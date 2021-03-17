@@ -6,47 +6,111 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjStair_c;
+struct JPABaseEmitter;
+
+struct daObjStair_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void event_proc_call();
+	void mode_proc_call();
+	void Draw();
+	void Delete();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	bool actionEnd();
+	void modeWaitUpperInit();
+	void modeWaitUpper();
+	void modeUpperInit();
+	void modeUpper();
+	void modeWaitLowerInit();
+	void modeWaitLower();
+	void modeLowerInit();
+	void modeLower();
+	void setParticle();
+	void removeParticle();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dPa_followEcallBack {
+	~dPa_followEcallBack();
+	void __defctor();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjStair_cFv();
-extern "C" extern void setBaseMtx__12daObjStair_cFv();
-extern "C" extern void Create__12daObjStair_cFv();
-extern "C" extern void CreateHeap__12daObjStair_cFv();
-extern "C" extern void create1st__12daObjStair_cFv();
-extern "C" extern void event_proc_call__12daObjStair_cFv();
-extern "C" extern void mode_proc_call__12daObjStair_cFv();
-extern "C" extern void Execute__12daObjStair_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjStair_cFv();
-extern "C" extern void Delete__12daObjStair_cFv();
-extern "C" extern void actionWait__12daObjStair_cFv();
-extern "C" extern void actionOrderEvent__12daObjStair_cFv();
-extern "C" extern void actionEvent__12daObjStair_cFv();
-extern "C" extern void actionEnd__12daObjStair_cFv();
-extern "C" extern void modeWaitUpperInit__12daObjStair_cFv();
-extern "C" extern void modeWaitUpper__12daObjStair_cFv();
-extern "C" extern void modeUpperInit__12daObjStair_cFv();
-extern "C" extern void modeUpper__12daObjStair_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void modeWaitLowerInit__12daObjStair_cFv();
-extern "C" extern void modeWaitLower__12daObjStair_cFv();
-extern "C" extern void modeLowerInit__12daObjStair_cFv();
-extern "C" extern void modeLower__12daObjStair_cFv();
-extern "C" extern void setParticle__12daObjStair_cFv();
-extern "C" extern void removeParticle__12daObjStair_cFv();
-extern "C" extern void daObjStair_create1st__FP12daObjStair_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__19dPa_followEcallBackFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __defctor__19dPa_followEcallBackFv();
-extern "C" extern void daObjStair_MoveBGDelete__FP12daObjStair_c();
-extern "C" extern void daObjStair_MoveBGExecute__FP12daObjStair_c();
-extern "C" extern void daObjStair_MoveBGDraw__FP12daObjStair_c();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void Execute__12daObjStair_cFPPA3_A4_f();
+void daObjStair_create1st(daObjStair_c*);
+void daObjStair_MoveBGDelete(daObjStair_c*);
+void daObjStair_MoveBGExecute(daObjStair_c*);
+void daObjStair_MoveBGDraw(daObjStair_c*);
+
+extern "C" void initBaseMtx__12daObjStair_cFv();
+extern "C" void setBaseMtx__12daObjStair_cFv();
+extern "C" void Create__12daObjStair_cFv();
+extern "C" void CreateHeap__12daObjStair_cFv();
+extern "C" void create1st__12daObjStair_cFv();
+extern "C" void event_proc_call__12daObjStair_cFv();
+extern "C" void mode_proc_call__12daObjStair_cFv();
+extern "C" void Execute__12daObjStair_cFPPA3_A4_f();
+extern "C" void Draw__12daObjStair_cFv();
+extern "C" void Delete__12daObjStair_cFv();
+extern "C" void actionWait__12daObjStair_cFv();
+extern "C" void actionOrderEvent__12daObjStair_cFv();
+extern "C" void actionEvent__12daObjStair_cFv();
+extern "C" bool actionEnd__12daObjStair_cFv();
+extern "C" void modeWaitUpperInit__12daObjStair_cFv();
+extern "C" void modeWaitUpper__12daObjStair_cFv();
+extern "C" void modeUpperInit__12daObjStair_cFv();
+extern "C" void modeUpper__12daObjStair_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void modeWaitLowerInit__12daObjStair_cFv();
+extern "C" void modeWaitLower__12daObjStair_cFv();
+extern "C" void modeLowerInit__12daObjStair_cFv();
+extern "C" void modeLower__12daObjStair_cFv();
+extern "C" void setParticle__12daObjStair_cFv();
+extern "C" void removeParticle__12daObjStair_cFv();
+extern "C" void daObjStair_create1st__FP12daObjStair_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void daObjStair_MoveBGDelete__FP12daObjStair_c();
+extern "C" void daObjStair_MoveBGExecute__FP12daObjStair_c();
+extern "C" void daObjStair_MoveBGDraw__FP12daObjStair_c();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
 SECTION_RODATA extern const u8 l_bmdName[8];
 SECTION_RODATA extern const u8 l_dzbName[8];
 SECTION_RODATA extern const u8 l_move_len[24];
@@ -87,7 +151,9 @@ SECTION_DATA extern void*const __vt__12daObjStair_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -97,7 +163,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjStair_cFv) {
+asm void daObjStair_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/initBaseMtx__12daObjStair_cFv.s"
 }
@@ -108,7 +174,7 @@ ASM_FUNCTION(initBaseMtx__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjStair_cFv) {
+asm void daObjStair_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/setBaseMtx__12daObjStair_cFv.s"
 }
@@ -119,7 +185,7 @@ ASM_FUNCTION(setBaseMtx__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjStair_cFv) {
+asm void daObjStair_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/Create__12daObjStair_cFv.s"
 }
@@ -130,7 +196,7 @@ ASM_FUNCTION(Create__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjStair_cFv) {
+asm void daObjStair_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/CreateHeap__12daObjStair_cFv.s"
 }
@@ -141,7 +207,7 @@ ASM_FUNCTION(CreateHeap__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjStair_cFv) {
+asm void daObjStair_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/create1st__12daObjStair_cFv.s"
 }
@@ -152,7 +218,7 @@ ASM_FUNCTION(create1st__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__12daObjStair_cFv) {
+asm void daObjStair_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/event_proc_call__12daObjStair_cFv.s"
 }
@@ -163,7 +229,7 @@ ASM_FUNCTION(event_proc_call__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__12daObjStair_cFv) {
+asm void daObjStair_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/mode_proc_call__12daObjStair_cFv.s"
 }
@@ -174,7 +240,7 @@ ASM_FUNCTION(mode_proc_call__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjStair_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjStair_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/Execute__12daObjStair_cFPPA3_A4_f.s"
 }
@@ -185,7 +251,7 @@ ASM_FUNCTION(Execute__12daObjStair_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjStair_cFv) {
+asm void daObjStair_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/Draw__12daObjStair_cFv.s"
 }
@@ -196,7 +262,7 @@ ASM_FUNCTION(Draw__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjStair_cFv) {
+asm void daObjStair_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/Delete__12daObjStair_cFv.s"
 }
@@ -207,7 +273,7 @@ ASM_FUNCTION(Delete__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__12daObjStair_cFv) {
+asm void daObjStair_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/actionWait__12daObjStair_cFv.s"
 }
@@ -218,7 +284,7 @@ ASM_FUNCTION(actionWait__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__12daObjStair_cFv) {
+asm void daObjStair_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/actionOrderEvent__12daObjStair_cFv.s"
 }
@@ -229,7 +295,7 @@ ASM_FUNCTION(actionOrderEvent__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__12daObjStair_cFv) {
+asm void daObjStair_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/actionEvent__12daObjStair_cFv.s"
 }
@@ -237,21 +303,16 @@ ASM_FUNCTION(actionEvent__12daObjStair_cFv) {
 
 
 /* 80C9D9BC-80C9D9C4 0008+00 .text      actionEnd__12daObjStair_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__12daObjStair_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/actionEnd__12daObjStair_cFv.s"
+bool daObjStair_c::actionEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9D9C4-80C9D9F4 0030+00 .text      modeWaitUpperInit__12daObjStair_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitUpperInit__12daObjStair_cFv) {
+asm void daObjStair_c::modeWaitUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeWaitUpperInit__12daObjStair_cFv.s"
 }
@@ -262,7 +323,7 @@ ASM_FUNCTION(modeWaitUpperInit__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitUpper__12daObjStair_cFv) {
+asm void daObjStair_c::modeWaitUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeWaitUpper__12daObjStair_cFv.s"
 }
@@ -273,7 +334,7 @@ ASM_FUNCTION(modeWaitUpper__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpperInit__12daObjStair_cFv) {
+asm void daObjStair_c::modeUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeUpperInit__12daObjStair_cFv.s"
 }
@@ -284,7 +345,7 @@ ASM_FUNCTION(modeUpperInit__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpper__12daObjStair_cFv) {
+asm void daObjStair_c::modeUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeUpper__12daObjStair_cFv.s"
 }
@@ -295,7 +356,7 @@ ASM_FUNCTION(modeUpper__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__dt__4cXyzFv.s"
 }
@@ -306,7 +367,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitLowerInit__12daObjStair_cFv) {
+asm void daObjStair_c::modeWaitLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeWaitLowerInit__12daObjStair_cFv.s"
 }
@@ -317,7 +378,7 @@ ASM_FUNCTION(modeWaitLowerInit__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitLower__12daObjStair_cFv) {
+asm void daObjStair_c::modeWaitLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeWaitLower__12daObjStair_cFv.s"
 }
@@ -328,7 +389,7 @@ ASM_FUNCTION(modeWaitLower__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLowerInit__12daObjStair_cFv) {
+asm void daObjStair_c::modeLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeLowerInit__12daObjStair_cFv.s"
 }
@@ -339,7 +400,7 @@ ASM_FUNCTION(modeLowerInit__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLower__12daObjStair_cFv) {
+asm void daObjStair_c::modeLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/modeLower__12daObjStair_cFv.s"
 }
@@ -350,7 +411,7 @@ ASM_FUNCTION(modeLower__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParticle__12daObjStair_cFv) {
+asm void daObjStair_c::setParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/setParticle__12daObjStair_cFv.s"
 }
@@ -361,7 +422,7 @@ ASM_FUNCTION(setParticle__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(removeParticle__12daObjStair_cFv) {
+asm void daObjStair_c::removeParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/removeParticle__12daObjStair_cFv.s"
 }
@@ -372,7 +433,7 @@ ASM_FUNCTION(removeParticle__12daObjStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStair_create1st__FP12daObjStair_c) {
+asm void daObjStair_create1st(daObjStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/daObjStair_create1st__FP12daObjStair_c.s"
 }
@@ -380,21 +441,16 @@ ASM_FUNCTION(daObjStair_create1st__FP12daObjStair_c) {
 
 
 /* 80C9E700-80C9E704 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E704-80C9E788 0084+00 .text      __dt__19dPa_followEcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
+asm dPa_followEcallBack::~dPa_followEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__dt__19dPa_followEcallBackFv.s"
 }
@@ -402,21 +458,16 @@ ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
 
 
 /* 80C9E788-80C9E78C 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E78C-80C9E7B4 0028+00 .text      __defctor__19dPa_followEcallBackFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
+asm void dPa_followEcallBack::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__defctor__19dPa_followEcallBackFv.s"
 }
@@ -427,7 +478,7 @@ ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStair_MoveBGDelete__FP12daObjStair_c) {
+asm void daObjStair_MoveBGDelete(daObjStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/daObjStair_MoveBGDelete__FP12daObjStair_c.s"
 }
@@ -438,7 +489,7 @@ ASM_FUNCTION(daObjStair_MoveBGDelete__FP12daObjStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStair_MoveBGExecute__FP12daObjStair_c) {
+asm void daObjStair_MoveBGExecute(daObjStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/daObjStair_MoveBGExecute__FP12daObjStair_c.s"
 }
@@ -449,7 +500,7 @@ ASM_FUNCTION(daObjStair_MoveBGExecute__FP12daObjStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStair_MoveBGDraw__FP12daObjStair_c) {
+asm void daObjStair_MoveBGDraw(daObjStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/daObjStair_MoveBGDraw__FP12daObjStair_c.s"
 }
@@ -460,7 +511,7 @@ ASM_FUNCTION(daObjStair_MoveBGDraw__FP12daObjStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -468,47 +519,27 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 80C9E894-80C9E898 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E898-80C9E89C 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E89C-80C9E8A0 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E8A0-80C9E8A4 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern u8 g_profile_Obj_DamCps[48];
 
 // 
@@ -16,10 +17,12 @@ SECTION_DATA extern u8 g_profile_Obj_DamCps[48];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
+/* ############################################################################################## */
 /* 80BDA460-80BDA490 0030+00 .data      g_profile_Obj_DamCps                                         */
 u8 g_profile_Obj_DamCps[48] = {
 	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x75, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

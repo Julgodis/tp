@@ -6,20 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daDmidna_c;
+struct fopAc_ac_c;
+
+struct daDmidna_c {
+	void createHeap();
+	void create();
+	~daDmidna_c();
+	void setMatrix();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__10daDmidna_cFv();
-extern "C" extern void daDmidna_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__10daDmidna_cFv();
-extern "C" extern void daDmidna_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10daDmidna_cFv();
-extern "C" extern void daDmidna_Delete__FP10daDmidna_c();
-extern "C" extern void setMatrix__10daDmidna_cFv();
-extern "C" extern void execute__10daDmidna_cFv();
-extern "C" extern void daDmidna_Execute__FP10daDmidna_c();
-extern "C" extern void draw__10daDmidna_cFv();
-extern "C" extern void daDmidna_Draw__FP10daDmidna_c();
+void daDmidna_createHeap(fopAc_ac_c*);
+void daDmidna_Create(fopAc_ac_c*);
+void daDmidna_Delete(daDmidna_c*);
+void daDmidna_Execute(daDmidna_c*);
+void daDmidna_Draw(daDmidna_c*);
+
+extern "C" void createHeap__10daDmidna_cFv();
+extern "C" void daDmidna_createHeap__FP10fopAc_ac_c();
+extern "C" void create__10daDmidna_cFv();
+extern "C" void daDmidna_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10daDmidna_cFv();
+extern "C" void daDmidna_Delete__FP10daDmidna_c();
+extern "C" void setMatrix__10daDmidna_cFv();
+extern "C" void execute__10daDmidna_cFv();
+extern "C" void daDmidna_Execute__FP10daDmidna_c();
+extern "C" void draw__10daDmidna_cFv();
+extern "C" void daDmidna_Draw__FP10daDmidna_c();
 SECTION_RODATA extern const u8 l_arcName[7 + 1 /* padding */];
 SECTION_RODATA extern const u32 lit_3769;
 SECTION_DATA extern u8 l_daDmidna_Method[32];
@@ -29,7 +54,9 @@ SECTION_DATA extern u8 g_profile_DMIDNA[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -39,7 +66,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__10daDmidna_cFv) {
+asm void daDmidna_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/createHeap__10daDmidna_cFv.s"
 }
@@ -50,7 +77,7 @@ ASM_FUNCTION(createHeap__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDmidna_createHeap__FP10fopAc_ac_c) {
+asm void daDmidna_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/daDmidna_createHeap__FP10fopAc_ac_c.s"
 }
@@ -61,7 +88,7 @@ ASM_FUNCTION(daDmidna_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daDmidna_cFv) {
+asm void daDmidna_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/create__10daDmidna_cFv.s"
 }
@@ -72,7 +99,7 @@ ASM_FUNCTION(create__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDmidna_Create__FP10fopAc_ac_c) {
+asm void daDmidna_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/daDmidna_Create__FP10fopAc_ac_c.s"
 }
@@ -83,7 +110,7 @@ ASM_FUNCTION(daDmidna_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daDmidna_cFv) {
+asm daDmidna_c::~daDmidna_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/__dt__10daDmidna_cFv.s"
 }
@@ -94,7 +121,7 @@ ASM_FUNCTION(__dt__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDmidna_Delete__FP10daDmidna_c) {
+asm void daDmidna_Delete(daDmidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/daDmidna_Delete__FP10daDmidna_c.s"
 }
@@ -105,7 +132,7 @@ ASM_FUNCTION(daDmidna_Delete__FP10daDmidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__10daDmidna_cFv) {
+asm void daDmidna_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/setMatrix__10daDmidna_cFv.s"
 }
@@ -116,7 +143,7 @@ ASM_FUNCTION(setMatrix__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daDmidna_cFv) {
+asm void daDmidna_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/execute__10daDmidna_cFv.s"
 }
@@ -127,7 +154,7 @@ ASM_FUNCTION(execute__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDmidna_Execute__FP10daDmidna_c) {
+asm void daDmidna_Execute(daDmidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/daDmidna_Execute__FP10daDmidna_c.s"
 }
@@ -138,7 +165,7 @@ ASM_FUNCTION(daDmidna_Execute__FP10daDmidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daDmidna_cFv) {
+asm void daDmidna_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/draw__10daDmidna_cFv.s"
 }
@@ -149,7 +176,7 @@ ASM_FUNCTION(draw__10daDmidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDmidna_Draw__FP10daDmidna_c) {
+asm void daDmidna_Draw(daDmidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dmidna/d_a_dmidna/daDmidna_Draw__FP10daDmidna_c.s"
 }

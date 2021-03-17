@@ -6,31 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_toby_class;
+struct yuka_s;
+
+struct daObj_Toby_HIO_c {
+	daObj_Toby_HIO_c();
+	~daObj_Toby_HIO_c();
+};
+
+struct obj_toby_class {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct yuka_s {
+	~yuka_s();
+	yuka_s();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daPy_py_c {
+	void getLeftHandPos() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Toby_HIO_cFv();
-extern "C" extern void daObj_Toby_Draw__FP14obj_toby_class();
-extern "C" extern void s_bomb_sub__FPvPv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void shot_b_sub__FPvPv();
-extern "C" extern void s_hz_sub__FPvPv();
-extern "C" extern void yuka_ground__FP14obj_toby_classP6yuka_s();
-extern "C" extern void yuka_fly__FP14obj_toby_classP6yuka_s();
-extern "C" extern void yuka_mtxset__FP14obj_toby_classP6yuka_s();
-extern "C" extern void yuka_control__FP14obj_toby_class();
-extern "C" extern void demo_camera__FP14obj_toby_class();
-extern "C" extern void daObj_Toby_Execute__FP14obj_toby_class();
-extern "C" extern void daObj_Toby_IsDelete__FP14obj_toby_class();
-extern "C" extern void daObj_Toby_Delete__FP14obj_toby_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void set_pos_check__FP14obj_toby_classi();
-extern "C" extern void daObj_Toby_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__6yuka_sFv();
-extern "C" extern void __ct__6yuka_sFv();
-extern "C" extern void __dt__16daObj_Toby_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_toby_cpp();
-extern "C" extern void getLeftHandPos__9daPy_py_cCFv();
+void daObj_Toby_Draw(obj_toby_class*);
+void s_bomb_sub(void*, void*);
+void shot_b_sub(void*, void*);
+void s_hz_sub(void*, void*);
+void yuka_ground(obj_toby_class*, yuka_s*);
+void yuka_fly(obj_toby_class*, yuka_s*);
+void yuka_mtxset(obj_toby_class*, yuka_s*);
+void yuka_control(obj_toby_class*);
+void demo_camera(obj_toby_class*);
+void daObj_Toby_Execute(obj_toby_class*);
+bool daObj_Toby_IsDelete(obj_toby_class*);
+void daObj_Toby_Delete(obj_toby_class*);
+void useHeapInit(fopAc_ac_c*);
+void set_pos_check(obj_toby_class*, s32);
+void daObj_Toby_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_toby_cpp();
+
+extern "C" void __ct__16daObj_Toby_HIO_cFv();
+extern "C" void daObj_Toby_Draw__FP14obj_toby_class();
+extern "C" void s_bomb_sub__FPvPv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void shot_b_sub__FPvPv();
+extern "C" void s_hz_sub__FPvPv();
+extern "C" void yuka_ground__FP14obj_toby_classP6yuka_s();
+extern "C" void yuka_fly__FP14obj_toby_classP6yuka_s();
+extern "C" void yuka_mtxset__FP14obj_toby_classP6yuka_s();
+extern "C" void yuka_control__FP14obj_toby_class();
+extern "C" void demo_camera__FP14obj_toby_class();
+extern "C" void daObj_Toby_Execute__FP14obj_toby_class();
+extern "C" bool daObj_Toby_IsDelete__FP14obj_toby_class();
+extern "C" void daObj_Toby_Delete__FP14obj_toby_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void set_pos_check__FP14obj_toby_classi();
+extern "C" void daObj_Toby_Create__FP10fopAc_ac_c();
+extern "C" void __dt__6yuka_sFv();
+extern "C" void __ct__6yuka_sFv();
+extern "C" void __dt__16daObj_Toby_HIO_cFv();
+extern "C" void __sinit_d_a_obj_toby_cpp();
+extern "C" void getLeftHandPos__9daPy_py_cCFv();
 SECTION_RODATA extern const u32 lit_3806;
 SECTION_RODATA extern const u8 lit_3880[4];
 SECTION_RODATA extern const u8 lit_3881[8];
@@ -136,8 +185,11 @@ SECTION_BSS extern u8 data_80D159B0[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -147,7 +199,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Toby_HIO_cFv) {
+asm daObj_Toby_HIO_c::daObj_Toby_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__ct__16daObj_Toby_HIO_cFv.s"
 }
@@ -158,7 +210,7 @@ ASM_FUNCTION(__ct__16daObj_Toby_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Toby_Draw__FP14obj_toby_class) {
+asm void daObj_Toby_Draw(obj_toby_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Draw__FP14obj_toby_class.s"
 }
@@ -169,7 +221,7 @@ ASM_FUNCTION(daObj_Toby_Draw__FP14obj_toby_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bomb_sub__FPvPv) {
+asm void s_bomb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/s_bomb_sub__FPvPv.s"
 }
@@ -180,7 +232,7 @@ ASM_FUNCTION(s_bomb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__dt__4cXyzFv.s"
 }
@@ -191,7 +243,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shot_b_sub__FPvPv) {
+asm void shot_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/shot_b_sub__FPvPv.s"
 }
@@ -202,7 +254,7 @@ ASM_FUNCTION(shot_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_hz_sub__FPvPv) {
+asm void s_hz_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/s_hz_sub__FPvPv.s"
 }
@@ -213,7 +265,7 @@ ASM_FUNCTION(s_hz_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yuka_ground__FP14obj_toby_classP6yuka_s) {
+asm void yuka_ground(obj_toby_class* field_0, yuka_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/yuka_ground__FP14obj_toby_classP6yuka_s.s"
 }
@@ -224,7 +276,7 @@ ASM_FUNCTION(yuka_ground__FP14obj_toby_classP6yuka_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yuka_fly__FP14obj_toby_classP6yuka_s) {
+asm void yuka_fly(obj_toby_class* field_0, yuka_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/yuka_fly__FP14obj_toby_classP6yuka_s.s"
 }
@@ -235,7 +287,7 @@ ASM_FUNCTION(yuka_fly__FP14obj_toby_classP6yuka_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yuka_mtxset__FP14obj_toby_classP6yuka_s) {
+asm void yuka_mtxset(obj_toby_class* field_0, yuka_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/yuka_mtxset__FP14obj_toby_classP6yuka_s.s"
 }
@@ -246,7 +298,7 @@ ASM_FUNCTION(yuka_mtxset__FP14obj_toby_classP6yuka_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yuka_control__FP14obj_toby_class) {
+asm void yuka_control(obj_toby_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/yuka_control__FP14obj_toby_class.s"
 }
@@ -257,7 +309,7 @@ ASM_FUNCTION(yuka_control__FP14obj_toby_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP14obj_toby_class) {
+asm void demo_camera(obj_toby_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/demo_camera__FP14obj_toby_class.s"
 }
@@ -268,7 +320,7 @@ ASM_FUNCTION(demo_camera__FP14obj_toby_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Toby_Execute__FP14obj_toby_class) {
+asm void daObj_Toby_Execute(obj_toby_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Execute__FP14obj_toby_class.s"
 }
@@ -276,21 +328,16 @@ ASM_FUNCTION(daObj_Toby_Execute__FP14obj_toby_class) {
 
 
 /* 80D14884-80D1488C 0008+00 .text      daObj_Toby_IsDelete__FP14obj_toby_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Toby_IsDelete__FP14obj_toby_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_IsDelete__FP14obj_toby_class.s"
+bool daObj_Toby_IsDelete(obj_toby_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1488C-80D149DC 0150+00 .text      daObj_Toby_Delete__FP14obj_toby_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Toby_Delete__FP14obj_toby_class) {
+asm void daObj_Toby_Delete(obj_toby_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Delete__FP14obj_toby_class.s"
 }
@@ -301,7 +348,7 @@ ASM_FUNCTION(daObj_Toby_Delete__FP14obj_toby_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -312,7 +359,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_pos_check__FP14obj_toby_classi) {
+asm void set_pos_check(obj_toby_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/set_pos_check__FP14obj_toby_classi.s"
 }
@@ -323,7 +370,7 @@ ASM_FUNCTION(set_pos_check__FP14obj_toby_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Toby_Create__FP10fopAc_ac_c) {
+asm void daObj_Toby_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_Create__FP10fopAc_ac_c.s"
 }
@@ -334,7 +381,7 @@ ASM_FUNCTION(daObj_Toby_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__6yuka_sFv) {
+asm yuka_s::~yuka_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__dt__6yuka_sFv.s"
 }
@@ -342,21 +389,16 @@ ASM_FUNCTION(__dt__6yuka_sFv) {
 
 
 /* 80D15530-80D15534 0004+00 .text      __ct__6yuka_sFv                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__6yuka_sFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__ct__6yuka_sFv.s"
+yuka_s::yuka_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D15534-80D1557C 0048+00 .text      __dt__16daObj_Toby_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Toby_HIO_cFv) {
+asm daObj_Toby_HIO_c::~daObj_Toby_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__dt__16daObj_Toby_HIO_cFv.s"
 }
@@ -367,7 +409,7 @@ ASM_FUNCTION(__dt__16daObj_Toby_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_toby_cpp) {
+extern "C" asm void __sinit_d_a_obj_toby_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__sinit_d_a_obj_toby_cpp.s"
 }
@@ -378,7 +420,7 @@ ASM_FUNCTION(__sinit_d_a_obj_toby_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftHandPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getLeftHandPos() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/getLeftHandPos__9daPy_py_cCFv.s"
 }

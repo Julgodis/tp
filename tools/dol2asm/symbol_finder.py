@@ -326,8 +326,7 @@ def search(context: Context,
                     symbol.source = f"section_symbol/{tuk}/{section.name}/{section.addr:08X}"
                     sv.append(symbol)
                     section_count[sk] += 1
-                    context.debug(
-                        f"added symbol '{name}' for unreferenced section '{sk}'")
+                    context.debug(f"added symbol '{name}' for unreferenced section '{sk}'")
 
                 # group symbols together, e.g., functions will be a group of [header, label1, label2, ...]
                 groups = generate_symbols.groups_from_symbols(sv)
@@ -352,7 +351,7 @@ def search(context: Context,
                     symbol._translation_unit = translation_unit.name
                     symbol._section = section.name
 
-                    if isinstance(symbol, Function):
+                    if isinstance(symbol, ASMFunction):
                         for block in symbol.blocks:
                             block._module = module.index
                             block._library = library.name

@@ -6,28 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daTreeSh_c;
+
+struct daTreeSh_HIO_c {
+	daTreeSh_HIO_c();
+	~daTreeSh_HIO_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct J3DJoint {
+};
+
+struct daTreeSh_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void CreateHeap();
+	void Create();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daTreeSh_HIO_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__10daTreeSh_cFv();
-extern "C" extern void setBaseMtx__10daTreeSh_cFv();
-extern "C" extern void CreateHeap__10daTreeSh_cFv();
-extern "C" extern void Create__10daTreeSh_cFv();
-extern "C" extern void create1st__10daTreeSh_cFv();
-extern "C" extern void Execute__10daTreeSh_cFPPA3_A4_f();
-extern "C" extern void Draw__10daTreeSh_cFv();
-extern "C" extern void Delete__10daTreeSh_cFv();
-extern "C" extern void daTreeSh_create1st__FP10daTreeSh_c();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void daTreeSh_MoveBGDelete__FP10daTreeSh_c();
-extern "C" extern void daTreeSh_MoveBGExecute__FP10daTreeSh_c();
-extern "C" extern void daTreeSh_MoveBGDraw__FP10daTreeSh_c();
-extern "C" extern void __dt__14daTreeSh_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_treesh_cpp();
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__10daTreeSh_cFPPA3_A4_f();
+void daTreeSh_create1st(daTreeSh_c*);
+void daTreeSh_MoveBGDelete(daTreeSh_c*);
+void daTreeSh_MoveBGExecute(daTreeSh_c*);
+void daTreeSh_MoveBGDraw(daTreeSh_c*);
+extern "C" void __sinit_d_a_obj_treesh_cpp();
+
+extern "C" void __ct__14daTreeSh_HIO_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__10daTreeSh_cFv();
+extern "C" void setBaseMtx__10daTreeSh_cFv();
+extern "C" void CreateHeap__10daTreeSh_cFv();
+extern "C" void Create__10daTreeSh_cFv();
+extern "C" void create1st__10daTreeSh_cFv();
+extern "C" void Execute__10daTreeSh_cFPPA3_A4_f();
+extern "C" void Draw__10daTreeSh_cFv();
+extern "C" void Delete__10daTreeSh_cFv();
+extern "C" void daTreeSh_create1st__FP10daTreeSh_c();
+extern "C" void __ct__5csXyzFv();
+extern "C" void daTreeSh_MoveBGDelete__FP10daTreeSh_c();
+extern "C" void daTreeSh_MoveBGExecute__FP10daTreeSh_c();
+extern "C" void daTreeSh_MoveBGDraw__FP10daTreeSh_c();
+extern "C" void __dt__14daTreeSh_HIO_cFv();
+extern "C" void __sinit_d_a_obj_treesh_cpp();
 SECTION_RODATA extern const u32 lit_3767;
 SECTION_RODATA extern const u32 lit_3768;
 SECTION_RODATA extern const u32 lit_3769;
@@ -48,8 +90,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -59,7 +104,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daTreeSh_HIO_cFv) {
+asm daTreeSh_HIO_c::daTreeSh_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__ct__14daTreeSh_HIO_cFv.s"
 }
@@ -70,7 +115,7 @@ ASM_FUNCTION(__ct__14daTreeSh_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__dt__5csXyzFv.s"
 }
@@ -81,7 +126,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +137,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/nodeCallBack__FP8J3DJointi.s"
 }
@@ -103,7 +148,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daTreeSh_cFv) {
+asm void daTreeSh_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/initBaseMtx__10daTreeSh_cFv.s"
 }
@@ -114,7 +159,7 @@ ASM_FUNCTION(initBaseMtx__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daTreeSh_cFv) {
+asm void daTreeSh_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/setBaseMtx__10daTreeSh_cFv.s"
 }
@@ -125,7 +170,7 @@ ASM_FUNCTION(setBaseMtx__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daTreeSh_cFv) {
+asm void daTreeSh_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/CreateHeap__10daTreeSh_cFv.s"
 }
@@ -136,7 +181,7 @@ ASM_FUNCTION(CreateHeap__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daTreeSh_cFv) {
+asm void daTreeSh_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/Create__10daTreeSh_cFv.s"
 }
@@ -147,7 +192,7 @@ ASM_FUNCTION(Create__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__10daTreeSh_cFv) {
+asm void daTreeSh_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/create1st__10daTreeSh_cFv.s"
 }
@@ -158,7 +203,7 @@ ASM_FUNCTION(create1st__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daTreeSh_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daTreeSh_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/Execute__10daTreeSh_cFPPA3_A4_f.s"
 }
@@ -169,7 +214,7 @@ ASM_FUNCTION(Execute__10daTreeSh_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daTreeSh_cFv) {
+asm void daTreeSh_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/Draw__10daTreeSh_cFv.s"
 }
@@ -180,7 +225,7 @@ ASM_FUNCTION(Draw__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daTreeSh_cFv) {
+asm void daTreeSh_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/Delete__10daTreeSh_cFv.s"
 }
@@ -191,7 +236,7 @@ ASM_FUNCTION(Delete__10daTreeSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTreeSh_create1st__FP10daTreeSh_c) {
+asm void daTreeSh_create1st(daTreeSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/daTreeSh_create1st__FP10daTreeSh_c.s"
 }
@@ -199,21 +244,16 @@ ASM_FUNCTION(daTreeSh_create1st__FP10daTreeSh_c) {
 
 
 /* 80D1F7AC-80D1F7B0 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D1F7B0-80D1F7D0 0020+00 .text      daTreeSh_MoveBGDelete__FP10daTreeSh_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTreeSh_MoveBGDelete__FP10daTreeSh_c) {
+asm void daTreeSh_MoveBGDelete(daTreeSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/daTreeSh_MoveBGDelete__FP10daTreeSh_c.s"
 }
@@ -224,7 +264,7 @@ ASM_FUNCTION(daTreeSh_MoveBGDelete__FP10daTreeSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTreeSh_MoveBGExecute__FP10daTreeSh_c) {
+asm void daTreeSh_MoveBGExecute(daTreeSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/daTreeSh_MoveBGExecute__FP10daTreeSh_c.s"
 }
@@ -235,7 +275,7 @@ ASM_FUNCTION(daTreeSh_MoveBGExecute__FP10daTreeSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTreeSh_MoveBGDraw__FP10daTreeSh_c) {
+asm void daTreeSh_MoveBGDraw(daTreeSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/daTreeSh_MoveBGDraw__FP10daTreeSh_c.s"
 }
@@ -246,7 +286,7 @@ ASM_FUNCTION(daTreeSh_MoveBGDraw__FP10daTreeSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTreeSh_HIO_cFv) {
+asm daTreeSh_HIO_c::~daTreeSh_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__dt__14daTreeSh_HIO_cFv.s"
 }
@@ -257,7 +297,7 @@ ASM_FUNCTION(__dt__14daTreeSh_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_treesh_cpp) {
+extern "C" asm void __sinit_d_a_obj_treesh_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_treesh/d_a_obj_treesh/__sinit_d_a_obj_treesh_cpp.s"
 }

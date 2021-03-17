@@ -6,33 +6,159 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASAramStream (JASAramStream) False/False
+// build JASDsp (JASDsp) False/False
+/* top-level dependencies (begin JASDsp) */
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// build TChannel (JASDsp::TChannel) False/False
+	/* dependencies (begin JASDsp::TChannel) */
+	/* dependencies (end JASDsp::TChannel) */
+	struct TChannel {
+	};
+
+};
+
+// build JASChannel (JASChannel) False/False
+// build JASOscillator (JASOscillator) False/False
+/* top-level dependencies (begin JASOscillator) */
+/* top-level dependencies (end JASOscillator) */
+struct JASOscillator {
+	// build Data (JASOscillator::Data) False/False
+	/* dependencies (begin JASOscillator::Data) */
+	/* dependencies (end JASOscillator::Data) */
+	struct Data {
+	};
+
+};
+
+/* top-level dependencies (begin JASChannel) */
+// outer dependency: JASOscillator::Data
+/* top-level dependencies (end JASChannel) */
+struct JASChannel {
+	// JASOscillator::Data
+	/* 8029AA60 */ void playForce();
+	/* 8029AAD0 */ void release(u16);
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+	/* 8029AB98 */ void setMixConfig(u32, u16);
+};
+
+/* top-level dependencies (begin JASAramStream) */
+// outer dependency: JASDsp::TChannel
+// outer dependency: JASChannel
+/* top-level dependencies (end JASAramStream) */
+struct JASAramStream {
+	// JASDsp::TChannel
+	// JASChannel
+	/* 8029631C */ void initSystem(u32, u32);
+	/* 802963A8 */ JASAramStream();
+	/* 8029655C */ void prepare(s32, s32);
+	/* 80296618 */ void start();
+	/* 8029664C */ void stop(u16);
+	/* 80296684 */ void pause(bool);
+	/* 802966CC */ void cancel();
+	/* 80296710 */ void getBlockSamples() const;
+	/* 8029673C */ void headerLoadTask(void*);
+	/* 8029676C */ void firstLoadTask(void*);
+	/* 80296848 */ void loadToAramTask(void*);
+	/* 80296868 */ void finishTask(void*);
+	/* 802968C8 */ void prepareFinishTask(void*);
+	/* 80296920 */ void headerLoad(u32, s32);
+	/* 80296AE8 */ void load();
+	/* 80296D74 */ void channelProcCallback(void*);
+	/* 80296D94 */ void dvdErrorCheck(void*);
+	/* 80296DF0 */ void channelCallback(u32, JASChannel*, JASDsp::TChannel*, void*);
+	/* 80296E2C */ void updateChannel(u32, JASChannel*, JASDsp::TChannel*);
+	/* 802974AC */ void channelProc();
+	/* 80297658 */ void channelStart();
+	/* 80297870 */ void channelStop(u16);
+};
+
+// build JASChannel (JASChannel) True/True
+// build JASDsp (JASDsp) True/True
+// build JASDvd (JASDvd) False/False
+/* top-level dependencies (begin JASDvd) */
+/* top-level dependencies (end JASDvd) */
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+};
+
+// build JASGenericMemPool (JASGenericMemPool) False/False
+/* top-level dependencies (begin JASGenericMemPool) */
+/* top-level dependencies (end JASGenericMemPool) */
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+};
+
+// build JASOscillator (JASOscillator) True/True
+// build JASDriver (JASDriver) False/False
+/* top-level dependencies (begin JASDriver) */
+/* top-level dependencies (end JASDriver) */
+struct JASDriver {
+	/* 8029C9E8 */ void getDacRate();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JKRAram (JKRAram) False/False
+// build JKRHeap (JKRHeap) True/True
+// build JKRExpandSwitch (JKRExpandSwitch) False/False
+/* top-level dependencies (begin JKRExpandSwitch) */
+/* top-level dependencies (end JKRExpandSwitch) */
+struct JKRExpandSwitch {
+};
+
+/* top-level dependencies (begin JKRAram) */
+// outer dependency: JKRHeap
+// outer dependency: JKRExpandSwitch
+/* top-level dependencies (end JKRAram) */
+struct JKRAram {
+	// JKRHeap
+	// JKRExpandSwitch
+	/* 802D233C */ void mainRamToAram(char*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+};
+
+// build JKRExpandSwitch (JKRExpandSwitch) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void initSystem__13JASAramStreamFUlUl();
-extern "C" extern void __ct__13JASAramStreamFv();
-extern "C" extern void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
-extern "C" extern void prepare__13JASAramStreamFli();
-extern "C" extern void start__13JASAramStreamFv();
-extern "C" extern void stop__13JASAramStreamFUs();
-extern "C" extern void pause__13JASAramStreamFb();
-extern "C" extern void cancel__13JASAramStreamFv();
-extern "C" extern void getBlockSamples__13JASAramStreamCFv();
-extern "C" extern void headerLoadTask__13JASAramStreamFPv();
-extern "C" extern void firstLoadTask__13JASAramStreamFPv();
-extern "C" extern void loadToAramTask__13JASAramStreamFPv();
-extern "C" extern void finishTask__13JASAramStreamFPv();
-extern "C" extern void prepareFinishTask__13JASAramStreamFPv();
-extern "C" extern void headerLoad__13JASAramStreamFUli();
-extern "C" extern void load__13JASAramStreamFv();
-extern "C" extern void channelProcCallback__13JASAramStreamFPv();
-extern "C" extern void dvdErrorCheck__13JASAramStreamFPv();
-extern "C" extern void channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv();
-extern "C" extern void updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel();
-extern "C" extern void channelProc__13JASAramStreamFv();
-extern "C" extern void channelStart__13JASAramStreamFv();
-extern "C" extern void channelStop__13JASAramStreamFUs();
-extern "C" extern void func_802978DC();
+extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
+extern "C" void func_802978DC();
+
+extern "C" void initSystem__13JASAramStreamFUlUl();
+extern "C" void __ct__13JASAramStreamFv();
+extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
+extern "C" void prepare__13JASAramStreamFli();
+extern "C" void start__13JASAramStreamFv();
+extern "C" void stop__13JASAramStreamFUs();
+extern "C" void pause__13JASAramStreamFb();
+extern "C" void cancel__13JASAramStreamFv();
+extern "C" void getBlockSamples__13JASAramStreamCFv();
+extern "C" void headerLoadTask__13JASAramStreamFPv();
+extern "C" void firstLoadTask__13JASAramStreamFPv();
+extern "C" void loadToAramTask__13JASAramStreamFPv();
+extern "C" void finishTask__13JASAramStreamFPv();
+extern "C" void prepareFinishTask__13JASAramStreamFPv();
+extern "C" void headerLoad__13JASAramStreamFUli();
+extern "C" void load__13JASAramStreamFv();
+extern "C" void channelProcCallback__13JASAramStreamFPv();
+extern "C" void dvdErrorCheck__13JASAramStreamFPv();
+extern "C" void channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv();
+extern "C" void updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel();
+extern "C" void channelProc__13JASAramStreamFv();
+extern "C" void channelStart__13JASAramStreamFv();
+extern "C" void channelStop__13JASAramStreamFUs();
+extern "C" void func_802978DC();
 SECTION_RODATA extern const u8 OSC_RELEASE_TABLE[12];
 SECTION_RODATA extern const void*const OSC_ENV[7];
 SECTION_DATA extern void*lit_613[14];
@@ -54,42 +180,69 @@ SECTION_SDATA2 extern u8 data_80455628[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" extern void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
-extern "C" extern void getThreadPointer__6JASDvdFv();
-extern "C" extern void __ct__17JASGenericMemPoolFv();
-extern "C" extern void __dt__17JASGenericMemPoolFv();
-extern "C" extern void alloc__17JASGenericMemPoolFUl();
-extern "C" extern void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" extern void playForce__10JASChannelFv();
-extern "C" extern void release__10JASChannelFUs();
-extern "C" extern void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
-extern "C" extern void setMixConfig__10JASChannelFUlUs();
-extern "C" extern void getDacRate__9JASDriverFv();
-extern "C" extern void rejectCallback__9JASDriverFPFPv_lPv();
-extern "C" extern void registerSubFrameCallback__9JASDriverFPFPv_lPv();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void OSInitMessageQueue();
-extern "C" extern void OSSendMessage();
-extern "C" extern void OSReceiveMessage();
-extern "C" extern void DVDFastOpen();
-extern "C" extern void DVDReadPrio();
-extern "C" extern void DVDGetDriveStatus();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void DVDFastOpen();
+extern "C" void DVDReadPrio();
+extern "C" void DVDGetDriveStatus();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void playForce__10JASChannelFv();
+extern "C" void release__10JASChannelFUs();
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
+extern "C" void setMixConfig__10JASChannelFUlUs();
+extern "C" void getDacRate__9JASDriverFv();
+extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void DVDFastOpen();
+extern "C" void DVDReadPrio();
+extern "C" void DVDGetDriveStatus();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 JASDram[4];
 
 // 
@@ -97,29 +250,29 @@ SECTION_SBSS extern u8 JASDram[4];
 // 
 
 /* ############################################################################################## */
-/* 80451250-80451254 0004+00 .sbss      sLoadThread__13JASAramStream                                 */
+/* 80451250-80451254 0004+00 rc=6 efc=0 .sbss      sLoadThread__13JASAramStream                                 */
 u8 sLoadThread__13JASAramStream[4];
 
-/* 80451254-80451258 0004+00 .sbss      sReadBuffer__13JASAramStream                                 */
+/* 80451254-80451258 0004+00 rc=3 efc=0 .sbss      sReadBuffer__13JASAramStream                                 */
 u8 sReadBuffer__13JASAramStream[4];
 
-/* 80451258-8045125C 0004+00 .sbss      sBlockSize__13JASAramStream                                  */
+/* 80451258-8045125C 0004+00 rc=7 efc=1 .sbss      sBlockSize__13JASAramStream                                  */
 u8 sBlockSize__13JASAramStream[4];
 
-/* 8045125C-80451260 0004+00 .sbss      sChannelMax__13JASAramStream                                 */
+/* 8045125C-80451260 0004+00 rc=1 efc=0 .sbss      sChannelMax__13JASAramStream                                 */
 u8 sChannelMax__13JASAramStream[4];
 
-/* 80451260-80451268 0008+00 .sbss      None                                                         */
+/* 80451260-80451268 0008+00 rc=12 efc=4 .sbss      None                                                         */
 u8 struct_80451260[8];
 /* 80451260 0001 data_80451260 */
 /* 80451261 0001 data_80451261 */
 /* 80451262 0006 data_80451262 */
 
-/* 8029631C-802963A8 008C+00 .text      initSystem__13JASAramStreamFUlUl                             */
+/* 8029631C-802963A8 008C+00 rc=1 efc=1 .text      initSystem__13JASAramStreamFUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initSystem__13JASAramStreamFUlUl) {
+asm void JASAramStream::initSystem(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/initSystem__13JASAramStreamFUlUl.s"
 }
@@ -127,154 +280,154 @@ ASM_FUNCTION(initSystem__13JASAramStreamFUlUl) {
 
 
 /* ############################################################################################## */
-/* 80455610-80455614 0004+00 .sdata2    @390                                                         */
+/* 80455610-80455614 0004+00 rc=3 efc=0 .sdata2    @390                                                         */
 u8 lit_390[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455614-80455618 0004+00 .sdata2    @391                                                         */
+/* 80455614-80455618 0004+00 rc=2 efc=0 .sdata2    @391                                                         */
 f32 lit_391 = 1.0f;
 
-/* 80455618-8045561C 0004+00 .sdata2    @392                                                         */
+/* 80455618-8045561C 0004+00 rc=2 efc=0 .sdata2    @392                                                         */
 f32 lit_392 = 0.5f;
 
-/* 802963A8-8029649C 00F4+00 .text      __ct__13JASAramStreamFv                                      */
+/* 802963A8-8029649C 00F4+00 rc=1 efc=1 .text      __ct__13JASAramStreamFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JASAramStreamFv) {
+asm JASAramStream::JASAramStream() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/__ct__13JASAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 8029649C-8029655C 00C0+00 .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv         */
+/* 8029649C-8029655C 00C0+00 rc=1 efc=1 .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv) {
+extern "C" asm void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv.s"
 }
 #pragma pop
 
 
-/* 8029655C-80296618 00BC+00 .text      prepare__13JASAramStreamFli                                  */
+/* 8029655C-80296618 00BC+00 rc=1 efc=1 .text      prepare__13JASAramStreamFli                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepare__13JASAramStreamFli) {
+asm void JASAramStream::prepare(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/prepare__13JASAramStreamFli.s"
 }
 #pragma pop
 
 
-/* 80296618-8029664C 0034+00 .text      start__13JASAramStreamFv                                     */
+/* 80296618-8029664C 0034+00 rc=1 efc=1 .text      start__13JASAramStreamFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__13JASAramStreamFv) {
+asm void JASAramStream::start() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/start__13JASAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 8029664C-80296684 0038+00 .text      stop__13JASAramStreamFUs                                     */
+/* 8029664C-80296684 0038+00 rc=1 efc=1 .text      stop__13JASAramStreamFUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stop__13JASAramStreamFUs) {
+asm void JASAramStream::stop(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/stop__13JASAramStreamFUs.s"
 }
 #pragma pop
 
 
-/* 80296684-802966CC 0048+00 .text      pause__13JASAramStreamFb                                     */
+/* 80296684-802966CC 0048+00 rc=1 efc=1 .text      pause__13JASAramStreamFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pause__13JASAramStreamFb) {
+asm void JASAramStream::pause(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/pause__13JASAramStreamFb.s"
 }
 #pragma pop
 
 
-/* 802966CC-80296710 0044+00 .text      cancel__13JASAramStreamFv                                    */
+/* 802966CC-80296710 0044+00 rc=1 efc=1 .text      cancel__13JASAramStreamFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancel__13JASAramStreamFv) {
+asm void JASAramStream::cancel() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/cancel__13JASAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 80296710-8029673C 002C+00 .text      getBlockSamples__13JASAramStreamCFv                          */
+/* 80296710-8029673C 002C+00 rc=4 efc=0 .text      getBlockSamples__13JASAramStreamCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBlockSamples__13JASAramStreamCFv) {
+asm void JASAramStream::getBlockSamples() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/getBlockSamples__13JASAramStreamCFv.s"
 }
 #pragma pop
 
 
-/* 8029673C-8029676C 0030+00 .text      headerLoadTask__13JASAramStreamFPv                           */
+/* 8029673C-8029676C 0030+00 rc=1 efc=0 .text      headerLoadTask__13JASAramStreamFPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(headerLoadTask__13JASAramStreamFPv) {
+asm void JASAramStream::headerLoadTask(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/headerLoadTask__13JASAramStreamFPv.s"
 }
 #pragma pop
 
 
-/* 8029676C-80296848 00DC+00 .text      firstLoadTask__13JASAramStreamFPv                            */
+/* 8029676C-80296848 00DC+00 rc=1 efc=0 .text      firstLoadTask__13JASAramStreamFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(firstLoadTask__13JASAramStreamFPv) {
+asm void JASAramStream::firstLoadTask(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/firstLoadTask__13JASAramStreamFPv.s"
 }
 #pragma pop
 
 
-/* 80296848-80296868 0020+00 .text      loadToAramTask__13JASAramStreamFPv                           */
+/* 80296848-80296868 0020+00 rc=1 efc=0 .text      loadToAramTask__13JASAramStreamFPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadToAramTask__13JASAramStreamFPv) {
+asm void JASAramStream::loadToAramTask(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/loadToAramTask__13JASAramStreamFPv.s"
 }
 #pragma pop
 
 
-/* 80296868-802968C8 0060+00 .text      finishTask__13JASAramStreamFPv                               */
+/* 80296868-802968C8 0060+00 rc=2 efc=0 .text      finishTask__13JASAramStreamFPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(finishTask__13JASAramStreamFPv) {
+asm void JASAramStream::finishTask(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/finishTask__13JASAramStreamFPv.s"
 }
 #pragma pop
 
 
-/* 802968C8-80296920 0058+00 .text      prepareFinishTask__13JASAramStreamFPv                        */
+/* 802968C8-80296920 0058+00 rc=1 efc=0 .text      prepareFinishTask__13JASAramStreamFPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepareFinishTask__13JASAramStreamFPv) {
+asm void JASAramStream::prepareFinishTask(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/prepareFinishTask__13JASAramStreamFPv.s"
 }
@@ -282,39 +435,39 @@ ASM_FUNCTION(prepareFinishTask__13JASAramStreamFPv) {
 
 
 /* ############################################################################################## */
-/* 8045561C-80455620 0004+00 .sdata2    @531                                                         */
+/* 8045561C-80455620 0004+00 rc=1 efc=0 .sdata2    @531                                                         */
 f32 JASAramStream__lit_531 = 127.0f;
 
-/* 80455620-80455628 0008+00 .sdata2    @533                                                         */
+/* 80455620-80455628 0008+00 rc=3 efc=0 .sdata2    @533                                                         */
 f64 JASAramStream__lit_533 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80296920-80296AE8 01C8+00 .text      headerLoad__13JASAramStreamFUli                              */
+/* 80296920-80296AE8 01C8+00 rc=1 efc=0 .text      headerLoad__13JASAramStreamFUli                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(headerLoad__13JASAramStreamFUli) {
+asm void JASAramStream::headerLoad(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/headerLoad__13JASAramStreamFUli.s"
 }
 #pragma pop
 
 
-/* 80296AE8-80296D74 028C+00 .text      load__13JASAramStreamFv                                      */
+/* 80296AE8-80296D74 028C+00 rc=2 efc=0 .text      load__13JASAramStreamFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load__13JASAramStreamFv) {
+asm void JASAramStream::load() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/load__13JASAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 80296D74-80296D94 0020+00 .text      channelProcCallback__13JASAramStreamFPv                      */
+/* 80296D74-80296D94 0020+00 rc=2 efc=0 .text      channelProcCallback__13JASAramStreamFPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(channelProcCallback__13JASAramStreamFPv) {
+asm void JASAramStream::channelProcCallback(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/channelProcCallback__13JASAramStreamFPv.s"
 }
@@ -322,7 +475,7 @@ ASM_FUNCTION(channelProcCallback__13JASAramStreamFPv) {
 
 
 /* ############################################################################################## */
-/* 803C7670-803C76A8 0034+04 .data      @613                                                         */
+/* 803C7670-803C76A8 0034+04 rc=1 efc=0 .data      @613                                                         */
 void* lit_613[14] = {
 	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
 	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x34),
@@ -341,44 +494,44 @@ void* lit_613[14] = {
 	NULL,
 };
 
-/* 80296D94-80296DF0 005C+00 .text      dvdErrorCheck__13JASAramStreamFPv                            */
+/* 80296D94-80296DF0 005C+00 rc=2 efc=0 .text      dvdErrorCheck__13JASAramStreamFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dvdErrorCheck__13JASAramStreamFPv) {
+asm void JASAramStream::dvdErrorCheck(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/dvdErrorCheck__13JASAramStreamFPv.s"
 }
 #pragma pop
 
 
-/* 80296DF0-80296E2C 003C+00 .text      channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv */
+/* 80296DF0-80296E2C 003C+00 rc=1 efc=0 .text      channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv) {
+asm void JASAramStream::channelCallback(u32 field_0, JASChannel* field_1, JASDsp::TChannel* field_2, void* field_3) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv.s"
 }
 #pragma pop
 
 
-/* 80296E2C-802974AC 0680+00 .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
+/* 80296E2C-802974AC 0680+00 rc=1 efc=0 .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel) {
+asm void JASAramStream::updateChannel(u32 field_0, JASChannel* field_1, JASDsp::TChannel* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel.s"
 }
 #pragma pop
 
 
-/* 802974AC-80297658 01AC+00 .text      channelProc__13JASAramStreamFv                               */
+/* 802974AC-80297658 01AC+00 rc=1 efc=0 .text      channelProc__13JASAramStreamFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(channelProc__13JASAramStreamFv) {
+asm void JASAramStream::channelProc() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/channelProc__13JASAramStreamFv.s"
 }
@@ -386,12 +539,12 @@ ASM_FUNCTION(channelProc__13JASAramStreamFv) {
 
 
 /* ############################################################################################## */
-/* 8039B168-8039B174 000C+00 .rodata    OSC_RELEASE_TABLE                                            */
+/* 8039B168-8039B174 000C+00 rc=1 efc=0 .rodata    OSC_RELEASE_TABLE                                            */
 SECTION_RODATA const u8 OSC_RELEASE_TABLE[12] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B174-8039B190 0018+04 .rodata    OSC_ENV                                                      */
+/* 8039B174-8039B190 0018+04 rc=1 efc=0 .rodata    OSC_ENV                                                      */
 SECTION_RODATA const void* const OSC_ENV[7] = {
 	NULL,
 	(void*)0x3F800000,
@@ -403,50 +556,49 @@ SECTION_RODATA const void* const OSC_ENV[7] = {
 	NULL,
 };
 
-/* 80431B28-80431B34 000C+00 .bss       @792                                                         */
+/* 80431B28-80431B34 000C+00 rc=1 efc=0 .bss       @792                                                         */
 u8 JASAramStream__lit_792[12];
 
-/* 80431B34-80431B48 0010+04 .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
+/* 80431B34-80431B48 0010+04 rc=5 efc=4 .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
 u8 data_80431B34[16 + 4 /* padding */];
 
-/* 80455628-80455630 0004+04 .sdata2    one$776                                                      */
+/* 80455628-80455630 0004+04 rc=1 efc=0 .sdata2    one$776                                                      */
 u8 data_80455628[8] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80297658-80297870 0218+00 .text      channelStart__13JASAramStreamFv                              */
+/* 80297658-80297870 0218+00 rc=1 efc=0 .text      channelStart__13JASAramStreamFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(channelStart__13JASAramStreamFv) {
+asm void JASAramStream::channelStart() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/channelStart__13JASAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 80297870-802978DC 006C+00 .text      channelStop__13JASAramStreamFUs                              */
+/* 80297870-802978DC 006C+00 rc=1 efc=0 .text      channelStop__13JASAramStreamFUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(channelStop__13JASAramStreamFUs) {
+asm void JASAramStream::channelStop(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/channelStop__13JASAramStreamFUs.s"
 }
 #pragma pop
 
 
-/* 802978DC-80297930 0054+00 .text      __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv             */
+/* 802978DC-80297930 0054+00 rc=6 efc=5 .text      __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802978DC) {
+extern "C" asm void func_802978DC() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/func_802978DC.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

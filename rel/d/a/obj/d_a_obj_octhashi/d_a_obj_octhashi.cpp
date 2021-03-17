@@ -6,44 +6,124 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daObjOCTHASHI_c;
+
+struct daObjOCTHASHI_c {
+	void initCcCylinder();
+	void SetCoSph();
+	void SetCoCyl();
+	void HakaiSet2(s32);
+	void HakaiMotion2();
+	void CylAction();
+	void SphAction();
+	void SphAction2();
+	void Action();
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dBgW {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct dCcD_Stts {
+	~dCcD_Stts();
+	dCcD_Stts();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initCcCylinder__15daObjOCTHASHI_cFv();
-extern "C" extern void daObjOCTHASHI_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c();
-extern "C" extern void SetCoSph__15daObjOCTHASHI_cFv();
-extern "C" extern void SetCoCyl__15daObjOCTHASHI_cFv();
-extern "C" extern void HakaiSet2__15daObjOCTHASHI_cFi();
-extern "C" extern void HakaiMotion2__15daObjOCTHASHI_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void CylAction__15daObjOCTHASHI_cFv();
-extern "C" extern void SphAction__15daObjOCTHASHI_cFv();
-extern "C" extern void SphAction2__15daObjOCTHASHI_cFv();
-extern "C" extern void Action__15daObjOCTHASHI_cFv();
-extern "C" extern void setBaseMtx__15daObjOCTHASHI_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c();
-extern "C" extern void daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c();
-extern "C" extern void CreateHeap__15daObjOCTHASHI_cFv();
-extern "C" extern void create__15daObjOCTHASHI_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__9dCcD_SttsFv();
-extern "C" extern void __ct__9dCcD_SttsFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void Create__15daObjOCTHASHI_cFv();
-extern "C" extern void Execute__15daObjOCTHASHI_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjOCTHASHI_cFv();
-extern "C" extern void Delete__15daObjOCTHASHI_cFv();
+void daObjOCTHASHI_Create(fopAc_ac_c*);
+void daObjOCTHASHI_Delete(daObjOCTHASHI_c*);
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObjOCTHASHI_Draw(daObjOCTHASHI_c*);
+void daObjOCTHASHI_Execute(daObjOCTHASHI_c*);
+bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c*);
+extern "C" void Execute__15daObjOCTHASHI_cFPPA3_A4_f();
+
+extern "C" void initCcCylinder__15daObjOCTHASHI_cFv();
+extern "C" void daObjOCTHASHI_Create__FP10fopAc_ac_c();
+extern "C" void daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c();
+extern "C" void SetCoSph__15daObjOCTHASHI_cFv();
+extern "C" void SetCoCyl__15daObjOCTHASHI_cFv();
+extern "C" void HakaiSet2__15daObjOCTHASHI_cFi();
+extern "C" void HakaiMotion2__15daObjOCTHASHI_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void CylAction__15daObjOCTHASHI_cFv();
+extern "C" void SphAction__15daObjOCTHASHI_cFv();
+extern "C" void SphAction2__15daObjOCTHASHI_cFv();
+extern "C" void Action__15daObjOCTHASHI_cFv();
+extern "C" void setBaseMtx__15daObjOCTHASHI_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c();
+extern "C" void daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c();
+extern "C" void CreateHeap__15daObjOCTHASHI_cFv();
+extern "C" void create__15daObjOCTHASHI_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__9dCcD_SttsFv();
+extern "C" void __ct__9dCcD_SttsFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void Create__15daObjOCTHASHI_cFv();
+extern "C" void Execute__15daObjOCTHASHI_cFPPA3_A4_f();
+extern "C" void Draw__15daObjOCTHASHI_cFv();
+extern "C" void Delete__15daObjOCTHASHI_cFv();
 SECTION_RODATA extern const u8 data_80CA6480[64];
 SECTION_RODATA extern const u32 lit_3681;
 SECTION_RODATA extern const u32 lit_3682;
@@ -92,7 +172,9 @@ SECTION_DATA extern void*const __vt__15daObjOCTHASHI_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -102,7 +184,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/initCcCylinder__15daObjOCTHASHI_cFv.s"
 }
@@ -113,7 +195,7 @@ ASM_FUNCTION(initCcCylinder__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOCTHASHI_Create__FP10fopAc_ac_c) {
+asm void daObjOCTHASHI_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_Create__FP10fopAc_ac_c.s"
 }
@@ -124,7 +206,7 @@ ASM_FUNCTION(daObjOCTHASHI_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c) {
+asm void daObjOCTHASHI_Delete(daObjOCTHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c.s"
 }
@@ -135,7 +217,7 @@ ASM_FUNCTION(daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCoSph__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::SetCoSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/SetCoSph__15daObjOCTHASHI_cFv.s"
 }
@@ -146,7 +228,7 @@ ASM_FUNCTION(SetCoSph__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCoCyl__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::SetCoCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/SetCoCyl__15daObjOCTHASHI_cFv.s"
 }
@@ -157,7 +239,7 @@ ASM_FUNCTION(SetCoCyl__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HakaiSet2__15daObjOCTHASHI_cFi) {
+asm void daObjOCTHASHI_c::HakaiSet2(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/HakaiSet2__15daObjOCTHASHI_cFi.s"
 }
@@ -168,7 +250,7 @@ ASM_FUNCTION(HakaiSet2__15daObjOCTHASHI_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HakaiMotion2__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::HakaiMotion2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/HakaiMotion2__15daObjOCTHASHI_cFv.s"
 }
@@ -179,7 +261,7 @@ ASM_FUNCTION(HakaiMotion2__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__5csXyzFv.s"
 }
@@ -190,7 +272,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__4cXyzFv.s"
 }
@@ -201,7 +283,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CylAction__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::CylAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/CylAction__15daObjOCTHASHI_cFv.s"
 }
@@ -212,7 +294,7 @@ ASM_FUNCTION(CylAction__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SphAction__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::SphAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/SphAction__15daObjOCTHASHI_cFv.s"
 }
@@ -223,7 +305,7 @@ ASM_FUNCTION(SphAction__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SphAction2__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::SphAction2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/SphAction2__15daObjOCTHASHI_cFv.s"
 }
@@ -234,7 +316,7 @@ ASM_FUNCTION(SphAction2__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/Action__15daObjOCTHASHI_cFv.s"
 }
@@ -245,7 +327,7 @@ ASM_FUNCTION(Action__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/setBaseMtx__15daObjOCTHASHI_cFv.s"
 }
@@ -256,7 +338,7 @@ ASM_FUNCTION(setBaseMtx__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -267,7 +349,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c) {
+asm void daObjOCTHASHI_Draw(daObjOCTHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c.s"
 }
@@ -278,7 +360,7 @@ ASM_FUNCTION(daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c) {
+asm void daObjOCTHASHI_Execute(daObjOCTHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c.s"
 }
@@ -289,7 +371,7 @@ ASM_FUNCTION(daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/CreateHeap__15daObjOCTHASHI_cFv.s"
 }
@@ -300,7 +382,7 @@ ASM_FUNCTION(CreateHeap__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/create__15daObjOCTHASHI_cFv.s"
 }
@@ -311,7 +393,7 @@ ASM_FUNCTION(create__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__8cM3dGCylFv.s"
 }
@@ -322,7 +404,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__8cM3dGAabFv.s"
 }
@@ -333,7 +415,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__8dCcD_SphFv.s"
 }
@@ -344,7 +426,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__8dCcD_SphFv.s"
 }
@@ -355,7 +437,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__8cM3dGSphFv.s"
 }
@@ -366,7 +448,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dCcD_SttsFv) {
+asm dCcD_Stts::~dCcD_Stts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__9dCcD_SttsFv.s"
 }
@@ -377,7 +459,7 @@ ASM_FUNCTION(__dt__9dCcD_SttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dCcD_SttsFv) {
+asm dCcD_Stts::dCcD_Stts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__9dCcD_SttsFv.s"
 }
@@ -388,7 +470,7 @@ ASM_FUNCTION(__ct__9dCcD_SttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__10dCcD_GSttsFv.s"
 }
@@ -396,43 +478,28 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 
 
 /* 80CA624C-80CA6250 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA6250-80CA6254 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA6254-80CA625C 0008+00 .text      daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c.s"
+bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CA625C-80CA62A4 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__dt__10cCcD_GSttsFv.s"
 }
@@ -443,7 +510,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/func_80CA62A4.s"
 }
@@ -454,7 +521,7 @@ ASM_FUNCTION(Create__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjOCTHASHI_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjOCTHASHI_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/Execute__15daObjOCTHASHI_cFPPA3_A4_f.s"
 }
@@ -465,7 +532,7 @@ ASM_FUNCTION(Execute__15daObjOCTHASHI_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/Draw__15daObjOCTHASHI_cFv.s"
 }
@@ -476,7 +543,7 @@ ASM_FUNCTION(Draw__15daObjOCTHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjOCTHASHI_cFv) {
+asm void daObjOCTHASHI_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/Delete__15daObjOCTHASHI_cFv.s"
 }

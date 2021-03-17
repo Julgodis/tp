@@ -6,33 +6,91 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct J3DModelData;
+struct cXyz;
+struct daObjItaRope_c;
+
+struct J3DModelData {
+};
+
+struct Sakuita_c {
+	void setModelData(J3DModelData*);
+	void draw();
+	void initBaseMtx();
+	void setBaseMtx();
+	void setPlatePos(cXyz*);
+	void calcAngle();
+	~Sakuita_c();
+	Sakuita_c();
+};
+
+struct cXyz {
+};
+
+struct daObjItaRope_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void setNormalRopePos();
+};
+
+struct fopAc_ac_c {
+};
+
+struct RopeWork_c {
+	~RopeWork_c();
+	RopeWork_c();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setModelData__9Sakuita_cFP12J3DModelData();
-extern "C" extern void create__9Sakuita_cFP4cXyzsSc();
-extern "C" extern void execute__9Sakuita_cFP4cXyzs();
-extern "C" extern void draw__9Sakuita_cFv();
-extern "C" extern void initBaseMtx__9Sakuita_cFv();
-extern "C" extern void setBaseMtx__9Sakuita_cFv();
-extern "C" extern void setPlatePos__9Sakuita_cFP4cXyz();
-extern "C" extern void calcAngle__9Sakuita_cFv();
-extern "C" extern void create_init__14daObjItaRope_cFv();
-extern "C" extern void initBaseMtx__14daObjItaRope_cFv();
-extern "C" extern void setBaseMtx__14daObjItaRope_cFv();
-extern "C" extern void setNormalRopePos__14daObjItaRope_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__9Sakuita_cFv();
-extern "C" extern void __ct__9Sakuita_cFv();
-extern "C" extern void __dt__10RopeWork_cFv();
-extern "C" extern void __ct__10RopeWork_cFv();
-extern "C" extern void daObjItaRope_Draw__FP14daObjItaRope_c();
-extern "C" extern void daObjItaRope_Execute__FP14daObjItaRope_c();
-extern "C" extern void daObjItaRope_IsDelete__FP14daObjItaRope_c();
-extern "C" extern void daObjItaRope_Delete__FP14daObjItaRope_c();
-extern "C" extern void daObjItaRope_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+extern "C" void create__9Sakuita_cFP4cXyzsSc();
+extern "C" void execute__9Sakuita_cFP4cXyzs();
+void createSolidHeap(fopAc_ac_c*);
+void daObjItaRope_Draw(daObjItaRope_c*);
+void daObjItaRope_Execute(daObjItaRope_c*);
+bool daObjItaRope_IsDelete(daObjItaRope_c*);
+void daObjItaRope_Delete(daObjItaRope_c*);
+void daObjItaRope_Create(fopAc_ac_c*);
+
+extern "C" void setModelData__9Sakuita_cFP12J3DModelData();
+extern "C" void create__9Sakuita_cFP4cXyzsSc();
+extern "C" void execute__9Sakuita_cFP4cXyzs();
+extern "C" void draw__9Sakuita_cFv();
+extern "C" void initBaseMtx__9Sakuita_cFv();
+extern "C" void setBaseMtx__9Sakuita_cFv();
+extern "C" void setPlatePos__9Sakuita_cFP4cXyz();
+extern "C" void calcAngle__9Sakuita_cFv();
+extern "C" void create_init__14daObjItaRope_cFv();
+extern "C" void initBaseMtx__14daObjItaRope_cFv();
+extern "C" void setBaseMtx__14daObjItaRope_cFv();
+extern "C" void setNormalRopePos__14daObjItaRope_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__9Sakuita_cFv();
+extern "C" void __ct__9Sakuita_cFv();
+extern "C" void __dt__10RopeWork_cFv();
+extern "C" void __ct__10RopeWork_cFv();
+extern "C" void daObjItaRope_Draw__FP14daObjItaRope_c();
+extern "C" void daObjItaRope_Execute__FP14daObjItaRope_c();
+extern "C" bool daObjItaRope_IsDelete__FP14daObjItaRope_c();
+extern "C" void daObjItaRope_Delete__FP14daObjItaRope_c();
+extern "C" void daObjItaRope_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__14daObjItaRope_c[20];
 SECTION_RODATA extern const u32 lit_3634;
 SECTION_RODATA extern const u8 lit_3635[4];
@@ -69,7 +127,9 @@ SECTION_DATA extern void*const __vt__10dCcD_GStts[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +139,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelData__9Sakuita_cFP12J3DModelData) {
+asm void Sakuita_c::setModelData(J3DModelData* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/setModelData__9Sakuita_cFP12J3DModelData.s"
 }
@@ -90,7 +150,7 @@ ASM_FUNCTION(setModelData__9Sakuita_cFP12J3DModelData) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9Sakuita_cFP4cXyzsSc) {
+extern "C" asm void create__9Sakuita_cFP4cXyzsSc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/create__9Sakuita_cFP4cXyzsSc.s"
 }
@@ -101,7 +161,7 @@ ASM_FUNCTION(create__9Sakuita_cFP4cXyzsSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9Sakuita_cFP4cXyzs) {
+extern "C" asm void execute__9Sakuita_cFP4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/execute__9Sakuita_cFP4cXyzs.s"
 }
@@ -112,7 +172,7 @@ ASM_FUNCTION(execute__9Sakuita_cFP4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9Sakuita_cFv) {
+asm void Sakuita_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/draw__9Sakuita_cFv.s"
 }
@@ -123,7 +183,7 @@ ASM_FUNCTION(draw__9Sakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__9Sakuita_cFv) {
+asm void Sakuita_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/initBaseMtx__9Sakuita_cFv.s"
 }
@@ -134,7 +194,7 @@ ASM_FUNCTION(initBaseMtx__9Sakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9Sakuita_cFv) {
+asm void Sakuita_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/setBaseMtx__9Sakuita_cFv.s"
 }
@@ -145,7 +205,7 @@ ASM_FUNCTION(setBaseMtx__9Sakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlatePos__9Sakuita_cFP4cXyz) {
+asm void Sakuita_c::setPlatePos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/setPlatePos__9Sakuita_cFP4cXyz.s"
 }
@@ -156,7 +216,7 @@ ASM_FUNCTION(setPlatePos__9Sakuita_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAngle__9Sakuita_cFv) {
+asm void Sakuita_c::calcAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/calcAngle__9Sakuita_cFv.s"
 }
@@ -167,7 +227,7 @@ ASM_FUNCTION(calcAngle__9Sakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daObjItaRope_cFv) {
+asm void daObjItaRope_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/create_init__14daObjItaRope_cFv.s"
 }
@@ -178,7 +238,7 @@ ASM_FUNCTION(create_init__14daObjItaRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjItaRope_cFv) {
+asm void daObjItaRope_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/initBaseMtx__14daObjItaRope_cFv.s"
 }
@@ -189,7 +249,7 @@ ASM_FUNCTION(initBaseMtx__14daObjItaRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjItaRope_cFv) {
+asm void daObjItaRope_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/setBaseMtx__14daObjItaRope_cFv.s"
 }
@@ -200,7 +260,7 @@ ASM_FUNCTION(setBaseMtx__14daObjItaRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalRopePos__14daObjItaRope_cFv) {
+asm void daObjItaRope_c::setNormalRopePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/setNormalRopePos__14daObjItaRope_cFv.s"
 }
@@ -211,7 +271,7 @@ ASM_FUNCTION(setNormalRopePos__14daObjItaRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -222,7 +282,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9Sakuita_cFv) {
+asm Sakuita_c::~Sakuita_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__dt__9Sakuita_cFv.s"
 }
@@ -230,21 +290,16 @@ ASM_FUNCTION(__dt__9Sakuita_cFv) {
 
 
 /* 80CC6420-80CC6424 0004+00 .text      __ct__9Sakuita_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__9Sakuita_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__ct__9Sakuita_cFv.s"
+Sakuita_c::Sakuita_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC6424-80CC6460 003C+00 .text      __dt__10RopeWork_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10RopeWork_cFv) {
+asm RopeWork_c::~RopeWork_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__dt__10RopeWork_cFv.s"
 }
@@ -252,21 +307,16 @@ ASM_FUNCTION(__dt__10RopeWork_cFv) {
 
 
 /* 80CC6460-80CC6464 0004+00 .text      __ct__10RopeWork_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__10RopeWork_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__ct__10RopeWork_cFv.s"
+RopeWork_c::RopeWork_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC6464-80CC652C 00C8+00 .text      daObjItaRope_Draw__FP14daObjItaRope_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjItaRope_Draw__FP14daObjItaRope_c) {
+asm void daObjItaRope_Draw(daObjItaRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Draw__FP14daObjItaRope_c.s"
 }
@@ -277,7 +327,7 @@ ASM_FUNCTION(daObjItaRope_Draw__FP14daObjItaRope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjItaRope_Execute__FP14daObjItaRope_c) {
+asm void daObjItaRope_Execute(daObjItaRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Execute__FP14daObjItaRope_c.s"
 }
@@ -285,21 +335,16 @@ ASM_FUNCTION(daObjItaRope_Execute__FP14daObjItaRope_c) {
 
 
 /* 80CC6610-80CC6618 0008+00 .text      daObjItaRope_IsDelete__FP14daObjItaRope_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjItaRope_IsDelete__FP14daObjItaRope_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_IsDelete__FP14daObjItaRope_c.s"
+bool daObjItaRope_IsDelete(daObjItaRope_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CC6618-80CC6738 0120+00 .text      daObjItaRope_Delete__FP14daObjItaRope_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjItaRope_Delete__FP14daObjItaRope_c) {
+asm void daObjItaRope_Delete(daObjItaRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Delete__FP14daObjItaRope_c.s"
 }
@@ -310,7 +355,7 @@ ASM_FUNCTION(daObjItaRope_Delete__FP14daObjItaRope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjItaRope_Create__FP10fopAc_ac_c) {
+asm void daObjItaRope_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Create__FP10fopAc_ac_c.s"
 }
@@ -321,7 +366,7 @@ ASM_FUNCTION(daObjItaRope_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__dt__10dCcD_GSttsFv.s"
 }
@@ -332,7 +377,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__dt__10cCcD_GSttsFv.s"
 }

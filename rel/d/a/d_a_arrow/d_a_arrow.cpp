@@ -6,61 +6,160 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daArrow_c;
+struct dCcD_GObjInf;
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daArrow_c {
+	void createHeap();
+	void atHitCallBack(dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+	void decAlphaBlur();
+	void setBlur();
+	void setLightArrowHitMark(cXyz const*);
+	void setLightChargeEffect(s32);
+	void setArrowWaterNextPos(cXyz*, cXyz*);
+	void setArrowAt(f32);
+	void arrowShooting();
+	void setBombArrowExplode(cXyz*);
+	void setRoomInfo();
+	void clearNearActorData();
+	void getVibAngle();
+	void setNormalMatrix();
+	void setSmokePos();
+	void setKeepMatrix();
+	void setStopActorMatrix();
+	void setBombMoveEffect();
+	void checkReget();
+	void procWait();
+	void procMove();
+	void procReturnInit(s32);
+	void procReturn();
+	void procBGStop();
+	void procActorStop();
+	void procActorControllStop();
+	void procSlingHitInit(cXyz*, dCcD_GObjInf*);
+	void procSlingHit();
+	void execute();
+	void draw();
+	void create();
+	~daArrow_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__9daArrow_cFv();
-extern "C" extern void daArrow_createHeap__FP10fopAc_ac_c();
-extern "C" extern void atHitCallBack__9daArrow_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void daArrow_atHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void decAlphaBlur__9daArrow_cFv();
-extern "C" extern void setBlur__9daArrow_cFv();
-extern "C" extern void setLightArrowHitMark__9daArrow_cFPC4cXyz();
-extern "C" extern void setLightChargeEffect__9daArrow_cFi();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void setArrowWaterNextPos__9daArrow_cFP4cXyzP4cXyz();
-extern "C" extern void setArrowAt__9daArrow_cFf();
-extern "C" extern void arrowShooting__9daArrow_cFv();
-extern "C" extern void setBombArrowExplode__9daArrow_cFP4cXyz();
-extern "C" extern void setRoomInfo__9daArrow_cFv();
-extern "C" extern void clearNearActorData__9daArrow_cFv();
-extern "C" extern void getVibAngle__9daArrow_cFv();
-extern "C" extern void setNormalMatrix__9daArrow_cFv();
-extern "C" extern void setSmokePos__9daArrow_cFv();
-extern "C" extern void setKeepMatrix__9daArrow_cFv();
-extern "C" extern void setStopActorMatrix__9daArrow_cFv();
-extern "C" extern void setBombMoveEffect__9daArrow_cFv();
-extern "C" extern void checkReget__9daArrow_cFv();
-extern "C" extern void procWait__9daArrow_cFv();
-extern "C" extern void procMove__9daArrow_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void procReturnInit__9daArrow_cFi();
-extern "C" extern void procReturn__9daArrow_cFv();
-extern "C" extern void procBGStop__9daArrow_cFv();
-extern "C" extern void procActorStop__9daArrow_cFv();
-extern "C" extern void procActorControllStop__9daArrow_cFv();
-extern "C" extern void procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf();
-extern "C" extern void procSlingHit__9daArrow_cFv();
-extern "C" extern void execute__9daArrow_cFv();
-extern "C" extern void daArrow_execute__FP9daArrow_c();
-extern "C" extern void draw__9daArrow_cFv();
-extern "C" extern void daArrow_draw__FP9daArrow_c();
-extern "C" extern void daAlink_searchHorseZelda__FP10fopAc_ac_cPv();
-extern "C" extern void create__9daArrow_cFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daArrow_create__FP9daArrow_c();
-extern "C" extern void __dt__9daArrow_cFv();
-extern "C" extern void daArrow_delete__FP9daArrow_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void func_8049DC58();
+void daArrow_createHeap(fopAc_ac_c*);
+void daArrow_atHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daArrow_execute(daArrow_c*);
+void daArrow_draw(daArrow_c*);
+void daAlink_searchHorseZelda(fopAc_ac_c*, void*);
+void daArrow_create(daArrow_c*);
+void daArrow_delete(daArrow_c*);
+extern "C" void func_8049DC58();
+
+extern "C" void createHeap__9daArrow_cFv();
+extern "C" void daArrow_createHeap__FP10fopAc_ac_c();
+extern "C" void atHitCallBack__9daArrow_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void daArrow_atHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void decAlphaBlur__9daArrow_cFv();
+extern "C" void setBlur__9daArrow_cFv();
+extern "C" void setLightArrowHitMark__9daArrow_cFPC4cXyz();
+extern "C" void setLightChargeEffect__9daArrow_cFi();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setArrowWaterNextPos__9daArrow_cFP4cXyzP4cXyz();
+extern "C" void setArrowAt__9daArrow_cFf();
+extern "C" void arrowShooting__9daArrow_cFv();
+extern "C" void setBombArrowExplode__9daArrow_cFP4cXyz();
+extern "C" void setRoomInfo__9daArrow_cFv();
+extern "C" void clearNearActorData__9daArrow_cFv();
+extern "C" void getVibAngle__9daArrow_cFv();
+extern "C" void setNormalMatrix__9daArrow_cFv();
+extern "C" void setSmokePos__9daArrow_cFv();
+extern "C" void setKeepMatrix__9daArrow_cFv();
+extern "C" void setStopActorMatrix__9daArrow_cFv();
+extern "C" void setBombMoveEffect__9daArrow_cFv();
+extern "C" void checkReget__9daArrow_cFv();
+extern "C" void procWait__9daArrow_cFv();
+extern "C" void procMove__9daArrow_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void procReturnInit__9daArrow_cFi();
+extern "C" void procReturn__9daArrow_cFv();
+extern "C" void procBGStop__9daArrow_cFv();
+extern "C" void procActorStop__9daArrow_cFv();
+extern "C" void procActorControllStop__9daArrow_cFv();
+extern "C" void procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf();
+extern "C" void procSlingHit__9daArrow_cFv();
+extern "C" void execute__9daArrow_cFv();
+extern "C" void daArrow_execute__FP9daArrow_c();
+extern "C" void draw__9daArrow_cFv();
+extern "C" void daArrow_draw__FP9daArrow_c();
+extern "C" void daAlink_searchHorseZelda__FP10fopAc_ac_cPv();
+extern "C" void create__9daArrow_cFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daArrow_create__FP9daArrow_c();
+extern "C" void __dt__9daArrow_cFv();
+extern "C" void daArrow_delete__FP9daArrow_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void func_8049DC58();
 SECTION_RODATA extern const u8 lit_3768[12];
 SECTION_RODATA extern const u8 l_atCpsSrc[76];
 SECTION_RODATA extern const u8 l_coSphSrc[64];
@@ -180,8 +279,11 @@ SECTION_BSS extern u8 data_8049E020[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -191,7 +293,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__9daArrow_cFv) {
+asm void daArrow_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/createHeap__9daArrow_cFv.s"
 }
@@ -202,7 +304,7 @@ ASM_FUNCTION(createHeap__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_createHeap__FP10fopAc_ac_c) {
+asm void daArrow_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_createHeap__FP10fopAc_ac_c.s"
 }
@@ -213,7 +315,7 @@ ASM_FUNCTION(daArrow_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(atHitCallBack__9daArrow_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daArrow_c::atHitCallBack(dCcD_GObjInf* field_0, fopAc_ac_c* field_1, dCcD_GObjInf* field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/atHitCallBack__9daArrow_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -224,7 +326,7 @@ ASM_FUNCTION(atHitCallBack__9daArrow_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjI
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_atHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daArrow_atHitCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_atHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -235,7 +337,7 @@ ASM_FUNCTION(daArrow_atHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decAlphaBlur__9daArrow_cFv) {
+asm void daArrow_c::decAlphaBlur() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/decAlphaBlur__9daArrow_cFv.s"
 }
@@ -246,7 +348,7 @@ ASM_FUNCTION(decAlphaBlur__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlur__9daArrow_cFv) {
+asm void daArrow_c::setBlur() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setBlur__9daArrow_cFv.s"
 }
@@ -257,7 +359,7 @@ ASM_FUNCTION(setBlur__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightArrowHitMark__9daArrow_cFPC4cXyz) {
+asm void daArrow_c::setLightArrowHitMark(cXyz const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setLightArrowHitMark__9daArrow_cFPC4cXyz.s"
 }
@@ -268,7 +370,7 @@ ASM_FUNCTION(setLightArrowHitMark__9daArrow_cFPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightChargeEffect__9daArrow_cFi) {
+asm void daArrow_c::setLightChargeEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setLightChargeEffect__9daArrow_cFi.s"
 }
@@ -279,7 +381,7 @@ ASM_FUNCTION(setLightChargeEffect__9daArrow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__4cXyzFv.s"
 }
@@ -290,7 +392,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowWaterNextPos__9daArrow_cFP4cXyzP4cXyz) {
+asm void daArrow_c::setArrowWaterNextPos(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setArrowWaterNextPos__9daArrow_cFP4cXyzP4cXyz.s"
 }
@@ -301,7 +403,7 @@ ASM_FUNCTION(setArrowWaterNextPos__9daArrow_cFP4cXyzP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowAt__9daArrow_cFf) {
+asm void daArrow_c::setArrowAt(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setArrowAt__9daArrow_cFf.s"
 }
@@ -312,7 +414,7 @@ ASM_FUNCTION(setArrowAt__9daArrow_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(arrowShooting__9daArrow_cFv) {
+asm void daArrow_c::arrowShooting() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/arrowShooting__9daArrow_cFv.s"
 }
@@ -323,7 +425,7 @@ ASM_FUNCTION(arrowShooting__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBombArrowExplode__9daArrow_cFP4cXyz) {
+asm void daArrow_c::setBombArrowExplode(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setBombArrowExplode__9daArrow_cFP4cXyz.s"
 }
@@ -334,7 +436,7 @@ ASM_FUNCTION(setBombArrowExplode__9daArrow_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daArrow_cFv) {
+asm void daArrow_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setRoomInfo__9daArrow_cFv.s"
 }
@@ -345,7 +447,7 @@ ASM_FUNCTION(setRoomInfo__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearNearActorData__9daArrow_cFv) {
+asm void daArrow_c::clearNearActorData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/clearNearActorData__9daArrow_cFv.s"
 }
@@ -356,7 +458,7 @@ ASM_FUNCTION(clearNearActorData__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVibAngle__9daArrow_cFv) {
+asm void daArrow_c::getVibAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/getVibAngle__9daArrow_cFv.s"
 }
@@ -367,7 +469,7 @@ ASM_FUNCTION(getVibAngle__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalMatrix__9daArrow_cFv) {
+asm void daArrow_c::setNormalMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setNormalMatrix__9daArrow_cFv.s"
 }
@@ -378,7 +480,7 @@ ASM_FUNCTION(setNormalMatrix__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokePos__9daArrow_cFv) {
+asm void daArrow_c::setSmokePos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setSmokePos__9daArrow_cFv.s"
 }
@@ -389,7 +491,7 @@ ASM_FUNCTION(setSmokePos__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKeepMatrix__9daArrow_cFv) {
+asm void daArrow_c::setKeepMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setKeepMatrix__9daArrow_cFv.s"
 }
@@ -400,7 +502,7 @@ ASM_FUNCTION(setKeepMatrix__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStopActorMatrix__9daArrow_cFv) {
+asm void daArrow_c::setStopActorMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setStopActorMatrix__9daArrow_cFv.s"
 }
@@ -411,7 +513,7 @@ ASM_FUNCTION(setStopActorMatrix__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBombMoveEffect__9daArrow_cFv) {
+asm void daArrow_c::setBombMoveEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/setBombMoveEffect__9daArrow_cFv.s"
 }
@@ -422,7 +524,7 @@ ASM_FUNCTION(setBombMoveEffect__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkReget__9daArrow_cFv) {
+asm void daArrow_c::checkReget() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/checkReget__9daArrow_cFv.s"
 }
@@ -433,7 +535,7 @@ ASM_FUNCTION(checkReget__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWait__9daArrow_cFv) {
+asm void daArrow_c::procWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procWait__9daArrow_cFv.s"
 }
@@ -444,7 +546,7 @@ ASM_FUNCTION(procWait__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMove__9daArrow_cFv) {
+asm void daArrow_c::procMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procMove__9daArrow_cFv.s"
 }
@@ -455,7 +557,7 @@ ASM_FUNCTION(procMove__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__8cM3dGPlaFv.s"
 }
@@ -466,7 +568,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procReturnInit__9daArrow_cFi) {
+asm void daArrow_c::procReturnInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procReturnInit__9daArrow_cFi.s"
 }
@@ -477,7 +579,7 @@ ASM_FUNCTION(procReturnInit__9daArrow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procReturn__9daArrow_cFv) {
+asm void daArrow_c::procReturn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procReturn__9daArrow_cFv.s"
 }
@@ -488,7 +590,7 @@ ASM_FUNCTION(procReturn__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procBGStop__9daArrow_cFv) {
+asm void daArrow_c::procBGStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procBGStop__9daArrow_cFv.s"
 }
@@ -499,7 +601,7 @@ ASM_FUNCTION(procBGStop__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procActorStop__9daArrow_cFv) {
+asm void daArrow_c::procActorStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procActorStop__9daArrow_cFv.s"
 }
@@ -510,7 +612,7 @@ ASM_FUNCTION(procActorStop__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procActorControllStop__9daArrow_cFv) {
+asm void daArrow_c::procActorControllStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procActorControllStop__9daArrow_cFv.s"
 }
@@ -521,7 +623,7 @@ ASM_FUNCTION(procActorControllStop__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf) {
+asm void daArrow_c::procSlingHitInit(cXyz* field_0, dCcD_GObjInf* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf.s"
 }
@@ -532,7 +634,7 @@ ASM_FUNCTION(procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procSlingHit__9daArrow_cFv) {
+asm void daArrow_c::procSlingHit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/procSlingHit__9daArrow_cFv.s"
 }
@@ -543,7 +645,7 @@ ASM_FUNCTION(procSlingHit__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daArrow_cFv) {
+asm void daArrow_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/execute__9daArrow_cFv.s"
 }
@@ -554,7 +656,7 @@ ASM_FUNCTION(execute__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_execute__FP9daArrow_c) {
+asm void daArrow_execute(daArrow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_execute__FP9daArrow_c.s"
 }
@@ -565,7 +667,7 @@ ASM_FUNCTION(daArrow_execute__FP9daArrow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daArrow_cFv) {
+asm void daArrow_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/draw__9daArrow_cFv.s"
 }
@@ -576,7 +678,7 @@ ASM_FUNCTION(draw__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_draw__FP9daArrow_c) {
+asm void daArrow_draw(daArrow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_draw__FP9daArrow_c.s"
 }
@@ -587,7 +689,7 @@ ASM_FUNCTION(daArrow_draw__FP9daArrow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAlink_searchHorseZelda__FP10fopAc_ac_cPv) {
+asm void daAlink_searchHorseZelda(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daAlink_searchHorseZelda__FP10fopAc_ac_cPv.s"
 }
@@ -598,7 +700,7 @@ ASM_FUNCTION(daAlink_searchHorseZelda__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daArrow_cFv) {
+asm void daArrow_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/create__9daArrow_cFv.s"
 }
@@ -606,21 +708,16 @@ ASM_FUNCTION(create__9daArrow_cFv) {
 
 
 /* 8049D808-8049D80C 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049D80C-8049D880 0074+00 .text      __dt__18dPa_levelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -631,7 +728,7 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__8cM3dGSphFv.s"
 }
@@ -642,7 +739,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__8cM3dGAabFv.s"
 }
@@ -653,7 +750,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__10dCcD_GSttsFv.s"
 }
@@ -664,7 +761,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_create__FP9daArrow_c) {
+asm void daArrow_create(daArrow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_create__FP9daArrow_c.s"
 }
@@ -675,7 +772,7 @@ ASM_FUNCTION(daArrow_create__FP9daArrow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daArrow_cFv) {
+asm daArrow_c::~daArrow_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__9daArrow_cFv.s"
 }
@@ -686,7 +783,7 @@ ASM_FUNCTION(__dt__9daArrow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daArrow_delete__FP9daArrow_c) {
+asm void daArrow_delete(daArrow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_delete__FP9daArrow_c.s"
 }
@@ -697,7 +794,7 @@ ASM_FUNCTION(daArrow_delete__FP9daArrow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/__dt__10cCcD_GSttsFv.s"
 }
@@ -705,54 +802,34 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 
 
 /* 8049DC48-8049DC4C 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC4C-8049DC50 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC50-8049DC54 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC54-8049DC58 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC58-8049DC74 001C+00 .text      cLib_calcTimer<s>__FPs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8049DC58) {
+extern "C" asm void func_8049DC58() {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/func_8049DC58.s"
 }

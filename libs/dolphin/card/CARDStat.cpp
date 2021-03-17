@@ -9,73 +9,89 @@
 // Forward References:
 // 
 
-extern "C" extern void UpdateIconOffsets();
-extern "C" extern void CARDGetStatus();
-extern "C" extern void CARDSetStatusAsync();
-extern "C" extern void CARDSetStatus();
+extern "C" static void UpdateIconOffsets();
+extern "C" void CARDGetStatus();
+extern "C" static void CARDSetStatusAsync();
+extern "C" void CARDSetStatus();
+
+extern "C" static void UpdateIconOffsets();
+extern "C" void CARDGetStatus();
+extern "C" static void CARDSetStatusAsync();
+extern "C" void CARDSetStatus();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void OSGetTime();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDGetDirBlock();
-extern "C" extern void __CARDUpdateDir();
-extern "C" extern void __CARDIsWritable();
-extern "C" extern void __CARDIsReadable();
-extern "C" extern void __div2i();
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDIsWritable();
+extern "C" void __CARDIsReadable();
+extern "C" void __div2i();
+
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDIsWritable();
+extern "C" void __CARDIsReadable();
+extern "C" void __div2i();
 
 // 
 // Declarations:
 // 
 
-/* 80358C90-80358E88 01F8+00 .text      UpdateIconOffsets                                            */
+/* 80358C90-80358E88 01F8+00 rc=2 efc=0 .text      UpdateIconOffsets                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(UpdateIconOffsets) {
+extern "C" asm static void UpdateIconOffsets() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/UpdateIconOffsets.s"
 }
 #pragma pop
 
 
-/* 80358E88-80358F9C 0114+00 .text      CARDGetStatus                                                */
+/* 80358E88-80358F9C 0114+00 rc=2 efc=2 .text      CARDGetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDGetStatus) {
+extern "C" asm void CARDGetStatus() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDGetStatus.s"
 }
 #pragma pop
 
 
-/* 80358F9C-80359110 0174+00 .text      CARDSetStatusAsync                                           */
+/* 80358F9C-80359110 0174+00 rc=1 efc=0 .text      CARDSetStatusAsync                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDSetStatusAsync) {
+extern "C" asm static void CARDSetStatusAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDSetStatusAsync.s"
 }
 #pragma pop
 
 
-/* 80359110-80359158 0048+00 .text      CARDSetStatus                                                */
+/* 80359110-80359158 0048+00 rc=1 efc=1 .text      CARDSetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDSetStatus) {
+extern "C" asm void CARDSetStatus() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDSetStatus.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

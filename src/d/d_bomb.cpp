@@ -6,65 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBomb_c (dBomb_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dBomb_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dBomb_c) */
+struct dBomb_c {
+	// fopAc_ac_c
+	/* 80031F94 */ void checkStateCarry();
+	/* 80031FCC */ void checkFlowerBombWait(fopAc_ac_c*);
+	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
+	/* 8003201C */ void checkInsectBombMove(fopAc_ac_c*);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void checkStateCarry__7dBomb_cFv();
-extern "C" extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
-extern "C" extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
-extern "C" extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
+
+extern "C" void checkStateCarry__7dBomb_cFv();
+extern "C" void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
+extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+extern "C" void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80031F94-80031FCC 0038+00 .text      checkStateCarry__7dBomb_cFv                                  */
+/* 80031F94-80031FCC 0038+00 rc=0 efc=0 .text      checkStateCarry__7dBomb_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkStateCarry__7dBomb_cFv) {
+asm void dBomb_c::checkStateCarry() {
 	nofralloc
 #include "asm/d/d_bomb/checkStateCarry__7dBomb_cFv.s"
 }
 #pragma pop
 
 
-/* 80031FCC-80031FF4 0028+00 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  */
+/* 80031FCC-80031FF4 0028+00 rc=0 efc=0 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c) {
+asm void dBomb_c::checkFlowerBombWait(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_bomb/checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80031FF4-8003201C 0028+00 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       */
+/* 80031FF4-8003201C 0028+00 rc=0 efc=0 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterBomb__7dBomb_cFP10fopAc_ac_c) {
+asm void dBomb_c::checkWaterBomb(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_bomb/checkWaterBomb__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8003201C-80032044 0028+00 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  */
+/* 8003201C-80032044 0028+00 rc=0 efc=0 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkInsectBombMove__7dBomb_cFP10fopAc_ac_c) {
+asm void dBomb_c::checkInsectBombMove(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_bomb/checkInsectBombMove__7dBomb_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

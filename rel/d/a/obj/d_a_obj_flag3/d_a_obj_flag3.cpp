@@ -6,34 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct daObjFlag3_c;
+
+struct daObjFlag3_c {
+	void createHeap();
+	void execute();
+	~daObjFlag3_c();
+	void create();
+	void create_init();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct FlagCloth2_c {
+	void execute();
+	void calcFlagNormal(cXyz*, s32);
+	void calcFlagFactor(cXyz*, cXyz*, cXyz*, s32);
+	~FlagCloth2_c();
+	void initFlagPos(cXyz*, fopAc_ac_c*);
+	void draw();
+	void getTargetPos();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct J3DLightObj {
+	J3DLightObj();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__12daObjFlag3_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjFlag3_Draw__FP12daObjFlag3_c();
-extern "C" extern void daObjFlag3_Execute__FP12daObjFlag3_c();
-extern "C" extern void execute__12daObjFlag3_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void execute__12FlagCloth2_cFv();
-extern "C" extern void calcFlagNormal__12FlagCloth2_cFP4cXyzi();
-extern "C" extern void calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi();
-extern "C" extern void daObjFlag3_IsDelete__FP12daObjFlag3_c();
-extern "C" extern void daObjFlag3_Delete__FP12daObjFlag3_c();
-extern "C" extern void __dt__12daObjFlag3_cFv();
-extern "C" extern void __dt__12FlagCloth2_cFv();
-extern "C" extern void daObjFlag3_Create__FP10fopAc_ac_c();
-extern "C" extern void create__12daObjFlag3_cFv();
-extern "C" extern void create_init__12daObjFlag3_cFv();
-extern "C" extern void initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void draw__12FlagCloth2_cFv();
-extern "C" extern void getTargetPos__12FlagCloth2_cFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjFlag3_Draw(daObjFlag3_c*);
+void daObjFlag3_Execute(daObjFlag3_c*);
+bool daObjFlag3_IsDelete(daObjFlag3_c*);
+void daObjFlag3_Delete(daObjFlag3_c*);
+void daObjFlag3_Create(fopAc_ac_c*);
+
+extern "C" void createHeap__12daObjFlag3_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjFlag3_Draw__FP12daObjFlag3_c();
+extern "C" void daObjFlag3_Execute__FP12daObjFlag3_c();
+extern "C" void execute__12daObjFlag3_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void execute__12FlagCloth2_cFv();
+extern "C" void calcFlagNormal__12FlagCloth2_cFP4cXyzi();
+extern "C" void calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi();
+extern "C" bool daObjFlag3_IsDelete__FP12daObjFlag3_c();
+extern "C" void daObjFlag3_Delete__FP12daObjFlag3_c();
+extern "C" void __dt__12daObjFlag3_cFv();
+extern "C" void __dt__12FlagCloth2_cFv();
+extern "C" void daObjFlag3_Create__FP10fopAc_ac_c();
+extern "C" void create__12daObjFlag3_cFv();
+extern "C" void create_init__12daObjFlag3_cFv();
+extern "C" void initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void draw__12FlagCloth2_cFv();
+extern "C" void getTargetPos__12FlagCloth2_cFv();
 SECTION_RODATA extern const u8 M_attr__12daObjFlag3_c[20];
 SECTION_RODATA extern const u8 lit_3637[32];
 SECTION_RODATA extern const u8 lit_3672[36];
@@ -69,7 +130,9 @@ SECTION_DATA extern void*const __vt__12FlagCloth2_c[5];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +142,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__12daObjFlag3_cFv) {
+asm void daObjFlag3_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/createHeap__12daObjFlag3_cFv.s"
 }
@@ -90,7 +153,7 @@ ASM_FUNCTION(createHeap__12daObjFlag3_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -101,7 +164,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag3_Draw__FP12daObjFlag3_c) {
+asm void daObjFlag3_Draw(daObjFlag3_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Draw__FP12daObjFlag3_c.s"
 }
@@ -112,7 +175,7 @@ ASM_FUNCTION(daObjFlag3_Draw__FP12daObjFlag3_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag3_Execute__FP12daObjFlag3_c) {
+asm void daObjFlag3_Execute(daObjFlag3_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Execute__FP12daObjFlag3_c.s"
 }
@@ -123,7 +186,7 @@ ASM_FUNCTION(daObjFlag3_Execute__FP12daObjFlag3_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjFlag3_cFv) {
+asm void daObjFlag3_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/execute__12daObjFlag3_cFv.s"
 }
@@ -134,7 +197,7 @@ ASM_FUNCTION(execute__12daObjFlag3_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__4cXyzFv.s"
 }
@@ -145,7 +208,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12FlagCloth2_cFv) {
+asm void FlagCloth2_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/execute__12FlagCloth2_cFv.s"
 }
@@ -156,7 +219,7 @@ ASM_FUNCTION(execute__12FlagCloth2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcFlagNormal__12FlagCloth2_cFP4cXyzi) {
+asm void FlagCloth2_c::calcFlagNormal(cXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/calcFlagNormal__12FlagCloth2_cFP4cXyzi.s"
 }
@@ -167,7 +230,7 @@ ASM_FUNCTION(calcFlagNormal__12FlagCloth2_cFP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi) {
+asm void FlagCloth2_c::calcFlagFactor(cXyz* field_0, cXyz* field_1, cXyz* field_2, s32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi.s"
 }
@@ -175,21 +238,16 @@ ASM_FUNCTION(calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi) {
 
 
 /* 80BEF6D0-80BEF6D8 0008+00 .text      daObjFlag3_IsDelete__FP12daObjFlag3_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag3_IsDelete__FP12daObjFlag3_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_IsDelete__FP12daObjFlag3_c.s"
+bool daObjFlag3_IsDelete(daObjFlag3_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BEF6D8-80BEF700 0028+00 .text      daObjFlag3_Delete__FP12daObjFlag3_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag3_Delete__FP12daObjFlag3_c) {
+asm void daObjFlag3_Delete(daObjFlag3_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Delete__FP12daObjFlag3_c.s"
 }
@@ -200,7 +258,7 @@ ASM_FUNCTION(daObjFlag3_Delete__FP12daObjFlag3_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObjFlag3_cFv) {
+asm daObjFlag3_c::~daObjFlag3_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__12daObjFlag3_cFv.s"
 }
@@ -211,7 +269,7 @@ ASM_FUNCTION(__dt__12daObjFlag3_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12FlagCloth2_cFv) {
+asm FlagCloth2_c::~FlagCloth2_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__12FlagCloth2_cFv.s"
 }
@@ -222,7 +280,7 @@ ASM_FUNCTION(__dt__12FlagCloth2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag3_Create__FP10fopAc_ac_c) {
+asm void daObjFlag3_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_Create__FP10fopAc_ac_c.s"
 }
@@ -233,7 +291,7 @@ ASM_FUNCTION(daObjFlag3_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjFlag3_cFv) {
+asm void daObjFlag3_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/create__12daObjFlag3_cFv.s"
 }
@@ -244,7 +302,7 @@ ASM_FUNCTION(create__12daObjFlag3_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__12daObjFlag3_cFv) {
+asm void daObjFlag3_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/create_init__12daObjFlag3_cFv.s"
 }
@@ -255,7 +313,7 @@ ASM_FUNCTION(create_init__12daObjFlag3_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c) {
+asm void FlagCloth2_c::initFlagPos(cXyz* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c.s"
 }
@@ -263,21 +321,16 @@ ASM_FUNCTION(initFlagPos__12FlagCloth2_cFP4cXyzP10fopAc_ac_c) {
 
 
 /* 80BEFF30-80BEFF34 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BEFF34-80BEFF7C 0048+00 .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__8cM3dGSphFv.s"
 }
@@ -288,7 +341,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__8cM3dGAabFv.s"
 }
@@ -299,7 +352,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__10dCcD_GSttsFv.s"
 }
@@ -310,7 +363,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__ct__11J3DLightObjFv.s"
 }
@@ -321,7 +374,7 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__dt__10cCcD_GSttsFv.s"
 }
@@ -332,7 +385,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12FlagCloth2_cFv) {
+asm void FlagCloth2_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/draw__12FlagCloth2_cFv.s"
 }
@@ -343,7 +396,7 @@ ASM_FUNCTION(draw__12FlagCloth2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTargetPos__12FlagCloth2_cFv) {
+asm void FlagCloth2_c::getTargetPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/getTargetPos__12FlagCloth2_cFv.s"
 }

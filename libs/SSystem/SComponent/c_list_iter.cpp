@@ -9,40 +9,45 @@
 // Forward References:
 // 
 
-extern "C" extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" extern void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
 
 // 
 // Declarations:
 // 
 
-/* 80266060-80266098 0038+00 .text      cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv       */
+/* 80266060-80266098 0038+00 rc=5 efc=5 .text      cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv) {
+extern "C" asm void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list_iter/cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv.s"
 }
 #pragma pop
 
 
-/* 80266098-802660D0 0038+00 .text      cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv       */
+/* 80266098-802660D0 0038+00 rc=4 efc=4 .text      cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv) {
+extern "C" asm void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list_iter/cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

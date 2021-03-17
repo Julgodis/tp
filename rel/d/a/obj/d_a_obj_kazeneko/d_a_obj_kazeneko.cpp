@@ -6,26 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjKazeNeko_c;
+struct cXyz;
+
+struct daObjKazeNeko_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void initCcCylinder();
+	void setCcCylinder();
+	void swingHead();
+	void getFirstVec(cXyz*, s32);
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__15daObjKazeNeko_cFv();
-extern "C" extern void initBaseMtx__15daObjKazeNeko_cFv();
-extern "C" extern void setBaseMtx__15daObjKazeNeko_cFv();
-extern "C" extern void initCcCylinder__15daObjKazeNeko_cFv();
-extern "C" extern void setCcCylinder__15daObjKazeNeko_cFv();
-extern "C" extern void swingHead__15daObjKazeNeko_cFv();
-extern "C" extern void getFirstVec__15daObjKazeNeko_cFP4cXyzi();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjKazeNeko_Draw__FP15daObjKazeNeko_c();
-extern "C" extern void daObjKazeNeko_Execute__FP15daObjKazeNeko_c();
-extern "C" extern void daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c();
-extern "C" extern void daObjKazeNeko_Delete__FP15daObjKazeNeko_c();
-extern "C" extern void daObjKazeNeko_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjKazeNeko_Draw(daObjKazeNeko_c*);
+void daObjKazeNeko_Execute(daObjKazeNeko_c*);
+bool daObjKazeNeko_IsDelete(daObjKazeNeko_c*);
+void daObjKazeNeko_Delete(daObjKazeNeko_c*);
+void daObjKazeNeko_Create(fopAc_ac_c*);
+
+extern "C" void create_init__15daObjKazeNeko_cFv();
+extern "C" void initBaseMtx__15daObjKazeNeko_cFv();
+extern "C" void setBaseMtx__15daObjKazeNeko_cFv();
+extern "C" void initCcCylinder__15daObjKazeNeko_cFv();
+extern "C" void setCcCylinder__15daObjKazeNeko_cFv();
+extern "C" void swingHead__15daObjKazeNeko_cFv();
+extern "C" void getFirstVec__15daObjKazeNeko_cFP4cXyzi();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjKazeNeko_Draw__FP15daObjKazeNeko_c();
+extern "C" void daObjKazeNeko_Execute__FP15daObjKazeNeko_c();
+extern "C" bool daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c();
+extern "C" void daObjKazeNeko_Delete__FP15daObjKazeNeko_c();
+extern "C" void daObjKazeNeko_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__15daObjKazeNeko_c[44];
 SECTION_RODATA extern const u32 lit_3853;
 SECTION_RODATA extern const u32 lit_3854;
@@ -50,7 +97,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +109,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/create_init__15daObjKazeNeko_cFv.s"
 }
@@ -71,7 +120,7 @@ ASM_FUNCTION(create_init__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/initBaseMtx__15daObjKazeNeko_cFv.s"
 }
@@ -82,7 +131,7 @@ ASM_FUNCTION(initBaseMtx__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/setBaseMtx__15daObjKazeNeko_cFv.s"
 }
@@ -93,7 +142,7 @@ ASM_FUNCTION(setBaseMtx__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/initCcCylinder__15daObjKazeNeko_cFv.s"
 }
@@ -104,7 +153,7 @@ ASM_FUNCTION(initCcCylinder__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::setCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/setCcCylinder__15daObjKazeNeko_cFv.s"
 }
@@ -115,7 +164,7 @@ ASM_FUNCTION(setCcCylinder__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(swingHead__15daObjKazeNeko_cFv) {
+asm void daObjKazeNeko_c::swingHead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/swingHead__15daObjKazeNeko_cFv.s"
 }
@@ -126,7 +175,7 @@ ASM_FUNCTION(swingHead__15daObjKazeNeko_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFirstVec__15daObjKazeNeko_cFP4cXyzi) {
+asm void daObjKazeNeko_c::getFirstVec(cXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/getFirstVec__15daObjKazeNeko_cFP4cXyzi.s"
 }
@@ -137,7 +186,7 @@ ASM_FUNCTION(getFirstVec__15daObjKazeNeko_cFP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -148,7 +197,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKazeNeko_Draw__FP15daObjKazeNeko_c) {
+asm void daObjKazeNeko_Draw(daObjKazeNeko_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Draw__FP15daObjKazeNeko_c.s"
 }
@@ -159,7 +208,7 @@ ASM_FUNCTION(daObjKazeNeko_Draw__FP15daObjKazeNeko_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKazeNeko_Execute__FP15daObjKazeNeko_c) {
+asm void daObjKazeNeko_Execute(daObjKazeNeko_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Execute__FP15daObjKazeNeko_c.s"
 }
@@ -167,21 +216,16 @@ ASM_FUNCTION(daObjKazeNeko_Execute__FP15daObjKazeNeko_c) {
 
 
 /* 80C3D030-80C3D038 0008+00 .text      daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c.s"
+bool daObjKazeNeko_IsDelete(daObjKazeNeko_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C3D038-80C3D168 0130+00 .text      daObjKazeNeko_Delete__FP15daObjKazeNeko_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKazeNeko_Delete__FP15daObjKazeNeko_c) {
+asm void daObjKazeNeko_Delete(daObjKazeNeko_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Delete__FP15daObjKazeNeko_c.s"
 }
@@ -192,7 +236,7 @@ ASM_FUNCTION(daObjKazeNeko_Delete__FP15daObjKazeNeko_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKazeNeko_Create__FP10fopAc_ac_c) {
+asm void daObjKazeNeko_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_Create__FP10fopAc_ac_c.s"
 }
@@ -203,7 +247,7 @@ ASM_FUNCTION(daObjKazeNeko_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/__dt__8cM3dGCylFv.s"
 }
@@ -214,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/__dt__8cM3dGAabFv.s"
 }
@@ -225,7 +269,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/__dt__10dCcD_GSttsFv.s"
 }
@@ -236,7 +280,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/__dt__10cCcD_GSttsFv.s"
 }

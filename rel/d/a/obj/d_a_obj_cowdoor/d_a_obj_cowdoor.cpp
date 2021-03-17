@@ -6,20 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daCowdoor_c;
+struct fopAc_ac_c;
+
+struct daCowdoor_c {
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setBaseMtx__11daCowdoor_cFv();
-extern "C" extern void Create__11daCowdoor_cFv();
-extern "C" extern void CreateHeap__11daCowdoor_cFv();
-extern "C" extern void create__11daCowdoor_cFv();
-extern "C" extern void Execute__11daCowdoor_cFPPA3_A4_f();
-extern "C" extern void Draw__11daCowdoor_cFv();
-extern "C" extern void Delete__11daCowdoor_cFv();
-extern "C" extern void daCowdoor_Draw__FP11daCowdoor_c();
-extern "C" extern void daCowdoor_Execute__FP11daCowdoor_c();
-extern "C" extern void daCowdoor_Delete__FP11daCowdoor_c();
-extern "C" extern void daCowdoor_Create__FP10fopAc_ac_c();
+extern "C" void Execute__11daCowdoor_cFPPA3_A4_f();
+void daCowdoor_Draw(daCowdoor_c*);
+void daCowdoor_Execute(daCowdoor_c*);
+void daCowdoor_Delete(daCowdoor_c*);
+void daCowdoor_Create(fopAc_ac_c*);
+
+extern "C" void setBaseMtx__11daCowdoor_cFv();
+extern "C" void Create__11daCowdoor_cFv();
+extern "C" void CreateHeap__11daCowdoor_cFv();
+extern "C" void create__11daCowdoor_cFv();
+extern "C" void Execute__11daCowdoor_cFPPA3_A4_f();
+extern "C" void Draw__11daCowdoor_cFv();
+extern "C" void Delete__11daCowdoor_cFv();
+extern "C" void daCowdoor_Draw__FP11daCowdoor_c();
+extern "C" void daCowdoor_Execute__FP11daCowdoor_c();
+extern "C" void daCowdoor_Delete__FP11daCowdoor_c();
+extern "C" void daCowdoor_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3648;
 SECTION_RODATA extern const u8 stringBase0[35];
 SECTION_DATA extern u8 l_arcName[4];
@@ -33,7 +58,9 @@ SECTION_DATA extern void*const __vt__11daCowdoor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -43,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daCowdoor_cFv) {
+asm void daCowdoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/setBaseMtx__11daCowdoor_cFv.s"
 }
@@ -54,7 +81,7 @@ ASM_FUNCTION(setBaseMtx__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daCowdoor_cFv) {
+asm void daCowdoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/Create__11daCowdoor_cFv.s"
 }
@@ -65,7 +92,7 @@ ASM_FUNCTION(Create__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daCowdoor_cFv) {
+asm void daCowdoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/CreateHeap__11daCowdoor_cFv.s"
 }
@@ -76,7 +103,7 @@ ASM_FUNCTION(CreateHeap__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daCowdoor_cFv) {
+asm void daCowdoor_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/func_80BCC93C.s"
 }
@@ -87,7 +114,7 @@ ASM_FUNCTION(create__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daCowdoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daCowdoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/Execute__11daCowdoor_cFPPA3_A4_f.s"
 }
@@ -98,7 +125,7 @@ ASM_FUNCTION(Execute__11daCowdoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daCowdoor_cFv) {
+asm void daCowdoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/Draw__11daCowdoor_cFv.s"
 }
@@ -109,7 +136,7 @@ ASM_FUNCTION(Draw__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daCowdoor_cFv) {
+asm void daCowdoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/Delete__11daCowdoor_cFv.s"
 }
@@ -120,7 +147,7 @@ ASM_FUNCTION(Delete__11daCowdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCowdoor_Draw__FP11daCowdoor_c) {
+asm void daCowdoor_Draw(daCowdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Draw__FP11daCowdoor_c.s"
 }
@@ -131,7 +158,7 @@ ASM_FUNCTION(daCowdoor_Draw__FP11daCowdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCowdoor_Execute__FP11daCowdoor_c) {
+asm void daCowdoor_Execute(daCowdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Execute__FP11daCowdoor_c.s"
 }
@@ -142,7 +169,7 @@ ASM_FUNCTION(daCowdoor_Execute__FP11daCowdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCowdoor_Delete__FP11daCowdoor_c) {
+asm void daCowdoor_Delete(daCowdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Delete__FP11daCowdoor_c.s"
 }
@@ -153,7 +180,7 @@ ASM_FUNCTION(daCowdoor_Delete__FP11daCowdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCowdoor_Create__FP10fopAc_ac_c) {
+asm void daCowdoor_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cowdoor/d_a_obj_cowdoor/daCowdoor_Create__FP10fopAc_ac_c.s"
 }

@@ -9,10 +9,15 @@
 // Forward References:
 // 
 
-extern "C" extern void free();
-extern "C" extern void __pool_free();
-extern "C" extern void deallocate_from_fixed_pools();
-extern "C" extern void deallocate_from_var_pools();
+extern "C" void free();
+extern "C" static void __pool_free();
+extern "C" static void deallocate_from_fixed_pools();
+extern "C" static void deallocate_from_var_pools();
+
+extern "C" void free();
+extern "C" static void __pool_free();
+extern "C" static void deallocate_from_fixed_pools();
+extern "C" static void deallocate_from_var_pools();
 SECTION_RODATA extern const u8 fix_pool_sizes[24];
 SECTION_BSS extern u8 data_8044D540[56];
 
@@ -20,10 +25,15 @@ SECTION_BSS extern u8 data_8044D540[56];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void __sys_free();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
+SECTION_INIT void memset();
+extern "C" void __sys_free();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+
+SECTION_INIT void memset();
+extern "C" void __sys_free();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
 SECTION_SBSS extern u8 data_804519A0[8];
 
 // 
@@ -31,25 +41,25 @@ SECTION_SBSS extern u8 data_804519A0[8];
 // 
 
 /* ############################################################################################## */
-/* 8044D540-8044D578 0038+00 .bss       protopool$192                                                */
+/* 8044D540-8044D578 0038+00 rc=1 efc=0 .bss       protopool$192                                                */
 u8 data_8044D540[56];
 
-/* 80362B58-80362BC8 0070+00 .text      free                                                         */
+/* 80362B58-80362BC8 0070+00 rc=2 efc=2 .text      free                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(free) {
+extern "C" asm void free() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc/free.s"
 }
 #pragma pop
 
 
-/* 80362BC8-80362C20 0058+00 .text      __pool_free                                                  */
+/* 80362BC8-80362C20 0058+00 rc=1 efc=0 .text      __pool_free                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__pool_free) {
+extern "C" asm static void __pool_free() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc/__pool_free.s"
 }
@@ -57,32 +67,31 @@ ASM_FUNCTION(__pool_free) {
 
 
 /* ############################################################################################## */
-/* 803A2220-803A2238 0018+00 .rodata    fix_pool_sizes                                               */
+/* 803A2220-803A2238 0018+00 rc=1 efc=0 .rodata    fix_pool_sizes                                               */
 SECTION_RODATA const u8 fix_pool_sizes[24] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x24,
 	0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x44,
 };
 
-/* 80362C20-80362D78 0158+00 .text      deallocate_from_fixed_pools                                  */
+/* 80362C20-80362D78 0158+00 rc=1 efc=0 .text      deallocate_from_fixed_pools                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deallocate_from_fixed_pools) {
+extern "C" asm static void deallocate_from_fixed_pools() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc/deallocate_from_fixed_pools.s"
 }
 #pragma pop
 
 
-/* 80362D78-8036300C 0294+00 .text      deallocate_from_var_pools                                    */
+/* 80362D78-8036300C 0294+00 rc=2 efc=0 .text      deallocate_from_var_pools                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deallocate_from_var_pools) {
+extern "C" asm static void deallocate_from_var_pools() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc/deallocate_from_var_pools.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

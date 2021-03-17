@@ -6,22 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_cr_egg_class;
+
+struct e_cr_egg_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_CR_EGG_Draw__FP14e_cr_egg_class();
-extern "C" extern void e_cr_egg_move__FP14e_cr_egg_class();
-extern "C" extern void action__FP14e_cr_egg_class();
-extern "C" extern void daE_CR_EGG_Execute__FP14e_cr_egg_class();
-extern "C" extern void daE_CR_EGG_IsDelete__FP14e_cr_egg_class();
-extern "C" extern void daE_CR_EGG_Delete__FP14e_cr_egg_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_CR_EGG_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void func_8069A8B4();
-extern "C" extern void func_8069A8BC();
+void daE_CR_EGG_Draw(e_cr_egg_class*);
+void e_cr_egg_move(e_cr_egg_class*);
+void action(e_cr_egg_class*);
+void daE_CR_EGG_Execute(e_cr_egg_class*);
+bool daE_CR_EGG_IsDelete(e_cr_egg_class*);
+void daE_CR_EGG_Delete(e_cr_egg_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_CR_EGG_Create(fopAc_ac_c*);
+extern "C" void func_8069A8B4();
+extern "C" void func_8069A8BC();
+
+extern "C" void daE_CR_EGG_Draw__FP14e_cr_egg_class();
+extern "C" void e_cr_egg_move__FP14e_cr_egg_class();
+extern "C" void action__FP14e_cr_egg_class();
+extern "C" void daE_CR_EGG_Execute__FP14e_cr_egg_class();
+extern "C" bool daE_CR_EGG_IsDelete__FP14e_cr_egg_class();
+extern "C" void daE_CR_EGG_Delete__FP14e_cr_egg_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_CR_EGG_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void func_8069A8B4();
+extern "C" void func_8069A8BC();
 SECTION_RODATA extern const u32 lit_3657;
 SECTION_RODATA extern const u32 lit_3658;
 SECTION_RODATA extern const u8 lit_3676[12];
@@ -49,7 +85,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +97,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_CR_EGG_Draw__FP14e_cr_egg_class) {
+asm void daE_CR_EGG_Draw(e_cr_egg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_Draw__FP14e_cr_egg_class.s"
 }
@@ -70,7 +108,7 @@ ASM_FUNCTION(daE_CR_EGG_Draw__FP14e_cr_egg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_cr_egg_move__FP14e_cr_egg_class) {
+asm void e_cr_egg_move(e_cr_egg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/e_cr_egg_move__FP14e_cr_egg_class.s"
 }
@@ -81,7 +119,7 @@ ASM_FUNCTION(e_cr_egg_move__FP14e_cr_egg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14e_cr_egg_class) {
+asm void action(e_cr_egg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/action__FP14e_cr_egg_class.s"
 }
@@ -92,7 +130,7 @@ ASM_FUNCTION(action__FP14e_cr_egg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_CR_EGG_Execute__FP14e_cr_egg_class) {
+asm void daE_CR_EGG_Execute(e_cr_egg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_Execute__FP14e_cr_egg_class.s"
 }
@@ -100,21 +138,16 @@ ASM_FUNCTION(daE_CR_EGG_Execute__FP14e_cr_egg_class) {
 
 
 /* 8069A4C4-8069A4CC 0008+00 .text      daE_CR_EGG_IsDelete__FP14e_cr_egg_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_CR_EGG_IsDelete__FP14e_cr_egg_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_IsDelete__FP14e_cr_egg_class.s"
+bool daE_CR_EGG_IsDelete(e_cr_egg_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8069A4CC-8069A510 0044+00 .text      daE_CR_EGG_Delete__FP14e_cr_egg_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_CR_EGG_Delete__FP14e_cr_egg_class) {
+asm void daE_CR_EGG_Delete(e_cr_egg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_Delete__FP14e_cr_egg_class.s"
 }
@@ -125,7 +158,7 @@ ASM_FUNCTION(daE_CR_EGG_Delete__FP14e_cr_egg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -136,7 +169,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_CR_EGG_Create__FP10fopAc_ac_c) {
+asm void daE_CR_EGG_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_Create__FP10fopAc_ac_c.s"
 }
@@ -147,7 +180,7 @@ ASM_FUNCTION(daE_CR_EGG_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/__dt__8cM3dGSphFv.s"
 }
@@ -158,7 +191,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/__dt__8cM3dGAabFv.s"
 }
@@ -169,7 +202,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -180,7 +213,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8069A8B4) {
+extern "C" asm void func_8069A8B4() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/func_8069A8B4.s"
 }
@@ -191,7 +224,7 @@ ASM_FUNCTION(func_8069A8B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8069A8BC) {
+extern "C" asm void func_8069A8BC() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/func_8069A8BC.s"
 }

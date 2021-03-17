@@ -6,36 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_Stick_c {
+	~daObj_Stick_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void getResName();
+	void isDelete();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_Stick_Param_c {
+	~daObj_Stick_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daObj_Stick_cFv();
-extern "C" extern void create__13daObj_Stick_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__13daObj_Stick_cFv();
-extern "C" extern void Delete__13daObj_Stick_cFv();
-extern "C" extern void Execute__13daObj_Stick_cFv();
-extern "C" extern void Draw__13daObj_Stick_cFv();
-extern "C" extern void createHeapCallBack__13daObj_Stick_cFP10fopAc_ac_c();
-extern "C" extern void getResName__13daObj_Stick_cFv();
-extern "C" extern void isDelete__13daObj_Stick_cFv();
-extern "C" extern void setEnvTevColor__13daObj_Stick_cFv();
-extern "C" extern void setRoomNo__13daObj_Stick_cFv();
-extern "C" extern void setMtx__13daObj_Stick_cFv();
-extern "C" extern void daObj_Stick_Create__FPv();
-extern "C" extern void daObj_Stick_Delete__FPv();
-extern "C" extern void daObj_Stick_Execute__FPv();
-extern "C" extern void daObj_Stick_Draw__FPv();
-extern "C" extern void daObj_Stick_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_stick_cpp();
-extern "C" extern void __dt__19daObj_Stick_Param_cFv();
-extern "C" extern void func_80599E18();
-extern "C" extern void func_80599E20();
+void daObj_Stick_Create(void*);
+void daObj_Stick_Delete(void*);
+void daObj_Stick_Execute(void*);
+void daObj_Stick_Draw(void*);
+bool daObj_Stick_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_stick_cpp();
+extern "C" void func_80599E18();
+extern "C" void func_80599E20();
+
+extern "C" void __dt__13daObj_Stick_cFv();
+extern "C" void create__13daObj_Stick_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__13daObj_Stick_cFv();
+extern "C" void Delete__13daObj_Stick_cFv();
+extern "C" void Execute__13daObj_Stick_cFv();
+extern "C" void Draw__13daObj_Stick_cFv();
+extern "C" void createHeapCallBack__13daObj_Stick_cFP10fopAc_ac_c();
+extern "C" void getResName__13daObj_Stick_cFv();
+extern "C" void isDelete__13daObj_Stick_cFv();
+extern "C" void setEnvTevColor__13daObj_Stick_cFv();
+extern "C" void setRoomNo__13daObj_Stick_cFv();
+extern "C" void setMtx__13daObj_Stick_cFv();
+extern "C" void daObj_Stick_Create__FPv();
+extern "C" void daObj_Stick_Delete__FPv();
+extern "C" void daObj_Stick_Execute__FPv();
+extern "C" void daObj_Stick_Draw__FPv();
+extern "C" bool daObj_Stick_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_stick_cpp();
+extern "C" void __dt__19daObj_Stick_Param_cFv();
+extern "C" void func_80599E18();
+extern "C" void func_80599E20();
 SECTION_RODATA extern const u8 m__19daObj_Stick_Param_c[16];
 SECTION_RODATA extern const u32 lit_3918;
 SECTION_RODATA extern const u32 lit_3919;
@@ -64,8 +125,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -75,7 +139,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObj_Stick_cFv) {
+asm daObj_Stick_c::~daObj_Stick_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__13daObj_Stick_cFv.s"
 }
@@ -86,7 +150,7 @@ ASM_FUNCTION(__dt__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/create__13daObj_Stick_cFv.s"
 }
@@ -97,7 +161,7 @@ ASM_FUNCTION(create__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__8cM3dGSphFv.s"
 }
@@ -108,7 +172,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__8cM3dGAabFv.s"
 }
@@ -119,7 +183,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__12dBgS_AcchCirFv.s"
 }
@@ -130,7 +194,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__10dCcD_GSttsFv.s"
 }
@@ -141,7 +205,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -152,7 +216,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/CreateHeap__13daObj_Stick_cFv.s"
 }
@@ -163,7 +227,7 @@ ASM_FUNCTION(CreateHeap__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/Delete__13daObj_Stick_cFv.s"
 }
@@ -174,7 +238,7 @@ ASM_FUNCTION(Delete__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/Execute__13daObj_Stick_cFv.s"
 }
@@ -185,7 +249,7 @@ ASM_FUNCTION(Execute__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/Draw__13daObj_Stick_cFv.s"
 }
@@ -196,7 +260,7 @@ ASM_FUNCTION(Draw__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daObj_Stick_cFP10fopAc_ac_c) {
+asm void daObj_Stick_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/createHeapCallBack__13daObj_Stick_cFP10fopAc_ac_c.s"
 }
@@ -207,7 +271,7 @@ ASM_FUNCTION(createHeapCallBack__13daObj_Stick_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/getResName__13daObj_Stick_cFv.s"
 }
@@ -218,7 +282,7 @@ ASM_FUNCTION(getResName__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/isDelete__13daObj_Stick_cFv.s"
 }
@@ -229,7 +293,7 @@ ASM_FUNCTION(isDelete__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/setEnvTevColor__13daObj_Stick_cFv.s"
 }
@@ -240,7 +304,7 @@ ASM_FUNCTION(setEnvTevColor__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/setRoomNo__13daObj_Stick_cFv.s"
 }
@@ -251,7 +315,7 @@ ASM_FUNCTION(setRoomNo__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__13daObj_Stick_cFv) {
+asm void daObj_Stick_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/setMtx__13daObj_Stick_cFv.s"
 }
@@ -262,7 +326,7 @@ ASM_FUNCTION(setMtx__13daObj_Stick_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Stick_Create__FPv) {
+asm void daObj_Stick_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Create__FPv.s"
 }
@@ -273,7 +337,7 @@ ASM_FUNCTION(daObj_Stick_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Stick_Delete__FPv) {
+asm void daObj_Stick_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Delete__FPv.s"
 }
@@ -284,7 +348,7 @@ ASM_FUNCTION(daObj_Stick_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Stick_Execute__FPv) {
+asm void daObj_Stick_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Execute__FPv.s"
 }
@@ -295,7 +359,7 @@ ASM_FUNCTION(daObj_Stick_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Stick_Draw__FPv) {
+asm void daObj_Stick_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_Draw__FPv.s"
 }
@@ -303,21 +367,16 @@ ASM_FUNCTION(daObj_Stick_Draw__FPv) {
 
 
 /* 80599D0C-80599D14 0008+00 .text      daObj_Stick_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Stick_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/daObj_Stick_IsDelete__FPv.s"
+bool daObj_Stick_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80599D14-80599D5C 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__10cCcD_GSttsFv.s"
 }
@@ -328,7 +387,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_stick_cpp) {
+extern "C" asm void __sinit_d_a_obj_stick_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__sinit_d_a_obj_stick_cpp.s"
 }
@@ -339,7 +398,7 @@ ASM_FUNCTION(__sinit_d_a_obj_stick_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObj_Stick_Param_cFv) {
+asm daObj_Stick_Param_c::~daObj_Stick_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/__dt__19daObj_Stick_Param_cFv.s"
 }
@@ -350,7 +409,7 @@ ASM_FUNCTION(__dt__19daObj_Stick_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80599E18) {
+extern "C" asm void func_80599E18() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/func_80599E18.s"
 }
@@ -361,7 +420,7 @@ ASM_FUNCTION(func_80599E18) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80599E20) {
+extern "C" asm void func_80599E20() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stick/d_a_obj_stick/func_80599E20.s"
 }

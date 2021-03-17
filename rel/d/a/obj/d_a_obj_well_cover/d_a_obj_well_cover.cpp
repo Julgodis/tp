@@ -6,25 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjWCover_c;
+
+struct daObjWCover_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void action();
+	void modeWait();
+	void init_modeBreak();
+	void modeBreak();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjWCover_cFv();
-extern "C" extern void setBaseMtx__13daObjWCover_cFv();
-extern "C" extern void Create__13daObjWCover_cFv();
-extern "C" extern void CreateHeap__13daObjWCover_cFv();
-extern "C" extern void create__13daObjWCover_cFv();
-extern "C" extern void Execute__13daObjWCover_cFPPA3_A4_f();
-extern "C" extern void action__13daObjWCover_cFv();
-extern "C" extern void modeWait__13daObjWCover_cFv();
-extern "C" extern void init_modeBreak__13daObjWCover_cFv();
-extern "C" extern void modeBreak__13daObjWCover_cFv();
-extern "C" extern void Draw__13daObjWCover_cFv();
-extern "C" extern void Delete__13daObjWCover_cFv();
-extern "C" extern void daObjWCover_Draw__FP13daObjWCover_c();
-extern "C" extern void daObjWCover_Execute__FP13daObjWCover_c();
-extern "C" extern void daObjWCover_Delete__FP13daObjWCover_c();
-extern "C" extern void daObjWCover_Create__FP10fopAc_ac_c();
+extern "C" void Execute__13daObjWCover_cFPPA3_A4_f();
+void daObjWCover_Draw(daObjWCover_c*);
+void daObjWCover_Execute(daObjWCover_c*);
+void daObjWCover_Delete(daObjWCover_c*);
+void daObjWCover_Create(fopAc_ac_c*);
+
+extern "C" void initBaseMtx__13daObjWCover_cFv();
+extern "C" void setBaseMtx__13daObjWCover_cFv();
+extern "C" void Create__13daObjWCover_cFv();
+extern "C" void CreateHeap__13daObjWCover_cFv();
+extern "C" void create__13daObjWCover_cFv();
+extern "C" void Execute__13daObjWCover_cFPPA3_A4_f();
+extern "C" void action__13daObjWCover_cFv();
+extern "C" void modeWait__13daObjWCover_cFv();
+extern "C" void init_modeBreak__13daObjWCover_cFv();
+extern "C" void modeBreak__13daObjWCover_cFv();
+extern "C" void Draw__13daObjWCover_cFv();
+extern "C" void Delete__13daObjWCover_cFv();
+extern "C" void daObjWCover_Draw__FP13daObjWCover_c();
+extern "C" void daObjWCover_Execute__FP13daObjWCover_c();
+extern "C" void daObjWCover_Delete__FP13daObjWCover_c();
+extern "C" void daObjWCover_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3794;
 SECTION_RODATA extern const u8 lit_3795[4];
 SECTION_RODATA extern const u8 lit_3796[8];
@@ -50,7 +80,9 @@ SECTION_DATA extern void*const __vt__13daObjWCover_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +92,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjWCover_cFv) {
+asm void daObjWCover_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/initBaseMtx__13daObjWCover_cFv.s"
 }
@@ -71,7 +103,7 @@ ASM_FUNCTION(initBaseMtx__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjWCover_cFv) {
+asm void daObjWCover_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/setBaseMtx__13daObjWCover_cFv.s"
 }
@@ -82,7 +114,7 @@ ASM_FUNCTION(setBaseMtx__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjWCover_cFv) {
+asm void daObjWCover_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/Create__13daObjWCover_cFv.s"
 }
@@ -93,7 +125,7 @@ ASM_FUNCTION(Create__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjWCover_cFv) {
+asm void daObjWCover_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/CreateHeap__13daObjWCover_cFv.s"
 }
@@ -104,7 +136,7 @@ ASM_FUNCTION(CreateHeap__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjWCover_cFv) {
+asm void daObjWCover_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/func_80D36404.s"
 }
@@ -115,7 +147,7 @@ ASM_FUNCTION(create__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjWCover_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjWCover_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/Execute__13daObjWCover_cFPPA3_A4_f.s"
 }
@@ -126,7 +158,7 @@ ASM_FUNCTION(Execute__13daObjWCover_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daObjWCover_cFv) {
+asm void daObjWCover_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/action__13daObjWCover_cFv.s"
 }
@@ -137,7 +169,7 @@ ASM_FUNCTION(action__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daObjWCover_cFv) {
+asm void daObjWCover_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/modeWait__13daObjWCover_cFv.s"
 }
@@ -148,7 +180,7 @@ ASM_FUNCTION(modeWait__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__13daObjWCover_cFv) {
+asm void daObjWCover_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/init_modeBreak__13daObjWCover_cFv.s"
 }
@@ -156,21 +188,16 @@ ASM_FUNCTION(init_modeBreak__13daObjWCover_cFv) {
 
 
 /* 80D3689C-80D368A0 0004+00 .text      modeBreak__13daObjWCover_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__13daObjWCover_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/modeBreak__13daObjWCover_cFv.s"
+void daObjWCover_c::modeBreak() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D368A0-80D36944 00A4+00 .text      Draw__13daObjWCover_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjWCover_cFv) {
+asm void daObjWCover_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/Draw__13daObjWCover_cFv.s"
 }
@@ -181,7 +208,7 @@ ASM_FUNCTION(Draw__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjWCover_cFv) {
+asm void daObjWCover_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/Delete__13daObjWCover_cFv.s"
 }
@@ -192,7 +219,7 @@ ASM_FUNCTION(Delete__13daObjWCover_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWCover_Draw__FP13daObjWCover_c) {
+asm void daObjWCover_Draw(daObjWCover_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/daObjWCover_Draw__FP13daObjWCover_c.s"
 }
@@ -203,7 +230,7 @@ ASM_FUNCTION(daObjWCover_Draw__FP13daObjWCover_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWCover_Execute__FP13daObjWCover_c) {
+asm void daObjWCover_Execute(daObjWCover_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/daObjWCover_Execute__FP13daObjWCover_c.s"
 }
@@ -214,7 +241,7 @@ ASM_FUNCTION(daObjWCover_Execute__FP13daObjWCover_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWCover_Delete__FP13daObjWCover_c) {
+asm void daObjWCover_Delete(daObjWCover_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/daObjWCover_Delete__FP13daObjWCover_c.s"
 }
@@ -225,7 +252,7 @@ ASM_FUNCTION(daObjWCover_Delete__FP13daObjWCover_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWCover_Create__FP10fopAc_ac_c) {
+asm void daObjWCover_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/daObjWCover_Create__FP10fopAc_ac_c.s"
 }

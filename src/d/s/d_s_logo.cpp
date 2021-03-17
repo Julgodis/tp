@@ -6,51 +6,341 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dLog_HIO_c (dLog_HIO_c) False/False
+/* top-level dependencies (begin dLog_HIO_c) */
+/* top-level dependencies (end dLog_HIO_c) */
+struct dLog_HIO_c {
+	/* 802560A4 */ dLog_HIO_c();
+	/* 8025855C */ ~dLog_HIO_c();
+};
+
+// build dScnLogo_c (dScnLogo_c) False/False
+/* top-level dependencies (begin dScnLogo_c) */
+/* top-level dependencies (end dScnLogo_c) */
+struct dScnLogo_c {
+	/* 802560B4 */ void preLoad_dyl_create();
+	/* 802560F8 */ void preLoad_dyl_remove();
+	/* 8025611C */ void preLoad_dyl();
+	/* 80256198 */ void checkProgSelect();
+	/* 80256210 */ void draw();
+	/* 80256264 */ void progInDraw();
+	/* 8025631C */ void progSelDraw();
+	/* 802568E0 */ void progOutDraw();
+	/* 80256A3C */ void progSetDraw();
+	/* 80256AC0 */ void progSet2Draw();
+	/* 80256B3C */ void progChangeDraw();
+	/* 80256BF4 */ void warningInDraw();
+	/* 80256C68 */ void warningDispDraw();
+	/* 80256DC4 */ void warningOutDraw();
+	/* 80256E48 */ void nintendoInDraw();
+	/* 80256ECC */ void nintendoOutDraw();
+	/* 80256F50 */ void dolbyInDraw();
+	/* 80256FD4 */ void dolbyOutDraw();
+	/* 80257058 */ void dolbyOutDraw2();
+	/* 80257070 */ void dvdWaitDraw();
+	/* 80257284 */ void nextSceneChange();
+	/* 802572B8 */ ~dScnLogo_c();
+	/* 80257AE0 */ void create();
+	/* 80257C64 */ void logoInitGC();
+	/* 80257FEC */ void dvdDataLoad();
+	/* 802584D8 */ void setProgressiveMode(char);
+	/* 802584FC */ void getProgressiveMode();
+	/* 80258520 */ void isProgressiveMode();
+	/* 8025854C */ void setRenderMode();
+};
+
+// build request_of_phase_process_class (request_of_phase_process_class) False/False
+/* top-level dependencies (begin request_of_phase_process_class) */
+/* top-level dependencies (end request_of_phase_process_class) */
+struct request_of_phase_process_class {
+};
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE448 */ void destroy();
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	// build EMountMode (JKRArchive::EMountMode) False/False
+	/* dependencies (begin JKRArchive::EMountMode) */
+	/* dependencies (end JKRArchive::EMountMode) */
+	struct EMountMode {
+	};
+
+};
+
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
+// outer dependency: JKRArchive::EMountMode
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
+struct mDoDvdThd_mountXArchive_c {
+	// JKRArchive::EMountMode
+	// JKRHeap
+	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin mDoDvdThd_toMainRam_c) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_toMainRam_c) */
+struct mDoDvdThd_toMainRam_c {
+	// JKRHeap
+	/* 80016394 */ void create(char const*, char, JKRHeap*);
+};
+
+// build cDylPhs (cDylPhs) False/False
+// build request_of_phase_process_class (request_of_phase_process_class) True/True
+/* top-level dependencies (begin cDylPhs) */
+// outer dependency: request_of_phase_process_class
+/* top-level dependencies (end cDylPhs) */
+struct cDylPhs {
+	// request_of_phase_process_class
+	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
+};
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+/* top-level dependencies (begin dComIfG_play_c) */
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	/* 8002C9D8 */ void createParticle();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build JKRHeap (JKRHeap) True/True
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: JKRHeap
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// JKRHeap
+	// dRes_info_c
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dMpath_c (dMpath_c) False/False
+/* top-level dependencies (begin dMpath_c) */
+/* top-level dependencies (end dMpath_c) */
+struct dMpath_c {
+	/* 8003F7E8 */ void createWork();
+};
+
+// build dPa_control_c (dPa_control_c) False/False
+/* top-level dependencies (begin dPa_control_c) */
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	/* 8004BB78 */ void createCommon(void const*);
+};
+
+// build dDlst_2D_c (dDlst_2D_c) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin dDlst_2D_c) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end dDlst_2D_c) */
+struct dDlst_2D_c {
+	// ResTIMG
+	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, char);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
+// build ResTIMG (ResTIMG) True/True
+/* top-level dependencies (begin dDlst_shadowControl_c) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end dDlst_shadowControl_c) */
+struct dDlst_shadowControl_c {
+	// ResTIMG
+	/* 80055FE8 */ void setSimpleTex(ResTIMG const*);
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build dTres_c (dTres_c) False/False
+/* top-level dependencies (begin dTres_c) */
+/* top-level dependencies (end dTres_c) */
+struct dTres_c {
+	/* 8009BBD8 */ void createWork();
+};
+
+// build JFWDisplay (JFWDisplay) False/False
+/* top-level dependencies (begin JFWDisplay) */
+/* top-level dependencies (end JFWDisplay) */
+struct JFWDisplay {
+	/* 80272C60 */ void waitBlanking(s32);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build Z2SceneMgr (Z2SceneMgr) False/False
+/* top-level dependencies (begin Z2SceneMgr) */
+/* top-level dependencies (end Z2SceneMgr) */
+struct Z2SceneMgr {
+	/* 802BA56C */ void loadStaticWaves();
+	/* 802BA5C0 */ bool checkFirstWaves();
+};
+
+// build Z2AudioMgr (Z2AudioMgr) False/False
+/* top-level dependencies (begin Z2AudioMgr) */
+/* top-level dependencies (end Z2AudioMgr) */
+struct Z2AudioMgr {
+	/* 802CD974 */ void resetProcess(u32, bool);
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+	/* 802CEF00 */ void create(void*, u32, JKRHeap*, bool);
+};
+
+// build JKRAramHeap (JKRAramHeap) False/False
+/* top-level dependencies (begin JKRAramHeap) */
+/* top-level dependencies (end JKRAramHeap) */
+struct JKRAramHeap {
+	/* 802D31AC */ void getTotalFreeSize();
+};
+
+// build J2DPicture (J2DPicture) False/False
+/* top-level dependencies (begin J2DPicture) */
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	/* 802FCFF0 */ ~J2DPicture();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10dLog_HIO_cFv();
-extern "C" extern void preLoad_dyl_create__10dScnLogo_cFv();
-extern "C" extern void preLoad_dyl_remove__10dScnLogo_cFv();
-extern "C" extern void preLoad_dyl__10dScnLogo_cFv();
-extern "C" extern void checkProgSelect__10dScnLogo_cFv();
-extern "C" extern void draw__10dScnLogo_cFv();
-extern "C" extern void progInDraw__10dScnLogo_cFv();
-extern "C" extern void progSelDraw__10dScnLogo_cFv();
-extern "C" extern void progOutDraw__10dScnLogo_cFv();
-extern "C" extern void progSetDraw__10dScnLogo_cFv();
-extern "C" extern void progSet2Draw__10dScnLogo_cFv();
-extern "C" extern void progChangeDraw__10dScnLogo_cFv();
-extern "C" extern void warningInDraw__10dScnLogo_cFv();
-extern "C" extern void warningDispDraw__10dScnLogo_cFv();
-extern "C" extern void warningOutDraw__10dScnLogo_cFv();
-extern "C" extern void nintendoInDraw__10dScnLogo_cFv();
-extern "C" extern void nintendoOutDraw__10dScnLogo_cFv();
-extern "C" extern void dolbyInDraw__10dScnLogo_cFv();
-extern "C" extern void dolbyOutDraw__10dScnLogo_cFv();
-extern "C" extern void dolbyOutDraw2__10dScnLogo_cFv();
-extern "C" extern void dvdWaitDraw__10dScnLogo_cFv();
-extern "C" extern void nextSceneChange__10dScnLogo_cFv();
-extern "C" extern void __dt__10dScnLogo_cFv();
-extern "C" extern void phase_0__FP10dScnLogo_c();
-extern "C" extern void phase_1__FP10dScnLogo_c();
-extern "C" extern void phase_2__FP10dScnLogo_c();
-extern "C" extern void resLoad__FP30request_of_phase_process_classP10dScnLogo_c();
-extern "C" extern void create__10dScnLogo_cFv();
-extern "C" extern void logoInitGC__10dScnLogo_cFv();
-extern "C" extern void dvdDataLoad__10dScnLogo_cFv();
-extern "C" extern void dScnLogo_Create__FP11scene_class();
-extern "C" extern void dScnLogo_Execute__FP10dScnLogo_c();
-extern "C" extern void dScnLogo_Draw__FP10dScnLogo_c();
-extern "C" extern void dScnLogo_Delete__FP10dScnLogo_c();
-extern "C" extern void dScnLogo_IsDelete__FP10dScnLogo_c();
-extern "C" extern void setProgressiveMode__10dScnLogo_cFUc();
-extern "C" extern void getProgressiveMode__10dScnLogo_cFv();
-extern "C" extern void isProgressiveMode__10dScnLogo_cFv();
-extern "C" extern void setRenderMode__10dScnLogo_cFv();
-extern "C" extern void __dt__10dLog_HIO_cFv();
-extern "C" extern void func_802585A4();
-extern "C" extern void __sinit_d_s_logo_cpp();
+static void phase_0(dScnLogo_c*);
+static void phase_1(dScnLogo_c*);
+static void phase_2(dScnLogo_c*);
+static void resLoad(request_of_phase_process_class*, dScnLogo_c*);
+static void dScnLogo_Create(scene_class*);
+static void dScnLogo_Execute(dScnLogo_c*);
+static void dScnLogo_Draw(dScnLogo_c*);
+static void dScnLogo_Delete(dScnLogo_c*);
+static bool dScnLogo_IsDelete(dScnLogo_c*);
+extern "C" static void func_802585A4();
+extern "C" void __sinit_d_s_logo_cpp();
+
+extern "C" void __ct__10dLog_HIO_cFv();
+extern "C" void preLoad_dyl_create__10dScnLogo_cFv();
+extern "C" void preLoad_dyl_remove__10dScnLogo_cFv();
+extern "C" void preLoad_dyl__10dScnLogo_cFv();
+extern "C" void checkProgSelect__10dScnLogo_cFv();
+extern "C" void draw__10dScnLogo_cFv();
+extern "C" void progInDraw__10dScnLogo_cFv();
+extern "C" void progSelDraw__10dScnLogo_cFv();
+extern "C" void progOutDraw__10dScnLogo_cFv();
+extern "C" void progSetDraw__10dScnLogo_cFv();
+extern "C" void progSet2Draw__10dScnLogo_cFv();
+extern "C" void progChangeDraw__10dScnLogo_cFv();
+extern "C" void warningInDraw__10dScnLogo_cFv();
+extern "C" void warningDispDraw__10dScnLogo_cFv();
+extern "C" void warningOutDraw__10dScnLogo_cFv();
+extern "C" void nintendoInDraw__10dScnLogo_cFv();
+extern "C" void nintendoOutDraw__10dScnLogo_cFv();
+extern "C" void dolbyInDraw__10dScnLogo_cFv();
+extern "C" void dolbyOutDraw__10dScnLogo_cFv();
+extern "C" void dolbyOutDraw2__10dScnLogo_cFv();
+extern "C" void dvdWaitDraw__10dScnLogo_cFv();
+extern "C" void nextSceneChange__10dScnLogo_cFv();
+extern "C" void __dt__10dScnLogo_cFv();
+extern "C" static void phase_0__FP10dScnLogo_c();
+extern "C" static void phase_1__FP10dScnLogo_c();
+extern "C" static void phase_2__FP10dScnLogo_c();
+extern "C" static void resLoad__FP30request_of_phase_process_classP10dScnLogo_c();
+extern "C" void create__10dScnLogo_cFv();
+extern "C" void logoInitGC__10dScnLogo_cFv();
+extern "C" void dvdDataLoad__10dScnLogo_cFv();
+extern "C" static void dScnLogo_Create__FP11scene_class();
+extern "C" static void dScnLogo_Execute__FP10dScnLogo_c();
+extern "C" static void dScnLogo_Draw__FP10dScnLogo_c();
+extern "C" static void dScnLogo_Delete__FP10dScnLogo_c();
+extern "C" static bool dScnLogo_IsDelete__FP10dScnLogo_c();
+extern "C" void setProgressiveMode__10dScnLogo_cFUc();
+extern "C" void getProgressiveMode__10dScnLogo_cFv();
+extern "C" void isProgressiveMode__10dScnLogo_cFv();
+extern "C" void setRenderMode__10dScnLogo_cFv();
+extern "C" void __dt__10dLog_HIO_cFv();
+extern "C" static void func_802585A4();
+extern "C" void __sinit_d_s_logo_cpp();
 SECTION_RODATA extern const u8 l_preLoad_dylKeyTbl[28];
 SECTION_RODATA extern const u8 d_s_d_s_logo__stringBase0[684];
 SECTION_DATA extern u8 d_s_d_s_logo__cNullVec__6Z2Calc[12];
@@ -89,64 +379,96 @@ SECTION_SDATA2 extern f64 d_s_d_s_logo__lit_3940;
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void mDoExt_getGameHeap__Fv();
-extern "C" extern void mDoExt_getJ2dHeap__Fv();
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getRubyFont__Fv();
-extern "C" extern void mDoExt_getSubFont__Fv();
-extern "C" extern void mDoExt_setAraCacheSize__FUl();
-extern "C" extern void mDoRst_reset__FiUli();
-extern "C" extern void mDoRst_resetCallBack__FiPv();
-extern "C" extern void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
-extern "C" extern void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
-extern "C" extern void cDyl_InitAsyncIsDone__Fv();
-extern "C" extern void Link__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" extern void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" extern void createParticle__14dComIfG_play_cFv();
-extern "C" extern void dComIfG_changeOpeningScene__FP11scene_classs();
-extern "C" extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void syncAllRes__14dRes_control_cFP11dRes_info_ci();
-extern "C" extern void createWork__8dMpath_cFv();
-extern "C" extern void createCommon__13dPa_control_cFPCv();
-extern "C" extern void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
-extern "C" extern void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void createWork__7dTres_cFv();
-extern "C" extern void waitBlanking__10JFWDisplayFi();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void loadStaticWaves__10Z2SceneMgrFv();
-extern "C" extern void checkFirstWaves__10Z2SceneMgrFv();
-extern "C" extern void resetProcess__10Z2AudioMgrFUlb();
-extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
-extern "C" extern void destroy__7JKRHeapFv();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __nwa__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dla__FPv();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void create__10JKRExpHeapFPvUlP7JKRHeapb();
-extern "C" extern void getTotalFreeSize__11JKRAramHeapFv();
-extern "C" extern void __dt__10J2DPictureFv();
-extern "C" extern void OSGetProgressiveMode();
-extern "C" extern void OSSetProgressiveMode();
-extern "C" extern void VIGetDTVStatus();
-extern "C" extern void __register_global_object();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+SECTION_INIT void memset();
+void mDoExt_getGameHeap();
+void mDoExt_getJ2dHeap();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void mDoExt_getSubFont();
+void mDoExt_setAraCacheSize(u32);
+void mDoRst_reset(s32, u32, s32);
+void mDoRst_resetCallBack(s32, void*);
+void cDyl_InitAsyncIsDone();
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void dComIfG_changeOpeningScene(scene_class*, s16);
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" void OSGetProgressiveMode();
+extern "C" void OSSetProgressiveMode();
+extern "C" void VIGetDTVStatus();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+SECTION_INIT void memset();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void mDoExt_setAraCacheSize__FUl();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void createParticle__14dComIfG_play_cFv();
+extern "C" void dComIfG_changeOpeningScene__FP11scene_classs();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+extern "C" void createWork__8dMpath_cFv();
+extern "C" void createCommon__13dPa_control_cFPCv();
+extern "C" void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
+extern "C" void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void createWork__7dTres_cFv();
+extern "C" void waitBlanking__10JFWDisplayFi();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void loadStaticWaves__10Z2SceneMgrFv();
+extern "C" bool checkFirstWaves__10Z2SceneMgrFv();
+extern "C" void resetProcess__10Z2AudioMgrFUlb();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void destroy__7JKRHeapFv();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void create__10JKRExpHeapFPvUlP7JKRHeapb();
+extern "C" void getTotalFreeSize__11JKRAramHeapFv();
+extern "C" void __dt__10J2DPictureFv();
+extern "C" void OSGetProgressiveMode();
+extern "C" void OSSetProgressiveMode();
+extern "C" void VIGetDTVStatus();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_DATA extern u8 g_ntscZeldaProg[60];
 SECTION_DATA extern void*g_fopScn_Method[6];
 SECTION_DATA extern void*g_fpcNd_Method[6];
@@ -172,124 +494,124 @@ SECTION_SBSS extern u8 struct_80451500[4];
 // 
 
 /* ############################################################################################## */
-/* 803C2E38-803C2E44 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803C2E38-803C2E44 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_s_d_s_logo__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C2E44-803C2E50 000C+00 .data      @3737                                                        */
+/* 803C2E44-803C2E50 000C+00 rc=0 efc=0 .data      @3737                                                        */
 void* lit_3737[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)warningInDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E50-803C2E5C 000C+00 .data      @3738                                                        */
+/* 803C2E50-803C2E5C 000C+00 rc=0 efc=0 .data      @3738                                                        */
 void* d_s_d_s_logo__lit_3738[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)warningDispDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E5C-803C2E68 000C+00 .data      @3739                                                        */
+/* 803C2E5C-803C2E68 000C+00 rc=0 efc=0 .data      @3739                                                        */
 void* d_s_d_s_logo__lit_3739[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)warningOutDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E68-803C2E74 000C+00 .data      @3740                                                        */
+/* 803C2E68-803C2E74 000C+00 rc=0 efc=0 .data      @3740                                                        */
 void* d_s_d_s_logo__lit_3740[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nintendoInDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E74-803C2E80 000C+00 .data      @3741                                                        */
+/* 803C2E74-803C2E80 000C+00 rc=0 efc=0 .data      @3741                                                        */
 void* d_s_d_s_logo__lit_3741[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nintendoOutDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E80-803C2E8C 000C+00 .data      @3742                                                        */
+/* 803C2E80-803C2E8C 000C+00 rc=0 efc=0 .data      @3742                                                        */
 void* d_s_d_s_logo__lit_3742[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dolbyInDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E8C-803C2E98 000C+00 .data      @3743                                                        */
+/* 803C2E8C-803C2E98 000C+00 rc=0 efc=0 .data      @3743                                                        */
 void* d_s_d_s_logo__lit_3743[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dolbyOutDraw__10dScnLogo_cFv,
 };
 
-/* 803C2E98-803C2EA4 000C+00 .data      @3744                                                        */
+/* 803C2E98-803C2EA4 000C+00 rc=0 efc=0 .data      @3744                                                        */
 void* lit_3744[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dolbyOutDraw2__10dScnLogo_cFv,
 };
 
-/* 803C2EA4-803C2EB0 000C+00 .data      @3745                                                        */
+/* 803C2EA4-803C2EB0 000C+00 rc=0 efc=0 .data      @3745                                                        */
 void* d_s_d_s_logo__lit_3745[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progInDraw__10dScnLogo_cFv,
 };
 
-/* 803C2EB0-803C2EBC 000C+00 .data      @3746                                                        */
+/* 803C2EB0-803C2EBC 000C+00 rc=0 efc=0 .data      @3746                                                        */
 void* d_s_d_s_logo__lit_3746[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progSelDraw__10dScnLogo_cFv,
 };
 
-/* 803C2EBC-803C2EC8 000C+00 .data      @3747                                                        */
+/* 803C2EBC-803C2EC8 000C+00 rc=0 efc=0 .data      @3747                                                        */
 void* d_s_d_s_logo__lit_3747[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progOutDraw__10dScnLogo_cFv,
 };
 
-/* 803C2EC8-803C2ED4 000C+00 .data      @3748                                                        */
+/* 803C2EC8-803C2ED4 000C+00 rc=0 efc=0 .data      @3748                                                        */
 void* d_s_d_s_logo__lit_3748[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progSetDraw__10dScnLogo_cFv,
 };
 
-/* 803C2ED4-803C2EE0 000C+00 .data      @3749                                                        */
+/* 803C2ED4-803C2EE0 000C+00 rc=0 efc=0 .data      @3749                                                        */
 void* d_s_d_s_logo__lit_3749[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progSet2Draw__10dScnLogo_cFv,
 };
 
-/* 803C2EE0-803C2EEC 000C+00 .data      @3750                                                        */
+/* 803C2EE0-803C2EEC 000C+00 rc=0 efc=0 .data      @3750                                                        */
 void* d_s_d_s_logo__lit_3750[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)progChangeDraw__10dScnLogo_cFv,
 };
 
-/* 803C2EEC-803C2EF8 000C+00 .data      @3751                                                        */
+/* 803C2EEC-803C2EF8 000C+00 rc=0 efc=0 .data      @3751                                                        */
 void* d_s_d_s_logo__lit_3751[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dvdWaitDraw__10dScnLogo_cFv,
 };
 
-/* 803C2EF8-803C2F04 000C+00 .data      @3752                                                        */
+/* 803C2EF8-803C2F04 000C+00 rc=0 efc=0 .data      @3752                                                        */
 void* d_s_d_s_logo__lit_3752[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nextSceneChange__10dScnLogo_cFv,
 };
 
-/* 803C2F04-803C2FC4 00C0+00 .data      l_execFunc                                                   */
+/* 803C2F04-803C2FC4 00C0+00 rc=1 efc=0 .data      l_execFunc                                                   */
 u8 l_execFunc[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -305,14 +627,14 @@ u8 l_execFunc[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C2FC4-803C2FD0 000C+00 .data      l_method$4611                                                */
+/* 803C2FC4-803C2FD0 000C+00 rc=1 efc=0 .data      l_method$4611                                                */
 void* data_803C2FC4[3] = {
 	(void*)phase_0__FP10dScnLogo_c,
 	(void*)phase_1__FP10dScnLogo_c,
 	(void*)phase_2__FP10dScnLogo_c,
 };
 
-/* 803C2FD0-803C2FE4 0014+00 .data      l_dScnLogo_Method                                            */
+/* 803C2FD0-803C2FE4 0014+00 rc=1 efc=0 .data      l_dScnLogo_Method                                            */
 void* l_dScnLogo_Method[5] = {
 	(void*)dScnLogo_Create__FP11scene_class,
 	(void*)dScnLogo_Delete__FP10dScnLogo_c,
@@ -321,7 +643,7 @@ void* l_dScnLogo_Method[5] = {
 	(void*)dScnLogo_Draw__FP10dScnLogo_c,
 };
 
-/* 803C2FE4-803C300C 0028+00 .data      g_profile_LOGO_SCENE                                         */
+/* 803C2FE4-803C300C 0028+00 rc=0 efc=0 .data      g_profile_LOGO_SCENE                                         */
 void* g_profile_LOGO_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,
@@ -335,40 +657,40 @@ void* g_profile_LOGO_SCENE[10] = {
 	NULL,
 };
 
-/* 803C300C-803C3018 000C+00 .data      __vt__10dLog_HIO_c                                           */
+/* 803C300C-803C3018 000C+00 rc=2 efc=0 .data      __vt__10dLog_HIO_c                                           */
 void* const __vt__10dLog_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10dLog_HIO_cFv,
 };
 
-/* 802560A4-802560B4 0010+00 .text      __ct__10dLog_HIO_cFv                                         */
+/* 802560A4-802560B4 0010+00 rc=1 efc=0 .text      __ct__10dLog_HIO_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dLog_HIO_cFv) {
+asm dLog_HIO_c::dLog_HIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_logo/__ct__10dLog_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 802560B4-802560F8 0044+00 .text      preLoad_dyl_create__10dScnLogo_cFv                           */
+/* 802560B4-802560F8 0044+00 rc=1 efc=0 .text      preLoad_dyl_create__10dScnLogo_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preLoad_dyl_create__10dScnLogo_cFv) {
+asm void dScnLogo_c::preLoad_dyl_create() {
 	nofralloc
 #include "asm/d/s/d_s_logo/preLoad_dyl_create__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 802560F8-8025611C 0024+00 .text      preLoad_dyl_remove__10dScnLogo_cFv                           */
+/* 802560F8-8025611C 0024+00 rc=1 efc=0 .text      preLoad_dyl_remove__10dScnLogo_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preLoad_dyl_remove__10dScnLogo_cFv) {
+asm void dScnLogo_c::preLoad_dyl_remove() {
 	nofralloc
 #include "asm/d/s/d_s_logo/preLoad_dyl_remove__10dScnLogo_cFv.s"
 }
@@ -376,50 +698,50 @@ ASM_FUNCTION(preLoad_dyl_remove__10dScnLogo_cFv) {
 
 
 /* ############################################################################################## */
-/* 80399FE0-80399FFC 001C+00 .rodata    l_preLoad_dylKeyTbl                                          */
+/* 80399FE0-80399FFC 001C+00 rc=1 efc=0 .rodata    l_preLoad_dylKeyTbl                                          */
 SECTION_RODATA const u8 l_preLoad_dylKeyTbl[28] = {
 	0x02, 0xDC, 0x02, 0xCE, 0x02, 0x21, 0x00, 0xF2, 0x02, 0x1B, 0x02, 0xF4, 0x01, 0x39, 0x01, 0x5A,
 	0x02, 0xE4, 0x00, 0xFE, 0x03, 0x08, 0x03, 0x0F, 0x00, 0xFF, 0x01, 0x3F,
 };
 
-/* 8025611C-80256198 007C+00 .text      preLoad_dyl__10dScnLogo_cFv                                  */
+/* 8025611C-80256198 007C+00 rc=2 efc=0 .text      preLoad_dyl__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preLoad_dyl__10dScnLogo_cFv) {
+asm void dScnLogo_c::preLoad_dyl() {
 	nofralloc
 #include "asm/d/s/d_s_logo/preLoad_dyl__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256198-80256210 0078+00 .text      checkProgSelect__10dScnLogo_cFv                              */
+/* 80256198-80256210 0078+00 rc=1 efc=0 .text      checkProgSelect__10dScnLogo_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkProgSelect__10dScnLogo_cFv) {
+asm void dScnLogo_c::checkProgSelect() {
 	nofralloc
 #include "asm/d/s/d_s_logo/checkProgSelect__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256210-80256264 0054+00 .text      draw__10dScnLogo_cFv                                         */
+/* 80256210-80256264 0054+00 rc=1 efc=0 .text      draw__10dScnLogo_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10dScnLogo_cFv) {
+asm void dScnLogo_c::draw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/draw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256264-8025631C 00B8+00 .text      progInDraw__10dScnLogo_cFv                                   */
+/* 80256264-8025631C 00B8+00 rc=1 efc=0 .text      progInDraw__10dScnLogo_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progInDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progInDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progInDraw__10dScnLogo_cFv.s"
 }
@@ -427,186 +749,186 @@ ASM_FUNCTION(progInDraw__10dScnLogo_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454ED8-80454EDC 0004+00 .sdata2    @3933                                                        */
+/* 80454ED8-80454EDC 0004+00 rc=1 efc=0 .sdata2    @3933                                                        */
 f32 lit_3933 = 0.5f;
 
-/* 80454EDC-80454EE0 0004+00 .sdata2    @3934                                                        */
+/* 80454EDC-80454EE0 0004+00 rc=2 efc=0 .sdata2    @3934                                                        */
 f32 lit_3934 = 1.0f;
 
-/* 80454EE0-80454EE4 0004+00 .sdata2    @3935                                                        */
+/* 80454EE0-80454EE4 0004+00 rc=1 efc=0 .sdata2    @3935                                                        */
 f32 d_s_d_s_logo__lit_3935 = -1.0f;
 
-/* 80454EE4-80454EE8 0004+00 .sdata2    @3936                                                        */
+/* 80454EE4-80454EE8 0004+00 rc=1 efc=0 .sdata2    @3936                                                        */
 f32 d_s_d_s_logo__lit_3936 = -0.5f;
 
-/* 80454EE8-80454EEC 0004+00 .sdata2    @3937                                                        */
+/* 80454EE8-80454EEC 0004+00 rc=2 efc=0 .sdata2    @3937                                                        */
 f32 d_s_d_s_logo__lit_3937 = 255.0f;
 
-/* 80454EEC-80454EF0 0004+00 .sdata2    @3938                                                        */
+/* 80454EEC-80454EF0 0004+00 rc=1 efc=0 .sdata2    @3938                                                        */
 f32 lit_3938 = 200.0f;
 
-/* 80454EF0-80454EF8 0008+00 .sdata2    @3940                                                        */
+/* 80454EF0-80454EF8 0008+00 rc=2 efc=0 .sdata2    @3940                                                        */
 f64 d_s_d_s_logo__lit_3940 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8025631C-802568E0 05C4+00 .text      progSelDraw__10dScnLogo_cFv                                  */
+/* 8025631C-802568E0 05C4+00 rc=1 efc=0 .text      progSelDraw__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progSelDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progSelDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progSelDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 802568E0-80256A3C 015C+00 .text      progOutDraw__10dScnLogo_cFv                                  */
+/* 802568E0-80256A3C 015C+00 rc=1 efc=0 .text      progOutDraw__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progOutDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progOutDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progOutDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256A3C-80256AC0 0084+00 .text      progSetDraw__10dScnLogo_cFv                                  */
+/* 80256A3C-80256AC0 0084+00 rc=1 efc=0 .text      progSetDraw__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progSetDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progSetDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progSetDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256AC0-80256B3C 007C+00 .text      progSet2Draw__10dScnLogo_cFv                                 */
+/* 80256AC0-80256B3C 007C+00 rc=1 efc=0 .text      progSet2Draw__10dScnLogo_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progSet2Draw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progSet2Draw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progSet2Draw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256B3C-80256BF4 00B8+00 .text      progChangeDraw__10dScnLogo_cFv                               */
+/* 80256B3C-80256BF4 00B8+00 rc=1 efc=0 .text      progChangeDraw__10dScnLogo_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(progChangeDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::progChangeDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/progChangeDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256BF4-80256C68 0074+00 .text      warningInDraw__10dScnLogo_cFv                                */
+/* 80256BF4-80256C68 0074+00 rc=1 efc=0 .text      warningInDraw__10dScnLogo_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(warningInDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::warningInDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/warningInDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256C68-80256DC4 015C+00 .text      warningDispDraw__10dScnLogo_cFv                              */
+/* 80256C68-80256DC4 015C+00 rc=1 efc=0 .text      warningDispDraw__10dScnLogo_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(warningDispDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::warningDispDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/warningDispDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256DC4-80256E48 0084+00 .text      warningOutDraw__10dScnLogo_cFv                               */
+/* 80256DC4-80256E48 0084+00 rc=1 efc=0 .text      warningOutDraw__10dScnLogo_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(warningOutDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::warningOutDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/warningOutDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256E48-80256ECC 0084+00 .text      nintendoInDraw__10dScnLogo_cFv                               */
+/* 80256E48-80256ECC 0084+00 rc=1 efc=0 .text      nintendoInDraw__10dScnLogo_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nintendoInDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::nintendoInDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/nintendoInDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256ECC-80256F50 0084+00 .text      nintendoOutDraw__10dScnLogo_cFv                              */
+/* 80256ECC-80256F50 0084+00 rc=1 efc=0 .text      nintendoOutDraw__10dScnLogo_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nintendoOutDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::nintendoOutDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/nintendoOutDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256F50-80256FD4 0084+00 .text      dolbyInDraw__10dScnLogo_cFv                                  */
+/* 80256F50-80256FD4 0084+00 rc=1 efc=0 .text      dolbyInDraw__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dolbyInDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::dolbyInDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/dolbyInDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80256FD4-80257058 0084+00 .text      dolbyOutDraw__10dScnLogo_cFv                                 */
+/* 80256FD4-80257058 0084+00 rc=1 efc=0 .text      dolbyOutDraw__10dScnLogo_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dolbyOutDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::dolbyOutDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/dolbyOutDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257058-80257070 0018+00 .text      dolbyOutDraw2__10dScnLogo_cFv                                */
+/* 80257058-80257070 0018+00 rc=1 efc=0 .text      dolbyOutDraw2__10dScnLogo_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dolbyOutDraw2__10dScnLogo_cFv) {
+asm void dScnLogo_c::dolbyOutDraw2() {
 	nofralloc
 #include "asm/d/s/d_s_logo/dolbyOutDraw2__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257070-80257284 0214+00 .text      dvdWaitDraw__10dScnLogo_cFv                                  */
+/* 80257070-80257284 0214+00 rc=1 efc=0 .text      dvdWaitDraw__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dvdWaitDraw__10dScnLogo_cFv) {
+asm void dScnLogo_c::dvdWaitDraw() {
 	nofralloc
 #include "asm/d/s/d_s_logo/dvdWaitDraw__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257284-802572B8 0034+00 .text      nextSceneChange__10dScnLogo_cFv                              */
+/* 80257284-802572B8 0034+00 rc=1 efc=0 .text      nextSceneChange__10dScnLogo_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nextSceneChange__10dScnLogo_cFv) {
+asm void dScnLogo_c::nextSceneChange() {
 	nofralloc
 #include "asm/d/s/d_s_logo/nextSceneChange__10dScnLogo_cFv.s"
 }
@@ -614,7 +936,7 @@ ASM_FUNCTION(nextSceneChange__10dScnLogo_cFv) {
 
 
 /* ############################################################################################## */
-/* 80399FFC-8039A2A8 02AA+02 .rodata    @stringBase0                                                 */
+/* 80399FFC-8039A2A8 02AA+02 rc=4 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -652,209 +974,204 @@ SECTION_DEAD char* const stringBase_8039A287 = "/res/ItemTable/enemy_table.bin";
 SECTION_DEAD char* const pad_8039A2A6 = "\0";
 #pragma pop
 
-/* 802572B8-80257910 0658+00 .text      __dt__10dScnLogo_cFv                                         */
+/* 802572B8-80257910 0658+00 rc=1 efc=0 .text      __dt__10dScnLogo_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dScnLogo_cFv) {
+asm dScnLogo_c::~dScnLogo_c() {
 	nofralloc
 #include "asm/d/s/d_s_logo/__dt__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257910-802579BC 00AC+00 .text      phase_0__FP10dScnLogo_c                                      */
+/* 80257910-802579BC 00AC+00 rc=1 efc=0 .text      phase_0__FP10dScnLogo_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_0__FP10dScnLogo_c) {
+asm static void phase_0(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/phase_0__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 802579BC-80257A70 00B4+00 .text      phase_1__FP10dScnLogo_c                                      */
+/* 802579BC-80257A70 00B4+00 rc=1 efc=0 .text      phase_1__FP10dScnLogo_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_1__FP10dScnLogo_c) {
+asm static void phase_1(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/phase_1__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 80257A70-80257AB4 0044+00 .text      phase_2__FP10dScnLogo_c                                      */
+/* 80257A70-80257AB4 0044+00 rc=1 efc=0 .text      phase_2__FP10dScnLogo_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_2__FP10dScnLogo_c) {
+asm static void phase_2(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/phase_2__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 80257AB4-80257AE0 002C+00 .text      resLoad__FP30request_of_phase_process_classP10dScnLogo_c     */
+/* 80257AB4-80257AE0 002C+00 rc=1 efc=0 .text      resLoad__FP30request_of_phase_process_classP10dScnLogo_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resLoad__FP30request_of_phase_process_classP10dScnLogo_c) {
+asm static void resLoad(request_of_phase_process_class* field_0, dScnLogo_c* field_1) {
 	nofralloc
 #include "asm/d/s/d_s_logo/resLoad__FP30request_of_phase_process_classP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 80257AE0-80257C64 0184+00 .text      create__10dScnLogo_cFv                                       */
+/* 80257AE0-80257C64 0184+00 rc=1 efc=0 .text      create__10dScnLogo_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10dScnLogo_cFv) {
+asm void dScnLogo_c::create() {
 	nofralloc
 #include "asm/d/s/d_s_logo/create__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257C64-80257FEC 0388+00 .text      logoInitGC__10dScnLogo_cFv                                   */
+/* 80257C64-80257FEC 0388+00 rc=1 efc=0 .text      logoInitGC__10dScnLogo_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(logoInitGC__10dScnLogo_cFv) {
+asm void dScnLogo_c::logoInitGC() {
 	nofralloc
 #include "asm/d/s/d_s_logo/logoInitGC__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80257FEC-80258420 0434+00 .text      dvdDataLoad__10dScnLogo_cFv                                  */
+/* 80257FEC-80258420 0434+00 rc=1 efc=0 .text      dvdDataLoad__10dScnLogo_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dvdDataLoad__10dScnLogo_cFv) {
+asm void dScnLogo_c::dvdDataLoad() {
 	nofralloc
 #include "asm/d/s/d_s_logo/dvdDataLoad__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80258420-80258444 0024+00 .text      dScnLogo_Create__FP11scene_class                             */
+/* 80258420-80258444 0024+00 rc=1 efc=0 .text      dScnLogo_Create__FP11scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnLogo_Create__FP11scene_class) {
+asm static void dScnLogo_Create(scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/dScnLogo_Create__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 80258444-80258484 0040+00 .text      dScnLogo_Execute__FP10dScnLogo_c                             */
+/* 80258444-80258484 0040+00 rc=1 efc=0 .text      dScnLogo_Execute__FP10dScnLogo_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnLogo_Execute__FP10dScnLogo_c) {
+asm static void dScnLogo_Execute(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/dScnLogo_Execute__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 80258484-802584A8 0024+00 .text      dScnLogo_Draw__FP10dScnLogo_c                                */
+/* 80258484-802584A8 0024+00 rc=1 efc=0 .text      dScnLogo_Draw__FP10dScnLogo_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnLogo_Draw__FP10dScnLogo_c) {
+asm static void dScnLogo_Draw(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/dScnLogo_Draw__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 802584A8-802584D0 0028+00 .text      dScnLogo_Delete__FP10dScnLogo_c                              */
+/* 802584A8-802584D0 0028+00 rc=1 efc=0 .text      dScnLogo_Delete__FP10dScnLogo_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnLogo_Delete__FP10dScnLogo_c) {
+asm static void dScnLogo_Delete(dScnLogo_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/dScnLogo_Delete__FP10dScnLogo_c.s"
 }
 #pragma pop
 
 
-/* 802584D0-802584D8 0008+00 .text      dScnLogo_IsDelete__FP10dScnLogo_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dScnLogo_IsDelete__FP10dScnLogo_c) {
-	nofralloc
-#include "asm/d/s/d_s_logo/dScnLogo_IsDelete__FP10dScnLogo_c.s"
+/* 802584D0-802584D8 0008+00 rc=1 efc=0 .text      dScnLogo_IsDelete__FP10dScnLogo_c                            */
+static bool dScnLogo_IsDelete(dScnLogo_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
-/* 802584D8-802584FC 0024+00 .text      setProgressiveMode__10dScnLogo_cFUc                          */
+/* 802584D8-802584FC 0024+00 rc=1 efc=0 .text      setProgressiveMode__10dScnLogo_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProgressiveMode__10dScnLogo_cFUc) {
+asm void dScnLogo_c::setProgressiveMode(char field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/setProgressiveMode__10dScnLogo_cFUc.s"
 }
 #pragma pop
 
 
-/* 802584FC-80258520 0024+00 .text      getProgressiveMode__10dScnLogo_cFv                           */
+/* 802584FC-80258520 0024+00 rc=3 efc=0 .text      getProgressiveMode__10dScnLogo_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getProgressiveMode__10dScnLogo_cFv) {
+asm void dScnLogo_c::getProgressiveMode() {
 	nofralloc
 #include "asm/d/s/d_s_logo/getProgressiveMode__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 80258520-8025854C 002C+00 .text      isProgressiveMode__10dScnLogo_cFv                            */
+/* 80258520-8025854C 002C+00 rc=1 efc=0 .text      isProgressiveMode__10dScnLogo_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isProgressiveMode__10dScnLogo_cFv) {
+asm void dScnLogo_c::isProgressiveMode() {
 	nofralloc
 #include "asm/d/s/d_s_logo/isProgressiveMode__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 8025854C-8025855C 0010+00 .text      setRenderMode__10dScnLogo_cFv                                */
+/* 8025854C-8025855C 0010+00 rc=1 efc=0 .text      setRenderMode__10dScnLogo_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRenderMode__10dScnLogo_cFv) {
+asm void dScnLogo_c::setRenderMode() {
 	nofralloc
 #include "asm/d/s/d_s_logo/setRenderMode__10dScnLogo_cFv.s"
 }
 #pragma pop
 
 
-/* 8025855C-802585A4 0048+00 .text      __dt__10dLog_HIO_cFv                                         */
+/* 8025855C-802585A4 0048+00 rc=2 efc=0 .text      __dt__10dLog_HIO_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dLog_HIO_cFv) {
+asm dLog_HIO_c::~dLog_HIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_logo/__dt__10dLog_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 802585A4-802585C0 001C+00 .text      cLib_calcTimer<Us>__FPUs                                     */
+/* 802585A4-802585C0 001C+00 rc=1 efc=0 .text      cLib_calcTimer<Us>__FPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802585A4) {
+extern "C" asm static void func_802585A4() {
 	nofralloc
 #include "asm/d/s/d_s_logo/func_802585A4.s"
 }
@@ -862,21 +1179,20 @@ ASM_FUNCTION(func_802585A4) {
 
 
 /* ############################################################################################## */
-/* 80430758-80430768 000C+04 .bss       @3702                                                        */
+/* 80430758-80430768 000C+04 rc=1 efc=0 .bss       @3702                                                        */
 u8 d_s_d_s_logo__lit_3702[12 + 4 /* padding */];
 
-/* 804510E8-804510F0 0008+00 .sbss      g_LogHIO                                                     */
+/* 804510E8-804510F0 0008+00 rc=1 efc=0 .sbss      g_LogHIO                                                     */
 u8 g_LogHIO[8];
 
-/* 802585C0-8025878C 01CC+00 .text      __sinit_d_s_logo_cpp                                         */
+/* 802585C0-8025878C 01CC+00 rc=1 efc=1 .text      __sinit_d_s_logo_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_s_logo_cpp) {
+extern "C" asm void __sinit_d_s_logo_cpp() {
 	nofralloc
 #include "asm/d/s/d_s_logo/__sinit_d_s_logo_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

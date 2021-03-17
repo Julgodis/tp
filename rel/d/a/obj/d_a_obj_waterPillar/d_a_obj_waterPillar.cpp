@@ -6,66 +6,167 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daWtPillar_c;
+
+struct daWtPillar_HIO_c {
+	daWtPillar_HIO_c();
+	~daWtPillar_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daWtPillar_c {
+	void setBaseMtx();
+	void createHeapCallBack(fopAc_ac_c*);
+	void CreateHeap();
+	void create();
+	void execute();
+	void actionMain();
+	void effectSet();
+	void effectSet2();
+	void actionSwWaitInit();
+	void actionSwWait();
+	void eventStart();
+	void actionWaitInit();
+	void actionWait();
+	void actionUpFirstInit();
+	void actionUpFirst();
+	void actionUpFirstWaitInit();
+	void actionUpFirstWait();
+	void actionUpInit();
+	void actionUp();
+	void actionUpWaitInit();
+	void actionUpWait();
+	void actionDownInit();
+	void actionDown();
+	void actionRockWaitInit();
+	void actionRockWait();
+	void actionRockOnInit();
+	void actionRockOn();
+	void actionEndInit();
+	void actionEnd();
+	void getPillarHeight();
+	void draw();
+	void _delete();
+	daWtPillar_c();
+	~daWtPillar_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventRun();
+	bool eventEnd();
+	bool eventStart();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daWtPillar_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daWtPillar_cFv();
-extern "C" extern void createHeapCallBack__12daWtPillar_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__12daWtPillar_cFv();
-extern "C" extern void create__12daWtPillar_cFv();
-extern "C" extern void execute__12daWtPillar_cFv();
-extern "C" extern void actionMain__12daWtPillar_cFv();
-extern "C" extern void effectSet__12daWtPillar_cFv();
-extern "C" extern void effectSet2__12daWtPillar_cFv();
-extern "C" extern void actionSwWaitInit__12daWtPillar_cFv();
-extern "C" extern void actionSwWait__12daWtPillar_cFv();
-extern "C" extern void eventStart__12daWtPillar_cFv();
-extern "C" extern void actionWaitInit__12daWtPillar_cFv();
-extern "C" extern void actionWait__12daWtPillar_cFv();
-extern "C" extern void actionUpFirstInit__12daWtPillar_cFv();
-extern "C" extern void actionUpFirst__12daWtPillar_cFv();
-extern "C" extern void actionUpFirstWaitInit__12daWtPillar_cFv();
-extern "C" extern void actionUpFirstWait__12daWtPillar_cFv();
-extern "C" extern void actionUpInit__12daWtPillar_cFv();
-extern "C" extern void actionUp__12daWtPillar_cFv();
-extern "C" extern void actionUpWaitInit__12daWtPillar_cFv();
-extern "C" extern void actionUpWait__12daWtPillar_cFv();
-extern "C" extern void actionDownInit__12daWtPillar_cFv();
-extern "C" extern void actionDown__12daWtPillar_cFv();
-extern "C" extern void actionRockWaitInit__12daWtPillar_cFv();
-extern "C" extern void actionRockWait__12daWtPillar_cFv();
-extern "C" extern void actionRockOnInit__12daWtPillar_cFv();
-extern "C" extern void actionRockOn__12daWtPillar_cFv();
-extern "C" extern void actionEndInit__12daWtPillar_cFv();
-extern "C" extern void actionEnd__12daWtPillar_cFv();
-extern "C" extern void getPillarHeight__12daWtPillar_cFv();
-extern "C" extern void draw__12daWtPillar_cFv();
-extern "C" extern void _delete__12daWtPillar_cFv();
-extern "C" extern void daWtPillar_Draw__FP12daWtPillar_c();
-extern "C" extern void daWtPillar_Execute__FP12daWtPillar_c();
-extern "C" extern void daWtPillar_Delete__FP12daWtPillar_c();
-extern "C" extern void daWtPillar_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daWtPillar_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_waterPillar_cpp();
-extern "C" extern void func_80D2E034();
-extern "C" extern void func_80D2E03C();
-extern "C" extern void func_80D2E044();
-extern "C" extern void func_80D2E04C();
-extern "C" extern void __ct__12daWtPillar_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__12daWtPillar_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
+void daWtPillar_Draw(daWtPillar_c*);
+void daWtPillar_Execute(daWtPillar_c*);
+void daWtPillar_Delete(daWtPillar_c*);
+void daWtPillar_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_waterPillar_cpp();
+extern "C" void func_80D2E034();
+extern "C" void func_80D2E03C();
+extern "C" void func_80D2E044();
+extern "C" void func_80D2E04C();
+
+extern "C" void __ct__16daWtPillar_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daWtPillar_cFv();
+extern "C" void createHeapCallBack__12daWtPillar_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__12daWtPillar_cFv();
+extern "C" void create__12daWtPillar_cFv();
+extern "C" void execute__12daWtPillar_cFv();
+extern "C" void actionMain__12daWtPillar_cFv();
+extern "C" void effectSet__12daWtPillar_cFv();
+extern "C" void effectSet2__12daWtPillar_cFv();
+extern "C" void actionSwWaitInit__12daWtPillar_cFv();
+extern "C" void actionSwWait__12daWtPillar_cFv();
+extern "C" void eventStart__12daWtPillar_cFv();
+extern "C" void actionWaitInit__12daWtPillar_cFv();
+extern "C" void actionWait__12daWtPillar_cFv();
+extern "C" void actionUpFirstInit__12daWtPillar_cFv();
+extern "C" void actionUpFirst__12daWtPillar_cFv();
+extern "C" void actionUpFirstWaitInit__12daWtPillar_cFv();
+extern "C" void actionUpFirstWait__12daWtPillar_cFv();
+extern "C" void actionUpInit__12daWtPillar_cFv();
+extern "C" void actionUp__12daWtPillar_cFv();
+extern "C" void actionUpWaitInit__12daWtPillar_cFv();
+extern "C" void actionUpWait__12daWtPillar_cFv();
+extern "C" void actionDownInit__12daWtPillar_cFv();
+extern "C" void actionDown__12daWtPillar_cFv();
+extern "C" void actionRockWaitInit__12daWtPillar_cFv();
+extern "C" void actionRockWait__12daWtPillar_cFv();
+extern "C" void actionRockOnInit__12daWtPillar_cFv();
+extern "C" void actionRockOn__12daWtPillar_cFv();
+extern "C" void actionEndInit__12daWtPillar_cFv();
+extern "C" void actionEnd__12daWtPillar_cFv();
+extern "C" void getPillarHeight__12daWtPillar_cFv();
+extern "C" void draw__12daWtPillar_cFv();
+extern "C" void _delete__12daWtPillar_cFv();
+extern "C" void daWtPillar_Draw__FP12daWtPillar_c();
+extern "C" void daWtPillar_Execute__FP12daWtPillar_c();
+extern "C" void daWtPillar_Delete__FP12daWtPillar_c();
+extern "C" void daWtPillar_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daWtPillar_HIO_cFv();
+extern "C" void __sinit_d_a_obj_waterPillar_cpp();
+extern "C" void func_80D2E034();
+extern "C" void func_80D2E03C();
+extern "C" void func_80D2E044();
+extern "C" void func_80D2E04C();
+extern "C" void __ct__12daWtPillar_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__12daWtPillar_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
 SECTION_RODATA extern const u32 lit_3645;
 SECTION_RODATA extern const u32 lit_3646;
 SECTION_RODATA extern const u32 lit_3647;
@@ -135,8 +236,11 @@ SECTION_BSS extern u8 data_80D2EB94[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -146,7 +250,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daWtPillar_HIO_cFv) {
+asm daWtPillar_HIO_c::daWtPillar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__ct__16daWtPillar_HIO_cFv.s"
 }
@@ -157,7 +261,7 @@ ASM_FUNCTION(__ct__16daWtPillar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -168,7 +272,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daWtPillar_cFv) {
+asm void daWtPillar_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/setBaseMtx__12daWtPillar_cFv.s"
 }
@@ -179,7 +283,7 @@ ASM_FUNCTION(setBaseMtx__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__12daWtPillar_cFP10fopAc_ac_c) {
+asm void daWtPillar_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/createHeapCallBack__12daWtPillar_cFP10fopAc_ac_c.s"
 }
@@ -190,7 +294,7 @@ ASM_FUNCTION(createHeapCallBack__12daWtPillar_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daWtPillar_cFv) {
+asm void daWtPillar_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/CreateHeap__12daWtPillar_cFv.s"
 }
@@ -201,7 +305,7 @@ ASM_FUNCTION(CreateHeap__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daWtPillar_cFv) {
+asm void daWtPillar_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/create__12daWtPillar_cFv.s"
 }
@@ -212,7 +316,7 @@ ASM_FUNCTION(create__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daWtPillar_cFv) {
+asm void daWtPillar_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/execute__12daWtPillar_cFv.s"
 }
@@ -223,7 +327,7 @@ ASM_FUNCTION(execute__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMain__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionMain__12daWtPillar_cFv.s"
 }
@@ -234,7 +338,7 @@ ASM_FUNCTION(actionMain__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet__12daWtPillar_cFv) {
+asm void daWtPillar_c::effectSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/effectSet__12daWtPillar_cFv.s"
 }
@@ -245,7 +349,7 @@ ASM_FUNCTION(effectSet__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet2__12daWtPillar_cFv) {
+asm void daWtPillar_c::effectSet2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/effectSet2__12daWtPillar_cFv.s"
 }
@@ -256,7 +360,7 @@ ASM_FUNCTION(effectSet2__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWaitInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionSwWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionSwWaitInit__12daWtPillar_cFv.s"
 }
@@ -267,7 +371,7 @@ ASM_FUNCTION(actionSwWaitInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWait__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionSwWait__12daWtPillar_cFv.s"
 }
@@ -278,7 +382,7 @@ ASM_FUNCTION(actionSwWait__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__12daWtPillar_cFv) {
+asm void daWtPillar_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/eventStart__12daWtPillar_cFv.s"
 }
@@ -289,7 +393,7 @@ ASM_FUNCTION(eventStart__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionWaitInit__12daWtPillar_cFv.s"
 }
@@ -300,7 +404,7 @@ ASM_FUNCTION(actionWaitInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionWait__12daWtPillar_cFv.s"
 }
@@ -311,7 +415,7 @@ ASM_FUNCTION(actionWait__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpFirstInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpFirstInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpFirstInit__12daWtPillar_cFv.s"
 }
@@ -322,7 +426,7 @@ ASM_FUNCTION(actionUpFirstInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpFirst__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpFirst() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpFirst__12daWtPillar_cFv.s"
 }
@@ -333,7 +437,7 @@ ASM_FUNCTION(actionUpFirst__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpFirstWaitInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpFirstWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpFirstWaitInit__12daWtPillar_cFv.s"
 }
@@ -344,7 +448,7 @@ ASM_FUNCTION(actionUpFirstWaitInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpFirstWait__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpFirstWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpFirstWait__12daWtPillar_cFv.s"
 }
@@ -355,7 +459,7 @@ ASM_FUNCTION(actionUpFirstWait__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpInit__12daWtPillar_cFv.s"
 }
@@ -366,7 +470,7 @@ ASM_FUNCTION(actionUpInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUp__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUp__12daWtPillar_cFv.s"
 }
@@ -377,7 +481,7 @@ ASM_FUNCTION(actionUp__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpWaitInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpWaitInit__12daWtPillar_cFv.s"
 }
@@ -388,7 +492,7 @@ ASM_FUNCTION(actionUpWaitInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionUpWait__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionUpWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionUpWait__12daWtPillar_cFv.s"
 }
@@ -399,7 +503,7 @@ ASM_FUNCTION(actionUpWait__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDownInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionDownInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionDownInit__12daWtPillar_cFv.s"
 }
@@ -410,7 +514,7 @@ ASM_FUNCTION(actionDownInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDown__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionDown__12daWtPillar_cFv.s"
 }
@@ -421,7 +525,7 @@ ASM_FUNCTION(actionDown__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionRockWaitInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionRockWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionRockWaitInit__12daWtPillar_cFv.s"
 }
@@ -432,7 +536,7 @@ ASM_FUNCTION(actionRockWaitInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionRockWait__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionRockWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionRockWait__12daWtPillar_cFv.s"
 }
@@ -443,7 +547,7 @@ ASM_FUNCTION(actionRockWait__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionRockOnInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionRockOnInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionRockOnInit__12daWtPillar_cFv.s"
 }
@@ -454,7 +558,7 @@ ASM_FUNCTION(actionRockOnInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionRockOn__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionRockOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionRockOn__12daWtPillar_cFv.s"
 }
@@ -465,7 +569,7 @@ ASM_FUNCTION(actionRockOn__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEndInit__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionEndInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionEndInit__12daWtPillar_cFv.s"
 }
@@ -476,7 +580,7 @@ ASM_FUNCTION(actionEndInit__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__12daWtPillar_cFv) {
+asm void daWtPillar_c::actionEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/actionEnd__12daWtPillar_cFv.s"
 }
@@ -487,7 +591,7 @@ ASM_FUNCTION(actionEnd__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPillarHeight__12daWtPillar_cFv) {
+asm void daWtPillar_c::getPillarHeight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/getPillarHeight__12daWtPillar_cFv.s"
 }
@@ -498,7 +602,7 @@ ASM_FUNCTION(getPillarHeight__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daWtPillar_cFv) {
+asm void daWtPillar_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/draw__12daWtPillar_cFv.s"
 }
@@ -509,7 +613,7 @@ ASM_FUNCTION(draw__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daWtPillar_cFv) {
+asm void daWtPillar_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/_delete__12daWtPillar_cFv.s"
 }
@@ -520,7 +624,7 @@ ASM_FUNCTION(_delete__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtPillar_Draw__FP12daWtPillar_c) {
+asm void daWtPillar_Draw(daWtPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/daWtPillar_Draw__FP12daWtPillar_c.s"
 }
@@ -531,7 +635,7 @@ ASM_FUNCTION(daWtPillar_Draw__FP12daWtPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtPillar_Execute__FP12daWtPillar_c) {
+asm void daWtPillar_Execute(daWtPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/daWtPillar_Execute__FP12daWtPillar_c.s"
 }
@@ -542,7 +646,7 @@ ASM_FUNCTION(daWtPillar_Execute__FP12daWtPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtPillar_Delete__FP12daWtPillar_c) {
+asm void daWtPillar_Delete(daWtPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/daWtPillar_Delete__FP12daWtPillar_c.s"
 }
@@ -553,7 +657,7 @@ ASM_FUNCTION(daWtPillar_Delete__FP12daWtPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtPillar_Create__FP10fopAc_ac_c) {
+asm void daWtPillar_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/daWtPillar_Create__FP10fopAc_ac_c.s"
 }
@@ -564,7 +668,7 @@ ASM_FUNCTION(daWtPillar_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daWtPillar_HIO_cFv) {
+asm daWtPillar_HIO_c::~daWtPillar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__16daWtPillar_HIO_cFv.s"
 }
@@ -575,7 +679,7 @@ ASM_FUNCTION(__dt__16daWtPillar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_waterPillar_cpp) {
+extern "C" asm void __sinit_d_a_obj_waterPillar_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__sinit_d_a_obj_waterPillar_cpp.s"
 }
@@ -586,7 +690,7 @@ ASM_FUNCTION(__sinit_d_a_obj_waterPillar_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D2E034) {
+extern "C" asm void func_80D2E034() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/func_80D2E034.s"
 }
@@ -597,7 +701,7 @@ ASM_FUNCTION(func_80D2E034) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D2E03C) {
+extern "C" asm void func_80D2E03C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/func_80D2E03C.s"
 }
@@ -608,7 +712,7 @@ ASM_FUNCTION(func_80D2E03C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D2E044) {
+extern "C" asm void func_80D2E044() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/func_80D2E044.s"
 }
@@ -619,7 +723,7 @@ ASM_FUNCTION(func_80D2E044) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D2E04C) {
+extern "C" asm void func_80D2E04C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/func_80D2E04C.s"
 }
@@ -630,7 +734,7 @@ ASM_FUNCTION(func_80D2E04C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daWtPillar_cFv) {
+asm daWtPillar_c::daWtPillar_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__ct__12daWtPillar_cFv.s"
 }
@@ -641,7 +745,7 @@ ASM_FUNCTION(__ct__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__8cM3dGCylFv.s"
 }
@@ -652,7 +756,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__8cM3dGAabFv.s"
 }
@@ -663,7 +767,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__10dCcD_GSttsFv.s"
 }
@@ -674,7 +778,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__12dBgS_AcchCirFv.s"
 }
@@ -685,7 +789,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -696,7 +800,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__12J3DFrameCtrlFv.s"
 }
@@ -707,7 +811,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daWtPillar_cFv) {
+asm daWtPillar_c::~daWtPillar_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__12daWtPillar_cFv.s"
 }
@@ -718,7 +822,7 @@ ASM_FUNCTION(__dt__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__10cCcD_GSttsFv.s"
 }
@@ -729,7 +833,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/__dt__17dEvLib_callback_cFv.s"
 }
@@ -737,36 +841,21 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80D2E744-80D2E74C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D2E74C-80D2E754 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D2E754-80D2E75C 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterPillar/d_a_obj_waterPillar/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

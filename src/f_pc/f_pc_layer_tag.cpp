@@ -6,60 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build layer_management_tag_class (layer_management_tag_class) False/False
+/* top-level dependencies (begin layer_management_tag_class) */
+/* top-level dependencies (end layer_management_tag_class) */
+struct layer_management_tag_class {
+};
+
+// build layer_class (layer_class) False/False
+/* top-level dependencies (begin layer_class) */
+/* top-level dependencies (end layer_class) */
+struct layer_class {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
-extern "C" extern void fpcLyTg_QueueTo__FP26layer_management_tag_class();
-extern "C" extern void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
-extern "C" extern void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
+void fpcLyTg_ToQueue(layer_management_tag_class*, s32, u16, u16);
+void fpcLyTg_QueueTo(layer_management_tag_class*);
+void fpcLyTg_Move(layer_management_tag_class*, s32, u16, u16);
+void fpcLyTg_Init(layer_management_tag_class*, s32, void*);
+
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
 SECTION_DATA extern u8 data_803A3A00[28 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
-extern "C" extern void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
-extern "C" extern void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
-extern "C" extern void fpcLy_Layer__FUi();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+void fpcLy_IntoQueue(layer_class*, s32, create_tag_class*, s32);
+void fpcLy_ToQueue(layer_class*, s32, create_tag_class*);
+void fpcLy_QueueTo(layer_class*, create_tag_class*);
+void fpcLy_Layer(s32);
+void cTg_Create(create_tag_class*, void*);
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
+extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
+extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
+extern "C" void fpcLy_Layer__FUi();
+extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
-/* 80021CD4-80021DCC 00F8+00 .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
+/* 80021CD4-80021DCC 00F8+00 rc=2 efc=1 .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs) {
+asm void fpcLyTg_ToQueue(layer_management_tag_class* field_0, s32 field_1, u16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs.s"
 }
 #pragma pop
 
 
-/* 80021DCC-80021E2C 0060+00 .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
+/* 80021DCC-80021E2C 0060+00 rc=3 efc=2 .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLyTg_QueueTo__FP26layer_management_tag_class) {
+asm void fpcLyTg_QueueTo(layer_management_tag_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_QueueTo__FP26layer_management_tag_class.s"
 }
 #pragma pop
 
 
-/* 80021E2C-80021EB0 0084+00 .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
+/* 80021E2C-80021EB0 0084+00 rc=1 efc=1 .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLyTg_Move__FP26layer_management_tag_classUiUsUs) {
+asm void fpcLyTg_Move(layer_management_tag_class* field_0, s32 field_1, u16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_Move__FP26layer_management_tag_classUiUsUs.s"
 }
@@ -67,7 +104,7 @@ ASM_FUNCTION(fpcLyTg_Move__FP26layer_management_tag_classUiUsUs) {
 
 
 /* ############################################################################################## */
-/* 803A3A00-803A3A20 001C+04 .data      crear$2239                                                   */
+/* 803A3A00-803A3A20 001C+04 rc=1 efc=0 .data      crear$2239                                                   */
 u8 data_803A3A00[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -75,15 +112,14 @@ u8 data_803A3A00[32] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80021EB0-80021F64 00B4+00 .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
+/* 80021EB0-80021F64 00B4+00 rc=1 efc=1 .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLyTg_Init__FP26layer_management_tag_classUiPv) {
+asm void fpcLyTg_Init(layer_management_tag_class* field_0, s32 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_Init__FP26layer_management_tag_classUiPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

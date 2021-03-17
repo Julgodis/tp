@@ -6,22 +6,49 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCrystal_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjCrystal_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__14daObjCrystal_cFv();
-extern "C" extern void setBaseMtx__14daObjCrystal_cFv();
-extern "C" extern void Create__14daObjCrystal_cFv();
-extern "C" extern void CreateHeap__14daObjCrystal_cFv();
-extern "C" extern void create__14daObjCrystal_cFv();
-extern "C" extern void execute__14daObjCrystal_cFv();
-extern "C" extern void draw__14daObjCrystal_cFv();
-extern "C" extern void _delete__14daObjCrystal_cFv();
-extern "C" extern void daObjCrystal_Draw__FP14daObjCrystal_c();
-extern "C" extern void daObjCrystal_Execute__FP14daObjCrystal_c();
-extern "C" extern void daObjCrystal_Delete__FP14daObjCrystal_c();
-extern "C" extern void daObjCrystal_Create__FP14daObjCrystal_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjCrystal_Draw(daObjCrystal_c*);
+void daObjCrystal_Execute(daObjCrystal_c*);
+void daObjCrystal_Delete(daObjCrystal_c*);
+void daObjCrystal_Create(daObjCrystal_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__14daObjCrystal_cFv();
+extern "C" void setBaseMtx__14daObjCrystal_cFv();
+extern "C" void Create__14daObjCrystal_cFv();
+extern "C" void CreateHeap__14daObjCrystal_cFv();
+extern "C" void create__14daObjCrystal_cFv();
+extern "C" void execute__14daObjCrystal_cFv();
+extern "C" void draw__14daObjCrystal_cFv();
+extern "C" void _delete__14daObjCrystal_cFv();
+extern "C" void daObjCrystal_Draw__FP14daObjCrystal_c();
+extern "C" void daObjCrystal_Execute__FP14daObjCrystal_c();
+extern "C" void daObjCrystal_Delete__FP14daObjCrystal_c();
+extern "C" void daObjCrystal_Create__FP14daObjCrystal_c();
 SECTION_RODATA extern const u32 lit_3693;
 SECTION_RODATA extern const u8 data_80BD68C0[8];
 SECTION_RODATA extern const u8 data_80BD68C8[8];
@@ -35,7 +62,9 @@ SECTION_DATA extern u8 g_profile_Obj_Crystal[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +74,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -56,7 +85,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/initBaseMtx__14daObjCrystal_cFv.s"
 }
@@ -67,7 +96,7 @@ ASM_FUNCTION(initBaseMtx__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/setBaseMtx__14daObjCrystal_cFv.s"
 }
@@ -78,7 +107,7 @@ ASM_FUNCTION(setBaseMtx__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/Create__14daObjCrystal_cFv.s"
 }
@@ -89,7 +118,7 @@ ASM_FUNCTION(Create__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/CreateHeap__14daObjCrystal_cFv.s"
 }
@@ -100,7 +129,7 @@ ASM_FUNCTION(CreateHeap__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/func_80BD6664.s"
 }
@@ -111,7 +140,7 @@ ASM_FUNCTION(create__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/execute__14daObjCrystal_cFv.s"
 }
@@ -122,7 +151,7 @@ ASM_FUNCTION(execute__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/draw__14daObjCrystal_cFv.s"
 }
@@ -133,7 +162,7 @@ ASM_FUNCTION(draw__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjCrystal_cFv) {
+asm void daObjCrystal_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/_delete__14daObjCrystal_cFv.s"
 }
@@ -144,7 +173,7 @@ ASM_FUNCTION(_delete__14daObjCrystal_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrystal_Draw__FP14daObjCrystal_c) {
+asm void daObjCrystal_Draw(daObjCrystal_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/daObjCrystal_Draw__FP14daObjCrystal_c.s"
 }
@@ -155,7 +184,7 @@ ASM_FUNCTION(daObjCrystal_Draw__FP14daObjCrystal_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrystal_Execute__FP14daObjCrystal_c) {
+asm void daObjCrystal_Execute(daObjCrystal_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/daObjCrystal_Execute__FP14daObjCrystal_c.s"
 }
@@ -166,7 +195,7 @@ ASM_FUNCTION(daObjCrystal_Execute__FP14daObjCrystal_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrystal_Delete__FP14daObjCrystal_c) {
+asm void daObjCrystal_Delete(daObjCrystal_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/daObjCrystal_Delete__FP14daObjCrystal_c.s"
 }
@@ -177,7 +206,7 @@ ASM_FUNCTION(daObjCrystal_Delete__FP14daObjCrystal_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrystal_Create__FP14daObjCrystal_c) {
+asm void daObjCrystal_Create(daObjCrystal_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crystal/d_a_obj_crystal/daObjCrystal_Create__FP14daObjCrystal_c.s"
 }

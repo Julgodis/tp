@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagChgRestart_c;
+
+struct daTagChgRestart_c {
+	void Create();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__17daTagChgRestart_cFv();
-extern "C" extern void create__17daTagChgRestart_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void execute__17daTagChgRestart_cFv();
-extern "C" extern void _delete__17daTagChgRestart_cFv();
-extern "C" extern void daTagChgRestart_Execute__FP17daTagChgRestart_c();
-extern "C" extern void daTagChgRestart_Delete__FP17daTagChgRestart_c();
-extern "C" extern void daTagChgRestart_Create__FP10fopAc_ac_c();
+void daTagChgRestart_Execute(daTagChgRestart_c*);
+void daTagChgRestart_Delete(daTagChgRestart_c*);
+void daTagChgRestart_Create(fopAc_ac_c*);
+
+extern "C" void Create__17daTagChgRestart_cFv();
+extern "C" void create__17daTagChgRestart_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__17daTagChgRestart_cFv();
+extern "C" bool _delete__17daTagChgRestart_cFv();
+extern "C" void daTagChgRestart_Execute__FP17daTagChgRestart_c();
+extern "C" void daTagChgRestart_Delete__FP17daTagChgRestart_c();
+extern "C" void daTagChgRestart_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u32 lit_3651;
 SECTION_RODATA extern const u8 lit_3652[4];
@@ -28,7 +54,9 @@ SECTION_DATA extern u8 g_profile_Tag_ChgRestart[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -38,7 +66,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__17daTagChgRestart_cFv) {
+asm void daTagChgRestart_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/Create__17daTagChgRestart_cFv.s"
 }
@@ -49,7 +77,7 @@ ASM_FUNCTION(Create__17daTagChgRestart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__17daTagChgRestart_cFv) {
+asm void daTagChgRestart_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/func_80D567E4.s"
 }
@@ -60,7 +88,7 @@ ASM_FUNCTION(create__17daTagChgRestart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/__dt__4cXyzFv.s"
 }
@@ -68,21 +96,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80D568B4-80D568B8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D568B8-80D56A84 01CC+00 .text      execute__17daTagChgRestart_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__17daTagChgRestart_cFv) {
+asm void daTagChgRestart_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/execute__17daTagChgRestart_cFv.s"
 }
@@ -90,21 +113,16 @@ ASM_FUNCTION(execute__17daTagChgRestart_cFv) {
 
 
 /* 80D56A84-80D56A8C 0008+00 .text      _delete__17daTagChgRestart_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__17daTagChgRestart_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/_delete__17daTagChgRestart_cFv.s"
+bool daTagChgRestart_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D56A8C-80D56AAC 0020+00 .text      daTagChgRestart_Execute__FP17daTagChgRestart_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagChgRestart_Execute__FP17daTagChgRestart_c) {
+asm void daTagChgRestart_Execute(daTagChgRestart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/daTagChgRestart_Execute__FP17daTagChgRestart_c.s"
 }
@@ -115,7 +133,7 @@ ASM_FUNCTION(daTagChgRestart_Execute__FP17daTagChgRestart_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagChgRestart_Delete__FP17daTagChgRestart_c) {
+asm void daTagChgRestart_Delete(daTagChgRestart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/daTagChgRestart_Delete__FP17daTagChgRestart_c.s"
 }
@@ -126,7 +144,7 @@ ASM_FUNCTION(daTagChgRestart_Delete__FP17daTagChgRestart_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagChgRestart_Create__FP10fopAc_ac_c) {
+asm void daTagChgRestart_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/daTagChgRestart_Create__FP10fopAc_ac_c.s"
 }

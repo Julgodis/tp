@@ -6,56 +6,126 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSCannonTen_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjSCannonTen_c {
+	daObjSCannonTen_c();
+	~daObjSCannonTen_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void middleExe();
+	void exeModeWait();
+	void exeModeOrderEvt();
+	void exeModeActionEvt();
+	void exeModeEnd();
+	void demoExe();
+	void demoModeInit(s32);
+	void demoInitLinkIn();
+	void demoExeLinkIn();
+	void demoInitSet();
+	void demoExeSet();
+	void demoInitMove();
+	void demoExeMove();
+	void demoInitFire();
+	void demoExeFire();
+	void demoInitFireEnd();
+	void demoExeFireEnd();
+	void demoInitFinish();
+	void demoExeFinish();
+	void init();
+	void setModelMtx();
+	void changeScene();
+	void initEmtSmoke();
+	void exeEmtSmoke();
+	void initEmtLine();
+	void exeEmtLine();
+	void delEmtAll();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void daObjSCannonTen_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__17daObjSCannonTen_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__17daObjSCannonTen_cFv();
-extern "C" extern void createHeap__17daObjSCannonTen_cFv();
-extern "C" extern void create__17daObjSCannonTen_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void Delete__17daObjSCannonTen_cFv();
-extern "C" extern void draw__17daObjSCannonTen_cFv();
-extern "C" extern void execute__17daObjSCannonTen_cFv();
-extern "C" extern void middleExe__17daObjSCannonTen_cFv();
-extern "C" extern void exeModeWait__17daObjSCannonTen_cFv();
-extern "C" extern void exeModeOrderEvt__17daObjSCannonTen_cFv();
-extern "C" extern void exeModeActionEvt__17daObjSCannonTen_cFv();
-extern "C" extern void exeModeEnd__17daObjSCannonTen_cFv();
-extern "C" extern void demoExe__17daObjSCannonTen_cFv();
-extern "C" extern void demoModeInit__17daObjSCannonTen_cFi();
-extern "C" extern void demoInitLinkIn__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeLinkIn__17daObjSCannonTen_cFv();
-extern "C" extern void demoInitSet__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeSet__17daObjSCannonTen_cFv();
-extern "C" extern void demoInitMove__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeMove__17daObjSCannonTen_cFv();
-extern "C" extern void demoInitFire__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeFire__17daObjSCannonTen_cFv();
-extern "C" extern void demoInitFireEnd__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeFireEnd__17daObjSCannonTen_cFv();
-extern "C" extern void demoInitFinish__17daObjSCannonTen_cFv();
-extern "C" extern void demoExeFinish__17daObjSCannonTen_cFv();
-extern "C" extern void init__17daObjSCannonTen_cFv();
-extern "C" extern void setModelMtx__17daObjSCannonTen_cFv();
-extern "C" extern void changeScene__17daObjSCannonTen_cFv();
-extern "C" extern void initEmtSmoke__17daObjSCannonTen_cFv();
-extern "C" extern void exeEmtSmoke__17daObjSCannonTen_cFv();
-extern "C" extern void initEmtLine__17daObjSCannonTen_cFv();
-extern "C" extern void exeEmtLine__17daObjSCannonTen_cFv();
-extern "C" extern void delEmtAll__17daObjSCannonTen_cFv();
-extern "C" extern void daObjSCannonTen_create__FP17daObjSCannonTen_c();
-extern "C" extern void daObjSCannonTen_Delete__FP17daObjSCannonTen_c();
-extern "C" extern void daObjSCannonTen_execute__FP17daObjSCannonTen_c();
-extern "C" extern void daObjSCannonTen_draw__FP17daObjSCannonTen_c();
-extern "C" extern void func_80CCCA6C();
-extern "C" extern void __sinit_d_a_obj_scannon_ten_cpp();
-extern "C" extern void func_80CCCC1C();
-extern "C" extern void func_80CCCC24();
+void eventCallBack(void*, s32);
+void daObjSCannonTen_c_createHeap(fopAc_ac_c*);
+void daObjSCannonTen_create(daObjSCannonTen_c*);
+void daObjSCannonTen_Delete(daObjSCannonTen_c*);
+void daObjSCannonTen_execute(daObjSCannonTen_c*);
+void daObjSCannonTen_draw(daObjSCannonTen_c*);
+extern "C" void func_80CCCA6C();
+extern "C" void __sinit_d_a_obj_scannon_ten_cpp();
+extern "C" void func_80CCCC1C();
+extern "C" void func_80CCCC24();
+
+extern "C" void eventCallBack__FPvi();
+extern "C" void daObjSCannonTen_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__17daObjSCannonTen_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__17daObjSCannonTen_cFv();
+extern "C" void createHeap__17daObjSCannonTen_cFv();
+extern "C" void create__17daObjSCannonTen_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void Delete__17daObjSCannonTen_cFv();
+extern "C" void draw__17daObjSCannonTen_cFv();
+extern "C" void execute__17daObjSCannonTen_cFv();
+extern "C" void middleExe__17daObjSCannonTen_cFv();
+extern "C" void exeModeWait__17daObjSCannonTen_cFv();
+extern "C" void exeModeOrderEvt__17daObjSCannonTen_cFv();
+extern "C" void exeModeActionEvt__17daObjSCannonTen_cFv();
+extern "C" void exeModeEnd__17daObjSCannonTen_cFv();
+extern "C" void demoExe__17daObjSCannonTen_cFv();
+extern "C" void demoModeInit__17daObjSCannonTen_cFi();
+extern "C" void demoInitLinkIn__17daObjSCannonTen_cFv();
+extern "C" void demoExeLinkIn__17daObjSCannonTen_cFv();
+extern "C" void demoInitSet__17daObjSCannonTen_cFv();
+extern "C" void demoExeSet__17daObjSCannonTen_cFv();
+extern "C" void demoInitMove__17daObjSCannonTen_cFv();
+extern "C" void demoExeMove__17daObjSCannonTen_cFv();
+extern "C" void demoInitFire__17daObjSCannonTen_cFv();
+extern "C" void demoExeFire__17daObjSCannonTen_cFv();
+extern "C" void demoInitFireEnd__17daObjSCannonTen_cFv();
+extern "C" void demoExeFireEnd__17daObjSCannonTen_cFv();
+extern "C" void demoInitFinish__17daObjSCannonTen_cFv();
+extern "C" void demoExeFinish__17daObjSCannonTen_cFv();
+extern "C" void init__17daObjSCannonTen_cFv();
+extern "C" void setModelMtx__17daObjSCannonTen_cFv();
+extern "C" void changeScene__17daObjSCannonTen_cFv();
+extern "C" void initEmtSmoke__17daObjSCannonTen_cFv();
+extern "C" void exeEmtSmoke__17daObjSCannonTen_cFv();
+extern "C" void initEmtLine__17daObjSCannonTen_cFv();
+extern "C" void exeEmtLine__17daObjSCannonTen_cFv();
+extern "C" void delEmtAll__17daObjSCannonTen_cFv();
+extern "C" void daObjSCannonTen_create__FP17daObjSCannonTen_c();
+extern "C" void daObjSCannonTen_Delete__FP17daObjSCannonTen_c();
+extern "C" void daObjSCannonTen_execute__FP17daObjSCannonTen_c();
+extern "C" void daObjSCannonTen_draw__FP17daObjSCannonTen_c();
+extern "C" void func_80CCCA6C();
+extern "C" void __sinit_d_a_obj_scannon_ten_cpp();
+extern "C" void func_80CCCC1C();
+extern "C" void func_80CCCC24();
 SECTION_RODATA extern const u8 lit_3832[4];
 SECTION_RODATA extern const u32 lit_3931;
 SECTION_RODATA extern const u32 lit_3932;
@@ -110,7 +180,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -120,7 +192,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/eventCallBack__FPvi.s"
 }
@@ -131,7 +203,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSCannonTen_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjSCannonTen_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/daObjSCannonTen_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -142,7 +214,7 @@ ASM_FUNCTION(daObjSCannonTen_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daObjSCannonTen_cFv) {
+asm daObjSCannonTen_c::daObjSCannonTen_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__ct__17daObjSCannonTen_cFv.s"
 }
@@ -153,7 +225,7 @@ ASM_FUNCTION(__ct__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__dt__12J3DFrameCtrlFv.s"
 }
@@ -164,7 +236,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daObjSCannonTen_cFv) {
+asm daObjSCannonTen_c::~daObjSCannonTen_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__dt__17daObjSCannonTen_cFv.s"
 }
@@ -175,7 +247,7 @@ ASM_FUNCTION(__dt__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/createHeap__17daObjSCannonTen_cFv.s"
 }
@@ -186,7 +258,7 @@ ASM_FUNCTION(createHeap__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/create__17daObjSCannonTen_cFv.s"
 }
@@ -197,7 +269,7 @@ ASM_FUNCTION(create__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -208,7 +280,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__dt__12dBgS_AcchCirFv.s"
 }
@@ -219,7 +291,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/Delete__17daObjSCannonTen_cFv.s"
 }
@@ -230,7 +302,7 @@ ASM_FUNCTION(Delete__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/draw__17daObjSCannonTen_cFv.s"
 }
@@ -241,7 +313,7 @@ ASM_FUNCTION(draw__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/execute__17daObjSCannonTen_cFv.s"
 }
@@ -252,7 +324,7 @@ ASM_FUNCTION(execute__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(middleExe__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::middleExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/middleExe__17daObjSCannonTen_cFv.s"
 }
@@ -263,7 +335,7 @@ ASM_FUNCTION(middleExe__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeWait__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::exeModeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeModeWait__17daObjSCannonTen_cFv.s"
 }
@@ -274,7 +346,7 @@ ASM_FUNCTION(exeModeWait__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeOrderEvt__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::exeModeOrderEvt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeModeOrderEvt__17daObjSCannonTen_cFv.s"
 }
@@ -285,7 +357,7 @@ ASM_FUNCTION(exeModeOrderEvt__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeActionEvt__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::exeModeActionEvt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeModeActionEvt__17daObjSCannonTen_cFv.s"
 }
@@ -293,21 +365,16 @@ ASM_FUNCTION(exeModeActionEvt__17daObjSCannonTen_cFv) {
 
 
 /* 80CCBDCC-80CCBDD0 0004+00 .text      exeModeEnd__17daObjSCannonTen_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exeModeEnd__17daObjSCannonTen_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeModeEnd__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::exeModeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCBDD0-80CCBE8C 00BC+00 .text      demoExe__17daObjSCannonTen_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExe__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExe__17daObjSCannonTen_cFv.s"
 }
@@ -318,7 +385,7 @@ ASM_FUNCTION(demoExe__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoModeInit__17daObjSCannonTen_cFi) {
+asm void daObjSCannonTen_c::demoModeInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoModeInit__17daObjSCannonTen_cFi.s"
 }
@@ -326,21 +393,16 @@ ASM_FUNCTION(demoModeInit__17daObjSCannonTen_cFi) {
 
 
 /* 80CCBF00-80CCBF04 0004+00 .text      demoInitLinkIn__17daObjSCannonTen_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoInitLinkIn__17daObjSCannonTen_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitLinkIn__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::demoInitLinkIn() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCBF04-80CCBFC4 00C0+00 .text      demoExeLinkIn__17daObjSCannonTen_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeLinkIn__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeLinkIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeLinkIn__17daObjSCannonTen_cFv.s"
 }
@@ -351,7 +413,7 @@ ASM_FUNCTION(demoExeLinkIn__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitSet__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoInitSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitSet__17daObjSCannonTen_cFv.s"
 }
@@ -362,7 +424,7 @@ ASM_FUNCTION(demoInitSet__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeSet__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeSet__17daObjSCannonTen_cFv.s"
 }
@@ -370,21 +432,16 @@ ASM_FUNCTION(demoExeSet__17daObjSCannonTen_cFv) {
 
 
 /* 80CCC114-80CCC118 0004+00 .text      demoInitMove__17daObjSCannonTen_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoInitMove__17daObjSCannonTen_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitMove__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::demoInitMove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCC118-80CCC20C 00F4+00 .text      demoExeMove__17daObjSCannonTen_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeMove__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeMove__17daObjSCannonTen_cFv.s"
 }
@@ -395,7 +452,7 @@ ASM_FUNCTION(demoExeMove__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitFire__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoInitFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitFire__17daObjSCannonTen_cFv.s"
 }
@@ -406,7 +463,7 @@ ASM_FUNCTION(demoInitFire__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeFire__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeFire__17daObjSCannonTen_cFv.s"
 }
@@ -417,7 +474,7 @@ ASM_FUNCTION(demoExeFire__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitFireEnd__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoInitFireEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitFireEnd__17daObjSCannonTen_cFv.s"
 }
@@ -428,7 +485,7 @@ ASM_FUNCTION(demoInitFireEnd__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeFireEnd__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeFireEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeFireEnd__17daObjSCannonTen_cFv.s"
 }
@@ -439,7 +496,7 @@ ASM_FUNCTION(demoExeFireEnd__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitFinish__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoInitFinish() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitFinish__17daObjSCannonTen_cFv.s"
 }
@@ -450,7 +507,7 @@ ASM_FUNCTION(demoInitFinish__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeFinish__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::demoExeFinish() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoExeFinish__17daObjSCannonTen_cFv.s"
 }
@@ -461,7 +518,7 @@ ASM_FUNCTION(demoExeFinish__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/init__17daObjSCannonTen_cFv.s"
 }
@@ -472,7 +529,7 @@ ASM_FUNCTION(init__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/setModelMtx__17daObjSCannonTen_cFv.s"
 }
@@ -483,7 +540,7 @@ ASM_FUNCTION(setModelMtx__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeScene__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::changeScene() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/changeScene__17daObjSCannonTen_cFv.s"
 }
@@ -494,7 +551,7 @@ ASM_FUNCTION(changeScene__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEmtSmoke__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::initEmtSmoke() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/initEmtSmoke__17daObjSCannonTen_cFv.s"
 }
@@ -505,7 +562,7 @@ ASM_FUNCTION(initEmtSmoke__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeEmtSmoke__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::exeEmtSmoke() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeEmtSmoke__17daObjSCannonTen_cFv.s"
 }
@@ -516,7 +573,7 @@ ASM_FUNCTION(exeEmtSmoke__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEmtLine__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::initEmtLine() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/initEmtLine__17daObjSCannonTen_cFv.s"
 }
@@ -527,7 +584,7 @@ ASM_FUNCTION(initEmtLine__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeEmtLine__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::exeEmtLine() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeEmtLine__17daObjSCannonTen_cFv.s"
 }
@@ -538,7 +595,7 @@ ASM_FUNCTION(exeEmtLine__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(delEmtAll__17daObjSCannonTen_cFv) {
+asm void daObjSCannonTen_c::delEmtAll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/delEmtAll__17daObjSCannonTen_cFv.s"
 }
@@ -549,7 +606,7 @@ ASM_FUNCTION(delEmtAll__17daObjSCannonTen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSCannonTen_create__FP17daObjSCannonTen_c) {
+asm void daObjSCannonTen_create(daObjSCannonTen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/daObjSCannonTen_create__FP17daObjSCannonTen_c.s"
 }
@@ -560,7 +617,7 @@ ASM_FUNCTION(daObjSCannonTen_create__FP17daObjSCannonTen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSCannonTen_Delete__FP17daObjSCannonTen_c) {
+asm void daObjSCannonTen_Delete(daObjSCannonTen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/daObjSCannonTen_Delete__FP17daObjSCannonTen_c.s"
 }
@@ -571,7 +628,7 @@ ASM_FUNCTION(daObjSCannonTen_Delete__FP17daObjSCannonTen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSCannonTen_execute__FP17daObjSCannonTen_c) {
+asm void daObjSCannonTen_execute(daObjSCannonTen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/daObjSCannonTen_execute__FP17daObjSCannonTen_c.s"
 }
@@ -582,7 +639,7 @@ ASM_FUNCTION(daObjSCannonTen_execute__FP17daObjSCannonTen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSCannonTen_draw__FP17daObjSCannonTen_c) {
+asm void daObjSCannonTen_draw(daObjSCannonTen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/daObjSCannonTen_draw__FP17daObjSCannonTen_c.s"
 }
@@ -593,7 +650,7 @@ ASM_FUNCTION(daObjSCannonTen_draw__FP17daObjSCannonTen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CCCA6C) {
+extern "C" asm void func_80CCCA6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/func_80CCCA6C.s"
 }
@@ -604,7 +661,7 @@ ASM_FUNCTION(func_80CCCA6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_scannon_ten_cpp) {
+extern "C" asm void __sinit_d_a_obj_scannon_ten_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/__sinit_d_a_obj_scannon_ten_cpp.s"
 }
@@ -615,7 +672,7 @@ ASM_FUNCTION(__sinit_d_a_obj_scannon_ten_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CCCC1C) {
+extern "C" asm void func_80CCCC1C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/func_80CCCC1C.s"
 }
@@ -626,7 +683,7 @@ ASM_FUNCTION(func_80CCCC1C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CCCC24) {
+extern "C" asm void func_80CCCC24() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/func_80CCCC24.s"
 }

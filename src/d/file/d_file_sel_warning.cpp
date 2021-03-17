@@ -6,28 +6,195 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dFile_warning_c (dFile_warning_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin dFile_warning_c) */
+// outer dependency: JKRArchive
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end dFile_warning_c) */
+struct dFile_warning_c {
+	// JKRArchive
+	// JUtility::TColor
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, char);
+	/* 80191C18 */ ~dFile_warning_c();
+	/* 80191CF4 */ void screenSet();
+	/* 80191F18 */ void _move();
+	/* 80191F90 */ void modeWait();
+	/* 80191F94 */ void modeMove();
+	/* 80191FD4 */ void baseMoveAnm();
+	/* 801920B8 */ void openInit();
+	/* 8019210C */ void closeInit();
+	/* 80192160 */ void init();
+	/* 80192190 */ void _draw();
+	/* 801921CC */ void drawSelf();
+	/* 801921F8 */ void setText(u32);
+	/* 80192240 */ void setFontColor(JUtility::TColor, JUtility::TColor);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build JUtility (JUtility) True/True
+// build J2DTextBox (J2DTextBox) False/False
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin J2DTextBox) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	// JUtility::TColor
+	/* 8019230C */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+};
+
+// build dDlst_FileWarn_c (dDlst_FileWarn_c) False/False
+/* top-level dependencies (begin dDlst_FileWarn_c) */
+/* top-level dependencies (end dDlst_FileWarn_c) */
+struct dDlst_FileWarn_c {
+	/* 80192354 */ void draw();
+	/* 801923CC */ ~dDlst_FileWarn_c();
+};
+
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DAnmTransform
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DAnmTransform
+	// J2DGrafContext
+	/* 80192414 */ void setAnimation(J2DAnmTransform*);
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build dMsgString_c (dMsgString_c) False/False
+/* top-level dependencies (begin dMsgString_c) */
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DAnmTransform
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DAnmTransform
+	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
+};
+
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15dFile_warning_cFP10JKRArchiveUc();
-extern "C" extern void __dt__15dFile_warning_cFv();
-extern "C" extern void screenSet__15dFile_warning_cFv();
-extern "C" extern void _move__15dFile_warning_cFv();
-extern "C" extern void modeWait__15dFile_warning_cFv();
-extern "C" extern void modeMove__15dFile_warning_cFv();
-extern "C" extern void baseMoveAnm__15dFile_warning_cFv();
-extern "C" extern void openInit__15dFile_warning_cFv();
-extern "C" extern void closeInit__15dFile_warning_cFv();
-extern "C" extern void init__15dFile_warning_cFv();
-extern "C" extern void _draw__15dFile_warning_cFv();
-extern "C" extern void drawSelf__15dFile_warning_cFv();
-extern "C" extern void setText__15dFile_warning_cFUl();
-extern "C" extern void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void draw__16dDlst_FileWarn_cFv();
-extern "C" extern void __sinit_d_file_sel_warning_cpp();
-extern "C" extern void __dt__16dDlst_FileWarn_cFv();
-extern "C" extern void setAnimation__9J2DScreenFP15J2DAnmTransform();
+extern "C" void __sinit_d_file_sel_warning_cpp();
+
+extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc();
+extern "C" void __dt__15dFile_warning_cFv();
+extern "C" void screenSet__15dFile_warning_cFv();
+extern "C" void _move__15dFile_warning_cFv();
+extern "C" void modeWait__15dFile_warning_cFv();
+extern "C" void modeMove__15dFile_warning_cFv();
+extern "C" void baseMoveAnm__15dFile_warning_cFv();
+extern "C" void openInit__15dFile_warning_cFv();
+extern "C" void closeInit__15dFile_warning_cFv();
+extern "C" void init__15dFile_warning_cFv();
+extern "C" void _draw__15dFile_warning_cFv();
+extern "C" void drawSelf__15dFile_warning_cFv();
+extern "C" void setText__15dFile_warning_cFUl();
+extern "C" void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void draw__16dDlst_FileWarn_cFv();
+extern "C" void __sinit_d_file_sel_warning_cpp();
+extern "C" void __dt__16dDlst_FileWarn_cFv();
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform();
 SECTION_RODATA extern const u8 d_file_d_file_sel_warning__stringBase0[144];
 SECTION_DATA extern u8 d_file_d_file_sel_warning__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_file_d_file_sel_warning__lit_3805[3];
@@ -47,23 +214,30 @@ SECTION_SDATA2 extern f64 d_file_d_file_sel_warning__lit_3868;
 // External References:
 // 
 
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_removeMesgFont__Fv();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void setAnimation__7J2DPaneFP15J2DAnmTransform();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void __ptmf_scall();
+void mDoExt_getMesgFont();
+void mDoExt_removeMesgFont();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_removeMesgFont__Fv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __ptmf_scall();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
@@ -72,32 +246,32 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BB410-803BB41C 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BB410-803BB41C 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_file_d_file_sel_warning__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB41C-803BB428 000C+00 .data      @3805                                                        */
+/* 803BB41C-803BB428 000C+00 rc=0 efc=0 .data      @3805                                                        */
 void* d_file_d_file_sel_warning__lit_3805[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeWait__15dFile_warning_cFv,
 };
 
-/* 803BB428-803BB434 000C+00 .data      @3806                                                        */
+/* 803BB428-803BB434 000C+00 rc=0 efc=0 .data      @3806                                                        */
 void* d_file_d_file_sel_warning__lit_3806[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeMove__15dFile_warning_cFv,
 };
 
-/* 803BB434-803BB44C 0018+00 .data      fileWarningProc                                              */
+/* 803BB434-803BB44C 0018+00 rc=1 efc=0 .data      fileWarningProc                                              */
 u8 d_file_d_file_sel_warning__fileWarningProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB44C-803BB480 0010+24 .data      __vt__16dDlst_FileWarn_c                                     */
+/* 803BB44C-803BB480 0010+24 rc=3 efc=0 .data      __vt__16dDlst_FileWarn_c                                     */
 void* const __vt__16dDlst_FileWarn_c[13] = {
 	NULL, /* RTTI */
 	NULL,
@@ -115,7 +289,7 @@ void* const __vt__16dDlst_FileWarn_c[13] = {
 	NULL,
 };
 
-/* 803BB480-803BB498 000C+0C .data      __vt__15dFile_warning_c                                      */
+/* 803BB480-803BB498 000C+0C rc=2 efc=0 .data      __vt__15dFile_warning_c                                      */
 void* const __vt__15dFile_warning_c[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -126,27 +300,27 @@ void* const __vt__15dFile_warning_c[6] = {
 	NULL,
 };
 
-/* 804539D8-804539DC 0004+00 .sdata2    @3741                                                        */
+/* 804539D8-804539DC 0004+00 rc=3 efc=0 .sdata2    @3741                                                        */
 u8 d_file_d_file_sel_warning__lit_3741[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80191BAC-80191C18 006C+00 .text      __ct__15dFile_warning_cFP10JKRArchiveUc                      */
+/* 80191BAC-80191C18 006C+00 rc=3 efc=3 .text      __ct__15dFile_warning_cFP10JKRArchiveUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15dFile_warning_cFP10JKRArchiveUc) {
+asm dFile_warning_c::dFile_warning_c(JKRArchive* field_0, char field_1) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/__ct__15dFile_warning_cFP10JKRArchiveUc.s"
 }
 #pragma pop
 
 
-/* 80191C18-80191CF4 00DC+00 .text      __dt__15dFile_warning_cFv                                    */
+/* 80191C18-80191CF4 00DC+00 rc=1 efc=0 .text      __dt__15dFile_warning_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dFile_warning_cFv) {
+asm dFile_warning_c::~dFile_warning_c() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/__dt__15dFile_warning_cFv.s"
 }
@@ -154,7 +328,7 @@ ASM_FUNCTION(__dt__15dFile_warning_cFv) {
 
 
 /* ############################################################################################## */
-/* 80394828-803948B8 0089+07 .rodata    @stringBase0                                                 */
+/* 80394828-803948B8 0089+07 rc=2 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -169,59 +343,54 @@ SECTION_DEAD char* const stringBase_803948B0 = "";
 SECTION_DEAD char* const pad_803948B1 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 804539DC-804539E0 0004+00 .sdata2    @3769                                                        */
+/* 804539DC-804539E0 0004+00 rc=1 efc=0 .sdata2    @3769                                                        */
 void* d_file_d_file_sel_warning__lit_3769 = (void*)&d_file_d_file_sel_warning__stringBase0;
 
-/* 804539E0-804539E4 0004+00 .sdata2    None                                                         */
+/* 804539E0-804539E4 0004+00 rc=1 efc=0 .sdata2    None                                                         */
 u32 data_804539E0 = 0x8039484D;
 
-/* 804539E4-804539E8 0004+00 .sdata2    @3770                                                        */
+/* 804539E4-804539E8 0004+00 rc=1 efc=0 .sdata2    @3770                                                        */
 u32 d_file_d_file_sel_warning__lit_3770 = 0x8039486C;
 
-/* 804539E8-804539EC 0004+00 .sdata2    None                                                         */
+/* 804539E8-804539EC 0004+00 rc=1 efc=0 .sdata2    None                                                         */
 u32 data_804539E8 = 0x80394891;
 
-/* 804539EC-804539F0 0004+00 .sdata2    @3799                                                        */
+/* 804539EC-804539F0 0004+00 rc=2 efc=0 .sdata2    @3799                                                        */
 f32 d_file_d_file_sel_warning__lit_3799 = 2849.0f;
 
-/* 80191CF4-80191F18 0224+00 .text      screenSet__15dFile_warning_cFv                               */
+/* 80191CF4-80191F18 0224+00 rc=1 efc=0 .text      screenSet__15dFile_warning_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSet__15dFile_warning_cFv) {
+asm void dFile_warning_c::screenSet() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/screenSet__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 80191F18-80191F90 0078+00 .text      _move__15dFile_warning_cFv                                   */
+/* 80191F18-80191F90 0078+00 rc=6 efc=6 .text      _move__15dFile_warning_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__15dFile_warning_cFv) {
+asm void dFile_warning_c::_move() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/_move__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 80191F90-80191F94 0004+00 .text      modeWait__15dFile_warning_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__15dFile_warning_cFv) {
-	nofralloc
-#include "asm/d/file/d_file_sel_warning/modeWait__15dFile_warning_cFv.s"
+/* 80191F90-80191F94 0004+00 rc=1 efc=0 .text      modeWait__15dFile_warning_cFv                                */
+void dFile_warning_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80191F94-80191FD4 0040+00 .text      modeMove__15dFile_warning_cFv                                */
+/* 80191F94-80191FD4 0040+00 rc=1 efc=0 .text      modeMove__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__15dFile_warning_cFv) {
+asm void dFile_warning_c::modeMove() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/modeMove__15dFile_warning_cFv.s"
 }
@@ -229,150 +398,149 @@ ASM_FUNCTION(modeMove__15dFile_warning_cFv) {
 
 
 /* ############################################################################################## */
-/* 804539F0-804539F8 0008+00 .sdata2    @3868                                                        */
+/* 804539F0-804539F8 0008+00 rc=3 efc=0 .sdata2    @3868                                                        */
 f64 d_file_d_file_sel_warning__lit_3868 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80191FD4-801920B8 00E4+00 .text      baseMoveAnm__15dFile_warning_cFv                             */
+/* 80191FD4-801920B8 00E4+00 rc=1 efc=0 .text      baseMoveAnm__15dFile_warning_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMoveAnm__15dFile_warning_cFv) {
+asm void dFile_warning_c::baseMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/baseMoveAnm__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 801920B8-8019210C 0054+00 .text      openInit__15dFile_warning_cFv                                */
+/* 801920B8-8019210C 0054+00 rc=5 efc=5 .text      openInit__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__15dFile_warning_cFv) {
+asm void dFile_warning_c::openInit() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/openInit__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 8019210C-80192160 0054+00 .text      closeInit__15dFile_warning_cFv                               */
+/* 8019210C-80192160 0054+00 rc=6 efc=6 .text      closeInit__15dFile_warning_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeInit__15dFile_warning_cFv) {
+asm void dFile_warning_c::closeInit() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/closeInit__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 80192160-80192190 0030+00 .text      init__15dFile_warning_cFv                                    */
+/* 80192160-80192190 0030+00 rc=4 efc=4 .text      init__15dFile_warning_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__15dFile_warning_cFv) {
+asm void dFile_warning_c::init() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/init__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 80192190-801921CC 003C+00 .text      _draw__15dFile_warning_cFv                                   */
+/* 80192190-801921CC 003C+00 rc=2 efc=2 .text      _draw__15dFile_warning_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__15dFile_warning_cFv) {
+asm void dFile_warning_c::_draw() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/_draw__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 801921CC-801921F8 002C+00 .text      drawSelf__15dFile_warning_cFv                                */
+/* 801921CC-801921F8 002C+00 rc=1 efc=1 .text      drawSelf__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSelf__15dFile_warning_cFv) {
+asm void dFile_warning_c::drawSelf() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/drawSelf__15dFile_warning_cFv.s"
 }
 #pragma pop
 
 
-/* 801921F8-80192240 0048+00 .text      setText__15dFile_warning_cFUl                                */
+/* 801921F8-80192240 0048+00 rc=1 efc=1 .text      setText__15dFile_warning_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setText__15dFile_warning_cFUl) {
+asm void dFile_warning_c::setText(u32 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/setText__15dFile_warning_cFUl.s"
 }
 #pragma pop
 
 
-/* 80192240-8019230C 00CC+00 .text      setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80192240-8019230C 00CC+00 rc=1 efc=1 .text      setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void dFile_warning_c::setFontColor(JUtility::TColor field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 8019230C-80192354 0048+00 .text      setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor */
+/* 8019230C-80192354 0048+00 rc=1 efc=1 .text      setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DTextBox::setBlackWhite(JUtility::TColor field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 80192354-8019238C 0038+00 .text      draw__16dDlst_FileWarn_cFv                                   */
+/* 80192354-8019238C 0038+00 rc=1 efc=0 .text      draw__16dDlst_FileWarn_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dDlst_FileWarn_cFv) {
+asm void dDlst_FileWarn_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/draw__16dDlst_FileWarn_cFv.s"
 }
 #pragma pop
 
 
-/* 8019238C-801923CC 0040+00 .text      __sinit_d_file_sel_warning_cpp                               */
+/* 8019238C-801923CC 0040+00 rc=1 efc=1 .text      __sinit_d_file_sel_warning_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_file_sel_warning_cpp) {
+extern "C" asm void __sinit_d_file_sel_warning_cpp() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/__sinit_d_file_sel_warning_cpp.s"
 }
 #pragma pop
 
 
-/* 801923CC-80192414 0048+00 .text      __dt__16dDlst_FileWarn_cFv                                   */
+/* 801923CC-80192414 0048+00 rc=1 efc=0 .text      __dt__16dDlst_FileWarn_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dDlst_FileWarn_cFv) {
+asm dDlst_FileWarn_c::~dDlst_FileWarn_c() {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/__dt__16dDlst_FileWarn_cFv.s"
 }
 #pragma pop
 
 
-/* 80192414-80192434 0020+00 .text      setAnimation__9J2DScreenFP15J2DAnmTransform                  */
+/* 80192414-80192434 0020+00 rc=1 efc=1 .text      setAnimation__9J2DScreenFP15J2DAnmTransform                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__9J2DScreenFP15J2DAnmTransform) {
+asm void J2DScreen::setAnimation(J2DAnmTransform* field_0) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/setAnimation__9J2DScreenFP15J2DAnmTransform.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

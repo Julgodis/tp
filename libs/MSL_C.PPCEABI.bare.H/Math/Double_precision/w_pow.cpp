@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void pow();
+extern "C" void pow();
+
+extern "C" void pow();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_pow();
+extern "C" void __ieee754_pow();
+
+extern "C" void __ieee754_pow();
 
 // 
 // Declarations:
 // 
 
-/* 8036C780-8036C7A0 0020+00 .text      pow                                                          */
+/* 8036C780-8036C7A0 0020+00 rc=3 efc=3 .text      pow                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pow) {
+extern "C" asm void pow() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_pow/pow.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

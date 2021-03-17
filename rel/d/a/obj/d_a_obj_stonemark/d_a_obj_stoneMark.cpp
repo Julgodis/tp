@@ -6,21 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSMark_c;
+
+struct daObjSMark_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void draw();
+	void _delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjSMark_cFv();
-extern "C" extern void setBaseMtx__12daObjSMark_cFv();
-extern "C" extern void Create__12daObjSMark_cFv();
-extern "C" extern void create__12daObjSMark_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void draw__12daObjSMark_cFv();
-extern "C" extern void _delete__12daObjSMark_cFv();
-extern "C" extern void daObjSMark_Draw__FP12daObjSMark_c();
-extern "C" extern void daObjSMark_Delete__FP12daObjSMark_c();
-extern "C" extern void daObjSMark_Create__FP10fopAc_ac_c();
-extern "C" extern void func_8059A3D0();
-extern "C" extern void func_8059A3D8();
+void daObjSMark_Draw(daObjSMark_c*);
+void daObjSMark_Delete(daObjSMark_c*);
+void daObjSMark_Create(fopAc_ac_c*);
+extern "C" void func_8059A3D0();
+extern "C" void func_8059A3D8();
+
+extern "C" void initBaseMtx__12daObjSMark_cFv();
+extern "C" void setBaseMtx__12daObjSMark_cFv();
+extern "C" void Create__12daObjSMark_cFv();
+extern "C" void create__12daObjSMark_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void draw__12daObjSMark_cFv();
+extern "C" void _delete__12daObjSMark_cFv();
+extern "C" void daObjSMark_Draw__FP12daObjSMark_c();
+extern "C" void daObjSMark_Delete__FP12daObjSMark_c();
+extern "C" void daObjSMark_Create__FP10fopAc_ac_c();
+extern "C" void func_8059A3D0();
+extern "C" void func_8059A3D8();
 SECTION_RODATA extern const u8 lit_3642[4];
 SECTION_RODATA extern const u32 lit_3643;
 SECTION_RODATA extern const u32 lit_3644;
@@ -37,7 +66,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +78,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjSMark_cFv) {
+asm void daObjSMark_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/initBaseMtx__12daObjSMark_cFv.s"
 }
@@ -58,7 +89,7 @@ ASM_FUNCTION(initBaseMtx__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjSMark_cFv) {
+asm void daObjSMark_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/setBaseMtx__12daObjSMark_cFv.s"
 }
@@ -69,7 +100,7 @@ ASM_FUNCTION(setBaseMtx__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjSMark_cFv) {
+asm void daObjSMark_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/Create__12daObjSMark_cFv.s"
 }
@@ -80,7 +111,7 @@ ASM_FUNCTION(Create__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjSMark_cFv) {
+asm void daObjSMark_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A168.s"
 }
@@ -91,7 +122,7 @@ ASM_FUNCTION(create__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -102,7 +133,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjSMark_cFv) {
+asm void daObjSMark_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/draw__12daObjSMark_cFv.s"
 }
@@ -113,7 +144,7 @@ ASM_FUNCTION(draw__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjSMark_cFv) {
+asm void daObjSMark_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/_delete__12daObjSMark_cFv.s"
 }
@@ -124,7 +155,7 @@ ASM_FUNCTION(_delete__12daObjSMark_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSMark_Draw__FP12daObjSMark_c) {
+asm void daObjSMark_Draw(daObjSMark_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Draw__FP12daObjSMark_c.s"
 }
@@ -135,7 +166,7 @@ ASM_FUNCTION(daObjSMark_Draw__FP12daObjSMark_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSMark_Delete__FP12daObjSMark_c) {
+asm void daObjSMark_Delete(daObjSMark_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Delete__FP12daObjSMark_c.s"
 }
@@ -146,7 +177,7 @@ ASM_FUNCTION(daObjSMark_Delete__FP12daObjSMark_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSMark_Create__FP10fopAc_ac_c) {
+asm void daObjSMark_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Create__FP10fopAc_ac_c.s"
 }
@@ -157,7 +188,7 @@ ASM_FUNCTION(daObjSMark_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059A3D0) {
+extern "C" asm void func_8059A3D0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A3D0.s"
 }
@@ -168,7 +199,7 @@ ASM_FUNCTION(func_8059A3D0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059A3D8) {
+extern "C" asm void func_8059A3D8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A3D8.s"
 }

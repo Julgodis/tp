@@ -6,14 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjOnsenFire_c;
+
+struct daObjOnsenFire_c {
+	void create();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__16daObjOnsenFire_cFv();
-extern "C" extern void execute__16daObjOnsenFire_cFv();
-extern "C" extern void daObjOnsenFire_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjOnsenFire_Execute__FP16daObjOnsenFire_c();
-extern "C" extern void daObjOnsenFire_Delete__FP16daObjOnsenFire_c();
+void daObjOnsenFire_Create(fopAc_ac_c*);
+void daObjOnsenFire_Execute(daObjOnsenFire_c*);
+void daObjOnsenFire_Delete(daObjOnsenFire_c*);
+
+extern "C" void create__16daObjOnsenFire_cFv();
+extern "C" void execute__16daObjOnsenFire_cFv();
+extern "C" void daObjOnsenFire_Create__FP10fopAc_ac_c();
+extern "C" void daObjOnsenFire_Execute__FP16daObjOnsenFire_c();
+extern "C" void daObjOnsenFire_Delete__FP16daObjOnsenFire_c();
 SECTION_RODATA extern const u8 lit_3659[4];
 SECTION_RODATA extern const u32 lit_3660;
 SECTION_RODATA extern const u32 lit_3661;
@@ -24,7 +43,9 @@ SECTION_DATA extern u8 g_profile_OBJ_ONSEN_FIRE[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -34,7 +55,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daObjOnsenFire_cFv) {
+asm void daObjOnsenFire_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenFire/d_a_obj_onsenFire/create__16daObjOnsenFire_cFv.s"
 }
@@ -45,7 +66,7 @@ ASM_FUNCTION(create__16daObjOnsenFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__16daObjOnsenFire_cFv) {
+asm void daObjOnsenFire_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenFire/d_a_obj_onsenFire/execute__16daObjOnsenFire_cFv.s"
 }
@@ -56,7 +77,7 @@ ASM_FUNCTION(execute__16daObjOnsenFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsenFire_Create__FP10fopAc_ac_c) {
+asm void daObjOnsenFire_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenFire/d_a_obj_onsenFire/daObjOnsenFire_Create__FP10fopAc_ac_c.s"
 }
@@ -67,7 +88,7 @@ ASM_FUNCTION(daObjOnsenFire_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsenFire_Execute__FP16daObjOnsenFire_c) {
+asm void daObjOnsenFire_Execute(daObjOnsenFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenFire/d_a_obj_onsenFire/daObjOnsenFire_Execute__FP16daObjOnsenFire_c.s"
 }
@@ -78,7 +99,7 @@ ASM_FUNCTION(daObjOnsenFire_Execute__FP16daObjOnsenFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsenFire_Delete__FP16daObjOnsenFire_c) {
+asm void daObjOnsenFire_Delete(daObjOnsenFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenFire/d_a_obj_onsenFire/daObjOnsenFire_Delete__FP16daObjOnsenFire_c.s"
 }

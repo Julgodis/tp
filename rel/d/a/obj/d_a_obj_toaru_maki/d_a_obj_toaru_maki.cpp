@@ -6,22 +6,49 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjToaruMaki_c;
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjToaruMaki_c {
+	daObjToaruMaki_c();
+	~daObjToaruMaki_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void setModelMtx();
+	void draw();
+	void execute();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjToaruMaki_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__16daObjToaruMaki_cFv();
-extern "C" extern void __dt__16daObjToaruMaki_cFv();
-extern "C" extern void createHeap__16daObjToaruMaki_cFv();
-extern "C" extern void create__16daObjToaruMaki_cFv();
-extern "C" extern void Delete__16daObjToaruMaki_cFv();
-extern "C" extern void setModelMtx__16daObjToaruMaki_cFv();
-extern "C" extern void draw__16daObjToaruMaki_cFv();
-extern "C" extern void execute__16daObjToaruMaki_cFv();
-extern "C" extern void daObjToaruMaki_create__FP16daObjToaruMaki_c();
-extern "C" extern void daObjToaruMaki_Delete__FP16daObjToaruMaki_c();
-extern "C" extern void daObjToaruMaki_execute__FP16daObjToaruMaki_c();
-extern "C" extern void daObjToaruMaki_draw__FP16daObjToaruMaki_c();
+void daObjToaruMaki_c_createHeap(fopAc_ac_c*);
+void daObjToaruMaki_create(daObjToaruMaki_c*);
+void daObjToaruMaki_Delete(daObjToaruMaki_c*);
+void daObjToaruMaki_execute(daObjToaruMaki_c*);
+void daObjToaruMaki_draw(daObjToaruMaki_c*);
+
+extern "C" void daObjToaruMaki_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__16daObjToaruMaki_cFv();
+extern "C" void __dt__16daObjToaruMaki_cFv();
+extern "C" void createHeap__16daObjToaruMaki_cFv();
+extern "C" void create__16daObjToaruMaki_cFv();
+extern "C" void Delete__16daObjToaruMaki_cFv();
+extern "C" void setModelMtx__16daObjToaruMaki_cFv();
+extern "C" void draw__16daObjToaruMaki_cFv();
+extern "C" void execute__16daObjToaruMaki_cFv();
+extern "C" void daObjToaruMaki_create__FP16daObjToaruMaki_c();
+extern "C" void daObjToaruMaki_Delete__FP16daObjToaruMaki_c();
+extern "C" void daObjToaruMaki_execute__FP16daObjToaruMaki_c();
+extern "C" void daObjToaruMaki_draw__FP16daObjToaruMaki_c();
 SECTION_RODATA extern const u8 l_bmdIdx[8];
 SECTION_RODATA extern const u8 l_heapSize[8];
 SECTION_RODATA extern const u8 stringBase0[16];
@@ -34,7 +61,9 @@ SECTION_DATA extern void*const __vt__16daObjToaruMaki_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +73,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjToaruMaki_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjToaruMaki_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/daObjToaruMaki_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -55,7 +84,7 @@ ASM_FUNCTION(daObjToaruMaki_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObjToaruMaki_cFv) {
+asm daObjToaruMaki_c::daObjToaruMaki_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/__ct__16daObjToaruMaki_cFv.s"
 }
@@ -66,7 +95,7 @@ ASM_FUNCTION(__ct__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjToaruMaki_cFv) {
+asm daObjToaruMaki_c::~daObjToaruMaki_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/__dt__16daObjToaruMaki_cFv.s"
 }
@@ -77,7 +106,7 @@ ASM_FUNCTION(__dt__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/createHeap__16daObjToaruMaki_cFv.s"
 }
@@ -88,7 +117,7 @@ ASM_FUNCTION(createHeap__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/create__16daObjToaruMaki_cFv.s"
 }
@@ -99,7 +128,7 @@ ASM_FUNCTION(create__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/Delete__16daObjToaruMaki_cFv.s"
 }
@@ -110,7 +139,7 @@ ASM_FUNCTION(Delete__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/setModelMtx__16daObjToaruMaki_cFv.s"
 }
@@ -121,7 +150,7 @@ ASM_FUNCTION(setModelMtx__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/draw__16daObjToaruMaki_cFv.s"
 }
@@ -132,7 +161,7 @@ ASM_FUNCTION(draw__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__16daObjToaruMaki_cFv) {
+asm void daObjToaruMaki_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/execute__16daObjToaruMaki_cFv.s"
 }
@@ -143,7 +172,7 @@ ASM_FUNCTION(execute__16daObjToaruMaki_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjToaruMaki_create__FP16daObjToaruMaki_c) {
+asm void daObjToaruMaki_create(daObjToaruMaki_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/daObjToaruMaki_create__FP16daObjToaruMaki_c.s"
 }
@@ -154,7 +183,7 @@ ASM_FUNCTION(daObjToaruMaki_create__FP16daObjToaruMaki_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjToaruMaki_Delete__FP16daObjToaruMaki_c) {
+asm void daObjToaruMaki_Delete(daObjToaruMaki_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/daObjToaruMaki_Delete__FP16daObjToaruMaki_c.s"
 }
@@ -165,7 +194,7 @@ ASM_FUNCTION(daObjToaruMaki_Delete__FP16daObjToaruMaki_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjToaruMaki_execute__FP16daObjToaruMaki_c) {
+asm void daObjToaruMaki_execute(daObjToaruMaki_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/daObjToaruMaki_execute__FP16daObjToaruMaki_c.s"
 }
@@ -176,7 +205,7 @@ ASM_FUNCTION(daObjToaruMaki_execute__FP16daObjToaruMaki_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjToaruMaki_draw__FP16daObjToaruMaki_c) {
+asm void daObjToaruMaki_draw(daObjToaruMaki_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_toaru_maki/d_a_obj_toaru_maki/daObjToaruMaki_draw__FP16daObjToaruMaki_c.s"
 }

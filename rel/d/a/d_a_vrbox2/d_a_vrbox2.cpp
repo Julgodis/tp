@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct vrbox2_class;
+struct fopAc_ac_c;
+
+struct vrbox2_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void texScrollCheck__FRf();
-extern "C" extern void daVrbox2_Draw__FP12vrbox2_class();
-extern "C" extern void daVrbox2_color_set__FP12vrbox2_class();
-extern "C" extern void daVrbox2_Execute__FP12vrbox2_class();
-extern "C" extern void daVrbox2_IsDelete__FP12vrbox2_class();
-extern "C" extern void daVrbox2_Delete__FP12vrbox2_class();
-extern "C" extern void daVrbox2_solidHeapCB__FP10fopAc_ac_c();
-extern "C" extern void daVrbox2_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
+void texScrollCheck(f32&);
+void daVrbox2_Draw(vrbox2_class*);
+void daVrbox2_color_set(vrbox2_class*);
+void daVrbox2_Execute(vrbox2_class*);
+bool daVrbox2_IsDelete(vrbox2_class*);
+bool daVrbox2_Delete(vrbox2_class*);
+void daVrbox2_solidHeapCB(fopAc_ac_c*);
+void daVrbox2_Create(fopAc_ac_c*);
+
+extern "C" void texScrollCheck__FRf();
+extern "C" void daVrbox2_Draw__FP12vrbox2_class();
+extern "C" void daVrbox2_color_set__FP12vrbox2_class();
+extern "C" void daVrbox2_Execute__FP12vrbox2_class();
+extern "C" bool daVrbox2_IsDelete__FP12vrbox2_class();
+extern "C" bool daVrbox2_Delete__FP12vrbox2_class();
+extern "C" void daVrbox2_solidHeapCB__FP10fopAc_ac_c();
+extern "C" void daVrbox2_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u8 lit_3628[4];
 SECTION_RODATA extern const u32 lit_3835;
@@ -50,7 +76,9 @@ SECTION_BSS extern u8 data_80499B78[2 + 2 /* padding */];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +88,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(texScrollCheck__FRf) {
+asm void texScrollCheck(f32& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/texScrollCheck__FRf.s"
 }
@@ -71,7 +99,7 @@ ASM_FUNCTION(texScrollCheck__FRf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_Draw__FP12vrbox2_class) {
+asm void daVrbox2_Draw(vrbox2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Draw__FP12vrbox2_class.s"
 }
@@ -82,7 +110,7 @@ ASM_FUNCTION(daVrbox2_Draw__FP12vrbox2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_color_set__FP12vrbox2_class) {
+asm void daVrbox2_color_set(vrbox2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_color_set__FP12vrbox2_class.s"
 }
@@ -93,7 +121,7 @@ ASM_FUNCTION(daVrbox2_color_set__FP12vrbox2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_Execute__FP12vrbox2_class) {
+asm void daVrbox2_Execute(vrbox2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Execute__FP12vrbox2_class.s"
 }
@@ -101,32 +129,22 @@ ASM_FUNCTION(daVrbox2_Execute__FP12vrbox2_class) {
 
 
 /* 8049982C-80499834 0008+00 .text      daVrbox2_IsDelete__FP12vrbox2_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_IsDelete__FP12vrbox2_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_IsDelete__FP12vrbox2_class.s"
+bool daVrbox2_IsDelete(vrbox2_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80499834-8049983C 0008+00 .text      daVrbox2_Delete__FP12vrbox2_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_Delete__FP12vrbox2_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Delete__FP12vrbox2_class.s"
+bool daVrbox2_Delete(vrbox2_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8049983C-80499978 013C+00 .text      daVrbox2_solidHeapCB__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_solidHeapCB__FP10fopAc_ac_c) {
+asm void daVrbox2_solidHeapCB(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_solidHeapCB__FP10fopAc_ac_c.s"
 }
@@ -137,7 +155,7 @@ ASM_FUNCTION(daVrbox2_solidHeapCB__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox2_Create__FP10fopAc_ac_c) {
+asm void daVrbox2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Create__FP10fopAc_ac_c.s"
 }
@@ -148,7 +166,7 @@ ASM_FUNCTION(daVrbox2_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/__dt__12J3DFrameCtrlFv.s"
 }

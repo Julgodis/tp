@@ -6,24 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMirrorScrew_c;
+
+struct daObjMirrorScrew_c {
+	void initWait();
+	void executeWait();
+	void initDown();
+	void executeDown();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initWait__18daObjMirrorScrew_cFv();
-extern "C" extern void executeWait__18daObjMirrorScrew_cFv();
-extern "C" extern void initDown__18daObjMirrorScrew_cFv();
-extern "C" extern void executeDown__18daObjMirrorScrew_cFv();
-extern "C" extern void daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c();
-extern "C" extern void daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c();
-extern "C" extern void daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c();
-extern "C" extern void daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c();
-extern "C" extern void daObjMirrorScrew_Create__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__18daObjMirrorScrew_cFv();
-extern "C" extern void Create__18daObjMirrorScrew_cFv();
-extern "C" extern void Execute__18daObjMirrorScrew_cFPPA3_A4_f();
-extern "C" extern void Draw__18daObjMirrorScrew_cFv();
-extern "C" extern void Delete__18daObjMirrorScrew_cFv();
-extern "C" extern void __sinit_d_a_obj_mirror_screw_cpp();
+void daObjMirrorScrew_Draw(daObjMirrorScrew_c*);
+void daObjMirrorScrew_Execute(daObjMirrorScrew_c*);
+bool daObjMirrorScrew_IsDelete(daObjMirrorScrew_c*);
+void daObjMirrorScrew_Delete(daObjMirrorScrew_c*);
+void daObjMirrorScrew_Create(fopAc_ac_c*);
+extern "C" void Execute__18daObjMirrorScrew_cFPPA3_A4_f();
+extern "C" void __sinit_d_a_obj_mirror_screw_cpp();
+
+extern "C" void initWait__18daObjMirrorScrew_cFv();
+extern "C" void executeWait__18daObjMirrorScrew_cFv();
+extern "C" void initDown__18daObjMirrorScrew_cFv();
+extern "C" void executeDown__18daObjMirrorScrew_cFv();
+extern "C" void daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c();
+extern "C" void daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c();
+extern "C" bool daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c();
+extern "C" void daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c();
+extern "C" void daObjMirrorScrew_Create__FP10fopAc_ac_c();
+extern "C" void CreateHeap__18daObjMirrorScrew_cFv();
+extern "C" void Create__18daObjMirrorScrew_cFv();
+extern "C" void Execute__18daObjMirrorScrew_cFPPA3_A4_f();
+extern "C" void Draw__18daObjMirrorScrew_cFv();
+extern "C" void Delete__18daObjMirrorScrew_cFv();
+extern "C" void __sinit_d_a_obj_mirror_screw_cpp();
 SECTION_RODATA extern const u8 M_attr__18daObjMirrorScrew_c[24];
 SECTION_RODATA extern const u32 lit_3680;
 SECTION_RODATA extern const u8 lit_3681[4];
@@ -49,7 +78,9 @@ SECTION_DATA extern void*const __vt__18daObjMirrorScrew_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +90,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/initWait__18daObjMirrorScrew_cFv.s"
 }
@@ -70,7 +101,7 @@ ASM_FUNCTION(initWait__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/executeWait__18daObjMirrorScrew_cFv.s"
 }
@@ -81,7 +112,7 @@ ASM_FUNCTION(executeWait__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDown__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::initDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/initDown__18daObjMirrorScrew_cFv.s"
 }
@@ -92,7 +123,7 @@ ASM_FUNCTION(initDown__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDown__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::executeDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/executeDown__18daObjMirrorScrew_cFv.s"
 }
@@ -103,7 +134,7 @@ ASM_FUNCTION(executeDown__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c) {
+asm void daObjMirrorScrew_Draw(daObjMirrorScrew_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c.s"
 }
@@ -114,7 +145,7 @@ ASM_FUNCTION(daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c) {
+asm void daObjMirrorScrew_Execute(daObjMirrorScrew_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c.s"
 }
@@ -122,21 +153,16 @@ ASM_FUNCTION(daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c) {
 
 
 /* 80C991A0-80C991A8 0008+00 .text      daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c.s"
+bool daObjMirrorScrew_IsDelete(daObjMirrorScrew_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C991A8-80C991CC 0024+00 .text      daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c) {
+asm void daObjMirrorScrew_Delete(daObjMirrorScrew_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c.s"
 }
@@ -147,7 +173,7 @@ ASM_FUNCTION(daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorScrew_Create__FP10fopAc_ac_c) {
+asm void daObjMirrorScrew_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_Create__FP10fopAc_ac_c.s"
 }
@@ -158,7 +184,7 @@ ASM_FUNCTION(daObjMirrorScrew_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/CreateHeap__18daObjMirrorScrew_cFv.s"
 }
@@ -169,7 +195,7 @@ ASM_FUNCTION(CreateHeap__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/Create__18daObjMirrorScrew_cFv.s"
 }
@@ -180,7 +206,7 @@ ASM_FUNCTION(Create__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__18daObjMirrorScrew_cFPPA3_A4_f) {
+extern "C" asm void Execute__18daObjMirrorScrew_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/Execute__18daObjMirrorScrew_cFPPA3_A4_f.s"
 }
@@ -191,7 +217,7 @@ ASM_FUNCTION(Execute__18daObjMirrorScrew_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/Draw__18daObjMirrorScrew_cFv.s"
 }
@@ -202,7 +228,7 @@ ASM_FUNCTION(Draw__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__18daObjMirrorScrew_cFv) {
+asm void daObjMirrorScrew_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/Delete__18daObjMirrorScrew_cFv.s"
 }
@@ -213,7 +239,7 @@ ASM_FUNCTION(Delete__18daObjMirrorScrew_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_mirror_screw_cpp) {
+extern "C" asm void __sinit_d_a_obj_mirror_screw_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/__sinit_d_a_obj_mirror_screw_cpp.s"
 }

@@ -6,36 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct b_oh_class;
+
+struct daB_OH_HIO_c {
+	daB_OH_HIO_c();
+	~daB_OH_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct b_oh_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daB_OH_HIO_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daB_OH_Draw__FP10b_oh_class();
-extern "C" extern void start__FP10b_oh_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void wait__FP10b_oh_class();
-extern "C" extern void attack__FP10b_oh_class();
-extern "C" extern void caught__FP10b_oh_class();
-extern "C" extern void end__FP10b_oh_class();
-extern "C" extern void non__FP10b_oh_class();
-extern "C" extern void action__FP10b_oh_class();
-extern "C" extern void damage_check__FP10b_oh_class();
-extern "C" extern void daB_OH_Execute__FP10b_oh_class();
-extern "C" extern void daB_OH_IsDelete__FP10b_oh_class();
-extern "C" extern void daB_OH_Delete__FP10b_oh_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daB_OH_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__12daB_OH_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_oh_cpp();
+void nodeCallBack(J3DJoint*, s32);
+void daB_OH_Draw(b_oh_class*);
+void start(b_oh_class*);
+void wait(b_oh_class*);
+void attack(b_oh_class*);
+void caught(b_oh_class*);
+void end(b_oh_class*);
+void non(b_oh_class*);
+void action(b_oh_class*);
+void damage_check(b_oh_class*);
+void daB_OH_Execute(b_oh_class*);
+bool daB_OH_IsDelete(b_oh_class*);
+void daB_OH_Delete(b_oh_class*);
+void useHeapInit(fopAc_ac_c*);
+void daB_OH_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_b_oh_cpp();
+
+extern "C" void __ct__12daB_OH_HIO_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daB_OH_Draw__FP10b_oh_class();
+extern "C" void start__FP10b_oh_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void wait__FP10b_oh_class();
+extern "C" void attack__FP10b_oh_class();
+extern "C" void caught__FP10b_oh_class();
+extern "C" void end__FP10b_oh_class();
+extern "C" void non__FP10b_oh_class();
+extern "C" void action__FP10b_oh_class();
+extern "C" void damage_check__FP10b_oh_class();
+extern "C" void daB_OH_Execute__FP10b_oh_class();
+extern "C" bool daB_OH_IsDelete__FP10b_oh_class();
+extern "C" void daB_OH_Delete__FP10b_oh_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daB_OH_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__12daB_OH_HIO_cFv();
+extern "C" void __sinit_d_a_b_oh_cpp();
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u32 lit_3651;
 SECTION_RODATA extern const u32 lit_3692;
@@ -134,8 +200,11 @@ SECTION_BSS extern u8 data_8061DC3C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -145,7 +214,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daB_OH_HIO_cFv) {
+asm daB_OH_HIO_c::daB_OH_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__12daB_OH_HIO_cFv.s"
 }
@@ -156,7 +225,7 @@ ASM_FUNCTION(__ct__12daB_OH_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/nodeCallBack__FP8J3DJointi.s"
 }
@@ -167,7 +236,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH_Draw__FP10b_oh_class) {
+asm void daB_OH_Draw(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_Draw__FP10b_oh_class.s"
 }
@@ -178,7 +247,7 @@ ASM_FUNCTION(daB_OH_Draw__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__FP10b_oh_class) {
+asm void start(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/start__FP10b_oh_class.s"
 }
@@ -189,7 +258,7 @@ ASM_FUNCTION(start__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__4cXyzFv.s"
 }
@@ -200,7 +269,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__FP10b_oh_class) {
+asm void wait(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/wait__FP10b_oh_class.s"
 }
@@ -211,7 +280,7 @@ ASM_FUNCTION(wait__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack__FP10b_oh_class) {
+asm void attack(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/attack__FP10b_oh_class.s"
 }
@@ -222,7 +291,7 @@ ASM_FUNCTION(attack__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(caught__FP10b_oh_class) {
+asm void caught(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/caught__FP10b_oh_class.s"
 }
@@ -233,7 +302,7 @@ ASM_FUNCTION(caught__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(end__FP10b_oh_class) {
+asm void end(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/end__FP10b_oh_class.s"
 }
@@ -244,7 +313,7 @@ ASM_FUNCTION(end__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(non__FP10b_oh_class) {
+asm void non(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/non__FP10b_oh_class.s"
 }
@@ -255,7 +324,7 @@ ASM_FUNCTION(non__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10b_oh_class) {
+asm void action(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/action__FP10b_oh_class.s"
 }
@@ -266,7 +335,7 @@ ASM_FUNCTION(action__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10b_oh_class) {
+asm void damage_check(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/damage_check__FP10b_oh_class.s"
 }
@@ -277,7 +346,7 @@ ASM_FUNCTION(damage_check__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH_Execute__FP10b_oh_class) {
+asm void daB_OH_Execute(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_Execute__FP10b_oh_class.s"
 }
@@ -285,21 +354,16 @@ ASM_FUNCTION(daB_OH_Execute__FP10b_oh_class) {
 
 
 /* 8061D05C-8061D064 0008+00 .text      daB_OH_IsDelete__FP10b_oh_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_OH_IsDelete__FP10b_oh_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_IsDelete__FP10b_oh_class.s"
+bool daB_OH_IsDelete(b_oh_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8061D064-8061D0B8 0054+00 .text      daB_OH_Delete__FP10b_oh_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH_Delete__FP10b_oh_class) {
+asm void daB_OH_Delete(b_oh_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_Delete__FP10b_oh_class.s"
 }
@@ -310,7 +374,7 @@ ASM_FUNCTION(daB_OH_Delete__FP10b_oh_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -321,7 +385,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__12J3DFrameCtrlFv.s"
 }
@@ -332,7 +396,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH_Create__FP10fopAc_ac_c) {
+asm void daB_OH_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_Create__FP10fopAc_ac_c.s"
 }
@@ -343,7 +407,7 @@ ASM_FUNCTION(daB_OH_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__8dCcD_SphFv.s"
 }
@@ -354,7 +418,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__8dCcD_SphFv.s"
 }
@@ -365,7 +429,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__8cM3dGSphFv.s"
 }
@@ -376,7 +440,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__8cM3dGAabFv.s"
 }
@@ -384,21 +448,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 8061D8F8-8061D8FC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061D8FC-8061D938 003C+00 .text      __dt__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__5csXyzFv.s"
 }
@@ -406,21 +465,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 8061D938-8061D93C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061D93C-8061D984 0048+00 .text      __dt__12daB_OH_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daB_OH_HIO_cFv) {
+asm daB_OH_HIO_c::~daB_OH_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__dt__12daB_OH_HIO_cFv.s"
 }
@@ -431,7 +485,7 @@ ASM_FUNCTION(__dt__12daB_OH_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_oh_cpp) {
+extern "C" asm void __sinit_d_a_b_oh_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__sinit_d_a_b_oh_cpp.s"
 }

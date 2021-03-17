@@ -6,69 +6,99 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build line_tag (line_tag) False/False
+/* top-level dependencies (begin line_tag) */
+/* top-level dependencies (end line_tag) */
+struct line_tag {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build node_lists_tree_class (node_lists_tree_class) False/False
+/* top-level dependencies (begin node_lists_tree_class) */
+/* top-level dependencies (end node_lists_tree_class) */
+struct node_lists_tree_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcLnTg_Move__FP8line_tagi();
-extern "C" extern void fpcLnTg_QueueTo__FP8line_tag();
-extern "C" extern void fpcLnTg_ToQueue__FP8line_tagi();
-extern "C" extern void fpcLnTg_Init__FP8line_tagPv();
+void fpcLnTg_Move(line_tag*, s32);
+void fpcLnTg_QueueTo(line_tag*);
+void fpcLnTg_ToQueue(line_tag*, s32);
+void fpcLnTg_Init(line_tag*, void*);
+
+extern "C" void fpcLnTg_Move__FP8line_tagi();
+extern "C" void fpcLnTg_QueueTo__FP8line_tag();
+extern "C" void fpcLnTg_ToQueue__FP8line_tagi();
+extern "C" void fpcLnTg_Init__FP8line_tagPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
+void cTg_SingleCutFromTree(create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
+
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
 // 
 // Declarations:
 // 
 
-/* 800235A8-80023600 0058+00 .text      fpcLnTg_Move__FP8line_tagi                                   */
+/* 800235A8-80023600 0058+00 rc=1 efc=1 .text      fpcLnTg_Move__FP8line_tagi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnTg_Move__FP8line_tagi) {
+asm void fpcLnTg_Move(line_tag* field_0, s32 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_Move__FP8line_tagi.s"
 }
 #pragma pop
 
 
-/* 80023600-80023634 0034+00 .text      fpcLnTg_QueueTo__FP8line_tag                                 */
+/* 80023600-80023634 0034+00 rc=2 efc=1 .text      fpcLnTg_QueueTo__FP8line_tag                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnTg_QueueTo__FP8line_tag) {
+asm void fpcLnTg_QueueTo(line_tag* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_QueueTo__FP8line_tag.s"
 }
 #pragma pop
 
 
-/* 80023634-8002368C 0058+00 .text      fpcLnTg_ToQueue__FP8line_tagi                                */
+/* 80023634-8002368C 0058+00 rc=2 efc=1 .text      fpcLnTg_ToQueue__FP8line_tagi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnTg_ToQueue__FP8line_tagi) {
+asm void fpcLnTg_ToQueue(line_tag* field_0, s32 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_ToQueue__FP8line_tagi.s"
 }
 #pragma pop
 
 
-/* 8002368C-800236C0 0034+00 .text      fpcLnTg_Init__FP8line_tagPv                                  */
+/* 8002368C-800236C0 0034+00 rc=1 efc=1 .text      fpcLnTg_Init__FP8line_tagPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnTg_Init__FP8line_tagPv) {
+asm void fpcLnTg_Init(line_tag* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_Init__FP8line_tagPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

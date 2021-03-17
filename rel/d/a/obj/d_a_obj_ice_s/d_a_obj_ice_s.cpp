@@ -6,29 +6,74 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjIce_s_c;
+struct dBgW;
+struct cXyz;
+
+struct daOBJ_ICE_S_HIO_c {
+	daOBJ_ICE_S_HIO_c();
+	~daOBJ_ICE_S_HIO_c();
+};
+
+struct cXyz {
+};
+
+struct daObjIce_s_c {
+	void Check_LinkRideOn(cXyz);
+	void Check_RideOn(cXyz);
+	void initBaseMtx();
+	void setBaseMtx();
+	void create();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daOBJ_ICE_S_HIO_cFv();
-extern "C" extern void RideOn_Angle__12daObjIce_s_cFRsfsf();
-extern "C" extern void Check_LinkRideOn__12daObjIce_s_cF4cXyz();
-extern "C" extern void Check_RideOn__12daObjIce_s_cF4cXyz();
-extern "C" extern void initBaseMtx__12daObjIce_s_cFv();
-extern "C" extern void setBaseMtx__12daObjIce_s_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObjIce_s_Draw__FP12daObjIce_s_c();
-extern "C" extern void daObjIce_s_Execute__FP12daObjIce_s_c();
-extern "C" extern void daObjIce_s_IsDelete__FP12daObjIce_s_c();
-extern "C" extern void daObjIce_s_Delete__FP12daObjIce_s_c();
-extern "C" extern void daObjIce_s_Create__FP10fopAc_ac_c();
-extern "C" extern void create__12daObjIce_s_cFv();
-extern "C" extern void CreateHeap__12daObjIce_s_cFv();
-extern "C" extern void Create__12daObjIce_s_cFv();
-extern "C" extern void Execute__12daObjIce_s_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjIce_s_cFv();
-extern "C" extern void Delete__12daObjIce_s_cFv();
-extern "C" extern void __dt__17daOBJ_ICE_S_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_ice_s_cpp();
+extern "C" void RideOn_Angle__12daObjIce_s_cFRsfsf();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObjIce_s_Draw(daObjIce_s_c*);
+void daObjIce_s_Execute(daObjIce_s_c*);
+bool daObjIce_s_IsDelete(daObjIce_s_c*);
+void daObjIce_s_Delete(daObjIce_s_c*);
+void daObjIce_s_Create(fopAc_ac_c*);
+extern "C" void Execute__12daObjIce_s_cFPPA3_A4_f();
+extern "C" void __sinit_d_a_obj_ice_s_cpp();
+
+extern "C" void __ct__17daOBJ_ICE_S_HIO_cFv();
+extern "C" void RideOn_Angle__12daObjIce_s_cFRsfsf();
+extern "C" void Check_LinkRideOn__12daObjIce_s_cF4cXyz();
+extern "C" void Check_RideOn__12daObjIce_s_cF4cXyz();
+extern "C" void initBaseMtx__12daObjIce_s_cFv();
+extern "C" void setBaseMtx__12daObjIce_s_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObjIce_s_Draw__FP12daObjIce_s_c();
+extern "C" void daObjIce_s_Execute__FP12daObjIce_s_c();
+extern "C" bool daObjIce_s_IsDelete__FP12daObjIce_s_c();
+extern "C" void daObjIce_s_Delete__FP12daObjIce_s_c();
+extern "C" void daObjIce_s_Create__FP10fopAc_ac_c();
+extern "C" void create__12daObjIce_s_cFv();
+extern "C" void CreateHeap__12daObjIce_s_cFv();
+extern "C" void Create__12daObjIce_s_cFv();
+extern "C" void Execute__12daObjIce_s_cFPPA3_A4_f();
+extern "C" void Draw__12daObjIce_s_cFv();
+extern "C" void Delete__12daObjIce_s_cFv();
+extern "C" void __dt__17daOBJ_ICE_S_HIO_cFv();
+extern "C" void __sinit_d_a_obj_ice_s_cpp();
 SECTION_RODATA extern const u32 lit_3644;
 SECTION_RODATA extern const u32 lit_3645;
 SECTION_RODATA extern const u8 lit_3686[4 + 4 /* padding */];
@@ -74,8 +119,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -85,7 +133,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daOBJ_ICE_S_HIO_cFv) {
+asm daOBJ_ICE_S_HIO_c::daOBJ_ICE_S_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/__ct__17daOBJ_ICE_S_HIO_cFv.s"
 }
@@ -96,7 +144,7 @@ ASM_FUNCTION(__ct__17daOBJ_ICE_S_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(RideOn_Angle__12daObjIce_s_cFRsfsf) {
+extern "C" asm void RideOn_Angle__12daObjIce_s_cFRsfsf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/RideOn_Angle__12daObjIce_s_cFRsfsf.s"
 }
@@ -107,7 +155,7 @@ ASM_FUNCTION(RideOn_Angle__12daObjIce_s_cFRsfsf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Check_LinkRideOn__12daObjIce_s_cF4cXyz) {
+asm void daObjIce_s_c::Check_LinkRideOn(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/Check_LinkRideOn__12daObjIce_s_cF4cXyz.s"
 }
@@ -118,7 +166,7 @@ ASM_FUNCTION(Check_LinkRideOn__12daObjIce_s_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Check_RideOn__12daObjIce_s_cF4cXyz) {
+asm void daObjIce_s_c::Check_RideOn(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/Check_RideOn__12daObjIce_s_cF4cXyz.s"
 }
@@ -129,7 +177,7 @@ ASM_FUNCTION(Check_RideOn__12daObjIce_s_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/initBaseMtx__12daObjIce_s_cFv.s"
 }
@@ -140,7 +188,7 @@ ASM_FUNCTION(initBaseMtx__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/setBaseMtx__12daObjIce_s_cFv.s"
 }
@@ -151,7 +199,7 @@ ASM_FUNCTION(setBaseMtx__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -162,7 +210,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIce_s_Draw__FP12daObjIce_s_c) {
+asm void daObjIce_s_Draw(daObjIce_s_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/daObjIce_s_Draw__FP12daObjIce_s_c.s"
 }
@@ -173,7 +221,7 @@ ASM_FUNCTION(daObjIce_s_Draw__FP12daObjIce_s_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIce_s_Execute__FP12daObjIce_s_c) {
+asm void daObjIce_s_Execute(daObjIce_s_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/daObjIce_s_Execute__FP12daObjIce_s_c.s"
 }
@@ -181,21 +229,16 @@ ASM_FUNCTION(daObjIce_s_Execute__FP12daObjIce_s_c) {
 
 
 /* 80C21280-80C21288 0008+00 .text      daObjIce_s_IsDelete__FP12daObjIce_s_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjIce_s_IsDelete__FP12daObjIce_s_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/daObjIce_s_IsDelete__FP12daObjIce_s_c.s"
+bool daObjIce_s_IsDelete(daObjIce_s_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C21288-80C212AC 0024+00 .text      daObjIce_s_Delete__FP12daObjIce_s_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIce_s_Delete__FP12daObjIce_s_c) {
+asm void daObjIce_s_Delete(daObjIce_s_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/daObjIce_s_Delete__FP12daObjIce_s_c.s"
 }
@@ -206,7 +249,7 @@ ASM_FUNCTION(daObjIce_s_Delete__FP12daObjIce_s_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIce_s_Create__FP10fopAc_ac_c) {
+asm void daObjIce_s_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/daObjIce_s_Create__FP10fopAc_ac_c.s"
 }
@@ -217,7 +260,7 @@ ASM_FUNCTION(daObjIce_s_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/create__12daObjIce_s_cFv.s"
 }
@@ -228,7 +271,7 @@ ASM_FUNCTION(create__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/CreateHeap__12daObjIce_s_cFv.s"
 }
@@ -239,7 +282,7 @@ ASM_FUNCTION(CreateHeap__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/func_80C215F4.s"
 }
@@ -250,7 +293,7 @@ ASM_FUNCTION(Create__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjIce_s_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjIce_s_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/Execute__12daObjIce_s_cFPPA3_A4_f.s"
 }
@@ -261,7 +304,7 @@ ASM_FUNCTION(Execute__12daObjIce_s_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/Draw__12daObjIce_s_cFv.s"
 }
@@ -272,7 +315,7 @@ ASM_FUNCTION(Draw__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjIce_s_cFv) {
+asm void daObjIce_s_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/Delete__12daObjIce_s_cFv.s"
 }
@@ -283,7 +326,7 @@ ASM_FUNCTION(Delete__12daObjIce_s_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daOBJ_ICE_S_HIO_cFv) {
+asm daOBJ_ICE_S_HIO_c::~daOBJ_ICE_S_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/__dt__17daOBJ_ICE_S_HIO_cFv.s"
 }
@@ -294,7 +337,7 @@ ASM_FUNCTION(__dt__17daOBJ_ICE_S_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ice_s_cpp) {
+extern "C" asm void __sinit_d_a_obj_ice_s_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ice_s/d_a_obj_ice_s/__sinit_d_a_obj_ice_s_cpp.s"
 }

@@ -6,95 +6,263 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+struct _GXColorS10;
+
+struct daNpc_GWolf_c {
+	daNpc_GWolf_c();
+	~daNpc_GWolf_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void draw(s32, s32, f32, _GXColorS10*, s32);
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void main();
+	void ctrlBtk();
+	void adjustShapeAngle();
+	void setAttnPos();
+	bool setExpressionAnm(s32, bool);
+	void setExpression(s32, f32);
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void drawOtherMdls();
+	void getTypeFromParam();
+	void getModeFromParam();
+	void isDelete();
+	void reset();
+	void playMotion();
+	void selectAction();
+	void doNormalAction(s32);
+	void doEvent();
+	void setLookMode(s32);
+	void lookat();
+	void ECut_attackWarp(s32);
+	void ECut_attackWarpHorse(s32);
+	void ECut_howlingSessionA(s32);
+	void meetGWolfSkip();
+	void ECut_meetGWolf(s32);
+	void wait(void*);
+	void waitHowling(void*);
+	void waitBrave(void*);
+	void talk(void*);
+	void test(void*);
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void setCollisions();
+	bool setExpressionBtp(s32);
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpc_GWolf_Param_c {
+	~daNpc_GWolf_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daNpc_GWolf_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__13daNpc_GWolf_cFv();
-extern "C" extern void create__13daNpc_GWolf_cFv();
-extern "C" extern void CreateHeap__13daNpc_GWolf_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__13daNpc_GWolf_cFv();
-extern "C" extern void Execute__13daNpc_GWolf_cFv();
-extern "C" extern void Draw__13daNpc_GWolf_cFv();
-extern "C" extern void draw__13daNpc_GWolf_cFiifP11_GXColorS10i();
-extern "C" extern void ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi();
-extern "C" extern void setParam__13daNpc_GWolf_cFv();
-extern "C" extern void main__13daNpc_GWolf_cFv();
-extern "C" extern void ctrlBtk__13daNpc_GWolf_cFv();
-extern "C" extern void adjustShapeAngle__13daNpc_GWolf_cFv();
-extern "C" extern void setAttnPos__13daNpc_GWolf_cFv();
-extern "C" extern void setExpressionAnm__13daNpc_GWolf_cFib();
-extern "C" extern void setExpression__13daNpc_GWolf_cFif();
-extern "C" extern void setMotionAnm__13daNpc_GWolf_cFif();
-extern "C" extern void setMotion__13daNpc_GWolf_cFifi();
-extern "C" extern void drawDbgInfo__13daNpc_GWolf_cFv();
-extern "C" extern void drawOtherMdls__13daNpc_GWolf_cFv();
-extern "C" extern void getTypeFromParam__13daNpc_GWolf_cFv();
-extern "C" extern void getModeFromParam__13daNpc_GWolf_cFv();
-extern "C" extern void isDelete__13daNpc_GWolf_cFv();
-extern "C" extern void reset__13daNpc_GWolf_cFv();
-extern "C" extern void playMotion__13daNpc_GWolf_cFv();
-extern "C" extern void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
-extern "C" extern void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
-extern "C" extern void selectAction__13daNpc_GWolf_cFv();
-extern "C" extern void doNormalAction__13daNpc_GWolf_cFi();
-extern "C" extern void doEvent__13daNpc_GWolf_cFv();
-extern "C" extern void setLookMode__13daNpc_GWolf_cFi();
-extern "C" extern void lookat__13daNpc_GWolf_cFv();
-extern "C" extern void ECut_attackWarp__13daNpc_GWolf_cFi();
-extern "C" extern void ECut_attackWarpHorse__13daNpc_GWolf_cFi();
-extern "C" extern void ECut_howlingSessionA__13daNpc_GWolf_cFi();
-extern "C" extern void callback_proc__FPvi();
-extern "C" extern void meetGWolfSkip__13daNpc_GWolf_cFv();
-extern "C" extern void ECut_meetGWolf__13daNpc_GWolf_cFi();
-extern "C" extern void wait__13daNpc_GWolf_cFPv();
-extern "C" extern void waitHowling__13daNpc_GWolf_cFPv();
-extern "C" extern void waitBrave__13daNpc_GWolf_cFPv();
-extern "C" extern void talk__13daNpc_GWolf_cFPv();
-extern "C" extern void test__13daNpc_GWolf_cFPv();
-extern "C" extern void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void daNpc_GWolf_Create__FPv();
-extern "C" extern void daNpc_GWolf_Delete__FPv();
-extern "C" extern void daNpc_GWolf_Execute__FPv();
-extern "C" extern void daNpc_GWolf_Draw__FPv();
-extern "C" extern void daNpc_GWolf_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_809F8398();
-extern "C" extern void __sinit_d_a_npc_gwolf_cpp();
-extern "C" extern void __dt__19daNpc_GWolf_Param_cFv();
-extern "C" extern void func_809F84D0();
-extern "C" extern void func_809F84D8();
+extern "C" void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+void callback_proc(void*, s32);
+extern "C" void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs();
+void daNpc_GWolf_Create(void*);
+void daNpc_GWolf_Delete(void*);
+void daNpc_GWolf_Execute(void*);
+void daNpc_GWolf_Draw(void*);
+bool daNpc_GWolf_IsDelete(void*);
+extern "C" void func_809F8398();
+extern "C" void __sinit_d_a_npc_gwolf_cpp();
+extern "C" void func_809F84D0();
+extern "C" void func_809F84D8();
+
+extern "C" void __ct__13daNpc_GWolf_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__13daNpc_GWolf_cFv();
+extern "C" void create__13daNpc_GWolf_cFv();
+extern "C" void CreateHeap__13daNpc_GWolf_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_GWolf_cFv();
+extern "C" void Execute__13daNpc_GWolf_cFv();
+extern "C" void Draw__13daNpc_GWolf_cFv();
+extern "C" void draw__13daNpc_GWolf_cFiifP11_GXColorS10i();
+extern "C" void ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi();
+extern "C" void setParam__13daNpc_GWolf_cFv();
+extern "C" void main__13daNpc_GWolf_cFv();
+extern "C" void ctrlBtk__13daNpc_GWolf_cFv();
+extern "C" void adjustShapeAngle__13daNpc_GWolf_cFv();
+extern "C" void setAttnPos__13daNpc_GWolf_cFv();
+extern "C" bool setExpressionAnm__13daNpc_GWolf_cFib();
+extern "C" void setExpression__13daNpc_GWolf_cFif();
+extern "C" void setMotionAnm__13daNpc_GWolf_cFif();
+extern "C" void setMotion__13daNpc_GWolf_cFifi();
+extern "C" bool drawDbgInfo__13daNpc_GWolf_cFv();
+extern "C" void drawOtherMdls__13daNpc_GWolf_cFv();
+extern "C" void getTypeFromParam__13daNpc_GWolf_cFv();
+extern "C" void getModeFromParam__13daNpc_GWolf_cFv();
+extern "C" void isDelete__13daNpc_GWolf_cFv();
+extern "C" void reset__13daNpc_GWolf_cFv();
+extern "C" void playMotion__13daNpc_GWolf_cFv();
+extern "C" void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+extern "C" void selectAction__13daNpc_GWolf_cFv();
+extern "C" void doNormalAction__13daNpc_GWolf_cFi();
+extern "C" void doEvent__13daNpc_GWolf_cFv();
+extern "C" void setLookMode__13daNpc_GWolf_cFi();
+extern "C" void lookat__13daNpc_GWolf_cFv();
+extern "C" void ECut_attackWarp__13daNpc_GWolf_cFi();
+extern "C" void ECut_attackWarpHorse__13daNpc_GWolf_cFi();
+extern "C" void ECut_howlingSessionA__13daNpc_GWolf_cFi();
+extern "C" void callback_proc__FPvi();
+extern "C" void meetGWolfSkip__13daNpc_GWolf_cFv();
+extern "C" void ECut_meetGWolf__13daNpc_GWolf_cFi();
+extern "C" void wait__13daNpc_GWolf_cFPv();
+extern "C" void waitHowling__13daNpc_GWolf_cFPv();
+extern "C" void waitBrave__13daNpc_GWolf_cFPv();
+extern "C" void talk__13daNpc_GWolf_cFPv();
+extern "C" void test__13daNpc_GWolf_cFPv();
+extern "C" void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void daNpc_GWolf_Create__FPv();
+extern "C" void daNpc_GWolf_Delete__FPv();
+extern "C" void daNpc_GWolf_Execute__FPv();
+extern "C" void daNpc_GWolf_Draw__FPv();
+extern "C" bool daNpc_GWolf_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_809F8398();
+extern "C" void __sinit_d_a_npc_gwolf_cpp();
+extern "C" void __dt__19daNpc_GWolf_Param_cFv();
+extern "C" void func_809F84D0();
+extern "C" void func_809F84D8();
 SECTION_RODATA extern const u8 m__19daNpc_GWolf_Param_c[140];
 SECTION_RODATA extern const u32 lit_4401;
 SECTION_RODATA extern const u32 lit_4402;
@@ -259,8 +427,11 @@ SECTION_BSS extern u8 data_809F8F94[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -270,7 +441,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpc_GWolf_cFv) {
+asm daNpc_GWolf_c::daNpc_GWolf_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__13daNpc_GWolf_cFv.s"
 }
@@ -281,7 +452,7 @@ ASM_FUNCTION(__ct__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__8cM3dGCylFv.s"
 }
@@ -292,7 +463,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__8cM3dGAabFv.s"
 }
@@ -303,7 +474,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_GWolf_cFv) {
+asm daNpc_GWolf_c::~daNpc_GWolf_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__13daNpc_GWolf_cFv.s"
 }
@@ -314,7 +485,7 @@ ASM_FUNCTION(__dt__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/create__13daNpc_GWolf_cFv.s"
 }
@@ -325,7 +496,7 @@ ASM_FUNCTION(create__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/CreateHeap__13daNpc_GWolf_cFv.s"
 }
@@ -336,7 +507,7 @@ ASM_FUNCTION(CreateHeap__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -347,7 +518,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -358,7 +529,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__14J3DTevColorAnmFv.s"
 }
@@ -369,7 +540,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__14J3DTevColorAnmFv.s"
 }
@@ -380,7 +551,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__11J3DTexNoAnmFv.s"
 }
@@ -391,7 +562,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__11J3DTexNoAnmFv.s"
 }
@@ -402,7 +573,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -413,7 +584,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -424,7 +595,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__14J3DMatColorAnmFv.s"
 }
@@ -435,7 +606,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__14J3DMatColorAnmFv.s"
 }
@@ -446,7 +617,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/Delete__13daNpc_GWolf_cFv.s"
 }
@@ -457,7 +628,7 @@ ASM_FUNCTION(Delete__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/Execute__13daNpc_GWolf_cFv.s"
 }
@@ -468,7 +639,7 @@ ASM_FUNCTION(Execute__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/Draw__13daNpc_GWolf_cFv.s"
 }
@@ -479,7 +650,7 @@ ASM_FUNCTION(Draw__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daNpc_GWolf_cFiifP11_GXColorS10i) {
+asm void daNpc_GWolf_c::draw(s32 field_0, s32 field_1, f32 field_2, _GXColorS10* field_3, s32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/draw__13daNpc_GWolf_cFiifP11_GXColorS10i.s"
 }
@@ -490,7 +661,7 @@ ASM_FUNCTION(draw__13daNpc_GWolf_cFiifP11_GXColorS10i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel) {
+asm void daNpc_GWolf_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel.s"
 }
@@ -501,7 +672,7 @@ ASM_FUNCTION(ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c) {
+asm void daNpc_GWolf_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c.s"
 }
@@ -512,7 +683,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi) {
+asm void daNpc_GWolf_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi.s"
 }
@@ -523,7 +694,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setParam__13daNpc_GWolf_cFv.s"
 }
@@ -534,7 +705,7 @@ ASM_FUNCTION(setParam__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/main__13daNpc_GWolf_cFv.s"
 }
@@ -545,7 +716,7 @@ ASM_FUNCTION(main__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::ctrlBtk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ctrlBtk__13daNpc_GWolf_cFv.s"
 }
@@ -556,7 +727,7 @@ ASM_FUNCTION(ctrlBtk__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::adjustShapeAngle() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/adjustShapeAngle__13daNpc_GWolf_cFv.s"
 }
@@ -567,7 +738,7 @@ ASM_FUNCTION(adjustShapeAngle__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setAttnPos__13daNpc_GWolf_cFv.s"
 }
@@ -575,32 +746,22 @@ ASM_FUNCTION(setAttnPos__13daNpc_GWolf_cFv) {
 
 
 /* 809F4BB0-809F4BB8 0008+00 .text      setExpressionAnm__13daNpc_GWolf_cFib                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__13daNpc_GWolf_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setExpressionAnm__13daNpc_GWolf_cFib.s"
+bool daNpc_GWolf_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 809F4BB8-809F4BBC 0004+00 .text      setExpression__13daNpc_GWolf_cFif                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__13daNpc_GWolf_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setExpression__13daNpc_GWolf_cFif.s"
+void daNpc_GWolf_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809F4BBC-809F4DE8 022C+00 .text      setMotionAnm__13daNpc_GWolf_cFif                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__13daNpc_GWolf_cFif) {
+asm void daNpc_GWolf_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setMotionAnm__13daNpc_GWolf_cFif.s"
 }
@@ -611,7 +772,7 @@ ASM_FUNCTION(setMotionAnm__13daNpc_GWolf_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__13daNpc_GWolf_cFifi) {
+asm void daNpc_GWolf_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setMotion__13daNpc_GWolf_cFifi.s"
 }
@@ -619,32 +780,22 @@ ASM_FUNCTION(setMotion__13daNpc_GWolf_cFifi) {
 
 
 /* 809F4E2C-809F4E34 0008+00 .text      drawDbgInfo__13daNpc_GWolf_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpc_GWolf_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/drawDbgInfo__13daNpc_GWolf_cFv.s"
+bool daNpc_GWolf_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809F4E34-809F4E38 0004+00 .text      drawOtherMdls__13daNpc_GWolf_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__13daNpc_GWolf_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/drawOtherMdls__13daNpc_GWolf_cFv.s"
+void daNpc_GWolf_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809F4E38-809F4E84 004C+00 .text      getTypeFromParam__13daNpc_GWolf_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::getTypeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/getTypeFromParam__13daNpc_GWolf_cFv.s"
 }
@@ -655,7 +806,7 @@ ASM_FUNCTION(getTypeFromParam__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModeFromParam__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::getModeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/getModeFromParam__13daNpc_GWolf_cFv.s"
 }
@@ -666,7 +817,7 @@ ASM_FUNCTION(getModeFromParam__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/isDelete__13daNpc_GWolf_cFv.s"
 }
@@ -677,7 +828,7 @@ ASM_FUNCTION(isDelete__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/reset__13daNpc_GWolf_cFv.s"
 }
@@ -688,7 +839,7 @@ ASM_FUNCTION(reset__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/playMotion__13daNpc_GWolf_cFv.s"
 }
@@ -699,7 +850,7 @@ ASM_FUNCTION(playMotion__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i) {
+extern "C" asm void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i.s"
 }
@@ -710,7 +861,7 @@ ASM_FUNCTION(chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i) {
+extern "C" asm void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i.s"
 }
@@ -721,7 +872,7 @@ ASM_FUNCTION(setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/selectAction__13daNpc_GWolf_cFv.s"
 }
@@ -732,7 +883,7 @@ ASM_FUNCTION(selectAction__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doNormalAction__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::doNormalAction(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/doNormalAction__13daNpc_GWolf_cFi.s"
 }
@@ -743,7 +894,7 @@ ASM_FUNCTION(doNormalAction__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doEvent__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::doEvent() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/doEvent__13daNpc_GWolf_cFv.s"
 }
@@ -754,7 +905,7 @@ ASM_FUNCTION(doEvent__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setLookMode__13daNpc_GWolf_cFi.s"
 }
@@ -765,7 +916,7 @@ ASM_FUNCTION(setLookMode__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/lookat__13daNpc_GWolf_cFv.s"
 }
@@ -776,7 +927,7 @@ ASM_FUNCTION(lookat__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_attackWarp__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::ECut_attackWarp(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ECut_attackWarp__13daNpc_GWolf_cFi.s"
 }
@@ -787,7 +938,7 @@ ASM_FUNCTION(ECut_attackWarp__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_attackWarpHorse__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::ECut_attackWarpHorse(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ECut_attackWarpHorse__13daNpc_GWolf_cFi.s"
 }
@@ -798,7 +949,7 @@ ASM_FUNCTION(ECut_attackWarpHorse__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_howlingSessionA__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::ECut_howlingSessionA(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ECut_howlingSessionA__13daNpc_GWolf_cFi.s"
 }
@@ -809,7 +960,7 @@ ASM_FUNCTION(ECut_howlingSessionA__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callback_proc__FPvi) {
+asm void callback_proc(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/callback_proc__FPvi.s"
 }
@@ -820,7 +971,7 @@ ASM_FUNCTION(callback_proc__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(meetGWolfSkip__13daNpc_GWolf_cFv) {
+asm void daNpc_GWolf_c::meetGWolfSkip() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/meetGWolfSkip__13daNpc_GWolf_cFv.s"
 }
@@ -831,7 +982,7 @@ ASM_FUNCTION(meetGWolfSkip__13daNpc_GWolf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_meetGWolf__13daNpc_GWolf_cFi) {
+asm void daNpc_GWolf_c::ECut_meetGWolf(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/ECut_meetGWolf__13daNpc_GWolf_cFi.s"
 }
@@ -842,7 +993,7 @@ ASM_FUNCTION(ECut_meetGWolf__13daNpc_GWolf_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_GWolf_cFPv) {
+asm void daNpc_GWolf_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/wait__13daNpc_GWolf_cFPv.s"
 }
@@ -853,7 +1004,7 @@ ASM_FUNCTION(wait__13daNpc_GWolf_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitHowling__13daNpc_GWolf_cFPv) {
+asm void daNpc_GWolf_c::waitHowling(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/waitHowling__13daNpc_GWolf_cFPv.s"
 }
@@ -864,7 +1015,7 @@ ASM_FUNCTION(waitHowling__13daNpc_GWolf_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitBrave__13daNpc_GWolf_cFPv) {
+asm void daNpc_GWolf_c::waitBrave(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/waitBrave__13daNpc_GWolf_cFPv.s"
 }
@@ -875,7 +1026,7 @@ ASM_FUNCTION(waitBrave__13daNpc_GWolf_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_GWolf_cFPv) {
+asm void daNpc_GWolf_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/talk__13daNpc_GWolf_cFPv.s"
 }
@@ -886,7 +1037,7 @@ ASM_FUNCTION(talk__13daNpc_GWolf_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(test__13daNpc_GWolf_cFPv) {
+asm void daNpc_GWolf_c::test(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/test__13daNpc_GWolf_cFPv.s"
 }
@@ -897,7 +1048,7 @@ ASM_FUNCTION(test__13daNpc_GWolf_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs) {
+extern "C" asm void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs.s"
 }
@@ -908,7 +1059,7 @@ ASM_FUNCTION(getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__8cM3dGPlaFv.s"
 }
@@ -919,7 +1070,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_GWolf_Create__FPv) {
+asm void daNpc_GWolf_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/daNpc_GWolf_Create__FPv.s"
 }
@@ -930,7 +1081,7 @@ ASM_FUNCTION(daNpc_GWolf_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_GWolf_Delete__FPv) {
+asm void daNpc_GWolf_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/daNpc_GWolf_Delete__FPv.s"
 }
@@ -941,7 +1092,7 @@ ASM_FUNCTION(daNpc_GWolf_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_GWolf_Execute__FPv) {
+asm void daNpc_GWolf_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/daNpc_GWolf_Execute__FPv.s"
 }
@@ -952,7 +1103,7 @@ ASM_FUNCTION(daNpc_GWolf_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_GWolf_Draw__FPv) {
+asm void daNpc_GWolf_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/daNpc_GWolf_Draw__FPv.s"
 }
@@ -960,21 +1111,16 @@ ASM_FUNCTION(daNpc_GWolf_Draw__FPv) {
 
 
 /* 809F7B78-809F7B80 0008+00 .text      daNpc_GWolf_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_GWolf_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/daNpc_GWolf_IsDelete__FPv.s"
+bool daNpc_GWolf_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809F7B80-809F7BB0 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -985,7 +1131,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -996,7 +1142,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1007,7 +1153,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -1018,7 +1164,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__5csXyzFv.s"
 }
@@ -1026,21 +1172,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 809F7D40-809F7D44 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809F7D44-809F7D80 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__4cXyzFv.s"
 }
@@ -1048,21 +1189,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 809F7D80-809F7D84 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809F7D84-809F7FD0 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__8daNpcF_cFv.s"
 }
@@ -1073,7 +1209,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__ct__8daNpcF_cFv.s"
 }
@@ -1084,7 +1220,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1095,7 +1231,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__10dCcD_GSttsFv.s"
 }
@@ -1106,7 +1242,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1117,7 +1253,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1125,32 +1261,22 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 809F8344-809F8348 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809F8348-809F8350 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809F8350-809F8398 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__10cCcD_GSttsFv.s"
 }
@@ -1161,7 +1287,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F8398) {
+extern "C" asm void func_809F8398() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/func_809F8398.s"
 }
@@ -1172,7 +1298,7 @@ ASM_FUNCTION(func_809F8398) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_gwolf_cpp) {
+extern "C" asm void __sinit_d_a_npc_gwolf_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__sinit_d_a_npc_gwolf_cpp.s"
 }
@@ -1183,7 +1309,7 @@ ASM_FUNCTION(__sinit_d_a_npc_gwolf_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_GWolf_Param_cFv) {
+asm daNpc_GWolf_Param_c::~daNpc_GWolf_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/__dt__19daNpc_GWolf_Param_cFv.s"
 }
@@ -1194,7 +1320,7 @@ ASM_FUNCTION(__dt__19daNpc_GWolf_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F84D0) {
+extern "C" asm void func_809F84D0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/func_809F84D0.s"
 }
@@ -1205,7 +1331,7 @@ ASM_FUNCTION(func_809F84D0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F84D8) {
+extern "C" asm void func_809F84D8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gwolf/d_a_npc_gwolf/func_809F84D8.s"
 }

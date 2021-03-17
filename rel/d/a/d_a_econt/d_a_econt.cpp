@@ -6,16 +6,31 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct econt_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daEcont_Draw__FP11econt_class();
-extern "C" extern void s_rd_sub__FPvPv();
-extern "C" extern void rider_game__FP11econt_class();
-extern "C" extern void daEcont_Execute__FP11econt_class();
-extern "C" extern void daEcont_IsDelete__FP11econt_class();
-extern "C" extern void daEcont_Delete__FP11econt_class();
-extern "C" extern void daEcont_Create__FP10fopAc_ac_c();
+bool daEcont_Draw(econt_class*);
+void s_rd_sub(void*, void*);
+void rider_game(econt_class*);
+void daEcont_Execute(econt_class*);
+bool daEcont_IsDelete(econt_class*);
+void daEcont_Delete(econt_class*);
+void daEcont_Create(fopAc_ac_c*);
+
+extern "C" bool daEcont_Draw__FP11econt_class();
+extern "C" void s_rd_sub__FPvPv();
+extern "C" void rider_game__FP11econt_class();
+extern "C" void daEcont_Execute__FP11econt_class();
+extern "C" bool daEcont_IsDelete__FP11econt_class();
+extern "C" void daEcont_Delete__FP11econt_class();
+extern "C" void daEcont_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3870;
 SECTION_RODATA extern const u32 lit_3871;
 SECTION_RODATA extern const u32 lit_3872;
@@ -27,28 +42,25 @@ SECTION_DATA extern u8 g_profile_ECONT[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 80519518-80519520 0008+00 .text      daEcont_Draw__FP11econt_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daEcont_Draw__FP11econt_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Draw__FP11econt_class.s"
+bool daEcont_Draw(econt_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80519520-80519578 0058+00 .text      s_rd_sub__FPvPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_rd_sub__FPvPv) {
+asm void s_rd_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/s_rd_sub__FPvPv.s"
 }
@@ -59,7 +71,7 @@ ASM_FUNCTION(s_rd_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rider_game__FP11econt_class) {
+asm void rider_game(econt_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/rider_game__FP11econt_class.s"
 }
@@ -70,7 +82,7 @@ ASM_FUNCTION(rider_game__FP11econt_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEcont_Execute__FP11econt_class) {
+asm void daEcont_Execute(econt_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Execute__FP11econt_class.s"
 }
@@ -78,21 +90,16 @@ ASM_FUNCTION(daEcont_Execute__FP11econt_class) {
 
 
 /* 805196B4-805196BC 0008+00 .text      daEcont_IsDelete__FP11econt_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daEcont_IsDelete__FP11econt_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_IsDelete__FP11econt_class.s"
+bool daEcont_IsDelete(econt_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805196BC-805196E4 0028+00 .text      daEcont_Delete__FP11econt_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEcont_Delete__FP11econt_class) {
+asm void daEcont_Delete(econt_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Delete__FP11econt_class.s"
 }
@@ -103,7 +110,7 @@ ASM_FUNCTION(daEcont_Delete__FP11econt_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEcont_Create__FP10fopAc_ac_c) {
+asm void daEcont_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Create__FP10fopAc_ac_c.s"
 }

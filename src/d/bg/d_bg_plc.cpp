@@ -6,78 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgPlc (dBgPlc) False/False
+// build sBgPc (sBgPc) False/False
+/* top-level dependencies (begin sBgPc) */
+/* top-level dependencies (end sBgPc) */
+struct sBgPc {
+};
+
+/* top-level dependencies (begin dBgPlc) */
+// outer dependency: sBgPc
+/* top-level dependencies (end dBgPlc) */
+struct dBgPlc {
+	// sBgPc
+	/* 80074074 */ dBgPlc();
+	/* 80074080 */ ~dBgPlc();
+	/* 800740BC */ void setBase(void*);
+	/* 800740C4 */ void getCode(s32, sBgPc**) const;
+	/* 800740DC */ void getGrpCode(s32) const;
+};
+
+// build sBgPc (sBgPc) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__6dBgPlcFv();
-extern "C" extern void __dt__6dBgPlcFv();
-extern "C" extern void setBase__6dBgPlcFPv();
-extern "C" extern void getCode__6dBgPlcCFiPP5sBgPc();
-extern "C" extern void getGrpCode__6dBgPlcCFi();
+
+extern "C" void __ct__6dBgPlcFv();
+extern "C" void __dt__6dBgPlcFv();
+extern "C" void setBase__6dBgPlcFPv();
+extern "C" void getCode__6dBgPlcCFiPP5sBgPc();
+extern "C" void getGrpCode__6dBgPlcCFi();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
-/* 80074074-80074080 000C+00 .text      __ct__6dBgPlcFv                                              */
+/* 80074074-80074080 000C+00 rc=1 efc=1 .text      __ct__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__6dBgPlcFv) {
+asm dBgPlc::dBgPlc() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/__ct__6dBgPlcFv.s"
 }
 #pragma pop
 
 
-/* 80074080-800740BC 003C+00 .text      __dt__6dBgPlcFv                                              */
+/* 80074080-800740BC 003C+00 rc=1 efc=1 .text      __dt__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__6dBgPlcFv) {
+asm dBgPlc::~dBgPlc() {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/__dt__6dBgPlcFv.s"
 }
 #pragma pop
 
 
-/* 800740BC-800740C4 0008+00 .text      setBase__6dBgPlcFPv                                          */
+/* 800740BC-800740C4 0008+00 rc=1 efc=1 .text      setBase__6dBgPlcFPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBase__6dBgPlcFPv) {
+asm void dBgPlc::setBase(void* field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/setBase__6dBgPlcFPv.s"
 }
 #pragma pop
 
 
-/* 800740C4-800740DC 0018+00 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
+/* 800740C4-800740DC 0018+00 rc=1 efc=1 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCode__6dBgPlcCFiPP5sBgPc) {
+asm void dBgPlc::getCode(s32 field_0, sBgPc** field_1) const {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getCode__6dBgPlcCFiPP5sBgPc.s"
 }
 #pragma pop
 
 
-/* 800740DC-800740F4 0018+00 .text      getGrpCode__6dBgPlcCFi                                       */
+/* 800740DC-800740F4 0018+00 rc=1 efc=1 .text      getGrpCode__6dBgPlcCFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGrpCode__6dBgPlcCFi) {
+asm void dBgPlc::getGrpCode(s32 field_0) const {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getGrpCode__6dBgPlcCFi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

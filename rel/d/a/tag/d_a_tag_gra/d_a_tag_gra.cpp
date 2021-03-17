@@ -6,11 +6,21 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagGra_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagGra_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagGra_Delete__FP10daTagGra_c();
+void daTagGra_Create(fopAc_ac_c*);
+void daTagGra_Delete(daTagGra_c*);
+
+extern "C" void daTagGra_Create__FP10fopAc_ac_c();
+extern "C" void daTagGra_Delete__FP10daTagGra_c();
 SECTION_DATA extern u8 l_daTagGra_Method[32];
 SECTION_DATA extern u8 g_profile_TAG_GRA[48];
 
@@ -18,7 +28,9 @@ SECTION_DATA extern u8 g_profile_TAG_GRA[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -28,7 +40,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGra_Create__FP10fopAc_ac_c) {
+asm void daTagGra_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gra/d_a_tag_gra/daTagGra_Create__FP10fopAc_ac_c.s"
 }
@@ -39,7 +51,7 @@ ASM_FUNCTION(daTagGra_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGra_Delete__FP10daTagGra_c) {
+asm void daTagGra_Delete(daTagGra_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gra/d_a_tag_gra/daTagGra_Delete__FP10daTagGra_c.s"
 }

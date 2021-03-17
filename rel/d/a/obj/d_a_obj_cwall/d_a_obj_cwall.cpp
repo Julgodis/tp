@@ -6,53 +6,135 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cXyz;
+struct daObjCwall_c;
+
+struct daObjCwall_c {
+	struct chain_s {
+		~daObjCwall_c::chain_s();
+		daObjCwall_c::chain_s();
+	};
+
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void setTension();
+	void calcSePos();
+	void getChainBasePos(cXyz*);
+	void setChainMtx();
+	void chain_control();
+	void chain_control2();
+	void block_mode_proc_call();
+	void initWait();
+	void modeWait();
+	void initWalk();
+	void modeWalk();
+	void initClose();
+	void modeClose();
+	void checkWall();
+	void checkPullNow();
+	void checkPull();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dCcD_Cyl {
+	dCcD_Cyl();
+	~dCcD_Cyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void getRightHandPos() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjCwall_cFv();
-extern "C" extern void setBaseMtx__12daObjCwall_cFv();
-extern "C" extern void Create__12daObjCwall_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void CreateHeap__12daObjCwall_cFv();
-extern "C" extern void __dt__Q212daObjCwall_c7chain_sFv();
-extern "C" extern void __ct__Q212daObjCwall_c7chain_sFv();
-extern "C" extern void create1st__12daObjCwall_cFv();
-extern "C" extern void Execute__12daObjCwall_cFPPA3_A4_f();
-extern "C" extern void setTension__12daObjCwall_cFv();
-extern "C" extern void calcSePos__12daObjCwall_cFv();
-extern "C" extern void getChainBasePos__12daObjCwall_cFP4cXyz();
-extern "C" extern void setChainMtx__12daObjCwall_cFv();
-extern "C" extern void chain_control__12daObjCwall_cFv();
-extern "C" extern void chain_control2__12daObjCwall_cFv();
-extern "C" extern void block_mode_proc_call__12daObjCwall_cFv();
-extern "C" extern void initWait__12daObjCwall_cFv();
-extern "C" extern void modeWait__12daObjCwall_cFv();
-extern "C" extern void initWalk__12daObjCwall_cFv();
-extern "C" extern void modeWalk__12daObjCwall_cFv();
-extern "C" extern void initClose__12daObjCwall_cFv();
-extern "C" extern void modeClose__12daObjCwall_cFv();
-extern "C" extern void setPower__12daObjCwall_cFfPs();
-extern "C" extern void checkWall__12daObjCwall_cFv();
-extern "C" extern void checkPullNow__12daObjCwall_cFv();
-extern "C" extern void checkPull__12daObjCwall_cFv();
-extern "C" extern void Draw__12daObjCwall_cFv();
-extern "C" extern void Delete__12daObjCwall_cFv();
-extern "C" extern void daObjCwall_create1st__FP12daObjCwall_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjCwall_MoveBGDelete__FP12daObjCwall_c();
-extern "C" extern void daObjCwall_MoveBGExecute__FP12daObjCwall_c();
-extern "C" extern void daObjCwall_MoveBGDraw__FP12daObjCwall_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BD9EAC();
-extern "C" extern void func_80BD9EC8();
-extern "C" extern void __sinit_d_a_obj_cwall_cpp();
-extern "C" extern void getRightHandPos__9daPy_py_cCFv();
+extern "C" void Execute__12daObjCwall_cFPPA3_A4_f();
+extern "C" void setPower__12daObjCwall_cFfPs();
+void daObjCwall_create1st(daObjCwall_c*);
+void daObjCwall_MoveBGDelete(daObjCwall_c*);
+void daObjCwall_MoveBGExecute(daObjCwall_c*);
+void daObjCwall_MoveBGDraw(daObjCwall_c*);
+extern "C" void func_80BD9EAC();
+extern "C" void func_80BD9EC8();
+extern "C" void __sinit_d_a_obj_cwall_cpp();
+
+extern "C" void initBaseMtx__12daObjCwall_cFv();
+extern "C" void setBaseMtx__12daObjCwall_cFv();
+extern "C" void Create__12daObjCwall_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void CreateHeap__12daObjCwall_cFv();
+extern "C" void __dt__Q212daObjCwall_c7chain_sFv();
+extern "C" void __ct__Q212daObjCwall_c7chain_sFv();
+extern "C" void create1st__12daObjCwall_cFv();
+extern "C" void Execute__12daObjCwall_cFPPA3_A4_f();
+extern "C" void setTension__12daObjCwall_cFv();
+extern "C" void calcSePos__12daObjCwall_cFv();
+extern "C" void getChainBasePos__12daObjCwall_cFP4cXyz();
+extern "C" void setChainMtx__12daObjCwall_cFv();
+extern "C" void chain_control__12daObjCwall_cFv();
+extern "C" void chain_control2__12daObjCwall_cFv();
+extern "C" void block_mode_proc_call__12daObjCwall_cFv();
+extern "C" void initWait__12daObjCwall_cFv();
+extern "C" void modeWait__12daObjCwall_cFv();
+extern "C" void initWalk__12daObjCwall_cFv();
+extern "C" void modeWalk__12daObjCwall_cFv();
+extern "C" void initClose__12daObjCwall_cFv();
+extern "C" void modeClose__12daObjCwall_cFv();
+extern "C" void setPower__12daObjCwall_cFfPs();
+extern "C" void checkWall__12daObjCwall_cFv();
+extern "C" void checkPullNow__12daObjCwall_cFv();
+extern "C" void checkPull__12daObjCwall_cFv();
+extern "C" void Draw__12daObjCwall_cFv();
+extern "C" void Delete__12daObjCwall_cFv();
+extern "C" void daObjCwall_create1st__FP12daObjCwall_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjCwall_MoveBGDelete__FP12daObjCwall_c();
+extern "C" void daObjCwall_MoveBGExecute__FP12daObjCwall_c();
+extern "C" void daObjCwall_MoveBGDraw__FP12daObjCwall_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BD9EAC();
+extern "C" void func_80BD9EC8();
+extern "C" void __sinit_d_a_obj_cwall_cpp();
+extern "C" void getRightHandPos__9daPy_py_cCFv();
 SECTION_RODATA extern const u8 l_wallBmd[8];
 SECTION_RODATA extern const u8 l_chainBmd[8];
 SECTION_RODATA extern const u8 l_handleBmd[8];
@@ -171,8 +253,11 @@ SECTION_BSS extern u8 data_80BDA3D4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -182,7 +267,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjCwall_cFv) {
+asm void daObjCwall_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/initBaseMtx__12daObjCwall_cFv.s"
 }
@@ -193,7 +278,7 @@ ASM_FUNCTION(initBaseMtx__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjCwall_cFv) {
+asm void daObjCwall_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/setBaseMtx__12daObjCwall_cFv.s"
 }
@@ -204,7 +289,7 @@ ASM_FUNCTION(setBaseMtx__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjCwall_cFv) {
+asm void daObjCwall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/Create__12daObjCwall_cFv.s"
 }
@@ -215,7 +300,7 @@ ASM_FUNCTION(Create__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__4cXyzFv.s"
 }
@@ -226,7 +311,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjCwall_cFv) {
+asm void daObjCwall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/CreateHeap__12daObjCwall_cFv.s"
 }
@@ -237,7 +322,7 @@ ASM_FUNCTION(CreateHeap__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q212daObjCwall_c7chain_sFv) {
+asm daObjCwall_c::chain_s::~daObjCwall_c::chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__Q212daObjCwall_c7chain_sFv.s"
 }
@@ -245,21 +330,16 @@ ASM_FUNCTION(__dt__Q212daObjCwall_c7chain_sFv) {
 
 
 /* 80BD6ED0-80BD6ED4 0004+00 .text      __ct__Q212daObjCwall_c7chain_sFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q212daObjCwall_c7chain_sFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__ct__Q212daObjCwall_c7chain_sFv.s"
+daObjCwall_c::chain_s::daObjCwall_c::chain_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD6ED4-80BD6F80 00AC+00 .text      create1st__12daObjCwall_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjCwall_cFv) {
+asm void daObjCwall_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/create1st__12daObjCwall_cFv.s"
 }
@@ -270,7 +350,7 @@ ASM_FUNCTION(create1st__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjCwall_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjCwall_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/Execute__12daObjCwall_cFPPA3_A4_f.s"
 }
@@ -281,7 +361,7 @@ ASM_FUNCTION(Execute__12daObjCwall_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTension__12daObjCwall_cFv) {
+asm void daObjCwall_c::setTension() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/setTension__12daObjCwall_cFv.s"
 }
@@ -292,7 +372,7 @@ ASM_FUNCTION(setTension__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSePos__12daObjCwall_cFv) {
+asm void daObjCwall_c::calcSePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/calcSePos__12daObjCwall_cFv.s"
 }
@@ -303,7 +383,7 @@ ASM_FUNCTION(calcSePos__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChainBasePos__12daObjCwall_cFP4cXyz) {
+asm void daObjCwall_c::getChainBasePos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/getChainBasePos__12daObjCwall_cFP4cXyz.s"
 }
@@ -314,7 +394,7 @@ ASM_FUNCTION(getChainBasePos__12daObjCwall_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setChainMtx__12daObjCwall_cFv) {
+asm void daObjCwall_c::setChainMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/setChainMtx__12daObjCwall_cFv.s"
 }
@@ -325,7 +405,7 @@ ASM_FUNCTION(setChainMtx__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control__12daObjCwall_cFv) {
+asm void daObjCwall_c::chain_control() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/chain_control__12daObjCwall_cFv.s"
 }
@@ -336,7 +416,7 @@ ASM_FUNCTION(chain_control__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control2__12daObjCwall_cFv) {
+asm void daObjCwall_c::chain_control2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/chain_control2__12daObjCwall_cFv.s"
 }
@@ -347,7 +427,7 @@ ASM_FUNCTION(chain_control2__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(block_mode_proc_call__12daObjCwall_cFv) {
+asm void daObjCwall_c::block_mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/block_mode_proc_call__12daObjCwall_cFv.s"
 }
@@ -358,7 +438,7 @@ ASM_FUNCTION(block_mode_proc_call__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__12daObjCwall_cFv) {
+asm void daObjCwall_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/initWait__12daObjCwall_cFv.s"
 }
@@ -369,7 +449,7 @@ ASM_FUNCTION(initWait__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daObjCwall_cFv) {
+asm void daObjCwall_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/modeWait__12daObjCwall_cFv.s"
 }
@@ -380,7 +460,7 @@ ASM_FUNCTION(modeWait__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWalk__12daObjCwall_cFv) {
+asm void daObjCwall_c::initWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/initWalk__12daObjCwall_cFv.s"
 }
@@ -391,7 +471,7 @@ ASM_FUNCTION(initWalk__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWalk__12daObjCwall_cFv) {
+asm void daObjCwall_c::modeWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/modeWalk__12daObjCwall_cFv.s"
 }
@@ -402,7 +482,7 @@ ASM_FUNCTION(modeWalk__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initClose__12daObjCwall_cFv) {
+asm void daObjCwall_c::initClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/initClose__12daObjCwall_cFv.s"
 }
@@ -413,7 +493,7 @@ ASM_FUNCTION(initClose__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__12daObjCwall_cFv) {
+asm void daObjCwall_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/modeClose__12daObjCwall_cFv.s"
 }
@@ -424,7 +504,7 @@ ASM_FUNCTION(modeClose__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPower__12daObjCwall_cFfPs) {
+extern "C" asm void setPower__12daObjCwall_cFfPs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/setPower__12daObjCwall_cFfPs.s"
 }
@@ -435,7 +515,7 @@ ASM_FUNCTION(setPower__12daObjCwall_cFfPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWall__12daObjCwall_cFv) {
+asm void daObjCwall_c::checkWall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/checkWall__12daObjCwall_cFv.s"
 }
@@ -446,7 +526,7 @@ ASM_FUNCTION(checkWall__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPullNow__12daObjCwall_cFv) {
+asm void daObjCwall_c::checkPullNow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/checkPullNow__12daObjCwall_cFv.s"
 }
@@ -457,7 +537,7 @@ ASM_FUNCTION(checkPullNow__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPull__12daObjCwall_cFv) {
+asm void daObjCwall_c::checkPull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/checkPull__12daObjCwall_cFv.s"
 }
@@ -468,7 +548,7 @@ ASM_FUNCTION(checkPull__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjCwall_cFv) {
+asm void daObjCwall_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/Draw__12daObjCwall_cFv.s"
 }
@@ -479,7 +559,7 @@ ASM_FUNCTION(Draw__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjCwall_cFv) {
+asm void daObjCwall_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/Delete__12daObjCwall_cFv.s"
 }
@@ -490,7 +570,7 @@ ASM_FUNCTION(Delete__12daObjCwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCwall_create1st__FP12daObjCwall_c) {
+asm void daObjCwall_create1st(daObjCwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/daObjCwall_create1st__FP12daObjCwall_c.s"
 }
@@ -498,21 +578,16 @@ ASM_FUNCTION(daObjCwall_create1st__FP12daObjCwall_c) {
 
 
 /* 80BD9B70-80BD9B74 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD9B74-80BD9BF8 0084+00 .text      __ct__8dCcD_CylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__ct__8dCcD_CylFv.s"
 }
@@ -523,7 +598,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__8cM3dGSphFv.s"
 }
@@ -534,7 +609,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__8dCcD_CylFv.s"
 }
@@ -545,7 +620,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__8cM3dGCylFv.s"
 }
@@ -556,7 +631,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__8cM3dGAabFv.s"
 }
@@ -567,7 +642,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__10dCcD_GSttsFv.s"
 }
@@ -578,7 +653,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCwall_MoveBGDelete__FP12daObjCwall_c) {
+asm void daObjCwall_MoveBGDelete(daObjCwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/daObjCwall_MoveBGDelete__FP12daObjCwall_c.s"
 }
@@ -589,7 +664,7 @@ ASM_FUNCTION(daObjCwall_MoveBGDelete__FP12daObjCwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCwall_MoveBGExecute__FP12daObjCwall_c) {
+asm void daObjCwall_MoveBGExecute(daObjCwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/daObjCwall_MoveBGExecute__FP12daObjCwall_c.s"
 }
@@ -600,7 +675,7 @@ ASM_FUNCTION(daObjCwall_MoveBGExecute__FP12daObjCwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCwall_MoveBGDraw__FP12daObjCwall_c) {
+asm void daObjCwall_MoveBGDraw(daObjCwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/daObjCwall_MoveBGDraw__FP12daObjCwall_c.s"
 }
@@ -611,7 +686,7 @@ ASM_FUNCTION(daObjCwall_MoveBGDraw__FP12daObjCwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__dt__10cCcD_GSttsFv.s"
 }
@@ -622,7 +697,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD9EAC) {
+extern "C" asm void func_80BD9EAC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/func_80BD9EAC.s"
 }
@@ -633,7 +708,7 @@ ASM_FUNCTION(func_80BD9EAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD9EC8) {
+extern "C" asm void func_80BD9EC8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/func_80BD9EC8.s"
 }
@@ -644,7 +719,7 @@ ASM_FUNCTION(func_80BD9EC8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_cwall_cpp) {
+extern "C" asm void __sinit_d_a_obj_cwall_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__sinit_d_a_obj_cwall_cpp.s"
 }
@@ -655,7 +730,7 @@ ASM_FUNCTION(__sinit_d_a_obj_cwall_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRightHandPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getRightHandPos() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/getRightHandPos__9daPy_py_cCFv.s"
 }

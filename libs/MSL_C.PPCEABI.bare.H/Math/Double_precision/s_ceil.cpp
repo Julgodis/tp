@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void ceil();
+extern "C" void ceil();
+
+extern "C" void ceil();
 SECTION_SDATA2 extern f64 Math_Double_precision_s_ceil__lit_124;
 SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__lit_125[8];
 
@@ -18,28 +20,28 @@ SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__lit_125[8];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456AE0-80456AE8 0008+00 .sdata2    @124                                                         */
+/* 80456AE0-80456AE8 0008+00 rc=1 efc=0 .sdata2    @124                                                         */
 f64 Math_Double_precision_s_ceil__lit_124 = 1e+300;
 
-/* 80456AE8-80456AF0 0008+00 .sdata2    @125                                                         */
+/* 80456AE8-80456AF0 0008+00 rc=1 efc=0 .sdata2    @125                                                         */
 u8 Math_Double_precision_s_ceil__lit_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036BEBC-8036C000 0144+00 .text      ceil                                                         */
+/* 8036BEBC-8036C000 0144+00 rc=2 efc=2 .text      ceil                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ceil) {
+extern "C" asm void ceil() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_ceil/ceil.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

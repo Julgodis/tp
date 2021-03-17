@@ -6,59 +6,151 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjIceBlk_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjIceBlk_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void getPointNo();
+	void loadCurrentPos();
+	void saveCurrentPos();
+	void enablePushPull();
+	void disablePushPull();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void checkWalk();
+	void clrCounter();
+	void mode_proc_call();
+	void mode_init_wait();
+	void mode_proc_wait();
+	void mode_init_walk();
+	void mode_proc_walk();
+	void setEffect();
+	void checkBgHit();
+	void bgCheck();
+	void init_bgCheck();
+	void checkFall();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__13daObjIceBlk_cFv();
-extern "C" extern void setBaseMtx__13daObjIceBlk_cFv();
-extern "C" extern void getPointNo__13daObjIceBlk_cFv();
-extern "C" extern void loadCurrentPos__13daObjIceBlk_cFv();
-extern "C" extern void saveCurrentPos__13daObjIceBlk_cFv();
-extern "C" extern void enablePushPull__13daObjIceBlk_cFv();
-extern "C" extern void disablePushPull__13daObjIceBlk_cFv();
-extern "C" extern void Create__13daObjIceBlk_cFv();
-extern "C" extern void CreateHeap__13daObjIceBlk_cFv();
-extern "C" extern void create1st__13daObjIceBlk_cFv();
-extern "C" extern void Execute__13daObjIceBlk_cFPPA3_A4_f();
-extern "C" extern void checkWalk__13daObjIceBlk_cFv();
-extern "C" extern void clrCounter__13daObjIceBlk_cFv();
-extern "C" extern void mode_proc_call__13daObjIceBlk_cFv();
-extern "C" extern void mode_init_wait__13daObjIceBlk_cFv();
-extern "C" extern void mode_proc_wait__13daObjIceBlk_cFv();
-extern "C" extern void mode_init_walk__13daObjIceBlk_cFv();
-extern "C" extern void mode_proc_walk__13daObjIceBlk_cFv();
-extern "C" extern void setEffect__13daObjIceBlk_cFv();
-extern "C" extern void checkWallPre__13daObjIceBlk_cFs();
-extern "C" extern void checkBgHit__13daObjIceBlk_cFv();
-extern "C" extern void bgCheck__13daObjIceBlk_cFv();
-extern "C" extern void init_bgCheck__13daObjIceBlk_cFv();
-extern "C" extern void checkFall__13daObjIceBlk_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void event_proc_call__13daObjIceBlk_cFv();
-extern "C" extern void actionWait__13daObjIceBlk_cFv();
-extern "C" extern void actionOrderEvent__13daObjIceBlk_cFv();
-extern "C" extern void actionEvent__13daObjIceBlk_cFv();
-extern "C" extern void actionDead__13daObjIceBlk_cFv();
-extern "C" extern void Draw__13daObjIceBlk_cFv();
-extern "C" extern void Delete__13daObjIceBlk_cFv();
-extern "C" extern void daObjIceBlk_create1st__FP13daObjIceBlk_c();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjIceBlk_MoveBGDelete__FP13daObjIceBlk_c();
-extern "C" extern void daObjIceBlk_MoveBGExecute__FP13daObjIceBlk_c();
-extern "C" extern void daObjIceBlk_MoveBGDraw__FP13daObjIceBlk_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80C242C4();
-extern "C" extern void func_80C242CC();
-extern "C" extern void func_80C242D4();
-extern "C" extern void func_80C242DC();
-extern "C" extern void func_80C242E4();
+extern "C" void PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__13daObjIceBlk_cFPPA3_A4_f();
+extern "C" void checkWallPre__13daObjIceBlk_cFs();
+void daObjIceBlk_create1st(daObjIceBlk_c*);
+void daObjIceBlk_MoveBGDelete(daObjIceBlk_c*);
+void daObjIceBlk_MoveBGExecute(daObjIceBlk_c*);
+void daObjIceBlk_MoveBGDraw(daObjIceBlk_c*);
+extern "C" void func_80C242C4();
+extern "C" void func_80C242CC();
+extern "C" void func_80C242D4();
+extern "C" void func_80C242DC();
+extern "C" void func_80C242E4();
+
+extern "C" void PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void initBaseMtx__13daObjIceBlk_cFv();
+extern "C" void setBaseMtx__13daObjIceBlk_cFv();
+extern "C" void getPointNo__13daObjIceBlk_cFv();
+extern "C" void loadCurrentPos__13daObjIceBlk_cFv();
+extern "C" void saveCurrentPos__13daObjIceBlk_cFv();
+extern "C" void enablePushPull__13daObjIceBlk_cFv();
+extern "C" void disablePushPull__13daObjIceBlk_cFv();
+extern "C" void Create__13daObjIceBlk_cFv();
+extern "C" void CreateHeap__13daObjIceBlk_cFv();
+extern "C" void create1st__13daObjIceBlk_cFv();
+extern "C" void Execute__13daObjIceBlk_cFPPA3_A4_f();
+extern "C" void checkWalk__13daObjIceBlk_cFv();
+extern "C" void clrCounter__13daObjIceBlk_cFv();
+extern "C" void mode_proc_call__13daObjIceBlk_cFv();
+extern "C" void mode_init_wait__13daObjIceBlk_cFv();
+extern "C" void mode_proc_wait__13daObjIceBlk_cFv();
+extern "C" void mode_init_walk__13daObjIceBlk_cFv();
+extern "C" void mode_proc_walk__13daObjIceBlk_cFv();
+extern "C" void setEffect__13daObjIceBlk_cFv();
+extern "C" void checkWallPre__13daObjIceBlk_cFs();
+extern "C" void checkBgHit__13daObjIceBlk_cFv();
+extern "C" void bgCheck__13daObjIceBlk_cFv();
+extern "C" void init_bgCheck__13daObjIceBlk_cFv();
+extern "C" void checkFall__13daObjIceBlk_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void event_proc_call__13daObjIceBlk_cFv();
+extern "C" void actionWait__13daObjIceBlk_cFv();
+extern "C" void actionOrderEvent__13daObjIceBlk_cFv();
+extern "C" void actionEvent__13daObjIceBlk_cFv();
+extern "C" void actionDead__13daObjIceBlk_cFv();
+extern "C" void Draw__13daObjIceBlk_cFv();
+extern "C" void Delete__13daObjIceBlk_cFv();
+extern "C" void daObjIceBlk_create1st__FP13daObjIceBlk_c();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjIceBlk_MoveBGDelete__FP13daObjIceBlk_c();
+extern "C" void daObjIceBlk_MoveBGExecute__FP13daObjIceBlk_c();
+extern "C" void daObjIceBlk_MoveBGDraw__FP13daObjIceBlk_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80C242C4();
+extern "C" void func_80C242CC();
+extern "C" void func_80C242D4();
+extern "C" void func_80C242DC();
+extern "C" void func_80C242E4();
 SECTION_RODATA extern const u8 l_dir_vec[48];
 SECTION_RODATA extern const u8 l_dir_angle[8];
 SECTION_RODATA extern const u8 l_cyl_src[68];
@@ -119,7 +211,9 @@ SECTION_DATA extern void*const __vt__13daObjIceBlk_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -129,7 +223,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C21CD8.s"
 }
@@ -140,7 +234,7 @@ ASM_FUNCTION(PPCallBack__13daObjIceBlk_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -151,7 +245,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/initBaseMtx__13daObjIceBlk_cFv.s"
 }
@@ -162,7 +256,7 @@ ASM_FUNCTION(initBaseMtx__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/setBaseMtx__13daObjIceBlk_cFv.s"
 }
@@ -173,7 +267,7 @@ ASM_FUNCTION(setBaseMtx__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPointNo__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::getPointNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/getPointNo__13daObjIceBlk_cFv.s"
 }
@@ -184,7 +278,7 @@ ASM_FUNCTION(getPointNo__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadCurrentPos__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::loadCurrentPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/loadCurrentPos__13daObjIceBlk_cFv.s"
 }
@@ -195,7 +289,7 @@ ASM_FUNCTION(loadCurrentPos__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(saveCurrentPos__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::saveCurrentPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/saveCurrentPos__13daObjIceBlk_cFv.s"
 }
@@ -206,7 +300,7 @@ ASM_FUNCTION(saveCurrentPos__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(enablePushPull__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::enablePushPull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/enablePushPull__13daObjIceBlk_cFv.s"
 }
@@ -217,7 +311,7 @@ ASM_FUNCTION(enablePushPull__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(disablePushPull__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::disablePushPull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/disablePushPull__13daObjIceBlk_cFv.s"
 }
@@ -228,7 +322,7 @@ ASM_FUNCTION(disablePushPull__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/Create__13daObjIceBlk_cFv.s"
 }
@@ -239,7 +333,7 @@ ASM_FUNCTION(Create__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/CreateHeap__13daObjIceBlk_cFv.s"
 }
@@ -250,7 +344,7 @@ ASM_FUNCTION(CreateHeap__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/create1st__13daObjIceBlk_cFv.s"
 }
@@ -261,7 +355,7 @@ ASM_FUNCTION(create1st__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjIceBlk_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjIceBlk_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/Execute__13daObjIceBlk_cFPPA3_A4_f.s"
 }
@@ -272,7 +366,7 @@ ASM_FUNCTION(Execute__13daObjIceBlk_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWalk__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::checkWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/checkWalk__13daObjIceBlk_cFv.s"
 }
@@ -283,7 +377,7 @@ ASM_FUNCTION(checkWalk__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clrCounter__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::clrCounter() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/clrCounter__13daObjIceBlk_cFv.s"
 }
@@ -294,7 +388,7 @@ ASM_FUNCTION(clrCounter__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/mode_proc_call__13daObjIceBlk_cFv.s"
 }
@@ -305,7 +399,7 @@ ASM_FUNCTION(mode_proc_call__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/mode_init_wait__13daObjIceBlk_cFv.s"
 }
@@ -316,7 +410,7 @@ ASM_FUNCTION(mode_init_wait__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_wait__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::mode_proc_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/mode_proc_wait__13daObjIceBlk_cFv.s"
 }
@@ -327,7 +421,7 @@ ASM_FUNCTION(mode_proc_wait__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_walk__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::mode_init_walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/mode_init_walk__13daObjIceBlk_cFv.s"
 }
@@ -338,7 +432,7 @@ ASM_FUNCTION(mode_init_walk__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_walk__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::mode_proc_walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/mode_proc_walk__13daObjIceBlk_cFv.s"
 }
@@ -349,7 +443,7 @@ ASM_FUNCTION(mode_proc_walk__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/setEffect__13daObjIceBlk_cFv.s"
 }
@@ -360,7 +454,7 @@ ASM_FUNCTION(setEffect__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWallPre__13daObjIceBlk_cFs) {
+extern "C" asm void checkWallPre__13daObjIceBlk_cFs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/checkWallPre__13daObjIceBlk_cFs.s"
 }
@@ -371,7 +465,7 @@ ASM_FUNCTION(checkWallPre__13daObjIceBlk_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBgHit__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::checkBgHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/checkBgHit__13daObjIceBlk_cFv.s"
 }
@@ -382,7 +476,7 @@ ASM_FUNCTION(checkBgHit__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/bgCheck__13daObjIceBlk_cFv.s"
 }
@@ -393,7 +487,7 @@ ASM_FUNCTION(bgCheck__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_bgCheck__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::init_bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/init_bgCheck__13daObjIceBlk_cFv.s"
 }
@@ -404,7 +498,7 @@ ASM_FUNCTION(init_bgCheck__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFall__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::checkFall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/checkFall__13daObjIceBlk_cFv.s"
 }
@@ -415,7 +509,7 @@ ASM_FUNCTION(checkFall__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__8cM3dGPlaFv.s"
 }
@@ -426,7 +520,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/event_proc_call__13daObjIceBlk_cFv.s"
 }
@@ -437,7 +531,7 @@ ASM_FUNCTION(event_proc_call__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/actionWait__13daObjIceBlk_cFv.s"
 }
@@ -448,7 +542,7 @@ ASM_FUNCTION(actionWait__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/actionOrderEvent__13daObjIceBlk_cFv.s"
 }
@@ -459,7 +553,7 @@ ASM_FUNCTION(actionOrderEvent__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/actionEvent__13daObjIceBlk_cFv.s"
 }
@@ -467,21 +561,16 @@ ASM_FUNCTION(actionEvent__13daObjIceBlk_cFv) {
 
 
 /* 80C23CA0-80C23CA4 0004+00 .text      actionDead__13daObjIceBlk_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__13daObjIceBlk_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/actionDead__13daObjIceBlk_cFv.s"
+void daObjIceBlk_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C23CA4-80C23DA8 0104+00 .text      Draw__13daObjIceBlk_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/Draw__13daObjIceBlk_cFv.s"
 }
@@ -492,7 +581,7 @@ ASM_FUNCTION(Draw__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjIceBlk_cFv) {
+asm void daObjIceBlk_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/Delete__13daObjIceBlk_cFv.s"
 }
@@ -503,7 +592,7 @@ ASM_FUNCTION(Delete__13daObjIceBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceBlk_create1st__FP13daObjIceBlk_c) {
+asm void daObjIceBlk_create1st(daObjIceBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/daObjIceBlk_create1st__FP13daObjIceBlk_c.s"
 }
@@ -514,7 +603,7 @@ ASM_FUNCTION(daObjIceBlk_create1st__FP13daObjIceBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -525,7 +614,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__8cM3dGCylFv.s"
 }
@@ -536,7 +625,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__8cM3dGAabFv.s"
 }
@@ -547,7 +636,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__10dCcD_GSttsFv.s"
 }
@@ -558,7 +647,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__12dBgS_AcchCirFv.s"
 }
@@ -569,7 +658,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -580,7 +669,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceBlk_MoveBGDelete__FP13daObjIceBlk_c) {
+asm void daObjIceBlk_MoveBGDelete(daObjIceBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/daObjIceBlk_MoveBGDelete__FP13daObjIceBlk_c.s"
 }
@@ -591,7 +680,7 @@ ASM_FUNCTION(daObjIceBlk_MoveBGDelete__FP13daObjIceBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceBlk_MoveBGExecute__FP13daObjIceBlk_c) {
+asm void daObjIceBlk_MoveBGExecute(daObjIceBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/daObjIceBlk_MoveBGExecute__FP13daObjIceBlk_c.s"
 }
@@ -602,7 +691,7 @@ ASM_FUNCTION(daObjIceBlk_MoveBGExecute__FP13daObjIceBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceBlk_MoveBGDraw__FP13daObjIceBlk_c) {
+asm void daObjIceBlk_MoveBGDraw(daObjIceBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/daObjIceBlk_MoveBGDraw__FP13daObjIceBlk_c.s"
 }
@@ -613,7 +702,7 @@ ASM_FUNCTION(daObjIceBlk_MoveBGDraw__FP13daObjIceBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/__dt__10cCcD_GSttsFv.s"
 }
@@ -624,7 +713,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C242C4) {
+extern "C" asm void func_80C242C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C242C4.s"
 }
@@ -635,7 +724,7 @@ ASM_FUNCTION(func_80C242C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C242CC) {
+extern "C" asm void func_80C242CC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C242CC.s"
 }
@@ -646,7 +735,7 @@ ASM_FUNCTION(func_80C242CC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C242D4) {
+extern "C" asm void func_80C242D4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C242D4.s"
 }
@@ -657,7 +746,7 @@ ASM_FUNCTION(func_80C242D4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C242DC) {
+extern "C" asm void func_80C242DC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C242DC.s"
 }
@@ -668,7 +757,7 @@ ASM_FUNCTION(func_80C242DC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C242E4) {
+extern "C" asm void func_80C242E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/func_80C242E4.s"
 }

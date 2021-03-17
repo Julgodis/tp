@@ -6,28 +6,260 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build daItemBase_c (daItemBase_c) False/False
+/* top-level dependencies (begin daItemBase_c) */
+/* top-level dependencies (end daItemBase_c) */
+struct daItemBase_c {
+	/* 80144724 */ void DeleteBase(char const*);
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
+	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
+	/* 80144B94 */ void DrawBase();
+	/* 80144C30 */ void RotateYBase();
+	/* 80144C7C */ void setListStart();
+	/* 80144CA0 */ void setListEnd();
+	/* 80144CC4 */ void settingBeforeDraw();
+	/* 80144D18 */ void setTevStr();
+	/* 80144D70 */ void setShadow();
+	/* 80144EDC */ void animEntry();
+	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
+	/* 80145144 */ void chkFlag(s32);
+	/* 80145164 */ void getTevFrm();
+	/* 80145180 */ void getBtpFrm();
+	/* 8014519C */ void getShadowSize();
+	/* 801451B4 */ void getCollisionH();
+	/* 801451D0 */ void getCollisionR();
+	/* 8015B0B8 */ void getData();
+};
+
+// build mDoExt_baseAnm (mDoExt_baseAnm) False/False
+/* top-level dependencies (begin mDoExt_baseAnm) */
+/* top-level dependencies (end mDoExt_baseAnm) */
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+// build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
+// build J3DAnmColor (J3DAnmColor) False/False
+/* top-level dependencies (begin J3DAnmColor) */
+/* top-level dependencies (end J3DAnmColor) */
+struct J3DAnmColor {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+/* top-level dependencies (begin mDoExt_bpkAnm) */
+// outer dependency: J3DAnmColor
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_bpkAnm) */
+struct mDoExt_bpkAnm {
+	// J3DAnmColor
+	// J3DMaterialTable
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, s32, s32, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+// build J3DAnmColor (J3DAnmColor) True/True
+// build mDoExt_btpAnm (mDoExt_btpAnm) False/False
+// build J3DMaterialTable (J3DMaterialTable) True/True
+// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
+/* top-level dependencies (begin J3DAnmTexPattern) */
+/* top-level dependencies (end J3DAnmTexPattern) */
+struct J3DAnmTexPattern {
+};
+
+/* top-level dependencies (begin mDoExt_btpAnm) */
+// outer dependency: J3DMaterialTable
+// outer dependency: J3DAnmTexPattern
+/* top-level dependencies (end mDoExt_btpAnm) */
+struct mDoExt_btpAnm {
+	// J3DMaterialTable
+	// J3DAnmTexPattern
+	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, s32, s32, f32, s16, s16);
+	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
+};
+
+// build J3DAnmTexPattern (J3DAnmTexPattern) True/True
+// build mDoExt_btkAnm (mDoExt_btkAnm) False/False
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+/* top-level dependencies (begin mDoExt_btkAnm) */
+// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_btkAnm) */
+struct mDoExt_btkAnm {
+	// J3DAnmTextureSRTKey
+	// J3DMaterialTable
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
+// build mDoExt_brkAnm (mDoExt_brkAnm) False/False
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+/* top-level dependencies (begin mDoExt_brkAnm) */
+// outer dependency: J3DAnmTevRegKey
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_brkAnm) */
+struct mDoExt_brkAnm {
+	// J3DAnmTevRegKey
+	// J3DMaterialTable
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
+// build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+/* top-level dependencies (begin mDoExt_bckAnm) */
+// outer dependency: J3DAnmTransform
+// outer dependency: J3DModelData
+/* top-level dependencies (end mDoExt_bckAnm) */
+struct mDoExt_bckAnm {
+	// J3DAnmTransform
+	// J3DModelData
+	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+// build J3DAnmTransform (J3DAnmTransform) True/True
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build request_of_phase_process_class (request_of_phase_process_class) False/False
+/* top-level dependencies (begin request_of_phase_process_class) */
+/* top-level dependencies (end request_of_phase_process_class) */
+struct request_of_phase_process_class {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
+// build _GXTexObj (_GXTexObj) False/False
+/* top-level dependencies (begin _GXTexObj) */
+/* top-level dependencies (end _GXTexObj) */
+struct _GXTexObj {
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
+// build J3DModelData (J3DModelData) True/True
+// build cXyz (cXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dScnKy_env_light_c) */
+// outer dependency: J3DModelData
+// outer dependency: cXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dScnKy_env_light_c) */
+struct dScnKy_env_light_c {
+	// J3DModelData
+	// cXyz
+	// dKy_tevstr_c
+	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+// build J3DFrameCtrl (J3DFrameCtrl) False/False
+/* top-level dependencies (begin J3DFrameCtrl) */
+/* top-level dependencies (end J3DFrameCtrl) */
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void DeleteBase__12daItemBase_cFPCc();
-extern "C" extern void clothCreate__12daItemBase_cFv();
-extern "C" extern void __CreateHeap__12daItemBase_cFv();
-extern "C" extern void CreateItemHeap__12daItemBase_cFPCcsssssss();
-extern "C" extern void DrawBase__12daItemBase_cFv();
-extern "C" extern void RotateYBase__12daItemBase_cFv();
-extern "C" extern void setListStart__12daItemBase_cFv();
-extern "C" extern void setListEnd__12daItemBase_cFv();
-extern "C" extern void settingBeforeDraw__12daItemBase_cFv();
-extern "C" extern void setTevStr__12daItemBase_cFv();
-extern "C" extern void setShadow__12daItemBase_cFv();
-extern "C" extern void animEntry__12daItemBase_cFv();
-extern "C" extern void animPlay__12daItemBase_cFffffff();
-extern "C" extern void chkFlag__12daItemBase_cFi();
-extern "C" extern void getTevFrm__12daItemBase_cFv();
-extern "C" extern void getBtpFrm__12daItemBase_cFv();
-extern "C" extern void getShadowSize__12daItemBase_cFv();
-extern "C" extern void getCollisionH__12daItemBase_cFv();
-extern "C" extern void getCollisionR__12daItemBase_cFv();
+
+extern "C" void DeleteBase__12daItemBase_cFPCc();
+extern "C" bool clothCreate__12daItemBase_cFv();
+extern "C" bool __CreateHeap__12daItemBase_cFv();
+extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss();
+extern "C" void DrawBase__12daItemBase_cFv();
+extern "C" void RotateYBase__12daItemBase_cFv();
+extern "C" void setListStart__12daItemBase_cFv();
+extern "C" void setListEnd__12daItemBase_cFv();
+extern "C" void settingBeforeDraw__12daItemBase_cFv();
+extern "C" void setTevStr__12daItemBase_cFv();
+extern "C" void setShadow__12daItemBase_cFv();
+extern "C" void animEntry__12daItemBase_cFv();
+extern "C" void animPlay__12daItemBase_cFffffff();
+extern "C" void chkFlag__12daItemBase_cFi();
+extern "C" void getTevFrm__12daItemBase_cFv();
+extern "C" void getBtpFrm__12daItemBase_cFv();
+extern "C" void getShadowSize__12daItemBase_cFv();
+extern "C" void getCollisionH__12daItemBase_cFv();
+extern "C" void getCollisionR__12daItemBase_cFv();
 SECTION_DATA extern void*const __vt__12daItemBase_c[18];
 SECTION_SDATA2 extern f32 d_a_d_a_itembase__lit_3881;
 SECTION_SDATA2 extern u8 lit_3952[4];
@@ -39,33 +271,45 @@ SECTION_SDATA2 extern f64 d_a_d_a_itembase__lit_4041;
 // External References:
 // 
 
-extern "C" extern void play__14mDoExt_baseAnmFv();
-extern "C" extern void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
-extern "C" extern void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
-extern "C" extern void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
-extern "C" extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern "C" extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" extern void fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData();
-extern "C" extern void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" extern void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
-extern "C" extern void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void getData__12daItemBase_cFv();
-extern "C" extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" extern void __nw__FUl();
-extern "C" extern void init__12J3DFrameCtrlFs();
-extern "C" extern void _savefpr_27();
-extern "C" extern void _restfpr_27();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _restgpr_21();
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
+void dComIfGd_setShadow(u32, char, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void* operator new(u32);
+extern "C" void _savefpr_27();
+extern "C" void _restfpr_27();
+extern "C" void _savegpr_21();
+extern "C" void _restgpr_21();
+
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
+extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getData__12daItemBase_cFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void* __nw__FUl();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void _savefpr_27();
+extern "C" void _restfpr_27();
+extern "C" void _savegpr_21();
+extern "C" void _restgpr_21();
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_DATA extern u8 item_info__10dItem_data[1020 + 4 /* padding */];
@@ -78,114 +322,104 @@ SECTION_BSS extern u8 j3dSys[284];
 // Declarations:
 // 
 
-/* 80144724-8014474C 0028+00 .text      DeleteBase__12daItemBase_cFPCc                               */
+/* 80144724-8014474C 0028+00 rc=1 efc=1 .text      DeleteBase__12daItemBase_cFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DeleteBase__12daItemBase_cFPCc) {
+asm void daItemBase_c::DeleteBase(char const* field_0) {
 	nofralloc
 #include "asm/d/a/d_a_itembase/DeleteBase__12daItemBase_cFPCc.s"
 }
 #pragma pop
 
 
-/* 8014474C-80144754 0008+00 .text      clothCreate__12daItemBase_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(clothCreate__12daItemBase_cFv) {
-	nofralloc
-#include "asm/d/a/d_a_itembase/clothCreate__12daItemBase_cFv.s"
+/* 8014474C-80144754 0008+00 rc=2 efc=1 .text      clothCreate__12daItemBase_cFv                                */
+bool daItemBase_c::clothCreate() {
+	return true;
 }
-#pragma pop
 
 
-/* 80144754-8014475C 0008+00 .text      __CreateHeap__12daItemBase_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__12daItemBase_cFv) {
-	nofralloc
-#include "asm/d/a/d_a_itembase/__CreateHeap__12daItemBase_cFv.s"
+/* 80144754-8014475C 0008+00 rc=2 efc=1 .text      __CreateHeap__12daItemBase_cFv                               */
+bool daItemBase_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 804533A8-804533AC 0004+00 .sdata2    @3881                                                        */
+/* 804533A8-804533AC 0004+00 rc=2 efc=0 .sdata2    @3881                                                        */
 f32 d_a_d_a_itembase__lit_3881 = 1.0f;
 
-/* 8014475C-80144B94 0438+00 .text      CreateItemHeap__12daItemBase_cFPCcsssssss                    */
+/* 8014475C-80144B94 0438+00 rc=3 efc=3 .text      CreateItemHeap__12daItemBase_cFPCcsssssss                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateItemHeap__12daItemBase_cFPCcsssssss) {
+asm void daItemBase_c::CreateItemHeap(char const* field_0, s16 field_1, s16 field_2, s16 field_3, s16 field_4, s16 field_5, s16 field_6, s16 field_7) {
 	nofralloc
 #include "asm/d/a/d_a_itembase/CreateItemHeap__12daItemBase_cFPCcsssssss.s"
 }
 #pragma pop
 
 
-/* 80144B94-80144C30 009C+00 .text      DrawBase__12daItemBase_cFv                                   */
+/* 80144B94-80144C30 009C+00 rc=2 efc=1 .text      DrawBase__12daItemBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DrawBase__12daItemBase_cFv) {
+asm void daItemBase_c::DrawBase() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/DrawBase__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80144C30-80144C7C 004C+00 .text      RotateYBase__12daItemBase_cFv                                */
+/* 80144C30-80144C7C 004C+00 rc=2 efc=1 .text      RotateYBase__12daItemBase_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(RotateYBase__12daItemBase_cFv) {
+asm void daItemBase_c::RotateYBase() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/RotateYBase__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80144C7C-80144CA0 0024+00 .text      setListStart__12daItemBase_cFv                               */
+/* 80144C7C-80144CA0 0024+00 rc=2 efc=1 .text      setListStart__12daItemBase_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setListStart__12daItemBase_cFv) {
+asm void daItemBase_c::setListStart() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/setListStart__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80144CA0-80144CC4 0024+00 .text      setListEnd__12daItemBase_cFv                                 */
+/* 80144CA0-80144CC4 0024+00 rc=1 efc=0 .text      setListEnd__12daItemBase_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setListEnd__12daItemBase_cFv) {
+asm void daItemBase_c::setListEnd() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/setListEnd__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80144CC4-80144D18 0054+00 .text      settingBeforeDraw__12daItemBase_cFv                          */
+/* 80144CC4-80144D18 0054+00 rc=2 efc=1 .text      settingBeforeDraw__12daItemBase_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(settingBeforeDraw__12daItemBase_cFv) {
+asm void daItemBase_c::settingBeforeDraw() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/settingBeforeDraw__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80144D18-80144D70 0058+00 .text      setTevStr__12daItemBase_cFv                                  */
+/* 80144D18-80144D70 0058+00 rc=1 efc=0 .text      setTevStr__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevStr__12daItemBase_cFv) {
+asm void daItemBase_c::setTevStr() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/setTevStr__12daItemBase_cFv.s"
 }
@@ -193,23 +427,23 @@ ASM_FUNCTION(setTevStr__12daItemBase_cFv) {
 
 
 /* ############################################################################################## */
-/* 804533AC-804533B0 0004+00 .sdata2    @3952                                                        */
+/* 804533AC-804533B0 0004+00 rc=1 efc=0 .sdata2    @3952                                                        */
 u8 lit_3952[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804533B0-804533B8 0004+04 .sdata2    @3953                                                        */
+/* 804533B0-804533B8 0004+04 rc=1 efc=0 .sdata2    @3953                                                        */
 f32 d_a_d_a_itembase__lit_3953 = 150.0f;
 /* padding 4 bytes */
 
-/* 804533B8-804533C0 0008+00 .sdata2    @3955                                                        */
+/* 804533B8-804533C0 0008+00 rc=1 efc=0 .sdata2    @3955                                                        */
 f64 lit_3955 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80144D70-80144EDC 016C+00 .text      setShadow__12daItemBase_cFv                                  */
+/* 80144D70-80144EDC 016C+00 rc=2 efc=1 .text      setShadow__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShadow__12daItemBase_cFv) {
+asm void daItemBase_c::setShadow() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/setShadow__12daItemBase_cFv.s"
 }
@@ -217,91 +451,91 @@ ASM_FUNCTION(setShadow__12daItemBase_cFv) {
 
 
 /* ############################################################################################## */
-/* 804533C0-804533C8 0008+00 .sdata2    @4041                                                        */
+/* 804533C0-804533C8 0008+00 rc=1 efc=0 .sdata2    @4041                                                        */
 f64 d_a_d_a_itembase__lit_4041 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80144EDC-8014503C 0160+00 .text      animEntry__12daItemBase_cFv                                  */
+/* 80144EDC-8014503C 0160+00 rc=2 efc=1 .text      animEntry__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animEntry__12daItemBase_cFv) {
+asm void daItemBase_c::animEntry() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/animEntry__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8014503C-80145144 0108+00 .text      animPlay__12daItemBase_cFffffff                              */
+/* 8014503C-80145144 0108+00 rc=2 efc=2 .text      animPlay__12daItemBase_cFffffff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animPlay__12daItemBase_cFffffff) {
+asm void daItemBase_c::animPlay(f32 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/d/a/d_a_itembase/animPlay__12daItemBase_cFffffff.s"
 }
 #pragma pop
 
 
-/* 80145144-80145164 0020+00 .text      chkFlag__12daItemBase_cFi                                    */
+/* 80145144-80145164 0020+00 rc=2 efc=1 .text      chkFlag__12daItemBase_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFlag__12daItemBase_cFi) {
+asm void daItemBase_c::chkFlag(s32 field_0) {
 	nofralloc
 #include "asm/d/a/d_a_itembase/chkFlag__12daItemBase_cFi.s"
 }
 #pragma pop
 
 
-/* 80145164-80145180 001C+00 .text      getTevFrm__12daItemBase_cFv                                  */
+/* 80145164-80145180 001C+00 rc=2 efc=1 .text      getTevFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTevFrm__12daItemBase_cFv) {
+asm void daItemBase_c::getTevFrm() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/getTevFrm__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80145180-8014519C 001C+00 .text      getBtpFrm__12daItemBase_cFv                                  */
+/* 80145180-8014519C 001C+00 rc=2 efc=1 .text      getBtpFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBtpFrm__12daItemBase_cFv) {
+asm void daItemBase_c::getBtpFrm() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/getBtpFrm__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8014519C-801451B4 0018+00 .text      getShadowSize__12daItemBase_cFv                              */
+/* 8014519C-801451B4 0018+00 rc=2 efc=1 .text      getShadowSize__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShadowSize__12daItemBase_cFv) {
+asm void daItemBase_c::getShadowSize() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/getShadowSize__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 801451B4-801451D0 001C+00 .text      getCollisionH__12daItemBase_cFv                              */
+/* 801451B4-801451D0 001C+00 rc=2 efc=1 .text      getCollisionH__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCollisionH__12daItemBase_cFv) {
+asm void daItemBase_c::getCollisionH() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/getCollisionH__12daItemBase_cFv.s"
 }
 #pragma pop
 
 
-/* 801451D0-801451EC 001C+00 .text      getCollisionR__12daItemBase_cFv                              */
+/* 801451D0-801451EC 001C+00 rc=2 efc=1 .text      getCollisionR__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCollisionR__12daItemBase_cFv) {
+asm void daItemBase_c::getCollisionR() {
 	nofralloc
 #include "asm/d/a/d_a_itembase/getCollisionR__12daItemBase_cFv.s"
 }
@@ -309,7 +543,7 @@ ASM_FUNCTION(getCollisionR__12daItemBase_cFv) {
 
 
 /* ############################################################################################## */
-/* 803B3610-803B3658 0044+04 .data      __vt__12daItemBase_c                                         */
+/* 803B3610-803B3658 0044+04 rc=1 efc=1 .data      __vt__12daItemBase_c                                         */
 void* const __vt__12daItemBase_c[18] = {
 	NULL, /* RTTI */
 	NULL,

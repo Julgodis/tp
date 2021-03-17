@@ -6,82 +6,501 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DPictureEx (J2DPictureEx) False/False
+// build J2DPictureEx (J2DPictureEx) True/False
+struct J2DPictureEx;
+// build ResTLUT (ResTLUT) False/False
+/* top-level dependencies (begin ResTLUT) */
+/* top-level dependencies (end ResTLUT) */
+struct ResTLUT {
+};
+
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
+};
+
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build JSURandomInputStream (JSURandomInputStream) False/False
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
+/* top-level dependencies (begin JSUStreamSeekFrom) */
+/* top-level dependencies (end JSUStreamSeekFrom) */
+struct JSUStreamSeekFrom {
+};
+
+/* top-level dependencies (begin JSURandomInputStream) */
+// outer dependency: JSUStreamSeekFrom
+/* top-level dependencies (end JSURandomInputStream) */
+struct JSURandomInputStream {
+	// JSUStreamSeekFrom
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
+/* top-level dependencies (begin J2DAnmVisibilityFull) */
+/* top-level dependencies (end J2DAnmVisibilityFull) */
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, char*) const;
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+};
+
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+// build J2DMaterial (J2DMaterial) False/False
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
+};
+
+/* top-level dependencies (begin J2DMaterial) */
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: J2DAnmColor
+// outer dependency: J2DAnmTexPattern
+/* top-level dependencies (end J2DMaterial) */
+struct J2DMaterial {
+	// J2DAnmTextureSRTKey
+	// J2DAnmTevRegKey
+	// J2DAnmColor
+	// J2DAnmTexPattern
+	/* 802EA38C */ void setGX();
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build J2DPane (J2DPane) False/False
+// build _GXCullMode (_GXCullMode) True/True
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build JSURandomInputStream (JSURandomInputStream) True/True
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+// build J2DAnmBase (J2DAnmBase) False/False
+/* top-level dependencies (begin J2DAnmBase) */
+/* top-level dependencies (end J2DAnmBase) */
+struct J2DAnmBase {
+};
+
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
+// build J2DAnmTransform (J2DAnmTransform) True/True
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: _GXCullMode
+// outer dependency: J2DAnmVtxColor
+// outer dependency: JSURandomInputStream
+// outer dependency: ResTIMG
+// outer dependency: ResFONT
+// outer dependency: J2DAnmBase
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: J2DAnmTransform
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// _GXCullMode
+	// J2DAnmVtxColor
+	// JSURandomInputStream
+	// ResTIMG
+	// ResFONT
+	// J2DAnmBase
+	// J2DAnmVisibilityFull
+	// J2DAnmTransform
+	/* 80053BC0 */ void calcMtx();
+	/* 80053C00 */ void makeMatrix(f32, f32);
+	/* 802F6F60 */ void move(f32, f32);
+	/* 802F6FB4 */ void add(f32, f32);
+	/* 802F6FF8 */ void resize(f32, f32);
+	/* 802F72E0 */ void search(u64);
+	/* 802F7388 */ void searchUserInfo(u64);
+	/* 802F7430 */ void isUsed(ResTIMG const*);
+	/* 802F74B8 */ void isUsed(ResFONT const*);
+	/* 802F7540 */ void makeMatrix(f32, f32, f32, f32);
+	/* 802F7680 */ void setCullBack(_GXCullMode);
+	/* 802F7B18 */ void makePaneExStream(J2DPane*, JSURandomInputStream*);
+	/* 802F7EF4 */ void setAnimation(J2DAnmBase*);
+	/* 802F8004 */ void clearAnmTransform();
+	/* 802F8080 */ void animationTransform(J2DAnmTransform const*);
+	/* 802F8118 */ void setVisibileAnimation(J2DAnmVisibilityFull*);
+	/* 802F81A0 */ void setVtxColorAnimation(J2DAnmVtxColor*);
+	/* 802F8228 */ void animationPane(J2DAnmTransform const*);
+	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
+	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
+	/* 802F8464 */ void setConnectParent(bool);
+	/* 802F8474 */ void update();
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build ResFONT (ResFONT) True/True
+// build J2DAnmBase (J2DAnmBase) True/True
+// build JUTPalette (JUTPalette) False/False
+/* top-level dependencies (begin JUTPalette) */
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+};
+
+// build JUTTexture (JUTTexture) False/False
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build JUTPalette (JUTPalette) True/True
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: _GXTlut
+// outer dependency: ResTIMG
+// outer dependency: JUTPalette
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// _GXTlut
+	// ResTIMG
+	// JUTPalette
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+};
+
+// build J2DTevStage (J2DTevStage) False/False
+/* top-level dependencies (begin J2DTevStage) */
+/* top-level dependencies (end J2DTevStage) */
+struct J2DTevStage {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+/* top-level dependencies (begin J2DPictureEx) */
+// outer dependency: J2DPictureEx::stage_enum
+// outer dependency: ResTLUT
+// outer dependency: _GXCullMode
+// outer dependency: J2DAnmVtxColor
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmTransform
+// outer dependency: _GXTexMapID
+// outer dependency: JUtility::TColor
+// outer dependency: J2DMaterial
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: J2DAnmColor
+// outer dependency: J2DPane
+// outer dependency: ResTIMG
+// outer dependency: ResFONT
+// outer dependency: J2DAnmBase
+// outer dependency: JUTPalette
+// outer dependency: JUTTexture
+// outer dependency: J2DTevStage
+// outer dependency: J2DAnmTexPattern
+/* top-level dependencies (end J2DPictureEx) */
+struct J2DPictureEx {
+	// J2DPictureEx::stage_enum
+	// ResTLUT
+	// J2DAnmVtxColor
+	// JSURandomInputStream
+	// J2DAnmVisibilityFull
+	// J2DAnmTextureSRTKey
+	// JUtility::TColor
+	// J2DAnmTevRegKey
+	// ResTIMG
+	// ResFONT
+	// JUTPalette
+	// JUTTexture
+	// _GXCullMode
+	// J2DAnmTransform
+	// _GXTexMapID
+	// J2DMaterial
+	// J2DAnmColor
+	// J2DPane
+	// J2DAnmBase
+	// J2DTevStage
+	// J2DAnmTexPattern
+	// build stage_enum (J2DPictureEx::stage_enum) False/False
+	/* dependencies (begin J2DPictureEx::stage_enum) */
+	/* dependencies (end J2DPictureEx::stage_enum) */
+	struct stage_enum {
+	};
+
+	/* 80256034 */ void getMaterial() const;
+	/* 80256064 */ void setAnimation(J2DAnmTransform*);
+	/* 80303640 */ void initiate(ResTIMG const*, ResTLUT const*);
+	/* 803036EC */ J2DPictureEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
+	/* 8030393C */ ~J2DPictureEx();
+	/* 803039CC */ void prepareTexture(char);
+	/* 80303E5C */ void append(ResTIMG const*, JUTPalette*, f32);
+	/* 80303EA4 */ void append(char const*, JUTPalette*, f32);
+	/* 80303EEC */ void append(JUTTexture*, f32);
+	/* 80303F34 */ void insert(ResTIMG const*, JUTPalette*, char, f32);
+	/* 80303FD8 */ void insert(char const*, JUTPalette*, char, f32);
+	/* 80304048 */ void insert(JUTTexture*, char, f32);
+	/* 803040E4 */ void insertCommon(char, f32);
+	/* 8030437C */ void isInsert(char) const;
+	/* 8030446C */ void remove(char);
+	/* 80304608 */ void remove();
+	/* 8030466C */ void remove(JUTTexture*);
+	/* 80304728 */ void isRemove(char) const;
+	/* 8030477C */ void draw(f32, f32, char, bool, bool, bool);
+	/* 80304890 */ void draw(f32, f32, f32, f32, bool, bool, bool);
+	/* 80304D88 */ void drawOut(f32, f32, f32, f32, f32, f32);
+	/* 80305264 */ void load(_GXTexMapID, char);
+	/* 803052AC */ void setTevOrder(char, char, bool);
+	/* 803053E0 */ void setTevStage(char, char, bool);
+	/* 80305688 */ void setStage(J2DTevStage*, J2DPictureEx::stage_enum);
+	/* 80305928 */ void setTevKColor(char);
+	/* 80305C70 */ void setTevKColorSel(char);
+	/* 80305D18 */ void setTevKAlphaSel(char);
+	/* 80305DC0 */ void shiftSetBlendRatio(char, f32, bool, bool);
+	/* 80305ED4 */ void setBlendColorRatio(f32, f32);
+	/* 80305F34 */ void setBlendAlphaRatio(f32, f32);
+	/* 80305F94 */ void changeTexture(ResTIMG const*, char);
+	/* 803060DC */ void changeTexture(char const*, char);
+	/* 80306134 */ void changeTexture(ResTIMG const*, char, JUTPalette*);
+	/* 80306298 */ void changeTexture(char const*, char, JUTPalette*);
+	/* 803062F8 */ void getTexture(char) const;
+	/* 80306350 */ void getTextureCount() const;
+	/* 80306370 */ void setBlack(JUtility::TColor);
+	/* 803063F8 */ void setWhite(JUtility::TColor);
+	/* 80306480 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 80306664 */ void getBlackWhite(JUtility::TColor*, JUtility::TColor*) const;
+	/* 80306824 */ void isSetBlackWhite(JUtility::TColor, JUtility::TColor) const;
+	/* 803068F8 */ void getBlack() const;
+	/* 80306958 */ void getWhite() const;
+	/* 803069B8 */ void setAlpha(char);
+	/* 803069D8 */ void setCullBack(_GXCullMode);
+	/* 80306A0C */ void rewriteAlpha();
+	/* 80306A24 */ void isUsed(ResTIMG const*);
+	/* 80306AC4 */ void setAnimation(J2DAnmColor*);
+	/* 80306AF0 */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 80306B1C */ void setAnimation(J2DAnmTexPattern*);
+	/* 80306B48 */ void setAnimation(J2DAnmTevRegKey*);
+	/* 80306B74 */ void setAnimation(J2DAnmVisibilityFull*);
+	/* 80306B7C */ void setAnimation(J2DAnmVtxColor*);
+	/* 80306C70 */ void animationPane(J2DAnmTransform const*);
+	/* 80306DC8 */ void getUsableTlut(char);
+	/* 80306ED4 */ void append(ResTIMG const*, f32);
+	/* 80306F04 */ void append(char const*, f32);
+	/* 80306F34 */ void prepend(JUTTexture*, f32);
+	/* 80306F64 */ void prepend(char const*, JUTPalette*, f32);
+	/* 80306F94 */ void prepend(char const*, f32);
+	/* 80306FC4 */ void prepend(ResTIMG const*, JUTPalette*, f32);
+	/* 80306FF4 */ void prepend(ResTIMG const*, f32);
+	/* 80307024 */ void insert(char const*, char, f32);
+	/* 80307058 */ void insert(ResTIMG const*, char, f32);
+	/* 8030708C */ void draw(f32, f32, bool, bool, bool);
+	/* 803070D0 */ void drawOut(f32, f32, f32, f32, f32, f32, f32, f32);
+	/* 80307134 */ void load(char);
+	/* 80307168 */ void setCullBack(bool);
+	/* 803071A4 */ void isUsed(ResFONT const*);
+	/* 803071C4 */ void setAnimation(J2DAnmBase*);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DPane (J2DPane) True/True
+// build JSURandomInputStream (JSURandomInputStream) True/True
+// build J2DMaterial (J2DMaterial) True/True
+// build JUTPalette (JUTPalette) True/True
+// build JUTTexture (JUTTexture) True/True
+// build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevStage (J2DTevStage) True/True
+// build JUtility (JUtility) True/True
+// build _GXCullMode (_GXCullMode) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// build ResFONT (ResFONT) True/True
+// build J2DAnmBase (J2DAnmBase) True/True
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) True/True
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 800202CC */ void setBlendRatio(f32, f32);
+	/* 802FC050 */ J2DPicture();
+	/* 802FCFF0 */ ~J2DPicture();
+	/* 802FDB28 */ void drawSelf(f32, f32);
+	/* 802FF1D0 */ void getTlutID(ResTIMG const*, char);
+	/* 802FF2E8 */ s32 getTypeID() const;
+};
+
+// build JSUInputStream (JSUInputStream) False/False
+/* top-level dependencies (begin JSUInputStream) */
+/* top-level dependencies (end JSUInputStream) */
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// build _GXTlut (_GXTlut) True/True
+// build J2DTexGenBlock (J2DTexGenBlock) False/False
+// build J2DTexMtx (J2DTexMtx) False/False
+/* top-level dependencies (begin J2DTexMtx) */
+/* top-level dependencies (end J2DTexMtx) */
+struct J2DTexMtx {
+};
+
+/* top-level dependencies (begin J2DTexGenBlock) */
+// outer dependency: J2DTexMtx
+/* top-level dependencies (end J2DTexGenBlock) */
+struct J2DTexGenBlock {
+	// J2DTexMtx
+	/* 802EB6A4 */ void setTexMtx(u32, J2DTexMtx&);
+};
+
+// build J2DTexMtx (J2DTexMtx) True/True
+// build J2DScreen (J2DScreen) False/False
+/* top-level dependencies (begin J2DScreen) */
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	/* 802F9640 */ void getNameResource(char const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT();
-extern "C" extern void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
-extern "C" extern void __dt__12J2DPictureExFv();
-extern "C" extern void prepareTexture__12J2DPictureExFUc();
-extern "C" extern void drawSelf__12J2DPictureExFffPA3_A4_f();
-extern "C" extern void drawFullSet__12J2DPictureExFffffPA3_A4_f();
-extern "C" extern void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
-extern "C" extern void append__12J2DPictureExFPC7ResTIMGP10JUTPalettef();
-extern "C" extern void append__12J2DPictureExFPCcP10JUTPalettef();
-extern "C" extern void append__12J2DPictureExFP10JUTTexturef();
-extern "C" extern void insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf();
-extern "C" extern void insert__12J2DPictureExFPCcP10JUTPaletteUcf();
-extern "C" extern void insert__12J2DPictureExFP10JUTTextureUcf();
-extern "C" extern void insertCommon__12J2DPictureExFUcf();
-extern "C" extern void isInsert__12J2DPictureExCFUc();
-extern "C" extern void remove__12J2DPictureExFUc();
-extern "C" extern void remove__12J2DPictureExFv();
-extern "C" extern void remove__12J2DPictureExFP10JUTTexture();
-extern "C" extern void isRemove__12J2DPictureExCFUc();
-extern "C" extern void draw__12J2DPictureExFffUcbbb();
-extern "C" extern void draw__12J2DPictureExFffffbbb();
-extern "C" extern void drawOut__12J2DPictureExFffffff();
-extern "C" extern void func_80304EF0();
-extern "C" extern void load__12J2DPictureExF11_GXTexMapIDUc();
-extern "C" extern void setTevOrder__12J2DPictureExFUcUcb();
-extern "C" extern void setTevStage__12J2DPictureExFUcUcb();
-extern "C" extern void setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum();
-extern "C" extern void setTevKColor__12J2DPictureExFUc();
-extern "C" extern void setTevKColorSel__12J2DPictureExFUc();
-extern "C" extern void setTevKAlphaSel__12J2DPictureExFUc();
-extern "C" extern void shiftSetBlendRatio__12J2DPictureExFUcfbb();
-extern "C" extern void setBlendColorRatio__12J2DPictureExFff();
-extern "C" extern void setBlendAlphaRatio__12J2DPictureExFff();
-extern "C" extern void changeTexture__12J2DPictureExFPC7ResTIMGUc();
-extern "C" extern void changeTexture__12J2DPictureExFPCcUc();
-extern "C" extern void changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette();
-extern "C" extern void changeTexture__12J2DPictureExFPCcUcP10JUTPalette();
-extern "C" extern void getTexture__12J2DPictureExCFUc();
-extern "C" extern void getTextureCount__12J2DPictureExCFv();
-extern "C" extern void setBlack__12J2DPictureExFQ28JUtility6TColor();
-extern "C" extern void setWhite__12J2DPictureExFQ28JUtility6TColor();
-extern "C" extern void setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor();
-extern "C" extern void isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void getBlack__12J2DPictureExCFv();
-extern "C" extern void getWhite__12J2DPictureExCFv();
-extern "C" extern void setAlpha__12J2DPictureExFUc();
-extern "C" extern void setCullBack__12J2DPictureExF11_GXCullMode();
-extern "C" extern void rewriteAlpha__12J2DPictureExFv();
-extern "C" extern void isUsed__12J2DPictureExFPC7ResTIMG();
-extern "C" extern void setAnimation__12J2DPictureExFP11J2DAnmColor();
-extern "C" extern void setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey();
-extern "C" extern void setAnimation__12J2DPictureExFP16J2DAnmTexPattern();
-extern "C" extern void setAnimation__12J2DPictureExFP15J2DAnmTevRegKey();
-extern "C" extern void setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull();
-extern "C" extern void setAnimation__12J2DPictureExFP14J2DAnmVtxColor();
-extern "C" extern void animationPane__12J2DPictureExFPC15J2DAnmTransform();
-extern "C" extern void getUsableTlut__12J2DPictureExFUc();
-extern "C" extern void append__12J2DPictureExFPC7ResTIMGf();
-extern "C" extern void append__12J2DPictureExFPCcf();
-extern "C" extern void prepend__12J2DPictureExFP10JUTTexturef();
-extern "C" extern void prepend__12J2DPictureExFPCcP10JUTPalettef();
-extern "C" extern void prepend__12J2DPictureExFPCcf();
-extern "C" extern void prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef();
-extern "C" extern void prepend__12J2DPictureExFPC7ResTIMGf();
-extern "C" extern void insert__12J2DPictureExFPCcUcf();
-extern "C" extern void insert__12J2DPictureExFPC7ResTIMGUcf();
-extern "C" extern void draw__12J2DPictureExFffbbb();
-extern "C" extern void drawOut__12J2DPictureExFffffffff();
-extern "C" extern void load__12J2DPictureExFUc();
-extern "C" extern void setCullBack__12J2DPictureExFb();
-extern "C" extern void isUsed__12J2DPictureExFPC7ResFONT();
-extern "C" extern void setAnimation__12J2DPictureExFP10J2DAnmBase();
+extern "C" static void drawSelf__12J2DPictureExFffPA3_A4_f();
+extern "C" static void drawFullSet__12J2DPictureExFffffPA3_A4_f();
+extern "C" static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
+extern "C" static void func_80304EF0();
+
+extern "C" void initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT();
+extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+extern "C" void __dt__12J2DPictureExFv();
+extern "C" void prepareTexture__12J2DPictureExFUc();
+extern "C" static void drawSelf__12J2DPictureExFffPA3_A4_f();
+extern "C" static void drawFullSet__12J2DPictureExFffffPA3_A4_f();
+extern "C" static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
+extern "C" void append__12J2DPictureExFPC7ResTIMGP10JUTPalettef();
+extern "C" void append__12J2DPictureExFPCcP10JUTPalettef();
+extern "C" void append__12J2DPictureExFP10JUTTexturef();
+extern "C" void insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf();
+extern "C" void insert__12J2DPictureExFPCcP10JUTPaletteUcf();
+extern "C" void insert__12J2DPictureExFP10JUTTextureUcf();
+extern "C" void insertCommon__12J2DPictureExFUcf();
+extern "C" void isInsert__12J2DPictureExCFUc();
+extern "C" void remove__12J2DPictureExFUc();
+extern "C" void remove__12J2DPictureExFv();
+extern "C" void remove__12J2DPictureExFP10JUTTexture();
+extern "C" void isRemove__12J2DPictureExCFUc();
+extern "C" void draw__12J2DPictureExFffUcbbb();
+extern "C" void draw__12J2DPictureExFffffbbb();
+extern "C" void drawOut__12J2DPictureExFffffff();
+extern "C" static void func_80304EF0();
+extern "C" void load__12J2DPictureExF11_GXTexMapIDUc();
+extern "C" void setTevOrder__12J2DPictureExFUcUcb();
+extern "C" void setTevStage__12J2DPictureExFUcUcb();
+extern "C" void setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum();
+extern "C" void setTevKColor__12J2DPictureExFUc();
+extern "C" void setTevKColorSel__12J2DPictureExFUc();
+extern "C" void setTevKAlphaSel__12J2DPictureExFUc();
+extern "C" void shiftSetBlendRatio__12J2DPictureExFUcfbb();
+extern "C" void setBlendColorRatio__12J2DPictureExFff();
+extern "C" void setBlendAlphaRatio__12J2DPictureExFff();
+extern "C" void changeTexture__12J2DPictureExFPC7ResTIMGUc();
+extern "C" void changeTexture__12J2DPictureExFPCcUc();
+extern "C" void changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette();
+extern "C" void changeTexture__12J2DPictureExFPCcUcP10JUTPalette();
+extern "C" void getTexture__12J2DPictureExCFUc();
+extern "C" void getTextureCount__12J2DPictureExCFv();
+extern "C" void setBlack__12J2DPictureExFQ28JUtility6TColor();
+extern "C" void setWhite__12J2DPictureExFQ28JUtility6TColor();
+extern "C" void setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor();
+extern "C" void isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void getBlack__12J2DPictureExCFv();
+extern "C" void getWhite__12J2DPictureExCFv();
+extern "C" void setAlpha__12J2DPictureExFUc();
+extern "C" void setCullBack__12J2DPictureExF11_GXCullMode();
+extern "C" void rewriteAlpha__12J2DPictureExFv();
+extern "C" void isUsed__12J2DPictureExFPC7ResTIMG();
+extern "C" void setAnimation__12J2DPictureExFP11J2DAnmColor();
+extern "C" void setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__12J2DPictureExFP16J2DAnmTexPattern();
+extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTevRegKey();
+extern "C" void setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull();
+extern "C" void setAnimation__12J2DPictureExFP14J2DAnmVtxColor();
+extern "C" void animationPane__12J2DPictureExFPC15J2DAnmTransform();
+extern "C" void getUsableTlut__12J2DPictureExFUc();
+extern "C" void append__12J2DPictureExFPC7ResTIMGf();
+extern "C" void append__12J2DPictureExFPCcf();
+extern "C" void prepend__12J2DPictureExFP10JUTTexturef();
+extern "C" void prepend__12J2DPictureExFPCcP10JUTPalettef();
+extern "C" void prepend__12J2DPictureExFPCcf();
+extern "C" void prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef();
+extern "C" void prepend__12J2DPictureExFPC7ResTIMGf();
+extern "C" void insert__12J2DPictureExFPCcUcf();
+extern "C" void insert__12J2DPictureExFPC7ResTIMGUcf();
+extern "C" void draw__12J2DPictureExFffbbb();
+extern "C" void drawOut__12J2DPictureExFffffffff();
+extern "C" void load__12J2DPictureExFUc();
+extern "C" void setCullBack__12J2DPictureExFb();
+extern "C" void isUsed__12J2DPictureExFPC7ResFONT();
+extern "C" void setAnimation__12J2DPictureExFP10J2DAnmBase();
 SECTION_RODATA extern const u8 lit_2555[32];
 SECTION_RODATA extern const u8 lit_2556[32];
 SECTION_RODATA extern const u8 lit_2557[40];
@@ -95,81 +514,114 @@ SECTION_SDATA2 extern f32 lit_2690;
 // External References:
 // 
 
-extern "C" extern void setBlendRatio__10J2DPictureFff();
-extern "C" extern void calcMtx__7J2DPaneFv();
-extern "C" extern void makeMatrix__7J2DPaneFff();
-extern "C" extern void getMaterial__12J2DPictureExCFv();
-extern "C" extern void setAnimation__12J2DPictureExFP15J2DAnmTransform();
-extern "C" extern void __dl__FPv();
-extern "C" extern void read__14JSUInputStreamFPvl();
-extern "C" extern void peek__20JSURandomInputStreamFPvl();
-extern "C" extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
-extern "C" extern void setGX__11J2DMaterialFv();
-extern "C" extern void setAnimation__11J2DMaterialFP11J2DAnmColor();
-extern "C" extern void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
-extern "C" extern void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
-extern "C" extern void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
-extern "C" extern void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
-extern "C" extern void move__7J2DPaneFff();
-extern "C" extern void add__7J2DPaneFff();
-extern "C" extern void resize__7J2DPaneFff();
-extern "C" extern void search__7J2DPaneFUx();
-extern "C" extern void searchUserInfo__7J2DPaneFUx();
-extern "C" extern void isUsed__7J2DPaneFPC7ResTIMG();
-extern "C" extern void isUsed__7J2DPaneFPC7ResFONT();
-extern "C" extern void makeMatrix__7J2DPaneFffff();
-extern "C" extern void setCullBack__7J2DPaneF11_GXCullMode();
-extern "C" extern void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
-extern "C" extern void setAnimation__7J2DPaneFP10J2DAnmBase();
-extern "C" extern void clearAnmTransform__7J2DPaneFv();
-extern "C" extern void animationTransform__7J2DPaneFPC15J2DAnmTransform();
-extern "C" extern void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void animationPane__7J2DPaneFPC15J2DAnmTransform();
-extern "C" extern void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void setConnectParent__7J2DPaneFb();
-extern "C" extern void update__7J2DPaneFv();
-extern "C" extern void getNameResource__9J2DScreenFPCc();
-extern "C" extern void __ct__10J2DPictureFv();
-extern "C" extern void __dt__10J2DPictureFv();
-extern "C" extern void drawSelf__10J2DPictureFff();
-extern "C" extern void getTlutID__10J2DPictureFPC7ResTIMGUc();
-extern "C" extern void func_802FF204();
-extern "C" extern void getTypeID__10J2DPictureCFv();
-extern "C" extern void getVisibility__20J2DAnmVisibilityFullCFUsPUc();
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXBegin();
-extern "C" extern void GXSetChanMatColor();
-extern "C" extern void GXSetChanCtrl();
-extern "C" extern void GXSetNumIndStages();
-extern "C" extern void GXSetTevDirect();
-extern "C" extern void GXSetTevOp();
-extern "C" extern void GXSetTevSwapModeTable();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void func_802FF204();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void __construct_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void setBlendRatio__10J2DPictureFff();
+extern "C" void calcMtx__7J2DPaneFv();
+extern "C" void makeMatrix__7J2DPaneFff();
+extern "C" void getMaterial__12J2DPictureExCFv();
+extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTransform();
+extern "C" void __dl__FPv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void peek__20JSURandomInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
+extern "C" void setGX__11J2DMaterialFv();
+extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor();
+extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
+extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
+extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
+extern "C" void move__7J2DPaneFff();
+extern "C" void add__7J2DPaneFff();
+extern "C" void resize__7J2DPaneFff();
+extern "C" void search__7J2DPaneFUx();
+extern "C" void searchUserInfo__7J2DPaneFUx();
+extern "C" void isUsed__7J2DPaneFPC7ResTIMG();
+extern "C" void isUsed__7J2DPaneFPC7ResFONT();
+extern "C" void makeMatrix__7J2DPaneFffff();
+extern "C" void setCullBack__7J2DPaneF11_GXCullMode();
+extern "C" void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase();
+extern "C" void clearAnmTransform__7J2DPaneFv();
+extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setConnectParent__7J2DPaneFb();
+extern "C" void update__7J2DPaneFv();
+extern "C" void getNameResource__9J2DScreenFPCc();
+extern "C" void __ct__10J2DPictureFv();
+extern "C" void __dt__10J2DPictureFv();
+extern "C" void drawSelf__10J2DPictureFff();
+extern "C" void getTlutID__10J2DPictureFPC7ResTIMGUc();
+extern "C" void func_802FF204();
+extern "C" s32 getTypeID__10J2DPictureCFv();
+extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void __construct_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_RODATA extern const u8 j2dDefaultTexMtxInfo[36];
 
 // 
@@ -177,14 +629,14 @@ SECTION_RODATA extern const u8 j2dDefaultTexMtxInfo[36];
 // 
 
 /* ############################################################################################## */
-/* 804562C0-804562C4 0004+00 .sdata2    @1517                                                        */
+/* 804562C0-804562C4 0004+00 rc=7 efc=0 .sdata2    @1517                                                        */
 f32 J2DPictureEx__lit_1517 = 1.0f;
 
-/* 80303640-803036EC 00AC+00 .text      initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT                */
+/* 80303640-803036EC 00AC+00 rc=1 efc=0 .text      initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT) {
+asm void J2DPictureEx::initiate(ResTIMG const* field_0, ResTLUT const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT.s"
 }
@@ -192,7 +644,7 @@ ASM_FUNCTION(initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT) {
 
 
 /* ############################################################################################## */
-/* 803CD4B8-803CD608 014C+04 .data      __vt__12J2DPictureEx                                         */
+/* 803CD4B8-803CD608 014C+04 rc=2 efc=0 .data      __vt__12J2DPictureEx                                         */
 void* const __vt__12J2DPictureEx[84] = {
 	NULL, /* RTTI */
 	NULL,
@@ -281,55 +733,55 @@ void* const __vt__12J2DPictureEx[84] = {
 	NULL,
 };
 
-/* 803036EC-8030393C 0250+00 .text      __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+/* 803036EC-8030393C 0250+00 rc=1 efc=1 .text      __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial) {
+asm J2DPictureEx::J2DPictureEx(J2DPane* field_0, JSURandomInputStream* field_1, u32 field_2, J2DMaterial* field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/__ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial.s"
 }
 #pragma pop
 
 
-/* 8030393C-803039CC 0090+00 .text      __dt__12J2DPictureExFv                                       */
+/* 8030393C-803039CC 0090+00 rc=1 efc=0 .text      __dt__12J2DPictureExFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J2DPictureExFv) {
+asm J2DPictureEx::~J2DPictureEx() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/__dt__12J2DPictureExFv.s"
 }
 #pragma pop
 
 
-/* 803039CC-80303AB4 00E8+00 .text      prepareTexture__12J2DPictureExFUc                            */
+/* 803039CC-80303AB4 00E8+00 rc=1 efc=0 .text      prepareTexture__12J2DPictureExFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepareTexture__12J2DPictureExFUc) {
+asm void J2DPictureEx::prepareTexture(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepareTexture__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80303AB4-80303B80 00CC+00 .text      drawSelf__12J2DPictureExFffPA3_A4_f                          */
+/* 80303AB4-80303B80 00CC+00 rc=1 efc=0 .text      drawSelf__12J2DPictureExFffPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSelf__12J2DPictureExFffPA3_A4_f) {
+extern "C" asm static void drawSelf__12J2DPictureExFffPA3_A4_f() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawSelf__12J2DPictureExFffPA3_A4_f.s"
 }
 #pragma pop
 
 
-/* 80303B80-80303BDC 005C+00 .text      drawFullSet__12J2DPictureExFffffPA3_A4_f                     */
+/* 80303B80-80303BDC 005C+00 rc=1 efc=0 .text      drawFullSet__12J2DPictureExFffffPA3_A4_f                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFullSet__12J2DPictureExFffffPA3_A4_f) {
+extern "C" asm static void drawFullSet__12J2DPictureExFffffPA3_A4_f() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawFullSet__12J2DPictureExFffffPA3_A4_f.s"
 }
@@ -337,148 +789,148 @@ ASM_FUNCTION(drawFullSet__12J2DPictureExFffffPA3_A4_f) {
 
 
 /* ############################################################################################## */
-/* 804562C4-804562C8 0004+00 .sdata2    @1784                                                        */
+/* 804562C4-804562C8 0004+00 rc=5 efc=0 .sdata2    @1784                                                        */
 u8 lit_1784[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80303BDC-80303E5C 0280+00 .text      drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f            */
+/* 80303BDC-80303E5C 0280+00 rc=1 efc=0 .text      drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f) {
+extern "C" asm static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f.s"
 }
 #pragma pop
 
 
-/* 80303E5C-80303EA4 0048+00 .text      append__12J2DPictureExFPC7ResTIMGP10JUTPalettef              */
+/* 80303E5C-80303EA4 0048+00 rc=1 efc=0 .text      append__12J2DPictureExFPC7ResTIMGP10JUTPalettef              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__12J2DPictureExFPC7ResTIMGP10JUTPalettef) {
+asm void J2DPictureEx::append(ResTIMG const* field_0, JUTPalette* field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPC7ResTIMGP10JUTPalettef.s"
 }
 #pragma pop
 
 
-/* 80303EA4-80303EEC 0048+00 .text      append__12J2DPictureExFPCcP10JUTPalettef                     */
+/* 80303EA4-80303EEC 0048+00 rc=1 efc=0 .text      append__12J2DPictureExFPCcP10JUTPalettef                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__12J2DPictureExFPCcP10JUTPalettef) {
+asm void J2DPictureEx::append(char const* field_0, JUTPalette* field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPCcP10JUTPalettef.s"
 }
 #pragma pop
 
 
-/* 80303EEC-80303F34 0048+00 .text      append__12J2DPictureExFP10JUTTexturef                        */
+/* 80303EEC-80303F34 0048+00 rc=1 efc=0 .text      append__12J2DPictureExFP10JUTTexturef                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__12J2DPictureExFP10JUTTexturef) {
+asm void J2DPictureEx::append(JUTTexture* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFP10JUTTexturef.s"
 }
 #pragma pop
 
 
-/* 80303F34-80303FD8 00A4+00 .text      insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf            */
+/* 80303F34-80303FD8 00A4+00 rc=1 efc=0 .text      insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf) {
+asm void J2DPictureEx::insert(ResTIMG const* field_0, JUTPalette* field_1, char field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf.s"
 }
 #pragma pop
 
 
-/* 80303FD8-80304048 0070+00 .text      insert__12J2DPictureExFPCcP10JUTPaletteUcf                   */
+/* 80303FD8-80304048 0070+00 rc=1 efc=0 .text      insert__12J2DPictureExFPCcP10JUTPaletteUcf                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__12J2DPictureExFPCcP10JUTPaletteUcf) {
+asm void J2DPictureEx::insert(char const* field_0, JUTPalette* field_1, char field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPCcP10JUTPaletteUcf.s"
 }
 #pragma pop
 
 
-/* 80304048-803040E4 009C+00 .text      insert__12J2DPictureExFP10JUTTextureUcf                      */
+/* 80304048-803040E4 009C+00 rc=1 efc=0 .text      insert__12J2DPictureExFP10JUTTextureUcf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__12J2DPictureExFP10JUTTextureUcf) {
+asm void J2DPictureEx::insert(JUTTexture* field_0, char field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFP10JUTTextureUcf.s"
 }
 #pragma pop
 
 
-/* 803040E4-8030437C 0298+00 .text      insertCommon__12J2DPictureExFUcf                             */
+/* 803040E4-8030437C 0298+00 rc=2 efc=0 .text      insertCommon__12J2DPictureExFUcf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insertCommon__12J2DPictureExFUcf) {
+asm void J2DPictureEx::insertCommon(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insertCommon__12J2DPictureExFUcf.s"
 }
 #pragma pop
 
 
-/* 8030437C-8030446C 00F0+00 .text      isInsert__12J2DPictureExCFUc                                 */
+/* 8030437C-8030446C 00F0+00 rc=2 efc=0 .text      isInsert__12J2DPictureExCFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isInsert__12J2DPictureExCFUc) {
+asm void J2DPictureEx::isInsert(char field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isInsert__12J2DPictureExCFUc.s"
 }
 #pragma pop
 
 
-/* 8030446C-80304608 019C+00 .text      remove__12J2DPictureExFUc                                    */
+/* 8030446C-80304608 019C+00 rc=1 efc=0 .text      remove__12J2DPictureExFUc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__12J2DPictureExFUc) {
+asm void J2DPictureEx::remove(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80304608-8030466C 0064+00 .text      remove__12J2DPictureExFv                                     */
+/* 80304608-8030466C 0064+00 rc=1 efc=0 .text      remove__12J2DPictureExFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__12J2DPictureExFv) {
+asm void J2DPictureEx::remove() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFv.s"
 }
 #pragma pop
 
 
-/* 8030466C-80304728 00BC+00 .text      remove__12J2DPictureExFP10JUTTexture                         */
+/* 8030466C-80304728 00BC+00 rc=1 efc=0 .text      remove__12J2DPictureExFP10JUTTexture                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__12J2DPictureExFP10JUTTexture) {
+asm void J2DPictureEx::remove(JUTTexture* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFP10JUTTexture.s"
 }
 #pragma pop
 
 
-/* 80304728-8030477C 0054+00 .text      isRemove__12J2DPictureExCFUc                                 */
+/* 80304728-8030477C 0054+00 rc=1 efc=0 .text      isRemove__12J2DPictureExCFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isRemove__12J2DPictureExCFUc) {
+asm void J2DPictureEx::isRemove(char field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isRemove__12J2DPictureExCFUc.s"
 }
@@ -486,80 +938,80 @@ ASM_FUNCTION(isRemove__12J2DPictureExCFUc) {
 
 
 /* ############################################################################################## */
-/* 804562C8-804562D0 0008+00 .sdata2    @2130                                                        */
+/* 804562C8-804562D0 0008+00 rc=2 efc=0 .sdata2    @2130                                                        */
 f64 lit_2130 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8030477C-80304890 0114+00 .text      draw__12J2DPictureExFffUcbbb                                 */
+/* 8030477C-80304890 0114+00 rc=1 efc=0 .text      draw__12J2DPictureExFffUcbbb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12J2DPictureExFffUcbbb) {
+asm void J2DPictureEx::draw(f32 field_0, f32 field_1, char field_2, bool field_3, bool field_4, bool field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffUcbbb.s"
 }
 #pragma pop
 
 
-/* 80304890-80304D88 04F8+00 .text      draw__12J2DPictureExFffffbbb                                 */
+/* 80304890-80304D88 04F8+00 rc=1 efc=0 .text      draw__12J2DPictureExFffffbbb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12J2DPictureExFffffbbb) {
+asm void J2DPictureEx::draw(f32 field_0, f32 field_1, f32 field_2, f32 field_3, bool field_4, bool field_5, bool field_6) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffffbbb.s"
 }
 #pragma pop
 
 
-/* 80304D88-80304EF0 0168+00 .text      drawOut__12J2DPictureExFffffff                               */
+/* 80304D88-80304EF0 0168+00 rc=1 efc=0 .text      drawOut__12J2DPictureExFffffff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOut__12J2DPictureExFffffff) {
+asm void J2DPictureEx::drawOut(f32 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawOut__12J2DPictureExFffffff.s"
 }
 #pragma pop
 
 
-/* 80304EF0-80305264 0374+00 .text      drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 80304EF0-80305264 0374+00 rc=1 efc=0 .text      drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80304EF0) {
+extern "C" asm static void func_80304EF0() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/func_80304EF0.s"
 }
 #pragma pop
 
 
-/* 80305264-803052AC 0048+00 .text      load__12J2DPictureExF11_GXTexMapIDUc                         */
+/* 80305264-803052AC 0048+00 rc=1 efc=0 .text      load__12J2DPictureExF11_GXTexMapIDUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load__12J2DPictureExF11_GXTexMapIDUc) {
+asm void J2DPictureEx::load(_GXTexMapID field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/load__12J2DPictureExF11_GXTexMapIDUc.s"
 }
 #pragma pop
 
 
-/* 803052AC-803053E0 0134+00 .text      setTevOrder__12J2DPictureExFUcUcb                            */
+/* 803052AC-803053E0 0134+00 rc=3 efc=0 .text      setTevOrder__12J2DPictureExFUcUcb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevOrder__12J2DPictureExFUcUcb) {
+asm void J2DPictureEx::setTevOrder(char field_0, char field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevOrder__12J2DPictureExFUcUcb.s"
 }
 #pragma pop
 
 
-/* 803053E0-80305688 02A8+00 .text      setTevStage__12J2DPictureExFUcUcb                            */
+/* 803053E0-80305688 02A8+00 rc=3 efc=0 .text      setTevStage__12J2DPictureExFUcUcb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevStage__12J2DPictureExFUcUcb) {
+asm void J2DPictureEx::setTevStage(char field_0, char field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevStage__12J2DPictureExFUcUcb.s"
 }
@@ -567,17 +1019,17 @@ ASM_FUNCTION(setTevStage__12J2DPictureExFUcUcb) {
 
 
 /* ############################################################################################## */
-/* 803A1D50-803A1D70 0020+00 .rodata    @2555                                                        */
+/* 803A1D50-803A1D70 0020+00 rc=1 efc=0 .rodata    @2555                                                        */
 SECTION_RODATA const u8 lit_2555[32] = {
 	0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x08, 0x0E, 0x0F, 0x0F, 0x08, 0x0E, 0x00,
 	0x0F, 0x0A, 0x00, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x02, 0x04, 0x00, 0x0F,
 };
 
-/* 80305688-80305928 02A0+00 .text      setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305688-80305928 02A0+00 rc=1 efc=0 .text      setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum) {
+asm void J2DPictureEx::setStage(J2DTevStage* field_0, J2DPictureEx::stage_enum field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum.s"
 }
@@ -585,510 +1037,510 @@ ASM_FUNCTION(setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum
 
 
 /* ############################################################################################## */
-/* 804562D0-804562D8 0004+04 .sdata2    @2690                                                        */
+/* 804562D0-804562D8 0004+04 rc=1 efc=0 .sdata2    @2690                                                        */
 f32 lit_2690 = 255.0f;
 /* padding 4 bytes */
 
-/* 80305928-80305C70 0348+00 .text      setTevKColor__12J2DPictureExFUc                              */
+/* 80305928-80305C70 0348+00 rc=5 efc=0 .text      setTevKColor__12J2DPictureExFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevKColor__12J2DPictureExFUc) {
+asm void J2DPictureEx::setTevKColor(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKColor__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80305C70-80305D18 00A8+00 .text      setTevKColorSel__12J2DPictureExFUc                           */
+/* 80305C70-80305D18 00A8+00 rc=3 efc=0 .text      setTevKColorSel__12J2DPictureExFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevKColorSel__12J2DPictureExFUc) {
+asm void J2DPictureEx::setTevKColorSel(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKColorSel__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80305D18-80305DC0 00A8+00 .text      setTevKAlphaSel__12J2DPictureExFUc                           */
+/* 80305D18-80305DC0 00A8+00 rc=3 efc=0 .text      setTevKAlphaSel__12J2DPictureExFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevKAlphaSel__12J2DPictureExFUc) {
+asm void J2DPictureEx::setTevKAlphaSel(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKAlphaSel__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80305DC0-80305ED4 0114+00 .text      shiftSetBlendRatio__12J2DPictureExFUcfbb                     */
+/* 80305DC0-80305ED4 0114+00 rc=2 efc=0 .text      shiftSetBlendRatio__12J2DPictureExFUcfbb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shiftSetBlendRatio__12J2DPictureExFUcfbb) {
+asm void J2DPictureEx::shiftSetBlendRatio(char field_0, f32 field_1, bool field_2, bool field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/shiftSetBlendRatio__12J2DPictureExFUcfbb.s"
 }
 #pragma pop
 
 
-/* 80305ED4-80305F34 0060+00 .text      setBlendColorRatio__12J2DPictureExFff                        */
+/* 80305ED4-80305F34 0060+00 rc=1 efc=0 .text      setBlendColorRatio__12J2DPictureExFff                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlendColorRatio__12J2DPictureExFff) {
+asm void J2DPictureEx::setBlendColorRatio(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setBlendColorRatio__12J2DPictureExFff.s"
 }
 #pragma pop
 
 
-/* 80305F34-80305F94 0060+00 .text      setBlendAlphaRatio__12J2DPictureExFff                        */
+/* 80305F34-80305F94 0060+00 rc=1 efc=0 .text      setBlendAlphaRatio__12J2DPictureExFff                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlendAlphaRatio__12J2DPictureExFff) {
+asm void J2DPictureEx::setBlendAlphaRatio(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setBlendAlphaRatio__12J2DPictureExFff.s"
 }
 #pragma pop
 
 
-/* 80305F94-803060DC 0148+00 .text      changeTexture__12J2DPictureExFPC7ResTIMGUc                   */
+/* 80305F94-803060DC 0148+00 rc=1 efc=0 .text      changeTexture__12J2DPictureExFPC7ResTIMGUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTexture__12J2DPictureExFPC7ResTIMGUc) {
+asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUc.s"
 }
 #pragma pop
 
 
-/* 803060DC-80306134 0058+00 .text      changeTexture__12J2DPictureExFPCcUc                          */
+/* 803060DC-80306134 0058+00 rc=1 efc=0 .text      changeTexture__12J2DPictureExFPCcUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTexture__12J2DPictureExFPCcUc) {
+asm void J2DPictureEx::changeTexture(char const* field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUc.s"
 }
 #pragma pop
 
 
-/* 80306134-80306298 0164+00 .text      changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette      */
+/* 80306134-80306298 0164+00 rc=1 efc=0 .text      changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette) {
+asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1, JUTPalette* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette.s"
 }
 #pragma pop
 
 
-/* 80306298-803062F8 0060+00 .text      changeTexture__12J2DPictureExFPCcUcP10JUTPalette             */
+/* 80306298-803062F8 0060+00 rc=1 efc=0 .text      changeTexture__12J2DPictureExFPCcUcP10JUTPalette             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTexture__12J2DPictureExFPCcUcP10JUTPalette) {
+asm void J2DPictureEx::changeTexture(char const* field_0, char field_1, JUTPalette* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUcP10JUTPalette.s"
 }
 #pragma pop
 
 
-/* 803062F8-80306350 0058+00 .text      getTexture__12J2DPictureExCFUc                               */
+/* 803062F8-80306350 0058+00 rc=1 efc=0 .text      getTexture__12J2DPictureExCFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTexture__12J2DPictureExCFUc) {
+asm void J2DPictureEx::getTexture(char field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getTexture__12J2DPictureExCFUc.s"
 }
 #pragma pop
 
 
-/* 80306350-80306370 0020+00 .text      getTextureCount__12J2DPictureExCFv                           */
+/* 80306350-80306370 0020+00 rc=1 efc=0 .text      getTextureCount__12J2DPictureExCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTextureCount__12J2DPictureExCFv) {
+asm void J2DPictureEx::getTextureCount() const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getTextureCount__12J2DPictureExCFv.s"
 }
 #pragma pop
 
 
-/* 80306370-803063F8 0088+00 .text      setBlack__12J2DPictureExFQ28JUtility6TColor                  */
+/* 80306370-803063F8 0088+00 rc=1 efc=0 .text      setBlack__12J2DPictureExFQ28JUtility6TColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlack__12J2DPictureExFQ28JUtility6TColor) {
+asm void J2DPictureEx::setBlack(JUtility::TColor field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setBlack__12J2DPictureExFQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 803063F8-80306480 0088+00 .text      setWhite__12J2DPictureExFQ28JUtility6TColor                  */
+/* 803063F8-80306480 0088+00 rc=1 efc=0 .text      setWhite__12J2DPictureExFQ28JUtility6TColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWhite__12J2DPictureExFQ28JUtility6TColor) {
+asm void J2DPictureEx::setWhite(JUtility::TColor field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setWhite__12J2DPictureExFQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 80306480-80306664 01E4+00 .text      setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80306480-80306664 01E4+00 rc=1 efc=0 .text      setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DPictureEx::setBlackWhite(JUtility::TColor field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 80306664-80306824 01C0+00 .text      getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+/* 80306664-80306824 01C0+00 rc=4 efc=0 .text      getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor) {
+asm void J2DPictureEx::getBlackWhite(JUtility::TColor* field_0, JUtility::TColor* field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 80306824-803068F8 00D4+00 .text      isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80306824-803068F8 00D4+00 rc=1 efc=0 .text      isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DPictureEx::isSetBlackWhite(JUtility::TColor field_0, JUtility::TColor field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 803068F8-80306958 0060+00 .text      getBlack__12J2DPictureExCFv                                  */
+/* 803068F8-80306958 0060+00 rc=1 efc=0 .text      getBlack__12J2DPictureExCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBlack__12J2DPictureExCFv) {
+asm void J2DPictureEx::getBlack() const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getBlack__12J2DPictureExCFv.s"
 }
 #pragma pop
 
 
-/* 80306958-803069B8 0060+00 .text      getWhite__12J2DPictureExCFv                                  */
+/* 80306958-803069B8 0060+00 rc=1 efc=0 .text      getWhite__12J2DPictureExCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWhite__12J2DPictureExCFv) {
+asm void J2DPictureEx::getWhite() const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getWhite__12J2DPictureExCFv.s"
 }
 #pragma pop
 
 
-/* 803069B8-803069D8 0020+00 .text      setAlpha__12J2DPictureExFUc                                  */
+/* 803069B8-803069D8 0020+00 rc=1 efc=0 .text      setAlpha__12J2DPictureExFUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlpha__12J2DPictureExFUc) {
+asm void J2DPictureEx::setAlpha(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAlpha__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 803069D8-80306A0C 0034+00 .text      setCullBack__12J2DPictureExF11_GXCullMode                    */
+/* 803069D8-80306A0C 0034+00 rc=1 efc=0 .text      setCullBack__12J2DPictureExF11_GXCullMode                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCullBack__12J2DPictureExF11_GXCullMode) {
+asm void J2DPictureEx::setCullBack(_GXCullMode field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setCullBack__12J2DPictureExF11_GXCullMode.s"
 }
 #pragma pop
 
 
-/* 80306A0C-80306A24 0018+00 .text      rewriteAlpha__12J2DPictureExFv                               */
+/* 80306A0C-80306A24 0018+00 rc=1 efc=0 .text      rewriteAlpha__12J2DPictureExFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rewriteAlpha__12J2DPictureExFv) {
+asm void J2DPictureEx::rewriteAlpha() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/rewriteAlpha__12J2DPictureExFv.s"
 }
 #pragma pop
 
 
-/* 80306A24-80306AC4 00A0+00 .text      isUsed__12J2DPictureExFPC7ResTIMG                            */
+/* 80306A24-80306AC4 00A0+00 rc=1 efc=0 .text      isUsed__12J2DPictureExFPC7ResTIMG                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isUsed__12J2DPictureExFPC7ResTIMG) {
+asm void J2DPictureEx::isUsed(ResTIMG const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isUsed__12J2DPictureExFPC7ResTIMG.s"
 }
 #pragma pop
 
 
-/* 80306AC4-80306AF0 002C+00 .text      setAnimation__12J2DPictureExFP11J2DAnmColor                  */
+/* 80306AC4-80306AF0 002C+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP11J2DAnmColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP11J2DAnmColor) {
+asm void J2DPictureEx::setAnimation(J2DAnmColor* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP11J2DAnmColor.s"
 }
 #pragma pop
 
 
-/* 80306AF0-80306B1C 002C+00 .text      setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey          */
+/* 80306AF0-80306B1C 002C+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey) {
+asm void J2DPictureEx::setAnimation(J2DAnmTextureSRTKey* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey.s"
 }
 #pragma pop
 
 
-/* 80306B1C-80306B48 002C+00 .text      setAnimation__12J2DPictureExFP16J2DAnmTexPattern             */
+/* 80306B1C-80306B48 002C+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP16J2DAnmTexPattern             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP16J2DAnmTexPattern) {
+asm void J2DPictureEx::setAnimation(J2DAnmTexPattern* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP16J2DAnmTexPattern.s"
 }
 #pragma pop
 
 
-/* 80306B48-80306B74 002C+00 .text      setAnimation__12J2DPictureExFP15J2DAnmTevRegKey              */
+/* 80306B48-80306B74 002C+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP15J2DAnmTevRegKey              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP15J2DAnmTevRegKey) {
+asm void J2DPictureEx::setAnimation(J2DAnmTevRegKey* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP15J2DAnmTevRegKey.s"
 }
 #pragma pop
 
 
-/* 80306B74-80306B7C 0008+00 .text      setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull         */
+/* 80306B74-80306B7C 0008+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull) {
+asm void J2DPictureEx::setAnimation(J2DAnmVisibilityFull* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull.s"
 }
 #pragma pop
 
 
-/* 80306B7C-80306C70 00F4+00 .text      setAnimation__12J2DPictureExFP14J2DAnmVtxColor               */
+/* 80306B7C-80306C70 00F4+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP14J2DAnmVtxColor               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP14J2DAnmVtxColor) {
+asm void J2DPictureEx::setAnimation(J2DAnmVtxColor* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP14J2DAnmVtxColor.s"
 }
 #pragma pop
 
 
-/* 80306C70-80306DC8 0158+00 .text      animationPane__12J2DPictureExFPC15J2DAnmTransform            */
+/* 80306C70-80306DC8 0158+00 rc=1 efc=0 .text      animationPane__12J2DPictureExFPC15J2DAnmTransform            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animationPane__12J2DPictureExFPC15J2DAnmTransform) {
+asm void J2DPictureEx::animationPane(J2DAnmTransform const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/animationPane__12J2DPictureExFPC15J2DAnmTransform.s"
 }
 #pragma pop
 
 
-/* 80306DC8-80306ED4 010C+00 .text      getUsableTlut__12J2DPictureExFUc                             */
+/* 80306DC8-80306ED4 010C+00 rc=1 efc=0 .text      getUsableTlut__12J2DPictureExFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getUsableTlut__12J2DPictureExFUc) {
+asm void J2DPictureEx::getUsableTlut(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getUsableTlut__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80306ED4-80306F04 0030+00 .text      append__12J2DPictureExFPC7ResTIMGf                           */
+/* 80306ED4-80306F04 0030+00 rc=1 efc=0 .text      append__12J2DPictureExFPC7ResTIMGf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__12J2DPictureExFPC7ResTIMGf) {
+asm void J2DPictureEx::append(ResTIMG const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPC7ResTIMGf.s"
 }
 #pragma pop
 
 
-/* 80306F04-80306F34 0030+00 .text      append__12J2DPictureExFPCcf                                  */
+/* 80306F04-80306F34 0030+00 rc=1 efc=0 .text      append__12J2DPictureExFPCcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__12J2DPictureExFPCcf) {
+asm void J2DPictureEx::append(char const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/append__12J2DPictureExFPCcf.s"
 }
 #pragma pop
 
 
-/* 80306F34-80306F64 0030+00 .text      prepend__12J2DPictureExFP10JUTTexturef                       */
+/* 80306F34-80306F64 0030+00 rc=1 efc=0 .text      prepend__12J2DPictureExFP10JUTTexturef                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__12J2DPictureExFP10JUTTexturef) {
+asm void J2DPictureEx::prepend(JUTTexture* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepend__12J2DPictureExFP10JUTTexturef.s"
 }
 #pragma pop
 
 
-/* 80306F64-80306F94 0030+00 .text      prepend__12J2DPictureExFPCcP10JUTPalettef                    */
+/* 80306F64-80306F94 0030+00 rc=1 efc=0 .text      prepend__12J2DPictureExFPCcP10JUTPalettef                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__12J2DPictureExFPCcP10JUTPalettef) {
+asm void J2DPictureEx::prepend(char const* field_0, JUTPalette* field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepend__12J2DPictureExFPCcP10JUTPalettef.s"
 }
 #pragma pop
 
 
-/* 80306F94-80306FC4 0030+00 .text      prepend__12J2DPictureExFPCcf                                 */
+/* 80306F94-80306FC4 0030+00 rc=1 efc=0 .text      prepend__12J2DPictureExFPCcf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__12J2DPictureExFPCcf) {
+asm void J2DPictureEx::prepend(char const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepend__12J2DPictureExFPCcf.s"
 }
 #pragma pop
 
 
-/* 80306FC4-80306FF4 0030+00 .text      prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef             */
+/* 80306FC4-80306FF4 0030+00 rc=1 efc=0 .text      prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef) {
+asm void J2DPictureEx::prepend(ResTIMG const* field_0, JUTPalette* field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef.s"
 }
 #pragma pop
 
 
-/* 80306FF4-80307024 0030+00 .text      prepend__12J2DPictureExFPC7ResTIMGf                          */
+/* 80306FF4-80307024 0030+00 rc=1 efc=0 .text      prepend__12J2DPictureExFPC7ResTIMGf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__12J2DPictureExFPC7ResTIMGf) {
+asm void J2DPictureEx::prepend(ResTIMG const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepend__12J2DPictureExFPC7ResTIMGf.s"
 }
 #pragma pop
 
 
-/* 80307024-80307058 0034+00 .text      insert__12J2DPictureExFPCcUcf                                */
+/* 80307024-80307058 0034+00 rc=1 efc=0 .text      insert__12J2DPictureExFPCcUcf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__12J2DPictureExFPCcUcf) {
+asm void J2DPictureEx::insert(char const* field_0, char field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPCcUcf.s"
 }
 #pragma pop
 
 
-/* 80307058-8030708C 0034+00 .text      insert__12J2DPictureExFPC7ResTIMGUcf                         */
+/* 80307058-8030708C 0034+00 rc=1 efc=0 .text      insert__12J2DPictureExFPC7ResTIMGUcf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__12J2DPictureExFPC7ResTIMGUcf) {
+asm void J2DPictureEx::insert(ResTIMG const* field_0, char field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPC7ResTIMGUcf.s"
 }
 #pragma pop
 
 
-/* 8030708C-803070D0 0044+00 .text      draw__12J2DPictureExFffbbb                                   */
+/* 8030708C-803070D0 0044+00 rc=1 efc=0 .text      draw__12J2DPictureExFffbbb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12J2DPictureExFffbbb) {
+asm void J2DPictureEx::draw(f32 field_0, f32 field_1, bool field_2, bool field_3, bool field_4) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffbbb.s"
 }
 #pragma pop
 
 
-/* 803070D0-80307134 0064+00 .text      drawOut__12J2DPictureExFffffffff                             */
+/* 803070D0-80307134 0064+00 rc=1 efc=0 .text      drawOut__12J2DPictureExFffffffff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOut__12J2DPictureExFffffffff) {
+asm void J2DPictureEx::drawOut(f32 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawOut__12J2DPictureExFffffffff.s"
 }
 #pragma pop
 
 
-/* 80307134-80307168 0034+00 .text      load__12J2DPictureExFUc                                      */
+/* 80307134-80307168 0034+00 rc=1 efc=0 .text      load__12J2DPictureExFUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load__12J2DPictureExFUc) {
+asm void J2DPictureEx::load(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/load__12J2DPictureExFUc.s"
 }
 #pragma pop
 
 
-/* 80307168-803071A4 003C+00 .text      setCullBack__12J2DPictureExFb                                */
+/* 80307168-803071A4 003C+00 rc=1 efc=0 .text      setCullBack__12J2DPictureExFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCullBack__12J2DPictureExFb) {
+asm void J2DPictureEx::setCullBack(bool field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setCullBack__12J2DPictureExFb.s"
 }
 #pragma pop
 
 
-/* 803071A4-803071C4 0020+00 .text      isUsed__12J2DPictureExFPC7ResFONT                            */
+/* 803071A4-803071C4 0020+00 rc=1 efc=0 .text      isUsed__12J2DPictureExFPC7ResFONT                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isUsed__12J2DPictureExFPC7ResFONT) {
+asm void J2DPictureEx::isUsed(ResFONT const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isUsed__12J2DPictureExFPC7ResFONT.s"
 }
 #pragma pop
 
 
-/* 803071C4-803071E4 0020+00 .text      setAnimation__12J2DPictureExFP10J2DAnmBase                   */
+/* 803071C4-803071E4 0020+00 rc=1 efc=0 .text      setAnimation__12J2DPictureExFP10J2DAnmBase                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP10J2DAnmBase) {
+asm void J2DPictureEx::setAnimation(J2DAnmBase* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAnimation__12J2DPictureExFP10J2DAnmBase.s"
 }
@@ -1096,13 +1548,13 @@ ASM_FUNCTION(setAnimation__12J2DPictureExFP10J2DAnmBase) {
 
 
 /* ############################################################################################## */
-/* 803A1D70-803A1D90 0020+00 .rodata    @2556                                                        */
+/* 803A1D70-803A1D90 0020+00 rc=0 efc=0 .rodata    @2556                                                        */
 SECTION_RODATA const u8 lit_2556[32] = {
 	0x07, 0x04, 0x05, 0x07, 0x05, 0x07, 0x07, 0x07, 0x07, 0x04, 0x06, 0x07, 0x07, 0x04, 0x06, 0x00,
 	0x07, 0x05, 0x00, 0x07, 0x01, 0x02, 0x04, 0x07, 0x07, 0x07, 0x07, 0x02, 0x01, 0x02, 0x00, 0x07,
 };
 
-/* 803A1D90-803A1DB8 0028+00 .rodata    @2557                                                        */
+/* 803A1D90-803A1DB8 0028+00 rc=0 efc=0 .rodata    @2557                                                        */
 SECTION_RODATA const u8 lit_2557[40] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,

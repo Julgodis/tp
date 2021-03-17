@@ -6,41 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjL4DigSand_c;
+
+struct daObjL4DigSand_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void mode_init_wait();
+	void mode_wait();
+	void mode_init_dig();
+	void mode_dig();
+	void mode_init_end();
+	void mode_end();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__16daObjL4DigSand_cFv();
-extern "C" extern void setBaseMtx__16daObjL4DigSand_cFv();
-extern "C" extern void Create__16daObjL4DigSand_cFv();
-extern "C" extern void CreateHeap__16daObjL4DigSand_cFv();
-extern "C" extern void create1st__16daObjL4DigSand_cFv();
-extern "C" extern void Execute__16daObjL4DigSand_cFPPA3_A4_f();
-extern "C" extern void action__16daObjL4DigSand_cFv();
-extern "C" extern void mode_init_wait__16daObjL4DigSand_cFv();
-extern "C" extern void mode_wait__16daObjL4DigSand_cFv();
-extern "C" extern void mode_init_dig__16daObjL4DigSand_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void mode_dig__16daObjL4DigSand_cFv();
-extern "C" extern void mode_init_end__16daObjL4DigSand_cFv();
-extern "C" extern void mode_end__16daObjL4DigSand_cFv();
-extern "C" extern void Draw__16daObjL4DigSand_cFv();
-extern "C" extern void Delete__16daObjL4DigSand_cFv();
-extern "C" extern void daObjL4DigSand_create1st__FP16daObjL4DigSand_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c();
-extern "C" extern void daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c();
-extern "C" extern void daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80C67588();
-extern "C" extern void func_80C675A4();
-extern "C" extern void func_80C675AC();
-extern "C" extern void func_80C675B4();
-extern "C" extern void func_80C675BC();
-extern "C" extern void func_80C675C4();
+extern "C" void Execute__16daObjL4DigSand_cFPPA3_A4_f();
+void daObjL4DigSand_create1st(daObjL4DigSand_c*);
+void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c*);
+void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c*);
+void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c*);
+extern "C" void func_80C67588();
+extern "C" void func_80C675A4();
+extern "C" void func_80C675AC();
+extern "C" void func_80C675B4();
+extern "C" void func_80C675BC();
+extern "C" void func_80C675C4();
+
+extern "C" void initBaseMtx__16daObjL4DigSand_cFv();
+extern "C" void setBaseMtx__16daObjL4DigSand_cFv();
+extern "C" void Create__16daObjL4DigSand_cFv();
+extern "C" void CreateHeap__16daObjL4DigSand_cFv();
+extern "C" void create1st__16daObjL4DigSand_cFv();
+extern "C" void Execute__16daObjL4DigSand_cFPPA3_A4_f();
+extern "C" void action__16daObjL4DigSand_cFv();
+extern "C" void mode_init_wait__16daObjL4DigSand_cFv();
+extern "C" void mode_wait__16daObjL4DigSand_cFv();
+extern "C" void mode_init_dig__16daObjL4DigSand_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void mode_dig__16daObjL4DigSand_cFv();
+extern "C" void mode_init_end__16daObjL4DigSand_cFv();
+extern "C" void mode_end__16daObjL4DigSand_cFv();
+extern "C" void Draw__16daObjL4DigSand_cFv();
+extern "C" void Delete__16daObjL4DigSand_cFv();
+extern "C" void daObjL4DigSand_create1st__FP16daObjL4DigSand_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c();
+extern "C" void daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c();
+extern "C" void daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80C67588();
+extern "C" void func_80C675A4();
+extern "C" void func_80C675AC();
+extern "C" void func_80C675B4();
+extern "C" void func_80C675BC();
+extern "C" void func_80C675C4();
 SECTION_RODATA extern const u32 lit_3746;
 SECTION_RODATA extern const u32 lit_3765;
 SECTION_RODATA extern const u32 lit_3766;
@@ -69,7 +132,9 @@ SECTION_DATA extern void*const __vt__16daObjL4DigSand_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +144,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/initBaseMtx__16daObjL4DigSand_cFv.s"
 }
@@ -90,7 +155,7 @@ ASM_FUNCTION(initBaseMtx__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/setBaseMtx__16daObjL4DigSand_cFv.s"
 }
@@ -101,7 +166,7 @@ ASM_FUNCTION(setBaseMtx__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/Create__16daObjL4DigSand_cFv.s"
 }
@@ -112,7 +177,7 @@ ASM_FUNCTION(Create__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/CreateHeap__16daObjL4DigSand_cFv.s"
 }
@@ -123,7 +188,7 @@ ASM_FUNCTION(CreateHeap__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/create1st__16daObjL4DigSand_cFv.s"
 }
@@ -134,7 +199,7 @@ ASM_FUNCTION(create1st__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjL4DigSand_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjL4DigSand_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/Execute__16daObjL4DigSand_cFPPA3_A4_f.s"
 }
@@ -145,7 +210,7 @@ ASM_FUNCTION(Execute__16daObjL4DigSand_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/action__16daObjL4DigSand_cFv.s"
 }
@@ -156,7 +221,7 @@ ASM_FUNCTION(action__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_init_wait__16daObjL4DigSand_cFv.s"
 }
@@ -167,7 +232,7 @@ ASM_FUNCTION(mode_init_wait__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_wait__16daObjL4DigSand_cFv.s"
 }
@@ -178,7 +243,7 @@ ASM_FUNCTION(mode_wait__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dig__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::mode_init_dig() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_init_dig__16daObjL4DigSand_cFv.s"
 }
@@ -189,7 +254,7 @@ ASM_FUNCTION(mode_init_dig__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -200,7 +265,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_dig__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::mode_dig() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_dig__16daObjL4DigSand_cFv.s"
 }
@@ -211,7 +276,7 @@ ASM_FUNCTION(mode_dig__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_end__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::mode_init_end() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_init_end__16daObjL4DigSand_cFv.s"
 }
@@ -219,21 +284,16 @@ ASM_FUNCTION(mode_init_end__16daObjL4DigSand_cFv) {
 
 
 /* 80C67100-80C67104 0004+00 .text      mode_end__16daObjL4DigSand_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_end__16daObjL4DigSand_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_end__16daObjL4DigSand_cFv.s"
+void daObjL4DigSand_c::mode_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C67104-80C671A8 00A4+00 .text      Draw__16daObjL4DigSand_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/Draw__16daObjL4DigSand_cFv.s"
 }
@@ -244,7 +304,7 @@ ASM_FUNCTION(Draw__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjL4DigSand_cFv) {
+asm void daObjL4DigSand_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/Delete__16daObjL4DigSand_cFv.s"
 }
@@ -255,7 +315,7 @@ ASM_FUNCTION(Delete__16daObjL4DigSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjL4DigSand_create1st__FP16daObjL4DigSand_c) {
+asm void daObjL4DigSand_create1st(daObjL4DigSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_create1st__FP16daObjL4DigSand_c.s"
 }
@@ -266,7 +326,7 @@ ASM_FUNCTION(daObjL4DigSand_create1st__FP16daObjL4DigSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__8cM3dGCylFv.s"
 }
@@ -277,7 +337,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__8cM3dGAabFv.s"
 }
@@ -288,7 +348,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__10dCcD_GSttsFv.s"
 }
@@ -299,7 +359,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__12dBgS_AcchCirFv.s"
 }
@@ -310,7 +370,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -321,7 +381,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c) {
+asm void daObjL4DigSand_MoveBGDelete(daObjL4DigSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c.s"
 }
@@ -332,7 +392,7 @@ ASM_FUNCTION(daObjL4DigSand_MoveBGDelete__FP16daObjL4DigSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c) {
+asm void daObjL4DigSand_MoveBGExecute(daObjL4DigSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c.s"
 }
@@ -343,7 +403,7 @@ ASM_FUNCTION(daObjL4DigSand_MoveBGExecute__FP16daObjL4DigSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c) {
+asm void daObjL4DigSand_MoveBGDraw(daObjL4DigSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c.s"
 }
@@ -354,7 +414,7 @@ ASM_FUNCTION(daObjL4DigSand_MoveBGDraw__FP16daObjL4DigSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/__dt__10cCcD_GSttsFv.s"
 }
@@ -365,7 +425,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C67588) {
+extern "C" asm void func_80C67588() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C67588.s"
 }
@@ -376,7 +436,7 @@ ASM_FUNCTION(func_80C67588) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C675A4) {
+extern "C" asm void func_80C675A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675A4.s"
 }
@@ -387,7 +447,7 @@ ASM_FUNCTION(func_80C675A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C675AC) {
+extern "C" asm void func_80C675AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675AC.s"
 }
@@ -398,7 +458,7 @@ ASM_FUNCTION(func_80C675AC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C675B4) {
+extern "C" asm void func_80C675B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675B4.s"
 }
@@ -409,7 +469,7 @@ ASM_FUNCTION(func_80C675B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C675BC) {
+extern "C" asm void func_80C675BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675BC.s"
 }
@@ -420,7 +480,7 @@ ASM_FUNCTION(func_80C675BC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C675C4) {
+extern "C" asm void func_80C675C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/func_80C675C4.s"
 }

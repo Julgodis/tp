@@ -9,22 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXInverse();
-extern "C" extern void PSMTXRotRad();
-extern "C" extern void PSMTXRotTrig();
-extern "C" extern void __PSMTXRotAxisRadInternal();
-extern "C" extern void PSMTXRotAxisRad();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSMTXTransApply();
-extern "C" extern void PSMTXScale();
-extern "C" extern void PSMTXScaleApply();
-extern "C" extern void PSMTXQuat();
-extern "C" extern void C_MTXLookAt();
-extern "C" extern void C_MTXLightPerspective();
-extern "C" extern void C_MTXLightOrtho();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXRotRad();
+extern "C" static void PSMTXRotTrig();
+extern "C" static void __PSMTXRotAxisRadInternal();
+extern "C" void PSMTXRotAxisRad();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXTransApply();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXScaleApply();
+extern "C" void PSMTXQuat();
+extern "C" void C_MTXLookAt();
+extern "C" void C_MTXLightPerspective();
+extern "C" void C_MTXLightOrtho();
+
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXRotRad();
+extern "C" static void PSMTXRotTrig();
+extern "C" static void __PSMTXRotAxisRadInternal();
+extern "C" void PSMTXRotAxisRad();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXTransApply();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXScaleApply();
+extern "C" void PSMTXQuat();
+extern "C" void C_MTXLookAt();
+extern "C" void C_MTXLightPerspective();
+extern "C" void C_MTXLightOrtho();
 SECTION_SDATA extern u8 mtx__Unit01[8];
 SECTION_SDATA2 extern f32 mtx__lit_96;
 SECTION_SDATA2 extern u8 mtx__lit_97[4];
@@ -38,41 +55,47 @@ SECTION_SDATA2 extern f32 lit_230;
 // External References:
 // 
 
-extern "C" extern void PSVECNormalize();
-extern "C" extern void PSVECCrossProduct();
-extern "C" extern void tanf();
-extern "C" extern void sinf();
-extern "C" extern void cosf();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECCrossProduct();
+extern "C" void tanf();
+extern "C" void sinf();
+extern "C" void cosf();
+
+extern "C" void PSVECNormalize();
+extern "C" void PSVECCrossProduct();
+extern "C" void tanf();
+extern "C" void sinf();
+extern "C" void cosf();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456508-8045650C 0004+00 .sdata2    @96                                                          */
+/* 80456508-8045650C 0004+00 rc=6 efc=0 .sdata2    @96                                                          */
 f32 mtx__lit_96 = 1.0f;
 
-/* 8045650C-80456510 0004+00 .sdata2    @97                                                          */
+/* 8045650C-80456510 0004+00 rc=6 efc=0 .sdata2    @97                                                          */
 u8 mtx__lit_97[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80346484-803464B0 002C+00 .text      PSMTXIdentity                                                */
+/* 80346484-803464B0 002C+00 rc=27 efc=27 .text      PSMTXIdentity                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXIdentity) {
+extern "C" asm void PSMTXIdentity() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXIdentity.s"
 }
 #pragma pop
 
 
-/* 803464B0-803464E4 0034+00 .text      PSMTXCopy                                                    */
+/* 803464B0-803464E4 0034+00 rc=119 efc=119 .text      PSMTXCopy                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXCopy) {
+extern "C" asm void PSMTXCopy() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXCopy.s"
 }
@@ -80,49 +103,49 @@ ASM_FUNCTION(PSMTXCopy) {
 
 
 /* ############################################################################################## */
-/* 804509D0-804509D8 0008+00 .sdata     Unit01                                                       */
+/* 804509D0-804509D8 0008+00 rc=1 efc=0 .sdata     Unit01                                                       */
 u8 mtx__Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803464E4-803465B0 00CC+00 .text      PSMTXConcat                                                  */
+/* 803464E4-803465B0 00CC+00 rc=109 efc=109 .text      PSMTXConcat                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXConcat) {
+extern "C" asm void PSMTXConcat() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXConcat.s"
 }
 #pragma pop
 
 
-/* 803465B0-803466A8 00F8+00 .text      PSMTXInverse                                                 */
+/* 803465B0-803466A8 00F8+00 rc=43 efc=43 .text      PSMTXInverse                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXInverse) {
+extern "C" asm void PSMTXInverse() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXInverse.s"
 }
 #pragma pop
 
 
-/* 803466A8-80346718 0070+00 .text      PSMTXRotRad                                                  */
+/* 803466A8-80346718 0070+00 rc=17 efc=17 .text      PSMTXRotRad                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXRotRad) {
+extern "C" asm void PSMTXRotRad() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXRotRad.s"
 }
 #pragma pop
 
 
-/* 80346718-803467C8 00B0+00 .text      PSMTXRotTrig                                                 */
+/* 80346718-803467C8 00B0+00 rc=1 efc=0 .text      PSMTXRotTrig                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXRotTrig) {
+extern "C" asm static void PSMTXRotTrig() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXRotTrig.s"
 }
@@ -130,94 +153,94 @@ ASM_FUNCTION(PSMTXRotTrig) {
 
 
 /* ############################################################################################## */
-/* 80456510-80456514 0004+00 .sdata2    @190                                                         */
+/* 80456510-80456514 0004+00 rc=2 efc=0 .sdata2    @190                                                         */
 f32 lit_190 = 0.5f;
 
-/* 80456514-80456518 0004+00 .sdata2    @191                                                         */
+/* 80456514-80456518 0004+00 rc=1 efc=0 .sdata2    @191                                                         */
 f32 lit_191 = 3.0f;
 
-/* 803467C8-80346878 00B0+00 .text      __PSMTXRotAxisRadInternal                                    */
+/* 803467C8-80346878 00B0+00 rc=1 efc=0 .text      __PSMTXRotAxisRadInternal                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__PSMTXRotAxisRadInternal) {
+extern "C" asm static void __PSMTXRotAxisRadInternal() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/__PSMTXRotAxisRadInternal.s"
 }
 #pragma pop
 
 
-/* 80346878-803468E8 0070+00 .text      PSMTXRotAxisRad                                              */
+/* 80346878-803468E8 0070+00 rc=6 efc=6 .text      PSMTXRotAxisRad                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXRotAxisRad) {
+extern "C" asm void PSMTXRotAxisRad() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXRotAxisRad.s"
 }
 #pragma pop
 
 
-/* 803468E8-8034691C 0034+00 .text      PSMTXTrans                                                   */
+/* 803468E8-8034691C 0034+00 rc=38 efc=38 .text      PSMTXTrans                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXTrans) {
+extern "C" asm void PSMTXTrans() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXTrans.s"
 }
 #pragma pop
 
 
-/* 8034691C-80346968 004C+00 .text      PSMTXTransApply                                              */
+/* 8034691C-80346968 004C+00 rc=3 efc=3 .text      PSMTXTransApply                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXTransApply) {
+extern "C" asm void PSMTXTransApply() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXTransApply.s"
 }
 #pragma pop
 
 
-/* 80346968-80346990 0028+00 .text      PSMTXScale                                                   */
+/* 80346968-80346990 0028+00 rc=14 efc=14 .text      PSMTXScale                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXScale) {
+extern "C" asm void PSMTXScale() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXScale.s"
 }
 #pragma pop
 
 
-/* 80346990-803469E8 0058+00 .text      PSMTXScaleApply                                              */
+/* 80346990-803469E8 0058+00 rc=1 efc=1 .text      PSMTXScaleApply                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXScaleApply) {
+extern "C" asm void PSMTXScaleApply() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXScaleApply.s"
 }
 #pragma pop
 
 
-/* 803469E8-80346A8C 00A4+00 .text      PSMTXQuat                                                    */
+/* 803469E8-80346A8C 00A4+00 rc=8 efc=8 .text      PSMTXQuat                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXQuat) {
+extern "C" asm void PSMTXQuat() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/PSMTXQuat.s"
 }
 #pragma pop
 
 
-/* 80346A8C-80346C18 018C+00 .text      C_MTXLookAt                                                  */
+/* 80346A8C-80346C18 018C+00 rc=2 efc=2 .text      C_MTXLookAt                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_MTXLookAt) {
+extern "C" asm void C_MTXLookAt() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/C_MTXLookAt.s"
 }
@@ -225,36 +248,35 @@ ASM_FUNCTION(C_MTXLookAt) {
 
 
 /* ############################################################################################## */
-/* 80456518-8045651C 0004+00 .sdata2    @206                                                         */
+/* 80456518-8045651C 0004+00 rc=1 efc=0 .sdata2    @206                                                         */
 f32 mtx__lit_206 = 2.0f;
 
-/* 8045651C-80456520 0004+00 .sdata2    @227                                                         */
+/* 8045651C-80456520 0004+00 rc=1 efc=0 .sdata2    @227                                                         */
 f32 lit_227 = -1.0f;
 
-/* 80456520-80456528 0004+04 .sdata2    @230                                                         */
+/* 80456520-80456528 0004+04 rc=1 efc=0 .sdata2    @230                                                         */
 f32 lit_230 = 0.01745329238474369f;
 /* padding 4 bytes */
 
-/* 80346C18-80346CE4 00CC+00 .text      C_MTXLightPerspective                                        */
+/* 80346C18-80346CE4 00CC+00 rc=4 efc=4 .text      C_MTXLightPerspective                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_MTXLightPerspective) {
+extern "C" asm void C_MTXLightPerspective() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/C_MTXLightPerspective.s"
 }
 #pragma pop
 
 
-/* 80346CE4-80346D6C 0088+00 .text      C_MTXLightOrtho                                              */
+/* 80346CE4-80346D6C 0088+00 rc=2 efc=2 .text      C_MTXLightOrtho                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_MTXLightOrtho) {
+extern "C" asm void C_MTXLightOrtho() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx/C_MTXLightOrtho.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

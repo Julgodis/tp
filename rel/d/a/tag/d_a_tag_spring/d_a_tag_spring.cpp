@@ -6,19 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagSpring_c;
+
+struct daTagSpring_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void checkArea();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daTagSpring_cFv();
-extern "C" extern void setBaseMtx__13daTagSpring_cFv();
-extern "C" extern void Create__13daTagSpring_cFv();
-extern "C" extern void create__13daTagSpring_cFv();
-extern "C" extern void execute__13daTagSpring_cFv();
-extern "C" extern void checkArea__13daTagSpring_cFv();
-extern "C" extern void _delete__13daTagSpring_cFv();
-extern "C" extern void daTagSpring_Execute__FP13daTagSpring_c();
-extern "C" extern void daTagSpring_Delete__FP13daTagSpring_c();
-extern "C" extern void daTagSpring_Create__FP13daTagSpring_c();
+void daTagSpring_Execute(daTagSpring_c*);
+void daTagSpring_Delete(daTagSpring_c*);
+void daTagSpring_Create(daTagSpring_c*);
+
+extern "C" void initBaseMtx__13daTagSpring_cFv();
+extern "C" void setBaseMtx__13daTagSpring_cFv();
+extern "C" void Create__13daTagSpring_cFv();
+extern "C" void create__13daTagSpring_cFv();
+extern "C" void execute__13daTagSpring_cFv();
+extern "C" void checkArea__13daTagSpring_cFv();
+extern "C" bool _delete__13daTagSpring_cFv();
+extern "C" void daTagSpring_Execute__FP13daTagSpring_c();
+extern "C" void daTagSpring_Delete__FP13daTagSpring_c();
+extern "C" void daTagSpring_Create__FP13daTagSpring_c();
 SECTION_RODATA extern const u32 lit_3728;
 SECTION_RODATA extern const u8 lit_3773[4];
 SECTION_RODATA extern const u8 lit_3774[8];
@@ -32,7 +52,9 @@ SECTION_DATA extern u8 g_profile_Tag_Spring[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +64,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daTagSpring_cFv) {
+asm void daTagSpring_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/initBaseMtx__13daTagSpring_cFv.s"
 }
@@ -53,7 +75,7 @@ ASM_FUNCTION(initBaseMtx__13daTagSpring_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daTagSpring_cFv) {
+asm void daTagSpring_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/setBaseMtx__13daTagSpring_cFv.s"
 }
@@ -64,7 +86,7 @@ ASM_FUNCTION(setBaseMtx__13daTagSpring_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daTagSpring_cFv) {
+asm void daTagSpring_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/Create__13daTagSpring_cFv.s"
 }
@@ -75,7 +97,7 @@ ASM_FUNCTION(Create__13daTagSpring_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagSpring_cFv) {
+asm void daTagSpring_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/func_805A6AF4.s"
 }
@@ -86,7 +108,7 @@ ASM_FUNCTION(create__13daTagSpring_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagSpring_cFv) {
+asm void daTagSpring_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/execute__13daTagSpring_cFv.s"
 }
@@ -97,7 +119,7 @@ ASM_FUNCTION(execute__13daTagSpring_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__13daTagSpring_cFv) {
+asm void daTagSpring_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/checkArea__13daTagSpring_cFv.s"
 }
@@ -105,21 +127,16 @@ ASM_FUNCTION(checkArea__13daTagSpring_cFv) {
 
 
 /* 805A6DFC-805A6E04 0008+00 .text      _delete__13daTagSpring_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__13daTagSpring_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/_delete__13daTagSpring_cFv.s"
+bool daTagSpring_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A6E04-805A6E24 0020+00 .text      daTagSpring_Execute__FP13daTagSpring_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpring_Execute__FP13daTagSpring_c) {
+asm void daTagSpring_Execute(daTagSpring_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Execute__FP13daTagSpring_c.s"
 }
@@ -130,7 +147,7 @@ ASM_FUNCTION(daTagSpring_Execute__FP13daTagSpring_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpring_Delete__FP13daTagSpring_c) {
+asm void daTagSpring_Delete(daTagSpring_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Delete__FP13daTagSpring_c.s"
 }
@@ -141,7 +158,7 @@ ASM_FUNCTION(daTagSpring_Delete__FP13daTagSpring_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpring_Create__FP13daTagSpring_c) {
+asm void daTagSpring_Create(daTagSpring_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Create__FP13daTagSpring_c.s"
 }

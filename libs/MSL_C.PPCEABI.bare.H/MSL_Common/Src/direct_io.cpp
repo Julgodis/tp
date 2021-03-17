@@ -9,47 +9,59 @@
 // Forward References:
 // 
 
-extern "C" extern void __fwrite();
-extern "C" extern void fwrite();
+extern "C" static void __fwrite();
+extern "C" void fwrite();
+
+extern "C" static void __fwrite();
+extern "C" void fwrite();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void __flush_buffer();
-extern "C" extern void __prep_buffer();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
-extern "C" extern void fseek();
-extern "C" extern void __memrchr();
-extern "C" extern void __stdio_atexit();
-extern "C" extern void fwide();
+SECTION_INIT void memcpy();
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fseek();
+extern "C" void __memrchr();
+extern "C" void __stdio_atexit();
+extern "C" void fwide();
+
+SECTION_INIT void memcpy();
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fseek();
+extern "C" void __memrchr();
+extern "C" void __stdio_atexit();
+extern "C" void fwide();
 
 // 
 // Declarations:
 // 
 
-/* 80365494-803657A0 030C+00 .text      __fwrite                                                     */
+/* 80365494-803657A0 030C+00 rc=1 efc=0 .text      __fwrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__fwrite) {
+extern "C" asm static void __fwrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io/__fwrite.s"
 }
 #pragma pop
 
 
-/* 803657A0-8036581C 007C+00 .text      fwrite                                                       */
+/* 803657A0-8036581C 007C+00 rc=1 efc=1 .text      fwrite                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fwrite) {
+extern "C" asm void fwrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io/fwrite.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

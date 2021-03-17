@@ -6,22 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_lp_class;
+struct fopAc_ac_c;
+struct cXyz;
+struct wd_ss;
+
+struct obj_lp_class {
+};
+
+struct wd_ss {
+	~wd_ss();
+	wd_ss();
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Lp_Draw__FP12obj_lp_class();
-extern "C" extern void s_ks_sub__FPvPv();
-extern "C" extern void hit_check__FP12obj_lp_classP5wd_ss();
-extern "C" extern void hasu_action__FP12obj_lp_classP5wd_ss();
-extern "C" extern void set_out_check__FP12obj_lp_classP4cXyz();
-extern "C" extern void daObj_Lp_Execute__FP12obj_lp_class();
-extern "C" extern void daObj_Lp_IsDelete__FP12obj_lp_class();
-extern "C" extern void daObj_Lp_Delete__FP12obj_lp_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void set_pos_check__FP12obj_lp_classi();
-extern "C" extern void daObj_Lp_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__5wd_ssFv();
-extern "C" extern void __ct__5wd_ssFv();
+void daObj_Lp_Draw(obj_lp_class*);
+void s_ks_sub(void*, void*);
+void hit_check(obj_lp_class*, wd_ss*);
+void hasu_action(obj_lp_class*, wd_ss*);
+void set_out_check(obj_lp_class*, cXyz*);
+void daObj_Lp_Execute(obj_lp_class*);
+bool daObj_Lp_IsDelete(obj_lp_class*);
+void daObj_Lp_Delete(obj_lp_class*);
+void useHeapInit(fopAc_ac_c*);
+void set_pos_check(obj_lp_class*, s32);
+void daObj_Lp_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Lp_Draw__FP12obj_lp_class();
+extern "C" void s_ks_sub__FPvPv();
+extern "C" void hit_check__FP12obj_lp_classP5wd_ss();
+extern "C" void hasu_action__FP12obj_lp_classP5wd_ss();
+extern "C" void set_out_check__FP12obj_lp_classP4cXyz();
+extern "C" void daObj_Lp_Execute__FP12obj_lp_class();
+extern "C" bool daObj_Lp_IsDelete__FP12obj_lp_class();
+extern "C" void daObj_Lp_Delete__FP12obj_lp_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void set_pos_check__FP12obj_lp_classi();
+extern "C" void daObj_Lp_Create__FP10fopAc_ac_c();
+extern "C" void __dt__5wd_ssFv();
+extern "C" void __ct__5wd_ssFv();
 SECTION_RODATA extern const u32 lit_3916;
 SECTION_RODATA extern const u32 lit_3917;
 SECTION_RODATA extern const u8 lit_3918[4];
@@ -115,7 +150,9 @@ SECTION_BSS extern u8 data_80C55C14[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -125,7 +162,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lp_Draw__FP12obj_lp_class) {
+asm void daObj_Lp_Draw(obj_lp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Draw__FP12obj_lp_class.s"
 }
@@ -136,7 +173,7 @@ ASM_FUNCTION(daObj_Lp_Draw__FP12obj_lp_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ks_sub__FPvPv) {
+asm void s_ks_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/s_ks_sub__FPvPv.s"
 }
@@ -147,7 +184,7 @@ ASM_FUNCTION(s_ks_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_check__FP12obj_lp_classP5wd_ss) {
+asm void hit_check(obj_lp_class* field_0, wd_ss* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/hit_check__FP12obj_lp_classP5wd_ss.s"
 }
@@ -158,7 +195,7 @@ ASM_FUNCTION(hit_check__FP12obj_lp_classP5wd_ss) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hasu_action__FP12obj_lp_classP5wd_ss) {
+asm void hasu_action(obj_lp_class* field_0, wd_ss* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/hasu_action__FP12obj_lp_classP5wd_ss.s"
 }
@@ -169,7 +206,7 @@ ASM_FUNCTION(hasu_action__FP12obj_lp_classP5wd_ss) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_out_check__FP12obj_lp_classP4cXyz) {
+asm void set_out_check(obj_lp_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/set_out_check__FP12obj_lp_classP4cXyz.s"
 }
@@ -180,7 +217,7 @@ ASM_FUNCTION(set_out_check__FP12obj_lp_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lp_Execute__FP12obj_lp_class) {
+asm void daObj_Lp_Execute(obj_lp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Execute__FP12obj_lp_class.s"
 }
@@ -188,21 +225,16 @@ ASM_FUNCTION(daObj_Lp_Execute__FP12obj_lp_class) {
 
 
 /* 80C550F0-80C550F8 0008+00 .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lp_IsDelete__FP12obj_lp_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_IsDelete__FP12obj_lp_class.s"
+bool daObj_Lp_IsDelete(obj_lp_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C550F8-80C5518C 0094+00 .text      daObj_Lp_Delete__FP12obj_lp_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lp_Delete__FP12obj_lp_class) {
+asm void daObj_Lp_Delete(obj_lp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Delete__FP12obj_lp_class.s"
 }
@@ -213,7 +245,7 @@ ASM_FUNCTION(daObj_Lp_Delete__FP12obj_lp_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -224,7 +256,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_pos_check__FP12obj_lp_classi) {
+asm void set_pos_check(obj_lp_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/set_pos_check__FP12obj_lp_classi.s"
 }
@@ -235,7 +267,7 @@ ASM_FUNCTION(set_pos_check__FP12obj_lp_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lp_Create__FP10fopAc_ac_c) {
+asm void daObj_Lp_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Create__FP10fopAc_ac_c.s"
 }
@@ -246,7 +278,7 @@ ASM_FUNCTION(daObj_Lp_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5wd_ssFv) {
+asm wd_ss::~wd_ss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/__dt__5wd_ssFv.s"
 }
@@ -254,14 +286,9 @@ ASM_FUNCTION(__dt__5wd_ssFv) {
 
 
 /* 80C55A04-80C55A08 0004+00 .text      __ct__5wd_ssFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5wd_ssFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/__ct__5wd_ssFv.s"
+wd_ss::wd_ss() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

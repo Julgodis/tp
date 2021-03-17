@@ -6,38 +6,229 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JFWDisplay (JFWDisplay) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build JUTXfb (JUTXfb) False/False
+// build JUTXfb (JUTXfb) True/False
+struct JUTXfb;
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+/* top-level dependencies (begin JUTXfb) */
+// outer dependency: JUTXfb::EXfbNumber
+// outer dependency: JKRHeap
+/* top-level dependencies (end JUTXfb) */
+struct JUTXfb {
+	// JUTXfb::EXfbNumber
+	// JKRHeap
+	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
+	/* dependencies (begin JUTXfb::EXfbNumber) */
+	/* dependencies (end JUTXfb::EXfbNumber) */
+	struct EXfbNumber {
+	};
+
+	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
+	/* 802E5424 */ void destroyManager();
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build _GXRenderModeObj (_GXRenderModeObj) False/False
+/* top-level dependencies (begin _GXRenderModeObj) */
+/* top-level dependencies (end _GXRenderModeObj) */
+struct _GXRenderModeObj {
+};
+
+/* top-level dependencies (begin JFWDisplay) */
+// outer dependency: _GXColor
+// outer dependency: JUTXfb::EXfbNumber
+// outer dependency: JKRHeap
+// outer dependency: _GXRenderModeObj
+/* top-level dependencies (end JFWDisplay) */
+struct JFWDisplay {
+	// _GXColor
+	// JUTXfb::EXfbNumber
+	// JKRHeap
+	// _GXRenderModeObj
+	/* 80272040 */ void ctor_subroutine(bool);
+	/* 802720F8 */ JFWDisplay(JKRHeap*, JUTXfb::EXfbNumber, bool);
+	/* 80272160 */ ~JFWDisplay();
+	/* 802721DC */ void createManager(_GXRenderModeObj const*, JKRHeap*, JUTXfb::EXfbNumber, bool);
+	/* 802722B8 */ void prepareCopyDisp();
+	/* 802723AC */ void drawendXfb_single();
+	/* 802723F4 */ void exchangeXfb_double();
+	/* 802724FC */ void exchangeXfb_triple();
+	/* 80272574 */ void copyXfb_triple();
+	/* 802725F8 */ void preGX();
+	/* 8027268C */ void endGX();
+	/* 80272798 */ void beginRender();
+	/* 80272A04 */ void endRender();
+	/* 80272AB0 */ void endFrame();
+	/* 80272C60 */ void waitBlanking(s32);
+	/* 80272E10 */ void threadSleep(s64);
+	/* 80272EB8 */ void clearEfb_init();
+	/* 80272F2C */ void clearEfb();
+	/* 80272F58 */ void clearEfb(_GXColor);
+	/* 80272F9C */ void clearEfb(s32, s32, s32, s32, _GXColor);
+	/* 8027331C */ void calcCombinationRatio();
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build JUTXfb (JUTXfb) True/True
+// build _GXRenderModeObj (_GXRenderModeObj) True/True
+// build OSAlarm (OSAlarm) False/False
+/* top-level dependencies (begin OSAlarm) */
+/* top-level dependencies (end OSAlarm) */
+struct OSAlarm {
+};
+
+// build OSContext (OSContext) False/False
+/* top-level dependencies (begin OSContext) */
+/* top-level dependencies (end OSContext) */
+struct OSContext {
+};
+
+// build _GXColor (_GXColor) True/True
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) True/True
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBE74 */ JSUPtrList(bool);
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// build JUTDbPrint (JUTDbPrint) False/False
+/* top-level dependencies (begin JUTDbPrint) */
+/* top-level dependencies (end JUTDbPrint) */
+struct JUTDbPrint {
+	/* 802E02A4 */ void flush();
+};
+
+// build JUTDirectPrint (JUTDirectPrint) False/False
+/* top-level dependencies (begin JUTDirectPrint) */
+/* top-level dependencies (end JUTDirectPrint) */
+struct JUTDirectPrint {
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+};
+
+// build JUTAssertion (JUTAssertion) False/False
+/* top-level dependencies (begin JUTAssertion) */
+/* top-level dependencies (end JUTAssertion) */
+struct JUTAssertion {
+	/* 802E499C */ void flushMessage();
+	/* 802E4A54 */ void flushMessage_dbPrint();
+};
+
+// build JUTVideo (JUTVideo) False/False
+// build _GXRenderModeObj (_GXRenderModeObj) True/True
+/* top-level dependencies (begin JUTVideo) */
+// outer dependency: _GXRenderModeObj
+/* top-level dependencies (end JUTVideo) */
+struct JUTVideo {
+	// _GXRenderModeObj
+	/* 802E5088 */ void drawDoneStart();
+	/* 802E50B0 */ void dummyNoDrawWait();
+	/* 802E5198 */ void setRenderMode(_GXRenderModeObj const*);
+	/* 802E5210 */ void waitRetraceIfNeed();
+};
+
+// build JUTFader (JUTFader) False/False
+/* top-level dependencies (begin JUTFader) */
+/* top-level dependencies (end JUTFader) */
+struct JUTFader {
+	/* 802E55DC */ void control();
+};
+
+// build JUTProcBar (JUTProcBar) False/False
+/* top-level dependencies (begin JUTProcBar) */
+/* top-level dependencies (end JUTProcBar) */
+struct JUTProcBar {
+	/* 802E59E0 */ void create();
+	/* 802E5A28 */ void destroy();
+	/* 802E5A60 */ void clear();
+	/* 802E5E08 */ void draw();
+};
+
+// build JUTConsoleManager (JUTConsoleManager) False/False
+/* top-level dependencies (begin JUTConsoleManager) */
+/* top-level dependencies (end JUTConsoleManager) */
+struct JUTConsoleManager {
+	/* 802E8384 */ void draw() const;
+};
+
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+	/* 802E97B4 */ void setPort();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ctor_subroutine__10JFWDisplayFb();
-extern "C" extern void __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb();
-extern "C" extern void __dt__10JFWDisplayFv();
-extern "C" extern void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb();
-extern "C" extern void callDirectDraw__Fv();
-extern "C" extern void prepareCopyDisp__10JFWDisplayFv();
-extern "C" extern void drawendXfb_single__10JFWDisplayFv();
-extern "C" extern void exchangeXfb_double__10JFWDisplayFv();
-extern "C" extern void exchangeXfb_triple__10JFWDisplayFv();
-extern "C" extern void copyXfb_triple__10JFWDisplayFv();
-extern "C" extern void preGX__10JFWDisplayFv();
-extern "C" extern void endGX__10JFWDisplayFv();
-extern "C" extern void beginRender__10JFWDisplayFv();
-extern "C" extern void endRender__10JFWDisplayFv();
-extern "C" extern void endFrame__10JFWDisplayFv();
-extern "C" extern void waitBlanking__10JFWDisplayFi();
-extern "C" extern void waitForTick__FUlUs();
-extern "C" extern void JFWThreadAlarmHandler__FP7OSAlarmP9OSContext();
-extern "C" extern void threadSleep__10JFWDisplayFx();
-extern "C" extern void clearEfb_init__10JFWDisplayFv();
-extern "C" extern void clearEfb__10JFWDisplayFv();
-extern "C" extern void clearEfb__10JFWDisplayF8_GXColor();
-extern "C" extern void clearEfb__10JFWDisplayFiiii8_GXColor();
-extern "C" extern void calcCombinationRatio__10JFWDisplayFv();
-extern "C" extern void JFWDrawDoneAlarm__Fv();
-extern "C" extern void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext();
-extern "C" extern void diagnoseGpHang__Fv();
-extern "C" extern void __sinit_JFWDisplay_cpp();
-extern "C" extern void func_80273724();
+static void callDirectDraw();
+static void waitForTick(u32, u16);
+static void JFWThreadAlarmHandler(OSAlarm*, OSContext*);
+static void JFWDrawDoneAlarm();
+static void JFWGXAbortAlarmHandler(OSAlarm*, OSContext*);
+static void diagnoseGpHang();
+extern "C" void __sinit_JFWDisplay_cpp();
+extern "C" static void func_80273724();
+
+extern "C" void ctor_subroutine__10JFWDisplayFb();
+extern "C" void __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb();
+extern "C" void __dt__10JFWDisplayFv();
+extern "C" void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb();
+extern "C" static void callDirectDraw__Fv();
+extern "C" void prepareCopyDisp__10JFWDisplayFv();
+extern "C" void drawendXfb_single__10JFWDisplayFv();
+extern "C" void exchangeXfb_double__10JFWDisplayFv();
+extern "C" void exchangeXfb_triple__10JFWDisplayFv();
+extern "C" void copyXfb_triple__10JFWDisplayFv();
+extern "C" void preGX__10JFWDisplayFv();
+extern "C" void endGX__10JFWDisplayFv();
+extern "C" void beginRender__10JFWDisplayFv();
+extern "C" void endRender__10JFWDisplayFv();
+extern "C" void endFrame__10JFWDisplayFv();
+extern "C" void waitBlanking__10JFWDisplayFi();
+extern "C" static void waitForTick__FUlUs();
+extern "C" static void JFWThreadAlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" void threadSleep__10JFWDisplayFx();
+extern "C" void clearEfb_init__10JFWDisplayFv();
+extern "C" void clearEfb__10JFWDisplayFv();
+extern "C" void clearEfb__10JFWDisplayF8_GXColor();
+extern "C" void clearEfb__10JFWDisplayFiiii8_GXColor();
+extern "C" void calcCombinationRatio__10JFWDisplayFv();
+extern "C" static void JFWDrawDoneAlarm__Fv();
+extern "C" static void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" static void diagnoseGpHang__Fv();
+extern "C" void __sinit_JFWDisplay_cpp();
+extern "C" static void func_80273724();
 SECTION_RODATA extern const u8 JFWDisplay__stringBase0[208];
 SECTION_DATA extern u8 e_mtx[48 + 16 /* padding */];
 SECTION_DATA extern u8 clear_z_TX[64];
@@ -64,111 +255,193 @@ SECTION_SDATA2 extern f64 lit_2964;
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__10JSUPtrLinkFPv();
-extern "C" extern void __dt__10JSUPtrLinkFv();
-extern "C" extern void __ct__10JSUPtrListFb();
-extern "C" extern void __dt__10JSUPtrListFv();
-extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void flush__10JUTDbPrintFv();
-extern "C" extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
-extern "C" extern void flushMessage__12JUTAssertionFv();
-extern "C" extern void flushMessage_dbPrint__12JUTAssertionFv();
-extern "C" extern void drawDoneStart__8JUTVideoFv();
-extern "C" extern void dummyNoDrawWait__8JUTVideoFv();
-extern "C" extern void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
-extern "C" extern void waitRetraceIfNeed__8JUTVideoFv();
-extern "C" extern void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
-extern "C" extern void destroyManager__6JUTXfbFv();
-extern "C" extern void control__8JUTFaderFv();
-extern "C" extern void create__10JUTProcBarFv();
-extern "C" extern void destroy__10JUTProcBarFv();
-extern "C" extern void clear__10JUTProcBarFv();
-extern "C" extern void draw__10JUTProcBarFv();
-extern "C" extern void draw__17JUTConsoleManagerCFv();
-extern "C" extern void __ct__13J2DOrthoGraphFffffff();
-extern "C" extern void setPort__13J2DOrthoGraphFv();
-extern "C" extern void OSCreateAlarm();
-extern "C" extern void OSSetAlarm();
-extern "C" extern void OSCancelAlarm();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void OSReceiveMessage();
-extern "C" extern void OSGetCurrentThread();
-extern "C" extern void OSResumeThread();
-extern "C" extern void OSSuspendThread();
-extern "C" extern void OSGetTime();
-extern "C" extern void OSGetTick();
-extern "C" extern void C_MTXOrtho();
-extern "C" extern void VIFlush();
-extern "C" extern void VIGetRetraceCount();
-extern "C" extern void GXInit();
-extern "C" extern void GXGetGPStatus();
-extern "C" extern void GXGetFifoBase();
-extern "C" extern void GXGetFifoSize();
-extern "C" extern void GXGetCPUFifo();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXInvalidateVtxCache();
-extern "C" extern void GXSetTexCoordGen2();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXFlush();
-extern "C" extern void GXAbortFrame();
-extern "C" extern void GXSetDrawDone();
-extern "C" extern void GXDrawDone();
-extern "C" extern void GXPixModeSync();
-extern "C" extern void GXBegin();
-extern "C" extern void GXSetCullMode();
-extern "C" extern void GXSetDispCopySrc();
-extern "C" extern void GXSetDispCopyDst();
-extern "C" extern void GXSetCopyClamp();
-extern "C" extern void GXGetNumXfbLines();
-extern "C" extern void GXGetYScaleFactor();
-extern "C" extern void GXSetDispCopyYScale();
-extern "C" extern void GXSetCopyClear();
-extern "C" extern void GXSetCopyFilter();
-extern "C" extern void GXSetDispCopyGamma();
-extern "C" extern void GXCopyDisp();
-extern "C" extern void GXSetNumChans();
-extern "C" extern void GXSetChanCtrl();
-extern "C" extern void GXInitTexObj();
-extern "C" extern void GXInitTexObjLOD();
-extern "C" extern void GXLoadTexObj();
-extern "C" extern void GXInvalidateTexAll();
-extern "C" extern void GXSetTevColorIn();
-extern "C" extern void GXSetTevAlphaIn();
-extern "C" extern void GXSetTevColorOp();
-extern "C" extern void GXSetTevAlphaOp();
-extern "C" extern void GXSetTevColor();
-extern "C" extern void GXSetAlphaCompare();
-extern "C" extern void GXSetZTexture();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXSetBlendMode();
-extern "C" extern void GXSetAlphaUpdate();
-extern "C" extern void GXSetZMode();
-extern "C" extern void GXSetZCompLoc();
-extern "C" extern void GXSetPixelFmt();
-extern "C" extern void GXSetDither();
-extern "C" extern void GXSetDstAlpha();
-extern "C" extern void GXSetProjection();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void GXSetViewport();
-extern "C" extern void GXSetScissor();
-extern "C" extern void GXReadXfRasMetric();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void __cvt_dbl_usll();
+extern "C" void OSReport();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void OSCreateAlarm();
+extern "C" void OSSetAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSReceiveMessage();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetTime();
+extern "C" void OSGetTick();
+extern "C" void C_MTXOrtho();
+extern "C" void VIFlush();
+extern "C" void VIGetRetraceCount();
+extern "C" void GXInit();
+extern "C" void GXGetGPStatus();
+extern "C" void GXGetFifoBase();
+extern "C" void GXGetFifoSize();
+extern "C" void GXGetCPUFifo();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXInvalidateVtxCache();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXSetDrawDone();
+extern "C" void GXDrawDone();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetDispCopySrc();
+extern "C" void GXSetDispCopyDst();
+extern "C" void GXSetCopyClamp();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void GXSetDispCopyYScale();
+extern "C" void GXSetCopyClear();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXSetDispCopyGamma();
+extern "C" void GXCopyDisp();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInvalidateTexAll();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetPixelFmt();
+extern "C" void GXSetDither();
+extern "C" void GXSetDstAlpha();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXReadXfRasMetric();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __cvt_dbl_usll();
+
+extern "C" void OSReport();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void flush__10JUTDbPrintFv();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" void flushMessage__12JUTAssertionFv();
+extern "C" void flushMessage_dbPrint__12JUTAssertionFv();
+extern "C" void drawDoneStart__8JUTVideoFv();
+extern "C" void dummyNoDrawWait__8JUTVideoFv();
+extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void waitRetraceIfNeed__8JUTVideoFv();
+extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void destroyManager__6JUTXfbFv();
+extern "C" void control__8JUTFaderFv();
+extern "C" void create__10JUTProcBarFv();
+extern "C" void destroy__10JUTProcBarFv();
+extern "C" void clear__10JUTProcBarFv();
+extern "C" void draw__10JUTProcBarFv();
+extern "C" void draw__17JUTConsoleManagerCFv();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void OSCreateAlarm();
+extern "C" void OSSetAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSReceiveMessage();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetTime();
+extern "C" void OSGetTick();
+extern "C" void C_MTXOrtho();
+extern "C" void VIFlush();
+extern "C" void VIGetRetraceCount();
+extern "C" void GXInit();
+extern "C" void GXGetGPStatus();
+extern "C" void GXGetFifoBase();
+extern "C" void GXGetFifoSize();
+extern "C" void GXGetCPUFifo();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXInvalidateVtxCache();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXSetDrawDone();
+extern "C" void GXDrawDone();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetDispCopySrc();
+extern "C" void GXSetDispCopyDst();
+extern "C" void GXSetCopyClamp();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void GXSetDispCopyYScale();
+extern "C" void GXSetCopyClear();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXSetDispCopyGamma();
+extern "C" void GXCopyDisp();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInvalidateTexAll();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetPixelFmt();
+extern "C" void GXSetDither();
+extern "C" void GXSetDstAlpha();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXReadXfRasMetric();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __cvt_dbl_usll();
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
@@ -185,16 +458,16 @@ SECTION_SBSS extern u8 sManager__17JUTConsoleManager[4];
 // 
 
 /* ############################################################################################## */
-/* 80455250-80455254 0004+00 .sdata2    @2198                                                        */
+/* 80455250-80455254 0004+00 rc=4 efc=0 .sdata2    @2198                                                        */
 u8 lit_2198[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80272040-802720F8 00B8+00 .text      ctor_subroutine__10JFWDisplayFb                              */
+/* 80272040-802720F8 00B8+00 rc=1 efc=0 .text      ctor_subroutine__10JFWDisplayFb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctor_subroutine__10JFWDisplayFb) {
+asm void JFWDisplay::ctor_subroutine(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/ctor_subroutine__10JFWDisplayFb.s"
 }
@@ -202,7 +475,7 @@ ASM_FUNCTION(ctor_subroutine__10JFWDisplayFb) {
 
 
 /* ############################################################################################## */
-/* 803C4020-803C4060 0030+10 .data      e_mtx                                                        */
+/* 803C4020-803C4060 0030+10 rc=1 efc=0 .data      e_mtx                                                        */
 u8 e_mtx[64] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -211,7 +484,7 @@ u8 e_mtx[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4060-803C40A0 0040+00 .data      clear_z_TX                                                   */
+/* 803C4060-803C40A0 0040+00 rc=1 efc=0 .data      clear_z_TX                                                   */
 u8 clear_z_TX[64] = {
 	0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF,
 	0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0x00, 0xFF,
@@ -219,7 +492,7 @@ u8 clear_z_TX[64] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 803C40A0-803C40C0 0018+08 .data      __vt__10JFWDisplay                                           */
+/* 803C40A0-803C40C0 0018+08 rc=2 efc=0 .data      __vt__10JFWDisplay                                           */
 void* const __vt__10JFWDisplay[8] = {
 	NULL, /* RTTI */
 	NULL,
@@ -232,22 +505,22 @@ void* const __vt__10JFWDisplay[8] = {
 	NULL,
 };
 
-/* 802720F8-80272160 0068+00 .text      __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb           */
+/* 802720F8-80272160 0068+00 rc=1 efc=0 .text      __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb) {
+asm JFWDisplay::JFWDisplay(JKRHeap* field_0, JUTXfb::EXfbNumber field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/__ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb.s"
 }
 #pragma pop
 
 
-/* 80272160-802721DC 007C+00 .text      __dt__10JFWDisplayFv                                         */
+/* 80272160-802721DC 007C+00 rc=1 efc=0 .text      __dt__10JFWDisplayFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JFWDisplayFv) {
+asm JFWDisplay::~JFWDisplay() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/__dt__10JFWDisplayFv.s"
 }
@@ -255,91 +528,91 @@ ASM_FUNCTION(__dt__10JFWDisplayFv) {
 
 
 /* ############################################################################################## */
-/* 804511C0-804511C4 0004+00 .sbss      sManager__10JFWDisplay                                       */
+/* 804511C0-804511C4 0004+00 rc=42 efc=40 .sbss      sManager__10JFWDisplay                                       */
 u8 sManager__10JFWDisplay[4];
 
-/* 802721DC-80272260 0084+00 .text      createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */
+/* 802721DC-80272260 0084+00 rc=1 efc=1 .text      createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb) {
+asm void JFWDisplay::createManager(_GXRenderModeObj const* field_0, JKRHeap* field_1, JUTXfb::EXfbNumber field_2, bool field_3) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb.s"
 }
 #pragma pop
 
 
-/* 80272260-802722B8 0058+00 .text      callDirectDraw__Fv                                           */
+/* 80272260-802722B8 0058+00 rc=2 efc=0 .text      callDirectDraw__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callDirectDraw__Fv) {
+asm static void callDirectDraw() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/callDirectDraw__Fv.s"
 }
 #pragma pop
 
 
-/* 802722B8-802723AC 00F4+00 .text      prepareCopyDisp__10JFWDisplayFv                              */
+/* 802722B8-802723AC 00F4+00 rc=3 efc=0 .text      prepareCopyDisp__10JFWDisplayFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepareCopyDisp__10JFWDisplayFv) {
+asm void JFWDisplay::prepareCopyDisp() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/prepareCopyDisp__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 802723AC-802723F4 0048+00 .text      drawendXfb_single__10JFWDisplayFv                            */
+/* 802723AC-802723F4 0048+00 rc=1 efc=0 .text      drawendXfb_single__10JFWDisplayFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawendXfb_single__10JFWDisplayFv) {
+asm void JFWDisplay::drawendXfb_single() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/drawendXfb_single__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 802723F4-802724FC 0108+00 .text      exchangeXfb_double__10JFWDisplayFv                           */
+/* 802723F4-802724FC 0108+00 rc=1 efc=0 .text      exchangeXfb_double__10JFWDisplayFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exchangeXfb_double__10JFWDisplayFv) {
+asm void JFWDisplay::exchangeXfb_double() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/exchangeXfb_double__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 802724FC-80272574 0078+00 .text      exchangeXfb_triple__10JFWDisplayFv                           */
+/* 802724FC-80272574 0078+00 rc=1 efc=0 .text      exchangeXfb_triple__10JFWDisplayFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exchangeXfb_triple__10JFWDisplayFv) {
+asm void JFWDisplay::exchangeXfb_triple() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/exchangeXfb_triple__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272574-802725F8 0084+00 .text      copyXfb_triple__10JFWDisplayFv                               */
+/* 80272574-802725F8 0084+00 rc=1 efc=0 .text      copyXfb_triple__10JFWDisplayFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyXfb_triple__10JFWDisplayFv) {
+asm void JFWDisplay::copyXfb_triple() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/copyXfb_triple__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 802725F8-8027268C 0094+00 .text      preGX__10JFWDisplayFv                                        */
+/* 802725F8-8027268C 0094+00 rc=1 efc=0 .text      preGX__10JFWDisplayFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preGX__10JFWDisplayFv) {
+asm void JFWDisplay::preGX() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/preGX__10JFWDisplayFv.s"
 }
@@ -347,43 +620,43 @@ ASM_FUNCTION(preGX__10JFWDisplayFv) {
 
 
 /* ############################################################################################## */
-/* 80455254-80455258 0004+00 .sdata2    @2497                                                        */
+/* 80455254-80455258 0004+00 rc=1 efc=0 .sdata2    @2497                                                        */
 f32 lit_2497 = -1.0f;
 
-/* 80455258-80455260 0004+04 .sdata2    @2498                                                        */
+/* 80455258-80455260 0004+04 rc=3 efc=0 .sdata2    @2498                                                        */
 f32 lit_2498 = 1.0f;
 /* padding 4 bytes */
 
-/* 80455260-80455268 0008+00 .sdata2    @2500                                                        */
+/* 80455260-80455268 0008+00 rc=4 efc=0 .sdata2    @2500                                                        */
 f64 lit_2500 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8027268C-80272798 010C+00 .text      endGX__10JFWDisplayFv                                        */
+/* 8027268C-80272798 010C+00 rc=1 efc=0 .text      endGX__10JFWDisplayFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endGX__10JFWDisplayFv) {
+asm void JFWDisplay::endGX() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/endGX__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272798-80272A04 026C+00 .text      beginRender__10JFWDisplayFv                                  */
+/* 80272798-80272A04 026C+00 rc=1 efc=0 .text      beginRender__10JFWDisplayFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beginRender__10JFWDisplayFv) {
+asm void JFWDisplay::beginRender() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/beginRender__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272A04-80272AB0 00AC+00 .text      endRender__10JFWDisplayFv                                    */
+/* 80272A04-80272AB0 00AC+00 rc=1 efc=0 .text      endRender__10JFWDisplayFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endRender__10JFWDisplayFv) {
+asm void JFWDisplay::endRender() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/endRender__10JFWDisplayFv.s"
 }
@@ -391,28 +664,28 @@ ASM_FUNCTION(endRender__10JFWDisplayFv) {
 
 
 /* ############################################################################################## */
-/* 804511C4-804511C8 0004+00 .sbss      prevFrame$2597                                               */
+/* 804511C4-804511C8 0004+00 rc=1 efc=0 .sbss      prevFrame$2597                                               */
 u8 data_804511C4[4];
 
-/* 804511C8-804511D0 0008+00 .sbss      None                                                         */
+/* 804511C8-804511D0 0008+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_804511C8[8];
 
-/* 80272AB0-80272C60 01B0+00 .text      endFrame__10JFWDisplayFv                                     */
+/* 80272AB0-80272C60 01B0+00 rc=1 efc=0 .text      endFrame__10JFWDisplayFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endFrame__10JFWDisplayFv) {
+asm void JFWDisplay::endFrame() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/endFrame__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272C60-80272CB0 0050+00 .text      waitBlanking__10JFWDisplayFi                                 */
+/* 80272C60-80272CB0 0050+00 rc=2 efc=1 .text      waitBlanking__10JFWDisplayFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitBlanking__10JFWDisplayFi) {
+asm void JFWDisplay::waitBlanking(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/waitBlanking__10JFWDisplayFi.s"
 }
@@ -420,26 +693,26 @@ ASM_FUNCTION(waitBlanking__10JFWDisplayFi) {
 
 
 /* ############################################################################################## */
-/* 804511D0-804511D4 0004+00 .sbss      nextTick$2642                                                */
+/* 804511D0-804511D4 0004+00 rc=1 efc=0 .sbss      nextTick$2642                                                */
 u8 data_804511D0[4];
 
-/* 804511D4-804511D8 0004+00 .sbss      None                                                         */
+/* 804511D4-804511D8 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_804511D4[4];
 
-/* 804511D8-804511DC 0004+00 .sbss      None                                                         */
+/* 804511D8-804511DC 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_804511D8[4];
 
-/* 804511DC-804511E0 0004+00 .sbss      nextCount$2650                                               */
+/* 804511DC-804511E0 0004+00 rc=1 efc=0 .sbss      nextCount$2650                                               */
 u8 data_804511DC[4];
 
-/* 804511E0-804511E8 0008+00 .sbss      None                                                         */
+/* 804511E0-804511E8 0008+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_804511E0[8];
 
-/* 80272CB0-80272DD0 0120+00 .text      waitForTick__FUlUs                                           */
+/* 80272CB0-80272DD0 0120+00 rc=2 efc=0 .text      waitForTick__FUlUs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitForTick__FUlUs) {
+asm static void waitForTick(u32 field_0, u16 field_1) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/waitForTick__FUlUs.s"
 }
@@ -447,28 +720,28 @@ ASM_FUNCTION(waitForTick__FUlUs) {
 
 
 /* ############################################################################################## */
-/* 80430FD8-80430FE4 000C+00 .bss       @2184                                                        */
+/* 80430FD8-80430FE4 000C+00 rc=1 efc=0 .bss       @2184                                                        */
 u8 lit_2184[12];
 
-/* 80430FE4-80430FF0 000C+00 .bss       sList__8JFWAlarm                                             */
+/* 80430FE4-80430FF0 000C+00 rc=4 efc=0 .bss       sList__8JFWAlarm                                             */
 u8 sList__8JFWAlarm[12];
 
-/* 80272DD0-80272E10 0040+00 .text      JFWThreadAlarmHandler__FP7OSAlarmP9OSContext                 */
+/* 80272DD0-80272E10 0040+00 rc=1 efc=0 .text      JFWThreadAlarmHandler__FP7OSAlarmP9OSContext                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JFWThreadAlarmHandler__FP7OSAlarmP9OSContext) {
+asm static void JFWThreadAlarmHandler(OSAlarm* field_0, OSContext* field_1) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/JFWThreadAlarmHandler__FP7OSAlarmP9OSContext.s"
 }
 #pragma pop
 
 
-/* 80272E10-80272EB8 00A8+00 .text      threadSleep__10JFWDisplayFx                                  */
+/* 80272E10-80272EB8 00A8+00 rc=1 efc=0 .text      threadSleep__10JFWDisplayFx                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(threadSleep__10JFWDisplayFx) {
+asm void JFWDisplay::threadSleep(s64 field_0) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/threadSleep__10JFWDisplayFx.s"
 }
@@ -476,47 +749,47 @@ ASM_FUNCTION(threadSleep__10JFWDisplayFx) {
 
 
 /* ############################################################################################## */
-/* 80430FF0-80431010 0020+00 .bss       clear_z_tobj                                                 */
+/* 80430FF0-80431010 0020+00 rc=2 efc=0 .bss       clear_z_tobj                                                 */
 u8 clear_z_tobj[32];
 
-/* 80272EB8-80272F2C 0074+00 .text      clearEfb_init__10JFWDisplayFv                                */
+/* 80272EB8-80272F2C 0074+00 rc=1 efc=0 .text      clearEfb_init__10JFWDisplayFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearEfb_init__10JFWDisplayFv) {
+asm void JFWDisplay::clearEfb_init() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/clearEfb_init__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272F2C-80272F58 002C+00 .text      clearEfb__10JFWDisplayFv                                     */
+/* 80272F2C-80272F58 002C+00 rc=1 efc=0 .text      clearEfb__10JFWDisplayFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearEfb__10JFWDisplayFv) {
+asm void JFWDisplay::clearEfb() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/clearEfb__10JFWDisplayFv.s"
 }
 #pragma pop
 
 
-/* 80272F58-80272F9C 0044+00 .text      clearEfb__10JFWDisplayF8_GXColor                             */
+/* 80272F58-80272F9C 0044+00 rc=3 efc=0 .text      clearEfb__10JFWDisplayF8_GXColor                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearEfb__10JFWDisplayF8_GXColor) {
+asm void JFWDisplay::clearEfb(_GXColor field_0) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/clearEfb__10JFWDisplayF8_GXColor.s"
 }
 #pragma pop
 
 
-/* 80272F9C-8027331C 0380+00 .text      clearEfb__10JFWDisplayFiiii8_GXColor                         */
+/* 80272F9C-8027331C 0380+00 rc=1 efc=0 .text      clearEfb__10JFWDisplayFiiii8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearEfb__10JFWDisplayFiiii8_GXColor) {
+asm void JFWDisplay::clearEfb(s32 field_0, s32 field_1, s32 field_2, s32 field_3, _GXColor field_4) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/clearEfb__10JFWDisplayFiiii8_GXColor.s"
 }
@@ -524,14 +797,14 @@ ASM_FUNCTION(clearEfb__10JFWDisplayFiiii8_GXColor) {
 
 
 /* ############################################################################################## */
-/* 80455268-80455270 0008+00 .sdata2    @2933                                                        */
+/* 80455268-80455270 0008+00 rc=1 efc=0 .sdata2    @2933                                                        */
 f64 JFWDisplay__lit_2933 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8027331C-802733A8 008C+00 .text      calcCombinationRatio__10JFWDisplayFv                         */
+/* 8027331C-802733A8 008C+00 rc=1 efc=0 .text      calcCombinationRatio__10JFWDisplayFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCombinationRatio__10JFWDisplayFv) {
+asm void JFWDisplay::calcCombinationRatio() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/calcCombinationRatio__10JFWDisplayFv.s"
 }
@@ -539,25 +812,25 @@ ASM_FUNCTION(calcCombinationRatio__10JFWDisplayFv) {
 
 
 /* ############################################################################################## */
-/* 80455270-80455278 0008+00 .sdata2    @2964                                                        */
+/* 80455270-80455278 0008+00 rc=1 efc=0 .sdata2    @2964                                                        */
 f64 lit_2964 = 0.5;
 
-/* 802733A8-80273484 00DC+00 .text      JFWDrawDoneAlarm__Fv                                         */
+/* 802733A8-80273484 00DC+00 rc=2 efc=0 .text      JFWDrawDoneAlarm__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JFWDrawDoneAlarm__Fv) {
+asm static void JFWDrawDoneAlarm() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/JFWDrawDoneAlarm__Fv.s"
 }
 #pragma pop
 
 
-/* 80273484-802734FC 0078+00 .text      JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext                */
+/* 80273484-802734FC 0078+00 rc=1 efc=0 .text      JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext) {
+asm static void JFWGXAbortAlarmHandler(OSAlarm* field_0, OSContext* field_1) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext.s"
 }
@@ -565,7 +838,7 @@ ASM_FUNCTION(JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext) {
 
 
 /* ############################################################################################## */
-/* 8039A878-8039A948 00D0+00 .rodata    @stringBase0                                                 */
+/* 8039A878-8039A948 00D0+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -580,37 +853,36 @@ SECTION_DEAD char* const stringBase_8039A8FF =
 SECTION_DEAD char* const stringBase_8039A92F = "GP is in unknown state.\n";
 #pragma pop
 
-/* 802734FC-802736DC 01E0+00 .text      diagnoseGpHang__Fv                                           */
+/* 802734FC-802736DC 01E0+00 rc=1 efc=0 .text      diagnoseGpHang__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(diagnoseGpHang__Fv) {
+asm static void diagnoseGpHang() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/diagnoseGpHang__Fv.s"
 }
 #pragma pop
 
 
-/* 802736DC-80273724 0048+00 .text      __sinit_JFWDisplay_cpp                                       */
+/* 802736DC-80273724 0048+00 rc=1 efc=1 .text      __sinit_JFWDisplay_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JFWDisplay_cpp) {
+extern "C" asm void __sinit_JFWDisplay_cpp() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/__sinit_JFWDisplay_cpp.s"
 }
 #pragma pop
 
 
-/* 80273724-80273778 0054+00 .text      __dt__18JSUList<8JFWAlarm>Fv                                 */
+/* 80273724-80273778 0054+00 rc=1 efc=0 .text      __dt__18JSUList<8JFWAlarm>Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80273724) {
+extern "C" asm static void func_80273724() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/func_80273724.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

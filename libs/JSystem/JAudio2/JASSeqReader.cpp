@@ -6,101 +6,119 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASSeqReader (JASSeqReader) False/False
+/* top-level dependencies (begin JASSeqReader) */
+/* top-level dependencies (end JASSeqReader) */
+struct JASSeqReader {
+	/* 80296108 */ void init();
+	/* 80296148 */ void init(void*);
+	/* 8029618C */ void call(u32);
+	/* 802961CC */ void loopStart(u32);
+	/* 80296210 */ void loopEnd();
+	/* 8029627C */ void ret();
+	/* 802962B0 */ void readMidiValue();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__12JASSeqReaderFv();
-extern "C" extern void init__12JASSeqReaderFPv();
-extern "C" extern void call__12JASSeqReaderFUl();
-extern "C" extern void loopStart__12JASSeqReaderFUl();
-extern "C" extern void loopEnd__12JASSeqReaderFv();
-extern "C" extern void ret__12JASSeqReaderFv();
-extern "C" extern void readMidiValue__12JASSeqReaderFv();
+
+extern "C" void init__12JASSeqReaderFv();
+extern "C" void init__12JASSeqReaderFPv();
+extern "C" void call__12JASSeqReaderFUl();
+extern "C" void loopStart__12JASSeqReaderFUl();
+extern "C" void loopEnd__12JASSeqReaderFv();
+extern "C" void ret__12JASSeqReaderFv();
+extern "C" void readMidiValue__12JASSeqReaderFv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80296108-80296148 0040+00 .text      init__12JASSeqReaderFv                                       */
+/* 80296108-80296148 0040+00 rc=2 efc=2 .text      init__12JASSeqReaderFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__12JASSeqReaderFv) {
+asm void JASSeqReader::init() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/init__12JASSeqReaderFv.s"
 }
 #pragma pop
 
 
-/* 80296148-8029618C 0044+00 .text      init__12JASSeqReaderFPv                                      */
+/* 80296148-8029618C 0044+00 rc=1 efc=1 .text      init__12JASSeqReaderFPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__12JASSeqReaderFPv) {
+asm void JASSeqReader::init(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/init__12JASSeqReaderFPv.s"
 }
 #pragma pop
 
 
-/* 8029618C-802961CC 0040+00 .text      call__12JASSeqReaderFUl                                      */
+/* 8029618C-802961CC 0040+00 rc=3 efc=3 .text      call__12JASSeqReaderFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(call__12JASSeqReaderFUl) {
+asm void JASSeqReader::call(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/call__12JASSeqReaderFUl.s"
 }
 #pragma pop
 
 
-/* 802961CC-80296210 0044+00 .text      loopStart__12JASSeqReaderFUl                                 */
+/* 802961CC-80296210 0044+00 rc=1 efc=1 .text      loopStart__12JASSeqReaderFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loopStart__12JASSeqReaderFUl) {
+asm void JASSeqReader::loopStart(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/loopStart__12JASSeqReaderFUl.s"
 }
 #pragma pop
 
 
-/* 80296210-8029627C 006C+00 .text      loopEnd__12JASSeqReaderFv                                    */
+/* 80296210-8029627C 006C+00 rc=1 efc=1 .text      loopEnd__12JASSeqReaderFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loopEnd__12JASSeqReaderFv) {
+asm void JASSeqReader::loopEnd() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/loopEnd__12JASSeqReaderFv.s"
 }
 #pragma pop
 
 
-/* 8029627C-802962B0 0034+00 .text      ret__12JASSeqReaderFv                                        */
+/* 8029627C-802962B0 0034+00 rc=2 efc=2 .text      ret__12JASSeqReaderFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ret__12JASSeqReaderFv) {
+asm void JASSeqReader::ret() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/ret__12JASSeqReaderFv.s"
 }
 #pragma pop
 
 
-/* 802962B0-8029631C 006C+00 .text      readMidiValue__12JASSeqReaderFv                              */
+/* 802962B0-8029631C 006C+00 rc=2 efc=2 .text      readMidiValue__12JASSeqReaderFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readMidiValue__12JASSeqReaderFv) {
+asm void JASSeqReader::readMidiValue() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqReader/readMidiValue__12JASSeqReaderFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

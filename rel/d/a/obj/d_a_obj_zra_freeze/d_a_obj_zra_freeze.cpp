@@ -6,23 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daZraFreeze_c;
+
+struct daZraFreeze_c {
+	void setBaseMtx();
+	void chkActorInScreen();
+	void Create();
+	void CreateHeap();
+	void setHitodamaPrtcl();
+	void Execute();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setBaseMtx__13daZraFreeze_cFv();
-extern "C" extern void chkActorInScreen__13daZraFreeze_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void Create__13daZraFreeze_cFv();
-extern "C" extern void CreateHeap__13daZraFreeze_cFv();
-extern "C" extern void setHitodamaPrtcl__13daZraFreeze_cFv();
-extern "C" extern void Execute__13daZraFreeze_cFv();
-extern "C" extern void Draw__13daZraFreeze_cFv();
-extern "C" extern void Delete__13daZraFreeze_cFv();
-extern "C" extern void daZraFreeze_Draw__FP13daZraFreeze_c();
-extern "C" extern void daZraFreeze_Execute__FP13daZraFreeze_c();
-extern "C" extern void daZraFreeze_IsDelete__FP13daZraFreeze_c();
-extern "C" extern void daZraFreeze_Delete__FP13daZraFreeze_c();
-extern "C" extern void daZraFreeze_create__FP10fopAc_ac_c();
+void createSolidHeap(fopAc_ac_c*);
+void daZraFreeze_Draw(daZraFreeze_c*);
+void daZraFreeze_Execute(daZraFreeze_c*);
+bool daZraFreeze_IsDelete(daZraFreeze_c*);
+void daZraFreeze_Delete(daZraFreeze_c*);
+void daZraFreeze_create(fopAc_ac_c*);
+
+extern "C" void setBaseMtx__13daZraFreeze_cFv();
+extern "C" void chkActorInScreen__13daZraFreeze_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void Create__13daZraFreeze_cFv();
+extern "C" void CreateHeap__13daZraFreeze_cFv();
+extern "C" void setHitodamaPrtcl__13daZraFreeze_cFv();
+extern "C" void Execute__13daZraFreeze_cFv();
+extern "C" void Draw__13daZraFreeze_cFv();
+extern "C" void Delete__13daZraFreeze_cFv();
+extern "C" void daZraFreeze_Draw__FP13daZraFreeze_c();
+extern "C" void daZraFreeze_Execute__FP13daZraFreeze_c();
+extern "C" bool daZraFreeze_IsDelete__FP13daZraFreeze_c();
+extern "C" void daZraFreeze_Delete__FP13daZraFreeze_c();
+extern "C" void daZraFreeze_create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_DATA[8];
 SECTION_RODATA extern const u8 lit_3763[4];
 SECTION_RODATA extern const u32 lit_3764;
@@ -45,7 +73,9 @@ SECTION_DATA extern u8 g_profile_OBJ_ZRAFREEZE[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -55,7 +85,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/setBaseMtx__13daZraFreeze_cFv.s"
 }
@@ -66,7 +96,7 @@ ASM_FUNCTION(setBaseMtx__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkActorInScreen__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::chkActorInScreen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/chkActorInScreen__13daZraFreeze_cFv.s"
 }
@@ -77,7 +107,7 @@ ASM_FUNCTION(chkActorInScreen__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -88,7 +118,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Create__13daZraFreeze_cFv.s"
 }
@@ -99,7 +129,7 @@ ASM_FUNCTION(Create__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/CreateHeap__13daZraFreeze_cFv.s"
 }
@@ -110,7 +140,7 @@ ASM_FUNCTION(CreateHeap__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHitodamaPrtcl__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::setHitodamaPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/setHitodamaPrtcl__13daZraFreeze_cFv.s"
 }
@@ -121,7 +151,7 @@ ASM_FUNCTION(setHitodamaPrtcl__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Execute__13daZraFreeze_cFv.s"
 }
@@ -132,7 +162,7 @@ ASM_FUNCTION(Execute__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Draw__13daZraFreeze_cFv.s"
 }
@@ -143,7 +173,7 @@ ASM_FUNCTION(Draw__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daZraFreeze_cFv) {
+asm void daZraFreeze_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Delete__13daZraFreeze_cFv.s"
 }
@@ -154,7 +184,7 @@ ASM_FUNCTION(Delete__13daZraFreeze_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZraFreeze_Draw__FP13daZraFreeze_c) {
+asm void daZraFreeze_Draw(daZraFreeze_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Draw__FP13daZraFreeze_c.s"
 }
@@ -165,7 +195,7 @@ ASM_FUNCTION(daZraFreeze_Draw__FP13daZraFreeze_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZraFreeze_Execute__FP13daZraFreeze_c) {
+asm void daZraFreeze_Execute(daZraFreeze_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Execute__FP13daZraFreeze_c.s"
 }
@@ -173,21 +203,16 @@ ASM_FUNCTION(daZraFreeze_Execute__FP13daZraFreeze_c) {
 
 
 /* 80D44AF8-80D44B00 0008+00 .text      daZraFreeze_IsDelete__FP13daZraFreeze_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daZraFreeze_IsDelete__FP13daZraFreeze_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_IsDelete__FP13daZraFreeze_c.s"
+bool daZraFreeze_IsDelete(daZraFreeze_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D44B00-80D44B20 0020+00 .text      daZraFreeze_Delete__FP13daZraFreeze_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZraFreeze_Delete__FP13daZraFreeze_c) {
+asm void daZraFreeze_Delete(daZraFreeze_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Delete__FP13daZraFreeze_c.s"
 }
@@ -198,7 +223,7 @@ ASM_FUNCTION(daZraFreeze_Delete__FP13daZraFreeze_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZraFreeze_create__FP10fopAc_ac_c) {
+asm void daZraFreeze_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_create__FP10fopAc_ac_c.s"
 }

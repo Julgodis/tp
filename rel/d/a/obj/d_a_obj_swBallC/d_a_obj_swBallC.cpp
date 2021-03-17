@@ -6,39 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSwBallC_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjSwBallC_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void setLightOnSwB();
+	void setLightOffSwB();
+	void deleteLightBall();
+	void deleteLightBallA();
+	void deleteLightBallB();
+	void calcLightBallScale();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void s_swb_sub__FPvPv();
-extern "C" extern void s_ballA_sub__FPvPv();
-extern "C" extern void s_ballB_sub__FPvPv();
-extern "C" extern void initBaseMtx__14daObjSwBallC_cFv();
-extern "C" extern void setBaseMtx__14daObjSwBallC_cFv();
-extern "C" extern void Create__14daObjSwBallC_cFv();
-extern "C" extern void CreateHeap__14daObjSwBallC_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__14daObjSwBallC_cFv();
-extern "C" extern void execute__14daObjSwBallC_cFv();
-extern "C" extern void event_proc_call__14daObjSwBallC_cFv();
-extern "C" extern void actionWait__14daObjSwBallC_cFv();
-extern "C" extern void actionOrderEvent__14daObjSwBallC_cFv();
-extern "C" extern void actionEvent__14daObjSwBallC_cFv();
-extern "C" extern void actionDead__14daObjSwBallC_cFv();
-extern "C" extern void demoProc__14daObjSwBallC_cFv();
-extern "C" extern void setLightOnSwB__14daObjSwBallC_cFv();
-extern "C" extern void setLightOffSwB__14daObjSwBallC_cFv();
-extern "C" extern void deleteLightBall__14daObjSwBallC_cFv();
-extern "C" extern void deleteLightBallA__14daObjSwBallC_cFv();
-extern "C" extern void deleteLightBallB__14daObjSwBallC_cFv();
-extern "C" extern void calcLightBallScale__14daObjSwBallC_cFv();
-extern "C" extern void draw__14daObjSwBallC_cFv();
-extern "C" extern void _delete__14daObjSwBallC_cFv();
-extern "C" extern void daObjSwBallC_Draw__FP14daObjSwBallC_c();
-extern "C" extern void daObjSwBallC_Execute__FP14daObjSwBallC_c();
-extern "C" extern void daObjSwBallC_Delete__FP14daObjSwBallC_c();
-extern "C" extern void daObjSwBallC_Create__FP14daObjSwBallC_c();
-extern "C" extern void func_80CF6CB0();
+void CheckCreateHeap(fopAc_ac_c*);
+void s_swb_sub(void*, void*);
+void s_ballA_sub(void*, void*);
+void s_ballB_sub(void*, void*);
+void daObjSwBallC_Draw(daObjSwBallC_c*);
+void daObjSwBallC_Execute(daObjSwBallC_c*);
+void daObjSwBallC_Delete(daObjSwBallC_c*);
+void daObjSwBallC_Create(daObjSwBallC_c*);
+extern "C" void func_80CF6CB0();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void s_swb_sub__FPvPv();
+extern "C" void s_ballA_sub__FPvPv();
+extern "C" void s_ballB_sub__FPvPv();
+extern "C" void initBaseMtx__14daObjSwBallC_cFv();
+extern "C" void setBaseMtx__14daObjSwBallC_cFv();
+extern "C" void Create__14daObjSwBallC_cFv();
+extern "C" void CreateHeap__14daObjSwBallC_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__14daObjSwBallC_cFv();
+extern "C" void execute__14daObjSwBallC_cFv();
+extern "C" void event_proc_call__14daObjSwBallC_cFv();
+extern "C" void actionWait__14daObjSwBallC_cFv();
+extern "C" void actionOrderEvent__14daObjSwBallC_cFv();
+extern "C" void actionEvent__14daObjSwBallC_cFv();
+extern "C" void actionDead__14daObjSwBallC_cFv();
+extern "C" void demoProc__14daObjSwBallC_cFv();
+extern "C" void setLightOnSwB__14daObjSwBallC_cFv();
+extern "C" void setLightOffSwB__14daObjSwBallC_cFv();
+extern "C" void deleteLightBall__14daObjSwBallC_cFv();
+extern "C" void deleteLightBallA__14daObjSwBallC_cFv();
+extern "C" void deleteLightBallB__14daObjSwBallC_cFv();
+extern "C" void calcLightBallScale__14daObjSwBallC_cFv();
+extern "C" void draw__14daObjSwBallC_cFv();
+extern "C" void _delete__14daObjSwBallC_cFv();
+extern "C" void daObjSwBallC_Draw__FP14daObjSwBallC_c();
+extern "C" void daObjSwBallC_Execute__FP14daObjSwBallC_c();
+extern "C" void daObjSwBallC_Delete__FP14daObjSwBallC_c();
+extern "C" void daObjSwBallC_Create__FP14daObjSwBallC_c();
+extern "C" void func_80CF6CB0();
 SECTION_RODATA extern const u32 l_color;
 SECTION_RODATA extern const u32 lit_3697;
 SECTION_RODATA extern const u32 lit_3814;
@@ -73,7 +120,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -83,7 +132,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -94,7 +143,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_swb_sub__FPvPv) {
+asm void s_swb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/s_swb_sub__FPvPv.s"
 }
@@ -105,7 +154,7 @@ ASM_FUNCTION(s_swb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ballA_sub__FPvPv) {
+asm void s_ballA_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/s_ballA_sub__FPvPv.s"
 }
@@ -116,7 +165,7 @@ ASM_FUNCTION(s_ballA_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ballB_sub__FPvPv) {
+asm void s_ballB_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/s_ballB_sub__FPvPv.s"
 }
@@ -127,7 +176,7 @@ ASM_FUNCTION(s_ballB_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/initBaseMtx__14daObjSwBallC_cFv.s"
 }
@@ -138,7 +187,7 @@ ASM_FUNCTION(initBaseMtx__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/setBaseMtx__14daObjSwBallC_cFv.s"
 }
@@ -149,7 +198,7 @@ ASM_FUNCTION(setBaseMtx__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/Create__14daObjSwBallC_cFv.s"
 }
@@ -160,7 +209,7 @@ ASM_FUNCTION(Create__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/CreateHeap__14daObjSwBallC_cFv.s"
 }
@@ -171,7 +220,7 @@ ASM_FUNCTION(CreateHeap__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/__dt__12J3DFrameCtrlFv.s"
 }
@@ -182,7 +231,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/func_80CF606C.s"
 }
@@ -193,7 +242,7 @@ ASM_FUNCTION(create__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/execute__14daObjSwBallC_cFv.s"
 }
@@ -204,7 +253,7 @@ ASM_FUNCTION(execute__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/event_proc_call__14daObjSwBallC_cFv.s"
 }
@@ -215,7 +264,7 @@ ASM_FUNCTION(event_proc_call__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/actionWait__14daObjSwBallC_cFv.s"
 }
@@ -226,7 +275,7 @@ ASM_FUNCTION(actionWait__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/actionOrderEvent__14daObjSwBallC_cFv.s"
 }
@@ -237,7 +286,7 @@ ASM_FUNCTION(actionOrderEvent__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/actionEvent__14daObjSwBallC_cFv.s"
 }
@@ -245,21 +294,16 @@ ASM_FUNCTION(actionEvent__14daObjSwBallC_cFv) {
 
 
 /* 80CF63F0-80CF63F4 0004+00 .text      actionDead__14daObjSwBallC_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__14daObjSwBallC_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/actionDead__14daObjSwBallC_cFv.s"
+void daObjSwBallC_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CF63F4-80CF6818 0424+00 .text      demoProc__14daObjSwBallC_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/demoProc__14daObjSwBallC_cFv.s"
 }
@@ -270,7 +314,7 @@ ASM_FUNCTION(demoProc__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightOnSwB__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::setLightOnSwB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/setLightOnSwB__14daObjSwBallC_cFv.s"
 }
@@ -281,7 +325,7 @@ ASM_FUNCTION(setLightOnSwB__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightOffSwB__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::setLightOffSwB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/setLightOffSwB__14daObjSwBallC_cFv.s"
 }
@@ -292,7 +336,7 @@ ASM_FUNCTION(setLightOffSwB__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteLightBall__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::deleteLightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/deleteLightBall__14daObjSwBallC_cFv.s"
 }
@@ -303,7 +347,7 @@ ASM_FUNCTION(deleteLightBall__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteLightBallA__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::deleteLightBallA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/deleteLightBallA__14daObjSwBallC_cFv.s"
 }
@@ -314,7 +358,7 @@ ASM_FUNCTION(deleteLightBallA__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteLightBallB__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::deleteLightBallB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/deleteLightBallB__14daObjSwBallC_cFv.s"
 }
@@ -325,7 +369,7 @@ ASM_FUNCTION(deleteLightBallB__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcLightBallScale__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::calcLightBallScale() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/calcLightBallScale__14daObjSwBallC_cFv.s"
 }
@@ -336,7 +380,7 @@ ASM_FUNCTION(calcLightBallScale__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/draw__14daObjSwBallC_cFv.s"
 }
@@ -347,7 +391,7 @@ ASM_FUNCTION(draw__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjSwBallC_cFv) {
+asm void daObjSwBallC_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/_delete__14daObjSwBallC_cFv.s"
 }
@@ -358,7 +402,7 @@ ASM_FUNCTION(_delete__14daObjSwBallC_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwBallC_Draw__FP14daObjSwBallC_c) {
+asm void daObjSwBallC_Draw(daObjSwBallC_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/daObjSwBallC_Draw__FP14daObjSwBallC_c.s"
 }
@@ -369,7 +413,7 @@ ASM_FUNCTION(daObjSwBallC_Draw__FP14daObjSwBallC_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwBallC_Execute__FP14daObjSwBallC_c) {
+asm void daObjSwBallC_Execute(daObjSwBallC_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/daObjSwBallC_Execute__FP14daObjSwBallC_c.s"
 }
@@ -380,7 +424,7 @@ ASM_FUNCTION(daObjSwBallC_Execute__FP14daObjSwBallC_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwBallC_Delete__FP14daObjSwBallC_c) {
+asm void daObjSwBallC_Delete(daObjSwBallC_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/daObjSwBallC_Delete__FP14daObjSwBallC_c.s"
 }
@@ -391,7 +435,7 @@ ASM_FUNCTION(daObjSwBallC_Delete__FP14daObjSwBallC_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwBallC_Create__FP14daObjSwBallC_c) {
+asm void daObjSwBallC_Create(daObjSwBallC_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/daObjSwBallC_Create__FP14daObjSwBallC_c.s"
 }
@@ -402,7 +446,7 @@ ASM_FUNCTION(daObjSwBallC_Create__FP14daObjSwBallC_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CF6CB0) {
+extern "C" asm void func_80CF6CB0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/func_80CF6CB0.s"
 }

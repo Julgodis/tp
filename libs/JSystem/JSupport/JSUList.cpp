@@ -6,152 +6,186 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) True/True
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBE74 */ JSUPtrList(bool);
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DBF28 */ void setFirst(JSUPtrLink*);
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+	/* 802DC20C */ void getNthLink(u32) const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10JSUPtrLinkFPv();
-extern "C" extern void __dt__10JSUPtrLinkFv();
-extern "C" extern void __ct__10JSUPtrListFb();
-extern "C" extern void __dt__10JSUPtrListFv();
-extern "C" extern void initiate__10JSUPtrListFv();
-extern "C" extern void setFirst__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void prepend__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void getNthLink__10JSUPtrListCFUl();
+
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void setFirst__10JSUPtrListFP10JSUPtrLink();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void getNthLink__10JSUPtrListCFUl();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 802DBDFC-802DBE14 0018+00 .text      __ct__10JSUPtrLinkFPv                                        */
+/* 802DBDFC-802DBE14 0018+00 rc=34 efc=34 .text      __ct__10JSUPtrLinkFPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JSUPtrLinkFPv) {
+asm JSUPtrLink::JSUPtrLink(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/__ct__10JSUPtrLinkFPv.s"
 }
 #pragma pop
 
 
-/* 802DBE14-802DBE74 0060+00 .text      __dt__10JSUPtrLinkFv                                         */
+/* 802DBE14-802DBE74 0060+00 rc=27 efc=27 .text      __dt__10JSUPtrLinkFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JSUPtrLinkFv) {
+asm JSUPtrLink::~JSUPtrLink() {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/__dt__10JSUPtrLinkFv.s"
 }
 #pragma pop
 
 
-/* 802DBE74-802DBEAC 0038+00 .text      __ct__10JSUPtrListFb                                         */
+/* 802DBE74-802DBEAC 0038+00 rc=4 efc=4 .text      __ct__10JSUPtrListFb                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JSUPtrListFb) {
+asm JSUPtrList::JSUPtrList(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/__ct__10JSUPtrListFb.s"
 }
 #pragma pop
 
 
-/* 802DBEAC-802DBF14 0068+00 .text      __dt__10JSUPtrListFv                                         */
+/* 802DBEAC-802DBF14 0068+00 rc=25 efc=25 .text      __dt__10JSUPtrListFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JSUPtrListFv) {
+asm JSUPtrList::~JSUPtrList() {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/__dt__10JSUPtrListFv.s"
 }
 #pragma pop
 
 
-/* 802DBF14-802DBF28 0014+00 .text      initiate__10JSUPtrListFv                                     */
+/* 802DBF14-802DBF28 0014+00 rc=28 efc=27 .text      initiate__10JSUPtrListFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__10JSUPtrListFv) {
+asm void JSUPtrList::initiate() {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/initiate__10JSUPtrListFv.s"
 }
 #pragma pop
 
 
-/* 802DBF28-802DBF4C 0024+00 .text      setFirst__10JSUPtrListFP10JSUPtrLink                         */
+/* 802DBF28-802DBF4C 0024+00 rc=2 efc=0 .text      setFirst__10JSUPtrListFP10JSUPtrLink                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFirst__10JSUPtrListFP10JSUPtrLink) {
+asm void JSUPtrList::setFirst(JSUPtrLink* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/setFirst__10JSUPtrListFP10JSUPtrLink.s"
 }
 #pragma pop
 
 
-/* 802DBF4C-802DBFF0 00A4+00 .text      append__10JSUPtrListFP10JSUPtrLink                           */
+/* 802DBF4C-802DBFF0 00A4+00 rc=30 efc=29 .text      append__10JSUPtrListFP10JSUPtrLink                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__10JSUPtrListFP10JSUPtrLink) {
+asm void JSUPtrList::append(JSUPtrLink* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/append__10JSUPtrListFP10JSUPtrLink.s"
 }
 #pragma pop
 
 
-/* 802DBFF0-802DC094 00A4+00 .text      prepend__10JSUPtrListFP10JSUPtrLink                          */
+/* 802DBFF0-802DC094 00A4+00 rc=9 efc=8 .text      prepend__10JSUPtrListFP10JSUPtrLink                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prepend__10JSUPtrListFP10JSUPtrLink) {
+asm void JSUPtrList::prepend(JSUPtrLink* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/prepend__10JSUPtrListFP10JSUPtrLink.s"
 }
 #pragma pop
 
 
-/* 802DC094-802DC15C 00C8+00 .text      insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink              */
+/* 802DC094-802DC15C 00C8+00 rc=4 efc=4 .text      insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink) {
+asm void JSUPtrList::insert(JSUPtrLink* field_0, JSUPtrLink* field_1) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink.s"
 }
 #pragma pop
 
 
-/* 802DC15C-802DC20C 00B0+00 .text      remove__10JSUPtrListFP10JSUPtrLink                           */
+/* 802DC15C-802DC20C 00B0+00 rc=35 efc=31 .text      remove__10JSUPtrListFP10JSUPtrLink                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__10JSUPtrListFP10JSUPtrLink) {
+asm void JSUPtrList::remove(JSUPtrLink* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/remove__10JSUPtrListFP10JSUPtrLink.s"
 }
 #pragma pop
 
 
-/* 802DC20C-802DC23C 0030+00 .text      getNthLink__10JSUPtrListCFUl                                 */
+/* 802DC20C-802DC23C 0030+00 rc=3 efc=3 .text      getNthLink__10JSUPtrListCFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNthLink__10JSUPtrListCFUl) {
+asm void JSUPtrList::getNthLink(u32 field_0) const {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUList/getNthLink__10JSUPtrListCFUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

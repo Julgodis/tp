@@ -9,29 +9,33 @@
 // Forward References:
 // 
 
-extern "C" extern void GXCallDisplayList();
+extern "C" void GXCallDisplayList();
+
+extern "C" void GXCallDisplayList();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __GXSetDirtyState();
-extern "C" extern void __GXSendFlushPrim();
+extern "C" void __GXSetDirtyState();
+extern "C" void __GXSendFlushPrim();
+
+extern "C" void __GXSetDirtyState();
+extern "C" void __GXSendFlushPrim();
 SECTION_SDATA2 extern void*__GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035FEF0-8035FF60 0070+00 .text      GXCallDisplayList                                            */
+/* 8035FEF0-8035FF60 0070+00 rc=20 efc=20 .text      GXCallDisplayList                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXCallDisplayList) {
+extern "C" asm void GXCallDisplayList() {
 	nofralloc
 #include "asm/dolphin/gx/GXDisplayList/GXCallDisplayList.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

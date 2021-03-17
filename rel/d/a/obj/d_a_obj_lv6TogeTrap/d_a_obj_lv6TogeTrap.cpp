@@ -6,62 +6,153 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv6TogeTrap_c;
+
+struct daLv6TogeTrap_HIO_c {
+	daLv6TogeTrap_HIO_c();
+	~daLv6TogeTrap_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6TogeTrap_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void searchSekizoAct(void*, void*);
+	void moveLift();
+	void executeType1();
+	void init_modeBound();
+	void modeBound();
+	void init_modeBoundWait();
+	void modeBoundWait();
+	void init_modeAcc();
+	void modeAcc();
+	void init_modeMove();
+	void modeMove();
+	void init_modeBrk();
+	void modeBrk();
+	void init_modeMove2();
+	void modeMove2();
+	void init_modeWaitInit();
+	void modeWaitInit();
+	void init_modeWait();
+	void modeWait();
+	void executeType2();
+	void init_modeWaitType2();
+	void modeWaitType2();
+	void init_modeMoveInitType2();
+	void modeMoveInitType2();
+	void init_modeAccType2();
+	void modeAccType2();
+	void init_modeWaitAttackType2();
+	void modeWaitAttackType2();
+	void init_modeRotate();
+	void modeRotate();
+	void init_modeBreak();
+	void modeBreak();
+	void setNextPoint();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19daLv6TogeTrap_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__15daLv6TogeTrap_cFv();
-extern "C" extern void CreateHeap__15daLv6TogeTrap_cFv();
-extern "C" extern void create__15daLv6TogeTrap_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void searchSekizoAct__15daLv6TogeTrap_cFPvPv();
-extern "C" extern void Execute__15daLv6TogeTrap_cFPPA3_A4_f();
-extern "C" extern void moveLift__15daLv6TogeTrap_cFv();
-extern "C" extern void executeType1__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeBound__15daLv6TogeTrap_cFv();
-extern "C" extern void modeBound__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeBoundWait__15daLv6TogeTrap_cFv();
-extern "C" extern void modeBoundWait__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeAcc__15daLv6TogeTrap_cFv();
-extern "C" extern void modeAcc__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeMove__15daLv6TogeTrap_cFv();
-extern "C" extern void modeMove__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeBrk__15daLv6TogeTrap_cFv();
-extern "C" extern void modeBrk__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeMove2__15daLv6TogeTrap_cFv();
-extern "C" extern void modeMove2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeWaitInit__15daLv6TogeTrap_cFv();
-extern "C" extern void modeWaitInit__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeWait__15daLv6TogeTrap_cFv();
-extern "C" extern void modeWait__15daLv6TogeTrap_cFv();
-extern "C" extern void executeType2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeWaitType2__15daLv6TogeTrap_cFv();
-extern "C" extern void modeWaitType2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeMoveInitType2__15daLv6TogeTrap_cFv();
-extern "C" extern void modeMoveInitType2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeAccType2__15daLv6TogeTrap_cFv();
-extern "C" extern void modeAccType2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeWaitAttackType2__15daLv6TogeTrap_cFv();
-extern "C" extern void modeWaitAttackType2__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeRotate__15daLv6TogeTrap_cFv();
-extern "C" extern void modeRotate__15daLv6TogeTrap_cFv();
-extern "C" extern void init_modeBreak__15daLv6TogeTrap_cFv();
-extern "C" extern void modeBreak__15daLv6TogeTrap_cFv();
-extern "C" extern void setNextPoint__15daLv6TogeTrap_cFv();
-extern "C" extern void Draw__15daLv6TogeTrap_cFv();
-extern "C" extern void Delete__15daLv6TogeTrap_cFv();
-extern "C" extern void daLv6TogeTrap_Draw__FP15daLv6TogeTrap_c();
-extern "C" extern void daLv6TogeTrap_Execute__FP15daLv6TogeTrap_c();
-extern "C" extern void daLv6TogeTrap_Delete__FP15daLv6TogeTrap_c();
-extern "C" extern void daLv6TogeTrap_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__19daLv6TogeTrap_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6TogeTrap_cpp();
+extern "C" void Execute__15daLv6TogeTrap_cFPPA3_A4_f();
+void daLv6TogeTrap_Draw(daLv6TogeTrap_c*);
+void daLv6TogeTrap_Execute(daLv6TogeTrap_c*);
+void daLv6TogeTrap_Delete(daLv6TogeTrap_c*);
+void daLv6TogeTrap_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6TogeTrap_cpp();
+
+extern "C" void __ct__19daLv6TogeTrap_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__15daLv6TogeTrap_cFv();
+extern "C" void CreateHeap__15daLv6TogeTrap_cFv();
+extern "C" void create__15daLv6TogeTrap_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void searchSekizoAct__15daLv6TogeTrap_cFPvPv();
+extern "C" void Execute__15daLv6TogeTrap_cFPPA3_A4_f();
+extern "C" void moveLift__15daLv6TogeTrap_cFv();
+extern "C" void executeType1__15daLv6TogeTrap_cFv();
+extern "C" void init_modeBound__15daLv6TogeTrap_cFv();
+extern "C" void modeBound__15daLv6TogeTrap_cFv();
+extern "C" void init_modeBoundWait__15daLv6TogeTrap_cFv();
+extern "C" void modeBoundWait__15daLv6TogeTrap_cFv();
+extern "C" void init_modeAcc__15daLv6TogeTrap_cFv();
+extern "C" void modeAcc__15daLv6TogeTrap_cFv();
+extern "C" void init_modeMove__15daLv6TogeTrap_cFv();
+extern "C" void modeMove__15daLv6TogeTrap_cFv();
+extern "C" void init_modeBrk__15daLv6TogeTrap_cFv();
+extern "C" void modeBrk__15daLv6TogeTrap_cFv();
+extern "C" void init_modeMove2__15daLv6TogeTrap_cFv();
+extern "C" void modeMove2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeWaitInit__15daLv6TogeTrap_cFv();
+extern "C" void modeWaitInit__15daLv6TogeTrap_cFv();
+extern "C" void init_modeWait__15daLv6TogeTrap_cFv();
+extern "C" void modeWait__15daLv6TogeTrap_cFv();
+extern "C" void executeType2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeWaitType2__15daLv6TogeTrap_cFv();
+extern "C" void modeWaitType2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeMoveInitType2__15daLv6TogeTrap_cFv();
+extern "C" void modeMoveInitType2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeAccType2__15daLv6TogeTrap_cFv();
+extern "C" void modeAccType2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeWaitAttackType2__15daLv6TogeTrap_cFv();
+extern "C" void modeWaitAttackType2__15daLv6TogeTrap_cFv();
+extern "C" void init_modeRotate__15daLv6TogeTrap_cFv();
+extern "C" void modeRotate__15daLv6TogeTrap_cFv();
+extern "C" void init_modeBreak__15daLv6TogeTrap_cFv();
+extern "C" void modeBreak__15daLv6TogeTrap_cFv();
+extern "C" void setNextPoint__15daLv6TogeTrap_cFv();
+extern "C" void Draw__15daLv6TogeTrap_cFv();
+extern "C" void Delete__15daLv6TogeTrap_cFv();
+extern "C" void daLv6TogeTrap_Draw__FP15daLv6TogeTrap_c();
+extern "C" void daLv6TogeTrap_Execute__FP15daLv6TogeTrap_c();
+extern "C" void daLv6TogeTrap_Delete__FP15daLv6TogeTrap_c();
+extern "C" void daLv6TogeTrap_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__19daLv6TogeTrap_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6TogeTrap_cpp();
 SECTION_RODATA extern const u32 lit_3631;
 SECTION_RODATA extern const u32 lit_3632;
 SECTION_RODATA extern const u32 lit_3633;
@@ -135,8 +226,11 @@ SECTION_BSS extern u8 data_80C7CA8C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -146,7 +240,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19daLv6TogeTrap_HIO_cFv) {
+asm daLv6TogeTrap_HIO_c::daLv6TogeTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__ct__19daLv6TogeTrap_HIO_cFv.s"
 }
@@ -157,7 +251,7 @@ ASM_FUNCTION(__ct__19daLv6TogeTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -168,7 +262,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/setBaseMtx__15daLv6TogeTrap_cFv.s"
 }
@@ -179,7 +273,7 @@ ASM_FUNCTION(setBaseMtx__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/CreateHeap__15daLv6TogeTrap_cFv.s"
 }
@@ -190,7 +284,7 @@ ASM_FUNCTION(CreateHeap__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/create__15daLv6TogeTrap_cFv.s"
 }
@@ -201,7 +295,7 @@ ASM_FUNCTION(create__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__8cM3dGCylFv.s"
 }
@@ -212,7 +306,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__8cM3dGSphFv.s"
 }
@@ -223,7 +317,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__8cM3dGAabFv.s"
 }
@@ -234,7 +328,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__10dCcD_GSttsFv.s"
 }
@@ -245,7 +339,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__8cM3dGLinFv.s"
 }
@@ -256,7 +350,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchSekizoAct__15daLv6TogeTrap_cFPvPv) {
+asm void daLv6TogeTrap_c::searchSekizoAct(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/searchSekizoAct__15daLv6TogeTrap_cFPvPv.s"
 }
@@ -267,7 +361,7 @@ ASM_FUNCTION(searchSekizoAct__15daLv6TogeTrap_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daLv6TogeTrap_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daLv6TogeTrap_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/Execute__15daLv6TogeTrap_cFPPA3_A4_f.s"
 }
@@ -278,7 +372,7 @@ ASM_FUNCTION(Execute__15daLv6TogeTrap_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLift__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::moveLift() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/moveLift__15daLv6TogeTrap_cFv.s"
 }
@@ -289,7 +383,7 @@ ASM_FUNCTION(moveLift__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeType1__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::executeType1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/executeType1__15daLv6TogeTrap_cFv.s"
 }
@@ -300,7 +394,7 @@ ASM_FUNCTION(executeType1__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBound__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeBound() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeBound__15daLv6TogeTrap_cFv.s"
 }
@@ -311,7 +405,7 @@ ASM_FUNCTION(init_modeBound__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBound__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeBound() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeBound__15daLv6TogeTrap_cFv.s"
 }
@@ -322,7 +416,7 @@ ASM_FUNCTION(modeBound__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBoundWait__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeBoundWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeBoundWait__15daLv6TogeTrap_cFv.s"
 }
@@ -333,7 +427,7 @@ ASM_FUNCTION(init_modeBoundWait__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBoundWait__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeBoundWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeBoundWait__15daLv6TogeTrap_cFv.s"
 }
@@ -344,7 +438,7 @@ ASM_FUNCTION(modeBoundWait__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeAcc__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeAcc__15daLv6TogeTrap_cFv.s"
 }
@@ -355,7 +449,7 @@ ASM_FUNCTION(init_modeAcc__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeAcc__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeAcc__15daLv6TogeTrap_cFv.s"
 }
@@ -366,7 +460,7 @@ ASM_FUNCTION(modeAcc__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeMove__15daLv6TogeTrap_cFv.s"
 }
@@ -377,7 +471,7 @@ ASM_FUNCTION(init_modeMove__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeMove__15daLv6TogeTrap_cFv.s"
 }
@@ -388,7 +482,7 @@ ASM_FUNCTION(modeMove__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBrk__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeBrk__15daLv6TogeTrap_cFv.s"
 }
@@ -399,7 +493,7 @@ ASM_FUNCTION(init_modeBrk__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBrk__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeBrk__15daLv6TogeTrap_cFv.s"
 }
@@ -410,7 +504,7 @@ ASM_FUNCTION(modeBrk__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeMove2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeMove2__15daLv6TogeTrap_cFv.s"
 }
@@ -421,7 +515,7 @@ ASM_FUNCTION(init_modeMove2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeMove2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeMove2__15daLv6TogeTrap_cFv.s"
 }
@@ -432,7 +526,7 @@ ASM_FUNCTION(modeMove2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitInit__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeWaitInit__15daLv6TogeTrap_cFv.s"
 }
@@ -443,7 +537,7 @@ ASM_FUNCTION(init_modeWaitInit__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitInit__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeWaitInit__15daLv6TogeTrap_cFv.s"
 }
@@ -454,7 +548,7 @@ ASM_FUNCTION(modeWaitInit__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeWait__15daLv6TogeTrap_cFv.s"
 }
@@ -465,7 +559,7 @@ ASM_FUNCTION(init_modeWait__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeWait__15daLv6TogeTrap_cFv.s"
 }
@@ -476,7 +570,7 @@ ASM_FUNCTION(modeWait__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::executeType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/executeType2__15daLv6TogeTrap_cFv.s"
 }
@@ -487,7 +581,7 @@ ASM_FUNCTION(executeType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeWaitType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeWaitType2__15daLv6TogeTrap_cFv.s"
 }
@@ -498,7 +592,7 @@ ASM_FUNCTION(init_modeWaitType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeWaitType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeWaitType2__15daLv6TogeTrap_cFv.s"
 }
@@ -509,7 +603,7 @@ ASM_FUNCTION(modeWaitType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveInitType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeMoveInitType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeMoveInitType2__15daLv6TogeTrap_cFv.s"
 }
@@ -520,7 +614,7 @@ ASM_FUNCTION(init_modeMoveInitType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveInitType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeMoveInitType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeMoveInitType2__15daLv6TogeTrap_cFv.s"
 }
@@ -531,7 +625,7 @@ ASM_FUNCTION(modeMoveInitType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeAccType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeAccType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeAccType2__15daLv6TogeTrap_cFv.s"
 }
@@ -542,7 +636,7 @@ ASM_FUNCTION(init_modeAccType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeAccType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeAccType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeAccType2__15daLv6TogeTrap_cFv.s"
 }
@@ -553,7 +647,7 @@ ASM_FUNCTION(modeAccType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitAttackType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeWaitAttackType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeWaitAttackType2__15daLv6TogeTrap_cFv.s"
 }
@@ -564,7 +658,7 @@ ASM_FUNCTION(init_modeWaitAttackType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitAttackType2__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeWaitAttackType2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeWaitAttackType2__15daLv6TogeTrap_cFv.s"
 }
@@ -575,7 +669,7 @@ ASM_FUNCTION(modeWaitAttackType2__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeRotate__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeRotate__15daLv6TogeTrap_cFv.s"
 }
@@ -586,7 +680,7 @@ ASM_FUNCTION(init_modeRotate__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeRotate__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeRotate__15daLv6TogeTrap_cFv.s"
 }
@@ -597,7 +691,7 @@ ASM_FUNCTION(modeRotate__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/init_modeBreak__15daLv6TogeTrap_cFv.s"
 }
@@ -608,7 +702,7 @@ ASM_FUNCTION(init_modeBreak__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/modeBreak__15daLv6TogeTrap_cFv.s"
 }
@@ -619,7 +713,7 @@ ASM_FUNCTION(modeBreak__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPoint__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::setNextPoint() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/setNextPoint__15daLv6TogeTrap_cFv.s"
 }
@@ -630,7 +724,7 @@ ASM_FUNCTION(setNextPoint__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/Draw__15daLv6TogeTrap_cFv.s"
 }
@@ -641,7 +735,7 @@ ASM_FUNCTION(Draw__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daLv6TogeTrap_cFv) {
+asm void daLv6TogeTrap_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/Delete__15daLv6TogeTrap_cFv.s"
 }
@@ -652,7 +746,7 @@ ASM_FUNCTION(Delete__15daLv6TogeTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6TogeTrap_Draw__FP15daLv6TogeTrap_c) {
+asm void daLv6TogeTrap_Draw(daLv6TogeTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/daLv6TogeTrap_Draw__FP15daLv6TogeTrap_c.s"
 }
@@ -663,7 +757,7 @@ ASM_FUNCTION(daLv6TogeTrap_Draw__FP15daLv6TogeTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6TogeTrap_Execute__FP15daLv6TogeTrap_c) {
+asm void daLv6TogeTrap_Execute(daLv6TogeTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/daLv6TogeTrap_Execute__FP15daLv6TogeTrap_c.s"
 }
@@ -674,7 +768,7 @@ ASM_FUNCTION(daLv6TogeTrap_Execute__FP15daLv6TogeTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6TogeTrap_Delete__FP15daLv6TogeTrap_c) {
+asm void daLv6TogeTrap_Delete(daLv6TogeTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/daLv6TogeTrap_Delete__FP15daLv6TogeTrap_c.s"
 }
@@ -685,7 +779,7 @@ ASM_FUNCTION(daLv6TogeTrap_Delete__FP15daLv6TogeTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6TogeTrap_Create__FP10fopAc_ac_c) {
+asm void daLv6TogeTrap_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/daLv6TogeTrap_Create__FP10fopAc_ac_c.s"
 }
@@ -696,7 +790,7 @@ ASM_FUNCTION(daLv6TogeTrap_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__10cCcD_GSttsFv.s"
 }
@@ -707,7 +801,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daLv6TogeTrap_HIO_cFv) {
+asm daLv6TogeTrap_HIO_c::~daLv6TogeTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__dt__19daLv6TogeTrap_HIO_cFv.s"
 }
@@ -718,7 +812,7 @@ ASM_FUNCTION(__dt__19daLv6TogeTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6TogeTrap_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6TogeTrap_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeTrap/d_a_obj_lv6TogeTrap/__sinit_d_a_obj_lv6TogeTrap_cpp.s"
 }

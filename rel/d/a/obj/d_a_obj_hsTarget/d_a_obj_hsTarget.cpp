@@ -6,23 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daHsTarget_c;
+struct fopAc_ac_c;
+
+struct daHsTarget_HIO_c {
+	daHsTarget_HIO_c();
+	~daHsTarget_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daHsTarget_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daHsTarget_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daHsTarget_cFv();
-extern "C" extern void CreateHeap__12daHsTarget_cFv();
-extern "C" extern void create__12daHsTarget_cFv();
-extern "C" extern void Execute__12daHsTarget_cFPPA3_A4_f();
-extern "C" extern void Draw__12daHsTarget_cFv();
-extern "C" extern void Delete__12daHsTarget_cFv();
-extern "C" extern void daHsTarget_Draw__FP12daHsTarget_c();
-extern "C" extern void daHsTarget_Execute__FP12daHsTarget_c();
-extern "C" extern void daHsTarget_Delete__FP12daHsTarget_c();
-extern "C" extern void daHsTarget_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daHsTarget_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_hsTarget_cpp();
+extern "C" void Execute__12daHsTarget_cFPPA3_A4_f();
+void daHsTarget_Draw(daHsTarget_c*);
+void daHsTarget_Execute(daHsTarget_c*);
+void daHsTarget_Delete(daHsTarget_c*);
+void daHsTarget_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_hsTarget_cpp();
+
+extern "C" void __ct__16daHsTarget_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daHsTarget_cFv();
+extern "C" void CreateHeap__12daHsTarget_cFv();
+extern "C" void create__12daHsTarget_cFv();
+extern "C" void Execute__12daHsTarget_cFPPA3_A4_f();
+extern "C" void Draw__12daHsTarget_cFv();
+extern "C" void Delete__12daHsTarget_cFv();
+extern "C" void daHsTarget_Draw__FP12daHsTarget_c();
+extern "C" void daHsTarget_Execute__FP12daHsTarget_c();
+extern "C" void daHsTarget_Delete__FP12daHsTarget_c();
+extern "C" void daHsTarget_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daHsTarget_HIO_cFv();
+extern "C" void __sinit_d_a_obj_hsTarget_cpp();
 SECTION_RODATA extern const u8 l_bmdIdx[8];
 SECTION_RODATA extern const u8 l_dzbIdx[8];
 SECTION_RODATA extern const u8 stringBase0[16];
@@ -39,8 +73,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -50,7 +87,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daHsTarget_HIO_cFv) {
+asm daHsTarget_HIO_c::daHsTarget_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/__ct__16daHsTarget_HIO_cFv.s"
 }
@@ -61,7 +98,7 @@ ASM_FUNCTION(__ct__16daHsTarget_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -72,7 +109,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daHsTarget_cFv) {
+asm void daHsTarget_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/setBaseMtx__12daHsTarget_cFv.s"
 }
@@ -83,7 +120,7 @@ ASM_FUNCTION(setBaseMtx__12daHsTarget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daHsTarget_cFv) {
+asm void daHsTarget_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/CreateHeap__12daHsTarget_cFv.s"
 }
@@ -94,7 +131,7 @@ ASM_FUNCTION(CreateHeap__12daHsTarget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daHsTarget_cFv) {
+asm void daHsTarget_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/create__12daHsTarget_cFv.s"
 }
@@ -105,7 +142,7 @@ ASM_FUNCTION(create__12daHsTarget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daHsTarget_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daHsTarget_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/Execute__12daHsTarget_cFPPA3_A4_f.s"
 }
@@ -116,7 +153,7 @@ ASM_FUNCTION(Execute__12daHsTarget_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daHsTarget_cFv) {
+asm void daHsTarget_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/Draw__12daHsTarget_cFv.s"
 }
@@ -127,7 +164,7 @@ ASM_FUNCTION(Draw__12daHsTarget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daHsTarget_cFv) {
+asm void daHsTarget_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/Delete__12daHsTarget_cFv.s"
 }
@@ -138,7 +175,7 @@ ASM_FUNCTION(Delete__12daHsTarget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHsTarget_Draw__FP12daHsTarget_c) {
+asm void daHsTarget_Draw(daHsTarget_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/daHsTarget_Draw__FP12daHsTarget_c.s"
 }
@@ -149,7 +186,7 @@ ASM_FUNCTION(daHsTarget_Draw__FP12daHsTarget_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHsTarget_Execute__FP12daHsTarget_c) {
+asm void daHsTarget_Execute(daHsTarget_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/daHsTarget_Execute__FP12daHsTarget_c.s"
 }
@@ -160,7 +197,7 @@ ASM_FUNCTION(daHsTarget_Execute__FP12daHsTarget_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHsTarget_Delete__FP12daHsTarget_c) {
+asm void daHsTarget_Delete(daHsTarget_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/daHsTarget_Delete__FP12daHsTarget_c.s"
 }
@@ -171,7 +208,7 @@ ASM_FUNCTION(daHsTarget_Delete__FP12daHsTarget_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHsTarget_Create__FP10fopAc_ac_c) {
+asm void daHsTarget_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/daHsTarget_Create__FP10fopAc_ac_c.s"
 }
@@ -182,7 +219,7 @@ ASM_FUNCTION(daHsTarget_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daHsTarget_HIO_cFv) {
+asm daHsTarget_HIO_c::~daHsTarget_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/__dt__16daHsTarget_HIO_cFv.s"
 }
@@ -193,7 +230,7 @@ ASM_FUNCTION(__dt__16daHsTarget_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_hsTarget_cpp) {
+extern "C" asm void __sinit_d_a_obj_hsTarget_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hsTarget/d_a_obj_hsTarget/__sinit_d_a_obj_hsTarget_cpp.s"
 }

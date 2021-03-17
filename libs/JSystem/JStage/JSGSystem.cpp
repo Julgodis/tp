@@ -6,42 +6,103 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStage (JStage) False/False
+// build JStage (JStage) True/False
+struct JStage;
+// build JStage (JStage) True/True
+/* top-level dependencies (begin JStage) */
+// outer dependency: JStage::TObject
+// outer dependency: JStage::TEObject
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TSystem (JStage::TSystem) False/False
+	/* dependencies (begin JStage::TSystem) */
+	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
+	// build TObject (JStage::TObject) False/False
+	/* dependencies (begin JStage::TObject) */
+	/* dependencies (end JStage::TObject) */
+	struct TObject {
+		/* 80280DD4 */ ~TObject();
+		/* 80280E1C */ bool JSGGetName() const;
+		/* 80280E24 */ void JSGUpdate();
+		/* 80280E28 */ bool JSGGetFlag() const;
+		/* 80280E30 */ void JSGSetFlag(u32);
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
+		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
+		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
+		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
+		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+	};
+
+	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
+	// build TEObject (JStage::TEObject) False/False
+	/* dependencies (begin JStage::TEObject) */
+	/* dependencies (end JStage::TEObject) */
+	struct TEObject {
+	};
+
+	/* dependencies (end JStage::TSystem) */
+	struct TSystem {
+		// JStage::TObject
+		// JStage::TEObject
+		/* 80280E90 */ ~TSystem();
+		/* 80280EF0 */ bool JSGFGetType() const;
+		/* 80280EF8 */ bool JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
+		/* 80280F00 */ bool JSGCreateObject(char const*, JStage::TEObject, u32);
+		/* 80280F08 */ void JSGDestroyObject(JStage::TObject*);
+		/* 80280F0C */ bool JSGGetSystemData(u32);
+		/* 80280F14 */ void JSGSetSystemData(u32, u32);
+	};
+
+	// build TObject (JStage::TObject) True/True
+	// build TEObject (JStage::TEObject) True/True
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__Q26JStage7TSystemFv();
-extern "C" extern void JSGFGetType__Q26JStage7TSystemCFv();
-extern "C" extern void JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
-extern "C" extern void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
-extern "C" extern void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
-extern "C" extern void JSGGetSystemData__Q26JStage7TSystemFUl();
-extern "C" extern void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+
+extern "C" void __dt__Q26JStage7TSystemFv();
+extern "C" bool JSGFGetType__Q26JStage7TSystemCFv();
+extern "C" bool JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
+extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
+extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl();
+extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl();
 SECTION_DATA extern void*const __vt__Q26JStage7TSystem[20];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__Q26JStage7TObjectFv();
-extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
-extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern "C" extern void __dl__FPv();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+void operator delete(void*);
+
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C4828-803C4878 0050+00 .data      __vt__Q26JStage7TSystem                                      */
+/* 803C4828-803C4878 0050+00 rc=2 efc=1 .data      __vt__Q26JStage7TSystem                                      */
 void* const __vt__Q26JStage7TSystem[20] = {
 	NULL, /* RTTI */
 	NULL,
@@ -65,81 +126,50 @@ void* const __vt__Q26JStage7TSystem[20] = {
 	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
-/* 80280E90-80280EF0 0060+00 .text      __dt__Q26JStage7TSystemFv                                    */
+/* 80280E90-80280EF0 0060+00 rc=1 efc=1 .text      __dt__Q26JStage7TSystemFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q26JStage7TSystemFv) {
+asm JStage::TSystem::~TSystem() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGSystem/__dt__Q26JStage7TSystemFv.s"
 }
 #pragma pop
 
 
-/* 80280EF0-80280EF8 0008+00 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGFGetType__Q26JStage7TSystemCFv) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGFGetType__Q26JStage7TSystemCFv.s"
+/* 80280EF0-80280EF8 0008+00 rc=2 efc=1 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
+bool JStage::TSystem::JSGFGetType() const {
+	return true;
 }
-#pragma pop
 
 
-/* 80280EF8-80280F00 0008+00 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject.s"
+/* 80280EF8-80280F00 0008+00 rc=1 efc=0 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+bool JStage::TSystem::JSGFindObject(JStage::TObject** field_0, char const* field_1, JStage::TEObject field_2) const {
+	return true;
 }
-#pragma pop
 
 
-/* 80280F00-80280F08 0008+00 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl.s"
+/* 80280F00-80280F08 0008+00 rc=2 efc=1 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
+bool JStage::TSystem::JSGCreateObject(char const* field_0, JStage::TEObject field_1, u32 field_2) {
+	return false;
 }
-#pragma pop
 
 
-/* 80280F08-80280F0C 0004+00 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject.s"
+/* 80280F08-80280F0C 0004+00 rc=2 efc=1 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
+void JStage::TSystem::JSGDestroyObject(JStage::TObject* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80280F0C-80280F14 0008+00 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGGetSystemData__Q26JStage7TSystemFUl) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGGetSystemData__Q26JStage7TSystemFUl.s"
+/* 80280F0C-80280F14 0008+00 rc=2 efc=1 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
+bool JStage::TSystem::JSGGetSystemData(u32 field_0) {
+	return false;
 }
-#pragma pop
 
 
-/* 80280F14-80280F18 0004+00 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGSetSystemData__Q26JStage7TSystemFUlUl) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGSystem/JSGSetSystemData__Q26JStage7TSystemFUlUl.s"
+/* 80280F14-80280F18 0004+00 rc=2 efc=1 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
+void JStage::TSystem::JSGSetSystemData(u32 field_0, u32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

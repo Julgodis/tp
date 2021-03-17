@@ -6,56 +6,143 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_SSDrink_c {
+	~daObj_SSDrink_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void setSoldOut();
+	void getResName();
+	void getTypeFromParam();
+	void getSwitchFromParam();
+	void getCapacityFromParam();
+	void getFlowNodeNum();
+	void getValue();
+	void restart();
+	void initialize();
+	void setParam();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+	void setAttnPos();
+	void animeEntry();
+	void animePlay();
+	void chkEvent();
+	void orderEvent();
+	bool wait(void*);
+	void talk(void*);
+	void drink(void*);
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void getLeftHandPos() const;
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__15daObj_SSDrink_cFv();
-extern "C" extern void create__15daObj_SSDrink_cFv();
-extern "C" extern void CreateHeap__15daObj_SSDrink_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Delete__15daObj_SSDrink_cFv();
-extern "C" extern void Execute__15daObj_SSDrink_cFv();
-extern "C" extern void Draw__15daObj_SSDrink_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void createHeapCallBack__15daObj_SSDrink_cFP10fopAc_ac_c();
-extern "C" extern void setSoldOut__15daObj_SSDrink_cFv();
-extern "C" extern void getResName__15daObj_SSDrink_cFv();
-extern "C" extern void getTypeFromParam__15daObj_SSDrink_cFv();
-extern "C" extern void getSwitchFromParam__15daObj_SSDrink_cFv();
-extern "C" extern void getCapacityFromParam__15daObj_SSDrink_cFv();
-extern "C" extern void getFlowNodeNum__15daObj_SSDrink_cFv();
-extern "C" extern void getValue__15daObj_SSDrink_cFv();
-extern "C" extern void restart__15daObj_SSDrink_cFv();
-extern "C" extern void initialize__15daObj_SSDrink_cFv();
-extern "C" extern void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
-extern "C" extern void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
-extern "C" extern void setParam__15daObj_SSDrink_cFv();
-extern "C" extern void setEnvTevColor__15daObj_SSDrink_cFv();
-extern "C" extern void setRoomNo__15daObj_SSDrink_cFv();
-extern "C" extern void setMtx__15daObj_SSDrink_cFv();
-extern "C" extern void setAttnPos__15daObj_SSDrink_cFv();
-extern "C" extern void animeEntry__15daObj_SSDrink_cFv();
-extern "C" extern void animePlay__15daObj_SSDrink_cFv();
-extern "C" extern void chkEvent__15daObj_SSDrink_cFv();
-extern "C" extern void orderEvent__15daObj_SSDrink_cFv();
-extern "C" extern void wait__15daObj_SSDrink_cFPv();
-extern "C" extern void talk__15daObj_SSDrink_cFPv();
-extern "C" extern void drink__15daObj_SSDrink_cFPv();
-extern "C" extern void daObj_SSDrink_Create__FPv();
-extern "C" extern void daObj_SSDrink_Delete__FPv();
-extern "C" extern void daObj_SSDrink_Execute__FPv();
-extern "C" extern void daObj_SSDrink_Draw__FPv();
-extern "C" extern void daObj_SSDrink_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_ss_drink_cpp();
-extern "C" extern void func_80CE672C();
-extern "C" extern void func_80CE6734();
-extern "C" extern void getLeftHandPos__9daPy_py_cCFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
+extern "C" void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
+extern "C" void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
+void daObj_SSDrink_Create(void*);
+void daObj_SSDrink_Delete(void*);
+void daObj_SSDrink_Execute(void*);
+void daObj_SSDrink_Draw(void*);
+bool daObj_SSDrink_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_ss_drink_cpp();
+extern "C" void func_80CE672C();
+extern "C" void func_80CE6734();
+
+extern "C" void __dt__15daObj_SSDrink_cFv();
+extern "C" void create__15daObj_SSDrink_cFv();
+extern "C" void CreateHeap__15daObj_SSDrink_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Delete__15daObj_SSDrink_cFv();
+extern "C" void Execute__15daObj_SSDrink_cFv();
+extern "C" void Draw__15daObj_SSDrink_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void createHeapCallBack__15daObj_SSDrink_cFP10fopAc_ac_c();
+extern "C" void setSoldOut__15daObj_SSDrink_cFv();
+extern "C" void getResName__15daObj_SSDrink_cFv();
+extern "C" void getTypeFromParam__15daObj_SSDrink_cFv();
+extern "C" void getSwitchFromParam__15daObj_SSDrink_cFv();
+extern "C" void getCapacityFromParam__15daObj_SSDrink_cFv();
+extern "C" void getFlowNodeNum__15daObj_SSDrink_cFv();
+extern "C" void getValue__15daObj_SSDrink_cFv();
+extern "C" void restart__15daObj_SSDrink_cFv();
+extern "C" void initialize__15daObj_SSDrink_cFv();
+extern "C" void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
+extern "C" void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i();
+extern "C" void setParam__15daObj_SSDrink_cFv();
+extern "C" void setEnvTevColor__15daObj_SSDrink_cFv();
+extern "C" void setRoomNo__15daObj_SSDrink_cFv();
+extern "C" void setMtx__15daObj_SSDrink_cFv();
+extern "C" void setAttnPos__15daObj_SSDrink_cFv();
+extern "C" void animeEntry__15daObj_SSDrink_cFv();
+extern "C" void animePlay__15daObj_SSDrink_cFv();
+extern "C" void chkEvent__15daObj_SSDrink_cFv();
+extern "C" void orderEvent__15daObj_SSDrink_cFv();
+extern "C" bool wait__15daObj_SSDrink_cFPv();
+extern "C" void talk__15daObj_SSDrink_cFPv();
+extern "C" void drink__15daObj_SSDrink_cFPv();
+extern "C" void daObj_SSDrink_Create__FPv();
+extern "C" void daObj_SSDrink_Delete__FPv();
+extern "C" void daObj_SSDrink_Execute__FPv();
+extern "C" void daObj_SSDrink_Draw__FPv();
+extern "C" bool daObj_SSDrink_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_ss_drink_cpp();
+extern "C" void func_80CE672C();
+extern "C" void func_80CE6734();
+extern "C" void getLeftHandPos__9daPy_py_cCFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
 SECTION_RODATA extern const u8 mCcDObjInfo__15daObj_SSDrink_c[48];
 SECTION_RODATA extern const u32 lit_4000;
 SECTION_RODATA extern const u32 lit_4057;
@@ -101,7 +188,9 @@ SECTION_DATA extern void*const __vt__15daObj_SSDrink_c[5];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -111,7 +200,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_SSDrink_cFv) {
+asm daObj_SSDrink_c::~daObj_SSDrink_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__15daObj_SSDrink_cFv.s"
 }
@@ -122,7 +211,7 @@ ASM_FUNCTION(__dt__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/create__15daObj_SSDrink_cFv.s"
 }
@@ -133,7 +222,7 @@ ASM_FUNCTION(create__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/CreateHeap__15daObj_SSDrink_cFv.s"
 }
@@ -144,7 +233,7 @@ ASM_FUNCTION(CreateHeap__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__12J3DFrameCtrlFv.s"
 }
@@ -155,7 +244,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/Delete__15daObj_SSDrink_cFv.s"
 }
@@ -166,7 +255,7 @@ ASM_FUNCTION(Delete__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/Execute__15daObj_SSDrink_cFv.s"
 }
@@ -177,7 +266,7 @@ ASM_FUNCTION(Execute__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/Draw__15daObj_SSDrink_cFv.s"
 }
@@ -188,7 +277,7 @@ ASM_FUNCTION(Draw__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__8cM3dGPlaFv.s"
 }
@@ -199,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__15daObj_SSDrink_cFP10fopAc_ac_c) {
+asm void daObj_SSDrink_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/createHeapCallBack__15daObj_SSDrink_cFP10fopAc_ac_c.s"
 }
@@ -210,7 +299,7 @@ ASM_FUNCTION(createHeapCallBack__15daObj_SSDrink_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoldOut__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setSoldOut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setSoldOut__15daObj_SSDrink_cFv.s"
 }
@@ -221,7 +310,7 @@ ASM_FUNCTION(setSoldOut__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getResName__15daObj_SSDrink_cFv.s"
 }
@@ -232,7 +321,7 @@ ASM_FUNCTION(getResName__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getTypeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getTypeFromParam__15daObj_SSDrink_cFv.s"
 }
@@ -243,7 +332,7 @@ ASM_FUNCTION(getTypeFromParam__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwitchFromParam__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getSwitchFromParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getSwitchFromParam__15daObj_SSDrink_cFv.s"
 }
@@ -254,7 +343,7 @@ ASM_FUNCTION(getSwitchFromParam__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCapacityFromParam__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getCapacityFromParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getCapacityFromParam__15daObj_SSDrink_cFv.s"
 }
@@ -265,7 +354,7 @@ ASM_FUNCTION(getCapacityFromParam__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFlowNodeNum__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getFlowNodeNum() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getFlowNodeNum__15daObj_SSDrink_cFv.s"
 }
@@ -276,7 +365,7 @@ ASM_FUNCTION(getFlowNodeNum__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValue__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::getValue() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getValue__15daObj_SSDrink_cFv.s"
 }
@@ -287,7 +376,7 @@ ASM_FUNCTION(getValue__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(restart__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::restart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/restart__15daObj_SSDrink_cFv.s"
 }
@@ -298,7 +387,7 @@ ASM_FUNCTION(restart__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/initialize__15daObj_SSDrink_cFv.s"
 }
@@ -309,7 +398,7 @@ ASM_FUNCTION(initialize__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i) {
+extern "C" asm void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i.s"
 }
@@ -320,7 +409,7 @@ ASM_FUNCTION(checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i) {
+extern "C" asm void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i.s"
 }
@@ -331,7 +420,7 @@ ASM_FUNCTION(setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setParam__15daObj_SSDrink_cFv.s"
 }
@@ -342,7 +431,7 @@ ASM_FUNCTION(setParam__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setEnvTevColor__15daObj_SSDrink_cFv.s"
 }
@@ -353,7 +442,7 @@ ASM_FUNCTION(setEnvTevColor__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setRoomNo__15daObj_SSDrink_cFv.s"
 }
@@ -364,7 +453,7 @@ ASM_FUNCTION(setRoomNo__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setMtx__15daObj_SSDrink_cFv.s"
 }
@@ -375,7 +464,7 @@ ASM_FUNCTION(setMtx__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setAttnPos__15daObj_SSDrink_cFv.s"
 }
@@ -386,7 +475,7 @@ ASM_FUNCTION(setAttnPos__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animeEntry__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::animeEntry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/animeEntry__15daObj_SSDrink_cFv.s"
 }
@@ -397,7 +486,7 @@ ASM_FUNCTION(animeEntry__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animePlay__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::animePlay() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/animePlay__15daObj_SSDrink_cFv.s"
 }
@@ -408,7 +497,7 @@ ASM_FUNCTION(animePlay__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkEvent__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::chkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/chkEvent__15daObj_SSDrink_cFv.s"
 }
@@ -419,7 +508,7 @@ ASM_FUNCTION(chkEvent__15daObj_SSDrink_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderEvent__15daObj_SSDrink_cFv) {
+asm void daObj_SSDrink_c::orderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/orderEvent__15daObj_SSDrink_cFv.s"
 }
@@ -427,21 +516,16 @@ ASM_FUNCTION(orderEvent__15daObj_SSDrink_cFv) {
 
 
 /* 80CE644C-80CE6454 0008+00 .text      wait__15daObj_SSDrink_cFPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(wait__15daObj_SSDrink_cFPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/wait__15daObj_SSDrink_cFPv.s"
+bool daObj_SSDrink_c::wait(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE6454-80CE6514 00C0+00 .text      talk__15daObj_SSDrink_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__15daObj_SSDrink_cFPv) {
+asm void daObj_SSDrink_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/talk__15daObj_SSDrink_cFPv.s"
 }
@@ -452,7 +536,7 @@ ASM_FUNCTION(talk__15daObj_SSDrink_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drink__15daObj_SSDrink_cFPv) {
+asm void daObj_SSDrink_c::drink(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/drink__15daObj_SSDrink_cFPv.s"
 }
@@ -463,7 +547,7 @@ ASM_FUNCTION(drink__15daObj_SSDrink_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSDrink_Create__FPv) {
+asm void daObj_SSDrink_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Create__FPv.s"
 }
@@ -474,7 +558,7 @@ ASM_FUNCTION(daObj_SSDrink_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSDrink_Delete__FPv) {
+asm void daObj_SSDrink_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Delete__FPv.s"
 }
@@ -485,7 +569,7 @@ ASM_FUNCTION(daObj_SSDrink_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSDrink_Execute__FPv) {
+asm void daObj_SSDrink_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Execute__FPv.s"
 }
@@ -496,7 +580,7 @@ ASM_FUNCTION(daObj_SSDrink_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSDrink_Draw__FPv) {
+asm void daObj_SSDrink_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_Draw__FPv.s"
 }
@@ -504,21 +588,16 @@ ASM_FUNCTION(daObj_SSDrink_Draw__FPv) {
 
 
 /* 80CE66A4-80CE66AC 0008+00 .text      daObj_SSDrink_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSDrink_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_IsDelete__FPv.s"
+bool daObj_SSDrink_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE66AC-80CE66F4 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__10cCcD_GSttsFv.s"
 }
@@ -529,7 +608,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ss_drink_cpp) {
+extern "C" asm void __sinit_d_a_obj_ss_drink_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__sinit_d_a_obj_ss_drink_cpp.s"
 }
@@ -540,7 +619,7 @@ ASM_FUNCTION(__sinit_d_a_obj_ss_drink_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CE672C) {
+extern "C" asm void func_80CE672C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/func_80CE672C.s"
 }
@@ -551,7 +630,7 @@ ASM_FUNCTION(func_80CE672C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CE6734) {
+extern "C" asm void func_80CE6734() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/func_80CE6734.s"
 }
@@ -562,7 +641,7 @@ ASM_FUNCTION(func_80CE6734) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftHandPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getLeftHandPos() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/getLeftHandPos__9daPy_py_cCFv.s"
 }
@@ -573,7 +652,7 @@ ASM_FUNCTION(getLeftHandPos__9daPy_py_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__8cM3dGCylFv.s"
 }
@@ -584,7 +663,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__8cM3dGAabFv.s"
 }
@@ -595,7 +674,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__12dBgS_AcchCirFv.s"
 }
@@ -606,7 +685,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__10dCcD_GSttsFv.s"
 }
@@ -617,7 +696,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/__dt__12dBgS_ObjAcchFv.s"
 }

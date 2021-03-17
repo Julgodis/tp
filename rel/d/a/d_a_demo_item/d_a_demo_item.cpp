@@ -6,39 +6,91 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daDitem_c;
+
+struct daDitem_c {
+	bool __CreateHeap();
+	void CreateInit();
+	void action();
+	void actionStart();
+	void actionEvent();
+	void actionWaitLightEnd();
+	void actionEnd();
+	void setInsectEffect();
+	void followInsectEffect();
+	void endInsectEffect();
+	void onEventReg(s32, s32);
+	void set_pos();
+	void anim_control();
+	void initEffectLight();
+	void settingEffectLight();
+	void set_mtx();
+	void setTevStr();
+	void setListStart();
+	void draw_WOOD_STICK();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __CreateHeap__9daDitem_cFv();
-extern "C" extern void CreateInit__9daDitem_cFv();
-extern "C" extern void action__9daDitem_cFv();
-extern "C" extern void actionStart__9daDitem_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void actionEvent__9daDitem_cFv();
-extern "C" extern void actionWaitLightEnd__9daDitem_cFv();
-extern "C" extern void actionEnd__9daDitem_cFv();
-extern "C" extern void setInsectEffect__9daDitem_cFv();
-extern "C" extern void followInsectEffect__9daDitem_cFv();
-extern "C" extern void endInsectEffect__9daDitem_cFv();
-extern "C" extern void onEventReg__9daDitem_cFii();
-extern "C" extern void set_pos__9daDitem_cFv();
-extern "C" extern void anim_control__9daDitem_cFv();
-extern "C" extern void initEffectLight__9daDitem_cFv();
-extern "C" extern void settingEffectLight__9daDitem_cFv();
-extern "C" extern void set_mtx__9daDitem_cFv();
-extern "C" extern void setTevStr__9daDitem_cFv();
-extern "C" extern void setListStart__9daDitem_cFv();
-extern "C" extern void draw_WOOD_STICK__9daDitem_cFv();
-extern "C" extern void daDitem_Delete__FP9daDitem_c();
-extern "C" extern void daDitem_Create__FP9daDitem_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daDitem_Execute__FP9daDitem_c();
-extern "C" extern void daDitem_Draw__FP9daDitem_c();
-extern "C" extern void __sinit_d_a_demo_item_cpp();
-extern "C" extern void func_804E19B0();
-extern "C" extern void func_804E19B8();
+void daDitem_Delete(daDitem_c*);
+void daDitem_Create(daDitem_c*);
+void daDitem_Execute(daDitem_c*);
+void daDitem_Draw(daDitem_c*);
+extern "C" void __sinit_d_a_demo_item_cpp();
+extern "C" void func_804E19B0();
+extern "C" void func_804E19B8();
+
+extern "C" bool __CreateHeap__9daDitem_cFv();
+extern "C" void CreateInit__9daDitem_cFv();
+extern "C" void action__9daDitem_cFv();
+extern "C" void actionStart__9daDitem_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void actionEvent__9daDitem_cFv();
+extern "C" void actionWaitLightEnd__9daDitem_cFv();
+extern "C" void actionEnd__9daDitem_cFv();
+extern "C" void setInsectEffect__9daDitem_cFv();
+extern "C" void followInsectEffect__9daDitem_cFv();
+extern "C" void endInsectEffect__9daDitem_cFv();
+extern "C" void onEventReg__9daDitem_cFii();
+extern "C" void set_pos__9daDitem_cFv();
+extern "C" void anim_control__9daDitem_cFv();
+extern "C" void initEffectLight__9daDitem_cFv();
+extern "C" void settingEffectLight__9daDitem_cFv();
+extern "C" void set_mtx__9daDitem_cFv();
+extern "C" void setTevStr__9daDitem_cFv();
+extern "C" void setListStart__9daDitem_cFv();
+extern "C" void draw_WOOD_STICK__9daDitem_cFv();
+extern "C" void daDitem_Delete__FP9daDitem_c();
+extern "C" void daDitem_Create__FP9daDitem_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daDitem_Execute__FP9daDitem_c();
+extern "C" void daDitem_Draw__FP9daDitem_c();
+extern "C" void __sinit_d_a_demo_item_cpp();
+extern "C" void func_804E19B0();
+extern "C" void func_804E19B8();
 SECTION_RODATA extern const u32 l_light_color;
 SECTION_RODATA extern const u32 lit_3812;
 SECTION_RODATA extern const u8 lit_3813[4];
@@ -129,29 +181,27 @@ SECTION_BSS extern u8 data_804E1D1C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
 // 
 
 /* 804DFBCC-804DFBD4 0008+00 .text      __CreateHeap__9daDitem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__9daDitem_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__CreateHeap__9daDitem_cFv.s"
+bool daDitem_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 804DFBD4-804DFC98 00C4+00 .text      CreateInit__9daDitem_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__9daDitem_cFv) {
+asm void daDitem_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/CreateInit__9daDitem_cFv.s"
 }
@@ -162,7 +212,7 @@ ASM_FUNCTION(CreateInit__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__9daDitem_cFv) {
+asm void daDitem_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/action__9daDitem_cFv.s"
 }
@@ -173,7 +223,7 @@ ASM_FUNCTION(action__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionStart__9daDitem_cFv) {
+asm void daDitem_c::actionStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/actionStart__9daDitem_cFv.s"
 }
@@ -184,7 +234,7 @@ ASM_FUNCTION(actionStart__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__dt__4cXyzFv.s"
 }
@@ -195,7 +245,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__9daDitem_cFv) {
+asm void daDitem_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/actionEvent__9daDitem_cFv.s"
 }
@@ -206,7 +256,7 @@ ASM_FUNCTION(actionEvent__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitLightEnd__9daDitem_cFv) {
+asm void daDitem_c::actionWaitLightEnd() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/actionWaitLightEnd__9daDitem_cFv.s"
 }
@@ -217,7 +267,7 @@ ASM_FUNCTION(actionWaitLightEnd__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__9daDitem_cFv) {
+asm void daDitem_c::actionEnd() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/actionEnd__9daDitem_cFv.s"
 }
@@ -228,7 +278,7 @@ ASM_FUNCTION(actionEnd__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInsectEffect__9daDitem_cFv) {
+asm void daDitem_c::setInsectEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/setInsectEffect__9daDitem_cFv.s"
 }
@@ -239,7 +289,7 @@ ASM_FUNCTION(setInsectEffect__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followInsectEffect__9daDitem_cFv) {
+asm void daDitem_c::followInsectEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/followInsectEffect__9daDitem_cFv.s"
 }
@@ -250,7 +300,7 @@ ASM_FUNCTION(followInsectEffect__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endInsectEffect__9daDitem_cFv) {
+asm void daDitem_c::endInsectEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/endInsectEffect__9daDitem_cFv.s"
 }
@@ -261,7 +311,7 @@ ASM_FUNCTION(endInsectEffect__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onEventReg__9daDitem_cFii) {
+asm void daDitem_c::onEventReg(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/onEventReg__9daDitem_cFii.s"
 }
@@ -272,7 +322,7 @@ ASM_FUNCTION(onEventReg__9daDitem_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_pos__9daDitem_cFv) {
+asm void daDitem_c::set_pos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/set_pos__9daDitem_cFv.s"
 }
@@ -283,7 +333,7 @@ ASM_FUNCTION(set_pos__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anim_control__9daDitem_cFv) {
+asm void daDitem_c::anim_control() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/anim_control__9daDitem_cFv.s"
 }
@@ -294,7 +344,7 @@ ASM_FUNCTION(anim_control__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEffectLight__9daDitem_cFv) {
+asm void daDitem_c::initEffectLight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/initEffectLight__9daDitem_cFv.s"
 }
@@ -305,7 +355,7 @@ ASM_FUNCTION(initEffectLight__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(settingEffectLight__9daDitem_cFv) {
+asm void daDitem_c::settingEffectLight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/settingEffectLight__9daDitem_cFv.s"
 }
@@ -316,7 +366,7 @@ ASM_FUNCTION(settingEffectLight__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__9daDitem_cFv) {
+asm void daDitem_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/set_mtx__9daDitem_cFv.s"
 }
@@ -327,7 +377,7 @@ ASM_FUNCTION(set_mtx__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevStr__9daDitem_cFv) {
+asm void daDitem_c::setTevStr() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/setTevStr__9daDitem_cFv.s"
 }
@@ -335,21 +385,16 @@ ASM_FUNCTION(setTevStr__9daDitem_cFv) {
 
 
 /* 804E122C-804E1230 0004+00 .text      setListStart__9daDitem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setListStart__9daDitem_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/setListStart__9daDitem_cFv.s"
+void daDitem_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804E1230-804E12C8 0098+00 .text      draw_WOOD_STICK__9daDitem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw_WOOD_STICK__9daDitem_cFv) {
+asm void daDitem_c::draw_WOOD_STICK() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/draw_WOOD_STICK__9daDitem_cFv.s"
 }
@@ -360,7 +405,7 @@ ASM_FUNCTION(draw_WOOD_STICK__9daDitem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDitem_Delete__FP9daDitem_c) {
+asm void daDitem_Delete(daDitem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Delete__FP9daDitem_c.s"
 }
@@ -371,7 +416,7 @@ ASM_FUNCTION(daDitem_Delete__FP9daDitem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDitem_Create__FP9daDitem_c) {
+asm void daDitem_Create(daDitem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Create__FP9daDitem_c.s"
 }
@@ -382,7 +427,7 @@ ASM_FUNCTION(daDitem_Create__FP9daDitem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__dt__8cM3dGCylFv.s"
 }
@@ -393,7 +438,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__dt__8cM3dGAabFv.s"
 }
@@ -404,7 +449,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -415,7 +460,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDitem_Execute__FP9daDitem_c) {
+asm void daDitem_Execute(daDitem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Execute__FP9daDitem_c.s"
 }
@@ -426,7 +471,7 @@ ASM_FUNCTION(daDitem_Execute__FP9daDitem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDitem_Draw__FP9daDitem_c) {
+asm void daDitem_Draw(daDitem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Draw__FP9daDitem_c.s"
 }
@@ -437,7 +482,7 @@ ASM_FUNCTION(daDitem_Draw__FP9daDitem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_demo_item_cpp) {
+extern "C" asm void __sinit_d_a_demo_item_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__sinit_d_a_demo_item_cpp.s"
 }
@@ -448,7 +493,7 @@ ASM_FUNCTION(__sinit_d_a_demo_item_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804E19B0) {
+extern "C" asm void func_804E19B0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/func_804E19B0.s"
 }
@@ -459,7 +504,7 @@ ASM_FUNCTION(func_804E19B0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804E19B8) {
+extern "C" asm void func_804E19B8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/func_804E19B8.s"
 }

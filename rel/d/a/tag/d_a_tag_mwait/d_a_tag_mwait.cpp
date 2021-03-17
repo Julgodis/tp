@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMwait_c;
+
+struct daTagMwait_c {
+	void create();
+	~daTagMwait_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagMwait_cFv();
-extern "C" extern void daTagMwait_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagMwait_cFv();
-extern "C" extern void daTagMwait_Delete__FP12daTagMwait_c();
-extern "C" extern void execute__12daTagMwait_cFv();
-extern "C" extern void daTagMwait_Execute__FP12daTagMwait_c();
-extern "C" extern void daTagMwait_Draw__FP12daTagMwait_c();
+void daTagMwait_Create(fopAc_ac_c*);
+void daTagMwait_Delete(daTagMwait_c*);
+void daTagMwait_Execute(daTagMwait_c*);
+bool daTagMwait_Draw(daTagMwait_c*);
+
+extern "C" void create__12daTagMwait_cFv();
+extern "C" void daTagMwait_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagMwait_cFv();
+extern "C" void daTagMwait_Delete__FP12daTagMwait_c();
+extern "C" void execute__12daTagMwait_cFv();
+extern "C" void daTagMwait_Execute__FP12daTagMwait_c();
+extern "C" bool daTagMwait_Draw__FP12daTagMwait_c();
 SECTION_RODATA extern const u32 lit_3841;
 SECTION_RODATA extern const u32 lit_3842;
 SECTION_RODATA extern const u32 lit_3843;
@@ -34,7 +55,9 @@ SECTION_DATA extern u8 g_profile_Tag_Mwait[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +67,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagMwait_cFv) {
+asm void daTagMwait_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/create__12daTagMwait_cFv.s"
 }
@@ -55,7 +78,7 @@ ASM_FUNCTION(create__12daTagMwait_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMwait_Create__FP10fopAc_ac_c) {
+asm void daTagMwait_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Create__FP10fopAc_ac_c.s"
 }
@@ -66,7 +89,7 @@ ASM_FUNCTION(daTagMwait_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagMwait_cFv) {
+asm daTagMwait_c::~daTagMwait_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/__dt__12daTagMwait_cFv.s"
 }
@@ -77,7 +100,7 @@ ASM_FUNCTION(__dt__12daTagMwait_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMwait_Delete__FP12daTagMwait_c) {
+asm void daTagMwait_Delete(daTagMwait_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Delete__FP12daTagMwait_c.s"
 }
@@ -88,7 +111,7 @@ ASM_FUNCTION(daTagMwait_Delete__FP12daTagMwait_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagMwait_cFv) {
+asm void daTagMwait_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/execute__12daTagMwait_cFv.s"
 }
@@ -99,7 +122,7 @@ ASM_FUNCTION(execute__12daTagMwait_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMwait_Execute__FP12daTagMwait_c) {
+asm void daTagMwait_Execute(daTagMwait_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Execute__FP12daTagMwait_c.s"
 }
@@ -107,14 +130,9 @@ ASM_FUNCTION(daTagMwait_Execute__FP12daTagMwait_c) {
 
 
 /* 80D5C570-80D5C578 0008+00 .text      daTagMwait_Draw__FP12daTagMwait_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagMwait_Draw__FP12daTagMwait_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Draw__FP12daTagMwait_c.s"
+bool daTagMwait_Draw(daTagMwait_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

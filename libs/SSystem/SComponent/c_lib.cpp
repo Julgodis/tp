@@ -6,37 +6,90 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266D30 */ void normZP() const;
+	/* 8026702C */ bool operator==(Vec const&) const;
+	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+// build Vec (Vec) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void cLib_memCpy__FPvPCvUl();
-extern "C" extern void cLib_memSet__FPviUl();
-extern "C" extern void cLib_addCalc__FPfffff();
-extern "C" extern void cLib_addCalc2__FPffff();
-extern "C" extern void cLib_addCalc0__FPfff();
-extern "C" extern void cLib_addCalcPos__FP4cXyzRC4cXyzfff();
-extern "C" extern void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
-extern "C" extern void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
-extern "C" extern void cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff();
-extern "C" extern void cLib_addCalcAngleS__FPsssss();
-extern "C" extern void cLib_addCalcAngleS2__FPssss();
-extern "C" extern void cLib_chaseUC__FPUcUcUc();
-extern "C" extern void cLib_chaseS__FPsss();
-extern "C" extern void cLib_chaseF__FPfff();
-extern "C" extern void cLib_chasePos__FP4cXyzRC4cXyzf();
-extern "C" extern void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
-extern "C" extern void cLib_chaseAngleS__FPsss();
-extern "C" extern void cLib_targetAngleY__FPC3VecPC3Vec();
-extern "C" extern void cLib_targetAngleY__FRC3VecRC3Vec();
-extern "C" extern void cLib_targetAngleX__FPC4cXyzPC4cXyz();
-extern "C" extern void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
-extern "C" extern void cLib_distanceAngleS__Fss();
-extern "C" extern void MtxInit__Fv();
-extern "C" extern void MtxTrans__FfffUc();
-extern "C" extern void MtxScale__FfffUc();
-extern "C" extern void MtxPosition__FP4cXyzP4cXyz();
-extern "C" extern void MtxPush__Fv();
-extern "C" extern void MtxPull__Fv();
+void cLib_memCpy(void*, void const*, u32);
+void cLib_memSet(void*, s32, u32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_addCalc0(f32*, f32, f32);
+void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
+void cLib_addCalcPosXZ2(cXyz*, cXyz const&, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_chaseUC(char*, char, char);
+void cLib_chaseS(s16*, s16, s16);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_chasePos(cXyz*, cXyz const&, f32);
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32);
+void cLib_chaseAngleS(s16*, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_targetAngleY(Vec const&, Vec const&);
+void cLib_targetAngleX(cXyz const*, cXyz const*);
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
+void cLib_distanceAngleS(s16, s16);
+void MtxInit();
+void MtxTrans(f32, f32, f32, char);
+void MtxScale(f32, f32, f32, char);
+void MtxPosition(cXyz*, cXyz*);
+void MtxPush();
+void MtxPull();
+
+extern "C" void cLib_memCpy__FPvPCvUl();
+extern "C" void cLib_memSet__FPviUl();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void cLib_chaseS__FPsss();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_chasePos__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chaseAngleS__FPsss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_targetAngleY__FRC3VecRC3Vec();
+extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz();
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void MtxInit__Fv();
+extern "C" void MtxTrans__FfffUc();
+extern "C" void MtxScale__FfffUc();
+extern "C" void MtxPosition__FP4cXyzP4cXyz();
+extern "C" void MtxPush__Fv();
+extern "C" void MtxPull__Fv();
 SECTION_BSS extern u8 mtx[480];
 SECTION_SDATA extern void*calc_mtx[2];
 SECTION_SDATA2 extern u8 c_lib__lit_2262[4 + 4 /* padding */];
@@ -49,24 +102,38 @@ SECTION_SDATA2 extern f32 lit_2382;
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void memcpy();
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void __ml__4cXyzCFf();
-extern "C" extern void normZP__4cXyzCFv();
-extern "C" extern void __eq__4cXyzCFRC3Vec();
-extern "C" extern void __ne__4cXyzCFRC3Vec();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSMTXScale();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void PSVECSubtract();
-extern "C" extern void PSVECScale();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void PSVECSquareDistance();
-extern "C" extern void abs();
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+void cM_atan2s(f32, f32);
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void abs();
+
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void normZP__4cXyzCFv();
+extern "C" bool __eq__4cXyzCFRC3Vec();
+extern "C" bool __ne__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void abs();
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 __float_nan;
 
@@ -74,22 +141,22 @@ SECTION_SDATA extern u32 __float_nan;
 // Declarations:
 // 
 
-/* 8026F93C-8026F95C 0020+00 .text      cLib_memCpy__FPvPCvUl                                        */
+/* 8026F93C-8026F95C 0020+00 rc=3 efc=3 .text      cLib_memCpy__FPvPCvUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_memCpy__FPvPCvUl) {
+asm void cLib_memCpy(void* field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_memCpy__FPvPCvUl.s"
 }
 #pragma pop
 
 
-/* 8026F95C-8026F97C 0020+00 .text      cLib_memSet__FPviUl                                          */
+/* 8026F95C-8026F97C 0020+00 rc=4 efc=4 .text      cLib_memSet__FPviUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_memSet__FPviUl) {
+asm void cLib_memSet(void* field_0, s32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_memSet__FPviUl.s"
 }
@@ -97,40 +164,40 @@ ASM_FUNCTION(cLib_memSet__FPviUl) {
 
 
 /* ############################################################################################## */
-/* 804551E0-804551E8 0004+04 .sdata2    @2262                                                        */
+/* 804551E0-804551E8 0004+04 rc=9 efc=0 .sdata2    @2262                                                        */
 u8 c_lib__lit_2262[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8026F97C-8026FA3C 00C0+00 .text      cLib_addCalc__FPfffff                                        */
+/* 8026F97C-8026FA3C 00C0+00 rc=50 efc=50 .text      cLib_addCalc__FPfffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalc__FPfffff) {
+asm void cLib_addCalc(f32* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalc__FPfffff.s"
 }
 #pragma pop
 
 
-/* 8026FA3C-8026FA80 0044+00 .text      cLib_addCalc2__FPffff                                        */
+/* 8026FA3C-8026FA80 0044+00 rc=20 efc=20 .text      cLib_addCalc2__FPffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalc2__FPffff) {
+asm void cLib_addCalc2(f32* field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalc2__FPffff.s"
 }
 #pragma pop
 
 
-/* 8026FA80-8026FAB8 0038+00 .text      cLib_addCalc0__FPfff                                         */
+/* 8026FA80-8026FAB8 0038+00 rc=2 efc=2 .text      cLib_addCalc0__FPfff                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalc0__FPfff) {
+asm void cLib_addCalc0(f32* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalc0__FPfff.s"
 }
@@ -138,202 +205,202 @@ ASM_FUNCTION(cLib_addCalc0__FPfff) {
 
 
 /* ############################################################################################## */
-/* 804551E8-804551F0 0008+00 .sdata2    @2379                                                        */
+/* 804551E8-804551F0 0008+00 rc=7 efc=0 .sdata2    @2379                                                        */
 f64 c_lib__lit_2379 = 0.5;
 
-/* 804551F0-804551F8 0008+00 .sdata2    @2380                                                        */
+/* 804551F0-804551F8 0008+00 rc=7 efc=0 .sdata2    @2380                                                        */
 f64 lit_2380 = 3.0;
 
-/* 804551F8-80455200 0008+00 .sdata2    @2381                                                        */
+/* 804551F8-80455200 0008+00 rc=7 efc=0 .sdata2    @2381                                                        */
 u8 lit_2381[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455200-80455208 0004+04 .sdata2    @2382                                                        */
+/* 80455200-80455208 0004+04 rc=5 efc=0 .sdata2    @2382                                                        */
 f32 lit_2382 = 7.999999968033578e-11f;
 /* padding 4 bytes */
 
-/* 8026FAB8-8026FDF4 033C+00 .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
+/* 8026FAB8-8026FDF4 033C+00 rc=3 efc=3 .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcPos__FP4cXyzRC4cXyzfff) {
+asm void cLib_addCalcPos(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcPos__FP4cXyzRC4cXyzfff.s"
 }
 #pragma pop
 
 
-/* 8026FDF4-80270178 0384+00 .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
+/* 8026FDF4-80270178 0384+00 rc=1 efc=1 .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff) {
+asm void cLib_addCalcPosXZ(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff.s"
 }
 #pragma pop
 
 
-/* 80270178-80270350 01D8+00 .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
+/* 80270178-80270350 01D8+00 rc=2 efc=2 .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcPos2__FP4cXyzRC4cXyzff) {
+asm void cLib_addCalcPos2(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcPos2__FP4cXyzRC4cXyzff.s"
 }
 #pragma pop
 
 
-/* 80270350-80270540 01F0+00 .text      cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff                         */
+/* 80270350-80270540 01F0+00 rc=0 efc=0 .text      cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff) {
+asm void cLib_addCalcPosXZ2(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff.s"
 }
 #pragma pop
 
 
-/* 80270540-80270608 00C8+00 .text      cLib_addCalcAngleS__FPsssss                                  */
+/* 80270540-80270608 00C8+00 rc=81 efc=81 .text      cLib_addCalcAngleS__FPsssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcAngleS__FPsssss) {
+asm void cLib_addCalcAngleS(s16* field_0, s16 field_1, s16 field_2, s16 field_3, s16 field_4) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcAngleS__FPsssss.s"
 }
 #pragma pop
 
 
-/* 80270608-8027065C 0054+00 .text      cLib_addCalcAngleS2__FPssss                                  */
+/* 80270608-8027065C 0054+00 rc=2 efc=2 .text      cLib_addCalcAngleS2__FPssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_addCalcAngleS2__FPssss) {
+asm void cLib_addCalcAngleS2(s16* field_0, s16 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_addCalcAngleS2__FPssss.s"
 }
 #pragma pop
 
 
-/* 8027065C-802706D0 0074+00 .text      cLib_chaseUC__FPUcUcUc                                       */
+/* 8027065C-802706D0 0074+00 rc=3 efc=3 .text      cLib_chaseUC__FPUcUcUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chaseUC__FPUcUcUc) {
+asm void cLib_chaseUC(char* field_0, char field_1, char field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chaseUC__FPUcUcUc.s"
 }
 #pragma pop
 
 
-/* 802706D0-80270740 0070+00 .text      cLib_chaseS__FPsss                                           */
+/* 802706D0-80270740 0070+00 rc=4 efc=4 .text      cLib_chaseS__FPsss                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chaseS__FPsss) {
+asm void cLib_chaseS(s16* field_0, s16 field_1, s16 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chaseS__FPsss.s"
 }
 #pragma pop
 
 
-/* 80270740-802707AC 006C+00 .text      cLib_chaseF__FPfff                                           */
+/* 80270740-802707AC 006C+00 rc=70 efc=70 .text      cLib_chaseF__FPfff                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chaseF__FPfff) {
+asm void cLib_chaseF(f32* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chaseF__FPfff.s"
 }
 #pragma pop
 
 
-/* 802707AC-80270990 01E4+00 .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
+/* 802707AC-80270990 01E4+00 rc=3 efc=3 .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chasePos__FP4cXyzRC4cXyzf) {
+asm void cLib_chasePos(cXyz* field_0, cXyz const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chasePos__FP4cXyzRC4cXyzf.s"
 }
 #pragma pop
 
 
-/* 80270990-80270B90 0200+00 .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
+/* 80270990-80270B90 0200+00 rc=1 efc=1 .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chasePosXZ__FP4cXyzRC4cXyzf) {
+asm void cLib_chasePosXZ(cXyz* field_0, cXyz const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chasePosXZ__FP4cXyzRC4cXyzf.s"
 }
 #pragma pop
 
 
-/* 80270B90-80270C04 0074+00 .text      cLib_chaseAngleS__FPsss                                      */
+/* 80270B90-80270C04 0074+00 rc=4 efc=4 .text      cLib_chaseAngleS__FPsss                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_chaseAngleS__FPsss) {
+asm void cLib_chaseAngleS(s16* field_0, s16 field_1, s16 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chaseAngleS__FPsss.s"
 }
 #pragma pop
 
 
-/* 80270C04-80270C3C 0038+00 .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
+/* 80270C04-80270C3C 0038+00 rc=39 efc=39 .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_targetAngleY__FPC3VecPC3Vec) {
+asm void cLib_targetAngleY(Vec const* field_0, Vec const* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_targetAngleY__FPC3VecPC3Vec.s"
 }
 #pragma pop
 
 
-/* 80270C3C-80270C74 0038+00 .text      cLib_targetAngleY__FRC3VecRC3Vec                             */
+/* 80270C3C-80270C74 0038+00 rc=0 efc=0 .text      cLib_targetAngleY__FRC3VecRC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_targetAngleY__FRC3VecRC3Vec) {
+asm void cLib_targetAngleY(Vec const& field_0, Vec const& field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_targetAngleY__FRC3VecRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80270C74-80270DC0 014C+00 .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
+/* 80270C74-80270DC0 014C+00 rc=2 efc=2 .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_targetAngleX__FPC4cXyzPC4cXyz) {
+asm void cLib_targetAngleX(cXyz const* field_0, cXyz const* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_targetAngleX__FPC4cXyzPC4cXyz.s"
 }
 #pragma pop
 
 
-/* 80270DC0-80270E24 0064+00 .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
+/* 80270DC0-80270E24 0064+00 rc=2 efc=2 .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz) {
+asm void cLib_offsetPos(cXyz* field_0, cXyz const* field_1, s16 field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz.s"
 }
 #pragma pop
 
 
-/* 80270E24-80270E4C 0028+00 .text      cLib_distanceAngleS__Fss                                     */
+/* 80270E24-80270E4C 0028+00 rc=48 efc=48 .text      cLib_distanceAngleS__Fss                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cLib_distanceAngleS__Fss) {
+asm void cLib_distanceAngleS(s16 field_0, s16 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_distanceAngleS__Fss.s"
 }
@@ -341,80 +408,79 @@ ASM_FUNCTION(cLib_distanceAngleS__Fss) {
 
 
 /* ############################################################################################## */
-/* 80430DB8-80430F98 01E0+00 .bss       mtx                                                          */
+/* 80430DB8-80430F98 01E0+00 rc=2 efc=0 .bss       mtx                                                          */
 u8 mtx[480];
 
-/* 80450768-80450770 0004+04 .sdata     calc_mtx                                                     */
+/* 80450768-80450770 0004+04 rc=8 efc=2 .sdata     calc_mtx                                                     */
 void* calc_mtx[2] = {
 	(void*)&mtx,
 	/* padding */
 	NULL,
 };
 
-/* 80270E4C-80270E5C 0010+00 .text      MtxInit__Fv                                                  */
+/* 80270E4C-80270E5C 0010+00 rc=1 efc=1 .text      MtxInit__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxInit__Fv) {
+asm void MtxInit() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxInit__Fv.s"
 }
 #pragma pop
 
 
-/* 80270E5C-80270EA4 0048+00 .text      MtxTrans__FfffUc                                             */
+/* 80270E5C-80270EA4 0048+00 rc=0 efc=0 .text      MtxTrans__FfffUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxTrans__FfffUc) {
+asm void MtxTrans(f32 field_0, f32 field_1, f32 field_2, char field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxTrans__FfffUc.s"
 }
 #pragma pop
 
 
-/* 80270EA4-80270EEC 0048+00 .text      MtxScale__FfffUc                                             */
+/* 80270EA4-80270EEC 0048+00 rc=0 efc=0 .text      MtxScale__FfffUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxScale__FfffUc) {
+asm void MtxScale(f32 field_0, f32 field_1, f32 field_2, char field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxScale__FfffUc.s"
 }
 #pragma pop
 
 
-/* 80270EEC-80270F1C 0030+00 .text      MtxPosition__FP4cXyzP4cXyz                                   */
+/* 80270EEC-80270F1C 0030+00 rc=2 efc=2 .text      MtxPosition__FP4cXyzP4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxPosition__FP4cXyzP4cXyz) {
+asm void MtxPosition(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxPosition__FP4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80270F1C-80270F58 003C+00 .text      MtxPush__Fv                                                  */
+/* 80270F1C-80270F58 003C+00 rc=0 efc=0 .text      MtxPush__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxPush__Fv) {
+asm void MtxPush() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxPush__Fv.s"
 }
 #pragma pop
 
 
-/* 80270F58-80270F68 0010+00 .text      MtxPull__Fv                                                  */
+/* 80270F58-80270F68 0010+00 rc=0 efc=0 .text      MtxPull__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MtxPull__Fv) {
+asm void MtxPull() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxPull__Fv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

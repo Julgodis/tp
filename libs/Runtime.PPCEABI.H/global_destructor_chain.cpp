@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void __destroy_global_chain();
-extern "C" extern void __register_global_object();
+extern "C" void __destroy_global_chain();
+extern "C" void __register_global_object();
+
+extern "C" void __destroy_global_chain();
+extern "C" void __register_global_object();
 SECTION_SBSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 
 // 
@@ -18,34 +21,34 @@ SECTION_SBSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451988-80451990 0004+04 .sbss      __global_destructor_chain                                    */
+/* 80451988-80451990 0004+04 rc=2 efc=0 .sbss      __global_destructor_chain                                    */
 u8 __global_destructor_chain[4 + 4 /* padding */];
 
-/* 80361BDC-80361C24 0048+00 .text      __destroy_global_chain                                       */
+/* 80361BDC-80361C24 0048+00 rc=2 efc=2 .text      __destroy_global_chain                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__destroy_global_chain) {
+extern "C" asm void __destroy_global_chain() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/global_destructor_chain/__destroy_global_chain.s"
 }
 #pragma pop
 
 
-/* 80361C24-80361C3C 0018+00 .text      __register_global_object                                     */
+/* 80361C24-80361C3C 0018+00 rc=116 efc=116 .text      __register_global_object                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__register_global_object) {
+extern "C" asm void __register_global_object() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/global_destructor_chain/__register_global_object.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

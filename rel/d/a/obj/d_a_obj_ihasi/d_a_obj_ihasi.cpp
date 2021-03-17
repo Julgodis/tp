@@ -6,19 +6,46 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_ihasi_class;
+
+struct obj_ihasi_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Ihasi_Draw__FP15obj_ihasi_class();
-extern "C" extern void ih_normal__FP15obj_ihasi_class();
-extern "C" extern void ih_disappear__FP15obj_ihasi_class();
-extern "C" extern void action__FP15obj_ihasi_class();
-extern "C" extern void daObj_Ihasi_Execute__FP15obj_ihasi_class();
-extern "C" extern void daObj_Ihasi_IsDelete__FP15obj_ihasi_class();
-extern "C" extern void daObj_Ihasi_Delete__FP15obj_ihasi_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Ihasi_Create__FP10fopAc_ac_c();
+void daObj_Ihasi_Draw(obj_ihasi_class*);
+void ih_normal(obj_ihasi_class*);
+void ih_disappear(obj_ihasi_class*);
+void action(obj_ihasi_class*);
+void daObj_Ihasi_Execute(obj_ihasi_class*);
+bool daObj_Ihasi_IsDelete(obj_ihasi_class*);
+void daObj_Ihasi_Delete(obj_ihasi_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Ihasi_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Ihasi_Draw__FP15obj_ihasi_class();
+extern "C" void ih_normal__FP15obj_ihasi_class();
+extern "C" void ih_disappear__FP15obj_ihasi_class();
+extern "C" void action__FP15obj_ihasi_class();
+extern "C" void daObj_Ihasi_Execute__FP15obj_ihasi_class();
+extern "C" bool daObj_Ihasi_IsDelete__FP15obj_ihasi_class();
+extern "C" void daObj_Ihasi_Delete__FP15obj_ihasi_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Ihasi_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3841;
 SECTION_RODATA extern const u32 lit_3842;
 SECTION_RODATA extern const u32 lit_3843;
@@ -43,7 +70,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -53,7 +82,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ihasi_Draw__FP15obj_ihasi_class) {
+asm void daObj_Ihasi_Draw(obj_ihasi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Draw__FP15obj_ihasi_class.s"
 }
@@ -61,32 +90,22 @@ ASM_FUNCTION(daObj_Ihasi_Draw__FP15obj_ihasi_class) {
 
 
 /* 80C2611C-80C26120 0004+00 .text      ih_normal__FP15obj_ihasi_class                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ih_normal__FP15obj_ihasi_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/ih_normal__FP15obj_ihasi_class.s"
+void ih_normal(obj_ihasi_class* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C26120-80C26124 0004+00 .text      ih_disappear__FP15obj_ihasi_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ih_disappear__FP15obj_ihasi_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/ih_disappear__FP15obj_ihasi_class.s"
+void ih_disappear(obj_ihasi_class* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C26124-80C26204 00E0+00 .text      action__FP15obj_ihasi_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP15obj_ihasi_class) {
+asm void action(obj_ihasi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/action__FP15obj_ihasi_class.s"
 }
@@ -97,7 +116,7 @@ ASM_FUNCTION(action__FP15obj_ihasi_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ihasi_Execute__FP15obj_ihasi_class) {
+asm void daObj_Ihasi_Execute(obj_ihasi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Execute__FP15obj_ihasi_class.s"
 }
@@ -105,21 +124,16 @@ ASM_FUNCTION(daObj_Ihasi_Execute__FP15obj_ihasi_class) {
 
 
 /* 80C262C4-80C262CC 0008+00 .text      daObj_Ihasi_IsDelete__FP15obj_ihasi_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ihasi_IsDelete__FP15obj_ihasi_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_IsDelete__FP15obj_ihasi_class.s"
+bool daObj_Ihasi_IsDelete(obj_ihasi_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C262CC-80C26324 0058+00 .text      daObj_Ihasi_Delete__FP15obj_ihasi_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ihasi_Delete__FP15obj_ihasi_class) {
+asm void daObj_Ihasi_Delete(obj_ihasi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Delete__FP15obj_ihasi_class.s"
 }
@@ -130,7 +144,7 @@ ASM_FUNCTION(daObj_Ihasi_Delete__FP15obj_ihasi_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -141,7 +155,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/__dt__12J3DFrameCtrlFv.s"
 }
@@ -152,7 +166,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ihasi_Create__FP10fopAc_ac_c) {
+asm void daObj_Ihasi_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_Create__FP10fopAc_ac_c.s"
 }

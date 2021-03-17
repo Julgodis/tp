@@ -6,30 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cXyz;
+
+struct daTag_EvtMsg_c {
+	void create();
+	bool Delete();
+	void Execute();
+	bool Draw();
+	void getOnEvtBit();
+	void getOffEvtBit();
+	void getOnSwBit();
+	void getOffSwBit();
+	void getProcType();
+	void isDelete();
+	void chkPointInArea(cXyz);
+	void ECut_talk(s32);
+	void ECut_wait(s32);
+	~daTag_EvtMsg_c();
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__14daTag_EvtMsg_cFv();
-extern "C" extern void Delete__14daTag_EvtMsg_cFv();
-extern "C" extern void Execute__14daTag_EvtMsg_cFv();
-extern "C" extern void Draw__14daTag_EvtMsg_cFv();
-extern "C" extern void getOnEvtBit__14daTag_EvtMsg_cFv();
-extern "C" extern void getOffEvtBit__14daTag_EvtMsg_cFv();
-extern "C" extern void getOnSwBit__14daTag_EvtMsg_cFv();
-extern "C" extern void getOffSwBit__14daTag_EvtMsg_cFv();
-extern "C" extern void getProcType__14daTag_EvtMsg_cFv();
-extern "C" extern void isDelete__14daTag_EvtMsg_cFv();
-extern "C" extern void chkPointInArea__14daTag_EvtMsg_cF4cXyz();
-extern "C" extern void ECut_talk__14daTag_EvtMsg_cFi();
-extern "C" extern void ECut_wait__14daTag_EvtMsg_cFi();
-extern "C" extern void daTag_EvtMsg_Create__FPv();
-extern "C" extern void daTag_EvtMsg_Delete__FPv();
-extern "C" extern void daTag_EvtMsg_Execute__FPv();
-extern "C" extern void daTag_EvtMsg_Draw__FPv();
-extern "C" extern void daTag_EvtMsg_IsDelete__FPv();
-extern "C" extern void __dt__14daTag_EvtMsg_cFv();
-extern "C" extern void func_8048D760();
-extern "C" extern void __sinit_d_a_tag_evtmsg_cpp();
+void daTag_EvtMsg_Create(void*);
+void daTag_EvtMsg_Delete(void*);
+void daTag_EvtMsg_Execute(void*);
+void daTag_EvtMsg_Draw(void*);
+bool daTag_EvtMsg_IsDelete(void*);
+extern "C" void func_8048D760();
+extern "C" void __sinit_d_a_tag_evtmsg_cpp();
+
+extern "C" void create__14daTag_EvtMsg_cFv();
+extern "C" bool Delete__14daTag_EvtMsg_cFv();
+extern "C" void Execute__14daTag_EvtMsg_cFv();
+extern "C" bool Draw__14daTag_EvtMsg_cFv();
+extern "C" void getOnEvtBit__14daTag_EvtMsg_cFv();
+extern "C" void getOffEvtBit__14daTag_EvtMsg_cFv();
+extern "C" void getOnSwBit__14daTag_EvtMsg_cFv();
+extern "C" void getOffSwBit__14daTag_EvtMsg_cFv();
+extern "C" void getProcType__14daTag_EvtMsg_cFv();
+extern "C" void isDelete__14daTag_EvtMsg_cFv();
+extern "C" void chkPointInArea__14daTag_EvtMsg_cF4cXyz();
+extern "C" void ECut_talk__14daTag_EvtMsg_cFi();
+extern "C" void ECut_wait__14daTag_EvtMsg_cFi();
+extern "C" void daTag_EvtMsg_Create__FPv();
+extern "C" void daTag_EvtMsg_Delete__FPv();
+extern "C" void daTag_EvtMsg_Execute__FPv();
+extern "C" void daTag_EvtMsg_Draw__FPv();
+extern "C" bool daTag_EvtMsg_IsDelete__FPv();
+extern "C" void __dt__14daTag_EvtMsg_cFv();
+extern "C" void func_8048D760();
+extern "C" void __sinit_d_a_tag_evtmsg_cpp();
 SECTION_RODATA extern const u32 lit_3826;
 SECTION_RODATA extern const u8 stringBase0[41];
 SECTION_DATA extern u8 cNullVec__6Z2Calc[12];
@@ -48,7 +82,9 @@ SECTION_DATA extern void*const __vt__14daTag_EvtMsg_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -58,7 +94,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/create__14daTag_EvtMsg_cFv.s"
 }
@@ -66,21 +102,16 @@ ASM_FUNCTION(create__14daTag_EvtMsg_cFv) {
 
 
 /* 8048D014-8048D01C 0008+00 .text      Delete__14daTag_EvtMsg_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daTag_EvtMsg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/Delete__14daTag_EvtMsg_cFv.s"
+bool daTag_EvtMsg_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D01C-8048D31C 0300+00 .text      Execute__14daTag_EvtMsg_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/Execute__14daTag_EvtMsg_cFv.s"
 }
@@ -88,21 +119,16 @@ ASM_FUNCTION(Execute__14daTag_EvtMsg_cFv) {
 
 
 /* 8048D31C-8048D324 0008+00 .text      Draw__14daTag_EvtMsg_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daTag_EvtMsg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/Draw__14daTag_EvtMsg_cFv.s"
+bool daTag_EvtMsg_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D324-8048D340 001C+00 .text      getOnEvtBit__14daTag_EvtMsg_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOnEvtBit__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::getOnEvtBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/getOnEvtBit__14daTag_EvtMsg_cFv.s"
 }
@@ -113,7 +139,7 @@ ASM_FUNCTION(getOnEvtBit__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOffEvtBit__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::getOffEvtBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/getOffEvtBit__14daTag_EvtMsg_cFv.s"
 }
@@ -124,7 +150,7 @@ ASM_FUNCTION(getOffEvtBit__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOnSwBit__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::getOnSwBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/getOnSwBit__14daTag_EvtMsg_cFv.s"
 }
@@ -135,7 +161,7 @@ ASM_FUNCTION(getOnSwBit__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOffSwBit__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::getOffSwBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/getOffSwBit__14daTag_EvtMsg_cFv.s"
 }
@@ -146,7 +172,7 @@ ASM_FUNCTION(getOffSwBit__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getProcType__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::getProcType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/getProcType__14daTag_EvtMsg_cFv.s"
 }
@@ -157,7 +183,7 @@ ASM_FUNCTION(getProcType__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__14daTag_EvtMsg_cFv) {
+asm void daTag_EvtMsg_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/isDelete__14daTag_EvtMsg_cFv.s"
 }
@@ -168,7 +194,7 @@ ASM_FUNCTION(isDelete__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__14daTag_EvtMsg_cF4cXyz) {
+asm void daTag_EvtMsg_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/chkPointInArea__14daTag_EvtMsg_cF4cXyz.s"
 }
@@ -179,7 +205,7 @@ ASM_FUNCTION(chkPointInArea__14daTag_EvtMsg_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_talk__14daTag_EvtMsg_cFi) {
+asm void daTag_EvtMsg_c::ECut_talk(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/ECut_talk__14daTag_EvtMsg_cFi.s"
 }
@@ -190,7 +216,7 @@ ASM_FUNCTION(ECut_talk__14daTag_EvtMsg_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_wait__14daTag_EvtMsg_cFi) {
+asm void daTag_EvtMsg_c::ECut_wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/ECut_wait__14daTag_EvtMsg_cFi.s"
 }
@@ -201,7 +227,7 @@ ASM_FUNCTION(ECut_wait__14daTag_EvtMsg_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtMsg_Create__FPv) {
+asm void daTag_EvtMsg_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_Create__FPv.s"
 }
@@ -212,7 +238,7 @@ ASM_FUNCTION(daTag_EvtMsg_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtMsg_Delete__FPv) {
+asm void daTag_EvtMsg_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_Delete__FPv.s"
 }
@@ -223,7 +249,7 @@ ASM_FUNCTION(daTag_EvtMsg_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtMsg_Execute__FPv) {
+asm void daTag_EvtMsg_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_Execute__FPv.s"
 }
@@ -234,7 +260,7 @@ ASM_FUNCTION(daTag_EvtMsg_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtMsg_Draw__FPv) {
+asm void daTag_EvtMsg_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_Draw__FPv.s"
 }
@@ -242,21 +268,16 @@ ASM_FUNCTION(daTag_EvtMsg_Draw__FPv) {
 
 
 /* 8048D6E8-8048D6F0 0008+00 .text      daTag_EvtMsg_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtMsg_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_IsDelete__FPv.s"
+bool daTag_EvtMsg_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D6F0-8048D760 0070+00 .text      __dt__14daTag_EvtMsg_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTag_EvtMsg_cFv) {
+asm daTag_EvtMsg_c::~daTag_EvtMsg_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/__dt__14daTag_EvtMsg_cFv.s"
 }
@@ -267,7 +288,7 @@ ASM_FUNCTION(__dt__14daTag_EvtMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8048D760) {
+extern "C" asm void func_8048D760() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/func_8048D760.s"
 }
@@ -278,7 +299,7 @@ ASM_FUNCTION(func_8048D760) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_evtmsg_cpp) {
+extern "C" asm void __sinit_d_a_tag_evtmsg_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/__sinit_d_a_tag_evtmsg_cpp.s"
 }

@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern u8 g_profile_NPC_HENNA0[48];
 
 // 
@@ -16,10 +17,12 @@ SECTION_DATA extern u8 g_profile_NPC_HENNA0[48];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
+/* ############################################################################################## */
 /* 80A013E0-80A01410 0030+00 .data      g_profile_NPC_HENNA0                                         */
 u8 g_profile_NPC_HENNA0[48] = {
 	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x56, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

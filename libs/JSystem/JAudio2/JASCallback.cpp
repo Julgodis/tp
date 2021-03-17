@@ -6,61 +6,83 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASCallbackMgr (JASCallbackMgr) False/False
+/* top-level dependencies (begin JASCallbackMgr) */
+/* top-level dependencies (end JASCallbackMgr) */
+struct JASCallbackMgr {
+	/* 802900C4 */ void callback();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void regist__14JASCallbackMgrFPFPv_lPv();
-extern "C" extern void reject__14JASCallbackMgrFPFPv_lPv();
-extern "C" extern void callback__14JASCallbackMgrFv();
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
+
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
+extern "C" void callback__14JASCallbackMgrFv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 8028FFA8-80290030 0088+00 .text      regist__14JASCallbackMgrFPFPv_lPv                            */
+/* 8028FFA8-80290030 0088+00 rc=2 efc=2 .text      regist__14JASCallbackMgrFPFPv_lPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regist__14JASCallbackMgrFPFPv_lPv) {
+extern "C" asm void regist__14JASCallbackMgrFPFPv_lPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCallback/regist__14JASCallbackMgrFPFPv_lPv.s"
 }
 #pragma pop
 
 
-/* 80290030-802900C4 0094+00 .text      reject__14JASCallbackMgrFPFPv_lPv                            */
+/* 80290030-802900C4 0094+00 rc=1 efc=1 .text      reject__14JASCallbackMgrFPFPv_lPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reject__14JASCallbackMgrFPFPv_lPv) {
+extern "C" asm void reject__14JASCallbackMgrFPFPv_lPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCallback/reject__14JASCallbackMgrFPFPv_lPv.s"
 }
 #pragma pop
 
 
-/* 802900C4-80290140 007C+00 .text      callback__14JASCallbackMgrFv                                 */
+/* 802900C4-80290140 007C+00 rc=3 efc=3 .text      callback__14JASCallbackMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callback__14JASCallbackMgrFv) {
+asm void JASCallbackMgr::callback() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCallback/callback__14JASCallbackMgrFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,30 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daLv6FurikoTrap_c;
+struct fopAc_ac_c;
+
+struct daLv6FurikoTrap_HIO_c {
+	daLv6FurikoTrap_HIO_c();
+	~daLv6FurikoTrap_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6FurikoTrap_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void move();
+	void init_modeMove();
+	void modeMove();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__21daLv6FurikoTrap_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__17daLv6FurikoTrap_cFv();
-extern "C" extern void CreateHeap__17daLv6FurikoTrap_cFv();
-extern "C" extern void create__17daLv6FurikoTrap_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void Execute__17daLv6FurikoTrap_cFPPA3_A4_f();
-extern "C" extern void move__17daLv6FurikoTrap_cFv();
-extern "C" extern void init_modeMove__17daLv6FurikoTrap_cFv();
-extern "C" extern void modeMove__17daLv6FurikoTrap_cFv();
-extern "C" extern void Draw__17daLv6FurikoTrap_cFv();
-extern "C" extern void Delete__17daLv6FurikoTrap_cFv();
-extern "C" extern void daLv6FurikoTrap_Draw__FP17daLv6FurikoTrap_c();
-extern "C" extern void daLv6FurikoTrap_Execute__FP17daLv6FurikoTrap_c();
-extern "C" extern void daLv6FurikoTrap_Delete__FP17daLv6FurikoTrap_c();
-extern "C" extern void daLv6FurikoTrap_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__21daLv6FurikoTrap_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6FurikoTrap_cpp();
+extern "C" void Execute__17daLv6FurikoTrap_cFPPA3_A4_f();
+void daLv6FurikoTrap_Draw(daLv6FurikoTrap_c*);
+void daLv6FurikoTrap_Execute(daLv6FurikoTrap_c*);
+void daLv6FurikoTrap_Delete(daLv6FurikoTrap_c*);
+void daLv6FurikoTrap_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6FurikoTrap_cpp();
+
+extern "C" void __ct__21daLv6FurikoTrap_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__17daLv6FurikoTrap_cFv();
+extern "C" void CreateHeap__17daLv6FurikoTrap_cFv();
+extern "C" void create__17daLv6FurikoTrap_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__17daLv6FurikoTrap_cFPPA3_A4_f();
+extern "C" void move__17daLv6FurikoTrap_cFv();
+extern "C" void init_modeMove__17daLv6FurikoTrap_cFv();
+extern "C" void modeMove__17daLv6FurikoTrap_cFv();
+extern "C" void Draw__17daLv6FurikoTrap_cFv();
+extern "C" void Delete__17daLv6FurikoTrap_cFv();
+extern "C" void daLv6FurikoTrap_Draw__FP17daLv6FurikoTrap_c();
+extern "C" void daLv6FurikoTrap_Execute__FP17daLv6FurikoTrap_c();
+extern "C" void daLv6FurikoTrap_Delete__FP17daLv6FurikoTrap_c();
+extern "C" void daLv6FurikoTrap_Create__FP10fopAc_ac_c();
+extern "C" void __dt__21daLv6FurikoTrap_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6FurikoTrap_cpp();
 SECTION_RODATA extern const u32 lit_3625;
 SECTION_RODATA extern const u32 lit_3626;
 SECTION_RODATA extern const u8 mCcDObjInfo__17daLv6FurikoTrap_c[48];
@@ -65,8 +115,11 @@ SECTION_BSS extern u8 data_80C732E4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -76,7 +129,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__21daLv6FurikoTrap_HIO_cFv) {
+asm daLv6FurikoTrap_HIO_c::daLv6FurikoTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__ct__21daLv6FurikoTrap_HIO_cFv.s"
 }
@@ -87,7 +140,7 @@ ASM_FUNCTION(__ct__21daLv6FurikoTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -98,7 +151,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/setBaseMtx__17daLv6FurikoTrap_cFv.s"
 }
@@ -109,7 +162,7 @@ ASM_FUNCTION(setBaseMtx__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/CreateHeap__17daLv6FurikoTrap_cFv.s"
 }
@@ -120,7 +173,7 @@ ASM_FUNCTION(CreateHeap__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/create__17daLv6FurikoTrap_cFv.s"
 }
@@ -131,7 +184,7 @@ ASM_FUNCTION(create__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__dt__8dCcD_SphFv.s"
 }
@@ -142,7 +195,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__ct__8dCcD_SphFv.s"
 }
@@ -153,7 +206,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__dt__8cM3dGSphFv.s"
 }
@@ -164,7 +217,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__dt__8cM3dGAabFv.s"
 }
@@ -175,7 +228,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__17daLv6FurikoTrap_cFPPA3_A4_f) {
+extern "C" asm void Execute__17daLv6FurikoTrap_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/Execute__17daLv6FurikoTrap_cFPPA3_A4_f.s"
 }
@@ -186,7 +239,7 @@ ASM_FUNCTION(Execute__17daLv6FurikoTrap_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/move__17daLv6FurikoTrap_cFv.s"
 }
@@ -197,7 +250,7 @@ ASM_FUNCTION(move__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/init_modeMove__17daLv6FurikoTrap_cFv.s"
 }
@@ -208,7 +261,7 @@ ASM_FUNCTION(init_modeMove__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/modeMove__17daLv6FurikoTrap_cFv.s"
 }
@@ -219,7 +272,7 @@ ASM_FUNCTION(modeMove__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/Draw__17daLv6FurikoTrap_cFv.s"
 }
@@ -230,7 +283,7 @@ ASM_FUNCTION(Draw__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daLv6FurikoTrap_cFv) {
+asm void daLv6FurikoTrap_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/Delete__17daLv6FurikoTrap_cFv.s"
 }
@@ -241,7 +294,7 @@ ASM_FUNCTION(Delete__17daLv6FurikoTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6FurikoTrap_Draw__FP17daLv6FurikoTrap_c) {
+asm void daLv6FurikoTrap_Draw(daLv6FurikoTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/daLv6FurikoTrap_Draw__FP17daLv6FurikoTrap_c.s"
 }
@@ -252,7 +305,7 @@ ASM_FUNCTION(daLv6FurikoTrap_Draw__FP17daLv6FurikoTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6FurikoTrap_Execute__FP17daLv6FurikoTrap_c) {
+asm void daLv6FurikoTrap_Execute(daLv6FurikoTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/daLv6FurikoTrap_Execute__FP17daLv6FurikoTrap_c.s"
 }
@@ -263,7 +316,7 @@ ASM_FUNCTION(daLv6FurikoTrap_Execute__FP17daLv6FurikoTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6FurikoTrap_Delete__FP17daLv6FurikoTrap_c) {
+asm void daLv6FurikoTrap_Delete(daLv6FurikoTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/daLv6FurikoTrap_Delete__FP17daLv6FurikoTrap_c.s"
 }
@@ -274,7 +327,7 @@ ASM_FUNCTION(daLv6FurikoTrap_Delete__FP17daLv6FurikoTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6FurikoTrap_Create__FP10fopAc_ac_c) {
+asm void daLv6FurikoTrap_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/daLv6FurikoTrap_Create__FP10fopAc_ac_c.s"
 }
@@ -285,7 +338,7 @@ ASM_FUNCTION(daLv6FurikoTrap_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daLv6FurikoTrap_HIO_cFv) {
+asm daLv6FurikoTrap_HIO_c::~daLv6FurikoTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__dt__21daLv6FurikoTrap_HIO_cFv.s"
 }
@@ -296,7 +349,7 @@ ASM_FUNCTION(__dt__21daLv6FurikoTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6FurikoTrap_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6FurikoTrap_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6FurikoTrap/d_a_obj_lv6FurikoTrap/__sinit_d_a_obj_lv6FurikoTrap_cpp.s"
 }

@@ -6,35 +6,96 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObj_Balloon_c;
+
+struct daObj_Balloon_HIO_c {
+	daObj_Balloon_HIO_c();
+	~daObj_Balloon_HIO_c();
+};
+
+struct daObj_Balloon_c {
+	void draw();
+	void saveBestScore();
+	void cc_set();
+	void action();
+	void mtx_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19daObj_Balloon_HIO_cFv();
-extern "C" extern void draw__15daObj_Balloon_cFv();
-extern "C" extern void daObj_Balloon_Draw__FP15daObj_Balloon_c();
-extern "C" extern void saveBestScore__15daObj_Balloon_cFv();
-extern "C" extern void cc_set__15daObj_Balloon_cFv();
-extern "C" extern void action__15daObj_Balloon_cFv();
-extern "C" extern void mtx_set__15daObj_Balloon_cFv();
-extern "C" extern void execute__15daObj_Balloon_cFv();
-extern "C" extern void daObj_Balloon_Execute__FP15daObj_Balloon_c();
-extern "C" extern void daObj_Balloon_IsDelete__FP15daObj_Balloon_c();
-extern "C" extern void _delete__15daObj_Balloon_cFv();
-extern "C" extern void daObj_Balloon_Delete__FP15daObj_Balloon_c();
-extern "C" extern void CreateHeap__15daObj_Balloon_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__15daObj_Balloon_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void daObj_Balloon_Create__FP15daObj_Balloon_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__19daObj_Balloon_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_balloon_cpp();
-extern "C" extern void func_80BA8DE8();
-extern "C" extern void func_80BA8DF0();
+void daObj_Balloon_Draw(daObj_Balloon_c*);
+void daObj_Balloon_Execute(daObj_Balloon_c*);
+bool daObj_Balloon_IsDelete(daObj_Balloon_c*);
+void daObj_Balloon_Delete(daObj_Balloon_c*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Balloon_Create(daObj_Balloon_c*);
+extern "C" void __sinit_d_a_obj_balloon_cpp();
+extern "C" void func_80BA8DE8();
+extern "C" void func_80BA8DF0();
+
+extern "C" void __ct__19daObj_Balloon_HIO_cFv();
+extern "C" void draw__15daObj_Balloon_cFv();
+extern "C" void daObj_Balloon_Draw__FP15daObj_Balloon_c();
+extern "C" void saveBestScore__15daObj_Balloon_cFv();
+extern "C" void cc_set__15daObj_Balloon_cFv();
+extern "C" void action__15daObj_Balloon_cFv();
+extern "C" void mtx_set__15daObj_Balloon_cFv();
+extern "C" void execute__15daObj_Balloon_cFv();
+extern "C" void daObj_Balloon_Execute__FP15daObj_Balloon_c();
+extern "C" bool daObj_Balloon_IsDelete__FP15daObj_Balloon_c();
+extern "C" void _delete__15daObj_Balloon_cFv();
+extern "C" void daObj_Balloon_Delete__FP15daObj_Balloon_c();
+extern "C" void CreateHeap__15daObj_Balloon_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__15daObj_Balloon_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void daObj_Balloon_Create__FP15daObj_Balloon_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__19daObj_Balloon_HIO_cFv();
+extern "C" void __sinit_d_a_obj_balloon_cpp();
+extern "C" void func_80BA8DE8();
+extern "C" void func_80BA8DF0();
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u32 lit_3657;
 SECTION_RODATA extern const u32 lit_3658;
@@ -124,8 +185,11 @@ SECTION_BSS extern u8 data_80BA908C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -135,7 +199,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19daObj_Balloon_HIO_cFv) {
+asm daObj_Balloon_HIO_c::daObj_Balloon_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__ct__19daObj_Balloon_HIO_cFv.s"
 }
@@ -146,7 +210,7 @@ ASM_FUNCTION(__ct__19daObj_Balloon_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/draw__15daObj_Balloon_cFv.s"
 }
@@ -157,7 +221,7 @@ ASM_FUNCTION(draw__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Balloon_Draw__FP15daObj_Balloon_c) {
+asm void daObj_Balloon_Draw(daObj_Balloon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_Draw__FP15daObj_Balloon_c.s"
 }
@@ -168,7 +232,7 @@ ASM_FUNCTION(daObj_Balloon_Draw__FP15daObj_Balloon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(saveBestScore__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::saveBestScore() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/saveBestScore__15daObj_Balloon_cFv.s"
 }
@@ -179,7 +243,7 @@ ASM_FUNCTION(saveBestScore__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/cc_set__15daObj_Balloon_cFv.s"
 }
@@ -190,7 +254,7 @@ ASM_FUNCTION(cc_set__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/action__15daObj_Balloon_cFv.s"
 }
@@ -201,7 +265,7 @@ ASM_FUNCTION(action__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/mtx_set__15daObj_Balloon_cFv.s"
 }
@@ -212,7 +276,7 @@ ASM_FUNCTION(mtx_set__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/execute__15daObj_Balloon_cFv.s"
 }
@@ -223,7 +287,7 @@ ASM_FUNCTION(execute__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Balloon_Execute__FP15daObj_Balloon_c) {
+asm void daObj_Balloon_Execute(daObj_Balloon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_Execute__FP15daObj_Balloon_c.s"
 }
@@ -231,21 +295,16 @@ ASM_FUNCTION(daObj_Balloon_Execute__FP15daObj_Balloon_c) {
 
 
 /* 80BA872C-80BA8734 0008+00 .text      daObj_Balloon_IsDelete__FP15daObj_Balloon_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Balloon_IsDelete__FP15daObj_Balloon_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_IsDelete__FP15daObj_Balloon_c.s"
+bool daObj_Balloon_IsDelete(daObj_Balloon_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA8734-80BA87AC 0078+00 .text      _delete__15daObj_Balloon_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/_delete__15daObj_Balloon_cFv.s"
 }
@@ -256,7 +315,7 @@ ASM_FUNCTION(_delete__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Balloon_Delete__FP15daObj_Balloon_c) {
+asm void daObj_Balloon_Delete(daObj_Balloon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_Delete__FP15daObj_Balloon_c.s"
 }
@@ -267,7 +326,7 @@ ASM_FUNCTION(daObj_Balloon_Delete__FP15daObj_Balloon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/CreateHeap__15daObj_Balloon_cFv.s"
 }
@@ -278,7 +337,7 @@ ASM_FUNCTION(CreateHeap__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -289,7 +348,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObj_Balloon_cFv) {
+asm void daObj_Balloon_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/create__15daObj_Balloon_cFv.s"
 }
@@ -300,7 +359,7 @@ ASM_FUNCTION(create__15daObj_Balloon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__8cM3dGSphFv.s"
 }
@@ -311,7 +370,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__8cM3dGAabFv.s"
 }
@@ -322,7 +381,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__10dCcD_GSttsFv.s"
 }
@@ -333,7 +392,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -344,7 +403,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__12dBgS_AcchCirFv.s"
 }
@@ -355,7 +414,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Balloon_Create__FP15daObj_Balloon_c) {
+asm void daObj_Balloon_Create(daObj_Balloon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_Create__FP15daObj_Balloon_c.s"
 }
@@ -366,7 +425,7 @@ ASM_FUNCTION(daObj_Balloon_Create__FP15daObj_Balloon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__10cCcD_GSttsFv.s"
 }
@@ -377,7 +436,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObj_Balloon_HIO_cFv) {
+asm daObj_Balloon_HIO_c::~daObj_Balloon_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__dt__19daObj_Balloon_HIO_cFv.s"
 }
@@ -388,7 +447,7 @@ ASM_FUNCTION(__dt__19daObj_Balloon_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_balloon_cpp) {
+extern "C" asm void __sinit_d_a_obj_balloon_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/__sinit_d_a_obj_balloon_cpp.s"
 }
@@ -399,7 +458,7 @@ ASM_FUNCTION(__sinit_d_a_obj_balloon_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA8DE8) {
+extern "C" asm void func_80BA8DE8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/func_80BA8DE8.s"
 }
@@ -410,7 +469,7 @@ ASM_FUNCTION(func_80BA8DE8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA8DF0) {
+extern "C" asm void func_80BA8DF0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/func_80BA8DF0.s"
 }

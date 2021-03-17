@@ -6,47 +6,99 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagTWGate_c;
+
+struct daTagTWGate_c {
+	void initWait();
+	void executeWait();
+	void initDemoFilone1();
+	void executeDemoFilone1();
+	void initDemoFilone2();
+	void executeDemoFilone2();
+	void initDemoFilone3();
+	void executeDemoFilone3();
+	void initDemoOrdin1();
+	void executeDemoOrdin1();
+	void initDemoOrdin2();
+	void executeDemoOrdin2();
+	void initDemoOrdin3();
+	void executeDemoOrdin3();
+	void initDemoRanail1();
+	void executeDemoRanail1();
+	void initDemoRanail2();
+	void executeDemoRanail2();
+	void initDemoRanail3();
+	void executeDemoRanail3();
+	void initDemoHyral1();
+	void executeDemoHyral1();
+	void initDemoHyral2();
+	void executeDemoHyral2();
+	void initDemoHyral3();
+	void executeDemoHyral3();
+	void initBaseMtx();
+	void downloadModels();
+	void initTalk(s32, fopAc_ac_c**);
+	void talkProc(s32*, s32, fopAc_ac_c**);
+	void createHeapCallBack(fopAc_ac_c*);
+	void CreateHeap();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initWait__13daTagTWGate_cFv();
-extern "C" extern void executeWait__13daTagTWGate_cFv();
-extern "C" extern void initDemoFilone1__13daTagTWGate_cFv();
-extern "C" extern void executeDemoFilone1__13daTagTWGate_cFv();
-extern "C" extern void initDemoFilone2__13daTagTWGate_cFv();
-extern "C" extern void executeDemoFilone2__13daTagTWGate_cFv();
-extern "C" extern void initDemoFilone3__13daTagTWGate_cFv();
-extern "C" extern void executeDemoFilone3__13daTagTWGate_cFv();
-extern "C" extern void initDemoOrdin1__13daTagTWGate_cFv();
-extern "C" extern void executeDemoOrdin1__13daTagTWGate_cFv();
-extern "C" extern void initDemoOrdin2__13daTagTWGate_cFv();
-extern "C" extern void executeDemoOrdin2__13daTagTWGate_cFv();
-extern "C" extern void initDemoOrdin3__13daTagTWGate_cFv();
-extern "C" extern void executeDemoOrdin3__13daTagTWGate_cFv();
-extern "C" extern void initDemoRanail1__13daTagTWGate_cFv();
-extern "C" extern void executeDemoRanail1__13daTagTWGate_cFv();
-extern "C" extern void initDemoRanail2__13daTagTWGate_cFv();
-extern "C" extern void executeDemoRanail2__13daTagTWGate_cFv();
-extern "C" extern void initDemoRanail3__13daTagTWGate_cFv();
-extern "C" extern void executeDemoRanail3__13daTagTWGate_cFv();
-extern "C" extern void initDemoHyral1__13daTagTWGate_cFv();
-extern "C" extern void executeDemoHyral1__13daTagTWGate_cFv();
-extern "C" extern void initDemoHyral2__13daTagTWGate_cFv();
-extern "C" extern void executeDemoHyral2__13daTagTWGate_cFv();
-extern "C" extern void initDemoHyral3__13daTagTWGate_cFv();
-extern "C" extern void executeDemoHyral3__13daTagTWGate_cFv();
-extern "C" extern void initBaseMtx__13daTagTWGate_cFv();
-extern "C" extern void downloadModels__13daTagTWGate_cFv();
-extern "C" extern void initTalk__13daTagTWGate_cFiPP10fopAc_ac_c();
-extern "C" extern void talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c();
-extern "C" extern void createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__13daTagTWGate_cFv();
-extern "C" extern void daTagTWGate_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagTWGate_Delete__FP13daTagTWGate_c();
-extern "C" extern void daTagTWGate_Execute__FP13daTagTWGate_c();
-extern "C" extern void daTagTWGate_Draw__FP13daTagTWGate_c();
-extern "C" extern void daTagTWGate_IsDelete__FP13daTagTWGate_c();
-extern "C" extern void __sinit_d_a_tag_TWgate_cpp();
+void daTagTWGate_Create(fopAc_ac_c*);
+void daTagTWGate_Delete(daTagTWGate_c*);
+void daTagTWGate_Execute(daTagTWGate_c*);
+void daTagTWGate_Draw(daTagTWGate_c*);
+bool daTagTWGate_IsDelete(daTagTWGate_c*);
+extern "C" void __sinit_d_a_tag_TWgate_cpp();
+
+extern "C" void initWait__13daTagTWGate_cFv();
+extern "C" void executeWait__13daTagTWGate_cFv();
+extern "C" void initDemoFilone1__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone1__13daTagTWGate_cFv();
+extern "C" void initDemoFilone2__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone2__13daTagTWGate_cFv();
+extern "C" void initDemoFilone3__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone3__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin1__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin1__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin2__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin2__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin3__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin3__13daTagTWGate_cFv();
+extern "C" void initDemoRanail1__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail1__13daTagTWGate_cFv();
+extern "C" void initDemoRanail2__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail2__13daTagTWGate_cFv();
+extern "C" void initDemoRanail3__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail3__13daTagTWGate_cFv();
+extern "C" void initDemoHyral1__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral1__13daTagTWGate_cFv();
+extern "C" void initDemoHyral2__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral2__13daTagTWGate_cFv();
+extern "C" void initDemoHyral3__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral3__13daTagTWGate_cFv();
+extern "C" void initBaseMtx__13daTagTWGate_cFv();
+extern "C" void downloadModels__13daTagTWGate_cFv();
+extern "C" void initTalk__13daTagTWGate_cFiPP10fopAc_ac_c();
+extern "C" void talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c();
+extern "C" void createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__13daTagTWGate_cFv();
+extern "C" void daTagTWGate_Create__FP10fopAc_ac_c();
+extern "C" void daTagTWGate_Delete__FP13daTagTWGate_c();
+extern "C" void daTagTWGate_Execute__FP13daTagTWGate_c();
+extern "C" void daTagTWGate_Draw__FP13daTagTWGate_c();
+extern "C" bool daTagTWGate_IsDelete__FP13daTagTWGate_c();
+extern "C" void __sinit_d_a_tag_TWgate_cpp();
 SECTION_RODATA extern const u8 mAttr__13daTagTWGate_c[1 + 3 /* padding */];
 SECTION_RODATA extern const u8 l_zevParamTbl[112];
 SECTION_RODATA extern const u32 lit_3857;
@@ -97,7 +149,9 @@ SECTION_DATA extern u8 g_profile_Tag_TWGate[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -107,7 +161,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initWait__13daTagTWGate_cFv.s"
 }
@@ -118,7 +172,7 @@ ASM_FUNCTION(initWait__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeWait__13daTagTWGate_cFv.s"
 }
@@ -129,7 +183,7 @@ ASM_FUNCTION(executeWait__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoFilone1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoFilone1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoFilone1__13daTagTWGate_cFv.s"
 }
@@ -140,7 +194,7 @@ ASM_FUNCTION(initDemoFilone1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoFilone1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoFilone1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoFilone1__13daTagTWGate_cFv.s"
 }
@@ -151,7 +205,7 @@ ASM_FUNCTION(executeDemoFilone1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoFilone2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoFilone2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoFilone2__13daTagTWGate_cFv.s"
 }
@@ -162,7 +216,7 @@ ASM_FUNCTION(initDemoFilone2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoFilone2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoFilone2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoFilone2__13daTagTWGate_cFv.s"
 }
@@ -173,7 +227,7 @@ ASM_FUNCTION(executeDemoFilone2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoFilone3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoFilone3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoFilone3__13daTagTWGate_cFv.s"
 }
@@ -184,7 +238,7 @@ ASM_FUNCTION(initDemoFilone3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoFilone3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoFilone3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoFilone3__13daTagTWGate_cFv.s"
 }
@@ -195,7 +249,7 @@ ASM_FUNCTION(executeDemoFilone3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoOrdin1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoOrdin1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoOrdin1__13daTagTWGate_cFv.s"
 }
@@ -206,7 +260,7 @@ ASM_FUNCTION(initDemoOrdin1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoOrdin1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoOrdin1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoOrdin1__13daTagTWGate_cFv.s"
 }
@@ -217,7 +271,7 @@ ASM_FUNCTION(executeDemoOrdin1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoOrdin2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoOrdin2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoOrdin2__13daTagTWGate_cFv.s"
 }
@@ -228,7 +282,7 @@ ASM_FUNCTION(initDemoOrdin2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoOrdin2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoOrdin2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoOrdin2__13daTagTWGate_cFv.s"
 }
@@ -239,7 +293,7 @@ ASM_FUNCTION(executeDemoOrdin2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoOrdin3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoOrdin3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoOrdin3__13daTagTWGate_cFv.s"
 }
@@ -250,7 +304,7 @@ ASM_FUNCTION(initDemoOrdin3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoOrdin3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoOrdin3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoOrdin3__13daTagTWGate_cFv.s"
 }
@@ -261,7 +315,7 @@ ASM_FUNCTION(executeDemoOrdin3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoRanail1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoRanail1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoRanail1__13daTagTWGate_cFv.s"
 }
@@ -272,7 +326,7 @@ ASM_FUNCTION(initDemoRanail1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoRanail1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoRanail1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoRanail1__13daTagTWGate_cFv.s"
 }
@@ -283,7 +337,7 @@ ASM_FUNCTION(executeDemoRanail1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoRanail2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoRanail2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoRanail2__13daTagTWGate_cFv.s"
 }
@@ -294,7 +348,7 @@ ASM_FUNCTION(initDemoRanail2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoRanail2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoRanail2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoRanail2__13daTagTWGate_cFv.s"
 }
@@ -305,7 +359,7 @@ ASM_FUNCTION(executeDemoRanail2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoRanail3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoRanail3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoRanail3__13daTagTWGate_cFv.s"
 }
@@ -316,7 +370,7 @@ ASM_FUNCTION(initDemoRanail3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoRanail3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoRanail3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoRanail3__13daTagTWGate_cFv.s"
 }
@@ -327,7 +381,7 @@ ASM_FUNCTION(executeDemoRanail3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoHyral1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoHyral1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoHyral1__13daTagTWGate_cFv.s"
 }
@@ -338,7 +392,7 @@ ASM_FUNCTION(initDemoHyral1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoHyral1__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoHyral1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoHyral1__13daTagTWGate_cFv.s"
 }
@@ -349,7 +403,7 @@ ASM_FUNCTION(executeDemoHyral1__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoHyral2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoHyral2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoHyral2__13daTagTWGate_cFv.s"
 }
@@ -360,7 +414,7 @@ ASM_FUNCTION(initDemoHyral2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoHyral2__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoHyral2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoHyral2__13daTagTWGate_cFv.s"
 }
@@ -371,7 +425,7 @@ ASM_FUNCTION(executeDemoHyral2__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoHyral3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initDemoHyral3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initDemoHyral3__13daTagTWGate_cFv.s"
 }
@@ -382,7 +436,7 @@ ASM_FUNCTION(initDemoHyral3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoHyral3__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::executeDemoHyral3() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/executeDemoHyral3__13daTagTWGate_cFv.s"
 }
@@ -393,7 +447,7 @@ ASM_FUNCTION(executeDemoHyral3__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initBaseMtx__13daTagTWGate_cFv.s"
 }
@@ -404,7 +458,7 @@ ASM_FUNCTION(initBaseMtx__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(downloadModels__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::downloadModels() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/downloadModels__13daTagTWGate_cFv.s"
 }
@@ -415,7 +469,7 @@ ASM_FUNCTION(downloadModels__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initTalk__13daTagTWGate_cFiPP10fopAc_ac_c) {
+asm void daTagTWGate_c::initTalk(s32 field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/initTalk__13daTagTWGate_cFiPP10fopAc_ac_c.s"
 }
@@ -426,7 +480,7 @@ ASM_FUNCTION(initTalk__13daTagTWGate_cFiPP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c) {
+asm void daTagTWGate_c::talkProc(s32* field_0, s32 field_1, fopAc_ac_c** field_2) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c.s"
 }
@@ -437,7 +491,7 @@ ASM_FUNCTION(talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c) {
+asm void daTagTWGate_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c.s"
 }
@@ -448,7 +502,7 @@ ASM_FUNCTION(createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daTagTWGate_cFv) {
+asm void daTagTWGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/CreateHeap__13daTagTWGate_cFv.s"
 }
@@ -459,7 +513,7 @@ ASM_FUNCTION(CreateHeap__13daTagTWGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTWGate_Create__FP10fopAc_ac_c) {
+asm void daTagTWGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_Create__FP10fopAc_ac_c.s"
 }
@@ -470,7 +524,7 @@ ASM_FUNCTION(daTagTWGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTWGate_Delete__FP13daTagTWGate_c) {
+asm void daTagTWGate_Delete(daTagTWGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_Delete__FP13daTagTWGate_c.s"
 }
@@ -481,7 +535,7 @@ ASM_FUNCTION(daTagTWGate_Delete__FP13daTagTWGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTWGate_Execute__FP13daTagTWGate_c) {
+asm void daTagTWGate_Execute(daTagTWGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_Execute__FP13daTagTWGate_c.s"
 }
@@ -492,7 +546,7 @@ ASM_FUNCTION(daTagTWGate_Execute__FP13daTagTWGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTWGate_Draw__FP13daTagTWGate_c) {
+asm void daTagTWGate_Draw(daTagTWGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_Draw__FP13daTagTWGate_c.s"
 }
@@ -500,21 +554,16 @@ ASM_FUNCTION(daTagTWGate_Draw__FP13daTagTWGate_c) {
 
 
 /* 80D55518-80D55520 0008+00 .text      daTagTWGate_IsDelete__FP13daTagTWGate_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagTWGate_IsDelete__FP13daTagTWGate_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_IsDelete__FP13daTagTWGate_c.s"
+bool daTagTWGate_IsDelete(daTagTWGate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D55520-80D557A0 0280+00 .text      __sinit_d_a_tag_TWgate_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_TWgate_cpp) {
+extern "C" asm void __sinit_d_a_tag_TWgate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/__sinit_d_a_tag_TWgate_cpp.s"
 }

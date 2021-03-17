@@ -6,23 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct b_oh2_class;
+
+struct J3DJoint {
+};
+
+struct b_oh2_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daB_OH2_Draw__FP11b_oh2_class();
-extern "C" extern void dmcalc__FP11b_oh2_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void action__FP11b_oh2_class();
-extern "C" extern void daB_OH2_Execute__FP11b_oh2_class();
-extern "C" extern void daB_OH2_IsDelete__FP11b_oh2_class();
-extern "C" extern void daB_OH2_Delete__FP11b_oh2_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daB_OH2_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
+void nodeCallBack(J3DJoint*, s32);
+void daB_OH2_Draw(b_oh2_class*);
+void dmcalc(b_oh2_class*);
+void action(b_oh2_class*);
+void daB_OH2_Execute(b_oh2_class*);
+bool daB_OH2_IsDelete(b_oh2_class*);
+void daB_OH2_Delete(b_oh2_class*);
+void useHeapInit(fopAc_ac_c*);
+void daB_OH2_Create(fopAc_ac_c*);
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daB_OH2_Draw__FP11b_oh2_class();
+extern "C" void dmcalc__FP11b_oh2_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void action__FP11b_oh2_class();
+extern "C" void daB_OH2_Execute__FP11b_oh2_class();
+extern "C" bool daB_OH2_IsDelete__FP11b_oh2_class();
+extern "C" void daB_OH2_Delete__FP11b_oh2_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daB_OH2_Create__FP10fopAc_ac_c();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3678;
 SECTION_RODATA extern const u8 lit_3792[4];
 SECTION_RODATA extern const u32 lit_3793;
@@ -50,7 +91,9 @@ SECTION_BSS extern u8 boss[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +103,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/nodeCallBack__FP8J3DJointi.s"
 }
@@ -71,7 +114,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH2_Draw__FP11b_oh2_class) {
+asm void daB_OH2_Draw(b_oh2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_Draw__FP11b_oh2_class.s"
 }
@@ -82,7 +125,7 @@ ASM_FUNCTION(daB_OH2_Draw__FP11b_oh2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmcalc__FP11b_oh2_class) {
+asm void dmcalc(b_oh2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/dmcalc__FP11b_oh2_class.s"
 }
@@ -93,7 +136,7 @@ ASM_FUNCTION(dmcalc__FP11b_oh2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__dt__4cXyzFv.s"
 }
@@ -104,7 +147,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP11b_oh2_class) {
+asm void action(b_oh2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/action__FP11b_oh2_class.s"
 }
@@ -115,7 +158,7 @@ ASM_FUNCTION(action__FP11b_oh2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH2_Execute__FP11b_oh2_class) {
+asm void daB_OH2_Execute(b_oh2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_Execute__FP11b_oh2_class.s"
 }
@@ -123,21 +166,16 @@ ASM_FUNCTION(daB_OH2_Execute__FP11b_oh2_class) {
 
 
 /* 8061E4E8-8061E4F0 0008+00 .text      daB_OH2_IsDelete__FP11b_oh2_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_OH2_IsDelete__FP11b_oh2_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_IsDelete__FP11b_oh2_class.s"
+bool daB_OH2_IsDelete(b_oh2_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8061E4F0-8061E540 0050+00 .text      daB_OH2_Delete__FP11b_oh2_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH2_Delete__FP11b_oh2_class) {
+asm void daB_OH2_Delete(b_oh2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_Delete__FP11b_oh2_class.s"
 }
@@ -148,7 +186,7 @@ ASM_FUNCTION(daB_OH2_Delete__FP11b_oh2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -159,7 +197,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -170,7 +208,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_OH2_Create__FP10fopAc_ac_c) {
+asm void daB_OH2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_Create__FP10fopAc_ac_c.s"
 }
@@ -181,7 +219,7 @@ ASM_FUNCTION(daB_OH2_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__dt__5csXyzFv.s"
 }
@@ -189,25 +227,15 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 8061EA28-8061EA2C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061EA2C-8061EA30 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

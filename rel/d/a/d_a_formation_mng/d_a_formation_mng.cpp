@@ -6,35 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daFmtMng_c;
+struct cXyz;
+struct FmtPos_c;
+
+struct daFmtMng_c {
+	void initWait();
+	void initMemberPos();
+	void executeWait();
+	void initWalk();
+	void executeWalk();
+	void setMovePath(FmtPos_c*, s32);
+	void initReverse();
+	void executeReverse();
+	void initMotion();
+	void executeMotion();
+	void initFight();
+	void executeFight();
+	void create();
+	void create_init();
+};
+
+struct FmtPos_c {
+	~FmtPos_c();
+	FmtPos_c();
+};
+
+struct cXyz {
+};
+
+struct daFmtMng_Path_c {
+	void checkPathEnd(cXyz, f32);
+	void checkPoint(cXyz, f32);
+};
+
+struct FmtMember_c {
+	~FmtMember_c();
+	FmtMember_c();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initWait__10daFmtMng_cFv();
-extern "C" extern void initMemberPos__10daFmtMng_cFv();
-extern "C" extern void executeWait__10daFmtMng_cFv();
-extern "C" extern void initWalk__10daFmtMng_cFv();
-extern "C" extern void executeWalk__10daFmtMng_cFv();
-extern "C" extern void setMovePath__10daFmtMng_cFP8FmtPos_ci();
-extern "C" extern void checkPathEnd__15daFmtMng_Path_cF4cXyzf();
-extern "C" extern void checkPoint__15daFmtMng_Path_cF4cXyzf();
-extern "C" extern void initReverse__10daFmtMng_cFv();
-extern "C" extern void executeReverse__10daFmtMng_cFv();
-extern "C" extern void __dt__8FmtPos_cFv();
-extern "C" extern void __ct__8FmtPos_cFv();
-extern "C" extern void initMotion__10daFmtMng_cFv();
-extern "C" extern void executeMotion__10daFmtMng_cFv();
-extern "C" extern void initFight__10daFmtMng_cFv();
-extern "C" extern void executeFight__10daFmtMng_cFv();
-extern "C" extern void daFmtMng_Draw__FP10daFmtMng_c();
-extern "C" extern void daFmtMng_Execute__FP10daFmtMng_c();
-extern "C" extern void daFmtMng_IsDelete__FP10daFmtMng_c();
-extern "C" extern void daFmtMng_Delete__FP10daFmtMng_c();
-extern "C" extern void __dt__11FmtMember_cFv();
-extern "C" extern void daFmtMng_Create__FP10fopAc_ac_c();
-extern "C" extern void create__10daFmtMng_cFv();
-extern "C" extern void create_init__10daFmtMng_cFv();
-extern "C" extern void __ct__11FmtMember_cFv();
-extern "C" extern void __sinit_d_a_formation_mng_cpp();
+bool daFmtMng_Draw(daFmtMng_c*);
+void daFmtMng_Execute(daFmtMng_c*);
+bool daFmtMng_IsDelete(daFmtMng_c*);
+void daFmtMng_Delete(daFmtMng_c*);
+void daFmtMng_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_formation_mng_cpp();
+
+extern "C" void initWait__10daFmtMng_cFv();
+extern "C" void initMemberPos__10daFmtMng_cFv();
+extern "C" void executeWait__10daFmtMng_cFv();
+extern "C" void initWalk__10daFmtMng_cFv();
+extern "C" void executeWalk__10daFmtMng_cFv();
+extern "C" void setMovePath__10daFmtMng_cFP8FmtPos_ci();
+extern "C" void checkPathEnd__15daFmtMng_Path_cF4cXyzf();
+extern "C" void checkPoint__15daFmtMng_Path_cF4cXyzf();
+extern "C" void initReverse__10daFmtMng_cFv();
+extern "C" void executeReverse__10daFmtMng_cFv();
+extern "C" void __dt__8FmtPos_cFv();
+extern "C" void __ct__8FmtPos_cFv();
+extern "C" void initMotion__10daFmtMng_cFv();
+extern "C" void executeMotion__10daFmtMng_cFv();
+extern "C" void initFight__10daFmtMng_cFv();
+extern "C" void executeFight__10daFmtMng_cFv();
+extern "C" bool daFmtMng_Draw__FP10daFmtMng_c();
+extern "C" void daFmtMng_Execute__FP10daFmtMng_c();
+extern "C" bool daFmtMng_IsDelete__FP10daFmtMng_c();
+extern "C" void daFmtMng_Delete__FP10daFmtMng_c();
+extern "C" void __dt__11FmtMember_cFv();
+extern "C" void daFmtMng_Create__FP10fopAc_ac_c();
+extern "C" void create__10daFmtMng_cFv();
+extern "C" void create_init__10daFmtMng_cFv();
+extern "C" void __ct__11FmtMember_cFv();
+extern "C" void __sinit_d_a_formation_mng_cpp();
 SECTION_RODATA extern const u8 M_attr__10daFmtMng_c[24];
 SECTION_RODATA extern const u32 lit_3979;
 SECTION_RODATA extern const u32 lit_3980;
@@ -77,7 +131,9 @@ SECTION_DATA extern u8 g_profile_FORMATION_MNG[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -87,7 +143,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__10daFmtMng_cFv) {
+asm void daFmtMng_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initWait__10daFmtMng_cFv.s"
 }
@@ -98,7 +154,7 @@ ASM_FUNCTION(initWait__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initMemberPos__10daFmtMng_cFv) {
+asm void daFmtMng_c::initMemberPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initMemberPos__10daFmtMng_cFv.s"
 }
@@ -109,7 +165,7 @@ ASM_FUNCTION(initMemberPos__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__10daFmtMng_cFv) {
+asm void daFmtMng_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/executeWait__10daFmtMng_cFv.s"
 }
@@ -120,7 +176,7 @@ ASM_FUNCTION(executeWait__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWalk__10daFmtMng_cFv) {
+asm void daFmtMng_c::initWalk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initWalk__10daFmtMng_cFv.s"
 }
@@ -131,7 +187,7 @@ ASM_FUNCTION(initWalk__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWalk__10daFmtMng_cFv) {
+asm void daFmtMng_c::executeWalk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/executeWalk__10daFmtMng_cFv.s"
 }
@@ -142,7 +198,7 @@ ASM_FUNCTION(executeWalk__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMovePath__10daFmtMng_cFP8FmtPos_ci) {
+asm void daFmtMng_c::setMovePath(FmtPos_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/setMovePath__10daFmtMng_cFP8FmtPos_ci.s"
 }
@@ -153,7 +209,7 @@ ASM_FUNCTION(setMovePath__10daFmtMng_cFP8FmtPos_ci) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPathEnd__15daFmtMng_Path_cF4cXyzf) {
+asm void daFmtMng_Path_c::checkPathEnd(cXyz field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/checkPathEnd__15daFmtMng_Path_cF4cXyzf.s"
 }
@@ -164,7 +220,7 @@ ASM_FUNCTION(checkPathEnd__15daFmtMng_Path_cF4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPoint__15daFmtMng_Path_cF4cXyzf) {
+asm void daFmtMng_Path_c::checkPoint(cXyz field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/checkPoint__15daFmtMng_Path_cF4cXyzf.s"
 }
@@ -175,7 +231,7 @@ ASM_FUNCTION(checkPoint__15daFmtMng_Path_cF4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initReverse__10daFmtMng_cFv) {
+asm void daFmtMng_c::initReverse() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initReverse__10daFmtMng_cFv.s"
 }
@@ -186,7 +242,7 @@ ASM_FUNCTION(initReverse__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeReverse__10daFmtMng_cFv) {
+asm void daFmtMng_c::executeReverse() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/executeReverse__10daFmtMng_cFv.s"
 }
@@ -197,7 +253,7 @@ ASM_FUNCTION(executeReverse__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8FmtPos_cFv) {
+asm FmtPos_c::~FmtPos_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__dt__8FmtPos_cFv.s"
 }
@@ -205,21 +261,16 @@ ASM_FUNCTION(__dt__8FmtPos_cFv) {
 
 
 /* 80836C60-80836C64 0004+00 .text      __ct__8FmtPos_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__8FmtPos_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__ct__8FmtPos_cFv.s"
+FmtPos_c::FmtPos_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80836C64-80836E20 01BC+00 .text      initMotion__10daFmtMng_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initMotion__10daFmtMng_cFv) {
+asm void daFmtMng_c::initMotion() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initMotion__10daFmtMng_cFv.s"
 }
@@ -230,7 +281,7 @@ ASM_FUNCTION(initMotion__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeMotion__10daFmtMng_cFv) {
+asm void daFmtMng_c::executeMotion() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/executeMotion__10daFmtMng_cFv.s"
 }
@@ -241,7 +292,7 @@ ASM_FUNCTION(executeMotion__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFight__10daFmtMng_cFv) {
+asm void daFmtMng_c::initFight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/initFight__10daFmtMng_cFv.s"
 }
@@ -252,7 +303,7 @@ ASM_FUNCTION(initFight__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFight__10daFmtMng_cFv) {
+asm void daFmtMng_c::executeFight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/executeFight__10daFmtMng_cFv.s"
 }
@@ -260,21 +311,16 @@ ASM_FUNCTION(executeFight__10daFmtMng_cFv) {
 
 
 /* 80837250-80837258 0008+00 .text      daFmtMng_Draw__FP10daFmtMng_c                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daFmtMng_Draw__FP10daFmtMng_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_Draw__FP10daFmtMng_c.s"
+bool daFmtMng_Draw(daFmtMng_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80837258-808373BC 0164+00 .text      daFmtMng_Execute__FP10daFmtMng_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFmtMng_Execute__FP10daFmtMng_c) {
+asm void daFmtMng_Execute(daFmtMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_Execute__FP10daFmtMng_c.s"
 }
@@ -282,21 +328,16 @@ ASM_FUNCTION(daFmtMng_Execute__FP10daFmtMng_c) {
 
 
 /* 808373BC-808373C4 0008+00 .text      daFmtMng_IsDelete__FP10daFmtMng_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daFmtMng_IsDelete__FP10daFmtMng_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_IsDelete__FP10daFmtMng_c.s"
+bool daFmtMng_IsDelete(daFmtMng_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808373C4-80837458 0094+00 .text      daFmtMng_Delete__FP10daFmtMng_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFmtMng_Delete__FP10daFmtMng_c) {
+asm void daFmtMng_Delete(daFmtMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_Delete__FP10daFmtMng_c.s"
 }
@@ -307,7 +348,7 @@ ASM_FUNCTION(daFmtMng_Delete__FP10daFmtMng_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11FmtMember_cFv) {
+asm FmtMember_c::~FmtMember_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__dt__11FmtMember_cFv.s"
 }
@@ -318,7 +359,7 @@ ASM_FUNCTION(__dt__11FmtMember_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFmtMng_Create__FP10fopAc_ac_c) {
+asm void daFmtMng_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_Create__FP10fopAc_ac_c.s"
 }
@@ -329,7 +370,7 @@ ASM_FUNCTION(daFmtMng_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daFmtMng_cFv) {
+asm void daFmtMng_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/create__10daFmtMng_cFv.s"
 }
@@ -340,7 +381,7 @@ ASM_FUNCTION(create__10daFmtMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__10daFmtMng_cFv) {
+asm void daFmtMng_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/create_init__10daFmtMng_cFv.s"
 }
@@ -348,21 +389,16 @@ ASM_FUNCTION(create_init__10daFmtMng_cFv) {
 
 
 /* 80837798-8083779C 0004+00 .text      __ct__11FmtMember_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__11FmtMember_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__ct__11FmtMember_cFv.s"
+FmtMember_c::FmtMember_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083779C-8083789C 0100+00 .text      __sinit_d_a_formation_mng_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_formation_mng_cpp) {
+extern "C" asm void __sinit_d_a_formation_mng_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__sinit_d_a_formation_mng_cpp.s"
 }

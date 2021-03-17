@@ -9,22 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void GXSetTevOp();
-extern "C" extern void GXSetTevColorIn();
-extern "C" extern void GXSetTevAlphaIn();
-extern "C" extern void GXSetTevColorOp();
-extern "C" extern void GXSetTevAlphaOp();
-extern "C" extern void GXSetTevColor();
-extern "C" extern void GXSetTevColorS10();
-extern "C" extern void GXSetTevKColor();
-extern "C" extern void GXSetTevKColorSel();
-extern "C" extern void GXSetTevKAlphaSel();
-extern "C" extern void GXSetTevSwapMode();
-extern "C" extern void GXSetTevSwapModeTable();
-extern "C" extern void GXSetAlphaCompare();
-extern "C" extern void GXSetZTexture();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
 SECTION_DATA extern u8 TEVCOpTableST0[20];
 SECTION_DATA extern u8 TEVCOpTableST1[20];
 SECTION_DATA extern u8 TEVAOpTableST0[20];
@@ -35,6 +52,7 @@ SECTION_DATA extern u8 data_803D2810[36 + 4 /* padding */];
 // External References:
 // 
 
+
 SECTION_SDATA2 extern void*__GXData;
 
 // 
@@ -42,160 +60,160 @@ SECTION_SDATA2 extern void*__GXData;
 // 
 
 /* ############################################################################################## */
-/* 803D27C0-803D27D4 0014+00 .data      TEVCOpTableST0                                               */
+/* 803D27C0-803D27D4 0014+00 rc=1 efc=0 .data      TEVCOpTableST0                                               */
 u8 TEVCOpTableST0[20] = {
 	0xC0, 0x08, 0xF8, 0xAF, 0xC0, 0x08, 0xA8, 0x9F, 0xC0, 0x08, 0xAC, 0x8F, 0xC0, 0x08, 0xFF, 0xF8,
 	0xC0, 0x08, 0xFF, 0xFA,
 };
 
-/* 8035F198-8035F224 008C+00 .text      GXSetTevOp                                                   */
+/* 8035F198-8035F224 008C+00 rc=15 efc=15 .text      GXSetTevOp                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevOp) {
+extern "C" asm void GXSetTevOp() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevOp.s"
 }
 #pragma pop
 
 
-/* 8035F224-8035F268 0044+00 .text      GXSetTevColorIn                                              */
+/* 8035F224-8035F268 0044+00 rc=49 efc=49 .text      GXSetTevColorIn                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevColorIn) {
+extern "C" asm void GXSetTevColorIn() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevColorIn.s"
 }
 #pragma pop
 
 
-/* 8035F268-8035F2AC 0044+00 .text      GXSetTevAlphaIn                                              */
+/* 8035F268-8035F2AC 0044+00 rc=49 efc=49 .text      GXSetTevAlphaIn                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevAlphaIn) {
+extern "C" asm void GXSetTevAlphaIn() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevAlphaIn.s"
 }
 #pragma pop
 
 
-/* 8035F2AC-8035F314 0068+00 .text      GXSetTevColorOp                                              */
+/* 8035F2AC-8035F314 0068+00 rc=50 efc=50 .text      GXSetTevColorOp                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevColorOp) {
+extern "C" asm void GXSetTevColorOp() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevColorOp.s"
 }
 #pragma pop
 
 
-/* 8035F314-8035F37C 0068+00 .text      GXSetTevAlphaOp                                              */
+/* 8035F314-8035F37C 0068+00 rc=50 efc=50 .text      GXSetTevAlphaOp                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevAlphaOp) {
+extern "C" asm void GXSetTevAlphaOp() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevAlphaOp.s"
 }
 #pragma pop
 
 
-/* 8035F37C-8035F3DC 0060+00 .text      GXSetTevColor                                                */
+/* 8035F37C-8035F3DC 0060+00 rc=54 efc=54 .text      GXSetTevColor                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevColor) {
+extern "C" asm void GXSetTevColor() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevColor.s"
 }
 #pragma pop
 
 
-/* 8035F3DC-8035F440 0064+00 .text      GXSetTevColorS10                                             */
+/* 8035F3DC-8035F440 0064+00 rc=8 efc=8 .text      GXSetTevColorS10                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevColorS10) {
+extern "C" asm void GXSetTevColorS10() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevColorS10.s"
 }
 #pragma pop
 
 
-/* 8035F440-8035F4A4 0064+00 .text      GXSetTevKColor                                               */
+/* 8035F440-8035F4A4 0064+00 rc=8 efc=8 .text      GXSetTevKColor                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevKColor) {
+extern "C" asm void GXSetTevKColor() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevKColor.s"
 }
 #pragma pop
 
 
-/* 8035F4A4-8035F500 005C+00 .text      GXSetTevKColorSel                                            */
+/* 8035F4A4-8035F500 005C+00 rc=9 efc=9 .text      GXSetTevKColorSel                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevKColorSel) {
+extern "C" asm void GXSetTevKColorSel() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevKColorSel.s"
 }
 #pragma pop
 
 
-/* 8035F500-8035F55C 005C+00 .text      GXSetTevKAlphaSel                                            */
+/* 8035F500-8035F55C 005C+00 rc=9 efc=9 .text      GXSetTevKAlphaSel                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevKAlphaSel) {
+extern "C" asm void GXSetTevKAlphaSel() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevKAlphaSel.s"
 }
 #pragma pop
 
 
-/* 8035F55C-8035F5A4 0048+00 .text      GXSetTevSwapMode                                             */
+/* 8035F55C-8035F5A4 0048+00 rc=10 efc=10 .text      GXSetTevSwapMode                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevSwapMode) {
+extern "C" asm void GXSetTevSwapMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevSwapMode.s"
 }
 #pragma pop
 
 
-/* 8035F5A4-8035F624 0080+00 .text      GXSetTevSwapModeTable                                        */
+/* 8035F5A4-8035F624 0080+00 rc=17 efc=17 .text      GXSetTevSwapModeTable                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevSwapModeTable) {
+extern "C" asm void GXSetTevSwapModeTable() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevSwapModeTable.s"
 }
 #pragma pop
 
 
-/* 8035F624-8035F668 0044+00 .text      GXSetAlphaCompare                                            */
+/* 8035F624-8035F668 0044+00 rc=43 efc=43 .text      GXSetAlphaCompare                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetAlphaCompare) {
+extern "C" asm void GXSetAlphaCompare() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetAlphaCompare.s"
 }
 #pragma pop
 
 
-/* 8035F668-8035F6F4 008C+00 .text      GXSetZTexture                                                */
+/* 8035F668-8035F6F4 008C+00 rc=3 efc=3 .text      GXSetZTexture                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetZTexture) {
+extern "C" asm void GXSetZTexture() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetZTexture.s"
 }
@@ -203,25 +221,25 @@ ASM_FUNCTION(GXSetZTexture) {
 
 
 /* ############################################################################################## */
-/* 803D27D4-803D27E8 0014+00 .data      TEVCOpTableST1                                               */
+/* 803D27D4-803D27E8 0014+00 rc=0 efc=0 .data      TEVCOpTableST1                                               */
 u8 TEVCOpTableST1[20] = {
 	0xC0, 0x08, 0xF8, 0x0F, 0xC0, 0x08, 0x08, 0x9F, 0xC0, 0x08, 0x0C, 0x8F, 0xC0, 0x08, 0xFF, 0xF8,
 	0xC0, 0x08, 0xFF, 0xF0,
 };
 
-/* 803D27E8-803D27FC 0014+00 .data      TEVAOpTableST0                                               */
+/* 803D27E8-803D27FC 0014+00 rc=0 efc=0 .data      TEVAOpTableST0                                               */
 u8 TEVAOpTableST0[20] = {
 	0xC1, 0x08, 0xF2, 0xF0, 0xC1, 0x08, 0xFF, 0xD0, 0xC1, 0x08, 0xF2, 0xF0, 0xC1, 0x08, 0xFF, 0xC0,
 	0xC1, 0x08, 0xFF, 0xD0,
 };
 
-/* 803D27FC-803D2810 0014+00 .data      TEVAOpTableST1                                               */
+/* 803D27FC-803D2810 0014+00 rc=0 efc=0 .data      TEVAOpTableST1                                               */
 u8 TEVAOpTableST1[20] = {
 	0xC1, 0x08, 0xF0, 0x70, 0xC1, 0x08, 0xFF, 0x80, 0xC1, 0x08, 0xF0, 0x70, 0xC1, 0x08, 0xFF, 0xC0,
 	0xC1, 0x08, 0xFF, 0x80,
 };
 
-/* 803D2810-803D2838 0024+04 .data      c2r$334                                                      */
+/* 803D2810-803D2838 0024+04 rc=1 efc=0 .data      c2r$334                                                      */
 u8 data_803D2810[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x05,
@@ -230,26 +248,25 @@ u8 data_803D2810[40] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8035F6F4-8035F890 019C+00 .text      GXSetTevOrder                                                */
+/* 8035F6F4-8035F890 019C+00 rc=65 efc=65 .text      GXSetTevOrder                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTevOrder) {
+extern "C" asm void GXSetTevOrder() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetTevOrder.s"
 }
 #pragma pop
 
 
-/* 8035F890-8035F8B8 0028+00 .text      GXSetNumTevStages                                            */
+/* 8035F890-8035F8B8 0028+00 rc=63 efc=63 .text      GXSetNumTevStages                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetNumTevStages) {
+extern "C" asm void GXSetNumTevStages() {
 	nofralloc
 #include "asm/dolphin/gx/GXTev/GXSetNumTevStages.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

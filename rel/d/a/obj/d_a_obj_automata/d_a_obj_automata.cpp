@@ -6,39 +6,109 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_AutoMata_c {
+	~daObj_AutoMata_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void srchTHouse(fopAc_ac_c*, void*);
+	void setAnm(s32, bool);
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+	void setSe();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_AutoMata_Param_c {
+	~daObj_AutoMata_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__16daObj_AutoMata_cFv();
-extern "C" extern void create__16daObj_AutoMata_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void CreateHeap__16daObj_AutoMata_cFv();
-extern "C" extern void Delete__16daObj_AutoMata_cFv();
-extern "C" extern void Execute__16daObj_AutoMata_cFv();
-extern "C" extern void Draw__16daObj_AutoMata_cFv();
-extern "C" extern void createHeapCallBack__16daObj_AutoMata_cFP10fopAc_ac_c();
-extern "C" extern void srchTHouse__16daObj_AutoMata_cFP10fopAc_ac_cPv();
-extern "C" extern void setAnm__16daObj_AutoMata_cFib();
-extern "C" extern void setEnvTevColor__16daObj_AutoMata_cFv();
-extern "C" extern void setRoomNo__16daObj_AutoMata_cFv();
-extern "C" extern void setMtx__16daObj_AutoMata_cFv();
-extern "C" extern void setSe__16daObj_AutoMata_cFv();
-extern "C" extern void daObj_AutoMata_Create__FPv();
-extern "C" extern void daObj_AutoMata_Delete__FPv();
-extern "C" extern void daObj_AutoMata_Execute__FPv();
-extern "C" extern void daObj_AutoMata_Draw__FPv();
-extern "C" extern void daObj_AutoMata_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_automata_cpp();
-extern "C" extern void __dt__22daObj_AutoMata_Param_cFv();
-extern "C" extern void func_80BA6BEC();
-extern "C" extern void func_80BA6BF4();
+void daObj_AutoMata_Create(void*);
+void daObj_AutoMata_Delete(void*);
+void daObj_AutoMata_Execute(void*);
+void daObj_AutoMata_Draw(void*);
+bool daObj_AutoMata_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_automata_cpp();
+extern "C" void func_80BA6BEC();
+extern "C" void func_80BA6BF4();
+
+extern "C" void __dt__16daObj_AutoMata_cFv();
+extern "C" void create__16daObj_AutoMata_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void CreateHeap__16daObj_AutoMata_cFv();
+extern "C" void Delete__16daObj_AutoMata_cFv();
+extern "C" void Execute__16daObj_AutoMata_cFv();
+extern "C" void Draw__16daObj_AutoMata_cFv();
+extern "C" void createHeapCallBack__16daObj_AutoMata_cFP10fopAc_ac_c();
+extern "C" void srchTHouse__16daObj_AutoMata_cFP10fopAc_ac_cPv();
+extern "C" void setAnm__16daObj_AutoMata_cFib();
+extern "C" void setEnvTevColor__16daObj_AutoMata_cFv();
+extern "C" void setRoomNo__16daObj_AutoMata_cFv();
+extern "C" void setMtx__16daObj_AutoMata_cFv();
+extern "C" void setSe__16daObj_AutoMata_cFv();
+extern "C" void daObj_AutoMata_Create__FPv();
+extern "C" void daObj_AutoMata_Delete__FPv();
+extern "C" void daObj_AutoMata_Execute__FPv();
+extern "C" void daObj_AutoMata_Draw__FPv();
+extern "C" bool daObj_AutoMata_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_automata_cpp();
+extern "C" void __dt__22daObj_AutoMata_Param_cFv();
+extern "C" void func_80BA6BEC();
+extern "C" void func_80BA6BF4();
 SECTION_RODATA extern const u8 m__22daObj_AutoMata_Param_c[12];
 SECTION_RODATA extern const u8 l_ccDObjData[48];
 SECTION_RODATA extern const u32 lit_3962;
@@ -87,8 +157,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -98,7 +171,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_AutoMata_cFv) {
+asm daObj_AutoMata_c::~daObj_AutoMata_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__16daObj_AutoMata_cFv.s"
 }
@@ -109,7 +182,7 @@ ASM_FUNCTION(__dt__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/create__16daObj_AutoMata_cFv.s"
 }
@@ -120,7 +193,7 @@ ASM_FUNCTION(create__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__8cM3dGSphFv.s"
 }
@@ -131,7 +204,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__8cM3dGCylFv.s"
 }
@@ -142,7 +215,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__8cM3dGAabFv.s"
 }
@@ -153,7 +226,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__12dBgS_AcchCirFv.s"
 }
@@ -164,7 +237,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__10dCcD_GSttsFv.s"
 }
@@ -175,7 +248,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -186,7 +259,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__12J3DFrameCtrlFv.s"
 }
@@ -197,7 +270,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/CreateHeap__16daObj_AutoMata_cFv.s"
 }
@@ -208,7 +281,7 @@ ASM_FUNCTION(CreateHeap__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/Delete__16daObj_AutoMata_cFv.s"
 }
@@ -219,7 +292,7 @@ ASM_FUNCTION(Delete__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/Execute__16daObj_AutoMata_cFv.s"
 }
@@ -230,7 +303,7 @@ ASM_FUNCTION(Execute__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/Draw__16daObj_AutoMata_cFv.s"
 }
@@ -241,7 +314,7 @@ ASM_FUNCTION(Draw__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__16daObj_AutoMata_cFP10fopAc_ac_c) {
+asm void daObj_AutoMata_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/createHeapCallBack__16daObj_AutoMata_cFP10fopAc_ac_c.s"
 }
@@ -252,7 +325,7 @@ ASM_FUNCTION(createHeapCallBack__16daObj_AutoMata_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchTHouse__16daObj_AutoMata_cFP10fopAc_ac_cPv) {
+asm void daObj_AutoMata_c::srchTHouse(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/srchTHouse__16daObj_AutoMata_cFP10fopAc_ac_cPv.s"
 }
@@ -263,7 +336,7 @@ ASM_FUNCTION(srchTHouse__16daObj_AutoMata_cFP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__16daObj_AutoMata_cFib) {
+asm void daObj_AutoMata_c::setAnm(s32 field_0, bool field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/setAnm__16daObj_AutoMata_cFib.s"
 }
@@ -274,7 +347,7 @@ ASM_FUNCTION(setAnm__16daObj_AutoMata_cFib) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/setEnvTevColor__16daObj_AutoMata_cFv.s"
 }
@@ -285,7 +358,7 @@ ASM_FUNCTION(setEnvTevColor__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/setRoomNo__16daObj_AutoMata_cFv.s"
 }
@@ -296,7 +369,7 @@ ASM_FUNCTION(setRoomNo__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/setMtx__16daObj_AutoMata_cFv.s"
 }
@@ -307,7 +380,7 @@ ASM_FUNCTION(setMtx__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSe__16daObj_AutoMata_cFv) {
+asm void daObj_AutoMata_c::setSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/setSe__16daObj_AutoMata_cFv.s"
 }
@@ -318,7 +391,7 @@ ASM_FUNCTION(setSe__16daObj_AutoMata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_AutoMata_Create__FPv) {
+asm void daObj_AutoMata_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_Create__FPv.s"
 }
@@ -329,7 +402,7 @@ ASM_FUNCTION(daObj_AutoMata_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_AutoMata_Delete__FPv) {
+asm void daObj_AutoMata_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_Delete__FPv.s"
 }
@@ -340,7 +413,7 @@ ASM_FUNCTION(daObj_AutoMata_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_AutoMata_Execute__FPv) {
+asm void daObj_AutoMata_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_Execute__FPv.s"
 }
@@ -351,7 +424,7 @@ ASM_FUNCTION(daObj_AutoMata_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_AutoMata_Draw__FPv) {
+asm void daObj_AutoMata_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_Draw__FPv.s"
 }
@@ -359,21 +432,16 @@ ASM_FUNCTION(daObj_AutoMata_Draw__FPv) {
 
 
 /* 80BA6A90-80BA6A98 0008+00 .text      daObj_AutoMata_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_AutoMata_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_IsDelete__FPv.s"
+bool daObj_AutoMata_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA6A98-80BA6AE0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__10cCcD_GSttsFv.s"
 }
@@ -384,7 +452,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_automata_cpp) {
+extern "C" asm void __sinit_d_a_obj_automata_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__sinit_d_a_obj_automata_cpp.s"
 }
@@ -395,7 +463,7 @@ ASM_FUNCTION(__sinit_d_a_obj_automata_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daObj_AutoMata_Param_cFv) {
+asm daObj_AutoMata_Param_c::~daObj_AutoMata_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/__dt__22daObj_AutoMata_Param_cFv.s"
 }
@@ -406,7 +474,7 @@ ASM_FUNCTION(__dt__22daObj_AutoMata_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA6BEC) {
+extern "C" asm void func_80BA6BEC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/func_80BA6BEC.s"
 }
@@ -417,7 +485,7 @@ ASM_FUNCTION(func_80BA6BEC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA6BF4) {
+extern "C" asm void func_80BA6BF4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/func_80BA6BF4.s"
 }

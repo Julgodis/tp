@@ -6,24 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daBkLeaf_c;
+
+struct fopAc_ac_c {
+};
+
+struct daBkLeaf_c {
+	void setBokkuri();
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void setBokkuri__10daBkLeaf_cFv();
-extern "C" extern void initBaseMtx__10daBkLeaf_cFv();
-extern "C" extern void setBaseMtx__10daBkLeaf_cFv();
-extern "C" extern void Create__10daBkLeaf_cFv();
-extern "C" extern void CreateHeap__10daBkLeaf_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__10daBkLeaf_cFv();
-extern "C" extern void execute__10daBkLeaf_cFv();
-extern "C" extern void draw__10daBkLeaf_cFv();
-extern "C" extern void _delete__10daBkLeaf_cFv();
-extern "C" extern void daBkLeaf_Draw__FP10daBkLeaf_c();
-extern "C" extern void daBkLeaf_Execute__FP10daBkLeaf_c();
-extern "C" extern void daBkLeaf_Delete__FP10daBkLeaf_c();
-extern "C" extern void daBkLeaf_Create__FP10fopAc_ac_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daBkLeaf_Draw(daBkLeaf_c*);
+void daBkLeaf_Execute(daBkLeaf_c*);
+void daBkLeaf_Delete(daBkLeaf_c*);
+void daBkLeaf_Create(fopAc_ac_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void setBokkuri__10daBkLeaf_cFv();
+extern "C" void initBaseMtx__10daBkLeaf_cFv();
+extern "C" void setBaseMtx__10daBkLeaf_cFv();
+extern "C" void Create__10daBkLeaf_cFv();
+extern "C" void CreateHeap__10daBkLeaf_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__10daBkLeaf_cFv();
+extern "C" void execute__10daBkLeaf_cFv();
+extern "C" void draw__10daBkLeaf_cFv();
+extern "C" void _delete__10daBkLeaf_cFv();
+extern "C" void daBkLeaf_Draw__FP10daBkLeaf_c();
+extern "C" void daBkLeaf_Execute__FP10daBkLeaf_c();
+extern "C" void daBkLeaf_Delete__FP10daBkLeaf_c();
+extern "C" void daBkLeaf_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3742;
 SECTION_RODATA extern const u8 lit_3811[4];
 SECTION_RODATA extern const u8 stringBase0[29];
@@ -41,7 +73,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -51,7 +85,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -62,7 +96,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBokkuri__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::setBokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/setBokkuri__10daBkLeaf_cFv.s"
 }
@@ -73,7 +107,7 @@ ASM_FUNCTION(setBokkuri__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/initBaseMtx__10daBkLeaf_cFv.s"
 }
@@ -84,7 +118,7 @@ ASM_FUNCTION(initBaseMtx__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/setBaseMtx__10daBkLeaf_cFv.s"
 }
@@ -95,7 +129,7 @@ ASM_FUNCTION(setBaseMtx__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/Create__10daBkLeaf_cFv.s"
 }
@@ -106,7 +140,7 @@ ASM_FUNCTION(Create__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/CreateHeap__10daBkLeaf_cFv.s"
 }
@@ -117,7 +151,7 @@ ASM_FUNCTION(CreateHeap__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/__dt__12J3DFrameCtrlFv.s"
 }
@@ -128,7 +162,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/func_80BB63F4.s"
 }
@@ -139,7 +173,7 @@ ASM_FUNCTION(create__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/execute__10daBkLeaf_cFv.s"
 }
@@ -150,7 +184,7 @@ ASM_FUNCTION(execute__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/draw__10daBkLeaf_cFv.s"
 }
@@ -161,7 +195,7 @@ ASM_FUNCTION(draw__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daBkLeaf_cFv) {
+asm void daBkLeaf_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/_delete__10daBkLeaf_cFv.s"
 }
@@ -172,7 +206,7 @@ ASM_FUNCTION(_delete__10daBkLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkLeaf_Draw__FP10daBkLeaf_c) {
+asm void daBkLeaf_Draw(daBkLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/daBkLeaf_Draw__FP10daBkLeaf_c.s"
 }
@@ -183,7 +217,7 @@ ASM_FUNCTION(daBkLeaf_Draw__FP10daBkLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkLeaf_Execute__FP10daBkLeaf_c) {
+asm void daBkLeaf_Execute(daBkLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/daBkLeaf_Execute__FP10daBkLeaf_c.s"
 }
@@ -194,7 +228,7 @@ ASM_FUNCTION(daBkLeaf_Execute__FP10daBkLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkLeaf_Delete__FP10daBkLeaf_c) {
+asm void daBkLeaf_Delete(daBkLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/daBkLeaf_Delete__FP10daBkLeaf_c.s"
 }
@@ -205,7 +239,7 @@ ASM_FUNCTION(daBkLeaf_Delete__FP10daBkLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkLeaf_Create__FP10fopAc_ac_c) {
+asm void daBkLeaf_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bk_leaf/d_a_obj_bk_leaf/daBkLeaf_Create__FP10fopAc_ac_c.s"
 }

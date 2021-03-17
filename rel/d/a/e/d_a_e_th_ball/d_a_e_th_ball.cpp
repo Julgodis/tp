@@ -6,42 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct e_th_ball_class;
+struct fopAc_ac_c;
+
+struct e_th_ball_class {
+	e_th_ball_class();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void chain_draw__FP15e_th_ball_class();
-extern "C" extern void daE_TH_BALL_Draw__FP15e_th_ball_class();
-extern "C" extern void chain_control_01__FP15e_th_ball_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void chain_control_02__FP15e_th_ball_class();
-extern "C" extern void chain_control_03__FP15e_th_ball_class();
-extern "C" extern void chain_control_11__FP15e_th_ball_class();
-extern "C" extern void chain_control_12__FP15e_th_ball_class();
-extern "C" extern void chain_control_13__FP15e_th_ball_class();
-extern "C" extern void chain_control_21__FP15e_th_ball_class();
-extern "C" extern void normal_move__FP15e_th_ball_classSc();
-extern "C" extern void e_th_ball_stop__FP15e_th_ball_class();
-extern "C" extern void e_th_ball_spin__FP15e_th_ball_class();
-extern "C" extern void wall_angle_get__FP15e_th_ball_class();
-extern "C" extern void e_th_ball_shot__FP15e_th_ball_class();
-extern "C" extern void e_th_ball_return__FP15e_th_ball_class();
-extern "C" extern void e_th_ball_end__FP15e_th_ball_class();
-extern "C" extern void action__FP15e_th_ball_class();
-extern "C" extern void get_demo__FP15e_th_ball_class();
-extern "C" extern void daE_TH_BALL_Execute__FP15e_th_ball_class();
-extern "C" extern void daE_TH_BALL_IsDelete__FP15e_th_ball_class();
-extern "C" extern void daE_TH_BALL_Delete__FP15e_th_ball_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_TH_BALL_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__15e_th_ball_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void func_807B7EA0();
-extern "C" extern void func_807B7EA8();
+void chain_draw(e_th_ball_class*);
+void daE_TH_BALL_Draw(e_th_ball_class*);
+void chain_control_01(e_th_ball_class*);
+void chain_control_02(e_th_ball_class*);
+void chain_control_03(e_th_ball_class*);
+void chain_control_11(e_th_ball_class*);
+void chain_control_12(e_th_ball_class*);
+void chain_control_13(e_th_ball_class*);
+void chain_control_21(e_th_ball_class*);
+void normal_move(e_th_ball_class*, s8);
+void e_th_ball_stop(e_th_ball_class*);
+void e_th_ball_spin(e_th_ball_class*);
+void wall_angle_get(e_th_ball_class*);
+void e_th_ball_shot(e_th_ball_class*);
+void e_th_ball_return(e_th_ball_class*);
+void e_th_ball_end(e_th_ball_class*);
+void action(e_th_ball_class*);
+void get_demo(e_th_ball_class*);
+void daE_TH_BALL_Execute(e_th_ball_class*);
+bool daE_TH_BALL_IsDelete(e_th_ball_class*);
+void daE_TH_BALL_Delete(e_th_ball_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_TH_BALL_Create(fopAc_ac_c*);
+extern "C" void func_807B7EA0();
+extern "C" void func_807B7EA8();
+
+extern "C" void chain_draw__FP15e_th_ball_class();
+extern "C" void daE_TH_BALL_Draw__FP15e_th_ball_class();
+extern "C" void chain_control_01__FP15e_th_ball_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void chain_control_02__FP15e_th_ball_class();
+extern "C" void chain_control_03__FP15e_th_ball_class();
+extern "C" void chain_control_11__FP15e_th_ball_class();
+extern "C" void chain_control_12__FP15e_th_ball_class();
+extern "C" void chain_control_13__FP15e_th_ball_class();
+extern "C" void chain_control_21__FP15e_th_ball_class();
+extern "C" void normal_move__FP15e_th_ball_classSc();
+extern "C" void e_th_ball_stop__FP15e_th_ball_class();
+extern "C" void e_th_ball_spin__FP15e_th_ball_class();
+extern "C" void wall_angle_get__FP15e_th_ball_class();
+extern "C" void e_th_ball_shot__FP15e_th_ball_class();
+extern "C" void e_th_ball_return__FP15e_th_ball_class();
+extern "C" void e_th_ball_end__FP15e_th_ball_class();
+extern "C" void action__FP15e_th_ball_class();
+extern "C" void get_demo__FP15e_th_ball_class();
+extern "C" void daE_TH_BALL_Execute__FP15e_th_ball_class();
+extern "C" bool daE_TH_BALL_IsDelete__FP15e_th_ball_class();
+extern "C" void daE_TH_BALL_Delete__FP15e_th_ball_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_TH_BALL_Create__FP10fopAc_ac_c();
+extern "C" void __ct__15e_th_ball_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void func_807B7EA0();
+extern "C" void func_807B7EA8();
 SECTION_RODATA extern const u32 lit_3746;
 SECTION_RODATA extern const u8 lit_3747[4];
 SECTION_RODATA extern const u32 lit_3748;
@@ -117,7 +179,9 @@ SECTION_BSS extern u8 demo_id[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -127,7 +191,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_draw__FP15e_th_ball_class) {
+asm void chain_draw(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_draw__FP15e_th_ball_class.s"
 }
@@ -138,7 +202,7 @@ ASM_FUNCTION(chain_draw__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TH_BALL_Draw__FP15e_th_ball_class) {
+asm void daE_TH_BALL_Draw(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Draw__FP15e_th_ball_class.s"
 }
@@ -149,7 +213,7 @@ ASM_FUNCTION(daE_TH_BALL_Draw__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_01__FP15e_th_ball_class) {
+asm void chain_control_01(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_01__FP15e_th_ball_class.s"
 }
@@ -160,7 +224,7 @@ ASM_FUNCTION(chain_control_01__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__dt__4cXyzFv.s"
 }
@@ -171,7 +235,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_02__FP15e_th_ball_class) {
+asm void chain_control_02(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_02__FP15e_th_ball_class.s"
 }
@@ -182,7 +246,7 @@ ASM_FUNCTION(chain_control_02__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_03__FP15e_th_ball_class) {
+asm void chain_control_03(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_03__FP15e_th_ball_class.s"
 }
@@ -193,7 +257,7 @@ ASM_FUNCTION(chain_control_03__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_11__FP15e_th_ball_class) {
+asm void chain_control_11(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_11__FP15e_th_ball_class.s"
 }
@@ -204,7 +268,7 @@ ASM_FUNCTION(chain_control_11__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_12__FP15e_th_ball_class) {
+asm void chain_control_12(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_12__FP15e_th_ball_class.s"
 }
@@ -215,7 +279,7 @@ ASM_FUNCTION(chain_control_12__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_13__FP15e_th_ball_class) {
+asm void chain_control_13(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_13__FP15e_th_ball_class.s"
 }
@@ -226,7 +290,7 @@ ASM_FUNCTION(chain_control_13__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_21__FP15e_th_ball_class) {
+asm void chain_control_21(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/chain_control_21__FP15e_th_ball_class.s"
 }
@@ -237,7 +301,7 @@ ASM_FUNCTION(chain_control_21__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(normal_move__FP15e_th_ball_classSc) {
+asm void normal_move(e_th_ball_class* field_0, s8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/normal_move__FP15e_th_ball_classSc.s"
 }
@@ -248,7 +312,7 @@ ASM_FUNCTION(normal_move__FP15e_th_ball_classSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_th_ball_stop__FP15e_th_ball_class) {
+asm void e_th_ball_stop(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/e_th_ball_stop__FP15e_th_ball_class.s"
 }
@@ -259,7 +323,7 @@ ASM_FUNCTION(e_th_ball_stop__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_th_ball_spin__FP15e_th_ball_class) {
+asm void e_th_ball_spin(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/e_th_ball_spin__FP15e_th_ball_class.s"
 }
@@ -270,7 +334,7 @@ ASM_FUNCTION(e_th_ball_spin__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_angle_get__FP15e_th_ball_class) {
+asm void wall_angle_get(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/wall_angle_get__FP15e_th_ball_class.s"
 }
@@ -281,7 +345,7 @@ ASM_FUNCTION(wall_angle_get__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_th_ball_shot__FP15e_th_ball_class) {
+asm void e_th_ball_shot(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/e_th_ball_shot__FP15e_th_ball_class.s"
 }
@@ -292,7 +356,7 @@ ASM_FUNCTION(e_th_ball_shot__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_th_ball_return__FP15e_th_ball_class) {
+asm void e_th_ball_return(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/e_th_ball_return__FP15e_th_ball_class.s"
 }
@@ -303,7 +367,7 @@ ASM_FUNCTION(e_th_ball_return__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_th_ball_end__FP15e_th_ball_class) {
+asm void e_th_ball_end(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/e_th_ball_end__FP15e_th_ball_class.s"
 }
@@ -314,7 +378,7 @@ ASM_FUNCTION(e_th_ball_end__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP15e_th_ball_class) {
+asm void action(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/action__FP15e_th_ball_class.s"
 }
@@ -325,7 +389,7 @@ ASM_FUNCTION(action__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_demo__FP15e_th_ball_class) {
+asm void get_demo(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/get_demo__FP15e_th_ball_class.s"
 }
@@ -336,7 +400,7 @@ ASM_FUNCTION(get_demo__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TH_BALL_Execute__FP15e_th_ball_class) {
+asm void daE_TH_BALL_Execute(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Execute__FP15e_th_ball_class.s"
 }
@@ -344,21 +408,16 @@ ASM_FUNCTION(daE_TH_BALL_Execute__FP15e_th_ball_class) {
 
 
 /* 807B7744-807B774C 0008+00 .text      daE_TH_BALL_IsDelete__FP15e_th_ball_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_TH_BALL_IsDelete__FP15e_th_ball_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_IsDelete__FP15e_th_ball_class.s"
+bool daE_TH_BALL_IsDelete(e_th_ball_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807B774C-807B77AC 0060+00 .text      daE_TH_BALL_Delete__FP15e_th_ball_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TH_BALL_Delete__FP15e_th_ball_class) {
+asm void daE_TH_BALL_Delete(e_th_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Delete__FP15e_th_ball_class.s"
 }
@@ -369,7 +428,7 @@ ASM_FUNCTION(daE_TH_BALL_Delete__FP15e_th_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -380,7 +439,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TH_BALL_Create__FP10fopAc_ac_c) {
+asm void daE_TH_BALL_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Create__FP10fopAc_ac_c.s"
 }
@@ -391,7 +450,7 @@ ASM_FUNCTION(daE_TH_BALL_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15e_th_ball_classFv) {
+asm e_th_ball_class::e_th_ball_class() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__ct__15e_th_ball_classFv.s"
 }
@@ -402,7 +461,7 @@ ASM_FUNCTION(__ct__15e_th_ball_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__dt__8cM3dGSphFv.s"
 }
@@ -413,7 +472,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__dt__8cM3dGAabFv.s"
 }
@@ -424,7 +483,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -435,7 +494,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__dt__5csXyzFv.s"
 }
@@ -443,32 +502,22 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 807B7E98-807B7E9C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807B7E9C-807B7EA0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807B7EA0-807B7EA8 0008+00 .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_807B7EA0) {
+extern "C" asm void func_807B7EA0() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/func_807B7EA0.s"
 }
@@ -479,7 +528,7 @@ ASM_FUNCTION(func_807B7EA0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_807B7EA8) {
+extern "C" asm void func_807B7EA8() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/func_807B7EA8.s"
 }

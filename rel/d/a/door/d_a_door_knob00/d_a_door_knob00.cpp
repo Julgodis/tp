@@ -6,57 +6,125 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daKnob20_c;
+
+struct fopAc_ac_c {
+};
+
+struct knob_param_c {
+	void getDoorModel(fopAc_ac_c*);
+	void getDoorLightInf(fopAc_ac_c*);
+	void getMsgNo(fopAc_ac_c*);
+	void getExitNo(fopAc_ac_c*);
+};
+
+struct daKnob20_c {
+	void getAlwaysArcName();
+	void getEvArcName();
+	void getDzb();
+	void getDummyBmd();
+	void getBmd();
+	void getDoorModelData();
+	void CreateHeap();
+	void calcMtx();
+	void CreateInit();
+	void create();
+	void checkOpenDoor(s32*);
+	void setActionFromFlow();
+	void setEventId();
+	void checkArea(f32, f32, f32);
+	void setEventPrm();
+	void releaseBG();
+	void frontCheck();
+	void getDemoAction();
+	void demoProc();
+	void setStart(f32, f32);
+	void setAngle();
+	void adjustmentProc();
+	void openInit(s32);
+	void openProc(s32);
+	void openEnd(s32);
+	void initOpenDemo();
+	void startDemoProc();
+	void actionWait();
+	void actionSpecialDemo();
+	void actionDemo();
+	void actionTalk();
+	void actionTalkWait();
+	void actionTalkOpen();
+	void actionInit();
+	bool actionDead();
+	void execute();
+	void draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getDoorModel__12knob_param_cFP10fopAc_ac_c();
-extern "C" extern void getDoorLightInf__12knob_param_cFP10fopAc_ac_c();
-extern "C" extern void getMsgNo__12knob_param_cFP10fopAc_ac_c();
-extern "C" extern void getExitNo__12knob_param_cFP10fopAc_ac_c();
-extern "C" extern void getAlwaysArcName__10daKnob20_cFv();
-extern "C" extern void getEvArcName__10daKnob20_cFv();
-extern "C" extern void getDzb__10daKnob20_cFv();
-extern "C" extern void getDummyBmd__10daKnob20_cFv();
-extern "C" extern void getBmd__10daKnob20_cFv();
-extern "C" extern void getDoorModelData__10daKnob20_cFv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daKnob20_cFv();
-extern "C" extern void calcMtx__10daKnob20_cFv();
-extern "C" extern void CreateInit__10daKnob20_cFv();
-extern "C" extern void create__10daKnob20_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void checkOpenDoor__10daKnob20_cFPi();
-extern "C" extern void setActionFromFlow__10daKnob20_cFv();
-extern "C" extern void setEventId__10daKnob20_cFv();
-extern "C" extern void checkArea__10daKnob20_cFfff();
-extern "C" extern void setEventPrm__10daKnob20_cFv();
-extern "C" extern void releaseBG__10daKnob20_cFv();
-extern "C" extern void frontCheck__10daKnob20_cFv();
-extern "C" extern void getDemoAction__10daKnob20_cFv();
-extern "C" extern void demoProc__10daKnob20_cFv();
-extern "C" extern void setStart__10daKnob20_cFff();
-extern "C" extern void setAngle__10daKnob20_cFv();
-extern "C" extern void adjustmentProc__10daKnob20_cFv();
-extern "C" extern void openInit__10daKnob20_cFi();
-extern "C" extern void openProc__10daKnob20_cFi();
-extern "C" extern void openEnd__10daKnob20_cFi();
-extern "C" extern void initOpenDemo__10daKnob20_cFv();
-extern "C" extern void startDemoProc__10daKnob20_cFv();
-extern "C" extern void actionWait__10daKnob20_cFv();
-extern "C" extern void actionSpecialDemo__10daKnob20_cFv();
-extern "C" extern void actionDemo__10daKnob20_cFv();
-extern "C" extern void actionTalk__10daKnob20_cFv();
-extern "C" extern void actionTalkWait__10daKnob20_cFv();
-extern "C" extern void actionTalkOpen__10daKnob20_cFv();
-extern "C" extern void actionInit__10daKnob20_cFv();
-extern "C" extern void actionDead__10daKnob20_cFv();
-extern "C" extern void execute__10daKnob20_cFv();
-extern "C" extern void draw__10daKnob20_cFv();
-extern "C" extern void Delete__10daKnob20_cFv();
-extern "C" extern void daKnob20_Draw__FP10daKnob20_c();
-extern "C" extern void daKnob20_Execute__FP10daKnob20_c();
-extern "C" extern void daKnob20_Delete__FP10daKnob20_c();
-extern "C" extern void daKnob20_Create__FP10fopAc_ac_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daKnob20_Draw(daKnob20_c*);
+void daKnob20_Execute(daKnob20_c*);
+void daKnob20_Delete(daKnob20_c*);
+void daKnob20_Create(fopAc_ac_c*);
+
+extern "C" void getDoorModel__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getDoorLightInf__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getMsgNo__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getExitNo__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getAlwaysArcName__10daKnob20_cFv();
+extern "C" void getEvArcName__10daKnob20_cFv();
+extern "C" void getDzb__10daKnob20_cFv();
+extern "C" void getDummyBmd__10daKnob20_cFv();
+extern "C" void getBmd__10daKnob20_cFv();
+extern "C" void getDoorModelData__10daKnob20_cFv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daKnob20_cFv();
+extern "C" void calcMtx__10daKnob20_cFv();
+extern "C" void CreateInit__10daKnob20_cFv();
+extern "C" void create__10daKnob20_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void checkOpenDoor__10daKnob20_cFPi();
+extern "C" void setActionFromFlow__10daKnob20_cFv();
+extern "C" void setEventId__10daKnob20_cFv();
+extern "C" void checkArea__10daKnob20_cFfff();
+extern "C" void setEventPrm__10daKnob20_cFv();
+extern "C" void releaseBG__10daKnob20_cFv();
+extern "C" void frontCheck__10daKnob20_cFv();
+extern "C" void getDemoAction__10daKnob20_cFv();
+extern "C" void demoProc__10daKnob20_cFv();
+extern "C" void setStart__10daKnob20_cFff();
+extern "C" void setAngle__10daKnob20_cFv();
+extern "C" void adjustmentProc__10daKnob20_cFv();
+extern "C" void openInit__10daKnob20_cFi();
+extern "C" void openProc__10daKnob20_cFi();
+extern "C" void openEnd__10daKnob20_cFi();
+extern "C" void initOpenDemo__10daKnob20_cFv();
+extern "C" void startDemoProc__10daKnob20_cFv();
+extern "C" void actionWait__10daKnob20_cFv();
+extern "C" void actionSpecialDemo__10daKnob20_cFv();
+extern "C" void actionDemo__10daKnob20_cFv();
+extern "C" void actionTalk__10daKnob20_cFv();
+extern "C" void actionTalkWait__10daKnob20_cFv();
+extern "C" void actionTalkOpen__10daKnob20_cFv();
+extern "C" void actionInit__10daKnob20_cFv();
+extern "C" bool actionDead__10daKnob20_cFv();
+extern "C" void execute__10daKnob20_cFv();
+extern "C" void draw__10daKnob20_cFv();
+extern "C" void Delete__10daKnob20_cFv();
+extern "C" void daKnob20_Draw__FP10daKnob20_c();
+extern "C" void daKnob20_Execute__FP10daKnob20_c();
+extern "C" void daKnob20_Delete__FP10daKnob20_c();
+extern "C" void daKnob20_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3876;
 SECTION_RODATA extern const u32 lit_3892;
 SECTION_RODATA extern const u8 lit_3893[4];
@@ -106,7 +174,9 @@ SECTION_BSS extern u8 data_80460AB8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -116,7 +186,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoorModel__12knob_param_cFP10fopAc_ac_c) {
+asm void knob_param_c::getDoorModel(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDoorModel__12knob_param_cFP10fopAc_ac_c.s"
 }
@@ -127,7 +197,7 @@ ASM_FUNCTION(getDoorModel__12knob_param_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoorLightInf__12knob_param_cFP10fopAc_ac_c) {
+asm void knob_param_c::getDoorLightInf(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDoorLightInf__12knob_param_cFP10fopAc_ac_c.s"
 }
@@ -138,7 +208,7 @@ ASM_FUNCTION(getDoorLightInf__12knob_param_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsgNo__12knob_param_cFP10fopAc_ac_c) {
+asm void knob_param_c::getMsgNo(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getMsgNo__12knob_param_cFP10fopAc_ac_c.s"
 }
@@ -149,7 +219,7 @@ ASM_FUNCTION(getMsgNo__12knob_param_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getExitNo__12knob_param_cFP10fopAc_ac_c) {
+asm void knob_param_c::getExitNo(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getExitNo__12knob_param_cFP10fopAc_ac_c.s"
 }
@@ -160,7 +230,7 @@ ASM_FUNCTION(getExitNo__12knob_param_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAlwaysArcName__10daKnob20_cFv) {
+asm void daKnob20_c::getAlwaysArcName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getAlwaysArcName__10daKnob20_cFv.s"
 }
@@ -171,7 +241,7 @@ ASM_FUNCTION(getAlwaysArcName__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEvArcName__10daKnob20_cFv) {
+asm void daKnob20_c::getEvArcName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getEvArcName__10daKnob20_cFv.s"
 }
@@ -182,7 +252,7 @@ ASM_FUNCTION(getEvArcName__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDzb__10daKnob20_cFv) {
+asm void daKnob20_c::getDzb() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDzb__10daKnob20_cFv.s"
 }
@@ -193,7 +263,7 @@ ASM_FUNCTION(getDzb__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDummyBmd__10daKnob20_cFv) {
+asm void daKnob20_c::getDummyBmd() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDummyBmd__10daKnob20_cFv.s"
 }
@@ -204,7 +274,7 @@ ASM_FUNCTION(getDummyBmd__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmd__10daKnob20_cFv) {
+asm void daKnob20_c::getBmd() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getBmd__10daKnob20_cFv.s"
 }
@@ -215,7 +285,7 @@ ASM_FUNCTION(getBmd__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoorModelData__10daKnob20_cFv) {
+asm void daKnob20_c::getDoorModelData() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDoorModelData__10daKnob20_cFv.s"
 }
@@ -226,7 +296,7 @@ ASM_FUNCTION(getDoorModelData__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -237,7 +307,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daKnob20_cFv) {
+asm void daKnob20_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/CreateHeap__10daKnob20_cFv.s"
 }
@@ -248,7 +318,7 @@ ASM_FUNCTION(CreateHeap__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMtx__10daKnob20_cFv) {
+asm void daKnob20_c::calcMtx() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/calcMtx__10daKnob20_cFv.s"
 }
@@ -259,7 +329,7 @@ ASM_FUNCTION(calcMtx__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__10daKnob20_cFv) {
+asm void daKnob20_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/CreateInit__10daKnob20_cFv.s"
 }
@@ -270,7 +340,7 @@ ASM_FUNCTION(CreateInit__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daKnob20_cFv) {
+asm void daKnob20_c::create() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/create__10daKnob20_cFv.s"
 }
@@ -281,7 +351,7 @@ ASM_FUNCTION(create__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/__dt__12J3DFrameCtrlFv.s"
 }
@@ -292,7 +362,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpenDoor__10daKnob20_cFPi) {
+asm void daKnob20_c::checkOpenDoor(s32* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/checkOpenDoor__10daKnob20_cFPi.s"
 }
@@ -303,7 +373,7 @@ ASM_FUNCTION(checkOpenDoor__10daKnob20_cFPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionFromFlow__10daKnob20_cFv) {
+asm void daKnob20_c::setActionFromFlow() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/setActionFromFlow__10daKnob20_cFv.s"
 }
@@ -314,7 +384,7 @@ ASM_FUNCTION(setActionFromFlow__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEventId__10daKnob20_cFv) {
+asm void daKnob20_c::setEventId() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/setEventId__10daKnob20_cFv.s"
 }
@@ -325,7 +395,7 @@ ASM_FUNCTION(setEventId__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__10daKnob20_cFfff) {
+asm void daKnob20_c::checkArea(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/checkArea__10daKnob20_cFfff.s"
 }
@@ -336,7 +406,7 @@ ASM_FUNCTION(checkArea__10daKnob20_cFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEventPrm__10daKnob20_cFv) {
+asm void daKnob20_c::setEventPrm() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/setEventPrm__10daKnob20_cFv.s"
 }
@@ -347,7 +417,7 @@ ASM_FUNCTION(setEventPrm__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(releaseBG__10daKnob20_cFv) {
+asm void daKnob20_c::releaseBG() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/releaseBG__10daKnob20_cFv.s"
 }
@@ -358,7 +428,7 @@ ASM_FUNCTION(releaseBG__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frontCheck__10daKnob20_cFv) {
+asm void daKnob20_c::frontCheck() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/frontCheck__10daKnob20_cFv.s"
 }
@@ -369,7 +439,7 @@ ASM_FUNCTION(frontCheck__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoAction__10daKnob20_cFv) {
+asm void daKnob20_c::getDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/getDemoAction__10daKnob20_cFv.s"
 }
@@ -380,7 +450,7 @@ ASM_FUNCTION(getDemoAction__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__10daKnob20_cFv) {
+asm void daKnob20_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/demoProc__10daKnob20_cFv.s"
 }
@@ -391,7 +461,7 @@ ASM_FUNCTION(demoProc__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStart__10daKnob20_cFff) {
+asm void daKnob20_c::setStart(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/setStart__10daKnob20_cFff.s"
 }
@@ -402,7 +472,7 @@ ASM_FUNCTION(setStart__10daKnob20_cFff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngle__10daKnob20_cFv) {
+asm void daKnob20_c::setAngle() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/setAngle__10daKnob20_cFv.s"
 }
@@ -413,7 +483,7 @@ ASM_FUNCTION(setAngle__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjustmentProc__10daKnob20_cFv) {
+asm void daKnob20_c::adjustmentProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/adjustmentProc__10daKnob20_cFv.s"
 }
@@ -424,7 +494,7 @@ ASM_FUNCTION(adjustmentProc__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__10daKnob20_cFi) {
+asm void daKnob20_c::openInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/openInit__10daKnob20_cFi.s"
 }
@@ -435,7 +505,7 @@ ASM_FUNCTION(openInit__10daKnob20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc__10daKnob20_cFi) {
+asm void daKnob20_c::openProc(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/openProc__10daKnob20_cFi.s"
 }
@@ -446,7 +516,7 @@ ASM_FUNCTION(openProc__10daKnob20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openEnd__10daKnob20_cFi) {
+asm void daKnob20_c::openEnd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/openEnd__10daKnob20_cFi.s"
 }
@@ -457,7 +527,7 @@ ASM_FUNCTION(openEnd__10daKnob20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initOpenDemo__10daKnob20_cFv) {
+asm void daKnob20_c::initOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/initOpenDemo__10daKnob20_cFv.s"
 }
@@ -468,7 +538,7 @@ ASM_FUNCTION(initOpenDemo__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startDemoProc__10daKnob20_cFv) {
+asm void daKnob20_c::startDemoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/startDemoProc__10daKnob20_cFv.s"
 }
@@ -479,7 +549,7 @@ ASM_FUNCTION(startDemoProc__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daKnob20_cFv) {
+asm void daKnob20_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionWait__10daKnob20_cFv.s"
 }
@@ -490,7 +560,7 @@ ASM_FUNCTION(actionWait__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSpecialDemo__10daKnob20_cFv) {
+asm void daKnob20_c::actionSpecialDemo() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionSpecialDemo__10daKnob20_cFv.s"
 }
@@ -501,7 +571,7 @@ ASM_FUNCTION(actionSpecialDemo__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDemo__10daKnob20_cFv) {
+asm void daKnob20_c::actionDemo() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionDemo__10daKnob20_cFv.s"
 }
@@ -512,7 +582,7 @@ ASM_FUNCTION(actionDemo__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTalk__10daKnob20_cFv) {
+asm void daKnob20_c::actionTalk() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionTalk__10daKnob20_cFv.s"
 }
@@ -523,7 +593,7 @@ ASM_FUNCTION(actionTalk__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTalkWait__10daKnob20_cFv) {
+asm void daKnob20_c::actionTalkWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionTalkWait__10daKnob20_cFv.s"
 }
@@ -534,7 +604,7 @@ ASM_FUNCTION(actionTalkWait__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTalkOpen__10daKnob20_cFv) {
+asm void daKnob20_c::actionTalkOpen() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionTalkOpen__10daKnob20_cFv.s"
 }
@@ -545,7 +615,7 @@ ASM_FUNCTION(actionTalkOpen__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__10daKnob20_cFv) {
+asm void daKnob20_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionInit__10daKnob20_cFv.s"
 }
@@ -553,21 +623,16 @@ ASM_FUNCTION(actionInit__10daKnob20_cFv) {
 
 
 /* 804602D8-804602E0 0008+00 .text      actionDead__10daKnob20_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__10daKnob20_cFv) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionDead__10daKnob20_cFv.s"
+bool daKnob20_c::actionDead() {
+	return true;
 }
-#pragma pop
 
 
 /* 804602E0-8046045C 017C+00 .text      execute__10daKnob20_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daKnob20_cFv) {
+asm void daKnob20_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/execute__10daKnob20_cFv.s"
 }
@@ -578,7 +643,7 @@ ASM_FUNCTION(execute__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daKnob20_cFv) {
+asm void daKnob20_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/draw__10daKnob20_cFv.s"
 }
@@ -589,7 +654,7 @@ ASM_FUNCTION(draw__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daKnob20_cFv) {
+asm void daKnob20_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/Delete__10daKnob20_cFv.s"
 }
@@ -600,7 +665,7 @@ ASM_FUNCTION(Delete__10daKnob20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKnob20_Draw__FP10daKnob20_c) {
+asm void daKnob20_Draw(daKnob20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/daKnob20_Draw__FP10daKnob20_c.s"
 }
@@ -611,7 +676,7 @@ ASM_FUNCTION(daKnob20_Draw__FP10daKnob20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKnob20_Execute__FP10daKnob20_c) {
+asm void daKnob20_Execute(daKnob20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/daKnob20_Execute__FP10daKnob20_c.s"
 }
@@ -622,7 +687,7 @@ ASM_FUNCTION(daKnob20_Execute__FP10daKnob20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKnob20_Delete__FP10daKnob20_c) {
+asm void daKnob20_Delete(daKnob20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/daKnob20_Delete__FP10daKnob20_c.s"
 }
@@ -633,7 +698,7 @@ ASM_FUNCTION(daKnob20_Delete__FP10daKnob20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKnob20_Create__FP10fopAc_ac_c) {
+asm void daKnob20_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/daKnob20_Create__FP10fopAc_ac_c.s"
 }

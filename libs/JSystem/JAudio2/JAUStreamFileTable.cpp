@@ -6,78 +6,120 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAUStreamFileTable (JAUStreamFileTable) False/False
+/* top-level dependencies (begin JAUStreamFileTable) */
+/* top-level dependencies (end JAUStreamFileTable) */
+struct JAUStreamFileTable {
+	/* 802A7420 */ JAUStreamFileTable();
+	/* 802A742C */ void init(void const*);
+	/* 802A7478 */ void getNumFiles() const;
+	/* 802A7484 */ void getFilePath(s32) const;
+};
+
+// build JAUStreamDataMgr_StreamFileTable (JAUStreamDataMgr_StreamFileTable) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+/* top-level dependencies (begin JAUStreamDataMgr_StreamFileTable) */
+// outer dependency: JAISoundID
+/* top-level dependencies (end JAUStreamDataMgr_StreamFileTable) */
+struct JAUStreamDataMgr_StreamFileTable {
+	// JAISoundID
+	/* 802A74AC */ void getStreamFileEntry(JAISoundID);
+	/* 802A74E8 */ ~JAUStreamDataMgr_StreamFileTable();
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build JAIStreamDataMgr (JAIStreamDataMgr) False/False
+/* top-level dependencies (begin JAIStreamDataMgr) */
+/* top-level dependencies (end JAIStreamDataMgr) */
+struct JAIStreamDataMgr {
+	/* 802A3AD8 */ ~JAIStreamDataMgr();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18JAUStreamFileTableFv();
-extern "C" extern void init__18JAUStreamFileTableFPCv();
-extern "C" extern void getNumFiles__18JAUStreamFileTableCFv();
-extern "C" extern void getFilePath__18JAUStreamFileTableCFi();
-extern "C" extern void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID();
-extern "C" extern void __dt__32JAUStreamDataMgr_StreamFileTableFv();
+
+extern "C" void __ct__18JAUStreamFileTableFv();
+extern "C" void init__18JAUStreamFileTableFPCv();
+extern "C" void getNumFiles__18JAUStreamFileTableCFv();
+extern "C" void getFilePath__18JAUStreamFileTableCFi();
+extern "C" void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID();
+extern "C" void __dt__32JAUStreamDataMgr_StreamFileTableFv();
 SECTION_DATA extern void*const __vt__32JAUStreamDataMgr_StreamFileTable[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__16JAIStreamDataMgrFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void DVDConvertPathToEntrynum();
+void operator delete(void*);
+extern "C" void DVDConvertPathToEntrynum();
+
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void DVDConvertPathToEntrynum();
 
 // 
 // Declarations:
 // 
 
-/* 802A7420-802A742C 000C+00 .text      __ct__18JAUStreamFileTableFv                                 */
+/* 802A7420-802A742C 000C+00 rc=1 efc=1 .text      __ct__18JAUStreamFileTableFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18JAUStreamFileTableFv) {
+asm JAUStreamFileTable::JAUStreamFileTable() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/__ct__18JAUStreamFileTableFv.s"
 }
 #pragma pop
 
 
-/* 802A742C-802A7478 004C+00 .text      init__18JAUStreamFileTableFPCv                               */
+/* 802A742C-802A7478 004C+00 rc=1 efc=1 .text      init__18JAUStreamFileTableFPCv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__18JAUStreamFileTableFPCv) {
+asm void JAUStreamFileTable::init(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/init__18JAUStreamFileTableFPCv.s"
 }
 #pragma pop
 
 
-/* 802A7478-802A7484 000C+00 .text      getNumFiles__18JAUStreamFileTableCFv                         */
+/* 802A7478-802A7484 000C+00 rc=1 efc=1 .text      getNumFiles__18JAUStreamFileTableCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNumFiles__18JAUStreamFileTableCFv) {
+asm void JAUStreamFileTable::getNumFiles() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/getNumFiles__18JAUStreamFileTableCFv.s"
 }
 #pragma pop
 
 
-/* 802A7484-802A74AC 0028+00 .text      getFilePath__18JAUStreamFileTableCFi                         */
+/* 802A7484-802A74AC 0028+00 rc=2 efc=1 .text      getFilePath__18JAUStreamFileTableCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFilePath__18JAUStreamFileTableCFi) {
+asm void JAUStreamFileTable::getFilePath(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/getFilePath__18JAUStreamFileTableCFi.s"
 }
 #pragma pop
 
 
-/* 802A74AC-802A74E8 003C+00 .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID */
+/* 802A74AC-802A74E8 003C+00 rc=1 efc=0 .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID) {
+asm void JAUStreamDataMgr_StreamFileTable::getStreamFileEntry(JAISoundID field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID.s"
 }
@@ -85,7 +127,7 @@ ASM_FUNCTION(getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID
 
 
 /* ############################################################################################## */
-/* 803C9B50-803C9B60 0010+00 .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
+/* 803C9B50-803C9B60 0010+00 rc=2 efc=1 .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
 void* const __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -93,15 +135,14 @@ void* const __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 	(void*)__dt__32JAUStreamDataMgr_StreamFileTableFv,
 };
 
-/* 802A74E8-802A7548 0060+00 .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */
+/* 802A74E8-802A7548 0060+00 rc=1 efc=0 .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__32JAUStreamDataMgr_StreamFileTableFv) {
+asm JAUStreamDataMgr_StreamFileTable::~JAUStreamDataMgr_StreamFileTable() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/__dt__32JAUStreamDataMgr_StreamFileTableFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

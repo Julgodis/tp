@@ -6,26 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTkraDai_c;
+
+struct daTkraDai_HIO_c {
+	daTkraDai_HIO_c();
+	~daTkraDai_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTkraDai_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void procMain();
+	void init_modeWait();
+	void modeWait();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daTkraDai_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daTkraDai_cFv();
-extern "C" extern void CreateHeap__11daTkraDai_cFv();
-extern "C" extern void create__11daTkraDai_cFv();
-extern "C" extern void Execute__11daTkraDai_cFPPA3_A4_f();
-extern "C" extern void procMain__11daTkraDai_cFv();
-extern "C" extern void init_modeWait__11daTkraDai_cFv();
-extern "C" extern void modeWait__11daTkraDai_cFv();
-extern "C" extern void Draw__11daTkraDai_cFv();
-extern "C" extern void Delete__11daTkraDai_cFv();
-extern "C" extern void daTkraDai_Draw__FP11daTkraDai_c();
-extern "C" extern void daTkraDai_Execute__FP11daTkraDai_c();
-extern "C" extern void daTkraDai_Delete__FP11daTkraDai_c();
-extern "C" extern void daTkraDai_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daTkraDai_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_takaraDai_cpp();
+extern "C" void Execute__11daTkraDai_cFPPA3_A4_f();
+void daTkraDai_Draw(daTkraDai_c*);
+void daTkraDai_Execute(daTkraDai_c*);
+void daTkraDai_Delete(daTkraDai_c*);
+void daTkraDai_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_takaraDai_cpp();
+
+extern "C" void __ct__15daTkraDai_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daTkraDai_cFv();
+extern "C" void CreateHeap__11daTkraDai_cFv();
+extern "C" void create__11daTkraDai_cFv();
+extern "C" void Execute__11daTkraDai_cFPPA3_A4_f();
+extern "C" void procMain__11daTkraDai_cFv();
+extern "C" void init_modeWait__11daTkraDai_cFv();
+extern "C" void modeWait__11daTkraDai_cFv();
+extern "C" void Draw__11daTkraDai_cFv();
+extern "C" void Delete__11daTkraDai_cFv();
+extern "C" void daTkraDai_Draw__FP11daTkraDai_c();
+extern "C" void daTkraDai_Execute__FP11daTkraDai_c();
+extern "C" void daTkraDai_Delete__FP11daTkraDai_c();
+extern "C" void daTkraDai_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daTkraDai_HIO_cFv();
+extern "C" void __sinit_d_a_obj_takaraDai_cpp();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u32 lit_3628;
 SECTION_RODATA extern const u32 lit_3629;
@@ -61,8 +98,11 @@ SECTION_BSS extern u8 data_80D07958[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -72,7 +112,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daTkraDai_HIO_cFv) {
+asm daTkraDai_HIO_c::daTkraDai_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/__ct__15daTkraDai_HIO_cFv.s"
 }
@@ -83,7 +123,7 @@ ASM_FUNCTION(__ct__15daTkraDai_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -94,7 +134,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daTkraDai_cFv) {
+asm void daTkraDai_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/setBaseMtx__11daTkraDai_cFv.s"
 }
@@ -105,7 +145,7 @@ ASM_FUNCTION(setBaseMtx__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daTkraDai_cFv) {
+asm void daTkraDai_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/CreateHeap__11daTkraDai_cFv.s"
 }
@@ -116,7 +156,7 @@ ASM_FUNCTION(CreateHeap__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTkraDai_cFv) {
+asm void daTkraDai_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/create__11daTkraDai_cFv.s"
 }
@@ -127,7 +167,7 @@ ASM_FUNCTION(create__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daTkraDai_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daTkraDai_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/Execute__11daTkraDai_cFPPA3_A4_f.s"
 }
@@ -138,7 +178,7 @@ ASM_FUNCTION(Execute__11daTkraDai_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__11daTkraDai_cFv) {
+asm void daTkraDai_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/procMain__11daTkraDai_cFv.s"
 }
@@ -149,7 +189,7 @@ ASM_FUNCTION(procMain__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daTkraDai_cFv) {
+asm void daTkraDai_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/init_modeWait__11daTkraDai_cFv.s"
 }
@@ -160,7 +200,7 @@ ASM_FUNCTION(init_modeWait__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daTkraDai_cFv) {
+asm void daTkraDai_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/modeWait__11daTkraDai_cFv.s"
 }
@@ -171,7 +211,7 @@ ASM_FUNCTION(modeWait__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daTkraDai_cFv) {
+asm void daTkraDai_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/Draw__11daTkraDai_cFv.s"
 }
@@ -182,7 +222,7 @@ ASM_FUNCTION(Draw__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daTkraDai_cFv) {
+asm void daTkraDai_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/Delete__11daTkraDai_cFv.s"
 }
@@ -193,7 +233,7 @@ ASM_FUNCTION(Delete__11daTkraDai_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTkraDai_Draw__FP11daTkraDai_c) {
+asm void daTkraDai_Draw(daTkraDai_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Draw__FP11daTkraDai_c.s"
 }
@@ -204,7 +244,7 @@ ASM_FUNCTION(daTkraDai_Draw__FP11daTkraDai_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTkraDai_Execute__FP11daTkraDai_c) {
+asm void daTkraDai_Execute(daTkraDai_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Execute__FP11daTkraDai_c.s"
 }
@@ -215,7 +255,7 @@ ASM_FUNCTION(daTkraDai_Execute__FP11daTkraDai_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTkraDai_Delete__FP11daTkraDai_c) {
+asm void daTkraDai_Delete(daTkraDai_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Delete__FP11daTkraDai_c.s"
 }
@@ -226,7 +266,7 @@ ASM_FUNCTION(daTkraDai_Delete__FP11daTkraDai_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTkraDai_Create__FP10fopAc_ac_c) {
+asm void daTkraDai_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/daTkraDai_Create__FP10fopAc_ac_c.s"
 }
@@ -237,7 +277,7 @@ ASM_FUNCTION(daTkraDai_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTkraDai_HIO_cFv) {
+asm daTkraDai_HIO_c::~daTkraDai_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/__dt__15daTkraDai_HIO_cFv.s"
 }
@@ -248,7 +288,7 @@ ASM_FUNCTION(__dt__15daTkraDai_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_takaraDai_cpp) {
+extern "C" asm void __sinit_d_a_obj_takaraDai_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_takaraDai/d_a_obj_takaraDai/__sinit_d_a_obj_takaraDai_cpp.s"
 }

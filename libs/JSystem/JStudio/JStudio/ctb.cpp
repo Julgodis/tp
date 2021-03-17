@@ -6,29 +6,194 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::object::TIDData
+// outer dependency: JStudio::ctb::TObject
+// outer dependency: JStudio::ctb::data::TParse_TBlock
+// outer dependency: JStudio::ctb::TControl
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build ctb (JStudio::ctb) False/False
+	/* dependencies (begin JStudio::ctb) */
+	/* dependencies (end JStudio::ctb) */
+	namespace ctb {
+		// build TObject (JStudio::ctb::TObject) False/False
+		/* dependencies (begin JStudio::ctb::TObject) */
+		/* dependencies (end JStudio::ctb::TObject) */
+		struct TObject {
+			/* 80280F18 */ ~TObject();
+		};
+
+		// build TObject_TxyzRy (JStudio::ctb::TObject_TxyzRy) False/False
+		/* dependencies (begin JStudio::ctb::TObject_TxyzRy) */
+		// inner dependency: data (JStudio::ctb::data::TParse_TBlock) True False (for JStudio::ctb::TObject_TxyzRy)
+		// build data (JStudio::ctb::data) False/False
+		/* dependencies (begin JStudio::ctb::data) */
+		/* dependencies (end JStudio::ctb::data) */
+		struct data {
+			// build TParse_TBlock (JStudio::ctb::data::TParse_TBlock) False/False
+			/* dependencies (begin JStudio::ctb::data::TParse_TBlock) */
+			/* dependencies (end JStudio::ctb::data::TParse_TBlock) */
+			struct TParse_TBlock {
+			};
+
+		};
+
+		/* dependencies (end JStudio::ctb::TObject_TxyzRy) */
+		struct TObject_TxyzRy {
+			// JStudio::ctb::data::TParse_TBlock
+			/* 80280F60 */ TObject_TxyzRy(JStudio::ctb::data::TParse_TBlock const&);
+			/* 80280FBC */ bool getScheme() const;
+			/* 80281554 */ ~TObject_TxyzRy();
+		};
+
+		// build data (JStudio::ctb::data) True/True
+		// build TControl (JStudio::ctb::TControl) False/False
+		/* dependencies (begin JStudio::ctb::TControl) */
+		// inner dependency: TObject (JStudio::ctb::TObject) True False (for JStudio::ctb::TControl)
+		// build TObject (JStudio::ctb::TObject) True/True
+		/* dependencies (end JStudio::ctb::TControl) */
+		struct TControl {
+			// JStudio::ctb::TObject
+			/* 80280FC4 */ TControl();
+			/* 80280FF4 */ ~TControl();
+			/* 80281060 */ void appendObject(JStudio::ctb::TObject*);
+			/* 802810AC */ void removeObject(JStudio::ctb::TObject*);
+			/* 802810DC */ void destroyObject(JStudio::ctb::TObject*);
+			/* 8028112C */ void destroyObject_all();
+			/* 80281190 */ void getObject(void const*, u32);
+			/* 80281230 */ void getObject_index(u32);
+		};
+
+		// build TFactory (JStudio::ctb::TFactory) False/False
+		/* dependencies (begin JStudio::ctb::TFactory) */
+		// inner dependency: TObject (JStudio::ctb::TObject) True False (for JStudio::ctb::TFactory)
+		// build TObject (JStudio::ctb::TObject) True/True
+		// inner dependency: data (JStudio::ctb::data::TParse_TBlock) True False (for JStudio::ctb::TFactory)
+		// build data (JStudio::ctb::data) True/True
+		/* dependencies (end JStudio::ctb::TFactory) */
+		struct TFactory {
+			// JStudio::ctb::TObject
+			// JStudio::ctb::data::TParse_TBlock
+			/* 80281274 */ ~TFactory();
+			/* 802812BC */ void create(JStudio::ctb::data::TParse_TBlock const&);
+			/* 80281320 */ void destroy(JStudio::ctb::TObject*);
+		};
+
+		// build TParse (JStudio::ctb::TParse) False/False
+		/* dependencies (begin JStudio::ctb::TParse) */
+		// inner dependency: TControl (JStudio::ctb::TControl) True False (for JStudio::ctb::TParse)
+		// build TControl (JStudio::ctb::TControl) True/True
+		/* dependencies (end JStudio::ctb::TParse) */
+		struct TParse {
+			// JStudio::ctb::TControl
+			/* 8028135C */ TParse(JStudio::ctb::TControl*);
+			/* 8028137C */ ~TParse();
+			/* 802813DC */ void parseHeader_next(void const**, u32*, u32);
+			/* 80281470 */ void parseBlock_next(void const**, u32*, u32);
+		};
+
+	};
+
+	// build object (JStudio::object) False/False
+	/* dependencies (begin JStudio::object) */
+	/* dependencies (end JStudio::object) */
+	struct object {
+		// build TIDData (JStudio::object::TIDData) False/False
+		/* dependencies (begin JStudio::object::TIDData) */
+		/* dependencies (end JStudio::object::TIDData) */
+		struct TIDData {
+			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
+		};
+
+	};
+
+};
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+// build JGadget (JGadget) True/True
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::TNodeLinkList::iterator
+// outer dependency: JGadget::TLinkListNode
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
+		/* dependencies (begin JGadget::binary::TParse_header_block) */
+		/* dependencies (end JGadget::binary::TParse_header_block) */
+		struct TParse_header_block {
+			/* 802DC8C8 */ ~TParse_header_block();
+		};
+
+	};
+
+	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
+	/* dependencies (begin JGadget::TNodeLinkList) */
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
+	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
+	// build TLinkListNode (JGadget::TLinkListNode) False/False
+	/* dependencies (begin JGadget::TLinkListNode) */
+	/* dependencies (end JGadget::TLinkListNode) */
+	struct TLinkListNode {
+	};
+
+	/* dependencies (end JGadget::TNodeLinkList) */
+	struct TNodeLinkList {
+		// JGadget::TNodeLinkList::iterator
+		// JGadget::TLinkListNode
+		// build iterator (JGadget::TNodeLinkList::iterator) False/False
+		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
+		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		struct iterator {
+		};
+
+		/* 802DCA1C */ ~TNodeLinkList();
+		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
+		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
+	};
+
+	// build TLinkListNode (JGadget::TLinkListNode) True/True
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__Q37JStudio3ctb7TObjectFv();
-extern "C" extern void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock();
-extern "C" extern void getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv();
-extern "C" extern void __ct__Q37JStudio3ctb8TControlFv();
-extern "C" extern void __dt__Q37JStudio3ctb8TControlFv();
-extern "C" extern void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" extern void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" extern void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" extern void destroyObject_all__Q37JStudio3ctb8TControlFv();
-extern "C" extern void getObject__Q37JStudio3ctb8TControlFPCvUl();
-extern "C" extern void getObject_index__Q37JStudio3ctb8TControlFUl();
-extern "C" extern void __dt__Q37JStudio3ctb8TFactoryFv();
-extern "C" extern void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock();
-extern "C" extern void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject();
-extern "C" extern void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
-extern "C" extern void __dt__Q37JStudio3ctb6TParseFv();
-extern "C" extern void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
-extern "C" extern void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
-extern "C" extern void __dt__Q37JStudio3ctb14TObject_TxyzRyFv();
-extern "C" extern void func_802815B4();
+extern "C" static void func_802815B4();
+
+extern "C" void __dt__Q37JStudio3ctb7TObjectFv();
+extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock();
+extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv();
+extern "C" void __ct__Q37JStudio3ctb8TControlFv();
+extern "C" void __dt__Q37JStudio3ctb8TControlFv();
+extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv();
+extern "C" void getObject__Q37JStudio3ctb8TControlFPCvUl();
+extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl();
+extern "C" void __dt__Q37JStudio3ctb8TFactoryFv();
+extern "C" void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock();
+extern "C" void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject();
+extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
+extern "C" void __dt__Q37JStudio3ctb6TParseFv();
+extern "C" void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
+extern "C" void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
+extern "C" void __dt__Q37JStudio3ctb14TObject_TxyzRyFv();
+extern "C" static void func_802815B4();
 SECTION_DATA extern void*const __vt__Q37JStudio3ctb6TParse[5];
 SECTION_DATA extern void*const __vt__Q37JGadget6binary19TParse_header_block[5];
 SECTION_DATA extern void*const __vt__Q37JStudio3ctb8TFactory[5];
@@ -40,16 +205,22 @@ SECTION_DATA extern void*const __vt__Q37JStudio3ctb7TObject[4];
 // External References:
 // 
 
-extern "C" extern void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern "C" extern void __dt__Q27JGadget13TNodeLinkListFv();
-extern "C" extern void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
-extern "C" extern void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
-extern "C" extern void memcmp();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" void memcmp();
+
+extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" void memcmp();
 SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3ctb4data;
 
 // 
@@ -57,7 +228,7 @@ SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3ctb4data;
 // 
 
 /* ############################################################################################## */
-/* 803C4878-803C488C 0014+00 .data      __vt__Q37JStudio3ctb6TParse                                  */
+/* 803C4878-803C488C 0014+00 rc=2 efc=0 .data      __vt__Q37JStudio3ctb6TParse                                  */
 void* const __vt__Q37JStudio3ctb6TParse[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -66,7 +237,7 @@ void* const __vt__Q37JStudio3ctb6TParse[5] = {
 	(void*)parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl,
 };
 
-/* 803C488C-803C48A0 0014+00 .data      __vt__Q37JGadget6binary19TParse_header_block                 */
+/* 803C488C-803C48A0 0014+00 rc=5 efc=4 .data      __vt__Q37JGadget6binary19TParse_header_block                 */
 void* const __vt__Q37JGadget6binary19TParse_header_block[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -75,7 +246,7 @@ void* const __vt__Q37JGadget6binary19TParse_header_block[5] = {
 	NULL,
 };
 
-/* 803C48A0-803C48B4 0014+00 .data      __vt__Q37JStudio3ctb8TFactory                                */
+/* 803C48A0-803C48B4 0014+00 rc=2 efc=1 .data      __vt__Q37JStudio3ctb8TFactory                                */
 void* const __vt__Q37JStudio3ctb8TFactory[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -84,14 +255,14 @@ void* const __vt__Q37JStudio3ctb8TFactory[5] = {
 	(void*)destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject,
 };
 
-/* 803C48B4-803C48C0 000C+00 .data      __vt__Q37JStudio3ctb8TControl                                */
+/* 803C48B4-803C48C0 000C+00 rc=2 efc=0 .data      __vt__Q37JStudio3ctb8TControl                                */
 void* const __vt__Q37JStudio3ctb8TControl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q37JStudio3ctb8TControlFv,
 };
 
-/* 803C48C0-803C48D0 0010+00 .data      __vt__Q37JStudio3ctb14TObject_TxyzRy                         */
+/* 803C48C0-803C48D0 0010+00 rc=2 efc=0 .data      __vt__Q37JStudio3ctb14TObject_TxyzRy                         */
 void* const __vt__Q37JStudio3ctb14TObject_TxyzRy[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -99,7 +270,7 @@ void* const __vt__Q37JStudio3ctb14TObject_TxyzRy[4] = {
 	(void*)getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv,
 };
 
-/* 803C48D0-803C48E0 0010+00 .data      __vt__Q37JStudio3ctb7TObject                                 */
+/* 803C48D0-803C48E0 0010+00 rc=2 efc=0 .data      __vt__Q37JStudio3ctb7TObject                                 */
 void* const __vt__Q37JStudio3ctb7TObject[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -107,224 +278,218 @@ void* const __vt__Q37JStudio3ctb7TObject[4] = {
 	NULL,
 };
 
-/* 80280F18-80280F60 0048+00 .text      __dt__Q37JStudio3ctb7TObjectFv                               */
+/* 80280F18-80280F60 0048+00 rc=1 efc=0 .text      __dt__Q37JStudio3ctb7TObjectFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JStudio3ctb7TObjectFv) {
+asm JStudio::ctb::TObject::~TObject() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__dt__Q37JStudio3ctb7TObjectFv.s"
 }
 #pragma pop
 
 
-/* 80280F60-80280FBC 005C+00 .text      __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock */
+/* 80280F60-80280FBC 005C+00 rc=1 efc=0 .text      __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock) {
+asm JStudio::ctb::TObject_TxyzRy::TObject_TxyzRy(JStudio::ctb::data::TParse_TBlock const& field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock.s"
 }
 #pragma pop
 
 
-/* 80280FBC-80280FC4 0008+00 .text      getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv) {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/ctb/getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv.s"
+/* 80280FBC-80280FC4 0008+00 rc=1 efc=0 .text      getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv                 */
+bool JStudio::ctb::TObject_TxyzRy::getScheme() const {
+	return true;
 }
-#pragma pop
 
 
-/* 80280FC4-80280FF4 0030+00 .text      __ct__Q37JStudio3ctb8TControlFv                              */
+/* 80280FC4-80280FF4 0030+00 rc=1 efc=1 .text      __ct__Q37JStudio3ctb8TControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q37JStudio3ctb8TControlFv) {
+asm JStudio::ctb::TControl::TControl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__ct__Q37JStudio3ctb8TControlFv.s"
 }
 #pragma pop
 
 
-/* 80280FF4-80281060 006C+00 .text      __dt__Q37JStudio3ctb8TControlFv                              */
+/* 80280FF4-80281060 006C+00 rc=2 efc=1 .text      __dt__Q37JStudio3ctb8TControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JStudio3ctb8TControlFv) {
+asm JStudio::ctb::TControl::~TControl() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__dt__Q37JStudio3ctb8TControlFv.s"
 }
 #pragma pop
 
 
-/* 80281060-802810AC 004C+00 .text      appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+/* 80281060-802810AC 004C+00 rc=1 efc=0 .text      appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject) {
+asm void JStudio::ctb::TControl::appendObject(JStudio::ctb::TObject* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject.s"
 }
 #pragma pop
 
 
-/* 802810AC-802810DC 0030+00 .text      removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+/* 802810AC-802810DC 0030+00 rc=1 efc=0 .text      removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject) {
+asm void JStudio::ctb::TControl::removeObject(JStudio::ctb::TObject* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject.s"
 }
 #pragma pop
 
 
-/* 802810DC-8028112C 0050+00 .text      destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+/* 802810DC-8028112C 0050+00 rc=1 efc=0 .text      destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject) {
+asm void JStudio::ctb::TControl::destroyObject(JStudio::ctb::TObject* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject.s"
 }
 #pragma pop
 
 
-/* 8028112C-80281190 0064+00 .text      destroyObject_all__Q37JStudio3ctb8TControlFv                 */
+/* 8028112C-80281190 0064+00 rc=2 efc=2 .text      destroyObject_all__Q37JStudio3ctb8TControlFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroyObject_all__Q37JStudio3ctb8TControlFv) {
+asm void JStudio::ctb::TControl::destroyObject_all() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/destroyObject_all__Q37JStudio3ctb8TControlFv.s"
 }
 #pragma pop
 
 
-/* 80281190-80281230 00A0+00 .text      getObject__Q37JStudio3ctb8TControlFPCvUl                     */
+/* 80281190-80281230 00A0+00 rc=1 efc=0 .text      getObject__Q37JStudio3ctb8TControlFPCvUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getObject__Q37JStudio3ctb8TControlFPCvUl) {
+asm void JStudio::ctb::TControl::getObject(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/getObject__Q37JStudio3ctb8TControlFPCvUl.s"
 }
 #pragma pop
 
 
-/* 80281230-80281274 0044+00 .text      getObject_index__Q37JStudio3ctb8TControlFUl                  */
+/* 80281230-80281274 0044+00 rc=1 efc=1 .text      getObject_index__Q37JStudio3ctb8TControlFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getObject_index__Q37JStudio3ctb8TControlFUl) {
+asm void JStudio::ctb::TControl::getObject_index(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/getObject_index__Q37JStudio3ctb8TControlFUl.s"
 }
 #pragma pop
 
 
-/* 80281274-802812BC 0048+00 .text      __dt__Q37JStudio3ctb8TFactoryFv                              */
+/* 80281274-802812BC 0048+00 rc=2 efc=1 .text      __dt__Q37JStudio3ctb8TFactoryFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JStudio3ctb8TFactoryFv) {
+asm JStudio::ctb::TFactory::~TFactory() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__dt__Q37JStudio3ctb8TFactoryFv.s"
 }
 #pragma pop
 
 
-/* 802812BC-80281320 0064+00 .text      create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock */
+/* 802812BC-80281320 0064+00 rc=1 efc=0 .text      create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock) {
+asm void JStudio::ctb::TFactory::create(JStudio::ctb::data::TParse_TBlock const& field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock.s"
 }
 #pragma pop
 
 
-/* 80281320-8028135C 003C+00 .text      destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject     */
+/* 80281320-8028135C 003C+00 rc=1 efc=0 .text      destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject) {
+asm void JStudio::ctb::TFactory::destroy(JStudio::ctb::TObject* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject.s"
 }
 #pragma pop
 
 
-/* 8028135C-8028137C 0020+00 .text      __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl         */
+/* 8028135C-8028137C 0020+00 rc=1 efc=1 .text      __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl) {
+asm JStudio::ctb::TParse::TParse(JStudio::ctb::TControl* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl.s"
 }
 #pragma pop
 
 
-/* 8028137C-802813DC 0060+00 .text      __dt__Q37JStudio3ctb6TParseFv                                */
+/* 8028137C-802813DC 0060+00 rc=2 efc=1 .text      __dt__Q37JStudio3ctb6TParseFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JStudio3ctb6TParseFv) {
+asm JStudio::ctb::TParse::~TParse() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__dt__Q37JStudio3ctb6TParseFv.s"
 }
 #pragma pop
 
 
-/* 802813DC-80281470 0094+00 .text      parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl            */
+/* 802813DC-80281470 0094+00 rc=1 efc=0 .text      parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl) {
+asm void JStudio::ctb::TParse::parseHeader_next(void const** field_0, u32* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl.s"
 }
 #pragma pop
 
 
-/* 80281470-80281554 00E4+00 .text      parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl             */
+/* 80281470-80281554 00E4+00 rc=1 efc=0 .text      parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl) {
+asm void JStudio::ctb::TParse::parseBlock_next(void const** field_0, u32* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl.s"
 }
 #pragma pop
 
 
-/* 80281554-802815B4 0060+00 .text      __dt__Q37JStudio3ctb14TObject_TxyzRyFv                       */
+/* 80281554-802815B4 0060+00 rc=1 efc=0 .text      __dt__Q37JStudio3ctb14TObject_TxyzRyFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JStudio3ctb14TObject_TxyzRyFv) {
+asm JStudio::ctb::TObject_TxyzRy::~TObject_TxyzRy() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/__dt__Q37JStudio3ctb14TObject_TxyzRyFv.s"
 }
 #pragma pop
 
 
-/* 802815B4-80281648 0094+00 .text      find_if<Q37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
+/* 802815B4-80281648 0094+00 rc=1 efc=0 .text      find_if<Q37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802815B4) {
+extern "C" asm static void func_802815B4() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/ctb/func_802815B4.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

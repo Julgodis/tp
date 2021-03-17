@@ -6,43 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build mDoCPd_c (mDoCPd_c) False/False
+/* top-level dependencies (begin mDoCPd_c) */
+/* top-level dependencies (end mDoCPd_c) */
+struct mDoCPd_c {
+	/* 80007D74 */ void recalibrate();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void cAPICPad_recalibrate__Fv();
-extern "C" extern void cAPICPad_ANY_BUTTON__FUl();
+void cAPICPad_recalibrate();
+void cAPICPad_ANY_BUTTON(u32);
+
+extern "C" void cAPICPad_recalibrate__Fv();
+extern "C" void cAPICPad_ANY_BUTTON__FUl();
 
 // 
 // External References:
 // 
 
-extern "C" extern void recalibrate__8mDoCPd_cFv();
+
+extern "C" void recalibrate__8mDoCPd_cFv();
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 
 // 
 // Declarations:
 // 
 
-/* 8026328C-802632AC 0020+00 .text      cAPICPad_recalibrate__Fv                                     */
+/* 8026328C-802632AC 0020+00 rc=3 efc=3 .text      cAPICPad_recalibrate__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cAPICPad_recalibrate__Fv) {
+asm void cAPICPad_recalibrate() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_controller_pad/cAPICPad_recalibrate__Fv.s"
 }
 #pragma pop
 
 
-/* 802632AC-802632C8 001C+00 .text      cAPICPad_ANY_BUTTON__FUl                                     */
+/* 802632AC-802632C8 001C+00 rc=3 efc=3 .text      cAPICPad_ANY_BUTTON__FUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cAPICPad_ANY_BUTTON__FUl) {
+asm void cAPICPad_ANY_BUTTON(u32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_controller_pad/cAPICPad_ANY_BUTTON__FUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

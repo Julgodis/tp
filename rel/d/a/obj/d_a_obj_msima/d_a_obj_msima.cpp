@@ -6,29 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_msima_class;
+struct fopAc_ac_c;
+struct dBgW;
+struct ms_chain_s;
+
+struct daObj_Msima_HIO_c {
+	daObj_Msima_HIO_c();
+	~daObj_Msima_HIO_c();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct obj_msima_class {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct ms_chain_s {
+	~ms_chain_s();
+	ms_chain_s();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daObj_Msima_HIO_cFv();
-extern "C" extern void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObj_Msima_Draw__FP15obj_msima_class();
-extern "C" extern void msima_start__FP15obj_msima_class();
-extern "C" extern void msima_drop__FP15obj_msima_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void msima_float__FP15obj_msima_class();
-extern "C" extern void action__FP15obj_msima_class();
-extern "C" extern void chain_move__FP15obj_msima_classP10ms_chain_si();
-extern "C" extern void chain_move2__FP15obj_msima_classP10ms_chain_si();
-extern "C" extern void daObj_Msima_Execute__FP15obj_msima_class();
-extern "C" extern void daObj_Msima_IsDelete__FP15obj_msima_class();
-extern "C" extern void daObj_Msima_Delete__FP15obj_msima_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Msima_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10ms_chain_sFv();
-extern "C" extern void __ct__10ms_chain_sFv();
-extern "C" extern void __dt__17daObj_Msima_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_msima_cpp();
+void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObj_Msima_Draw(obj_msima_class*);
+void msima_start(obj_msima_class*);
+void msima_drop(obj_msima_class*);
+void msima_float(obj_msima_class*);
+void action(obj_msima_class*);
+void chain_move(obj_msima_class*, ms_chain_s*, s32);
+void chain_move2(obj_msima_class*, ms_chain_s*, s32);
+void daObj_Msima_Execute(obj_msima_class*);
+bool daObj_Msima_IsDelete(obj_msima_class*);
+void daObj_Msima_Delete(obj_msima_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Msima_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_msima_cpp();
+
+extern "C" void __ct__17daObj_Msima_HIO_cFv();
+extern "C" void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObj_Msima_Draw__FP15obj_msima_class();
+extern "C" void msima_start__FP15obj_msima_class();
+extern "C" void msima_drop__FP15obj_msima_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void msima_float__FP15obj_msima_class();
+extern "C" void action__FP15obj_msima_class();
+extern "C" void chain_move__FP15obj_msima_classP10ms_chain_si();
+extern "C" void chain_move2__FP15obj_msima_classP10ms_chain_si();
+extern "C" void daObj_Msima_Execute__FP15obj_msima_class();
+extern "C" bool daObj_Msima_IsDelete__FP15obj_msima_class();
+extern "C" void daObj_Msima_Delete__FP15obj_msima_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Msima_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10ms_chain_sFv();
+extern "C" void __ct__10ms_chain_sFv();
+extern "C" void __dt__17daObj_Msima_HIO_cFv();
+extern "C" void __sinit_d_a_obj_msima_cpp();
 SECTION_RODATA extern const u32 lit_3863;
 SECTION_RODATA extern const u32 lit_3864;
 SECTION_RODATA extern const u32 lit_4013;
@@ -132,8 +183,11 @@ SECTION_BSS extern u8 data_80C9D000[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -143,7 +197,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daObj_Msima_HIO_cFv) {
+asm daObj_Msima_HIO_c::daObj_Msima_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__ct__17daObj_Msima_HIO_cFv.s"
 }
@@ -154,7 +208,7 @@ ASM_FUNCTION(__ct__17daObj_Msima_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -165,7 +219,7 @@ ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Msima_Draw__FP15obj_msima_class) {
+asm void daObj_Msima_Draw(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Draw__FP15obj_msima_class.s"
 }
@@ -176,7 +230,7 @@ ASM_FUNCTION(daObj_Msima_Draw__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(msima_start__FP15obj_msima_class) {
+asm void msima_start(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/msima_start__FP15obj_msima_class.s"
 }
@@ -187,7 +241,7 @@ ASM_FUNCTION(msima_start__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(msima_drop__FP15obj_msima_class) {
+asm void msima_drop(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/msima_drop__FP15obj_msima_class.s"
 }
@@ -198,7 +252,7 @@ ASM_FUNCTION(msima_drop__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__dt__4cXyzFv.s"
 }
@@ -209,7 +263,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(msima_float__FP15obj_msima_class) {
+asm void msima_float(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/msima_float__FP15obj_msima_class.s"
 }
@@ -220,7 +274,7 @@ ASM_FUNCTION(msima_float__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP15obj_msima_class) {
+asm void action(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/action__FP15obj_msima_class.s"
 }
@@ -231,7 +285,7 @@ ASM_FUNCTION(action__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_move__FP15obj_msima_classP10ms_chain_si) {
+asm void chain_move(obj_msima_class* field_0, ms_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/chain_move__FP15obj_msima_classP10ms_chain_si.s"
 }
@@ -242,7 +296,7 @@ ASM_FUNCTION(chain_move__FP15obj_msima_classP10ms_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_move2__FP15obj_msima_classP10ms_chain_si) {
+asm void chain_move2(obj_msima_class* field_0, ms_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/chain_move2__FP15obj_msima_classP10ms_chain_si.s"
 }
@@ -253,7 +307,7 @@ ASM_FUNCTION(chain_move2__FP15obj_msima_classP10ms_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Msima_Execute__FP15obj_msima_class) {
+asm void daObj_Msima_Execute(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Execute__FP15obj_msima_class.s"
 }
@@ -261,21 +315,16 @@ ASM_FUNCTION(daObj_Msima_Execute__FP15obj_msima_class) {
 
 
 /* 80C9C3A8-80C9C3B0 0008+00 .text      daObj_Msima_IsDelete__FP15obj_msima_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Msima_IsDelete__FP15obj_msima_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_IsDelete__FP15obj_msima_class.s"
+bool daObj_Msima_IsDelete(obj_msima_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9C3B0-80C9C42C 007C+00 .text      daObj_Msima_Delete__FP15obj_msima_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Msima_Delete__FP15obj_msima_class) {
+asm void daObj_Msima_Delete(obj_msima_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Delete__FP15obj_msima_class.s"
 }
@@ -286,7 +335,7 @@ ASM_FUNCTION(daObj_Msima_Delete__FP15obj_msima_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -297,7 +346,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__dt__12J3DFrameCtrlFv.s"
 }
@@ -308,7 +357,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Msima_Create__FP10fopAc_ac_c) {
+asm void daObj_Msima_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Create__FP10fopAc_ac_c.s"
 }
@@ -319,7 +368,7 @@ ASM_FUNCTION(daObj_Msima_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10ms_chain_sFv) {
+asm ms_chain_s::~ms_chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__dt__10ms_chain_sFv.s"
 }
@@ -327,21 +376,16 @@ ASM_FUNCTION(__dt__10ms_chain_sFv) {
 
 
 /* 80C9CA9C-80C9CAA0 0004+00 .text      __ct__10ms_chain_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__10ms_chain_sFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__ct__10ms_chain_sFv.s"
+ms_chain_s::ms_chain_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9CAA0-80C9CAE8 0048+00 .text      __dt__17daObj_Msima_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daObj_Msima_HIO_cFv) {
+asm daObj_Msima_HIO_c::~daObj_Msima_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__dt__17daObj_Msima_HIO_cFv.s"
 }
@@ -352,7 +396,7 @@ ASM_FUNCTION(__dt__17daObj_Msima_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_msima_cpp) {
+extern "C" asm void __sinit_d_a_obj_msima_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__sinit_d_a_obj_msima_cpp.s"
 }

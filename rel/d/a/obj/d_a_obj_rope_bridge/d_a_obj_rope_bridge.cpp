@@ -6,44 +6,108 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjRBridge_c;
+struct cXyz;
+
+struct daObjRBridge_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void checkE3Special();
+	void setStPos();
+	void initLinePos();
+	void setLinePos();
+	void getLinePosSt(cXyz*);
+	void getLinePosBrg(s32, cXyz*);
+	void checkTight();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void init_wait();
+	void mode_wait();
+	void init_cut();
+	void mode_cut();
+	void init_end();
+	void mode_end();
+	void Draw();
+	void checkHimoCulling();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Cps {
+	~dCcD_Cps();
+	dCcD_Cps();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjRBridge_cFv();
-extern "C" extern void setBaseMtx__14daObjRBridge_cFv();
-extern "C" extern void checkE3Special__14daObjRBridge_cFv();
-extern "C" extern void setStPos__14daObjRBridge_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void initLinePos__14daObjRBridge_cFv();
-extern "C" extern void setLinePos__14daObjRBridge_cFv();
-extern "C" extern void getLinePosSt__14daObjRBridge_cFP4cXyz();
-extern "C" extern void getLinePosBrg__14daObjRBridge_cFiP4cXyz();
-extern "C" extern void checkTight__14daObjRBridge_cFv();
-extern "C" extern void Create__14daObjRBridge_cFv();
-extern "C" extern void CreateHeap__14daObjRBridge_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void create1st__14daObjRBridge_cFv();
-extern "C" extern void Execute__14daObjRBridge_cFPPA3_A4_f();
-extern "C" extern void action__14daObjRBridge_cFv();
-extern "C" extern void init_wait__14daObjRBridge_cFv();
-extern "C" extern void mode_wait__14daObjRBridge_cFv();
-extern "C" extern void init_cut__14daObjRBridge_cFv();
-extern "C" extern void mode_cut__14daObjRBridge_cFv();
-extern "C" extern void init_end__14daObjRBridge_cFv();
-extern "C" extern void mode_end__14daObjRBridge_cFv();
-extern "C" extern void Draw__14daObjRBridge_cFv();
-extern "C" extern void checkHimoCulling__14daObjRBridge_cFv();
-extern "C" extern void Delete__14daObjRBridge_cFv();
-extern "C" extern void daObjRBridge_create1st__FP14daObjRBridge_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_CpsFv();
-extern "C" extern void __ct__8dCcD_CpsFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjRBridge_MoveBGDelete__FP14daObjRBridge_c();
-extern "C" extern void daObjRBridge_MoveBGExecute__FP14daObjRBridge_c();
-extern "C" extern void daObjRBridge_MoveBGDraw__FP14daObjRBridge_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+extern "C" void Execute__14daObjRBridge_cFPPA3_A4_f();
+void daObjRBridge_create1st(daObjRBridge_c*);
+void daObjRBridge_MoveBGDelete(daObjRBridge_c*);
+void daObjRBridge_MoveBGExecute(daObjRBridge_c*);
+void daObjRBridge_MoveBGDraw(daObjRBridge_c*);
+
+extern "C" void initBaseMtx__14daObjRBridge_cFv();
+extern "C" void setBaseMtx__14daObjRBridge_cFv();
+extern "C" void checkE3Special__14daObjRBridge_cFv();
+extern "C" void setStPos__14daObjRBridge_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void initLinePos__14daObjRBridge_cFv();
+extern "C" void setLinePos__14daObjRBridge_cFv();
+extern "C" void getLinePosSt__14daObjRBridge_cFP4cXyz();
+extern "C" void getLinePosBrg__14daObjRBridge_cFiP4cXyz();
+extern "C" void checkTight__14daObjRBridge_cFv();
+extern "C" void Create__14daObjRBridge_cFv();
+extern "C" void CreateHeap__14daObjRBridge_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void create1st__14daObjRBridge_cFv();
+extern "C" void Execute__14daObjRBridge_cFPPA3_A4_f();
+extern "C" void action__14daObjRBridge_cFv();
+extern "C" void init_wait__14daObjRBridge_cFv();
+extern "C" void mode_wait__14daObjRBridge_cFv();
+extern "C" void init_cut__14daObjRBridge_cFv();
+extern "C" void mode_cut__14daObjRBridge_cFv();
+extern "C" void init_end__14daObjRBridge_cFv();
+extern "C" void mode_end__14daObjRBridge_cFv();
+extern "C" void Draw__14daObjRBridge_cFv();
+extern "C" void checkHimoCulling__14daObjRBridge_cFv();
+extern "C" void Delete__14daObjRBridge_cFv();
+extern "C" void daObjRBridge_create1st__FP14daObjRBridge_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_CpsFv();
+extern "C" void __ct__8dCcD_CpsFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjRBridge_MoveBGDelete__FP14daObjRBridge_c();
+extern "C" void daObjRBridge_MoveBGExecute__FP14daObjRBridge_c();
+extern "C" void daObjRBridge_MoveBGDraw__FP14daObjRBridge_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_brgBmdIdx[8];
 SECTION_RODATA extern const u8 l_brgDzbIdx[8];
 SECTION_RODATA extern const u8 l_brg_height[8];
@@ -107,7 +171,9 @@ SECTION_DATA extern void*const __vt__14daObjRBridge_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -117,7 +183,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/initBaseMtx__14daObjRBridge_cFv.s"
 }
@@ -128,7 +194,7 @@ ASM_FUNCTION(initBaseMtx__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/setBaseMtx__14daObjRBridge_cFv.s"
 }
@@ -139,7 +205,7 @@ ASM_FUNCTION(setBaseMtx__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkE3Special__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::checkE3Special() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/checkE3Special__14daObjRBridge_cFv.s"
 }
@@ -150,7 +216,7 @@ ASM_FUNCTION(checkE3Special__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStPos__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::setStPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/setStPos__14daObjRBridge_cFv.s"
 }
@@ -161,7 +227,7 @@ ASM_FUNCTION(setStPos__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__4cXyzFv.s"
 }
@@ -172,7 +238,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initLinePos__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::initLinePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/initLinePos__14daObjRBridge_cFv.s"
 }
@@ -183,7 +249,7 @@ ASM_FUNCTION(initLinePos__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinePos__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::setLinePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/setLinePos__14daObjRBridge_cFv.s"
 }
@@ -194,7 +260,7 @@ ASM_FUNCTION(setLinePos__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLinePosSt__14daObjRBridge_cFP4cXyz) {
+asm void daObjRBridge_c::getLinePosSt(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/getLinePosSt__14daObjRBridge_cFP4cXyz.s"
 }
@@ -205,7 +271,7 @@ ASM_FUNCTION(getLinePosSt__14daObjRBridge_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLinePosBrg__14daObjRBridge_cFiP4cXyz) {
+asm void daObjRBridge_c::getLinePosBrg(s32 field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/getLinePosBrg__14daObjRBridge_cFiP4cXyz.s"
 }
@@ -216,7 +282,7 @@ ASM_FUNCTION(getLinePosBrg__14daObjRBridge_cFiP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTight__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::checkTight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/checkTight__14daObjRBridge_cFv.s"
 }
@@ -227,7 +293,7 @@ ASM_FUNCTION(checkTight__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/Create__14daObjRBridge_cFv.s"
 }
@@ -238,7 +304,7 @@ ASM_FUNCTION(Create__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/CreateHeap__14daObjRBridge_cFv.s"
 }
@@ -246,21 +312,16 @@ ASM_FUNCTION(CreateHeap__14daObjRBridge_cFv) {
 
 
 /* 80596DE8-80596DEC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80596DEC-80596EBC 00D0+00 .text      create1st__14daObjRBridge_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/create1st__14daObjRBridge_cFv.s"
 }
@@ -271,7 +332,7 @@ ASM_FUNCTION(create1st__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjRBridge_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjRBridge_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/Execute__14daObjRBridge_cFPPA3_A4_f.s"
 }
@@ -282,7 +343,7 @@ ASM_FUNCTION(Execute__14daObjRBridge_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/action__14daObjRBridge_cFv.s"
 }
@@ -293,7 +354,7 @@ ASM_FUNCTION(action__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_wait__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/init_wait__14daObjRBridge_cFv.s"
 }
@@ -304,7 +365,7 @@ ASM_FUNCTION(init_wait__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/mode_wait__14daObjRBridge_cFv.s"
 }
@@ -315,7 +376,7 @@ ASM_FUNCTION(mode_wait__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_cut__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::init_cut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/init_cut__14daObjRBridge_cFv.s"
 }
@@ -326,7 +387,7 @@ ASM_FUNCTION(init_cut__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_cut__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::mode_cut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/mode_cut__14daObjRBridge_cFv.s"
 }
@@ -337,7 +398,7 @@ ASM_FUNCTION(mode_cut__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_end__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::init_end() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/init_end__14daObjRBridge_cFv.s"
 }
@@ -345,21 +406,16 @@ ASM_FUNCTION(init_end__14daObjRBridge_cFv) {
 
 
 /* 805975F4-805975F8 0004+00 .text      mode_end__14daObjRBridge_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_end__14daObjRBridge_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/mode_end__14daObjRBridge_cFv.s"
+void daObjRBridge_c::mode_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805975F8-805977D0 01D8+00 .text      Draw__14daObjRBridge_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/Draw__14daObjRBridge_cFv.s"
 }
@@ -370,7 +426,7 @@ ASM_FUNCTION(Draw__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHimoCulling__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::checkHimoCulling() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/checkHimoCulling__14daObjRBridge_cFv.s"
 }
@@ -381,7 +437,7 @@ ASM_FUNCTION(checkHimoCulling__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjRBridge_cFv) {
+asm void daObjRBridge_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/Delete__14daObjRBridge_cFv.s"
 }
@@ -392,7 +448,7 @@ ASM_FUNCTION(Delete__14daObjRBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRBridge_create1st__FP14daObjRBridge_c) {
+asm void daObjRBridge_create1st(daObjRBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_create1st__FP14daObjRBridge_c.s"
 }
@@ -403,7 +459,7 @@ ASM_FUNCTION(daObjRBridge_create1st__FP14daObjRBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__8cM3dGSphFv.s"
 }
@@ -414,7 +470,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__8cM3dGAabFv.s"
 }
@@ -425,7 +481,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CpsFv) {
+asm dCcD_Cps::~dCcD_Cps() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__8dCcD_CpsFv.s"
 }
@@ -436,7 +492,7 @@ ASM_FUNCTION(__dt__8dCcD_CpsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CpsFv) {
+asm dCcD_Cps::dCcD_Cps() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__ct__8dCcD_CpsFv.s"
 }
@@ -447,7 +503,7 @@ ASM_FUNCTION(__ct__8dCcD_CpsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__10dCcD_GSttsFv.s"
 }
@@ -458,7 +514,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRBridge_MoveBGDelete__FP14daObjRBridge_c) {
+asm void daObjRBridge_MoveBGDelete(daObjRBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGDelete__FP14daObjRBridge_c.s"
 }
@@ -469,7 +525,7 @@ ASM_FUNCTION(daObjRBridge_MoveBGDelete__FP14daObjRBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRBridge_MoveBGExecute__FP14daObjRBridge_c) {
+asm void daObjRBridge_MoveBGExecute(daObjRBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGExecute__FP14daObjRBridge_c.s"
 }
@@ -480,7 +536,7 @@ ASM_FUNCTION(daObjRBridge_MoveBGExecute__FP14daObjRBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRBridge_MoveBGDraw__FP14daObjRBridge_c) {
+asm void daObjRBridge_MoveBGDraw(daObjRBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/daObjRBridge_MoveBGDraw__FP14daObjRBridge_c.s"
 }
@@ -491,7 +547,7 @@ ASM_FUNCTION(daObjRBridge_MoveBGDraw__FP14daObjRBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rope_bridge/d_a_obj_rope_bridge/__dt__10cCcD_GSttsFv.s"
 }

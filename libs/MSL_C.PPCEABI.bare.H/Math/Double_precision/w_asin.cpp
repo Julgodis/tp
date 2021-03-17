@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void asin();
+extern "C" void asin();
+
+extern "C" void asin();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_asin();
+extern "C" void __ieee754_asin();
+
+extern "C" void __ieee754_asin();
 
 // 
 // Declarations:
 // 
 
-/* 8036C700-8036C720 0020+00 .text      asin                                                         */
+/* 8036C700-8036C720 0020+00 rc=2 efc=2 .text      asin                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(asin) {
+extern "C" asm void asin() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_asin/asin.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

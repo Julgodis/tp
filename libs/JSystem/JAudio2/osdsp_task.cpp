@@ -9,12 +9,19 @@
 // Forward References:
 // 
 
-extern "C" extern void __DSPHandler();
-extern "C" extern void DsyncFrame2__FUlUlUl();
-extern "C" extern void DsyncFrame3__FUlUlUlUlUl();
-extern "C" extern void Dsp_Update_Request__Fv();
-extern "C" extern void Dsp_Running_Check__Fv();
-extern "C" extern void Dsp_Running_Start__Fv();
+extern "C" void __DSPHandler();
+void DsyncFrame2(u32, u32, u32);
+static void DsyncFrame3(u32, u32, u32, u32, u32);
+static void Dsp_Update_Request();
+void Dsp_Running_Check();
+void Dsp_Running_Start();
+
+extern "C" void __DSPHandler();
+extern "C" void DsyncFrame2__FUlUlUl();
+extern "C" static void DsyncFrame3__FUlUlUlUlUl();
+extern "C" static void Dsp_Update_Request__Fv();
+extern "C" void Dsp_Running_Check__Fv();
+extern "C" void Dsp_Running_Start__Fv();
 SECTION_BSS extern u8 sync_stack[20 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80451308[4];
 SECTION_SBSS extern u8 DSP_prior_task[4];
@@ -27,16 +34,27 @@ SECTION_SBSS extern u8 data_80451328[8];
 // External References:
 // 
 
-extern "C" extern void DsyncFrame2ch__FUlUlUl();
-extern "C" extern void DsyncFrame4ch__FUlUlUlUlUl();
-extern "C" extern void OSSetCurrentContext();
-extern "C" extern void OSClearContext();
-extern "C" extern void DSPCheckMailToDSP();
-extern "C" extern void DSPCheckMailFromDSP();
-extern "C" extern void DSPReadMailFromDSP();
-extern "C" extern void DSPSendMailToDSP();
-extern "C" extern void __DSP_exec_task();
-extern "C" extern void __DSP_remove_task();
+void DsyncFrame2ch(u32, u32, u32);
+void DsyncFrame4ch(u32, u32, u32, u32, u32);
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void __DSP_exec_task();
+extern "C" void __DSP_remove_task();
+
+extern "C" void DsyncFrame2ch__FUlUlUl();
+extern "C" void DsyncFrame4ch__FUlUlUlUlUl();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void __DSP_exec_task();
+extern "C" void __DSP_remove_task();
 SECTION_SBSS extern u8 __DSP_first_task[4];
 SECTION_SBSS extern u8 __DSP_curr_task[4];
 
@@ -45,20 +63,20 @@ SECTION_SBSS extern u8 __DSP_curr_task[4];
 // 
 
 /* ############################################################################################## */
-/* 80451308-8045130C 0004+00 .sbss      None                                                         */
+/* 80451308-8045130C 0004+00 rc=6 efc=0 .sbss      None                                                         */
 u8 struct_80451308[4];
 /* 80451308 0001 data_80451308 */
 /* 80451309 0003 data_80451309 */
 
-/* 8045130C-80451310 0004+00 .sbss      DSP_prior_task                                               */
+/* 8045130C-80451310 0004+00 rc=3 efc=2 .sbss      DSP_prior_task                                               */
 u8 DSP_prior_task[4];
 
-/* 8029EB20-8029EE24 0304+00 .text      __DSPHandler                                                 */
+/* 8029EB20-8029EE24 0304+00 rc=1 efc=1 .text      __DSPHandler                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(__DSPHandler) {
+extern "C" asm void __DSPHandler() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/__DSPHandler.s"
 }
@@ -66,63 +84,63 @@ ASM_FUNCTION(__DSPHandler) {
 
 
 /* ############################################################################################## */
-/* 80434060-80434078 0014+04 .bss       sync_stack                                                   */
+/* 80434060-80434078 0014+04 rc=3 efc=0 .bss       sync_stack                                                   */
 u8 sync_stack[20 + 4 /* padding */];
 
-/* 8029EE40-8029EE90 0050+00 .text      DsyncFrame2__FUlUlUl                                         */
+/* 8029EE40-8029EE90 0050+00 rc=2 efc=1 .text      DsyncFrame2__FUlUlUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsyncFrame2__FUlUlUl) {
+asm void DsyncFrame2(u32 field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/DsyncFrame2__FUlUlUl.s"
 }
 #pragma pop
 
 
-/* 8029EEA0-8029EEF8 0058+00 .text      DsyncFrame3__FUlUlUlUlUl                                     */
+/* 8029EEA0-8029EEF8 0058+00 rc=1 efc=0 .text      DsyncFrame3__FUlUlUlUlUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsyncFrame3__FUlUlUlUlUl) {
+asm static void DsyncFrame3(u32 field_0, u32 field_1, u32 field_2, u32 field_3, u32 field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/DsyncFrame3__FUlUlUlUlUl.s"
 }
 #pragma pop
 
 
-/* 8029EF00-8029EF78 0078+00 .text      Dsp_Update_Request__Fv                                       */
+/* 8029EF00-8029EF78 0078+00 rc=1 efc=0 .text      Dsp_Update_Request__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(Dsp_Update_Request__Fv) {
+asm static void Dsp_Update_Request() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/Dsp_Update_Request__Fv.s"
 }
 #pragma pop
 
 
-/* 8029EF80-8029EF94 0014+00 .text      Dsp_Running_Check__Fv                                        */
+/* 8029EF80-8029EF94 0014+00 rc=1 efc=1 .text      Dsp_Running_Check__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(Dsp_Running_Check__Fv) {
+asm void Dsp_Running_Check() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/Dsp_Running_Check__Fv.s"
 }
 #pragma pop
 
 
-/* 8029EFA0-8029EFAC 000C+00 .text      Dsp_Running_Start__Fv                                        */
+/* 8029EFA0-8029EFAC 000C+00 rc=1 efc=1 .text      Dsp_Running_Start__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(Dsp_Running_Start__Fv) {
+asm void Dsp_Running_Start() {
 	nofralloc
 #include "asm/JSystem/JAudio2/osdsp_task/Dsp_Running_Start__Fv.s"
 }
@@ -130,15 +148,15 @@ ASM_FUNCTION(Dsp_Running_Start__Fv) {
 
 
 /* ############################################################################################## */
-/* 80451310-80451318 0008+00 .sbss      None                                                         */
+/* 80451310-80451318 0008+00 rc=3 efc=3 .sbss      None                                                         */
 u8 data_80451310[8];
 
-/* 80451318-80451320 0008+00 .sbss      None                                                         */
+/* 80451318-80451320 0008+00 rc=7 efc=7 .sbss      None                                                         */
 u8 data_80451318[8];
 
-/* 80451320-80451328 0008+00 .sbss      None                                                         */
+/* 80451320-80451328 0008+00 rc=4 efc=4 .sbss      None                                                         */
 u8 data_80451320[8];
 
-/* 80451328-80451330 0008+00 .sbss      None                                                         */
+/* 80451328-80451330 0008+00 rc=3 efc=3 .sbss      None                                                         */
 u8 data_80451328[8];
 

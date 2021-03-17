@@ -9,12 +9,19 @@
 // Forward References:
 // 
 
-extern "C" extern void DSPReleaseHalt2__FUl();
-extern "C" extern void setup_callback__FUs();
-extern "C" extern void DsetupTable__FUlUlUlUlUl();
-extern "C" extern void DsetMixerLevel__Ff();
-extern "C" extern void DsyncFrame2ch__FUlUlUl();
-extern "C" extern void DsyncFrame4ch__FUlUlUlUlUl();
+void DSPReleaseHalt2(u32);
+static void setup_callback(u16);
+void DsetupTable(u32, u32, u32, u32, u32);
+void DsetMixerLevel(f32);
+void DsyncFrame2ch(u32, u32, u32);
+void DsyncFrame4ch(u32, u32, u32, u32, u32);
+
+extern "C" void DSPReleaseHalt2__FUl();
+extern "C" static void setup_callback__FUs();
+extern "C" void DsetupTable__FUlUlUlUlUl();
+extern "C" void DsetMixerLevel__Ff();
+extern "C" void DsyncFrame2ch__FUlUlUl();
+extern "C" void DsyncFrame4ch__FUlUlUlUlUl();
 SECTION_SDATA extern u16 DSP_MIXERLEVEL;
 SECTION_SBSS extern u8 flag[4 + 4 /* padding */];
 SECTION_SDATA2 extern f32 dspproc__lit_333;
@@ -23,19 +30,22 @@ SECTION_SDATA2 extern f32 dspproc__lit_333;
 // External References:
 // 
 
-extern "C" extern void DSP_CreateMap2__FUl();
-extern "C" extern void DSPSendCommands2__FPUlUlPFUs_v();
+void DSP_CreateMap2(u32);
+extern "C" void DSPSendCommands2__FPUlUlPFUs_v();
+
+extern "C" void DSP_CreateMap2__FUl();
+extern "C" void DSPSendCommands2__FPUlUlPFUs_v();
 
 // 
 // Declarations:
 // 
 
-/* 8029E4E0-8029E528 0048+00 .text      DSPReleaseHalt2__FUl                                         */
+/* 8029E4E0-8029E528 0048+00 rc=1 efc=1 .text      DSPReleaseHalt2__FUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DSPReleaseHalt2__FUl) {
+asm void DSPReleaseHalt2(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/DSPReleaseHalt2__FUl.s"
 }
@@ -43,27 +53,27 @@ ASM_FUNCTION(DSPReleaseHalt2__FUl) {
 
 
 /* ############################################################################################## */
-/* 804512F8-80451300 0004+04 .sbss      flag                                                         */
+/* 804512F8-80451300 0004+04 rc=2 efc=0 .sbss      flag                                                         */
 u8 flag[4 + 4 /* padding */];
 
-/* 8029E540-8029E54C 000C+00 .text      setup_callback__FUs                                          */
+/* 8029E540-8029E54C 000C+00 rc=1 efc=0 .text      setup_callback__FUs                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(setup_callback__FUs) {
+asm static void setup_callback(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/setup_callback__FUs.s"
 }
 #pragma pop
 
 
-/* 8029E560-8029E5C4 0064+00 .text      DsetupTable__FUlUlUlUlUl                                     */
+/* 8029E560-8029E5C4 0064+00 rc=1 efc=1 .text      DsetupTable__FUlUlUlUlUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsetupTable__FUlUlUlUlUl) {
+asm void DsetupTable(u32 field_0, u32 field_1, u32 field_2, u32 field_3, u32 field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/DsetupTable__FUlUlUlUlUl.s"
 }
@@ -71,48 +81,47 @@ ASM_FUNCTION(DsetupTable__FUlUlUlUlUl) {
 
 
 /* ############################################################################################## */
-/* 804507C8-804507D0 0002+06 .sdata     DSP_MIXERLEVEL                                               */
+/* 804507C8-804507D0 0002+06 rc=3 efc=0 .sdata     DSP_MIXERLEVEL                                               */
 u16 DSP_MIXERLEVEL = 0x4000;
 /* padding 6 bytes */
 
-/* 80455770-80455778 0004+04 .sdata2    @333                                                         */
+/* 80455770-80455778 0004+04 rc=1 efc=0 .sdata2    @333                                                         */
 f32 dspproc__lit_333 = 4096.0f;
 /* padding 4 bytes */
 
-/* 8029E5E0-8029E604 0024+00 .text      DsetMixerLevel__Ff                                           */
+/* 8029E5E0-8029E604 0024+00 rc=1 efc=1 .text      DsetMixerLevel__Ff                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsetMixerLevel__Ff) {
+asm void DsetMixerLevel(f32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/DsetMixerLevel__Ff.s"
 }
 #pragma pop
 
 
-/* 8029E620-8029E674 0054+00 .text      DsyncFrame2ch__FUlUlUl                                       */
+/* 8029E620-8029E674 0054+00 rc=1 efc=1 .text      DsyncFrame2ch__FUlUlUl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsyncFrame2ch__FUlUlUl) {
+asm void DsyncFrame2ch(u32 field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/DsyncFrame2ch__FUlUlUl.s"
 }
 #pragma pop
 
 
-/* 8029E680-8029E6D0 0050+00 .text      DsyncFrame4ch__FUlUlUlUlUl                                   */
+/* 8029E680-8029E6D0 0050+00 rc=1 efc=1 .text      DsyncFrame4ch__FUlUlUlUlUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-ASM_FUNCTION(DsyncFrame4ch__FUlUlUlUlUl) {
+asm void DsyncFrame4ch(u32 field_0, u32 field_1, u32 field_2, u32 field_3, u32 field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dspproc/DsyncFrame4ch__FUlUlUlUlUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

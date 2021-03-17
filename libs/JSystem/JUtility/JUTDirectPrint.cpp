@@ -6,19 +6,74 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTDirectPrint (JUTDirectPrint) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin JUTDirectPrint) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTDirectPrint) */
+struct JUTDirectPrint {
+	// JUtility::TColor
+	/* 802E41E8 */ JUTDirectPrint();
+	/* 802E4240 */ void start();
+	/* 802E4288 */ void erase(s32, s32, s32, s32);
+	/* 802E431C */ void drawChar(s32, s32, s32);
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+	/* 802E46D8 */ void drawString(u16, u16, char*);
+	/* 802E4798 */ void setCharColor(JUtility::TColor);
+	/* 802E47C8 */ void setCharColor(char, char, char);
+};
+
+// build JUtility (JUtility) True/True
+// build base_process_class (base_process_class) False/False
+/* top-level dependencies (begin base_process_class) */
+/* top-level dependencies (end base_process_class) */
+struct base_process_class {
+};
+
+// build JStudio (JStudio) False/False
+/* top-level dependencies (begin JStudio) */
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build TFunctionValue_list_parameter (JStudio::TFunctionValue_list_parameter) False/False
+	/* dependencies (begin JStudio::TFunctionValue_list_parameter) */
+	/* dependencies (end JStudio::TFunctionValue_list_parameter) */
+	struct TFunctionValue_list_parameter {
+		/* 80283C24 */ ~TFunctionValue_list_parameter();
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14JUTDirectPrintFv();
-extern "C" extern void start__14JUTDirectPrintFv();
-extern "C" extern void erase__14JUTDirectPrintFiiii();
-extern "C" extern void drawChar__14JUTDirectPrintFiii();
-extern "C" extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
-extern "C" extern void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
-extern "C" extern void drawString__14JUTDirectPrintFUsUsPc();
-extern "C" extern void drawString_f__14JUTDirectPrintFUsUsPCce();
-extern "C" extern void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
-extern "C" extern void setCharColor__14JUTDirectPrintFUcUcUc();
+extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
+extern "C" static void drawString_f__14JUTDirectPrintFUsUsPCce();
+
+extern "C" void __ct__14JUTDirectPrintFv();
+extern "C" void start__14JUTDirectPrintFv();
+extern "C" void erase__14JUTDirectPrintFiiii();
+extern "C" void drawChar__14JUTDirectPrintFiii();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
+extern "C" void drawString__14JUTDirectPrintFUsUsPc();
+extern "C" static void drawString_f__14JUTDirectPrintFUsUsPCce();
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+extern "C" void setCharColor__14JUTDirectPrintFUcUcUc();
 SECTION_RODATA extern const u8 JUTDirectPrint__stringBase0[8];
 SECTION_DATA extern u8 sAsciiTable__14JUTDirectPrint[128];
 SECTION_DATA extern void*sFontData__14JUTDirectPrint[64];
@@ -41,25 +96,34 @@ SECTION_SDATA2 extern f64 JUTDirectPrint__lit_514;
 // External References:
 // 
 
-extern "C" extern void fpcBs_Delete__FP18base_process_class();
-extern "C" extern void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void DCStoreRange();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_27();
-extern "C" extern void vsnprintf();
+void fpcBs_Delete(base_process_class*);
+void* operator new(u32);
+extern "C" void DCStoreRange();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void vsnprintf();
+
+extern "C" void fpcBs_Delete__FP18base_process_class();
+extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void* __nw__FUl();
+extern "C" void DCStoreRange();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void vsnprintf();
 
 // 
 // Declarations:
 // 
 
-/* 802E41E8-802E4240 0058+00 .text      __ct__14JUTDirectPrintFv                                     */
+/* 802E41E8-802E4240 0058+00 rc=1 efc=0 .text      __ct__14JUTDirectPrintFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14JUTDirectPrintFv) {
+asm JUTDirectPrint::JUTDirectPrint() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/__ct__14JUTDirectPrintFv.s"
 }
@@ -67,25 +131,25 @@ ASM_FUNCTION(__ct__14JUTDirectPrintFv) {
 
 
 /* ############################################################################################## */
-/* 80451528-80451530 0004+04 .sbss      sDirectPrint__14JUTDirectPrint                               */
+/* 80451528-80451530 0004+04 rc=5 efc=4 .sbss      sDirectPrint__14JUTDirectPrint                               */
 u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
-/* 802E4240-802E4288 0048+00 .text      start__14JUTDirectPrintFv                                    */
+/* 802E4240-802E4288 0048+00 rc=1 efc=1 .text      start__14JUTDirectPrintFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__14JUTDirectPrintFv) {
+asm void JUTDirectPrint::start() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/start__14JUTDirectPrintFv.s"
 }
 #pragma pop
 
 
-/* 802E4288-802E431C 0094+00 .text      erase__14JUTDirectPrintFiiii                                 */
+/* 802E4288-802E431C 0094+00 rc=2 efc=1 .text      erase__14JUTDirectPrintFiiii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(erase__14JUTDirectPrintFiiii) {
+asm void JUTDirectPrint::erase(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/erase__14JUTDirectPrintFiiii.s"
 }
@@ -93,7 +157,7 @@ ASM_FUNCTION(erase__14JUTDirectPrintFiiii) {
 
 
 /* ############################################################################################## */
-/* 803CC6B8-803CC738 0080+00 .data      sAsciiTable__14JUTDirectPrint                                */
+/* 803CC6B8-803CC738 0080+00 rc=2 efc=0 .data      sAsciiTable__14JUTDirectPrint                                */
 u8 sAsciiTable__14JUTDirectPrint[128] = {
 	0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0xFD, 0xFE, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -105,33 +169,33 @@ u8 sAsciiTable__14JUTDirectPrint[128] = {
 	0x8C, 0x8D, 0x8E, 0x8F, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x76, 0x77, 0x78, 0x79, 0x7A,
 };
 
-/* 802E431C-802E456C 0250+00 .text      drawChar__14JUTDirectPrintFiii                               */
+/* 802E431C-802E456C 0250+00 rc=1 efc=0 .text      drawChar__14JUTDirectPrintFiii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawChar__14JUTDirectPrintFiii) {
+asm void JUTDirectPrint::drawChar(s32 field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/drawChar__14JUTDirectPrintFiii.s"
 }
 #pragma pop
 
 
-/* 802E456C-802E45A4 0038+00 .text      changeFrameBuffer__14JUTDirectPrintFPvUsUs                   */
+/* 802E456C-802E45A4 0038+00 rc=5 efc=4 .text      changeFrameBuffer__14JUTDirectPrintFPvUsUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeFrameBuffer__14JUTDirectPrintFPvUsUs) {
+asm void JUTDirectPrint::changeFrameBuffer(void* field_0, u16 field_1, u16 field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/changeFrameBuffer__14JUTDirectPrintFPvUsUs.s"
 }
 #pragma pop
 
 
-/* 802E45A4-802E46D8 0134+00 .text      printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb       */
+/* 802E45A4-802E46D8 0134+00 rc=1 efc=0 .text      printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb) {
+extern "C" asm static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb.s"
 }
@@ -139,7 +203,7 @@ ASM_FUNCTION(printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb) {
 
 
 /* ############################################################################################## */
-/* 8039D9A0-8039D9A8 0003+05 .rodata    @stringBase0                                                 */
+/* 8039D9A0-8039D9A8 0003+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -148,33 +212,33 @@ SECTION_DEAD char* const stringBase_8039D9A0 = "%s";
 SECTION_DEAD char* const pad_8039D9A3 = "\0\0\0\0";
 #pragma pop
 
-/* 802E46D8-802E4708 0030+00 .text      drawString__14JUTDirectPrintFUsUsPc                          */
+/* 802E46D8-802E4708 0030+00 rc=2 efc=2 .text      drawString__14JUTDirectPrintFUsUsPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawString__14JUTDirectPrintFUsUsPc) {
+asm void JUTDirectPrint::drawString(u16 field_0, u16 field_1, char* field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/drawString__14JUTDirectPrintFUsUsPc.s"
 }
 #pragma pop
 
 
-/* 802E4708-802E4798 0090+00 .text      drawString_f__14JUTDirectPrintFUsUsPCce                      */
+/* 802E4708-802E4798 0090+00 rc=1 efc=0 .text      drawString_f__14JUTDirectPrintFUsUsPCce                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawString_f__14JUTDirectPrintFUsUsPCce) {
+extern "C" asm static void drawString_f__14JUTDirectPrintFUsUsPCce() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/drawString_f__14JUTDirectPrintFUsUsPCce.s"
 }
 #pragma pop
 
 
-/* 802E4798-802E47C8 0030+00 .text      setCharColor__14JUTDirectPrintFQ28JUtility6TColor            */
+/* 802E4798-802E47C8 0030+00 rc=2 efc=2 .text      setCharColor__14JUTDirectPrintFQ28JUtility6TColor            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCharColor__14JUTDirectPrintFQ28JUtility6TColor) {
+asm void JUTDirectPrint::setCharColor(JUtility::TColor field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/setCharColor__14JUTDirectPrintFQ28JUtility6TColor.s"
 }
@@ -182,44 +246,44 @@ ASM_FUNCTION(setCharColor__14JUTDirectPrintFQ28JUtility6TColor) {
 
 
 /* ############################################################################################## */
-/* 80456060-80456068 0008+00 .sdata2    @503                                                         */
+/* 80456060-80456068 0008+00 rc=1 efc=0 .sdata2    @503                                                         */
 f64 JUTDirectPrint__lit_503 = 128.0;
 
-/* 80456068-80456070 0008+00 .sdata2    @504                                                         */
+/* 80456068-80456070 0008+00 rc=1 efc=0 .sdata2    @504                                                         */
 f64 JUTDirectPrint__lit_504 = 0.439;
 
-/* 80456070-80456078 0008+00 .sdata2    @505                                                         */
+/* 80456070-80456078 0008+00 rc=1 efc=0 .sdata2    @505                                                         */
 f64 JUTDirectPrint__lit_505 = -0.148;
 
-/* 80456078-80456080 0008+00 .sdata2    @506                                                         */
+/* 80456078-80456080 0008+00 rc=1 efc=0 .sdata2    @506                                                         */
 f64 JUTDirectPrint__lit_506 = 0.291;
 
-/* 80456080-80456088 0008+00 .sdata2    @507                                                         */
+/* 80456080-80456088 0008+00 rc=1 efc=0 .sdata2    @507                                                         */
 f64 JUTDirectPrint__lit_507 = 0.368;
 
-/* 80456088-80456090 0008+00 .sdata2    @508                                                         */
+/* 80456088-80456090 0008+00 rc=1 efc=0 .sdata2    @508                                                         */
 f64 JUTDirectPrint__lit_508 = 0.071;
 
-/* 80456090-80456098 0008+00 .sdata2    @509                                                         */
+/* 80456090-80456098 0008+00 rc=1 efc=0 .sdata2    @509                                                         */
 f64 JUTDirectPrint__lit_509 = 16.0;
 
-/* 80456098-804560A0 0008+00 .sdata2    @510                                                         */
+/* 80456098-804560A0 0008+00 rc=1 efc=0 .sdata2    @510                                                         */
 f64 JUTDirectPrint__lit_510 = 0.098;
 
-/* 804560A0-804560A8 0008+00 .sdata2    @511                                                         */
+/* 804560A0-804560A8 0008+00 rc=1 efc=0 .sdata2    @511                                                         */
 f64 JUTDirectPrint__lit_511 = 0.257;
 
-/* 804560A8-804560B0 0008+00 .sdata2    @512                                                         */
+/* 804560A8-804560B0 0008+00 rc=1 efc=0 .sdata2    @512                                                         */
 f64 JUTDirectPrint__lit_512 = 0.504;
 
-/* 804560B0-804560B8 0008+00 .sdata2    @514                                                         */
+/* 804560B0-804560B8 0008+00 rc=1 efc=0 .sdata2    @514                                                         */
 f64 JUTDirectPrint__lit_514 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E47C8-802E495C 0194+00 .text      setCharColor__14JUTDirectPrintFUcUcUc                        */
+/* 802E47C8-802E495C 0194+00 rc=2 efc=0 .text      setCharColor__14JUTDirectPrintFUcUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCharColor__14JUTDirectPrintFUcUcUc) {
+asm void JUTDirectPrint::setCharColor(char field_0, char field_1, char field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/setCharColor__14JUTDirectPrintFUcUcUc.s"
 }
@@ -227,7 +291,7 @@ ASM_FUNCTION(setCharColor__14JUTDirectPrintFUcUcUc) {
 
 
 /* ############################################################################################## */
-/* 803CC738-803CC838 0100+00 .data      sFontData__14JUTDirectPrint                                  */
+/* 803CC738-803CC838 0100+00 rc=0 efc=0 .data      sFontData__14JUTDirectPrint                                  */
 void* sFontData__14JUTDirectPrint[64] = {
 	(void*)0x70871C30,
 	(void*)0x8988A250,
@@ -295,7 +359,7 @@ void* sFontData__14JUTDirectPrint[64] = {
 	NULL,
 };
 
-/* 803CC838-803CC96C 0134+00 .data      sFontData2__14JUTDirectPrint                                 */
+/* 803CC838-803CC96C 0134+00 rc=0 efc=0 .data      sFontData2__14JUTDirectPrint                                 */
 void* sFontData2__14JUTDirectPrint[77] = {
 	(void*)0x51421820,
 	(void*)0x53E7A420,
@@ -376,7 +440,7 @@ void* sFontData2__14JUTDirectPrint[77] = {
 	(void*)0xF8000000,
 };
 
-/* 803CC96C-803CC980 0010+04 .data      twiceBit$371                                                 */
+/* 803CC96C-803CC980 0010+04 rc=0 efc=0 .data      twiceBit$371                                                 */
 u8 data_803CC96C[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0F,
 	/* padding */

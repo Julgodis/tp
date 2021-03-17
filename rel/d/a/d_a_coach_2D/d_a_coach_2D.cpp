@@ -6,30 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daCoach2D_c;
+
+struct fopAc_ac_c {
+};
+
+struct daCoach2D_c {
+	struct c_list {
+		void draw();
+		~daCoach2D_c::c_list();
+	};
+
+	void createHeap();
+	void create();
+	void destroy();
+	void draw();
+	void execute();
+	void drawMeter();
+	void initiate();
+	void update();
+	void setBrkAnime(bool);
+	~daCoach2D_c();
+};
+
+struct dDlst_base_c {
+	void draw();
+};
+
+struct daCoach2D_HIO_c {
+	~daCoach2D_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__Q211daCoach2D_c6c_listFv();
-extern "C" extern void daCoach2D_createHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__11daCoach2D_cFv();
-extern "C" extern void create__11daCoach2D_cFv();
-extern "C" extern void destroy__11daCoach2D_cFv();
-extern "C" extern void draw__11daCoach2D_cFv();
-extern "C" extern void execute__11daCoach2D_cFv();
-extern "C" extern void drawMeter__11daCoach2D_cFv();
-extern "C" extern void initiate__11daCoach2D_cFv();
-extern "C" extern void update__11daCoach2D_cFv();
-extern "C" extern void setBrkAnime__11daCoach2D_cFb();
-extern "C" extern void daCoach2D_create__FP11daCoach2D_c();
-extern "C" extern void daCoach2D_destroy__FP11daCoach2D_c();
-extern "C" extern void daCoach2D_execute__FP11daCoach2D_c();
-extern "C" extern void daCoach2D_draw__FP11daCoach2D_c();
-extern "C" extern void draw__12dDlst_base_cFv();
-extern "C" extern void __dt__15daCoach2D_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void __dt__Q211daCoach2D_c6c_listFv();
-extern "C" extern void __dt__11daCoach2D_cFv();
-extern "C" extern void __sinit_d_a_coach_2D_cpp();
+void daCoach2D_createHeap(fopAc_ac_c*);
+void daCoach2D_create(daCoach2D_c*);
+void daCoach2D_destroy(daCoach2D_c*);
+void daCoach2D_execute(daCoach2D_c*);
+void daCoach2D_draw(daCoach2D_c*);
+extern "C" void __sinit_d_a_coach_2D_cpp();
+
+extern "C" void draw__Q211daCoach2D_c6c_listFv();
+extern "C" void daCoach2D_createHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__11daCoach2D_cFv();
+extern "C" void create__11daCoach2D_cFv();
+extern "C" void destroy__11daCoach2D_cFv();
+extern "C" void draw__11daCoach2D_cFv();
+extern "C" void execute__11daCoach2D_cFv();
+extern "C" void drawMeter__11daCoach2D_cFv();
+extern "C" void initiate__11daCoach2D_cFv();
+extern "C" void update__11daCoach2D_cFv();
+extern "C" void setBrkAnime__11daCoach2D_cFb();
+extern "C" void daCoach2D_create__FP11daCoach2D_c();
+extern "C" void daCoach2D_destroy__FP11daCoach2D_c();
+extern "C" void daCoach2D_execute__FP11daCoach2D_c();
+extern "C" void daCoach2D_draw__FP11daCoach2D_c();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__15daCoach2D_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__Q211daCoach2D_c6c_listFv();
+extern "C" void __dt__11daCoach2D_cFv();
+extern "C" void __sinit_d_a_coach_2D_cpp();
 SECTION_RODATA extern const u32 lit_4003;
 SECTION_RODATA extern const u8 lit_4004[4];
 SECTION_RODATA extern const u32 lit_4005;
@@ -56,8 +103,11 @@ SECTION_BSS extern u8 l_HOSTIO[92];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -67,7 +117,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__Q211daCoach2D_c6c_listFv) {
+asm void daCoach2D_c::c_list::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/draw__Q211daCoach2D_c6c_listFv.s"
 }
@@ -78,7 +128,7 @@ ASM_FUNCTION(draw__Q211daCoach2D_c6c_listFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoach2D_createHeap__FP10fopAc_ac_c) {
+asm void daCoach2D_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_createHeap__FP10fopAc_ac_c.s"
 }
@@ -89,7 +139,7 @@ ASM_FUNCTION(daCoach2D_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daCoach2D_cFv) {
+asm void daCoach2D_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/createHeap__11daCoach2D_cFv.s"
 }
@@ -100,7 +150,7 @@ ASM_FUNCTION(createHeap__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daCoach2D_cFv) {
+asm void daCoach2D_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/create__11daCoach2D_cFv.s"
 }
@@ -111,7 +161,7 @@ ASM_FUNCTION(create__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroy__11daCoach2D_cFv) {
+asm void daCoach2D_c::destroy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/destroy__11daCoach2D_cFv.s"
 }
@@ -122,7 +172,7 @@ ASM_FUNCTION(destroy__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daCoach2D_cFv) {
+asm void daCoach2D_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/draw__11daCoach2D_cFv.s"
 }
@@ -133,7 +183,7 @@ ASM_FUNCTION(draw__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daCoach2D_cFv) {
+asm void daCoach2D_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/execute__11daCoach2D_cFv.s"
 }
@@ -144,7 +194,7 @@ ASM_FUNCTION(execute__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawMeter__11daCoach2D_cFv) {
+asm void daCoach2D_c::drawMeter() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/drawMeter__11daCoach2D_cFv.s"
 }
@@ -155,7 +205,7 @@ ASM_FUNCTION(drawMeter__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__11daCoach2D_cFv) {
+asm void daCoach2D_c::initiate() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/initiate__11daCoach2D_cFv.s"
 }
@@ -166,7 +216,7 @@ ASM_FUNCTION(initiate__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__11daCoach2D_cFv) {
+asm void daCoach2D_c::update() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/update__11daCoach2D_cFv.s"
 }
@@ -177,7 +227,7 @@ ASM_FUNCTION(update__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBrkAnime__11daCoach2D_cFb) {
+asm void daCoach2D_c::setBrkAnime(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/setBrkAnime__11daCoach2D_cFb.s"
 }
@@ -188,7 +238,7 @@ ASM_FUNCTION(setBrkAnime__11daCoach2D_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoach2D_create__FP11daCoach2D_c) {
+asm void daCoach2D_create(daCoach2D_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_create__FP11daCoach2D_c.s"
 }
@@ -199,7 +249,7 @@ ASM_FUNCTION(daCoach2D_create__FP11daCoach2D_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoach2D_destroy__FP11daCoach2D_c) {
+asm void daCoach2D_destroy(daCoach2D_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_destroy__FP11daCoach2D_c.s"
 }
@@ -210,7 +260,7 @@ ASM_FUNCTION(daCoach2D_destroy__FP11daCoach2D_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoach2D_execute__FP11daCoach2D_c) {
+asm void daCoach2D_execute(daCoach2D_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_execute__FP11daCoach2D_c.s"
 }
@@ -221,7 +271,7 @@ ASM_FUNCTION(daCoach2D_execute__FP11daCoach2D_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoach2D_draw__FP11daCoach2D_c) {
+asm void daCoach2D_draw(daCoach2D_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/daCoach2D_draw__FP11daCoach2D_c.s"
 }
@@ -229,21 +279,16 @@ ASM_FUNCTION(daCoach2D_draw__FP11daCoach2D_c) {
 
 
 /* 80657734-80657738 0004+00 .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12dDlst_base_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80657738-80657794 005C+00 .text      __dt__15daCoach2D_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daCoach2D_HIO_cFv) {
+asm daCoach2D_HIO_c::~daCoach2D_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/__dt__15daCoach2D_HIO_cFv.s"
 }
@@ -254,7 +299,7 @@ ASM_FUNCTION(__dt__15daCoach2D_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -265,7 +310,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q211daCoach2D_c6c_listFv) {
+asm daCoach2D_c::c_list::~daCoach2D_c::c_list() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/__dt__Q211daCoach2D_c6c_listFv.s"
 }
@@ -276,7 +321,7 @@ ASM_FUNCTION(__dt__Q211daCoach2D_c6c_listFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daCoach2D_cFv) {
+asm daCoach2D_c::~daCoach2D_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/__dt__11daCoach2D_cFv.s"
 }
@@ -287,7 +332,7 @@ ASM_FUNCTION(__dt__11daCoach2D_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_coach_2D_cpp) {
+extern "C" asm void __sinit_d_a_coach_2D_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/__sinit_d_a_coach_2D_cpp.s"
 }

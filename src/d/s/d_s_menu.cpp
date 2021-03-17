@@ -9,11 +9,13 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern void*g_profile_MENU_SCENE[10];
 
 // 
 // External References:
 // 
+
 
 SECTION_DATA extern void*g_fopScn_Method[6];
 SECTION_DATA extern void*g_fpcNd_Method[6];
@@ -22,7 +24,8 @@ SECTION_DATA extern void*g_fpcNd_Method[6];
 // Declarations:
 // 
 
-/* 803C3018-803C3040 0028+00 .data      g_profile_MENU_SCENE                                         */
+/* ############################################################################################## */
+/* 803C3018-803C3040 0028+00 rc=0 efc=0 .data      g_profile_MENU_SCENE                                         */
 void* g_profile_MENU_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,

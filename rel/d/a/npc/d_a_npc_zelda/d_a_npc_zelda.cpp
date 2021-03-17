@@ -6,102 +6,277 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+
+struct daNpc_Zelda_c {
+	~daNpc_Zelda_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void getType();
+	bool isDelete();
+	void reset();
+	void afterJntAnm(s32);
+	void ctrlBtk();
+	void checkChangeEvt();
+	void setParam();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void beforeMove();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void selectAction();
+	void wait(void*);
+	void talk(void*);
+	s32 getEyeballRMaterialNo();
+	s32 getEyeballLMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+	bool getEyeballMaterialNo();
+	bool evtEndProc();
+	void afterMoved();
+	bool chkXYItems();
+	void decTmr();
+	void drawOtherMdl();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	bool afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpc_Zelda_Param_c {
+	~daNpc_Zelda_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daNpc_Zelda_cFv();
-extern "C" extern void create__13daNpc_Zelda_cFv();
-extern "C" extern void CreateHeap__13daNpc_Zelda_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__13daNpc_Zelda_cFv();
-extern "C" extern void Execute__13daNpc_Zelda_cFv();
-extern "C" extern void Draw__13daNpc_Zelda_cFv();
-extern "C" extern void createHeapCallBack__13daNpc_Zelda_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpc_Zelda_cFP8J3DJointi();
-extern "C" extern void getType__13daNpc_Zelda_cFv();
-extern "C" extern void isDelete__13daNpc_Zelda_cFv();
-extern "C" extern void reset__13daNpc_Zelda_cFv();
-extern "C" extern void afterJntAnm__13daNpc_Zelda_cFi();
-extern "C" extern void ctrlBtk__13daNpc_Zelda_cFv();
-extern "C" extern void checkChangeEvt__13daNpc_Zelda_cFv();
-extern "C" extern void setParam__13daNpc_Zelda_cFv();
-extern "C" extern void setAfterTalkMotion__13daNpc_Zelda_cFv();
-extern "C" extern void srchActors__13daNpc_Zelda_cFv();
-extern "C" extern void evtTalk__13daNpc_Zelda_cFv();
-extern "C" extern void evtCutProc__13daNpc_Zelda_cFv();
-extern "C" extern void action__13daNpc_Zelda_cFv();
-extern "C" extern void beforeMove__13daNpc_Zelda_cFv();
-extern "C" extern void setAttnPos__13daNpc_Zelda_cFv();
-extern "C" extern void setCollision__13daNpc_Zelda_cFv();
-extern "C" extern void drawDbgInfo__13daNpc_Zelda_cFv();
-extern "C" extern void selectAction__13daNpc_Zelda_cFv();
-extern "C" extern void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
-extern "C" extern void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
-extern "C" extern void wait__13daNpc_Zelda_cFPv();
-extern "C" extern void talk__13daNpc_Zelda_cFPv();
-extern "C" extern void daNpc_Zelda_Create__FPv();
-extern "C" extern void daNpc_Zelda_Delete__FPv();
-extern "C" extern void daNpc_Zelda_Execute__FPv();
-extern "C" extern void daNpc_Zelda_Draw__FPv();
-extern "C" extern void daNpc_Zelda_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getFootLJointNo__8daNpcT_cFv();
-extern "C" extern void getFootRJointNo__8daNpcT_cFv();
-extern "C" extern void getEyeballMaterialNo__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void afterMoved__8daNpcT_cFv();
-extern "C" extern void chkXYItems__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawOtherMdl__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void afterSetMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void changeAnm__8daNpcT_cFPiPi();
-extern "C" extern void changeBck__8daNpcT_cFPiPi();
-extern "C" extern void changeBtp__8daNpcT_cFPiPi();
-extern "C" extern void changeBtk__8daNpcT_cFPiPi();
-extern "C" extern void __sinit_d_a_npc_zelda_cpp();
-extern "C" extern void __ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void getEyeballRMaterialNo__13daNpc_Zelda_cFv();
-extern "C" extern void getEyeballLMaterialNo__13daNpc_Zelda_cFv();
-extern "C" extern void getHeadJointNo__13daNpc_Zelda_cFv();
-extern "C" extern void getNeckJointNo__13daNpc_Zelda_cFv();
-extern "C" extern void getBackboneJointNo__13daNpc_Zelda_cFv();
-extern "C" extern void checkChangeJoint__13daNpc_Zelda_cFi();
-extern "C" extern void checkRemoveJoint__13daNpc_Zelda_cFi();
-extern "C" extern void __dt__19daNpc_Zelda_Param_cFv();
-extern "C" extern void func_80B77FA4();
-extern "C" extern void func_80B77FAC();
+extern "C" void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
+void daNpc_Zelda_Create(void*);
+void daNpc_Zelda_Delete(void*);
+void daNpc_Zelda_Execute(void*);
+void daNpc_Zelda_Draw(void*);
+bool daNpc_Zelda_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void __sinit_d_a_npc_zelda_cpp();
+extern "C" void __ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_80B77FA4();
+extern "C" void func_80B77FAC();
+
+extern "C" void __dt__13daNpc_Zelda_cFv();
+extern "C" void create__13daNpc_Zelda_cFv();
+extern "C" void CreateHeap__13daNpc_Zelda_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_Zelda_cFv();
+extern "C" void Execute__13daNpc_Zelda_cFv();
+extern "C" void Draw__13daNpc_Zelda_cFv();
+extern "C" void createHeapCallBack__13daNpc_Zelda_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_Zelda_cFP8J3DJointi();
+extern "C" void getType__13daNpc_Zelda_cFv();
+extern "C" bool isDelete__13daNpc_Zelda_cFv();
+extern "C" void reset__13daNpc_Zelda_cFv();
+extern "C" void afterJntAnm__13daNpc_Zelda_cFi();
+extern "C" void ctrlBtk__13daNpc_Zelda_cFv();
+extern "C" void checkChangeEvt__13daNpc_Zelda_cFv();
+extern "C" void setParam__13daNpc_Zelda_cFv();
+extern "C" void setAfterTalkMotion__13daNpc_Zelda_cFv();
+extern "C" void srchActors__13daNpc_Zelda_cFv();
+extern "C" void evtTalk__13daNpc_Zelda_cFv();
+extern "C" void evtCutProc__13daNpc_Zelda_cFv();
+extern "C" void action__13daNpc_Zelda_cFv();
+extern "C" void beforeMove__13daNpc_Zelda_cFv();
+extern "C" void setAttnPos__13daNpc_Zelda_cFv();
+extern "C" void setCollision__13daNpc_Zelda_cFv();
+extern "C" bool drawDbgInfo__13daNpc_Zelda_cFv();
+extern "C" void selectAction__13daNpc_Zelda_cFv();
+extern "C" void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i();
+extern "C" void wait__13daNpc_Zelda_cFPv();
+extern "C" void talk__13daNpc_Zelda_cFPv();
+extern "C" void daNpc_Zelda_Create__FPv();
+extern "C" void daNpc_Zelda_Delete__FPv();
+extern "C" void daNpc_Zelda_Execute__FPv();
+extern "C" void daNpc_Zelda_Draw__FPv();
+extern "C" bool daNpc_Zelda_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" bool getEyeballMaterialNo__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawOtherMdl__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void __sinit_d_a_npc_zelda_cpp();
+extern "C" void __ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" s32 getEyeballRMaterialNo__13daNpc_Zelda_cFv();
+extern "C" s32 getEyeballLMaterialNo__13daNpc_Zelda_cFv();
+extern "C" s32 getHeadJointNo__13daNpc_Zelda_cFv();
+extern "C" s32 getNeckJointNo__13daNpc_Zelda_cFv();
+extern "C" bool getBackboneJointNo__13daNpc_Zelda_cFv();
+extern "C" void checkChangeJoint__13daNpc_Zelda_cFi();
+extern "C" void checkRemoveJoint__13daNpc_Zelda_cFi();
+extern "C" void __dt__19daNpc_Zelda_Param_cFv();
+extern "C" void func_80B77FA4();
+extern "C" void func_80B77FAC();
 SECTION_RODATA extern const u8 m__19daNpc_Zelda_Param_c[140];
 SECTION_RODATA extern const u8 data_80B78054[8];
 SECTION_RODATA extern const u32 lit_4032;
@@ -167,8 +342,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -178,7 +356,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_Zelda_cFv) {
+asm daNpc_Zelda_c::~daNpc_Zelda_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__13daNpc_Zelda_cFv.s"
 }
@@ -189,7 +367,7 @@ ASM_FUNCTION(__dt__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/create__13daNpc_Zelda_cFv.s"
 }
@@ -200,7 +378,7 @@ ASM_FUNCTION(create__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/CreateHeap__13daNpc_Zelda_cFv.s"
 }
@@ -211,7 +389,7 @@ ASM_FUNCTION(CreateHeap__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -222,7 +400,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -233,7 +411,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__14J3DTevColorAnmFv.s"
 }
@@ -244,7 +422,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__14J3DTevColorAnmFv.s"
 }
@@ -255,7 +433,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__11J3DTexNoAnmFv.s"
 }
@@ -266,7 +444,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__11J3DTexNoAnmFv.s"
 }
@@ -277,7 +455,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -288,7 +466,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -299,7 +477,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__14J3DMatColorAnmFv.s"
 }
@@ -310,7 +488,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__14J3DMatColorAnmFv.s"
 }
@@ -321,7 +499,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/Delete__13daNpc_Zelda_cFv.s"
 }
@@ -332,7 +510,7 @@ ASM_FUNCTION(Delete__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/Execute__13daNpc_Zelda_cFv.s"
 }
@@ -343,7 +521,7 @@ ASM_FUNCTION(Execute__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/Draw__13daNpc_Zelda_cFv.s"
 }
@@ -354,7 +532,7 @@ ASM_FUNCTION(Draw__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpc_Zelda_cFP10fopAc_ac_c) {
+asm void daNpc_Zelda_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/createHeapCallBack__13daNpc_Zelda_cFP10fopAc_ac_c.s"
 }
@@ -365,7 +543,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpc_Zelda_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpc_Zelda_cFP8J3DJointi) {
+asm void daNpc_Zelda_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/ctrlJointCallBack__13daNpc_Zelda_cFP8J3DJointi.s"
 }
@@ -376,7 +554,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpc_Zelda_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getType__13daNpc_Zelda_cFv.s"
 }
@@ -384,21 +562,16 @@ ASM_FUNCTION(getType__13daNpc_Zelda_cFv) {
 
 
 /* 80B75B28-80B75B30 0008+00 .text      isDelete__13daNpc_Zelda_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/isDelete__13daNpc_Zelda_cFv.s"
+bool daNpc_Zelda_c::isDelete() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B75B30-80B75C9C 016C+00 .text      reset__13daNpc_Zelda_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/reset__13daNpc_Zelda_cFv.s"
 }
@@ -409,7 +582,7 @@ ASM_FUNCTION(reset__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__13daNpc_Zelda_cFi) {
+asm void daNpc_Zelda_c::afterJntAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/afterJntAnm__13daNpc_Zelda_cFi.s"
 }
@@ -420,7 +593,7 @@ ASM_FUNCTION(afterJntAnm__13daNpc_Zelda_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::ctrlBtk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/ctrlBtk__13daNpc_Zelda_cFv.s"
 }
@@ -431,7 +604,7 @@ ASM_FUNCTION(ctrlBtk__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::checkChangeEvt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/checkChangeEvt__13daNpc_Zelda_cFv.s"
 }
@@ -442,7 +615,7 @@ ASM_FUNCTION(checkChangeEvt__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setParam__13daNpc_Zelda_cFv.s"
 }
@@ -453,7 +626,7 @@ ASM_FUNCTION(setParam__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setAfterTalkMotion__13daNpc_Zelda_cFv.s"
 }
@@ -461,21 +634,16 @@ ASM_FUNCTION(setAfterTalkMotion__13daNpc_Zelda_cFv) {
 
 
 /* 80B76074-80B76078 0004+00 .text      srchActors__13daNpc_Zelda_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(srchActors__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/srchActors__13daNpc_Zelda_cFv.s"
+void daNpc_Zelda_c::srchActors() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B76078-80B76118 00A0+00 .text      evtTalk__13daNpc_Zelda_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/evtTalk__13daNpc_Zelda_cFv.s"
 }
@@ -486,7 +654,7 @@ ASM_FUNCTION(evtTalk__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/evtCutProc__13daNpc_Zelda_cFv.s"
 }
@@ -497,7 +665,7 @@ ASM_FUNCTION(evtCutProc__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/action__13daNpc_Zelda_cFv.s"
 }
@@ -508,7 +676,7 @@ ASM_FUNCTION(action__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/beforeMove__13daNpc_Zelda_cFv.s"
 }
@@ -519,7 +687,7 @@ ASM_FUNCTION(beforeMove__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setAttnPos__13daNpc_Zelda_cFv.s"
 }
@@ -530,7 +698,7 @@ ASM_FUNCTION(setAttnPos__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setCollision__13daNpc_Zelda_cFv.s"
 }
@@ -538,21 +706,16 @@ ASM_FUNCTION(setCollision__13daNpc_Zelda_cFv) {
 
 
 /* 80B76774-80B7677C 0008+00 .text      drawDbgInfo__13daNpc_Zelda_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/drawDbgInfo__13daNpc_Zelda_cFv.s"
+bool daNpc_Zelda_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B7677C-80B767C4 0048+00 .text      selectAction__13daNpc_Zelda_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__13daNpc_Zelda_cFv) {
+asm void daNpc_Zelda_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/selectAction__13daNpc_Zelda_cFv.s"
 }
@@ -563,7 +726,7 @@ ASM_FUNCTION(selectAction__13daNpc_Zelda_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i) {
+extern "C" asm void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i.s"
 }
@@ -574,7 +737,7 @@ ASM_FUNCTION(chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i) {
+extern "C" asm void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i.s"
 }
@@ -585,7 +748,7 @@ ASM_FUNCTION(setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_Zelda_cFPv) {
+asm void daNpc_Zelda_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/wait__13daNpc_Zelda_cFPv.s"
 }
@@ -596,7 +759,7 @@ ASM_FUNCTION(wait__13daNpc_Zelda_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_Zelda_cFPv) {
+asm void daNpc_Zelda_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/talk__13daNpc_Zelda_cFPv.s"
 }
@@ -607,7 +770,7 @@ ASM_FUNCTION(talk__13daNpc_Zelda_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Zelda_Create__FPv) {
+asm void daNpc_Zelda_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/daNpc_Zelda_Create__FPv.s"
 }
@@ -618,7 +781,7 @@ ASM_FUNCTION(daNpc_Zelda_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Zelda_Delete__FPv) {
+asm void daNpc_Zelda_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/daNpc_Zelda_Delete__FPv.s"
 }
@@ -629,7 +792,7 @@ ASM_FUNCTION(daNpc_Zelda_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Zelda_Execute__FPv) {
+asm void daNpc_Zelda_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/daNpc_Zelda_Execute__FPv.s"
 }
@@ -640,7 +803,7 @@ ASM_FUNCTION(daNpc_Zelda_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Zelda_Draw__FPv) {
+asm void daNpc_Zelda_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/daNpc_Zelda_Draw__FPv.s"
 }
@@ -648,21 +811,16 @@ ASM_FUNCTION(daNpc_Zelda_Draw__FPv) {
 
 
 /* 80B76DE0-80B76DE8 0008+00 .text      daNpc_Zelda_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Zelda_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/daNpc_Zelda_IsDelete__FPv.s"
+bool daNpc_Zelda_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B76DE8-80B76E18 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -673,7 +831,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__10cCcD_GSttsFv.s"
 }
@@ -684,7 +842,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__8daNpcT_cFv.s"
 }
@@ -695,7 +853,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__4cXyzFv.s"
 }
@@ -706,7 +864,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__5csXyzFv.s"
 }
@@ -717,7 +875,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/func_80B77260.s"
 }
@@ -725,21 +883,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 80B77664-80B77668 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77668-80B77764 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -747,21 +900,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 80B77764-80B77768 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77768-80B777B0 0048+00 .text      __dt__18daNpcT_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -772,7 +920,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -783,7 +931,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__12dBgS_AcchCirFv.s"
 }
@@ -794,7 +942,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__10dCcD_GSttsFv.s"
 }
@@ -805,7 +953,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -816,7 +964,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__12J3DFrameCtrlFv.s"
 }
@@ -827,7 +975,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -838,7 +986,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -846,87 +994,52 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 80B77CA0-80B77CA4 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77CA4-80B77CAC 0008+00 .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80B77CAC-80B77CB4 0008+00 .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80B77CB4-80B77CBC 0008+00 .text      getEyeballMaterialNo__8daNpcT_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getEyeballMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B77CBC-80B77CC4 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B77CC4-80B77CC8 0004+00 .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77CC8-80B77CD0 0008+00 .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B77CD0-80B77CE8 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/decTmr__8daNpcT_cFv.s"
 }
@@ -934,54 +1047,34 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 80B77CE8-80B77CEC 0004+00 .text      drawOtherMdl__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/drawOtherMdl__8daNpcT_cFv.s"
+void daNpcT_c::drawOtherMdl() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77CEC-80B77CF0 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77CF0-80B77CF8 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B77CF8-80B77D00 0008+00 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B77D00-80B77D30 0030+00 .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -992,7 +1085,7 @@ ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1000,54 +1093,34 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 
 
 /* 80B77D60-80B77D64 0004+00 .text      changeAnm__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/changeAnm__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeAnm(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77D64-80B77D68 0004+00 .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBck__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77D68-80B77D6C 0004+00 .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77D6C-80B77D70 0004+00 .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B77D70-80B77DD8 0068+00 .text      __sinit_d_a_npc_zelda_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_zelda_cpp) {
+extern "C" asm void __sinit_d_a_npc_zelda_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__sinit_d_a_npc_zelda_cpp.s"
 }
@@ -1058,7 +1131,7 @@ ASM_FUNCTION(__sinit_d_a_npc_zelda_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/func_80B77DD8.s"
 }
@@ -1069,7 +1142,7 @@ ASM_FUNCTION(__ct__13daNpc_Zelda_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_moti
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__8cM3dGCylFv.s"
 }
@@ -1080,7 +1153,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__8cM3dGAabFv.s"
 }
@@ -1088,65 +1161,40 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80B77F14-80B77F1C 0008+00 .text      getEyeballRMaterialNo__13daNpc_Zelda_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getEyeballRMaterialNo__13daNpc_Zelda_cFv.s"
+s32 daNpc_Zelda_c::getEyeballRMaterialNo() {
+	return 5;
 }
-#pragma pop
 
 
 /* 80B77F1C-80B77F24 0008+00 .text      getEyeballLMaterialNo__13daNpc_Zelda_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getEyeballLMaterialNo__13daNpc_Zelda_cFv.s"
+s32 daNpc_Zelda_c::getEyeballLMaterialNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80B77F24-80B77F2C 0008+00 .text      getHeadJointNo__13daNpc_Zelda_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getHeadJointNo__13daNpc_Zelda_cFv.s"
+s32 daNpc_Zelda_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80B77F2C-80B77F34 0008+00 .text      getNeckJointNo__13daNpc_Zelda_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getNeckJointNo__13daNpc_Zelda_cFv.s"
+s32 daNpc_Zelda_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 80B77F34-80B77F3C 0008+00 .text      getBackboneJointNo__13daNpc_Zelda_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__13daNpc_Zelda_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/getBackboneJointNo__13daNpc_Zelda_cFv.s"
+bool daNpc_Zelda_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B77F3C-80B77F4C 0010+00 .text      checkChangeJoint__13daNpc_Zelda_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__13daNpc_Zelda_cFi) {
+asm void daNpc_Zelda_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/checkChangeJoint__13daNpc_Zelda_cFi.s"
 }
@@ -1157,7 +1205,7 @@ ASM_FUNCTION(checkChangeJoint__13daNpc_Zelda_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__13daNpc_Zelda_cFi) {
+asm void daNpc_Zelda_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/checkRemoveJoint__13daNpc_Zelda_cFi.s"
 }
@@ -1168,7 +1216,7 @@ ASM_FUNCTION(checkRemoveJoint__13daNpc_Zelda_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_Zelda_Param_cFv) {
+asm daNpc_Zelda_Param_c::~daNpc_Zelda_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/__dt__19daNpc_Zelda_Param_cFv.s"
 }
@@ -1179,7 +1227,7 @@ ASM_FUNCTION(__dt__19daNpc_Zelda_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B77FA4) {
+extern "C" asm void func_80B77FA4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/func_80B77FA4.s"
 }
@@ -1190,7 +1238,7 @@ ASM_FUNCTION(func_80B77FA4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B77FAC) {
+extern "C" asm void func_80B77FAC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/func_80B77FAC.s"
 }

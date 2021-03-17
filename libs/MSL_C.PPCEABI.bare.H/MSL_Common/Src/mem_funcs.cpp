@@ -9,62 +9,67 @@
 // Forward References:
 // 
 
-extern "C" extern void __copy_longs_rev_unaligned();
-extern "C" extern void __copy_longs_unaligned();
-extern "C" extern void __copy_longs_rev_aligned();
-extern "C" extern void __copy_longs_aligned();
+extern "C" void __copy_longs_rev_unaligned();
+extern "C" void __copy_longs_unaligned();
+extern "C" void __copy_longs_rev_aligned();
+extern "C" void __copy_longs_aligned();
+
+extern "C" void __copy_longs_rev_unaligned();
+extern "C" void __copy_longs_unaligned();
+extern "C" void __copy_longs_rev_aligned();
+extern "C" void __copy_longs_aligned();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 803661FC-803662A8 00AC+00 .text      __copy_longs_rev_unaligned                                   */
+/* 803661FC-803662A8 00AC+00 rc=1 efc=1 .text      __copy_longs_rev_unaligned                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__copy_longs_rev_unaligned) {
+extern "C" asm void __copy_longs_rev_unaligned() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem_funcs/__copy_longs_rev_unaligned.s"
 }
 #pragma pop
 
 
-/* 803662A8-80366368 00C0+00 .text      __copy_longs_unaligned                                       */
+/* 803662A8-80366368 00C0+00 rc=1 efc=1 .text      __copy_longs_unaligned                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__copy_longs_unaligned) {
+extern "C" asm void __copy_longs_unaligned() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem_funcs/__copy_longs_unaligned.s"
 }
 #pragma pop
 
 
-/* 80366368-80366410 00A8+00 .text      __copy_longs_rev_aligned                                     */
+/* 80366368-80366410 00A8+00 rc=1 efc=1 .text      __copy_longs_rev_aligned                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__copy_longs_rev_aligned) {
+extern "C" asm void __copy_longs_rev_aligned() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem_funcs/__copy_longs_rev_aligned.s"
 }
 #pragma pop
 
 
-/* 80366410-803664CC 00BC+00 .text      __copy_longs_aligned                                         */
+/* 80366410-803664CC 00BC+00 rc=1 efc=1 .text      __copy_longs_aligned                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__copy_longs_aligned) {
+extern "C" asm void __copy_longs_aligned() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem_funcs/__copy_longs_aligned.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

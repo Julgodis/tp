@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagSmkEmt_c;
+
+struct daTagSmkEmt_c {
+	daTagSmkEmt_c();
+	~daTagSmkEmt_c();
+	void create();
+	void Delete();
+	bool draw();
+	bool execute();
+	void createSmkEmt();
+	void deleteSmkEmt();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daTagSmkEmt_cFv();
-extern "C" extern void __dt__13daTagSmkEmt_cFv();
-extern "C" extern void create__13daTagSmkEmt_cFv();
-extern "C" extern void Delete__13daTagSmkEmt_cFv();
-extern "C" extern void draw__13daTagSmkEmt_cFv();
-extern "C" extern void execute__13daTagSmkEmt_cFv();
-extern "C" extern void createSmkEmt__13daTagSmkEmt_cFv();
-extern "C" extern void deleteSmkEmt__13daTagSmkEmt_cFv();
-extern "C" extern void daTagSmkEmt_create__FP13daTagSmkEmt_c();
-extern "C" extern void daTagSmkEmt_Delete__FP13daTagSmkEmt_c();
-extern "C" extern void daTagSmkEmt_execute__FP13daTagSmkEmt_c();
-extern "C" extern void daTagSmkEmt_draw__FP13daTagSmkEmt_c();
+void daTagSmkEmt_create(daTagSmkEmt_c*);
+void daTagSmkEmt_Delete(daTagSmkEmt_c*);
+void daTagSmkEmt_execute(daTagSmkEmt_c*);
+void daTagSmkEmt_draw(daTagSmkEmt_c*);
+
+extern "C" void __ct__13daTagSmkEmt_cFv();
+extern "C" void __dt__13daTagSmkEmt_cFv();
+extern "C" void create__13daTagSmkEmt_cFv();
+extern "C" void Delete__13daTagSmkEmt_cFv();
+extern "C" bool draw__13daTagSmkEmt_cFv();
+extern "C" bool execute__13daTagSmkEmt_cFv();
+extern "C" void createSmkEmt__13daTagSmkEmt_cFv();
+extern "C" void deleteSmkEmt__13daTagSmkEmt_cFv();
+extern "C" void daTagSmkEmt_create__FP13daTagSmkEmt_c();
+extern "C" void daTagSmkEmt_Delete__FP13daTagSmkEmt_c();
+extern "C" void daTagSmkEmt_execute__FP13daTagSmkEmt_c();
+extern "C" void daTagSmkEmt_draw__FP13daTagSmkEmt_c();
 SECTION_RODATA extern const u8 data_80D61600[6 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_3677;
 SECTION_DATA extern u8 daTagSmkEmt_METHODS[32];
@@ -31,7 +53,9 @@ SECTION_DATA extern void*const __vt__13daTagSmkEmt_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +65,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daTagSmkEmt_cFv) {
+asm daTagSmkEmt_c::daTagSmkEmt_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/__ct__13daTagSmkEmt_cFv.s"
 }
@@ -52,7 +76,7 @@ ASM_FUNCTION(__ct__13daTagSmkEmt_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagSmkEmt_cFv) {
+asm daTagSmkEmt_c::~daTagSmkEmt_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/__dt__13daTagSmkEmt_cFv.s"
 }
@@ -63,7 +87,7 @@ ASM_FUNCTION(__dt__13daTagSmkEmt_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagSmkEmt_cFv) {
+asm void daTagSmkEmt_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/create__13daTagSmkEmt_cFv.s"
 }
@@ -74,7 +98,7 @@ ASM_FUNCTION(create__13daTagSmkEmt_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daTagSmkEmt_cFv) {
+asm void daTagSmkEmt_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/Delete__13daTagSmkEmt_cFv.s"
 }
@@ -82,32 +106,22 @@ ASM_FUNCTION(Delete__13daTagSmkEmt_cFv) {
 
 
 /* 80D61400-80D61408 0008+00 .text      draw__13daTagSmkEmt_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__13daTagSmkEmt_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/draw__13daTagSmkEmt_cFv.s"
+bool daTagSmkEmt_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61408-80D61410 0008+00 .text      execute__13daTagSmkEmt_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagSmkEmt_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/execute__13daTagSmkEmt_cFv.s"
+bool daTagSmkEmt_c::execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61410-80D61500 00F0+00 .text      createSmkEmt__13daTagSmkEmt_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSmkEmt__13daTagSmkEmt_cFv) {
+asm void daTagSmkEmt_c::createSmkEmt() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/createSmkEmt__13daTagSmkEmt_cFv.s"
 }
@@ -118,7 +132,7 @@ ASM_FUNCTION(createSmkEmt__13daTagSmkEmt_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteSmkEmt__13daTagSmkEmt_cFv) {
+asm void daTagSmkEmt_c::deleteSmkEmt() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/deleteSmkEmt__13daTagSmkEmt_cFv.s"
 }
@@ -129,7 +143,7 @@ ASM_FUNCTION(deleteSmkEmt__13daTagSmkEmt_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSmkEmt_create__FP13daTagSmkEmt_c) {
+asm void daTagSmkEmt_create(daTagSmkEmt_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/daTagSmkEmt_create__FP13daTagSmkEmt_c.s"
 }
@@ -140,7 +154,7 @@ ASM_FUNCTION(daTagSmkEmt_create__FP13daTagSmkEmt_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSmkEmt_Delete__FP13daTagSmkEmt_c) {
+asm void daTagSmkEmt_Delete(daTagSmkEmt_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/daTagSmkEmt_Delete__FP13daTagSmkEmt_c.s"
 }
@@ -151,7 +165,7 @@ ASM_FUNCTION(daTagSmkEmt_Delete__FP13daTagSmkEmt_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSmkEmt_execute__FP13daTagSmkEmt_c) {
+asm void daTagSmkEmt_execute(daTagSmkEmt_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/daTagSmkEmt_execute__FP13daTagSmkEmt_c.s"
 }
@@ -162,7 +176,7 @@ ASM_FUNCTION(daTagSmkEmt_execute__FP13daTagSmkEmt_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSmkEmt_draw__FP13daTagSmkEmt_c) {
+asm void daTagSmkEmt_draw(daTagSmkEmt_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/daTagSmkEmt_draw__FP13daTagSmkEmt_c.s"
 }

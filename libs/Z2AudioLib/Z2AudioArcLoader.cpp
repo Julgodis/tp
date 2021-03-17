@@ -6,40 +6,144 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Z2AudioArcLoader (Z2AudioArcLoader) False/False
+// build JAUSection (JAUSection) False/False
+/* top-level dependencies (begin JAUSection) */
+/* top-level dependencies (end JAUSection) */
+struct JAUSection {
+};
+
+/* top-level dependencies (begin Z2AudioArcLoader) */
+// outer dependency: JAUSection
+/* top-level dependencies (end Z2AudioArcLoader) */
+struct Z2AudioArcLoader {
+	// JAUSection
+	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
+	/* 802A9A70 */ void readCommandMore(u32);
+	/* 802A9AC8 */ void readBFCA(void const*);
+	/* 802A9B54 */ void readBSTN(void const*, u32);
+	/* 802A9B58 */ ~Z2AudioArcLoader();
+};
+
+// build JAUSection (JAUSection) True/True
+// build JAUAudioArcInterpreter (JAUAudioArcInterpreter) False/False
+/* top-level dependencies (begin JAUAudioArcInterpreter) */
+/* top-level dependencies (end JAUAudioArcInterpreter) */
+struct JAUAudioArcInterpreter {
+	/* 802A4260 */ ~JAUAudioArcInterpreter();
+};
+
+// build JAUAudioArcLoader (JAUAudioArcLoader) False/False
+// build JAUSection (JAUSection) True/True
+/* top-level dependencies (begin JAUAudioArcLoader) */
+// outer dependency: JAUSection
+/* top-level dependencies (end JAUAudioArcLoader) */
+struct JAUAudioArcLoader {
+	// JAUSection
+	/* 802A4740 */ JAUAudioArcLoader(JAUSection*);
+	/* 802A47AC */ void readWS(u32, void const*, u32);
+	/* 802A4804 */ void readBNK(u32, void const*);
+	/* 802A4834 */ void readBSC(void const*, u32);
+	/* 802A4858 */ void readBST(void const*, u32);
+	/* 802A48A8 */ void readBMS(u32, void const*, u32);
+	/* 802A48D4 */ void readBMS_fromArchive(u32);
+	/* 802A4900 */ void newVoiceBank(u32, u32);
+	/* 802A4930 */ void newDynamicSeqBlock(u32);
+	/* 802A4968 */ void readBSFT(void const*);
+	/* 802A4990 */ void beginBNKList(u32, u32);
+	/* 802A49B4 */ void endBNKList();
+	/* 802A49D8 */ void readMaxSeCategory(s32, s32, s32);
+};
+
+// build JAUSectionHeap (JAUSectionHeap) False/False
+/* top-level dependencies (begin JAUSectionHeap) */
+/* top-level dependencies (end JAUSectionHeap) */
+struct JAUSectionHeap {
+	/* 802A6094 */ void getOpenSection();
+};
+
+// build Z2FxLineMgr (Z2FxLineMgr) False/False
+// build JKRArchive (JKRArchive) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JKRArchive (JKRArchive) True/False
+struct JKRArchive;
+/* top-level dependencies (begin JKRArchive) */
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountDirection
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	// JKRHeap
+	// JKRArchive::EMountDirection
+	// build EMountDirection (JKRArchive::EMountDirection) False/False
+	/* dependencies (begin JKRArchive::EMountDirection) */
+	/* dependencies (end JKRArchive::EMountDirection) */
+	struct EMountDirection {
+	};
+
+	/* 802D5840 */ void mount(void*, JKRHeap*, JKRArchive::EMountDirection);
+};
+
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin Z2FxLineMgr) */
+// outer dependency: JKRArchive
+// outer dependency: JKRHeap
+/* top-level dependencies (end Z2FxLineMgr) */
+struct Z2FxLineMgr {
+	// JKRArchive
+	// JKRHeap
+	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build JKRHeap (JKRHeap) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
-extern "C" extern void readCommandMore__16Z2AudioArcLoaderFUl();
-extern "C" extern void readBFCA__16Z2AudioArcLoaderFPCv();
-extern "C" extern void readBSTN__16Z2AudioArcLoaderFPCvUl();
-extern "C" extern void __dt__16Z2AudioArcLoaderFv();
+
+extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection();
+extern "C" void readCommandMore__16Z2AudioArcLoaderFUl();
+extern "C" void readBFCA__16Z2AudioArcLoaderFPCv();
+extern "C" void readBSTN__16Z2AudioArcLoaderFPCvUl();
+extern "C" void __dt__16Z2AudioArcLoaderFv();
 SECTION_DATA extern void*const __vt__16Z2AudioArcLoader[18];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__22JAUAudioArcInterpreterFv();
-extern "C" extern void __ct__17JAUAudioArcLoaderFP10JAUSection();
-extern "C" extern void readWS__17JAUAudioArcLoaderFUlPCvUl();
-extern "C" extern void readBNK__17JAUAudioArcLoaderFUlPCv();
-extern "C" extern void readBSC__17JAUAudioArcLoaderFPCvUl();
-extern "C" extern void readBST__17JAUAudioArcLoaderFPCvUl();
-extern "C" extern void readBMS__17JAUAudioArcLoaderFUlPCvUl();
-extern "C" extern void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
-extern "C" extern void newVoiceBank__17JAUAudioArcLoaderFUlUl();
-extern "C" extern void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
-extern "C" extern void readBSFT__17JAUAudioArcLoaderFPCv();
-extern "C" extern void beginBNKList__17JAUAudioArcLoaderFUlUl();
-extern "C" extern void endBNKList__17JAUAudioArcLoaderFv();
-extern "C" extern void readMaxSeCategory__17JAUAudioArcLoaderFiii();
-extern "C" extern void getOpenSection__14JAUSectionHeapFv();
-extern "C" extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern "C" extern void __dl__FPv();
-extern "C" extern void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void __dt__22JAUAudioArcInterpreterFv();
+extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection();
+extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv();
+extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBST__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
+extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl();
+extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
+extern "C" void readBSFT__17JAUAudioArcLoaderFPCv();
+extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl();
+extern "C" void endBNKList__17JAUAudioArcLoaderFv();
+extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii();
+extern "C" void getOpenSection__14JAUSectionHeapFv();
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" void __dl__FPv();
+extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_DATA extern void*const __vt__17JAUAudioArcLoader[18];
 SECTION_SBSS extern u8 data_80450B40[4];
 SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
@@ -50,7 +154,7 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803C9CD0-803C9D18 0044+04 .data      __vt__16Z2AudioArcLoader                                     */
+/* 803C9CD0-803C9D18 0044+04 rc=3 efc=1 .data      __vt__16Z2AudioArcLoader                                     */
 void* const __vt__16Z2AudioArcLoader[18] = {
 	NULL, /* RTTI */
 	NULL,
@@ -73,59 +177,53 @@ void* const __vt__16Z2AudioArcLoader[18] = {
 	NULL,
 };
 
-/* 802A9A34-802A9A70 003C+00 .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
+/* 802A9A34-802A9A70 003C+00 rc=1 efc=1 .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16Z2AudioArcLoaderFP10JAUSection) {
+asm Z2AudioArcLoader::Z2AudioArcLoader(JAUSection* field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/__ct__16Z2AudioArcLoaderFP10JAUSection.s"
 }
 #pragma pop
 
 
-/* 802A9A70-802A9AC8 0058+00 .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
+/* 802A9A70-802A9AC8 0058+00 rc=1 efc=0 .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readCommandMore__16Z2AudioArcLoaderFUl) {
+asm void Z2AudioArcLoader::readCommandMore(u32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/readCommandMore__16Z2AudioArcLoaderFUl.s"
 }
 #pragma pop
 
 
-/* 802A9AC8-802A9B54 008C+00 .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
+/* 802A9AC8-802A9B54 008C+00 rc=1 efc=0 .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readBFCA__16Z2AudioArcLoaderFPCv) {
+asm void Z2AudioArcLoader::readBFCA(void const* field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/readBFCA__16Z2AudioArcLoaderFPCv.s"
 }
 #pragma pop
 
 
-/* 802A9B54-802A9B58 0004+00 .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(readBSTN__16Z2AudioArcLoaderFPCvUl) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2AudioArcLoader/readBSTN__16Z2AudioArcLoaderFPCvUl.s"
+/* 802A9B54-802A9B58 0004+00 rc=1 efc=0 .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
+void Z2AudioArcLoader::readBSTN(void const* field_0, u32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802A9B58-802A9BC8 0070+00 .text      __dt__16Z2AudioArcLoaderFv                                   */
+/* 802A9B58-802A9BC8 0070+00 rc=1 efc=0 .text      __dt__16Z2AudioArcLoaderFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16Z2AudioArcLoaderFv) {
+asm Z2AudioArcLoader::~Z2AudioArcLoader() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioArcLoader/__dt__16Z2AudioArcLoaderFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

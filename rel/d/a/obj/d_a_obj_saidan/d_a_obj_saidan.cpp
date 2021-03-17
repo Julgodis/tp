@@ -6,30 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSaidan_c;
+struct fopAc_ac_c;
+
+struct daSaidan_HIO_c {
+	daSaidan_HIO_c();
+	~daSaidan_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daSaidan_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveProc();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMove();
+	void modeMove();
+	void init_modeMoveEnd();
+	void modeMoveEnd();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daSaidan_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daSaidan_cFv();
-extern "C" extern void CreateHeap__10daSaidan_cFv();
-extern "C" extern void create__10daSaidan_cFv();
-extern "C" extern void Execute__10daSaidan_cFPPA3_A4_f();
-extern "C" extern void moveProc__10daSaidan_cFv();
-extern "C" extern void init_modeWait__10daSaidan_cFv();
-extern "C" extern void modeWait__10daSaidan_cFv();
-extern "C" extern void init_modeMove__10daSaidan_cFv();
-extern "C" extern void modeMove__10daSaidan_cFv();
-extern "C" extern void init_modeMoveEnd__10daSaidan_cFv();
-extern "C" extern void modeMoveEnd__10daSaidan_cFv();
-extern "C" extern void Draw__10daSaidan_cFv();
-extern "C" extern void Delete__10daSaidan_cFv();
-extern "C" extern void daSaidan_Draw__FP10daSaidan_c();
-extern "C" extern void daSaidan_Execute__FP10daSaidan_c();
-extern "C" extern void daSaidan_Delete__FP10daSaidan_c();
-extern "C" extern void daSaidan_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daSaidan_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_saidan_cpp();
+extern "C" void Execute__10daSaidan_cFPPA3_A4_f();
+void daSaidan_Draw(daSaidan_c*);
+void daSaidan_Execute(daSaidan_c*);
+void daSaidan_Delete(daSaidan_c*);
+void daSaidan_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_saidan_cpp();
+
+extern "C" void __ct__14daSaidan_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daSaidan_cFv();
+extern "C" void CreateHeap__10daSaidan_cFv();
+extern "C" void create__10daSaidan_cFv();
+extern "C" void Execute__10daSaidan_cFPPA3_A4_f();
+extern "C" void moveProc__10daSaidan_cFv();
+extern "C" void init_modeWait__10daSaidan_cFv();
+extern "C" void modeWait__10daSaidan_cFv();
+extern "C" void init_modeMove__10daSaidan_cFv();
+extern "C" void modeMove__10daSaidan_cFv();
+extern "C" void init_modeMoveEnd__10daSaidan_cFv();
+extern "C" void modeMoveEnd__10daSaidan_cFv();
+extern "C" void Draw__10daSaidan_cFv();
+extern "C" void Delete__10daSaidan_cFv();
+extern "C" void daSaidan_Draw__FP10daSaidan_c();
+extern "C" void daSaidan_Execute__FP10daSaidan_c();
+extern "C" void daSaidan_Delete__FP10daSaidan_c();
+extern "C" void daSaidan_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daSaidan_HIO_cFv();
+extern "C" void __sinit_d_a_obj_saidan_cpp();
 SECTION_RODATA extern const u32 lit_3625;
 SECTION_RODATA extern const u32 lit_3626;
 SECTION_RODATA extern const u32 lit_3758;
@@ -58,8 +99,11 @@ SECTION_BSS extern u8 data_80CC4668[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -69,7 +113,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daSaidan_HIO_cFv) {
+asm daSaidan_HIO_c::daSaidan_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/__ct__14daSaidan_HIO_cFv.s"
 }
@@ -80,7 +124,7 @@ ASM_FUNCTION(__ct__14daSaidan_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -91,7 +135,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daSaidan_cFv) {
+asm void daSaidan_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/setBaseMtx__10daSaidan_cFv.s"
 }
@@ -102,7 +146,7 @@ ASM_FUNCTION(setBaseMtx__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daSaidan_cFv) {
+asm void daSaidan_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/CreateHeap__10daSaidan_cFv.s"
 }
@@ -113,7 +157,7 @@ ASM_FUNCTION(CreateHeap__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daSaidan_cFv) {
+asm void daSaidan_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/create__10daSaidan_cFv.s"
 }
@@ -124,7 +168,7 @@ ASM_FUNCTION(create__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daSaidan_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daSaidan_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/Execute__10daSaidan_cFPPA3_A4_f.s"
 }
@@ -135,7 +179,7 @@ ASM_FUNCTION(Execute__10daSaidan_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveProc__10daSaidan_cFv) {
+asm void daSaidan_c::moveProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/moveProc__10daSaidan_cFv.s"
 }
@@ -146,7 +190,7 @@ ASM_FUNCTION(moveProc__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daSaidan_cFv) {
+asm void daSaidan_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/init_modeWait__10daSaidan_cFv.s"
 }
@@ -157,7 +201,7 @@ ASM_FUNCTION(init_modeWait__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daSaidan_cFv) {
+asm void daSaidan_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/modeWait__10daSaidan_cFv.s"
 }
@@ -168,7 +212,7 @@ ASM_FUNCTION(modeWait__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__10daSaidan_cFv) {
+asm void daSaidan_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/init_modeMove__10daSaidan_cFv.s"
 }
@@ -179,7 +223,7 @@ ASM_FUNCTION(init_modeMove__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__10daSaidan_cFv) {
+asm void daSaidan_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/modeMove__10daSaidan_cFv.s"
 }
@@ -190,7 +234,7 @@ ASM_FUNCTION(modeMove__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveEnd__10daSaidan_cFv) {
+asm void daSaidan_c::init_modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/init_modeMoveEnd__10daSaidan_cFv.s"
 }
@@ -198,21 +242,16 @@ ASM_FUNCTION(init_modeMoveEnd__10daSaidan_cFv) {
 
 
 /* 80CC4314-80CC4318 0004+00 .text      modeMoveEnd__10daSaidan_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeMoveEnd__10daSaidan_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/modeMoveEnd__10daSaidan_cFv.s"
+void daSaidan_c::modeMoveEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC4318-80CC43BC 00A4+00 .text      Draw__10daSaidan_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daSaidan_cFv) {
+asm void daSaidan_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/Draw__10daSaidan_cFv.s"
 }
@@ -223,7 +262,7 @@ ASM_FUNCTION(Draw__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daSaidan_cFv) {
+asm void daSaidan_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/Delete__10daSaidan_cFv.s"
 }
@@ -234,7 +273,7 @@ ASM_FUNCTION(Delete__10daSaidan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSaidan_Draw__FP10daSaidan_c) {
+asm void daSaidan_Draw(daSaidan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/daSaidan_Draw__FP10daSaidan_c.s"
 }
@@ -245,7 +284,7 @@ ASM_FUNCTION(daSaidan_Draw__FP10daSaidan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSaidan_Execute__FP10daSaidan_c) {
+asm void daSaidan_Execute(daSaidan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/daSaidan_Execute__FP10daSaidan_c.s"
 }
@@ -256,7 +295,7 @@ ASM_FUNCTION(daSaidan_Execute__FP10daSaidan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSaidan_Delete__FP10daSaidan_c) {
+asm void daSaidan_Delete(daSaidan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/daSaidan_Delete__FP10daSaidan_c.s"
 }
@@ -267,7 +306,7 @@ ASM_FUNCTION(daSaidan_Delete__FP10daSaidan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSaidan_Create__FP10fopAc_ac_c) {
+asm void daSaidan_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/daSaidan_Create__FP10fopAc_ac_c.s"
 }
@@ -278,7 +317,7 @@ ASM_FUNCTION(daSaidan_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daSaidan_HIO_cFv) {
+asm daSaidan_HIO_c::~daSaidan_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/__dt__14daSaidan_HIO_cFv.s"
 }
@@ -289,7 +328,7 @@ ASM_FUNCTION(__dt__14daSaidan_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_saidan_cpp) {
+extern "C" asm void __sinit_d_a_obj_saidan_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/__sinit_d_a_obj_saidan_cpp.s"
 }

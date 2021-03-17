@@ -6,20 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSwc00_c;
+struct fopAc_ac_c;
+
+struct daSwc00_c {
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void hitCheck__FP9daSwc00_c();
-extern "C" extern void daSwc00_Execute__FP9daSwc00_c();
-extern "C" extern void execute__9daSwc00_cFv();
-extern "C" extern void event_proc_call__9daSwc00_cFv();
-extern "C" extern void actionWait__9daSwc00_cFv();
-extern "C" extern void actionOrderEvent__9daSwc00_cFv();
-extern "C" extern void actionEvent__9daSwc00_cFv();
-extern "C" extern void actionDead__9daSwc00_cFv();
-extern "C" extern void daSwc00_IsDelete__FP9daSwc00_c();
-extern "C" extern void daSwc00_Delete__FP9daSwc00_c();
-extern "C" extern void daSwc00_Create__FP10fopAc_ac_c();
+void hitCheck(daSwc00_c*);
+void daSwc00_Execute(daSwc00_c*);
+bool daSwc00_IsDelete(daSwc00_c*);
+bool daSwc00_Delete(daSwc00_c*);
+void daSwc00_Create(fopAc_ac_c*);
+
+extern "C" void hitCheck__FP9daSwc00_c();
+extern "C" void daSwc00_Execute__FP9daSwc00_c();
+extern "C" void execute__9daSwc00_cFv();
+extern "C" void event_proc_call__9daSwc00_cFv();
+extern "C" void actionWait__9daSwc00_cFv();
+extern "C" void actionOrderEvent__9daSwc00_cFv();
+extern "C" void actionEvent__9daSwc00_cFv();
+extern "C" void actionDead__9daSwc00_cFv();
+extern "C" bool daSwc00_IsDelete__FP9daSwc00_c();
+extern "C" bool daSwc00_Delete__FP9daSwc00_c();
+extern "C" void daSwc00_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3708;
 SECTION_RODATA extern const u32 lit_3991;
 SECTION_RODATA extern const u32 lit_3992;
@@ -44,7 +69,9 @@ SECTION_DATA extern u8 g_profile_SWC00[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +81,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitCheck__FP9daSwc00_c) {
+asm void hitCheck(daSwc00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/hitCheck__FP9daSwc00_c.s"
 }
@@ -65,7 +92,7 @@ ASM_FUNCTION(hitCheck__FP9daSwc00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwc00_Execute__FP9daSwc00_c) {
+asm void daSwc00_Execute(daSwc00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_Execute__FP9daSwc00_c.s"
 }
@@ -76,7 +103,7 @@ ASM_FUNCTION(daSwc00_Execute__FP9daSwc00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daSwc00_cFv) {
+asm void daSwc00_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/execute__9daSwc00_cFv.s"
 }
@@ -87,7 +114,7 @@ ASM_FUNCTION(execute__9daSwc00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__9daSwc00_cFv) {
+asm void daSwc00_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/event_proc_call__9daSwc00_cFv.s"
 }
@@ -98,7 +125,7 @@ ASM_FUNCTION(event_proc_call__9daSwc00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__9daSwc00_cFv) {
+asm void daSwc00_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/actionWait__9daSwc00_cFv.s"
 }
@@ -109,7 +136,7 @@ ASM_FUNCTION(actionWait__9daSwc00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__9daSwc00_cFv) {
+asm void daSwc00_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/actionOrderEvent__9daSwc00_cFv.s"
 }
@@ -120,7 +147,7 @@ ASM_FUNCTION(actionOrderEvent__9daSwc00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__9daSwc00_cFv) {
+asm void daSwc00_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/actionEvent__9daSwc00_cFv.s"
 }
@@ -131,7 +158,7 @@ ASM_FUNCTION(actionEvent__9daSwc00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDead__9daSwc00_cFv) {
+asm void daSwc00_c::actionDead() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/actionDead__9daSwc00_cFv.s"
 }
@@ -139,32 +166,22 @@ ASM_FUNCTION(actionDead__9daSwc00_cFv) {
 
 
 /* 805A1B1C-805A1B24 0008+00 .text      daSwc00_IsDelete__FP9daSwc00_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daSwc00_IsDelete__FP9daSwc00_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_IsDelete__FP9daSwc00_c.s"
+bool daSwc00_IsDelete(daSwc00_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A1B24-805A1B2C 0008+00 .text      daSwc00_Delete__FP9daSwc00_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daSwc00_Delete__FP9daSwc00_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_Delete__FP9daSwc00_c.s"
+bool daSwc00_Delete(daSwc00_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A1B2C-805A1D8C 0260+00 .text      daSwc00_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwc00_Create__FP10fopAc_ac_c) {
+asm void daSwc00_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_Create__FP10fopAc_ac_c.s"
 }

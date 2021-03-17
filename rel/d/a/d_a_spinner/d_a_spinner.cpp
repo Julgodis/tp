@@ -6,44 +6,124 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSpinner_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daSpinner_c {
+	void createHeap();
+	void create();
+	~daSpinner_c();
+	void setRoomInfo();
+	void setMatrix();
+	void setEffect();
+	void posMove();
+	void setReflectAngle();
+	void setAnm();
+	void setNextPathNum();
+	void getPathNextPos();
+	void checkLineWallHit(cXyz*, cXyz*);
+	void checkPathMove();
+	void setSpreadEffect();
+	void clearSpreadEffect();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_LinkAcch {
+	~dBgS_LinkAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__11daSpinner_cFv();
-extern "C" extern void daSpinner_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__11daSpinner_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__13dBgS_LinkAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daSpinner_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__11daSpinner_cFv();
-extern "C" extern void daSpinner_Delete__FP11daSpinner_c();
-extern "C" extern void setRoomInfo__11daSpinner_cFv();
-extern "C" extern void setMatrix__11daSpinner_cFv();
-extern "C" extern void setEffect__11daSpinner_cFv();
-extern "C" extern void posMove__11daSpinner_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void setReflectAngle__11daSpinner_cFv();
-extern "C" extern void setWallHit__11daSpinner_cFsUl();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setAnm__11daSpinner_cFv();
-extern "C" extern void setNextPathNum__11daSpinner_cFv();
-extern "C" extern void getPathNextPos__11daSpinner_cFv();
-extern "C" extern void checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz();
-extern "C" extern void checkPathMove__11daSpinner_cFv();
-extern "C" extern void setSpreadEffect__11daSpinner_cFv();
-extern "C" extern void clearSpreadEffect__11daSpinner_cFv();
-extern "C" extern void execute__11daSpinner_cFv();
-extern "C" extern void daSpinner_Execute__FP11daSpinner_c();
-extern "C" extern void draw__11daSpinner_cFv();
-extern "C" extern void daSpinner_Draw__FP11daSpinner_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_804D4D70();
-extern "C" extern void func_804D4D78();
+void daSpinner_createHeap(fopAc_ac_c*);
+void daSpinner_Create(fopAc_ac_c*);
+void daSpinner_Delete(daSpinner_c*);
+extern "C" void setWallHit__11daSpinner_cFsUl();
+void daSpinner_Execute(daSpinner_c*);
+void daSpinner_Draw(daSpinner_c*);
+extern "C" void func_804D4D70();
+extern "C" void func_804D4D78();
+
+extern "C" void createHeap__11daSpinner_cFv();
+extern "C" void daSpinner_createHeap__FP10fopAc_ac_c();
+extern "C" void create__11daSpinner_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__13dBgS_LinkAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daSpinner_Create__FP10fopAc_ac_c();
+extern "C" void __dt__11daSpinner_cFv();
+extern "C" void daSpinner_Delete__FP11daSpinner_c();
+extern "C" void setRoomInfo__11daSpinner_cFv();
+extern "C" void setMatrix__11daSpinner_cFv();
+extern "C" void setEffect__11daSpinner_cFv();
+extern "C" void posMove__11daSpinner_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void setReflectAngle__11daSpinner_cFv();
+extern "C" void setWallHit__11daSpinner_cFsUl();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setAnm__11daSpinner_cFv();
+extern "C" void setNextPathNum__11daSpinner_cFv();
+extern "C" void getPathNextPos__11daSpinner_cFv();
+extern "C" void checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz();
+extern "C" void checkPathMove__11daSpinner_cFv();
+extern "C" void setSpreadEffect__11daSpinner_cFv();
+extern "C" void clearSpreadEffect__11daSpinner_cFv();
+extern "C" void execute__11daSpinner_cFv();
+extern "C" void daSpinner_Execute__FP11daSpinner_c();
+extern "C" void draw__11daSpinner_cFv();
+extern "C" void daSpinner_Draw__FP11daSpinner_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_804D4D70();
+extern "C" void func_804D4D78();
 SECTION_RODATA extern const u8 lit_3768[12];
 SECTION_RODATA extern const u32 lit_4168;
 SECTION_RODATA extern const u32 lit_4241;
@@ -154,8 +234,11 @@ SECTION_BSS extern u8 data_804D5094[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -165,7 +248,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daSpinner_cFv) {
+asm void daSpinner_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/createHeap__11daSpinner_cFv.s"
 }
@@ -176,7 +259,7 @@ ASM_FUNCTION(createHeap__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinner_createHeap__FP10fopAc_ac_c) {
+asm void daSpinner_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/daSpinner_createHeap__FP10fopAc_ac_c.s"
 }
@@ -187,7 +270,7 @@ ASM_FUNCTION(daSpinner_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daSpinner_cFv) {
+asm void daSpinner_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/create__11daSpinner_cFv.s"
 }
@@ -198,7 +281,7 @@ ASM_FUNCTION(create__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__8cM3dGCylFv.s"
 }
@@ -209,7 +292,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__8cM3dGAabFv.s"
 }
@@ -220,7 +303,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__10dCcD_GSttsFv.s"
 }
@@ -231,7 +314,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__4cXyzFv.s"
 }
@@ -242,7 +325,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dBgS_LinkAcchFv) {
+asm dBgS_LinkAcch::~dBgS_LinkAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__13dBgS_LinkAcchFv.s"
 }
@@ -253,7 +336,7 @@ ASM_FUNCTION(__dt__13dBgS_LinkAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__12dBgS_AcchCirFv.s"
 }
@@ -264,7 +347,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__12J3DFrameCtrlFv.s"
 }
@@ -275,7 +358,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinner_Create__FP10fopAc_ac_c) {
+asm void daSpinner_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/daSpinner_Create__FP10fopAc_ac_c.s"
 }
@@ -286,7 +369,7 @@ ASM_FUNCTION(daSpinner_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daSpinner_cFv) {
+asm daSpinner_c::~daSpinner_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__11daSpinner_cFv.s"
 }
@@ -297,7 +380,7 @@ ASM_FUNCTION(__dt__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinner_Delete__FP11daSpinner_c) {
+asm void daSpinner_Delete(daSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/daSpinner_Delete__FP11daSpinner_c.s"
 }
@@ -308,7 +391,7 @@ ASM_FUNCTION(daSpinner_Delete__FP11daSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__11daSpinner_cFv) {
+asm void daSpinner_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setRoomInfo__11daSpinner_cFv.s"
 }
@@ -319,7 +402,7 @@ ASM_FUNCTION(setRoomInfo__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__11daSpinner_cFv) {
+asm void daSpinner_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setMatrix__11daSpinner_cFv.s"
 }
@@ -330,7 +413,7 @@ ASM_FUNCTION(setMatrix__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__11daSpinner_cFv) {
+asm void daSpinner_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setEffect__11daSpinner_cFv.s"
 }
@@ -341,7 +424,7 @@ ASM_FUNCTION(setEffect__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMove__11daSpinner_cFv) {
+asm void daSpinner_c::posMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/posMove__11daSpinner_cFv.s"
 }
@@ -352,7 +435,7 @@ ASM_FUNCTION(posMove__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__8cM3dGLinFv.s"
 }
@@ -363,7 +446,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReflectAngle__11daSpinner_cFv) {
+asm void daSpinner_c::setReflectAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setReflectAngle__11daSpinner_cFv.s"
 }
@@ -374,7 +457,7 @@ ASM_FUNCTION(setReflectAngle__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWallHit__11daSpinner_cFsUl) {
+extern "C" asm void setWallHit__11daSpinner_cFsUl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setWallHit__11daSpinner_cFsUl.s"
 }
@@ -385,7 +468,7 @@ ASM_FUNCTION(setWallHit__11daSpinner_cFsUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__8cM3dGPlaFv.s"
 }
@@ -396,7 +479,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__11daSpinner_cFv) {
+asm void daSpinner_c::setAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setAnm__11daSpinner_cFv.s"
 }
@@ -407,7 +490,7 @@ ASM_FUNCTION(setAnm__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPathNum__11daSpinner_cFv) {
+asm void daSpinner_c::setNextPathNum() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setNextPathNum__11daSpinner_cFv.s"
 }
@@ -418,7 +501,7 @@ ASM_FUNCTION(setNextPathNum__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathNextPos__11daSpinner_cFv) {
+asm void daSpinner_c::getPathNextPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/getPathNextPos__11daSpinner_cFv.s"
 }
@@ -429,7 +512,7 @@ ASM_FUNCTION(getPathNextPos__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz) {
+asm void daSpinner_c::checkLineWallHit(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz.s"
 }
@@ -440,7 +523,7 @@ ASM_FUNCTION(checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPathMove__11daSpinner_cFv) {
+asm void daSpinner_c::checkPathMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/checkPathMove__11daSpinner_cFv.s"
 }
@@ -451,7 +534,7 @@ ASM_FUNCTION(checkPathMove__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSpreadEffect__11daSpinner_cFv) {
+asm void daSpinner_c::setSpreadEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/setSpreadEffect__11daSpinner_cFv.s"
 }
@@ -462,7 +545,7 @@ ASM_FUNCTION(setSpreadEffect__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearSpreadEffect__11daSpinner_cFv) {
+asm void daSpinner_c::clearSpreadEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/clearSpreadEffect__11daSpinner_cFv.s"
 }
@@ -473,7 +556,7 @@ ASM_FUNCTION(clearSpreadEffect__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daSpinner_cFv) {
+asm void daSpinner_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/execute__11daSpinner_cFv.s"
 }
@@ -484,7 +567,7 @@ ASM_FUNCTION(execute__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinner_Execute__FP11daSpinner_c) {
+asm void daSpinner_Execute(daSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/daSpinner_Execute__FP11daSpinner_c.s"
 }
@@ -495,7 +578,7 @@ ASM_FUNCTION(daSpinner_Execute__FP11daSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daSpinner_cFv) {
+asm void daSpinner_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/draw__11daSpinner_cFv.s"
 }
@@ -506,7 +589,7 @@ ASM_FUNCTION(draw__11daSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinner_Draw__FP11daSpinner_c) {
+asm void daSpinner_Draw(daSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/daSpinner_Draw__FP11daSpinner_c.s"
 }
@@ -517,7 +600,7 @@ ASM_FUNCTION(daSpinner_Draw__FP11daSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/__dt__10cCcD_GSttsFv.s"
 }
@@ -528,7 +611,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D4D70) {
+extern "C" asm void func_804D4D70() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/func_804D4D70.s"
 }
@@ -539,7 +622,7 @@ ASM_FUNCTION(func_804D4D70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D4D78) {
+extern "C" asm void func_804D4D78() {
 	nofralloc
 #include "asm/rel/d/a/d_a_spinner/d_a_spinner/func_804D4D78.s"
 }

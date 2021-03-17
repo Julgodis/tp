@@ -6,29 +6,69 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSmWStone_c;
+
+struct fopAc_ac_c {
+};
+
+struct daSmWStone_c {
+	daSmWStone_c();
+	~daSmWStone_c();
+	void create();
+	void execute();
+	void draw();
+	void Delete();
+	void exeModeHowl();
+	void setModelMtx();
+	void createHeap();
+	void init();
+	void chkWlfInRange();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daSmWStone_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__12daSmWStone_cFv();
-extern "C" extern void __dt__12daSmWStone_cFv();
-extern "C" extern void create__12daSmWStone_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void execute__12daSmWStone_cFv();
-extern "C" extern void draw__12daSmWStone_cFv();
-extern "C" extern void Delete__12daSmWStone_cFv();
-extern "C" extern void exeModeHowl__12daSmWStone_cFv();
-extern "C" extern void setModelMtx__12daSmWStone_cFv();
-extern "C" extern void createHeap__12daSmWStone_cFv();
-extern "C" extern void init__12daSmWStone_cFv();
-extern "C" extern void chkWlfInRange__12daSmWStone_cFv();
-extern "C" extern void daSmWStone_create__FP12daSmWStone_c();
-extern "C" extern void daSmWStone_Delete__FP12daSmWStone_c();
-extern "C" extern void daSmWStone_execute__FP12daSmWStone_c();
-extern "C" extern void daSmWStone_draw__FP12daSmWStone_c();
-extern "C" extern void func_80CDEEDC();
-extern "C" extern void func_80CDEEE4();
+void daSmWStone_c_createHeap(fopAc_ac_c*);
+void daSmWStone_create(daSmWStone_c*);
+void daSmWStone_Delete(daSmWStone_c*);
+void daSmWStone_execute(daSmWStone_c*);
+void daSmWStone_draw(daSmWStone_c*);
+extern "C" void func_80CDEEDC();
+extern "C" void func_80CDEEE4();
+
+extern "C" void daSmWStone_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__12daSmWStone_cFv();
+extern "C" void __dt__12daSmWStone_cFv();
+extern "C" void create__12daSmWStone_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void execute__12daSmWStone_cFv();
+extern "C" void draw__12daSmWStone_cFv();
+extern "C" void Delete__12daSmWStone_cFv();
+extern "C" void exeModeHowl__12daSmWStone_cFv();
+extern "C" void setModelMtx__12daSmWStone_cFv();
+extern "C" void createHeap__12daSmWStone_cFv();
+extern "C" void init__12daSmWStone_cFv();
+extern "C" void chkWlfInRange__12daSmWStone_cFv();
+extern "C" void daSmWStone_create__FP12daSmWStone_c();
+extern "C" void daSmWStone_Delete__FP12daSmWStone_c();
+extern "C" void daSmWStone_execute__FP12daSmWStone_c();
+extern "C" void daSmWStone_draw__FP12daSmWStone_c();
+extern "C" void func_80CDEEDC();
+extern "C" void func_80CDEEE4();
 SECTION_RODATA extern const u8 lit_3776[12];
 SECTION_RODATA extern const u8 lit_4191[4];
 SECTION_RODATA extern const u32 lit_4192;
@@ -47,7 +87,9 @@ SECTION_DATA extern void*const __vt__12daSmWStone_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +99,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSmWStone_c_createHeap__FP10fopAc_ac_c) {
+asm void daSmWStone_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/daSmWStone_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -68,7 +110,7 @@ ASM_FUNCTION(daSmWStone_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daSmWStone_cFv) {
+asm daSmWStone_c::daSmWStone_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/__ct__12daSmWStone_cFv.s"
 }
@@ -79,7 +121,7 @@ ASM_FUNCTION(__ct__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daSmWStone_cFv) {
+asm daSmWStone_c::~daSmWStone_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/__dt__12daSmWStone_cFv.s"
 }
@@ -90,7 +132,7 @@ ASM_FUNCTION(__dt__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daSmWStone_cFv) {
+asm void daSmWStone_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/create__12daSmWStone_cFv.s"
 }
@@ -101,7 +143,7 @@ ASM_FUNCTION(create__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -112,7 +154,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/__dt__12dBgS_AcchCirFv.s"
 }
@@ -123,7 +165,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daSmWStone_cFv) {
+asm void daSmWStone_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/execute__12daSmWStone_cFv.s"
 }
@@ -134,7 +176,7 @@ ASM_FUNCTION(execute__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daSmWStone_cFv) {
+asm void daSmWStone_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/draw__12daSmWStone_cFv.s"
 }
@@ -145,7 +187,7 @@ ASM_FUNCTION(draw__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daSmWStone_cFv) {
+asm void daSmWStone_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/Delete__12daSmWStone_cFv.s"
 }
@@ -156,7 +198,7 @@ ASM_FUNCTION(Delete__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeHowl__12daSmWStone_cFv) {
+asm void daSmWStone_c::exeModeHowl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/exeModeHowl__12daSmWStone_cFv.s"
 }
@@ -167,7 +209,7 @@ ASM_FUNCTION(exeModeHowl__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__12daSmWStone_cFv) {
+asm void daSmWStone_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/setModelMtx__12daSmWStone_cFv.s"
 }
@@ -178,7 +220,7 @@ ASM_FUNCTION(setModelMtx__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__12daSmWStone_cFv) {
+asm void daSmWStone_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/createHeap__12daSmWStone_cFv.s"
 }
@@ -189,7 +231,7 @@ ASM_FUNCTION(createHeap__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__12daSmWStone_cFv) {
+asm void daSmWStone_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/init__12daSmWStone_cFv.s"
 }
@@ -200,7 +242,7 @@ ASM_FUNCTION(init__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWlfInRange__12daSmWStone_cFv) {
+asm void daSmWStone_c::chkWlfInRange() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/chkWlfInRange__12daSmWStone_cFv.s"
 }
@@ -211,7 +253,7 @@ ASM_FUNCTION(chkWlfInRange__12daSmWStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSmWStone_create__FP12daSmWStone_c) {
+asm void daSmWStone_create(daSmWStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/daSmWStone_create__FP12daSmWStone_c.s"
 }
@@ -222,7 +264,7 @@ ASM_FUNCTION(daSmWStone_create__FP12daSmWStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSmWStone_Delete__FP12daSmWStone_c) {
+asm void daSmWStone_Delete(daSmWStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/daSmWStone_Delete__FP12daSmWStone_c.s"
 }
@@ -233,7 +275,7 @@ ASM_FUNCTION(daSmWStone_Delete__FP12daSmWStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSmWStone_execute__FP12daSmWStone_c) {
+asm void daSmWStone_execute(daSmWStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/daSmWStone_execute__FP12daSmWStone_c.s"
 }
@@ -244,7 +286,7 @@ ASM_FUNCTION(daSmWStone_execute__FP12daSmWStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSmWStone_draw__FP12daSmWStone_c) {
+asm void daSmWStone_draw(daSmWStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/daSmWStone_draw__FP12daSmWStone_c.s"
 }
@@ -255,7 +297,7 @@ ASM_FUNCTION(daSmWStone_draw__FP12daSmWStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDEEDC) {
+extern "C" asm void func_80CDEEDC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/func_80CDEEDC.s"
 }
@@ -266,7 +308,7 @@ ASM_FUNCTION(func_80CDEEDC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDEEE4) {
+extern "C" asm void func_80CDEEE4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smw_stone/d_a_obj_smw_stone/func_80CDEEE4.s"
 }

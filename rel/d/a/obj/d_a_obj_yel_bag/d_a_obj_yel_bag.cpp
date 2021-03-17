@@ -6,45 +6,118 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_YBag_c {
+	daObj_YBag_c();
+	~daObj_YBag_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	bool getTypeFromParam();
+	bool isDelete();
+	void setEnvTevColor();
+	void setRoomNo();
+	void reset();
+	void setMtx();
+	void setSmokePrtcl();
+	void setWaterPrtcl();
+	void setHamonPrtcl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_YBag_Param_c {
+	~daObj_YBag_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daObj_YBag_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12daObj_YBag_cFv();
-extern "C" extern void create__12daObj_YBag_cFv();
-extern "C" extern void CreateHeap__12daObj_YBag_cFv();
-extern "C" extern void Delete__12daObj_YBag_cFv();
-extern "C" extern void Execute__12daObj_YBag_cFv();
-extern "C" extern void Draw__12daObj_YBag_cFv();
-extern "C" extern void createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c();
-extern "C" extern void getTypeFromParam__12daObj_YBag_cFv();
-extern "C" extern void isDelete__12daObj_YBag_cFv();
-extern "C" extern void setEnvTevColor__12daObj_YBag_cFv();
-extern "C" extern void setRoomNo__12daObj_YBag_cFv();
-extern "C" extern void reset__12daObj_YBag_cFv();
-extern "C" extern void setMtx__12daObj_YBag_cFv();
-extern "C" extern void calcRollAngle__12daObj_YBag_cFsi();
-extern "C" extern void getWallAngle__12daObj_YBag_cFsPs();
-extern "C" extern void setSmokePrtcl__12daObj_YBag_cFv();
-extern "C" extern void setWaterPrtcl__12daObj_YBag_cFv();
-extern "C" extern void setHamonPrtcl__12daObj_YBag_cFv();
-extern "C" extern void daObj_YBag_Create__FPv();
-extern "C" extern void daObj_YBag_Delete__FPv();
-extern "C" extern void daObj_YBag_Execute__FPv();
-extern "C" extern void daObj_YBag_Draw__FPv();
-extern "C" extern void daObj_YBag_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80D3DB90();
-extern "C" extern void __sinit_d_a_obj_yel_bag_cpp();
-extern "C" extern void __dt__18daObj_YBag_Param_cFv();
-extern "C" extern void func_80D3DC68();
-extern "C" extern void func_80D3DC70();
+extern "C" void calcRollAngle__12daObj_YBag_cFsi();
+extern "C" void getWallAngle__12daObj_YBag_cFsPs();
+void daObj_YBag_Create(void*);
+void daObj_YBag_Delete(void*);
+void daObj_YBag_Execute(void*);
+void daObj_YBag_Draw(void*);
+bool daObj_YBag_IsDelete(void*);
+extern "C" void func_80D3DB90();
+extern "C" void __sinit_d_a_obj_yel_bag_cpp();
+extern "C" void func_80D3DC68();
+extern "C" void func_80D3DC70();
+
+extern "C" void __ct__12daObj_YBag_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12daObj_YBag_cFv();
+extern "C" void create__12daObj_YBag_cFv();
+extern "C" void CreateHeap__12daObj_YBag_cFv();
+extern "C" void Delete__12daObj_YBag_cFv();
+extern "C" void Execute__12daObj_YBag_cFv();
+extern "C" void Draw__12daObj_YBag_cFv();
+extern "C" void createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c();
+extern "C" bool getTypeFromParam__12daObj_YBag_cFv();
+extern "C" bool isDelete__12daObj_YBag_cFv();
+extern "C" void setEnvTevColor__12daObj_YBag_cFv();
+extern "C" void setRoomNo__12daObj_YBag_cFv();
+extern "C" void reset__12daObj_YBag_cFv();
+extern "C" void setMtx__12daObj_YBag_cFv();
+extern "C" void calcRollAngle__12daObj_YBag_cFsi();
+extern "C" void getWallAngle__12daObj_YBag_cFsPs();
+extern "C" void setSmokePrtcl__12daObj_YBag_cFv();
+extern "C" void setWaterPrtcl__12daObj_YBag_cFv();
+extern "C" void setHamonPrtcl__12daObj_YBag_cFv();
+extern "C" void daObj_YBag_Create__FPv();
+extern "C" void daObj_YBag_Delete__FPv();
+extern "C" void daObj_YBag_Execute__FPv();
+extern "C" void daObj_YBag_Draw__FPv();
+extern "C" bool daObj_YBag_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80D3DB90();
+extern "C" void __sinit_d_a_obj_yel_bag_cpp();
+extern "C" void __dt__18daObj_YBag_Param_cFv();
+extern "C" void func_80D3DC68();
+extern "C" void func_80D3DC70();
 SECTION_RODATA extern const u8 mCcDObjInfo__12daObj_YBag_c[48];
 SECTION_RODATA extern const u8 m__18daObj_YBag_Param_c[44];
 SECTION_RODATA extern const u32 lit_4021;
@@ -149,8 +222,11 @@ SECTION_BSS extern u8 data_80D3DF9C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -160,7 +236,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daObj_YBag_cFv) {
+asm daObj_YBag_c::daObj_YBag_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__ct__12daObj_YBag_cFv.s"
 }
@@ -171,7 +247,7 @@ ASM_FUNCTION(__ct__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__8cM3dGCylFv.s"
 }
@@ -182,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__8cM3dGAabFv.s"
 }
@@ -193,7 +269,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__12dBgS_AcchCirFv.s"
 }
@@ -204,7 +280,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__10dCcD_GSttsFv.s"
 }
@@ -215,7 +291,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__4cXyzFv.s"
 }
@@ -226,7 +302,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -237,7 +313,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObj_YBag_cFv) {
+asm daObj_YBag_c::~daObj_YBag_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__12daObj_YBag_cFv.s"
 }
@@ -248,7 +324,7 @@ ASM_FUNCTION(__dt__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/create__12daObj_YBag_cFv.s"
 }
@@ -259,7 +335,7 @@ ASM_FUNCTION(create__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/CreateHeap__12daObj_YBag_cFv.s"
 }
@@ -270,7 +346,7 @@ ASM_FUNCTION(CreateHeap__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/Delete__12daObj_YBag_cFv.s"
 }
@@ -281,7 +357,7 @@ ASM_FUNCTION(Delete__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/Execute__12daObj_YBag_cFv.s"
 }
@@ -292,7 +368,7 @@ ASM_FUNCTION(Execute__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/Draw__12daObj_YBag_cFv.s"
 }
@@ -303,7 +379,7 @@ ASM_FUNCTION(Draw__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c) {
+asm void daObj_YBag_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c.s"
 }
@@ -311,32 +387,22 @@ ASM_FUNCTION(createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c) {
 
 
 /* 80D3D458-80D3D460 0008+00 .text      getTypeFromParam__12daObj_YBag_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__12daObj_YBag_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/getTypeFromParam__12daObj_YBag_cFv.s"
+bool daObj_YBag_c::getTypeFromParam() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D3D460-80D3D468 0008+00 .text      isDelete__12daObj_YBag_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(isDelete__12daObj_YBag_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/isDelete__12daObj_YBag_cFv.s"
+bool daObj_YBag_c::isDelete() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D3D468-80D3D4C4 005C+00 .text      setEnvTevColor__12daObj_YBag_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setEnvTevColor__12daObj_YBag_cFv.s"
 }
@@ -347,7 +413,7 @@ ASM_FUNCTION(setEnvTevColor__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setRoomNo__12daObj_YBag_cFv.s"
 }
@@ -358,7 +424,7 @@ ASM_FUNCTION(setRoomNo__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/reset__12daObj_YBag_cFv.s"
 }
@@ -369,7 +435,7 @@ ASM_FUNCTION(reset__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setMtx__12daObj_YBag_cFv.s"
 }
@@ -380,7 +446,7 @@ ASM_FUNCTION(setMtx__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRollAngle__12daObj_YBag_cFsi) {
+extern "C" asm void calcRollAngle__12daObj_YBag_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/calcRollAngle__12daObj_YBag_cFsi.s"
 }
@@ -391,7 +457,7 @@ ASM_FUNCTION(calcRollAngle__12daObj_YBag_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWallAngle__12daObj_YBag_cFsPs) {
+extern "C" asm void getWallAngle__12daObj_YBag_cFsPs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/getWallAngle__12daObj_YBag_cFsPs.s"
 }
@@ -402,7 +468,7 @@ ASM_FUNCTION(getWallAngle__12daObj_YBag_cFsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokePrtcl__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setSmokePrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setSmokePrtcl__12daObj_YBag_cFv.s"
 }
@@ -413,7 +479,7 @@ ASM_FUNCTION(setSmokePrtcl__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterPrtcl__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setWaterPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setWaterPrtcl__12daObj_YBag_cFv.s"
 }
@@ -424,7 +490,7 @@ ASM_FUNCTION(setWaterPrtcl__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHamonPrtcl__12daObj_YBag_cFv) {
+asm void daObj_YBag_c::setHamonPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/setHamonPrtcl__12daObj_YBag_cFv.s"
 }
@@ -435,7 +501,7 @@ ASM_FUNCTION(setHamonPrtcl__12daObj_YBag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_YBag_Create__FPv) {
+asm void daObj_YBag_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_Create__FPv.s"
 }
@@ -446,7 +512,7 @@ ASM_FUNCTION(daObj_YBag_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_YBag_Delete__FPv) {
+asm void daObj_YBag_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_Delete__FPv.s"
 }
@@ -457,7 +523,7 @@ ASM_FUNCTION(daObj_YBag_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_YBag_Execute__FPv) {
+asm void daObj_YBag_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_Execute__FPv.s"
 }
@@ -468,7 +534,7 @@ ASM_FUNCTION(daObj_YBag_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_YBag_Draw__FPv) {
+asm void daObj_YBag_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_Draw__FPv.s"
 }
@@ -476,21 +542,16 @@ ASM_FUNCTION(daObj_YBag_Draw__FPv) {
 
 
 /* 80D3DB40-80D3DB48 0008+00 .text      daObj_YBag_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_YBag_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_IsDelete__FPv.s"
+bool daObj_YBag_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3DB48-80D3DB90 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__10cCcD_GSttsFv.s"
 }
@@ -501,7 +562,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3DB90) {
+extern "C" asm void func_80D3DB90() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/func_80D3DB90.s"
 }
@@ -512,7 +573,7 @@ ASM_FUNCTION(func_80D3DB90) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_yel_bag_cpp) {
+extern "C" asm void __sinit_d_a_obj_yel_bag_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__sinit_d_a_obj_yel_bag_cpp.s"
 }
@@ -523,7 +584,7 @@ ASM_FUNCTION(__sinit_d_a_obj_yel_bag_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daObj_YBag_Param_cFv) {
+asm daObj_YBag_Param_c::~daObj_YBag_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/__dt__18daObj_YBag_Param_cFv.s"
 }
@@ -534,7 +595,7 @@ ASM_FUNCTION(__dt__18daObj_YBag_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3DC68) {
+extern "C" asm void func_80D3DC68() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/func_80D3DC68.s"
 }
@@ -545,7 +606,7 @@ ASM_FUNCTION(func_80D3DC68) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3DC70) {
+extern "C" asm void func_80D3DC70() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/func_80D3DC70.s"
 }

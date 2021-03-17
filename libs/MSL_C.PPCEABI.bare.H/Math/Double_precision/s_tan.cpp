@@ -9,35 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void tan();
+extern "C" void tan();
+
+extern "C" void tan();
 SECTION_SDATA2 extern u8 lit_58[8];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_rem_pio2();
-extern "C" extern void __kernel_tan();
+extern "C" void __ieee754_rem_pio2();
+extern "C" void __kernel_tan();
+
+extern "C" void __ieee754_rem_pio2();
+extern "C" void __kernel_tan();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456B40-80456B48 0008+00 .sdata2    @58                                                          */
+/* 80456B40-80456B48 0008+00 rc=1 efc=0 .sdata2    @58                                                          */
 u8 lit_58[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036C668-8036C6E0 0078+00 .text      tan                                                          */
+/* 8036C668-8036C6E0 0078+00 rc=7 efc=7 .text      tan                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tan) {
+extern "C" asm void tan() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_tan/tan.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

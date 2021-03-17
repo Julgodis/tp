@@ -6,24 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build COutFontSet_c (COutFontSet_c) False/False
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+};
+
+/* top-level dependencies (begin COutFontSet_c) */
+// outer dependency: J2DTextBox
+/* top-level dependencies (end COutFontSet_c) */
+struct COutFontSet_c {
+	// J2DTextBox
+	/* 80225BB8 */ COutFontSet_c();
+	/* 80225BF4 */ ~COutFontSet_c();
+	/* 80225C3C */ void initialize();
+	/* 80225C70 */ void drawFont(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+};
+
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) False/False
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+// build J2DTextBox (J2DTextBox) True/True
+/* top-level dependencies (begin COutFont_c) */
+// outer dependency: J2DPicture
+// outer dependency: J2DTextBox
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+	// J2DPicture
+	// J2DTextBox
+	/* 80225C94 */ COutFont_c(char);
+	/* 80225D60 */ ~COutFont_c();
+	/* 80225E7C */ void setPane(J2DPicture*);
+	/* 80225EA8 */ void createPane();
+	/* 80226CF8 */ void initialize();
+	/* 80226D4C */ void drawFont(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+	/* 80226DA8 */ void setAlphaRatio(f32);
+	/* 80226DB0 */ void draw(J2DTextBox*, f32, f32, f32);
+	/* 80228448 */ void reset(J2DTextBox*);
+	/* 80228490 */ void setBlendAnime(J2DPicture*, s16);
+	/* 80228530 */ void getBtiName(s32);
+};
+
+// build J2DPicture (J2DPicture) True/True
+// build J2DPane (J2DPane) False/False
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DRotateAxis
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DRotateAxis
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F7AFC */ void getParentPane();
+};
+
+// build J2DRotateAxis (J2DRotateAxis) True/True
+// build ResTIMG (ResTIMG) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13COutFontSet_cFv();
-extern "C" extern void __dt__13COutFontSet_cFv();
-extern "C" extern void initialize__13COutFontSet_cFv();
-extern "C" extern void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
-extern "C" extern void __ct__10COutFont_cFUc();
-extern "C" extern void __dt__10COutFont_cFv();
-extern "C" extern void setPane__10COutFont_cFP10J2DPicture();
-extern "C" extern void createPane__10COutFont_cFv();
-extern "C" extern void initialize__10COutFont_cFv();
-extern "C" extern void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
-extern "C" extern void setAlphaRatio__10COutFont_cFf();
-extern "C" extern void draw__10COutFont_cFP10J2DTextBoxfff();
-extern "C" extern void reset__10COutFont_cFP10J2DTextBox();
-extern "C" extern void setBlendAnime__10COutFont_cFP10J2DPictures();
-extern "C" extern void getBtiName__10COutFont_cFi();
+
+extern "C" void __ct__13COutFontSet_cFv();
+extern "C" void __dt__13COutFontSet_cFv();
+extern "C" void initialize__13COutFontSet_cFv();
+extern "C" void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void __ct__10COutFont_cFUc();
+extern "C" void __dt__10COutFont_cFv();
+extern "C" void setPane__10COutFont_cFP10J2DPicture();
+extern "C" void createPane__10COutFont_cFv();
+extern "C" void initialize__10COutFont_cFv();
+extern "C" void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void setAlphaRatio__10COutFont_cFf();
+extern "C" void draw__10COutFont_cFP10J2DTextBoxfff();
+extern "C" void reset__10COutFont_cFP10J2DTextBox();
+extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures();
+extern "C" void getBtiName__10COutFont_cFi();
 SECTION_RODATA extern const u8 d_msg_d_msg_out_font__stringBase0[632];
 SECTION_DATA extern void*d_msg_d_msg_out_font__lit_4395[70];
 SECTION_DATA extern void*d_msg_d_msg_out_font__lit_5000[65];
@@ -51,19 +131,30 @@ SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_5001;
 // External References:
 // 
 
-extern "C" extern void fopMsgM_valueIncrease__FiiUc();
-extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" extern void getParentPane__7J2DPaneFv();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_29();
+void fopMsgM_valueIncrease(s32, s32, char);
+void dMeter2Info_getNumberTextureName(s32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+
+extern "C" void fopMsgM_valueIncrease__FiiUc();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 
@@ -72,7 +163,7 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 803BFA90-803BFBA8 0118+00 .data      @4395                                                        */
+/* 803BFA90-803BFBA8 0118+00 rc=1 efc=0 .data      @4395                                                        */
 void* d_msg_d_msg_out_font__lit_4395[70] = {
 	(void*)(((char*)createPane__10COutFont_cFv)+0xDC),
 	(void*)(((char*)createPane__10COutFont_cFv)+0x140),
@@ -146,7 +237,7 @@ void* d_msg_d_msg_out_font__lit_4395[70] = {
 	(void*)(((char*)createPane__10COutFont_cFv)+0xDC4),
 };
 
-/* 803BFBA8-803BFCAC 0104+00 .data      @5000                                                        */
+/* 803BFBA8-803BFCAC 0104+00 rc=1 efc=0 .data      @5000                                                        */
 void* d_msg_d_msg_out_font__lit_5000[65] = {
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
@@ -215,7 +306,7 @@ void* d_msg_d_msg_out_font__lit_5000[65] = {
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
 };
 
-/* 803BFCAC-803BFDC4 0118+00 .data      mpIconName$5045                                              */
+/* 803BFCAC-803BFDC4 0118+00 rc=1 efc=0 .data      mpIconName$5045                                              */
 u8 data_803BFCAC[280] = {
 	0x80, 0x39, 0x93, 0x9B, 0x80, 0x39, 0x93, 0xA7, 0x80, 0x39, 0x93, 0xB3, 0x80, 0x39, 0x93, 0xBF,
 	0x80, 0x39, 0x93, 0xCB, 0x80, 0x39, 0x93, 0xD7, 0x80, 0x39, 0x93, 0xE3, 0x80, 0x39, 0x93, 0xEF,
@@ -237,7 +328,7 @@ u8 data_803BFCAC[280] = {
 	0x80, 0x39, 0x95, 0xAD, 0x80, 0x39, 0x95, 0xB9,
 };
 
-/* 803BFDC4-803BFDE8 0024+00 .data      __vt__10COutFont_c                                           */
+/* 803BFDC4-803BFDE8 0024+00 rc=2 efc=0 .data      __vt__10COutFont_c                                           */
 void* const __vt__10COutFont_c[9] = {
 	NULL, /* RTTI */
 	NULL,
@@ -250,7 +341,7 @@ void* const __vt__10COutFont_c[9] = {
 	(void*)setAlphaRatio__10COutFont_cFf,
 };
 
-/* 803BFDE8-803BFDF8 000C+04 .data      __vt__13COutFontSet_c                                        */
+/* 803BFDE8-803BFDF8 000C+04 rc=2 efc=0 .data      __vt__13COutFontSet_c                                        */
 void* const __vt__13COutFontSet_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -259,22 +350,22 @@ void* const __vt__13COutFontSet_c[4] = {
 	NULL,
 };
 
-/* 80225BB8-80225BF4 003C+00 .text      __ct__13COutFontSet_cFv                                      */
+/* 80225BB8-80225BF4 003C+00 rc=1 efc=0 .text      __ct__13COutFontSet_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13COutFontSet_cFv) {
+asm COutFontSet_c::COutFontSet_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/__ct__13COutFontSet_cFv.s"
 }
 #pragma pop
 
 
-/* 80225BF4-80225C3C 0048+00 .text      __dt__13COutFontSet_cFv                                      */
+/* 80225BF4-80225C3C 0048+00 rc=1 efc=0 .text      __dt__13COutFontSet_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13COutFontSet_cFv) {
+asm COutFontSet_c::~COutFontSet_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/__dt__13COutFontSet_cFv.s"
 }
@@ -282,63 +373,63 @@ ASM_FUNCTION(__dt__13COutFontSet_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454A10-80454A14 0004+00 .sdata2    @3748                                                        */
+/* 80454A10-80454A14 0004+00 rc=4 efc=0 .sdata2    @3748                                                        */
 u8 d_msg_d_msg_out_font__lit_3748[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454A14-80454A18 0004+00 .sdata2    @3749                                                        */
+/* 80454A14-80454A18 0004+00 rc=6 efc=0 .sdata2    @3749                                                        */
 f32 d_msg_d_msg_out_font__lit_3749 = 1.0f;
 
-/* 80225C3C-80225C70 0034+00 .text      initialize__13COutFontSet_cFv                                */
+/* 80225C3C-80225C70 0034+00 rc=2 efc=0 .text      initialize__13COutFontSet_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__13COutFontSet_cFv) {
+asm void COutFontSet_c::initialize() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/initialize__13COutFontSet_cFv.s"
 }
 #pragma pop
 
 
-/* 80225C70-80225C94 0024+00 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
+/* 80225C70-80225C94 0024+00 rc=1 efc=0 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc) {
+asm void COutFontSet_c::drawFont(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc.s"
 }
 #pragma pop
 
 
-/* 80225C94-80225D60 00CC+00 .text      __ct__10COutFont_cFUc                                        */
+/* 80225C94-80225D60 00CC+00 rc=5 efc=5 .text      __ct__10COutFont_cFUc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10COutFont_cFUc) {
+asm COutFont_c::COutFont_c(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/__ct__10COutFont_cFUc.s"
 }
 #pragma pop
 
 
-/* 80225D60-80225E7C 011C+00 .text      __dt__10COutFont_cFv                                         */
+/* 80225D60-80225E7C 011C+00 rc=1 efc=0 .text      __dt__10COutFont_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10COutFont_cFv) {
+asm COutFont_c::~COutFont_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/__dt__10COutFont_cFv.s"
 }
 #pragma pop
 
 
-/* 80225E7C-80225EA8 002C+00 .text      setPane__10COutFont_cFP10J2DPicture                          */
+/* 80225E7C-80225EA8 002C+00 rc=1 efc=0 .text      setPane__10COutFont_cFP10J2DPicture                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPane__10COutFont_cFP10J2DPicture) {
+asm void COutFont_c::setPane(J2DPicture* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/setPane__10COutFont_cFP10J2DPicture.s"
 }
@@ -346,7 +437,7 @@ ASM_FUNCTION(setPane__10COutFont_cFP10J2DPicture) {
 
 
 /* ############################################################################################## */
-/* 80399350-803995C8 0275+03 .rodata    @stringBase0                                                 */
+/* 80399350-803995C8 0275+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -403,47 +494,47 @@ SECTION_DEAD char* const stringBase_803995B9 = "font_53.bti";
 SECTION_DEAD char* const pad_803995C5 = "\0\0";
 #pragma pop
 
-/* 80454A18-80454A20 0008+00 .sdata2    @4397                                                        */
+/* 80454A18-80454A20 0008+00 rc=2 efc=0 .sdata2    @4397                                                        */
 f64 d_msg_d_msg_out_font__lit_4397 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80225EA8-80226CF8 0E50+00 .text      createPane__10COutFont_cFv                                   */
+/* 80225EA8-80226CF8 0E50+00 rc=2 efc=0 .text      createPane__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createPane__10COutFont_cFv) {
+asm void COutFont_c::createPane() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/createPane__10COutFont_cFv.s"
 }
 #pragma pop
 
 
-/* 80226CF8-80226D4C 0054+00 .text      initialize__10COutFont_cFv                                   */
+/* 80226CF8-80226D4C 0054+00 rc=2 efc=2 .text      initialize__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__10COutFont_cFv) {
+asm void COutFont_c::initialize() {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/initialize__10COutFont_cFv.s"
 }
 #pragma pop
 
 
-/* 80226D4C-80226DA8 005C+00 .text      drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc               */
+/* 80226D4C-80226DA8 005C+00 rc=1 efc=0 .text      drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc) {
+asm void COutFont_c::drawFont(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc.s"
 }
 #pragma pop
 
 
-/* 80226DA8-80226DB0 0008+00 .text      setAlphaRatio__10COutFont_cFf                                */
+/* 80226DA8-80226DB0 0008+00 rc=1 efc=0 .text      setAlphaRatio__10COutFont_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRatio__10COutFont_cFf) {
+asm void COutFont_c::setAlphaRatio(f32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/setAlphaRatio__10COutFont_cFf.s"
 }
@@ -451,87 +542,86 @@ ASM_FUNCTION(setAlphaRatio__10COutFont_cFf) {
 
 
 /* ############################################################################################## */
-/* 80454A20-80454A24 0004+00 .sdata2    @4986                                                        */
+/* 80454A20-80454A24 0004+00 rc=1 efc=0 .sdata2    @4986                                                        */
 f32 lit_4986 = 2.0f;
 
-/* 80454A24-80454A28 0004+00 .sdata2    @4987                                                        */
+/* 80454A24-80454A28 0004+00 rc=1 efc=0 .sdata2    @4987                                                        */
 f32 lit_4987 = 3.0f;
 
-/* 80454A28-80454A2C 0004+00 .sdata2    @4988                                                        */
+/* 80454A28-80454A2C 0004+00 rc=1 efc=0 .sdata2    @4988                                                        */
 f32 lit_4988 = 0.5f;
 
-/* 80454A2C-80454A30 0004+00 .sdata2    @4989                                                        */
+/* 80454A2C-80454A30 0004+00 rc=1 efc=0 .sdata2    @4989                                                        */
 f32 lit_4989 = 360.0f;
 
-/* 80454A30-80454A34 0004+00 .sdata2    @4990                                                        */
+/* 80454A30-80454A34 0004+00 rc=1 efc=0 .sdata2    @4990                                                        */
 f32 lit_4990 = 28.0f;
 
-/* 80454A34-80454A38 0004+00 .sdata2    @4991                                                        */
+/* 80454A34-80454A38 0004+00 rc=1 efc=0 .sdata2    @4991                                                        */
 f32 lit_4991 = 50.0f;
 
-/* 80454A38-80454A3C 0004+00 .sdata2    @4992                                                        */
+/* 80454A38-80454A3C 0004+00 rc=1 efc=0 .sdata2    @4992                                                        */
 f32 lit_4992 = 205.0f;
 
-/* 80454A3C-80454A40 0004+00 .sdata2    @4993                                                        */
+/* 80454A3C-80454A40 0004+00 rc=1 efc=0 .sdata2    @4993                                                        */
 f32 lit_4993 = 9.0f;
 
-/* 80454A40-80454A44 0004+00 .sdata2    @4994                                                        */
+/* 80454A40-80454A44 0004+00 rc=1 efc=0 .sdata2    @4994                                                        */
 f32 lit_4994 = 18.0f;
 
-/* 80454A44-80454A48 0004+00 .sdata2    @4995                                                        */
+/* 80454A44-80454A48 0004+00 rc=1 efc=0 .sdata2    @4995                                                        */
 f32 lit_4995 = -3.0f;
 
-/* 80454A48-80454A4C 0004+00 .sdata2    @4996                                                        */
+/* 80454A48-80454A4C 0004+00 rc=1 efc=0 .sdata2    @4996                                                        */
 f32 lit_4996 = 4.0f;
 
-/* 80454A4C-80454A50 0004+00 .sdata2    @4997                                                        */
+/* 80454A4C-80454A50 0004+00 rc=1 efc=0 .sdata2    @4997                                                        */
 f32 lit_4997 = 1.25f;
 
-/* 80454A50-80454A58 0008+00 .sdata2    @5001                                                        */
+/* 80454A50-80454A58 0008+00 rc=1 efc=0 .sdata2    @5001                                                        */
 f64 d_msg_d_msg_out_font__lit_5001 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80226DB0-80228448 1698+00 .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
+/* 80226DB0-80228448 1698+00 rc=2 efc=0 .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10COutFont_cFP10J2DTextBoxfff) {
+asm void COutFont_c::draw(J2DTextBox* field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/draw__10COutFont_cFP10J2DTextBoxfff.s"
 }
 #pragma pop
 
 
-/* 80228448-80228490 0048+00 .text      reset__10COutFont_cFP10J2DTextBox                            */
+/* 80228448-80228490 0048+00 rc=1 efc=0 .text      reset__10COutFont_cFP10J2DTextBox                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__10COutFont_cFP10J2DTextBox) {
+asm void COutFont_c::reset(J2DTextBox* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/reset__10COutFont_cFP10J2DTextBox.s"
 }
 #pragma pop
 
 
-/* 80228490-80228530 00A0+00 .text      setBlendAnime__10COutFont_cFP10J2DPictures                   */
+/* 80228490-80228530 00A0+00 rc=1 efc=0 .text      setBlendAnime__10COutFont_cFP10J2DPictures                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlendAnime__10COutFont_cFP10J2DPictures) {
+asm void COutFont_c::setBlendAnime(J2DPicture* field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/setBlendAnime__10COutFont_cFP10J2DPictures.s"
 }
 #pragma pop
 
 
-/* 80228530-80228578 0048+00 .text      getBtiName__10COutFont_cFi                                   */
+/* 80228530-80228578 0048+00 rc=1 efc=0 .text      getBtiName__10COutFont_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBtiName__10COutFont_cFi) {
+asm void COutFont_c::getBtiName(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/getBtiName__10COutFont_cFi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

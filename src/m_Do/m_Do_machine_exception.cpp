@@ -6,33 +6,87 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTConsole (JUTConsole) False/False
+/* top-level dependencies (begin JUTConsole) */
+/* top-level dependencies (end JUTConsole) */
+struct JUTConsole {
+	/* 802E7C38 */ void print(char const*);
+	/* 802E7F7C */ void dumpToTerminal(s32);
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+/* top-level dependencies (begin dRes_control_c) */
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	/* 8003C638 */ void dump();
+};
+
+// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
+/* top-level dependencies (begin DynamicModuleControlBase) */
+/* top-level dependencies (end DynamicModuleControlBase) */
+struct DynamicModuleControlBase {
+	/* 80262470 */ void dump();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+// build JKRAramHeap (JKRAramHeap) False/False
+/* top-level dependencies (begin JKRAramHeap) */
+/* top-level dependencies (end JKRAramHeap) */
+struct JKRAramHeap {
+	/* 802D3218 */ void dump();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void print_f__FPCce();
-extern "C" extern void print__FPCc();
-extern "C" extern void dispHeapInfo__Fv();
-extern "C" extern void dispGameInfo__Fv();
-extern "C" extern void dispDateInfo__Fv();
-extern "C" extern void dispConsoleToTerminal__Fv();
-extern "C" extern void exception_addition__FP10JUTConsole();
+extern "C" static void print_f__FPCce();
+static void print(char const*);
+static void dispHeapInfo();
+static void dispGameInfo();
+static void dispDateInfo();
+static void dispConsoleToTerminal();
+void exception_addition(JUTConsole*);
+
+extern "C" static void print_f__FPCce();
+extern "C" static void print__FPCc();
+extern "C" static void dispHeapInfo__Fv();
+extern "C" static void dispGameInfo__Fv();
+extern "C" static void dispDateInfo__Fv();
+extern "C" static void dispConsoleToTerminal__Fv();
+extern "C" void exception_addition__FP10JUTConsole();
 SECTION_RODATA extern const u8 m_Do_m_Do_machine_exception__stringBase0[480];
 
 // 
 // External References:
 // 
 
-extern "C" extern void dump__14dRes_control_cFv();
-extern "C" extern void dump__24DynamicModuleControlBaseFv();
-extern "C" extern void getFreeSize__7JKRHeapFv();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void dump__11JKRAramHeapFv();
-extern "C" extern void print__10JUTConsoleFPCc();
-extern "C" extern void JUTConsole_print_f_va_();
-extern "C" extern void dumpToTerminal__10JUTConsoleFUi();
-extern "C" extern void OSTicksToCalendarTime();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _restgpr_23();
+extern "C" void JUTConsole_print_f_va_();
+extern "C" void OSTicksToCalendarTime();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+
+extern "C" void dump__14dRes_control_cFv();
+extern "C" void dump__24DynamicModuleControlBaseFv();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void dump__11JKRAramHeapFv();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void JUTConsole_print_f_va_();
+extern "C" void dumpToTerminal__10JUTConsoleFUi();
+extern "C" void OSTicksToCalendarTime();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
 SECTION_DATA extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 sPowerOnTime__7mDoMain[4];
@@ -50,22 +104,22 @@ SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 // Declarations:
 // 
 
-/* 80017D7C-80017E08 008C+00 .text      print_f__FPCce                                               */
+/* 80017D7C-80017E08 008C+00 rc=3 efc=0 .text      print_f__FPCce                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(print_f__FPCce) {
+extern "C" asm static void print_f__FPCce() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/print_f__FPCce.s"
 }
 #pragma pop
 
 
-/* 80017E08-80017E30 0028+00 .text      print__FPCc                                                  */
+/* 80017E08-80017E30 0028+00 rc=2 efc=0 .text      print__FPCc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(print__FPCc) {
+asm static void print(char const* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/print__FPCc.s"
 }
@@ -73,7 +127,7 @@ ASM_FUNCTION(print__FPCc) {
 
 
 /* ############################################################################################## */
-/* 80374460-80374640 01DF+01 .rodata    @stringBase0                                                 */
+/* 80374460-80374640 01DF+01 rc=3 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -104,59 +158,58 @@ SECTION_DEAD char* const stringBase_80374616 =
 SECTION_DEAD char* const pad_8037463F = "";
 #pragma pop
 
-/* 80017E30-80017F8C 015C+00 .text      dispHeapInfo__Fv                                             */
+/* 80017E30-80017F8C 015C+00 rc=1 efc=0 .text      dispHeapInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dispHeapInfo__Fv) {
+asm static void dispHeapInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/dispHeapInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80017F8C-80017FD0 0044+00 .text      dispGameInfo__Fv                                             */
+/* 80017F8C-80017FD0 0044+00 rc=1 efc=0 .text      dispGameInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dispGameInfo__Fv) {
+asm static void dispGameInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/dispGameInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80017FD0-80018124 0154+00 .text      dispDateInfo__Fv                                             */
+/* 80017FD0-80018124 0154+00 rc=1 efc=0 .text      dispDateInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dispDateInfo__Fv) {
+asm static void dispDateInfo() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/dispDateInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80018124-8001814C 0028+00 .text      dispConsoleToTerminal__Fv                                    */
+/* 80018124-8001814C 0028+00 rc=1 efc=0 .text      dispConsoleToTerminal__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dispConsoleToTerminal__Fv) {
+asm static void dispConsoleToTerminal() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/dispConsoleToTerminal__Fv.s"
 }
 #pragma pop
 
 
-/* 8001814C-8001817C 0030+00 .text      exception_addition__FP10JUTConsole                           */
+/* 8001814C-8001817C 0030+00 rc=1 efc=1 .text      exception_addition__FP10JUTConsole                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exception_addition__FP10JUTConsole) {
+asm void exception_addition(JUTConsole* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/exception_addition__FP10JUTConsole.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

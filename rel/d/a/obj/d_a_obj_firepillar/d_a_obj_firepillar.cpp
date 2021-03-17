@@ -6,35 +6,98 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjFPillar_c;
+struct fopAc_ac_c;
+struct csXyz;
+struct cXyz;
+
+struct daObjFPillar_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void action();
+	void actionOffInit();
+	void actionOff();
+	void actionOnWaitInit();
+	void actionOnWait();
+	void actionOnInit();
+	void actionOn();
+	void draw();
+	bool _delete();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cXyz {
+};
+
+struct csXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjFPillar_cFv();
-extern "C" extern void setBaseMtx__14daObjFPillar_cFv();
-extern "C" extern void Create__14daObjFPillar_cFv();
-extern "C" extern void create__14daObjFPillar_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void execute__14daObjFPillar_cFv();
-extern "C" extern void action__14daObjFPillar_cFv();
-extern "C" extern void actionOffInit__14daObjFPillar_cFv();
-extern "C" extern void actionOff__14daObjFPillar_cFv();
-extern "C" extern void actionOnWaitInit__14daObjFPillar_cFv();
-extern "C" extern void actionOnWait__14daObjFPillar_cFv();
-extern "C" extern void actionOnInit__14daObjFPillar_cFv();
-extern "C" extern void actionOn__14daObjFPillar_cFv();
-extern "C" extern void drawCylinder__FP4cXyzP4cXyzP5csXyz();
-extern "C" extern void draw__14daObjFPillar_cFv();
-extern "C" extern void _delete__14daObjFPillar_cFv();
-extern "C" extern void daObjFPillar_Draw__FP14daObjFPillar_c();
-extern "C" extern void daObjFPillar_Execute__FP14daObjFPillar_c();
-extern "C" extern void daObjFPillar_Delete__FP14daObjFPillar_c();
-extern "C" extern void daObjFPillar_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BE9A88();
-extern "C" extern void func_80BE9A90();
+void drawCylinder(cXyz*, cXyz*, csXyz*);
+void daObjFPillar_Draw(daObjFPillar_c*);
+void daObjFPillar_Execute(daObjFPillar_c*);
+void daObjFPillar_Delete(daObjFPillar_c*);
+void daObjFPillar_Create(fopAc_ac_c*);
+extern "C" void func_80BE9A88();
+extern "C" void func_80BE9A90();
+
+extern "C" void initBaseMtx__14daObjFPillar_cFv();
+extern "C" void setBaseMtx__14daObjFPillar_cFv();
+extern "C" void Create__14daObjFPillar_cFv();
+extern "C" void create__14daObjFPillar_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void execute__14daObjFPillar_cFv();
+extern "C" void action__14daObjFPillar_cFv();
+extern "C" void actionOffInit__14daObjFPillar_cFv();
+extern "C" void actionOff__14daObjFPillar_cFv();
+extern "C" void actionOnWaitInit__14daObjFPillar_cFv();
+extern "C" void actionOnWait__14daObjFPillar_cFv();
+extern "C" void actionOnInit__14daObjFPillar_cFv();
+extern "C" void actionOn__14daObjFPillar_cFv();
+extern "C" void drawCylinder__FP4cXyzP4cXyzP5csXyz();
+extern "C" void draw__14daObjFPillar_cFv();
+extern "C" bool _delete__14daObjFPillar_cFv();
+extern "C" void daObjFPillar_Draw__FP14daObjFPillar_c();
+extern "C" void daObjFPillar_Execute__FP14daObjFPillar_c();
+extern "C" void daObjFPillar_Delete__FP14daObjFPillar_c();
+extern "C" void daObjFPillar_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BE9A88();
+extern "C" void func_80BE9A90();
 SECTION_RODATA extern const u8 lit_3780[4];
 SECTION_RODATA extern const u32 lit_3781;
 SECTION_RODATA extern const u32 lit_3782;
@@ -63,7 +126,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -73,7 +138,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/initBaseMtx__14daObjFPillar_cFv.s"
 }
@@ -84,7 +149,7 @@ ASM_FUNCTION(initBaseMtx__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/setBaseMtx__14daObjFPillar_cFv.s"
 }
@@ -95,7 +160,7 @@ ASM_FUNCTION(setBaseMtx__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/Create__14daObjFPillar_cFv.s"
 }
@@ -106,7 +171,7 @@ ASM_FUNCTION(Create__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/func_80BE9230.s"
 }
@@ -117,7 +182,7 @@ ASM_FUNCTION(create__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/__dt__8cM3dGAabFv.s"
 }
@@ -128,7 +193,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/__dt__10dCcD_GSttsFv.s"
 }
@@ -139,7 +204,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/__dt__12dBgS_AcchCirFv.s"
 }
@@ -150,7 +215,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -161,7 +226,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/execute__14daObjFPillar_cFv.s"
 }
@@ -172,7 +237,7 @@ ASM_FUNCTION(execute__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/action__14daObjFPillar_cFv.s"
 }
@@ -183,7 +248,7 @@ ASM_FUNCTION(action__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOffInit__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOffInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOffInit__14daObjFPillar_cFv.s"
 }
@@ -194,7 +259,7 @@ ASM_FUNCTION(actionOffInit__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOff__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOff() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOff__14daObjFPillar_cFv.s"
 }
@@ -205,7 +270,7 @@ ASM_FUNCTION(actionOff__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWaitInit__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOnWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOnWaitInit__14daObjFPillar_cFv.s"
 }
@@ -216,7 +281,7 @@ ASM_FUNCTION(actionOnWaitInit__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWait__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOnWait__14daObjFPillar_cFv.s"
 }
@@ -227,7 +292,7 @@ ASM_FUNCTION(actionOnWait__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnInit__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOnInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOnInit__14daObjFPillar_cFv.s"
 }
@@ -238,7 +303,7 @@ ASM_FUNCTION(actionOnInit__14daObjFPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOn__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::actionOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/actionOn__14daObjFPillar_cFv.s"
 }
@@ -246,21 +311,16 @@ ASM_FUNCTION(actionOn__14daObjFPillar_cFv) {
 
 
 /* 80BE9980-80BE9984 0004+00 .text      drawCylinder__FP4cXyzP4cXyzP5csXyz                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawCylinder__FP4cXyzP4cXyzP5csXyz) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/drawCylinder__FP4cXyzP4cXyzP5csXyz.s"
+void drawCylinder(cXyz* field_0, cXyz* field_1, csXyz* field_2) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE9984-80BE99B8 0034+00 .text      draw__14daObjFPillar_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjFPillar_cFv) {
+asm void daObjFPillar_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/draw__14daObjFPillar_cFv.s"
 }
@@ -268,21 +328,16 @@ ASM_FUNCTION(draw__14daObjFPillar_cFv) {
 
 
 /* 80BE99B8-80BE99C0 0008+00 .text      _delete__14daObjFPillar_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjFPillar_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/_delete__14daObjFPillar_cFv.s"
+bool daObjFPillar_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE99C0-80BE99E0 0020+00 .text      daObjFPillar_Draw__FP14daObjFPillar_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFPillar_Draw__FP14daObjFPillar_c) {
+asm void daObjFPillar_Draw(daObjFPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/daObjFPillar_Draw__FP14daObjFPillar_c.s"
 }
@@ -293,7 +348,7 @@ ASM_FUNCTION(daObjFPillar_Draw__FP14daObjFPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFPillar_Execute__FP14daObjFPillar_c) {
+asm void daObjFPillar_Execute(daObjFPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/daObjFPillar_Execute__FP14daObjFPillar_c.s"
 }
@@ -304,7 +359,7 @@ ASM_FUNCTION(daObjFPillar_Execute__FP14daObjFPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFPillar_Delete__FP14daObjFPillar_c) {
+asm void daObjFPillar_Delete(daObjFPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/daObjFPillar_Delete__FP14daObjFPillar_c.s"
 }
@@ -315,7 +370,7 @@ ASM_FUNCTION(daObjFPillar_Delete__FP14daObjFPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFPillar_Create__FP10fopAc_ac_c) {
+asm void daObjFPillar_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/daObjFPillar_Create__FP10fopAc_ac_c.s"
 }
@@ -326,7 +381,7 @@ ASM_FUNCTION(daObjFPillar_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/__dt__10cCcD_GSttsFv.s"
 }
@@ -337,7 +392,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BE9A88) {
+extern "C" asm void func_80BE9A88() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/func_80BE9A88.s"
 }
@@ -348,7 +403,7 @@ ASM_FUNCTION(func_80BE9A88) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BE9A90) {
+extern "C" asm void func_80BE9A90() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/func_80BE9A90.s"
 }

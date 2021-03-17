@@ -6,24 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv6CstaSw_c;
+
+struct daLv6CstaSw_HIO_c {
+	daLv6CstaSw_HIO_c();
+	~daLv6CstaSw_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6CstaSw_c {
+	void setBaseMtx();
+	void create();
+	void searchSekizoAct(void*, void*);
+	void areaCheck();
+	void Execute();
+	bool Draw();
+	bool Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daLv6CstaSw_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daLv6CstaSw_cFv();
-extern "C" extern void create__13daLv6CstaSw_cFv();
-extern "C" extern void searchSekizoAct__13daLv6CstaSw_cFPvPv();
-extern "C" extern void areaCheck__13daLv6CstaSw_cFv();
-extern "C" extern void Execute__13daLv6CstaSw_cFv();
-extern "C" extern void Draw__13daLv6CstaSw_cFv();
-extern "C" extern void Delete__13daLv6CstaSw_cFv();
-extern "C" extern void daLv6CstaSw_Draw__FP13daLv6CstaSw_c();
-extern "C" extern void daLv6CstaSw_Execute__FP13daLv6CstaSw_c();
-extern "C" extern void daLv6CstaSw_Delete__FP13daLv6CstaSw_c();
-extern "C" extern void daLv6CstaSw_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daLv6CstaSw_HIO_cFv();
-extern "C" extern void __sinit_d_a_tag_lv6CstaSw_cpp();
+void daLv6CstaSw_Draw(daLv6CstaSw_c*);
+void daLv6CstaSw_Execute(daLv6CstaSw_c*);
+void daLv6CstaSw_Delete(daLv6CstaSw_c*);
+void daLv6CstaSw_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp();
+
+extern "C" void __ct__17daLv6CstaSw_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv6CstaSw_cFv();
+extern "C" void create__13daLv6CstaSw_cFv();
+extern "C" void searchSekizoAct__13daLv6CstaSw_cFPvPv();
+extern "C" void areaCheck__13daLv6CstaSw_cFv();
+extern "C" void Execute__13daLv6CstaSw_cFv();
+extern "C" bool Draw__13daLv6CstaSw_cFv();
+extern "C" bool Delete__13daLv6CstaSw_cFv();
+extern "C" void daLv6CstaSw_Draw__FP13daLv6CstaSw_c();
+extern "C" void daLv6CstaSw_Execute__FP13daLv6CstaSw_c();
+extern "C" void daLv6CstaSw_Delete__FP13daLv6CstaSw_c();
+extern "C" void daLv6CstaSw_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daLv6CstaSw_HIO_cFv();
+extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp();
 SECTION_RODATA extern const u8 lit_3724[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3725[8];
 SECTION_RODATA extern const u8 lit_3726[8];
@@ -40,8 +75,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -51,7 +89,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daLv6CstaSw_HIO_cFv) {
+asm daLv6CstaSw_HIO_c::daLv6CstaSw_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/__ct__17daLv6CstaSw_HIO_cFv.s"
 }
@@ -62,7 +100,7 @@ ASM_FUNCTION(__ct__17daLv6CstaSw_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -73,7 +111,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daLv6CstaSw_cFv) {
+asm void daLv6CstaSw_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/setBaseMtx__13daLv6CstaSw_cFv.s"
 }
@@ -84,7 +122,7 @@ ASM_FUNCTION(setBaseMtx__13daLv6CstaSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daLv6CstaSw_cFv) {
+asm void daLv6CstaSw_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/create__13daLv6CstaSw_cFv.s"
 }
@@ -95,7 +133,7 @@ ASM_FUNCTION(create__13daLv6CstaSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchSekizoAct__13daLv6CstaSw_cFPvPv) {
+asm void daLv6CstaSw_c::searchSekizoAct(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/searchSekizoAct__13daLv6CstaSw_cFPvPv.s"
 }
@@ -106,7 +144,7 @@ ASM_FUNCTION(searchSekizoAct__13daLv6CstaSw_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(areaCheck__13daLv6CstaSw_cFv) {
+asm void daLv6CstaSw_c::areaCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/areaCheck__13daLv6CstaSw_cFv.s"
 }
@@ -117,7 +155,7 @@ ASM_FUNCTION(areaCheck__13daLv6CstaSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daLv6CstaSw_cFv) {
+asm void daLv6CstaSw_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/Execute__13daLv6CstaSw_cFv.s"
 }
@@ -125,32 +163,22 @@ ASM_FUNCTION(Execute__13daLv6CstaSw_cFv) {
 
 
 /* 80D5B6B0-80D5B6B8 0008+00 .text      Draw__13daLv6CstaSw_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daLv6CstaSw_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/Draw__13daLv6CstaSw_cFv.s"
+bool daLv6CstaSw_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5B6B8-80D5B6C0 0008+00 .text      Delete__13daLv6CstaSw_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daLv6CstaSw_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/Delete__13daLv6CstaSw_cFv.s"
+bool daLv6CstaSw_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5B6C0-80D5B6E0 0020+00 .text      daLv6CstaSw_Draw__FP13daLv6CstaSw_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6CstaSw_Draw__FP13daLv6CstaSw_c) {
+asm void daLv6CstaSw_Draw(daLv6CstaSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Draw__FP13daLv6CstaSw_c.s"
 }
@@ -161,7 +189,7 @@ ASM_FUNCTION(daLv6CstaSw_Draw__FP13daLv6CstaSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6CstaSw_Execute__FP13daLv6CstaSw_c) {
+asm void daLv6CstaSw_Execute(daLv6CstaSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Execute__FP13daLv6CstaSw_c.s"
 }
@@ -172,7 +200,7 @@ ASM_FUNCTION(daLv6CstaSw_Execute__FP13daLv6CstaSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6CstaSw_Delete__FP13daLv6CstaSw_c) {
+asm void daLv6CstaSw_Delete(daLv6CstaSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Delete__FP13daLv6CstaSw_c.s"
 }
@@ -183,7 +211,7 @@ ASM_FUNCTION(daLv6CstaSw_Delete__FP13daLv6CstaSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6CstaSw_Create__FP10fopAc_ac_c) {
+asm void daLv6CstaSw_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/daLv6CstaSw_Create__FP10fopAc_ac_c.s"
 }
@@ -194,7 +222,7 @@ ASM_FUNCTION(daLv6CstaSw_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv6CstaSw_HIO_cFv) {
+asm daLv6CstaSw_HIO_c::~daLv6CstaSw_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/__dt__17daLv6CstaSw_HIO_cFv.s"
 }
@@ -205,7 +233,7 @@ ASM_FUNCTION(__dt__17daLv6CstaSw_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_lv6CstaSw_cpp) {
+extern "C" asm void __sinit_d_a_tag_lv6CstaSw_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/__sinit_d_a_tag_lv6CstaSw_cpp.s"
 }

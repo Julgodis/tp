@@ -6,28 +6,74 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_hb_class;
+struct fopAc_ac_c;
+struct csXyz;
+
+struct obj_hb_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daOBJ_HB_Draw__FP12obj_hb_class();
-extern "C" extern void obj_hb_carry__FP12obj_hb_class();
-extern "C" extern void wall_angle_get__FP12obj_hb_class();
-extern "C" extern void water_check__FP12obj_hb_class();
-extern "C" extern void obj_hb_set__FP12obj_hb_class();
-extern "C" extern void getGroundAngle__FP10fopAc_ac_cP5csXyz();
-extern "C" extern void obj_hb_drop__FP12obj_hb_class();
-extern "C" extern void obj_hb_float__FP12obj_hb_class();
-extern "C" extern void action__FP12obj_hb_class();
-extern "C" extern void daOBJ_HB_Execute__FP12obj_hb_class();
-extern "C" extern void daOBJ_HB_IsDelete__FP12obj_hb_class();
-extern "C" extern void daOBJ_HB_Delete__FP12obj_hb_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daOBJ_HB_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void func_80C1B5E8();
-extern "C" extern void func_80C1B5F0();
+void daOBJ_HB_Draw(obj_hb_class*);
+void obj_hb_carry(obj_hb_class*);
+void wall_angle_get(obj_hb_class*);
+void water_check(obj_hb_class*);
+void obj_hb_set(obj_hb_class*);
+void getGroundAngle(fopAc_ac_c*, csXyz*);
+void obj_hb_drop(obj_hb_class*);
+void obj_hb_float(obj_hb_class*);
+void action(obj_hb_class*);
+void daOBJ_HB_Execute(obj_hb_class*);
+bool daOBJ_HB_IsDelete(obj_hb_class*);
+void daOBJ_HB_Delete(obj_hb_class*);
+void useHeapInit(fopAc_ac_c*);
+void daOBJ_HB_Create(fopAc_ac_c*);
+extern "C" void func_80C1B5E8();
+extern "C" void func_80C1B5F0();
+
+extern "C" void daOBJ_HB_Draw__FP12obj_hb_class();
+extern "C" void obj_hb_carry__FP12obj_hb_class();
+extern "C" void wall_angle_get__FP12obj_hb_class();
+extern "C" void water_check__FP12obj_hb_class();
+extern "C" void obj_hb_set__FP12obj_hb_class();
+extern "C" void getGroundAngle__FP10fopAc_ac_cP5csXyz();
+extern "C" void obj_hb_drop__FP12obj_hb_class();
+extern "C" void obj_hb_float__FP12obj_hb_class();
+extern "C" void action__FP12obj_hb_class();
+extern "C" void daOBJ_HB_Execute__FP12obj_hb_class();
+extern "C" bool daOBJ_HB_IsDelete__FP12obj_hb_class();
+extern "C" void daOBJ_HB_Delete__FP12obj_hb_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daOBJ_HB_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void func_80C1B5E8();
+extern "C" void func_80C1B5F0();
 SECTION_RODATA extern const u32 lit_3665;
 SECTION_RODATA extern const u32 lit_3666;
 SECTION_RODATA extern const u8 lit_3667[4];
@@ -100,7 +146,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -110,7 +158,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOBJ_HB_Draw__FP12obj_hb_class) {
+asm void daOBJ_HB_Draw(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Draw__FP12obj_hb_class.s"
 }
@@ -121,7 +169,7 @@ ASM_FUNCTION(daOBJ_HB_Draw__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_hb_carry__FP12obj_hb_class) {
+asm void obj_hb_carry(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/obj_hb_carry__FP12obj_hb_class.s"
 }
@@ -132,7 +180,7 @@ ASM_FUNCTION(obj_hb_carry__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_angle_get__FP12obj_hb_class) {
+asm void wall_angle_get(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/wall_angle_get__FP12obj_hb_class.s"
 }
@@ -143,7 +191,7 @@ ASM_FUNCTION(wall_angle_get__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP12obj_hb_class) {
+asm void water_check(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/water_check__FP12obj_hb_class.s"
 }
@@ -154,7 +202,7 @@ ASM_FUNCTION(water_check__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_hb_set__FP12obj_hb_class) {
+asm void obj_hb_set(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/obj_hb_set__FP12obj_hb_class.s"
 }
@@ -165,7 +213,7 @@ ASM_FUNCTION(obj_hb_set__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroundAngle__FP10fopAc_ac_cP5csXyz) {
+asm void getGroundAngle(fopAc_ac_c* field_0, csXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/getGroundAngle__FP10fopAc_ac_cP5csXyz.s"
 }
@@ -176,7 +224,7 @@ ASM_FUNCTION(getGroundAngle__FP10fopAc_ac_cP5csXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_hb_drop__FP12obj_hb_class) {
+asm void obj_hb_drop(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/obj_hb_drop__FP12obj_hb_class.s"
 }
@@ -187,7 +235,7 @@ ASM_FUNCTION(obj_hb_drop__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_hb_float__FP12obj_hb_class) {
+asm void obj_hb_float(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/obj_hb_float__FP12obj_hb_class.s"
 }
@@ -198,7 +246,7 @@ ASM_FUNCTION(obj_hb_float__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12obj_hb_class) {
+asm void action(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/action__FP12obj_hb_class.s"
 }
@@ -209,7 +257,7 @@ ASM_FUNCTION(action__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOBJ_HB_Execute__FP12obj_hb_class) {
+asm void daOBJ_HB_Execute(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Execute__FP12obj_hb_class.s"
 }
@@ -217,21 +265,16 @@ ASM_FUNCTION(daOBJ_HB_Execute__FP12obj_hb_class) {
 
 
 /* 80C1B124-80C1B12C 0008+00 .text      daOBJ_HB_IsDelete__FP12obj_hb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daOBJ_HB_IsDelete__FP12obj_hb_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_IsDelete__FP12obj_hb_class.s"
+bool daOBJ_HB_IsDelete(obj_hb_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C1B12C-80C1B188 005C+00 .text      daOBJ_HB_Delete__FP12obj_hb_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOBJ_HB_Delete__FP12obj_hb_class) {
+asm void daOBJ_HB_Delete(obj_hb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Delete__FP12obj_hb_class.s"
 }
@@ -242,7 +285,7 @@ ASM_FUNCTION(daOBJ_HB_Delete__FP12obj_hb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -253,7 +296,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOBJ_HB_Create__FP10fopAc_ac_c) {
+asm void daOBJ_HB_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_Create__FP10fopAc_ac_c.s"
 }
@@ -264,7 +307,7 @@ ASM_FUNCTION(daOBJ_HB_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/__dt__8cM3dGSphFv.s"
 }
@@ -275,7 +318,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/__dt__8cM3dGAabFv.s"
 }
@@ -286,7 +329,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -297,7 +340,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1B5E8) {
+extern "C" asm void func_80C1B5E8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/func_80C1B5E8.s"
 }
@@ -308,7 +351,7 @@ ASM_FUNCTION(func_80C1B5E8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1B5F0) {
+extern "C" asm void func_80C1B5F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/func_80C1B5F0.s"
 }

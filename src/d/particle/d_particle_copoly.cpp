@@ -6,29 +6,180 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dPaPo_c (dPaPo_c) False/False
+// build dBgS_Acch (dBgS_Acch) False/False
+/* top-level dependencies (begin dBgS_Acch) */
+/* top-level dependencies (end dBgS_Acch) */
+struct dBgS_Acch {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin dPaPo_c) */
+// outer dependency: dBgS_Acch
+// outer dependency: cXyz
+// outer dependency: csXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPaPo_c) */
+struct dPaPo_c {
+	// dBgS_Acch
+	// cXyz
+	// csXyz
+	// dKy_tevstr_c
+	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
+	/* 80050CC4 */ void checkWaterIn(cXyz*, cXyz const*, dKy_tevstr_c const*, u32, char, f32, f32);
+	/* 80050E7C */ void setEffect(u32*, s32, dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, char, char*, char*);
+	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	/* 8005113C */ void clearID(u32*, char*);
+	/* 80051488 */ void getCenterEffType(s32) const;
+	/* 80051524 */ void getCenterEmitter(s32, s32);
+};
+
+// build dBgS_Acch (dBgS_Acch) True/True
+// build cXyz (cXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
+// build dPaPoT_c (dPaPoT_c) False/False
+// build cXyz (cXyz) True/True
+// build csXyz (csXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dPaPoT_c) */
+// outer dependency: cXyz
+// outer dependency: csXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPaPoT_c) */
+struct dPaPoT_c {
+	// cXyz
+	// csXyz
+	// dKy_tevstr_c
+	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	/* 80051294 */ void clearTwoAllID();
+	/* 80051470 */ void getRightEffType(s32) const;
+	/* 8005147C */ void getLeftEffType(s32) const;
+	/* 80051494 */ void getRightEmitter(s32, s32);
+	/* 800514DC */ void getLeftEmitter(s32, s32);
+};
+
+// build dPaPoF_c (dPaPoF_c) False/False
+// build cXyz (cXyz) True/True
+// build csXyz (csXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dPaPoF_c) */
+// outer dependency: cXyz
+// outer dependency: csXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPaPoF_c) */
+struct dPaPoF_c {
+	// cXyz
+	// csXyz
+	// dKy_tevstr_c
+	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	/* 80051424 */ void clearFourAllID();
+	/* 8005156C */ void getBackRightEffType(s32) const;
+	/* 80051578 */ void getBackLeftEffType(s32) const;
+	/* 80051584 */ void getBackRightEmitter(s32, s32);
+	/* 800515CC */ void getBackLeftEmitter(s32, s32);
+};
+
+// build dPa_control_c (dPa_control_c) False/False
+// build cXyz (cXyz) True/True
+// build csXyz (csXyz) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dPa_control_c) */
+// outer dependency: cXyz
+// outer dependency: csXyz
+// outer dependency: cBgS_PolyInfo
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	// cXyz
+	// csXyz
+	// cBgS_PolyInfo
+	// dKy_tevstr_c
+	// build level_c (dPa_control_c::level_c) False/False
+	/* dependencies (begin dPa_control_c::level_c) */
+	/* dependencies (end dPa_control_c::level_c) */
+	struct level_c {
+		/* 8004B918 */ void getEmitter(u32);
+	};
+
+	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, char);
+	/* 8004D770 */ void setStopContinue(u32);
+	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, char);
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build cBgS (cBgS) False/False
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin cBgS) */
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end cBgS) */
+struct cBgS {
+	// cBgS_PolyInfo
+	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
+};
+
+// build dBgS (dBgS) False/False
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin dBgS) */
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	// cBgS_PolyInfo
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__7dPaPo_cFP9dBgS_Acchff();
-extern "C" extern void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff();
-extern "C" extern void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc();
-extern "C" extern void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" extern void clearID__7dPaPo_cFPUlPUc();
-extern "C" extern void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" extern void clearTwoAllID__8dPaPoT_cFv();
-extern "C" extern void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" extern void clearFourAllID__8dPaPoF_cFv();
-extern "C" extern void getRightEffType__8dPaPoT_cCFi();
-extern "C" extern void getLeftEffType__8dPaPoT_cCFi();
-extern "C" extern void getCenterEffType__7dPaPo_cCFi();
-extern "C" extern void getRightEmitter__8dPaPoT_cFii();
-extern "C" extern void getLeftEmitter__8dPaPoT_cFii();
-extern "C" extern void getCenterEmitter__7dPaPo_cFii();
-extern "C" extern void getBackRightEffType__8dPaPoF_cCFi();
-extern "C" extern void getBackLeftEffType__8dPaPoF_cCFi();
-extern "C" extern void getBackRightEmitter__8dPaPoF_cFii();
-extern "C" extern void getBackLeftEmitter__8dPaPoF_cFii();
-extern "C" extern void __sinit_d_particle_copoly_cpp();
+extern "C" void __sinit_d_particle_copoly_cpp();
+
+extern "C" void init__7dPaPo_cFP9dBgS_Acchff();
+extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff();
+extern "C" void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc();
+extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearID__7dPaPo_cFPUlPUc();
+extern "C" void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearTwoAllID__8dPaPoT_cFv();
+extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearFourAllID__8dPaPoF_cFv();
+extern "C" void getRightEffType__8dPaPoT_cCFi();
+extern "C" void getLeftEffType__8dPaPoT_cCFi();
+extern "C" void getCenterEffType__7dPaPo_cCFi();
+extern "C" void getRightEmitter__8dPaPoT_cFii();
+extern "C" void getLeftEmitter__8dPaPoT_cFii();
+extern "C" void getCenterEmitter__7dPaPo_cFii();
+extern "C" void getBackRightEffType__8dPaPoF_cCFi();
+extern "C" void getBackLeftEffType__8dPaPoF_cCFi();
+extern "C" void getBackRightEmitter__8dPaPoF_cFii();
+extern "C" void getBackLeftEmitter__8dPaPoF_cFii();
+extern "C" void __sinit_d_particle_copoly_cpp();
 SECTION_DATA extern u8 d_particle_d_particle_copoly__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_particle_d_particle_copoly__lit_3816[3];
 SECTION_DATA extern void*lit_3817[3];
@@ -56,32 +207,42 @@ SECTION_SDATA2 extern u8 d_particle_d_particle_copoly__lit_3672[4 + 4 /* padding
 // External References:
 // 
 
-extern "C" extern void fopKyM_createWpillar__FPC4cXyzfi();
-extern "C" extern void getEmitter__Q213dPa_control_c7level_cFUl();
-extern "C" extern void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
-extern "C" extern void setStopContinue__13dPa_control_cFUl();
-extern "C" extern void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
-extern "C" extern void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_29();
+void fopKyM_createWpillar(cXyz const*, f32, s32);
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
+
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+extern "C" void setStopContinue__13dPa_control_cFUl();
+extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
+extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
-/* 80050C9C-80050CC4 0028+00 .text      init__7dPaPo_cFP9dBgS_Acchff                                 */
+/* 80050C9C-80050CC4 0028+00 rc=2 efc=2 .text      init__7dPaPo_cFP9dBgS_Acchff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__7dPaPo_cFP9dBgS_Acchff) {
+asm void dPaPo_c::init(dBgS_Acch* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/init__7dPaPo_cFP9dBgS_Acchff.s"
 }
@@ -89,205 +250,205 @@ ASM_FUNCTION(init__7dPaPo_cFP9dBgS_Acchff) {
 
 
 /* ############################################################################################## */
-/* 80451FF8-80452000 0004+04 .sdata2    @3672                                                        */
+/* 80451FF8-80452000 0004+04 rc=1 efc=0 .sdata2    @3672                                                        */
 u8 d_particle_d_particle_copoly__lit_3672[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80050CC4-80050E7C 01B8+00 .text      checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff   */
+/* 80050CC4-80050E7C 01B8+00 rc=1 efc=0 .text      checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff) {
+asm void dPaPo_c::checkWaterIn(cXyz* field_0, cXyz const* field_1, dKy_tevstr_c const* field_2, u32 field_3, char field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff.s"
 }
 #pragma pop
 
 
-/* 80050E7C-80051008 018C+00 .text      setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc */
+/* 80050E7C-80051008 018C+00 rc=3 efc=0 .text      setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc) {
+asm void dPaPo_c::setEffect(u32* field_0, s32 field_1, dKy_tevstr_c const* field_2, cXyz const* field_3, u32 field_4, u32 field_5, cXyz const* field_6, csXyz const* field_7, char field_8, char* field_9, char* field_10) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc.s"
 }
 #pragma pop
 
 
-/* 80051008-8005113C 0134+00 .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff */
+/* 80051008-8005113C 0134+00 rc=2 efc=1 .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff) {
+asm void dPaPo_c::setEffectCenter(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, csXyz const* field_5, cXyz const* field_6, char field_7, f32 field_8, f32 field_9) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff.s"
 }
 #pragma pop
 
 
-/* 8005113C-8005115C 0020+00 .text      clearID__7dPaPo_cFPUlPUc                                     */
+/* 8005113C-8005115C 0020+00 rc=2 efc=0 .text      clearID__7dPaPo_cFPUlPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearID__7dPaPo_cFPUlPUc) {
+asm void dPaPo_c::clearID(u32* field_0, char* field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/clearID__7dPaPo_cFPUlPUc.s"
 }
 #pragma pop
 
 
-/* 8005115C-80051294 0138+00 .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 8005115C-80051294 0138+00 rc=2 efc=1 .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff) {
+asm void dPaPoT_c::setEffectTwo(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, csXyz const* field_7, cXyz const* field_8, char field_9, f32 field_10, f32 field_11) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/func_8005115C.s"
 }
 #pragma pop
 
 
-/* 80051294-800512E8 0054+00 .text      clearTwoAllID__8dPaPoT_cFv                                   */
+/* 80051294-800512E8 0054+00 rc=1 efc=0 .text      clearTwoAllID__8dPaPoT_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearTwoAllID__8dPaPoT_cFv) {
+asm void dPaPoT_c::clearTwoAllID() {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/clearTwoAllID__8dPaPoT_cFv.s"
 }
 #pragma pop
 
 
-/* 800512E8-80051424 013C+00 .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 800512E8-80051424 013C+00 rc=1 efc=1 .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff) {
+asm void dPaPoF_c::setEffectFour(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, cXyz const* field_7, cXyz const* field_8, csXyz const* field_9, cXyz const* field_10, char field_11, f32 field_12, f32 field_13) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/func_800512E8.s"
 }
 #pragma pop
 
 
-/* 80051424-80051470 004C+00 .text      clearFourAllID__8dPaPoF_cFv                                  */
+/* 80051424-80051470 004C+00 rc=1 efc=1 .text      clearFourAllID__8dPaPoF_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearFourAllID__8dPaPoF_cFv) {
+asm void dPaPoF_c::clearFourAllID() {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/clearFourAllID__8dPaPoF_cFv.s"
 }
 #pragma pop
 
 
-/* 80051470-8005147C 000C+00 .text      getRightEffType__8dPaPoT_cCFi                                */
+/* 80051470-8005147C 000C+00 rc=2 efc=0 .text      getRightEffType__8dPaPoT_cCFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRightEffType__8dPaPoT_cCFi) {
+asm void dPaPoT_c::getRightEffType(s32 field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getRightEffType__8dPaPoT_cCFi.s"
 }
 #pragma pop
 
 
-/* 8005147C-80051488 000C+00 .text      getLeftEffType__8dPaPoT_cCFi                                 */
+/* 8005147C-80051488 000C+00 rc=2 efc=0 .text      getLeftEffType__8dPaPoT_cCFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftEffType__8dPaPoT_cCFi) {
+asm void dPaPoT_c::getLeftEffType(s32 field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getLeftEffType__8dPaPoT_cCFi.s"
 }
 #pragma pop
 
 
-/* 80051488-80051494 000C+00 .text      getCenterEffType__7dPaPo_cCFi                                */
+/* 80051488-80051494 000C+00 rc=2 efc=0 .text      getCenterEffType__7dPaPo_cCFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCenterEffType__7dPaPo_cCFi) {
+asm void dPaPo_c::getCenterEffType(s32 field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getCenterEffType__7dPaPo_cCFi.s"
 }
 #pragma pop
 
 
-/* 80051494-800514DC 0048+00 .text      getRightEmitter__8dPaPoT_cFii                                */
+/* 80051494-800514DC 0048+00 rc=2 efc=0 .text      getRightEmitter__8dPaPoT_cFii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRightEmitter__8dPaPoT_cFii) {
+asm void dPaPoT_c::getRightEmitter(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getRightEmitter__8dPaPoT_cFii.s"
 }
 #pragma pop
 
 
-/* 800514DC-80051524 0048+00 .text      getLeftEmitter__8dPaPoT_cFii                                 */
+/* 800514DC-80051524 0048+00 rc=2 efc=0 .text      getLeftEmitter__8dPaPoT_cFii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftEmitter__8dPaPoT_cFii) {
+asm void dPaPoT_c::getLeftEmitter(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getLeftEmitter__8dPaPoT_cFii.s"
 }
 #pragma pop
 
 
-/* 80051524-8005156C 0048+00 .text      getCenterEmitter__7dPaPo_cFii                                */
+/* 80051524-8005156C 0048+00 rc=2 efc=0 .text      getCenterEmitter__7dPaPo_cFii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCenterEmitter__7dPaPo_cFii) {
+asm void dPaPo_c::getCenterEmitter(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getCenterEmitter__7dPaPo_cFii.s"
 }
 #pragma pop
 
 
-/* 8005156C-80051578 000C+00 .text      getBackRightEffType__8dPaPoF_cCFi                            */
+/* 8005156C-80051578 000C+00 rc=1 efc=0 .text      getBackRightEffType__8dPaPoF_cCFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBackRightEffType__8dPaPoF_cCFi) {
+asm void dPaPoF_c::getBackRightEffType(s32 field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackRightEffType__8dPaPoF_cCFi.s"
 }
 #pragma pop
 
 
-/* 80051578-80051584 000C+00 .text      getBackLeftEffType__8dPaPoF_cCFi                             */
+/* 80051578-80051584 000C+00 rc=1 efc=0 .text      getBackLeftEffType__8dPaPoF_cCFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBackLeftEffType__8dPaPoF_cCFi) {
+asm void dPaPoF_c::getBackLeftEffType(s32 field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackLeftEffType__8dPaPoF_cCFi.s"
 }
 #pragma pop
 
 
-/* 80051584-800515CC 0048+00 .text      getBackRightEmitter__8dPaPoF_cFii                            */
+/* 80051584-800515CC 0048+00 rc=1 efc=0 .text      getBackRightEmitter__8dPaPoF_cFii                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBackRightEmitter__8dPaPoF_cFii) {
+asm void dPaPoF_c::getBackRightEmitter(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackRightEmitter__8dPaPoF_cFii.s"
 }
 #pragma pop
 
 
-/* 800515CC-80051614 0048+00 .text      getBackLeftEmitter__8dPaPoF_cFii                             */
+/* 800515CC-80051614 0048+00 rc=1 efc=0 .text      getBackLeftEmitter__8dPaPoF_cFii                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBackLeftEmitter__8dPaPoF_cFii) {
+asm void dPaPoF_c::getBackLeftEmitter(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackLeftEmitter__8dPaPoF_cFii.s"
 }
@@ -295,16 +456,16 @@ ASM_FUNCTION(getBackLeftEmitter__8dPaPoF_cFii) {
 
 
 /* ############################################################################################## */
-/* 803A85F8-803A8604 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803A85F8-803A8604 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_particle_d_particle_copoly__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80051614-800517B0 019C+00 .text      __sinit_d_particle_copoly_cpp                                */
+/* 80051614-800517B0 019C+00 rc=1 efc=1 .text      __sinit_d_particle_copoly_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_particle_copoly_cpp) {
+extern "C" asm void __sinit_d_particle_copoly_cpp() {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/__sinit_d_particle_copoly_cpp.s"
 }
@@ -312,98 +473,98 @@ ASM_FUNCTION(__sinit_d_particle_copoly_cpp) {
 
 
 /* ############################################################################################## */
-/* 803A8604-803A8610 000C+00 .data      @3816                                                        */
+/* 803A8604-803A8610 000C+00 rc=0 efc=0 .data      @3816                                                        */
 void* d_particle_d_particle_copoly__lit_3816[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getCenterEffType__7dPaPo_cCFi,
 };
 
-/* 803A8610-803A861C 000C+00 .data      @3817                                                        */
+/* 803A8610-803A861C 000C+00 rc=0 efc=0 .data      @3817                                                        */
 void* lit_3817[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getLeftEffType__8dPaPoT_cCFi,
 };
 
-/* 803A861C-803A8628 000C+00 .data      @3818                                                        */
+/* 803A861C-803A8628 000C+00 rc=0 efc=0 .data      @3818                                                        */
 void* d_particle_d_particle_copoly__lit_3818[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getRightEffType__8dPaPoT_cCFi,
 };
 
-/* 803A8628-803A864C 0024+00 .data      m_typeTwoData__8dPaPoT_c                                     */
+/* 803A8628-803A864C 0024+00 rc=0 efc=0 .data      m_typeTwoData__8dPaPoT_c                                     */
 u8 m_typeTwoData__8dPaPoT_c[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A864C-803A8658 000C+00 .data      @3826                                                        */
+/* 803A864C-803A8658 000C+00 rc=0 efc=0 .data      @3826                                                        */
 void* d_particle_d_particle_copoly__lit_3826[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getCenterEmitter__7dPaPo_cFii,
 };
 
-/* 803A8658-803A8664 000C+00 .data      @3827                                                        */
+/* 803A8658-803A8664 000C+00 rc=0 efc=0 .data      @3827                                                        */
 void* d_particle_d_particle_copoly__lit_3827[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getLeftEmitter__8dPaPoT_cFii,
 };
 
-/* 803A8664-803A8670 000C+00 .data      @3828                                                        */
+/* 803A8664-803A8670 000C+00 rc=0 efc=0 .data      @3828                                                        */
 void* d_particle_d_particle_copoly__lit_3828[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getRightEmitter__8dPaPoT_cFii,
 };
 
-/* 803A8670-803A8694 0024+00 .data      m_emitterTwoData__8dPaPoT_c                                  */
+/* 803A8670-803A8694 0024+00 rc=0 efc=0 .data      m_emitterTwoData__8dPaPoT_c                                  */
 u8 m_emitterTwoData__8dPaPoT_c[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A8694-803A86A0 000C+00 .data      @3841                                                        */
+/* 803A8694-803A86A0 000C+00 rc=0 efc=0 .data      @3841                                                        */
 void* d_particle_d_particle_copoly__lit_3841[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getCenterEffType__7dPaPo_cCFi,
 };
 
-/* 803A86A0-803A86AC 000C+00 .data      @3842                                                        */
+/* 803A86A0-803A86AC 000C+00 rc=0 efc=0 .data      @3842                                                        */
 void* d_particle_d_particle_copoly__lit_3842[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getLeftEffType__8dPaPoT_cCFi,
 };
 
-/* 803A86AC-803A86B8 000C+00 .data      @3843                                                        */
+/* 803A86AC-803A86B8 000C+00 rc=0 efc=0 .data      @3843                                                        */
 void* d_particle_d_particle_copoly__lit_3843[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getRightEffType__8dPaPoT_cCFi,
 };
 
-/* 803A86B8-803A86C4 000C+00 .data      @3844                                                        */
+/* 803A86B8-803A86C4 000C+00 rc=0 efc=0 .data      @3844                                                        */
 void* d_particle_d_particle_copoly__lit_3844[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getBackLeftEffType__8dPaPoF_cCFi,
 };
 
-/* 803A86C4-803A86D0 000C+00 .data      @3845                                                        */
+/* 803A86C4-803A86D0 000C+00 rc=0 efc=0 .data      @3845                                                        */
 void* d_particle_d_particle_copoly__lit_3845[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getBackRightEffType__8dPaPoF_cCFi,
 };
 
-/* 803A86D0-803A870C 003C+00 .data      m_typeFourData__8dPaPoF_c                                    */
+/* 803A86D0-803A870C 003C+00 rc=5 efc=5 .data      m_typeFourData__8dPaPoF_c                                    */
 u8 m_typeFourData__8dPaPoF_c[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -411,42 +572,42 @@ u8 m_typeFourData__8dPaPoF_c[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A870C-803A8718 000C+00 .data      @3850                                                        */
+/* 803A870C-803A8718 000C+00 rc=0 efc=0 .data      @3850                                                        */
 void* d_particle_d_particle_copoly__lit_3850[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getCenterEmitter__7dPaPo_cFii,
 };
 
-/* 803A8718-803A8724 000C+00 .data      @3851                                                        */
+/* 803A8718-803A8724 000C+00 rc=0 efc=0 .data      @3851                                                        */
 void* d_particle_d_particle_copoly__lit_3851[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getLeftEmitter__8dPaPoT_cFii,
 };
 
-/* 803A8724-803A8730 000C+00 .data      @3852                                                        */
+/* 803A8724-803A8730 000C+00 rc=0 efc=0 .data      @3852                                                        */
 void* d_particle_d_particle_copoly__lit_3852[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getRightEmitter__8dPaPoT_cFii,
 };
 
-/* 803A8730-803A873C 000C+00 .data      @3853                                                        */
+/* 803A8730-803A873C 000C+00 rc=0 efc=0 .data      @3853                                                        */
 void* d_particle_d_particle_copoly__lit_3853[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getBackLeftEmitter__8dPaPoF_cFii,
 };
 
-/* 803A873C-803A8748 000C+00 .data      @3854                                                        */
+/* 803A873C-803A8748 000C+00 rc=0 efc=0 .data      @3854                                                        */
 void* d_particle_d_particle_copoly__lit_3854[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)getBackRightEmitter__8dPaPoF_cFii,
 };
 
-/* 803A8748-803A87A0 003C+1C .data      m_emitterFourData__8dPaPoF_c                                 */
+/* 803A8748-803A87A0 003C+1C rc=5 efc=5 .data      m_emitterFourData__8dPaPoF_c                                 */
 u8 m_emitterFourData__8dPaPoF_c[88] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

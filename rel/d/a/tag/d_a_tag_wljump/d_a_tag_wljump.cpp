@@ -6,17 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagWljump_c;
+
+struct daTagWljump_c {
+	void create();
+	~daTagWljump_c();
+	void execute();
+	bool draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__13daTagWljump_cFv();
-extern "C" extern void daTagWljump_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daTagWljump_cFv();
-extern "C" extern void daTagWljump_Delete__FP13daTagWljump_c();
-extern "C" extern void execute__13daTagWljump_cFv();
-extern "C" extern void daTagWljump_Execute__FP13daTagWljump_c();
-extern "C" extern void draw__13daTagWljump_cFv();
-extern "C" extern void daTagWljump_Draw__FP13daTagWljump_c();
+void daTagWljump_Create(fopAc_ac_c*);
+void daTagWljump_Delete(daTagWljump_c*);
+void daTagWljump_Execute(daTagWljump_c*);
+void daTagWljump_Draw(daTagWljump_c*);
+
+extern "C" void create__13daTagWljump_cFv();
+extern "C" void daTagWljump_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagWljump_cFv();
+extern "C" void daTagWljump_Delete__FP13daTagWljump_c();
+extern "C" void execute__13daTagWljump_cFv();
+extern "C" void daTagWljump_Execute__FP13daTagWljump_c();
+extern "C" bool draw__13daTagWljump_cFv();
+extern "C" void daTagWljump_Draw__FP13daTagWljump_c();
 SECTION_RODATA extern const u32 lit_4044;
 SECTION_RODATA extern const u32 lit_4045;
 SECTION_RODATA extern const u8 lit_4046[4 + 4 /* padding */];
@@ -35,7 +57,9 @@ SECTION_DATA extern u8 g_profile_Tag_Wljump[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +69,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagWljump_cFv) {
+asm void daTagWljump_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/create__13daTagWljump_cFv.s"
 }
@@ -56,7 +80,7 @@ ASM_FUNCTION(create__13daTagWljump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWljump_Create__FP10fopAc_ac_c) {
+asm void daTagWljump_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Create__FP10fopAc_ac_c.s"
 }
@@ -67,7 +91,7 @@ ASM_FUNCTION(daTagWljump_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagWljump_cFv) {
+asm daTagWljump_c::~daTagWljump_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/__dt__13daTagWljump_cFv.s"
 }
@@ -78,7 +102,7 @@ ASM_FUNCTION(__dt__13daTagWljump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWljump_Delete__FP13daTagWljump_c) {
+asm void daTagWljump_Delete(daTagWljump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Delete__FP13daTagWljump_c.s"
 }
@@ -89,7 +113,7 @@ ASM_FUNCTION(daTagWljump_Delete__FP13daTagWljump_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagWljump_cFv) {
+asm void daTagWljump_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/execute__13daTagWljump_cFv.s"
 }
@@ -100,7 +124,7 @@ ASM_FUNCTION(execute__13daTagWljump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWljump_Execute__FP13daTagWljump_c) {
+asm void daTagWljump_Execute(daTagWljump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Execute__FP13daTagWljump_c.s"
 }
@@ -108,21 +132,16 @@ ASM_FUNCTION(daTagWljump_Execute__FP13daTagWljump_c) {
 
 
 /* 80D6589C-80D658A4 0008+00 .text      draw__13daTagWljump_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__13daTagWljump_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/draw__13daTagWljump_cFv.s"
+bool daTagWljump_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D658A4-80D658C4 0020+00 .text      daTagWljump_Draw__FP13daTagWljump_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWljump_Draw__FP13daTagWljump_c) {
+asm void daTagWljump_Draw(daTagWljump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/daTagWljump_Draw__FP13daTagWljump_c.s"
 }

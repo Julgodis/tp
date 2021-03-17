@@ -6,38 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_Event_c;
+struct fopAc_ac_c;
+
+struct daTag_Event_c {
+	void getEventNo();
+	void getSwbit();
+	void getSwbit2();
+	void getType();
+	void getInvalidEventFlag();
+	void getAreaType();
+	void getValidEventFlag();
+	void horseRodeo();
+	void arrivalTerms();
+	void demoInitProc();
+	void demoEndProc();
+	void demoProc();
+	void create();
+	void actionNext();
+	void actionEvent();
+	void actionReady();
+	void checkArea();
+	void actionHunt();
+	void actionArrival();
+	bool actionWait();
+	void actionHunt2();
+	void execute();
+	bool draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTag_getBk__FUl();
-extern "C" extern void getEventNo__13daTag_Event_cFv();
-extern "C" extern void getSwbit__13daTag_Event_cFv();
-extern "C" extern void getSwbit2__13daTag_Event_cFv();
-extern "C" extern void getType__13daTag_Event_cFv();
-extern "C" extern void getInvalidEventFlag__13daTag_Event_cFv();
-extern "C" extern void getAreaType__13daTag_Event_cFv();
-extern "C" extern void getValidEventFlag__13daTag_Event_cFv();
-extern "C" extern void horseRodeo__13daTag_Event_cFv();
-extern "C" extern void arrivalTerms__13daTag_Event_cFv();
-extern "C" extern void demoInitProc__13daTag_Event_cFv();
-extern "C" extern void demoEndProc__13daTag_Event_cFv();
-extern "C" extern void demoProc__13daTag_Event_cFv();
-extern "C" extern void create__13daTag_Event_cFv();
-extern "C" extern void actionNext__13daTag_Event_cFv();
-extern "C" extern void actionEvent__13daTag_Event_cFv();
-extern "C" extern void actionReady__13daTag_Event_cFv();
-extern "C" extern void checkArea__13daTag_Event_cFv();
-extern "C" extern void actionHunt__13daTag_Event_cFv();
-extern "C" extern void actionArrival__13daTag_Event_cFv();
-extern "C" extern void actionWait__13daTag_Event_cFv();
-extern "C" extern void actionHunt2__13daTag_Event_cFv();
-extern "C" extern void execute__13daTag_Event_cFv();
-extern "C" extern void draw__13daTag_Event_cFv();
-extern "C" extern void daTag_Event_Draw__FP13daTag_Event_c();
-extern "C" extern void daTag_Event_Execute__FP13daTag_Event_c();
-extern "C" extern void daTag_Event_IsDelete__FP13daTag_Event_c();
-extern "C" extern void daTag_Event_Delete__FP13daTag_Event_c();
-extern "C" extern void daTag_Event_Create__FP10fopAc_ac_c();
+void daTag_getBk(u32);
+void daTag_Event_Draw(daTag_Event_c*);
+void daTag_Event_Execute(daTag_Event_c*);
+bool daTag_Event_IsDelete(daTag_Event_c*);
+void daTag_Event_Delete(daTag_Event_c*);
+void daTag_Event_Create(fopAc_ac_c*);
+
+extern "C" void daTag_getBk__FUl();
+extern "C" void getEventNo__13daTag_Event_cFv();
+extern "C" void getSwbit__13daTag_Event_cFv();
+extern "C" void getSwbit2__13daTag_Event_cFv();
+extern "C" void getType__13daTag_Event_cFv();
+extern "C" void getInvalidEventFlag__13daTag_Event_cFv();
+extern "C" void getAreaType__13daTag_Event_cFv();
+extern "C" void getValidEventFlag__13daTag_Event_cFv();
+extern "C" void horseRodeo__13daTag_Event_cFv();
+extern "C" void arrivalTerms__13daTag_Event_cFv();
+extern "C" void demoInitProc__13daTag_Event_cFv();
+extern "C" void demoEndProc__13daTag_Event_cFv();
+extern "C" void demoProc__13daTag_Event_cFv();
+extern "C" void create__13daTag_Event_cFv();
+extern "C" void actionNext__13daTag_Event_cFv();
+extern "C" void actionEvent__13daTag_Event_cFv();
+extern "C" void actionReady__13daTag_Event_cFv();
+extern "C" void checkArea__13daTag_Event_cFv();
+extern "C" void actionHunt__13daTag_Event_cFv();
+extern "C" void actionArrival__13daTag_Event_cFv();
+extern "C" bool actionWait__13daTag_Event_cFv();
+extern "C" void actionHunt2__13daTag_Event_cFv();
+extern "C" void execute__13daTag_Event_cFv();
+extern "C" bool draw__13daTag_Event_cFv();
+extern "C" void daTag_Event_Draw__FP13daTag_Event_c();
+extern "C" void daTag_Event_Execute__FP13daTag_Event_c();
+extern "C" bool daTag_Event_IsDelete__FP13daTag_Event_c();
+extern "C" void daTag_Event_Delete__FP13daTag_Event_c();
+extern "C" void daTag_Event_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3814;
 SECTION_RODATA extern const u32 lit_3815;
 SECTION_RODATA extern const u32 lit_3954;
@@ -50,7 +93,9 @@ SECTION_DATA extern u8 g_profile_TAG_EVENT[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +105,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_getBk__FUl) {
+asm void daTag_getBk(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_getBk__FUl.s"
 }
@@ -71,7 +116,7 @@ ASM_FUNCTION(daTag_getBk__FUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventNo__13daTag_Event_cFv) {
+asm void daTag_Event_c::getEventNo() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getEventNo__13daTag_Event_cFv.s"
 }
@@ -82,7 +127,7 @@ ASM_FUNCTION(getEventNo__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwbit__13daTag_Event_cFv) {
+asm void daTag_Event_c::getSwbit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getSwbit__13daTag_Event_cFv.s"
 }
@@ -93,7 +138,7 @@ ASM_FUNCTION(getSwbit__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwbit2__13daTag_Event_cFv) {
+asm void daTag_Event_c::getSwbit2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getSwbit2__13daTag_Event_cFv.s"
 }
@@ -104,7 +149,7 @@ ASM_FUNCTION(getSwbit2__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__13daTag_Event_cFv) {
+asm void daTag_Event_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getType__13daTag_Event_cFv.s"
 }
@@ -115,7 +160,7 @@ ASM_FUNCTION(getType__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getInvalidEventFlag__13daTag_Event_cFv) {
+asm void daTag_Event_c::getInvalidEventFlag() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getInvalidEventFlag__13daTag_Event_cFv.s"
 }
@@ -126,7 +171,7 @@ ASM_FUNCTION(getInvalidEventFlag__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAreaType__13daTag_Event_cFv) {
+asm void daTag_Event_c::getAreaType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getAreaType__13daTag_Event_cFv.s"
 }
@@ -137,7 +182,7 @@ ASM_FUNCTION(getAreaType__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValidEventFlag__13daTag_Event_cFv) {
+asm void daTag_Event_c::getValidEventFlag() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/getValidEventFlag__13daTag_Event_cFv.s"
 }
@@ -148,7 +193,7 @@ ASM_FUNCTION(getValidEventFlag__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(horseRodeo__13daTag_Event_cFv) {
+asm void daTag_Event_c::horseRodeo() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/horseRodeo__13daTag_Event_cFv.s"
 }
@@ -159,7 +204,7 @@ ASM_FUNCTION(horseRodeo__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(arrivalTerms__13daTag_Event_cFv) {
+asm void daTag_Event_c::arrivalTerms() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/arrivalTerms__13daTag_Event_cFv.s"
 }
@@ -170,7 +215,7 @@ ASM_FUNCTION(arrivalTerms__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitProc__13daTag_Event_cFv) {
+asm void daTag_Event_c::demoInitProc() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/demoInitProc__13daTag_Event_cFv.s"
 }
@@ -178,32 +223,22 @@ ASM_FUNCTION(demoInitProc__13daTag_Event_cFv) {
 
 
 /* 8048AEF8-8048AEFC 0004+00 .text      demoEndProc__13daTag_Event_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoEndProc__13daTag_Event_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/demoEndProc__13daTag_Event_cFv.s"
+void daTag_Event_c::demoEndProc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048AEFC-8048AF00 0004+00 .text      demoProc__13daTag_Event_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoProc__13daTag_Event_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/demoProc__13daTag_Event_cFv.s"
+void daTag_Event_c::demoProc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048AF00-8048B0E4 01E4+00 .text      create__13daTag_Event_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTag_Event_cFv) {
+asm void daTag_Event_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/create__13daTag_Event_cFv.s"
 }
@@ -214,7 +249,7 @@ ASM_FUNCTION(create__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionNext__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionNext() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionNext__13daTag_Event_cFv.s"
 }
@@ -225,7 +260,7 @@ ASM_FUNCTION(actionNext__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionEvent__13daTag_Event_cFv.s"
 }
@@ -236,7 +271,7 @@ ASM_FUNCTION(actionEvent__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionReady__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionReady() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionReady__13daTag_Event_cFv.s"
 }
@@ -247,7 +282,7 @@ ASM_FUNCTION(actionReady__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__13daTag_Event_cFv) {
+asm void daTag_Event_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/checkArea__13daTag_Event_cFv.s"
 }
@@ -258,7 +293,7 @@ ASM_FUNCTION(checkArea__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionHunt__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionHunt() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionHunt__13daTag_Event_cFv.s"
 }
@@ -269,7 +304,7 @@ ASM_FUNCTION(actionHunt__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionArrival__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionArrival() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionArrival__13daTag_Event_cFv.s"
 }
@@ -277,21 +312,16 @@ ASM_FUNCTION(actionArrival__13daTag_Event_cFv) {
 
 
 /* 8048B5F4-8048B5FC 0008+00 .text      actionWait__13daTag_Event_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__13daTag_Event_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionWait__13daTag_Event_cFv.s"
+bool daTag_Event_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B5FC-8048B6D4 00D8+00 .text      actionHunt2__13daTag_Event_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionHunt2__13daTag_Event_cFv) {
+asm void daTag_Event_c::actionHunt2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionHunt2__13daTag_Event_cFv.s"
 }
@@ -302,7 +332,7 @@ ASM_FUNCTION(actionHunt2__13daTag_Event_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTag_Event_cFv) {
+asm void daTag_Event_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/execute__13daTag_Event_cFv.s"
 }
@@ -310,21 +340,16 @@ ASM_FUNCTION(execute__13daTag_Event_cFv) {
 
 
 /* 8048B784-8048B78C 0008+00 .text      draw__13daTag_Event_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__13daTag_Event_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/draw__13daTag_Event_cFv.s"
+bool daTag_Event_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B78C-8048B7AC 0020+00 .text      daTag_Event_Draw__FP13daTag_Event_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Event_Draw__FP13daTag_Event_c) {
+asm void daTag_Event_Draw(daTag_Event_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Draw__FP13daTag_Event_c.s"
 }
@@ -335,7 +360,7 @@ ASM_FUNCTION(daTag_Event_Draw__FP13daTag_Event_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Event_Execute__FP13daTag_Event_c) {
+asm void daTag_Event_Execute(daTag_Event_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Execute__FP13daTag_Event_c.s"
 }
@@ -343,21 +368,16 @@ ASM_FUNCTION(daTag_Event_Execute__FP13daTag_Event_c) {
 
 
 /* 8048B7D0-8048B7D8 0008+00 .text      daTag_Event_IsDelete__FP13daTag_Event_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Event_IsDelete__FP13daTag_Event_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_IsDelete__FP13daTag_Event_c.s"
+bool daTag_Event_IsDelete(daTag_Event_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B7D8-8048B808 0030+00 .text      daTag_Event_Delete__FP13daTag_Event_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Event_Delete__FP13daTag_Event_c) {
+asm void daTag_Event_Delete(daTag_Event_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Delete__FP13daTag_Event_c.s"
 }
@@ -368,7 +388,7 @@ ASM_FUNCTION(daTag_Event_Delete__FP13daTag_Event_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Event_Create__FP10fopAc_ac_c) {
+asm void daTag_Event_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Create__FP10fopAc_ac_c.s"
 }

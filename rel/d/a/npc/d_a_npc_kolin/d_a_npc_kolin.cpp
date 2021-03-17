@@ -6,123 +6,329 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daNpc_Kolin_c {
+	~daNpc_Kolin_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void getType();
+	void isDelete();
+	void reset();
+	void afterJntAnm(s32);
+	void setParam();
+	void checkChangeEvt();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void beforeMove();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void drawOtherMdl();
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void selectAction();
+	void calcFollowSpeedAndAngle(fopAc_ac_c*, s32, s32);
+	void followPlayer(s32);
+	void lookup(u8);
+	void cutNoRide(s32);
+	void cutHail(s32);
+	void cutGiveMeWoodSwd(s32);
+	void cutGetWoodSwd(s32);
+	void cutConversationAboutLoopHole(s32);
+	void cutCacaricoConversation(s32);
+	void cutConversationAboutDeathMt(s32);
+	void cutConversationAboutGoron(s32);
+	void cutClothTry(s32);
+	void cutThankYou(s32);
+	void wait(void*);
+	void timidWalk(void*);
+	void follow(void*);
+	void clothWait(void*);
+	void talk(void*);
+	s32 getEyeballMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct dAttention_c {
+	void getDistTable(s32);
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	bool getEyeballLMaterialNo();
+	bool getEyeballRMaterialNo();
+	bool evtEndProc();
+	void afterMoved();
+	bool chkXYItems();
+	void decTmr();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	bool afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+	daNpcT_ActorMngr_c();
+};
+
+struct daNpcT_Path_c {
+	~daNpcT_Path_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpc_Kolin_Param_c {
+	~daNpc_Kolin_Param_c();
+};
+
+struct daTag_EvtArea_c {
+	void chkPointInArea(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daNpc_Kolin_cFv();
-extern "C" extern void create__13daNpc_Kolin_cFv();
-extern "C" extern void CreateHeap__13daNpc_Kolin_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__13daNpc_Kolin_cFv();
-extern "C" extern void Execute__13daNpc_Kolin_cFv();
-extern "C" extern void Draw__13daNpc_Kolin_cFv();
-extern "C" extern void createHeapCallBack__13daNpc_Kolin_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpc_Kolin_cFP8J3DJointi();
-extern "C" extern void getType__13daNpc_Kolin_cFv();
-extern "C" extern void isDelete__13daNpc_Kolin_cFv();
-extern "C" extern void reset__13daNpc_Kolin_cFv();
-extern "C" extern void afterJntAnm__13daNpc_Kolin_cFi();
-extern "C" extern void setParam__13daNpc_Kolin_cFv();
-extern "C" extern void checkChangeEvt__13daNpc_Kolin_cFv();
-extern "C" extern void setAfterTalkMotion__13daNpc_Kolin_cFv();
-extern "C" extern void srchActors__13daNpc_Kolin_cFv();
-extern "C" extern void evtTalk__13daNpc_Kolin_cFv();
-extern "C" extern void evtCutProc__13daNpc_Kolin_cFv();
-extern "C" extern void action__13daNpc_Kolin_cFv();
-extern "C" extern void beforeMove__13daNpc_Kolin_cFv();
-extern "C" extern void setAttnPos__13daNpc_Kolin_cFv();
-extern "C" extern void setCollision__13daNpc_Kolin_cFv();
-extern "C" extern void drawDbgInfo__13daNpc_Kolin_cFv();
-extern "C" extern void drawOtherMdl__13daNpc_Kolin_cFv();
-extern "C" extern void changeAnm__13daNpc_Kolin_cFPiPi();
-extern "C" extern void changeBck__13daNpc_Kolin_cFPiPi();
-extern "C" extern void selectAction__13daNpc_Kolin_cFv();
-extern "C" extern void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
-extern "C" extern void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
-extern "C" extern void calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii();
-extern "C" extern void followPlayer__13daNpc_Kolin_cFi();
-extern "C" extern void getDistTable__12dAttention_cFi();
-extern "C" extern void lookup__13daNpc_Kolin_cFUc();
-extern "C" extern void cutNoRide__13daNpc_Kolin_cFi();
-extern "C" extern void cutHail__13daNpc_Kolin_cFi();
-extern "C" extern void cutGiveMeWoodSwd__13daNpc_Kolin_cFi();
-extern "C" extern void cutGetWoodSwd__13daNpc_Kolin_cFi();
-extern "C" extern void cutConversationAboutLoopHole__13daNpc_Kolin_cFi();
-extern "C" extern void cutCacaricoConversation__13daNpc_Kolin_cFi();
-extern "C" extern void cutConversationAboutDeathMt__13daNpc_Kolin_cFi();
-extern "C" extern void cutConversationAboutGoron__13daNpc_Kolin_cFi();
-extern "C" extern void cutClothTry__13daNpc_Kolin_cFi();
-extern "C" extern void cutThankYou__13daNpc_Kolin_cFi();
-extern "C" extern void wait__13daNpc_Kolin_cFPv();
-extern "C" extern void timidWalk__13daNpc_Kolin_cFPv();
-extern "C" extern void follow__13daNpc_Kolin_cFPv();
-extern "C" extern void clothWait__13daNpc_Kolin_cFPv();
-extern "C" extern void talk__13daNpc_Kolin_cFPv();
-extern "C" extern void daNpc_Kolin_Create__FPv();
-extern "C" extern void daNpc_Kolin_Delete__FPv();
-extern "C" extern void daNpc_Kolin_Execute__FPv();
-extern "C" extern void daNpc_Kolin_Draw__FPv();
-extern "C" extern void daNpc_Kolin_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__13daNpcT_Path_cFv();
-extern "C" extern void __ct__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getEyeballLMaterialNo__8daNpcT_cFv();
-extern "C" extern void getEyeballRMaterialNo__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void afterMoved__8daNpcT_cFv();
-extern "C" extern void chkXYItems__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void afterSetMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void changeBtp__8daNpcT_cFPiPi();
-extern "C" extern void changeBtk__8daNpcT_cFPiPi();
-extern "C" extern void func_8055A1C4();
-extern "C" extern void func_8055A1E0();
-extern "C" extern void __sinit_d_a_npc_kolin_cpp();
-extern "C" extern void __ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void getEyeballMaterialNo__13daNpc_Kolin_cFv();
-extern "C" extern void getHeadJointNo__13daNpc_Kolin_cFv();
-extern "C" extern void getNeckJointNo__13daNpc_Kolin_cFv();
-extern "C" extern void getBackboneJointNo__13daNpc_Kolin_cFv();
-extern "C" extern void checkChangeJoint__13daNpc_Kolin_cFi();
-extern "C" extern void checkRemoveJoint__13daNpc_Kolin_cFi();
-extern "C" extern void getFootLJointNo__13daNpc_Kolin_cFv();
-extern "C" extern void getFootRJointNo__13daNpc_Kolin_cFv();
-extern "C" extern void __dt__19daNpc_Kolin_Param_cFv();
-extern "C" extern void func_8055A530();
-extern "C" extern void func_8055A538();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
+void daNpc_Kolin_Create(void*);
+void daNpc_Kolin_Delete(void*);
+void daNpc_Kolin_Execute(void*);
+void daNpc_Kolin_Draw(void*);
+bool daNpc_Kolin_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void func_8055A1C4();
+extern "C" void func_8055A1E0();
+extern "C" void __sinit_d_a_npc_kolin_cpp();
+extern "C" void __ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_8055A530();
+extern "C" void func_8055A538();
+
+extern "C" void __dt__13daNpc_Kolin_cFv();
+extern "C" void create__13daNpc_Kolin_cFv();
+extern "C" void CreateHeap__13daNpc_Kolin_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_Kolin_cFv();
+extern "C" void Execute__13daNpc_Kolin_cFv();
+extern "C" void Draw__13daNpc_Kolin_cFv();
+extern "C" void createHeapCallBack__13daNpc_Kolin_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_Kolin_cFP8J3DJointi();
+extern "C" void getType__13daNpc_Kolin_cFv();
+extern "C" void isDelete__13daNpc_Kolin_cFv();
+extern "C" void reset__13daNpc_Kolin_cFv();
+extern "C" void afterJntAnm__13daNpc_Kolin_cFi();
+extern "C" void setParam__13daNpc_Kolin_cFv();
+extern "C" void checkChangeEvt__13daNpc_Kolin_cFv();
+extern "C" void setAfterTalkMotion__13daNpc_Kolin_cFv();
+extern "C" void srchActors__13daNpc_Kolin_cFv();
+extern "C" void evtTalk__13daNpc_Kolin_cFv();
+extern "C" void evtCutProc__13daNpc_Kolin_cFv();
+extern "C" void action__13daNpc_Kolin_cFv();
+extern "C" void beforeMove__13daNpc_Kolin_cFv();
+extern "C" void setAttnPos__13daNpc_Kolin_cFv();
+extern "C" void setCollision__13daNpc_Kolin_cFv();
+extern "C" bool drawDbgInfo__13daNpc_Kolin_cFv();
+extern "C" void drawOtherMdl__13daNpc_Kolin_cFv();
+extern "C" void changeAnm__13daNpc_Kolin_cFPiPi();
+extern "C" void changeBck__13daNpc_Kolin_cFPiPi();
+extern "C" void selectAction__13daNpc_Kolin_cFv();
+extern "C" void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i();
+extern "C" void calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii();
+extern "C" void followPlayer__13daNpc_Kolin_cFi();
+extern "C" void getDistTable__12dAttention_cFi();
+extern "C" void lookup__13daNpc_Kolin_cFUc();
+extern "C" void cutNoRide__13daNpc_Kolin_cFi();
+extern "C" void cutHail__13daNpc_Kolin_cFi();
+extern "C" void cutGiveMeWoodSwd__13daNpc_Kolin_cFi();
+extern "C" void cutGetWoodSwd__13daNpc_Kolin_cFi();
+extern "C" void cutConversationAboutLoopHole__13daNpc_Kolin_cFi();
+extern "C" void cutCacaricoConversation__13daNpc_Kolin_cFi();
+extern "C" void cutConversationAboutDeathMt__13daNpc_Kolin_cFi();
+extern "C" void cutConversationAboutGoron__13daNpc_Kolin_cFi();
+extern "C" void cutClothTry__13daNpc_Kolin_cFi();
+extern "C" void cutThankYou__13daNpc_Kolin_cFi();
+extern "C" void wait__13daNpc_Kolin_cFPv();
+extern "C" void timidWalk__13daNpc_Kolin_cFPv();
+extern "C" void follow__13daNpc_Kolin_cFPv();
+extern "C" void clothWait__13daNpc_Kolin_cFPv();
+extern "C" void talk__13daNpc_Kolin_cFPv();
+extern "C" void daNpc_Kolin_Create__FPv();
+extern "C" void daNpc_Kolin_Delete__FPv();
+extern "C" void daNpc_Kolin_Execute__FPv();
+extern "C" void daNpc_Kolin_Draw__FPv();
+extern "C" bool daNpc_Kolin_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__13daNpcT_Path_cFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void func_8055A1C4();
+extern "C" void func_8055A1E0();
+extern "C" void __sinit_d_a_npc_kolin_cpp();
+extern "C" void __ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" s32 getEyeballMaterialNo__13daNpc_Kolin_cFv();
+extern "C" s32 getHeadJointNo__13daNpc_Kolin_cFv();
+extern "C" s32 getNeckJointNo__13daNpc_Kolin_cFv();
+extern "C" bool getBackboneJointNo__13daNpc_Kolin_cFv();
+extern "C" void checkChangeJoint__13daNpc_Kolin_cFi();
+extern "C" void checkRemoveJoint__13daNpc_Kolin_cFi();
+extern "C" s32 getFootLJointNo__13daNpc_Kolin_cFv();
+extern "C" s32 getFootRJointNo__13daNpc_Kolin_cFv();
+extern "C" void __dt__19daNpc_Kolin_Param_cFv();
+extern "C" void func_8055A530();
+extern "C" void func_8055A538();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
 SECTION_RODATA extern const u8 m__19daNpc_Kolin_Param_c[160];
 SECTION_RODATA extern const u8 data_8055A654[60];
 SECTION_RODATA extern const u32 lit_4106;
@@ -281,8 +487,11 @@ SECTION_BSS extern u8 data_8055B49C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -292,7 +501,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_Kolin_cFv) {
+asm daNpc_Kolin_c::~daNpc_Kolin_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__13daNpc_Kolin_cFv.s"
 }
@@ -303,7 +512,7 @@ ASM_FUNCTION(__dt__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/create__13daNpc_Kolin_cFv.s"
 }
@@ -314,7 +523,7 @@ ASM_FUNCTION(create__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/CreateHeap__13daNpc_Kolin_cFv.s"
 }
@@ -325,7 +534,7 @@ ASM_FUNCTION(CreateHeap__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -336,7 +545,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -347,7 +556,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__14J3DTevColorAnmFv.s"
 }
@@ -358,7 +567,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__14J3DTevColorAnmFv.s"
 }
@@ -369,7 +578,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__11J3DTexNoAnmFv.s"
 }
@@ -380,7 +589,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__11J3DTexNoAnmFv.s"
 }
@@ -391,7 +600,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -402,7 +611,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -413,7 +622,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__14J3DMatColorAnmFv.s"
 }
@@ -424,7 +633,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__14J3DMatColorAnmFv.s"
 }
@@ -435,7 +644,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/Delete__13daNpc_Kolin_cFv.s"
 }
@@ -446,7 +655,7 @@ ASM_FUNCTION(Delete__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/Execute__13daNpc_Kolin_cFv.s"
 }
@@ -457,7 +666,7 @@ ASM_FUNCTION(Execute__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/Draw__13daNpc_Kolin_cFv.s"
 }
@@ -468,7 +677,7 @@ ASM_FUNCTION(Draw__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpc_Kolin_cFP10fopAc_ac_c) {
+asm void daNpc_Kolin_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/createHeapCallBack__13daNpc_Kolin_cFP10fopAc_ac_c.s"
 }
@@ -479,7 +688,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpc_Kolin_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpc_Kolin_cFP8J3DJointi) {
+asm void daNpc_Kolin_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/ctrlJointCallBack__13daNpc_Kolin_cFP8J3DJointi.s"
 }
@@ -490,7 +699,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpc_Kolin_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getType__13daNpc_Kolin_cFv.s"
 }
@@ -501,7 +710,7 @@ ASM_FUNCTION(getType__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/isDelete__13daNpc_Kolin_cFv.s"
 }
@@ -512,7 +721,7 @@ ASM_FUNCTION(isDelete__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/reset__13daNpc_Kolin_cFv.s"
 }
@@ -523,7 +732,7 @@ ASM_FUNCTION(reset__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::afterJntAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/afterJntAnm__13daNpc_Kolin_cFi.s"
 }
@@ -534,7 +743,7 @@ ASM_FUNCTION(afterJntAnm__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setParam__13daNpc_Kolin_cFv.s"
 }
@@ -545,7 +754,7 @@ ASM_FUNCTION(setParam__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::checkChangeEvt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/checkChangeEvt__13daNpc_Kolin_cFv.s"
 }
@@ -556,7 +765,7 @@ ASM_FUNCTION(checkChangeEvt__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setAfterTalkMotion__13daNpc_Kolin_cFv.s"
 }
@@ -567,7 +776,7 @@ ASM_FUNCTION(setAfterTalkMotion__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActors__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::srchActors() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/srchActors__13daNpc_Kolin_cFv.s"
 }
@@ -578,7 +787,7 @@ ASM_FUNCTION(srchActors__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/evtTalk__13daNpc_Kolin_cFv.s"
 }
@@ -589,7 +798,7 @@ ASM_FUNCTION(evtTalk__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/evtCutProc__13daNpc_Kolin_cFv.s"
 }
@@ -600,7 +809,7 @@ ASM_FUNCTION(evtCutProc__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/action__13daNpc_Kolin_cFv.s"
 }
@@ -611,7 +820,7 @@ ASM_FUNCTION(action__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/beforeMove__13daNpc_Kolin_cFv.s"
 }
@@ -622,7 +831,7 @@ ASM_FUNCTION(beforeMove__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setAttnPos__13daNpc_Kolin_cFv.s"
 }
@@ -633,7 +842,7 @@ ASM_FUNCTION(setAttnPos__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setCollision__13daNpc_Kolin_cFv.s"
 }
@@ -641,21 +850,16 @@ ASM_FUNCTION(setCollision__13daNpc_Kolin_cFv) {
 
 
 /* 80555CE4-80555CEC 0008+00 .text      drawDbgInfo__13daNpc_Kolin_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/drawDbgInfo__13daNpc_Kolin_cFv.s"
+bool daNpc_Kolin_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80555CEC-80555DC4 00D8+00 .text      drawOtherMdl__13daNpc_Kolin_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::drawOtherMdl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/drawOtherMdl__13daNpc_Kolin_cFv.s"
 }
@@ -666,7 +870,7 @@ ASM_FUNCTION(drawOtherMdl__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__13daNpc_Kolin_cFPiPi) {
+asm void daNpc_Kolin_c::changeAnm(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/changeAnm__13daNpc_Kolin_cFPiPi.s"
 }
@@ -677,7 +881,7 @@ ASM_FUNCTION(changeAnm__13daNpc_Kolin_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeBck__13daNpc_Kolin_cFPiPi) {
+asm void daNpc_Kolin_c::changeBck(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/changeBck__13daNpc_Kolin_cFPiPi.s"
 }
@@ -688,7 +892,7 @@ ASM_FUNCTION(changeBck__13daNpc_Kolin_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__13daNpc_Kolin_cFv) {
+asm void daNpc_Kolin_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/selectAction__13daNpc_Kolin_cFv.s"
 }
@@ -699,7 +903,7 @@ ASM_FUNCTION(selectAction__13daNpc_Kolin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i) {
+extern "C" asm void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i.s"
 }
@@ -710,7 +914,7 @@ ASM_FUNCTION(chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i) {
+extern "C" asm void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i.s"
 }
@@ -721,7 +925,7 @@ ASM_FUNCTION(setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii) {
+asm void daNpc_Kolin_c::calcFollowSpeedAndAngle(fopAc_ac_c* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii.s"
 }
@@ -732,7 +936,7 @@ ASM_FUNCTION(calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followPlayer__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::followPlayer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/followPlayer__13daNpc_Kolin_cFi.s"
 }
@@ -743,7 +947,7 @@ ASM_FUNCTION(followPlayer__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDistTable__12dAttention_cFi) {
+asm void dAttention_c::getDistTable(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getDistTable__12dAttention_cFi.s"
 }
@@ -754,7 +958,7 @@ ASM_FUNCTION(getDistTable__12dAttention_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookup__13daNpc_Kolin_cFUc) {
+asm void daNpc_Kolin_c::lookup(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/lookup__13daNpc_Kolin_cFUc.s"
 }
@@ -765,7 +969,7 @@ ASM_FUNCTION(lookup__13daNpc_Kolin_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutNoRide__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutNoRide(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutNoRide__13daNpc_Kolin_cFi.s"
 }
@@ -776,7 +980,7 @@ ASM_FUNCTION(cutNoRide__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutHail__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutHail(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutHail__13daNpc_Kolin_cFi.s"
 }
@@ -787,7 +991,7 @@ ASM_FUNCTION(cutHail__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutGiveMeWoodSwd__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutGiveMeWoodSwd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutGiveMeWoodSwd__13daNpc_Kolin_cFi.s"
 }
@@ -798,7 +1002,7 @@ ASM_FUNCTION(cutGiveMeWoodSwd__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutGetWoodSwd__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutGetWoodSwd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutGetWoodSwd__13daNpc_Kolin_cFi.s"
 }
@@ -809,7 +1013,7 @@ ASM_FUNCTION(cutGetWoodSwd__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutLoopHole__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutConversationAboutLoopHole(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutConversationAboutLoopHole__13daNpc_Kolin_cFi.s"
 }
@@ -820,7 +1024,7 @@ ASM_FUNCTION(cutConversationAboutLoopHole__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutCacaricoConversation__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutCacaricoConversation(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutCacaricoConversation__13daNpc_Kolin_cFi.s"
 }
@@ -831,7 +1035,7 @@ ASM_FUNCTION(cutCacaricoConversation__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutDeathMt__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutConversationAboutDeathMt(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutConversationAboutDeathMt__13daNpc_Kolin_cFi.s"
 }
@@ -842,7 +1046,7 @@ ASM_FUNCTION(cutConversationAboutDeathMt__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutGoron__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutConversationAboutGoron(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutConversationAboutGoron__13daNpc_Kolin_cFi.s"
 }
@@ -853,7 +1057,7 @@ ASM_FUNCTION(cutConversationAboutGoron__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutClothTry__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutClothTry(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutClothTry__13daNpc_Kolin_cFi.s"
 }
@@ -864,7 +1068,7 @@ ASM_FUNCTION(cutClothTry__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutThankYou__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::cutThankYou(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/cutThankYou__13daNpc_Kolin_cFi.s"
 }
@@ -875,7 +1079,7 @@ ASM_FUNCTION(cutThankYou__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_Kolin_cFPv) {
+asm void daNpc_Kolin_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/wait__13daNpc_Kolin_cFPv.s"
 }
@@ -886,7 +1090,7 @@ ASM_FUNCTION(wait__13daNpc_Kolin_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(timidWalk__13daNpc_Kolin_cFPv) {
+asm void daNpc_Kolin_c::timidWalk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/timidWalk__13daNpc_Kolin_cFPv.s"
 }
@@ -897,7 +1101,7 @@ ASM_FUNCTION(timidWalk__13daNpc_Kolin_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(follow__13daNpc_Kolin_cFPv) {
+asm void daNpc_Kolin_c::follow(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/follow__13daNpc_Kolin_cFPv.s"
 }
@@ -908,7 +1112,7 @@ ASM_FUNCTION(follow__13daNpc_Kolin_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clothWait__13daNpc_Kolin_cFPv) {
+asm void daNpc_Kolin_c::clothWait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/clothWait__13daNpc_Kolin_cFPv.s"
 }
@@ -919,7 +1123,7 @@ ASM_FUNCTION(clothWait__13daNpc_Kolin_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_Kolin_cFPv) {
+asm void daNpc_Kolin_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/talk__13daNpc_Kolin_cFPv.s"
 }
@@ -930,7 +1134,7 @@ ASM_FUNCTION(talk__13daNpc_Kolin_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Kolin_Create__FPv) {
+asm void daNpc_Kolin_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/daNpc_Kolin_Create__FPv.s"
 }
@@ -941,7 +1145,7 @@ ASM_FUNCTION(daNpc_Kolin_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Kolin_Delete__FPv) {
+asm void daNpc_Kolin_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/daNpc_Kolin_Delete__FPv.s"
 }
@@ -952,7 +1156,7 @@ ASM_FUNCTION(daNpc_Kolin_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Kolin_Execute__FPv) {
+asm void daNpc_Kolin_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/daNpc_Kolin_Execute__FPv.s"
 }
@@ -963,7 +1167,7 @@ ASM_FUNCTION(daNpc_Kolin_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Kolin_Draw__FPv) {
+asm void daNpc_Kolin_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/daNpc_Kolin_Draw__FPv.s"
 }
@@ -971,21 +1175,16 @@ ASM_FUNCTION(daNpc_Kolin_Draw__FPv) {
 
 
 /* 80559134-8055913C 0008+00 .text      daNpc_Kolin_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Kolin_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/daNpc_Kolin_IsDelete__FPv.s"
+bool daNpc_Kolin_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8055913C-8055916C 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -996,7 +1195,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__10cCcD_GSttsFv.s"
 }
@@ -1007,7 +1206,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__8daNpcT_cFv.s"
 }
@@ -1018,7 +1217,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__4cXyzFv.s"
 }
@@ -1029,7 +1228,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__5csXyzFv.s"
 }
@@ -1040,7 +1239,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1051,7 +1250,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
+asm daNpcT_Path_c::~daNpcT_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__13daNpcT_Path_cFv.s"
 }
@@ -1062,7 +1261,7 @@ ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1073,7 +1272,7 @@ ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__8cM3dGCylFv.s"
 }
@@ -1084,7 +1283,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__8cM3dGAabFv.s"
 }
@@ -1095,7 +1294,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_80559710.s"
 }
@@ -1103,21 +1302,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 80559B14-80559B18 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80559B18-80559C14 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -1125,21 +1319,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 80559C14-80559C18 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80559C18-80559C60 0048+00 .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -1150,7 +1339,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1161,7 +1350,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__10dCcD_GSttsFv.s"
 }
@@ -1172,7 +1361,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1183,7 +1372,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1194,7 +1383,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -1205,7 +1394,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -1213,76 +1402,46 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 8055A108-8055A10C 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8055A10C-8055A114 0008+00 .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8055A114-8055A11C 0008+00 .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8055A11C-8055A124 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 8055A124-8055A128 0004+00 .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8055A128-8055A130 0008+00 .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 8055A130-8055A148 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/decTmr__8daNpcT_cFv.s"
 }
@@ -1290,43 +1449,28 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 8055A148-8055A14C 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8055A14C-8055A154 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 8055A154-8055A15C 0008+00 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 8055A15C-8055A18C 0030+00 .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -1337,7 +1481,7 @@ ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1345,32 +1489,22 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 
 
 /* 8055A1BC-8055A1C0 0004+00 .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8055A1C0-8055A1C4 0004+00 .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8055A1C4-8055A1E0 001C+00 .text      cLib_calcTimer<i>__FPi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8055A1C4) {
+extern "C" asm void func_8055A1C4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_8055A1C4.s"
 }
@@ -1381,7 +1515,7 @@ ASM_FUNCTION(func_8055A1C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8055A1E0) {
+extern "C" asm void func_8055A1E0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_8055A1E0.s"
 }
@@ -1392,7 +1526,7 @@ ASM_FUNCTION(func_8055A1E0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_kolin_cpp) {
+extern "C" asm void __sinit_d_a_npc_kolin_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__sinit_d_a_npc_kolin_cpp.s"
 }
@@ -1403,7 +1537,7 @@ ASM_FUNCTION(__sinit_d_a_npc_kolin_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_8055A3B8.s"
 }
@@ -1411,54 +1545,34 @@ ASM_FUNCTION(__ct__13daNpc_Kolin_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_moti
 
 
 /* 8055A498-8055A4A0 0008+00 .text      getEyeballMaterialNo__13daNpc_Kolin_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getEyeballMaterialNo__13daNpc_Kolin_cFv.s"
+s32 daNpc_Kolin_c::getEyeballMaterialNo() {
+	return 2;
 }
-#pragma pop
 
 
 /* 8055A4A0-8055A4A8 0008+00 .text      getHeadJointNo__13daNpc_Kolin_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getHeadJointNo__13daNpc_Kolin_cFv.s"
+s32 daNpc_Kolin_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 8055A4A8-8055A4B0 0008+00 .text      getNeckJointNo__13daNpc_Kolin_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getNeckJointNo__13daNpc_Kolin_cFv.s"
+s32 daNpc_Kolin_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 8055A4B0-8055A4B8 0008+00 .text      getBackboneJointNo__13daNpc_Kolin_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getBackboneJointNo__13daNpc_Kolin_cFv.s"
+bool daNpc_Kolin_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 8055A4B8-8055A4C8 0010+00 .text      checkChangeJoint__13daNpc_Kolin_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/checkChangeJoint__13daNpc_Kolin_cFi.s"
 }
@@ -1469,7 +1583,7 @@ ASM_FUNCTION(checkChangeJoint__13daNpc_Kolin_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__13daNpc_Kolin_cFi) {
+asm void daNpc_Kolin_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/checkRemoveJoint__13daNpc_Kolin_cFi.s"
 }
@@ -1477,32 +1591,22 @@ ASM_FUNCTION(checkRemoveJoint__13daNpc_Kolin_cFi) {
 
 
 /* 8055A4D8-8055A4E0 0008+00 .text      getFootLJointNo__13daNpc_Kolin_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getFootLJointNo__13daNpc_Kolin_cFv.s"
+s32 daNpc_Kolin_c::getFootLJointNo() {
+	return 22;
 }
-#pragma pop
 
 
 /* 8055A4E0-8055A4E8 0008+00 .text      getFootRJointNo__13daNpc_Kolin_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__13daNpc_Kolin_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/getFootRJointNo__13daNpc_Kolin_cFv.s"
+s32 daNpc_Kolin_c::getFootRJointNo() {
+	return 25;
 }
-#pragma pop
 
 
 /* 8055A4E8-8055A530 0048+00 .text      __dt__19daNpc_Kolin_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_Kolin_Param_cFv) {
+asm daNpc_Kolin_Param_c::~daNpc_Kolin_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/__dt__19daNpc_Kolin_Param_cFv.s"
 }
@@ -1513,7 +1617,7 @@ ASM_FUNCTION(__dt__19daNpc_Kolin_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8055A530) {
+extern "C" asm void func_8055A530() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_8055A530.s"
 }
@@ -1524,7 +1628,7 @@ ASM_FUNCTION(func_8055A530) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8055A538) {
+extern "C" asm void func_8055A538() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/func_8055A538.s"
 }
@@ -1535,7 +1639,7 @@ ASM_FUNCTION(func_8055A538) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/chkPointInArea__15daTag_EvtArea_cF4cXyz.s"
 }

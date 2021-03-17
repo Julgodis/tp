@@ -6,23 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObj_Suisya_c;
+
+struct daObj_Suisya_c {
+	void draw();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__14daObj_Suisya_cFv();
-extern "C" extern void daObj_Suisya_Draw__FP14daObj_Suisya_c();
-extern "C" extern void execute__14daObj_Suisya_cFv();
-extern "C" extern void daObj_Suisya_Execute__FP14daObj_Suisya_c();
-extern "C" extern void daObj_Suisya_IsDelete__FP14daObj_Suisya_c();
-extern "C" extern void _delete__14daObj_Suisya_cFv();
-extern "C" extern void daObj_Suisya_Delete__FP14daObj_Suisya_c();
-extern "C" extern void CreateHeap__14daObj_Suisya_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__14daObj_Suisya_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObj_Suisya_Create__FP14daObj_Suisya_c();
-extern "C" extern void func_80CF0508();
-extern "C" extern void func_80CF0510();
+void daObj_Suisya_Draw(daObj_Suisya_c*);
+void daObj_Suisya_Execute(daObj_Suisya_c*);
+bool daObj_Suisya_IsDelete(daObj_Suisya_c*);
+void daObj_Suisya_Delete(daObj_Suisya_c*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Suisya_Create(daObj_Suisya_c*);
+extern "C" void func_80CF0508();
+extern "C" void func_80CF0510();
+
+extern "C" void draw__14daObj_Suisya_cFv();
+extern "C" void daObj_Suisya_Draw__FP14daObj_Suisya_c();
+extern "C" void execute__14daObj_Suisya_cFv();
+extern "C" void daObj_Suisya_Execute__FP14daObj_Suisya_c();
+extern "C" bool daObj_Suisya_IsDelete__FP14daObj_Suisya_c();
+extern "C" void _delete__14daObj_Suisya_cFv();
+extern "C" void daObj_Suisya_Delete__FP14daObj_Suisya_c();
+extern "C" void CreateHeap__14daObj_Suisya_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__14daObj_Suisya_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObj_Suisya_Create__FP14daObj_Suisya_c();
+extern "C" void func_80CF0508();
+extern "C" void func_80CF0510();
 SECTION_RODATA extern const u32 lit_3662;
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_RODATA extern const u8 lit_3664[4];
@@ -41,7 +72,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -51,7 +84,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObj_Suisya_cFv) {
+asm void daObj_Suisya_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/draw__14daObj_Suisya_cFv.s"
 }
@@ -62,7 +95,7 @@ ASM_FUNCTION(draw__14daObj_Suisya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Suisya_Draw__FP14daObj_Suisya_c) {
+asm void daObj_Suisya_Draw(daObj_Suisya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Draw__FP14daObj_Suisya_c.s"
 }
@@ -73,7 +106,7 @@ ASM_FUNCTION(daObj_Suisya_Draw__FP14daObj_Suisya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObj_Suisya_cFv) {
+asm void daObj_Suisya_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/execute__14daObj_Suisya_cFv.s"
 }
@@ -84,7 +117,7 @@ ASM_FUNCTION(execute__14daObj_Suisya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Suisya_Execute__FP14daObj_Suisya_c) {
+asm void daObj_Suisya_Execute(daObj_Suisya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Execute__FP14daObj_Suisya_c.s"
 }
@@ -92,21 +125,16 @@ ASM_FUNCTION(daObj_Suisya_Execute__FP14daObj_Suisya_c) {
 
 
 /* 80CF022C-80CF0234 0008+00 .text      daObj_Suisya_IsDelete__FP14daObj_Suisya_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Suisya_IsDelete__FP14daObj_Suisya_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_IsDelete__FP14daObj_Suisya_c.s"
+bool daObj_Suisya_IsDelete(daObj_Suisya_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CF0234-80CF0264 0030+00 .text      _delete__14daObj_Suisya_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObj_Suisya_cFv) {
+asm void daObj_Suisya_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/_delete__14daObj_Suisya_cFv.s"
 }
@@ -117,7 +145,7 @@ ASM_FUNCTION(_delete__14daObj_Suisya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Suisya_Delete__FP14daObj_Suisya_c) {
+asm void daObj_Suisya_Delete(daObj_Suisya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Delete__FP14daObj_Suisya_c.s"
 }
@@ -128,7 +156,7 @@ ASM_FUNCTION(daObj_Suisya_Delete__FP14daObj_Suisya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObj_Suisya_cFv) {
+asm void daObj_Suisya_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/CreateHeap__14daObj_Suisya_cFv.s"
 }
@@ -139,7 +167,7 @@ ASM_FUNCTION(CreateHeap__14daObj_Suisya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -150,7 +178,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObj_Suisya_cFv) {
+asm void daObj_Suisya_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/create__14daObj_Suisya_cFv.s"
 }
@@ -161,7 +189,7 @@ ASM_FUNCTION(create__14daObj_Suisya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -172,7 +200,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Suisya_Create__FP14daObj_Suisya_c) {
+asm void daObj_Suisya_Create(daObj_Suisya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Create__FP14daObj_Suisya_c.s"
 }
@@ -183,7 +211,7 @@ ASM_FUNCTION(daObj_Suisya_Create__FP14daObj_Suisya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CF0508) {
+extern "C" asm void func_80CF0508() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/func_80CF0508.s"
 }
@@ -194,7 +222,7 @@ ASM_FUNCTION(func_80CF0508) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CF0510) {
+extern "C" asm void func_80CF0510() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/func_80CF0510.s"
 }

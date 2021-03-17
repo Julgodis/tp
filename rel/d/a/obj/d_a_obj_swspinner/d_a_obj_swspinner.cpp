@@ -6,22 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjSwSpinner_c;
+
+struct daObjSwSpinner_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void search_spinner_sub__FPvPv();
-extern "C" extern void initBaseMtx__16daObjSwSpinner_cFv();
-extern "C" extern void setBaseMtx__16daObjSwSpinner_cFv();
-extern "C" extern void Create__16daObjSwSpinner_cFv();
-extern "C" extern void CreateHeap__16daObjSwSpinner_cFv();
-extern "C" extern void create1st__16daObjSwSpinner_cFv();
-extern "C" extern void Execute__16daObjSwSpinner_cFPPA3_A4_f();
-extern "C" extern void Draw__16daObjSwSpinner_cFv();
-extern "C" extern void Delete__16daObjSwSpinner_cFv();
-extern "C" extern void daObjSwSpinner_create1st__FP16daObjSwSpinner_c();
-extern "C" extern void daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c();
-extern "C" extern void daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c();
-extern "C" extern void daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c();
+void search_spinner_sub(void*, void*);
+extern "C" void Execute__16daObjSwSpinner_cFPPA3_A4_f();
+void daObjSwSpinner_create1st(daObjSwSpinner_c*);
+void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c*);
+void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c*);
+void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c*);
+
+extern "C" void search_spinner_sub__FPvPv();
+extern "C" void initBaseMtx__16daObjSwSpinner_cFv();
+extern "C" void setBaseMtx__16daObjSwSpinner_cFv();
+extern "C" void Create__16daObjSwSpinner_cFv();
+extern "C" void CreateHeap__16daObjSwSpinner_cFv();
+extern "C" void create1st__16daObjSwSpinner_cFv();
+extern "C" void Execute__16daObjSwSpinner_cFPPA3_A4_f();
+extern "C" void Draw__16daObjSwSpinner_cFv();
+extern "C" void Delete__16daObjSwSpinner_cFv();
+extern "C" void daObjSwSpinner_create1st__FP16daObjSwSpinner_c();
+extern "C" void daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c();
+extern "C" void daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c();
+extern "C" void daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c();
 SECTION_RODATA extern const u8 lit_3717[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3718[8];
 SECTION_RODATA extern const u8 lit_3719[8];
@@ -44,7 +67,9 @@ SECTION_DATA extern void*const __vt__16daObjSwSpinner_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +79,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_spinner_sub__FPvPv) {
+asm void search_spinner_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/search_spinner_sub__FPvPv.s"
 }
@@ -65,7 +90,7 @@ ASM_FUNCTION(search_spinner_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/initBaseMtx__16daObjSwSpinner_cFv.s"
 }
@@ -76,7 +101,7 @@ ASM_FUNCTION(initBaseMtx__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/setBaseMtx__16daObjSwSpinner_cFv.s"
 }
@@ -87,7 +112,7 @@ ASM_FUNCTION(setBaseMtx__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/Create__16daObjSwSpinner_cFv.s"
 }
@@ -98,7 +123,7 @@ ASM_FUNCTION(Create__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/CreateHeap__16daObjSwSpinner_cFv.s"
 }
@@ -109,7 +134,7 @@ ASM_FUNCTION(CreateHeap__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/create1st__16daObjSwSpinner_cFv.s"
 }
@@ -120,7 +145,7 @@ ASM_FUNCTION(create1st__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjSwSpinner_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjSwSpinner_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/Execute__16daObjSwSpinner_cFPPA3_A4_f.s"
 }
@@ -131,7 +156,7 @@ ASM_FUNCTION(Execute__16daObjSwSpinner_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/Draw__16daObjSwSpinner_cFv.s"
 }
@@ -142,7 +167,7 @@ ASM_FUNCTION(Draw__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjSwSpinner_cFv) {
+asm void daObjSwSpinner_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/Delete__16daObjSwSpinner_cFv.s"
 }
@@ -153,7 +178,7 @@ ASM_FUNCTION(Delete__16daObjSwSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwSpinner_create1st__FP16daObjSwSpinner_c) {
+asm void daObjSwSpinner_create1st(daObjSwSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_create1st__FP16daObjSwSpinner_c.s"
 }
@@ -164,7 +189,7 @@ ASM_FUNCTION(daObjSwSpinner_create1st__FP16daObjSwSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c) {
+asm void daObjSwSpinner_MoveBGDelete(daObjSwSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c.s"
 }
@@ -175,7 +200,7 @@ ASM_FUNCTION(daObjSwSpinner_MoveBGDelete__FP16daObjSwSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c) {
+asm void daObjSwSpinner_MoveBGExecute(daObjSwSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c.s"
 }
@@ -186,7 +211,7 @@ ASM_FUNCTION(daObjSwSpinner_MoveBGExecute__FP16daObjSwSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c) {
+asm void daObjSwSpinner_MoveBGDraw(daObjSwSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swspinner/d_a_obj_swspinner/daObjSwSpinner_MoveBGDraw__FP16daObjSwSpinner_c.s"
 }

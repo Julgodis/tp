@@ -6,37 +6,100 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjChest_c;
+
+struct daObjChest_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void action();
+	void actionWait();
+	void actionMove();
+	void actionEnd();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjChest_cFv();
-extern "C" extern void setBaseMtx__12daObjChest_cFv();
-extern "C" extern void Create__12daObjChest_cFv();
-extern "C" extern void CreateHeap__12daObjChest_cFv();
-extern "C" extern void create__12daObjChest_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void Execute__12daObjChest_cFPPA3_A4_f();
-extern "C" extern void action__12daObjChest_cFv();
-extern "C" extern void actionWait__12daObjChest_cFv();
-extern "C" extern void actionMove__12daObjChest_cFv();
-extern "C" extern void actionEnd__12daObjChest_cFv();
-extern "C" extern void Draw__12daObjChest_cFv();
-extern "C" extern void Delete__12daObjChest_cFv();
-extern "C" extern void daObjChest_Draw__FP12daObjChest_c();
-extern "C" extern void daObjChest_Execute__FP12daObjChest_c();
-extern "C" extern void daObjChest_Delete__FP12daObjChest_c();
-extern "C" extern void daObjChest_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BC9FAC();
-extern "C" extern void func_80BC9FC8();
-extern "C" extern void func_80BC9FE4();
-extern "C" extern void func_80BC9FEC();
+extern "C" void Execute__12daObjChest_cFPPA3_A4_f();
+void daObjChest_Draw(daObjChest_c*);
+void daObjChest_Execute(daObjChest_c*);
+void daObjChest_Delete(daObjChest_c*);
+void daObjChest_Create(fopAc_ac_c*);
+extern "C" void func_80BC9FAC();
+extern "C" void func_80BC9FC8();
+extern "C" void func_80BC9FE4();
+extern "C" void func_80BC9FEC();
+
+extern "C" void initBaseMtx__12daObjChest_cFv();
+extern "C" void setBaseMtx__12daObjChest_cFv();
+extern "C" void Create__12daObjChest_cFv();
+extern "C" void CreateHeap__12daObjChest_cFv();
+extern "C" void create__12daObjChest_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void Execute__12daObjChest_cFPPA3_A4_f();
+extern "C" void action__12daObjChest_cFv();
+extern "C" void actionWait__12daObjChest_cFv();
+extern "C" void actionMove__12daObjChest_cFv();
+extern "C" void actionEnd__12daObjChest_cFv();
+extern "C" void Draw__12daObjChest_cFv();
+extern "C" void Delete__12daObjChest_cFv();
+extern "C" void daObjChest_Draw__FP12daObjChest_c();
+extern "C" void daObjChest_Execute__FP12daObjChest_c();
+extern "C" void daObjChest_Delete__FP12daObjChest_c();
+extern "C" void daObjChest_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BC9FAC();
+extern "C" void func_80BC9FC8();
+extern "C" void func_80BC9FE4();
+extern "C" void func_80BC9FEC();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u32 lit_3679;
 SECTION_RODATA extern const u8 lit_3681[8];
@@ -84,7 +147,9 @@ SECTION_DATA extern void*const __vt__12daObjChest_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -94,7 +159,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjChest_cFv) {
+asm void daObjChest_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/initBaseMtx__12daObjChest_cFv.s"
 }
@@ -105,7 +170,7 @@ ASM_FUNCTION(initBaseMtx__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjChest_cFv) {
+asm void daObjChest_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/setBaseMtx__12daObjChest_cFv.s"
 }
@@ -116,7 +181,7 @@ ASM_FUNCTION(setBaseMtx__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjChest_cFv) {
+asm void daObjChest_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/Create__12daObjChest_cFv.s"
 }
@@ -127,7 +192,7 @@ ASM_FUNCTION(Create__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjChest_cFv) {
+asm void daObjChest_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/CreateHeap__12daObjChest_cFv.s"
 }
@@ -138,7 +203,7 @@ ASM_FUNCTION(CreateHeap__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjChest_cFv) {
+asm void daObjChest_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC92B0.s"
 }
@@ -149,7 +214,7 @@ ASM_FUNCTION(create__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__8dCcD_CylFv.s"
 }
@@ -160,7 +225,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__ct__8dCcD_CylFv.s"
 }
@@ -171,7 +236,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__8cM3dGCylFv.s"
 }
@@ -182,7 +247,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__8cM3dGAabFv.s"
 }
@@ -193,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__10dCcD_GSttsFv.s"
 }
@@ -204,7 +269,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__12dBgS_AcchCirFv.s"
 }
@@ -215,7 +280,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -226,7 +291,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjChest_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjChest_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/Execute__12daObjChest_cFPPA3_A4_f.s"
 }
@@ -237,7 +302,7 @@ ASM_FUNCTION(Execute__12daObjChest_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__12daObjChest_cFv) {
+asm void daObjChest_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/action__12daObjChest_cFv.s"
 }
@@ -248,7 +313,7 @@ ASM_FUNCTION(action__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__12daObjChest_cFv) {
+asm void daObjChest_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/actionWait__12daObjChest_cFv.s"
 }
@@ -259,7 +324,7 @@ ASM_FUNCTION(actionWait__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMove__12daObjChest_cFv) {
+asm void daObjChest_c::actionMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/actionMove__12daObjChest_cFv.s"
 }
@@ -267,21 +332,16 @@ ASM_FUNCTION(actionMove__12daObjChest_cFv) {
 
 
 /* 80BC9DFC-80BC9E00 0004+00 .text      actionEnd__12daObjChest_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__12daObjChest_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/actionEnd__12daObjChest_cFv.s"
+void daObjChest_c::actionEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BC9E00-80BC9EA4 00A4+00 .text      Draw__12daObjChest_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjChest_cFv) {
+asm void daObjChest_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/Draw__12daObjChest_cFv.s"
 }
@@ -292,7 +352,7 @@ ASM_FUNCTION(Draw__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjChest_cFv) {
+asm void daObjChest_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/Delete__12daObjChest_cFv.s"
 }
@@ -303,7 +363,7 @@ ASM_FUNCTION(Delete__12daObjChest_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChest_Draw__FP12daObjChest_c) {
+asm void daObjChest_Draw(daObjChest_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/daObjChest_Draw__FP12daObjChest_c.s"
 }
@@ -314,7 +374,7 @@ ASM_FUNCTION(daObjChest_Draw__FP12daObjChest_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChest_Execute__FP12daObjChest_c) {
+asm void daObjChest_Execute(daObjChest_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/daObjChest_Execute__FP12daObjChest_c.s"
 }
@@ -325,7 +385,7 @@ ASM_FUNCTION(daObjChest_Execute__FP12daObjChest_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChest_Delete__FP12daObjChest_c) {
+asm void daObjChest_Delete(daObjChest_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/daObjChest_Delete__FP12daObjChest_c.s"
 }
@@ -336,7 +396,7 @@ ASM_FUNCTION(daObjChest_Delete__FP12daObjChest_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChest_Create__FP10fopAc_ac_c) {
+asm void daObjChest_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/daObjChest_Create__FP10fopAc_ac_c.s"
 }
@@ -347,7 +407,7 @@ ASM_FUNCTION(daObjChest_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/__dt__10cCcD_GSttsFv.s"
 }
@@ -358,7 +418,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC9FAC) {
+extern "C" asm void func_80BC9FAC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC9FAC.s"
 }
@@ -369,7 +429,7 @@ ASM_FUNCTION(func_80BC9FAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC9FC8) {
+extern "C" asm void func_80BC9FC8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC9FC8.s"
 }
@@ -380,7 +440,7 @@ ASM_FUNCTION(func_80BC9FC8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC9FE4) {
+extern "C" asm void func_80BC9FE4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC9FE4.s"
 }
@@ -391,7 +451,7 @@ ASM_FUNCTION(func_80BC9FE4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC9FEC) {
+extern "C" asm void func_80BC9FEC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chest/d_a_obj_chest/func_80BC9FEC.s"
 }

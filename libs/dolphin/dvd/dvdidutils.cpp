@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void DVDCompareDiskID();
+extern "C" void DVDCompareDiskID();
+
+extern "C" void DVDCompareDiskID();
 
 // 
 // External References:
 // 
 
-extern "C" extern void strncmp();
+extern "C" void strncmp();
+
+extern "C" void strncmp();
 
 // 
 // Declarations:
 // 
 
-/* 8034BC04-8034BCFC 00F8+00 .text      DVDCompareDiskID                                             */
+/* 8034BC04-8034BCFC 00F8+00 rc=1 efc=1 .text      DVDCompareDiskID                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DVDCompareDiskID) {
+extern "C" asm void DVDCompareDiskID() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdidutils/DVDCompareDiskID.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

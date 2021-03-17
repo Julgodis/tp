@@ -6,40 +6,124 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daBg_c;
+struct J3DAnmTevRegKey;
+struct J3DModelData;
+struct fopAc_ac_c;
+struct J3DAnmTextureSRTKey;
+
+struct daBg_c {
+	void setArcName();
+	void createHeap();
+	~daBg_c();
+	void draw();
+	void create();
+};
+
+struct J3DModelData {
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct daBg_btkAnm_c {
+	void create(J3DModelData*, J3DAnmTextureSRTKey*, s32);
+	void entry(J3DModelData*);
+	void play();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct daBg_brkAnm_c {
+	void create(J3DModelData*, J3DAnmTevRegKey*, s32);
+	void entry(J3DModelData*);
+	void play();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DLightObj {
+	J3DLightObj();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setArcName__6daBg_cFv();
-extern "C" extern void createMatAnm__FP12J3DModelDataUs();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void create__13daBg_btkAnm_cFP12J3DModelDataP19J3DAnmTextureSRTKeyi();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void entry__13daBg_btkAnm_cFP12J3DModelData();
-extern "C" extern void play__13daBg_btkAnm_cFv();
-extern "C" extern void create__13daBg_brkAnm_cFP12J3DModelDataP15J3DAnmTevRegKeyi();
-extern "C" extern void entry__13daBg_brkAnm_cFP12J3DModelData();
-extern "C" extern void play__13daBg_brkAnm_cFv();
-extern "C" extern void checkCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__6daBg_cFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void __dt__6daBg_cFv();
-extern "C" extern void daBg_Draw__FP6daBg_c();
-extern "C" extern void draw__6daBg_cFv();
-extern "C" extern void daBg_Execute__FP6daBg_c();
-extern "C" extern void daBg_IsDelete__FP6daBg_c();
-extern "C" extern void daBg_Delete__FP6daBg_c();
-extern "C" extern void daBg_Create__FP10fopAc_ac_c();
-extern "C" extern void create__6daBg_cFv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
+void createMatAnm(J3DModelData*, u16);
+void checkCreateHeap(fopAc_ac_c*);
+void daBg_Draw(daBg_c*);
+void daBg_Execute(daBg_c*);
+bool daBg_IsDelete(daBg_c*);
+void daBg_Delete(daBg_c*);
+void daBg_Create(fopAc_ac_c*);
+
+extern "C" void setArcName__6daBg_cFv();
+extern "C" void createMatAnm__FP12J3DModelDataUs();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void create__13daBg_btkAnm_cFP12J3DModelDataP19J3DAnmTextureSRTKeyi();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void entry__13daBg_btkAnm_cFP12J3DModelData();
+extern "C" void play__13daBg_btkAnm_cFv();
+extern "C" void create__13daBg_brkAnm_cFP12J3DModelDataP15J3DAnmTevRegKeyi();
+extern "C" void entry__13daBg_brkAnm_cFP12J3DModelData();
+extern "C" void play__13daBg_brkAnm_cFv();
+extern "C" void checkCreateHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__6daBg_cFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void __dt__6daBg_cFv();
+extern "C" void daBg_Draw__FP6daBg_c();
+extern "C" void draw__6daBg_cFv();
+extern "C" void daBg_Execute__FP6daBg_c();
+extern "C" bool daBg_IsDelete__FP6daBg_c();
+extern "C" void daBg_Delete__FP6daBg_c();
+extern "C" void daBg_Create__FP10fopAc_ac_c();
+extern "C" void create__6daBg_cFv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
 SECTION_RODATA extern const u8 lit_3756[12];
 SECTION_RODATA extern const u32 lit_3900;
 SECTION_RODATA extern const u8 lit_3914[4];
@@ -65,7 +149,9 @@ SECTION_BSS extern u8 data_804595B8[32];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +161,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArcName__6daBg_cFv) {
+asm void daBg_c::setArcName() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/setArcName__6daBg_cFv.s"
 }
@@ -86,7 +172,7 @@ ASM_FUNCTION(setArcName__6daBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createMatAnm__FP12J3DModelDataUs) {
+asm void createMatAnm(J3DModelData* field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/createMatAnm__FP12J3DModelDataUs.s"
 }
@@ -97,7 +183,7 @@ ASM_FUNCTION(createMatAnm__FP12J3DModelDataUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -108,7 +194,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -119,7 +205,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__14J3DTevColorAnmFv.s"
 }
@@ -130,7 +216,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__14J3DTevColorAnmFv.s"
 }
@@ -141,7 +227,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__11J3DTexNoAnmFv.s"
 }
@@ -152,7 +238,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__11J3DTexNoAnmFv.s"
 }
@@ -163,7 +249,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -174,7 +260,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -185,7 +271,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__14J3DMatColorAnmFv.s"
 }
@@ -196,7 +282,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__14J3DMatColorAnmFv.s"
 }
@@ -207,7 +293,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daBg_btkAnm_cFP12J3DModelDataP19J3DAnmTextureSRTKeyi) {
+asm void daBg_btkAnm_c::create(J3DModelData* field_0, J3DAnmTextureSRTKey* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/create__13daBg_btkAnm_cFP12J3DModelDataP19J3DAnmTextureSRTKeyi.s"
 }
@@ -218,7 +304,7 @@ ASM_FUNCTION(create__13daBg_btkAnm_cFP12J3DModelDataP19J3DAnmTextureSRTKeyi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__12J3DFrameCtrlFv.s"
 }
@@ -229,7 +315,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entry__13daBg_btkAnm_cFP12J3DModelData) {
+asm void daBg_btkAnm_c::entry(J3DModelData* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/entry__13daBg_btkAnm_cFP12J3DModelData.s"
 }
@@ -240,7 +326,7 @@ ASM_FUNCTION(entry__13daBg_btkAnm_cFP12J3DModelData) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(play__13daBg_btkAnm_cFv) {
+asm void daBg_btkAnm_c::play() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/play__13daBg_btkAnm_cFv.s"
 }
@@ -251,7 +337,7 @@ ASM_FUNCTION(play__13daBg_btkAnm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daBg_brkAnm_cFP12J3DModelDataP15J3DAnmTevRegKeyi) {
+asm void daBg_brkAnm_c::create(J3DModelData* field_0, J3DAnmTevRegKey* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/create__13daBg_brkAnm_cFP12J3DModelDataP15J3DAnmTevRegKeyi.s"
 }
@@ -262,7 +348,7 @@ ASM_FUNCTION(create__13daBg_brkAnm_cFP12J3DModelDataP15J3DAnmTevRegKeyi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entry__13daBg_brkAnm_cFP12J3DModelData) {
+asm void daBg_brkAnm_c::entry(J3DModelData* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/entry__13daBg_brkAnm_cFP12J3DModelData.s"
 }
@@ -273,7 +359,7 @@ ASM_FUNCTION(entry__13daBg_brkAnm_cFP12J3DModelData) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(play__13daBg_brkAnm_cFv) {
+asm void daBg_brkAnm_c::play() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/play__13daBg_brkAnm_cFv.s"
 }
@@ -284,7 +370,7 @@ ASM_FUNCTION(play__13daBg_brkAnm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCreateHeap__FP10fopAc_ac_c) {
+asm void checkCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/checkCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -295,7 +381,7 @@ ASM_FUNCTION(checkCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__6daBg_cFv) {
+asm void daBg_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/createHeap__6daBg_cFv.s"
 }
@@ -306,7 +392,7 @@ ASM_FUNCTION(createHeap__6daBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__ct__11J3DLightObjFv.s"
 }
@@ -317,7 +403,7 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__6daBg_cFv) {
+asm daBg_c::~daBg_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/__dt__6daBg_cFv.s"
 }
@@ -328,7 +414,7 @@ ASM_FUNCTION(__dt__6daBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBg_Draw__FP6daBg_c) {
+asm void daBg_Draw(daBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_Draw__FP6daBg_c.s"
 }
@@ -339,7 +425,7 @@ ASM_FUNCTION(daBg_Draw__FP6daBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__6daBg_cFv) {
+asm void daBg_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/draw__6daBg_cFv.s"
 }
@@ -350,7 +436,7 @@ ASM_FUNCTION(draw__6daBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBg_Execute__FP6daBg_c) {
+asm void daBg_Execute(daBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_Execute__FP6daBg_c.s"
 }
@@ -358,21 +444,16 @@ ASM_FUNCTION(daBg_Execute__FP6daBg_c) {
 
 
 /* 8045901C-80459024 0008+00 .text      daBg_IsDelete__FP6daBg_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daBg_IsDelete__FP6daBg_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_IsDelete__FP6daBg_c.s"
+bool daBg_IsDelete(daBg_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80459024-8045904C 0028+00 .text      daBg_Delete__FP6daBg_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBg_Delete__FP6daBg_c) {
+asm void daBg_Delete(daBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_Delete__FP6daBg_c.s"
 }
@@ -383,7 +464,7 @@ ASM_FUNCTION(daBg_Delete__FP6daBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBg_Create__FP10fopAc_ac_c) {
+asm void daBg_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_Create__FP10fopAc_ac_c.s"
 }
@@ -394,7 +475,7 @@ ASM_FUNCTION(daBg_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__6daBg_cFv) {
+asm void daBg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/create__6daBg_cFv.s"
 }
@@ -405,7 +486,7 @@ ASM_FUNCTION(create__6daBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg/d_a_bg/calc__11J3DTexNoAnmCFPUs.s"
 }

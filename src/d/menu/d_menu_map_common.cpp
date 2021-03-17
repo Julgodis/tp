@@ -6,22 +6,110 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin dMenuMapCommon_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dMenuMapCommon_c) */
+struct dMenuMapCommon_c {
+	// JKRArchive
+	/* 801C2718 */ dMenuMapCommon_c();
+	/* 801C27B4 */ ~dMenuMapCommon_c();
+	/* 801C28D8 */ void initiate(JKRArchive*);
+	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
+	/* 801C3EC4 */ void iconScale(s32, f32, f32, f32);
+	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C443C */ void clearIconInfo();
+	/* 801C4494 */ void setBlendRatio(char, f32, f32);
+	/* 801C452C */ void blinkMove(s16);
+	/* 801C4600 */ void moveLightDropAnime();
+	/* 801C4738 */ void getIconSizeX(char);
+	/* 801C4778 */ void getIconSizeY(char);
+	/* 801C47C4 */ void debugIcon();
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DBasePosition
+// outer dependency: J2DRotateAxis
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DBasePosition
+	// J2DRotateAxis
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
+};
+
+// build J2DRotateAxis (J2DRotateAxis) True/True
+// build J2DBasePosition (J2DBasePosition) True/True
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16dMenuMapCommon_cFv();
-extern "C" extern void __dt__16dMenuMapCommon_cFv();
-extern "C" extern void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern "C" extern void drawIcon__16dMenuMapCommon_cFffff();
-extern "C" extern void iconScale__16dMenuMapCommon_cFifff();
-extern "C" extern void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern "C" extern void clearIconInfo__16dMenuMapCommon_cFv();
-extern "C" extern void setBlendRatio__16dMenuMapCommon_cFUcff();
-extern "C" extern void blinkMove__16dMenuMapCommon_cFs();
-extern "C" extern void moveLightDropAnime__16dMenuMapCommon_cFv();
-extern "C" extern void getIconSizeX__16dMenuMapCommon_cFUc();
-extern "C" extern void getIconSizeY__16dMenuMapCommon_cFUc();
-extern "C" extern void debugIcon__16dMenuMapCommon_cFv();
+
+extern "C" void __ct__16dMenuMapCommon_cFv();
+extern "C" void __dt__16dMenuMapCommon_cFv();
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" void iconScale__16dMenuMapCommon_cFifff();
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" void clearIconInfo__16dMenuMapCommon_cFv();
+extern "C" void setBlendRatio__16dMenuMapCommon_cFUcff();
+extern "C" void blinkMove__16dMenuMapCommon_cFs();
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
+extern "C" void getIconSizeX__16dMenuMapCommon_cFUc();
+extern "C" void getIconSizeY__16dMenuMapCommon_cFUc();
+extern "C" void debugIcon__16dMenuMapCommon_cFv();
 SECTION_RODATA extern const u8 d_menu_d_menu_map_common__stringBase0[976];
 SECTION_DATA extern u8 map_icon_size[276];
 SECTION_DATA extern void*const __vt__16dMenuMapCommon_c[3];
@@ -40,19 +128,26 @@ SECTION_SDATA2 extern f64 d_menu_d_menu_map_common__lit_4140;
 // External References:
 // 
 
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setScale__16dSelect_cursor_cFf();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" extern void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern "C" extern void setInfluencedAlpha__7J2DPaneFbb();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void setInfluencedAlpha__7J2DPaneFbb();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_fmapHIO[1188];
 
@@ -61,7 +156,7 @@ SECTION_BSS extern u8 g_fmapHIO[1188];
 // 
 
 /* ############################################################################################## */
-/* 803BCF18-803BD02C 0114+00 .data      map_icon_size                                                */
+/* 803BCF18-803BD02C 0114+00 rc=2 efc=0 .data      map_icon_size                                                */
 u8 map_icon_size[276] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
@@ -83,34 +178,34 @@ u8 map_icon_size[276] = {
 	0x16, 0x00, 0x00, 0x00,
 };
 
-/* 803BD02C-803BD038 000C+00 .data      __vt__16dMenuMapCommon_c                                     */
+/* 803BD02C-803BD038 000C+00 rc=2 efc=0 .data      __vt__16dMenuMapCommon_c                                     */
 void* const __vt__16dMenuMapCommon_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dMenuMapCommon_cFv,
 };
 
-/* 804540D8-804540DC 0004+00 .sdata2    @3703                                                        */
+/* 804540D8-804540DC 0004+00 rc=6 efc=0 .sdata2    @3703                                                        */
 u8 d_menu_d_menu_map_common__lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801C2718-801C27B4 009C+00 .text      __ct__16dMenuMapCommon_cFv                                   */
+/* 801C2718-801C27B4 009C+00 rc=2 efc=2 .text      __ct__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dMenuMapCommon_cFv) {
+asm dMenuMapCommon_c::dMenuMapCommon_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/__ct__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
 
-/* 801C27B4-801C28D8 0124+00 .text      __dt__16dMenuMapCommon_cFv                                   */
+/* 801C27B4-801C28D8 0124+00 rc=3 efc=2 .text      __dt__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dMenuMapCommon_cFv) {
+asm dMenuMapCommon_c::~dMenuMapCommon_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/__dt__16dMenuMapCommon_cFv.s"
 }
@@ -118,7 +213,7 @@ ASM_FUNCTION(__dt__16dMenuMapCommon_cFv) {
 
 
 /* ############################################################################################## */
-/* 803959C0-80395D90 03CF+01 .rodata    @stringBase0                                                 */
+/* 803959C0-80395D90 03CF+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -172,14 +267,14 @@ SECTION_DEAD char* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.bti";
 SECTION_DEAD char* const pad_80395D8F = "";
 #pragma pop
 
-/* 804540DC-804540E0 0004+00 .sdata2    @3882                                                        */
+/* 804540DC-804540E0 0004+00 rc=7 efc=0 .sdata2    @3882                                                        */
 f32 d_menu_d_menu_map_common__lit_3882 = 1.0f;
 
-/* 801C28D8-801C38E4 100C+00 .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
+/* 801C28D8-801C38E4 100C+00 rc=2 efc=2 .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__16dMenuMapCommon_cFP10JKRArchive) {
+asm void dMenuMapCommon_c::initiate(JKRArchive* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/initiate__16dMenuMapCommon_cFP10JKRArchive.s"
 }
@@ -187,23 +282,23 @@ ASM_FUNCTION(initiate__16dMenuMapCommon_cFP10JKRArchive) {
 
 
 /* ############################################################################################## */
-/* 804540E0-804540E4 0004+00 .sdata2    @4010                                                        */
+/* 804540E0-804540E4 0004+00 rc=1 efc=0 .sdata2    @4010                                                        */
 f32 d_menu_d_menu_map_common__lit_4010 = 255.0f;
 
-/* 804540E4-804540E8 0004+00 .sdata2    @4011                                                        */
+/* 804540E4-804540E8 0004+00 rc=1 efc=0 .sdata2    @4011                                                        */
 f32 d_menu_d_menu_map_common__lit_4011 = 4.0f / 7.0f;
 
-/* 804540E8-804540EC 0004+00 .sdata2    @4012                                                        */
+/* 804540E8-804540EC 0004+00 rc=3 efc=0 .sdata2    @4012                                                        */
 f32 d_menu_d_menu_map_common__lit_4012 = 0.5f;
 
-/* 804540EC-804540F0 0004+00 .sdata2    @4013                                                        */
+/* 804540EC-804540F0 0004+00 rc=1 efc=0 .sdata2    @4013                                                        */
 f32 d_menu_d_menu_map_common__lit_4013 = 180.0f;
 
-/* 801C38E4-801C3EC4 05E0+00 .text      drawIcon__16dMenuMapCommon_cFffff                            */
+/* 801C38E4-801C3EC4 05E0+00 rc=2 efc=2 .text      drawIcon__16dMenuMapCommon_cFffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawIcon__16dMenuMapCommon_cFffff) {
+asm void dMenuMapCommon_c::drawIcon(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/drawIcon__16dMenuMapCommon_cFffff.s"
 }
@@ -211,50 +306,50 @@ ASM_FUNCTION(drawIcon__16dMenuMapCommon_cFffff) {
 
 
 /* ############################################################################################## */
-/* 804540F0-804540F4 0004+00 .sdata2    @4072                                                        */
+/* 804540F0-804540F4 0004+00 rc=1 efc=0 .sdata2    @4072                                                        */
 f32 d_menu_d_menu_map_common__lit_4072 = 16.0f / 27.0f;
 
-/* 804540F4-804540F8 0004+00 .sdata2    @4073                                                        */
+/* 804540F4-804540F8 0004+00 rc=1 efc=0 .sdata2    @4073                                                        */
 f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
 
-/* 801C3EC4-801C43A8 04E4+00 .text      iconScale__16dMenuMapCommon_cFifff                           */
+/* 801C3EC4-801C43A8 04E4+00 rc=4 efc=4 .text      iconScale__16dMenuMapCommon_cFifff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iconScale__16dMenuMapCommon_cFifff) {
+asm void dMenuMapCommon_c::iconScale(s32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/iconScale__16dMenuMapCommon_cFifff.s"
 }
 #pragma pop
 
 
-/* 801C43A8-801C443C 0094+00 .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
+/* 801C43A8-801C443C 0094+00 rc=4 efc=3 .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIconInfo__16dMenuMapCommon_cFUcfffffUc) {
+asm void dMenuMapCommon_c::setIconInfo(char field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, char field_6) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setIconInfo__16dMenuMapCommon_cFUcfffffUc.s"
 }
 #pragma pop
 
 
-/* 801C443C-801C4494 0058+00 .text      clearIconInfo__16dMenuMapCommon_cFv                          */
+/* 801C443C-801C4494 0058+00 rc=3 efc=2 .text      clearIconInfo__16dMenuMapCommon_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearIconInfo__16dMenuMapCommon_cFv) {
+asm void dMenuMapCommon_c::clearIconInfo() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/clearIconInfo__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
 
-/* 801C4494-801C452C 0098+00 .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
+/* 801C4494-801C452C 0098+00 rc=1 efc=0 .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlendRatio__16dMenuMapCommon_cFUcff) {
+asm void dMenuMapCommon_c::setBlendRatio(char field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setBlendRatio__16dMenuMapCommon_cFUcff.s"
 }
@@ -262,14 +357,14 @@ ASM_FUNCTION(setBlendRatio__16dMenuMapCommon_cFUcff) {
 
 
 /* ############################################################################################## */
-/* 804540F8-80454100 0008+00 .sdata2    @4119                                                        */
+/* 804540F8-80454100 0008+00 rc=2 efc=0 .sdata2    @4119                                                        */
 f64 d_menu_d_menu_map_common__lit_4119 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801C452C-801C4600 00D4+00 .text      blinkMove__16dMenuMapCommon_cFs                              */
+/* 801C452C-801C4600 00D4+00 rc=1 efc=1 .text      blinkMove__16dMenuMapCommon_cFs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(blinkMove__16dMenuMapCommon_cFs) {
+asm void dMenuMapCommon_c::blinkMove(s16 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/blinkMove__16dMenuMapCommon_cFs.s"
 }
@@ -277,51 +372,50 @@ ASM_FUNCTION(blinkMove__16dMenuMapCommon_cFs) {
 
 
 /* ############################################################################################## */
-/* 80454100-80454108 0008+00 .sdata2    @4140                                                        */
+/* 80454100-80454108 0008+00 rc=1 efc=0 .sdata2    @4140                                                        */
 f64 d_menu_d_menu_map_common__lit_4140 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801C4600-801C4738 0138+00 .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
+/* 801C4600-801C4738 0138+00 rc=1 efc=1 .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLightDropAnime__16dMenuMapCommon_cFv) {
+asm void dMenuMapCommon_c::moveLightDropAnime() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/moveLightDropAnime__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
 
-/* 801C4738-801C4778 0040+00 .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
+/* 801C4738-801C4778 0040+00 rc=1 efc=0 .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIconSizeX__16dMenuMapCommon_cFUc) {
+asm void dMenuMapCommon_c::getIconSizeX(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeX__16dMenuMapCommon_cFUc.s"
 }
 #pragma pop
 
 
-/* 801C4778-801C47C4 004C+00 .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
+/* 801C4778-801C47C4 004C+00 rc=1 efc=0 .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIconSizeY__16dMenuMapCommon_cFUc) {
+asm void dMenuMapCommon_c::getIconSizeY(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeY__16dMenuMapCommon_cFUc.s"
 }
 #pragma pop
 
 
-/* 801C47C4-801C4D54 0590+00 .text      debugIcon__16dMenuMapCommon_cFv                              */
+/* 801C47C4-801C4D54 0590+00 rc=1 efc=0 .text      debugIcon__16dMenuMapCommon_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(debugIcon__16dMenuMapCommon_cFv) {
+asm void dMenuMapCommon_c::debugIcon() {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/debugIcon__16dMenuMapCommon_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

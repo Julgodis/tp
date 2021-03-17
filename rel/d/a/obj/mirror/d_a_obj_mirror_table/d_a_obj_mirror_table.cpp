@@ -6,27 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daObjMirrorTable_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjMirrorTable_c {
+	void createHeap();
+	void isSwitch();
+	void draw();
+	void execute();
+	void create();
+	void create_init();
+	void initBaseMtx();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgW {
+	~dBgW();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__18daObjMirrorTable_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void isSwitch__18daObjMirrorTable_cFv();
-extern "C" extern void rideCallBack1__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void rideCallBack2__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObjMirrorTable_Draw__FP18daObjMirrorTable_c();
-extern "C" extern void draw__18daObjMirrorTable_cFv();
-extern "C" extern void daObjMirrorTable_Execute__FP18daObjMirrorTable_c();
-extern "C" extern void execute__18daObjMirrorTable_cFv();
-extern "C" extern void daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c();
-extern "C" extern void daObjMirrorTable_Delete__FP18daObjMirrorTable_c();
-extern "C" extern void __dt__4dBgWFv();
-extern "C" extern void daObjMirrorTable_Create__FP10fopAc_ac_c();
-extern "C" extern void create__18daObjMirrorTable_cFv();
-extern "C" extern void create_init__18daObjMirrorTable_cFv();
-extern "C" extern void initBaseMtx__18daObjMirrorTable_cFv();
-extern "C" extern void func_80C9B220();
+void createSolidHeap(fopAc_ac_c*);
+void rideCallBack1(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void rideCallBack2(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObjMirrorTable_Draw(daObjMirrorTable_c*);
+void daObjMirrorTable_Execute(daObjMirrorTable_c*);
+bool daObjMirrorTable_IsDelete(daObjMirrorTable_c*);
+void daObjMirrorTable_Delete(daObjMirrorTable_c*);
+void daObjMirrorTable_Create(fopAc_ac_c*);
+extern "C" void func_80C9B220();
+
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__18daObjMirrorTable_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void isSwitch__18daObjMirrorTable_cFv();
+extern "C" void rideCallBack1__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void rideCallBack2__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObjMirrorTable_Draw__FP18daObjMirrorTable_c();
+extern "C" void draw__18daObjMirrorTable_cFv();
+extern "C" void daObjMirrorTable_Execute__FP18daObjMirrorTable_c();
+extern "C" void execute__18daObjMirrorTable_cFv();
+extern "C" bool daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c();
+extern "C" void daObjMirrorTable_Delete__FP18daObjMirrorTable_c();
+extern "C" void __dt__4dBgWFv();
+extern "C" void daObjMirrorTable_Create__FP10fopAc_ac_c();
+extern "C" void create__18daObjMirrorTable_cFv();
+extern "C" void create_init__18daObjMirrorTable_cFv();
+extern "C" void initBaseMtx__18daObjMirrorTable_cFv();
+extern "C" void func_80C9B220();
 SECTION_RODATA extern const u8 l_minPos[12];
 SECTION_RODATA extern const u8 l_maxPos[12];
 SECTION_RODATA extern const u32 lit_3850;
@@ -51,7 +90,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -61,7 +102,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -72,7 +113,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/createHeap__18daObjMirrorTable_cFv.s"
 }
@@ -83,7 +124,7 @@ ASM_FUNCTION(createHeap__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/__dt__12J3DFrameCtrlFv.s"
 }
@@ -94,7 +135,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSwitch__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::isSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/isSwitch__18daObjMirrorTable_cFv.s"
 }
@@ -105,7 +146,7 @@ ASM_FUNCTION(isSwitch__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack1__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack1(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/rideCallBack1__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -116,7 +157,7 @@ ASM_FUNCTION(rideCallBack1__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack2__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack2(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/rideCallBack2__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -127,7 +168,7 @@ ASM_FUNCTION(rideCallBack2__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorTable_Draw__FP18daObjMirrorTable_c) {
+asm void daObjMirrorTable_Draw(daObjMirrorTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_Draw__FP18daObjMirrorTable_c.s"
 }
@@ -138,7 +179,7 @@ ASM_FUNCTION(daObjMirrorTable_Draw__FP18daObjMirrorTable_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/draw__18daObjMirrorTable_cFv.s"
 }
@@ -149,7 +190,7 @@ ASM_FUNCTION(draw__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorTable_Execute__FP18daObjMirrorTable_c) {
+asm void daObjMirrorTable_Execute(daObjMirrorTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_Execute__FP18daObjMirrorTable_c.s"
 }
@@ -160,7 +201,7 @@ ASM_FUNCTION(daObjMirrorTable_Execute__FP18daObjMirrorTable_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/execute__18daObjMirrorTable_cFv.s"
 }
@@ -168,21 +209,16 @@ ASM_FUNCTION(execute__18daObjMirrorTable_cFv) {
 
 
 /* 80C9A9D4-80C9A9DC 0008+00 .text      daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c.s"
+bool daObjMirrorTable_IsDelete(daObjMirrorTable_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9A9DC-80C9AAB0 00D4+00 .text      daObjMirrorTable_Delete__FP18daObjMirrorTable_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorTable_Delete__FP18daObjMirrorTable_c) {
+asm void daObjMirrorTable_Delete(daObjMirrorTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_Delete__FP18daObjMirrorTable_c.s"
 }
@@ -193,7 +229,7 @@ ASM_FUNCTION(daObjMirrorTable_Delete__FP18daObjMirrorTable_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dBgWFv) {
+asm dBgW::~dBgW() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/__dt__4dBgWFv.s"
 }
@@ -204,7 +240,7 @@ ASM_FUNCTION(__dt__4dBgWFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorTable_Create__FP10fopAc_ac_c) {
+asm void daObjMirrorTable_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_Create__FP10fopAc_ac_c.s"
 }
@@ -215,7 +251,7 @@ ASM_FUNCTION(daObjMirrorTable_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/create__18daObjMirrorTable_cFv.s"
 }
@@ -226,7 +262,7 @@ ASM_FUNCTION(create__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/create_init__18daObjMirrorTable_cFv.s"
 }
@@ -237,7 +273,7 @@ ASM_FUNCTION(create_init__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__18daObjMirrorTable_cFv) {
+asm void daObjMirrorTable_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/initBaseMtx__18daObjMirrorTable_cFv.s"
 }
@@ -248,7 +284,7 @@ ASM_FUNCTION(initBaseMtx__18daObjMirrorTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C9B220) {
+extern "C" asm void func_80C9B220() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/func_80C9B220.s"
 }

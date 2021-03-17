@@ -6,25 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjZCloth_c;
+
+struct daObjZCloth_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjZCloth_cFv();
-extern "C" extern void setBaseMtx__13daObjZCloth_cFv();
-extern "C" extern void Create__13daObjZCloth_cFv();
-extern "C" extern void create__13daObjZCloth_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void execute__13daObjZCloth_cFv();
-extern "C" extern void draw__13daObjZCloth_cFv();
-extern "C" extern void _delete__13daObjZCloth_cFv();
-extern "C" extern void daObjZCloth_Draw__FP13daObjZCloth_c();
-extern "C" extern void daObjZCloth_Execute__FP13daObjZCloth_c();
-extern "C" extern void daObjZCloth_Delete__FP13daObjZCloth_c();
-extern "C" extern void daObjZCloth_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80D3F2BC();
-extern "C" extern void func_80D3F2C4();
+void daObjZCloth_Draw(daObjZCloth_c*);
+void daObjZCloth_Execute(daObjZCloth_c*);
+void daObjZCloth_Delete(daObjZCloth_c*);
+void daObjZCloth_Create(fopAc_ac_c*);
+extern "C" void func_80D3F2BC();
+extern "C" void func_80D3F2C4();
+
+extern "C" void initBaseMtx__13daObjZCloth_cFv();
+extern "C" void setBaseMtx__13daObjZCloth_cFv();
+extern "C" void Create__13daObjZCloth_cFv();
+extern "C" void create__13daObjZCloth_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void execute__13daObjZCloth_cFv();
+extern "C" void draw__13daObjZCloth_cFv();
+extern "C" void _delete__13daObjZCloth_cFv();
+extern "C" void daObjZCloth_Draw__FP13daObjZCloth_c();
+extern "C" void daObjZCloth_Execute__FP13daObjZCloth_c();
+extern "C" void daObjZCloth_Delete__FP13daObjZCloth_c();
+extern "C" void daObjZCloth_Create__FP10fopAc_ac_c();
+extern "C" void func_80D3F2BC();
+extern "C" void func_80D3F2C4();
 SECTION_DATA extern u8 l_daObjZCloth_Method[32];
 SECTION_DATA extern u8 g_profile_Obj_ZoraCloth[48];
 SECTION_DATA extern void*const __vt__13daObjZCloth_c[17];
@@ -36,7 +75,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -46,7 +87,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/initBaseMtx__13daObjZCloth_cFv.s"
 }
@@ -57,7 +98,7 @@ ASM_FUNCTION(initBaseMtx__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/setBaseMtx__13daObjZCloth_cFv.s"
 }
@@ -68,7 +109,7 @@ ASM_FUNCTION(setBaseMtx__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/Create__13daObjZCloth_cFv.s"
 }
@@ -79,7 +120,7 @@ ASM_FUNCTION(Create__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3EF0C.s"
 }
@@ -90,7 +131,7 @@ ASM_FUNCTION(create__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/__dt__8cM3dGCylFv.s"
 }
@@ -101,7 +142,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/__dt__8cM3dGAabFv.s"
 }
@@ -112,7 +153,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -123,7 +164,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/execute__13daObjZCloth_cFv.s"
 }
@@ -134,7 +175,7 @@ ASM_FUNCTION(execute__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/draw__13daObjZCloth_cFv.s"
 }
@@ -145,7 +186,7 @@ ASM_FUNCTION(draw__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__13daObjZCloth_cFv) {
+asm void daObjZCloth_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/_delete__13daObjZCloth_cFv.s"
 }
@@ -156,7 +197,7 @@ ASM_FUNCTION(_delete__13daObjZCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZCloth_Draw__FP13daObjZCloth_c) {
+asm void daObjZCloth_Draw(daObjZCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Draw__FP13daObjZCloth_c.s"
 }
@@ -167,7 +208,7 @@ ASM_FUNCTION(daObjZCloth_Draw__FP13daObjZCloth_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZCloth_Execute__FP13daObjZCloth_c) {
+asm void daObjZCloth_Execute(daObjZCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Execute__FP13daObjZCloth_c.s"
 }
@@ -178,7 +219,7 @@ ASM_FUNCTION(daObjZCloth_Execute__FP13daObjZCloth_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZCloth_Delete__FP13daObjZCloth_c) {
+asm void daObjZCloth_Delete(daObjZCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Delete__FP13daObjZCloth_c.s"
 }
@@ -189,7 +230,7 @@ ASM_FUNCTION(daObjZCloth_Delete__FP13daObjZCloth_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZCloth_Create__FP10fopAc_ac_c) {
+asm void daObjZCloth_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Create__FP10fopAc_ac_c.s"
 }
@@ -200,7 +241,7 @@ ASM_FUNCTION(daObjZCloth_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3F2BC) {
+extern "C" asm void func_80D3F2BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3F2BC.s"
 }
@@ -211,7 +252,7 @@ ASM_FUNCTION(func_80D3F2BC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3F2C4) {
+extern "C" asm void func_80D3F2C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3F2C4.s"
 }

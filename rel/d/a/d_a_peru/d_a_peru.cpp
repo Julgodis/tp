@@ -6,123 +6,332 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daPeru_c {
+	~daPeru_c();
+	void create();
+	void CreateHeap();
+	void typeInitialize();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void isDelete();
+	void reset();
+	void setParam();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void wait(s32);
+	void is_AppearDemo_start();
+	void _AppearDemoTag_delete();
+	void talk(s32);
+	void jump_st(s32);
+	void jump_ed(s32);
+	void sniff(s32);
+	void demo_appear(s32);
+	void demo_walk_to_link(s32);
+	void demo_walk_circle(s32);
+	void demo_walk_to_window(s32);
+	void demo_walk_to_pathway(s32);
+	void cutAppear(s32);
+	void _cutAppear_Init(s32 const&);
+	void _cutAppear_Main(s32 const&);
+	void _catdoor_open();
+	void _catdoor_open_demoskip();
+	void cutAppear_skip(s32);
+	void _cutAppear_skip_Init(s32 const&);
+	void _cutAppear_skip_Main(s32 const&);
+	bool getEyeballMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+	void beforeMove();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+	bool getEyeballLMaterialNo();
+	bool getEyeballRMaterialNo();
+	void afterJntAnm(s32);
+	bool checkChangeEvt();
+	bool evtEndProc();
+	void afterMoved();
+	bool chkXYItems();
+	void decTmr();
+	void drawOtherMdl();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	bool afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+	daNpcT_ActorMngr_c();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct daNpcT_Path_c {
+	~daNpcT_Path_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daPeru_Param_c {
+	~daPeru_Param_c();
+};
+
+struct daTag_EvtArea_c {
+	void chkPointInArea(cXyz);
+};
+
+struct daPy_py_c {
+	void checkNowWolf();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__8daPeru_cFv();
-extern "C" extern void create__8daPeru_cFv();
-extern "C" extern void CreateHeap__8daPeru_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void typeInitialize__8daPeru_cFv();
-extern "C" extern void Delete__8daPeru_cFv();
-extern "C" extern void Execute__8daPeru_cFv();
-extern "C" extern void Draw__8daPeru_cFv();
-extern "C" extern void createHeapCallBack__8daPeru_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__8daPeru_cFP8J3DJointi();
-extern "C" extern void isDelete__8daPeru_cFv();
-extern "C" extern void reset__8daPeru_cFv();
-extern "C" extern void setParam__8daPeru_cFv();
-extern "C" extern void setAfterTalkMotion__8daPeru_cFv();
-extern "C" extern void srchActors__8daPeru_cFv();
-extern "C" extern void evtTalk__8daPeru_cFv();
-extern "C" extern void evtCutProc__8daPeru_cFv();
-extern "C" extern void action__8daPeru_cFv();
-extern "C" extern void setAttnPos__8daPeru_cFv();
-extern "C" extern void setCollision__8daPeru_cFv();
-extern "C" extern void drawDbgInfo__8daPeru_cFv();
-extern "C" extern void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii();
-extern "C" extern void wait__8daPeru_cFi();
-extern "C" extern void is_AppearDemo_start__8daPeru_cFv();
-extern "C" extern void _AppearDemoTag_delete__8daPeru_cFv();
-extern "C" extern void talk__8daPeru_cFi();
-extern "C" extern void jump_st__8daPeru_cFi();
-extern "C" extern void jump_ed__8daPeru_cFi();
-extern "C" extern void sniff__8daPeru_cFi();
-extern "C" extern void demo_appear__8daPeru_cFi();
-extern "C" extern void demo_walk_to_link__8daPeru_cFi();
-extern "C" extern void demo_walk_circle__8daPeru_cFi();
-extern "C" extern void demo_walk_to_window__8daPeru_cFi();
-extern "C" extern void demo_walk_to_pathway__8daPeru_cFi();
-extern "C" extern void cutAppear__8daPeru_cFi();
-extern "C" extern void _cutAppear_Init__8daPeru_cFRCi();
-extern "C" extern void _cutAppear_Main__8daPeru_cFRCi();
-extern "C" extern void _catdoor_open__8daPeru_cFv();
-extern "C" extern void _catdoor_open_demoskip__8daPeru_cFv();
-extern "C" extern void cutAppear_skip__8daPeru_cFi();
-extern "C" extern void _cutAppear_skip_Init__8daPeru_cFRCi();
-extern "C" extern void _cutAppear_skip_Main__8daPeru_cFRCi();
-extern "C" extern void daPeru_Create__FPv();
-extern "C" extern void daPeru_Delete__FPv();
-extern "C" extern void daPeru_Execute__FPv();
-extern "C" extern void daPeru_Draw__FPv();
-extern "C" extern void daPeru_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __dt__13daNpcT_Path_cFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getFootLJointNo__8daNpcT_cFv();
-extern "C" extern void getFootRJointNo__8daNpcT_cFv();
-extern "C" extern void getEyeballLMaterialNo__8daNpcT_cFv();
-extern "C" extern void getEyeballRMaterialNo__8daNpcT_cFv();
-extern "C" extern void afterJntAnm__8daNpcT_cFi();
-extern "C" extern void checkChangeEvt__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void afterMoved__8daNpcT_cFv();
-extern "C" extern void chkXYItems__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawOtherMdl__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void afterSetMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void changeAnm__8daNpcT_cFPiPi();
-extern "C" extern void changeBck__8daNpcT_cFPiPi();
-extern "C" extern void changeBtp__8daNpcT_cFPiPi();
-extern "C" extern void changeBtk__8daNpcT_cFPiPi();
-extern "C" extern void __sinit_d_a_peru_cpp();
-extern "C" extern void __ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void getEyeballMaterialNo__8daPeru_cFv();
-extern "C" extern void getHeadJointNo__8daPeru_cFv();
-extern "C" extern void getNeckJointNo__8daPeru_cFv();
-extern "C" extern void getBackboneJointNo__8daPeru_cFv();
-extern "C" extern void checkChangeJoint__8daPeru_cFi();
-extern "C" extern void checkRemoveJoint__8daPeru_cFi();
-extern "C" extern void beforeMove__8daPeru_cFv();
-extern "C" extern void __dt__14daPeru_Param_cFv();
-extern "C" extern void func_80D4BFC4();
-extern "C" extern void func_80D4BFCC();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz();
-extern "C" extern void checkNowWolf__9daPy_py_cFv();
+extern "C" void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii();
+void daPeru_Create(void*);
+void daPeru_Delete(void*);
+void daPeru_Execute(void*);
+void daPeru_Draw(void*);
+bool daPeru_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void __sinit_d_a_peru_cpp();
+extern "C" void __ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_80D4BFC4();
+extern "C" void func_80D4BFCC();
+
+extern "C" void __dt__8daPeru_cFv();
+extern "C" void create__8daPeru_cFv();
+extern "C" void CreateHeap__8daPeru_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void typeInitialize__8daPeru_cFv();
+extern "C" void Delete__8daPeru_cFv();
+extern "C" void Execute__8daPeru_cFv();
+extern "C" void Draw__8daPeru_cFv();
+extern "C" void createHeapCallBack__8daPeru_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__8daPeru_cFP8J3DJointi();
+extern "C" void isDelete__8daPeru_cFv();
+extern "C" void reset__8daPeru_cFv();
+extern "C" void setParam__8daPeru_cFv();
+extern "C" void setAfterTalkMotion__8daPeru_cFv();
+extern "C" void srchActors__8daPeru_cFv();
+extern "C" void evtTalk__8daPeru_cFv();
+extern "C" void evtCutProc__8daPeru_cFv();
+extern "C" void action__8daPeru_cFv();
+extern "C" void setAttnPos__8daPeru_cFv();
+extern "C" void setCollision__8daPeru_cFv();
+extern "C" bool drawDbgInfo__8daPeru_cFv();
+extern "C" void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii();
+extern "C" void wait__8daPeru_cFi();
+extern "C" void is_AppearDemo_start__8daPeru_cFv();
+extern "C" void _AppearDemoTag_delete__8daPeru_cFv();
+extern "C" void talk__8daPeru_cFi();
+extern "C" void jump_st__8daPeru_cFi();
+extern "C" void jump_ed__8daPeru_cFi();
+extern "C" void sniff__8daPeru_cFi();
+extern "C" void demo_appear__8daPeru_cFi();
+extern "C" void demo_walk_to_link__8daPeru_cFi();
+extern "C" void demo_walk_circle__8daPeru_cFi();
+extern "C" void demo_walk_to_window__8daPeru_cFi();
+extern "C" void demo_walk_to_pathway__8daPeru_cFi();
+extern "C" void cutAppear__8daPeru_cFi();
+extern "C" void _cutAppear_Init__8daPeru_cFRCi();
+extern "C" void _cutAppear_Main__8daPeru_cFRCi();
+extern "C" void _catdoor_open__8daPeru_cFv();
+extern "C" void _catdoor_open_demoskip__8daPeru_cFv();
+extern "C" void cutAppear_skip__8daPeru_cFi();
+extern "C" void _cutAppear_skip_Init__8daPeru_cFRCi();
+extern "C" void _cutAppear_skip_Main__8daPeru_cFRCi();
+extern "C" void daPeru_Create__FPv();
+extern "C" void daPeru_Delete__FPv();
+extern "C" void daPeru_Execute__FPv();
+extern "C" void daPeru_Draw__FPv();
+extern "C" bool daPeru_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __dt__13daNpcT_Path_cFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" void afterJntAnm__8daNpcT_cFi();
+extern "C" bool checkChangeEvt__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawOtherMdl__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void __sinit_d_a_peru_cpp();
+extern "C" void __ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" bool getEyeballMaterialNo__8daPeru_cFv();
+extern "C" s32 getHeadJointNo__8daPeru_cFv();
+extern "C" s32 getNeckJointNo__8daPeru_cFv();
+extern "C" bool getBackboneJointNo__8daPeru_cFv();
+extern "C" void checkChangeJoint__8daPeru_cFi();
+extern "C" void checkRemoveJoint__8daPeru_cFi();
+extern "C" void beforeMove__8daPeru_cFv();
+extern "C" void __dt__14daPeru_Param_cFv();
+extern "C" void func_80D4BFC4();
+extern "C" void func_80D4BFCC();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void checkNowWolf__9daPy_py_cFv();
 SECTION_RODATA extern const u8 m__14daPeru_Param_c[152];
 SECTION_RODATA extern const u32 lit_4050;
 SECTION_RODATA extern const u32 lit_4051;
@@ -268,8 +477,11 @@ SECTION_BSS extern u8 data_80D4C8BC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -279,7 +491,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daPeru_cFv) {
+asm daPeru_c::~daPeru_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__8daPeru_cFv.s"
 }
@@ -290,7 +502,7 @@ ASM_FUNCTION(__dt__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daPeru_cFv) {
+asm void daPeru_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/create__8daPeru_cFv.s"
 }
@@ -301,7 +513,7 @@ ASM_FUNCTION(create__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daPeru_cFv) {
+asm void daPeru_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/CreateHeap__8daPeru_cFv.s"
 }
@@ -312,7 +524,7 @@ ASM_FUNCTION(CreateHeap__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -323,7 +535,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -334,7 +546,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__14J3DTevColorAnmFv.s"
 }
@@ -345,7 +557,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__14J3DTevColorAnmFv.s"
 }
@@ -356,7 +568,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__11J3DTexNoAnmFv.s"
 }
@@ -367,7 +579,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__11J3DTexNoAnmFv.s"
 }
@@ -378,7 +590,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -389,7 +601,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -400,7 +612,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__14J3DMatColorAnmFv.s"
 }
@@ -411,7 +623,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__14J3DMatColorAnmFv.s"
 }
@@ -422,7 +634,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeInitialize__8daPeru_cFv) {
+asm void daPeru_c::typeInitialize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/typeInitialize__8daPeru_cFv.s"
 }
@@ -433,7 +645,7 @@ ASM_FUNCTION(typeInitialize__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__8daPeru_cFv) {
+asm void daPeru_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/Delete__8daPeru_cFv.s"
 }
@@ -444,7 +656,7 @@ ASM_FUNCTION(Delete__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__8daPeru_cFv) {
+asm void daPeru_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/Execute__8daPeru_cFv.s"
 }
@@ -455,7 +667,7 @@ ASM_FUNCTION(Execute__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__8daPeru_cFv) {
+asm void daPeru_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/Draw__8daPeru_cFv.s"
 }
@@ -466,7 +678,7 @@ ASM_FUNCTION(Draw__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__8daPeru_cFP10fopAc_ac_c) {
+asm void daPeru_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/createHeapCallBack__8daPeru_cFP10fopAc_ac_c.s"
 }
@@ -477,7 +689,7 @@ ASM_FUNCTION(createHeapCallBack__8daPeru_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__8daPeru_cFP8J3DJointi) {
+asm void daPeru_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/ctrlJointCallBack__8daPeru_cFP8J3DJointi.s"
 }
@@ -488,7 +700,7 @@ ASM_FUNCTION(ctrlJointCallBack__8daPeru_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__8daPeru_cFv) {
+asm void daPeru_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/isDelete__8daPeru_cFv.s"
 }
@@ -499,7 +711,7 @@ ASM_FUNCTION(isDelete__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__8daPeru_cFv) {
+asm void daPeru_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/reset__8daPeru_cFv.s"
 }
@@ -510,7 +722,7 @@ ASM_FUNCTION(reset__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__8daPeru_cFv) {
+asm void daPeru_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setParam__8daPeru_cFv.s"
 }
@@ -521,7 +733,7 @@ ASM_FUNCTION(setParam__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__8daPeru_cFv) {
+asm void daPeru_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setAfterTalkMotion__8daPeru_cFv.s"
 }
@@ -532,7 +744,7 @@ ASM_FUNCTION(setAfterTalkMotion__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActors__8daPeru_cFv) {
+asm void daPeru_c::srchActors() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/srchActors__8daPeru_cFv.s"
 }
@@ -543,7 +755,7 @@ ASM_FUNCTION(srchActors__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__8daPeru_cFv) {
+asm void daPeru_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/evtTalk__8daPeru_cFv.s"
 }
@@ -554,7 +766,7 @@ ASM_FUNCTION(evtTalk__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__8daPeru_cFv) {
+asm void daPeru_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/evtCutProc__8daPeru_cFv.s"
 }
@@ -565,7 +777,7 @@ ASM_FUNCTION(evtCutProc__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__8daPeru_cFv) {
+asm void daPeru_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/action__8daPeru_cFv.s"
 }
@@ -576,7 +788,7 @@ ASM_FUNCTION(action__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__8daPeru_cFv) {
+asm void daPeru_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setAttnPos__8daPeru_cFv.s"
 }
@@ -587,7 +799,7 @@ ASM_FUNCTION(setAttnPos__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__8daPeru_cFv) {
+asm void daPeru_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setCollision__8daPeru_cFv.s"
 }
@@ -595,21 +807,16 @@ ASM_FUNCTION(setCollision__8daPeru_cFv) {
 
 
 /* 80D4835C-80D48364 0008+00 .text      drawDbgInfo__8daPeru_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__8daPeru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/drawDbgInfo__8daPeru_cFv.s"
+bool daPeru_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D48364-80D48414 00B0+00 .text      setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii) {
+extern "C" asm void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii.s"
 }
@@ -620,7 +827,7 @@ ASM_FUNCTION(setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__8daPeru_cFi) {
+asm void daPeru_c::wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/wait__8daPeru_cFi.s"
 }
@@ -631,7 +838,7 @@ ASM_FUNCTION(wait__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(is_AppearDemo_start__8daPeru_cFv) {
+asm void daPeru_c::is_AppearDemo_start() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/is_AppearDemo_start__8daPeru_cFv.s"
 }
@@ -642,7 +849,7 @@ ASM_FUNCTION(is_AppearDemo_start__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_AppearDemoTag_delete__8daPeru_cFv) {
+asm void daPeru_c::_AppearDemoTag_delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_AppearDemoTag_delete__8daPeru_cFv.s"
 }
@@ -653,7 +860,7 @@ ASM_FUNCTION(_AppearDemoTag_delete__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__8daPeru_cFi) {
+asm void daPeru_c::talk(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/talk__8daPeru_cFi.s"
 }
@@ -664,7 +871,7 @@ ASM_FUNCTION(talk__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jump_st__8daPeru_cFi) {
+asm void daPeru_c::jump_st(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/jump_st__8daPeru_cFi.s"
 }
@@ -675,7 +882,7 @@ ASM_FUNCTION(jump_st__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jump_ed__8daPeru_cFi) {
+asm void daPeru_c::jump_ed(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/jump_ed__8daPeru_cFi.s"
 }
@@ -686,7 +893,7 @@ ASM_FUNCTION(jump_ed__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sniff__8daPeru_cFi) {
+asm void daPeru_c::sniff(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/sniff__8daPeru_cFi.s"
 }
@@ -697,7 +904,7 @@ ASM_FUNCTION(sniff__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_appear__8daPeru_cFi) {
+asm void daPeru_c::demo_appear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/demo_appear__8daPeru_cFi.s"
 }
@@ -708,7 +915,7 @@ ASM_FUNCTION(demo_appear__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_walk_to_link__8daPeru_cFi) {
+asm void daPeru_c::demo_walk_to_link(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/demo_walk_to_link__8daPeru_cFi.s"
 }
@@ -719,7 +926,7 @@ ASM_FUNCTION(demo_walk_to_link__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_walk_circle__8daPeru_cFi) {
+asm void daPeru_c::demo_walk_circle(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/demo_walk_circle__8daPeru_cFi.s"
 }
@@ -730,7 +937,7 @@ ASM_FUNCTION(demo_walk_circle__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_walk_to_window__8daPeru_cFi) {
+asm void daPeru_c::demo_walk_to_window(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/demo_walk_to_window__8daPeru_cFi.s"
 }
@@ -741,7 +948,7 @@ ASM_FUNCTION(demo_walk_to_window__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_walk_to_pathway__8daPeru_cFi) {
+asm void daPeru_c::demo_walk_to_pathway(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/demo_walk_to_pathway__8daPeru_cFi.s"
 }
@@ -752,7 +959,7 @@ ASM_FUNCTION(demo_walk_to_pathway__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutAppear__8daPeru_cFi) {
+asm void daPeru_c::cutAppear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/cutAppear__8daPeru_cFi.s"
 }
@@ -763,7 +970,7 @@ ASM_FUNCTION(cutAppear__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_cutAppear_Init__8daPeru_cFRCi) {
+asm void daPeru_c::_cutAppear_Init(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_cutAppear_Init__8daPeru_cFRCi.s"
 }
@@ -774,7 +981,7 @@ ASM_FUNCTION(_cutAppear_Init__8daPeru_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_cutAppear_Main__8daPeru_cFRCi) {
+asm void daPeru_c::_cutAppear_Main(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_cutAppear_Main__8daPeru_cFRCi.s"
 }
@@ -785,7 +992,7 @@ ASM_FUNCTION(_cutAppear_Main__8daPeru_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_catdoor_open__8daPeru_cFv) {
+asm void daPeru_c::_catdoor_open() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_catdoor_open__8daPeru_cFv.s"
 }
@@ -796,7 +1003,7 @@ ASM_FUNCTION(_catdoor_open__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_catdoor_open_demoskip__8daPeru_cFv) {
+asm void daPeru_c::_catdoor_open_demoskip() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_catdoor_open_demoskip__8daPeru_cFv.s"
 }
@@ -807,7 +1014,7 @@ ASM_FUNCTION(_catdoor_open_demoskip__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutAppear_skip__8daPeru_cFi) {
+asm void daPeru_c::cutAppear_skip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/cutAppear_skip__8daPeru_cFi.s"
 }
@@ -818,7 +1025,7 @@ ASM_FUNCTION(cutAppear_skip__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_cutAppear_skip_Init__8daPeru_cFRCi) {
+asm void daPeru_c::_cutAppear_skip_Init(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_cutAppear_skip_Init__8daPeru_cFRCi.s"
 }
@@ -829,7 +1036,7 @@ ASM_FUNCTION(_cutAppear_skip_Init__8daPeru_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_cutAppear_skip_Main__8daPeru_cFRCi) {
+asm void daPeru_c::_cutAppear_skip_Main(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/_cutAppear_skip_Main__8daPeru_cFRCi.s"
 }
@@ -840,7 +1047,7 @@ ASM_FUNCTION(_cutAppear_skip_Main__8daPeru_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPeru_Create__FPv) {
+asm void daPeru_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/daPeru_Create__FPv.s"
 }
@@ -851,7 +1058,7 @@ ASM_FUNCTION(daPeru_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPeru_Delete__FPv) {
+asm void daPeru_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/daPeru_Delete__FPv.s"
 }
@@ -862,7 +1069,7 @@ ASM_FUNCTION(daPeru_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPeru_Execute__FPv) {
+asm void daPeru_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/daPeru_Execute__FPv.s"
 }
@@ -873,7 +1080,7 @@ ASM_FUNCTION(daPeru_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPeru_Draw__FPv) {
+asm void daPeru_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/daPeru_Draw__FPv.s"
 }
@@ -881,21 +1088,16 @@ ASM_FUNCTION(daPeru_Draw__FPv) {
 
 
 /* 80D4AB88-80D4AB90 0008+00 .text      daPeru_IsDelete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daPeru_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/daPeru_IsDelete__FPv.s"
+bool daPeru_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4AB90-80D4ABC0 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -906,7 +1108,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__10cCcD_GSttsFv.s"
 }
@@ -917,7 +1119,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__8daNpcT_cFv.s"
 }
@@ -928,7 +1130,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__4cXyzFv.s"
 }
@@ -939,7 +1141,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__5csXyzFv.s"
 }
@@ -950,7 +1152,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -961,7 +1163,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__8dCcD_CylFv.s"
 }
@@ -972,7 +1174,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
+asm daNpcT_Path_c::~daNpcT_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__13daNpcT_Path_cFv.s"
 }
@@ -983,7 +1185,7 @@ ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__8dCcD_CylFv.s"
 }
@@ -994,7 +1196,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__8cM3dGCylFv.s"
 }
@@ -1005,7 +1207,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__8cM3dGAabFv.s"
 }
@@ -1016,7 +1218,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1027,7 +1229,7 @@ ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/func_80D4B2B4.s"
 }
@@ -1035,21 +1237,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 80D4B6B8-80D4B6BC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4B6BC-80D4B7B8 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -1057,21 +1254,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 80D4B7B8-80D4B7BC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4B7BC-80D4B804 0048+00 .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -1082,7 +1274,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1093,7 +1285,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__10dCcD_GSttsFv.s"
 }
@@ -1104,7 +1296,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1115,7 +1307,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1126,7 +1318,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -1137,7 +1329,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -1145,120 +1337,70 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 80D4BCAC-80D4BCB0 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BCB0-80D4BCB8 0008+00 .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80D4BCB8-80D4BCC0 0008+00 .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80D4BCC0-80D4BCC8 0008+00 .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D4BCC8-80D4BCD0 0008+00 .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D4BCD0-80D4BCD4 0004+00 .text      afterJntAnm__8daNpcT_cFi                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/afterJntAnm__8daNpcT_cFi.s"
+void daNpcT_c::afterJntAnm(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BCD4-80D4BCDC 0008+00 .text      checkChangeEvt__8daNpcT_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/checkChangeEvt__8daNpcT_cFv.s"
+bool daNpcT_c::checkChangeEvt() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D4BCDC-80D4BCE4 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4BCE4-80D4BCE8 0004+00 .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BCE8-80D4BCF0 0008+00 .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D4BCF0-80D4BD08 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/decTmr__8daNpcT_cFv.s"
 }
@@ -1266,54 +1408,34 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 80D4BD08-80D4BD0C 0004+00 .text      drawOtherMdl__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/drawOtherMdl__8daNpcT_cFv.s"
+void daNpcT_c::drawOtherMdl() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD0C-80D4BD10 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD10-80D4BD18 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4BD18-80D4BD20 0008+00 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4BD20-80D4BD50 0030+00 .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -1324,7 +1446,7 @@ ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1332,54 +1454,34 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 
 
 /* 80D4BD80-80D4BD84 0004+00 .text      changeAnm__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/changeAnm__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeAnm(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD84-80D4BD88 0004+00 .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBck__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD88-80D4BD8C 0004+00 .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD8C-80D4BD90 0004+00 .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4BD90-80D4BE2C 009C+00 .text      __sinit_d_a_peru_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_peru_cpp) {
+extern "C" asm void __sinit_d_a_peru_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__sinit_d_a_peru_cpp.s"
 }
@@ -1390,7 +1492,7 @@ ASM_FUNCTION(__sinit_d_a_peru_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/func_80D4BE2C.s"
 }
@@ -1398,54 +1500,34 @@ ASM_FUNCTION(__ct__8daPeru_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 80D4BEC4-80D4BECC 0008+00 .text      getEyeballMaterialNo__8daPeru_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__8daPeru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getEyeballMaterialNo__8daPeru_cFv.s"
+bool daPeru_c::getEyeballMaterialNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4BECC-80D4BED4 0008+00 .text      getHeadJointNo__8daPeru_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__8daPeru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getHeadJointNo__8daPeru_cFv.s"
+s32 daPeru_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80D4BED4-80D4BEDC 0008+00 .text      getNeckJointNo__8daPeru_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__8daPeru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getNeckJointNo__8daPeru_cFv.s"
+s32 daPeru_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 80D4BEDC-80D4BEE4 0008+00 .text      getBackboneJointNo__8daPeru_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__8daPeru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_peru/d_a_peru/getBackboneJointNo__8daPeru_cFv.s"
+bool daPeru_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4BEE4-80D4BEF4 0010+00 .text      checkChangeJoint__8daPeru_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__8daPeru_cFi) {
+asm void daPeru_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/checkChangeJoint__8daPeru_cFi.s"
 }
@@ -1456,7 +1538,7 @@ ASM_FUNCTION(checkChangeJoint__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__8daPeru_cFi) {
+asm void daPeru_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/checkRemoveJoint__8daPeru_cFi.s"
 }
@@ -1467,7 +1549,7 @@ ASM_FUNCTION(checkRemoveJoint__8daPeru_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__8daPeru_cFv) {
+asm void daPeru_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/beforeMove__8daPeru_cFv.s"
 }
@@ -1478,7 +1560,7 @@ ASM_FUNCTION(beforeMove__8daPeru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daPeru_Param_cFv) {
+asm daPeru_Param_c::~daPeru_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/__dt__14daPeru_Param_cFv.s"
 }
@@ -1489,7 +1571,7 @@ ASM_FUNCTION(__dt__14daPeru_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D4BFC4) {
+extern "C" asm void func_80D4BFC4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/func_80D4BFC4.s"
 }
@@ -1500,7 +1582,7 @@ ASM_FUNCTION(func_80D4BFC4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D4BFCC) {
+extern "C" asm void func_80D4BFCC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/func_80D4BFCC.s"
 }
@@ -1511,7 +1593,7 @@ ASM_FUNCTION(func_80D4BFCC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/chkPointInArea__15daTag_EvtArea_cF4cXyz.s"
 }
@@ -1522,7 +1604,7 @@ ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNowWolf__9daPy_py_cFv) {
+asm void daPy_py_c::checkNowWolf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/checkNowWolf__9daPy_py_cFv.s"
 }

@@ -6,18 +6,35 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct disappear_class;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daDisappear_Draw__FP15disappear_class();
-extern "C" extern void s_ks_sub__FPvPv();
-extern "C" extern void daDisappear_Execute__FP15disappear_class();
-extern "C" extern void daDisappear_IsDelete__FP15disappear_class();
-extern "C" extern void daDisappear_Delete__FP15disappear_class();
-extern "C" extern void yami_disappear__FP15disappear_classf();
-extern "C" extern void ghost_disappear__FP15disappear_classf();
-extern "C" extern void set_disappear__FP15disappear_classf();
-extern "C" extern void daDisappear_Create__FP10fopAc_ac_c();
+bool daDisappear_Draw(disappear_class*);
+void s_ks_sub(void*, void*);
+void daDisappear_Execute(disappear_class*);
+bool daDisappear_IsDelete(disappear_class*);
+bool daDisappear_Delete(disappear_class*);
+void yami_disappear(disappear_class*, f32);
+void ghost_disappear(disappear_class*, f32);
+void set_disappear(disappear_class*, f32);
+void daDisappear_Create(fopAc_ac_c*);
+
+extern "C" bool daDisappear_Draw__FP15disappear_class();
+extern "C" void s_ks_sub__FPvPv();
+extern "C" void daDisappear_Execute__FP15disappear_class();
+extern "C" bool daDisappear_IsDelete__FP15disappear_class();
+extern "C" bool daDisappear_Delete__FP15disappear_class();
+extern "C" void yami_disappear__FP15disappear_classf();
+extern "C" void ghost_disappear__FP15disappear_classf();
+extern "C" void set_disappear__FP15disappear_classf();
+extern "C" void daDisappear_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3704;
 SECTION_RODATA extern const u32 lit_3787;
 SECTION_RODATA extern const u32 lit_3788;
@@ -35,28 +52,25 @@ SECTION_DATA extern u8 g_profile_DISAPPEAR[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 804A8F18-804A8F20 0008+00 .text      daDisappear_Draw__FP15disappear_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDisappear_Draw__FP15disappear_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Draw__FP15disappear_class.s"
+bool daDisappear_Draw(disappear_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A8F20-804A8F6C 004C+00 .text      s_ks_sub__FPvPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ks_sub__FPvPv) {
+asm void s_ks_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/s_ks_sub__FPvPv.s"
 }
@@ -67,7 +81,7 @@ ASM_FUNCTION(s_ks_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDisappear_Execute__FP15disappear_class) {
+asm void daDisappear_Execute(disappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Execute__FP15disappear_class.s"
 }
@@ -75,32 +89,22 @@ ASM_FUNCTION(daDisappear_Execute__FP15disappear_class) {
 
 
 /* 804A8FA8-804A8FB0 0008+00 .text      daDisappear_IsDelete__FP15disappear_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDisappear_IsDelete__FP15disappear_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_IsDelete__FP15disappear_class.s"
+bool daDisappear_IsDelete(disappear_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A8FB0-804A8FB8 0008+00 .text      daDisappear_Delete__FP15disappear_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDisappear_Delete__FP15disappear_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Delete__FP15disappear_class.s"
+bool daDisappear_Delete(disappear_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A8FB8-804A9080 00C8+00 .text      yami_disappear__FP15disappear_classf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yami_disappear__FP15disappear_classf) {
+asm void yami_disappear(disappear_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/yami_disappear__FP15disappear_classf.s"
 }
@@ -111,7 +115,7 @@ ASM_FUNCTION(yami_disappear__FP15disappear_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ghost_disappear__FP15disappear_classf) {
+asm void ghost_disappear(disappear_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/ghost_disappear__FP15disappear_classf.s"
 }
@@ -122,7 +126,7 @@ ASM_FUNCTION(ghost_disappear__FP15disappear_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_disappear__FP15disappear_classf) {
+asm void set_disappear(disappear_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/set_disappear__FP15disappear_classf.s"
 }
@@ -133,7 +137,7 @@ ASM_FUNCTION(set_disappear__FP15disappear_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDisappear_Create__FP10fopAc_ac_c) {
+asm void daDisappear_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Create__FP10fopAc_ac_c.s"
 }

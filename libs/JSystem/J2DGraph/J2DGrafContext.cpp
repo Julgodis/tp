@@ -6,25 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DGrafContext (J2DGrafContext) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin J2DGrafContext) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+	// JUtility::TColor
+	/* 802E8B08 */ J2DGrafContext(f32, f32, f32, f32);
+	/* 802E8BB4 */ void setPort();
+	/* 802E8C44 */ void setup2D();
+	/* 802E8E20 */ void setScissor();
+	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+	/* 802E9234 */ void setLineWidth(char);
+	/* 802E95D4 */ ~J2DGrafContext();
+	/* 802E961C */ void place(f32, f32, f32, f32);
+	/* 802E9664 */ bool getGrafType() const;
+	/* 802E966C */ void setLookat();
+};
+
+// build JUtility (JUtility) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14J2DGrafContextFffff();
-extern "C" extern void setPort__14J2DGrafContextFv();
-extern "C" extern void setup2D__14J2DGrafContextFv();
-extern "C" extern void setScissor__14J2DGrafContextFv();
-extern "C" extern void func_802E90C0();
-extern "C" extern void func_802E90E4();
-extern "C" extern void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void setLineWidth__14J2DGrafContextFUc();
-extern "C" extern void func_802E9260();
-extern "C" extern void func_802E9368();
-extern "C" extern void func_802E9488();
-extern "C" extern void func_802E9564();
-extern "C" extern void __dt__14J2DGrafContextFv();
-extern "C" extern void place__14J2DGrafContextFffff();
-extern "C" extern void getGrafType__14J2DGrafContextCFv();
-extern "C" extern void setLookat__14J2DGrafContextFv();
+extern "C" void func_802E90C0();
+extern "C" void func_802E90E4();
+extern "C" void func_802E9260();
+extern "C" void func_802E9368();
+extern "C" static void func_802E9488();
+extern "C" void func_802E9564();
+
+extern "C" void __ct__14J2DGrafContextFffff();
+extern "C" void setPort__14J2DGrafContextFv();
+extern "C" void setup2D__14J2DGrafContextFv();
+extern "C" void setScissor__14J2DGrafContextFv();
+extern "C" void func_802E90C0();
+extern "C" void func_802E90E4();
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setLineWidth__14J2DGrafContextFUc();
+extern "C" void func_802E9260();
+extern "C" void func_802E9368();
+extern "C" static void func_802E9488();
+extern "C" void func_802E9564();
+extern "C" void __dt__14J2DGrafContextFv();
+extern "C" void place__14J2DGrafContextFffff();
+extern "C" bool getGrafType__14J2DGrafContextCFv();
+extern "C" void setLookat__14J2DGrafContextFv();
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_SDATA2 extern u8 J2DGrafContext__lit_627[4];
 SECTION_SDATA2 extern f32 J2DGrafContext__lit_628;
@@ -35,43 +77,74 @@ SECTION_SDATA2 extern f64 lit_732;
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXSetTexCoordGen2();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXBegin();
-extern "C" extern void GXSetLineWidth();
-extern "C" extern void GXSetCullMode();
-extern "C" extern void GXSetNumChans();
-extern "C" extern void GXSetChanCtrl();
-extern "C" extern void GXSetNumIndStages();
-extern "C" extern void GXSetTevDirect();
-extern "C" extern void GXSetTevOp();
-extern "C" extern void GXSetAlphaCompare();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXSetBlendMode();
-extern "C" extern void GXSetZMode();
-extern "C" extern void GXSetZCompLoc();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void GXLoadTexMtxImm();
-extern "C" extern void GXSetViewport();
-extern "C" extern void GXSetScissor();
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
-extern "C" extern void ceil();
+void operator delete(void*);
+extern "C" void PSMTXIdentity();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void ceil();
+
+extern "C" void __dl__FPv();
+extern "C" void PSMTXIdentity();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void ceil();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CC9B8-803CC9E0 0028+00 .data      __vt__14J2DGrafContext                                       */
+/* 803CC9B8-803CC9E0 0028+00 rc=15 efc=13 .data      __vt__14J2DGrafContext                                       */
 void* const __vt__14J2DGrafContext[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -85,11 +158,11 @@ void* const __vt__14J2DGrafContext[10] = {
 	(void*)setLookat__14J2DGrafContextFv,
 };
 
-/* 802E8B08-802E8BB4 00AC+00 .text      __ct__14J2DGrafContextFffff                                  */
+/* 802E8B08-802E8BB4 00AC+00 rc=2 efc=2 .text      __ct__14J2DGrafContextFffff                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J2DGrafContextFffff) {
+asm J2DGrafContext::J2DGrafContext(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/__ct__14J2DGrafContextFffff.s"
 }
@@ -97,30 +170,30 @@ ASM_FUNCTION(__ct__14J2DGrafContextFffff) {
 
 
 /* ############################################################################################## */
-/* 80456148-8045614C 0004+00 .sdata2    @627                                                         */
+/* 80456148-8045614C 0004+00 rc=5 efc=0 .sdata2    @627                                                         */
 u8 J2DGrafContext__lit_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045614C-80456150 0004+00 .sdata2    @628                                                         */
+/* 8045614C-80456150 0004+00 rc=1 efc=0 .sdata2    @628                                                         */
 f32 J2DGrafContext__lit_628 = 1.0f;
 
-/* 802E8BB4-802E8C44 0090+00 .text      setPort__14J2DGrafContextFv                                  */
+/* 802E8BB4-802E8C44 0090+00 rc=2 efc=1 .text      setPort__14J2DGrafContextFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPort__14J2DGrafContextFv) {
+asm void J2DGrafContext::setPort() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/setPort__14J2DGrafContextFv.s"
 }
 #pragma pop
 
 
-/* 802E8C44-802E8E20 01DC+00 .text      setup2D__14J2DGrafContextFv                                  */
+/* 802E8C44-802E8E20 01DC+00 rc=2 efc=1 .text      setup2D__14J2DGrafContextFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setup2D__14J2DGrafContextFv) {
+asm void J2DGrafContext::setup2D() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/setup2D__14J2DGrafContextFv.s"
 }
@@ -128,154 +201,143 @@ ASM_FUNCTION(setup2D__14J2DGrafContextFv) {
 
 
 /* ############################################################################################## */
-/* 80456150-80456158 0004+04 .sdata2    @730                                                         */
+/* 80456150-80456158 0004+04 rc=1 efc=0 .sdata2    @730                                                         */
 f32 J2DGrafContext__lit_730 = 1024.0f;
 /* padding 4 bytes */
 
-/* 80456158-80456160 0008+00 .sdata2    @732                                                         */
+/* 80456158-80456160 0008+00 rc=1 efc=0 .sdata2    @732                                                         */
 f64 lit_732 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802E8E20-802E90C0 02A0+00 .text      setScissor__14J2DGrafContextFv                               */
+/* 802E8E20-802E90C0 02A0+00 rc=3 efc=2 .text      setScissor__14J2DGrafContextFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setScissor__14J2DGrafContextFv) {
+asm void J2DGrafContext::setScissor() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/setScissor__14J2DGrafContextFv.s"
 }
 #pragma pop
 
 
-/* 802E90C0-802E90E4 0024+00 .text      scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
+/* 802E90C0-802E90E4 0024+00 rc=10 efc=10 .text      scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E90C0) {
+extern "C" asm void func_802E90C0() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E90C0.s"
 }
 #pragma pop
 
 
-/* 802E90E4-802E9118 0034+00 .text      place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>              */
+/* 802E90E4-802E9118 0034+00 rc=2 efc=1 .text      place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E90E4) {
+extern "C" asm void func_802E90E4() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E90E4.s"
 }
 #pragma pop
 
 
-/* 802E9118-802E9234 011C+00 .text      setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+/* 802E9118-802E9234 011C+00 rc=5 efc=4 .text      setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DGrafContext::setColor(JUtility::TColor field_0, JUtility::TColor field_1, JUtility::TColor field_2, JUtility::TColor field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9118.s"
 }
 #pragma pop
 
 
-/* 802E9234-802E9260 002C+00 .text      setLineWidth__14J2DGrafContextFUc                            */
+/* 802E9234-802E9260 002C+00 rc=3 efc=2 .text      setLineWidth__14J2DGrafContextFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLineWidth__14J2DGrafContextFUc) {
+asm void J2DGrafContext::setLineWidth(char field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/setLineWidth__14J2DGrafContextFUc.s"
 }
 #pragma pop
 
 
-/* 802E9260-802E9368 0108+00 .text      fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
+/* 802E9260-802E9368 0108+00 rc=2 efc=2 .text      fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E9260) {
+extern "C" asm void func_802E9260() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9260.s"
 }
 #pragma pop
 
 
-/* 802E9368-802E9488 0120+00 .text      drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>          */
+/* 802E9368-802E9488 0120+00 rc=1 efc=1 .text      drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E9368) {
+extern "C" asm void func_802E9368() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9368.s"
 }
 #pragma pop
 
 
-/* 802E9488-802E9564 00DC+00 .text      line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
+/* 802E9488-802E9564 00DC+00 rc=1 efc=0 .text      line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E9488) {
+extern "C" asm static void func_802E9488() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9488.s"
 }
 #pragma pop
 
 
-/* 802E9564-802E95D4 0070+00 .text      lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>               */
+/* 802E9564-802E95D4 0070+00 rc=1 efc=1 .text      lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802E9564) {
+extern "C" asm void func_802E9564() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9564.s"
 }
 #pragma pop
 
 
-/* 802E95D4-802E961C 0048+00 .text      __dt__14J2DGrafContextFv                                     */
+/* 802E95D4-802E961C 0048+00 rc=1 efc=0 .text      __dt__14J2DGrafContextFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J2DGrafContextFv) {
+asm J2DGrafContext::~J2DGrafContext() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/__dt__14J2DGrafContextFv.s"
 }
 #pragma pop
 
 
-/* 802E961C-802E9664 0048+00 .text      place__14J2DGrafContextFffff                                 */
+/* 802E961C-802E9664 0048+00 rc=2 efc=1 .text      place__14J2DGrafContextFffff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(place__14J2DGrafContextFffff) {
+asm void J2DGrafContext::place(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/place__14J2DGrafContextFffff.s"
 }
 #pragma pop
 
 
-/* 802E9664-802E966C 0008+00 .text      getGrafType__14J2DGrafContextCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getGrafType__14J2DGrafContextCFv) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DGrafContext/getGrafType__14J2DGrafContextCFv.s"
+/* 802E9664-802E966C 0008+00 rc=1 efc=0 .text      getGrafType__14J2DGrafContextCFv                             */
+bool J2DGrafContext::getGrafType() const {
+	return false;
 }
-#pragma pop
 
 
-/* 802E966C-802E9670 0004+00 .text      setLookat__14J2DGrafContextFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setLookat__14J2DGrafContextFv) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DGrafContext/setLookat__14J2DGrafContextFv.s"
+/* 802E966C-802E9670 0004+00 rc=1 efc=0 .text      setLookat__14J2DGrafContextFv                                */
+void J2DGrafContext::setLookat() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

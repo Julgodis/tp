@@ -6,32 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daObjIta_c;
+
+struct daObj_ITA_HIO_c {
+	daObj_ITA_HIO_c();
+	~daObj_ITA_HIO_c();
+};
+
+struct daObjIta_c {
+	void Search_Ymb();
+	void Check_RideOn();
+	void initBaseMtx();
+	void setBaseMtx();
+	void create();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daObj_ITA_HIO_cFv();
-extern "C" extern void Search_Ymb__10daObjIta_cFv();
-extern "C" extern void Check_RideOn__10daObjIta_cFv();
-extern "C" extern void initBaseMtx__10daObjIta_cFv();
-extern "C" extern void setBaseMtx__10daObjIta_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObjIta_Draw__FP10daObjIta_c();
-extern "C" extern void daObjIta_Execute__FP10daObjIta_c();
-extern "C" extern void daObjIta_IsDelete__FP10daObjIta_c();
-extern "C" extern void daObjIta_Delete__FP10daObjIta_c();
-extern "C" extern void daObjIta_Create__FP10fopAc_ac_c();
-extern "C" extern void create__10daObjIta_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__10daObjIta_cFv();
-extern "C" extern void Create__10daObjIta_cFv();
-extern "C" extern void Execute__10daObjIta_cFPPA3_A4_f();
-extern "C" extern void Draw__10daObjIta_cFv();
-extern "C" extern void Delete__10daObjIta_cFv();
-extern "C" extern void __dt__15daObj_ITA_HIO_cFv();
-extern "C" extern void func_80C291CC();
-extern "C" extern void __sinit_d_a_obj_ita_cpp();
-extern "C" extern void func_80C29214();
-extern "C" extern void func_80C2921C();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObjIta_Draw(daObjIta_c*);
+void daObjIta_Execute(daObjIta_c*);
+bool daObjIta_IsDelete(daObjIta_c*);
+void daObjIta_Delete(daObjIta_c*);
+void daObjIta_Create(fopAc_ac_c*);
+extern "C" void Execute__10daObjIta_cFPPA3_A4_f();
+extern "C" void func_80C291CC();
+extern "C" void __sinit_d_a_obj_ita_cpp();
+extern "C" void func_80C29214();
+extern "C" void func_80C2921C();
+
+extern "C" void __ct__15daObj_ITA_HIO_cFv();
+extern "C" void Search_Ymb__10daObjIta_cFv();
+extern "C" void Check_RideOn__10daObjIta_cFv();
+extern "C" void initBaseMtx__10daObjIta_cFv();
+extern "C" void setBaseMtx__10daObjIta_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObjIta_Draw__FP10daObjIta_c();
+extern "C" void daObjIta_Execute__FP10daObjIta_c();
+extern "C" bool daObjIta_IsDelete__FP10daObjIta_c();
+extern "C" void daObjIta_Delete__FP10daObjIta_c();
+extern "C" void daObjIta_Create__FP10fopAc_ac_c();
+extern "C" void create__10daObjIta_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__10daObjIta_cFv();
+extern "C" void Create__10daObjIta_cFv();
+extern "C" void Execute__10daObjIta_cFPPA3_A4_f();
+extern "C" void Draw__10daObjIta_cFv();
+extern "C" void Delete__10daObjIta_cFv();
+extern "C" void __dt__15daObj_ITA_HIO_cFv();
+extern "C" void func_80C291CC();
+extern "C" void __sinit_d_a_obj_ita_cpp();
+extern "C" void func_80C29214();
+extern "C" void func_80C2921C();
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u32 lit_3651;
@@ -89,8 +136,11 @@ SECTION_BSS extern u8 data_80C293F8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -100,7 +150,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daObj_ITA_HIO_cFv) {
+asm daObj_ITA_HIO_c::daObj_ITA_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/__ct__15daObj_ITA_HIO_cFv.s"
 }
@@ -111,7 +161,7 @@ ASM_FUNCTION(__ct__15daObj_ITA_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Search_Ymb__10daObjIta_cFv) {
+asm void daObjIta_c::Search_Ymb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/Search_Ymb__10daObjIta_cFv.s"
 }
@@ -122,7 +172,7 @@ ASM_FUNCTION(Search_Ymb__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Check_RideOn__10daObjIta_cFv) {
+asm void daObjIta_c::Check_RideOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/Check_RideOn__10daObjIta_cFv.s"
 }
@@ -133,7 +183,7 @@ ASM_FUNCTION(Check_RideOn__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daObjIta_cFv) {
+asm void daObjIta_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/initBaseMtx__10daObjIta_cFv.s"
 }
@@ -144,7 +194,7 @@ ASM_FUNCTION(initBaseMtx__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjIta_cFv) {
+asm void daObjIta_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/setBaseMtx__10daObjIta_cFv.s"
 }
@@ -155,7 +205,7 @@ ASM_FUNCTION(setBaseMtx__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -166,7 +216,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIta_Draw__FP10daObjIta_c) {
+asm void daObjIta_Draw(daObjIta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_Draw__FP10daObjIta_c.s"
 }
@@ -177,7 +227,7 @@ ASM_FUNCTION(daObjIta_Draw__FP10daObjIta_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIta_Execute__FP10daObjIta_c) {
+asm void daObjIta_Execute(daObjIta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_Execute__FP10daObjIta_c.s"
 }
@@ -185,21 +235,16 @@ ASM_FUNCTION(daObjIta_Execute__FP10daObjIta_c) {
 
 
 /* 80C288DC-80C288E4 0008+00 .text      daObjIta_IsDelete__FP10daObjIta_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjIta_IsDelete__FP10daObjIta_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_IsDelete__FP10daObjIta_c.s"
+bool daObjIta_IsDelete(daObjIta_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C288E4-80C28908 0024+00 .text      daObjIta_Delete__FP10daObjIta_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIta_Delete__FP10daObjIta_c) {
+asm void daObjIta_Delete(daObjIta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_Delete__FP10daObjIta_c.s"
 }
@@ -210,7 +255,7 @@ ASM_FUNCTION(daObjIta_Delete__FP10daObjIta_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIta_Create__FP10fopAc_ac_c) {
+asm void daObjIta_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_Create__FP10fopAc_ac_c.s"
 }
@@ -221,7 +266,7 @@ ASM_FUNCTION(daObjIta_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjIta_cFv) {
+asm void daObjIta_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/create__10daObjIta_cFv.s"
 }
@@ -232,7 +277,7 @@ ASM_FUNCTION(create__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -243,7 +288,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjIta_cFv) {
+asm void daObjIta_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/CreateHeap__10daObjIta_cFv.s"
 }
@@ -254,7 +299,7 @@ ASM_FUNCTION(CreateHeap__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daObjIta_cFv) {
+asm void daObjIta_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C28C28.s"
 }
@@ -265,7 +310,7 @@ ASM_FUNCTION(Create__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjIta_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daObjIta_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/Execute__10daObjIta_cFPPA3_A4_f.s"
 }
@@ -276,7 +321,7 @@ ASM_FUNCTION(Execute__10daObjIta_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daObjIta_cFv) {
+asm void daObjIta_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/Draw__10daObjIta_cFv.s"
 }
@@ -287,7 +332,7 @@ ASM_FUNCTION(Draw__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjIta_cFv) {
+asm void daObjIta_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/Delete__10daObjIta_cFv.s"
 }
@@ -298,7 +343,7 @@ ASM_FUNCTION(Delete__10daObjIta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_ITA_HIO_cFv) {
+asm daObj_ITA_HIO_c::~daObj_ITA_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/__dt__15daObj_ITA_HIO_cFv.s"
 }
@@ -309,7 +354,7 @@ ASM_FUNCTION(__dt__15daObj_ITA_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C291CC) {
+extern "C" asm void func_80C291CC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C291CC.s"
 }
@@ -320,7 +365,7 @@ ASM_FUNCTION(func_80C291CC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ita_cpp) {
+extern "C" asm void __sinit_d_a_obj_ita_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/__sinit_d_a_obj_ita_cpp.s"
 }
@@ -331,7 +376,7 @@ ASM_FUNCTION(__sinit_d_a_obj_ita_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C29214) {
+extern "C" asm void func_80C29214() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C29214.s"
 }
@@ -342,7 +387,7 @@ ASM_FUNCTION(func_80C29214) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C2921C) {
+extern "C" asm void func_80C2921C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C2921C.s"
 }

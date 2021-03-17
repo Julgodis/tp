@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void TRK_main();
+extern "C" void TRK_main();
+
+extern "C" void TRK_main();
 SECTION_RODATA extern const u8 MetroTRK_Portable_main_TRK__lit_80[11 + 5 /* padding */];
 SECTION_BSS extern u8 TRK_mainError[4 + 4 /* padding */];
 
@@ -17,36 +19,41 @@ SECTION_BSS extern u8 TRK_mainError[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void TRKNubMainLoop();
-extern "C" extern void TRKNubWelcome();
-extern "C" extern void TRKTerminateNub();
-extern "C" extern void TRKInitializeNub();
-extern "C" extern void MWTRACE();
+extern "C" void TRKNubMainLoop();
+extern "C" void TRKNubWelcome();
+extern "C" void TRKTerminateNub();
+extern "C" void TRKInitializeNub();
+extern "C" void MWTRACE();
+
+extern "C" void TRKNubMainLoop();
+extern "C" void TRKNubWelcome();
+extern "C" void TRKTerminateNub();
+extern "C" void TRKInitializeNub();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2BF8-803A2C08 000B+05 .rodata    @80                                                          */
+/* 803A2BF8-803A2C08 000B+05 rc=1 efc=0 .rodata    @80                                                          */
 SECTION_RODATA const u8 MetroTRK_Portable_main_TRK__lit_80[16] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x4D, 0x61, 0x69, 0x6E, 0x20, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8044F818-8044F820 0004+04 .bss       TRK_mainError                                                */
+/* 8044F818-8044F820 0004+04 rc=1 efc=0 .bss       TRK_mainError                                                */
 u8 TRK_mainError[4 + 4 /* padding */];
 
-/* 80371B9C-80371BF4 0058+00 .text      TRK_main                                                     */
+/* 80371B9C-80371BF4 0058+00 rc=2 efc=2 .text      TRK_main                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRK_main) {
+extern "C" asm void TRK_main() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/main_TRK/TRK_main.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

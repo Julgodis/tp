@@ -6,21 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct kytag00_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void get_check_pos__FP13kytag00_class();
-extern "C" extern void wether_tag_reset__FP13kytag00_class();
-extern "C" extern void wether_tag_move__FP13kytag00_class();
-extern "C" extern void raincnt_set__Ff();
-extern "C" extern void raincnt_cut__Fv();
-extern "C" extern void wether_tag_efect_reset__FP13kytag00_class();
-extern "C" extern void wether_tag_efect_move__FP13kytag00_class();
-extern "C" extern void daKytag00_Draw__FP13kytag00_class();
-extern "C" extern void daKytag00_Execute__FP13kytag00_class();
-extern "C" extern void daKytag00_IsDelete__FP13kytag00_class();
-extern "C" extern void daKytag00_Delete__FP13kytag00_class();
-extern "C" extern void daKytag00_Create__FP10fopAc_ac_c();
+void get_check_pos(kytag00_class*);
+void wether_tag_reset(kytag00_class*);
+void wether_tag_move(kytag00_class*);
+void raincnt_set(f32);
+void raincnt_cut();
+void wether_tag_efect_reset(kytag00_class*);
+void wether_tag_efect_move(kytag00_class*);
+void daKytag00_Draw(kytag00_class*);
+void daKytag00_Execute(kytag00_class*);
+bool daKytag00_IsDelete(kytag00_class*);
+void daKytag00_Delete(kytag00_class*);
+void daKytag00_Create(fopAc_ac_c*);
+
+extern "C" void get_check_pos__FP13kytag00_class();
+extern "C" void wether_tag_reset__FP13kytag00_class();
+extern "C" void wether_tag_move__FP13kytag00_class();
+extern "C" void raincnt_set__Ff();
+extern "C" void raincnt_cut__Fv();
+extern "C" void wether_tag_efect_reset__FP13kytag00_class();
+extern "C" void wether_tag_efect_move__FP13kytag00_class();
+extern "C" void daKytag00_Draw__FP13kytag00_class();
+extern "C" void daKytag00_Execute__FP13kytag00_class();
+extern "C" bool daKytag00_IsDelete__FP13kytag00_class();
+extern "C" void daKytag00_Delete__FP13kytag00_class();
+extern "C" void daKytag00_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3798[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3799[8];
 SECTION_RODATA extern const u8 lit_3800[8];
@@ -49,7 +69,9 @@ SECTION_DATA extern u8 g_profile_KYTAG00[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +81,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_check_pos__FP13kytag00_class) {
+asm void get_check_pos(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/get_check_pos__FP13kytag00_class.s"
 }
@@ -70,7 +92,7 @@ ASM_FUNCTION(get_check_pos__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wether_tag_reset__FP13kytag00_class) {
+asm void wether_tag_reset(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/wether_tag_reset__FP13kytag00_class.s"
 }
@@ -81,7 +103,7 @@ ASM_FUNCTION(wether_tag_reset__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wether_tag_move__FP13kytag00_class) {
+asm void wether_tag_move(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/wether_tag_move__FP13kytag00_class.s"
 }
@@ -92,7 +114,7 @@ ASM_FUNCTION(wether_tag_move__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(raincnt_set__Ff) {
+asm void raincnt_set(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/raincnt_set__Ff.s"
 }
@@ -103,7 +125,7 @@ ASM_FUNCTION(raincnt_set__Ff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(raincnt_cut__Fv) {
+asm void raincnt_cut() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/raincnt_cut__Fv.s"
 }
@@ -114,7 +136,7 @@ ASM_FUNCTION(raincnt_cut__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wether_tag_efect_reset__FP13kytag00_class) {
+asm void wether_tag_efect_reset(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/wether_tag_efect_reset__FP13kytag00_class.s"
 }
@@ -125,7 +147,7 @@ ASM_FUNCTION(wether_tag_efect_reset__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wether_tag_efect_move__FP13kytag00_class) {
+asm void wether_tag_efect_move(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/wether_tag_efect_move__FP13kytag00_class.s"
 }
@@ -136,7 +158,7 @@ ASM_FUNCTION(wether_tag_efect_move__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag00_Draw__FP13kytag00_class) {
+asm void daKytag00_Draw(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Draw__FP13kytag00_class.s"
 }
@@ -147,7 +169,7 @@ ASM_FUNCTION(daKytag00_Draw__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag00_Execute__FP13kytag00_class) {
+asm void daKytag00_Execute(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Execute__FP13kytag00_class.s"
 }
@@ -155,21 +177,16 @@ ASM_FUNCTION(daKytag00_Execute__FP13kytag00_class) {
 
 
 /* 8046C76C-8046C774 0008+00 .text      daKytag00_IsDelete__FP13kytag00_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag00_IsDelete__FP13kytag00_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_IsDelete__FP13kytag00_class.s"
+bool daKytag00_IsDelete(kytag00_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046C774-8046C7BC 0048+00 .text      daKytag00_Delete__FP13kytag00_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag00_Delete__FP13kytag00_class) {
+asm void daKytag00_Delete(kytag00_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Delete__FP13kytag00_class.s"
 }
@@ -180,7 +197,7 @@ ASM_FUNCTION(daKytag00_Delete__FP13kytag00_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag00_Create__FP10fopAc_ac_c) {
+asm void daKytag00_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_Create__FP10fopAc_ac_c.s"
 }

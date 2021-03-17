@@ -6,20 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjGraWall_c;
+
+struct daObjGraWall_c {
+	void Create();
+	void Execute();
+	bool Delete();
+	void col_init();
+	void col_set();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__14daObjGraWall_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void Execute__14daObjGraWall_cFv();
-extern "C" extern void Delete__14daObjGraWall_cFv();
-extern "C" extern void col_init__14daObjGraWall_cFv();
-extern "C" extern void col_set__14daObjGraWall_cFv();
-extern "C" extern void daObjGraWall_Execute__FP14daObjGraWall_c();
-extern "C" extern void daObjGraWall_IsDelete__FP14daObjGraWall_c();
-extern "C" extern void daObjGraWall_Delete__FP14daObjGraWall_c();
-extern "C" extern void daObjGraWall_create__FP10fopAc_ac_c();
+void daObjGraWall_Execute(daObjGraWall_c*);
+bool daObjGraWall_IsDelete(daObjGraWall_c*);
+void daObjGraWall_Delete(daObjGraWall_c*);
+void daObjGraWall_create(fopAc_ac_c*);
+
+extern "C" void Create__14daObjGraWall_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__14daObjGraWall_cFv();
+extern "C" bool Delete__14daObjGraWall_cFv();
+extern "C" void col_init__14daObjGraWall_cFv();
+extern "C" void col_set__14daObjGraWall_cFv();
+extern "C" void daObjGraWall_Execute__FP14daObjGraWall_c();
+extern "C" bool daObjGraWall_IsDelete__FP14daObjGraWall_c();
+extern "C" void daObjGraWall_Delete__FP14daObjGraWall_c();
+extern "C" void daObjGraWall_create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_DATA[8];
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_DATA extern u8 l_daObjGraWall_Method[32];
@@ -31,7 +62,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +74,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjGraWall_cFv) {
+asm void daObjGraWall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/Create__14daObjGraWall_cFv.s"
 }
@@ -52,7 +85,7 @@ ASM_FUNCTION(Create__14daObjGraWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/__dt__8cM3dGCylFv.s"
 }
@@ -63,7 +96,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/__dt__8cM3dGAabFv.s"
 }
@@ -74,7 +107,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjGraWall_cFv) {
+asm void daObjGraWall_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/Execute__14daObjGraWall_cFv.s"
 }
@@ -82,21 +115,16 @@ ASM_FUNCTION(Execute__14daObjGraWall_cFv) {
 
 
 /* 80C10E78-80C10E80 0008+00 .text      Delete__14daObjGraWall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjGraWall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/Delete__14daObjGraWall_cFv.s"
+bool daObjGraWall_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C10E80-80C10ED4 0054+00 .text      col_init__14daObjGraWall_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_init__14daObjGraWall_cFv) {
+asm void daObjGraWall_c::col_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/col_init__14daObjGraWall_cFv.s"
 }
@@ -107,7 +135,7 @@ ASM_FUNCTION(col_init__14daObjGraWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_set__14daObjGraWall_cFv) {
+asm void daObjGraWall_c::col_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/col_set__14daObjGraWall_cFv.s"
 }
@@ -118,7 +146,7 @@ ASM_FUNCTION(col_set__14daObjGraWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraWall_Execute__FP14daObjGraWall_c) {
+asm void daObjGraWall_Execute(daObjGraWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/daObjGraWall_Execute__FP14daObjGraWall_c.s"
 }
@@ -126,21 +154,16 @@ ASM_FUNCTION(daObjGraWall_Execute__FP14daObjGraWall_c) {
 
 
 /* 80C10F60-80C10F68 0008+00 .text      daObjGraWall_IsDelete__FP14daObjGraWall_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjGraWall_IsDelete__FP14daObjGraWall_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/daObjGraWall_IsDelete__FP14daObjGraWall_c.s"
+bool daObjGraWall_IsDelete(daObjGraWall_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C10F68-80C10F88 0020+00 .text      daObjGraWall_Delete__FP14daObjGraWall_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraWall_Delete__FP14daObjGraWall_c) {
+asm void daObjGraWall_Delete(daObjGraWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/daObjGraWall_Delete__FP14daObjGraWall_c.s"
 }
@@ -151,7 +174,7 @@ ASM_FUNCTION(daObjGraWall_Delete__FP14daObjGraWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraWall_create__FP10fopAc_ac_c) {
+asm void daObjGraWall_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/daObjGraWall_create__FP10fopAc_ac_c.s"
 }

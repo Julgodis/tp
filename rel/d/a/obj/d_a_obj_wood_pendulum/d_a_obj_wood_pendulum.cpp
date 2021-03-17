@@ -6,26 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjWPndlm_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjWPndlm_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct dCcD_Sph {
+	dCcD_Sph();
+	~dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__13daObjWPndlm_cFv();
-extern "C" extern void setBaseMtx__13daObjWPndlm_cFv();
-extern "C" extern void Create__13daObjWPndlm_cFv();
-extern "C" extern void CreateHeap__13daObjWPndlm_cFv();
-extern "C" extern void create__13daObjWPndlm_cFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__13daObjWPndlm_cFv();
-extern "C" extern void draw__13daObjWPndlm_cFv();
-extern "C" extern void _delete__13daObjWPndlm_cFv();
-extern "C" extern void daObjWPndlm_Draw__FP13daObjWPndlm_c();
-extern "C" extern void daObjWPndlm_Execute__FP13daObjWPndlm_c();
-extern "C" extern void daObjWPndlm_Delete__FP13daObjWPndlm_c();
-extern "C" extern void daObjWPndlm_Create__FP10fopAc_ac_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjWPndlm_Draw(daObjWPndlm_c*);
+void daObjWPndlm_Execute(daObjWPndlm_c*);
+void daObjWPndlm_Delete(daObjWPndlm_c*);
+void daObjWPndlm_Create(fopAc_ac_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__13daObjWPndlm_cFv();
+extern "C" void setBaseMtx__13daObjWPndlm_cFv();
+extern "C" void Create__13daObjWPndlm_cFv();
+extern "C" void CreateHeap__13daObjWPndlm_cFv();
+extern "C" void create__13daObjWPndlm_cFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__13daObjWPndlm_cFv();
+extern "C" void draw__13daObjWPndlm_cFv();
+extern "C" void _delete__13daObjWPndlm_cFv();
+extern "C" void daObjWPndlm_Draw__FP13daObjWPndlm_c();
+extern "C" void daObjWPndlm_Execute__FP13daObjWPndlm_c();
+extern "C" void daObjWPndlm_Delete__FP13daObjWPndlm_c();
+extern "C" void daObjWPndlm_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_sph_src[64];
 SECTION_RODATA extern const u8 l_sph_src2[64];
 SECTION_RODATA extern const u32 lit_3672;
@@ -44,7 +84,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +96,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -65,7 +107,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/initBaseMtx__13daObjWPndlm_cFv.s"
 }
@@ -76,7 +118,7 @@ ASM_FUNCTION(initBaseMtx__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/setBaseMtx__13daObjWPndlm_cFv.s"
 }
@@ -87,7 +129,7 @@ ASM_FUNCTION(setBaseMtx__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/Create__13daObjWPndlm_cFv.s"
 }
@@ -98,7 +140,7 @@ ASM_FUNCTION(Create__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/CreateHeap__13daObjWPndlm_cFv.s"
 }
@@ -109,7 +151,7 @@ ASM_FUNCTION(CreateHeap__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/func_80D39638.s"
 }
@@ -120,7 +162,7 @@ ASM_FUNCTION(create__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/__ct__8dCcD_SphFv.s"
 }
@@ -131,7 +173,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/__dt__8dCcD_SphFv.s"
 }
@@ -142,7 +184,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/__dt__8cM3dGSphFv.s"
 }
@@ -153,7 +195,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/__dt__8cM3dGAabFv.s"
 }
@@ -164,7 +206,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/execute__13daObjWPndlm_cFv.s"
 }
@@ -175,7 +217,7 @@ ASM_FUNCTION(execute__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/draw__13daObjWPndlm_cFv.s"
 }
@@ -186,7 +228,7 @@ ASM_FUNCTION(draw__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__13daObjWPndlm_cFv) {
+asm void daObjWPndlm_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/_delete__13daObjWPndlm_cFv.s"
 }
@@ -197,7 +239,7 @@ ASM_FUNCTION(_delete__13daObjWPndlm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWPndlm_Draw__FP13daObjWPndlm_c) {
+asm void daObjWPndlm_Draw(daObjWPndlm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/daObjWPndlm_Draw__FP13daObjWPndlm_c.s"
 }
@@ -208,7 +250,7 @@ ASM_FUNCTION(daObjWPndlm_Draw__FP13daObjWPndlm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWPndlm_Execute__FP13daObjWPndlm_c) {
+asm void daObjWPndlm_Execute(daObjWPndlm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/daObjWPndlm_Execute__FP13daObjWPndlm_c.s"
 }
@@ -219,7 +261,7 @@ ASM_FUNCTION(daObjWPndlm_Execute__FP13daObjWPndlm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWPndlm_Delete__FP13daObjWPndlm_c) {
+asm void daObjWPndlm_Delete(daObjWPndlm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/daObjWPndlm_Delete__FP13daObjWPndlm_c.s"
 }
@@ -230,7 +272,7 @@ ASM_FUNCTION(daObjWPndlm_Delete__FP13daObjWPndlm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWPndlm_Create__FP10fopAc_ac_c) {
+asm void daObjWPndlm_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_pendulum/d_a_obj_wood_pendulum/daObjWPndlm_Create__FP10fopAc_ac_c.s"
 }

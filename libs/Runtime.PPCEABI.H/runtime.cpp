@@ -9,60 +9,115 @@
 // Forward References:
 // 
 
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void __save_fpr();
-extern "C" extern void _savefpr_25();
-extern "C" extern void _savefpr_26();
-extern "C" extern void _savefpr_27();
-extern "C" extern void _savefpr_28();
-extern "C" extern void _savefpr_29();
-extern "C" extern void __restore_fpr();
-extern "C" extern void _restfpr_25();
-extern "C" extern void _restfpr_26();
-extern "C" extern void _restfpr_27();
-extern "C" extern void _restfpr_28();
-extern "C" extern void _restfpr_29();
-extern "C" extern void __save_gpr();
-extern "C" extern void _savegpr_15();
-extern "C" extern void _savegpr_16();
-extern "C" extern void _savegpr_17();
-extern "C" extern void _savegpr_18();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void __restore_gpr();
-extern "C" extern void _restgpr_15();
-extern "C" extern void _restgpr_16();
-extern "C" extern void _restgpr_17();
-extern "C" extern void _restgpr_18();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void __div2u();
-extern "C" extern void __div2i();
-extern "C" extern void __mod2u();
-extern "C" extern void __mod2i();
-extern "C" extern void __shl2i();
-extern "C" extern void __shr2u();
-extern "C" extern void __shr2i();
-extern "C" extern void __cvt_sll_flt();
-extern "C" extern void __cvt_dbl_usll();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void __save_fpr();
+extern "C" void _savefpr_25();
+extern "C" void _savefpr_26();
+extern "C" void _savefpr_27();
+extern "C" void _savefpr_28();
+extern "C" void _savefpr_29();
+extern "C" void __restore_fpr();
+extern "C" void _restfpr_25();
+extern "C" void _restfpr_26();
+extern "C" void _restfpr_27();
+extern "C" void _restfpr_28();
+extern "C" void _restfpr_29();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __div2u();
+extern "C" void __div2i();
+extern "C" void __mod2u();
+extern "C" void __mod2i();
+extern "C" void __shl2i();
+extern "C" void __shr2u();
+extern "C" void __shr2i();
+extern "C" void __cvt_sll_flt();
+extern "C" void __cvt_dbl_usll();
+
+extern "C" void __cvt_fp2unsigned();
+extern "C" void __save_fpr();
+extern "C" void _savefpr_25();
+extern "C" void _savefpr_26();
+extern "C" void _savefpr_27();
+extern "C" void _savefpr_28();
+extern "C" void _savefpr_29();
+extern "C" void __restore_fpr();
+extern "C" void _restfpr_25();
+extern "C" void _restfpr_26();
+extern "C" void _restfpr_27();
+extern "C" void _restfpr_28();
+extern "C" void _restfpr_29();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __div2u();
+extern "C" void __div2i();
+extern "C" void __mod2u();
+extern "C" void __mod2i();
+extern "C" void __shl2i();
+extern "C" void __shr2u();
+extern "C" void __shr2i();
+extern "C" void __cvt_sll_flt();
+extern "C" void __cvt_dbl_usll();
 SECTION_RODATA extern const u8 __constants[24];
 
 // 
@@ -70,609 +125,609 @@ SECTION_RODATA extern const u8 __constants[24];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2190-803A21A8 0018+00 .rodata    __constants                                                  */
+/* 803A2190-803A21A8 0018+00 rc=1 efc=0 .rodata    __constants                                                  */
 SECTION_RODATA const u8 __constants[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x41, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803620AC-80362108 005C+00 .text      __cvt_fp2unsigned                                            */
+/* 803620AC-80362108 005C+00 rc=42 efc=42 .text      __cvt_fp2unsigned                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__cvt_fp2unsigned) {
+extern "C" asm void __cvt_fp2unsigned() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__cvt_fp2unsigned.s"
 }
 #pragma pop
 
 
-/* 80362108-80362134 002C+00 .text      __save_fpr                                                   */
+/* 80362108-80362134 002C+00 rc=0 efc=0 .text      __save_fpr                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__save_fpr) {
+extern "C" asm void __save_fpr() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__save_fpr.s"
 }
 #pragma pop
 
 
-/* 80362134-80362138 0004+00 .text      _savefpr_25                                                  */
+/* 80362134-80362138 0004+00 rc=1 efc=1 .text      _savefpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savefpr_25) {
+extern "C" asm void _savefpr_25() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savefpr_25.s"
 }
 #pragma pop
 
 
-/* 80362138-8036213C 0004+00 .text      _savefpr_26                                                  */
+/* 80362138-8036213C 0004+00 rc=1 efc=1 .text      _savefpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savefpr_26) {
+extern "C" asm void _savefpr_26() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savefpr_26.s"
 }
 #pragma pop
 
 
-/* 8036213C-80362140 0004+00 .text      _savefpr_27                                                  */
+/* 8036213C-80362140 0004+00 rc=2 efc=2 .text      _savefpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savefpr_27) {
+extern "C" asm void _savefpr_27() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savefpr_27.s"
 }
 #pragma pop
 
 
-/* 80362140-80362144 0004+00 .text      _savefpr_28                                                  */
+/* 80362140-80362144 0004+00 rc=2 efc=2 .text      _savefpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savefpr_28) {
+extern "C" asm void _savefpr_28() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savefpr_28.s"
 }
 #pragma pop
 
 
-/* 80362144-80362154 0010+00 .text      _savefpr_29                                                  */
+/* 80362144-80362154 0010+00 rc=3 efc=3 .text      _savefpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savefpr_29) {
+extern "C" asm void _savefpr_29() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savefpr_29.s"
 }
 #pragma pop
 
 
-/* 80362154-80362180 002C+00 .text      __restore_fpr                                                */
+/* 80362154-80362180 002C+00 rc=0 efc=0 .text      __restore_fpr                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__restore_fpr) {
+extern "C" asm void __restore_fpr() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__restore_fpr.s"
 }
 #pragma pop
 
 
-/* 80362180-80362184 0004+00 .text      _restfpr_25                                                  */
+/* 80362180-80362184 0004+00 rc=1 efc=1 .text      _restfpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restfpr_25) {
+extern "C" asm void _restfpr_25() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restfpr_25.s"
 }
 #pragma pop
 
 
-/* 80362184-80362188 0004+00 .text      _restfpr_26                                                  */
+/* 80362184-80362188 0004+00 rc=1 efc=1 .text      _restfpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restfpr_26) {
+extern "C" asm void _restfpr_26() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restfpr_26.s"
 }
 #pragma pop
 
 
-/* 80362188-8036218C 0004+00 .text      _restfpr_27                                                  */
+/* 80362188-8036218C 0004+00 rc=2 efc=2 .text      _restfpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restfpr_27) {
+extern "C" asm void _restfpr_27() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restfpr_27.s"
 }
 #pragma pop
 
 
-/* 8036218C-80362190 0004+00 .text      _restfpr_28                                                  */
+/* 8036218C-80362190 0004+00 rc=2 efc=2 .text      _restfpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restfpr_28) {
+extern "C" asm void _restfpr_28() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restfpr_28.s"
 }
 #pragma pop
 
 
-/* 80362190-803621A0 0010+00 .text      _restfpr_29                                                  */
+/* 80362190-803621A0 0010+00 rc=3 efc=3 .text      _restfpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restfpr_29) {
+extern "C" asm void _restfpr_29() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restfpr_29.s"
 }
 #pragma pop
 
 
-/* 803621A0-803621A4 0004+00 .text      __save_gpr                                                   */
+/* 803621A0-803621A4 0004+00 rc=22 efc=22 .text      __save_gpr                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__save_gpr) {
+extern "C" asm void __save_gpr() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__save_gpr.s"
 }
 #pragma pop
 
 
-/* 803621A4-803621A8 0004+00 .text      _savegpr_15                                                  */
+/* 803621A4-803621A8 0004+00 rc=5 efc=5 .text      _savegpr_15                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_15) {
+extern "C" asm void _savegpr_15() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_15.s"
 }
 #pragma pop
 
 
-/* 803621A8-803621AC 0004+00 .text      _savegpr_16                                                  */
+/* 803621A8-803621AC 0004+00 rc=10 efc=10 .text      _savegpr_16                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_16) {
+extern "C" asm void _savegpr_16() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_16.s"
 }
 #pragma pop
 
 
-/* 803621AC-803621B0 0004+00 .text      _savegpr_17                                                  */
+/* 803621AC-803621B0 0004+00 rc=11 efc=11 .text      _savegpr_17                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_17) {
+extern "C" asm void _savegpr_17() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_17.s"
 }
 #pragma pop
 
 
-/* 803621B0-803621B4 0004+00 .text      _savegpr_18                                                  */
+/* 803621B0-803621B4 0004+00 rc=13 efc=13 .text      _savegpr_18                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_18) {
+extern "C" asm void _savegpr_18() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_18.s"
 }
 #pragma pop
 
 
-/* 803621B4-803621B8 0004+00 .text      _savegpr_19                                                  */
+/* 803621B4-803621B8 0004+00 rc=22 efc=22 .text      _savegpr_19                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_19) {
+extern "C" asm void _savegpr_19() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_19.s"
 }
 #pragma pop
 
 
-/* 803621B8-803621BC 0004+00 .text      _savegpr_20                                                  */
+/* 803621B8-803621BC 0004+00 rc=26 efc=26 .text      _savegpr_20                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_20) {
+extern "C" asm void _savegpr_20() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_20.s"
 }
 #pragma pop
 
 
-/* 803621BC-803621C0 0004+00 .text      _savegpr_21                                                  */
+/* 803621BC-803621C0 0004+00 rc=35 efc=35 .text      _savegpr_21                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_21) {
+extern "C" asm void _savegpr_21() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_21.s"
 }
 #pragma pop
 
 
-/* 803621C0-803621C4 0004+00 .text      _savegpr_22                                                  */
+/* 803621C0-803621C4 0004+00 rc=60 efc=60 .text      _savegpr_22                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_22) {
+extern "C" asm void _savegpr_22() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_22.s"
 }
 #pragma pop
 
 
-/* 803621C4-803621C8 0004+00 .text      _savegpr_23                                                  */
+/* 803621C4-803621C8 0004+00 rc=63 efc=63 .text      _savegpr_23                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_23) {
+extern "C" asm void _savegpr_23() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_23.s"
 }
 #pragma pop
 
 
-/* 803621C8-803621CC 0004+00 .text      _savegpr_24                                                  */
+/* 803621C8-803621CC 0004+00 rc=116 efc=116 .text      _savegpr_24                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_24) {
+extern "C" asm void _savegpr_24() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_24.s"
 }
 #pragma pop
 
 
-/* 803621CC-803621D0 0004+00 .text      _savegpr_25                                                  */
+/* 803621CC-803621D0 0004+00 rc=206 efc=206 .text      _savegpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_25) {
+extern "C" asm void _savegpr_25() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_25.s"
 }
 #pragma pop
 
 
-/* 803621D0-803621D4 0004+00 .text      _savegpr_26                                                  */
+/* 803621D0-803621D4 0004+00 rc=308 efc=308 .text      _savegpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_26) {
+extern "C" asm void _savegpr_26() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_26.s"
 }
 #pragma pop
 
 
-/* 803621D4-803621D8 0004+00 .text      _savegpr_27                                                  */
+/* 803621D4-803621D8 0004+00 rc=480 efc=480 .text      _savegpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_27) {
+extern "C" asm void _savegpr_27() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_27.s"
 }
 #pragma pop
 
 
-/* 803621D8-803621DC 0004+00 .text      _savegpr_28                                                  */
+/* 803621D8-803621DC 0004+00 rc=644 efc=644 .text      _savegpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_28) {
+extern "C" asm void _savegpr_28() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_28.s"
 }
 #pragma pop
 
 
-/* 803621DC-803621EC 0010+00 .text      _savegpr_29                                                  */
+/* 803621DC-803621EC 0010+00 rc=992 efc=992 .text      _savegpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_savegpr_29) {
+extern "C" asm void _savegpr_29() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_savegpr_29.s"
 }
 #pragma pop
 
 
-/* 803621EC-803621F0 0004+00 .text      __restore_gpr                                                */
+/* 803621EC-803621F0 0004+00 rc=22 efc=22 .text      __restore_gpr                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__restore_gpr) {
+extern "C" asm void __restore_gpr() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__restore_gpr.s"
 }
 #pragma pop
 
 
-/* 803621F0-803621F4 0004+00 .text      _restgpr_15                                                  */
+/* 803621F0-803621F4 0004+00 rc=5 efc=5 .text      _restgpr_15                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_15) {
+extern "C" asm void _restgpr_15() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_15.s"
 }
 #pragma pop
 
 
-/* 803621F4-803621F8 0004+00 .text      _restgpr_16                                                  */
+/* 803621F4-803621F8 0004+00 rc=10 efc=10 .text      _restgpr_16                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_16) {
+extern "C" asm void _restgpr_16() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_16.s"
 }
 #pragma pop
 
 
-/* 803621F8-803621FC 0004+00 .text      _restgpr_17                                                  */
+/* 803621F8-803621FC 0004+00 rc=11 efc=11 .text      _restgpr_17                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_17) {
+extern "C" asm void _restgpr_17() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_17.s"
 }
 #pragma pop
 
 
-/* 803621FC-80362200 0004+00 .text      _restgpr_18                                                  */
+/* 803621FC-80362200 0004+00 rc=13 efc=13 .text      _restgpr_18                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_18) {
+extern "C" asm void _restgpr_18() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_18.s"
 }
 #pragma pop
 
 
-/* 80362200-80362204 0004+00 .text      _restgpr_19                                                  */
+/* 80362200-80362204 0004+00 rc=22 efc=22 .text      _restgpr_19                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_19) {
+extern "C" asm void _restgpr_19() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_19.s"
 }
 #pragma pop
 
 
-/* 80362204-80362208 0004+00 .text      _restgpr_20                                                  */
+/* 80362204-80362208 0004+00 rc=26 efc=26 .text      _restgpr_20                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_20) {
+extern "C" asm void _restgpr_20() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_20.s"
 }
 #pragma pop
 
 
-/* 80362208-8036220C 0004+00 .text      _restgpr_21                                                  */
+/* 80362208-8036220C 0004+00 rc=35 efc=35 .text      _restgpr_21                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_21) {
+extern "C" asm void _restgpr_21() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_21.s"
 }
 #pragma pop
 
 
-/* 8036220C-80362210 0004+00 .text      _restgpr_22                                                  */
+/* 8036220C-80362210 0004+00 rc=60 efc=60 .text      _restgpr_22                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_22) {
+extern "C" asm void _restgpr_22() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_22.s"
 }
 #pragma pop
 
 
-/* 80362210-80362214 0004+00 .text      _restgpr_23                                                  */
+/* 80362210-80362214 0004+00 rc=63 efc=63 .text      _restgpr_23                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_23) {
+extern "C" asm void _restgpr_23() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_23.s"
 }
 #pragma pop
 
 
-/* 80362214-80362218 0004+00 .text      _restgpr_24                                                  */
+/* 80362214-80362218 0004+00 rc=116 efc=116 .text      _restgpr_24                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_24) {
+extern "C" asm void _restgpr_24() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_24.s"
 }
 #pragma pop
 
 
-/* 80362218-8036221C 0004+00 .text      _restgpr_25                                                  */
+/* 80362218-8036221C 0004+00 rc=205 efc=205 .text      _restgpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_25) {
+extern "C" asm void _restgpr_25() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_25.s"
 }
 #pragma pop
 
 
-/* 8036221C-80362220 0004+00 .text      _restgpr_26                                                  */
+/* 8036221C-80362220 0004+00 rc=308 efc=308 .text      _restgpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_26) {
+extern "C" asm void _restgpr_26() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_26.s"
 }
 #pragma pop
 
 
-/* 80362220-80362224 0004+00 .text      _restgpr_27                                                  */
+/* 80362220-80362224 0004+00 rc=479 efc=479 .text      _restgpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_27) {
+extern "C" asm void _restgpr_27() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_27.s"
 }
 #pragma pop
 
 
-/* 80362224-80362228 0004+00 .text      _restgpr_28                                                  */
+/* 80362224-80362228 0004+00 rc=642 efc=642 .text      _restgpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_28) {
+extern "C" asm void _restgpr_28() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_28.s"
 }
 #pragma pop
 
 
-/* 80362228-80362238 0010+00 .text      _restgpr_29                                                  */
+/* 80362228-80362238 0010+00 rc=991 efc=991 .text      _restgpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_restgpr_29) {
+extern "C" asm void _restgpr_29() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/_restgpr_29.s"
 }
 #pragma pop
 
 
-/* 80362238-80362324 00EC+00 .text      __div2u                                                      */
+/* 80362238-80362324 00EC+00 rc=2 efc=2 .text      __div2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__div2u) {
+extern "C" asm void __div2u() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__div2u.s"
 }
 #pragma pop
 
 
-/* 80362324-8036245C 0138+00 .text      __div2i                                                      */
+/* 80362324-8036245C 0138+00 rc=16 efc=16 .text      __div2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__div2i) {
+extern "C" asm void __div2i() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__div2i.s"
 }
 #pragma pop
 
 
-/* 8036245C-80362540 00E4+00 .text      __mod2u                                                      */
+/* 8036245C-80362540 00E4+00 rc=2 efc=2 .text      __mod2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__mod2u) {
+extern "C" asm void __mod2u() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__mod2u.s"
 }
 #pragma pop
 
 
-/* 80362540-8036264C 010C+00 .text      __mod2i                                                      */
+/* 80362540-8036264C 010C+00 rc=2 efc=2 .text      __mod2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__mod2i) {
+extern "C" asm void __mod2i() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__mod2i.s"
 }
 #pragma pop
 
 
-/* 8036264C-80362670 0024+00 .text      __shl2i                                                      */
+/* 8036264C-80362670 0024+00 rc=2 efc=2 .text      __shl2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__shl2i) {
+extern "C" asm void __shl2i() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__shl2i.s"
 }
 #pragma pop
 
 
-/* 80362670-80362694 0024+00 .text      __shr2u                                                      */
+/* 80362670-80362694 0024+00 rc=2 efc=2 .text      __shr2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__shr2u) {
+extern "C" asm void __shr2u() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__shr2u.s"
 }
 #pragma pop
 
 
-/* 80362694-803626BC 0028+00 .text      __shr2i                                                      */
+/* 80362694-803626BC 0028+00 rc=3 efc=3 .text      __shr2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__shr2i) {
+extern "C" asm void __shr2i() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__shr2i.s"
 }
 #pragma pop
 
 
-/* 803626BC-80362770 00B4+00 .text      __cvt_sll_flt                                                */
+/* 803626BC-80362770 00B4+00 rc=1 efc=1 .text      __cvt_sll_flt                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__cvt_sll_flt) {
+extern "C" asm void __cvt_sll_flt() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__cvt_sll_flt.s"
 }
 #pragma pop
 
 
-/* 80362770-8036283C 00CC+00 .text      __cvt_dbl_usll                                               */
+/* 80362770-8036283C 00CC+00 rc=2 efc=2 .text      __cvt_dbl_usll                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__cvt_dbl_usll) {
+extern "C" asm void __cvt_dbl_usll() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/runtime/__cvt_dbl_usll.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

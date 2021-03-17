@@ -6,17 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgW_Base (dBgW_Base) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dBgW_Base) */
+// outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dBgW_Base) */
+struct dBgW_Base {
+	// cXyz
+	// fopAc_ac_c
+	/* 80074AB4 */ void SetOldShapeAngleY(s16);
+	/* 8007E5A8 */ dBgW_Base();
+	/* 8007E640 */ ~dBgW_Base();
+	/* 8007E69C */ void ClrDBgWBase();
+	/* 8007E6D0 */ bool ChkMemoryError();
+	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
+	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
+	/* 8007E6E0 */ void CalcDiffShapeAngleY(s16);
+};
+
+// build cBgW_BgId (cBgW_BgId) False/False
+/* top-level dependencies (begin cBgW_BgId) */
+/* top-level dependencies (end cBgW_BgId) */
+struct cBgW_BgId {
+	/* 8007E5F8 */ ~cBgW_BgId();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build cXyz (cXyz) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__9dBgW_BaseFv();
-extern "C" extern void __dt__9cBgW_BgIdFv();
-extern "C" extern void __dt__9dBgW_BaseFv();
-extern "C" extern void ClrDBgWBase__9dBgW_BaseFv();
-extern "C" extern void ChkMemoryError__9dBgW_BaseFv();
-extern "C" extern void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
-extern "C" extern void CalcDiffShapeAngleY__9dBgW_BaseFs();
+
+extern "C" void __ct__9dBgW_BaseFv();
+extern "C" void __dt__9cBgW_BgIdFv();
+extern "C" void __dt__9dBgW_BaseFv();
+extern "C" void ClrDBgWBase__9dBgW_BaseFv();
+extern "C" bool ChkMemoryError__9dBgW_BaseFv();
+extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
+extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs();
 SECTION_DATA extern void*const __vt__9dBgW_Base[60];
 SECTION_DATA extern void*const __vt__9cBgW_BgId[4];
 
@@ -24,15 +68,17 @@ SECTION_DATA extern void*const __vt__9cBgW_BgId[4];
 // External References:
 // 
 
-extern "C" extern void SetOldShapeAngleY__9dBgW_BaseFs();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void SetOldShapeAngleY__9dBgW_BaseFs();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803ABCC8-803ABDB8 00F0+00 .data      __vt__9dBgW_Base                                             */
+/* 803ABCC8-803ABDB8 00F0+00 rc=2 efc=0 .data      __vt__9dBgW_Base                                             */
 void* const __vt__9dBgW_Base[60] = {
 	NULL, /* RTTI */
 	NULL,
@@ -96,7 +142,7 @@ void* const __vt__9dBgW_Base[60] = {
 	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
-/* 803ABDB8-803ABDC8 000C+04 .data      __vt__9cBgW_BgId                                             */
+/* 803ABDB8-803ABDC8 000C+04 rc=3 efc=0 .data      __vt__9cBgW_BgId                                             */
 void* const __vt__9cBgW_BgId[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -105,92 +151,76 @@ void* const __vt__9cBgW_BgId[4] = {
 	NULL,
 };
 
-/* 8007E5A8-8007E5F8 0050+00 .text      __ct__9dBgW_BaseFv                                           */
+/* 8007E5A8-8007E5F8 0050+00 rc=2 efc=2 .text      __ct__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dBgW_BaseFv) {
+asm dBgW_Base::dBgW_Base() {
 	nofralloc
 #include "asm/d/bg/d_bg_w_base/__ct__9dBgW_BaseFv.s"
 }
 #pragma pop
 
 
-/* 8007E5F8-8007E640 0048+00 .text      __dt__9cBgW_BgIdFv                                           */
+/* 8007E5F8-8007E640 0048+00 rc=1 efc=0 .text      __dt__9cBgW_BgIdFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9cBgW_BgIdFv) {
+asm cBgW_BgId::~cBgW_BgId() {
 	nofralloc
 #include "asm/d/bg/d_bg_w_base/__dt__9cBgW_BgIdFv.s"
 }
 #pragma pop
 
 
-/* 8007E640-8007E69C 005C+00 .text      __dt__9dBgW_BaseFv                                           */
+/* 8007E640-8007E69C 005C+00 rc=3 efc=2 .text      __dt__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dBgW_BaseFv) {
+asm dBgW_Base::~dBgW_Base() {
 	nofralloc
 #include "asm/d/bg/d_bg_w_base/__dt__9dBgW_BaseFv.s"
 }
 #pragma pop
 
 
-/* 8007E69C-8007E6D0 0034+00 .text      ClrDBgWBase__9dBgW_BaseFv                                    */
+/* 8007E69C-8007E6D0 0034+00 rc=2 efc=1 .text      ClrDBgWBase__9dBgW_BaseFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrDBgWBase__9dBgW_BaseFv) {
+asm void dBgW_Base::ClrDBgWBase() {
 	nofralloc
 #include "asm/d/bg/d_bg_w_base/ClrDBgWBase__9dBgW_BaseFv.s"
 }
 #pragma pop
 
 
-/* 8007E6D0-8007E6D8 0008+00 .text      ChkMemoryError__9dBgW_BaseFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ChkMemoryError__9dBgW_BaseFv) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/ChkMemoryError__9dBgW_BaseFv.s"
+/* 8007E6D0-8007E6D8 0008+00 rc=2 efc=1 .text      ChkMemoryError__9dBgW_BaseFv                                 */
+bool dBgW_Base::ChkMemoryError() {
+	return false;
 }
-#pragma pop
 
 
-/* 8007E6D8-8007E6DC 0004+00 .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c.s"
+/* 8007E6D8-8007E6DC 0004+00 rc=3 efc=2 .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
+void dBgW_Base::CallRideCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8007E6DC-8007E6E0 0004+00 .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz.s"
+/* 8007E6DC-8007E6E0 0004+00 rc=3 efc=2 .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
+void dBgW_Base::CallArrowStickCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1, cXyz& field_2) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8007E6E0-8007E6F4 0014+00 .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
+/* 8007E6E0-8007E6F4 0014+00 rc=1 efc=1 .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcDiffShapeAngleY__9dBgW_BaseFs) {
+asm void dBgW_Base::CalcDiffShapeAngleY(s16 field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_base/CalcDiffShapeAngleY__9dBgW_BaseFs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

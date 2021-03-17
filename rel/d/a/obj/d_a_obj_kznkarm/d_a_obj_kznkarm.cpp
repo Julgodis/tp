@@ -6,36 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjKznkarm_c;
+
+struct daObjKznkarm_c {
+	struct Mode_e {
+	};
+
+	void setAction(daObjKznkarm_c::Mode_e);
+	void callInit();
+	void callExecute();
+	void initBroken();
+	void executeBroken();
+	void initCarry();
+	void executeCarry();
+	void initThrow();
+	void executeThrow();
+	void initStay();
+	void executeStay();
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAction__14daObjKznkarm_cFQ214daObjKznkarm_c6Mode_e();
-extern "C" extern void callInit__14daObjKznkarm_cFv();
-extern "C" extern void callExecute__14daObjKznkarm_cFv();
-extern "C" extern void initBroken__14daObjKznkarm_cFv();
-extern "C" extern void executeBroken__14daObjKznkarm_cFv();
-extern "C" extern void initCarry__14daObjKznkarm_cFv();
-extern "C" extern void executeCarry__14daObjKznkarm_cFv();
-extern "C" extern void initThrow__14daObjKznkarm_cFv();
-extern "C" extern void executeThrow__14daObjKznkarm_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void initStay__14daObjKznkarm_cFv();
-extern "C" extern void executeStay__14daObjKznkarm_cFv();
-extern "C" extern void create_init__14daObjKznkarm_cFv();
-extern "C" extern void initBaseMtx__14daObjKznkarm_cFv();
-extern "C" extern void setBaseMtx__14daObjKznkarm_cFv();
-extern "C" extern void getGroundSlope__14daObjKznkarm_cFs();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjKznkarm_Draw__FP14daObjKznkarm_c();
-extern "C" extern void daObjKznkarm_Execute__FP14daObjKznkarm_c();
-extern "C" extern void daObjKznkarm_IsDelete__FP14daObjKznkarm_c();
-extern "C" extern void daObjKznkarm_Delete__FP14daObjKznkarm_c();
-extern "C" extern void daObjKznkarm_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __sinit_d_a_obj_kznkarm_cpp();
-extern "C" extern void func_80C50CEC();
-extern "C" extern void func_80C50CF4();
+extern "C" void getGroundSlope__14daObjKznkarm_cFs();
+void createSolidHeap(fopAc_ac_c*);
+void daObjKznkarm_Draw(daObjKznkarm_c*);
+void daObjKznkarm_Execute(daObjKznkarm_c*);
+bool daObjKznkarm_IsDelete(daObjKznkarm_c*);
+void daObjKznkarm_Delete(daObjKznkarm_c*);
+void daObjKznkarm_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_kznkarm_cpp();
+extern "C" void func_80C50CEC();
+extern "C" void func_80C50CF4();
+
+extern "C" void setAction__14daObjKznkarm_cFQ214daObjKznkarm_c6Mode_e();
+extern "C" void callInit__14daObjKznkarm_cFv();
+extern "C" void callExecute__14daObjKznkarm_cFv();
+extern "C" void initBroken__14daObjKznkarm_cFv();
+extern "C" void executeBroken__14daObjKznkarm_cFv();
+extern "C" void initCarry__14daObjKznkarm_cFv();
+extern "C" void executeCarry__14daObjKznkarm_cFv();
+extern "C" void initThrow__14daObjKznkarm_cFv();
+extern "C" void executeThrow__14daObjKznkarm_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void initStay__14daObjKznkarm_cFv();
+extern "C" void executeStay__14daObjKznkarm_cFv();
+extern "C" void create_init__14daObjKznkarm_cFv();
+extern "C" void initBaseMtx__14daObjKznkarm_cFv();
+extern "C" void setBaseMtx__14daObjKznkarm_cFv();
+extern "C" void getGroundSlope__14daObjKznkarm_cFs();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjKznkarm_Draw__FP14daObjKznkarm_c();
+extern "C" void daObjKznkarm_Execute__FP14daObjKznkarm_c();
+extern "C" bool daObjKznkarm_IsDelete__FP14daObjKznkarm_c();
+extern "C" void daObjKznkarm_Delete__FP14daObjKznkarm_c();
+extern "C" void daObjKznkarm_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __sinit_d_a_obj_kznkarm_cpp();
+extern "C" void func_80C50CEC();
+extern "C" void func_80C50CF4();
 SECTION_RODATA extern const u8 M_attr__14daObjKznkarm_c[56];
 SECTION_RODATA extern const u32 lit_3720;
 SECTION_RODATA extern const u8 lit_3721[4];
@@ -78,7 +131,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -88,7 +143,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__14daObjKznkarm_cFQ214daObjKznkarm_c6Mode_e) {
+asm void daObjKznkarm_c::setAction(daObjKznkarm_c::Mode_e field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/setAction__14daObjKznkarm_cFQ214daObjKznkarm_c6Mode_e.s"
 }
@@ -99,7 +154,7 @@ ASM_FUNCTION(setAction__14daObjKznkarm_cFQ214daObjKznkarm_c6Mode_e) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callInit__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::callInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/callInit__14daObjKznkarm_cFv.s"
 }
@@ -110,7 +165,7 @@ ASM_FUNCTION(callInit__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callExecute__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::callExecute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/callExecute__14daObjKznkarm_cFv.s"
 }
@@ -121,7 +176,7 @@ ASM_FUNCTION(callExecute__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBroken__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::initBroken() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/initBroken__14daObjKznkarm_cFv.s"
 }
@@ -132,7 +187,7 @@ ASM_FUNCTION(initBroken__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBroken__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::executeBroken() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/executeBroken__14daObjKznkarm_cFv.s"
 }
@@ -143,7 +198,7 @@ ASM_FUNCTION(executeBroken__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCarry__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::initCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/initCarry__14daObjKznkarm_cFv.s"
 }
@@ -154,7 +209,7 @@ ASM_FUNCTION(initCarry__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCarry__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::executeCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/executeCarry__14daObjKznkarm_cFv.s"
 }
@@ -165,7 +220,7 @@ ASM_FUNCTION(executeCarry__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initThrow__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::initThrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/initThrow__14daObjKznkarm_cFv.s"
 }
@@ -176,7 +231,7 @@ ASM_FUNCTION(initThrow__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeThrow__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::executeThrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/executeThrow__14daObjKznkarm_cFv.s"
 }
@@ -187,7 +242,7 @@ ASM_FUNCTION(executeThrow__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/__dt__8cM3dGPlaFv.s"
 }
@@ -198,7 +253,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initStay__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::initStay() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/initStay__14daObjKznkarm_cFv.s"
 }
@@ -209,7 +264,7 @@ ASM_FUNCTION(initStay__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeStay__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::executeStay() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/executeStay__14daObjKznkarm_cFv.s"
 }
@@ -220,7 +275,7 @@ ASM_FUNCTION(executeStay__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/create_init__14daObjKznkarm_cFv.s"
 }
@@ -231,7 +286,7 @@ ASM_FUNCTION(create_init__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/initBaseMtx__14daObjKznkarm_cFv.s"
 }
@@ -242,7 +297,7 @@ ASM_FUNCTION(initBaseMtx__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjKznkarm_cFv) {
+asm void daObjKznkarm_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/setBaseMtx__14daObjKznkarm_cFv.s"
 }
@@ -253,7 +308,7 @@ ASM_FUNCTION(setBaseMtx__14daObjKznkarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroundSlope__14daObjKznkarm_cFs) {
+extern "C" asm void getGroundSlope__14daObjKznkarm_cFs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/getGroundSlope__14daObjKznkarm_cFs.s"
 }
@@ -264,7 +319,7 @@ ASM_FUNCTION(getGroundSlope__14daObjKznkarm_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -275,7 +330,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKznkarm_Draw__FP14daObjKznkarm_c) {
+asm void daObjKznkarm_Draw(daObjKznkarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_Draw__FP14daObjKznkarm_c.s"
 }
@@ -286,7 +341,7 @@ ASM_FUNCTION(daObjKznkarm_Draw__FP14daObjKznkarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKznkarm_Execute__FP14daObjKznkarm_c) {
+asm void daObjKznkarm_Execute(daObjKznkarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_Execute__FP14daObjKznkarm_c.s"
 }
@@ -294,21 +349,16 @@ ASM_FUNCTION(daObjKznkarm_Execute__FP14daObjKznkarm_c) {
 
 
 /* 80C509A8-80C509B0 0008+00 .text      daObjKznkarm_IsDelete__FP14daObjKznkarm_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKznkarm_IsDelete__FP14daObjKznkarm_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_IsDelete__FP14daObjKznkarm_c.s"
+bool daObjKznkarm_IsDelete(daObjKznkarm_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C509B0-80C50A5C 00AC+00 .text      daObjKznkarm_Delete__FP14daObjKznkarm_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKznkarm_Delete__FP14daObjKznkarm_c) {
+asm void daObjKznkarm_Delete(daObjKznkarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_Delete__FP14daObjKznkarm_c.s"
 }
@@ -319,7 +369,7 @@ ASM_FUNCTION(daObjKznkarm_Delete__FP14daObjKznkarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKznkarm_Create__FP10fopAc_ac_c) {
+asm void daObjKznkarm_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_Create__FP10fopAc_ac_c.s"
 }
@@ -330,7 +380,7 @@ ASM_FUNCTION(daObjKznkarm_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -341,7 +391,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/__dt__12dBgS_AcchCirFv.s"
 }
@@ -352,7 +402,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kznkarm_cpp) {
+extern "C" asm void __sinit_d_a_obj_kznkarm_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/__sinit_d_a_obj_kznkarm_cpp.s"
 }
@@ -363,7 +413,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kznkarm_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C50CEC) {
+extern "C" asm void func_80C50CEC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/func_80C50CEC.s"
 }
@@ -374,7 +424,7 @@ ASM_FUNCTION(func_80C50CEC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C50CF4) {
+extern "C" asm void func_80C50CF4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/func_80C50CF4.s"
 }

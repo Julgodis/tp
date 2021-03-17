@@ -6,32 +6,83 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjSword_c;
+
+struct daObjSword_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjSword_cFv();
-extern "C" extern void setBaseMtx__12daObjSword_cFv();
-extern "C" extern void Create__12daObjSword_cFv();
-extern "C" extern void create__12daObjSword_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void actionWait__12daObjSword_cFv();
-extern "C" extern void initActionOrderGetDemo__12daObjSword_cFv();
-extern "C" extern void actionOrderGetDemo__12daObjSword_cFv();
-extern "C" extern void actionGetDemo__12daObjSword_cFv();
-extern "C" extern void execute__12daObjSword_cFv();
-extern "C" extern void draw__12daObjSword_cFv();
-extern "C" extern void _delete__12daObjSword_cFv();
-extern "C" extern void daObjSword_Draw__FP12daObjSword_c();
-extern "C" extern void daObjSword_Execute__FP12daObjSword_c();
-extern "C" extern void daObjSword_Delete__FP12daObjSword_c();
-extern "C" extern void daObjSword_Create__FP12daObjSword_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80CFDE6C();
-extern "C" extern void func_80CFDE74();
+void daObjSword_Draw(daObjSword_c*);
+void daObjSword_Execute(daObjSword_c*);
+void daObjSword_Delete(daObjSword_c*);
+void daObjSword_Create(daObjSword_c*);
+extern "C" void func_80CFDE6C();
+extern "C" void func_80CFDE74();
+
+extern "C" void initBaseMtx__12daObjSword_cFv();
+extern "C" void setBaseMtx__12daObjSword_cFv();
+extern "C" void Create__12daObjSword_cFv();
+extern "C" void create__12daObjSword_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void actionWait__12daObjSword_cFv();
+extern "C" void initActionOrderGetDemo__12daObjSword_cFv();
+extern "C" void actionOrderGetDemo__12daObjSword_cFv();
+extern "C" void actionGetDemo__12daObjSword_cFv();
+extern "C" void execute__12daObjSword_cFv();
+extern "C" void draw__12daObjSword_cFv();
+extern "C" void _delete__12daObjSword_cFv();
+extern "C" void daObjSword_Draw__FP12daObjSword_c();
+extern "C" void daObjSword_Execute__FP12daObjSword_c();
+extern "C" void daObjSword_Delete__FP12daObjSword_c();
+extern "C" void daObjSword_Create__FP12daObjSword_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80CFDE6C();
+extern "C" void func_80CFDE74();
 SECTION_RODATA extern const u8 stringBase0[16];
 SECTION_DATA extern u8 cNullVec__6Z2Calc[12];
 SECTION_DATA extern u32 lit_1787;
@@ -55,7 +106,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjSword_cFv) {
+asm void daObjSword_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/initBaseMtx__12daObjSword_cFv.s"
 }
@@ -76,7 +129,7 @@ ASM_FUNCTION(initBaseMtx__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjSword_cFv) {
+asm void daObjSword_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/setBaseMtx__12daObjSword_cFv.s"
 }
@@ -87,7 +140,7 @@ ASM_FUNCTION(setBaseMtx__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjSword_cFv) {
+asm void daObjSword_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/Create__12daObjSword_cFv.s"
 }
@@ -98,7 +151,7 @@ ASM_FUNCTION(Create__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjSword_cFv) {
+asm void daObjSword_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFD67C.s"
 }
@@ -109,7 +162,7 @@ ASM_FUNCTION(create__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__8cM3dGCylFv.s"
 }
@@ -120,7 +173,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__8cM3dGAabFv.s"
 }
@@ -131,7 +184,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__10dCcD_GSttsFv.s"
 }
@@ -142,7 +195,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__12dBgS_AcchCirFv.s"
 }
@@ -153,7 +206,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -164,7 +217,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__12daObjSword_cFv) {
+asm void daObjSword_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/actionWait__12daObjSword_cFv.s"
 }
@@ -175,7 +228,7 @@ ASM_FUNCTION(actionWait__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__12daObjSword_cFv) {
+asm void daObjSword_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/initActionOrderGetDemo__12daObjSword_cFv.s"
 }
@@ -186,7 +239,7 @@ ASM_FUNCTION(initActionOrderGetDemo__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__12daObjSword_cFv) {
+asm void daObjSword_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/actionOrderGetDemo__12daObjSword_cFv.s"
 }
@@ -197,7 +250,7 @@ ASM_FUNCTION(actionOrderGetDemo__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__12daObjSword_cFv) {
+asm void daObjSword_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/actionGetDemo__12daObjSword_cFv.s"
 }
@@ -208,7 +261,7 @@ ASM_FUNCTION(actionGetDemo__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjSword_cFv) {
+asm void daObjSword_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/execute__12daObjSword_cFv.s"
 }
@@ -219,7 +272,7 @@ ASM_FUNCTION(execute__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjSword_cFv) {
+asm void daObjSword_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/draw__12daObjSword_cFv.s"
 }
@@ -230,7 +283,7 @@ ASM_FUNCTION(draw__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjSword_cFv) {
+asm void daObjSword_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/_delete__12daObjSword_cFv.s"
 }
@@ -241,7 +294,7 @@ ASM_FUNCTION(_delete__12daObjSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSword_Draw__FP12daObjSword_c) {
+asm void daObjSword_Draw(daObjSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Draw__FP12daObjSword_c.s"
 }
@@ -252,7 +305,7 @@ ASM_FUNCTION(daObjSword_Draw__FP12daObjSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSword_Execute__FP12daObjSword_c) {
+asm void daObjSword_Execute(daObjSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Execute__FP12daObjSword_c.s"
 }
@@ -263,7 +316,7 @@ ASM_FUNCTION(daObjSword_Execute__FP12daObjSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSword_Delete__FP12daObjSword_c) {
+asm void daObjSword_Delete(daObjSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Delete__FP12daObjSword_c.s"
 }
@@ -274,7 +327,7 @@ ASM_FUNCTION(daObjSword_Delete__FP12daObjSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSword_Create__FP12daObjSword_c) {
+asm void daObjSword_Create(daObjSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/daObjSword_Create__FP12daObjSword_c.s"
 }
@@ -285,7 +338,7 @@ ASM_FUNCTION(daObjSword_Create__FP12daObjSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/__dt__10cCcD_GSttsFv.s"
 }
@@ -296,7 +349,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFDE6C) {
+extern "C" asm void func_80CFDE6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFDE6C.s"
 }
@@ -307,7 +360,7 @@ ASM_FUNCTION(func_80CFDE6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFDE74) {
+extern "C" asm void func_80CFDE74() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sword/d_a_obj_sword/func_80CFDE74.s"
 }

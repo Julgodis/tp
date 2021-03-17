@@ -6,55 +6,126 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct dBgW;
+struct daObjDmElevator_c;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct J3DJoint {
+};
+
+struct daObjDmElevator_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void init();
+	void CreateHeap();
+	void create1st();
+	void setting_ride_flag();
+	void event_sw_proc_call();
+	void actionSwPauseNoneInit();
+	void actionSwPauseNone();
+	void actionSwPauseOrderInit();
+	void actionSwPauseOrder();
+	void actionSwPauseInit();
+	void actionSwPause();
+	void calc_top_pos();
+	void mode_sw_proc_call();
+	void modeSwWaitLowerInit();
+	void modeSwWaitLower();
+	void modeSwLowerInit();
+	void modeSwLower();
+	void modeSwWaitUpperInit();
+	void modeSwWaitUpper();
+	void modeSwUpperInit();
+	void modeSwUpper();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionStartEvent();
+	void actionMoveStart();
+	void actionDead();
+	void demoProc();
+	void moveInit();
+	void moveProc();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void nodeCallBackForSw__FP8J3DJointi();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__17daObjDmElevator_cFv();
-extern "C" extern void setBaseMtx__17daObjDmElevator_cFv();
-extern "C" extern void Create__17daObjDmElevator_cFv();
-extern "C" extern void init__17daObjDmElevator_cFv();
-extern "C" extern void CreateHeap__17daObjDmElevator_cFv();
-extern "C" extern void create1st__17daObjDmElevator_cFv();
-extern "C" extern void Execute__17daObjDmElevator_cFPPA3_A4_f();
-extern "C" extern void setting_ride_flag__17daObjDmElevator_cFv();
-extern "C" extern void event_sw_proc_call__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPauseNoneInit__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPauseNone__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPauseOrderInit__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPauseOrder__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPauseInit__17daObjDmElevator_cFv();
-extern "C" extern void actionSwPause__17daObjDmElevator_cFv();
-extern "C" extern void calc_top_pos__17daObjDmElevator_cFv();
-extern "C" extern void mode_sw_proc_call__17daObjDmElevator_cFv();
-extern "C" extern void modeSwWaitLowerInit__17daObjDmElevator_cFv();
-extern "C" extern void modeSwWaitLower__17daObjDmElevator_cFv();
-extern "C" extern void modeSwLowerInit__17daObjDmElevator_cFv();
-extern "C" extern void modeSwLower__17daObjDmElevator_cFv();
-extern "C" extern void modeSwWaitUpperInit__17daObjDmElevator_cFv();
-extern "C" extern void modeSwWaitUpper__17daObjDmElevator_cFv();
-extern "C" extern void modeSwUpperInit__17daObjDmElevator_cFv();
-extern "C" extern void modeSwUpper__17daObjDmElevator_cFv();
-extern "C" extern void event_proc_call__17daObjDmElevator_cFv();
-extern "C" extern void actionWait__17daObjDmElevator_cFv();
-extern "C" extern void actionOrderEvent__17daObjDmElevator_cFv();
-extern "C" extern void actionEvent__17daObjDmElevator_cFv();
-extern "C" extern void actionStartEvent__17daObjDmElevator_cFv();
-extern "C" extern void actionMoveStart__17daObjDmElevator_cFv();
-extern "C" extern void actionDead__17daObjDmElevator_cFv();
-extern "C" extern void demoProc__17daObjDmElevator_cFv();
-extern "C" extern void moveInit__17daObjDmElevator_cFv();
-extern "C" extern void moveProc__17daObjDmElevator_cFv();
-extern "C" extern void Draw__17daObjDmElevator_cFv();
-extern "C" extern void Delete__17daObjDmElevator_cFv();
-extern "C" extern void daObjDmElevator_create1st__FP17daObjDmElevator_c();
-extern "C" extern void daObjDmElevator_MoveBGDelete__FP17daObjDmElevator_c();
-extern "C" extern void daObjDmElevator_MoveBGExecute__FP17daObjDmElevator_c();
-extern "C" extern void daObjDmElevator_MoveBGDraw__FP17daObjDmElevator_c();
-extern "C" extern void func_80BDF844();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void nodeCallBackForSw(J3DJoint*, s32);
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__17daObjDmElevator_cFPPA3_A4_f();
+void daObjDmElevator_create1st(daObjDmElevator_c*);
+void daObjDmElevator_MoveBGDelete(daObjDmElevator_c*);
+void daObjDmElevator_MoveBGExecute(daObjDmElevator_c*);
+void daObjDmElevator_MoveBGDraw(daObjDmElevator_c*);
+extern "C" void func_80BDF844();
+
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __dt__4cXyzFv();
+extern "C" void nodeCallBackForSw__FP8J3DJointi();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__17daObjDmElevator_cFv();
+extern "C" void setBaseMtx__17daObjDmElevator_cFv();
+extern "C" void Create__17daObjDmElevator_cFv();
+extern "C" void init__17daObjDmElevator_cFv();
+extern "C" void CreateHeap__17daObjDmElevator_cFv();
+extern "C" void create1st__17daObjDmElevator_cFv();
+extern "C" void Execute__17daObjDmElevator_cFPPA3_A4_f();
+extern "C" void setting_ride_flag__17daObjDmElevator_cFv();
+extern "C" void event_sw_proc_call__17daObjDmElevator_cFv();
+extern "C" void actionSwPauseNoneInit__17daObjDmElevator_cFv();
+extern "C" void actionSwPauseNone__17daObjDmElevator_cFv();
+extern "C" void actionSwPauseOrderInit__17daObjDmElevator_cFv();
+extern "C" void actionSwPauseOrder__17daObjDmElevator_cFv();
+extern "C" void actionSwPauseInit__17daObjDmElevator_cFv();
+extern "C" void actionSwPause__17daObjDmElevator_cFv();
+extern "C" void calc_top_pos__17daObjDmElevator_cFv();
+extern "C" void mode_sw_proc_call__17daObjDmElevator_cFv();
+extern "C" void modeSwWaitLowerInit__17daObjDmElevator_cFv();
+extern "C" void modeSwWaitLower__17daObjDmElevator_cFv();
+extern "C" void modeSwLowerInit__17daObjDmElevator_cFv();
+extern "C" void modeSwLower__17daObjDmElevator_cFv();
+extern "C" void modeSwWaitUpperInit__17daObjDmElevator_cFv();
+extern "C" void modeSwWaitUpper__17daObjDmElevator_cFv();
+extern "C" void modeSwUpperInit__17daObjDmElevator_cFv();
+extern "C" void modeSwUpper__17daObjDmElevator_cFv();
+extern "C" void event_proc_call__17daObjDmElevator_cFv();
+extern "C" void actionWait__17daObjDmElevator_cFv();
+extern "C" void actionOrderEvent__17daObjDmElevator_cFv();
+extern "C" void actionEvent__17daObjDmElevator_cFv();
+extern "C" void actionStartEvent__17daObjDmElevator_cFv();
+extern "C" void actionMoveStart__17daObjDmElevator_cFv();
+extern "C" void actionDead__17daObjDmElevator_cFv();
+extern "C" void demoProc__17daObjDmElevator_cFv();
+extern "C" void moveInit__17daObjDmElevator_cFv();
+extern "C" void moveProc__17daObjDmElevator_cFv();
+extern "C" void Draw__17daObjDmElevator_cFv();
+extern "C" void Delete__17daObjDmElevator_cFv();
+extern "C" void daObjDmElevator_create1st__FP17daObjDmElevator_c();
+extern "C" void daObjDmElevator_MoveBGDelete__FP17daObjDmElevator_c();
+extern "C" void daObjDmElevator_MoveBGExecute__FP17daObjDmElevator_c();
+extern "C" void daObjDmElevator_MoveBGDraw__FP17daObjDmElevator_c();
+extern "C" void func_80BDF844();
 SECTION_RODATA extern const u8 l_swOffset[12];
 SECTION_RODATA extern const u32 lit_3718;
 SECTION_RODATA extern const u8 lit_3719[4];
@@ -161,8 +232,11 @@ SECTION_BSS extern u8 data_80BDFC40[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -172,7 +246,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -183,7 +257,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/__dt__4cXyzFv.s"
 }
@@ -194,7 +268,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBackForSw__FP8J3DJointi) {
+asm void nodeCallBackForSw(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/nodeCallBackForSw__FP8J3DJointi.s"
 }
@@ -205,7 +279,7 @@ ASM_FUNCTION(nodeCallBackForSw__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/nodeCallBack__FP8J3DJointi.s"
 }
@@ -216,7 +290,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/initBaseMtx__17daObjDmElevator_cFv.s"
 }
@@ -227,7 +301,7 @@ ASM_FUNCTION(initBaseMtx__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/setBaseMtx__17daObjDmElevator_cFv.s"
 }
@@ -238,7 +312,7 @@ ASM_FUNCTION(setBaseMtx__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/Create__17daObjDmElevator_cFv.s"
 }
@@ -249,7 +323,7 @@ ASM_FUNCTION(Create__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/init__17daObjDmElevator_cFv.s"
 }
@@ -260,7 +334,7 @@ ASM_FUNCTION(init__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/CreateHeap__17daObjDmElevator_cFv.s"
 }
@@ -271,7 +345,7 @@ ASM_FUNCTION(CreateHeap__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/create1st__17daObjDmElevator_cFv.s"
 }
@@ -282,7 +356,7 @@ ASM_FUNCTION(create1st__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__17daObjDmElevator_cFPPA3_A4_f) {
+extern "C" asm void Execute__17daObjDmElevator_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/Execute__17daObjDmElevator_cFPPA3_A4_f.s"
 }
@@ -293,7 +367,7 @@ ASM_FUNCTION(Execute__17daObjDmElevator_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setting_ride_flag__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::setting_ride_flag() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/setting_ride_flag__17daObjDmElevator_cFv.s"
 }
@@ -304,7 +378,7 @@ ASM_FUNCTION(setting_ride_flag__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_sw_proc_call__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::event_sw_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/event_sw_proc_call__17daObjDmElevator_cFv.s"
 }
@@ -315,7 +389,7 @@ ASM_FUNCTION(event_sw_proc_call__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwPauseNoneInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionSwPauseNoneInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPauseNoneInit__17daObjDmElevator_cFv.s"
 }
@@ -323,21 +397,16 @@ ASM_FUNCTION(actionSwPauseNoneInit__17daObjDmElevator_cFv) {
 
 
 /* 80BDE7AC-80BDE7B0 0004+00 .text      actionSwPauseNone__17daObjDmElevator_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionSwPauseNone__17daObjDmElevator_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPauseNone__17daObjDmElevator_cFv.s"
+void daObjDmElevator_c::actionSwPauseNone() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BDE7B0-80BDE808 0058+00 .text      actionSwPauseOrderInit__17daObjDmElevator_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwPauseOrderInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionSwPauseOrderInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPauseOrderInit__17daObjDmElevator_cFv.s"
 }
@@ -348,7 +417,7 @@ ASM_FUNCTION(actionSwPauseOrderInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwPauseOrder__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionSwPauseOrder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPauseOrder__17daObjDmElevator_cFv.s"
 }
@@ -359,7 +428,7 @@ ASM_FUNCTION(actionSwPauseOrder__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwPauseInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionSwPauseInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPauseInit__17daObjDmElevator_cFv.s"
 }
@@ -370,7 +439,7 @@ ASM_FUNCTION(actionSwPauseInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwPause__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionSwPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionSwPause__17daObjDmElevator_cFv.s"
 }
@@ -381,7 +450,7 @@ ASM_FUNCTION(actionSwPause__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_top_pos__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::calc_top_pos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/calc_top_pos__17daObjDmElevator_cFv.s"
 }
@@ -392,7 +461,7 @@ ASM_FUNCTION(calc_top_pos__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_sw_proc_call__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::mode_sw_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/mode_sw_proc_call__17daObjDmElevator_cFv.s"
 }
@@ -403,7 +472,7 @@ ASM_FUNCTION(mode_sw_proc_call__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwWaitLowerInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwWaitLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwWaitLowerInit__17daObjDmElevator_cFv.s"
 }
@@ -414,7 +483,7 @@ ASM_FUNCTION(modeSwWaitLowerInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwWaitLower__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwWaitLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwWaitLower__17daObjDmElevator_cFv.s"
 }
@@ -425,7 +494,7 @@ ASM_FUNCTION(modeSwWaitLower__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwLowerInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwLowerInit__17daObjDmElevator_cFv.s"
 }
@@ -436,7 +505,7 @@ ASM_FUNCTION(modeSwLowerInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwLower__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwLower__17daObjDmElevator_cFv.s"
 }
@@ -447,7 +516,7 @@ ASM_FUNCTION(modeSwLower__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwWaitUpperInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwWaitUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwWaitUpperInit__17daObjDmElevator_cFv.s"
 }
@@ -458,7 +527,7 @@ ASM_FUNCTION(modeSwWaitUpperInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwWaitUpper__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwWaitUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwWaitUpper__17daObjDmElevator_cFv.s"
 }
@@ -469,7 +538,7 @@ ASM_FUNCTION(modeSwWaitUpper__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwUpperInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwUpperInit__17daObjDmElevator_cFv.s"
 }
@@ -480,7 +549,7 @@ ASM_FUNCTION(modeSwUpperInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSwUpper__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::modeSwUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/modeSwUpper__17daObjDmElevator_cFv.s"
 }
@@ -491,7 +560,7 @@ ASM_FUNCTION(modeSwUpper__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/event_proc_call__17daObjDmElevator_cFv.s"
 }
@@ -502,7 +571,7 @@ ASM_FUNCTION(event_proc_call__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionWait__17daObjDmElevator_cFv.s"
 }
@@ -513,7 +582,7 @@ ASM_FUNCTION(actionWait__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionOrderEvent__17daObjDmElevator_cFv.s"
 }
@@ -524,7 +593,7 @@ ASM_FUNCTION(actionOrderEvent__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionEvent__17daObjDmElevator_cFv.s"
 }
@@ -535,7 +604,7 @@ ASM_FUNCTION(actionEvent__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionStartEvent__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionStartEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionStartEvent__17daObjDmElevator_cFv.s"
 }
@@ -546,7 +615,7 @@ ASM_FUNCTION(actionStartEvent__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMoveStart__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::actionMoveStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionMoveStart__17daObjDmElevator_cFv.s"
 }
@@ -554,21 +623,16 @@ ASM_FUNCTION(actionMoveStart__17daObjDmElevator_cFv) {
 
 
 /* 80BDF168-80BDF16C 0004+00 .text      actionDead__17daObjDmElevator_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__17daObjDmElevator_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/actionDead__17daObjDmElevator_cFv.s"
+void daObjDmElevator_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BDF16C-80BDF320 01B4+00 .text      demoProc__17daObjDmElevator_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/demoProc__17daObjDmElevator_cFv.s"
 }
@@ -579,7 +643,7 @@ ASM_FUNCTION(demoProc__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveInit__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::moveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/moveInit__17daObjDmElevator_cFv.s"
 }
@@ -590,7 +654,7 @@ ASM_FUNCTION(moveInit__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveProc__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::moveProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/moveProc__17daObjDmElevator_cFv.s"
 }
@@ -601,7 +665,7 @@ ASM_FUNCTION(moveProc__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/Draw__17daObjDmElevator_cFv.s"
 }
@@ -612,7 +676,7 @@ ASM_FUNCTION(Draw__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daObjDmElevator_cFv) {
+asm void daObjDmElevator_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/Delete__17daObjDmElevator_cFv.s"
 }
@@ -623,7 +687,7 @@ ASM_FUNCTION(Delete__17daObjDmElevator_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDmElevator_create1st__FP17daObjDmElevator_c) {
+asm void daObjDmElevator_create1st(daObjDmElevator_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/daObjDmElevator_create1st__FP17daObjDmElevator_c.s"
 }
@@ -634,7 +698,7 @@ ASM_FUNCTION(daObjDmElevator_create1st__FP17daObjDmElevator_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDmElevator_MoveBGDelete__FP17daObjDmElevator_c) {
+asm void daObjDmElevator_MoveBGDelete(daObjDmElevator_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/daObjDmElevator_MoveBGDelete__FP17daObjDmElevator_c.s"
 }
@@ -645,7 +709,7 @@ ASM_FUNCTION(daObjDmElevator_MoveBGDelete__FP17daObjDmElevator_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDmElevator_MoveBGExecute__FP17daObjDmElevator_c) {
+asm void daObjDmElevator_MoveBGExecute(daObjDmElevator_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/daObjDmElevator_MoveBGExecute__FP17daObjDmElevator_c.s"
 }
@@ -656,7 +720,7 @@ ASM_FUNCTION(daObjDmElevator_MoveBGExecute__FP17daObjDmElevator_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDmElevator_MoveBGDraw__FP17daObjDmElevator_c) {
+asm void daObjDmElevator_MoveBGDraw(daObjDmElevator_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/daObjDmElevator_MoveBGDraw__FP17daObjDmElevator_c.s"
 }
@@ -667,7 +731,7 @@ ASM_FUNCTION(daObjDmElevator_MoveBGDraw__FP17daObjDmElevator_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDF844) {
+extern "C" asm void func_80BDF844() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dmelevator/d_a_obj_dmelevator/func_80BDF844.s"
 }

@@ -6,23 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_tk_ball_class;
+
+struct e_tk_ball_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_TK_BALL_Draw__FP15e_tk_ball_class();
-extern "C" extern void simple_bg_check__FP15e_tk_ball_class();
-extern "C" extern void impact_eff_set__FP15e_tk_ball_class();
-extern "C" extern void e_tk_ball_move__FP15e_tk_ball_class();
-extern "C" extern void e_tk_ball_return__FP15e_tk_ball_class();
-extern "C" extern void e_tk_ball_drop__FP15e_tk_ball_class();
-extern "C" extern void action__FP15e_tk_ball_class();
-extern "C" extern void daE_TK_BALL_Execute__FP15e_tk_ball_class();
-extern "C" extern void daE_TK_BALL_IsDelete__FP15e_tk_ball_class();
-extern "C" extern void daE_TK_BALL_Delete__FP15e_tk_ball_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_TK_BALL_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daE_TK_BALL_Draw(e_tk_ball_class*);
+void simple_bg_check(e_tk_ball_class*);
+void impact_eff_set(e_tk_ball_class*);
+void e_tk_ball_move(e_tk_ball_class*);
+void e_tk_ball_return(e_tk_ball_class*);
+void e_tk_ball_drop(e_tk_ball_class*);
+void action(e_tk_ball_class*);
+void daE_TK_BALL_Execute(e_tk_ball_class*);
+bool daE_TK_BALL_IsDelete(e_tk_ball_class*);
+void daE_TK_BALL_Delete(e_tk_ball_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_TK_BALL_Create(fopAc_ac_c*);
+
+extern "C" void daE_TK_BALL_Draw__FP15e_tk_ball_class();
+extern "C" void simple_bg_check__FP15e_tk_ball_class();
+extern "C" void impact_eff_set__FP15e_tk_ball_class();
+extern "C" void e_tk_ball_move__FP15e_tk_ball_class();
+extern "C" void e_tk_ball_return__FP15e_tk_ball_class();
+extern "C" void e_tk_ball_drop__FP15e_tk_ball_class();
+extern "C" void action__FP15e_tk_ball_class();
+extern "C" void daE_TK_BALL_Execute__FP15e_tk_ball_class();
+extern "C" bool daE_TK_BALL_IsDelete__FP15e_tk_ball_class();
+extern "C" void daE_TK_BALL_Delete__FP15e_tk_ball_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_TK_BALL_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u8 lit_3710[4];
 SECTION_RODATA extern const u32 lit_3711;
 SECTION_RODATA extern const u32 lit_3712;
@@ -55,7 +89,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +101,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_BALL_Draw__FP15e_tk_ball_class) {
+asm void daE_TK_BALL_Draw(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Draw__FP15e_tk_ball_class.s"
 }
@@ -76,7 +112,7 @@ ASM_FUNCTION(daE_TK_BALL_Draw__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(simple_bg_check__FP15e_tk_ball_class) {
+asm void simple_bg_check(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/simple_bg_check__FP15e_tk_ball_class.s"
 }
@@ -87,7 +123,7 @@ ASM_FUNCTION(simple_bg_check__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(impact_eff_set__FP15e_tk_ball_class) {
+asm void impact_eff_set(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/impact_eff_set__FP15e_tk_ball_class.s"
 }
@@ -98,7 +134,7 @@ ASM_FUNCTION(impact_eff_set__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_ball_move__FP15e_tk_ball_class) {
+asm void e_tk_ball_move(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/e_tk_ball_move__FP15e_tk_ball_class.s"
 }
@@ -109,7 +145,7 @@ ASM_FUNCTION(e_tk_ball_move__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_ball_return__FP15e_tk_ball_class) {
+asm void e_tk_ball_return(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/e_tk_ball_return__FP15e_tk_ball_class.s"
 }
@@ -120,7 +156,7 @@ ASM_FUNCTION(e_tk_ball_return__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_ball_drop__FP15e_tk_ball_class) {
+asm void e_tk_ball_drop(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/e_tk_ball_drop__FP15e_tk_ball_class.s"
 }
@@ -131,7 +167,7 @@ ASM_FUNCTION(e_tk_ball_drop__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP15e_tk_ball_class) {
+asm void action(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/action__FP15e_tk_ball_class.s"
 }
@@ -142,7 +178,7 @@ ASM_FUNCTION(action__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_BALL_Execute__FP15e_tk_ball_class) {
+asm void daE_TK_BALL_Execute(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Execute__FP15e_tk_ball_class.s"
 }
@@ -150,21 +186,16 @@ ASM_FUNCTION(daE_TK_BALL_Execute__FP15e_tk_ball_class) {
 
 
 /* 807BD0C0-807BD0C8 0008+00 .text      daE_TK_BALL_IsDelete__FP15e_tk_ball_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_BALL_IsDelete__FP15e_tk_ball_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_IsDelete__FP15e_tk_ball_class.s"
+bool daE_TK_BALL_IsDelete(e_tk_ball_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807BD0C8-807BD13C 0074+00 .text      daE_TK_BALL_Delete__FP15e_tk_ball_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_BALL_Delete__FP15e_tk_ball_class) {
+asm void daE_TK_BALL_Delete(e_tk_ball_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Delete__FP15e_tk_ball_class.s"
 }
@@ -175,7 +206,7 @@ ASM_FUNCTION(daE_TK_BALL_Delete__FP15e_tk_ball_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -186,7 +217,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_BALL_Create__FP10fopAc_ac_c) {
+asm void daE_TK_BALL_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_Create__FP10fopAc_ac_c.s"
 }
@@ -197,7 +228,7 @@ ASM_FUNCTION(daE_TK_BALL_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/__dt__8cM3dGSphFv.s"
 }
@@ -208,7 +239,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/__dt__8cM3dGAabFv.s"
 }

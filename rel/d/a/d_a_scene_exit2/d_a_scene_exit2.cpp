@@ -6,28 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daScExit_c;
+
+struct daScExit_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void checkArea();
+	bool draw();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__10daScExit_cFv();
-extern "C" extern void setBaseMtx__10daScExit_cFv();
-extern "C" extern void Create__10daScExit_cFv();
-extern "C" extern void create__10daScExit_cFv();
-extern "C" extern void execute__10daScExit_cFv();
-extern "C" extern void event_proc_call__10daScExit_cFv();
-extern "C" extern void actionWait__10daScExit_cFv();
-extern "C" extern void actionOrderEvent__10daScExit_cFv();
-extern "C" extern void actionEvent__10daScExit_cFv();
-extern "C" extern void actionDead__10daScExit_cFv();
-extern "C" extern void demoProc__10daScExit_cFv();
-extern "C" extern void checkArea__10daScExit_cFv();
-extern "C" extern void draw__10daScExit_cFv();
-extern "C" extern void _delete__10daScExit_cFv();
-extern "C" extern void daScExit_Draw__FP10daScExit_c();
-extern "C" extern void daScExit_Execute__FP10daScExit_c();
-extern "C" extern void daScExit_Delete__FP10daScExit_c();
-extern "C" extern void daScExit_Create__FP10daScExit_c();
-extern "C" extern void func_8059E7D0();
+void daScExit_Draw(daScExit_c*);
+void daScExit_Execute(daScExit_c*);
+void daScExit_Delete(daScExit_c*);
+void daScExit_Create(daScExit_c*);
+extern "C" void func_8059E7D0();
+
+extern "C" void initBaseMtx__10daScExit_cFv();
+extern "C" void setBaseMtx__10daScExit_cFv();
+extern "C" void Create__10daScExit_cFv();
+extern "C" void create__10daScExit_cFv();
+extern "C" void execute__10daScExit_cFv();
+extern "C" void event_proc_call__10daScExit_cFv();
+extern "C" void actionWait__10daScExit_cFv();
+extern "C" void actionOrderEvent__10daScExit_cFv();
+extern "C" void actionEvent__10daScExit_cFv();
+extern "C" void actionDead__10daScExit_cFv();
+extern "C" void demoProc__10daScExit_cFv();
+extern "C" void checkArea__10daScExit_cFv();
+extern "C" bool draw__10daScExit_cFv();
+extern "C" void _delete__10daScExit_cFv();
+extern "C" void daScExit_Draw__FP10daScExit_c();
+extern "C" void daScExit_Execute__FP10daScExit_c();
+extern "C" void daScExit_Delete__FP10daScExit_c();
+extern "C" void daScExit_Create__FP10daScExit_c();
+extern "C" void func_8059E7D0();
 SECTION_RODATA extern const u32 lit_3659;
 SECTION_RODATA extern const u32 lit_3797;
 SECTION_RODATA extern const u32 lit_3798;
@@ -52,7 +81,9 @@ SECTION_DATA extern u8 g_profile_SCENE_EXIT2[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -62,7 +93,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daScExit_cFv) {
+asm void daScExit_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/initBaseMtx__10daScExit_cFv.s"
 }
@@ -73,7 +104,7 @@ ASM_FUNCTION(initBaseMtx__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daScExit_cFv) {
+asm void daScExit_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/setBaseMtx__10daScExit_cFv.s"
 }
@@ -84,7 +115,7 @@ ASM_FUNCTION(setBaseMtx__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daScExit_cFv) {
+asm void daScExit_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/Create__10daScExit_cFv.s"
 }
@@ -95,7 +126,7 @@ ASM_FUNCTION(Create__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daScExit_cFv) {
+asm void daScExit_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/func_8059E230.s"
 }
@@ -106,7 +137,7 @@ ASM_FUNCTION(create__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daScExit_cFv) {
+asm void daScExit_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/execute__10daScExit_cFv.s"
 }
@@ -117,7 +148,7 @@ ASM_FUNCTION(execute__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__10daScExit_cFv) {
+asm void daScExit_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/event_proc_call__10daScExit_cFv.s"
 }
@@ -128,7 +159,7 @@ ASM_FUNCTION(event_proc_call__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daScExit_cFv) {
+asm void daScExit_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/actionWait__10daScExit_cFv.s"
 }
@@ -139,7 +170,7 @@ ASM_FUNCTION(actionWait__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__10daScExit_cFv) {
+asm void daScExit_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/actionOrderEvent__10daScExit_cFv.s"
 }
@@ -150,7 +181,7 @@ ASM_FUNCTION(actionOrderEvent__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__10daScExit_cFv) {
+asm void daScExit_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/actionEvent__10daScExit_cFv.s"
 }
@@ -158,21 +189,16 @@ ASM_FUNCTION(actionEvent__10daScExit_cFv) {
 
 
 /* 8059E504-8059E508 0004+00 .text      actionDead__10daScExit_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__10daScExit_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/actionDead__10daScExit_cFv.s"
+void daScExit_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059E508-8059E6CC 01C4+00 .text      demoProc__10daScExit_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__10daScExit_cFv) {
+asm void daScExit_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/demoProc__10daScExit_cFv.s"
 }
@@ -183,7 +209,7 @@ ASM_FUNCTION(demoProc__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__10daScExit_cFv) {
+asm void daScExit_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/checkArea__10daScExit_cFv.s"
 }
@@ -191,21 +217,16 @@ ASM_FUNCTION(checkArea__10daScExit_cFv) {
 
 
 /* 8059E714-8059E71C 0008+00 .text      draw__10daScExit_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__10daScExit_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/draw__10daScExit_cFv.s"
+bool daScExit_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8059E71C-8059E750 0034+00 .text      _delete__10daScExit_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daScExit_cFv) {
+asm void daScExit_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/_delete__10daScExit_cFv.s"
 }
@@ -216,7 +237,7 @@ ASM_FUNCTION(_delete__10daScExit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScExit_Draw__FP10daScExit_c) {
+asm void daScExit_Draw(daScExit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Draw__FP10daScExit_c.s"
 }
@@ -227,7 +248,7 @@ ASM_FUNCTION(daScExit_Draw__FP10daScExit_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScExit_Execute__FP10daScExit_c) {
+asm void daScExit_Execute(daScExit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Execute__FP10daScExit_c.s"
 }
@@ -238,7 +259,7 @@ ASM_FUNCTION(daScExit_Execute__FP10daScExit_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScExit_Delete__FP10daScExit_c) {
+asm void daScExit_Delete(daScExit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Delete__FP10daScExit_c.s"
 }
@@ -249,7 +270,7 @@ ASM_FUNCTION(daScExit_Delete__FP10daScExit_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScExit_Create__FP10daScExit_c) {
+asm void daScExit_Create(daScExit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/daScExit_Create__FP10daScExit_c.s"
 }
@@ -260,7 +281,7 @@ ASM_FUNCTION(daScExit_Create__FP10daScExit_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059E7D0) {
+extern "C" asm void func_8059E7D0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/func_8059E7D0.s"
 }

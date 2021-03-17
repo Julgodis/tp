@@ -6,26 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct obj_ki_class;
+
+struct daObj_Ki_HIO_c {
+	daObj_Ki_HIO_c();
+	~daObj_Ki_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct obj_ki_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct sq_cp_s {
+	~sq_cp_s();
+	sq_cp_s();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_Ki_HIO_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daObj_Ki_Draw__FP12obj_ki_class();
-extern "C" extern void action__FP12obj_ki_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObj_Ki_Execute__FP12obj_ki_class();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void daObj_Ki_IsDelete__FP12obj_ki_class();
-extern "C" extern void daObj_Ki_Delete__FP12obj_ki_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Ki_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__7sq_cp_sFv();
-extern "C" extern void __ct__7sq_cp_sFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__14daObj_Ki_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_ki_cpp();
+void nodeCallBack(J3DJoint*, s32);
+void daObj_Ki_Draw(obj_ki_class*);
+void action(obj_ki_class*);
+void daObj_Ki_Execute(obj_ki_class*);
+bool daObj_Ki_IsDelete(obj_ki_class*);
+void daObj_Ki_Delete(obj_ki_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Ki_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_ki_cpp();
+
+extern "C" void __ct__14daObj_Ki_HIO_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daObj_Ki_Draw__FP12obj_ki_class();
+extern "C" void action__FP12obj_ki_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObj_Ki_Execute__FP12obj_ki_class();
+extern "C" void __dt__5csXyzFv();
+extern "C" bool daObj_Ki_IsDelete__FP12obj_ki_class();
+extern "C" void daObj_Ki_Delete__FP12obj_ki_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Ki_Create__FP10fopAc_ac_c();
+extern "C" void __dt__7sq_cp_sFv();
+extern "C" void __ct__7sq_cp_sFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__14daObj_Ki_HIO_cFv();
+extern "C" void __sinit_d_a_obj_ki_cpp();
 SECTION_RODATA extern const u32 lit_3790;
 SECTION_RODATA extern const u32 lit_3791;
 SECTION_RODATA extern const u8 lit_3793[8];
@@ -56,8 +103,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -67,7 +117,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_Ki_HIO_cFv) {
+asm daObj_Ki_HIO_c::daObj_Ki_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__14daObj_Ki_HIO_cFv.s"
 }
@@ -78,7 +128,7 @@ ASM_FUNCTION(__ct__14daObj_Ki_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/nodeCallBack__FP8J3DJointi.s"
 }
@@ -89,7 +139,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ki_Draw__FP12obj_ki_class) {
+asm void daObj_Ki_Draw(obj_ki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Draw__FP12obj_ki_class.s"
 }
@@ -100,7 +150,7 @@ ASM_FUNCTION(daObj_Ki_Draw__FP12obj_ki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12obj_ki_class) {
+asm void action(obj_ki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/action__FP12obj_ki_class.s"
 }
@@ -111,7 +161,7 @@ ASM_FUNCTION(action__FP12obj_ki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__dt__4cXyzFv.s"
 }
@@ -122,7 +172,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ki_Execute__FP12obj_ki_class) {
+asm void daObj_Ki_Execute(obj_ki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Execute__FP12obj_ki_class.s"
 }
@@ -133,7 +183,7 @@ ASM_FUNCTION(daObj_Ki_Execute__FP12obj_ki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__dt__5csXyzFv.s"
 }
@@ -141,21 +191,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80C4441C-80C44424 0008+00 .text      daObj_Ki_IsDelete__FP12obj_ki_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ki_IsDelete__FP12obj_ki_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_IsDelete__FP12obj_ki_class.s"
+bool daObj_Ki_IsDelete(obj_ki_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C44424-80C4448C 0068+00 .text      daObj_Ki_Delete__FP12obj_ki_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ki_Delete__FP12obj_ki_class) {
+asm void daObj_Ki_Delete(obj_ki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Delete__FP12obj_ki_class.s"
 }
@@ -166,7 +211,7 @@ ASM_FUNCTION(daObj_Ki_Delete__FP12obj_ki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -177,7 +222,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ki_Create__FP10fopAc_ac_c) {
+asm void daObj_Ki_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_Create__FP10fopAc_ac_c.s"
 }
@@ -188,7 +233,7 @@ ASM_FUNCTION(daObj_Ki_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7sq_cp_sFv) {
+asm sq_cp_s::~sq_cp_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__dt__7sq_cp_sFv.s"
 }
@@ -199,7 +244,7 @@ ASM_FUNCTION(__dt__7sq_cp_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7sq_cp_sFv) {
+asm sq_cp_s::sq_cp_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__7sq_cp_sFv.s"
 }
@@ -207,32 +252,22 @@ ASM_FUNCTION(__ct__7sq_cp_sFv) {
 
 
 /* 80C44AA0-80C44AA4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C44AA4-80C44AA8 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C44AA8-80C44AF0 0048+00 .text      __dt__14daObj_Ki_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_Ki_HIO_cFv) {
+asm daObj_Ki_HIO_c::~daObj_Ki_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__dt__14daObj_Ki_HIO_cFv.s"
 }
@@ -243,7 +278,7 @@ ASM_FUNCTION(__dt__14daObj_Ki_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ki_cpp) {
+extern "C" asm void __sinit_d_a_obj_ki_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__sinit_d_a_obj_ki_cpp.s"
 }

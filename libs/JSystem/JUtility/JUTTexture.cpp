@@ -6,18 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTTexture (JUTTexture) False/False
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
+// build JUTPalette (JUTPalette) False/False
+// build JUTTransparency (JUTTransparency) False/False
+/* top-level dependencies (begin JUTTransparency) */
+/* top-level dependencies (end JUTTransparency) */
+struct JUTTransparency {
+};
+
+// build _GXTlut (_GXTlut) True/True
+// build _GXTlutFmt (_GXTlutFmt) False/False
+/* top-level dependencies (begin _GXTlutFmt) */
+/* top-level dependencies (end _GXTlutFmt) */
+struct _GXTlutFmt {
+};
+
+/* top-level dependencies (begin JUTPalette) */
+// outer dependency: JUTTransparency
+// outer dependency: _GXTlut
+// outer dependency: _GXTlutFmt
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+	// JUTTransparency
+	// _GXTlut
+	// _GXTlutFmt
+	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
+	/* 802DE95C */ void load();
+};
+
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: _GXTlut
+// outer dependency: ResTIMG
+// outer dependency: _GXTexMapID
+// outer dependency: JUTPalette
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// _GXTlut
+	// ResTIMG
+	// _GXTexMapID
+	// JUTPalette
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE608 */ void init();
+	/* 802DE658 */ void initTexObj();
+	/* 802DE744 */ void initTexObj(_GXTlut);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build JUTPalette (JUTPalette) True/True
+// build _GXTlut (_GXTlut) True/True
+// build _GXTexMapID (_GXTexMapID) True/True
+// build _GXTlutFmt (_GXTlutFmt) True/True
+// build JUTTransparency (JUTTransparency) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__10JUTTextureFv();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
-extern "C" extern void attachPalette__10JUTTextureFP10JUTPalette();
-extern "C" extern void init__10JUTTextureFv();
-extern "C" extern void initTexObj__10JUTTextureFv();
-extern "C" extern void initTexObj__10JUTTextureF7_GXTlut();
-extern "C" extern void load__10JUTTextureF11_GXTexMapID();
+
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
+extern "C" void attachPalette__10JUTTextureFP10JUTPalette();
+extern "C" void init__10JUTTextureFv();
+extern "C" void initTexObj__10JUTTextureFv();
+extern "C" void initTexObj__10JUTTextureF7_GXTlut();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
 SECTION_SDATA2 extern f32 lit_453;
 SECTION_SDATA2 extern f32 lit_454;
 SECTION_SDATA2 extern f64 lit_456;
@@ -27,82 +106,92 @@ SECTION_SDATA2 extern f64 JUTTexture__lit_459;
 // External References:
 // 
 
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dla__FPv();
-extern "C" extern void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
-extern "C" extern void load__10JUTPaletteFv();
-extern "C" extern void GXInitTexObj();
-extern "C" extern void GXInitTexObjCI();
-extern "C" extern void GXInitTexObjLOD();
-extern "C" extern void GXLoadTexObj();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+extern "C" void load__10JUTPaletteFv();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 802DE234-802DE2A8 0074+00 .text      __dt__10JUTTextureFv                                         */
+/* 802DE234-802DE2A8 0074+00 rc=30 efc=30 .text      __dt__10JUTTextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JUTTextureFv) {
+asm JUTTexture::~JUTTexture() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/__dt__10JUTTextureFv.s"
 }
 #pragma pop
 
 
-/* 802DE2A8-802DE44C 01A4+00 .text      storeTIMG__10JUTTextureFPC7ResTIMGUc                         */
+/* 802DE2A8-802DE44C 01A4+00 rc=18 efc=18 .text      storeTIMG__10JUTTextureFPC7ResTIMGUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(storeTIMG__10JUTTextureFPC7ResTIMGUc) {
+asm void JUTTexture::storeTIMG(ResTIMG const* field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/storeTIMG__10JUTTextureFPC7ResTIMGUc.s"
 }
 #pragma pop
 
 
-/* 802DE44C-802DE480 0034+00 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette              */
+/* 802DE44C-802DE480 0034+00 rc=6 efc=6 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette) {
+asm void JUTTexture::storeTIMG(ResTIMG const* field_0, JUTPalette* field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette.s"
 }
 #pragma pop
 
 
-/* 802DE480-802DE5B0 0130+00 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut      */
+/* 802DE480-802DE5B0 0130+00 rc=4 efc=3 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut) {
+asm void JUTTexture::storeTIMG(ResTIMG const* field_0, JUTPalette* field_1, _GXTlut field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut.s"
 }
 #pragma pop
 
 
-/* 802DE5B0-802DE608 0058+00 .text      attachPalette__10JUTTextureFP10JUTPalette                    */
+/* 802DE5B0-802DE608 0058+00 rc=8 efc=7 .text      attachPalette__10JUTTextureFP10JUTPalette                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attachPalette__10JUTTextureFP10JUTPalette) {
+asm void JUTTexture::attachPalette(JUTPalette* field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/attachPalette__10JUTTextureFP10JUTPalette.s"
 }
 #pragma pop
 
 
-/* 802DE608-802DE658 0050+00 .text      init__10JUTTextureFv                                         */
+/* 802DE608-802DE658 0050+00 rc=1 efc=0 .text      init__10JUTTextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__10JUTTextureFv) {
+asm void JUTTexture::init() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/init__10JUTTextureFv.s"
 }
@@ -110,49 +199,48 @@ ASM_FUNCTION(init__10JUTTextureFv) {
 
 
 /* ############################################################################################## */
-/* 80455FD8-80455FDC 0004+00 .sdata2    @453                                                         */
+/* 80455FD8-80455FDC 0004+00 rc=2 efc=0 .sdata2    @453                                                         */
 f32 lit_453 = 0.125f;
 
-/* 80455FDC-80455FE0 0004+00 .sdata2    @454                                                         */
+/* 80455FDC-80455FE0 0004+00 rc=2 efc=0 .sdata2    @454                                                         */
 f32 lit_454 = 100.0f;
 
-/* 80455FE0-80455FE8 0008+00 .sdata2    @456                                                         */
+/* 80455FE0-80455FE8 0008+00 rc=2 efc=0 .sdata2    @456                                                         */
 f64 lit_456 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80455FE8-80455FF0 0008+00 .sdata2    @459                                                         */
+/* 80455FE8-80455FF0 0008+00 rc=2 efc=0 .sdata2    @459                                                         */
 f64 JUTTexture__lit_459 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802DE658-802DE744 00EC+00 .text      initTexObj__10JUTTextureFv                                   */
+/* 802DE658-802DE744 00EC+00 rc=2 efc=0 .text      initTexObj__10JUTTextureFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initTexObj__10JUTTextureFv) {
+asm void JUTTexture::initTexObj() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/initTexObj__10JUTTextureFv.s"
 }
 #pragma pop
 
 
-/* 802DE744-802DE840 00FC+00 .text      initTexObj__10JUTTextureF7_GXTlut                            */
+/* 802DE744-802DE840 00FC+00 rc=2 efc=0 .text      initTexObj__10JUTTextureF7_GXTlut                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initTexObj__10JUTTextureF7_GXTlut) {
+asm void JUTTexture::initTexObj(_GXTlut field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/initTexObj__10JUTTextureF7_GXTlut.s"
 }
 #pragma pop
 
 
-/* 802DE840-802DE890 0050+00 .text      load__10JUTTextureF11_GXTexMapID                             */
+/* 802DE840-802DE890 0050+00 rc=14 efc=14 .text      load__10JUTTextureF11_GXTexMapID                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load__10JUTTextureF11_GXTexMapID) {
+asm void JUTTexture::load(_GXTexMapID field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/load__10JUTTextureF11_GXTexMapID.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

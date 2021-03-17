@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagRestart_c;
+
+struct daTagRestart_c {
+	void Create();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__14daTagRestart_cFv();
-extern "C" extern void create__14daTagRestart_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void execute__14daTagRestart_cFv();
-extern "C" extern void _delete__14daTagRestart_cFv();
-extern "C" extern void daTagRestart_Execute__FP14daTagRestart_c();
-extern "C" extern void daTagRestart_Delete__FP14daTagRestart_c();
-extern "C" extern void daTagRestart_Create__FP10fopAc_ac_c();
+void daTagRestart_Execute(daTagRestart_c*);
+void daTagRestart_Delete(daTagRestart_c*);
+void daTagRestart_Create(fopAc_ac_c*);
+
+extern "C" void Create__14daTagRestart_cFv();
+extern "C" void create__14daTagRestart_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__14daTagRestart_cFv();
+extern "C" bool _delete__14daTagRestart_cFv();
+extern "C" void daTagRestart_Execute__FP14daTagRestart_c();
+extern "C" void daTagRestart_Delete__FP14daTagRestart_c();
+extern "C" void daTagRestart_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u32 lit_3651;
 SECTION_RODATA extern const u8 lit_3652[4];
@@ -28,7 +54,9 @@ SECTION_DATA extern u8 g_profile_Tag_Restart[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -38,7 +66,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daTagRestart_cFv) {
+asm void daTagRestart_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/Create__14daTagRestart_cFv.s"
 }
@@ -49,7 +77,7 @@ ASM_FUNCTION(Create__14daTagRestart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagRestart_cFv) {
+asm void daTagRestart_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/func_80D6048C.s"
 }
@@ -60,7 +88,7 @@ ASM_FUNCTION(create__14daTagRestart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/__dt__4cXyzFv.s"
 }
@@ -68,21 +96,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80D6055C-80D60560 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D60560-80D60744 01E4+00 .text      execute__14daTagRestart_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagRestart_cFv) {
+asm void daTagRestart_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/execute__14daTagRestart_cFv.s"
 }
@@ -90,21 +113,16 @@ ASM_FUNCTION(execute__14daTagRestart_cFv) {
 
 
 /* 80D60744-80D6074C 0008+00 .text      _delete__14daTagRestart_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daTagRestart_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/_delete__14daTagRestart_cFv.s"
+bool daTagRestart_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6074C-80D6076C 0020+00 .text      daTagRestart_Execute__FP14daTagRestart_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRestart_Execute__FP14daTagRestart_c) {
+asm void daTagRestart_Execute(daTagRestart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/daTagRestart_Execute__FP14daTagRestart_c.s"
 }
@@ -115,7 +133,7 @@ ASM_FUNCTION(daTagRestart_Execute__FP14daTagRestart_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRestart_Delete__FP14daTagRestart_c) {
+asm void daTagRestart_Delete(daTagRestart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/daTagRestart_Delete__FP14daTagRestart_c.s"
 }
@@ -126,7 +144,7 @@ ASM_FUNCTION(daTagRestart_Delete__FP14daTagRestart_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRestart_Create__FP10fopAc_ac_c) {
+asm void daTagRestart_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/daTagRestart_Create__FP10fopAc_ac_c.s"
 }

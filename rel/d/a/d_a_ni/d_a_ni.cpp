@@ -6,54 +6,144 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct ni_class;
+
+struct daNi_HIO_c {
+	daNi_HIO_c();
+	~daNi_HIO_c();
+};
+
+struct ni_class {
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daNi_HIO_cFv();
-extern "C" extern void anm_init__FP8ni_classifUcf();
-extern "C" extern void hane_set__FP8ni_classff();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNi_Draw__FP8ni_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void s_play_sub__FPvPv();
-extern "C" extern void damage_check__FP8ni_class();
-extern "C" extern void s_t_sub__FPvPv();
-extern "C" extern void search_test__FP8ni_class();
-extern "C" extern void ni_carry_check__FP8ni_class();
-extern "C" extern void move_gake_check__FP8ni_classf();
-extern "C" extern void ni_normal__FP8ni_class();
-extern "C" extern void ni_away__FP8ni_class();
-extern "C" extern void ni_swim__FP8ni_class();
-extern "C" extern void ni_carry__FP8ni_class();
-extern "C" extern void ni_fly__FP8ni_class();
-extern "C" extern void ni_drop__FP8ni_class();
-extern "C" extern void ni_return__FP8ni_class();
-extern "C" extern void ni_damage__FP8ni_class();
-extern "C" extern void s_b_sub__FPvPv();
-extern "C" extern void ni_windspin__FP8ni_class();
-extern "C" extern void ni_demo0__FP8ni_class();
-extern "C" extern void ni_message__FP8ni_class();
-extern "C" extern void playwallcheck__FP8ni_class();
-extern "C" extern void ni_play__FP8ni_class();
-extern "C" extern void play_camera__FP8ni_class();
-extern "C" extern void action__FP8ni_class();
-extern "C" extern void message__FP8ni_class();
-extern "C" extern void daNi_Execute__FP8ni_class();
-extern "C" extern void daNi_IsDelete__FP8ni_class();
-extern "C" extern void daNi_Delete__FP8ni_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNi_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__10daNi_HIO_cFv();
-extern "C" extern void __sinit_d_a_ni_cpp();
-extern "C" extern void func_8095119C();
-extern "C" extern void func_809511A4();
+void anm_init(ni_class*, s32, f32, u8, f32);
+void hane_set(ni_class*, f32, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNi_Draw(ni_class*);
+void s_play_sub(void*, void*);
+void damage_check(ni_class*);
+void s_t_sub(void*, void*);
+void search_test(ni_class*);
+void ni_carry_check(ni_class*);
+void move_gake_check(ni_class*, f32);
+void ni_normal(ni_class*);
+void ni_away(ni_class*);
+void ni_swim(ni_class*);
+void ni_carry(ni_class*);
+void ni_fly(ni_class*);
+void ni_drop(ni_class*);
+void ni_return(ni_class*);
+void ni_damage(ni_class*);
+void s_b_sub(void*, void*);
+void ni_windspin(ni_class*);
+void ni_demo0(ni_class*);
+void ni_message(ni_class*);
+void playwallcheck(ni_class*);
+void ni_play(ni_class*);
+void play_camera(ni_class*);
+void action(ni_class*);
+void message(ni_class*);
+void daNi_Execute(ni_class*);
+bool daNi_IsDelete(ni_class*);
+void daNi_Delete(ni_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNi_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_ni_cpp();
+extern "C" void func_8095119C();
+extern "C" void func_809511A4();
+
+extern "C" void __ct__10daNi_HIO_cFv();
+extern "C" void anm_init__FP8ni_classifUcf();
+extern "C" void hane_set__FP8ni_classff();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNi_Draw__FP8ni_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void s_play_sub__FPvPv();
+extern "C" void damage_check__FP8ni_class();
+extern "C" void s_t_sub__FPvPv();
+extern "C" void search_test__FP8ni_class();
+extern "C" void ni_carry_check__FP8ni_class();
+extern "C" void move_gake_check__FP8ni_classf();
+extern "C" void ni_normal__FP8ni_class();
+extern "C" void ni_away__FP8ni_class();
+extern "C" void ni_swim__FP8ni_class();
+extern "C" void ni_carry__FP8ni_class();
+extern "C" void ni_fly__FP8ni_class();
+extern "C" void ni_drop__FP8ni_class();
+extern "C" void ni_return__FP8ni_class();
+extern "C" void ni_damage__FP8ni_class();
+extern "C" void s_b_sub__FPvPv();
+extern "C" void ni_windspin__FP8ni_class();
+extern "C" void ni_demo0__FP8ni_class();
+extern "C" void ni_message__FP8ni_class();
+extern "C" void playwallcheck__FP8ni_class();
+extern "C" void ni_play__FP8ni_class();
+extern "C" void play_camera__FP8ni_class();
+extern "C" void action__FP8ni_class();
+extern "C" void message__FP8ni_class();
+extern "C" void daNi_Execute__FP8ni_class();
+extern "C" bool daNi_IsDelete__FP8ni_class();
+extern "C" void daNi_Delete__FP8ni_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNi_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__10daNi_HIO_cFv();
+extern "C" void __sinit_d_a_ni_cpp();
+extern "C" void func_8095119C();
+extern "C" void func_809511A4();
 SECTION_RODATA extern const u32 lit_3958;
 SECTION_RODATA extern const u32 lit_3959;
 SECTION_RODATA extern const u32 lit_3960;
@@ -210,8 +300,11 @@ SECTION_BSS extern u8 data_80951680[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -221,7 +314,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daNi_HIO_cFv) {
+asm daNi_HIO_c::daNi_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__ct__10daNi_HIO_cFv.s"
 }
@@ -232,7 +325,7 @@ ASM_FUNCTION(__ct__10daNi_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP8ni_classifUcf) {
+asm void anm_init(ni_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/anm_init__FP8ni_classifUcf.s"
 }
@@ -243,7 +336,7 @@ ASM_FUNCTION(anm_init__FP8ni_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hane_set__FP8ni_classff) {
+asm void hane_set(ni_class* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/hane_set__FP8ni_classff.s"
 }
@@ -254,7 +347,7 @@ ASM_FUNCTION(hane_set__FP8ni_classff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/nodeCallBack__FP8J3DJointi.s"
 }
@@ -265,7 +358,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNi_Draw__FP8ni_class) {
+asm void daNi_Draw(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_Draw__FP8ni_class.s"
 }
@@ -276,7 +369,7 @@ ASM_FUNCTION(daNi_Draw__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__4cXyzFv.s"
 }
@@ -287,7 +380,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_play_sub__FPvPv) {
+asm void s_play_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/s_play_sub__FPvPv.s"
 }
@@ -298,7 +391,7 @@ ASM_FUNCTION(s_play_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP8ni_class) {
+asm void damage_check(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/damage_check__FP8ni_class.s"
 }
@@ -309,7 +402,7 @@ ASM_FUNCTION(damage_check__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_t_sub__FPvPv) {
+asm void s_t_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/s_t_sub__FPvPv.s"
 }
@@ -320,7 +413,7 @@ ASM_FUNCTION(s_t_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_test__FP8ni_class) {
+asm void search_test(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/search_test__FP8ni_class.s"
 }
@@ -331,7 +424,7 @@ ASM_FUNCTION(search_test__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_carry_check__FP8ni_class) {
+asm void ni_carry_check(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_carry_check__FP8ni_class.s"
 }
@@ -342,7 +435,7 @@ ASM_FUNCTION(ni_carry_check__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move_gake_check__FP8ni_classf) {
+asm void move_gake_check(ni_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/move_gake_check__FP8ni_classf.s"
 }
@@ -353,7 +446,7 @@ ASM_FUNCTION(move_gake_check__FP8ni_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_normal__FP8ni_class) {
+asm void ni_normal(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_normal__FP8ni_class.s"
 }
@@ -364,7 +457,7 @@ ASM_FUNCTION(ni_normal__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_away__FP8ni_class) {
+asm void ni_away(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_away__FP8ni_class.s"
 }
@@ -375,7 +468,7 @@ ASM_FUNCTION(ni_away__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_swim__FP8ni_class) {
+asm void ni_swim(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_swim__FP8ni_class.s"
 }
@@ -386,7 +479,7 @@ ASM_FUNCTION(ni_swim__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_carry__FP8ni_class) {
+asm void ni_carry(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_carry__FP8ni_class.s"
 }
@@ -397,7 +490,7 @@ ASM_FUNCTION(ni_carry__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_fly__FP8ni_class) {
+asm void ni_fly(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_fly__FP8ni_class.s"
 }
@@ -408,7 +501,7 @@ ASM_FUNCTION(ni_fly__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_drop__FP8ni_class) {
+asm void ni_drop(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_drop__FP8ni_class.s"
 }
@@ -419,7 +512,7 @@ ASM_FUNCTION(ni_drop__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_return__FP8ni_class) {
+asm void ni_return(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_return__FP8ni_class.s"
 }
@@ -430,7 +523,7 @@ ASM_FUNCTION(ni_return__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_damage__FP8ni_class) {
+asm void ni_damage(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_damage__FP8ni_class.s"
 }
@@ -441,7 +534,7 @@ ASM_FUNCTION(ni_damage__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_b_sub__FPvPv) {
+asm void s_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/s_b_sub__FPvPv.s"
 }
@@ -452,7 +545,7 @@ ASM_FUNCTION(s_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_windspin__FP8ni_class) {
+asm void ni_windspin(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_windspin__FP8ni_class.s"
 }
@@ -463,7 +556,7 @@ ASM_FUNCTION(ni_windspin__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_demo0__FP8ni_class) {
+asm void ni_demo0(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_demo0__FP8ni_class.s"
 }
@@ -474,7 +567,7 @@ ASM_FUNCTION(ni_demo0__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_message__FP8ni_class) {
+asm void ni_message(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_message__FP8ni_class.s"
 }
@@ -485,7 +578,7 @@ ASM_FUNCTION(ni_message__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playwallcheck__FP8ni_class) {
+asm void playwallcheck(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/playwallcheck__FP8ni_class.s"
 }
@@ -496,7 +589,7 @@ ASM_FUNCTION(playwallcheck__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ni_play__FP8ni_class) {
+asm void ni_play(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/ni_play__FP8ni_class.s"
 }
@@ -507,7 +600,7 @@ ASM_FUNCTION(ni_play__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(play_camera__FP8ni_class) {
+asm void play_camera(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/play_camera__FP8ni_class.s"
 }
@@ -518,7 +611,7 @@ ASM_FUNCTION(play_camera__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP8ni_class) {
+asm void action(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/action__FP8ni_class.s"
 }
@@ -529,7 +622,7 @@ ASM_FUNCTION(action__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP8ni_class) {
+asm void message(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/message__FP8ni_class.s"
 }
@@ -540,7 +633,7 @@ ASM_FUNCTION(message__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNi_Execute__FP8ni_class) {
+asm void daNi_Execute(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_Execute__FP8ni_class.s"
 }
@@ -548,21 +641,16 @@ ASM_FUNCTION(daNi_Execute__FP8ni_class) {
 
 
 /* 80950870-80950878 0008+00 .text      daNi_IsDelete__FP8ni_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNi_IsDelete__FP8ni_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_IsDelete__FP8ni_class.s"
+bool daNi_IsDelete(ni_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80950878-809508E0 0068+00 .text      daNi_Delete__FP8ni_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNi_Delete__FP8ni_class) {
+asm void daNi_Delete(ni_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_Delete__FP8ni_class.s"
 }
@@ -573,7 +661,7 @@ ASM_FUNCTION(daNi_Delete__FP8ni_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -584,7 +672,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__12J3DFrameCtrlFv.s"
 }
@@ -595,7 +683,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNi_Create__FP10fopAc_ac_c) {
+asm void daNi_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_Create__FP10fopAc_ac_c.s"
 }
@@ -606,7 +694,7 @@ ASM_FUNCTION(daNi_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__8cM3dGSphFv.s"
 }
@@ -617,7 +705,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__8cM3dGAabFv.s"
 }
@@ -628,7 +716,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__10dCcD_GSttsFv.s"
 }
@@ -639,7 +727,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -650,7 +738,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__12dBgS_AcchCirFv.s"
 }
@@ -661,7 +749,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__10cCcD_GSttsFv.s"
 }
@@ -672,7 +760,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daNi_HIO_cFv) {
+asm daNi_HIO_c::~daNi_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__dt__10daNi_HIO_cFv.s"
 }
@@ -683,7 +771,7 @@ ASM_FUNCTION(__dt__10daNi_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_ni_cpp) {
+extern "C" asm void __sinit_d_a_ni_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/__sinit_d_a_ni_cpp.s"
 }
@@ -694,7 +782,7 @@ ASM_FUNCTION(__sinit_d_a_ni_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8095119C) {
+extern "C" asm void func_8095119C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/func_8095119C.s"
 }
@@ -705,7 +793,7 @@ ASM_FUNCTION(func_8095119C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809511A4) {
+extern "C" asm void func_809511A4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ni/d_a_ni/func_809511A4.s"
 }

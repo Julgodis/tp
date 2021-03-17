@@ -6,28 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjWchain_c;
+struct cXyz;
+
+struct daObjWchain_c {
+	void createHeap();
+	void create();
+	~daObjWchain_c();
+	void setMatrix();
+	void getChainAngleZ(cXyz*, s32);
+	void setChainPos();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	cXyz();
+	~cXyz();
+};
+
+struct daObjWchain_shape_c {
+	void draw();
+	~daObjWchain_shape_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__13daObjWchain_cFv();
-extern "C" extern void daObjWchain_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__13daObjWchain_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObjWchain_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daObjWchain_cFv();
-extern "C" extern void daObjWchain_Delete__FP13daObjWchain_c();
-extern "C" extern void setMatrix__13daObjWchain_cFv();
-extern "C" extern void getChainAngleZ__13daObjWchain_cFP4cXyzi();
-extern "C" extern void setChainPos__13daObjWchain_cFv();
-extern "C" extern void execute__13daObjWchain_cFv();
-extern "C" extern void daObjWchain_Execute__FP13daObjWchain_c();
-extern "C" extern void draw__19daObjWchain_shape_cFv();
-extern "C" extern void draw__13daObjWchain_cFv();
-extern "C" extern void daObjWchain_Draw__FP13daObjWchain_c();
-extern "C" extern void __dt__19daObjWchain_shape_cFv();
+void daObjWchain_createHeap(fopAc_ac_c*);
+void daObjWchain_Create(fopAc_ac_c*);
+void daObjWchain_Delete(daObjWchain_c*);
+void daObjWchain_Execute(daObjWchain_c*);
+void daObjWchain_Draw(daObjWchain_c*);
+
+extern "C" void createHeap__13daObjWchain_cFv();
+extern "C" void daObjWchain_createHeap__FP10fopAc_ac_c();
+extern "C" void create__13daObjWchain_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObjWchain_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daObjWchain_cFv();
+extern "C" void daObjWchain_Delete__FP13daObjWchain_c();
+extern "C" void setMatrix__13daObjWchain_cFv();
+extern "C" void getChainAngleZ__13daObjWchain_cFP4cXyzi();
+extern "C" void setChainPos__13daObjWchain_cFv();
+extern "C" void execute__13daObjWchain_cFv();
+extern "C" void daObjWchain_Execute__FP13daObjWchain_c();
+extern "C" void draw__19daObjWchain_shape_cFv();
+extern "C" void draw__13daObjWchain_cFv();
+extern "C" void daObjWchain_Draw__FP13daObjWchain_c();
+extern "C" void __dt__19daObjWchain_shape_cFv();
 SECTION_RODATA extern const u8 l_arcName[7 + 1 /* padding */];
 SECTION_RODATA extern const u32 lit_3744;
 SECTION_RODATA extern const u32 lit_3745;
@@ -73,7 +116,9 @@ SECTION_DATA extern void*const __vt__19daObjWchain_shape_c[5];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -83,7 +128,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__13daObjWchain_cFv) {
+asm void daObjWchain_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/createHeap__13daObjWchain_cFv.s"
 }
@@ -94,7 +139,7 @@ ASM_FUNCTION(createHeap__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWchain_createHeap__FP10fopAc_ac_c) {
+asm void daObjWchain_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_createHeap__FP10fopAc_ac_c.s"
 }
@@ -105,7 +150,7 @@ ASM_FUNCTION(daObjWchain_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjWchain_cFv) {
+asm void daObjWchain_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/create__13daObjWchain_cFv.s"
 }
@@ -116,7 +161,7 @@ ASM_FUNCTION(create__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__5csXyzFv.s"
 }
@@ -124,32 +169,22 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80D303D0-80D303D4 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D303D4-80D303D8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D303D8-80D30414 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__4cXyzFv.s"
 }
@@ -160,7 +195,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWchain_Create__FP10fopAc_ac_c) {
+asm void daObjWchain_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Create__FP10fopAc_ac_c.s"
 }
@@ -171,7 +206,7 @@ ASM_FUNCTION(daObjWchain_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObjWchain_cFv) {
+asm daObjWchain_c::~daObjWchain_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__13daObjWchain_cFv.s"
 }
@@ -182,7 +217,7 @@ ASM_FUNCTION(__dt__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWchain_Delete__FP13daObjWchain_c) {
+asm void daObjWchain_Delete(daObjWchain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Delete__FP13daObjWchain_c.s"
 }
@@ -193,7 +228,7 @@ ASM_FUNCTION(daObjWchain_Delete__FP13daObjWchain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__13daObjWchain_cFv) {
+asm void daObjWchain_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setMatrix__13daObjWchain_cFv.s"
 }
@@ -204,7 +239,7 @@ ASM_FUNCTION(setMatrix__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChainAngleZ__13daObjWchain_cFP4cXyzi) {
+asm void daObjWchain_c::getChainAngleZ(cXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/getChainAngleZ__13daObjWchain_cFP4cXyzi.s"
 }
@@ -215,7 +250,7 @@ ASM_FUNCTION(getChainAngleZ__13daObjWchain_cFP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setChainPos__13daObjWchain_cFv) {
+asm void daObjWchain_c::setChainPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/setChainPos__13daObjWchain_cFv.s"
 }
@@ -226,7 +261,7 @@ ASM_FUNCTION(setChainPos__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daObjWchain_cFv) {
+asm void daObjWchain_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/execute__13daObjWchain_cFv.s"
 }
@@ -237,7 +272,7 @@ ASM_FUNCTION(execute__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWchain_Execute__FP13daObjWchain_c) {
+asm void daObjWchain_Execute(daObjWchain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Execute__FP13daObjWchain_c.s"
 }
@@ -248,7 +283,7 @@ ASM_FUNCTION(daObjWchain_Execute__FP13daObjWchain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__19daObjWchain_shape_cFv) {
+asm void daObjWchain_shape_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__19daObjWchain_shape_cFv.s"
 }
@@ -259,7 +294,7 @@ ASM_FUNCTION(draw__19daObjWchain_shape_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daObjWchain_cFv) {
+asm void daObjWchain_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/draw__13daObjWchain_cFv.s"
 }
@@ -270,7 +305,7 @@ ASM_FUNCTION(draw__13daObjWchain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWchain_Draw__FP13daObjWchain_c) {
+asm void daObjWchain_Draw(daObjWchain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/daObjWchain_Draw__FP13daObjWchain_c.s"
 }
@@ -281,7 +316,7 @@ ASM_FUNCTION(daObjWchain_Draw__FP13daObjWchain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObjWchain_shape_cFv) {
+asm daObjWchain_shape_c::~daObjWchain_shape_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__dt__19daObjWchain_shape_cFv.s"
 }

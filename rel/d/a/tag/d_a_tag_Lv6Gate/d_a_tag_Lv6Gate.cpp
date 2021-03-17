@@ -6,21 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagLv6Gate_c;
+
+struct fopAc_ac_c {
+};
+
+struct daTagLv6Gate_c {
+	void createHeap();
+	void create();
+	void execute();
+	void draw();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgW {
+	~dBgW();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__14daTagLv6Gate_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daTagLv6Gate_Create__FP10fopAc_ac_c();
-extern "C" extern void create__14daTagLv6Gate_cFv();
-extern "C" extern void __dt__4dBgWFv();
-extern "C" extern void daTagLv6Gate_Execute__FP14daTagLv6Gate_c();
-extern "C" extern void execute__14daTagLv6Gate_cFv();
-extern "C" extern void daTagLv6Gate_Draw__FP14daTagLv6Gate_c();
-extern "C" extern void draw__14daTagLv6Gate_cFv();
-extern "C" extern void daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c();
-extern "C" extern void daTagLv6Gate_Delete__FP14daTagLv6Gate_c();
+void createSolidHeap(fopAc_ac_c*);
+void daTagLv6Gate_Create(fopAc_ac_c*);
+void daTagLv6Gate_Execute(daTagLv6Gate_c*);
+void daTagLv6Gate_Draw(daTagLv6Gate_c*);
+bool daTagLv6Gate_IsDelete(daTagLv6Gate_c*);
+void daTagLv6Gate_Delete(daTagLv6Gate_c*);
+
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__14daTagLv6Gate_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daTagLv6Gate_Create__FP10fopAc_ac_c();
+extern "C" void create__14daTagLv6Gate_cFv();
+extern "C" void __dt__4dBgWFv();
+extern "C" void daTagLv6Gate_Execute__FP14daTagLv6Gate_c();
+extern "C" void execute__14daTagLv6Gate_cFv();
+extern "C" void daTagLv6Gate_Draw__FP14daTagLv6Gate_c();
+extern "C" void draw__14daTagLv6Gate_cFv();
+extern "C" bool daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c();
+extern "C" void daTagLv6Gate_Delete__FP14daTagLv6Gate_c();
 SECTION_RODATA extern const u8 l_minRelative[12];
 SECTION_RODATA extern const u8 l_maxRelative[12];
 SECTION_RODATA extern const u32 lit_3757;
@@ -55,7 +87,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +99,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -76,7 +110,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daTagLv6Gate_cFv) {
+asm void daTagLv6Gate_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/createHeap__14daTagLv6Gate_cFv.s"
 }
@@ -87,7 +121,7 @@ ASM_FUNCTION(createHeap__14daTagLv6Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__12J3DFrameCtrlFv.s"
 }
@@ -98,7 +132,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv6Gate_Create__FP10fopAc_ac_c) {
+asm void daTagLv6Gate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Create__FP10fopAc_ac_c.s"
 }
@@ -109,7 +143,7 @@ ASM_FUNCTION(daTagLv6Gate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagLv6Gate_cFv) {
+asm void daTagLv6Gate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/create__14daTagLv6Gate_cFv.s"
 }
@@ -120,7 +154,7 @@ ASM_FUNCTION(create__14daTagLv6Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dBgWFv) {
+asm dBgW::~dBgW() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/__dt__4dBgWFv.s"
 }
@@ -131,7 +165,7 @@ ASM_FUNCTION(__dt__4dBgWFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv6Gate_Execute__FP14daTagLv6Gate_c) {
+asm void daTagLv6Gate_Execute(daTagLv6Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Execute__FP14daTagLv6Gate_c.s"
 }
@@ -142,7 +176,7 @@ ASM_FUNCTION(daTagLv6Gate_Execute__FP14daTagLv6Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagLv6Gate_cFv) {
+asm void daTagLv6Gate_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/execute__14daTagLv6Gate_cFv.s"
 }
@@ -153,7 +187,7 @@ ASM_FUNCTION(execute__14daTagLv6Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv6Gate_Draw__FP14daTagLv6Gate_c) {
+asm void daTagLv6Gate_Draw(daTagLv6Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Draw__FP14daTagLv6Gate_c.s"
 }
@@ -164,7 +198,7 @@ ASM_FUNCTION(daTagLv6Gate_Draw__FP14daTagLv6Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daTagLv6Gate_cFv) {
+asm void daTagLv6Gate_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/draw__14daTagLv6Gate_cFv.s"
 }
@@ -172,21 +206,16 @@ ASM_FUNCTION(draw__14daTagLv6Gate_cFv) {
 
 
 /* 80D50848-80D50850 0008+00 .text      daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c.s"
+bool daTagLv6Gate_IsDelete(daTagLv6Gate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D50850-80D50900 00B0+00 .text      daTagLv6Gate_Delete__FP14daTagLv6Gate_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv6Gate_Delete__FP14daTagLv6Gate_c) {
+asm void daTagLv6Gate_Delete(daTagLv6Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_Delete__FP14daTagLv6Gate_c.s"
 }

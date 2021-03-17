@@ -6,32 +6,84 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagCsw_c;
+
+struct daTagCsw_c {
+	~daTagCsw_c();
+	void setMtx();
+	void createHeap();
+	void chkInsideStatueStart();
+	void create();
+	void Delete();
+	void onLight();
+	void offLight();
+	void execute();
+	void draw();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__10daTagCsw_cFv();
-extern "C" extern void setMtx__10daTagCsw_cFv();
-extern "C" extern void createHeap__10daTagCsw_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daTagCsw_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void chkInsideStatueStart__10daTagCsw_cFv();
-extern "C" extern void create__10daTagCsw_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void searchTagCswOut__FPvPv();
-extern "C" extern void searchCStatue__FPvPv();
-extern "C" extern void Delete__10daTagCsw_cFv();
-extern "C" extern void onLight__10daTagCsw_cFv();
-extern "C" extern void offLight__10daTagCsw_cFv();
-extern "C" extern void execute__10daTagCsw_cFv();
-extern "C" extern void draw__10daTagCsw_cFv();
-extern "C" extern void daTagCsw_Draw__FP10daTagCsw_c();
-extern "C" extern void daTagCsw_Execute__FP10daTagCsw_c();
-extern "C" extern void daTagCsw_IsDelete__FP10daTagCsw_c();
-extern "C" extern void daTagCsw_Delete__FP10daTagCsw_c();
-extern "C" extern void daTagCsw_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daTagCsw_c_createHeap(fopAc_ac_c*);
+void searchTagCswOut(void*, void*);
+void searchCStatue(void*, void*);
+void daTagCsw_Draw(daTagCsw_c*);
+void daTagCsw_Execute(daTagCsw_c*);
+bool daTagCsw_IsDelete(daTagCsw_c*);
+void daTagCsw_Delete(daTagCsw_c*);
+void daTagCsw_Create(fopAc_ac_c*);
+
+extern "C" void __dt__10daTagCsw_cFv();
+extern "C" void setMtx__10daTagCsw_cFv();
+extern "C" void createHeap__10daTagCsw_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daTagCsw_c_createHeap__FP10fopAc_ac_c();
+extern "C" void chkInsideStatueStart__10daTagCsw_cFv();
+extern "C" void create__10daTagCsw_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void searchTagCswOut__FPvPv();
+extern "C" void searchCStatue__FPvPv();
+extern "C" void Delete__10daTagCsw_cFv();
+extern "C" void onLight__10daTagCsw_cFv();
+extern "C" void offLight__10daTagCsw_cFv();
+extern "C" void execute__10daTagCsw_cFv();
+extern "C" void draw__10daTagCsw_cFv();
+extern "C" void daTagCsw_Draw__FP10daTagCsw_c();
+extern "C" void daTagCsw_Execute__FP10daTagCsw_c();
+extern "C" bool daTagCsw_IsDelete__FP10daTagCsw_c();
+extern "C" void daTagCsw_Delete__FP10daTagCsw_c();
+extern "C" void daTagCsw_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_bmd_idx[8];
 SECTION_RODATA extern const u8 l_brk_idx[8];
 SECTION_RODATA extern const u8 l_dbz_idx[8];
@@ -70,7 +122,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -80,7 +134,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daTagCsw_cFv) {
+asm daTagCsw_c::~daTagCsw_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__10daTagCsw_cFv.s"
 }
@@ -91,7 +145,7 @@ ASM_FUNCTION(__dt__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__10daTagCsw_cFv) {
+asm void daTagCsw_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/setMtx__10daTagCsw_cFv.s"
 }
@@ -102,7 +156,7 @@ ASM_FUNCTION(setMtx__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__10daTagCsw_cFv) {
+asm void daTagCsw_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/createHeap__10daTagCsw_cFv.s"
 }
@@ -113,7 +167,7 @@ ASM_FUNCTION(createHeap__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__12J3DFrameCtrlFv.s"
 }
@@ -124,7 +178,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_c_createHeap__FP10fopAc_ac_c) {
+asm void daTagCsw_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -135,7 +189,7 @@ ASM_FUNCTION(daTagCsw_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkInsideStatueStart__10daTagCsw_cFv) {
+asm void daTagCsw_c::chkInsideStatueStart() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/chkInsideStatueStart__10daTagCsw_cFv.s"
 }
@@ -146,7 +200,7 @@ ASM_FUNCTION(chkInsideStatueStart__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daTagCsw_cFv) {
+asm void daTagCsw_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/create__10daTagCsw_cFv.s"
 }
@@ -157,7 +211,7 @@ ASM_FUNCTION(create__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__8cM3dGCylFv.s"
 }
@@ -168,7 +222,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__8cM3dGAabFv.s"
 }
@@ -179,7 +233,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__10dCcD_GSttsFv.s"
 }
@@ -190,7 +244,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchTagCswOut__FPvPv) {
+asm void searchTagCswOut(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/searchTagCswOut__FPvPv.s"
 }
@@ -201,7 +255,7 @@ ASM_FUNCTION(searchTagCswOut__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchCStatue__FPvPv) {
+asm void searchCStatue(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/searchCStatue__FPvPv.s"
 }
@@ -212,7 +266,7 @@ ASM_FUNCTION(searchCStatue__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daTagCsw_cFv) {
+asm void daTagCsw_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/Delete__10daTagCsw_cFv.s"
 }
@@ -223,7 +277,7 @@ ASM_FUNCTION(Delete__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onLight__10daTagCsw_cFv) {
+asm void daTagCsw_c::onLight() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/onLight__10daTagCsw_cFv.s"
 }
@@ -234,7 +288,7 @@ ASM_FUNCTION(onLight__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offLight__10daTagCsw_cFv) {
+asm void daTagCsw_c::offLight() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/offLight__10daTagCsw_cFv.s"
 }
@@ -245,7 +299,7 @@ ASM_FUNCTION(offLight__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daTagCsw_cFv) {
+asm void daTagCsw_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/execute__10daTagCsw_cFv.s"
 }
@@ -256,7 +310,7 @@ ASM_FUNCTION(execute__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daTagCsw_cFv) {
+asm void daTagCsw_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/draw__10daTagCsw_cFv.s"
 }
@@ -267,7 +321,7 @@ ASM_FUNCTION(draw__10daTagCsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_Draw__FP10daTagCsw_c) {
+asm void daTagCsw_Draw(daTagCsw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_Draw__FP10daTagCsw_c.s"
 }
@@ -278,7 +332,7 @@ ASM_FUNCTION(daTagCsw_Draw__FP10daTagCsw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_Execute__FP10daTagCsw_c) {
+asm void daTagCsw_Execute(daTagCsw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_Execute__FP10daTagCsw_c.s"
 }
@@ -286,21 +340,16 @@ ASM_FUNCTION(daTagCsw_Execute__FP10daTagCsw_c) {
 
 
 /* 80D58504-80D5850C 0008+00 .text      daTagCsw_IsDelete__FP10daTagCsw_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_IsDelete__FP10daTagCsw_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_IsDelete__FP10daTagCsw_c.s"
+bool daTagCsw_IsDelete(daTagCsw_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5850C-80D58548 003C+00 .text      daTagCsw_Delete__FP10daTagCsw_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_Delete__FP10daTagCsw_c) {
+asm void daTagCsw_Delete(daTagCsw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_Delete__FP10daTagCsw_c.s"
 }
@@ -311,7 +360,7 @@ ASM_FUNCTION(daTagCsw_Delete__FP10daTagCsw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagCsw_Create__FP10fopAc_ac_c) {
+asm void daTagCsw_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_Create__FP10fopAc_ac_c.s"
 }
@@ -322,7 +371,7 @@ ASM_FUNCTION(daTagCsw_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/__dt__10cCcD_GSttsFv.s"
 }

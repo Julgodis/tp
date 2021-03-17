@@ -6,38 +6,92 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct daSCannonCrs_c;
+struct daMidna_c;
+
+struct fopAc_ac_c {
+};
+
+struct daSCannonCrs_c {
+	daSCannonCrs_c();
+	~daSCannonCrs_c();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void middleExe(daMidna_c*);
+	void exeModeWait(daMidna_c*);
+	void exeModePreWait(daMidna_c*);
+	void exeModeOrderEvt(daMidna_c*);
+	void exeModeTalkEvt(daMidna_c*);
+	void exeModeWarpEvt(daMidna_c*);
+	void exeModeEnd(daMidna_c*);
+	void demoExe();
+	void init();
+	void setModelMtx();
+	void createHeap();
+	void chkInTalkRange();
+	void initEmtRt(u16, s32, u16 const*, JPABaseEmitter**);
+	void exeEmtRt(u16, s32, JPABaseEmitter**);
+	void callMidnaBeamEmt();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daMidna_c {
+};
+
+struct JPABaseEmitter {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daSCannonCrs_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void __ct__14daSCannonCrs_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__14daSCannonCrs_cFv();
-extern "C" extern void create__14daSCannonCrs_cFv();
-extern "C" extern void Delete__14daSCannonCrs_cFv();
-extern "C" extern void draw__14daSCannonCrs_cFv();
-extern "C" extern void execute__14daSCannonCrs_cFv();
-extern "C" extern void middleExe__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModeWait__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModePreWait__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModeOrderEvt__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModeTalkEvt__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModeWarpEvt__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void exeModeEnd__14daSCannonCrs_cFP9daMidna_c();
-extern "C" extern void demoExe__14daSCannonCrs_cFv();
-extern "C" extern void init__14daSCannonCrs_cFv();
-extern "C" extern void setModelMtx__14daSCannonCrs_cFv();
-extern "C" extern void createHeap__14daSCannonCrs_cFv();
-extern "C" extern void chkInTalkRange__14daSCannonCrs_cFv();
-extern "C" extern void initEmtRt__14daSCannonCrs_cFUsiPCUsPP14JPABaseEmitter();
-extern "C" extern void exeEmtRt__14daSCannonCrs_cFUsiPP14JPABaseEmitter();
-extern "C" extern void callMidnaBeamEmt__14daSCannonCrs_cFv();
-extern "C" extern void daSCannonCrs_create__FP14daSCannonCrs_c();
-extern "C" extern void daSCannonCrs_Delete__FP14daSCannonCrs_c();
-extern "C" extern void daSCannonCrs_execute__FP14daSCannonCrs_c();
-extern "C" extern void daSCannonCrs_draw__FP14daSCannonCrs_c();
-extern "C" extern void __sinit_d_a_obj_scannon_crs_cpp();
+void daSCannonCrs_c_createHeap(fopAc_ac_c*);
+void eventCallBack(void*, s32);
+void daSCannonCrs_create(daSCannonCrs_c*);
+void daSCannonCrs_Delete(daSCannonCrs_c*);
+void daSCannonCrs_execute(daSCannonCrs_c*);
+void daSCannonCrs_draw(daSCannonCrs_c*);
+extern "C" void __sinit_d_a_obj_scannon_crs_cpp();
+
+extern "C" void daSCannonCrs_c_createHeap__FP10fopAc_ac_c();
+extern "C" void eventCallBack__FPvi();
+extern "C" void __ct__14daSCannonCrs_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__14daSCannonCrs_cFv();
+extern "C" void create__14daSCannonCrs_cFv();
+extern "C" void Delete__14daSCannonCrs_cFv();
+extern "C" void draw__14daSCannonCrs_cFv();
+extern "C" void execute__14daSCannonCrs_cFv();
+extern "C" void middleExe__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModeWait__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModePreWait__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModeOrderEvt__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModeTalkEvt__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModeWarpEvt__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void exeModeEnd__14daSCannonCrs_cFP9daMidna_c();
+extern "C" void demoExe__14daSCannonCrs_cFv();
+extern "C" void init__14daSCannonCrs_cFv();
+extern "C" void setModelMtx__14daSCannonCrs_cFv();
+extern "C" void createHeap__14daSCannonCrs_cFv();
+extern "C" void chkInTalkRange__14daSCannonCrs_cFv();
+extern "C" void initEmtRt__14daSCannonCrs_cFUsiPCUsPP14JPABaseEmitter();
+extern "C" void exeEmtRt__14daSCannonCrs_cFUsiPP14JPABaseEmitter();
+extern "C" void callMidnaBeamEmt__14daSCannonCrs_cFv();
+extern "C" void daSCannonCrs_create__FP14daSCannonCrs_c();
+extern "C" void daSCannonCrs_Delete__FP14daSCannonCrs_c();
+extern "C" void daSCannonCrs_execute__FP14daSCannonCrs_c();
+extern "C" void daSCannonCrs_draw__FP14daSCannonCrs_c();
+extern "C" void __sinit_d_a_obj_scannon_crs_cpp();
 SECTION_RODATA extern const u8 DISAP_PARTICLE_NAME[8];
 SECTION_RODATA extern const u8 BEAM_PARTICLE_NAME[8];
 SECTION_RODATA extern const u32 lit_3822;
@@ -88,7 +142,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -98,7 +154,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannonCrs_c_createHeap__FP10fopAc_ac_c) {
+asm void daSCannonCrs_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/daSCannonCrs_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -109,7 +165,7 @@ ASM_FUNCTION(daSCannonCrs_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/eventCallBack__FPvi.s"
 }
@@ -120,7 +176,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daSCannonCrs_cFv) {
+asm daSCannonCrs_c::daSCannonCrs_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/__ct__14daSCannonCrs_cFv.s"
 }
@@ -131,7 +187,7 @@ ASM_FUNCTION(__ct__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/__dt__12J3DFrameCtrlFv.s"
 }
@@ -142,7 +198,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daSCannonCrs_cFv) {
+asm daSCannonCrs_c::~daSCannonCrs_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/__dt__14daSCannonCrs_cFv.s"
 }
@@ -153,7 +209,7 @@ ASM_FUNCTION(__dt__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/create__14daSCannonCrs_cFv.s"
 }
@@ -164,7 +220,7 @@ ASM_FUNCTION(create__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/Delete__14daSCannonCrs_cFv.s"
 }
@@ -175,7 +231,7 @@ ASM_FUNCTION(Delete__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/draw__14daSCannonCrs_cFv.s"
 }
@@ -186,7 +242,7 @@ ASM_FUNCTION(draw__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/execute__14daSCannonCrs_cFv.s"
 }
@@ -197,7 +253,7 @@ ASM_FUNCTION(execute__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(middleExe__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::middleExe(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/middleExe__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -208,7 +264,7 @@ ASM_FUNCTION(middleExe__14daSCannonCrs_cFP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeWait__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::exeModeWait(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeWait__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -219,7 +275,7 @@ ASM_FUNCTION(exeModeWait__14daSCannonCrs_cFP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModePreWait__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::exeModePreWait(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModePreWait__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -230,7 +286,7 @@ ASM_FUNCTION(exeModePreWait__14daSCannonCrs_cFP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeOrderEvt__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::exeModeOrderEvt(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeOrderEvt__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -241,7 +297,7 @@ ASM_FUNCTION(exeModeOrderEvt__14daSCannonCrs_cFP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeTalkEvt__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::exeModeTalkEvt(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeTalkEvt__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -252,7 +308,7 @@ ASM_FUNCTION(exeModeTalkEvt__14daSCannonCrs_cFP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeWarpEvt__14daSCannonCrs_cFP9daMidna_c) {
+asm void daSCannonCrs_c::exeModeWarpEvt(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeWarpEvt__14daSCannonCrs_cFP9daMidna_c.s"
 }
@@ -260,21 +316,16 @@ ASM_FUNCTION(exeModeWarpEvt__14daSCannonCrs_cFP9daMidna_c) {
 
 
 /* 80CCA344-80CCA348 0004+00 .text      exeModeEnd__14daSCannonCrs_cFP9daMidna_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exeModeEnd__14daSCannonCrs_cFP9daMidna_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeEnd__14daSCannonCrs_cFP9daMidna_c.s"
+void daSCannonCrs_c::exeModeEnd(daMidna_c* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCA348-80CCA74C 0404+00 .text      demoExe__14daSCannonCrs_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExe__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::demoExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/demoExe__14daSCannonCrs_cFv.s"
 }
@@ -285,7 +336,7 @@ ASM_FUNCTION(demoExe__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/init__14daSCannonCrs_cFv.s"
 }
@@ -296,7 +347,7 @@ ASM_FUNCTION(init__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/setModelMtx__14daSCannonCrs_cFv.s"
 }
@@ -307,7 +358,7 @@ ASM_FUNCTION(setModelMtx__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/createHeap__14daSCannonCrs_cFv.s"
 }
@@ -318,7 +369,7 @@ ASM_FUNCTION(createHeap__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkInTalkRange__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::chkInTalkRange() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/chkInTalkRange__14daSCannonCrs_cFv.s"
 }
@@ -329,7 +380,7 @@ ASM_FUNCTION(chkInTalkRange__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEmtRt__14daSCannonCrs_cFUsiPCUsPP14JPABaseEmitter) {
+asm void daSCannonCrs_c::initEmtRt(u16 field_0, s32 field_1, u16 const* field_2, JPABaseEmitter** field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/initEmtRt__14daSCannonCrs_cFUsiPCUsPP14JPABaseEmitter.s"
 }
@@ -340,7 +391,7 @@ ASM_FUNCTION(initEmtRt__14daSCannonCrs_cFUsiPCUsPP14JPABaseEmitter) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeEmtRt__14daSCannonCrs_cFUsiPP14JPABaseEmitter) {
+asm void daSCannonCrs_c::exeEmtRt(u16 field_0, s32 field_1, JPABaseEmitter** field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeEmtRt__14daSCannonCrs_cFUsiPP14JPABaseEmitter.s"
 }
@@ -351,7 +402,7 @@ ASM_FUNCTION(exeEmtRt__14daSCannonCrs_cFUsiPP14JPABaseEmitter) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callMidnaBeamEmt__14daSCannonCrs_cFv) {
+asm void daSCannonCrs_c::callMidnaBeamEmt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/callMidnaBeamEmt__14daSCannonCrs_cFv.s"
 }
@@ -362,7 +413,7 @@ ASM_FUNCTION(callMidnaBeamEmt__14daSCannonCrs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannonCrs_create__FP14daSCannonCrs_c) {
+asm void daSCannonCrs_create(daSCannonCrs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/daSCannonCrs_create__FP14daSCannonCrs_c.s"
 }
@@ -373,7 +424,7 @@ ASM_FUNCTION(daSCannonCrs_create__FP14daSCannonCrs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannonCrs_Delete__FP14daSCannonCrs_c) {
+asm void daSCannonCrs_Delete(daSCannonCrs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/daSCannonCrs_Delete__FP14daSCannonCrs_c.s"
 }
@@ -384,7 +435,7 @@ ASM_FUNCTION(daSCannonCrs_Delete__FP14daSCannonCrs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannonCrs_execute__FP14daSCannonCrs_c) {
+asm void daSCannonCrs_execute(daSCannonCrs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/daSCannonCrs_execute__FP14daSCannonCrs_c.s"
 }
@@ -395,7 +446,7 @@ ASM_FUNCTION(daSCannonCrs_execute__FP14daSCannonCrs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannonCrs_draw__FP14daSCannonCrs_c) {
+asm void daSCannonCrs_draw(daSCannonCrs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/daSCannonCrs_draw__FP14daSCannonCrs_c.s"
 }
@@ -406,7 +457,7 @@ ASM_FUNCTION(daSCannonCrs_draw__FP14daSCannonCrs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_scannon_crs_cpp) {
+extern "C" asm void __sinit_d_a_obj_scannon_crs_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/__sinit_d_a_obj_scannon_crs_cpp.s"
 }

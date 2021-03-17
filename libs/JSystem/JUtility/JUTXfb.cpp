@@ -6,34 +6,93 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTXfb (JUTXfb) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build _GXRenderModeObj (_GXRenderModeObj) False/False
+/* top-level dependencies (begin _GXRenderModeObj) */
+/* top-level dependencies (end _GXRenderModeObj) */
+struct _GXRenderModeObj {
+};
+
+// build JUTXfb (JUTXfb) True/False
+struct JUTXfb;
+/* top-level dependencies (begin JUTXfb) */
+// outer dependency: JKRHeap
+// outer dependency: _GXRenderModeObj
+// outer dependency: JUTXfb::EXfbNumber
+/* top-level dependencies (end JUTXfb) */
+struct JUTXfb {
+	// JKRHeap
+	// _GXRenderModeObj
+	// JUTXfb::EXfbNumber
+	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
+	/* dependencies (begin JUTXfb::EXfbNumber) */
+	/* dependencies (end JUTXfb::EXfbNumber) */
+	struct EXfbNumber {
+	};
+
+	/* 802E5214 */ void clearIndex();
+	/* 802E5228 */ void common_init(s32);
+	/* 802E5260 */ JUTXfb(_GXRenderModeObj const*, JKRHeap*, JUTXfb::EXfbNumber);
+	/* 802E5308 */ ~JUTXfb();
+	/* 802E5378 */ void delXfb(s32);
+	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
+	/* 802E5424 */ void destroyManager();
+	/* 802E5454 */ void initiate(u16, u16, JKRHeap*, JUTXfb::EXfbNumber);
+};
+
+// build _GXRenderModeObj (_GXRenderModeObj) True/True
+// build JKRHeap (JKRHeap) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void clearIndex__6JUTXfbFv();
-extern "C" extern void common_init__6JUTXfbFi();
-extern "C" extern void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber();
-extern "C" extern void __dt__6JUTXfbFv();
-extern "C" extern void delXfb__6JUTXfbFi();
-extern "C" extern void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
-extern "C" extern void destroyManager__6JUTXfbFv();
-extern "C" extern void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber();
+
+extern "C" void clearIndex__6JUTXfbFv();
+extern "C" void common_init__6JUTXfbFi();
+extern "C" void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void __dt__6JUTXfbFv();
+extern "C" void delXfb__6JUTXfbFi();
+extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void destroyManager__6JUTXfbFv();
+extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber();
 SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __nw__FUl();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void GXGetNumXfbLines();
-extern "C" extern void GXGetYScaleFactor();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 
@@ -41,33 +100,33 @@ SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 // Declarations:
 // 
 
-/* 802E5214-802E5228 0014+00 .text      clearIndex__6JUTXfbFv                                        */
+/* 802E5214-802E5228 0014+00 rc=2 efc=1 .text      clearIndex__6JUTXfbFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearIndex__6JUTXfbFv) {
+asm void JUTXfb::clearIndex() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/clearIndex__6JUTXfbFv.s"
 }
 #pragma pop
 
 
-/* 802E5228-802E5260 0038+00 .text      common_init__6JUTXfbFi                                       */
+/* 802E5228-802E5260 0038+00 rc=1 efc=0 .text      common_init__6JUTXfbFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(common_init__6JUTXfbFi) {
+asm void JUTXfb::common_init(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/common_init__6JUTXfbFi.s"
 }
 #pragma pop
 
 
-/* 802E5260-802E5308 00A8+00 .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
+/* 802E5260-802E5308 00A8+00 rc=1 efc=0 .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber) {
+asm JUTXfb::JUTXfb(_GXRenderModeObj const* field_0, JKRHeap* field_1, JUTXfb::EXfbNumber field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/__ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber.s"
 }
@@ -75,62 +134,61 @@ ASM_FUNCTION(__ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber) {
 
 
 /* ############################################################################################## */
-/* 80451550-80451558 0004+04 .sbss      sManager__6JUTXfb                                            */
+/* 80451550-80451558 0004+04 rc=16 efc=13 .sbss      sManager__6JUTXfb                                            */
 u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
-/* 802E5308-802E5378 0070+00 .text      __dt__6JUTXfbFv                                              */
+/* 802E5308-802E5378 0070+00 rc=1 efc=0 .text      __dt__6JUTXfbFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__6JUTXfbFv) {
+asm JUTXfb::~JUTXfb() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/__dt__6JUTXfbFv.s"
 }
 #pragma pop
 
 
-/* 802E5378-802E53B8 0040+00 .text      delXfb__6JUTXfbFi                                            */
+/* 802E5378-802E53B8 0040+00 rc=1 efc=0 .text      delXfb__6JUTXfbFi                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(delXfb__6JUTXfbFi) {
+asm void JUTXfb::delXfb(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/delXfb__6JUTXfbFi.s"
 }
 #pragma pop
 
 
-/* 802E53B8-802E5424 006C+00 .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        */
+/* 802E53B8-802E5424 006C+00 rc=1 efc=1 .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber) {
+asm void JUTXfb::createManager(JKRHeap* field_0, JUTXfb::EXfbNumber field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber.s"
 }
 #pragma pop
 
 
-/* 802E5424-802E5454 0030+00 .text      destroyManager__6JUTXfbFv                                    */
+/* 802E5424-802E5454 0030+00 rc=1 efc=1 .text      destroyManager__6JUTXfbFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroyManager__6JUTXfbFv) {
+asm void JUTXfb::destroyManager() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/destroyManager__6JUTXfbFv.s"
 }
 #pragma pop
 
 
-/* 802E5454-802E5530 00DC+00 .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         */
+/* 802E5454-802E5530 00DC+00 rc=1 efc=0 .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber) {
+asm void JUTXfb::initiate(u16 field_0, u16 field_1, JKRHeap* field_2, JUTXfb::EXfbNumber field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

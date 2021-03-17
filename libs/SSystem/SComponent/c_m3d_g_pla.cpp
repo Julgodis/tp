@@ -6,26 +6,68 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cM3dGPla (cM3dGPla) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cM3dGPla) */
+// outer dependency: cXyz
+// outer dependency: Vec
+/* top-level dependencies (end cM3dGPla) */
+struct cM3dGPla {
+	// cXyz
+	// Vec
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+	/* 8026F4C4 */ void SetupNP0(Vec const&, Vec const&);
+	/* 8026F52C */ void SetupNP(Vec const&, Vec const&);
+	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
+	/* 8026F624 */ void Set(cM3dGPla const*);
+};
+
+// build cXyz (cXyz) True/True
+// build Vec (Vec) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8cM3dGPlaFPC4cXyzf();
-extern "C" extern void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
-extern "C" extern void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" extern void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" extern void getCrossY__8cM3dGPlaCFRC4cXyzPf();
-extern "C" extern void getCrossYLessD__8cM3dGPlaCFRC3VecPf();
-extern "C" extern void Set__8cM3dGPlaFPC8cM3dGPla();
+
+extern "C" void __ct__8cM3dGPlaFPC4cXyzf();
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
+extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf();
+extern "C" void getCrossYLessD__8cM3dGPlaCFRC3VecPf();
+extern "C" void Set__8cM3dGPlaFPC8cM3dGPla();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec();
-extern "C" extern void PSVECNormalize();
-extern "C" extern void PSVECDotProduct();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*);
+extern "C" void PSVECNormalize();
+extern "C" void PSVECDotProduct();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECDotProduct();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 
@@ -33,81 +75,80 @@ SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8026F3DC-8026F408 002C+00 .text      __ct__8cM3dGPlaFPC4cXyzf                                     */
+/* 8026F3DC-8026F408 002C+00 rc=3 efc=3 .text      __ct__8cM3dGPlaFPC4cXyzf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8cM3dGPlaFPC4cXyzf) {
+asm cM3dGPla::cM3dGPla(cXyz const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/__ct__8cM3dGPlaFPC4cXyzf.s"
 }
 #pragma pop
 
 
-/* 8026F408-8026F4C4 00BC+00 .text      crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz                 */
+/* 8026F408-8026F4C4 00BC+00 rc=3 efc=3 .text      crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz) {
+asm void cM3dGPla::crossInfLin(cXyz const& field_0, cXyz const& field_1, cXyz& field_2) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F4C4-8026F52C 0068+00 .text      SetupNP0__8cM3dGPlaFRC3VecRC3Vec                             */
+/* 8026F4C4-8026F52C 0068+00 rc=1 efc=1 .text      SetupNP0__8cM3dGPlaFRC3VecRC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetupNP0__8cM3dGPlaFRC3VecRC3Vec) {
+asm void cM3dGPla::SetupNP0(Vec const& field_0, Vec const& field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/SetupNP0__8cM3dGPlaFRC3VecRC3Vec.s"
 }
 #pragma pop
 
 
-/* 8026F52C-8026F57C 0050+00 .text      SetupNP__8cM3dGPlaFRC3VecRC3Vec                              */
+/* 8026F52C-8026F57C 0050+00 rc=2 efc=2 .text      SetupNP__8cM3dGPlaFRC3VecRC3Vec                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetupNP__8cM3dGPlaFRC3VecRC3Vec) {
+asm void cM3dGPla::SetupNP(Vec const& field_0, Vec const& field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/SetupNP__8cM3dGPlaFRC3VecRC3Vec.s"
 }
 #pragma pop
 
 
-/* 8026F57C-8026F5D4 0058+00 .text      getCrossY__8cM3dGPlaCFRC4cXyzPf                              */
+/* 8026F57C-8026F5D4 0058+00 rc=2 efc=2 .text      getCrossY__8cM3dGPlaCFRC4cXyzPf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCrossY__8cM3dGPlaCFRC4cXyzPf) {
+asm void cM3dGPla::getCrossY(cXyz const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/getCrossY__8cM3dGPlaCFRC4cXyzPf.s"
 }
 #pragma pop
 
 
-/* 8026F5D4-8026F624 0050+00 .text      getCrossYLessD__8cM3dGPlaCFRC3VecPf                          */
+/* 8026F5D4-8026F624 0050+00 rc=1 efc=1 .text      getCrossYLessD__8cM3dGPlaCFRC3VecPf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCrossYLessD__8cM3dGPlaCFRC3VecPf) {
+asm void cM3dGPla::getCrossYLessD(Vec const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/getCrossYLessD__8cM3dGPlaCFRC3VecPf.s"
 }
 #pragma pop
 
 
-/* 8026F624-8026F648 0024+00 .text      Set__8cM3dGPlaFPC8cM3dGPla                                   */
+/* 8026F624-8026F648 0024+00 rc=1 efc=1 .text      Set__8cM3dGPlaFPC8cM3dGPla                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGPlaFPC8cM3dGPla) {
+asm void cM3dGPla::Set(cM3dGPla const* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_pla/Set__8cM3dGPlaFPC8cM3dGPla.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,39 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CreateHeap__Q211daObjLadder5Act_cFv();
-extern "C" extern void Create__Q211daObjLadder5Act_cFv();
-extern "C" extern void Mthd_Create__Q211daObjLadder5Act_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void Delete__Q211daObjLadder5Act_cFv();
-extern "C" extern void Mthd_Delete__Q211daObjLadder5Act_cFv();
-extern "C" extern void demo_end_reset__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_wait_init__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_wait__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_demoreq_init__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_demoreq__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_vib_init__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_vib__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_drop_init__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_drop__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_fell_init__Q211daObjLadder5Act_cFv();
-extern "C" extern void mode_fell__Q211daObjLadder5Act_cFv();
-extern "C" extern void set_mtx__Q211daObjLadder5Act_cFv();
-extern "C" extern void init_mtx__Q211daObjLadder5Act_cFv();
-extern "C" extern void Execute__Q211daObjLadder5Act_cFPPA3_A4_f();
-extern "C" extern void Draw__Q211daObjLadder5Act_cFv();
-extern "C" extern void func_8058DC5C();
-extern "C" extern void func_8058DC7C();
-extern "C" extern void func_8058DC9C();
-extern "C" extern void func_8058DCBC();
-extern "C" extern void func_8058DCE8();
-extern "C" extern void func_8058DD14();
-extern "C" extern void func_8058DD30();
-extern "C" extern void func_8058DD38();
-extern "C" extern void func_8058DD40();
+extern "C" void Execute__Q211daObjLadder5Act_cFPPA3_A4_f();
+extern "C" void func_8058DC5C();
+extern "C" void func_8058DC7C();
+extern "C" void func_8058DC9C();
+extern "C" void func_8058DCBC();
+extern "C" void func_8058DCE8();
+extern "C" void func_8058DD14();
+extern "C" void func_8058DD30();
+extern "C" void func_8058DD38();
+extern "C" void func_8058DD40();
+
+extern "C" void CreateHeap__Q211daObjLadder5Act_cFv();
+extern "C" void Create__Q211daObjLadder5Act_cFv();
+extern "C" void Mthd_Create__Q211daObjLadder5Act_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" bool Delete__Q211daObjLadder5Act_cFv();
+extern "C" void Mthd_Delete__Q211daObjLadder5Act_cFv();
+extern "C" void demo_end_reset__Q211daObjLadder5Act_cFv();
+extern "C" void mode_wait_init__Q211daObjLadder5Act_cFv();
+extern "C" void mode_wait__Q211daObjLadder5Act_cFv();
+extern "C" void mode_demoreq_init__Q211daObjLadder5Act_cFv();
+extern "C" void mode_demoreq__Q211daObjLadder5Act_cFv();
+extern "C" void mode_vib_init__Q211daObjLadder5Act_cFv();
+extern "C" void mode_vib__Q211daObjLadder5Act_cFv();
+extern "C" void mode_drop_init__Q211daObjLadder5Act_cFv();
+extern "C" void mode_drop__Q211daObjLadder5Act_cFv();
+extern "C" void mode_fell_init__Q211daObjLadder5Act_cFv();
+extern "C" void mode_fell__Q211daObjLadder5Act_cFv();
+extern "C" void set_mtx__Q211daObjLadder5Act_cFv();
+extern "C" void init_mtx__Q211daObjLadder5Act_cFv();
+extern "C" void Execute__Q211daObjLadder5Act_cFPPA3_A4_f();
+extern "C" void Draw__Q211daObjLadder5Act_cFv();
+extern "C" void func_8058DC5C();
+extern "C" void func_8058DC7C();
+extern "C" void func_8058DC9C();
+extern "C" void func_8058DCBC();
+extern "C" void func_8058DCE8();
+extern "C" void func_8058DD14();
+extern "C" void func_8058DD30();
+extern "C" void func_8058DD38();
+extern "C" void func_8058DD40();
 SECTION_RODATA extern const u8 data_8058DD50[36];
 SECTION_RODATA extern const u8 M_arcname__Q211daObjLadder5Act_c[5 + 3 /* padding */];
 SECTION_RODATA extern const u32 lit_3667;
@@ -74,7 +93,9 @@ SECTION_BSS extern u8 data_8058DF50[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -84,7 +105,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/CreateHeap__Q211daObjLadder5Act_cFv.s"
 }
@@ -95,7 +116,7 @@ ASM_FUNCTION(CreateHeap__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Create__Q211daObjLadder5Act_cFv.s"
 }
@@ -106,7 +127,7 @@ ASM_FUNCTION(Create__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Create__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::Mthd_Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Mthd_Create__Q211daObjLadder5Act_cFv.s"
 }
@@ -117,7 +138,7 @@ ASM_FUNCTION(Mthd_Create__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -125,21 +146,16 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 
 
 /* 8058D4F0-8058D4F8 0008+00 .text      Delete__Q211daObjLadder5Act_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__Q211daObjLadder5Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Delete__Q211daObjLadder5Act_cFv.s"
+bool daObjLadder::Act_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8058D4F8-8058D544 004C+00 .text      Mthd_Delete__Q211daObjLadder5Act_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Delete__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::Mthd_Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Mthd_Delete__Q211daObjLadder5Act_cFv.s"
 }
@@ -150,7 +166,7 @@ ASM_FUNCTION(Mthd_Delete__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_end_reset__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::demo_end_reset() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/demo_end_reset__Q211daObjLadder5Act_cFv.s"
 }
@@ -161,7 +177,7 @@ ASM_FUNCTION(demo_end_reset__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait_init__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_wait_init__Q211daObjLadder5Act_cFv.s"
 }
@@ -172,7 +188,7 @@ ASM_FUNCTION(mode_wait_init__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_wait__Q211daObjLadder5Act_cFv.s"
 }
@@ -183,7 +199,7 @@ ASM_FUNCTION(mode_wait__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_demoreq_init__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_demoreq_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_demoreq_init__Q211daObjLadder5Act_cFv.s"
 }
@@ -194,7 +210,7 @@ ASM_FUNCTION(mode_demoreq_init__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_demoreq__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_demoreq() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_demoreq__Q211daObjLadder5Act_cFv.s"
 }
@@ -205,7 +221,7 @@ ASM_FUNCTION(mode_demoreq__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_vib_init__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_vib_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_vib_init__Q211daObjLadder5Act_cFv.s"
 }
@@ -216,7 +232,7 @@ ASM_FUNCTION(mode_vib_init__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_vib__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_vib() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_vib__Q211daObjLadder5Act_cFv.s"
 }
@@ -227,7 +243,7 @@ ASM_FUNCTION(mode_vib__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_drop_init__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_drop_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_drop_init__Q211daObjLadder5Act_cFv.s"
 }
@@ -238,7 +254,7 @@ ASM_FUNCTION(mode_drop_init__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_drop__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_drop__Q211daObjLadder5Act_cFv.s"
 }
@@ -249,7 +265,7 @@ ASM_FUNCTION(mode_drop__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_fell_init__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::mode_fell_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_fell_init__Q211daObjLadder5Act_cFv.s"
 }
@@ -257,21 +273,16 @@ ASM_FUNCTION(mode_fell_init__Q211daObjLadder5Act_cFv) {
 
 
 /* 8058D9CC-8058D9D0 0004+00 .text      mode_fell__Q211daObjLadder5Act_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_fell__Q211daObjLadder5Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_fell__Q211daObjLadder5Act_cFv.s"
+void daObjLadder::Act_c::mode_fell() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8058D9D0-8058DA64 0094+00 .text      set_mtx__Q211daObjLadder5Act_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/set_mtx__Q211daObjLadder5Act_cFv.s"
 }
@@ -282,7 +293,7 @@ ASM_FUNCTION(set_mtx__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_mtx__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::init_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/init_mtx__Q211daObjLadder5Act_cFv.s"
 }
@@ -293,7 +304,7 @@ ASM_FUNCTION(init_mtx__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__Q211daObjLadder5Act_cFPPA3_A4_f) {
+extern "C" asm void Execute__Q211daObjLadder5Act_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Execute__Q211daObjLadder5Act_cFPPA3_A4_f.s"
 }
@@ -304,7 +315,7 @@ ASM_FUNCTION(Execute__Q211daObjLadder5Act_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__Q211daObjLadder5Act_cFv) {
+asm void daObjLadder::Act_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Draw__Q211daObjLadder5Act_cFv.s"
 }
@@ -315,7 +326,7 @@ ASM_FUNCTION(Draw__Q211daObjLadder5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DC5C) {
+extern "C" asm void func_8058DC5C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DC5C.s"
 }
@@ -326,7 +337,7 @@ ASM_FUNCTION(func_8058DC5C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DC7C) {
+extern "C" asm void func_8058DC7C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DC7C.s"
 }
@@ -337,7 +348,7 @@ ASM_FUNCTION(func_8058DC7C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DC9C) {
+extern "C" asm void func_8058DC9C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DC9C.s"
 }
@@ -348,7 +359,7 @@ ASM_FUNCTION(func_8058DC9C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DCBC) {
+extern "C" asm void func_8058DCBC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DCBC.s"
 }
@@ -359,7 +370,7 @@ ASM_FUNCTION(func_8058DCBC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DCE8) {
+extern "C" asm void func_8058DCE8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DCE8.s"
 }
@@ -370,7 +381,7 @@ ASM_FUNCTION(func_8058DCE8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DD14) {
+extern "C" asm void func_8058DD14() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DD14.s"
 }
@@ -381,7 +392,7 @@ ASM_FUNCTION(func_8058DD14) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DD30) {
+extern "C" asm void func_8058DD30() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DD30.s"
 }
@@ -392,7 +403,7 @@ ASM_FUNCTION(func_8058DD30) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DD38) {
+extern "C" asm void func_8058DD38() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DD38.s"
 }
@@ -403,7 +414,7 @@ ASM_FUNCTION(func_8058DD38) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8058DD40) {
+extern "C" asm void func_8058DD40() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/func_8058DD40.s"
 }

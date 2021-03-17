@@ -6,27 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv4Floor_c;
+
+struct daObjLv4Floor_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void mode_wait();
+	void mode_init_move();
+	void mode_move();
+	void mode_init_dead();
+	void mode_dead();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__15daObjLv4Floor_cFv();
-extern "C" extern void setBaseMtx__15daObjLv4Floor_cFv();
-extern "C" extern void Create__15daObjLv4Floor_cFv();
-extern "C" extern void CreateHeap__15daObjLv4Floor_cFv();
-extern "C" extern void create1st__15daObjLv4Floor_cFv();
-extern "C" extern void Execute__15daObjLv4Floor_cFPPA3_A4_f();
-extern "C" extern void action__15daObjLv4Floor_cFv();
-extern "C" extern void mode_wait__15daObjLv4Floor_cFv();
-extern "C" extern void mode_init_move__15daObjLv4Floor_cFv();
-extern "C" extern void mode_move__15daObjLv4Floor_cFv();
-extern "C" extern void mode_init_dead__15daObjLv4Floor_cFv();
-extern "C" extern void mode_dead__15daObjLv4Floor_cFv();
-extern "C" extern void Draw__15daObjLv4Floor_cFv();
-extern "C" extern void Delete__15daObjLv4Floor_cFv();
-extern "C" extern void daObjLv4Floor_create1st__FP15daObjLv4Floor_c();
-extern "C" extern void daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c();
-extern "C" extern void daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c();
-extern "C" extern void daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c();
+extern "C" void Execute__15daObjLv4Floor_cFPPA3_A4_f();
+void daObjLv4Floor_create1st(daObjLv4Floor_c*);
+void daObjLv4Floor_MoveBGDelete(daObjLv4Floor_c*);
+void daObjLv4Floor_MoveBGExecute(daObjLv4Floor_c*);
+void daObjLv4Floor_MoveBGDraw(daObjLv4Floor_c*);
+
+extern "C" void initBaseMtx__15daObjLv4Floor_cFv();
+extern "C" void setBaseMtx__15daObjLv4Floor_cFv();
+extern "C" void Create__15daObjLv4Floor_cFv();
+extern "C" void CreateHeap__15daObjLv4Floor_cFv();
+extern "C" void create1st__15daObjLv4Floor_cFv();
+extern "C" void Execute__15daObjLv4Floor_cFPPA3_A4_f();
+extern "C" void action__15daObjLv4Floor_cFv();
+extern "C" void mode_wait__15daObjLv4Floor_cFv();
+extern "C" void mode_init_move__15daObjLv4Floor_cFv();
+extern "C" void mode_move__15daObjLv4Floor_cFv();
+extern "C" void mode_init_dead__15daObjLv4Floor_cFv();
+extern "C" void mode_dead__15daObjLv4Floor_cFv();
+extern "C" void Draw__15daObjLv4Floor_cFv();
+extern "C" void Delete__15daObjLv4Floor_cFv();
+extern "C" void daObjLv4Floor_create1st__FP15daObjLv4Floor_c();
+extern "C" void daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c();
+extern "C" void daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c();
+extern "C" void daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c();
 SECTION_RODATA extern const u8 lit_3704[4];
 SECTION_RODATA extern const u32 lit_3711;
 SECTION_RODATA extern const u32 lit_3712;
@@ -48,7 +76,9 @@ SECTION_DATA extern void*const __vt__15daObjLv4Floor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -58,7 +88,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/initBaseMtx__15daObjLv4Floor_cFv.s"
 }
@@ -69,7 +99,7 @@ ASM_FUNCTION(initBaseMtx__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/setBaseMtx__15daObjLv4Floor_cFv.s"
 }
@@ -80,7 +110,7 @@ ASM_FUNCTION(setBaseMtx__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/Create__15daObjLv4Floor_cFv.s"
 }
@@ -91,7 +121,7 @@ ASM_FUNCTION(Create__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/CreateHeap__15daObjLv4Floor_cFv.s"
 }
@@ -102,7 +132,7 @@ ASM_FUNCTION(CreateHeap__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/create1st__15daObjLv4Floor_cFv.s"
 }
@@ -113,7 +143,7 @@ ASM_FUNCTION(create1st__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjLv4Floor_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjLv4Floor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/Execute__15daObjLv4Floor_cFPPA3_A4_f.s"
 }
@@ -124,7 +154,7 @@ ASM_FUNCTION(Execute__15daObjLv4Floor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/action__15daObjLv4Floor_cFv.s"
 }
@@ -135,7 +165,7 @@ ASM_FUNCTION(action__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/mode_wait__15daObjLv4Floor_cFv.s"
 }
@@ -146,7 +176,7 @@ ASM_FUNCTION(mode_wait__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_move__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::mode_init_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/mode_init_move__15daObjLv4Floor_cFv.s"
 }
@@ -157,7 +187,7 @@ ASM_FUNCTION(mode_init_move__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_move__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::mode_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/mode_move__15daObjLv4Floor_cFv.s"
 }
@@ -168,7 +198,7 @@ ASM_FUNCTION(mode_move__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dead__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::mode_init_dead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/mode_init_dead__15daObjLv4Floor_cFv.s"
 }
@@ -179,7 +209,7 @@ ASM_FUNCTION(mode_init_dead__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_dead__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::mode_dead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/mode_dead__15daObjLv4Floor_cFv.s"
 }
@@ -190,7 +220,7 @@ ASM_FUNCTION(mode_dead__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/Draw__15daObjLv4Floor_cFv.s"
 }
@@ -201,7 +231,7 @@ ASM_FUNCTION(Draw__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjLv4Floor_cFv) {
+asm void daObjLv4Floor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/Delete__15daObjLv4Floor_cFv.s"
 }
@@ -212,7 +242,7 @@ ASM_FUNCTION(Delete__15daObjLv4Floor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Floor_create1st__FP15daObjLv4Floor_c) {
+asm void daObjLv4Floor_create1st(daObjLv4Floor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/daObjLv4Floor_create1st__FP15daObjLv4Floor_c.s"
 }
@@ -223,7 +253,7 @@ ASM_FUNCTION(daObjLv4Floor_create1st__FP15daObjLv4Floor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c) {
+asm void daObjLv4Floor_MoveBGDelete(daObjLv4Floor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c.s"
 }
@@ -234,7 +264,7 @@ ASM_FUNCTION(daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c) {
+asm void daObjLv4Floor_MoveBGExecute(daObjLv4Floor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c.s"
 }
@@ -245,7 +275,7 @@ ASM_FUNCTION(daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c) {
+asm void daObjLv4Floor_MoveBGDraw(daObjLv4Floor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4floor/d_a_obj_lv4floor/daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c.s"
 }

@@ -6,17 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPAParticleCallBack (JPAParticleCallBack) False/False
+/* top-level dependencies (begin JPAParticleCallBack) */
+/* top-level dependencies (end JPAParticleCallBack) */
+struct JPAParticleCallBack {
+	/* 8027EFA4 */ ~JPAParticleCallBack();
+};
+
+// build JPABaseParticle (JPABaseParticle) False/False
+// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
+/* top-level dependencies (begin JPAEmitterWorkData) */
+/* top-level dependencies (end JPAEmitterWorkData) */
+struct JPAEmitterWorkData {
+};
+
+// build JPABaseEmitter (JPABaseEmitter) False/False
+// build JPABaseParticle (JPABaseParticle) True/False
+struct JPABaseParticle;
+/* top-level dependencies (begin JPABaseEmitter) */
+// outer dependency: JPABaseParticle
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+	// JPABaseParticle
+	/* 8027EB60 */ void createChild(JPABaseParticle*);
+};
+
+/* top-level dependencies (begin JPABaseParticle) */
+// outer dependency: JPAEmitterWorkData
+// outer dependency: JPABaseEmitter
+/* top-level dependencies (end JPABaseParticle) */
+struct JPABaseParticle {
+	// JPAEmitterWorkData
+	// JPABaseEmitter
+	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
+	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
+	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
+	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
+	/* 802804C8 */ void canCreateChild(JPAEmitterWorkData*);
+	/* 80280548 */ void getWidth(JPABaseEmitter const*) const;
+	/* 80280568 */ void getHeight(JPABaseEmitter const*) const;
+};
+
+// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
+// build JPABaseEmitter (JPABaseEmitter) True/True
+// build JPAResource (JPAResource) False/False
+// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
+// build JPABaseParticle (JPABaseParticle) True/True
+/* top-level dependencies (begin JPAResource) */
+// outer dependency: JPAEmitterWorkData
+// outer dependency: JPABaseParticle
+/* top-level dependencies (end JPAResource) */
+struct JPAResource {
+	// JPAEmitterWorkData
+	// JPABaseParticle
+	/* 8027658C */ void calc_p(JPAEmitterWorkData*, JPABaseParticle*);
+	/* 80276608 */ void calc_c(JPAEmitterWorkData*, JPABaseParticle*);
+	/* 80276684 */ void calcField(JPAEmitterWorkData*, JPABaseParticle*);
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__19JPAParticleCallBackFv();
-extern "C" extern void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" extern void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void calc_p__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" extern void calc_c__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" extern void canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" extern void getWidth__15JPABaseParticleCFPC14JPABaseEmitter();
-extern "C" extern void getHeight__15JPABaseParticleCFPC14JPABaseEmitter();
+
+extern "C" void __dt__19JPAParticleCallBackFv();
+extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calc_p__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void calc_c__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void getWidth__15JPABaseParticleCFPC14JPABaseEmitter();
+extern "C" void getHeight__15JPABaseParticleCFPC14JPABaseEmitter();
 SECTION_SDATA2 extern f32 lit_2565;
 SECTION_SDATA2 extern u8 lit_2566[4];
 SECTION_SDATA2 extern f32 lit_2567;
@@ -31,19 +100,29 @@ SECTION_SDATA2 extern f32 lit_3010;
 // External References:
 // 
 
-extern "C" extern void calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void createChild__14JPABaseEmitterFP15JPABaseParticle();
-extern "C" extern void JPAGetYZRotateMtx__FssPA4_f();
-extern "C" extern void __dl__FPv();
-extern "C" extern void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXMultVecSR();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_29();
+extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+void operator delete(void*);
+void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32);
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXMultVecSR();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+
+extern "C" void calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle();
+extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+extern "C" void __dl__FPv();
+extern "C" void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXMultVecSR();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 SECTION_DATA extern void*const __vt__19JPAParticleCallBack[5];
 SECTION_SDATA extern u32 __float_epsilon;
 
@@ -51,11 +130,11 @@ SECTION_SDATA extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027EFA4-8027EFEC 0048+00 .text      __dt__19JPAParticleCallBackFv                                */
+/* 8027EFA4-8027EFEC 0048+00 rc=11 efc=11 .text      __dt__19JPAParticleCallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19JPAParticleCallBackFv) {
+asm JPAParticleCallBack::~JPAParticleCallBack() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/__dt__19JPAParticleCallBackFv.s"
 }
@@ -63,81 +142,81 @@ ASM_FUNCTION(__dt__19JPAParticleCallBackFv) {
 
 
 /* ############################################################################################## */
-/* 80455388-8045538C 0004+00 .sdata2    @2565                                                        */
+/* 80455388-8045538C 0004+00 rc=2 efc=0 .sdata2    @2565                                                        */
 f32 lit_2565 = 1.0f;
 
-/* 8045538C-80455390 0004+00 .sdata2    @2566                                                        */
+/* 8045538C-80455390 0004+00 rc=4 efc=0 .sdata2    @2566                                                        */
 u8 lit_2566[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455390-80455394 0004+00 .sdata2    @2567                                                        */
+/* 80455390-80455394 0004+00 rc=2 efc=0 .sdata2    @2567                                                        */
 f32 lit_2567 = 32.0f;
 
-/* 80455394-80455398 0004+00 .sdata2    @2568                                                        */
+/* 80455394-80455398 0004+00 rc=2 efc=0 .sdata2    @2568                                                        */
 f32 lit_2568 = 0.5f;
 
-/* 80455398-8045539C 0004+00 .sdata2    @2569                                                        */
+/* 80455398-8045539C 0004+00 rc=2 efc=0 .sdata2    @2569                                                        */
 f32 lit_2569 = 3.0f;
 
-/* 8045539C-804553A0 0004+00 .sdata2    @2570                                                        */
+/* 8045539C-804553A0 0004+00 rc=1 efc=0 .sdata2    @2570                                                        */
 f32 lit_2570 = 32768.0f;
 
-/* 804553A0-804553A8 0008+00 .sdata2    @2572                                                        */
+/* 804553A0-804553A8 0008+00 rc=4 efc=0 .sdata2    @2572                                                        */
 f64 lit_2572 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 804553A8-804553B0 0008+00 .sdata2    @2574                                                        */
+/* 804553A8-804553B0 0008+00 rc=2 efc=0 .sdata2    @2574                                                        */
 f64 lit_2574 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8027EFEC-8027F8C8 08DC+00 .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027EFEC-8027F8C8 08DC+00 rc=1 efc=1 .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_p__15JPABaseParticleFP18JPAEmitterWorkData) {
+asm void JPABaseParticle::init_p(JPAEmitterWorkData* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/init_p__15JPABaseParticleFP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
 
-/* 8027F8C8-8027FFD0 0708+00 .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027F8C8-8027FFD0 0708+00 rc=1 efc=1 .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPABaseParticle::init_c(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027FFD0-80280260 0290+00 .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027FFD0-80280260 0290+00 rc=1 efc=1 .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_p__15JPABaseParticleFP18JPAEmitterWorkData) {
+asm void JPABaseParticle::calc_p(JPAEmitterWorkData* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/calc_p__15JPABaseParticleFP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
 
-/* 80280260-802804C8 0268+00 .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 80280260-802804C8 0268+00 rc=1 efc=1 .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_c__15JPABaseParticleFP18JPAEmitterWorkData) {
+asm void JPABaseParticle::calc_c(JPAEmitterWorkData* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/calc_c__15JPABaseParticleFP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
 
-/* 802804C8-80280548 0080+00 .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
+/* 802804C8-80280548 0080+00 rc=1 efc=0 .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData) {
+asm void JPABaseParticle::canCreateChild(JPAEmitterWorkData* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData.s"
 }
@@ -145,30 +224,29 @@ ASM_FUNCTION(canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData) {
 
 
 /* ############################################################################################## */
-/* 804553B0-804553B8 0004+04 .sdata2    @3010                                                        */
+/* 804553B0-804553B8 0004+04 rc=2 efc=0 .sdata2    @3010                                                        */
 f32 lit_3010 = 2.0f;
 /* padding 4 bytes */
 
-/* 80280548-80280568 0020+00 .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
+/* 80280548-80280568 0020+00 rc=3 efc=3 .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWidth__15JPABaseParticleCFPC14JPABaseEmitter) {
+asm void JPABaseParticle::getWidth(JPABaseEmitter const* field_0) const {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/getWidth__15JPABaseParticleCFPC14JPABaseEmitter.s"
 }
 #pragma pop
 
 
-/* 80280568-80280588 0020+00 .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
+/* 80280568-80280588 0020+00 rc=3 efc=3 .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeight__15JPABaseParticleCFPC14JPABaseEmitter) {
+asm void JPABaseParticle::getHeight(JPABaseEmitter const* field_0) const {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAParticle/getHeight__15JPABaseParticleCFPC14JPABaseEmitter.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

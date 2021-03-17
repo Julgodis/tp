@@ -9,11 +9,17 @@
 // Forward References:
 // 
 
-extern "C" extern void DLInsert();
-extern "C" extern void OSFreeToHeap();
-extern "C" extern void OSSetCurrentHeap();
-extern "C" extern void OSInitAlloc();
-extern "C" extern void OSCreateHeap();
+extern "C" static void DLInsert();
+extern "C" void OSFreeToHeap();
+extern "C" void OSSetCurrentHeap();
+extern "C" void OSInitAlloc();
+extern "C" void OSCreateHeap();
+
+extern "C" static void DLInsert();
+extern "C" void OSFreeToHeap();
+extern "C" void OSSetCurrentHeap();
+extern "C" void OSInitAlloc();
+extern "C" void OSCreateHeap();
 SECTION_SDATA extern u32 __OSCurrHeap;
 SECTION_SBSS extern u8 HeapArray[4];
 SECTION_SBSS extern u8 NumHeaps[4];
@@ -25,15 +31,16 @@ SECTION_SBSS extern u8 ArenaEnd[4];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8033B078-8033B124 00AC+00 .text      DLInsert                                                     */
+/* 8033B078-8033B124 00AC+00 rc=1 efc=0 .text      DLInsert                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DLInsert) {
+extern "C" asm static void DLInsert() {
 	nofralloc
 #include "asm/dolphin/os/OSAlloc/DLInsert.s"
 }
@@ -41,14 +48,14 @@ ASM_FUNCTION(DLInsert) {
 
 
 /* ############################################################################################## */
-/* 80451640-80451644 0004+00 .sbss      HeapArray                                                    */
+/* 80451640-80451644 0004+00 rc=3 efc=0 .sbss      HeapArray                                                    */
 u8 HeapArray[4];
 
-/* 8033B124-8033B1A0 007C+00 .text      OSFreeToHeap                                                 */
+/* 8033B124-8033B1A0 007C+00 rc=1 efc=1 .text      OSFreeToHeap                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSFreeToHeap) {
+extern "C" asm void OSFreeToHeap() {
 	nofralloc
 #include "asm/dolphin/os/OSAlloc/OSFreeToHeap.s"
 }
@@ -56,15 +63,15 @@ ASM_FUNCTION(OSFreeToHeap) {
 
 
 /* ############################################################################################## */
-/* 80450990-80450998 0004+04 .sdata     __OSCurrHeap                                                 */
+/* 80450990-80450998 0004+04 rc=3 efc=1 .sdata     __OSCurrHeap                                                 */
 u32 __OSCurrHeap = 0xFFFFFFFF;
 /* padding 4 bytes */
 
-/* 8033B1A0-8033B1B0 0010+00 .text      OSSetCurrentHeap                                             */
+/* 8033B1A0-8033B1B0 0010+00 rc=1 efc=1 .text      OSSetCurrentHeap                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetCurrentHeap) {
+extern "C" asm void OSSetCurrentHeap() {
 	nofralloc
 #include "asm/dolphin/os/OSAlloc/OSSetCurrentHeap.s"
 }
@@ -72,35 +79,34 @@ ASM_FUNCTION(OSSetCurrentHeap) {
 
 
 /* ############################################################################################## */
-/* 80451644-80451648 0004+00 .sbss      NumHeaps                                                     */
+/* 80451644-80451648 0004+00 rc=2 efc=0 .sbss      NumHeaps                                                     */
 u8 NumHeaps[4];
 
-/* 80451648-8045164C 0004+00 .sbss      ArenaStart                                                   */
+/* 80451648-8045164C 0004+00 rc=1 efc=0 .sbss      ArenaStart                                                   */
 u8 ArenaStart[4];
 
-/* 8045164C-80451650 0004+00 .sbss      ArenaEnd                                                     */
+/* 8045164C-80451650 0004+00 rc=1 efc=0 .sbss      ArenaEnd                                                     */
 u8 ArenaEnd[4];
 
-/* 8033B1B0-8033B220 0070+00 .text      OSInitAlloc                                                  */
+/* 8033B1B0-8033B220 0070+00 rc=2 efc=2 .text      OSInitAlloc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSInitAlloc) {
+extern "C" asm void OSInitAlloc() {
 	nofralloc
 #include "asm/dolphin/os/OSAlloc/OSInitAlloc.s"
 }
 #pragma pop
 
 
-/* 8033B220-8033B28C 006C+00 .text      OSCreateHeap                                                 */
+/* 8033B220-8033B28C 006C+00 rc=1 efc=1 .text      OSCreateHeap                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSCreateHeap) {
+extern "C" asm void OSCreateHeap() {
 	nofralloc
 #include "asm/dolphin/os/OSAlloc/OSCreateHeap.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

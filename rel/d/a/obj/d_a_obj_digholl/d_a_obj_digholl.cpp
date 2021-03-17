@@ -6,17 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjDigholl_c;
+
+struct daObjDigholl_c {
+	void create();
+	~daObjDigholl_c();
+	void execute();
+	bool draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__14daObjDigholl_cFv();
-extern "C" extern void daObjDigholl_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daObjDigholl_cFv();
-extern "C" extern void daObjDigholl_Delete__FP14daObjDigholl_c();
-extern "C" extern void execute__14daObjDigholl_cFv();
-extern "C" extern void daObjDigholl_Execute__FP14daObjDigholl_c();
-extern "C" extern void draw__14daObjDigholl_cFv();
-extern "C" extern void daObjDigholl_Draw__FP14daObjDigholl_c();
+void daObjDigholl_Create(fopAc_ac_c*);
+void daObjDigholl_Delete(daObjDigholl_c*);
+void daObjDigholl_Execute(daObjDigholl_c*);
+void daObjDigholl_Draw(daObjDigholl_c*);
+
+extern "C" void create__14daObjDigholl_cFv();
+extern "C" void daObjDigholl_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daObjDigholl_cFv();
+extern "C" void daObjDigholl_Delete__FP14daObjDigholl_c();
+extern "C" void execute__14daObjDigholl_cFv();
+extern "C" void daObjDigholl_Execute__FP14daObjDigholl_c();
+extern "C" bool draw__14daObjDigholl_cFv();
+extern "C" void daObjDigholl_Draw__FP14daObjDigholl_c();
 SECTION_RODATA extern const u32 lit_3678;
 SECTION_RODATA extern const u8 lit_3679[4];
 SECTION_RODATA extern const u32 lit_3680;
@@ -38,7 +60,9 @@ SECTION_DATA extern u8 g_profile_Obj_Digholl[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +72,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjDigholl_cFv) {
+asm void daObjDigholl_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/create__14daObjDigholl_cFv.s"
 }
@@ -59,7 +83,7 @@ ASM_FUNCTION(create__14daObjDigholl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigholl_Create__FP10fopAc_ac_c) {
+asm void daObjDigholl_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Create__FP10fopAc_ac_c.s"
 }
@@ -70,7 +94,7 @@ ASM_FUNCTION(daObjDigholl_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjDigholl_cFv) {
+asm daObjDigholl_c::~daObjDigholl_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/__dt__14daObjDigholl_cFv.s"
 }
@@ -81,7 +105,7 @@ ASM_FUNCTION(__dt__14daObjDigholl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigholl_Delete__FP14daObjDigholl_c) {
+asm void daObjDigholl_Delete(daObjDigholl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Delete__FP14daObjDigholl_c.s"
 }
@@ -92,7 +116,7 @@ ASM_FUNCTION(daObjDigholl_Delete__FP14daObjDigholl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjDigholl_cFv) {
+asm void daObjDigholl_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/execute__14daObjDigholl_cFv.s"
 }
@@ -103,7 +127,7 @@ ASM_FUNCTION(execute__14daObjDigholl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigholl_Execute__FP14daObjDigholl_c) {
+asm void daObjDigholl_Execute(daObjDigholl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Execute__FP14daObjDigholl_c.s"
 }
@@ -111,21 +135,16 @@ ASM_FUNCTION(daObjDigholl_Execute__FP14daObjDigholl_c) {
 
 
 /* 80BDCB0C-80BDCB14 0008+00 .text      draw__14daObjDigholl_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjDigholl_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/draw__14daObjDigholl_cFv.s"
+bool daObjDigholl_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BDCB14-80BDCB34 0020+00 .text      daObjDigholl_Draw__FP14daObjDigholl_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigholl_Draw__FP14daObjDigholl_c) {
+asm void daObjDigholl_Draw(daObjDigholl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Draw__FP14daObjDigholl_c.s"
 }

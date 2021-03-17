@@ -6,57 +6,165 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cBgS_PolyInfo;
+struct daObjWStatue_c;
+struct dCcD_GObjInf;
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct daObjWStatue_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool __CreateHeap();
+	void create();
+	void bg_check();
+	void actionWaitInit();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void actionInitSwOnWait();
+	void actionSwOnWait();
+	void actionInitBoomerangCarry();
+	void actionBoomerangCarry();
+	void demoProc();
+	void effectSet();
+	void effectStop();
+	void execute();
+	void draw();
+	void setListStart();
+	void _delete();
+};
+
+struct dPa_followEcallBack {
+	~dPa_followEcallBack();
+	void __defctor();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void s_sh_sub__FPvPv();
-extern "C" extern void initBaseMtx__14daObjWStatue_cFv();
-extern "C" extern void setBaseMtx__14daObjWStatue_cFv();
-extern "C" extern void Create__14daObjWStatue_cFv();
-extern "C" extern void __CreateHeap__14daObjWStatue_cFv();
-extern "C" extern void create__14daObjWStatue_cFv();
-extern "C" extern void __dt__19dPa_followEcallBackFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __defctor__19dPa_followEcallBackFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void bg_check__14daObjWStatue_cFv();
-extern "C" extern void actionWaitInit__14daObjWStatue_cFv();
-extern "C" extern void actionWait__14daObjWStatue_cFv();
-extern "C" extern void initActionOrderGetDemo__14daObjWStatue_cFv();
-extern "C" extern void actionOrderGetDemo__14daObjWStatue_cFv();
-extern "C" extern void actionGetDemo__14daObjWStatue_cFv();
-extern "C" extern void actionInitSwOnWait__14daObjWStatue_cFv();
-extern "C" extern void actionSwOnWait__14daObjWStatue_cFv();
-extern "C" extern void actionInitBoomerangCarry__14daObjWStatue_cFv();
-extern "C" extern void actionBoomerangCarry__14daObjWStatue_cFv();
-extern "C" extern void demoProc__14daObjWStatue_cFv();
-extern "C" extern void effectSet__14daObjWStatue_cFv();
-extern "C" extern void effectStop__14daObjWStatue_cFv();
-extern "C" extern void execute__14daObjWStatue_cFv();
-extern "C" extern void draw__14daObjWStatue_cFv();
-extern "C" extern void setListStart__14daObjWStatue_cFv();
-extern "C" extern void _delete__14daObjWStatue_cFv();
-extern "C" extern void daObjWStatue_Draw__FP14daObjWStatue_c();
-extern "C" extern void daObjWStatue_Execute__FP14daObjWStatue_c();
-extern "C" extern void daObjWStatue_Delete__FP14daObjWStatue_c();
-extern "C" extern void daObjWStatue_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void func_80D3B604();
-extern "C" extern void func_80D3B620();
-extern "C" extern void func_80D3B628();
+void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+void lifeGetTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void lifeGetCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void s_sh_sub(void*, void*);
+void daObjWStatue_Draw(daObjWStatue_c*);
+void daObjWStatue_Execute(daObjWStatue_c*);
+void daObjWStatue_Delete(daObjWStatue_c*);
+void daObjWStatue_Create(fopAc_ac_c*);
+extern "C" void func_80D3B604();
+extern "C" void func_80D3B620();
+extern "C" void func_80D3B628();
+
+extern "C" void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void s_sh_sub__FPvPv();
+extern "C" void initBaseMtx__14daObjWStatue_cFv();
+extern "C" void setBaseMtx__14daObjWStatue_cFv();
+extern "C" void Create__14daObjWStatue_cFv();
+extern "C" bool __CreateHeap__14daObjWStatue_cFv();
+extern "C" void create__14daObjWStatue_cFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__14daObjWStatue_cFv();
+extern "C" void actionWaitInit__14daObjWStatue_cFv();
+extern "C" void actionWait__14daObjWStatue_cFv();
+extern "C" void initActionOrderGetDemo__14daObjWStatue_cFv();
+extern "C" void actionOrderGetDemo__14daObjWStatue_cFv();
+extern "C" void actionGetDemo__14daObjWStatue_cFv();
+extern "C" void actionInitSwOnWait__14daObjWStatue_cFv();
+extern "C" void actionSwOnWait__14daObjWStatue_cFv();
+extern "C" void actionInitBoomerangCarry__14daObjWStatue_cFv();
+extern "C" void actionBoomerangCarry__14daObjWStatue_cFv();
+extern "C" void demoProc__14daObjWStatue_cFv();
+extern "C" void effectSet__14daObjWStatue_cFv();
+extern "C" void effectStop__14daObjWStatue_cFv();
+extern "C" void execute__14daObjWStatue_cFv();
+extern "C" void draw__14daObjWStatue_cFv();
+extern "C" void setListStart__14daObjWStatue_cFv();
+extern "C" void _delete__14daObjWStatue_cFv();
+extern "C" void daObjWStatue_Draw__FP14daObjWStatue_c();
+extern "C" void daObjWStatue_Execute__FP14daObjWStatue_c();
+extern "C" void daObjWStatue_Delete__FP14daObjWStatue_c();
+extern "C" void daObjWStatue_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void func_80D3B604();
+extern "C" void func_80D3B620();
+extern "C" void func_80D3B628();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3857[4];
 SECTION_RODATA extern const u8 lit_3858[8];
@@ -105,7 +213,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -115,7 +225,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
+asm void Reflect(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/Reflect__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -126,7 +236,7 @@ ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__8cM3dGPlaFv.s"
 }
@@ -137,7 +247,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void lifeGetTgCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A17C.s"
 }
@@ -148,7 +258,7 @@ ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void lifeGetCoCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A1D8.s"
 }
@@ -159,7 +269,7 @@ ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sh_sub__FPvPv) {
+asm void s_sh_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/s_sh_sub__FPvPv.s"
 }
@@ -170,7 +280,7 @@ ASM_FUNCTION(s_sh_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/initBaseMtx__14daObjWStatue_cFv.s"
 }
@@ -181,7 +291,7 @@ ASM_FUNCTION(initBaseMtx__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/setBaseMtx__14daObjWStatue_cFv.s"
 }
@@ -192,7 +302,7 @@ ASM_FUNCTION(setBaseMtx__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/Create__14daObjWStatue_cFv.s"
 }
@@ -200,21 +310,16 @@ ASM_FUNCTION(Create__14daObjWStatue_cFv) {
 
 
 /* 80D3A474-80D3A47C 0008+00 .text      __CreateHeap__14daObjWStatue_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__14daObjWStatue_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__CreateHeap__14daObjWStatue_cFv.s"
+bool daObjWStatue_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3A47C-80D3A66C 01F0+00 .text      create__14daObjWStatue_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3A47C.s"
 }
@@ -225,7 +330,7 @@ ASM_FUNCTION(create__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
+asm dPa_followEcallBack::~dPa_followEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__19dPa_followEcallBackFv.s"
 }
@@ -233,21 +338,16 @@ ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
 
 
 /* 80D3A6F0-80D3A6F4 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3A6F4-80D3A71C 0028+00 .text      __defctor__19dPa_followEcallBackFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
+asm void dPa_followEcallBack::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__defctor__19dPa_followEcallBackFv.s"
 }
@@ -258,7 +358,7 @@ ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__8cM3dGCylFv.s"
 }
@@ -269,7 +369,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__8cM3dGAabFv.s"
 }
@@ -280,7 +380,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__10dCcD_GSttsFv.s"
 }
@@ -291,7 +391,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__12dBgS_AcchCirFv.s"
 }
@@ -302,7 +402,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -313,7 +413,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/bg_check__14daObjWStatue_cFv.s"
 }
@@ -324,7 +424,7 @@ ASM_FUNCTION(bg_check__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionWaitInit__14daObjWStatue_cFv.s"
 }
@@ -335,7 +435,7 @@ ASM_FUNCTION(actionWaitInit__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionWait__14daObjWStatue_cFv.s"
 }
@@ -346,7 +446,7 @@ ASM_FUNCTION(actionWait__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/initActionOrderGetDemo__14daObjWStatue_cFv.s"
 }
@@ -357,7 +457,7 @@ ASM_FUNCTION(initActionOrderGetDemo__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionOrderGetDemo__14daObjWStatue_cFv.s"
 }
@@ -368,7 +468,7 @@ ASM_FUNCTION(actionOrderGetDemo__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionGetDemo__14daObjWStatue_cFv.s"
 }
@@ -379,7 +479,7 @@ ASM_FUNCTION(actionGetDemo__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitSwOnWait__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionInitSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionInitSwOnWait__14daObjWStatue_cFv.s"
 }
@@ -390,7 +490,7 @@ ASM_FUNCTION(actionInitSwOnWait__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionSwOnWait__14daObjWStatue_cFv.s"
 }
@@ -401,7 +501,7 @@ ASM_FUNCTION(actionSwOnWait__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitBoomerangCarry__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionInitBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionInitBoomerangCarry__14daObjWStatue_cFv.s"
 }
@@ -412,7 +512,7 @@ ASM_FUNCTION(actionInitBoomerangCarry__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionBoomerangCarry__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::actionBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/actionBoomerangCarry__14daObjWStatue_cFv.s"
 }
@@ -423,7 +523,7 @@ ASM_FUNCTION(actionBoomerangCarry__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/demoProc__14daObjWStatue_cFv.s"
 }
@@ -434,7 +534,7 @@ ASM_FUNCTION(demoProc__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::effectSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/effectSet__14daObjWStatue_cFv.s"
 }
@@ -445,7 +545,7 @@ ASM_FUNCTION(effectSet__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectStop__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::effectStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/effectStop__14daObjWStatue_cFv.s"
 }
@@ -456,7 +556,7 @@ ASM_FUNCTION(effectStop__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/execute__14daObjWStatue_cFv.s"
 }
@@ -467,7 +567,7 @@ ASM_FUNCTION(execute__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/draw__14daObjWStatue_cFv.s"
 }
@@ -475,21 +575,16 @@ ASM_FUNCTION(draw__14daObjWStatue_cFv) {
 
 
 /* 80D3B47C-80D3B480 0004+00 .text      setListStart__14daObjWStatue_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setListStart__14daObjWStatue_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/setListStart__14daObjWStatue_cFv.s"
+void daObjWStatue_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B480-80D3B4B8 0038+00 .text      _delete__14daObjWStatue_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjWStatue_cFv) {
+asm void daObjWStatue_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/_delete__14daObjWStatue_cFv.s"
 }
@@ -500,7 +595,7 @@ ASM_FUNCTION(_delete__14daObjWStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWStatue_Draw__FP14daObjWStatue_c) {
+asm void daObjWStatue_Draw(daObjWStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/daObjWStatue_Draw__FP14daObjWStatue_c.s"
 }
@@ -511,7 +606,7 @@ ASM_FUNCTION(daObjWStatue_Draw__FP14daObjWStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWStatue_Execute__FP14daObjWStatue_c) {
+asm void daObjWStatue_Execute(daObjWStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/daObjWStatue_Execute__FP14daObjWStatue_c.s"
 }
@@ -522,7 +617,7 @@ ASM_FUNCTION(daObjWStatue_Execute__FP14daObjWStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWStatue_Delete__FP14daObjWStatue_c) {
+asm void daObjWStatue_Delete(daObjWStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/daObjWStatue_Delete__FP14daObjWStatue_c.s"
 }
@@ -533,7 +628,7 @@ ASM_FUNCTION(daObjWStatue_Delete__FP14daObjWStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWStatue_Create__FP10fopAc_ac_c) {
+asm void daObjWStatue_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/daObjWStatue_Create__FP10fopAc_ac_c.s"
 }
@@ -544,7 +639,7 @@ ASM_FUNCTION(daObjWStatue_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__10cCcD_GSttsFv.s"
 }
@@ -555,7 +650,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -563,54 +658,34 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 80D3B5F4-80D3B5F8 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B5F8-80D3B5FC 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B5FC-80D3B600 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B600-80D3B604 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B604-80D3B620 001C+00 .text      cLib_calcTimer<Uc>__FPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3B604) {
+extern "C" asm void func_80D3B604() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3B604.s"
 }
@@ -621,7 +696,7 @@ ASM_FUNCTION(func_80D3B604) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3B620) {
+extern "C" asm void func_80D3B620() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3B620.s"
 }
@@ -632,7 +707,7 @@ ASM_FUNCTION(func_80D3B620) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D3B628) {
+extern "C" asm void func_80D3B628() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/func_80D3B628.s"
 }

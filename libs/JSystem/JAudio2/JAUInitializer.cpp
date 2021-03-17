@@ -6,13 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAU_JASInitializer (JAU_JASInitializer) False/False
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+};
+
+/* top-level dependencies (begin JAU_JASInitializer) */
+// outer dependency: JKRSolidHeap
+/* top-level dependencies (end JAU_JASInitializer) */
+struct JAU_JASInitializer {
+	// JKRSolidHeap
+	/* 802A4AD0 */ JAU_JASInitializer();
+	/* 802A4B28 */ void initJASystem(JKRSolidHeap*);
+};
+
+// build JKRSolidHeap (JKRSolidHeap) True/True
+// build JAU_JAIInitializer (JAU_JAIInitializer) False/False
+/* top-level dependencies (begin JAU_JAIInitializer) */
+/* top-level dependencies (end JAU_JAIInitializer) */
+struct JAU_JAIInitializer {
+	/* 802A4D3C */ JAU_JAIInitializer();
+	/* 802A4D60 */ void initJAInterface();
+};
+
+// build JASDvd (JASDvd) False/False
+/* top-level dependencies (begin JASDvd) */
+/* top-level dependencies (end JASDvd) */
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+	/* 8028FF04 */ void createThread(s32, s32, u32);
+};
+
+// build JASGenericMemPool (JASGenericMemPool) False/False
+/* top-level dependencies (begin JASGenericMemPool) */
+/* top-level dependencies (end JASGenericMemPool) */
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 802908C8 */ void newMemPool(u32, s32);
+};
+
+// build JASKernel (JASKernel) False/False
+// build JKRSolidHeap (JKRSolidHeap) True/True
+/* top-level dependencies (begin JASKernel) */
+// outer dependency: JKRSolidHeap
+/* top-level dependencies (end JASKernel) */
+struct JASKernel {
+	// JKRSolidHeap
+	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
+	/* 80290AD0 */ void setupAramHeap(u32, u32);
+};
+
+// build JASAramStream (JASAramStream) False/False
+/* top-level dependencies (begin JASAramStream) */
+/* top-level dependencies (end JASAramStream) */
+struct JASAramStream {
+	/* 8029631C */ void initSystem(u32, u32);
+};
+
+// build JASWaveArcLoader (JASWaveArcLoader) False/False
+/* top-level dependencies (begin JASWaveArcLoader) */
+/* top-level dependencies (end JASWaveArcLoader) */
+struct JASWaveArcLoader {
+	/* 8029A0D0 */ void setCurrentDir(char const*);
+};
+
+// build JASAudioThread (JASAudioThread) False/False
+/* top-level dependencies (begin JASAudioThread) */
+/* top-level dependencies (end JASAudioThread) */
+struct JASAudioThread {
+	/* 8029CD4C */ void create(s32);
+};
+
+// build JASDriver (JASDriver) False/False
+/* top-level dependencies (begin JASDriver) */
+/* top-level dependencies (end JASDriver) */
+struct JASDriver {
+	/* 8029E130 */ void setDSPLevel(f32);
+	/* 8029E178 */ void setOutputMode(u32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
+};
+
+// build JKRThreadSwitch (JKRThreadSwitch) False/False
+// build JKRThread (JKRThread) False/False
+/* top-level dependencies (begin JKRThread) */
+/* top-level dependencies (end JKRThread) */
+struct JKRThread {
+};
+
+/* top-level dependencies (begin JKRThreadSwitch) */
+// outer dependency: JKRThread
+/* top-level dependencies (end JKRThreadSwitch) */
+struct JKRThreadSwitch {
+	// JKRThread
+	/* 802D1A70 */ void enter(JKRThread*, s32);
+};
+
+// build JKRThread (JKRThread) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18JAU_JASInitializerFv();
-extern "C" extern void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
-extern "C" extern void __ct__18JAU_JAIInitializerFv();
-extern "C" extern void initJAInterface__18JAU_JAIInitializerFv();
+
+extern "C" void __ct__18JAU_JASInitializerFv();
+extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
+extern "C" void __ct__18JAU_JAIInitializerFv();
+extern "C" void initJAInterface__18JAU_JAIInitializerFv();
 SECTION_BSS extern u8 JAUInitializer__lit_757[12];
 SECTION_BSS extern u8 JAUInitializer__lit_763[12];
 SECTION_BSS extern u8 JAUInitializer__lit_855[12];
@@ -25,31 +134,44 @@ SECTION_SDATA2 extern f32 JAUInitializer__lit_730;
 // External References:
 // 
 
-extern "C" extern void getThreadPointer__6JASDvdFv();
-extern "C" extern void createThread__6JASDvdFliUl();
-extern "C" extern void __ct__17JASGenericMemPoolFv();
-extern "C" extern void newMemPool__17JASGenericMemPoolFUli();
-extern "C" extern void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
-extern "C" extern void setupAramHeap__9JASKernelFUlUl();
-extern "C" extern void func_802932E0();
-extern "C" extern void func_80293334();
-extern "C" extern void initSystem__13JASAramStreamFUlUl();
-extern "C" extern void setCurrentDir__16JASWaveArcLoaderFPCc();
-extern "C" extern void create__14JASAudioThreadFl();
-extern "C" extern void setDSPLevel__9JASDriverFf();
-extern "C" extern void setOutputMode__9JASDriverFUl();
-extern "C" extern void func_8029FC34();
-extern "C" extern void func_802A1268();
-extern "C" extern void func_802A1AF4();
-extern "C" extern void func_802A3E68();
-extern "C" extern void getFreeSize__7JKRHeapFv();
-extern "C" extern void enter__15JKRThreadSwitchFP9JKRThreadi();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void OSGetSoundMode();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+extern "C" void func_802932E0();
+extern "C" void func_80293334();
+extern "C" void func_8029FC34();
+extern "C" void func_802A1268();
+extern "C" void func_802A1AF4();
+extern "C" void func_802A3E68();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSGetSoundMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void createThread__6JASDvdFliUl();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void newMemPool__17JASGenericMemPoolFUli();
+extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
+extern "C" void setupAramHeap__9JASKernelFUlUl();
+extern "C" void func_802932E0();
+extern "C" void func_80293334();
+extern "C" void initSystem__13JASAramStreamFUlUl();
+extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc();
+extern "C" void create__14JASAudioThreadFl();
+extern "C" void setDSPLevel__9JASDriverFf();
+extern "C" void setOutputMode__9JASDriverFUl();
+extern "C" void func_8029FC34();
+extern "C" void func_802A1268();
+extern "C" void func_802A1AF4();
+extern "C" void func_802A3E68();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSGetSoundMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 data_80431AF4[16];
 SECTION_BSS extern u8 data_80431B04[16 + 4 /* padding */];
 SECTION_BSS extern u8 data_80434084[16 + 4 /* padding */];
@@ -71,15 +193,15 @@ SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 80455810-80455818 0004+04 .sdata2    @730                                                         */
+/* 80455810-80455818 0004+04 rc=1 efc=0 .sdata2    @730                                                         */
 f32 JAUInitializer__lit_730 = 1.0f;
 /* padding 4 bytes */
 
-/* 802A4AD0-802A4B28 0058+00 .text      __ct__18JAU_JASInitializerFv                                 */
+/* 802A4AD0-802A4B28 0058+00 rc=1 efc=1 .text      __ct__18JAU_JASInitializerFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18JAU_JASInitializerFv) {
+asm JAU_JASInitializer::JAU_JASInitializer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUInitializer/__ct__18JAU_JASInitializerFv.s"
 }
@@ -87,39 +209,39 @@ ASM_FUNCTION(__ct__18JAU_JASInitializerFv) {
 
 
 /* ############################################################################################## */
-/* 80434110-8043411C 000C+00 .bss       @757                                                         */
+/* 80434110-8043411C 000C+00 rc=2 efc=0 .bss       @757                                                         */
 u8 JAUInitializer__lit_757[12];
 
-/* 8043411C-80434128 000C+00 .bss       @763                                                         */
+/* 8043411C-80434128 000C+00 rc=1 efc=0 .bss       @763                                                         */
 u8 JAUInitializer__lit_763[12];
 
-/* 802A4B28-802A4D3C 0214+00 .text      initJASystem__18JAU_JASInitializerFP12JKRSolidHeap           */
+/* 802A4B28-802A4D3C 0214+00 rc=1 efc=1 .text      initJASystem__18JAU_JASInitializerFP12JKRSolidHeap           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initJASystem__18JAU_JASInitializerFP12JKRSolidHeap) {
+asm void JAU_JASInitializer::initJASystem(JKRSolidHeap* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUInitializer/initJASystem__18JAU_JASInitializerFP12JKRSolidHeap.s"
 }
 #pragma pop
 
 
-/* 802A4D3C-802A4D60 0024+00 .text      __ct__18JAU_JAIInitializerFv                                 */
+/* 802A4D3C-802A4D60 0024+00 rc=1 efc=1 .text      __ct__18JAU_JAIInitializerFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18JAU_JAIInitializerFv) {
+asm JAU_JAIInitializer::JAU_JAIInitializer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUInitializer/__ct__18JAU_JAIInitializerFv.s"
 }
 #pragma pop
 
 
-/* 802A4D60-802A4EE8 0188+00 .text      initJAInterface__18JAU_JAIInitializerFv                      */
+/* 802A4D60-802A4EE8 0188+00 rc=1 efc=1 .text      initJAInterface__18JAU_JAIInitializerFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initJAInterface__18JAU_JAIInitializerFv) {
+asm void JAU_JAIInitializer::initJAInterface() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUInitializer/initJAInterface__18JAU_JAIInitializerFv.s"
 }
@@ -127,15 +249,15 @@ ASM_FUNCTION(initJAInterface__18JAU_JAIInitializerFv) {
 
 
 /* ############################################################################################## */
-/* 80434128-80434134 000C+00 .bss       @855                                                         */
+/* 80434128-80434134 000C+00 rc=0 efc=0 .bss       @855                                                         */
 u8 JAUInitializer__lit_855[12];
 
-/* 80434134-80434140 000C+00 .bss       @859                                                         */
+/* 80434134-80434140 000C+00 rc=0 efc=0 .bss       @859                                                         */
 u8 lit_859[12];
 
-/* 80434140-8043414C 000C+00 .bss       @863                                                         */
+/* 80434140-8043414C 000C+00 rc=0 efc=0 .bss       @863                                                         */
 u8 lit_863[12];
 
-/* 8043414C-804341B8 000C+60 .bss       @867                                                         */
+/* 8043414C-804341B8 000C+60 rc=0 efc=0 .bss       @867                                                         */
 u8 JAUInitializer__lit_867[12 + 96 /* padding */];
 

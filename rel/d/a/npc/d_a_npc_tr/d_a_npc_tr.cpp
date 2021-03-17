@@ -6,21 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct npc_tr_class;
+
+struct daNPC_TR_HIO_c {
+	daNPC_TR_HIO_c();
+	~daNPC_TR_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct npc_tr_class {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNPC_TR_HIO_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNPC_TR_Draw__FP12npc_tr_class();
-extern "C" extern void npc_tr_move__FP12npc_tr_class();
-extern "C" extern void action__FP12npc_tr_class();
-extern "C" extern void daNPC_TR_Execute__FP12npc_tr_class();
-extern "C" extern void daNPC_TR_IsDelete__FP12npc_tr_class();
-extern "C" extern void daNPC_TR_Delete__FP12npc_tr_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daNPC_TR_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daNPC_TR_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_tr_cpp();
+void nodeCallBack(J3DJoint*, s32);
+void daNPC_TR_Draw(npc_tr_class*);
+void npc_tr_move(npc_tr_class*);
+void action(npc_tr_class*);
+void daNPC_TR_Execute(npc_tr_class*);
+bool daNPC_TR_IsDelete(npc_tr_class*);
+void daNPC_TR_Delete(npc_tr_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNPC_TR_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_tr_cpp();
+
+extern "C" void __ct__14daNPC_TR_HIO_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNPC_TR_Draw__FP12npc_tr_class();
+extern "C" void npc_tr_move__FP12npc_tr_class();
+extern "C" void action__FP12npc_tr_class();
+extern "C" void daNPC_TR_Execute__FP12npc_tr_class();
+extern "C" bool daNPC_TR_IsDelete__FP12npc_tr_class();
+extern "C" void daNPC_TR_Delete__FP12npc_tr_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daNPC_TR_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daNPC_TR_HIO_cFv();
+extern "C" void __sinit_d_a_npc_tr_cpp();
 SECTION_RODATA extern const u32 lit_3768;
 SECTION_RODATA extern const u32 lit_3769;
 SECTION_RODATA extern const u32 lit_3770;
@@ -61,8 +94,11 @@ SECTION_BSS extern u8 l_HIO[28];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -72,7 +108,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNPC_TR_HIO_cFv) {
+asm daNPC_TR_HIO_c::daNPC_TR_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/__ct__14daNPC_TR_HIO_cFv.s"
 }
@@ -83,7 +119,7 @@ ASM_FUNCTION(__ct__14daNPC_TR_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/nodeCallBack__FP8J3DJointi.s"
 }
@@ -94,7 +130,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TR_Draw__FP12npc_tr_class) {
+asm void daNPC_TR_Draw(npc_tr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Draw__FP12npc_tr_class.s"
 }
@@ -105,7 +141,7 @@ ASM_FUNCTION(daNPC_TR_Draw__FP12npc_tr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tr_move__FP12npc_tr_class) {
+asm void npc_tr_move(npc_tr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/npc_tr_move__FP12npc_tr_class.s"
 }
@@ -116,7 +152,7 @@ ASM_FUNCTION(npc_tr_move__FP12npc_tr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12npc_tr_class) {
+asm void action(npc_tr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/action__FP12npc_tr_class.s"
 }
@@ -127,7 +163,7 @@ ASM_FUNCTION(action__FP12npc_tr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TR_Execute__FP12npc_tr_class) {
+asm void daNPC_TR_Execute(npc_tr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Execute__FP12npc_tr_class.s"
 }
@@ -135,21 +171,16 @@ ASM_FUNCTION(daNPC_TR_Execute__FP12npc_tr_class) {
 
 
 /* 80B262D0-80B262D8 0008+00 .text      daNPC_TR_IsDelete__FP12npc_tr_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TR_IsDelete__FP12npc_tr_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_IsDelete__FP12npc_tr_class.s"
+bool daNPC_TR_IsDelete(npc_tr_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B262D8-80B2632C 0054+00 .text      daNPC_TR_Delete__FP12npc_tr_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TR_Delete__FP12npc_tr_class) {
+asm void daNPC_TR_Delete(npc_tr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Delete__FP12npc_tr_class.s"
 }
@@ -160,7 +191,7 @@ ASM_FUNCTION(daNPC_TR_Delete__FP12npc_tr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -171,7 +202,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TR_Create__FP10fopAc_ac_c) {
+asm void daNPC_TR_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_Create__FP10fopAc_ac_c.s"
 }
@@ -182,7 +213,7 @@ ASM_FUNCTION(daNPC_TR_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNPC_TR_HIO_cFv) {
+asm daNPC_TR_HIO_c::~daNPC_TR_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/__dt__14daNPC_TR_HIO_cFv.s"
 }
@@ -193,7 +224,7 @@ ASM_FUNCTION(__dt__14daNPC_TR_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_tr_cpp) {
+extern "C" asm void __sinit_d_a_npc_tr_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/__sinit_d_a_npc_tr_cpp.s"
 }

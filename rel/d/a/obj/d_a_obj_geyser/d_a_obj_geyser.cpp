@@ -6,55 +6,123 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjGeyser_c;
+
+struct daObjGeyser_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void actionOff2Init();
+	void actionOff2();
+	void actionOnWait2Init();
+	void actionOnWait2();
+	void actionOn2Init();
+	void actionOn2();
+	void actionDisappearInit(u8);
+	void actionDisappear();
+	void actionOffInit();
+	void actionOff();
+	void actionOnWaitInit();
+	void actionOnWait();
+	void actionOnInit();
+	void actionOn();
+	void setPntWind();
+	void cutPntWind();
+	void movePntWind();
+	void Draw();
+	void setEmitterPre00();
+	void setEmitterSrc00Sand();
+	void setEmitterSrc01Smk();
+	void stopEmitterPre00();
+	void stopEmitterSrc00Sand();
+	void stopEmitterSrc01Smk();
+	void setEmitterClm00();
+	void setEmitterSmk01();
+	void setEmitterSmk02();
+	void stopEmitterClm00();
+	void stopEmitterSmk01();
+	void stopEmitterSmk02();
+	void Delete();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjGeyser_cFv();
-extern "C" extern void setBaseMtx__13daObjGeyser_cFv();
-extern "C" extern void Create__13daObjGeyser_cFv();
-extern "C" extern void CreateHeap__13daObjGeyser_cFv();
-extern "C" extern void create1st__13daObjGeyser_cFv();
-extern "C" extern void Execute__13daObjGeyser_cFPPA3_A4_f();
-extern "C" extern void action__13daObjGeyser_cFv();
-extern "C" extern void actionOff2Init__13daObjGeyser_cFv();
-extern "C" extern void actionOff2__13daObjGeyser_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void actionOnWait2Init__13daObjGeyser_cFv();
-extern "C" extern void actionOnWait2__13daObjGeyser_cFv();
-extern "C" extern void actionOn2Init__13daObjGeyser_cFv();
-extern "C" extern void actionOn2__13daObjGeyser_cFv();
-extern "C" extern void actionDisappearInit__13daObjGeyser_cFUc();
-extern "C" extern void actionDisappear__13daObjGeyser_cFv();
-extern "C" extern void actionOffInit__13daObjGeyser_cFv();
-extern "C" extern void actionOff__13daObjGeyser_cFv();
-extern "C" extern void actionOnWaitInit__13daObjGeyser_cFv();
-extern "C" extern void actionOnWait__13daObjGeyser_cFv();
-extern "C" extern void actionOnInit__13daObjGeyser_cFv();
-extern "C" extern void actionOn__13daObjGeyser_cFv();
-extern "C" extern void setPntWind__13daObjGeyser_cFv();
-extern "C" extern void cutPntWind__13daObjGeyser_cFv();
-extern "C" extern void movePntWind__13daObjGeyser_cFv();
-extern "C" extern void Draw__13daObjGeyser_cFv();
-extern "C" extern void setEmitterPre00__13daObjGeyser_cFv();
-extern "C" extern void setEmitterSrc00Sand__13daObjGeyser_cFv();
-extern "C" extern void setEmitterSrc01Smk__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterPre00__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterSrc00Sand__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterSrc01Smk__13daObjGeyser_cFv();
-extern "C" extern void setEmitterClm00__13daObjGeyser_cFv();
-extern "C" extern void setEmitterSmk01__13daObjGeyser_cFv();
-extern "C" extern void setEmitterSmk02__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterClm00__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterSmk01__13daObjGeyser_cFv();
-extern "C" extern void stopEmitterSmk02__13daObjGeyser_cFv();
-extern "C" extern void Delete__13daObjGeyser_cFv();
-extern "C" extern void daObjGeyser_create1st__FP13daObjGeyser_c();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjGeyser_MoveBGDelete__FP13daObjGeyser_c();
-extern "C" extern void daObjGeyser_MoveBGExecute__FP13daObjGeyser_c();
-extern "C" extern void daObjGeyser_MoveBGDraw__FP13daObjGeyser_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+extern "C" void Execute__13daObjGeyser_cFPPA3_A4_f();
+void daObjGeyser_create1st(daObjGeyser_c*);
+void daObjGeyser_MoveBGDelete(daObjGeyser_c*);
+void daObjGeyser_MoveBGExecute(daObjGeyser_c*);
+void daObjGeyser_MoveBGDraw(daObjGeyser_c*);
+
+extern "C" void initBaseMtx__13daObjGeyser_cFv();
+extern "C" void setBaseMtx__13daObjGeyser_cFv();
+extern "C" void Create__13daObjGeyser_cFv();
+extern "C" void CreateHeap__13daObjGeyser_cFv();
+extern "C" void create1st__13daObjGeyser_cFv();
+extern "C" void Execute__13daObjGeyser_cFPPA3_A4_f();
+extern "C" void action__13daObjGeyser_cFv();
+extern "C" void actionOff2Init__13daObjGeyser_cFv();
+extern "C" void actionOff2__13daObjGeyser_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void actionOnWait2Init__13daObjGeyser_cFv();
+extern "C" void actionOnWait2__13daObjGeyser_cFv();
+extern "C" void actionOn2Init__13daObjGeyser_cFv();
+extern "C" void actionOn2__13daObjGeyser_cFv();
+extern "C" void actionDisappearInit__13daObjGeyser_cFUc();
+extern "C" void actionDisappear__13daObjGeyser_cFv();
+extern "C" void actionOffInit__13daObjGeyser_cFv();
+extern "C" void actionOff__13daObjGeyser_cFv();
+extern "C" void actionOnWaitInit__13daObjGeyser_cFv();
+extern "C" void actionOnWait__13daObjGeyser_cFv();
+extern "C" void actionOnInit__13daObjGeyser_cFv();
+extern "C" void actionOn__13daObjGeyser_cFv();
+extern "C" void setPntWind__13daObjGeyser_cFv();
+extern "C" void cutPntWind__13daObjGeyser_cFv();
+extern "C" void movePntWind__13daObjGeyser_cFv();
+extern "C" void Draw__13daObjGeyser_cFv();
+extern "C" void setEmitterPre00__13daObjGeyser_cFv();
+extern "C" void setEmitterSrc00Sand__13daObjGeyser_cFv();
+extern "C" void setEmitterSrc01Smk__13daObjGeyser_cFv();
+extern "C" void stopEmitterPre00__13daObjGeyser_cFv();
+extern "C" void stopEmitterSrc00Sand__13daObjGeyser_cFv();
+extern "C" void stopEmitterSrc01Smk__13daObjGeyser_cFv();
+extern "C" void setEmitterClm00__13daObjGeyser_cFv();
+extern "C" void setEmitterSmk01__13daObjGeyser_cFv();
+extern "C" void setEmitterSmk02__13daObjGeyser_cFv();
+extern "C" void stopEmitterClm00__13daObjGeyser_cFv();
+extern "C" void stopEmitterSmk01__13daObjGeyser_cFv();
+extern "C" void stopEmitterSmk02__13daObjGeyser_cFv();
+extern "C" void Delete__13daObjGeyser_cFv();
+extern "C" void daObjGeyser_create1st__FP13daObjGeyser_c();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjGeyser_MoveBGDelete__FP13daObjGeyser_c();
+extern "C" void daObjGeyser_MoveBGExecute__FP13daObjGeyser_c();
+extern "C" void daObjGeyser_MoveBGDraw__FP13daObjGeyser_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_scale[24];
 SECTION_RODATA extern const u32 lit_3758;
@@ -103,7 +171,9 @@ SECTION_DATA extern void*const __vt__13daObjGeyser_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -113,7 +183,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/initBaseMtx__13daObjGeyser_cFv.s"
 }
@@ -124,7 +194,7 @@ ASM_FUNCTION(initBaseMtx__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setBaseMtx__13daObjGeyser_cFv.s"
 }
@@ -135,7 +205,7 @@ ASM_FUNCTION(setBaseMtx__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/Create__13daObjGeyser_cFv.s"
 }
@@ -146,7 +216,7 @@ ASM_FUNCTION(Create__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/CreateHeap__13daObjGeyser_cFv.s"
 }
@@ -157,7 +227,7 @@ ASM_FUNCTION(CreateHeap__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/create1st__13daObjGeyser_cFv.s"
 }
@@ -168,7 +238,7 @@ ASM_FUNCTION(create1st__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjGeyser_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjGeyser_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/Execute__13daObjGeyser_cFPPA3_A4_f.s"
 }
@@ -179,7 +249,7 @@ ASM_FUNCTION(Execute__13daObjGeyser_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/action__13daObjGeyser_cFv.s"
 }
@@ -190,7 +260,7 @@ ASM_FUNCTION(action__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOff2Init__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOff2Init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOff2Init__13daObjGeyser_cFv.s"
 }
@@ -201,7 +271,7 @@ ASM_FUNCTION(actionOff2Init__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOff2__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOff2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOff2__13daObjGeyser_cFv.s"
 }
@@ -212,7 +282,7 @@ ASM_FUNCTION(actionOff2__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/__dt__8cM3dGLinFv.s"
 }
@@ -223,7 +293,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWait2Init__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOnWait2Init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOnWait2Init__13daObjGeyser_cFv.s"
 }
@@ -234,7 +304,7 @@ ASM_FUNCTION(actionOnWait2Init__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWait2__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOnWait2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOnWait2__13daObjGeyser_cFv.s"
 }
@@ -245,7 +315,7 @@ ASM_FUNCTION(actionOnWait2__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOn2Init__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOn2Init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOn2Init__13daObjGeyser_cFv.s"
 }
@@ -256,7 +326,7 @@ ASM_FUNCTION(actionOn2Init__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOn2__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOn2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOn2__13daObjGeyser_cFv.s"
 }
@@ -267,7 +337,7 @@ ASM_FUNCTION(actionOn2__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDisappearInit__13daObjGeyser_cFUc) {
+asm void daObjGeyser_c::actionDisappearInit(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionDisappearInit__13daObjGeyser_cFUc.s"
 }
@@ -278,7 +348,7 @@ ASM_FUNCTION(actionDisappearInit__13daObjGeyser_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDisappear__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionDisappear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionDisappear__13daObjGeyser_cFv.s"
 }
@@ -289,7 +359,7 @@ ASM_FUNCTION(actionDisappear__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOffInit__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOffInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOffInit__13daObjGeyser_cFv.s"
 }
@@ -300,7 +370,7 @@ ASM_FUNCTION(actionOffInit__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOff__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOff() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOff__13daObjGeyser_cFv.s"
 }
@@ -311,7 +381,7 @@ ASM_FUNCTION(actionOff__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWaitInit__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOnWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOnWaitInit__13daObjGeyser_cFv.s"
 }
@@ -322,7 +392,7 @@ ASM_FUNCTION(actionOnWaitInit__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWait__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOnWait__13daObjGeyser_cFv.s"
 }
@@ -333,7 +403,7 @@ ASM_FUNCTION(actionOnWait__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnInit__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOnInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOnInit__13daObjGeyser_cFv.s"
 }
@@ -344,7 +414,7 @@ ASM_FUNCTION(actionOnInit__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOn__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::actionOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/actionOn__13daObjGeyser_cFv.s"
 }
@@ -355,7 +425,7 @@ ASM_FUNCTION(actionOn__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPntWind__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setPntWind__13daObjGeyser_cFv.s"
 }
@@ -366,7 +436,7 @@ ASM_FUNCTION(setPntWind__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutPntWind__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::cutPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/cutPntWind__13daObjGeyser_cFv.s"
 }
@@ -377,7 +447,7 @@ ASM_FUNCTION(cutPntWind__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(movePntWind__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::movePntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/movePntWind__13daObjGeyser_cFv.s"
 }
@@ -388,7 +458,7 @@ ASM_FUNCTION(movePntWind__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/Draw__13daObjGeyser_cFv.s"
 }
@@ -399,7 +469,7 @@ ASM_FUNCTION(Draw__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEmitterPre00__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setEmitterPre00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterPre00__13daObjGeyser_cFv.s"
 }
@@ -407,21 +477,16 @@ ASM_FUNCTION(setEmitterPre00__13daObjGeyser_cFv) {
 
 
 /* 80BF89AC-80BF89B0 0004+00 .text      setEmitterSrc00Sand__13daObjGeyser_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setEmitterSrc00Sand__13daObjGeyser_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterSrc00Sand__13daObjGeyser_cFv.s"
+void daObjGeyser_c::setEmitterSrc00Sand() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BF89B0-80BF8A54 00A4+00 .text      setEmitterSrc01Smk__13daObjGeyser_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEmitterSrc01Smk__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setEmitterSrc01Smk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterSrc01Smk__13daObjGeyser_cFv.s"
 }
@@ -432,7 +497,7 @@ ASM_FUNCTION(setEmitterSrc01Smk__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterPre00__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterPre00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterPre00__13daObjGeyser_cFv.s"
 }
@@ -443,7 +508,7 @@ ASM_FUNCTION(stopEmitterPre00__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterSrc00Sand__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterSrc00Sand() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterSrc00Sand__13daObjGeyser_cFv.s"
 }
@@ -454,7 +519,7 @@ ASM_FUNCTION(stopEmitterSrc00Sand__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterSrc01Smk__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterSrc01Smk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterSrc01Smk__13daObjGeyser_cFv.s"
 }
@@ -465,7 +530,7 @@ ASM_FUNCTION(stopEmitterSrc01Smk__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEmitterClm00__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setEmitterClm00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterClm00__13daObjGeyser_cFv.s"
 }
@@ -476,7 +541,7 @@ ASM_FUNCTION(setEmitterClm00__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEmitterSmk01__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setEmitterSmk01() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterSmk01__13daObjGeyser_cFv.s"
 }
@@ -487,7 +552,7 @@ ASM_FUNCTION(setEmitterSmk01__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEmitterSmk02__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::setEmitterSmk02() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/setEmitterSmk02__13daObjGeyser_cFv.s"
 }
@@ -498,7 +563,7 @@ ASM_FUNCTION(setEmitterSmk02__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterClm00__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterClm00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterClm00__13daObjGeyser_cFv.s"
 }
@@ -509,7 +574,7 @@ ASM_FUNCTION(stopEmitterClm00__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterSmk01__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterSmk01() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterSmk01__13daObjGeyser_cFv.s"
 }
@@ -520,7 +585,7 @@ ASM_FUNCTION(stopEmitterSmk01__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopEmitterSmk02__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::stopEmitterSmk02() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/stopEmitterSmk02__13daObjGeyser_cFv.s"
 }
@@ -531,7 +596,7 @@ ASM_FUNCTION(stopEmitterSmk02__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjGeyser_cFv) {
+asm void daObjGeyser_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/Delete__13daObjGeyser_cFv.s"
 }
@@ -542,7 +607,7 @@ ASM_FUNCTION(Delete__13daObjGeyser_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGeyser_create1st__FP13daObjGeyser_c) {
+asm void daObjGeyser_create1st(daObjGeyser_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/daObjGeyser_create1st__FP13daObjGeyser_c.s"
 }
@@ -553,7 +618,7 @@ ASM_FUNCTION(daObjGeyser_create1st__FP13daObjGeyser_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/__dt__8cM3dGAabFv.s"
 }
@@ -564,7 +629,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/__dt__10dCcD_GSttsFv.s"
 }
@@ -575,7 +640,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGeyser_MoveBGDelete__FP13daObjGeyser_c) {
+asm void daObjGeyser_MoveBGDelete(daObjGeyser_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/daObjGeyser_MoveBGDelete__FP13daObjGeyser_c.s"
 }
@@ -586,7 +651,7 @@ ASM_FUNCTION(daObjGeyser_MoveBGDelete__FP13daObjGeyser_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGeyser_MoveBGExecute__FP13daObjGeyser_c) {
+asm void daObjGeyser_MoveBGExecute(daObjGeyser_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/daObjGeyser_MoveBGExecute__FP13daObjGeyser_c.s"
 }
@@ -597,7 +662,7 @@ ASM_FUNCTION(daObjGeyser_MoveBGExecute__FP13daObjGeyser_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGeyser_MoveBGDraw__FP13daObjGeyser_c) {
+asm void daObjGeyser_MoveBGDraw(daObjGeyser_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/daObjGeyser_MoveBGDraw__FP13daObjGeyser_c.s"
 }
@@ -608,7 +673,7 @@ ASM_FUNCTION(daObjGeyser_MoveBGDraw__FP13daObjGeyser_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_geyser/d_a_obj_geyser/__dt__10cCcD_GSttsFv.s"
 }

@@ -6,104 +6,222 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DMaterialAnm (J3DMaterialAnm) False/False
+// build J3DTexNoAnm (J3DTexNoAnm) False/False
+/* top-level dependencies (begin J3DTexNoAnm) */
+/* top-level dependencies (end J3DTexNoAnm) */
+struct J3DTexNoAnm {
+};
+
+// build J3DTexMtxAnm (J3DTexMtxAnm) False/False
+/* top-level dependencies (begin J3DTexMtxAnm) */
+/* top-level dependencies (end J3DTexMtxAnm) */
+struct J3DTexMtxAnm {
+};
+
+// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
+/* top-level dependencies (begin J3DTevKColorAnm) */
+/* top-level dependencies (end J3DTevKColorAnm) */
+struct J3DTevKColorAnm {
+};
+
+// build J3DMaterial (J3DMaterial) False/False
+/* top-level dependencies (begin J3DMaterial) */
+/* top-level dependencies (end J3DMaterial) */
+struct J3DMaterial {
+};
+
+// build J3DMatColorAnm (J3DMatColorAnm) False/False
+/* top-level dependencies (begin J3DMatColorAnm) */
+/* top-level dependencies (end J3DMatColorAnm) */
+struct J3DMatColorAnm {
+};
+
+// build J3DTevColorAnm (J3DTevColorAnm) False/False
+/* top-level dependencies (begin J3DTevColorAnm) */
+/* top-level dependencies (end J3DTevColorAnm) */
+struct J3DTevColorAnm {
+};
+
+/* top-level dependencies (begin J3DMaterialAnm) */
+// outer dependency: J3DTexNoAnm
+// outer dependency: J3DTexMtxAnm
+// outer dependency: J3DTevKColorAnm
+// outer dependency: J3DMaterial
+// outer dependency: J3DMatColorAnm
+// outer dependency: J3DTevColorAnm
+/* top-level dependencies (end J3DMaterialAnm) */
+struct J3DMaterialAnm {
+	// J3DTexNoAnm
+	// J3DMaterial
+	// J3DTevColorAnm
+	// J3DTexMtxAnm
+	// J3DTevKColorAnm
+	// J3DMatColorAnm
+	/* 800A4820 */ ~J3DMaterialAnm();
+	/* 8032C320 */ void initialize();
+	/* 8032C3C4 */ void calc(J3DMaterial*) const;
+	/* 8032C5A4 */ void setMatColorAnm(s32, J3DMatColorAnm*);
+	/* 8032C5E4 */ void setTexMtxAnm(s32, J3DTexMtxAnm*);
+	/* 8032C624 */ void setTexNoAnm(s32, J3DTexNoAnm*);
+	/* 8032C664 */ void setTevColorAnm(s32, J3DTevColorAnm*);
+	/* 8032C6A4 */ void setTevKColorAnm(s32, J3DTevKColorAnm*);
+};
+
+// build J3DMaterial (J3DMaterial) True/True
+// build J3DMatColorAnm (J3DMatColorAnm) True/True
+// build J3DTexMtxAnm (J3DTexMtxAnm) True/True
+// build J3DTexNoAnm (J3DTexNoAnm) True/True
+// build J3DTevColorAnm (J3DTevColorAnm) True/True
+// build J3DTevKColorAnm (J3DTevKColorAnm) True/True
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
+};
+
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+// outer dependency: J3DTextureSRTInfo
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+	// J3DTextureSRTInfo
+	/* 80329F14 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
+};
+
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) True/True
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build _GXColorS10 (_GXColorS10) False/False
+/* top-level dependencies (begin _GXColorS10) */
+/* top-level dependencies (end _GXColorS10) */
+struct _GXColorS10 {
+};
+
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+// outer dependency: _GXColor
+// outer dependency: _GXColorS10
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+	// _GXColor
+	// _GXColorS10
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B4BC */ void getTevKonstReg(u16, _GXColor*) const;
+};
+
+// build _GXColorS10 (_GXColorS10) True/True
+// build _GXColor (_GXColor) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void initialize__14J3DMaterialAnmFv();
-extern "C" extern void calc__14J3DMaterialAnmCFP11J3DMaterial();
-extern "C" extern void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
-extern "C" extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
-extern "C" extern void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
-extern "C" extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
-extern "C" extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial();
+extern "C" void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
 SECTION_DATA extern void*const __vt__14J3DMaterialAnm[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__14J3DMaterialAnmFv();
-extern "C" extern void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
-extern "C" extern void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
-extern "C" extern void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+
+extern "C" void __dt__14J3DMaterialAnmFv();
+extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:
 // 
 
-/* 8032C320-8032C3C4 00A4+00 .text      initialize__14J3DMaterialAnmFv                               */
+/* 8032C320-8032C3C4 00A4+00 rc=5 efc=5 .text      initialize__14J3DMaterialAnmFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__14J3DMaterialAnmFv) {
+asm void J3DMaterialAnm::initialize() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/initialize__14J3DMaterialAnmFv.s"
 }
 #pragma pop
 
 
-/* 8032C3C4-8032C5A4 01E0+00 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
+/* 8032C3C4-8032C5A4 01E0+00 rc=5 efc=4 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__14J3DMaterialAnmCFP11J3DMaterial) {
+asm void J3DMaterialAnm::calc(J3DMaterial* field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/calc__14J3DMaterialAnmCFP11J3DMaterial.s"
 }
 #pragma pop
 
 
-/* 8032C5A4-8032C5E4 0040+00 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          */
+/* 8032C5A4-8032C5E4 0040+00 rc=2 efc=2 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm) {
+asm void J3DMaterialAnm::setMatColorAnm(s32 field_0, J3DMatColorAnm* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm.s"
 }
 #pragma pop
 
 
-/* 8032C5E4-8032C624 0040+00 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              */
+/* 8032C5E4-8032C624 0040+00 rc=3 efc=3 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm) {
+asm void J3DMaterialAnm::setTexMtxAnm(s32 field_0, J3DTexMtxAnm* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm.s"
 }
 #pragma pop
 
 
-/* 8032C624-8032C664 0040+00 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                */
+/* 8032C624-8032C664 0040+00 rc=2 efc=2 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm) {
+asm void J3DMaterialAnm::setTexNoAnm(s32 field_0, J3DTexNoAnm* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm.s"
 }
 #pragma pop
 
 
-/* 8032C664-8032C6A4 0040+00 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          */
+/* 8032C664-8032C6A4 0040+00 rc=3 efc=3 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm) {
+asm void J3DMaterialAnm::setTevColorAnm(s32 field_0, J3DTevColorAnm* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm.s"
 }
 #pragma pop
 
 
-/* 8032C6A4-8032C6E4 0040+00 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        */
+/* 8032C6A4-8032C6E4 0040+00 rc=3 efc=3 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm) {
+asm void J3DMaterialAnm::setTevKColorAnm(s32 field_0, J3DTevKColorAnm* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMaterialAnm/setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm.s"
 }
@@ -111,7 +229,7 @@ ASM_FUNCTION(setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm) {
 
 
 /* ############################################################################################## */
-/* 803CEE60-803CEE70 0010+00 .data      __vt__14J3DMaterialAnm                                       */
+/* 803CEE60-803CEE70 0010+00 rc=10 efc=10 .data      __vt__14J3DMaterialAnm                                       */
 void* const __vt__14J3DMaterialAnm[4] = {
 	NULL, /* RTTI */
 	NULL,

@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
 
 // 
@@ -16,11 +17,13 @@ SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 803A9C70-803AB608 1998+00 .data      dist_table__12dAttention_c                                   */
+/* ############################################################################################## */
+/* 803A9C70-803AB608 1998+00 rc=5 efc=5 .data      dist_table__12dAttention_c                                   */
 u8 dist_table__12dAttention_c[6552] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3C, 0x23, 0xD7, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x43, 0x7A, 0x00, 0x00,

@@ -9,69 +9,91 @@
 // Forward References:
 // 
 
-extern "C" extern void FormatCallback();
-extern "C" extern void __CARDFormatRegionAsync();
-extern "C" extern void CARDFormat();
+extern "C" static void FormatCallback();
+extern "C" static void __CARDFormatRegionAsync();
+extern "C" void CARDFormat();
+
+extern "C" static void FormatCallback();
+extern "C" static void __CARDFormatRegionAsync();
+extern "C" void CARDFormat();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void memcpy();
-extern "C" extern void DCStoreRange();
-extern "C" extern void __OSLockSram();
-extern "C" extern void __OSLockSramEx();
-extern "C" extern void __OSUnlockSram();
-extern "C" extern void __OSUnlockSramEx();
-extern "C" extern void OSGetTime();
-extern "C" extern void __CARDDefaultApiCallback();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDEraseSector();
-extern "C" extern void __CARDGetFontEncode();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDWrite();
-extern "C" extern void __CARDCheckSum();
-extern "C" extern void __shr2i();
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void DCStoreRange();
+extern "C" void __OSLockSram();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSram();
+extern "C" void __OSUnlockSramEx();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDGetFontEncode();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDWrite();
+extern "C" void __CARDCheckSum();
+extern "C" void __shr2i();
+
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void DCStoreRange();
+extern "C" void __OSLockSram();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSram();
+extern "C" void __OSUnlockSramEx();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDGetFontEncode();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDWrite();
+extern "C" void __CARDCheckSum();
+extern "C" void __shr2i();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 80357484-803575C8 0144+00 .text      FormatCallback                                               */
+/* 80357484-803575C8 0144+00 rc=1 efc=0 .text      FormatCallback                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(FormatCallback) {
+extern "C" asm static void FormatCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/FormatCallback.s"
 }
 #pragma pop
 
 
-/* 803575C8-80357C20 0658+00 .text      __CARDFormatRegionAsync                                      */
+/* 803575C8-80357C20 0658+00 rc=1 efc=0 .text      __CARDFormatRegionAsync                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDFormatRegionAsync) {
+extern "C" asm static void __CARDFormatRegionAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/__CARDFormatRegionAsync.s"
 }
 #pragma pop
 
 
-/* 80357C20-80357C74 0054+00 .text      CARDFormat                                                   */
+/* 80357C20-80357C74 0054+00 rc=1 efc=1 .text      CARDFormat                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDFormat) {
+extern "C" asm void CARDFormat() {
 	nofralloc
 #include "asm/dolphin/card/CARDFormat/CARDFormat.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

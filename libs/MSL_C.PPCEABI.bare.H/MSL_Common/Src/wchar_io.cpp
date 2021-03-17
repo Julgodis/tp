@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void fwide();
+extern "C" void fwide();
+
+extern "C" void fwide();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80369114-8036919C 0088+00 .text      fwide                                                        */
+/* 80369114-8036919C 0088+00 rc=5 efc=5 .text      fwide                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fwide) {
+extern "C" asm void fwide() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/wchar_io/fwide.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

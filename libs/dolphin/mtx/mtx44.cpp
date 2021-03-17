@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void C_MTXPerspective();
-extern "C" extern void C_MTXOrtho();
+extern "C" void C_MTXPerspective();
+extern "C" void C_MTXOrtho();
+
+extern "C" void C_MTXPerspective();
+extern "C" void C_MTXOrtho();
 SECTION_SDATA2 extern f32 mtx44__lit_99;
 SECTION_SDATA2 extern f32 mtx44__lit_100;
 SECTION_SDATA2 extern u8 mtx44__lit_101[4];
@@ -22,53 +25,54 @@ SECTION_SDATA2 extern f32 mtx44__lit_106;
 // External References:
 // 
 
-extern "C" extern void tanf();
+extern "C" void tanf();
+
+extern "C" void tanf();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456528-8045652C 0004+00 .sdata2    @99                                                          */
+/* 80456528-8045652C 0004+00 rc=2 efc=0 .sdata2    @99                                                          */
 f32 mtx44__lit_99 = 1.0f;
 
-/* 8045652C-80456530 0004+00 .sdata2    @100                                                         */
+/* 8045652C-80456530 0004+00 rc=1 efc=0 .sdata2    @100                                                         */
 f32 mtx44__lit_100 = 2.0f;
 
-/* 80456530-80456534 0004+00 .sdata2    @101                                                         */
+/* 80456530-80456534 0004+00 rc=2 efc=0 .sdata2    @101                                                         */
 u8 mtx44__lit_101[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456534-80456538 0004+00 .sdata2    @102                                                         */
+/* 80456534-80456538 0004+00 rc=2 efc=0 .sdata2    @102                                                         */
 f32 mtx44__lit_102 = -1.0f;
 
-/* 80456538-8045653C 0004+00 .sdata2    @105                                                         */
+/* 80456538-8045653C 0004+00 rc=1 efc=0 .sdata2    @105                                                         */
 f32 mtx44__lit_105 = 0.5f;
 
-/* 8045653C-80456540 0004+00 .sdata2    @106                                                         */
+/* 8045653C-80456540 0004+00 rc=1 efc=0 .sdata2    @106                                                         */
 f32 mtx44__lit_106 = 0.01745329238474369f;
 
-/* 80346F28-80346FF8 00D0+00 .text      C_MTXPerspective                                             */
+/* 80346F28-80346FF8 00D0+00 rc=6 efc=6 .text      C_MTXPerspective                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_MTXPerspective) {
+extern "C" asm void C_MTXPerspective() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx44/C_MTXPerspective.s"
 }
 #pragma pop
 
 
-/* 80346FF8-80347090 0098+00 .text      C_MTXOrtho                                                   */
+/* 80346FF8-80347090 0098+00 rc=11 efc=11 .text      C_MTXOrtho                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_MTXOrtho) {
+extern "C" asm void C_MTXOrtho() {
 	nofralloc
 #include "asm/dolphin/mtx/mtx44/C_MTXOrtho.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

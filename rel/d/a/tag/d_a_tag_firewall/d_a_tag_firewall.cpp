@@ -6,23 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_FWall_c;
+
+struct daTag_FWall_c {
+	void execute();
+	bool _delete();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTag_FWall_Draw__FP13daTag_FWall_c();
-extern "C" extern void execute__13daTag_FWall_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daTag_FWall_Execute__FP13daTag_FWall_c();
-extern "C" extern void _delete__13daTag_FWall_cFv();
-extern "C" extern void daTag_FWall_IsDelete__FP13daTag_FWall_c();
-extern "C" extern void daTag_FWall_Delete__FP13daTag_FWall_c();
-extern "C" extern void create__13daTag_FWall_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daTag_FWall_Create__FP13daTag_FWall_c();
+bool daTag_FWall_Draw(daTag_FWall_c*);
+void daTag_FWall_Execute(daTag_FWall_c*);
+void daTag_FWall_IsDelete(daTag_FWall_c*);
+bool daTag_FWall_Delete(daTag_FWall_c*);
+void daTag_FWall_Create(daTag_FWall_c*);
+
+extern "C" bool daTag_FWall_Draw__FP13daTag_FWall_c();
+extern "C" void execute__13daTag_FWall_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daTag_FWall_Execute__FP13daTag_FWall_c();
+extern "C" bool _delete__13daTag_FWall_cFv();
+extern "C" void daTag_FWall_IsDelete__FP13daTag_FWall_c();
+extern "C" bool daTag_FWall_Delete__FP13daTag_FWall_c();
+extern "C" void create__13daTag_FWall_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void daTag_FWall_Create__FP13daTag_FWall_c();
 SECTION_RODATA extern const u8 lit_3983[4];
 SECTION_RODATA extern const u32 lit_3984;
 SECTION_RODATA extern const u32 lit_3985;
@@ -45,28 +81,25 @@ SECTION_BSS extern u8 data_80D595C4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 80D58938-80D58940 0008+00 .text      daTag_FWall_Draw__FP13daTag_FWall_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_FWall_Draw__FP13daTag_FWall_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Draw__FP13daTag_FWall_c.s"
+bool daTag_FWall_Draw(daTag_FWall_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D58940-80D5901C 06DC+00 .text      execute__13daTag_FWall_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTag_FWall_cFv) {
+asm void daTag_FWall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/execute__13daTag_FWall_cFv.s"
 }
@@ -77,7 +110,7 @@ ASM_FUNCTION(execute__13daTag_FWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__dt__4cXyzFv.s"
 }
@@ -88,7 +121,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_FWall_Execute__FP13daTag_FWall_c) {
+asm void daTag_FWall_Execute(daTag_FWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Execute__FP13daTag_FWall_c.s"
 }
@@ -96,21 +129,16 @@ ASM_FUNCTION(daTag_FWall_Execute__FP13daTag_FWall_c) {
 
 
 /* 80D59078-80D59080 0008+00 .text      _delete__13daTag_FWall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__13daTag_FWall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/_delete__13daTag_FWall_cFv.s"
+bool daTag_FWall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D59080-80D590A0 0020+00 .text      daTag_FWall_IsDelete__FP13daTag_FWall_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_FWall_IsDelete__FP13daTag_FWall_c) {
+asm void daTag_FWall_IsDelete(daTag_FWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_IsDelete__FP13daTag_FWall_c.s"
 }
@@ -118,21 +146,16 @@ ASM_FUNCTION(daTag_FWall_IsDelete__FP13daTag_FWall_c) {
 
 
 /* 80D590A0-80D590A8 0008+00 .text      daTag_FWall_Delete__FP13daTag_FWall_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_FWall_Delete__FP13daTag_FWall_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Delete__FP13daTag_FWall_c.s"
+bool daTag_FWall_Delete(daTag_FWall_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D590A8-80D592D0 0228+00 .text      create__13daTag_FWall_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTag_FWall_cFv) {
+asm void daTag_FWall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/create__13daTag_FWall_cFv.s"
 }
@@ -143,7 +166,7 @@ ASM_FUNCTION(create__13daTag_FWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__dt__8dCcD_SphFv.s"
 }
@@ -154,7 +177,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__ct__8dCcD_SphFv.s"
 }
@@ -165,7 +188,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__dt__8cM3dGSphFv.s"
 }
@@ -176,7 +199,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__dt__8cM3dGAabFv.s"
 }
@@ -184,21 +207,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80D594B0-80D594B4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D594B4-80D594D4 0020+00 .text      daTag_FWall_Create__FP13daTag_FWall_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_FWall_Create__FP13daTag_FWall_c) {
+asm void daTag_FWall_Create(daTag_FWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_firewall/d_a_tag_firewall/daTag_FWall_Create__FP13daTag_FWall_c.s"
 }

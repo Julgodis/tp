@@ -6,31 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daLv6Lblock_c;
+struct fopAc_ac_c;
+
+struct daLv6Lblock_HIO_c {
+	daLv6Lblock_HIO_c();
+	~daLv6Lblock_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6Lblock_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void isSwitch();
+	void moveBlock();
+	void init_modeWait();
+	void modeWait();
+	void init_modeLiftUp();
+	void modeLiftUp();
+	void init_modeLiftDown();
+	void modeLiftDown();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daLv6Lblock_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daLv6Lblock_cFv();
-extern "C" extern void CreateHeap__13daLv6Lblock_cFv();
-extern "C" extern void create__13daLv6Lblock_cFv();
-extern "C" extern void isSwitch__13daLv6Lblock_cFv();
-extern "C" extern void Execute__13daLv6Lblock_cFPPA3_A4_f();
-extern "C" extern void moveBlock__13daLv6Lblock_cFv();
-extern "C" extern void init_modeWait__13daLv6Lblock_cFv();
-extern "C" extern void modeWait__13daLv6Lblock_cFv();
-extern "C" extern void init_modeLiftUp__13daLv6Lblock_cFv();
-extern "C" extern void modeLiftUp__13daLv6Lblock_cFv();
-extern "C" extern void init_modeLiftDown__13daLv6Lblock_cFv();
-extern "C" extern void modeLiftDown__13daLv6Lblock_cFv();
-extern "C" extern void Draw__13daLv6Lblock_cFv();
-extern "C" extern void Delete__13daLv6Lblock_cFv();
-extern "C" extern void daLv6Lblock_Draw__FP13daLv6Lblock_c();
-extern "C" extern void daLv6Lblock_Execute__FP13daLv6Lblock_c();
-extern "C" extern void daLv6Lblock_Delete__FP13daLv6Lblock_c();
-extern "C" extern void daLv6Lblock_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daLv6Lblock_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6Lblock_cpp();
+extern "C" void Execute__13daLv6Lblock_cFPPA3_A4_f();
+void daLv6Lblock_Draw(daLv6Lblock_c*);
+void daLv6Lblock_Execute(daLv6Lblock_c*);
+void daLv6Lblock_Delete(daLv6Lblock_c*);
+void daLv6Lblock_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6Lblock_cpp();
+
+extern "C" void __ct__17daLv6Lblock_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv6Lblock_cFv();
+extern "C" void CreateHeap__13daLv6Lblock_cFv();
+extern "C" void create__13daLv6Lblock_cFv();
+extern "C" void isSwitch__13daLv6Lblock_cFv();
+extern "C" void Execute__13daLv6Lblock_cFPPA3_A4_f();
+extern "C" void moveBlock__13daLv6Lblock_cFv();
+extern "C" void init_modeWait__13daLv6Lblock_cFv();
+extern "C" void modeWait__13daLv6Lblock_cFv();
+extern "C" void init_modeLiftUp__13daLv6Lblock_cFv();
+extern "C" void modeLiftUp__13daLv6Lblock_cFv();
+extern "C" void init_modeLiftDown__13daLv6Lblock_cFv();
+extern "C" void modeLiftDown__13daLv6Lblock_cFv();
+extern "C" void Draw__13daLv6Lblock_cFv();
+extern "C" void Delete__13daLv6Lblock_cFv();
+extern "C" void daLv6Lblock_Draw__FP13daLv6Lblock_c();
+extern "C" void daLv6Lblock_Execute__FP13daLv6Lblock_c();
+extern "C" void daLv6Lblock_Delete__FP13daLv6Lblock_c();
+extern "C" void daLv6Lblock_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daLv6Lblock_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6Lblock_cpp();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u32 lit_3709;
 SECTION_RODATA extern const u32 lit_3777;
@@ -60,8 +102,11 @@ SECTION_BSS extern u8 data_80C73E0C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -71,7 +116,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daLv6Lblock_HIO_cFv) {
+asm daLv6Lblock_HIO_c::daLv6Lblock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/__ct__17daLv6Lblock_HIO_cFv.s"
 }
@@ -82,7 +127,7 @@ ASM_FUNCTION(__ct__17daLv6Lblock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -93,7 +138,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/setBaseMtx__13daLv6Lblock_cFv.s"
 }
@@ -104,7 +149,7 @@ ASM_FUNCTION(setBaseMtx__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/CreateHeap__13daLv6Lblock_cFv.s"
 }
@@ -115,7 +160,7 @@ ASM_FUNCTION(CreateHeap__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/create__13daLv6Lblock_cFv.s"
 }
@@ -126,7 +171,7 @@ ASM_FUNCTION(create__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSwitch__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::isSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/isSwitch__13daLv6Lblock_cFv.s"
 }
@@ -137,7 +182,7 @@ ASM_FUNCTION(isSwitch__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daLv6Lblock_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daLv6Lblock_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/Execute__13daLv6Lblock_cFPPA3_A4_f.s"
 }
@@ -148,7 +193,7 @@ ASM_FUNCTION(Execute__13daLv6Lblock_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveBlock__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::moveBlock() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/moveBlock__13daLv6Lblock_cFv.s"
 }
@@ -159,7 +204,7 @@ ASM_FUNCTION(moveBlock__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/init_modeWait__13daLv6Lblock_cFv.s"
 }
@@ -167,21 +212,16 @@ ASM_FUNCTION(init_modeWait__13daLv6Lblock_cFv) {
 
 
 /* 80C7385C-80C73860 0004+00 .text      modeWait__13daLv6Lblock_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daLv6Lblock_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/modeWait__13daLv6Lblock_cFv.s"
+void daLv6Lblock_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C73860-80C7386C 000C+00 .text      init_modeLiftUp__13daLv6Lblock_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLiftUp__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::init_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/init_modeLiftUp__13daLv6Lblock_cFv.s"
 }
@@ -192,7 +232,7 @@ ASM_FUNCTION(init_modeLiftUp__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLiftUp__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/modeLiftUp__13daLv6Lblock_cFv.s"
 }
@@ -203,7 +243,7 @@ ASM_FUNCTION(modeLiftUp__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLiftDown__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::init_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/init_modeLiftDown__13daLv6Lblock_cFv.s"
 }
@@ -214,7 +254,7 @@ ASM_FUNCTION(init_modeLiftDown__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLiftDown__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/modeLiftDown__13daLv6Lblock_cFv.s"
 }
@@ -225,7 +265,7 @@ ASM_FUNCTION(modeLiftDown__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/Draw__13daLv6Lblock_cFv.s"
 }
@@ -236,7 +276,7 @@ ASM_FUNCTION(Draw__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daLv6Lblock_cFv) {
+asm void daLv6Lblock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/Delete__13daLv6Lblock_cFv.s"
 }
@@ -247,7 +287,7 @@ ASM_FUNCTION(Delete__13daLv6Lblock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6Lblock_Draw__FP13daLv6Lblock_c) {
+asm void daLv6Lblock_Draw(daLv6Lblock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/daLv6Lblock_Draw__FP13daLv6Lblock_c.s"
 }
@@ -258,7 +298,7 @@ ASM_FUNCTION(daLv6Lblock_Draw__FP13daLv6Lblock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6Lblock_Execute__FP13daLv6Lblock_c) {
+asm void daLv6Lblock_Execute(daLv6Lblock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/daLv6Lblock_Execute__FP13daLv6Lblock_c.s"
 }
@@ -269,7 +309,7 @@ ASM_FUNCTION(daLv6Lblock_Execute__FP13daLv6Lblock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6Lblock_Delete__FP13daLv6Lblock_c) {
+asm void daLv6Lblock_Delete(daLv6Lblock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/daLv6Lblock_Delete__FP13daLv6Lblock_c.s"
 }
@@ -280,7 +320,7 @@ ASM_FUNCTION(daLv6Lblock_Delete__FP13daLv6Lblock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6Lblock_Create__FP10fopAc_ac_c) {
+asm void daLv6Lblock_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/daLv6Lblock_Create__FP10fopAc_ac_c.s"
 }
@@ -291,7 +331,7 @@ ASM_FUNCTION(daLv6Lblock_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv6Lblock_HIO_cFv) {
+asm daLv6Lblock_HIO_c::~daLv6Lblock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/__dt__17daLv6Lblock_HIO_cFv.s"
 }
@@ -302,7 +342,7 @@ ASM_FUNCTION(__dt__17daLv6Lblock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6Lblock_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6Lblock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Lblock/d_a_obj_lv6Lblock/__sinit_d_a_obj_lv6Lblock_cpp.s"
 }

@@ -6,25 +6,287 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+};
+
+// build J3DLightObj (J3DLightObj) False/False
+/* top-level dependencies (begin J3DLightObj) */
+/* top-level dependencies (end J3DLightObj) */
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
+};
+
+// build dEvt_info_c (dEvt_info_c) False/False
+/* top-level dependencies (begin dEvt_info_c) */
+/* top-level dependencies (end dEvt_info_c) */
+struct dEvt_info_c {
+	/* 80018C44 */ ~dEvt_info_c();
+	/* 800433F0 */ dEvt_info_c();
+	/* 800434CC */ void beforeProc();
+};
+
+// build dStage_roomDt_c (dStage_roomDt_c) False/False
+/* top-level dependencies (begin dStage_roomDt_c) */
+/* top-level dependencies (end dStage_roomDt_c) */
+struct dStage_roomDt_c {
+	/* 800193FC */ void getFileListInfo() const;
+};
+
+// build fopEn_enemy_c (fopEn_enemy_c) False/False
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin fopEn_enemy_c) */
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end fopEn_enemy_c) */
+struct fopEn_enemy_c {
+	// dKy_tevstr_c
+	/* 80019404 */ void initBallModel();
+	/* 800194FC */ void checkBallModelDraw();
+	/* 80019520 */ void setBallModelEffect(dKy_tevstr_c*);
+	/* 800196A0 */ void drawBallModel(dKy_tevstr_c*);
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build leafdraw_class (leafdraw_class) False/False
+/* top-level dependencies (begin leafdraw_class) */
+/* top-level dependencies (end leafdraw_class) */
+struct leafdraw_class {
+};
+
+// build leafdraw_method_class (leafdraw_method_class) False/False
+/* top-level dependencies (begin leafdraw_method_class) */
+/* top-level dependencies (end leafdraw_method_class) */
+struct leafdraw_method_class {
+};
+
+// build process_method_class (process_method_class) False/False
+/* top-level dependencies (begin process_method_class) */
+/* top-level dependencies (end process_method_class) */
+struct process_method_class {
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(s32);
+};
+
+// build daSus_c (daSus_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin daSus_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end daSus_c) */
+struct daSus_c {
+	// fopAc_ac_c
+	/* 800314D4 */ void check(fopAc_ac_c*);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// build dDemo_actor_c (dDemo_actor_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dDemo_actor_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dDemo_actor_c) */
+struct dDemo_actor_c {
+	// fopAc_ac_c
+	/* 8003815C */ void setActor(fopAc_ac_c*);
+};
+
+// build dDemo_object_c (dDemo_object_c) False/False
+/* top-level dependencies (begin dDemo_object_c) */
+/* top-level dependencies (end dDemo_object_c) */
+struct dDemo_object_c {
+	/* 80039088 */ void getActor(char);
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 80042FA8 */ void moveApproval(void*);
+};
+
+// build dPa_control_c (dPa_control_c) False/False
+// build csXyz (csXyz) True/True
+// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
+/* top-level dependencies (begin dPa_levelEcallBack) */
+/* top-level dependencies (end dPa_levelEcallBack) */
+struct dPa_levelEcallBack {
+};
+
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dPa_control_c) */
+// outer dependency: csXyz
+// outer dependency: dPa_levelEcallBack
+// outer dependency: _GXColor
+// outer dependency: cXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	// csXyz
+	// _GXColor
+	// dPa_levelEcallBack
+	// cXyz
+	// dKy_tevstr_c
+	/* 8004D4CC */ void set(u32, char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+// build cXyz (cXyz) True/True
+// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
+// build _GXColor (_GXColor) True/True
+// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
+// build J3DModelData (J3DModelData) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dScnKy_env_light_c) */
+// outer dependency: J3DModelData
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dScnKy_env_light_c) */
+struct dScnKy_env_light_c {
+	// J3DModelData
+	// dKy_tevstr_c
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+// build J3DLightInfo (J3DLightInfo) False/False
+/* top-level dependencies (begin J3DLightInfo) */
+/* top-level dependencies (end J3DLightInfo) */
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+// build J3DModelData (J3DModelData) True/True
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+// outer dependency: J3DModelData
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+	// J3DModelData
+	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+// build J3DModelData (J3DModelData) True/True
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+// outer dependency: J3DModelData
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+	// J3DModelData
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
+/* top-level dependencies (begin J3DMaterialTable) */
+// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: J3DAnmTevRegKey
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+	// J3DAnmTextureSRTKey
+	// J3DAnmTevRegKey
+	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
+	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10fopAc_ac_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void __dt__11dEvt_info_cFv();
-extern "C" extern void __dt__10fopAc_ac_cFv();
-extern "C" extern void fopAc_IsActor__FPv();
-extern "C" extern void fopAc_Draw__FPv();
-extern "C" extern void fopAc_Execute__FPv();
-extern "C" extern void fopAc_IsDelete__FPv();
-extern "C" extern void fopAc_Delete__FPv();
-extern "C" extern void fopAc_Create__FPv();
-extern "C" extern void getFileListInfo__15dStage_roomDt_cCFv();
-extern "C" extern void initBallModel__13fopEn_enemy_cFv();
-extern "C" extern void checkBallModelDraw__13fopEn_enemy_cFv();
-extern "C" extern void setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c();
-extern "C" extern void drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c();
+void fopAc_IsActor(void*);
+static void fopAc_Draw(void*);
+static void fopAc_Execute(void*);
+static void fopAc_IsDelete(void*);
+static void fopAc_Delete(void*);
+static void fopAc_Create(void*);
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void __dt__11dEvt_info_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" static void fopAc_Draw__FPv();
+extern "C" static void fopAc_Execute__FPv();
+extern "C" static void fopAc_IsDelete__FPv();
+extern "C" static void fopAc_Delete__FPv();
+extern "C" static void fopAc_Create__FPv();
+extern "C" void getFileListInfo__15dStage_roomDt_cCFv();
+extern "C" void initBallModel__13fopEn_enemy_cFv();
+extern "C" void checkBallModelDraw__13fopEn_enemy_cFv();
+extern "C" void setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c();
+extern "C" void drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c();
 SECTION_RODATA extern const u8 f_op_f_op_actor__stringBase0[8];
 SECTION_DATA extern void*g_fopAc_Method[8];
 SECTION_DATA extern void*const __vt__11dEvt_info_c[4];
@@ -46,49 +308,77 @@ SECTION_SDATA2 extern f32 f_op_f_op_actor__lit_4557;
 // External References:
 // 
 
-extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" extern void fopAcTg_ToActorQ__FP16create_tag_class();
-extern "C" extern void fopAcTg_ActorQTo__FP16create_tag_class();
-extern "C" extern void fopAcTg_Init__FP16create_tag_classPv();
-extern "C" extern void fopAcM_delete__FP10fopAc_ac_c();
-extern "C" extern void fopAcM_DeleteHeap__FP10fopAc_ac_c();
-extern "C" extern void fopAcM_cullingCheck__FPC10fopAc_ac_c();
-extern "C" extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
-extern "C" extern void fopDwTg_DrawQTo__FP16create_tag_class();
-extern "C" extern void fopDwTg_Init__FP16create_tag_classPv();
-extern "C" extern void fpcBs_Is_JustOfType__Fii();
-extern "C" extern void fpcBs_MakeOfType__FPi();
-extern "C" extern void fpcLf_GetPriority__FPC14leafdraw_class();
-extern "C" extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void check__7daSus_cFP10fopAc_ac_c();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void setActor__13dDemo_actor_cFP10fopAc_ac_c();
-extern "C" extern void getActor__14dDemo_object_cFUc();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void moveApproval__14dEvt_control_cFPv();
-extern "C" extern void __ct__11dEvt_info_cFv();
-extern "C" extern void beforeProc__11dEvt_info_cFv();
-extern "C" extern void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern "C" extern void dKy_depth_dist_set__FPv();
-extern "C" extern void cLib_chaseF__FPfff();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" extern void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData();
-extern "C" extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
-extern "C" extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern "C" extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcTg_ToActorQ(create_tag_class*);
+void fopAcTg_ActorQTo(create_tag_class*);
+void fopAcTg_Init(create_tag_class*, void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_DeleteHeap(fopAc_ac_c*);
+void fopAcM_cullingCheck(fopAc_ac_c const*);
+void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_DrawQTo(create_tag_class*);
+void fopDwTg_Init(create_tag_class*, void*);
+void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_MakeOfType(s32*);
+void fpcLf_GetPriority(leafdraw_class const*);
+void fpcLf_DrawMethod(leafdraw_method_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_depth_dist_set(void*);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
+extern "C" void PSMTXTrans();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcTg_ToActorQ__FP16create_tag_class();
+extern "C" void fopAcTg_ActorQTo__FP16create_tag_class();
+extern "C" void fopAcTg_Init__FP16create_tag_classPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_DeleteHeap__FP10fopAc_ac_c();
+extern "C" void fopAcM_cullingCheck__FPC10fopAc_ac_c();
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void fopDwTg_Init__FP16create_tag_classPv();
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcBs_MakeOfType__FPi();
+extern "C" void fpcLf_GetPriority__FPC14leafdraw_class();
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void check__7daSus_cFP10fopAc_ac_c();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void setActor__13dDemo_actor_cFP10fopAc_ac_c();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void moveApproval__14dEvt_control_cFPv();
+extern "C" void __ct__11dEvt_info_cFv();
+extern "C" void beforeProc__11dEvt_info_cFv();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void dKy_depth_dist_set__FPv();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void __dl__FPv();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void PSMTXTrans();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
@@ -102,33 +392,33 @@ SECTION_SBSS extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 80018B64-80018BD0 006C+00 .text      __ct__10fopAc_ac_cFv                                         */
+/* 80018B64-80018BD0 006C+00 rc=7 efc=7 .text      __ct__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10fopAc_ac_cFv) {
+asm fopAc_ac_c::fopAc_ac_c() {
 	nofralloc
 #include "asm/f_op/f_op_actor/__ct__10fopAc_ac_cFv.s"
 }
 #pragma pop
 
 
-/* 80018BD0-80018C0C 003C+00 .text      __dt__5csXyzFv                                               */
+/* 80018BD0-80018C0C 003C+00 rc=12 efc=12 .text      __dt__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/f_op/f_op_actor/__dt__5csXyzFv.s"
 }
 #pragma pop
 
 
-/* 80018C0C-80018C44 0038+00 .text      __ct__11J3DLightObjFv                                        */
+/* 80018C0C-80018C44 0038+00 rc=7 efc=6 .text      __ct__11J3DLightObjFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/f_op/f_op_actor/__ct__11J3DLightObjFv.s"
 }
@@ -136,7 +426,7 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 rc=3 efc=3 .data      g_fopAc_Method                                               */
 void* g_fopAc_Method[8] = {
 	(void*)fopAc_Create__FPv,
 	(void*)fopAc_Delete__FPv,
@@ -148,7 +438,7 @@ void* g_fopAc_Method[8] = {
 	NULL,
 };
 
-/* 803A35D0-803A35E0 000C+04 .data      __vt__11dEvt_info_c                                          */
+/* 803A35D0-803A35E0 000C+04 rc=3 efc=1 .data      __vt__11dEvt_info_c                                          */
 void* const __vt__11dEvt_info_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -157,22 +447,22 @@ void* const __vt__11dEvt_info_c[4] = {
 	NULL,
 };
 
-/* 80018C44-80018C8C 0048+00 .text      __dt__11dEvt_info_cFv                                        */
+/* 80018C44-80018C8C 0048+00 rc=1 efc=0 .text      __dt__11dEvt_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dEvt_info_cFv) {
+asm dEvt_info_c::~dEvt_info_c() {
 	nofralloc
 #include "asm/f_op/f_op_actor/__dt__11dEvt_info_cFv.s"
 }
 #pragma pop
 
 
-/* 80018C8C-80018CE0 0054+00 .text      __dt__10fopAc_ac_cFv                                         */
+/* 80018C8C-80018CE0 0054+00 rc=5 efc=5 .text      __dt__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10fopAc_ac_cFv) {
+asm fopAc_ac_c::~fopAc_ac_c() {
 	nofralloc
 #include "asm/f_op/f_op_actor/__dt__10fopAc_ac_cFv.s"
 }
@@ -180,14 +470,14 @@ ASM_FUNCTION(__dt__10fopAc_ac_cFv) {
 
 
 /* ############################################################################################## */
-/* 80450CB8-80450CBC 0004+00 .sbss      g_fopAc_type                                                 */
+/* 80450CB8-80450CBC 0004+00 rc=2 efc=0 .sbss      g_fopAc_type                                                 */
 u8 g_fopAc_type[4];
 
-/* 80018CE0-80018D0C 002C+00 .text      fopAc_IsActor__FPv                                           */
+/* 80018CE0-80018D0C 002C+00 rc=12 efc=12 .text      fopAc_IsActor__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_IsActor__FPv) {
+asm void fopAc_IsActor(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_IsActor__FPv.s"
 }
@@ -195,14 +485,14 @@ ASM_FUNCTION(fopAc_IsActor__FPv) {
 
 
 /* ############################################################################################## */
-/* 80450CBC-80450CC0 0004+00 .sbss      stopStatus__10fopAc_ac_c                                     */
+/* 80450CBC-80450CC0 0004+00 rc=3 efc=1 .sbss      stopStatus__10fopAc_ac_c                                     */
 u8 stopStatus__10fopAc_ac_c[4];
 
-/* 80018D0C-80018DD8 00CC+00 .text      fopAc_Draw__FPv                                              */
+/* 80018D0C-80018DD8 00CC+00 rc=1 efc=0 .text      fopAc_Draw__FPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_Draw__FPv) {
+asm static void fopAc_Draw(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_Draw__FPv.s"
 }
@@ -210,39 +500,39 @@ ASM_FUNCTION(fopAc_Draw__FPv) {
 
 
 /* ############################################################################################## */
-/* 80451BC8-80451BCC 0004+00 .sdata2    @4324                                                        */
+/* 80451BC8-80451BCC 0004+00 rc=1 efc=0 .sdata2    @4324                                                        */
 f32 f_op_f_op_actor__lit_4324 = 5000.0f;
 
-/* 80451BCC-80451BD0 0004+00 .sdata2    @4325                                                        */
+/* 80451BCC-80451BD0 0004+00 rc=1 efc=0 .sdata2    @4325                                                        */
 f32 f_op_f_op_actor__lit_4325 = -9.999999848243207e+30f;
 
-/* 80018DD8-80018F78 01A0+00 .text      fopAc_Execute__FPv                                           */
+/* 80018DD8-80018F78 01A0+00 rc=1 efc=0 .text      fopAc_Execute__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_Execute__FPv) {
+asm static void fopAc_Execute(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80018F78-80018FCC 0054+00 .text      fopAc_IsDelete__FPv                                          */
+/* 80018F78-80018FCC 0054+00 rc=1 efc=0 .text      fopAc_IsDelete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_IsDelete__FPv) {
+asm static void fopAc_IsDelete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_IsDelete__FPv.s"
 }
 #pragma pop
 
 
-/* 80018FCC-8001904C 0080+00 .text      fopAc_Delete__FPv                                            */
+/* 80018FCC-8001904C 0080+00 rc=1 efc=0 .text      fopAc_Delete__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_Delete__FPv) {
+asm static void fopAc_Delete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_Delete__FPv.s"
 }
@@ -250,31 +540,31 @@ ASM_FUNCTION(fopAc_Delete__FPv) {
 
 
 /* ############################################################################################## */
-/* 80451BD0-80451BD4 0004+00 .sdata2    @4431                                                        */
+/* 80451BD0-80451BD4 0004+00 rc=2 efc=0 .sdata2    @4431                                                        */
 f32 f_op_f_op_actor__lit_4431 = 1.0f / 10.0f;
 
-/* 80451BD4-80451BD8 0004+00 .sdata2    @4432                                                        */
+/* 80451BD4-80451BD8 0004+00 rc=1 efc=0 .sdata2    @4432                                                        */
 f32 f_op_f_op_actor__lit_4432 = -100.0f;
 
-/* 80451BD8-80451BE0 0008+00 .sdata2    @4434                                                        */
+/* 80451BD8-80451BE0 0008+00 rc=1 efc=0 .sdata2    @4434                                                        */
 f64 f_op_f_op_actor__lit_4434 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8001904C-800193FC 03B0+00 .text      fopAc_Create__FPv                                            */
+/* 8001904C-800193FC 03B0+00 rc=1 efc=0 .text      fopAc_Create__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAc_Create__FPv) {
+asm static void fopAc_Create(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/fopAc_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 800193FC-80019404 0008+00 .text      getFileListInfo__15dStage_roomDt_cCFv                        */
+/* 800193FC-80019404 0008+00 rc=1 efc=1 .text      getFileListInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFileListInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getFileListInfo() const {
 	nofralloc
 #include "asm/f_op/f_op_actor/getFileListInfo__15dStage_roomDt_cCFv.s"
 }
@@ -282,7 +572,7 @@ ASM_FUNCTION(getFileListInfo__15dStage_roomDt_cCFv) {
 
 
 /* ############################################################################################## */
-/* 80378878-80378880 0006+02 .rodata    @stringBase0                                                 */
+/* 80378878-80378880 0006+02 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -291,22 +581,22 @@ SECTION_DEAD char* const stringBase_80378878 = "Alink";
 SECTION_DEAD char* const pad_8037887E = "\0";
 #pragma pop
 
-/* 80019404-800194FC 00F8+00 .text      initBallModel__13fopEn_enemy_cFv                             */
+/* 80019404-800194FC 00F8+00 rc=0 efc=0 .text      initBallModel__13fopEn_enemy_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBallModel__13fopEn_enemy_cFv) {
+asm void fopEn_enemy_c::initBallModel() {
 	nofralloc
 #include "asm/f_op/f_op_actor/initBallModel__13fopEn_enemy_cFv.s"
 }
 #pragma pop
 
 
-/* 800194FC-80019520 0024+00 .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
+/* 800194FC-80019520 0024+00 rc=2 efc=0 .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBallModelDraw__13fopEn_enemy_cFv) {
+asm void fopEn_enemy_c::checkBallModelDraw() {
 	nofralloc
 #include "asm/f_op/f_op_actor/checkBallModelDraw__13fopEn_enemy_cFv.s"
 }
@@ -314,18 +604,18 @@ ASM_FUNCTION(checkBallModelDraw__13fopEn_enemy_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451BE0-80451BE8 0004+04 .sdata2    @4505                                                        */
+/* 80451BE0-80451BE8 0004+04 rc=2 efc=0 .sdata2    @4505                                                        */
 f32 f_op_f_op_actor__lit_4505 = 1.0f;
 /* padding 4 bytes */
 
-/* 80451BE8-80451BF0 0008+00 .sdata2    @4507                                                        */
+/* 80451BE8-80451BF0 0008+00 rc=1 efc=0 .sdata2    @4507                                                        */
 f64 f_op_f_op_actor__lit_4507 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80019520-800196A0 0180+00 .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
+/* 80019520-800196A0 0180+00 rc=0 efc=0 .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c) {
+asm void fopEn_enemy_c::setBallModelEffect(dKy_tevstr_c* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c.s"
 }
@@ -333,23 +623,23 @@ ASM_FUNCTION(setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c) {
 
 
 /* ############################################################################################## */
-/* 80451BF0-80451BF4 0004+00 .sdata2    @4555                                                        */
+/* 80451BF0-80451BF4 0004+00 rc=1 efc=0 .sdata2    @4555                                                        */
 u8 f_op_f_op_actor__lit_4555[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451BF4-80451BF8 0004+00 .sdata2    @4556                                                        */
+/* 80451BF4-80451BF8 0004+00 rc=1 efc=0 .sdata2    @4556                                                        */
 f32 f_op_f_op_actor__lit_4556 = 1.0f / 20.0f;
 
-/* 80451BF8-80451C00 0004+04 .sdata2    @4557                                                        */
+/* 80451BF8-80451C00 0004+04 rc=1 efc=0 .sdata2    @4557                                                        */
 f32 f_op_f_op_actor__lit_4557 = 1.0f / 100.0f;
 /* padding 4 bytes */
 
-/* 800196A0-800197BC 011C+00 .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
+/* 800196A0-800197BC 011C+00 rc=0 efc=0 .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c) {
+asm void fopEn_enemy_c::drawBallModel(dKy_tevstr_c* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor/drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c.s"
 }
@@ -357,6 +647,6 @@ ASM_FUNCTION(drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c) {
 
 
 /* ############################################################################################## */
-/* 80450CC0-80450CC8 0004+04 .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             */
+/* 80450CC0-80450CC8 0004+04 rc=9 efc=9 .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             */
 u8 data_80450CC0[4 + 4 /* padding */];
 

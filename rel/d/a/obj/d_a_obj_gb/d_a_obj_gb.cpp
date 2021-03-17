@@ -6,18 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_gb_class;
+
+struct obj_gb_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Gb_Draw__FP12obj_gb_class();
-extern "C" extern void daObj_Gb_Execute__FP12obj_gb_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObj_Gb_IsDelete__FP12obj_gb_class();
-extern "C" extern void daObj_Gb_Delete__FP12obj_gb_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Gb_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__4cXyzFv();
+void daObj_Gb_Draw(obj_gb_class*);
+void daObj_Gb_Execute(obj_gb_class*);
+bool daObj_Gb_IsDelete(obj_gb_class*);
+void daObj_Gb_Delete(obj_gb_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Gb_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Gb_Draw__FP12obj_gb_class();
+extern "C" void daObj_Gb_Execute__FP12obj_gb_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" bool daObj_Gb_IsDelete__FP12obj_gb_class();
+extern "C" void daObj_Gb_Delete__FP12obj_gb_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Gb_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3890;
 SECTION_RODATA extern const u32 lit_3891;
 SECTION_RODATA extern const u32 lit_3892;
@@ -45,7 +74,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -55,7 +86,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gb_Draw__FP12obj_gb_class) {
+asm void daObj_Gb_Draw(obj_gb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_Draw__FP12obj_gb_class.s"
 }
@@ -66,7 +97,7 @@ ASM_FUNCTION(daObj_Gb_Draw__FP12obj_gb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gb_Execute__FP12obj_gb_class) {
+asm void daObj_Gb_Execute(obj_gb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_Execute__FP12obj_gb_class.s"
 }
@@ -77,7 +108,7 @@ ASM_FUNCTION(daObj_Gb_Execute__FP12obj_gb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/__dt__4cXyzFv.s"
 }
@@ -85,21 +116,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80BF67C8-80BF67D0 0008+00 .text      daObj_Gb_IsDelete__FP12obj_gb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gb_IsDelete__FP12obj_gb_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_IsDelete__FP12obj_gb_class.s"
+bool daObj_Gb_IsDelete(obj_gb_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BF67D0-80BF682C 005C+00 .text      daObj_Gb_Delete__FP12obj_gb_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gb_Delete__FP12obj_gb_class) {
+asm void daObj_Gb_Delete(obj_gb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_Delete__FP12obj_gb_class.s"
 }
@@ -110,7 +136,7 @@ ASM_FUNCTION(daObj_Gb_Delete__FP12obj_gb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -121,7 +147,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/__dt__12J3DFrameCtrlFv.s"
 }
@@ -132,7 +158,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gb_Create__FP10fopAc_ac_c) {
+asm void daObj_Gb_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_Create__FP10fopAc_ac_c.s"
 }
@@ -140,14 +166,9 @@ ASM_FUNCTION(daObj_Gb_Create__FP10fopAc_ac_c) {
 
 
 /* 80BF6DB0-80BF6DB4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -6,33 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjBmSh_c;
+struct fopAc_ac_c;
+
+struct daObjBmSh_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void checkSw();
+	void checkAnySw();
+	void checkMySw();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void mode_proc_call();
+	void modeWait();
+	void modeMove();
+	void modeEnd();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjBmSh_cFv();
-extern "C" extern void setBaseMtx__11daObjBmSh_cFv();
-extern "C" extern void Create__11daObjBmSh_cFv();
-extern "C" extern void CreateHeap__11daObjBmSh_cFv();
-extern "C" extern void create__11daObjBmSh_cFv();
-extern "C" extern void Execute__11daObjBmSh_cFPPA3_A4_f();
-extern "C" extern void checkSw__11daObjBmSh_cFv();
-extern "C" extern void checkAnySw__11daObjBmSh_cFv();
-extern "C" extern void checkMySw__11daObjBmSh_cFv();
-extern "C" extern void event_proc_call__11daObjBmSh_cFv();
-extern "C" extern void actionWait__11daObjBmSh_cFv();
-extern "C" extern void actionOrderEvent__11daObjBmSh_cFv();
-extern "C" extern void actionEvent__11daObjBmSh_cFv();
-extern "C" extern void actionDead__11daObjBmSh_cFv();
-extern "C" extern void mode_proc_call__11daObjBmSh_cFv();
-extern "C" extern void modeWait__11daObjBmSh_cFv();
-extern "C" extern void modeMove__11daObjBmSh_cFv();
-extern "C" extern void modeEnd__11daObjBmSh_cFv();
-extern "C" extern void Draw__11daObjBmSh_cFv();
-extern "C" extern void Delete__11daObjBmSh_cFv();
-extern "C" extern void daObjBmSh_Draw__FP11daObjBmSh_c();
-extern "C" extern void daObjBmSh_Execute__FP11daObjBmSh_c();
-extern "C" extern void daObjBmSh_Delete__FP11daObjBmSh_c();
-extern "C" extern void daObjBmSh_Create__FP10fopAc_ac_c();
+extern "C" void Execute__11daObjBmSh_cFPPA3_A4_f();
+void daObjBmSh_Draw(daObjBmSh_c*);
+void daObjBmSh_Execute(daObjBmSh_c*);
+void daObjBmSh_Delete(daObjBmSh_c*);
+void daObjBmSh_Create(fopAc_ac_c*);
+
+extern "C" void initBaseMtx__11daObjBmSh_cFv();
+extern "C" void setBaseMtx__11daObjBmSh_cFv();
+extern "C" void Create__11daObjBmSh_cFv();
+extern "C" void CreateHeap__11daObjBmSh_cFv();
+extern "C" void create__11daObjBmSh_cFv();
+extern "C" void Execute__11daObjBmSh_cFPPA3_A4_f();
+extern "C" void checkSw__11daObjBmSh_cFv();
+extern "C" void checkAnySw__11daObjBmSh_cFv();
+extern "C" void checkMySw__11daObjBmSh_cFv();
+extern "C" void event_proc_call__11daObjBmSh_cFv();
+extern "C" void actionWait__11daObjBmSh_cFv();
+extern "C" void actionOrderEvent__11daObjBmSh_cFv();
+extern "C" void actionEvent__11daObjBmSh_cFv();
+extern "C" void actionDead__11daObjBmSh_cFv();
+extern "C" void mode_proc_call__11daObjBmSh_cFv();
+extern "C" void modeWait__11daObjBmSh_cFv();
+extern "C" void modeMove__11daObjBmSh_cFv();
+extern "C" void modeEnd__11daObjBmSh_cFv();
+extern "C" void Draw__11daObjBmSh_cFv();
+extern "C" void Delete__11daObjBmSh_cFv();
+extern "C" void daObjBmSh_Draw__FP11daObjBmSh_c();
+extern "C" void daObjBmSh_Execute__FP11daObjBmSh_c();
+extern "C" void daObjBmSh_Delete__FP11daObjBmSh_c();
+extern "C" void daObjBmSh_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u8 l_check_area[48];
 SECTION_RODATA extern const u32 lit_3663;
@@ -67,7 +105,9 @@ SECTION_DATA extern void*const __vt__11daObjBmSh_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -77,7 +117,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/initBaseMtx__11daObjBmSh_cFv.s"
 }
@@ -88,7 +128,7 @@ ASM_FUNCTION(initBaseMtx__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/setBaseMtx__11daObjBmSh_cFv.s"
 }
@@ -99,7 +139,7 @@ ASM_FUNCTION(setBaseMtx__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/Create__11daObjBmSh_cFv.s"
 }
@@ -110,7 +150,7 @@ ASM_FUNCTION(Create__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/CreateHeap__11daObjBmSh_cFv.s"
 }
@@ -121,7 +161,7 @@ ASM_FUNCTION(CreateHeap__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/func_80BB9CC0.s"
 }
@@ -132,7 +172,7 @@ ASM_FUNCTION(create__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjBmSh_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjBmSh_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/Execute__11daObjBmSh_cFPPA3_A4_f.s"
 }
@@ -143,7 +183,7 @@ ASM_FUNCTION(Execute__11daObjBmSh_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSw__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::checkSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/checkSw__11daObjBmSh_cFv.s"
 }
@@ -154,7 +194,7 @@ ASM_FUNCTION(checkSw__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAnySw__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::checkAnySw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/checkAnySw__11daObjBmSh_cFv.s"
 }
@@ -165,7 +205,7 @@ ASM_FUNCTION(checkAnySw__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkMySw__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::checkMySw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/checkMySw__11daObjBmSh_cFv.s"
 }
@@ -176,7 +216,7 @@ ASM_FUNCTION(checkMySw__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/event_proc_call__11daObjBmSh_cFv.s"
 }
@@ -187,7 +227,7 @@ ASM_FUNCTION(event_proc_call__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/actionWait__11daObjBmSh_cFv.s"
 }
@@ -198,7 +238,7 @@ ASM_FUNCTION(actionWait__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/actionOrderEvent__11daObjBmSh_cFv.s"
 }
@@ -209,7 +249,7 @@ ASM_FUNCTION(actionOrderEvent__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/actionEvent__11daObjBmSh_cFv.s"
 }
@@ -217,21 +257,16 @@ ASM_FUNCTION(actionEvent__11daObjBmSh_cFv) {
 
 
 /* 80BBA268-80BBA26C 0004+00 .text      actionDead__11daObjBmSh_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__11daObjBmSh_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/actionDead__11daObjBmSh_cFv.s"
+void daObjBmSh_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BBA26C-80BBA394 0128+00 .text      mode_proc_call__11daObjBmSh_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/mode_proc_call__11daObjBmSh_cFv.s"
 }
@@ -242,7 +277,7 @@ ASM_FUNCTION(mode_proc_call__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/modeWait__11daObjBmSh_cFv.s"
 }
@@ -253,7 +288,7 @@ ASM_FUNCTION(modeWait__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/modeMove__11daObjBmSh_cFv.s"
 }
@@ -261,21 +296,16 @@ ASM_FUNCTION(modeMove__11daObjBmSh_cFv) {
 
 
 /* 80BBA640-80BBA644 0004+00 .text      modeEnd__11daObjBmSh_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeEnd__11daObjBmSh_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/modeEnd__11daObjBmSh_cFv.s"
+void daObjBmSh_c::modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BBA644-80BBA6E8 00A4+00 .text      Draw__11daObjBmSh_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/Draw__11daObjBmSh_cFv.s"
 }
@@ -286,7 +316,7 @@ ASM_FUNCTION(Draw__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjBmSh_cFv) {
+asm void daObjBmSh_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/Delete__11daObjBmSh_cFv.s"
 }
@@ -297,7 +327,7 @@ ASM_FUNCTION(Delete__11daObjBmSh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBmSh_Draw__FP11daObjBmSh_c) {
+asm void daObjBmSh_Draw(daObjBmSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/daObjBmSh_Draw__FP11daObjBmSh_c.s"
 }
@@ -308,7 +338,7 @@ ASM_FUNCTION(daObjBmSh_Draw__FP11daObjBmSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBmSh_Execute__FP11daObjBmSh_c) {
+asm void daObjBmSh_Execute(daObjBmSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/daObjBmSh_Execute__FP11daObjBmSh_c.s"
 }
@@ -319,7 +349,7 @@ ASM_FUNCTION(daObjBmSh_Execute__FP11daObjBmSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBmSh_Delete__FP11daObjBmSh_c) {
+asm void daObjBmSh_Delete(daObjBmSh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/daObjBmSh_Delete__FP11daObjBmSh_c.s"
 }
@@ -330,7 +360,7 @@ ASM_FUNCTION(daObjBmSh_Delete__FP11daObjBmSh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBmSh_Create__FP10fopAc_ac_c) {
+asm void daObjBmSh_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bmshutter/d_a_obj_bmshutter/daObjBmSh_Create__FP10fopAc_ac_c.s"
 }

@@ -6,45 +6,118 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjRgate_c;
+struct cXyz;
+
+struct J3DJoint {
+};
+
+struct daObjRgate_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void checkAreaL(cXyz const*, cXyz const*);
+	void checkAreaR(cXyz const*, cXyz const*);
+	void checkOpen();
+	void checkDirL(fopAc_ac_c*);
+	void checkDirR(fopAc_ac_c*);
+	void setAtkSE();
+	void setCrkSE();
+	void action();
+	void action_typeA();
+	void actionWaitEvent();
+	void actionEvent();
+	void actionDead();
+	void event_proc_call();
+	void demoProc();
+	void getDemoAction();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void search_coach__FPvPv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__12daObjRgate_cFv();
-extern "C" extern void setBaseMtx__12daObjRgate_cFv();
-extern "C" extern void Create__12daObjRgate_cFv();
-extern "C" extern void CreateHeap__12daObjRgate_cFv();
-extern "C" extern void create1st__12daObjRgate_cFv();
-extern "C" extern void checkAreaL__12daObjRgate_cFPC4cXyzPC4cXyz();
-extern "C" extern void checkAreaR__12daObjRgate_cFPC4cXyzPC4cXyz();
-extern "C" extern void checkOpen__12daObjRgate_cFv();
-extern "C" extern void checkDirL__12daObjRgate_cFP10fopAc_ac_c();
-extern "C" extern void checkDirR__12daObjRgate_cFP10fopAc_ac_c();
-extern "C" extern void setAtkSE__12daObjRgate_cFv();
-extern "C" extern void setCrkSE__12daObjRgate_cFv();
-extern "C" extern void action__12daObjRgate_cFv();
-extern "C" extern void action_typeA__12daObjRgate_cFv();
-extern "C" extern void actionWaitEvent__12daObjRgate_cFv();
-extern "C" extern void actionEvent__12daObjRgate_cFv();
-extern "C" extern void actionDead__12daObjRgate_cFv();
-extern "C" extern void event_proc_call__12daObjRgate_cFv();
-extern "C" extern void demoProc__12daObjRgate_cFv();
-extern "C" extern void getDemoAction__12daObjRgate_cFv();
-extern "C" extern void Execute__12daObjRgate_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjRgate_cFv();
-extern "C" extern void Delete__12daObjRgate_cFv();
-extern "C" extern void daObjRgate_create1st__FP12daObjRgate_c();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjRgate_MoveBGDelete__FP12daObjRgate_c();
-extern "C" extern void daObjRgate_MoveBGExecute__FP12daObjRgate_c();
-extern "C" extern void daObjRgate_MoveBGDraw__FP12daObjRgate_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80CBC344();
+void search_coach(void*, void*);
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__12daObjRgate_cFPPA3_A4_f();
+void daObjRgate_create1st(daObjRgate_c*);
+void daObjRgate_MoveBGDelete(daObjRgate_c*);
+void daObjRgate_MoveBGExecute(daObjRgate_c*);
+void daObjRgate_MoveBGDraw(daObjRgate_c*);
+extern "C" void func_80CBC344();
+
+extern "C" void search_coach__FPvPv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__12daObjRgate_cFv();
+extern "C" void setBaseMtx__12daObjRgate_cFv();
+extern "C" void Create__12daObjRgate_cFv();
+extern "C" void CreateHeap__12daObjRgate_cFv();
+extern "C" void create1st__12daObjRgate_cFv();
+extern "C" void checkAreaL__12daObjRgate_cFPC4cXyzPC4cXyz();
+extern "C" void checkAreaR__12daObjRgate_cFPC4cXyzPC4cXyz();
+extern "C" void checkOpen__12daObjRgate_cFv();
+extern "C" void checkDirL__12daObjRgate_cFP10fopAc_ac_c();
+extern "C" void checkDirR__12daObjRgate_cFP10fopAc_ac_c();
+extern "C" void setAtkSE__12daObjRgate_cFv();
+extern "C" void setCrkSE__12daObjRgate_cFv();
+extern "C" void action__12daObjRgate_cFv();
+extern "C" void action_typeA__12daObjRgate_cFv();
+extern "C" void actionWaitEvent__12daObjRgate_cFv();
+extern "C" void actionEvent__12daObjRgate_cFv();
+extern "C" void actionDead__12daObjRgate_cFv();
+extern "C" void event_proc_call__12daObjRgate_cFv();
+extern "C" void demoProc__12daObjRgate_cFv();
+extern "C" void getDemoAction__12daObjRgate_cFv();
+extern "C" void Execute__12daObjRgate_cFPPA3_A4_f();
+extern "C" void Draw__12daObjRgate_cFv();
+extern "C" void Delete__12daObjRgate_cFv();
+extern "C" void daObjRgate_create1st__FP12daObjRgate_c();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjRgate_MoveBGDelete__FP12daObjRgate_c();
+extern "C" void daObjRgate_MoveBGExecute__FP12daObjRgate_c();
+extern "C" void daObjRgate_MoveBGDraw__FP12daObjRgate_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80CBC344();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3897[4];
@@ -107,7 +180,9 @@ SECTION_BSS extern u8 struct_80CBC5CC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -117,7 +192,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_coach__FPvPv) {
+asm void search_coach(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/search_coach__FPvPv.s"
 }
@@ -128,7 +203,7 @@ ASM_FUNCTION(search_coach__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/nodeCallBack__FP8J3DJointi.s"
 }
@@ -139,7 +214,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjRgate_cFv) {
+asm void daObjRgate_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/initBaseMtx__12daObjRgate_cFv.s"
 }
@@ -150,7 +225,7 @@ ASM_FUNCTION(initBaseMtx__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjRgate_cFv) {
+asm void daObjRgate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/setBaseMtx__12daObjRgate_cFv.s"
 }
@@ -161,7 +236,7 @@ ASM_FUNCTION(setBaseMtx__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjRgate_cFv) {
+asm void daObjRgate_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/Create__12daObjRgate_cFv.s"
 }
@@ -172,7 +247,7 @@ ASM_FUNCTION(Create__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjRgate_cFv) {
+asm void daObjRgate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/CreateHeap__12daObjRgate_cFv.s"
 }
@@ -183,7 +258,7 @@ ASM_FUNCTION(CreateHeap__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjRgate_cFv) {
+asm void daObjRgate_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/create1st__12daObjRgate_cFv.s"
 }
@@ -194,7 +269,7 @@ ASM_FUNCTION(create1st__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAreaL__12daObjRgate_cFPC4cXyzPC4cXyz) {
+asm void daObjRgate_c::checkAreaL(cXyz const* field_0, cXyz const* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/checkAreaL__12daObjRgate_cFPC4cXyzPC4cXyz.s"
 }
@@ -205,7 +280,7 @@ ASM_FUNCTION(checkAreaL__12daObjRgate_cFPC4cXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAreaR__12daObjRgate_cFPC4cXyzPC4cXyz) {
+asm void daObjRgate_c::checkAreaR(cXyz const* field_0, cXyz const* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/checkAreaR__12daObjRgate_cFPC4cXyzPC4cXyz.s"
 }
@@ -216,7 +291,7 @@ ASM_FUNCTION(checkAreaR__12daObjRgate_cFPC4cXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpen__12daObjRgate_cFv) {
+asm void daObjRgate_c::checkOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/checkOpen__12daObjRgate_cFv.s"
 }
@@ -227,7 +302,7 @@ ASM_FUNCTION(checkOpen__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDirL__12daObjRgate_cFP10fopAc_ac_c) {
+asm void daObjRgate_c::checkDirL(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/checkDirL__12daObjRgate_cFP10fopAc_ac_c.s"
 }
@@ -238,7 +313,7 @@ ASM_FUNCTION(checkDirL__12daObjRgate_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDirR__12daObjRgate_cFP10fopAc_ac_c) {
+asm void daObjRgate_c::checkDirR(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/checkDirR__12daObjRgate_cFP10fopAc_ac_c.s"
 }
@@ -249,7 +324,7 @@ ASM_FUNCTION(checkDirR__12daObjRgate_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAtkSE__12daObjRgate_cFv) {
+asm void daObjRgate_c::setAtkSE() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/setAtkSE__12daObjRgate_cFv.s"
 }
@@ -260,7 +335,7 @@ ASM_FUNCTION(setAtkSE__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCrkSE__12daObjRgate_cFv) {
+asm void daObjRgate_c::setCrkSE() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/setCrkSE__12daObjRgate_cFv.s"
 }
@@ -271,7 +346,7 @@ ASM_FUNCTION(setCrkSE__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__12daObjRgate_cFv) {
+asm void daObjRgate_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/action__12daObjRgate_cFv.s"
 }
@@ -282,7 +357,7 @@ ASM_FUNCTION(action__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_typeA__12daObjRgate_cFv) {
+asm void daObjRgate_c::action_typeA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/action_typeA__12daObjRgate_cFv.s"
 }
@@ -293,7 +368,7 @@ ASM_FUNCTION(action_typeA__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitEvent__12daObjRgate_cFv) {
+asm void daObjRgate_c::actionWaitEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/actionWaitEvent__12daObjRgate_cFv.s"
 }
@@ -304,7 +379,7 @@ ASM_FUNCTION(actionWaitEvent__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__12daObjRgate_cFv) {
+asm void daObjRgate_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/actionEvent__12daObjRgate_cFv.s"
 }
@@ -312,21 +387,16 @@ ASM_FUNCTION(actionEvent__12daObjRgate_cFv) {
 
 
 /* 80CBBB5C-80CBBB60 0004+00 .text      actionDead__12daObjRgate_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__12daObjRgate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/actionDead__12daObjRgate_cFv.s"
+void daObjRgate_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CBBB60-80CBBC04 00A4+00 .text      event_proc_call__12daObjRgate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__12daObjRgate_cFv) {
+asm void daObjRgate_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/event_proc_call__12daObjRgate_cFv.s"
 }
@@ -337,7 +407,7 @@ ASM_FUNCTION(event_proc_call__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__12daObjRgate_cFv) {
+asm void daObjRgate_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/demoProc__12daObjRgate_cFv.s"
 }
@@ -348,7 +418,7 @@ ASM_FUNCTION(demoProc__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoAction__12daObjRgate_cFv) {
+asm void daObjRgate_c::getDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/getDemoAction__12daObjRgate_cFv.s"
 }
@@ -359,7 +429,7 @@ ASM_FUNCTION(getDemoAction__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjRgate_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjRgate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/Execute__12daObjRgate_cFPPA3_A4_f.s"
 }
@@ -370,7 +440,7 @@ ASM_FUNCTION(Execute__12daObjRgate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjRgate_cFv) {
+asm void daObjRgate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/Draw__12daObjRgate_cFv.s"
 }
@@ -381,7 +451,7 @@ ASM_FUNCTION(Draw__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjRgate_cFv) {
+asm void daObjRgate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/Delete__12daObjRgate_cFv.s"
 }
@@ -392,7 +462,7 @@ ASM_FUNCTION(Delete__12daObjRgate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRgate_create1st__FP12daObjRgate_c) {
+asm void daObjRgate_create1st(daObjRgate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/daObjRgate_create1st__FP12daObjRgate_c.s"
 }
@@ -403,7 +473,7 @@ ASM_FUNCTION(daObjRgate_create1st__FP12daObjRgate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__dt__8dCcD_CylFv.s"
 }
@@ -414,7 +484,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__ct__8dCcD_CylFv.s"
 }
@@ -425,7 +495,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__dt__8cM3dGCylFv.s"
 }
@@ -436,7 +506,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__dt__8cM3dGAabFv.s"
 }
@@ -447,7 +517,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__dt__10dCcD_GSttsFv.s"
 }
@@ -458,7 +528,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRgate_MoveBGDelete__FP12daObjRgate_c) {
+asm void daObjRgate_MoveBGDelete(daObjRgate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/daObjRgate_MoveBGDelete__FP12daObjRgate_c.s"
 }
@@ -469,7 +539,7 @@ ASM_FUNCTION(daObjRgate_MoveBGDelete__FP12daObjRgate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRgate_MoveBGExecute__FP12daObjRgate_c) {
+asm void daObjRgate_MoveBGExecute(daObjRgate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/daObjRgate_MoveBGExecute__FP12daObjRgate_c.s"
 }
@@ -480,7 +550,7 @@ ASM_FUNCTION(daObjRgate_MoveBGExecute__FP12daObjRgate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRgate_MoveBGDraw__FP12daObjRgate_c) {
+asm void daObjRgate_MoveBGDraw(daObjRgate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/daObjRgate_MoveBGDraw__FP12daObjRgate_c.s"
 }
@@ -491,7 +561,7 @@ ASM_FUNCTION(daObjRgate_MoveBGDraw__FP12daObjRgate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/__dt__10cCcD_GSttsFv.s"
 }
@@ -502,7 +572,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CBC344) {
+extern "C" asm void func_80CBC344() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/func_80CBC344.s"
 }

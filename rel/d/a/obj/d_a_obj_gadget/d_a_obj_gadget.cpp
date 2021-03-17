@@ -6,44 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_Gadget_c {
+	~daObj_Gadget_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void setEnvTevColor();
+	void setRoomNo();
+	void reset();
+	void setMtx();
+	void setSmokePrtcl();
+	void setWaterPrtcl();
+	void setHamonPrtcl();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_Gadget_Param_c {
+	~daObj_Gadget_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__14daObj_Gadget_cFv();
-extern "C" extern void create__14daObj_Gadget_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__14daObj_Gadget_cFv();
-extern "C" extern void Delete__14daObj_Gadget_cFv();
-extern "C" extern void Execute__14daObj_Gadget_cFv();
-extern "C" extern void Draw__14daObj_Gadget_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void createHeapCallBack__14daObj_Gadget_cFP10fopAc_ac_c();
-extern "C" extern void setEnvTevColor__14daObj_Gadget_cFv();
-extern "C" extern void setRoomNo__14daObj_Gadget_cFv();
-extern "C" extern void reset__14daObj_Gadget_cFv();
-extern "C" extern void setMtx__14daObj_Gadget_cFv();
-extern "C" extern void calcRollAngle__14daObj_Gadget_cFsi();
-extern "C" extern void getWallAngle__14daObj_Gadget_cFsPs();
-extern "C" extern void setSmokePrtcl__14daObj_Gadget_cFv();
-extern "C" extern void setWaterPrtcl__14daObj_Gadget_cFv();
-extern "C" extern void setHamonPrtcl__14daObj_Gadget_cFv();
-extern "C" extern void daObj_Gadget_Create__FPv();
-extern "C" extern void daObj_Gadget_Delete__FPv();
-extern "C" extern void daObj_Gadget_Execute__FPv();
-extern "C" extern void daObj_Gadget_Draw__FPv();
-extern "C" extern void daObj_Gadget_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BF4848();
-extern "C" extern void __sinit_d_a_obj_gadget_cpp();
-extern "C" extern void __dt__20daObj_Gadget_Param_cFv();
-extern "C" extern void func_80BF4920();
-extern "C" extern void func_80BF4928();
+extern "C" void calcRollAngle__14daObj_Gadget_cFsi();
+extern "C" void getWallAngle__14daObj_Gadget_cFsPs();
+void daObj_Gadget_Create(void*);
+void daObj_Gadget_Delete(void*);
+void daObj_Gadget_Execute(void*);
+void daObj_Gadget_Draw(void*);
+bool daObj_Gadget_IsDelete(void*);
+extern "C" void func_80BF4848();
+extern "C" void __sinit_d_a_obj_gadget_cpp();
+extern "C" void func_80BF4920();
+extern "C" void func_80BF4928();
+
+extern "C" void __dt__14daObj_Gadget_cFv();
+extern "C" void create__14daObj_Gadget_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__14daObj_Gadget_cFv();
+extern "C" void Delete__14daObj_Gadget_cFv();
+extern "C" void Execute__14daObj_Gadget_cFv();
+extern "C" void Draw__14daObj_Gadget_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void createHeapCallBack__14daObj_Gadget_cFP10fopAc_ac_c();
+extern "C" void setEnvTevColor__14daObj_Gadget_cFv();
+extern "C" void setRoomNo__14daObj_Gadget_cFv();
+extern "C" void reset__14daObj_Gadget_cFv();
+extern "C" void setMtx__14daObj_Gadget_cFv();
+extern "C" void calcRollAngle__14daObj_Gadget_cFsi();
+extern "C" void getWallAngle__14daObj_Gadget_cFsPs();
+extern "C" void setSmokePrtcl__14daObj_Gadget_cFv();
+extern "C" void setWaterPrtcl__14daObj_Gadget_cFv();
+extern "C" void setHamonPrtcl__14daObj_Gadget_cFv();
+extern "C" void daObj_Gadget_Create__FPv();
+extern "C" void daObj_Gadget_Delete__FPv();
+extern "C" void daObj_Gadget_Execute__FPv();
+extern "C" void daObj_Gadget_Draw__FPv();
+extern "C" bool daObj_Gadget_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BF4848();
+extern "C" void __sinit_d_a_obj_gadget_cpp();
+extern "C" void __dt__20daObj_Gadget_Param_cFv();
+extern "C" void func_80BF4920();
+extern "C" void func_80BF4928();
 SECTION_RODATA extern const u8 m__20daObj_Gadget_Param_c[44];
 SECTION_RODATA extern const u8 l_ccDObjData[48];
 SECTION_RODATA extern const u32 lit_3935;
@@ -147,8 +225,11 @@ SECTION_BSS extern u8 data_80BF4C64[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -158,7 +239,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_Gadget_cFv) {
+asm daObj_Gadget_c::~daObj_Gadget_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__14daObj_Gadget_cFv.s"
 }
@@ -169,7 +250,7 @@ ASM_FUNCTION(__dt__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/create__14daObj_Gadget_cFv.s"
 }
@@ -180,7 +261,7 @@ ASM_FUNCTION(create__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__8cM3dGLinFv.s"
 }
@@ -191,7 +272,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__8cM3dGCylFv.s"
 }
@@ -202,7 +283,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__8cM3dGAabFv.s"
 }
@@ -213,7 +294,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__12dBgS_AcchCirFv.s"
 }
@@ -224,7 +305,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__10dCcD_GSttsFv.s"
 }
@@ -235,7 +316,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__4cXyzFv.s"
 }
@@ -246,7 +327,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -257,7 +338,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/CreateHeap__14daObj_Gadget_cFv.s"
 }
@@ -268,7 +349,7 @@ ASM_FUNCTION(CreateHeap__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/Delete__14daObj_Gadget_cFv.s"
 }
@@ -279,7 +360,7 @@ ASM_FUNCTION(Delete__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/Execute__14daObj_Gadget_cFv.s"
 }
@@ -290,7 +371,7 @@ ASM_FUNCTION(Execute__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/Draw__14daObj_Gadget_cFv.s"
 }
@@ -301,7 +382,7 @@ ASM_FUNCTION(Draw__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__8cM3dGPlaFv.s"
 }
@@ -312,7 +393,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daObj_Gadget_cFP10fopAc_ac_c) {
+asm void daObj_Gadget_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/createHeapCallBack__14daObj_Gadget_cFP10fopAc_ac_c.s"
 }
@@ -323,7 +404,7 @@ ASM_FUNCTION(createHeapCallBack__14daObj_Gadget_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setEnvTevColor__14daObj_Gadget_cFv.s"
 }
@@ -334,7 +415,7 @@ ASM_FUNCTION(setEnvTevColor__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setRoomNo__14daObj_Gadget_cFv.s"
 }
@@ -345,7 +426,7 @@ ASM_FUNCTION(setRoomNo__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/reset__14daObj_Gadget_cFv.s"
 }
@@ -356,7 +437,7 @@ ASM_FUNCTION(reset__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setMtx__14daObj_Gadget_cFv.s"
 }
@@ -367,7 +448,7 @@ ASM_FUNCTION(setMtx__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRollAngle__14daObj_Gadget_cFsi) {
+extern "C" asm void calcRollAngle__14daObj_Gadget_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/calcRollAngle__14daObj_Gadget_cFsi.s"
 }
@@ -378,7 +459,7 @@ ASM_FUNCTION(calcRollAngle__14daObj_Gadget_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWallAngle__14daObj_Gadget_cFsPs) {
+extern "C" asm void getWallAngle__14daObj_Gadget_cFsPs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/getWallAngle__14daObj_Gadget_cFsPs.s"
 }
@@ -389,7 +470,7 @@ ASM_FUNCTION(getWallAngle__14daObj_Gadget_cFsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokePrtcl__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setSmokePrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setSmokePrtcl__14daObj_Gadget_cFv.s"
 }
@@ -400,7 +481,7 @@ ASM_FUNCTION(setSmokePrtcl__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterPrtcl__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setWaterPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setWaterPrtcl__14daObj_Gadget_cFv.s"
 }
@@ -411,7 +492,7 @@ ASM_FUNCTION(setWaterPrtcl__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHamonPrtcl__14daObj_Gadget_cFv) {
+asm void daObj_Gadget_c::setHamonPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/setHamonPrtcl__14daObj_Gadget_cFv.s"
 }
@@ -422,7 +503,7 @@ ASM_FUNCTION(setHamonPrtcl__14daObj_Gadget_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gadget_Create__FPv) {
+asm void daObj_Gadget_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_Create__FPv.s"
 }
@@ -433,7 +514,7 @@ ASM_FUNCTION(daObj_Gadget_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gadget_Delete__FPv) {
+asm void daObj_Gadget_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_Delete__FPv.s"
 }
@@ -444,7 +525,7 @@ ASM_FUNCTION(daObj_Gadget_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gadget_Execute__FPv) {
+asm void daObj_Gadget_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_Execute__FPv.s"
 }
@@ -455,7 +536,7 @@ ASM_FUNCTION(daObj_Gadget_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gadget_Draw__FPv) {
+asm void daObj_Gadget_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_Draw__FPv.s"
 }
@@ -463,21 +544,16 @@ ASM_FUNCTION(daObj_Gadget_Draw__FPv) {
 
 
 /* 80BF47F8-80BF4800 0008+00 .text      daObj_Gadget_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Gadget_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_IsDelete__FPv.s"
+bool daObj_Gadget_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BF4800-80BF4848 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__10cCcD_GSttsFv.s"
 }
@@ -488,7 +564,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BF4848) {
+extern "C" asm void func_80BF4848() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/func_80BF4848.s"
 }
@@ -499,7 +575,7 @@ ASM_FUNCTION(func_80BF4848) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_gadget_cpp) {
+extern "C" asm void __sinit_d_a_obj_gadget_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__sinit_d_a_obj_gadget_cpp.s"
 }
@@ -510,7 +586,7 @@ ASM_FUNCTION(__sinit_d_a_obj_gadget_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daObj_Gadget_Param_cFv) {
+asm daObj_Gadget_Param_c::~daObj_Gadget_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/__dt__20daObj_Gadget_Param_cFv.s"
 }
@@ -521,7 +597,7 @@ ASM_FUNCTION(__dt__20daObj_Gadget_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BF4920) {
+extern "C" asm void func_80BF4920() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/func_80BF4920.s"
 }
@@ -532,7 +608,7 @@ ASM_FUNCTION(func_80BF4920) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BF4928) {
+extern "C" asm void func_80BF4928() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/func_80BF4928.s"
 }

@@ -6,182 +6,831 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMsgObject_HowlHIO_c (dMsgObject_HowlHIO_c) False/False
+/* top-level dependencies (begin dMsgObject_HowlHIO_c) */
+/* top-level dependencies (end dMsgObject_HowlHIO_c) */
+struct dMsgObject_HowlHIO_c {
+	/* 80232AEC */ dMsgObject_HowlHIO_c();
+	/* 80238B94 */ ~dMsgObject_HowlHIO_c();
+};
+
+// build dMsgObject_HIO_c (dMsgObject_HIO_c) False/False
+/* top-level dependencies (begin dMsgObject_HIO_c) */
+/* top-level dependencies (end dMsgObject_HIO_c) */
+struct dMsgObject_HIO_c {
+	/* 80232D6C */ dMsgObject_HIO_c();
+	/* 80238BDC */ ~dMsgObject_HIO_c();
+};
+
+// build dMsgObject_c (dMsgObject_c) False/False
+// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	// build EMountMode (JKRArchive::EMountMode) False/False
+	/* dependencies (begin JKRArchive::EMountMode) */
+	/* dependencies (end JKRArchive::EMountMode) */
+	struct EMountMode {
+	};
+
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+/* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
+// outer dependency: JKRArchive::EMountMode
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
+struct mDoDvdThd_mountXArchive_c {
+	// JKRArchive::EMountMode
+	// JKRHeap
+	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(char);
+};
+
+// build msg_class (msg_class) False/False
+/* top-level dependencies (begin msg_class) */
+/* top-level dependencies (end msg_class) */
+struct msg_class {
+};
+
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+};
+
+/* top-level dependencies (begin dMsgObject_c) */
+// outer dependency: mDoDvdThd_mountXArchive_c
+// outer dependency: fopAc_ac_c
+// outer dependency: COutFont_c
+// outer dependency: msg_class
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	// COutFont_c
+	// msg_class
+	// JUTFont
+	// J2DTextBox
+	// mDoDvdThd_mountXArchive_c
+	// fopAc_ac_c
+	/* 80233284 */ void _create(msg_class*);
+	/* 80233590 */ void _execute();
+	/* 802339BC */ void _draw();
+	/* 80233AE8 */ void _delete();
+	/* 80233D04 */ void setMessageIndex(u32, u32, bool);
+	/* 80233E70 */ void setMessageIndexDemo(u32, bool);
+	/* 80233F84 */ void getMessageIndex(u32);
+	/* 80233FD8 */ void getRevoMessageIndex(u32);
+	/* 802340D4 */ void getMessageIndexAlways(u32);
+	/* 80234128 */ void getMessageIDAlways(u32);
+	/* 8023413C */ void getMessageGroup(u32);
+	/* 80234150 */ void waitProc();
+	/* 80234318 */ void openProc();
+	/* 802349D8 */ void outnowProc();
+	/* 80234CCC */ void outwaitProc();
+	/* 80234FF0 */ void stopProc();
+	/* 80234FF4 */ void continueProc();
+	/* 8023531C */ void selectProc();
+	/* 8023587C */ void selectEndProc();
+	/* 802358D4 */ void inputProc();
+	/* 80235AD4 */ void finishProc();
+	/* 80235CC0 */ void endProc();
+	/* 80235EBC */ void deleteProc();
+	/* 8023609C */ void textmodeProc();
+	/* 802360A0 */ void talkStartInit();
+	/* 8023670C */ void fukiPosCalc(bool);
+	/* 802368E4 */ void setStatusLocal(u16);
+	/* 802368F8 */ void getStatusLocal();
+	/* 8023690C */ void delete_screen(bool);
+	/* 802369D8 */ void isSend();
+	/* 80236BF8 */ void readMessageGroupLocal(mDoDvdThd_mountXArchive_c**);
+	/* 80236C90 */ void changeFlowGroupLocal(s32);
+	/* 80236CD4 */ void demoMessageGroupLocal();
+	/* 80236D00 */ void endFlowGroupLocal();
+	/* 80236D0C */ void changeGroupLocal(s16);
+	/* 80236DE4 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
+	/* 802370A8 */ void isGetItemMessage();
+	/* 802370BC */ void isKanbanMessage();
+	/* 802370E8 */ void isHowlMessage();
+	/* 802370FC */ void isMidonaMessage();
+	/* 80237138 */ void isMidonaNormalTalkWait();
+	/* 802371B0 */ void isMidonaTalkWait();
+	/* 802371E4 */ void isPlaceMessage();
+	/* 802371F8 */ void isBossMessage();
+	/* 8023720C */ bool isBookMessage();
+	/* 80237214 */ void isStaffMessage();
+	/* 80237228 */ void isSaveMessage();
+	/* 8023723C */ void isTalkMessage();
+	/* 802372CC */ void getSmellName();
+	/* 80237334 */ void getPortalName();
+	/* 8023738C */ void getBombName();
+	/* 8023741C */ void getInsectName();
+	/* 80237478 */ void getLetterName();
+	/* 802374D0 */ void getSelectBombNum();
+	/* 80237520 */ void onMsgSendControlLocal();
+	/* 80237530 */ void offMsgSendControlLocal();
+	/* 80237550 */ void isMsgSendControlLocal();
+	/* 8023755C */ void onMsgSendLocal();
+	/* 8023756C */ void offMsgSendLocal();
+	/* 8023757C */ void isMsgSendLocal();
+	/* 80237588 */ void isMouthCheckLocal();
+	/* 8023759C */ void getBombBuyPriceLocal(char);
+	/* 802375E4 */ void addSelectBomBag(char);
+	/* 80237610 */ void resetSelectBomBag();
+	/* 8023763C */ void getSelectBombBagIDLocal();
+	/* 8023768C */ void getSelectBombPriceLocal();
+	/* 8023773C */ void setEquipBombInfoLocal();
+	/* 80237748 */ void updateEquipBombInfoLocal();
+	/* 802378B8 */ void setShopWaitTimer(char);
+	/* 802378CC */ void setSelectWordFlagLocal(char);
+	/* 802378D4 */ void isHowlHearingModeLocal();
+	/* 80237934 */ void isCameraCancelFlag();
+	/* 80237950 */ void onCameraCancelFlag();
+	/* 80237968 */ void offCameraCancelFlag();
+	/* 80237980 */ void isKillMessageFlag();
+	/* 80237994 */ void onKillMessageFlag();
+	/* 802379AC */ void setKillMessageFlag();
+	/* 802379D8 */ void setKillMessageFlagLocal();
+	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
+	/* 80237A88 */ void setNowTalkFlowNo(s16);
+	/* 80237A9C */ void getNowTalkFlowNo();
+	/* 80237AB0 */ void setDemoMessage(u32);
+	/* 80237AE0 */ void setTalkHeap(void*);
+	/* 80237B10 */ void setTalkHeapLocal(void*);
+	/* 80237B54 */ void getTalkHeap();
+	/* 80237B68 */ void isDraw();
+	/* 80237BFC */ void setButtonStatusLocal();
+	/* 80237D88 */ void setDemoMessageLocal(u32);
+	/* 80237DD8 */ void getSmellTypeMessageIDLocal();
+	/* 80237E04 */ void setSmellTypeLocal(char);
+	/* 80237E58 */ void getSelectCursorPosLocal();
+	/* 80237E68 */ void setSelectCursorPosLocal(char);
+	/* 80237F10 */ void setTalkActorLocal(fopAc_ac_c*);
+	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
+	/* 8023803C */ void changeFlowGroup(s32);
+	/* 8023806C */ void demoMessageGroup();
+	/* 80238098 */ void endFlowGroup();
+	/* 802380C4 */ void changeGroup(s16);
+	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
+	/* 80238174 */ void getMsgDtPtr();
+	/* 80238188 */ void setProcessID(s32);
+	/* 8023819C */ void getActor();
+	/* 802381C0 */ void getpTalkActor();
+	/* 802381D4 */ void getIdx();
+	/* 802381E8 */ void getNodeIdx();
+	/* 802381FC */ void setStatus(u16);
+	/* 8023822C */ void getStatus();
+	/* 80238258 */ void getScrnDrawPtr();
+	/* 8023826C */ void setTalkActor(fopAc_ac_c*);
+	/* 8023829C */ void onMsgSendControl();
+	/* 802382C8 */ void offMsgSendControl();
+	/* 802382F4 */ void isMsgSendControl();
+	/* 80238320 */ void onMsgSend();
+	/* 8023834C */ void offMsgSend();
+	/* 80238378 */ void isMsgSend();
+	/* 802383A4 */ void isMouthCheck();
+	/* 802383D0 */ void getMessageID();
+	/* 802383E4 */ void getSmellTypeMessageID();
+	/* 80238410 */ void setSmellType(char);
+	/* 80238440 */ void getSelectCursorPos();
+	/* 8023846C */ void setSelectCursorPos(char);
+	/* 8023849C */ void setPortalMessageID(u16);
+	/* 802384B0 */ void setInsectItemNo(char);
+	/* 802384C4 */ void setLetterNameID(u16);
+	/* 802384D8 */ void setArrowNum(char);
+	/* 802384EC */ void setMsgOutputType(char);
+	/* 80238500 */ void getMsgOutputType();
+	/* 80238514 */ void getWord();
+	/* 80238528 */ void getSelectWord(s32);
+	/* 80238544 */ void setSelectWordFlag(char);
+	/* 80238574 */ void getSelectWordFlag();
+	/* 80238588 */ void isHowlHearingMode();
+	/* 802385B4 */ void getSelectBombBagID();
+	/* 802385E0 */ void getSelectBombPrice();
+	/* 8023860C */ void setEquipBombInfo();
+	/* 80238638 */ void getItemEquipButton();
+	/* 8023864C */ void setSelectCancelPos(char);
+};
+
+// build msg_class (msg_class) True/True
+// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) True/True
+// build J2DTextBox (J2DTextBox) True/True
+// build JUTFont (JUTFont) True/True
+// build COutFont_c (COutFont_c) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dMsgScrnBase_c (dMsgScrnBase_c) False/False
+/* top-level dependencies (begin dMsgScrnBase_c) */
+/* top-level dependencies (end dMsgScrnBase_c) */
+struct dMsgScrnBase_c {
+	/* 80238C3C */ void exec();
+	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
+	/* 80238C44 */ void setSelectString(char*, char*, char*);
+	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
+	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C54 */ void arwAnimeMove();
+	/* 80238C58 */ void arwAnimeInit();
+	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C60 */ bool isSelect();
+	/* 80238C68 */ bool selectAnimeEnd();
+	/* 80238C70 */ void dotAnimeMove();
+	/* 80238C74 */ void dotAnimeInit();
+	/* 8023C360 */ void setString(char*, char*);
+	/* 8023C3EC */ void setRubyString(char*);
+};
+
+// build jmessage_tReference (jmessage_tReference) False/False
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+/* top-level dependencies (begin jmessage_tReference) */
+// outer dependency: cXyz
+/* top-level dependencies (end jmessage_tReference) */
+struct jmessage_tReference {
+	// cXyz
+	/* 80228B04 */ jmessage_tReference();
+	/* 80229034 */ void pageSend();
+	/* 80229168 */ void selectMessage();
+	/* 802294A8 */ void inputNumber();
+	/* 802297E4 */ void shiftCharCountBuffer();
+	/* 80229810 */ void resetCharCountBuffer();
+	/* 8022994C */ void isLightEnd();
+	/* 80238C78 */ void setActorPos(cXyz);
+};
+
+// build cXyz (cXyz) True/True
+// build JKRHeap (JKRHeap) True/True
+// build Vec (Vec) True/True
+// build JKRArchive (JKRArchive) True/True
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(s32, bool) const;
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033E60 */ void onFirstBit(char);
+};
+
+// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
+/* top-level dependencies (begin dSv_player_item_record_c) */
+/* top-level dependencies (end dSv_player_item_record_c) */
+struct dSv_player_item_record_c {
+	/* 80033F7C */ void getBombNum(char) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+	/* 800349E0 */ void setEventReg(u16, char);
+	/* 80034A04 */ void getEventReg(u16) const;
+};
+
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 8004368C */ void setPtT(void*);
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+/* top-level dependencies (begin dMeter2Info_c) */
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	/* 8021C1DC */ void isFloatingMessageVisible();
+	/* 8021C218 */ void resetFloatingMessage();
+	/* 8021C238 */ void decMsgKeyWaitTimer();
+};
+
+// build dMeter2_c (dMeter2_c) False/False
+/* top-level dependencies (begin dMeter2_c) */
+/* top-level dependencies (end dMeter2_c) */
+struct dMeter2_c {
+	/* 8021F6EC */ void emphasisButtonDelete();
+};
+
+// build jmessage_tSequenceProcessor (jmessage_tSequenceProcessor) False/False
+// build jmessage_tControl (jmessage_tControl) False/False
+/* top-level dependencies (begin jmessage_tControl) */
+/* top-level dependencies (end jmessage_tControl) */
+struct jmessage_tControl {
+};
+
+// build jmessage_tReference (jmessage_tReference) True/True
+/* top-level dependencies (begin jmessage_tSequenceProcessor) */
+// outer dependency: jmessage_tControl
+// outer dependency: jmessage_tReference
+/* top-level dependencies (end jmessage_tSequenceProcessor) */
+struct jmessage_tSequenceProcessor {
+	// jmessage_tControl
+	// jmessage_tReference
+	/* 8022B558 */ jmessage_tSequenceProcessor(jmessage_tReference const*, jmessage_tControl*);
+};
+
+// build jmessage_tControl (jmessage_tControl) True/True
+// build jmessage_tRenderingProcessor (jmessage_tRenderingProcessor) False/False
+// build jmessage_tReference (jmessage_tReference) True/True
+/* top-level dependencies (begin jmessage_tRenderingProcessor) */
+// outer dependency: jmessage_tReference
+/* top-level dependencies (end jmessage_tRenderingProcessor) */
+struct jmessage_tRenderingProcessor {
+	// jmessage_tReference
+	/* 8022CCB0 */ jmessage_tRenderingProcessor(jmessage_tReference const*);
+	/* 8022E12C */ void resetRendering();
+};
+
+// build dMsgScrnBoss_c (dMsgScrnBoss_c) False/False
+/* top-level dependencies (begin dMsgScrnBoss_c) */
+/* top-level dependencies (end dMsgScrnBoss_c) */
+struct dMsgScrnBoss_c {
+	/* 8023C5C8 */ dMsgScrnBoss_c();
+};
+
+// build dMsgScrnItem_c (dMsgScrnItem_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+/* top-level dependencies (begin dMsgScrnItem_c) */
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnItem_c) */
+struct dMsgScrnItem_c {
+	// JKRExpHeap
+	/* 8023E79C */ dMsgScrnItem_c(char, char, JKRExpHeap*);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build dMsgScrnHowl_c (dMsgScrnHowl_c) False/False
+/* top-level dependencies (begin dMsgScrnHowl_c) */
+/* top-level dependencies (end dMsgScrnHowl_c) */
+struct dMsgScrnHowl_c {
+	/* 8024096C */ dMsgScrnHowl_c();
+	/* 80242080 */ void isKeyCheck();
+};
+
+// build dMsgScrnJimaku_c (dMsgScrnJimaku_c) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin dMsgScrnJimaku_c) */
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnJimaku_c) */
+struct dMsgScrnJimaku_c {
+	// JKRExpHeap
+	/* 80244558 */ dMsgScrnJimaku_c(char, JKRExpHeap*);
+};
+
+// build dMsgScrnKanban_c (dMsgScrnKanban_c) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin dMsgScrnKanban_c) */
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnKanban_c) */
+struct dMsgScrnKanban_c {
+	// JKRExpHeap
+	/* 80244E38 */ dMsgScrnKanban_c(JKRExpHeap*);
+};
+
+// build dMsgScrnPlace_c (dMsgScrnPlace_c) False/False
+/* top-level dependencies (begin dMsgScrnPlace_c) */
+/* top-level dependencies (end dMsgScrnPlace_c) */
+struct dMsgScrnPlace_c {
+	/* 802463CC */ dMsgScrnPlace_c();
+};
+
+// build dMsgScrnStaff_c (dMsgScrnStaff_c) False/False
+/* top-level dependencies (begin dMsgScrnStaff_c) */
+/* top-level dependencies (end dMsgScrnStaff_c) */
+struct dMsgScrnStaff_c {
+	/* 80246B34 */ dMsgScrnStaff_c(char);
+};
+
+// build dMsgScrnTalk_c (dMsgScrnTalk_c) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin dMsgScrnTalk_c) */
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnTalk_c) */
+struct dMsgScrnTalk_c {
+	// JKRExpHeap
+	/* 80246FF0 */ dMsgScrnTalk_c(char, char, JKRExpHeap*);
+};
+
+// build dMsgScrnTree_c (dMsgScrnTree_c) False/False
+// build JUTFont (JUTFont) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin dMsgScrnTree_c) */
+// outer dependency: JUTFont
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnTree_c) */
+struct dMsgScrnTree_c {
+	// JUTFont
+	// JKRExpHeap
+	/* 80248954 */ dMsgScrnTree_c(JUTFont*, JKRExpHeap*);
+};
+
+// build dMsgString_c (dMsgString_c) False/False
+/* top-level dependencies (begin dMsgString_c) */
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build JMessage (JMessage) False/False
+// build JMessage (JMessage) True/False
+struct JMessage;
+/* top-level dependencies (begin JMessage) */
+// outer dependency: JMessage::TResourceContainer
+/* top-level dependencies (end JMessage) */
+struct JMessage {
+	// build TControl (JMessage::TControl) False/False
+	/* dependencies (begin JMessage::TControl) */
+	/* dependencies (end JMessage::TControl) */
+	struct TControl {
+		/* 802A75D4 */ void reset();
+		/* 802A7634 */ void update();
+		/* 802A76BC */ void render();
+		/* 802A77E8 */ void setMessageCode(u16, u16);
+		/* 802A78F4 */ void setMessageID(u32, u32, bool*);
+	};
+
+	// build TResourceContainer (JMessage::TResourceContainer) False/False
+	/* dependencies (begin JMessage::TResourceContainer) */
+	/* dependencies (end JMessage::TResourceContainer) */
+	struct TResourceContainer {
+		// build TCResource (JMessage::TResourceContainer::TCResource) False/False
+		/* dependencies (begin JMessage::TResourceContainer::TCResource) */
+		/* dependencies (end JMessage::TResourceContainer::TCResource) */
+		struct TCResource {
+			/* 802A8EF8 */ ~TCResource();
+		};
+
+		/* 802A906C */ TResourceContainer();
+	};
+
+	// build TParse (JMessage::TParse) False/False
+	/* dependencies (begin JMessage::TParse) */
+	// inner dependency: TResourceContainer (JMessage::TResourceContainer) True False (for JMessage::TParse)
+	// build TResourceContainer (JMessage::TResourceContainer) True/True
+	/* dependencies (end JMessage::TParse) */
+	struct TParse {
+		// JMessage::TResourceContainer
+		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
+	};
+
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Z2SeqMgr (Z2SeqMgr) False/False
+/* top-level dependencies (begin Z2SeqMgr) */
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	/* 802AFF8C */ void changeBgmStatus(s32);
+};
+
+// build Z2StatusMgr (Z2StatusMgr) False/False
+/* top-level dependencies (begin Z2StatusMgr) */
+/* top-level dependencies (end Z2StatusMgr) */
+struct Z2StatusMgr {
+	/* 802B60CC */ void talkIn();
+	/* 802B6104 */ void talkOut();
+};
+
+// build Z2SpeechMgr2 (Z2SpeechMgr2) False/False
+/* top-level dependencies (begin Z2SpeechMgr2) */
+/* top-level dependencies (end Z2SpeechMgr2) */
+struct Z2SpeechMgr2 {
+	/* 802CBF60 */ void setTextCount(s16);
+};
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::TNodeLinkList::iterator
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
+		/* dependencies (begin JGadget::binary::TParse_header_block) */
+		/* dependencies (end JGadget::binary::TParse_header_block) */
+		struct TParse_header_block {
+			/* 802DC910 */ void parse_next(void const**, u32);
+		};
+
+	};
+
+	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
+	/* dependencies (begin JGadget::TNodeLinkList) */
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
+	/* dependencies (end JGadget::TNodeLinkList) */
+	struct TNodeLinkList {
+		// JGadget::TNodeLinkList::iterator
+		// build iterator (JGadget::TNodeLinkList::iterator) False/False
+		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
+		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		struct iterator {
+		};
+
+		/* 802DCA58 */ void erase(JGadget::TNodeLinkList::iterator);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dMsgObject_getGroupID__Fv();
-extern "C" extern void dMsgObject_searchSSItem__FPvPv();
-extern "C" extern void __ct__20dMsgObject_HowlHIO_cFv();
-extern "C" extern void __ct__16dMsgObject_HIO_cFv();
-extern "C" extern void _create__12dMsgObject_cFP9msg_class();
-extern "C" extern void _execute__12dMsgObject_cFv();
-extern "C" extern void _draw__12dMsgObject_cFv();
-extern "C" extern void _delete__12dMsgObject_cFv();
-extern "C" extern void setMessageIndex__12dMsgObject_cFUlUlb();
-extern "C" extern void setMessageIndexDemo__12dMsgObject_cFUlb();
-extern "C" extern void getMessageIndex__12dMsgObject_cFUl();
-extern "C" extern void getRevoMessageIndex__12dMsgObject_cFUl();
-extern "C" extern void getMessageIndexAlways__12dMsgObject_cFUl();
-extern "C" extern void getMessageIDAlways__12dMsgObject_cFUl();
-extern "C" extern void getMessageGroup__12dMsgObject_cFUl();
-extern "C" extern void waitProc__12dMsgObject_cFv();
-extern "C" extern void openProc__12dMsgObject_cFv();
-extern "C" extern void outnowProc__12dMsgObject_cFv();
-extern "C" extern void outwaitProc__12dMsgObject_cFv();
-extern "C" extern void stopProc__12dMsgObject_cFv();
-extern "C" extern void continueProc__12dMsgObject_cFv();
-extern "C" extern void selectProc__12dMsgObject_cFv();
-extern "C" extern void selectEndProc__12dMsgObject_cFv();
-extern "C" extern void inputProc__12dMsgObject_cFv();
-extern "C" extern void finishProc__12dMsgObject_cFv();
-extern "C" extern void endProc__12dMsgObject_cFv();
-extern "C" extern void deleteProc__12dMsgObject_cFv();
-extern "C" extern void textmodeProc__12dMsgObject_cFv();
-extern "C" extern void talkStartInit__12dMsgObject_cFv();
-extern "C" extern void fukiPosCalc__12dMsgObject_cFb();
-extern "C" extern void setStatusLocal__12dMsgObject_cFUs();
-extern "C" extern void getStatusLocal__12dMsgObject_cFv();
-extern "C" extern void delete_screen__12dMsgObject_cFb();
-extern "C" extern void isSend__12dMsgObject_cFv();
-extern "C" extern void readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" extern void changeFlowGroupLocal__12dMsgObject_cFl();
-extern "C" extern void demoMessageGroupLocal__12dMsgObject_cFv();
-extern "C" extern void endFlowGroupLocal__12dMsgObject_cFv();
-extern "C" extern void changeGroupLocal__12dMsgObject_cFs();
-extern "C" extern void getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern "C" extern void isGetItemMessage__12dMsgObject_cFv();
-extern "C" extern void isKanbanMessage__12dMsgObject_cFv();
-extern "C" extern void isHowlMessage__12dMsgObject_cFv();
-extern "C" extern void isMidonaMessage__12dMsgObject_cFv();
-extern "C" extern void isMidonaNormalTalkWait__12dMsgObject_cFv();
-extern "C" extern void isMidonaTalkWait__12dMsgObject_cFv();
-extern "C" extern void isPlaceMessage__12dMsgObject_cFv();
-extern "C" extern void isBossMessage__12dMsgObject_cFv();
-extern "C" extern void isBookMessage__12dMsgObject_cFv();
-extern "C" extern void isStaffMessage__12dMsgObject_cFv();
-extern "C" extern void isSaveMessage__12dMsgObject_cFv();
-extern "C" extern void isTalkMessage__12dMsgObject_cFv();
-extern "C" extern void getSmellName__12dMsgObject_cFv();
-extern "C" extern void getPortalName__12dMsgObject_cFv();
-extern "C" extern void getBombName__12dMsgObject_cFv();
-extern "C" extern void getInsectName__12dMsgObject_cFv();
-extern "C" extern void getLetterName__12dMsgObject_cFv();
-extern "C" extern void getSelectBombNum__12dMsgObject_cFv();
-extern "C" extern void onMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" extern void offMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" extern void isMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" extern void onMsgSendLocal__12dMsgObject_cFv();
-extern "C" extern void offMsgSendLocal__12dMsgObject_cFv();
-extern "C" extern void isMsgSendLocal__12dMsgObject_cFv();
-extern "C" extern void isMouthCheckLocal__12dMsgObject_cFv();
-extern "C" extern void getBombBuyPriceLocal__12dMsgObject_cFUc();
-extern "C" extern void addSelectBomBag__12dMsgObject_cFUc();
-extern "C" extern void resetSelectBomBag__12dMsgObject_cFv();
-extern "C" extern void getSelectBombBagIDLocal__12dMsgObject_cFv();
-extern "C" extern void getSelectBombPriceLocal__12dMsgObject_cFv();
-extern "C" extern void setEquipBombInfoLocal__12dMsgObject_cFv();
-extern "C" extern void updateEquipBombInfoLocal__12dMsgObject_cFv();
-extern "C" extern void setShopWaitTimer__12dMsgObject_cFUc();
-extern "C" extern void setSelectWordFlagLocal__12dMsgObject_cFUc();
-extern "C" extern void isHowlHearingModeLocal__12dMsgObject_cFv();
-extern "C" extern void isCameraCancelFlag__12dMsgObject_cFv();
-extern "C" extern void onCameraCancelFlag__12dMsgObject_cFv();
-extern "C" extern void offCameraCancelFlag__12dMsgObject_cFv();
-extern "C" extern void isKillMessageFlag__12dMsgObject_cFv();
-extern "C" extern void onKillMessageFlag__12dMsgObject_cFv();
-extern "C" extern void setKillMessageFlag__12dMsgObject_cFv();
-extern "C" extern void setKillMessageFlagLocal__12dMsgObject_cFv();
-extern "C" extern void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" extern void setNowTalkFlowNo__12dMsgObject_cFs();
-extern "C" extern void getNowTalkFlowNo__12dMsgObject_cFv();
-extern "C" extern void setDemoMessage__12dMsgObject_cFUl();
-extern "C" extern void setTalkHeap__12dMsgObject_cFPv();
-extern "C" extern void setTalkHeapLocal__12dMsgObject_cFPv();
-extern "C" extern void getTalkHeap__12dMsgObject_cFv();
-extern "C" extern void isDraw__12dMsgObject_cFv();
-extern "C" extern void setButtonStatusLocal__12dMsgObject_cFv();
-extern "C" extern void setDemoMessageLocal__12dMsgObject_cFUl();
-extern "C" extern void getSmellTypeMessageIDLocal__12dMsgObject_cFv();
-extern "C" extern void setSmellTypeLocal__12dMsgObject_cFUc();
-extern "C" extern void getSelectCursorPosLocal__12dMsgObject_cFv();
-extern "C" extern void setSelectCursorPosLocal__12dMsgObject_cFUc();
-extern "C" extern void setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" extern void dMsgObject_Draw__FP12dMsgObject_c();
-extern "C" extern void dMsgObject_Execute__FP12dMsgObject_c();
-extern "C" extern void dMsgObject_IsDelete__FP12dMsgObject_c();
-extern "C" extern void dMsgObject_Delete__FP12dMsgObject_c();
-extern "C" extern void dMsgObject_Create__FP9msg_class();
-extern "C" extern void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" extern void changeFlowGroup__12dMsgObject_cFl();
-extern "C" extern void demoMessageGroup__12dMsgObject_cFv();
-extern "C" extern void endFlowGroup__12dMsgObject_cFv();
-extern "C" extern void changeGroup__12dMsgObject_cFs();
-extern "C" extern void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern "C" extern void getMsgDtPtr__12dMsgObject_cFv();
-extern "C" extern void setProcessID__12dMsgObject_cFUi();
-extern "C" extern void getActor__12dMsgObject_cFv();
-extern "C" extern void getpTalkActor__12dMsgObject_cFv();
-extern "C" extern void getIdx__12dMsgObject_cFv();
-extern "C" extern void getNodeIdx__12dMsgObject_cFv();
-extern "C" extern void setStatus__12dMsgObject_cFUs();
-extern "C" extern void getStatus__12dMsgObject_cFv();
-extern "C" extern void getScrnDrawPtr__12dMsgObject_cFv();
-extern "C" extern void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" extern void onMsgSendControl__12dMsgObject_cFv();
-extern "C" extern void offMsgSendControl__12dMsgObject_cFv();
-extern "C" extern void isMsgSendControl__12dMsgObject_cFv();
-extern "C" extern void onMsgSend__12dMsgObject_cFv();
-extern "C" extern void offMsgSend__12dMsgObject_cFv();
-extern "C" extern void isMsgSend__12dMsgObject_cFv();
-extern "C" extern void isMouthCheck__12dMsgObject_cFv();
-extern "C" extern void getMessageID__12dMsgObject_cFv();
-extern "C" extern void getSmellTypeMessageID__12dMsgObject_cFv();
-extern "C" extern void setSmellType__12dMsgObject_cFUc();
-extern "C" extern void getSelectCursorPos__12dMsgObject_cFv();
-extern "C" extern void setSelectCursorPos__12dMsgObject_cFUc();
-extern "C" extern void setPortalMessageID__12dMsgObject_cFUs();
-extern "C" extern void setInsectItemNo__12dMsgObject_cFUc();
-extern "C" extern void setLetterNameID__12dMsgObject_cFUs();
-extern "C" extern void setArrowNum__12dMsgObject_cFUc();
-extern "C" extern void setMsgOutputType__12dMsgObject_cFUc();
-extern "C" extern void getMsgOutputType__12dMsgObject_cFv();
-extern "C" extern void getWord__12dMsgObject_cFv();
-extern "C" extern void getSelectWord__12dMsgObject_cFi();
-extern "C" extern void setSelectWordFlag__12dMsgObject_cFUc();
-extern "C" extern void getSelectWordFlag__12dMsgObject_cFv();
-extern "C" extern void isHowlHearingMode__12dMsgObject_cFv();
-extern "C" extern void getSelectBombBagID__12dMsgObject_cFv();
-extern "C" extern void getSelectBombPrice__12dMsgObject_cFv();
-extern "C" extern void setEquipBombInfo__12dMsgObject_cFv();
-extern "C" extern void getItemEquipButton__12dMsgObject_cFv();
-extern "C" extern void setSelectCancelPos__12dMsgObject_cFUc();
-extern "C" extern void dMsgObject_getTotalPrice__Fv();
-extern "C" extern void dMsgObject_setTotalPrice__FUs();
-extern "C" extern void dMsgObject_addTotalPrice__Fs();
-extern "C" extern void dMsgObject_getTotalPayment__Fv();
-extern "C" extern void dMsgObject_setTotalPayment__FUs();
-extern "C" extern void dMsgObject_addTotalPayment__Fs();
-extern "C" extern void dMsgObject_getFundRaising__Fv();
-extern "C" extern void dMsgObject_setFundRaising__FUs();
-extern "C" extern void dMsgObject_addFundRaising__Fs();
-extern "C" extern void dMsgObject_getOffering__Fv();
-extern "C" extern void dMsgObject_addOffering__Fs();
-extern "C" extern void __sinit_d_msg_object_cpp();
-extern "C" extern void __dt__20dMsgObject_HowlHIO_cFv();
-extern "C" extern void __dt__16dMsgObject_HIO_cFv();
-extern "C" extern void exec__14dMsgScrnBase_cFv();
-extern "C" extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
-extern "C" extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern "C" extern void selectAnimeMove__14dMsgScrnBase_cFUcUcb();
-extern "C" extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
-extern "C" extern void arwAnimeMove__14dMsgScrnBase_cFv();
-extern "C" extern void arwAnimeInit__14dMsgScrnBase_cFv();
-extern "C" extern void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern "C" extern void isSelect__14dMsgScrnBase_cFv();
-extern "C" extern void selectAnimeEnd__14dMsgScrnBase_cFv();
-extern "C" extern void dotAnimeMove__14dMsgScrnBase_cFv();
-extern "C" extern void dotAnimeInit__14dMsgScrnBase_cFv();
-extern "C" extern void setActorPos__19jmessage_tReferenceF4cXyz();
+void dMsgObject_getGroupID();
+static void dMsgObject_searchSSItem(void*, void*);
+static void dMsgObject_Draw(dMsgObject_c*);
+static void dMsgObject_Execute(dMsgObject_c*);
+static bool dMsgObject_IsDelete(dMsgObject_c*);
+static void dMsgObject_Delete(dMsgObject_c*);
+static void dMsgObject_Create(msg_class*);
+static void dMsgObject_getTotalPrice();
+void dMsgObject_setTotalPrice(u16);
+void dMsgObject_addTotalPrice(s16);
+static void dMsgObject_getTotalPayment();
+void dMsgObject_setTotalPayment(u16);
+static void dMsgObject_addTotalPayment(s16);
+void dMsgObject_getFundRaising();
+void dMsgObject_setFundRaising(u16);
+static void dMsgObject_addFundRaising(s16);
+void dMsgObject_getOffering();
+void dMsgObject_addOffering(s16);
+extern "C" void __sinit_d_msg_object_cpp();
+
+extern "C" void dMsgObject_getGroupID__Fv();
+extern "C" static void dMsgObject_searchSSItem__FPvPv();
+extern "C" void __ct__20dMsgObject_HowlHIO_cFv();
+extern "C" void __ct__16dMsgObject_HIO_cFv();
+extern "C" void _create__12dMsgObject_cFP9msg_class();
+extern "C" void _execute__12dMsgObject_cFv();
+extern "C" void _draw__12dMsgObject_cFv();
+extern "C" void _delete__12dMsgObject_cFv();
+extern "C" void setMessageIndex__12dMsgObject_cFUlUlb();
+extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb();
+extern "C" void getMessageIndex__12dMsgObject_cFUl();
+extern "C" void getRevoMessageIndex__12dMsgObject_cFUl();
+extern "C" void getMessageIndexAlways__12dMsgObject_cFUl();
+extern "C" void getMessageIDAlways__12dMsgObject_cFUl();
+extern "C" void getMessageGroup__12dMsgObject_cFUl();
+extern "C" void waitProc__12dMsgObject_cFv();
+extern "C" void openProc__12dMsgObject_cFv();
+extern "C" void outnowProc__12dMsgObject_cFv();
+extern "C" void outwaitProc__12dMsgObject_cFv();
+extern "C" void stopProc__12dMsgObject_cFv();
+extern "C" void continueProc__12dMsgObject_cFv();
+extern "C" void selectProc__12dMsgObject_cFv();
+extern "C" void selectEndProc__12dMsgObject_cFv();
+extern "C" void inputProc__12dMsgObject_cFv();
+extern "C" void finishProc__12dMsgObject_cFv();
+extern "C" void endProc__12dMsgObject_cFv();
+extern "C" void deleteProc__12dMsgObject_cFv();
+extern "C" void textmodeProc__12dMsgObject_cFv();
+extern "C" void talkStartInit__12dMsgObject_cFv();
+extern "C" void fukiPosCalc__12dMsgObject_cFb();
+extern "C" void setStatusLocal__12dMsgObject_cFUs();
+extern "C" void getStatusLocal__12dMsgObject_cFv();
+extern "C" void delete_screen__12dMsgObject_cFb();
+extern "C" void isSend__12dMsgObject_cFv();
+extern "C" void readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
+extern "C" void changeFlowGroupLocal__12dMsgObject_cFl();
+extern "C" void demoMessageGroupLocal__12dMsgObject_cFv();
+extern "C" void endFlowGroupLocal__12dMsgObject_cFv();
+extern "C" void changeGroupLocal__12dMsgObject_cFs();
+extern "C" void getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
+extern "C" void isGetItemMessage__12dMsgObject_cFv();
+extern "C" void isKanbanMessage__12dMsgObject_cFv();
+extern "C" void isHowlMessage__12dMsgObject_cFv();
+extern "C" void isMidonaMessage__12dMsgObject_cFv();
+extern "C" void isMidonaNormalTalkWait__12dMsgObject_cFv();
+extern "C" void isMidonaTalkWait__12dMsgObject_cFv();
+extern "C" void isPlaceMessage__12dMsgObject_cFv();
+extern "C" void isBossMessage__12dMsgObject_cFv();
+extern "C" bool isBookMessage__12dMsgObject_cFv();
+extern "C" void isStaffMessage__12dMsgObject_cFv();
+extern "C" void isSaveMessage__12dMsgObject_cFv();
+extern "C" void isTalkMessage__12dMsgObject_cFv();
+extern "C" void getSmellName__12dMsgObject_cFv();
+extern "C" void getPortalName__12dMsgObject_cFv();
+extern "C" void getBombName__12dMsgObject_cFv();
+extern "C" void getInsectName__12dMsgObject_cFv();
+extern "C" void getLetterName__12dMsgObject_cFv();
+extern "C" void getSelectBombNum__12dMsgObject_cFv();
+extern "C" void onMsgSendControlLocal__12dMsgObject_cFv();
+extern "C" void offMsgSendControlLocal__12dMsgObject_cFv();
+extern "C" void isMsgSendControlLocal__12dMsgObject_cFv();
+extern "C" void onMsgSendLocal__12dMsgObject_cFv();
+extern "C" void offMsgSendLocal__12dMsgObject_cFv();
+extern "C" void isMsgSendLocal__12dMsgObject_cFv();
+extern "C" void isMouthCheckLocal__12dMsgObject_cFv();
+extern "C" void getBombBuyPriceLocal__12dMsgObject_cFUc();
+extern "C" void addSelectBomBag__12dMsgObject_cFUc();
+extern "C" void resetSelectBomBag__12dMsgObject_cFv();
+extern "C" void getSelectBombBagIDLocal__12dMsgObject_cFv();
+extern "C" void getSelectBombPriceLocal__12dMsgObject_cFv();
+extern "C" void setEquipBombInfoLocal__12dMsgObject_cFv();
+extern "C" void updateEquipBombInfoLocal__12dMsgObject_cFv();
+extern "C" void setShopWaitTimer__12dMsgObject_cFUc();
+extern "C" void setSelectWordFlagLocal__12dMsgObject_cFUc();
+extern "C" void isHowlHearingModeLocal__12dMsgObject_cFv();
+extern "C" void isCameraCancelFlag__12dMsgObject_cFv();
+extern "C" void onCameraCancelFlag__12dMsgObject_cFv();
+extern "C" void offCameraCancelFlag__12dMsgObject_cFv();
+extern "C" void isKillMessageFlag__12dMsgObject_cFv();
+extern "C" void onKillMessageFlag__12dMsgObject_cFv();
+extern "C" void setKillMessageFlag__12dMsgObject_cFv();
+extern "C" void setKillMessageFlagLocal__12dMsgObject_cFv();
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" void setNowTalkFlowNo__12dMsgObject_cFs();
+extern "C" void getNowTalkFlowNo__12dMsgObject_cFv();
+extern "C" void setDemoMessage__12dMsgObject_cFUl();
+extern "C" void setTalkHeap__12dMsgObject_cFPv();
+extern "C" void setTalkHeapLocal__12dMsgObject_cFPv();
+extern "C" void getTalkHeap__12dMsgObject_cFv();
+extern "C" void isDraw__12dMsgObject_cFv();
+extern "C" void setButtonStatusLocal__12dMsgObject_cFv();
+extern "C" void setDemoMessageLocal__12dMsgObject_cFUl();
+extern "C" void getSmellTypeMessageIDLocal__12dMsgObject_cFv();
+extern "C" void setSmellTypeLocal__12dMsgObject_cFUc();
+extern "C" void getSelectCursorPosLocal__12dMsgObject_cFv();
+extern "C" void setSelectCursorPosLocal__12dMsgObject_cFUc();
+extern "C" void setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" static void dMsgObject_Draw__FP12dMsgObject_c();
+extern "C" static void dMsgObject_Execute__FP12dMsgObject_c();
+extern "C" static bool dMsgObject_IsDelete__FP12dMsgObject_c();
+extern "C" static void dMsgObject_Delete__FP12dMsgObject_c();
+extern "C" static void dMsgObject_Create__FP9msg_class();
+extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
+extern "C" void changeFlowGroup__12dMsgObject_cFl();
+extern "C" void demoMessageGroup__12dMsgObject_cFv();
+extern "C" void endFlowGroup__12dMsgObject_cFv();
+extern "C" void changeGroup__12dMsgObject_cFs();
+extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
+extern "C" void getMsgDtPtr__12dMsgObject_cFv();
+extern "C" void setProcessID__12dMsgObject_cFUi();
+extern "C" void getActor__12dMsgObject_cFv();
+extern "C" void getpTalkActor__12dMsgObject_cFv();
+extern "C" void getIdx__12dMsgObject_cFv();
+extern "C" void getNodeIdx__12dMsgObject_cFv();
+extern "C" void setStatus__12dMsgObject_cFUs();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void getScrnDrawPtr__12dMsgObject_cFv();
+extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" void onMsgSendControl__12dMsgObject_cFv();
+extern "C" void offMsgSendControl__12dMsgObject_cFv();
+extern "C" void isMsgSendControl__12dMsgObject_cFv();
+extern "C" void onMsgSend__12dMsgObject_cFv();
+extern "C" void offMsgSend__12dMsgObject_cFv();
+extern "C" void isMsgSend__12dMsgObject_cFv();
+extern "C" void isMouthCheck__12dMsgObject_cFv();
+extern "C" void getMessageID__12dMsgObject_cFv();
+extern "C" void getSmellTypeMessageID__12dMsgObject_cFv();
+extern "C" void setSmellType__12dMsgObject_cFUc();
+extern "C" void getSelectCursorPos__12dMsgObject_cFv();
+extern "C" void setSelectCursorPos__12dMsgObject_cFUc();
+extern "C" void setPortalMessageID__12dMsgObject_cFUs();
+extern "C" void setInsectItemNo__12dMsgObject_cFUc();
+extern "C" void setLetterNameID__12dMsgObject_cFUs();
+extern "C" void setArrowNum__12dMsgObject_cFUc();
+extern "C" void setMsgOutputType__12dMsgObject_cFUc();
+extern "C" void getMsgOutputType__12dMsgObject_cFv();
+extern "C" void getWord__12dMsgObject_cFv();
+extern "C" void getSelectWord__12dMsgObject_cFi();
+extern "C" void setSelectWordFlag__12dMsgObject_cFUc();
+extern "C" void getSelectWordFlag__12dMsgObject_cFv();
+extern "C" void isHowlHearingMode__12dMsgObject_cFv();
+extern "C" void getSelectBombBagID__12dMsgObject_cFv();
+extern "C" void getSelectBombPrice__12dMsgObject_cFv();
+extern "C" void setEquipBombInfo__12dMsgObject_cFv();
+extern "C" void getItemEquipButton__12dMsgObject_cFv();
+extern "C" void setSelectCancelPos__12dMsgObject_cFUc();
+extern "C" static void dMsgObject_getTotalPrice__Fv();
+extern "C" void dMsgObject_setTotalPrice__FUs();
+extern "C" void dMsgObject_addTotalPrice__Fs();
+extern "C" static void dMsgObject_getTotalPayment__Fv();
+extern "C" void dMsgObject_setTotalPayment__FUs();
+extern "C" static void dMsgObject_addTotalPayment__Fs();
+extern "C" void dMsgObject_getFundRaising__Fv();
+extern "C" void dMsgObject_setFundRaising__FUs();
+extern "C" static void dMsgObject_addFundRaising__Fs();
+extern "C" void dMsgObject_getOffering__Fv();
+extern "C" void dMsgObject_addOffering__Fs();
+extern "C" void __sinit_d_msg_object_cpp();
+extern "C" void __dt__20dMsgObject_HowlHIO_cFv();
+extern "C" void __dt__16dMsgObject_HIO_cFv();
+extern "C" void exec__14dMsgScrnBase_cFv();
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" bool isSelect__14dMsgScrnBase_cFv();
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void setActorPos__19jmessage_tReferenceF4cXyz();
 SECTION_RODATA extern const u8 d_msg_d_msg_object__stringBase0[136];
 SECTION_DATA extern void*d_msg_d_msg_object__lit_4486[25];
 SECTION_DATA extern void*lit_5875[20];
@@ -235,95 +884,127 @@ SECTION_SDATA2 extern f32 d_msg_d_msg_object__lit_5950;
 // External References:
 // 
 
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getRubyFont__Fv();
-extern "C" extern void mDoLib_project__FP3VecP3Vec();
-extern "C" extern void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
-extern "C" extern void fopAc_IsActor__FPv();
-extern "C" extern void fopMsgM_setStageLayer__FPv();
-extern "C" extern void fopMsgM_messageSet__FUlUl();
-extern "C" extern void fpcEx_Search__FPFPvPv_PvPv();
-extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" extern void dComIfGp_setHeapLockFlag__FUc();
-extern "C" extern void dComIfGp_offHeapLockFlag__Fi();
-extern "C" extern void dComIfGp_getSubHeap2D__Fi();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void offEventBit__11dSv_event_cFUs();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void setEventReg__11dSv_event_cFUsUc();
-extern "C" extern void getEventReg__11dSv_event_cCFUs();
-extern "C" extern void setPtT__14dEvt_control_cFPv();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void __ct__Q28JUtility6TColorFv();
-extern "C" extern void isFloatingMessageVisible__13dMeter2Info_cFv();
-extern "C" extern void resetFloatingMessage__13dMeter2Info_cFv();
-extern "C" extern void decMsgKeyWaitTimer__13dMeter2Info_cFv();
-extern "C" extern void dMeter2Info_set2DVibration__Fv();
-extern "C" extern void emphasisButtonDelete__9dMeter2_cFv();
-extern "C" extern void __ct__10COutFont_cFUc();
-extern "C" extern void __ct__19jmessage_tReferenceFv();
-extern "C" extern void pageSend__19jmessage_tReferenceFv();
-extern "C" extern void selectMessage__19jmessage_tReferenceFv();
-extern "C" extern void inputNumber__19jmessage_tReferenceFv();
-extern "C" extern void shiftCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" extern void resetCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" extern void isLightEnd__19jmessage_tReferenceFv();
-extern "C" extern void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl();
-extern "C" extern void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference();
-extern "C" extern void resetRendering__28jmessage_tRenderingProcessorFv();
-extern "C" extern void setString__14dMsgScrnBase_cFPcPc();
-extern "C" extern void setRubyString__14dMsgScrnBase_cFPc();
-extern "C" extern void __ct__14dMsgScrnBoss_cFv();
-extern "C" extern void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap();
-extern "C" extern void __ct__14dMsgScrnHowl_cFv();
-extern "C" extern void isKeyCheck__14dMsgScrnHowl_cFv();
-extern "C" extern void __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap();
-extern "C" extern void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
-extern "C" extern void __ct__15dMsgScrnPlace_cFv();
-extern "C" extern void __ct__15dMsgScrnStaff_cFUc();
-extern "C" extern void __ct__14dMsgScrnTalk_cFUcUcP10JKRExpHeap();
-extern "C" extern void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __eq__4cXyzCFRC3Vec();
-extern "C" extern void reset__Q28JMessage8TControlFv();
-extern "C" extern void update__Q28JMessage8TControlFv();
-extern "C" extern void render__Q28JMessage8TControlFv();
-extern "C" extern void setMessageCode__Q28JMessage8TControlFUsUs();
-extern "C" extern void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern "C" extern void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" extern void __ct__Q28JMessage18TResourceContainerFv();
-extern "C" extern void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" extern void talkIn__11Z2StatusMgrFv();
-extern "C" extern void talkOut__11Z2StatusMgrFv();
-extern "C" extern void setTextCount__12Z2SpeechMgr2Fs();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
-extern "C" extern void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
-extern "C" extern void __register_global_object();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void mDoLib_project(Vec*, Vec*);
+void fopAc_IsActor(void*);
+void fopMsgM_setStageLayer(void*);
+void fopMsgM_messageSet(u32, u32);
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+void dComIfGs_setSelectItemIndex(s32, char);
+void dComIfGp_setHeapLockFlag(char);
+void dComIfGp_offHeapLockFlag(s32);
+void dComIfGp_getSubHeap2D(s32);
+void dMeter2Info_set2DVibration();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopMsgM_setStageLayer__FPv();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGp_setHeapLockFlag__FUc();
+extern "C" void dComIfGp_offHeapLockFlag__Fi();
+extern "C" void dComIfGp_getSubHeap2D__Fi();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setEventReg__11dSv_event_cFUsUc();
+extern "C" void getEventReg__11dSv_event_cCFUs();
+extern "C" void setPtT__14dEvt_control_cFPv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv();
+extern "C" void resetFloatingMessage__13dMeter2Info_cFv();
+extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void emphasisButtonDelete__9dMeter2_cFv();
+extern "C" void __ct__10COutFont_cFUc();
+extern "C" void __ct__19jmessage_tReferenceFv();
+extern "C" void pageSend__19jmessage_tReferenceFv();
+extern "C" void selectMessage__19jmessage_tReferenceFv();
+extern "C" void inputNumber__19jmessage_tReferenceFv();
+extern "C" void shiftCharCountBuffer__19jmessage_tReferenceFv();
+extern "C" void resetCharCountBuffer__19jmessage_tReferenceFv();
+extern "C" void isLightEnd__19jmessage_tReferenceFv();
+extern "C" void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl();
+extern "C" void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference();
+extern "C" void resetRendering__28jmessage_tRenderingProcessorFv();
+extern "C" void setString__14dMsgScrnBase_cFPcPc();
+extern "C" void setRubyString__14dMsgScrnBase_cFPc();
+extern "C" void __ct__14dMsgScrnBoss_cFv();
+extern "C" void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap();
+extern "C" void __ct__14dMsgScrnHowl_cFv();
+extern "C" void isKeyCheck__14dMsgScrnHowl_cFv();
+extern "C" void __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap();
+extern "C" void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
+extern "C" void __ct__15dMsgScrnPlace_cFv();
+extern "C" void __ct__15dMsgScrnStaff_cFUc();
+extern "C" void __ct__14dMsgScrnTalk_cFUcUcP10JKRExpHeap();
+extern "C" void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" bool __eq__4cXyzCFRC3Vec();
+extern "C" void reset__Q28JMessage8TControlFv();
+extern "C" void update__Q28JMessage8TControlFv();
+extern "C" void render__Q28JMessage8TControlFv();
+extern "C" void setMessageCode__Q28JMessage8TControlFUsUs();
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void __ct__Q28JMessage18TResourceContainerFv();
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void talkIn__11Z2StatusMgrFv();
+extern "C" void talkOut__11Z2StatusMgrFv();
+extern "C" void setTextCount__12Z2SpeechMgr2Fs();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcpy();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern void*g_fopMsg_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
@@ -342,25 +1023,25 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 804510C8-804510D0 0002+06 .sbss      s_groupID                                                    */
+/* 804510C8-804510D0 0002+06 rc=5 efc=0 .sbss      s_groupID                                                    */
 u8 s_groupID[2 + 6 /* padding */];
 
-/* 80232A3C-80232A44 0008+00 .text      dMsgObject_getGroupID__Fv                                    */
+/* 80232A3C-80232A44 0008+00 rc=1 efc=1 .text      dMsgObject_getGroupID__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getGroupID__Fv) {
+asm void dMsgObject_getGroupID() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getGroupID__Fv.s"
 }
 #pragma pop
 
 
-/* 80232A44-80232AEC 00A8+00 .text      dMsgObject_searchSSItem__FPvPv                               */
+/* 80232A44-80232AEC 00A8+00 rc=1 efc=0 .text      dMsgObject_searchSSItem__FPvPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_searchSSItem__FPvPv) {
+asm static void dMsgObject_searchSSItem(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_searchSSItem__FPvPv.s"
 }
@@ -368,7 +1049,7 @@ ASM_FUNCTION(dMsgObject_searchSSItem__FPvPv) {
 
 
 /* ############################################################################################## */
-/* 803C0AE8-803C0B4C 0064+00 .data      @4486                                                        */
+/* 803C0AE8-803C0B4C 0064+00 rc=1 efc=0 .data      @4486                                                        */
 void* d_msg_d_msg_object__lit_4486[25] = {
 	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
 	(void*)(((char*)_execute__12dMsgObject_cFv)+0x1F4),
@@ -397,7 +1078,7 @@ void* d_msg_d_msg_object__lit_4486[25] = {
 	(void*)(((char*)_execute__12dMsgObject_cFv)+0x248),
 };
 
-/* 803C0B4C-803C0B9C 0050+00 .data      @5875                                                        */
+/* 803C0B4C-803C0B9C 0050+00 rc=1 efc=0 .data      @5875                                                        */
 void* lit_5875[20] = {
 	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
 	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x308),
@@ -421,7 +1102,7 @@ void* lit_5875[20] = {
 	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2C4),
 };
 
-/* 803C0B9C-803C0BB0 0014+00 .data      l_dMsgObject_Method                                          */
+/* 803C0B9C-803C0BB0 0014+00 rc=1 efc=0 .data      l_dMsgObject_Method                                          */
 void* l_dMsgObject_Method[5] = {
 	(void*)dMsgObject_Create__FP9msg_class,
 	(void*)dMsgObject_Delete__FP12dMsgObject_c,
@@ -430,7 +1111,7 @@ void* l_dMsgObject_Method[5] = {
 	(void*)dMsgObject_Draw__FP12dMsgObject_c,
 };
 
-/* 803C0BB0-803C0BD8 0028+00 .data      g_profile_MSG_OBJECT                                         */
+/* 803C0BB0-803C0BD8 0028+00 rc=0 efc=0 .data      g_profile_MSG_OBJECT                                         */
 void* g_profile_MSG_OBJECT[10] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x000CFFFD,
@@ -444,57 +1125,57 @@ void* g_profile_MSG_OBJECT[10] = {
 	(void*)&l_dMsgObject_Method,
 };
 
-/* 803C0BD8-803C0BE4 000C+00 .data      __vt__16dMsgObject_HIO_c                                     */
+/* 803C0BD8-803C0BE4 000C+00 rc=2 efc=0 .data      __vt__16dMsgObject_HIO_c                                     */
 void* const __vt__16dMsgObject_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dMsgObject_HIO_cFv,
 };
 
-/* 803C0BE4-803C0BF0 000C+00 .data      __vt__20dMsgObject_HowlHIO_c                                 */
+/* 803C0BE4-803C0BF0 000C+00 rc=3 efc=0 .data      __vt__20dMsgObject_HowlHIO_c                                 */
 void* const __vt__20dMsgObject_HowlHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20dMsgObject_HowlHIO_cFv,
 };
 
-/* 80454AA0-80454AA4 0004+00 .sdata2    @4076                                                        */
+/* 80454AA0-80454AA4 0004+00 rc=2 efc=0 .sdata2    @4076                                                        */
 f32 d_msg_d_msg_object__lit_4076 = 0.5f;
 
-/* 80454AA4-80454AA8 0004+00 .sdata2    @4077                                                        */
+/* 80454AA4-80454AA8 0004+00 rc=1 efc=0 .sdata2    @4077                                                        */
 f32 d_msg_d_msg_object__lit_4077 = 1.0f / 10.0f;
 
-/* 80454AA8-80454AAC 0004+00 .sdata2    @4078                                                        */
+/* 80454AA8-80454AAC 0004+00 rc=2 efc=0 .sdata2    @4078                                                        */
 f32 d_msg_d_msg_object__lit_4078 = 3.0f / 10.0f;
 
-/* 80454AAC-80454AB0 0004+00 .sdata2    @4079                                                        */
+/* 80454AAC-80454AB0 0004+00 rc=2 efc=0 .sdata2    @4079                                                        */
 f32 d_msg_d_msg_object__lit_4079 = 2.0f / 5.0f;
 
-/* 80454AB0-80454AB4 0004+00 .sdata2    @4080                                                        */
+/* 80454AB0-80454AB4 0004+00 rc=1 efc=0 .sdata2    @4080                                                        */
 f32 d_msg_d_msg_object__lit_4080 = 1.0f / 20.0f;
 
-/* 80454AB4-80454AB8 0004+00 .sdata2    @4081                                                        */
+/* 80454AB4-80454AB8 0004+00 rc=2 efc=0 .sdata2    @4081                                                        */
 f32 d_msg_d_msg_object__lit_4081 = 1.5f;
 
-/* 80454AB8-80454ABC 0004+00 .sdata2    @4082                                                        */
+/* 80454AB8-80454ABC 0004+00 rc=1 efc=0 .sdata2    @4082                                                        */
 f32 d_msg_d_msg_object__lit_4082 = 2.0f;
 
-/* 80454ABC-80454AC0 0004+00 .sdata2    @4083                                                        */
+/* 80454ABC-80454AC0 0004+00 rc=7 efc=0 .sdata2    @4083                                                        */
 u8 d_msg_d_msg_object__lit_4083[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454AC0-80454AC4 0004+00 .sdata2    @4084                                                        */
+/* 80454AC0-80454AC4 0004+00 rc=12 efc=0 .sdata2    @4084                                                        */
 f32 d_msg_d_msg_object__lit_4084 = 1.0f;
 
-/* 80454AC4-80454AC8 0004+00 .sdata2    @4085                                                        */
+/* 80454AC4-80454AC8 0004+00 rc=1 efc=0 .sdata2    @4085                                                        */
 f32 d_msg_d_msg_object__lit_4085 = 11.0f / 5.0f;
 
-/* 80232AEC-80232D6C 0280+00 .text      __ct__20dMsgObject_HowlHIO_cFv                               */
+/* 80232AEC-80232D6C 0280+00 rc=1 efc=0 .text      __ct__20dMsgObject_HowlHIO_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20dMsgObject_HowlHIO_cFv) {
+asm dMsgObject_HowlHIO_c::dMsgObject_HowlHIO_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/__ct__20dMsgObject_HowlHIO_cFv.s"
 }
@@ -502,86 +1183,86 @@ ASM_FUNCTION(__ct__20dMsgObject_HowlHIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454AC8-80454ACC 0004+00 .sdata2    @4127                                                        */
+/* 80454AC8-80454ACC 0004+00 rc=1 efc=0 .sdata2    @4127                                                        */
 f32 d_msg_d_msg_object__lit_4127 = 23.0f;
 
-/* 80454ACC-80454AD0 0004+00 .sdata2    @4128                                                        */
+/* 80454ACC-80454AD0 0004+00 rc=1 efc=0 .sdata2    @4128                                                        */
 f32 d_msg_d_msg_object__lit_4128 = 22.0f;
 
-/* 80454AD0-80454AD4 0004+00 .sdata2    @4129                                                        */
+/* 80454AD0-80454AD4 0004+00 rc=1 efc=0 .sdata2    @4129                                                        */
 f32 d_msg_d_msg_object__lit_4129 = 26.0f;
 
-/* 80454AD4-80454AD8 0004+00 .sdata2    @4130                                                        */
+/* 80454AD4-80454AD8 0004+00 rc=1 efc=0 .sdata2    @4130                                                        */
 f32 d_msg_d_msg_object__lit_4130 = 25.0f;
 
-/* 80454AD8-80454ADC 0004+00 .sdata2    @4131                                                        */
+/* 80454AD8-80454ADC 0004+00 rc=1 efc=0 .sdata2    @4131                                                        */
 f32 d_msg_d_msg_object__lit_4131 = 7.0f / 10.0f;
 
-/* 80454ADC-80454AE0 0004+00 .sdata2    @4132                                                        */
+/* 80454ADC-80454AE0 0004+00 rc=1 efc=0 .sdata2    @4132                                                        */
 f32 d_msg_d_msg_object__lit_4132 = 9.0f / 10.0f;
 
-/* 80454AE0-80454AE4 0004+00 .sdata2    @4133                                                        */
+/* 80454AE0-80454AE4 0004+00 rc=1 efc=0 .sdata2    @4133                                                        */
 f32 d_msg_d_msg_object__lit_4133 = 1.0f / 5.0f;
 
-/* 80454AE4-80454AE8 0004+00 .sdata2    @4134                                                        */
+/* 80454AE4-80454AE8 0004+00 rc=1 efc=0 .sdata2    @4134                                                        */
 f32 d_msg_d_msg_object__lit_4134 = 6.0f / 5.0f;
 
-/* 80454AE8-80454AEC 0004+00 .sdata2    @4135                                                        */
+/* 80454AE8-80454AEC 0004+00 rc=1 efc=0 .sdata2    @4135                                                        */
 f32 d_msg_d_msg_object__lit_4135 = 21.0f / 20.0f;
 
-/* 80454AEC-80454AF0 0004+00 .sdata2    @4136                                                        */
+/* 80454AEC-80454AF0 0004+00 rc=1 efc=0 .sdata2    @4136                                                        */
 f32 d_msg_d_msg_object__lit_4136 = 97.0f / 100.0f;
 
-/* 80454AF0-80454AF4 0004+00 .sdata2    @4137                                                        */
+/* 80454AF0-80454AF4 0004+00 rc=1 efc=0 .sdata2    @4137                                                        */
 f32 d_msg_d_msg_object__lit_4137 = 11.0f / 10.0f;
 
-/* 80454AF4-80454AF8 0004+00 .sdata2    @4138                                                        */
+/* 80454AF4-80454AF8 0004+00 rc=1 efc=0 .sdata2    @4138                                                        */
 f32 d_msg_d_msg_object__lit_4138 = 30.0f;
 
-/* 80454AF8-80454AFC 0004+00 .sdata2    @4139                                                        */
+/* 80454AF8-80454AFC 0004+00 rc=1 efc=0 .sdata2    @4139                                                        */
 f32 d_msg_d_msg_object__lit_4139 = 11.0f;
 
-/* 80454AFC-80454B00 0004+00 .sdata2    @4140                                                        */
+/* 80454AFC-80454B00 0004+00 rc=1 efc=0 .sdata2    @4140                                                        */
 f32 d_msg_d_msg_object__lit_4140 = 17.0f / 10.0f;
 
-/* 80454B00-80454B04 0004+00 .sdata2    @4141                                                        */
+/* 80454B00-80454B04 0004+00 rc=1 efc=0 .sdata2    @4141                                                        */
 f32 d_msg_d_msg_object__lit_4141 = 4.5f;
 
-/* 80454B04-80454B08 0004+00 .sdata2    @4142                                                        */
+/* 80454B04-80454B08 0004+00 rc=1 efc=0 .sdata2    @4142                                                        */
 f32 d_msg_d_msg_object__lit_4142 = -45.0f;
 
-/* 80454B08-80454B0C 0004+00 .sdata2    @4143                                                        */
+/* 80454B08-80454B0C 0004+00 rc=1 efc=0 .sdata2    @4143                                                        */
 f32 d_msg_d_msg_object__lit_4143 = 0.75f;
 
-/* 80454B0C-80454B10 0004+00 .sdata2    @4144                                                        */
+/* 80454B0C-80454B10 0004+00 rc=1 efc=0 .sdata2    @4144                                                        */
 f32 d_msg_d_msg_object__lit_4144 = -5.0f;
 
-/* 80454B10-80454B14 0004+00 .sdata2    @4145                                                        */
+/* 80454B10-80454B14 0004+00 rc=7 efc=0 .sdata2    @4145                                                        */
 f32 d_msg_d_msg_object__lit_4145 = -1.0f;
 
-/* 80454B14-80454B18 0004+00 .sdata2    @4146                                                        */
+/* 80454B14-80454B18 0004+00 rc=1 efc=0 .sdata2    @4146                                                        */
 f32 d_msg_d_msg_object__lit_4146 = 19.0f / 20.0f;
 
-/* 80454B18-80454B20 0004+04 .sdata2    @4147                                                        */
+/* 80454B18-80454B20 0004+04 rc=1 efc=0 .sdata2    @4147                                                        */
 f32 d_msg_d_msg_object__lit_4147 = -30.0f;
 /* padding 4 bytes */
 
-/* 80232D6C-80233284 0518+00 .text      __ct__16dMsgObject_HIO_cFv                                   */
+/* 80232D6C-80233284 0518+00 rc=1 efc=0 .text      __ct__16dMsgObject_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dMsgObject_HIO_cFv) {
+asm dMsgObject_HIO_c::dMsgObject_HIO_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/__ct__16dMsgObject_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 80233284-80233590 030C+00 .text      _create__12dMsgObject_cFP9msg_class                          */
+/* 80233284-80233590 030C+00 rc=1 efc=0 .text      _create__12dMsgObject_cFP9msg_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__12dMsgObject_cFP9msg_class) {
+asm void dMsgObject_c::_create(msg_class* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/_create__12dMsgObject_cFP9msg_class.s"
 }
@@ -589,7 +1270,7 @@ ASM_FUNCTION(_create__12dMsgObject_cFP9msg_class) {
 
 
 /* ############################################################################################## */
-/* 80399660-803996E8 0087+01 .rodata    @stringBase0                                                 */
+/* 80399660-803996E8 0087+01 rc=4 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -609,127 +1290,127 @@ SECTION_DEAD char* const stringBase_803996CF = "/res/Msgus/bmgres%d.arc";
 SECTION_DEAD char* const pad_803996E7 = "";
 #pragma pop
 
-/* 80430280-8043028C 000C+00 .bss       @4011                                                        */
+/* 80430280-8043028C 000C+00 rc=1 efc=0 .bss       @4011                                                        */
 u8 d_msg_d_msg_object__lit_4011[12];
 
-/* 8043028C-8043069C 0410+00 .bss       g_MsgObject_HIO_c                                            */
+/* 8043028C-8043069C 0410+00 rc=58 efc=51 .bss       g_MsgObject_HIO_c                                            */
 u8 g_MsgObject_HIO_c[1040];
 
-/* 80233590-802339BC 042C+00 .text      _execute__12dMsgObject_cFv                                   */
+/* 80233590-802339BC 042C+00 rc=2 efc=0 .text      _execute__12dMsgObject_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_execute__12dMsgObject_cFv) {
+asm void dMsgObject_c::_execute() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/_execute__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802339BC-80233AE8 012C+00 .text      _draw__12dMsgObject_cFv                                      */
+/* 802339BC-80233AE8 012C+00 rc=1 efc=0 .text      _draw__12dMsgObject_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__12dMsgObject_cFv) {
+asm void dMsgObject_c::_draw() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/_draw__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80233AE8-80233D04 021C+00 .text      _delete__12dMsgObject_cFv                                    */
+/* 80233AE8-80233D04 021C+00 rc=1 efc=0 .text      _delete__12dMsgObject_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12dMsgObject_cFv) {
+asm void dMsgObject_c::_delete() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/_delete__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80233D04-80233E70 016C+00 .text      setMessageIndex__12dMsgObject_cFUlUlb                        */
+/* 80233D04-80233E70 016C+00 rc=4 efc=2 .text      setMessageIndex__12dMsgObject_cFUlUlb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageIndex__12dMsgObject_cFUlUlb) {
+asm void dMsgObject_c::setMessageIndex(u32 field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setMessageIndex__12dMsgObject_cFUlUlb.s"
 }
 #pragma pop
 
 
-/* 80233E70-80233F84 0114+00 .text      setMessageIndexDemo__12dMsgObject_cFUlb                      */
+/* 80233E70-80233F84 0114+00 rc=2 efc=1 .text      setMessageIndexDemo__12dMsgObject_cFUlb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageIndexDemo__12dMsgObject_cFUlb) {
+asm void dMsgObject_c::setMessageIndexDemo(u32 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setMessageIndexDemo__12dMsgObject_cFUlb.s"
 }
 #pragma pop
 
 
-/* 80233F84-80233FD8 0054+00 .text      getMessageIndex__12dMsgObject_cFUl                           */
+/* 80233F84-80233FD8 0054+00 rc=4 efc=0 .text      getMessageIndex__12dMsgObject_cFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageIndex__12dMsgObject_cFUl) {
+asm void dMsgObject_c::getMessageIndex(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMessageIndex__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 80233FD8-802340D4 00FC+00 .text      getRevoMessageIndex__12dMsgObject_cFUl                       */
+/* 80233FD8-802340D4 00FC+00 rc=2 efc=0 .text      getRevoMessageIndex__12dMsgObject_cFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRevoMessageIndex__12dMsgObject_cFUl) {
+asm void dMsgObject_c::getRevoMessageIndex(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getRevoMessageIndex__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 802340D4-80234128 0054+00 .text      getMessageIndexAlways__12dMsgObject_cFUl                     */
+/* 802340D4-80234128 0054+00 rc=3 efc=0 .text      getMessageIndexAlways__12dMsgObject_cFUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageIndexAlways__12dMsgObject_cFUl) {
+asm void dMsgObject_c::getMessageIndexAlways(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMessageIndexAlways__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 80234128-8023413C 0014+00 .text      getMessageIDAlways__12dMsgObject_cFUl                        */
+/* 80234128-8023413C 0014+00 rc=1 efc=0 .text      getMessageIDAlways__12dMsgObject_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageIDAlways__12dMsgObject_cFUl) {
+asm void dMsgObject_c::getMessageIDAlways(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMessageIDAlways__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 8023413C-80234150 0014+00 .text      getMessageGroup__12dMsgObject_cFUl                           */
+/* 8023413C-80234150 0014+00 rc=4 efc=0 .text      getMessageGroup__12dMsgObject_cFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageGroup__12dMsgObject_cFUl) {
+asm void dMsgObject_c::getMessageGroup(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMessageGroup__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 80234150-80234318 01C8+00 .text      waitProc__12dMsgObject_cFv                                   */
+/* 80234150-80234318 01C8+00 rc=1 efc=0 .text      waitProc__12dMsgObject_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::waitProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/waitProc__12dMsgObject_cFv.s"
 }
@@ -737,14 +1418,14 @@ ASM_FUNCTION(waitProc__12dMsgObject_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454B20-80454B28 0008+00 .sdata2    @4965                                                        */
+/* 80454B20-80454B28 0008+00 rc=6 efc=0 .sdata2    @4965                                                        */
 f64 d_msg_d_msg_object__lit_4965 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80234318-802349D8 06C0+00 .text      openProc__12dMsgObject_cFv                                   */
+/* 80234318-802349D8 06C0+00 rc=1 efc=0 .text      openProc__12dMsgObject_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::openProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/openProc__12dMsgObject_cFv.s"
 }
@@ -752,135 +1433,125 @@ ASM_FUNCTION(openProc__12dMsgObject_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454B28-80454B2C 0004+00 .sdata2    @5044                                                        */
+/* 80454B28-80454B2C 0004+00 rc=3 efc=0 .sdata2    @5044                                                        */
 f32 d_msg_d_msg_object__lit_5044 = 10.0f;
 
-/* 802349D8-80234CCC 02F4+00 .text      outnowProc__12dMsgObject_cFv                                 */
+/* 802349D8-80234CCC 02F4+00 rc=1 efc=0 .text      outnowProc__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(outnowProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::outnowProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/outnowProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80234CCC-80234FF0 0324+00 .text      outwaitProc__12dMsgObject_cFv                                */
+/* 80234CCC-80234FF0 0324+00 rc=1 efc=0 .text      outwaitProc__12dMsgObject_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(outwaitProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::outwaitProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/outwaitProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80234FF0-80234FF4 0004+00 .text      stopProc__12dMsgObject_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(stopProc__12dMsgObject_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/stopProc__12dMsgObject_cFv.s"
+/* 80234FF0-80234FF4 0004+00 rc=1 efc=0 .text      stopProc__12dMsgObject_cFv                                   */
+void dMsgObject_c::stopProc() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80234FF4-8023531C 0328+00 .text      continueProc__12dMsgObject_cFv                               */
+/* 80234FF4-8023531C 0328+00 rc=1 efc=0 .text      continueProc__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(continueProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::continueProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/continueProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023531C-8023587C 0560+00 .text      selectProc__12dMsgObject_cFv                                 */
+/* 8023531C-8023587C 0560+00 rc=1 efc=0 .text      selectProc__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::selectProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/selectProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023587C-802358D4 0058+00 .text      selectEndProc__12dMsgObject_cFv                              */
+/* 8023587C-802358D4 0058+00 rc=1 efc=0 .text      selectEndProc__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectEndProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::selectEndProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/selectEndProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802358D4-80235AD4 0200+00 .text      inputProc__12dMsgObject_cFv                                  */
+/* 802358D4-80235AD4 0200+00 rc=1 efc=0 .text      inputProc__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(inputProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::inputProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/inputProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80235AD4-80235CC0 01EC+00 .text      finishProc__12dMsgObject_cFv                                 */
+/* 80235AD4-80235CC0 01EC+00 rc=1 efc=0 .text      finishProc__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(finishProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::finishProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/finishProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80235CC0-80235EBC 01FC+00 .text      endProc__12dMsgObject_cFv                                    */
+/* 80235CC0-80235EBC 01FC+00 rc=1 efc=0 .text      endProc__12dMsgObject_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::endProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/endProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80235EBC-8023609C 01E0+00 .text      deleteProc__12dMsgObject_cFv                                 */
+/* 80235EBC-8023609C 01E0+00 rc=2 efc=0 .text      deleteProc__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteProc__12dMsgObject_cFv) {
+asm void dMsgObject_c::deleteProc() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/deleteProc__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023609C-802360A0 0004+00 .text      textmodeProc__12dMsgObject_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(textmodeProc__12dMsgObject_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/textmodeProc__12dMsgObject_cFv.s"
+/* 8023609C-802360A0 0004+00 rc=1 efc=0 .text      textmodeProc__12dMsgObject_cFv                               */
+void dMsgObject_c::textmodeProc() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802360A0-8023670C 066C+00 .text      talkStartInit__12dMsgObject_cFv                              */
+/* 802360A0-8023670C 066C+00 rc=2 efc=1 .text      talkStartInit__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talkStartInit__12dMsgObject_cFv) {
+asm void dMsgObject_c::talkStartInit() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/talkStartInit__12dMsgObject_cFv.s"
 }
@@ -888,68 +1559,68 @@ ASM_FUNCTION(talkStartInit__12dMsgObject_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454B2C-80454B30 0004+00 .sdata2    @5947                                                        */
+/* 80454B2C-80454B30 0004+00 rc=1 efc=0 .sdata2    @5947                                                        */
 f32 d_msg_d_msg_object__lit_5947 = 608.0f;
 
-/* 80454B30-80454B34 0004+00 .sdata2    @5948                                                        */
+/* 80454B30-80454B34 0004+00 rc=1 efc=0 .sdata2    @5948                                                        */
 f32 d_msg_d_msg_object__lit_5948 = 448.0f;
 
-/* 80454B34-80454B38 0004+00 .sdata2    @5949                                                        */
+/* 80454B34-80454B38 0004+00 rc=1 efc=0 .sdata2    @5949                                                        */
 f32 d_msg_d_msg_object__lit_5949 = -200.0f;
 
-/* 80454B38-80454B40 0004+04 .sdata2    @5950                                                        */
+/* 80454B38-80454B40 0004+04 rc=1 efc=0 .sdata2    @5950                                                        */
 f32 d_msg_d_msg_object__lit_5950 = -100.0f;
 /* padding 4 bytes */
 
-/* 8023670C-802368E4 01D8+00 .text      fukiPosCalc__12dMsgObject_cFb                                */
+/* 8023670C-802368E4 01D8+00 rc=1 efc=0 .text      fukiPosCalc__12dMsgObject_cFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fukiPosCalc__12dMsgObject_cFb) {
+asm void dMsgObject_c::fukiPosCalc(bool field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/fukiPosCalc__12dMsgObject_cFb.s"
 }
 #pragma pop
 
 
-/* 802368E4-802368F8 0014+00 .text      setStatusLocal__12dMsgObject_cFUs                            */
+/* 802368E4-802368F8 0014+00 rc=15 efc=0 .text      setStatusLocal__12dMsgObject_cFUs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStatusLocal__12dMsgObject_cFUs) {
+asm void dMsgObject_c::setStatusLocal(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setStatusLocal__12dMsgObject_cFUs.s"
 }
 #pragma pop
 
 
-/* 802368F8-8023690C 0014+00 .text      getStatusLocal__12dMsgObject_cFv                             */
+/* 802368F8-8023690C 0014+00 rc=9 efc=0 .text      getStatusLocal__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStatusLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::getStatusLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getStatusLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023690C-802369D8 00CC+00 .text      delete_screen__12dMsgObject_cFb                              */
+/* 8023690C-802369D8 00CC+00 rc=3 efc=0 .text      delete_screen__12dMsgObject_cFb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(delete_screen__12dMsgObject_cFb) {
+asm void dMsgObject_c::delete_screen(bool field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/delete_screen__12dMsgObject_cFb.s"
 }
 #pragma pop
 
 
-/* 802369D8-80236BF8 0220+00 .text      isSend__12dMsgObject_cFv                                     */
+/* 802369D8-80236BF8 0220+00 rc=5 efc=0 .text      isSend__12dMsgObject_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSend__12dMsgObject_cFv) {
+asm void dMsgObject_c::isSend() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isSend__12dMsgObject_cFv.s"
 }
@@ -957,1536 +1628,1465 @@ ASM_FUNCTION(isSend__12dMsgObject_cFv) {
 
 
 /* ############################################################################################## */
-/* 8043069C-804306B8 0016+06 .bss       arcName$6106                                                 */
+/* 8043069C-804306B8 0016+06 rc=1 efc=0 .bss       arcName$6106                                                 */
 u8 data_8043069C[22 + 6 /* padding */];
 
-/* 80236BF8-80236C90 0098+00 .text      readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c */
+/* 80236BF8-80236C90 0098+00 rc=1 efc=0 .text      readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c) {
+asm void dMsgObject_c::readMessageGroupLocal(mDoDvdThd_mountXArchive_c** field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c.s"
 }
 #pragma pop
 
 
-/* 80236C90-80236CD4 0044+00 .text      changeFlowGroupLocal__12dMsgObject_cFl                       */
+/* 80236C90-80236CD4 0044+00 rc=1 efc=0 .text      changeFlowGroupLocal__12dMsgObject_cFl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeFlowGroupLocal__12dMsgObject_cFl) {
+asm void dMsgObject_c::changeFlowGroupLocal(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/changeFlowGroupLocal__12dMsgObject_cFl.s"
 }
 #pragma pop
 
 
-/* 80236CD4-80236D00 002C+00 .text      demoMessageGroupLocal__12dMsgObject_cFv                      */
+/* 80236CD4-80236D00 002C+00 rc=1 efc=0 .text      demoMessageGroupLocal__12dMsgObject_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoMessageGroupLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::demoMessageGroupLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/demoMessageGroupLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80236D00-80236D0C 000C+00 .text      endFlowGroupLocal__12dMsgObject_cFv                          */
+/* 80236D00-80236D0C 000C+00 rc=1 efc=0 .text      endFlowGroupLocal__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endFlowGroupLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::endFlowGroupLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/endFlowGroupLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80236D0C-80236DE4 00D8+00 .text      changeGroupLocal__12dMsgObject_cFs                           */
+/* 80236D0C-80236DE4 00D8+00 rc=1 efc=0 .text      changeGroupLocal__12dMsgObject_cFs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeGroupLocal__12dMsgObject_cFs) {
+asm void dMsgObject_c::changeGroupLocal(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/changeGroupLocal__12dMsgObject_cFs.s"
 }
 #pragma pop
 
 
-/* 80236DE4-802370A8 02C4+00 .text      getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs */
+/* 80236DE4-802370A8 02C4+00 rc=1 efc=0 .text      getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs) {
+asm void dMsgObject_c::getStringLocal(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char* field_5, char* field_6, char* field_7, s16* field_8) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs.s"
 }
 #pragma pop
 
 
-/* 802370A8-802370BC 0014+00 .text      isGetItemMessage__12dMsgObject_cFv                           */
+/* 802370A8-802370BC 0014+00 rc=1 efc=1 .text      isGetItemMessage__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isGetItemMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isGetItemMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isGetItemMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802370BC-802370E8 002C+00 .text      isKanbanMessage__12dMsgObject_cFv                            */
+/* 802370BC-802370E8 002C+00 rc=6 efc=2 .text      isKanbanMessage__12dMsgObject_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isKanbanMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isKanbanMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isKanbanMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802370E8-802370FC 0014+00 .text      isHowlMessage__12dMsgObject_cFv                              */
+/* 802370E8-802370FC 0014+00 rc=9 efc=3 .text      isHowlMessage__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isHowlMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isHowlMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isHowlMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802370FC-80237138 003C+00 .text      isMidonaMessage__12dMsgObject_cFv                            */
+/* 802370FC-80237138 003C+00 rc=5 efc=2 .text      isMidonaMessage__12dMsgObject_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMidonaMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMidonaMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMidonaMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237138-802371B0 0078+00 .text      isMidonaNormalTalkWait__12dMsgObject_cFv                     */
+/* 80237138-802371B0 0078+00 rc=1 efc=0 .text      isMidonaNormalTalkWait__12dMsgObject_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMidonaNormalTalkWait__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMidonaNormalTalkWait() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMidonaNormalTalkWait__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802371B0-802371E4 0034+00 .text      isMidonaTalkWait__12dMsgObject_cFv                           */
+/* 802371B0-802371E4 0034+00 rc=1 efc=1 .text      isMidonaTalkWait__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMidonaTalkWait__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMidonaTalkWait() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMidonaTalkWait__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802371E4-802371F8 0014+00 .text      isPlaceMessage__12dMsgObject_cFv                             */
+/* 802371E4-802371F8 0014+00 rc=7 efc=3 .text      isPlaceMessage__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isPlaceMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isPlaceMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isPlaceMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802371F8-8023720C 0014+00 .text      isBossMessage__12dMsgObject_cFv                              */
+/* 802371F8-8023720C 0014+00 rc=5 efc=2 .text      isBossMessage__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isBossMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isBossMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isBossMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023720C-80237214 0008+00 .text      isBookMessage__12dMsgObject_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(isBookMessage__12dMsgObject_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/isBookMessage__12dMsgObject_cFv.s"
+/* 8023720C-80237214 0008+00 rc=8 efc=2 .text      isBookMessage__12dMsgObject_cFv                              */
+bool dMsgObject_c::isBookMessage() {
+	return false;
 }
-#pragma pop
 
 
-/* 80237214-80237228 0014+00 .text      isStaffMessage__12dMsgObject_cFv                             */
+/* 80237214-80237228 0014+00 rc=5 efc=2 .text      isStaffMessage__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isStaffMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isStaffMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isStaffMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237228-8023723C 0014+00 .text      isSaveMessage__12dMsgObject_cFv                              */
+/* 80237228-8023723C 0014+00 rc=1 efc=1 .text      isSaveMessage__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSaveMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isSaveMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isSaveMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023723C-802372CC 0090+00 .text      isTalkMessage__12dMsgObject_cFv                              */
+/* 8023723C-802372CC 0090+00 rc=4 efc=0 .text      isTalkMessage__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isTalkMessage__12dMsgObject_cFv) {
+asm void dMsgObject_c::isTalkMessage() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isTalkMessage__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802372CC-80237334 0068+00 .text      getSmellName__12dMsgObject_cFv                               */
+/* 802372CC-80237334 0068+00 rc=5 efc=5 .text      getSmellName__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSmellName__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSmellName() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSmellName__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237334-8023738C 0058+00 .text      getPortalName__12dMsgObject_cFv                              */
+/* 80237334-8023738C 0058+00 rc=5 efc=5 .text      getPortalName__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPortalName__12dMsgObject_cFv) {
+asm void dMsgObject_c::getPortalName() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getPortalName__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023738C-8023741C 0090+00 .text      getBombName__12dMsgObject_cFv                                */
+/* 8023738C-8023741C 0090+00 rc=5 efc=5 .text      getBombName__12dMsgObject_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombName__12dMsgObject_cFv) {
+asm void dMsgObject_c::getBombName() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getBombName__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023741C-80237478 005C+00 .text      getInsectName__12dMsgObject_cFv                              */
+/* 8023741C-80237478 005C+00 rc=5 efc=5 .text      getInsectName__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getInsectName__12dMsgObject_cFv) {
+asm void dMsgObject_c::getInsectName() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getInsectName__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237478-802374D0 0058+00 .text      getLetterName__12dMsgObject_cFv                              */
+/* 80237478-802374D0 0058+00 rc=5 efc=5 .text      getLetterName__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLetterName__12dMsgObject_cFv) {
+asm void dMsgObject_c::getLetterName() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getLetterName__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802374D0-80237520 0050+00 .text      getSelectBombNum__12dMsgObject_cFv                           */
+/* 802374D0-80237520 0050+00 rc=6 efc=5 .text      getSelectBombNum__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectBombNum__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectBombNum() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectBombNum__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237520-80237530 0010+00 .text      onMsgSendControlLocal__12dMsgObject_cFv                      */
+/* 80237520-80237530 0010+00 rc=1 efc=0 .text      onMsgSendControlLocal__12dMsgObject_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMsgSendControlLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::onMsgSendControlLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onMsgSendControlLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237530-80237550 0020+00 .text      offMsgSendControlLocal__12dMsgObject_cFv                     */
+/* 80237530-80237550 0020+00 rc=1 efc=0 .text      offMsgSendControlLocal__12dMsgObject_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offMsgSendControlLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::offMsgSendControlLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/offMsgSendControlLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237550-8023755C 000C+00 .text      isMsgSendControlLocal__12dMsgObject_cFv                      */
+/* 80237550-8023755C 000C+00 rc=1 efc=0 .text      isMsgSendControlLocal__12dMsgObject_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMsgSendControlLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMsgSendControlLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMsgSendControlLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023755C-8023756C 0010+00 .text      onMsgSendLocal__12dMsgObject_cFv                             */
+/* 8023755C-8023756C 0010+00 rc=1 efc=0 .text      onMsgSendLocal__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMsgSendLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::onMsgSendLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onMsgSendLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023756C-8023757C 0010+00 .text      offMsgSendLocal__12dMsgObject_cFv                            */
+/* 8023756C-8023757C 0010+00 rc=1 efc=0 .text      offMsgSendLocal__12dMsgObject_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offMsgSendLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::offMsgSendLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/offMsgSendLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023757C-80237588 000C+00 .text      isMsgSendLocal__12dMsgObject_cFv                             */
+/* 8023757C-80237588 000C+00 rc=1 efc=0 .text      isMsgSendLocal__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMsgSendLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMsgSendLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMsgSendLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237588-8023759C 0014+00 .text      isMouthCheckLocal__12dMsgObject_cFv                          */
+/* 80237588-8023759C 0014+00 rc=1 efc=0 .text      isMouthCheckLocal__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMouthCheckLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMouthCheckLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMouthCheckLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023759C-802375E4 0048+00 .text      getBombBuyPriceLocal__12dMsgObject_cFUc                      */
+/* 8023759C-802375E4 0048+00 rc=1 efc=0 .text      getBombBuyPriceLocal__12dMsgObject_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombBuyPriceLocal__12dMsgObject_cFUc) {
+asm void dMsgObject_c::getBombBuyPriceLocal(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getBombBuyPriceLocal__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 802375E4-80237610 002C+00 .text      addSelectBomBag__12dMsgObject_cFUc                           */
+/* 802375E4-80237610 002C+00 rc=1 efc=1 .text      addSelectBomBag__12dMsgObject_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addSelectBomBag__12dMsgObject_cFUc) {
+asm void dMsgObject_c::addSelectBomBag(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/addSelectBomBag__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80237610-8023763C 002C+00 .text      resetSelectBomBag__12dMsgObject_cFv                          */
+/* 80237610-8023763C 002C+00 rc=2 efc=1 .text      resetSelectBomBag__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetSelectBomBag__12dMsgObject_cFv) {
+asm void dMsgObject_c::resetSelectBomBag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/resetSelectBomBag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023763C-8023768C 0050+00 .text      getSelectBombBagIDLocal__12dMsgObject_cFv                    */
+/* 8023763C-8023768C 0050+00 rc=1 efc=0 .text      getSelectBombBagIDLocal__12dMsgObject_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectBombBagIDLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectBombBagIDLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectBombBagIDLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023768C-8023773C 00B0+00 .text      getSelectBombPriceLocal__12dMsgObject_cFv                    */
+/* 8023768C-8023773C 00B0+00 rc=1 efc=0 .text      getSelectBombPriceLocal__12dMsgObject_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectBombPriceLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectBombPriceLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectBombPriceLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023773C-80237748 000C+00 .text      setEquipBombInfoLocal__12dMsgObject_cFv                      */
+/* 8023773C-80237748 000C+00 rc=1 efc=0 .text      setEquipBombInfoLocal__12dMsgObject_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEquipBombInfoLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::setEquipBombInfoLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setEquipBombInfoLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237748-802378B8 0170+00 .text      updateEquipBombInfoLocal__12dMsgObject_cFv                   */
+/* 80237748-802378B8 0170+00 rc=3 efc=0 .text      updateEquipBombInfoLocal__12dMsgObject_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(updateEquipBombInfoLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::updateEquipBombInfoLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/updateEquipBombInfoLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802378B8-802378CC 0014+00 .text      setShopWaitTimer__12dMsgObject_cFUc                          */
+/* 802378B8-802378CC 0014+00 rc=1 efc=1 .text      setShopWaitTimer__12dMsgObject_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShopWaitTimer__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setShopWaitTimer(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setShopWaitTimer__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 802378CC-802378D4 0008+00 .text      setSelectWordFlagLocal__12dMsgObject_cFUc                    */
+/* 802378CC-802378D4 0008+00 rc=1 efc=0 .text      setSelectWordFlagLocal__12dMsgObject_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectWordFlagLocal__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSelectWordFlagLocal(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectWordFlagLocal__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 802378D4-80237934 0060+00 .text      isHowlHearingModeLocal__12dMsgObject_cFv                     */
+/* 802378D4-80237934 0060+00 rc=1 efc=0 .text      isHowlHearingModeLocal__12dMsgObject_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isHowlHearingModeLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::isHowlHearingModeLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isHowlHearingModeLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237934-80237950 001C+00 .text      isCameraCancelFlag__12dMsgObject_cFv                         */
+/* 80237934-80237950 001C+00 rc=1 efc=0 .text      isCameraCancelFlag__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isCameraCancelFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::isCameraCancelFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isCameraCancelFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237950-80237968 0018+00 .text      onCameraCancelFlag__12dMsgObject_cFv                         */
+/* 80237950-80237968 0018+00 rc=2 efc=0 .text      onCameraCancelFlag__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onCameraCancelFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::onCameraCancelFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onCameraCancelFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237968-80237980 0018+00 .text      offCameraCancelFlag__12dMsgObject_cFv                        */
+/* 80237968-80237980 0018+00 rc=1 efc=0 .text      offCameraCancelFlag__12dMsgObject_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offCameraCancelFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::offCameraCancelFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/offCameraCancelFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237980-80237994 0014+00 .text      isKillMessageFlag__12dMsgObject_cFv                          */
+/* 80237980-80237994 0014+00 rc=1 efc=1 .text      isKillMessageFlag__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isKillMessageFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::isKillMessageFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isKillMessageFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237994-802379AC 0018+00 .text      onKillMessageFlag__12dMsgObject_cFv                          */
+/* 80237994-802379AC 0018+00 rc=2 efc=2 .text      onKillMessageFlag__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onKillMessageFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::onKillMessageFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onKillMessageFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802379AC-802379D8 002C+00 .text      setKillMessageFlag__12dMsgObject_cFv                         */
+/* 802379AC-802379D8 002C+00 rc=2 efc=2 .text      setKillMessageFlag__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKillMessageFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::setKillMessageFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setKillMessageFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802379D8-80237A74 009C+00 .text      setKillMessageFlagLocal__12dMsgObject_cFv                    */
+/* 802379D8-80237A74 009C+00 rc=1 efc=0 .text      setKillMessageFlagLocal__12dMsgObject_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKillMessageFlagLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::setKillMessageFlagLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setKillMessageFlagLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237A74-80237A88 0014+00 .text      setTalkPartner__12dMsgObject_cFP10fopAc_ac_c                 */
+/* 80237A74-80237A88 0014+00 rc=3 efc=3 .text      setTalkPartner__12dMsgObject_cFP10fopAc_ac_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkPartner__12dMsgObject_cFP10fopAc_ac_c) {
+asm void dMsgObject_c::setTalkPartner(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setTalkPartner__12dMsgObject_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80237A88-80237A9C 0014+00 .text      setNowTalkFlowNo__12dMsgObject_cFs                           */
+/* 80237A88-80237A9C 0014+00 rc=3 efc=2 .text      setNowTalkFlowNo__12dMsgObject_cFs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNowTalkFlowNo__12dMsgObject_cFs) {
+asm void dMsgObject_c::setNowTalkFlowNo(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setNowTalkFlowNo__12dMsgObject_cFs.s"
 }
 #pragma pop
 
 
-/* 80237A9C-80237AB0 0014+00 .text      getNowTalkFlowNo__12dMsgObject_cFv                           */
+/* 80237A9C-80237AB0 0014+00 rc=0 efc=0 .text      getNowTalkFlowNo__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowTalkFlowNo__12dMsgObject_cFv) {
+asm void dMsgObject_c::getNowTalkFlowNo() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getNowTalkFlowNo__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237AB0-80237AE0 0030+00 .text      setDemoMessage__12dMsgObject_cFUl                            */
+/* 80237AB0-80237AE0 0030+00 rc=1 efc=1 .text      setDemoMessage__12dMsgObject_cFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoMessage__12dMsgObject_cFUl) {
+asm void dMsgObject_c::setDemoMessage(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setDemoMessage__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 80237AE0-80237B10 0030+00 .text      setTalkHeap__12dMsgObject_cFPv                               */
+/* 80237AE0-80237B10 0030+00 rc=8 efc=8 .text      setTalkHeap__12dMsgObject_cFPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkHeap__12dMsgObject_cFPv) {
+asm void dMsgObject_c::setTalkHeap(void* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setTalkHeap__12dMsgObject_cFPv.s"
 }
 #pragma pop
 
 
-/* 80237B10-80237B54 0044+00 .text      setTalkHeapLocal__12dMsgObject_cFPv                          */
+/* 80237B10-80237B54 0044+00 rc=1 efc=0 .text      setTalkHeapLocal__12dMsgObject_cFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkHeapLocal__12dMsgObject_cFPv) {
+asm void dMsgObject_c::setTalkHeapLocal(void* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setTalkHeapLocal__12dMsgObject_cFPv.s"
 }
 #pragma pop
 
 
-/* 80237B54-80237B68 0014+00 .text      getTalkHeap__12dMsgObject_cFv                                */
+/* 80237B54-80237B68 0014+00 rc=2 efc=2 .text      getTalkHeap__12dMsgObject_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTalkHeap__12dMsgObject_cFv) {
+asm void dMsgObject_c::getTalkHeap() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getTalkHeap__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237B68-80237BFC 0094+00 .text      isDraw__12dMsgObject_cFv                                     */
+/* 80237B68-80237BFC 0094+00 rc=2 efc=0 .text      isDraw__12dMsgObject_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDraw__12dMsgObject_cFv) {
+asm void dMsgObject_c::isDraw() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isDraw__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237BFC-80237D88 018C+00 .text      setButtonStatusLocal__12dMsgObject_cFv                       */
+/* 80237BFC-80237D88 018C+00 rc=2 efc=0 .text      setButtonStatusLocal__12dMsgObject_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonStatusLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::setButtonStatusLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setButtonStatusLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237D88-80237DD8 0050+00 .text      setDemoMessageLocal__12dMsgObject_cFUl                       */
+/* 80237D88-80237DD8 0050+00 rc=1 efc=0 .text      setDemoMessageLocal__12dMsgObject_cFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoMessageLocal__12dMsgObject_cFUl) {
+asm void dMsgObject_c::setDemoMessageLocal(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setDemoMessageLocal__12dMsgObject_cFUl.s"
 }
 #pragma pop
 
 
-/* 80237DD8-80237E04 002C+00 .text      getSmellTypeMessageIDLocal__12dMsgObject_cFv                 */
+/* 80237DD8-80237E04 002C+00 rc=1 efc=0 .text      getSmellTypeMessageIDLocal__12dMsgObject_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSmellTypeMessageIDLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSmellTypeMessageIDLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSmellTypeMessageIDLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237E04-80237E58 0054+00 .text      setSmellTypeLocal__12dMsgObject_cFUc                         */
+/* 80237E04-80237E58 0054+00 rc=1 efc=0 .text      setSmellTypeLocal__12dMsgObject_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmellTypeLocal__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSmellTypeLocal(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSmellTypeLocal__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80237E58-80237E68 0010+00 .text      getSelectCursorPosLocal__12dMsgObject_cFv                    */
+/* 80237E58-80237E68 0010+00 rc=3 efc=0 .text      getSelectCursorPosLocal__12dMsgObject_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectCursorPosLocal__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectCursorPosLocal() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectCursorPosLocal__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80237E68-80237F10 00A8+00 .text      setSelectCursorPosLocal__12dMsgObject_cFUc                   */
+/* 80237E68-80237F10 00A8+00 rc=3 efc=0 .text      setSelectCursorPosLocal__12dMsgObject_cFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectCursorPosLocal__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSelectCursorPosLocal(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCursorPosLocal__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80237F10-80237F18 0008+00 .text      setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c              */
+/* 80237F10-80237F18 0008+00 rc=1 efc=0 .text      setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c) {
+asm void dMsgObject_c::setTalkActorLocal(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80237F18-80237F38 0020+00 .text      dMsgObject_Draw__FP12dMsgObject_c                            */
+/* 80237F18-80237F38 0020+00 rc=1 efc=0 .text      dMsgObject_Draw__FP12dMsgObject_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_Draw__FP12dMsgObject_c) {
+asm static void dMsgObject_Draw(dMsgObject_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_Draw__FP12dMsgObject_c.s"
 }
 #pragma pop
 
 
-/* 80237F38-80237F58 0020+00 .text      dMsgObject_Execute__FP12dMsgObject_c                         */
+/* 80237F38-80237F58 0020+00 rc=1 efc=0 .text      dMsgObject_Execute__FP12dMsgObject_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_Execute__FP12dMsgObject_c) {
+asm static void dMsgObject_Execute(dMsgObject_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_Execute__FP12dMsgObject_c.s"
 }
 #pragma pop
 
 
-/* 80237F58-80237F60 0008+00 .text      dMsgObject_IsDelete__FP12dMsgObject_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_IsDelete__FP12dMsgObject_c) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/dMsgObject_IsDelete__FP12dMsgObject_c.s"
+/* 80237F58-80237F60 0008+00 rc=1 efc=0 .text      dMsgObject_IsDelete__FP12dMsgObject_c                        */
+static bool dMsgObject_IsDelete(dMsgObject_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
-/* 80237F60-80237F80 0020+00 .text      dMsgObject_Delete__FP12dMsgObject_c                          */
+/* 80237F60-80237F80 0020+00 rc=1 efc=0 .text      dMsgObject_Delete__FP12dMsgObject_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_Delete__FP12dMsgObject_c) {
+asm static void dMsgObject_Delete(dMsgObject_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_Delete__FP12dMsgObject_c.s"
 }
 #pragma pop
 
 
-/* 80237F80-8023800C 008C+00 .text      dMsgObject_Create__FP9msg_class                              */
+/* 80237F80-8023800C 008C+00 rc=1 efc=0 .text      dMsgObject_Create__FP9msg_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_Create__FP9msg_class) {
+asm static void dMsgObject_Create(msg_class* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_Create__FP9msg_class.s"
 }
 #pragma pop
 
 
-/* 8023800C-8023803C 0030+00 .text      readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c */
+/* 8023800C-8023803C 0030+00 rc=1 efc=1 .text      readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c) {
+asm void dMsgObject_c::readMessageGroup(mDoDvdThd_mountXArchive_c** field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c.s"
 }
 #pragma pop
 
 
-/* 8023803C-8023806C 0030+00 .text      changeFlowGroup__12dMsgObject_cFl                            */
+/* 8023803C-8023806C 0030+00 rc=3 efc=3 .text      changeFlowGroup__12dMsgObject_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeFlowGroup__12dMsgObject_cFl) {
+asm void dMsgObject_c::changeFlowGroup(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/changeFlowGroup__12dMsgObject_cFl.s"
 }
 #pragma pop
 
 
-/* 8023806C-80238098 002C+00 .text      demoMessageGroup__12dMsgObject_cFv                           */
+/* 8023806C-80238098 002C+00 rc=1 efc=1 .text      demoMessageGroup__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoMessageGroup__12dMsgObject_cFv) {
+asm void dMsgObject_c::demoMessageGroup() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/demoMessageGroup__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238098-802380C4 002C+00 .text      endFlowGroup__12dMsgObject_cFv                               */
+/* 80238098-802380C4 002C+00 rc=3 efc=3 .text      endFlowGroup__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endFlowGroup__12dMsgObject_cFv) {
+asm void dMsgObject_c::endFlowGroup() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/endFlowGroup__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802380C4-802380F4 0030+00 .text      changeGroup__12dMsgObject_cFs                                */
+/* 802380C4-802380F4 0030+00 rc=7 efc=0 .text      changeGroup__12dMsgObject_cFs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeGroup__12dMsgObject_cFs) {
+asm void dMsgObject_c::changeGroup(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/changeGroup__12dMsgObject_cFs.s"
 }
 #pragma pop
 
 
-/* 802380F4-80238174 0080+00 .text      getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs */
+/* 802380F4-80238174 0080+00 rc=2 efc=2 .text      getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs) {
+asm void dMsgObject_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char* field_5, char* field_6, char* field_7, s16* field_8) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs.s"
 }
 #pragma pop
 
 
-/* 80238174-80238188 0014+00 .text      getMsgDtPtr__12dMsgObject_cFv                                */
+/* 80238174-80238188 0014+00 rc=1 efc=1 .text      getMsgDtPtr__12dMsgObject_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsgDtPtr__12dMsgObject_cFv) {
+asm void dMsgObject_c::getMsgDtPtr() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMsgDtPtr__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238188-8023819C 0014+00 .text      setProcessID__12dMsgObject_cFUi                              */
+/* 80238188-8023819C 0014+00 rc=0 efc=0 .text      setProcessID__12dMsgObject_cFUi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcessID__12dMsgObject_cFUi) {
+asm void dMsgObject_c::setProcessID(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setProcessID__12dMsgObject_cFUi.s"
 }
 #pragma pop
 
 
-/* 8023819C-802381C0 0024+00 .text      getActor__12dMsgObject_cFv                                   */
+/* 8023819C-802381C0 0024+00 rc=5 efc=5 .text      getActor__12dMsgObject_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActor__12dMsgObject_cFv) {
+asm void dMsgObject_c::getActor() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getActor__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802381C0-802381D4 0014+00 .text      getpTalkActor__12dMsgObject_cFv                              */
+/* 802381C0-802381D4 0014+00 rc=0 efc=0 .text      getpTalkActor__12dMsgObject_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getpTalkActor__12dMsgObject_cFv) {
+asm void dMsgObject_c::getpTalkActor() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getpTalkActor__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802381D4-802381E8 0014+00 .text      getIdx__12dMsgObject_cFv                                     */
+/* 802381D4-802381E8 0014+00 rc=0 efc=0 .text      getIdx__12dMsgObject_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIdx__12dMsgObject_cFv) {
+asm void dMsgObject_c::getIdx() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getIdx__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802381E8-802381FC 0014+00 .text      getNodeIdx__12dMsgObject_cFv                                 */
+/* 802381E8-802381FC 0014+00 rc=0 efc=0 .text      getNodeIdx__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNodeIdx__12dMsgObject_cFv) {
+asm void dMsgObject_c::getNodeIdx() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getNodeIdx__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802381FC-8023822C 0030+00 .text      setStatus__12dMsgObject_cFUs                                 */
+/* 802381FC-8023822C 0030+00 rc=1 efc=1 .text      setStatus__12dMsgObject_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStatus__12dMsgObject_cFUs) {
+asm void dMsgObject_c::setStatus(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setStatus__12dMsgObject_cFUs.s"
 }
 #pragma pop
 
 
-/* 8023822C-80238258 002C+00 .text      getStatus__12dMsgObject_cFv                                  */
+/* 8023822C-80238258 002C+00 rc=40 efc=40 .text      getStatus__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStatus__12dMsgObject_cFv) {
+asm void dMsgObject_c::getStatus() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getStatus__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238258-8023826C 0014+00 .text      getScrnDrawPtr__12dMsgObject_cFv                             */
+/* 80238258-8023826C 0014+00 rc=1 efc=1 .text      getScrnDrawPtr__12dMsgObject_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getScrnDrawPtr__12dMsgObject_cFv) {
+asm void dMsgObject_c::getScrnDrawPtr() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getScrnDrawPtr__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023826C-8023829C 0030+00 .text      setTalkActor__12dMsgObject_cFP10fopAc_ac_c                   */
+/* 8023826C-8023829C 0030+00 rc=1 efc=1 .text      setTalkActor__12dMsgObject_cFP10fopAc_ac_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkActor__12dMsgObject_cFP10fopAc_ac_c) {
+asm void dMsgObject_c::setTalkActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setTalkActor__12dMsgObject_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8023829C-802382C8 002C+00 .text      onMsgSendControl__12dMsgObject_cFv                           */
+/* 8023829C-802382C8 002C+00 rc=1 efc=0 .text      onMsgSendControl__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMsgSendControl__12dMsgObject_cFv) {
+asm void dMsgObject_c::onMsgSendControl() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onMsgSendControl__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802382C8-802382F4 002C+00 .text      offMsgSendControl__12dMsgObject_cFv                          */
+/* 802382C8-802382F4 002C+00 rc=4 efc=2 .text      offMsgSendControl__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offMsgSendControl__12dMsgObject_cFv) {
+asm void dMsgObject_c::offMsgSendControl() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/offMsgSendControl__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802382F4-80238320 002C+00 .text      isMsgSendControl__12dMsgObject_cFv                           */
+/* 802382F4-80238320 002C+00 rc=3 efc=3 .text      isMsgSendControl__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMsgSendControl__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMsgSendControl() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMsgSendControl__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238320-8023834C 002C+00 .text      onMsgSend__12dMsgObject_cFv                                  */
+/* 80238320-8023834C 002C+00 rc=3 efc=2 .text      onMsgSend__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMsgSend__12dMsgObject_cFv) {
+asm void dMsgObject_c::onMsgSend() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/onMsgSend__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023834C-80238378 002C+00 .text      offMsgSend__12dMsgObject_cFv                                 */
+/* 8023834C-80238378 002C+00 rc=2 efc=0 .text      offMsgSend__12dMsgObject_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offMsgSend__12dMsgObject_cFv) {
+asm void dMsgObject_c::offMsgSend() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/offMsgSend__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238378-802383A4 002C+00 .text      isMsgSend__12dMsgObject_cFv                                  */
+/* 80238378-802383A4 002C+00 rc=1 efc=0 .text      isMsgSend__12dMsgObject_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMsgSend__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMsgSend() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMsgSend__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802383A4-802383D0 002C+00 .text      isMouthCheck__12dMsgObject_cFv                               */
+/* 802383A4-802383D0 002C+00 rc=2 efc=2 .text      isMouthCheck__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMouthCheck__12dMsgObject_cFv) {
+asm void dMsgObject_c::isMouthCheck() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isMouthCheck__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802383D0-802383E4 0014+00 .text      getMessageID__12dMsgObject_cFv                               */
+/* 802383D0-802383E4 0014+00 rc=9 efc=9 .text      getMessageID__12dMsgObject_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageID__12dMsgObject_cFv) {
+asm void dMsgObject_c::getMessageID() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMessageID__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802383E4-80238410 002C+00 .text      getSmellTypeMessageID__12dMsgObject_cFv                      */
+/* 802383E4-80238410 002C+00 rc=2 efc=1 .text      getSmellTypeMessageID__12dMsgObject_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSmellTypeMessageID__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSmellTypeMessageID() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSmellTypeMessageID__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238410-80238440 0030+00 .text      setSmellType__12dMsgObject_cFUc                              */
+/* 80238410-80238440 0030+00 rc=1 efc=1 .text      setSmellType__12dMsgObject_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmellType__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSmellType(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSmellType__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80238440-8023846C 002C+00 .text      getSelectCursorPos__12dMsgObject_cFv                         */
+/* 80238440-8023846C 002C+00 rc=4 efc=0 .text      getSelectCursorPos__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectCursorPos__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectCursorPos() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectCursorPos__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023846C-8023849C 0030+00 .text      setSelectCursorPos__12dMsgObject_cFUc                        */
+/* 8023846C-8023849C 0030+00 rc=1 efc=1 .text      setSelectCursorPos__12dMsgObject_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectCursorPos__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSelectCursorPos(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCursorPos__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 8023849C-802384B0 0014+00 .text      setPortalMessageID__12dMsgObject_cFUs                        */
+/* 8023849C-802384B0 0014+00 rc=2 efc=2 .text      setPortalMessageID__12dMsgObject_cFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPortalMessageID__12dMsgObject_cFUs) {
+asm void dMsgObject_c::setPortalMessageID(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setPortalMessageID__12dMsgObject_cFUs.s"
 }
 #pragma pop
 
 
-/* 802384B0-802384C4 0014+00 .text      setInsectItemNo__12dMsgObject_cFUc                           */
+/* 802384B0-802384C4 0014+00 rc=0 efc=0 .text      setInsectItemNo__12dMsgObject_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInsectItemNo__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setInsectItemNo(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setInsectItemNo__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 802384C4-802384D8 0014+00 .text      setLetterNameID__12dMsgObject_cFUs                           */
+/* 802384C4-802384D8 0014+00 rc=1 efc=1 .text      setLetterNameID__12dMsgObject_cFUs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLetterNameID__12dMsgObject_cFUs) {
+asm void dMsgObject_c::setLetterNameID(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setLetterNameID__12dMsgObject_cFUs.s"
 }
 #pragma pop
 
 
-/* 802384D8-802384EC 0014+00 .text      setArrowNum__12dMsgObject_cFUc                               */
+/* 802384D8-802384EC 0014+00 rc=1 efc=1 .text      setArrowNum__12dMsgObject_cFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowNum__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setArrowNum(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setArrowNum__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 802384EC-80238500 0014+00 .text      setMsgOutputType__12dMsgObject_cFUc                          */
+/* 802384EC-80238500 0014+00 rc=1 efc=0 .text      setMsgOutputType__12dMsgObject_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMsgOutputType__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setMsgOutputType(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setMsgOutputType__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80238500-80238514 0014+00 .text      getMsgOutputType__12dMsgObject_cFv                           */
+/* 80238500-80238514 0014+00 rc=1 efc=1 .text      getMsgOutputType__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsgOutputType__12dMsgObject_cFv) {
+asm void dMsgObject_c::getMsgOutputType() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getMsgOutputType__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238514-80238528 0014+00 .text      getWord__12dMsgObject_cFv                                    */
+/* 80238514-80238528 0014+00 rc=5 efc=5 .text      getWord__12dMsgObject_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWord__12dMsgObject_cFv) {
+asm void dMsgObject_c::getWord() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getWord__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238528-80238544 001C+00 .text      getSelectWord__12dMsgObject_cFi                              */
+/* 80238528-80238544 001C+00 rc=1 efc=1 .text      getSelectWord__12dMsgObject_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectWord__12dMsgObject_cFi) {
+asm void dMsgObject_c::getSelectWord(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectWord__12dMsgObject_cFi.s"
 }
 #pragma pop
 
 
-/* 80238544-80238574 0030+00 .text      setSelectWordFlag__12dMsgObject_cFUc                         */
+/* 80238544-80238574 0030+00 rc=1 efc=1 .text      setSelectWordFlag__12dMsgObject_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectWordFlag__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSelectWordFlag(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectWordFlag__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80238574-80238588 0014+00 .text      getSelectWordFlag__12dMsgObject_cFv                          */
+/* 80238574-80238588 0014+00 rc=3 efc=3 .text      getSelectWordFlag__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectWordFlag__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectWordFlag() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectWordFlag__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238588-802385B4 002C+00 .text      isHowlHearingMode__12dMsgObject_cFv                          */
+/* 80238588-802385B4 002C+00 rc=1 efc=1 .text      isHowlHearingMode__12dMsgObject_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isHowlHearingMode__12dMsgObject_cFv) {
+asm void dMsgObject_c::isHowlHearingMode() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/isHowlHearingMode__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802385B4-802385E0 002C+00 .text      getSelectBombBagID__12dMsgObject_cFv                         */
+/* 802385B4-802385E0 002C+00 rc=1 efc=1 .text      getSelectBombBagID__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectBombBagID__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectBombBagID() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectBombBagID__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 802385E0-8023860C 002C+00 .text      getSelectBombPrice__12dMsgObject_cFv                         */
+/* 802385E0-8023860C 002C+00 rc=6 efc=6 .text      getSelectBombPrice__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSelectBombPrice__12dMsgObject_cFv) {
+asm void dMsgObject_c::getSelectBombPrice() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectBombPrice__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023860C-80238638 002C+00 .text      setEquipBombInfo__12dMsgObject_cFv                           */
+/* 8023860C-80238638 002C+00 rc=1 efc=1 .text      setEquipBombInfo__12dMsgObject_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEquipBombInfo__12dMsgObject_cFv) {
+asm void dMsgObject_c::setEquipBombInfo() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setEquipBombInfo__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 80238638-8023864C 0014+00 .text      getItemEquipButton__12dMsgObject_cFv                         */
+/* 80238638-8023864C 0014+00 rc=2 efc=2 .text      getItemEquipButton__12dMsgObject_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemEquipButton__12dMsgObject_cFv) {
+asm void dMsgObject_c::getItemEquipButton() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getItemEquipButton__12dMsgObject_cFv.s"
 }
 #pragma pop
 
 
-/* 8023864C-80238660 0014+00 .text      setSelectCancelPos__12dMsgObject_cFUc                        */
+/* 8023864C-80238660 0014+00 rc=2 efc=2 .text      setSelectCancelPos__12dMsgObject_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectCancelPos__12dMsgObject_cFUc) {
+asm void dMsgObject_c::setSelectCancelPos(char field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCancelPos__12dMsgObject_cFUc.s"
 }
 #pragma pop
 
 
-/* 80238660-802386C8 0068+00 .text      dMsgObject_getTotalPrice__Fv                                 */
+/* 80238660-802386C8 0068+00 rc=1 efc=0 .text      dMsgObject_getTotalPrice__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getTotalPrice__Fv) {
+asm static void dMsgObject_getTotalPrice() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getTotalPrice__Fv.s"
 }
 #pragma pop
 
 
-/* 802386C8-80238730 0068+00 .text      dMsgObject_setTotalPrice__FUs                                */
+/* 802386C8-80238730 0068+00 rc=0 efc=0 .text      dMsgObject_setTotalPrice__FUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_setTotalPrice__FUs) {
+asm void dMsgObject_setTotalPrice(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_setTotalPrice__FUs.s"
 }
 #pragma pop
 
 
-/* 80238730-802387C4 0094+00 .text      dMsgObject_addTotalPrice__Fs                                 */
+/* 80238730-802387C4 0094+00 rc=0 efc=0 .text      dMsgObject_addTotalPrice__Fs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_addTotalPrice__Fs) {
+asm void dMsgObject_addTotalPrice(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_addTotalPrice__Fs.s"
 }
 #pragma pop
 
 
-/* 802387C4-8023882C 0068+00 .text      dMsgObject_getTotalPayment__Fv                               */
+/* 802387C4-8023882C 0068+00 rc=1 efc=0 .text      dMsgObject_getTotalPayment__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getTotalPayment__Fv) {
+asm static void dMsgObject_getTotalPayment() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getTotalPayment__Fv.s"
 }
 #pragma pop
 
 
-/* 8023882C-80238894 0068+00 .text      dMsgObject_setTotalPayment__FUs                              */
+/* 8023882C-80238894 0068+00 rc=0 efc=0 .text      dMsgObject_setTotalPayment__FUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_setTotalPayment__FUs) {
+asm void dMsgObject_setTotalPayment(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_setTotalPayment__FUs.s"
 }
 #pragma pop
 
 
-/* 80238894-80238928 0094+00 .text      dMsgObject_addTotalPayment__Fs                               */
+/* 80238894-80238928 0094+00 rc=1 efc=0 .text      dMsgObject_addTotalPayment__Fs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_addTotalPayment__Fs) {
+asm static void dMsgObject_addTotalPayment(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_addTotalPayment__Fs.s"
 }
 #pragma pop
 
 
-/* 80238928-80238990 0068+00 .text      dMsgObject_getFundRaising__Fv                                */
+/* 80238928-80238990 0068+00 rc=6 efc=4 .text      dMsgObject_getFundRaising__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getFundRaising__Fv) {
+asm void dMsgObject_getFundRaising() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getFundRaising__Fv.s"
 }
 #pragma pop
 
 
-/* 80238990-802389F8 0068+00 .text      dMsgObject_setFundRaising__FUs                               */
+/* 80238990-802389F8 0068+00 rc=2 efc=1 .text      dMsgObject_setFundRaising__FUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_setFundRaising__FUs) {
+asm void dMsgObject_setFundRaising(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_setFundRaising__FUs.s"
 }
 #pragma pop
 
 
-/* 802389F8-80238A74 007C+00 .text      dMsgObject_addFundRaising__Fs                                */
+/* 802389F8-80238A74 007C+00 rc=1 efc=0 .text      dMsgObject_addFundRaising__Fs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_addFundRaising__Fs) {
+asm static void dMsgObject_addFundRaising(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_addFundRaising__Fs.s"
 }
 #pragma pop
 
 
-/* 80238A74-80238ADC 0068+00 .text      dMsgObject_getOffering__Fv                                   */
+/* 80238A74-80238ADC 0068+00 rc=2 efc=1 .text      dMsgObject_getOffering__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getOffering__Fv) {
+asm void dMsgObject_getOffering() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_getOffering__Fv.s"
 }
 #pragma pop
 
 
-/* 80238ADC-80238B58 007C+00 .text      dMsgObject_addOffering__Fs                                   */
+/* 80238ADC-80238B58 007C+00 rc=1 efc=1 .text      dMsgObject_addOffering__Fs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_addOffering__Fs) {
+asm void dMsgObject_addOffering(s16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/dMsgObject_addOffering__Fs.s"
 }
 #pragma pop
 
 
-/* 80238B58-80238B94 003C+00 .text      __sinit_d_msg_object_cpp                                     */
+/* 80238B58-80238B94 003C+00 rc=1 efc=1 .text      __sinit_d_msg_object_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_msg_object_cpp) {
+extern "C" asm void __sinit_d_msg_object_cpp() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/__sinit_d_msg_object_cpp.s"
 }
 #pragma pop
 
 
-/* 80238B94-80238BDC 0048+00 .text      __dt__20dMsgObject_HowlHIO_cFv                               */
+/* 80238B94-80238BDC 0048+00 rc=1 efc=0 .text      __dt__20dMsgObject_HowlHIO_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20dMsgObject_HowlHIO_cFv) {
+asm dMsgObject_HowlHIO_c::~dMsgObject_HowlHIO_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/__dt__20dMsgObject_HowlHIO_cFv.s"
 }
 #pragma pop
 
 
-/* 80238BDC-80238C3C 0060+00 .text      __dt__16dMsgObject_HIO_cFv                                   */
+/* 80238BDC-80238C3C 0060+00 rc=2 efc=0 .text      __dt__16dMsgObject_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dMsgObject_HIO_cFv) {
+asm dMsgObject_HIO_c::~dMsgObject_HIO_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_object/__dt__16dMsgObject_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 80238C3C-80238C40 0004+00 .text      exec__14dMsgScrnBase_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exec__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/exec__14dMsgScrnBase_cFv.s"
+/* 80238C3C-80238C40 0004+00 rc=1 efc=1 .text      exec__14dMsgScrnBase_cFv                                     */
+void dMsgScrnBase_c::exec() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C40-80238C44 0004+00 .text      setSelectRubyString__14dMsgScrnBase_cFPcPcPc                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setSelectRubyString__14dMsgScrnBase_cFPcPcPc) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/setSelectRubyString__14dMsgScrnBase_cFPcPcPc.s"
+/* 80238C40-80238C44 0004+00 rc=8 efc=8 .text      setSelectRubyString__14dMsgScrnBase_cFPcPcPc                 */
+void dMsgScrnBase_c::setSelectRubyString(char* field_0, char* field_1, char* field_2) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C44-80238C48 0004+00 .text      setSelectString__14dMsgScrnBase_cFPcPcPc                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setSelectString__14dMsgScrnBase_cFPcPcPc) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/setSelectString__14dMsgScrnBase_cFPcPcPc.s"
+/* 80238C44-80238C48 0004+00 rc=8 efc=8 .text      setSelectString__14dMsgScrnBase_cFPcPcPc                     */
+void dMsgScrnBase_c::setSelectString(char* field_0, char* field_1, char* field_2) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C48-80238C50 0008+00 .text      selectAnimeMove__14dMsgScrnBase_cFUcUcb                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(selectAnimeMove__14dMsgScrnBase_cFUcUcb) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/selectAnimeMove__14dMsgScrnBase_cFUcUcb.s"
+/* 80238C48-80238C50 0008+00 rc=8 efc=8 .text      selectAnimeMove__14dMsgScrnBase_cFUcUcb                      */
+bool dMsgScrnBase_c::selectAnimeMove(char field_0, char field_1, bool field_2) {
+	return true;
 }
-#pragma pop
 
 
-/* 80238C50-80238C54 0004+00 .text      selectAnimeInit__14dMsgScrnBase_cFUcUcfUc                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(selectAnimeInit__14dMsgScrnBase_cFUcUcfUc) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/selectAnimeInit__14dMsgScrnBase_cFUcUcfUc.s"
+/* 80238C50-80238C54 0004+00 rc=8 efc=8 .text      selectAnimeInit__14dMsgScrnBase_cFUcUcfUc                    */
+void dMsgScrnBase_c::selectAnimeInit(char field_0, char field_1, f32 field_2, char field_3) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C54-80238C58 0004+00 .text      arwAnimeMove__14dMsgScrnBase_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(arwAnimeMove__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/arwAnimeMove__14dMsgScrnBase_cFv.s"
+/* 80238C54-80238C58 0004+00 rc=8 efc=8 .text      arwAnimeMove__14dMsgScrnBase_cFv                             */
+void dMsgScrnBase_c::arwAnimeMove() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C58-80238C5C 0004+00 .text      arwAnimeInit__14dMsgScrnBase_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(arwAnimeInit__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/arwAnimeInit__14dMsgScrnBase_cFv.s"
+/* 80238C58-80238C5C 0004+00 rc=8 efc=8 .text      arwAnimeInit__14dMsgScrnBase_cFv                             */
+void dMsgScrnBase_c::arwAnimeInit() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C5C-80238C60 0004+00 .text      fukiPosCalc__14dMsgScrnBase_cFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fukiPosCalc__14dMsgScrnBase_cFUc) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/fukiPosCalc__14dMsgScrnBase_cFUc.s"
+/* 80238C5C-80238C60 0004+00 rc=8 efc=8 .text      fukiPosCalc__14dMsgScrnBase_cFUc                             */
+void dMsgScrnBase_c::fukiPosCalc(char field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C60-80238C68 0008+00 .text      isSelect__14dMsgScrnBase_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(isSelect__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/isSelect__14dMsgScrnBase_cFv.s"
+/* 80238C60-80238C68 0008+00 rc=8 efc=8 .text      isSelect__14dMsgScrnBase_cFv                                 */
+bool dMsgScrnBase_c::isSelect() {
+	return true;
 }
-#pragma pop
 
 
-/* 80238C68-80238C70 0008+00 .text      selectAnimeEnd__14dMsgScrnBase_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(selectAnimeEnd__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/selectAnimeEnd__14dMsgScrnBase_cFv.s"
+/* 80238C68-80238C70 0008+00 rc=8 efc=8 .text      selectAnimeEnd__14dMsgScrnBase_cFv                           */
+bool dMsgScrnBase_c::selectAnimeEnd() {
+	return true;
 }
-#pragma pop
 
 
-/* 80238C70-80238C74 0004+00 .text      dotAnimeMove__14dMsgScrnBase_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dotAnimeMove__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/dotAnimeMove__14dMsgScrnBase_cFv.s"
+/* 80238C70-80238C74 0004+00 rc=8 efc=8 .text      dotAnimeMove__14dMsgScrnBase_cFv                             */
+void dMsgScrnBase_c::dotAnimeMove() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C74-80238C78 0004+00 .text      dotAnimeInit__14dMsgScrnBase_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dotAnimeInit__14dMsgScrnBase_cFv) {
-	nofralloc
-#include "asm/d/msg/d_msg_object/dotAnimeInit__14dMsgScrnBase_cFv.s"
+/* 80238C74-80238C78 0004+00 rc=8 efc=8 .text      dotAnimeInit__14dMsgScrnBase_cFv                             */
+void dMsgScrnBase_c::dotAnimeInit() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80238C78-80238C94 001C+00 .text      setActorPos__19jmessage_tReferenceF4cXyz                     */
+/* 80238C78-80238C94 001C+00 rc=2 efc=0 .text      setActorPos__19jmessage_tReferenceF4cXyz                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActorPos__19jmessage_tReferenceF4cXyz) {
+asm void jmessage_tReference::setActorPos(cXyz field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setActorPos__19jmessage_tReferenceF4cXyz.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

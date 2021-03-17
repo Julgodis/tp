@@ -6,31 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_bee_class;
+struct bee_s;
+
+struct daE_Bee_HIO_c {
+	daE_Bee_HIO_c();
+	~daE_Bee_HIO_c();
+};
+
+struct e_bee_class {
+};
+
+struct bee_s {
+	~bee_s();
+	bee_s();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daE_Bee_HIO_cFv();
-extern "C" extern void daE_Bee_Draw__FP11e_bee_class();
-extern "C" extern void bee_mtxset__FP5bee_s();
-extern "C" extern void bee_ground_ang_set__FP5bee_s();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void bee_fly_action__FP11e_bee_classP5bee_s();
-extern "C" extern void bee_nest_action__FP11e_bee_classP5bee_sSc();
-extern "C" extern void bee_fail__FP5bee_s();
-extern "C" extern void bee_start__FP11e_bee_classP5bee_s();
-extern "C" extern void bee_control__FP11e_bee_class();
-extern "C" extern void daE_Bee_Execute__FP11e_bee_class();
-extern "C" extern void daE_Bee_IsDelete__FP11e_bee_class();
-extern "C" extern void daE_Bee_Delete__FP11e_bee_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_Bee_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__5bee_sFv();
-extern "C" extern void __ct__5bee_sFv();
-extern "C" extern void __dt__13daE_Bee_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_bee_cpp();
+void daE_Bee_Draw(e_bee_class*);
+void bee_mtxset(bee_s*);
+void bee_ground_ang_set(bee_s*);
+void bee_fly_action(e_bee_class*, bee_s*);
+void bee_nest_action(e_bee_class*, bee_s*, s8);
+void bee_fail(bee_s*);
+void bee_start(e_bee_class*, bee_s*);
+void bee_control(e_bee_class*);
+void daE_Bee_Execute(e_bee_class*);
+bool daE_Bee_IsDelete(e_bee_class*);
+void daE_Bee_Delete(e_bee_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_Bee_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_bee_cpp();
+
+extern "C" void __ct__13daE_Bee_HIO_cFv();
+extern "C" void daE_Bee_Draw__FP11e_bee_class();
+extern "C" void bee_mtxset__FP5bee_s();
+extern "C" void bee_ground_ang_set__FP5bee_s();
+extern "C" void __dt__4cXyzFv();
+extern "C" void bee_fly_action__FP11e_bee_classP5bee_s();
+extern "C" void bee_nest_action__FP11e_bee_classP5bee_sSc();
+extern "C" void bee_fail__FP5bee_s();
+extern "C" void bee_start__FP11e_bee_classP5bee_s();
+extern "C" void bee_control__FP11e_bee_class();
+extern "C" void daE_Bee_Execute__FP11e_bee_class();
+extern "C" bool daE_Bee_IsDelete__FP11e_bee_class();
+extern "C" void daE_Bee_Delete__FP11e_bee_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_Bee_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__5bee_sFv();
+extern "C" void __ct__5bee_sFv();
+extern "C" void __dt__13daE_Bee_HIO_cFv();
+extern "C" void __sinit_d_a_e_bee_cpp();
 SECTION_RODATA extern const u32 lit_3770;
 SECTION_RODATA extern const u32 lit_3929;
 SECTION_RODATA extern const u32 lit_3930;
@@ -141,8 +196,11 @@ SECTION_BSS extern u8 data_80685714[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -152,7 +210,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daE_Bee_HIO_cFv) {
+asm daE_Bee_HIO_c::daE_Bee_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__ct__13daE_Bee_HIO_cFv.s"
 }
@@ -163,7 +221,7 @@ ASM_FUNCTION(__ct__13daE_Bee_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bee_Draw__FP11e_bee_class) {
+asm void daE_Bee_Draw(e_bee_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_Draw__FP11e_bee_class.s"
 }
@@ -174,7 +232,7 @@ ASM_FUNCTION(daE_Bee_Draw__FP11e_bee_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_mtxset__FP5bee_s) {
+asm void bee_mtxset(bee_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_mtxset__FP5bee_s.s"
 }
@@ -185,7 +243,7 @@ ASM_FUNCTION(bee_mtxset__FP5bee_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_ground_ang_set__FP5bee_s) {
+asm void bee_ground_ang_set(bee_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_ground_ang_set__FP5bee_s.s"
 }
@@ -196,7 +254,7 @@ ASM_FUNCTION(bee_ground_ang_set__FP5bee_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__4cXyzFv.s"
 }
@@ -207,7 +265,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_fly_action__FP11e_bee_classP5bee_s) {
+asm void bee_fly_action(e_bee_class* field_0, bee_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_fly_action__FP11e_bee_classP5bee_s.s"
 }
@@ -218,7 +276,7 @@ ASM_FUNCTION(bee_fly_action__FP11e_bee_classP5bee_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_nest_action__FP11e_bee_classP5bee_sSc) {
+asm void bee_nest_action(e_bee_class* field_0, bee_s* field_1, s8 field_2) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_nest_action__FP11e_bee_classP5bee_sSc.s"
 }
@@ -229,7 +287,7 @@ ASM_FUNCTION(bee_nest_action__FP11e_bee_classP5bee_sSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_fail__FP5bee_s) {
+asm void bee_fail(bee_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_fail__FP5bee_s.s"
 }
@@ -240,7 +298,7 @@ ASM_FUNCTION(bee_fail__FP5bee_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_start__FP11e_bee_classP5bee_s) {
+asm void bee_start(e_bee_class* field_0, bee_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_start__FP11e_bee_classP5bee_s.s"
 }
@@ -251,7 +309,7 @@ ASM_FUNCTION(bee_start__FP11e_bee_classP5bee_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_control__FP11e_bee_class) {
+asm void bee_control(e_bee_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/bee_control__FP11e_bee_class.s"
 }
@@ -262,7 +320,7 @@ ASM_FUNCTION(bee_control__FP11e_bee_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bee_Execute__FP11e_bee_class) {
+asm void daE_Bee_Execute(e_bee_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_Execute__FP11e_bee_class.s"
 }
@@ -270,21 +328,16 @@ ASM_FUNCTION(daE_Bee_Execute__FP11e_bee_class) {
 
 
 /* 80684B5C-80684B64 0008+00 .text      daE_Bee_IsDelete__FP11e_bee_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_Bee_IsDelete__FP11e_bee_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_IsDelete__FP11e_bee_class.s"
+bool daE_Bee_IsDelete(e_bee_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80684B64-80684C70 010C+00 .text      daE_Bee_Delete__FP11e_bee_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bee_Delete__FP11e_bee_class) {
+asm void daE_Bee_Delete(e_bee_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_Delete__FP11e_bee_class.s"
 }
@@ -295,7 +348,7 @@ ASM_FUNCTION(daE_Bee_Delete__FP11e_bee_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -306,7 +359,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bee_Create__FP10fopAc_ac_c) {
+asm void daE_Bee_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_Create__FP10fopAc_ac_c.s"
 }
@@ -317,7 +370,7 @@ ASM_FUNCTION(daE_Bee_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__8cM3dGSphFv.s"
 }
@@ -328,7 +381,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__8cM3dGCylFv.s"
 }
@@ -339,7 +392,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__8cM3dGAabFv.s"
 }
@@ -350,7 +403,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5bee_sFv) {
+asm bee_s::~bee_s() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__5bee_sFv.s"
 }
@@ -361,7 +414,7 @@ ASM_FUNCTION(__dt__5bee_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__5bee_sFv) {
+asm bee_s::bee_s() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__ct__5bee_sFv.s"
 }
@@ -372,7 +425,7 @@ ASM_FUNCTION(__ct__5bee_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daE_Bee_HIO_cFv) {
+asm daE_Bee_HIO_c::~daE_Bee_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__dt__13daE_Bee_HIO_cFv.s"
 }
@@ -383,7 +436,7 @@ ASM_FUNCTION(__dt__13daE_Bee_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_bee_cpp) {
+extern "C" asm void __sinit_d_a_e_bee_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/__sinit_d_a_e_bee_cpp.s"
 }

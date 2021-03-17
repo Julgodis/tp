@@ -6,11 +6,21 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagEscape_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagEscape_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagEscape_Delete__FP13daTagEscape_c();
+void daTagEscape_Create(fopAc_ac_c*);
+void daTagEscape_Delete(daTagEscape_c*);
+
+extern "C" void daTagEscape_Create__FP10fopAc_ac_c();
+extern "C" void daTagEscape_Delete__FP13daTagEscape_c();
 SECTION_DATA extern u8 l_daTagEscape_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Escape[48];
 
@@ -18,7 +28,9 @@ SECTION_DATA extern u8 g_profile_Tag_Escape[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -28,7 +40,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagEscape_Create__FP10fopAc_ac_c) {
+asm void daTagEscape_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_escape/d_a_tag_escape/daTagEscape_Create__FP10fopAc_ac_c.s"
 }
@@ -39,7 +51,7 @@ ASM_FUNCTION(daTagEscape_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagEscape_Delete__FP13daTagEscape_c) {
+asm void daTagEscape_Delete(daTagEscape_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_escape/d_a_tag_escape/daTagEscape_Delete__FP13daTagEscape_c.s"
 }

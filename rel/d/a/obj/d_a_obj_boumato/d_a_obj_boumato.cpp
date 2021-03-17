@@ -6,42 +6,119 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dCcD_GObjInf;
+
+struct daObj_BouMato_c {
+	~daObj_BouMato_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void tgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+	void srchArrow(void*, void*);
+	void deleteStuckArrow();
+	void getResName();
+	void setSwayParam(fopAc_ac_c*);
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_BouMato_Param_c {
+	~daObj_BouMato_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__15daObj_BouMato_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void create__15daObj_BouMato_cFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__15daObj_BouMato_cFv();
-extern "C" extern void Delete__15daObj_BouMato_cFv();
-extern "C" extern void Execute__15daObj_BouMato_cFv();
-extern "C" extern void Draw__15daObj_BouMato_cFv();
-extern "C" extern void createHeapCallBack__15daObj_BouMato_cFP10fopAc_ac_c();
-extern "C" extern void tgHitCallBack__15daObj_BouMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void srchArrow__15daObj_BouMato_cFPvPv();
-extern "C" extern void deleteStuckArrow__15daObj_BouMato_cFv();
-extern "C" extern void getResName__15daObj_BouMato_cFv();
-extern "C" extern void setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c();
-extern "C" extern void setEnvTevColor__15daObj_BouMato_cFv();
-extern "C" extern void setRoomNo__15daObj_BouMato_cFv();
-extern "C" extern void setMtx__15daObj_BouMato_cFv();
-extern "C" extern void daObj_BouMato_Create__FPv();
-extern "C" extern void daObj_BouMato_Delete__FPv();
-extern "C" extern void daObj_BouMato_Execute__FPv();
-extern "C" extern void daObj_BouMato_Draw__FPv();
-extern "C" extern void daObj_BouMato_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_boumato_cpp();
-extern "C" extern void __dt__21daObj_BouMato_Param_cFv();
-extern "C" extern void func_80BBC44C();
-extern "C" extern void func_80BBC454();
+void daObj_BouMato_Create(void*);
+void daObj_BouMato_Delete(void*);
+void daObj_BouMato_Execute(void*);
+void daObj_BouMato_Draw(void*);
+bool daObj_BouMato_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_boumato_cpp();
+extern "C" void func_80BBC44C();
+extern "C" void func_80BBC454();
+
+extern "C" void __dt__15daObj_BouMato_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void create__15daObj_BouMato_cFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__15daObj_BouMato_cFv();
+extern "C" void Delete__15daObj_BouMato_cFv();
+extern "C" void Execute__15daObj_BouMato_cFv();
+extern "C" void Draw__15daObj_BouMato_cFv();
+extern "C" void createHeapCallBack__15daObj_BouMato_cFP10fopAc_ac_c();
+extern "C" void tgHitCallBack__15daObj_BouMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void srchArrow__15daObj_BouMato_cFPvPv();
+extern "C" void deleteStuckArrow__15daObj_BouMato_cFv();
+extern "C" void getResName__15daObj_BouMato_cFv();
+extern "C" void setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c();
+extern "C" void setEnvTevColor__15daObj_BouMato_cFv();
+extern "C" void setRoomNo__15daObj_BouMato_cFv();
+extern "C" void setMtx__15daObj_BouMato_cFv();
+extern "C" void daObj_BouMato_Create__FPv();
+extern "C" void daObj_BouMato_Delete__FPv();
+extern "C" void daObj_BouMato_Execute__FPv();
+extern "C" void daObj_BouMato_Draw__FPv();
+extern "C" bool daObj_BouMato_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_boumato_cpp();
+extern "C" void __dt__21daObj_BouMato_Param_cFv();
+extern "C" void func_80BBC44C();
+extern "C" void func_80BBC454();
 SECTION_RODATA extern const u8 m__21daObj_BouMato_Param_c[28];
 SECTION_RODATA extern const u8 l_ccDObjData[48];
 SECTION_RODATA extern const u32 lit_3956;
@@ -88,8 +165,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -99,7 +179,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_BouMato_cFv) {
+asm daObj_BouMato_c::~daObj_BouMato_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__15daObj_BouMato_cFv.s"
 }
@@ -110,7 +190,7 @@ ASM_FUNCTION(__dt__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__5csXyzFv.s"
 }
@@ -121,7 +201,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/create__15daObj_BouMato_cFv.s"
 }
@@ -129,21 +209,16 @@ ASM_FUNCTION(create__15daObj_BouMato_cFv) {
 
 
 /* 80BBB558-80BBB55C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BBB55C-80BBB5A4 0048+00 .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGLinFv.s"
 }
@@ -154,7 +229,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGCylFv.s"
 }
@@ -165,7 +240,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__8cM3dGAabFv.s"
 }
@@ -176,7 +251,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_AcchCirFv.s"
 }
@@ -187,7 +262,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__10dCcD_GSttsFv.s"
 }
@@ -198,7 +273,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -209,7 +284,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/CreateHeap__15daObj_BouMato_cFv.s"
 }
@@ -220,7 +295,7 @@ ASM_FUNCTION(CreateHeap__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/Delete__15daObj_BouMato_cFv.s"
 }
@@ -231,7 +306,7 @@ ASM_FUNCTION(Delete__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/Execute__15daObj_BouMato_cFv.s"
 }
@@ -242,7 +317,7 @@ ASM_FUNCTION(Execute__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/Draw__15daObj_BouMato_cFv.s"
 }
@@ -253,7 +328,7 @@ ASM_FUNCTION(Draw__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__15daObj_BouMato_cFP10fopAc_ac_c) {
+asm void daObj_BouMato_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/createHeapCallBack__15daObj_BouMato_cFP10fopAc_ac_c.s"
 }
@@ -264,7 +339,7 @@ ASM_FUNCTION(createHeapCallBack__15daObj_BouMato_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tgHitCallBack__15daObj_BouMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daObj_BouMato_c::tgHitCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/func_80BBBE70.s"
 }
@@ -275,7 +350,7 @@ ASM_FUNCTION(tgHitCallBack__15daObj_BouMato_cFP10fopAc_ac_cP12dCcD_GObjInfP10fop
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchArrow__15daObj_BouMato_cFPvPv) {
+asm void daObj_BouMato_c::srchArrow(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/srchArrow__15daObj_BouMato_cFPvPv.s"
 }
@@ -286,7 +361,7 @@ ASM_FUNCTION(srchArrow__15daObj_BouMato_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteStuckArrow__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::deleteStuckArrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/deleteStuckArrow__15daObj_BouMato_cFv.s"
 }
@@ -297,7 +372,7 @@ ASM_FUNCTION(deleteStuckArrow__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/getResName__15daObj_BouMato_cFv.s"
 }
@@ -308,7 +383,7 @@ ASM_FUNCTION(getResName__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c) {
+asm void daObj_BouMato_c::setSwayParam(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c.s"
 }
@@ -319,7 +394,7 @@ ASM_FUNCTION(setSwayParam__15daObj_BouMato_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/setEnvTevColor__15daObj_BouMato_cFv.s"
 }
@@ -330,7 +405,7 @@ ASM_FUNCTION(setEnvTevColor__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/setRoomNo__15daObj_BouMato_cFv.s"
 }
@@ -341,7 +416,7 @@ ASM_FUNCTION(setRoomNo__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObj_BouMato_cFv) {
+asm void daObj_BouMato_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/setMtx__15daObj_BouMato_cFv.s"
 }
@@ -352,7 +427,7 @@ ASM_FUNCTION(setMtx__15daObj_BouMato_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_BouMato_Create__FPv) {
+asm void daObj_BouMato_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Create__FPv.s"
 }
@@ -363,7 +438,7 @@ ASM_FUNCTION(daObj_BouMato_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_BouMato_Delete__FPv) {
+asm void daObj_BouMato_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Delete__FPv.s"
 }
@@ -374,7 +449,7 @@ ASM_FUNCTION(daObj_BouMato_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_BouMato_Execute__FPv) {
+asm void daObj_BouMato_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Execute__FPv.s"
 }
@@ -385,7 +460,7 @@ ASM_FUNCTION(daObj_BouMato_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_BouMato_Draw__FPv) {
+asm void daObj_BouMato_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_Draw__FPv.s"
 }
@@ -393,21 +468,16 @@ ASM_FUNCTION(daObj_BouMato_Draw__FPv) {
 
 
 /* 80BBC340-80BBC348 0008+00 .text      daObj_BouMato_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_BouMato_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/daObj_BouMato_IsDelete__FPv.s"
+bool daObj_BouMato_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BBC348-80BBC390 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__10cCcD_GSttsFv.s"
 }
@@ -418,7 +488,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_boumato_cpp) {
+extern "C" asm void __sinit_d_a_obj_boumato_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__sinit_d_a_obj_boumato_cpp.s"
 }
@@ -429,7 +499,7 @@ ASM_FUNCTION(__sinit_d_a_obj_boumato_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daObj_BouMato_Param_cFv) {
+asm daObj_BouMato_Param_c::~daObj_BouMato_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/__dt__21daObj_BouMato_Param_cFv.s"
 }
@@ -440,7 +510,7 @@ ASM_FUNCTION(__dt__21daObj_BouMato_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BBC44C) {
+extern "C" asm void func_80BBC44C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/func_80BBC44C.s"
 }
@@ -451,7 +521,7 @@ ASM_FUNCTION(func_80BBC44C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BBC454) {
+extern "C" asm void func_80BBC454() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_boumato/d_a_obj_boumato/func_80BBC454.s"
 }

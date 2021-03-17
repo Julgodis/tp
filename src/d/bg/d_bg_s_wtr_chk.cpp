@@ -6,31 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgS_WtrChk (dBgS_WtrChk) False/False
+/* top-level dependencies (begin dBgS_WtrChk) */
+/* top-level dependencies (end dBgS_WtrChk) */
+struct dBgS_WtrChk {
+	/* 80079164 */ dBgS_WtrChk();
+};
+
+// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
+/* top-level dependencies (begin dBgS_SplGrpChk) */
+/* top-level dependencies (end dBgS_SplGrpChk) */
+struct dBgS_SplGrpChk {
+	/* 80078BB0 */ dBgS_SplGrpChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11dBgS_WtrChkFv();
+
+extern "C" void __ct__11dBgS_WtrChkFv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__14dBgS_SplGrpChkFv();
+
+extern "C" void __ct__14dBgS_SplGrpChkFv();
 SECTION_DATA extern void*const __vt__11dBgS_WtrChk[12];
 
 // 
 // Declarations:
 // 
 
-/* 80079164-800791C4 0060+00 .text      __ct__11dBgS_WtrChkFv                                        */
+/* 80079164-800791C4 0060+00 rc=2 efc=2 .text      __ct__11dBgS_WtrChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dBgS_WtrChkFv) {
+asm dBgS_WtrChk::dBgS_WtrChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_wtr_chk/__ct__11dBgS_WtrChkFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

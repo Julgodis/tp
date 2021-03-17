@@ -6,13 +6,40 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build node_lists_tree_class (node_lists_tree_class) False/False
+/* top-level dependencies (begin node_lists_tree_class) */
+/* top-level dependencies (end node_lists_tree_class) */
+struct node_lists_tree_class {
+};
+
+// build node_list_class (node_list_class) False/False
+/* top-level dependencies (begin node_list_class) */
+/* top-level dependencies (end node_list_class) */
+struct node_list_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
-extern "C" extern void fopDwTg_DrawQTo__FP16create_tag_class();
-extern "C" extern void fopDwTg_Init__FP16create_tag_classPv();
-extern "C" extern void fopDwTg_CreateQueue__Fv();
+void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_DrawQTo(create_tag_class*);
+void fopDwTg_Init(create_tag_class*, void*);
+void fopDwTg_CreateQueue();
+
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void fopDwTg_Init__FP16create_tag_classPv();
+extern "C" void fopDwTg_CreateQueue__Fv();
 SECTION_BSS extern u8 data_803F1E10[12000];
 SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 
@@ -20,48 +47,53 @@ SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 // External References:
 // 
 
-extern "C" extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
-extern "C" extern void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
+void cTr_Create(node_lists_tree_class*, node_list_class*, s32);
+void cTg_SingleCutFromTree(create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
+
+extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804505D0-804505D8 0008+00 .sdata     g_fopDwTg_Queue                                              */
+/* 804505D0-804505D8 0008+00 rc=4 efc=2 .sdata     g_fopDwTg_Queue                                              */
 u8 g_fopDwTg_Queue[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800204AC-800204D4 0028+00 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
+/* 800204AC-800204D4 0028+00 rc=4 efc=4 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwTg_ToDrawQ__FP16create_tag_classi) {
+asm void fopDwTg_ToDrawQ(create_tag_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/f_op/f_op_draw_tag/fopDwTg_ToDrawQ__FP16create_tag_classi.s"
 }
 #pragma pop
 
 
-/* 800204D4-800204F4 0020+00 .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
+/* 800204D4-800204F4 0020+00 rc=8 efc=8 .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwTg_DrawQTo__FP16create_tag_class) {
+asm void fopDwTg_DrawQTo(create_tag_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_draw_tag/fopDwTg_DrawQTo__FP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 800204F4-80020518 0024+00 .text      fopDwTg_Init__FP16create_tag_classPv                         */
+/* 800204F4-80020518 0024+00 rc=4 efc=4 .text      fopDwTg_Init__FP16create_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwTg_Init__FP16create_tag_classPv) {
+asm void fopDwTg_Init(create_tag_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_op/f_op_draw_tag/fopDwTg_Init__FP16create_tag_classPv.s"
 }
@@ -69,18 +101,17 @@ ASM_FUNCTION(fopDwTg_Init__FP16create_tag_classPv) {
 
 
 /* ############################################################################################## */
-/* 803F1E10-803F4CF0 2EE0+00 .bss       lists$2216                                                   */
+/* 803F1E10-803F4CF0 2EE0+00 rc=1 efc=0 .bss       lists$2216                                                   */
 u8 data_803F1E10[12000];
 
-/* 80020518-80020548 0030+00 .text      fopDwTg_CreateQueue__Fv                                      */
+/* 80020518-80020548 0030+00 rc=1 efc=1 .text      fopDwTg_CreateQueue__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwTg_CreateQueue__Fv) {
+asm void fopDwTg_CreateQueue() {
 	nofralloc
 #include "asm/f_op/f_op_draw_tag/fopDwTg_CreateQueue__Fv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

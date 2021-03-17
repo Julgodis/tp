@@ -6,49 +6,136 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fshop_class;
+struct J3DJoint;
+struct dBgW;
+struct fopAc_ac_c;
+struct fs_weed_s;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct fshop_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fs_weed_s {
+	~fs_weed_s();
+	fs_weed_s();
+};
+
+struct fs_koro2_s {
+	~fs_koro2_s();
+	fs_koro2_s();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct fs_tsubo_s {
+	~fs_tsubo_s();
+	fs_tsubo_s();
+};
+
+struct fs_rod_s {
+	~fs_rod_s();
+	fs_rod_s();
+};
+
+struct fs_lure_s {
+	~fs_lure_s();
+	fs_lure_s();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Reel_CallBack__FP8J3DJointi();
-extern "C" extern void frog_CallBack__FP8J3DJointi();
-extern "C" extern void koro2_draw__FP11fshop_class();
-extern "C" extern void daFshop_Draw__FP11fshop_class();
-extern "C" extern void lure_set__FP11fshop_class();
-extern "C" extern void rod_set__FP11fshop_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void s_fish_sub__FPvPv();
-extern "C" extern void tsubo_set__FP11fshop_class();
-extern "C" extern void weed_control__FP11fshop_classP9fs_weed_s();
-extern "C" extern void stage_copy__FP11fshop_classP11fshop_class();
-extern "C" extern void koro2_mtx_set__FP11fshop_class();
-extern "C" extern void s_sel_sub__FPvPv();
-extern "C" extern void s_ball_sub__FPvPv();
-extern "C" extern void koro2_game__FP11fshop_class();
-extern "C" extern void ball_wall_check__FP11fshop_class();
-extern "C" extern void daFshop_Execute__FP11fshop_class();
-extern "C" extern void daFshop_IsDelete__FP11fshop_class();
-extern "C" extern void daFshop_Delete__FP11fshop_class();
-extern "C" extern void koro2_heapinit__FP10fopAc_ac_c();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void BalluseHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daFshop_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10fs_koro2_sFv();
-extern "C" extern void __ct__10fs_koro2_sFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10fs_tsubo_sFv();
-extern "C" extern void __ct__10fs_tsubo_sFv();
-extern "C" extern void __dt__9fs_weed_sFv();
-extern "C" extern void __ct__9fs_weed_sFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8fs_rod_sFv();
-extern "C" extern void __ct__8fs_rod_sFv();
-extern "C" extern void __dt__9fs_lure_sFv();
-extern "C" extern void __ct__9fs_lure_sFv();
-extern "C" extern void __sinit_d_a_mg_fshop_cpp();
-extern "C" extern void func_80870070();
-extern "C" extern void func_80870078();
+void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void Reel_CallBack(J3DJoint*, s32);
+void frog_CallBack(J3DJoint*, s32);
+void koro2_draw(fshop_class*);
+void daFshop_Draw(fshop_class*);
+void lure_set(fshop_class*);
+void rod_set(fshop_class*);
+void s_fish_sub(void*, void*);
+void tsubo_set(fshop_class*);
+void weed_control(fshop_class*, fs_weed_s*);
+void stage_copy(fshop_class*, fshop_class*);
+void koro2_mtx_set(fshop_class*);
+void s_sel_sub(void*, void*);
+void s_ball_sub(void*, void*);
+void koro2_game(fshop_class*);
+void ball_wall_check(fshop_class*);
+void daFshop_Execute(fshop_class*);
+bool daFshop_IsDelete(fshop_class*);
+void daFshop_Delete(fshop_class*);
+void koro2_heapinit(fopAc_ac_c*);
+void useHeapInit(fopAc_ac_c*);
+void BalluseHeapInit(fopAc_ac_c*);
+void daFshop_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_mg_fshop_cpp();
+extern "C" void func_80870070();
+extern "C" void func_80870078();
+
+extern "C" void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Reel_CallBack__FP8J3DJointi();
+extern "C" void frog_CallBack__FP8J3DJointi();
+extern "C" void koro2_draw__FP11fshop_class();
+extern "C" void daFshop_Draw__FP11fshop_class();
+extern "C" void lure_set__FP11fshop_class();
+extern "C" void rod_set__FP11fshop_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void s_fish_sub__FPvPv();
+extern "C" void tsubo_set__FP11fshop_class();
+extern "C" void weed_control__FP11fshop_classP9fs_weed_s();
+extern "C" void stage_copy__FP11fshop_classP11fshop_class();
+extern "C" void koro2_mtx_set__FP11fshop_class();
+extern "C" void s_sel_sub__FPvPv();
+extern "C" void s_ball_sub__FPvPv();
+extern "C" void koro2_game__FP11fshop_class();
+extern "C" void ball_wall_check__FP11fshop_class();
+extern "C" void daFshop_Execute__FP11fshop_class();
+extern "C" bool daFshop_IsDelete__FP11fshop_class();
+extern "C" void daFshop_Delete__FP11fshop_class();
+extern "C" void koro2_heapinit__FP10fopAc_ac_c();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void BalluseHeapInit__FP10fopAc_ac_c();
+extern "C" void daFshop_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10fs_koro2_sFv();
+extern "C" void __ct__10fs_koro2_sFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10fs_tsubo_sFv();
+extern "C" void __ct__10fs_tsubo_sFv();
+extern "C" void __dt__9fs_weed_sFv();
+extern "C" void __ct__9fs_weed_sFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8fs_rod_sFv();
+extern "C" void __ct__8fs_rod_sFv();
+extern "C" void __dt__9fs_lure_sFv();
+extern "C" void __ct__9fs_lure_sFv();
+extern "C" void __sinit_d_a_mg_fshop_cpp();
+extern "C" void func_80870070();
+extern "C" void func_80870078();
 SECTION_RODATA extern const u32 lit_3829;
 SECTION_RODATA extern const u32 lit_3830;
 SECTION_RODATA extern const u32 lit_3831;
@@ -256,8 +343,11 @@ SECTION_BSS extern u8 data_80870B28[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -267,7 +357,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -278,7 +368,7 @@ ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reel_CallBack__FP8J3DJointi) {
+asm void Reel_CallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/Reel_CallBack__FP8J3DJointi.s"
 }
@@ -289,7 +379,7 @@ ASM_FUNCTION(Reel_CallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frog_CallBack__FP8J3DJointi) {
+asm void frog_CallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/frog_CallBack__FP8J3DJointi.s"
 }
@@ -300,7 +390,7 @@ ASM_FUNCTION(frog_CallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(koro2_draw__FP11fshop_class) {
+asm void koro2_draw(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/koro2_draw__FP11fshop_class.s"
 }
@@ -311,7 +401,7 @@ ASM_FUNCTION(koro2_draw__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFshop_Draw__FP11fshop_class) {
+asm void daFshop_Draw(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_Draw__FP11fshop_class.s"
 }
@@ -322,7 +412,7 @@ ASM_FUNCTION(daFshop_Draw__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_set__FP11fshop_class) {
+asm void lure_set(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/lure_set__FP11fshop_class.s"
 }
@@ -333,7 +423,7 @@ ASM_FUNCTION(lure_set__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rod_set__FP11fshop_class) {
+asm void rod_set(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/rod_set__FP11fshop_class.s"
 }
@@ -344,7 +434,7 @@ ASM_FUNCTION(rod_set__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__4cXyzFv.s"
 }
@@ -355,7 +445,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fish_sub__FPvPv) {
+asm void s_fish_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/s_fish_sub__FPvPv.s"
 }
@@ -366,7 +456,7 @@ ASM_FUNCTION(s_fish_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tsubo_set__FP11fshop_class) {
+asm void tsubo_set(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/tsubo_set__FP11fshop_class.s"
 }
@@ -377,7 +467,7 @@ ASM_FUNCTION(tsubo_set__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(weed_control__FP11fshop_classP9fs_weed_s) {
+asm void weed_control(fshop_class* field_0, fs_weed_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/weed_control__FP11fshop_classP9fs_weed_s.s"
 }
@@ -388,7 +478,7 @@ ASM_FUNCTION(weed_control__FP11fshop_classP9fs_weed_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stage_copy__FP11fshop_classP11fshop_class) {
+asm void stage_copy(fshop_class* field_0, fshop_class* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/stage_copy__FP11fshop_classP11fshop_class.s"
 }
@@ -399,7 +489,7 @@ ASM_FUNCTION(stage_copy__FP11fshop_classP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(koro2_mtx_set__FP11fshop_class) {
+asm void koro2_mtx_set(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/koro2_mtx_set__FP11fshop_class.s"
 }
@@ -410,7 +500,7 @@ ASM_FUNCTION(koro2_mtx_set__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sel_sub__FPvPv) {
+asm void s_sel_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/s_sel_sub__FPvPv.s"
 }
@@ -421,7 +511,7 @@ ASM_FUNCTION(s_sel_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ball_sub__FPvPv) {
+asm void s_ball_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/s_ball_sub__FPvPv.s"
 }
@@ -432,7 +522,7 @@ ASM_FUNCTION(s_ball_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(koro2_game__FP11fshop_class) {
+asm void koro2_game(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/koro2_game__FP11fshop_class.s"
 }
@@ -443,7 +533,7 @@ ASM_FUNCTION(koro2_game__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ball_wall_check__FP11fshop_class) {
+asm void ball_wall_check(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/ball_wall_check__FP11fshop_class.s"
 }
@@ -454,7 +544,7 @@ ASM_FUNCTION(ball_wall_check__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFshop_Execute__FP11fshop_class) {
+asm void daFshop_Execute(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_Execute__FP11fshop_class.s"
 }
@@ -462,21 +552,16 @@ ASM_FUNCTION(daFshop_Execute__FP11fshop_class) {
 
 
 /* 8086E6C4-8086E6CC 0008+00 .text      daFshop_IsDelete__FP11fshop_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daFshop_IsDelete__FP11fshop_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_IsDelete__FP11fshop_class.s"
+bool daFshop_IsDelete(fshop_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8086E6CC-8086E7F0 0124+00 .text      daFshop_Delete__FP11fshop_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFshop_Delete__FP11fshop_class) {
+asm void daFshop_Delete(fshop_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_Delete__FP11fshop_class.s"
 }
@@ -487,7 +572,7 @@ ASM_FUNCTION(daFshop_Delete__FP11fshop_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(koro2_heapinit__FP10fopAc_ac_c) {
+asm void koro2_heapinit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/koro2_heapinit__FP10fopAc_ac_c.s"
 }
@@ -498,7 +583,7 @@ ASM_FUNCTION(koro2_heapinit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -509,7 +594,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BalluseHeapInit__FP10fopAc_ac_c) {
+asm void BalluseHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/BalluseHeapInit__FP10fopAc_ac_c.s"
 }
@@ -520,7 +605,7 @@ ASM_FUNCTION(BalluseHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFshop_Create__FP10fopAc_ac_c) {
+asm void daFshop_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_Create__FP10fopAc_ac_c.s"
 }
@@ -531,7 +616,7 @@ ASM_FUNCTION(daFshop_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10fs_koro2_sFv) {
+asm fs_koro2_s::~fs_koro2_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__10fs_koro2_sFv.s"
 }
@@ -539,21 +624,16 @@ ASM_FUNCTION(__dt__10fs_koro2_sFv) {
 
 
 /* 8086FDB4-8086FDB8 0004+00 .text      __ct__10fs_koro2_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__10fs_koro2_sFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__10fs_koro2_sFv.s"
+fs_koro2_s::fs_koro2_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FDB8-8086FE28 0070+00 .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -564,7 +644,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__12dBgS_AcchCirFv.s"
 }
@@ -575,7 +655,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10fs_tsubo_sFv) {
+asm fs_tsubo_s::~fs_tsubo_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__10fs_tsubo_sFv.s"
 }
@@ -583,21 +663,16 @@ ASM_FUNCTION(__dt__10fs_tsubo_sFv) {
 
 
 /* 8086FED4-8086FED8 0004+00 .text      __ct__10fs_tsubo_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__10fs_tsubo_sFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__10fs_tsubo_sFv.s"
+fs_tsubo_s::fs_tsubo_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FED8-8086FF38 0060+00 .text      __dt__9fs_weed_sFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9fs_weed_sFv) {
+asm fs_weed_s::~fs_weed_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__9fs_weed_sFv.s"
 }
@@ -608,7 +683,7 @@ ASM_FUNCTION(__dt__9fs_weed_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9fs_weed_sFv) {
+asm fs_weed_s::fs_weed_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__9fs_weed_sFv.s"
 }
@@ -616,21 +691,16 @@ ASM_FUNCTION(__ct__9fs_weed_sFv) {
 
 
 /* 8086FF80-8086FF84 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FF84-8086FFC0 003C+00 .text      __dt__8fs_rod_sFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8fs_rod_sFv) {
+asm fs_rod_s::~fs_rod_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__8fs_rod_sFv.s"
 }
@@ -641,7 +711,7 @@ ASM_FUNCTION(__dt__8fs_rod_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8fs_rod_sFv) {
+asm fs_rod_s::fs_rod_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__8fs_rod_sFv.s"
 }
@@ -652,7 +722,7 @@ ASM_FUNCTION(__ct__8fs_rod_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9fs_lure_sFv) {
+asm fs_lure_s::~fs_lure_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__dt__9fs_lure_sFv.s"
 }
@@ -660,21 +730,16 @@ ASM_FUNCTION(__dt__9fs_lure_sFv) {
 
 
 /* 80870018-8087001C 0004+00 .text      __ct__9fs_lure_sFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__9fs_lure_sFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__9fs_lure_sFv.s"
+fs_lure_s::fs_lure_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8087001C-80870070 0054+00 .text      __sinit_d_a_mg_fshop_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_mg_fshop_cpp) {
+extern "C" asm void __sinit_d_a_mg_fshop_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__sinit_d_a_mg_fshop_cpp.s"
 }
@@ -685,7 +750,7 @@ ASM_FUNCTION(__sinit_d_a_mg_fshop_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80870070) {
+extern "C" asm void func_80870070() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/func_80870070.s"
 }
@@ -696,7 +761,7 @@ ASM_FUNCTION(func_80870070) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80870078) {
+extern "C" asm void func_80870078() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/func_80870078.s"
 }

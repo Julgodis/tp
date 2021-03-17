@@ -6,65 +6,181 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daNpcDoorBoy_c {
+	daNpcDoorBoy_c();
+	~daNpcDoorBoy_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setMotion(s32, f32, s32);
+	void reset();
+	void wait(void*);
+	void fear(void*);
+	void talk(void*);
+	void demo(void*);
+	void dummyTalk(void*);
+	void setParam();
+	void main();
+	void setAttnPos();
+	void lookat();
+	void setMotionAnm(s32, f32);
+	bool drawDbgInfo();
+	void adjustShapeAngle();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	bool ctrlBtk();
+	void setCollisions();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+	void drawOtherMdls();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcDoorBoy_Param_c {
+	~daNpcDoorBoy_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNpcDoorBoy_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__14daNpcDoorBoy_cFv();
-extern "C" extern void Create__14daNpcDoorBoy_cFv();
-extern "C" extern void CreateHeap__14daNpcDoorBoy_cFv();
-extern "C" extern void Delete__14daNpcDoorBoy_cFv();
-extern "C" extern void Execute__14daNpcDoorBoy_cFv();
-extern "C" extern void Draw__14daNpcDoorBoy_cFv();
-extern "C" extern void ctrlJoint__14daNpcDoorBoy_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi();
-extern "C" extern void setMotion__14daNpcDoorBoy_cFifi();
-extern "C" extern void reset__14daNpcDoorBoy_cFv();
-extern "C" extern void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b();
-extern "C" extern void wait__14daNpcDoorBoy_cFPv();
-extern "C" extern void fear__14daNpcDoorBoy_cFPv();
-extern "C" extern void talk__14daNpcDoorBoy_cFPv();
-extern "C" extern void demo__14daNpcDoorBoy_cFPv();
-extern "C" extern void dummyTalk__14daNpcDoorBoy_cFPv();
-extern "C" extern void daNpcDoorBoy_Create__FPv();
-extern "C" extern void daNpcDoorBoy_Delete__FPv();
-extern "C" extern void daNpcDoorBoy_Execute__FPv();
-extern "C" extern void daNpcDoorBoy_Draw__FPv();
-extern "C" extern void daNpcDoorBoy_IsDelete__FPv();
-extern "C" extern void setParam__14daNpcDoorBoy_cFv();
-extern "C" extern void main__14daNpcDoorBoy_cFv();
-extern "C" extern void setAttnPos__14daNpcDoorBoy_cFv();
-extern "C" extern void lookat__14daNpcDoorBoy_cFv();
-extern "C" extern void setMotionAnm__14daNpcDoorBoy_cFif();
-extern "C" extern void drawDbgInfo__14daNpcDoorBoy_cFv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void ctrlBtk__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_npc_doorboy_cpp();
-extern "C" extern void adjustShapeAngle__14daNpcDoorBoy_cFv();
-extern "C" extern void __dt__20daNpcDoorBoy_Param_cFv();
-extern "C" extern void func_809AD984();
-extern "C" extern void func_809AD98C();
+extern "C" void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b();
+void daNpcDoorBoy_Create(void*);
+void daNpcDoorBoy_Delete(void*);
+void daNpcDoorBoy_Execute(void*);
+void daNpcDoorBoy_Draw(void*);
+bool daNpcDoorBoy_IsDelete(void*);
+extern "C" void __sinit_d_a_npc_doorboy_cpp();
+extern "C" void func_809AD984();
+extern "C" void func_809AD98C();
+
+extern "C" void __ct__14daNpcDoorBoy_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__14daNpcDoorBoy_cFv();
+extern "C" void Create__14daNpcDoorBoy_cFv();
+extern "C" void CreateHeap__14daNpcDoorBoy_cFv();
+extern "C" void Delete__14daNpcDoorBoy_cFv();
+extern "C" void Execute__14daNpcDoorBoy_cFv();
+extern "C" void Draw__14daNpcDoorBoy_cFv();
+extern "C" void ctrlJoint__14daNpcDoorBoy_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi();
+extern "C" void setMotion__14daNpcDoorBoy_cFifi();
+extern "C" void reset__14daNpcDoorBoy_cFv();
+extern "C" void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b();
+extern "C" void wait__14daNpcDoorBoy_cFPv();
+extern "C" void fear__14daNpcDoorBoy_cFPv();
+extern "C" void talk__14daNpcDoorBoy_cFPv();
+extern "C" void demo__14daNpcDoorBoy_cFPv();
+extern "C" void dummyTalk__14daNpcDoorBoy_cFPv();
+extern "C" void daNpcDoorBoy_Create__FPv();
+extern "C" void daNpcDoorBoy_Delete__FPv();
+extern "C" void daNpcDoorBoy_Execute__FPv();
+extern "C" void daNpcDoorBoy_Draw__FPv();
+extern "C" bool daNpcDoorBoy_IsDelete__FPv();
+extern "C" void setParam__14daNpcDoorBoy_cFv();
+extern "C" void main__14daNpcDoorBoy_cFv();
+extern "C" void setAttnPos__14daNpcDoorBoy_cFv();
+extern "C" void lookat__14daNpcDoorBoy_cFv();
+extern "C" void setMotionAnm__14daNpcDoorBoy_cFif();
+extern "C" bool drawDbgInfo__14daNpcDoorBoy_cFv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" bool ctrlBtk__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_npc_doorboy_cpp();
+extern "C" void adjustShapeAngle__14daNpcDoorBoy_cFv();
+extern "C" void __dt__20daNpcDoorBoy_Param_cFv();
+extern "C" void func_809AD984();
+extern "C" void func_809AD98C();
 SECTION_RODATA extern const u8 m__20daNpcDoorBoy_Param_c[108];
 SECTION_RODATA extern const u32 lit_4267;
 SECTION_RODATA extern const u32 lit_4268;
@@ -136,8 +252,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -147,7 +266,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNpcDoorBoy_cFv) {
+asm daNpcDoorBoy_c::daNpcDoorBoy_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__ct__14daNpcDoorBoy_cFv.s"
 }
@@ -158,7 +277,7 @@ ASM_FUNCTION(__ct__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__8cM3dGCylFv.s"
 }
@@ -169,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__8cM3dGAabFv.s"
 }
@@ -180,7 +299,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpcDoorBoy_cFv) {
+asm daNpcDoorBoy_c::~daNpcDoorBoy_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__14daNpcDoorBoy_cFv.s"
 }
@@ -191,7 +310,7 @@ ASM_FUNCTION(__dt__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/Create__14daNpcDoorBoy_cFv.s"
 }
@@ -202,7 +321,7 @@ ASM_FUNCTION(Create__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/CreateHeap__14daNpcDoorBoy_cFv.s"
 }
@@ -213,7 +332,7 @@ ASM_FUNCTION(CreateHeap__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/Delete__14daNpcDoorBoy_cFv.s"
 }
@@ -224,7 +343,7 @@ ASM_FUNCTION(Delete__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/Execute__14daNpcDoorBoy_cFv.s"
 }
@@ -235,7 +354,7 @@ ASM_FUNCTION(Execute__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/Draw__14daNpcDoorBoy_cFv.s"
 }
@@ -246,7 +365,7 @@ ASM_FUNCTION(Draw__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__14daNpcDoorBoy_cFP8J3DJointP8J3DModel) {
+asm void daNpcDoorBoy_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/ctrlJoint__14daNpcDoorBoy_cFP8J3DJointP8J3DModel.s"
 }
@@ -257,7 +376,7 @@ ASM_FUNCTION(ctrlJoint__14daNpcDoorBoy_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c) {
+asm void daNpcDoorBoy_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c.s"
 }
@@ -268,7 +387,7 @@ ASM_FUNCTION(createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi) {
+asm void daNpcDoorBoy_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi.s"
 }
@@ -279,7 +398,7 @@ ASM_FUNCTION(ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__14daNpcDoorBoy_cFifi) {
+asm void daNpcDoorBoy_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setMotion__14daNpcDoorBoy_cFifi.s"
 }
@@ -290,7 +409,7 @@ ASM_FUNCTION(setMotion__14daNpcDoorBoy_cFifi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/reset__14daNpcDoorBoy_cFv.s"
 }
@@ -301,7 +420,7 @@ ASM_FUNCTION(reset__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b) {
+extern "C" asm void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b.s"
 }
@@ -312,7 +431,7 @@ ASM_FUNCTION(setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__14daNpcDoorBoy_cFPv) {
+asm void daNpcDoorBoy_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/wait__14daNpcDoorBoy_cFPv.s"
 }
@@ -323,7 +442,7 @@ ASM_FUNCTION(wait__14daNpcDoorBoy_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fear__14daNpcDoorBoy_cFPv) {
+asm void daNpcDoorBoy_c::fear(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/fear__14daNpcDoorBoy_cFPv.s"
 }
@@ -334,7 +453,7 @@ ASM_FUNCTION(fear__14daNpcDoorBoy_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__14daNpcDoorBoy_cFPv) {
+asm void daNpcDoorBoy_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/talk__14daNpcDoorBoy_cFPv.s"
 }
@@ -345,7 +464,7 @@ ASM_FUNCTION(talk__14daNpcDoorBoy_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__14daNpcDoorBoy_cFPv) {
+asm void daNpcDoorBoy_c::demo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/demo__14daNpcDoorBoy_cFPv.s"
 }
@@ -356,7 +475,7 @@ ASM_FUNCTION(demo__14daNpcDoorBoy_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dummyTalk__14daNpcDoorBoy_cFPv) {
+asm void daNpcDoorBoy_c::dummyTalk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/dummyTalk__14daNpcDoorBoy_cFPv.s"
 }
@@ -367,7 +486,7 @@ ASM_FUNCTION(dummyTalk__14daNpcDoorBoy_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcDoorBoy_Create__FPv) {
+asm void daNpcDoorBoy_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/daNpcDoorBoy_Create__FPv.s"
 }
@@ -378,7 +497,7 @@ ASM_FUNCTION(daNpcDoorBoy_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcDoorBoy_Delete__FPv) {
+asm void daNpcDoorBoy_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/daNpcDoorBoy_Delete__FPv.s"
 }
@@ -389,7 +508,7 @@ ASM_FUNCTION(daNpcDoorBoy_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcDoorBoy_Execute__FPv) {
+asm void daNpcDoorBoy_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/daNpcDoorBoy_Execute__FPv.s"
 }
@@ -400,7 +519,7 @@ ASM_FUNCTION(daNpcDoorBoy_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcDoorBoy_Draw__FPv) {
+asm void daNpcDoorBoy_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/daNpcDoorBoy_Draw__FPv.s"
 }
@@ -408,21 +527,16 @@ ASM_FUNCTION(daNpcDoorBoy_Draw__FPv) {
 
 
 /* 809AC98C-809AC994 0008+00 .text      daNpcDoorBoy_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcDoorBoy_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/daNpcDoorBoy_IsDelete__FPv.s"
+bool daNpcDoorBoy_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AC994-809ACA58 00C4+00 .text      setParam__14daNpcDoorBoy_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setParam__14daNpcDoorBoy_cFv.s"
 }
@@ -433,7 +547,7 @@ ASM_FUNCTION(setParam__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/main__14daNpcDoorBoy_cFv.s"
 }
@@ -444,7 +558,7 @@ ASM_FUNCTION(main__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setAttnPos__14daNpcDoorBoy_cFv.s"
 }
@@ -455,7 +569,7 @@ ASM_FUNCTION(setAttnPos__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__14daNpcDoorBoy_cFv) {
+asm void daNpcDoorBoy_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/lookat__14daNpcDoorBoy_cFv.s"
 }
@@ -466,7 +580,7 @@ ASM_FUNCTION(lookat__14daNpcDoorBoy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__14daNpcDoorBoy_cFif) {
+asm void daNpcDoorBoy_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setMotionAnm__14daNpcDoorBoy_cFif.s"
 }
@@ -474,21 +588,16 @@ ASM_FUNCTION(setMotionAnm__14daNpcDoorBoy_cFif) {
 
 
 /* 809AD0C8-809AD0D0 0008+00 .text      drawDbgInfo__14daNpcDoorBoy_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__14daNpcDoorBoy_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/drawDbgInfo__14daNpcDoorBoy_cFv.s"
+bool daNpcDoorBoy_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809AD0D0-809AD118 0048+00 .text      __dt__18daNpcF_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -499,7 +608,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -510,7 +619,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -521,7 +630,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__5csXyzFv.s"
 }
@@ -529,21 +638,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 809AD260-809AD264 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD264-809AD2A0 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__4cXyzFv.s"
 }
@@ -551,21 +655,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 809AD2A0-809AD2A4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD2A4-809AD4F0 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__8daNpcF_cFv.s"
 }
@@ -576,7 +675,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__ct__8daNpcF_cFv.s"
 }
@@ -587,7 +686,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__12dBgS_AcchCirFv.s"
 }
@@ -598,7 +697,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__10dCcD_GSttsFv.s"
 }
@@ -609,7 +708,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -620,7 +719,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__12J3DFrameCtrlFv.s"
 }
@@ -628,76 +727,46 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 809AD864-809AD86C 0008+00 .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 809AD86C-809AD870 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD870-809AD878 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AD878-809AD880 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AD880-809AD884 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD884-809AD888 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD888-809AD8D0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__10cCcD_GSttsFv.s"
 }
@@ -708,7 +777,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_doorboy_cpp) {
+extern "C" asm void __sinit_d_a_npc_doorboy_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__sinit_d_a_npc_doorboy_cpp.s"
 }
@@ -716,21 +785,16 @@ ASM_FUNCTION(__sinit_d_a_npc_doorboy_cpp) {
 
 
 /* 809AD938-809AD93C 0004+00 .text      adjustShapeAngle__14daNpcDoorBoy_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__14daNpcDoorBoy_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/adjustShapeAngle__14daNpcDoorBoy_cFv.s"
+void daNpcDoorBoy_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AD93C-809AD984 0048+00 .text      __dt__20daNpcDoorBoy_Param_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daNpcDoorBoy_Param_cFv) {
+asm daNpcDoorBoy_Param_c::~daNpcDoorBoy_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/__dt__20daNpcDoorBoy_Param_cFv.s"
 }
@@ -741,7 +805,7 @@ ASM_FUNCTION(__dt__20daNpcDoorBoy_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809AD984) {
+extern "C" asm void func_809AD984() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/func_809AD984.s"
 }
@@ -752,7 +816,7 @@ ASM_FUNCTION(func_809AD984) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809AD98C) {
+extern "C" asm void func_809AD98C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/func_809AD98C.s"
 }

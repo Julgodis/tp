@@ -9,24 +9,33 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern void*g_cAPI_Interface[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void mDoGph_BlankingON__Fv();
-extern "C" extern void mDoGph_BlankingOFF__Fv();
-extern "C" extern void mDoGph_BeforeOfDraw__Fv();
-extern "C" extern void mDoGph_AfterOfDraw__Fv();
-extern "C" extern void mDoGph_Painter__Fv();
-extern "C" extern void mDoGph_Create__Fv();
+void mDoGph_BlankingON();
+void mDoGph_BlankingOFF();
+void mDoGph_BeforeOfDraw();
+void mDoGph_AfterOfDraw();
+void mDoGph_Painter();
+void mDoGph_Create();
+
+extern "C" void mDoGph_BlankingON__Fv();
+extern "C" void mDoGph_BlankingOFF__Fv();
+extern "C" void mDoGph_BeforeOfDraw__Fv();
+extern "C" void mDoGph_AfterOfDraw__Fv();
+extern "C" void mDoGph_Painter__Fv();
+extern "C" void mDoGph_Create__Fv();
 
 // 
 // Declarations:
 // 
 
-/* 803C3528-803C3540 0018+00 .data      g_cAPI_Interface                                             */
+/* ############################################################################################## */
+/* 803C3528-803C3540 0018+00 rc=3 efc=3 .data      g_cAPI_Interface                                             */
 void* g_cAPI_Interface[6] = {
 	(void*)mDoGph_Create__Fv,
 	(void*)mDoGph_BeforeOfDraw__Fv,

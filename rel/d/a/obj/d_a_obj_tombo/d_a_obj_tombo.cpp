@@ -6,52 +6,130 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjTOMBO_c;
+
+struct daObj_TomHIO_c {
+	daObj_TomHIO_c();
+	~daObj_TomHIO_c();
+};
+
+struct daObjTOMBO_c {
+	void InitCcSph();
+	void SetCcSph();
+	void CreateHeap();
+	void WaitAction();
+	void SpeedSet();
+	void CheckWater();
+	void CheckGround();
+	void CheckWall();
+	void SearchLink();
+	void LinkAction();
+	void MoveAction();
+	void Action();
+	void ShopAction();
+	void Insect_Release();
+	void ParticleSet();
+	void BoomChk();
+	void Execute();
+	void ObjHit();
+	void Z_BufferChk();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_TomHIO_cFv();
-extern "C" extern void InitCcSph__12daObjTOMBO_cFv();
-extern "C" extern void SetCcSph__12daObjTOMBO_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__12daObjTOMBO_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjTOMBO_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjTOMBO_Delete__FP12daObjTOMBO_c();
-extern "C" extern void WaitAction__12daObjTOMBO_cFv();
-extern "C" extern void SpeedSet__12daObjTOMBO_cFv();
-extern "C" extern void CheckWater__12daObjTOMBO_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void CheckGround__12daObjTOMBO_cFv();
-extern "C" extern void CheckWall__12daObjTOMBO_cFv();
-extern "C" extern void SearchLink__12daObjTOMBO_cFv();
-extern "C" extern void LinkAction__12daObjTOMBO_cFv();
-extern "C" extern void MoveAction__12daObjTOMBO_cFv();
-extern "C" extern void Action__12daObjTOMBO_cFv();
-extern "C" extern void ShopAction__12daObjTOMBO_cFv();
-extern "C" extern void Insect_Release__12daObjTOMBO_cFv();
-extern "C" extern void ParticleSet__12daObjTOMBO_cFv();
-extern "C" extern void BoomChk__12daObjTOMBO_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void Execute__12daObjTOMBO_cFv();
-extern "C" extern void ObjHit__12daObjTOMBO_cFv();
-extern "C" extern void Z_BufferChk__12daObjTOMBO_cFv();
-extern "C" extern void Delete__12daObjTOMBO_cFv();
-extern "C" extern void setBaseMtx__12daObjTOMBO_cFv();
-extern "C" extern void daObjTOMBO_Draw__FP12daObjTOMBO_c();
-extern "C" extern void daObjTOMBO_Execute__FP12daObjTOMBO_c();
-extern "C" extern void CreateChk__12daObjTOMBO_cFv();
-extern "C" extern void create__12daObjTOMBO_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjTOMBO_IsDelete__FP12daObjTOMBO_c();
-extern "C" extern void __dt__14daObj_TomHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_tombo_cpp();
-extern "C" extern void func_80D1B69C();
-extern "C" extern void func_80D1B6A4();
-extern "C" extern void func_80D1B6AC();
-extern "C" extern void func_80D1B6B4();
-extern "C" extern void func_80D1B6BC();
+void useHeapInit(fopAc_ac_c*);
+void daObjTOMBO_Create(fopAc_ac_c*);
+void daObjTOMBO_Delete(daObjTOMBO_c*);
+void daObjTOMBO_Draw(daObjTOMBO_c*);
+void daObjTOMBO_Execute(daObjTOMBO_c*);
+bool daObjTOMBO_IsDelete(daObjTOMBO_c*);
+extern "C" void __sinit_d_a_obj_tombo_cpp();
+extern "C" void func_80D1B69C();
+extern "C" void func_80D1B6A4();
+extern "C" void func_80D1B6AC();
+extern "C" void func_80D1B6B4();
+extern "C" void func_80D1B6BC();
+
+extern "C" void __ct__14daObj_TomHIO_cFv();
+extern "C" void InitCcSph__12daObjTOMBO_cFv();
+extern "C" void SetCcSph__12daObjTOMBO_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__12daObjTOMBO_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjTOMBO_Create__FP10fopAc_ac_c();
+extern "C" void daObjTOMBO_Delete__FP12daObjTOMBO_c();
+extern "C" void WaitAction__12daObjTOMBO_cFv();
+extern "C" void SpeedSet__12daObjTOMBO_cFv();
+extern "C" void CheckWater__12daObjTOMBO_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void CheckGround__12daObjTOMBO_cFv();
+extern "C" void CheckWall__12daObjTOMBO_cFv();
+extern "C" void SearchLink__12daObjTOMBO_cFv();
+extern "C" void LinkAction__12daObjTOMBO_cFv();
+extern "C" void MoveAction__12daObjTOMBO_cFv();
+extern "C" void Action__12daObjTOMBO_cFv();
+extern "C" void ShopAction__12daObjTOMBO_cFv();
+extern "C" void Insect_Release__12daObjTOMBO_cFv();
+extern "C" void ParticleSet__12daObjTOMBO_cFv();
+extern "C" void BoomChk__12daObjTOMBO_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void Execute__12daObjTOMBO_cFv();
+extern "C" void ObjHit__12daObjTOMBO_cFv();
+extern "C" void Z_BufferChk__12daObjTOMBO_cFv();
+extern "C" void Delete__12daObjTOMBO_cFv();
+extern "C" void setBaseMtx__12daObjTOMBO_cFv();
+extern "C" void daObjTOMBO_Draw__FP12daObjTOMBO_c();
+extern "C" void daObjTOMBO_Execute__FP12daObjTOMBO_c();
+extern "C" void CreateChk__12daObjTOMBO_cFv();
+extern "C" void create__12daObjTOMBO_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjTOMBO_IsDelete__FP12daObjTOMBO_c();
+extern "C" void __dt__14daObj_TomHIO_cFv();
+extern "C" void __sinit_d_a_obj_tombo_cpp();
+extern "C" void func_80D1B69C();
+extern "C" void func_80D1B6A4();
+extern "C" void func_80D1B6AC();
+extern "C" void func_80D1B6B4();
+extern "C" void func_80D1B6BC();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u16 l_tom_itemno;
@@ -118,8 +196,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -129,7 +210,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_TomHIO_cFv) {
+asm daObj_TomHIO_c::daObj_TomHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__ct__14daObj_TomHIO_cFv.s"
 }
@@ -140,7 +221,7 @@ ASM_FUNCTION(__ct__14daObj_TomHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/InitCcSph__12daObjTOMBO_cFv.s"
 }
@@ -151,7 +232,7 @@ ASM_FUNCTION(InitCcSph__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/SetCcSph__12daObjTOMBO_cFv.s"
 }
@@ -162,7 +243,7 @@ ASM_FUNCTION(SetCcSph__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -173,7 +254,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/CreateHeap__12daObjTOMBO_cFv.s"
 }
@@ -184,7 +265,7 @@ ASM_FUNCTION(CreateHeap__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__12J3DFrameCtrlFv.s"
 }
@@ -195,7 +276,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTOMBO_Create__FP10fopAc_ac_c) {
+asm void daObjTOMBO_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/daObjTOMBO_Create__FP10fopAc_ac_c.s"
 }
@@ -206,7 +287,7 @@ ASM_FUNCTION(daObjTOMBO_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTOMBO_Delete__FP12daObjTOMBO_c) {
+asm void daObjTOMBO_Delete(daObjTOMBO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/daObjTOMBO_Delete__FP12daObjTOMBO_c.s"
 }
@@ -217,7 +298,7 @@ ASM_FUNCTION(daObjTOMBO_Delete__FP12daObjTOMBO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/WaitAction__12daObjTOMBO_cFv.s"
 }
@@ -228,7 +309,7 @@ ASM_FUNCTION(WaitAction__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/SpeedSet__12daObjTOMBO_cFv.s"
 }
@@ -239,7 +320,7 @@ ASM_FUNCTION(SpeedSet__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckWater__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::CheckWater() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/CheckWater__12daObjTOMBO_cFv.s"
 }
@@ -250,7 +331,7 @@ ASM_FUNCTION(CheckWater__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -261,7 +342,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckGround__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::CheckGround() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/CheckGround__12daObjTOMBO_cFv.s"
 }
@@ -272,7 +353,7 @@ ASM_FUNCTION(CheckGround__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckWall__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::CheckWall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/CheckWall__12daObjTOMBO_cFv.s"
 }
@@ -283,7 +364,7 @@ ASM_FUNCTION(CheckWall__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SearchLink__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::SearchLink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/SearchLink__12daObjTOMBO_cFv.s"
 }
@@ -294,7 +375,7 @@ ASM_FUNCTION(SearchLink__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LinkAction__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::LinkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/LinkAction__12daObjTOMBO_cFv.s"
 }
@@ -305,7 +386,7 @@ ASM_FUNCTION(LinkAction__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/MoveAction__12daObjTOMBO_cFv.s"
 }
@@ -316,7 +397,7 @@ ASM_FUNCTION(MoveAction__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/Action__12daObjTOMBO_cFv.s"
 }
@@ -327,7 +408,7 @@ ASM_FUNCTION(Action__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopAction__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::ShopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/ShopAction__12daObjTOMBO_cFv.s"
 }
@@ -338,7 +419,7 @@ ASM_FUNCTION(ShopAction__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/Insect_Release__12daObjTOMBO_cFv.s"
 }
@@ -349,7 +430,7 @@ ASM_FUNCTION(Insect_Release__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/ParticleSet__12daObjTOMBO_cFv.s"
 }
@@ -360,7 +441,7 @@ ASM_FUNCTION(ParticleSet__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BoomChk__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::BoomChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/BoomChk__12daObjTOMBO_cFv.s"
 }
@@ -371,7 +452,7 @@ ASM_FUNCTION(BoomChk__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__8cM3dGPlaFv.s"
 }
@@ -382,7 +463,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/Execute__12daObjTOMBO_cFv.s"
 }
@@ -393,7 +474,7 @@ ASM_FUNCTION(Execute__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/ObjHit__12daObjTOMBO_cFv.s"
 }
@@ -404,7 +485,7 @@ ASM_FUNCTION(ObjHit__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/Z_BufferChk__12daObjTOMBO_cFv.s"
 }
@@ -415,7 +496,7 @@ ASM_FUNCTION(Z_BufferChk__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/Delete__12daObjTOMBO_cFv.s"
 }
@@ -426,7 +507,7 @@ ASM_FUNCTION(Delete__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/setBaseMtx__12daObjTOMBO_cFv.s"
 }
@@ -437,7 +518,7 @@ ASM_FUNCTION(setBaseMtx__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTOMBO_Draw__FP12daObjTOMBO_c) {
+asm void daObjTOMBO_Draw(daObjTOMBO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/daObjTOMBO_Draw__FP12daObjTOMBO_c.s"
 }
@@ -448,7 +529,7 @@ ASM_FUNCTION(daObjTOMBO_Draw__FP12daObjTOMBO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTOMBO_Execute__FP12daObjTOMBO_c) {
+asm void daObjTOMBO_Execute(daObjTOMBO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/daObjTOMBO_Execute__FP12daObjTOMBO_c.s"
 }
@@ -459,7 +540,7 @@ ASM_FUNCTION(daObjTOMBO_Execute__FP12daObjTOMBO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/CreateChk__12daObjTOMBO_cFv.s"
 }
@@ -470,7 +551,7 @@ ASM_FUNCTION(CreateChk__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjTOMBO_cFv) {
+asm void daObjTOMBO_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/create__12daObjTOMBO_cFv.s"
 }
@@ -481,7 +562,7 @@ ASM_FUNCTION(create__12daObjTOMBO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -492,7 +573,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__8cM3dGSphFv.s"
 }
@@ -503,7 +584,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__8cM3dGAabFv.s"
 }
@@ -511,21 +592,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80D1B610-80D1B618 0008+00 .text      daObjTOMBO_IsDelete__FP12daObjTOMBO_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjTOMBO_IsDelete__FP12daObjTOMBO_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/daObjTOMBO_IsDelete__FP12daObjTOMBO_c.s"
+bool daObjTOMBO_IsDelete(daObjTOMBO_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1B618-80D1B660 0048+00 .text      __dt__14daObj_TomHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_TomHIO_cFv) {
+asm daObj_TomHIO_c::~daObj_TomHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__dt__14daObj_TomHIO_cFv.s"
 }
@@ -536,7 +612,7 @@ ASM_FUNCTION(__dt__14daObj_TomHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_tombo_cpp) {
+extern "C" asm void __sinit_d_a_obj_tombo_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/__sinit_d_a_obj_tombo_cpp.s"
 }
@@ -547,7 +623,7 @@ ASM_FUNCTION(__sinit_d_a_obj_tombo_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1B69C) {
+extern "C" asm void func_80D1B69C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/func_80D1B69C.s"
 }
@@ -558,7 +634,7 @@ ASM_FUNCTION(func_80D1B69C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1B6A4) {
+extern "C" asm void func_80D1B6A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/func_80D1B6A4.s"
 }
@@ -569,7 +645,7 @@ ASM_FUNCTION(func_80D1B6A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1B6AC) {
+extern "C" asm void func_80D1B6AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/func_80D1B6AC.s"
 }
@@ -580,7 +656,7 @@ ASM_FUNCTION(func_80D1B6AC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1B6B4) {
+extern "C" asm void func_80D1B6B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/func_80D1B6B4.s"
 }
@@ -591,7 +667,7 @@ ASM_FUNCTION(func_80D1B6B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1B6BC) {
+extern "C" asm void func_80D1B6BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tombo/d_a_obj_tombo/func_80D1B6BC.s"
 }

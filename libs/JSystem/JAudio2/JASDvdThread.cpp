@@ -6,22 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASDvd (JASDvd) False/False
+/* top-level dependencies (begin JASDvd) */
+/* top-level dependencies (end JASDvd) */
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+	/* 8028FF04 */ void createThread(s32, s32, u32);
+};
+
+// build JASTaskThread (JASTaskThread) False/False
+/* top-level dependencies (begin JASTaskThread) */
+/* top-level dependencies (end JASTaskThread) */
+struct JASTaskThread {
+	/* 8028F6C4 */ JASTaskThread(s32, s32, u32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getThreadPointer__6JASDvdFv();
-extern "C" extern void createThread__6JASDvdFliUl();
+
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void createThread__6JASDvdFliUl();
 SECTION_SBSS extern u8 sThread__6JASDvd[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__13JASTaskThreadFiiUl();
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void OSResumeThread();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void* operator new(u32, JKRHeap*, s32);
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void __ct__13JASTaskThreadFiiUl();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 JASDram[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
@@ -31,29 +62,28 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 80451208-80451210 0004+04 .sbss      sThread__6JASDvd                                             */
+/* 80451208-80451210 0004+04 rc=2 efc=0 .sbss      sThread__6JASDvd                                             */
 u8 sThread__6JASDvd[4 + 4 /* padding */];
 
-/* 8028FEFC-8028FF04 0008+00 .text      getThreadPointer__6JASDvdFv                                  */
+/* 8028FEFC-8028FF04 0008+00 rc=6 efc=6 .text      getThreadPointer__6JASDvdFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getThreadPointer__6JASDvdFv) {
+asm void JASDvd::getThreadPointer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDvdThread/getThreadPointer__6JASDvdFv.s"
 }
 #pragma pop
 
 
-/* 8028FF04-8028FFA8 00A4+00 .text      createThread__6JASDvdFliUl                                   */
+/* 8028FF04-8028FFA8 00A4+00 rc=1 efc=1 .text      createThread__6JASDvdFliUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createThread__6JASDvdFliUl) {
+asm void JASDvd::createThread(s32 field_0, s32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDvdThread/createThread__6JASDvdFliUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,13 +6,34 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cM3dGCir (cM3dGCir) False/False
+/* top-level dependencies (begin cM3dGCir) */
+/* top-level dependencies (end cM3dGCir) */
+struct cM3dGCir {
+	/* 8026EEB4 */ cM3dGCir();
+	/* 8026EF18 */ ~cM3dGCir();
+	/* 8026EF74 */ void Set(f32, f32, f32, f32);
+};
+
+// build cM2dGCir (cM2dGCir) False/False
+/* top-level dependencies (begin cM2dGCir) */
+/* top-level dependencies (end cM2dGCir) */
+struct cM2dGCir {
+	/* 8026EED0 */ ~cM2dGCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8cM3dGCirFv();
-extern "C" extern void __dt__8cM2dGCirFv();
-extern "C" extern void __dt__8cM3dGCirFv();
-extern "C" extern void Set__8cM3dGCirFffff();
+
+extern "C" void __ct__8cM3dGCirFv();
+extern "C" void __dt__8cM2dGCirFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void Set__8cM3dGCirFffff();
 SECTION_DATA extern void*const __vt__8cM3dGCir[3];
 SECTION_DATA extern void*const __vt__8cM2dGCir[3];
 
@@ -20,69 +41,70 @@ SECTION_DATA extern void*const __vt__8cM2dGCir[3];
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C3FE0-803C3FEC 000C+00 .data      __vt__8cM3dGCir                                              */
+/* 803C3FE0-803C3FEC 000C+00 rc=2 efc=0 .data      __vt__8cM3dGCir                                              */
 void* const __vt__8cM3dGCir[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM3dGCirFv,
 };
 
-/* 803C3FEC-803C3FF8 000C+00 .data      __vt__8cM2dGCir                                              */
+/* 803C3FEC-803C3FF8 000C+00 rc=3 efc=0 .data      __vt__8cM2dGCir                                              */
 void* const __vt__8cM2dGCir[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM2dGCirFv,
 };
 
-/* 8026EEB4-8026EED0 001C+00 .text      __ct__8cM3dGCirFv                                            */
+/* 8026EEB4-8026EED0 001C+00 rc=1 efc=1 .text      __ct__8cM3dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8cM3dGCirFv) {
+asm cM3dGCir::cM3dGCir() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cir/__ct__8cM3dGCirFv.s"
 }
 #pragma pop
 
 
-/* 8026EED0-8026EF18 0048+00 .text      __dt__8cM2dGCirFv                                            */
+/* 8026EED0-8026EF18 0048+00 rc=1 efc=0 .text      __dt__8cM2dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM2dGCirFv) {
+asm cM2dGCir::~cM2dGCir() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cir/__dt__8cM2dGCirFv.s"
 }
 #pragma pop
 
 
-/* 8026EF18-8026EF74 005C+00 .text      __dt__8cM3dGCirFv                                            */
+/* 8026EF18-8026EF74 005C+00 rc=5 efc=4 .text      __dt__8cM3dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCirFv) {
+asm cM3dGCir::~cM3dGCir() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cir/__dt__8cM3dGCirFv.s"
 }
 #pragma pop
 
 
-/* 8026EF74-8026EF88 0014+00 .text      Set__8cM3dGCirFffff                                          */
+/* 8026EF74-8026EF88 0014+00 rc=1 efc=1 .text      Set__8cM3dGCirFffff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGCirFffff) {
+asm void cM3dGCir::Set(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cir/Set__8cM3dGCirFffff.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

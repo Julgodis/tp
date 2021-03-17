@@ -6,20 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_KMsg_c {
+	void create();
+	void Delete();
+	void Execute();
+	bool Draw();
+	void isDelete();
+	~daTag_KMsg_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTag_KMsg_cFv();
-extern "C" extern void Delete__12daTag_KMsg_cFv();
-extern "C" extern void Execute__12daTag_KMsg_cFv();
-extern "C" extern void Draw__12daTag_KMsg_cFv();
-extern "C" extern void isDelete__12daTag_KMsg_cFv();
-extern "C" extern void daTag_KMsg_Create__FPv();
-extern "C" extern void daTag_KMsg_Delete__FPv();
-extern "C" extern void daTag_KMsg_Execute__FPv();
-extern "C" extern void daTag_KMsg_Draw__FPv();
-extern "C" extern void daTag_KMsg_IsDelete__FPv();
-extern "C" extern void __dt__12daTag_KMsg_cFv();
+void daTag_KMsg_Create(void*);
+void daTag_KMsg_Delete(void*);
+void daTag_KMsg_Execute(void*);
+void daTag_KMsg_Draw(void*);
+bool daTag_KMsg_IsDelete(void*);
+
+extern "C" void create__12daTag_KMsg_cFv();
+extern "C" void Delete__12daTag_KMsg_cFv();
+extern "C" void Execute__12daTag_KMsg_cFv();
+extern "C" bool Draw__12daTag_KMsg_cFv();
+extern "C" void isDelete__12daTag_KMsg_cFv();
+extern "C" void daTag_KMsg_Create__FPv();
+extern "C" void daTag_KMsg_Delete__FPv();
+extern "C" void daTag_KMsg_Execute__FPv();
+extern "C" void daTag_KMsg_Draw__FPv();
+extern "C" bool daTag_KMsg_IsDelete__FPv();
+extern "C" void __dt__12daTag_KMsg_cFv();
 SECTION_RODATA extern const u32 lit_3884;
 SECTION_RODATA extern const u32 lit_4206;
 SECTION_RODATA extern const u32 lit_4207;
@@ -37,7 +56,9 @@ SECTION_DATA extern void*const __vt__12daTag_KMsg_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +68,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTag_KMsg_cFv) {
+asm void daTag_KMsg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/create__12daTag_KMsg_cFv.s"
 }
@@ -58,7 +79,7 @@ ASM_FUNCTION(create__12daTag_KMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daTag_KMsg_cFv) {
+asm void daTag_KMsg_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/Delete__12daTag_KMsg_cFv.s"
 }
@@ -69,7 +90,7 @@ ASM_FUNCTION(Delete__12daTag_KMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daTag_KMsg_cFv) {
+asm void daTag_KMsg_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/Execute__12daTag_KMsg_cFv.s"
 }
@@ -77,21 +98,16 @@ ASM_FUNCTION(Execute__12daTag_KMsg_cFv) {
 
 
 /* 8048E8B8-8048E8C0 0008+00 .text      Draw__12daTag_KMsg_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daTag_KMsg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/Draw__12daTag_KMsg_cFv.s"
+bool daTag_KMsg_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048E8C0-8048E9A8 00E8+00 .text      isDelete__12daTag_KMsg_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__12daTag_KMsg_cFv) {
+asm void daTag_KMsg_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/isDelete__12daTag_KMsg_cFv.s"
 }
@@ -102,7 +118,7 @@ ASM_FUNCTION(isDelete__12daTag_KMsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_KMsg_Create__FPv) {
+asm void daTag_KMsg_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Create__FPv.s"
 }
@@ -113,7 +129,7 @@ ASM_FUNCTION(daTag_KMsg_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_KMsg_Delete__FPv) {
+asm void daTag_KMsg_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Delete__FPv.s"
 }
@@ -124,7 +140,7 @@ ASM_FUNCTION(daTag_KMsg_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_KMsg_Execute__FPv) {
+asm void daTag_KMsg_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Execute__FPv.s"
 }
@@ -135,7 +151,7 @@ ASM_FUNCTION(daTag_KMsg_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_KMsg_Draw__FPv) {
+asm void daTag_KMsg_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Draw__FPv.s"
 }
@@ -143,21 +159,16 @@ ASM_FUNCTION(daTag_KMsg_Draw__FPv) {
 
 
 /* 8048EA28-8048EA30 0008+00 .text      daTag_KMsg_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_KMsg_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_IsDelete__FPv.s"
+bool daTag_KMsg_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048EA30-8048EAD4 00A4+00 .text      __dt__12daTag_KMsg_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTag_KMsg_cFv) {
+asm daTag_KMsg_c::~daTag_KMsg_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/__dt__12daTag_KMsg_cFv.s"
 }

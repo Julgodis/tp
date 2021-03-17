@@ -6,65 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAUSoundTable (JAUSoundTable) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+/* top-level dependencies (begin JAUSoundTable) */
+// outer dependency: JAISoundID
+/* top-level dependencies (end JAUSoundTable) */
+struct JAUSoundTable {
+	// JAISoundID
+	/* 802A7114 */ void init(void const*);
+	/* 802A7160 */ void getTypeID(JAISoundID) const;
+	/* 802A728C */ void getData(JAISoundID) const;
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build JAUSoundNameTable (JAUSoundNameTable) False/False
+/* top-level dependencies (begin JAUSoundNameTable) */
+/* top-level dependencies (end JAUSoundNameTable) */
+struct JAUSoundNameTable {
+	/* 802A73D4 */ void init(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__13JAUSoundTableFPCv();
-extern "C" extern void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern "C" extern void getData__13JAUSoundTableCF10JAISoundID();
-extern "C" extern void init__17JAUSoundNameTableFPCv();
+
+extern "C" void init__13JAUSoundTableFPCv();
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" void getData__13JAUSoundTableCF10JAISoundID();
+extern "C" void init__17JAUSoundNameTableFPCv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 802A7114-802A7160 004C+00 .text      init__13JAUSoundTableFPCv                                    */
+/* 802A7114-802A7160 004C+00 rc=1 efc=1 .text      init__13JAUSoundTableFPCv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13JAUSoundTableFPCv) {
+asm void JAUSoundTable::init(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/init__13JAUSoundTableFPCv.s"
 }
 #pragma pop
 
 
-/* 802A7160-802A728C 012C+00 .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
+/* 802A7160-802A728C 012C+00 rc=10 efc=10 .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeID__13JAUSoundTableCF10JAISoundID) {
+asm void JAUSoundTable::getTypeID(JAISoundID field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/getTypeID__13JAUSoundTableCF10JAISoundID.s"
 }
 #pragma pop
 
 
-/* 802A728C-802A73D4 0148+00 .text      getData__13JAUSoundTableCF10JAISoundID                       */
+/* 802A728C-802A73D4 0148+00 rc=7 efc=7 .text      getData__13JAUSoundTableCF10JAISoundID                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__13JAUSoundTableCF10JAISoundID) {
+asm void JAUSoundTable::getData(JAISoundID field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/getData__13JAUSoundTableCF10JAISoundID.s"
 }
 #pragma pop
 
 
-/* 802A73D4-802A7420 004C+00 .text      init__17JAUSoundNameTableFPCv                                */
+/* 802A73D4-802A7420 004C+00 rc=1 efc=1 .text      init__17JAUSoundNameTableFPCv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__17JAUSoundNameTableFPCv) {
+asm void JAUSoundNameTable::init(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSoundTable/init__17JAUSoundNameTableFPCv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

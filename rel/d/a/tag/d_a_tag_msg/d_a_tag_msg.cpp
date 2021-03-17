@@ -6,27 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daTag_Msg_c {
+	~daTag_Msg_c();
+	void create();
+	void createHeap();
+	void destroy();
+	void execute();
+	bool draw();
+	void rangeCheck();
+	void otherCheck();
+	void getResName();
+	void getParam();
+	void cut_speak(s32, s32);
+};
+
+struct daTag_Msg_Param_c {
+	~daTag_Msg_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void __dt__11daTag_Msg_cFv();
-extern "C" extern void create__11daTag_Msg_cFv();
-extern "C" extern void createHeap__11daTag_Msg_cFv();
-extern "C" extern void destroy__11daTag_Msg_cFv();
-extern "C" extern void execute__11daTag_Msg_cFv();
-extern "C" extern void draw__11daTag_Msg_cFv();
-extern "C" extern void rangeCheck__11daTag_Msg_cFv();
-extern "C" extern void otherCheck__11daTag_Msg_cFv();
-extern "C" extern void getResName__11daTag_Msg_cFv();
-extern "C" extern void getParam__11daTag_Msg_cFv();
-extern "C" extern void cut_speak__11daTag_Msg_cFii();
-extern "C" extern void daTag_Msg_Create__FPv();
-extern "C" extern void daTag_Msg_Delete__FPv();
-extern "C" extern void daTag_Msg_Execute__FPv();
-extern "C" extern void daTag_Msg_Draw__FPv();
-extern "C" extern void daTag_Msg_IsDelete__FPv();
-extern "C" extern void __dt__17daTag_Msg_Param_cFv();
+void createHeapCallBack(fopAc_ac_c*);
+void daTag_Msg_Create(void*);
+void daTag_Msg_Delete(void*);
+void daTag_Msg_Execute(void*);
+void daTag_Msg_Draw(void*);
+bool daTag_Msg_IsDelete(void*);
+
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void __dt__11daTag_Msg_cFv();
+extern "C" void create__11daTag_Msg_cFv();
+extern "C" void createHeap__11daTag_Msg_cFv();
+extern "C" void destroy__11daTag_Msg_cFv();
+extern "C" void execute__11daTag_Msg_cFv();
+extern "C" bool draw__11daTag_Msg_cFv();
+extern "C" void rangeCheck__11daTag_Msg_cFv();
+extern "C" void otherCheck__11daTag_Msg_cFv();
+extern "C" void getResName__11daTag_Msg_cFv();
+extern "C" void getParam__11daTag_Msg_cFv();
+extern "C" void cut_speak__11daTag_Msg_cFii();
+extern "C" void daTag_Msg_Create__FPv();
+extern "C" void daTag_Msg_Delete__FPv();
+extern "C" void daTag_Msg_Execute__FPv();
+extern "C" void daTag_Msg_Draw__FPv();
+extern "C" bool daTag_Msg_IsDelete__FPv();
+extern "C" void __dt__17daTag_Msg_Param_cFv();
 SECTION_RODATA extern const u8 m__17daTag_Msg_Param_c[1 + 3 /* padding */];
 SECTION_RODATA extern const u32 lit_3757;
 SECTION_RODATA extern const u8 lit_3813[4 + 4 /* padding */];
@@ -47,7 +81,9 @@ SECTION_DATA extern void*const __vt__11daTag_Msg_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +93,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -68,7 +104,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daTag_Msg_cFv) {
+asm daTag_Msg_c::~daTag_Msg_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/__dt__11daTag_Msg_cFv.s"
 }
@@ -79,7 +115,7 @@ ASM_FUNCTION(__dt__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/create__11daTag_Msg_cFv.s"
 }
@@ -90,7 +126,7 @@ ASM_FUNCTION(create__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/createHeap__11daTag_Msg_cFv.s"
 }
@@ -101,7 +137,7 @@ ASM_FUNCTION(createHeap__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroy__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::destroy() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/destroy__11daTag_Msg_cFv.s"
 }
@@ -112,7 +148,7 @@ ASM_FUNCTION(destroy__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/execute__11daTag_Msg_cFv.s"
 }
@@ -120,21 +156,16 @@ ASM_FUNCTION(execute__11daTag_Msg_cFv) {
 
 
 /* 8048FC68-8048FC70 0008+00 .text      draw__11daTag_Msg_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__11daTag_Msg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/draw__11daTag_Msg_cFv.s"
+bool daTag_Msg_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048FC70-8048FE18 01A8+00 .text      rangeCheck__11daTag_Msg_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rangeCheck__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::rangeCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/rangeCheck__11daTag_Msg_cFv.s"
 }
@@ -145,7 +176,7 @@ ASM_FUNCTION(rangeCheck__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(otherCheck__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::otherCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/otherCheck__11daTag_Msg_cFv.s"
 }
@@ -156,7 +187,7 @@ ASM_FUNCTION(otherCheck__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/getResName__11daTag_Msg_cFv.s"
 }
@@ -167,7 +198,7 @@ ASM_FUNCTION(getResName__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__11daTag_Msg_cFv) {
+asm void daTag_Msg_c::getParam() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/getParam__11daTag_Msg_cFv.s"
 }
@@ -178,7 +209,7 @@ ASM_FUNCTION(getParam__11daTag_Msg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_speak__11daTag_Msg_cFii) {
+asm void daTag_Msg_c::cut_speak(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/cut_speak__11daTag_Msg_cFii.s"
 }
@@ -189,7 +220,7 @@ ASM_FUNCTION(cut_speak__11daTag_Msg_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Msg_Create__FPv) {
+asm void daTag_Msg_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Create__FPv.s"
 }
@@ -200,7 +231,7 @@ ASM_FUNCTION(daTag_Msg_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Msg_Delete__FPv) {
+asm void daTag_Msg_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Delete__FPv.s"
 }
@@ -211,7 +242,7 @@ ASM_FUNCTION(daTag_Msg_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Msg_Execute__FPv) {
+asm void daTag_Msg_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Execute__FPv.s"
 }
@@ -222,7 +253,7 @@ ASM_FUNCTION(daTag_Msg_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Msg_Draw__FPv) {
+asm void daTag_Msg_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Draw__FPv.s"
 }
@@ -230,21 +261,16 @@ ASM_FUNCTION(daTag_Msg_Draw__FPv) {
 
 
 /* 80490120-80490128 0008+00 .text      daTag_Msg_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Msg_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_IsDelete__FPv.s"
+bool daTag_Msg_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80490128-80490170 0048+00 .text      __dt__17daTag_Msg_Param_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daTag_Msg_Param_cFv) {
+asm daTag_Msg_Param_c::~daTag_Msg_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/__dt__17daTag_Msg_Param_cFv.s"
 }

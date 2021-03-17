@@ -9,12 +9,16 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKSaveExtended1Block();
-extern "C" extern void TRKRestoreExtended1Block();
+extern "C" void TRKSaveExtended1Block();
+extern "C" void TRKRestoreExtended1Block();
+
+extern "C" void TRKSaveExtended1Block();
+extern "C" void TRKRestoreExtended1Block();
 
 // 
 // External References:
 // 
+
 
 SECTION_DATA extern u8 gTRKRestoreFlags[9 + 3 /* padding */];
 SECTION_BSS extern u8 gTRKCPUState[1072];
@@ -23,26 +27,25 @@ SECTION_BSS extern u8 gTRKCPUState[1072];
 // Declarations:
 // 
 
-/* 803711F0-803713A8 01B8+00 .text      TRKSaveExtended1Block                                        */
+/* 803711F0-803713A8 01B8+00 rc=3 efc=3 .text      TRKSaveExtended1Block                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKSaveExtended1Block) {
+extern "C" asm void TRKSaveExtended1Block() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Generic/mpc_7xx_603e/TRKSaveExtended1Block.s"
 }
 #pragma pop
 
 
-/* 803713A8-80371560 01B8+00 .text      TRKRestoreExtended1Block                                     */
+/* 803713A8-80371560 01B8+00 rc=1 efc=1 .text      TRKRestoreExtended1Block                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKRestoreExtended1Block) {
+extern "C" asm void TRKRestoreExtended1Block() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/ppc/Generic/mpc_7xx_603e/TRKRestoreExtended1Block.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,86 +6,143 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASDSPChannel (JASDSPChannel) False/False
+/* top-level dependencies (begin JASDSPChannel) */
+/* top-level dependencies (end JASDSPChannel) */
+struct JASDSPChannel {
+	/* 8029D2F4 */ JASDSPChannel();
+	/* 8029D320 */ void free();
+	/* 8029D330 */ void start();
+	/* 8029D340 */ void drop();
+	/* 8029D3C8 */ void initAll();
+	/* 8029D534 */ void setPriority(char);
+	/* 8029D540 */ void getLowestChannel(s32);
+	/* 8029D5D0 */ void getLowestActiveChannel();
+	/* 8029D65C */ void updateProc();
+	/* 8029D89C */ void updateAll();
+	/* 8029D910 */ void killActiveChannel();
+	/* 8029D948 */ void getHandle(u32);
+};
+
+// build JASDsp (JASDsp) False/False
+/* top-level dependencies (begin JASDsp) */
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// build TChannel (JASDsp::TChannel) False/False
+	/* dependencies (begin JASDsp::TChannel) */
+	/* dependencies (end JASDsp::TChannel) */
+	struct TChannel {
+		/* 8029DCA4 */ void init();
+		/* 8029DCE0 */ void playStart();
+		/* 8029DD44 */ void playStop();
+		/* 8029DD50 */ void replyFinishRequest();
+		/* 8029DD60 */ void forceStop();
+		/* 8029DD7C */ void isFinish() const;
+		/* 8029DF8C */ void flush();
+	};
+
+	/* 8029D9A4 */ void releaseHalt(u32);
+	/* 8029DA38 */ void getDSPHandle(s32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13JASDSPChannelFv();
-extern "C" extern void free__13JASDSPChannelFv();
-extern "C" extern void start__13JASDSPChannelFv();
-extern "C" extern void drop__13JASDSPChannelFv();
-extern "C" extern void initAll__13JASDSPChannelFv();
-extern "C" extern void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" extern void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" extern void setPriority__13JASDSPChannelFUc();
-extern "C" extern void getLowestChannel__13JASDSPChannelFi();
-extern "C" extern void getLowestActiveChannel__13JASDSPChannelFv();
-extern "C" extern void updateProc__13JASDSPChannelFv();
-extern "C" extern void updateAll__13JASDSPChannelFv();
-extern "C" extern void killActiveChannel__13JASDSPChannelFv();
-extern "C" extern void getHandle__13JASDSPChannelFUl();
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+
+extern "C" void __ct__13JASDSPChannelFv();
+extern "C" void free__13JASDSPChannelFv();
+extern "C" void start__13JASDSPChannelFv();
+extern "C" void drop__13JASDSPChannelFv();
+extern "C" void initAll__13JASDSPChannelFv();
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" void setPriority__13JASDSPChannelFUc();
+extern "C" void getLowestChannel__13JASDSPChannelFi();
+extern "C" void getLowestActiveChannel__13JASDSPChannelFv();
+extern "C" void updateProc__13JASDSPChannelFv();
+extern "C" void updateAll__13JASDSPChannelFv();
+extern "C" void killActiveChannel__13JASDSPChannelFv();
+extern "C" void getHandle__13JASDSPChannelFUl();
 SECTION_SBSS extern u8 sDspChannels__13JASDSPChannel[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void releaseHalt__6JASDspFUl();
-extern "C" extern void getDSPHandle__6JASDspFi();
-extern "C" extern void init__Q26JASDsp8TChannelFv();
-extern "C" extern void playStart__Q26JASDsp8TChannelFv();
-extern "C" extern void playStop__Q26JASDsp8TChannelFv();
-extern "C" extern void replyFinishRequest__Q26JASDsp8TChannelFv();
-extern "C" extern void forceStop__Q26JASDsp8TChannelFv();
-extern "C" extern void isFinish__Q26JASDsp8TChannelCFv();
-extern "C" extern void flush__Q26JASDsp8TChannelFv();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __construct_new_array();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+void* operator new[](u32, JKRHeap*, s32);
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void releaseHalt__6JASDspFUl();
+extern "C" void getDSPHandle__6JASDspFi();
+extern "C" void init__Q26JASDsp8TChannelFv();
+extern "C" void playStart__Q26JASDsp8TChannelFv();
+extern "C" void playStop__Q26JASDsp8TChannelFv();
+extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv();
+extern "C" void forceStop__Q26JASDsp8TChannelFv();
+extern "C" void isFinish__Q26JASDsp8TChannelCFv();
+extern "C" void flush__Q26JASDsp8TChannelFv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_SBSS extern u8 JASDram[4];
 
 // 
 // Declarations:
 // 
 
-/* 8029D2F4-8029D320 002C+00 .text      __ct__13JASDSPChannelFv                                      */
+/* 8029D2F4-8029D320 002C+00 rc=1 efc=0 .text      __ct__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JASDSPChannelFv) {
+asm JASDSPChannel::JASDSPChannel() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/__ct__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D320-8029D330 0010+00 .text      free__13JASDSPChannelFv                                      */
+/* 8029D320-8029D330 0010+00 rc=3 efc=3 .text      free__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(free__13JASDSPChannelFv) {
+asm void JASDSPChannel::free() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/free__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D330-8029D340 0010+00 .text      start__13JASDSPChannelFv                                     */
+/* 8029D330-8029D340 0010+00 rc=2 efc=2 .text      start__13JASDSPChannelFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__13JASDSPChannelFv) {
+asm void JASDSPChannel::start() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/start__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D340-8029D3C8 0088+00 .text      drop__13JASDSPChannelFv                                      */
+/* 8029D340-8029D3C8 0088+00 rc=5 efc=2 .text      drop__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drop__13JASDSPChannelFv) {
+asm void JASDSPChannel::drop() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/drop__13JASDSPChannelFv.s"
 }
@@ -93,117 +150,116 @@ ASM_FUNCTION(drop__13JASDSPChannelFv) {
 
 
 /* ############################################################################################## */
-/* 804512E0-804512E8 0004+04 .sbss      sDspChannels__13JASDSPChannel                                */
+/* 804512E0-804512E8 0004+04 rc=5 efc=0 .sbss      sDspChannels__13JASDSPChannel                                */
 u8 sDspChannels__13JASDSPChannel[4 + 4 /* padding */];
 
-/* 8029D3C8-8029D44C 0084+00 .text      initAll__13JASDSPChannelFv                                   */
+/* 8029D3C8-8029D44C 0084+00 rc=1 efc=1 .text      initAll__13JASDSPChannelFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initAll__13JASDSPChannelFv) {
+asm void JASDSPChannel::initAll() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/initAll__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D44C-8029D4BC 0070+00 .text      alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv       */
+/* 8029D44C-8029D4BC 0070+00 rc=1 efc=1 .text      alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv) {
+extern "C" asm void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv.s"
 }
 #pragma pop
 
 
-/* 8029D4BC-8029D534 0078+00 .text      allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv  */
+/* 8029D4BC-8029D534 0078+00 rc=1 efc=1 .text      allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv) {
+extern "C" asm void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv.s"
 }
 #pragma pop
 
 
-/* 8029D534-8029D540 000C+00 .text      setPriority__13JASDSPChannelFUc                              */
+/* 8029D534-8029D540 000C+00 rc=1 efc=1 .text      setPriority__13JASDSPChannelFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPriority__13JASDSPChannelFUc) {
+asm void JASDSPChannel::setPriority(char field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/setPriority__13JASDSPChannelFUc.s"
 }
 #pragma pop
 
 
-/* 8029D540-8029D5D0 0090+00 .text      getLowestChannel__13JASDSPChannelFi                          */
+/* 8029D540-8029D5D0 0090+00 rc=2 efc=0 .text      getLowestChannel__13JASDSPChannelFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLowestChannel__13JASDSPChannelFi) {
+asm void JASDSPChannel::getLowestChannel(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/getLowestChannel__13JASDSPChannelFi.s"
 }
 #pragma pop
 
 
-/* 8029D5D0-8029D65C 008C+00 .text      getLowestActiveChannel__13JASDSPChannelFv                    */
+/* 8029D5D0-8029D65C 008C+00 rc=1 efc=0 .text      getLowestActiveChannel__13JASDSPChannelFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLowestActiveChannel__13JASDSPChannelFv) {
+asm void JASDSPChannel::getLowestActiveChannel() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/getLowestActiveChannel__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D65C-8029D89C 0240+00 .text      updateProc__13JASDSPChannelFv                                */
+/* 8029D65C-8029D89C 0240+00 rc=1 efc=0 .text      updateProc__13JASDSPChannelFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(updateProc__13JASDSPChannelFv) {
+asm void JASDSPChannel::updateProc() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/updateProc__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D89C-8029D910 0074+00 .text      updateAll__13JASDSPChannelFv                                 */
+/* 8029D89C-8029D910 0074+00 rc=1 efc=1 .text      updateAll__13JASDSPChannelFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(updateAll__13JASDSPChannelFv) {
+asm void JASDSPChannel::updateAll() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/updateAll__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D910-8029D948 0038+00 .text      killActiveChannel__13JASDSPChannelFv                         */
+/* 8029D910-8029D948 0038+00 rc=1 efc=1 .text      killActiveChannel__13JASDSPChannelFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(killActiveChannel__13JASDSPChannelFv) {
+asm void JASDSPChannel::killActiveChannel() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/killActiveChannel__13JASDSPChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029D948-8029D958 0010+00 .text      getHandle__13JASDSPChannelFUl                                */
+/* 8029D948-8029D958 0010+00 rc=1 efc=1 .text      getHandle__13JASDSPChannelFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHandle__13JASDSPChannelFUl) {
+asm void JASDSPChannel::getHandle(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/getHandle__13JASDSPChannelFUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

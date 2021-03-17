@@ -28,14 +28,14 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x80485D00,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485D2C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485D58,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
-	{'addr':0x80485D78,'size':132,'pad':0,'label':"CreateInit__12daSetBgObj_cFv",'name':"CreateInit__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80485DFC,'size':140,'pad':0,'label':"create__12daSetBgObj_cFv",'name':"create__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80485E88,'size':48,'pad':0,'label':"Delete__12daSetBgObj_cFv",'name':"Delete__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80485EB8,'size':32,'pad':0,'label':"daSetBgObj_Delete__FP12daSetBgObj_c",'name':"daSetBgObj_Delete__FP12daSetBgObj_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485ED8,'size':32,'pad':0,'label':"daSetBgObj_Create__FP10fopAc_ac_c",'name':"daSetBgObj_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80485D00,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485D2C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485D58,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"ASMFunction"},
+	{'addr':0x80485D78,'size':132,'pad':0,'label':"CreateInit__12daSetBgObj_cFv",'name':"CreateInit__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80485DFC,'size':140,'pad':0,'label':"create__12daSetBgObj_cFv",'name':"create__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80485E88,'size':48,'pad':0,'label':"Delete__12daSetBgObj_cFv",'name':"Delete__12daSetBgObj_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80485EB8,'size':32,'pad':0,'label':"daSetBgObj_Delete__FP12daSetBgObj_c",'name':"daSetBgObj_Delete__FP12daSetBgObj_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485ED8,'size':32,'pad':0,'label':"daSetBgObj_Create__FP10fopAc_ac_c",'name':"daSetBgObj_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
 	{'addr':0x80485EF8,'size':4,'pad':0,'label':"data_80485EF8",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
 	{'addr':0x80485EFC,'size':4,'pad':0,'label':"data_80485EFC",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
 	{'addr':0x80485F00,'size':9,'pad':3,'label':"l_specName",'name':"l_specName",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},

@@ -6,29 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daTenbin_c;
+
+struct daTenbin_HIO_c {
+	daTenbin_HIO_c();
+	~daTenbin_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTenbin_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void rideCallBackRight(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	void rideCallBackLeft(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	void procMain();
+	void init_modeWait();
+	void modeWait();
+	void balanceCheck();
+	void Draw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daTenbin_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daTenbin_cFv();
-extern "C" extern void CreateHeap__10daTenbin_cFv();
-extern "C" extern void create__10daTenbin_cFv();
-extern "C" extern void rideCallBackRight__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Execute__10daTenbin_cFPPA3_A4_f();
-extern "C" extern void procMain__10daTenbin_cFv();
-extern "C" extern void init_modeWait__10daTenbin_cFv();
-extern "C" extern void modeWait__10daTenbin_cFv();
-extern "C" extern void balanceCheck__10daTenbin_cFv();
-extern "C" extern void Draw__10daTenbin_cFv();
-extern "C" extern void Delete__10daTenbin_cFv();
-extern "C" extern void daTenbin_Draw__FP10daTenbin_c();
-extern "C" extern void daTenbin_Execute__FP10daTenbin_c();
-extern "C" extern void daTenbin_Delete__FP10daTenbin_c();
-extern "C" extern void daTenbin_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daTenbin_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6Tenbin_cpp();
+extern "C" void Execute__10daTenbin_cFPPA3_A4_f();
+void daTenbin_Draw(daTenbin_c*);
+void daTenbin_Execute(daTenbin_c*);
+void daTenbin_Delete(daTenbin_c*);
+void daTenbin_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6Tenbin_cpp();
+
+extern "C" void __ct__14daTenbin_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daTenbin_cFv();
+extern "C" void CreateHeap__10daTenbin_cFv();
+extern "C" void create__10daTenbin_cFv();
+extern "C" void rideCallBackRight__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Execute__10daTenbin_cFPPA3_A4_f();
+extern "C" void procMain__10daTenbin_cFv();
+extern "C" void init_modeWait__10daTenbin_cFv();
+extern "C" void modeWait__10daTenbin_cFv();
+extern "C" void balanceCheck__10daTenbin_cFv();
+extern "C" void Draw__10daTenbin_cFv();
+extern "C" void Delete__10daTenbin_cFv();
+extern "C" void daTenbin_Draw__FP10daTenbin_c();
+extern "C" void daTenbin_Execute__FP10daTenbin_c();
+extern "C" void daTenbin_Delete__FP10daTenbin_c();
+extern "C" void daTenbin_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daTenbin_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6Tenbin_cpp();
 SECTION_RODATA extern const u32 lit_3668;
 SECTION_RODATA extern const u32 lit_3669;
 SECTION_RODATA extern const u8 lit_3670[4];
@@ -65,8 +109,11 @@ SECTION_BSS extern u8 data_80C77B20[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -76,7 +123,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daTenbin_HIO_cFv) {
+asm daTenbin_HIO_c::daTenbin_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/__ct__14daTenbin_HIO_cFv.s"
 }
@@ -87,7 +134,7 @@ ASM_FUNCTION(__ct__14daTenbin_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -98,7 +145,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daTenbin_cFv) {
+asm void daTenbin_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/setBaseMtx__10daTenbin_cFv.s"
 }
@@ -109,7 +156,7 @@ ASM_FUNCTION(setBaseMtx__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daTenbin_cFv) {
+asm void daTenbin_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/CreateHeap__10daTenbin_cFv.s"
 }
@@ -120,7 +167,7 @@ ASM_FUNCTION(CreateHeap__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daTenbin_cFv) {
+asm void daTenbin_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/create__10daTenbin_cFv.s"
 }
@@ -131,7 +178,7 @@ ASM_FUNCTION(create__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBackRight__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daTenbin_c::rideCallBackRight(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/rideCallBackRight__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -142,7 +189,7 @@ ASM_FUNCTION(rideCallBackRight__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daTenbin_c::rideCallBackLeft(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -153,7 +200,7 @@ ASM_FUNCTION(rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daTenbin_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daTenbin_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/Execute__10daTenbin_cFPPA3_A4_f.s"
 }
@@ -164,7 +211,7 @@ ASM_FUNCTION(Execute__10daTenbin_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__10daTenbin_cFv) {
+asm void daTenbin_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/procMain__10daTenbin_cFv.s"
 }
@@ -175,7 +222,7 @@ ASM_FUNCTION(procMain__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daTenbin_cFv) {
+asm void daTenbin_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/init_modeWait__10daTenbin_cFv.s"
 }
@@ -186,7 +233,7 @@ ASM_FUNCTION(init_modeWait__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daTenbin_cFv) {
+asm void daTenbin_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/modeWait__10daTenbin_cFv.s"
 }
@@ -197,7 +244,7 @@ ASM_FUNCTION(modeWait__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(balanceCheck__10daTenbin_cFv) {
+asm void daTenbin_c::balanceCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/balanceCheck__10daTenbin_cFv.s"
 }
@@ -208,7 +255,7 @@ ASM_FUNCTION(balanceCheck__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daTenbin_cFv) {
+asm void daTenbin_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/Draw__10daTenbin_cFv.s"
 }
@@ -219,7 +266,7 @@ ASM_FUNCTION(Draw__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daTenbin_cFv) {
+asm void daTenbin_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/Delete__10daTenbin_cFv.s"
 }
@@ -230,7 +277,7 @@ ASM_FUNCTION(Delete__10daTenbin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTenbin_Draw__FP10daTenbin_c) {
+asm void daTenbin_Draw(daTenbin_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Draw__FP10daTenbin_c.s"
 }
@@ -241,7 +288,7 @@ ASM_FUNCTION(daTenbin_Draw__FP10daTenbin_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTenbin_Execute__FP10daTenbin_c) {
+asm void daTenbin_Execute(daTenbin_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Execute__FP10daTenbin_c.s"
 }
@@ -252,7 +299,7 @@ ASM_FUNCTION(daTenbin_Execute__FP10daTenbin_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTenbin_Delete__FP10daTenbin_c) {
+asm void daTenbin_Delete(daTenbin_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Delete__FP10daTenbin_c.s"
 }
@@ -263,7 +310,7 @@ ASM_FUNCTION(daTenbin_Delete__FP10daTenbin_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTenbin_Create__FP10fopAc_ac_c) {
+asm void daTenbin_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Create__FP10fopAc_ac_c.s"
 }
@@ -274,7 +321,7 @@ ASM_FUNCTION(daTenbin_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTenbin_HIO_cFv) {
+asm daTenbin_HIO_c::~daTenbin_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/__dt__14daTenbin_HIO_cFv.s"
 }
@@ -285,7 +332,7 @@ ASM_FUNCTION(__dt__14daTenbin_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6Tenbin_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6Tenbin_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/__sinit_d_a_obj_lv6Tenbin_cpp.s"
 }

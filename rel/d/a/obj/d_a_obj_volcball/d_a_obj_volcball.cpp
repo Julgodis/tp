@@ -6,70 +6,182 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct daObjVolcBall_c;
+
+struct daObjVolcBall_c {
+	struct vball_s {
+		~daObjVolcBall_c::vball_s();
+		daObjVolcBall_c::vball_s();
+	};
+
+	void getData();
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void action();
+	void initActionPlayerWait();
+	void initActionWarning();
+	void initActionSwWait();
+	void actionPlayerWait();
+	void actionSwWait();
+	void actionStop();
+	void actionWarning();
+	void actionEruption();
+	void initActionEnd();
+	void actionEnd();
+	void eventStart();
+	void setEruptEffect(s32);
+	void setFallEffect(s32);
+	void endFallEffect(s32);
+	void createSearchBall();
+	void createNormalBall();
+	void executeBall();
+	void startQuake();
+	void draw();
+	void _delete();
+	~daObjVolcBall_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dPa_followEcallBack {
+	~dPa_followEcallBack();
+	void __defctor();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventRun();
+	bool eventEnd();
+	bool eventStart();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getData__15daObjVolcBall_cFv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void search_big_volc__FPvPv();
-extern "C" extern void initBaseMtx__15daObjVolcBall_cFv();
-extern "C" extern void setBaseMtx__15daObjVolcBall_cFv();
-extern "C" extern void Create__15daObjVolcBall_cFv();
-extern "C" extern void CreateHeap__15daObjVolcBall_cFv();
-extern "C" extern void create__15daObjVolcBall_cFv();
-extern "C" extern void __dt__Q215daObjVolcBall_c7vball_sFv();
-extern "C" extern void __dt__19dPa_followEcallBackFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __ct__Q215daObjVolcBall_c7vball_sFv();
-extern "C" extern void __defctor__19dPa_followEcallBackFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void execute__15daObjVolcBall_cFv();
-extern "C" extern void action__15daObjVolcBall_cFv();
-extern "C" extern void initActionPlayerWait__15daObjVolcBall_cFv();
-extern "C" extern void initActionWarning__15daObjVolcBall_cFv();
-extern "C" extern void initActionSwWait__15daObjVolcBall_cFv();
-extern "C" extern void actionPlayerWait__15daObjVolcBall_cFv();
-extern "C" extern void actionSwWait__15daObjVolcBall_cFv();
-extern "C" extern void actionStop__15daObjVolcBall_cFv();
-extern "C" extern void actionWarning__15daObjVolcBall_cFv();
-extern "C" extern void actionEruption__15daObjVolcBall_cFv();
-extern "C" extern void initActionEnd__15daObjVolcBall_cFv();
-extern "C" extern void actionEnd__15daObjVolcBall_cFv();
-extern "C" extern void eventStart__15daObjVolcBall_cFv();
-extern "C" extern void setEruptEffect__15daObjVolcBall_cFi();
-extern "C" extern void setFallEffect__15daObjVolcBall_cFi();
-extern "C" extern void endFallEffect__15daObjVolcBall_cFi();
-extern "C" extern void createSearchBall__15daObjVolcBall_cFv();
-extern "C" extern void createNormalBall__15daObjVolcBall_cFv();
-extern "C" extern void executeBall__15daObjVolcBall_cFv();
-extern "C" extern void startQuake__15daObjVolcBall_cFv();
-extern "C" extern void draw__15daObjVolcBall_cFv();
-extern "C" extern void _delete__15daObjVolcBall_cFv();
-extern "C" extern void daObjVolcBall_Draw__FP15daObjVolcBall_c();
-extern "C" extern void daObjVolcBall_Execute__FP15daObjVolcBall_c();
-extern "C" extern void daObjVolcBall_Delete__FP15daObjVolcBall_c();
-extern "C" extern void daObjVolcBall_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daObjVolcBall_cFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void func_80D23D6C();
-extern "C" extern void func_80D23D88();
-extern "C" extern void func_80D23DA4();
-extern "C" extern void func_80D23DAC();
-extern "C" extern void func_80D23DB4();
-extern "C" extern void func_80D23DBC();
+void CheckCreateHeap(fopAc_ac_c*);
+void search_big_volc(void*, void*);
+void daObjVolcBall_Draw(daObjVolcBall_c*);
+void daObjVolcBall_Execute(daObjVolcBall_c*);
+void daObjVolcBall_Delete(daObjVolcBall_c*);
+void daObjVolcBall_Create(fopAc_ac_c*);
+extern "C" void func_80D23D6C();
+extern "C" void func_80D23D88();
+extern "C" void func_80D23DA4();
+extern "C" void func_80D23DAC();
+extern "C" void func_80D23DB4();
+extern "C" void func_80D23DBC();
+
+extern "C" void getData__15daObjVolcBall_cFv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void search_big_volc__FPvPv();
+extern "C" void initBaseMtx__15daObjVolcBall_cFv();
+extern "C" void setBaseMtx__15daObjVolcBall_cFv();
+extern "C" void Create__15daObjVolcBall_cFv();
+extern "C" void CreateHeap__15daObjVolcBall_cFv();
+extern "C" void create__15daObjVolcBall_cFv();
+extern "C" void __dt__Q215daObjVolcBall_c7vball_sFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __ct__Q215daObjVolcBall_c7vball_sFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void execute__15daObjVolcBall_cFv();
+extern "C" void action__15daObjVolcBall_cFv();
+extern "C" void initActionPlayerWait__15daObjVolcBall_cFv();
+extern "C" void initActionWarning__15daObjVolcBall_cFv();
+extern "C" void initActionSwWait__15daObjVolcBall_cFv();
+extern "C" void actionPlayerWait__15daObjVolcBall_cFv();
+extern "C" void actionSwWait__15daObjVolcBall_cFv();
+extern "C" void actionStop__15daObjVolcBall_cFv();
+extern "C" void actionWarning__15daObjVolcBall_cFv();
+extern "C" void actionEruption__15daObjVolcBall_cFv();
+extern "C" void initActionEnd__15daObjVolcBall_cFv();
+extern "C" void actionEnd__15daObjVolcBall_cFv();
+extern "C" void eventStart__15daObjVolcBall_cFv();
+extern "C" void setEruptEffect__15daObjVolcBall_cFi();
+extern "C" void setFallEffect__15daObjVolcBall_cFi();
+extern "C" void endFallEffect__15daObjVolcBall_cFi();
+extern "C" void createSearchBall__15daObjVolcBall_cFv();
+extern "C" void createNormalBall__15daObjVolcBall_cFv();
+extern "C" void executeBall__15daObjVolcBall_cFv();
+extern "C" void startQuake__15daObjVolcBall_cFv();
+extern "C" void draw__15daObjVolcBall_cFv();
+extern "C" void _delete__15daObjVolcBall_cFv();
+extern "C" void daObjVolcBall_Draw__FP15daObjVolcBall_c();
+extern "C" void daObjVolcBall_Execute__FP15daObjVolcBall_c();
+extern "C" void daObjVolcBall_Delete__FP15daObjVolcBall_c();
+extern "C" void daObjVolcBall_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daObjVolcBall_cFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" void func_80D23D6C();
+extern "C" void func_80D23D88();
+extern "C" void func_80D23DA4();
+extern "C" void func_80D23DAC();
+extern "C" void func_80D23DB4();
+extern "C" void func_80D23DBC();
 SECTION_RODATA extern const u8 l_sph_src[64];
 SECTION_RODATA extern const u32 lit_3715;
 SECTION_RODATA extern const u32 lit_3716;
@@ -120,7 +232,9 @@ SECTION_DATA extern void*const __vt__17dEvLib_callback_c[6];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -130,7 +244,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::getData() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/getData__15daObjVolcBall_cFv.s"
 }
@@ -141,7 +255,7 @@ ASM_FUNCTION(getData__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -152,7 +266,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_big_volc__FPvPv) {
+asm void search_big_volc(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/search_big_volc__FPvPv.s"
 }
@@ -163,7 +277,7 @@ ASM_FUNCTION(search_big_volc__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/initBaseMtx__15daObjVolcBall_cFv.s"
 }
@@ -174,7 +288,7 @@ ASM_FUNCTION(initBaseMtx__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/setBaseMtx__15daObjVolcBall_cFv.s"
 }
@@ -185,7 +299,7 @@ ASM_FUNCTION(setBaseMtx__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/Create__15daObjVolcBall_cFv.s"
 }
@@ -196,7 +310,7 @@ ASM_FUNCTION(Create__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/CreateHeap__15daObjVolcBall_cFv.s"
 }
@@ -207,7 +321,7 @@ ASM_FUNCTION(CreateHeap__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D21E28.s"
 }
@@ -218,7 +332,7 @@ ASM_FUNCTION(create__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q215daObjVolcBall_c7vball_sFv) {
+asm daObjVolcBall_c::vball_s::~daObjVolcBall_c::vball_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__Q215daObjVolcBall_c7vball_sFv.s"
 }
@@ -229,7 +343,7 @@ ASM_FUNCTION(__dt__Q215daObjVolcBall_c7vball_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
+asm dPa_followEcallBack::~dPa_followEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__19dPa_followEcallBackFv.s"
 }
@@ -237,21 +351,16 @@ ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
 
 
 /* 80D22148-80D2214C 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2214C-80D22230 00E4+00 .text      __ct__Q215daObjVolcBall_c7vball_sFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q215daObjVolcBall_c7vball_sFv) {
+asm daObjVolcBall_c::vball_s::daObjVolcBall_c::vball_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__ct__Q215daObjVolcBall_c7vball_sFv.s"
 }
@@ -262,7 +371,7 @@ ASM_FUNCTION(__ct__Q215daObjVolcBall_c7vball_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
+asm void dPa_followEcallBack::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__defctor__19dPa_followEcallBackFv.s"
 }
@@ -273,7 +382,7 @@ ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__8cM3dGSphFv.s"
 }
@@ -284,7 +393,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__8cM3dGAabFv.s"
 }
@@ -295,7 +404,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -306,7 +415,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__10dCcD_GSttsFv.s"
 }
@@ -317,7 +426,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__12dBgS_AcchCirFv.s"
 }
@@ -328,7 +437,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/execute__15daObjVolcBall_cFv.s"
 }
@@ -339,7 +448,7 @@ ASM_FUNCTION(execute__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/action__15daObjVolcBall_cFv.s"
 }
@@ -350,7 +459,7 @@ ASM_FUNCTION(action__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionPlayerWait__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::initActionPlayerWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/initActionPlayerWait__15daObjVolcBall_cFv.s"
 }
@@ -361,7 +470,7 @@ ASM_FUNCTION(initActionPlayerWait__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionWarning__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::initActionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/initActionWarning__15daObjVolcBall_cFv.s"
 }
@@ -372,7 +481,7 @@ ASM_FUNCTION(initActionWarning__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionSwWait__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::initActionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/initActionSwWait__15daObjVolcBall_cFv.s"
 }
@@ -383,7 +492,7 @@ ASM_FUNCTION(initActionSwWait__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPlayerWait__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionPlayerWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionPlayerWait__15daObjVolcBall_cFv.s"
 }
@@ -394,7 +503,7 @@ ASM_FUNCTION(actionPlayerWait__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWait__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionSwWait__15daObjVolcBall_cFv.s"
 }
@@ -405,7 +514,7 @@ ASM_FUNCTION(actionSwWait__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionStop__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionStop__15daObjVolcBall_cFv.s"
 }
@@ -416,7 +525,7 @@ ASM_FUNCTION(actionStop__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarning__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionWarning__15daObjVolcBall_cFv.s"
 }
@@ -427,7 +536,7 @@ ASM_FUNCTION(actionWarning__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEruption__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionEruption() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionEruption__15daObjVolcBall_cFv.s"
 }
@@ -438,7 +547,7 @@ ASM_FUNCTION(actionEruption__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionEnd__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::initActionEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/initActionEnd__15daObjVolcBall_cFv.s"
 }
@@ -449,7 +558,7 @@ ASM_FUNCTION(initActionEnd__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::actionEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/actionEnd__15daObjVolcBall_cFv.s"
 }
@@ -460,7 +569,7 @@ ASM_FUNCTION(actionEnd__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventStart__15daObjVolcBall_cFv.s"
 }
@@ -471,7 +580,7 @@ ASM_FUNCTION(eventStart__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEruptEffect__15daObjVolcBall_cFi) {
+asm void daObjVolcBall_c::setEruptEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/setEruptEffect__15daObjVolcBall_cFi.s"
 }
@@ -482,7 +591,7 @@ ASM_FUNCTION(setEruptEffect__15daObjVolcBall_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFallEffect__15daObjVolcBall_cFi) {
+asm void daObjVolcBall_c::setFallEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/setFallEffect__15daObjVolcBall_cFi.s"
 }
@@ -493,7 +602,7 @@ ASM_FUNCTION(setFallEffect__15daObjVolcBall_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endFallEffect__15daObjVolcBall_cFi) {
+asm void daObjVolcBall_c::endFallEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/endFallEffect__15daObjVolcBall_cFi.s"
 }
@@ -504,7 +613,7 @@ ASM_FUNCTION(endFallEffect__15daObjVolcBall_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSearchBall__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::createSearchBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/createSearchBall__15daObjVolcBall_cFv.s"
 }
@@ -515,7 +624,7 @@ ASM_FUNCTION(createSearchBall__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createNormalBall__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::createNormalBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/createNormalBall__15daObjVolcBall_cFv.s"
 }
@@ -526,7 +635,7 @@ ASM_FUNCTION(createNormalBall__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBall__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::executeBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/executeBall__15daObjVolcBall_cFv.s"
 }
@@ -537,7 +646,7 @@ ASM_FUNCTION(executeBall__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startQuake__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::startQuake() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/startQuake__15daObjVolcBall_cFv.s"
 }
@@ -548,7 +657,7 @@ ASM_FUNCTION(startQuake__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/draw__15daObjVolcBall_cFv.s"
 }
@@ -559,7 +668,7 @@ ASM_FUNCTION(draw__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObjVolcBall_cFv) {
+asm void daObjVolcBall_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/_delete__15daObjVolcBall_cFv.s"
 }
@@ -570,7 +679,7 @@ ASM_FUNCTION(_delete__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBall_Draw__FP15daObjVolcBall_c) {
+asm void daObjVolcBall_Draw(daObjVolcBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/daObjVolcBall_Draw__FP15daObjVolcBall_c.s"
 }
@@ -581,7 +690,7 @@ ASM_FUNCTION(daObjVolcBall_Draw__FP15daObjVolcBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBall_Execute__FP15daObjVolcBall_c) {
+asm void daObjVolcBall_Execute(daObjVolcBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/daObjVolcBall_Execute__FP15daObjVolcBall_c.s"
 }
@@ -592,7 +701,7 @@ ASM_FUNCTION(daObjVolcBall_Execute__FP15daObjVolcBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBall_Delete__FP15daObjVolcBall_c) {
+asm void daObjVolcBall_Delete(daObjVolcBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/daObjVolcBall_Delete__FP15daObjVolcBall_c.s"
 }
@@ -603,7 +712,7 @@ ASM_FUNCTION(daObjVolcBall_Delete__FP15daObjVolcBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBall_Create__FP10fopAc_ac_c) {
+asm void daObjVolcBall_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/daObjVolcBall_Create__FP10fopAc_ac_c.s"
 }
@@ -614,7 +723,7 @@ ASM_FUNCTION(daObjVolcBall_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjVolcBall_cFv) {
+asm daObjVolcBall_c::~daObjVolcBall_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__15daObjVolcBall_cFv.s"
 }
@@ -625,7 +734,7 @@ ASM_FUNCTION(__dt__15daObjVolcBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__17dEvLib_callback_cFv.s"
 }
@@ -633,32 +742,22 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80D23C88-80D23C90 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23C90-80D23C98 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23C98-80D23CE0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__10cCcD_GSttsFv.s"
 }
@@ -669,7 +768,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -677,65 +776,40 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 80D23D54-80D23D58 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D58-80D23D5C 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D5C-80D23D60 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D60-80D23D64 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D64-80D23D6C 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23D6C-80D23D88 001C+00 .text      cLib_calcTimer<Uc>__FPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23D6C) {
+extern "C" asm void func_80D23D6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23D6C.s"
 }
@@ -746,7 +820,7 @@ ASM_FUNCTION(func_80D23D6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23D88) {
+extern "C" asm void func_80D23D88() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23D88.s"
 }
@@ -757,7 +831,7 @@ ASM_FUNCTION(func_80D23D88) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23DA4) {
+extern "C" asm void func_80D23DA4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23DA4.s"
 }
@@ -768,7 +842,7 @@ ASM_FUNCTION(func_80D23DA4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23DAC) {
+extern "C" asm void func_80D23DAC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23DAC.s"
 }
@@ -779,7 +853,7 @@ ASM_FUNCTION(func_80D23DAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23DB4) {
+extern "C" asm void func_80D23DB4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23DB4.s"
 }
@@ -790,7 +864,7 @@ ASM_FUNCTION(func_80D23DB4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D23DBC) {
+extern "C" asm void func_80D23DBC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/func_80D23DBC.s"
 }

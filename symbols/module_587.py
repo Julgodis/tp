@@ -28,14 +28,14 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x80CA8200,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80CA822C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80CA8258,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
-	{'addr':0x80CA8278,'size':124,'pad':0,'label':"create__16daObjOnsenFire_cFv",'name':"create__16daObjOnsenFire_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80CA82F4,'size':264,'pad':0,'label':"execute__16daObjOnsenFire_cFv",'name':"execute__16daObjOnsenFire_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80CA83FC,'size':32,'pad':0,'label':"daObjOnsenFire_Create__FP10fopAc_ac_c",'name':"daObjOnsenFire_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80CA841C,'size':32,'pad':0,'label':"daObjOnsenFire_Execute__FP16daObjOnsenFire_c",'name':"daObjOnsenFire_Execute__FP16daObjOnsenFire_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80CA843C,'size':48,'pad':0,'label':"daObjOnsenFire_Delete__FP16daObjOnsenFire_c",'name':"daObjOnsenFire_Delete__FP16daObjOnsenFire_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80CA8200,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80CA822C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80CA8258,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"ASMFunction"},
+	{'addr':0x80CA8278,'size':124,'pad':0,'label':"create__16daObjOnsenFire_cFv",'name':"create__16daObjOnsenFire_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80CA82F4,'size':264,'pad':0,'label':"execute__16daObjOnsenFire_cFv",'name':"execute__16daObjOnsenFire_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80CA83FC,'size':32,'pad':0,'label':"daObjOnsenFire_Create__FP10fopAc_ac_c",'name':"daObjOnsenFire_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80CA841C,'size':32,'pad':0,'label':"daObjOnsenFire_Execute__FP16daObjOnsenFire_c",'name':"daObjOnsenFire_Execute__FP16daObjOnsenFire_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80CA843C,'size':48,'pad':0,'label':"daObjOnsenFire_Delete__FP16daObjOnsenFire_c",'name':"daObjOnsenFire_Delete__FP16daObjOnsenFire_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
 	{'addr':0x80CA846C,'size':4,'pad':0,'label':"data_80CA846C",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
 	{'addr':0x80CA8470,'size':4,'pad':0,'label':"data_80CA8470",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
 	{'addr':0x80CA8474,'size':4,'pad':0,'label':"lit_3659",'name':"@3659",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},

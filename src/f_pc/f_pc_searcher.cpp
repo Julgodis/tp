@@ -9,38 +9,41 @@
 // Forward References:
 // 
 
-extern "C" extern void fpcSch_JudgeForPName__FPvPv();
-extern "C" extern void fpcSch_JudgeByID__FPvPv();
+void fpcSch_JudgeForPName(void*, void*);
+void fpcSch_JudgeByID(void*, void*);
+
+extern "C" void fpcSch_JudgeForPName__FPvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80023578-80023590 0018+00 .text      fpcSch_JudgeForPName__FPvPv                                  */
+/* 80023578-80023590 0018+00 rc=3 efc=3 .text      fpcSch_JudgeForPName__FPvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcSch_JudgeForPName__FPvPv) {
+asm void fpcSch_JudgeForPName(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_searcher/fpcSch_JudgeForPName__FPvPv.s"
 }
 #pragma pop
 
 
-/* 80023590-800235A8 0018+00 .text      fpcSch_JudgeByID__FPvPv                                      */
+/* 80023590-800235A8 0018+00 rc=44 efc=44 .text      fpcSch_JudgeByID__FPvPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcSch_JudgeByID__FPvPv) {
+asm void fpcSch_JudgeByID(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_searcher/fpcSch_JudgeByID__FPvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

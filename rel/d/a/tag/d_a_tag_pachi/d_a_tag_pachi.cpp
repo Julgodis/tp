@@ -6,21 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagPati_c;
+
+struct daTagPati_c {
+	~daTagPati_c();
+	void create();
+	void Execute();
+	void col_set();
+	void chk_CoHit();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__11daTagPati_cFv();
-extern "C" extern void create__11daTagPati_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void Execute__11daTagPati_cFv();
-extern "C" extern void col_set__11daTagPati_cFv();
-extern "C" extern void chk_CoHit__11daTagPati_cFv();
-extern "C" extern void daTagPati_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagPati_Execute__FP10fopAc_ac_c();
-extern "C" extern void daTagPati_Delete__FP11daTagPati_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daTagPati_Create(fopAc_ac_c*);
+void daTagPati_Execute(fopAc_ac_c*);
+void daTagPati_Delete(daTagPati_c*);
+
+extern "C" void __dt__11daTagPati_cFv();
+extern "C" void create__11daTagPati_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__11daTagPati_cFv();
+extern "C" void col_set__11daTagPati_cFv();
+extern "C" void chk_CoHit__11daTagPati_cFv();
+extern "C" void daTagPati_Create__FP10fopAc_ac_c();
+extern "C" void daTagPati_Execute__FP10fopAc_ac_c();
+extern "C" void daTagPati_Delete__FP11daTagPati_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_sph_src[68];
 SECTION_RODATA extern const u32 lit_3802;
 SECTION_RODATA extern const u32 lit_3803;
@@ -35,7 +73,9 @@ SECTION_DATA extern void*const __vt__10dCcD_GStts[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +85,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daTagPati_cFv) {
+asm daTagPati_c::~daTagPati_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/__dt__11daTagPati_cFv.s"
 }
@@ -56,7 +96,7 @@ ASM_FUNCTION(__dt__11daTagPati_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTagPati_cFv) {
+asm void daTagPati_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/create__11daTagPati_cFv.s"
 }
@@ -67,7 +107,7 @@ ASM_FUNCTION(create__11daTagPati_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/__dt__10dCcD_GSttsFv.s"
 }
@@ -78,7 +118,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/__dt__8cM3dGCylFv.s"
 }
@@ -89,7 +129,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/__dt__8cM3dGAabFv.s"
 }
@@ -100,7 +140,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daTagPati_cFv) {
+asm void daTagPati_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/Execute__11daTagPati_cFv.s"
 }
@@ -111,7 +151,7 @@ ASM_FUNCTION(Execute__11daTagPati_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_set__11daTagPati_cFv) {
+asm void daTagPati_c::col_set() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/col_set__11daTagPati_cFv.s"
 }
@@ -122,7 +162,7 @@ ASM_FUNCTION(col_set__11daTagPati_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chk_CoHit__11daTagPati_cFv) {
+asm void daTagPati_c::chk_CoHit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/chk_CoHit__11daTagPati_cFv.s"
 }
@@ -133,7 +173,7 @@ ASM_FUNCTION(chk_CoHit__11daTagPati_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPati_Create__FP10fopAc_ac_c) {
+asm void daTagPati_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/daTagPati_Create__FP10fopAc_ac_c.s"
 }
@@ -144,7 +184,7 @@ ASM_FUNCTION(daTagPati_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPati_Execute__FP10fopAc_ac_c) {
+asm void daTagPati_Execute(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/daTagPati_Execute__FP10fopAc_ac_c.s"
 }
@@ -155,7 +195,7 @@ ASM_FUNCTION(daTagPati_Execute__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPati_Delete__FP11daTagPati_c) {
+asm void daTagPati_Delete(daTagPati_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/daTagPati_Delete__FP11daTagPati_c.s"
 }
@@ -166,7 +206,7 @@ ASM_FUNCTION(daTagPati_Delete__FP11daTagPati_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_pachi/d_a_tag_pachi/__dt__10cCcD_GSttsFv.s"
 }

@@ -6,24 +6,112 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DPrint (J2DPrint) False/False
+// build J2DPrint (J2DPrint) True/False
+struct J2DPrint;
+// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
+/* top-level dependencies (begin J2DTextBoxVBinding) */
+/* top-level dependencies (end J2DTextBoxVBinding) */
+struct J2DTextBoxVBinding {
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+// build JUTFont (JUTFont) False/False
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin JUTFont) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+	// JUtility::TColor
+	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+};
+
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
+/* top-level dependencies (begin J2DTextBoxHBinding) */
+/* top-level dependencies (end J2DTextBoxHBinding) */
+struct J2DTextBoxHBinding {
+};
+
+/* top-level dependencies (begin J2DPrint) */
+// outer dependency: J2DPrint::TSize
+// outer dependency: J2DTextBoxVBinding
+// outer dependency: JUtility::TColor
+// outer dependency: JUTFont
+// outer dependency: J2DTextBoxHBinding
+/* top-level dependencies (end J2DPrint) */
+struct J2DPrint {
+	// J2DPrint::TSize
+	// J2DTextBoxVBinding
+	// JUtility::TColor
+	// JUTFont
+	// J2DTextBoxHBinding
+	// build TSize (J2DPrint::TSize) False/False
+	/* dependencies (begin J2DPrint::TSize) */
+	/* dependencies (end J2DPrint::TSize) */
+	struct TSize {
+	};
+
+	/* 802F4394 */ J2DPrint(JUTFont*, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+	/* 802F4420 */ ~J2DPrint();
+	/* 802F4468 */ void private_initiate(JUTFont*, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, bool);
+	/* 802F4658 */ void setBuffer(u32);
+	/* 802F46C4 */ void setFontSize();
+	/* 802F475C */ void locate(f32, f32);
+	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, char);
+	/* 802F4B4C */ void parse(char const*, s32, s32, u16*, J2DPrint::TSize&, char, bool);
+	/* 802F52E8 */ void doCtrlCode(s32);
+	/* 802F5410 */ void doEscapeCode(char const**, char);
+	/* 802F594C */ void initchar();
+	/* 802F59C0 */ void getNumberS32(char const**, s32, s32, s32);
+	/* 802F5AC4 */ void getNumberF32(char const**, f32, f32, s32);
+};
+
+// build JUTFont (JUTFont) True/True
+// build JUtility (JUtility) True/True
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
+// build J2DTextBoxVBinding (J2DTextBoxVBinding) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void J2DPrint_print_alpha_va();
-extern "C" extern void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void __dt__8J2DPrintFv();
-extern "C" extern void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb();
-extern "C" extern void setBuffer__8J2DPrintFUl();
-extern "C" extern void setFontSize__8J2DPrintFv();
-extern "C" extern void locate__8J2DPrintFff();
-extern "C" extern void print__8J2DPrintFffUcPCce();
-extern "C" extern void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc();
-extern "C" extern void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb();
-extern "C" extern void doCtrlCode__8J2DPrintFi();
-extern "C" extern void doEscapeCode__8J2DPrintFPPCUcUc();
-extern "C" extern void initchar__8J2DPrintFv();
-extern "C" extern void getNumberS32__8J2DPrintFPPCUclli();
-extern "C" extern void getNumberF32__8J2DPrintFPPCUcffi();
+extern "C" static void J2DPrint_print_alpha_va();
+extern "C" void print__8J2DPrintFffUcPCce();
+
+extern "C" static void J2DPrint_print_alpha_va();
+extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void __dt__8J2DPrintFv();
+extern "C" void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb();
+extern "C" void setBuffer__8J2DPrintFUl();
+extern "C" void setFontSize__8J2DPrintFv();
+extern "C" void locate__8J2DPrintFff();
+extern "C" void print__8J2DPrintFffUcPCce();
+extern "C" void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc();
+extern "C" void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb();
+extern "C" void doCtrlCode__8J2DPrintFi();
+extern "C" void doEscapeCode__8J2DPrintFPPCUcUc();
+extern "C" void initchar__8J2DPrintFv();
+extern "C" void getNumberS32__8J2DPrintFPPCUclli();
+extern "C" void getNumberF32__8J2DPrintFPPCUcffi();
 SECTION_DATA extern void*lit_938[24];
 SECTION_DATA extern void*const __vt__8J2DPrint[4];
 SECTION_SBSS extern u8 mStrBuff__8J2DPrint[4];
@@ -42,23 +130,40 @@ SECTION_SDATA2 extern f32 J2DPrint__lit_937;
 // External References:
 // 
 
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void vsnprintf();
-extern "C" extern void strlen();
-extern "C" extern void strtol();
-extern "C" extern void strtoul();
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void vsnprintf();
+extern "C" void strlen();
+extern "C" void strtol();
+extern "C" void strtoul();
+
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void vsnprintf();
+extern "C" void strlen();
+extern "C" void strtol();
+extern "C" void strtoul();
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 
@@ -66,28 +171,28 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 80451580-80451584 0004+00 .sbss      mStrBuff__8J2DPrint                                          */
+/* 80451580-80451584 0004+00 rc=3 efc=0 .sbss      mStrBuff__8J2DPrint                                          */
 u8 mStrBuff__8J2DPrint[4];
 
-/* 80451584-80451588 0004+00 .sbss      None                                                         */
+/* 80451584-80451588 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80451584[4];
 
-/* 80451588-8045158C 0004+00 .sbss      mStrBuffSize__8J2DPrint                                      */
+/* 80451588-8045158C 0004+00 rc=3 efc=0 .sbss      mStrBuffSize__8J2DPrint                                      */
 u8 mStrBuffSize__8J2DPrint[4];
 
-/* 8045158C-80451590 0004+00 .sbss      None                                                         */
+/* 8045158C-80451590 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_8045158C[4];
 
-/* 804561C8-804561CC 0004+00 .sdata2    @418                                                         */
+/* 804561C8-804561CC 0004+00 rc=6 efc=0 .sdata2    @418                                                         */
 u8 lit_418[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802F42F0-802F4394 00A4+00 .text      J2DPrint_print_alpha_va                                      */
+/* 802F42F0-802F4394 00A4+00 rc=1 efc=0 .text      J2DPrint_print_alpha_va                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(J2DPrint_print_alpha_va) {
+extern "C" asm static void J2DPrint_print_alpha_va() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/J2DPrint_print_alpha_va.s"
 }
@@ -95,7 +200,7 @@ ASM_FUNCTION(J2DPrint_print_alpha_va) {
 
 
 /* ############################################################################################## */
-/* 803CCF40-803CCFA0 0060+00 .data      @938                                                         */
+/* 803CCF40-803CCFA0 0060+00 rc=1 efc=0 .data      @938                                                         */
 void* lit_938[24] = {
 	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x28),
 	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x44),
@@ -123,7 +228,7 @@ void* lit_938[24] = {
 	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x110),
 };
 
-/* 803CCFA0-803CCFB0 000C+04 .data      __vt__8J2DPrint                                              */
+/* 803CCFA0-803CCFB0 000C+04 rc=2 efc=0 .data      __vt__8J2DPrint                                              */
 void* const __vt__8J2DPrint[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -132,22 +237,22 @@ void* const __vt__8J2DPrint[4] = {
 	NULL,
 };
 
-/* 802F4394-802F4420 008C+00 .text      __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+/* 802F4394-802F4420 008C+00 rc=6 efc=6 .text      __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
+asm J2DPrint::J2DPrint(JUTFont* field_0, f32 field_1, f32 field_2, JUtility::TColor field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/func_802F4394.s"
 }
 #pragma pop
 
 
-/* 802F4420-802F4468 0048+00 .text      __dt__8J2DPrintFv                                            */
+/* 802F4420-802F4468 0048+00 rc=7 efc=6 .text      __dt__8J2DPrintFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8J2DPrintFv) {
+asm J2DPrint::~J2DPrint() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/__dt__8J2DPrintFv.s"
 }
@@ -155,61 +260,61 @@ ASM_FUNCTION(__dt__8J2DPrintFv) {
 
 
 /* ############################################################################################## */
-/* 804561CC-804561D0 0004+00 .sdata2    @644                                                         */
+/* 804561CC-804561D0 0004+00 rc=1 efc=0 .sdata2    @644                                                         */
 f32 J2DPrint__lit_644 = 32.0f;
 
-/* 804561D0-804561D8 0008+00 .sdata2    @650                                                         */
+/* 804561D0-804561D8 0008+00 rc=6 efc=0 .sdata2    @650                                                         */
 f64 lit_650 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802F4468-802F4658 01F0+00 .text      private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb */
+/* 802F4468-802F4658 01F0+00 rc=1 efc=0 .text      private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb) {
+asm void J2DPrint::private_initiate(JUTFont* field_0, f32 field_1, f32 field_2, JUtility::TColor field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, bool field_7) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/func_802F4468.s"
 }
 #pragma pop
 
 
-/* 802F4658-802F46C4 006C+00 .text      setBuffer__8J2DPrintFUl                                      */
+/* 802F4658-802F46C4 006C+00 rc=2 efc=1 .text      setBuffer__8J2DPrintFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBuffer__8J2DPrintFUl) {
+asm void J2DPrint::setBuffer(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/setBuffer__8J2DPrintFUl.s"
 }
 #pragma pop
 
 
-/* 802F46C4-802F475C 0098+00 .text      setFontSize__8J2DPrintFv                                     */
+/* 802F46C4-802F475C 0098+00 rc=1 efc=0 .text      setFontSize__8J2DPrintFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFontSize__8J2DPrintFv) {
+asm void J2DPrint::setFontSize() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/setFontSize__8J2DPrintFv.s"
 }
 #pragma pop
 
 
-/* 802F475C-802F4778 001C+00 .text      locate__8J2DPrintFff                                         */
+/* 802F475C-802F4778 001C+00 rc=4 efc=2 .text      locate__8J2DPrintFff                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(locate__8J2DPrintFff) {
+asm void J2DPrint::locate(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/locate__8J2DPrintFff.s"
 }
 #pragma pop
 
 
-/* 802F4778-802F4828 00B0+00 .text      print__8J2DPrintFffUcPCce                                    */
+/* 802F4778-802F4828 00B0+00 rc=2 efc=2 .text      print__8J2DPrintFffUcPCce                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(print__8J2DPrintFffUcPCce) {
+extern "C" asm void print__8J2DPrintFffUcPCce() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/print__8J2DPrintFffUcPCce.s"
 }
@@ -217,18 +322,18 @@ ASM_FUNCTION(print__8J2DPrintFffUcPCce) {
 
 
 /* ############################################################################################## */
-/* 804561D8-804561E0 0004+04 .sdata2    @786                                                         */
+/* 804561D8-804561E0 0004+04 rc=2 efc=0 .sdata2    @786                                                         */
 f32 lit_786 = 0.5f;
 /* padding 4 bytes */
 
-/* 804561E0-804561E8 0008+00 .sdata2    @791                                                         */
+/* 804561E0-804561E8 0008+00 rc=2 efc=0 .sdata2    @791                                                         */
 f64 lit_791 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802F4828-802F4B4C 0324+00 .text      printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc */
+/* 802F4828-802F4B4C 0324+00 rc=4 efc=4 .text      printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc) {
+asm void J2DPrint::printReturn(char const* field_0, f32 field_1, f32 field_2, J2DTextBoxHBinding field_3, J2DTextBoxVBinding field_4, f32 field_5, f32 field_6, char field_7) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc.s"
 }
@@ -236,14 +341,14 @@ ASM_FUNCTION(printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindin
 
 
 /* ############################################################################################## */
-/* 804561E8-804561EC 0004+00 .sdata2    @913                                                         */
+/* 804561E8-804561EC 0004+00 rc=1 efc=0 .sdata2    @913                                                         */
 f32 J2DPrint__lit_913 = 10000.0f;
 
-/* 802F4B4C-802F52E8 079C+00 .text      parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb              */
+/* 802F4B4C-802F52E8 079C+00 rc=2 efc=0 .text      parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb) {
+asm void J2DPrint::parse(char const* field_0, s32 field_1, s32 field_2, u16* field_3, J2DPrint::TSize& field_4, char field_5, bool field_6) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb.s"
 }
@@ -251,62 +356,61 @@ ASM_FUNCTION(parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb) {
 
 
 /* ############################################################################################## */
-/* 804561EC-804561F0 0004+00 .sdata2    @937                                                         */
+/* 804561EC-804561F0 0004+00 rc=2 efc=0 .sdata2    @937                                                         */
 f32 J2DPrint__lit_937 = 1.0f;
 
-/* 802F52E8-802F5410 0128+00 .text      doCtrlCode__8J2DPrintFi                                      */
+/* 802F52E8-802F5410 0128+00 rc=2 efc=0 .text      doCtrlCode__8J2DPrintFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doCtrlCode__8J2DPrintFi) {
+asm void J2DPrint::doCtrlCode(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/doCtrlCode__8J2DPrintFi.s"
 }
 #pragma pop
 
 
-/* 802F5410-802F594C 053C+00 .text      doEscapeCode__8J2DPrintFPPCUcUc                              */
+/* 802F5410-802F594C 053C+00 rc=1 efc=0 .text      doEscapeCode__8J2DPrintFPPCUcUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doEscapeCode__8J2DPrintFPPCUcUc) {
+asm void J2DPrint::doEscapeCode(char const** field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/doEscapeCode__8J2DPrintFPPCUcUc.s"
 }
 #pragma pop
 
 
-/* 802F594C-802F59C0 0074+00 .text      initchar__8J2DPrintFv                                        */
+/* 802F594C-802F59C0 0074+00 rc=3 efc=0 .text      initchar__8J2DPrintFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initchar__8J2DPrintFv) {
+asm void J2DPrint::initchar() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/initchar__8J2DPrintFv.s"
 }
 #pragma pop
 
 
-/* 802F59C0-802F5AC4 0104+00 .text      getNumberS32__8J2DPrintFPPCUclli                             */
+/* 802F59C0-802F5AC4 0104+00 rc=1 efc=0 .text      getNumberS32__8J2DPrintFPPCUclli                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNumberS32__8J2DPrintFPPCUclli) {
+asm void J2DPrint::getNumberS32(char const** field_0, s32 field_1, s32 field_2, s32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/getNumberS32__8J2DPrintFPPCUclli.s"
 }
 #pragma pop
 
 
-/* 802F5AC4-802F5BF8 0134+00 .text      getNumberF32__8J2DPrintFPPCUcffi                             */
+/* 802F5AC4-802F5BF8 0134+00 rc=1 efc=0 .text      getNumberF32__8J2DPrintFPPCUcffi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNumberF32__8J2DPrintFPPCUcffi) {
+asm void J2DPrint::getNumberF32(char const** field_0, f32 field_1, f32 field_2, s32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/getNumberF32__8J2DPrintFPPCUcffi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

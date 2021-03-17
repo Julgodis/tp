@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daAndsw_c;
+
+struct daAndsw_c {
+	void Create();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__9daAndsw_cFv();
-extern "C" extern void create__9daAndsw_cFv();
-extern "C" extern void execute__9daAndsw_cFv();
-extern "C" extern void _delete__9daAndsw_cFv();
-extern "C" extern void daAndsw_Execute__FP9daAndsw_c();
-extern "C" extern void daAndsw_Delete__FP9daAndsw_c();
-extern "C" extern void daAndsw_Create__FP10fopAc_ac_c();
+void daAndsw_Execute(daAndsw_c*);
+void daAndsw_Delete(daAndsw_c*);
+void daAndsw_Create(fopAc_ac_c*);
+
+extern "C" void Create__9daAndsw_cFv();
+extern "C" void create__9daAndsw_cFv();
+extern "C" void execute__9daAndsw_cFv();
+extern "C" bool _delete__9daAndsw_cFv();
+extern "C" void daAndsw_Execute__FP9daAndsw_c();
+extern "C" void daAndsw_Delete__FP9daAndsw_c();
+extern "C" void daAndsw_Create__FP10fopAc_ac_c();
 SECTION_DATA extern u8 l_daAndsw_Method[32];
 SECTION_DATA extern u8 g_profile_ANDSW[48];
 
@@ -23,7 +44,9 @@ SECTION_DATA extern u8 g_profile_ANDSW[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -33,7 +56,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__9daAndsw_cFv) {
+asm void daAndsw_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/Create__9daAndsw_cFv.s"
 }
@@ -44,7 +67,7 @@ ASM_FUNCTION(Create__9daAndsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daAndsw_cFv) {
+asm void daAndsw_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/func_804579B8.s"
 }
@@ -55,7 +78,7 @@ ASM_FUNCTION(create__9daAndsw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daAndsw_cFv) {
+asm void daAndsw_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/execute__9daAndsw_cFv.s"
 }
@@ -63,21 +86,16 @@ ASM_FUNCTION(execute__9daAndsw_cFv) {
 
 
 /* 80457ABC-80457AC4 0008+00 .text      _delete__9daAndsw_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__9daAndsw_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_andsw/d_a_andsw/_delete__9daAndsw_cFv.s"
+bool daAndsw_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80457AC4-80457AE4 0020+00 .text      daAndsw_Execute__FP9daAndsw_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw_Execute__FP9daAndsw_c) {
+asm void daAndsw_Execute(daAndsw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/daAndsw_Execute__FP9daAndsw_c.s"
 }
@@ -88,7 +106,7 @@ ASM_FUNCTION(daAndsw_Execute__FP9daAndsw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw_Delete__FP9daAndsw_c) {
+asm void daAndsw_Delete(daAndsw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/daAndsw_Delete__FP9daAndsw_c.s"
 }
@@ -99,7 +117,7 @@ ASM_FUNCTION(daAndsw_Delete__FP9daAndsw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw_Create__FP10fopAc_ac_c) {
+asm void daAndsw_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw/d_a_andsw/daAndsw_Create__FP10fopAc_ac_c.s"
 }

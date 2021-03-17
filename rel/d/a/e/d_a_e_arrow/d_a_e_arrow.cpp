@@ -6,35 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_arrow_class;
+struct dCcD_GObjInf;
+
+struct e_arrow_class {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_ARROW_Draw__FP13e_arrow_class();
-extern "C" extern void fire_eff_set__FP13e_arrow_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void hit_check__FP13e_arrow_class();
-extern "C" extern void e_arrow_shot__FP13e_arrow_class();
-extern "C" extern void e_arrow_bg__FP13e_arrow_class();
-extern "C" extern void e_arrow_spin__FP13e_arrow_class();
-extern "C" extern void s_limit_sub__FPvPv();
-extern "C" extern void e_arrow_demo_fire__FP13e_arrow_class();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void atHit_CB__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void e_arrow_shield__FP13e_arrow_class();
-extern "C" extern void e_arrow_demo_bound__FP13e_arrow_class();
-extern "C" extern void action__FP13e_arrow_class();
-extern "C" extern void daE_ARROW_Execute__FP13e_arrow_class();
-extern "C" extern void daE_ARROW_IsDelete__FP13e_arrow_class();
-extern "C" extern void daE_ARROW_Delete__FP13e_arrow_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_ARROW_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_8067E858();
-extern "C" extern void func_8067E860();
-extern "C" extern void func_8067E868();
+void daE_ARROW_Draw(e_arrow_class*);
+void fire_eff_set(e_arrow_class*);
+void hit_check(e_arrow_class*);
+void e_arrow_shot(e_arrow_class*);
+void e_arrow_bg(e_arrow_class*);
+void e_arrow_spin(e_arrow_class*);
+void s_limit_sub(void*, void*);
+void e_arrow_demo_fire(e_arrow_class*);
+void atHit_CB(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void e_arrow_shield(e_arrow_class*);
+void e_arrow_demo_bound(e_arrow_class*);
+void action(e_arrow_class*);
+void daE_ARROW_Execute(e_arrow_class*);
+bool daE_ARROW_IsDelete(e_arrow_class*);
+void daE_ARROW_Delete(e_arrow_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_ARROW_Create(fopAc_ac_c*);
+extern "C" void func_8067E858();
+extern "C" void func_8067E860();
+extern "C" void func_8067E868();
+
+extern "C" void daE_ARROW_Draw__FP13e_arrow_class();
+extern "C" void fire_eff_set__FP13e_arrow_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void hit_check__FP13e_arrow_class();
+extern "C" void e_arrow_shot__FP13e_arrow_class();
+extern "C" void e_arrow_bg__FP13e_arrow_class();
+extern "C" void e_arrow_spin__FP13e_arrow_class();
+extern "C" void s_limit_sub__FPvPv();
+extern "C" void e_arrow_demo_fire__FP13e_arrow_class();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void atHit_CB__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void e_arrow_shield__FP13e_arrow_class();
+extern "C" void e_arrow_demo_bound__FP13e_arrow_class();
+extern "C" void action__FP13e_arrow_class();
+extern "C" void daE_ARROW_Execute__FP13e_arrow_class();
+extern "C" bool daE_ARROW_IsDelete__FP13e_arrow_class();
+extern "C" void daE_ARROW_Delete__FP13e_arrow_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_ARROW_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_8067E858();
+extern "C" void func_8067E860();
+extern "C" void func_8067E868();
 SECTION_RODATA extern const u8 lit_3983[12];
 SECTION_RODATA extern const u8 lit_4362[4];
 SECTION_RODATA extern const u32 lit_4363;
@@ -152,8 +214,11 @@ SECTION_BSS extern u8 data_8067EBF4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -163,7 +228,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_ARROW_Draw__FP13e_arrow_class) {
+asm void daE_ARROW_Draw(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_Draw__FP13e_arrow_class.s"
 }
@@ -174,7 +239,7 @@ ASM_FUNCTION(daE_ARROW_Draw__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fire_eff_set__FP13e_arrow_class) {
+asm void fire_eff_set(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/fire_eff_set__FP13e_arrow_class.s"
 }
@@ -185,7 +250,7 @@ ASM_FUNCTION(fire_eff_set__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__4cXyzFv.s"
 }
@@ -196,7 +261,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_check__FP13e_arrow_class) {
+asm void hit_check(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/hit_check__FP13e_arrow_class.s"
 }
@@ -207,7 +272,7 @@ ASM_FUNCTION(hit_check__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_shot__FP13e_arrow_class) {
+asm void e_arrow_shot(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_shot__FP13e_arrow_class.s"
 }
@@ -218,7 +283,7 @@ ASM_FUNCTION(e_arrow_shot__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_bg__FP13e_arrow_class) {
+asm void e_arrow_bg(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_bg__FP13e_arrow_class.s"
 }
@@ -229,7 +294,7 @@ ASM_FUNCTION(e_arrow_bg__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_spin__FP13e_arrow_class) {
+asm void e_arrow_spin(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_spin__FP13e_arrow_class.s"
 }
@@ -240,7 +305,7 @@ ASM_FUNCTION(e_arrow_spin__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_limit_sub__FPvPv) {
+asm void s_limit_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/s_limit_sub__FPvPv.s"
 }
@@ -251,7 +316,7 @@ ASM_FUNCTION(s_limit_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_demo_fire__FP13e_arrow_class) {
+asm void e_arrow_demo_fire(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_demo_fire__FP13e_arrow_class.s"
 }
@@ -262,7 +327,7 @@ ASM_FUNCTION(e_arrow_demo_fire__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -273,7 +338,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(atHit_CB__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void atHit_CB(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/atHit_CB__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -284,7 +349,7 @@ ASM_FUNCTION(atHit_CB__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_shield__FP13e_arrow_class) {
+asm void e_arrow_shield(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_shield__FP13e_arrow_class.s"
 }
@@ -295,7 +360,7 @@ ASM_FUNCTION(e_arrow_shield__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_arrow_demo_bound__FP13e_arrow_class) {
+asm void e_arrow_demo_bound(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/e_arrow_demo_bound__FP13e_arrow_class.s"
 }
@@ -306,7 +371,7 @@ ASM_FUNCTION(e_arrow_demo_bound__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP13e_arrow_class) {
+asm void action(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/action__FP13e_arrow_class.s"
 }
@@ -317,7 +382,7 @@ ASM_FUNCTION(action__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_ARROW_Execute__FP13e_arrow_class) {
+asm void daE_ARROW_Execute(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_Execute__FP13e_arrow_class.s"
 }
@@ -325,21 +390,16 @@ ASM_FUNCTION(daE_ARROW_Execute__FP13e_arrow_class) {
 
 
 /* 8067E304-8067E30C 0008+00 .text      daE_ARROW_IsDelete__FP13e_arrow_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_ARROW_IsDelete__FP13e_arrow_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_IsDelete__FP13e_arrow_class.s"
+bool daE_ARROW_IsDelete(e_arrow_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8067E30C-8067E374 0068+00 .text      daE_ARROW_Delete__FP13e_arrow_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_ARROW_Delete__FP13e_arrow_class) {
+asm void daE_ARROW_Delete(e_arrow_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_Delete__FP13e_arrow_class.s"
 }
@@ -350,7 +410,7 @@ ASM_FUNCTION(daE_ARROW_Delete__FP13e_arrow_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -361,7 +421,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_ARROW_Create__FP10fopAc_ac_c) {
+asm void daE_ARROW_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_Create__FP10fopAc_ac_c.s"
 }
@@ -372,7 +432,7 @@ ASM_FUNCTION(daE_ARROW_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__8cM3dGSphFv.s"
 }
@@ -383,7 +443,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__8cM3dGAabFv.s"
 }
@@ -394,7 +454,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__10dCcD_GSttsFv.s"
 }
@@ -405,7 +465,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/__dt__10cCcD_GSttsFv.s"
 }
@@ -416,7 +476,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8067E858) {
+extern "C" asm void func_8067E858() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/func_8067E858.s"
 }
@@ -427,7 +487,7 @@ ASM_FUNCTION(func_8067E858) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8067E860) {
+extern "C" asm void func_8067E860() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/func_8067E860.s"
 }
@@ -438,7 +498,7 @@ ASM_FUNCTION(func_8067E860) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8067E868) {
+extern "C" asm void func_8067E868() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/func_8067E868.s"
 }

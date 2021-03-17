@@ -9,62 +9,67 @@
 // Forward References:
 // 
 
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void PSMTXMultVecArray();
-extern "C" extern void PSMTXMultVecSR();
-extern "C" extern void PSMTXMultVecArraySR();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecArray();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSMTXMultVecArraySR();
+
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecArray();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSMTXMultVecArraySR();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80346D6C-80346DC0 0054+00 .text      PSMTXMultVec                                                 */
+/* 80346D6C-80346DC0 0054+00 rc=158 efc=158 .text      PSMTXMultVec                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXMultVec) {
+extern "C" asm void PSMTXMultVec() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVec.s"
 }
 #pragma pop
 
 
-/* 80346DC0-80346E4C 008C+00 .text      PSMTXMultVecArray                                            */
+/* 80346DC0-80346E4C 008C+00 rc=2 efc=2 .text      PSMTXMultVecArray                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXMultVecArray) {
+extern "C" asm void PSMTXMultVecArray() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecArray.s"
 }
 #pragma pop
 
 
-/* 80346E4C-80346EA0 0054+00 .text      PSMTXMultVecSR                                               */
+/* 80346E4C-80346EA0 0054+00 rc=47 efc=47 .text      PSMTXMultVecSR                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXMultVecSR) {
+extern "C" asm void PSMTXMultVecSR() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecSR.s"
 }
 #pragma pop
 
 
-/* 80346EA0-80346F28 0088+00 .text      PSMTXMultVecArraySR                                          */
+/* 80346EA0-80346F28 0088+00 rc=2 efc=2 .text      PSMTXMultVecArraySR                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSMTXMultVecArraySR) {
+extern "C" asm void PSMTXMultVecArraySR() {
 	nofralloc
 #include "asm/dolphin/mtx/mtxvec/PSMTXMultVecArraySR.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

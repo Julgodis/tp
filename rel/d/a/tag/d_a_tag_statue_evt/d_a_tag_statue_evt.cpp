@@ -6,36 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagStatue_c;
+
+struct fopAc_ac_c {
+};
+
+struct daTagStatue_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void setParticle();
+	void endParticle();
+	void checkStartDemo();
+	void checkOnEffect();
+	void getLetterCount();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void s_s_sub__FPvPv();
-extern "C" extern void initBaseMtx__13daTagStatue_cFv();
-extern "C" extern void setBaseMtx__13daTagStatue_cFv();
-extern "C" extern void Create__13daTagStatue_cFv();
-extern "C" extern void CreateHeap__13daTagStatue_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__13daTagStatue_cFv();
-extern "C" extern void execute__13daTagStatue_cFv();
-extern "C" extern void event_proc_call__13daTagStatue_cFv();
-extern "C" extern void actionWait__13daTagStatue_cFv();
-extern "C" extern void actionOrderEvent__13daTagStatue_cFv();
-extern "C" extern void actionEvent__13daTagStatue_cFv();
-extern "C" extern void actionDead__13daTagStatue_cFv();
-extern "C" extern void demoProc__13daTagStatue_cFv();
-extern "C" extern void setParticle__13daTagStatue_cFv();
-extern "C" extern void endParticle__13daTagStatue_cFv();
-extern "C" extern void checkStartDemo__13daTagStatue_cFv();
-extern "C" extern void checkOnEffect__13daTagStatue_cFv();
-extern "C" extern void getLetterCount__13daTagStatue_cFv();
-extern "C" extern void draw__13daTagStatue_cFv();
-extern "C" extern void _delete__13daTagStatue_cFv();
-extern "C" extern void daTagStatue_Draw__FP13daTagStatue_c();
-extern "C" extern void daTagStatue_Execute__FP13daTagStatue_c();
-extern "C" extern void daTagStatue_Delete__FP13daTagStatue_c();
-extern "C" extern void daTagStatue_Create__FP13daTagStatue_c();
-extern "C" extern void func_805A80E0();
+void CheckCreateHeap(fopAc_ac_c*);
+void s_s_sub(void*, void*);
+void daTagStatue_Draw(daTagStatue_c*);
+void daTagStatue_Execute(daTagStatue_c*);
+void daTagStatue_Delete(daTagStatue_c*);
+void daTagStatue_Create(daTagStatue_c*);
+extern "C" void func_805A80E0();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void s_s_sub__FPvPv();
+extern "C" void initBaseMtx__13daTagStatue_cFv();
+extern "C" void setBaseMtx__13daTagStatue_cFv();
+extern "C" void Create__13daTagStatue_cFv();
+extern "C" void CreateHeap__13daTagStatue_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__13daTagStatue_cFv();
+extern "C" void execute__13daTagStatue_cFv();
+extern "C" void event_proc_call__13daTagStatue_cFv();
+extern "C" void actionWait__13daTagStatue_cFv();
+extern "C" void actionOrderEvent__13daTagStatue_cFv();
+extern "C" void actionEvent__13daTagStatue_cFv();
+extern "C" void actionDead__13daTagStatue_cFv();
+extern "C" void demoProc__13daTagStatue_cFv();
+extern "C" void setParticle__13daTagStatue_cFv();
+extern "C" void endParticle__13daTagStatue_cFv();
+extern "C" void checkStartDemo__13daTagStatue_cFv();
+extern "C" void checkOnEffect__13daTagStatue_cFv();
+extern "C" void getLetterCount__13daTagStatue_cFv();
+extern "C" void draw__13daTagStatue_cFv();
+extern "C" void _delete__13daTagStatue_cFv();
+extern "C" void daTagStatue_Draw__FP13daTagStatue_c();
+extern "C" void daTagStatue_Execute__FP13daTagStatue_c();
+extern "C" void daTagStatue_Delete__FP13daTagStatue_c();
+extern "C" void daTagStatue_Create__FP13daTagStatue_c();
+extern "C" void func_805A80E0();
 SECTION_RODATA extern const u8 l_event_bit[12];
 SECTION_RODATA extern const u32 lit_3690;
 SECTION_RODATA extern const u8 lit_3756[4 + 4 /* padding */];
@@ -72,7 +116,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -82,7 +128,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -93,7 +139,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s_sub__FPvPv) {
+asm void s_s_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/s_s_sub__FPvPv.s"
 }
@@ -104,7 +150,7 @@ ASM_FUNCTION(s_s_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daTagStatue_cFv) {
+asm void daTagStatue_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/initBaseMtx__13daTagStatue_cFv.s"
 }
@@ -115,7 +161,7 @@ ASM_FUNCTION(initBaseMtx__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daTagStatue_cFv) {
+asm void daTagStatue_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/setBaseMtx__13daTagStatue_cFv.s"
 }
@@ -126,7 +172,7 @@ ASM_FUNCTION(setBaseMtx__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daTagStatue_cFv) {
+asm void daTagStatue_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/Create__13daTagStatue_cFv.s"
 }
@@ -137,7 +183,7 @@ ASM_FUNCTION(Create__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daTagStatue_cFv) {
+asm void daTagStatue_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/CreateHeap__13daTagStatue_cFv.s"
 }
@@ -148,7 +194,7 @@ ASM_FUNCTION(CreateHeap__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/__dt__12J3DFrameCtrlFv.s"
 }
@@ -159,7 +205,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagStatue_cFv) {
+asm void daTagStatue_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/func_805A7424.s"
 }
@@ -170,7 +216,7 @@ ASM_FUNCTION(create__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagStatue_cFv) {
+asm void daTagStatue_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/execute__13daTagStatue_cFv.s"
 }
@@ -181,7 +227,7 @@ ASM_FUNCTION(execute__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__13daTagStatue_cFv) {
+asm void daTagStatue_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/event_proc_call__13daTagStatue_cFv.s"
 }
@@ -192,7 +238,7 @@ ASM_FUNCTION(event_proc_call__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__13daTagStatue_cFv) {
+asm void daTagStatue_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/actionWait__13daTagStatue_cFv.s"
 }
@@ -203,7 +249,7 @@ ASM_FUNCTION(actionWait__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__13daTagStatue_cFv) {
+asm void daTagStatue_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/actionOrderEvent__13daTagStatue_cFv.s"
 }
@@ -214,7 +260,7 @@ ASM_FUNCTION(actionOrderEvent__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__13daTagStatue_cFv) {
+asm void daTagStatue_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/actionEvent__13daTagStatue_cFv.s"
 }
@@ -222,21 +268,16 @@ ASM_FUNCTION(actionEvent__13daTagStatue_cFv) {
 
 
 /* 805A7848-805A784C 0004+00 .text      actionDead__13daTagStatue_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__13daTagStatue_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/actionDead__13daTagStatue_cFv.s"
+void daTagStatue_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805A784C-805A7A68 021C+00 .text      demoProc__13daTagStatue_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__13daTagStatue_cFv) {
+asm void daTagStatue_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/demoProc__13daTagStatue_cFv.s"
 }
@@ -247,7 +288,7 @@ ASM_FUNCTION(demoProc__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParticle__13daTagStatue_cFv) {
+asm void daTagStatue_c::setParticle() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/setParticle__13daTagStatue_cFv.s"
 }
@@ -258,7 +299,7 @@ ASM_FUNCTION(setParticle__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endParticle__13daTagStatue_cFv) {
+asm void daTagStatue_c::endParticle() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/endParticle__13daTagStatue_cFv.s"
 }
@@ -269,7 +310,7 @@ ASM_FUNCTION(endParticle__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkStartDemo__13daTagStatue_cFv) {
+asm void daTagStatue_c::checkStartDemo() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/checkStartDemo__13daTagStatue_cFv.s"
 }
@@ -280,7 +321,7 @@ ASM_FUNCTION(checkStartDemo__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOnEffect__13daTagStatue_cFv) {
+asm void daTagStatue_c::checkOnEffect() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/checkOnEffect__13daTagStatue_cFv.s"
 }
@@ -291,7 +332,7 @@ ASM_FUNCTION(checkOnEffect__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLetterCount__13daTagStatue_cFv) {
+asm void daTagStatue_c::getLetterCount() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/getLetterCount__13daTagStatue_cFv.s"
 }
@@ -302,7 +343,7 @@ ASM_FUNCTION(getLetterCount__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daTagStatue_cFv) {
+asm void daTagStatue_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/draw__13daTagStatue_cFv.s"
 }
@@ -313,7 +354,7 @@ ASM_FUNCTION(draw__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__13daTagStatue_cFv) {
+asm void daTagStatue_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/_delete__13daTagStatue_cFv.s"
 }
@@ -324,7 +365,7 @@ ASM_FUNCTION(_delete__13daTagStatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStatue_Draw__FP13daTagStatue_c) {
+asm void daTagStatue_Draw(daTagStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Draw__FP13daTagStatue_c.s"
 }
@@ -335,7 +376,7 @@ ASM_FUNCTION(daTagStatue_Draw__FP13daTagStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStatue_Execute__FP13daTagStatue_c) {
+asm void daTagStatue_Execute(daTagStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Execute__FP13daTagStatue_c.s"
 }
@@ -346,7 +387,7 @@ ASM_FUNCTION(daTagStatue_Execute__FP13daTagStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStatue_Delete__FP13daTagStatue_c) {
+asm void daTagStatue_Delete(daTagStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Delete__FP13daTagStatue_c.s"
 }
@@ -357,7 +398,7 @@ ASM_FUNCTION(daTagStatue_Delete__FP13daTagStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStatue_Create__FP13daTagStatue_c) {
+asm void daTagStatue_Create(daTagStatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Create__FP13daTagStatue_c.s"
 }
@@ -368,7 +409,7 @@ ASM_FUNCTION(daTagStatue_Create__FP13daTagStatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A80E0) {
+extern "C" asm void func_805A80E0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/func_805A80E0.s"
 }

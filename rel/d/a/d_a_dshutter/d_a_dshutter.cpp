@@ -6,32 +6,72 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daDsh_c;
+
+struct daDsh_c {
+	struct action_c {
+	};
+
+	~daDsh_c();
+	void CreateHeap();
+	void Draw();
+	void setMtx();
+	void setAction(daDsh_c::action_c*);
+	void callInit();
+	void callExecute();
+	void initOpenWait();
+	void executeOpenWait();
+	void initOpen();
+	void executeOpen();
+	void initCloseWait();
+	void executeCloseWait();
+	void initClose();
+	void executeClose();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__7daDsh_cFv();
-extern "C" extern void CreateHeap__7daDsh_cFv();
-extern "C" extern void Draw__7daDsh_cFv();
-extern "C" extern void Execute__7daDsh_cFPPA3_A4_f();
-extern "C" extern void setMtx__7daDsh_cFv();
-extern "C" extern void setAction__7daDsh_cFPQ27daDsh_c8action_c();
-extern "C" extern void callInit__7daDsh_cFv();
-extern "C" extern void callExecute__7daDsh_cFv();
-extern "C" extern void initOpenWait__7daDsh_cFv();
-extern "C" extern void executeOpenWait__7daDsh_cFv();
-extern "C" extern void initOpen__7daDsh_cFv();
-extern "C" extern void executeOpen__7daDsh_cFv();
-extern "C" extern void initCloseWait__7daDsh_cFv();
-extern "C" extern void executeCloseWait__7daDsh_cFv();
-extern "C" extern void initClose__7daDsh_cFv();
-extern "C" extern void executeClose__7daDsh_cFv();
-extern "C" extern void daDsh_Draw__FP7daDsh_c();
-extern "C" extern void daDsh_Execute__FP7daDsh_c();
-extern "C" extern void daDsh_IsDelete__FP7daDsh_c();
-extern "C" extern void daDsh_Delete__FP7daDsh_c();
-extern "C" extern void daDsh_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80467DF8();
-extern "C" extern void __sinit_d_a_dshutter_cpp();
+extern "C" void Execute__7daDsh_cFPPA3_A4_f();
+void daDsh_Draw(daDsh_c*);
+void daDsh_Execute(daDsh_c*);
+bool daDsh_IsDelete(daDsh_c*);
+void daDsh_Delete(daDsh_c*);
+void daDsh_Create(fopAc_ac_c*);
+extern "C" void func_80467DF8();
+extern "C" void __sinit_d_a_dshutter_cpp();
+
+extern "C" void __dt__7daDsh_cFv();
+extern "C" void CreateHeap__7daDsh_cFv();
+extern "C" void Draw__7daDsh_cFv();
+extern "C" void Execute__7daDsh_cFPPA3_A4_f();
+extern "C" void setMtx__7daDsh_cFv();
+extern "C" void setAction__7daDsh_cFPQ27daDsh_c8action_c();
+extern "C" void callInit__7daDsh_cFv();
+extern "C" void callExecute__7daDsh_cFv();
+extern "C" void initOpenWait__7daDsh_cFv();
+extern "C" void executeOpenWait__7daDsh_cFv();
+extern "C" void initOpen__7daDsh_cFv();
+extern "C" void executeOpen__7daDsh_cFv();
+extern "C" void initCloseWait__7daDsh_cFv();
+extern "C" void executeCloseWait__7daDsh_cFv();
+extern "C" void initClose__7daDsh_cFv();
+extern "C" void executeClose__7daDsh_cFv();
+extern "C" void daDsh_Draw__FP7daDsh_c();
+extern "C" void daDsh_Execute__FP7daDsh_c();
+extern "C" bool daDsh_IsDelete__FP7daDsh_c();
+extern "C" void daDsh_Delete__FP7daDsh_c();
+extern "C" void daDsh_Create__FP10fopAc_ac_c();
+extern "C" void func_80467DF8();
+extern "C" void __sinit_d_a_dshutter_cpp();
 SECTION_RODATA extern const u8 l_bmd[12];
 SECTION_RODATA extern const u8 l_dzb[12];
 SECTION_RODATA extern const u8 l_heap_size[12];
@@ -109,7 +149,9 @@ SECTION_BSS extern u8 data_80468174[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -119,7 +161,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7daDsh_cFv) {
+asm daDsh_c::~daDsh_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/__dt__7daDsh_cFv.s"
 }
@@ -130,7 +172,7 @@ ASM_FUNCTION(__dt__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__7daDsh_cFv) {
+asm void daDsh_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/CreateHeap__7daDsh_cFv.s"
 }
@@ -141,7 +183,7 @@ ASM_FUNCTION(CreateHeap__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__7daDsh_cFv) {
+asm void daDsh_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/Draw__7daDsh_cFv.s"
 }
@@ -152,7 +194,7 @@ ASM_FUNCTION(Draw__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__7daDsh_cFPPA3_A4_f) {
+extern "C" asm void Execute__7daDsh_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/Execute__7daDsh_cFPPA3_A4_f.s"
 }
@@ -163,7 +205,7 @@ ASM_FUNCTION(Execute__7daDsh_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__7daDsh_cFv) {
+asm void daDsh_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/setMtx__7daDsh_cFv.s"
 }
@@ -174,7 +216,7 @@ ASM_FUNCTION(setMtx__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__7daDsh_cFPQ27daDsh_c8action_c) {
+asm void daDsh_c::setAction(daDsh_c::action_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/setAction__7daDsh_cFPQ27daDsh_c8action_c.s"
 }
@@ -185,7 +227,7 @@ ASM_FUNCTION(setAction__7daDsh_cFPQ27daDsh_c8action_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callInit__7daDsh_cFv) {
+asm void daDsh_c::callInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/callInit__7daDsh_cFv.s"
 }
@@ -196,7 +238,7 @@ ASM_FUNCTION(callInit__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callExecute__7daDsh_cFv) {
+asm void daDsh_c::callExecute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/callExecute__7daDsh_cFv.s"
 }
@@ -207,7 +249,7 @@ ASM_FUNCTION(callExecute__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initOpenWait__7daDsh_cFv) {
+asm void daDsh_c::initOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/initOpenWait__7daDsh_cFv.s"
 }
@@ -218,7 +260,7 @@ ASM_FUNCTION(initOpenWait__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeOpenWait__7daDsh_cFv) {
+asm void daDsh_c::executeOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/executeOpenWait__7daDsh_cFv.s"
 }
@@ -229,7 +271,7 @@ ASM_FUNCTION(executeOpenWait__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initOpen__7daDsh_cFv) {
+asm void daDsh_c::initOpen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/initOpen__7daDsh_cFv.s"
 }
@@ -240,7 +282,7 @@ ASM_FUNCTION(initOpen__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeOpen__7daDsh_cFv) {
+asm void daDsh_c::executeOpen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/executeOpen__7daDsh_cFv.s"
 }
@@ -251,7 +293,7 @@ ASM_FUNCTION(executeOpen__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCloseWait__7daDsh_cFv) {
+asm void daDsh_c::initCloseWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/initCloseWait__7daDsh_cFv.s"
 }
@@ -262,7 +304,7 @@ ASM_FUNCTION(initCloseWait__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCloseWait__7daDsh_cFv) {
+asm void daDsh_c::executeCloseWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/executeCloseWait__7daDsh_cFv.s"
 }
@@ -273,7 +315,7 @@ ASM_FUNCTION(executeCloseWait__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initClose__7daDsh_cFv) {
+asm void daDsh_c::initClose() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/initClose__7daDsh_cFv.s"
 }
@@ -284,7 +326,7 @@ ASM_FUNCTION(initClose__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeClose__7daDsh_cFv) {
+asm void daDsh_c::executeClose() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/executeClose__7daDsh_cFv.s"
 }
@@ -295,7 +337,7 @@ ASM_FUNCTION(executeClose__7daDsh_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDsh_Draw__FP7daDsh_c) {
+asm void daDsh_Draw(daDsh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/daDsh_Draw__FP7daDsh_c.s"
 }
@@ -306,7 +348,7 @@ ASM_FUNCTION(daDsh_Draw__FP7daDsh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDsh_Execute__FP7daDsh_c) {
+asm void daDsh_Execute(daDsh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/daDsh_Execute__FP7daDsh_c.s"
 }
@@ -314,21 +356,16 @@ ASM_FUNCTION(daDsh_Execute__FP7daDsh_c) {
 
 
 /* 80467C2C-80467C34 0008+00 .text      daDsh_IsDelete__FP7daDsh_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDsh_IsDelete__FP7daDsh_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/daDsh_IsDelete__FP7daDsh_c.s"
+bool daDsh_IsDelete(daDsh_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80467C34-80467C7C 0048+00 .text      daDsh_Delete__FP7daDsh_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDsh_Delete__FP7daDsh_c) {
+asm void daDsh_Delete(daDsh_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/daDsh_Delete__FP7daDsh_c.s"
 }
@@ -339,7 +376,7 @@ ASM_FUNCTION(daDsh_Delete__FP7daDsh_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDsh_Create__FP10fopAc_ac_c) {
+asm void daDsh_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/daDsh_Create__FP10fopAc_ac_c.s"
 }
@@ -350,7 +387,7 @@ ASM_FUNCTION(daDsh_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80467DF8) {
+extern "C" asm void func_80467DF8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/func_80467DF8.s"
 }
@@ -361,7 +398,7 @@ ASM_FUNCTION(func_80467DF8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_dshutter_cpp) {
+extern "C" asm void __sinit_d_a_dshutter_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_dshutter/d_a_dshutter/__sinit_d_a_dshutter_cpp.s"
 }

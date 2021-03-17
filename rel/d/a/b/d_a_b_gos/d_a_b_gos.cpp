@@ -6,32 +6,84 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct b_gos_class;
+
+struct daB_GOS_HIO_c {
+	daB_GOS_HIO_c();
+	~daB_GOS_HIO_c();
+};
+
+struct b_gos_class {
+	b_gos_class();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daB_GOS_HIO_cFv();
-extern "C" extern void daB_GOS_Draw__FP11b_gos_class();
-extern "C" extern void anm_init__FP11b_gos_classifUcf();
-extern "C" extern void damage_check__FP11b_gos_class();
-extern "C" extern void wait__FP11b_gos_class();
-extern "C" extern void walk__FP11b_gos_class();
-extern "C" extern void ball__FP11b_gos_class();
-extern "C" extern void stick__FP11b_gos_class();
-extern "C" extern void action__FP11b_gos_class();
-extern "C" extern void daB_GOS_Execute__FP11b_gos_class();
-extern "C" extern void daB_GOS_IsDelete__FP11b_gos_class();
-extern "C" extern void daB_GOS_Delete__FP11b_gos_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daB_GOS_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__11b_gos_classFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__13daB_GOS_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_gos_cpp();
-extern "C" extern void func_806053A4();
-extern "C" extern void func_806053AC();
+void daB_GOS_Draw(b_gos_class*);
+void anm_init(b_gos_class*, s32, f32, u8, f32);
+void damage_check(b_gos_class*);
+void wait(b_gos_class*);
+void walk(b_gos_class*);
+void ball(b_gos_class*);
+void stick(b_gos_class*);
+void action(b_gos_class*);
+void daB_GOS_Execute(b_gos_class*);
+bool daB_GOS_IsDelete(b_gos_class*);
+void daB_GOS_Delete(b_gos_class*);
+void useHeapInit(fopAc_ac_c*);
+void daB_GOS_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_b_gos_cpp();
+extern "C" void func_806053A4();
+extern "C" void func_806053AC();
+
+extern "C" void __ct__13daB_GOS_HIO_cFv();
+extern "C" void daB_GOS_Draw__FP11b_gos_class();
+extern "C" void anm_init__FP11b_gos_classifUcf();
+extern "C" void damage_check__FP11b_gos_class();
+extern "C" void wait__FP11b_gos_class();
+extern "C" void walk__FP11b_gos_class();
+extern "C" void ball__FP11b_gos_class();
+extern "C" void stick__FP11b_gos_class();
+extern "C" void action__FP11b_gos_class();
+extern "C" void daB_GOS_Execute__FP11b_gos_class();
+extern "C" bool daB_GOS_IsDelete__FP11b_gos_class();
+extern "C" void daB_GOS_Delete__FP11b_gos_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daB_GOS_Create__FP10fopAc_ac_c();
+extern "C" void __ct__11b_gos_classFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__13daB_GOS_HIO_cFv();
+extern "C" void __sinit_d_a_b_gos_cpp();
+extern "C" void func_806053A4();
+extern "C" void func_806053AC();
 SECTION_RODATA extern const u32 lit_3646;
 SECTION_RODATA extern const u32 lit_3647;
 SECTION_RODATA extern const u32 lit_3674;
@@ -70,8 +122,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -81,7 +136,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daB_GOS_HIO_cFv) {
+asm daB_GOS_HIO_c::daB_GOS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__ct__13daB_GOS_HIO_cFv.s"
 }
@@ -92,7 +147,7 @@ ASM_FUNCTION(__ct__13daB_GOS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GOS_Draw__FP11b_gos_class) {
+asm void daB_GOS_Draw(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_Draw__FP11b_gos_class.s"
 }
@@ -103,7 +158,7 @@ ASM_FUNCTION(daB_GOS_Draw__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP11b_gos_classifUcf) {
+asm void anm_init(b_gos_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/anm_init__FP11b_gos_classifUcf.s"
 }
@@ -111,21 +166,16 @@ ASM_FUNCTION(anm_init__FP11b_gos_classifUcf) {
 
 
 /* 8060441C-80604420 0004+00 .text      damage_check__FP11b_gos_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP11b_gos_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/damage_check__FP11b_gos_class.s"
+void damage_check(b_gos_class* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80604420-806044D8 00B8+00 .text      wait__FP11b_gos_class                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__FP11b_gos_class) {
+asm void wait(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/wait__FP11b_gos_class.s"
 }
@@ -136,7 +186,7 @@ ASM_FUNCTION(wait__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(walk__FP11b_gos_class) {
+asm void walk(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/walk__FP11b_gos_class.s"
 }
@@ -147,7 +197,7 @@ ASM_FUNCTION(walk__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ball__FP11b_gos_class) {
+asm void ball(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/ball__FP11b_gos_class.s"
 }
@@ -158,7 +208,7 @@ ASM_FUNCTION(ball__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick__FP11b_gos_class) {
+asm void stick(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/stick__FP11b_gos_class.s"
 }
@@ -169,7 +219,7 @@ ASM_FUNCTION(stick__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP11b_gos_class) {
+asm void action(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/action__FP11b_gos_class.s"
 }
@@ -180,7 +230,7 @@ ASM_FUNCTION(action__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GOS_Execute__FP11b_gos_class) {
+asm void daB_GOS_Execute(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_Execute__FP11b_gos_class.s"
 }
@@ -188,21 +238,16 @@ ASM_FUNCTION(daB_GOS_Execute__FP11b_gos_class) {
 
 
 /* 80604CF4-80604CFC 0008+00 .text      daB_GOS_IsDelete__FP11b_gos_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_GOS_IsDelete__FP11b_gos_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_IsDelete__FP11b_gos_class.s"
+bool daB_GOS_IsDelete(b_gos_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80604CFC-80604D64 0068+00 .text      daB_GOS_Delete__FP11b_gos_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GOS_Delete__FP11b_gos_class) {
+asm void daB_GOS_Delete(b_gos_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_Delete__FP11b_gos_class.s"
 }
@@ -213,7 +258,7 @@ ASM_FUNCTION(daB_GOS_Delete__FP11b_gos_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -224,7 +269,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GOS_Create__FP10fopAc_ac_c) {
+asm void daB_GOS_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_Create__FP10fopAc_ac_c.s"
 }
@@ -235,7 +280,7 @@ ASM_FUNCTION(daB_GOS_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11b_gos_classFv) {
+asm b_gos_class::b_gos_class() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__ct__11b_gos_classFv.s"
 }
@@ -246,7 +291,7 @@ ASM_FUNCTION(__ct__11b_gos_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__dt__8cM3dGCylFv.s"
 }
@@ -257,7 +302,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__dt__8cM3dGSphFv.s"
 }
@@ -268,7 +313,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__dt__8cM3dGAabFv.s"
 }
@@ -279,7 +324,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -290,7 +335,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daB_GOS_HIO_cFv) {
+asm daB_GOS_HIO_c::~daB_GOS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__dt__13daB_GOS_HIO_cFv.s"
 }
@@ -301,7 +346,7 @@ ASM_FUNCTION(__dt__13daB_GOS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_gos_cpp) {
+extern "C" asm void __sinit_d_a_b_gos_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/__sinit_d_a_b_gos_cpp.s"
 }
@@ -312,7 +357,7 @@ ASM_FUNCTION(__sinit_d_a_b_gos_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806053A4) {
+extern "C" asm void func_806053A4() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/func_806053A4.s"
 }
@@ -323,7 +368,7 @@ ASM_FUNCTION(func_806053A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806053AC) {
+extern "C" asm void func_806053AC() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/func_806053AC.s"
 }

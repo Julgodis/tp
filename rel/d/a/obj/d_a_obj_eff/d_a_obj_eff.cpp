@@ -6,16 +6,27 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void _create__Q28daObjEff5Act_cFv();
-extern "C" extern void func_8057CA94();
-extern "C" extern void func_8057CAB4();
-extern "C" extern void func_8057CABC();
-extern "C" extern void func_8057CAC4();
-extern "C" extern void func_8057CACC();
-extern "C" extern void func_8057CAD4();
+extern "C" void func_8057CA94();
+extern "C" bool func_8057CAB4();
+extern "C" bool func_8057CABC();
+extern "C" bool func_8057CAC4();
+extern "C" bool func_8057CACC();
+extern "C" void func_8057CAD4();
+
+extern "C" void _create__Q28daObjEff5Act_cFv();
+extern "C" void func_8057CA94();
+extern "C" bool func_8057CAB4();
+extern "C" bool func_8057CABC();
+extern "C" bool func_8057CAC4();
+extern "C" bool func_8057CACC();
+extern "C" void func_8057CAD4();
 SECTION_RODATA extern const u8 lit_3648[4];
 SECTION_DATA extern u8 data_8057CAFC[32];
 SECTION_DATA extern u8 g_profile_Obj_Eff[48];
@@ -24,7 +35,9 @@ SECTION_DATA extern u8 g_profile_Obj_Eff[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -34,7 +47,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__Q28daObjEff5Act_cFv) {
+asm void daObjEff::Act_c::_create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/_create__Q28daObjEff5Act_cFv.s"
 }
@@ -45,7 +58,7 @@ ASM_FUNCTION(_create__Q28daObjEff5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057CA94) {
+extern "C" asm void func_8057CA94() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CA94.s"
 }
@@ -53,54 +66,34 @@ ASM_FUNCTION(func_8057CA94) {
 
 
 /* 8057CAB4-8057CABC 0008+00 .text      Mthd_Delete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_8057CAB4) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAB4.s"
+extern "C" bool func_8057CAB4() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CABC-8057CAC4 0008+00 .text      Mthd_Execute__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_8057CABC) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CABC.s"
+extern "C" bool func_8057CABC() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CAC4-8057CACC 0008+00 .text      Mthd_Draw__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_8057CAC4) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAC4.s"
+extern "C" bool func_8057CAC4() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CACC-8057CAD4 0008+00 .text      Mthd_IsDelete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_8057CACC) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CACC.s"
+extern "C" bool func_8057CACC() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CAD4-8057CAF0 001C+00 .text      PrmAbstract<Q38daObjEff5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ38daObjEff5Act_c5Prm_eQ38daObjEff5Act_c5Prm_e */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057CAD4) {
+extern "C" asm void func_8057CAD4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAD4.s"
 }

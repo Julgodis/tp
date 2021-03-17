@@ -6,40 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjDigSnow_c;
+
+struct daObjDigSnow_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void mode_init_wait();
+	void mode_wait();
+	void mode_init_dig();
+	void mode_dig();
+	void mode_init_end();
+	void mode_end();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjDigSnow_cFv();
-extern "C" extern void setBaseMtx__14daObjDigSnow_cFv();
-extern "C" extern void Create__14daObjDigSnow_cFv();
-extern "C" extern void CreateHeap__14daObjDigSnow_cFv();
-extern "C" extern void create1st__14daObjDigSnow_cFv();
-extern "C" extern void Execute__14daObjDigSnow_cFPPA3_A4_f();
-extern "C" extern void action__14daObjDigSnow_cFv();
-extern "C" extern void mode_init_wait__14daObjDigSnow_cFv();
-extern "C" extern void mode_wait__14daObjDigSnow_cFv();
-extern "C" extern void mode_init_dig__14daObjDigSnow_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void mode_dig__14daObjDigSnow_cFv();
-extern "C" extern void mode_init_end__14daObjDigSnow_cFv();
-extern "C" extern void mode_end__14daObjDigSnow_cFv();
-extern "C" extern void Draw__14daObjDigSnow_cFv();
-extern "C" extern void Delete__14daObjDigSnow_cFv();
-extern "C" extern void daObjDigSnow_create1st__FP14daObjDigSnow_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c();
-extern "C" extern void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c();
-extern "C" extern void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BDD698();
-extern "C" extern void func_80BDD6A0();
-extern "C" extern void func_80BDD6A8();
-extern "C" extern void func_80BDD6B0();
-extern "C" extern void func_80BDD6B8();
+extern "C" void Execute__14daObjDigSnow_cFPPA3_A4_f();
+void daObjDigSnow_create1st(daObjDigSnow_c*);
+void daObjDigSnow_MoveBGDelete(daObjDigSnow_c*);
+void daObjDigSnow_MoveBGExecute(daObjDigSnow_c*);
+void daObjDigSnow_MoveBGDraw(daObjDigSnow_c*);
+extern "C" void func_80BDD698();
+extern "C" void func_80BDD6A0();
+extern "C" void func_80BDD6A8();
+extern "C" void func_80BDD6B0();
+extern "C" void func_80BDD6B8();
+
+extern "C" void initBaseMtx__14daObjDigSnow_cFv();
+extern "C" void setBaseMtx__14daObjDigSnow_cFv();
+extern "C" void Create__14daObjDigSnow_cFv();
+extern "C" void CreateHeap__14daObjDigSnow_cFv();
+extern "C" void create1st__14daObjDigSnow_cFv();
+extern "C" void Execute__14daObjDigSnow_cFPPA3_A4_f();
+extern "C" void action__14daObjDigSnow_cFv();
+extern "C" void mode_init_wait__14daObjDigSnow_cFv();
+extern "C" void mode_wait__14daObjDigSnow_cFv();
+extern "C" void mode_init_dig__14daObjDigSnow_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void mode_dig__14daObjDigSnow_cFv();
+extern "C" void mode_init_end__14daObjDigSnow_cFv();
+extern "C" void mode_end__14daObjDigSnow_cFv();
+extern "C" void Draw__14daObjDigSnow_cFv();
+extern "C" void Delete__14daObjDigSnow_cFv();
+extern "C" void daObjDigSnow_create1st__FP14daObjDigSnow_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c();
+extern "C" void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c();
+extern "C" void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BDD698();
+extern "C" void func_80BDD6A0();
+extern "C" void func_80BDD6A8();
+extern "C" void func_80BDD6B0();
+extern "C" void func_80BDD6B8();
 SECTION_RODATA extern const u32 lit_3744;
 SECTION_RODATA extern const u32 lit_3761;
 SECTION_RODATA extern const u32 lit_3762;
@@ -69,7 +131,9 @@ SECTION_DATA extern void*const __vt__14daObjDigSnow_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +143,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/initBaseMtx__14daObjDigSnow_cFv.s"
 }
@@ -90,7 +154,7 @@ ASM_FUNCTION(initBaseMtx__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/setBaseMtx__14daObjDigSnow_cFv.s"
 }
@@ -101,7 +165,7 @@ ASM_FUNCTION(setBaseMtx__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/Create__14daObjDigSnow_cFv.s"
 }
@@ -112,7 +176,7 @@ ASM_FUNCTION(Create__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/CreateHeap__14daObjDigSnow_cFv.s"
 }
@@ -123,7 +187,7 @@ ASM_FUNCTION(CreateHeap__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/create1st__14daObjDigSnow_cFv.s"
 }
@@ -134,7 +198,7 @@ ASM_FUNCTION(create1st__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjDigSnow_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjDigSnow_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/Execute__14daObjDigSnow_cFPPA3_A4_f.s"
 }
@@ -145,7 +209,7 @@ ASM_FUNCTION(Execute__14daObjDigSnow_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/action__14daObjDigSnow_cFv.s"
 }
@@ -156,7 +220,7 @@ ASM_FUNCTION(action__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_init_wait__14daObjDigSnow_cFv.s"
 }
@@ -167,7 +231,7 @@ ASM_FUNCTION(mode_init_wait__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_wait__14daObjDigSnow_cFv.s"
 }
@@ -178,7 +242,7 @@ ASM_FUNCTION(mode_wait__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dig__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::mode_init_dig() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_init_dig__14daObjDigSnow_cFv.s"
 }
@@ -189,7 +253,7 @@ ASM_FUNCTION(mode_init_dig__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -200,7 +264,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_dig__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::mode_dig() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_dig__14daObjDigSnow_cFv.s"
 }
@@ -211,7 +275,7 @@ ASM_FUNCTION(mode_dig__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_end__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::mode_init_end() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_init_end__14daObjDigSnow_cFv.s"
 }
@@ -219,21 +283,16 @@ ASM_FUNCTION(mode_init_end__14daObjDigSnow_cFv) {
 
 
 /* 80BDD210-80BDD214 0004+00 .text      mode_end__14daObjDigSnow_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_end__14daObjDigSnow_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/mode_end__14daObjDigSnow_cFv.s"
+void daObjDigSnow_c::mode_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BDD214-80BDD2B8 00A4+00 .text      Draw__14daObjDigSnow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/Draw__14daObjDigSnow_cFv.s"
 }
@@ -244,7 +303,7 @@ ASM_FUNCTION(Draw__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjDigSnow_cFv) {
+asm void daObjDigSnow_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/Delete__14daObjDigSnow_cFv.s"
 }
@@ -255,7 +314,7 @@ ASM_FUNCTION(Delete__14daObjDigSnow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigSnow_create1st__FP14daObjDigSnow_c) {
+asm void daObjDigSnow_create1st(daObjDigSnow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_create1st__FP14daObjDigSnow_c.s"
 }
@@ -266,7 +325,7 @@ ASM_FUNCTION(daObjDigSnow_create1st__FP14daObjDigSnow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__8cM3dGCylFv.s"
 }
@@ -277,7 +336,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__8cM3dGAabFv.s"
 }
@@ -288,7 +347,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__10dCcD_GSttsFv.s"
 }
@@ -299,7 +358,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__12dBgS_AcchCirFv.s"
 }
@@ -310,7 +369,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -321,7 +380,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c) {
+asm void daObjDigSnow_MoveBGDelete(daObjDigSnow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c.s"
 }
@@ -332,7 +391,7 @@ ASM_FUNCTION(daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c) {
+asm void daObjDigSnow_MoveBGExecute(daObjDigSnow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c.s"
 }
@@ -343,7 +402,7 @@ ASM_FUNCTION(daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c) {
+asm void daObjDigSnow_MoveBGDraw(daObjDigSnow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c.s"
 }
@@ -354,7 +413,7 @@ ASM_FUNCTION(daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/__dt__10cCcD_GSttsFv.s"
 }
@@ -365,7 +424,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDD698) {
+extern "C" asm void func_80BDD698() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD698.s"
 }
@@ -376,7 +435,7 @@ ASM_FUNCTION(func_80BDD698) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDD6A0) {
+extern "C" asm void func_80BDD6A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A0.s"
 }
@@ -387,7 +446,7 @@ ASM_FUNCTION(func_80BDD6A0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDD6A8) {
+extern "C" asm void func_80BDD6A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A8.s"
 }
@@ -398,7 +457,7 @@ ASM_FUNCTION(func_80BDD6A8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDD6B0) {
+extern "C" asm void func_80BDD6B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B0.s"
 }
@@ -409,7 +468,7 @@ ASM_FUNCTION(func_80BDD6B0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDD6B8) {
+extern "C" asm void func_80BDD6B8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B8.s"
 }

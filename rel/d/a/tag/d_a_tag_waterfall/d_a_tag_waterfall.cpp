@@ -6,25 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagWaterFall_c;
+struct cXyz;
+
+struct daTagWaterFall_HIO_c {
+	daTagWaterFall_HIO_c();
+	~daTagWaterFall_HIO_c();
+};
+
+struct daTagWaterFall_c {
+	bool draw();
+	void getEllipseY(f32);
+	void checkHitWaterFall(cXyz);
+	void checkHitWaterFallCamera();
+	void execute();
+	void _delete();
+	void create();
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__20daTagWaterFall_HIO_cFv();
-extern "C" extern void draw__16daTagWaterFall_cFv();
-extern "C" extern void daTagWaterFall_Draw__FP16daTagWaterFall_c();
-extern "C" extern void s_waterfall__FPvPv();
-extern "C" extern void getEllipseY__16daTagWaterFall_cFf();
-extern "C" extern void checkHitWaterFall__16daTagWaterFall_cF4cXyz();
-extern "C" extern void checkHitWaterFallCamera__16daTagWaterFall_cFv();
-extern "C" extern void execute__16daTagWaterFall_cFv();
-extern "C" extern void daTagWaterFall_Execute__FP16daTagWaterFall_c();
-extern "C" extern void daTagWaterFall_IsDelete__FP16daTagWaterFall_c();
-extern "C" extern void _delete__16daTagWaterFall_cFv();
-extern "C" extern void daTagWaterFall_Delete__FP16daTagWaterFall_c();
-extern "C" extern void create__16daTagWaterFall_cFv();
-extern "C" extern void daTagWaterFall_Create__FP16daTagWaterFall_c();
-extern "C" extern void __dt__20daTagWaterFall_HIO_cFv();
-extern "C" extern void __sinit_d_a_tag_waterfall_cpp();
+void daTagWaterFall_Draw(daTagWaterFall_c*);
+void s_waterfall(void*, void*);
+void daTagWaterFall_Execute(daTagWaterFall_c*);
+bool daTagWaterFall_IsDelete(daTagWaterFall_c*);
+void daTagWaterFall_Delete(daTagWaterFall_c*);
+void daTagWaterFall_Create(daTagWaterFall_c*);
+extern "C" void __sinit_d_a_tag_waterfall_cpp();
+
+extern "C" void __ct__20daTagWaterFall_HIO_cFv();
+extern "C" bool draw__16daTagWaterFall_cFv();
+extern "C" void daTagWaterFall_Draw__FP16daTagWaterFall_c();
+extern "C" void s_waterfall__FPvPv();
+extern "C" void getEllipseY__16daTagWaterFall_cFf();
+extern "C" void checkHitWaterFall__16daTagWaterFall_cF4cXyz();
+extern "C" void checkHitWaterFallCamera__16daTagWaterFall_cFv();
+extern "C" void execute__16daTagWaterFall_cFv();
+extern "C" void daTagWaterFall_Execute__FP16daTagWaterFall_c();
+extern "C" bool daTagWaterFall_IsDelete__FP16daTagWaterFall_c();
+extern "C" void _delete__16daTagWaterFall_cFv();
+extern "C" void daTagWaterFall_Delete__FP16daTagWaterFall_c();
+extern "C" void create__16daTagWaterFall_cFv();
+extern "C" void daTagWaterFall_Create__FP16daTagWaterFall_c();
+extern "C" void __dt__20daTagWaterFall_HIO_cFv();
+extern "C" void __sinit_d_a_tag_waterfall_cpp();
 SECTION_RODATA extern const u8 lit_3758[4];
 SECTION_RODATA extern const u32 lit_3759;
 SECTION_RODATA extern const u32 lit_3760;
@@ -43,8 +76,11 @@ SECTION_BSS extern u8 l_HIO[36];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -54,7 +90,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20daTagWaterFall_HIO_cFv) {
+asm daTagWaterFall_HIO_c::daTagWaterFall_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/__ct__20daTagWaterFall_HIO_cFv.s"
 }
@@ -62,21 +98,16 @@ ASM_FUNCTION(__ct__20daTagWaterFall_HIO_cFv) {
 
 
 /* 80D64680-80D64688 0008+00 .text      draw__16daTagWaterFall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__16daTagWaterFall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/draw__16daTagWaterFall_cFv.s"
+bool daTagWaterFall_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D64688-80D646A8 0020+00 .text      daTagWaterFall_Draw__FP16daTagWaterFall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWaterFall_Draw__FP16daTagWaterFall_c) {
+asm void daTagWaterFall_Draw(daTagWaterFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/daTagWaterFall_Draw__FP16daTagWaterFall_c.s"
 }
@@ -87,7 +118,7 @@ ASM_FUNCTION(daTagWaterFall_Draw__FP16daTagWaterFall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_waterfall__FPvPv) {
+asm void s_waterfall(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/s_waterfall__FPvPv.s"
 }
@@ -98,7 +129,7 @@ ASM_FUNCTION(s_waterfall__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEllipseY__16daTagWaterFall_cFf) {
+asm void daTagWaterFall_c::getEllipseY(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/getEllipseY__16daTagWaterFall_cFf.s"
 }
@@ -109,7 +140,7 @@ ASM_FUNCTION(getEllipseY__16daTagWaterFall_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHitWaterFall__16daTagWaterFall_cF4cXyz) {
+asm void daTagWaterFall_c::checkHitWaterFall(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/checkHitWaterFall__16daTagWaterFall_cF4cXyz.s"
 }
@@ -120,7 +151,7 @@ ASM_FUNCTION(checkHitWaterFall__16daTagWaterFall_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHitWaterFallCamera__16daTagWaterFall_cFv) {
+asm void daTagWaterFall_c::checkHitWaterFallCamera() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/checkHitWaterFallCamera__16daTagWaterFall_cFv.s"
 }
@@ -131,7 +162,7 @@ ASM_FUNCTION(checkHitWaterFallCamera__16daTagWaterFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__16daTagWaterFall_cFv) {
+asm void daTagWaterFall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/execute__16daTagWaterFall_cFv.s"
 }
@@ -142,7 +173,7 @@ ASM_FUNCTION(execute__16daTagWaterFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWaterFall_Execute__FP16daTagWaterFall_c) {
+asm void daTagWaterFall_Execute(daTagWaterFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/daTagWaterFall_Execute__FP16daTagWaterFall_c.s"
 }
@@ -150,21 +181,16 @@ ASM_FUNCTION(daTagWaterFall_Execute__FP16daTagWaterFall_c) {
 
 
 /* 80D64AD8-80D64AE0 0008+00 .text      daTagWaterFall_IsDelete__FP16daTagWaterFall_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagWaterFall_IsDelete__FP16daTagWaterFall_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/daTagWaterFall_IsDelete__FP16daTagWaterFall_c.s"
+bool daTagWaterFall_IsDelete(daTagWaterFall_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D64AE0-80D64B00 0020+00 .text      _delete__16daTagWaterFall_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__16daTagWaterFall_cFv) {
+asm void daTagWaterFall_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/_delete__16daTagWaterFall_cFv.s"
 }
@@ -175,7 +201,7 @@ ASM_FUNCTION(_delete__16daTagWaterFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWaterFall_Delete__FP16daTagWaterFall_c) {
+asm void daTagWaterFall_Delete(daTagWaterFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/daTagWaterFall_Delete__FP16daTagWaterFall_c.s"
 }
@@ -186,7 +212,7 @@ ASM_FUNCTION(daTagWaterFall_Delete__FP16daTagWaterFall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daTagWaterFall_cFv) {
+asm void daTagWaterFall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/create__16daTagWaterFall_cFv.s"
 }
@@ -197,7 +223,7 @@ ASM_FUNCTION(create__16daTagWaterFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWaterFall_Create__FP16daTagWaterFall_c) {
+asm void daTagWaterFall_Create(daTagWaterFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/daTagWaterFall_Create__FP16daTagWaterFall_c.s"
 }
@@ -208,7 +234,7 @@ ASM_FUNCTION(daTagWaterFall_Create__FP16daTagWaterFall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daTagWaterFall_HIO_cFv) {
+asm daTagWaterFall_HIO_c::~daTagWaterFall_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/__dt__20daTagWaterFall_HIO_cFv.s"
 }
@@ -219,7 +245,7 @@ ASM_FUNCTION(__dt__20daTagWaterFall_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_waterfall_cpp) {
+extern "C" asm void __sinit_d_a_tag_waterfall_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_waterfall/d_a_tag_waterfall/__sinit_d_a_tag_waterfall_cpp.s"
 }

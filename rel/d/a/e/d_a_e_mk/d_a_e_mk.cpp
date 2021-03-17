@@ -6,54 +6,131 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_mk_class;
+
+struct daE_MK_HIO_c {
+	daE_MK_HIO_c();
+	~daE_MK_HIO_c();
+};
+
+struct e_mk_class {
+	e_mk_class();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_MK_HIO_cFv();
-extern "C" extern void anm_init__FP10e_mk_classifUcf();
-extern "C" extern void ok_anm_init__FP10e_mk_classifUcf();
-extern "C" extern void daE_MK_Draw__FP10e_mk_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void s_obj_delete__FPvPv();
-extern "C" extern void s_h_sub__FPvPv();
-extern "C" extern void search_hasira__FP10e_mk_class();
-extern "C" extern void s_d_sub__FPvPv();
-extern "C" extern void search_db__FP10e_mk_class();
-extern "C" extern void e_mk_move__FP10e_mk_class();
-extern "C" extern void e_mk_wait__FP10e_mk_class();
-extern "C" extern void e_mk_shoot__FP10e_mk_class();
-extern "C" extern void e_mk_yoro__FP10e_mk_class();
-extern "C" extern void e_mk_drop__FP10e_mk_class();
-extern "C" extern void e_mk_damage__FP10e_mk_class();
-extern "C" extern void damage_check__FP10e_mk_class();
-extern "C" extern void e_mk_s_demo__FP10e_mk_class();
-extern "C" extern void e_mk_e_demo__FP10e_mk_class();
-extern "C" extern void e_mk_r04_demo__FP10e_mk_class();
-extern "C" extern void cam_3d_morf__FP10e_mk_classf();
-extern "C" extern void demo_camera_start__FP10e_mk_class();
-extern "C" extern void demo_camera_end__FP10e_mk_class();
-extern "C" extern void s_ks_sub__FPvPv();
-extern "C" extern void s_brg_sub__FPvPv();
-extern "C" extern void s_brg_sub2__FPvPv();
-extern "C" extern void demo_camera_r04__FP10e_mk_class();
-extern "C" extern void demo_camera_bohit__FP10e_mk_class();
-extern "C" extern void demo_camera__FP10e_mk_class();
-extern "C" extern void action__FP10e_mk_class();
-extern "C" extern void anm_se_set__FP10e_mk_class();
-extern "C" extern void daE_MK_Execute__FP10e_mk_class();
-extern "C" extern void daE_MK_IsDelete__FP10e_mk_class();
-extern "C" extern void daE_MK_Delete__FP10e_mk_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daE_MK_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__10e_mk_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12daE_MK_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_mk_cpp();
-extern "C" extern void func_8071C520();
-extern "C" extern void func_8071C528();
+void anm_init(e_mk_class*, s32, f32, u8, f32);
+void ok_anm_init(e_mk_class*, s32, f32, u8, f32);
+void daE_MK_Draw(e_mk_class*);
+void s_obj_delete(void*, void*);
+void s_h_sub(void*, void*);
+void search_hasira(e_mk_class*);
+void s_d_sub(void*, void*);
+void search_db(e_mk_class*);
+void e_mk_move(e_mk_class*);
+void e_mk_wait(e_mk_class*);
+void e_mk_shoot(e_mk_class*);
+void e_mk_yoro(e_mk_class*);
+void e_mk_drop(e_mk_class*);
+void e_mk_damage(e_mk_class*);
+void damage_check(e_mk_class*);
+void e_mk_s_demo(e_mk_class*);
+void e_mk_e_demo(e_mk_class*);
+void e_mk_r04_demo(e_mk_class*);
+void cam_3d_morf(e_mk_class*, f32);
+void demo_camera_start(e_mk_class*);
+void demo_camera_end(e_mk_class*);
+void s_ks_sub(void*, void*);
+void s_brg_sub(void*, void*);
+void s_brg_sub2(void*, void*);
+void demo_camera_r04(e_mk_class*);
+void demo_camera_bohit(e_mk_class*);
+void demo_camera(e_mk_class*);
+void action(e_mk_class*);
+void anm_se_set(e_mk_class*);
+void daE_MK_Execute(e_mk_class*);
+bool daE_MK_IsDelete(e_mk_class*);
+void daE_MK_Delete(e_mk_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_MK_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_mk_cpp();
+extern "C" void func_8071C520();
+extern "C" void func_8071C528();
+
+extern "C" void __ct__12daE_MK_HIO_cFv();
+extern "C" void anm_init__FP10e_mk_classifUcf();
+extern "C" void ok_anm_init__FP10e_mk_classifUcf();
+extern "C" void daE_MK_Draw__FP10e_mk_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void s_obj_delete__FPvPv();
+extern "C" void s_h_sub__FPvPv();
+extern "C" void search_hasira__FP10e_mk_class();
+extern "C" void s_d_sub__FPvPv();
+extern "C" void search_db__FP10e_mk_class();
+extern "C" void e_mk_move__FP10e_mk_class();
+extern "C" void e_mk_wait__FP10e_mk_class();
+extern "C" void e_mk_shoot__FP10e_mk_class();
+extern "C" void e_mk_yoro__FP10e_mk_class();
+extern "C" void e_mk_drop__FP10e_mk_class();
+extern "C" void e_mk_damage__FP10e_mk_class();
+extern "C" void damage_check__FP10e_mk_class();
+extern "C" void e_mk_s_demo__FP10e_mk_class();
+extern "C" void e_mk_e_demo__FP10e_mk_class();
+extern "C" void e_mk_r04_demo__FP10e_mk_class();
+extern "C" void cam_3d_morf__FP10e_mk_classf();
+extern "C" void demo_camera_start__FP10e_mk_class();
+extern "C" void demo_camera_end__FP10e_mk_class();
+extern "C" void s_ks_sub__FPvPv();
+extern "C" void s_brg_sub__FPvPv();
+extern "C" void s_brg_sub2__FPvPv();
+extern "C" void demo_camera_r04__FP10e_mk_class();
+extern "C" void demo_camera_bohit__FP10e_mk_class();
+extern "C" void demo_camera__FP10e_mk_class();
+extern "C" void action__FP10e_mk_class();
+extern "C" void anm_se_set__FP10e_mk_class();
+extern "C" void daE_MK_Execute__FP10e_mk_class();
+extern "C" bool daE_MK_IsDelete__FP10e_mk_class();
+extern "C" void daE_MK_Delete__FP10e_mk_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daE_MK_Create__FP10fopAc_ac_c();
+extern "C" void __ct__10e_mk_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12daE_MK_HIO_cFv();
+extern "C" void __sinit_d_a_e_mk_cpp();
+extern "C" void func_8071C520();
+extern "C" void func_8071C528();
 SECTION_RODATA extern const u32 lit_3777;
 SECTION_RODATA extern const u32 lit_3778;
 SECTION_RODATA extern const u32 lit_3779;
@@ -293,8 +370,11 @@ SECTION_BSS extern u8 data_8071CBF4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -304,7 +384,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_MK_HIO_cFv) {
+asm daE_MK_HIO_c::daE_MK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__ct__12daE_MK_HIO_cFv.s"
 }
@@ -315,7 +395,7 @@ ASM_FUNCTION(__ct__12daE_MK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10e_mk_classifUcf) {
+asm void anm_init(e_mk_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/anm_init__FP10e_mk_classifUcf.s"
 }
@@ -326,7 +406,7 @@ ASM_FUNCTION(anm_init__FP10e_mk_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ok_anm_init__FP10e_mk_classifUcf) {
+asm void ok_anm_init(e_mk_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/ok_anm_init__FP10e_mk_classifUcf.s"
 }
@@ -337,7 +417,7 @@ ASM_FUNCTION(ok_anm_init__FP10e_mk_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_Draw__FP10e_mk_class) {
+asm void daE_MK_Draw(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_Draw__FP10e_mk_class.s"
 }
@@ -348,7 +428,7 @@ ASM_FUNCTION(daE_MK_Draw__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__4cXyzFv.s"
 }
@@ -359,7 +439,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_delete__FPvPv) {
+asm void s_obj_delete(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_obj_delete__FPvPv.s"
 }
@@ -370,7 +450,7 @@ ASM_FUNCTION(s_obj_delete__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_h_sub__FPvPv) {
+asm void s_h_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_h_sub__FPvPv.s"
 }
@@ -381,7 +461,7 @@ ASM_FUNCTION(s_h_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_hasira__FP10e_mk_class) {
+asm void search_hasira(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/search_hasira__FP10e_mk_class.s"
 }
@@ -392,7 +472,7 @@ ASM_FUNCTION(search_hasira__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_d_sub__FPvPv) {
+asm void s_d_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_d_sub__FPvPv.s"
 }
@@ -403,7 +483,7 @@ ASM_FUNCTION(s_d_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_db__FP10e_mk_class) {
+asm void search_db(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/search_db__FP10e_mk_class.s"
 }
@@ -414,7 +494,7 @@ ASM_FUNCTION(search_db__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_move__FP10e_mk_class) {
+asm void e_mk_move(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_move__FP10e_mk_class.s"
 }
@@ -425,7 +505,7 @@ ASM_FUNCTION(e_mk_move__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_wait__FP10e_mk_class) {
+asm void e_mk_wait(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_wait__FP10e_mk_class.s"
 }
@@ -436,7 +516,7 @@ ASM_FUNCTION(e_mk_wait__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_shoot__FP10e_mk_class) {
+asm void e_mk_shoot(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_shoot__FP10e_mk_class.s"
 }
@@ -447,7 +527,7 @@ ASM_FUNCTION(e_mk_shoot__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_yoro__FP10e_mk_class) {
+asm void e_mk_yoro(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_yoro__FP10e_mk_class.s"
 }
@@ -458,7 +538,7 @@ ASM_FUNCTION(e_mk_yoro__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_drop__FP10e_mk_class) {
+asm void e_mk_drop(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_drop__FP10e_mk_class.s"
 }
@@ -469,7 +549,7 @@ ASM_FUNCTION(e_mk_drop__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_damage__FP10e_mk_class) {
+asm void e_mk_damage(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_damage__FP10e_mk_class.s"
 }
@@ -480,7 +560,7 @@ ASM_FUNCTION(e_mk_damage__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10e_mk_class) {
+asm void damage_check(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/damage_check__FP10e_mk_class.s"
 }
@@ -491,7 +571,7 @@ ASM_FUNCTION(damage_check__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_s_demo__FP10e_mk_class) {
+asm void e_mk_s_demo(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_s_demo__FP10e_mk_class.s"
 }
@@ -502,7 +582,7 @@ ASM_FUNCTION(e_mk_s_demo__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_e_demo__FP10e_mk_class) {
+asm void e_mk_e_demo(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_e_demo__FP10e_mk_class.s"
 }
@@ -513,7 +593,7 @@ ASM_FUNCTION(e_mk_e_demo__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_r04_demo__FP10e_mk_class) {
+asm void e_mk_r04_demo(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/e_mk_r04_demo__FP10e_mk_class.s"
 }
@@ -524,7 +604,7 @@ ASM_FUNCTION(e_mk_r04_demo__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cam_3d_morf__FP10e_mk_classf) {
+asm void cam_3d_morf(e_mk_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/cam_3d_morf__FP10e_mk_classf.s"
 }
@@ -535,7 +615,7 @@ ASM_FUNCTION(cam_3d_morf__FP10e_mk_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera_start__FP10e_mk_class) {
+asm void demo_camera_start(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/demo_camera_start__FP10e_mk_class.s"
 }
@@ -546,7 +626,7 @@ ASM_FUNCTION(demo_camera_start__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera_end__FP10e_mk_class) {
+asm void demo_camera_end(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/demo_camera_end__FP10e_mk_class.s"
 }
@@ -557,7 +637,7 @@ ASM_FUNCTION(demo_camera_end__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ks_sub__FPvPv) {
+asm void s_ks_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_ks_sub__FPvPv.s"
 }
@@ -568,7 +648,7 @@ ASM_FUNCTION(s_ks_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_brg_sub__FPvPv) {
+asm void s_brg_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_brg_sub__FPvPv.s"
 }
@@ -579,7 +659,7 @@ ASM_FUNCTION(s_brg_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_brg_sub2__FPvPv) {
+asm void s_brg_sub2(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/s_brg_sub2__FPvPv.s"
 }
@@ -590,7 +670,7 @@ ASM_FUNCTION(s_brg_sub2__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera_r04__FP10e_mk_class) {
+asm void demo_camera_r04(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/demo_camera_r04__FP10e_mk_class.s"
 }
@@ -601,7 +681,7 @@ ASM_FUNCTION(demo_camera_r04__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera_bohit__FP10e_mk_class) {
+asm void demo_camera_bohit(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/demo_camera_bohit__FP10e_mk_class.s"
 }
@@ -612,7 +692,7 @@ ASM_FUNCTION(demo_camera_bohit__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP10e_mk_class) {
+asm void demo_camera(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/demo_camera__FP10e_mk_class.s"
 }
@@ -623,7 +703,7 @@ ASM_FUNCTION(demo_camera__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10e_mk_class) {
+asm void action(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/action__FP10e_mk_class.s"
 }
@@ -634,7 +714,7 @@ ASM_FUNCTION(action__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP10e_mk_class) {
+asm void anm_se_set(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/anm_se_set__FP10e_mk_class.s"
 }
@@ -645,7 +725,7 @@ ASM_FUNCTION(anm_se_set__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_Execute__FP10e_mk_class) {
+asm void daE_MK_Execute(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_Execute__FP10e_mk_class.s"
 }
@@ -653,21 +733,16 @@ ASM_FUNCTION(daE_MK_Execute__FP10e_mk_class) {
 
 
 /* 8071B9C4-8071B9CC 0008+00 .text      daE_MK_IsDelete__FP10e_mk_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_IsDelete__FP10e_mk_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_IsDelete__FP10e_mk_class.s"
+bool daE_MK_IsDelete(e_mk_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8071B9CC-8071BA34 0068+00 .text      daE_MK_Delete__FP10e_mk_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_Delete__FP10e_mk_class) {
+asm void daE_MK_Delete(e_mk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_Delete__FP10e_mk_class.s"
 }
@@ -678,7 +753,7 @@ ASM_FUNCTION(daE_MK_Delete__FP10e_mk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -689,7 +764,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__12J3DFrameCtrlFv.s"
 }
@@ -700,7 +775,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_Create__FP10fopAc_ac_c) {
+asm void daE_MK_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_Create__FP10fopAc_ac_c.s"
 }
@@ -711,7 +786,7 @@ ASM_FUNCTION(daE_MK_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10e_mk_classFv) {
+asm e_mk_class::e_mk_class() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__ct__10e_mk_classFv.s"
 }
@@ -722,7 +797,7 @@ ASM_FUNCTION(__ct__10e_mk_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__8cM3dGSphFv.s"
 }
@@ -733,7 +808,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__8cM3dGAabFv.s"
 }
@@ -744,7 +819,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -755,7 +830,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_MK_HIO_cFv) {
+asm daE_MK_HIO_c::~daE_MK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__dt__12daE_MK_HIO_cFv.s"
 }
@@ -766,7 +841,7 @@ ASM_FUNCTION(__dt__12daE_MK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_mk_cpp) {
+extern "C" asm void __sinit_d_a_e_mk_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/__sinit_d_a_e_mk_cpp.s"
 }
@@ -777,7 +852,7 @@ ASM_FUNCTION(__sinit_d_a_e_mk_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8071C520) {
+extern "C" asm void func_8071C520() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/func_8071C520.s"
 }
@@ -788,7 +863,7 @@ ASM_FUNCTION(func_8071C520) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8071C528) {
+extern "C" asm void func_8071C528() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/func_8071C528.s"
 }

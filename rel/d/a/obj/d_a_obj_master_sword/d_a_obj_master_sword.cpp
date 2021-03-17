@@ -6,32 +6,90 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMasterSword_c;
+
+struct daObjMasterSword_c {
+	void initWait();
+	void executeWait();
+	void createHeapCallBack(fopAc_ac_c*);
+	void CreateHeap();
+	void create();
+	void create_init();
+	~daObjMasterSword_c();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initWait__18daObjMasterSword_cFv();
-extern "C" extern void executeWait__18daObjMasterSword_cFv();
-extern "C" extern void createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__18daObjMasterSword_cFv();
-extern "C" extern void daObjMasterSword_Create__FP10fopAc_ac_c();
-extern "C" extern void create__18daObjMasterSword_cFv();
-extern "C" extern void create_init__18daObjMasterSword_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjMasterSword_Delete__FP18daObjMasterSword_c();
-extern "C" extern void __dt__18daObjMasterSword_cFv();
-extern "C" extern void daObjMasterSword_Execute__FP18daObjMasterSword_c();
-extern "C" extern void daObjMasterSword_Draw__FP18daObjMasterSword_c();
-extern "C" extern void draw__18daObjMasterSword_cFv();
-extern "C" extern void daObjMasterSword_IsDelete__FP18daObjMasterSword_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_master_sword_cpp();
-extern "C" extern void func_80C91924();
-extern "C" extern void func_80C9192C();
+void daObjMasterSword_Create(fopAc_ac_c*);
+void daObjMasterSword_Delete(daObjMasterSword_c*);
+void daObjMasterSword_Execute(daObjMasterSword_c*);
+void daObjMasterSword_Draw(daObjMasterSword_c*);
+bool daObjMasterSword_IsDelete(daObjMasterSword_c*);
+extern "C" void __sinit_d_a_obj_master_sword_cpp();
+extern "C" void func_80C91924();
+extern "C" void func_80C9192C();
+
+extern "C" void initWait__18daObjMasterSword_cFv();
+extern "C" void executeWait__18daObjMasterSword_cFv();
+extern "C" void createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__18daObjMasterSword_cFv();
+extern "C" void daObjMasterSword_Create__FP10fopAc_ac_c();
+extern "C" void create__18daObjMasterSword_cFv();
+extern "C" void create_init__18daObjMasterSword_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjMasterSword_Delete__FP18daObjMasterSword_c();
+extern "C" void __dt__18daObjMasterSword_cFv();
+extern "C" void daObjMasterSword_Execute__FP18daObjMasterSword_c();
+extern "C" void daObjMasterSword_Draw__FP18daObjMasterSword_c();
+extern "C" void draw__18daObjMasterSword_cFv();
+extern "C" bool daObjMasterSword_IsDelete__FP18daObjMasterSword_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_master_sword_cpp();
+extern "C" void func_80C91924();
+extern "C" void func_80C9192C();
 SECTION_RODATA extern const u32 mAttr__18daObjMasterSword_c;
 SECTION_RODATA extern const u8 lit_3710[12];
 SECTION_RODATA extern const u32 lit_3759;
@@ -64,7 +122,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -74,7 +134,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/initWait__18daObjMasterSword_cFv.s"
 }
@@ -85,7 +145,7 @@ ASM_FUNCTION(initWait__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/executeWait__18daObjMasterSword_cFv.s"
 }
@@ -96,7 +156,7 @@ ASM_FUNCTION(executeWait__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c) {
+asm void daObjMasterSword_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c.s"
 }
@@ -107,7 +167,7 @@ ASM_FUNCTION(createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/CreateHeap__18daObjMasterSword_cFv.s"
 }
@@ -118,7 +178,7 @@ ASM_FUNCTION(CreateHeap__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMasterSword_Create__FP10fopAc_ac_c) {
+asm void daObjMasterSword_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Create__FP10fopAc_ac_c.s"
 }
@@ -129,7 +189,7 @@ ASM_FUNCTION(daObjMasterSword_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/create__18daObjMasterSword_cFv.s"
 }
@@ -140,7 +200,7 @@ ASM_FUNCTION(create__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/create_init__18daObjMasterSword_cFv.s"
 }
@@ -151,7 +211,7 @@ ASM_FUNCTION(create_init__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -162,7 +222,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__12dBgS_AcchCirFv.s"
 }
@@ -173,7 +233,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__8cM3dGCylFv.s"
 }
@@ -184,7 +244,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__8cM3dGAabFv.s"
 }
@@ -195,7 +255,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__10dCcD_GSttsFv.s"
 }
@@ -206,7 +266,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__12J3DFrameCtrlFv.s"
 }
@@ -217,7 +277,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMasterSword_Delete__FP18daObjMasterSword_c) {
+asm void daObjMasterSword_Delete(daObjMasterSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Delete__FP18daObjMasterSword_c.s"
 }
@@ -228,7 +288,7 @@ ASM_FUNCTION(daObjMasterSword_Delete__FP18daObjMasterSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daObjMasterSword_cFv) {
+asm daObjMasterSword_c::~daObjMasterSword_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__18daObjMasterSword_cFv.s"
 }
@@ -239,7 +299,7 @@ ASM_FUNCTION(__dt__18daObjMasterSword_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMasterSword_Execute__FP18daObjMasterSword_c) {
+asm void daObjMasterSword_Execute(daObjMasterSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Execute__FP18daObjMasterSword_c.s"
 }
@@ -250,7 +310,7 @@ ASM_FUNCTION(daObjMasterSword_Execute__FP18daObjMasterSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMasterSword_Draw__FP18daObjMasterSword_c) {
+asm void daObjMasterSword_Draw(daObjMasterSword_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Draw__FP18daObjMasterSword_c.s"
 }
@@ -261,7 +321,7 @@ ASM_FUNCTION(daObjMasterSword_Draw__FP18daObjMasterSword_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__18daObjMasterSword_cFv) {
+asm void daObjMasterSword_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/draw__18daObjMasterSword_cFv.s"
 }
@@ -269,21 +329,16 @@ ASM_FUNCTION(draw__18daObjMasterSword_cFv) {
 
 
 /* 80C91894-80C9189C 0008+00 .text      daObjMasterSword_IsDelete__FP18daObjMasterSword_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMasterSword_IsDelete__FP18daObjMasterSword_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_IsDelete__FP18daObjMasterSword_c.s"
+bool daObjMasterSword_IsDelete(daObjMasterSword_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9189C-80C918E4 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__dt__10cCcD_GSttsFv.s"
 }
@@ -294,7 +349,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_master_sword_cpp) {
+extern "C" asm void __sinit_d_a_obj_master_sword_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/__sinit_d_a_obj_master_sword_cpp.s"
 }
@@ -305,7 +360,7 @@ ASM_FUNCTION(__sinit_d_a_obj_master_sword_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C91924) {
+extern "C" asm void func_80C91924() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/func_80C91924.s"
 }
@@ -316,7 +371,7 @@ ASM_FUNCTION(func_80C91924) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C9192C) {
+extern "C" asm void func_80C9192C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/func_80C9192C.s"
 }

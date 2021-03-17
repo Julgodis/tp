@@ -6,22 +6,60 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dPath;
+struct kytag03_class;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct dPath {
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct fopAc_ac_c {
+};
+
+struct kytag03_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void get_rail_ratio_pos__FP5dPathifPsPs();
-extern "C" extern void set_path_info__FP10fopAc_ac_c();
-extern "C" extern void getSound_pos__FP10fopAc_ac_c();
-extern "C" extern void get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi();
-extern "C" extern void get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi();
-extern "C" extern void odour_move__FP13kytag03_class();
-extern "C" extern void daKytag03_Draw__FP13kytag03_class();
-extern "C" extern void daKytag03_Execute__FP13kytag03_class();
-extern "C" extern void daKytag03_IsDelete__FP13kytag03_class();
-extern "C" extern void daKytag03_Delete__FP13kytag03_class();
-extern "C" extern void daKytag03_Create__FP10fopAc_ac_c();
+void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*);
+extern "C" void get_rail_ratio_pos__FP5dPathifPsPs();
+void set_path_info(fopAc_ac_c*);
+void getSound_pos(fopAc_ac_c*);
+void get_Extent_pos_start_get(kytag03_class*, dPath*, cXyz*, f32, s32*);
+void get_Extent_pos_end_get(kytag03_class*, dPath*, cXyz*, f32, s32*);
+void odour_move(kytag03_class*);
+bool daKytag03_Draw(kytag03_class*);
+void daKytag03_Execute(kytag03_class*);
+bool daKytag03_IsDelete(kytag03_class*);
+void daKytag03_Delete(kytag03_class*);
+void daKytag03_Create(fopAc_ac_c*);
+
+extern "C" void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void get_rail_ratio_pos__FP5dPathifPsPs();
+extern "C" void set_path_info__FP10fopAc_ac_c();
+extern "C" void getSound_pos__FP10fopAc_ac_c();
+extern "C" void get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi();
+extern "C" void get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi();
+extern "C" void odour_move__FP13kytag03_class();
+extern "C" bool daKytag03_Draw__FP13kytag03_class();
+extern "C" void daKytag03_Execute__FP13kytag03_class();
+extern "C" bool daKytag03_IsDelete__FP13kytag03_class();
+extern "C" void daKytag03_Delete__FP13kytag03_class();
+extern "C" void daKytag03_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3770[8];
 SECTION_RODATA extern const u8 lit_3870[4];
 SECTION_RODATA extern const u32 lit_4218;
@@ -70,7 +108,9 @@ SECTION_BSS extern u8 struct_80857768[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -80,7 +120,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath) {
+asm void dEnvSe_getNearPathPos(cXyz* field_0, cXyz* field_1, dPath* field_2) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath.s"
 }
@@ -91,7 +131,7 @@ ASM_FUNCTION(dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/__dt__8cM3dGLinFv.s"
 }
@@ -102,7 +142,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_rail_ratio_pos__FP5dPathifPsPs) {
+extern "C" asm void get_rail_ratio_pos__FP5dPathifPsPs() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/get_rail_ratio_pos__FP5dPathifPsPs.s"
 }
@@ -113,7 +153,7 @@ ASM_FUNCTION(get_rail_ratio_pos__FP5dPathifPsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
+asm void set_path_info(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/set_path_info__FP10fopAc_ac_c.s"
 }
@@ -124,7 +164,7 @@ ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSound_pos__FP10fopAc_ac_c) {
+asm void getSound_pos(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/getSound_pos__FP10fopAc_ac_c.s"
 }
@@ -135,7 +175,7 @@ ASM_FUNCTION(getSound_pos__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi) {
+asm void get_Extent_pos_start_get(kytag03_class* field_0, dPath* field_1, cXyz* field_2, f32 field_3, s32* field_4) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi.s"
 }
@@ -146,7 +186,7 @@ ASM_FUNCTION(get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi) {
+asm void get_Extent_pos_end_get(kytag03_class* field_0, dPath* field_1, cXyz* field_2, f32 field_3, s32* field_4) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi.s"
 }
@@ -157,7 +197,7 @@ ASM_FUNCTION(get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(odour_move__FP13kytag03_class) {
+asm void odour_move(kytag03_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/odour_move__FP13kytag03_class.s"
 }
@@ -165,21 +205,16 @@ ASM_FUNCTION(odour_move__FP13kytag03_class) {
 
 
 /* 80856E24-80856E2C 0008+00 .text      daKytag03_Draw__FP13kytag03_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag03_Draw__FP13kytag03_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_Draw__FP13kytag03_class.s"
+bool daKytag03_Draw(kytag03_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80856E2C-808573F4 05C8+00 .text      daKytag03_Execute__FP13kytag03_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag03_Execute__FP13kytag03_class) {
+asm void daKytag03_Execute(kytag03_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_Execute__FP13kytag03_class.s"
 }
@@ -187,21 +222,16 @@ ASM_FUNCTION(daKytag03_Execute__FP13kytag03_class) {
 
 
 /* 808573F4-808573FC 0008+00 .text      daKytag03_IsDelete__FP13kytag03_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag03_IsDelete__FP13kytag03_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_IsDelete__FP13kytag03_class.s"
+bool daKytag03_IsDelete(kytag03_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808573FC-80857470 0074+00 .text      daKytag03_Delete__FP13kytag03_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag03_Delete__FP13kytag03_class) {
+asm void daKytag03_Delete(kytag03_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_Delete__FP13kytag03_class.s"
 }
@@ -212,7 +242,7 @@ ASM_FUNCTION(daKytag03_Delete__FP13kytag03_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag03_Create__FP10fopAc_ac_c) {
+asm void daKytag03_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_Create__FP10fopAc_ac_c.s"
 }

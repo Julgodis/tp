@@ -6,71 +6,186 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cCcD_Obj;
+struct daBgObj_c;
+struct J3DModel;
+struct dBgW;
+struct fopAc_ac_c;
+
+struct dBgW {
+};
+
+struct daBgObj_c {
+	struct spec_data_c {
+		void initParticleBlock(u8*);
+		void initSoundBlock(u8*);
+		void initTexShareBlock(u8*);
+		void initFarInfoBlock(u8*);
+		void Set(void*);
+	};
+
+	void release(dBgW*);
+	void regist(dBgW*);
+	void initAtt();
+	void setAttentionInfo(fopAc_ac_c*);
+	void initBaseMtx();
+	void setBaseMtx();
+	void settingCullSizeBoxForCo(s32);
+	void settingCullSizeBoxForCull(s32);
+	void CreateInitType0();
+	void CreateInitType1();
+	void Create();
+	void CreateHeapType0();
+	void CreateHeapType1();
+	void doShareTexture();
+	void CreateHeap();
+	void create1st();
+	void setColCommon();
+	void set_tri_0();
+	void set_tri_1();
+	void set_cyl_0();
+	void set_tri_2();
+	void set_tri_3();
+	void setParticle();
+	void setSe();
+	void checkDestroy();
+	void checkHitAt(cCcD_Obj*);
+	void orderWait_tri();
+	void orderWait_cyl();
+	void orderWait_spec();
+	void actionOrderWait();
+	void actionOrder();
+	void actionEvent();
+	bool actionWait();
+	void ExecuteType0();
+	void ExecuteType1();
+	void Draw();
+	void indirectProc(J3DModel*);
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_Obj {
+};
+
+struct J3DModel {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Tri {
+	~dCcD_Tri();
+	dCcD_Tri();
+};
+
+struct cM3dGTri {
+	~cM3dGTri();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getBmdName__Fii();
-extern "C" extern void getBtkName__Fii();
-extern "C" extern void getBrkName__Fii();
-extern "C" extern void getDzbName__Fi();
-extern "C" extern void initParticleBlock__Q29daBgObj_c11spec_data_cFPUc();
-extern "C" extern void initSoundBlock__Q29daBgObj_c11spec_data_cFPUc();
-extern "C" extern void initTexShareBlock__Q29daBgObj_c11spec_data_cFPUc();
-extern "C" extern void initFarInfoBlock__Q29daBgObj_c11spec_data_cFPUc();
-extern "C" extern void Set__Q29daBgObj_c11spec_data_cFPv();
-extern "C" extern void release__9daBgObj_cFP4dBgW();
-extern "C" extern void regist__9daBgObj_cFP4dBgW();
-extern "C" extern void initAtt__9daBgObj_cFv();
-extern "C" extern void setAttentionInfo__9daBgObj_cFP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__9daBgObj_cFv();
-extern "C" extern void setBaseMtx__9daBgObj_cFv();
-extern "C" extern void settingCullSizeBoxForCo__9daBgObj_cFi();
-extern "C" extern void settingCullSizeBoxForCull__9daBgObj_cFi();
-extern "C" extern void CreateInitType0__9daBgObj_cFv();
-extern "C" extern void CreateInitType1__9daBgObj_cFv();
-extern "C" extern void Create__9daBgObj_cFv();
-extern "C" extern void CreateHeapType0__9daBgObj_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void CreateHeapType1__9daBgObj_cFv();
-extern "C" extern void doShareTexture__9daBgObj_cFv();
-extern "C" extern void CreateHeap__9daBgObj_cFv();
-extern "C" extern void create1st__9daBgObj_cFv();
-extern "C" extern void setColCommon__9daBgObj_cFv();
-extern "C" extern void set_tri_0__9daBgObj_cFv();
-extern "C" extern void set_tri_1__9daBgObj_cFv();
-extern "C" extern void set_cyl_0__9daBgObj_cFv();
-extern "C" extern void set_tri_2__9daBgObj_cFv();
-extern "C" extern void set_tri_3__9daBgObj_cFv();
-extern "C" extern void setParticle__9daBgObj_cFv();
-extern "C" extern void setSe__9daBgObj_cFv();
-extern "C" extern void checkDestroy__9daBgObj_cFv();
-extern "C" extern void checkHitAt__9daBgObj_cFP8cCcD_Obj();
-extern "C" extern void orderWait_tri__9daBgObj_cFv();
-extern "C" extern void orderWait_cyl__9daBgObj_cFv();
-extern "C" extern void orderWait_spec__9daBgObj_cFv();
-extern "C" extern void actionOrderWait__9daBgObj_cFv();
-extern "C" extern void actionOrder__9daBgObj_cFv();
-extern "C" extern void actionEvent__9daBgObj_cFv();
-extern "C" extern void actionWait__9daBgObj_cFv();
-extern "C" extern void ExecuteType0__9daBgObj_cFv();
-extern "C" extern void ExecuteType1__9daBgObj_cFv();
-extern "C" extern void Execute__9daBgObj_cFPPA3_A4_f();
-extern "C" extern void Draw__9daBgObj_cFv();
-extern "C" extern void indirectProc__9daBgObj_cFP8J3DModel();
-extern "C" extern void Delete__9daBgObj_cFv();
-extern "C" extern void daBgObj_create1st__FP9daBgObj_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_TriFv();
-extern "C" extern void __ct__8dCcD_TriFv();
-extern "C" extern void __dt__8cM3dGTriFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daBgObj_MoveBGDelete__FP9daBgObj_c();
-extern "C" extern void daBgObj_MoveBGExecute__FP9daBgObj_c();
-extern "C" extern void daBgObj_MoveBGDraw__FP9daBgObj_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_bg_obj_cpp();
+void getBmdName(s32, s32);
+void getBtkName(s32, s32);
+void getBrkName(s32, s32);
+void getDzbName(s32);
+extern "C" void Execute__9daBgObj_cFPPA3_A4_f();
+void daBgObj_create1st(daBgObj_c*);
+void daBgObj_MoveBGDelete(daBgObj_c*);
+void daBgObj_MoveBGExecute(daBgObj_c*);
+void daBgObj_MoveBGDraw(daBgObj_c*);
+extern "C" void __sinit_d_a_bg_obj_cpp();
+
+extern "C" void getBmdName__Fii();
+extern "C" void getBtkName__Fii();
+extern "C" void getBrkName__Fii();
+extern "C" void getDzbName__Fi();
+extern "C" void initParticleBlock__Q29daBgObj_c11spec_data_cFPUc();
+extern "C" void initSoundBlock__Q29daBgObj_c11spec_data_cFPUc();
+extern "C" void initTexShareBlock__Q29daBgObj_c11spec_data_cFPUc();
+extern "C" void initFarInfoBlock__Q29daBgObj_c11spec_data_cFPUc();
+extern "C" void Set__Q29daBgObj_c11spec_data_cFPv();
+extern "C" void release__9daBgObj_cFP4dBgW();
+extern "C" void regist__9daBgObj_cFP4dBgW();
+extern "C" void initAtt__9daBgObj_cFv();
+extern "C" void setAttentionInfo__9daBgObj_cFP10fopAc_ac_c();
+extern "C" void initBaseMtx__9daBgObj_cFv();
+extern "C" void setBaseMtx__9daBgObj_cFv();
+extern "C" void settingCullSizeBoxForCo__9daBgObj_cFi();
+extern "C" void settingCullSizeBoxForCull__9daBgObj_cFi();
+extern "C" void CreateInitType0__9daBgObj_cFv();
+extern "C" void CreateInitType1__9daBgObj_cFv();
+extern "C" void Create__9daBgObj_cFv();
+extern "C" void CreateHeapType0__9daBgObj_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void CreateHeapType1__9daBgObj_cFv();
+extern "C" void doShareTexture__9daBgObj_cFv();
+extern "C" void CreateHeap__9daBgObj_cFv();
+extern "C" void create1st__9daBgObj_cFv();
+extern "C" void setColCommon__9daBgObj_cFv();
+extern "C" void set_tri_0__9daBgObj_cFv();
+extern "C" void set_tri_1__9daBgObj_cFv();
+extern "C" void set_cyl_0__9daBgObj_cFv();
+extern "C" void set_tri_2__9daBgObj_cFv();
+extern "C" void set_tri_3__9daBgObj_cFv();
+extern "C" void setParticle__9daBgObj_cFv();
+extern "C" void setSe__9daBgObj_cFv();
+extern "C" void checkDestroy__9daBgObj_cFv();
+extern "C" void checkHitAt__9daBgObj_cFP8cCcD_Obj();
+extern "C" void orderWait_tri__9daBgObj_cFv();
+extern "C" void orderWait_cyl__9daBgObj_cFv();
+extern "C" void orderWait_spec__9daBgObj_cFv();
+extern "C" void actionOrderWait__9daBgObj_cFv();
+extern "C" void actionOrder__9daBgObj_cFv();
+extern "C" void actionEvent__9daBgObj_cFv();
+extern "C" bool actionWait__9daBgObj_cFv();
+extern "C" void ExecuteType0__9daBgObj_cFv();
+extern "C" void ExecuteType1__9daBgObj_cFv();
+extern "C" void Execute__9daBgObj_cFPPA3_A4_f();
+extern "C" void Draw__9daBgObj_cFv();
+extern "C" void indirectProc__9daBgObj_cFP8J3DModel();
+extern "C" void Delete__9daBgObj_cFv();
+extern "C" void daBgObj_create1st__FP9daBgObj_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_TriFv();
+extern "C" void __ct__8dCcD_TriFv();
+extern "C" void __dt__8cM3dGTriFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daBgObj_MoveBGDelete__FP9daBgObj_c();
+extern "C" void daBgObj_MoveBGExecute__FP9daBgObj_c();
+extern "C" void daBgObj_MoveBGDraw__FP9daBgObj_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_bg_obj_cpp();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u32 lit_3823;
 SECTION_RODATA extern const u8 lit_3873[4];
@@ -133,7 +248,9 @@ SECTION_BSS extern u8 data_8045CE40[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -143,7 +260,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmdName__Fii) {
+asm void getBmdName(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/getBmdName__Fii.s"
 }
@@ -154,7 +271,7 @@ ASM_FUNCTION(getBmdName__Fii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBtkName__Fii) {
+asm void getBtkName(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/getBtkName__Fii.s"
 }
@@ -165,7 +282,7 @@ ASM_FUNCTION(getBtkName__Fii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBrkName__Fii) {
+asm void getBrkName(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/getBrkName__Fii.s"
 }
@@ -176,7 +293,7 @@ ASM_FUNCTION(getBrkName__Fii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDzbName__Fi) {
+asm void getDzbName(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/getDzbName__Fi.s"
 }
@@ -187,7 +304,7 @@ ASM_FUNCTION(getDzbName__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initParticleBlock__Q29daBgObj_c11spec_data_cFPUc) {
+asm void daBgObj_c::spec_data_c::initParticleBlock(u8* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initParticleBlock__Q29daBgObj_c11spec_data_cFPUc.s"
 }
@@ -198,7 +315,7 @@ ASM_FUNCTION(initParticleBlock__Q29daBgObj_c11spec_data_cFPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initSoundBlock__Q29daBgObj_c11spec_data_cFPUc) {
+asm void daBgObj_c::spec_data_c::initSoundBlock(u8* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initSoundBlock__Q29daBgObj_c11spec_data_cFPUc.s"
 }
@@ -209,7 +326,7 @@ ASM_FUNCTION(initSoundBlock__Q29daBgObj_c11spec_data_cFPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initTexShareBlock__Q29daBgObj_c11spec_data_cFPUc) {
+asm void daBgObj_c::spec_data_c::initTexShareBlock(u8* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initTexShareBlock__Q29daBgObj_c11spec_data_cFPUc.s"
 }
@@ -220,7 +337,7 @@ ASM_FUNCTION(initTexShareBlock__Q29daBgObj_c11spec_data_cFPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFarInfoBlock__Q29daBgObj_c11spec_data_cFPUc) {
+asm void daBgObj_c::spec_data_c::initFarInfoBlock(u8* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initFarInfoBlock__Q29daBgObj_c11spec_data_cFPUc.s"
 }
@@ -231,7 +348,7 @@ ASM_FUNCTION(initFarInfoBlock__Q29daBgObj_c11spec_data_cFPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__Q29daBgObj_c11spec_data_cFPv) {
+asm void daBgObj_c::spec_data_c::Set(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/Set__Q29daBgObj_c11spec_data_cFPv.s"
 }
@@ -242,7 +359,7 @@ ASM_FUNCTION(Set__Q29daBgObj_c11spec_data_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(release__9daBgObj_cFP4dBgW) {
+asm void daBgObj_c::release(dBgW* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/release__9daBgObj_cFP4dBgW.s"
 }
@@ -253,7 +370,7 @@ ASM_FUNCTION(release__9daBgObj_cFP4dBgW) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regist__9daBgObj_cFP4dBgW) {
+asm void daBgObj_c::regist(dBgW* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/regist__9daBgObj_cFP4dBgW.s"
 }
@@ -264,7 +381,7 @@ ASM_FUNCTION(regist__9daBgObj_cFP4dBgW) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initAtt__9daBgObj_cFv) {
+asm void daBgObj_c::initAtt() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initAtt__9daBgObj_cFv.s"
 }
@@ -275,7 +392,7 @@ ASM_FUNCTION(initAtt__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttentionInfo__9daBgObj_cFP10fopAc_ac_c) {
+asm void daBgObj_c::setAttentionInfo(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/setAttentionInfo__9daBgObj_cFP10fopAc_ac_c.s"
 }
@@ -286,7 +403,7 @@ ASM_FUNCTION(setAttentionInfo__9daBgObj_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__9daBgObj_cFv) {
+asm void daBgObj_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/initBaseMtx__9daBgObj_cFv.s"
 }
@@ -297,7 +414,7 @@ ASM_FUNCTION(initBaseMtx__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daBgObj_cFv) {
+asm void daBgObj_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/setBaseMtx__9daBgObj_cFv.s"
 }
@@ -308,7 +425,7 @@ ASM_FUNCTION(setBaseMtx__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(settingCullSizeBoxForCo__9daBgObj_cFi) {
+asm void daBgObj_c::settingCullSizeBoxForCo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/settingCullSizeBoxForCo__9daBgObj_cFi.s"
 }
@@ -319,7 +436,7 @@ ASM_FUNCTION(settingCullSizeBoxForCo__9daBgObj_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(settingCullSizeBoxForCull__9daBgObj_cFi) {
+asm void daBgObj_c::settingCullSizeBoxForCull(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/settingCullSizeBoxForCull__9daBgObj_cFi.s"
 }
@@ -330,7 +447,7 @@ ASM_FUNCTION(settingCullSizeBoxForCull__9daBgObj_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInitType0__9daBgObj_cFv) {
+asm void daBgObj_c::CreateInitType0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/CreateInitType0__9daBgObj_cFv.s"
 }
@@ -341,7 +458,7 @@ ASM_FUNCTION(CreateInitType0__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInitType1__9daBgObj_cFv) {
+asm void daBgObj_c::CreateInitType1() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/CreateInitType1__9daBgObj_cFv.s"
 }
@@ -352,7 +469,7 @@ ASM_FUNCTION(CreateInitType1__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__9daBgObj_cFv) {
+asm void daBgObj_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/Create__9daBgObj_cFv.s"
 }
@@ -363,7 +480,7 @@ ASM_FUNCTION(Create__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeapType0__9daBgObj_cFv) {
+asm void daBgObj_c::CreateHeapType0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/CreateHeapType0__9daBgObj_cFv.s"
 }
@@ -374,7 +491,7 @@ ASM_FUNCTION(CreateHeapType0__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__12J3DFrameCtrlFv.s"
 }
@@ -385,7 +502,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeapType1__9daBgObj_cFv) {
+asm void daBgObj_c::CreateHeapType1() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/CreateHeapType1__9daBgObj_cFv.s"
 }
@@ -396,7 +513,7 @@ ASM_FUNCTION(CreateHeapType1__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doShareTexture__9daBgObj_cFv) {
+asm void daBgObj_c::doShareTexture() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/doShareTexture__9daBgObj_cFv.s"
 }
@@ -407,7 +524,7 @@ ASM_FUNCTION(doShareTexture__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daBgObj_cFv) {
+asm void daBgObj_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/CreateHeap__9daBgObj_cFv.s"
 }
@@ -418,7 +535,7 @@ ASM_FUNCTION(CreateHeap__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__9daBgObj_cFv) {
+asm void daBgObj_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/create1st__9daBgObj_cFv.s"
 }
@@ -429,7 +546,7 @@ ASM_FUNCTION(create1st__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setColCommon__9daBgObj_cFv) {
+asm void daBgObj_c::setColCommon() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/setColCommon__9daBgObj_cFv.s"
 }
@@ -440,7 +557,7 @@ ASM_FUNCTION(setColCommon__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_tri_0__9daBgObj_cFv) {
+asm void daBgObj_c::set_tri_0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/set_tri_0__9daBgObj_cFv.s"
 }
@@ -451,7 +568,7 @@ ASM_FUNCTION(set_tri_0__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_tri_1__9daBgObj_cFv) {
+asm void daBgObj_c::set_tri_1() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/set_tri_1__9daBgObj_cFv.s"
 }
@@ -462,7 +579,7 @@ ASM_FUNCTION(set_tri_1__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_cyl_0__9daBgObj_cFv) {
+asm void daBgObj_c::set_cyl_0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/set_cyl_0__9daBgObj_cFv.s"
 }
@@ -473,7 +590,7 @@ ASM_FUNCTION(set_cyl_0__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_tri_2__9daBgObj_cFv) {
+asm void daBgObj_c::set_tri_2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/set_tri_2__9daBgObj_cFv.s"
 }
@@ -484,7 +601,7 @@ ASM_FUNCTION(set_tri_2__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_tri_3__9daBgObj_cFv) {
+asm void daBgObj_c::set_tri_3() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/set_tri_3__9daBgObj_cFv.s"
 }
@@ -495,7 +612,7 @@ ASM_FUNCTION(set_tri_3__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParticle__9daBgObj_cFv) {
+asm void daBgObj_c::setParticle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/setParticle__9daBgObj_cFv.s"
 }
@@ -506,7 +623,7 @@ ASM_FUNCTION(setParticle__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSe__9daBgObj_cFv) {
+asm void daBgObj_c::setSe() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/setSe__9daBgObj_cFv.s"
 }
@@ -517,7 +634,7 @@ ASM_FUNCTION(setSe__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDestroy__9daBgObj_cFv) {
+asm void daBgObj_c::checkDestroy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/checkDestroy__9daBgObj_cFv.s"
 }
@@ -528,7 +645,7 @@ ASM_FUNCTION(checkDestroy__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHitAt__9daBgObj_cFP8cCcD_Obj) {
+asm void daBgObj_c::checkHitAt(cCcD_Obj* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/checkHitAt__9daBgObj_cFP8cCcD_Obj.s"
 }
@@ -539,7 +656,7 @@ ASM_FUNCTION(checkHitAt__9daBgObj_cFP8cCcD_Obj) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderWait_tri__9daBgObj_cFv) {
+asm void daBgObj_c::orderWait_tri() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/orderWait_tri__9daBgObj_cFv.s"
 }
@@ -550,7 +667,7 @@ ASM_FUNCTION(orderWait_tri__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderWait_cyl__9daBgObj_cFv) {
+asm void daBgObj_c::orderWait_cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/orderWait_cyl__9daBgObj_cFv.s"
 }
@@ -561,7 +678,7 @@ ASM_FUNCTION(orderWait_cyl__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderWait_spec__9daBgObj_cFv) {
+asm void daBgObj_c::orderWait_spec() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/orderWait_spec__9daBgObj_cFv.s"
 }
@@ -572,7 +689,7 @@ ASM_FUNCTION(orderWait_spec__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderWait__9daBgObj_cFv) {
+asm void daBgObj_c::actionOrderWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/actionOrderWait__9daBgObj_cFv.s"
 }
@@ -583,7 +700,7 @@ ASM_FUNCTION(actionOrderWait__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrder__9daBgObj_cFv) {
+asm void daBgObj_c::actionOrder() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/actionOrder__9daBgObj_cFv.s"
 }
@@ -594,7 +711,7 @@ ASM_FUNCTION(actionOrder__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__9daBgObj_cFv) {
+asm void daBgObj_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/actionEvent__9daBgObj_cFv.s"
 }
@@ -602,21 +719,16 @@ ASM_FUNCTION(actionEvent__9daBgObj_cFv) {
 
 
 /* 8045BDB0-8045BDB8 0008+00 .text      actionWait__9daBgObj_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__9daBgObj_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/actionWait__9daBgObj_cFv.s"
+bool daBgObj_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 8045BDB8-8045BED0 0118+00 .text      ExecuteType0__9daBgObj_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ExecuteType0__9daBgObj_cFv) {
+asm void daBgObj_c::ExecuteType0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/ExecuteType0__9daBgObj_cFv.s"
 }
@@ -627,7 +739,7 @@ ASM_FUNCTION(ExecuteType0__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ExecuteType1__9daBgObj_cFv) {
+asm void daBgObj_c::ExecuteType1() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/ExecuteType1__9daBgObj_cFv.s"
 }
@@ -638,7 +750,7 @@ ASM_FUNCTION(ExecuteType1__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daBgObj_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daBgObj_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/Execute__9daBgObj_cFPPA3_A4_f.s"
 }
@@ -649,7 +761,7 @@ ASM_FUNCTION(Execute__9daBgObj_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daBgObj_cFv) {
+asm void daBgObj_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/Draw__9daBgObj_cFv.s"
 }
@@ -660,7 +772,7 @@ ASM_FUNCTION(Draw__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(indirectProc__9daBgObj_cFP8J3DModel) {
+asm void daBgObj_c::indirectProc(J3DModel* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/indirectProc__9daBgObj_cFP8J3DModel.s"
 }
@@ -671,7 +783,7 @@ ASM_FUNCTION(indirectProc__9daBgObj_cFP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daBgObj_cFv) {
+asm void daBgObj_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/Delete__9daBgObj_cFv.s"
 }
@@ -682,7 +794,7 @@ ASM_FUNCTION(Delete__9daBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBgObj_create1st__FP9daBgObj_c) {
+asm void daBgObj_create1st(daBgObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/daBgObj_create1st__FP9daBgObj_c.s"
 }
@@ -693,7 +805,7 @@ ASM_FUNCTION(daBgObj_create1st__FP9daBgObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__8cM3dGCylFv.s"
 }
@@ -704,7 +816,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__8cM3dGAabFv.s"
 }
@@ -715,7 +827,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_TriFv) {
+asm dCcD_Tri::~dCcD_Tri() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__8dCcD_TriFv.s"
 }
@@ -726,7 +838,7 @@ ASM_FUNCTION(__dt__8dCcD_TriFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_TriFv) {
+asm dCcD_Tri::dCcD_Tri() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__ct__8dCcD_TriFv.s"
 }
@@ -737,7 +849,7 @@ ASM_FUNCTION(__ct__8dCcD_TriFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGTriFv) {
+asm cM3dGTri::~cM3dGTri() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__8cM3dGTriFv.s"
 }
@@ -748,7 +860,7 @@ ASM_FUNCTION(__dt__8cM3dGTriFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__8cM3dGPlaFv.s"
 }
@@ -759,7 +871,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__10dCcD_GSttsFv.s"
 }
@@ -770,7 +882,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBgObj_MoveBGDelete__FP9daBgObj_c) {
+asm void daBgObj_MoveBGDelete(daBgObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/daBgObj_MoveBGDelete__FP9daBgObj_c.s"
 }
@@ -781,7 +893,7 @@ ASM_FUNCTION(daBgObj_MoveBGDelete__FP9daBgObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBgObj_MoveBGExecute__FP9daBgObj_c) {
+asm void daBgObj_MoveBGExecute(daBgObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/daBgObj_MoveBGExecute__FP9daBgObj_c.s"
 }
@@ -792,7 +904,7 @@ ASM_FUNCTION(daBgObj_MoveBGExecute__FP9daBgObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBgObj_MoveBGDraw__FP9daBgObj_c) {
+asm void daBgObj_MoveBGDraw(daBgObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/daBgObj_MoveBGDraw__FP9daBgObj_c.s"
 }
@@ -803,7 +915,7 @@ ASM_FUNCTION(daBgObj_MoveBGDraw__FP9daBgObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__dt__10cCcD_GSttsFv.s"
 }
@@ -814,7 +926,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_bg_obj_cpp) {
+extern "C" asm void __sinit_d_a_bg_obj_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bg_obj/d_a_bg_obj/__sinit_d_a_bg_obj_cpp.s"
 }

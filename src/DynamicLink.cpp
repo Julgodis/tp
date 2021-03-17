@@ -6,43 +6,182 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
+/* top-level dependencies (begin DynamicModuleControlBase) */
+/* top-level dependencies (end DynamicModuleControlBase) */
+struct DynamicModuleControlBase {
+	/* 800188DC */ bool getModuleName() const;
+	/* 802621CC */ ~DynamicModuleControlBase();
+	/* 80262284 */ DynamicModuleControlBase();
+	/* 802622D0 */ void link();
+	/* 80262364 */ void unlink();
+	/* 802623EC */ void load_async();
+	/* 8026242C */ void force_unlink();
+	/* 80262470 */ void dump();
+	/* 802631D4 */ bool do_link();
+	/* 802631DC */ bool do_load();
+	/* 802631E4 */ bool do_unload();
+	/* 802631EC */ bool do_unlink();
+	/* 802631F4 */ bool do_load_async();
+	/* 802631FC */ void dump2();
+	/* 80263200 */ void getModuleTypeString() const;
+	/* 80263210 */ bool getModuleSize() const;
+};
+
+// build DynamicModuleControl (DynamicModuleControl) False/False
+/* top-level dependencies (begin DynamicModuleControl) */
+/* top-level dependencies (end DynamicModuleControl) */
+struct DynamicModuleControl {
+	/* 800188E4 */ ~DynamicModuleControl();
+	/* 80262660 */ DynamicModuleControl(char const*);
+	/* 802626D0 */ void mountCallback(void*);
+	/* 8026275C */ void initialize();
+	/* 80262794 */ void callback(void*);
+	/* 802627E8 */ void do_load();
+	/* 80262AFC */ void do_load_async();
+	/* 80262BC4 */ void do_unload();
+	/* 80262C0C */ void dump2();
+	/* 80262C5C */ void do_link();
+	/* 80262F28 */ void do_unlink();
+	/* 80263000 */ void getModuleSize() const;
+	/* 80263070 */ void getModuleTypeString() const;
+	/* 80263218 */ void getModuleName() const;
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE624 */ void resize(void*, u32, JKRHeap*);
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+};
+
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
+};
+
+// build JKRFileCache (JKRFileCache) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRFileCache) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRFileCache) */
+struct JKRFileCache {
+	// JKRHeap
+	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
+};
+
+// build JKRArchive (JKRArchive) False/False
+// build JKRArchive (JKRArchive) True/False
+struct JKRArchive;
+// build JKRHeap (JKRHeap) True/True
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin JKRArchive) */
+// outer dependency: JKRArchive::EMountMode
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountDirection
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	// JKRArchive::EMountMode
+	// JKRHeap
+	// JKRArchive::EMountDirection
+	// build EMountMode (JKRArchive::EMountMode) False/False
+	/* dependencies (begin JKRArchive::EMountMode) */
+	/* dependencies (end JKRArchive::EMountMode) */
+	struct EMountMode {
+	};
+
+	// build EMountDirection (JKRArchive::EMountDirection) False/False
+	/* dependencies (begin JKRArchive::EMountDirection) */
+	/* dependencies (end JKRArchive::EMountDirection) */
+	struct EMountDirection {
+	};
+
+	/* 802D57E4 */ void mount(char const*, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection);
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+// build JKRDvdRipper (JKRDvdRipper) False/False
+// build JKRHeap (JKRHeap) True/True
+// build JKRExpandSwitch (JKRExpandSwitch) False/False
+/* top-level dependencies (begin JKRExpandSwitch) */
+/* top-level dependencies (end JKRExpandSwitch) */
+struct JKRExpandSwitch {
+};
+
+// build JKRDvdRipper (JKRDvdRipper) True/False
+struct JKRDvdRipper;
+/* top-level dependencies (begin JKRDvdRipper) */
+// outer dependency: JKRHeap
+// outer dependency: JKRExpandSwitch
+// outer dependency: JKRDvdRipper::EAllocDirection
+/* top-level dependencies (end JKRDvdRipper) */
+struct JKRDvdRipper {
+	// JKRHeap
+	// JKRExpandSwitch
+	// JKRDvdRipper::EAllocDirection
+	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
+	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
+	/* dependencies (end JKRDvdRipper::EAllocDirection) */
+	struct EAllocDirection {
+	};
+
+	/* 802D9B98 */ void loadToMainRAM(char const*, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+};
+
+// build JKRExpandSwitch (JKRExpandSwitch) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__24DynamicModuleControlBaseFv();
-extern "C" extern void __ct__24DynamicModuleControlBaseFv();
-extern "C" extern void link__24DynamicModuleControlBaseFv();
-extern "C" extern void unlink__24DynamicModuleControlBaseFv();
-extern "C" extern void load_async__24DynamicModuleControlBaseFv();
-extern "C" extern void force_unlink__24DynamicModuleControlBaseFv();
-extern "C" extern void dump__24DynamicModuleControlBaseFv();
-extern "C" extern void __ct__20DynamicModuleControlFPCc();
-extern "C" extern void mountCallback__20DynamicModuleControlFPv();
-extern "C" extern void initialize__20DynamicModuleControlFv();
-extern "C" extern void callback__20DynamicModuleControlFPv();
-extern "C" extern void calcSum2__FPCUsUl();
-extern "C" extern void do_load__20DynamicModuleControlFv();
-extern "C" extern void do_load_async__20DynamicModuleControlFv();
-extern "C" extern void do_unload__20DynamicModuleControlFv();
-extern "C" extern void dump2__20DynamicModuleControlFv();
-extern "C" extern void do_link__20DynamicModuleControlFv();
-extern "C" extern void do_unlink__20DynamicModuleControlFv();
-extern "C" extern void getModuleSize__20DynamicModuleControlCFv();
-extern "C" extern void getModuleTypeString__20DynamicModuleControlCFv();
-extern "C" extern void ModuleProlog();
-extern "C" extern void ModuleEpilog();
-extern "C" extern void ModuleUnresolved();
-extern "C" extern void ModuleConstructorsX();
-extern "C" extern void ModuleDestructorsX();
-extern "C" extern void do_link__24DynamicModuleControlBaseFv();
-extern "C" extern void do_load__24DynamicModuleControlBaseFv();
-extern "C" extern void do_unload__24DynamicModuleControlBaseFv();
-extern "C" extern void do_unlink__24DynamicModuleControlBaseFv();
-extern "C" extern void do_load_async__24DynamicModuleControlBaseFv();
-extern "C" extern void dump2__24DynamicModuleControlBaseFv();
-extern "C" extern void getModuleTypeString__24DynamicModuleControlBaseCFv();
-extern "C" extern void getModuleSize__24DynamicModuleControlBaseCFv();
-extern "C" extern void getModuleName__20DynamicModuleControlCFv();
+static void calcSum2(u16 const*, u32);
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+extern "C" void ModuleUnresolved();
+extern "C" void ModuleConstructorsX();
+extern "C" void ModuleDestructorsX();
+
+extern "C" void __dt__24DynamicModuleControlBaseFv();
+extern "C" void __ct__24DynamicModuleControlBaseFv();
+extern "C" void link__24DynamicModuleControlBaseFv();
+extern "C" void unlink__24DynamicModuleControlBaseFv();
+extern "C" void load_async__24DynamicModuleControlBaseFv();
+extern "C" void force_unlink__24DynamicModuleControlBaseFv();
+extern "C" void dump__24DynamicModuleControlBaseFv();
+extern "C" void __ct__20DynamicModuleControlFPCc();
+extern "C" void mountCallback__20DynamicModuleControlFPv();
+extern "C" void initialize__20DynamicModuleControlFv();
+extern "C" void callback__20DynamicModuleControlFPv();
+extern "C" static void calcSum2__FPCUsUl();
+extern "C" void do_load__20DynamicModuleControlFv();
+extern "C" void do_load_async__20DynamicModuleControlFv();
+extern "C" void do_unload__20DynamicModuleControlFv();
+extern "C" void dump2__20DynamicModuleControlFv();
+extern "C" void do_link__20DynamicModuleControlFv();
+extern "C" void do_unlink__20DynamicModuleControlFv();
+extern "C" void getModuleSize__20DynamicModuleControlCFv();
+extern "C" void getModuleTypeString__20DynamicModuleControlCFv();
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+extern "C" void ModuleUnresolved();
+extern "C" void ModuleConstructorsX();
+extern "C" void ModuleDestructorsX();
+extern "C" bool do_link__24DynamicModuleControlBaseFv();
+extern "C" bool do_load__24DynamicModuleControlBaseFv();
+extern "C" bool do_unload__24DynamicModuleControlBaseFv();
+extern "C" bool do_unlink__24DynamicModuleControlBaseFv();
+extern "C" bool do_load_async__24DynamicModuleControlBaseFv();
+extern "C" void dump2__24DynamicModuleControlBaseFv();
+extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv();
+extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv();
+extern "C" void getModuleName__20DynamicModuleControlCFv();
 SECTION_RODATA extern const u8 DynamicLink__stringBase0[840];
 SECTION_DATA extern u8 data_803C34B0[16];
 SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
@@ -59,48 +198,68 @@ SECTION_SDATA2 extern f64 DynamicLink__lit_3774;
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void OSReport_Error();
-extern "C" extern void OSReport_Warning();
-extern "C" extern void mDoExt_getArchiveHeap__Fv();
-extern "C" extern void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-extern "C" extern void getModuleName__24DynamicModuleControlBaseCFv();
-extern "C" extern void __dt__20DynamicModuleControlFv();
-extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void resize__7JKRHeapFPvUlP7JKRHeap();
-extern "C" extern void getSize__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void __dl__FPv();
-extern "C" extern void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" extern void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
-extern "C" extern void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
-extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" extern void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" extern void JUTReportConsole_f();
-extern "C" extern void OSGetStackPointer();
-extern "C" extern void OSLink();
-extern "C" extern void OSLinkFixed();
-extern "C" extern void OSUnlink();
-extern "C" extern void OSGetTime();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void snprintf();
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+void mDoExt_getArchiveHeap();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+void operator delete(void*);
+extern "C" void JUTReportConsole_f();
+extern "C" void OSGetStackPointer();
+extern "C" void OSLink();
+extern "C" void OSLinkFixed();
+extern "C" void OSUnlink();
+extern "C" void OSGetTime();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void snprintf();
+
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
+extern "C" void __dt__20DynamicModuleControlFv();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void resize__7JKRHeapFPvUlP7JKRHeap();
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
+extern "C" void __dl__FPv();
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
+extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void JUTReportConsole_f();
+extern "C" void OSGetStackPointer();
+extern "C" void OSLink();
+extern "C" void OSLinkFixed();
+extern "C" void OSUnlink();
+extern "C" void OSGetTime();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void snprintf();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C34B0-803C34C0 0010+00 .data      strings$4165                                                 */
+/* 803C34B0-803C34C0 0010+00 rc=1 efc=0 .data      strings$4165                                                 */
 u8 data_803C34B0[16] = {
 	0x80, 0x39, 0xA7, 0x5E, 0x80, 0x39, 0xA7, 0x63, 0x80, 0x39, 0xA7, 0x67, 0x80, 0x39, 0xA7, 0x6C,
 };
 
-/* 803C34C0-803C34F4 0034+00 .data      __vt__20DynamicModuleControl                                 */
+/* 803C34C0-803C34F4 0034+00 rc=3 efc=2 .data      __vt__20DynamicModuleControl                                 */
 void* const __vt__20DynamicModuleControl[13] = {
 	NULL, /* RTTI */
 	NULL,
@@ -117,7 +276,7 @@ void* const __vt__20DynamicModuleControl[13] = {
 	(void*)do_unlink__20DynamicModuleControlFv,
 };
 
-/* 803C34F4-803C3528 0034+00 .data      __vt__24DynamicModuleControlBase                             */
+/* 803C34F4-803C3528 0034+00 rc=2 efc=0 .data      __vt__24DynamicModuleControlBase                             */
 void* const __vt__24DynamicModuleControlBase[13] = {
 	NULL, /* RTTI */
 	NULL,
@@ -134,39 +293,39 @@ void* const __vt__24DynamicModuleControlBase[13] = {
 	(void*)do_unlink__24DynamicModuleControlBaseFv,
 };
 
-/* 80451138-8045113C 0004+00 .sbss      mFirst__24DynamicModuleControlBase                           */
+/* 80451138-8045113C 0004+00 rc=3 efc=0 .sbss      mFirst__24DynamicModuleControlBase                           */
 u8 mFirst__24DynamicModuleControlBase[4];
 
-/* 8045113C-80451140 0004+00 .sbss      mLast__24DynamicModuleControlBase                            */
+/* 8045113C-80451140 0004+00 rc=2 efc=0 .sbss      mLast__24DynamicModuleControlBase                            */
 u8 mLast__24DynamicModuleControlBase[4];
 
-/* 802621CC-80262284 00B8+00 .text      __dt__24DynamicModuleControlBaseFv                           */
+/* 802621CC-80262284 00B8+00 rc=3 efc=2 .text      __dt__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__24DynamicModuleControlBaseFv) {
+asm DynamicModuleControlBase::~DynamicModuleControlBase() {
 	nofralloc
 #include "asm/DynamicLink/__dt__24DynamicModuleControlBaseFv.s"
 }
 #pragma pop
 
 
-/* 80262284-802622D0 004C+00 .text      __ct__24DynamicModuleControlBaseFv                           */
+/* 80262284-802622D0 004C+00 rc=1 efc=0 .text      __ct__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__24DynamicModuleControlBaseFv) {
+asm DynamicModuleControlBase::DynamicModuleControlBase() {
 	nofralloc
 #include "asm/DynamicLink/__ct__24DynamicModuleControlBaseFv.s"
 }
 #pragma pop
 
 
-/* 802622D0-80262364 0094+00 .text      link__24DynamicModuleControlBaseFv                           */
+/* 802622D0-80262364 0094+00 rc=2 efc=2 .text      link__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(link__24DynamicModuleControlBaseFv) {
+asm void DynamicModuleControlBase::link() {
 	nofralloc
 #include "asm/DynamicLink/link__24DynamicModuleControlBaseFv.s"
 }
@@ -174,7 +333,7 @@ ASM_FUNCTION(link__24DynamicModuleControlBaseFv) {
 
 
 /* ############################################################################################## */
-/* 8039A4A0-8039A7E8 0344+04 .rodata    @stringBase0                                                 */
+/* 8039A4A0-8039A7E8 0344+04 rc=10 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -225,33 +384,33 @@ SECTION_DEAD char* const stringBase_8039A7C8 = "0x%08x:   0x%08x    0x%08x\n";
 SECTION_DEAD char* const pad_8039A7E4 = "\0\0\0";
 #pragma pop
 
-/* 80262364-802623EC 0088+00 .text      unlink__24DynamicModuleControlBaseFv                         */
+/* 80262364-802623EC 0088+00 rc=1 efc=1 .text      unlink__24DynamicModuleControlBaseFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(unlink__24DynamicModuleControlBaseFv) {
+asm void DynamicModuleControlBase::unlink() {
 	nofralloc
 #include "asm/DynamicLink/unlink__24DynamicModuleControlBaseFv.s"
 }
 #pragma pop
 
 
-/* 802623EC-8026242C 0040+00 .text      load_async__24DynamicModuleControlBaseFv                     */
+/* 802623EC-8026242C 0040+00 rc=1 efc=1 .text      load_async__24DynamicModuleControlBaseFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load_async__24DynamicModuleControlBaseFv) {
+asm void DynamicModuleControlBase::load_async() {
 	nofralloc
 #include "asm/DynamicLink/load_async__24DynamicModuleControlBaseFv.s"
 }
 #pragma pop
 
 
-/* 8026242C-80262470 0044+00 .text      force_unlink__24DynamicModuleControlBaseFv                   */
+/* 8026242C-80262470 0044+00 rc=1 efc=0 .text      force_unlink__24DynamicModuleControlBaseFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(force_unlink__24DynamicModuleControlBaseFv) {
+asm void DynamicModuleControlBase::force_unlink() {
 	nofralloc
 #include "asm/DynamicLink/force_unlink__24DynamicModuleControlBaseFv.s"
 }
@@ -259,29 +418,29 @@ ASM_FUNCTION(force_unlink__24DynamicModuleControlBaseFv) {
 
 
 /* ############################################################################################## */
-/* 80455008-80455010 0004+04 .sdata2    @3772                                                        */
+/* 80455008-80455010 0004+04 rc=1 efc=0 .sdata2    @3772                                                        */
 f32 DynamicLink__lit_3772 = 0.0009765625f;
 /* padding 4 bytes */
 
-/* 80455010-80455018 0008+00 .sdata2    @3774                                                        */
+/* 80455010-80455018 0008+00 rc=1 efc=0 .sdata2    @3774                                                        */
 f64 DynamicLink__lit_3774 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80262470-80262660 01F0+00 .text      dump__24DynamicModuleControlBaseFv                           */
+/* 80262470-80262660 01F0+00 rc=4 efc=2 .text      dump__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump__24DynamicModuleControlBaseFv) {
+asm void DynamicModuleControlBase::dump() {
 	nofralloc
 #include "asm/DynamicLink/dump__24DynamicModuleControlBaseFv.s"
 }
 #pragma pop
 
 
-/* 80262660-802626D0 0070+00 .text      __ct__20DynamicModuleControlFPCc                             */
+/* 80262660-802626D0 0070+00 rc=2 efc=2 .text      __ct__20DynamicModuleControlFPCc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20DynamicModuleControlFPCc) {
+asm DynamicModuleControl::DynamicModuleControl(char const* field_0) {
 	nofralloc
 #include "asm/DynamicLink/__ct__20DynamicModuleControlFPCc.s"
 }
@@ -289,299 +448,253 @@ ASM_FUNCTION(__ct__20DynamicModuleControlFPCc) {
 
 
 /* ############################################################################################## */
-/* 80451140-80451144 0004+00 .sbss      sAllocBytes__20DynamicModuleControl                          */
+/* 80451140-80451144 0004+00 rc=3 efc=0 .sbss      sAllocBytes__20DynamicModuleControl                          */
 u8 sAllocBytes__20DynamicModuleControl[4];
 
-/* 80451144-80451148 0004+00 .sbss      sArchive__20DynamicModuleControl                             */
+/* 80451144-80451148 0004+00 rc=3 efc=0 .sbss      sArchive__20DynamicModuleControl                             */
 u8 sArchive__20DynamicModuleControl[4];
 
-/* 80451148-80451150 0004+04 .sbss      sFileCache__20DynamicModuleControl                           */
+/* 80451148-80451150 0004+04 rc=3 efc=0 .sbss      sFileCache__20DynamicModuleControl                           */
 u8 sFileCache__20DynamicModuleControl[4 + 4 /* padding */];
 
-/* 802626D0-8026275C 008C+00 .text      mountCallback__20DynamicModuleControlFPv                     */
+/* 802626D0-8026275C 008C+00 rc=1 efc=0 .text      mountCallback__20DynamicModuleControlFPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mountCallback__20DynamicModuleControlFPv) {
+asm void DynamicModuleControl::mountCallback(void* field_0) {
 	nofralloc
 #include "asm/DynamicLink/mountCallback__20DynamicModuleControlFPv.s"
 }
 #pragma pop
 
 
-/* 8026275C-80262794 0038+00 .text      initialize__20DynamicModuleControlFv                         */
+/* 8026275C-80262794 0038+00 rc=1 efc=1 .text      initialize__20DynamicModuleControlFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::initialize() {
 	nofralloc
 #include "asm/DynamicLink/initialize__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262794-802627C0 002C+00 .text      callback__20DynamicModuleControlFPv                          */
+/* 80262794-802627C0 002C+00 rc=1 efc=0 .text      callback__20DynamicModuleControlFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callback__20DynamicModuleControlFPv) {
+asm void DynamicModuleControl::callback(void* field_0) {
 	nofralloc
 #include "asm/DynamicLink/callback__20DynamicModuleControlFPv.s"
 }
 #pragma pop
 
 
-/* 802627C0-802627E8 0028+00 .text      calcSum2__FPCUsUl                                            */
+/* 802627C0-802627E8 0028+00 rc=1 efc=0 .text      calcSum2__FPCUsUl                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSum2__FPCUsUl) {
+asm static void calcSum2(u16 const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/DynamicLink/calcSum2__FPCUsUl.s"
 }
 #pragma pop
 
 
-/* 802627E8-80262AFC 0314+00 .text      do_load__20DynamicModuleControlFv                            */
+/* 802627E8-80262AFC 0314+00 rc=1 efc=0 .text      do_load__20DynamicModuleControlFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_load__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::do_load() {
 	nofralloc
 #include "asm/DynamicLink/do_load__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262AFC-80262BC4 00C8+00 .text      do_load_async__20DynamicModuleControlFv                      */
+/* 80262AFC-80262BC4 00C8+00 rc=1 efc=0 .text      do_load_async__20DynamicModuleControlFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_load_async__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::do_load_async() {
 	nofralloc
 #include "asm/DynamicLink/do_load_async__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262BC4-80262C0C 0048+00 .text      do_unload__20DynamicModuleControlFv                          */
+/* 80262BC4-80262C0C 0048+00 rc=1 efc=0 .text      do_unload__20DynamicModuleControlFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_unload__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::do_unload() {
 	nofralloc
 #include "asm/DynamicLink/do_unload__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262C0C-80262C5C 0050+00 .text      dump2__20DynamicModuleControlFv                              */
+/* 80262C0C-80262C5C 0050+00 rc=1 efc=0 .text      dump2__20DynamicModuleControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump2__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::dump2() {
 	nofralloc
 #include "asm/DynamicLink/dump2__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262C5C-80262F28 02CC+00 .text      do_link__20DynamicModuleControlFv                            */
+/* 80262C5C-80262F28 02CC+00 rc=1 efc=0 .text      do_link__20DynamicModuleControlFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_link__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::do_link() {
 	nofralloc
 #include "asm/DynamicLink/do_link__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80262F28-80263000 00D8+00 .text      do_unlink__20DynamicModuleControlFv                          */
+/* 80262F28-80263000 00D8+00 rc=1 efc=0 .text      do_unlink__20DynamicModuleControlFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_unlink__20DynamicModuleControlFv) {
+asm void DynamicModuleControl::do_unlink() {
 	nofralloc
 #include "asm/DynamicLink/do_unlink__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* 80263000-80263070 0070+00 .text      getModuleSize__20DynamicModuleControlCFv                     */
+/* 80263000-80263070 0070+00 rc=1 efc=0 .text      getModuleSize__20DynamicModuleControlCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModuleSize__20DynamicModuleControlCFv) {
+asm void DynamicModuleControl::getModuleSize() const {
 	nofralloc
 #include "asm/DynamicLink/getModuleSize__20DynamicModuleControlCFv.s"
 }
 #pragma pop
 
 
-/* 80263070-80263088 0018+00 .text      getModuleTypeString__20DynamicModuleControlCFv               */
+/* 80263070-80263088 0018+00 rc=1 efc=0 .text      getModuleTypeString__20DynamicModuleControlCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModuleTypeString__20DynamicModuleControlCFv) {
+asm void DynamicModuleControl::getModuleTypeString() const {
 	nofralloc
 #include "asm/DynamicLink/getModuleTypeString__20DynamicModuleControlCFv.s"
 }
 #pragma pop
 
 
-/* 80263088-8026308C 0004+00 .text      ModuleProlog                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ModuleProlog) {
-	nofralloc
-#include "asm/DynamicLink/ModuleProlog.s"
+/* 80263088-8026308C 0004+00 rc=0 efc=0 .text      ModuleProlog                                                 */
+extern "C" void ModuleProlog() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8026308C-80263090 0004+00 .text      ModuleEpilog                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ModuleEpilog) {
-	nofralloc
-#include "asm/DynamicLink/ModuleEpilog.s"
+/* 8026308C-80263090 0004+00 rc=0 efc=0 .text      ModuleEpilog                                                 */
+extern "C" void ModuleEpilog() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80263090-8026314C 00BC+00 .text      ModuleUnresolved                                             */
+/* 80263090-8026314C 00BC+00 rc=0 efc=0 .text      ModuleUnresolved                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ModuleUnresolved) {
+extern "C" asm void ModuleUnresolved() {
 	nofralloc
 #include "asm/DynamicLink/ModuleUnresolved.s"
 }
 #pragma pop
 
 
-/* 8026314C-80263190 0044+00 .text      ModuleConstructorsX                                          */
+/* 8026314C-80263190 0044+00 rc=0 efc=0 .text      ModuleConstructorsX                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ModuleConstructorsX) {
+extern "C" asm void ModuleConstructorsX() {
 	nofralloc
 #include "asm/DynamicLink/ModuleConstructorsX.s"
 }
 #pragma pop
 
 
-/* 80263190-802631D4 0044+00 .text      ModuleDestructorsX                                           */
+/* 80263190-802631D4 0044+00 rc=0 efc=0 .text      ModuleDestructorsX                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ModuleDestructorsX) {
+extern "C" asm void ModuleDestructorsX() {
 	nofralloc
 #include "asm/DynamicLink/ModuleDestructorsX.s"
 }
 #pragma pop
 
 
-/* 802631D4-802631DC 0008+00 .text      do_link__24DynamicModuleControlBaseFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_link__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/do_link__24DynamicModuleControlBaseFv.s"
+/* 802631D4-802631DC 0008+00 rc=1 efc=0 .text      do_link__24DynamicModuleControlBaseFv                        */
+bool DynamicModuleControlBase::do_link() {
+	return true;
 }
-#pragma pop
 
 
-/* 802631DC-802631E4 0008+00 .text      do_load__24DynamicModuleControlBaseFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_load__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/do_load__24DynamicModuleControlBaseFv.s"
+/* 802631DC-802631E4 0008+00 rc=1 efc=0 .text      do_load__24DynamicModuleControlBaseFv                        */
+bool DynamicModuleControlBase::do_load() {
+	return true;
 }
-#pragma pop
 
 
-/* 802631E4-802631EC 0008+00 .text      do_unload__24DynamicModuleControlBaseFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_unload__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/do_unload__24DynamicModuleControlBaseFv.s"
+/* 802631E4-802631EC 0008+00 rc=1 efc=0 .text      do_unload__24DynamicModuleControlBaseFv                      */
+bool DynamicModuleControlBase::do_unload() {
+	return true;
 }
-#pragma pop
 
 
-/* 802631EC-802631F4 0008+00 .text      do_unlink__24DynamicModuleControlBaseFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_unlink__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/do_unlink__24DynamicModuleControlBaseFv.s"
+/* 802631EC-802631F4 0008+00 rc=1 efc=0 .text      do_unlink__24DynamicModuleControlBaseFv                      */
+bool DynamicModuleControlBase::do_unlink() {
+	return true;
 }
-#pragma pop
 
 
-/* 802631F4-802631FC 0008+00 .text      do_load_async__24DynamicModuleControlBaseFv                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_load_async__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/do_load_async__24DynamicModuleControlBaseFv.s"
+/* 802631F4-802631FC 0008+00 rc=1 efc=0 .text      do_load_async__24DynamicModuleControlBaseFv                  */
+bool DynamicModuleControlBase::do_load_async() {
+	return true;
 }
-#pragma pop
 
 
-/* 802631FC-80263200 0004+00 .text      dump2__24DynamicModuleControlBaseFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dump2__24DynamicModuleControlBaseFv) {
-	nofralloc
-#include "asm/DynamicLink/dump2__24DynamicModuleControlBaseFv.s"
+/* 802631FC-80263200 0004+00 rc=1 efc=0 .text      dump2__24DynamicModuleControlBaseFv                          */
+void DynamicModuleControlBase::dump2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80263200-80263210 0010+00 .text      getModuleTypeString__24DynamicModuleControlBaseCFv           */
+/* 80263200-80263210 0010+00 rc=1 efc=0 .text      getModuleTypeString__24DynamicModuleControlBaseCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModuleTypeString__24DynamicModuleControlBaseCFv) {
+asm void DynamicModuleControlBase::getModuleTypeString() const {
 	nofralloc
 #include "asm/DynamicLink/getModuleTypeString__24DynamicModuleControlBaseCFv.s"
 }
 #pragma pop
 
 
-/* 80263210-80263218 0008+00 .text      getModuleSize__24DynamicModuleControlBaseCFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getModuleSize__24DynamicModuleControlBaseCFv) {
-	nofralloc
-#include "asm/DynamicLink/getModuleSize__24DynamicModuleControlBaseCFv.s"
+/* 80263210-80263218 0008+00 rc=1 efc=0 .text      getModuleSize__24DynamicModuleControlBaseCFv                 */
+bool DynamicModuleControlBase::getModuleSize() const {
+	return false;
 }
-#pragma pop
 
 
-/* 80263218-80263220 0008+00 .text      getModuleName__20DynamicModuleControlCFv                     */
+/* 80263218-80263220 0008+00 rc=1 efc=0 .text      getModuleName__20DynamicModuleControlCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModuleName__20DynamicModuleControlCFv) {
+asm void DynamicModuleControl::getModuleName() const {
 	nofralloc
 #include "asm/DynamicLink/getModuleName__20DynamicModuleControlCFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

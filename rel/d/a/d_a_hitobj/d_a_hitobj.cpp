@@ -6,16 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct hitobj_class;
+
+struct hitobj_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daHitobj_Draw__FP12hitobj_class();
-extern "C" extern void daHitobj_Execute__FP12hitobj_class();
-extern "C" extern void daHitobj_IsDelete__FP12hitobj_class();
-extern "C" extern void daHitobj_Delete__FP12hitobj_class();
-extern "C" extern void daHitobj_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+bool daHitobj_Draw(hitobj_class*);
+void daHitobj_Execute(hitobj_class*);
+bool daHitobj_IsDelete(hitobj_class*);
+void daHitobj_Delete(hitobj_class*);
+void daHitobj_Create(fopAc_ac_c*);
+
+extern "C" bool daHitobj_Draw__FP12hitobj_class();
+extern "C" void daHitobj_Execute__FP12hitobj_class();
+extern "C" bool daHitobj_IsDelete__FP12hitobj_class();
+extern "C" void daHitobj_Delete__FP12hitobj_class();
+extern "C" void daHitobj_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u8 stringBase0[8];
 SECTION_DATA extern u8 data_8046B5DC[64];
 SECTION_DATA extern u8 l_daHitobj_Method[32];
@@ -27,28 +54,25 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 8046B358-8046B360 0008+00 .text      daHitobj_Draw__FP12hitobj_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daHitobj_Draw__FP12hitobj_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_Draw__FP12hitobj_class.s"
+bool daHitobj_Draw(hitobj_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046B360-8046B3C8 0068+00 .text      daHitobj_Execute__FP12hitobj_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHitobj_Execute__FP12hitobj_class) {
+asm void daHitobj_Execute(hitobj_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_Execute__FP12hitobj_class.s"
 }
@@ -56,21 +80,16 @@ ASM_FUNCTION(daHitobj_Execute__FP12hitobj_class) {
 
 
 /* 8046B3C8-8046B3D0 0008+00 .text      daHitobj_IsDelete__FP12hitobj_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daHitobj_IsDelete__FP12hitobj_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_IsDelete__FP12hitobj_class.s"
+bool daHitobj_IsDelete(hitobj_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046B3D0-8046B400 0030+00 .text      daHitobj_Delete__FP12hitobj_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHitobj_Delete__FP12hitobj_class) {
+asm void daHitobj_Delete(hitobj_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_Delete__FP12hitobj_class.s"
 }
@@ -81,7 +100,7 @@ ASM_FUNCTION(daHitobj_Delete__FP12hitobj_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHitobj_Create__FP10fopAc_ac_c) {
+asm void daHitobj_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_Create__FP10fopAc_ac_c.s"
 }
@@ -92,7 +111,7 @@ ASM_FUNCTION(daHitobj_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/__dt__8cM3dGSphFv.s"
 }
@@ -103,7 +122,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/__dt__8cM3dGAabFv.s"
 }

@@ -6,23 +6,57 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSnowEffTag_c;
+struct fopAc_ac_c;
+
+struct daSnowEffTag_HIO_c {
+	daSnowEffTag_HIO_c();
+	~daSnowEffTag_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daSnowEffTag_c {
+	void setBaseMtx();
+	void create();
+	void playerAreaCheck();
+	void Execute();
+	bool Draw();
+	bool Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18daSnowEffTag_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__14daSnowEffTag_cFv();
-extern "C" extern void create__14daSnowEffTag_cFv();
-extern "C" extern void playerAreaCheck__14daSnowEffTag_cFv();
-extern "C" extern void Execute__14daSnowEffTag_cFv();
-extern "C" extern void Draw__14daSnowEffTag_cFv();
-extern "C" extern void Delete__14daSnowEffTag_cFv();
-extern "C" extern void daSnowEffTag_Draw__FP14daSnowEffTag_c();
-extern "C" extern void daSnowEffTag_Execute__FP14daSnowEffTag_c();
-extern "C" extern void daSnowEffTag_Delete__FP14daSnowEffTag_c();
-extern "C" extern void daSnowEffTag_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__18daSnowEffTag_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_snowEffTag_cpp();
+void daSnowEffTag_Draw(daSnowEffTag_c*);
+void daSnowEffTag_Execute(daSnowEffTag_c*);
+void daSnowEffTag_Delete(daSnowEffTag_c*);
+void daSnowEffTag_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_snowEffTag_cpp();
+
+extern "C" void __ct__18daSnowEffTag_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daSnowEffTag_cFv();
+extern "C" void create__14daSnowEffTag_cFv();
+extern "C" void playerAreaCheck__14daSnowEffTag_cFv();
+extern "C" void Execute__14daSnowEffTag_cFv();
+extern "C" bool Draw__14daSnowEffTag_cFv();
+extern "C" bool Delete__14daSnowEffTag_cFv();
+extern "C" void daSnowEffTag_Draw__FP14daSnowEffTag_c();
+extern "C" void daSnowEffTag_Execute__FP14daSnowEffTag_c();
+extern "C" void daSnowEffTag_Delete__FP14daSnowEffTag_c();
+extern "C" void daSnowEffTag_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daSnowEffTag_HIO_cFv();
+extern "C" void __sinit_d_a_obj_snowEffTag_cpp();
 SECTION_RODATA extern const u32 lit_3702;
 SECTION_RODATA extern const u32 lit_3703;
 SECTION_RODATA extern const u32 lit_3704;
@@ -44,8 +78,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -55,7 +92,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daSnowEffTag_HIO_cFv) {
+asm daSnowEffTag_HIO_c::daSnowEffTag_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/__ct__18daSnowEffTag_HIO_cFv.s"
 }
@@ -66,7 +103,7 @@ ASM_FUNCTION(__ct__18daSnowEffTag_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -77,7 +114,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daSnowEffTag_cFv) {
+asm void daSnowEffTag_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/setBaseMtx__14daSnowEffTag_cFv.s"
 }
@@ -88,7 +125,7 @@ ASM_FUNCTION(setBaseMtx__14daSnowEffTag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daSnowEffTag_cFv) {
+asm void daSnowEffTag_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/create__14daSnowEffTag_cFv.s"
 }
@@ -99,7 +136,7 @@ ASM_FUNCTION(create__14daSnowEffTag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playerAreaCheck__14daSnowEffTag_cFv) {
+asm void daSnowEffTag_c::playerAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/playerAreaCheck__14daSnowEffTag_cFv.s"
 }
@@ -110,7 +147,7 @@ ASM_FUNCTION(playerAreaCheck__14daSnowEffTag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daSnowEffTag_cFv) {
+asm void daSnowEffTag_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/Execute__14daSnowEffTag_cFv.s"
 }
@@ -118,32 +155,22 @@ ASM_FUNCTION(Execute__14daSnowEffTag_cFv) {
 
 
 /* 80CDF5E4-80CDF5EC 0008+00 .text      Draw__14daSnowEffTag_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daSnowEffTag_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/Draw__14daSnowEffTag_cFv.s"
+bool daSnowEffTag_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDF5EC-80CDF5F4 0008+00 .text      Delete__14daSnowEffTag_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daSnowEffTag_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/Delete__14daSnowEffTag_cFv.s"
+bool daSnowEffTag_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDF5F4-80CDF614 0020+00 .text      daSnowEffTag_Draw__FP14daSnowEffTag_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSnowEffTag_Draw__FP14daSnowEffTag_c) {
+asm void daSnowEffTag_Draw(daSnowEffTag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/daSnowEffTag_Draw__FP14daSnowEffTag_c.s"
 }
@@ -154,7 +181,7 @@ ASM_FUNCTION(daSnowEffTag_Draw__FP14daSnowEffTag_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSnowEffTag_Execute__FP14daSnowEffTag_c) {
+asm void daSnowEffTag_Execute(daSnowEffTag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/daSnowEffTag_Execute__FP14daSnowEffTag_c.s"
 }
@@ -165,7 +192,7 @@ ASM_FUNCTION(daSnowEffTag_Execute__FP14daSnowEffTag_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSnowEffTag_Delete__FP14daSnowEffTag_c) {
+asm void daSnowEffTag_Delete(daSnowEffTag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/daSnowEffTag_Delete__FP14daSnowEffTag_c.s"
 }
@@ -176,7 +203,7 @@ ASM_FUNCTION(daSnowEffTag_Delete__FP14daSnowEffTag_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSnowEffTag_Create__FP10fopAc_ac_c) {
+asm void daSnowEffTag_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/daSnowEffTag_Create__FP10fopAc_ac_c.s"
 }
@@ -187,7 +214,7 @@ ASM_FUNCTION(daSnowEffTag_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daSnowEffTag_HIO_cFv) {
+asm daSnowEffTag_HIO_c::~daSnowEffTag_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/__dt__18daSnowEffTag_HIO_cFv.s"
 }
@@ -198,7 +225,7 @@ ASM_FUNCTION(__dt__18daSnowEffTag_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_snowEffTag_cpp) {
+extern "C" asm void __sinit_d_a_obj_snowEffTag_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/__sinit_d_a_obj_snowEffTag_cpp.s"
 }

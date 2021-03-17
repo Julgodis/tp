@@ -9,20 +9,35 @@
 // Forward References:
 // 
 
-extern "C" extern void __OSLoadFPUContext();
-extern "C" extern void __OSSaveFPUContext();
-extern "C" extern void OSSaveFPUContext();
-extern "C" extern void OSSetCurrentContext();
-extern "C" extern void OSGetCurrentContext();
-extern "C" extern void OSSaveContext();
-extern "C" extern void OSLoadContext();
-extern "C" extern void OSGetStackPointer();
-extern "C" extern void OSClearContext();
-extern "C" extern void OSInitContext();
-extern "C" extern void OSDumpContext();
-extern "C" extern void OSSwitchFPUContext();
-extern "C" extern void __OSContextInit();
-extern "C" extern void OSFillFPUContext();
+extern "C" static void __OSLoadFPUContext();
+extern "C" static void __OSSaveFPUContext();
+extern "C" void OSSaveFPUContext();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSGetCurrentContext();
+extern "C" void OSSaveContext();
+extern "C" void OSLoadContext();
+extern "C" void OSGetStackPointer();
+extern "C" void OSClearContext();
+extern "C" void OSInitContext();
+extern "C" void OSDumpContext();
+extern "C" static void OSSwitchFPUContext();
+extern "C" void __OSContextInit();
+extern "C" void OSFillFPUContext();
+
+extern "C" static void __OSLoadFPUContext();
+extern "C" static void __OSSaveFPUContext();
+extern "C" void OSSaveFPUContext();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSGetCurrentContext();
+extern "C" void OSSaveContext();
+extern "C" void OSLoadContext();
+extern "C" void OSGetStackPointer();
+extern "C" void OSClearContext();
+extern "C" void OSInitContext();
+extern "C" void OSDumpContext();
+extern "C" static void OSSwitchFPUContext();
+extern "C" void __OSContextInit();
+extern "C" void OSFillFPUContext();
 SECTION_DATA extern u8 OSContext__lit_61[68];
 SECTION_DATA extern u8 OSContext__lit_62[48];
 SECTION_DATA extern u8 OSContext__lit_63[47 + 1 /* padding */];
@@ -41,122 +56,130 @@ SECTION_DATA extern u8 OSContext__lit_76[35 + 1 /* padding */];
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void __OSSetExceptionHandler();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void __RAS_OSDisableInterrupts_end();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void DBPrintf();
-extern "C" extern void __cvt_fp2unsigned();
+extern "C" void OSReport();
+extern "C" void __OSSetExceptionHandler();
+extern "C" void OSDisableInterrupts();
+extern "C" void __RAS_OSDisableInterrupts_end();
+extern "C" void OSRestoreInterrupts();
+extern "C" void DBPrintf();
+extern "C" void __cvt_fp2unsigned();
+
+extern "C" void OSReport();
+extern "C" void __OSSetExceptionHandler();
+extern "C" void OSDisableInterrupts();
+extern "C" void __RAS_OSDisableInterrupts_end();
+extern "C" void OSRestoreInterrupts();
+extern "C" void DBPrintf();
+extern "C" void __cvt_fp2unsigned();
 
 // 
 // Declarations:
 // 
 
-/* 8033BBE4-8033BD08 0124+00 .text      __OSLoadFPUContext                                           */
+/* 8033BBE4-8033BD08 0124+00 rc=1 efc=0 .text      __OSLoadFPUContext                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSLoadFPUContext) {
+extern "C" asm static void __OSLoadFPUContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/__OSLoadFPUContext.s"
 }
 #pragma pop
 
 
-/* 8033BD08-8033BE30 0128+00 .text      __OSSaveFPUContext                                           */
+/* 8033BD08-8033BE30 0128+00 rc=2 efc=0 .text      __OSSaveFPUContext                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSSaveFPUContext) {
+extern "C" asm static void __OSSaveFPUContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/__OSSaveFPUContext.s"
 }
 #pragma pop
 
 
-/* 8033BE30-8033BE38 0008+00 .text      OSSaveFPUContext                                             */
+/* 8033BE30-8033BE38 0008+00 rc=1 efc=1 .text      OSSaveFPUContext                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSaveFPUContext) {
+extern "C" asm void OSSaveFPUContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSSaveFPUContext.s"
 }
 #pragma pop
 
 
-/* 8033BE38-8033BE94 005C+00 .text      OSSetCurrentContext                                          */
+/* 8033BE38-8033BE94 005C+00 rc=19 efc=18 .text      OSSetCurrentContext                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetCurrentContext) {
+extern "C" asm void OSSetCurrentContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSSetCurrentContext.s"
 }
 #pragma pop
 
 
-/* 8033BE94-8033BEA0 000C+00 .text      OSGetCurrentContext                                          */
+/* 8033BE94-8033BEA0 000C+00 rc=2 efc=2 .text      OSGetCurrentContext                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSGetCurrentContext) {
+extern "C" asm void OSGetCurrentContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSGetCurrentContext.s"
 }
 #pragma pop
 
 
-/* 8033BEA0-8033BF20 0080+00 .text      OSSaveContext                                                */
+/* 8033BEA0-8033BF20 0080+00 rc=1 efc=1 .text      OSSaveContext                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSaveContext) {
+extern "C" asm void OSSaveContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSSaveContext.s"
 }
 #pragma pop
 
 
-/* 8033BF20-8033BFF8 00D8+00 .text      OSLoadContext                                                */
+/* 8033BF20-8033BFF8 00D8+00 rc=4 efc=4 .text      OSLoadContext                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSLoadContext) {
+extern "C" asm void OSLoadContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSLoadContext.s"
 }
 #pragma pop
 
 
-/* 8033BFF8-8033C000 0008+00 .text      OSGetStackPointer                                            */
+/* 8033BFF8-8033C000 0008+00 rc=5 efc=5 .text      OSGetStackPointer                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSGetStackPointer) {
+extern "C" asm void OSGetStackPointer() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSGetStackPointer.s"
 }
 #pragma pop
 
 
-/* 8033C000-8033C024 0024+00 .text      OSClearContext                                               */
+/* 8033C000-8033C024 0024+00 rc=21 efc=20 .text      OSClearContext                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSClearContext) {
+extern "C" asm void OSClearContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSClearContext.s"
 }
 #pragma pop
 
 
-/* 8033C024-8033C0E0 00BC+00 .text      OSInitContext                                                */
+/* 8033C024-8033C0E0 00BC+00 rc=1 efc=1 .text      OSInitContext                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSInitContext) {
+extern "C" asm void OSInitContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSInitContext.s"
 }
@@ -164,7 +187,7 @@ ASM_FUNCTION(OSInitContext) {
 
 
 /* ############################################################################################## */
-/* 803CF740-803CF784 0044+00 .data      @61                                                          */
+/* 803CF740-803CF784 0044+00 rc=1 efc=0 .data      @61                                                          */
 u8 OSContext__lit_61[68] = {
 	0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x20, 0x43, 0x6F, 0x6E, 0x74, 0x65, 0x78,
@@ -173,22 +196,22 @@ u8 OSContext__lit_61[68] = {
 	0x2D, 0x2D, 0x0A, 0x00,
 };
 
-/* 8033C0E0-8033C388 02A8+00 .text      OSDumpContext                                                */
+/* 8033C0E0-8033C388 02A8+00 rc=3 efc=3 .text      OSDumpContext                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSDumpContext) {
+extern "C" asm void OSDumpContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSDumpContext.s"
 }
 #pragma pop
 
 
-/* 8033C388-8033C40C 0084+00 .text      OSSwitchFPUContext                                           */
+/* 8033C388-8033C40C 0084+00 rc=1 efc=0 .text      OSSwitchFPUContext                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSwitchFPUContext) {
+extern "C" asm static void OSSwitchFPUContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSSwitchFPUContext.s"
 }
@@ -196,14 +219,14 @@ ASM_FUNCTION(OSSwitchFPUContext) {
 
 
 /* ############################################################################################## */
-/* 803CF784-803CF7B4 0030+00 .data      @62                                                          */
+/* 803CF784-803CF7B4 0030+00 rc=0 efc=0 .data      @62                                                          */
 u8 OSContext__lit_62[48] = {
 	0x72, 0x25, 0x2D, 0x32, 0x64, 0x20, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20,
 	0x28, 0x25, 0x31, 0x34, 0x64, 0x29, 0x20, 0x20, 0x72, 0x25, 0x2D, 0x32, 0x64, 0x20, 0x20, 0x3D,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x28, 0x25, 0x31, 0x34, 0x64, 0x29, 0x0A, 0x00,
 };
 
-/* 803CF7B4-803CF7E4 002F+01 .data      @63                                                          */
+/* 803CF7B4-803CF7E4 002F+01 rc=0 efc=0 .data      @63                                                          */
 u8 OSContext__lit_63[48] = {
 	0x4C, 0x52, 0x20, 0x20, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
@@ -212,7 +235,7 @@ u8 OSContext__lit_63[48] = {
 	0x00,
 };
 
-/* 803CF7E4-803CF814 002F+01 .data      @64                                                          */
+/* 803CF7E4-803CF814 002F+01 rc=0 efc=0 .data      @64                                                          */
 u8 OSContext__lit_64[48] = {
 	0x53, 0x52, 0x52, 0x30, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
@@ -221,7 +244,7 @@ u8 OSContext__lit_64[48] = {
 	0x00,
 };
 
-/* 803CF814-803CF828 0011+03 .data      @65                                                          */
+/* 803CF814-803CF828 0011+03 rc=0 efc=0 .data      @65                                                          */
 u8 OSContext__lit_65[20] = {
 	0x0A, 0x47, 0x51, 0x52, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x0A,
 	0x00,
@@ -229,7 +252,7 @@ u8 OSContext__lit_65[20] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803CF828-803CF84C 0021+03 .data      @66                                                          */
+/* 803CF828-803CF84C 0021+03 rc=0 efc=0 .data      @66                                                          */
 u8 OSContext__lit_66[36] = {
 	0x67, 0x71, 0x72, 0x25, 0x64, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x09,
 	0x20, 0x67, 0x71, 0x72, 0x25, 0x64, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A,
@@ -238,7 +261,7 @@ u8 OSContext__lit_66[36] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803CF84C-803CF860 0012+02 .data      @67                                                          */
+/* 803CF84C-803CF860 0012+02 rc=0 efc=0 .data      @67                                                          */
 u8 OSContext__lit_67[20] = {
 	0x0A, 0x0A, 0x46, 0x50, 0x52, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x0A, 0x00,
@@ -246,7 +269,7 @@ u8 OSContext__lit_67[20] = {
 	0x00, 0x00,
 };
 
-/* 803CF860-803CF87C 0019+03 .data      @68                                                          */
+/* 803CF860-803CF87C 0019+03 rc=0 efc=0 .data      @68                                                          */
 u8 OSContext__lit_68[28] = {
 	0x66, 0x72, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x25, 0x64, 0x20, 0x09, 0x20, 0x66, 0x72, 0x25,
 	0x64, 0x20, 0x09, 0x3D, 0x20, 0x25, 0x64, 0x0A, 0x00,
@@ -254,7 +277,7 @@ u8 OSContext__lit_68[28] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803CF87C-803CF890 0012+02 .data      @69                                                          */
+/* 803CF87C-803CF890 0012+02 rc=0 efc=0 .data      @69                                                          */
 u8 OSContext__lit_69[20] = {
 	0x0A, 0x0A, 0x50, 0x53, 0x46, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x0A, 0x00,
@@ -262,7 +285,7 @@ u8 OSContext__lit_69[20] = {
 	0x00, 0x00,
 };
 
-/* 803CF890-803CF8B0 001D+03 .data      @70                                                          */
+/* 803CF890-803CF8B0 001D+03 rc=0 efc=0 .data      @70                                                          */
 u8 OSContext__lit_70[32] = {
 	0x70, 0x73, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x09, 0x20, 0x70,
 	0x73, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x0A, 0x00,
@@ -270,7 +293,7 @@ u8 OSContext__lit_70[32] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803CF8B0-803CF8D8 0026+02 .data      @71                                                          */
+/* 803CF8B0-803CF8D8 0026+02 rc=0 efc=0 .data      @71                                                          */
 u8 OSContext__lit_71[40] = {
 	0x0A, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x42,
 	0x61, 0x63, 0x6B, 0x20, 0x43, 0x68, 0x61, 0x69, 0x6E, 0x20, 0x20, 0x20, 0x20, 0x4C, 0x52, 0x20,
@@ -279,13 +302,13 @@ u8 OSContext__lit_71[40] = {
 	0x00, 0x00,
 };
 
-/* 803CF8D8-803CF8F4 001C+00 .data      @72                                                          */
+/* 803CF8D8-803CF8F4 001C+00 rc=0 efc=0 .data      @72                                                          */
 u8 OSContext__lit_72[28] = {
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3A, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78,
 	0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
-/* 803CF8F4-803CF918 0023+01 .data      @76                                                          */
+/* 803CF8F4-803CF918 0023+01 rc=1 efc=0 .data      @76                                                          */
 u8 OSContext__lit_76[36] = {
 	0x46, 0x50, 0x55, 0x2D, 0x75, 0x6E, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x20,
 	0x68, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x72, 0x20, 0x69, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x65,
@@ -294,26 +317,25 @@ u8 OSContext__lit_76[36] = {
 	0x00,
 };
 
-/* 8033C40C-8033C454 0048+00 .text      __OSContextInit                                              */
+/* 8033C40C-8033C454 0048+00 rc=1 efc=1 .text      __OSContextInit                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSContextInit) {
+extern "C" asm void __OSContextInit() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/__OSContextInit.s"
 }
 #pragma pop
 
 
-/* 8033C454-8033C580 012C+00 .text      OSFillFPUContext                                             */
+/* 8033C454-8033C580 012C+00 rc=1 efc=1 .text      OSFillFPUContext                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSFillFPUContext) {
+extern "C" asm void OSFillFPUContext() {
 	nofralloc
 #include "asm/dolphin/os/OSContext/OSFillFPUContext.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

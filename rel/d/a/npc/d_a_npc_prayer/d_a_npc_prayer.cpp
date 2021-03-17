@@ -6,72 +6,195 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daNpcPray_c {
+	daNpcPray_c();
+	~daNpcPray_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void main();
+	void setAttnPos();
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void reset();
+	void playMotion();
+	void setLookMode(s32);
+	void lookat();
+	void chkFindPlayer();
+	void wait(void*);
+	void fear(void*);
+	void talk(void*);
+	void demo(void*);
+	void createHeart();
+	void _Evt_GetHeart(s32);
+	void _Evt_GetHeart_CutInit(s32 const&);
+	void _Evt_GetHeart_CutMain(s32 const&);
+	void adjustShapeAngle();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	bool ctrlBtk();
+	void setCollisions();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+	void drawOtherMdls();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcPray_Param_c {
+	~daNpcPray_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11daNpcPray_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__11daNpcPray_cFv();
-extern "C" extern void Create__11daNpcPray_cFv();
-extern "C" extern void CreateHeap__11daNpcPray_cFv();
-extern "C" extern void Delete__11daNpcPray_cFv();
-extern "C" extern void Execute__11daNpcPray_cFv();
-extern "C" extern void Draw__11daNpcPray_cFv();
-extern "C" extern void ctrlJoint__11daNpcPray_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__11daNpcPray_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__11daNpcPray_cFP8J3DJointi();
-extern "C" extern void setParam__11daNpcPray_cFv();
-extern "C" extern void main__11daNpcPray_cFv();
-extern "C" extern void setAttnPos__11daNpcPray_cFv();
-extern "C" extern void setMotionAnm__11daNpcPray_cFif();
-extern "C" extern void setMotion__11daNpcPray_cFifi();
-extern "C" extern void drawDbgInfo__11daNpcPray_cFv();
-extern "C" extern void reset__11daNpcPray_cFv();
-extern "C" extern void playMotion__11daNpcPray_cFv();
-extern "C" extern void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b();
-extern "C" extern void setLookMode__11daNpcPray_cFi();
-extern "C" extern void lookat__11daNpcPray_cFv();
-extern "C" extern void step__11daNpcPray_cFsi();
-extern "C" extern void chkFindPlayer__11daNpcPray_cFv();
-extern "C" extern void wait__11daNpcPray_cFPv();
-extern "C" extern void fear__11daNpcPray_cFPv();
-extern "C" extern void talk__11daNpcPray_cFPv();
-extern "C" extern void demo__11daNpcPray_cFPv();
-extern "C" extern void createHeart__11daNpcPray_cFv();
-extern "C" extern void _Evt_GetHeart__11daNpcPray_cFi();
-extern "C" extern void _Evt_GetHeart_CutInit__11daNpcPray_cFRCi();
-extern "C" extern void _Evt_GetHeart_CutMain__11daNpcPray_cFRCi();
-extern "C" extern void daNpcPray_Create__FPv();
-extern "C" extern void daNpcPray_Delete__FPv();
-extern "C" extern void daNpcPray_Execute__FPv();
-extern "C" extern void daNpcPray_Draw__FPv();
-extern "C" extern void daNpcPray_IsDelete__FPv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void ctrlBtk__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_npc_prayer_cpp();
-extern "C" extern void adjustShapeAngle__11daNpcPray_cFv();
-extern "C" extern void __dt__17daNpcPray_Param_cFv();
-extern "C" extern void func_80AB57E4();
-extern "C" extern void func_80AB57EC();
+extern "C" void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b();
+extern "C" void step__11daNpcPray_cFsi();
+void daNpcPray_Create(void*);
+void daNpcPray_Delete(void*);
+void daNpcPray_Execute(void*);
+void daNpcPray_Draw(void*);
+bool daNpcPray_IsDelete(void*);
+extern "C" void __sinit_d_a_npc_prayer_cpp();
+extern "C" void func_80AB57E4();
+extern "C" void func_80AB57EC();
+
+extern "C" void __ct__11daNpcPray_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__11daNpcPray_cFv();
+extern "C" void Create__11daNpcPray_cFv();
+extern "C" void CreateHeap__11daNpcPray_cFv();
+extern "C" void Delete__11daNpcPray_cFv();
+extern "C" void Execute__11daNpcPray_cFv();
+extern "C" void Draw__11daNpcPray_cFv();
+extern "C" void ctrlJoint__11daNpcPray_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__11daNpcPray_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__11daNpcPray_cFP8J3DJointi();
+extern "C" void setParam__11daNpcPray_cFv();
+extern "C" void main__11daNpcPray_cFv();
+extern "C" void setAttnPos__11daNpcPray_cFv();
+extern "C" void setMotionAnm__11daNpcPray_cFif();
+extern "C" void setMotion__11daNpcPray_cFifi();
+extern "C" bool drawDbgInfo__11daNpcPray_cFv();
+extern "C" void reset__11daNpcPray_cFv();
+extern "C" void playMotion__11daNpcPray_cFv();
+extern "C" void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b();
+extern "C" void setLookMode__11daNpcPray_cFi();
+extern "C" void lookat__11daNpcPray_cFv();
+extern "C" void step__11daNpcPray_cFsi();
+extern "C" void chkFindPlayer__11daNpcPray_cFv();
+extern "C" void wait__11daNpcPray_cFPv();
+extern "C" void fear__11daNpcPray_cFPv();
+extern "C" void talk__11daNpcPray_cFPv();
+extern "C" void demo__11daNpcPray_cFPv();
+extern "C" void createHeart__11daNpcPray_cFv();
+extern "C" void _Evt_GetHeart__11daNpcPray_cFi();
+extern "C" void _Evt_GetHeart_CutInit__11daNpcPray_cFRCi();
+extern "C" void _Evt_GetHeart_CutMain__11daNpcPray_cFRCi();
+extern "C" void daNpcPray_Create__FPv();
+extern "C" void daNpcPray_Delete__FPv();
+extern "C" void daNpcPray_Execute__FPv();
+extern "C" void daNpcPray_Draw__FPv();
+extern "C" bool daNpcPray_IsDelete__FPv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" bool ctrlBtk__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_npc_prayer_cpp();
+extern "C" void adjustShapeAngle__11daNpcPray_cFv();
+extern "C" void __dt__17daNpcPray_Param_cFv();
+extern "C" void func_80AB57E4();
+extern "C" void func_80AB57EC();
 SECTION_RODATA extern const u8 m__17daNpcPray_Param_c[108];
 SECTION_RODATA extern const u32 lit_4169;
 SECTION_RODATA extern const u32 lit_4170;
@@ -147,8 +270,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -158,7 +284,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daNpcPray_cFv) {
+asm daNpcPray_c::daNpcPray_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__ct__11daNpcPray_cFv.s"
 }
@@ -169,7 +295,7 @@ ASM_FUNCTION(__ct__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__8cM3dGCylFv.s"
 }
@@ -180,7 +306,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__8cM3dGAabFv.s"
 }
@@ -191,7 +317,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daNpcPray_cFv) {
+asm daNpcPray_c::~daNpcPray_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__11daNpcPray_cFv.s"
 }
@@ -202,7 +328,7 @@ ASM_FUNCTION(__dt__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daNpcPray_cFv) {
+asm void daNpcPray_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/Create__11daNpcPray_cFv.s"
 }
@@ -213,7 +339,7 @@ ASM_FUNCTION(Create__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daNpcPray_cFv) {
+asm void daNpcPray_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/CreateHeap__11daNpcPray_cFv.s"
 }
@@ -224,7 +350,7 @@ ASM_FUNCTION(CreateHeap__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daNpcPray_cFv) {
+asm void daNpcPray_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/Delete__11daNpcPray_cFv.s"
 }
@@ -235,7 +361,7 @@ ASM_FUNCTION(Delete__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daNpcPray_cFv) {
+asm void daNpcPray_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/Execute__11daNpcPray_cFv.s"
 }
@@ -246,7 +372,7 @@ ASM_FUNCTION(Execute__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daNpcPray_cFv) {
+asm void daNpcPray_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/Draw__11daNpcPray_cFv.s"
 }
@@ -257,7 +383,7 @@ ASM_FUNCTION(Draw__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__11daNpcPray_cFP8J3DJointP8J3DModel) {
+asm void daNpcPray_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/ctrlJoint__11daNpcPray_cFP8J3DJointP8J3DModel.s"
 }
@@ -268,7 +394,7 @@ ASM_FUNCTION(ctrlJoint__11daNpcPray_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__11daNpcPray_cFP10fopAc_ac_c) {
+asm void daNpcPray_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/createHeapCallBack__11daNpcPray_cFP10fopAc_ac_c.s"
 }
@@ -279,7 +405,7 @@ ASM_FUNCTION(createHeapCallBack__11daNpcPray_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__11daNpcPray_cFP8J3DJointi) {
+asm void daNpcPray_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/ctrlJointCallBack__11daNpcPray_cFP8J3DJointi.s"
 }
@@ -290,7 +416,7 @@ ASM_FUNCTION(ctrlJointCallBack__11daNpcPray_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__11daNpcPray_cFv) {
+asm void daNpcPray_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setParam__11daNpcPray_cFv.s"
 }
@@ -301,7 +427,7 @@ ASM_FUNCTION(setParam__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__11daNpcPray_cFv) {
+asm void daNpcPray_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/main__11daNpcPray_cFv.s"
 }
@@ -312,7 +438,7 @@ ASM_FUNCTION(main__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__11daNpcPray_cFv) {
+asm void daNpcPray_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setAttnPos__11daNpcPray_cFv.s"
 }
@@ -323,7 +449,7 @@ ASM_FUNCTION(setAttnPos__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__11daNpcPray_cFif) {
+asm void daNpcPray_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setMotionAnm__11daNpcPray_cFif.s"
 }
@@ -334,7 +460,7 @@ ASM_FUNCTION(setMotionAnm__11daNpcPray_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__11daNpcPray_cFifi) {
+asm void daNpcPray_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setMotion__11daNpcPray_cFifi.s"
 }
@@ -342,21 +468,16 @@ ASM_FUNCTION(setMotion__11daNpcPray_cFifi) {
 
 
 /* 80AB3C24-80AB3C2C 0008+00 .text      drawDbgInfo__11daNpcPray_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__11daNpcPray_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/drawDbgInfo__11daNpcPray_cFv.s"
+bool daNpcPray_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AB3C2C-80AB3DBC 0190+00 .text      reset__11daNpcPray_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__11daNpcPray_cFv) {
+asm void daNpcPray_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/reset__11daNpcPray_cFv.s"
 }
@@ -367,7 +488,7 @@ ASM_FUNCTION(reset__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__11daNpcPray_cFv) {
+asm void daNpcPray_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/playMotion__11daNpcPray_cFv.s"
 }
@@ -378,7 +499,7 @@ ASM_FUNCTION(playMotion__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b) {
+extern "C" asm void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b.s"
 }
@@ -389,7 +510,7 @@ ASM_FUNCTION(setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__11daNpcPray_cFi) {
+asm void daNpcPray_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setLookMode__11daNpcPray_cFi.s"
 }
@@ -400,7 +521,7 @@ ASM_FUNCTION(setLookMode__11daNpcPray_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__11daNpcPray_cFv) {
+asm void daNpcPray_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/lookat__11daNpcPray_cFv.s"
 }
@@ -411,7 +532,7 @@ ASM_FUNCTION(lookat__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(step__11daNpcPray_cFsi) {
+extern "C" asm void step__11daNpcPray_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/step__11daNpcPray_cFsi.s"
 }
@@ -422,7 +543,7 @@ ASM_FUNCTION(step__11daNpcPray_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFindPlayer__11daNpcPray_cFv) {
+asm void daNpcPray_c::chkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/chkFindPlayer__11daNpcPray_cFv.s"
 }
@@ -433,7 +554,7 @@ ASM_FUNCTION(chkFindPlayer__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__11daNpcPray_cFPv) {
+asm void daNpcPray_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/wait__11daNpcPray_cFPv.s"
 }
@@ -444,7 +565,7 @@ ASM_FUNCTION(wait__11daNpcPray_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fear__11daNpcPray_cFPv) {
+asm void daNpcPray_c::fear(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/fear__11daNpcPray_cFPv.s"
 }
@@ -455,7 +576,7 @@ ASM_FUNCTION(fear__11daNpcPray_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__11daNpcPray_cFPv) {
+asm void daNpcPray_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/talk__11daNpcPray_cFPv.s"
 }
@@ -466,7 +587,7 @@ ASM_FUNCTION(talk__11daNpcPray_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__11daNpcPray_cFPv) {
+asm void daNpcPray_c::demo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/demo__11daNpcPray_cFPv.s"
 }
@@ -477,7 +598,7 @@ ASM_FUNCTION(demo__11daNpcPray_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeart__11daNpcPray_cFv) {
+asm void daNpcPray_c::createHeart() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/createHeart__11daNpcPray_cFv.s"
 }
@@ -488,7 +609,7 @@ ASM_FUNCTION(createHeart__11daNpcPray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_GetHeart__11daNpcPray_cFi) {
+asm void daNpcPray_c::_Evt_GetHeart(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/_Evt_GetHeart__11daNpcPray_cFi.s"
 }
@@ -499,7 +620,7 @@ ASM_FUNCTION(_Evt_GetHeart__11daNpcPray_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_GetHeart_CutInit__11daNpcPray_cFRCi) {
+asm void daNpcPray_c::_Evt_GetHeart_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/_Evt_GetHeart_CutInit__11daNpcPray_cFRCi.s"
 }
@@ -510,7 +631,7 @@ ASM_FUNCTION(_Evt_GetHeart_CutInit__11daNpcPray_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_GetHeart_CutMain__11daNpcPray_cFRCi) {
+asm void daNpcPray_c::_Evt_GetHeart_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/_Evt_GetHeart_CutMain__11daNpcPray_cFRCi.s"
 }
@@ -521,7 +642,7 @@ ASM_FUNCTION(_Evt_GetHeart_CutMain__11daNpcPray_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPray_Create__FPv) {
+asm void daNpcPray_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/daNpcPray_Create__FPv.s"
 }
@@ -532,7 +653,7 @@ ASM_FUNCTION(daNpcPray_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPray_Delete__FPv) {
+asm void daNpcPray_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/daNpcPray_Delete__FPv.s"
 }
@@ -543,7 +664,7 @@ ASM_FUNCTION(daNpcPray_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPray_Execute__FPv) {
+asm void daNpcPray_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/daNpcPray_Execute__FPv.s"
 }
@@ -554,7 +675,7 @@ ASM_FUNCTION(daNpcPray_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPray_Draw__FPv) {
+asm void daNpcPray_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/daNpcPray_Draw__FPv.s"
 }
@@ -562,21 +683,16 @@ ASM_FUNCTION(daNpcPray_Draw__FPv) {
 
 
 /* 80AB4F08-80AB4F10 0008+00 .text      daNpcPray_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcPray_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/daNpcPray_IsDelete__FPv.s"
+bool daNpcPray_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AB4F10-80AB4F58 0048+00 .text      __dt__18daNpcF_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -587,7 +703,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -598,7 +714,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -609,7 +725,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__5csXyzFv.s"
 }
@@ -617,21 +733,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80AB50A0-80AB50A4 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB50A4-80AB50E0 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__4cXyzFv.s"
 }
@@ -639,21 +750,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80AB50E0-80AB50E4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB50E4-80AB5330 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__8daNpcF_cFv.s"
 }
@@ -664,7 +770,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__ct__8daNpcF_cFv.s"
 }
@@ -675,7 +781,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__12dBgS_AcchCirFv.s"
 }
@@ -686,7 +792,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__10dCcD_GSttsFv.s"
 }
@@ -697,7 +803,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -708,7 +814,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__12J3DFrameCtrlFv.s"
 }
@@ -716,76 +822,46 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80AB56A4-80AB56AC 0008+00 .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AB56AC-80AB56B0 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB56B0-80AB56B8 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AB56B8-80AB56C0 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AB56C0-80AB56C4 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB56C4-80AB56C8 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB56C8-80AB5710 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__10cCcD_GSttsFv.s"
 }
@@ -796,7 +872,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_prayer_cpp) {
+extern "C" asm void __sinit_d_a_npc_prayer_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__sinit_d_a_npc_prayer_cpp.s"
 }
@@ -804,21 +880,16 @@ ASM_FUNCTION(__sinit_d_a_npc_prayer_cpp) {
 
 
 /* 80AB5798-80AB579C 0004+00 .text      adjustShapeAngle__11daNpcPray_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__11daNpcPray_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/adjustShapeAngle__11daNpcPray_cFv.s"
+void daNpcPray_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AB579C-80AB57E4 0048+00 .text      __dt__17daNpcPray_Param_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daNpcPray_Param_cFv) {
+asm daNpcPray_Param_c::~daNpcPray_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/__dt__17daNpcPray_Param_cFv.s"
 }
@@ -829,7 +900,7 @@ ASM_FUNCTION(__dt__17daNpcPray_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AB57E4) {
+extern "C" asm void func_80AB57E4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/func_80AB57E4.s"
 }
@@ -840,7 +911,7 @@ ASM_FUNCTION(func_80AB57E4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AB57EC) {
+extern "C" asm void func_80AB57EC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/func_80AB57EC.s"
 }

@@ -6,57 +6,149 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSyRock_c;
+struct fopAc_ac_c;
+
+struct daSyRock_HIO_c {
+	daSyRock_HIO_c();
+	~daSyRock_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daSyRock_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void setFallStat();
+	void move();
+	void init_modeWait();
+	void modeWait();
+	void eventStart();
+	void init_modeDropInit();
+	void modeDropInit();
+	void searchWaterPillar(void*, void*);
+	void init_modeDrop();
+	void modeDrop();
+	void init_modeSink();
+	void modeSink();
+	void init_modeMove();
+	void modeMove();
+	void chkWaterLineIn();
+	void bgCheck();
+	void init_modeDropEnd();
+	void modeDropEnd();
+	void Draw();
+	void Delete();
+	~daSyRock_c();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+struct daWtPillar_c {
+	void getPos();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daSyRock_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daSyRock_cFv();
-extern "C" extern void CreateHeap__10daSyRock_cFv();
-extern "C" extern void create__10daSyRock_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void setFallStat__10daSyRock_cFv();
-extern "C" extern void Execute__10daSyRock_cFPPA3_A4_f();
-extern "C" extern void move__10daSyRock_cFv();
-extern "C" extern void init_modeWait__10daSyRock_cFv();
-extern "C" extern void modeWait__10daSyRock_cFv();
-extern "C" extern void eventStart__10daSyRock_cFv();
-extern "C" extern void init_modeDropInit__10daSyRock_cFv();
-extern "C" extern void modeDropInit__10daSyRock_cFv();
-extern "C" extern void searchWaterPillar__10daSyRock_cFPvPv();
-extern "C" extern void init_modeDrop__10daSyRock_cFv();
-extern "C" extern void modeDrop__10daSyRock_cFv();
-extern "C" extern void init_modeSink__10daSyRock_cFv();
-extern "C" extern void modeSink__10daSyRock_cFv();
-extern "C" extern void init_modeMove__10daSyRock_cFv();
-extern "C" extern void modeMove__10daSyRock_cFv();
-extern "C" extern void chkWaterLineIn__10daSyRock_cFv();
-extern "C" extern void bgCheck__10daSyRock_cFv();
-extern "C" extern void init_modeDropEnd__10daSyRock_cFv();
-extern "C" extern void modeDropEnd__10daSyRock_cFv();
-extern "C" extern void Draw__10daSyRock_cFv();
-extern "C" extern void Delete__10daSyRock_cFv();
-extern "C" extern void daSyRock_Draw__FP10daSyRock_c();
-extern "C" extern void daSyRock_Execute__FP10daSyRock_c();
-extern "C" extern void daSyRock_Delete__FP10daSyRock_c();
-extern "C" extern void daSyRock_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daSyRock_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_syRock_cpp();
-extern "C" extern void func_80D03D10();
-extern "C" extern void func_80D03D18();
-extern "C" extern void func_80D03D20();
-extern "C" extern void func_80D03D28();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void getPos__12daWtPillar_cFv();
-extern "C" extern void __dt__10daSyRock_cFv();
+extern "C" void Execute__10daSyRock_cFPPA3_A4_f();
+void daSyRock_Draw(daSyRock_c*);
+void daSyRock_Execute(daSyRock_c*);
+void daSyRock_Delete(daSyRock_c*);
+void daSyRock_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_syRock_cpp();
+extern "C" void func_80D03D10();
+extern "C" void func_80D03D18();
+extern "C" void func_80D03D20();
+extern "C" void func_80D03D28();
+
+extern "C" void __ct__14daSyRock_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daSyRock_cFv();
+extern "C" void CreateHeap__10daSyRock_cFv();
+extern "C" void create__10daSyRock_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void setFallStat__10daSyRock_cFv();
+extern "C" void Execute__10daSyRock_cFPPA3_A4_f();
+extern "C" void move__10daSyRock_cFv();
+extern "C" void init_modeWait__10daSyRock_cFv();
+extern "C" void modeWait__10daSyRock_cFv();
+extern "C" void eventStart__10daSyRock_cFv();
+extern "C" void init_modeDropInit__10daSyRock_cFv();
+extern "C" void modeDropInit__10daSyRock_cFv();
+extern "C" void searchWaterPillar__10daSyRock_cFPvPv();
+extern "C" void init_modeDrop__10daSyRock_cFv();
+extern "C" void modeDrop__10daSyRock_cFv();
+extern "C" void init_modeSink__10daSyRock_cFv();
+extern "C" void modeSink__10daSyRock_cFv();
+extern "C" void init_modeMove__10daSyRock_cFv();
+extern "C" void modeMove__10daSyRock_cFv();
+extern "C" void chkWaterLineIn__10daSyRock_cFv();
+extern "C" void bgCheck__10daSyRock_cFv();
+extern "C" void init_modeDropEnd__10daSyRock_cFv();
+extern "C" void modeDropEnd__10daSyRock_cFv();
+extern "C" void Draw__10daSyRock_cFv();
+extern "C" void Delete__10daSyRock_cFv();
+extern "C" void daSyRock_Draw__FP10daSyRock_c();
+extern "C" void daSyRock_Execute__FP10daSyRock_c();
+extern "C" void daSyRock_Delete__FP10daSyRock_c();
+extern "C" void daSyRock_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daSyRock_HIO_cFv();
+extern "C" void __sinit_d_a_obj_syRock_cpp();
+extern "C" void func_80D03D10();
+extern "C" void func_80D03D18();
+extern "C" void func_80D03D20();
+extern "C" void func_80D03D28();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void getPos__12daWtPillar_cFv();
+extern "C" void __dt__10daSyRock_cFv();
 SECTION_RODATA extern const u32 lit_3662;
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_RODATA extern const u32 lit_3664;
@@ -115,8 +207,11 @@ SECTION_BSS extern u8 data_80D042A0[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -126,7 +221,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daSyRock_HIO_cFv) {
+asm daSyRock_HIO_c::daSyRock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__ct__14daSyRock_HIO_cFv.s"
 }
@@ -137,7 +232,7 @@ ASM_FUNCTION(__ct__14daSyRock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -148,7 +243,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daSyRock_cFv) {
+asm void daSyRock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/setBaseMtx__10daSyRock_cFv.s"
 }
@@ -159,7 +254,7 @@ ASM_FUNCTION(setBaseMtx__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daSyRock_cFv) {
+asm void daSyRock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/CreateHeap__10daSyRock_cFv.s"
 }
@@ -170,7 +265,7 @@ ASM_FUNCTION(CreateHeap__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daSyRock_cFv) {
+asm void daSyRock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/create__10daSyRock_cFv.s"
 }
@@ -181,7 +276,7 @@ ASM_FUNCTION(create__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -192,7 +287,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__12dBgS_AcchCirFv.s"
 }
@@ -203,7 +298,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__8cM3dGCylFv.s"
 }
@@ -214,7 +309,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__8cM3dGAabFv.s"
 }
@@ -225,7 +320,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__10dCcD_GSttsFv.s"
 }
@@ -236,7 +331,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFallStat__10daSyRock_cFv) {
+asm void daSyRock_c::setFallStat() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/setFallStat__10daSyRock_cFv.s"
 }
@@ -247,7 +342,7 @@ ASM_FUNCTION(setFallStat__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daSyRock_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daSyRock_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/Execute__10daSyRock_cFPPA3_A4_f.s"
 }
@@ -258,7 +353,7 @@ ASM_FUNCTION(Execute__10daSyRock_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__10daSyRock_cFv) {
+asm void daSyRock_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/move__10daSyRock_cFv.s"
 }
@@ -269,7 +364,7 @@ ASM_FUNCTION(move__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeWait__10daSyRock_cFv.s"
 }
@@ -280,7 +375,7 @@ ASM_FUNCTION(init_modeWait__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daSyRock_cFv) {
+asm void daSyRock_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeWait__10daSyRock_cFv.s"
 }
@@ -291,7 +386,7 @@ ASM_FUNCTION(modeWait__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__10daSyRock_cFv) {
+asm void daSyRock_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/eventStart__10daSyRock_cFv.s"
 }
@@ -302,7 +397,7 @@ ASM_FUNCTION(eventStart__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDropInit__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeDropInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeDropInit__10daSyRock_cFv.s"
 }
@@ -313,7 +408,7 @@ ASM_FUNCTION(init_modeDropInit__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDropInit__10daSyRock_cFv) {
+asm void daSyRock_c::modeDropInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeDropInit__10daSyRock_cFv.s"
 }
@@ -324,7 +419,7 @@ ASM_FUNCTION(modeDropInit__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchWaterPillar__10daSyRock_cFPvPv) {
+asm void daSyRock_c::searchWaterPillar(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/searchWaterPillar__10daSyRock_cFPvPv.s"
 }
@@ -335,7 +430,7 @@ ASM_FUNCTION(searchWaterPillar__10daSyRock_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDrop__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeDrop__10daSyRock_cFv.s"
 }
@@ -346,7 +441,7 @@ ASM_FUNCTION(init_modeDrop__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDrop__10daSyRock_cFv) {
+asm void daSyRock_c::modeDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeDrop__10daSyRock_cFv.s"
 }
@@ -357,7 +452,7 @@ ASM_FUNCTION(modeDrop__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeSink__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeSink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeSink__10daSyRock_cFv.s"
 }
@@ -368,7 +463,7 @@ ASM_FUNCTION(init_modeSink__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSink__10daSyRock_cFv) {
+asm void daSyRock_c::modeSink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeSink__10daSyRock_cFv.s"
 }
@@ -379,7 +474,7 @@ ASM_FUNCTION(modeSink__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeMove__10daSyRock_cFv.s"
 }
@@ -390,7 +485,7 @@ ASM_FUNCTION(init_modeMove__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__10daSyRock_cFv) {
+asm void daSyRock_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeMove__10daSyRock_cFv.s"
 }
@@ -401,7 +496,7 @@ ASM_FUNCTION(modeMove__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWaterLineIn__10daSyRock_cFv) {
+asm void daSyRock_c::chkWaterLineIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/chkWaterLineIn__10daSyRock_cFv.s"
 }
@@ -412,7 +507,7 @@ ASM_FUNCTION(chkWaterLineIn__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__10daSyRock_cFv) {
+asm void daSyRock_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/bgCheck__10daSyRock_cFv.s"
 }
@@ -423,7 +518,7 @@ ASM_FUNCTION(bgCheck__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDropEnd__10daSyRock_cFv) {
+asm void daSyRock_c::init_modeDropEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/init_modeDropEnd__10daSyRock_cFv.s"
 }
@@ -431,21 +526,16 @@ ASM_FUNCTION(init_modeDropEnd__10daSyRock_cFv) {
 
 
 /* 80D03A48-80D03A4C 0004+00 .text      modeDropEnd__10daSyRock_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeDropEnd__10daSyRock_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/modeDropEnd__10daSyRock_cFv.s"
+void daSyRock_c::modeDropEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D03A4C-80D03B08 00BC+00 .text      Draw__10daSyRock_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daSyRock_cFv) {
+asm void daSyRock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/Draw__10daSyRock_cFv.s"
 }
@@ -456,7 +546,7 @@ ASM_FUNCTION(Draw__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daSyRock_cFv) {
+asm void daSyRock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/Delete__10daSyRock_cFv.s"
 }
@@ -467,7 +557,7 @@ ASM_FUNCTION(Delete__10daSyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSyRock_Draw__FP10daSyRock_c) {
+asm void daSyRock_Draw(daSyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/daSyRock_Draw__FP10daSyRock_c.s"
 }
@@ -478,7 +568,7 @@ ASM_FUNCTION(daSyRock_Draw__FP10daSyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSyRock_Execute__FP10daSyRock_c) {
+asm void daSyRock_Execute(daSyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/daSyRock_Execute__FP10daSyRock_c.s"
 }
@@ -489,7 +579,7 @@ ASM_FUNCTION(daSyRock_Execute__FP10daSyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSyRock_Delete__FP10daSyRock_c) {
+asm void daSyRock_Delete(daSyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/daSyRock_Delete__FP10daSyRock_c.s"
 }
@@ -500,7 +590,7 @@ ASM_FUNCTION(daSyRock_Delete__FP10daSyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSyRock_Create__FP10fopAc_ac_c) {
+asm void daSyRock_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/daSyRock_Create__FP10fopAc_ac_c.s"
 }
@@ -511,7 +601,7 @@ ASM_FUNCTION(daSyRock_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__10cCcD_GSttsFv.s"
 }
@@ -522,7 +612,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daSyRock_HIO_cFv) {
+asm daSyRock_HIO_c::~daSyRock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__14daSyRock_HIO_cFv.s"
 }
@@ -533,7 +623,7 @@ ASM_FUNCTION(__dt__14daSyRock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_syRock_cpp) {
+extern "C" asm void __sinit_d_a_obj_syRock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__sinit_d_a_obj_syRock_cpp.s"
 }
@@ -544,7 +634,7 @@ ASM_FUNCTION(__sinit_d_a_obj_syRock_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D03D10) {
+extern "C" asm void func_80D03D10() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/func_80D03D10.s"
 }
@@ -555,7 +645,7 @@ ASM_FUNCTION(func_80D03D10) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D03D18) {
+extern "C" asm void func_80D03D18() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/func_80D03D18.s"
 }
@@ -566,7 +656,7 @@ ASM_FUNCTION(func_80D03D18) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D03D20) {
+extern "C" asm void func_80D03D20() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/func_80D03D20.s"
 }
@@ -577,7 +667,7 @@ ASM_FUNCTION(func_80D03D20) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D03D28) {
+extern "C" asm void func_80D03D28() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/func_80D03D28.s"
 }
@@ -588,7 +678,7 @@ ASM_FUNCTION(func_80D03D28) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__17dEvLib_callback_cFv.s"
 }
@@ -596,43 +686,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80D03D78-80D03D80 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D03D80-80D03D88 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D03D88-80D03D90 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D03D90-80D03DAC 001C+00 .text      getPos__12daWtPillar_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPos__12daWtPillar_cFv) {
+asm void daWtPillar_c::getPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/getPos__12daWtPillar_cFv.s"
 }
@@ -643,7 +718,7 @@ ASM_FUNCTION(getPos__12daWtPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daSyRock_cFv) {
+asm daSyRock_c::~daSyRock_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_syRock/d_a_obj_syRock/__dt__10daSyRock_cFv.s"
 }

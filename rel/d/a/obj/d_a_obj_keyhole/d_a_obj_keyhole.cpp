@@ -6,38 +6,113 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct obj_keyhole_class;
+struct kh_chain_s;
+
+struct daObj_Keyhole_HIO_c {
+	daObj_Keyhole_HIO_c();
+	~daObj_Keyhole_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct obj_keyhole_class {
+};
+
+struct kh_chain_s {
+	~kh_chain_s();
+	kh_chain_s();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19daObj_Keyhole_HIO_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daObj_Keyhole_Draw__FP17obj_keyhole_class();
-extern "C" extern void chain_control1__FP17obj_keyhole_classP10kh_chain_si();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void chain_control1_2__FP17obj_keyhole_classP10kh_chain_si();
-extern "C" extern void chain_control2__FP17obj_keyhole_classP10kh_chain_si();
-extern "C" extern void chain_control3__FP17obj_keyhole_classP10kh_chain_si();
-extern "C" extern void chain_move__FP17obj_keyhole_class();
-extern "C" extern void open__FP17obj_keyhole_class();
-extern "C" extern void drop__FP17obj_keyhole_class();
-extern "C" extern void daObj_Keyhole_Execute__FP17obj_keyhole_class();
-extern "C" extern void daObj_Keyhole_IsDelete__FP17obj_keyhole_class();
-extern "C" extern void daObj_Keyhole_Delete__FP17obj_keyhole_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Keyhole_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10kh_chain_sFv();
-extern "C" extern void __ct__10kh_chain_sFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__19daObj_Keyhole_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_keyhole_cpp();
+void nodeCallBack(J3DJoint*, s32);
+void daObj_Keyhole_Draw(obj_keyhole_class*);
+void chain_control1(obj_keyhole_class*, kh_chain_s*, s32);
+void chain_control1_2(obj_keyhole_class*, kh_chain_s*, s32);
+void chain_control2(obj_keyhole_class*, kh_chain_s*, s32);
+void chain_control3(obj_keyhole_class*, kh_chain_s*, s32);
+void chain_move(obj_keyhole_class*);
+void open(obj_keyhole_class*);
+void drop(obj_keyhole_class*);
+void daObj_Keyhole_Execute(obj_keyhole_class*);
+bool daObj_Keyhole_IsDelete(obj_keyhole_class*);
+void daObj_Keyhole_Delete(obj_keyhole_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Keyhole_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_keyhole_cpp();
+
+extern "C" void __ct__19daObj_Keyhole_HIO_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daObj_Keyhole_Draw__FP17obj_keyhole_class();
+extern "C" void chain_control1__FP17obj_keyhole_classP10kh_chain_si();
+extern "C" void __dt__4cXyzFv();
+extern "C" void chain_control1_2__FP17obj_keyhole_classP10kh_chain_si();
+extern "C" void chain_control2__FP17obj_keyhole_classP10kh_chain_si();
+extern "C" void chain_control3__FP17obj_keyhole_classP10kh_chain_si();
+extern "C" void chain_move__FP17obj_keyhole_class();
+extern "C" void open__FP17obj_keyhole_class();
+extern "C" void drop__FP17obj_keyhole_class();
+extern "C" void daObj_Keyhole_Execute__FP17obj_keyhole_class();
+extern "C" bool daObj_Keyhole_IsDelete__FP17obj_keyhole_class();
+extern "C" void daObj_Keyhole_Delete__FP17obj_keyhole_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Keyhole_Create__FP10fopAc_ac_c();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10kh_chain_sFv();
+extern "C" void __ct__10kh_chain_sFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__19daObj_Keyhole_HIO_cFv();
+extern "C" void __sinit_d_a_obj_keyhole_cpp();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_RODATA extern const u8 lit_3689[4];
 SECTION_RODATA extern const u32 lit_3763;
@@ -159,8 +234,11 @@ SECTION_BSS extern u8 data_80C43DF4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -170,7 +248,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19daObj_Keyhole_HIO_cFv) {
+asm daObj_Keyhole_HIO_c::daObj_Keyhole_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__19daObj_Keyhole_HIO_cFv.s"
 }
@@ -181,7 +259,7 @@ ASM_FUNCTION(__ct__19daObj_Keyhole_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/nodeCallBack__FP8J3DJointi.s"
 }
@@ -192,7 +270,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Keyhole_Draw__FP17obj_keyhole_class) {
+asm void daObj_Keyhole_Draw(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_Draw__FP17obj_keyhole_class.s"
 }
@@ -203,7 +281,7 @@ ASM_FUNCTION(daObj_Keyhole_Draw__FP17obj_keyhole_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control1__FP17obj_keyhole_classP10kh_chain_si) {
+asm void chain_control1(obj_keyhole_class* field_0, kh_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/chain_control1__FP17obj_keyhole_classP10kh_chain_si.s"
 }
@@ -214,7 +292,7 @@ ASM_FUNCTION(chain_control1__FP17obj_keyhole_classP10kh_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__4cXyzFv.s"
 }
@@ -225,7 +303,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control1_2__FP17obj_keyhole_classP10kh_chain_si) {
+asm void chain_control1_2(obj_keyhole_class* field_0, kh_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/chain_control1_2__FP17obj_keyhole_classP10kh_chain_si.s"
 }
@@ -236,7 +314,7 @@ ASM_FUNCTION(chain_control1_2__FP17obj_keyhole_classP10kh_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control2__FP17obj_keyhole_classP10kh_chain_si) {
+asm void chain_control2(obj_keyhole_class* field_0, kh_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/chain_control2__FP17obj_keyhole_classP10kh_chain_si.s"
 }
@@ -247,7 +325,7 @@ ASM_FUNCTION(chain_control2__FP17obj_keyhole_classP10kh_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control3__FP17obj_keyhole_classP10kh_chain_si) {
+asm void chain_control3(obj_keyhole_class* field_0, kh_chain_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/chain_control3__FP17obj_keyhole_classP10kh_chain_si.s"
 }
@@ -258,7 +336,7 @@ ASM_FUNCTION(chain_control3__FP17obj_keyhole_classP10kh_chain_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_move__FP17obj_keyhole_class) {
+asm void chain_move(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/chain_move__FP17obj_keyhole_class.s"
 }
@@ -269,7 +347,7 @@ ASM_FUNCTION(chain_move__FP17obj_keyhole_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(open__FP17obj_keyhole_class) {
+asm void open(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/open__FP17obj_keyhole_class.s"
 }
@@ -280,7 +358,7 @@ ASM_FUNCTION(open__FP17obj_keyhole_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drop__FP17obj_keyhole_class) {
+asm void drop(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/drop__FP17obj_keyhole_class.s"
 }
@@ -291,7 +369,7 @@ ASM_FUNCTION(drop__FP17obj_keyhole_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Keyhole_Execute__FP17obj_keyhole_class) {
+asm void daObj_Keyhole_Execute(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_Execute__FP17obj_keyhole_class.s"
 }
@@ -299,21 +377,16 @@ ASM_FUNCTION(daObj_Keyhole_Execute__FP17obj_keyhole_class) {
 
 
 /* 80C42D0C-80C42D14 0008+00 .text      daObj_Keyhole_IsDelete__FP17obj_keyhole_class                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Keyhole_IsDelete__FP17obj_keyhole_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_IsDelete__FP17obj_keyhole_class.s"
+bool daObj_Keyhole_IsDelete(obj_keyhole_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C42D14-80C42DC8 00B4+00 .text      daObj_Keyhole_Delete__FP17obj_keyhole_class                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Keyhole_Delete__FP17obj_keyhole_class) {
+asm void daObj_Keyhole_Delete(obj_keyhole_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_Delete__FP17obj_keyhole_class.s"
 }
@@ -324,7 +397,7 @@ ASM_FUNCTION(daObj_Keyhole_Delete__FP17obj_keyhole_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -335,7 +408,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Keyhole_Create__FP10fopAc_ac_c) {
+asm void daObj_Keyhole_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_Create__FP10fopAc_ac_c.s"
 }
@@ -346,7 +419,7 @@ ASM_FUNCTION(daObj_Keyhole_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__5csXyzFv.s"
 }
@@ -357,7 +430,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__8dCcD_SphFv.s"
 }
@@ -368,7 +441,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__8cM3dGSphFv.s"
 }
@@ -379,7 +452,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__8cM3dGAabFv.s"
 }
@@ -390,7 +463,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__10dCcD_GSttsFv.s"
 }
@@ -401,7 +474,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10kh_chain_sFv) {
+asm kh_chain_s::~kh_chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__10kh_chain_sFv.s"
 }
@@ -412,7 +485,7 @@ ASM_FUNCTION(__dt__10kh_chain_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10kh_chain_sFv) {
+asm kh_chain_s::kh_chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__10kh_chain_sFv.s"
 }
@@ -423,7 +496,7 @@ ASM_FUNCTION(__ct__10kh_chain_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__8dCcD_SphFv.s"
 }
@@ -431,32 +504,22 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 
 
 /* 80C438FC-80C43900 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C43900-80C43904 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C43904-80C4394C 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__10cCcD_GSttsFv.s"
 }
@@ -467,7 +530,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObj_Keyhole_HIO_cFv) {
+asm daObj_Keyhole_HIO_c::~daObj_Keyhole_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__dt__19daObj_Keyhole_HIO_cFv.s"
 }
@@ -478,7 +541,7 @@ ASM_FUNCTION(__dt__19daObj_Keyhole_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_keyhole_cpp) {
+extern "C" asm void __sinit_d_a_obj_keyhole_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__sinit_d_a_obj_keyhole_cpp.s"
 }

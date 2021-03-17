@@ -6,39 +6,99 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daHeavySw_c;
+
+struct daHeavySw_HIO_c {
+	daHeavySw_HIO_c();
+	~daHeavySw_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daHeavySw_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	void moveSwitch();
+	void init_modeWait();
+	void modeWait();
+	void init_modeRide();
+	void modeRide();
+	void init_modeMoveInit();
+	void modeMoveInit();
+	void init_modeMove();
+	void modeMove();
+	void init_modeMoveEnd();
+	void modeMoveEnd();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daHeavySw_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daHeavySw_cFv();
-extern "C" extern void CreateHeap__11daHeavySw_cFv();
-extern "C" extern void create__11daHeavySw_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void rideCallBack__11daHeavySw_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Execute__11daHeavySw_cFPPA3_A4_f();
-extern "C" extern void moveSwitch__11daHeavySw_cFv();
-extern "C" extern void init_modeWait__11daHeavySw_cFv();
-extern "C" extern void modeWait__11daHeavySw_cFv();
-extern "C" extern void init_modeRide__11daHeavySw_cFv();
-extern "C" extern void modeRide__11daHeavySw_cFv();
-extern "C" extern void init_modeMoveInit__11daHeavySw_cFv();
-extern "C" extern void modeMoveInit__11daHeavySw_cFv();
-extern "C" extern void init_modeMove__11daHeavySw_cFv();
-extern "C" extern void modeMove__11daHeavySw_cFv();
-extern "C" extern void init_modeMoveEnd__11daHeavySw_cFv();
-extern "C" extern void modeMoveEnd__11daHeavySw_cFv();
-extern "C" extern void Draw__11daHeavySw_cFv();
-extern "C" extern void Delete__11daHeavySw_cFv();
-extern "C" extern void daHeavySw_Draw__FP11daHeavySw_c();
-extern "C" extern void daHeavySw_Execute__FP11daHeavySw_c();
-extern "C" extern void daHeavySw_Delete__FP11daHeavySw_c();
-extern "C" extern void daHeavySw_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daHeavySw_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_heavySw_cpp();
-extern "C" extern void func_80C1DA70();
-extern "C" extern void func_80C1DA78();
+extern "C" void Execute__11daHeavySw_cFPPA3_A4_f();
+void daHeavySw_Draw(daHeavySw_c*);
+void daHeavySw_Execute(daHeavySw_c*);
+void daHeavySw_Delete(daHeavySw_c*);
+void daHeavySw_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_heavySw_cpp();
+extern "C" void func_80C1DA70();
+extern "C" void func_80C1DA78();
+
+extern "C" void __ct__15daHeavySw_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daHeavySw_cFv();
+extern "C" void CreateHeap__11daHeavySw_cFv();
+extern "C" void create__11daHeavySw_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void rideCallBack__11daHeavySw_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Execute__11daHeavySw_cFPPA3_A4_f();
+extern "C" void moveSwitch__11daHeavySw_cFv();
+extern "C" void init_modeWait__11daHeavySw_cFv();
+extern "C" void modeWait__11daHeavySw_cFv();
+extern "C" void init_modeRide__11daHeavySw_cFv();
+extern "C" void modeRide__11daHeavySw_cFv();
+extern "C" void init_modeMoveInit__11daHeavySw_cFv();
+extern "C" void modeMoveInit__11daHeavySw_cFv();
+extern "C" void init_modeMove__11daHeavySw_cFv();
+extern "C" void modeMove__11daHeavySw_cFv();
+extern "C" void init_modeMoveEnd__11daHeavySw_cFv();
+extern "C" void modeMoveEnd__11daHeavySw_cFv();
+extern "C" void Draw__11daHeavySw_cFv();
+extern "C" void Delete__11daHeavySw_cFv();
+extern "C" void daHeavySw_Draw__FP11daHeavySw_c();
+extern "C" void daHeavySw_Execute__FP11daHeavySw_c();
+extern "C" void daHeavySw_Delete__FP11daHeavySw_c();
+extern "C" void daHeavySw_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daHeavySw_HIO_cFv();
+extern "C" void __sinit_d_a_obj_heavySw_cpp();
+extern "C" void func_80C1DA70();
+extern "C" void func_80C1DA78();
 SECTION_RODATA extern const u32 lit_3647;
 SECTION_RODATA extern const u32 lit_3648;
 SECTION_RODATA extern const u32 lit_3649;
@@ -83,8 +143,11 @@ SECTION_BSS extern u8 data_80C1DC8C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -94,7 +157,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daHeavySw_HIO_cFv) {
+asm daHeavySw_HIO_c::daHeavySw_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__ct__15daHeavySw_HIO_cFv.s"
 }
@@ -105,7 +168,7 @@ ASM_FUNCTION(__ct__15daHeavySw_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -116,7 +179,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daHeavySw_cFv) {
+asm void daHeavySw_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/setBaseMtx__11daHeavySw_cFv.s"
 }
@@ -127,7 +190,7 @@ ASM_FUNCTION(setBaseMtx__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daHeavySw_cFv) {
+asm void daHeavySw_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/CreateHeap__11daHeavySw_cFv.s"
 }
@@ -138,7 +201,7 @@ ASM_FUNCTION(CreateHeap__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daHeavySw_cFv) {
+asm void daHeavySw_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/create__11daHeavySw_cFv.s"
 }
@@ -149,7 +212,7 @@ ASM_FUNCTION(create__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -160,7 +223,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__dt__12dBgS_AcchCirFv.s"
 }
@@ -171,7 +234,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__11daHeavySw_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daHeavySw_c::rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/rideCallBack__11daHeavySw_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -182,7 +245,7 @@ ASM_FUNCTION(rideCallBack__11daHeavySw_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daHeavySw_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daHeavySw_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/Execute__11daHeavySw_cFPPA3_A4_f.s"
 }
@@ -193,7 +256,7 @@ ASM_FUNCTION(Execute__11daHeavySw_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveSwitch__11daHeavySw_cFv) {
+asm void daHeavySw_c::moveSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/moveSwitch__11daHeavySw_cFv.s"
 }
@@ -204,7 +267,7 @@ ASM_FUNCTION(moveSwitch__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daHeavySw_cFv) {
+asm void daHeavySw_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/init_modeWait__11daHeavySw_cFv.s"
 }
@@ -215,7 +278,7 @@ ASM_FUNCTION(init_modeWait__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daHeavySw_cFv) {
+asm void daHeavySw_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/modeWait__11daHeavySw_cFv.s"
 }
@@ -226,7 +289,7 @@ ASM_FUNCTION(modeWait__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeRide__11daHeavySw_cFv) {
+asm void daHeavySw_c::init_modeRide() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/init_modeRide__11daHeavySw_cFv.s"
 }
@@ -237,7 +300,7 @@ ASM_FUNCTION(init_modeRide__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeRide__11daHeavySw_cFv) {
+asm void daHeavySw_c::modeRide() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/modeRide__11daHeavySw_cFv.s"
 }
@@ -248,7 +311,7 @@ ASM_FUNCTION(modeRide__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveInit__11daHeavySw_cFv) {
+asm void daHeavySw_c::init_modeMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/init_modeMoveInit__11daHeavySw_cFv.s"
 }
@@ -259,7 +322,7 @@ ASM_FUNCTION(init_modeMoveInit__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveInit__11daHeavySw_cFv) {
+asm void daHeavySw_c::modeMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/modeMoveInit__11daHeavySw_cFv.s"
 }
@@ -270,7 +333,7 @@ ASM_FUNCTION(modeMoveInit__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__11daHeavySw_cFv) {
+asm void daHeavySw_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/init_modeMove__11daHeavySw_cFv.s"
 }
@@ -281,7 +344,7 @@ ASM_FUNCTION(init_modeMove__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daHeavySw_cFv) {
+asm void daHeavySw_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/modeMove__11daHeavySw_cFv.s"
 }
@@ -292,7 +355,7 @@ ASM_FUNCTION(modeMove__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveEnd__11daHeavySw_cFv) {
+asm void daHeavySw_c::init_modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/init_modeMoveEnd__11daHeavySw_cFv.s"
 }
@@ -303,7 +366,7 @@ ASM_FUNCTION(init_modeMoveEnd__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveEnd__11daHeavySw_cFv) {
+asm void daHeavySw_c::modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/modeMoveEnd__11daHeavySw_cFv.s"
 }
@@ -314,7 +377,7 @@ ASM_FUNCTION(modeMoveEnd__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daHeavySw_cFv) {
+asm void daHeavySw_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/Draw__11daHeavySw_cFv.s"
 }
@@ -325,7 +388,7 @@ ASM_FUNCTION(Draw__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daHeavySw_cFv) {
+asm void daHeavySw_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/Delete__11daHeavySw_cFv.s"
 }
@@ -336,7 +399,7 @@ ASM_FUNCTION(Delete__11daHeavySw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHeavySw_Draw__FP11daHeavySw_c) {
+asm void daHeavySw_Draw(daHeavySw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/daHeavySw_Draw__FP11daHeavySw_c.s"
 }
@@ -347,7 +410,7 @@ ASM_FUNCTION(daHeavySw_Draw__FP11daHeavySw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHeavySw_Execute__FP11daHeavySw_c) {
+asm void daHeavySw_Execute(daHeavySw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/daHeavySw_Execute__FP11daHeavySw_c.s"
 }
@@ -358,7 +421,7 @@ ASM_FUNCTION(daHeavySw_Execute__FP11daHeavySw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHeavySw_Delete__FP11daHeavySw_c) {
+asm void daHeavySw_Delete(daHeavySw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/daHeavySw_Delete__FP11daHeavySw_c.s"
 }
@@ -369,7 +432,7 @@ ASM_FUNCTION(daHeavySw_Delete__FP11daHeavySw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHeavySw_Create__FP10fopAc_ac_c) {
+asm void daHeavySw_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/daHeavySw_Create__FP10fopAc_ac_c.s"
 }
@@ -380,7 +443,7 @@ ASM_FUNCTION(daHeavySw_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daHeavySw_HIO_cFv) {
+asm daHeavySw_HIO_c::~daHeavySw_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__dt__15daHeavySw_HIO_cFv.s"
 }
@@ -391,7 +454,7 @@ ASM_FUNCTION(__dt__15daHeavySw_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_heavySw_cpp) {
+extern "C" asm void __sinit_d_a_obj_heavySw_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/__sinit_d_a_obj_heavySw_cpp.s"
 }
@@ -402,7 +465,7 @@ ASM_FUNCTION(__sinit_d_a_obj_heavySw_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1DA70) {
+extern "C" asm void func_80C1DA70() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/func_80C1DA70.s"
 }
@@ -413,7 +476,7 @@ ASM_FUNCTION(func_80C1DA70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1DA78) {
+extern "C" asm void func_80C1DA78() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_heavySw/d_a_obj_heavySw/func_80C1DA78.s"
 }

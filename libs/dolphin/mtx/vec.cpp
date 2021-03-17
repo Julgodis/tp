@@ -9,18 +9,31 @@
 // Forward References:
 // 
 
-extern "C" extern void PSVECAdd();
-extern "C" extern void PSVECSubtract();
-extern "C" extern void PSVECScale();
-extern "C" extern void PSVECNormalize();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void PSVECMag();
-extern "C" extern void PSVECDotProduct();
-extern "C" extern void PSVECCrossProduct();
-extern "C" extern void C_VECHalfAngle();
-extern "C" extern void C_VECReflect();
-extern "C" extern void PSVECSquareDistance();
-extern "C" extern void PSVECDistance();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECCrossProduct();
+extern "C" void C_VECHalfAngle();
+extern "C" void C_VECReflect();
+extern "C" void PSVECSquareDistance();
+extern "C" void PSVECDistance();
+
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECCrossProduct();
+extern "C" void C_VECHalfAngle();
+extern "C" void C_VECReflect();
+extern "C" void PSVECSquareDistance();
+extern "C" void PSVECDistance();
 SECTION_SDATA2 extern u8 vec__lit_113[4];
 SECTION_SDATA2 extern f32 vec__lit_118;
 SECTION_SDATA2 extern f32 vec__lit_119;
@@ -31,37 +44,38 @@ SECTION_SDATA2 extern f32 vec__lit_161;
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80347090-803470B4 0024+00 .text      PSVECAdd                                                     */
+/* 80347090-803470B4 0024+00 rc=104 efc=103 .text      PSVECAdd                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECAdd) {
+extern "C" asm void PSVECAdd() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECAdd.s"
 }
 #pragma pop
 
 
-/* 803470B4-803470D8 0024+00 .text      PSVECSubtract                                                */
+/* 803470B4-803470D8 0024+00 rc=60 efc=60 .text      PSVECSubtract                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECSubtract) {
+extern "C" asm void PSVECSubtract() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECSubtract.s"
 }
 #pragma pop
 
 
-/* 803470D8-803470F4 001C+00 .text      PSVECScale                                                   */
+/* 803470D8-803470F4 001C+00 rc=58 efc=58 .text      PSVECScale                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECScale) {
+extern "C" asm void PSVECScale() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECScale.s"
 }
@@ -69,77 +83,77 @@ ASM_FUNCTION(PSVECScale) {
 
 
 /* ############################################################################################## */
-/* 80456540-80456544 0004+00 .sdata2    @113                                                         */
+/* 80456540-80456544 0004+00 rc=1 efc=0 .sdata2    @113                                                         */
 u8 vec__lit_113[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456544-80456548 0004+00 .sdata2    @118                                                         */
+/* 80456544-80456548 0004+00 rc=3 efc=0 .sdata2    @118                                                         */
 f32 vec__lit_118 = 0.5f;
 
-/* 80456548-8045654C 0004+00 .sdata2    @119                                                         */
+/* 80456548-8045654C 0004+00 rc=3 efc=0 .sdata2    @119                                                         */
 f32 vec__lit_119 = 3.0f;
 
-/* 803470F4-80347138 0044+00 .text      PSVECNormalize                                               */
+/* 803470F4-80347138 0044+00 rc=18 efc=16 .text      PSVECNormalize                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECNormalize) {
+extern "C" asm void PSVECNormalize() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECNormalize.s"
 }
 #pragma pop
 
 
-/* 80347138-80347150 0018+00 .text      PSVECSquareMag                                               */
+/* 80347138-80347150 0018+00 rc=140 efc=140 .text      PSVECSquareMag                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECSquareMag) {
+extern "C" asm void PSVECSquareMag() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECSquareMag.s"
 }
 #pragma pop
 
 
-/* 80347150-80347194 0044+00 .text      PSVECMag                                                     */
+/* 80347150-80347194 0044+00 rc=24 efc=24 .text      PSVECMag                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECMag) {
+extern "C" asm void PSVECMag() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECMag.s"
 }
 #pragma pop
 
 
-/* 80347194-803471B4 0020+00 .text      PSVECDotProduct                                              */
+/* 80347194-803471B4 0020+00 rc=41 efc=39 .text      PSVECDotProduct                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECDotProduct) {
+extern "C" asm void PSVECDotProduct() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECDotProduct.s"
 }
 #pragma pop
 
 
-/* 803471B4-803471F0 003C+00 .text      PSVECCrossProduct                                            */
+/* 803471B4-803471F0 003C+00 rc=20 efc=20 .text      PSVECCrossProduct                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECCrossProduct) {
+extern "C" asm void PSVECCrossProduct() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECCrossProduct.s"
 }
 #pragma pop
 
 
-/* 803471F0-803472C8 00D8+00 .text      C_VECHalfAngle                                               */
+/* 803471F0-803472C8 00D8+00 rc=1 efc=1 .text      C_VECHalfAngle                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_VECHalfAngle) {
+extern "C" asm void C_VECHalfAngle() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/C_VECHalfAngle.s"
 }
@@ -147,40 +161,39 @@ ASM_FUNCTION(C_VECHalfAngle) {
 
 
 /* ############################################################################################## */
-/* 8045654C-80456550 0004+00 .sdata2    @161                                                         */
+/* 8045654C-80456550 0004+00 rc=1 efc=0 .sdata2    @161                                                         */
 f32 vec__lit_161 = 2.0f;
 
-/* 803472C8-8034739C 00D4+00 .text      C_VECReflect                                                 */
+/* 803472C8-8034739C 00D4+00 rc=1 efc=1 .text      C_VECReflect                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_VECReflect) {
+extern "C" asm void C_VECReflect() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/C_VECReflect.s"
 }
 #pragma pop
 
 
-/* 8034739C-803473C4 0028+00 .text      PSVECSquareDistance                                          */
+/* 8034739C-803473C4 0028+00 rc=107 efc=107 .text      PSVECSquareDistance                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECSquareDistance) {
+extern "C" asm void PSVECSquareDistance() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECSquareDistance.s"
 }
 #pragma pop
 
 
-/* 803473C4-80347418 0054+00 .text      PSVECDistance                                                */
+/* 803473C4-80347418 0054+00 rc=4 efc=4 .text      PSVECDistance                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSVECDistance) {
+extern "C" asm void PSVECDistance() {
 	nofralloc
 #include "asm/dolphin/mtx/vec/PSVECDistance.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

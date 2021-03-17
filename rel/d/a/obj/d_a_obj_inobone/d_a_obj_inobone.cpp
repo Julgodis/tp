@@ -6,28 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjIBone_c;
+struct dCcD_GObjInf;
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct daObjIBone_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void setBreakEffect();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void s_boar_sub__FPvPv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__12daObjIBone_cFv();
-extern "C" extern void setBaseMtx__12daObjIBone_cFv();
-extern "C" extern void Create__12daObjIBone_cFv();
-extern "C" extern void CreateHeap__12daObjIBone_cFv();
-extern "C" extern void create__12daObjIBone_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__12daObjIBone_cFv();
-extern "C" extern void setBreakEffect__12daObjIBone_cFv();
-extern "C" extern void draw__12daObjIBone_cFv();
-extern "C" extern void _delete__12daObjIBone_cFv();
-extern "C" extern void daObjIBone_Draw__FP12daObjIBone_c();
-extern "C" extern void daObjIBone_Execute__FP12daObjIBone_c();
-extern "C" extern void daObjIBone_Delete__FP12daObjIBone_c();
-extern "C" extern void daObjIBone_Create__FP10fopAc_ac_c();
+void bornTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void bornCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void s_boar_sub(void*, void*);
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjIBone_Draw(daObjIBone_c*);
+void daObjIBone_Execute(daObjIBone_c*);
+void daObjIBone_Delete(daObjIBone_c*);
+void daObjIBone_Create(fopAc_ac_c*);
+
+extern "C" void bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void s_boar_sub__FPvPv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__12daObjIBone_cFv();
+extern "C" void setBaseMtx__12daObjIBone_cFv();
+extern "C" void Create__12daObjIBone_cFv();
+extern "C" void CreateHeap__12daObjIBone_cFv();
+extern "C" void create__12daObjIBone_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__12daObjIBone_cFv();
+extern "C" void setBreakEffect__12daObjIBone_cFv();
+extern "C" void draw__12daObjIBone_cFv();
+extern "C" void _delete__12daObjIBone_cFv();
+extern "C" void daObjIBone_Draw__FP12daObjIBone_c();
+extern "C" void daObjIBone_Execute__FP12daObjIBone_c();
+extern "C" void daObjIBone_Delete__FP12daObjIBone_c();
+extern "C" void daObjIBone_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 l_cyl_src2[68];
 SECTION_RODATA extern const u32 lit_3693;
@@ -49,7 +92,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +104,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void bornTgCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C276B8.s"
 }
@@ -70,7 +115,7 @@ ASM_FUNCTION(bornTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_G
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void bornCoCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27714.s"
 }
@@ -81,7 +126,7 @@ ASM_FUNCTION(bornCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_G
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_boar_sub__FPvPv) {
+asm void s_boar_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/s_boar_sub__FPvPv.s"
 }
@@ -92,7 +137,7 @@ ASM_FUNCTION(s_boar_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -103,7 +148,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjIBone_cFv) {
+asm void daObjIBone_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/initBaseMtx__12daObjIBone_cFv.s"
 }
@@ -114,7 +159,7 @@ ASM_FUNCTION(initBaseMtx__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjIBone_cFv) {
+asm void daObjIBone_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/setBaseMtx__12daObjIBone_cFv.s"
 }
@@ -125,7 +170,7 @@ ASM_FUNCTION(setBaseMtx__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjIBone_cFv) {
+asm void daObjIBone_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/Create__12daObjIBone_cFv.s"
 }
@@ -136,7 +181,7 @@ ASM_FUNCTION(Create__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjIBone_cFv) {
+asm void daObjIBone_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/CreateHeap__12daObjIBone_cFv.s"
 }
@@ -147,7 +192,7 @@ ASM_FUNCTION(CreateHeap__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjIBone_cFv) {
+asm void daObjIBone_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/func_80C27A20.s"
 }
@@ -158,7 +203,7 @@ ASM_FUNCTION(create__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGCylFv.s"
 }
@@ -169,7 +214,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/__dt__8cM3dGAabFv.s"
 }
@@ -180,7 +225,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjIBone_cFv) {
+asm void daObjIBone_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/execute__12daObjIBone_cFv.s"
 }
@@ -191,7 +236,7 @@ ASM_FUNCTION(execute__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBreakEffect__12daObjIBone_cFv) {
+asm void daObjIBone_c::setBreakEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/setBreakEffect__12daObjIBone_cFv.s"
 }
@@ -202,7 +247,7 @@ ASM_FUNCTION(setBreakEffect__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjIBone_cFv) {
+asm void daObjIBone_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/draw__12daObjIBone_cFv.s"
 }
@@ -213,7 +258,7 @@ ASM_FUNCTION(draw__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjIBone_cFv) {
+asm void daObjIBone_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/_delete__12daObjIBone_cFv.s"
 }
@@ -224,7 +269,7 @@ ASM_FUNCTION(_delete__12daObjIBone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIBone_Draw__FP12daObjIBone_c) {
+asm void daObjIBone_Draw(daObjIBone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Draw__FP12daObjIBone_c.s"
 }
@@ -235,7 +280,7 @@ ASM_FUNCTION(daObjIBone_Draw__FP12daObjIBone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIBone_Execute__FP12daObjIBone_c) {
+asm void daObjIBone_Execute(daObjIBone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Execute__FP12daObjIBone_c.s"
 }
@@ -246,7 +291,7 @@ ASM_FUNCTION(daObjIBone_Execute__FP12daObjIBone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIBone_Delete__FP12daObjIBone_c) {
+asm void daObjIBone_Delete(daObjIBone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Delete__FP12daObjIBone_c.s"
 }
@@ -257,7 +302,7 @@ ASM_FUNCTION(daObjIBone_Delete__FP12daObjIBone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIBone_Create__FP10fopAc_ac_c) {
+asm void daObjIBone_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_inobone/d_a_obj_inobone/daObjIBone_Create__FP10fopAc_ac_c.s"
 }

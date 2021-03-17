@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_RODATA extern const u8 d_d_item_data__stringBase0[872];
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_DATA extern u8 field_item_res__10dItem_data[4080];
@@ -19,11 +20,13 @@ SECTION_DATA extern u8 item_info__10dItem_data[1020 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8037AD68-8037B0D0 0366+02 .rodata    @stringBase0                                                 */
+/* ############################################################################################## */
+/* 8037AD68-8037B0D0 0366+02 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -122,7 +125,7 @@ SECTION_DEAD char* const stringBase_8037B0C7 = "O_wood";
 SECTION_DEAD char* const pad_8037B0CE = "\0";
 #pragma pop
 
-/* 803AC5A0-803ADD88 17E8+00 .data      item_resource__10dItem_data                                  */
+/* 803AC5A0-803ADD88 17E8+00 rc=10 efc=10 .data      item_resource__10dItem_data                                  */
 void* item_resource__10dItem_data[1530] = {
 	(void*)&d_d_item_data__stringBase0,
 	(void*)0x0004FFFF,
@@ -1656,7 +1659,7 @@ void* item_resource__10dItem_data[1530] = {
 	NULL,
 };
 
-/* 803ADD88-803AED78 0FF0+00 .data      field_item_res__10dItem_data                                 */
+/* 803ADD88-803AED78 0FF0+00 rc=3 efc=3 .data      field_item_res__10dItem_data                                 */
 u8 field_item_res__10dItem_data[4080] = {
 	0x80, 0x37, 0xB0, 0x8F, 0x00, 0x14, 0xFF, 0xFF, 0x00, 0x30, 0xFF, 0x00, 0x10, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xB0, 0x8F, 0x00, 0x17, 0xFF, 0xFF, 0x00, 0x31, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00,
@@ -1915,7 +1918,7 @@ u8 field_item_res__10dItem_data[4080] = {
 	0x80, 0x37, 0xB0, 0x96, 0x00, 0x03, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x10, 0x00, 0x00, 0x00,
 };
 
-/* 803AED78-803AF178 03FC+04 .data      item_info__10dItem_data                                      */
+/* 803AED78-803AF178 03FC+04 rc=9 efc=9 .data      item_info__10dItem_data                                      */
 u8 item_info__10dItem_data[1024] = {
 	0x0F, 0x28, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,
 	0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,

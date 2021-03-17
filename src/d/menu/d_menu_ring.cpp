@@ -6,64 +6,427 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMenu_Ring_c (dMenu_Ring_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build CSTControl (CSTControl) False/False
+/* top-level dependencies (begin CSTControl) */
+/* top-level dependencies (end CSTControl) */
+struct CSTControl {
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+};
+
+/* top-level dependencies (begin dMenu_Ring_c) */
+// outer dependency: JKRExpHeap
+// outer dependency: CSTControl
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_Ring_c) */
+struct dMenu_Ring_c {
+	// JKRExpHeap
+	// CSTControl
+	// STControl
+	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, char);
+	/* 801EA708 */ ~dMenu_Ring_c();
+	/* 801EAB7C */ void _create();
+	/* 801EABE8 */ void _delete();
+	/* 801EABEC */ void _move();
+	/* 801EACC8 */ void _draw();
+	/* 801EB080 */ void setKanteraPos(f32, f32);
+	/* 801EB0A4 */ void isOpen();
+	/* 801EB2B4 */ void isMoveEnd();
+	/* 801EB3CC */ void isClose();
+	/* 801EB624 */ void getStickInfo(STControl*);
+	/* 801EB8C0 */ void calcStickAngle(STControl*, char);
+	/* 801EB960 */ void setRotate();
+	/* 801EBA38 */ void setItemScale(s32, f32);
+	/* 801EBAB8 */ void setButtonScale(s32, f32);
+	/* 801EBB10 */ void setItem();
+	/* 801EBE58 */ void setJumpItem(bool);
+	/* 801EC20C */ void setScale();
+	/* 801EC3B0 */ void setNameString(u32);
+	/* 801EC504 */ void setActiveCursor();
+	/* 801EC754 */ void setMixItem();
+	/* 801ECB14 */ void drawItem();
+	/* 801ECF9C */ void drawItem2();
+	/* 801ED2BC */ void stick_wait_init();
+	/* 801ED31C */ void stick_wait_proc();
+	/* 801ED490 */ void stick_move_init();
+	/* 801ED53C */ void stick_move_proc();
+	/* 801ED934 */ void stick_explain_init();
+	/* 801ED938 */ void stick_explain_force_init();
+	/* 801ED93C */ void stick_explain_proc();
+	/* 801EDA0C */ void stick_explain_force_proc();
+	/* 801EDB14 */ void setSelectItem(s32, char);
+	/* 801EDC98 */ void drawSelectItem();
+	/* 801EDF2C */ void setSelectItemForce(s32);
+	/* 801EDFDC */ void getCursorPos(char);
+	/* 801EE058 */ void getItemNum(char);
+	/* 801EE15C */ void getItemMaxNum(char);
+	/* 801EE228 */ void checkExplainForce();
+	/* 801EE63C */ bool checkCombineBomb(s32);
+	/* 801EE644 */ void setCombineBomb(s32);
+	/* 801EE648 */ void drawNumber(s32, s32, f32, f32);
+	/* 801EEA84 */ void getItem(s32, char);
+	/* 801EEAE4 */ void setDoStatus(char);
+	/* 801EEB58 */ void isMixItemOn();
+	/* 801EEC98 */ void isMixItemOff();
+	/* 801EED84 */ void setMixMessage();
+	/* 801EEF14 */ void textScaleHIO();
+	/* 801EF11C */ void textCentering();
+	/* 801EF13C */ void clacEllipseFunction(f32, f32, f32);
+	/* 801EF174 */ void calcDistance(f32, f32, f32, f32);
+	/* 801EF1A0 */ void clacEllipsePlotAverage(s32, f32, f32);
+	/* 801EF484 */ bool dpdMove();
+	/* 801EF48C */ void openExplain(char);
+	/* 801EF560 */ void draw();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build STControl (STControl) True/True
+// build CSTControl (CSTControl) True/True
+// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
+/* top-level dependencies (begin dSv_player_status_a_c) */
+/* top-level dependencies (end dSv_player_status_a_c) */
+struct dSv_player_status_a_c {
+	/* 80032A5C */ void getSelectItemIndex(s32) const;
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033354 */ void getLineUpItem(s32) const;
+};
+
+// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
+/* top-level dependencies (begin dSv_player_item_record_c) */
+/* top-level dependencies (end dSv_player_item_record_c) */
+struct dSv_player_item_record_c {
+	/* 80033F7C */ void getBombNum(char) const;
+	/* 80034030 */ void getBottleNum(char) const;
+};
+
+// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
+/* top-level dependencies (begin dSv_player_item_max_c) */
+/* top-level dependencies (end dSv_player_item_max_c) */
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(char) const;
+};
+
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build dKantera_icon_c (dKantera_icon_c) False/False
+/* top-level dependencies (begin dKantera_icon_c) */
+/* top-level dependencies (end dKantera_icon_c) */
+struct dKantera_icon_c {
+	/* 801AE938 */ dKantera_icon_c();
+	/* 801AEB7C */ void setAlphaRate(f32);
+	/* 801AEBA0 */ void setPos(f32, f32);
+	/* 801AEBF4 */ void setScale(f32, f32);
+	/* 801AEC44 */ void setNowGauge(u16, u16);
+};
+
+// build dMenu_ItemExplain_c (dMenu_ItemExplain_c) False/False
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build STControl (STControl) True/True
+/* top-level dependencies (begin dMenu_ItemExplain_c) */
+// outer dependency: J2DOrthoGraph
+// outer dependency: JKRArchive
+// outer dependency: JKRExpHeap
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_ItemExplain_c) */
+struct dMenu_ItemExplain_c {
+	// J2DOrthoGraph
+	// JKRArchive
+	// JKRExpHeap
+	// STControl
+	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
+	/* 801DB470 */ void move();
+	/* 801DB514 */ void draw(J2DOrthoGraph*);
+	/* 801DC340 */ void openExplain(char, char, char, bool);
+	/* 801DC738 */ void openExplainTx(u32, u32);
+	/* 801DC7AC */ void getAlphaRatio();
+};
+
+// build J2DOrthoGraph (J2DOrthoGraph) True/True
+// build dMeter2Draw_c (dMeter2Draw_c) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin dMeter2Draw_c) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end dMeter2Draw_c) */
+struct dMeter2Draw_c {
+	// JUtility::TColor
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+};
+
+// build JUtility (JUtility) True/True
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: J2DPicture
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// J2DPicture
+	/* 8021CA04 */ void warpInProc();
+	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021D36C */ void setItemColor(char, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
+};
+
+// build J2DPicture (J2DPicture) True/True
+// build dMsgString_c (dMsgString_c) False/False
+/* top-level dependencies (begin dMsgString_c) */
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) False/False
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DBasePosition
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DBasePosition
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80253930 */ CPaneMgr();
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build J2DPane (J2DPane) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE548 */ void free(void*);
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+// build Vec (Vec) True/True
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build J2DBasePosition (J2DBasePosition) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build ResTIMG (ResTIMG) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc();
-extern "C" extern void __dt__12dMenu_Ring_cFv();
-extern "C" extern void _create__12dMenu_Ring_cFv();
-extern "C" extern void _delete__12dMenu_Ring_cFv();
-extern "C" extern void _move__12dMenu_Ring_cFv();
-extern "C" extern void _draw__12dMenu_Ring_cFv();
-extern "C" extern void setKanteraPos__12dMenu_Ring_cFff();
-extern "C" extern void isOpen__12dMenu_Ring_cFv();
-extern "C" extern void isMoveEnd__12dMenu_Ring_cFv();
-extern "C" extern void isClose__12dMenu_Ring_cFv();
-extern "C" extern void getStickInfo__12dMenu_Ring_cFP9STControl();
-extern "C" extern void calcStickAngle__12dMenu_Ring_cFP9STControlUc();
-extern "C" extern void setRotate__12dMenu_Ring_cFv();
-extern "C" extern void setItemScale__12dMenu_Ring_cFif();
-extern "C" extern void setButtonScale__12dMenu_Ring_cFif();
-extern "C" extern void setItem__12dMenu_Ring_cFv();
-extern "C" extern void setJumpItem__12dMenu_Ring_cFb();
-extern "C" extern void setScale__12dMenu_Ring_cFv();
-extern "C" extern void setNameString__12dMenu_Ring_cFUl();
-extern "C" extern void setActiveCursor__12dMenu_Ring_cFv();
-extern "C" extern void setMixItem__12dMenu_Ring_cFv();
-extern "C" extern void drawItem__12dMenu_Ring_cFv();
-extern "C" extern void drawItem2__12dMenu_Ring_cFv();
-extern "C" extern void stick_wait_init__12dMenu_Ring_cFv();
-extern "C" extern void stick_wait_proc__12dMenu_Ring_cFv();
-extern "C" extern void stick_move_init__12dMenu_Ring_cFv();
-extern "C" extern void stick_move_proc__12dMenu_Ring_cFv();
-extern "C" extern void stick_explain_init__12dMenu_Ring_cFv();
-extern "C" extern void stick_explain_force_init__12dMenu_Ring_cFv();
-extern "C" extern void stick_explain_proc__12dMenu_Ring_cFv();
-extern "C" extern void stick_explain_force_proc__12dMenu_Ring_cFv();
-extern "C" extern void setSelectItem__12dMenu_Ring_cFiUc();
-extern "C" extern void drawSelectItem__12dMenu_Ring_cFv();
-extern "C" extern void setSelectItemForce__12dMenu_Ring_cFi();
-extern "C" extern void getCursorPos__12dMenu_Ring_cFUc();
-extern "C" extern void getItemNum__12dMenu_Ring_cFUc();
-extern "C" extern void getItemMaxNum__12dMenu_Ring_cFUc();
-extern "C" extern void checkExplainForce__12dMenu_Ring_cFv();
-extern "C" extern void checkCombineBomb__12dMenu_Ring_cFi();
-extern "C" extern void setCombineBomb__12dMenu_Ring_cFi();
-extern "C" extern void drawNumber__12dMenu_Ring_cFiiff();
-extern "C" extern void getItem__12dMenu_Ring_cFiUc();
-extern "C" extern void setDoStatus__12dMenu_Ring_cFUc();
-extern "C" extern void isMixItemOn__12dMenu_Ring_cFv();
-extern "C" extern void isMixItemOff__12dMenu_Ring_cFv();
-extern "C" extern void setMixMessage__12dMenu_Ring_cFv();
-extern "C" extern void textScaleHIO__12dMenu_Ring_cFv();
-extern "C" extern void textCentering__12dMenu_Ring_cFv();
-extern "C" extern void clacEllipseFunction__12dMenu_Ring_cFfff();
-extern "C" extern void calcDistance__12dMenu_Ring_cFffff();
-extern "C" extern void clacEllipsePlotAverage__12dMenu_Ring_cFiff();
-extern "C" extern void dpdMove__12dMenu_Ring_cFv();
-extern "C" extern void openExplain__12dMenu_Ring_cFUc();
-extern "C" extern void draw__12dMenu_Ring_cFv();
-extern "C" extern void __sinit_d_menu_ring_cpp();
+extern "C" void __sinit_d_menu_ring_cpp();
+
+extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc();
+extern "C" void __dt__12dMenu_Ring_cFv();
+extern "C" void _create__12dMenu_Ring_cFv();
+extern "C" void _delete__12dMenu_Ring_cFv();
+extern "C" void _move__12dMenu_Ring_cFv();
+extern "C" void _draw__12dMenu_Ring_cFv();
+extern "C" void setKanteraPos__12dMenu_Ring_cFff();
+extern "C" void isOpen__12dMenu_Ring_cFv();
+extern "C" void isMoveEnd__12dMenu_Ring_cFv();
+extern "C" void isClose__12dMenu_Ring_cFv();
+extern "C" void getStickInfo__12dMenu_Ring_cFP9STControl();
+extern "C" void calcStickAngle__12dMenu_Ring_cFP9STControlUc();
+extern "C" void setRotate__12dMenu_Ring_cFv();
+extern "C" void setItemScale__12dMenu_Ring_cFif();
+extern "C" void setButtonScale__12dMenu_Ring_cFif();
+extern "C" void setItem__12dMenu_Ring_cFv();
+extern "C" void setJumpItem__12dMenu_Ring_cFb();
+extern "C" void setScale__12dMenu_Ring_cFv();
+extern "C" void setNameString__12dMenu_Ring_cFUl();
+extern "C" void setActiveCursor__12dMenu_Ring_cFv();
+extern "C" void setMixItem__12dMenu_Ring_cFv();
+extern "C" void drawItem__12dMenu_Ring_cFv();
+extern "C" void drawItem2__12dMenu_Ring_cFv();
+extern "C" void stick_wait_init__12dMenu_Ring_cFv();
+extern "C" void stick_wait_proc__12dMenu_Ring_cFv();
+extern "C" void stick_move_init__12dMenu_Ring_cFv();
+extern "C" void stick_move_proc__12dMenu_Ring_cFv();
+extern "C" void stick_explain_init__12dMenu_Ring_cFv();
+extern "C" void stick_explain_force_init__12dMenu_Ring_cFv();
+extern "C" void stick_explain_proc__12dMenu_Ring_cFv();
+extern "C" void stick_explain_force_proc__12dMenu_Ring_cFv();
+extern "C" void setSelectItem__12dMenu_Ring_cFiUc();
+extern "C" void drawSelectItem__12dMenu_Ring_cFv();
+extern "C" void setSelectItemForce__12dMenu_Ring_cFi();
+extern "C" void getCursorPos__12dMenu_Ring_cFUc();
+extern "C" void getItemNum__12dMenu_Ring_cFUc();
+extern "C" void getItemMaxNum__12dMenu_Ring_cFUc();
+extern "C" void checkExplainForce__12dMenu_Ring_cFv();
+extern "C" bool checkCombineBomb__12dMenu_Ring_cFi();
+extern "C" void setCombineBomb__12dMenu_Ring_cFi();
+extern "C" void drawNumber__12dMenu_Ring_cFiiff();
+extern "C" void getItem__12dMenu_Ring_cFiUc();
+extern "C" void setDoStatus__12dMenu_Ring_cFUc();
+extern "C" void isMixItemOn__12dMenu_Ring_cFv();
+extern "C" void isMixItemOff__12dMenu_Ring_cFv();
+extern "C" void setMixMessage__12dMenu_Ring_cFv();
+extern "C" void textScaleHIO__12dMenu_Ring_cFv();
+extern "C" void textCentering__12dMenu_Ring_cFv();
+extern "C" void clacEllipseFunction__12dMenu_Ring_cFfff();
+extern "C" void calcDistance__12dMenu_Ring_cFffff();
+extern "C" void clacEllipsePlotAverage__12dMenu_Ring_cFiff();
+extern "C" bool dpdMove__12dMenu_Ring_cFv();
+extern "C" void openExplain__12dMenu_Ring_cFUc();
+extern "C" void draw__12dMenu_Ring_cFv();
+extern "C" void __sinit_d_menu_ring_cpp();
 SECTION_RODATA extern const u8 data_80397738[40];
 SECTION_RODATA extern const u8 data_80397760[40];
 SECTION_RODATA extern const u8 data_80397788[40];
@@ -127,101 +490,149 @@ SECTION_SDATA2 extern u8 data_8045442C[8 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" extern void dComIfGs_setMixItemIndex__FiUc();
-extern "C" extern void dComIfGs_getMixItemIndex__Fi();
-extern "C" extern void dComIfGs_getBottleMax__Fv();
-extern "C" extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void getLineUpItem__17dSv_player_item_cCFi();
-extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void getBottleNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setScale__16dSelect_cursor_cFf();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void __ct__15dKantera_icon_cFv();
-extern "C" extern void setAlphaRate__15dKantera_icon_cFf();
-extern "C" extern void setPos__15dKantera_icon_cFff();
-extern "C" extern void setScale__15dKantera_icon_cFff();
-extern "C" extern void setNowGauge__15dKantera_icon_cFUsUs();
-extern "C" extern void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb();
-extern "C" extern void move__19dMenu_ItemExplain_cFv();
-extern "C" extern void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph();
-extern "C" extern void openExplain__19dMenu_ItemExplain_cFUcUcUcb();
-extern "C" extern void openExplainTx__19dMenu_ItemExplain_cFUlUl();
-extern "C" extern void getAlphaRatio__19dMenu_ItemExplain_cFv();
-extern "C" extern void dMw_UP_TRIGGER__Fv();
-extern "C" extern void dMw_DOWN_TRIGGER__Fv();
-extern "C" extern void dMw_A_TRIGGER__Fv();
-extern "C" extern void dMw_B_TRIGGER__Fv();
-extern "C" extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" extern void warpInProc__13dMeter2Info_cFv();
-extern "C" extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern "C" extern void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
-extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
-extern "C" extern void dMeter2Info_set2DVibration__Fv();
-extern "C" extern void dMeter2Info_set2DVibrationM__Fv();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __ct__8CPaneMgrFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __dt__8CPaneMgrFv();
-extern "C" extern void paneTrans__8CPaneMgrFff();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void isVisible__13CPaneMgrAlphaFv();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
-extern "C" extern void cLib_addCalcAngleS__FPsssss();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __nwa__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dla__FPv();
-extern "C" extern void J2DDrawFrame__FffffQ28JUtility6TColorUc();
-extern "C" extern void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_17();
-extern "C" extern void _savegpr_18();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_17();
-extern "C" extern void _restgpr_18();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void abs();
-extern "C" extern void strcpy();
+void mDoExt_getMesgFont();
+void dComIfGs_setSelectItemIndex(s32, char);
+void dComIfGs_setMixItemIndex(s32, char);
+void dComIfGs_getMixItemIndex(s32);
+s32 dComIfGs_getBottleMax();
+void dMw_UP_TRIGGER();
+void dMw_DOWN_TRIGGER();
+void dMw_A_TRIGGER();
+void dMw_B_TRIGGER();
+void dMeter2Info_getNumberTextureName(s32);
+void dMeter2Info_set2DVibration();
+void dMeter2Info_set2DVibrationM();
+void dPaneClass_showNullPane(J2DScreen*);
+void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*);
+void cM_atan2s(f32, f32);
+void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+void operator delete[](void*);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, char);
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" s32 dComIfGs_getBottleMax__Fv();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void getLineUpItem__17dSv_player_item_cCFi();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb();
+extern "C" void move__19dMenu_ItemExplain_cFv();
+extern "C" void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph();
+extern "C" void openExplain__19dMenu_ItemExplain_cFUcUcUcb();
+extern "C" void openExplainTx__19dMenu_ItemExplain_cFUlUl();
+extern "C" void getAlphaRatio__19dMenu_ItemExplain_cFv();
+extern "C" void dMw_UP_TRIGGER__Fv();
+extern "C" void dMw_DOWN_TRIGGER__Fv();
+extern "C" void dMw_A_TRIGGER__Fv();
+extern "C" void dMw_B_TRIGGER__Fv();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void warpInProc__13dMeter2Info_cFv();
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
@@ -237,77 +648,77 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80397738-80397760 0028+00 .rodata    xy_text$4015                                                 */
+/* 80397738-80397760 0028+00 rc=1 efc=0 .rodata    xy_text$4015                                                 */
 SECTION_RODATA const u8 data_80397738[40] = {
 	0x00, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x31,
 	0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x32, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x33,
 	0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x34,
 };
 
-/* 80397760-80397788 0028+00 .rodata    fxy_text$4016                                                */
+/* 80397760-80397788 0028+00 rc=0 efc=0 .rodata    fxy_text$4016                                                */
 SECTION_RODATA const u8 data_80397760[40] = {
 	0x00, 0x66, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x78, 0x66, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x31,
 	0x66, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x32, 0x66, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x33,
 	0x66, 0x79, 0x78, 0x5F, 0x74, 0x65, 0x5F, 0x34,
 };
 
-/* 80397788-803977B0 0028+00 .rodata    c_text$4022                                                  */
+/* 80397788-803977B0 0028+00 rc=0 efc=0 .rodata    c_text$4022                                                  */
 SECTION_RODATA const u8 data_80397788[40] = {
 	0x00, 0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x00, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x31,
 	0x00, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x32, 0x00, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x33,
 	0x00, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x34,
 };
 
-/* 803977B0-803977D8 0028+00 .rodata    fc_text$4023                                                 */
+/* 803977B0-803977D8 0028+00 rc=0 efc=0 .rodata    fc_text$4023                                                 */
 SECTION_RODATA const u8 data_803977B0[40] = {
 	0x00, 0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x66, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x31,
 	0x66, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x32, 0x66, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x33,
 	0x66, 0x63, 0x5F, 0x74, 0x65, 0x5F, 0x73, 0x34,
 };
 
-/* 803977D8-80397800 0028+00 .rodata    c_text1$4029                                                 */
+/* 803977D8-80397800 0028+00 rc=0 efc=0 .rodata    c_text1$4029                                                 */
 SECTION_RODATA const u8 data_803977D8[40] = {
 	0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x31, 0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x31,
 	0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x32, 0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x33,
 	0x00, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x34,
 };
 
-/* 80397800-80397828 0028+00 .rodata    fc_text1$4030                                                */
+/* 80397800-80397828 0028+00 rc=0 efc=0 .rodata    fc_text1$4030                                                */
 SECTION_RODATA const u8 data_80397800[40] = {
 	0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x31, 0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x31,
 	0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x32, 0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x33,
 	0x66, 0x63, 0x5F, 0x74, 0x65, 0x78, 0x73, 0x34,
 };
 
-/* 80397828-80397850 0028+00 .rodata    t_on$4036                                                    */
+/* 80397828-80397850 0028+00 rc=0 efc=0 .rodata    t_on$4036                                                    */
 SECTION_RODATA const u8 data_80397828[40] = {
 	0x00, 0x67, 0x72, 0x5F, 0x74, 0x5F, 0x6F, 0x6E, 0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x35,
 	0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x36, 0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x37,
 	0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x38,
 };
 
-/* 80397850-80397878 0028+00 .rodata    ft_on$4037                                                   */
+/* 80397850-80397878 0028+00 rc=0 efc=0 .rodata    ft_on$4037                                                   */
 SECTION_RODATA const u8 data_80397850[40] = {
 	0x00, 0x66, 0x72, 0x5F, 0x74, 0x5F, 0x6F, 0x6E, 0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x35,
 	0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x36, 0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x37,
 	0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x38,
 };
 
-/* 80397878-803978A0 0028+00 .rodata    t_off$4043                                                   */
+/* 80397878-803978A0 0028+00 rc=0 efc=0 .rodata    t_off$4043                                                   */
 SECTION_RODATA const u8 data_80397878[40] = {
 	0x00, 0x67, 0x72, 0x5F, 0x74, 0x5F, 0x6F, 0x66, 0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x31,
 	0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x32, 0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x33,
 	0x67, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x34,
 };
 
-/* 803978A0-803978C8 0028+00 .rodata    ft_off$4044                                                  */
+/* 803978A0-803978C8 0028+00 rc=0 efc=0 .rodata    ft_off$4044                                                  */
 SECTION_RODATA const u8 data_803978A0[40] = {
 	0x00, 0x66, 0x72, 0x5F, 0x74, 0x5F, 0x6F, 0x66, 0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x31,
 	0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x32, 0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x33,
 	0x66, 0x5F, 0x74, 0x6F, 0x66, 0x5F, 0x73, 0x34,
 };
 
-/* 803978C8-80397960 0092+06 .rodata    @stringBase0                                                 */
+/* 803978C8-80397960 0092+06 rc=2 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -323,82 +734,82 @@ SECTION_DEAD char* const stringBase_8039792C =
 SECTION_DEAD char* const pad_8039795A = "\0\0\0\0\0";
 #pragma pop
 
-/* 803BDE70-803BDE7C 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BDE70-803BDE7C 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_menu_d_menu_ring__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDE7C-803BDE88 000C+00 .data      @3862                                                        */
+/* 803BDE7C-803BDE88 000C+00 rc=0 efc=0 .data      @3862                                                        */
 void* d_menu_d_menu_ring__lit_3862[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_wait_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDE88-803BDE94 000C+00 .data      @3863                                                        */
+/* 803BDE88-803BDE94 000C+00 rc=0 efc=0 .data      @3863                                                        */
 void* d_menu_d_menu_ring__lit_3863[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_move_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDE94-803BDEA0 000C+00 .data      @3864                                                        */
+/* 803BDE94-803BDEA0 000C+00 rc=0 efc=0 .data      @3864                                                        */
 void* d_menu_d_menu_ring__lit_3864[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_explain_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDEA0-803BDEAC 000C+00 .data      @3865                                                        */
+/* 803BDEA0-803BDEAC 000C+00 rc=0 efc=0 .data      @3865                                                        */
 void* d_menu_d_menu_ring__lit_3865[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_explain_force_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDEAC-803BDEDC 0030+00 .data      stick_init                                                   */
+/* 803BDEAC-803BDEDC 0030+00 rc=3 efc=0 .data      stick_init                                                   */
 u8 stick_init[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDEDC-803BDEE8 000C+00 .data      @3866                                                        */
+/* 803BDEDC-803BDEE8 000C+00 rc=0 efc=0 .data      @3866                                                        */
 void* d_menu_d_menu_ring__lit_3866[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_wait_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDEE8-803BDEF4 000C+00 .data      @3867                                                        */
+/* 803BDEE8-803BDEF4 000C+00 rc=0 efc=0 .data      @3867                                                        */
 void* d_menu_d_menu_ring__lit_3867[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_move_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDEF4-803BDF00 000C+00 .data      @3868                                                        */
+/* 803BDEF4-803BDF00 000C+00 rc=0 efc=0 .data      @3868                                                        */
 void* d_menu_d_menu_ring__lit_3868[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_explain_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDF00-803BDF0C 000C+00 .data      @3869                                                        */
+/* 803BDF00-803BDF0C 000C+00 rc=0 efc=0 .data      @3869                                                        */
 void* d_menu_d_menu_ring__lit_3869[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)stick_explain_force_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDF0C-803BDF3C 0030+00 .data      stick_proc                                                   */
+/* 803BDF0C-803BDF3C 0030+00 rc=1 efc=0 .data      stick_proc                                                   */
 u8 stick_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDF3C-803BDF5C 0020+00 .data      @4795                                                        */
+/* 803BDF3C-803BDF5C 0020+00 rc=1 efc=0 .data      @4795                                                        */
 void* d_menu_d_menu_ring__lit_4795[8] = {
 	(void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x4C),
 	(void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x60),
@@ -410,7 +821,7 @@ void* d_menu_d_menu_ring__lit_4795[8] = {
 	(void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x80),
 };
 
-/* 803BDF5C-803BDF78 0010+0C .data      __vt__12dMenu_Ring_c                                         */
+/* 803BDF5C-803BDF78 0010+0C rc=2 efc=0 .data      __vt__12dMenu_Ring_c                                         */
 void* const __vt__12dMenu_Ring_c[7] = {
 	NULL, /* RTTI */
 	NULL,
@@ -422,61 +833,61 @@ void* const __vt__12dMenu_Ring_c[7] = {
 	NULL,
 };
 
-/* 80454388-8045438C 0004+00 .sdata2    @4300                                                        */
+/* 80454388-8045438C 0004+00 rc=9 efc=0 .sdata2    @4300                                                        */
 u8 d_menu_d_menu_ring__lit_4300[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045438C-80454390 0004+00 .sdata2    @4301                                                        */
+/* 8045438C-80454390 0004+00 rc=3 efc=0 .sdata2    @4301                                                        */
 f32 d_menu_d_menu_ring__lit_4301 = 448.0f;
 
-/* 80454390-80454394 0004+00 .sdata2    @4302                                                        */
+/* 80454390-80454394 0004+00 rc=3 efc=0 .sdata2    @4302                                                        */
 f32 d_menu_d_menu_ring__lit_4302 = -448.0f;
 
-/* 80454394-80454398 0004+00 .sdata2    @4303                                                        */
+/* 80454394-80454398 0004+00 rc=3 efc=0 .sdata2    @4303                                                        */
 f32 d_menu_d_menu_ring__lit_4303 = 608.0f;
 
-/* 80454398-8045439C 0004+00 .sdata2    @4304                                                        */
+/* 80454398-8045439C 0004+00 rc=3 efc=0 .sdata2    @4304                                                        */
 f32 d_menu_d_menu_ring__lit_4304 = -608.0f;
 
-/* 8045439C-804543A0 0004+00 .sdata2    @4305                                                        */
+/* 8045439C-804543A0 0004+00 rc=18 efc=0 .sdata2    @4305                                                        */
 f32 d_menu_d_menu_ring__lit_4305 = 1.0f;
 
-/* 804543A0-804543A4 0004+00 .sdata2    @4306                                                        */
+/* 804543A0-804543A4 0004+00 rc=2 efc=0 .sdata2    @4306                                                        */
 f32 d_menu_d_menu_ring__lit_4306 = 100.0f;
 
-/* 804543A4-804543A8 0004+00 .sdata2    @4307                                                        */
+/* 804543A4-804543A8 0004+00 rc=5 efc=0 .sdata2    @4307                                                        */
 f32 d_menu_d_menu_ring__lit_4307 = 48.0f;
 
-/* 804543A8-804543AC 0004+00 .sdata2    @4308                                                        */
+/* 804543A8-804543AC 0004+00 rc=4 efc=0 .sdata2    @4308                                                        */
 f32 d_menu_d_menu_ring__lit_4308 = 1.0f / 10.0f;
 
-/* 804543AC-804543B0 0004+00 .sdata2    @4309                                                        */
+/* 804543AC-804543B0 0004+00 rc=4 efc=0 .sdata2    @4309                                                        */
 f32 d_menu_d_menu_ring__lit_4309 = 3.0f / 5.0f;
 
-/* 804543B0-804543B8 0004+04 .sdata2    @4310                                                        */
+/* 804543B0-804543B8 0004+04 rc=7 efc=0 .sdata2    @4310                                                        */
 f32 d_menu_d_menu_ring__lit_4310 = 0.5f;
 /* padding 4 bytes */
 
-/* 804543B8-804543C0 0008+00 .sdata2    @4312                                                        */
+/* 804543B8-804543C0 0008+00 rc=5 efc=0 .sdata2    @4312                                                        */
 f64 d_menu_d_menu_ring__lit_4312 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801E9118-801EA708 15F0+00 .text      __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc */
+/* 801E9118-801EA708 15F0+00 rc=1 efc=1 .text      __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc) {
+asm dMenu_Ring_c::dMenu_Ring_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, char field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/__ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc.s"
 }
 #pragma pop
 
 
-/* 801EA708-801EAB7C 0474+00 .text      __dt__12dMenu_Ring_cFv                                       */
+/* 801EA708-801EAB7C 0474+00 rc=1 efc=0 .text      __dt__12dMenu_Ring_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dMenu_Ring_cFv) {
+asm dMenu_Ring_c::~dMenu_Ring_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/__dt__12dMenu_Ring_cFv.s"
 }
@@ -484,59 +895,54 @@ ASM_FUNCTION(__dt__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 804543C0-804543C8 0004+04 .sdata2    @4465                                                        */
+/* 804543C0-804543C8 0004+04 rc=8 efc=0 .sdata2    @4465                                                        */
 f32 d_menu_d_menu_ring__lit_4465 = -1.0f;
 /* padding 4 bytes */
 
-/* 801EAB7C-801EABE8 006C+00 .text      _create__12dMenu_Ring_cFv                                    */
+/* 801EAB7C-801EABE8 006C+00 rc=1 efc=1 .text      _create__12dMenu_Ring_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::_create() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/_create__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EABE8-801EABEC 0004+00 .text      _delete__12dMenu_Ring_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__12dMenu_Ring_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/_delete__12dMenu_Ring_cFv.s"
+/* 801EABE8-801EABEC 0004+00 rc=1 efc=1 .text      _delete__12dMenu_Ring_cFv                                    */
+void dMenu_Ring_c::_delete() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801EABEC-801EACC8 00DC+00 .text      _move__12dMenu_Ring_cFv                                      */
+/* 801EABEC-801EACC8 00DC+00 rc=1 efc=1 .text      _move__12dMenu_Ring_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/_move__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EACC8-801EB080 03B8+00 .text      _draw__12dMenu_Ring_cFv                                      */
+/* 801EACC8-801EB080 03B8+00 rc=1 efc=0 .text      _draw__12dMenu_Ring_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::_draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/_draw__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EB080-801EB0A4 0024+00 .text      setKanteraPos__12dMenu_Ring_cFff                             */
+/* 801EB080-801EB0A4 0024+00 rc=2 efc=0 .text      setKanteraPos__12dMenu_Ring_cFff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKanteraPos__12dMenu_Ring_cFff) {
+asm void dMenu_Ring_c::setKanteraPos(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setKanteraPos__12dMenu_Ring_cFff.s"
 }
@@ -544,36 +950,36 @@ ASM_FUNCTION(setKanteraPos__12dMenu_Ring_cFff) {
 
 
 /* ############################################################################################## */
-/* 804543C8-804543D0 0008+00 .sdata2    @4596                                                        */
+/* 804543C8-804543D0 0008+00 rc=6 efc=0 .sdata2    @4596                                                        */
 f64 d_menu_d_menu_ring__lit_4596 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801EB0A4-801EB2B4 0210+00 .text      isOpen__12dMenu_Ring_cFv                                     */
+/* 801EB0A4-801EB2B4 0210+00 rc=1 efc=1 .text      isOpen__12dMenu_Ring_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isOpen__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::isOpen() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/isOpen__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EB2B4-801EB3CC 0118+00 .text      isMoveEnd__12dMenu_Ring_cFv                                  */
+/* 801EB2B4-801EB3CC 0118+00 rc=1 efc=1 .text      isMoveEnd__12dMenu_Ring_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMoveEnd__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::isMoveEnd() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/isMoveEnd__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EB3CC-801EB624 0258+00 .text      isClose__12dMenu_Ring_cFv                                    */
+/* 801EB3CC-801EB624 0258+00 rc=1 efc=1 .text      isClose__12dMenu_Ring_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isClose__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::isClose() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/isClose__12dMenu_Ring_cFv.s"
 }
@@ -581,25 +987,25 @@ ASM_FUNCTION(isClose__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 804543D0-804543D4 0004+00 .sdata2    @4739                                                        */
+/* 804543D0-804543D4 0004+00 rc=1 efc=0 .sdata2    @4739                                                        */
 f32 d_menu_d_menu_ring__lit_4739 = 0.75f;
 
-/* 801EB624-801EB8C0 029C+00 .text      getStickInfo__12dMenu_Ring_cFP9STControl                     */
+/* 801EB624-801EB8C0 029C+00 rc=1 efc=0 .text      getStickInfo__12dMenu_Ring_cFP9STControl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStickInfo__12dMenu_Ring_cFP9STControl) {
+asm void dMenu_Ring_c::getStickInfo(STControl* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/getStickInfo__12dMenu_Ring_cFP9STControl.s"
 }
 #pragma pop
 
 
-/* 801EB8C0-801EB960 00A0+00 .text      calcStickAngle__12dMenu_Ring_cFP9STControlUc                 */
+/* 801EB8C0-801EB960 00A0+00 rc=1 efc=0 .text      calcStickAngle__12dMenu_Ring_cFP9STControlUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcStickAngle__12dMenu_Ring_cFP9STControlUc) {
+asm void dMenu_Ring_c::calcStickAngle(STControl* field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/calcStickAngle__12dMenu_Ring_cFP9STControlUc.s"
 }
@@ -607,94 +1013,94 @@ ASM_FUNCTION(calcStickAngle__12dMenu_Ring_cFP9STControlUc) {
 
 
 /* ############################################################################################## */
-/* 804543D4-804543D8 0004+00 .sdata2    @4810                                                        */
+/* 804543D4-804543D8 0004+00 rc=2 efc=0 .sdata2    @4810                                                        */
 f32 d_menu_d_menu_ring__lit_4810 = 304.0f;
 
-/* 804543D8-804543DC 0004+00 .sdata2    @4811                                                        */
+/* 804543D8-804543DC 0004+00 rc=2 efc=0 .sdata2    @4811                                                        */
 f32 d_menu_d_menu_ring__lit_4811 = 224.0f;
 
-/* 801EB960-801EBA38 00D8+00 .text      setRotate__12dMenu_Ring_cFv                                  */
+/* 801EB960-801EBA38 00D8+00 rc=1 efc=0 .text      setRotate__12dMenu_Ring_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRotate__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setRotate() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setRotate__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EBA38-801EBAB8 0080+00 .text      setItemScale__12dMenu_Ring_cFif                              */
+/* 801EBA38-801EBAB8 0080+00 rc=1 efc=0 .text      setItemScale__12dMenu_Ring_cFif                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemScale__12dMenu_Ring_cFif) {
+asm void dMenu_Ring_c::setItemScale(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setItemScale__12dMenu_Ring_cFif.s"
 }
 #pragma pop
 
 
-/* 801EBAB8-801EBB10 0058+00 .text      setButtonScale__12dMenu_Ring_cFif                            */
+/* 801EBAB8-801EBB10 0058+00 rc=2 efc=0 .text      setButtonScale__12dMenu_Ring_cFif                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonScale__12dMenu_Ring_cFif) {
+asm void dMenu_Ring_c::setButtonScale(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setButtonScale__12dMenu_Ring_cFif.s"
 }
 #pragma pop
 
 
-/* 801EBB10-801EBE58 0348+00 .text      setItem__12dMenu_Ring_cFv                                    */
+/* 801EBB10-801EBE58 0348+00 rc=1 efc=0 .text      setItem__12dMenu_Ring_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItem__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setItem() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setItem__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EBE58-801EC20C 03B4+00 .text      setJumpItem__12dMenu_Ring_cFb                                */
+/* 801EBE58-801EC20C 03B4+00 rc=2 efc=0 .text      setJumpItem__12dMenu_Ring_cFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setJumpItem__12dMenu_Ring_cFb) {
+asm void dMenu_Ring_c::setJumpItem(bool field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setJumpItem__12dMenu_Ring_cFb.s"
 }
 #pragma pop
 
 
-/* 801EC20C-801EC3B0 01A4+00 .text      setScale__12dMenu_Ring_cFv                                   */
+/* 801EC20C-801EC3B0 01A4+00 rc=2 efc=0 .text      setScale__12dMenu_Ring_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setScale__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setScale() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setScale__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EC3B0-801EC504 0154+00 .text      setNameString__12dMenu_Ring_cFUl                             */
+/* 801EC3B0-801EC504 0154+00 rc=1 efc=0 .text      setNameString__12dMenu_Ring_cFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNameString__12dMenu_Ring_cFUl) {
+asm void dMenu_Ring_c::setNameString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setNameString__12dMenu_Ring_cFUl.s"
 }
 #pragma pop
 
 
-/* 801EC504-801EC754 0250+00 .text      setActiveCursor__12dMenu_Ring_cFv                            */
+/* 801EC504-801EC754 0250+00 rc=1 efc=0 .text      setActiveCursor__12dMenu_Ring_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActiveCursor__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setActiveCursor() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setActiveCursor__12dMenu_Ring_cFv.s"
 }
@@ -702,14 +1108,14 @@ ASM_FUNCTION(setActiveCursor__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 804543DC-804543E0 0004+00 .sdata2    @5171                                                        */
+/* 804543DC-804543E0 0004+00 rc=1 efc=0 .sdata2    @5171                                                        */
 u32 d_menu_d_menu_ring__lit_5171 = 0xFFFFFFFF;
 
-/* 801EC754-801ECB14 03C0+00 .text      setMixItem__12dMenu_Ring_cFv                                 */
+/* 801EC754-801ECB14 03C0+00 rc=1 efc=0 .text      setMixItem__12dMenu_Ring_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMixItem__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setMixItem() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setMixItem__12dMenu_Ring_cFv.s"
 }
@@ -717,70 +1123,70 @@ ASM_FUNCTION(setMixItem__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 804543E0-804543E4 0004+00 .sdata2    @5366                                                        */
+/* 804543E0-804543E4 0004+00 rc=2 efc=0 .sdata2    @5366                                                        */
 f32 lit_5366 = 24.0f;
 
-/* 804543E4-804543E8 0004+00 .sdata2    @5367                                                        */
+/* 804543E4-804543E8 0004+00 rc=3 efc=0 .sdata2    @5367                                                        */
 f32 lit_5367 = 255.0f;
 
-/* 804543E8-804543EC 0004+00 .sdata2    @5368                                                        */
+/* 804543E8-804543EC 0004+00 rc=2 efc=0 .sdata2    @5368                                                        */
 f32 lit_5368 = 15.0f;
 
-/* 804543EC-804543F0 0004+00 .sdata2    @5369                                                        */
+/* 804543EC-804543F0 0004+00 rc=3 efc=0 .sdata2    @5369                                                        */
 f32 lit_5369 = 10.0f;
 
-/* 804543F0-804543F4 0004+00 .sdata2    @5370                                                        */
+/* 804543F0-804543F4 0004+00 rc=2 efc=0 .sdata2    @5370                                                        */
 f32 lit_5370 = 16.0f / 25.0f;
 
-/* 801ECB14-801ECF9C 0488+00 .text      drawItem__12dMenu_Ring_cFv                                   */
+/* 801ECB14-801ECF9C 0488+00 rc=1 efc=0 .text      drawItem__12dMenu_Ring_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawItem__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::drawItem() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/drawItem__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801ECF9C-801ED2BC 0320+00 .text      drawItem2__12dMenu_Ring_cFv                                  */
+/* 801ECF9C-801ED2BC 0320+00 rc=1 efc=0 .text      drawItem2__12dMenu_Ring_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawItem2__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::drawItem2() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/drawItem2__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801ED2BC-801ED31C 0060+00 .text      stick_wait_init__12dMenu_Ring_cFv                            */
+/* 801ED2BC-801ED31C 0060+00 rc=1 efc=0 .text      stick_wait_init__12dMenu_Ring_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_wait_init__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_wait_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_wait_init__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801ED31C-801ED490 0174+00 .text      stick_wait_proc__12dMenu_Ring_cFv                            */
+/* 801ED31C-801ED490 0174+00 rc=1 efc=0 .text      stick_wait_proc__12dMenu_Ring_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_wait_proc__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_wait_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_wait_proc__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801ED490-801ED53C 00AC+00 .text      stick_move_init__12dMenu_Ring_cFv                            */
+/* 801ED490-801ED53C 00AC+00 rc=1 efc=0 .text      stick_move_init__12dMenu_Ring_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_move_init__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_move_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_move_init__12dMenu_Ring_cFv.s"
 }
@@ -788,84 +1194,74 @@ ASM_FUNCTION(stick_move_init__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 804543F4-804543F8 0004+00 .sdata2    @5648                                                        */
+/* 804543F4-804543F8 0004+00 rc=1 efc=0 .sdata2    @5648                                                        */
 f32 lit_5648 = 70.0f;
 
-/* 804543F8-80454400 0008+00 .sdata2    @5649                                                        */
+/* 804543F8-80454400 0008+00 rc=1 efc=0 .sdata2    @5649                                                        */
 f64 lit_5649 = 0.5;
 
-/* 80454400-80454408 0008+00 .sdata2    @5650                                                        */
+/* 80454400-80454408 0008+00 rc=1 efc=0 .sdata2    @5650                                                        */
 f64 lit_5650 = 3.0;
 
-/* 80454408-80454410 0008+00 .sdata2    @5651                                                        */
+/* 80454408-80454410 0008+00 rc=1 efc=0 .sdata2    @5651                                                        */
 u8 lit_5651[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801ED53C-801ED934 03F8+00 .text      stick_move_proc__12dMenu_Ring_cFv                            */
+/* 801ED53C-801ED934 03F8+00 rc=1 efc=0 .text      stick_move_proc__12dMenu_Ring_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_move_proc__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_move_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_move_proc__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801ED934-801ED938 0004+00 .text      stick_explain_init__12dMenu_Ring_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(stick_explain_init__12dMenu_Ring_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/stick_explain_init__12dMenu_Ring_cFv.s"
+/* 801ED934-801ED938 0004+00 rc=1 efc=0 .text      stick_explain_init__12dMenu_Ring_cFv                         */
+void dMenu_Ring_c::stick_explain_init() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801ED938-801ED93C 0004+00 .text      stick_explain_force_init__12dMenu_Ring_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(stick_explain_force_init__12dMenu_Ring_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/stick_explain_force_init__12dMenu_Ring_cFv.s"
+/* 801ED938-801ED93C 0004+00 rc=1 efc=0 .text      stick_explain_force_init__12dMenu_Ring_cFv                   */
+void dMenu_Ring_c::stick_explain_force_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80454410-80454414 0004+00 .sdata2    @5683                                                        */
+/* 80454410-80454414 0004+00 rc=2 efc=0 .sdata2    @5683                                                        */
 f32 lit_5683 = 150.0f;
 
-/* 801ED93C-801EDA0C 00D0+00 .text      stick_explain_proc__12dMenu_Ring_cFv                         */
+/* 801ED93C-801EDA0C 00D0+00 rc=1 efc=0 .text      stick_explain_proc__12dMenu_Ring_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_explain_proc__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_explain_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_explain_proc__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EDA0C-801EDB14 0108+00 .text      stick_explain_force_proc__12dMenu_Ring_cFv                   */
+/* 801EDA0C-801EDB14 0108+00 rc=1 efc=0 .text      stick_explain_force_proc__12dMenu_Ring_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stick_explain_force_proc__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::stick_explain_force_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/stick_explain_force_proc__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EDB14-801EDC98 0184+00 .text      setSelectItem__12dMenu_Ring_cFiUc                            */
+/* 801EDB14-801EDC98 0184+00 rc=2 efc=0 .text      setSelectItem__12dMenu_Ring_cFiUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectItem__12dMenu_Ring_cFiUc) {
+asm void dMenu_Ring_c::setSelectItem(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setSelectItem__12dMenu_Ring_cFiUc.s"
 }
@@ -873,150 +1269,140 @@ ASM_FUNCTION(setSelectItem__12dMenu_Ring_cFiUc) {
 
 
 /* ############################################################################################## */
-/* 80454414-80454418 0004+00 .sdata2    @5811                                                        */
+/* 80454414-80454418 0004+00 rc=1 efc=0 .sdata2    @5811                                                        */
 f32 d_menu_d_menu_ring__lit_5811 = 17.0f / 10.0f;
 
-/* 801EDC98-801EDF2C 0294+00 .text      drawSelectItem__12dMenu_Ring_cFv                             */
+/* 801EDC98-801EDF2C 0294+00 rc=1 efc=0 .text      drawSelectItem__12dMenu_Ring_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSelectItem__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::drawSelectItem() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/drawSelectItem__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EDF2C-801EDFDC 00B0+00 .text      setSelectItemForce__12dMenu_Ring_cFi                         */
+/* 801EDF2C-801EDFDC 00B0+00 rc=4 efc=0 .text      setSelectItemForce__12dMenu_Ring_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectItemForce__12dMenu_Ring_cFi) {
+asm void dMenu_Ring_c::setSelectItemForce(s32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setSelectItemForce__12dMenu_Ring_cFi.s"
 }
 #pragma pop
 
 
-/* 801EDFDC-801EE058 007C+00 .text      getCursorPos__12dMenu_Ring_cFUc                              */
+/* 801EDFDC-801EE058 007C+00 rc=1 efc=0 .text      getCursorPos__12dMenu_Ring_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCursorPos__12dMenu_Ring_cFUc) {
+asm void dMenu_Ring_c::getCursorPos(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/getCursorPos__12dMenu_Ring_cFUc.s"
 }
 #pragma pop
 
 
-/* 801EE058-801EE15C 0104+00 .text      getItemNum__12dMenu_Ring_cFUc                                */
+/* 801EE058-801EE15C 0104+00 rc=4 efc=0 .text      getItemNum__12dMenu_Ring_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemNum__12dMenu_Ring_cFUc) {
+asm void dMenu_Ring_c::getItemNum(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/getItemNum__12dMenu_Ring_cFUc.s"
 }
 #pragma pop
 
 
-/* 801EE15C-801EE228 00CC+00 .text      getItemMaxNum__12dMenu_Ring_cFUc                             */
+/* 801EE15C-801EE228 00CC+00 rc=4 efc=0 .text      getItemMaxNum__12dMenu_Ring_cFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemMaxNum__12dMenu_Ring_cFUc) {
+asm void dMenu_Ring_c::getItemMaxNum(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/getItemMaxNum__12dMenu_Ring_cFUc.s"
 }
 #pragma pop
 
 
-/* 801EE228-801EE63C 0414+00 .text      checkExplainForce__12dMenu_Ring_cFv                          */
+/* 801EE228-801EE63C 0414+00 rc=1 efc=0 .text      checkExplainForce__12dMenu_Ring_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkExplainForce__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::checkExplainForce() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/checkExplainForce__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EE63C-801EE644 0008+00 .text      checkCombineBomb__12dMenu_Ring_cFi                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkCombineBomb__12dMenu_Ring_cFi) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/checkCombineBomb__12dMenu_Ring_cFi.s"
+/* 801EE63C-801EE644 0008+00 rc=1 efc=0 .text      checkCombineBomb__12dMenu_Ring_cFi                           */
+bool dMenu_Ring_c::checkCombineBomb(s32 field_0) {
+	return false;
 }
-#pragma pop
 
 
-/* 801EE644-801EE648 0004+00 .text      setCombineBomb__12dMenu_Ring_cFi                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCombineBomb__12dMenu_Ring_cFi) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/setCombineBomb__12dMenu_Ring_cFi.s"
+/* 801EE644-801EE648 0004+00 rc=1 efc=0 .text      setCombineBomb__12dMenu_Ring_cFi                             */
+void dMenu_Ring_c::setCombineBomb(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80454418-8045441C 0004+00 .sdata2    @6143                                                        */
+/* 80454418-8045441C 0004+00 rc=1 efc=0 .sdata2    @6143                                                        */
 f32 d_menu_d_menu_ring__lit_6143 = 16.0f;
 
-/* 801EE648-801EEA84 043C+00 .text      drawNumber__12dMenu_Ring_cFiiff                              */
+/* 801EE648-801EEA84 043C+00 rc=2 efc=0 .text      drawNumber__12dMenu_Ring_cFiiff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawNumber__12dMenu_Ring_cFiiff) {
+asm void dMenu_Ring_c::drawNumber(s32 field_0, s32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/drawNumber__12dMenu_Ring_cFiiff.s"
 }
 #pragma pop
 
 
-/* 801EEA84-801EEAE4 0060+00 .text      getItem__12dMenu_Ring_cFiUc                                  */
+/* 801EEA84-801EEAE4 0060+00 rc=1 efc=0 .text      getItem__12dMenu_Ring_cFiUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItem__12dMenu_Ring_cFiUc) {
+asm void dMenu_Ring_c::getItem(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/getItem__12dMenu_Ring_cFiUc.s"
 }
 #pragma pop
 
 
-/* 801EEAE4-801EEB58 0074+00 .text      setDoStatus__12dMenu_Ring_cFUc                               */
+/* 801EEAE4-801EEB58 0074+00 rc=2 efc=0 .text      setDoStatus__12dMenu_Ring_cFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDoStatus__12dMenu_Ring_cFUc) {
+asm void dMenu_Ring_c::setDoStatus(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setDoStatus__12dMenu_Ring_cFUc.s"
 }
 #pragma pop
 
 
-/* 801EEB58-801EEC98 0140+00 .text      isMixItemOn__12dMenu_Ring_cFv                                */
+/* 801EEB58-801EEC98 0140+00 rc=1 efc=0 .text      isMixItemOn__12dMenu_Ring_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMixItemOn__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::isMixItemOn() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/isMixItemOn__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EEC98-801EED84 00EC+00 .text      isMixItemOff__12dMenu_Ring_cFv                               */
+/* 801EEC98-801EED84 00EC+00 rc=1 efc=0 .text      isMixItemOff__12dMenu_Ring_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMixItemOff__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::isMixItemOff() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/isMixItemOff__12dMenu_Ring_cFv.s"
 }
@@ -1024,58 +1410,58 @@ ASM_FUNCTION(isMixItemOff__12dMenu_Ring_cFv) {
 
 
 /* ############################################################################################## */
-/* 8045441C-80454420 0004+00 .sdata2    @6308                                                        */
+/* 8045441C-80454420 0004+00 rc=1 efc=0 .sdata2    @6308                                                        */
 f32 lit_6308 = 18.0f;
 
-/* 801EED84-801EEF14 0190+00 .text      setMixMessage__12dMenu_Ring_cFv                              */
+/* 801EED84-801EEF14 0190+00 rc=1 efc=0 .text      setMixMessage__12dMenu_Ring_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMixMessage__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::setMixMessage() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/setMixMessage__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EEF14-801EF11C 0208+00 .text      textScaleHIO__12dMenu_Ring_cFv                               */
+/* 801EEF14-801EF11C 0208+00 rc=2 efc=0 .text      textScaleHIO__12dMenu_Ring_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(textScaleHIO__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::textScaleHIO() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/textScaleHIO__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EF11C-801EF13C 0020+00 .text      textCentering__12dMenu_Ring_cFv                              */
+/* 801EF11C-801EF13C 0020+00 rc=1 efc=0 .text      textCentering__12dMenu_Ring_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(textCentering__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::textCentering() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/textCentering__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EF13C-801EF174 0038+00 .text      clacEllipseFunction__12dMenu_Ring_cFfff                      */
+/* 801EF13C-801EF174 0038+00 rc=1 efc=0 .text      clacEllipseFunction__12dMenu_Ring_cFfff                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clacEllipseFunction__12dMenu_Ring_cFfff) {
+asm void dMenu_Ring_c::clacEllipseFunction(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/clacEllipseFunction__12dMenu_Ring_cFfff.s"
 }
 #pragma pop
 
 
-/* 801EF174-801EF1A0 002C+00 .text      calcDistance__12dMenu_Ring_cFffff                            */
+/* 801EF174-801EF1A0 002C+00 rc=1 efc=0 .text      calcDistance__12dMenu_Ring_cFffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcDistance__12dMenu_Ring_cFffff) {
+asm void dMenu_Ring_c::calcDistance(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/calcDistance__12dMenu_Ring_cFffff.s"
 }
@@ -1083,75 +1469,69 @@ ASM_FUNCTION(calcDistance__12dMenu_Ring_cFffff) {
 
 
 /* ############################################################################################## */
-/* 80454420-80454424 0004+00 .sdata2    @6454                                                        */
+/* 80454420-80454424 0004+00 rc=1 efc=0 .sdata2    @6454                                                        */
 f32 lit_6454 = 1000.0f;
 
-/* 801EF1A0-801EF484 02E4+00 .text      clacEllipsePlotAverage__12dMenu_Ring_cFiff                   */
+/* 801EF1A0-801EF484 02E4+00 rc=1 efc=0 .text      clacEllipsePlotAverage__12dMenu_Ring_cFiff                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clacEllipsePlotAverage__12dMenu_Ring_cFiff) {
+asm void dMenu_Ring_c::clacEllipsePlotAverage(s32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/clacEllipsePlotAverage__12dMenu_Ring_cFiff.s"
 }
 #pragma pop
 
 
-/* 801EF484-801EF48C 0008+00 .text      dpdMove__12dMenu_Ring_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dpdMove__12dMenu_Ring_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/dpdMove__12dMenu_Ring_cFv.s"
+/* 801EF484-801EF48C 0008+00 rc=1 efc=0 .text      dpdMove__12dMenu_Ring_cFv                                    */
+bool dMenu_Ring_c::dpdMove() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80454424-8045442C 0008+00 .sdata2    i_nameID$6472                                                */
+/* 80454424-8045442C 0008+00 rc=1 efc=0 .sdata2    i_nameID$6472                                                */
 u8 data_80454424[8] = {
 	0x00, 0x00, 0x04, 0xDE, 0x00, 0x00, 0x04, 0xE0,
 };
 
-/* 8045442C-80454438 0008+04 .sdata2    i_expID$6473                                                 */
+/* 8045442C-80454438 0008+04 rc=1 efc=0 .sdata2    i_expID$6473                                                 */
 u8 data_8045442C[12] = {
 	0x00, 0x00, 0x04, 0xDF, 0x00, 0x00, 0x04, 0xE1,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801EF48C-801EF560 00D4+00 .text      openExplain__12dMenu_Ring_cFUc                               */
+/* 801EF48C-801EF560 00D4+00 rc=1 efc=0 .text      openExplain__12dMenu_Ring_cFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openExplain__12dMenu_Ring_cFUc) {
+asm void dMenu_Ring_c::openExplain(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/openExplain__12dMenu_Ring_cFUc.s"
 }
 #pragma pop
 
 
-/* 801EF560-801EF580 0020+00 .text      draw__12dMenu_Ring_cFv                                       */
+/* 801EF560-801EF580 0020+00 rc=1 efc=0 .text      draw__12dMenu_Ring_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12dMenu_Ring_cFv) {
+asm void dMenu_Ring_c::draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/draw__12dMenu_Ring_cFv.s"
 }
 #pragma pop
 
 
-/* 801EF580-801EF654 00D4+00 .text      __sinit_d_menu_ring_cpp                                      */
+/* 801EF580-801EF654 00D4+00 rc=1 efc=1 .text      __sinit_d_menu_ring_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_menu_ring_cpp) {
+extern "C" asm void __sinit_d_menu_ring_cpp() {
 	nofralloc
 #include "asm/d/menu/d_menu_ring/__sinit_d_menu_ring_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

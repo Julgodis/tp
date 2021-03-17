@@ -6,12 +6,23 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagTheBHint_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagTheBHint_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagTheBHint_Delete__FP15daTagTheBHint_c();
-extern "C" extern void daTagTheBHint_Execute__FP15daTagTheBHint_c();
+void daTagTheBHint_Create(fopAc_ac_c*);
+void daTagTheBHint_Delete(daTagTheBHint_c*);
+void daTagTheBHint_Execute(daTagTheBHint_c*);
+
+extern "C" void daTagTheBHint_Create__FP10fopAc_ac_c();
+extern "C" void daTagTheBHint_Delete__FP15daTagTheBHint_c();
+extern "C" void daTagTheBHint_Execute__FP15daTagTheBHint_c();
 SECTION_RODATA extern const u32 lit_3831;
 SECTION_RODATA extern const u8 lit_3832[8];
 SECTION_DATA extern u8 l_daTagTheBHint_Method[32];
@@ -21,7 +32,9 @@ SECTION_DATA extern u8 g_profile_Tag_TheBHint[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -31,7 +44,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTheBHint_Create__FP10fopAc_ac_c) {
+asm void daTagTheBHint_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Create__FP10fopAc_ac_c.s"
 }
@@ -42,7 +55,7 @@ ASM_FUNCTION(daTagTheBHint_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTheBHint_Delete__FP15daTagTheBHint_c) {
+asm void daTagTheBHint_Delete(daTagTheBHint_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Delete__FP15daTagTheBHint_c.s"
 }
@@ -53,7 +66,7 @@ ASM_FUNCTION(daTagTheBHint_Delete__FP15daTagTheBHint_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagTheBHint_Execute__FP15daTagTheBHint_c) {
+asm void daTagTheBHint_Execute(daTagTheBHint_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Execute__FP15daTagTheBHint_c.s"
 }

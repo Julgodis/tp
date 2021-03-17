@@ -6,18 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAISoundInfo (JAISoundInfo) False/False
+/* top-level dependencies (begin JAISoundInfo) */
+/* top-level dependencies (end JAISoundInfo) */
+struct JAISoundInfo {
+	/* 802A2D34 */ JAISoundInfo(bool);
+	/* 802A2D50 */ ~JAISoundInfo();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12JAISoundInfoFb();
-extern "C" extern void __dt__12JAISoundInfoFv();
+
+extern "C" void __ct__12JAISoundInfoFb();
+extern "C" void __dt__12JAISoundInfoFv();
 SECTION_DATA extern void*const __vt__12JAISoundInfo[10];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 SECTION_SBSS extern u8 data_80450B5C[4];
 
 // 
@@ -25,7 +40,7 @@ SECTION_SBSS extern u8 data_80450B5C[4];
 // 
 
 /* ############################################################################################## */
-/* 803C99A0-803C99C8 0024+04 .data      __vt__12JAISoundInfo                                         */
+/* 803C99A0-803C99C8 0024+04 rc=2 efc=0 .data      __vt__12JAISoundInfo                                         */
 void* const __vt__12JAISoundInfo[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -40,26 +55,25 @@ void* const __vt__12JAISoundInfo[10] = {
 	NULL,
 };
 
-/* 802A2D34-802A2D50 001C+00 .text      __ct__12JAISoundInfoFb                                       */
+/* 802A2D34-802A2D50 001C+00 rc=1 efc=1 .text      __ct__12JAISoundInfoFb                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12JAISoundInfoFb) {
+asm JAISoundInfo::JAISoundInfo(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundInfo/__ct__12JAISoundInfoFb.s"
 }
 #pragma pop
 
 
-/* 802A2D50-802A2DB4 0064+00 .text      __dt__12JAISoundInfoFv                                       */
+/* 802A2D50-802A2DB4 0064+00 rc=3 efc=2 .text      __dt__12JAISoundInfoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12JAISoundInfoFv) {
+asm JAISoundInfo::~JAISoundInfo() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundInfo/__dt__12JAISoundInfoFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

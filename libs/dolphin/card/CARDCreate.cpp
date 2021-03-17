@@ -9,67 +9,87 @@
 // Forward References:
 // 
 
-extern "C" extern void CreateCallbackFat();
-extern "C" extern void CARDCreateAsync();
-extern "C" extern void CARDCreate();
+extern "C" static void CreateCallbackFat();
+extern "C" static void CARDCreateAsync();
+extern "C" void CARDCreate();
+
+extern "C" static void CreateCallbackFat();
+extern "C" static void CARDCreateAsync();
+extern "C" void CARDCreate();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void OSGetTime();
-extern "C" extern void __CARDDefaultApiCallback();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDGetFatBlock();
-extern "C" extern void __CARDAllocBlock();
-extern "C" extern void __CARDGetDirBlock();
-extern "C" extern void __CARDUpdateDir();
-extern "C" extern void __CARDCompareFileName();
-extern "C" extern void __div2i();
-extern "C" extern void memcmp();
-extern "C" extern void strncpy();
-extern "C" extern void strlen();
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDAllocBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDCompareFileName();
+extern "C" void __div2i();
+extern "C" void memcmp();
+extern "C" void strncpy();
+extern "C" void strlen();
+
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDAllocBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDCompareFileName();
+extern "C" void __div2i();
+extern "C" void memcmp();
+extern "C" void strncpy();
+extern "C" void strlen();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 80358108-80358238 0130+00 .text      CreateCallbackFat                                            */
+/* 80358108-80358238 0130+00 rc=1 efc=0 .text      CreateCallbackFat                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateCallbackFat) {
+extern "C" asm static void CreateCallbackFat() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CreateCallbackFat.s"
 }
 #pragma pop
 
 
-/* 80358238-80358458 0220+00 .text      CARDCreateAsync                                              */
+/* 80358238-80358458 0220+00 rc=1 efc=0 .text      CARDCreateAsync                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDCreateAsync) {
+extern "C" asm static void CARDCreateAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CARDCreateAsync.s"
 }
 #pragma pop
 
 
-/* 80358458-803584A0 0048+00 .text      CARDCreate                                                   */
+/* 80358458-803584A0 0048+00 rc=1 efc=1 .text      CARDCreate                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDCreate) {
+extern "C" asm void CARDCreate() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CARDCreate.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

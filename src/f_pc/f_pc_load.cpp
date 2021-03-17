@@ -9,65 +9,73 @@
 // Forward References:
 // 
 
-extern "C" extern void fpcLd_Use__Fs();
-extern "C" extern void fpcLd_IsLoaded__Fs();
-extern "C" extern void fpcLd_Free__Fs();
-extern "C" extern void fpcLd_Load__Fs();
+void fpcLd_Use(s16);
+static void fpcLd_IsLoaded(s16);
+void fpcLd_Free(s16);
+void fpcLd_Load(s16);
+
+extern "C" void fpcLd_Use__Fs();
+extern "C" static void fpcLd_IsLoaded__Fs();
+extern "C" void fpcLd_Free__Fs();
+extern "C" void fpcLd_Load__Fs();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cDyl_IsLinked__Fs();
-extern "C" extern void cDyl_Unlink__Fs();
-extern "C" extern void cDyl_LinkASync__Fs();
+void cDyl_IsLinked(s16);
+void cDyl_Unlink(s16);
+void cDyl_LinkASync(s16);
+
+extern "C" void cDyl_IsLinked__Fs();
+extern "C" void cDyl_Unlink__Fs();
+extern "C" void cDyl_LinkASync__Fs();
 
 // 
 // Declarations:
 // 
 
-/* 80021FB8-80022008 0050+00 .text      fpcLd_Use__Fs                                                */
+/* 80021FB8-80022008 0050+00 rc=1 efc=1 .text      fpcLd_Use__Fs                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLd_Use__Fs) {
+asm void fpcLd_Use(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_load/fpcLd_Use__Fs.s"
 }
 #pragma pop
 
 
-/* 80022008-8002202C 0024+00 .text      fpcLd_IsLoaded__Fs                                           */
+/* 80022008-8002202C 0024+00 rc=1 efc=0 .text      fpcLd_IsLoaded__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLd_IsLoaded__Fs) {
+asm static void fpcLd_IsLoaded(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_load/fpcLd_IsLoaded__Fs.s"
 }
 #pragma pop
 
 
-/* 8002202C-80022050 0024+00 .text      fpcLd_Free__Fs                                               */
+/* 8002202C-80022050 0024+00 rc=2 efc=2 .text      fpcLd_Free__Fs                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLd_Free__Fs) {
+asm void fpcLd_Free(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_load/fpcLd_Free__Fs.s"
 }
 #pragma pop
 
 
-/* 80022050-800220A0 0050+00 .text      fpcLd_Load__Fs                                               */
+/* 80022050-800220A0 0050+00 rc=2 efc=1 .text      fpcLd_Load__Fs                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLd_Load__Fs) {
+asm void fpcLd_Load(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_load/fpcLd_Load__Fs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

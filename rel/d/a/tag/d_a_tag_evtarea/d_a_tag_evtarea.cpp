@@ -6,22 +6,48 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cXyz;
+
+struct daTag_EvtArea_c {
+	void create();
+	bool Delete();
+	void Execute();
+	bool Draw();
+	void isDelete();
+	void chkPointInArea(cXyz, cXyz);
+	void chkPointInArea(cXyz);
+	~daTag_EvtArea_c();
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__15daTag_EvtArea_cFv();
-extern "C" extern void Delete__15daTag_EvtArea_cFv();
-extern "C" extern void Execute__15daTag_EvtArea_cFv();
-extern "C" extern void Draw__15daTag_EvtArea_cFv();
-extern "C" extern void isDelete__15daTag_EvtArea_cFv();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz();
-extern "C" extern void daTag_EvtArea_Create__FPv();
-extern "C" extern void daTag_EvtArea_Delete__FPv();
-extern "C" extern void daTag_EvtArea_Execute__FPv();
-extern "C" extern void daTag_EvtArea_Draw__FPv();
-extern "C" extern void daTag_EvtArea_IsDelete__FPv();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz();
-extern "C" extern void __dt__15daTag_EvtArea_cFv();
+void daTag_EvtArea_Create(void*);
+void daTag_EvtArea_Delete(void*);
+void daTag_EvtArea_Execute(void*);
+void daTag_EvtArea_Draw(void*);
+bool daTag_EvtArea_IsDelete(void*);
+
+extern "C" void create__15daTag_EvtArea_cFv();
+extern "C" bool Delete__15daTag_EvtArea_cFv();
+extern "C" void Execute__15daTag_EvtArea_cFv();
+extern "C" bool Draw__15daTag_EvtArea_cFv();
+extern "C" void isDelete__15daTag_EvtArea_cFv();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz();
+extern "C" void daTag_EvtArea_Create__FPv();
+extern "C" void daTag_EvtArea_Delete__FPv();
+extern "C" void daTag_EvtArea_Execute__FPv();
+extern "C" void daTag_EvtArea_Draw__FPv();
+extern "C" bool daTag_EvtArea_IsDelete__FPv();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void __dt__15daTag_EvtArea_cFv();
 SECTION_RODATA extern const u32 lit_3853;
 SECTION_RODATA extern const u32 lit_3854;
 SECTION_RODATA extern const u32 lit_3855;
@@ -37,7 +63,9 @@ SECTION_DATA extern void*const __vt__15daTag_EvtArea_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +75,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daTag_EvtArea_cFv) {
+asm void daTag_EvtArea_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/create__15daTag_EvtArea_cFv.s"
 }
@@ -55,21 +83,16 @@ ASM_FUNCTION(create__15daTag_EvtArea_cFv) {
 
 
 /* 8048C728-8048C730 0008+00 .text      Delete__15daTag_EvtArea_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daTag_EvtArea_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/Delete__15daTag_EvtArea_cFv.s"
+bool daTag_EvtArea_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048C730-8048C894 0164+00 .text      Execute__15daTag_EvtArea_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daTag_EvtArea_cFv) {
+asm void daTag_EvtArea_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/Execute__15daTag_EvtArea_cFv.s"
 }
@@ -77,21 +100,16 @@ ASM_FUNCTION(Execute__15daTag_EvtArea_cFv) {
 
 
 /* 8048C894-8048C89C 0008+00 .text      Draw__15daTag_EvtArea_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daTag_EvtArea_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/Draw__15daTag_EvtArea_cFv.s"
+bool daTag_EvtArea_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048C89C-8048C94C 00B0+00 .text      isDelete__15daTag_EvtArea_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__15daTag_EvtArea_cFv) {
+asm void daTag_EvtArea_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/isDelete__15daTag_EvtArea_cFv.s"
 }
@@ -102,7 +120,7 @@ ASM_FUNCTION(isDelete__15daTag_EvtArea_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz.s"
 }
@@ -113,7 +131,7 @@ ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtArea_Create__FPv) {
+asm void daTag_EvtArea_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Create__FPv.s"
 }
@@ -124,7 +142,7 @@ ASM_FUNCTION(daTag_EvtArea_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtArea_Delete__FPv) {
+asm void daTag_EvtArea_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Delete__FPv.s"
 }
@@ -135,7 +153,7 @@ ASM_FUNCTION(daTag_EvtArea_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtArea_Execute__FPv) {
+asm void daTag_EvtArea_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Execute__FPv.s"
 }
@@ -146,7 +164,7 @@ ASM_FUNCTION(daTag_EvtArea_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtArea_Draw__FPv) {
+asm void daTag_EvtArea_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Draw__FPv.s"
 }
@@ -154,21 +172,16 @@ ASM_FUNCTION(daTag_EvtArea_Draw__FPv) {
 
 
 /* 8048CD00-8048CD08 0008+00 .text      daTag_EvtArea_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_EvtArea_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_IsDelete__FPv.s"
+bool daTag_EvtArea_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048CD08-8048CD68 0060+00 .text      chkPointInArea__15daTag_EvtArea_cF4cXyz                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/chkPointInArea__15daTag_EvtArea_cF4cXyz.s"
 }
@@ -179,7 +192,7 @@ ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTag_EvtArea_cFv) {
+asm daTag_EvtArea_c::~daTag_EvtArea_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/__dt__15daTag_EvtArea_cFv.s"
 }

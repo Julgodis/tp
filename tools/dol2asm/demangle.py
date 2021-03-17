@@ -85,6 +85,7 @@ class FuncParam:
     ret_type: Optional[Param] = None
     inner_type: Optional[Param] = None
     params: List[Param] = field(default_factory=list)
+    class_name: str = None
 
     def to_str(self) -> str:
         ret = ''
@@ -92,7 +93,11 @@ class FuncParam:
             ret += 'void'
         else:
             ret += self.ret_type.to_str()
-        ret += f' ({self.inner_type.to_str()})('
+
+        class_name = ""
+        if self.class_name:
+            class_name = f"{self.class_name}::"
+        ret += f' ({class_name}{self.inner_type.to_str()})('
         ret += ', '.join([x.to_str() for x in self.params])
         ret += ')'
         return ret
@@ -119,13 +124,11 @@ class ParseCtx:
         self.class_name = None
         self.is_const = False
         self.func_name = None
+        self.special_func_name = None
 
     def demangle(self):
         # this split is still not accurate, but good enough for most cases
-        last_f = self.mangled.rfind('F')
-        if last_f == -1:
-            return
-        split_pos = self.mangled.rfind('__', 0, last_f)
+        split_pos = self.mangled.rfind('__')
         if split_pos == -1 or split_pos == 0:
             return
         self.func_name = self.mangled[:split_pos]
@@ -135,36 +138,43 @@ class ParseCtx:
             if match:
                 special_func_name = match.group(1)
                 if special_func_name in special_funcs:
+                    self.special_func_name = special_func_name
                     self.func_name = special_funcs[special_func_name]
                 else:
                     if special_func_name == 'ct':
+                        self.special_func_name = special_func_name
                         self.func_name = '.ctor'
                     elif special_func_name == 'dt':
+                        self.special_func_name = special_func_name
                         self.func_name = '.dtor'
         self.demangle_first_class()
         while self.index < len(self.mangled):
             self.demangled.append(self.demangle_next_type())
         if self.func_name == '.ctor':
-            self.func_name = self.class_name
+            self.func_name = self.class_name.split("::")[-1]
         if self.func_name == '.dtor':
-            self.func_name = '~' + self.class_name
+            self.func_name = '~' + self.class_name.split("::")[-1]
     
     def demangle_first_class(self):
+        #print(self.func_name, self.mangled, self.peek_next_char())
         if self.peek_next_char().isdecimal():
             self.class_name = self.demangle_class()
             if self.peek_next_char() == 'C':
                 self.is_const = True
                 self.index += 1
-            assert self.consume_next_char() == 'F', 'next char should be F!'
+            if self.consume_next_char() != 'F':
+                raise ParseError('next char should be F! (decimal)')
         elif self.peek_next_char() == 'Q':
             self.index += 1
             self.class_name = self.demangle_qualified_name()
             if self.peek_next_char() == 'C':
                 self.is_const = True
                 self.index += 1
-            assert self.consume_next_char() == 'F', 'next char should be F!'
+            if self.consume_next_char() != 'F':
+                raise ParseError('next char should be F! (Q)')
         else:
-            assert self.consume_next_char() == 'F', 'next char should be F!'
+            if self.consume_next_char() != 'F':
+                raise ParseError('next char should be F!')
     
     def demangle_next_type(self) -> str:
         cur_type = Param()
@@ -199,18 +209,25 @@ class ParseCtx:
                 return func
             elif cur_char == 'Q':
                 self.index += 1
-                qual_type = Param()
+                qual_type = cur_type
                 qual_type.name = self.demangle_qualified_name()
                 return qual_type
             elif cur_char == 'A':
                 if cur_type.pointer_lvl < 1 and not cur_type.is_ref:
                     raise ParseError("pointer level for array is wrong!")
-                # decrease pointer level by one, cause one is already handled in the array demangle
-                #if not cur_type.is_ref:
-                #    cur_type.pointer_lvl -= 1
-
                 return self.demangle_array(cur_type)
+            elif cur_char == 'M':
+                self.index += 1
+                class_name = self.demangle_class()
 
+                if self.peek_next_char() != 'F':
+                    raise ParseError(f"expected character 'F' after class name")
+                self.index += 1
+                
+
+                func = self.demangle_function(cur_type)
+                func.class_name = class_name
+                return func
             else:
                 raise ParseError(f'unexpected character {cur_char}')
 

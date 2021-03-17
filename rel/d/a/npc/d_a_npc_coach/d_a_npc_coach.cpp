@@ -6,68 +6,208 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct Vec;
+struct daNpcCoach_c;
+struct SVec;
+struct J3DJoint;
+struct dBgW;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct J3DJoint {
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcCoach_c {
+	void hitFireArrow(cXyz);
+	void deleteFireArrow(s32);
+	void deleteFireArrowFromList(s32);
+	void setPosAngle(cXyz&, csXyz&);
+	void ctrlJointHorse(J3DJoint*, J3DModel*);
+	void initCoachPosition(Vec&, SVec&);
+	void changeAtherPath(s8, cXyz&, csXyz&);
+	void createHeap();
+	void execute();
+	void checkCoachDamage();
+	void setCoachBlazing(u8);
+	void reinsExecute();
+	void reinsInit();
+	void calcCoachMotion();
+	void calcRearWheelRotate();
+	void calcHarnessMotion();
+	void calcFrontWheelRotate();
+	void calcHorseMotion();
+	void calcHorseAnm();
+	void calcHorsePath();
+	void draw();
+	~daNpcCoach_c();
+	void create();
+	void create_init();
+	void initCollision();
+	void initBaseMtx();
+	void setBaseMtx();
+	void initCoachBlazing();
+	daNpcCoach_c();
+};
+
+struct csXyz {
+};
+
+struct J3DModel {
+};
+
+struct Vec {
+};
+
+struct SVec {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct daNpcChHarness_c {
+	~daNpcChHarness_c();
+};
+
+struct daNpcChCoach_c {
+	~daNpcChCoach_c();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DLightObj {
+	J3DLightObj();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void jointHorseCallBack__FP8J3DJointi();
-extern "C" extern void jointFrontWheelCallBack__FP8J3DJointi();
-extern "C" extern void jointRearWheelCallBack__FP8J3DJointi();
-extern "C" extern void jointCoachCallBack__FP8J3DJointi();
-extern "C" extern void arrowStickCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void hitFireArrow__12daNpcCoach_cF4cXyz();
-extern "C" extern void deleteFireArrow__12daNpcCoach_cFUi();
-extern "C" extern void deleteFireArrowFromList__12daNpcCoach_cFUi();
-extern "C" extern void setPosAngle__12daNpcCoach_cFR4cXyzR5csXyz();
-extern "C" extern void ctrlJointHorse__12daNpcCoach_cFP8J3DJointP8J3DModel();
-extern "C" extern void initCoachPosition__12daNpcCoach_cFR3VecR4SVec();
-extern "C" extern void s_sub__FPvPv();
-extern "C" extern void changeAtherPath__12daNpcCoach_cFScR4cXyzR5csXyz();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__12daNpcCoach_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNpcCoach_Execute__FP12daNpcCoach_c();
-extern "C" extern void execute__12daNpcCoach_cFv();
-extern "C" extern void checkCoachDamage__12daNpcCoach_cFv();
-extern "C" extern void setCoachBlazing__12daNpcCoach_cFUc();
-extern "C" extern void reinsExecute__12daNpcCoach_cFv();
-extern "C" extern void reinsInit__12daNpcCoach_cFv();
-extern "C" extern void calcCoachMotion__12daNpcCoach_cFv();
-extern "C" extern void calcRearWheelRotate__12daNpcCoach_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void calcHarnessMotion__12daNpcCoach_cFv();
-extern "C" extern void calcFrontWheelRotate__12daNpcCoach_cFv();
-extern "C" extern void calcHorseMotion__12daNpcCoach_cFv();
-extern "C" extern void calcHorseAnm__12daNpcCoach_cFv();
-extern "C" extern void calcHorsePath__12daNpcCoach_cFv();
-extern "C" extern void daNpcCoach_Draw__FP12daNpcCoach_c();
-extern "C" extern void draw__12daNpcCoach_cFv();
-extern "C" extern void daNpcCoach_IsDelete__FP12daNpcCoach_c();
-extern "C" extern void daNpcCoach_Delete__FP12daNpcCoach_c();
-extern "C" extern void __dt__12daNpcCoach_cFv();
-extern "C" extern void __dt__16daNpcChHarness_cFv();
-extern "C" extern void __dt__14daNpcChCoach_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void daNpcCoach_Create__FP10fopAc_ac_c();
-extern "C" extern void create__12daNpcCoach_cFv();
-extern "C" extern void create_init__12daNpcCoach_cFv();
-extern "C" extern void initCollision__12daNpcCoach_cFv();
-extern "C" extern void initBaseMtx__12daNpcCoach_cFv();
-extern "C" extern void setBaseMtx__12daNpcCoach_cFv();
-extern "C" extern void initCoachBlazing__12daNpcCoach_cFv();
-extern "C" extern void __ct__12daNpcCoach_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_809A4EB8();
-extern "C" extern void func_809A4EC0();
+void jointHorseCallBack(J3DJoint*, s32);
+void jointFrontWheelCallBack(J3DJoint*, s32);
+void jointRearWheelCallBack(J3DJoint*, s32);
+void jointCoachCallBack(J3DJoint*, s32);
+void arrowStickCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*, cXyz&);
+void s_sub(void*, void*);
+void createSolidHeap(fopAc_ac_c*);
+void daNpcCoach_Execute(daNpcCoach_c*);
+void daNpcCoach_Draw(daNpcCoach_c*);
+bool daNpcCoach_IsDelete(daNpcCoach_c*);
+void daNpcCoach_Delete(daNpcCoach_c*);
+void daNpcCoach_Create(fopAc_ac_c*);
+extern "C" void func_809A4EB8();
+extern "C" void func_809A4EC0();
+
+extern "C" void jointHorseCallBack__FP8J3DJointi();
+extern "C" void jointFrontWheelCallBack__FP8J3DJointi();
+extern "C" void jointRearWheelCallBack__FP8J3DJointi();
+extern "C" void jointCoachCallBack__FP8J3DJointi();
+extern "C" void arrowStickCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
+extern "C" void __dt__4cXyzFv();
+extern "C" void hitFireArrow__12daNpcCoach_cF4cXyz();
+extern "C" void deleteFireArrow__12daNpcCoach_cFUi();
+extern "C" void deleteFireArrowFromList__12daNpcCoach_cFUi();
+extern "C" void setPosAngle__12daNpcCoach_cFR4cXyzR5csXyz();
+extern "C" void ctrlJointHorse__12daNpcCoach_cFP8J3DJointP8J3DModel();
+extern "C" void initCoachPosition__12daNpcCoach_cFR3VecR4SVec();
+extern "C" void s_sub__FPvPv();
+extern "C" void changeAtherPath__12daNpcCoach_cFScR4cXyzR5csXyz();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__12daNpcCoach_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNpcCoach_Execute__FP12daNpcCoach_c();
+extern "C" void execute__12daNpcCoach_cFv();
+extern "C" void checkCoachDamage__12daNpcCoach_cFv();
+extern "C" void setCoachBlazing__12daNpcCoach_cFUc();
+extern "C" void reinsExecute__12daNpcCoach_cFv();
+extern "C" void reinsInit__12daNpcCoach_cFv();
+extern "C" void calcCoachMotion__12daNpcCoach_cFv();
+extern "C" void calcRearWheelRotate__12daNpcCoach_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void calcHarnessMotion__12daNpcCoach_cFv();
+extern "C" void calcFrontWheelRotate__12daNpcCoach_cFv();
+extern "C" void calcHorseMotion__12daNpcCoach_cFv();
+extern "C" void calcHorseAnm__12daNpcCoach_cFv();
+extern "C" void calcHorsePath__12daNpcCoach_cFv();
+extern "C" void daNpcCoach_Draw__FP12daNpcCoach_c();
+extern "C" void draw__12daNpcCoach_cFv();
+extern "C" bool daNpcCoach_IsDelete__FP12daNpcCoach_c();
+extern "C" void daNpcCoach_Delete__FP12daNpcCoach_c();
+extern "C" void __dt__12daNpcCoach_cFv();
+extern "C" void __dt__16daNpcChHarness_cFv();
+extern "C" void __dt__14daNpcChCoach_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void daNpcCoach_Create__FP10fopAc_ac_c();
+extern "C" void create__12daNpcCoach_cFv();
+extern "C" void create_init__12daNpcCoach_cFv();
+extern "C" void initCollision__12daNpcCoach_cFv();
+extern "C" void initBaseMtx__12daNpcCoach_cFv();
+extern "C" void setBaseMtx__12daNpcCoach_cFv();
+extern "C" void initCoachBlazing__12daNpcCoach_cFv();
+extern "C" void __ct__12daNpcCoach_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_809A4EB8();
+extern "C" void func_809A4EC0();
 SECTION_RODATA extern const u8 M_attr__12daNpcCoach_c[160];
 SECTION_RODATA extern const u8 lit_4121[4];
 SECTION_RODATA extern const u32 lit_4358;
@@ -159,7 +299,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -169,7 +311,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointHorseCallBack__FP8J3DJointi) {
+asm void jointHorseCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/jointHorseCallBack__FP8J3DJointi.s"
 }
@@ -180,7 +322,7 @@ ASM_FUNCTION(jointHorseCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointFrontWheelCallBack__FP8J3DJointi) {
+asm void jointFrontWheelCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/jointFrontWheelCallBack__FP8J3DJointi.s"
 }
@@ -191,7 +333,7 @@ ASM_FUNCTION(jointFrontWheelCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointRearWheelCallBack__FP8J3DJointi) {
+asm void jointRearWheelCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/jointRearWheelCallBack__FP8J3DJointi.s"
 }
@@ -202,7 +344,7 @@ ASM_FUNCTION(jointRearWheelCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointCoachCallBack__FP8J3DJointi) {
+asm void jointCoachCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/jointCoachCallBack__FP8J3DJointi.s"
 }
@@ -213,7 +355,7 @@ ASM_FUNCTION(jointCoachCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(arrowStickCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_cR4cXyz) {
+asm void arrowStickCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2, cXyz& field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/arrowStickCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_cR4cXyz.s"
 }
@@ -224,7 +366,7 @@ ASM_FUNCTION(arrowStickCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_cR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__4cXyzFv.s"
 }
@@ -235,7 +377,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitFireArrow__12daNpcCoach_cF4cXyz) {
+asm void daNpcCoach_c::hitFireArrow(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/hitFireArrow__12daNpcCoach_cF4cXyz.s"
 }
@@ -246,7 +388,7 @@ ASM_FUNCTION(hitFireArrow__12daNpcCoach_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteFireArrow__12daNpcCoach_cFUi) {
+asm void daNpcCoach_c::deleteFireArrow(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/deleteFireArrow__12daNpcCoach_cFUi.s"
 }
@@ -257,7 +399,7 @@ ASM_FUNCTION(deleteFireArrow__12daNpcCoach_cFUi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteFireArrowFromList__12daNpcCoach_cFUi) {
+asm void daNpcCoach_c::deleteFireArrowFromList(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/deleteFireArrowFromList__12daNpcCoach_cFUi.s"
 }
@@ -268,7 +410,7 @@ ASM_FUNCTION(deleteFireArrowFromList__12daNpcCoach_cFUi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPosAngle__12daNpcCoach_cFR4cXyzR5csXyz) {
+asm void daNpcCoach_c::setPosAngle(cXyz& field_0, csXyz& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/setPosAngle__12daNpcCoach_cFR4cXyzR5csXyz.s"
 }
@@ -279,7 +421,7 @@ ASM_FUNCTION(setPosAngle__12daNpcCoach_cFR4cXyzR5csXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointHorse__12daNpcCoach_cFP8J3DJointP8J3DModel) {
+asm void daNpcCoach_c::ctrlJointHorse(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/ctrlJointHorse__12daNpcCoach_cFP8J3DJointP8J3DModel.s"
 }
@@ -290,7 +432,7 @@ ASM_FUNCTION(ctrlJointHorse__12daNpcCoach_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCoachPosition__12daNpcCoach_cFR3VecR4SVec) {
+asm void daNpcCoach_c::initCoachPosition(Vec& field_0, SVec& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/initCoachPosition__12daNpcCoach_cFR3VecR4SVec.s"
 }
@@ -301,7 +443,7 @@ ASM_FUNCTION(initCoachPosition__12daNpcCoach_cFR3VecR4SVec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub__FPvPv) {
+asm void s_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/s_sub__FPvPv.s"
 }
@@ -312,7 +454,7 @@ ASM_FUNCTION(s_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeAtherPath__12daNpcCoach_cFScR4cXyzR5csXyz) {
+asm void daNpcCoach_c::changeAtherPath(s8 field_0, cXyz& field_1, csXyz& field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/changeAtherPath__12daNpcCoach_cFScR4cXyzR5csXyz.s"
 }
@@ -323,7 +465,7 @@ ASM_FUNCTION(changeAtherPath__12daNpcCoach_cFScR4cXyzR5csXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -334,7 +476,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/createHeap__12daNpcCoach_cFv.s"
 }
@@ -345,7 +487,7 @@ ASM_FUNCTION(createHeap__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__12J3DFrameCtrlFv.s"
 }
@@ -356,7 +498,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcCoach_Execute__FP12daNpcCoach_c) {
+asm void daNpcCoach_Execute(daNpcCoach_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_Execute__FP12daNpcCoach_c.s"
 }
@@ -367,7 +509,7 @@ ASM_FUNCTION(daNpcCoach_Execute__FP12daNpcCoach_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/execute__12daNpcCoach_cFv.s"
 }
@@ -378,7 +520,7 @@ ASM_FUNCTION(execute__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCoachDamage__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::checkCoachDamage() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/checkCoachDamage__12daNpcCoach_cFv.s"
 }
@@ -389,7 +531,7 @@ ASM_FUNCTION(checkCoachDamage__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCoachBlazing__12daNpcCoach_cFUc) {
+asm void daNpcCoach_c::setCoachBlazing(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/setCoachBlazing__12daNpcCoach_cFUc.s"
 }
@@ -400,7 +542,7 @@ ASM_FUNCTION(setCoachBlazing__12daNpcCoach_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reinsExecute__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::reinsExecute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/reinsExecute__12daNpcCoach_cFv.s"
 }
@@ -411,7 +553,7 @@ ASM_FUNCTION(reinsExecute__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reinsInit__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::reinsInit() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/reinsInit__12daNpcCoach_cFv.s"
 }
@@ -422,7 +564,7 @@ ASM_FUNCTION(reinsInit__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCoachMotion__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcCoachMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcCoachMotion__12daNpcCoach_cFv.s"
 }
@@ -433,7 +575,7 @@ ASM_FUNCTION(calcCoachMotion__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRearWheelRotate__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcRearWheelRotate() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcRearWheelRotate__12daNpcCoach_cFv.s"
 }
@@ -444,7 +586,7 @@ ASM_FUNCTION(calcRearWheelRotate__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__8cM3dGPlaFv.s"
 }
@@ -455,7 +597,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHarnessMotion__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcHarnessMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcHarnessMotion__12daNpcCoach_cFv.s"
 }
@@ -466,7 +608,7 @@ ASM_FUNCTION(calcHarnessMotion__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcFrontWheelRotate__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcFrontWheelRotate() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcFrontWheelRotate__12daNpcCoach_cFv.s"
 }
@@ -477,7 +619,7 @@ ASM_FUNCTION(calcFrontWheelRotate__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHorseMotion__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcHorseMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcHorseMotion__12daNpcCoach_cFv.s"
 }
@@ -488,7 +630,7 @@ ASM_FUNCTION(calcHorseMotion__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHorseAnm__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcHorseAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcHorseAnm__12daNpcCoach_cFv.s"
 }
@@ -499,7 +641,7 @@ ASM_FUNCTION(calcHorseAnm__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHorsePath__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::calcHorsePath() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/calcHorsePath__12daNpcCoach_cFv.s"
 }
@@ -510,7 +652,7 @@ ASM_FUNCTION(calcHorsePath__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcCoach_Draw__FP12daNpcCoach_c) {
+asm void daNpcCoach_Draw(daNpcCoach_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_Draw__FP12daNpcCoach_c.s"
 }
@@ -521,7 +663,7 @@ ASM_FUNCTION(daNpcCoach_Draw__FP12daNpcCoach_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/draw__12daNpcCoach_cFv.s"
 }
@@ -529,21 +671,16 @@ ASM_FUNCTION(draw__12daNpcCoach_cFv) {
 
 
 /* 809A3300-809A3308 0008+00 .text      daNpcCoach_IsDelete__FP12daNpcCoach_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcCoach_IsDelete__FP12daNpcCoach_c) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_IsDelete__FP12daNpcCoach_c.s"
+bool daNpcCoach_IsDelete(daNpcCoach_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809A3308-809A3330 0028+00 .text      daNpcCoach_Delete__FP12daNpcCoach_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcCoach_Delete__FP12daNpcCoach_c) {
+asm void daNpcCoach_Delete(daNpcCoach_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_Delete__FP12daNpcCoach_c.s"
 }
@@ -554,7 +691,7 @@ ASM_FUNCTION(daNpcCoach_Delete__FP12daNpcCoach_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daNpcCoach_cFv) {
+asm daNpcCoach_c::~daNpcCoach_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__12daNpcCoach_cFv.s"
 }
@@ -565,7 +702,7 @@ ASM_FUNCTION(__dt__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daNpcChHarness_cFv) {
+asm daNpcChHarness_c::~daNpcChHarness_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__16daNpcChHarness_cFv.s"
 }
@@ -576,7 +713,7 @@ ASM_FUNCTION(__dt__16daNpcChHarness_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpcChCoach_cFv) {
+asm daNpcChCoach_c::~daNpcChCoach_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__14daNpcChCoach_cFv.s"
 }
@@ -587,7 +724,7 @@ ASM_FUNCTION(__dt__14daNpcChCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__8dCcD_CylFv.s"
 }
@@ -598,7 +735,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcCoach_Create__FP10fopAc_ac_c) {
+asm void daNpcCoach_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_Create__FP10fopAc_ac_c.s"
 }
@@ -609,7 +746,7 @@ ASM_FUNCTION(daNpcCoach_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/create__12daNpcCoach_cFv.s"
 }
@@ -620,7 +757,7 @@ ASM_FUNCTION(create__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/create_init__12daNpcCoach_cFv.s"
 }
@@ -631,7 +768,7 @@ ASM_FUNCTION(create_init__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCollision__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::initCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/initCollision__12daNpcCoach_cFv.s"
 }
@@ -642,7 +779,7 @@ ASM_FUNCTION(initCollision__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/initBaseMtx__12daNpcCoach_cFv.s"
 }
@@ -653,7 +790,7 @@ ASM_FUNCTION(initBaseMtx__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/setBaseMtx__12daNpcCoach_cFv.s"
 }
@@ -664,7 +801,7 @@ ASM_FUNCTION(setBaseMtx__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCoachBlazing__12daNpcCoach_cFv) {
+asm void daNpcCoach_c::initCoachBlazing() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/initCoachBlazing__12daNpcCoach_cFv.s"
 }
@@ -675,7 +812,7 @@ ASM_FUNCTION(initCoachBlazing__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daNpcCoach_cFv) {
+asm daNpcCoach_c::daNpcCoach_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__ct__12daNpcCoach_cFv.s"
 }
@@ -686,7 +823,7 @@ ASM_FUNCTION(__ct__12daNpcCoach_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__10dCcD_GSttsFv.s"
 }
@@ -697,7 +834,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__12dBgS_AcchCirFv.s"
 }
@@ -708,7 +845,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__8cM3dGSphFv.s"
 }
@@ -719,7 +856,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__8cM3dGCylFv.s"
 }
@@ -730,7 +867,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__8cM3dGAabFv.s"
 }
@@ -741,7 +878,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__ct__11J3DLightObjFv.s"
 }
@@ -749,21 +886,16 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 
 
 /* 809A4D78-809A4D7C 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809A4D7C-809A4E00 0084+00 .text      __ct__8dCcD_CylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__ct__8dCcD_CylFv.s"
 }
@@ -774,7 +906,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -785,7 +917,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__dt__10cCcD_GSttsFv.s"
 }
@@ -796,7 +928,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809A4EB8) {
+extern "C" asm void func_809A4EB8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/func_809A4EB8.s"
 }
@@ -807,7 +939,7 @@ ASM_FUNCTION(func_809A4EB8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809A4EC0) {
+extern "C" asm void func_809A4EC0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/func_809A4EC0.s"
 }

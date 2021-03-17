@@ -6,28 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMirrorChain_c;
+
+struct dScissorBegin_packet_c {
+	void draw();
+	~dScissorBegin_packet_c();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dScissorEnd_packet_c {
+	void draw();
+	~dScissorEnd_packet_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjMirrorChain_c {
+	void createHeap();
+	void initBaseMtx();
+	void setBaseMtx();
+	void draw();
+	void execute();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgW {
+	~dBgW();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__22dScissorBegin_packet_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void draw__20dScissorEnd_packet_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__18daObjMirrorChain_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void initBaseMtx__18daObjMirrorChain_cFv();
-extern "C" extern void setBaseMtx__18daObjMirrorChain_cFv();
-extern "C" extern void daObjMirrorChain_Draw__FP18daObjMirrorChain_c();
-extern "C" extern void draw__18daObjMirrorChain_cFv();
-extern "C" extern void daObjMirrorChain_Execute__FP18daObjMirrorChain_c();
-extern "C" extern void execute__18daObjMirrorChain_cFv();
-extern "C" extern void daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c();
-extern "C" extern void daObjMirrorChain_Delete__FP18daObjMirrorChain_c();
-extern "C" extern void __dt__4dBgWFv();
-extern "C" extern void daObjMirrorChain_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__20dScissorEnd_packet_cFv();
-extern "C" extern void __dt__22dScissorBegin_packet_cFv();
-extern "C" extern void __ct__4cXyzFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjMirrorChain_Draw(daObjMirrorChain_c*);
+void daObjMirrorChain_Execute(daObjMirrorChain_c*);
+bool daObjMirrorChain_IsDelete(daObjMirrorChain_c*);
+void daObjMirrorChain_Delete(daObjMirrorChain_c*);
+void daObjMirrorChain_Create(fopAc_ac_c*);
+
+extern "C" void draw__22dScissorBegin_packet_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void draw__20dScissorEnd_packet_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__18daObjMirrorChain_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void initBaseMtx__18daObjMirrorChain_cFv();
+extern "C" void setBaseMtx__18daObjMirrorChain_cFv();
+extern "C" void daObjMirrorChain_Draw__FP18daObjMirrorChain_c();
+extern "C" void draw__18daObjMirrorChain_cFv();
+extern "C" void daObjMirrorChain_Execute__FP18daObjMirrorChain_c();
+extern "C" void execute__18daObjMirrorChain_cFv();
+extern "C" bool daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c();
+extern "C" void daObjMirrorChain_Delete__FP18daObjMirrorChain_c();
+extern "C" void __dt__4dBgWFv();
+extern "C" void daObjMirrorChain_Create__FP10fopAc_ac_c();
+extern "C" void __dt__20dScissorEnd_packet_cFv();
+extern "C" void __dt__22dScissorBegin_packet_cFv();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3915;
 SECTION_RODATA extern const u32 lit_3916;
 SECTION_RODATA extern const u8 lit_3917[4];
@@ -58,7 +106,9 @@ SECTION_BSS extern u8 l_scissor[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -68,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__22dScissorBegin_packet_cFv) {
+asm void dScissorBegin_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/draw__22dScissorBegin_packet_cFv.s"
 }
@@ -79,7 +129,7 @@ ASM_FUNCTION(draw__22dScissorBegin_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__dt__4cXyzFv.s"
 }
@@ -90,7 +140,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__20dScissorEnd_packet_cFv) {
+asm void dScissorEnd_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/draw__20dScissorEnd_packet_cFv.s"
 }
@@ -101,7 +151,7 @@ ASM_FUNCTION(draw__20dScissorEnd_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -112,7 +162,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__18daObjMirrorChain_cFv) {
+asm void daObjMirrorChain_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/createHeap__18daObjMirrorChain_cFv.s"
 }
@@ -123,7 +173,7 @@ ASM_FUNCTION(createHeap__18daObjMirrorChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__dt__12J3DFrameCtrlFv.s"
 }
@@ -134,7 +184,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__18daObjMirrorChain_cFv) {
+asm void daObjMirrorChain_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/initBaseMtx__18daObjMirrorChain_cFv.s"
 }
@@ -145,7 +195,7 @@ ASM_FUNCTION(initBaseMtx__18daObjMirrorChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__18daObjMirrorChain_cFv) {
+asm void daObjMirrorChain_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/setBaseMtx__18daObjMirrorChain_cFv.s"
 }
@@ -156,7 +206,7 @@ ASM_FUNCTION(setBaseMtx__18daObjMirrorChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorChain_Draw__FP18daObjMirrorChain_c) {
+asm void daObjMirrorChain_Draw(daObjMirrorChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_Draw__FP18daObjMirrorChain_c.s"
 }
@@ -167,7 +217,7 @@ ASM_FUNCTION(daObjMirrorChain_Draw__FP18daObjMirrorChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__18daObjMirrorChain_cFv) {
+asm void daObjMirrorChain_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/draw__18daObjMirrorChain_cFv.s"
 }
@@ -178,7 +228,7 @@ ASM_FUNCTION(draw__18daObjMirrorChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorChain_Execute__FP18daObjMirrorChain_c) {
+asm void daObjMirrorChain_Execute(daObjMirrorChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_Execute__FP18daObjMirrorChain_c.s"
 }
@@ -189,7 +239,7 @@ ASM_FUNCTION(daObjMirrorChain_Execute__FP18daObjMirrorChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__18daObjMirrorChain_cFv) {
+asm void daObjMirrorChain_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/execute__18daObjMirrorChain_cFv.s"
 }
@@ -197,21 +247,16 @@ ASM_FUNCTION(execute__18daObjMirrorChain_cFv) {
 
 
 /* 80C97BA4-80C97BAC 0008+00 .text      daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c.s"
+bool daObjMirrorChain_IsDelete(daObjMirrorChain_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C97BAC-80C97CC4 0118+00 .text      daObjMirrorChain_Delete__FP18daObjMirrorChain_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorChain_Delete__FP18daObjMirrorChain_c) {
+asm void daObjMirrorChain_Delete(daObjMirrorChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_Delete__FP18daObjMirrorChain_c.s"
 }
@@ -222,7 +267,7 @@ ASM_FUNCTION(daObjMirrorChain_Delete__FP18daObjMirrorChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dBgWFv) {
+asm dBgW::~dBgW() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__dt__4dBgWFv.s"
 }
@@ -233,7 +278,7 @@ ASM_FUNCTION(__dt__4dBgWFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorChain_Create__FP10fopAc_ac_c) {
+asm void daObjMirrorChain_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_Create__FP10fopAc_ac_c.s"
 }
@@ -244,7 +289,7 @@ ASM_FUNCTION(daObjMirrorChain_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20dScissorEnd_packet_cFv) {
+asm dScissorEnd_packet_c::~dScissorEnd_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__dt__20dScissorEnd_packet_cFv.s"
 }
@@ -255,7 +300,7 @@ ASM_FUNCTION(__dt__20dScissorEnd_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22dScissorBegin_packet_cFv) {
+asm dScissorBegin_packet_c::~dScissorBegin_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__dt__22dScissorBegin_packet_cFv.s"
 }
@@ -263,14 +308,9 @@ ASM_FUNCTION(__dt__22dScissorBegin_packet_cFv) {
 
 
 /* 80C9801C-80C98020 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

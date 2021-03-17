@@ -9,9 +9,13 @@
 // Forward References:
 // 
 
-extern "C" extern void PSQUATMultiply();
-extern "C" extern void C_QUATRotAxisRad();
-extern "C" extern void C_QUATSlerp();
+extern "C" void PSQUATMultiply();
+extern "C" void C_QUATRotAxisRad();
+extern "C" void C_QUATSlerp();
+
+extern "C" void PSQUATMultiply();
+extern "C" void C_QUATRotAxisRad();
+extern "C" void C_QUATSlerp();
 SECTION_SDATA2 extern u8 lit_130[4];
 SECTION_SDATA2 extern f32 quat__lit_133;
 SECTION_SDATA2 extern f32 quat__lit_135;
@@ -21,20 +25,25 @@ SECTION_SDATA2 extern f32 lit_261;
 // External References:
 // 
 
-extern "C" extern void PSVECNormalize();
-extern "C" extern void sinf();
-extern "C" extern void cosf();
-extern "C" extern void acosf();
+extern "C" void PSVECNormalize();
+extern "C" void sinf();
+extern "C" void cosf();
+extern "C" void acosf();
+
+extern "C" void PSVECNormalize();
+extern "C" void sinf();
+extern "C" void cosf();
+extern "C" void acosf();
 
 // 
 // Declarations:
 // 
 
-/* 80347418-80347474 005C+00 .text      PSQUATMultiply                                               */
+/* 80347418-80347474 005C+00 rc=0 efc=0 .text      PSQUATMultiply                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PSQUATMultiply) {
+extern "C" asm void PSQUATMultiply() {
 	nofralloc
 #include "asm/dolphin/mtx/quat/PSQUATMultiply.s"
 }
@@ -42,22 +51,22 @@ ASM_FUNCTION(PSQUATMultiply) {
 
 
 /* ############################################################################################## */
-/* 80456550-80456554 0004+00 .sdata2    @130                                                         */
+/* 80456550-80456554 0004+00 rc=1 efc=0 .sdata2    @130                                                         */
 u8 lit_130[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456554-80456558 0004+00 .sdata2    @133                                                         */
+/* 80456554-80456558 0004+00 rc=1 efc=0 .sdata2    @133                                                         */
 f32 quat__lit_133 = 1.0f;
 
-/* 80456558-8045655C 0004+00 .sdata2    @135                                                         */
+/* 80456558-8045655C 0004+00 rc=1 efc=0 .sdata2    @135                                                         */
 f32 quat__lit_135 = 0.5f;
 
-/* 80347474-80347500 008C+00 .text      C_QUATRotAxisRad                                             */
+/* 80347474-80347500 008C+00 rc=1 efc=1 .text      C_QUATRotAxisRad                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_QUATRotAxisRad) {
+extern "C" asm void C_QUATRotAxisRad() {
 	nofralloc
 #include "asm/dolphin/mtx/quat/C_QUATRotAxisRad.s"
 }
@@ -65,18 +74,17 @@ ASM_FUNCTION(C_QUATRotAxisRad) {
 
 
 /* ############################################################################################## */
-/* 8045655C-80456560 0004+00 .sdata2    @261                                                         */
+/* 8045655C-80456560 0004+00 rc=1 efc=0 .sdata2    @261                                                         */
 f32 lit_261 = 0.9999899864196777f;
 
-/* 80347500-80347674 0174+00 .text      C_QUATSlerp                                                  */
+/* 80347500-80347674 0174+00 rc=0 efc=0 .text      C_QUATSlerp                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(C_QUATSlerp) {
+extern "C" asm void C_QUATSlerp() {
 	nofralloc
 #include "asm/dolphin/mtx/quat/C_QUATSlerp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

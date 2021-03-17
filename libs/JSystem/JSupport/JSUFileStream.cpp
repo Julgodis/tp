@@ -6,27 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JSUFileInputStream (JSUFileInputStream) False/False
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
+/* top-level dependencies (begin JSUStreamSeekFrom) */
+/* top-level dependencies (end JSUStreamSeekFrom) */
+struct JSUStreamSeekFrom {
+};
+
+// build JKRFile (JKRFile) False/False
+/* top-level dependencies (begin JKRFile) */
+/* top-level dependencies (end JKRFile) */
+struct JKRFile {
+};
+
+/* top-level dependencies (begin JSUFileInputStream) */
+// outer dependency: JSUStreamSeekFrom
+// outer dependency: JKRFile
+/* top-level dependencies (end JSUFileInputStream) */
+struct JSUFileInputStream {
+	// JSUStreamSeekFrom
+	// JKRFile
+	/* 802DADD8 */ ~JSUFileInputStream();
+	/* 802DC638 */ JSUFileInputStream(JKRFile*);
+	/* 802DC67C */ void readData(void*, s32);
+	/* 802DC74C */ void seekPos(s32, JSUStreamSeekFrom);
+	/* 802DC82C */ void getLength() const;
+	/* 802DC85C */ void getPosition() const;
+};
+
+// build JKRFile (JKRFile) True/True
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// build JSURandomInputStream (JSURandomInputStream) False/False
+/* top-level dependencies (begin JSURandomInputStream) */
+/* top-level dependencies (end JSURandomInputStream) */
+struct JSURandomInputStream {
+	/* 802D4094 */ void getAvailable() const;
+	/* 802DC3FC */ void skip(s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18JSUFileInputStreamFP7JKRFile();
-extern "C" extern void readData__18JSUFileInputStreamFPvl();
-extern "C" extern void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom();
-extern "C" extern void getLength__18JSUFileInputStreamCFv();
-extern "C" extern void getPosition__18JSUFileInputStreamCFv();
+
+extern "C" void __ct__18JSUFileInputStreamFP7JKRFile();
+extern "C" void readData__18JSUFileInputStreamFPvl();
+extern "C" void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom();
+extern "C" void getLength__18JSUFileInputStreamCFv();
+extern "C" void getPosition__18JSUFileInputStreamCFv();
 SECTION_DATA extern void*const __vt__18JSUFileInputStream[10];
 
 // 
 // External References:
 // 
 
-extern "C" extern void getAvailable__20JSURandomInputStreamCFv();
-extern "C" extern void __dt__18JSUFileInputStreamFv();
-extern "C" extern void skip__20JSURandomInputStreamFl();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void getAvailable__20JSURandomInputStreamCFv();
+extern "C" void __dt__18JSUFileInputStreamFv();
+extern "C" void skip__20JSURandomInputStreamFl();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];
@@ -36,7 +84,7 @@ SECTION_DATA extern void*const __vt__14JSUInputStream[7];
 // 
 
 /* ############################################################################################## */
-/* 803CC518-803CC540 0024+04 .data      __vt__18JSUFileInputStream                                   */
+/* 803CC518-803CC540 0024+04 rc=2 efc=1 .data      __vt__18JSUFileInputStream                                   */
 void* const __vt__18JSUFileInputStream[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -51,59 +99,58 @@ void* const __vt__18JSUFileInputStream[10] = {
 	NULL,
 };
 
-/* 802DC638-802DC67C 0044+00 .text      __ct__18JSUFileInputStreamFP7JKRFile                         */
+/* 802DC638-802DC67C 0044+00 rc=1 efc=1 .text      __ct__18JSUFileInputStreamFP7JKRFile                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18JSUFileInputStreamFP7JKRFile) {
+asm JSUFileInputStream::JSUFileInputStream(JKRFile* field_0) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUFileStream/__ct__18JSUFileInputStreamFP7JKRFile.s"
 }
 #pragma pop
 
 
-/* 802DC67C-802DC74C 00D0+00 .text      readData__18JSUFileInputStreamFPvl                           */
+/* 802DC67C-802DC74C 00D0+00 rc=1 efc=0 .text      readData__18JSUFileInputStreamFPvl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readData__18JSUFileInputStreamFPvl) {
+asm void JSUFileInputStream::readData(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUFileStream/readData__18JSUFileInputStreamFPvl.s"
 }
 #pragma pop
 
 
-/* 802DC74C-802DC82C 00E0+00 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           */
+/* 802DC74C-802DC82C 00E0+00 rc=1 efc=0 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom) {
+asm void JSUFileInputStream::seekPos(s32 field_0, JSUStreamSeekFrom field_1) {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUFileStream/seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom.s"
 }
 #pragma pop
 
 
-/* 802DC82C-802DC85C 0030+00 .text      getLength__18JSUFileInputStreamCFv                           */
+/* 802DC82C-802DC85C 0030+00 rc=1 efc=0 .text      getLength__18JSUFileInputStreamCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLength__18JSUFileInputStreamCFv) {
+asm void JSUFileInputStream::getLength() const {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUFileStream/getLength__18JSUFileInputStreamCFv.s"
 }
 #pragma pop
 
 
-/* 802DC85C-802DC864 0008+00 .text      getPosition__18JSUFileInputStreamCFv                         */
+/* 802DC85C-802DC864 0008+00 rc=1 efc=0 .text      getPosition__18JSUFileInputStreamCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPosition__18JSUFileInputStreamCFv) {
+asm void JSUFileInputStream::getPosition() const {
 	nofralloc
 #include "asm/JSystem/JSupport/JSUFileStream/getPosition__18JSUFileInputStreamCFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

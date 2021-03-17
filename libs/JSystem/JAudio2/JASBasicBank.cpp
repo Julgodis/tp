@@ -6,17 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASBasicBank (JASBasicBank) False/False
+// build JASInstParam (JASInstParam) False/False
+/* top-level dependencies (begin JASInstParam) */
+/* top-level dependencies (end JASInstParam) */
+struct JASInstParam {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JASInst (JASInst) False/False
+/* top-level dependencies (begin JASInst) */
+/* top-level dependencies (end JASInst) */
+struct JASInst {
+};
+
+/* top-level dependencies (begin JASBasicBank) */
+// outer dependency: JASInstParam
+// outer dependency: JKRHeap
+// outer dependency: JASInst
+/* top-level dependencies (end JASBasicBank) */
+struct JASBasicBank {
+	// JASInstParam
+	// JKRHeap
+	// JASInst
+	/* 80297D78 */ JASBasicBank();
+	/* 80297DA4 */ void newInstTable(char, JKRHeap*);
+	/* 80297E00 */ void getInstParam(s32, s32, s32, JASInstParam*) const;
+	/* 80297E68 */ void setInst(s32, JASInst*);
+	/* 80297E80 */ void getInst(s32) const;
+	/* 80297F0C */ ~JASBasicBank();
+	/* 80297F68 */ void getType() const;
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build JASInstParam (JASInstParam) True/True
+// build JASInst (JASInst) True/True
+// build JASBank (JASBank) False/False
+/* top-level dependencies (begin JASBank) */
+/* top-level dependencies (end JASBank) */
+struct JASBank {
+	/* 80297EC4 */ ~JASBank();
+};
+
+// build JASCalc (JASCalc) False/False
+/* top-level dependencies (begin JASCalc) */
+/* top-level dependencies (end JASCalc) */
+struct JASCalc {
+	/* 8028F480 */ void bzero(void*, u32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12JASBasicBankFv();
-extern "C" extern void newInstTable__12JASBasicBankFUcP7JKRHeap();
-extern "C" extern void getInstParam__12JASBasicBankCFiiiP12JASInstParam();
-extern "C" extern void setInst__12JASBasicBankFiP7JASInst();
-extern "C" extern void getInst__12JASBasicBankCFi();
-extern "C" extern void __dt__7JASBankFv();
-extern "C" extern void __dt__12JASBasicBankFv();
-extern "C" extern void getType__12JASBasicBankCFv();
+
+extern "C" void __ct__12JASBasicBankFv();
+extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap();
+extern "C" void getInstParam__12JASBasicBankCFiiiP12JASInstParam();
+extern "C" void setInst__12JASBasicBankFiP7JASInst();
+extern "C" void getInst__12JASBasicBankCFi();
+extern "C" void __dt__7JASBankFv();
+extern "C" void __dt__12JASBasicBankFv();
+extern "C" void getType__12JASBasicBankCFv();
 SECTION_DATA extern void*const __vt__12JASBasicBank[5];
 SECTION_DATA extern void*const __vt__7JASBank[5];
 
@@ -24,18 +83,23 @@ SECTION_DATA extern void*const __vt__7JASBank[5];
 // External References:
 // 
 
-extern "C" extern void bzero__7JASCalcFPvUl();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C76A8-803C76BC 0014+00 .data      __vt__12JASBasicBank                                         */
+/* 803C76A8-803C76BC 0014+00 rc=2 efc=0 .data      __vt__12JASBasicBank                                         */
 void* const __vt__12JASBasicBank[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -44,7 +108,7 @@ void* const __vt__12JASBasicBank[5] = {
 	(void*)getType__12JASBasicBankCFv,
 };
 
-/* 803C76BC-803C76D0 0014+00 .data      __vt__7JASBank                                               */
+/* 803C76BC-803C76D0 0014+00 rc=5 efc=2 .data      __vt__7JASBank                                               */
 void* const __vt__7JASBank[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -53,92 +117,91 @@ void* const __vt__7JASBank[5] = {
 	NULL,
 };
 
-/* 80297D78-80297DA4 002C+00 .text      __ct__12JASBasicBankFv                                       */
+/* 80297D78-80297DA4 002C+00 rc=2 efc=2 .text      __ct__12JASBasicBankFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12JASBasicBankFv) {
+asm JASBasicBank::JASBasicBank() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/__ct__12JASBasicBankFv.s"
 }
 #pragma pop
 
 
-/* 80297DA4-80297E00 005C+00 .text      newInstTable__12JASBasicBankFUcP7JKRHeap                     */
+/* 80297DA4-80297E00 005C+00 rc=2 efc=2 .text      newInstTable__12JASBasicBankFUcP7JKRHeap                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newInstTable__12JASBasicBankFUcP7JKRHeap) {
+asm void JASBasicBank::newInstTable(char field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/newInstTable__12JASBasicBankFUcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 80297E00-80297E68 0068+00 .text      getInstParam__12JASBasicBankCFiiiP12JASInstParam             */
+/* 80297E00-80297E68 0068+00 rc=1 efc=0 .text      getInstParam__12JASBasicBankCFiiiP12JASInstParam             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getInstParam__12JASBasicBankCFiiiP12JASInstParam) {
+asm void JASBasicBank::getInstParam(s32 field_0, s32 field_1, s32 field_2, JASInstParam* field_3) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/getInstParam__12JASBasicBankCFiiiP12JASInstParam.s"
 }
 #pragma pop
 
 
-/* 80297E68-80297E80 0018+00 .text      setInst__12JASBasicBankFiP7JASInst                           */
+/* 80297E68-80297E80 0018+00 rc=2 efc=2 .text      setInst__12JASBasicBankFiP7JASInst                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInst__12JASBasicBankFiP7JASInst) {
+asm void JASBasicBank::setInst(s32 field_0, JASInst* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/setInst__12JASBasicBankFiP7JASInst.s"
 }
 #pragma pop
 
 
-/* 80297E80-80297EC4 0044+00 .text      getInst__12JASBasicBankCFi                                   */
+/* 80297E80-80297EC4 0044+00 rc=2 efc=1 .text      getInst__12JASBasicBankCFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getInst__12JASBasicBankCFi) {
+asm void JASBasicBank::getInst(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/getInst__12JASBasicBankCFi.s"
 }
 #pragma pop
 
 
-/* 80297EC4-80297F0C 0048+00 .text      __dt__7JASBankFv                                             */
+/* 80297EC4-80297F0C 0048+00 rc=1 efc=0 .text      __dt__7JASBankFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7JASBankFv) {
+asm JASBank::~JASBank() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/__dt__7JASBankFv.s"
 }
 #pragma pop
 
 
-/* 80297F0C-80297F68 005C+00 .text      __dt__12JASBasicBankFv                                       */
+/* 80297F0C-80297F68 005C+00 rc=1 efc=0 .text      __dt__12JASBasicBankFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12JASBasicBankFv) {
+asm JASBasicBank::~JASBasicBank() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/__dt__12JASBasicBankFv.s"
 }
 #pragma pop
 
 
-/* 80297F68-80297F74 000C+00 .text      getType__12JASBasicBankCFv                                   */
+/* 80297F68-80297F74 000C+00 rc=1 efc=0 .text      getType__12JASBasicBankCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__12JASBasicBankCFv) {
+asm void JASBasicBank::getType() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/getType__12JASBasicBankCFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

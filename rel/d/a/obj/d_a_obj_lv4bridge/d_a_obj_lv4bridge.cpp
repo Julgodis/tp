@@ -6,36 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv4Brg_c;
+
+struct daObjLv4Brg_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void mode_init_wait();
+	void mode_wait();
+	void mode_init_move();
+	void mode_move();
+	void mode_init_dead();
+	void mode_dead();
+	void eventStart();
+	void Draw();
+	void Delete();
+	~daObjLv4Brg_c();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjLv4Brg_cFv();
-extern "C" extern void setBaseMtx__13daObjLv4Brg_cFv();
-extern "C" extern void Create__13daObjLv4Brg_cFv();
-extern "C" extern void CreateHeap__13daObjLv4Brg_cFv();
-extern "C" extern void create1st__13daObjLv4Brg_cFv();
-extern "C" extern void Execute__13daObjLv4Brg_cFPPA3_A4_f();
-extern "C" extern void action__13daObjLv4Brg_cFv();
-extern "C" extern void mode_init_wait__13daObjLv4Brg_cFv();
-extern "C" extern void mode_wait__13daObjLv4Brg_cFv();
-extern "C" extern void mode_init_move__13daObjLv4Brg_cFv();
-extern "C" extern void mode_move__13daObjLv4Brg_cFv();
-extern "C" extern void mode_init_dead__13daObjLv4Brg_cFv();
-extern "C" extern void mode_dead__13daObjLv4Brg_cFv();
-extern "C" extern void eventStart__13daObjLv4Brg_cFv();
-extern "C" extern void Draw__13daObjLv4Brg_cFv();
-extern "C" extern void Delete__13daObjLv4Brg_cFv();
-extern "C" extern void daObjLv4Brg_create1st__FP13daObjLv4Brg_c();
-extern "C" extern void daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c();
-extern "C" extern void daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c();
-extern "C" extern void daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__13daObjLv4Brg_cFv();
-extern "C" extern void func_80C63158();
-extern "C" extern void func_80C63160();
+extern "C" void Execute__13daObjLv4Brg_cFPPA3_A4_f();
+void daObjLv4Brg_create1st(daObjLv4Brg_c*);
+void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c*);
+void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c*);
+void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c*);
+extern "C" void func_80C63158();
+extern "C" void func_80C63160();
+
+extern "C" void initBaseMtx__13daObjLv4Brg_cFv();
+extern "C" void setBaseMtx__13daObjLv4Brg_cFv();
+extern "C" void Create__13daObjLv4Brg_cFv();
+extern "C" void CreateHeap__13daObjLv4Brg_cFv();
+extern "C" void create1st__13daObjLv4Brg_cFv();
+extern "C" void Execute__13daObjLv4Brg_cFPPA3_A4_f();
+extern "C" void action__13daObjLv4Brg_cFv();
+extern "C" void mode_init_wait__13daObjLv4Brg_cFv();
+extern "C" void mode_wait__13daObjLv4Brg_cFv();
+extern "C" void mode_init_move__13daObjLv4Brg_cFv();
+extern "C" void mode_move__13daObjLv4Brg_cFv();
+extern "C" void mode_init_dead__13daObjLv4Brg_cFv();
+extern "C" void mode_dead__13daObjLv4Brg_cFv();
+extern "C" void eventStart__13daObjLv4Brg_cFv();
+extern "C" void Draw__13daObjLv4Brg_cFv();
+extern "C" void Delete__13daObjLv4Brg_cFv();
+extern "C" void daObjLv4Brg_create1st__FP13daObjLv4Brg_c();
+extern "C" void daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c();
+extern "C" void daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c();
+extern "C" void daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__13daObjLv4Brg_cFv();
+extern "C" void func_80C63158();
+extern "C" void func_80C63160();
 SECTION_RODATA extern const u8 lit_3653[4];
 SECTION_RODATA extern const u32 lit_3654;
 SECTION_RODATA extern const u32 lit_3655;
@@ -62,7 +102,9 @@ SECTION_DATA extern void*const __vt__13daObjLv4Brg_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -72,7 +114,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/initBaseMtx__13daObjLv4Brg_cFv.s"
 }
@@ -83,7 +125,7 @@ ASM_FUNCTION(initBaseMtx__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/setBaseMtx__13daObjLv4Brg_cFv.s"
 }
@@ -94,7 +136,7 @@ ASM_FUNCTION(setBaseMtx__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/Create__13daObjLv4Brg_cFv.s"
 }
@@ -105,7 +147,7 @@ ASM_FUNCTION(Create__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/CreateHeap__13daObjLv4Brg_cFv.s"
 }
@@ -116,7 +158,7 @@ ASM_FUNCTION(CreateHeap__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/create1st__13daObjLv4Brg_cFv.s"
 }
@@ -127,7 +169,7 @@ ASM_FUNCTION(create1st__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjLv4Brg_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjLv4Brg_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/Execute__13daObjLv4Brg_cFPPA3_A4_f.s"
 }
@@ -138,7 +180,7 @@ ASM_FUNCTION(Execute__13daObjLv4Brg_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/action__13daObjLv4Brg_cFv.s"
 }
@@ -149,7 +191,7 @@ ASM_FUNCTION(action__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_init_wait__13daObjLv4Brg_cFv.s"
 }
@@ -160,7 +202,7 @@ ASM_FUNCTION(mode_init_wait__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_wait__13daObjLv4Brg_cFv.s"
 }
@@ -171,7 +213,7 @@ ASM_FUNCTION(mode_wait__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_move__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::mode_init_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_init_move__13daObjLv4Brg_cFv.s"
 }
@@ -182,7 +224,7 @@ ASM_FUNCTION(mode_init_move__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_move__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::mode_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_move__13daObjLv4Brg_cFv.s"
 }
@@ -193,7 +235,7 @@ ASM_FUNCTION(mode_move__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dead__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::mode_init_dead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_init_dead__13daObjLv4Brg_cFv.s"
 }
@@ -201,21 +243,16 @@ ASM_FUNCTION(mode_init_dead__13daObjLv4Brg_cFv) {
 
 
 /* 80C62E30-80C62E34 0004+00 .text      mode_dead__13daObjLv4Brg_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_dead__13daObjLv4Brg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_dead__13daObjLv4Brg_cFv.s"
+void daObjLv4Brg_c::mode_dead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C62E34-80C62EA0 006C+00 .text      eventStart__13daObjLv4Brg_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventStart__13daObjLv4Brg_cFv.s"
 }
@@ -226,7 +263,7 @@ ASM_FUNCTION(eventStart__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/Draw__13daObjLv4Brg_cFv.s"
 }
@@ -237,7 +274,7 @@ ASM_FUNCTION(Draw__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjLv4Brg_cFv) {
+asm void daObjLv4Brg_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/Delete__13daObjLv4Brg_cFv.s"
 }
@@ -248,7 +285,7 @@ ASM_FUNCTION(Delete__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Brg_create1st__FP13daObjLv4Brg_c) {
+asm void daObjLv4Brg_create1st(daObjLv4Brg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_create1st__FP13daObjLv4Brg_c.s"
 }
@@ -259,7 +296,7 @@ ASM_FUNCTION(daObjLv4Brg_create1st__FP13daObjLv4Brg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c) {
+asm void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c.s"
 }
@@ -270,7 +307,7 @@ ASM_FUNCTION(daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c) {
+asm void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c.s"
 }
@@ -281,7 +318,7 @@ ASM_FUNCTION(daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c) {
+asm void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c.s"
 }
@@ -292,7 +329,7 @@ ASM_FUNCTION(daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/__dt__17dEvLib_callback_cFv.s"
 }
@@ -300,43 +337,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C630AC-80C630B4 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630B4-80C630BC 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630BC-80C630C4 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630C4-80C63158 0094+00 .text      __dt__13daObjLv4Brg_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObjLv4Brg_cFv) {
+asm daObjLv4Brg_c::~daObjLv4Brg_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/__dt__13daObjLv4Brg_cFv.s"
 }
@@ -347,7 +369,7 @@ ASM_FUNCTION(__dt__13daObjLv4Brg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C63158) {
+extern "C" asm void func_80C63158() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/func_80C63158.s"
 }
@@ -358,7 +380,7 @@ ASM_FUNCTION(func_80C63158) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C63160) {
+extern "C" asm void func_80C63160() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/func_80C63160.s"
 }

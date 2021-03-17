@@ -6,35 +6,88 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct mDoExt_McaMorfSO;
+struct daE_MD_c;
+
+struct daE_MD_c {
+	void initCcCylinder();
+	void setCcCylinder(f32);
+	void SetAnm(mDoExt_McaMorfSO*, s32, s32, f32, f32);
+	void At_Check();
+	void CheckHit();
+	void WaitAction();
+	void HalfBreakAction();
+	void VibAction();
+	void DummyAction();
+	void RealAction();
+	void Action();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct mDoExt_McaMorfSO {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initCcCylinder__8daE_MD_cFv();
-extern "C" extern void setCcCylinder__8daE_MD_cFf();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_MD_Create__FP10fopAc_ac_c();
-extern "C" extern void SetAnm__8daE_MD_cFP16mDoExt_McaMorfSOiiff();
-extern "C" extern void daE_MD_Delete__FP8daE_MD_c();
-extern "C" extern void At_Check__8daE_MD_cFv();
-extern "C" extern void CheckHit__8daE_MD_cFv();
-extern "C" extern void WaitAction__8daE_MD_cFv();
-extern "C" extern void HalfBreakAction__8daE_MD_cFv();
-extern "C" extern void VibAction__8daE_MD_cFv();
-extern "C" extern void DummyAction__8daE_MD_cFv();
-extern "C" extern void RealAction__8daE_MD_cFv();
-extern "C" extern void Action__8daE_MD_cFv();
-extern "C" extern void Execute__8daE_MD_cFv();
-extern "C" extern void Delete__8daE_MD_cFv();
-extern "C" extern void setBaseMtx__8daE_MD_cFv();
-extern "C" extern void daE_MD_Draw__FP8daE_MD_c();
-extern "C" extern void daE_MD_Execute__FP8daE_MD_c();
-extern "C" extern void create__8daE_MD_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daE_MD_IsDelete__FP8daE_MD_c();
-extern "C" extern void func_8070A4D4();
-extern "C" extern void func_8070A4DC();
+void useHeapInit(fopAc_ac_c*);
+void daE_MD_Create(fopAc_ac_c*);
+void daE_MD_Delete(daE_MD_c*);
+void daE_MD_Draw(daE_MD_c*);
+void daE_MD_Execute(daE_MD_c*);
+bool daE_MD_IsDelete(daE_MD_c*);
+extern "C" void func_8070A4D4();
+extern "C" void func_8070A4DC();
+
+extern "C" void initCcCylinder__8daE_MD_cFv();
+extern "C" void setCcCylinder__8daE_MD_cFf();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_MD_Create__FP10fopAc_ac_c();
+extern "C" void SetAnm__8daE_MD_cFP16mDoExt_McaMorfSOiiff();
+extern "C" void daE_MD_Delete__FP8daE_MD_c();
+extern "C" void At_Check__8daE_MD_cFv();
+extern "C" void CheckHit__8daE_MD_cFv();
+extern "C" void WaitAction__8daE_MD_cFv();
+extern "C" void HalfBreakAction__8daE_MD_cFv();
+extern "C" void VibAction__8daE_MD_cFv();
+extern "C" void DummyAction__8daE_MD_cFv();
+extern "C" void RealAction__8daE_MD_cFv();
+extern "C" void Action__8daE_MD_cFv();
+extern "C" void Execute__8daE_MD_cFv();
+extern "C" void Delete__8daE_MD_cFv();
+extern "C" void setBaseMtx__8daE_MD_cFv();
+extern "C" void daE_MD_Draw__FP8daE_MD_c();
+extern "C" void daE_MD_Execute__FP8daE_MD_c();
+extern "C" void create__8daE_MD_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" bool daE_MD_IsDelete__FP8daE_MD_c();
+extern "C" void func_8070A4D4();
+extern "C" void func_8070A4DC();
 SECTION_RODATA extern const u8 data_8070A4EC[68];
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u32 lit_3858;
@@ -62,7 +115,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -72,7 +127,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__8daE_MD_cFv) {
+asm void daE_MD_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/initCcCylinder__8daE_MD_cFv.s"
 }
@@ -83,7 +138,7 @@ ASM_FUNCTION(initCcCylinder__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__8daE_MD_cFf) {
+asm void daE_MD_c::setCcCylinder(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/setCcCylinder__8daE_MD_cFf.s"
 }
@@ -94,7 +149,7 @@ ASM_FUNCTION(setCcCylinder__8daE_MD_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -105,7 +160,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MD_Create__FP10fopAc_ac_c) {
+asm void daE_MD_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_Create__FP10fopAc_ac_c.s"
 }
@@ -116,7 +171,7 @@ ASM_FUNCTION(daE_MD_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetAnm__8daE_MD_cFP16mDoExt_McaMorfSOiiff) {
+asm void daE_MD_c::SetAnm(mDoExt_McaMorfSO* field_0, s32 field_1, s32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/SetAnm__8daE_MD_cFP16mDoExt_McaMorfSOiiff.s"
 }
@@ -127,7 +182,7 @@ ASM_FUNCTION(SetAnm__8daE_MD_cFP16mDoExt_McaMorfSOiiff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MD_Delete__FP8daE_MD_c) {
+asm void daE_MD_Delete(daE_MD_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_Delete__FP8daE_MD_c.s"
 }
@@ -138,7 +193,7 @@ ASM_FUNCTION(daE_MD_Delete__FP8daE_MD_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(At_Check__8daE_MD_cFv) {
+asm void daE_MD_c::At_Check() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/At_Check__8daE_MD_cFv.s"
 }
@@ -149,7 +204,7 @@ ASM_FUNCTION(At_Check__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckHit__8daE_MD_cFv) {
+asm void daE_MD_c::CheckHit() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/CheckHit__8daE_MD_cFv.s"
 }
@@ -160,7 +215,7 @@ ASM_FUNCTION(CheckHit__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__8daE_MD_cFv) {
+asm void daE_MD_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/WaitAction__8daE_MD_cFv.s"
 }
@@ -171,7 +226,7 @@ ASM_FUNCTION(WaitAction__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HalfBreakAction__8daE_MD_cFv) {
+asm void daE_MD_c::HalfBreakAction() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/HalfBreakAction__8daE_MD_cFv.s"
 }
@@ -182,7 +237,7 @@ ASM_FUNCTION(HalfBreakAction__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(VibAction__8daE_MD_cFv) {
+asm void daE_MD_c::VibAction() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/VibAction__8daE_MD_cFv.s"
 }
@@ -193,7 +248,7 @@ ASM_FUNCTION(VibAction__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DummyAction__8daE_MD_cFv) {
+asm void daE_MD_c::DummyAction() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/DummyAction__8daE_MD_cFv.s"
 }
@@ -204,7 +259,7 @@ ASM_FUNCTION(DummyAction__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(RealAction__8daE_MD_cFv) {
+asm void daE_MD_c::RealAction() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/RealAction__8daE_MD_cFv.s"
 }
@@ -215,7 +270,7 @@ ASM_FUNCTION(RealAction__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__8daE_MD_cFv) {
+asm void daE_MD_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/Action__8daE_MD_cFv.s"
 }
@@ -226,7 +281,7 @@ ASM_FUNCTION(Action__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__8daE_MD_cFv) {
+asm void daE_MD_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/Execute__8daE_MD_cFv.s"
 }
@@ -237,7 +292,7 @@ ASM_FUNCTION(Execute__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__8daE_MD_cFv) {
+asm void daE_MD_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/Delete__8daE_MD_cFv.s"
 }
@@ -248,7 +303,7 @@ ASM_FUNCTION(Delete__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__8daE_MD_cFv) {
+asm void daE_MD_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/setBaseMtx__8daE_MD_cFv.s"
 }
@@ -259,7 +314,7 @@ ASM_FUNCTION(setBaseMtx__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MD_Draw__FP8daE_MD_c) {
+asm void daE_MD_Draw(daE_MD_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_Draw__FP8daE_MD_c.s"
 }
@@ -270,7 +325,7 @@ ASM_FUNCTION(daE_MD_Draw__FP8daE_MD_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MD_Execute__FP8daE_MD_c) {
+asm void daE_MD_Execute(daE_MD_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_Execute__FP8daE_MD_c.s"
 }
@@ -281,7 +336,7 @@ ASM_FUNCTION(daE_MD_Execute__FP8daE_MD_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daE_MD_cFv) {
+asm void daE_MD_c::create() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/create__8daE_MD_cFv.s"
 }
@@ -292,7 +347,7 @@ ASM_FUNCTION(create__8daE_MD_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/__dt__8cM3dGCylFv.s"
 }
@@ -303,7 +358,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/__dt__8cM3dGAabFv.s"
 }
@@ -314,7 +369,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -322,21 +377,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 8070A4CC-8070A4D4 0008+00 .text      daE_MD_IsDelete__FP8daE_MD_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_MD_IsDelete__FP8daE_MD_c) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_IsDelete__FP8daE_MD_c.s"
+bool daE_MD_IsDelete(daE_MD_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8070A4D4-8070A4DC 0008+00 .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8070A4D4) {
+extern "C" asm void func_8070A4D4() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/func_8070A4D4.s"
 }
@@ -347,7 +397,7 @@ ASM_FUNCTION(func_8070A4D4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8070A4DC) {
+extern "C" asm void func_8070A4DC() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/func_8070A4DC.s"
 }

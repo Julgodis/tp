@@ -6,36 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct e_tk_class;
+struct fopAc_ac_c;
+
+struct daE_TK_HIO_c {
+	daE_TK_HIO_c();
+	~daE_TK_HIO_c();
+};
+
+struct e_tk_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_TK_HIO_cFv();
-extern "C" extern void anm_init__FP10e_tk_classifUcf();
-extern "C" extern void daE_TK_Draw__FP10e_tk_class();
-extern "C" extern void other_bg_check__FP10e_tk_classP10fopAc_ac_c();
-extern "C" extern void pl_y_check__FP10e_tk_class();
-extern "C" extern void pl_check__FP10e_tk_classfs();
-extern "C" extern void damage_check__FP10e_tk_class();
-extern "C" extern void way_bg_check__FP10e_tk_classf();
-extern "C" extern void e_tk_wait_0__FP10e_tk_class();
-extern "C" extern void e_tk_find__FP10e_tk_class();
-extern "C" extern void e_tk_attack__FP10e_tk_class();
-extern "C" extern void e_tk_pathswim__FP10e_tk_class();
-extern "C" extern void e_tk_s_damage__FP10e_tk_class();
-extern "C" extern void e_tk_damage__FP10e_tk_class();
-extern "C" extern void action__FP10e_tk_class();
-extern "C" extern void daE_TK_Execute__FP10e_tk_class();
-extern "C" extern void daE_TK_IsDelete__FP10e_tk_class();
-extern "C" extern void daE_TK_Delete__FP10e_tk_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_TK_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12daE_TK_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_tk_cpp();
-extern "C" extern void func_807BA248();
-extern "C" extern void func_807BA250();
+void anm_init(e_tk_class*, s32, f32, u8, f32);
+void daE_TK_Draw(e_tk_class*);
+void other_bg_check(e_tk_class*, fopAc_ac_c*);
+void pl_y_check(e_tk_class*);
+extern "C" void pl_check__FP10e_tk_classfs();
+void damage_check(e_tk_class*);
+void way_bg_check(e_tk_class*, f32);
+void e_tk_wait_0(e_tk_class*);
+void e_tk_find(e_tk_class*);
+void e_tk_attack(e_tk_class*);
+void e_tk_pathswim(e_tk_class*);
+void e_tk_s_damage(e_tk_class*);
+void e_tk_damage(e_tk_class*);
+void action(e_tk_class*);
+void daE_TK_Execute(e_tk_class*);
+bool daE_TK_IsDelete(e_tk_class*);
+void daE_TK_Delete(e_tk_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_TK_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_tk_cpp();
+extern "C" void func_807BA248();
+extern "C" void func_807BA250();
+
+extern "C" void __ct__12daE_TK_HIO_cFv();
+extern "C" void anm_init__FP10e_tk_classifUcf();
+extern "C" void daE_TK_Draw__FP10e_tk_class();
+extern "C" void other_bg_check__FP10e_tk_classP10fopAc_ac_c();
+extern "C" void pl_y_check__FP10e_tk_class();
+extern "C" void pl_check__FP10e_tk_classfs();
+extern "C" void damage_check__FP10e_tk_class();
+extern "C" void way_bg_check__FP10e_tk_classf();
+extern "C" void e_tk_wait_0__FP10e_tk_class();
+extern "C" void e_tk_find__FP10e_tk_class();
+extern "C" void e_tk_attack__FP10e_tk_class();
+extern "C" void e_tk_pathswim__FP10e_tk_class();
+extern "C" void e_tk_s_damage__FP10e_tk_class();
+extern "C" void e_tk_damage__FP10e_tk_class();
+extern "C" void action__FP10e_tk_class();
+extern "C" void daE_TK_Execute__FP10e_tk_class();
+extern "C" bool daE_TK_IsDelete__FP10e_tk_class();
+extern "C" void daE_TK_Delete__FP10e_tk_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_TK_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12daE_TK_HIO_cFv();
+extern "C" void __sinit_d_a_e_tk_cpp();
+extern "C" void func_807BA248();
+extern "C" void func_807BA250();
 SECTION_RODATA extern const u32 lit_3762;
 SECTION_RODATA extern const u32 lit_3763;
 SECTION_RODATA extern const u32 lit_3764;
@@ -87,8 +140,11 @@ SECTION_BSS extern u8 l_HIO[28];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -98,7 +154,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_TK_HIO_cFv) {
+asm daE_TK_HIO_c::daE_TK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__ct__12daE_TK_HIO_cFv.s"
 }
@@ -109,7 +165,7 @@ ASM_FUNCTION(__ct__12daE_TK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10e_tk_classifUcf) {
+asm void anm_init(e_tk_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/anm_init__FP10e_tk_classifUcf.s"
 }
@@ -120,7 +176,7 @@ ASM_FUNCTION(anm_init__FP10e_tk_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_Draw__FP10e_tk_class) {
+asm void daE_TK_Draw(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_Draw__FP10e_tk_class.s"
 }
@@ -131,7 +187,7 @@ ASM_FUNCTION(daE_TK_Draw__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(other_bg_check__FP10e_tk_classP10fopAc_ac_c) {
+asm void other_bg_check(e_tk_class* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/other_bg_check__FP10e_tk_classP10fopAc_ac_c.s"
 }
@@ -142,7 +198,7 @@ ASM_FUNCTION(other_bg_check__FP10e_tk_classP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_y_check__FP10e_tk_class) {
+asm void pl_y_check(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/pl_y_check__FP10e_tk_class.s"
 }
@@ -153,7 +209,7 @@ ASM_FUNCTION(pl_y_check__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_check__FP10e_tk_classfs) {
+extern "C" asm void pl_check__FP10e_tk_classfs() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/pl_check__FP10e_tk_classfs.s"
 }
@@ -164,7 +220,7 @@ ASM_FUNCTION(pl_check__FP10e_tk_classfs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10e_tk_class) {
+asm void damage_check(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/damage_check__FP10e_tk_class.s"
 }
@@ -175,7 +231,7 @@ ASM_FUNCTION(damage_check__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP10e_tk_classf) {
+asm void way_bg_check(e_tk_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/way_bg_check__FP10e_tk_classf.s"
 }
@@ -186,7 +242,7 @@ ASM_FUNCTION(way_bg_check__FP10e_tk_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_wait_0__FP10e_tk_class) {
+asm void e_tk_wait_0(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_wait_0__FP10e_tk_class.s"
 }
@@ -197,7 +253,7 @@ ASM_FUNCTION(e_tk_wait_0__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_find__FP10e_tk_class) {
+asm void e_tk_find(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_find__FP10e_tk_class.s"
 }
@@ -208,7 +264,7 @@ ASM_FUNCTION(e_tk_find__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_attack__FP10e_tk_class) {
+asm void e_tk_attack(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_attack__FP10e_tk_class.s"
 }
@@ -219,7 +275,7 @@ ASM_FUNCTION(e_tk_attack__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_pathswim__FP10e_tk_class) {
+asm void e_tk_pathswim(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_pathswim__FP10e_tk_class.s"
 }
@@ -230,7 +286,7 @@ ASM_FUNCTION(e_tk_pathswim__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_s_damage__FP10e_tk_class) {
+asm void e_tk_s_damage(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_s_damage__FP10e_tk_class.s"
 }
@@ -241,7 +297,7 @@ ASM_FUNCTION(e_tk_s_damage__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_tk_damage__FP10e_tk_class) {
+asm void e_tk_damage(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/e_tk_damage__FP10e_tk_class.s"
 }
@@ -252,7 +308,7 @@ ASM_FUNCTION(e_tk_damage__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10e_tk_class) {
+asm void action(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/action__FP10e_tk_class.s"
 }
@@ -263,7 +319,7 @@ ASM_FUNCTION(action__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_Execute__FP10e_tk_class) {
+asm void daE_TK_Execute(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_Execute__FP10e_tk_class.s"
 }
@@ -271,21 +327,16 @@ ASM_FUNCTION(daE_TK_Execute__FP10e_tk_class) {
 
 
 /* 807B9C50-807B9C58 0008+00 .text      daE_TK_IsDelete__FP10e_tk_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_IsDelete__FP10e_tk_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_IsDelete__FP10e_tk_class.s"
+bool daE_TK_IsDelete(e_tk_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807B9C58-807B9CC0 0068+00 .text      daE_TK_Delete__FP10e_tk_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_Delete__FP10e_tk_class) {
+asm void daE_TK_Delete(e_tk_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_Delete__FP10e_tk_class.s"
 }
@@ -296,7 +347,7 @@ ASM_FUNCTION(daE_TK_Delete__FP10e_tk_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -307,7 +358,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_TK_Create__FP10fopAc_ac_c) {
+asm void daE_TK_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_Create__FP10fopAc_ac_c.s"
 }
@@ -318,7 +369,7 @@ ASM_FUNCTION(daE_TK_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__dt__8cM3dGSphFv.s"
 }
@@ -329,7 +380,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__dt__8cM3dGAabFv.s"
 }
@@ -340,7 +391,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -351,7 +402,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_TK_HIO_cFv) {
+asm daE_TK_HIO_c::~daE_TK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__dt__12daE_TK_HIO_cFv.s"
 }
@@ -362,7 +413,7 @@ ASM_FUNCTION(__dt__12daE_TK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_tk_cpp) {
+extern "C" asm void __sinit_d_a_e_tk_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/__sinit_d_a_e_tk_cpp.s"
 }
@@ -373,7 +424,7 @@ ASM_FUNCTION(__sinit_d_a_e_tk_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_807BA248) {
+extern "C" asm void func_807BA248() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/func_807BA248.s"
 }
@@ -384,7 +435,7 @@ ASM_FUNCTION(func_807BA248) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_807BA250) {
+extern "C" asm void func_807BA250() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/func_807BA250.s"
 }

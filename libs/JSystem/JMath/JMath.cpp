@@ -6,14 +6,36 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Quaternion (Quaternion) False/False
+/* top-level dependencies (begin Quaternion) */
+/* top-level dependencies (end Quaternion) */
+struct Quaternion {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void JMAEulerToQuat__FsssP10Quaternion();
-extern "C" extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
-extern "C" extern void JMAFastVECNormalize__FPC3VecP3Vec();
-extern "C" extern void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
-extern "C" extern void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+void JMAEulerToQuat(s16, s16, s16, Quaternion*);
+void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*);
+void JMAFastVECNormalize(Vec const*, Vec*);
+void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32);
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+
+extern "C" void JMAEulerToQuat__FsssP10Quaternion();
+extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
+extern "C" void JMAFastVECNormalize__FPC3VecP3Vec();
+extern "C" void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
 SECTION_SDATA2 extern u8 JMath__lit_376[8];
 SECTION_SDATA2 extern f32 lit_411;
 
@@ -21,17 +43,18 @@ SECTION_SDATA2 extern f32 lit_411;
 // External References:
 // 
 
+
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
 // 
 
-/* 80339878-80339938 00C0+00 .text      JMAEulerToQuat__FsssP10Quaternion                            */
+/* 80339878-80339938 00C0+00 rc=11 efc=11 .text      JMAEulerToQuat__FsssP10Quaternion                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAEulerToQuat__FsssP10Quaternion) {
+asm void JMAEulerToQuat(s16 field_0, s16 field_1, s16 field_2, Quaternion* field_3) {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAEulerToQuat__FsssP10Quaternion.s"
 }
@@ -39,38 +62,38 @@ ASM_FUNCTION(JMAEulerToQuat__FsssP10Quaternion) {
 
 
 /* ############################################################################################## */
-/* 804564C8-804564D0 0008+00 .sdata2    @376                                                         */
+/* 804564C8-804564D0 0008+00 rc=1 efc=0 .sdata2    @376                                                         */
 u8 JMath__lit_376[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80339938-80339A30 00F8+00 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
+/* 80339938-80339A30 00F8+00 rc=5 efc=5 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion) {
+asm void JMAQuatLerp(Quaternion const* field_0, Quaternion const* field_1, f32 field_2, Quaternion* field_3) {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion.s"
 }
 #pragma pop
 
 
-/* 80339A30-80339A5C 002C+00 .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
+/* 80339A30-80339A5C 002C+00 rc=1 efc=1 .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAFastVECNormalize__FPC3VecP3Vec) {
+asm void JMAFastVECNormalize(Vec const* field_0, Vec* field_1) {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAFastVECNormalize__FPC3VecP3Vec.s"
 }
 #pragma pop
 
 
-/* 80339A5C-80339A84 0028+00 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
+/* 80339A5C-80339A84 0028+00 rc=1 efc=1 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAVECScaleAdd__FPC3VecPC3VecP3Vecf) {
+asm void JMAVECScaleAdd(Vec const* field_0, Vec const* field_1, Vec* field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAVECScaleAdd__FPC3VecPC3VecP3Vecf.s"
 }
@@ -78,19 +101,18 @@ ASM_FUNCTION(JMAVECScaleAdd__FPC3VecPC3VecP3Vecf) {
 
 
 /* ############################################################################################## */
-/* 804564D0-804564D8 0004+04 .sdata2    @411                                                         */
+/* 804564D0-804564D8 0004+04 rc=1 efc=0 .sdata2    @411                                                         */
 f32 lit_411 = 1.0f;
 /* padding 4 bytes */
 
-/* 80339A84-80339AE4 0060+00 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
+/* 80339A84-80339AE4 0060+00 rc=5 efc=5 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAMTXApplyScale__FPA4_CfPA4_ffff) {
+extern "C" asm void JMAMTXApplyScale__FPA4_CfPA4_ffff() {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAMTXApplyScale__FPA4_CfPA4_ffff.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

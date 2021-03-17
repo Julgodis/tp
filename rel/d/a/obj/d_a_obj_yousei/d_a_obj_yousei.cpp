@@ -6,44 +6,108 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjYOUSEI_c;
+
+struct daObjYOUSEI_c {
+	void InitCcSph();
+	void SetCcSph();
+	void SpeedSet();
+	void MoveAction();
+	void BinAction();
+	void LinkChk();
+	void WaitAction();
+	void LinkAction();
+	void LinkSearch();
+	void CareAction();
+	void CheckGround();
+	void CheckWater();
+	void Action();
+	void ObjHit();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct daPy_py_c {
+	void getHeadTopPos() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void InitCcSph__13daObjYOUSEI_cFv();
-extern "C" extern void SetCcSph__13daObjYOUSEI_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObjYOUSEI_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjYOUSEI_Delete__FP13daObjYOUSEI_c();
-extern "C" extern void SpeedSet__13daObjYOUSEI_cFv();
-extern "C" extern void MoveAction__13daObjYOUSEI_cFv();
-extern "C" extern void BinAction__13daObjYOUSEI_cFv();
-extern "C" extern void LinkChk__13daObjYOUSEI_cFv();
-extern "C" extern void WaitAction__13daObjYOUSEI_cFv();
-extern "C" extern void LinkAction__13daObjYOUSEI_cFv();
-extern "C" extern void LinkSearch__13daObjYOUSEI_cFv();
-extern "C" extern void WayBgCheck__13daObjYOUSEI_cFffs();
-extern "C" extern void CareAction__13daObjYOUSEI_cFv();
-extern "C" extern void CheckGround__13daObjYOUSEI_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void CheckWater__13daObjYOUSEI_cFv();
-extern "C" extern void Action__13daObjYOUSEI_cFv();
-extern "C" extern void ObjHit__13daObjYOUSEI_cFv();
-extern "C" extern void Execute__13daObjYOUSEI_cFv();
-extern "C" extern void Delete__13daObjYOUSEI_cFv();
-extern "C" extern void setBaseMtx__13daObjYOUSEI_cFv();
-extern "C" extern void daObjYOUSEI_Draw__FP13daObjYOUSEI_c();
-extern "C" extern void daObjYOUSEI_Execute__FP13daObjYOUSEI_c();
-extern "C" extern void create__13daObjYOUSEI_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c();
-extern "C" extern void func_804D15A4();
-extern "C" extern void func_804D15AC();
-extern "C" extern void func_804D15B4();
-extern "C" extern void func_804D15BC();
-extern "C" extern void func_804D15C4();
-extern "C" extern void getHeadTopPos__9daPy_py_cCFv();
+void useHeapInit(fopAc_ac_c*);
+void daObjYOUSEI_Create(fopAc_ac_c*);
+void daObjYOUSEI_Delete(daObjYOUSEI_c*);
+extern "C" void WayBgCheck__13daObjYOUSEI_cFffs();
+void daObjYOUSEI_Draw(daObjYOUSEI_c*);
+void daObjYOUSEI_Execute(daObjYOUSEI_c*);
+bool daObjYOUSEI_IsDelete(daObjYOUSEI_c*);
+extern "C" void func_804D15A4();
+extern "C" void func_804D15AC();
+extern "C" void func_804D15B4();
+extern "C" void func_804D15BC();
+extern "C" void func_804D15C4();
+
+extern "C" void InitCcSph__13daObjYOUSEI_cFv();
+extern "C" void SetCcSph__13daObjYOUSEI_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObjYOUSEI_Create__FP10fopAc_ac_c();
+extern "C" void daObjYOUSEI_Delete__FP13daObjYOUSEI_c();
+extern "C" void SpeedSet__13daObjYOUSEI_cFv();
+extern "C" void MoveAction__13daObjYOUSEI_cFv();
+extern "C" void BinAction__13daObjYOUSEI_cFv();
+extern "C" void LinkChk__13daObjYOUSEI_cFv();
+extern "C" void WaitAction__13daObjYOUSEI_cFv();
+extern "C" void LinkAction__13daObjYOUSEI_cFv();
+extern "C" void LinkSearch__13daObjYOUSEI_cFv();
+extern "C" void WayBgCheck__13daObjYOUSEI_cFffs();
+extern "C" void CareAction__13daObjYOUSEI_cFv();
+extern "C" void CheckGround__13daObjYOUSEI_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void CheckWater__13daObjYOUSEI_cFv();
+extern "C" void Action__13daObjYOUSEI_cFv();
+extern "C" void ObjHit__13daObjYOUSEI_cFv();
+extern "C" void Execute__13daObjYOUSEI_cFv();
+extern "C" void Delete__13daObjYOUSEI_cFv();
+extern "C" void setBaseMtx__13daObjYOUSEI_cFv();
+extern "C" void daObjYOUSEI_Draw__FP13daObjYOUSEI_c();
+extern "C" void daObjYOUSEI_Execute__FP13daObjYOUSEI_c();
+extern "C" void create__13daObjYOUSEI_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" bool daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c();
+extern "C" void func_804D15A4();
+extern "C" void func_804D15AC();
+extern "C" void func_804D15B4();
+extern "C" void func_804D15BC();
+extern "C" void func_804D15C4();
+extern "C" void getHeadTopPos__9daPy_py_cCFv();
 SECTION_RODATA extern const u8 data_804D15F0[64];
 SECTION_RODATA extern const u32 lit_3661;
 SECTION_RODATA extern const u32 lit_3680;
@@ -156,7 +220,9 @@ SECTION_BSS extern u8 data_804D1894[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -166,7 +232,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/InitCcSph__13daObjYOUSEI_cFv.s"
 }
@@ -177,7 +243,7 @@ ASM_FUNCTION(InitCcSph__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/SetCcSph__13daObjYOUSEI_cFv.s"
 }
@@ -188,7 +254,7 @@ ASM_FUNCTION(SetCcSph__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -199,7 +265,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYOUSEI_Create__FP10fopAc_ac_c) {
+asm void daObjYOUSEI_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_Create__FP10fopAc_ac_c.s"
 }
@@ -210,7 +276,7 @@ ASM_FUNCTION(daObjYOUSEI_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYOUSEI_Delete__FP13daObjYOUSEI_c) {
+asm void daObjYOUSEI_Delete(daObjYOUSEI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_Delete__FP13daObjYOUSEI_c.s"
 }
@@ -221,7 +287,7 @@ ASM_FUNCTION(daObjYOUSEI_Delete__FP13daObjYOUSEI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/SpeedSet__13daObjYOUSEI_cFv.s"
 }
@@ -232,7 +298,7 @@ ASM_FUNCTION(SpeedSet__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/MoveAction__13daObjYOUSEI_cFv.s"
 }
@@ -243,7 +309,7 @@ ASM_FUNCTION(MoveAction__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BinAction__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::BinAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/BinAction__13daObjYOUSEI_cFv.s"
 }
@@ -254,7 +320,7 @@ ASM_FUNCTION(BinAction__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LinkChk__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::LinkChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/LinkChk__13daObjYOUSEI_cFv.s"
 }
@@ -265,7 +331,7 @@ ASM_FUNCTION(LinkChk__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/WaitAction__13daObjYOUSEI_cFv.s"
 }
@@ -276,7 +342,7 @@ ASM_FUNCTION(WaitAction__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LinkAction__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::LinkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/LinkAction__13daObjYOUSEI_cFv.s"
 }
@@ -287,7 +353,7 @@ ASM_FUNCTION(LinkAction__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LinkSearch__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::LinkSearch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/LinkSearch__13daObjYOUSEI_cFv.s"
 }
@@ -298,7 +364,7 @@ ASM_FUNCTION(LinkSearch__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WayBgCheck__13daObjYOUSEI_cFffs) {
+extern "C" asm void WayBgCheck__13daObjYOUSEI_cFffs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/WayBgCheck__13daObjYOUSEI_cFffs.s"
 }
@@ -309,7 +375,7 @@ ASM_FUNCTION(WayBgCheck__13daObjYOUSEI_cFffs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CareAction__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::CareAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/CareAction__13daObjYOUSEI_cFv.s"
 }
@@ -320,7 +386,7 @@ ASM_FUNCTION(CareAction__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckGround__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::CheckGround() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/CheckGround__13daObjYOUSEI_cFv.s"
 }
@@ -331,7 +397,7 @@ ASM_FUNCTION(CheckGround__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -342,7 +408,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckWater__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::CheckWater() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/CheckWater__13daObjYOUSEI_cFv.s"
 }
@@ -353,7 +419,7 @@ ASM_FUNCTION(CheckWater__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/Action__13daObjYOUSEI_cFv.s"
 }
@@ -364,7 +430,7 @@ ASM_FUNCTION(Action__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/ObjHit__13daObjYOUSEI_cFv.s"
 }
@@ -375,7 +441,7 @@ ASM_FUNCTION(ObjHit__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/Execute__13daObjYOUSEI_cFv.s"
 }
@@ -386,7 +452,7 @@ ASM_FUNCTION(Execute__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/Delete__13daObjYOUSEI_cFv.s"
 }
@@ -397,7 +463,7 @@ ASM_FUNCTION(Delete__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/setBaseMtx__13daObjYOUSEI_cFv.s"
 }
@@ -408,7 +474,7 @@ ASM_FUNCTION(setBaseMtx__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYOUSEI_Draw__FP13daObjYOUSEI_c) {
+asm void daObjYOUSEI_Draw(daObjYOUSEI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_Draw__FP13daObjYOUSEI_c.s"
 }
@@ -419,7 +485,7 @@ ASM_FUNCTION(daObjYOUSEI_Draw__FP13daObjYOUSEI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYOUSEI_Execute__FP13daObjYOUSEI_c) {
+asm void daObjYOUSEI_Execute(daObjYOUSEI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_Execute__FP13daObjYOUSEI_c.s"
 }
@@ -430,7 +496,7 @@ ASM_FUNCTION(daObjYOUSEI_Execute__FP13daObjYOUSEI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjYOUSEI_cFv) {
+asm void daObjYOUSEI_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/create__13daObjYOUSEI_cFv.s"
 }
@@ -441,7 +507,7 @@ ASM_FUNCTION(create__13daObjYOUSEI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/__dt__8cM3dGSphFv.s"
 }
@@ -452,7 +518,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/__dt__8cM3dGAabFv.s"
 }
@@ -463,7 +529,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -471,21 +537,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 804D159C-804D15A4 0008+00 .text      daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c.s"
+bool daObjYOUSEI_IsDelete(daObjYOUSEI_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D15A4-804D15AC 0008+00 .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D15A4) {
+extern "C" asm void func_804D15A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/func_804D15A4.s"
 }
@@ -496,7 +557,7 @@ ASM_FUNCTION(func_804D15A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D15AC) {
+extern "C" asm void func_804D15AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/func_804D15AC.s"
 }
@@ -507,7 +568,7 @@ ASM_FUNCTION(func_804D15AC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D15B4) {
+extern "C" asm void func_804D15B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/func_804D15B4.s"
 }
@@ -518,7 +579,7 @@ ASM_FUNCTION(func_804D15B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D15BC) {
+extern "C" asm void func_804D15BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/func_804D15BC.s"
 }
@@ -529,7 +590,7 @@ ASM_FUNCTION(func_804D15BC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D15C4) {
+extern "C" asm void func_804D15C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/func_804D15C4.s"
 }
@@ -540,7 +601,7 @@ ASM_FUNCTION(func_804D15C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeadTopPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getHeadTopPos() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/getHeadTopPos__9daPy_py_cCFv.s"
 }

@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjBoard_c;
+
+struct daObjBoard_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool CreateHeap();
+	void create1st();
+	bool Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjBoard_cFv();
-extern "C" extern void setBaseMtx__12daObjBoard_cFv();
-extern "C" extern void Create__12daObjBoard_cFv();
-extern "C" extern void CreateHeap__12daObjBoard_cFv();
-extern "C" extern void create1st__12daObjBoard_cFv();
-extern "C" extern void Execute__12daObjBoard_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjBoard_cFv();
-extern "C" extern void Delete__12daObjBoard_cFv();
-extern "C" extern void daObjBoard_create1st__FP12daObjBoard_c();
-extern "C" extern void daObjBoard_MoveBGDelete__FP12daObjBoard_c();
-extern "C" extern void daObjBoard_MoveBGExecute__FP12daObjBoard_c();
-extern "C" extern void daObjBoard_MoveBGDraw__FP12daObjBoard_c();
+extern "C" void Execute__12daObjBoard_cFPPA3_A4_f();
+void daObjBoard_create1st(daObjBoard_c*);
+void daObjBoard_MoveBGDelete(daObjBoard_c*);
+void daObjBoard_MoveBGExecute(daObjBoard_c*);
+void daObjBoard_MoveBGDraw(daObjBoard_c*);
+
+extern "C" void initBaseMtx__12daObjBoard_cFv();
+extern "C" void setBaseMtx__12daObjBoard_cFv();
+extern "C" void Create__12daObjBoard_cFv();
+extern "C" bool CreateHeap__12daObjBoard_cFv();
+extern "C" void create1st__12daObjBoard_cFv();
+extern "C" void Execute__12daObjBoard_cFPPA3_A4_f();
+extern "C" bool Draw__12daObjBoard_cFv();
+extern "C" void Delete__12daObjBoard_cFv();
+extern "C" void daObjBoard_create1st__FP12daObjBoard_c();
+extern "C" void daObjBoard_MoveBGDelete__FP12daObjBoard_c();
+extern "C" void daObjBoard_MoveBGExecute__FP12daObjBoard_c();
+extern "C" void daObjBoard_MoveBGDraw__FP12daObjBoard_c();
 SECTION_RODATA extern const u32 lit_3636;
 SECTION_RODATA extern const u8 stringBase0[75];
 SECTION_DATA extern u8 l_arcName[4];
@@ -35,7 +57,9 @@ SECTION_DATA extern void*const __vt__12daObjBoard_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +69,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjBoard_cFv) {
+asm void daObjBoard_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/initBaseMtx__12daObjBoard_cFv.s"
 }
@@ -56,7 +80,7 @@ ASM_FUNCTION(initBaseMtx__12daObjBoard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjBoard_cFv) {
+asm void daObjBoard_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/setBaseMtx__12daObjBoard_cFv.s"
 }
@@ -67,7 +91,7 @@ ASM_FUNCTION(setBaseMtx__12daObjBoard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjBoard_cFv) {
+asm void daObjBoard_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/Create__12daObjBoard_cFv.s"
 }
@@ -75,21 +99,16 @@ ASM_FUNCTION(Create__12daObjBoard_cFv) {
 
 
 /* 8057BA70-8057BA78 0008+00 .text      CreateHeap__12daObjBoard_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjBoard_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/CreateHeap__12daObjBoard_cFv.s"
+bool daObjBoard_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057BA78-8057BB74 00FC+00 .text      create1st__12daObjBoard_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjBoard_cFv) {
+asm void daObjBoard_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/create1st__12daObjBoard_cFv.s"
 }
@@ -100,7 +119,7 @@ ASM_FUNCTION(create1st__12daObjBoard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjBoard_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjBoard_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/Execute__12daObjBoard_cFPPA3_A4_f.s"
 }
@@ -108,21 +127,16 @@ ASM_FUNCTION(Execute__12daObjBoard_cFPPA3_A4_f) {
 
 
 /* 8057BCC0-8057BCC8 0008+00 .text      Draw__12daObjBoard_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjBoard_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/Draw__12daObjBoard_cFv.s"
+bool daObjBoard_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057BCC8-8057BCFC 0034+00 .text      Delete__12daObjBoard_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjBoard_cFv) {
+asm void daObjBoard_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/Delete__12daObjBoard_cFv.s"
 }
@@ -133,7 +147,7 @@ ASM_FUNCTION(Delete__12daObjBoard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBoard_create1st__FP12daObjBoard_c) {
+asm void daObjBoard_create1st(daObjBoard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_create1st__FP12daObjBoard_c.s"
 }
@@ -144,7 +158,7 @@ ASM_FUNCTION(daObjBoard_create1st__FP12daObjBoard_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBoard_MoveBGDelete__FP12daObjBoard_c) {
+asm void daObjBoard_MoveBGDelete(daObjBoard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGDelete__FP12daObjBoard_c.s"
 }
@@ -155,7 +169,7 @@ ASM_FUNCTION(daObjBoard_MoveBGDelete__FP12daObjBoard_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBoard_MoveBGExecute__FP12daObjBoard_c) {
+asm void daObjBoard_MoveBGExecute(daObjBoard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGExecute__FP12daObjBoard_c.s"
 }
@@ -166,7 +180,7 @@ ASM_FUNCTION(daObjBoard_MoveBGExecute__FP12daObjBoard_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBoard_MoveBGDraw__FP12daObjBoard_c) {
+asm void daObjBoard_MoveBGDraw(daObjBoard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGDraw__FP12daObjBoard_c.s"
 }

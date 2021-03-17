@@ -6,57 +6,222 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DModelLoader (J3DModelLoader) False/False
+// build J3DShapeBlock (J3DShapeBlock) False/False
+/* top-level dependencies (begin J3DShapeBlock) */
+/* top-level dependencies (end J3DShapeBlock) */
+struct J3DShapeBlock {
+};
+
+// build J3DDrawBlock (J3DDrawBlock) False/False
+/* top-level dependencies (begin J3DDrawBlock) */
+/* top-level dependencies (end J3DDrawBlock) */
+struct J3DDrawBlock {
+};
+
+// build J3DEnvelopeBlock (J3DEnvelopeBlock) False/False
+/* top-level dependencies (begin J3DEnvelopeBlock) */
+/* top-level dependencies (end J3DEnvelopeBlock) */
+struct J3DEnvelopeBlock {
+};
+
+// build J3DTextureBlock (J3DTextureBlock) False/False
+/* top-level dependencies (begin J3DTextureBlock) */
+/* top-level dependencies (end J3DTextureBlock) */
+struct J3DTextureBlock {
+};
+
+// build J3DMaterialDLBlock (J3DMaterialDLBlock) False/False
+/* top-level dependencies (begin J3DMaterialDLBlock) */
+/* top-level dependencies (end J3DMaterialDLBlock) */
+struct J3DMaterialDLBlock {
+};
+
+// build J3DMaterialBlock (J3DMaterialBlock) False/False
+/* top-level dependencies (begin J3DMaterialBlock) */
+/* top-level dependencies (end J3DMaterialBlock) */
+struct J3DMaterialBlock {
+};
+
+// build J3DModelInfoBlock (J3DModelInfoBlock) False/False
+/* top-level dependencies (begin J3DModelInfoBlock) */
+/* top-level dependencies (end J3DModelInfoBlock) */
+struct J3DModelInfoBlock {
+};
+
+// build J3DJointBlock (J3DJointBlock) False/False
+/* top-level dependencies (begin J3DJointBlock) */
+/* top-level dependencies (end J3DJointBlock) */
+struct J3DJointBlock {
+};
+
+/* top-level dependencies (begin J3DModelLoader) */
+// outer dependency: J3DShapeBlock
+// outer dependency: J3DDrawBlock
+// outer dependency: J3DEnvelopeBlock
+// outer dependency: J3DTextureBlock
+// outer dependency: J3DMaterialDLBlock
+// outer dependency: J3DMaterialBlock
+// outer dependency: J3DModelInfoBlock
+// outer dependency: J3DJointBlock
+/* top-level dependencies (end J3DModelLoader) */
+struct J3DModelLoader {
+	// J3DShapeBlock
+	// J3DDrawBlock
+	// J3DEnvelopeBlock
+	// J3DTextureBlock
+	// J3DMaterialDLBlock
+	// J3DMaterialBlock
+	// J3DModelInfoBlock
+	// J3DJointBlock
+	/* 80336794 */ void countMaterialNum(void const*);
+	/* 803367D4 */ void calcLoadSize(void const*, u32);
+	/* 803369A0 */ void calcLoadMaterialTableSize(void const*);
+	/* 80336A98 */ void calcLoadBinaryDisplayListSize(void const*, u32);
+	/* 80336CD8 */ void calcSizeInformation(J3DModelInfoBlock const*, u32);
+	/* 80336D64 */ void calcSizeJoint(J3DJointBlock const*);
+	/* 80336D90 */ void calcSizeEnvelope(J3DEnvelopeBlock const*);
+	/* 80336DA0 */ void calcSizeDraw(J3DDrawBlock const*);
+	/* 80336EA0 */ void calcSizeShape(J3DShapeBlock const*, u32);
+	/* 80336F44 */ void calcSizeTexture(J3DTextureBlock const*);
+	/* 80336FF0 */ void calcSizeTextureTable(J3DTextureBlock const*);
+	/* 80337010 */ void calcSizePatchedMaterial(J3DMaterialBlock const*, u32);
+	/* 803370A0 */ void calcSizeMaterialDL(J3DMaterialDLBlock const*, u32);
+};
+
+// build J3DModelInfoBlock (J3DModelInfoBlock) True/True
+// build J3DJointBlock (J3DJointBlock) True/True
+// build J3DEnvelopeBlock (J3DEnvelopeBlock) True/True
+// build J3DDrawBlock (J3DDrawBlock) True/True
+// build J3DModelLoader_v26 (J3DModelLoader_v26) False/False
+// build J3DMaterialBlock (J3DMaterialBlock) True/True
+/* top-level dependencies (begin J3DModelLoader_v26) */
+// outer dependency: J3DMaterialBlock
+/* top-level dependencies (end J3DModelLoader_v26) */
+struct J3DModelLoader_v26 {
+	// J3DMaterialBlock
+	/* 80336DB4 */ void calcSizeMaterial(J3DMaterialBlock const*, u32);
+	/* 80336F60 */ void calcSizeMaterialTable(J3DMaterialBlock const*, u32);
+};
+
+// build J3DMaterialBlock (J3DMaterialBlock) True/True
+// build J3DShapeBlock (J3DShapeBlock) True/True
+// build J3DTextureBlock (J3DTextureBlock) True/True
+// build J3DMaterialDLBlock (J3DMaterialDLBlock) True/True
+// build J3DMaterialFactory (J3DMaterialFactory) False/False
+// build J3DMaterialDLBlock (J3DMaterialDLBlock) True/True
+// build J3DMaterialBlock (J3DMaterialBlock) True/True
+// build J3DMaterial (J3DMaterial) False/False
+/* top-level dependencies (begin J3DMaterial) */
+/* top-level dependencies (end J3DMaterial) */
+struct J3DMaterial {
+};
+
+// build J3DMaterialFactory (J3DMaterialFactory) True/False
+struct J3DMaterialFactory;
+/* top-level dependencies (begin J3DMaterialFactory) */
+// outer dependency: J3DMaterialDLBlock
+// outer dependency: J3DMaterialBlock
+// outer dependency: J3DMaterial
+// outer dependency: J3DMaterialFactory::MaterialType
+/* top-level dependencies (end J3DMaterialFactory) */
+struct J3DMaterialFactory {
+	// J3DMaterialDLBlock
+	// J3DMaterialBlock
+	// J3DMaterial
+	// J3DMaterialFactory::MaterialType
+	// build MaterialType (J3DMaterialFactory::MaterialType) False/False
+	/* dependencies (begin J3DMaterialFactory::MaterialType) */
+	/* dependencies (end J3DMaterialFactory::MaterialType) */
+	struct MaterialType {
+	};
+
+	/* 8032FFEC */ J3DMaterialFactory(J3DMaterialBlock const&);
+	/* 80330234 */ J3DMaterialFactory(J3DMaterialDLBlock const&);
+	/* 803302BC */ void countUniqueMaterials();
+	/* 80331A7C */ void calcSize(J3DMaterial*, J3DMaterialFactory::MaterialType, s32, u32) const;
+};
+
+// build J3DMaterial (J3DMaterial) True/True
+// build J3DShapeFactory (J3DShapeFactory) False/False
+// build J3DShapeBlock (J3DShapeBlock) True/True
+/* top-level dependencies (begin J3DShapeFactory) */
+// outer dependency: J3DShapeBlock
+/* top-level dependencies (end J3DShapeFactory) */
+struct J3DShapeFactory {
+	// J3DShapeBlock
+	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
+	/* 80337944 */ void calcSize(s32, u32);
+	/* 803379D8 */ void calcSizeVcdVatCmdBuffer(u32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void countMaterialNum__14J3DModelLoaderFPCv();
-extern "C" extern void calcLoadSize__14J3DModelLoaderFPCvUl();
-extern "C" extern void calcLoadMaterialTableSize__14J3DModelLoaderFPCv();
-extern "C" extern void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl();
-extern "C" extern void calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl();
-extern "C" extern void calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock();
-extern "C" extern void calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock();
-extern "C" extern void calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock();
-extern "C" extern void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
-extern "C" extern void calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl();
-extern "C" extern void calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock();
-extern "C" extern void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
-extern "C" extern void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock();
-extern "C" extern void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
-extern "C" extern void calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl();
+
+extern "C" void countMaterialNum__14J3DModelLoaderFPCv();
+extern "C" void calcLoadSize__14J3DModelLoaderFPCvUl();
+extern "C" void calcLoadMaterialTableSize__14J3DModelLoaderFPCv();
+extern "C" void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl();
+extern "C" void calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl();
+extern "C" void calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock();
+extern "C" void calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock();
+extern "C" void calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock();
+extern "C" void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl();
+extern "C" void calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock();
+extern "C" void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock();
+extern "C" void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" void calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl();
 SECTION_RODATA extern const u8 J3DModelLoaderCalcSize__stringBase0[24];
 
 // 
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
-extern "C" extern void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
-extern "C" extern void countUniqueMaterials__18J3DMaterialFactoryFv();
-extern "C" extern void calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
-extern "C" extern void func_8033674C();
-extern "C" extern void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
-extern "C" extern void calcSize__15J3DShapeFactoryFiUl();
-extern "C" extern void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+extern "C" void OSReport();
+extern "C" void func_8033674C();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void OSReport();
+extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
+extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
+extern "C" void countUniqueMaterials__18J3DMaterialFactoryFv();
+extern "C" void calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
+extern "C" void func_8033674C();
+extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+extern "C" void calcSize__15J3DShapeFactoryFiUl();
+extern "C" void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
-/* 80336794-803367D4 0040+00 .text      countMaterialNum__14J3DModelLoaderFPCv                       */
+/* 80336794-803367D4 0040+00 rc=3 efc=3 .text      countMaterialNum__14J3DModelLoaderFPCv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(countMaterialNum__14J3DModelLoaderFPCv) {
+asm void J3DModelLoader::countMaterialNum(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/countMaterialNum__14J3DModelLoaderFPCv.s"
 }
@@ -64,7 +229,7 @@ ASM_FUNCTION(countMaterialNum__14J3DModelLoaderFPCv) {
 
 
 /* ############################################################################################## */
-/* 803A20E8-803A2100 0014+04 .rodata    @stringBase0                                                 */
+/* 803A20E8-803A2100 0014+04 rc=3 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -73,158 +238,157 @@ SECTION_DEAD char* const stringBase_803A20E8 = "Unknown data block\n";
 SECTION_DEAD char* const pad_803A20FC = "\0\0\0";
 #pragma pop
 
-/* 803367D4-803369A0 01CC+00 .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
+/* 803367D4-803369A0 01CC+00 rc=3 efc=3 .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcLoadSize__14J3DModelLoaderFPCvUl) {
+asm void J3DModelLoader::calcLoadSize(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcLoadSize__14J3DModelLoaderFPCvUl.s"
 }
 #pragma pop
 
 
-/* 803369A0-80336A98 00F8+00 .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              */
+/* 803369A0-80336A98 00F8+00 rc=3 efc=3 .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcLoadMaterialTableSize__14J3DModelLoaderFPCv) {
+asm void J3DModelLoader::calcLoadMaterialTableSize(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcLoadMaterialTableSize__14J3DModelLoaderFPCv.s"
 }
 #pragma pop
 
 
-/* 80336A98-80336CD8 0240+00 .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        */
+/* 80336A98-80336CD8 0240+00 rc=3 efc=3 .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl) {
+asm void J3DModelLoader::calcLoadBinaryDisplayListSize(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl.s"
 }
 #pragma pop
 
 
-/* 80336CD8-80336D64 008C+00 .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl */
+/* 80336CD8-80336D64 008C+00 rc=2 efc=0 .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl) {
+asm void J3DModelLoader::calcSizeInformation(J3DModelInfoBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl.s"
 }
 #pragma pop
 
 
-/* 80336D64-80336D90 002C+00 .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            */
+/* 80336D64-80336D90 002C+00 rc=2 efc=0 .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock) {
+asm void J3DModelLoader::calcSizeJoint(J3DJointBlock const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock.s"
 }
 #pragma pop
 
 
-/* 80336D90-80336DA0 0010+00 .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      */
+/* 80336D90-80336DA0 0010+00 rc=2 efc=0 .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock) {
+asm void J3DModelLoader::calcSizeEnvelope(J3DEnvelopeBlock const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock.s"
 }
 #pragma pop
 
 
-/* 80336DA0-80336DB4 0014+00 .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              */
+/* 80336DA0-80336DB4 0014+00 rc=2 efc=0 .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock) {
+asm void J3DModelLoader::calcSizeDraw(J3DDrawBlock const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock.s"
 }
 #pragma pop
 
 
-/* 80336DB4-80336EA0 00EC+00 .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336DB4-80336EA0 00EC+00 rc=1 efc=1 .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl) {
+asm void J3DModelLoader_v26::calcSizeMaterial(J3DMaterialBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl.s"
 }
 #pragma pop
 
 
-/* 80336EA0-80336F44 00A4+00 .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          */
+/* 80336EA0-80336F44 00A4+00 rc=2 efc=0 .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl) {
+asm void J3DModelLoader::calcSizeShape(J3DShapeBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl.s"
 }
 #pragma pop
 
 
-/* 80336F44-80336F60 001C+00 .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        */
+/* 80336F44-80336F60 001C+00 rc=3 efc=0 .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock) {
+asm void J3DModelLoader::calcSizeTexture(J3DTextureBlock const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock.s"
 }
 #pragma pop
 
 
-/* 80336F60-80336FF0 0090+00 .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336F60-80336FF0 0090+00 rc=1 efc=1 .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl) {
+asm void J3DModelLoader_v26::calcSizeMaterialTable(J3DMaterialBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl.s"
 }
 #pragma pop
 
 
-/* 80336FF0-80337010 0020+00 .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   */
+/* 80336FF0-80337010 0020+00 rc=1 efc=0 .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock) {
+asm void J3DModelLoader::calcSizeTextureTable(J3DTextureBlock const* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock.s"
 }
 #pragma pop
 
 
-/* 80337010-803370A0 0090+00 .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
+/* 80337010-803370A0 0090+00 rc=1 efc=0 .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl) {
+asm void J3DModelLoader::calcSizePatchedMaterial(J3DMaterialBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl.s"
 }
 #pragma pop
 
 
-/* 803370A0-80337178 00D8+00 .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl */
+/* 803370A0-80337178 00D8+00 rc=1 efc=0 .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl) {
+asm void J3DModelLoader::calcSizeMaterialDL(J3DMaterialDLBlock const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoaderCalcSize/calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,41 +6,60 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JMessage (JMessage) False/False
+/* top-level dependencies (begin JMessage) */
+/* top-level dependencies (end JMessage) */
+struct JMessage {
+	// build locale (JMessage::locale) False/False
+	/* dependencies (begin JMessage::locale) */
+	/* dependencies (end JMessage::locale) */
+	struct locale {
+		/* 802A9528 */ void parseCharacter_ShiftJIS(char const**);
+		/* 802A958C */ void parseCharacter_UTF8(char const**);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
-extern "C" extern void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
+
+extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
+extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 802A9528-802A958C 0064+00 .text      parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc             */
+/* 802A9528-802A958C 0064+00 rc=1 efc=1 .text      parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc) {
+asm void JMessage::locale::parseCharacter_ShiftJIS(char const** field_0) {
 	nofralloc
 #include "asm/JSystem/JMessage/locale/parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc.s"
 }
 #pragma pop
 
 
-/* 802A958C-802A968C 0100+00 .text      parseCharacter_UTF8__Q28JMessage6localeFPPCc                 */
+/* 802A958C-802A968C 0100+00 rc=1 efc=1 .text      parseCharacter_UTF8__Q28JMessage6localeFPPCc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseCharacter_UTF8__Q28JMessage6localeFPPCc) {
+asm void JMessage::locale::parseCharacter_UTF8(char const** field_0) {
 	nofralloc
 #include "asm/JSystem/JMessage/locale/parseCharacter_UTF8__Q28JMessage6localeFPPCc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

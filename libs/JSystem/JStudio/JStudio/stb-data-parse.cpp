@@ -6,55 +6,153 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::stb::data::TParse_TSequence::TData
+// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
+// outer dependency: JStudio::stb::data::TParse_TParagraph_data::TData
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build stb (JStudio::stb) False/False
+	/* dependencies (begin JStudio::stb) */
+	/* dependencies (end JStudio::stb) */
+	struct stb {
+		// build data (JStudio::stb::data) False/False
+		/* dependencies (begin JStudio::stb::data) */
+		/* dependencies (end JStudio::stb::data) */
+		struct data {
+			// build TParse_TSequence (JStudio::stb::data::TParse_TSequence) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TSequence) */
+			// inner dependency: TParse_TSequence (JStudio::stb::data::TParse_TSequence::TData) True False (for JStudio::stb::data::TParse_TSequence)
+			/* dependencies (end JStudio::stb::data::TParse_TSequence) */
+			struct TParse_TSequence {
+				// JStudio::stb::data::TParse_TSequence::TData
+				// build TData (JStudio::stb::data::TParse_TSequence::TData) False/False
+				/* dependencies (begin JStudio::stb::data::TParse_TSequence::TData) */
+				/* dependencies (end JStudio::stb::data::TParse_TSequence::TData) */
+				struct TData {
+				};
+
+				/* 802899BC */ void getData(JStudio::stb::data::TParse_TSequence::TData*) const;
+			};
+
+			// build TParse_TParagraph (JStudio::stb::data::TParse_TParagraph) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TParagraph) */
+			// inner dependency: TParse_TParagraph (JStudio::stb::data::TParse_TParagraph::TData) True False (for JStudio::stb::data::TParse_TParagraph)
+			/* dependencies (end JStudio::stb::data::TParse_TParagraph) */
+			struct TParse_TParagraph {
+				// JStudio::stb::data::TParse_TParagraph::TData
+				// build TData (JStudio::stb::data::TParse_TParagraph::TData) False/False
+				/* dependencies (begin JStudio::stb::data::TParse_TParagraph::TData) */
+				/* dependencies (end JStudio::stb::data::TParse_TParagraph::TData) */
+				struct TData {
+				};
+
+				/* 80289A08 */ void getData(JStudio::stb::data::TParse_TParagraph::TData*) const;
+			};
+
+			// build TParse_TParagraph_data (JStudio::stb::data::TParse_TParagraph_data) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TParagraph_data) */
+			// inner dependency: TParse_TParagraph_data (JStudio::stb::data::TParse_TParagraph_data::TData) True False (for JStudio::stb::data::TParse_TParagraph_data)
+			/* dependencies (end JStudio::stb::data::TParse_TParagraph_data) */
+			struct TParse_TParagraph_data {
+				// JStudio::stb::data::TParse_TParagraph_data::TData
+				// build TData (JStudio::stb::data::TParse_TParagraph_data::TData) False/False
+				/* dependencies (begin JStudio::stb::data::TParse_TParagraph_data::TData) */
+				/* dependencies (end JStudio::stb::data::TParse_TParagraph_data::TData) */
+				struct TData {
+				};
+
+				/* 80289A80 */ void getData(JStudio::stb::data::TParse_TParagraph_data::TData*) const;
+			};
+
+		};
+
+	};
+
+};
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::binary::TEBit
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	// inner dependency: binary (JGadget::binary::TEBit) True False (for JGadget::binary)
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// JGadget::binary::TEBit
+		// build TEBit (JGadget::binary::TEBit) False/False
+		/* dependencies (begin JGadget::binary::TEBit) */
+		/* dependencies (end JGadget::binary::TEBit) */
+		struct TEBit {
+		};
+
+		/* 802DC864 */ void parseVariableUInt_16_32_following(void const*, u32*, u32*, JGadget::binary::TEBit*);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData();
-extern "C" extern void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData();
-extern "C" extern void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+
+extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData();
+extern "C" void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
 
 // 
 // External References:
 // 
 
-extern "C" extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
 SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 
 // 
 // Declarations:
 // 
 
-/* 802899BC-80289A08 004C+00 .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
+/* 802899BC-80289A08 004C+00 rc=1 efc=1 .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData) {
+asm void JStudio::stb::data::TParse_TSequence::getData(JStudio::stb::data::TParse_TSequence::TData* field_0) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_802899BC.s"
 }
 #pragma pop
 
 
-/* 80289A08-80289A80 0078+00 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
+/* 80289A08-80289A80 0078+00 rc=1 efc=1 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData) {
+asm void JStudio::stb::data::TParse_TParagraph::getData(JStudio::stb::data::TParse_TParagraph::TData* field_0) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_80289A08.s"
 }
 #pragma pop
 
 
-/* 80289A80-80289B00 0080+00 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+/* 80289A80-80289B00 0080+00 rc=3 efc=3 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData) {
+asm void JStudio::stb::data::TParse_TParagraph_data::getData(JStudio::stb::data::TParse_TParagraph_data::TData* field_0) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/stb-data-parse/func_80289A80.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

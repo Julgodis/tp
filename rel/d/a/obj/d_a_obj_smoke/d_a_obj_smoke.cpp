@@ -6,18 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSmoke_c;
+
+struct daObjSmoke_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjSmoke_cFv();
-extern "C" extern void setBaseMtx__12daObjSmoke_cFv();
-extern "C" extern void Create__12daObjSmoke_cFv();
-extern "C" extern void create__12daObjSmoke_cFv();
-extern "C" extern void execute__12daObjSmoke_cFv();
-extern "C" extern void _delete__12daObjSmoke_cFv();
-extern "C" extern void daObjSmoke_Execute__FP12daObjSmoke_c();
-extern "C" extern void daObjSmoke_Delete__FP12daObjSmoke_c();
-extern "C" extern void daObjSmoke_Create__FP10fopAc_ac_c();
+void daObjSmoke_Execute(daObjSmoke_c*);
+void daObjSmoke_Delete(daObjSmoke_c*);
+void daObjSmoke_Create(fopAc_ac_c*);
+
+extern "C" void initBaseMtx__12daObjSmoke_cFv();
+extern "C" void setBaseMtx__12daObjSmoke_cFv();
+extern "C" void Create__12daObjSmoke_cFv();
+extern "C" void create__12daObjSmoke_cFv();
+extern "C" void execute__12daObjSmoke_cFv();
+extern "C" void _delete__12daObjSmoke_cFv();
+extern "C" void daObjSmoke_Execute__FP12daObjSmoke_c();
+extern "C" void daObjSmoke_Delete__FP12daObjSmoke_c();
+extern "C" void daObjSmoke_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_DATA extern u8 l_daObjSmoke_Method[32];
 SECTION_DATA extern u8 g_profile_Obj_Smoke[48];
@@ -26,7 +49,9 @@ SECTION_DATA extern u8 g_profile_Obj_Smoke[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -36,7 +61,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/initBaseMtx__12daObjSmoke_cFv.s"
 }
@@ -47,7 +72,7 @@ ASM_FUNCTION(initBaseMtx__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/setBaseMtx__12daObjSmoke_cFv.s"
 }
@@ -58,7 +83,7 @@ ASM_FUNCTION(setBaseMtx__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/Create__12daObjSmoke_cFv.s"
 }
@@ -69,7 +94,7 @@ ASM_FUNCTION(Create__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/func_80CDCF9C.s"
 }
@@ -80,7 +105,7 @@ ASM_FUNCTION(create__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/execute__12daObjSmoke_cFv.s"
 }
@@ -91,7 +116,7 @@ ASM_FUNCTION(execute__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjSmoke_cFv) {
+asm void daObjSmoke_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/_delete__12daObjSmoke_cFv.s"
 }
@@ -102,7 +127,7 @@ ASM_FUNCTION(_delete__12daObjSmoke_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSmoke_Execute__FP12daObjSmoke_c) {
+asm void daObjSmoke_Execute(daObjSmoke_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/daObjSmoke_Execute__FP12daObjSmoke_c.s"
 }
@@ -113,7 +138,7 @@ ASM_FUNCTION(daObjSmoke_Execute__FP12daObjSmoke_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSmoke_Delete__FP12daObjSmoke_c) {
+asm void daObjSmoke_Delete(daObjSmoke_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/daObjSmoke_Delete__FP12daObjSmoke_c.s"
 }
@@ -124,7 +149,7 @@ ASM_FUNCTION(daObjSmoke_Delete__FP12daObjSmoke_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSmoke_Create__FP10fopAc_ac_c) {
+asm void daObjSmoke_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smoke/d_a_obj_smoke/daObjSmoke_Create__FP10fopAc_ac_c.s"
 }

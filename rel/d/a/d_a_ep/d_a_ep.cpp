@@ -6,40 +6,107 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct ep_hahen_s;
+struct ep_class;
+
+struct ep_class {
+	ep_class();
+};
+
+struct ep_hahen_s {
+	~ep_hahen_s();
+	ep_hahen_s();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void hahen_draw__FP8ep_class();
-extern "C" extern void move_calc__FP8ep_classP10ep_hahen_s();
-extern "C" extern void hahen_normal__FP8ep_classP10ep_hahen_s();
-extern "C" extern void hahen_water__FP8ep_classP10ep_hahen_s();
-extern "C" extern void hahen_carry__FP8ep_classP10ep_hahen_s();
-extern "C" extern void hahen_cast__FP8ep_classP10ep_hahen_s();
-extern "C" extern void hahen_move__FP8ep_class();
-extern "C" extern void daEp_Draw__FP8ep_class();
-extern "C" extern void ep_switch_event_end__FP8ep_class();
-extern "C" extern void ep_switch_event_begin__FP8ep_class();
-extern "C" extern void ep_switch_event_move__FP8ep_class();
-extern "C" extern void ep_move__FP8ep_class();
-extern "C" extern void daEp_set_mtx__FP8ep_class();
-extern "C" extern void daEp_Execute__FP8ep_class();
-extern "C" extern void daEp_IsDelete__FP8ep_class();
-extern "C" extern void daEp_Delete__FP8ep_class();
-extern "C" extern void daEp_CreateHeap__FP10fopAc_ac_c();
-extern "C" extern void daEp_CreateInit__FP10fopAc_ac_c();
-extern "C" extern void daEp_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__8ep_classFv();
-extern "C" extern void __dt__10ep_hahen_sFv();
-extern "C" extern void __ct__10ep_hahen_sFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_8046AFA4();
-extern "C" extern void func_8046AFAC();
-extern "C" extern void func_8046AFB4();
+void hahen_draw(ep_class*);
+void move_calc(ep_class*, ep_hahen_s*);
+void hahen_normal(ep_class*, ep_hahen_s*);
+void hahen_water(ep_class*, ep_hahen_s*);
+void hahen_carry(ep_class*, ep_hahen_s*);
+void hahen_cast(ep_class*, ep_hahen_s*);
+void hahen_move(ep_class*);
+void daEp_Draw(ep_class*);
+void ep_switch_event_end(ep_class*);
+void ep_switch_event_begin(ep_class*);
+void ep_switch_event_move(ep_class*);
+void ep_move(ep_class*);
+void daEp_set_mtx(ep_class*);
+void daEp_Execute(ep_class*);
+bool daEp_IsDelete(ep_class*);
+void daEp_Delete(ep_class*);
+void daEp_CreateHeap(fopAc_ac_c*);
+void daEp_CreateInit(fopAc_ac_c*);
+void daEp_Create(fopAc_ac_c*);
+extern "C" void func_8046AFA4();
+extern "C" void func_8046AFAC();
+extern "C" void func_8046AFB4();
+
+extern "C" void hahen_draw__FP8ep_class();
+extern "C" void move_calc__FP8ep_classP10ep_hahen_s();
+extern "C" void hahen_normal__FP8ep_classP10ep_hahen_s();
+extern "C" void hahen_water__FP8ep_classP10ep_hahen_s();
+extern "C" void hahen_carry__FP8ep_classP10ep_hahen_s();
+extern "C" void hahen_cast__FP8ep_classP10ep_hahen_s();
+extern "C" void hahen_move__FP8ep_class();
+extern "C" void daEp_Draw__FP8ep_class();
+extern "C" void ep_switch_event_end__FP8ep_class();
+extern "C" void ep_switch_event_begin__FP8ep_class();
+extern "C" void ep_switch_event_move__FP8ep_class();
+extern "C" void ep_move__FP8ep_class();
+extern "C" void daEp_set_mtx__FP8ep_class();
+extern "C" void daEp_Execute__FP8ep_class();
+extern "C" bool daEp_IsDelete__FP8ep_class();
+extern "C" void daEp_Delete__FP8ep_class();
+extern "C" void daEp_CreateHeap__FP10fopAc_ac_c();
+extern "C" void daEp_CreateInit__FP10fopAc_ac_c();
+extern "C" void daEp_Create__FP10fopAc_ac_c();
+extern "C" void __ct__8ep_classFv();
+extern "C" void __dt__10ep_hahen_sFv();
+extern "C" void __ct__10ep_hahen_sFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_8046AFA4();
+extern "C" void func_8046AFAC();
+extern "C" void func_8046AFB4();
 SECTION_RODATA extern const u32 lit_3681;
 SECTION_RODATA extern const u32 lit_3682;
 SECTION_RODATA extern const u8 lit_3683[4];
@@ -131,7 +198,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -141,7 +210,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_draw__FP8ep_class) {
+asm void hahen_draw(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_draw__FP8ep_class.s"
 }
@@ -152,7 +221,7 @@ ASM_FUNCTION(hahen_draw__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move_calc__FP8ep_classP10ep_hahen_s) {
+asm void move_calc(ep_class* field_0, ep_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/move_calc__FP8ep_classP10ep_hahen_s.s"
 }
@@ -163,7 +232,7 @@ ASM_FUNCTION(move_calc__FP8ep_classP10ep_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_normal__FP8ep_classP10ep_hahen_s) {
+asm void hahen_normal(ep_class* field_0, ep_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_normal__FP8ep_classP10ep_hahen_s.s"
 }
@@ -174,7 +243,7 @@ ASM_FUNCTION(hahen_normal__FP8ep_classP10ep_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_water__FP8ep_classP10ep_hahen_s) {
+asm void hahen_water(ep_class* field_0, ep_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_water__FP8ep_classP10ep_hahen_s.s"
 }
@@ -185,7 +254,7 @@ ASM_FUNCTION(hahen_water__FP8ep_classP10ep_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_carry__FP8ep_classP10ep_hahen_s) {
+asm void hahen_carry(ep_class* field_0, ep_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_carry__FP8ep_classP10ep_hahen_s.s"
 }
@@ -196,7 +265,7 @@ ASM_FUNCTION(hahen_carry__FP8ep_classP10ep_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_cast__FP8ep_classP10ep_hahen_s) {
+asm void hahen_cast(ep_class* field_0, ep_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_cast__FP8ep_classP10ep_hahen_s.s"
 }
@@ -207,7 +276,7 @@ ASM_FUNCTION(hahen_cast__FP8ep_classP10ep_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_move__FP8ep_class) {
+asm void hahen_move(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/hahen_move__FP8ep_class.s"
 }
@@ -218,7 +287,7 @@ ASM_FUNCTION(hahen_move__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_Draw__FP8ep_class) {
+asm void daEp_Draw(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_Draw__FP8ep_class.s"
 }
@@ -229,7 +298,7 @@ ASM_FUNCTION(daEp_Draw__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ep_switch_event_end__FP8ep_class) {
+asm void ep_switch_event_end(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/ep_switch_event_end__FP8ep_class.s"
 }
@@ -240,7 +309,7 @@ ASM_FUNCTION(ep_switch_event_end__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ep_switch_event_begin__FP8ep_class) {
+asm void ep_switch_event_begin(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/ep_switch_event_begin__FP8ep_class.s"
 }
@@ -251,7 +320,7 @@ ASM_FUNCTION(ep_switch_event_begin__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ep_switch_event_move__FP8ep_class) {
+asm void ep_switch_event_move(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/ep_switch_event_move__FP8ep_class.s"
 }
@@ -262,7 +331,7 @@ ASM_FUNCTION(ep_switch_event_move__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ep_move__FP8ep_class) {
+asm void ep_move(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/ep_move__FP8ep_class.s"
 }
@@ -273,7 +342,7 @@ ASM_FUNCTION(ep_move__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_set_mtx__FP8ep_class) {
+asm void daEp_set_mtx(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_set_mtx__FP8ep_class.s"
 }
@@ -284,7 +353,7 @@ ASM_FUNCTION(daEp_set_mtx__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_Execute__FP8ep_class) {
+asm void daEp_Execute(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_Execute__FP8ep_class.s"
 }
@@ -292,21 +361,16 @@ ASM_FUNCTION(daEp_Execute__FP8ep_class) {
 
 
 /* 8046A6D4-8046A6DC 0008+00 .text      daEp_IsDelete__FP8ep_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daEp_IsDelete__FP8ep_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_IsDelete__FP8ep_class.s"
+bool daEp_IsDelete(ep_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046A6DC-8046A724 0048+00 .text      daEp_Delete__FP8ep_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_Delete__FP8ep_class) {
+asm void daEp_Delete(ep_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_Delete__FP8ep_class.s"
 }
@@ -317,7 +381,7 @@ ASM_FUNCTION(daEp_Delete__FP8ep_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_CreateHeap__FP10fopAc_ac_c) {
+asm void daEp_CreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_CreateHeap__FP10fopAc_ac_c.s"
 }
@@ -328,7 +392,7 @@ ASM_FUNCTION(daEp_CreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_CreateInit__FP10fopAc_ac_c) {
+asm void daEp_CreateInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_CreateInit__FP10fopAc_ac_c.s"
 }
@@ -339,7 +403,7 @@ ASM_FUNCTION(daEp_CreateInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daEp_Create__FP10fopAc_ac_c) {
+asm void daEp_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_Create__FP10fopAc_ac_c.s"
 }
@@ -350,7 +414,7 @@ ASM_FUNCTION(daEp_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8ep_classFv) {
+asm ep_class::ep_class() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__ct__8ep_classFv.s"
 }
@@ -361,7 +425,7 @@ ASM_FUNCTION(__ct__8ep_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10ep_hahen_sFv) {
+asm ep_hahen_s::~ep_hahen_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__10ep_hahen_sFv.s"
 }
@@ -372,7 +436,7 @@ ASM_FUNCTION(__dt__10ep_hahen_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10ep_hahen_sFv) {
+asm ep_hahen_s::ep_hahen_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__ct__10ep_hahen_sFv.s"
 }
@@ -383,7 +447,7 @@ ASM_FUNCTION(__ct__10ep_hahen_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -394,7 +458,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__8cM3dGSphFv.s"
 }
@@ -405,7 +469,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__8cM3dGCylFv.s"
 }
@@ -416,7 +480,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__8cM3dGAabFv.s"
 }
@@ -427,7 +491,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__10dCcD_GSttsFv.s"
 }
@@ -438,7 +502,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/__dt__10cCcD_GSttsFv.s"
 }
@@ -449,7 +513,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8046AFA4) {
+extern "C" asm void func_8046AFA4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/func_8046AFA4.s"
 }
@@ -460,7 +524,7 @@ ASM_FUNCTION(func_8046AFA4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8046AFAC) {
+extern "C" asm void func_8046AFAC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/func_8046AFAC.s"
 }
@@ -471,7 +535,7 @@ ASM_FUNCTION(func_8046AFAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8046AFB4) {
+extern "C" asm void func_8046AFB4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ep/d_a_ep/func_8046AFB4.s"
 }

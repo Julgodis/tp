@@ -6,23 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_MynaLight_c {
+	void create();
+	void Delete();
+	void Execute();
+	void Draw();
+	void setTurnOnOffChange();
+	void getTurnOnTime();
+	void getTurnOffTime();
+	void initialize();
+	~daTag_MynaLight_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__17daTag_MynaLight_cFv();
-extern "C" extern void Delete__17daTag_MynaLight_cFv();
-extern "C" extern void Execute__17daTag_MynaLight_cFv();
-extern "C" extern void Draw__17daTag_MynaLight_cFv();
-extern "C" extern void setTurnOnOffChange__17daTag_MynaLight_cFv();
-extern "C" extern void getTurnOnTime__17daTag_MynaLight_cFv();
-extern "C" extern void getTurnOffTime__17daTag_MynaLight_cFv();
-extern "C" extern void initialize__17daTag_MynaLight_cFv();
-extern "C" extern void daTag_MynaLight_Create__FPv();
-extern "C" extern void daTag_MynaLight_Delete__FPv();
-extern "C" extern void daTag_MynaLight_Execute__FPv();
-extern "C" extern void daTag_MynaLight_Draw__FPv();
-extern "C" extern void daTag_MynaLight_IsDelete__FPv();
-extern "C" extern void __dt__17daTag_MynaLight_cFv();
+void daTag_MynaLight_Create(void*);
+void daTag_MynaLight_Delete(void*);
+void daTag_MynaLight_Execute(void*);
+void daTag_MynaLight_Draw(void*);
+bool daTag_MynaLight_IsDelete(void*);
+
+extern "C" void create__17daTag_MynaLight_cFv();
+extern "C" void Delete__17daTag_MynaLight_cFv();
+extern "C" void Execute__17daTag_MynaLight_cFv();
+extern "C" void Draw__17daTag_MynaLight_cFv();
+extern "C" void setTurnOnOffChange__17daTag_MynaLight_cFv();
+extern "C" void getTurnOnTime__17daTag_MynaLight_cFv();
+extern "C" void getTurnOffTime__17daTag_MynaLight_cFv();
+extern "C" void initialize__17daTag_MynaLight_cFv();
+extern "C" void daTag_MynaLight_Create__FPv();
+extern "C" void daTag_MynaLight_Delete__FPv();
+extern "C" void daTag_MynaLight_Execute__FPv();
+extern "C" void daTag_MynaLight_Draw__FPv();
+extern "C" bool daTag_MynaLight_IsDelete__FPv();
+extern "C" void __dt__17daTag_MynaLight_cFv();
 SECTION_RODATA extern const u32 lit_3694;
 SECTION_RODATA extern const u32 lit_3695;
 SECTION_RODATA extern const u32 lit_3696;
@@ -49,7 +71,9 @@ SECTION_DATA extern void*const __vt__17daTag_MynaLight_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +83,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/create__17daTag_MynaLight_cFv.s"
 }
@@ -70,7 +94,7 @@ ASM_FUNCTION(create__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/Delete__17daTag_MynaLight_cFv.s"
 }
@@ -81,7 +105,7 @@ ASM_FUNCTION(Delete__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/Execute__17daTag_MynaLight_cFv.s"
 }
@@ -92,7 +116,7 @@ ASM_FUNCTION(Execute__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/Draw__17daTag_MynaLight_cFv.s"
 }
@@ -103,7 +127,7 @@ ASM_FUNCTION(Draw__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTurnOnOffChange__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::setTurnOnOffChange() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/setTurnOnOffChange__17daTag_MynaLight_cFv.s"
 }
@@ -114,7 +138,7 @@ ASM_FUNCTION(setTurnOnOffChange__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTurnOnTime__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::getTurnOnTime() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/getTurnOnTime__17daTag_MynaLight_cFv.s"
 }
@@ -125,7 +149,7 @@ ASM_FUNCTION(getTurnOnTime__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTurnOffTime__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::getTurnOffTime() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/getTurnOffTime__17daTag_MynaLight_cFv.s"
 }
@@ -136,7 +160,7 @@ ASM_FUNCTION(getTurnOffTime__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__17daTag_MynaLight_cFv) {
+asm void daTag_MynaLight_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/initialize__17daTag_MynaLight_cFv.s"
 }
@@ -147,7 +171,7 @@ ASM_FUNCTION(initialize__17daTag_MynaLight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_MynaLight_Create__FPv) {
+asm void daTag_MynaLight_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Create__FPv.s"
 }
@@ -158,7 +182,7 @@ ASM_FUNCTION(daTag_MynaLight_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_MynaLight_Delete__FPv) {
+asm void daTag_MynaLight_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Delete__FPv.s"
 }
@@ -169,7 +193,7 @@ ASM_FUNCTION(daTag_MynaLight_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_MynaLight_Execute__FPv) {
+asm void daTag_MynaLight_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Execute__FPv.s"
 }
@@ -180,7 +204,7 @@ ASM_FUNCTION(daTag_MynaLight_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_MynaLight_Draw__FPv) {
+asm void daTag_MynaLight_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Draw__FPv.s"
 }
@@ -188,21 +212,16 @@ ASM_FUNCTION(daTag_MynaLight_Draw__FPv) {
 
 
 /* 80D5D290-80D5D298 0008+00 .text      daTag_MynaLight_IsDelete__FPv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_MynaLight_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_IsDelete__FPv.s"
+bool daTag_MynaLight_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5D298-80D5D2F8 0060+00 .text      __dt__17daTag_MynaLight_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daTag_MynaLight_cFv) {
+asm daTag_MynaLight_c::~daTag_MynaLight_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/__dt__17daTag_MynaLight_cFv.s"
 }

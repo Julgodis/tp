@@ -6,130 +6,320 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct Vec;
+struct npc_ks_class;
+struct J3DJoint;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daNpc_Ks_HIO_c {
+	daNpc_Ks_HIO_c();
+	~daNpc_Ks_HIO_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz(cXyz const&);
+	void operator+=(Vec const&);
+	void set(f32, f32, f32);
+	void operator=(cXyz const&);
+	cXyz(f32, f32, f32);
+};
+
+struct npc_ks_class {
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void cancelOriginalDemo();
+	void changeDemoPos0(cXyz const*);
+	void changeDemoParam0(s32);
+	void changeOriginalDemo();
+};
+
+struct csXyz {
+};
+
+struct Vec {
+};
+
+struct std {
+	void fabsf(f32);
+};
+
+struct dEvt_info_c {
+	void onCondition(u16);
+	void checkCommandDemoAccrpt();
+};
+
+struct daMidna_c {
+	void checkShadowReturnEnd() const;
+	void changeDemoMode(u32);
+	void changeOriginalDemo();
+};
+
+struct JAISoundID {
+	JAISoundID(u32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNpc_Ks_HIO_cFv();
-extern "C" extern void setPlayerPosAndAngle__FP4cXyzs();
-extern "C" extern void checkDoorDemo__Fv();
-extern "C" extern void otherBgCheck__FP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void anm_init__FP12npc_ks_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Ks_Draw__FP12npc_ks_class();
-extern "C" extern void s_resq_sub__FPvPv();
-extern "C" extern void s_b_sub__FPvPv();
-extern "C" extern void search_bomb__FP12npc_ks_classi();
-extern "C" extern void bomb_view_check__FP12npc_ks_class();
-extern "C" extern void bomb_check__FP12npc_ks_class();
-extern "C" extern void s_e_sub__FPvPv();
-extern "C" extern void search_enemy__FP12npc_ks_classif();
-extern "C" extern void enemy_view_check__FP12npc_ks_classf();
-extern "C" extern void enemy_check__FP12npc_ks_classf();
-extern "C" extern void s_en_sub__FPvPv();
-extern "C" extern void en_search_test__FP12npc_ks_class();
-extern "C" extern void s_ori_sub__FPvPv();
-extern "C" extern void npc_ks_pole_ori__FP12npc_ks_class();
-extern "C" extern void npc_ks_ori__FP12npc_ks_class();
-extern "C" extern void shot_bo_sub__FPvPv();
-extern "C" extern void npc_ks_ori2__FP12npc_ks_class();
-extern "C" extern void npc_ks_home__FP12npc_ks_class();
-extern "C" extern void s_sw_sub__FPvPv();
-extern "C" extern void s_ha_sub__FPvPv();
-extern "C" extern void s_01_sub__FPvPv();
-extern "C" extern void npc_ks_demo_02__FP12npc_ks_class();
-extern "C" extern void s_dn_sub__FPvPv();
-extern "C" extern void npc_ks_demo_022__FP12npc_ks_class();
-extern "C" extern void npc_ks_demo_04__FP12npc_ks_class();
-extern "C" extern void npc_ks_to_hang__FP12npc_ks_class();
-extern "C" extern void s_next_do_sub__FPvPv();
-extern "C" extern void s_next_get_sub__FPvPv();
-extern "C" extern void order_set__Fi();
-extern "C" extern void all_carry_finish__Fi();
-extern "C" extern void hang_end_check__FP12npc_ks_class();
-extern "C" extern void npc_ks_hang__FP12npc_ks_class();
-extern "C" extern void npc_ks_hang_s__FP12npc_ks_class();
-extern "C" extern void npc_ks_e_hang__FP12npc_ks_class();
-extern "C" extern void all_move_check__Fii();
-extern "C" extern void go_jump_check__Fi();
-extern "C" extern void npc_ks_e_jump__FP12npc_ks_class();
-extern "C" extern void get_move_saru__FP12npc_ks_classi();
-extern "C" extern void all_hang_check__FP12npc_ks_classi();
-extern "C" extern void cam_3d_morf__FP12npc_ks_classf();
-extern "C" extern void s_fs_sub__FPvPv();
-extern "C" extern void s_fsdown_sub__FPvPv();
-extern "C" extern void demo_camera__FP12npc_ks_class();
-extern "C" extern void saru_count_check__FP12npc_ks_class();
-extern "C" extern void action_check__FP12npc_ks_class();
-extern "C" extern void water_check__FP12npc_ks_class4cXyzf();
-extern "C" extern void npc_ks_option__FP12npc_ks_class();
-extern "C" extern void npc_ks_awaydoor__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_00__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_00_2__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_00_3__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_01__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_02__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_22__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_09__FP12npc_ks_class();
-extern "C" extern void npc_ks_demo_12__FP12npc_ks_class();
-extern "C" extern void npc_ks_guide_0409__FP12npc_ks_class();
-extern "C" extern void path_search__FP12npc_ks_class();
-extern "C" extern void npc_ks_mori__FP12npc_ks_class();
-extern "C" extern void npc_ks_fsdemo__FP12npc_ks_class();
-extern "C" extern void npc_ks_kago__FP12npc_ks_class();
-extern "C" extern void anm_se_set__FP12npc_ks_class();
-extern "C" extern void action__FP12npc_ks_class();
-extern "C" extern void s_kago_sub__FPvPv();
-extern "C" extern void kantera_sub__FP12npc_ks_class();
-extern "C" extern void daNpc_Ks_Execute__FP12npc_ks_class();
-extern "C" extern void daNpc_Ks_IsDelete__FP12npc_ks_class();
-extern "C" extern void daNpc_Ks_Delete__FP12npc_ks_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void start_check__FP12npc_ks_class();
-extern "C" extern void s_check_sub__FPvPv();
-extern "C" extern void daNpc_Ks_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daNpc_Ks_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_ks_cpp();
-extern "C" extern void func_80A5DB30();
-extern "C" extern void func_80A5DB38();
-extern "C" extern void cancelOriginalDemo__9daPy_py_cFv();
-extern "C" extern void dComIfGp_event_reset__Fv();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void dComIfGp_setItemOilCount__Fl();
-extern "C" extern void dComIfGs_getMaxOil__Fv();
-extern "C" extern void daPy_getPlayerActorClass__Fv();
-extern "C" extern void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void changeDemoPos0__9daPy_py_cFPC4cXyz();
-extern "C" extern void __apl__4cXyzFRC3Vec();
-extern "C" extern void fabsf__3stdFf();
-extern "C" extern void set__4cXyzFfff();
-extern "C" extern void __as__4cXyzFRC4cXyz();
-extern "C" extern void changeDemoParam0__9daPy_py_cFi();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void changeOriginalDemo__9daPy_py_cFv();
-extern "C" extern void onCondition__11dEvt_info_cFUs();
-extern "C" extern void checkCommandDemoAccrpt__11dEvt_info_cFv();
-extern "C" extern void dComIfGp_getCamera__Fi();
-extern "C" extern void dComIfGp_getPlayerCameraID__Fi();
-extern "C" extern void dComIfGp_getPlayer__Fi();
-extern "C" extern void checkShadowReturnEnd__9daMidna_cCFv();
-extern "C" extern void changeDemoMode__9daMidna_cFUl();
-extern "C" extern void changeOriginalDemo__9daMidna_cFv();
-extern "C" extern void dComIfGp_getVibration__Fv();
-extern "C" extern void __ct__4cXyzFfff();
-extern "C" extern void dMeter2Info_setOilGaugeBackUp__FUs();
-extern "C" extern void dComIfGs_getOil__Fv();
-extern "C" extern void dComIfGs_setItem__FiUc();
-extern "C" extern void __ct__10JAISoundIDFUl();
-extern "C" extern void mDoAud_seStart__FUlPC3VecUlSc();
-extern "C" extern void dComIfGs_onEventBit__FUs();
+extern "C" void setPlayerPosAndAngle__FP4cXyzs();
+void checkDoorDemo();
+void otherBgCheck(fopAc_ac_c*, fopAc_ac_c*);
+void anm_init(npc_ks_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Ks_Draw(npc_ks_class*);
+void s_resq_sub(void*, void*);
+void s_b_sub(void*, void*);
+void search_bomb(npc_ks_class*, s32);
+void bomb_view_check(npc_ks_class*);
+void bomb_check(npc_ks_class*);
+void s_e_sub(void*, void*);
+void search_enemy(npc_ks_class*, s32, f32);
+void enemy_view_check(npc_ks_class*, f32);
+void enemy_check(npc_ks_class*, f32);
+void s_en_sub(void*, void*);
+void en_search_test(npc_ks_class*);
+void s_ori_sub(void*, void*);
+void npc_ks_pole_ori(npc_ks_class*);
+void npc_ks_ori(npc_ks_class*);
+void shot_bo_sub(void*, void*);
+void npc_ks_ori2(npc_ks_class*);
+void npc_ks_home(npc_ks_class*);
+void s_sw_sub(void*, void*);
+void s_ha_sub(void*, void*);
+void s_01_sub(void*, void*);
+void npc_ks_demo_02(npc_ks_class*);
+void s_dn_sub(void*, void*);
+void npc_ks_demo_022(npc_ks_class*);
+void npc_ks_demo_04(npc_ks_class*);
+void npc_ks_to_hang(npc_ks_class*);
+void s_next_do_sub(void*, void*);
+void s_next_get_sub(void*, void*);
+void order_set(s32);
+void all_carry_finish(s32);
+void hang_end_check(npc_ks_class*);
+void npc_ks_hang(npc_ks_class*);
+void npc_ks_hang_s(npc_ks_class*);
+void npc_ks_e_hang(npc_ks_class*);
+void all_move_check(s32, s32);
+void go_jump_check(s32);
+void npc_ks_e_jump(npc_ks_class*);
+void get_move_saru(npc_ks_class*, s32);
+void all_hang_check(npc_ks_class*, s32);
+void cam_3d_morf(npc_ks_class*, f32);
+void s_fs_sub(void*, void*);
+void s_fsdown_sub(void*, void*);
+void demo_camera(npc_ks_class*);
+void saru_count_check(npc_ks_class*);
+void action_check(npc_ks_class*);
+void water_check(npc_ks_class*, cXyz, f32);
+void npc_ks_option(npc_ks_class*);
+void npc_ks_awaydoor(npc_ks_class*);
+void npc_ks_guide_00(npc_ks_class*);
+void npc_ks_guide_00_2(npc_ks_class*);
+void npc_ks_guide_00_3(npc_ks_class*);
+void npc_ks_guide_01(npc_ks_class*);
+void npc_ks_guide_02(npc_ks_class*);
+void npc_ks_guide_22(npc_ks_class*);
+void npc_ks_guide_09(npc_ks_class*);
+void npc_ks_demo_12(npc_ks_class*);
+void npc_ks_guide_0409(npc_ks_class*);
+void path_search(npc_ks_class*);
+void npc_ks_mori(npc_ks_class*);
+void npc_ks_fsdemo(npc_ks_class*);
+void npc_ks_kago(npc_ks_class*);
+void anm_se_set(npc_ks_class*);
+void action(npc_ks_class*);
+void s_kago_sub(void*, void*);
+void kantera_sub(npc_ks_class*);
+void daNpc_Ks_Execute(npc_ks_class*);
+bool daNpc_Ks_IsDelete(npc_ks_class*);
+void daNpc_Ks_Delete(npc_ks_class*);
+void useHeapInit(fopAc_ac_c*);
+void start_check(npc_ks_class*);
+void s_check_sub(void*, void*);
+void daNpc_Ks_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_ks_cpp();
+extern "C" void func_80A5DB30();
+extern "C" void func_80A5DB38();
+void dComIfGp_event_reset();
+extern "C" void dComIfGp_setItemOilCount__Fl();
+void dComIfGs_getMaxOil();
+void daPy_getPlayerActorClass();
+void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*);
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+void dComIfGp_getCamera(s32);
+void dComIfGp_getPlayerCameraID(s32);
+void dComIfGp_getPlayer(s32);
+void dComIfGp_getVibration();
+void dMeter2Info_setOilGaugeBackUp(u16);
+void dComIfGs_getOil();
+void dComIfGs_setItem(s32, u8);
+void mDoAud_seStart(u32, Vec const*, u32, s8);
+void dComIfGs_onEventBit(u16);
+
+extern "C" void __ct__14daNpc_Ks_HIO_cFv();
+extern "C" void setPlayerPosAndAngle__FP4cXyzs();
+extern "C" void checkDoorDemo__Fv();
+extern "C" void otherBgCheck__FP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __dt__4cXyzFv();
+extern "C" void anm_init__FP12npc_ks_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Ks_Draw__FP12npc_ks_class();
+extern "C" void s_resq_sub__FPvPv();
+extern "C" void s_b_sub__FPvPv();
+extern "C" void search_bomb__FP12npc_ks_classi();
+extern "C" void bomb_view_check__FP12npc_ks_class();
+extern "C" void bomb_check__FP12npc_ks_class();
+extern "C" void s_e_sub__FPvPv();
+extern "C" void search_enemy__FP12npc_ks_classif();
+extern "C" void enemy_view_check__FP12npc_ks_classf();
+extern "C" void enemy_check__FP12npc_ks_classf();
+extern "C" void s_en_sub__FPvPv();
+extern "C" void en_search_test__FP12npc_ks_class();
+extern "C" void s_ori_sub__FPvPv();
+extern "C" void npc_ks_pole_ori__FP12npc_ks_class();
+extern "C" void npc_ks_ori__FP12npc_ks_class();
+extern "C" void shot_bo_sub__FPvPv();
+extern "C" void npc_ks_ori2__FP12npc_ks_class();
+extern "C" void npc_ks_home__FP12npc_ks_class();
+extern "C" void s_sw_sub__FPvPv();
+extern "C" void s_ha_sub__FPvPv();
+extern "C" void s_01_sub__FPvPv();
+extern "C" void npc_ks_demo_02__FP12npc_ks_class();
+extern "C" void s_dn_sub__FPvPv();
+extern "C" void npc_ks_demo_022__FP12npc_ks_class();
+extern "C" void npc_ks_demo_04__FP12npc_ks_class();
+extern "C" void npc_ks_to_hang__FP12npc_ks_class();
+extern "C" void s_next_do_sub__FPvPv();
+extern "C" void s_next_get_sub__FPvPv();
+extern "C" void order_set__Fi();
+extern "C" void all_carry_finish__Fi();
+extern "C" void hang_end_check__FP12npc_ks_class();
+extern "C" void npc_ks_hang__FP12npc_ks_class();
+extern "C" void npc_ks_hang_s__FP12npc_ks_class();
+extern "C" void npc_ks_e_hang__FP12npc_ks_class();
+extern "C" void all_move_check__Fii();
+extern "C" void go_jump_check__Fi();
+extern "C" void npc_ks_e_jump__FP12npc_ks_class();
+extern "C" void get_move_saru__FP12npc_ks_classi();
+extern "C" void all_hang_check__FP12npc_ks_classi();
+extern "C" void cam_3d_morf__FP12npc_ks_classf();
+extern "C" void s_fs_sub__FPvPv();
+extern "C" void s_fsdown_sub__FPvPv();
+extern "C" void demo_camera__FP12npc_ks_class();
+extern "C" void saru_count_check__FP12npc_ks_class();
+extern "C" void action_check__FP12npc_ks_class();
+extern "C" void water_check__FP12npc_ks_class4cXyzf();
+extern "C" void npc_ks_option__FP12npc_ks_class();
+extern "C" void npc_ks_awaydoor__FP12npc_ks_class();
+extern "C" void npc_ks_guide_00__FP12npc_ks_class();
+extern "C" void npc_ks_guide_00_2__FP12npc_ks_class();
+extern "C" void npc_ks_guide_00_3__FP12npc_ks_class();
+extern "C" void npc_ks_guide_01__FP12npc_ks_class();
+extern "C" void npc_ks_guide_02__FP12npc_ks_class();
+extern "C" void npc_ks_guide_22__FP12npc_ks_class();
+extern "C" void npc_ks_guide_09__FP12npc_ks_class();
+extern "C" void npc_ks_demo_12__FP12npc_ks_class();
+extern "C" void npc_ks_guide_0409__FP12npc_ks_class();
+extern "C" void path_search__FP12npc_ks_class();
+extern "C" void npc_ks_mori__FP12npc_ks_class();
+extern "C" void npc_ks_fsdemo__FP12npc_ks_class();
+extern "C" void npc_ks_kago__FP12npc_ks_class();
+extern "C" void anm_se_set__FP12npc_ks_class();
+extern "C" void action__FP12npc_ks_class();
+extern "C" void s_kago_sub__FPvPv();
+extern "C" void kantera_sub__FP12npc_ks_class();
+extern "C" void daNpc_Ks_Execute__FP12npc_ks_class();
+extern "C" bool daNpc_Ks_IsDelete__FP12npc_ks_class();
+extern "C" void daNpc_Ks_Delete__FP12npc_ks_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void start_check__FP12npc_ks_class();
+extern "C" void s_check_sub__FPvPv();
+extern "C" void daNpc_Ks_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daNpc_Ks_HIO_cFv();
+extern "C" void __sinit_d_a_npc_ks_cpp();
+extern "C" void func_80A5DB30();
+extern "C" void func_80A5DB38();
+extern "C" void cancelOriginalDemo__9daPy_py_cFv();
+extern "C" void dComIfGp_event_reset__Fv();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void dComIfGp_setItemOilCount__Fl();
+extern "C" void dComIfGs_getMaxOil__Fv();
+extern "C" void daPy_getPlayerActorClass__Fv();
+extern "C" void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void changeDemoPos0__9daPy_py_cFPC4cXyz();
+extern "C" void __apl__4cXyzFRC3Vec();
+extern "C" void fabsf__3stdFf();
+extern "C" void set__4cXyzFfff();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void changeDemoParam0__9daPy_py_cFi();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void changeOriginalDemo__9daPy_py_cFv();
+extern "C" void onCondition__11dEvt_info_cFUs();
+extern "C" void checkCommandDemoAccrpt__11dEvt_info_cFv();
+extern "C" void dComIfGp_getCamera__Fi();
+extern "C" void dComIfGp_getPlayerCameraID__Fi();
+extern "C" void dComIfGp_getPlayer__Fi();
+extern "C" void checkShadowReturnEnd__9daMidna_cCFv();
+extern "C" void changeDemoMode__9daMidna_cFUl();
+extern "C" void changeOriginalDemo__9daMidna_cFv();
+extern "C" void dComIfGp_getVibration__Fv();
+extern "C" void __ct__4cXyzFfff();
+extern "C" void dMeter2Info_setOilGaugeBackUp__FUs();
+extern "C" void dComIfGs_getOil__Fv();
+extern "C" void dComIfGs_setItem__FiUc();
+extern "C" void __ct__10JAISoundIDFUl();
+extern "C" void mDoAud_seStart__FUlPC3VecUlSc();
+extern "C" void dComIfGs_onEventBit__FUs();
 SECTION_RODATA extern const u32 lit_4030;
 SECTION_RODATA extern const u32 lit_4031;
 SECTION_RODATA extern const u32 lit_4032;
@@ -561,8 +751,11 @@ SECTION_BSS extern u8 data_80A5FFC8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -572,7 +765,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNpc_Ks_HIO_cFv) {
+asm daNpc_Ks_HIO_c::daNpc_Ks_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__ct__14daNpc_Ks_HIO_cFv.s"
 }
@@ -583,7 +776,7 @@ ASM_FUNCTION(__ct__14daNpc_Ks_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayerPosAndAngle__FP4cXyzs) {
+extern "C" asm void setPlayerPosAndAngle__FP4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/setPlayerPosAndAngle__FP4cXyzs.s"
 }
@@ -594,7 +787,7 @@ ASM_FUNCTION(setPlayerPosAndAngle__FP4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDoorDemo__Fv) {
+asm void checkDoorDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/checkDoorDemo__Fv.s"
 }
@@ -605,7 +798,7 @@ ASM_FUNCTION(checkDoorDemo__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(otherBgCheck__FP10fopAc_ac_cP10fopAc_ac_c) {
+asm void otherBgCheck(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/otherBgCheck__FP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -616,7 +809,7 @@ ASM_FUNCTION(otherBgCheck__FP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__4cXyzFv.s"
 }
@@ -627,7 +820,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP12npc_ks_classifUcf) {
+asm void anm_init(npc_ks_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/anm_init__FP12npc_ks_classifUcf.s"
 }
@@ -638,7 +831,7 @@ ASM_FUNCTION(anm_init__FP12npc_ks_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/nodeCallBack__FP8J3DJointi.s"
 }
@@ -649,7 +842,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ks_Draw__FP12npc_ks_class) {
+asm void daNpc_Ks_Draw(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_Draw__FP12npc_ks_class.s"
 }
@@ -660,7 +853,7 @@ ASM_FUNCTION(daNpc_Ks_Draw__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_resq_sub__FPvPv) {
+asm void s_resq_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_resq_sub__FPvPv.s"
 }
@@ -671,7 +864,7 @@ ASM_FUNCTION(s_resq_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_b_sub__FPvPv) {
+asm void s_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_b_sub__FPvPv.s"
 }
@@ -682,7 +875,7 @@ ASM_FUNCTION(s_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_bomb__FP12npc_ks_classi) {
+asm void search_bomb(npc_ks_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/search_bomb__FP12npc_ks_classi.s"
 }
@@ -693,7 +886,7 @@ ASM_FUNCTION(search_bomb__FP12npc_ks_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bomb_view_check__FP12npc_ks_class) {
+asm void bomb_view_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/bomb_view_check__FP12npc_ks_class.s"
 }
@@ -704,7 +897,7 @@ ASM_FUNCTION(bomb_view_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bomb_check__FP12npc_ks_class) {
+asm void bomb_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/bomb_check__FP12npc_ks_class.s"
 }
@@ -715,7 +908,7 @@ ASM_FUNCTION(bomb_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_e_sub__FPvPv) {
+asm void s_e_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_e_sub__FPvPv.s"
 }
@@ -726,7 +919,7 @@ ASM_FUNCTION(s_e_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_enemy__FP12npc_ks_classif) {
+asm void search_enemy(npc_ks_class* field_0, s32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/search_enemy__FP12npc_ks_classif.s"
 }
@@ -737,7 +930,7 @@ ASM_FUNCTION(search_enemy__FP12npc_ks_classif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(enemy_view_check__FP12npc_ks_classf) {
+asm void enemy_view_check(npc_ks_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/enemy_view_check__FP12npc_ks_classf.s"
 }
@@ -748,7 +941,7 @@ ASM_FUNCTION(enemy_view_check__FP12npc_ks_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(enemy_check__FP12npc_ks_classf) {
+asm void enemy_check(npc_ks_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/enemy_check__FP12npc_ks_classf.s"
 }
@@ -759,7 +952,7 @@ ASM_FUNCTION(enemy_check__FP12npc_ks_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_en_sub__FPvPv) {
+asm void s_en_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_en_sub__FPvPv.s"
 }
@@ -770,7 +963,7 @@ ASM_FUNCTION(s_en_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(en_search_test__FP12npc_ks_class) {
+asm void en_search_test(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/en_search_test__FP12npc_ks_class.s"
 }
@@ -781,7 +974,7 @@ ASM_FUNCTION(en_search_test__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ori_sub__FPvPv) {
+asm void s_ori_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_ori_sub__FPvPv.s"
 }
@@ -792,7 +985,7 @@ ASM_FUNCTION(s_ori_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_pole_ori__FP12npc_ks_class) {
+asm void npc_ks_pole_ori(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_pole_ori__FP12npc_ks_class.s"
 }
@@ -803,7 +996,7 @@ ASM_FUNCTION(npc_ks_pole_ori__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_ori__FP12npc_ks_class) {
+asm void npc_ks_ori(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_ori__FP12npc_ks_class.s"
 }
@@ -814,7 +1007,7 @@ ASM_FUNCTION(npc_ks_ori__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shot_bo_sub__FPvPv) {
+asm void shot_bo_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/shot_bo_sub__FPvPv.s"
 }
@@ -825,7 +1018,7 @@ ASM_FUNCTION(shot_bo_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_ori2__FP12npc_ks_class) {
+asm void npc_ks_ori2(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_ori2__FP12npc_ks_class.s"
 }
@@ -836,7 +1029,7 @@ ASM_FUNCTION(npc_ks_ori2__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_home__FP12npc_ks_class) {
+asm void npc_ks_home(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_home__FP12npc_ks_class.s"
 }
@@ -847,7 +1040,7 @@ ASM_FUNCTION(npc_ks_home__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sw_sub__FPvPv) {
+asm void s_sw_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_sw_sub__FPvPv.s"
 }
@@ -858,7 +1051,7 @@ ASM_FUNCTION(s_sw_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ha_sub__FPvPv) {
+asm void s_ha_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_ha_sub__FPvPv.s"
 }
@@ -869,7 +1062,7 @@ ASM_FUNCTION(s_ha_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_01_sub__FPvPv) {
+asm void s_01_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_01_sub__FPvPv.s"
 }
@@ -880,7 +1073,7 @@ ASM_FUNCTION(s_01_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_demo_02__FP12npc_ks_class) {
+asm void npc_ks_demo_02(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_demo_02__FP12npc_ks_class.s"
 }
@@ -891,7 +1084,7 @@ ASM_FUNCTION(npc_ks_demo_02__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_dn_sub__FPvPv) {
+asm void s_dn_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_dn_sub__FPvPv.s"
 }
@@ -902,7 +1095,7 @@ ASM_FUNCTION(s_dn_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_demo_022__FP12npc_ks_class) {
+asm void npc_ks_demo_022(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_demo_022__FP12npc_ks_class.s"
 }
@@ -913,7 +1106,7 @@ ASM_FUNCTION(npc_ks_demo_022__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_demo_04__FP12npc_ks_class) {
+asm void npc_ks_demo_04(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_demo_04__FP12npc_ks_class.s"
 }
@@ -924,7 +1117,7 @@ ASM_FUNCTION(npc_ks_demo_04__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_to_hang__FP12npc_ks_class) {
+asm void npc_ks_to_hang(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_to_hang__FP12npc_ks_class.s"
 }
@@ -935,7 +1128,7 @@ ASM_FUNCTION(npc_ks_to_hang__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_next_do_sub__FPvPv) {
+asm void s_next_do_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_next_do_sub__FPvPv.s"
 }
@@ -946,7 +1139,7 @@ ASM_FUNCTION(s_next_do_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_next_get_sub__FPvPv) {
+asm void s_next_get_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_next_get_sub__FPvPv.s"
 }
@@ -957,7 +1150,7 @@ ASM_FUNCTION(s_next_get_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(order_set__Fi) {
+asm void order_set(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/order_set__Fi.s"
 }
@@ -968,7 +1161,7 @@ ASM_FUNCTION(order_set__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(all_carry_finish__Fi) {
+asm void all_carry_finish(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/all_carry_finish__Fi.s"
 }
@@ -979,7 +1172,7 @@ ASM_FUNCTION(all_carry_finish__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hang_end_check__FP12npc_ks_class) {
+asm void hang_end_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/hang_end_check__FP12npc_ks_class.s"
 }
@@ -990,7 +1183,7 @@ ASM_FUNCTION(hang_end_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_hang__FP12npc_ks_class) {
+asm void npc_ks_hang(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_hang__FP12npc_ks_class.s"
 }
@@ -1001,7 +1194,7 @@ ASM_FUNCTION(npc_ks_hang__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_hang_s__FP12npc_ks_class) {
+asm void npc_ks_hang_s(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_hang_s__FP12npc_ks_class.s"
 }
@@ -1012,7 +1205,7 @@ ASM_FUNCTION(npc_ks_hang_s__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_e_hang__FP12npc_ks_class) {
+asm void npc_ks_e_hang(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_e_hang__FP12npc_ks_class.s"
 }
@@ -1023,7 +1216,7 @@ ASM_FUNCTION(npc_ks_e_hang__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(all_move_check__Fii) {
+asm void all_move_check(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/all_move_check__Fii.s"
 }
@@ -1034,7 +1227,7 @@ ASM_FUNCTION(all_move_check__Fii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(go_jump_check__Fi) {
+asm void go_jump_check(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/go_jump_check__Fi.s"
 }
@@ -1045,7 +1238,7 @@ ASM_FUNCTION(go_jump_check__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_e_jump__FP12npc_ks_class) {
+asm void npc_ks_e_jump(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_e_jump__FP12npc_ks_class.s"
 }
@@ -1056,7 +1249,7 @@ ASM_FUNCTION(npc_ks_e_jump__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_move_saru__FP12npc_ks_classi) {
+asm void get_move_saru(npc_ks_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/get_move_saru__FP12npc_ks_classi.s"
 }
@@ -1067,7 +1260,7 @@ ASM_FUNCTION(get_move_saru__FP12npc_ks_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(all_hang_check__FP12npc_ks_classi) {
+asm void all_hang_check(npc_ks_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/all_hang_check__FP12npc_ks_classi.s"
 }
@@ -1078,7 +1271,7 @@ ASM_FUNCTION(all_hang_check__FP12npc_ks_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cam_3d_morf__FP12npc_ks_classf) {
+asm void cam_3d_morf(npc_ks_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/cam_3d_morf__FP12npc_ks_classf.s"
 }
@@ -1089,7 +1282,7 @@ ASM_FUNCTION(cam_3d_morf__FP12npc_ks_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fs_sub__FPvPv) {
+asm void s_fs_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_fs_sub__FPvPv.s"
 }
@@ -1100,7 +1293,7 @@ ASM_FUNCTION(s_fs_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fsdown_sub__FPvPv) {
+asm void s_fsdown_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_fsdown_sub__FPvPv.s"
 }
@@ -1111,7 +1304,7 @@ ASM_FUNCTION(s_fsdown_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP12npc_ks_class) {
+asm void demo_camera(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/demo_camera__FP12npc_ks_class.s"
 }
@@ -1122,7 +1315,7 @@ ASM_FUNCTION(demo_camera__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(saru_count_check__FP12npc_ks_class) {
+asm void saru_count_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/saru_count_check__FP12npc_ks_class.s"
 }
@@ -1133,7 +1326,7 @@ ASM_FUNCTION(saru_count_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_check__FP12npc_ks_class) {
+asm void action_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/action_check__FP12npc_ks_class.s"
 }
@@ -1144,7 +1337,7 @@ ASM_FUNCTION(action_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP12npc_ks_class4cXyzf) {
+asm void water_check(npc_ks_class* field_0, cXyz field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/water_check__FP12npc_ks_class4cXyzf.s"
 }
@@ -1155,7 +1348,7 @@ ASM_FUNCTION(water_check__FP12npc_ks_class4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_option__FP12npc_ks_class) {
+asm void npc_ks_option(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_option__FP12npc_ks_class.s"
 }
@@ -1166,7 +1359,7 @@ ASM_FUNCTION(npc_ks_option__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_awaydoor__FP12npc_ks_class) {
+asm void npc_ks_awaydoor(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_awaydoor__FP12npc_ks_class.s"
 }
@@ -1177,7 +1370,7 @@ ASM_FUNCTION(npc_ks_awaydoor__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_00__FP12npc_ks_class) {
+asm void npc_ks_guide_00(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_00__FP12npc_ks_class.s"
 }
@@ -1188,7 +1381,7 @@ ASM_FUNCTION(npc_ks_guide_00__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_00_2__FP12npc_ks_class) {
+asm void npc_ks_guide_00_2(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_00_2__FP12npc_ks_class.s"
 }
@@ -1199,7 +1392,7 @@ ASM_FUNCTION(npc_ks_guide_00_2__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_00_3__FP12npc_ks_class) {
+asm void npc_ks_guide_00_3(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_00_3__FP12npc_ks_class.s"
 }
@@ -1210,7 +1403,7 @@ ASM_FUNCTION(npc_ks_guide_00_3__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_01__FP12npc_ks_class) {
+asm void npc_ks_guide_01(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_01__FP12npc_ks_class.s"
 }
@@ -1221,7 +1414,7 @@ ASM_FUNCTION(npc_ks_guide_01__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_02__FP12npc_ks_class) {
+asm void npc_ks_guide_02(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_02__FP12npc_ks_class.s"
 }
@@ -1232,7 +1425,7 @@ ASM_FUNCTION(npc_ks_guide_02__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_22__FP12npc_ks_class) {
+asm void npc_ks_guide_22(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_22__FP12npc_ks_class.s"
 }
@@ -1243,7 +1436,7 @@ ASM_FUNCTION(npc_ks_guide_22__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_09__FP12npc_ks_class) {
+asm void npc_ks_guide_09(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_09__FP12npc_ks_class.s"
 }
@@ -1254,7 +1447,7 @@ ASM_FUNCTION(npc_ks_guide_09__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_demo_12__FP12npc_ks_class) {
+asm void npc_ks_demo_12(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_demo_12__FP12npc_ks_class.s"
 }
@@ -1265,7 +1458,7 @@ ASM_FUNCTION(npc_ks_demo_12__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_guide_0409__FP12npc_ks_class) {
+asm void npc_ks_guide_0409(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_guide_0409__FP12npc_ks_class.s"
 }
@@ -1276,7 +1469,7 @@ ASM_FUNCTION(npc_ks_guide_0409__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(path_search__FP12npc_ks_class) {
+asm void path_search(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/path_search__FP12npc_ks_class.s"
 }
@@ -1287,7 +1480,7 @@ ASM_FUNCTION(path_search__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_mori__FP12npc_ks_class) {
+asm void npc_ks_mori(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_mori__FP12npc_ks_class.s"
 }
@@ -1298,7 +1491,7 @@ ASM_FUNCTION(npc_ks_mori__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_fsdemo__FP12npc_ks_class) {
+asm void npc_ks_fsdemo(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_fsdemo__FP12npc_ks_class.s"
 }
@@ -1309,7 +1502,7 @@ ASM_FUNCTION(npc_ks_fsdemo__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ks_kago__FP12npc_ks_class) {
+asm void npc_ks_kago(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/npc_ks_kago__FP12npc_ks_class.s"
 }
@@ -1320,7 +1513,7 @@ ASM_FUNCTION(npc_ks_kago__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP12npc_ks_class) {
+asm void anm_se_set(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/anm_se_set__FP12npc_ks_class.s"
 }
@@ -1331,7 +1524,7 @@ ASM_FUNCTION(anm_se_set__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12npc_ks_class) {
+asm void action(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/action__FP12npc_ks_class.s"
 }
@@ -1342,7 +1535,7 @@ ASM_FUNCTION(action__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_kago_sub__FPvPv) {
+asm void s_kago_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_kago_sub__FPvPv.s"
 }
@@ -1353,7 +1546,7 @@ ASM_FUNCTION(s_kago_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kantera_sub__FP12npc_ks_class) {
+asm void kantera_sub(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/kantera_sub__FP12npc_ks_class.s"
 }
@@ -1364,7 +1557,7 @@ ASM_FUNCTION(kantera_sub__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ks_Execute__FP12npc_ks_class) {
+asm void daNpc_Ks_Execute(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_Execute__FP12npc_ks_class.s"
 }
@@ -1372,21 +1565,16 @@ ASM_FUNCTION(daNpc_Ks_Execute__FP12npc_ks_class) {
 
 
 /* 80A5C3E4-80A5C3EC 0008+00 .text      daNpc_Ks_IsDelete__FP12npc_ks_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ks_IsDelete__FP12npc_ks_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_IsDelete__FP12npc_ks_class.s"
+bool daNpc_Ks_IsDelete(npc_ks_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A5C3EC-80A5C450 0064+00 .text      daNpc_Ks_Delete__FP12npc_ks_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ks_Delete__FP12npc_ks_class) {
+asm void daNpc_Ks_Delete(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_Delete__FP12npc_ks_class.s"
 }
@@ -1397,7 +1585,7 @@ ASM_FUNCTION(daNpc_Ks_Delete__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1408,7 +1596,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1419,7 +1607,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start_check__FP12npc_ks_class) {
+asm void start_check(npc_ks_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/start_check__FP12npc_ks_class.s"
 }
@@ -1430,7 +1618,7 @@ ASM_FUNCTION(start_check__FP12npc_ks_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_check_sub__FPvPv) {
+asm void s_check_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/s_check_sub__FPvPv.s"
 }
@@ -1441,7 +1629,7 @@ ASM_FUNCTION(s_check_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ks_Create__FP10fopAc_ac_c) {
+asm void daNpc_Ks_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_Create__FP10fopAc_ac_c.s"
 }
@@ -1452,7 +1640,7 @@ ASM_FUNCTION(daNpc_Ks_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__8cM3dGCylFv.s"
 }
@@ -1463,7 +1651,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__8cM3dGAabFv.s"
 }
@@ -1474,7 +1662,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__10dCcD_GSttsFv.s"
 }
@@ -1485,7 +1673,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1496,7 +1684,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1507,7 +1695,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__10cCcD_GSttsFv.s"
 }
@@ -1518,7 +1706,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpc_Ks_HIO_cFv) {
+asm daNpc_Ks_HIO_c::~daNpc_Ks_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__dt__14daNpc_Ks_HIO_cFv.s"
 }
@@ -1529,7 +1717,7 @@ ASM_FUNCTION(__dt__14daNpc_Ks_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_ks_cpp) {
+extern "C" asm void __sinit_d_a_npc_ks_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__sinit_d_a_npc_ks_cpp.s"
 }
@@ -1540,7 +1728,7 @@ ASM_FUNCTION(__sinit_d_a_npc_ks_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A5DB30) {
+extern "C" asm void func_80A5DB30() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/func_80A5DB30.s"
 }
@@ -1551,7 +1739,7 @@ ASM_FUNCTION(func_80A5DB30) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A5DB38) {
+extern "C" asm void func_80A5DB38() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/func_80A5DB38.s"
 }
@@ -1562,7 +1750,7 @@ ASM_FUNCTION(func_80A5DB38) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::cancelOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/cancelOriginalDemo__9daPy_py_cFv.s"
 }
@@ -1573,7 +1761,7 @@ ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_reset__Fv) {
+asm void dComIfGp_event_reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_event_reset__Fv.s"
 }
@@ -1584,7 +1772,7 @@ ASM_FUNCTION(dComIfGp_event_reset__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__ct__4cXyzFRC4cXyz.s"
 }
@@ -1595,7 +1783,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setItemOilCount__Fl) {
+extern "C" asm void dComIfGp_setItemOilCount__Fl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_setItemOilCount__Fl.s"
 }
@@ -1606,7 +1794,7 @@ ASM_FUNCTION(dComIfGp_setItemOilCount__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getMaxOil__Fv) {
+asm void dComIfGs_getMaxOil() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGs_getMaxOil__Fv.s"
 }
@@ -1617,7 +1805,7 @@ ASM_FUNCTION(dComIfGs_getMaxOil__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
+asm void daPy_getPlayerActorClass() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daPy_getPlayerActorClass__Fv.s"
 }
@@ -1628,7 +1816,7 @@ ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u16 field_0, cXyz const* field_1, csXyz const* field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -1639,7 +1827,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
+asm void daPy_py_c::changeDemoPos0(cXyz const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeDemoPos0__9daPy_py_cFPC4cXyz.s"
 }
@@ -1650,7 +1838,7 @@ ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__apl__4cXyzFRC3Vec) {
+asm void cXyz::operator+=(Vec const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__apl__4cXyzFRC3Vec.s"
 }
@@ -1661,7 +1849,7 @@ ASM_FUNCTION(__apl__4cXyzFRC3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fabsf__3stdFf) {
+asm void std::fabsf(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/fabsf__3stdFf.s"
 }
@@ -1672,7 +1860,7 @@ ASM_FUNCTION(fabsf__3stdFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__4cXyzFfff) {
+asm void cXyz::set(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/set__4cXyzFfff.s"
 }
@@ -1683,7 +1871,7 @@ ASM_FUNCTION(set__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__as__4cXyzFRC4cXyz.s"
 }
@@ -1694,7 +1882,7 @@ ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoParam0__9daPy_py_cFi) {
+asm void daPy_py_c::changeDemoParam0(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeDemoParam0__9daPy_py_cFi.s"
 }
@@ -1705,7 +1893,7 @@ ASM_FUNCTION(changeDemoParam0__9daPy_py_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -1716,7 +1904,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::changeOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeOriginalDemo__9daPy_py_cFv.s"
 }
@@ -1727,7 +1915,7 @@ ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
+asm void dEvt_info_c::onCondition(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/onCondition__11dEvt_info_cFUs.s"
 }
@@ -1738,7 +1926,7 @@ ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
+asm void dEvt_info_c::checkCommandDemoAccrpt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/checkCommandDemoAccrpt__11dEvt_info_cFv.s"
 }
@@ -1749,7 +1937,7 @@ ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getCamera__Fi) {
+asm void dComIfGp_getCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_getCamera__Fi.s"
 }
@@ -1760,7 +1948,7 @@ ASM_FUNCTION(dComIfGp_getCamera__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
+asm void dComIfGp_getPlayerCameraID(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_getPlayerCameraID__Fi.s"
 }
@@ -1771,7 +1959,7 @@ ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
+asm void dComIfGp_getPlayer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_getPlayer__Fi.s"
 }
@@ -1782,7 +1970,7 @@ ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkShadowReturnEnd__9daMidna_cCFv) {
+asm void daMidna_c::checkShadowReturnEnd() const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/checkShadowReturnEnd__9daMidna_cCFv.s"
 }
@@ -1793,7 +1981,7 @@ ASM_FUNCTION(checkShadowReturnEnd__9daMidna_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daMidna_cFUl) {
+asm void daMidna_c::changeDemoMode(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeDemoMode__9daMidna_cFUl.s"
 }
@@ -1804,7 +1992,7 @@ ASM_FUNCTION(changeDemoMode__9daMidna_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOriginalDemo__9daMidna_cFv) {
+asm void daMidna_c::changeOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/changeOriginalDemo__9daMidna_cFv.s"
 }
@@ -1815,7 +2003,7 @@ ASM_FUNCTION(changeOriginalDemo__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getVibration__Fv) {
+asm void dComIfGp_getVibration() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGp_getVibration__Fv.s"
 }
@@ -1826,7 +2014,7 @@ ASM_FUNCTION(dComIfGp_getVibration__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFfff) {
+asm cXyz::cXyz(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__ct__4cXyzFfff.s"
 }
@@ -1837,7 +2025,7 @@ ASM_FUNCTION(__ct__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMeter2Info_setOilGaugeBackUp__FUs) {
+asm void dMeter2Info_setOilGaugeBackUp(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dMeter2Info_setOilGaugeBackUp__FUs.s"
 }
@@ -1848,7 +2036,7 @@ ASM_FUNCTION(dMeter2Info_setOilGaugeBackUp__FUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getOil__Fv) {
+asm void dComIfGs_getOil() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGs_getOil__Fv.s"
 }
@@ -1859,7 +2047,7 @@ ASM_FUNCTION(dComIfGs_getOil__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setItem__FiUc) {
+asm void dComIfGs_setItem(s32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGs_setItem__FiUc.s"
 }
@@ -1870,7 +2058,7 @@ ASM_FUNCTION(dComIfGs_setItem__FiUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JAISoundIDFUl) {
+asm JAISoundID::JAISoundID(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/__ct__10JAISoundIDFUl.s"
 }
@@ -1881,7 +2069,7 @@ ASM_FUNCTION(__ct__10JAISoundIDFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
+asm void mDoAud_seStart(u32 field_0, Vec const* field_1, u32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/mDoAud_seStart__FUlPC3VecUlSc.s"
 }
@@ -1892,7 +2080,7 @@ ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onEventBit__FUs) {
+asm void dComIfGs_onEventBit(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/dComIfGs_onEventBit__FUs.s"
 }

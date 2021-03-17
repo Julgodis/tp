@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void __unregister_fragment();
-extern "C" extern void __register_fragment();
+extern "C" void __unregister_fragment();
+extern "C" void __register_fragment();
+
+extern "C" void __unregister_fragment();
+extern "C" void __register_fragment();
 SECTION_BSS extern u8 fragmentinfo[12 + 4 /* padding */];
 
 // 
@@ -18,34 +21,34 @@ SECTION_BSS extern u8 fragmentinfo[12 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8044D430-8044D440 000C+04 .bss       fragmentinfo                                                 */
+/* 8044D430-8044D440 000C+04 rc=2 efc=0 .bss       fragmentinfo                                                 */
 u8 fragmentinfo[12 + 4 /* padding */];
 
-/* 803628AC-803628E0 0034+00 .text      __unregister_fragment                                        */
+/* 803628AC-803628E0 0034+00 rc=1 efc=1 .text      __unregister_fragment                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__unregister_fragment) {
+extern "C" asm void __unregister_fragment() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/Gecko_ExceptionPPC/__unregister_fragment.s"
 }
 #pragma pop
 
 
-/* 803628E0-80362914 0034+00 .text      __register_fragment                                          */
+/* 803628E0-80362914 0034+00 rc=1 efc=1 .text      __register_fragment                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__register_fragment) {
+extern "C" asm void __register_fragment() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/Gecko_ExceptionPPC/__register_fragment.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

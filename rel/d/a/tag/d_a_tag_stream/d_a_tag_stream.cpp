@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagStream_c;
+
+struct daTagStream_c {
+	void create();
+	~daTagStream_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__13daTagStream_cFv();
-extern "C" extern void daTagStream_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daTagStream_cFv();
-extern "C" extern void daTagStream_Delete__FP13daTagStream_c();
-extern "C" extern void execute__13daTagStream_cFv();
-extern "C" extern void daTagStream_Execute__FP13daTagStream_c();
-extern "C" extern void daTagStream_Draw__FP13daTagStream_c();
+void daTagStream_Create(fopAc_ac_c*);
+void daTagStream_Delete(daTagStream_c*);
+void daTagStream_Execute(daTagStream_c*);
+bool daTagStream_Draw(daTagStream_c*);
+
+extern "C" void create__13daTagStream_cFv();
+extern "C" void daTagStream_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagStream_cFv();
+extern "C" void daTagStream_Delete__FP13daTagStream_c();
+extern "C" void execute__13daTagStream_cFv();
+extern "C" void daTagStream_Execute__FP13daTagStream_c();
+extern "C" bool daTagStream_Draw__FP13daTagStream_c();
 SECTION_RODATA extern const u32 lit_3721;
 SECTION_DATA extern u8 l_daTagStream_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Stream[48];
@@ -24,7 +45,9 @@ SECTION_DATA extern u8 g_profile_Tag_Stream[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -34,7 +57,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagStream_cFv) {
+asm void daTagStream_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/create__13daTagStream_cFv.s"
 }
@@ -45,7 +68,7 @@ ASM_FUNCTION(create__13daTagStream_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStream_Create__FP10fopAc_ac_c) {
+asm void daTagStream_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Create__FP10fopAc_ac_c.s"
 }
@@ -56,7 +79,7 @@ ASM_FUNCTION(daTagStream_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagStream_cFv) {
+asm daTagStream_c::~daTagStream_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/__dt__13daTagStream_cFv.s"
 }
@@ -67,7 +90,7 @@ ASM_FUNCTION(__dt__13daTagStream_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStream_Delete__FP13daTagStream_c) {
+asm void daTagStream_Delete(daTagStream_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Delete__FP13daTagStream_c.s"
 }
@@ -78,7 +101,7 @@ ASM_FUNCTION(daTagStream_Delete__FP13daTagStream_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagStream_cFv) {
+asm void daTagStream_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/execute__13daTagStream_cFv.s"
 }
@@ -89,7 +112,7 @@ ASM_FUNCTION(execute__13daTagStream_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagStream_Execute__FP13daTagStream_c) {
+asm void daTagStream_Execute(daTagStream_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Execute__FP13daTagStream_c.s"
 }
@@ -97,14 +120,9 @@ ASM_FUNCTION(daTagStream_Execute__FP13daTagStream_c) {
 
 
 /* 80D63BE0-80D63BE8 0008+00 .text      daTagStream_Draw__FP13daTagStream_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagStream_Draw__FP13daTagStream_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Draw__FP13daTagStream_c.s"
+bool daTagStream_Draw(daTagStream_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -6,132 +6,526 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMsgFlow_c (dMsgFlow_c) False/False
+// build mesg_flow_node (mesg_flow_node) False/False
+/* top-level dependencies (begin mesg_flow_node) */
+/* top-level dependencies (end mesg_flow_node) */
+struct mesg_flow_node {
+};
+
+// build mesg_flow_node_branch (mesg_flow_node_branch) False/False
+/* top-level dependencies (begin mesg_flow_node_branch) */
+/* top-level dependencies (end mesg_flow_node_branch) */
+struct mesg_flow_node_branch {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build mesg_flow_node_event (mesg_flow_node_event) False/False
+/* top-level dependencies (begin mesg_flow_node_event) */
+/* top-level dependencies (end mesg_flow_node_event) */
+struct mesg_flow_node_event {
+};
+
+/* top-level dependencies (begin dMsgFlow_c) */
+// outer dependency: mesg_flow_node
+// outer dependency: mesg_flow_node_branch
+// outer dependency: fopAc_ac_c
+// outer dependency: mesg_flow_node_event
+/* top-level dependencies (end dMsgFlow_c) */
+struct dMsgFlow_c {
+	// mesg_flow_node
+	// mesg_flow_node_branch
+	// fopAc_ac_c
+	// mesg_flow_node_event
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, s32, s32, fopAc_ac_c**);
+	/* 8024A13C */ void checkOpenDoor(fopAc_ac_c*, s32*);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
+	/* 8024A424 */ void checkEventRender(s32*, s32*, s32*, s32*);
+	/* 8024A4C4 */ void remove();
+	/* 8024A528 */ void getEventId(s32*);
+	/* 8024A538 */ void getMsgNo();
+	/* 8024A540 */ void getNowMsgNo();
+	/* 8024A548 */ void getMsg();
+	/* 8024A580 */ void setInitValue(s32);
+	/* 8024A618 */ void setInitValueGroupChange(s32, fopAc_ac_c**);
+	/* 8024A6EC */ void getMsgDataBlock(char const*);
+	/* 8024A784 */ void getInitNodeIndex(u16);
+	/* 8024A7CC */ void setNodeIndex(u16, fopAc_ac_c**);
+	/* 8024A95C */ void setSelectMsg(mesg_flow_node*, mesg_flow_node*, fopAc_ac_c*);
+	/* 8024AA50 */ void setNormalMsg(mesg_flow_node*, fopAc_ac_c*);
+	/* 8024AB30 */ void messageNodeProc(fopAc_ac_c*, fopAc_ac_c**);
+	/* 8024AD54 */ void branchNodeProc(fopAc_ac_c*, fopAc_ac_c**);
+	/* 8024ADEC */ void eventNodeProc(fopAc_ac_c*, fopAc_ac_c**);
+	/* 8024AFF8 */ void nodeProc(fopAc_ac_c*, fopAc_ac_c**);
+	/* 8024B0F0 */ void getParam(u16*, u16*, char*);
+	/* 8024B108 */ void getParam(char*, char*);
+	/* 8024B130 */ void getParam(char*);
+	/* 8024B138 */ void query001(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B180 */ void query002(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B208 */ void query003(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B250 */ void query004(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B2F8 */ void query006(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B32C */ void query007(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B45C */ void query008(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B4A4 */ void query009(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B4D0 */ void query010(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B504 */ void query011(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B54C */ void query012(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B584 */ void query013(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B5BC */ void query014(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B5F4 */ void query015(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B62C */ void query016(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B664 */ void query017(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B6A8 */ void query018(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B6EC */ void query019(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B730 */ void query020(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B774 */ void query021(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B8E4 */ void query022(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B918 */ void query023(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B954 */ void query024(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B974 */ void query025(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B9BC */ void query026(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024B9E8 */ void query027(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BA4C */ void query028(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BAA0 */ void query029(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BAE0 */ void query030(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BB18 */ void query031(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BB74 */ void query032(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BB9C */ void query033(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BBE4 */ void query034(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BC14 */ void query035(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BC3C */ void query036(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BC80 */ void query037(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BCC4 */ void query038(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BDB0 */ void query039(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BE4C */ void query040(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BF50 */ void query041(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024BFEC */ void query042(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C0A8 */ void query043(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C144 */ void query044(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C18C */ void query045(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C218 */ void query046(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C248 */ bool query047(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C250 */ void query048(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C2A0 */ void query049(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C2FC */ void query050(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C340 */ void query051(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C3A0 */ void query052(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C3D4 */ void query053(mesg_flow_node_branch*, fopAc_ac_c*, s32);
+	/* 8024C3FC */ void event000(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C488 */ void event001(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C514 */ void event002(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C550 */ void event003(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C590 */ void event004(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C5F0 */ void event005(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C654 */ void event006(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C694 */ void event007(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C6D8 */ void event008(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C744 */ void event009(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C76C */ void event010(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C7F8 */ void event011(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C884 */ bool event012(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C88C */ void event013(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C8CC */ void event014(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C994 */ void event015(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CA5C */ void event016(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CA94 */ void event017(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CBB0 */ void event018(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CCA4 */ bool event019(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CCAC */ void event020(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CD84 */ void event021(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CDAC */ void event022(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CE40 */ void event023(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CF2C */ void event024(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CF54 */ void event025(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CF9C */ void event026(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D004 */ void event027(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D3C4 */ void event028(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D500 */ void event029(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D544 */ void event030(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D5BC */ void event031(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D5EC */ void event032(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D6BC */ void event033(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D788 */ void event034(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D7C8 */ void event035(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D870 */ void event036(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D8C4 */ void event037(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D918 */ void event038(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D93C */ void event039(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024D970 */ void event040(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024DA78 */ void event041(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024DAA8 */ bool event042(mesg_flow_node_event*, fopAc_ac_c*);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build mesg_flow_node (mesg_flow_node) True/True
+// build mesg_flow_node_branch (mesg_flow_node_branch) True/True
+// build mesg_flow_node_event (mesg_flow_node_event) True/True
+// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+/* top-level dependencies (begin mDoGph_gInf_c) */
+// outer dependency: _GXColor
+/* top-level dependencies (end mDoGph_gInf_c) */
+struct mDoGph_gInf_c {
+	// _GXColor
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+};
+
+// build _GXColor (_GXColor) True/True
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(s32);
+};
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+/* top-level dependencies (begin dComIfG_play_c) */
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	/* 8002B36C */ void setItemBombNumCount(char, s16);
+};
+
+// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
+/* top-level dependencies (begin dSv_player_status_a_c) */
+/* top-level dependencies (end dSv_player_status_a_c) */
+struct dSv_player_status_a_c {
+	/* 80032A5C */ void getSelectItemIndex(s32) const;
+	/* 80032AA8 */ void getRupeeMax() const;
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(s32, char);
+	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033370 */ void setBottleItemIn(char, char);
+	/* 80033450 */ void setEmptyBottleItemIn(char);
+	/* 80033754 */ void checkInsectBottle();
+	/* 800337EC */ void checkEmptyBottle();
+	/* 80033BEC */ void checkBombBag(char);
+	/* 80033C2C */ void setWarashibeItem(char);
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033E94 */ void offFirstBit(char);
+};
+
+// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
+/* top-level dependencies (begin dSv_player_item_record_c) */
+/* top-level dependencies (end dSv_player_item_record_c) */
+struct dSv_player_item_record_c {
+	/* 80033F6C */ void setBombNum(char, char);
+	/* 80033F7C */ void getBombNum(char) const;
+};
+
+// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
+/* top-level dependencies (begin dSv_player_item_max_c) */
+/* top-level dependencies (end dSv_player_item_max_c) */
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(char) const;
+};
+
+// build dSv_light_drop_c (dSv_light_drop_c) False/False
+/* top-level dependencies (begin dSv_light_drop_c) */
+/* top-level dependencies (end dSv_light_drop_c) */
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(char) const;
+	/* 80034368 */ void onLightDropGetFlag(char);
+};
+
+// build dSv_memBit_c (dSv_memBit_c) False/False
+/* top-level dependencies (begin dSv_memBit_c) */
+/* top-level dependencies (end dSv_memBit_c) */
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(s32) const;
+	/* 80034810 */ void onSwitch(s32);
+	/* 80034838 */ void offSwitch(s32);
+	/* 80034860 */ void isSwitch(s32) const;
+	/* 800348EC */ void isItem(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+	/* 800349E0 */ void setEventReg(u16, char);
+	/* 80034A04 */ void getEventReg(u16) const;
+};
+
+// build dSv_danBit_c (dSv_danBit_c) False/False
+/* top-level dependencies (begin dSv_danBit_c) */
+/* top-level dependencies (end dSv_danBit_c) */
+struct dSv_danBit_c {
+	/* 80034B98 */ void onSwitch(s32);
+	/* 80034BC0 */ void offSwitch(s32);
+	/* 80034BE8 */ void isSwitch(s32) const;
+	/* 80034C74 */ void isItem(s32) const;
+};
+
+// build dAttention_c (dAttention_c) False/False
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+/* top-level dependencies (begin dAttention_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dAttention_c) */
+struct dAttention_c {
+	// cXyz
+	/* 80073838 */ void checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32);
+	/* 8014B010 */ void getDistTable(s32);
+};
+
+// build cXyz (cXyz) True/True
+// build daAlink_c (daAlink_c) False/False
+/* top-level dependencies (begin daAlink_c) */
+/* top-level dependencies (end daAlink_c) */
+struct daAlink_c {
+	/* 800B4938 */ void setMidnaMsg();
+};
+
+// build daPy_py_c (daPy_py_c) False/False
+/* top-level dependencies (begin daPy_py_c) */
+/* top-level dependencies (end daPy_py_c) */
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
+	/* 8015F954 */ void setMidnaMotionNum(s32);
+	/* 8015F968 */ void setMidnaFaceNum(s32);
+};
+
+// build dShopSystem_c (dShopSystem_c) False/False
+/* top-level dependencies (begin dShopSystem_c) */
+/* top-level dependencies (end dShopSystem_c) */
+struct dShopSystem_c {
+	/* 801975F8 */ void isFlag(s32);
+	/* 8019A354 */ void setSoldOutFlag();
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+/* top-level dependencies (begin dMeter2Info_c) */
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	/* 8021E0C4 */ void resetMiniGameItem(bool);
+};
+
+// build dMsgObject_c (dMsgObject_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dMsgObject_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	// fopAc_ac_c
+	/* 802370FC */ void isMidonaMessage();
+	/* 80237980 */ void isKillMessageFlag();
+	/* 80237994 */ void onKillMessageFlag();
+	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
+	/* 80237A88 */ void setNowTalkFlowNo(s16);
+	/* 8023803C */ void changeFlowGroup(s32);
+	/* 80238098 */ void endFlowGroup();
+	/* 80238174 */ void getMsgDtPtr();
+	/* 8023822C */ void getStatus();
+	/* 8023846C */ void setSelectCursorPos(char);
+	/* 802384D8 */ void setArrowNum(char);
+	/* 80238544 */ void setSelectWordFlag(char);
+	/* 802385B4 */ void getSelectBombBagID();
+	/* 802385E0 */ void getSelectBombPrice();
+	/* 8023860C */ void setEquipBombInfo();
+	/* 8023864C */ void setSelectCancelPos(char);
+};
+
+// build Vec (Vec) True/True
+// build cSAngle (cSAngle) False/False
+/* top-level dependencies (begin cSAngle) */
+/* top-level dependencies (end cSAngle) */
+struct cSAngle {
+	/* 80271228 */ void operator-(s16) const;
+};
+
+// build cSGlobe (cSGlobe) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cSGlobe) */
+// outer dependency: cXyz
+/* top-level dependencies (end cSGlobe) */
+struct cSGlobe {
+	// cXyz
+	/* 80271880 */ cSGlobe(cXyz const&);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// Vec
+	/* 802ADB14 */ void messageSePlay(u16, Vec*, char);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10dMsgFlow_cFv();
-extern "C" extern void __dt__10dMsgFlow_cFv();
-extern "C" extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
-extern "C" extern void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi();
-extern "C" extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
-extern "C" extern void checkEventRender__10dMsgFlow_cFPiPiPiPi();
-extern "C" extern void remove__10dMsgFlow_cFv();
-extern "C" extern void getEventId__10dMsgFlow_cFPi();
-extern "C" extern void getMsgNo__10dMsgFlow_cFv();
-extern "C" extern void getNowMsgNo__10dMsgFlow_cFv();
-extern "C" extern void getMsg__10dMsgFlow_cFv();
-extern "C" extern void setInitValue__10dMsgFlow_cFi();
-extern "C" extern void setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c();
-extern "C" extern void getMsgDataBlock__10dMsgFlow_cFPCc();
-extern "C" extern void getInitNodeIndex__10dMsgFlow_cFUs();
-extern "C" extern void setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c();
-extern "C" extern void setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c();
-extern "C" extern void setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c();
-extern "C" extern void messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" extern void branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" extern void eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" extern void nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" extern void getParam__10dMsgFlow_cFPUsPUsPUc();
-extern "C" extern void getParam__10dMsgFlow_cFPUcPUc();
-extern "C" extern void getParam__10dMsgFlow_cFPUc();
-extern "C" extern void query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" extern void event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" extern void func_8024DAB0();
-extern "C" extern void __sinit_d_msg_flow_cpp();
+extern "C" static void func_8024DAB0();
+extern "C" void __sinit_d_msg_flow_cpp();
+
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void checkEventRender__10dMsgFlow_cFPiPiPiPi();
+extern "C" void remove__10dMsgFlow_cFv();
+extern "C" void getEventId__10dMsgFlow_cFPi();
+extern "C" void getMsgNo__10dMsgFlow_cFv();
+extern "C" void getNowMsgNo__10dMsgFlow_cFv();
+extern "C" void getMsg__10dMsgFlow_cFv();
+extern "C" void setInitValue__10dMsgFlow_cFi();
+extern "C" void setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c();
+extern "C" void getMsgDataBlock__10dMsgFlow_cFPCc();
+extern "C" void getInitNodeIndex__10dMsgFlow_cFUs();
+extern "C" void setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c();
+extern "C" void setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c();
+extern "C" void setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c();
+extern "C" void messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
+extern "C" void branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
+extern "C" void eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
+extern "C" void nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
+extern "C" void getParam__10dMsgFlow_cFPUsPUsPUc();
+extern "C" void getParam__10dMsgFlow_cFPUcPUc();
+extern "C" void getParam__10dMsgFlow_cFPUc();
+extern "C" void query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" bool query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" bool event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" bool event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" bool event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
+extern "C" static void func_8024DAB0();
+extern "C" void __sinit_d_msg_flow_cpp();
 SECTION_RODATA extern const u8 d_msg_d_msg_flow__stringBase0[24];
 SECTION_DATA extern u8 d_msg_d_msg_flow__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_msg_d_msg_flow__lit_4646[22];
@@ -251,112 +645,157 @@ SECTION_SBSS2 extern u8 data_80456BA4[4];
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
-extern "C" extern void fopMsgM_SearchByID__FUi();
-extern "C" extern void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
-extern "C" extern void fopMsgM_messageSet__FUlUl();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void setItemBombNumCount__14dComIfG_play_cFUcs();
-extern "C" extern void dComIfGp_getReverb__Fi();
-extern "C" extern void dComIfGs_onZoneSwitch__Fii();
-extern "C" extern void dComIfGs_offZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isZoneSwitch__Fii();
-extern "C" extern void dComIfGs_onOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_offOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isZoneItem__Fii();
-extern "C" extern void dComIfGs_isOneZoneItem__Fii();
-extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" extern void dComIfGs_setMixItemIndex__FiUc();
-extern "C" extern void dComIfGs_getMixItemIndex__Fi();
-extern "C" extern void dComIfGp_setSelectItem__Fi();
-extern "C" extern void dComIfGs_checkGetInsectNum__Fv();
-extern "C" extern void daNpcKakashi_getSwdTutorialStep__Fv();
-extern "C" extern void daNpcKakashi_getSwdTutorialResult__Fv();
-extern "C" extern void daNpcKakashi_getSuccessCount__Fv();
-extern "C" extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" extern void getRupeeMax__21dSv_player_status_a_cCFv();
-extern "C" extern void setItem__17dSv_player_item_cFiUc();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void setBottleItemIn__17dSv_player_item_cFUcUc();
-extern "C" extern void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern "C" extern void checkInsectBottle__17dSv_player_item_cFv();
-extern "C" extern void checkEmptyBottle__17dSv_player_item_cFv();
-extern "C" extern void checkBombBag__17dSv_player_item_cFUc();
-extern "C" extern void setWarashibeItem__17dSv_player_item_cFUc();
-extern "C" extern void offFirstBit__21dSv_player_get_item_cFUc();
-extern "C" extern void setBombNum__24dSv_player_item_record_cFUcUc();
-extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" extern void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" extern void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern "C" extern void isTbox__12dSv_memBit_cCFi();
-extern "C" extern void onSwitch__12dSv_memBit_cFi();
-extern "C" extern void offSwitch__12dSv_memBit_cFi();
-extern "C" extern void isSwitch__12dSv_memBit_cCFi();
-extern "C" extern void isItem__12dSv_memBit_cCFi();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void offEventBit__11dSv_event_cFUs();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void setEventReg__11dSv_event_cFUsUc();
-extern "C" extern void getEventReg__11dSv_event_cCFUs();
-extern "C" extern void onSwitch__12dSv_danBit_cFi();
-extern "C" extern void offSwitch__12dSv_danBit_cFi();
-extern "C" extern void isSwitch__12dSv_danBit_cCFi();
-extern "C" extern void isItem__12dSv_danBit_cCFi();
-extern "C" extern void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
-extern "C" extern void execItemGet__FUc();
-extern "C" extern void checkItemGet__FUci();
-extern "C" extern void setMidnaMsg__9daAlink_cFv();
-extern "C" extern void getDistTable__12dAttention_cFi();
-extern "C" extern void getAttentionOffsetY__9daPy_py_cFv();
-extern "C" extern void setMidnaMotionNum__9daPy_py_cFi();
-extern "C" extern void setMidnaFaceNum__9daPy_py_cFi();
-extern "C" extern void isFlag__13dShopSystem_cFi();
-extern "C" extern void setSoldOutFlag__13dShopSystem_cFv();
-extern "C" extern void resetMiniGameItem__13dMeter2Info_cFb();
-extern "C" extern void dMeter2Info_getNewLetterNum__Fv();
-extern "C" extern void dMeter2Info_setNewLetterSender__Fv();
-extern "C" extern void dMeter2Info_recieveLetter__Fv();
-extern "C" extern void isMidonaMessage__12dMsgObject_cFv();
-extern "C" extern void isKillMessageFlag__12dMsgObject_cFv();
-extern "C" extern void onKillMessageFlag__12dMsgObject_cFv();
-extern "C" extern void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" extern void setNowTalkFlowNo__12dMsgObject_cFs();
-extern "C" extern void changeFlowGroup__12dMsgObject_cFl();
-extern "C" extern void endFlowGroup__12dMsgObject_cFv();
-extern "C" extern void getMsgDtPtr__12dMsgObject_cFv();
-extern "C" extern void getStatus__12dMsgObject_cFv();
-extern "C" extern void setSelectCursorPos__12dMsgObject_cFUc();
-extern "C" extern void setArrowNum__12dMsgObject_cFUc();
-extern "C" extern void setSelectWordFlag__12dMsgObject_cFUc();
-extern "C" extern void getSelectBombBagID__12dMsgObject_cFv();
-extern "C" extern void getSelectBombPrice__12dMsgObject_cFv();
-extern "C" extern void setEquipBombInfo__12dMsgObject_cFv();
-extern "C" extern void setSelectCancelPos__12dMsgObject_cFUc();
-extern "C" extern void dMsgObject_getFundRaising__Fv();
-extern "C" extern void dMsgObject_setFundRaising__FUs();
-extern "C" extern void dMsgObject_getOffering__Fv();
-extern "C" extern void dMsgObject_addOffering__Fs();
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void cM_rndF__Ff();
-extern "C" extern void __mi__7cSAngleCFs();
-extern "C" extern void __ct__7cSGlobeFRC4cXyz();
-extern "C" extern void messageSePlay__7Z2SeMgrFUsP3VecSc();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+SECTION_INIT void memcpy();
+void fopMsgM_SearchByID(s32);
+void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
+void fopMsgM_messageSet(u32, u32);
+void dComIfGp_getReverb(s32);
+void dComIfGs_onZoneSwitch(s32, s32);
+void dComIfGs_offZoneSwitch(s32, s32);
+void dComIfGs_isZoneSwitch(s32, s32);
+void dComIfGs_onOneZoneSwitch(s32, s32);
+void dComIfGs_offOneZoneSwitch(s32, s32);
+void dComIfGs_isOneZoneSwitch(s32, s32);
+void dComIfGs_isZoneItem(s32, s32);
+void dComIfGs_isOneZoneItem(s32, s32);
+void dComIfGs_setSelectItemIndex(s32, char);
+void dComIfGs_setMixItemIndex(s32, char);
+void dComIfGs_getMixItemIndex(s32);
+void dComIfGp_setSelectItem(s32);
+void dComIfGs_checkGetInsectNum();
+void daNpcKakashi_getSwdTutorialStep();
+void daNpcKakashi_getSwdTutorialResult();
+void daNpcKakashi_getSuccessCount();
+void execItemGet(char);
+void checkItemGet(char, s32);
+void dMeter2Info_getNewLetterNum();
+void dMeter2Info_setNewLetterSender();
+void dMeter2Info_recieveLetter();
+void dMsgObject_getFundRaising();
+void dMsgObject_setFundRaising(u16);
+void dMsgObject_getOffering();
+void dMsgObject_addOffering(s16);
+void cM_rndF(f32);
+void operator delete(void*);
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+SECTION_INIT void memcpy();
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGs_onZoneSwitch__Fii();
+extern "C" void dComIfGs_offZoneSwitch__Fii();
+extern "C" void dComIfGs_isZoneSwitch__Fii();
+extern "C" void dComIfGs_onOneZoneSwitch__Fii();
+extern "C" void dComIfGs_offOneZoneSwitch__Fii();
+extern "C" void dComIfGs_isOneZoneSwitch__Fii();
+extern "C" void dComIfGs_isZoneItem__Fii();
+extern "C" void dComIfGs_isOneZoneItem__Fii();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" void dComIfGp_setSelectItem__Fi();
+extern "C" void dComIfGs_checkGetInsectNum__Fv();
+extern "C" void daNpcKakashi_getSwdTutorialStep__Fv();
+extern "C" void daNpcKakashi_getSwdTutorialResult__Fv();
+extern "C" void daNpcKakashi_getSuccessCount__Fv();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
+extern "C" void checkInsectBottle__17dSv_player_item_cFv();
+extern "C" void checkEmptyBottle__17dSv_player_item_cFv();
+extern "C" void checkBombBag__17dSv_player_item_cFUc();
+extern "C" void setWarashibeItem__17dSv_player_item_cFUc();
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void onSwitch__12dSv_memBit_cFi();
+extern "C" void offSwitch__12dSv_memBit_cFi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void isItem__12dSv_memBit_cCFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setEventReg__11dSv_event_cFUsUc();
+extern "C" void getEventReg__11dSv_event_cCFUs();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void offSwitch__12dSv_danBit_cFi();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void isItem__12dSv_danBit_cCFi();
+extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
+extern "C" void execItemGet__FUc();
+extern "C" void checkItemGet__FUci();
+extern "C" void setMidnaMsg__9daAlink_cFv();
+extern "C" void getDistTable__12dAttention_cFi();
+extern "C" void getAttentionOffsetY__9daPy_py_cFv();
+extern "C" void setMidnaMotionNum__9daPy_py_cFi();
+extern "C" void setMidnaFaceNum__9daPy_py_cFi();
+extern "C" void isFlag__13dShopSystem_cFi();
+extern "C" void setSoldOutFlag__13dShopSystem_cFv();
+extern "C" void resetMiniGameItem__13dMeter2Info_cFb();
+extern "C" void dMeter2Info_getNewLetterNum__Fv();
+extern "C" void dMeter2Info_setNewLetterSender__Fv();
+extern "C" void dMeter2Info_recieveLetter__Fv();
+extern "C" void isMidonaMessage__12dMsgObject_cFv();
+extern "C" void isKillMessageFlag__12dMsgObject_cFv();
+extern "C" void onKillMessageFlag__12dMsgObject_cFv();
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" void setNowTalkFlowNo__12dMsgObject_cFs();
+extern "C" void changeFlowGroup__12dMsgObject_cFl();
+extern "C" void endFlowGroup__12dMsgObject_cFv();
+extern "C" void getMsgDtPtr__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void setSelectCursorPos__12dMsgObject_cFUc();
+extern "C" void setArrowNum__12dMsgObject_cFUc();
+extern "C" void setSelectWordFlag__12dMsgObject_cFUc();
+extern "C" void getSelectBombBagID__12dMsgObject_cFv();
+extern "C" void getSelectBombPrice__12dMsgObject_cFv();
+extern "C" void setEquipBombInfo__12dMsgObject_cFv();
+extern "C" void setSelectCancelPos__12dMsgObject_cFUc();
+extern "C" void dMsgObject_getFundRaising__Fv();
+extern "C" void dMsgObject_setFundRaising__FUs();
+extern "C" void dMsgObject_getOffering__Fv();
+extern "C" void dMsgObject_addOffering__Fs();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_rndF__Ff();
+extern "C" void __mi__7cSAngleCFs();
+extern "C" void __ct__7cSGlobeFRC4cXyz();
+extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -373,12 +812,12 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C14B8-803C14C4 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803C14B8-803C14C4 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_msg_d_msg_flow__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C14C4-803C151C 0058+00 .data      @4646                                                        */
+/* 803C14C4-803C151C 0058+00 rc=1 efc=0 .data      @4646                                                        */
 void* d_msg_d_msg_flow__lit_4646[22] = {
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x140),
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x140),
@@ -404,7 +843,7 @@ void* d_msg_d_msg_flow__lit_4646[22] = {
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x140),
 };
 
-/* 803C151C-803C1584 0068+00 .data      @4645                                                        */
+/* 803C151C-803C1584 0068+00 rc=1 efc=0 .data      @4645                                                        */
 void* d_msg_d_msg_flow__lit_4645[26] = {
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xCC),
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xD0),
@@ -434,7 +873,7 @@ void* d_msg_d_msg_flow__lit_4645[26] = {
 	(void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xCC),
 };
 
-/* 803C1584-803C15D0 004C+00 .data      @4936                                                        */
+/* 803C1584-803C15D0 004C+00 rc=1 efc=0 .data      @4936                                                        */
 void* lit_4936[19] = {
 	(void*)(((char*)messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c)+0x208),
 	(void*)(((char*)messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c)+0x208),
@@ -457,378 +896,378 @@ void* lit_4936[19] = {
 	(void*)(((char*)messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c)+0x1BC),
 };
 
-/* 803C15D0-803C15DC 000C+00 .data      @5023                                                        */
+/* 803C15D0-803C15DC 000C+00 rc=0 efc=0 .data      @5023                                                        */
 void* d_msg_d_msg_flow__lit_5023[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15DC-803C15E8 000C+00 .data      @5024                                                        */
+/* 803C15DC-803C15E8 000C+00 rc=0 efc=0 .data      @5024                                                        */
 void* d_msg_d_msg_flow__lit_5024[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15E8-803C15F4 000C+00 .data      @5025                                                        */
+/* 803C15E8-803C15F4 000C+00 rc=0 efc=0 .data      @5025                                                        */
 void* d_msg_d_msg_flow__lit_5025[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15F4-803C1600 000C+00 .data      @5026                                                        */
+/* 803C15F4-803C1600 000C+00 rc=0 efc=0 .data      @5026                                                        */
 void* d_msg_d_msg_flow__lit_5026[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1600-803C160C 000C+00 .data      @5027                                                        */
+/* 803C1600-803C160C 000C+00 rc=0 efc=0 .data      @5027                                                        */
 void* d_msg_d_msg_flow__lit_5027[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C160C-803C1618 000C+00 .data      @5028                                                        */
+/* 803C160C-803C1618 000C+00 rc=0 efc=0 .data      @5028                                                        */
 void* d_msg_d_msg_flow__lit_5028[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1618-803C1624 000C+00 .data      @5029                                                        */
+/* 803C1618-803C1624 000C+00 rc=0 efc=0 .data      @5029                                                        */
 void* d_msg_d_msg_flow__lit_5029[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1624-803C1630 000C+00 .data      @5030                                                        */
+/* 803C1624-803C1630 000C+00 rc=0 efc=0 .data      @5030                                                        */
 void* d_msg_d_msg_flow__lit_5030[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1630-803C163C 000C+00 .data      @5031                                                        */
+/* 803C1630-803C163C 000C+00 rc=0 efc=0 .data      @5031                                                        */
 void* d_msg_d_msg_flow__lit_5031[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C163C-803C1648 000C+00 .data      @5032                                                        */
+/* 803C163C-803C1648 000C+00 rc=0 efc=0 .data      @5032                                                        */
 void* lit_5032[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1648-803C1654 000C+00 .data      @5033                                                        */
+/* 803C1648-803C1654 000C+00 rc=0 efc=0 .data      @5033                                                        */
 void* lit_5033[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1654-803C1660 000C+00 .data      @5034                                                        */
+/* 803C1654-803C1660 000C+00 rc=0 efc=0 .data      @5034                                                        */
 void* lit_5034[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1660-803C166C 000C+00 .data      @5035                                                        */
+/* 803C1660-803C166C 000C+00 rc=0 efc=0 .data      @5035                                                        */
 void* lit_5035[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C166C-803C1678 000C+00 .data      @5036                                                        */
+/* 803C166C-803C1678 000C+00 rc=0 efc=0 .data      @5036                                                        */
 void* lit_5036[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1678-803C1684 000C+00 .data      @5037                                                        */
+/* 803C1678-803C1684 000C+00 rc=0 efc=0 .data      @5037                                                        */
 void* lit_5037[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1684-803C1690 000C+00 .data      @5038                                                        */
+/* 803C1684-803C1690 000C+00 rc=0 efc=0 .data      @5038                                                        */
 void* d_msg_d_msg_flow__lit_5038[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1690-803C169C 000C+00 .data      @5039                                                        */
+/* 803C1690-803C169C 000C+00 rc=0 efc=0 .data      @5039                                                        */
 void* lit_5039[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C169C-803C16A8 000C+00 .data      @5040                                                        */
+/* 803C169C-803C16A8 000C+00 rc=0 efc=0 .data      @5040                                                        */
 void* lit_5040[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16A8-803C16B4 000C+00 .data      @5041                                                        */
+/* 803C16A8-803C16B4 000C+00 rc=0 efc=0 .data      @5041                                                        */
 void* lit_5041[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16B4-803C16C0 000C+00 .data      @5042                                                        */
+/* 803C16B4-803C16C0 000C+00 rc=0 efc=0 .data      @5042                                                        */
 void* lit_5042[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16C0-803C16CC 000C+00 .data      @5043                                                        */
+/* 803C16C0-803C16CC 000C+00 rc=0 efc=0 .data      @5043                                                        */
 void* lit_5043[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16CC-803C16D8 000C+00 .data      @5044                                                        */
+/* 803C16CC-803C16D8 000C+00 rc=0 efc=0 .data      @5044                                                        */
 void* d_msg_d_msg_flow__lit_5044[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16D8-803C16E4 000C+00 .data      @5045                                                        */
+/* 803C16D8-803C16E4 000C+00 rc=0 efc=0 .data      @5045                                                        */
 void* lit_5045[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16E4-803C16F0 000C+00 .data      @5046                                                        */
+/* 803C16E4-803C16F0 000C+00 rc=0 efc=0 .data      @5046                                                        */
 void* lit_5046[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16F0-803C16FC 000C+00 .data      @5047                                                        */
+/* 803C16F0-803C16FC 000C+00 rc=0 efc=0 .data      @5047                                                        */
 void* lit_5047[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16FC-803C1708 000C+00 .data      @5048                                                        */
+/* 803C16FC-803C1708 000C+00 rc=0 efc=0 .data      @5048                                                        */
 void* lit_5048[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1708-803C1714 000C+00 .data      @5049                                                        */
+/* 803C1708-803C1714 000C+00 rc=0 efc=0 .data      @5049                                                        */
 void* lit_5049[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1714-803C1720 000C+00 .data      @5050                                                        */
+/* 803C1714-803C1720 000C+00 rc=0 efc=0 .data      @5050                                                        */
 void* d_msg_d_msg_flow__lit_5050[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1720-803C172C 000C+00 .data      @5051                                                        */
+/* 803C1720-803C172C 000C+00 rc=0 efc=0 .data      @5051                                                        */
 void* d_msg_d_msg_flow__lit_5051[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C172C-803C1738 000C+00 .data      @5052                                                        */
+/* 803C172C-803C1738 000C+00 rc=0 efc=0 .data      @5052                                                        */
 void* d_msg_d_msg_flow__lit_5052[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1738-803C1744 000C+00 .data      @5053                                                        */
+/* 803C1738-803C1744 000C+00 rc=0 efc=0 .data      @5053                                                        */
 void* d_msg_d_msg_flow__lit_5053[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1744-803C1750 000C+00 .data      @5054                                                        */
+/* 803C1744-803C1750 000C+00 rc=0 efc=0 .data      @5054                                                        */
 void* d_msg_d_msg_flow__lit_5054[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1750-803C175C 000C+00 .data      @5055                                                        */
+/* 803C1750-803C175C 000C+00 rc=0 efc=0 .data      @5055                                                        */
 void* d_msg_d_msg_flow__lit_5055[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C175C-803C1768 000C+00 .data      @5056                                                        */
+/* 803C175C-803C1768 000C+00 rc=0 efc=0 .data      @5056                                                        */
 void* lit_5056[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1768-803C1774 000C+00 .data      @5057                                                        */
+/* 803C1768-803C1774 000C+00 rc=0 efc=0 .data      @5057                                                        */
 void* d_msg_d_msg_flow__lit_5057[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1774-803C1780 000C+00 .data      @5058                                                        */
+/* 803C1774-803C1780 000C+00 rc=0 efc=0 .data      @5058                                                        */
 void* lit_5058[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1780-803C178C 000C+00 .data      @5059                                                        */
+/* 803C1780-803C178C 000C+00 rc=0 efc=0 .data      @5059                                                        */
 void* lit_5059[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C178C-803C1798 000C+00 .data      @5060                                                        */
+/* 803C178C-803C1798 000C+00 rc=0 efc=0 .data      @5060                                                        */
 void* d_msg_d_msg_flow__lit_5060[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1798-803C17A4 000C+00 .data      @5061                                                        */
+/* 803C1798-803C17A4 000C+00 rc=0 efc=0 .data      @5061                                                        */
 void* d_msg_d_msg_flow__lit_5061[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17A4-803C17B0 000C+00 .data      @5062                                                        */
+/* 803C17A4-803C17B0 000C+00 rc=0 efc=0 .data      @5062                                                        */
 void* d_msg_d_msg_flow__lit_5062[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17B0-803C17BC 000C+00 .data      @5063                                                        */
+/* 803C17B0-803C17BC 000C+00 rc=0 efc=0 .data      @5063                                                        */
 void* lit_5063[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17BC-803C17C8 000C+00 .data      @5064                                                        */
+/* 803C17BC-803C17C8 000C+00 rc=0 efc=0 .data      @5064                                                        */
 void* lit_5064[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17C8-803C17D4 000C+00 .data      @5065                                                        */
+/* 803C17C8-803C17D4 000C+00 rc=0 efc=0 .data      @5065                                                        */
 void* d_msg_d_msg_flow__lit_5065[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17D4-803C17E0 000C+00 .data      @5066                                                        */
+/* 803C17D4-803C17E0 000C+00 rc=0 efc=0 .data      @5066                                                        */
 void* d_msg_d_msg_flow__lit_5066[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17E0-803C17EC 000C+00 .data      @5067                                                        */
+/* 803C17E0-803C17EC 000C+00 rc=0 efc=0 .data      @5067                                                        */
 void* lit_5067[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17EC-803C17F8 000C+00 .data      @5068                                                        */
+/* 803C17EC-803C17F8 000C+00 rc=0 efc=0 .data      @5068                                                        */
 void* lit_5068[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17F8-803C1804 000C+00 .data      @5069                                                        */
+/* 803C17F8-803C1804 000C+00 rc=0 efc=0 .data      @5069                                                        */
 void* lit_5069[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1804-803C1810 000C+00 .data      @5070                                                        */
+/* 803C1804-803C1810 000C+00 rc=0 efc=0 .data      @5070                                                        */
 void* lit_5070[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1810-803C181C 000C+00 .data      @5071                                                        */
+/* 803C1810-803C181C 000C+00 rc=0 efc=0 .data      @5071                                                        */
 void* lit_5071[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C181C-803C1828 000C+00 .data      @5072                                                        */
+/* 803C181C-803C1828 000C+00 rc=0 efc=0 .data      @5072                                                        */
 void* lit_5072[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1828-803C1834 000C+00 .data      @5073                                                        */
+/* 803C1828-803C1834 000C+00 rc=0 efc=0 .data      @5073                                                        */
 void* lit_5073[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1834-803C1840 000C+00 .data      @5074                                                        */
+/* 803C1834-803C1840 000C+00 rc=0 efc=0 .data      @5074                                                        */
 void* d_msg_d_msg_flow__lit_5074[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1840-803C184C 000C+00 .data      @5075                                                        */
+/* 803C1840-803C184C 000C+00 rc=0 efc=0 .data      @5075                                                        */
 void* lit_5075[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C184C-803C1AC8 027C+00 .data      mQueryList__10dMsgFlow_c                                     */
+/* 803C184C-803C1AC8 027C+00 rc=2 efc=0 .data      mQueryList__10dMsgFlow_c                                     */
 u8 mQueryList__10dMsgFlow_c[636] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -872,308 +1311,308 @@ u8 mQueryList__10dMsgFlow_c[636] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C1AC8-803C1AD4 000C+00 .data      @5944                                                        */
+/* 803C1AC8-803C1AD4 000C+00 rc=0 efc=0 .data      @5944                                                        */
 void* d_msg_d_msg_flow__lit_5944[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AD4-803C1AE0 000C+00 .data      @5945                                                        */
+/* 803C1AD4-803C1AE0 000C+00 rc=0 efc=0 .data      @5945                                                        */
 void* d_msg_d_msg_flow__lit_5945[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AE0-803C1AEC 000C+00 .data      @5946                                                        */
+/* 803C1AE0-803C1AEC 000C+00 rc=0 efc=0 .data      @5946                                                        */
 void* lit_5946[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AEC-803C1AF8 000C+00 .data      @5947                                                        */
+/* 803C1AEC-803C1AF8 000C+00 rc=0 efc=0 .data      @5947                                                        */
 void* d_msg_d_msg_flow__lit_5947[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AF8-803C1B04 000C+00 .data      @5948                                                        */
+/* 803C1AF8-803C1B04 000C+00 rc=0 efc=0 .data      @5948                                                        */
 void* d_msg_d_msg_flow__lit_5948[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B04-803C1B10 000C+00 .data      @5949                                                        */
+/* 803C1B04-803C1B10 000C+00 rc=0 efc=0 .data      @5949                                                        */
 void* d_msg_d_msg_flow__lit_5949[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B10-803C1B1C 000C+00 .data      @5950                                                        */
+/* 803C1B10-803C1B1C 000C+00 rc=0 efc=0 .data      @5950                                                        */
 void* d_msg_d_msg_flow__lit_5950[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B1C-803C1B28 000C+00 .data      @5951                                                        */
+/* 803C1B1C-803C1B28 000C+00 rc=0 efc=0 .data      @5951                                                        */
 void* lit_5951[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B28-803C1B34 000C+00 .data      @5952                                                        */
+/* 803C1B28-803C1B34 000C+00 rc=0 efc=0 .data      @5952                                                        */
 void* lit_5952[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B34-803C1B40 000C+00 .data      @5953                                                        */
+/* 803C1B34-803C1B40 000C+00 rc=0 efc=0 .data      @5953                                                        */
 void* lit_5953[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B40-803C1B4C 000C+00 .data      @5954                                                        */
+/* 803C1B40-803C1B4C 000C+00 rc=0 efc=0 .data      @5954                                                        */
 void* lit_5954[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B4C-803C1B58 000C+00 .data      @5955                                                        */
+/* 803C1B4C-803C1B58 000C+00 rc=0 efc=0 .data      @5955                                                        */
 void* lit_5955[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B58-803C1B64 000C+00 .data      @5956                                                        */
+/* 803C1B58-803C1B64 000C+00 rc=0 efc=0 .data      @5956                                                        */
 void* lit_5956[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B64-803C1B70 000C+00 .data      @5957                                                        */
+/* 803C1B64-803C1B70 000C+00 rc=0 efc=0 .data      @5957                                                        */
 void* lit_5957[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B70-803C1B7C 000C+00 .data      @5958                                                        */
+/* 803C1B70-803C1B7C 000C+00 rc=0 efc=0 .data      @5958                                                        */
 void* lit_5958[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B7C-803C1B88 000C+00 .data      @5959                                                        */
+/* 803C1B7C-803C1B88 000C+00 rc=0 efc=0 .data      @5959                                                        */
 void* d_msg_d_msg_flow__lit_5959[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B88-803C1B94 000C+00 .data      @5960                                                        */
+/* 803C1B88-803C1B94 000C+00 rc=0 efc=0 .data      @5960                                                        */
 void* lit_5960[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B94-803C1BA0 000C+00 .data      @5961                                                        */
+/* 803C1B94-803C1BA0 000C+00 rc=0 efc=0 .data      @5961                                                        */
 void* lit_5961[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BA0-803C1BAC 000C+00 .data      @5962                                                        */
+/* 803C1BA0-803C1BAC 000C+00 rc=0 efc=0 .data      @5962                                                        */
 void* d_msg_d_msg_flow__lit_5962[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BAC-803C1BB8 000C+00 .data      @5963                                                        */
+/* 803C1BAC-803C1BB8 000C+00 rc=0 efc=0 .data      @5963                                                        */
 void* lit_5963[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BB8-803C1BC4 000C+00 .data      @5964                                                        */
+/* 803C1BB8-803C1BC4 000C+00 rc=0 efc=0 .data      @5964                                                        */
 void* lit_5964[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BC4-803C1BD0 000C+00 .data      @5965                                                        */
+/* 803C1BC4-803C1BD0 000C+00 rc=0 efc=0 .data      @5965                                                        */
 void* lit_5965[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BD0-803C1BDC 000C+00 .data      @5966                                                        */
+/* 803C1BD0-803C1BDC 000C+00 rc=0 efc=0 .data      @5966                                                        */
 void* lit_5966[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BDC-803C1BE8 000C+00 .data      @5967                                                        */
+/* 803C1BDC-803C1BE8 000C+00 rc=0 efc=0 .data      @5967                                                        */
 void* lit_5967[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BE8-803C1BF4 000C+00 .data      @5968                                                        */
+/* 803C1BE8-803C1BF4 000C+00 rc=0 efc=0 .data      @5968                                                        */
 void* lit_5968[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BF4-803C1C00 000C+00 .data      @5969                                                        */
+/* 803C1BF4-803C1C00 000C+00 rc=0 efc=0 .data      @5969                                                        */
 void* lit_5969[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C00-803C1C0C 000C+00 .data      @5970                                                        */
+/* 803C1C00-803C1C0C 000C+00 rc=0 efc=0 .data      @5970                                                        */
 void* lit_5970[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C0C-803C1C18 000C+00 .data      @5971                                                        */
+/* 803C1C0C-803C1C18 000C+00 rc=0 efc=0 .data      @5971                                                        */
 void* lit_5971[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C18-803C1C24 000C+00 .data      @5972                                                        */
+/* 803C1C18-803C1C24 000C+00 rc=0 efc=0 .data      @5972                                                        */
 void* lit_5972[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C24-803C1C30 000C+00 .data      @5973                                                        */
+/* 803C1C24-803C1C30 000C+00 rc=0 efc=0 .data      @5973                                                        */
 void* lit_5973[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C30-803C1C3C 000C+00 .data      @5974                                                        */
+/* 803C1C30-803C1C3C 000C+00 rc=0 efc=0 .data      @5974                                                        */
 void* lit_5974[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C3C-803C1C48 000C+00 .data      @5975                                                        */
+/* 803C1C3C-803C1C48 000C+00 rc=0 efc=0 .data      @5975                                                        */
 void* lit_5975[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C48-803C1C54 000C+00 .data      @5976                                                        */
+/* 803C1C48-803C1C54 000C+00 rc=0 efc=0 .data      @5976                                                        */
 void* lit_5976[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C54-803C1C60 000C+00 .data      @5977                                                        */
+/* 803C1C54-803C1C60 000C+00 rc=0 efc=0 .data      @5977                                                        */
 void* lit_5977[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C60-803C1C6C 000C+00 .data      @5978                                                        */
+/* 803C1C60-803C1C6C 000C+00 rc=0 efc=0 .data      @5978                                                        */
 void* lit_5978[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C6C-803C1C78 000C+00 .data      @5979                                                        */
+/* 803C1C6C-803C1C78 000C+00 rc=0 efc=0 .data      @5979                                                        */
 void* lit_5979[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C78-803C1C84 000C+00 .data      @5980                                                        */
+/* 803C1C78-803C1C84 000C+00 rc=0 efc=0 .data      @5980                                                        */
 void* lit_5980[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C84-803C1C90 000C+00 .data      @5981                                                        */
+/* 803C1C84-803C1C90 000C+00 rc=0 efc=0 .data      @5981                                                        */
 void* lit_5981[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C90-803C1C9C 000C+00 .data      @5982                                                        */
+/* 803C1C90-803C1C9C 000C+00 rc=0 efc=0 .data      @5982                                                        */
 void* lit_5982[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C9C-803C1CA8 000C+00 .data      @5983                                                        */
+/* 803C1C9C-803C1CA8 000C+00 rc=0 efc=0 .data      @5983                                                        */
 void* lit_5983[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CA8-803C1CB4 000C+00 .data      @5984                                                        */
+/* 803C1CA8-803C1CB4 000C+00 rc=0 efc=0 .data      @5984                                                        */
 void* d_msg_d_msg_flow__lit_5984[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CB4-803C1CC0 000C+00 .data      @5985                                                        */
+/* 803C1CB4-803C1CC0 000C+00 rc=0 efc=0 .data      @5985                                                        */
 void* d_msg_d_msg_flow__lit_5985[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CC0-803C1CCC 000C+00 .data      @5986                                                        */
+/* 803C1CC0-803C1CCC 000C+00 rc=0 efc=0 .data      @5986                                                        */
 void* d_msg_d_msg_flow__lit_5986[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CCC-803C1ED0 0204+00 .data      mEventList__10dMsgFlow_c                                     */
+/* 803C1CCC-803C1ED0 0204+00 rc=1 efc=0 .data      mEventList__10dMsgFlow_c                                     */
 u8 mEventList__10dMsgFlow_c[516] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1210,7 +1649,7 @@ u8 mEventList__10dMsgFlow_c[516] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C1ED0-803C1EF0 0020+00 .data      @6324                                                        */
+/* 803C1ED0-803C1EF0 0020+00 rc=1 efc=0 .data      @6324                                                        */
 void* lit_6324[8] = {
 	(void*)(((char*)event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xD8),
 	(void*)(((char*)event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x34),
@@ -1222,7 +1661,7 @@ void* lit_6324[8] = {
 	(void*)(((char*)event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xC4),
 };
 
-/* 803C1EF0-803C1F20 0030+00 .data      @6503                                                        */
+/* 803C1EF0-803C1F20 0030+00 rc=1 efc=0 .data      @6503                                                        */
 void* d_msg_d_msg_flow__lit_6503[12] = {
 	(void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xC4),
 	(void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x160),
@@ -1238,7 +1677,7 @@ void* d_msg_d_msg_flow__lit_6503[12] = {
 	(void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x3A4),
 };
 
-/* 803C1F20-803C1F40 0020+00 .data      @6752                                                        */
+/* 803C1F20-803C1F40 0020+00 rc=1 efc=0 .data      @6752                                                        */
 void* lit_6752[8] = {
 	(void*)(((char*)event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xF4),
 	(void*)(((char*)event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x34),
@@ -1250,7 +1689,7 @@ void* lit_6752[8] = {
 	(void*)(((char*)event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xDC),
 };
 
-/* 803C1F40-803C1F50 000C+04 .data      __vt__10dMsgFlow_c                                           */
+/* 803C1F40-803C1F50 000C+04 rc=2 efc=0 .data      __vt__10dMsgFlow_c                                           */
 void* const __vt__10dMsgFlow_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1259,22 +1698,22 @@ void* const __vt__10dMsgFlow_c[4] = {
 	NULL,
 };
 
-/* 80249F00-80249F48 0048+00 .text      __ct__10dMsgFlow_cFv                                         */
+/* 80249F00-80249F48 0048+00 rc=5 efc=5 .text      __ct__10dMsgFlow_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dMsgFlow_cFv) {
+asm dMsgFlow_c::dMsgFlow_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/__ct__10dMsgFlow_cFv.s"
 }
 #pragma pop
 
 
-/* 80249F48-80249F90 0048+00 .text      __dt__10dMsgFlow_cFv                                         */
+/* 80249F48-80249F90 0048+00 rc=8 efc=7 .text      __dt__10dMsgFlow_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dMsgFlow_cFv) {
+asm dMsgFlow_c::~dMsgFlow_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/__dt__10dMsgFlow_cFv.s"
 }
@@ -1282,7 +1721,7 @@ ASM_FUNCTION(__dt__10dMsgFlow_cFv) {
 
 
 /* ############################################################################################## */
-/* 80399CB0-80399CC8 0018+00 .rodata    @stringBase0                                                 */
+/* 80399CB0-80399CC8 0018+00 rc=5 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -1293,121 +1732,121 @@ SECTION_DEAD char* const stringBase_80399CBB = "INF1";
 SECTION_DEAD char* const stringBase_80399CC0 = "F_SP116";
 #pragma pop
 
-/* 80249F90-8024A13C 01AC+00 .text      init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c             */
+/* 80249F90-8024A13C 01AC+00 rc=10 efc=10 .text      init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c) {
+asm void dMsgFlow_c::init(fopAc_ac_c* field_0, s32 field_1, s32 field_2, fopAc_ac_c** field_3) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024A13C-8024A2D8 019C+00 .text      checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi                  */
+/* 8024A13C-8024A2D8 019C+00 rc=2 efc=0 .text      checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi) {
+asm void dMsgFlow_c::checkOpenDoor(fopAc_ac_c* field_0, s32* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi.s"
 }
 #pragma pop
 
 
-/* 8024A2D8-8024A424 014C+00 .text      doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci            */
+/* 8024A2D8-8024A424 014C+00 rc=21 efc=21 .text      doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci) {
+asm void dMsgFlow_c::doFlow(fopAc_ac_c* field_0, fopAc_ac_c** field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024A424-8024A4C4 00A0+00 .text      checkEventRender__10dMsgFlow_cFPiPiPiPi                      */
+/* 8024A424-8024A4C4 00A0+00 rc=2 efc=2 .text      checkEventRender__10dMsgFlow_cFPiPiPiPi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEventRender__10dMsgFlow_cFPiPiPiPi) {
+asm void dMsgFlow_c::checkEventRender(s32* field_0, s32* field_1, s32* field_2, s32* field_3) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/checkEventRender__10dMsgFlow_cFPiPiPiPi.s"
 }
 #pragma pop
 
 
-/* 8024A4C4-8024A528 0064+00 .text      remove__10dMsgFlow_cFv                                       */
+/* 8024A4C4-8024A528 0064+00 rc=0 efc=0 .text      remove__10dMsgFlow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__10dMsgFlow_cFv) {
+asm void dMsgFlow_c::remove() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/remove__10dMsgFlow_cFv.s"
 }
 #pragma pop
 
 
-/* 8024A528-8024A538 0010+00 .text      getEventId__10dMsgFlow_cFPi                                  */
+/* 8024A528-8024A538 0010+00 rc=2 efc=2 .text      getEventId__10dMsgFlow_cFPi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventId__10dMsgFlow_cFPi) {
+asm void dMsgFlow_c::getEventId(s32* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getEventId__10dMsgFlow_cFPi.s"
 }
 #pragma pop
 
 
-/* 8024A538-8024A540 0008+00 .text      getMsgNo__10dMsgFlow_cFv                                     */
+/* 8024A538-8024A540 0008+00 rc=3 efc=3 .text      getMsgNo__10dMsgFlow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsgNo__10dMsgFlow_cFv) {
+asm void dMsgFlow_c::getMsgNo() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getMsgNo__10dMsgFlow_cFv.s"
 }
 #pragma pop
 
 
-/* 8024A540-8024A548 0008+00 .text      getNowMsgNo__10dMsgFlow_cFv                                  */
+/* 8024A540-8024A548 0008+00 rc=0 efc=0 .text      getNowMsgNo__10dMsgFlow_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowMsgNo__10dMsgFlow_cFv) {
+asm void dMsgFlow_c::getNowMsgNo() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getNowMsgNo__10dMsgFlow_cFv.s"
 }
 #pragma pop
 
 
-/* 8024A548-8024A580 0038+00 .text      getMsg__10dMsgFlow_cFv                                       */
+/* 8024A548-8024A580 0038+00 rc=2 efc=2 .text      getMsg__10dMsgFlow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsg__10dMsgFlow_cFv) {
+asm void dMsgFlow_c::getMsg() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getMsg__10dMsgFlow_cFv.s"
 }
 #pragma pop
 
 
-/* 8024A580-8024A618 0098+00 .text      setInitValue__10dMsgFlow_cFi                                 */
+/* 8024A580-8024A618 0098+00 rc=5 efc=0 .text      setInitValue__10dMsgFlow_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInitValue__10dMsgFlow_cFi) {
+asm void dMsgFlow_c::setInitValue(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/setInitValue__10dMsgFlow_cFi.s"
 }
 #pragma pop
 
 
-/* 8024A618-8024A6EC 00D4+00 .text      setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c        */
+/* 8024A618-8024A6EC 00D4+00 rc=1 efc=0 .text      setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c) {
+asm void dMsgFlow_c::setInitValueGroupChange(s32 field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c.s"
 }
@@ -1415,160 +1854,160 @@ ASM_FUNCTION(setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80456BA0-80456BA4 0004+00 .sbss2     @4765                                                        */
+/* 80456BA0-80456BA4 0004+00 rc=1 efc=0 .sbss2     @4765                                                        */
 u8 d_msg_d_msg_flow__lit_4765[4];
 
-/* 80456BA4-80456BA8 0004+00 .sbss2     None                                                         */
+/* 80456BA4-80456BA8 0004+00 rc=1 efc=0 .sbss2     None                                                         */
 u8 data_80456BA4[4];
 
-/* 8024A6EC-8024A784 0098+00 .text      getMsgDataBlock__10dMsgFlow_cFPCc                            */
+/* 8024A6EC-8024A784 0098+00 rc=4 efc=0 .text      getMsgDataBlock__10dMsgFlow_cFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMsgDataBlock__10dMsgFlow_cFPCc) {
+asm void dMsgFlow_c::getMsgDataBlock(char const* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getMsgDataBlock__10dMsgFlow_cFPCc.s"
 }
 #pragma pop
 
 
-/* 8024A784-8024A7CC 0048+00 .text      getInitNodeIndex__10dMsgFlow_cFUs                            */
+/* 8024A784-8024A7CC 0048+00 rc=5 efc=0 .text      getInitNodeIndex__10dMsgFlow_cFUs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getInitNodeIndex__10dMsgFlow_cFUs) {
+asm void dMsgFlow_c::getInitNodeIndex(u16 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getInitNodeIndex__10dMsgFlow_cFUs.s"
 }
 #pragma pop
 
 
-/* 8024A7CC-8024A95C 0190+00 .text      setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c                  */
+/* 8024A7CC-8024A95C 0190+00 rc=6 efc=0 .text      setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c) {
+asm void dMsgFlow_c::setNodeIndex(u16 field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024A95C-8024AA50 00F4+00 .text      setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c */
+/* 8024A95C-8024AA50 00F4+00 rc=1 efc=0 .text      setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c) {
+asm void dMsgFlow_c::setSelectMsg(mesg_flow_node* field_0, mesg_flow_node* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024AA50-8024AB30 00E0+00 .text      setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c    */
+/* 8024AA50-8024AB30 00E0+00 rc=1 efc=0 .text      setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c) {
+asm void dMsgFlow_c::setNormalMsg(mesg_flow_node* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024AB30-8024AD54 0224+00 .text      messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c    */
+/* 8024AB30-8024AD54 0224+00 rc=2 efc=0 .text      messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c) {
+asm void dMsgFlow_c::messageNodeProc(fopAc_ac_c* field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024AD54-8024ADEC 0098+00 .text      branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c     */
+/* 8024AD54-8024ADEC 0098+00 rc=1 efc=0 .text      branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c) {
+asm void dMsgFlow_c::branchNodeProc(fopAc_ac_c* field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024ADEC-8024AFF8 020C+00 .text      eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c      */
+/* 8024ADEC-8024AFF8 020C+00 rc=1 efc=0 .text      eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c) {
+asm void dMsgFlow_c::eventNodeProc(fopAc_ac_c* field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024AFF8-8024B0F0 00F8+00 .text      nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c           */
+/* 8024AFF8-8024B0F0 00F8+00 rc=1 efc=0 .text      nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c) {
+asm void dMsgFlow_c::nodeProc(fopAc_ac_c* field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024B0F0-8024B108 0018+00 .text      getParam__10dMsgFlow_cFPUsPUsPUc                             */
+/* 8024B0F0-8024B108 0018+00 rc=16 efc=0 .text      getParam__10dMsgFlow_cFPUsPUsPUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__10dMsgFlow_cFPUsPUsPUc) {
+asm void dMsgFlow_c::getParam(u16* field_0, u16* field_1, char* field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getParam__10dMsgFlow_cFPUsPUsPUc.s"
 }
 #pragma pop
 
 
-/* 8024B108-8024B130 0028+00 .text      getParam__10dMsgFlow_cFPUcPUc                                */
+/* 8024B108-8024B130 0028+00 rc=3 efc=0 .text      getParam__10dMsgFlow_cFPUcPUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__10dMsgFlow_cFPUcPUc) {
+asm void dMsgFlow_c::getParam(char* field_0, char* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getParam__10dMsgFlow_cFPUcPUc.s"
 }
 #pragma pop
 
 
-/* 8024B130-8024B138 0008+00 .text      getParam__10dMsgFlow_cFPUc                                   */
+/* 8024B130-8024B138 0008+00 rc=20 efc=0 .text      getParam__10dMsgFlow_cFPUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__10dMsgFlow_cFPUc) {
+asm void dMsgFlow_c::getParam(char* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/getParam__10dMsgFlow_cFPUc.s"
 }
 #pragma pop
 
 
-/* 8024B138-8024B180 0048+00 .text      query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B138-8024B180 0048+00 rc=1 efc=0 .text      query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query001(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B180-8024B208 0088+00 .text      query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B180-8024B208 0088+00 rc=1 efc=0 .text      query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query002(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
@@ -1576,344 +2015,344 @@ ASM_FUNCTION(query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
 
 
 /* ############################################################################################## */
-/* 80454D90-80454D98 0008+00 .sdata2    @5116                                                        */
+/* 80454D90-80454D98 0008+00 rc=5 efc=0 .sdata2    @5116                                                        */
 f64 d_msg_d_msg_flow__lit_5116 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8024B208-8024B250 0048+00 .text      query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B208-8024B250 0048+00 rc=1 efc=0 .text      query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query003(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B250-8024B2C0 0070+00 .text      query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B250-8024B2C0 0070+00 rc=1 efc=0 .text      query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query004(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B2C0-8024B2F8 0038+00 .text      query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B2C0-8024B2F8 0038+00 rc=3 efc=1 .text      query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query005(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B2F8-8024B32C 0034+00 .text      query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B2F8-8024B32C 0034+00 rc=1 efc=0 .text      query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query006(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B32C-8024B45C 0130+00 .text      query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B32C-8024B45C 0130+00 rc=1 efc=0 .text      query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query007(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B45C-8024B4A4 0048+00 .text      query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B45C-8024B4A4 0048+00 rc=1 efc=0 .text      query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query008(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B4A4-8024B4D0 002C+00 .text      query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B4A4-8024B4D0 002C+00 rc=1 efc=0 .text      query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query009(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B4D0-8024B504 0034+00 .text      query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B4D0-8024B504 0034+00 rc=1 efc=0 .text      query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query010(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B504-8024B54C 0048+00 .text      query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B504-8024B54C 0048+00 rc=1 efc=0 .text      query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query011(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B54C-8024B584 0038+00 .text      query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B54C-8024B584 0038+00 rc=1 efc=0 .text      query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query012(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B584-8024B5BC 0038+00 .text      query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B584-8024B5BC 0038+00 rc=1 efc=0 .text      query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query013(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B5BC-8024B5F4 0038+00 .text      query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B5BC-8024B5F4 0038+00 rc=1 efc=0 .text      query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query014(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B5F4-8024B62C 0038+00 .text      query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B5F4-8024B62C 0038+00 rc=1 efc=0 .text      query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query015(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B62C-8024B664 0038+00 .text      query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B62C-8024B664 0038+00 rc=1 efc=0 .text      query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query016(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B664-8024B6A8 0044+00 .text      query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B664-8024B6A8 0044+00 rc=1 efc=0 .text      query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query017(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B6A8-8024B6EC 0044+00 .text      query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B6A8-8024B6EC 0044+00 rc=1 efc=0 .text      query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query018(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B6EC-8024B730 0044+00 .text      query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B6EC-8024B730 0044+00 rc=1 efc=0 .text      query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query019(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B730-8024B774 0044+00 .text      query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B730-8024B774 0044+00 rc=1 efc=0 .text      query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query020(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B774-8024B8E4 0170+00 .text      query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B774-8024B8E4 0170+00 rc=1 efc=0 .text      query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query021(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B8E4-8024B918 0034+00 .text      query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B8E4-8024B918 0034+00 rc=1 efc=0 .text      query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query022(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B918-8024B954 003C+00 .text      query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B918-8024B954 003C+00 rc=1 efc=0 .text      query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query023(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B954-8024B974 0020+00 .text      query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B954-8024B974 0020+00 rc=1 efc=0 .text      query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query024(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B974-8024B9BC 0048+00 .text      query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B974-8024B9BC 0048+00 rc=1 efc=0 .text      query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query025(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B9BC-8024B9E8 002C+00 .text      query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B9BC-8024B9E8 002C+00 rc=1 efc=0 .text      query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query026(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024B9E8-8024BA4C 0064+00 .text      query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024B9E8-8024BA4C 0064+00 rc=1 efc=0 .text      query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query027(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BA4C-8024BAA0 0054+00 .text      query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BA4C-8024BAA0 0054+00 rc=1 efc=0 .text      query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query028(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BAA0-8024BAE0 0040+00 .text      query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BAA0-8024BAE0 0040+00 rc=1 efc=0 .text      query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query029(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BAE0-8024BB18 0038+00 .text      query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BAE0-8024BB18 0038+00 rc=1 efc=0 .text      query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query030(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BB18-8024BB74 005C+00 .text      query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BB18-8024BB74 005C+00 rc=1 efc=0 .text      query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query031(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BB74-8024BB9C 0028+00 .text      query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BB74-8024BB9C 0028+00 rc=1 efc=0 .text      query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query032(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BB9C-8024BBE4 0048+00 .text      query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BB9C-8024BBE4 0048+00 rc=1 efc=0 .text      query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query033(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
@@ -1921,268 +2360,263 @@ ASM_FUNCTION(query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
 
 
 /* ############################################################################################## */
-/* 80454D98-80454DA0 0004+04 .sdata2    @5608                                                        */
+/* 80454D98-80454DA0 0004+04 rc=1 efc=0 .sdata2    @5608                                                        */
 f32 lit_5608 = 1.0f / 15.0f;
 /* padding 4 bytes */
 
-/* 8024BBE4-8024BC14 0030+00 .text      query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BBE4-8024BC14 0030+00 rc=1 efc=0 .text      query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query034(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BC14-8024BC3C 0028+00 .text      query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BC14-8024BC3C 0028+00 rc=1 efc=0 .text      query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query035(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BC3C-8024BC80 0044+00 .text      query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BC3C-8024BC80 0044+00 rc=1 efc=0 .text      query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query036(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BC80-8024BCC4 0044+00 .text      query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BC80-8024BCC4 0044+00 rc=1 efc=0 .text      query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query037(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BCC4-8024BDB0 00EC+00 .text      query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BCC4-8024BDB0 00EC+00 rc=1 efc=0 .text      query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query038(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BDB0-8024BE4C 009C+00 .text      query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BDB0-8024BE4C 009C+00 rc=1 efc=0 .text      query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query039(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BE4C-8024BF50 0104+00 .text      query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BE4C-8024BF50 0104+00 rc=1 efc=0 .text      query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query040(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BF50-8024BFEC 009C+00 .text      query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BF50-8024BFEC 009C+00 rc=1 efc=0 .text      query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query041(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024BFEC-8024C0A8 00BC+00 .text      query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024BFEC-8024C0A8 00BC+00 rc=1 efc=0 .text      query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query042(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C0A8-8024C144 009C+00 .text      query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C0A8-8024C144 009C+00 rc=1 efc=0 .text      query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query043(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C144-8024C18C 0048+00 .text      query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C144-8024C18C 0048+00 rc=1 efc=0 .text      query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query044(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C18C-8024C218 008C+00 .text      query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C18C-8024C218 008C+00 rc=1 efc=0 .text      query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query045(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C218-8024C248 0030+00 .text      query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C218-8024C248 0030+00 rc=1 efc=0 .text      query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query046(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C248-8024C250 0008+00 .text      query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
-	nofralloc
-#include "asm/d/msg/d_msg_flow/query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
+/* 8024C248-8024C250 0008+00 rc=1 efc=0 .text      query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+bool dMsgFlow_c::query047(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
+	return false;
 }
-#pragma pop
 
 
-/* 8024C250-8024C2A0 0050+00 .text      query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C250-8024C2A0 0050+00 rc=1 efc=0 .text      query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query048(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C2A0-8024C2FC 005C+00 .text      query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C2A0-8024C2FC 005C+00 rc=1 efc=0 .text      query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query049(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C2FC-8024C340 0044+00 .text      query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C2FC-8024C340 0044+00 rc=1 efc=0 .text      query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query050(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C340-8024C3A0 0060+00 .text      query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C340-8024C3A0 0060+00 rc=1 efc=0 .text      query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query051(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C3A0-8024C3D4 0034+00 .text      query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C3A0-8024C3D4 0034+00 rc=1 efc=0 .text      query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query052(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C3D4-8024C3FC 0028+00 .text      query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
+/* 8024C3D4-8024C3FC 0028+00 rc=1 efc=0 .text      query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci) {
+asm void dMsgFlow_c::query053(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 8024C3FC-8024C488 008C+00 .text      event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C3FC-8024C488 008C+00 rc=1 efc=0 .text      event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event000(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C488-8024C514 008C+00 .text      event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C488-8024C514 008C+00 rc=1 efc=0 .text      event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event001(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C514-8024C550 003C+00 .text      event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C514-8024C550 003C+00 rc=1 efc=0 .text      event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event002(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C550-8024C590 0040+00 .text      event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C550-8024C590 0040+00 rc=1 efc=0 .text      event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event003(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
@@ -2190,201 +2624,191 @@ ASM_FUNCTION(event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80454DA0-80454DA8 0008+00 .sdata2    @6040                                                        */
+/* 80454DA0-80454DA8 0008+00 rc=3 efc=0 .sdata2    @6040                                                        */
 f64 d_msg_d_msg_flow__lit_6040 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8024C590-8024C5F0 0060+00 .text      event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C590-8024C5F0 0060+00 rc=1 efc=0 .text      event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event004(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C5F0-8024C654 0064+00 .text      event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C5F0-8024C654 0064+00 rc=1 efc=0 .text      event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event005(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C654-8024C694 0040+00 .text      event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C654-8024C694 0040+00 rc=1 efc=0 .text      event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event006(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C694-8024C6D8 0044+00 .text      event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C694-8024C6D8 0044+00 rc=1 efc=0 .text      event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event007(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C6D8-8024C744 006C+00 .text      event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C6D8-8024C744 006C+00 rc=1 efc=0 .text      event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event008(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C744-8024C76C 0028+00 .text      event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C744-8024C76C 0028+00 rc=1 efc=0 .text      event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event009(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C76C-8024C7F8 008C+00 .text      event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C76C-8024C7F8 008C+00 rc=1 efc=0 .text      event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event010(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C7F8-8024C884 008C+00 .text      event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C7F8-8024C884 008C+00 rc=1 efc=0 .text      event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event011(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C884-8024C88C 0008+00 .text      event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
-	nofralloc
-#include "asm/d/msg/d_msg_flow/event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
+/* 8024C884-8024C88C 0008+00 rc=1 efc=0 .text      event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+bool dMsgFlow_c::event012(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	return true;
 }
-#pragma pop
 
 
-/* 8024C88C-8024C8CC 0040+00 .text      event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C88C-8024C8CC 0040+00 rc=1 efc=0 .text      event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event013(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C8CC-8024C994 00C8+00 .text      event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C8CC-8024C994 00C8+00 rc=1 efc=0 .text      event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event014(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024C994-8024CA5C 00C8+00 .text      event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024C994-8024CA5C 00C8+00 rc=1 efc=0 .text      event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event015(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CA5C-8024CA94 0038+00 .text      event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CA5C-8024CA94 0038+00 rc=1 efc=0 .text      event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event016(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CA94-8024CBB0 011C+00 .text      event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CA94-8024CBB0 011C+00 rc=1 efc=0 .text      event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event017(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CBB0-8024CCA4 00F4+00 .text      event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CBB0-8024CCA4 00F4+00 rc=1 efc=0 .text      event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event018(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CCA4-8024CCAC 0008+00 .text      event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
-	nofralloc
-#include "asm/d/msg/d_msg_flow/event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
+/* 8024CCA4-8024CCAC 0008+00 rc=1 efc=0 .text      event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+bool dMsgFlow_c::event019(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	return true;
 }
-#pragma pop
 
 
-/* 8024CCAC-8024CD84 00D8+00 .text      event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CCAC-8024CD84 00D8+00 rc=1 efc=0 .text      event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event020(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CD84-8024CDAC 0028+00 .text      event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CD84-8024CDAC 0028+00 rc=1 efc=0 .text      event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event021(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
@@ -2392,113 +2816,113 @@ ASM_FUNCTION(event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80454DA8-80454DAC 0004+00 .sdata2    @6273                                                        */
+/* 80454DA8-80454DAC 0004+00 rc=1 efc=0 .sdata2    @6273                                                        */
 f32 lit_6273 = 100.0f;
 
-/* 8024CDAC-8024CE40 0094+00 .text      event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CDAC-8024CE40 0094+00 rc=1 efc=0 .text      event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event022(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CE40-8024CF2C 00EC+00 .text      event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CE40-8024CF2C 00EC+00 rc=2 efc=0 .text      event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event023(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CF2C-8024CF54 0028+00 .text      event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CF2C-8024CF54 0028+00 rc=1 efc=0 .text      event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event024(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CF54-8024CF9C 0048+00 .text      event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CF54-8024CF9C 0048+00 rc=1 efc=0 .text      event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event025(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024CF9C-8024D004 0068+00 .text      event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024CF9C-8024D004 0068+00 rc=1 efc=0 .text      event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event026(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D004-8024D3C4 03C0+00 .text      event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D004-8024D3C4 03C0+00 rc=2 efc=0 .text      event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event027(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D3C4-8024D500 013C+00 .text      event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D3C4-8024D500 013C+00 rc=1 efc=0 .text      event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event028(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D500-8024D544 0044+00 .text      event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D500-8024D544 0044+00 rc=1 efc=0 .text      event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event029(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D544-8024D5BC 0078+00 .text      event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D544-8024D5BC 0078+00 rc=1 efc=0 .text      event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event030(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D5BC-8024D5EC 0030+00 .text      event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D5BC-8024D5EC 0030+00 rc=1 efc=0 .text      event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event031(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
@@ -2506,150 +2930,144 @@ ASM_FUNCTION(event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80454DAC-80454DB0 0004+00 .sdata2    @6613                                                        */
+/* 80454DAC-80454DB0 0004+00 rc=2 efc=0 .sdata2    @6613                                                        */
 f32 lit_6613 = 1.0f;
 
-/* 8024D5EC-8024D6BC 00D0+00 .text      event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D5EC-8024D6BC 00D0+00 rc=1 efc=0 .text      event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event032(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D6BC-8024D788 00CC+00 .text      event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D6BC-8024D788 00CC+00 rc=1 efc=0 .text      event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event033(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D788-8024D7C8 0040+00 .text      event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D788-8024D7C8 0040+00 rc=1 efc=0 .text      event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event034(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D7C8-8024D870 00A8+00 .text      event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D7C8-8024D870 00A8+00 rc=1 efc=0 .text      event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event035(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D870-8024D8C4 0054+00 .text      event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D870-8024D8C4 0054+00 rc=1 efc=0 .text      event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event036(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D8C4-8024D918 0054+00 .text      event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D8C4-8024D918 0054+00 rc=1 efc=0 .text      event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event037(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D918-8024D93C 0024+00 .text      event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D918-8024D93C 0024+00 rc=1 efc=0 .text      event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event038(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D93C-8024D970 0034+00 .text      event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D93C-8024D970 0034+00 rc=1 efc=0 .text      event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event039(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024D970-8024DA78 0108+00 .text      event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024D970-8024DA78 0108+00 rc=2 efc=0 .text      event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event040(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024DA78-8024DAA8 0030+00 .text      event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+/* 8024DA78-8024DAA8 0030+00 rc=1 efc=0 .text      event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
+asm void dMsgFlow_c::event041(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8024DAA8-8024DAB0 0008+00 .text      event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c) {
-	nofralloc
-#include "asm/d/msg/d_msg_flow/event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
+/* 8024DAA8-8024DAB0 0008+00 rc=1 efc=0 .text      event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
+bool dMsgFlow_c::event042(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	return true;
 }
-#pragma pop
 
 
-/* 8024DAB0-8024DACC 001C+00 .text      cLib_calcTimer<l>__FPl                                       */
+/* 8024DAB0-8024DACC 001C+00 rc=3 efc=0 .text      cLib_calcTimer<l>__FPl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8024DAB0) {
+extern "C" asm static void func_8024DAB0() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/func_8024DAB0.s"
 }
 #pragma pop
 
 
-/* 8024DACC-8024E3E0 0914+00 .text      __sinit_d_msg_flow_cpp                                       */
+/* 8024DACC-8024E3E0 0914+00 rc=1 efc=1 .text      __sinit_d_msg_flow_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_msg_flow_cpp) {
+extern "C" asm void __sinit_d_msg_flow_cpp() {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/__sinit_d_msg_flow_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void atan();
+extern "C" void atan();
+
+extern "C" void atan();
 SECTION_RODATA extern const u8 atanhi[32];
 SECTION_RODATA extern const u8 atanlo[32];
 SECTION_RODATA extern const u8 aT[88];
@@ -24,37 +26,38 @@ SECTION_SDATA2 extern f64 Math_Double_precision_s_atan__lit_119;
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A25F0-803A2610 0020+00 .rodata    atanhi                                                       */
+/* 803A25F0-803A2610 0020+00 rc=1 efc=0 .rodata    atanhi                                                       */
 SECTION_RODATA const u8 atanhi[32] = {
 	0x3F, 0xDD, 0xAC, 0x67, 0x05, 0x61, 0xBB, 0x4F, 0x3F, 0xE9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
 	0x3F, 0xEF, 0x73, 0x0B, 0xD2, 0x81, 0xF6, 0x9B, 0x3F, 0xF9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
 };
 
-/* 80456AB8-80456AC0 0008+00 .sdata2    @115                                                         */
+/* 80456AB8-80456AC0 0008+00 rc=1 efc=0 .sdata2    @115                                                         */
 f64 Math_Double_precision_s_atan__lit_115 = 1e+300;
 
-/* 80456AC0-80456AC8 0008+00 .sdata2    @116                                                         */
+/* 80456AC0-80456AC8 0008+00 rc=1 efc=0 .sdata2    @116                                                         */
 f64 Math_Double_precision_s_atan__lit_116 = 1.0;
 
-/* 80456AC8-80456AD0 0008+00 .sdata2    @117                                                         */
+/* 80456AC8-80456AD0 0008+00 rc=1 efc=0 .sdata2    @117                                                         */
 f64 Math_Double_precision_s_atan__lit_117 = 2.0;
 
-/* 80456AD0-80456AD8 0008+00 .sdata2    @118                                                         */
+/* 80456AD0-80456AD8 0008+00 rc=1 efc=0 .sdata2    @118                                                         */
 f64 Math_Double_precision_s_atan__lit_118 = 1.5;
 
-/* 80456AD8-80456AE0 0008+00 .sdata2    @119                                                         */
+/* 80456AD8-80456AE0 0008+00 rc=1 efc=0 .sdata2    @119                                                         */
 f64 Math_Double_precision_s_atan__lit_119 = -1.0;
 
-/* 8036BCA4-8036BEBC 0218+00 .text      atan                                                         */
+/* 8036BCA4-8036BEBC 0218+00 rc=2 efc=2 .text      atan                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(atan) {
+extern "C" asm void atan() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_atan/atan.s"
 }
@@ -62,13 +65,13 @@ ASM_FUNCTION(atan) {
 
 
 /* ############################################################################################## */
-/* 803A2610-803A2630 0020+00 .rodata    atanlo                                                       */
+/* 803A2610-803A2630 0020+00 rc=0 efc=0 .rodata    atanlo                                                       */
 SECTION_RODATA const u8 atanlo[32] = {
 	0x3C, 0x7A, 0x2B, 0x7F, 0x22, 0x2F, 0x65, 0xE2, 0x3C, 0x81, 0xA6, 0x26, 0x33, 0x14, 0x5C, 0x07,
 	0x3C, 0x70, 0x07, 0x88, 0x7A, 0xF0, 0xCB, 0xBD, 0x3C, 0x91, 0xA6, 0x26, 0x33, 0x14, 0x5C, 0x07,
 };
 
-/* 803A2630-803A2688 0058+00 .rodata    aT                                                           */
+/* 803A2630-803A2688 0058+00 rc=0 efc=0 .rodata    aT                                                           */
 SECTION_RODATA const u8 aT[88] = {
 	0x3F, 0xD5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x0D, 0xBF, 0xC9, 0x99, 0x99, 0x99, 0x98, 0xEB, 0xC4,
 	0x3F, 0xC2, 0x49, 0x24, 0x92, 0x00, 0x83, 0xFF, 0xBF, 0xBC, 0x71, 0xC6, 0xFE, 0x23, 0x16, 0x71,

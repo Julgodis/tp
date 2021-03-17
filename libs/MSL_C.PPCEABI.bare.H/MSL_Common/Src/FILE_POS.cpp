@@ -9,54 +9,61 @@
 // Forward References:
 // 
 
-extern "C" extern void fseek();
-extern "C" extern void _fseek();
-extern "C" extern void ftell();
+extern "C" void fseek();
+extern "C" static void _fseek();
+extern "C" void ftell();
+
+extern "C" void fseek();
+extern "C" static void _fseek();
+extern "C" void ftell();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __flush_buffer();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
+extern "C" void __flush_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+
+extern "C" void __flush_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80365BB4-80365C20 006C+00 .text      fseek                                                        */
+/* 80365BB4-80365C20 006C+00 rc=2 efc=2 .text      fseek                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fseek) {
+extern "C" asm void fseek() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/fseek.s"
 }
 #pragma pop
 
 
-/* 80365C20-80365E90 0270+00 .text      _fseek                                                       */
+/* 80365C20-80365E90 0270+00 rc=1 efc=0 .text      _fseek                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_fseek) {
+extern "C" asm static void _fseek() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/_fseek.s"
 }
 #pragma pop
 
 
-/* 80365E90-80365F74 00E4+00 .text      ftell                                                        */
+/* 80365E90-80365F74 00E4+00 rc=2 efc=2 .text      ftell                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ftell) {
+extern "C" asm void ftell() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/ftell.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

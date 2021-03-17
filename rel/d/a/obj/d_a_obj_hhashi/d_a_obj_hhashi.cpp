@@ -6,38 +6,94 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjHHASHI_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daObjHHASHI_c {
+	void initCcCylinder();
+	void setCcCylinder();
+	void Set_Hahen(cXyz*);
+	void Obj_Damage();
+	void CheckCull();
+	void checkViewArea(s32);
+	void Rolling(cXyz*, f32, f32, s8);
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initCcCylinder__13daObjHHASHI_cFv();
-extern "C" extern void setCcCylinder__13daObjHHASHI_cFv();
-extern "C" extern void daObjHHASHI_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjHHASHI_Delete__FP13daObjHHASHI_c();
-extern "C" extern void Set_Hahen__13daObjHHASHI_cFP4cXyz();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void Set_Speed__13daObjHHASHI_cFssffff();
-extern "C" extern void Obj_Damage__13daObjHHASHI_cFv();
-extern "C" extern void Wall_Check__13daObjHHASHI_cFs();
-extern "C" extern void Hahen_Motion__13daObjHHASHI_cFs();
-extern "C" extern void CheckCull__13daObjHHASHI_cFv();
-extern "C" extern void checkViewArea__13daObjHHASHI_cFi();
-extern "C" extern void Rolling__13daObjHHASHI_cFP4cXyzffSc();
-extern "C" extern void Roll_Set__13daObjHHASHI_cFP4cXyzfs();
-extern "C" extern void setBaseMtx__13daObjHHASHI_cFv();
-extern "C" extern void daObjHHASHI_Draw__FP13daObjHHASHI_c();
-extern "C" extern void daObjHHASHI_Execute__FP13daObjHHASHI_c();
-extern "C" extern void CreateHeap__13daObjHHASHI_cFv();
-extern "C" extern void create__13daObjHHASHI_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjHHASHI_IsDelete__FP13daObjHHASHI_c();
-extern "C" extern void Create__13daObjHHASHI_cFv();
-extern "C" extern void Execute__13daObjHHASHI_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjHHASHI_cFv();
-extern "C" extern void Delete__13daObjHHASHI_cFv();
+void daObjHHASHI_Create(fopAc_ac_c*);
+void daObjHHASHI_Delete(daObjHHASHI_c*);
+extern "C" void Set_Speed__13daObjHHASHI_cFssffff();
+extern "C" void Wall_Check__13daObjHHASHI_cFs();
+extern "C" void Hahen_Motion__13daObjHHASHI_cFs();
+extern "C" void Roll_Set__13daObjHHASHI_cFP4cXyzfs();
+void daObjHHASHI_Draw(daObjHHASHI_c*);
+void daObjHHASHI_Execute(daObjHHASHI_c*);
+bool daObjHHASHI_IsDelete(daObjHHASHI_c*);
+extern "C" void Execute__13daObjHHASHI_cFPPA3_A4_f();
+
+extern "C" void initCcCylinder__13daObjHHASHI_cFv();
+extern "C" void setCcCylinder__13daObjHHASHI_cFv();
+extern "C" void daObjHHASHI_Create__FP10fopAc_ac_c();
+extern "C" void daObjHHASHI_Delete__FP13daObjHHASHI_c();
+extern "C" void Set_Hahen__13daObjHHASHI_cFP4cXyz();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void Set_Speed__13daObjHHASHI_cFssffff();
+extern "C" void Obj_Damage__13daObjHHASHI_cFv();
+extern "C" void Wall_Check__13daObjHHASHI_cFs();
+extern "C" void Hahen_Motion__13daObjHHASHI_cFs();
+extern "C" void CheckCull__13daObjHHASHI_cFv();
+extern "C" void checkViewArea__13daObjHHASHI_cFi();
+extern "C" void Rolling__13daObjHHASHI_cFP4cXyzffSc();
+extern "C" void Roll_Set__13daObjHHASHI_cFP4cXyzfs();
+extern "C" void setBaseMtx__13daObjHHASHI_cFv();
+extern "C" void daObjHHASHI_Draw__FP13daObjHHASHI_c();
+extern "C" void daObjHHASHI_Execute__FP13daObjHHASHI_c();
+extern "C" void CreateHeap__13daObjHHASHI_cFv();
+extern "C" void create__13daObjHHASHI_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjHHASHI_IsDelete__FP13daObjHHASHI_c();
+extern "C" void Create__13daObjHHASHI_cFv();
+extern "C" void Execute__13daObjHHASHI_cFPPA3_A4_f();
+extern "C" void Draw__13daObjHHASHI_cFv();
+extern "C" void Delete__13daObjHHASHI_cFv();
 SECTION_RODATA extern const u8 data_805814AC[68];
 SECTION_RODATA extern const u32 lit_3844;
 SECTION_RODATA extern const u32 lit_3845;
@@ -93,7 +149,9 @@ SECTION_DATA extern void*const __vt__13daObjHHASHI_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -103,7 +161,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/initCcCylinder__13daObjHHASHI_cFv.s"
 }
@@ -114,7 +172,7 @@ ASM_FUNCTION(initCcCylinder__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::setCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/setCcCylinder__13daObjHHASHI_cFv.s"
 }
@@ -125,7 +183,7 @@ ASM_FUNCTION(setCcCylinder__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHHASHI_Create__FP10fopAc_ac_c) {
+asm void daObjHHASHI_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Create__FP10fopAc_ac_c.s"
 }
@@ -136,7 +194,7 @@ ASM_FUNCTION(daObjHHASHI_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHHASHI_Delete__FP13daObjHHASHI_c) {
+asm void daObjHHASHI_Delete(daObjHHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Delete__FP13daObjHHASHI_c.s"
 }
@@ -147,7 +205,7 @@ ASM_FUNCTION(daObjHHASHI_Delete__FP13daObjHHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set_Hahen__13daObjHHASHI_cFP4cXyz) {
+asm void daObjHHASHI_c::Set_Hahen(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Set_Hahen__13daObjHHASHI_cFP4cXyz.s"
 }
@@ -158,7 +216,7 @@ ASM_FUNCTION(Set_Hahen__13daObjHHASHI_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__dt__4cXyzFv.s"
 }
@@ -169,7 +227,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__dt__5csXyzFv.s"
 }
@@ -180,7 +238,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set_Speed__13daObjHHASHI_cFssffff) {
+extern "C" asm void Set_Speed__13daObjHHASHI_cFssffff() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Set_Speed__13daObjHHASHI_cFssffff.s"
 }
@@ -191,7 +249,7 @@ ASM_FUNCTION(Set_Speed__13daObjHHASHI_cFssffff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Obj_Damage__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::Obj_Damage() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Obj_Damage__13daObjHHASHI_cFv.s"
 }
@@ -202,7 +260,7 @@ ASM_FUNCTION(Obj_Damage__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Wall_Check__13daObjHHASHI_cFs) {
+extern "C" asm void Wall_Check__13daObjHHASHI_cFs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Wall_Check__13daObjHHASHI_cFs.s"
 }
@@ -213,7 +271,7 @@ ASM_FUNCTION(Wall_Check__13daObjHHASHI_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Hahen_Motion__13daObjHHASHI_cFs) {
+extern "C" asm void Hahen_Motion__13daObjHHASHI_cFs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Hahen_Motion__13daObjHHASHI_cFs.s"
 }
@@ -224,7 +282,7 @@ ASM_FUNCTION(Hahen_Motion__13daObjHHASHI_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCull__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::CheckCull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/CheckCull__13daObjHHASHI_cFv.s"
 }
@@ -235,7 +293,7 @@ ASM_FUNCTION(CheckCull__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkViewArea__13daObjHHASHI_cFi) {
+asm void daObjHHASHI_c::checkViewArea(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/checkViewArea__13daObjHHASHI_cFi.s"
 }
@@ -246,7 +304,7 @@ ASM_FUNCTION(checkViewArea__13daObjHHASHI_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Rolling__13daObjHHASHI_cFP4cXyzffSc) {
+asm void daObjHHASHI_c::Rolling(cXyz* field_0, f32 field_1, f32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Rolling__13daObjHHASHI_cFP4cXyzffSc.s"
 }
@@ -257,7 +315,7 @@ ASM_FUNCTION(Rolling__13daObjHHASHI_cFP4cXyzffSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Roll_Set__13daObjHHASHI_cFP4cXyzfs) {
+extern "C" asm void Roll_Set__13daObjHHASHI_cFP4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Roll_Set__13daObjHHASHI_cFP4cXyzfs.s"
 }
@@ -268,7 +326,7 @@ ASM_FUNCTION(Roll_Set__13daObjHHASHI_cFP4cXyzfs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/setBaseMtx__13daObjHHASHI_cFv.s"
 }
@@ -279,7 +337,7 @@ ASM_FUNCTION(setBaseMtx__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHHASHI_Draw__FP13daObjHHASHI_c) {
+asm void daObjHHASHI_Draw(daObjHHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Draw__FP13daObjHHASHI_c.s"
 }
@@ -290,7 +348,7 @@ ASM_FUNCTION(daObjHHASHI_Draw__FP13daObjHHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHHASHI_Execute__FP13daObjHHASHI_c) {
+asm void daObjHHASHI_Execute(daObjHHASHI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Execute__FP13daObjHHASHI_c.s"
 }
@@ -301,7 +359,7 @@ ASM_FUNCTION(daObjHHASHI_Execute__FP13daObjHHASHI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/CreateHeap__13daObjHHASHI_cFv.s"
 }
@@ -312,7 +370,7 @@ ASM_FUNCTION(CreateHeap__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/create__13daObjHHASHI_cFv.s"
 }
@@ -323,7 +381,7 @@ ASM_FUNCTION(create__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__dt__8cM3dGCylFv.s"
 }
@@ -334,7 +392,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__dt__8cM3dGAabFv.s"
 }
@@ -342,43 +400,28 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 805811BC-805811C0 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805811C0-805811C4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805811C4-805811CC 0008+00 .text      daObjHHASHI_IsDelete__FP13daObjHHASHI_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjHHASHI_IsDelete__FP13daObjHHASHI_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_IsDelete__FP13daObjHHASHI_c.s"
+bool daObjHHASHI_IsDelete(daObjHHASHI_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805811CC-80581210 0044+00 .text      Create__13daObjHHASHI_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/func_805811CC.s"
 }
@@ -389,7 +432,7 @@ ASM_FUNCTION(Create__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjHHASHI_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjHHASHI_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Execute__13daObjHHASHI_cFPPA3_A4_f.s"
 }
@@ -400,7 +443,7 @@ ASM_FUNCTION(Execute__13daObjHHASHI_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Draw__13daObjHHASHI_cFv.s"
 }
@@ -411,7 +454,7 @@ ASM_FUNCTION(Draw__13daObjHHASHI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjHHASHI_cFv) {
+asm void daObjHHASHI_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/Delete__13daObjHHASHI_cFv.s"
 }

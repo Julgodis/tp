@@ -6,36 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjRIVERROCK_c;
+
+struct daObjRIVERROCK_HIO_c {
+	daObjRIVERROCK_HIO_c();
+	~daObjRIVERROCK_HIO_c();
+};
+
+struct daObjRIVERROCK_c {
+	void initCcCylinder();
+	void SetCcCyl();
+	void BreakWaitAction();
+	void CheckBG();
+	void BreakMoveAction();
+	void BrokenAction();
+	void BreakAction();
+	void Action();
+	void BreakSet();
+	void WaitAction();
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__20daObjRIVERROCK_HIO_cFv();
-extern "C" extern void initCcCylinder__16daObjRIVERROCK_cFv();
-extern "C" extern void SetCcCyl__16daObjRIVERROCK_cFv();
-extern "C" extern void daObjRIVERROCK_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjRIVERROCK_Delete__FP16daObjRIVERROCK_c();
-extern "C" extern void BreakWaitAction__16daObjRIVERROCK_cFv();
-extern "C" extern void CheckBG__16daObjRIVERROCK_cFv();
-extern "C" extern void BreakMoveAction__16daObjRIVERROCK_cFv();
-extern "C" extern void BrokenAction__16daObjRIVERROCK_cFv();
-extern "C" extern void BreakAction__16daObjRIVERROCK_cFv();
-extern "C" extern void Action__16daObjRIVERROCK_cFv();
-extern "C" extern void BreakSet__16daObjRIVERROCK_cFv();
-extern "C" extern void WaitAction__16daObjRIVERROCK_cFv();
-extern "C" extern void setBaseMtx__16daObjRIVERROCK_cFv();
-extern "C" extern void daObjRIVERROCK_Draw__FP16daObjRIVERROCK_c();
-extern "C" extern void daObjRIVERROCK_Execute__FP16daObjRIVERROCK_c();
-extern "C" extern void CreateHeap__16daObjRIVERROCK_cFv();
-extern "C" extern void create__16daObjRIVERROCK_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c();
-extern "C" extern void Create__16daObjRIVERROCK_cFv();
-extern "C" extern void Execute__16daObjRIVERROCK_cFPPA3_A4_f();
-extern "C" extern void Draw__16daObjRIVERROCK_cFv();
-extern "C" extern void Delete__16daObjRIVERROCK_cFv();
-extern "C" extern void __dt__20daObjRIVERROCK_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_riverrock_cpp();
+void daObjRIVERROCK_Create(fopAc_ac_c*);
+void daObjRIVERROCK_Delete(daObjRIVERROCK_c*);
+void daObjRIVERROCK_Draw(daObjRIVERROCK_c*);
+void daObjRIVERROCK_Execute(daObjRIVERROCK_c*);
+bool daObjRIVERROCK_IsDelete(daObjRIVERROCK_c*);
+extern "C" void Execute__16daObjRIVERROCK_cFPPA3_A4_f();
+extern "C" void __sinit_d_a_obj_riverrock_cpp();
+
+extern "C" void __ct__20daObjRIVERROCK_HIO_cFv();
+extern "C" void initCcCylinder__16daObjRIVERROCK_cFv();
+extern "C" void SetCcCyl__16daObjRIVERROCK_cFv();
+extern "C" void daObjRIVERROCK_Create__FP10fopAc_ac_c();
+extern "C" void daObjRIVERROCK_Delete__FP16daObjRIVERROCK_c();
+extern "C" void BreakWaitAction__16daObjRIVERROCK_cFv();
+extern "C" void CheckBG__16daObjRIVERROCK_cFv();
+extern "C" void BreakMoveAction__16daObjRIVERROCK_cFv();
+extern "C" void BrokenAction__16daObjRIVERROCK_cFv();
+extern "C" void BreakAction__16daObjRIVERROCK_cFv();
+extern "C" void Action__16daObjRIVERROCK_cFv();
+extern "C" void BreakSet__16daObjRIVERROCK_cFv();
+extern "C" void WaitAction__16daObjRIVERROCK_cFv();
+extern "C" void setBaseMtx__16daObjRIVERROCK_cFv();
+extern "C" void daObjRIVERROCK_Draw__FP16daObjRIVERROCK_c();
+extern "C" void daObjRIVERROCK_Execute__FP16daObjRIVERROCK_c();
+extern "C" void CreateHeap__16daObjRIVERROCK_cFv();
+extern "C" void create__16daObjRIVERROCK_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c();
+extern "C" void Create__16daObjRIVERROCK_cFv();
+extern "C" void Execute__16daObjRIVERROCK_cFPPA3_A4_f();
+extern "C" void Draw__16daObjRIVERROCK_cFv();
+extern "C" void Delete__16daObjRIVERROCK_cFv();
+extern "C" void __dt__20daObjRIVERROCK_HIO_cFv();
+extern "C" void __sinit_d_a_obj_riverrock_cpp();
 SECTION_RODATA extern const u8 lit_3631[4];
 SECTION_RODATA extern const u8 data_80CBDA60[68];
 SECTION_RODATA extern const u32 lit_3642;
@@ -79,8 +129,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -90,7 +143,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20daObjRIVERROCK_HIO_cFv) {
+asm daObjRIVERROCK_HIO_c::daObjRIVERROCK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/__ct__20daObjRIVERROCK_HIO_cFv.s"
 }
@@ -101,7 +154,7 @@ ASM_FUNCTION(__ct__20daObjRIVERROCK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/initCcCylinder__16daObjRIVERROCK_cFv.s"
 }
@@ -112,7 +165,7 @@ ASM_FUNCTION(initCcCylinder__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcCyl__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::SetCcCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/SetCcCyl__16daObjRIVERROCK_cFv.s"
 }
@@ -123,7 +176,7 @@ ASM_FUNCTION(SetCcCyl__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRIVERROCK_Create__FP10fopAc_ac_c) {
+asm void daObjRIVERROCK_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/daObjRIVERROCK_Create__FP10fopAc_ac_c.s"
 }
@@ -134,7 +187,7 @@ ASM_FUNCTION(daObjRIVERROCK_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRIVERROCK_Delete__FP16daObjRIVERROCK_c) {
+asm void daObjRIVERROCK_Delete(daObjRIVERROCK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/daObjRIVERROCK_Delete__FP16daObjRIVERROCK_c.s"
 }
@@ -145,7 +198,7 @@ ASM_FUNCTION(daObjRIVERROCK_Delete__FP16daObjRIVERROCK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakWaitAction__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::BreakWaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/BreakWaitAction__16daObjRIVERROCK_cFv.s"
 }
@@ -156,7 +209,7 @@ ASM_FUNCTION(BreakWaitAction__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckBG__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::CheckBG() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/CheckBG__16daObjRIVERROCK_cFv.s"
 }
@@ -167,7 +220,7 @@ ASM_FUNCTION(CheckBG__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakMoveAction__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::BreakMoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/BreakMoveAction__16daObjRIVERROCK_cFv.s"
 }
@@ -178,7 +231,7 @@ ASM_FUNCTION(BreakMoveAction__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BrokenAction__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::BrokenAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/BrokenAction__16daObjRIVERROCK_cFv.s"
 }
@@ -189,7 +242,7 @@ ASM_FUNCTION(BrokenAction__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakAction__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::BreakAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/BreakAction__16daObjRIVERROCK_cFv.s"
 }
@@ -200,7 +253,7 @@ ASM_FUNCTION(BreakAction__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/Action__16daObjRIVERROCK_cFv.s"
 }
@@ -211,7 +264,7 @@ ASM_FUNCTION(Action__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakSet__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::BreakSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/BreakSet__16daObjRIVERROCK_cFv.s"
 }
@@ -222,7 +275,7 @@ ASM_FUNCTION(BreakSet__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/WaitAction__16daObjRIVERROCK_cFv.s"
 }
@@ -233,7 +286,7 @@ ASM_FUNCTION(WaitAction__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/setBaseMtx__16daObjRIVERROCK_cFv.s"
 }
@@ -244,7 +297,7 @@ ASM_FUNCTION(setBaseMtx__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRIVERROCK_Draw__FP16daObjRIVERROCK_c) {
+asm void daObjRIVERROCK_Draw(daObjRIVERROCK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/daObjRIVERROCK_Draw__FP16daObjRIVERROCK_c.s"
 }
@@ -255,7 +308,7 @@ ASM_FUNCTION(daObjRIVERROCK_Draw__FP16daObjRIVERROCK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRIVERROCK_Execute__FP16daObjRIVERROCK_c) {
+asm void daObjRIVERROCK_Execute(daObjRIVERROCK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/daObjRIVERROCK_Execute__FP16daObjRIVERROCK_c.s"
 }
@@ -266,7 +319,7 @@ ASM_FUNCTION(daObjRIVERROCK_Execute__FP16daObjRIVERROCK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/CreateHeap__16daObjRIVERROCK_cFv.s"
 }
@@ -277,7 +330,7 @@ ASM_FUNCTION(CreateHeap__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/create__16daObjRIVERROCK_cFv.s"
 }
@@ -288,7 +341,7 @@ ASM_FUNCTION(create__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/__dt__8cM3dGCylFv.s"
 }
@@ -299,7 +352,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/__dt__8cM3dGAabFv.s"
 }
@@ -307,21 +360,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80CBD7AC-80CBD7B4 0008+00 .text      daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/daObjRIVERROCK_IsDelete__FP16daObjRIVERROCK_c.s"
+bool daObjRIVERROCK_IsDelete(daObjRIVERROCK_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CBD7B4-80CBD814 0060+00 .text      Create__16daObjRIVERROCK_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/func_80CBD7B4.s"
 }
@@ -332,7 +380,7 @@ ASM_FUNCTION(Create__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjRIVERROCK_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjRIVERROCK_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/Execute__16daObjRIVERROCK_cFPPA3_A4_f.s"
 }
@@ -343,7 +391,7 @@ ASM_FUNCTION(Execute__16daObjRIVERROCK_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/Draw__16daObjRIVERROCK_cFv.s"
 }
@@ -354,7 +402,7 @@ ASM_FUNCTION(Draw__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjRIVERROCK_cFv) {
+asm void daObjRIVERROCK_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/Delete__16daObjRIVERROCK_cFv.s"
 }
@@ -365,7 +413,7 @@ ASM_FUNCTION(Delete__16daObjRIVERROCK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daObjRIVERROCK_HIO_cFv) {
+asm daObjRIVERROCK_HIO_c::~daObjRIVERROCK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/__dt__20daObjRIVERROCK_HIO_cFv.s"
 }
@@ -376,7 +424,7 @@ ASM_FUNCTION(__dt__20daObjRIVERROCK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_riverrock_cpp) {
+extern "C" asm void __sinit_d_a_obj_riverrock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_riverrock/d_a_obj_riverrock/__sinit_d_a_obj_riverrock_cpp.s"
 }

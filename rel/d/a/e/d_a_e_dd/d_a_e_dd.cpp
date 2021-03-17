@@ -6,52 +6,152 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopEn_enemy_c;
+struct Z2CreatureEnemy;
+struct J3DJoint;
+struct fopAc_ac_c;
+struct e_dd_class;
+struct cXyz;
+
+struct daE_DD_HIO_c {
+	daE_DD_HIO_c();
+	~daE_DD_HIO_c();
+};
+
+struct e_dd_class {
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dCcD_Sph {
+	dCcD_Sph();
+	~dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct fopEn_enemy_c {
+};
+
+struct Z2CreatureEnemy {
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_DD_HIO_cFv();
-extern "C" extern void anm_init__FP10e_dd_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daE_DD_Draw__FP10e_dd_class();
-extern "C" extern void otherBgCheckS__FP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void pl_check__FP10e_dd_classfs();
-extern "C" extern void way_gake_check__FP10e_dd_classf();
-extern "C" extern void damage_check__FP10e_dd_class();
-extern "C" extern void way_bg_check__FP10e_dd_classf();
-extern "C" extern void path_check__FP10e_dd_class();
-extern "C" extern void e_dd_wall__FP10e_dd_class();
-extern "C" extern void e_dd_normal__FP10e_dd_class();
-extern "C" extern void e_dd_run__FP10e_dd_class();
-extern "C" extern void s_b_sub__FPvPv();
-extern "C" extern void e_dd_attack__FP10e_dd_class();
-extern "C" extern void e_dd_guard__FP10e_dd_class();
-extern "C" extern void e_dd_bombdamage__FP10e_dd_class();
-extern "C" extern void e_dd_taildamage__FP10e_dd_class();
-extern "C" extern void e_dd_fall__FP10e_dd_class();
-extern "C" extern void e_dd_dead__FP10e_dd_class();
-extern "C" extern void e_dd_arrowdamage__FP10e_dd_class();
-extern "C" extern void action__FP10e_dd_class();
-extern "C" extern void anm_se_set__FP10e_dd_class();
-extern "C" extern void daE_DD_Execute__FP10e_dd_class();
-extern "C" extern void daE_DD_IsDelete__FP10e_dd_class();
-extern "C" extern void daE_DD_Delete__FP10e_dd_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void kabe_initial_pos_set__FP10e_dd_class();
-extern "C" extern void daE_DD_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daE_DD_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_dd_cpp();
-extern "C" extern void func_806A6D8C();
-extern "C" extern void func_806A6D94();
-extern "C" extern void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
+void anm_init(e_dd_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daE_DD_Draw(e_dd_class*);
+void otherBgCheckS(fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void pl_check__FP10e_dd_classfs();
+void way_gake_check(e_dd_class*, f32);
+void damage_check(e_dd_class*);
+void way_bg_check(e_dd_class*, f32);
+void path_check(e_dd_class*);
+void e_dd_wall(e_dd_class*);
+void e_dd_normal(e_dd_class*);
+void e_dd_run(e_dd_class*);
+void s_b_sub(void*, void*);
+void e_dd_attack(e_dd_class*);
+void e_dd_guard(e_dd_class*);
+void e_dd_bombdamage(e_dd_class*);
+void e_dd_taildamage(e_dd_class*);
+void e_dd_fall(e_dd_class*);
+void e_dd_dead(e_dd_class*);
+void e_dd_arrowdamage(e_dd_class*);
+void action(e_dd_class*);
+void anm_se_set(e_dd_class*);
+void daE_DD_Execute(e_dd_class*);
+bool daE_DD_IsDelete(e_dd_class*);
+void daE_DD_Delete(e_dd_class*);
+void useHeapInit(fopAc_ac_c*);
+void kabe_initial_pos_set(e_dd_class*);
+void daE_DD_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_dd_cpp();
+extern "C" void func_806A6D8C();
+extern "C" void func_806A6D94();
+void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*);
+
+extern "C" void __ct__12daE_DD_HIO_cFv();
+extern "C" void anm_init__FP10e_dd_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daE_DD_Draw__FP10e_dd_class();
+extern "C" void otherBgCheckS__FP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void pl_check__FP10e_dd_classfs();
+extern "C" void way_gake_check__FP10e_dd_classf();
+extern "C" void damage_check__FP10e_dd_class();
+extern "C" void way_bg_check__FP10e_dd_classf();
+extern "C" void path_check__FP10e_dd_class();
+extern "C" void e_dd_wall__FP10e_dd_class();
+extern "C" void e_dd_normal__FP10e_dd_class();
+extern "C" void e_dd_run__FP10e_dd_class();
+extern "C" void s_b_sub__FPvPv();
+extern "C" void e_dd_attack__FP10e_dd_class();
+extern "C" void e_dd_guard__FP10e_dd_class();
+extern "C" void e_dd_bombdamage__FP10e_dd_class();
+extern "C" void e_dd_taildamage__FP10e_dd_class();
+extern "C" void e_dd_fall__FP10e_dd_class();
+extern "C" void e_dd_dead__FP10e_dd_class();
+extern "C" void e_dd_arrowdamage__FP10e_dd_class();
+extern "C" void action__FP10e_dd_class();
+extern "C" void anm_se_set__FP10e_dd_class();
+extern "C" void daE_DD_Execute__FP10e_dd_class();
+extern "C" bool daE_DD_IsDelete__FP10e_dd_class();
+extern "C" void daE_DD_Delete__FP10e_dd_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void kabe_initial_pos_set__FP10e_dd_class();
+extern "C" void daE_DD_Create__FP10fopAc_ac_c();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daE_DD_HIO_cFv();
+extern "C" void __sinit_d_a_e_dd_cpp();
+extern "C" void func_806A6D8C();
+extern "C" void func_806A6D94();
+extern "C" void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
 SECTION_RODATA extern const u32 lit_3903;
 SECTION_RODATA extern const u8 lit_3904[4];
 SECTION_RODATA extern const u32 lit_3905;
@@ -143,8 +243,11 @@ SECTION_BSS extern u8 data_806A74F0[255];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -154,7 +257,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_DD_HIO_cFv) {
+asm daE_DD_HIO_c::daE_DD_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__ct__12daE_DD_HIO_cFv.s"
 }
@@ -165,7 +268,7 @@ ASM_FUNCTION(__ct__12daE_DD_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10e_dd_classifUcf) {
+asm void anm_init(e_dd_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/anm_init__FP10e_dd_classifUcf.s"
 }
@@ -176,7 +279,7 @@ ASM_FUNCTION(anm_init__FP10e_dd_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/nodeCallBack__FP8J3DJointi.s"
 }
@@ -187,7 +290,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DD_Draw__FP10e_dd_class) {
+asm void daE_DD_Draw(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_Draw__FP10e_dd_class.s"
 }
@@ -198,7 +301,7 @@ ASM_FUNCTION(daE_DD_Draw__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(otherBgCheckS__FP10fopAc_ac_cP10fopAc_ac_c) {
+asm void otherBgCheckS(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/otherBgCheckS__FP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -209,7 +312,7 @@ ASM_FUNCTION(otherBgCheckS__FP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_check__FP10e_dd_classfs) {
+extern "C" asm void pl_check__FP10e_dd_classfs() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/pl_check__FP10e_dd_classfs.s"
 }
@@ -220,7 +323,7 @@ ASM_FUNCTION(pl_check__FP10e_dd_classfs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_gake_check__FP10e_dd_classf) {
+asm void way_gake_check(e_dd_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/way_gake_check__FP10e_dd_classf.s"
 }
@@ -231,7 +334,7 @@ ASM_FUNCTION(way_gake_check__FP10e_dd_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10e_dd_class) {
+asm void damage_check(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/damage_check__FP10e_dd_class.s"
 }
@@ -242,7 +345,7 @@ ASM_FUNCTION(damage_check__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP10e_dd_classf) {
+asm void way_bg_check(e_dd_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/way_bg_check__FP10e_dd_classf.s"
 }
@@ -253,7 +356,7 @@ ASM_FUNCTION(way_bg_check__FP10e_dd_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(path_check__FP10e_dd_class) {
+asm void path_check(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/path_check__FP10e_dd_class.s"
 }
@@ -264,7 +367,7 @@ ASM_FUNCTION(path_check__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_wall__FP10e_dd_class) {
+asm void e_dd_wall(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_wall__FP10e_dd_class.s"
 }
@@ -275,7 +378,7 @@ ASM_FUNCTION(e_dd_wall__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_normal__FP10e_dd_class) {
+asm void e_dd_normal(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_normal__FP10e_dd_class.s"
 }
@@ -286,7 +389,7 @@ ASM_FUNCTION(e_dd_normal__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_run__FP10e_dd_class) {
+asm void e_dd_run(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_run__FP10e_dd_class.s"
 }
@@ -297,7 +400,7 @@ ASM_FUNCTION(e_dd_run__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_b_sub__FPvPv) {
+asm void s_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/s_b_sub__FPvPv.s"
 }
@@ -308,7 +411,7 @@ ASM_FUNCTION(s_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_attack__FP10e_dd_class) {
+asm void e_dd_attack(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_attack__FP10e_dd_class.s"
 }
@@ -319,7 +422,7 @@ ASM_FUNCTION(e_dd_attack__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_guard__FP10e_dd_class) {
+asm void e_dd_guard(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_guard__FP10e_dd_class.s"
 }
@@ -330,7 +433,7 @@ ASM_FUNCTION(e_dd_guard__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_bombdamage__FP10e_dd_class) {
+asm void e_dd_bombdamage(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_bombdamage__FP10e_dd_class.s"
 }
@@ -341,7 +444,7 @@ ASM_FUNCTION(e_dd_bombdamage__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_taildamage__FP10e_dd_class) {
+asm void e_dd_taildamage(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_taildamage__FP10e_dd_class.s"
 }
@@ -352,7 +455,7 @@ ASM_FUNCTION(e_dd_taildamage__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_fall__FP10e_dd_class) {
+asm void e_dd_fall(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_fall__FP10e_dd_class.s"
 }
@@ -363,7 +466,7 @@ ASM_FUNCTION(e_dd_fall__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_dead__FP10e_dd_class) {
+asm void e_dd_dead(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_dead__FP10e_dd_class.s"
 }
@@ -374,7 +477,7 @@ ASM_FUNCTION(e_dd_dead__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_dd_arrowdamage__FP10e_dd_class) {
+asm void e_dd_arrowdamage(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/e_dd_arrowdamage__FP10e_dd_class.s"
 }
@@ -385,7 +488,7 @@ ASM_FUNCTION(e_dd_arrowdamage__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10e_dd_class) {
+asm void action(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/action__FP10e_dd_class.s"
 }
@@ -396,7 +499,7 @@ ASM_FUNCTION(action__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP10e_dd_class) {
+asm void anm_se_set(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/anm_se_set__FP10e_dd_class.s"
 }
@@ -407,7 +510,7 @@ ASM_FUNCTION(anm_se_set__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DD_Execute__FP10e_dd_class) {
+asm void daE_DD_Execute(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_Execute__FP10e_dd_class.s"
 }
@@ -415,21 +518,16 @@ ASM_FUNCTION(daE_DD_Execute__FP10e_dd_class) {
 
 
 /* 806A60E0-806A60E8 0008+00 .text      daE_DD_IsDelete__FP10e_dd_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_DD_IsDelete__FP10e_dd_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_IsDelete__FP10e_dd_class.s"
+bool daE_DD_IsDelete(e_dd_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806A60E8-806A6154 006C+00 .text      daE_DD_Delete__FP10e_dd_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DD_Delete__FP10e_dd_class) {
+asm void daE_DD_Delete(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_Delete__FP10e_dd_class.s"
 }
@@ -440,7 +538,7 @@ ASM_FUNCTION(daE_DD_Delete__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -451,7 +549,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__12J3DFrameCtrlFv.s"
 }
@@ -462,7 +560,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kabe_initial_pos_set__FP10e_dd_class) {
+asm void kabe_initial_pos_set(e_dd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/kabe_initial_pos_set__FP10e_dd_class.s"
 }
@@ -473,7 +571,7 @@ ASM_FUNCTION(kabe_initial_pos_set__FP10e_dd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DD_Create__FP10fopAc_ac_c) {
+asm void daE_DD_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_Create__FP10fopAc_ac_c.s"
 }
@@ -484,7 +582,7 @@ ASM_FUNCTION(daE_DD_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__ct__8dCcD_SphFv.s"
 }
@@ -495,7 +593,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__8dCcD_SphFv.s"
 }
@@ -506,7 +604,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__8cM3dGSphFv.s"
 }
@@ -517,7 +615,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__8cM3dGAabFv.s"
 }
@@ -528,7 +626,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__10dCcD_GSttsFv.s"
 }
@@ -539,7 +637,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -550,7 +648,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__12dBgS_AcchCirFv.s"
 }
@@ -561,7 +659,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__10cCcD_GSttsFv.s"
 }
@@ -572,7 +670,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_DD_HIO_cFv) {
+asm daE_DD_HIO_c::~daE_DD_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__dt__12daE_DD_HIO_cFv.s"
 }
@@ -583,7 +681,7 @@ ASM_FUNCTION(__dt__12daE_DD_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_dd_cpp) {
+extern "C" asm void __sinit_d_a_e_dd_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/__sinit_d_a_e_dd_cpp.s"
 }
@@ -594,7 +692,7 @@ ASM_FUNCTION(__sinit_d_a_e_dd_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806A6D8C) {
+extern "C" asm void func_806A6D8C() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/func_806A6D8C.s"
 }
@@ -605,7 +703,7 @@ ASM_FUNCTION(func_806A6D8C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806A6D94) {
+extern "C" asm void func_806A6D94() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/func_806A6D94.s"
 }
@@ -616,7 +714,7 @@ ASM_FUNCTION(func_806A6D94) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz) {
+asm void setMidnaBindEffect(fopEn_enemy_c* field_0, Z2CreatureEnemy* field_1, cXyz* field_2, cXyz* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz.s"
 }

@@ -6,15 +6,35 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTag_Chk_c;
+
+struct daTag_Chk_c {
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void execute__11daTag_Chk_cFv();
-extern "C" extern void daTag_Chk_Draw__FP11daTag_Chk_c();
-extern "C" extern void daTag_Chk_Execute__FP11daTag_Chk_c();
-extern "C" extern void daTag_Chk_IsDelete__FP11daTag_Chk_c();
-extern "C" extern void daTag_Chk_Delete__FP11daTag_Chk_c();
-extern "C" extern void daTag_Chk_Create__FP10fopAc_ac_c();
+bool daTag_Chk_Draw(daTag_Chk_c*);
+void daTag_Chk_Execute(daTag_Chk_c*);
+bool daTag_Chk_IsDelete(daTag_Chk_c*);
+void daTag_Chk_Delete(daTag_Chk_c*);
+void daTag_Chk_Create(fopAc_ac_c*);
+
+extern "C" void execute__11daTag_Chk_cFv();
+extern "C" bool daTag_Chk_Draw__FP11daTag_Chk_c();
+extern "C" void daTag_Chk_Execute__FP11daTag_Chk_c();
+extern "C" bool daTag_Chk_IsDelete__FP11daTag_Chk_c();
+extern "C" void daTag_Chk_Delete__FP11daTag_Chk_c();
+extern "C" void daTag_Chk_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3769[9 + 3 /* padding */];
 SECTION_RODATA extern const u8 lit_3843[4];
 SECTION_RODATA extern const u8 lit_3844[8];
@@ -32,7 +52,9 @@ SECTION_DATA extern u8 g_profile_TAG_CHKPOINT[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +64,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daTag_Chk_cFv) {
+asm void daTag_Chk_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/execute__11daTag_Chk_cFv.s"
 }
@@ -50,21 +72,16 @@ ASM_FUNCTION(execute__11daTag_Chk_cFv) {
 
 
 /* 8048A9EC-8048A9F4 0008+00 .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Chk_Draw__FP11daTag_Chk_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Draw__FP11daTag_Chk_c.s"
+bool daTag_Chk_Draw(daTag_Chk_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A9F4-8048AA18 0024+00 .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Chk_Execute__FP11daTag_Chk_c) {
+asm void daTag_Chk_Execute(daTag_Chk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Execute__FP11daTag_Chk_c.s"
 }
@@ -72,21 +89,16 @@ ASM_FUNCTION(daTag_Chk_Execute__FP11daTag_Chk_c) {
 
 
 /* 8048AA18-8048AA20 0008+00 .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Chk_IsDelete__FP11daTag_Chk_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_IsDelete__FP11daTag_Chk_c.s"
+bool daTag_Chk_IsDelete(daTag_Chk_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048AA20-8048AA50 0030+00 .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Chk_Delete__FP11daTag_Chk_c) {
+asm void daTag_Chk_Delete(daTag_Chk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Delete__FP11daTag_Chk_c.s"
 }
@@ -97,7 +109,7 @@ ASM_FUNCTION(daTag_Chk_Delete__FP11daTag_Chk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Chk_Create__FP10fopAc_ac_c) {
+asm void daTag_Chk_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Create__FP10fopAc_ac_c.s"
 }

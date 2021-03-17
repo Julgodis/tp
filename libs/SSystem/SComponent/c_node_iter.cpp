@@ -9,42 +9,49 @@
 // Forward References:
 // 
 
-extern "C" extern void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" extern void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 80266324-802663B4 0090+00 .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            */
+/* 80266324-802663B4 0090+00 rc=1 efc=1 .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cNdIt_Method__FP10node_classPFP10node_classPv_iPv) {
+extern "C" asm void cNdIt_Method__FP10node_classPFP10node_classPv_iPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_node_iter/cNdIt_Method__FP10node_classPFP10node_classPv_iPv.s"
 }
 #pragma pop
 
 
-/* 802663B4-80266440 008C+00 .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            */
+/* 802663B4-80266440 008C+00 rc=1 efc=1 .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv) {
+extern "C" asm void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_node_iter/cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,57 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::binary::TEBit
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	// inner dependency: binary (JGadget::binary::TEBit) True False (for JGadget::binary)
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// JGadget::binary::TEBit
+		// build TEBit (JGadget::binary::TEBit) False/False
+		/* dependencies (begin JGadget::binary::TEBit) */
+		/* dependencies (end JGadget::binary::TEBit) */
+		struct TEBit {
+		};
+
+		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
+		/* dependencies (begin JGadget::binary::TParse_header_block) */
+		/* dependencies (end JGadget::binary::TParse_header_block) */
+		struct TParse_header_block {
+			/* 802DC8C8 */ ~TParse_header_block();
+			/* 802DC910 */ void parse_next(void const**, u32);
+		};
+
+		/* 802DC864 */ void parseVariableUInt_16_32_following(void const*, u32*, u32*, JGadget::binary::TEBit*);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
-extern "C" extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern "C" extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
+void operator delete(void*);
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 SECTION_DATA extern void*const __vt__Q37JGadget6binary19TParse_header_block[5];
 
 // 
 // Declarations:
 // 
 
-/* 802DC864-802DC8C8 0064+00 .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
+/* 802DC864-802DC8C8 0064+00 rc=2 efc=2 .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit) {
+asm void JGadget::binary::parseVariableUInt_16_32_following(void const* field_0, u32* field_1, u32* field_2, JGadget::binary::TEBit* field_3) {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit.s"
 }
 #pragma pop
 
 
-/* 802DC8C8-802DC910 0048+00 .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
+/* 802DC8C8-802DC910 0048+00 rc=4 efc=4 .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q37JGadget6binary19TParse_header_blockFv) {
+asm JGadget::binary::TParse_header_block::~TParse_header_block() {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/__dt__Q37JGadget6binary19TParse_header_blockFv.s"
 }
 #pragma pop
 
 
-/* 802DC910-802DCA1C 010C+00 .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
+/* 802DC910-802DCA1C 010C+00 rc=9 efc=9 .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl) {
+asm void JGadget::binary::TParse_header_block::parse_next(void const** field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JGadget/binary/parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

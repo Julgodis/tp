@@ -6,41 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAISoundHandles (JAISoundHandles) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+/* top-level dependencies (begin JAISoundHandles) */
+// outer dependency: JAISoundID
+/* top-level dependencies (end JAISoundHandles) */
+struct JAISoundHandles {
+	// JAISoundID
+	/* 802A2C98 */ void getHandleSoundID(JAISoundID);
+	/* 802A2CF4 */ void getFreeHandle();
+};
+
+// build JAISoundID (JAISoundID) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
-extern "C" extern void getFreeHandle__15JAISoundHandlesFv();
+
+extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
+extern "C" void getFreeHandle__15JAISoundHandlesFv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 802A2C98-802A2CF4 005C+00 .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
+/* 802A2C98-802A2CF4 005C+00 rc=1 efc=1 .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHandleSoundID__15JAISoundHandlesF10JAISoundID) {
+asm void JAISoundHandles::getHandleSoundID(JAISoundID field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundHandles/getHandleSoundID__15JAISoundHandlesF10JAISoundID.s"
 }
 #pragma pop
 
 
-/* 802A2CF4-802A2D34 0040+00 .text      getFreeHandle__15JAISoundHandlesFv                           */
+/* 802A2CF4-802A2D34 0040+00 rc=2 efc=2 .text      getFreeHandle__15JAISoundHandlesFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFreeHandle__15JAISoundHandlesFv) {
+asm void JAISoundHandles::getFreeHandle() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundHandles/getFreeHandle__15JAISoundHandlesFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

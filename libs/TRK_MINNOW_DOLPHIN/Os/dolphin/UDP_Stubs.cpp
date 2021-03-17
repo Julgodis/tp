@@ -9,122 +9,87 @@
 // Forward References:
 // 
 
-extern "C" extern void udp_cc_post_stop();
-extern "C" extern void udp_cc_pre_continue();
-extern "C" extern void udp_cc_peek();
-extern "C" extern void udp_cc_write();
-extern "C" extern void udp_cc_read();
-extern "C" extern void udp_cc_close();
-extern "C" extern void udp_cc_open();
-extern "C" extern void udp_cc_shutdown();
-extern "C" extern void udp_cc_initialize();
+extern "C" s32 udp_cc_post_stop();
+extern "C" s32 udp_cc_pre_continue();
+extern "C" bool udp_cc_peek();
+extern "C" bool udp_cc_write();
+extern "C" bool udp_cc_read();
+extern "C" s32 udp_cc_close();
+extern "C" s32 udp_cc_open();
+extern "C" s32 udp_cc_shutdown();
+extern "C" s32 udp_cc_initialize();
+
+extern "C" s32 udp_cc_post_stop();
+extern "C" s32 udp_cc_pre_continue();
+extern "C" bool udp_cc_peek();
+extern "C" bool udp_cc_write();
+extern "C" bool udp_cc_read();
+extern "C" s32 udp_cc_close();
+extern "C" s32 udp_cc_open();
+extern "C" s32 udp_cc_shutdown();
+extern "C" s32 udp_cc_initialize();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80372314-8037231C 0008+00 .text      udp_cc_post_stop                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_post_stop) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_post_stop.s"
+/* 80372314-8037231C 0008+00 rc=1 efc=1 .text      udp_cc_post_stop                                             */
+extern "C" s32 udp_cc_post_stop() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8037231C-80372324 0008+00 .text      udp_cc_pre_continue                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_pre_continue) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_pre_continue.s"
+/* 8037231C-80372324 0008+00 rc=1 efc=1 .text      udp_cc_pre_continue                                          */
+extern "C" s32 udp_cc_pre_continue() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80372324-8037232C 0008+00 .text      udp_cc_peek                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_peek) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_peek.s"
+/* 80372324-8037232C 0008+00 rc=1 efc=1 .text      udp_cc_peek                                                  */
+extern "C" bool udp_cc_peek() {
+	return false;
 }
-#pragma pop
 
 
-/* 8037232C-80372334 0008+00 .text      udp_cc_write                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_write) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_write.s"
+/* 8037232C-80372334 0008+00 rc=1 efc=1 .text      udp_cc_write                                                 */
+extern "C" bool udp_cc_write() {
+	return false;
 }
-#pragma pop
 
 
-/* 80372334-8037233C 0008+00 .text      udp_cc_read                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_read) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_read.s"
+/* 80372334-8037233C 0008+00 rc=1 efc=1 .text      udp_cc_read                                                  */
+extern "C" bool udp_cc_read() {
+	return false;
 }
-#pragma pop
 
 
-/* 8037233C-80372344 0008+00 .text      udp_cc_close                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_close) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_close.s"
+/* 8037233C-80372344 0008+00 rc=1 efc=1 .text      udp_cc_close                                                 */
+extern "C" s32 udp_cc_close() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80372344-8037234C 0008+00 .text      udp_cc_open                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_open) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_open.s"
+/* 80372344-8037234C 0008+00 rc=1 efc=1 .text      udp_cc_open                                                  */
+extern "C" s32 udp_cc_open() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8037234C-80372354 0008+00 .text      udp_cc_shutdown                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_shutdown) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_shutdown.s"
+/* 8037234C-80372354 0008+00 rc=1 efc=1 .text      udp_cc_shutdown                                              */
+extern "C" s32 udp_cc_shutdown() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80372354-8037235C 0008+00 .text      udp_cc_initialize                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(udp_cc_initialize) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_initialize.s"
+/* 80372354-8037235C 0008+00 rc=1 efc=1 .text      udp_cc_initialize                                            */
+extern "C" s32 udp_cc_initialize() {
+	return -1;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

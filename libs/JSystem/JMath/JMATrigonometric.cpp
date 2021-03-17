@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void __sinit_JMATrigonometric_cpp();
-extern "C" extern void func_80339CB0();
+extern "C" void __sinit_JMATrigonometric_cpp();
+extern "C" static void func_80339CB0();
+
+extern "C" void __sinit_JMATrigonometric_cpp();
+extern "C" static void func_80339CB0();
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_BSS extern u8 atanTable___5JMath[4128];
 SECTION_BSS extern u8 asinAcosTable___5JMath[4128];
@@ -25,71 +28,78 @@ SECTION_SDATA2 extern f64 JMATrigonometric__lit_441;
 // External References:
 // 
 
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
-extern "C" extern void atan();
-extern "C" extern void cos();
-extern "C" extern void sin();
-extern "C" extern void asin();
+extern "C" void __construct_array();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void atan();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void asin();
+
+extern "C" void __construct_array();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void atan();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void asin();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80439A20-80449A20 10000+00 .bss       sincosTable___5JMath                                         */
+/* 80439A20-80449A20 10000+00 rc=266 efc=265 .bss       sincosTable___5JMath                                         */
 u8 sincosTable___5JMath[65536];
 
-/* 80449A20-8044AA40 1020+00 .bss       atanTable___5JMath                                           */
+/* 80449A20-8044AA40 1020+00 rc=1 efc=0 .bss       atanTable___5JMath                                           */
 u8 atanTable___5JMath[4128];
 
-/* 8044AA40-8044BA60 1020+00 .bss       asinAcosTable___5JMath                                       */
+/* 8044AA40-8044BA60 1020+00 rc=2 efc=1 .bss       asinAcosTable___5JMath                                       */
 u8 asinAcosTable___5JMath[4128];
 
-/* 804564D8-804564E0 0004+04 .sdata2    @326                                                         */
+/* 804564D8-804564E0 0004+04 rc=2 efc=0 .sdata2    @326                                                         */
 u8 lit_326[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804564E0-804564E8 0008+00 .sdata2    @436                                                         */
+/* 804564E0-804564E8 0008+00 rc=1 efc=0 .sdata2    @436                                                         */
 f64 JMATrigonometric__lit_436 = 6.2831854820251465;
 
-/* 804564E8-804564F0 0008+00 .sdata2    @437                                                         */
+/* 804564E8-804564F0 0008+00 rc=1 efc=0 .sdata2    @437                                                         */
 f64 JMATrigonometric__lit_437 = 8192.0;
 
-/* 804564F0-804564F8 0008+00 .sdata2    @438                                                         */
+/* 804564F0-804564F8 0008+00 rc=1 efc=0 .sdata2    @438                                                         */
 f64 JMATrigonometric__lit_438 = 0.0009765625;
 
-/* 804564F8-80456500 0004+04 .sdata2    @439                                                         */
+/* 804564F8-80456500 0004+04 rc=1 efc=0 .sdata2    @439                                                         */
 f32 JMATrigonometric__lit_439 = 0.7853981852531433f;
 /* padding 4 bytes */
 
-/* 80456500-80456508 0008+00 .sdata2    @441                                                         */
+/* 80456500-80456508 0008+00 rc=1 efc=0 .sdata2    @441                                                         */
 f64 JMATrigonometric__lit_441 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80339AEC-80339CB0 01C4+00 .text      __sinit_JMATrigonometric_cpp                                 */
+/* 80339AEC-80339CB0 01C4+00 rc=1 efc=1 .text      __sinit_JMATrigonometric_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JMATrigonometric_cpp) {
+extern "C" asm void __sinit_JMATrigonometric_cpp() {
 	nofralloc
 #include "asm/JSystem/JMath/JMATrigonometric/__sinit_JMATrigonometric_cpp.s"
 }
 #pragma pop
 
 
-/* 80339CB0-80339CC0 0010+00 .text      __ct__Q23std9pair<f,f>Fv                                     */
+/* 80339CB0-80339CC0 0010+00 rc=1 efc=0 .text      __ct__Q23std9pair<f,f>Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80339CB0) {
+extern "C" asm static void func_80339CB0() {
 	nofralloc
 #include "asm/JSystem/JMath/JMATrigonometric/func_80339CB0.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

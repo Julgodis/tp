@@ -6,23 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjBBox_c;
+
+struct daObjBBox_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjBBox_cFv();
-extern "C" extern void setBaseMtx__11daObjBBox_cFv();
-extern "C" extern void Create__11daObjBBox_cFv();
-extern "C" extern void CreateHeap__11daObjBBox_cFv();
-extern "C" extern void create1st__11daObjBBox_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void Execute__11daObjBBox_cFPPA3_A4_f();
-extern "C" extern void Draw__11daObjBBox_cFv();
-extern "C" extern void Delete__11daObjBBox_cFv();
-extern "C" extern void daObjBBox_create1st__FP11daObjBBox_c();
-extern "C" extern void daObjBBox_MoveBGDelete__FP11daObjBBox_c();
-extern "C" extern void daObjBBox_MoveBGExecute__FP11daObjBBox_c();
-extern "C" extern void daObjBBox_MoveBGDraw__FP11daObjBBox_c();
+extern "C" void Execute__11daObjBBox_cFPPA3_A4_f();
+void daObjBBox_create1st(daObjBBox_c*);
+void daObjBBox_MoveBGDelete(daObjBBox_c*);
+void daObjBBox_MoveBGExecute(daObjBBox_c*);
+void daObjBBox_MoveBGDraw(daObjBBox_c*);
+
+extern "C" void initBaseMtx__11daObjBBox_cFv();
+extern "C" void setBaseMtx__11daObjBBox_cFv();
+extern "C" void Create__11daObjBBox_cFv();
+extern "C" void CreateHeap__11daObjBBox_cFv();
+extern "C" void create1st__11daObjBBox_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__11daObjBBox_cFPPA3_A4_f();
+extern "C" void Draw__11daObjBBox_cFv();
+extern "C" void Delete__11daObjBBox_cFv();
+extern "C" void daObjBBox_create1st__FP11daObjBBox_c();
+extern "C" void daObjBBox_MoveBGDelete__FP11daObjBBox_c();
+extern "C" void daObjBBox_MoveBGExecute__FP11daObjBBox_c();
+extern "C" void daObjBBox_MoveBGDraw__FP11daObjBBox_c();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 data_80BAD4B8[10 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_3821;
@@ -39,7 +69,9 @@ SECTION_DATA extern void*const __vt__11daObjBBox_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -49,7 +81,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjBBox_cFv) {
+asm void daObjBBox_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/initBaseMtx__11daObjBBox_cFv.s"
 }
@@ -60,7 +92,7 @@ ASM_FUNCTION(initBaseMtx__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjBBox_cFv) {
+asm void daObjBBox_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/setBaseMtx__11daObjBBox_cFv.s"
 }
@@ -71,7 +103,7 @@ ASM_FUNCTION(setBaseMtx__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjBBox_cFv) {
+asm void daObjBBox_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/Create__11daObjBBox_cFv.s"
 }
@@ -82,7 +114,7 @@ ASM_FUNCTION(Create__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjBBox_cFv) {
+asm void daObjBBox_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/CreateHeap__11daObjBBox_cFv.s"
 }
@@ -93,7 +125,7 @@ ASM_FUNCTION(CreateHeap__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__11daObjBBox_cFv) {
+asm void daObjBBox_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/create1st__11daObjBBox_cFv.s"
 }
@@ -104,7 +136,7 @@ ASM_FUNCTION(create1st__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/__dt__8cM3dGCylFv.s"
 }
@@ -115,7 +147,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/__dt__8cM3dGAabFv.s"
 }
@@ -126,7 +158,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjBBox_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjBBox_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/Execute__11daObjBBox_cFPPA3_A4_f.s"
 }
@@ -137,7 +169,7 @@ ASM_FUNCTION(Execute__11daObjBBox_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjBBox_cFv) {
+asm void daObjBBox_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/Draw__11daObjBBox_cFv.s"
 }
@@ -148,7 +180,7 @@ ASM_FUNCTION(Draw__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjBBox_cFv) {
+asm void daObjBBox_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/Delete__11daObjBBox_cFv.s"
 }
@@ -159,7 +191,7 @@ ASM_FUNCTION(Delete__11daObjBBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBBox_create1st__FP11daObjBBox_c) {
+asm void daObjBBox_create1st(daObjBBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/daObjBBox_create1st__FP11daObjBBox_c.s"
 }
@@ -170,7 +202,7 @@ ASM_FUNCTION(daObjBBox_create1st__FP11daObjBBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBBox_MoveBGDelete__FP11daObjBBox_c) {
+asm void daObjBBox_MoveBGDelete(daObjBBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/daObjBBox_MoveBGDelete__FP11daObjBBox_c.s"
 }
@@ -181,7 +213,7 @@ ASM_FUNCTION(daObjBBox_MoveBGDelete__FP11daObjBBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBBox_MoveBGExecute__FP11daObjBBox_c) {
+asm void daObjBBox_MoveBGExecute(daObjBBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/daObjBBox_MoveBGExecute__FP11daObjBBox_c.s"
 }
@@ -192,7 +224,7 @@ ASM_FUNCTION(daObjBBox_MoveBGExecute__FP11daObjBBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBBox_MoveBGDraw__FP11daObjBBox_c) {
+asm void daObjBBox_MoveBGDraw(daObjBBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bbox/d_a_obj_bbox/daObjBBox_MoveBGDraw__FP11daObjBBox_c.s"
 }

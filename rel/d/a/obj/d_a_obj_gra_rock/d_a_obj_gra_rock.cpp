@@ -6,37 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjGraRock_c;
+struct fopAc_ac_c;
+struct cCcD_Obj;
+
+struct daObjGraRock_c {
+	void setAttnPos();
+	void setBaseMtx();
+	void setPrtcl();
+	void bombParticleSet();
+	void setEnvTevColor();
+	void setRoomNo();
+	void col_set();
+	void checkHitAt(cCcD_Obj*);
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct cCcD_Obj {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAttnPos__14daObjGraRock_cFv();
-extern "C" extern void setBaseMtx__14daObjGraRock_cFv();
-extern "C" extern void setPrtcl__14daObjGraRock_cFv();
-extern "C" extern void bombParticleSet__14daObjGraRock_cFv();
-extern "C" extern void setEnvTevColor__14daObjGraRock_cFv();
-extern "C" extern void setRoomNo__14daObjGraRock_cFv();
-extern "C" extern void col_set__14daObjGraRock_cFv();
-extern "C" extern void checkHitAt__14daObjGraRock_cFP8cCcD_Obj();
-extern "C" extern void Create__14daObjGraRock_cFv();
-extern "C" extern void CreateHeap__14daObjGraRock_cFv();
-extern "C" extern void create__14daObjGraRock_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__14daObjGraRock_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjGraRock_cFv();
-extern "C" extern void Delete__14daObjGraRock_cFv();
-extern "C" extern void daObjGraRock_Draw__FP14daObjGraRock_c();
-extern "C" extern void daObjGraRock_Execute__FP14daObjGraRock_c();
-extern "C" extern void daObjGraRock_IsDelete__FP14daObjGraRock_c();
-extern "C" extern void daObjGraRock_Delete__FP14daObjGraRock_c();
-extern "C" extern void daObjGraRock_create__FP10fopAc_ac_c();
-extern "C" extern void func_80C122F0();
-extern "C" extern void func_80C1230C();
-extern "C" extern void func_80C12328();
-extern "C" extern void func_80C123A4();
-extern "C" extern void func_80C123AC();
+extern "C" void Execute__14daObjGraRock_cFPPA3_A4_f();
+void daObjGraRock_Draw(daObjGraRock_c*);
+void daObjGraRock_Execute(daObjGraRock_c*);
+bool daObjGraRock_IsDelete(daObjGraRock_c*);
+void daObjGraRock_Delete(daObjGraRock_c*);
+void daObjGraRock_create(fopAc_ac_c*);
+extern "C" void func_80C122F0();
+extern "C" void func_80C1230C();
+extern "C" void func_80C12328();
+extern "C" void func_80C123A4();
+extern "C" void func_80C123AC();
+
+extern "C" void setAttnPos__14daObjGraRock_cFv();
+extern "C" void setBaseMtx__14daObjGraRock_cFv();
+extern "C" void setPrtcl__14daObjGraRock_cFv();
+extern "C" void bombParticleSet__14daObjGraRock_cFv();
+extern "C" void setEnvTevColor__14daObjGraRock_cFv();
+extern "C" void setRoomNo__14daObjGraRock_cFv();
+extern "C" void col_set__14daObjGraRock_cFv();
+extern "C" void checkHitAt__14daObjGraRock_cFP8cCcD_Obj();
+extern "C" void Create__14daObjGraRock_cFv();
+extern "C" void CreateHeap__14daObjGraRock_cFv();
+extern "C" void create__14daObjGraRock_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__14daObjGraRock_cFPPA3_A4_f();
+extern "C" void Draw__14daObjGraRock_cFv();
+extern "C" void Delete__14daObjGraRock_cFv();
+extern "C" void daObjGraRock_Draw__FP14daObjGraRock_c();
+extern "C" void daObjGraRock_Execute__FP14daObjGraRock_c();
+extern "C" bool daObjGraRock_IsDelete__FP14daObjGraRock_c();
+extern "C" void daObjGraRock_Delete__FP14daObjGraRock_c();
+extern "C" void daObjGraRock_create__FP10fopAc_ac_c();
+extern "C" void func_80C122F0();
+extern "C" void func_80C1230C();
+extern "C" void func_80C12328();
+extern "C" void func_80C123A4();
+extern "C" void func_80C123AC();
 SECTION_RODATA extern const u8 mCcDCyl__14daObjGraRock_c[68];
 SECTION_RODATA extern const u8 lit_3857[4];
 SECTION_RODATA extern const u32 lit_3858;
@@ -66,7 +124,9 @@ SECTION_DATA extern void*const __vt__14daObjGraRock_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -76,7 +136,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/setAttnPos__14daObjGraRock_cFv.s"
 }
@@ -87,7 +147,7 @@ ASM_FUNCTION(setAttnPos__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/setBaseMtx__14daObjGraRock_cFv.s"
 }
@@ -98,7 +158,7 @@ ASM_FUNCTION(setBaseMtx__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPrtcl__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::setPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/setPrtcl__14daObjGraRock_cFv.s"
 }
@@ -109,7 +169,7 @@ ASM_FUNCTION(setPrtcl__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bombParticleSet__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::bombParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/bombParticleSet__14daObjGraRock_cFv.s"
 }
@@ -120,7 +180,7 @@ ASM_FUNCTION(bombParticleSet__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/setEnvTevColor__14daObjGraRock_cFv.s"
 }
@@ -131,7 +191,7 @@ ASM_FUNCTION(setEnvTevColor__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/setRoomNo__14daObjGraRock_cFv.s"
 }
@@ -142,7 +202,7 @@ ASM_FUNCTION(setRoomNo__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_set__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::col_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/col_set__14daObjGraRock_cFv.s"
 }
@@ -153,7 +213,7 @@ ASM_FUNCTION(col_set__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHitAt__14daObjGraRock_cFP8cCcD_Obj) {
+asm void daObjGraRock_c::checkHitAt(cCcD_Obj* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/checkHitAt__14daObjGraRock_cFP8cCcD_Obj.s"
 }
@@ -164,7 +224,7 @@ ASM_FUNCTION(checkHitAt__14daObjGraRock_cFP8cCcD_Obj) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/Create__14daObjGraRock_cFv.s"
 }
@@ -175,7 +235,7 @@ ASM_FUNCTION(Create__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/CreateHeap__14daObjGraRock_cFv.s"
 }
@@ -186,7 +246,7 @@ ASM_FUNCTION(CreateHeap__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C11C64.s"
 }
@@ -197,7 +257,7 @@ ASM_FUNCTION(create__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/__dt__8cM3dGCylFv.s"
 }
@@ -208,7 +268,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/__dt__8cM3dGAabFv.s"
 }
@@ -219,7 +279,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -230,7 +290,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/__dt__12J3DFrameCtrlFv.s"
 }
@@ -241,7 +301,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjGraRock_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjGraRock_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/Execute__14daObjGraRock_cFPPA3_A4_f.s"
 }
@@ -252,7 +312,7 @@ ASM_FUNCTION(Execute__14daObjGraRock_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/Draw__14daObjGraRock_cFv.s"
 }
@@ -263,7 +323,7 @@ ASM_FUNCTION(Draw__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjGraRock_cFv) {
+asm void daObjGraRock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/Delete__14daObjGraRock_cFv.s"
 }
@@ -274,7 +334,7 @@ ASM_FUNCTION(Delete__14daObjGraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraRock_Draw__FP14daObjGraRock_c) {
+asm void daObjGraRock_Draw(daObjGraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/daObjGraRock_Draw__FP14daObjGraRock_c.s"
 }
@@ -285,7 +345,7 @@ ASM_FUNCTION(daObjGraRock_Draw__FP14daObjGraRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraRock_Execute__FP14daObjGraRock_c) {
+asm void daObjGraRock_Execute(daObjGraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/daObjGraRock_Execute__FP14daObjGraRock_c.s"
 }
@@ -293,21 +353,16 @@ ASM_FUNCTION(daObjGraRock_Execute__FP14daObjGraRock_c) {
 
 
 /* 80C122A8-80C122B0 0008+00 .text      daObjGraRock_IsDelete__FP14daObjGraRock_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjGraRock_IsDelete__FP14daObjGraRock_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/daObjGraRock_IsDelete__FP14daObjGraRock_c.s"
+bool daObjGraRock_IsDelete(daObjGraRock_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C122B0-80C122D0 0020+00 .text      daObjGraRock_Delete__FP14daObjGraRock_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraRock_Delete__FP14daObjGraRock_c) {
+asm void daObjGraRock_Delete(daObjGraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/daObjGraRock_Delete__FP14daObjGraRock_c.s"
 }
@@ -318,7 +373,7 @@ ASM_FUNCTION(daObjGraRock_Delete__FP14daObjGraRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGraRock_create__FP10fopAc_ac_c) {
+asm void daObjGraRock_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/daObjGraRock_create__FP10fopAc_ac_c.s"
 }
@@ -329,7 +384,7 @@ ASM_FUNCTION(daObjGraRock_create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C122F0) {
+extern "C" asm void func_80C122F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C122F0.s"
 }
@@ -340,7 +395,7 @@ ASM_FUNCTION(func_80C122F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1230C) {
+extern "C" asm void func_80C1230C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C1230C.s"
 }
@@ -351,7 +406,7 @@ ASM_FUNCTION(func_80C1230C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C12328) {
+extern "C" asm void func_80C12328() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C12328.s"
 }
@@ -362,7 +417,7 @@ ASM_FUNCTION(func_80C12328) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C123A4) {
+extern "C" asm void func_80C123A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C123A4.s"
 }
@@ -373,7 +428,7 @@ ASM_FUNCTION(func_80C123A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C123AC) {
+extern "C" asm void func_80C123AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra_rock/d_a_obj_gra_rock/func_80C123AC.s"
 }

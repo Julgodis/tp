@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void __kernel_cos();
+extern "C" void __kernel_cos();
+
+extern "C" void __kernel_cos();
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_65;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_66;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_67;
@@ -25,47 +27,47 @@ SECTION_SDATA2 extern f64 lit_73;
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804569C0-804569C8 0008+00 .sdata2    @65                                                          */
+/* 804569C0-804569C8 0008+00 rc=1 efc=0 .sdata2    @65                                                          */
 f64 Math_Double_precision_k_cos__lit_65 = 1.0;
 
-/* 804569C8-804569D0 0008+00 .sdata2    @66                                                          */
+/* 804569C8-804569D0 0008+00 rc=1 efc=0 .sdata2    @66                                                          */
 f64 Math_Double_precision_k_cos__lit_66 = 0.0416666666666666;
 
-/* 804569D0-804569D8 0008+00 .sdata2    @67                                                          */
+/* 804569D0-804569D8 0008+00 rc=1 efc=0 .sdata2    @67                                                          */
 f64 Math_Double_precision_k_cos__lit_67 = -0.001388888888887411;
 
-/* 804569D8-804569E0 0008+00 .sdata2    @68                                                          */
+/* 804569D8-804569E0 0008+00 rc=1 efc=0 .sdata2    @68                                                          */
 f64 Math_Double_precision_k_cos__lit_68 = 2.480158728947673e-05;
 
-/* 804569E0-804569E8 0008+00 .sdata2    @69                                                          */
+/* 804569E0-804569E8 0008+00 rc=1 efc=0 .sdata2    @69                                                          */
 f64 Math_Double_precision_k_cos__lit_69 = -2.7557314351390663e-07;
 
-/* 804569E8-804569F0 0008+00 .sdata2    @70                                                          */
+/* 804569E8-804569F0 0008+00 rc=1 efc=0 .sdata2    @70                                                          */
 f64 Math_Double_precision_k_cos__lit_70 = 2.087572321298175e-09;
 
-/* 804569F0-804569F8 0008+00 .sdata2    @71                                                          */
+/* 804569F0-804569F8 0008+00 rc=1 efc=0 .sdata2    @71                                                          */
 f64 Math_Double_precision_k_cos__lit_71 = -1.1359647557788195e-11;
 
-/* 804569F8-80456A00 0008+00 .sdata2    @72                                                          */
+/* 804569F8-80456A00 0008+00 rc=1 efc=0 .sdata2    @72                                                          */
 f64 Math_Double_precision_k_cos__lit_72 = 0.5;
 
-/* 80456A00-80456A08 0008+00 .sdata2    @73                                                          */
+/* 80456A00-80456A08 0008+00 rc=1 efc=0 .sdata2    @73                                                          */
 f64 lit_73 = 0.28125;
 
-/* 8036AAA8-8036AB9C 00F4+00 .text      __kernel_cos                                                 */
+/* 8036AAA8-8036AB9C 00F4+00 rc=2 efc=2 .text      __kernel_cos                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__kernel_cos) {
+extern "C" asm void __kernel_cos() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/k_cos/__kernel_cos.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

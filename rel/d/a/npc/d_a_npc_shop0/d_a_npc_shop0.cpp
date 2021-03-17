@@ -6,53 +6,144 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DAnmTransform;
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daNpc_Shop0_c {
+	~daNpc_Shop0_c();
+	void create();
+	void createHeap();
+	void destroy();
+	void execute();
+	void draw();
+	void getResName();
+	void getParam();
+	void getFlowNodeNum();
+	void isDelete();
+	void init();
+	void setBckAnm(J3DAnmTransform*, f32, s32, s32, s32, bool);
+	void setCollision();
+	void checkEvent();
+	void orderEvent();
+	void setMtx();
+	void setRoomInf();
+	void cut_alert(s32, s32);
+	void wait(void*);
+	void talk(void*);
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DAnmTransform {
+};
+
+struct daNpc_Shop0_Param_c {
+	~daNpc_Shop0_Param_c();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daNpc_Shop0_cFv();
-extern "C" extern void create__13daNpc_Shop0_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void createHeap__13daNpc_Shop0_cFv();
-extern "C" extern void destroy__13daNpc_Shop0_cFv();
-extern "C" extern void execute__13daNpc_Shop0_cFv();
-extern "C" extern void draw__13daNpc_Shop0_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void getResName__13daNpc_Shop0_cFv();
-extern "C" extern void getParam__13daNpc_Shop0_cFv();
-extern "C" extern void getFlowNodeNum__13daNpc_Shop0_cFv();
-extern "C" extern void isDelete__13daNpc_Shop0_cFv();
-extern "C" extern void init__13daNpc_Shop0_cFv();
-extern "C" extern void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc();
-extern "C" extern void setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib();
-extern "C" extern void setCollision__13daNpc_Shop0_cFv();
-extern "C" extern void checkEvent__13daNpc_Shop0_cFv();
-extern "C" extern void orderEvent__13daNpc_Shop0_cFv();
-extern "C" extern void setMtx__13daNpc_Shop0_cFv();
-extern "C" extern void setRoomInf__13daNpc_Shop0_cFv();
-extern "C" extern void cut_alert__13daNpc_Shop0_cFii();
-extern "C" extern void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i();
-extern "C" extern void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi();
-extern "C" extern void wait__13daNpc_Shop0_cFPv();
-extern "C" extern void talk__13daNpc_Shop0_cFPv();
-extern "C" extern void daNpc_Shop0_Create__FPv();
-extern "C" extern void daNpc_Shop0_Delete__FPv();
-extern "C" extern void daNpc_Shop0_Execute__FPv();
-extern "C" extern void daNpc_Shop0_Draw__FPv();
-extern "C" extern void daNpc_Shop0_IsDelete__FPv();
-extern "C" extern void __dt__19daNpc_Shop0_Param_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80AEBBA4();
-extern "C" extern void func_80AEBBAC();
-extern "C" extern void func_80AEBBB4();
-extern "C" extern void func_80AEBBBC();
-extern "C" extern void func_80AEBBC4();
+void createHeapCallBack(fopAc_ac_c*);
+extern "C" void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc();
+extern "C" void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i();
+extern "C" void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi();
+void daNpc_Shop0_Create(void*);
+void daNpc_Shop0_Delete(void*);
+void daNpc_Shop0_Execute(void*);
+void daNpc_Shop0_Draw(void*);
+bool daNpc_Shop0_IsDelete(void*);
+extern "C" void func_80AEBBA4();
+extern "C" void func_80AEBBAC();
+extern "C" void func_80AEBBB4();
+extern "C" void func_80AEBBBC();
+extern "C" void func_80AEBBC4();
+
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void __dt__13daNpc_Shop0_cFv();
+extern "C" void create__13daNpc_Shop0_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void createHeap__13daNpc_Shop0_cFv();
+extern "C" void destroy__13daNpc_Shop0_cFv();
+extern "C" void execute__13daNpc_Shop0_cFv();
+extern "C" void draw__13daNpc_Shop0_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void getResName__13daNpc_Shop0_cFv();
+extern "C" void getParam__13daNpc_Shop0_cFv();
+extern "C" void getFlowNodeNum__13daNpc_Shop0_cFv();
+extern "C" void isDelete__13daNpc_Shop0_cFv();
+extern "C" void init__13daNpc_Shop0_cFv();
+extern "C" void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc();
+extern "C" void setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib();
+extern "C" void setCollision__13daNpc_Shop0_cFv();
+extern "C" void checkEvent__13daNpc_Shop0_cFv();
+extern "C" void orderEvent__13daNpc_Shop0_cFv();
+extern "C" void setMtx__13daNpc_Shop0_cFv();
+extern "C" void setRoomInf__13daNpc_Shop0_cFv();
+extern "C" void cut_alert__13daNpc_Shop0_cFii();
+extern "C" void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i();
+extern "C" void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi();
+extern "C" void wait__13daNpc_Shop0_cFPv();
+extern "C" void talk__13daNpc_Shop0_cFPv();
+extern "C" void daNpc_Shop0_Create__FPv();
+extern "C" void daNpc_Shop0_Delete__FPv();
+extern "C" void daNpc_Shop0_Execute__FPv();
+extern "C" void daNpc_Shop0_Draw__FPv();
+extern "C" bool daNpc_Shop0_IsDelete__FPv();
+extern "C" void __dt__19daNpc_Shop0_Param_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80AEBBA4();
+extern "C" void func_80AEBBAC();
+extern "C" void func_80AEBBB4();
+extern "C" void func_80AEBBBC();
+extern "C" void func_80AEBBC4();
 SECTION_RODATA extern const u8 mCylDat__13daNpc_Shop0_c[68];
 SECTION_RODATA extern const u8 mParam__19daNpc_Shop0_Param_c[12];
 SECTION_RODATA extern const u32 lit_4004;
@@ -91,7 +182,9 @@ SECTION_BSS extern u8 l_fileName[21 + 3 /* padding */];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -101,7 +194,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -112,7 +205,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_Shop0_cFv) {
+asm daNpc_Shop0_c::~daNpc_Shop0_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__13daNpc_Shop0_cFv.s"
 }
@@ -123,7 +216,7 @@ ASM_FUNCTION(__dt__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/create__13daNpc_Shop0_cFv.s"
 }
@@ -134,7 +227,7 @@ ASM_FUNCTION(create__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__8cM3dGCylFv.s"
 }
@@ -145,7 +238,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__8cM3dGAabFv.s"
 }
@@ -156,7 +249,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__10dCcD_GSttsFv.s"
 }
@@ -167,7 +260,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -178,7 +271,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__12dBgS_AcchCirFv.s"
 }
@@ -189,7 +282,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -200,7 +293,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__12J3DFrameCtrlFv.s"
 }
@@ -211,7 +304,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/createHeap__13daNpc_Shop0_cFv.s"
 }
@@ -222,7 +315,7 @@ ASM_FUNCTION(createHeap__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroy__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::destroy() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/destroy__13daNpc_Shop0_cFv.s"
 }
@@ -233,7 +326,7 @@ ASM_FUNCTION(destroy__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/execute__13daNpc_Shop0_cFv.s"
 }
@@ -244,7 +337,7 @@ ASM_FUNCTION(execute__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/draw__13daNpc_Shop0_cFv.s"
 }
@@ -255,7 +348,7 @@ ASM_FUNCTION(draw__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__8cM3dGPlaFv.s"
 }
@@ -266,7 +359,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/getResName__13daNpc_Shop0_cFv.s"
 }
@@ -277,7 +370,7 @@ ASM_FUNCTION(getResName__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::getParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/getParam__13daNpc_Shop0_cFv.s"
 }
@@ -288,7 +381,7 @@ ASM_FUNCTION(getParam__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFlowNodeNum__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::getFlowNodeNum() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/getFlowNodeNum__13daNpc_Shop0_cFv.s"
 }
@@ -299,7 +392,7 @@ ASM_FUNCTION(getFlowNodeNum__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/isDelete__13daNpc_Shop0_cFv.s"
 }
@@ -310,7 +403,7 @@ ASM_FUNCTION(isDelete__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::init() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/init__13daNpc_Shop0_cFv.s"
 }
@@ -321,7 +414,7 @@ ASM_FUNCTION(init__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc) {
+extern "C" asm void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc.s"
 }
@@ -332,7 +425,7 @@ ASM_FUNCTION(getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib) {
+asm void daNpc_Shop0_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2, s32 field_3, s32 field_4, bool field_5) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib.s"
 }
@@ -343,7 +436,7 @@ ASM_FUNCTION(setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setCollision__13daNpc_Shop0_cFv.s"
 }
@@ -354,7 +447,7 @@ ASM_FUNCTION(setCollision__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEvent__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::checkEvent() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/checkEvent__13daNpc_Shop0_cFv.s"
 }
@@ -365,7 +458,7 @@ ASM_FUNCTION(checkEvent__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderEvent__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::orderEvent() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/orderEvent__13daNpc_Shop0_cFv.s"
 }
@@ -376,7 +469,7 @@ ASM_FUNCTION(orderEvent__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setMtx__13daNpc_Shop0_cFv.s"
 }
@@ -387,7 +480,7 @@ ASM_FUNCTION(setMtx__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInf__13daNpc_Shop0_cFv) {
+asm void daNpc_Shop0_c::setRoomInf() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setRoomInf__13daNpc_Shop0_cFv.s"
 }
@@ -398,7 +491,7 @@ ASM_FUNCTION(setRoomInf__13daNpc_Shop0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_alert__13daNpc_Shop0_cFii) {
+asm void daNpc_Shop0_c::cut_alert(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/cut_alert__13daNpc_Shop0_cFii.s"
 }
@@ -409,7 +502,7 @@ ASM_FUNCTION(cut_alert__13daNpc_Shop0_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i) {
+extern "C" asm void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i.s"
 }
@@ -420,7 +513,7 @@ ASM_FUNCTION(chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi) {
+extern "C" asm void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi.s"
 }
@@ -431,7 +524,7 @@ ASM_FUNCTION(setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_Shop0_cFPv) {
+asm void daNpc_Shop0_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/wait__13daNpc_Shop0_cFPv.s"
 }
@@ -442,7 +535,7 @@ ASM_FUNCTION(wait__13daNpc_Shop0_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_Shop0_cFPv) {
+asm void daNpc_Shop0_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/talk__13daNpc_Shop0_cFPv.s"
 }
@@ -453,7 +546,7 @@ ASM_FUNCTION(talk__13daNpc_Shop0_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Shop0_Create__FPv) {
+asm void daNpc_Shop0_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_Create__FPv.s"
 }
@@ -464,7 +557,7 @@ ASM_FUNCTION(daNpc_Shop0_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Shop0_Delete__FPv) {
+asm void daNpc_Shop0_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_Delete__FPv.s"
 }
@@ -475,7 +568,7 @@ ASM_FUNCTION(daNpc_Shop0_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Shop0_Execute__FPv) {
+asm void daNpc_Shop0_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_Execute__FPv.s"
 }
@@ -486,7 +579,7 @@ ASM_FUNCTION(daNpc_Shop0_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Shop0_Draw__FPv) {
+asm void daNpc_Shop0_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_Draw__FPv.s"
 }
@@ -494,21 +587,16 @@ ASM_FUNCTION(daNpc_Shop0_Draw__FPv) {
 
 
 /* 80AEBB0C-80AEBB14 0008+00 .text      daNpc_Shop0_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Shop0_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_IsDelete__FPv.s"
+bool daNpc_Shop0_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEBB14-80AEBB5C 0048+00 .text      __dt__19daNpc_Shop0_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_Shop0_Param_cFv) {
+asm daNpc_Shop0_Param_c::~daNpc_Shop0_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__19daNpc_Shop0_Param_cFv.s"
 }
@@ -519,7 +607,7 @@ ASM_FUNCTION(__dt__19daNpc_Shop0_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/__dt__10cCcD_GSttsFv.s"
 }
@@ -530,7 +618,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AEBBA4) {
+extern "C" asm void func_80AEBBA4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/func_80AEBBA4.s"
 }
@@ -541,7 +629,7 @@ ASM_FUNCTION(func_80AEBBA4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AEBBAC) {
+extern "C" asm void func_80AEBBAC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/func_80AEBBAC.s"
 }
@@ -552,7 +640,7 @@ ASM_FUNCTION(func_80AEBBAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AEBBB4) {
+extern "C" asm void func_80AEBBB4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/func_80AEBBB4.s"
 }
@@ -563,7 +651,7 @@ ASM_FUNCTION(func_80AEBBB4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AEBBBC) {
+extern "C" asm void func_80AEBBBC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/func_80AEBBBC.s"
 }
@@ -574,7 +662,7 @@ ASM_FUNCTION(func_80AEBBBC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AEBBC4) {
+extern "C" asm void func_80AEBBC4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/func_80AEBBC4.s"
 }

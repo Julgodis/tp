@@ -6,27 +6,62 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjGrzRock_c;
+
+struct daObjGrzRock_c {
+	void setBaseMtx();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setPrtcl();
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setBaseMtx__14daObjGrzRock_cFv();
-extern "C" extern void setEnvTevColor__14daObjGrzRock_cFv();
-extern "C" extern void setRoomNo__14daObjGrzRock_cFv();
-extern "C" extern void setPrtcl__14daObjGrzRock_cFv();
-extern "C" extern void Create__14daObjGrzRock_cFv();
-extern "C" extern void CreateHeap__14daObjGrzRock_cFv();
-extern "C" extern void create__14daObjGrzRock_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void Execute__14daObjGrzRock_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjGrzRock_cFv();
-extern "C" extern void Delete__14daObjGrzRock_cFv();
-extern "C" extern void daObjGrzRock_Draw__FP14daObjGrzRock_c();
-extern "C" extern void daObjGrzRock_Execute__FP14daObjGrzRock_c();
-extern "C" extern void daObjGrzRock_IsDelete__FP14daObjGrzRock_c();
-extern "C" extern void daObjGrzRock_Delete__FP14daObjGrzRock_c();
-extern "C" extern void daObjGrzRock_create__FP10fopAc_ac_c();
-extern "C" extern void func_80C15348();
-extern "C" extern void func_80C15350();
+extern "C" void Execute__14daObjGrzRock_cFPPA3_A4_f();
+void daObjGrzRock_Draw(daObjGrzRock_c*);
+void daObjGrzRock_Execute(daObjGrzRock_c*);
+bool daObjGrzRock_IsDelete(daObjGrzRock_c*);
+void daObjGrzRock_Delete(daObjGrzRock_c*);
+void daObjGrzRock_create(fopAc_ac_c*);
+extern "C" void func_80C15348();
+extern "C" void func_80C15350();
+
+extern "C" void setBaseMtx__14daObjGrzRock_cFv();
+extern "C" void setEnvTevColor__14daObjGrzRock_cFv();
+extern "C" void setRoomNo__14daObjGrzRock_cFv();
+extern "C" void setPrtcl__14daObjGrzRock_cFv();
+extern "C" void Create__14daObjGrzRock_cFv();
+extern "C" void CreateHeap__14daObjGrzRock_cFv();
+extern "C" void create__14daObjGrzRock_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void Execute__14daObjGrzRock_cFPPA3_A4_f();
+extern "C" void Draw__14daObjGrzRock_cFv();
+extern "C" void Delete__14daObjGrzRock_cFv();
+extern "C" void daObjGrzRock_Draw__FP14daObjGrzRock_c();
+extern "C" void daObjGrzRock_Execute__FP14daObjGrzRock_c();
+extern "C" bool daObjGrzRock_IsDelete__FP14daObjGrzRock_c();
+extern "C" void daObjGrzRock_Delete__FP14daObjGrzRock_c();
+extern "C" void daObjGrzRock_create__FP10fopAc_ac_c();
+extern "C" void func_80C15348();
+extern "C" void func_80C15350();
 SECTION_RODATA extern const u8 data_80C15360[12];
 SECTION_RODATA extern const u32 lit_3849;
 SECTION_RODATA extern const u32 lit_3850;
@@ -42,7 +77,9 @@ SECTION_DATA extern void*const __vt__14daObjGrzRock_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -52,7 +89,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/setBaseMtx__14daObjGrzRock_cFv.s"
 }
@@ -63,7 +100,7 @@ ASM_FUNCTION(setBaseMtx__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/setEnvTevColor__14daObjGrzRock_cFv.s"
 }
@@ -74,7 +111,7 @@ ASM_FUNCTION(setEnvTevColor__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/setRoomNo__14daObjGrzRock_cFv.s"
 }
@@ -85,7 +122,7 @@ ASM_FUNCTION(setRoomNo__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPrtcl__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::setPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/setPrtcl__14daObjGrzRock_cFv.s"
 }
@@ -96,7 +133,7 @@ ASM_FUNCTION(setPrtcl__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/Create__14daObjGrzRock_cFv.s"
 }
@@ -107,7 +144,7 @@ ASM_FUNCTION(Create__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/CreateHeap__14daObjGrzRock_cFv.s"
 }
@@ -118,7 +155,7 @@ ASM_FUNCTION(CreateHeap__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/func_80C14F50.s"
 }
@@ -129,7 +166,7 @@ ASM_FUNCTION(create__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -140,7 +177,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjGrzRock_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjGrzRock_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/Execute__14daObjGrzRock_cFPPA3_A4_f.s"
 }
@@ -151,7 +188,7 @@ ASM_FUNCTION(Execute__14daObjGrzRock_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/Draw__14daObjGrzRock_cFv.s"
 }
@@ -162,7 +199,7 @@ ASM_FUNCTION(Draw__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjGrzRock_cFv) {
+asm void daObjGrzRock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/Delete__14daObjGrzRock_cFv.s"
 }
@@ -173,7 +210,7 @@ ASM_FUNCTION(Delete__14daObjGrzRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGrzRock_Draw__FP14daObjGrzRock_c) {
+asm void daObjGrzRock_Draw(daObjGrzRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_Draw__FP14daObjGrzRock_c.s"
 }
@@ -184,7 +221,7 @@ ASM_FUNCTION(daObjGrzRock_Draw__FP14daObjGrzRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGrzRock_Execute__FP14daObjGrzRock_c) {
+asm void daObjGrzRock_Execute(daObjGrzRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_Execute__FP14daObjGrzRock_c.s"
 }
@@ -192,21 +229,16 @@ ASM_FUNCTION(daObjGrzRock_Execute__FP14daObjGrzRock_c) {
 
 
 /* 80C15300-80C15308 0008+00 .text      daObjGrzRock_IsDelete__FP14daObjGrzRock_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjGrzRock_IsDelete__FP14daObjGrzRock_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_IsDelete__FP14daObjGrzRock_c.s"
+bool daObjGrzRock_IsDelete(daObjGrzRock_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C15308-80C15328 0020+00 .text      daObjGrzRock_Delete__FP14daObjGrzRock_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGrzRock_Delete__FP14daObjGrzRock_c) {
+asm void daObjGrzRock_Delete(daObjGrzRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_Delete__FP14daObjGrzRock_c.s"
 }
@@ -217,7 +249,7 @@ ASM_FUNCTION(daObjGrzRock_Delete__FP14daObjGrzRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGrzRock_create__FP10fopAc_ac_c) {
+asm void daObjGrzRock_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_create__FP10fopAc_ac_c.s"
 }
@@ -228,7 +260,7 @@ ASM_FUNCTION(daObjGrzRock_create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C15348) {
+extern "C" asm void func_80C15348() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/func_80C15348.s"
 }
@@ -239,7 +271,7 @@ ASM_FUNCTION(func_80C15348) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C15350) {
+extern "C" asm void func_80C15350() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/func_80C15350.s"
 }

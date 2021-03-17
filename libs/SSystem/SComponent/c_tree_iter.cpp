@@ -9,44 +9,53 @@
 // Forward References:
 // 
 
-extern "C" extern void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-extern "C" extern void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
-/* 80266540-802665B4 0074+00 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
+/* 80266540-802665B4 0074+00 rc=2 efc=2 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv) {
+extern "C" asm void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree_iter/cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv.s"
 }
 #pragma pop
 
 
-/* 802665B4-80266624 0070+00 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
+/* 802665B4-80266624 0070+00 rc=2 efc=2 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv) {
+extern "C" asm void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree_iter/cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

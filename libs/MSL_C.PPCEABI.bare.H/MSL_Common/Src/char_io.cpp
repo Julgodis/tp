@@ -9,45 +9,55 @@
 // Forward References:
 // 
 
-extern "C" extern void fputs();
-extern "C" extern void __put_char();
+extern "C" void fputs();
+extern "C" static void __put_char();
+
+extern "C" void fputs();
+extern "C" static void __put_char();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __flush_buffer();
-extern "C" extern void __prep_buffer();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
-extern "C" extern void fseek();
-extern "C" extern void __stdio_atexit();
-extern "C" extern void fwide();
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fseek();
+extern "C" void __stdio_atexit();
+extern "C" void fwide();
+
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fseek();
+extern "C" void __stdio_atexit();
+extern "C" void fwide();
 
 // 
 // Declarations:
 // 
 
-/* 803651D8-803652AC 00D4+00 .text      fputs                                                        */
+/* 803651D8-803652AC 00D4+00 rc=1 efc=1 .text      fputs                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fputs) {
+extern "C" asm void fputs() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/char_io/fputs.s"
 }
 #pragma pop
 
 
-/* 803652AC-80365464 01B8+00 .text      __put_char                                                   */
+/* 803652AC-80365464 01B8+00 rc=1 efc=0 .text      __put_char                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__put_char) {
+extern "C" asm static void __put_char() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/char_io/__put_char.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

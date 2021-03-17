@@ -9,113 +9,135 @@
 // Forward References:
 // 
 
-extern "C" extern void __CARDCheckSum();
-extern "C" extern void VerifyID();
-extern "C" extern void VerifyDir();
-extern "C" extern void VerifyFAT();
-extern "C" extern void __CARDVerify();
-extern "C" extern void CARDCheckExAsync();
-extern "C" extern void CARDCheck();
+extern "C" void __CARDCheckSum();
+extern "C" static void VerifyID();
+extern "C" static void VerifyDir();
+extern "C" static void VerifyFAT();
+extern "C" void __CARDVerify();
+extern "C" static void CARDCheckExAsync();
+extern "C" void CARDCheck();
+
+extern "C" void __CARDCheckSum();
+extern "C" static void VerifyID();
+extern "C" static void VerifyDir();
+extern "C" static void VerifyFAT();
+extern "C" void __CARDVerify();
+extern "C" static void CARDCheckExAsync();
+extern "C" void CARDCheck();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void memcpy();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void __OSLockSramEx();
-extern "C" extern void __OSUnlockSramEx();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDGetFontEncode();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDUpdateFatBlock();
-extern "C" extern void __CARDUpdateDir();
-extern "C" extern void __shr2i();
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetFontEncode();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDUpdateFatBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __shr2i();
+
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetFontEncode();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDUpdateFatBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __shr2i();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 803559E0-80355B90 01B0+00 .text      __CARDCheckSum                                               */
+/* 803559E0-80355B90 01B0+00 rc=3 efc=3 .text      __CARDCheckSum                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDCheckSum) {
+extern "C" asm void __CARDCheckSum() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/__CARDCheckSum.s"
 }
 #pragma pop
 
 
-/* 80355B90-80355E14 0284+00 .text      VerifyID                                                     */
+/* 80355B90-80355E14 0284+00 rc=2 efc=0 .text      VerifyID                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(VerifyID) {
+extern "C" asm static void VerifyID() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyID.s"
 }
 #pragma pop
 
 
-/* 80355E14-80356054 0240+00 .text      VerifyDir                                                    */
+/* 80355E14-80356054 0240+00 rc=2 efc=0 .text      VerifyDir                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(VerifyDir) {
+extern "C" asm static void VerifyDir() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyDir.s"
 }
 #pragma pop
 
 
-/* 80356054-803562D8 0284+00 .text      VerifyFAT                                                    */
+/* 80356054-803562D8 0284+00 rc=2 efc=0 .text      VerifyFAT                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(VerifyFAT) {
+extern "C" asm static void VerifyFAT() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/VerifyFAT.s"
 }
 #pragma pop
 
 
-/* 803562D8-80356364 008C+00 .text      __CARDVerify                                                 */
+/* 803562D8-80356364 008C+00 rc=1 efc=1 .text      __CARDVerify                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDVerify) {
+extern "C" asm void __CARDVerify() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/__CARDVerify.s"
 }
 #pragma pop
 
 
-/* 80356364-803568F4 0590+00 .text      CARDCheckExAsync                                             */
+/* 80356364-803568F4 0590+00 rc=1 efc=0 .text      CARDCheckExAsync                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDCheckExAsync) {
+extern "C" asm static void CARDCheckExAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/CARDCheckExAsync.s"
 }
 #pragma pop
 
 
-/* 803568F4-80356948 0054+00 .text      CARDCheck                                                    */
+/* 803568F4-80356948 0054+00 rc=2 efc=2 .text      CARDCheck                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDCheck) {
+extern "C" asm void CARDCheck() {
 	nofralloc
 #include "asm/dolphin/card/CARDCheck/CARDCheck.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

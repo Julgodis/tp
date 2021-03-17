@@ -6,82 +6,125 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// build scene_tag_class (scene_tag_class) False/False
+/* top-level dependencies (begin scene_tag_class) */
+/* top-level dependencies (end scene_tag_class) */
+struct scene_tag_class {
+};
+
+// build process_method_class (process_method_class) False/False
+/* top-level dependencies (begin process_method_class) */
+/* top-level dependencies (end process_method_class) */
+struct process_method_class {
+};
+
+// build nodedraw_method_class (nodedraw_method_class) False/False
+/* top-level dependencies (begin nodedraw_method_class) */
+/* top-level dependencies (end nodedraw_method_class) */
+struct nodedraw_method_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopScn_Draw__FP11scene_class();
-extern "C" extern void fopScn_Execute__FP11scene_class();
-extern "C" extern void fopScn_IsDelete__FPv();
-extern "C" extern void fopScn_Delete__FPv();
-extern "C" extern void fopScn_Create__FPv();
+static void fopScn_Draw(scene_class*);
+static void fopScn_Execute(scene_class*);
+static void fopScn_IsDelete(void*);
+static void fopScn_Delete(void*);
+static void fopScn_Create(void*);
+
+extern "C" static void fopScn_Draw__FP11scene_class();
+extern "C" static void fopScn_Execute__FP11scene_class();
+extern "C" static void fopScn_IsDelete__FPv();
+extern "C" static void fopScn_Delete__FPv();
+extern "C" static void fopScn_Create__FPv();
 SECTION_DATA extern void*g_fopScn_Method[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void fopScnTg_QueueTo__FP15scene_tag_class();
-extern "C" extern void fopScnTg_ToQueue__FP15scene_tag_class();
-extern "C" extern void fopScnTg_Init__FP15scene_tag_classPv();
-extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
-extern "C" extern void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
+void fopScnTg_QueueTo(scene_tag_class*);
+void fopScnTg_ToQueue(scene_tag_class*);
+void fopScnTg_Init(scene_tag_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+void fpcNd_DrawMethod(nodedraw_method_class*, void*);
+
+extern "C" void fopScnTg_QueueTo__FP15scene_tag_class();
+extern "C" void fopScnTg_ToQueue__FP15scene_tag_class();
+extern "C" void fopScnTg_Init__FP15scene_tag_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
 
 // 
 // Declarations:
 // 
 
-/* 8001EB34-8001EB5C 0028+00 .text      fopScn_Draw__FP11scene_class                                 */
+/* 8001EB34-8001EB5C 0028+00 rc=1 efc=0 .text      fopScn_Draw__FP11scene_class                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScn_Draw__FP11scene_class) {
+asm static void fopScn_Draw(scene_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene/fopScn_Draw__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 8001EB5C-8001EB84 0028+00 .text      fopScn_Execute__FP11scene_class                              */
+/* 8001EB5C-8001EB84 0028+00 rc=1 efc=0 .text      fopScn_Execute__FP11scene_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScn_Execute__FP11scene_class) {
+asm static void fopScn_Execute(scene_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene/fopScn_Execute__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 8001EB84-8001EBAC 0028+00 .text      fopScn_IsDelete__FPv                                         */
+/* 8001EB84-8001EBAC 0028+00 rc=1 efc=0 .text      fopScn_IsDelete__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScn_IsDelete__FPv) {
+asm static void fopScn_IsDelete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene/fopScn_IsDelete__FPv.s"
 }
 #pragma pop
 
 
-/* 8001EBAC-8001EC00 0054+00 .text      fopScn_Delete__FPv                                           */
+/* 8001EBAC-8001EC00 0054+00 rc=1 efc=0 .text      fopScn_Delete__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScn_Delete__FPv) {
+asm static void fopScn_Delete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene/fopScn_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8001EC00-8001EC74 0074+00 .text      fopScn_Create__FPv                                           */
+/* 8001EC00-8001EC74 0074+00 rc=1 efc=0 .text      fopScn_Create__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScn_Create__FPv) {
+asm static void fopScn_Create(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene/fopScn_Create__FPv.s"
 }
@@ -89,7 +132,7 @@ ASM_FUNCTION(fopScn_Create__FPv) {
 
 
 /* ############################################################################################## */
-/* 803A38B0-803A38C8 0014+04 .data      g_fopScn_Method                                              */
+/* 803A38B0-803A38C8 0014+04 rc=9 efc=9 .data      g_fopScn_Method                                              */
 void* g_fopScn_Method[6] = {
 	(void*)fopScn_Create__FPv,
 	(void*)fopScn_Delete__FPv,

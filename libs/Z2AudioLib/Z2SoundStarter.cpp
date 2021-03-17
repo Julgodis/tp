@@ -6,15 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Z2SoundStarter (Z2SoundStarter) False/False
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+};
+
+/* top-level dependencies (begin Z2SoundStarter) */
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end Z2SoundStarter) */
+struct Z2SoundStarter {
+	// JAISoundHandle
+	/* 802AAB94 */ Z2SoundStarter(bool);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, char);
+	/* 802AAFF0 */ ~Z2SoundStarter();
+};
+
+// build JAISoundHandle (JAISoundHandle) True/True
+// build JASTrack (JASTrack) False/False
+/* top-level dependencies (begin JASTrack) */
+/* top-level dependencies (end JASTrack) */
+struct JASTrack {
+	/* 80291C30 */ void openChild(u32);
+	/* 80292918 */ void writePort(u32, u16);
+	/* 8029297C */ void readPort(u32);
+};
+
+// build JAISoundParamsMove (JAISoundParamsMove) False/False
+/* top-level dependencies (begin JAISoundParamsMove) */
+/* top-level dependencies (end JAISoundParamsMove) */
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+	/* 802A2E64 */ void moveFxMix(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+	/* 802A2F14 */ void moveDolby(f32, u32);
+};
+
+// build JAISoundStarter (JAISoundStarter) False/False
+/* top-level dependencies (begin JAISoundStarter) */
+/* top-level dependencies (end JAISoundStarter) */
+struct JAISoundStarter {
+	/* 802A2F6C */ JAISoundStarter(bool);
+	/* 802A2F88 */ ~JAISoundStarter();
+};
+
+// build Z2EnvSeMgr (Z2EnvSeMgr) False/False
+/* top-level dependencies (begin Z2EnvSeMgr) */
+/* top-level dependencies (end Z2EnvSeMgr) */
+struct Z2EnvSeMgr {
+	/* 802C93E4 */ void getFogDensity();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14Z2SoundStarterFb();
-extern "C" extern void func_802AABF4();
-extern "C" extern void func_802AAC3C();
-extern "C" extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" extern void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
-extern "C" extern void __dt__14Z2SoundStarterFv();
+extern "C" void func_802AABF4();
+extern "C" void func_802AAC3C();
+
+extern "C" void __ct__14Z2SoundStarterFb();
+extern "C" void func_802AABF4();
+extern "C" void func_802AAC3C();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+extern "C" void __dt__14Z2SoundStarterFv();
 SECTION_DATA extern void*const __vt__14Z2SoundStarter[6];
 SECTION_SDATA2 extern u8 lit_3597[4];
 SECTION_SDATA2 extern f32 lit_3598;
@@ -26,22 +87,28 @@ SECTION_SDATA2 extern f64 Z2SoundStarter__lit_3717;
 // External References:
 // 
 
-extern "C" extern void openChild__8JASTrackFUl();
-extern "C" extern void writePort__8JASTrackFUlUs();
-extern "C" extern void readPort__8JASTrackFUl();
-extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" extern void movePitch__18JAISoundParamsMoveFfUl();
-extern "C" extern void moveFxMix__18JAISoundParamsMoveFfUl();
-extern "C" extern void movePan__18JAISoundParamsMoveFfUl();
-extern "C" extern void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" extern void __ct__15JAISoundStarterFb();
-extern "C" extern void __dt__15JAISoundStarterFv();
-extern "C" extern void getFogDensity__10Z2EnvSeMgrFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+
+extern "C" void openChild__8JASTrackFUl();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void readPort__8JASTrackFUl();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void __ct__15JAISoundStarterFb();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void getFogDensity__10Z2EnvSeMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 data_80450B3C[4];
 SECTION_SBSS extern u8 data_80450B74[4];
 SECTION_SBSS extern u8 data_80450B7C[4];
@@ -53,7 +120,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C9D80-803C9D98 0014+04 .data      __vt__14Z2SoundStarter                                       */
+/* 803C9D80-803C9D98 0014+04 rc=8 efc=6 .data      __vt__14Z2SoundStarter                                       */
 void* const __vt__14Z2SoundStarter[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -64,11 +131,11 @@ void* const __vt__14Z2SoundStarter[6] = {
 	NULL,
 };
 
-/* 802AAB94-802AABF4 0060+00 .text      __ct__14Z2SoundStarterFb                                     */
+/* 802AAB94-802AABF4 0060+00 rc=4 efc=4 .text      __ct__14Z2SoundStarterFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14Z2SoundStarterFb) {
+asm Z2SoundStarter::Z2SoundStarter(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/__ct__14Z2SoundStarterFb.s"
 }
@@ -76,22 +143,22 @@ ASM_FUNCTION(__ct__14Z2SoundStarterFb) {
 
 
 /* ############################################################################################## */
-/* 80455858-8045585C 0004+00 .sdata2    @3597                                                        */
+/* 80455858-8045585C 0004+00 rc=2 efc=0 .sdata2    @3597                                                        */
 u8 lit_3597[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045585C-80455860 0004+00 .sdata2    @3598                                                        */
+/* 8045585C-80455860 0004+00 rc=2 efc=0 .sdata2    @3598                                                        */
 f32 lit_3598 = 1.0f;
 
-/* 80455860-80455864 0004+00 .sdata2    @3599                                                        */
+/* 80455860-80455864 0004+00 rc=2 efc=0 .sdata2    @3599                                                        */
 f32 lit_3599 = -1.0f;
 
-/* 802AABF4-802AAC3C 0048+00 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802AABF4-802AAC3C 0048+00 rc=6 efc=5 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802AABF4) {
+extern "C" asm void func_802AABF4() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/func_802AABF4.s"
 }
@@ -99,54 +166,53 @@ ASM_FUNCTION(func_802AABF4) {
 
 
 /* ############################################################################################## */
-/* 80455864-80455868 0004+00 .sdata2    @3713                                                        */
+/* 80455864-80455868 0004+00 rc=1 efc=0 .sdata2    @3713                                                        */
 f32 Z2SoundStarter__lit_3713 = 0.5f;
 
-/* 80455868-80455870 0008+00 .sdata2    @3717                                                        */
+/* 80455868-80455870 0008+00 rc=1 efc=0 .sdata2    @3717                                                        */
 f64 Z2SoundStarter__lit_3717 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802AAC3C-802AAEDC 02A0+00 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
+/* 802AAC3C-802AAEDC 02A0+00 rc=4 efc=2 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802AAC3C) {
+extern "C" asm void func_802AAC3C() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/func_802AAC3C.s"
 }
 #pragma pop
 
 
-/* 802AAEDC-802AAF74 0098+00 .text      setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc        */
+/* 802AAEDC-802AAF74 0098+00 rc=11 efc=10 .text      setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc) {
+asm void Z2SoundStarter::setPortData(JAISoundHandle* field_0, u32 field_1, u16 field_2, char field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc.s"
 }
 #pragma pop
 
 
-/* 802AAF74-802AAFF0 007C+00 .text      getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc          */
+/* 802AAF74-802AAFF0 007C+00 rc=1 efc=1 .text      getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc) {
+asm void Z2SoundStarter::getPortData(JAISoundHandle* field_0, u32 field_1, char field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc.s"
 }
 #pragma pop
 
 
-/* 802AAFF0-802AB07C 008C+00 .text      __dt__14Z2SoundStarterFv                                     */
+/* 802AAFF0-802AB07C 008C+00 rc=1 efc=0 .text      __dt__14Z2SoundStarterFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14Z2SoundStarterFv) {
+asm Z2SoundStarter::~Z2SoundStarter() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/__dt__14Z2SoundStarterFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

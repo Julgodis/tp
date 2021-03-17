@@ -6,29 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_food_class;
+
+struct daObj_Food_HIO_c {
+	daObj_Food_HIO_c();
+	~daObj_Food_HIO_c();
+};
+
+struct obj_food_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Food_HIO_cFv();
-extern "C" extern void daObj_Food_Draw__FP14obj_food_class();
-extern "C" extern void ground_ang_set__FP14obj_food_class();
-extern "C" extern void food_carry__FP14obj_food_class();
-extern "C" extern void wall_angle_get__FP14obj_food_class();
-extern "C" extern void food_normal__FP14obj_food_class();
-extern "C" extern void ball_move__FP14obj_food_class();
-extern "C" extern void action__FP14obj_food_class();
-extern "C" extern void daObj_Food_Execute__FP14obj_food_class();
-extern "C" extern void daObj_Food_IsDelete__FP14obj_food_class();
-extern "C" extern void daObj_Food_Delete__FP14obj_food_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Food_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__16daObj_Food_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_food_cpp();
-extern "C" extern void func_80BF1D6C();
-extern "C" extern void func_80BF1D74();
+void daObj_Food_Draw(obj_food_class*);
+void ground_ang_set(obj_food_class*);
+void food_carry(obj_food_class*);
+void wall_angle_get(obj_food_class*);
+void food_normal(obj_food_class*);
+void ball_move(obj_food_class*);
+void action(obj_food_class*);
+void daObj_Food_Execute(obj_food_class*);
+bool daObj_Food_IsDelete(obj_food_class*);
+void daObj_Food_Delete(obj_food_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Food_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_food_cpp();
+extern "C" void func_80BF1D6C();
+extern "C" void func_80BF1D74();
+
+extern "C" void __ct__16daObj_Food_HIO_cFv();
+extern "C" void daObj_Food_Draw__FP14obj_food_class();
+extern "C" void ground_ang_set__FP14obj_food_class();
+extern "C" void food_carry__FP14obj_food_class();
+extern "C" void wall_angle_get__FP14obj_food_class();
+extern "C" void food_normal__FP14obj_food_class();
+extern "C" void ball_move__FP14obj_food_class();
+extern "C" void action__FP14obj_food_class();
+extern "C" void daObj_Food_Execute__FP14obj_food_class();
+extern "C" bool daObj_Food_IsDelete__FP14obj_food_class();
+extern "C" void daObj_Food_Delete__FP14obj_food_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Food_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__16daObj_Food_HIO_cFv();
+extern "C" void __sinit_d_a_obj_food_cpp();
+extern "C" void func_80BF1D6C();
+extern "C" void func_80BF1D74();
 SECTION_RODATA extern const u32 lit_3647;
 SECTION_RODATA extern const u32 lit_3679;
 SECTION_RODATA extern const u32 lit_3680;
@@ -79,8 +125,11 @@ SECTION_BSS extern u8 l_HIO[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -90,7 +139,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Food_HIO_cFv) {
+asm daObj_Food_HIO_c::daObj_Food_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__ct__16daObj_Food_HIO_cFv.s"
 }
@@ -101,7 +150,7 @@ ASM_FUNCTION(__ct__16daObj_Food_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Food_Draw__FP14obj_food_class) {
+asm void daObj_Food_Draw(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Draw__FP14obj_food_class.s"
 }
@@ -112,7 +161,7 @@ ASM_FUNCTION(daObj_Food_Draw__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ground_ang_set__FP14obj_food_class) {
+asm void ground_ang_set(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/ground_ang_set__FP14obj_food_class.s"
 }
@@ -123,7 +172,7 @@ ASM_FUNCTION(ground_ang_set__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(food_carry__FP14obj_food_class) {
+asm void food_carry(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/food_carry__FP14obj_food_class.s"
 }
@@ -134,7 +183,7 @@ ASM_FUNCTION(food_carry__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_angle_get__FP14obj_food_class) {
+asm void wall_angle_get(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/wall_angle_get__FP14obj_food_class.s"
 }
@@ -145,7 +194,7 @@ ASM_FUNCTION(wall_angle_get__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(food_normal__FP14obj_food_class) {
+asm void food_normal(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/food_normal__FP14obj_food_class.s"
 }
@@ -156,7 +205,7 @@ ASM_FUNCTION(food_normal__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ball_move__FP14obj_food_class) {
+asm void ball_move(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/ball_move__FP14obj_food_class.s"
 }
@@ -167,7 +216,7 @@ ASM_FUNCTION(ball_move__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14obj_food_class) {
+asm void action(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/action__FP14obj_food_class.s"
 }
@@ -178,7 +227,7 @@ ASM_FUNCTION(action__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Food_Execute__FP14obj_food_class) {
+asm void daObj_Food_Execute(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Execute__FP14obj_food_class.s"
 }
@@ -186,21 +235,16 @@ ASM_FUNCTION(daObj_Food_Execute__FP14obj_food_class) {
 
 
 /* 80BF1794-80BF179C 0008+00 .text      daObj_Food_IsDelete__FP14obj_food_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Food_IsDelete__FP14obj_food_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_IsDelete__FP14obj_food_class.s"
+bool daObj_Food_IsDelete(obj_food_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BF179C-80BF1804 0068+00 .text      daObj_Food_Delete__FP14obj_food_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Food_Delete__FP14obj_food_class) {
+asm void daObj_Food_Delete(obj_food_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Delete__FP14obj_food_class.s"
 }
@@ -211,7 +255,7 @@ ASM_FUNCTION(daObj_Food_Delete__FP14obj_food_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -222,7 +266,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Food_Create__FP10fopAc_ac_c) {
+asm void daObj_Food_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_Create__FP10fopAc_ac_c.s"
 }
@@ -233,7 +277,7 @@ ASM_FUNCTION(daObj_Food_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__dt__8cM3dGSphFv.s"
 }
@@ -244,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__dt__8cM3dGAabFv.s"
 }
@@ -255,7 +299,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -266,7 +310,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Food_HIO_cFv) {
+asm daObj_Food_HIO_c::~daObj_Food_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__dt__16daObj_Food_HIO_cFv.s"
 }
@@ -277,7 +321,7 @@ ASM_FUNCTION(__dt__16daObj_Food_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_food_cpp) {
+extern "C" asm void __sinit_d_a_obj_food_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/__sinit_d_a_obj_food_cpp.s"
 }
@@ -288,7 +332,7 @@ ASM_FUNCTION(__sinit_d_a_obj_food_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BF1D6C) {
+extern "C" asm void func_80BF1D6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/func_80BF1D6C.s"
 }
@@ -299,7 +343,7 @@ ASM_FUNCTION(func_80BF1D6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BF1D74) {
+extern "C" asm void func_80BF1D74() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/func_80BF1D74.s"
 }

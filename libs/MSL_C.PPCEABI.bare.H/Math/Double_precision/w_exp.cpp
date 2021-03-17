@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void exp();
+extern "C" void exp();
+
+extern "C" void exp();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_exp();
+extern "C" void __ieee754_exp();
+
+extern "C" void __ieee754_exp();
 
 // 
 // Declarations:
 // 
 
-/* 8036C740-8036C760 0020+00 .text      exp                                                          */
+/* 8036C740-8036C760 0020+00 rc=1 efc=1 .text      exp                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exp) {
+extern "C" asm void exp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_exp/exp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

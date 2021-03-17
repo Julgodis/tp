@@ -6,11 +6,21 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagSchedule_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagSchedule_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagSchedule_Delete__FP15daTagSchedule_c();
+void daTagSchedule_Create(fopAc_ac_c*);
+void daTagSchedule_Delete(daTagSchedule_c*);
+
+extern "C" void daTagSchedule_Create__FP10fopAc_ac_c();
+extern "C" void daTagSchedule_Delete__FP15daTagSchedule_c();
 SECTION_DATA extern u8 l_daTagSchedule_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Schedule[48];
 
@@ -18,7 +28,9 @@ SECTION_DATA extern u8 g_profile_Tag_Schedule[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -28,7 +40,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSchedule_Create__FP10fopAc_ac_c) {
+asm void daTagSchedule_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_schedule/d_a_tag_schedule/daTagSchedule_Create__FP10fopAc_ac_c.s"
 }
@@ -39,7 +51,7 @@ ASM_FUNCTION(daTagSchedule_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSchedule_Delete__FP15daTagSchedule_c) {
+asm void daTagSchedule_Delete(daTagSchedule_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_schedule/d_a_tag_schedule/daTagSchedule_Delete__FP15daTagSchedule_c.s"
 }

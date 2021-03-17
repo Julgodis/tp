@@ -6,22 +6,46 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_Lantern_c {
+	~daTag_Lantern_c();
+	void create();
+	void Delete();
+	void Execute();
+	bool Draw();
+	void initialize();
+};
+
+struct daTag_Lantern_Param_c {
+	~daTag_Lantern_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__15daTag_Lantern_cFv();
-extern "C" extern void create__15daTag_Lantern_cFv();
-extern "C" extern void Delete__15daTag_Lantern_cFv();
-extern "C" extern void Execute__15daTag_Lantern_cFv();
-extern "C" extern void Draw__15daTag_Lantern_cFv();
-extern "C" extern void initialize__15daTag_Lantern_cFv();
-extern "C" extern void daTag_Lantern_Create__FPv();
-extern "C" extern void daTag_Lantern_Delete__FPv();
-extern "C" extern void daTag_Lantern_Execute__FPv();
-extern "C" extern void daTag_Lantern_Draw__FPv();
-extern "C" extern void daTag_Lantern_IsDelete__FPv();
-extern "C" extern void __sinit_d_a_tag_lantern_cpp();
-extern "C" extern void __dt__21daTag_Lantern_Param_cFv();
+void daTag_Lantern_Create(void*);
+void daTag_Lantern_Delete(void*);
+void daTag_Lantern_Execute(void*);
+void daTag_Lantern_Draw(void*);
+bool daTag_Lantern_IsDelete(void*);
+extern "C" void __sinit_d_a_tag_lantern_cpp();
+
+extern "C" void __dt__15daTag_Lantern_cFv();
+extern "C" void create__15daTag_Lantern_cFv();
+extern "C" void Delete__15daTag_Lantern_cFv();
+extern "C" void Execute__15daTag_Lantern_cFv();
+extern "C" bool Draw__15daTag_Lantern_cFv();
+extern "C" void initialize__15daTag_Lantern_cFv();
+extern "C" void daTag_Lantern_Create__FPv();
+extern "C" void daTag_Lantern_Delete__FPv();
+extern "C" void daTag_Lantern_Execute__FPv();
+extern "C" void daTag_Lantern_Draw__FPv();
+extern "C" bool daTag_Lantern_IsDelete__FPv();
+extern "C" void __sinit_d_a_tag_lantern_cpp();
+extern "C" void __dt__21daTag_Lantern_Param_cFv();
 SECTION_RODATA extern const u32 lit_3683;
 SECTION_RODATA extern const u8 lit_3697[4];
 SECTION_RODATA extern const u32 lit_3698;
@@ -36,8 +60,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -47,7 +74,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTag_Lantern_cFv) {
+asm daTag_Lantern_c::~daTag_Lantern_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/__dt__15daTag_Lantern_cFv.s"
 }
@@ -58,7 +85,7 @@ ASM_FUNCTION(__dt__15daTag_Lantern_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daTag_Lantern_cFv) {
+asm void daTag_Lantern_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/create__15daTag_Lantern_cFv.s"
 }
@@ -69,7 +96,7 @@ ASM_FUNCTION(create__15daTag_Lantern_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daTag_Lantern_cFv) {
+asm void daTag_Lantern_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/Delete__15daTag_Lantern_cFv.s"
 }
@@ -80,7 +107,7 @@ ASM_FUNCTION(Delete__15daTag_Lantern_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daTag_Lantern_cFv) {
+asm void daTag_Lantern_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/Execute__15daTag_Lantern_cFv.s"
 }
@@ -88,21 +115,16 @@ ASM_FUNCTION(Execute__15daTag_Lantern_cFv) {
 
 
 /* 8048EF6C-8048EF74 0008+00 .text      Draw__15daTag_Lantern_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daTag_Lantern_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/Draw__15daTag_Lantern_cFv.s"
+bool daTag_Lantern_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048EF74-8048F024 00B0+00 .text      initialize__15daTag_Lantern_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__15daTag_Lantern_cFv) {
+asm void daTag_Lantern_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/initialize__15daTag_Lantern_cFv.s"
 }
@@ -113,7 +135,7 @@ ASM_FUNCTION(initialize__15daTag_Lantern_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lantern_Create__FPv) {
+asm void daTag_Lantern_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Create__FPv.s"
 }
@@ -124,7 +146,7 @@ ASM_FUNCTION(daTag_Lantern_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lantern_Delete__FPv) {
+asm void daTag_Lantern_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Delete__FPv.s"
 }
@@ -135,7 +157,7 @@ ASM_FUNCTION(daTag_Lantern_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lantern_Execute__FPv) {
+asm void daTag_Lantern_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Execute__FPv.s"
 }
@@ -146,7 +168,7 @@ ASM_FUNCTION(daTag_Lantern_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lantern_Draw__FPv) {
+asm void daTag_Lantern_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Draw__FPv.s"
 }
@@ -154,21 +176,16 @@ ASM_FUNCTION(daTag_Lantern_Draw__FPv) {
 
 
 /* 8048F0A4-8048F0AC 0008+00 .text      daTag_Lantern_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lantern_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_IsDelete__FPv.s"
+bool daTag_Lantern_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048F0AC-8048F0EC 0040+00 .text      __sinit_d_a_tag_lantern_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_lantern_cpp) {
+extern "C" asm void __sinit_d_a_tag_lantern_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/__sinit_d_a_tag_lantern_cpp.s"
 }
@@ -179,7 +196,7 @@ ASM_FUNCTION(__sinit_d_a_tag_lantern_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daTag_Lantern_Param_cFv) {
+asm daTag_Lantern_Param_c::~daTag_Lantern_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/__dt__21daTag_Lantern_Param_cFv.s"
 }

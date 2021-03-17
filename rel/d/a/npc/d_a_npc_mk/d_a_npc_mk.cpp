@@ -9,11 +9,17 @@
 // Forward References:
 // 
 
-extern "C" extern void daNpc_Mk_Create__FPv();
-extern "C" extern void daNpc_Mk_Delete__FPv();
-extern "C" extern void daNpc_Mk_Execute__FPv();
-extern "C" extern void daNpc_Mk_Draw__FPv();
-extern "C" extern void daNpc_Mk_IsDelete__FPv();
+bool daNpc_Mk_Create(void*);
+bool daNpc_Mk_Delete(void*);
+bool daNpc_Mk_Execute(void*);
+bool daNpc_Mk_Draw(void*);
+bool daNpc_Mk_IsDelete(void*);
+
+extern "C" bool daNpc_Mk_Create__FPv();
+extern "C" bool daNpc_Mk_Delete__FPv();
+extern "C" bool daNpc_Mk_Execute__FPv();
+extern "C" bool daNpc_Mk_Draw__FPv();
+extern "C" bool daNpc_Mk_IsDelete__FPv();
 SECTION_DATA extern u8 daNpc_Mk_MethodTable[32];
 SECTION_DATA extern u8 g_profile_NPC_MK[48];
 
@@ -22,63 +28,39 @@ SECTION_DATA extern u8 g_profile_NPC_MK[48];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* 80A73DD8-80A73DE0 0008+00 .text      daNpc_Mk_Create__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Mk_Create__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Create__FPv.s"
+bool daNpc_Mk_Create(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DE0-80A73DE8 0008+00 .text      daNpc_Mk_Delete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Mk_Delete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Delete__FPv.s"
+bool daNpc_Mk_Delete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DE8-80A73DF0 0008+00 .text      daNpc_Mk_Execute__FPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Mk_Execute__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Execute__FPv.s"
+bool daNpc_Mk_Execute(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DF0-80A73DF8 0008+00 .text      daNpc_Mk_Draw__FPv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Mk_Draw__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Draw__FPv.s"
+bool daNpc_Mk_Draw(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DF8-80A73E00 0008+00 .text      daNpc_Mk_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Mk_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_IsDelete__FPv.s"
+bool daNpc_Mk_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

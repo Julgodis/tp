@@ -6,29 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjH_Saku_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daObjH_Saku_c {
+	void BreakSet();
+	void SpeedSet(cXyz*, cXyz*, f32);
+	void Action();
+	void initBaseMtx();
+	void setBaseMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void BreakSet__13daObjH_Saku_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf();
-extern "C" extern void Action__13daObjH_Saku_cFv();
-extern "C" extern void initBaseMtx__13daObjH_Saku_cFv();
-extern "C" extern void setBaseMtx__13daObjH_Saku_cFv();
-extern "C" extern void daObjH_Saku_Draw__FP13daObjH_Saku_c();
-extern "C" extern void daObjH_Saku_Execute__FP13daObjH_Saku_c();
-extern "C" extern void daObjH_Saku_IsDelete__FP13daObjH_Saku_c();
-extern "C" extern void daObjH_Saku_Delete__FP13daObjH_Saku_c();
-extern "C" extern void daObjH_Saku_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__13daObjH_Saku_cFv();
-extern "C" extern void Create__13daObjH_Saku_cFv();
-extern "C" extern void Execute__13daObjH_Saku_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjH_Saku_cFv();
-extern "C" extern void Delete__13daObjH_Saku_cFv();
-extern "C" extern void __sinit_d_a_obj_h_saku_cpp();
-extern "C" extern void func_80C164A4();
-extern "C" extern void func_80C164AC();
+void daObjH_Saku_Draw(daObjH_Saku_c*);
+void daObjH_Saku_Execute(daObjH_Saku_c*);
+bool daObjH_Saku_IsDelete(daObjH_Saku_c*);
+void daObjH_Saku_Delete(daObjH_Saku_c*);
+void daObjH_Saku_Create(fopAc_ac_c*);
+extern "C" void Execute__13daObjH_Saku_cFPPA3_A4_f();
+extern "C" void __sinit_d_a_obj_h_saku_cpp();
+extern "C" void func_80C164A4();
+extern "C" void func_80C164AC();
+
+extern "C" void BreakSet__13daObjH_Saku_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf();
+extern "C" void Action__13daObjH_Saku_cFv();
+extern "C" void initBaseMtx__13daObjH_Saku_cFv();
+extern "C" void setBaseMtx__13daObjH_Saku_cFv();
+extern "C" void daObjH_Saku_Draw__FP13daObjH_Saku_c();
+extern "C" void daObjH_Saku_Execute__FP13daObjH_Saku_c();
+extern "C" bool daObjH_Saku_IsDelete__FP13daObjH_Saku_c();
+extern "C" void daObjH_Saku_Delete__FP13daObjH_Saku_c();
+extern "C" void daObjH_Saku_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__13daObjH_Saku_cFv();
+extern "C" void Create__13daObjH_Saku_cFv();
+extern "C" void Execute__13daObjH_Saku_cFPPA3_A4_f();
+extern "C" void Draw__13daObjH_Saku_cFv();
+extern "C" void Delete__13daObjH_Saku_cFv();
+extern "C" void __sinit_d_a_obj_h_saku_cpp();
+extern "C" void func_80C164A4();
+extern "C" void func_80C164AC();
 SECTION_RODATA extern const u32 lit_3703;
 SECTION_RODATA extern const u8 lit_3704[4];
 SECTION_RODATA extern const u32 lit_3705;
@@ -106,8 +147,11 @@ SECTION_BSS extern u8 data_80C166B8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -117,7 +161,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakSet__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::BreakSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/BreakSet__13daObjH_Saku_cFv.s"
 }
@@ -128,7 +172,7 @@ ASM_FUNCTION(BreakSet__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/__dt__4cXyzFv.s"
 }
@@ -139,7 +183,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf) {
+asm void daObjH_Saku_c::SpeedSet(cXyz* field_0, cXyz* field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf.s"
 }
@@ -150,7 +194,7 @@ ASM_FUNCTION(SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/Action__13daObjH_Saku_cFv.s"
 }
@@ -161,7 +205,7 @@ ASM_FUNCTION(Action__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/initBaseMtx__13daObjH_Saku_cFv.s"
 }
@@ -172,7 +216,7 @@ ASM_FUNCTION(initBaseMtx__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/setBaseMtx__13daObjH_Saku_cFv.s"
 }
@@ -183,7 +227,7 @@ ASM_FUNCTION(setBaseMtx__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjH_Saku_Draw__FP13daObjH_Saku_c) {
+asm void daObjH_Saku_Draw(daObjH_Saku_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Draw__FP13daObjH_Saku_c.s"
 }
@@ -194,7 +238,7 @@ ASM_FUNCTION(daObjH_Saku_Draw__FP13daObjH_Saku_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjH_Saku_Execute__FP13daObjH_Saku_c) {
+asm void daObjH_Saku_Execute(daObjH_Saku_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Execute__FP13daObjH_Saku_c.s"
 }
@@ -202,21 +246,16 @@ ASM_FUNCTION(daObjH_Saku_Execute__FP13daObjH_Saku_c) {
 
 
 /* 80C15F98-80C15FA0 0008+00 .text      daObjH_Saku_IsDelete__FP13daObjH_Saku_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjH_Saku_IsDelete__FP13daObjH_Saku_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_IsDelete__FP13daObjH_Saku_c.s"
+bool daObjH_Saku_IsDelete(daObjH_Saku_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C15FA0-80C15FC4 0024+00 .text      daObjH_Saku_Delete__FP13daObjH_Saku_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjH_Saku_Delete__FP13daObjH_Saku_c) {
+asm void daObjH_Saku_Delete(daObjH_Saku_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Delete__FP13daObjH_Saku_c.s"
 }
@@ -227,7 +266,7 @@ ASM_FUNCTION(daObjH_Saku_Delete__FP13daObjH_Saku_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjH_Saku_Create__FP10fopAc_ac_c) {
+asm void daObjH_Saku_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Create__FP10fopAc_ac_c.s"
 }
@@ -238,7 +277,7 @@ ASM_FUNCTION(daObjH_Saku_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -249,7 +288,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/CreateHeap__13daObjH_Saku_cFv.s"
 }
@@ -260,7 +299,7 @@ ASM_FUNCTION(CreateHeap__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/Create__13daObjH_Saku_cFv.s"
 }
@@ -271,7 +310,7 @@ ASM_FUNCTION(Create__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjH_Saku_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjH_Saku_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/Execute__13daObjH_Saku_cFPPA3_A4_f.s"
 }
@@ -282,7 +321,7 @@ ASM_FUNCTION(Execute__13daObjH_Saku_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/Draw__13daObjH_Saku_cFv.s"
 }
@@ -293,7 +332,7 @@ ASM_FUNCTION(Draw__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjH_Saku_cFv) {
+asm void daObjH_Saku_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/Delete__13daObjH_Saku_cFv.s"
 }
@@ -304,7 +343,7 @@ ASM_FUNCTION(Delete__13daObjH_Saku_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_h_saku_cpp) {
+extern "C" asm void __sinit_d_a_obj_h_saku_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/__sinit_d_a_obj_h_saku_cpp.s"
 }
@@ -315,7 +354,7 @@ ASM_FUNCTION(__sinit_d_a_obj_h_saku_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C164A4) {
+extern "C" asm void func_80C164A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/func_80C164A4.s"
 }
@@ -326,7 +365,7 @@ ASM_FUNCTION(func_80C164A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C164AC) {
+extern "C" asm void func_80C164AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/func_80C164AC.s"
 }

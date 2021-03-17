@@ -6,59 +6,115 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dPath (dPath) False/False
+/* top-level dependencies (begin dPath) */
+/* top-level dependencies (end dPath) */
+struct dPath {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(s32);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// build dBgS (dBgS) False/False
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin dBgS) */
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	// cBgS_PolyInfo
+	/* 80074FE0 */ void GetRoomPathId(cBgS_PolyInfo const&);
+	/* 80075030 */ void GetRoomPathPntNo(cBgS_PolyInfo const&);
+	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dPath_GetPnt__FPC5dPathi();
-extern "C" extern void dPath_GetRoomPath__Fii();
-extern "C" extern void dPath_GetNextRoomPath__FPC5dPathi();
-extern "C" extern void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
+void dPath_GetPnt(dPath const*, s32);
+void dPath_GetRoomPath(s32, s32);
+void dPath_GetNextRoomPath(dPath const*, s32);
+void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, s32*);
+
+extern "C" void dPath_GetPnt__FPC5dPathi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dPath_GetNextRoomPath__FPC5dPathi();
+extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
 SECTION_SDATA2 extern u8 d_d_path__lit_3685[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
-/* 800517B0-800517EC 003C+00 .text      dPath_GetPnt__FPC5dPathi                                     */
+/* 800517B0-800517EC 003C+00 rc=7 efc=7 .text      dPath_GetPnt__FPC5dPathi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dPath_GetPnt__FPC5dPathi) {
+asm void dPath_GetPnt(dPath const* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPnt__FPC5dPathi.s"
 }
 #pragma pop
 
 
-/* 800517EC-80051898 00AC+00 .text      dPath_GetRoomPath__Fii                                       */
+/* 800517EC-80051898 00AC+00 rc=13 efc=12 .text      dPath_GetRoomPath__Fii                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dPath_GetRoomPath__Fii) {
+asm void dPath_GetRoomPath(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetRoomPath__Fii.s"
 }
 #pragma pop
 
 
-/* 80051898-8005195C 00C4+00 .text      dPath_GetNextRoomPath__FPC5dPathi                            */
+/* 80051898-8005195C 00C4+00 rc=1 efc=1 .text      dPath_GetNextRoomPath__FPC5dPathi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dPath_GetNextRoomPath__FPC5dPathi) {
+asm void dPath_GetNextRoomPath(dPath const* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetNextRoomPath__FPC5dPathi.s"
 }
@@ -66,22 +122,21 @@ ASM_FUNCTION(dPath_GetNextRoomPath__FPC5dPathi) {
 
 
 /* ############################################################################################## */
-/* 80452000-80452008 0004+04 .sdata2    @3685                                                        */
+/* 80452000-80452008 0004+04 rc=1 efc=0 .sdata2    @3685                                                        */
 u8 d_d_path__lit_3685[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8005195C-80051AC0 0164+00 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
+/* 8005195C-80051AC0 0164+00 rc=1 efc=1 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi) {
+asm void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const& field_0, cXyz* field_1, s32* field_2) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,122 +6,308 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+struct cXyz;
+
+struct daNpcKasi_Mng_c {
+	void calcEscapeForm();
+	void calcCenterPos();
+	void getDistFromCenter();
+	void getOffsetFromLeader(cXyz const&, cXyz&);
+	void initPath(u8, u16);
+	void getPlNearPoint();
+	void getSygnalInfo();
+	void sendInfo();
+	void offTalk();
+	void chkTalk();
+	void chkFear();
+	void chkEscape();
+	void createHearts();
+	void allDemoMove();
+	void allDemoNotMove();
+	void isMiniGamePlaying();
+	void schMemberActor();
+	void schDanchoActor();
+	void deleteAllMember();
+	void chgWeightHeavy();
+	void chgWeightLight();
+	void getCenterPos();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcKasiHana_c {
+	daNpcKasiHana_c();
+	~daNpcKasiHana_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void main();
+	void setAttnPos();
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void reset();
+	void playMotion();
+	void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
+	void setLookMode(s32);
+	void lookat();
+	void chkFindPlayer();
+	void wait(s32);
+	void chace_st(s32);
+	void chace(s32);
+	void getChacePos();
+	void turn(s32);
+	void fear(s32);
+	void srchWolfTag();
+	void _srch_escape_tag(void*, void*);
+	void getWolfPathNearIdx();
+	void talk(s32);
+	void demo(s32);
+	void escape(s32);
+	void cheer(s32);
+	void actor_front_check(fopAc_ac_c*);
+	void _getOffset(cXyz const&, cXyz&);
+	void _Evt_Kasi_Appear(s32);
+	void _Evt_Kasi_Appear_CutInit(s32 const&);
+	void _Evt_Kasi_Appear_CutMain(s32 const&);
+	void _Evt_Kasi_Talk(s32);
+	void _Evt_Kasi_Talk_CutInit(s32 const&);
+	void _Evt_Kasi_Talk_CutMain(s32 const&, s32);
+	void _Evt_Kasi(s32);
+	void _Evt_Kasi_CutInit(s32 const&);
+	void _Evt_Kasi_CutMain(s32 const&);
+	void _Evt_Kasi_Cheer(s32);
+	void _Evt_Kasi_Cheer_CutInit(s32 const&);
+	void _Evt_Kasi_Cheer_CutMain(s32 const&, s32);
+	void _Evt_Kasi_Cheer2(s32);
+	void _Evt_Kasi_Cheer2_CutInit(s32 const&);
+	void _Evt_Kasi_Cheer2_CutMain(s32 const&, s32);
+	void adjustShapeAngle();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_c {
+	struct daNpcF_anmPlayData {
+	};
+
+	~daNpcF_c();
+	daNpcF_c();
+	bool ctrlBtk();
+	void setCollisions();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+	void drawOtherMdls();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcKasiHana_Param_c {
+	~daNpcKasiHana_Param_c();
+};
+
+struct daNpcF_Path_c {
+	~daNpcF_Path_c();
+};
+
+struct daNpcF_SPCurve_c {
+	~daNpcF_SPCurve_c();
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void calcEscapeForm__15daNpcKasi_Mng_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void calcCenterPos__15daNpcKasi_Mng_cFv();
-extern "C" extern void getDistFromCenter__15daNpcKasi_Mng_cFv();
-extern "C" extern void getOffsetFromLeader__15daNpcKasi_Mng_cFRC4cXyzR4cXyz();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void initPath__15daNpcKasi_Mng_cFUcUs();
-extern "C" extern void getPlNearPoint__15daNpcKasi_Mng_cFv();
-extern "C" extern void getSygnalInfo__15daNpcKasi_Mng_cFv();
-extern "C" extern void sendInfo__15daNpcKasi_Mng_cFv();
-extern "C" extern void offTalk__15daNpcKasi_Mng_cFv();
-extern "C" extern void chkTalk__15daNpcKasi_Mng_cFv();
-extern "C" extern void chkFear__15daNpcKasi_Mng_cFv();
-extern "C" extern void chkEscape__15daNpcKasi_Mng_cFv();
-extern "C" extern void createHearts__15daNpcKasi_Mng_cFv();
-extern "C" extern void allDemoMove__15daNpcKasi_Mng_cFv();
-extern "C" extern void allDemoNotMove__15daNpcKasi_Mng_cFv();
-extern "C" extern void isMiniGamePlaying__15daNpcKasi_Mng_cFv();
-extern "C" extern void schMemberActor__15daNpcKasi_Mng_cFv();
-extern "C" extern void schDanchoActor__15daNpcKasi_Mng_cFv();
-extern "C" extern void deleteAllMember__15daNpcKasi_Mng_cFv();
-extern "C" extern void chgWeightHeavy__15daNpcKasi_Mng_cFv();
-extern "C" extern void chgWeightLight__15daNpcKasi_Mng_cFv();
-extern "C" extern void __ct__15daNpcKasiHana_cFv();
-extern "C" extern void __dt__15daNpcKasiHana_cFv();
-extern "C" extern void Create__15daNpcKasiHana_cFv();
-extern "C" extern void CreateHeap__15daNpcKasiHana_cFv();
-extern "C" extern void Delete__15daNpcKasiHana_cFv();
-extern "C" extern void Execute__15daNpcKasiHana_cFv();
-extern "C" extern void Draw__15daNpcKasiHana_cFv();
-extern "C" extern void ctrlJoint__15daNpcKasiHana_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__15daNpcKasiHana_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__15daNpcKasiHana_cFP8J3DJointi();
-extern "C" extern void setParam__15daNpcKasiHana_cFv();
-extern "C" extern void main__15daNpcKasiHana_cFv();
-extern "C" extern void setAttnPos__15daNpcKasiHana_cFv();
-extern "C" extern void setMotionAnm__15daNpcKasiHana_cFif();
-extern "C" extern void setMotion__15daNpcKasiHana_cFifi();
-extern "C" extern void drawDbgInfo__15daNpcKasiHana_cFv();
-extern "C" extern void reset__15daNpcKasiHana_cFv();
-extern "C" extern void playMotion__15daNpcKasiHana_cFv();
-extern "C" extern void playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlayData();
-extern "C" extern void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i();
-extern "C" extern void setLookMode__15daNpcKasiHana_cFi();
-extern "C" extern void lookat__15daNpcKasiHana_cFv();
-extern "C" extern void step__15daNpcKasiHana_cFsi();
-extern "C" extern void chkFindPlayer__15daNpcKasiHana_cFv();
-extern "C" extern void wait__15daNpcKasiHana_cFi();
-extern "C" extern void chace_st__15daNpcKasiHana_cFi();
-extern "C" extern void chace__15daNpcKasiHana_cFi();
-extern "C" extern void getChacePos__15daNpcKasiHana_cFv();
-extern "C" extern void turn__15daNpcKasiHana_cFi();
-extern "C" extern void fear__15daNpcKasiHana_cFi();
-extern "C" extern void srchWolfTag__15daNpcKasiHana_cFv();
-extern "C" extern void _srch_escape_tag__15daNpcKasiHana_cFPvPv();
-extern "C" extern void getWolfPathNearIdx__15daNpcKasiHana_cFv();
-extern "C" extern void talk__15daNpcKasiHana_cFi();
-extern "C" extern void demo__15daNpcKasiHana_cFi();
-extern "C" extern void escape__15daNpcKasiHana_cFi();
-extern "C" extern void cheer__15daNpcKasiHana_cFi();
-extern "C" extern void _turn_to_link__15daNpcKasiHana_cFs();
-extern "C" extern void _turn_pos__15daNpcKasiHana_cFRC4cXyzs();
-extern "C" extern void actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c();
-extern "C" extern void _getOffset__15daNpcKasiHana_cFRC4cXyzR4cXyz();
-extern "C" extern void _Evt_Kasi_Appear__15daNpcKasiHana_cFi();
-extern "C" extern void _Evt_Kasi_Appear_CutInit__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Appear_CutMain__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Talk__15daNpcKasiHana_cFi();
-extern "C" extern void _Evt_Kasi_Talk_CutInit__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Talk_CutMain__15daNpcKasiHana_cFRCii();
-extern "C" extern void _Evt_Kasi__15daNpcKasiHana_cFi();
-extern "C" extern void _Evt_Kasi_CutInit__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_CutMain__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Cheer__15daNpcKasiHana_cFi();
-extern "C" extern void _Evt_Kasi_Cheer_CutInit__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Cheer_CutMain__15daNpcKasiHana_cFRCii();
-extern "C" extern void _Evt_Kasi_Cheer2__15daNpcKasiHana_cFi();
-extern "C" extern void _Evt_Kasi_Cheer2_CutInit__15daNpcKasiHana_cFRCi();
-extern "C" extern void _Evt_Kasi_Cheer2_CutMain__15daNpcKasiHana_cFRCii();
-extern "C" extern void daNpcKasiHana_Create__FPv();
-extern "C" extern void daNpcKasiHana_Delete__FPv();
-extern "C" extern void daNpcKasiHana_Execute__FPv();
-extern "C" extern void daNpcKasiHana_Draw__FPv();
-extern "C" extern void daNpcKasiHana_IsDelete__FPv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void getCenterPos__15daNpcKasi_Mng_cFv();
-extern "C" extern void adjustShapeAngle__15daNpcKasiHana_cFv();
-extern "C" extern void __dt__21daNpcKasiHana_Param_cFv();
-extern "C" extern void func_80A206C4();
-extern "C" extern void func_80A206CC();
-extern "C" extern void __dt__13daNpcF_Path_cFv();
-extern "C" extern void __dt__16daNpcF_SPCurve_cFv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void ctrlBtk__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80A20F04();
-extern "C" extern void __sinit_d_a_npc_kasi_hana_cpp();
+extern "C" void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i();
+extern "C" void step__15daNpcKasiHana_cFsi();
+extern "C" void _turn_to_link__15daNpcKasiHana_cFs();
+extern "C" void _turn_pos__15daNpcKasiHana_cFRC4cXyzs();
+void daNpcKasiHana_Create(void*);
+void daNpcKasiHana_Delete(void*);
+void daNpcKasiHana_Execute(void*);
+void daNpcKasiHana_Draw(void*);
+bool daNpcKasiHana_IsDelete(void*);
+extern "C" void func_80A206C4();
+extern "C" void func_80A206CC();
+extern "C" void func_80A20F04();
+extern "C" void __sinit_d_a_npc_kasi_hana_cpp();
+
+extern "C" void calcEscapeForm__15daNpcKasi_Mng_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void calcCenterPos__15daNpcKasi_Mng_cFv();
+extern "C" void getDistFromCenter__15daNpcKasi_Mng_cFv();
+extern "C" void getOffsetFromLeader__15daNpcKasi_Mng_cFRC4cXyzR4cXyz();
+extern "C" void __dt__5csXyzFv();
+extern "C" void initPath__15daNpcKasi_Mng_cFUcUs();
+extern "C" void getPlNearPoint__15daNpcKasi_Mng_cFv();
+extern "C" void getSygnalInfo__15daNpcKasi_Mng_cFv();
+extern "C" void sendInfo__15daNpcKasi_Mng_cFv();
+extern "C" void offTalk__15daNpcKasi_Mng_cFv();
+extern "C" void chkTalk__15daNpcKasi_Mng_cFv();
+extern "C" void chkFear__15daNpcKasi_Mng_cFv();
+extern "C" void chkEscape__15daNpcKasi_Mng_cFv();
+extern "C" void createHearts__15daNpcKasi_Mng_cFv();
+extern "C" void allDemoMove__15daNpcKasi_Mng_cFv();
+extern "C" void allDemoNotMove__15daNpcKasi_Mng_cFv();
+extern "C" void isMiniGamePlaying__15daNpcKasi_Mng_cFv();
+extern "C" void schMemberActor__15daNpcKasi_Mng_cFv();
+extern "C" void schDanchoActor__15daNpcKasi_Mng_cFv();
+extern "C" void deleteAllMember__15daNpcKasi_Mng_cFv();
+extern "C" void chgWeightHeavy__15daNpcKasi_Mng_cFv();
+extern "C" void chgWeightLight__15daNpcKasi_Mng_cFv();
+extern "C" void __ct__15daNpcKasiHana_cFv();
+extern "C" void __dt__15daNpcKasiHana_cFv();
+extern "C" void Create__15daNpcKasiHana_cFv();
+extern "C" void CreateHeap__15daNpcKasiHana_cFv();
+extern "C" void Delete__15daNpcKasiHana_cFv();
+extern "C" void Execute__15daNpcKasiHana_cFv();
+extern "C" void Draw__15daNpcKasiHana_cFv();
+extern "C" void ctrlJoint__15daNpcKasiHana_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__15daNpcKasiHana_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__15daNpcKasiHana_cFP8J3DJointi();
+extern "C" void setParam__15daNpcKasiHana_cFv();
+extern "C" void main__15daNpcKasiHana_cFv();
+extern "C" void setAttnPos__15daNpcKasiHana_cFv();
+extern "C" void setMotionAnm__15daNpcKasiHana_cFif();
+extern "C" void setMotion__15daNpcKasiHana_cFifi();
+extern "C" bool drawDbgInfo__15daNpcKasiHana_cFv();
+extern "C" void reset__15daNpcKasiHana_cFv();
+extern "C" void playMotion__15daNpcKasiHana_cFv();
+extern "C" void playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlayData();
+extern "C" void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i();
+extern "C" void setLookMode__15daNpcKasiHana_cFi();
+extern "C" void lookat__15daNpcKasiHana_cFv();
+extern "C" void step__15daNpcKasiHana_cFsi();
+extern "C" void chkFindPlayer__15daNpcKasiHana_cFv();
+extern "C" void wait__15daNpcKasiHana_cFi();
+extern "C" void chace_st__15daNpcKasiHana_cFi();
+extern "C" void chace__15daNpcKasiHana_cFi();
+extern "C" void getChacePos__15daNpcKasiHana_cFv();
+extern "C" void turn__15daNpcKasiHana_cFi();
+extern "C" void fear__15daNpcKasiHana_cFi();
+extern "C" void srchWolfTag__15daNpcKasiHana_cFv();
+extern "C" void _srch_escape_tag__15daNpcKasiHana_cFPvPv();
+extern "C" void getWolfPathNearIdx__15daNpcKasiHana_cFv();
+extern "C" void talk__15daNpcKasiHana_cFi();
+extern "C" void demo__15daNpcKasiHana_cFi();
+extern "C" void escape__15daNpcKasiHana_cFi();
+extern "C" void cheer__15daNpcKasiHana_cFi();
+extern "C" void _turn_to_link__15daNpcKasiHana_cFs();
+extern "C" void _turn_pos__15daNpcKasiHana_cFRC4cXyzs();
+extern "C" void actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c();
+extern "C" void _getOffset__15daNpcKasiHana_cFRC4cXyzR4cXyz();
+extern "C" void _Evt_Kasi_Appear__15daNpcKasiHana_cFi();
+extern "C" void _Evt_Kasi_Appear_CutInit__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Appear_CutMain__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Talk__15daNpcKasiHana_cFi();
+extern "C" void _Evt_Kasi_Talk_CutInit__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Talk_CutMain__15daNpcKasiHana_cFRCii();
+extern "C" void _Evt_Kasi__15daNpcKasiHana_cFi();
+extern "C" void _Evt_Kasi_CutInit__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_CutMain__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Cheer__15daNpcKasiHana_cFi();
+extern "C" void _Evt_Kasi_Cheer_CutInit__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Cheer_CutMain__15daNpcKasiHana_cFRCii();
+extern "C" void _Evt_Kasi_Cheer2__15daNpcKasiHana_cFi();
+extern "C" void _Evt_Kasi_Cheer2_CutInit__15daNpcKasiHana_cFRCi();
+extern "C" void _Evt_Kasi_Cheer2_CutMain__15daNpcKasiHana_cFRCii();
+extern "C" void daNpcKasiHana_Create__FPv();
+extern "C" void daNpcKasiHana_Delete__FPv();
+extern "C" void daNpcKasiHana_Execute__FPv();
+extern "C" void daNpcKasiHana_Draw__FPv();
+extern "C" bool daNpcKasiHana_IsDelete__FPv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void getCenterPos__15daNpcKasi_Mng_cFv();
+extern "C" void adjustShapeAngle__15daNpcKasiHana_cFv();
+extern "C" void __dt__21daNpcKasiHana_Param_cFv();
+extern "C" void func_80A206C4();
+extern "C" void func_80A206CC();
+extern "C" void __dt__13daNpcF_Path_cFv();
+extern "C" void __dt__16daNpcF_SPCurve_cFv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" bool ctrlBtk__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80A20F04();
+extern "C" void __sinit_d_a_npc_kasi_hana_cpp();
 SECTION_RODATA extern const u8 lit_3908[4];
 SECTION_RODATA extern const u32 lit_3909;
 SECTION_RODATA extern const u32 lit_3910;
@@ -304,8 +490,11 @@ SECTION_BSS extern u8 data_80A218C4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -315,7 +504,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcEscapeForm__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::calcEscapeForm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/calcEscapeForm__15daNpcKasi_Mng_cFv.s"
 }
@@ -326,7 +515,7 @@ ASM_FUNCTION(calcEscapeForm__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__4cXyzFv.s"
 }
@@ -337,7 +526,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCenterPos__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::calcCenterPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/calcCenterPos__15daNpcKasi_Mng_cFv.s"
 }
@@ -348,7 +537,7 @@ ASM_FUNCTION(calcCenterPos__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDistFromCenter__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::getDistFromCenter() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getDistFromCenter__15daNpcKasi_Mng_cFv.s"
 }
@@ -359,7 +548,7 @@ ASM_FUNCTION(getDistFromCenter__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOffsetFromLeader__15daNpcKasi_Mng_cFRC4cXyzR4cXyz) {
+asm void daNpcKasi_Mng_c::getOffsetFromLeader(cXyz const& field_0, cXyz& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getOffsetFromLeader__15daNpcKasi_Mng_cFRC4cXyzR4cXyz.s"
 }
@@ -370,7 +559,7 @@ ASM_FUNCTION(getOffsetFromLeader__15daNpcKasi_Mng_cFRC4cXyzR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__5csXyzFv.s"
 }
@@ -381,7 +570,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPath__15daNpcKasi_Mng_cFUcUs) {
+asm void daNpcKasi_Mng_c::initPath(u8 field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/initPath__15daNpcKasi_Mng_cFUcUs.s"
 }
@@ -392,7 +581,7 @@ ASM_FUNCTION(initPath__15daNpcKasi_Mng_cFUcUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlNearPoint__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::getPlNearPoint() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getPlNearPoint__15daNpcKasi_Mng_cFv.s"
 }
@@ -403,7 +592,7 @@ ASM_FUNCTION(getPlNearPoint__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSygnalInfo__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::getSygnalInfo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getSygnalInfo__15daNpcKasi_Mng_cFv.s"
 }
@@ -414,7 +603,7 @@ ASM_FUNCTION(getSygnalInfo__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sendInfo__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::sendInfo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/sendInfo__15daNpcKasi_Mng_cFv.s"
 }
@@ -425,7 +614,7 @@ ASM_FUNCTION(sendInfo__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offTalk__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::offTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/offTalk__15daNpcKasi_Mng_cFv.s"
 }
@@ -436,7 +625,7 @@ ASM_FUNCTION(offTalk__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkTalk__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::chkTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chkTalk__15daNpcKasi_Mng_cFv.s"
 }
@@ -447,7 +636,7 @@ ASM_FUNCTION(chkTalk__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFear__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::chkFear() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chkFear__15daNpcKasi_Mng_cFv.s"
 }
@@ -458,7 +647,7 @@ ASM_FUNCTION(chkFear__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkEscape__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::chkEscape() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chkEscape__15daNpcKasi_Mng_cFv.s"
 }
@@ -469,7 +658,7 @@ ASM_FUNCTION(chkEscape__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHearts__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::createHearts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/createHearts__15daNpcKasi_Mng_cFv.s"
 }
@@ -480,7 +669,7 @@ ASM_FUNCTION(createHearts__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allDemoMove__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::allDemoMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/allDemoMove__15daNpcKasi_Mng_cFv.s"
 }
@@ -491,7 +680,7 @@ ASM_FUNCTION(allDemoMove__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allDemoNotMove__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::allDemoNotMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/allDemoNotMove__15daNpcKasi_Mng_cFv.s"
 }
@@ -502,7 +691,7 @@ ASM_FUNCTION(allDemoNotMove__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMiniGamePlaying__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::isMiniGamePlaying() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/isMiniGamePlaying__15daNpcKasi_Mng_cFv.s"
 }
@@ -513,7 +702,7 @@ ASM_FUNCTION(isMiniGamePlaying__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(schMemberActor__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::schMemberActor() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/schMemberActor__15daNpcKasi_Mng_cFv.s"
 }
@@ -524,7 +713,7 @@ ASM_FUNCTION(schMemberActor__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(schDanchoActor__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::schDanchoActor() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/schDanchoActor__15daNpcKasi_Mng_cFv.s"
 }
@@ -535,7 +724,7 @@ ASM_FUNCTION(schDanchoActor__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteAllMember__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::deleteAllMember() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/deleteAllMember__15daNpcKasi_Mng_cFv.s"
 }
@@ -546,7 +735,7 @@ ASM_FUNCTION(deleteAllMember__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chgWeightHeavy__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::chgWeightHeavy() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chgWeightHeavy__15daNpcKasi_Mng_cFv.s"
 }
@@ -557,7 +746,7 @@ ASM_FUNCTION(chgWeightHeavy__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chgWeightLight__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::chgWeightLight() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chgWeightLight__15daNpcKasi_Mng_cFv.s"
 }
@@ -568,7 +757,7 @@ ASM_FUNCTION(chgWeightLight__15daNpcKasi_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daNpcKasiHana_cFv) {
+asm daNpcKasiHana_c::daNpcKasiHana_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__15daNpcKasiHana_cFv.s"
 }
@@ -579,7 +768,7 @@ ASM_FUNCTION(__ct__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcKasiHana_cFv) {
+asm daNpcKasiHana_c::~daNpcKasiHana_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__15daNpcKasiHana_cFv.s"
 }
@@ -590,7 +779,7 @@ ASM_FUNCTION(__dt__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/Create__15daNpcKasiHana_cFv.s"
 }
@@ -601,7 +790,7 @@ ASM_FUNCTION(Create__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/CreateHeap__15daNpcKasiHana_cFv.s"
 }
@@ -612,7 +801,7 @@ ASM_FUNCTION(CreateHeap__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/Delete__15daNpcKasiHana_cFv.s"
 }
@@ -623,7 +812,7 @@ ASM_FUNCTION(Delete__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/Execute__15daNpcKasiHana_cFv.s"
 }
@@ -634,7 +823,7 @@ ASM_FUNCTION(Execute__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/Draw__15daNpcKasiHana_cFv.s"
 }
@@ -645,7 +834,7 @@ ASM_FUNCTION(Draw__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__15daNpcKasiHana_cFP8J3DJointP8J3DModel) {
+asm void daNpcKasiHana_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/ctrlJoint__15daNpcKasiHana_cFP8J3DJointP8J3DModel.s"
 }
@@ -656,7 +845,7 @@ ASM_FUNCTION(ctrlJoint__15daNpcKasiHana_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__15daNpcKasiHana_cFP10fopAc_ac_c) {
+asm void daNpcKasiHana_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/createHeapCallBack__15daNpcKasiHana_cFP10fopAc_ac_c.s"
 }
@@ -667,7 +856,7 @@ ASM_FUNCTION(createHeapCallBack__15daNpcKasiHana_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__15daNpcKasiHana_cFP8J3DJointi) {
+asm void daNpcKasiHana_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/ctrlJointCallBack__15daNpcKasiHana_cFP8J3DJointi.s"
 }
@@ -678,7 +867,7 @@ ASM_FUNCTION(ctrlJointCallBack__15daNpcKasiHana_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setParam__15daNpcKasiHana_cFv.s"
 }
@@ -689,7 +878,7 @@ ASM_FUNCTION(setParam__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/main__15daNpcKasiHana_cFv.s"
 }
@@ -700,7 +889,7 @@ ASM_FUNCTION(main__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setAttnPos__15daNpcKasiHana_cFv.s"
 }
@@ -711,7 +900,7 @@ ASM_FUNCTION(setAttnPos__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__15daNpcKasiHana_cFif) {
+asm void daNpcKasiHana_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setMotionAnm__15daNpcKasiHana_cFif.s"
 }
@@ -722,7 +911,7 @@ ASM_FUNCTION(setMotionAnm__15daNpcKasiHana_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__15daNpcKasiHana_cFifi) {
+asm void daNpcKasiHana_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setMotion__15daNpcKasiHana_cFifi.s"
 }
@@ -730,21 +919,16 @@ ASM_FUNCTION(setMotion__15daNpcKasiHana_cFifi) {
 
 
 /* 80A1CFE8-80A1CFF0 0008+00 .text      drawDbgInfo__15daNpcKasiHana_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__15daNpcKasiHana_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/drawDbgInfo__15daNpcKasiHana_cFv.s"
+bool daNpcKasiHana_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A1CFF0-80A1D238 0248+00 .text      reset__15daNpcKasiHana_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/reset__15daNpcKasiHana_cFv.s"
 }
@@ -755,7 +939,7 @@ ASM_FUNCTION(reset__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/playMotion__15daNpcKasiHana_cFv.s"
 }
@@ -766,7 +950,7 @@ ASM_FUNCTION(playMotion__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlayData) {
+asm void daNpcKasiHana_c::playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData*** field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/func_80A1D604.s"
 }
@@ -777,7 +961,7 @@ ASM_FUNCTION(playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlay
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i) {
+extern "C" asm void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i.s"
 }
@@ -788,7 +972,7 @@ ASM_FUNCTION(setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setLookMode__15daNpcKasiHana_cFi.s"
 }
@@ -799,7 +983,7 @@ ASM_FUNCTION(setLookMode__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/lookat__15daNpcKasiHana_cFv.s"
 }
@@ -810,7 +994,7 @@ ASM_FUNCTION(lookat__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(step__15daNpcKasiHana_cFsi) {
+extern "C" asm void step__15daNpcKasiHana_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/step__15daNpcKasiHana_cFsi.s"
 }
@@ -821,7 +1005,7 @@ ASM_FUNCTION(step__15daNpcKasiHana_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFindPlayer__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::chkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chkFindPlayer__15daNpcKasiHana_cFv.s"
 }
@@ -832,7 +1016,7 @@ ASM_FUNCTION(chkFindPlayer__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/wait__15daNpcKasiHana_cFi.s"
 }
@@ -843,7 +1027,7 @@ ASM_FUNCTION(wait__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chace_st__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::chace_st(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chace_st__15daNpcKasiHana_cFi.s"
 }
@@ -854,7 +1038,7 @@ ASM_FUNCTION(chace_st__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chace__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::chace(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/chace__15daNpcKasiHana_cFi.s"
 }
@@ -865,7 +1049,7 @@ ASM_FUNCTION(chace__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChacePos__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::getChacePos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getChacePos__15daNpcKasiHana_cFv.s"
 }
@@ -876,7 +1060,7 @@ ASM_FUNCTION(getChacePos__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::turn(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/turn__15daNpcKasiHana_cFi.s"
 }
@@ -887,7 +1071,7 @@ ASM_FUNCTION(turn__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fear__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::fear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/fear__15daNpcKasiHana_cFi.s"
 }
@@ -898,7 +1082,7 @@ ASM_FUNCTION(fear__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchWolfTag__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::srchWolfTag() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/srchWolfTag__15daNpcKasiHana_cFv.s"
 }
@@ -909,7 +1093,7 @@ ASM_FUNCTION(srchWolfTag__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_srch_escape_tag__15daNpcKasiHana_cFPvPv) {
+asm void daNpcKasiHana_c::_srch_escape_tag(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_srch_escape_tag__15daNpcKasiHana_cFPvPv.s"
 }
@@ -920,7 +1104,7 @@ ASM_FUNCTION(_srch_escape_tag__15daNpcKasiHana_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWolfPathNearIdx__15daNpcKasiHana_cFv) {
+asm void daNpcKasiHana_c::getWolfPathNearIdx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getWolfPathNearIdx__15daNpcKasiHana_cFv.s"
 }
@@ -931,7 +1115,7 @@ ASM_FUNCTION(getWolfPathNearIdx__15daNpcKasiHana_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::talk(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/talk__15daNpcKasiHana_cFi.s"
 }
@@ -942,7 +1126,7 @@ ASM_FUNCTION(talk__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::demo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/demo__15daNpcKasiHana_cFi.s"
 }
@@ -953,7 +1137,7 @@ ASM_FUNCTION(demo__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(escape__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::escape(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/escape__15daNpcKasiHana_cFi.s"
 }
@@ -964,7 +1148,7 @@ ASM_FUNCTION(escape__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cheer__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::cheer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/cheer__15daNpcKasiHana_cFi.s"
 }
@@ -975,7 +1159,7 @@ ASM_FUNCTION(cheer__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_turn_to_link__15daNpcKasiHana_cFs) {
+extern "C" asm void _turn_to_link__15daNpcKasiHana_cFs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_turn_to_link__15daNpcKasiHana_cFs.s"
 }
@@ -986,7 +1170,7 @@ ASM_FUNCTION(_turn_to_link__15daNpcKasiHana_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_turn_pos__15daNpcKasiHana_cFRC4cXyzs) {
+extern "C" asm void _turn_pos__15daNpcKasiHana_cFRC4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_turn_pos__15daNpcKasiHana_cFRC4cXyzs.s"
 }
@@ -997,7 +1181,7 @@ ASM_FUNCTION(_turn_pos__15daNpcKasiHana_cFRC4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c) {
+asm void daNpcKasiHana_c::actor_front_check(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c.s"
 }
@@ -1008,7 +1192,7 @@ ASM_FUNCTION(actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_getOffset__15daNpcKasiHana_cFRC4cXyzR4cXyz) {
+asm void daNpcKasiHana_c::_getOffset(cXyz const& field_0, cXyz& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_getOffset__15daNpcKasiHana_cFRC4cXyzR4cXyz.s"
 }
@@ -1019,7 +1203,7 @@ ASM_FUNCTION(_getOffset__15daNpcKasiHana_cFRC4cXyzR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Appear__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Appear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Appear__15daNpcKasiHana_cFi.s"
 }
@@ -1030,7 +1214,7 @@ ASM_FUNCTION(_Evt_Kasi_Appear__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Appear_CutInit__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Appear_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Appear_CutInit__15daNpcKasiHana_cFRCi.s"
 }
@@ -1041,7 +1225,7 @@ ASM_FUNCTION(_Evt_Kasi_Appear_CutInit__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Appear_CutMain__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Appear_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Appear_CutMain__15daNpcKasiHana_cFRCi.s"
 }
@@ -1052,7 +1236,7 @@ ASM_FUNCTION(_Evt_Kasi_Appear_CutMain__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Talk__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Talk(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Talk__15daNpcKasiHana_cFi.s"
 }
@@ -1063,7 +1247,7 @@ ASM_FUNCTION(_Evt_Kasi_Talk__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Talk_CutInit__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Talk_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Talk_CutInit__15daNpcKasiHana_cFRCi.s"
 }
@@ -1074,7 +1258,7 @@ ASM_FUNCTION(_Evt_Kasi_Talk_CutInit__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Talk_CutMain__15daNpcKasiHana_cFRCii) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Talk_CutMain(s32 const& field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Talk_CutMain__15daNpcKasiHana_cFRCii.s"
 }
@@ -1085,7 +1269,7 @@ ASM_FUNCTION(_Evt_Kasi_Talk_CutMain__15daNpcKasiHana_cFRCii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::_Evt_Kasi(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi__15daNpcKasiHana_cFi.s"
 }
@@ -1096,7 +1280,7 @@ ASM_FUNCTION(_Evt_Kasi__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_CutInit__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_CutInit__15daNpcKasiHana_cFRCi.s"
 }
@@ -1107,7 +1291,7 @@ ASM_FUNCTION(_Evt_Kasi_CutInit__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_CutMain__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_CutMain__15daNpcKasiHana_cFRCi.s"
 }
@@ -1118,7 +1302,7 @@ ASM_FUNCTION(_Evt_Kasi_CutMain__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer__15daNpcKasiHana_cFi.s"
 }
@@ -1129,7 +1313,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer_CutInit__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer_CutInit__15daNpcKasiHana_cFRCi.s"
 }
@@ -1140,7 +1324,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer_CutInit__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer_CutMain__15daNpcKasiHana_cFRCii) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer_CutMain(s32 const& field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer_CutMain__15daNpcKasiHana_cFRCii.s"
 }
@@ -1151,7 +1335,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer_CutMain__15daNpcKasiHana_cFRCii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer2__15daNpcKasiHana_cFi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer2(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer2__15daNpcKasiHana_cFi.s"
 }
@@ -1162,7 +1346,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer2__15daNpcKasiHana_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer2_CutInit__15daNpcKasiHana_cFRCi) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer2_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer2_CutInit__15daNpcKasiHana_cFRCi.s"
 }
@@ -1173,7 +1357,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer2_CutInit__15daNpcKasiHana_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_Kasi_Cheer2_CutMain__15daNpcKasiHana_cFRCii) {
+asm void daNpcKasiHana_c::_Evt_Kasi_Cheer2_CutMain(s32 const& field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/_Evt_Kasi_Cheer2_CutMain__15daNpcKasiHana_cFRCii.s"
 }
@@ -1184,7 +1368,7 @@ ASM_FUNCTION(_Evt_Kasi_Cheer2_CutMain__15daNpcKasiHana_cFRCii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiHana_Create__FPv) {
+asm void daNpcKasiHana_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_Create__FPv.s"
 }
@@ -1195,7 +1379,7 @@ ASM_FUNCTION(daNpcKasiHana_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiHana_Delete__FPv) {
+asm void daNpcKasiHana_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_Delete__FPv.s"
 }
@@ -1206,7 +1390,7 @@ ASM_FUNCTION(daNpcKasiHana_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiHana_Execute__FPv) {
+asm void daNpcKasiHana_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_Execute__FPv.s"
 }
@@ -1217,7 +1401,7 @@ ASM_FUNCTION(daNpcKasiHana_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiHana_Draw__FPv) {
+asm void daNpcKasiHana_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_Draw__FPv.s"
 }
@@ -1225,21 +1409,16 @@ ASM_FUNCTION(daNpcKasiHana_Draw__FPv) {
 
 
 /* 80A205C4-80A205CC 0008+00 .text      daNpcKasiHana_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiHana_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_IsDelete__FPv.s"
+bool daNpcKasiHana_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A205CC-80A20614 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__8cM3dGCylFv.s"
 }
@@ -1250,7 +1429,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__8cM3dGAabFv.s"
 }
@@ -1261,7 +1440,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCenterPos__15daNpcKasi_Mng_cFv) {
+asm void daNpcKasi_Mng_c::getCenterPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/getCenterPos__15daNpcKasi_Mng_cFv.s"
 }
@@ -1269,21 +1448,16 @@ ASM_FUNCTION(getCenterPos__15daNpcKasi_Mng_cFv) {
 
 
 /* 80A20678-80A2067C 0004+00 .text      adjustShapeAngle__15daNpcKasiHana_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__15daNpcKasiHana_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/adjustShapeAngle__15daNpcKasiHana_cFv.s"
+void daNpcKasiHana_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A2067C-80A206C4 0048+00 .text      __dt__21daNpcKasiHana_Param_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daNpcKasiHana_Param_cFv) {
+asm daNpcKasiHana_Param_c::~daNpcKasiHana_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__21daNpcKasiHana_Param_cFv.s"
 }
@@ -1294,7 +1468,7 @@ ASM_FUNCTION(__dt__21daNpcKasiHana_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A206C4) {
+extern "C" asm void func_80A206C4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/func_80A206C4.s"
 }
@@ -1305,7 +1479,7 @@ ASM_FUNCTION(func_80A206C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A206CC) {
+extern "C" asm void func_80A206CC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/func_80A206CC.s"
 }
@@ -1316,7 +1490,7 @@ ASM_FUNCTION(func_80A206CC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcF_Path_cFv) {
+asm daNpcF_Path_c::~daNpcF_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__13daNpcF_Path_cFv.s"
 }
@@ -1327,7 +1501,7 @@ ASM_FUNCTION(__dt__13daNpcF_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daNpcF_SPCurve_cFv) {
+asm daNpcF_SPCurve_c::~daNpcF_SPCurve_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__16daNpcF_SPCurve_cFv.s"
 }
@@ -1338,7 +1512,7 @@ ASM_FUNCTION(__dt__16daNpcF_SPCurve_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1349,7 +1523,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1360,7 +1534,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -1368,32 +1542,22 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 
 
 /* 80A208D0-80A208D4 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A208D4-80A208D8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A208D8-80A20B24 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__8daNpcF_cFv.s"
 }
@@ -1404,7 +1568,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__8daNpcF_cFv.s"
 }
@@ -1415,7 +1579,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1426,7 +1590,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__10dCcD_GSttsFv.s"
 }
@@ -1437,7 +1601,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1448,7 +1612,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1456,76 +1620,46 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80A20E98-80A20EA0 0008+00 .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A20EA0-80A20EA4 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EA4-80A20EAC 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A20EAC-80A20EB4 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A20EB4-80A20EB8 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EB8-80A20EBC 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EBC-80A20F04 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__dt__10cCcD_GSttsFv.s"
 }
@@ -1536,7 +1670,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A20F04) {
+extern "C" asm void func_80A20F04() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/func_80A20F04.s"
 }
@@ -1547,7 +1681,7 @@ ASM_FUNCTION(func_80A20F04) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_kasi_hana_cpp) {
+extern "C" asm void __sinit_d_a_npc_kasi_hana_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__sinit_d_a_npc_kasi_hana_cpp.s"
 }

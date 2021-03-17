@@ -6,24 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_wflag_class;
+struct fopAc_ac_c;
+struct wf_tail_s;
+
+struct obj_wflag_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct wf_tail_s {
+	~wf_tail_s();
+	wf_tail_s();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Wflag_Draw__FP15obj_wflag_class();
-extern "C" extern void tail_control__FP10fopAc_ac_cP9wf_tail_s();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void tail_mtxset__FP9wf_tail_s();
-extern "C" extern void daObj_Wflag_Execute__FP15obj_wflag_class();
-extern "C" extern void daObj_Wflag_IsDelete__FP15obj_wflag_class();
-extern "C" extern void daObj_Wflag_Delete__FP15obj_wflag_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Wflag_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__9wf_tail_sFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__9wf_tail_sFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
+void daObj_Wflag_Draw(obj_wflag_class*);
+void tail_control(fopAc_ac_c*, wf_tail_s*);
+void tail_mtxset(wf_tail_s*);
+void daObj_Wflag_Execute(obj_wflag_class*);
+bool daObj_Wflag_IsDelete(obj_wflag_class*);
+void daObj_Wflag_Delete(obj_wflag_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Wflag_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Wflag_Draw__FP15obj_wflag_class();
+extern "C" void tail_control__FP10fopAc_ac_cP9wf_tail_s();
+extern "C" void __dt__4cXyzFv();
+extern "C" void tail_mtxset__FP9wf_tail_s();
+extern "C" void daObj_Wflag_Execute__FP15obj_wflag_class();
+extern "C" bool daObj_Wflag_IsDelete__FP15obj_wflag_class();
+extern "C" void daObj_Wflag_Delete__FP15obj_wflag_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Wflag_Create__FP10fopAc_ac_c();
+extern "C" void __dt__9wf_tail_sFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__9wf_tail_sFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u8 lit_3883[4];
 SECTION_RODATA extern const u32 lit_3884;
 SECTION_RODATA extern const u32 lit_3885;
@@ -47,7 +89,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +101,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Wflag_Draw__FP15obj_wflag_class) {
+asm void daObj_Wflag_Draw(obj_wflag_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_Draw__FP15obj_wflag_class.s"
 }
@@ -68,7 +112,7 @@ ASM_FUNCTION(daObj_Wflag_Draw__FP15obj_wflag_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tail_control__FP10fopAc_ac_cP9wf_tail_s) {
+asm void tail_control(fopAc_ac_c* field_0, wf_tail_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/tail_control__FP10fopAc_ac_cP9wf_tail_s.s"
 }
@@ -79,7 +123,7 @@ ASM_FUNCTION(tail_control__FP10fopAc_ac_cP9wf_tail_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__dt__4cXyzFv.s"
 }
@@ -90,7 +134,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tail_mtxset__FP9wf_tail_s) {
+asm void tail_mtxset(wf_tail_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/tail_mtxset__FP9wf_tail_s.s"
 }
@@ -101,7 +145,7 @@ ASM_FUNCTION(tail_mtxset__FP9wf_tail_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Wflag_Execute__FP15obj_wflag_class) {
+asm void daObj_Wflag_Execute(obj_wflag_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_Execute__FP15obj_wflag_class.s"
 }
@@ -109,21 +153,16 @@ ASM_FUNCTION(daObj_Wflag_Execute__FP15obj_wflag_class) {
 
 
 /* 80D372D0-80D372D8 0008+00 .text      daObj_Wflag_IsDelete__FP15obj_wflag_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Wflag_IsDelete__FP15obj_wflag_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_IsDelete__FP15obj_wflag_class.s"
+bool daObj_Wflag_IsDelete(obj_wflag_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D372D8-80D37308 0030+00 .text      daObj_Wflag_Delete__FP15obj_wflag_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Wflag_Delete__FP15obj_wflag_class) {
+asm void daObj_Wflag_Delete(obj_wflag_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_Delete__FP15obj_wflag_class.s"
 }
@@ -134,7 +173,7 @@ ASM_FUNCTION(daObj_Wflag_Delete__FP15obj_wflag_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -145,7 +184,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__dt__12J3DFrameCtrlFv.s"
 }
@@ -156,7 +195,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Wflag_Create__FP10fopAc_ac_c) {
+asm void daObj_Wflag_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_Create__FP10fopAc_ac_c.s"
 }
@@ -167,7 +206,7 @@ ASM_FUNCTION(daObj_Wflag_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9wf_tail_sFv) {
+asm wf_tail_s::~wf_tail_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__dt__9wf_tail_sFv.s"
 }
@@ -178,7 +217,7 @@ ASM_FUNCTION(__dt__9wf_tail_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__dt__5csXyzFv.s"
 }
@@ -189,7 +228,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9wf_tail_sFv) {
+asm wf_tail_s::wf_tail_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__ct__9wf_tail_sFv.s"
 }
@@ -197,25 +236,15 @@ ASM_FUNCTION(__ct__9wf_tail_sFv) {
 
 
 /* 80D3787C-80D37880 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D37880-80D37884 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

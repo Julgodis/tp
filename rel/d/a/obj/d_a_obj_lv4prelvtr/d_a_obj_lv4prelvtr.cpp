@@ -6,22 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjPRElvtr_c;
+
+struct daObjPRElvtr_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjPRElvtr_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__14daObjPRElvtr_cFv();
-extern "C" extern void setMtx__14daObjPRElvtr_cFv();
-extern "C" extern void CreateHeap__14daObjPRElvtr_cFv();
-extern "C" extern void Create__14daObjPRElvtr_cFv();
-extern "C" extern void searchObjSwTurn__FPvPv();
-extern "C" extern void Execute__14daObjPRElvtr_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjPRElvtr_cFv();
-extern "C" extern void Delete__14daObjPRElvtr_cFv();
-extern "C" extern void daObjPRElvtr_create1st__FP14daObjPRElvtr_c();
-extern "C" extern void daObjPRElvtr_MoveBGDelete__FP14daObjPRElvtr_c();
-extern "C" extern void daObjPRElvtr_MoveBGExecute__FP14daObjPRElvtr_c();
-extern "C" extern void daObjPRElvtr_MoveBGDraw__FP14daObjPRElvtr_c();
-extern "C" extern void __dt__14daObjPRElvtr_cFv();
+void searchObjSwTurn(void*, void*);
+extern "C" void Execute__14daObjPRElvtr_cFPPA3_A4_f();
+void daObjPRElvtr_create1st(daObjPRElvtr_c*);
+void daObjPRElvtr_MoveBGDelete(daObjPRElvtr_c*);
+void daObjPRElvtr_MoveBGExecute(daObjPRElvtr_c*);
+void daObjPRElvtr_MoveBGDraw(daObjPRElvtr_c*);
+
+extern "C" void create1st__14daObjPRElvtr_cFv();
+extern "C" void setMtx__14daObjPRElvtr_cFv();
+extern "C" void CreateHeap__14daObjPRElvtr_cFv();
+extern "C" void Create__14daObjPRElvtr_cFv();
+extern "C" void searchObjSwTurn__FPvPv();
+extern "C" void Execute__14daObjPRElvtr_cFPPA3_A4_f();
+extern "C" void Draw__14daObjPRElvtr_cFv();
+extern "C" void Delete__14daObjPRElvtr_cFv();
+extern "C" void daObjPRElvtr_create1st__FP14daObjPRElvtr_c();
+extern "C" void daObjPRElvtr_MoveBGDelete__FP14daObjPRElvtr_c();
+extern "C" void daObjPRElvtr_MoveBGExecute__FP14daObjPRElvtr_c();
+extern "C" void daObjPRElvtr_MoveBGDraw__FP14daObjPRElvtr_c();
+extern "C" void __dt__14daObjPRElvtr_cFv();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3694;
 SECTION_RODATA extern const u32 lit_3695;
@@ -36,7 +59,9 @@ SECTION_DATA extern void*const __vt__14daObjPRElvtr_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -46,7 +71,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/create1st__14daObjPRElvtr_cFv.s"
 }
@@ -57,7 +82,7 @@ ASM_FUNCTION(create1st__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/setMtx__14daObjPRElvtr_cFv.s"
 }
@@ -68,7 +93,7 @@ ASM_FUNCTION(setMtx__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/CreateHeap__14daObjPRElvtr_cFv.s"
 }
@@ -79,7 +104,7 @@ ASM_FUNCTION(CreateHeap__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/Create__14daObjPRElvtr_cFv.s"
 }
@@ -90,7 +115,7 @@ ASM_FUNCTION(Create__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchObjSwTurn__FPvPv) {
+asm void searchObjSwTurn(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/searchObjSwTurn__FPvPv.s"
 }
@@ -101,7 +126,7 @@ ASM_FUNCTION(searchObjSwTurn__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjPRElvtr_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjPRElvtr_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/Execute__14daObjPRElvtr_cFPPA3_A4_f.s"
 }
@@ -112,7 +137,7 @@ ASM_FUNCTION(Execute__14daObjPRElvtr_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/Draw__14daObjPRElvtr_cFv.s"
 }
@@ -123,7 +148,7 @@ ASM_FUNCTION(Draw__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjPRElvtr_cFv) {
+asm void daObjPRElvtr_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/Delete__14daObjPRElvtr_cFv.s"
 }
@@ -134,7 +159,7 @@ ASM_FUNCTION(Delete__14daObjPRElvtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPRElvtr_create1st__FP14daObjPRElvtr_c) {
+asm void daObjPRElvtr_create1st(daObjPRElvtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/daObjPRElvtr_create1st__FP14daObjPRElvtr_c.s"
 }
@@ -145,7 +170,7 @@ ASM_FUNCTION(daObjPRElvtr_create1st__FP14daObjPRElvtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPRElvtr_MoveBGDelete__FP14daObjPRElvtr_c) {
+asm void daObjPRElvtr_MoveBGDelete(daObjPRElvtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/daObjPRElvtr_MoveBGDelete__FP14daObjPRElvtr_c.s"
 }
@@ -156,7 +181,7 @@ ASM_FUNCTION(daObjPRElvtr_MoveBGDelete__FP14daObjPRElvtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPRElvtr_MoveBGExecute__FP14daObjPRElvtr_c) {
+asm void daObjPRElvtr_MoveBGExecute(daObjPRElvtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/daObjPRElvtr_MoveBGExecute__FP14daObjPRElvtr_c.s"
 }
@@ -167,7 +192,7 @@ ASM_FUNCTION(daObjPRElvtr_MoveBGExecute__FP14daObjPRElvtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPRElvtr_MoveBGDraw__FP14daObjPRElvtr_c) {
+asm void daObjPRElvtr_MoveBGDraw(daObjPRElvtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/daObjPRElvtr_MoveBGDraw__FP14daObjPRElvtr_c.s"
 }
@@ -178,7 +203,7 @@ ASM_FUNCTION(daObjPRElvtr_MoveBGDraw__FP14daObjPRElvtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjPRElvtr_cFv) {
+asm daObjPRElvtr_c::~daObjPRElvtr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prelvtr/d_a_obj_lv4prelvtr/__dt__14daObjPRElvtr_cFv.s"
 }

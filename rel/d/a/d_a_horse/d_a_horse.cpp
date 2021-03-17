@@ -6,142 +6,353 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DAnmTransform;
+struct dCcD_GObjInf;
+struct J3DJoint;
+struct daHorse_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daHorseRein_c {
+	void setReinPos(s32);
+	void setReinPosPart(s32);
+	~daHorseRein_c();
+	daHorseRein_c();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daHorse_c {
+	void coHitCallbackBoarJump(fopAc_ac_c*);
+	void coHitCallbackBoarHit(fopAc_ac_c*, dCcD_GObjInf*);
+	void coHitCallbackCowHit(fopAc_ac_c*);
+	void modelCallBack(s32);
+	void createHeap();
+	void checkEnding();
+	void create();
+	void setBasAnime(s32);
+	void resetBasAnime();
+	void setDoubleAnime(f32, f32, f32, u16, u16, f32);
+	void animePlay();
+	void checkDemoAction();
+	void setStickRodeoMove();
+	void setStickCallMove();
+	void setDemoMoveData(u32*, cXyz const*);
+	void setDemoData();
+	void acceptPlayerRide();
+	void setStickData();
+	void setTurnStartVibration();
+	void setTurnVibration();
+	void setMoveAnime(f32);
+	void checkHorseNoMove(s32);
+	void checkTurnPlayerState();
+	void setSpeedAndAngle();
+	void checkWaitTurn() const;
+	void setRoomInfo(s32);
+	void setBodyPart();
+	void setMatrix();
+	void setDashEffect(u32*);
+	void setEffect();
+	void setCollision();
+	void autoGroundHit();
+	void setTailAngle();
+	void setNeckAngle();
+	void copyFootMatrix();
+	void setFootMatrix();
+	void footBgCheck();
+	void setReinPosMoveInit(s32);
+	void copyReinPos();
+	void setReinPosHandSubstance(s32);
+	void setReinPosNormalSubstance();
+	void bgCheck();
+	void checkSpecialWallHitSubstance(cXyz const&) const;
+	void setServiceWaitTimer();
+	void checkServiceWaitAnime();
+	void checkTurnInput();
+	void checkTgHitTurn();
+	void checkTurnAfterFastMove(f32);
+	void setNeckAnimeMorf();
+	void resetNeckAnime();
+	void setLashCnt();
+	void setTalkModeWolf();
+	void setBoarHit(fopAc_ac_c*, s32);
+	void savePos();
+	void callHorseSubstance(cXyz const*);
+	void checkPlayerHeavy();
+	void setTgCoGrp(u32, u32);
+	void onRideFlgSubstance();
+	void offRideFlgSubstance();
+	void procWaitInit();
+	void procWait();
+	void procMoveInit();
+	void procMove();
+	void procStopInit();
+	void procStop();
+	void procTurnInit(s32);
+	void procTurn();
+	void procJumpInit(s32);
+	void procJump();
+	void procLandInit(f32, s32);
+	void procLand();
+	void procLargeDamageInit();
+	void procLargeDamage();
+	void procToolDemoInit();
+	void procToolDemo();
+	void searchSceneChangeArea(fopAc_ac_c*);
+	void execute();
+	void draw();
+	~daHorse_c();
+	daHorse_c();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dCcD_GObjInf {
+};
+
+struct J3DJoint {
+};
+
+struct J3DMtxCalcNoAnmBase {
+	~J3DMtxCalcNoAnmBase();
+};
+
+struct J3DMtxCalc {
+	~J3DMtxCalc();
+	void setAnmTransform(u8, J3DAnmTransform*);
+	void setAnmTransform(J3DAnmTransform*);
+	bool getAnmTransform(u8);
+	bool getAnmTransform();
+	void setWeight(u8, f32);
+	void getWeight(u8) const;
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct J3DAnmTransform {
+};
+
+struct daHorseFootData_c {
+	~daHorseFootData_c();
+	daHorseFootData_c();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_HorseAcch {
+	~dBgS_HorseAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct daPy_frameCtrl_c {
+	~daPy_frameCtrl_c();
+	daPy_frameCtrl_c();
+};
+
+struct mDoExt_AnmRatioPack {
+	~mDoExt_AnmRatioPack();
+	mDoExt_AnmRatioPack();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setReinPos__13daHorseRein_cFi();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void setReinPosPart__13daHorseRein_cFi();
-extern "C" extern void coHitCallbackBoarJump__9daHorse_cFP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void coHitCallbackBoarHit__9daHorse_cFP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c();
-extern "C" extern void daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void daHorse_coHitCallbackCowHit__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void daHorse_coHitCallbackAll__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void daHorse_searchEnemy__FP10fopAc_ac_cPv();
-extern "C" extern void modelCallBack__9daHorse_cFi();
-extern "C" extern void daHorse_modelCallBack__FP8J3DJointi();
-extern "C" extern void daHorse_searchSingleBoar__FP10fopAc_ac_cPv();
-extern "C" extern void createHeap__9daHorse_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void func_808392DC();
-extern "C" extern void __dt__19J3DMtxCalcNoAnmBaseFv();
-extern "C" extern void __dt__10J3DMtxCalcFv();
-extern "C" extern void daHorse_createHeap__FP10fopAc_ac_c();
-extern "C" extern void checkEnding__9daHorse_cFv();
-extern "C" extern void create__9daHorse_cFv();
-extern "C" extern void daHorse_Create__FP10fopAc_ac_c();
-extern "C" extern void setBasAnime__9daHorse_cFi();
-extern "C" extern void resetBasAnime__9daHorse_cFv();
-extern "C" extern void setDoubleAnime__9daHorse_cFfffUsUsf();
-extern "C" extern void setSingleAnime__9daHorse_cFUsffsfi();
-extern "C" extern void animePlay__9daHorse_cFv();
-extern "C" extern void checkDemoAction__9daHorse_cFv();
-extern "C" extern void setStickRodeoMove__9daHorse_cFv();
-extern "C" extern void setStickCallMove__9daHorse_cFv();
-extern "C" extern void setDemoMoveData__9daHorse_cFPUlPC4cXyz();
-extern "C" extern void setDemoData__9daHorse_cFv();
-extern "C" extern void acceptPlayerRide__9daHorse_cFv();
-extern "C" extern void setStickData__9daHorse_cFv();
-extern "C" extern void setTurnStartVibration__9daHorse_cFv();
-extern "C" extern void setTurnVibration__9daHorse_cFv();
-extern "C" extern void setMoveAnime__9daHorse_cFf();
-extern "C" extern void checkHorseNoMove__9daHorse_cFi();
-extern "C" extern void checkTurnPlayerState__9daHorse_cFv();
-extern "C" extern void setSpeedAndAngle__9daHorse_cFv();
-extern "C" extern void checkWaitTurn__9daHorse_cCFv();
-extern "C" extern void setRoomInfo__9daHorse_cFi();
-extern "C" extern void setBodyPart__9daHorse_cFv();
-extern "C" extern void setMatrix__9daHorse_cFv();
-extern "C" extern void setDashEffect__9daHorse_cFPUl();
-extern "C" extern void setEffect__9daHorse_cFv();
-extern "C" extern void setCollision__9daHorse_cFv();
-extern "C" extern void autoGroundHit__9daHorse_cFv();
-extern "C" extern void setTailAngle__9daHorse_cFv();
-extern "C" extern void setNeckAngle__9daHorse_cFv();
-extern "C" extern void copyFootMatrix__9daHorse_cFv();
-extern "C" extern void setFootMatrix__9daHorse_cFv();
-extern "C" extern void setLegAngle__9daHorse_cFfiiPs();
-extern "C" extern void footBgCheck__9daHorse_cFv();
-extern "C" extern void setReinPosMoveInit__9daHorse_cFi();
-extern "C" extern void copyReinPos__9daHorse_cFv();
-extern "C" extern void setReinPosHandSubstance__9daHorse_cFi();
-extern "C" extern void setReinPosNormalSubstance__9daHorse_cFv();
-extern "C" extern void bgCheck__9daHorse_cFv();
-extern "C" extern void checkSpecialWallHitSubstance__9daHorse_cCFRC4cXyz();
-extern "C" extern void setServiceWaitTimer__9daHorse_cFv();
-extern "C" extern void checkServiceWaitAnime__9daHorse_cFv();
-extern "C" extern void checkTurnInput__9daHorse_cFv();
-extern "C" extern void checkTgHitTurn__9daHorse_cFv();
-extern "C" extern void checkTurnAfterFastMove__9daHorse_cFf();
-extern "C" extern void setNeckAnimeMorf__9daHorse_cFv();
-extern "C" extern void setNeckAnime__9daHorse_cFUsffs();
-extern "C" extern void resetNeckAnime__9daHorse_cFv();
-extern "C" extern void setLashCnt__9daHorse_cFv();
-extern "C" extern void setTalkModeWolf__9daHorse_cFv();
-extern "C" extern void setBoarHit__9daHorse_cFP10fopAc_ac_ci();
-extern "C" extern void savePos__9daHorse_cFv();
-extern "C" extern void callHorseSubstance__9daHorse_cFPC4cXyz();
-extern "C" extern void setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs();
-extern "C" extern void checkPlayerHeavy__9daHorse_cFv();
-extern "C" extern void setTgCoGrp__9daHorse_cFUlUl();
-extern "C" extern void onRideFlgSubstance__9daHorse_cFv();
-extern "C" extern void offRideFlgSubstance__9daHorse_cFv();
-extern "C" extern void procWaitInit__9daHorse_cFv();
-extern "C" extern void procWait__9daHorse_cFv();
-extern "C" extern void procMoveInit__9daHorse_cFv();
-extern "C" extern void procMove__9daHorse_cFv();
-extern "C" extern void procStopInit__9daHorse_cFv();
-extern "C" extern void procStop__9daHorse_cFv();
-extern "C" extern void procTurnInit__9daHorse_cFi();
-extern "C" extern void procTurn__9daHorse_cFv();
-extern "C" extern void procJumpInit__9daHorse_cFi();
-extern "C" extern void procJump__9daHorse_cFv();
-extern "C" extern void procLandInit__9daHorse_cFfi();
-extern "C" extern void procLand__9daHorse_cFv();
-extern "C" extern void procLargeDamageInit__9daHorse_cFv();
-extern "C" extern void procLargeDamage__9daHorse_cFv();
-extern "C" extern void procToolDemoInit__9daHorse_cFv();
-extern "C" extern void procToolDemo__9daHorse_cFv();
-extern "C" extern void searchSceneChangeArea__9daHorse_cFP10fopAc_ac_c();
-extern "C" extern void daHorse_searchSceneChangeArea__FP10fopAc_ac_cPv();
-extern "C" extern void execute__9daHorse_cFv();
-extern "C" extern void daHorse_Execute__FP9daHorse_c();
-extern "C" extern void draw__9daHorse_cFv();
-extern "C" extern void daHorse_Draw__FP9daHorse_c();
-extern "C" extern void __dt__9daHorse_cFv();
-extern "C" extern void daHorse_Delete__FP9daHorse_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
-extern "C" extern void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
-extern "C" extern void getAnmTransform__10J3DMtxCalcFUc();
-extern "C" extern void getAnmTransform__10J3DMtxCalcFv();
-extern "C" extern void setWeight__10J3DMtxCalcFUcf();
-extern "C" extern void getWeight__10J3DMtxCalcCFUc();
-extern "C" extern void func_80844BB4();
-extern "C" extern void func_80844BDC();
-extern "C" extern void __sinit_d_a_horse_cpp();
-extern "C" extern void func_80844CA0();
-extern "C" extern void func_80844CA8();
-extern "C" extern void __ct__9daHorse_cFv();
-extern "C" extern void __dt__17daHorseFootData_cFv();
-extern "C" extern void __ct__17daHorseFootData_cFv();
-extern "C" extern void __dt__13daHorseRein_cFv();
-extern "C" extern void __ct__13daHorseRein_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__14dBgS_HorseAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__16daPy_frameCtrl_cFv();
-extern "C" extern void __ct__16daPy_frameCtrl_cFv();
-extern "C" extern void __dt__19mDoExt_AnmRatioPackFv();
-extern "C" extern void __ct__19mDoExt_AnmRatioPackFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
+void daHorse_coHitCallbackBoarJump(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daHorse_coHitCallbackCowHit(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daHorse_coHitCallbackAll(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daHorse_searchEnemy(fopAc_ac_c*, void*);
+void daHorse_modelCallBack(J3DJoint*, s32);
+void daHorse_searchSingleBoar(fopAc_ac_c*, void*);
+extern "C" void func_808392DC();
+void daHorse_createHeap(fopAc_ac_c*);
+void daHorse_Create(fopAc_ac_c*);
+extern "C" void setSingleAnime__9daHorse_cFUsffsfi();
+extern "C" void setLegAngle__9daHorse_cFfiiPs();
+extern "C" void setNeckAnime__9daHorse_cFUsffs();
+extern "C" void setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs();
+void daHorse_searchSceneChangeArea(fopAc_ac_c*, void*);
+void daHorse_Execute(daHorse_c*);
+void daHorse_Draw(daHorse_c*);
+void daHorse_Delete(daHorse_c*);
+extern "C" void func_80844BB4();
+extern "C" void func_80844BDC();
+extern "C" void __sinit_d_a_horse_cpp();
+extern "C" void func_80844CA0();
+extern "C" void func_80844CA8();
+
+extern "C" void setReinPos__13daHorseRein_cFi();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setReinPosPart__13daHorseRein_cFi();
+extern "C" void coHitCallbackBoarJump__9daHorse_cFP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void coHitCallbackBoarHit__9daHorse_cFP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c();
+extern "C" void daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void daHorse_coHitCallbackCowHit__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void daHorse_coHitCallbackAll__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void daHorse_searchEnemy__FP10fopAc_ac_cPv();
+extern "C" void modelCallBack__9daHorse_cFi();
+extern "C" void daHorse_modelCallBack__FP8J3DJointi();
+extern "C" void daHorse_searchSingleBoar__FP10fopAc_ac_cPv();
+extern "C" void createHeap__9daHorse_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void func_808392DC();
+extern "C" void __dt__19J3DMtxCalcNoAnmBaseFv();
+extern "C" void __dt__10J3DMtxCalcFv();
+extern "C" void daHorse_createHeap__FP10fopAc_ac_c();
+extern "C" void checkEnding__9daHorse_cFv();
+extern "C" void create__9daHorse_cFv();
+extern "C" void daHorse_Create__FP10fopAc_ac_c();
+extern "C" void setBasAnime__9daHorse_cFi();
+extern "C" void resetBasAnime__9daHorse_cFv();
+extern "C" void setDoubleAnime__9daHorse_cFfffUsUsf();
+extern "C" void setSingleAnime__9daHorse_cFUsffsfi();
+extern "C" void animePlay__9daHorse_cFv();
+extern "C" void checkDemoAction__9daHorse_cFv();
+extern "C" void setStickRodeoMove__9daHorse_cFv();
+extern "C" void setStickCallMove__9daHorse_cFv();
+extern "C" void setDemoMoveData__9daHorse_cFPUlPC4cXyz();
+extern "C" void setDemoData__9daHorse_cFv();
+extern "C" void acceptPlayerRide__9daHorse_cFv();
+extern "C" void setStickData__9daHorse_cFv();
+extern "C" void setTurnStartVibration__9daHorse_cFv();
+extern "C" void setTurnVibration__9daHorse_cFv();
+extern "C" void setMoveAnime__9daHorse_cFf();
+extern "C" void checkHorseNoMove__9daHorse_cFi();
+extern "C" void checkTurnPlayerState__9daHorse_cFv();
+extern "C" void setSpeedAndAngle__9daHorse_cFv();
+extern "C" void checkWaitTurn__9daHorse_cCFv();
+extern "C" void setRoomInfo__9daHorse_cFi();
+extern "C" void setBodyPart__9daHorse_cFv();
+extern "C" void setMatrix__9daHorse_cFv();
+extern "C" void setDashEffect__9daHorse_cFPUl();
+extern "C" void setEffect__9daHorse_cFv();
+extern "C" void setCollision__9daHorse_cFv();
+extern "C" void autoGroundHit__9daHorse_cFv();
+extern "C" void setTailAngle__9daHorse_cFv();
+extern "C" void setNeckAngle__9daHorse_cFv();
+extern "C" void copyFootMatrix__9daHorse_cFv();
+extern "C" void setFootMatrix__9daHorse_cFv();
+extern "C" void setLegAngle__9daHorse_cFfiiPs();
+extern "C" void footBgCheck__9daHorse_cFv();
+extern "C" void setReinPosMoveInit__9daHorse_cFi();
+extern "C" void copyReinPos__9daHorse_cFv();
+extern "C" void setReinPosHandSubstance__9daHorse_cFi();
+extern "C" void setReinPosNormalSubstance__9daHorse_cFv();
+extern "C" void bgCheck__9daHorse_cFv();
+extern "C" void checkSpecialWallHitSubstance__9daHorse_cCFRC4cXyz();
+extern "C" void setServiceWaitTimer__9daHorse_cFv();
+extern "C" void checkServiceWaitAnime__9daHorse_cFv();
+extern "C" void checkTurnInput__9daHorse_cFv();
+extern "C" void checkTgHitTurn__9daHorse_cFv();
+extern "C" void checkTurnAfterFastMove__9daHorse_cFf();
+extern "C" void setNeckAnimeMorf__9daHorse_cFv();
+extern "C" void setNeckAnime__9daHorse_cFUsffs();
+extern "C" void resetNeckAnime__9daHorse_cFv();
+extern "C" void setLashCnt__9daHorse_cFv();
+extern "C" void setTalkModeWolf__9daHorse_cFv();
+extern "C" void setBoarHit__9daHorse_cFP10fopAc_ac_ci();
+extern "C" void savePos__9daHorse_cFv();
+extern "C" void callHorseSubstance__9daHorse_cFPC4cXyz();
+extern "C" void setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs();
+extern "C" void checkPlayerHeavy__9daHorse_cFv();
+extern "C" void setTgCoGrp__9daHorse_cFUlUl();
+extern "C" void onRideFlgSubstance__9daHorse_cFv();
+extern "C" void offRideFlgSubstance__9daHorse_cFv();
+extern "C" void procWaitInit__9daHorse_cFv();
+extern "C" void procWait__9daHorse_cFv();
+extern "C" void procMoveInit__9daHorse_cFv();
+extern "C" void procMove__9daHorse_cFv();
+extern "C" void procStopInit__9daHorse_cFv();
+extern "C" void procStop__9daHorse_cFv();
+extern "C" void procTurnInit__9daHorse_cFi();
+extern "C" void procTurn__9daHorse_cFv();
+extern "C" void procJumpInit__9daHorse_cFi();
+extern "C" void procJump__9daHorse_cFv();
+extern "C" void procLandInit__9daHorse_cFfi();
+extern "C" void procLand__9daHorse_cFv();
+extern "C" void procLargeDamageInit__9daHorse_cFv();
+extern "C" void procLargeDamage__9daHorse_cFv();
+extern "C" void procToolDemoInit__9daHorse_cFv();
+extern "C" void procToolDemo__9daHorse_cFv();
+extern "C" void searchSceneChangeArea__9daHorse_cFP10fopAc_ac_c();
+extern "C" void daHorse_searchSceneChangeArea__FP10fopAc_ac_cPv();
+extern "C" void execute__9daHorse_cFv();
+extern "C" void daHorse_Execute__FP9daHorse_c();
+extern "C" void draw__9daHorse_cFv();
+extern "C" void daHorse_Draw__FP9daHorse_c();
+extern "C" void __dt__9daHorse_cFv();
+extern "C" void daHorse_Delete__FP9daHorse_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
+extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
+extern "C" bool getAnmTransform__10J3DMtxCalcFUc();
+extern "C" bool getAnmTransform__10J3DMtxCalcFv();
+extern "C" void setWeight__10J3DMtxCalcFUcf();
+extern "C" void getWeight__10J3DMtxCalcCFUc();
+extern "C" void func_80844BB4();
+extern "C" void func_80844BDC();
+extern "C" void __sinit_d_a_horse_cpp();
+extern "C" void func_80844CA0();
+extern "C" void func_80844CA8();
+extern "C" void __ct__9daHorse_cFv();
+extern "C" void __dt__17daHorseFootData_cFv();
+extern "C" void __ct__17daHorseFootData_cFv();
+extern "C" void __dt__13daHorseRein_cFv();
+extern "C" void __ct__13daHorseRein_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__14dBgS_HorseAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__16daPy_frameCtrl_cFv();
+extern "C" void __ct__16daPy_frameCtrl_cFv();
+extern "C" void __dt__19mDoExt_AnmRatioPackFv();
+extern "C" void __ct__19mDoExt_AnmRatioPackFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
 SECTION_RODATA extern const u8 lit_3894[12];
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 m_footJointTable__9daHorse_c[8];
@@ -379,8 +590,11 @@ SECTION_BSS extern u8 data_80845E14[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -390,7 +604,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReinPos__13daHorseRein_cFi) {
+asm void daHorseRein_c::setReinPos(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setReinPos__13daHorseRein_cFi.s"
 }
@@ -401,7 +615,7 @@ ASM_FUNCTION(setReinPos__13daHorseRein_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__4cXyzFv.s"
 }
@@ -412,7 +626,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReinPosPart__13daHorseRein_cFi) {
+asm void daHorseRein_c::setReinPosPart(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setReinPosPart__13daHorseRein_cFi.s"
 }
@@ -423,7 +637,7 @@ ASM_FUNCTION(setReinPosPart__13daHorseRein_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(coHitCallbackBoarJump__9daHorse_cFP10fopAc_ac_c) {
+asm void daHorse_c::coHitCallbackBoarJump(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/coHitCallbackBoarJump__9daHorse_cFP10fopAc_ac_c.s"
 }
@@ -434,7 +648,7 @@ ASM_FUNCTION(coHitCallbackBoarJump__9daHorse_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__8cM3dGPlaFv.s"
 }
@@ -445,7 +659,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(coHitCallbackBoarHit__9daHorse_cFP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daHorse_c::coHitCallbackBoarHit(fopAc_ac_c* field_0, dCcD_GObjInf* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/coHitCallbackBoarHit__9daHorse_cFP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -456,7 +670,7 @@ ASM_FUNCTION(coHitCallbackBoarHit__9daHorse_cFP10fopAc_ac_cP12dCcD_GObjInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c) {
+asm void daHorse_c::coHitCallbackCowHit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c.s"
 }
@@ -467,7 +681,7 @@ ASM_FUNCTION(coHitCallbackCowHit__9daHorse_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daHorse_coHitCallbackBoarJump(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_80838A20.s"
 }
@@ -478,7 +692,7 @@ ASM_FUNCTION(daHorse_coHitCallbackBoarJump__FP10fopAc_ac_cP12dCcD_GObjInfP10fopA
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_coHitCallbackCowHit__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daHorse_coHitCallbackCowHit(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_coHitCallbackCowHit__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -489,7 +703,7 @@ ASM_FUNCTION(daHorse_coHitCallbackCowHit__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_coHitCallbackAll__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daHorse_coHitCallbackAll(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_coHitCallbackAll__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -500,7 +714,7 @@ ASM_FUNCTION(daHorse_coHitCallbackAll__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_searchEnemy__FP10fopAc_ac_cPv) {
+asm void daHorse_searchEnemy(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_searchEnemy__FP10fopAc_ac_cPv.s"
 }
@@ -511,7 +725,7 @@ ASM_FUNCTION(daHorse_searchEnemy__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modelCallBack__9daHorse_cFi) {
+asm void daHorse_c::modelCallBack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/modelCallBack__9daHorse_cFi.s"
 }
@@ -522,7 +736,7 @@ ASM_FUNCTION(modelCallBack__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_modelCallBack__FP8J3DJointi) {
+asm void daHorse_modelCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_modelCallBack__FP8J3DJointi.s"
 }
@@ -533,7 +747,7 @@ ASM_FUNCTION(daHorse_modelCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_searchSingleBoar__FP10fopAc_ac_cPv) {
+asm void daHorse_searchSingleBoar(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_searchSingleBoar__FP10fopAc_ac_cPv.s"
 }
@@ -544,7 +758,7 @@ ASM_FUNCTION(daHorse_searchSingleBoar__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__9daHorse_cFv) {
+asm void daHorse_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/createHeap__9daHorse_cFv.s"
 }
@@ -552,21 +766,16 @@ ASM_FUNCTION(createHeap__9daHorse_cFv) {
 
 
 /* 808392D8-808392DC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 808392DC-80839348 006C+00 .text      __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_808392DC) {
+extern "C" asm void func_808392DC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_808392DC.s"
 }
@@ -577,7 +786,7 @@ ASM_FUNCTION(func_808392DC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19J3DMtxCalcNoAnmBaseFv) {
+asm J3DMtxCalcNoAnmBase::~J3DMtxCalcNoAnmBase() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__19J3DMtxCalcNoAnmBaseFv.s"
 }
@@ -588,7 +797,7 @@ ASM_FUNCTION(__dt__19J3DMtxCalcNoAnmBaseFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10J3DMtxCalcFv) {
+asm J3DMtxCalc::~J3DMtxCalc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__10J3DMtxCalcFv.s"
 }
@@ -599,7 +808,7 @@ ASM_FUNCTION(__dt__10J3DMtxCalcFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_createHeap__FP10fopAc_ac_c) {
+asm void daHorse_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_createHeap__FP10fopAc_ac_c.s"
 }
@@ -610,7 +819,7 @@ ASM_FUNCTION(daHorse_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEnding__9daHorse_cFv) {
+asm void daHorse_c::checkEnding() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkEnding__9daHorse_cFv.s"
 }
@@ -621,7 +830,7 @@ ASM_FUNCTION(checkEnding__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daHorse_cFv) {
+asm void daHorse_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/create__9daHorse_cFv.s"
 }
@@ -632,7 +841,7 @@ ASM_FUNCTION(create__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_Create__FP10fopAc_ac_c) {
+asm void daHorse_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_Create__FP10fopAc_ac_c.s"
 }
@@ -643,7 +852,7 @@ ASM_FUNCTION(daHorse_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBasAnime__9daHorse_cFi) {
+asm void daHorse_c::setBasAnime(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setBasAnime__9daHorse_cFi.s"
 }
@@ -654,7 +863,7 @@ ASM_FUNCTION(setBasAnime__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetBasAnime__9daHorse_cFv) {
+asm void daHorse_c::resetBasAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/resetBasAnime__9daHorse_cFv.s"
 }
@@ -665,7 +874,7 @@ ASM_FUNCTION(resetBasAnime__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDoubleAnime__9daHorse_cFfffUsUsf) {
+asm void daHorse_c::setDoubleAnime(f32 field_0, f32 field_1, f32 field_2, u16 field_3, u16 field_4, f32 field_5) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setDoubleAnime__9daHorse_cFfffUsUsf.s"
 }
@@ -676,7 +885,7 @@ ASM_FUNCTION(setDoubleAnime__9daHorse_cFfffUsUsf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSingleAnime__9daHorse_cFUsffsfi) {
+extern "C" asm void setSingleAnime__9daHorse_cFUsffsfi() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setSingleAnime__9daHorse_cFUsffsfi.s"
 }
@@ -687,7 +896,7 @@ ASM_FUNCTION(setSingleAnime__9daHorse_cFUsffsfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animePlay__9daHorse_cFv) {
+asm void daHorse_c::animePlay() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/animePlay__9daHorse_cFv.s"
 }
@@ -698,7 +907,7 @@ ASM_FUNCTION(animePlay__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDemoAction__9daHorse_cFv) {
+asm void daHorse_c::checkDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkDemoAction__9daHorse_cFv.s"
 }
@@ -709,7 +918,7 @@ ASM_FUNCTION(checkDemoAction__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStickRodeoMove__9daHorse_cFv) {
+asm void daHorse_c::setStickRodeoMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setStickRodeoMove__9daHorse_cFv.s"
 }
@@ -720,7 +929,7 @@ ASM_FUNCTION(setStickRodeoMove__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStickCallMove__9daHorse_cFv) {
+asm void daHorse_c::setStickCallMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setStickCallMove__9daHorse_cFv.s"
 }
@@ -731,7 +940,7 @@ ASM_FUNCTION(setStickCallMove__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoMoveData__9daHorse_cFPUlPC4cXyz) {
+asm void daHorse_c::setDemoMoveData(u32* field_0, cXyz const* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setDemoMoveData__9daHorse_cFPUlPC4cXyz.s"
 }
@@ -742,7 +951,7 @@ ASM_FUNCTION(setDemoMoveData__9daHorse_cFPUlPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoData__9daHorse_cFv) {
+asm void daHorse_c::setDemoData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setDemoData__9daHorse_cFv.s"
 }
@@ -753,7 +962,7 @@ ASM_FUNCTION(setDemoData__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(acceptPlayerRide__9daHorse_cFv) {
+asm void daHorse_c::acceptPlayerRide() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/acceptPlayerRide__9daHorse_cFv.s"
 }
@@ -764,7 +973,7 @@ ASM_FUNCTION(acceptPlayerRide__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStickData__9daHorse_cFv) {
+asm void daHorse_c::setStickData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setStickData__9daHorse_cFv.s"
 }
@@ -772,32 +981,22 @@ ASM_FUNCTION(setStickData__9daHorse_cFv) {
 
 
 /* 8083B828-8083B82C 0004+00 .text      setTurnStartVibration__9daHorse_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setTurnStartVibration__9daHorse_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setTurnStartVibration__9daHorse_cFv.s"
+void daHorse_c::setTurnStartVibration() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083B82C-8083B830 0004+00 .text      setTurnVibration__9daHorse_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setTurnVibration__9daHorse_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setTurnVibration__9daHorse_cFv.s"
+void daHorse_c::setTurnVibration() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083B830-8083BF48 0718+00 .text      setMoveAnime__9daHorse_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMoveAnime__9daHorse_cFf) {
+asm void daHorse_c::setMoveAnime(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setMoveAnime__9daHorse_cFf.s"
 }
@@ -808,7 +1007,7 @@ ASM_FUNCTION(setMoveAnime__9daHorse_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHorseNoMove__9daHorse_cFi) {
+asm void daHorse_c::checkHorseNoMove(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkHorseNoMove__9daHorse_cFi.s"
 }
@@ -819,7 +1018,7 @@ ASM_FUNCTION(checkHorseNoMove__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTurnPlayerState__9daHorse_cFv) {
+asm void daHorse_c::checkTurnPlayerState() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkTurnPlayerState__9daHorse_cFv.s"
 }
@@ -830,7 +1029,7 @@ ASM_FUNCTION(checkTurnPlayerState__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSpeedAndAngle__9daHorse_cFv) {
+asm void daHorse_c::setSpeedAndAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setSpeedAndAngle__9daHorse_cFv.s"
 }
@@ -841,7 +1040,7 @@ ASM_FUNCTION(setSpeedAndAngle__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaitTurn__9daHorse_cCFv) {
+asm void daHorse_c::checkWaitTurn() const {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkWaitTurn__9daHorse_cCFv.s"
 }
@@ -852,7 +1051,7 @@ ASM_FUNCTION(checkWaitTurn__9daHorse_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daHorse_cFi) {
+asm void daHorse_c::setRoomInfo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setRoomInfo__9daHorse_cFi.s"
 }
@@ -863,7 +1062,7 @@ ASM_FUNCTION(setRoomInfo__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyPart__9daHorse_cFv) {
+asm void daHorse_c::setBodyPart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setBodyPart__9daHorse_cFv.s"
 }
@@ -874,7 +1073,7 @@ ASM_FUNCTION(setBodyPart__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__9daHorse_cFv) {
+asm void daHorse_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setMatrix__9daHorse_cFv.s"
 }
@@ -885,7 +1084,7 @@ ASM_FUNCTION(setMatrix__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDashEffect__9daHorse_cFPUl) {
+asm void daHorse_c::setDashEffect(u32* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setDashEffect__9daHorse_cFPUl.s"
 }
@@ -896,7 +1095,7 @@ ASM_FUNCTION(setDashEffect__9daHorse_cFPUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__9daHorse_cFv) {
+asm void daHorse_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setEffect__9daHorse_cFv.s"
 }
@@ -907,7 +1106,7 @@ ASM_FUNCTION(setEffect__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__9daHorse_cFv) {
+asm void daHorse_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setCollision__9daHorse_cFv.s"
 }
@@ -918,7 +1117,7 @@ ASM_FUNCTION(setCollision__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(autoGroundHit__9daHorse_cFv) {
+asm void daHorse_c::autoGroundHit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/autoGroundHit__9daHorse_cFv.s"
 }
@@ -929,7 +1128,7 @@ ASM_FUNCTION(autoGroundHit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTailAngle__9daHorse_cFv) {
+asm void daHorse_c::setTailAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setTailAngle__9daHorse_cFv.s"
 }
@@ -940,7 +1139,7 @@ ASM_FUNCTION(setTailAngle__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNeckAngle__9daHorse_cFv) {
+asm void daHorse_c::setNeckAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setNeckAngle__9daHorse_cFv.s"
 }
@@ -951,7 +1150,7 @@ ASM_FUNCTION(setNeckAngle__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyFootMatrix__9daHorse_cFv) {
+asm void daHorse_c::copyFootMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/copyFootMatrix__9daHorse_cFv.s"
 }
@@ -962,7 +1161,7 @@ ASM_FUNCTION(copyFootMatrix__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFootMatrix__9daHorse_cFv) {
+asm void daHorse_c::setFootMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setFootMatrix__9daHorse_cFv.s"
 }
@@ -973,7 +1172,7 @@ ASM_FUNCTION(setFootMatrix__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLegAngle__9daHorse_cFfiiPs) {
+extern "C" asm void setLegAngle__9daHorse_cFfiiPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setLegAngle__9daHorse_cFfiiPs.s"
 }
@@ -984,7 +1183,7 @@ ASM_FUNCTION(setLegAngle__9daHorse_cFfiiPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(footBgCheck__9daHorse_cFv) {
+asm void daHorse_c::footBgCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/footBgCheck__9daHorse_cFv.s"
 }
@@ -995,7 +1194,7 @@ ASM_FUNCTION(footBgCheck__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReinPosMoveInit__9daHorse_cFi) {
+asm void daHorse_c::setReinPosMoveInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setReinPosMoveInit__9daHorse_cFi.s"
 }
@@ -1006,7 +1205,7 @@ ASM_FUNCTION(setReinPosMoveInit__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyReinPos__9daHorse_cFv) {
+asm void daHorse_c::copyReinPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/copyReinPos__9daHorse_cFv.s"
 }
@@ -1017,7 +1216,7 @@ ASM_FUNCTION(copyReinPos__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReinPosHandSubstance__9daHorse_cFi) {
+asm void daHorse_c::setReinPosHandSubstance(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setReinPosHandSubstance__9daHorse_cFi.s"
 }
@@ -1028,7 +1227,7 @@ ASM_FUNCTION(setReinPosHandSubstance__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReinPosNormalSubstance__9daHorse_cFv) {
+asm void daHorse_c::setReinPosNormalSubstance() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setReinPosNormalSubstance__9daHorse_cFv.s"
 }
@@ -1039,7 +1238,7 @@ ASM_FUNCTION(setReinPosNormalSubstance__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__9daHorse_cFv) {
+asm void daHorse_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/bgCheck__9daHorse_cFv.s"
 }
@@ -1050,7 +1249,7 @@ ASM_FUNCTION(bgCheck__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSpecialWallHitSubstance__9daHorse_cCFRC4cXyz) {
+asm void daHorse_c::checkSpecialWallHitSubstance(cXyz const& field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkSpecialWallHitSubstance__9daHorse_cCFRC4cXyz.s"
 }
@@ -1061,7 +1260,7 @@ ASM_FUNCTION(checkSpecialWallHitSubstance__9daHorse_cCFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setServiceWaitTimer__9daHorse_cFv) {
+asm void daHorse_c::setServiceWaitTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setServiceWaitTimer__9daHorse_cFv.s"
 }
@@ -1072,7 +1271,7 @@ ASM_FUNCTION(setServiceWaitTimer__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkServiceWaitAnime__9daHorse_cFv) {
+asm void daHorse_c::checkServiceWaitAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkServiceWaitAnime__9daHorse_cFv.s"
 }
@@ -1083,7 +1282,7 @@ ASM_FUNCTION(checkServiceWaitAnime__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTurnInput__9daHorse_cFv) {
+asm void daHorse_c::checkTurnInput() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkTurnInput__9daHorse_cFv.s"
 }
@@ -1094,7 +1293,7 @@ ASM_FUNCTION(checkTurnInput__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTgHitTurn__9daHorse_cFv) {
+asm void daHorse_c::checkTgHitTurn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkTgHitTurn__9daHorse_cFv.s"
 }
@@ -1105,7 +1304,7 @@ ASM_FUNCTION(checkTgHitTurn__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTurnAfterFastMove__9daHorse_cFf) {
+asm void daHorse_c::checkTurnAfterFastMove(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkTurnAfterFastMove__9daHorse_cFf.s"
 }
@@ -1116,7 +1315,7 @@ ASM_FUNCTION(checkTurnAfterFastMove__9daHorse_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNeckAnimeMorf__9daHorse_cFv) {
+asm void daHorse_c::setNeckAnimeMorf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setNeckAnimeMorf__9daHorse_cFv.s"
 }
@@ -1127,7 +1326,7 @@ ASM_FUNCTION(setNeckAnimeMorf__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNeckAnime__9daHorse_cFUsffs) {
+extern "C" asm void setNeckAnime__9daHorse_cFUsffs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setNeckAnime__9daHorse_cFUsffs.s"
 }
@@ -1138,7 +1337,7 @@ ASM_FUNCTION(setNeckAnime__9daHorse_cFUsffs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetNeckAnime__9daHorse_cFv) {
+asm void daHorse_c::resetNeckAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/resetNeckAnime__9daHorse_cFv.s"
 }
@@ -1149,7 +1348,7 @@ ASM_FUNCTION(resetNeckAnime__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLashCnt__9daHorse_cFv) {
+asm void daHorse_c::setLashCnt() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setLashCnt__9daHorse_cFv.s"
 }
@@ -1160,7 +1359,7 @@ ASM_FUNCTION(setLashCnt__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTalkModeWolf__9daHorse_cFv) {
+asm void daHorse_c::setTalkModeWolf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setTalkModeWolf__9daHorse_cFv.s"
 }
@@ -1171,7 +1370,7 @@ ASM_FUNCTION(setTalkModeWolf__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBoarHit__9daHorse_cFP10fopAc_ac_ci) {
+asm void daHorse_c::setBoarHit(fopAc_ac_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setBoarHit__9daHorse_cFP10fopAc_ac_ci.s"
 }
@@ -1182,7 +1381,7 @@ ASM_FUNCTION(setBoarHit__9daHorse_cFP10fopAc_ac_ci) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(savePos__9daHorse_cFv) {
+asm void daHorse_c::savePos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/savePos__9daHorse_cFv.s"
 }
@@ -1193,7 +1392,7 @@ ASM_FUNCTION(savePos__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callHorseSubstance__9daHorse_cFPC4cXyz) {
+asm void daHorse_c::callHorseSubstance(cXyz const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/callHorseSubstance__9daHorse_cFPC4cXyz.s"
 }
@@ -1204,7 +1403,7 @@ ASM_FUNCTION(callHorseSubstance__9daHorse_cFPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs) {
+extern "C" asm void setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs.s"
 }
@@ -1215,7 +1414,7 @@ ASM_FUNCTION(setHorsePosAndAngleSubstance__9daHorse_cFPC4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerHeavy__9daHorse_cFv) {
+asm void daHorse_c::checkPlayerHeavy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/checkPlayerHeavy__9daHorse_cFv.s"
 }
@@ -1226,7 +1425,7 @@ ASM_FUNCTION(checkPlayerHeavy__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgCoGrp__9daHorse_cFUlUl) {
+asm void daHorse_c::setTgCoGrp(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/setTgCoGrp__9daHorse_cFUlUl.s"
 }
@@ -1237,7 +1436,7 @@ ASM_FUNCTION(setTgCoGrp__9daHorse_cFUlUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onRideFlgSubstance__9daHorse_cFv) {
+asm void daHorse_c::onRideFlgSubstance() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/onRideFlgSubstance__9daHorse_cFv.s"
 }
@@ -1248,7 +1447,7 @@ ASM_FUNCTION(onRideFlgSubstance__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offRideFlgSubstance__9daHorse_cFv) {
+asm void daHorse_c::offRideFlgSubstance() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/offRideFlgSubstance__9daHorse_cFv.s"
 }
@@ -1259,7 +1458,7 @@ ASM_FUNCTION(offRideFlgSubstance__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWaitInit__9daHorse_cFv) {
+asm void daHorse_c::procWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procWaitInit__9daHorse_cFv.s"
 }
@@ -1270,7 +1469,7 @@ ASM_FUNCTION(procWaitInit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWait__9daHorse_cFv) {
+asm void daHorse_c::procWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procWait__9daHorse_cFv.s"
 }
@@ -1281,7 +1480,7 @@ ASM_FUNCTION(procWait__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMoveInit__9daHorse_cFv) {
+asm void daHorse_c::procMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procMoveInit__9daHorse_cFv.s"
 }
@@ -1292,7 +1491,7 @@ ASM_FUNCTION(procMoveInit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMove__9daHorse_cFv) {
+asm void daHorse_c::procMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procMove__9daHorse_cFv.s"
 }
@@ -1303,7 +1502,7 @@ ASM_FUNCTION(procMove__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procStopInit__9daHorse_cFv) {
+asm void daHorse_c::procStopInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procStopInit__9daHorse_cFv.s"
 }
@@ -1314,7 +1513,7 @@ ASM_FUNCTION(procStopInit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procStop__9daHorse_cFv) {
+asm void daHorse_c::procStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procStop__9daHorse_cFv.s"
 }
@@ -1325,7 +1524,7 @@ ASM_FUNCTION(procStop__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procTurnInit__9daHorse_cFi) {
+asm void daHorse_c::procTurnInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procTurnInit__9daHorse_cFi.s"
 }
@@ -1336,7 +1535,7 @@ ASM_FUNCTION(procTurnInit__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procTurn__9daHorse_cFv) {
+asm void daHorse_c::procTurn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procTurn__9daHorse_cFv.s"
 }
@@ -1347,7 +1546,7 @@ ASM_FUNCTION(procTurn__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procJumpInit__9daHorse_cFi) {
+asm void daHorse_c::procJumpInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procJumpInit__9daHorse_cFi.s"
 }
@@ -1358,7 +1557,7 @@ ASM_FUNCTION(procJumpInit__9daHorse_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procJump__9daHorse_cFv) {
+asm void daHorse_c::procJump() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procJump__9daHorse_cFv.s"
 }
@@ -1369,7 +1568,7 @@ ASM_FUNCTION(procJump__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procLandInit__9daHorse_cFfi) {
+asm void daHorse_c::procLandInit(f32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procLandInit__9daHorse_cFfi.s"
 }
@@ -1380,7 +1579,7 @@ ASM_FUNCTION(procLandInit__9daHorse_cFfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procLand__9daHorse_cFv) {
+asm void daHorse_c::procLand() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procLand__9daHorse_cFv.s"
 }
@@ -1391,7 +1590,7 @@ ASM_FUNCTION(procLand__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procLargeDamageInit__9daHorse_cFv) {
+asm void daHorse_c::procLargeDamageInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procLargeDamageInit__9daHorse_cFv.s"
 }
@@ -1402,7 +1601,7 @@ ASM_FUNCTION(procLargeDamageInit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procLargeDamage__9daHorse_cFv) {
+asm void daHorse_c::procLargeDamage() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procLargeDamage__9daHorse_cFv.s"
 }
@@ -1413,7 +1612,7 @@ ASM_FUNCTION(procLargeDamage__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procToolDemoInit__9daHorse_cFv) {
+asm void daHorse_c::procToolDemoInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procToolDemoInit__9daHorse_cFv.s"
 }
@@ -1424,7 +1623,7 @@ ASM_FUNCTION(procToolDemoInit__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procToolDemo__9daHorse_cFv) {
+asm void daHorse_c::procToolDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/procToolDemo__9daHorse_cFv.s"
 }
@@ -1435,7 +1634,7 @@ ASM_FUNCTION(procToolDemo__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchSceneChangeArea__9daHorse_cFP10fopAc_ac_c) {
+asm void daHorse_c::searchSceneChangeArea(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/searchSceneChangeArea__9daHorse_cFP10fopAc_ac_c.s"
 }
@@ -1446,7 +1645,7 @@ ASM_FUNCTION(searchSceneChangeArea__9daHorse_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_searchSceneChangeArea__FP10fopAc_ac_cPv) {
+asm void daHorse_searchSceneChangeArea(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_searchSceneChangeArea__FP10fopAc_ac_cPv.s"
 }
@@ -1457,7 +1656,7 @@ ASM_FUNCTION(daHorse_searchSceneChangeArea__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daHorse_cFv) {
+asm void daHorse_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/execute__9daHorse_cFv.s"
 }
@@ -1468,7 +1667,7 @@ ASM_FUNCTION(execute__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_Execute__FP9daHorse_c) {
+asm void daHorse_Execute(daHorse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_Execute__FP9daHorse_c.s"
 }
@@ -1479,7 +1678,7 @@ ASM_FUNCTION(daHorse_Execute__FP9daHorse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daHorse_cFv) {
+asm void daHorse_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/draw__9daHorse_cFv.s"
 }
@@ -1490,7 +1689,7 @@ ASM_FUNCTION(draw__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_Draw__FP9daHorse_c) {
+asm void daHorse_Draw(daHorse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_Draw__FP9daHorse_c.s"
 }
@@ -1501,7 +1700,7 @@ ASM_FUNCTION(daHorse_Draw__FP9daHorse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daHorse_cFv) {
+asm daHorse_c::~daHorse_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__9daHorse_cFv.s"
 }
@@ -1512,7 +1711,7 @@ ASM_FUNCTION(__dt__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daHorse_Delete__FP9daHorse_c) {
+asm void daHorse_Delete(daHorse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/daHorse_Delete__FP9daHorse_c.s"
 }
@@ -1523,7 +1722,7 @@ ASM_FUNCTION(daHorse_Delete__FP9daHorse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__10cCcD_GSttsFv.s"
 }
@@ -1531,65 +1730,40 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 
 
 /* 80844B8C-80844B90 0004+00 .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(u8 field_0, J3DAnmTransform* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844B90-80844B94 0004+00 .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(J3DAnmTransform* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844B94-80844B9C 0008+00 .text      getAnmTransform__10J3DMtxCalcFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getAnmTransform__10J3DMtxCalcFUc) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/getAnmTransform__10J3DMtxCalcFUc.s"
+bool J3DMtxCalc::getAnmTransform(u8 field_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80844B9C-80844BA4 0008+00 .text      getAnmTransform__10J3DMtxCalcFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getAnmTransform__10J3DMtxCalcFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/getAnmTransform__10J3DMtxCalcFv.s"
+bool J3DMtxCalc::getAnmTransform() {
+	return false;
 }
-#pragma pop
 
 
 /* 80844BA4-80844BA8 0004+00 .text      setWeight__10J3DMtxCalcFUcf                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setWeight__10J3DMtxCalcFUcf) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setWeight__10J3DMtxCalcFUcf.s"
+void J3DMtxCalc::setWeight(u8 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844BA8-80844BB4 000C+00 .text      getWeight__10J3DMtxCalcCFUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWeight__10J3DMtxCalcCFUc) {
+asm void J3DMtxCalc::getWeight(u8 field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/getWeight__10J3DMtxCalcCFUc.s"
 }
@@ -1600,7 +1774,7 @@ ASM_FUNCTION(getWeight__10J3DMtxCalcCFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80844BB4) {
+extern "C" asm void func_80844BB4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_80844BB4.s"
 }
@@ -1611,7 +1785,7 @@ ASM_FUNCTION(func_80844BB4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80844BDC) {
+extern "C" asm void func_80844BDC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_80844BDC.s"
 }
@@ -1622,7 +1796,7 @@ ASM_FUNCTION(func_80844BDC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_horse_cpp) {
+extern "C" asm void __sinit_d_a_horse_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__sinit_d_a_horse_cpp.s"
 }
@@ -1633,7 +1807,7 @@ ASM_FUNCTION(__sinit_d_a_horse_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80844CA0) {
+extern "C" asm void func_80844CA0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_80844CA0.s"
 }
@@ -1644,7 +1818,7 @@ ASM_FUNCTION(func_80844CA0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80844CA8) {
+extern "C" asm void func_80844CA8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/func_80844CA8.s"
 }
@@ -1655,7 +1829,7 @@ ASM_FUNCTION(func_80844CA8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9daHorse_cFv) {
+asm daHorse_c::daHorse_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__9daHorse_cFv.s"
 }
@@ -1666,7 +1840,7 @@ ASM_FUNCTION(__ct__9daHorse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daHorseFootData_cFv) {
+asm daHorseFootData_c::~daHorseFootData_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__17daHorseFootData_cFv.s"
 }
@@ -1674,21 +1848,16 @@ ASM_FUNCTION(__dt__17daHorseFootData_cFv) {
 
 
 /* 80844FAC-80844FB0 0004+00 .text      __ct__17daHorseFootData_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daHorseFootData_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__17daHorseFootData_cFv.s"
+daHorseFootData_c::daHorseFootData_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844FB0-80844FEC 003C+00 .text      __dt__13daHorseRein_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daHorseRein_cFv) {
+asm daHorseRein_c::~daHorseRein_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__13daHorseRein_cFv.s"
 }
@@ -1696,21 +1865,16 @@ ASM_FUNCTION(__dt__13daHorseRein_cFv) {
 
 
 /* 80844FEC-80844FF0 0004+00 .text      __ct__13daHorseRein_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daHorseRein_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__13daHorseRein_cFv.s"
+daHorseRein_c::daHorseRein_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844FF0-80845038 0048+00 .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__8cM3dGSphFv.s"
 }
@@ -1721,7 +1885,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__8cM3dGCylFv.s"
 }
@@ -1732,7 +1896,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__8cM3dGAabFv.s"
 }
@@ -1743,7 +1907,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__8dCcD_CylFv.s"
 }
@@ -1754,7 +1918,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__8dCcD_CylFv.s"
 }
@@ -1765,7 +1929,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__10dCcD_GSttsFv.s"
 }
@@ -1776,7 +1940,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_HorseAcchFv) {
+asm dBgS_HorseAcch::~dBgS_HorseAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__14dBgS_HorseAcchFv.s"
 }
@@ -1787,7 +1951,7 @@ ASM_FUNCTION(__dt__14dBgS_HorseAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1798,7 +1962,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daPy_frameCtrl_cFv) {
+asm daPy_frameCtrl_c::~daPy_frameCtrl_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__16daPy_frameCtrl_cFv.s"
 }
@@ -1809,7 +1973,7 @@ ASM_FUNCTION(__dt__16daPy_frameCtrl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daPy_frameCtrl_cFv) {
+asm daPy_frameCtrl_c::daPy_frameCtrl_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__16daPy_frameCtrl_cFv.s"
 }
@@ -1820,7 +1984,7 @@ ASM_FUNCTION(__ct__16daPy_frameCtrl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19mDoExt_AnmRatioPackFv) {
+asm mDoExt_AnmRatioPack::~mDoExt_AnmRatioPack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__19mDoExt_AnmRatioPackFv.s"
 }
@@ -1831,7 +1995,7 @@ ASM_FUNCTION(__dt__19mDoExt_AnmRatioPackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19mDoExt_AnmRatioPackFv) {
+asm mDoExt_AnmRatioPack::mDoExt_AnmRatioPack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__19mDoExt_AnmRatioPackFv.s"
 }
@@ -1842,7 +2006,7 @@ ASM_FUNCTION(__ct__19mDoExt_AnmRatioPackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_horse/d_a_horse/__dt__12J3DFrameCtrlFv.s"
 }

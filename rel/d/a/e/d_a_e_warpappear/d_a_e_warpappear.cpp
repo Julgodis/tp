@@ -6,30 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct csXyz;
+struct e_warpappear_class;
+
+struct e_warpappear_class {
+};
+
+struct cXyz {
+};
+
+struct csXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_Warpappear_Draw__FP18e_warpappear_class();
-extern "C" extern void s_s1_sub__FPvPv();
-extern "C" extern void s_s1drop_sub__FPvPv();
-extern "C" extern void s_s1riv_sub__FPvPv();
-extern "C" extern void s_s1fight_sub__FPvPv();
-extern "C" extern void s_s1entry_sub__FPvPv();
-extern "C" extern void s_s1drop2_sub__FPvPv();
-extern "C" extern void s_s1Yangset_sub__FPvPv();
-extern "C" extern void s_s1start_sub__FPvPv();
-extern "C" extern void action__FP18e_warpappear_class();
-extern "C" extern void demo_camera__FP18e_warpappear_class();
-extern "C" extern void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void mtx_set__FP18e_warpappear_class();
-extern "C" extern void daE_Warpappear_Execute__FP18e_warpappear_class();
-extern "C" extern void daE_Warpappear_IsDelete__FP18e_warpappear_class();
-extern "C" extern void daE_Warpappear_Delete__FP18e_warpappear_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daE_Warpappear_Create__FP10fopAc_ac_c();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
+void daE_Warpappear_Draw(e_warpappear_class*);
+void s_s1_sub(void*, void*);
+void s_s1drop_sub(void*, void*);
+void s_s1riv_sub(void*, void*);
+void s_s1fight_sub(void*, void*);
+void s_s1entry_sub(void*, void*);
+void s_s1drop2_sub(void*, void*);
+void s_s1Yangset_sub(void*, void*);
+void s_s1start_sub(void*, void*);
+void action(e_warpappear_class*);
+void demo_camera(e_warpappear_class*);
+void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*);
+void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*);
+void mtx_set(e_warpappear_class*);
+void daE_Warpappear_Execute(e_warpappear_class*);
+bool daE_Warpappear_IsDelete(e_warpappear_class*);
+void daE_Warpappear_Delete(e_warpappear_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_Warpappear_Create(fopAc_ac_c*);
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+
+extern "C" void daE_Warpappear_Draw__FP18e_warpappear_class();
+extern "C" void s_s1_sub__FPvPv();
+extern "C" void s_s1drop_sub__FPvPv();
+extern "C" void s_s1riv_sub__FPvPv();
+extern "C" void s_s1fight_sub__FPvPv();
+extern "C" void s_s1entry_sub__FPvPv();
+extern "C" void s_s1drop2_sub__FPvPv();
+extern "C" void s_s1Yangset_sub__FPvPv();
+extern "C" void s_s1start_sub__FPvPv();
+extern "C" void action__FP18e_warpappear_class();
+extern "C" void demo_camera__FP18e_warpappear_class();
+extern "C" void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void mtx_set__FP18e_warpappear_class();
+extern "C" void daE_Warpappear_Execute__FP18e_warpappear_class();
+extern "C" bool daE_Warpappear_IsDelete__FP18e_warpappear_class();
+extern "C" void daE_Warpappear_Delete__FP18e_warpappear_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daE_Warpappear_Create__FP10fopAc_ac_c();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
 SECTION_RODATA extern const u32 lit_3864;
 SECTION_RODATA extern const u32 lit_3865;
 SECTION_RODATA extern const u32 lit_3866;
@@ -166,7 +212,9 @@ SECTION_BSS extern u8 ew_s1angy[2];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -176,7 +224,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Warpappear_Draw__FP18e_warpappear_class) {
+asm void daE_Warpappear_Draw(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Draw__FP18e_warpappear_class.s"
 }
@@ -187,7 +235,7 @@ ASM_FUNCTION(daE_Warpappear_Draw__FP18e_warpappear_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1_sub__FPvPv) {
+asm void s_s1_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1_sub__FPvPv.s"
 }
@@ -198,7 +246,7 @@ ASM_FUNCTION(s_s1_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1drop_sub__FPvPv) {
+asm void s_s1drop_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1drop_sub__FPvPv.s"
 }
@@ -209,7 +257,7 @@ ASM_FUNCTION(s_s1drop_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1riv_sub__FPvPv) {
+asm void s_s1riv_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1riv_sub__FPvPv.s"
 }
@@ -220,7 +268,7 @@ ASM_FUNCTION(s_s1riv_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1fight_sub__FPvPv) {
+asm void s_s1fight_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1fight_sub__FPvPv.s"
 }
@@ -231,7 +279,7 @@ ASM_FUNCTION(s_s1fight_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1entry_sub__FPvPv) {
+asm void s_s1entry_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1entry_sub__FPvPv.s"
 }
@@ -242,7 +290,7 @@ ASM_FUNCTION(s_s1entry_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1drop2_sub__FPvPv) {
+asm void s_s1drop2_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1drop2_sub__FPvPv.s"
 }
@@ -253,7 +301,7 @@ ASM_FUNCTION(s_s1drop2_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1Yangset_sub__FPvPv) {
+asm void s_s1Yangset_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1Yangset_sub__FPvPv.s"
 }
@@ -264,7 +312,7 @@ ASM_FUNCTION(s_s1Yangset_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_s1start_sub__FPvPv) {
+asm void s_s1start_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/s_s1start_sub__FPvPv.s"
 }
@@ -275,7 +323,7 @@ ASM_FUNCTION(s_s1start_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP18e_warpappear_class) {
+asm void action(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/action__FP18e_warpappear_class.s"
 }
@@ -286,7 +334,7 @@ ASM_FUNCTION(action__FP18e_warpappear_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP18e_warpappear_class) {
+asm void demo_camera(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/demo_camera__FP18e_warpappear_class.s"
 }
@@ -297,7 +345,7 @@ ASM_FUNCTION(demo_camera__FP18e_warpappear_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u16 field_0, cXyz const* field_1, csXyz const* field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -308,7 +356,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u32 field_0, u16 field_1, cXyz const* field_2, csXyz const* field_3, cXyz const* field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -319,7 +367,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__FP18e_warpappear_class) {
+asm void mtx_set(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/mtx_set__FP18e_warpappear_class.s"
 }
@@ -330,7 +378,7 @@ ASM_FUNCTION(mtx_set__FP18e_warpappear_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Warpappear_Execute__FP18e_warpappear_class) {
+asm void daE_Warpappear_Execute(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Execute__FP18e_warpappear_class.s"
 }
@@ -338,21 +386,16 @@ ASM_FUNCTION(daE_Warpappear_Execute__FP18e_warpappear_class) {
 
 
 /* 807D1C50-807D1C58 0008+00 .text      daE_Warpappear_IsDelete__FP18e_warpappear_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_Warpappear_IsDelete__FP18e_warpappear_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_IsDelete__FP18e_warpappear_class.s"
+bool daE_Warpappear_IsDelete(e_warpappear_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807D1C58-807D1C8C 0034+00 .text      daE_Warpappear_Delete__FP18e_warpappear_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Warpappear_Delete__FP18e_warpappear_class) {
+asm void daE_Warpappear_Delete(e_warpappear_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Delete__FP18e_warpappear_class.s"
 }
@@ -363,7 +406,7 @@ ASM_FUNCTION(daE_Warpappear_Delete__FP18e_warpappear_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -374,7 +417,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/__dt__12J3DFrameCtrlFv.s"
 }
@@ -385,7 +428,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Warpappear_Create__FP10fopAc_ac_c) {
+asm void daE_Warpappear_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Create__FP10fopAc_ac_c.s"
 }
@@ -396,7 +439,7 @@ ASM_FUNCTION(daE_Warpappear_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/changeDemoMode__9daPy_py_cFUliis.s"
 }

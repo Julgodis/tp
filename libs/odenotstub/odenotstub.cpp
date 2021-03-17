@@ -9,26 +9,23 @@
 // Forward References:
 // 
 
-extern "C" extern void Hu_IsStub();
+extern "C" bool Hu_IsStub();
+
+extern "C" bool Hu_IsStub();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 803737AC-803737B4 0008+00 .text      Hu_IsStub                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Hu_IsStub) {
-	nofralloc
-#include "asm/odenotstub/odenotstub/Hu_IsStub.s"
+/* 803737AC-803737B4 0008+00 rc=1 efc=1 .text      Hu_IsStub                                                    */
+extern "C" bool Hu_IsStub() {
+	return false;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

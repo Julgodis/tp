@@ -9,12 +9,19 @@
 // Forward References:
 // 
 
-extern "C" extern void func_80280588();
-extern "C" extern void JPAGetYZRotateMtx__FssPA4_f();
-extern "C" extern void JPAGetXYZRotateMtx__FsssPA4_f();
-extern "C" extern void func_802807E0();
-extern "C" extern void func_80280808();
-extern "C" extern void JPACalcKeyAnmValue__FfUsPCf();
+extern "C" void func_80280588();
+extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_802807E0();
+extern "C" void func_80280808();
+void JPACalcKeyAnmValue(f32, u16, f32 const*);
+
+extern "C" void func_80280588();
+extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_802807E0();
+extern "C" void func_80280808();
+extern "C" void JPACalcKeyAnmValue__FfUsPCf();
 SECTION_SDATA2 extern f32 lit_2193;
 SECTION_SDATA2 extern u8 lit_2238[4];
 SECTION_SDATA2 extern f32 lit_2239;
@@ -23,10 +30,15 @@ SECTION_SDATA2 extern f32 lit_2239;
 // External References:
 // 
 
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSVECMag();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+extern "C" void PSMTXIdentity();
+extern "C" void PSVECMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void PSMTXIdentity();
+extern "C" void PSVECMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 __float_epsilon;
 
@@ -35,82 +47,81 @@ SECTION_SDATA extern u32 __float_epsilon;
 // 
 
 /* ############################################################################################## */
-/* 804553B8-804553BC 0004+00 .sdata2    @2193                                                        */
+/* 804553B8-804553BC 0004+00 rc=2 efc=0 .sdata2    @2193                                                        */
 f32 lit_2193 = 1.0f;
 
-/* 804553BC-804553C0 0004+00 .sdata2    @2238                                                        */
+/* 804553BC-804553C0 0004+00 rc=4 efc=0 .sdata2    @2238                                                        */
 u8 lit_2238[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804553C0-804553C8 0004+04 .sdata2    @2239                                                        */
+/* 804553C0-804553C8 0004+04 rc=1 efc=0 .sdata2    @2239                                                        */
 f32 lit_2239 = 32.0f;
 /* padding 4 bytes */
 
-/* 80280588-802806C0 0138+00 .text      JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f                  */
+/* 80280588-802806C0 0138+00 rc=1 efc=1 .text      JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80280588) {
+extern "C" asm void func_80280588() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_80280588.s"
 }
 #pragma pop
 
 
-/* 802806C0-80280734 0074+00 .text      JPAGetYZRotateMtx__FssPA4_f                                  */
+/* 802806C0-80280734 0074+00 rc=1 efc=1 .text      JPAGetYZRotateMtx__FssPA4_f                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPAGetYZRotateMtx__FssPA4_f) {
+extern "C" asm void JPAGetYZRotateMtx__FssPA4_f() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/JPAGetYZRotateMtx__FssPA4_f.s"
 }
 #pragma pop
 
 
-/* 80280734-802807E0 00AC+00 .text      JPAGetXYZRotateMtx__FsssPA4_f                                */
+/* 80280734-802807E0 00AC+00 rc=6 efc=6 .text      JPAGetXYZRotateMtx__FsssPA4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPAGetXYZRotateMtx__FsssPA4_f) {
+extern "C" asm void JPAGetXYZRotateMtx__FsssPA4_f() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/JPAGetXYZRotateMtx__FsssPA4_f.s"
 }
 #pragma pop
 
 
-/* 802807E0-80280808 0028+00 .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    */
+/* 802807E0-80280808 0028+00 rc=11 efc=11 .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802807E0) {
+extern "C" asm void func_802807E0() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_802807E0.s"
 }
 #pragma pop
 
 
-/* 80280808-80280984 017C+00 .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
+/* 80280808-80280984 017C+00 rc=2 efc=1 .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80280808) {
+extern "C" asm void func_80280808() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_80280808.s"
 }
 #pragma pop
 
 
-/* 80280984-80280A48 00C4+00 .text      JPACalcKeyAnmValue__FfUsPCf                                  */
+/* 80280984-80280A48 00C4+00 rc=2 efc=2 .text      JPACalcKeyAnmValue__FfUsPCf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcKeyAnmValue__FfUsPCf) {
+asm void JPACalcKeyAnmValue(f32 field_0, u16 field_1, f32 const* field_2) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/JPACalcKeyAnmValue__FfUsPCf.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

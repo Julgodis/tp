@@ -6,22 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv4PRwall_c;
+
+struct daObjLv4PRwall_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjLv4PRwall_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__16daObjLv4PRwall_cFv();
-extern "C" extern void setMtx__16daObjLv4PRwall_cFv();
-extern "C" extern void CreateHeap__16daObjLv4PRwall_cFv();
-extern "C" extern void Create__16daObjLv4PRwall_cFv();
-extern "C" extern void searchObjSwTurn__FPvPv();
-extern "C" extern void Execute__16daObjLv4PRwall_cFPPA3_A4_f();
-extern "C" extern void Draw__16daObjLv4PRwall_cFv();
-extern "C" extern void Delete__16daObjLv4PRwall_cFv();
-extern "C" extern void daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c();
-extern "C" extern void daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c();
-extern "C" extern void daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c();
-extern "C" extern void daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c();
-extern "C" extern void __dt__16daObjLv4PRwall_cFv();
+void searchObjSwTurn(void*, void*);
+extern "C" void Execute__16daObjLv4PRwall_cFPPA3_A4_f();
+void daObjLv4PRwall_create1st(daObjLv4PRwall_c*);
+void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c*);
+void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c*);
+void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c*);
+
+extern "C" void create1st__16daObjLv4PRwall_cFv();
+extern "C" void setMtx__16daObjLv4PRwall_cFv();
+extern "C" void CreateHeap__16daObjLv4PRwall_cFv();
+extern "C" void Create__16daObjLv4PRwall_cFv();
+extern "C" void searchObjSwTurn__FPvPv();
+extern "C" void Execute__16daObjLv4PRwall_cFPPA3_A4_f();
+extern "C" void Draw__16daObjLv4PRwall_cFv();
+extern "C" void Delete__16daObjLv4PRwall_cFv();
+extern "C" void daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c();
+extern "C" void daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c();
+extern "C" void daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c();
+extern "C" void daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c();
+extern "C" void __dt__16daObjLv4PRwall_cFv();
 SECTION_RODATA extern const u8 l_dzbidx[12];
 SECTION_RODATA extern const u8 l_bmdidx[12];
 SECTION_RODATA extern const u8 l_cull_box[72];
@@ -45,7 +68,9 @@ SECTION_DATA extern void*const __vt__16daObjLv4PRwall_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -55,7 +80,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/create1st__16daObjLv4PRwall_cFv.s"
 }
@@ -66,7 +91,7 @@ ASM_FUNCTION(create1st__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/setMtx__16daObjLv4PRwall_cFv.s"
 }
@@ -77,7 +102,7 @@ ASM_FUNCTION(setMtx__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/CreateHeap__16daObjLv4PRwall_cFv.s"
 }
@@ -88,7 +113,7 @@ ASM_FUNCTION(CreateHeap__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/Create__16daObjLv4PRwall_cFv.s"
 }
@@ -99,7 +124,7 @@ ASM_FUNCTION(Create__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchObjSwTurn__FPvPv) {
+asm void searchObjSwTurn(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/searchObjSwTurn__FPvPv.s"
 }
@@ -110,7 +135,7 @@ ASM_FUNCTION(searchObjSwTurn__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjLv4PRwall_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjLv4PRwall_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/Execute__16daObjLv4PRwall_cFPPA3_A4_f.s"
 }
@@ -121,7 +146,7 @@ ASM_FUNCTION(Execute__16daObjLv4PRwall_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/Draw__16daObjLv4PRwall_cFv.s"
 }
@@ -132,7 +157,7 @@ ASM_FUNCTION(Draw__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjLv4PRwall_cFv) {
+asm void daObjLv4PRwall_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/Delete__16daObjLv4PRwall_cFv.s"
 }
@@ -143,7 +168,7 @@ ASM_FUNCTION(Delete__16daObjLv4PRwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c) {
+asm void daObjLv4PRwall_create1st(daObjLv4PRwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c.s"
 }
@@ -154,7 +179,7 @@ ASM_FUNCTION(daObjLv4PRwall_create1st__FP16daObjLv4PRwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c) {
+asm void daObjLv4PRwall_MoveBGDelete(daObjLv4PRwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c.s"
 }
@@ -165,7 +190,7 @@ ASM_FUNCTION(daObjLv4PRwall_MoveBGDelete__FP16daObjLv4PRwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c) {
+asm void daObjLv4PRwall_MoveBGExecute(daObjLv4PRwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c.s"
 }
@@ -176,7 +201,7 @@ ASM_FUNCTION(daObjLv4PRwall_MoveBGExecute__FP16daObjLv4PRwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c) {
+asm void daObjLv4PRwall_MoveBGDraw(daObjLv4PRwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c.s"
 }
@@ -187,7 +212,7 @@ ASM_FUNCTION(daObjLv4PRwall_MoveBGDraw__FP16daObjLv4PRwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjLv4PRwall_cFv) {
+asm daObjLv4PRwall_c::~daObjLv4PRwall_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4prwall/d_a_obj_lv4prwall/__dt__16daObjLv4PRwall_cFv.s"
 }

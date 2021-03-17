@@ -6,24 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_ShopItem_c {
+	void create();
+	void Delete();
+	void Execute();
+	bool Draw();
+	void getType();
+	void getGroupID();
+	void getSwitchBit1();
+	void getSwitchBit2();
+	void initialize();
+	~daTag_ShopItem_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__16daTag_ShopItem_cFv();
-extern "C" extern void Delete__16daTag_ShopItem_cFv();
-extern "C" extern void Execute__16daTag_ShopItem_cFv();
-extern "C" extern void Draw__16daTag_ShopItem_cFv();
-extern "C" extern void getType__16daTag_ShopItem_cFv();
-extern "C" extern void getGroupID__16daTag_ShopItem_cFv();
-extern "C" extern void getSwitchBit1__16daTag_ShopItem_cFv();
-extern "C" extern void getSwitchBit2__16daTag_ShopItem_cFv();
-extern "C" extern void initialize__16daTag_ShopItem_cFv();
-extern "C" extern void daTag_ShopItem_Create__FPv();
-extern "C" extern void daTag_ShopItem_Delete__FPv();
-extern "C" extern void daTag_ShopItem_Execute__FPv();
-extern "C" extern void daTag_ShopItem_Draw__FPv();
-extern "C" extern void daTag_ShopItem_IsDelete__FPv();
-extern "C" extern void __dt__16daTag_ShopItem_cFv();
+void daTag_ShopItem_Create(void*);
+void daTag_ShopItem_Delete(void*);
+void daTag_ShopItem_Execute(void*);
+void daTag_ShopItem_Draw(void*);
+bool daTag_ShopItem_IsDelete(void*);
+
+extern "C" void create__16daTag_ShopItem_cFv();
+extern "C" void Delete__16daTag_ShopItem_cFv();
+extern "C" void Execute__16daTag_ShopItem_cFv();
+extern "C" bool Draw__16daTag_ShopItem_cFv();
+extern "C" void getType__16daTag_ShopItem_cFv();
+extern "C" void getGroupID__16daTag_ShopItem_cFv();
+extern "C" void getSwitchBit1__16daTag_ShopItem_cFv();
+extern "C" void getSwitchBit2__16daTag_ShopItem_cFv();
+extern "C" void initialize__16daTag_ShopItem_cFv();
+extern "C" void daTag_ShopItem_Create__FPv();
+extern "C" void daTag_ShopItem_Delete__FPv();
+extern "C" void daTag_ShopItem_Execute__FPv();
+extern "C" void daTag_ShopItem_Draw__FPv();
+extern "C" bool daTag_ShopItem_IsDelete__FPv();
+extern "C" void __dt__16daTag_ShopItem_cFv();
 SECTION_RODATA extern const u32 lit_3684;
 SECTION_RODATA extern const u32 lit_3685;
 SECTION_RODATA extern const u32 lit_3778;
@@ -39,7 +62,9 @@ SECTION_DATA extern void*const __vt__16daTag_ShopItem_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -49,7 +74,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/create__16daTag_ShopItem_cFv.s"
 }
@@ -60,7 +85,7 @@ ASM_FUNCTION(create__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/Delete__16daTag_ShopItem_cFv.s"
 }
@@ -71,7 +96,7 @@ ASM_FUNCTION(Delete__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/Execute__16daTag_ShopItem_cFv.s"
 }
@@ -79,21 +104,16 @@ ASM_FUNCTION(Execute__16daTag_ShopItem_cFv) {
 
 
 /* 80D61024-80D6102C 0008+00 .text      Draw__16daTag_ShopItem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daTag_ShopItem_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/Draw__16daTag_ShopItem_cFv.s"
+bool daTag_ShopItem_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6102C-80D61038 000C+00 .text      getType__16daTag_ShopItem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/getType__16daTag_ShopItem_cFv.s"
 }
@@ -104,7 +124,7 @@ ASM_FUNCTION(getType__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroupID__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::getGroupID() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/getGroupID__16daTag_ShopItem_cFv.s"
 }
@@ -115,7 +135,7 @@ ASM_FUNCTION(getGroupID__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwitchBit1__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::getSwitchBit1() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/getSwitchBit1__16daTag_ShopItem_cFv.s"
 }
@@ -126,7 +146,7 @@ ASM_FUNCTION(getSwitchBit1__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwitchBit2__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::getSwitchBit2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/getSwitchBit2__16daTag_ShopItem_cFv.s"
 }
@@ -137,7 +157,7 @@ ASM_FUNCTION(getSwitchBit2__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__16daTag_ShopItem_cFv) {
+asm void daTag_ShopItem_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/initialize__16daTag_ShopItem_cFv.s"
 }
@@ -148,7 +168,7 @@ ASM_FUNCTION(initialize__16daTag_ShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopItem_Create__FPv) {
+asm void daTag_ShopItem_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Create__FPv.s"
 }
@@ -159,7 +179,7 @@ ASM_FUNCTION(daTag_ShopItem_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopItem_Delete__FPv) {
+asm void daTag_ShopItem_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Delete__FPv.s"
 }
@@ -170,7 +190,7 @@ ASM_FUNCTION(daTag_ShopItem_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopItem_Execute__FPv) {
+asm void daTag_ShopItem_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Execute__FPv.s"
 }
@@ -181,7 +201,7 @@ ASM_FUNCTION(daTag_ShopItem_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopItem_Draw__FPv) {
+asm void daTag_ShopItem_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_Draw__FPv.s"
 }
@@ -189,21 +209,16 @@ ASM_FUNCTION(daTag_ShopItem_Draw__FPv) {
 
 
 /* 80D61160-80D61168 0008+00 .text      daTag_ShopItem_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopItem_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_IsDelete__FPv.s"
+bool daTag_ShopItem_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61168-80D611C8 0060+00 .text      __dt__16daTag_ShopItem_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daTag_ShopItem_cFv) {
+asm daTag_ShopItem_c::~daTag_ShopItem_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/__dt__16daTag_ShopItem_cFv.s"
 }

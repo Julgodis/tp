@@ -6,49 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjWarpKBrg_c;
+
+struct daObjWarpKBrg_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void event_proc_call();
+	void orderZHintEvent();
+	void actionWait();
+	void actionOrderEvent();
+	void actionWaitWarpEvent();
+	void actionOrderATalkEvent();
+	void actionTalkEvent();
+	void actionWarpEvent();
+	void actionDead();
+	void actionWait2();
+	void actionOrderEvent2();
+	void actionWarpEvent2();
+	void actionDead2();
+	void demoProc();
+	void calcObjPos();
+	void checkTalkDistance();
+	void calcMidnaWaitPos();
+	void setBindEffect();
+	void followBindEffect();
+	void setSrcEffect();
+	void setDstEffect();
+	void followSrcEffect();
+	void followDstEffect();
+	void endSrcEffect();
+	void endDstEffect();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void initBaseMtx__15daObjWarpKBrg_cFv();
-extern "C" extern void setBaseMtx__15daObjWarpKBrg_cFv();
-extern "C" extern void Create__15daObjWarpKBrg_cFv();
-extern "C" extern void CreateHeap__15daObjWarpKBrg_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__15daObjWarpKBrg_cFv();
-extern "C" extern void Execute__15daObjWarpKBrg_cFPPA3_A4_f();
-extern "C" extern void event_proc_call__15daObjWarpKBrg_cFv();
-extern "C" extern void orderZHintEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionWait__15daObjWarpKBrg_cFv();
-extern "C" extern void actionOrderEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionWaitWarpEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionOrderATalkEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionTalkEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionWarpEvent__15daObjWarpKBrg_cFv();
-extern "C" extern void actionDead__15daObjWarpKBrg_cFv();
-extern "C" extern void actionWait2__15daObjWarpKBrg_cFv();
-extern "C" extern void actionOrderEvent2__15daObjWarpKBrg_cFv();
-extern "C" extern void actionWarpEvent2__15daObjWarpKBrg_cFv();
-extern "C" extern void actionDead2__15daObjWarpKBrg_cFv();
-extern "C" extern void demoProc__15daObjWarpKBrg_cFv();
-extern "C" extern void calcObjPos__15daObjWarpKBrg_cFv();
-extern "C" extern void checkTalkDistance__15daObjWarpKBrg_cFv();
-extern "C" extern void calcMidnaWaitPos__15daObjWarpKBrg_cFv();
-extern "C" extern void setBindEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void followBindEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void setSrcEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void setDstEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void followSrcEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void followDstEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void endSrcEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void endDstEffect__15daObjWarpKBrg_cFv();
-extern "C" extern void Draw__15daObjWarpKBrg_cFv();
-extern "C" extern void Delete__15daObjWarpKBrg_cFv();
-extern "C" extern void daObjWarpKBrg_create1st__FP15daObjWarpKBrg_c();
-extern "C" extern void daObjWarpKBrg_MoveBGDelete__FP15daObjWarpKBrg_c();
-extern "C" extern void daObjWarpKBrg_MoveBGExecute__FP15daObjWarpKBrg_c();
-extern "C" extern void daObjWarpKBrg_MoveBGDraw__FP15daObjWarpKBrg_c();
-extern "C" extern void func_80D29590();
+void eventCallBack(void*, s32);
+extern "C" void Execute__15daObjWarpKBrg_cFPPA3_A4_f();
+void daObjWarpKBrg_create1st(daObjWarpKBrg_c*);
+void daObjWarpKBrg_MoveBGDelete(daObjWarpKBrg_c*);
+void daObjWarpKBrg_MoveBGExecute(daObjWarpKBrg_c*);
+void daObjWarpKBrg_MoveBGDraw(daObjWarpKBrg_c*);
+extern "C" void func_80D29590();
+
+extern "C" void eventCallBack__FPvi();
+extern "C" void initBaseMtx__15daObjWarpKBrg_cFv();
+extern "C" void setBaseMtx__15daObjWarpKBrg_cFv();
+extern "C" void Create__15daObjWarpKBrg_cFv();
+extern "C" void CreateHeap__15daObjWarpKBrg_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__15daObjWarpKBrg_cFv();
+extern "C" void Execute__15daObjWarpKBrg_cFPPA3_A4_f();
+extern "C" void event_proc_call__15daObjWarpKBrg_cFv();
+extern "C" void orderZHintEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionWait__15daObjWarpKBrg_cFv();
+extern "C" void actionOrderEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionWaitWarpEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionOrderATalkEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionTalkEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionWarpEvent__15daObjWarpKBrg_cFv();
+extern "C" void actionDead__15daObjWarpKBrg_cFv();
+extern "C" void actionWait2__15daObjWarpKBrg_cFv();
+extern "C" void actionOrderEvent2__15daObjWarpKBrg_cFv();
+extern "C" void actionWarpEvent2__15daObjWarpKBrg_cFv();
+extern "C" void actionDead2__15daObjWarpKBrg_cFv();
+extern "C" void demoProc__15daObjWarpKBrg_cFv();
+extern "C" void calcObjPos__15daObjWarpKBrg_cFv();
+extern "C" void checkTalkDistance__15daObjWarpKBrg_cFv();
+extern "C" void calcMidnaWaitPos__15daObjWarpKBrg_cFv();
+extern "C" void setBindEffect__15daObjWarpKBrg_cFv();
+extern "C" void followBindEffect__15daObjWarpKBrg_cFv();
+extern "C" void setSrcEffect__15daObjWarpKBrg_cFv();
+extern "C" void setDstEffect__15daObjWarpKBrg_cFv();
+extern "C" void followSrcEffect__15daObjWarpKBrg_cFv();
+extern "C" void followDstEffect__15daObjWarpKBrg_cFv();
+extern "C" void endSrcEffect__15daObjWarpKBrg_cFv();
+extern "C" void endDstEffect__15daObjWarpKBrg_cFv();
+extern "C" void Draw__15daObjWarpKBrg_cFv();
+extern "C" void Delete__15daObjWarpKBrg_cFv();
+extern "C" void daObjWarpKBrg_create1st__FP15daObjWarpKBrg_c();
+extern "C" void daObjWarpKBrg_MoveBGDelete__FP15daObjWarpKBrg_c();
+extern "C" void daObjWarpKBrg_MoveBGExecute__FP15daObjWarpKBrg_c();
+extern "C" void daObjWarpKBrg_MoveBGDraw__FP15daObjWarpKBrg_c();
+extern "C" void func_80D29590();
 SECTION_RODATA extern const u8 l_bmd_idx[8];
 SECTION_RODATA extern const u8 l_dzb_idx[8];
 SECTION_RODATA extern const u8 l_btk_idx[8];
@@ -114,7 +167,9 @@ SECTION_DATA extern void*const __vt__15daObjWarpKBrg_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -124,7 +179,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/eventCallBack__FPvi.s"
 }
@@ -135,7 +190,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/initBaseMtx__15daObjWarpKBrg_cFv.s"
 }
@@ -146,7 +201,7 @@ ASM_FUNCTION(initBaseMtx__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/setBaseMtx__15daObjWarpKBrg_cFv.s"
 }
@@ -157,7 +212,7 @@ ASM_FUNCTION(setBaseMtx__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/Create__15daObjWarpKBrg_cFv.s"
 }
@@ -168,7 +223,7 @@ ASM_FUNCTION(Create__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/CreateHeap__15daObjWarpKBrg_cFv.s"
 }
@@ -179,7 +234,7 @@ ASM_FUNCTION(CreateHeap__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/__dt__12J3DFrameCtrlFv.s"
 }
@@ -190,7 +245,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/create1st__15daObjWarpKBrg_cFv.s"
 }
@@ -201,7 +256,7 @@ ASM_FUNCTION(create1st__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjWarpKBrg_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjWarpKBrg_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/Execute__15daObjWarpKBrg_cFPPA3_A4_f.s"
 }
@@ -212,7 +267,7 @@ ASM_FUNCTION(Execute__15daObjWarpKBrg_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/event_proc_call__15daObjWarpKBrg_cFv.s"
 }
@@ -223,7 +278,7 @@ ASM_FUNCTION(event_proc_call__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderZHintEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::orderZHintEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/orderZHintEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -234,7 +289,7 @@ ASM_FUNCTION(orderZHintEvent__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionWait__15daObjWarpKBrg_cFv.s"
 }
@@ -245,7 +300,7 @@ ASM_FUNCTION(actionWait__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionOrderEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -256,7 +311,7 @@ ASM_FUNCTION(actionOrderEvent__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitWarpEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionWaitWarpEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionWaitWarpEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -267,7 +322,7 @@ ASM_FUNCTION(actionWaitWarpEvent__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderATalkEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionOrderATalkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionOrderATalkEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -278,7 +333,7 @@ ASM_FUNCTION(actionOrderATalkEvent__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTalkEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionTalkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionTalkEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -289,7 +344,7 @@ ASM_FUNCTION(actionTalkEvent__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarpEvent__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionWarpEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionWarpEvent__15daObjWarpKBrg_cFv.s"
 }
@@ -297,32 +352,22 @@ ASM_FUNCTION(actionWarpEvent__15daObjWarpKBrg_cFv) {
 
 
 /* 80D28144-80D28148 0004+00 .text      actionDead__15daObjWarpKBrg_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__15daObjWarpKBrg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionDead__15daObjWarpKBrg_cFv.s"
+void daObjWarpKBrg_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D28148-80D2814C 0004+00 .text      actionWait2__15daObjWarpKBrg_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait2__15daObjWarpKBrg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionWait2__15daObjWarpKBrg_cFv.s"
+void daObjWarpKBrg_c::actionWait2() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2814C-80D281E4 0098+00 .text      actionOrderEvent2__15daObjWarpKBrg_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent2__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionOrderEvent2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionOrderEvent2__15daObjWarpKBrg_cFv.s"
 }
@@ -333,7 +378,7 @@ ASM_FUNCTION(actionOrderEvent2__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarpEvent2__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::actionWarpEvent2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionWarpEvent2__15daObjWarpKBrg_cFv.s"
 }
@@ -341,21 +386,16 @@ ASM_FUNCTION(actionWarpEvent2__15daObjWarpKBrg_cFv) {
 
 
 /* 80D28248-80D2824C 0004+00 .text      actionDead2__15daObjWarpKBrg_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead2__15daObjWarpKBrg_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/actionDead2__15daObjWarpKBrg_cFv.s"
+void daObjWarpKBrg_c::actionDead2() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2824C-80D28A50 0804+00 .text      demoProc__15daObjWarpKBrg_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/demoProc__15daObjWarpKBrg_cFv.s"
 }
@@ -366,7 +406,7 @@ ASM_FUNCTION(demoProc__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcObjPos__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::calcObjPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/calcObjPos__15daObjWarpKBrg_cFv.s"
 }
@@ -377,7 +417,7 @@ ASM_FUNCTION(calcObjPos__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTalkDistance__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::checkTalkDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/checkTalkDistance__15daObjWarpKBrg_cFv.s"
 }
@@ -388,7 +428,7 @@ ASM_FUNCTION(checkTalkDistance__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMidnaWaitPos__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::calcMidnaWaitPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/calcMidnaWaitPos__15daObjWarpKBrg_cFv.s"
 }
@@ -399,7 +439,7 @@ ASM_FUNCTION(calcMidnaWaitPos__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBindEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::setBindEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/setBindEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -410,7 +450,7 @@ ASM_FUNCTION(setBindEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followBindEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::followBindEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/followBindEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -421,7 +461,7 @@ ASM_FUNCTION(followBindEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSrcEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::setSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/setSrcEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -432,7 +472,7 @@ ASM_FUNCTION(setSrcEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDstEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::setDstEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/setDstEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -443,7 +483,7 @@ ASM_FUNCTION(setDstEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followSrcEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::followSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/followSrcEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -454,7 +494,7 @@ ASM_FUNCTION(followSrcEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followDstEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::followDstEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/followDstEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -465,7 +505,7 @@ ASM_FUNCTION(followDstEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endSrcEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::endSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/endSrcEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -476,7 +516,7 @@ ASM_FUNCTION(endSrcEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endDstEffect__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::endDstEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/endDstEffect__15daObjWarpKBrg_cFv.s"
 }
@@ -487,7 +527,7 @@ ASM_FUNCTION(endDstEffect__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/Draw__15daObjWarpKBrg_cFv.s"
 }
@@ -498,7 +538,7 @@ ASM_FUNCTION(Draw__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjWarpKBrg_cFv) {
+asm void daObjWarpKBrg_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/Delete__15daObjWarpKBrg_cFv.s"
 }
@@ -509,7 +549,7 @@ ASM_FUNCTION(Delete__15daObjWarpKBrg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWarpKBrg_create1st__FP15daObjWarpKBrg_c) {
+asm void daObjWarpKBrg_create1st(daObjWarpKBrg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/daObjWarpKBrg_create1st__FP15daObjWarpKBrg_c.s"
 }
@@ -520,7 +560,7 @@ ASM_FUNCTION(daObjWarpKBrg_create1st__FP15daObjWarpKBrg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWarpKBrg_MoveBGDelete__FP15daObjWarpKBrg_c) {
+asm void daObjWarpKBrg_MoveBGDelete(daObjWarpKBrg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/daObjWarpKBrg_MoveBGDelete__FP15daObjWarpKBrg_c.s"
 }
@@ -531,7 +571,7 @@ ASM_FUNCTION(daObjWarpKBrg_MoveBGDelete__FP15daObjWarpKBrg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWarpKBrg_MoveBGExecute__FP15daObjWarpKBrg_c) {
+asm void daObjWarpKBrg_MoveBGExecute(daObjWarpKBrg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/daObjWarpKBrg_MoveBGExecute__FP15daObjWarpKBrg_c.s"
 }
@@ -542,7 +582,7 @@ ASM_FUNCTION(daObjWarpKBrg_MoveBGExecute__FP15daObjWarpKBrg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWarpKBrg_MoveBGDraw__FP15daObjWarpKBrg_c) {
+asm void daObjWarpKBrg_MoveBGDraw(daObjWarpKBrg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/daObjWarpKBrg_MoveBGDraw__FP15daObjWarpKBrg_c.s"
 }
@@ -553,7 +593,7 @@ ASM_FUNCTION(daObjWarpKBrg_MoveBGDraw__FP15daObjWarpKBrg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D29590) {
+extern "C" asm void func_80D29590() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_warp_kbrg/d_a_obj_warp_kbrg/func_80D29590.s"
 }

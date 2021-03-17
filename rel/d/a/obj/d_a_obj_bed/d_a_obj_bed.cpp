@@ -6,35 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_Bed_c {
+	~daObj_Bed_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	bool getType();
+	void getResName();
+	void isDelete();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObj_Bed_Param_c {
+	~daObj_Bed_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__11daObj_Bed_cFv();
-extern "C" extern void create__11daObj_Bed_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__11daObj_Bed_cFv();
-extern "C" extern void Delete__11daObj_Bed_cFv();
-extern "C" extern void Execute__11daObj_Bed_cFv();
-extern "C" extern void Draw__11daObj_Bed_cFv();
-extern "C" extern void createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c();
-extern "C" extern void getType__11daObj_Bed_cFv();
-extern "C" extern void getResName__11daObj_Bed_cFv();
-extern "C" extern void isDelete__11daObj_Bed_cFv();
-extern "C" extern void setEnvTevColor__11daObj_Bed_cFv();
-extern "C" extern void setRoomNo__11daObj_Bed_cFv();
-extern "C" extern void setMtx__11daObj_Bed_cFv();
-extern "C" extern void daObj_Bed_Create__FPv();
-extern "C" extern void daObj_Bed_Delete__FPv();
-extern "C" extern void daObj_Bed_Execute__FPv();
-extern "C" extern void daObj_Bed_Draw__FPv();
-extern "C" extern void daObj_Bed_IsDelete__FPv();
-extern "C" extern void __sinit_d_a_obj_bed_cpp();
-extern "C" extern void __dt__17daObj_Bed_Param_cFv();
-extern "C" extern void func_80BAE144();
-extern "C" extern void func_80BAE14C();
+void daObj_Bed_Create(void*);
+void daObj_Bed_Delete(void*);
+void daObj_Bed_Execute(void*);
+void daObj_Bed_Draw(void*);
+bool daObj_Bed_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_bed_cpp();
+extern "C" void func_80BAE144();
+extern "C" void func_80BAE14C();
+
+extern "C" void __dt__11daObj_Bed_cFv();
+extern "C" void create__11daObj_Bed_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__11daObj_Bed_cFv();
+extern "C" void Delete__11daObj_Bed_cFv();
+extern "C" void Execute__11daObj_Bed_cFv();
+extern "C" void Draw__11daObj_Bed_cFv();
+extern "C" void createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c();
+extern "C" bool getType__11daObj_Bed_cFv();
+extern "C" void getResName__11daObj_Bed_cFv();
+extern "C" void isDelete__11daObj_Bed_cFv();
+extern "C" void setEnvTevColor__11daObj_Bed_cFv();
+extern "C" void setRoomNo__11daObj_Bed_cFv();
+extern "C" void setMtx__11daObj_Bed_cFv();
+extern "C" void daObj_Bed_Create__FPv();
+extern "C" void daObj_Bed_Delete__FPv();
+extern "C" void daObj_Bed_Execute__FPv();
+extern "C" void daObj_Bed_Draw__FPv();
+extern "C" bool daObj_Bed_IsDelete__FPv();
+extern "C" void __sinit_d_a_obj_bed_cpp();
+extern "C" void __dt__17daObj_Bed_Param_cFv();
+extern "C" void func_80BAE144();
+extern "C" void func_80BAE14C();
 SECTION_RODATA extern const u8 m__17daObj_Bed_Param_c[16];
 SECTION_RODATA extern const u32 lit_3902;
 SECTION_RODATA extern const u32 lit_3903;
@@ -59,8 +113,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +127,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daObj_Bed_cFv) {
+asm daObj_Bed_c::~daObj_Bed_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__11daObj_Bed_cFv.s"
 }
@@ -81,7 +138,7 @@ ASM_FUNCTION(__dt__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/create__11daObj_Bed_cFv.s"
 }
@@ -92,7 +149,7 @@ ASM_FUNCTION(create__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__8cM3dGLinFv.s"
 }
@@ -103,7 +160,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__8cM3dGCylFv.s"
 }
@@ -114,7 +171,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__12dBgS_AcchCirFv.s"
 }
@@ -125,7 +182,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -136,7 +193,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/CreateHeap__11daObj_Bed_cFv.s"
 }
@@ -147,7 +204,7 @@ ASM_FUNCTION(CreateHeap__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/Delete__11daObj_Bed_cFv.s"
 }
@@ -158,7 +215,7 @@ ASM_FUNCTION(Delete__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/Execute__11daObj_Bed_cFv.s"
 }
@@ -169,7 +226,7 @@ ASM_FUNCTION(Execute__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/Draw__11daObj_Bed_cFv.s"
 }
@@ -180,7 +237,7 @@ ASM_FUNCTION(Draw__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c) {
+asm void daObj_Bed_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c.s"
 }
@@ -188,21 +245,16 @@ ASM_FUNCTION(createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c) {
 
 
 /* 80BADED8-80BADEE0 0008+00 .text      getType__11daObj_Bed_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getType__11daObj_Bed_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/getType__11daObj_Bed_cFv.s"
+bool daObj_Bed_c::getType() {
+	return false;
 }
-#pragma pop
 
 
 /* 80BADEE0-80BADEF0 0010+00 .text      getResName__11daObj_Bed_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/getResName__11daObj_Bed_cFv.s"
 }
@@ -213,7 +265,7 @@ ASM_FUNCTION(getResName__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/isDelete__11daObj_Bed_cFv.s"
 }
@@ -224,7 +276,7 @@ ASM_FUNCTION(isDelete__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/setEnvTevColor__11daObj_Bed_cFv.s"
 }
@@ -235,7 +287,7 @@ ASM_FUNCTION(setEnvTevColor__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/setRoomNo__11daObj_Bed_cFv.s"
 }
@@ -246,7 +298,7 @@ ASM_FUNCTION(setRoomNo__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__11daObj_Bed_cFv) {
+asm void daObj_Bed_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/setMtx__11daObj_Bed_cFv.s"
 }
@@ -257,7 +309,7 @@ ASM_FUNCTION(setMtx__11daObj_Bed_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Bed_Create__FPv) {
+asm void daObj_Bed_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Create__FPv.s"
 }
@@ -268,7 +320,7 @@ ASM_FUNCTION(daObj_Bed_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Bed_Delete__FPv) {
+asm void daObj_Bed_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Delete__FPv.s"
 }
@@ -279,7 +331,7 @@ ASM_FUNCTION(daObj_Bed_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Bed_Execute__FPv) {
+asm void daObj_Bed_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Execute__FPv.s"
 }
@@ -290,7 +342,7 @@ ASM_FUNCTION(daObj_Bed_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Bed_Draw__FPv) {
+asm void daObj_Bed_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_Draw__FPv.s"
 }
@@ -298,21 +350,16 @@ ASM_FUNCTION(daObj_Bed_Draw__FPv) {
 
 
 /* 80BAE0B4-80BAE0BC 0008+00 .text      daObj_Bed_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Bed_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_IsDelete__FPv.s"
+bool daObj_Bed_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BAE0BC-80BAE0FC 0040+00 .text      __sinit_d_a_obj_bed_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_bed_cpp) {
+extern "C" asm void __sinit_d_a_obj_bed_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__sinit_d_a_obj_bed_cpp.s"
 }
@@ -323,7 +370,7 @@ ASM_FUNCTION(__sinit_d_a_obj_bed_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daObj_Bed_Param_cFv) {
+asm daObj_Bed_Param_c::~daObj_Bed_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/__dt__17daObj_Bed_Param_cFv.s"
 }
@@ -334,7 +381,7 @@ ASM_FUNCTION(__dt__17daObj_Bed_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BAE144) {
+extern "C" asm void func_80BAE144() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/func_80BAE144.s"
 }
@@ -345,7 +392,7 @@ ASM_FUNCTION(func_80BAE144) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BAE14C) {
+extern "C" asm void func_80BAE14C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/func_80BAE14C.s"
 }

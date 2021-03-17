@@ -9,15 +9,25 @@
 // Forward References:
 // 
 
-extern "C" extern void OSInitAlarm();
-extern "C" extern void OSCreateAlarm();
-extern "C" extern void InsertAlarm();
-extern "C" extern void OSSetAlarm();
-extern "C" extern void OSSetPeriodicAlarm();
-extern "C" extern void OSCancelAlarm();
-extern "C" extern void DecrementerExceptionCallback();
-extern "C" extern void DecrementerExceptionHandler();
-extern "C" extern void OSAlarm__OnReset();
+extern "C" void OSInitAlarm();
+extern "C" void OSCreateAlarm();
+extern "C" static void InsertAlarm();
+extern "C" void OSSetAlarm();
+extern "C" void OSSetPeriodicAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" static void DecrementerExceptionCallback();
+extern "C" static void DecrementerExceptionHandler();
+extern "C" static void OSAlarm__OnReset();
+
+extern "C" void OSInitAlarm();
+extern "C" void OSCreateAlarm();
+extern "C" static void InsertAlarm();
+extern "C" void OSSetAlarm();
+extern "C" void OSSetPeriodicAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" static void DecrementerExceptionCallback();
+extern "C" static void DecrementerExceptionHandler();
+extern "C" static void OSAlarm__OnReset();
 SECTION_DATA extern void*OSAlarm__ResetFunctionInfo[4];
 SECTION_SBSS extern u8 AlarmQueue[8];
 
@@ -25,29 +35,46 @@ SECTION_SBSS extern u8 AlarmQueue[8];
 // External References:
 // 
 
-extern "C" extern void PPCMtdec();
-extern "C" extern void __OSSetExceptionHandler();
-extern "C" extern void __OSGetExceptionHandler();
-extern "C" extern void OSSetCurrentContext();
-extern "C" extern void OSLoadContext();
-extern "C" extern void OSClearContext();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void OSRegisterResetFunction();
-extern "C" extern void OSDisableScheduler();
-extern "C" extern void OSEnableScheduler();
-extern "C" extern void __OSReschedule();
-extern "C" extern void __OSGetSystemTime();
-extern "C" extern void __OSTimeToSystemTime();
-extern "C" extern void __DVDTestAlarm();
-extern "C" extern void __div2i();
+extern "C" void PPCMtdec();
+extern "C" void __OSSetExceptionHandler();
+extern "C" void __OSGetExceptionHandler();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSLoadContext();
+extern "C" void OSClearContext();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSRegisterResetFunction();
+extern "C" void OSDisableScheduler();
+extern "C" void OSEnableScheduler();
+extern "C" void __OSReschedule();
+extern "C" void __OSGetSystemTime();
+extern "C" void __OSTimeToSystemTime();
+extern "C" void __DVDTestAlarm();
+extern "C" void __div2i();
+
+extern "C" void PPCMtdec();
+extern "C" void __OSSetExceptionHandler();
+extern "C" void __OSGetExceptionHandler();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSLoadContext();
+extern "C" void OSClearContext();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSRegisterResetFunction();
+extern "C" void OSDisableScheduler();
+extern "C" void OSEnableScheduler();
+extern "C" void __OSReschedule();
+extern "C" void __OSGetSystemTime();
+extern "C" void __OSTimeToSystemTime();
+extern "C" void __DVDTestAlarm();
+extern "C" void __div2i();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CF480-803CF490 0010+00 .data      ResetFunctionInfo                                            */
+/* 803CF480-803CF490 0010+00 rc=1 efc=0 .data      ResetFunctionInfo                                            */
 void* OSAlarm__ResetFunctionInfo[4] = {
 	(void*)OSAlarm__OnReset,
 	(void*)0xFFFFFFFF,
@@ -55,106 +82,105 @@ void* OSAlarm__ResetFunctionInfo[4] = {
 	NULL,
 };
 
-/* 80451638-80451640 0008+00 .sbss      AlarmQueue                                                   */
+/* 80451638-80451640 0008+00 rc=5 efc=0 .sbss      AlarmQueue                                                   */
 u8 AlarmQueue[8];
 
-/* 8033A8A0-8033A8F8 0058+00 .text      OSInitAlarm                                                  */
+/* 8033A8A0-8033A8F8 0058+00 rc=3 efc=3 .text      OSInitAlarm                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSInitAlarm) {
+extern "C" asm void OSInitAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSInitAlarm.s"
 }
 #pragma pop
 
 
-/* 8033A8F8-8033A908 0010+00 .text      OSCreateAlarm                                                */
+/* 8033A8F8-8033A908 0010+00 rc=17 efc=17 .text      OSCreateAlarm                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSCreateAlarm) {
+extern "C" asm void OSCreateAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSCreateAlarm.s"
 }
 #pragma pop
 
 
-/* 8033A908-8033AB58 0250+00 .text      InsertAlarm                                                  */
+/* 8033A908-8033AB58 0250+00 rc=3 efc=0 .text      InsertAlarm                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InsertAlarm) {
+extern "C" asm static void InsertAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/InsertAlarm.s"
 }
 #pragma pop
 
 
-/* 8033AB58-8033ABC0 0068+00 .text      OSSetAlarm                                                   */
+/* 8033AB58-8033ABC0 0068+00 rc=18 efc=18 .text      OSSetAlarm                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetAlarm) {
+extern "C" asm void OSSetAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSSetAlarm.s"
 }
 #pragma pop
 
 
-/* 8033ABC0-8033AC3C 007C+00 .text      OSSetPeriodicAlarm                                           */
+/* 8033ABC0-8033AC3C 007C+00 rc=1 efc=1 .text      OSSetPeriodicAlarm                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetPeriodicAlarm) {
+extern "C" asm void OSSetPeriodicAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSSetPeriodicAlarm.s"
 }
 #pragma pop
 
 
-/* 8033AC3C-8033AD58 011C+00 .text      OSCancelAlarm                                                */
+/* 8033AC3C-8033AD58 011C+00 rc=12 efc=11 .text      OSCancelAlarm                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSCancelAlarm) {
+extern "C" asm void OSCancelAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSCancelAlarm.s"
 }
 #pragma pop
 
 
-/* 8033AD58-8033AF88 0230+00 .text      DecrementerExceptionCallback                                 */
+/* 8033AD58-8033AF88 0230+00 rc=1 efc=0 .text      DecrementerExceptionCallback                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DecrementerExceptionCallback) {
+extern "C" asm static void DecrementerExceptionCallback() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/DecrementerExceptionCallback.s"
 }
 #pragma pop
 
 
-/* 8033AF88-8033AFD8 0050+00 .text      DecrementerExceptionHandler                                  */
+/* 8033AF88-8033AFD8 0050+00 rc=1 efc=0 .text      DecrementerExceptionHandler                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DecrementerExceptionHandler) {
+extern "C" asm static void DecrementerExceptionHandler() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/DecrementerExceptionHandler.s"
 }
 #pragma pop
 
 
-/* 8033AFD8-8033B078 00A0+00 .text      OnReset                                                      */
+/* 8033AFD8-8033B078 00A0+00 rc=1 efc=0 .text      OnReset                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSAlarm__OnReset) {
+extern "C" asm static void OSAlarm__OnReset() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSAlarm__OnReset.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

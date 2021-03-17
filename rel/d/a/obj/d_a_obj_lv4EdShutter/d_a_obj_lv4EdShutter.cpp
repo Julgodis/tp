@@ -6,40 +6,94 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv4EdShutter_c;
+
+struct daLv4EdShutter_HIO_c {
+	daLv4EdShutter_HIO_c();
+	~daLv4EdShutter_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv4EdShutter_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void move();
+	void init_modeWait();
+	void modeWait();
+	void init_modeOpen();
+	void modeOpen();
+	void init_modeClose();
+	void modeClose();
+	void init_modeEnd();
+	void modeEnd();
+	void eventStart();
+	void Draw();
+	void Delete();
+	~daLv4EdShutter_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__20daLv4EdShutter_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__16daLv4EdShutter_cFv();
-extern "C" extern void CreateHeap__16daLv4EdShutter_cFv();
-extern "C" extern void create__16daLv4EdShutter_cFv();
-extern "C" extern void Execute__16daLv4EdShutter_cFPPA3_A4_f();
-extern "C" extern void move__16daLv4EdShutter_cFv();
-extern "C" extern void init_modeWait__16daLv4EdShutter_cFv();
-extern "C" extern void modeWait__16daLv4EdShutter_cFv();
-extern "C" extern void init_modeOpen__16daLv4EdShutter_cFv();
-extern "C" extern void modeOpen__16daLv4EdShutter_cFv();
-extern "C" extern void init_modeClose__16daLv4EdShutter_cFv();
-extern "C" extern void modeClose__16daLv4EdShutter_cFv();
-extern "C" extern void init_modeEnd__16daLv4EdShutter_cFv();
-extern "C" extern void modeEnd__16daLv4EdShutter_cFv();
-extern "C" extern void eventStart__16daLv4EdShutter_cFv();
-extern "C" extern void Draw__16daLv4EdShutter_cFv();
-extern "C" extern void Delete__16daLv4EdShutter_cFv();
-extern "C" extern void daLv4EdShutter_Draw__FP16daLv4EdShutter_c();
-extern "C" extern void daLv4EdShutter_Execute__FP16daLv4EdShutter_c();
-extern "C" extern void daLv4EdShutter_Delete__FP16daLv4EdShutter_c();
-extern "C" extern void daLv4EdShutter_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__20daLv4EdShutter_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv4EdShutter_cpp();
-extern "C" extern void func_80C5E7C4();
-extern "C" extern void func_80C5E7CC();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__16daLv4EdShutter_cFv();
+extern "C" void Execute__16daLv4EdShutter_cFPPA3_A4_f();
+void daLv4EdShutter_Draw(daLv4EdShutter_c*);
+void daLv4EdShutter_Execute(daLv4EdShutter_c*);
+void daLv4EdShutter_Delete(daLv4EdShutter_c*);
+void daLv4EdShutter_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv4EdShutter_cpp();
+extern "C" void func_80C5E7C4();
+extern "C" void func_80C5E7CC();
+
+extern "C" void __ct__20daLv4EdShutter_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__16daLv4EdShutter_cFv();
+extern "C" void CreateHeap__16daLv4EdShutter_cFv();
+extern "C" void create__16daLv4EdShutter_cFv();
+extern "C" void Execute__16daLv4EdShutter_cFPPA3_A4_f();
+extern "C" void move__16daLv4EdShutter_cFv();
+extern "C" void init_modeWait__16daLv4EdShutter_cFv();
+extern "C" void modeWait__16daLv4EdShutter_cFv();
+extern "C" void init_modeOpen__16daLv4EdShutter_cFv();
+extern "C" void modeOpen__16daLv4EdShutter_cFv();
+extern "C" void init_modeClose__16daLv4EdShutter_cFv();
+extern "C" void modeClose__16daLv4EdShutter_cFv();
+extern "C" void init_modeEnd__16daLv4EdShutter_cFv();
+extern "C" void modeEnd__16daLv4EdShutter_cFv();
+extern "C" void eventStart__16daLv4EdShutter_cFv();
+extern "C" void Draw__16daLv4EdShutter_cFv();
+extern "C" void Delete__16daLv4EdShutter_cFv();
+extern "C" void daLv4EdShutter_Draw__FP16daLv4EdShutter_c();
+extern "C" void daLv4EdShutter_Execute__FP16daLv4EdShutter_c();
+extern "C" void daLv4EdShutter_Delete__FP16daLv4EdShutter_c();
+extern "C" void daLv4EdShutter_Create__FP10fopAc_ac_c();
+extern "C" void __dt__20daLv4EdShutter_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv4EdShutter_cpp();
+extern "C" void func_80C5E7C4();
+extern "C" void func_80C5E7CC();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__16daLv4EdShutter_cFv();
 SECTION_RODATA extern const u32 lit_3634;
 SECTION_RODATA extern const u32 lit_3635;
 SECTION_RODATA extern const u32 lit_3704;
@@ -71,8 +125,11 @@ SECTION_BSS extern u8 data_80C5EA74[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -82,7 +139,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20daLv4EdShutter_HIO_cFv) {
+asm daLv4EdShutter_HIO_c::daLv4EdShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__ct__20daLv4EdShutter_HIO_cFv.s"
 }
@@ -93,7 +150,7 @@ ASM_FUNCTION(__ct__20daLv4EdShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -104,7 +161,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/setBaseMtx__16daLv4EdShutter_cFv.s"
 }
@@ -115,7 +172,7 @@ ASM_FUNCTION(setBaseMtx__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/CreateHeap__16daLv4EdShutter_cFv.s"
 }
@@ -126,7 +183,7 @@ ASM_FUNCTION(CreateHeap__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/create__16daLv4EdShutter_cFv.s"
 }
@@ -137,7 +194,7 @@ ASM_FUNCTION(create__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daLv4EdShutter_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daLv4EdShutter_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/Execute__16daLv4EdShutter_cFPPA3_A4_f.s"
 }
@@ -148,7 +205,7 @@ ASM_FUNCTION(Execute__16daLv4EdShutter_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/move__16daLv4EdShutter_cFv.s"
 }
@@ -159,7 +216,7 @@ ASM_FUNCTION(move__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/init_modeWait__16daLv4EdShutter_cFv.s"
 }
@@ -170,7 +227,7 @@ ASM_FUNCTION(init_modeWait__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/modeWait__16daLv4EdShutter_cFv.s"
 }
@@ -181,7 +238,7 @@ ASM_FUNCTION(modeWait__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/init_modeOpen__16daLv4EdShutter_cFv.s"
 }
@@ -192,7 +249,7 @@ ASM_FUNCTION(init_modeOpen__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/modeOpen__16daLv4EdShutter_cFv.s"
 }
@@ -203,7 +260,7 @@ ASM_FUNCTION(modeOpen__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeClose__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::init_modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/init_modeClose__16daLv4EdShutter_cFv.s"
 }
@@ -214,7 +271,7 @@ ASM_FUNCTION(init_modeClose__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/modeClose__16daLv4EdShutter_cFv.s"
 }
@@ -225,7 +282,7 @@ ASM_FUNCTION(modeClose__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeEnd__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::init_modeEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/init_modeEnd__16daLv4EdShutter_cFv.s"
 }
@@ -233,21 +290,16 @@ ASM_FUNCTION(init_modeEnd__16daLv4EdShutter_cFv) {
 
 
 /* 80C5E590-80C5E594 0004+00 .text      modeEnd__16daLv4EdShutter_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeEnd__16daLv4EdShutter_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/modeEnd__16daLv4EdShutter_cFv.s"
+void daLv4EdShutter_c::modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C5E594-80C5E5CC 0038+00 .text      eventStart__16daLv4EdShutter_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/eventStart__16daLv4EdShutter_cFv.s"
 }
@@ -258,7 +310,7 @@ ASM_FUNCTION(eventStart__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/Draw__16daLv4EdShutter_cFv.s"
 }
@@ -269,7 +321,7 @@ ASM_FUNCTION(Draw__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daLv4EdShutter_cFv) {
+asm void daLv4EdShutter_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/Delete__16daLv4EdShutter_cFv.s"
 }
@@ -280,7 +332,7 @@ ASM_FUNCTION(Delete__16daLv4EdShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4EdShutter_Draw__FP16daLv4EdShutter_c) {
+asm void daLv4EdShutter_Draw(daLv4EdShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/daLv4EdShutter_Draw__FP16daLv4EdShutter_c.s"
 }
@@ -291,7 +343,7 @@ ASM_FUNCTION(daLv4EdShutter_Draw__FP16daLv4EdShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4EdShutter_Execute__FP16daLv4EdShutter_c) {
+asm void daLv4EdShutter_Execute(daLv4EdShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/daLv4EdShutter_Execute__FP16daLv4EdShutter_c.s"
 }
@@ -302,7 +354,7 @@ ASM_FUNCTION(daLv4EdShutter_Execute__FP16daLv4EdShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4EdShutter_Delete__FP16daLv4EdShutter_c) {
+asm void daLv4EdShutter_Delete(daLv4EdShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/daLv4EdShutter_Delete__FP16daLv4EdShutter_c.s"
 }
@@ -313,7 +365,7 @@ ASM_FUNCTION(daLv4EdShutter_Delete__FP16daLv4EdShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4EdShutter_Create__FP10fopAc_ac_c) {
+asm void daLv4EdShutter_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/daLv4EdShutter_Create__FP10fopAc_ac_c.s"
 }
@@ -324,7 +376,7 @@ ASM_FUNCTION(daLv4EdShutter_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daLv4EdShutter_HIO_cFv) {
+asm daLv4EdShutter_HIO_c::~daLv4EdShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__dt__20daLv4EdShutter_HIO_cFv.s"
 }
@@ -335,7 +387,7 @@ ASM_FUNCTION(__dt__20daLv4EdShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv4EdShutter_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv4EdShutter_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__sinit_d_a_obj_lv4EdShutter_cpp.s"
 }
@@ -346,7 +398,7 @@ ASM_FUNCTION(__sinit_d_a_obj_lv4EdShutter_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C5E7C4) {
+extern "C" asm void func_80C5E7C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/func_80C5E7C4.s"
 }
@@ -357,7 +409,7 @@ ASM_FUNCTION(func_80C5E7C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C5E7CC) {
+extern "C" asm void func_80C5E7CC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/func_80C5E7CC.s"
 }
@@ -368,7 +420,7 @@ ASM_FUNCTION(func_80C5E7CC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__dt__17dEvLib_callback_cFv.s"
 }
@@ -376,43 +428,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C5E81C-80C5E824 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5E824-80C5E82C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5E82C-80C5E834 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5E834-80C5E8C8 0094+00 .text      __dt__16daLv4EdShutter_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daLv4EdShutter_cFv) {
+asm daLv4EdShutter_c::~daLv4EdShutter_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4EdShutter/d_a_obj_lv4EdShutter/__dt__16daLv4EdShutter_cFv.s"
 }

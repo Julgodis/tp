@@ -37,10 +37,19 @@ def _process_entrypoint(input: Queue, output: Queue, shared_file: str):
     # load shared data if any
     shared = {}
     if shared_file:
-        context = Context(index=-1, output=output)
-        with TimeCode(context, "load_shared") as tc:
-            with open(shared_file, 'rb') as file:
-                shared = pickle.load(file)
+        try:
+            context = Context(index=-1, output=output)
+            with TimeCode(context, "load_shared") as tc:
+                with open(shared_file, 'rb') as file:
+                    shared = pickle.load(file)
+        except:
+            exc_type, exc_value, tb = sys.exc_info()
+            tb = rich.traceback.Traceback.from_exception(
+                exc_type,
+                exc_value,
+                tb.tb_next if tb else tb,
+            )
+            context.exception(tb)
 
     while True:
         try:
@@ -51,6 +60,8 @@ def _process_entrypoint(input: Queue, output: Queue, shared_file: str):
                 # execute task
                 result = task[0](context, *task[1], **shared)
                 context.complete(result)
+            except SystemExit:
+                sys.exit(1)
             except:
                 # exception inside task, capture exception information and send it back to the main process
                 exc_type, exc_value, tb = sys.exc_info()
@@ -91,13 +102,19 @@ def execute_tasks(process_count: int,
             temp_file = tempfile.NamedTemporaryFile(
                 "wb", suffix='.dump', prefix="mp_shared", delete=True)
             shared_file = temp_file.name
+            g.LOG.debug(f"shared file: '{temp_file.name}'")
             pickle_data = pickle.dumps(shared)
             temp_file.write(pickle_data)
             temp_file.flush()
 
     # add tasks to the task queue
     for i, task in enumerate(input_tasks):
-        input.put((i, task))
+        try:
+            input.put((i, task))
+        except:
+            g.LOG.error(task)
+            g.CONSOLE.print_exception()
+            sys.exit(1)
 
     # create the processes
     processors = [

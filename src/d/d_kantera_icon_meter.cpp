@@ -6,18 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dKantera_icon_c (dKantera_icon_c) False/False
+/* top-level dependencies (begin dKantera_icon_c) */
+/* top-level dependencies (end dKantera_icon_c) */
+struct dKantera_icon_c {
+	/* 801AE938 */ dKantera_icon_c();
+	/* 801AE974 */ ~dKantera_icon_c();
+	/* 801AEA68 */ void initiate();
+	/* 801AEB7C */ void setAlphaRate(f32);
+	/* 801AEBA0 */ void setPos(f32, f32);
+	/* 801AEBF4 */ void setScale(f32, f32);
+	/* 801AEC44 */ void setNowGauge(u16, u16);
+};
+
+// build dDlst_KanteraIcon_c (dDlst_KanteraIcon_c) False/False
+/* top-level dependencies (begin dDlst_KanteraIcon_c) */
+/* top-level dependencies (end dDlst_KanteraIcon_c) */
+struct dDlst_KanteraIcon_c {
+	/* 801AECB8 */ void draw();
+	/* 801AED1C */ ~dDlst_KanteraIcon_c();
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15dKantera_icon_cFv();
-extern "C" extern void __dt__15dKantera_icon_cFv();
-extern "C" extern void initiate__15dKantera_icon_cFv();
-extern "C" extern void setAlphaRate__15dKantera_icon_cFf();
-extern "C" extern void setPos__15dKantera_icon_cFff();
-extern "C" extern void setScale__15dKantera_icon_cFff();
-extern "C" extern void setNowGauge__15dKantera_icon_cFUsUs();
-extern "C" extern void draw__19dDlst_KanteraIcon_cFv();
-extern "C" extern void __dt__19dDlst_KanteraIcon_cFv();
+
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void __dt__15dKantera_icon_cFv();
+extern "C" void initiate__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void draw__19dDlst_KanteraIcon_cFv();
+extern "C" void __dt__19dDlst_KanteraIcon_cFv();
 SECTION_RODATA extern const u8 d_d_kantera_icon_meter__stringBase0[32];
 SECTION_DATA extern void*const __vt__19dDlst_KanteraIcon_c[4];
 SECTION_DATA extern void*const __vt__15dKantera_icon_c[4];
@@ -29,14 +108,18 @@ SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__lit_3776[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
@@ -46,7 +129,7 @@ SECTION_BSS extern u8 g_drawHIO[3880];
 // 
 
 /* ############################################################################################## */
-/* 803BC218-803BC228 0010+00 .data      __vt__19dDlst_KanteraIcon_c                                  */
+/* 803BC218-803BC228 0010+00 rc=2 efc=0 .data      __vt__19dDlst_KanteraIcon_c                                  */
 void* const __vt__19dDlst_KanteraIcon_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -54,7 +137,7 @@ void* const __vt__19dDlst_KanteraIcon_c[4] = {
 	(void*)__dt__19dDlst_KanteraIcon_cFv,
 };
 
-/* 803BC228-803BC238 000C+04 .data      __vt__15dKantera_icon_c                                      */
+/* 803BC228-803BC238 000C+04 rc=2 efc=0 .data      __vt__15dKantera_icon_c                                      */
 void* const __vt__15dKantera_icon_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -63,22 +146,22 @@ void* const __vt__15dKantera_icon_c[4] = {
 	NULL,
 };
 
-/* 801AE938-801AE974 003C+00 .text      __ct__15dKantera_icon_cFv                                    */
+/* 801AE938-801AE974 003C+00 rc=3 efc=3 .text      __ct__15dKantera_icon_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15dKantera_icon_cFv) {
+asm dKantera_icon_c::dKantera_icon_c() {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/__ct__15dKantera_icon_cFv.s"
 }
 #pragma pop
 
 
-/* 801AE974-801AEA68 00F4+00 .text      __dt__15dKantera_icon_cFv                                    */
+/* 801AE974-801AEA68 00F4+00 rc=1 efc=0 .text      __dt__15dKantera_icon_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dKantera_icon_cFv) {
+asm dKantera_icon_c::~dKantera_icon_c() {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/__dt__15dKantera_icon_cFv.s"
 }
@@ -86,7 +169,7 @@ ASM_FUNCTION(__dt__15dKantera_icon_cFv) {
 
 
 /* ############################################################################################## */
-/* 80394F50-80394F70 001D+03 .rodata    @stringBase0                                                 */
+/* 80394F50-80394F70 001D+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -95,44 +178,44 @@ SECTION_DEAD char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
 SECTION_DEAD char* const pad_80394F6D = "\0\0";
 #pragma pop
 
-/* 801AEA68-801AEB7C 0114+00 .text      initiate__15dKantera_icon_cFv                                */
+/* 801AEA68-801AEB7C 0114+00 rc=1 efc=0 .text      initiate__15dKantera_icon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__15dKantera_icon_cFv) {
+asm void dKantera_icon_c::initiate() {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/initiate__15dKantera_icon_cFv.s"
 }
 #pragma pop
 
 
-/* 801AEB7C-801AEBA0 0024+00 .text      setAlphaRate__15dKantera_icon_cFf                            */
+/* 801AEB7C-801AEBA0 0024+00 rc=4 efc=4 .text      setAlphaRate__15dKantera_icon_cFf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRate__15dKantera_icon_cFf) {
+asm void dKantera_icon_c::setAlphaRate(f32 field_0) {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/setAlphaRate__15dKantera_icon_cFf.s"
 }
 #pragma pop
 
 
-/* 801AEBA0-801AEBF4 0054+00 .text      setPos__15dKantera_icon_cFff                                 */
+/* 801AEBA0-801AEBF4 0054+00 rc=3 efc=3 .text      setPos__15dKantera_icon_cFff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__15dKantera_icon_cFff) {
+asm void dKantera_icon_c::setPos(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/setPos__15dKantera_icon_cFff.s"
 }
 #pragma pop
 
 
-/* 801AEBF4-801AEC44 0050+00 .text      setScale__15dKantera_icon_cFff                               */
+/* 801AEBF4-801AEC44 0050+00 rc=4 efc=4 .text      setScale__15dKantera_icon_cFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setScale__15dKantera_icon_cFff) {
+asm void dKantera_icon_c::setScale(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/setScale__15dKantera_icon_cFff.s"
 }
@@ -140,18 +223,18 @@ ASM_FUNCTION(setScale__15dKantera_icon_cFff) {
 
 
 /* ############################################################################################## */
-/* 80453EF8-80453F00 0004+04 .sdata2    @3759                                                        */
+/* 80453EF8-80453F00 0004+04 rc=1 efc=0 .sdata2    @3759                                                        */
 f32 d_d_kantera_icon_meter__lit_3759 = 1.0f;
 /* padding 4 bytes */
 
-/* 80453F00-80453F08 0008+00 .sdata2    @3761                                                        */
+/* 80453F00-80453F08 0008+00 rc=1 efc=0 .sdata2    @3761                                                        */
 f64 d_d_kantera_icon_meter__lit_3761 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801AEC44-801AECB8 0074+00 .text      setNowGauge__15dKantera_icon_cFUsUs                          */
+/* 801AEC44-801AECB8 0074+00 rc=4 efc=4 .text      setNowGauge__15dKantera_icon_cFUsUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNowGauge__15dKantera_icon_cFUsUs) {
+asm void dKantera_icon_c::setNowGauge(u16 field_0, u16 field_1) {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/setNowGauge__15dKantera_icon_cFUsUs.s"
 }
@@ -159,33 +242,32 @@ ASM_FUNCTION(setNowGauge__15dKantera_icon_cFUsUs) {
 
 
 /* ############################################################################################## */
-/* 80453F08-80453F10 0004+04 .sdata2    @3776                                                        */
+/* 80453F08-80453F10 0004+04 rc=1 efc=0 .sdata2    @3776                                                        */
 u8 d_d_kantera_icon_meter__lit_3776[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801AECB8-801AED1C 0064+00 .text      draw__19dDlst_KanteraIcon_cFv                                */
+/* 801AECB8-801AED1C 0064+00 rc=1 efc=0 .text      draw__19dDlst_KanteraIcon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__19dDlst_KanteraIcon_cFv) {
+asm void dDlst_KanteraIcon_c::draw() {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/draw__19dDlst_KanteraIcon_cFv.s"
 }
 #pragma pop
 
 
-/* 801AED1C-801AED64 0048+00 .text      __dt__19dDlst_KanteraIcon_cFv                                */
+/* 801AED1C-801AED64 0048+00 rc=1 efc=0 .text      __dt__19dDlst_KanteraIcon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dDlst_KanteraIcon_cFv) {
+asm dDlst_KanteraIcon_c::~dDlst_KanteraIcon_c() {
 	nofralloc
 #include "asm/d/d_kantera_icon_meter/__dt__19dDlst_KanteraIcon_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,20 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_myogan_class;
+
+struct daObj_Myogan_HIO_c {
+	daObj_Myogan_HIO_c();
+	~daObj_Myogan_HIO_c();
+};
+
+struct obj_myogan_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18daObj_Myogan_HIO_cFv();
-extern "C" extern void daObj_Myogan_Draw__FP16obj_myogan_class();
-extern "C" extern void action__FP16obj_myogan_class();
-extern "C" extern void daObj_Myogan_Execute__FP16obj_myogan_class();
-extern "C" extern void daObj_Myogan_IsDelete__FP16obj_myogan_class();
-extern "C" extern void daObj_Myogan_Delete__FP16obj_myogan_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Myogan_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__18daObj_Myogan_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_myogan_cpp();
+void daObj_Myogan_Draw(obj_myogan_class*);
+void action(obj_myogan_class*);
+void daObj_Myogan_Execute(obj_myogan_class*);
+bool daObj_Myogan_IsDelete(obj_myogan_class*);
+void daObj_Myogan_Delete(obj_myogan_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Myogan_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_myogan_cpp();
+
+extern "C" void __ct__18daObj_Myogan_HIO_cFv();
+extern "C" void daObj_Myogan_Draw__FP16obj_myogan_class();
+extern "C" void action__FP16obj_myogan_class();
+extern "C" void daObj_Myogan_Execute__FP16obj_myogan_class();
+extern "C" bool daObj_Myogan_IsDelete__FP16obj_myogan_class();
+extern "C" void daObj_Myogan_Delete__FP16obj_myogan_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Myogan_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daObj_Myogan_HIO_cFv();
+extern "C" void __sinit_d_a_obj_myogan_cpp();
 SECTION_RODATA extern const u32 lit_3762;
 SECTION_RODATA extern const u8 lit_3763[4];
 SECTION_RODATA extern const u32 lit_3823;
@@ -39,8 +70,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -50,7 +84,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daObj_Myogan_HIO_cFv) {
+asm daObj_Myogan_HIO_c::daObj_Myogan_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/__ct__18daObj_Myogan_HIO_cFv.s"
 }
@@ -61,7 +95,7 @@ ASM_FUNCTION(__ct__18daObj_Myogan_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Myogan_Draw__FP16obj_myogan_class) {
+asm void daObj_Myogan_Draw(obj_myogan_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_Draw__FP16obj_myogan_class.s"
 }
@@ -72,7 +106,7 @@ ASM_FUNCTION(daObj_Myogan_Draw__FP16obj_myogan_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP16obj_myogan_class) {
+asm void action(obj_myogan_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/action__FP16obj_myogan_class.s"
 }
@@ -83,7 +117,7 @@ ASM_FUNCTION(action__FP16obj_myogan_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Myogan_Execute__FP16obj_myogan_class) {
+asm void daObj_Myogan_Execute(obj_myogan_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_Execute__FP16obj_myogan_class.s"
 }
@@ -91,21 +125,16 @@ ASM_FUNCTION(daObj_Myogan_Execute__FP16obj_myogan_class) {
 
 
 /* 80C9EDB8-80C9EDC0 0008+00 .text      daObj_Myogan_IsDelete__FP16obj_myogan_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Myogan_IsDelete__FP16obj_myogan_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_IsDelete__FP16obj_myogan_class.s"
+bool daObj_Myogan_IsDelete(obj_myogan_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9EDC0-80C9EE28 0068+00 .text      daObj_Myogan_Delete__FP16obj_myogan_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Myogan_Delete__FP16obj_myogan_class) {
+asm void daObj_Myogan_Delete(obj_myogan_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_Delete__FP16obj_myogan_class.s"
 }
@@ -116,7 +145,7 @@ ASM_FUNCTION(daObj_Myogan_Delete__FP16obj_myogan_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -127,7 +156,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/__dt__12J3DFrameCtrlFv.s"
 }
@@ -138,7 +167,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Myogan_Create__FP10fopAc_ac_c) {
+asm void daObj_Myogan_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_Create__FP10fopAc_ac_c.s"
 }
@@ -149,7 +178,7 @@ ASM_FUNCTION(daObj_Myogan_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daObj_Myogan_HIO_cFv) {
+asm daObj_Myogan_HIO_c::~daObj_Myogan_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/__dt__18daObj_Myogan_HIO_cFv.s"
 }
@@ -160,7 +189,7 @@ ASM_FUNCTION(__dt__18daObj_Myogan_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_myogan_cpp) {
+extern "C" asm void __sinit_d_a_obj_myogan_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/__sinit_d_a_obj_myogan_cpp.s"
 }

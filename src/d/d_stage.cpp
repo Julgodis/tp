@@ -6,306 +6,1251 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dStage_nextStage_c (dStage_nextStage_c) False/False
+/* top-level dependencies (begin dStage_nextStage_c) */
+/* top-level dependencies (end dStage_nextStage_c) */
+struct dStage_nextStage_c {
+	/* 80023E28 */ void set(char const*, char, s16, char, char, char);
+};
+
+// build dStage_dt_c (dStage_dt_c) False/False
+/* top-level dependencies (begin dStage_dt_c) */
+/* top-level dependencies (end dStage_dt_c) */
+struct dStage_dt_c {
+};
+
+// build stage_tgsc_class (stage_tgsc_class) False/False
+/* top-level dependencies (begin stage_tgsc_class) */
+/* top-level dependencies (end stage_tgsc_class) */
+struct stage_tgsc_class {
+};
+
+// build dStage_startStage_c (dStage_startStage_c) False/False
+/* top-level dependencies (begin dStage_startStage_c) */
+/* top-level dependencies (end dStage_startStage_c) */
+struct dStage_startStage_c {
+	/* 8002419C */ void set(char const*, char, s16, char);
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	// build roomDzs_c (dStage_roomControl_c::roomDzs_c) False/False
+	/* dependencies (begin dStage_roomControl_c::roomDzs_c) */
+	/* dependencies (end dStage_roomControl_c::roomDzs_c) */
+	struct roomDzs_c {
+		/* 80024A34 */ void create(char);
+		/* 80024ABC */ void remove();
+		/* 80024B44 */ void add(char, char);
+	};
+
+	/* 800241E8 */ void init();
+	/* 80024338 */ void initZone();
+	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 800243B0 */ void getMemoryBlock(s32);
+	/* 800243E8 */ void setStayNo(s32);
+	/* 80024424 */ void setNextStayNo(s32);
+	/* 800244E8 */ void checkRoomDisp(s32) const;
+	/* 8002451C */ void loadRoom(s32, char*, bool);
+	/* 8002471C */ void zoneCountCheck(s32) const;
+	/* 80024844 */ void createMemoryBlock(s32, u32);
+	/* 800248A8 */ void destroyMemoryBlock();
+	/* 8002490C */ void setArcBank(s32, char const*);
+	/* 80024940 */ void getArcBank(s32);
+	/* 80024954 */ void resetArchiveBank(s32);
+	/* 80024DB0 */ void SetTimePass(s32);
+};
+
+// build dStage_stageDt_c (dStage_stageDt_c) False/False
+// build stage_palette_info_class (stage_palette_info_class) False/False
+/* top-level dependencies (begin stage_palette_info_class) */
+/* top-level dependencies (end stage_palette_info_class) */
+struct stage_palette_info_class {
+};
+
+// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) False/False
+/* top-level dependencies (begin dStage_FileList2_dt_c) */
+/* top-level dependencies (end dStage_FileList2_dt_c) */
+struct dStage_FileList2_dt_c {
+};
+
+// build dStage_Lbnk_c (dStage_Lbnk_c) False/False
+/* top-level dependencies (begin dStage_Lbnk_c) */
+/* top-level dependencies (end dStage_Lbnk_c) */
+struct dStage_Lbnk_c {
+};
+
+// build dStage_FileList_dt_c (dStage_FileList_dt_c) False/False
+/* top-level dependencies (begin dStage_FileList_dt_c) */
+/* top-level dependencies (end dStage_FileList_dt_c) */
+struct dStage_FileList_dt_c {
+};
+
+// build stage_pselect_info_class (stage_pselect_info_class) False/False
+/* top-level dependencies (begin stage_pselect_info_class) */
+/* top-level dependencies (end stage_pselect_info_class) */
+struct stage_pselect_info_class {
+};
+
+// build stage_plight_info_class (stage_plight_info_class) False/False
+/* top-level dependencies (begin stage_plight_info_class) */
+/* top-level dependencies (end stage_plight_info_class) */
+struct stage_plight_info_class {
+};
+
+// build dStage_dPnt_c (dStage_dPnt_c) False/False
+/* top-level dependencies (begin dStage_dPnt_c) */
+/* top-level dependencies (end dStage_dPnt_c) */
+struct dStage_dPnt_c {
+};
+
+// build stage_map_info_class (stage_map_info_class) False/False
+/* top-level dependencies (begin stage_map_info_class) */
+/* top-level dependencies (end stage_map_info_class) */
+struct stage_map_info_class {
+};
+
+// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) False/False
+/* top-level dependencies (begin dStage_MemoryConfig_c) */
+/* top-level dependencies (end dStage_MemoryConfig_c) */
+struct dStage_MemoryConfig_c {
+};
+
+// build stage_tresure_class (stage_tresure_class) False/False
+/* top-level dependencies (begin stage_tresure_class) */
+/* top-level dependencies (end stage_tresure_class) */
+struct stage_tresure_class {
+};
+
+// build stage_envr_info_class (stage_envr_info_class) False/False
+/* top-level dependencies (begin stage_envr_info_class) */
+/* top-level dependencies (end stage_envr_info_class) */
+struct stage_envr_info_class {
+};
+
+// build dStage_DMap_c (dStage_DMap_c) False/False
+/* top-level dependencies (begin dStage_DMap_c) */
+/* top-level dependencies (end dStage_DMap_c) */
+struct dStage_DMap_c {
+};
+
+// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) False/False
+/* top-level dependencies (begin stage_pure_lightvec_info_class) */
+/* top-level dependencies (end stage_pure_lightvec_info_class) */
+struct stage_pure_lightvec_info_class {
+};
+
+// build stage_stag_info_class (stage_stag_info_class) False/False
+/* top-level dependencies (begin stage_stag_info_class) */
+/* top-level dependencies (end stage_stag_info_class) */
+struct stage_stag_info_class {
+};
+
+// build stage_tgsc_class (stage_tgsc_class) True/True
+// build dStage_MemoryMap_c (dStage_MemoryMap_c) False/False
+/* top-level dependencies (begin dStage_MemoryMap_c) */
+/* top-level dependencies (end dStage_MemoryMap_c) */
+struct dStage_MemoryMap_c {
+};
+
+// build dStage_SoundInfo_c (dStage_SoundInfo_c) False/False
+/* top-level dependencies (begin dStage_SoundInfo_c) */
+/* top-level dependencies (end dStage_SoundInfo_c) */
+struct dStage_SoundInfo_c {
+};
+
+// build stage_map_info_dummy_class (stage_map_info_dummy_class) False/False
+/* top-level dependencies (begin stage_map_info_dummy_class) */
+/* top-level dependencies (end stage_map_info_dummy_class) */
+struct stage_map_info_dummy_class {
+};
+
+// build stage_actor_class (stage_actor_class) False/False
+/* top-level dependencies (begin stage_actor_class) */
+/* top-level dependencies (end stage_actor_class) */
+struct stage_actor_class {
+};
+
+// build dStage_FloorInfo_c (dStage_FloorInfo_c) False/False
+/* top-level dependencies (begin dStage_FloorInfo_c) */
+/* top-level dependencies (end dStage_FloorInfo_c) */
+struct dStage_FloorInfo_c {
+};
+
+// build dStage_Elst_c (dStage_Elst_c) False/False
+/* top-level dependencies (begin dStage_Elst_c) */
+/* top-level dependencies (end dStage_Elst_c) */
+struct dStage_Elst_c {
+};
+
+// build roomRead_class (roomRead_class) False/False
+/* top-level dependencies (begin roomRead_class) */
+/* top-level dependencies (end roomRead_class) */
+struct roomRead_class {
+};
+
+// build stage_arrow_class (stage_arrow_class) False/False
+/* top-level dependencies (begin stage_arrow_class) */
+/* top-level dependencies (end stage_arrow_class) */
+struct stage_arrow_class {
+};
+
+// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) False/False
+/* top-level dependencies (begin stage_vrboxcol_info_class) */
+/* top-level dependencies (end stage_vrboxcol_info_class) */
+struct stage_vrboxcol_info_class {
+};
+
+// build stage_vrbox_info_class (stage_vrbox_info_class) False/False
+/* top-level dependencies (begin stage_vrbox_info_class) */
+/* top-level dependencies (end stage_vrbox_info_class) */
+struct stage_vrbox_info_class {
+};
+
+// build dStage_Multi_c (dStage_Multi_c) False/False
+/* top-level dependencies (begin dStage_Multi_c) */
+/* top-level dependencies (end dStage_Multi_c) */
+struct dStage_Multi_c {
+};
+
+// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) False/False
+/* top-level dependencies (begin dStage_MapEventInfo_c) */
+/* top-level dependencies (end dStage_MapEventInfo_c) */
+struct dStage_MapEventInfo_c {
+};
+
+// build dStage_dPath_c (dStage_dPath_c) False/False
+/* top-level dependencies (begin dStage_dPath_c) */
+/* top-level dependencies (end dStage_dPath_c) */
+struct dStage_dPath_c {
+};
+
+// build stage_camera_class (stage_camera_class) False/False
+/* top-level dependencies (begin stage_camera_class) */
+/* top-level dependencies (end stage_camera_class) */
+struct stage_camera_class {
+};
+
+// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) False/False
+/* top-level dependencies (begin stage_scls_info_dummy_class) */
+/* top-level dependencies (end stage_scls_info_dummy_class) */
+struct stage_scls_info_dummy_class {
+};
+
+/* top-level dependencies (begin dStage_stageDt_c) */
+// outer dependency: stage_palette_info_class
+// outer dependency: dStage_FileList2_dt_c
+// outer dependency: dStage_Lbnk_c
+// outer dependency: dStage_FileList_dt_c
+// outer dependency: stage_pselect_info_class
+// outer dependency: stage_plight_info_class
+// outer dependency: dStage_dPnt_c
+// outer dependency: stage_map_info_class
+// outer dependency: dStage_MemoryConfig_c
+// outer dependency: stage_tresure_class
+// outer dependency: stage_envr_info_class
+// outer dependency: dStage_DMap_c
+// outer dependency: stage_pure_lightvec_info_class
+// outer dependency: stage_stag_info_class
+// outer dependency: stage_tgsc_class
+// outer dependency: dStage_MemoryMap_c
+// outer dependency: dStage_SoundInfo_c
+// outer dependency: stage_map_info_dummy_class
+// outer dependency: stage_actor_class
+// outer dependency: dStage_FloorInfo_c
+// outer dependency: dStage_Elst_c
+// outer dependency: roomRead_class
+// outer dependency: stage_arrow_class
+// outer dependency: stage_vrboxcol_info_class
+// outer dependency: stage_vrbox_info_class
+// outer dependency: dStage_Multi_c
+// outer dependency: dStage_MapEventInfo_c
+// outer dependency: dStage_dPath_c
+// outer dependency: stage_camera_class
+// outer dependency: stage_scls_info_dummy_class
+/* top-level dependencies (end dStage_stageDt_c) */
+struct dStage_stageDt_c {
+	// dStage_FileList_dt_c
+	// stage_pselect_info_class
+	// stage_plight_info_class
+	// dStage_MemoryConfig_c
+	// stage_pure_lightvec_info_class
+	// stage_stag_info_class
+	// dStage_SoundInfo_c
+	// stage_actor_class
+	// dStage_FloorInfo_c
+	// dStage_Elst_c
+	// roomRead_class
+	// stage_arrow_class
+	// stage_vrboxcol_info_class
+	// stage_vrbox_info_class
+	// dStage_MapEventInfo_c
+	// dStage_dPath_c
+	// stage_camera_class
+	// stage_palette_info_class
+	// dStage_FileList2_dt_c
+	// dStage_Lbnk_c
+	// dStage_dPnt_c
+	// stage_map_info_class
+	// stage_tresure_class
+	// stage_envr_info_class
+	// stage_tgsc_class
+	// dStage_MemoryMap_c
+	// stage_map_info_dummy_class
+	// dStage_DMap_c
+	// dStage_Multi_c
+	// stage_scls_info_dummy_class
+	/* 8002483C */ void getStagInfo() const;
+	/* 80024C1C */ void init();
+	/* 80024DB8 */ void getRoom() const;
+	/* 8002500C */ void getPlayer() const;
+	/* 80025404 */ void getMapInfo2(s32) const;
+	/* 80025490 */ void getMapInfoBase() const;
+	/* 8002582C */ void resetOldMulti();
+	/* 80026AE8 */ void getElst();
+	/* 80026FDC */ void setOldMulti();
+	/* 800272E8 */ void getSclsInfo() const;
+	/* 80027E10 */ void setCamera(stage_camera_class*);
+	/* 80027E18 */ void getCamera() const;
+	/* 80027E20 */ void setArrow(stage_arrow_class*);
+	/* 80027E28 */ void getArrow() const;
+	/* 80027E30 */ void setPlayer(stage_actor_class*);
+	/* 80027E38 */ void setPlayerNum(u16);
+	/* 80027E40 */ void getPlayerNum() const;
+	/* 80027E48 */ void setRoom(roomRead_class*);
+	/* 80027E50 */ void setMapInfo(stage_map_info_class*);
+	/* 80027E58 */ void getMapInfo() const;
+	/* 80027E60 */ void setMapInfoBase(stage_map_info_dummy_class*);
+	/* 80027E68 */ void setPaletteInfo(stage_palette_info_class*);
+	/* 80027E70 */ void getPaletteInfo() const;
+	/* 80027E78 */ void setPselectInfo(stage_pselect_info_class*);
+	/* 80027E80 */ void getPselectInfo() const;
+	/* 80027E88 */ void setEnvrInfo(stage_envr_info_class*);
+	/* 80027E90 */ void getEnvrInfo() const;
+	/* 80027E98 */ void setVrboxInfo(stage_vrbox_info_class*);
+	/* 80027EA0 */ void getVrboxInfo() const;
+	/* 80027EA8 */ void setVrboxcolInfo(stage_vrboxcol_info_class*);
+	/* 80027EB0 */ void getVrboxcolInfo() const;
+	/* 80027EB8 */ void setPlightInfo(stage_plight_info_class*);
+	/* 80027EC0 */ void getPlightInfo() const;
+	/* 80027EC8 */ void setPaletteNumInfo(s32);
+	/* 80027ED0 */ void getPaletteNumInfo() const;
+	/* 80027ED8 */ void setPselectNumInfo(s32);
+	/* 80027EE0 */ void getPselectNumInfo() const;
+	/* 80027EE8 */ void setEnvrNumInfo(s32);
+	/* 80027EF0 */ void getEnvrNumInfo() const;
+	/* 80027EF8 */ void setVrboxNumInfo(s32);
+	/* 80027F00 */ void getVrboxNumInfo() const;
+	/* 80027F08 */ void setVrboxcolNumInfo(s32);
+	/* 80027F10 */ void getVrboxcolNumInfo() const;
+	/* 80027F18 */ void setLightVecInfo(stage_pure_lightvec_info_class*);
+	/* 80027F4C */ void getLightVecInfo() const;
+	/* 80027F80 */ void setLightVecInfoNum(s32);
+	/* 80027FB4 */ void getLightVecInfoNum() const;
+	/* 80027FE8 */ void setPlightNumInfo(s32);
+	/* 80027FF0 */ void getPlightNumInfo() const;
+	/* 80027FF8 */ void setStagInfo(stage_stag_info_class*);
+	/* 80028000 */ void setSclsInfo(stage_scls_info_dummy_class*);
+	/* 80028008 */ void setPntInfo(dStage_dPnt_c*);
+	/* 80028010 */ void getPntInf() const;
+	/* 80028018 */ void setPathInfo(dStage_dPath_c*);
+	/* 80028020 */ void getPathInf() const;
+	/* 80028028 */ void setPnt2Info(dStage_dPnt_c*);
+	/* 80028030 */ void getPnt2Inf() const;
+	/* 80028038 */ void setPath2Info(dStage_dPath_c*);
+	/* 80028040 */ void getPath2Inf() const;
+	/* 80028048 */ void setSoundInf(dStage_SoundInfo_c*);
+	/* 80028050 */ void getSoundInf() const;
+	/* 80028058 */ void setSoundInfCL(dStage_SoundInfo_c*);
+	/* 80028060 */ void getSoundInfCL() const;
+	/* 80028068 */ void setMapEventInfo(dStage_MapEventInfo_c*);
+	/* 80028070 */ void getMapEventInfo() const;
+	/* 80028078 */ void setFileList2Info(dStage_FileList2_dt_c*);
+	/* 800280AC */ void getFileList2Info() const;
+	/* 800280E0 */ void setFileListInfo(dStage_FileList_dt_c*);
+	/* 80028114 */ void getFileListInfo() const;
+	/* 80028148 */ void setFloorInfo(dStage_FloorInfo_c*);
+	/* 80028150 */ void getFloorInfo() const;
+	/* 80028158 */ void setMemoryConfig(dStage_MemoryConfig_c*);
+	/* 80028160 */ void getMemoryConfig() const;
+	/* 80028168 */ void setMemoryMap(dStage_MemoryMap_c*);
+	/* 80028170 */ void getMemoryMap() const;
+	/* 80028178 */ void setMulti(dStage_Multi_c*);
+	/* 80028180 */ void getMulti() const;
+	/* 80028188 */ void getOldMulti() const;
+	/* 80028190 */ void setLbnk(dStage_Lbnk_c*);
+	/* 800281C4 */ void getLbnk() const;
+	/* 800281F8 */ void setTresure(stage_tresure_class*);
+	/* 80028200 */ void getTresure() const;
+	/* 80028208 */ void setDMap(dStage_DMap_c*);
+	/* 80028210 */ void getDMap() const;
+	/* 80028218 */ void setDrTg(stage_tgsc_class*);
+	/* 80028220 */ void getDrTg() const;
+	/* 80028228 */ void setDoor(stage_tgsc_class*);
+	/* 80028230 */ void getDoor() const;
+	/* 80028238 */ void setMapPath(void*);
+	/* 8002823C */ bool getMapPath();
+	/* 80028244 */ void setElst(dStage_Elst_c*);
+};
+
+// build dStage_roomDt_c (dStage_roomDt_c) False/False
+// build stage_palette_info_class (stage_palette_info_class) True/True
+// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) True/True
+// build dStage_Lbnk_c (dStage_Lbnk_c) True/True
+// build dStage_FileList_dt_c (dStage_FileList_dt_c) True/True
+// build stage_pselect_info_class (stage_pselect_info_class) True/True
+// build stage_plight_info_class (stage_plight_info_class) True/True
+// build dStage_dPnt_c (dStage_dPnt_c) True/True
+// build stage_map_info_class (stage_map_info_class) True/True
+// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) True/True
+// build stage_tresure_class (stage_tresure_class) True/True
+// build stage_envr_info_class (stage_envr_info_class) True/True
+// build dStage_DMap_c (dStage_DMap_c) True/True
+// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) True/True
+// build stage_stag_info_class (stage_stag_info_class) True/True
+// build stage_tgsc_class (stage_tgsc_class) True/True
+// build dStage_MemoryMap_c (dStage_MemoryMap_c) True/True
+// build dStage_SoundInfo_c (dStage_SoundInfo_c) True/True
+// build stage_map_info_dummy_class (stage_map_info_dummy_class) True/True
+// build stage_actor_class (stage_actor_class) True/True
+// build dStage_FloorInfo_c (dStage_FloorInfo_c) True/True
+// build dStage_Elst_c (dStage_Elst_c) True/True
+// build roomRead_class (roomRead_class) True/True
+// build stage_arrow_class (stage_arrow_class) True/True
+// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) True/True
+// build stage_vrbox_info_class (stage_vrbox_info_class) True/True
+// build dStage_Multi_c (dStage_Multi_c) True/True
+// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) True/True
+// build dStage_dPath_c (dStage_dPath_c) True/True
+// build stage_camera_class (stage_camera_class) True/True
+// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) True/True
+/* top-level dependencies (begin dStage_roomDt_c) */
+// outer dependency: stage_palette_info_class
+// outer dependency: dStage_FileList2_dt_c
+// outer dependency: dStage_Lbnk_c
+// outer dependency: dStage_FileList_dt_c
+// outer dependency: stage_pselect_info_class
+// outer dependency: stage_plight_info_class
+// outer dependency: dStage_dPnt_c
+// outer dependency: stage_map_info_class
+// outer dependency: dStage_MemoryConfig_c
+// outer dependency: stage_tresure_class
+// outer dependency: stage_envr_info_class
+// outer dependency: dStage_DMap_c
+// outer dependency: stage_pure_lightvec_info_class
+// outer dependency: stage_stag_info_class
+// outer dependency: stage_tgsc_class
+// outer dependency: dStage_MemoryMap_c
+// outer dependency: dStage_SoundInfo_c
+// outer dependency: stage_map_info_dummy_class
+// outer dependency: stage_actor_class
+// outer dependency: dStage_FloorInfo_c
+// outer dependency: dStage_Elst_c
+// outer dependency: roomRead_class
+// outer dependency: stage_arrow_class
+// outer dependency: stage_vrboxcol_info_class
+// outer dependency: stage_vrbox_info_class
+// outer dependency: dStage_Multi_c
+// outer dependency: dStage_MapEventInfo_c
+// outer dependency: dStage_dPath_c
+// outer dependency: stage_camera_class
+// outer dependency: stage_scls_info_dummy_class
+/* top-level dependencies (end dStage_roomDt_c) */
+struct dStage_roomDt_c {
+	// dStage_FileList_dt_c
+	// stage_pselect_info_class
+	// stage_plight_info_class
+	// dStage_MemoryConfig_c
+	// stage_pure_lightvec_info_class
+	// stage_stag_info_class
+	// dStage_SoundInfo_c
+	// stage_actor_class
+	// dStage_FloorInfo_c
+	// dStage_Elst_c
+	// roomRead_class
+	// stage_arrow_class
+	// stage_vrboxcol_info_class
+	// stage_vrbox_info_class
+	// dStage_MapEventInfo_c
+	// dStage_dPath_c
+	// stage_camera_class
+	// stage_palette_info_class
+	// dStage_FileList2_dt_c
+	// dStage_Lbnk_c
+	// dStage_dPnt_c
+	// stage_map_info_class
+	// stage_tresure_class
+	// stage_envr_info_class
+	// stage_tgsc_class
+	// dStage_MemoryMap_c
+	// stage_map_info_dummy_class
+	// dStage_DMap_c
+	// dStage_Multi_c
+	// stage_scls_info_dummy_class
+	/* 800193FC */ void getFileListInfo() const;
+	/* 80024CA8 */ void initFileList2();
+	/* 80024CB4 */ void init();
+	/* 80025004 */ void getPlayer() const;
+	/* 80025370 */ void getMapInfo2(s32) const;
+	/* 800253FC */ void getMapInfoBase() const;
+	/* 800272E0 */ void getSclsInfo() const;
+	/* 80027524 */ void setCamera(stage_camera_class*);
+	/* 8002752C */ void getCamera() const;
+	/* 80027534 */ void setArrow(stage_arrow_class*);
+	/* 8002753C */ void getArrow() const;
+	/* 80027544 */ void setPlayer(stage_actor_class*);
+	/* 8002754C */ void setPlayerNum(u16);
+	/* 80027554 */ void getPlayerNum() const;
+	/* 8002755C */ void setRoom(roomRead_class*);
+	/* 80027590 */ void getRoom() const;
+	/* 800275C4 */ void setMapInfo(stage_map_info_class*);
+	/* 800275CC */ void getMapInfo() const;
+	/* 800275D4 */ void setMapInfoBase(stage_map_info_dummy_class*);
+	/* 800275DC */ void setPaletteInfo(stage_palette_info_class*);
+	/* 80027610 */ void getPaletteInfo() const;
+	/* 80027644 */ void setPselectInfo(stage_pselect_info_class*);
+	/* 80027678 */ void getPselectInfo() const;
+	/* 800276AC */ void setEnvrInfo(stage_envr_info_class*);
+	/* 800276E0 */ void getEnvrInfo() const;
+	/* 80027714 */ void setVrboxInfo(stage_vrbox_info_class*);
+	/* 8002771C */ void getVrboxInfo() const;
+	/* 80027724 */ void setVrboxcolInfo(stage_vrboxcol_info_class*);
+	/* 8002772C */ void getVrboxcolInfo() const;
+	/* 80027734 */ void setPlightInfo(stage_plight_info_class*);
+	/* 80027768 */ void getPlightInfo() const;
+	/* 8002779C */ void setPaletteNumInfo(s32);
+	/* 800277D0 */ void getPaletteNumInfo() const;
+	/* 80027804 */ void setPselectNumInfo(s32);
+	/* 80027838 */ void getPselectNumInfo() const;
+	/* 8002786C */ void setEnvrNumInfo(s32);
+	/* 800278A0 */ void getEnvrNumInfo() const;
+	/* 800278D4 */ void setVrboxNumInfo(s32);
+	/* 800278DC */ void getVrboxNumInfo() const;
+	/* 800278E4 */ void setVrboxcolNumInfo(s32);
+	/* 800278EC */ void getVrboxcolNumInfo() const;
+	/* 800278F4 */ void setPlightNumInfo(s32);
+	/* 80027928 */ void getPlightNumInfo() const;
+	/* 8002795C */ void setLightVecInfo(stage_pure_lightvec_info_class*);
+	/* 80027964 */ void getLightVecInfo() const;
+	/* 8002796C */ void setLightVecInfoNum(s32);
+	/* 80027974 */ void getLightVecInfoNum() const;
+	/* 8002797C */ void setStagInfo(stage_stag_info_class*);
+	/* 800279B0 */ void getStagInfo() const;
+	/* 800279E4 */ void setSclsInfo(stage_scls_info_dummy_class*);
+	/* 800279EC */ void setPntInfo(dStage_dPnt_c*);
+	/* 80027A20 */ void getPntInf() const;
+	/* 80027A54 */ void setPathInfo(dStage_dPath_c*);
+	/* 80027A88 */ void getPathInf() const;
+	/* 80027ABC */ void setPnt2Info(dStage_dPnt_c*);
+	/* 80027AC4 */ void getPnt2Inf() const;
+	/* 80027ACC */ void setPath2Info(dStage_dPath_c*);
+	/* 80027AD4 */ void getPath2Inf() const;
+	/* 80027ADC */ void setSoundInf(dStage_SoundInfo_c*);
+	/* 80027AE4 */ void getSoundInf() const;
+	/* 80027AEC */ void setSoundInfCL(dStage_SoundInfo_c*);
+	/* 80027AF4 */ void getSoundInfCL() const;
+	/* 80027AFC */ void setMapEventInfo(dStage_MapEventInfo_c*);
+	/* 80027B04 */ void getMapEventInfo() const;
+	/* 80027B0C */ void setFileList2Info(dStage_FileList2_dt_c*);
+	/* 80027B14 */ void getFileList2Info() const;
+	/* 80027B1C */ void setFileListInfo(dStage_FileList_dt_c*);
+	/* 80027B24 */ void setFloorInfo(dStage_FloorInfo_c*);
+	/* 80027B2C */ void getFloorInfo() const;
+	/* 80027B34 */ void setMemoryConfig(dStage_MemoryConfig_c*);
+	/* 80027B64 */ void getMemoryConfig() const;
+	/* 80027B98 */ void setMemoryMap(dStage_MemoryMap_c*);
+	/* 80027BC8 */ void getMemoryMap() const;
+	/* 80027BFC */ void setMulti(dStage_Multi_c*);
+	/* 80027C2C */ void getMulti() const;
+	/* 80027C60 */ void setOldMulti();
+	/* 80027C90 */ void resetOldMulti();
+	/* 80027CC0 */ void getOldMulti() const;
+	/* 80027CF4 */ void setLbnk(dStage_Lbnk_c*);
+	/* 80027CFC */ void getLbnk() const;
+	/* 80027D04 */ void setTresure(stage_tresure_class*);
+	/* 80027D0C */ void getTresure() const;
+	/* 80027D14 */ void setDMap(dStage_DMap_c*);
+	/* 80027D18 */ bool getDMap() const;
+	/* 80027D20 */ void setDrTg(stage_tgsc_class*);
+	/* 80027D28 */ void getDrTg() const;
+	/* 80027D30 */ void setDoor(stage_tgsc_class*);
+	/* 80027D38 */ void getDoor() const;
+	/* 80027D40 */ void setMapPath(void*);
+	/* 80027D70 */ void getMapPath();
+	/* 80027DA4 */ void setElst(dStage_Elst_c*);
+	/* 80027DD8 */ void getElst();
+};
+
+// build stage_actor_data_class (stage_actor_data_class) False/False
+/* top-level dependencies (begin stage_actor_data_class) */
+/* top-level dependencies (end stage_actor_data_class) */
+struct stage_actor_data_class {
+};
+
+// build fopAcM_prm_class (fopAcM_prm_class) False/False
+/* top-level dependencies (begin fopAcM_prm_class) */
+/* top-level dependencies (end fopAcM_prm_class) */
+struct fopAcM_prm_class {
+};
+
+// build stage_camera2_data_class (stage_camera2_data_class) False/False
+/* top-level dependencies (begin stage_camera2_data_class) */
+/* top-level dependencies (end stage_camera2_data_class) */
+struct stage_camera2_data_class {
+};
+
+// build stage_stag_info_class (stage_stag_info_class) True/True
+// build roomRead_class (roomRead_class) True/True
+// build FuncTable (FuncTable) False/False
+/* top-level dependencies (begin FuncTable) */
+/* top-level dependencies (end FuncTable) */
+struct FuncTable {
+};
+
+// build dStage_Multi_c (dStage_Multi_c) True/True
+// build cBgS_GndChk (cBgS_GndChk) False/False
+/* top-level dependencies (begin cBgS_GndChk) */
+/* top-level dependencies (end cBgS_GndChk) */
+struct cBgS_GndChk {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
+// build stage_camera_class (stage_camera_class) True/True
+// build stage_arrow_class (stage_arrow_class) True/True
+// build stage_actor_class (stage_actor_class) True/True
+// build stage_map_info_class (stage_map_info_class) True/True
+// build stage_map_info_dummy_class (stage_map_info_dummy_class) True/True
+// build stage_palette_info_class (stage_palette_info_class) True/True
+// build stage_pselect_info_class (stage_pselect_info_class) True/True
+// build stage_envr_info_class (stage_envr_info_class) True/True
+// build stage_vrbox_info_class (stage_vrbox_info_class) True/True
+// build stage_vrboxcol_info_class (stage_vrboxcol_info_class) True/True
+// build stage_plight_info_class (stage_plight_info_class) True/True
+// build stage_pure_lightvec_info_class (stage_pure_lightvec_info_class) True/True
+// build stage_scls_info_dummy_class (stage_scls_info_dummy_class) True/True
+// build dStage_dPnt_c (dStage_dPnt_c) True/True
+// build dStage_dPath_c (dStage_dPath_c) True/True
+// build dStage_SoundInfo_c (dStage_SoundInfo_c) True/True
+// build dStage_MapEventInfo_c (dStage_MapEventInfo_c) True/True
+// build dStage_FileList2_dt_c (dStage_FileList2_dt_c) True/True
+// build dStage_FileList_dt_c (dStage_FileList_dt_c) True/True
+// build dStage_FloorInfo_c (dStage_FloorInfo_c) True/True
+// build dStage_MemoryConfig_c (dStage_MemoryConfig_c) True/True
+// build dStage_MemoryMap_c (dStage_MemoryMap_c) True/True
+// build dStage_Lbnk_c (dStage_Lbnk_c) True/True
+// build stage_tresure_class (stage_tresure_class) True/True
+// build dStage_DMap_c (dStage_DMap_c) True/True
+// build dStage_Elst_c (dStage_Elst_c) True/True
+// build dStage_roomStatus_c (dStage_roomStatus_c) False/False
+/* top-level dependencies (begin dStage_roomStatus_c) */
+/* top-level dependencies (end dStage_roomStatus_c) */
+struct dStage_roomStatus_c {
+	/* 80028360 */ ~dStage_roomStatus_c();
+	/* 8002839C */ dStage_roomStatus_c();
+};
+
+// build dStage_KeepDoorInfo (dStage_KeepDoorInfo) False/False
+/* top-level dependencies (begin dStage_KeepDoorInfo) */
+/* top-level dependencies (end dStage_KeepDoorInfo) */
+struct dStage_KeepDoorInfo {
+	/* 80028418 */ ~dStage_KeepDoorInfo();
+};
+
+// build stage_tgsc_data_class (stage_tgsc_data_class) False/False
+/* top-level dependencies (begin stage_tgsc_data_class) */
+/* top-level dependencies (end stage_tgsc_data_class) */
+struct stage_tgsc_data_class {
+	/* 8002847C */ ~stage_tgsc_data_class();
+	/* 800284B8 */ stage_tgsc_data_class();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+};
+
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+// build J3DLightObj (J3DLightObj) False/False
+/* top-level dependencies (begin J3DLightObj) */
+/* top-level dependencies (end J3DLightObj) */
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+/* top-level dependencies (begin dComIfG_play_c) */
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(s32);
+};
+
+// build daSus_c (daSus_c) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin daSus_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end daSus_c) */
+struct daSus_c {
+	// cXyz
+	/* 80031434 */ void check(char, cXyz const&);
+	/* 800315A4 */ void execute();
+};
+
+// build cXyz (cXyz) True/True
+// build JKRAramArchive (JKRAramArchive) False/False
+/* top-level dependencies (begin JKRAramArchive) */
+/* top-level dependencies (end JKRAramArchive) */
+struct JKRAramArchive {
+};
+
+// build dSv_danBit_c (dSv_danBit_c) False/False
+/* top-level dependencies (begin dSv_danBit_c) */
+/* top-level dependencies (end dSv_danBit_c) */
+struct dSv_danBit_c {
+	/* 80034B14 */ void init(char);
+};
+
+// build dSv_zoneBit_c (dSv_zoneBit_c) False/False
+/* top-level dependencies (begin dSv_zoneBit_c) */
+/* top-level dependencies (end dSv_zoneBit_c) */
+struct dSv_zoneBit_c {
+	/* 80034CEC */ void clearRoomSwitch();
+	/* 80034CF8 */ void clearRoomItem();
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 800350BC */ void getSave(s32);
+	/* 800350F0 */ void putSave(s32);
+	/* 8003514C */ void initZone();
+	/* 80035724 */ void isActor(s32, s32) const;
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dMpath_c (dMpath_c) False/False
+// build dDrawPath_c (dDrawPath_c) False/False
+/* top-level dependencies (begin dDrawPath_c) */
+/* top-level dependencies (end dDrawPath_c) */
+struct dDrawPath_c {
+	// build room_class (dDrawPath_c::room_class) False/False
+	/* dependencies (begin dDrawPath_c::room_class) */
+	/* dependencies (end dDrawPath_c::room_class) */
+	struct room_class {
+	};
+
+};
+
+/* top-level dependencies (begin dMpath_c) */
+// outer dependency: dDrawPath_c::room_class
+/* top-level dependencies (end dMpath_c) */
+struct dMpath_c {
+	// dDrawPath_c::room_class
+	/* 8003F810 */ void setPointer(dDrawPath_c::room_class*, char*, char*);
+	/* 8003FA40 */ void setPointer(char, void*, s32);
+};
+
+// build dDrawPath_c (dDrawPath_c) True/True
+// build dEvent_manager_c (dEvent_manager_c) False/False
+/* top-level dependencies (begin dEvent_manager_c) */
+/* top-level dependencies (end dEvent_manager_c) */
+struct dEvent_manager_c {
+	/* 80046710 */ void create();
+	/* 80046C0C */ void remove();
+};
+
+// build dBgS (dBgS) False/False
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin dBgS) */
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	// cBgS_PolyInfo
+	/* 80074B98 */ void GetExitId(cBgS_PolyInfo const&);
+	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+// build dTres_c (dTres_c) False/False
+// build dTres_c (dTres_c) True/False
+struct dTres_c;
+/* top-level dependencies (begin dTres_c) */
+// outer dependency: dTres_c::list_class
+/* top-level dependencies (end dTres_c) */
+struct dTres_c {
+	// dTres_c::list_class
+	// build list_class (dTres_c::list_class) False/False
+	/* dependencies (begin dTres_c::list_class) */
+	/* dependencies (end dTres_c::list_class) */
+	struct list_class {
+	};
+
+	/* 8009BCB4 */ void addData(dTres_c::list_class*, char);
+};
+
+// build dSvBit_HIO_c (dSvBit_HIO_c) False/False
+/* top-level dependencies (begin dSvBit_HIO_c) */
+/* top-level dependencies (end dSvBit_HIO_c) */
+struct dSvBit_HIO_c {
+	/* 8025C1F8 */ void init();
+};
+
+// build cMl (cMl) False/False
+/* top-level dependencies (begin cMl) */
+/* top-level dependencies (end cMl) */
+struct cMl {
+	/* 80263228 */ void memalignB(s32, u32);
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build J3DLightInfo (J3DLightInfo) False/False
+/* top-level dependencies (begin J3DLightInfo) */
+/* top-level dependencies (end J3DLightInfo) */
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void set__18dStage_nextStage_cFPCcScsScScUc();
-extern "C" extern void dStage_SetErrorRoom__Fv();
-extern "C" extern void dStage_SetErrorStage__Fv();
-extern "C" extern void dStage_GetKeepDoorInfo__Fv();
-extern "C" extern void dStage_isBossStage__FP11dStage_dt_c();
-extern "C" extern void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
-extern "C" extern void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
-extern "C" extern void dStage_GetRoomKeepDoorInfo__Fv();
-extern "C" extern void dStage_initRoomKeepDoorInfo__Fv();
-extern "C" extern void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
-extern "C" extern void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
-extern "C" extern void set__19dStage_startStage_cFPCcScsSc();
-extern "C" extern void init__20dStage_roomControl_cFv();
-extern "C" extern void initZone__20dStage_roomControl_cFv();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void getMemoryBlock__20dStage_roomControl_cFi();
-extern "C" extern void setStayNo__20dStage_roomControl_cFi();
-extern "C" extern void setNextStayNo__20dStage_roomControl_cFi();
-extern "C" extern void stayRoomCheck__FiPUci();
-extern "C" extern void createRoomScene__Fi();
-extern "C" extern void checkRoomDisp__20dStage_roomControl_cCFi();
-extern "C" extern void loadRoom__20dStage_roomControl_cFiPUcb();
-extern "C" extern void zoneCountCheck__20dStage_roomControl_cCFi();
-extern "C" extern void getStagInfo__16dStage_stageDt_cCFv();
-extern "C" extern void createMemoryBlock__20dStage_roomControl_cFiUl();
-extern "C" extern void destroyMemoryBlock__20dStage_roomControl_cFv();
-extern "C" extern void setArcBank__20dStage_roomControl_cFiPCc();
-extern "C" extern void getArcBank__20dStage_roomControl_cFi();
-extern "C" extern void resetArchiveBank__20dStage_roomControl_cFi();
-extern "C" extern void create__Q220dStage_roomControl_c9roomDzs_cFUc();
-extern "C" extern void remove__Q220dStage_roomControl_c9roomDzs_cFv();
-extern "C" extern void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
-extern "C" extern void init__16dStage_stageDt_cFv();
-extern "C" extern void initFileList2__15dStage_roomDt_cFv();
-extern "C" extern void init__15dStage_roomDt_cFv();
-extern "C" extern void dStage_roomInit__Fi();
-extern "C" extern void SetTimePass__20dStage_roomControl_cFi();
-extern "C" extern void getRoom__16dStage_stageDt_cCFv();
-extern "C" extern void dStage_searchName__FPCc();
-extern "C" extern void dStage_getName__FsSc();
-extern "C" extern void dStage_getName2__FsSc();
-extern "C" extern void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
-extern "C" extern void dStage_cameraCreate__FP24stage_camera2_data_classii();
-extern "C" extern void getPlayer__15dStage_roomDt_cCFv();
-extern "C" extern void getPlayer__16dStage_stageDt_cCFv();
-extern "C" extern void dStage_playerInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_cameraInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_arrowInit__FP11dStage_dt_cPviPv();
-extern "C" extern void getMapInfo2__15dStage_roomDt_cCFi();
-extern "C" extern void getMapInfoBase__15dStage_roomDt_cCFv();
-extern "C" extern void getMapInfo2__16dStage_stageDt_cCFi();
-extern "C" extern void getMapInfoBase__16dStage_stageDt_cCFv();
-extern "C" extern void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
-extern "C" extern void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void resetOldMulti__16dStage_stageDt_cFv();
-extern "C" extern void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_actorInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_actorInit_always__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_roomReadInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
-extern "C" extern void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_setLayerTagName__FP9FuncTableii();
-extern "C" extern void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
-extern "C" extern void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_dt_c_offsetToPtr__FPv();
-extern "C" extern void dStage_mapPathInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
-extern "C" extern void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
-extern "C" extern void dStage_multInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
-extern "C" extern void dKankyo_create__Fv();
-extern "C" extern void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
-extern "C" extern void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
-extern "C" extern void layerTableLoader__FPvP11dStage_dt_ci();
-extern "C" extern void getElst__16dStage_stageDt_cFv();
-extern "C" extern void layerActorLoader__FPvP11dStage_dt_ci();
-extern "C" extern void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
-extern "C" extern void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
-extern "C" extern void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
-extern "C" extern void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
-extern "C" extern void dStage_infoCreate__Fv();
-extern "C" extern void dStage_Create__Fv();
-extern "C" extern void dStage_Delete__Fv();
-extern "C" extern void setOldMulti__16dStage_stageDt_cFv();
-extern "C" extern void dStage_RoomCheck__FP11cBgS_GndChk();
-extern "C" extern void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
-extern "C" extern void dStage_changeScene__FifUlScsi();
-extern "C" extern void getSclsInfo__15dStage_roomDt_cCFv();
-extern "C" extern void getSclsInfo__16dStage_stageDt_cCFv();
-extern "C" extern void dStage_changeScene4Event__FiScibfUlsi();
-extern "C" extern void dStage_restartRoom__FUlUli();
-extern "C" extern void setCamera__15dStage_roomDt_cFP18stage_camera_class();
-extern "C" extern void getCamera__15dStage_roomDt_cCFv();
-extern "C" extern void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
-extern "C" extern void getArrow__15dStage_roomDt_cCFv();
-extern "C" extern void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
-extern "C" extern void setPlayerNum__15dStage_roomDt_cFUs();
-extern "C" extern void getPlayerNum__15dStage_roomDt_cCFv();
-extern "C" extern void setRoom__15dStage_roomDt_cFP14roomRead_class();
-extern "C" extern void getRoom__15dStage_roomDt_cCFv();
-extern "C" extern void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
-extern "C" extern void getMapInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
-extern "C" extern void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
-extern "C" extern void getPaletteInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
-extern "C" extern void getPselectInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
-extern "C" extern void getEnvrInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
-extern "C" extern void getVrboxInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
-extern "C" extern void getVrboxcolInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
-extern "C" extern void getPlightInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setPaletteNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getPaletteNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setPselectNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getPselectNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setEnvrNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getEnvrNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setVrboxNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getVrboxNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setVrboxcolNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getVrboxcolNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setPlightNumInfo__15dStage_roomDt_cFi();
-extern "C" extern void getPlightNumInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
-extern "C" extern void getLightVecInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setLightVecInfoNum__15dStage_roomDt_cFi();
-extern "C" extern void getLightVecInfoNum__15dStage_roomDt_cCFv();
-extern "C" extern void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
-extern "C" extern void getStagInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
-extern "C" extern void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
-extern "C" extern void getPntInf__15dStage_roomDt_cCFv();
-extern "C" extern void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
-extern "C" extern void getPathInf__15dStage_roomDt_cCFv();
-extern "C" extern void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
-extern "C" extern void getPnt2Inf__15dStage_roomDt_cCFv();
-extern "C" extern void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
-extern "C" extern void getPath2Inf__15dStage_roomDt_cCFv();
-extern "C" extern void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
-extern "C" extern void getSoundInf__15dStage_roomDt_cCFv();
-extern "C" extern void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
-extern "C" extern void getSoundInfCL__15dStage_roomDt_cCFv();
-extern "C" extern void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
-extern "C" extern void getMapEventInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
-extern "C" extern void getFileList2Info__15dStage_roomDt_cCFv();
-extern "C" extern void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
-extern "C" extern void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
-extern "C" extern void getFloorInfo__15dStage_roomDt_cCFv();
-extern "C" extern void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
-extern "C" extern void getMemoryConfig__15dStage_roomDt_cCFv();
-extern "C" extern void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
-extern "C" extern void getMemoryMap__15dStage_roomDt_cCFv();
-extern "C" extern void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
-extern "C" extern void getMulti__15dStage_roomDt_cCFv();
-extern "C" extern void setOldMulti__15dStage_roomDt_cFv();
-extern "C" extern void resetOldMulti__15dStage_roomDt_cFv();
-extern "C" extern void getOldMulti__15dStage_roomDt_cCFv();
-extern "C" extern void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
-extern "C" extern void getLbnk__15dStage_roomDt_cCFv();
-extern "C" extern void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
-extern "C" extern void getTresure__15dStage_roomDt_cCFv();
-extern "C" extern void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
-extern "C" extern void getDMap__15dStage_roomDt_cCFv();
-extern "C" extern void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
-extern "C" extern void getDrTg__15dStage_roomDt_cCFv();
-extern "C" extern void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
-extern "C" extern void getDoor__15dStage_roomDt_cCFv();
-extern "C" extern void setMapPath__15dStage_roomDt_cFPv();
-extern "C" extern void getMapPath__15dStage_roomDt_cFv();
-extern "C" extern void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
-extern "C" extern void getElst__15dStage_roomDt_cFv();
-extern "C" extern void setCamera__16dStage_stageDt_cFP18stage_camera_class();
-extern "C" extern void getCamera__16dStage_stageDt_cCFv();
-extern "C" extern void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
-extern "C" extern void getArrow__16dStage_stageDt_cCFv();
-extern "C" extern void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
-extern "C" extern void setPlayerNum__16dStage_stageDt_cFUs();
-extern "C" extern void getPlayerNum__16dStage_stageDt_cCFv();
-extern "C" extern void setRoom__16dStage_stageDt_cFP14roomRead_class();
-extern "C" extern void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
-extern "C" extern void getMapInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
-extern "C" extern void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
-extern "C" extern void getPaletteInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
-extern "C" extern void getPselectInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
-extern "C" extern void getEnvrInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
-extern "C" extern void getVrboxInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
-extern "C" extern void getVrboxcolInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
-extern "C" extern void getPlightInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setPaletteNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getPaletteNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setPselectNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getPselectNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setEnvrNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getEnvrNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setVrboxNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getVrboxNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setVrboxcolNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getVrboxcolNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
-extern "C" extern void getLightVecInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setLightVecInfoNum__16dStage_stageDt_cFi();
-extern "C" extern void getLightVecInfoNum__16dStage_stageDt_cCFv();
-extern "C" extern void setPlightNumInfo__16dStage_stageDt_cFi();
-extern "C" extern void getPlightNumInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
-extern "C" extern void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
-extern "C" extern void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
-extern "C" extern void getPntInf__16dStage_stageDt_cCFv();
-extern "C" extern void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
-extern "C" extern void getPathInf__16dStage_stageDt_cCFv();
-extern "C" extern void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
-extern "C" extern void getPnt2Inf__16dStage_stageDt_cCFv();
-extern "C" extern void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
-extern "C" extern void getPath2Inf__16dStage_stageDt_cCFv();
-extern "C" extern void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
-extern "C" extern void getSoundInf__16dStage_stageDt_cCFv();
-extern "C" extern void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
-extern "C" extern void getSoundInfCL__16dStage_stageDt_cCFv();
-extern "C" extern void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
-extern "C" extern void getMapEventInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
-extern "C" extern void getFileList2Info__16dStage_stageDt_cCFv();
-extern "C" extern void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
-extern "C" extern void getFileListInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
-extern "C" extern void getFloorInfo__16dStage_stageDt_cCFv();
-extern "C" extern void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
-extern "C" extern void getMemoryConfig__16dStage_stageDt_cCFv();
-extern "C" extern void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
-extern "C" extern void getMemoryMap__16dStage_stageDt_cCFv();
-extern "C" extern void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
-extern "C" extern void getMulti__16dStage_stageDt_cCFv();
-extern "C" extern void getOldMulti__16dStage_stageDt_cCFv();
-extern "C" extern void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
-extern "C" extern void getLbnk__16dStage_stageDt_cCFv();
-extern "C" extern void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
-extern "C" extern void getTresure__16dStage_stageDt_cCFv();
-extern "C" extern void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
-extern "C" extern void getDMap__16dStage_stageDt_cCFv();
-extern "C" extern void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
-extern "C" extern void getDrTg__16dStage_stageDt_cCFv();
-extern "C" extern void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
-extern "C" extern void getDoor__16dStage_stageDt_cCFv();
-extern "C" extern void setMapPath__16dStage_stageDt_cFPv();
-extern "C" extern void getMapPath__16dStage_stageDt_cFv();
-extern "C" extern void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
-extern "C" extern void __sinit_d_stage_cpp();
-extern "C" extern void func_80028328();
-extern "C" extern void __dt__19dStage_roomStatus_cFv();
-extern "C" extern void __ct__19dStage_roomStatus_cFv();
-extern "C" extern void __dt__19dStage_KeepDoorInfoFv();
-extern "C" extern void __dt__21stage_tgsc_data_classFv();
-extern "C" extern void __ct__21stage_tgsc_data_classFv();
+static void dStage_SetErrorRoom();
+static void dStage_SetErrorStage();
+void dStage_GetKeepDoorInfo();
+static void dStage_isBossStage(dStage_dt_c*);
+static void dStage_KeepDoorInfoInit(dStage_dt_c*);
+static void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*);
+void dStage_GetRoomKeepDoorInfo();
+static void dStage_initRoomKeepDoorInfo();
+static void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*);
+static void dStage_RoomKeepDoorInit(dStage_dt_c*, void*, s32, void*);
+static void stayRoomCheck(s32, char*, s32);
+static void createRoomScene(s32);
+static void dStage_roomInit(s32);
+void dStage_searchName(char const*);
+static void dStage_getName(s16, char);
+void dStage_getName2(s16, char);
+static void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*);
+static void dStage_cameraCreate(stage_camera2_data_class*, s32, s32);
+static void dStage_playerInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_cameraInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_RoomCameraInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_arrowInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_paletteInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_pselectInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_envrInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_filiInfo2Init(dStage_dt_c*, void*, s32, void*);
+static void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, s32, void*);
+static void dStage_filiInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_vrboxInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_vrboxcolInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_plightInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_lgtvInfoInit(dStage_dt_c*, void*, s32, void*);
+void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, s32);
+static void dStage_stagInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_sclsInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_actorCommonLayerInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_tgscCommonLayerInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_actorInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_actorInit_always(dStage_dt_c*, void*, s32, void*);
+static void dStage_tgscInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_doorInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_roomReadInit(dStage_dt_c*, void*, s32, void*);
+void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, s32);
+static void dStage_ppntInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_pathInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_rppnInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_rpatInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_soundInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_soundInfoInitCL(dStage_dt_c*, void*, s32, void*);
+static void dStage_setLayerTagName(FuncTable*, s32, s32);
+static void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, s32);
+static void dStage_stEventInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_mapEventInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_floorInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_memaInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_mecoInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_stageKeepTresureInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_fieldMapTresureInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_dt_c_offsetToPtr(void*);
+static void dStage_mapPathInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_mapPathInitCommonLayer(dStage_dt_c*, void*, s32, void*);
+static void dStage_fieldMapMapPathInit(dStage_dt_c*, void*, s32, void*);
+static void readMult(dStage_dt_c*, dStage_Multi_c*, bool);
+static void dStage_multInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_lbnkInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_roomTresureInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_layerTresureInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_dmapInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_stageDrtgInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_roomDrtgInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dStage_elstInfoInit(dStage_dt_c*, void*, s32, void*);
+static void dKankyo_create();
+static void layerMemoryInfoLoader(void*, dStage_dt_c*, s32);
+static void dStage_dt_c_stageInitLoader(void*, dStage_dt_c*);
+static void layerTableLoader(void*, dStage_dt_c*, s32);
+static void layerActorLoader(void*, dStage_dt_c*, s32);
+static void dStage_dt_c_stageLoader(void*, dStage_dt_c*);
+void dStage_dt_c_roomLoader(void*, dStage_dt_c*, s32);
+void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, s32);
+void dStage_dt_c_fieldMapLoader(void*, dStage_dt_c*);
+void dStage_infoCreate();
+void dStage_Create();
+void dStage_Delete();
+void dStage_RoomCheck(cBgS_GndChk*);
+void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, char, s16);
+void dStage_changeScene(s32, f32, u32, char, s16, s32);
+void dStage_changeScene4Event(s32, char, s32, bool, f32, u32, s16, s32);
+void dStage_restartRoom(u32, u32, s32);
+extern "C" void __sinit_d_stage_cpp();
+extern "C" static void func_80028328();
+
+extern "C" void set__18dStage_nextStage_cFPCcScsScScUc();
+extern "C" static void dStage_SetErrorRoom__Fv();
+extern "C" static void dStage_SetErrorStage__Fv();
+extern "C" void dStage_GetKeepDoorInfo__Fv();
+extern "C" static void dStage_isBossStage__FP11dStage_dt_c();
+extern "C" static void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
+extern "C" static void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" void dStage_GetRoomKeepDoorInfo__Fv();
+extern "C" static void dStage_initRoomKeepDoorInfo__Fv();
+extern "C" static void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" static void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
+extern "C" void set__19dStage_startStage_cFPCcScsSc();
+extern "C" void init__20dStage_roomControl_cFv();
+extern "C" void initZone__20dStage_roomControl_cFv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void getMemoryBlock__20dStage_roomControl_cFi();
+extern "C" void setStayNo__20dStage_roomControl_cFi();
+extern "C" void setNextStayNo__20dStage_roomControl_cFi();
+extern "C" static void stayRoomCheck__FiPUci();
+extern "C" static void createRoomScene__Fi();
+extern "C" void checkRoomDisp__20dStage_roomControl_cCFi();
+extern "C" void loadRoom__20dStage_roomControl_cFiPUcb();
+extern "C" void zoneCountCheck__20dStage_roomControl_cCFi();
+extern "C" void getStagInfo__16dStage_stageDt_cCFv();
+extern "C" void createMemoryBlock__20dStage_roomControl_cFiUl();
+extern "C" void destroyMemoryBlock__20dStage_roomControl_cFv();
+extern "C" void setArcBank__20dStage_roomControl_cFiPCc();
+extern "C" void getArcBank__20dStage_roomControl_cFi();
+extern "C" void resetArchiveBank__20dStage_roomControl_cFi();
+extern "C" void create__Q220dStage_roomControl_c9roomDzs_cFUc();
+extern "C" void remove__Q220dStage_roomControl_c9roomDzs_cFv();
+extern "C" void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
+extern "C" void init__16dStage_stageDt_cFv();
+extern "C" void initFileList2__15dStage_roomDt_cFv();
+extern "C" void init__15dStage_roomDt_cFv();
+extern "C" static void dStage_roomInit__Fi();
+extern "C" void SetTimePass__20dStage_roomControl_cFi();
+extern "C" void getRoom__16dStage_stageDt_cCFv();
+extern "C" void dStage_searchName__FPCc();
+extern "C" static void dStage_getName__FsSc();
+extern "C" void dStage_getName2__FsSc();
+extern "C" static void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
+extern "C" static void dStage_cameraCreate__FP24stage_camera2_data_classii();
+extern "C" void getPlayer__15dStage_roomDt_cCFv();
+extern "C" void getPlayer__16dStage_stageDt_cCFv();
+extern "C" static void dStage_playerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_cameraInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_arrowInit__FP11dStage_dt_cPviPv();
+extern "C" void getMapInfo2__15dStage_roomDt_cCFi();
+extern "C" void getMapInfoBase__15dStage_roomDt_cCFv();
+extern "C" void getMapInfo2__16dStage_stageDt_cCFi();
+extern "C" void getMapInfoBase__16dStage_stageDt_cCFv();
+extern "C" static void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+extern "C" static void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void resetOldMulti__16dStage_stageDt_cFv();
+extern "C" static void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorInit_always__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomReadInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
+extern "C" static void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_setLayerTagName__FP9FuncTableii();
+extern "C" static void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
+extern "C" static void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_dt_c_offsetToPtr__FPv();
+extern "C" static void dStage_mapPathInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
+extern "C" static void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
+extern "C" static void dStage_multInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dKankyo_create__Fv();
+extern "C" static void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
+extern "C" static void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
+extern "C" static void layerTableLoader__FPvP11dStage_dt_ci();
+extern "C" void getElst__16dStage_stageDt_cFv();
+extern "C" static void layerActorLoader__FPvP11dStage_dt_ci();
+extern "C" static void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
+extern "C" void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
+extern "C" void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
+extern "C" void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
+extern "C" void dStage_infoCreate__Fv();
+extern "C" void dStage_Create__Fv();
+extern "C" void dStage_Delete__Fv();
+extern "C" void setOldMulti__16dStage_stageDt_cFv();
+extern "C" void dStage_RoomCheck__FP11cBgS_GndChk();
+extern "C" void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void getSclsInfo__15dStage_roomDt_cCFv();
+extern "C" void getSclsInfo__16dStage_stageDt_cCFv();
+extern "C" void dStage_changeScene4Event__FiScibfUlsi();
+extern "C" void dStage_restartRoom__FUlUli();
+extern "C" void setCamera__15dStage_roomDt_cFP18stage_camera_class();
+extern "C" void getCamera__15dStage_roomDt_cCFv();
+extern "C" void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
+extern "C" void getArrow__15dStage_roomDt_cCFv();
+extern "C" void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
+extern "C" void setPlayerNum__15dStage_roomDt_cFUs();
+extern "C" void getPlayerNum__15dStage_roomDt_cCFv();
+extern "C" void setRoom__15dStage_roomDt_cFP14roomRead_class();
+extern "C" void getRoom__15dStage_roomDt_cCFv();
+extern "C" void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
+extern "C" void getMapInfo__15dStage_roomDt_cCFv();
+extern "C" void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
+extern "C" void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
+extern "C" void getPaletteInfo__15dStage_roomDt_cCFv();
+extern "C" void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
+extern "C" void getPselectInfo__15dStage_roomDt_cCFv();
+extern "C" void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
+extern "C" void getEnvrInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
+extern "C" void getVrboxInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
+extern "C" void getVrboxcolInfo__15dStage_roomDt_cCFv();
+extern "C" void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
+extern "C" void getPlightInfo__15dStage_roomDt_cCFv();
+extern "C" void setPaletteNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPaletteNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setPselectNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPselectNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setEnvrNumInfo__15dStage_roomDt_cFi();
+extern "C" void getEnvrNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxNumInfo__15dStage_roomDt_cFi();
+extern "C" void getVrboxNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxcolNumInfo__15dStage_roomDt_cFi();
+extern "C" void getVrboxcolNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setPlightNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPlightNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
+extern "C" void getLightVecInfo__15dStage_roomDt_cCFv();
+extern "C" void setLightVecInfoNum__15dStage_roomDt_cFi();
+extern "C" void getLightVecInfoNum__15dStage_roomDt_cCFv();
+extern "C" void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
+extern "C" void getStagInfo__15dStage_roomDt_cCFv();
+extern "C" void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
+extern "C" void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" void getPntInf__15dStage_roomDt_cCFv();
+extern "C" void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" void getPathInf__15dStage_roomDt_cCFv();
+extern "C" void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" void getPnt2Inf__15dStage_roomDt_cCFv();
+extern "C" void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" void getPath2Inf__15dStage_roomDt_cCFv();
+extern "C" void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInf__15dStage_roomDt_cCFv();
+extern "C" void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInfCL__15dStage_roomDt_cCFv();
+extern "C" void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
+extern "C" void getMapEventInfo__15dStage_roomDt_cCFv();
+extern "C" void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
+extern "C" void getFileList2Info__15dStage_roomDt_cCFv();
+extern "C" void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
+extern "C" void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
+extern "C" void getFloorInfo__15dStage_roomDt_cCFv();
+extern "C" void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
+extern "C" void getMemoryConfig__15dStage_roomDt_cCFv();
+extern "C" void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
+extern "C" void getMemoryMap__15dStage_roomDt_cCFv();
+extern "C" void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
+extern "C" void getMulti__15dStage_roomDt_cCFv();
+extern "C" void setOldMulti__15dStage_roomDt_cFv();
+extern "C" void resetOldMulti__15dStage_roomDt_cFv();
+extern "C" void getOldMulti__15dStage_roomDt_cCFv();
+extern "C" void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
+extern "C" void getLbnk__15dStage_roomDt_cCFv();
+extern "C" void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
+extern "C" void getTresure__15dStage_roomDt_cCFv();
+extern "C" void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
+extern "C" bool getDMap__15dStage_roomDt_cCFv();
+extern "C" void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" void getDrTg__15dStage_roomDt_cCFv();
+extern "C" void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" void getDoor__15dStage_roomDt_cCFv();
+extern "C" void setMapPath__15dStage_roomDt_cFPv();
+extern "C" void getMapPath__15dStage_roomDt_cFv();
+extern "C" void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
+extern "C" void getElst__15dStage_roomDt_cFv();
+extern "C" void setCamera__16dStage_stageDt_cFP18stage_camera_class();
+extern "C" void getCamera__16dStage_stageDt_cCFv();
+extern "C" void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
+extern "C" void getArrow__16dStage_stageDt_cCFv();
+extern "C" void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
+extern "C" void setPlayerNum__16dStage_stageDt_cFUs();
+extern "C" void getPlayerNum__16dStage_stageDt_cCFv();
+extern "C" void setRoom__16dStage_stageDt_cFP14roomRead_class();
+extern "C" void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
+extern "C" void getMapInfo__16dStage_stageDt_cCFv();
+extern "C" void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
+extern "C" void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
+extern "C" void getPaletteInfo__16dStage_stageDt_cCFv();
+extern "C" void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
+extern "C" void getPselectInfo__16dStage_stageDt_cCFv();
+extern "C" void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
+extern "C" void getEnvrInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
+extern "C" void getVrboxInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
+extern "C" void getVrboxcolInfo__16dStage_stageDt_cCFv();
+extern "C" void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
+extern "C" void getPlightInfo__16dStage_stageDt_cCFv();
+extern "C" void setPaletteNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPaletteNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setPselectNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPselectNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setEnvrNumInfo__16dStage_stageDt_cFi();
+extern "C" void getEnvrNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxNumInfo__16dStage_stageDt_cFi();
+extern "C" void getVrboxNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxcolNumInfo__16dStage_stageDt_cFi();
+extern "C" void getVrboxcolNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
+extern "C" void getLightVecInfo__16dStage_stageDt_cCFv();
+extern "C" void setLightVecInfoNum__16dStage_stageDt_cFi();
+extern "C" void getLightVecInfoNum__16dStage_stageDt_cCFv();
+extern "C" void setPlightNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPlightNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
+extern "C" void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
+extern "C" void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" void getPntInf__16dStage_stageDt_cCFv();
+extern "C" void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" void getPathInf__16dStage_stageDt_cCFv();
+extern "C" void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" void getPnt2Inf__16dStage_stageDt_cCFv();
+extern "C" void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" void getPath2Inf__16dStage_stageDt_cCFv();
+extern "C" void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInf__16dStage_stageDt_cCFv();
+extern "C" void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInfCL__16dStage_stageDt_cCFv();
+extern "C" void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
+extern "C" void getMapEventInfo__16dStage_stageDt_cCFv();
+extern "C" void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
+extern "C" void getFileList2Info__16dStage_stageDt_cCFv();
+extern "C" void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
+extern "C" void getFileListInfo__16dStage_stageDt_cCFv();
+extern "C" void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
+extern "C" void getFloorInfo__16dStage_stageDt_cCFv();
+extern "C" void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
+extern "C" void getMemoryConfig__16dStage_stageDt_cCFv();
+extern "C" void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
+extern "C" void getMemoryMap__16dStage_stageDt_cCFv();
+extern "C" void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
+extern "C" void getMulti__16dStage_stageDt_cCFv();
+extern "C" void getOldMulti__16dStage_stageDt_cCFv();
+extern "C" void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
+extern "C" void getLbnk__16dStage_stageDt_cCFv();
+extern "C" void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
+extern "C" void getTresure__16dStage_stageDt_cCFv();
+extern "C" void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
+extern "C" void getDMap__16dStage_stageDt_cCFv();
+extern "C" void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" void getDrTg__16dStage_stageDt_cCFv();
+extern "C" void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" void getDoor__16dStage_stageDt_cCFv();
+extern "C" void setMapPath__16dStage_stageDt_cFPv();
+extern "C" bool getMapPath__16dStage_stageDt_cFv();
+extern "C" void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
+extern "C" void __sinit_d_stage_cpp();
+extern "C" static void func_80028328();
+extern "C" void __dt__19dStage_roomStatus_cFv();
+extern "C" void __ct__19dStage_roomStatus_cFv();
+extern "C" void __dt__19dStage_KeepDoorInfoFv();
+extern "C" void __dt__21stage_tgsc_data_classFv();
+extern "C" void __ct__21stage_tgsc_data_classFv();
 SECTION_RODATA extern const u8 d_d_stage__stringBase0[1016];
 SECTION_DATA extern u8 l_objectName[10932];
 SECTION_DATA extern void*data_803A65CC[12];
@@ -346,78 +1291,121 @@ SECTION_SDATA2 extern f64 lit_5317;
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void OSReport_Error();
-extern "C" extern void mDoExt_getArchiveHeap__Fv();
-extern "C" extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void getFileListInfo__15dStage_roomDt_cCFv();
-extern "C" extern void fopAcM_FastCreate__FsPFPv_iPvPv();
-extern "C" extern void fopAcM_CreateAppend__Fv();
-extern "C" extern void fopAcM_delete__FP10fopAc_ac_c();
-extern "C" extern void fopCamM_Create__FisPv();
-extern "C" extern void fopScnM_SearchByID__FUi();
-extern "C" extern void fopScnM_CreateReq__FssUsUl();
-extern "C" extern void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
-extern "C" extern void fopMsgM_Create__FsPFPv_iPv();
-extern "C" extern void fpcLy_CurrentLayer__Fv();
-extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" extern void getLayerNo__14dComIfG_play_cFi();
-extern "C" extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
-extern "C" extern void dComIfG_getStageRes__FPCc();
-extern "C" extern void dComIfG_getOldStageRes__FPCc();
-extern "C" extern void check__7daSus_cFScRC4cXyz();
-extern "C" extern void execute__7daSus_cFv();
-extern "C" extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern "C" extern void init__12dSv_danBit_cFSc();
-extern "C" extern void clearRoomSwitch__13dSv_zoneBit_cFv();
-extern "C" extern void clearRoomItem__13dSv_zoneBit_cFv();
-extern "C" extern void getSave__10dSv_info_cFi();
-extern "C" extern void putSave__10dSv_info_cFi();
-extern "C" extern void initZone__10dSv_info_cFv();
-extern "C" extern void isActor__10dSv_info_cCFii();
-extern "C" extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
-extern "C" extern void setPointer__8dMpath_cFScPvi();
-extern "C" extern void create__16dEvent_manager_cFv();
-extern "C" extern void remove__16dEvent_manager_cFv();
-extern "C" extern void GetExitId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void addData__7dTres_cFPQ27dTres_c10list_classSc();
-extern "C" extern void dKy_set_nexttime__Ff();
-extern "C" extern void init__12dSvBit_HIO_cFv();
-extern "C" extern void memalignB__3cMlFiUl();
-extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dla__FPv();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" extern void __register_global_object();
-extern "C" extern void __destroy_arr();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void snprintf();
-extern "C" extern void strcmp();
-extern "C" extern void strncpy();
-extern "C" extern void strcpy();
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+void mDoExt_getArchiveHeap();
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv();
+void fopAcM_CreateAppend();
+void fopAcM_delete(fopAc_ac_c*);
+void fopCamM_Create(s32, s16, void*);
+void fopScnM_SearchByID(s32);
+void fopScnM_CreateReq(s16, s16, u16, u32);
+extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopMsgM_Create__FsPFPv_iPv();
+void fpcLy_CurrentLayer();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+void dComIfGp_setNextStage(char const*, s16, char, char, f32, u32, s32, char, s16, s32, s32);
+void dComIfG_getStageRes(char const*);
+void dComIfG_getOldStageRes(char const*);
+void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
+void dKy_set_nexttime(f32);
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void snprintf();
+extern "C" void strcmp();
+extern "C" void strncpy();
+extern "C" void strcpy();
+
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void getFileListInfo__15dStage_roomDt_cCFv();
+extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv();
+extern "C" void fopAcM_CreateAppend__Fv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopCamM_Create__FisPv();
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fopScnM_CreateReq__FssUsUl();
+extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopMsgM_Create__FsPFPv_iPv();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfG_getOldStageRes__FPCc();
+extern "C" void check__7daSus_cFScRC4cXyz();
+extern "C" void execute__7daSus_cFv();
+extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" void init__12dSv_danBit_cFSc();
+extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" void getSave__10dSv_info_cFi();
+extern "C" void putSave__10dSv_info_cFi();
+extern "C" void initZone__10dSv_info_cFv();
+extern "C" void isActor__10dSv_info_cCFii();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
+extern "C" void setPointer__8dMpath_cFScPvi();
+extern "C" void create__16dEvent_manager_cFv();
+extern "C" void remove__16dEvent_manager_cFv();
+extern "C" void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void addData__7dTres_cFPQ27dTres_c10list_classSc();
+extern "C" void dKy_set_nexttime__Ff();
+extern "C" void init__12dSvBit_HIO_cFv();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void snprintf();
+extern "C" void strcmp();
+extern "C" void strncpy();
+extern "C" void strcpy();
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
@@ -429,7 +1417,7 @@ SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80378A50-80378E48 03F3+05 .rodata    @stringBase0                                                 */
+/* 80378A50-80378E48 03F3+05 rc=62 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -485,33 +1473,33 @@ SECTION_DEAD char* const stringBase_80378E2D = "stage non Lbnk data!\n";
 SECTION_DEAD char* const pad_80378E43 = "\0\0\0\0";
 #pragma pop
 
-/* 80023E28-80023E94 006C+00 .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
+/* 80023E28-80023E94 006C+00 rc=1 efc=1 .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__18dStage_nextStage_cFPCcScsScScUc) {
+asm void dStage_nextStage_c::set(char const* field_0, char field_1, s16 field_2, char field_3, char field_4, char field_5) {
 	nofralloc
 #include "asm/d/d_stage/set__18dStage_nextStage_cFPCcScsScScUc.s"
 }
 #pragma pop
 
 
-/* 80023E94-80023EC4 0030+00 .text      dStage_SetErrorRoom__Fv                                      */
+/* 80023E94-80023EC4 0030+00 rc=14 efc=0 .text      dStage_SetErrorRoom__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_SetErrorRoom__Fv) {
+asm static void dStage_SetErrorRoom() {
 	nofralloc
 #include "asm/d/d_stage/dStage_SetErrorRoom__Fv.s"
 }
 #pragma pop
 
 
-/* 80023EC4-80023EF4 0030+00 .text      dStage_SetErrorStage__Fv                                     */
+/* 80023EC4-80023EF4 0030+00 rc=5 efc=0 .text      dStage_SetErrorStage__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_SetErrorStage__Fv) {
+asm static void dStage_SetErrorStage() {
 	nofralloc
 #include "asm/d/d_stage/dStage_SetErrorStage__Fv.s"
 }
@@ -519,50 +1507,50 @@ ASM_FUNCTION(dStage_SetErrorStage__Fv) {
 
 
 /* ############################################################################################## */
-/* 803F4E68-803F4E74 000C+00 .bss       @3926                                                        */
+/* 803F4E68-803F4E74 000C+00 rc=1 efc=0 .bss       @3926                                                        */
 u8 d_d_stage__lit_3926[12];
 
-/* 803F4E74-803F5778 0904+00 .bss       DoorInfo                                                     */
+/* 803F4E74-803F5778 0904+00 rc=3 efc=0 .bss       DoorInfo                                                     */
 u8 DoorInfo[2308];
 
-/* 80023EF4-80023F00 000C+00 .text      dStage_GetKeepDoorInfo__Fv                                   */
+/* 80023EF4-80023F00 000C+00 rc=1 efc=1 .text      dStage_GetKeepDoorInfo__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_GetKeepDoorInfo__Fv) {
+asm void dStage_GetKeepDoorInfo() {
 	nofralloc
 #include "asm/d/d_stage/dStage_GetKeepDoorInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80023F00-80023F50 0050+00 .text      dStage_isBossStage__FP11dStage_dt_c                          */
+/* 80023F00-80023F50 0050+00 rc=2 efc=0 .text      dStage_isBossStage__FP11dStage_dt_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_isBossStage__FP11dStage_dt_c) {
+asm static void dStage_isBossStage(dStage_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_isBossStage__FP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80023F50-80023F84 0034+00 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
+/* 80023F50-80023F84 0034+00 rc=1 efc=0 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_KeepDoorInfoInit__FP11dStage_dt_c) {
+asm static void dStage_KeepDoorInfoInit(dStage_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_KeepDoorInfoInit__FP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80023F84-8002405C 00D8+00 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
+/* 80023F84-8002405C 00D8+00 rc=1 efc=0 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class) {
+asm static void dStage_KeepDoorInfoProc(dStage_dt_c* field_0, stage_tgsc_class* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
 }
@@ -570,61 +1558,61 @@ ASM_FUNCTION(dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class) {
 
 
 /* ############################################################################################## */
-/* 803F5778-803F5784 000C+00 .bss       @3981                                                        */
+/* 803F5778-803F5784 000C+00 rc=0 efc=0 .bss       @3981                                                        */
 u8 d_d_stage__lit_3981[12];
 
-/* 803F5784-803F6088 0904+00 .bss       l_RoomKeepDoorInfo                                           */
+/* 803F5784-803F6088 0904+00 rc=3 efc=0 .bss       l_RoomKeepDoorInfo                                           */
 u8 l_RoomKeepDoorInfo[2308];
 
-/* 8002405C-80024068 000C+00 .text      dStage_GetRoomKeepDoorInfo__Fv                               */
+/* 8002405C-80024068 000C+00 rc=1 efc=1 .text      dStage_GetRoomKeepDoorInfo__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_GetRoomKeepDoorInfo__Fv) {
+asm void dStage_GetRoomKeepDoorInfo() {
 	nofralloc
 #include "asm/d/d_stage/dStage_GetRoomKeepDoorInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80024068-80024078 0010+00 .text      dStage_initRoomKeepDoorInfo__Fv                              */
+/* 80024068-80024078 0010+00 rc=1 efc=0 .text      dStage_initRoomKeepDoorInfo__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_initRoomKeepDoorInfo__Fv) {
+asm static void dStage_initRoomKeepDoorInfo() {
 	nofralloc
 #include "asm/d/d_stage/dStage_initRoomKeepDoorInfo__Fv.s"
 }
 #pragma pop
 
 
-/* 80024078-80024174 00FC+00 .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
+/* 80024078-80024174 00FC+00 rc=1 efc=0 .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class) {
+asm static void dStage_RoomKeepDoorInfoProc(dStage_dt_c* field_0, stage_tgsc_class* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
 }
 #pragma pop
 
 
-/* 80024174-8002419C 0028+00 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                */
+/* 80024174-8002419C 0028+00 rc=2 efc=0 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_RoomKeepDoorInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002419C-800241E8 004C+00 .text      set__19dStage_startStage_cFPCcScsSc                          */
+/* 8002419C-800241E8 004C+00 rc=2 efc=0 .text      set__19dStage_startStage_cFPCcScsSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__19dStage_startStage_cFPCcScsSc) {
+asm void dStage_startStage_c::set(char const* field_0, char field_1, s16 field_2, char field_3) {
 	nofralloc
 #include "asm/d/d_stage/set__19dStage_startStage_cFPCcScsSc.s"
 }
@@ -632,61 +1620,61 @@ ASM_FUNCTION(set__19dStage_startStage_cFPCcScsSc) {
 
 
 /* ############################################################################################## */
-/* 803F6088-803F6094 000C+00 .bss       @5376                                                        */
+/* 803F6088-803F6094 000C+00 rc=0 efc=0 .bss       @5376                                                        */
 u8 d_d_stage__lit_5376[12];
 
-/* 803F6094-80406194 10100+00 .bss       mStatus__20dStage_roomControl_c                              */
+/* 803F6094-80406194 10100+00 rc=43 efc=31 .bss       mStatus__20dStage_roomControl_c                              */
 u8 mStatus__20dStage_roomControl_c[65792];
 
-/* 80450D58-80450D60 0008+00 .sbss      tmp_name$4456                                                */
+/* 80450D58-80450D60 0008+00 rc=1 efc=0 .sbss      tmp_name$4456                                                */
 u8 data_80450D58[8];
 
-/* 80450D60-80450D64 0004+00 .sbss      mProcID__20dStage_roomControl_c                              */
+/* 80450D60-80450D64 0004+00 rc=4 efc=3 .sbss      mProcID__20dStage_roomControl_c                              */
 u8 mProcID__20dStage_roomControl_c[4];
 
-/* 80450D64-80450D68 0004+00 .sbss      None                                                         */
+/* 80450D64-80450D68 0004+00 rc=100 efc=94 .sbss      None                                                         */
 u8 struct_80450D64[4];
 /* 80450D64 0001 data_80450D64 */
 /* 80450D65 0001 data_80450D65 */
 /* 80450D66 0001 data_80450D66 */
 /* 80450D67 0001 data_80450D67 */
 
-/* 80450D68-80450D6C 0004+00 .sbss      None                                                         */
+/* 80450D68-80450D6C 0004+00 rc=4 efc=2 .sbss      None                                                         */
 u8 data_80450D68[4];
 
-/* 80450D6C-80450D70 0004+00 .sbss      mArcBankName__20dStage_roomControl_c                         */
+/* 80450D6C-80450D70 0004+00 rc=3 efc=2 .sbss      mArcBankName__20dStage_roomControl_c                         */
 u8 mArcBankName__20dStage_roomControl_c[4];
 
-/* 80450D70-80450D74 0004+00 .sbss      mArcBankData__20dStage_roomControl_c                         */
+/* 80450D70-80450D74 0004+00 rc=2 efc=1 .sbss      mArcBankData__20dStage_roomControl_c                         */
 u8 mArcBankData__20dStage_roomControl_c[4];
 
-/* 800241E8-80024338 0150+00 .text      init__20dStage_roomControl_cFv                               */
+/* 800241E8-80024338 0150+00 rc=1 efc=0 .text      init__20dStage_roomControl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__20dStage_roomControl_cFv) {
+asm void dStage_roomControl_c::init() {
 	nofralloc
 #include "asm/d/d_stage/init__20dStage_roomControl_cFv.s"
 }
 #pragma pop
 
 
-/* 80024338-80024384 004C+00 .text      initZone__20dStage_roomControl_cFv                           */
+/* 80024338-80024384 004C+00 rc=2 efc=1 .text      initZone__20dStage_roomControl_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initZone__20dStage_roomControl_cFv) {
+asm void dStage_roomControl_c::initZone() {
 	nofralloc
 #include "asm/d/d_stage/initZone__20dStage_roomControl_cFv.s"
 }
 #pragma pop
 
 
-/* 80024384-800243B0 002C+00 .text      getStatusRoomDt__20dStage_roomControl_cFi                    */
+/* 80024384-800243B0 002C+00 rc=29 efc=27 .text      getStatusRoomDt__20dStage_roomControl_cFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStatusRoomDt__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::getStatusRoomDt(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/getStatusRoomDt__20dStage_roomControl_cFi.s"
 }
@@ -694,7 +1682,7 @@ ASM_FUNCTION(getStatusRoomDt__20dStage_roomControl_cFi) {
 
 
 /* ############################################################################################## */
-/* 803A3B18-803A65CC 2AB4+00 .data      l_objectName                                                 */
+/* 803A3B18-803A65CC 2AB4+00 rc=2 efc=0 .data      l_objectName                                                 */
 u8 l_objectName[10932] = {
 	0x47, 0x72, 0x61, 0x73, 0x73, 0x00, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61,
 	0x78, 0x31, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61, 0x78, 0x37, 0x00, 0x00,
@@ -1382,7 +2370,7 @@ u8 l_objectName[10932] = {
 	0x00, 0x0B, 0xFF, 0x00,
 };
 
-/* 803A65CC-803A65FC 0030+00 .data      l_roomFuncTable$5052                                         */
+/* 803A65CC-803A65FC 0030+00 rc=1 efc=0 .data      l_roomFuncTable$5052                                         */
 void* data_803A65CC[12] = {
 	(void*)0x54524553,
 	NULL,
@@ -1398,7 +2386,7 @@ void* data_803A65CC[12] = {
 	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A65FC-803A6620 0024+00 .data      l_layerFuncTable$5053                                        */
+/* 803A65FC-803A6620 0024+00 rc=1 efc=0 .data      l_layerFuncTable$5053                                        */
 void* data_803A65FC[9] = {
 	(void*)0x54524530,
 	NULL,
@@ -1411,7 +2399,7 @@ void* data_803A65FC[9] = {
 	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A6620-803A6638 0018+00 .data      l_layerFuncTable$5131                                        */
+/* 803A6620-803A6638 0018+00 rc=1 efc=0 .data      l_layerFuncTable$5131                                        */
 void* data_803A6620[6] = {
 	(void*)0x4D454D30,
 	NULL,
@@ -1421,21 +2409,21 @@ void* data_803A6620[6] = {
 	(void*)dStage_mecoInfoInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A6638-803A6644 000C+00 .data      l_funcTable$5136                                             */
+/* 803A6638-803A6644 000C+00 rc=1 efc=0 .data      l_funcTable$5136                                             */
 void* data_803A6638[3] = {
 	(void*)0x53544147,
 	NULL,
 	(void*)dStage_stagInfoInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A6644-803A6650 000C+00 .data      l_layerFuncTableA$5141                                       */
+/* 803A6644-803A6650 000C+00 rc=1 efc=0 .data      l_layerFuncTableA$5141                                       */
 void* data_803A6644[3] = {
 	(void*)0x534F4E30,
 	NULL,
 	(void*)dStage_soundInfoInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A6650-803A668C 003C+00 .data      l_envLayerFuncTable$5142                                     */
+/* 803A6650-803A668C 003C+00 rc=1 efc=0 .data      l_envLayerFuncTable$5142                                     */
 void* data_803A6650[15] = {
 	(void*)0x4C475430,
 	NULL,
@@ -1454,7 +2442,7 @@ void* data_803A6650[15] = {
 	(void*)dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A668C-803A66BC 0030+00 .data      l_layerFuncTable$5158                                        */
+/* 803A668C-803A66BC 0030+00 rc=1 efc=0 .data      l_layerFuncTable$5158                                        */
 void* data_803A668C[12] = {
 	(void*)0x446F6F30,
 	NULL,
@@ -1470,7 +2458,7 @@ void* data_803A668C[12] = {
 	(void*)dStage_layerTresureInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A66BC-803A67F4 0138+00 .data      l_funcTable$5163                                             */
+/* 803A66BC-803A67F4 0138+00 rc=1 efc=0 .data      l_funcTable$5163                                             */
 void* data_803A66BC[78] = {
 	(void*)0x45564C59,
 	NULL,
@@ -1552,7 +2540,7 @@ void* data_803A66BC[78] = {
 	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
 
-/* 803A67F4-803A689C 00A8+00 .data      l_funcTable$5168                                             */
+/* 803A67F4-803A689C 00A8+00 rc=1 efc=0 .data      l_funcTable$5168                                             */
 void* data_803A67F4[42] = {
 	(void*)0x504C5952,
 	NULL,
@@ -1598,7 +2586,7 @@ void* data_803A67F4[42] = {
 	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
 
-/* 803A689C-803A68FC 0060+00 .data      l_funcTable$5173                                             */
+/* 803A689C-803A68FC 0060+00 rc=1 efc=0 .data      l_funcTable$5173                                             */
 void* data_803A689C[24] = {
 	(void*)0x446F6F72,
 	NULL,
@@ -1626,7 +2614,7 @@ void* data_803A689C[24] = {
 	(void*)dStage_mapEventInfoInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A68FC-803A6920 0024+00 .data      l_funcTable$5178                                             */
+/* 803A68FC-803A6920 0024+00 rc=1 efc=0 .data      l_funcTable$5178                                             */
 void* data_803A68FC[9] = {
 	(void*)0x54524553,
 	NULL,
@@ -1639,7 +2627,7 @@ void* data_803A68FC[9] = {
 	(void*)dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv,
 };
 
-/* 803A6920-803A696C 004C+00 .data      mMemoryBlock__20dStage_roomControl_c                         */
+/* 803A6920-803A696C 004C+00 rc=3 efc=0 .data      mMemoryBlock__20dStage_roomControl_c                         */
 u8 mMemoryBlock__20dStage_roomControl_c[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1648,121 +2636,121 @@ u8 mMemoryBlock__20dStage_roomControl_c[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800243B0-800243E8 0038+00 .text      getMemoryBlock__20dStage_roomControl_cFi                     */
+/* 800243B0-800243E8 0038+00 rc=3 efc=3 .text      getMemoryBlock__20dStage_roomControl_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMemoryBlock__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::getMemoryBlock(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/getMemoryBlock__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 800243E8-80024424 003C+00 .text      setStayNo__20dStage_roomControl_cFi                          */
+/* 800243E8-80024424 003C+00 rc=2 efc=0 .text      setStayNo__20dStage_roomControl_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStayNo__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::setStayNo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setStayNo__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 80024424-8002442C 0008+00 .text      setNextStayNo__20dStage_roomControl_cFi                      */
+/* 80024424-8002442C 0008+00 rc=0 efc=0 .text      setNextStayNo__20dStage_roomControl_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextStayNo__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::setNextStayNo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setNextStayNo__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 8002442C-80024460 0034+00 .text      stayRoomCheck__FiPUci                                        */
+/* 8002442C-80024460 0034+00 rc=1 efc=0 .text      stayRoomCheck__FiPUci                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stayRoomCheck__FiPUci) {
+asm static void stayRoomCheck(s32 field_0, char* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/stayRoomCheck__FiPUci.s"
 }
 #pragma pop
 
 
-/* 80024460-800244E8 0088+00 .text      createRoomScene__Fi                                          */
+/* 80024460-800244E8 0088+00 rc=1 efc=0 .text      createRoomScene__Fi                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createRoomScene__Fi) {
+asm static void createRoomScene(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/createRoomScene__Fi.s"
 }
 #pragma pop
 
 
-/* 800244E8-8002451C 0034+00 .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
+/* 800244E8-8002451C 0034+00 rc=0 efc=0 .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRoomDisp__20dStage_roomControl_cCFi) {
+asm void dStage_roomControl_c::checkRoomDisp(s32 field_0) const {
 	nofralloc
 #include "asm/d/d_stage/checkRoomDisp__20dStage_roomControl_cCFi.s"
 }
 #pragma pop
 
 
-/* 8002451C-8002471C 0200+00 .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
+/* 8002451C-8002471C 0200+00 rc=2 efc=0 .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadRoom__20dStage_roomControl_cFiPUcb) {
+asm void dStage_roomControl_c::loadRoom(s32 field_0, char* field_1, bool field_2) {
 	nofralloc
 #include "asm/d/d_stage/loadRoom__20dStage_roomControl_cFiPUcb.s"
 }
 #pragma pop
 
 
-/* 8002471C-8002483C 0120+00 .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
+/* 8002471C-8002483C 0120+00 rc=1 efc=0 .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoneCountCheck__20dStage_roomControl_cCFi) {
+asm void dStage_roomControl_c::zoneCountCheck(s32 field_0) const {
 	nofralloc
 #include "asm/d/d_stage/zoneCountCheck__20dStage_roomControl_cCFi.s"
 }
 #pragma pop
 
 
-/* 8002483C-80024844 0008+00 .text      getStagInfo__16dStage_stageDt_cCFv                           */
+/* 8002483C-80024844 0008+00 rc=1 efc=0 .text      getStagInfo__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStagInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getStagInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getStagInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80024844-800248A8 0064+00 .text      createMemoryBlock__20dStage_roomControl_cFiUl                */
+/* 80024844-800248A8 0064+00 rc=1 efc=0 .text      createMemoryBlock__20dStage_roomControl_cFiUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createMemoryBlock__20dStage_roomControl_cFiUl) {
+asm void dStage_roomControl_c::createMemoryBlock(s32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/d/d_stage/createMemoryBlock__20dStage_roomControl_cFiUl.s"
 }
 #pragma pop
 
 
-/* 800248A8-8002490C 0064+00 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
+/* 800248A8-8002490C 0064+00 rc=1 efc=0 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroyMemoryBlock__20dStage_roomControl_cFv) {
+asm void dStage_roomControl_c::destroyMemoryBlock() {
 	nofralloc
 #include "asm/d/d_stage/destroyMemoryBlock__20dStage_roomControl_cFv.s"
 }
@@ -1770,7 +2758,7 @@ ASM_FUNCTION(destroyMemoryBlock__20dStage_roomControl_cFv) {
 
 
 /* ############################################################################################## */
-/* 803A696C-803A6AAC 0140+00 .data      mArcBank__20dStage_roomControl_c                             */
+/* 803A696C-803A6AAC 0140+00 rc=2 efc=0 .data      mArcBank__20dStage_roomControl_c                             */
 u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1794,176 +2782,176 @@ u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8002490C-80024940 0034+00 .text      setArcBank__20dStage_roomControl_cFiPCc                      */
+/* 8002490C-80024940 0034+00 rc=2 efc=1 .text      setArcBank__20dStage_roomControl_cFiPCc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArcBank__20dStage_roomControl_cFiPCc) {
+asm void dStage_roomControl_c::setArcBank(s32 field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/d_stage/setArcBank__20dStage_roomControl_cFiPCc.s"
 }
 #pragma pop
 
 
-/* 80024940-80024954 0014+00 .text      getArcBank__20dStage_roomControl_cFi                         */
+/* 80024940-80024954 0014+00 rc=2 efc=1 .text      getArcBank__20dStage_roomControl_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcBank__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::getArcBank(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/getArcBank__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 80024954-80024A34 00E0+00 .text      resetArchiveBank__20dStage_roomControl_cFi                   */
+/* 80024954-80024A34 00E0+00 rc=2 efc=2 .text      resetArchiveBank__20dStage_roomControl_cFi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetArchiveBank__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::resetArchiveBank(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/resetArchiveBank__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 80024A34-80024ABC 0088+00 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
+/* 80024A34-80024ABC 0088+00 rc=1 efc=0 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__Q220dStage_roomControl_c9roomDzs_cFUc) {
+asm void dStage_roomControl_c::roomDzs_c::create(char field_0) {
 	nofralloc
 #include "asm/d/d_stage/create__Q220dStage_roomControl_c9roomDzs_cFUc.s"
 }
 #pragma pop
 
 
-/* 80024ABC-80024B44 0088+00 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 */
+/* 80024ABC-80024B44 0088+00 rc=1 efc=0 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__Q220dStage_roomControl_c9roomDzs_cFv) {
+asm void dStage_roomControl_c::roomDzs_c::remove() {
 	nofralloc
 #include "asm/d/d_stage/remove__Q220dStage_roomControl_c9roomDzs_cFv.s"
 }
 #pragma pop
 
 
-/* 80024B44-80024C1C 00D8+00 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
+/* 80024B44-80024C1C 00D8+00 rc=1 efc=0 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(add__Q220dStage_roomControl_c9roomDzs_cFUcUc) {
+asm void dStage_roomControl_c::roomDzs_c::add(char field_0, char field_1) {
 	nofralloc
 #include "asm/d/d_stage/add__Q220dStage_roomControl_c9roomDzs_cFUcUc.s"
 }
 #pragma pop
 
 
-/* 80024C1C-80024CA8 008C+00 .text      init__16dStage_stageDt_cFv                                   */
+/* 80024C1C-80024CA8 008C+00 rc=1 efc=0 .text      init__16dStage_stageDt_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__16dStage_stageDt_cFv) {
+asm void dStage_stageDt_c::init() {
 	nofralloc
 #include "asm/d/d_stage/init__16dStage_stageDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80024CA8-80024CB4 000C+00 .text      initFileList2__15dStage_roomDt_cFv                           */
+/* 80024CA8-80024CB4 000C+00 rc=1 efc=0 .text      initFileList2__15dStage_roomDt_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFileList2__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::initFileList2() {
 	nofralloc
 #include "asm/d/d_stage/initFileList2__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80024CB4-80024D10 005C+00 .text      init__15dStage_roomDt_cFv                                    */
+/* 80024CB4-80024D10 005C+00 rc=1 efc=0 .text      init__15dStage_roomDt_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::init() {
 	nofralloc
 #include "asm/d/d_stage/init__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80024D10-80024DB0 00A0+00 .text      dStage_roomInit__Fi                                          */
+/* 80024D10-80024DB0 00A0+00 rc=1 efc=0 .text      dStage_roomInit__Fi                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_roomInit__Fi) {
+asm static void dStage_roomInit(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_roomInit__Fi.s"
 }
 #pragma pop
 
 
-/* 80024DB0-80024DB8 0008+00 .text      SetTimePass__20dStage_roomControl_cFi                        */
+/* 80024DB0-80024DB8 0008+00 rc=2 efc=0 .text      SetTimePass__20dStage_roomControl_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetTimePass__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::SetTimePass(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/SetTimePass__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 80024DB8-80024DC0 0008+00 .text      getRoom__16dStage_stageDt_cCFv                               */
+/* 80024DB8-80024DC0 0008+00 rc=1 efc=0 .text      getRoom__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRoom__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getRoom() const {
 	nofralloc
 #include "asm/d/d_stage/getRoom__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80024DC0-80024E30 0070+00 .text      dStage_searchName__FPCc                                      */
+/* 80024DC0-80024E30 0070+00 rc=5 efc=4 .text      dStage_searchName__FPCc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_searchName__FPCc) {
+asm void dStage_searchName(char const* field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_searchName__FPCc.s"
 }
 #pragma pop
 
 
-/* 80024E30-80024EDC 00AC+00 .text      dStage_getName__FsSc                                         */
+/* 80024E30-80024EDC 00AC+00 rc=1 efc=0 .text      dStage_getName__FsSc                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_getName__FsSc) {
+asm static void dStage_getName(s16 field_0, char field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_getName__FsSc.s"
 }
 #pragma pop
 
 
-/* 80024EDC-80024EFC 0020+00 .text      dStage_getName2__FsSc                                        */
+/* 80024EDC-80024EFC 0020+00 rc=1 efc=1 .text      dStage_getName2__FsSc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_getName2__FsSc) {
+asm void dStage_getName2(s16 field_0, char field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_getName2__FsSc.s"
 }
 #pragma pop
 
 
-/* 80024EFC-80024F98 009C+00 .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
+/* 80024EFC-80024F98 009C+00 rc=7 efc=0 .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class) {
+asm static void dStage_actorCreate(stage_actor_data_class* field_0, fopAcM_prm_class* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class.s"
 }
@@ -1971,577 +2959,577 @@ ASM_FUNCTION(dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class) 
 
 
 /* ############################################################################################## */
-/* 80451C90-80451C94 0004+00 .sdata2    @4270                                                        */
+/* 80451C90-80451C94 0004+00 rc=2 efc=0 .sdata2    @4270                                                        */
 u8 d_d_stage__lit_4270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80024F98-80025004 006C+00 .text      dStage_cameraCreate__FP24stage_camera2_data_classii          */
+/* 80024F98-80025004 006C+00 rc=1 efc=0 .text      dStage_cameraCreate__FP24stage_camera2_data_classii          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_cameraCreate__FP24stage_camera2_data_classii) {
+asm static void dStage_cameraCreate(stage_camera2_data_class* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/dStage_cameraCreate__FP24stage_camera2_data_classii.s"
 }
 #pragma pop
 
 
-/* 80025004-8002500C 0008+00 .text      getPlayer__15dStage_roomDt_cCFv                              */
+/* 80025004-8002500C 0008+00 rc=1 efc=0 .text      getPlayer__15dStage_roomDt_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayer__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPlayer() const {
 	nofralloc
 #include "asm/d/d_stage/getPlayer__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002500C-80025014 0008+00 .text      getPlayer__16dStage_stageDt_cCFv                             */
+/* 8002500C-80025014 0008+00 rc=1 efc=0 .text      getPlayer__16dStage_stageDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayer__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPlayer() const {
 	nofralloc
 #include "asm/d/d_stage/getPlayer__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80025014-800252B8 02A4+00 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      */
+/* 80025014-800252B8 02A4+00 rc=2 efc=0 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_playerInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_playerInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_playerInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800252B8-80025308 0050+00 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      */
+/* 800252B8-80025308 0050+00 rc=1 efc=0 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_cameraInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_cameraInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_cameraInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025308-8002533C 0034+00 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  */
+/* 80025308-8002533C 0034+00 rc=1 efc=0 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_RoomCameraInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_RoomCameraInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_RoomCameraInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002533C-80025370 0034+00 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       */
+/* 8002533C-80025370 0034+00 rc=2 efc=0 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_arrowInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_arrowInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_arrowInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025370-800253FC 008C+00 .text      getMapInfo2__15dStage_roomDt_cCFi                            */
+/* 80025370-800253FC 008C+00 rc=1 efc=0 .text      getMapInfo2__15dStage_roomDt_cCFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfo2__15dStage_roomDt_cCFi) {
+asm void dStage_roomDt_c::getMapInfo2(s32 field_0) const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfo2__15dStage_roomDt_cCFi.s"
 }
 #pragma pop
 
 
-/* 800253FC-80025404 0008+00 .text      getMapInfoBase__15dStage_roomDt_cCFv                         */
+/* 800253FC-80025404 0008+00 rc=1 efc=0 .text      getMapInfoBase__15dStage_roomDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfoBase__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMapInfoBase() const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfoBase__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80025404-80025490 008C+00 .text      getMapInfo2__16dStage_stageDt_cCFi                           */
+/* 80025404-80025490 008C+00 rc=1 efc=0 .text      getMapInfo2__16dStage_stageDt_cCFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfo2__16dStage_stageDt_cCFi) {
+asm void dStage_stageDt_c::getMapInfo2(s32 field_0) const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfo2__16dStage_stageDt_cCFi.s"
 }
 #pragma pop
 
 
-/* 80025490-80025498 0008+00 .text      getMapInfoBase__16dStage_stageDt_cCFv                        */
+/* 80025490-80025498 0008+00 rc=1 efc=0 .text      getMapInfoBase__16dStage_stageDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfoBase__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMapInfoBase() const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfoBase__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80025498-800254CC 0034+00 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 */
+/* 80025498-800254CC 0034+00 rc=1 efc=0 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_paletteInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_paletteInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_paletteInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800254CC-80025500 0034+00 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
+/* 800254CC-80025500 0034+00 rc=1 efc=0 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_pselectInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_pselectInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_pselectInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025500-80025534 0034+00 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025500-80025534 0034+00 rc=1 efc=0 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_envrInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_envrInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_envrInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025534-8002556C 0038+00 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
+/* 80025534-8002556C 0038+00 rc=1 efc=0 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_filiInfo2Init__FP11dStage_dt_cPviPv) {
+asm static void dStage_filiInfo2Init(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_filiInfo2Init__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002556C-8002558C 0020+00 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           */
+/* 8002556C-8002558C 0020+00 rc=1 efc=0 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv) {
+asm static void dStage_fieldMapFiliInfo2Init(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002558C-800255E0 0054+00 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    */
+/* 8002558C-800255E0 0054+00 rc=2 efc=0 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_filiInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_filiInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_filiInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800255E0-80025614 0034+00 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   */
+/* 800255E0-80025614 0034+00 rc=2 efc=0 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_vrboxInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_vrboxInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_vrboxInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025614-80025648 0034+00 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                */
+/* 80025614-80025648 0034+00 rc=1 efc=0 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_vrboxcolInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025648-800256AC 0064+00 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  */
+/* 80025648-800256AC 0064+00 rc=2 efc=0 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_plightInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_plightInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_plightInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800256AC-80025738 008C+00 .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    */
+/* 800256AC-80025738 008C+00 rc=1 efc=0 .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_lgtvInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_lgtvInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_lgtvInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025738-80025744 000C+00 .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    */
+/* 80025738-80025744 000C+00 rc=1 efc=1 .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi) {
+asm void dStage_stagInfo_GetParticleNo(stage_stag_info_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi.s"
 }
 #pragma pop
 
 
-/* 80025744-8002582C 00E8+00 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025744-8002582C 00E8+00 rc=1 efc=0 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_stagInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_stagInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_stagInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002582C-80025838 000C+00 .text      resetOldMulti__16dStage_stageDt_cFv                          */
+/* 8002582C-80025838 000C+00 rc=1 efc=0 .text      resetOldMulti__16dStage_stageDt_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetOldMulti__16dStage_stageDt_cFv) {
+asm void dStage_stageDt_c::resetOldMulti() {
 	nofralloc
 #include "asm/d/d_stage/resetOldMulti__16dStage_stageDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80025838-8002586C 0034+00 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025838-8002586C 0034+00 rc=2 efc=0 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_sclsInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_sclsInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_sclsInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002586C-80025958 00EC+00 .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            */
+/* 8002586C-80025958 00EC+00 rc=1 efc=0 .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_actorCommonLayerInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025958-80025A38 00E0+00 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             */
+/* 80025958-80025A38 00E0+00 rc=1 efc=0 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_tgscCommonLayerInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025A38-80025B24 00EC+00 .text      dStage_actorInit__FP11dStage_dt_cPviPv                       */
+/* 80025A38-80025B24 00EC+00 rc=3 efc=0 .text      dStage_actorInit__FP11dStage_dt_cPviPv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_actorInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_actorInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_actorInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025B24-80025BFC 00D8+00 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                */
+/* 80025B24-80025BFC 00D8+00 rc=1 efc=0 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_actorInit_always__FP11dStage_dt_cPviPv) {
+asm static void dStage_actorInit_always(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_actorInit_always__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025BFC-80025CDC 00E0+00 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025BFC-80025CDC 00E0+00 rc=4 efc=0 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_tgscInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_tgscInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_tgscInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025CDC-80025DA8 00CC+00 .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025CDC-80025DA8 00CC+00 rc=1 efc=0 .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_doorInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_doorInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_doorInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025DA8-80025E40 0098+00 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    */
+/* 80025DA8-80025E40 0098+00 rc=2 efc=0 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_roomReadInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_roomReadInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_roomReadInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025E40-80025E70 0030+00 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     */
+/* 80025E40-80025E70 0030+00 rc=1 efc=1 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi) {
+asm void dStage_roomRead_dt_c_GetReverbStage(roomRead_class& field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi.s"
 }
 #pragma pop
 
 
-/* 80025E70-80025EA4 0034+00 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025E70-80025EA4 0034+00 rc=1 efc=0 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_ppntInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_ppntInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_ppntInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025EA4-80025F44 00A0+00 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025EA4-80025F44 00A0+00 rc=1 efc=0 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_pathInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_pathInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_pathInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025F44-80025F78 0034+00 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025F44-80025F78 0034+00 rc=2 efc=0 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_rppnInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_rppnInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_rppnInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025F78-80026018 00A0+00 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025F78-80026018 00A0+00 rc=2 efc=0 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_rpatInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_rpatInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_rpatInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026018-8002604C 0034+00 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   */
+/* 80026018-8002604C 0034+00 rc=1 efc=0 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_soundInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_soundInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_soundInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002604C-80026080 0034+00 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 */
+/* 8002604C-80026080 0034+00 rc=2 efc=0 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_soundInfoInitCL__FP11dStage_dt_cPviPv) {
+asm static void dStage_soundInfoInitCL(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_soundInfoInitCL__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026080-800260B4 0034+00 .text      dStage_setLayerTagName__FP9FuncTableii                       */
+/* 80026080-800260B4 0034+00 rc=3 efc=0 .text      dStage_setLayerTagName__FP9FuncTableii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_setLayerTagName__FP9FuncTableii) {
+asm static void dStage_setLayerTagName(FuncTable* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/dStage_setLayerTagName__FP9FuncTableii.s"
 }
 #pragma pop
 
 
-/* 800260B4-8002617C 00C8+00 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            */
+/* 800260B4-8002617C 00C8+00 rc=9 efc=0 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei) {
+asm static void dStage_dt_c_decode(void* field_0, dStage_dt_c* field_1, FuncTable* field_2, s32 field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei.s"
 }
 #pragma pop
 
 
-/* 8002617C-800261B0 0034+00 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 */
+/* 8002617C-800261B0 0034+00 rc=1 efc=0 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_stEventInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_stEventInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_stEventInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800261B0-800261E4 0034+00 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                */
+/* 800261B0-800261E4 0034+00 rc=1 efc=0 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_mapEventInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_mapEventInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_mapEventInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800261E4-80026218 0034+00 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   */
+/* 800261E4-80026218 0034+00 rc=2 efc=0 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_floorInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_floorInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_floorInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026218-80026298 0080+00 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026218-80026298 0080+00 rc=1 efc=0 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_memaInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_memaInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_memaInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026298-8002631C 0084+00 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026298-8002631C 0084+00 rc=1 efc=0 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_mecoInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_mecoInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_mecoInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002631C-8002634C 0030+00 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            */
+/* 8002631C-8002634C 0030+00 rc=2 efc=0 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_stageKeepTresureInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002634C-8002635C 0010+00 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             */
+/* 8002634C-8002635C 0010+00 rc=1 efc=0 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_fieldMapTresureInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002635C-800263A0 0044+00 .text      dStage_dt_c_offsetToPtr__FPv                                 */
+/* 8002635C-800263A0 0044+00 rc=4 efc=0 .text      dStage_dt_c_offsetToPtr__FPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_offsetToPtr__FPv) {
+asm static void dStage_dt_c_offsetToPtr(void* field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_offsetToPtr__FPv.s"
 }
 #pragma pop
 
 
-/* 800263A0-800263D0 0030+00 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     */
+/* 800263A0-800263D0 0030+00 rc=1 efc=0 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_mapPathInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_mapPathInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_mapPathInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800263D0-80026400 0030+00 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          */
+/* 800263D0-80026400 0030+00 rc=1 efc=0 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv) {
+asm static void dStage_mapPathInitCommonLayer(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026400-8002645C 005C+00 .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             */
+/* 80026400-8002645C 005C+00 rc=1 efc=0 .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_fieldMapMapPathInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv.s"
 }
@@ -2549,223 +3537,223 @@ ASM_FUNCTION(dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv) {
 
 
 /* ############################################################################################## */
-/* 80450D74-80450D80 0008+04 .sbss      m_roomDzs__20dStage_roomControl_c                            */
+/* 80450D74-80450D80 0008+04 rc=3 efc=0 .sbss      m_roomDzs__20dStage_roomControl_c                            */
 u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
 
-/* 8002645C-800265DC 0180+00 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  */
+/* 8002645C-800265DC 0180+00 rc=1 efc=0 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readMult__FP11dStage_dt_cP14dStage_Multi_cb) {
+asm static void readMult(dStage_dt_c* field_0, dStage_Multi_c* field_1, bool field_2) {
 	nofralloc
 #include "asm/d/d_stage/readMult__FP11dStage_dt_cP14dStage_Multi_cb.s"
 }
 #pragma pop
 
 
-/* 800265DC-80026670 0094+00 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    */
+/* 800265DC-80026670 0094+00 rc=1 efc=0 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_multInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_multInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_multInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026670-800266A4 0034+00 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026670-800266A4 0034+00 rc=1 efc=0 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_lbnkInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_lbnkInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_lbnkInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800266A4-8002670C 0068+00 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 */
+/* 800266A4-8002670C 0068+00 rc=1 efc=0 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_roomTresureInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_roomTresureInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_roomTresureInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 8002670C-80026730 0024+00 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                */
+/* 8002670C-80026730 0024+00 rc=1 efc=0 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_layerTresureInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_layerTresureInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_layerTresureInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026730-80026764 0034+00 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026730-80026764 0034+00 rc=1 efc=0 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dmapInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_dmapInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dmapInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026764-800267DC 0078+00 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               */
+/* 80026764-800267DC 0078+00 rc=1 efc=0 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_stageDrtgInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 800267DC-80026844 0068+00 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                */
+/* 800267DC-80026844 0068+00 rc=2 efc=0 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_roomDrtgInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026844-80026898 0054+00 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026844-80026898 0054+00 rc=1 efc=0 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_elstInfoInit__FP11dStage_dt_cPviPv) {
+asm static void dStage_elstInfoInit(dStage_dt_c* field_0, void* field_1, s32 field_2, void* field_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_elstInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80026898-80026914 007C+00 .text      dKankyo_create__Fv                                           */
+/* 80026898-80026914 007C+00 rc=1 efc=0 .text      dKankyo_create__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKankyo_create__Fv) {
+asm static void dKankyo_create() {
 	nofralloc
 #include "asm/d/d_stage/dKankyo_create__Fv.s"
 }
 #pragma pop
 
 
-/* 80026914-80026940 002C+00 .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    */
+/* 80026914-80026940 002C+00 rc=1 efc=0 .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(layerMemoryInfoLoader__FPvP11dStage_dt_ci) {
+asm static void layerMemoryInfoLoader(void* field_0, dStage_dt_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/layerMemoryInfoLoader__FPvP11dStage_dt_ci.s"
 }
 #pragma pop
 
 
-/* 80026940-800269B4 0074+00 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               */
+/* 80026940-800269B4 0074+00 rc=1 efc=0 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c) {
+asm static void dStage_dt_c_stageInitLoader(void* field_0, dStage_dt_c* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 800269B4-80026AE8 0134+00 .text      layerTableLoader__FPvP11dStage_dt_ci                         */
+/* 800269B4-80026AE8 0134+00 rc=2 efc=0 .text      layerTableLoader__FPvP11dStage_dt_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(layerTableLoader__FPvP11dStage_dt_ci) {
+asm static void layerTableLoader(void* field_0, dStage_dt_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/layerTableLoader__FPvP11dStage_dt_ci.s"
 }
 #pragma pop
 
 
-/* 80026AE8-80026AF0 0008+00 .text      getElst__16dStage_stageDt_cFv                                */
+/* 80026AE8-80026AF0 0008+00 rc=1 efc=0 .text      getElst__16dStage_stageDt_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getElst__16dStage_stageDt_cFv) {
+asm void dStage_stageDt_c::getElst() {
 	nofralloc
 #include "asm/d/d_stage/getElst__16dStage_stageDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80026AF0-80026B58 0068+00 .text      layerActorLoader__FPvP11dStage_dt_ci                         */
+/* 80026AF0-80026B58 0068+00 rc=2 efc=0 .text      layerActorLoader__FPvP11dStage_dt_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(layerActorLoader__FPvP11dStage_dt_ci) {
+asm static void layerActorLoader(void* field_0, dStage_dt_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/layerActorLoader__FPvP11dStage_dt_ci.s"
 }
 #pragma pop
 
 
-/* 80026B58-80026BBC 0064+00 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   */
+/* 80026B58-80026BBC 0064+00 rc=1 efc=0 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_stageLoader__FPvP11dStage_dt_c) {
+asm static void dStage_dt_c_stageLoader(void* field_0, dStage_dt_c* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_stageLoader__FPvP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80026BBC-80026C34 0078+00 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   */
+/* 80026BBC-80026C34 0078+00 rc=1 efc=1 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_roomLoader__FPvP11dStage_dt_ci) {
+asm void dStage_dt_c_roomLoader(void* field_0, dStage_dt_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_roomLoader__FPvP11dStage_dt_ci.s"
 }
 #pragma pop
 
 
-/* 80026C34-80026C8C 0058+00 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 */
+/* 80026C34-80026C8C 0058+00 rc=1 efc=1 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci) {
+asm void dStage_dt_c_roomReLoader(void* field_0, dStage_dt_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci.s"
 }
 #pragma pop
 
 
-/* 80026C8C-80026CDC 0050+00 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                */
+/* 80026C8C-80026CDC 0050+00 rc=1 efc=1 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c) {
+asm void dStage_dt_c_fieldMapLoader(void* field_0, dStage_dt_c* field_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80026CDC-80026D38 005C+00 .text      dStage_infoCreate__Fv                                        */
+/* 80026CDC-80026D38 005C+00 rc=1 efc=1 .text      dStage_infoCreate__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_infoCreate__Fv) {
+asm void dStage_infoCreate() {
 	nofralloc
 #include "asm/d/d_stage/dStage_infoCreate__Fv.s"
 }
@@ -2773,58 +3761,58 @@ ASM_FUNCTION(dStage_infoCreate__Fv) {
 
 
 /* ############################################################################################## */
-/* 80406194-804061A0 000A+02 .bss       mDemoArcName__20dStage_roomControl_c                         */
+/* 80406194-804061A0 000A+02 rc=16 efc=14 .bss       mDemoArcName__20dStage_roomControl_c                         */
 u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 
-/* 80026D38-80026DF8 00C0+00 .text      dStage_Create__Fv                                            */
+/* 80026D38-80026DF8 00C0+00 rc=1 efc=1 .text      dStage_Create__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_Create__Fv) {
+asm void dStage_Create() {
 	nofralloc
 #include "asm/d/d_stage/dStage_Create__Fv.s"
 }
 #pragma pop
 
 
-/* 80026DF8-80026FDC 01E4+00 .text      dStage_Delete__Fv                                            */
+/* 80026DF8-80026FDC 01E4+00 rc=1 efc=1 .text      dStage_Delete__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_Delete__Fv) {
+asm void dStage_Delete() {
 	nofralloc
 #include "asm/d/d_stage/dStage_Delete__Fv.s"
 }
 #pragma pop
 
 
-/* 80026FDC-80026FE8 000C+00 .text      setOldMulti__16dStage_stageDt_cFv                            */
+/* 80026FDC-80026FE8 000C+00 rc=1 efc=0 .text      setOldMulti__16dStage_stageDt_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOldMulti__16dStage_stageDt_cFv) {
+asm void dStage_stageDt_c::setOldMulti() {
 	nofralloc
 #include "asm/d/d_stage/setOldMulti__16dStage_stageDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80026FE8-800270FC 0114+00 .text      dStage_RoomCheck__FP11cBgS_GndChk                            */
+/* 80026FE8-800270FC 0114+00 rc=1 efc=1 .text      dStage_RoomCheck__FP11cBgS_GndChk                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_RoomCheck__FP11cBgS_GndChk) {
+asm void dStage_RoomCheck(cBgS_GndChk* field_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_RoomCheck__FP11cBgS_GndChk.s"
 }
 #pragma pop
 
 
-/* 800270FC-80027170 0074+00 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            */
+/* 800270FC-80027170 0074+00 rc=1 efc=1 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs) {
+asm void dStage_changeSceneExitId(cBgS_PolyInfo& field_0, f32 field_1, u32 field_2, char field_3, s16 field_4) {
 	nofralloc
 #include "asm/d/d_stage/dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs.s"
 }
@@ -2832,1920 +3820,1900 @@ ASM_FUNCTION(dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs) {
 
 
 /* ############################################################################################## */
-/* 80451C94-80451C98 0004+00 .sdata2    @5315                                                        */
+/* 80451C94-80451C98 0004+00 rc=2 efc=0 .sdata2    @5315                                                        */
 f32 lit_5315 = 15.0f;
 
-/* 80451C98-80451CA0 0008+00 .sdata2    @5317                                                        */
+/* 80451C98-80451CA0 0008+00 rc=2 efc=0 .sdata2    @5317                                                        */
 f64 lit_5317 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80027170-800272E0 0170+00 .text      dStage_changeScene__FifUlScsi                                */
+/* 80027170-800272E0 0170+00 rc=11 efc=10 .text      dStage_changeScene__FifUlScsi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_changeScene__FifUlScsi) {
+asm void dStage_changeScene(s32 field_0, f32 field_1, u32 field_2, char field_3, s16 field_4, s32 field_5) {
 	nofralloc
 #include "asm/d/d_stage/dStage_changeScene__FifUlScsi.s"
 }
 #pragma pop
 
 
-/* 800272E0-800272E8 0008+00 .text      getSclsInfo__15dStage_roomDt_cCFv                            */
+/* 800272E0-800272E8 0008+00 rc=1 efc=0 .text      getSclsInfo__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSclsInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getSclsInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getSclsInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800272E8-800272F0 0008+00 .text      getSclsInfo__16dStage_stageDt_cCFv                           */
+/* 800272E8-800272F0 0008+00 rc=1 efc=0 .text      getSclsInfo__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSclsInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getSclsInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getSclsInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800272F0-800274B0 01C0+00 .text      dStage_changeScene4Event__FiScibfUlsi                        */
+/* 800272F0-800274B0 01C0+00 rc=1 efc=1 .text      dStage_changeScene4Event__FiScibfUlsi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_changeScene4Event__FiScibfUlsi) {
+asm void dStage_changeScene4Event(s32 field_0, char field_1, s32 field_2, bool field_3, f32 field_4, u32 field_5, s16 field_6, s32 field_7) {
 	nofralloc
 #include "asm/d/d_stage/dStage_changeScene4Event__FiScibfUlsi.s"
 }
 #pragma pop
 
 
-/* 800274B0-80027524 0074+00 .text      dStage_restartRoom__FUlUli                                   */
+/* 800274B0-80027524 0074+00 rc=1 efc=1 .text      dStage_restartRoom__FUlUli                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dStage_restartRoom__FUlUli) {
+asm void dStage_restartRoom(u32 field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_stage/dStage_restartRoom__FUlUli.s"
 }
 #pragma pop
 
 
-/* 80027524-8002752C 0008+00 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           */
+/* 80027524-8002752C 0008+00 rc=1 efc=0 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCamera__15dStage_roomDt_cFP18stage_camera_class) {
+asm void dStage_roomDt_c::setCamera(stage_camera_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setCamera__15dStage_roomDt_cFP18stage_camera_class.s"
 }
 #pragma pop
 
 
-/* 8002752C-80027534 0008+00 .text      getCamera__15dStage_roomDt_cCFv                              */
+/* 8002752C-80027534 0008+00 rc=1 efc=0 .text      getCamera__15dStage_roomDt_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCamera__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getCamera() const {
 	nofralloc
 #include "asm/d/d_stage/getCamera__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027534-8002753C 0008+00 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             */
+/* 80027534-8002753C 0008+00 rc=1 efc=0 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrow__15dStage_roomDt_cFP17stage_arrow_class) {
+asm void dStage_roomDt_c::setArrow(stage_arrow_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setArrow__15dStage_roomDt_cFP17stage_arrow_class.s"
 }
 #pragma pop
 
 
-/* 8002753C-80027544 0008+00 .text      getArrow__15dStage_roomDt_cCFv                               */
+/* 8002753C-80027544 0008+00 rc=1 efc=0 .text      getArrow__15dStage_roomDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArrow__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getArrow() const {
 	nofralloc
 #include "asm/d/d_stage/getArrow__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027544-8002754C 0008+00 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            */
+/* 80027544-8002754C 0008+00 rc=1 efc=0 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayer__15dStage_roomDt_cFP17stage_actor_class) {
+asm void dStage_roomDt_c::setPlayer(stage_actor_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlayer__15dStage_roomDt_cFP17stage_actor_class.s"
 }
 #pragma pop
 
 
-/* 8002754C-80027554 0008+00 .text      setPlayerNum__15dStage_roomDt_cFUs                           */
+/* 8002754C-80027554 0008+00 rc=1 efc=0 .text      setPlayerNum__15dStage_roomDt_cFUs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayerNum__15dStage_roomDt_cFUs) {
+asm void dStage_roomDt_c::setPlayerNum(u16 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlayerNum__15dStage_roomDt_cFUs.s"
 }
 #pragma pop
 
 
-/* 80027554-8002755C 0008+00 .text      getPlayerNum__15dStage_roomDt_cCFv                           */
+/* 80027554-8002755C 0008+00 rc=1 efc=0 .text      getPlayerNum__15dStage_roomDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayerNum__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPlayerNum() const {
 	nofralloc
 #include "asm/d/d_stage/getPlayerNum__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002755C-80027590 0034+00 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 */
+/* 8002755C-80027590 0034+00 rc=1 efc=0 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoom__15dStage_roomDt_cFP14roomRead_class) {
+asm void dStage_roomDt_c::setRoom(roomRead_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setRoom__15dStage_roomDt_cFP14roomRead_class.s"
 }
 #pragma pop
 
 
-/* 80027590-800275C4 0034+00 .text      getRoom__15dStage_roomDt_cCFv                                */
+/* 80027590-800275C4 0034+00 rc=1 efc=0 .text      getRoom__15dStage_roomDt_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRoom__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getRoom() const {
 	nofralloc
 #include "asm/d/d_stage/getRoom__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800275C4-800275CC 0008+00 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        */
+/* 800275C4-800275CC 0008+00 rc=1 efc=0 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapInfo__15dStage_roomDt_cFP20stage_map_info_class) {
+asm void dStage_roomDt_c::setMapInfo(stage_map_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapInfo__15dStage_roomDt_cFP20stage_map_info_class.s"
 }
 #pragma pop
 
 
-/* 800275CC-800275D4 0008+00 .text      getMapInfo__15dStage_roomDt_cCFv                             */
+/* 800275CC-800275D4 0008+00 rc=1 efc=0 .text      getMapInfo__15dStage_roomDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMapInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800275D4-800275DC 0008+00 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class */
+/* 800275D4-800275DC 0008+00 rc=1 efc=0 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class) {
+asm void dStage_roomDt_c::setMapInfoBase(stage_map_info_dummy_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class.s"
 }
 #pragma pop
 
 
-/* 800275DC-80027610 0034+00 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class */
+/* 800275DC-80027610 0034+00 rc=1 efc=0 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class) {
+asm void dStage_roomDt_c::setPaletteInfo(stage_palette_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class.s"
 }
 #pragma pop
 
 
-/* 80027610-80027644 0034+00 .text      getPaletteInfo__15dStage_roomDt_cCFv                         */
+/* 80027610-80027644 0034+00 rc=1 efc=0 .text      getPaletteInfo__15dStage_roomDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPaletteInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPaletteInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPaletteInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027644-80027678 0034+00 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class */
+/* 80027644-80027678 0034+00 rc=1 efc=0 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class) {
+asm void dStage_roomDt_c::setPselectInfo(stage_pselect_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class.s"
 }
 #pragma pop
 
 
-/* 80027678-800276AC 0034+00 .text      getPselectInfo__15dStage_roomDt_cCFv                         */
+/* 80027678-800276AC 0034+00 rc=1 efc=0 .text      getPselectInfo__15dStage_roomDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPselectInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPselectInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPselectInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800276AC-800276E0 0034+00 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      */
+/* 800276AC-800276E0 0034+00 rc=1 efc=0 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class) {
+asm void dStage_roomDt_c::setEnvrInfo(stage_envr_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class.s"
 }
 #pragma pop
 
 
-/* 800276E0-80027714 0034+00 .text      getEnvrInfo__15dStage_roomDt_cCFv                            */
+/* 800276E0-80027714 0034+00 rc=1 efc=0 .text      getEnvrInfo__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEnvrInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getEnvrInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getEnvrInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027714-8002771C 0008+00 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    */
+/* 80027714-8002771C 0008+00 rc=1 efc=0 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class) {
+asm void dStage_roomDt_c::setVrboxInfo(stage_vrbox_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class.s"
 }
 #pragma pop
 
 
-/* 8002771C-80027724 0008+00 .text      getVrboxInfo__15dStage_roomDt_cCFv                           */
+/* 8002771C-80027724 0008+00 rc=1 efc=0 .text      getVrboxInfo__15dStage_roomDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getVrboxInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027724-8002772C 0008+00 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class */
+/* 80027724-8002772C 0008+00 rc=1 efc=0 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class) {
+asm void dStage_roomDt_c::setVrboxcolInfo(stage_vrboxcol_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class.s"
 }
 #pragma pop
 
 
-/* 8002772C-80027734 0008+00 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        */
+/* 8002772C-80027734 0008+00 rc=1 efc=0 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxcolInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getVrboxcolInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxcolInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027734-80027768 0034+00 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  */
+/* 80027734-80027768 0034+00 rc=1 efc=0 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class) {
+asm void dStage_roomDt_c::setPlightInfo(stage_plight_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class.s"
 }
 #pragma pop
 
 
-/* 80027768-8002779C 0034+00 .text      getPlightInfo__15dStage_roomDt_cCFv                          */
+/* 80027768-8002779C 0034+00 rc=1 efc=0 .text      getPlightInfo__15dStage_roomDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlightInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPlightInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPlightInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002779C-800277D0 0034+00 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       */
+/* 8002779C-800277D0 0034+00 rc=1 efc=0 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPaletteNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setPaletteNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPaletteNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 800277D0-80027804 0034+00 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      */
+/* 800277D0-80027804 0034+00 rc=1 efc=0 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPaletteNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPaletteNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPaletteNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027804-80027838 0034+00 .text      setPselectNumInfo__15dStage_roomDt_cFi                       */
+/* 80027804-80027838 0034+00 rc=1 efc=0 .text      setPselectNumInfo__15dStage_roomDt_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPselectNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setPselectNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPselectNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027838-8002786C 0034+00 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      */
+/* 80027838-8002786C 0034+00 rc=1 efc=0 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPselectNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPselectNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPselectNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002786C-800278A0 0034+00 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          */
+/* 8002786C-800278A0 0034+00 rc=1 efc=0 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvrNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setEnvrNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setEnvrNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 800278A0-800278D4 0034+00 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         */
+/* 800278A0-800278D4 0034+00 rc=1 efc=0 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEnvrNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getEnvrNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getEnvrNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800278D4-800278DC 0008+00 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         */
+/* 800278D4-800278DC 0008+00 rc=1 efc=0 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setVrboxNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 800278DC-800278E4 0008+00 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        */
+/* 800278DC-800278E4 0008+00 rc=1 efc=0 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getVrboxNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800278E4-800278EC 0008+00 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      */
+/* 800278E4-800278EC 0008+00 rc=1 efc=0 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxcolNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setVrboxcolNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxcolNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 800278EC-800278F4 0008+00 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     */
+/* 800278EC-800278F4 0008+00 rc=1 efc=0 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxcolNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getVrboxcolNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxcolNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800278F4-80027928 0034+00 .text      setPlightNumInfo__15dStage_roomDt_cFi                        */
+/* 800278F4-80027928 0034+00 rc=1 efc=0 .text      setPlightNumInfo__15dStage_roomDt_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlightNumInfo__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setPlightNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlightNumInfo__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027928-8002795C 0034+00 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       */
+/* 80027928-8002795C 0034+00 rc=1 efc=0 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlightNumInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPlightNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPlightNumInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002795C-80027964 0008+00 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class */
+/* 8002795C-80027964 0008+00 rc=1 efc=0 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class) {
+asm void dStage_roomDt_c::setLightVecInfo(stage_pure_lightvec_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class.s"
 }
 #pragma pop
 
 
-/* 80027964-8002796C 0008+00 .text      getLightVecInfo__15dStage_roomDt_cCFv                        */
+/* 80027964-8002796C 0008+00 rc=1 efc=0 .text      getLightVecInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLightVecInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getLightVecInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getLightVecInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002796C-80027974 0008+00 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      */
+/* 8002796C-80027974 0008+00 rc=1 efc=0 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightVecInfoNum__15dStage_roomDt_cFi) {
+asm void dStage_roomDt_c::setLightVecInfoNum(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLightVecInfoNum__15dStage_roomDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027974-8002797C 0008+00 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     */
+/* 80027974-8002797C 0008+00 rc=1 efc=0 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLightVecInfoNum__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getLightVecInfoNum() const {
 	nofralloc
 #include "asm/d/d_stage/getLightVecInfoNum__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 8002797C-800279B0 0034+00 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      */
+/* 8002797C-800279B0 0034+00 rc=1 efc=0 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class) {
+asm void dStage_roomDt_c::setStagInfo(stage_stag_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class.s"
 }
 #pragma pop
 
 
-/* 800279B0-800279E4 0034+00 .text      getStagInfo__15dStage_roomDt_cCFv                            */
+/* 800279B0-800279E4 0034+00 rc=1 efc=0 .text      getStagInfo__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStagInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getStagInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getStagInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800279E4-800279EC 0008+00 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class */
+/* 800279E4-800279EC 0008+00 rc=1 efc=0 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class) {
+asm void dStage_roomDt_c::setSclsInfo(stage_scls_info_dummy_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class.s"
 }
 #pragma pop
 
 
-/* 800279EC-80027A20 0034+00 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               */
+/* 800279EC-80027A20 0034+00 rc=1 efc=0 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c) {
+asm void dStage_roomDt_c::setPntInfo(dStage_dPnt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c.s"
 }
 #pragma pop
 
 
-/* 80027A20-80027A54 0034+00 .text      getPntInf__15dStage_roomDt_cCFv                              */
+/* 80027A20-80027A54 0034+00 rc=1 efc=0 .text      getPntInf__15dStage_roomDt_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPntInf__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPntInf() const {
 	nofralloc
 #include "asm/d/d_stage/getPntInf__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027A54-80027A88 0034+00 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             */
+/* 80027A54-80027A88 0034+00 rc=1 efc=0 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c) {
+asm void dStage_roomDt_c::setPathInfo(dStage_dPath_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c.s"
 }
 #pragma pop
 
 
-/* 80027A88-80027ABC 0034+00 .text      getPathInf__15dStage_roomDt_cCFv                             */
+/* 80027A88-80027ABC 0034+00 rc=1 efc=0 .text      getPathInf__15dStage_roomDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathInf__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPathInf() const {
 	nofralloc
 #include "asm/d/d_stage/getPathInf__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027ABC-80027AC4 0008+00 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              */
+/* 80027ABC-80027AC4 0008+00 rc=1 efc=0 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c) {
+asm void dStage_roomDt_c::setPnt2Info(dStage_dPnt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c.s"
 }
 #pragma pop
 
 
-/* 80027AC4-80027ACC 0008+00 .text      getPnt2Inf__15dStage_roomDt_cCFv                             */
+/* 80027AC4-80027ACC 0008+00 rc=1 efc=0 .text      getPnt2Inf__15dStage_roomDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPnt2Inf__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPnt2Inf() const {
 	nofralloc
 #include "asm/d/d_stage/getPnt2Inf__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027ACC-80027AD4 0008+00 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            */
+/* 80027ACC-80027AD4 0008+00 rc=1 efc=0 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c) {
+asm void dStage_roomDt_c::setPath2Info(dStage_dPath_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c.s"
 }
 #pragma pop
 
 
-/* 80027AD4-80027ADC 0008+00 .text      getPath2Inf__15dStage_roomDt_cCFv                            */
+/* 80027AD4-80027ADC 0008+00 rc=1 efc=0 .text      getPath2Inf__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPath2Inf__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getPath2Inf() const {
 	nofralloc
 #include "asm/d/d_stage/getPath2Inf__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027ADC-80027AE4 0008+00 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         */
+/* 80027ADC-80027AE4 0008+00 rc=1 efc=0 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c) {
+asm void dStage_roomDt_c::setSoundInf(dStage_SoundInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
 }
 #pragma pop
 
 
-/* 80027AE4-80027AEC 0008+00 .text      getSoundInf__15dStage_roomDt_cCFv                            */
+/* 80027AE4-80027AEC 0008+00 rc=1 efc=0 .text      getSoundInf__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSoundInf__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getSoundInf() const {
 	nofralloc
 #include "asm/d/d_stage/getSoundInf__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027AEC-80027AF4 0008+00 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       */
+/* 80027AEC-80027AF4 0008+00 rc=1 efc=0 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c) {
+asm void dStage_roomDt_c::setSoundInfCL(dStage_SoundInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c.s"
 }
 #pragma pop
 
 
-/* 80027AF4-80027AFC 0008+00 .text      getSoundInfCL__15dStage_roomDt_cCFv                          */
+/* 80027AF4-80027AFC 0008+00 rc=1 efc=0 .text      getSoundInfCL__15dStage_roomDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSoundInfCL__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getSoundInfCL() const {
 	nofralloc
 #include "asm/d/d_stage/getSoundInfCL__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027AFC-80027B04 0008+00 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  */
+/* 80027AFC-80027B04 0008+00 rc=1 efc=0 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c) {
+asm void dStage_roomDt_c::setMapEventInfo(dStage_MapEventInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c.s"
 }
 #pragma pop
 
 
-/* 80027B04-80027B0C 0008+00 .text      getMapEventInfo__15dStage_roomDt_cCFv                        */
+/* 80027B04-80027B0C 0008+00 rc=1 efc=0 .text      getMapEventInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapEventInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMapEventInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getMapEventInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027B0C-80027B14 0008+00 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c */
+/* 80027B0C-80027B14 0008+00 rc=1 efc=0 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c) {
+asm void dStage_roomDt_c::setFileList2Info(dStage_FileList2_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c.s"
 }
 #pragma pop
 
 
-/* 80027B14-80027B1C 0008+00 .text      getFileList2Info__15dStage_roomDt_cCFv                       */
+/* 80027B14-80027B1C 0008+00 rc=1 efc=0 .text      getFileList2Info__15dStage_roomDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFileList2Info__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getFileList2Info() const {
 	nofralloc
 #include "asm/d/d_stage/getFileList2Info__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027B1C-80027B24 0008+00 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   */
+/* 80027B1C-80027B24 0008+00 rc=1 efc=0 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c) {
+asm void dStage_roomDt_c::setFileListInfo(dStage_FileList_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c.s"
 }
 #pragma pop
 
 
-/* 80027B24-80027B2C 0008+00 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        */
+/* 80027B24-80027B2C 0008+00 rc=1 efc=0 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c) {
+asm void dStage_roomDt_c::setFloorInfo(dStage_FloorInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c.s"
 }
 #pragma pop
 
 
-/* 80027B2C-80027B34 0008+00 .text      getFloorInfo__15dStage_roomDt_cCFv                           */
+/* 80027B2C-80027B34 0008+00 rc=1 efc=0 .text      getFloorInfo__15dStage_roomDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFloorInfo__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getFloorInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getFloorInfo__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027B34-80027B64 0030+00 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  */
+/* 80027B34-80027B64 0030+00 rc=1 efc=0 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c) {
+asm void dStage_roomDt_c::setMemoryConfig(dStage_MemoryConfig_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c.s"
 }
 #pragma pop
 
 
-/* 80027B64-80027B98 0034+00 .text      getMemoryConfig__15dStage_roomDt_cCFv                        */
+/* 80027B64-80027B98 0034+00 rc=1 efc=0 .text      getMemoryConfig__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMemoryConfig__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMemoryConfig() const {
 	nofralloc
 #include "asm/d/d_stage/getMemoryConfig__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027B98-80027BC8 0030+00 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        */
+/* 80027B98-80027BC8 0030+00 rc=1 efc=0 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c) {
+asm void dStage_roomDt_c::setMemoryMap(dStage_MemoryMap_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c.s"
 }
 #pragma pop
 
 
-/* 80027BC8-80027BFC 0034+00 .text      getMemoryMap__15dStage_roomDt_cCFv                           */
+/* 80027BC8-80027BFC 0034+00 rc=1 efc=0 .text      getMemoryMap__15dStage_roomDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMemoryMap__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMemoryMap() const {
 	nofralloc
 #include "asm/d/d_stage/getMemoryMap__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027BFC-80027C2C 0030+00 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                */
+/* 80027BFC-80027C2C 0030+00 rc=1 efc=0 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMulti__15dStage_roomDt_cFP14dStage_Multi_c) {
+asm void dStage_roomDt_c::setMulti(dStage_Multi_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMulti__15dStage_roomDt_cFP14dStage_Multi_c.s"
 }
 #pragma pop
 
 
-/* 80027C2C-80027C60 0034+00 .text      getMulti__15dStage_roomDt_cCFv                               */
+/* 80027C2C-80027C60 0034+00 rc=1 efc=0 .text      getMulti__15dStage_roomDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMulti__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getMulti() const {
 	nofralloc
 #include "asm/d/d_stage/getMulti__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027C60-80027C90 0030+00 .text      setOldMulti__15dStage_roomDt_cFv                             */
+/* 80027C60-80027C90 0030+00 rc=1 efc=0 .text      setOldMulti__15dStage_roomDt_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOldMulti__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::setOldMulti() {
 	nofralloc
 #include "asm/d/d_stage/setOldMulti__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80027C90-80027CC0 0030+00 .text      resetOldMulti__15dStage_roomDt_cFv                           */
+/* 80027C90-80027CC0 0030+00 rc=1 efc=0 .text      resetOldMulti__15dStage_roomDt_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetOldMulti__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::resetOldMulti() {
 	nofralloc
 #include "asm/d/d_stage/resetOldMulti__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80027CC0-80027CF4 0034+00 .text      getOldMulti__15dStage_roomDt_cCFv                            */
+/* 80027CC0-80027CF4 0034+00 rc=1 efc=0 .text      getOldMulti__15dStage_roomDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOldMulti__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getOldMulti() const {
 	nofralloc
 #include "asm/d/d_stage/getOldMulti__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027CF4-80027CFC 0008+00 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  */
+/* 80027CF4-80027CFC 0008+00 rc=1 efc=0 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c) {
+asm void dStage_roomDt_c::setLbnk(dStage_Lbnk_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c.s"
 }
 #pragma pop
 
 
-/* 80027CFC-80027D04 0008+00 .text      getLbnk__15dStage_roomDt_cCFv                                */
+/* 80027CFC-80027D04 0008+00 rc=1 efc=0 .text      getLbnk__15dStage_roomDt_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLbnk__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getLbnk() const {
 	nofralloc
 #include "asm/d/d_stage/getLbnk__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027D04-80027D0C 0008+00 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         */
+/* 80027D04-80027D0C 0008+00 rc=1 efc=0 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTresure__15dStage_roomDt_cFP19stage_tresure_class) {
+asm void dStage_roomDt_c::setTresure(stage_tresure_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setTresure__15dStage_roomDt_cFP19stage_tresure_class.s"
 }
 #pragma pop
 
 
-/* 80027D0C-80027D14 0008+00 .text      getTresure__15dStage_roomDt_cCFv                             */
+/* 80027D0C-80027D14 0008+00 rc=1 efc=0 .text      getTresure__15dStage_roomDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTresure__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getTresure() const {
 	nofralloc
 #include "asm/d/d_stage/getTresure__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027D14-80027D18 0004+00 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setDMap__15dStage_roomDt_cFP13dStage_DMap_c) {
-	nofralloc
-#include "asm/d/d_stage/setDMap__15dStage_roomDt_cFP13dStage_DMap_c.s"
+/* 80027D14-80027D18 0004+00 rc=1 efc=0 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
+void dStage_roomDt_c::setDMap(dStage_DMap_c* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80027D18-80027D20 0008+00 .text      getDMap__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getDMap__15dStage_roomDt_cCFv) {
-	nofralloc
-#include "asm/d/d_stage/getDMap__15dStage_roomDt_cCFv.s"
+/* 80027D18-80027D20 0008+00 rc=1 efc=0 .text      getDMap__15dStage_roomDt_cCFv                                */
+bool dStage_roomDt_c::getDMap() const {
+	return false;
 }
-#pragma pop
 
 
-/* 80027D20-80027D28 0008+00 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
+/* 80027D20-80027D28 0008+00 rc=1 efc=0 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDrTg__15dStage_roomDt_cFP16stage_tgsc_class) {
+asm void dStage_roomDt_c::setDrTg(stage_tgsc_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setDrTg__15dStage_roomDt_cFP16stage_tgsc_class.s"
 }
 #pragma pop
 
 
-/* 80027D28-80027D30 0008+00 .text      getDrTg__15dStage_roomDt_cCFv                                */
+/* 80027D28-80027D30 0008+00 rc=1 efc=0 .text      getDrTg__15dStage_roomDt_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDrTg__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getDrTg() const {
 	nofralloc
 #include "asm/d/d_stage/getDrTg__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027D30-80027D38 0008+00 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               */
+/* 80027D30-80027D38 0008+00 rc=1 efc=0 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDoor__15dStage_roomDt_cFP16stage_tgsc_class) {
+asm void dStage_roomDt_c::setDoor(stage_tgsc_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setDoor__15dStage_roomDt_cFP16stage_tgsc_class.s"
 }
 #pragma pop
 
 
-/* 80027D38-80027D40 0008+00 .text      getDoor__15dStage_roomDt_cCFv                                */
+/* 80027D38-80027D40 0008+00 rc=1 efc=0 .text      getDoor__15dStage_roomDt_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoor__15dStage_roomDt_cCFv) {
+asm void dStage_roomDt_c::getDoor() const {
 	nofralloc
 #include "asm/d/d_stage/getDoor__15dStage_roomDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027D40-80027D70 0030+00 .text      setMapPath__15dStage_roomDt_cFPv                             */
+/* 80027D40-80027D70 0030+00 rc=1 efc=0 .text      setMapPath__15dStage_roomDt_cFPv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapPath__15dStage_roomDt_cFPv) {
+asm void dStage_roomDt_c::setMapPath(void* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapPath__15dStage_roomDt_cFPv.s"
 }
 #pragma pop
 
 
-/* 80027D70-80027DA4 0034+00 .text      getMapPath__15dStage_roomDt_cFv                              */
+/* 80027D70-80027DA4 0034+00 rc=1 efc=0 .text      getMapPath__15dStage_roomDt_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapPath__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::getMapPath() {
 	nofralloc
 #include "asm/d/d_stage/getMapPath__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80027DA4-80027DD8 0034+00 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  */
+/* 80027DA4-80027DD8 0034+00 rc=1 efc=0 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setElst__15dStage_roomDt_cFP13dStage_Elst_c) {
+asm void dStage_roomDt_c::setElst(dStage_Elst_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setElst__15dStage_roomDt_cFP13dStage_Elst_c.s"
 }
 #pragma pop
 
 
-/* 80027DD8-80027E10 0038+00 .text      getElst__15dStage_roomDt_cFv                                 */
+/* 80027DD8-80027E10 0038+00 rc=1 efc=0 .text      getElst__15dStage_roomDt_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getElst__15dStage_roomDt_cFv) {
+asm void dStage_roomDt_c::getElst() {
 	nofralloc
 #include "asm/d/d_stage/getElst__15dStage_roomDt_cFv.s"
 }
 #pragma pop
 
 
-/* 80027E10-80027E18 0008+00 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          */
+/* 80027E10-80027E18 0008+00 rc=1 efc=0 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCamera__16dStage_stageDt_cFP18stage_camera_class) {
+asm void dStage_stageDt_c::setCamera(stage_camera_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setCamera__16dStage_stageDt_cFP18stage_camera_class.s"
 }
 #pragma pop
 
 
-/* 80027E18-80027E20 0008+00 .text      getCamera__16dStage_stageDt_cCFv                             */
+/* 80027E18-80027E20 0008+00 rc=1 efc=0 .text      getCamera__16dStage_stageDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCamera__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getCamera() const {
 	nofralloc
 #include "asm/d/d_stage/getCamera__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E20-80027E28 0008+00 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            */
+/* 80027E20-80027E28 0008+00 rc=1 efc=0 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrow__16dStage_stageDt_cFP17stage_arrow_class) {
+asm void dStage_stageDt_c::setArrow(stage_arrow_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setArrow__16dStage_stageDt_cFP17stage_arrow_class.s"
 }
 #pragma pop
 
 
-/* 80027E28-80027E30 0008+00 .text      getArrow__16dStage_stageDt_cCFv                              */
+/* 80027E28-80027E30 0008+00 rc=1 efc=0 .text      getArrow__16dStage_stageDt_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArrow__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getArrow() const {
 	nofralloc
 #include "asm/d/d_stage/getArrow__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E30-80027E38 0008+00 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           */
+/* 80027E30-80027E38 0008+00 rc=1 efc=0 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayer__16dStage_stageDt_cFP17stage_actor_class) {
+asm void dStage_stageDt_c::setPlayer(stage_actor_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlayer__16dStage_stageDt_cFP17stage_actor_class.s"
 }
 #pragma pop
 
 
-/* 80027E38-80027E40 0008+00 .text      setPlayerNum__16dStage_stageDt_cFUs                          */
+/* 80027E38-80027E40 0008+00 rc=1 efc=0 .text      setPlayerNum__16dStage_stageDt_cFUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayerNum__16dStage_stageDt_cFUs) {
+asm void dStage_stageDt_c::setPlayerNum(u16 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlayerNum__16dStage_stageDt_cFUs.s"
 }
 #pragma pop
 
 
-/* 80027E40-80027E48 0008+00 .text      getPlayerNum__16dStage_stageDt_cCFv                          */
+/* 80027E40-80027E48 0008+00 rc=1 efc=0 .text      getPlayerNum__16dStage_stageDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayerNum__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPlayerNum() const {
 	nofralloc
 #include "asm/d/d_stage/getPlayerNum__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E48-80027E50 0008+00 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                */
+/* 80027E48-80027E50 0008+00 rc=1 efc=0 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoom__16dStage_stageDt_cFP14roomRead_class) {
+asm void dStage_stageDt_c::setRoom(roomRead_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setRoom__16dStage_stageDt_cFP14roomRead_class.s"
 }
 #pragma pop
 
 
-/* 80027E50-80027E58 0008+00 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       */
+/* 80027E50-80027E58 0008+00 rc=1 efc=0 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapInfo__16dStage_stageDt_cFP20stage_map_info_class) {
+asm void dStage_stageDt_c::setMapInfo(stage_map_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapInfo__16dStage_stageDt_cFP20stage_map_info_class.s"
 }
 #pragma pop
 
 
-/* 80027E58-80027E60 0008+00 .text      getMapInfo__16dStage_stageDt_cCFv                            */
+/* 80027E58-80027E60 0008+00 rc=1 efc=0 .text      getMapInfo__16dStage_stageDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMapInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getMapInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E60-80027E68 0008+00 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class */
+/* 80027E60-80027E68 0008+00 rc=1 efc=0 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class) {
+asm void dStage_stageDt_c::setMapInfoBase(stage_map_info_dummy_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class.s"
 }
 #pragma pop
 
 
-/* 80027E68-80027E70 0008+00 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class */
+/* 80027E68-80027E70 0008+00 rc=1 efc=0 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class) {
+asm void dStage_stageDt_c::setPaletteInfo(stage_palette_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class.s"
 }
 #pragma pop
 
 
-/* 80027E70-80027E78 0008+00 .text      getPaletteInfo__16dStage_stageDt_cCFv                        */
+/* 80027E70-80027E78 0008+00 rc=1 efc=0 .text      getPaletteInfo__16dStage_stageDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPaletteInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPaletteInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPaletteInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E78-80027E80 0008+00 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class */
+/* 80027E78-80027E80 0008+00 rc=1 efc=0 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class) {
+asm void dStage_stageDt_c::setPselectInfo(stage_pselect_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class.s"
 }
 #pragma pop
 
 
-/* 80027E80-80027E88 0008+00 .text      getPselectInfo__16dStage_stageDt_cCFv                        */
+/* 80027E80-80027E88 0008+00 rc=1 efc=0 .text      getPselectInfo__16dStage_stageDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPselectInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPselectInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPselectInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E88-80027E90 0008+00 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     */
+/* 80027E88-80027E90 0008+00 rc=1 efc=0 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class) {
+asm void dStage_stageDt_c::setEnvrInfo(stage_envr_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class.s"
 }
 #pragma pop
 
 
-/* 80027E90-80027E98 0008+00 .text      getEnvrInfo__16dStage_stageDt_cCFv                           */
+/* 80027E90-80027E98 0008+00 rc=1 efc=0 .text      getEnvrInfo__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEnvrInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getEnvrInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getEnvrInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027E98-80027EA0 0008+00 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   */
+/* 80027E98-80027EA0 0008+00 rc=1 efc=0 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class) {
+asm void dStage_stageDt_c::setVrboxInfo(stage_vrbox_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class.s"
 }
 #pragma pop
 
 
-/* 80027EA0-80027EA8 0008+00 .text      getVrboxInfo__16dStage_stageDt_cCFv                          */
+/* 80027EA0-80027EA8 0008+00 rc=1 efc=0 .text      getVrboxInfo__16dStage_stageDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getVrboxInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027EA8-80027EB0 0008+00 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class */
+/* 80027EA8-80027EB0 0008+00 rc=1 efc=0 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class) {
+asm void dStage_stageDt_c::setVrboxcolInfo(stage_vrboxcol_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class.s"
 }
 #pragma pop
 
 
-/* 80027EB0-80027EB8 0008+00 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       */
+/* 80027EB0-80027EB8 0008+00 rc=1 efc=0 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxcolInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getVrboxcolInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxcolInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027EB8-80027EC0 0008+00 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class */
+/* 80027EB8-80027EC0 0008+00 rc=1 efc=0 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class) {
+asm void dStage_stageDt_c::setPlightInfo(stage_plight_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class.s"
 }
 #pragma pop
 
 
-/* 80027EC0-80027EC8 0008+00 .text      getPlightInfo__16dStage_stageDt_cCFv                         */
+/* 80027EC0-80027EC8 0008+00 rc=1 efc=0 .text      getPlightInfo__16dStage_stageDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlightInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPlightInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPlightInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027EC8-80027ED0 0008+00 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      */
+/* 80027EC8-80027ED0 0008+00 rc=1 efc=0 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPaletteNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setPaletteNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPaletteNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027ED0-80027ED8 0008+00 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     */
+/* 80027ED0-80027ED8 0008+00 rc=1 efc=0 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPaletteNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPaletteNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPaletteNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027ED8-80027EE0 0008+00 .text      setPselectNumInfo__16dStage_stageDt_cFi                      */
+/* 80027ED8-80027EE0 0008+00 rc=1 efc=0 .text      setPselectNumInfo__16dStage_stageDt_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPselectNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setPselectNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPselectNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027EE0-80027EE8 0008+00 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     */
+/* 80027EE0-80027EE8 0008+00 rc=1 efc=0 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPselectNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPselectNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPselectNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027EE8-80027EF0 0008+00 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         */
+/* 80027EE8-80027EF0 0008+00 rc=1 efc=0 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvrNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setEnvrNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setEnvrNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027EF0-80027EF8 0008+00 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        */
+/* 80027EF0-80027EF8 0008+00 rc=1 efc=0 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEnvrNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getEnvrNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getEnvrNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027EF8-80027F00 0008+00 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        */
+/* 80027EF8-80027F00 0008+00 rc=1 efc=0 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setVrboxNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027F00-80027F08 0008+00 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       */
+/* 80027F00-80027F08 0008+00 rc=1 efc=0 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getVrboxNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027F08-80027F10 0008+00 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     */
+/* 80027F08-80027F10 0008+00 rc=1 efc=0 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVrboxcolNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setVrboxcolNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setVrboxcolNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027F10-80027F18 0008+00 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    */
+/* 80027F10-80027F18 0008+00 rc=1 efc=0 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVrboxcolNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getVrboxcolNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getVrboxcolNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027F18-80027F4C 0034+00 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class */
+/* 80027F18-80027F4C 0034+00 rc=1 efc=0 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class) {
+asm void dStage_stageDt_c::setLightVecInfo(stage_pure_lightvec_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class.s"
 }
 #pragma pop
 
 
-/* 80027F4C-80027F80 0034+00 .text      getLightVecInfo__16dStage_stageDt_cCFv                       */
+/* 80027F4C-80027F80 0034+00 rc=1 efc=0 .text      getLightVecInfo__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLightVecInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getLightVecInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getLightVecInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027F80-80027FB4 0034+00 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     */
+/* 80027F80-80027FB4 0034+00 rc=1 efc=0 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightVecInfoNum__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setLightVecInfoNum(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLightVecInfoNum__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027FB4-80027FE8 0034+00 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    */
+/* 80027FB4-80027FE8 0034+00 rc=1 efc=0 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLightVecInfoNum__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getLightVecInfoNum() const {
 	nofralloc
 #include "asm/d/d_stage/getLightVecInfoNum__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027FE8-80027FF0 0008+00 .text      setPlightNumInfo__16dStage_stageDt_cFi                       */
+/* 80027FE8-80027FF0 0008+00 rc=1 efc=0 .text      setPlightNumInfo__16dStage_stageDt_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlightNumInfo__16dStage_stageDt_cFi) {
+asm void dStage_stageDt_c::setPlightNumInfo(s32 field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPlightNumInfo__16dStage_stageDt_cFi.s"
 }
 #pragma pop
 
 
-/* 80027FF0-80027FF8 0008+00 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      */
+/* 80027FF0-80027FF8 0008+00 rc=1 efc=0 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlightNumInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPlightNumInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getPlightNumInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80027FF8-80028000 0008+00 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     */
+/* 80027FF8-80028000 0008+00 rc=1 efc=0 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class) {
+asm void dStage_stageDt_c::setStagInfo(stage_stag_info_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class.s"
 }
 #pragma pop
 
 
-/* 80028000-80028008 0008+00 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class */
+/* 80028000-80028008 0008+00 rc=1 efc=0 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class) {
+asm void dStage_stageDt_c::setSclsInfo(stage_scls_info_dummy_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class.s"
 }
 #pragma pop
 
 
-/* 80028008-80028010 0008+00 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              */
+/* 80028008-80028010 0008+00 rc=1 efc=0 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c) {
+asm void dStage_stageDt_c::setPntInfo(dStage_dPnt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c.s"
 }
 #pragma pop
 
 
-/* 80028010-80028018 0008+00 .text      getPntInf__16dStage_stageDt_cCFv                             */
+/* 80028010-80028018 0008+00 rc=1 efc=0 .text      getPntInf__16dStage_stageDt_cCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPntInf__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPntInf() const {
 	nofralloc
 #include "asm/d/d_stage/getPntInf__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028018-80028020 0008+00 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            */
+/* 80028018-80028020 0008+00 rc=1 efc=0 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c) {
+asm void dStage_stageDt_c::setPathInfo(dStage_dPath_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c.s"
 }
 #pragma pop
 
 
-/* 80028020-80028028 0008+00 .text      getPathInf__16dStage_stageDt_cCFv                            */
+/* 80028020-80028028 0008+00 rc=1 efc=0 .text      getPathInf__16dStage_stageDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathInf__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPathInf() const {
 	nofralloc
 #include "asm/d/d_stage/getPathInf__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028028-80028030 0008+00 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             */
+/* 80028028-80028030 0008+00 rc=1 efc=0 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c) {
+asm void dStage_stageDt_c::setPnt2Info(dStage_dPnt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c.s"
 }
 #pragma pop
 
 
-/* 80028030-80028038 0008+00 .text      getPnt2Inf__16dStage_stageDt_cCFv                            */
+/* 80028030-80028038 0008+00 rc=1 efc=0 .text      getPnt2Inf__16dStage_stageDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPnt2Inf__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPnt2Inf() const {
 	nofralloc
 #include "asm/d/d_stage/getPnt2Inf__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028038-80028040 0008+00 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           */
+/* 80028038-80028040 0008+00 rc=1 efc=0 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c) {
+asm void dStage_stageDt_c::setPath2Info(dStage_dPath_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c.s"
 }
 #pragma pop
 
 
-/* 80028040-80028048 0008+00 .text      getPath2Inf__16dStage_stageDt_cCFv                           */
+/* 80028040-80028048 0008+00 rc=1 efc=0 .text      getPath2Inf__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPath2Inf__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getPath2Inf() const {
 	nofralloc
 #include "asm/d/d_stage/getPath2Inf__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028048-80028050 0008+00 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        */
+/* 80028048-80028050 0008+00 rc=1 efc=0 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c) {
+asm void dStage_stageDt_c::setSoundInf(dStage_SoundInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
 }
 #pragma pop
 
 
-/* 80028050-80028058 0008+00 .text      getSoundInf__16dStage_stageDt_cCFv                           */
+/* 80028050-80028058 0008+00 rc=1 efc=0 .text      getSoundInf__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSoundInf__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getSoundInf() const {
 	nofralloc
 #include "asm/d/d_stage/getSoundInf__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028058-80028060 0008+00 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      */
+/* 80028058-80028060 0008+00 rc=1 efc=0 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c) {
+asm void dStage_stageDt_c::setSoundInfCL(dStage_SoundInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c.s"
 }
 #pragma pop
 
 
-/* 80028060-80028068 0008+00 .text      getSoundInfCL__16dStage_stageDt_cCFv                         */
+/* 80028060-80028068 0008+00 rc=1 efc=0 .text      getSoundInfCL__16dStage_stageDt_cCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSoundInfCL__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getSoundInfCL() const {
 	nofralloc
 #include "asm/d/d_stage/getSoundInfCL__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028068-80028070 0008+00 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c */
+/* 80028068-80028070 0008+00 rc=1 efc=0 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c) {
+asm void dStage_stageDt_c::setMapEventInfo(dStage_MapEventInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c.s"
 }
 #pragma pop
 
 
-/* 80028070-80028078 0008+00 .text      getMapEventInfo__16dStage_stageDt_cCFv                       */
+/* 80028070-80028078 0008+00 rc=1 efc=0 .text      getMapEventInfo__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapEventInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMapEventInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getMapEventInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028078-800280AC 0034+00 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c */
+/* 80028078-800280AC 0034+00 rc=1 efc=0 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c) {
+asm void dStage_stageDt_c::setFileList2Info(dStage_FileList2_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c.s"
 }
 #pragma pop
 
 
-/* 800280AC-800280E0 0034+00 .text      getFileList2Info__16dStage_stageDt_cCFv                      */
+/* 800280AC-800280E0 0034+00 rc=1 efc=0 .text      getFileList2Info__16dStage_stageDt_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFileList2Info__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getFileList2Info() const {
 	nofralloc
 #include "asm/d/d_stage/getFileList2Info__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800280E0-80028114 0034+00 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  */
+/* 800280E0-80028114 0034+00 rc=1 efc=0 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c) {
+asm void dStage_stageDt_c::setFileListInfo(dStage_FileList_dt_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c.s"
 }
 #pragma pop
 
 
-/* 80028114-80028148 0034+00 .text      getFileListInfo__16dStage_stageDt_cCFv                       */
+/* 80028114-80028148 0034+00 rc=1 efc=0 .text      getFileListInfo__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFileListInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getFileListInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getFileListInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028148-80028150 0008+00 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       */
+/* 80028148-80028150 0008+00 rc=1 efc=0 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c) {
+asm void dStage_stageDt_c::setFloorInfo(dStage_FloorInfo_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c.s"
 }
 #pragma pop
 
 
-/* 80028150-80028158 0008+00 .text      getFloorInfo__16dStage_stageDt_cCFv                          */
+/* 80028150-80028158 0008+00 rc=1 efc=0 .text      getFloorInfo__16dStage_stageDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFloorInfo__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getFloorInfo() const {
 	nofralloc
 #include "asm/d/d_stage/getFloorInfo__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028158-80028160 0008+00 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c */
+/* 80028158-80028160 0008+00 rc=1 efc=0 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c) {
+asm void dStage_stageDt_c::setMemoryConfig(dStage_MemoryConfig_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c.s"
 }
 #pragma pop
 
 
-/* 80028160-80028168 0008+00 .text      getMemoryConfig__16dStage_stageDt_cCFv                       */
+/* 80028160-80028168 0008+00 rc=1 efc=0 .text      getMemoryConfig__16dStage_stageDt_cCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMemoryConfig__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMemoryConfig() const {
 	nofralloc
 #include "asm/d/d_stage/getMemoryConfig__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028168-80028170 0008+00 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       */
+/* 80028168-80028170 0008+00 rc=1 efc=0 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c) {
+asm void dStage_stageDt_c::setMemoryMap(dStage_MemoryMap_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c.s"
 }
 #pragma pop
 
 
-/* 80028170-80028178 0008+00 .text      getMemoryMap__16dStage_stageDt_cCFv                          */
+/* 80028170-80028178 0008+00 rc=1 efc=0 .text      getMemoryMap__16dStage_stageDt_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMemoryMap__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMemoryMap() const {
 	nofralloc
 #include "asm/d/d_stage/getMemoryMap__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028178-80028180 0008+00 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               */
+/* 80028178-80028180 0008+00 rc=1 efc=0 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMulti__16dStage_stageDt_cFP14dStage_Multi_c) {
+asm void dStage_stageDt_c::setMulti(dStage_Multi_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setMulti__16dStage_stageDt_cFP14dStage_Multi_c.s"
 }
 #pragma pop
 
 
-/* 80028180-80028188 0008+00 .text      getMulti__16dStage_stageDt_cCFv                              */
+/* 80028180-80028188 0008+00 rc=1 efc=0 .text      getMulti__16dStage_stageDt_cCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMulti__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getMulti() const {
 	nofralloc
 #include "asm/d/d_stage/getMulti__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028188-80028190 0008+00 .text      getOldMulti__16dStage_stageDt_cCFv                           */
+/* 80028188-80028190 0008+00 rc=1 efc=0 .text      getOldMulti__16dStage_stageDt_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOldMulti__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getOldMulti() const {
 	nofralloc
 #include "asm/d/d_stage/getOldMulti__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028190-800281C4 0034+00 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 */
+/* 80028190-800281C4 0034+00 rc=1 efc=0 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c) {
+asm void dStage_stageDt_c::setLbnk(dStage_Lbnk_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c.s"
 }
 #pragma pop
 
 
-/* 800281C4-800281F8 0034+00 .text      getLbnk__16dStage_stageDt_cCFv                               */
+/* 800281C4-800281F8 0034+00 rc=1 efc=0 .text      getLbnk__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLbnk__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getLbnk() const {
 	nofralloc
 #include "asm/d/d_stage/getLbnk__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 800281F8-80028200 0008+00 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        */
+/* 800281F8-80028200 0008+00 rc=1 efc=0 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTresure__16dStage_stageDt_cFP19stage_tresure_class) {
+asm void dStage_stageDt_c::setTresure(stage_tresure_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setTresure__16dStage_stageDt_cFP19stage_tresure_class.s"
 }
 #pragma pop
 
 
-/* 80028200-80028208 0008+00 .text      getTresure__16dStage_stageDt_cCFv                            */
+/* 80028200-80028208 0008+00 rc=1 efc=0 .text      getTresure__16dStage_stageDt_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTresure__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getTresure() const {
 	nofralloc
 #include "asm/d/d_stage/getTresure__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028208-80028210 0008+00 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 */
+/* 80028208-80028210 0008+00 rc=1 efc=0 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDMap__16dStage_stageDt_cFP13dStage_DMap_c) {
+asm void dStage_stageDt_c::setDMap(dStage_DMap_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setDMap__16dStage_stageDt_cFP13dStage_DMap_c.s"
 }
 #pragma pop
 
 
-/* 80028210-80028218 0008+00 .text      getDMap__16dStage_stageDt_cCFv                               */
+/* 80028210-80028218 0008+00 rc=1 efc=0 .text      getDMap__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDMap__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getDMap() const {
 	nofralloc
 #include "asm/d/d_stage/getDMap__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028218-80028220 0008+00 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              */
+/* 80028218-80028220 0008+00 rc=1 efc=0 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDrTg__16dStage_stageDt_cFP16stage_tgsc_class) {
+asm void dStage_stageDt_c::setDrTg(stage_tgsc_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setDrTg__16dStage_stageDt_cFP16stage_tgsc_class.s"
 }
 #pragma pop
 
 
-/* 80028220-80028228 0008+00 .text      getDrTg__16dStage_stageDt_cCFv                               */
+/* 80028220-80028228 0008+00 rc=1 efc=0 .text      getDrTg__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDrTg__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getDrTg() const {
 	nofralloc
 #include "asm/d/d_stage/getDrTg__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028228-80028230 0008+00 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              */
+/* 80028228-80028230 0008+00 rc=1 efc=0 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDoor__16dStage_stageDt_cFP16stage_tgsc_class) {
+asm void dStage_stageDt_c::setDoor(stage_tgsc_class* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setDoor__16dStage_stageDt_cFP16stage_tgsc_class.s"
 }
 #pragma pop
 
 
-/* 80028230-80028238 0008+00 .text      getDoor__16dStage_stageDt_cCFv                               */
+/* 80028230-80028238 0008+00 rc=1 efc=0 .text      getDoor__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoor__16dStage_stageDt_cCFv) {
+asm void dStage_stageDt_c::getDoor() const {
 	nofralloc
 #include "asm/d/d_stage/getDoor__16dStage_stageDt_cCFv.s"
 }
 #pragma pop
 
 
-/* 80028238-8002823C 0004+00 .text      setMapPath__16dStage_stageDt_cFPv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setMapPath__16dStage_stageDt_cFPv) {
-	nofralloc
-#include "asm/d/d_stage/setMapPath__16dStage_stageDt_cFPv.s"
+/* 80028238-8002823C 0004+00 rc=1 efc=0 .text      setMapPath__16dStage_stageDt_cFPv                            */
+void dStage_stageDt_c::setMapPath(void* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8002823C-80028244 0008+00 .text      getMapPath__16dStage_stageDt_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getMapPath__16dStage_stageDt_cFv) {
-	nofralloc
-#include "asm/d/d_stage/getMapPath__16dStage_stageDt_cFv.s"
+/* 8002823C-80028244 0008+00 rc=1 efc=0 .text      getMapPath__16dStage_stageDt_cFv                             */
+bool dStage_stageDt_c::getMapPath() {
+	return false;
 }
-#pragma pop
 
 
-/* 80028244-8002824C 0008+00 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
+/* 80028244-8002824C 0008+00 rc=1 efc=0 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setElst__16dStage_stageDt_cFP13dStage_Elst_c) {
+asm void dStage_stageDt_c::setElst(dStage_Elst_c* field_0) {
 	nofralloc
 #include "asm/d/d_stage/setElst__16dStage_stageDt_cFP13dStage_Elst_c.s"
 }
 #pragma pop
 
 
-/* 8002824C-80028328 00DC+00 .text      __sinit_d_stage_cpp                                          */
+/* 8002824C-80028328 00DC+00 rc=1 efc=1 .text      __sinit_d_stage_cpp                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_stage_cpp) {
+extern "C" asm void __sinit_d_stage_cpp() {
 	nofralloc
 #include "asm/d/d_stage/__sinit_d_stage_cpp.s"
 }
 #pragma pop
 
 
-/* 80028328-80028360 0038+00 .text      __arraydtor$5375                                             */
+/* 80028328-80028360 0038+00 rc=1 efc=0 .text      __arraydtor$5375                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80028328) {
+extern "C" asm static void func_80028328() {
 	nofralloc
 #include "asm/d/d_stage/func_80028328.s"
 }
 #pragma pop
 
 
-/* 80028360-8002839C 003C+00 .text      __dt__19dStage_roomStatus_cFv                                */
+/* 80028360-8002839C 003C+00 rc=2 efc=0 .text      __dt__19dStage_roomStatus_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dStage_roomStatus_cFv) {
+asm dStage_roomStatus_c::~dStage_roomStatus_c() {
 	nofralloc
 #include "asm/d/d_stage/__dt__19dStage_roomStatus_cFv.s"
 }
@@ -4753,7 +5721,7 @@ ASM_FUNCTION(__dt__19dStage_roomStatus_cFv) {
 
 
 /* ############################################################################################## */
-/* 803A6AAC-803A6C20 0174+00 .data      __vt__15dStage_roomDt_c                                      */
+/* 803A6AAC-803A6C20 0174+00 rc=1 efc=0 .data      __vt__15dStage_roomDt_c                                      */
 void* const __vt__15dStage_roomDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
@@ -4850,7 +5818,7 @@ void* const __vt__15dStage_roomDt_c[93] = {
 	(void*)getElst__15dStage_roomDt_cFv,
 };
 
-/* 803A6C20-803A6D94 0174+00 .data      __vt__16dStage_stageDt_c                                     */
+/* 803A6C20-803A6D94 0174+00 rc=1 efc=1 .data      __vt__16dStage_stageDt_c                                     */
 void* const __vt__16dStage_stageDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
@@ -4947,7 +5915,7 @@ void* const __vt__16dStage_stageDt_c[93] = {
 	(void*)getElst__16dStage_stageDt_cFv,
 };
 
-/* 803A6D94-803A6F08 0174+00 .data      __vt__11dStage_dt_c                                          */
+/* 803A6D94-803A6F08 0174+00 rc=2 efc=1 .data      __vt__11dStage_dt_c                                          */
 void* const __vt__11dStage_dt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
@@ -5044,48 +6012,42 @@ void* const __vt__11dStage_dt_c[93] = {
 	NULL,
 };
 
-/* 8002839C-80028418 007C+00 .text      __ct__19dStage_roomStatus_cFv                                */
+/* 8002839C-80028418 007C+00 rc=1 efc=0 .text      __ct__19dStage_roomStatus_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19dStage_roomStatus_cFv) {
+asm dStage_roomStatus_c::dStage_roomStatus_c() {
 	nofralloc
 #include "asm/d/d_stage/__ct__19dStage_roomStatus_cFv.s"
 }
 #pragma pop
 
 
-/* 80028418-8002847C 0064+00 .text      __dt__19dStage_KeepDoorInfoFv                                */
+/* 80028418-8002847C 0064+00 rc=1 efc=0 .text      __dt__19dStage_KeepDoorInfoFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dStage_KeepDoorInfoFv) {
+asm dStage_KeepDoorInfo::~dStage_KeepDoorInfo() {
 	nofralloc
 #include "asm/d/d_stage/__dt__19dStage_KeepDoorInfoFv.s"
 }
 #pragma pop
 
 
-/* 8002847C-800284B8 003C+00 .text      __dt__21stage_tgsc_data_classFv                              */
+/* 8002847C-800284B8 003C+00 rc=2 efc=0 .text      __dt__21stage_tgsc_data_classFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21stage_tgsc_data_classFv) {
+asm stage_tgsc_data_class::~stage_tgsc_data_class() {
 	nofralloc
 #include "asm/d/d_stage/__dt__21stage_tgsc_data_classFv.s"
 }
 #pragma pop
 
 
-/* 800284B8-800284BC 0004+00 .text      __ct__21stage_tgsc_data_classFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__21stage_tgsc_data_classFv) {
-	nofralloc
-#include "asm/d/d_stage/__ct__21stage_tgsc_data_classFv.s"
+/* 800284B8-800284BC 0004+00 rc=1 efc=0 .text      __ct__21stage_tgsc_data_classFv                              */
+stage_tgsc_data_class::stage_tgsc_data_class() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

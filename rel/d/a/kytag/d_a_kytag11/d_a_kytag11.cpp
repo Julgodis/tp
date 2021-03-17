@@ -6,15 +6,29 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct kytag11_class;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daKytag11_Draw__FP13kytag11_class();
-extern "C" extern void daKytag11_Execute__FP13kytag11_class();
-extern "C" extern void daKytag11_IsDelete__FP13kytag11_class();
-extern "C" extern void daKytag11_Delete__FP13kytag11_class();
-extern "C" extern void daKytag11_Create__FP10fopAc_ac_c();
-extern "C" extern void dKankyo_DayProc__Fv();
+bool daKytag11_Draw(kytag11_class*);
+void daKytag11_Execute(kytag11_class*);
+bool daKytag11_IsDelete(kytag11_class*);
+bool daKytag11_Delete(kytag11_class*);
+void daKytag11_Create(fopAc_ac_c*);
+void dKankyo_DayProc();
+
+extern "C" bool daKytag11_Draw__FP13kytag11_class();
+extern "C" void daKytag11_Execute__FP13kytag11_class();
+extern "C" bool daKytag11_IsDelete__FP13kytag11_class();
+extern "C" bool daKytag11_Delete__FP13kytag11_class();
+extern "C" void daKytag11_Create__FP10fopAc_ac_c();
+extern "C" void dKankyo_DayProc__Fv();
 SECTION_RODATA extern const u32 lit_3874;
 SECTION_RODATA extern const u32 lit_3875;
 SECTION_RODATA extern const u32 lit_3876;
@@ -28,28 +42,25 @@ SECTION_DATA extern u8 g_profile_KYTAG11[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 80529518-80529520 0008+00 .text      daKytag11_Draw__FP13kytag11_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag11_Draw__FP13kytag11_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Draw__FP13kytag11_class.s"
+bool daKytag11_Draw(kytag11_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80529520-80529798 0278+00 .text      daKytag11_Execute__FP13kytag11_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag11_Execute__FP13kytag11_class) {
+asm void daKytag11_Execute(kytag11_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Execute__FP13kytag11_class.s"
 }
@@ -57,32 +68,22 @@ ASM_FUNCTION(daKytag11_Execute__FP13kytag11_class) {
 
 
 /* 80529798-805297A0 0008+00 .text      daKytag11_IsDelete__FP13kytag11_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag11_IsDelete__FP13kytag11_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_IsDelete__FP13kytag11_class.s"
+bool daKytag11_IsDelete(kytag11_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805297A0-805297A8 0008+00 .text      daKytag11_Delete__FP13kytag11_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag11_Delete__FP13kytag11_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Delete__FP13kytag11_class.s"
+bool daKytag11_Delete(kytag11_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805297A8-80529854 00AC+00 .text      daKytag11_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag11_Create__FP10fopAc_ac_c) {
+asm void daKytag11_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/daKytag11_Create__FP10fopAc_ac_c.s"
 }
@@ -93,7 +94,7 @@ ASM_FUNCTION(daKytag11_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKankyo_DayProc__Fv) {
+asm void dKankyo_DayProc() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag11/d_a_kytag11/dKankyo_DayProc__Fv.s"
 }

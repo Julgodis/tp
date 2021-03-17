@@ -6,37 +6,105 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daNpcPasser2_c {
+	struct Mode_e {
+	};
+
+	void setAction(daNpcPasser2_c::Mode_e);
+	void callInit();
+	void callExecute();
+	void initPath();
+	void executePath();
+	void setAngle();
+	void pathMoveF();
+	void create();
+	void create_init();
+	~daNpcPasser2_c();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcCd_c {
+	~daNpcCd_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void setAction__14daNpcPasser2_cFQ214daNpcPasser2_c6Mode_e();
-extern "C" extern void callInit__14daNpcPasser2_cFv();
-extern "C" extern void callExecute__14daNpcPasser2_cFv();
-extern "C" extern void initPath__14daNpcPasser2_cFv();
-extern "C" extern void executePath__14daNpcPasser2_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setAngle__14daNpcPasser2_cFv();
-extern "C" extern void pathMoveF__14daNpcPasser2_cFv();
-extern "C" extern void daNpcPasser2_Create__FPv();
-extern "C" extern void create__14daNpcPasser2_cFv();
-extern "C" extern void create_init__14daNpcPasser2_cFv();
-extern "C" extern void daNpcPasser2_Delete__FPv();
-extern "C" extern void __dt__14daNpcPasser2_cFv();
-extern "C" extern void daNpcPasser2_Execute__FPv();
-extern "C" extern void daNpcPasser2_Draw__FPv();
-extern "C" extern void daNpcPasser2_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80AA85C8();
-extern "C" extern void __sinit_d_a_npc_passer2_cpp();
-extern "C" extern void func_80AA8684();
-extern "C" extern void func_80AA868C();
-extern "C" extern void __dt__9daNpcCd_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
+void createHeapCallBack(fopAc_ac_c*);
+void daNpcPasser2_Create(void*);
+void daNpcPasser2_Delete(void*);
+void daNpcPasser2_Execute(void*);
+void daNpcPasser2_Draw(void*);
+bool daNpcPasser2_IsDelete(void*);
+extern "C" void func_80AA85C8();
+extern "C" void __sinit_d_a_npc_passer2_cpp();
+extern "C" void func_80AA8684();
+extern "C" void func_80AA868C();
+
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void setAction__14daNpcPasser2_cFQ214daNpcPasser2_c6Mode_e();
+extern "C" void callInit__14daNpcPasser2_cFv();
+extern "C" void callExecute__14daNpcPasser2_cFv();
+extern "C" void initPath__14daNpcPasser2_cFv();
+extern "C" void executePath__14daNpcPasser2_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setAngle__14daNpcPasser2_cFv();
+extern "C" void pathMoveF__14daNpcPasser2_cFv();
+extern "C" void daNpcPasser2_Create__FPv();
+extern "C" void create__14daNpcPasser2_cFv();
+extern "C" void create_init__14daNpcPasser2_cFv();
+extern "C" void daNpcPasser2_Delete__FPv();
+extern "C" void __dt__14daNpcPasser2_cFv();
+extern "C" void daNpcPasser2_Execute__FPv();
+extern "C" void daNpcPasser2_Draw__FPv();
+extern "C" bool daNpcPasser2_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80AA85C8();
+extern "C" void __sinit_d_a_npc_passer2_cpp();
+extern "C" void func_80AA8684();
+extern "C" void func_80AA868C();
+extern "C" void __dt__9daNpcCd_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
 SECTION_RODATA extern const u32 lit_3963;
 SECTION_RODATA extern const u32 lit_3964;
 SECTION_RODATA extern const u8 lit_4127[4];
@@ -77,7 +145,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -87,7 +157,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -98,7 +168,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__14daNpcPasser2_cFQ214daNpcPasser2_c6Mode_e) {
+asm void daNpcPasser2_c::setAction(daNpcPasser2_c::Mode_e field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/setAction__14daNpcPasser2_cFQ214daNpcPasser2_c6Mode_e.s"
 }
@@ -109,7 +179,7 @@ ASM_FUNCTION(setAction__14daNpcPasser2_cFQ214daNpcPasser2_c6Mode_e) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callInit__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::callInit() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/callInit__14daNpcPasser2_cFv.s"
 }
@@ -120,7 +190,7 @@ ASM_FUNCTION(callInit__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callExecute__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::callExecute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/callExecute__14daNpcPasser2_cFv.s"
 }
@@ -131,7 +201,7 @@ ASM_FUNCTION(callExecute__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPath__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::initPath() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/initPath__14daNpcPasser2_cFv.s"
 }
@@ -142,7 +212,7 @@ ASM_FUNCTION(initPath__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePath__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::executePath() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/executePath__14daNpcPasser2_cFv.s"
 }
@@ -153,7 +223,7 @@ ASM_FUNCTION(executePath__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__8cM3dGPlaFv.s"
 }
@@ -164,7 +234,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngle__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::setAngle() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/setAngle__14daNpcPasser2_cFv.s"
 }
@@ -175,7 +245,7 @@ ASM_FUNCTION(setAngle__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pathMoveF__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::pathMoveF() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/pathMoveF__14daNpcPasser2_cFv.s"
 }
@@ -186,7 +256,7 @@ ASM_FUNCTION(pathMoveF__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPasser2_Create__FPv) {
+asm void daNpcPasser2_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_Create__FPv.s"
 }
@@ -197,7 +267,7 @@ ASM_FUNCTION(daNpcPasser2_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/create__14daNpcPasser2_cFv.s"
 }
@@ -208,7 +278,7 @@ ASM_FUNCTION(create__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daNpcPasser2_cFv) {
+asm void daNpcPasser2_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/create_init__14daNpcPasser2_cFv.s"
 }
@@ -219,7 +289,7 @@ ASM_FUNCTION(create_init__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPasser2_Delete__FPv) {
+asm void daNpcPasser2_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_Delete__FPv.s"
 }
@@ -230,7 +300,7 @@ ASM_FUNCTION(daNpcPasser2_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpcPasser2_cFv) {
+asm daNpcPasser2_c::~daNpcPasser2_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__14daNpcPasser2_cFv.s"
 }
@@ -241,7 +311,7 @@ ASM_FUNCTION(__dt__14daNpcPasser2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPasser2_Execute__FPv) {
+asm void daNpcPasser2_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_Execute__FPv.s"
 }
@@ -252,7 +322,7 @@ ASM_FUNCTION(daNpcPasser2_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcPasser2_Draw__FPv) {
+asm void daNpcPasser2_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_Draw__FPv.s"
 }
@@ -260,21 +330,16 @@ ASM_FUNCTION(daNpcPasser2_Draw__FPv) {
 
 
 /* 80AA8578-80AA8580 0008+00 .text      daNpcPasser2_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcPasser2_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_IsDelete__FPv.s"
+bool daNpcPasser2_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AA8580-80AA85C8 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__10cCcD_GSttsFv.s"
 }
@@ -285,7 +350,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AA85C8) {
+extern "C" asm void func_80AA85C8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/func_80AA85C8.s"
 }
@@ -296,7 +361,7 @@ ASM_FUNCTION(func_80AA85C8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_passer2_cpp) {
+extern "C" asm void __sinit_d_a_npc_passer2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__sinit_d_a_npc_passer2_cpp.s"
 }
@@ -307,7 +372,7 @@ ASM_FUNCTION(__sinit_d_a_npc_passer2_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AA8684) {
+extern "C" asm void func_80AA8684() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/func_80AA8684.s"
 }
@@ -318,7 +383,7 @@ ASM_FUNCTION(func_80AA8684) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AA868C) {
+extern "C" asm void func_80AA868C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/func_80AA868C.s"
 }
@@ -329,7 +394,7 @@ ASM_FUNCTION(func_80AA868C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daNpcCd_cFv) {
+asm daNpcCd_c::~daNpcCd_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__9daNpcCd_cFv.s"
 }
@@ -340,7 +405,7 @@ ASM_FUNCTION(__dt__9daNpcCd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__8cM3dGCylFv.s"
 }
@@ -351,7 +416,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__8cM3dGAabFv.s"
 }
@@ -362,7 +427,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__10dCcD_GSttsFv.s"
 }
@@ -373,7 +438,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__12dBgS_AcchCirFv.s"
 }
@@ -384,7 +449,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/__dt__12dBgS_ObjAcchFv.s"
 }

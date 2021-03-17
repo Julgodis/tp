@@ -6,77 +6,220 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daObjTks_c {
+	daObjTks_c();
+	~daObjTks_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setMtx();
+	void setExpressionAnm(s32, bool);
+	void setExpressionBtp(s32);
+	void setMotion(s32, f32, s32);
+	void reset();
+	void wait();
+	void setExpression(s32, f32);
+	void talk();
+	void demo();
+	void setMotionAnm(s32, f32);
+	void warp();
+	void setParam();
+	void main();
+	void ctrlBtk();
+	void setAttnPos();
+	void lookat();
+	bool drawDbgInfo();
+	void drawOtherMdls();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void adjustShapeAngle();
+	void setCollisions();
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObjTks_Param_c {
+	~daObjTks_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daObjTks_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10daObjTks_cFv();
-extern "C" extern void Create__10daObjTks_cFv();
-extern "C" extern void CreateHeap__10daObjTks_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__10daObjTks_cFv();
-extern "C" extern void Execute__10daObjTks_cFv();
-extern "C" extern void Draw__10daObjTks_cFv();
-extern "C" extern void ctrlJoint__10daObjTks_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__10daObjTks_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__10daObjTks_cFP8J3DJointi();
-extern "C" extern void setMtx__10daObjTks_cFv();
-extern "C" extern void setExpressionAnm__10daObjTks_cFib();
-extern "C" extern void setExpressionBtp__10daObjTks_cFi();
-extern "C" extern void setMotion__10daObjTks_cFifi();
-extern "C" extern void reset__10daObjTks_cFv();
-extern "C" extern void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v();
-extern "C" extern void wait__10daObjTks_cFv();
-extern "C" extern void setExpression__10daObjTks_cFif();
-extern "C" extern void talk__10daObjTks_cFv();
-extern "C" extern void demo__10daObjTks_cFv();
-extern "C" extern void setMotionAnm__10daObjTks_cFif();
-extern "C" extern void warp__10daObjTks_cFv();
-extern "C" extern void daObjTks_Create__FPv();
-extern "C" extern void daObjTks_Delete__FPv();
-extern "C" extern void daObjTks_Execute__FPv();
-extern "C" extern void daObjTks_Draw__FPv();
-extern "C" extern void daObjTks_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void setParam__10daObjTks_cFv();
-extern "C" extern void main__10daObjTks_cFv();
-extern "C" extern void ctrlBtk__10daObjTks_cFv();
-extern "C" extern void setAttnPos__10daObjTks_cFv();
-extern "C" extern void lookat__10daObjTks_cFv();
-extern "C" extern void drawDbgInfo__10daObjTks_cFv();
-extern "C" extern void drawOtherMdls__10daObjTks_cFv();
-extern "C" extern void func_80D11EA0();
-extern "C" extern void __sinit_d_a_obj_tks_cpp();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void adjustShapeAngle__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daObjTks_Param_cFv();
-extern "C" extern void func_80D12718();
-extern "C" extern void func_80D12720();
+extern "C" void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v();
+void daObjTks_Create(void*);
+void daObjTks_Delete(void*);
+void daObjTks_Execute(void*);
+void daObjTks_Draw(void*);
+bool daObjTks_IsDelete(void*);
+extern "C" void func_80D11EA0();
+extern "C" void __sinit_d_a_obj_tks_cpp();
+extern "C" void func_80D12718();
+extern "C" void func_80D12720();
+
+extern "C" void __ct__10daObjTks_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10daObjTks_cFv();
+extern "C" void Create__10daObjTks_cFv();
+extern "C" void CreateHeap__10daObjTks_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__10daObjTks_cFv();
+extern "C" void Execute__10daObjTks_cFv();
+extern "C" void Draw__10daObjTks_cFv();
+extern "C" void ctrlJoint__10daObjTks_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__10daObjTks_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__10daObjTks_cFP8J3DJointi();
+extern "C" void setMtx__10daObjTks_cFv();
+extern "C" void setExpressionAnm__10daObjTks_cFib();
+extern "C" void setExpressionBtp__10daObjTks_cFi();
+extern "C" void setMotion__10daObjTks_cFifi();
+extern "C" void reset__10daObjTks_cFv();
+extern "C" void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v();
+extern "C" void wait__10daObjTks_cFv();
+extern "C" void setExpression__10daObjTks_cFif();
+extern "C" void talk__10daObjTks_cFv();
+extern "C" void demo__10daObjTks_cFv();
+extern "C" void setMotionAnm__10daObjTks_cFif();
+extern "C" void warp__10daObjTks_cFv();
+extern "C" void daObjTks_Create__FPv();
+extern "C" void daObjTks_Delete__FPv();
+extern "C" void daObjTks_Execute__FPv();
+extern "C" void daObjTks_Draw__FPv();
+extern "C" bool daObjTks_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void setParam__10daObjTks_cFv();
+extern "C" void main__10daObjTks_cFv();
+extern "C" void ctrlBtk__10daObjTks_cFv();
+extern "C" void setAttnPos__10daObjTks_cFv();
+extern "C" void lookat__10daObjTks_cFv();
+extern "C" bool drawDbgInfo__10daObjTks_cFv();
+extern "C" void drawOtherMdls__10daObjTks_cFv();
+extern "C" void func_80D11EA0();
+extern "C" void __sinit_d_a_obj_tks_cpp();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void adjustShapeAngle__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daObjTks_Param_cFv();
+extern "C" void func_80D12718();
+extern "C" void func_80D12720();
 SECTION_RODATA extern const u8 m__16daObjTks_Param_c[128];
 SECTION_RODATA extern const u8 data_80D127BC[4];
 SECTION_RODATA extern const u32 lit_4271;
@@ -155,8 +298,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -166,7 +312,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daObjTks_cFv) {
+asm daObjTks_c::daObjTks_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__10daObjTks_cFv.s"
 }
@@ -177,7 +323,7 @@ ASM_FUNCTION(__ct__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__8cM3dGCylFv.s"
 }
@@ -188,7 +334,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__8cM3dGAabFv.s"
 }
@@ -199,7 +345,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daObjTks_cFv) {
+asm daObjTks_c::~daObjTks_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__10daObjTks_cFv.s"
 }
@@ -210,7 +356,7 @@ ASM_FUNCTION(__dt__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daObjTks_cFv) {
+asm void daObjTks_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/Create__10daObjTks_cFv.s"
 }
@@ -221,7 +367,7 @@ ASM_FUNCTION(Create__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjTks_cFv) {
+asm void daObjTks_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/CreateHeap__10daObjTks_cFv.s"
 }
@@ -232,7 +378,7 @@ ASM_FUNCTION(CreateHeap__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -243,7 +389,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -254,7 +400,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__14J3DTevColorAnmFv.s"
 }
@@ -265,7 +411,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__14J3DTevColorAnmFv.s"
 }
@@ -276,7 +422,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__11J3DTexNoAnmFv.s"
 }
@@ -287,7 +433,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__11J3DTexNoAnmFv.s"
 }
@@ -298,7 +444,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -309,7 +455,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -320,7 +466,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__14J3DMatColorAnmFv.s"
 }
@@ -331,7 +477,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__14J3DMatColorAnmFv.s"
 }
@@ -342,7 +488,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjTks_cFv) {
+asm void daObjTks_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/Delete__10daObjTks_cFv.s"
 }
@@ -353,7 +499,7 @@ ASM_FUNCTION(Delete__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjTks_cFv) {
+asm void daObjTks_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/Execute__10daObjTks_cFv.s"
 }
@@ -364,7 +510,7 @@ ASM_FUNCTION(Execute__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daObjTks_cFv) {
+asm void daObjTks_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/Draw__10daObjTks_cFv.s"
 }
@@ -375,7 +521,7 @@ ASM_FUNCTION(Draw__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__10daObjTks_cFP8J3DJointP8J3DModel) {
+asm void daObjTks_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/ctrlJoint__10daObjTks_cFP8J3DJointP8J3DModel.s"
 }
@@ -386,7 +532,7 @@ ASM_FUNCTION(ctrlJoint__10daObjTks_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__10daObjTks_cFP10fopAc_ac_c) {
+asm void daObjTks_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/createHeapCallBack__10daObjTks_cFP10fopAc_ac_c.s"
 }
@@ -397,7 +543,7 @@ ASM_FUNCTION(createHeapCallBack__10daObjTks_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__10daObjTks_cFP8J3DJointi) {
+asm void daObjTks_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/ctrlJointCallBack__10daObjTks_cFP8J3DJointi.s"
 }
@@ -408,7 +554,7 @@ ASM_FUNCTION(ctrlJointCallBack__10daObjTks_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__10daObjTks_cFv) {
+asm void daObjTks_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setMtx__10daObjTks_cFv.s"
 }
@@ -419,7 +565,7 @@ ASM_FUNCTION(setMtx__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__10daObjTks_cFib) {
+asm void daObjTks_c::setExpressionAnm(s32 field_0, bool field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setExpressionAnm__10daObjTks_cFib.s"
 }
@@ -430,7 +576,7 @@ ASM_FUNCTION(setExpressionAnm__10daObjTks_cFib) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__10daObjTks_cFi) {
+asm void daObjTks_c::setExpressionBtp(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setExpressionBtp__10daObjTks_cFi.s"
 }
@@ -441,7 +587,7 @@ ASM_FUNCTION(setExpressionBtp__10daObjTks_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__10daObjTks_cFifi) {
+asm void daObjTks_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setMotion__10daObjTks_cFifi.s"
 }
@@ -452,7 +598,7 @@ ASM_FUNCTION(setMotion__10daObjTks_cFifi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__10daObjTks_cFv) {
+asm void daObjTks_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/reset__10daObjTks_cFv.s"
 }
@@ -463,7 +609,7 @@ ASM_FUNCTION(reset__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v) {
+extern "C" asm void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v.s"
 }
@@ -474,7 +620,7 @@ ASM_FUNCTION(setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__10daObjTks_cFv) {
+asm void daObjTks_c::wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/wait__10daObjTks_cFv.s"
 }
@@ -485,7 +631,7 @@ ASM_FUNCTION(wait__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpression__10daObjTks_cFif) {
+asm void daObjTks_c::setExpression(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setExpression__10daObjTks_cFif.s"
 }
@@ -496,7 +642,7 @@ ASM_FUNCTION(setExpression__10daObjTks_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__10daObjTks_cFv) {
+asm void daObjTks_c::talk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/talk__10daObjTks_cFv.s"
 }
@@ -507,7 +653,7 @@ ASM_FUNCTION(talk__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__10daObjTks_cFv) {
+asm void daObjTks_c::demo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/demo__10daObjTks_cFv.s"
 }
@@ -518,7 +664,7 @@ ASM_FUNCTION(demo__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__10daObjTks_cFif) {
+asm void daObjTks_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setMotionAnm__10daObjTks_cFif.s"
 }
@@ -529,7 +675,7 @@ ASM_FUNCTION(setMotionAnm__10daObjTks_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(warp__10daObjTks_cFv) {
+asm void daObjTks_c::warp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/warp__10daObjTks_cFv.s"
 }
@@ -540,7 +686,7 @@ ASM_FUNCTION(warp__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTks_Create__FPv) {
+asm void daObjTks_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_Create__FPv.s"
 }
@@ -551,7 +697,7 @@ ASM_FUNCTION(daObjTks_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTks_Delete__FPv) {
+asm void daObjTks_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_Delete__FPv.s"
 }
@@ -562,7 +708,7 @@ ASM_FUNCTION(daObjTks_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTks_Execute__FPv) {
+asm void daObjTks_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_Execute__FPv.s"
 }
@@ -573,7 +719,7 @@ ASM_FUNCTION(daObjTks_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTks_Draw__FPv) {
+asm void daObjTks_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_Draw__FPv.s"
 }
@@ -581,21 +727,16 @@ ASM_FUNCTION(daObjTks_Draw__FPv) {
 
 
 /* 80D11638-80D11640 0008+00 .text      daObjTks_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjTks_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_IsDelete__FPv.s"
+bool daObjTks_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D11640-80D11670 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -606,7 +747,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__10daObjTks_cFv) {
+asm void daObjTks_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setParam__10daObjTks_cFv.s"
 }
@@ -617,7 +758,7 @@ ASM_FUNCTION(setParam__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__10daObjTks_cFv) {
+asm void daObjTks_c::main() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/main__10daObjTks_cFv.s"
 }
@@ -628,7 +769,7 @@ ASM_FUNCTION(main__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__10daObjTks_cFv) {
+asm void daObjTks_c::ctrlBtk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/ctrlBtk__10daObjTks_cFv.s"
 }
@@ -639,7 +780,7 @@ ASM_FUNCTION(ctrlBtk__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__10daObjTks_cFv) {
+asm void daObjTks_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setAttnPos__10daObjTks_cFv.s"
 }
@@ -650,7 +791,7 @@ ASM_FUNCTION(setAttnPos__10daObjTks_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__10daObjTks_cFv) {
+asm void daObjTks_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/lookat__10daObjTks_cFv.s"
 }
@@ -658,32 +799,22 @@ ASM_FUNCTION(lookat__10daObjTks_cFv) {
 
 
 /* 80D11E94-80D11E9C 0008+00 .text      drawDbgInfo__10daObjTks_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__10daObjTks_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/drawDbgInfo__10daObjTks_cFv.s"
+bool daObjTks_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D11E9C-80D11EA0 0004+00 .text      drawOtherMdls__10daObjTks_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__10daObjTks_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/drawOtherMdls__10daObjTks_cFv.s"
+void daObjTks_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D11EA0-80D11EAC 000C+00 .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D11EA0) {
+extern "C" asm void func_80D11EA0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/func_80D11EA0.s"
 }
@@ -694,7 +825,7 @@ ASM_FUNCTION(func_80D11EA0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_tks_cpp) {
+extern "C" asm void __sinit_d_a_obj_tks_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__sinit_d_a_obj_tks_cpp.s"
 }
@@ -705,7 +836,7 @@ ASM_FUNCTION(__sinit_d_a_obj_tks_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -716,7 +847,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__5csXyzFv.s"
 }
@@ -724,21 +855,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80D11FF8-80D11FFC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D11FFC-80D12038 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__4cXyzFv.s"
 }
@@ -746,21 +872,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80D12038-80D1203C 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D1203C-80D12288 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__8daNpcF_cFv.s"
 }
@@ -771,7 +892,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -782,7 +903,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__8daNpcF_cFv.s"
 }
@@ -793,7 +914,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -804,7 +925,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__12dBgS_AcchCirFv.s"
 }
@@ -815,7 +936,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__10dCcD_GSttsFv.s"
 }
@@ -826,7 +947,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -837,7 +958,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__12J3DFrameCtrlFv.s"
 }
@@ -845,32 +966,22 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80D12680-80D12684 0004+00 .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D12684-80D12688 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D12688-80D126D0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__10cCcD_GSttsFv.s"
 }
@@ -881,7 +992,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjTks_Param_cFv) {
+asm daObjTks_Param_c::~daObjTks_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__dt__16daObjTks_Param_cFv.s"
 }
@@ -892,7 +1003,7 @@ ASM_FUNCTION(__dt__16daObjTks_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D12718) {
+extern "C" asm void func_80D12718() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/func_80D12718.s"
 }
@@ -903,7 +1014,7 @@ ASM_FUNCTION(func_80D12718) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D12720) {
+extern "C" asm void func_80D12720() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/func_80D12720.s"
 }

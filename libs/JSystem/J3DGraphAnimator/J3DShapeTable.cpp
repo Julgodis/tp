@@ -6,71 +6,116 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DShapeTable (J3DShapeTable) False/False
+// build J3DDrawMtxData (J3DDrawMtxData) False/False
+/* top-level dependencies (begin J3DDrawMtxData) */
+/* top-level dependencies (end J3DDrawMtxData) */
+struct J3DDrawMtxData {
+};
+
+// build J3DVertexData (J3DVertexData) False/False
+/* top-level dependencies (begin J3DVertexData) */
+/* top-level dependencies (end J3DVertexData) */
+struct J3DVertexData {
+};
+
+/* top-level dependencies (begin J3DShapeTable) */
+// outer dependency: J3DDrawMtxData
+// outer dependency: J3DVertexData
+/* top-level dependencies (end J3DShapeTable) */
+struct J3DShapeTable {
+	// J3DDrawMtxData
+	// J3DVertexData
+	/* 803258A0 */ void hide();
+	/* 803258D8 */ void show();
+	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
+	/* 8032597C */ void sortVcdVatCmd();
+};
+
+// build J3DDrawMtxData (J3DDrawMtxData) True/True
+// build J3DVertexData (J3DVertexData) True/True
+// build J3DShape (J3DShape) False/False
+/* top-level dependencies (begin J3DShape) */
+/* top-level dependencies (end J3DShape) */
+struct J3DShape {
+	/* 80314F5C */ void isSameVcdVatCmd(J3DShape*);
+	/* 80315260 */ void makeVcdVatCmd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void hide__13J3DShapeTableFv();
-extern "C" extern void show__13J3DShapeTableFv();
-extern "C" extern void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
-extern "C" extern void sortVcdVatCmd__13J3DShapeTableFv();
+
+extern "C" void hide__13J3DShapeTableFv();
+extern "C" void show__13J3DShapeTableFv();
+extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
+extern "C" void sortVcdVatCmd__13J3DShapeTableFv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
-extern "C" extern void makeVcdVatCmd__8J3DShapeFv();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_27();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+
+extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
+extern "C" void makeVcdVatCmd__8J3DShapeFv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:
 // 
 
-/* 803258A0-803258D8 0038+00 .text      hide__13J3DShapeTableFv                                      */
+/* 803258A0-803258D8 0038+00 rc=0 efc=0 .text      hide__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hide__13J3DShapeTableFv) {
+asm void J3DShapeTable::hide() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DShapeTable/hide__13J3DShapeTableFv.s"
 }
 #pragma pop
 
 
-/* 803258D8-80325910 0038+00 .text      show__13J3DShapeTableFv                                      */
+/* 803258D8-80325910 0038+00 rc=0 efc=0 .text      show__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(show__13J3DShapeTableFv) {
+asm void J3DShapeTable::show() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DShapeTable/show__13J3DShapeTableFv.s"
 }
 #pragma pop
 
 
-/* 80325910-8032597C 006C+00 .text      initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData */
+/* 80325910-8032597C 006C+00 rc=2 efc=2 .text      initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData) {
+asm void J3DShapeTable::initShapeNodes(J3DDrawMtxData* field_0, J3DVertexData* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DShapeTable/initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData.s"
 }
 #pragma pop
 
 
-/* 8032597C-80325A18 009C+00 .text      sortVcdVatCmd__13J3DShapeTableFv                             */
+/* 8032597C-80325A18 009C+00 rc=2 efc=2 .text      sortVcdVatCmd__13J3DShapeTableFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sortVcdVatCmd__13J3DShapeTableFv) {
+asm void J3DShapeTable::sortVcdVatCmd() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DShapeTable/sortVcdVatCmd__13J3DShapeTableFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

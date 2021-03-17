@@ -6,30 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTvCdlst_c;
+
+struct daTvCdlst_HIO_c {
+	daTvCdlst_HIO_c();
+	~daTvCdlst_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTvCdlst_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void lightInit();
+	void setLight();
+	void cutLight();
+	void pointLightProc();
+	void Execute();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daTvCdlst_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daTvCdlst_cFv();
-extern "C" extern void CreateHeap__11daTvCdlst_cFv();
-extern "C" extern void create__11daTvCdlst_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void createHeapCallBack__11daTvCdlst_cFP10fopAc_ac_c();
-extern "C" extern void lightInit__11daTvCdlst_cFv();
-extern "C" extern void setLight__11daTvCdlst_cFv();
-extern "C" extern void cutLight__11daTvCdlst_cFv();
-extern "C" extern void pointLightProc__11daTvCdlst_cFv();
-extern "C" extern void Execute__11daTvCdlst_cFv();
-extern "C" extern void Draw__11daTvCdlst_cFv();
-extern "C" extern void Delete__11daTvCdlst_cFv();
-extern "C" extern void daTvCdlst_Draw__FP11daTvCdlst_c();
-extern "C" extern void daTvCdlst_Execute__FP11daTvCdlst_c();
-extern "C" extern void daTvCdlst_Delete__FP11daTvCdlst_c();
-extern "C" extern void daTvCdlst_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daTvCdlst_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_TvCdlst_cpp();
+void daTvCdlst_Draw(daTvCdlst_c*);
+void daTvCdlst_Execute(daTvCdlst_c*);
+void daTvCdlst_Delete(daTvCdlst_c*);
+void daTvCdlst_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_TvCdlst_cpp();
+
+extern "C" void __ct__15daTvCdlst_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daTvCdlst_cFv();
+extern "C" void CreateHeap__11daTvCdlst_cFv();
+extern "C" void create__11daTvCdlst_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void createHeapCallBack__11daTvCdlst_cFP10fopAc_ac_c();
+extern "C" void lightInit__11daTvCdlst_cFv();
+extern "C" void setLight__11daTvCdlst_cFv();
+extern "C" void cutLight__11daTvCdlst_cFv();
+extern "C" void pointLightProc__11daTvCdlst_cFv();
+extern "C" void Execute__11daTvCdlst_cFv();
+extern "C" void Draw__11daTvCdlst_cFv();
+extern "C" void Delete__11daTvCdlst_cFv();
+extern "C" void daTvCdlst_Draw__FP11daTvCdlst_c();
+extern "C" void daTvCdlst_Execute__FP11daTvCdlst_c();
+extern "C" void daTvCdlst_Delete__FP11daTvCdlst_c();
+extern "C" void daTvCdlst_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daTvCdlst_HIO_cFv();
+extern "C" void __sinit_d_a_obj_TvCdlst_cpp();
 SECTION_RODATA extern const u8 mCcDObjInfo__11daTvCdlst_c[48];
 SECTION_RODATA extern const u32 lit_3750;
 SECTION_RODATA extern const u32 lit_3840;
@@ -59,8 +106,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +120,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daTvCdlst_HIO_cFv) {
+asm daTvCdlst_HIO_c::daTvCdlst_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__ct__15daTvCdlst_HIO_cFv.s"
 }
@@ -81,7 +131,7 @@ ASM_FUNCTION(__ct__15daTvCdlst_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +142,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/setBaseMtx__11daTvCdlst_cFv.s"
 }
@@ -103,7 +153,7 @@ ASM_FUNCTION(setBaseMtx__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/CreateHeap__11daTvCdlst_cFv.s"
 }
@@ -114,7 +164,7 @@ ASM_FUNCTION(CreateHeap__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/create__11daTvCdlst_cFv.s"
 }
@@ -125,7 +175,7 @@ ASM_FUNCTION(create__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__dt__8cM3dGCylFv.s"
 }
@@ -136,7 +186,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__dt__8cM3dGAabFv.s"
 }
@@ -147,7 +197,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__11daTvCdlst_cFP10fopAc_ac_c) {
+asm void daTvCdlst_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/createHeapCallBack__11daTvCdlst_cFP10fopAc_ac_c.s"
 }
@@ -158,7 +208,7 @@ ASM_FUNCTION(createHeapCallBack__11daTvCdlst_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightInit__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::lightInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/lightInit__11daTvCdlst_cFv.s"
 }
@@ -169,7 +219,7 @@ ASM_FUNCTION(lightInit__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLight__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::setLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/setLight__11daTvCdlst_cFv.s"
 }
@@ -180,7 +230,7 @@ ASM_FUNCTION(setLight__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutLight__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::cutLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/cutLight__11daTvCdlst_cFv.s"
 }
@@ -191,7 +241,7 @@ ASM_FUNCTION(cutLight__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pointLightProc__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::pointLightProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/pointLightProc__11daTvCdlst_cFv.s"
 }
@@ -202,7 +252,7 @@ ASM_FUNCTION(pointLightProc__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/Execute__11daTvCdlst_cFv.s"
 }
@@ -213,7 +263,7 @@ ASM_FUNCTION(Execute__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/Draw__11daTvCdlst_cFv.s"
 }
@@ -224,7 +274,7 @@ ASM_FUNCTION(Draw__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daTvCdlst_cFv) {
+asm void daTvCdlst_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/Delete__11daTvCdlst_cFv.s"
 }
@@ -235,7 +285,7 @@ ASM_FUNCTION(Delete__11daTvCdlst_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTvCdlst_Draw__FP11daTvCdlst_c) {
+asm void daTvCdlst_Draw(daTvCdlst_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/daTvCdlst_Draw__FP11daTvCdlst_c.s"
 }
@@ -246,7 +296,7 @@ ASM_FUNCTION(daTvCdlst_Draw__FP11daTvCdlst_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTvCdlst_Execute__FP11daTvCdlst_c) {
+asm void daTvCdlst_Execute(daTvCdlst_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/daTvCdlst_Execute__FP11daTvCdlst_c.s"
 }
@@ -257,7 +307,7 @@ ASM_FUNCTION(daTvCdlst_Execute__FP11daTvCdlst_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTvCdlst_Delete__FP11daTvCdlst_c) {
+asm void daTvCdlst_Delete(daTvCdlst_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/daTvCdlst_Delete__FP11daTvCdlst_c.s"
 }
@@ -268,7 +318,7 @@ ASM_FUNCTION(daTvCdlst_Delete__FP11daTvCdlst_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTvCdlst_Create__FP10fopAc_ac_c) {
+asm void daTvCdlst_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/daTvCdlst_Create__FP10fopAc_ac_c.s"
 }
@@ -279,7 +329,7 @@ ASM_FUNCTION(daTvCdlst_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTvCdlst_HIO_cFv) {
+asm daTvCdlst_HIO_c::~daTvCdlst_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__dt__15daTvCdlst_HIO_cFv.s"
 }
@@ -290,7 +340,7 @@ ASM_FUNCTION(__dt__15daTvCdlst_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_TvCdlst_cpp) {
+extern "C" asm void __sinit_d_a_obj_TvCdlst_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_TvCdlst/d_a_obj_TvCdlst/__sinit_d_a_obj_TvCdlst_cpp.s"
 }

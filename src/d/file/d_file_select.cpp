@@ -6,204 +6,1083 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dFs_HIO_c (dFs_HIO_c) False/False
+/* top-level dependencies (begin dFs_HIO_c) */
+/* top-level dependencies (end dFs_HIO_c) */
+struct dFs_HIO_c {
+	/* 801835F8 */ dFs_HIO_c();
+	/* 801913E0 */ ~dFs_HIO_c();
+};
+
+// build dFile_select_c (dFile_select_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin dFile_select_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dFile_select_c) */
+struct dFile_select_c {
+	// JKRArchive
+	/* 8018366C */ dFile_select_c(JKRArchive*);
+	/* 8018375C */ ~dFile_select_c();
+	/* 801843CC */ void _create();
+	/* 801844FC */ void _move();
+	/* 80184664 */ void selFileWakuAnm();
+	/* 801848A0 */ void bookIconAnm();
+	/* 8018499C */ void selCopyFileWakuAnm();
+	/* 80184A48 */ void copyBookIconAnm();
+	/* 80184B44 */ void dataDelEffAnm();
+	/* 80184BFC */ void dataCopyEffAnm();
+	/* 80184CB4 */ void selectDataBaseMoveAnmInitSet(s32, s32);
+	/* 80184D4C */ void selectDataBaseMoveAnm();
+	/* 80184E38 */ void dataSelectInAnmSet();
+	/* 80185040 */ void dataSelectIn();
+	/* 80185230 */ void dataSelectInit();
+	/* 801853C4 */ void dataSelect();
+	/* 80185508 */ void dataSelectStart();
+	/* 80185994 */ void selectDataMoveAnmInitSet(s32, s32);
+	/* 80185AAC */ void selectDataMoveAnm();
+	/* 80185C2C */ void dataSelectAnmSet();
+	/* 80185DE0 */ void dataSelectMoveAnime();
+	/* 80186088 */ void makeRecInfo(char);
+	/* 801864DC */ void selectDataOpenMove();
+	/* 80186638 */ void selectDataNameMove();
+	/* 801866C8 */ void selectDataOpenEraseMove();
+	/* 80186774 */ void menuSelect();
+	/* 801868EC */ void menuSelectStart();
+	/* 80186A80 */ void menuSelectCansel();
+	/* 80186B48 */ void menuMoveAnmInitSet(s32, s32);
+	/* 80186CAC */ void menuMoveAnm();
+	/* 80186E14 */ void menuSelectAnmSet();
+	/* 80186F98 */ void menuSelectMoveAnm();
+	/* 8018721C */ void ToNameMove();
+	/* 801872C4 */ void ToNameMove2();
+	/* 80187384 */ void nameInputWait();
+	/* 801873BC */ void nameInput();
+	/* 801874F8 */ void nameToDataSelectMove();
+	/* 8018759C */ void nameInputFade();
+	/* 801876A0 */ void nameInput2Move();
+	/* 8018774C */ void nameInput2();
+	/* 80187824 */ void backNameInputMove0();
+	/* 80187908 */ void backNameInputMove();
+	/* 801879B8 */ void ToCopyPaneMove();
+	/* 80187ADC */ void ToErasePaneMove();
+	/* 80187B44 */ void backSelectMove();
+	/* 80187BE8 */ void copySelMoveAnmInitSet(s32, s32);
+	/* 80187DB8 */ void setSaveDataForCopySel();
+	/* 80187ED4 */ void copyDataToSelect();
+	/* 8018801C */ void copyDataToSelectStart();
+	/* 80188234 */ void copyDataToSelectCansel();
+	/* 8018832C */ void copyDataToSelectMoveAnmSet();
+	/* 801884D0 */ void copyDataToSelectMoveAnm();
+	/* 80188834 */ void copySelectWakuAlpahAnmInit(char, char, char, char);
+	/* 80188878 */ void copySelectWakuAlpahAnm(char);
+	/* 80188950 */ void getCptoNum(char);
+	/* 80188994 */ void copyToSelBack();
+	/* 80188B54 */ void copyToSelPaneMove();
+	/* 80188BBC */ void yesnoMenuMoveAnmInitSet(s32, s32);
+	/* 80188D38 */ void yesnoMenuMoveAnm();
+	/* 80188ED0 */ void yesnoSelectMoveAnm();
+	/* 8018912C */ void yesnoCursorShow();
+	/* 8018929C */ void YesNoSelect();
+	/* 801893E4 */ void yesNoSelectStart();
+	/* 8018978C */ void yesnoSelectAnmSet();
+	/* 80189904 */ void yesnoCancelAnmSet();
+	/* 80189A24 */ void YesNoCancelMove();
+	/* 80189BA8 */ void yesNoCursorMoveAnm();
+	/* 80189C14 */ void CmdExecPaneMove0();
+	/* 80189E28 */ void CommandExec();
+	/* 80189F68 */ void DataEraseWait();
+	/* 80189FFC */ void DataEraseWait2();
+	/* 8018A194 */ void ErasePaneMoveOk();
+	/* 8018A2DC */ void ErasePaneMoveOk2();
+	/* 8018A3B0 */ void eraseEndBackSelectWait();
+	/* 8018A444 */ void eraseEndBackSelect();
+	/* 8018A4D0 */ void DataCopyWait();
+	/* 8018A564 */ void DataCopyWait2();
+	/* 8018A6F8 */ void copyPaneMoveOk();
+	/* 8018A868 */ void copyPaneMoveOk2();
+	/* 8018A960 */ void ErrorMsgPaneMove();
+	/* 8018AAC4 */ void backDatSelPaneMove();
+	/* 8018AC3C */ void backDatSelWait();
+	/* 8018AD38 */ void backDatSelWait2();
+	/* 8018AD9C */ void nextModeWait();
+	/* 8018ADA0 */ void screenSet();
+	/* 8018BF2C */ void screenSetCopySel();
+	/* 8018C524 */ void screenSetYesNo();
+	/* 8018C8F4 */ void screenSet3Menu();
+	/* 8018CCD0 */ void screenSetDetail();
+	/* 8018CE38 */ void setWakuAnm();
+	/* 8018CF50 */ void displayInit();
+	/* 8018D044 */ void setSaveData();
+	/* 8018D0E4 */ void headerTxtSet(u16, char, char);
+	/* 8018D25C */ void headerTxtChangeAnm();
+	/* 8018D344 */ void modoruTxtChange(char);
+	/* 8018D3A0 */ void modoruTxtDispAnmInit(char);
+	/* 8018D41C */ void modoruTxtDispAnm();
+	/* 8018D4F8 */ void ketteiTxtDispAnmInit(char);
+	/* 8018D574 */ void ketteiTxtDispAnm();
+	/* 8018D650 */ void selectWakuAlpahAnmInit(char, char, char, char);
+	/* 8018D68C */ void selectWakuAlpahAnm(char);
+	/* 8018D764 */ void selFileCursorShow();
+	/* 8018D884 */ void menuWakuAlpahAnmInit(char, char, char, char);
+	/* 8018D8C8 */ void menuWakuAlpahAnm(char);
+	/* 8018DA10 */ void menuCursorShow();
+	/* 8018DB80 */ void yesnoWakuAlpahAnmInit(char, char, char, char);
+	/* 8018DBCC */ void yesnoWakuAlpahAnm(char);
+	/* 8018DD38 */ void _draw();
+	/* 8018E130 */ void errorMoveAnmInitSet(s32, s32);
+	/* 8018E1C0 */ void errorMoveAnm();
+	/* 8018E2B4 */ void errDispInitSet(s32, s32);
+	/* 8018E4CC */ void MemCardCheckMain();
+	/* 8018E504 */ void MemCardStatCheck();
+	/* 8018E7C4 */ void MemCardLoadWait();
+	/* 8018E93C */ void MemCardErrMsgWaitKey();
+	/* 8018E9B0 */ void noFileSpaceDispInit();
+	/* 8018E9D4 */ void MemCardNoFileSpaceDisp();
+	/* 8018EA3C */ void iplSelDispInit();
+	/* 8018EA90 */ void MemCardGotoIPLSelectDisp();
+	/* 8018EB10 */ void MemCardGotoIPLSelect();
+	/* 8018EBCC */ void MemCardGotoIPL();
+	/* 8018EC4C */ void noSaveSelDispInit();
+	/* 8018ECBC */ void MemCardNoSaveSelDisp();
+	/* 8018ED80 */ void MemCardErrMsgWaitNoSaveSel();
+	/* 8018EF5C */ void formatYesSelDispInitSet();
+	/* 8018EFAC */ void formatNoSelDispInitSet();
+	/* 8018EFFC */ void MemCardFormatYesSelDisp();
+	/* 8018F080 */ void MemCardFormatNoSelDisp();
+	/* 8018F128 */ void MemCardErrMsgWaitFormatSel();
+	/* 8018F17C */ void formatYesSel2DispInitSet();
+	/* 8018F1CC */ void MemCardErrMsgWaitFormatSel2();
+	/* 8018F228 */ void MemCardFormatYesSel2Disp();
+	/* 8018F2A4 */ void MemCardFormat();
+	/* 8018F304 */ void MemCardFormatWait();
+	/* 8018F374 */ void MemCardFormatCheck();
+	/* 8018F400 */ void MemCardMakeGameFileSel();
+	/* 8018F488 */ void MemCardMakeGameFileSelDisp();
+	/* 8018F580 */ void MemCardMakeGameFile();
+	/* 8018F5E0 */ void MemCardMakeGameFileWait();
+	/* 8018F650 */ void MemCardMakeGameFileCheck();
+	/* 8018F6DC */ void MemCardMsgWindowInitOpen();
+	/* 8018F8D8 */ void MemCardMsgWindowOpen();
+	/* 8018F974 */ void MemCardMsgWindowClose();
+	/* 8018FA2C */ void errYesNoSelect();
+	/* 8018FB80 */ void errCurMove(char);
+	/* 8018FBF8 */ void MemCardErrYesNoCursorMoveAnm();
+	/* 8018FC64 */ void errorTxtSet(u16);
+	/* 8018FD30 */ void errorTxtChangeAnm();
+	/* 8018FE18 */ void fileRecScaleAnm();
+	/* 8018FE64 */ void fileRecScaleAnmInitSet2(f32, f32);
+	/* 8018FEF4 */ void fileRecScaleAnm2();
+	/* 8018FF9C */ void fileInfoScaleAnm();
+	/* 80190074 */ void nameMoveAnmInitSet(s32, s32);
+	/* 80190124 */ void nameMoveAnm();
+	/* 80190208 */ void MemCardSaveDataClear();
+	/* 80190254 */ void setInitSaveData();
+	/* 801902B8 */ void dataSave();
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+	/* 801841EC */ ~J2DAnmTevRegKey();
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+	/* 80184274 */ ~J2DAnmTextureSRTKey();
+};
+
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+	/* 801842FC */ ~J2DAnmColor();
+};
+
+// build J2DAnmTransform (J2DAnmTransform) False/False
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
+/* top-level dependencies (begin J2DAnmTransform) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+	// J3DTransformInfo
+	/* 80184370 */ ~J2DAnmTransform();
+	/* 80191130 */ void getTransform(u16, J3DTransformInfo*) const;
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin J2DTextBox) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	// JUtility::TColor
+	/* 80186C84 */ void setWhite(JUtility::TColor);
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build JUtility (JUtility) True/True
+// build J2DPicture (J2DPicture) False/False
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// JUtility::TColor
+	/* 8018BEE0 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DAnmTextureSRTKey
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DAnmTextureSRTKey
+	/* 8018BF28 */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802F6714 */ void insertChild(J2DPane*, J2DPane*);
+	/* 802F7FCC */ void animationTransform();
+};
+
+// build dDlst_FileSel_c (dDlst_FileSel_c) False/False
+/* top-level dependencies (begin dDlst_FileSel_c) */
+/* top-level dependencies (end dDlst_FileSel_c) */
+struct dDlst_FileSel_c {
+	/* 8018DEBC */ void draw();
+	/* 8019135C */ ~dDlst_FileSel_c();
+};
+
+// build dDlst_FileSelDt_c (dDlst_FileSelDt_c) False/False
+/* top-level dependencies (begin dDlst_FileSelDt_c) */
+/* top-level dependencies (end dDlst_FileSelDt_c) */
+struct dDlst_FileSelDt_c {
+	/* 8018DEF4 */ void draw();
+	/* 801912E4 */ ~dDlst_FileSelDt_c();
+};
+
+// build dDlst_FileSelCp_c (dDlst_FileSelCp_c) False/False
+/* top-level dependencies (begin dDlst_FileSelCp_c) */
+/* top-level dependencies (end dDlst_FileSelCp_c) */
+struct dDlst_FileSelCp_c {
+	/* 8018DFFC */ void draw();
+	/* 8019126C */ ~dDlst_FileSelCp_c();
+};
+
+// build dDlst_FileSelYn_c (dDlst_FileSelYn_c) False/False
+/* top-level dependencies (begin dDlst_FileSelYn_c) */
+/* top-level dependencies (end dDlst_FileSelYn_c) */
+struct dDlst_FileSelYn_c {
+	/* 8018E0C0 */ void draw();
+	/* 801911F4 */ ~dDlst_FileSelYn_c();
+};
+
+// build dDlst_FileSel3m_c (dDlst_FileSel3m_c) False/False
+/* top-level dependencies (begin dDlst_FileSel3m_c) */
+/* top-level dependencies (end dDlst_FileSel3m_c) */
+struct dDlst_FileSel3m_c {
+	/* 8018E0F8 */ void draw();
+	/* 8019117C */ ~dDlst_FileSel3m_c();
+};
+
+// build dFile_select3D_c (dFile_select3D_c) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin dFile_select3D_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dFile_select3D_c) */
+struct dFile_select3D_c {
+	// cXyz
+	/* 801902F0 */ dFile_select3D_c();
+	/* 80190380 */ ~dFile_select3D_c();
+	/* 801903DC */ void _create(char, char);
+	/* 8019049C */ void _delete();
+	/* 801904A0 */ void freeHeap();
+	/* 801904E4 */ void _move();
+	/* 801905A8 */ void draw();
+	/* 8019065C */ void setJ3D(char const*, char const*, char const*);
+	/* 8019095C */ void set_mtx();
+	/* 80190A14 */ void animePlay();
+	/* 80190B44 */ void animeEntry();
+	/* 80190BA8 */ void createMaskModel();
+	/* 80190D68 */ void createMirrorModel();
+	/* 80190FE8 */ void toItem3Dpos(f32, f32, f32, cXyz*);
+};
+
+// build cXyz (cXyz) True/True
+// build J3DTransformInfo (J3DTransformInfo) True/True
+// build JUTNameTab (JUTNameTab) False/False
+/* top-level dependencies (begin JUTNameTab) */
+/* top-level dependencies (end JUTNameTab) */
+struct JUTNameTab {
+	/* 80191134 */ ~JUTNameTab();
+};
+
+// build dMsgString_c (dMsgString_c) False/False
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
+/* top-level dependencies (begin dMsgString_c) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build JUTFont (JUTFont) True/True
+// build COutFont_c (COutFont_c) True/True
+// build mDoExt_baseAnm (mDoExt_baseAnm) False/False
+/* top-level dependencies (begin mDoExt_baseAnm) */
+/* top-level dependencies (end mDoExt_baseAnm) */
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+// build mDoExt_brkAnm (mDoExt_brkAnm) False/False
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+// outer dependency: J3DModelData
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+	// J3DModelData
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+/* top-level dependencies (begin mDoExt_brkAnm) */
+// outer dependency: J3DAnmTevRegKey
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_brkAnm) */
+struct mDoExt_brkAnm {
+	// J3DAnmTevRegKey
+	// J3DMaterialTable
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
+// build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
+// build J3DModelData (J3DModelData) True/True
+/* top-level dependencies (begin mDoExt_bckAnm) */
+// outer dependency: J3DAnmTransform
+// outer dependency: J3DModelData
+/* top-level dependencies (end mDoExt_bckAnm) */
+struct mDoExt_bckAnm {
+	// J3DAnmTransform
+	// J3DModelData
+	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+// build J3DAnmTransform (J3DAnmTransform) True/True
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) False/False
+// build J3DModelData (J3DModelData) True/True
+/* top-level dependencies (begin J3DModel) */
+// outer dependency: J3DModelData
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+	// J3DModelData
+	/* 80327100 */ void initialize();
+	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+// build mDoMemCd_Ctrl_c (mDoMemCd_Ctrl_c) False/False
+/* top-level dependencies (begin mDoMemCd_Ctrl_c) */
+/* top-level dependencies (end mDoMemCd_Ctrl_c) */
+struct mDoMemCd_Ctrl_c {
+	/* 800169B4 */ void load();
+	/* 80016AB0 */ void LoadSync(void*, u32, u32);
+	/* 80016B58 */ void save(void*, u32, u32);
+	/* 80016CE0 */ void SaveSync();
+	/* 80016D74 */ void getStatus(u32);
+	/* 80016E58 */ void command_format();
+	/* 80016F2C */ void FormatSync();
+};
+
+// build J3DLightObj (J3DLightObj) False/False
+/* top-level dependencies (begin J3DLightObj) */
+/* top-level dependencies (end J3DLightObj) */
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
+};
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+/* top-level dependencies (begin dComIfG_play_c) */
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	/* 8002B2C8 */ void itemInit();
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(char) const;
+};
+
+// build dSv_player_collect_c (dSv_player_collect_c) False/False
+/* top-level dependencies (begin dSv_player_collect_c) */
+/* top-level dependencies (end dSv_player_collect_c) */
+struct dSv_player_collect_c {
+	/* 8003424C */ void isCollectCrystal(char) const;
+	/* 80034290 */ void isCollectMirror(char) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80034FCC */ void init();
+	/* 80035A04 */ void card_to_memory(char*, s32);
+	/* 80035BD0 */ void initdata_to_card(char*, s32);
+};
+
+// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
+/* top-level dependencies (begin J3DTevKColorAnm) */
+/* top-level dependencies (end J3DTevKColorAnm) */
+struct J3DTevKColorAnm {
+	/* 8003B150 */ ~J3DTevKColorAnm();
+	/* 8003B18C */ J3DTevKColorAnm();
+};
+
+// build J3DTevColorAnm (J3DTevColorAnm) False/False
+/* top-level dependencies (begin J3DTevColorAnm) */
+/* top-level dependencies (end J3DTevColorAnm) */
+struct J3DTevColorAnm {
+	/* 8003B1A4 */ ~J3DTevColorAnm();
+	/* 8003B1E0 */ J3DTevColorAnm();
+};
+
+// build J3DTexNoAnm (J3DTexNoAnm) False/False
+/* top-level dependencies (begin J3DTexNoAnm) */
+/* top-level dependencies (end J3DTexNoAnm) */
+struct J3DTexNoAnm {
+	/* 8003B1F8 */ ~J3DTexNoAnm();
+	/* 8003B240 */ J3DTexNoAnm();
+};
+
+// build J3DTexMtxAnm (J3DTexMtxAnm) False/False
+/* top-level dependencies (begin J3DTexMtxAnm) */
+/* top-level dependencies (end J3DTexMtxAnm) */
+struct J3DTexMtxAnm {
+	/* 8003B264 */ ~J3DTexMtxAnm();
+	/* 8003B2A0 */ J3DTexMtxAnm();
+};
+
+// build J3DMatColorAnm (J3DMatColorAnm) False/False
+/* top-level dependencies (begin J3DMatColorAnm) */
+/* top-level dependencies (end J3DMatColorAnm) */
+struct J3DMatColorAnm {
+	/* 8003B2B8 */ ~J3DMatColorAnm();
+	/* 8003B2F4 */ J3DMatColorAnm();
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build J2DAnmBase (J2DAnmBase) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+/* top-level dependencies (begin J2DAnmBase) */
+// outer dependency: J2DScreen
+/* top-level dependencies (end J2DAnmBase) */
+struct J2DAnmBase {
+	// J2DScreen
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build dFile_warning_c (dFile_warning_c) False/False
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin dFile_warning_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dFile_warning_c) */
+struct dFile_warning_c {
+	// JKRArchive
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, char);
+	/* 80191F18 */ void _move();
+	/* 801920B8 */ void openInit();
+	/* 8019210C */ void closeInit();
+	/* 80192160 */ void init();
+	/* 80192190 */ void _draw();
+};
+
+// build dFile_info_c (dFile_info_c) False/False
+// build dSv_save_c (dSv_save_c) False/False
+/* top-level dependencies (begin dSv_save_c) */
+/* top-level dependencies (end dSv_save_c) */
+struct dSv_save_c {
+};
+
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin dFile_info_c) */
+// outer dependency: dSv_save_c
+// outer dependency: JKRArchive
+/* top-level dependencies (end dFile_info_c) */
+struct dFile_info_c {
+	// dSv_save_c
+	// JKRArchive
+	/* 80192434 */ dFile_info_c(JKRArchive*, char);
+	/* 80192954 */ void setSaveData(dSv_save_c*, s32, char);
+	/* 80192D60 */ void _draw();
+};
+
+// build dSv_save_c (dSv_save_c) True/True
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	// J2DPane
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
+// build J3DModelData (J3DModelData) True/True
+// build cXyz (cXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin dScnKy_env_light_c) */
+// outer dependency: J3DModelData
+// outer dependency: cXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dScnKy_env_light_c) */
+struct dScnKy_env_light_c {
+	// J3DModelData
+	// cXyz
+	// dKy_tevstr_c
+	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
+/* top-level dependencies (begin JMSMesgEntry_c) */
+/* top-level dependencies (end JMSMesgEntry_c) */
+struct JMSMesgEntry_c {
+};
+
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: JMSMesgEntry_c
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// JMSMesgEntry_c
+	/* 8021C238 */ void decMsgKeyWaitTimer();
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+};
+
+// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
+// build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build JUTFont (JUTFont) True/True
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) True/True
+/* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end dMsgStringBase_c) */
+struct dMsgStringBase_c {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+};
+
+// build dName_c (dName_c) False/False
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin dName_c) */
+// outer dependency: J2DPane
+/* top-level dependencies (end dName_c) */
+struct dName_c {
+	// J2DPane
+	/* 8024E408 */ dName_c(J2DPane*);
+	/* 8024E7A4 */ void initial();
+	/* 8024E7EC */ void showIcon();
+	/* 8024E9A0 */ void _move();
+	/* 80250560 */ void _draw();
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DPane (J2DPane) True/True
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DPane
+	// J2DScreen
+	// JKRExpHeap
+	// JUtility::TColor
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253B2C */ void reinit();
+	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, char);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 80255878 */ void alphaAnime(s16, char, char, char);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// build J3DVertexBuffer (J3DVertexBuffer) False/False
+/* top-level dependencies (begin J3DVertexBuffer) */
+/* top-level dependencies (end J3DVertexBuffer) */
+struct J3DVertexBuffer {
+	/* 80310FD8 */ void init();
+};
+
+// build J3DLightInfo (J3DLightInfo) False/False
+/* top-level dependencies (begin J3DLightInfo) */
+/* top-level dependencies (end J3DLightInfo) */
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+// build J3DFrameCtrl (J3DFrameCtrl) False/False
+/* top-level dependencies (begin J3DFrameCtrl) */
+/* top-level dependencies (end J3DFrameCtrl) */
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+// build J3DMaterialAnm (J3DMaterialAnm) False/False
+/* top-level dependencies (begin J3DMaterialAnm) */
+/* top-level dependencies (end J3DMaterialAnm) */
+struct J3DMaterialAnm {
+	/* 8032C320 */ void initialize();
+};
+
+// build J3DModelLoaderDataBase (J3DModelLoaderDataBase) False/False
+/* top-level dependencies (begin J3DModelLoaderDataBase) */
+/* top-level dependencies (end J3DModelLoaderDataBase) */
+struct J3DModelLoaderDataBase {
+	/* 803346BC */ void load(void const*, u32);
+};
+
+// build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
+// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
+/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
+/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
+struct J3DAnmLoaderDataBaseFlag {
+};
+
+/* top-level dependencies (begin J3DAnmLoaderDataBase) */
+// outer dependency: J3DAnmLoaderDataBaseFlag
+/* top-level dependencies (end J3DAnmLoaderDataBase) */
+struct J3DAnmLoaderDataBase {
+	// J3DAnmLoaderDataBaseFlag
+	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
+};
+
+// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__9dFs_HIO_cFv();
-extern "C" extern void __ct__14dFile_select_cFP10JKRArchive();
-extern "C" extern void __dt__14dFile_select_cFv();
-extern "C" extern void __dt__15J2DAnmTevRegKeyFv();
-extern "C" extern void __dt__19J2DAnmTextureSRTKeyFv();
-extern "C" extern void __dt__11J2DAnmColorFv();
-extern "C" extern void __dt__15J2DAnmTransformFv();
-extern "C" extern void _create__14dFile_select_cFv();
-extern "C" extern void _move__14dFile_select_cFv();
-extern "C" extern void selFileWakuAnm__14dFile_select_cFv();
-extern "C" extern void bookIconAnm__14dFile_select_cFv();
-extern "C" extern void selCopyFileWakuAnm__14dFile_select_cFv();
-extern "C" extern void copyBookIconAnm__14dFile_select_cFv();
-extern "C" extern void dataDelEffAnm__14dFile_select_cFv();
-extern "C" extern void dataCopyEffAnm__14dFile_select_cFv();
-extern "C" extern void selectDataBaseMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void selectDataBaseMoveAnm__14dFile_select_cFv();
-extern "C" extern void dataSelectInAnmSet__14dFile_select_cFv();
-extern "C" extern void dataSelectIn__14dFile_select_cFv();
-extern "C" extern void dataSelectInit__14dFile_select_cFv();
-extern "C" extern void dataSelect__14dFile_select_cFv();
-extern "C" extern void dataSelectStart__14dFile_select_cFv();
-extern "C" extern void selectDataMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void selectDataMoveAnm__14dFile_select_cFv();
-extern "C" extern void dataSelectAnmSet__14dFile_select_cFv();
-extern "C" extern void dataSelectMoveAnime__14dFile_select_cFv();
-extern "C" extern void makeRecInfo__14dFile_select_cFUc();
-extern "C" extern void selectDataOpenMove__14dFile_select_cFv();
-extern "C" extern void selectDataNameMove__14dFile_select_cFv();
-extern "C" extern void selectDataOpenEraseMove__14dFile_select_cFv();
-extern "C" extern void menuSelect__14dFile_select_cFv();
-extern "C" extern void menuSelectStart__14dFile_select_cFv();
-extern "C" extern void menuSelectCansel__14dFile_select_cFv();
-extern "C" extern void menuMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void setWhite__10J2DTextBoxFQ28JUtility6TColor();
-extern "C" extern void menuMoveAnm__14dFile_select_cFv();
-extern "C" extern void menuSelectAnmSet__14dFile_select_cFv();
-extern "C" extern void menuSelectMoveAnm__14dFile_select_cFv();
-extern "C" extern void ToNameMove__14dFile_select_cFv();
-extern "C" extern void ToNameMove2__14dFile_select_cFv();
-extern "C" extern void nameInputWait__14dFile_select_cFv();
-extern "C" extern void nameInput__14dFile_select_cFv();
-extern "C" extern void nameToDataSelectMove__14dFile_select_cFv();
-extern "C" extern void nameInputFade__14dFile_select_cFv();
-extern "C" extern void nameInput2Move__14dFile_select_cFv();
-extern "C" extern void nameInput2__14dFile_select_cFv();
-extern "C" extern void backNameInputMove0__14dFile_select_cFv();
-extern "C" extern void backNameInputMove__14dFile_select_cFv();
-extern "C" extern void ToCopyPaneMove__14dFile_select_cFv();
-extern "C" extern void ToErasePaneMove__14dFile_select_cFv();
-extern "C" extern void backSelectMove__14dFile_select_cFv();
-extern "C" extern void copySelMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void setSaveDataForCopySel__14dFile_select_cFv();
-extern "C" extern void copyDataToSelect__14dFile_select_cFv();
-extern "C" extern void copyDataToSelectStart__14dFile_select_cFv();
-extern "C" extern void copyDataToSelectCansel__14dFile_select_cFv();
-extern "C" extern void copyDataToSelectMoveAnmSet__14dFile_select_cFv();
-extern "C" extern void copyDataToSelectMoveAnm__14dFile_select_cFv();
-extern "C" extern void copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
-extern "C" extern void copySelectWakuAlpahAnm__14dFile_select_cFUc();
-extern "C" extern void getCptoNum__14dFile_select_cFUc();
-extern "C" extern void copyToSelBack__14dFile_select_cFv();
-extern "C" extern void copyToSelPaneMove__14dFile_select_cFv();
-extern "C" extern void yesnoMenuMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void yesnoMenuMoveAnm__14dFile_select_cFv();
-extern "C" extern void yesnoSelectMoveAnm__14dFile_select_cFv();
-extern "C" extern void yesnoCursorShow__14dFile_select_cFv();
-extern "C" extern void YesNoSelect__14dFile_select_cFv();
-extern "C" extern void yesNoSelectStart__14dFile_select_cFv();
-extern "C" extern void yesnoSelectAnmSet__14dFile_select_cFv();
-extern "C" extern void yesnoCancelAnmSet__14dFile_select_cFv();
-extern "C" extern void YesNoCancelMove__14dFile_select_cFv();
-extern "C" extern void yesNoCursorMoveAnm__14dFile_select_cFv();
-extern "C" extern void CmdExecPaneMove0__14dFile_select_cFv();
-extern "C" extern void CommandExec__14dFile_select_cFv();
-extern "C" extern void DataEraseWait__14dFile_select_cFv();
-extern "C" extern void DataEraseWait2__14dFile_select_cFv();
-extern "C" extern void ErasePaneMoveOk__14dFile_select_cFv();
-extern "C" extern void ErasePaneMoveOk2__14dFile_select_cFv();
-extern "C" extern void eraseEndBackSelectWait__14dFile_select_cFv();
-extern "C" extern void eraseEndBackSelect__14dFile_select_cFv();
-extern "C" extern void DataCopyWait__14dFile_select_cFv();
-extern "C" extern void DataCopyWait2__14dFile_select_cFv();
-extern "C" extern void copyPaneMoveOk__14dFile_select_cFv();
-extern "C" extern void copyPaneMoveOk2__14dFile_select_cFv();
-extern "C" extern void ErrorMsgPaneMove__14dFile_select_cFv();
-extern "C" extern void backDatSelPaneMove__14dFile_select_cFv();
-extern "C" extern void backDatSelWait__14dFile_select_cFv();
-extern "C" extern void backDatSelWait2__14dFile_select_cFv();
-extern "C" extern void nextModeWait__14dFile_select_cFv();
-extern "C" extern void screenSet__14dFile_select_cFv();
-extern "C" extern void setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
-extern "C" extern void screenSetCopySel__14dFile_select_cFv();
-extern "C" extern void screenSetYesNo__14dFile_select_cFv();
-extern "C" extern void screenSet3Menu__14dFile_select_cFv();
-extern "C" extern void screenSetDetail__14dFile_select_cFv();
-extern "C" extern void setWakuAnm__14dFile_select_cFv();
-extern "C" extern void displayInit__14dFile_select_cFv();
-extern "C" extern void setSaveData__14dFile_select_cFv();
-extern "C" extern void headerTxtSet__14dFile_select_cFUsUcUc();
-extern "C" extern void headerTxtChangeAnm__14dFile_select_cFv();
-extern "C" extern void modoruTxtChange__14dFile_select_cFUc();
-extern "C" extern void modoruTxtDispAnmInit__14dFile_select_cFUc();
-extern "C" extern void modoruTxtDispAnm__14dFile_select_cFv();
-extern "C" extern void ketteiTxtDispAnmInit__14dFile_select_cFUc();
-extern "C" extern void ketteiTxtDispAnm__14dFile_select_cFv();
-extern "C" extern void selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
-extern "C" extern void selectWakuAlpahAnm__14dFile_select_cFUc();
-extern "C" extern void selFileCursorShow__14dFile_select_cFv();
-extern "C" extern void menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
-extern "C" extern void menuWakuAlpahAnm__14dFile_select_cFUc();
-extern "C" extern void menuCursorShow__14dFile_select_cFv();
-extern "C" extern void yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
-extern "C" extern void yesnoWakuAlpahAnm__14dFile_select_cFUc();
-extern "C" extern void _draw__14dFile_select_cFv();
-extern "C" extern void draw__15dDlst_FileSel_cFv();
-extern "C" extern void draw__17dDlst_FileSelDt_cFv();
-extern "C" extern void draw__17dDlst_FileSelCp_cFv();
-extern "C" extern void draw__17dDlst_FileSelYn_cFv();
-extern "C" extern void draw__17dDlst_FileSel3m_cFv();
-extern "C" extern void errorMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void errorMoveAnm__14dFile_select_cFv();
-extern "C" extern void errDispInitSet__14dFile_select_cFii();
-extern "C" extern void MemCardCheckMain__14dFile_select_cFv();
-extern "C" extern void MemCardStatCheck__14dFile_select_cFv();
-extern "C" extern void MemCardLoadWait__14dFile_select_cFv();
-extern "C" extern void MemCardErrMsgWaitKey__14dFile_select_cFv();
-extern "C" extern void noFileSpaceDispInit__14dFile_select_cFv();
-extern "C" extern void MemCardNoFileSpaceDisp__14dFile_select_cFv();
-extern "C" extern void iplSelDispInit__14dFile_select_cFv();
-extern "C" extern void MemCardGotoIPLSelectDisp__14dFile_select_cFv();
-extern "C" extern void MemCardGotoIPLSelect__14dFile_select_cFv();
-extern "C" extern void MemCardGotoIPL__14dFile_select_cFv();
-extern "C" extern void noSaveSelDispInit__14dFile_select_cFv();
-extern "C" extern void MemCardNoSaveSelDisp__14dFile_select_cFv();
-extern "C" extern void MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv();
-extern "C" extern void formatYesSelDispInitSet__14dFile_select_cFv();
-extern "C" extern void formatNoSelDispInitSet__14dFile_select_cFv();
-extern "C" extern void MemCardFormatYesSelDisp__14dFile_select_cFv();
-extern "C" extern void MemCardFormatNoSelDisp__14dFile_select_cFv();
-extern "C" extern void MemCardErrMsgWaitFormatSel__14dFile_select_cFv();
-extern "C" extern void formatYesSel2DispInitSet__14dFile_select_cFv();
-extern "C" extern void MemCardErrMsgWaitFormatSel2__14dFile_select_cFv();
-extern "C" extern void MemCardFormatYesSel2Disp__14dFile_select_cFv();
-extern "C" extern void MemCardFormat__14dFile_select_cFv();
-extern "C" extern void MemCardFormatWait__14dFile_select_cFv();
-extern "C" extern void MemCardFormatCheck__14dFile_select_cFv();
-extern "C" extern void MemCardMakeGameFileSel__14dFile_select_cFv();
-extern "C" extern void MemCardMakeGameFileSelDisp__14dFile_select_cFv();
-extern "C" extern void MemCardMakeGameFile__14dFile_select_cFv();
-extern "C" extern void MemCardMakeGameFileWait__14dFile_select_cFv();
-extern "C" extern void MemCardMakeGameFileCheck__14dFile_select_cFv();
-extern "C" extern void MemCardMsgWindowInitOpen__14dFile_select_cFv();
-extern "C" extern void MemCardMsgWindowOpen__14dFile_select_cFv();
-extern "C" extern void MemCardMsgWindowClose__14dFile_select_cFv();
-extern "C" extern void errYesNoSelect__14dFile_select_cFv();
-extern "C" extern void errCurMove__14dFile_select_cFUc();
-extern "C" extern void MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv();
-extern "C" extern void errorTxtSet__14dFile_select_cFUs();
-extern "C" extern void errorTxtChangeAnm__14dFile_select_cFv();
-extern "C" extern void fileRecScaleAnm__14dFile_select_cFv();
-extern "C" extern void fileRecScaleAnmInitSet2__14dFile_select_cFff();
-extern "C" extern void fileRecScaleAnm2__14dFile_select_cFv();
-extern "C" extern void fileInfoScaleAnm__14dFile_select_cFv();
-extern "C" extern void nameMoveAnmInitSet__14dFile_select_cFii();
-extern "C" extern void nameMoveAnm__14dFile_select_cFv();
-extern "C" extern void MemCardSaveDataClear__14dFile_select_cFv();
-extern "C" extern void setInitSaveData__14dFile_select_cFv();
-extern "C" extern void dataSave__14dFile_select_cFv();
-extern "C" extern void __ct__16dFile_select3D_cFv();
-extern "C" extern void __dt__16dFile_select3D_cFv();
-extern "C" extern void _create__16dFile_select3D_cFUcUc();
-extern "C" extern void _delete__16dFile_select3D_cFv();
-extern "C" extern void freeHeap__16dFile_select3D_cFv();
-extern "C" extern void _move__16dFile_select3D_cFv();
-extern "C" extern void draw__16dFile_select3D_cFv();
-extern "C" extern void setJ3D__16dFile_select3D_cFPCcPCcPCc();
-extern "C" extern void set_mtx__16dFile_select3D_cFv();
-extern "C" extern void animePlay__16dFile_select3D_cFv();
-extern "C" extern void animeEntry__16dFile_select3D_cFv();
-extern "C" extern void createMaskModel__16dFile_select3D_cFv();
-extern "C" extern void createMirrorModel__16dFile_select3D_cFv();
-extern "C" extern void toItem3Dpos__16dFile_select3D_cFfffP4cXyz();
-extern "C" extern void calcViewMtx__16dFile_select3D_cFPA4_f();
-extern "C" extern void getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo();
-extern "C" extern void __dt__10JUTNameTabFv();
-extern "C" extern void __dt__17dDlst_FileSel3m_cFv();
-extern "C" extern void __dt__17dDlst_FileSelYn_cFv();
-extern "C" extern void __dt__17dDlst_FileSelCp_cFv();
-extern "C" extern void __dt__17dDlst_FileSelDt_cFv();
-extern "C" extern void __dt__15dDlst_FileSel_cFv();
-extern "C" extern void __dt__9dFs_HIO_cFv();
-extern "C" extern void __sinit_d_file_select_cpp();
-extern "C" extern void getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" static void calcViewMtx__16dFile_select3D_cFPA4_f();
+extern "C" void __sinit_d_file_select_cpp();
+
+extern "C" void __ct__9dFs_HIO_cFv();
+extern "C" void __ct__14dFile_select_cFP10JKRArchive();
+extern "C" void __dt__14dFile_select_cFv();
+extern "C" void __dt__15J2DAnmTevRegKeyFv();
+extern "C" void __dt__19J2DAnmTextureSRTKeyFv();
+extern "C" void __dt__11J2DAnmColorFv();
+extern "C" void __dt__15J2DAnmTransformFv();
+extern "C" void _create__14dFile_select_cFv();
+extern "C" void _move__14dFile_select_cFv();
+extern "C" void selFileWakuAnm__14dFile_select_cFv();
+extern "C" void bookIconAnm__14dFile_select_cFv();
+extern "C" void selCopyFileWakuAnm__14dFile_select_cFv();
+extern "C" void copyBookIconAnm__14dFile_select_cFv();
+extern "C" void dataDelEffAnm__14dFile_select_cFv();
+extern "C" void dataCopyEffAnm__14dFile_select_cFv();
+extern "C" void selectDataBaseMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void selectDataBaseMoveAnm__14dFile_select_cFv();
+extern "C" void dataSelectInAnmSet__14dFile_select_cFv();
+extern "C" void dataSelectIn__14dFile_select_cFv();
+extern "C" void dataSelectInit__14dFile_select_cFv();
+extern "C" void dataSelect__14dFile_select_cFv();
+extern "C" void dataSelectStart__14dFile_select_cFv();
+extern "C" void selectDataMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void selectDataMoveAnm__14dFile_select_cFv();
+extern "C" void dataSelectAnmSet__14dFile_select_cFv();
+extern "C" void dataSelectMoveAnime__14dFile_select_cFv();
+extern "C" void makeRecInfo__14dFile_select_cFUc();
+extern "C" void selectDataOpenMove__14dFile_select_cFv();
+extern "C" void selectDataNameMove__14dFile_select_cFv();
+extern "C" void selectDataOpenEraseMove__14dFile_select_cFv();
+extern "C" void menuSelect__14dFile_select_cFv();
+extern "C" void menuSelectStart__14dFile_select_cFv();
+extern "C" void menuSelectCansel__14dFile_select_cFv();
+extern "C" void menuMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void setWhite__10J2DTextBoxFQ28JUtility6TColor();
+extern "C" void menuMoveAnm__14dFile_select_cFv();
+extern "C" void menuSelectAnmSet__14dFile_select_cFv();
+extern "C" void menuSelectMoveAnm__14dFile_select_cFv();
+extern "C" void ToNameMove__14dFile_select_cFv();
+extern "C" void ToNameMove2__14dFile_select_cFv();
+extern "C" void nameInputWait__14dFile_select_cFv();
+extern "C" void nameInput__14dFile_select_cFv();
+extern "C" void nameToDataSelectMove__14dFile_select_cFv();
+extern "C" void nameInputFade__14dFile_select_cFv();
+extern "C" void nameInput2Move__14dFile_select_cFv();
+extern "C" void nameInput2__14dFile_select_cFv();
+extern "C" void backNameInputMove0__14dFile_select_cFv();
+extern "C" void backNameInputMove__14dFile_select_cFv();
+extern "C" void ToCopyPaneMove__14dFile_select_cFv();
+extern "C" void ToErasePaneMove__14dFile_select_cFv();
+extern "C" void backSelectMove__14dFile_select_cFv();
+extern "C" void copySelMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void setSaveDataForCopySel__14dFile_select_cFv();
+extern "C" void copyDataToSelect__14dFile_select_cFv();
+extern "C" void copyDataToSelectStart__14dFile_select_cFv();
+extern "C" void copyDataToSelectCansel__14dFile_select_cFv();
+extern "C" void copyDataToSelectMoveAnmSet__14dFile_select_cFv();
+extern "C" void copyDataToSelectMoveAnm__14dFile_select_cFv();
+extern "C" void copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
+extern "C" void copySelectWakuAlpahAnm__14dFile_select_cFUc();
+extern "C" void getCptoNum__14dFile_select_cFUc();
+extern "C" void copyToSelBack__14dFile_select_cFv();
+extern "C" void copyToSelPaneMove__14dFile_select_cFv();
+extern "C" void yesnoMenuMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void yesnoMenuMoveAnm__14dFile_select_cFv();
+extern "C" void yesnoSelectMoveAnm__14dFile_select_cFv();
+extern "C" void yesnoCursorShow__14dFile_select_cFv();
+extern "C" void YesNoSelect__14dFile_select_cFv();
+extern "C" void yesNoSelectStart__14dFile_select_cFv();
+extern "C" void yesnoSelectAnmSet__14dFile_select_cFv();
+extern "C" void yesnoCancelAnmSet__14dFile_select_cFv();
+extern "C" void YesNoCancelMove__14dFile_select_cFv();
+extern "C" void yesNoCursorMoveAnm__14dFile_select_cFv();
+extern "C" void CmdExecPaneMove0__14dFile_select_cFv();
+extern "C" void CommandExec__14dFile_select_cFv();
+extern "C" void DataEraseWait__14dFile_select_cFv();
+extern "C" void DataEraseWait2__14dFile_select_cFv();
+extern "C" void ErasePaneMoveOk__14dFile_select_cFv();
+extern "C" void ErasePaneMoveOk2__14dFile_select_cFv();
+extern "C" void eraseEndBackSelectWait__14dFile_select_cFv();
+extern "C" void eraseEndBackSelect__14dFile_select_cFv();
+extern "C" void DataCopyWait__14dFile_select_cFv();
+extern "C" void DataCopyWait2__14dFile_select_cFv();
+extern "C" void copyPaneMoveOk__14dFile_select_cFv();
+extern "C" void copyPaneMoveOk2__14dFile_select_cFv();
+extern "C" void ErrorMsgPaneMove__14dFile_select_cFv();
+extern "C" void backDatSelPaneMove__14dFile_select_cFv();
+extern "C" void backDatSelWait__14dFile_select_cFv();
+extern "C" void backDatSelWait2__14dFile_select_cFv();
+extern "C" void nextModeWait__14dFile_select_cFv();
+extern "C" void screenSet__14dFile_select_cFv();
+extern "C" void setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
+extern "C" void screenSetCopySel__14dFile_select_cFv();
+extern "C" void screenSetYesNo__14dFile_select_cFv();
+extern "C" void screenSet3Menu__14dFile_select_cFv();
+extern "C" void screenSetDetail__14dFile_select_cFv();
+extern "C" void setWakuAnm__14dFile_select_cFv();
+extern "C" void displayInit__14dFile_select_cFv();
+extern "C" void setSaveData__14dFile_select_cFv();
+extern "C" void headerTxtSet__14dFile_select_cFUsUcUc();
+extern "C" void headerTxtChangeAnm__14dFile_select_cFv();
+extern "C" void modoruTxtChange__14dFile_select_cFUc();
+extern "C" void modoruTxtDispAnmInit__14dFile_select_cFUc();
+extern "C" void modoruTxtDispAnm__14dFile_select_cFv();
+extern "C" void ketteiTxtDispAnmInit__14dFile_select_cFUc();
+extern "C" void ketteiTxtDispAnm__14dFile_select_cFv();
+extern "C" void selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
+extern "C" void selectWakuAlpahAnm__14dFile_select_cFUc();
+extern "C" void selFileCursorShow__14dFile_select_cFv();
+extern "C" void menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
+extern "C" void menuWakuAlpahAnm__14dFile_select_cFUc();
+extern "C" void menuCursorShow__14dFile_select_cFv();
+extern "C" void yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc();
+extern "C" void yesnoWakuAlpahAnm__14dFile_select_cFUc();
+extern "C" void _draw__14dFile_select_cFv();
+extern "C" void draw__15dDlst_FileSel_cFv();
+extern "C" void draw__17dDlst_FileSelDt_cFv();
+extern "C" void draw__17dDlst_FileSelCp_cFv();
+extern "C" void draw__17dDlst_FileSelYn_cFv();
+extern "C" void draw__17dDlst_FileSel3m_cFv();
+extern "C" void errorMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void errorMoveAnm__14dFile_select_cFv();
+extern "C" void errDispInitSet__14dFile_select_cFii();
+extern "C" void MemCardCheckMain__14dFile_select_cFv();
+extern "C" void MemCardStatCheck__14dFile_select_cFv();
+extern "C" void MemCardLoadWait__14dFile_select_cFv();
+extern "C" void MemCardErrMsgWaitKey__14dFile_select_cFv();
+extern "C" void noFileSpaceDispInit__14dFile_select_cFv();
+extern "C" void MemCardNoFileSpaceDisp__14dFile_select_cFv();
+extern "C" void iplSelDispInit__14dFile_select_cFv();
+extern "C" void MemCardGotoIPLSelectDisp__14dFile_select_cFv();
+extern "C" void MemCardGotoIPLSelect__14dFile_select_cFv();
+extern "C" void MemCardGotoIPL__14dFile_select_cFv();
+extern "C" void noSaveSelDispInit__14dFile_select_cFv();
+extern "C" void MemCardNoSaveSelDisp__14dFile_select_cFv();
+extern "C" void MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv();
+extern "C" void formatYesSelDispInitSet__14dFile_select_cFv();
+extern "C" void formatNoSelDispInitSet__14dFile_select_cFv();
+extern "C" void MemCardFormatYesSelDisp__14dFile_select_cFv();
+extern "C" void MemCardFormatNoSelDisp__14dFile_select_cFv();
+extern "C" void MemCardErrMsgWaitFormatSel__14dFile_select_cFv();
+extern "C" void formatYesSel2DispInitSet__14dFile_select_cFv();
+extern "C" void MemCardErrMsgWaitFormatSel2__14dFile_select_cFv();
+extern "C" void MemCardFormatYesSel2Disp__14dFile_select_cFv();
+extern "C" void MemCardFormat__14dFile_select_cFv();
+extern "C" void MemCardFormatWait__14dFile_select_cFv();
+extern "C" void MemCardFormatCheck__14dFile_select_cFv();
+extern "C" void MemCardMakeGameFileSel__14dFile_select_cFv();
+extern "C" void MemCardMakeGameFileSelDisp__14dFile_select_cFv();
+extern "C" void MemCardMakeGameFile__14dFile_select_cFv();
+extern "C" void MemCardMakeGameFileWait__14dFile_select_cFv();
+extern "C" void MemCardMakeGameFileCheck__14dFile_select_cFv();
+extern "C" void MemCardMsgWindowInitOpen__14dFile_select_cFv();
+extern "C" void MemCardMsgWindowOpen__14dFile_select_cFv();
+extern "C" void MemCardMsgWindowClose__14dFile_select_cFv();
+extern "C" void errYesNoSelect__14dFile_select_cFv();
+extern "C" void errCurMove__14dFile_select_cFUc();
+extern "C" void MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv();
+extern "C" void errorTxtSet__14dFile_select_cFUs();
+extern "C" void errorTxtChangeAnm__14dFile_select_cFv();
+extern "C" void fileRecScaleAnm__14dFile_select_cFv();
+extern "C" void fileRecScaleAnmInitSet2__14dFile_select_cFff();
+extern "C" void fileRecScaleAnm2__14dFile_select_cFv();
+extern "C" void fileInfoScaleAnm__14dFile_select_cFv();
+extern "C" void nameMoveAnmInitSet__14dFile_select_cFii();
+extern "C" void nameMoveAnm__14dFile_select_cFv();
+extern "C" void MemCardSaveDataClear__14dFile_select_cFv();
+extern "C" void setInitSaveData__14dFile_select_cFv();
+extern "C" void dataSave__14dFile_select_cFv();
+extern "C" void __ct__16dFile_select3D_cFv();
+extern "C" void __dt__16dFile_select3D_cFv();
+extern "C" void _create__16dFile_select3D_cFUcUc();
+extern "C" void _delete__16dFile_select3D_cFv();
+extern "C" void freeHeap__16dFile_select3D_cFv();
+extern "C" void _move__16dFile_select3D_cFv();
+extern "C" void draw__16dFile_select3D_cFv();
+extern "C" void setJ3D__16dFile_select3D_cFPCcPCcPCc();
+extern "C" void set_mtx__16dFile_select3D_cFv();
+extern "C" void animePlay__16dFile_select3D_cFv();
+extern "C" void animeEntry__16dFile_select3D_cFv();
+extern "C" void createMaskModel__16dFile_select3D_cFv();
+extern "C" void createMirrorModel__16dFile_select3D_cFv();
+extern "C" void toItem3Dpos__16dFile_select3D_cFfffP4cXyz();
+extern "C" static void calcViewMtx__16dFile_select3D_cFPA4_f();
+extern "C" void getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo();
+extern "C" void __dt__10JUTNameTabFv();
+extern "C" void __dt__17dDlst_FileSel3m_cFv();
+extern "C" void __dt__17dDlst_FileSelYn_cFv();
+extern "C" void __dt__17dDlst_FileSelCp_cFv();
+extern "C" void __dt__17dDlst_FileSelDt_cFv();
+extern "C" void __dt__15dDlst_FileSel_cFv();
+extern "C" void __dt__9dFs_HIO_cFv();
+extern "C" void __sinit_d_file_select_cpp();
+extern "C" void getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
 SECTION_RODATA extern const u8 data_80394310[20];
 SECTION_RODATA extern const u8 data_80394324[20];
 SECTION_RODATA extern const u8 data_80394338[20];
@@ -402,153 +1281,207 @@ SECTION_SDATA2 extern f32 d_file_d_file_select__lit_8993;
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void mDoMtx_XYZrotM__FPA4_fsss();
-extern "C" extern void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-extern "C" extern void play__14mDoExt_baseAnmFv();
-extern "C" extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
-extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_removeMesgFont__Fv();
-extern "C" extern void mDoExt_getSubFont__Fv();
-extern "C" extern void mDoExt_removeSubFont__Fv();
-extern "C" extern void load__15mDoMemCd_Ctrl_cFv();
-extern "C" extern void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
-extern "C" extern void save__15mDoMemCd_Ctrl_cFPvUlUl();
-extern "C" extern void SaveSync__15mDoMemCd_Ctrl_cFv();
-extern "C" extern void getStatus__15mDoMemCd_Ctrl_cFUl();
-extern "C" extern void command_format__15mDoMemCd_Ctrl_cFv();
-extern "C" extern void FormatSync__15mDoMemCd_Ctrl_cFv();
-extern "C" extern void mDoMemCdRWm_TestCheckSumGameData__FPv();
-extern "C" extern void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void fopMsgM_messageGet__FPcUl();
-extern "C" extern void itemInit__14dComIfG_play_cFv();
-extern "C" extern void __ct__9STControlFssssffss();
-extern "C" extern void checkTrigger__9STControlFv();
-extern "C" extern void checkLeftTrigger__9STControlFv();
-extern "C" extern void checkRightTrigger__9STControlFv();
-extern "C" extern void checkUpTrigger__9STControlFv();
-extern "C" extern void checkDownTrigger__9STControlFv();
-extern "C" extern void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" extern void isCollectCrystal__20dSv_player_collect_cCFUc();
-extern "C" extern void isCollectMirror__20dSv_player_collect_cCFUc();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void init__10dSv_info_cFv();
-extern "C" extern void card_to_memory__10dSv_info_cFPci();
-extern "C" extern void initdata_to_card__10dSv_info_cFPci();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
-extern "C" extern void __ct__15dFile_warning_cFP10JKRArchiveUc();
-extern "C" extern void _move__15dFile_warning_cFv();
-extern "C" extern void openInit__15dFile_warning_cFv();
-extern "C" extern void closeInit__15dFile_warning_cFv();
-extern "C" extern void init__15dFile_warning_cFv();
-extern "C" extern void _draw__15dFile_warning_cFv();
-extern "C" extern void __ct__12dFile_info_cFP10JKRArchiveUc();
-extern "C" extern void setSaveData__12dFile_info_cFP10dSv_save_ciUc();
-extern "C" extern void _draw__12dFile_info_cFv();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern "C" extern void decMsgKeyWaitTimer__13dMeter2Info_cFv();
-extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __ct__7dName_cFP7J2DPane();
-extern "C" extern void initial__7dName_cFv();
-extern "C" extern void showIcon__7dName_cFv();
-extern "C" extern void _move__7dName_cFv();
-extern "C" extern void _draw__7dName_cFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void reinit__8CPaneMgrFv();
-extern "C" extern void scaleAnime__8CPaneMgrFsffUc();
-extern "C" extern void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
-extern "C" extern void cAPICPad_ANY_BUTTON__FUl();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void adjustSize__12JKRSolidHeapFv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void func_802F5E88();
-extern "C" extern void insertChild__7J2DPaneFP7J2DPaneP7J2DPane();
-extern "C" extern void animationTransform__7J2DPaneFv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void func_802FC800();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFPCce();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void init__15J3DVertexBufferFv();
-extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" extern void initialize__8J3DModelFv();
-extern "C" extern void entryModelData__8J3DModelFP12J3DModelDataUlUl();
-extern "C" extern void init__12J3DFrameCtrlFs();
-extern "C" extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
-extern "C" extern void initialize__14J3DMaterialAnmFv();
-extern "C" extern void load__22J3DModelLoaderDataBaseFPCvUl();
-extern "C" extern void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXInverse();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSMTXScale();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void DVDGetDriveStatus();
-extern "C" extern void __register_global_object();
-extern "C" extern void __construct_array();
-extern "C" extern void __ptmf_test();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void __div2i();
-extern "C" extern void strcpy();
-extern "C" extern void tan();
+SECTION_INIT void memcpy();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_removeMesgFont();
+void mDoExt_getSubFont();
+void mDoExt_removeSubFont();
+void mDoMemCdRWm_TestCheckSumGameData(void*);
+void mDoMemCdRWm_SetCheckSumGameData(char*, char);
+void fopMsgM_messageGet(char*, u32);
+void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dPaneClass_showNullPane(J2DScreen*);
+void cAPICPad_ANY_BUTTON(u32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802F5E88();
+extern "C" void func_802FC800();
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void DVDGetDriveStatus();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __div2i();
+extern "C" void strcpy();
+extern "C" void tan();
+
+SECTION_INIT void memcpy();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_removeMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void mDoExt_removeSubFont__Fv();
+extern "C" void load__15mDoMemCd_Ctrl_cFv();
+extern "C" void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void save__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void SaveSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void getStatus__15mDoMemCd_Ctrl_cFUl();
+extern "C" void command_format__15mDoMemCd_Ctrl_cFv();
+extern "C" void FormatSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv();
+extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void itemInit__14dComIfG_play_cFv();
+extern "C" void __ct__9STControlFssssffss();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void init__10dSv_info_cFv();
+extern "C" void card_to_memory__10dSv_info_cFPci();
+extern "C" void initdata_to_card__10dSv_info_cFPci();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
+extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc();
+extern "C" void _move__15dFile_warning_cFv();
+extern "C" void openInit__15dFile_warning_cFv();
+extern "C" void closeInit__15dFile_warning_cFv();
+extern "C" void init__15dFile_warning_cFv();
+extern "C" void _draw__15dFile_warning_cFv();
+extern "C" void __ct__12dFile_info_cFP10JKRArchiveUc();
+extern "C" void setSaveData__12dFile_info_cFP10dSv_save_ciUc();
+extern "C" void _draw__12dFile_info_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__7dName_cFP7J2DPane();
+extern "C" void initial__7dName_cFv();
+extern "C" void showIcon__7dName_cFv();
+extern "C" void _move__7dName_cFv();
+extern "C" void _draw__7dName_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void reinit__8CPaneMgrFv();
+extern "C" void scaleAnime__8CPaneMgrFsffUc();
+extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void cAPICPad_ANY_BUTTON__FUl();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void adjustSize__12JKRSolidHeapFv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void func_802F5E88();
+extern "C" void insertChild__7J2DPaneFP7J2DPaneP7J2DPane();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void func_802FC800();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void init__15J3DVertexBufferFv();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void initialize__8J3DModelFv();
+extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void DVDGetDriveStatus();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __div2i();
+extern "C" void strcpy();
+extern "C" void tan();
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
@@ -579,379 +1512,379 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803BA848-803BA854 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BA848-803BA854 000C+00 rc=6 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_file_d_file_select__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BA854-803BA860 000C+00 .data      SelStartFrameTbl                                             */
+/* 803BA854-803BA860 000C+00 rc=3 efc=0 .data      SelStartFrameTbl                                             */
 u8 d_file_d_file_select__SelStartFrameTbl[12] = {
 	0x00, 0x00, 0x00, 0x3B, 0x00, 0x00, 0x00, 0x63, 0x00, 0x00, 0x00, 0x8B,
 };
 
-/* 803BA860-803BA86C 000C+00 .data      SelEndFrameTbl                                               */
+/* 803BA860-803BA86C 000C+00 rc=3 efc=0 .data      SelEndFrameTbl                                               */
 u8 d_file_d_file_select__SelEndFrameTbl[12] = {
 	0x00, 0x00, 0x00, 0x45, 0x00, 0x00, 0x00, 0x6D, 0x00, 0x00, 0x00, 0x95,
 };
 
-/* 803BA86C-803BA878 000C+00 .data      SelOpenStartFrameTbl                                         */
+/* 803BA86C-803BA878 000C+00 rc=7 efc=0 .data      SelOpenStartFrameTbl                                         */
 u8 d_file_d_file_select__SelOpenStartFrameTbl[12] = {
 	0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x01, 0xC0, 0x00, 0x00, 0x02, 0x88,
 };
 
-/* 803BA878-803BA884 000C+00 .data      SelOpenEndFrameTbl                                           */
+/* 803BA878-803BA884 000C+00 rc=7 efc=0 .data      SelOpenEndFrameTbl                                           */
 u8 d_file_d_file_select__SelOpenEndFrameTbl[12] = {
 	0x00, 0x00, 0x01, 0x03, 0x00, 0x00, 0x01, 0xCC, 0x00, 0x00, 0x02, 0x93,
 };
 
-/* 803BA884-803BA890 000C+00 .data      MenuSelStartFrameTbl                                         */
+/* 803BA884-803BA890 000C+00 rc=5 efc=0 .data      MenuSelStartFrameTbl                                         */
 u8 MenuSelStartFrameTbl[12] = {
 	0x00, 0x00, 0x07, 0xCD, 0x00, 0x00, 0x03, 0x82, 0x00, 0x00, 0x03, 0x90,
 };
 
-/* 803BA890-803BA8A0 000C+04 .data      MenuSelEndFrameTbl                                           */
+/* 803BA890-803BA8A0 000C+04 rc=3 efc=0 .data      MenuSelEndFrameTbl                                           */
 u8 MenuSelEndFrameTbl[16] = {
 	0x00, 0x00, 0x07, 0xDB, 0x00, 0x00, 0x03, 0x8E, 0x00, 0x00, 0x03, 0x82,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BA8A0-803BA8B8 0018+00 .data      l_tagName13                                                  */
+/* 803BA8A0-803BA8B8 0018+00 rc=0 efc=0 .data      l_tagName13                                                  */
 u8 l_tagName13[24] = {
 	0x77, 0x5F, 0x64, 0x61, 0x74, 0x5F, 0x69, 0x30, 0x77, 0x5F, 0x64, 0x61, 0x74, 0x5F, 0x69, 0x31,
 	0x77, 0x5F, 0x64, 0x61, 0x74, 0x5F, 0x69, 0x32,
 };
 
-/* 803BA8B8-803BA8C4 000C+00 .data      @4167                                                        */
+/* 803BA8B8-803BA8C4 000C+00 rc=0 efc=0 .data      @4167                                                        */
 void* d_file_d_file_select__lit_4167[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardCheckMain__14dFile_select_cFv,
 };
 
-/* 803BA8C4-803BA8D0 000C+00 .data      @4168                                                        */
+/* 803BA8C4-803BA8D0 000C+00 rc=0 efc=0 .data      @4168                                                        */
 void* d_file_d_file_select__lit_4168[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dataSelectIn__14dFile_select_cFv,
 };
 
-/* 803BA8D0-803BA8DC 000C+00 .data      @4169                                                        */
+/* 803BA8D0-803BA8DC 000C+00 rc=0 efc=0 .data      @4169                                                        */
 void* lit_4169[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dataSelectInit__14dFile_select_cFv,
 };
 
-/* 803BA8DC-803BA8E8 000C+00 .data      @4170                                                        */
+/* 803BA8DC-803BA8E8 000C+00 rc=0 efc=0 .data      @4170                                                        */
 void* d_file_d_file_select__lit_4170[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dataSelect__14dFile_select_cFv,
 };
 
-/* 803BA8E8-803BA8F4 000C+00 .data      @4171                                                        */
+/* 803BA8E8-803BA8F4 000C+00 rc=0 efc=0 .data      @4171                                                        */
 void* d_file_d_file_select__lit_4171[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)dataSelectMoveAnime__14dFile_select_cFv,
 };
 
-/* 803BA8F4-803BA900 000C+00 .data      @4172                                                        */
+/* 803BA8F4-803BA900 000C+00 rc=0 efc=0 .data      @4172                                                        */
 void* lit_4172[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)selectDataOpenMove__14dFile_select_cFv,
 };
 
-/* 803BA900-803BA90C 000C+00 .data      @4173                                                        */
+/* 803BA900-803BA90C 000C+00 rc=0 efc=0 .data      @4173                                                        */
 void* d_file_d_file_select__lit_4173[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)selectDataNameMove__14dFile_select_cFv,
 };
 
-/* 803BA90C-803BA918 000C+00 .data      @4174                                                        */
+/* 803BA90C-803BA918 000C+00 rc=0 efc=0 .data      @4174                                                        */
 void* d_file_d_file_select__lit_4174[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)selectDataOpenEraseMove__14dFile_select_cFv,
 };
 
-/* 803BA918-803BA924 000C+00 .data      @4175                                                        */
+/* 803BA918-803BA924 000C+00 rc=0 efc=0 .data      @4175                                                        */
 void* d_file_d_file_select__lit_4175[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)menuSelect__14dFile_select_cFv,
 };
 
-/* 803BA924-803BA930 000C+00 .data      @4176                                                        */
+/* 803BA924-803BA930 000C+00 rc=0 efc=0 .data      @4176                                                        */
 void* d_file_d_file_select__lit_4176[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)menuSelectMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BA930-803BA93C 000C+00 .data      @4177                                                        */
+/* 803BA930-803BA93C 000C+00 rc=0 efc=0 .data      @4177                                                        */
 void* d_file_d_file_select__lit_4177[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ToNameMove__14dFile_select_cFv,
 };
 
-/* 803BA93C-803BA948 000C+00 .data      @4178                                                        */
+/* 803BA93C-803BA948 000C+00 rc=0 efc=0 .data      @4178                                                        */
 void* d_file_d_file_select__lit_4178[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ToCopyPaneMove__14dFile_select_cFv,
 };
 
-/* 803BA948-803BA954 000C+00 .data      @4179                                                        */
+/* 803BA948-803BA954 000C+00 rc=0 efc=0 .data      @4179                                                        */
 void* d_file_d_file_select__lit_4179[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ToErasePaneMove__14dFile_select_cFv,
 };
 
-/* 803BA954-803BA960 000C+00 .data      @4180                                                        */
+/* 803BA954-803BA960 000C+00 rc=0 efc=0 .data      @4180                                                        */
 void* d_file_d_file_select__lit_4180[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backSelectMove__14dFile_select_cFv,
 };
 
-/* 803BA960-803BA96C 000C+00 .data      @4181                                                        */
+/* 803BA960-803BA96C 000C+00 rc=0 efc=0 .data      @4181                                                        */
 void* d_file_d_file_select__lit_4181[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameToDataSelectMove__14dFile_select_cFv,
 };
 
-/* 803BA96C-803BA978 000C+00 .data      @4182                                                        */
+/* 803BA96C-803BA978 000C+00 rc=0 efc=0 .data      @4182                                                        */
 void* d_file_d_file_select__lit_4182[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameInputWait__14dFile_select_cFv,
 };
 
-/* 803BA978-803BA984 000C+00 .data      @4183                                                        */
+/* 803BA978-803BA984 000C+00 rc=0 efc=0 .data      @4183                                                        */
 void* d_file_d_file_select__lit_4183[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameInput__14dFile_select_cFv,
 };
 
-/* 803BA984-803BA990 000C+00 .data      @4184                                                        */
+/* 803BA984-803BA990 000C+00 rc=0 efc=0 .data      @4184                                                        */
 void* d_file_d_file_select__lit_4184[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameInputFade__14dFile_select_cFv,
 };
 
-/* 803BA990-803BA99C 000C+00 .data      @4185                                                        */
+/* 803BA990-803BA99C 000C+00 rc=0 efc=0 .data      @4185                                                        */
 void* d_file_d_file_select__lit_4185[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameInput2Move__14dFile_select_cFv,
 };
 
-/* 803BA99C-803BA9A8 000C+00 .data      @4186                                                        */
+/* 803BA99C-803BA9A8 000C+00 rc=0 efc=0 .data      @4186                                                        */
 void* lit_4186[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nameInput2__14dFile_select_cFv,
 };
 
-/* 803BA9A8-803BA9B4 000C+00 .data      @4187                                                        */
+/* 803BA9A8-803BA9B4 000C+00 rc=0 efc=0 .data      @4187                                                        */
 void* d_file_d_file_select__lit_4187[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backNameInputMove0__14dFile_select_cFv,
 };
 
-/* 803BA9B4-803BA9C0 000C+00 .data      @4188                                                        */
+/* 803BA9B4-803BA9C0 000C+00 rc=0 efc=0 .data      @4188                                                        */
 void* d_file_d_file_select__lit_4188[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backNameInputMove__14dFile_select_cFv,
 };
 
-/* 803BA9C0-803BA9CC 000C+00 .data      @4189                                                        */
+/* 803BA9C0-803BA9CC 000C+00 rc=0 efc=0 .data      @4189                                                        */
 void* d_file_d_file_select__lit_4189[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyDataToSelect__14dFile_select_cFv,
 };
 
-/* 803BA9CC-803BA9D8 000C+00 .data      @4190                                                        */
+/* 803BA9CC-803BA9D8 000C+00 rc=0 efc=0 .data      @4190                                                        */
 void* d_file_d_file_select__lit_4190[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyDataToSelectMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BA9D8-803BA9E4 000C+00 .data      @4191                                                        */
+/* 803BA9D8-803BA9E4 000C+00 rc=0 efc=0 .data      @4191                                                        */
 void* d_file_d_file_select__lit_4191[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyToSelBack__14dFile_select_cFv,
 };
 
-/* 803BA9E4-803BA9F0 000C+00 .data      @4192                                                        */
+/* 803BA9E4-803BA9F0 000C+00 rc=0 efc=0 .data      @4192                                                        */
 void* d_file_d_file_select__lit_4192[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyToSelPaneMove__14dFile_select_cFv,
 };
 
-/* 803BA9F0-803BA9FC 000C+00 .data      @4193                                                        */
+/* 803BA9F0-803BA9FC 000C+00 rc=0 efc=0 .data      @4193                                                        */
 void* d_file_d_file_select__lit_4193[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)YesNoSelect__14dFile_select_cFv,
 };
 
-/* 803BA9FC-803BAA08 000C+00 .data      @4194                                                        */
+/* 803BA9FC-803BAA08 000C+00 rc=0 efc=0 .data      @4194                                                        */
 void* d_file_d_file_select__lit_4194[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)YesNoCancelMove__14dFile_select_cFv,
 };
 
-/* 803BAA08-803BAA14 000C+00 .data      @4195                                                        */
+/* 803BAA08-803BAA14 000C+00 rc=0 efc=0 .data      @4195                                                        */
 void* d_file_d_file_select__lit_4195[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)yesNoCursorMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BAA14-803BAA20 000C+00 .data      @4196                                                        */
+/* 803BAA14-803BAA20 000C+00 rc=0 efc=0 .data      @4196                                                        */
 void* d_file_d_file_select__lit_4196[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)CmdExecPaneMove0__14dFile_select_cFv,
 };
 
-/* 803BAA20-803BAA2C 000C+00 .data      @4197                                                        */
+/* 803BAA20-803BAA2C 000C+00 rc=0 efc=0 .data      @4197                                                        */
 void* d_file_d_file_select__lit_4197[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)CommandExec__14dFile_select_cFv,
 };
 
-/* 803BAA2C-803BAA38 000C+00 .data      @4198                                                        */
+/* 803BAA2C-803BAA38 000C+00 rc=0 efc=0 .data      @4198                                                        */
 void* d_file_d_file_select__lit_4198[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)DataEraseWait__14dFile_select_cFv,
 };
 
-/* 803BAA38-803BAA44 000C+00 .data      @4199                                                        */
+/* 803BAA38-803BAA44 000C+00 rc=0 efc=0 .data      @4199                                                        */
 void* d_file_d_file_select__lit_4199[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)DataEraseWait2__14dFile_select_cFv,
 };
 
-/* 803BAA44-803BAA50 000C+00 .data      @4200                                                        */
+/* 803BAA44-803BAA50 000C+00 rc=0 efc=0 .data      @4200                                                        */
 void* d_file_d_file_select__lit_4200[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)DataCopyWait__14dFile_select_cFv,
 };
 
-/* 803BAA50-803BAA5C 000C+00 .data      @4201                                                        */
+/* 803BAA50-803BAA5C 000C+00 rc=0 efc=0 .data      @4201                                                        */
 void* d_file_d_file_select__lit_4201[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)DataCopyWait2__14dFile_select_cFv,
 };
 
-/* 803BAA5C-803BAA68 000C+00 .data      @4202                                                        */
+/* 803BAA5C-803BAA68 000C+00 rc=0 efc=0 .data      @4202                                                        */
 void* d_file_d_file_select__lit_4202[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyPaneMoveOk__14dFile_select_cFv,
 };
 
-/* 803BAA68-803BAA74 000C+00 .data      @4203                                                        */
+/* 803BAA68-803BAA74 000C+00 rc=0 efc=0 .data      @4203                                                        */
 void* d_file_d_file_select__lit_4203[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)copyPaneMoveOk2__14dFile_select_cFv,
 };
 
-/* 803BAA74-803BAA80 000C+00 .data      @4204                                                        */
+/* 803BAA74-803BAA80 000C+00 rc=0 efc=0 .data      @4204                                                        */
 void* d_file_d_file_select__lit_4204[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ErasePaneMoveOk__14dFile_select_cFv,
 };
 
-/* 803BAA80-803BAA8C 000C+00 .data      @4205                                                        */
+/* 803BAA80-803BAA8C 000C+00 rc=0 efc=0 .data      @4205                                                        */
 void* d_file_d_file_select__lit_4205[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ErasePaneMoveOk2__14dFile_select_cFv,
 };
 
-/* 803BAA8C-803BAA98 000C+00 .data      @4206                                                        */
+/* 803BAA8C-803BAA98 000C+00 rc=0 efc=0 .data      @4206                                                        */
 void* lit_4206[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ErrorMsgPaneMove__14dFile_select_cFv,
 };
 
-/* 803BAA98-803BAAA4 000C+00 .data      @4207                                                        */
+/* 803BAA98-803BAAA4 000C+00 rc=0 efc=0 .data      @4207                                                        */
 void* d_file_d_file_select__lit_4207[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)eraseEndBackSelectWait__14dFile_select_cFv,
 };
 
-/* 803BAAA4-803BAAB0 000C+00 .data      @4208                                                        */
+/* 803BAAA4-803BAAB0 000C+00 rc=0 efc=0 .data      @4208                                                        */
 void* lit_4208[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)eraseEndBackSelect__14dFile_select_cFv,
 };
 
-/* 803BAAB0-803BAABC 000C+00 .data      @4209                                                        */
+/* 803BAAB0-803BAABC 000C+00 rc=0 efc=0 .data      @4209                                                        */
 void* lit_4209[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backDatSelWait__14dFile_select_cFv,
 };
 
-/* 803BAABC-803BAAC8 000C+00 .data      @4210                                                        */
+/* 803BAABC-803BAAC8 000C+00 rc=0 efc=0 .data      @4210                                                        */
 void* lit_4210[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backDatSelWait2__14dFile_select_cFv,
 };
 
-/* 803BAAC8-803BAAD4 000C+00 .data      @4211                                                        */
+/* 803BAAC8-803BAAD4 000C+00 rc=0 efc=0 .data      @4211                                                        */
 void* d_file_d_file_select__lit_4211[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)backDatSelPaneMove__14dFile_select_cFv,
 };
 
-/* 803BAAD4-803BAAE0 000C+00 .data      @4212                                                        */
+/* 803BAAD4-803BAAE0 000C+00 rc=0 efc=0 .data      @4212                                                        */
 void* d_file_d_file_select__lit_4212[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)ToNameMove2__14dFile_select_cFv,
 };
 
-/* 803BAAE0-803BAAEC 000C+00 .data      @4213                                                        */
+/* 803BAAE0-803BAAEC 000C+00 rc=0 efc=0 .data      @4213                                                        */
 void* d_file_d_file_select__lit_4213[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)nextModeWait__14dFile_select_cFv,
 };
 
-/* 803BAAEC-803BAD20 0234+00 .data      DataSelProc                                                  */
+/* 803BAAEC-803BAD20 0234+00 rc=1 efc=0 .data      DataSelProc                                                  */
 u8 DataSelProc[564] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -991,12 +1924,12 @@ u8 DataSelProc[564] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BAD20-803BAD30 0010+00 .data      l_tagName101$5620                                            */
+/* 803BAD20-803BAD30 0010+00 rc=1 efc=0 .data      l_tagName101$5620                                            */
 u8 data_803BAD20[16] = {
 	0x00, 0x77, 0x5F, 0x6E, 0x75, 0x6E, 0x30, 0x31, 0x00, 0x77, 0x5F, 0x6E, 0x75, 0x6E, 0x30, 0x32,
 };
 
-/* 803BAD30-803BAD40 000C+04 .data      l_numTex$5621                                                */
+/* 803BAD30-803BAD40 000C+04 rc=1 efc=0 .data      l_numTex$5621                                                */
 void* data_803BAD30[4] = {
 	(void*)&d_file_d_file_select__stringBase0,
 	(void*)0x8039439D,
@@ -1005,37 +1938,37 @@ void* data_803BAD30[4] = {
 	NULL,
 };
 
-/* 803BAD40-803BAD58 0018+00 .data      l_tagName0$6517                                              */
+/* 803BAD40-803BAD58 0018+00 rc=0 efc=0 .data      l_tagName0$6517                                              */
 u8 data_803BAD40[24] = {
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x30, 0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31,
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
-/* 803BAD58-803BAD70 0018+00 .data      l_tagName3$6528                                              */
+/* 803BAD58-803BAD70 0018+00 rc=0 efc=0 .data      l_tagName3$6528                                              */
 u8 data_803BAD58[24] = {
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x30, 0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x31,
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x32,
 };
 
-/* 803BAD70-803BAD88 0018+00 .data      l_tagName4$6529                                              */
+/* 803BAD70-803BAD88 0018+00 rc=0 efc=0 .data      l_tagName4$6529                                              */
 u8 data_803BAD70[24] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x30, 0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31,
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
-/* 803BAD88-803BADA0 0018+00 .data      l_tagName5$6530                                              */
+/* 803BAD88-803BADA0 0018+00 rc=0 efc=0 .data      l_tagName5$6530                                              */
 u8 data_803BAD88[24] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x30, 0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x31,
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x32,
 };
 
-/* 803BADA0-803BADB8 0018+00 .data      l_tagName12$6539                                             */
+/* 803BADA0-803BADB8 0018+00 rc=0 efc=0 .data      l_tagName12$6539                                             */
 u8 data_803BADA0[24] = {
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x30, 0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x31,
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x32,
 };
 
-/* 803BADB8-803BAE30 0078+00 .data      l_nouseTag$6546                                              */
+/* 803BADB8-803BAE30 0078+00 rc=0 efc=0 .data      l_nouseTag$6546                                              */
 u8 data_803BADB8[120] = {
 	0x77, 0x5F, 0x6D, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x31,
 	0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x32, 0x00, 0x77, 0x5F, 0x74, 0x61, 0x62, 0x69, 0x33,
@@ -1047,320 +1980,320 @@ u8 data_803BADB8[120] = {
 	0x77, 0x5F, 0x68, 0x5F, 0x6E, 0x61, 0x6D, 0x65,
 };
 
-/* 803BAE30-803BAE40 0010+00 .data      l_tagName21$6552                                             */
+/* 803BAE30-803BAE40 0010+00 rc=0 efc=0 .data      l_tagName21$6552                                             */
 u8 data_803BAE30[16] = {
 	0x00, 0x00, 0x00, 0x74, 0x5F, 0x66, 0x6F, 0x72, 0x00, 0x00, 0x74, 0x5F, 0x66, 0x6F, 0x72, 0x31,
 };
 
-/* 803BAE40-803BAE58 0018+00 .data      l_tagName18$6559                                             */
+/* 803BAE40-803BAE58 0018+00 rc=0 efc=0 .data      l_tagName18$6559                                             */
 u8 data_803BAE40[24] = {
 	0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x30, 0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x31,
 	0x77, 0x5F, 0x64, 0x65, 0x5F, 0x65, 0x66, 0x32,
 };
 
-/* 803BAE58-803BAE70 0018+00 .data      l_tagName19$6560                                             */
+/* 803BAE58-803BAE70 0018+00 rc=0 efc=0 .data      l_tagName19$6560                                             */
 u8 data_803BAE58[24] = {
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x30, 0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x31,
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x32,
 };
 
-/* 803BAE70-803BAE80 0010+00 .data      l_tagName20$6568                                             */
+/* 803BAE70-803BAE80 0010+00 rc=0 efc=0 .data      l_tagName20$6568                                             */
 u8 data_803BAE70[16] = {
 	0x00, 0x65, 0x72, 0x5F, 0x66, 0x6F, 0x72, 0x30, 0x00, 0x65, 0x72, 0x5F, 0x66, 0x6F, 0x72, 0x31,
 };
 
-/* 803BAE80-803BAE98 0018+00 .data      l_tagName131$6576                                            */
+/* 803BAE80-803BAE98 0018+00 rc=0 efc=0 .data      l_tagName131$6576                                            */
 u8 data_803BAE80[24] = {
 	0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x30, 0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31,
 	0x4E, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
-/* 803BAE98-803BAEA8 0010+00 .data      l_tagName000$6897                                            */
+/* 803BAE98-803BAEA8 0010+00 rc=0 efc=0 .data      l_tagName000$6897                                            */
 u8 data_803BAE98[16] = {
 	0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x31, 0x77, 0x5F, 0x73, 0x65, 0x6C, 0x5F, 0x30, 0x32,
 };
 
-/* 803BAEA8-803BAEB8 0010+00 .data      l_tagName001$6898                                            */
+/* 803BAEA8-803BAEB8 0010+00 rc=0 efc=0 .data      l_tagName001$6898                                            */
 u8 data_803BAEA8[16] = {
 	0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x31, 0x77, 0x5F, 0x6D, 0x6F, 0x79, 0x6F, 0x30, 0x32,
 };
 
-/* 803BAEB8-803BAEC8 0010+00 .data      l_tagName002$6899                                            */
+/* 803BAEB8-803BAEC8 0010+00 rc=0 efc=0 .data      l_tagName002$6899                                            */
 u8 data_803BAEB8[16] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31, 0x77, 0x5F, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
-/* 803BAEC8-803BAED8 0010+00 .data      l_tagName003$6900                                            */
+/* 803BAEC8-803BAED8 0010+00 rc=0 efc=0 .data      l_tagName003$6900                                            */
 u8 data_803BAEC8[16] = {
 	0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x31, 0x77, 0x5F, 0x67, 0x6F, 0x32, 0x5F, 0x30, 0x32,
 };
 
-/* 803BAED8-803BAEE8 0010+00 .data      l_tagName004$6901                                            */
+/* 803BAED8-803BAEE8 0010+00 rc=0 efc=0 .data      l_tagName004$6901                                            */
 u8 data_803BAED8[16] = {
 	0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x31, 0x77, 0x5F, 0x62, 0x6B, 0x5F, 0x6C, 0x30, 0x32,
 };
 
-/* 803BAEE8-803BAEF8 0010+00 .data      l_tagName005$6902                                            */
+/* 803BAEE8-803BAEF8 0010+00 rc=0 efc=0 .data      l_tagName005$6902                                            */
 u8 data_803BAEE8[16] = {
 	0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x31, 0x77, 0x5F, 0x63, 0x70, 0x5F, 0x65, 0x66, 0x32,
 };
 
-/* 803BAEF8-803BAF08 0010+00 .data      l_tagName012$6999                                            */
+/* 803BAEF8-803BAF08 0010+00 rc=0 efc=0 .data      l_tagName012$6999                                            */
 u8 data_803BAEF8[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x6E, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x6E,
 };
 
-/* 803BAF08-803BAF18 0010+00 .data      l_tagName013$7000                                            */
+/* 803BAF08-803BAF18 0010+00 rc=0 efc=0 .data      l_tagName013$7000                                            */
 u8 data_803BAF08[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x74, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x74,
 };
 
-/* 803BAF18-803BAF28 0010+00 .data      l_tagName013U$7001                                           */
+/* 803BAF18-803BAF28 0010+00 rc=0 efc=0 .data      l_tagName013U$7001                                           */
 u8 data_803BAF18[16] = {
 	0x00, 0x00, 0x66, 0x5F, 0x6E, 0x6F, 0x5F, 0x74, 0x00, 0x66, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x74,
 };
 
-/* 803BAF28-803BAF38 0010+00 .data      l_tagName9$7010                                              */
+/* 803BAF28-803BAF38 0010+00 rc=0 efc=0 .data      l_tagName9$7010                                              */
 u8 data_803BAF28[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x6D, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x6D,
 };
 
-/* 803BAF38-803BAF48 0010+00 .data      l_tagName10$7011                                             */
+/* 803BAF38-803BAF48 0010+00 rc=0 efc=0 .data      l_tagName10$7011                                             */
 u8 data_803BAF38[16] = {
 	0x00, 0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x67, 0x00, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x67,
 };
 
-/* 803BAF48-803BAF58 0010+00 .data      l_tagName11$7012                                             */
+/* 803BAF48-803BAF58 0010+00 rc=0 efc=0 .data      l_tagName11$7012                                             */
 u8 data_803BAF48[16] = {
 	0x00, 0x77, 0x5F, 0x6E, 0x6F, 0x5F, 0x67, 0x72, 0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x67, 0x72,
 };
 
-/* 803BAF58-803BAF70 0018+00 .data      l_tagName6$7076                                              */
+/* 803BAF58-803BAF70 0018+00 rc=0 efc=0 .data      l_tagName6$7076                                              */
 u8 data_803BAF58[24] = {
 	0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x6D, 0x6F, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x6D, 0x6F,
 	0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x6D, 0x6F,
 };
 
-/* 803BAF70-803BAF88 0018+00 .data      l_tagName7$7077                                              */
+/* 803BAF70-803BAF88 0018+00 rc=0 efc=0 .data      l_tagName7$7077                                              */
 u8 data_803BAF70[24] = {
 	0x00, 0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x67, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x67,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x67,
 };
 
-/* 803BAF88-803BAFA0 0018+00 .data      l_tagName8$7078                                              */
+/* 803BAF88-803BAFA0 0018+00 rc=0 efc=0 .data      l_tagName8$7078                                              */
 u8 data_803BAF88[24] = {
 	0x77, 0x5F, 0x73, 0x61, 0x74, 0x5F, 0x67, 0x72, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x67, 0x72,
 	0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x67, 0x72,
 };
 
-/* 803BAFA0-803BAFB8 0018+00 .data      l_tagName1$7079                                              */
+/* 803BAFA0-803BAFB8 0018+00 rc=0 efc=0 .data      l_tagName1$7079                                              */
 u8 data_803BAFA0[24] = {
 	0x00, 0x77, 0x5F, 0x73, 0x74, 0x61, 0x5F, 0x6E, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C, 0x5F, 0x6E,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x6E,
 };
 
-/* 803BAFB8-803BAFD0 0018+00 .data      l_tagName011$7080                                            */
+/* 803BAFB8-803BAFD0 0018+00 rc=0 efc=0 .data      l_tagName011$7080                                            */
 u8 data_803BAFB8[24] = {
 	0x00, 0x00, 0x00, 0x77, 0x5F, 0x73, 0x74, 0x61, 0x00, 0x00, 0x00, 0x77, 0x5F, 0x64, 0x65, 0x6C,
 	0x00, 0x77, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x74,
 };
 
-/* 803BAFD0-803BAFE8 0018+00 .data      l_tagName011U$7081                                           */
+/* 803BAFD0-803BAFE8 0018+00 rc=0 efc=0 .data      l_tagName011U$7081                                           */
 u8 data_803BAFD0[24] = {
 	0x00, 0x00, 0x00, 0x66, 0x5F, 0x73, 0x74, 0x61, 0x00, 0x00, 0x00, 0x66, 0x5F, 0x64, 0x65, 0x6C,
 	0x00, 0x66, 0x5F, 0x63, 0x6F, 0x70, 0x5F, 0x74,
 };
 
-/* 803BAFE8-803BAFF4 000C+00 .data      @7759                                                        */
+/* 803BAFE8-803BAFF4 000C+00 rc=0 efc=0 .data      @7759                                                        */
 void* lit_7759[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardStatCheck__14dFile_select_cFv,
 };
 
-/* 803BAFF4-803BB000 000C+00 .data      @7760                                                        */
+/* 803BAFF4-803BB000 000C+00 rc=0 efc=0 .data      @7760                                                        */
 void* lit_7760[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardLoadWait__14dFile_select_cFv,
 };
 
-/* 803BB000-803BB00C 000C+00 .data      @7761                                                        */
+/* 803BB000-803BB00C 000C+00 rc=0 efc=0 .data      @7761                                                        */
 void* lit_7761[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardErrMsgWaitKey__14dFile_select_cFv,
 };
 
-/* 803BB00C-803BB018 000C+00 .data      @7762                                                        */
+/* 803BB00C-803BB018 000C+00 rc=0 efc=0 .data      @7762                                                        */
 void* lit_7762[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardNoSaveSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB018-803BB024 000C+00 .data      @7763                                                        */
+/* 803BB018-803BB024 000C+00 rc=0 efc=0 .data      @7763                                                        */
 void* lit_7763[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv,
 };
 
-/* 803BB024-803BB030 000C+00 .data      @7764                                                        */
+/* 803BB024-803BB030 000C+00 rc=0 efc=0 .data      @7764                                                        */
 void* lit_7764[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardErrMsgWaitFormatSel__14dFile_select_cFv,
 };
 
-/* 803BB030-803BB03C 000C+00 .data      @7765                                                        */
+/* 803BB030-803BB03C 000C+00 rc=0 efc=0 .data      @7765                                                        */
 void* lit_7765[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormatYesSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB03C-803BB048 000C+00 .data      @7766                                                        */
+/* 803BB03C-803BB048 000C+00 rc=0 efc=0 .data      @7766                                                        */
 void* lit_7766[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormatNoSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB048-803BB054 000C+00 .data      @7767                                                        */
+/* 803BB048-803BB054 000C+00 rc=0 efc=0 .data      @7767                                                        */
 void* lit_7767[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardErrMsgWaitFormatSel2__14dFile_select_cFv,
 };
 
-/* 803BB054-803BB060 000C+00 .data      @7768                                                        */
+/* 803BB054-803BB060 000C+00 rc=0 efc=0 .data      @7768                                                        */
 void* lit_7768[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormatYesSel2Disp__14dFile_select_cFv,
 };
 
-/* 803BB060-803BB06C 000C+00 .data      @7769                                                        */
+/* 803BB060-803BB06C 000C+00 rc=0 efc=0 .data      @7769                                                        */
 void* lit_7769[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormat__14dFile_select_cFv,
 };
 
-/* 803BB06C-803BB078 000C+00 .data      @7770                                                        */
+/* 803BB06C-803BB078 000C+00 rc=0 efc=0 .data      @7770                                                        */
 void* lit_7770[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormatWait__14dFile_select_cFv,
 };
 
-/* 803BB078-803BB084 000C+00 .data      @7771                                                        */
+/* 803BB078-803BB084 000C+00 rc=0 efc=0 .data      @7771                                                        */
 void* lit_7771[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardFormatCheck__14dFile_select_cFv,
 };
 
-/* 803BB084-803BB090 000C+00 .data      @7772                                                        */
+/* 803BB084-803BB090 000C+00 rc=0 efc=0 .data      @7772                                                        */
 void* lit_7772[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMakeGameFileSel__14dFile_select_cFv,
 };
 
-/* 803BB090-803BB09C 000C+00 .data      @7773                                                        */
+/* 803BB090-803BB09C 000C+00 rc=0 efc=0 .data      @7773                                                        */
 void* lit_7773[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMakeGameFileSelDisp__14dFile_select_cFv,
 };
 
-/* 803BB09C-803BB0A8 000C+00 .data      @7774                                                        */
+/* 803BB09C-803BB0A8 000C+00 rc=0 efc=0 .data      @7774                                                        */
 void* lit_7774[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMakeGameFile__14dFile_select_cFv,
 };
 
-/* 803BB0A8-803BB0B4 000C+00 .data      @7775                                                        */
+/* 803BB0A8-803BB0B4 000C+00 rc=0 efc=0 .data      @7775                                                        */
 void* lit_7775[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMakeGameFileWait__14dFile_select_cFv,
 };
 
-/* 803BB0B4-803BB0C0 000C+00 .data      @7776                                                        */
+/* 803BB0B4-803BB0C0 000C+00 rc=0 efc=0 .data      @7776                                                        */
 void* lit_7776[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMakeGameFileCheck__14dFile_select_cFv,
 };
 
-/* 803BB0C0-803BB0CC 000C+00 .data      @7777                                                        */
+/* 803BB0C0-803BB0CC 000C+00 rc=0 efc=0 .data      @7777                                                        */
 void* lit_7777[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardNoFileSpaceDisp__14dFile_select_cFv,
 };
 
-/* 803BB0CC-803BB0D8 000C+00 .data      @7778                                                        */
+/* 803BB0CC-803BB0D8 000C+00 rc=0 efc=0 .data      @7778                                                        */
 void* lit_7778[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardGotoIPLSelectDisp__14dFile_select_cFv,
 };
 
-/* 803BB0D8-803BB0E4 000C+00 .data      @7779                                                        */
+/* 803BB0D8-803BB0E4 000C+00 rc=0 efc=0 .data      @7779                                                        */
 void* lit_7779[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardGotoIPLSelect__14dFile_select_cFv,
 };
 
-/* 803BB0E4-803BB0F0 000C+00 .data      @7780                                                        */
+/* 803BB0E4-803BB0F0 000C+00 rc=0 efc=0 .data      @7780                                                        */
 void* lit_7780[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardGotoIPL__14dFile_select_cFv,
 };
 
-/* 803BB0F0-803BB0FC 000C+00 .data      @7781                                                        */
+/* 803BB0F0-803BB0FC 000C+00 rc=0 efc=0 .data      @7781                                                        */
 void* lit_7781[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMsgWindowInitOpen__14dFile_select_cFv,
 };
 
-/* 803BB0FC-803BB108 000C+00 .data      @7782                                                        */
+/* 803BB0FC-803BB108 000C+00 rc=0 efc=0 .data      @7782                                                        */
 void* lit_7782[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMsgWindowOpen__14dFile_select_cFv,
 };
 
-/* 803BB108-803BB114 000C+00 .data      @7783                                                        */
+/* 803BB108-803BB114 000C+00 rc=0 efc=0 .data      @7783                                                        */
 void* lit_7783[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardMsgWindowClose__14dFile_select_cFv,
 };
 
-/* 803BB114-803BB120 000C+00 .data      @7784                                                        */
+/* 803BB114-803BB120 000C+00 rc=0 efc=0 .data      @7784                                                        */
 void* lit_7784[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv,
 };
 
-/* 803BB120-803BB12C 000C+00 .data      @7785                                                        */
+/* 803BB120-803BB12C 000C+00 rc=0 efc=0 .data      @7785                                                        */
 void* lit_7785[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MemCardSaveDataClear__14dFile_select_cFv,
 };
 
-/* 803BB12C-803BB270 0144+00 .data      MemCardCheckProc                                             */
+/* 803BB12C-803BB270 0144+00 rc=1 efc=0 .data      MemCardCheckProc                                             */
 u8 MemCardCheckProc[324] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1385,42 +2318,42 @@ u8 MemCardCheckProc[324] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB270-803BB27C 000C+00 .data      @7797                                                        */
+/* 803BB270-803BB27C 000C+00 rc=0 efc=0 .data      @7797                                                        */
 void* lit_7797[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB27C-803BB288 000C+00 .data      @7799                                                        */
+/* 803BB27C-803BB288 000C+00 rc=0 efc=0 .data      @7799                                                        */
 void* lit_7799[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB288-803BB294 000C+00 .data      @7801                                                        */
+/* 803BB288-803BB294 000C+00 rc=0 efc=0 .data      @7801                                                        */
 void* lit_7801[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB294-803BB2A0 000C+00 .data      @7803                                                        */
+/* 803BB294-803BB2A0 000C+00 rc=0 efc=0 .data      @7803                                                        */
 void* lit_7803[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB2A0-803BB2AC 000C+00 .data      @7808                                                        */
+/* 803BB2A0-803BB2AC 000C+00 rc=0 efc=0 .data      @7808                                                        */
 void* d_file_d_file_select__lit_7808[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noFileSpaceDispInit__14dFile_select_cFv,
 };
 
-/* 803BB2AC-803BB2E0 0034+00 .data      @7815                                                        */
+/* 803BB2AC-803BB2E0 0034+00 rc=1 efc=0 .data      @7815                                                        */
 void* lit_7815[13] = {
 	(void*)(((char*)MemCardStatCheck__14dFile_select_cFv)+0x58),
 	(void*)(((char*)MemCardStatCheck__14dFile_select_cFv)+0x288),
@@ -1437,43 +2370,43 @@ void* lit_7815[13] = {
 	(void*)(((char*)MemCardStatCheck__14dFile_select_cFv)+0x20C),
 };
 
-/* 803BB2E0-803BB2EC 000C+00 .data      @7865                                                        */
+/* 803BB2E0-803BB2EC 000C+00 rc=1 efc=0 .data      @7865                                                        */
 void* lit_7865[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)iplSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB2EC-803BB2F8 000C+00 .data      @8004                                                        */
+/* 803BB2EC-803BB2F8 000C+00 rc=1 efc=0 .data      @8004                                                        */
 void* lit_8004[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB2F8-803BB304 000C+00 .data      @8083                                                        */
+/* 803BB2F8-803BB304 000C+00 rc=1 efc=0 .data      @8083                                                        */
 void* lit_8083[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)noSaveSelDispInit__14dFile_select_cFv,
 };
 
-/* 803BB304-803BB314 0010+00 .data      bck_name$8683                                                */
+/* 803BB304-803BB314 0010+00 rc=1 efc=0 .data      bck_name$8683                                                */
 u8 data_803BB304[16] = {
 	0x80, 0x39, 0x46, 0xB8, 0x80, 0x39, 0x46, 0xD1, 0x80, 0x39, 0x46, 0xEA, 0x80, 0x39, 0x47, 0x03,
 };
 
-/* 803BB314-803BB324 0010+00 .data      brk_name$8684                                                */
+/* 803BB314-803BB324 0010+00 rc=1 efc=0 .data      brk_name$8684                                                */
 u8 data_803BB314[16] = {
 	0x80, 0x39, 0x47, 0x1C, 0x80, 0x39, 0x47, 0x35, 0x80, 0x39, 0x47, 0x35, 0x80, 0x39, 0x47, 0x50,
 };
 
-/* 803BB324-803BB334 0010+00 .data      bck_name$8786                                                */
+/* 803BB324-803BB334 0010+00 rc=1 efc=0 .data      bck_name$8786                                                */
 u8 data_803BB324[16] = {
 	0x80, 0x39, 0x47, 0x78, 0x80, 0x39, 0x47, 0x91, 0x80, 0x39, 0x47, 0xAA, 0x80, 0x39, 0x47, 0xC3,
 };
 
-/* 803BB334-803BB35C 0010+18 .data      brk_name$8787                                                */
+/* 803BB334-803BB35C 0010+18 rc=1 efc=0 .data      brk_name$8787                                                */
 u8 data_803BB334[40] = {
 	0x80, 0x39, 0x47, 0xDC, 0x80, 0x39, 0x47, 0xF5, 0x80, 0x39, 0x47, 0xF5, 0x80, 0x39, 0x47, 0xF5,
 	/* padding */
@@ -1481,14 +2414,14 @@ u8 data_803BB334[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB35C-803BB368 000C+00 .data      __vt__16dFile_select3D_c                                     */
+/* 803BB35C-803BB368 000C+00 rc=2 efc=0 .data      __vt__16dFile_select3D_c                                     */
 void* const __vt__16dFile_select3D_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dFile_select3D_cFv,
 };
 
-/* 803BB368-803BB378 0010+00 .data      __vt__17dDlst_FileSel3m_c                                    */
+/* 803BB368-803BB378 0010+00 rc=3 efc=0 .data      __vt__17dDlst_FileSel3m_c                                    */
 void* const __vt__17dDlst_FileSel3m_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1496,7 +2429,7 @@ void* const __vt__17dDlst_FileSel3m_c[4] = {
 	(void*)__dt__17dDlst_FileSel3m_cFv,
 };
 
-/* 803BB378-803BB388 0010+00 .data      __vt__17dDlst_FileSelYn_c                                    */
+/* 803BB378-803BB388 0010+00 rc=3 efc=0 .data      __vt__17dDlst_FileSelYn_c                                    */
 void* const __vt__17dDlst_FileSelYn_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1504,7 +2437,7 @@ void* const __vt__17dDlst_FileSelYn_c[4] = {
 	(void*)__dt__17dDlst_FileSelYn_cFv,
 };
 
-/* 803BB388-803BB398 0010+00 .data      __vt__17dDlst_FileSelCp_c                                    */
+/* 803BB388-803BB398 0010+00 rc=3 efc=0 .data      __vt__17dDlst_FileSelCp_c                                    */
 void* const __vt__17dDlst_FileSelCp_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1512,7 +2445,7 @@ void* const __vt__17dDlst_FileSelCp_c[4] = {
 	(void*)__dt__17dDlst_FileSelCp_cFv,
 };
 
-/* 803BB398-803BB3A8 0010+00 .data      __vt__17dDlst_FileSelDt_c                                    */
+/* 803BB398-803BB3A8 0010+00 rc=3 efc=0 .data      __vt__17dDlst_FileSelDt_c                                    */
 void* const __vt__17dDlst_FileSelDt_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1520,7 +2453,7 @@ void* const __vt__17dDlst_FileSelDt_c[4] = {
 	(void*)__dt__17dDlst_FileSelDt_cFv,
 };
 
-/* 803BB3A8-803BB3B8 0010+00 .data      __vt__15dDlst_FileSel_c                                      */
+/* 803BB3A8-803BB3B8 0010+00 rc=3 efc=0 .data      __vt__15dDlst_FileSel_c                                      */
 void* const __vt__15dDlst_FileSel_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1528,7 +2461,7 @@ void* const __vt__15dDlst_FileSel_c[4] = {
 	(void*)__dt__15dDlst_FileSel_cFv,
 };
 
-/* 803BB3B8-803BB3DC 0014+10 .data      __vt__15J2DAnmTransform                                      */
+/* 803BB3B8-803BB3DC 0014+10 rc=4 efc=3 .data      __vt__15J2DAnmTransform                                      */
 void* const __vt__15J2DAnmTransform[9] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1542,14 +2475,14 @@ void* const __vt__15J2DAnmTransform[9] = {
 	NULL,
 };
 
-/* 803BB3DC-803BB3E8 000C+00 .data      __vt__10JUTNameTab                                           */
+/* 803BB3DC-803BB3E8 000C+00 rc=15 efc=11 .data      __vt__10JUTNameTab                                           */
 void* const __vt__10JUTNameTab[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JUTNameTabFv,
 };
 
-/* 803BB3E8-803BB400 000C+0C .data      __vt__14dFile_select_c                                       */
+/* 803BB3E8-803BB400 000C+0C rc=2 efc=0 .data      __vt__14dFile_select_c                                       */
 void* const __vt__14dFile_select_c[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1560,7 +2493,7 @@ void* const __vt__14dFile_select_c[6] = {
 	NULL,
 };
 
-/* 803BB400-803BB410 000C+04 .data      __vt__9dFs_HIO_c                                             */
+/* 803BB400-803BB410 000C+04 rc=2 efc=0 .data      __vt__9dFs_HIO_c                                             */
 void* const __vt__9dFs_HIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1569,80 +2502,80 @@ void* const __vt__9dFs_HIO_c[4] = {
 	NULL,
 };
 
-/* 80453928-8045392C 0004+00 .sdata2    @3812                                                        */
+/* 80453928-8045392C 0004+00 rc=1 efc=0 .sdata2    @3812                                                        */
 f32 d_file_d_file_select__lit_3812 = 111.0f / 100.0f;
 
-/* 801835F8-8018366C 0074+00 .text      __ct__9dFs_HIO_cFv                                           */
+/* 801835F8-8018366C 0074+00 rc=1 efc=0 .text      __ct__9dFs_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dFs_HIO_cFv) {
+asm dFs_HIO_c::dFs_HIO_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__ct__9dFs_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 8018366C-8018375C 00F0+00 .text      __ct__14dFile_select_cFP10JKRArchive                         */
+/* 8018366C-8018375C 00F0+00 rc=1 efc=1 .text      __ct__14dFile_select_cFP10JKRArchive                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dFile_select_cFP10JKRArchive) {
+asm dFile_select_c::dFile_select_c(JKRArchive* field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/__ct__14dFile_select_cFP10JKRArchive.s"
 }
 #pragma pop
 
 
-/* 8018375C-801841EC 0A90+00 .text      __dt__14dFile_select_cFv                                     */
+/* 8018375C-801841EC 0A90+00 rc=1 efc=0 .text      __dt__14dFile_select_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dFile_select_cFv) {
+asm dFile_select_c::~dFile_select_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801841EC-80184274 0088+00 .text      __dt__15J2DAnmTevRegKeyFv                                    */
+/* 801841EC-80184274 0088+00 rc=1 efc=1 .text      __dt__15J2DAnmTevRegKeyFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J2DAnmTevRegKeyFv) {
+asm J2DAnmTevRegKey::~J2DAnmTevRegKey() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__15J2DAnmTevRegKeyFv.s"
 }
 #pragma pop
 
 
-/* 80184274-801842FC 0088+00 .text      __dt__19J2DAnmTextureSRTKeyFv                                */
+/* 80184274-801842FC 0088+00 rc=1 efc=1 .text      __dt__19J2DAnmTextureSRTKeyFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19J2DAnmTextureSRTKeyFv) {
+asm J2DAnmTextureSRTKey::~J2DAnmTextureSRTKey() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__19J2DAnmTextureSRTKeyFv.s"
 }
 #pragma pop
 
 
-/* 801842FC-80184370 0074+00 .text      __dt__11J2DAnmColorFv                                        */
+/* 801842FC-80184370 0074+00 rc=1 efc=1 .text      __dt__11J2DAnmColorFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J2DAnmColorFv) {
+asm J2DAnmColor::~J2DAnmColor() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__11J2DAnmColorFv.s"
 }
 #pragma pop
 
 
-/* 80184370-801843CC 005C+00 .text      __dt__15J2DAnmTransformFv                                    */
+/* 80184370-801843CC 005C+00 rc=1 efc=0 .text      __dt__15J2DAnmTransformFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J2DAnmTransformFv) {
+asm J2DAnmTransform::~J2DAnmTransform() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__15J2DAnmTransformFv.s"
 }
@@ -1650,35 +2583,35 @@ ASM_FUNCTION(__dt__15J2DAnmTransformFv) {
 
 
 /* ############################################################################################## */
-/* 8042C9E0-8042C9EC 000C+00 .bss       @3807                                                        */
+/* 8042C9E0-8042C9EC 000C+00 rc=1 efc=0 .bss       @3807                                                        */
 u8 d_file_d_file_select__lit_3807[12];
 
-/* 8042C9EC-8042CA10 0024+00 .bss       g_fsHIO                                                      */
+/* 8042C9EC-8042CA10 0024+00 rc=35 efc=0 .bss       g_fsHIO                                                      */
 u8 g_fsHIO[36];
 
-/* 8045392C-80453930 0004+00 .sdata2    @4165                                                        */
+/* 8045392C-80453930 0004+00 rc=1 efc=0 .sdata2    @4165                                                        */
 f32 d_file_d_file_select__lit_4165 = 9.0f / 10.0f;
 
-/* 80453930-80453938 0004+04 .sdata2    @4166                                                        */
+/* 80453930-80453938 0004+04 rc=5 efc=0 .sdata2    @4166                                                        */
 f32 d_file_d_file_select__lit_4166 = 0.5f;
 /* padding 4 bytes */
 
-/* 801843CC-801844FC 0130+00 .text      _create__14dFile_select_cFv                                  */
+/* 801843CC-801844FC 0130+00 rc=1 efc=1 .text      _create__14dFile_select_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__14dFile_select_cFv) {
+asm void dFile_select_c::_create() {
 	nofralloc
 #include "asm/d/file/d_file_select/_create__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801844FC-80184664 0168+00 .text      _move__14dFile_select_cFv                                    */
+/* 801844FC-80184664 0168+00 rc=1 efc=1 .text      _move__14dFile_select_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__14dFile_select_cFv) {
+asm void dFile_select_c::_move() {
 	nofralloc
 #include "asm/d/file/d_file_select/_move__14dFile_select_cFv.s"
 }
@@ -1686,91 +2619,91 @@ ASM_FUNCTION(_move__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453938-80453940 0008+00 .sdata2    @4342                                                        */
+/* 80453938-80453940 0008+00 rc=34 efc=0 .sdata2    @4342                                                        */
 f64 d_file_d_file_select__lit_4342 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80184664-801848A0 023C+00 .text      selFileWakuAnm__14dFile_select_cFv                           */
+/* 80184664-801848A0 023C+00 rc=1 efc=0 .text      selFileWakuAnm__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selFileWakuAnm__14dFile_select_cFv) {
+asm void dFile_select_c::selFileWakuAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/selFileWakuAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801848A0-8018499C 00FC+00 .text      bookIconAnm__14dFile_select_cFv                              */
+/* 801848A0-8018499C 00FC+00 rc=1 efc=0 .text      bookIconAnm__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bookIconAnm__14dFile_select_cFv) {
+asm void dFile_select_c::bookIconAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/bookIconAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018499C-80184A48 00AC+00 .text      selCopyFileWakuAnm__14dFile_select_cFv                       */
+/* 8018499C-80184A48 00AC+00 rc=1 efc=0 .text      selCopyFileWakuAnm__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selCopyFileWakuAnm__14dFile_select_cFv) {
+asm void dFile_select_c::selCopyFileWakuAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/selCopyFileWakuAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80184A48-80184B44 00FC+00 .text      copyBookIconAnm__14dFile_select_cFv                          */
+/* 80184A48-80184B44 00FC+00 rc=1 efc=0 .text      copyBookIconAnm__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyBookIconAnm__14dFile_select_cFv) {
+asm void dFile_select_c::copyBookIconAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyBookIconAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80184B44-80184BFC 00B8+00 .text      dataDelEffAnm__14dFile_select_cFv                            */
+/* 80184B44-80184BFC 00B8+00 rc=1 efc=0 .text      dataDelEffAnm__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataDelEffAnm__14dFile_select_cFv) {
+asm void dFile_select_c::dataDelEffAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataDelEffAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80184BFC-80184CB4 00B8+00 .text      dataCopyEffAnm__14dFile_select_cFv                           */
+/* 80184BFC-80184CB4 00B8+00 rc=1 efc=0 .text      dataCopyEffAnm__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataCopyEffAnm__14dFile_select_cFv) {
+asm void dFile_select_c::dataCopyEffAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataCopyEffAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80184CB4-80184D4C 0098+00 .text      selectDataBaseMoveAnmInitSet__14dFile_select_cFii            */
+/* 80184CB4-80184D4C 0098+00 rc=2 efc=0 .text      selectDataBaseMoveAnmInitSet__14dFile_select_cFii            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataBaseMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::selectDataBaseMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataBaseMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80184D4C-80184E38 00EC+00 .text      selectDataBaseMoveAnm__14dFile_select_cFv                    */
+/* 80184D4C-80184E38 00EC+00 rc=2 efc=0 .text      selectDataBaseMoveAnm__14dFile_select_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataBaseMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::selectDataBaseMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataBaseMoveAnm__14dFile_select_cFv.s"
 }
@@ -1778,50 +2711,50 @@ ASM_FUNCTION(selectDataBaseMoveAnm__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453940-80453944 0004+00 .sdata2    @4611                                                        */
+/* 80453940-80453944 0004+00 rc=38 efc=0 .sdata2    @4611                                                        */
 f32 d_file_d_file_select__lit_4611 = 1.0f;
 
-/* 80453944-80453948 0004+00 .sdata2    @4612                                                        */
+/* 80453944-80453948 0004+00 rc=19 efc=0 .sdata2    @4612                                                        */
 f32 d_file_d_file_select__lit_4612 = -1.0f;
 
-/* 80184E38-80185040 0208+00 .text      dataSelectInAnmSet__14dFile_select_cFv                       */
+/* 80184E38-80185040 0208+00 rc=1 efc=0 .text      dataSelectInAnmSet__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectInAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectInAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectInAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80185040-80185230 01F0+00 .text      dataSelectIn__14dFile_select_cFv                             */
+/* 80185040-80185230 01F0+00 rc=1 efc=0 .text      dataSelectIn__14dFile_select_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectIn__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectIn() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectIn__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80185230-801853C4 0194+00 .text      dataSelectInit__14dFile_select_cFv                           */
+/* 80185230-801853C4 0194+00 rc=1 efc=0 .text      dataSelectInit__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectInit__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectInit() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectInit__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801853C4-80185508 0144+00 .text      dataSelect__14dFile_select_cFv                               */
+/* 801853C4-80185508 0144+00 rc=1 efc=0 .text      dataSelect__14dFile_select_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelect__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelect__14dFile_select_cFv.s"
 }
@@ -1829,264 +2762,264 @@ ASM_FUNCTION(dataSelect__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 804506B0-804506B8 0008+00 .sdata     YnSelStartFrameTbl                                           */
+/* 804506B0-804506B8 0008+00 rc=2 efc=0 .sdata     YnSelStartFrameTbl                                           */
 u8 d_file_d_file_select__YnSelStartFrameTbl[8] = {
 	0x00, 0x00, 0x04, 0xE3, 0x00, 0x00, 0x04, 0xD4,
 };
 
-/* 804506B8-804506C0 0008+00 .sdata     YnSelEndFrameTbl                                             */
+/* 804506B8-804506C0 0008+00 rc=2 efc=0 .sdata     YnSelEndFrameTbl                                             */
 u8 d_file_d_file_select__YnSelEndFrameTbl[8] = {
 	0x00, 0x00, 0x04, 0xD4, 0x00, 0x00, 0x04, 0xE3,
 };
 
-/* 804506C0-804506C8 0006+02 .sdata     msgTbl                                                       */
+/* 804506C0-804506C8 0006+02 rc=4 efc=0 .sdata     msgTbl                                                       */
 u8 msgTbl[8] = {
 	0x00, 0x40, 0x00, 0x41, 0x00, 0x42,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 80453948-8045394C 0004+00 .sdata2    @4778                                                        */
+/* 80453948-8045394C 0004+00 rc=35 efc=0 .sdata2    @4778                                                        */
 u8 d_file_d_file_select__lit_4778[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80185508-80185994 048C+00 .text      dataSelectStart__14dFile_select_cFv                          */
+/* 80185508-80185994 048C+00 rc=1 efc=0 .text      dataSelectStart__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectStart__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectStart() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectStart__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80185994-80185AAC 0118+00 .text      selectDataMoveAnmInitSet__14dFile_select_cFii                */
+/* 80185994-80185AAC 0118+00 rc=7 efc=0 .text      selectDataMoveAnmInitSet__14dFile_select_cFii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::selectDataMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80185AAC-80185C2C 0180+00 .text      selectDataMoveAnm__14dFile_select_cFv                        */
+/* 80185AAC-80185C2C 0180+00 rc=8 efc=0 .text      selectDataMoveAnm__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::selectDataMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80185C2C-80185DE0 01B4+00 .text      dataSelectAnmSet__14dFile_select_cFv                         */
+/* 80185C2C-80185DE0 01B4+00 rc=1 efc=0 .text      dataSelectAnmSet__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80185DE0-80186088 02A8+00 .text      dataSelectMoveAnime__14dFile_select_cFv                      */
+/* 80185DE0-80186088 02A8+00 rc=1 efc=0 .text      dataSelectMoveAnime__14dFile_select_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSelectMoveAnime__14dFile_select_cFv) {
+asm void dFile_select_c::dataSelectMoveAnime() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSelectMoveAnime__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186088-801864DC 0454+00 .text      makeRecInfo__14dFile_select_cFUc                             */
+/* 80186088-801864DC 0454+00 rc=2 efc=0 .text      makeRecInfo__14dFile_select_cFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeRecInfo__14dFile_select_cFUc) {
+asm void dFile_select_c::makeRecInfo(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/makeRecInfo__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 801864DC-80186638 015C+00 .text      selectDataOpenMove__14dFile_select_cFv                       */
+/* 801864DC-80186638 015C+00 rc=1 efc=0 .text      selectDataOpenMove__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataOpenMove__14dFile_select_cFv) {
+asm void dFile_select_c::selectDataOpenMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataOpenMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186638-801866C8 0090+00 .text      selectDataNameMove__14dFile_select_cFv                       */
+/* 80186638-801866C8 0090+00 rc=1 efc=0 .text      selectDataNameMove__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataNameMove__14dFile_select_cFv) {
+asm void dFile_select_c::selectDataNameMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataNameMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801866C8-80186774 00AC+00 .text      selectDataOpenEraseMove__14dFile_select_cFv                  */
+/* 801866C8-80186774 00AC+00 rc=1 efc=0 .text      selectDataOpenEraseMove__14dFile_select_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectDataOpenEraseMove__14dFile_select_cFv) {
+asm void dFile_select_c::selectDataOpenEraseMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataOpenEraseMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186774-801868EC 0178+00 .text      menuSelect__14dFile_select_cFv                               */
+/* 80186774-801868EC 0178+00 rc=1 efc=0 .text      menuSelect__14dFile_select_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuSelect__14dFile_select_cFv) {
+asm void dFile_select_c::menuSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801868EC-80186A80 0194+00 .text      menuSelectStart__14dFile_select_cFv                          */
+/* 801868EC-80186A80 0194+00 rc=1 efc=0 .text      menuSelectStart__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuSelectStart__14dFile_select_cFv) {
+asm void dFile_select_c::menuSelectStart() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuSelectStart__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186A80-80186B48 00C8+00 .text      menuSelectCansel__14dFile_select_cFv                         */
+/* 80186A80-80186B48 00C8+00 rc=1 efc=0 .text      menuSelectCansel__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuSelectCansel__14dFile_select_cFv) {
+asm void dFile_select_c::menuSelectCansel() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuSelectCansel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186B48-80186C84 013C+00 .text      menuMoveAnmInitSet__14dFile_select_cFii                      */
+/* 80186B48-80186C84 013C+00 rc=8 efc=0 .text      menuMoveAnmInitSet__14dFile_select_cFii                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::menuMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80186C84-80186CAC 0028+00 .text      setWhite__10J2DTextBoxFQ28JUtility6TColor                    */
+/* 80186C84-80186CAC 0028+00 rc=1 efc=1 .text      setWhite__10J2DTextBoxFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWhite__10J2DTextBoxFQ28JUtility6TColor) {
+asm void J2DTextBox::setWhite(JUtility::TColor field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/setWhite__10J2DTextBoxFQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 80186CAC-80186E14 0168+00 .text      menuMoveAnm__14dFile_select_cFv                              */
+/* 80186CAC-80186E14 0168+00 rc=9 efc=0 .text      menuMoveAnm__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::menuMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186E14-80186F98 0184+00 .text      menuSelectAnmSet__14dFile_select_cFv                         */
+/* 80186E14-80186F98 0184+00 rc=1 efc=0 .text      menuSelectAnmSet__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuSelectAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::menuSelectAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuSelectAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80186F98-8018721C 0284+00 .text      menuSelectMoveAnm__14dFile_select_cFv                        */
+/* 80186F98-8018721C 0284+00 rc=1 efc=0 .text      menuSelectMoveAnm__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuSelectMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::menuSelectMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuSelectMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018721C-801872C4 00A8+00 .text      ToNameMove__14dFile_select_cFv                               */
+/* 8018721C-801872C4 00A8+00 rc=1 efc=0 .text      ToNameMove__14dFile_select_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ToNameMove__14dFile_select_cFv) {
+asm void dFile_select_c::ToNameMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/ToNameMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801872C4-80187384 00C0+00 .text      ToNameMove2__14dFile_select_cFv                              */
+/* 801872C4-80187384 00C0+00 rc=1 efc=0 .text      ToNameMove2__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ToNameMove2__14dFile_select_cFv) {
+asm void dFile_select_c::ToNameMove2() {
 	nofralloc
 #include "asm/d/file/d_file_select/ToNameMove2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187384-801873BC 0038+00 .text      nameInputWait__14dFile_select_cFv                            */
+/* 80187384-801873BC 0038+00 rc=1 efc=0 .text      nameInputWait__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameInputWait__14dFile_select_cFv) {
+asm void dFile_select_c::nameInputWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameInputWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801873BC-801874F8 013C+00 .text      nameInput__14dFile_select_cFv                                */
+/* 801873BC-801874F8 013C+00 rc=1 efc=0 .text      nameInput__14dFile_select_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameInput__14dFile_select_cFv) {
+asm void dFile_select_c::nameInput() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameInput__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801874F8-8018759C 00A4+00 .text      nameToDataSelectMove__14dFile_select_cFv                     */
+/* 801874F8-8018759C 00A4+00 rc=1 efc=0 .text      nameToDataSelectMove__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameToDataSelectMove__14dFile_select_cFv) {
+asm void dFile_select_c::nameToDataSelectMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameToDataSelectMove__14dFile_select_cFv.s"
 }
@@ -2094,98 +3027,98 @@ ASM_FUNCTION(nameToDataSelectMove__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 8045394C-80453950 0004+00 .sdata2    @5472                                                        */
+/* 8045394C-80453950 0004+00 rc=4 efc=0 .sdata2    @5472                                                        */
 f32 lit_5472 = 255.0f;
 
-/* 80453950-80453958 0004+04 .sdata2    @5473                                                        */
+/* 80453950-80453958 0004+04 rc=4 efc=0 .sdata2    @5473                                                        */
 f32 lit_5473 = 15.0f;
 /* padding 4 bytes */
 
-/* 80453958-80453960 0008+00 .sdata2    @5475                                                        */
+/* 80453958-80453960 0008+00 rc=4 efc=0 .sdata2    @5475                                                        */
 f64 lit_5475 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8018759C-801876A0 0104+00 .text      nameInputFade__14dFile_select_cFv                            */
+/* 8018759C-801876A0 0104+00 rc=1 efc=0 .text      nameInputFade__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameInputFade__14dFile_select_cFv) {
+asm void dFile_select_c::nameInputFade() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameInputFade__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801876A0-8018774C 00AC+00 .text      nameInput2Move__14dFile_select_cFv                           */
+/* 801876A0-8018774C 00AC+00 rc=1 efc=0 .text      nameInput2Move__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameInput2Move__14dFile_select_cFv) {
+asm void dFile_select_c::nameInput2Move() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameInput2Move__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018774C-80187824 00D8+00 .text      nameInput2__14dFile_select_cFv                               */
+/* 8018774C-80187824 00D8+00 rc=1 efc=0 .text      nameInput2__14dFile_select_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameInput2__14dFile_select_cFv) {
+asm void dFile_select_c::nameInput2() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameInput2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187824-80187908 00E4+00 .text      backNameInputMove0__14dFile_select_cFv                       */
+/* 80187824-80187908 00E4+00 rc=1 efc=0 .text      backNameInputMove0__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backNameInputMove0__14dFile_select_cFv) {
+asm void dFile_select_c::backNameInputMove0() {
 	nofralloc
 #include "asm/d/file/d_file_select/backNameInputMove0__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187908-801879B8 00B0+00 .text      backNameInputMove__14dFile_select_cFv                        */
+/* 80187908-801879B8 00B0+00 rc=1 efc=0 .text      backNameInputMove__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backNameInputMove__14dFile_select_cFv) {
+asm void dFile_select_c::backNameInputMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/backNameInputMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801879B8-80187ADC 0124+00 .text      ToCopyPaneMove__14dFile_select_cFv                           */
+/* 801879B8-80187ADC 0124+00 rc=1 efc=0 .text      ToCopyPaneMove__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ToCopyPaneMove__14dFile_select_cFv) {
+asm void dFile_select_c::ToCopyPaneMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/ToCopyPaneMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187ADC-80187B44 0068+00 .text      ToErasePaneMove__14dFile_select_cFv                          */
+/* 80187ADC-80187B44 0068+00 rc=1 efc=0 .text      ToErasePaneMove__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ToErasePaneMove__14dFile_select_cFv) {
+asm void dFile_select_c::ToErasePaneMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/ToErasePaneMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187B44-80187BE8 00A4+00 .text      backSelectMove__14dFile_select_cFv                           */
+/* 80187B44-80187BE8 00A4+00 rc=1 efc=0 .text      backSelectMove__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backSelectMove__14dFile_select_cFv) {
+asm void dFile_select_c::backSelectMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/backSelectMove__14dFile_select_cFv.s"
 }
@@ -2193,171 +3126,171 @@ ASM_FUNCTION(backSelectMove__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453960-80453964 0004+00 .sdata2    @5614                                                        */
+/* 80453960-80453964 0004+00 rc=1 efc=0 .sdata2    @5614                                                        */
 f32 d_file_d_file_select__lit_5614 = 99.0f;
 
-/* 80453964-80453968 0004+00 .sdata2    @5615                                                        */
+/* 80453964-80453968 0004+00 rc=1 efc=0 .sdata2    @5615                                                        */
 f32 d_file_d_file_select__lit_5615 = 109.0f;
 
-/* 80187BE8-80187DB8 01D0+00 .text      copySelMoveAnmInitSet__14dFile_select_cFii                   */
+/* 80187BE8-80187DB8 01D0+00 rc=6 efc=0 .text      copySelMoveAnmInitSet__14dFile_select_cFii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copySelMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::copySelMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80187DB8-80187ED4 011C+00 .text      setSaveDataForCopySel__14dFile_select_cFv                    */
+/* 80187DB8-80187ED4 011C+00 rc=1 efc=0 .text      setSaveDataForCopySel__14dFile_select_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSaveDataForCopySel__14dFile_select_cFv) {
+asm void dFile_select_c::setSaveDataForCopySel() {
 	nofralloc
 #include "asm/d/file/d_file_select/setSaveDataForCopySel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80187ED4-8018801C 0148+00 .text      copyDataToSelect__14dFile_select_cFv                         */
+/* 80187ED4-8018801C 0148+00 rc=1 efc=0 .text      copyDataToSelect__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDataToSelect__14dFile_select_cFv) {
+asm void dFile_select_c::copyDataToSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyDataToSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018801C-80188234 0218+00 .text      copyDataToSelectStart__14dFile_select_cFv                    */
+/* 8018801C-80188234 0218+00 rc=1 efc=0 .text      copyDataToSelectStart__14dFile_select_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDataToSelectStart__14dFile_select_cFv) {
+asm void dFile_select_c::copyDataToSelectStart() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyDataToSelectStart__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80188234-8018832C 00F8+00 .text      copyDataToSelectCansel__14dFile_select_cFv                   */
+/* 80188234-8018832C 00F8+00 rc=1 efc=0 .text      copyDataToSelectCansel__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDataToSelectCansel__14dFile_select_cFv) {
+asm void dFile_select_c::copyDataToSelectCansel() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyDataToSelectCansel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018832C-801884D0 01A4+00 .text      copyDataToSelectMoveAnmSet__14dFile_select_cFv               */
+/* 8018832C-801884D0 01A4+00 rc=1 efc=0 .text      copyDataToSelectMoveAnmSet__14dFile_select_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDataToSelectMoveAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::copyDataToSelectMoveAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyDataToSelectMoveAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801884D0-80188834 0364+00 .text      copyDataToSelectMoveAnm__14dFile_select_cFv                  */
+/* 801884D0-80188834 0364+00 rc=1 efc=0 .text      copyDataToSelectMoveAnm__14dFile_select_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDataToSelectMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::copyDataToSelectMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyDataToSelectMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80188834-80188878 0044+00 .text      copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc        */
+/* 80188834-80188878 0044+00 rc=1 efc=0 .text      copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc) {
+asm void dFile_select_c::copySelectWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 80188878-80188950 00D8+00 .text      copySelectWakuAlpahAnm__14dFile_select_cFUc                  */
+/* 80188878-80188950 00D8+00 rc=1 efc=0 .text      copySelectWakuAlpahAnm__14dFile_select_cFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copySelectWakuAlpahAnm__14dFile_select_cFUc) {
+asm void dFile_select_c::copySelectWakuAlpahAnm(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelectWakuAlpahAnm__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 80188950-80188994 0044+00 .text      getCptoNum__14dFile_select_cFUc                              */
+/* 80188950-80188994 0044+00 rc=1 efc=0 .text      getCptoNum__14dFile_select_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCptoNum__14dFile_select_cFUc) {
+asm void dFile_select_c::getCptoNum(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/getCptoNum__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 80188994-80188B54 01C0+00 .text      copyToSelBack__14dFile_select_cFv                            */
+/* 80188994-80188B54 01C0+00 rc=1 efc=0 .text      copyToSelBack__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyToSelBack__14dFile_select_cFv) {
+asm void dFile_select_c::copyToSelBack() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyToSelBack__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80188B54-80188BBC 0068+00 .text      copyToSelPaneMove__14dFile_select_cFv                        */
+/* 80188B54-80188BBC 0068+00 rc=1 efc=0 .text      copyToSelPaneMove__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyToSelPaneMove__14dFile_select_cFv) {
+asm void dFile_select_c::copyToSelPaneMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyToSelPaneMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80188BBC-80188D38 017C+00 .text      yesnoMenuMoveAnmInitSet__14dFile_select_cFii                 */
+/* 80188BBC-80188D38 017C+00 rc=14 efc=0 .text      yesnoMenuMoveAnmInitSet__14dFile_select_cFii                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoMenuMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::yesnoMenuMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoMenuMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80188D38-80188ED0 0198+00 .text      yesnoMenuMoveAnm__14dFile_select_cFv                         */
+/* 80188D38-80188ED0 0198+00 rc=15 efc=0 .text      yesnoMenuMoveAnm__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoMenuMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::yesnoMenuMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoMenuMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80188ED0-8018912C 025C+00 .text      yesnoSelectMoveAnm__14dFile_select_cFv                       */
+/* 80188ED0-8018912C 025C+00 rc=3 efc=0 .text      yesnoSelectMoveAnm__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoSelectMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::yesnoSelectMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoSelectMoveAnm__14dFile_select_cFv.s"
 }
@@ -2365,317 +3298,312 @@ ASM_FUNCTION(yesnoSelectMoveAnm__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453968-8045396C 0004+00 .sdata2    @6069                                                        */
+/* 80453968-8045396C 0004+00 rc=6 efc=0 .sdata2    @6069                                                        */
 f32 lit_6069 = 24.0f / 25.0f;
 
-/* 8045396C-80453970 0004+00 .sdata2    @6070                                                        */
+/* 8045396C-80453970 0004+00 rc=3 efc=0 .sdata2    @6070                                                        */
 f32 lit_6070 = 21.0f / 25.0f;
 
-/* 80453970-80453974 0004+00 .sdata2    @6071                                                        */
+/* 80453970-80453974 0004+00 rc=3 efc=0 .sdata2    @6071                                                        */
 f32 lit_6071 = 3.0f / 50.0f;
 
-/* 8018912C-8018929C 0170+00 .text      yesnoCursorShow__14dFile_select_cFv                          */
+/* 8018912C-8018929C 0170+00 rc=9 efc=0 .text      yesnoCursorShow__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoCursorShow__14dFile_select_cFv) {
+asm void dFile_select_c::yesnoCursorShow() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoCursorShow__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018929C-801893E4 0148+00 .text      YesNoSelect__14dFile_select_cFv                              */
+/* 8018929C-801893E4 0148+00 rc=1 efc=0 .text      YesNoSelect__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(YesNoSelect__14dFile_select_cFv) {
+asm void dFile_select_c::YesNoSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/YesNoSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801893E4-8018978C 03A8+00 .text      yesNoSelectStart__14dFile_select_cFv                         */
+/* 801893E4-8018978C 03A8+00 rc=1 efc=0 .text      yesNoSelectStart__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesNoSelectStart__14dFile_select_cFv) {
+asm void dFile_select_c::yesNoSelectStart() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesNoSelectStart__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018978C-80189904 0178+00 .text      yesnoSelectAnmSet__14dFile_select_cFv                        */
+/* 8018978C-80189904 0178+00 rc=3 efc=0 .text      yesnoSelectAnmSet__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoSelectAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::yesnoSelectAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoSelectAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189904-80189A24 0120+00 .text      yesnoCancelAnmSet__14dFile_select_cFv                        */
+/* 80189904-80189A24 0120+00 rc=2 efc=0 .text      yesnoCancelAnmSet__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoCancelAnmSet__14dFile_select_cFv) {
+asm void dFile_select_c::yesnoCancelAnmSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoCancelAnmSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189A24-80189BA8 0184+00 .text      YesNoCancelMove__14dFile_select_cFv                          */
+/* 80189A24-80189BA8 0184+00 rc=1 efc=0 .text      YesNoCancelMove__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(YesNoCancelMove__14dFile_select_cFv) {
+asm void dFile_select_c::YesNoCancelMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/YesNoCancelMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189BA8-80189C14 006C+00 .text      yesNoCursorMoveAnm__14dFile_select_cFv                       */
+/* 80189BA8-80189C14 006C+00 rc=1 efc=0 .text      yesNoCursorMoveAnm__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesNoCursorMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::yesNoCursorMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/yesNoCursorMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189C14-80189E28 0214+00 .text      CmdExecPaneMove0__14dFile_select_cFv                         */
+/* 80189C14-80189E28 0214+00 rc=1 efc=0 .text      CmdExecPaneMove0__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CmdExecPaneMove0__14dFile_select_cFv) {
+asm void dFile_select_c::CmdExecPaneMove0() {
 	nofralloc
 #include "asm/d/file/d_file_select/CmdExecPaneMove0__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189E28-80189F68 0140+00 .text      CommandExec__14dFile_select_cFv                              */
+/* 80189E28-80189F68 0140+00 rc=1 efc=0 .text      CommandExec__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CommandExec__14dFile_select_cFv) {
+asm void dFile_select_c::CommandExec() {
 	nofralloc
 #include "asm/d/file/d_file_select/CommandExec__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189F68-80189FFC 0094+00 .text      DataEraseWait__14dFile_select_cFv                            */
+/* 80189F68-80189FFC 0094+00 rc=1 efc=0 .text      DataEraseWait__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DataEraseWait__14dFile_select_cFv) {
+asm void dFile_select_c::DataEraseWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/DataEraseWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80189FFC-8018A194 0198+00 .text      DataEraseWait2__14dFile_select_cFv                           */
+/* 80189FFC-8018A194 0198+00 rc=1 efc=0 .text      DataEraseWait2__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DataEraseWait2__14dFile_select_cFv) {
+asm void dFile_select_c::DataEraseWait2() {
 	nofralloc
 #include "asm/d/file/d_file_select/DataEraseWait2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A194-8018A2DC 0148+00 .text      ErasePaneMoveOk__14dFile_select_cFv                          */
+/* 8018A194-8018A2DC 0148+00 rc=1 efc=0 .text      ErasePaneMoveOk__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ErasePaneMoveOk__14dFile_select_cFv) {
+asm void dFile_select_c::ErasePaneMoveOk() {
 	nofralloc
 #include "asm/d/file/d_file_select/ErasePaneMoveOk__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A2DC-8018A3B0 00D4+00 .text      ErasePaneMoveOk2__14dFile_select_cFv                         */
+/* 8018A2DC-8018A3B0 00D4+00 rc=1 efc=0 .text      ErasePaneMoveOk2__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ErasePaneMoveOk2__14dFile_select_cFv) {
+asm void dFile_select_c::ErasePaneMoveOk2() {
 	nofralloc
 #include "asm/d/file/d_file_select/ErasePaneMoveOk2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A3B0-8018A444 0094+00 .text      eraseEndBackSelectWait__14dFile_select_cFv                   */
+/* 8018A3B0-8018A444 0094+00 rc=1 efc=0 .text      eraseEndBackSelectWait__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eraseEndBackSelectWait__14dFile_select_cFv) {
+asm void dFile_select_c::eraseEndBackSelectWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/eraseEndBackSelectWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A444-8018A4D0 008C+00 .text      eraseEndBackSelect__14dFile_select_cFv                       */
+/* 8018A444-8018A4D0 008C+00 rc=1 efc=0 .text      eraseEndBackSelect__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eraseEndBackSelect__14dFile_select_cFv) {
+asm void dFile_select_c::eraseEndBackSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/eraseEndBackSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A4D0-8018A564 0094+00 .text      DataCopyWait__14dFile_select_cFv                             */
+/* 8018A4D0-8018A564 0094+00 rc=1 efc=0 .text      DataCopyWait__14dFile_select_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DataCopyWait__14dFile_select_cFv) {
+asm void dFile_select_c::DataCopyWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/DataCopyWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A564-8018A6F8 0194+00 .text      DataCopyWait2__14dFile_select_cFv                            */
+/* 8018A564-8018A6F8 0194+00 rc=1 efc=0 .text      DataCopyWait2__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DataCopyWait2__14dFile_select_cFv) {
+asm void dFile_select_c::DataCopyWait2() {
 	nofralloc
 #include "asm/d/file/d_file_select/DataCopyWait2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A6F8-8018A868 0170+00 .text      copyPaneMoveOk__14dFile_select_cFv                           */
+/* 8018A6F8-8018A868 0170+00 rc=1 efc=0 .text      copyPaneMoveOk__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyPaneMoveOk__14dFile_select_cFv) {
+asm void dFile_select_c::copyPaneMoveOk() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyPaneMoveOk__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A868-8018A960 00F8+00 .text      copyPaneMoveOk2__14dFile_select_cFv                          */
+/* 8018A868-8018A960 00F8+00 rc=1 efc=0 .text      copyPaneMoveOk2__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyPaneMoveOk2__14dFile_select_cFv) {
+asm void dFile_select_c::copyPaneMoveOk2() {
 	nofralloc
 #include "asm/d/file/d_file_select/copyPaneMoveOk2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018A960-8018AAC4 0164+00 .text      ErrorMsgPaneMove__14dFile_select_cFv                         */
+/* 8018A960-8018AAC4 0164+00 rc=1 efc=0 .text      ErrorMsgPaneMove__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ErrorMsgPaneMove__14dFile_select_cFv) {
+asm void dFile_select_c::ErrorMsgPaneMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/ErrorMsgPaneMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018AAC4-8018AC3C 0178+00 .text      backDatSelPaneMove__14dFile_select_cFv                       */
+/* 8018AAC4-8018AC3C 0178+00 rc=1 efc=0 .text      backDatSelPaneMove__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backDatSelPaneMove__14dFile_select_cFv) {
+asm void dFile_select_c::backDatSelPaneMove() {
 	nofralloc
 #include "asm/d/file/d_file_select/backDatSelPaneMove__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018AC3C-8018AD38 00FC+00 .text      backDatSelWait__14dFile_select_cFv                           */
+/* 8018AC3C-8018AD38 00FC+00 rc=1 efc=0 .text      backDatSelWait__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backDatSelWait__14dFile_select_cFv) {
+asm void dFile_select_c::backDatSelWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/backDatSelWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018AD38-8018AD9C 0064+00 .text      backDatSelWait2__14dFile_select_cFv                          */
+/* 8018AD38-8018AD9C 0064+00 rc=1 efc=0 .text      backDatSelWait2__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backDatSelWait2__14dFile_select_cFv) {
+asm void dFile_select_c::backDatSelWait2() {
 	nofralloc
 #include "asm/d/file/d_file_select/backDatSelWait2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018AD9C-8018ADA0 0004+00 .text      nextModeWait__14dFile_select_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(nextModeWait__14dFile_select_cFv) {
-	nofralloc
-#include "asm/d/file/d_file_select/nextModeWait__14dFile_select_cFv.s"
+/* 8018AD9C-8018ADA0 0004+00 rc=1 efc=0 .text      nextModeWait__14dFile_select_cFv                             */
+void dFile_select_c::nextModeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80394310-80394324 0014+00 .rodata    m_kamen_offset_x$8678                                        */
+/* 80394310-80394324 0014+00 rc=2 efc=0 .rodata    m_kamen_offset_x$8678                                        */
 SECTION_RODATA const u8 data_80394310[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80394324-80394338 0014+00 .rodata    m_kamen_offset_y$8679                                        */
+/* 80394324-80394338 0014+00 rc=0 efc=0 .rodata    m_kamen_offset_y$8679                                        */
 SECTION_RODATA const u8 data_80394324[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0xA0, 0x00, 0x00,
 	0x40, 0xA0, 0x00, 0x00,
 };
 
-/* 80394338-8039434C 0014+00 .rodata    m_kamen_scale$8680                                           */
+/* 80394338-8039434C 0014+00 rc=0 efc=0 .rodata    m_kamen_scale$8680                                           */
 SECTION_RODATA const u8 data_80394338[20] = {
 	0x40, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x3F, 0xCC, 0xCC, 0xCD,
 	0x3F, 0xCC, 0xCC, 0xCD,
 };
 
-/* 8039434C-80394360 0014+00 .rodata    m_mirror_offset_x$8781                                       */
+/* 8039434C-80394360 0014+00 rc=0 efc=0 .rodata    m_mirror_offset_x$8781                                       */
 SECTION_RODATA const u8 data_8039434C[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80394360-80394374 0014+00 .rodata    m_mirror_offset_y$8782                                       */
+/* 80394360-80394374 0014+00 rc=0 efc=0 .rodata    m_mirror_offset_y$8782                                       */
 SECTION_RODATA const u8 data_80394360[20] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80394374-80394388 0014+00 .rodata    m_mirror_scale$8783                                          */
+/* 80394374-80394388 0014+00 rc=0 efc=0 .rodata    m_mirror_scale$8783                                          */
 SECTION_RODATA const u8 data_80394374[20] = {
 	0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A,
 	0x3F, 0x19, 0x99, 0x9A,
 };
 
-/* 80394388-80394828 049F+01 .rodata    @stringBase0                                                 */
+/* 80394388-80394828 049F+01 rc=10 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -2741,86 +3669,81 @@ SECTION_DEAD char* const stringBase_80394812 = "kageri_mirrer_UI.bmd";
 SECTION_DEAD char* const pad_80394827 = "";
 #pragma pop
 
-/* 80453974-80453978 0004+00 .sdata2    @6867                                                        */
+/* 80453974-80453978 0004+00 rc=1 efc=0 .sdata2    @6867                                                        */
 f32 lit_6867 = 24.0f;
 
-/* 80453978-8045397C 0004+00 .sdata2    @6868                                                        */
+/* 80453978-8045397C 0004+00 rc=1 efc=0 .sdata2    @6868                                                        */
 f32 lit_6868 = 20.0f;
 
-/* 8045397C-80453980 0004+00 .sdata2    @6869                                                        */
+/* 8045397C-80453980 0004+00 rc=1 efc=0 .sdata2    @6869                                                        */
 f32 lit_6869 = 440.0f;
 
-/* 80453980-80453984 0004+00 .sdata2    @6870                                                        */
+/* 80453980-80453984 0004+00 rc=1 efc=0 .sdata2    @6870                                                        */
 f32 lit_6870 = 198.0f;
 
-/* 80453984-80453988 0004+00 .sdata2    @6871                                                        */
+/* 80453984-80453988 0004+00 rc=1 efc=0 .sdata2    @6871                                                        */
 f32 lit_6871 = 21.0f;
 
-/* 80453988-8045398C 0004+00 .sdata2    @6872                                                        */
+/* 80453988-8045398C 0004+00 rc=3 efc=0 .sdata2    @6872                                                        */
 f32 lit_6872 = 47.0f / 50.0f;
 
-/* 8045398C-80453990 0004+00 .sdata2    @6873                                                        */
+/* 8045398C-80453990 0004+00 rc=3 efc=0 .sdata2    @6873                                                        */
 f32 lit_6873 = 3.0f / 100.0f;
 
-/* 80453990-80453994 0004+00 .sdata2    @6874                                                        */
+/* 80453990-80453994 0004+00 rc=3 efc=0 .sdata2    @6874                                                        */
 f32 lit_6874 = 7.0f / 10.0f;
 
-/* 80453994-80453998 0004+00 .sdata2    @6875                                                        */
+/* 80453994-80453998 0004+00 rc=1 efc=0 .sdata2    @6875                                                        */
 f32 lit_6875 = 238.0f;
 
-/* 80453998-8045399C 0004+00 .sdata2    @6876                                                        */
+/* 80453998-8045399C 0004+00 rc=1 efc=0 .sdata2    @6876                                                        */
 f32 lit_6876 = 43.0f;
 
-/* 8045399C-804539A0 0004+00 .sdata2    @6877                                                        */
+/* 8045399C-804539A0 0004+00 rc=1 efc=0 .sdata2    @6877                                                        */
 f32 d_file_d_file_select__lit_6877 = 712.0f;
 
-/* 804539A0-804539A4 0004+00 .sdata2    @6878                                                        */
+/* 804539A0-804539A4 0004+00 rc=1 efc=0 .sdata2    @6878                                                        */
 f32 lit_6878 = 130.0f;
 
-/* 804539A4-804539A8 0004+00 .sdata2    @6879                                                        */
+/* 804539A4-804539A8 0004+00 rc=3 efc=0 .sdata2    @6879                                                        */
 f32 lit_6879 = 608.0f;
 
-/* 804539A8-804539AC 0004+00 .sdata2    @6880                                                        */
+/* 804539A8-804539AC 0004+00 rc=3 efc=0 .sdata2    @6880                                                        */
 f32 lit_6880 = 448.0f;
 
-/* 8018ADA0-8018BEE0 1140+00 .text      screenSet__14dFile_select_cFv                                */
+/* 8018ADA0-8018BEE0 1140+00 rc=1 efc=0 .text      screenSet__14dFile_select_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSet__14dFile_select_cFv) {
+asm void dFile_select_c::screenSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/screenSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018BEE0-8018BF28 0048+00 .text      setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor */
+/* 8018BEE0-8018BF28 0048+00 rc=1 efc=1 .text      setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DPicture::setBlackWhite(JUtility::TColor field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 8018BF28-8018BF2C 0004+00 .text      setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey) {
-	nofralloc
-#include "asm/d/file/d_file_select/setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey.s"
+/* 8018BF28-8018BF2C 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey                */
+void J2DPane::setAnimation(J2DAnmTextureSRTKey* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8018BF2C-8018C524 05F8+00 .text      screenSetCopySel__14dFile_select_cFv                         */
+/* 8018BF2C-8018C524 05F8+00 rc=1 efc=0 .text      screenSetCopySel__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetCopySel__14dFile_select_cFv) {
+asm void dFile_select_c::screenSetCopySel() {
 	nofralloc
 #include "asm/d/file/d_file_select/screenSetCopySel__14dFile_select_cFv.s"
 }
@@ -2828,18 +3751,18 @@ ASM_FUNCTION(screenSetCopySel__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 804506C8-804506CC 0002+02 .sdata     l_msgNum2$7002                                               */
+/* 804506C8-804506CC 0002+02 rc=1 efc=0 .sdata     l_msgNum2$7002                                               */
 u8 data_804506C8[4] = {
 	0x08, 0x07,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 8018C524-8018C8F4 03D0+00 .text      screenSetYesNo__14dFile_select_cFv                           */
+/* 8018C524-8018C8F4 03D0+00 rc=1 efc=0 .text      screenSetYesNo__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetYesNo__14dFile_select_cFv) {
+asm void dFile_select_c::screenSetYesNo() {
 	nofralloc
 #include "asm/d/file/d_file_select/screenSetYesNo__14dFile_select_cFv.s"
 }
@@ -2847,32 +3770,32 @@ ASM_FUNCTION(screenSetYesNo__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 804506CC-804506D0 0003+01 .sdata     l_msgNum$7082                                                */
+/* 804506CC-804506D0 0003+01 rc=1 efc=0 .sdata     l_msgNum$7082                                                */
 u8 data_804506CC[4] = {
 	0x57, 0x58, 0x56,
 	/* padding */
 	0x00,
 };
 
-/* 804539AC-804539B0 0004+00 .sdata2    @7146                                                        */
+/* 804539AC-804539B0 0004+00 rc=1 efc=0 .sdata2    @7146                                                        */
 f32 lit_7146 = 799.0f;
 
-/* 8018C8F4-8018CCD0 03DC+00 .text      screenSet3Menu__14dFile_select_cFv                           */
+/* 8018C8F4-8018CCD0 03DC+00 rc=1 efc=0 .text      screenSet3Menu__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSet3Menu__14dFile_select_cFv) {
+asm void dFile_select_c::screenSet3Menu() {
 	nofralloc
 #include "asm/d/file/d_file_select/screenSet3Menu__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018CCD0-8018CE38 0168+00 .text      screenSetDetail__14dFile_select_cFv                          */
+/* 8018CCD0-8018CE38 0168+00 rc=1 efc=0 .text      screenSetDetail__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetDetail__14dFile_select_cFv) {
+asm void dFile_select_c::screenSetDetail() {
 	nofralloc
 #include "asm/d/file/d_file_select/screenSetDetail__14dFile_select_cFv.s"
 }
@@ -2880,36 +3803,36 @@ ASM_FUNCTION(screenSetDetail__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 804539B0-804539B4 0004+00 .sdata2    @7201                                                        */
+/* 804539B0-804539B4 0004+00 rc=1 efc=0 .sdata2    @7201                                                        */
 f32 lit_7201 = 3000.0f;
 
-/* 8018CE38-8018CF50 0118+00 .text      setWakuAnm__14dFile_select_cFv                               */
+/* 8018CE38-8018CF50 0118+00 rc=2 efc=0 .text      setWakuAnm__14dFile_select_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWakuAnm__14dFile_select_cFv) {
+asm void dFile_select_c::setWakuAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/setWakuAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018CF50-8018D044 00F4+00 .text      displayInit__14dFile_select_cFv                              */
+/* 8018CF50-8018D044 00F4+00 rc=1 efc=0 .text      displayInit__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(displayInit__14dFile_select_cFv) {
+asm void dFile_select_c::displayInit() {
 	nofralloc
 #include "asm/d/file/d_file_select/displayInit__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018D044-8018D0E4 00A0+00 .text      setSaveData__14dFile_select_cFv                              */
+/* 8018D044-8018D0E4 00A0+00 rc=3 efc=0 .text      setSaveData__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSaveData__14dFile_select_cFv) {
+asm void dFile_select_c::setSaveData() {
 	nofralloc
 #include "asm/d/file/d_file_select/setSaveData__14dFile_select_cFv.s"
 }
@@ -2917,840 +3840,835 @@ ASM_FUNCTION(setSaveData__14dFile_select_cFv) {
 
 
 /* ############################################################################################## */
-/* 804506D0-804506D8 0008+00 .sdata     fontsize$7230                                                */
+/* 804506D0-804506D8 0008+00 rc=1 efc=0 .sdata     fontsize$7230                                                */
 u8 data_804506D0[8] = {
 	0x41, 0xA8, 0x00, 0x00, 0x41, 0xD8, 0x00, 0x00,
 };
 
-/* 804506D8-804506E0 0008+00 .sdata     linespace$7231                                               */
+/* 804506D8-804506E0 0008+00 rc=1 efc=0 .sdata     linespace$7231                                               */
 u8 data_804506D8[8] = {
 	0x41, 0xA8, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00,
 };
 
-/* 804506E0-804506E8 0008+00 .sdata     charspace$7232                                               */
+/* 804506E0-804506E8 0008+00 rc=1 efc=0 .sdata     charspace$7232                                               */
 u8 data_804506E0[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8018D0E4-8018D25C 0178+00 .text      headerTxtSet__14dFile_select_cFUsUcUc                        */
+/* 8018D0E4-8018D25C 0178+00 rc=20 efc=0 .text      headerTxtSet__14dFile_select_cFUsUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(headerTxtSet__14dFile_select_cFUsUcUc) {
+asm void dFile_select_c::headerTxtSet(u16 field_0, char field_1, char field_2) {
 	nofralloc
 #include "asm/d/file/d_file_select/headerTxtSet__14dFile_select_cFUsUcUc.s"
 }
 #pragma pop
 
 
-/* 8018D25C-8018D344 00E8+00 .text      headerTxtChangeAnm__14dFile_select_cFv                       */
+/* 8018D25C-8018D344 00E8+00 rc=21 efc=0 .text      headerTxtChangeAnm__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(headerTxtChangeAnm__14dFile_select_cFv) {
+asm void dFile_select_c::headerTxtChangeAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/headerTxtChangeAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018D344-8018D3A0 005C+00 .text      modoruTxtChange__14dFile_select_cFUc                         */
+/* 8018D344-8018D3A0 005C+00 rc=7 efc=0 .text      modoruTxtChange__14dFile_select_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modoruTxtChange__14dFile_select_cFUc) {
+asm void dFile_select_c::modoruTxtChange(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/modoruTxtChange__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018D3A0-8018D41C 007C+00 .text      modoruTxtDispAnmInit__14dFile_select_cFUc                    */
+/* 8018D3A0-8018D41C 007C+00 rc=11 efc=0 .text      modoruTxtDispAnmInit__14dFile_select_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modoruTxtDispAnmInit__14dFile_select_cFUc) {
+asm void dFile_select_c::modoruTxtDispAnmInit(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/modoruTxtDispAnmInit__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018D41C-8018D4F8 00DC+00 .text      modoruTxtDispAnm__14dFile_select_cFv                         */
+/* 8018D41C-8018D4F8 00DC+00 rc=11 efc=0 .text      modoruTxtDispAnm__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modoruTxtDispAnm__14dFile_select_cFv) {
+asm void dFile_select_c::modoruTxtDispAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/modoruTxtDispAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018D4F8-8018D574 007C+00 .text      ketteiTxtDispAnmInit__14dFile_select_cFUc                    */
+/* 8018D4F8-8018D574 007C+00 rc=13 efc=0 .text      ketteiTxtDispAnmInit__14dFile_select_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ketteiTxtDispAnmInit__14dFile_select_cFUc) {
+asm void dFile_select_c::ketteiTxtDispAnmInit(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/ketteiTxtDispAnmInit__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018D574-8018D650 00DC+00 .text      ketteiTxtDispAnm__14dFile_select_cFv                         */
+/* 8018D574-8018D650 00DC+00 rc=12 efc=0 .text      ketteiTxtDispAnm__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ketteiTxtDispAnm__14dFile_select_cFv) {
+asm void dFile_select_c::ketteiTxtDispAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/ketteiTxtDispAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018D650-8018D68C 003C+00 .text      selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc            */
+/* 8018D650-8018D68C 003C+00 rc=8 efc=0 .text      selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc) {
+asm void dFile_select_c::selectWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 8018D68C-8018D764 00D8+00 .text      selectWakuAlpahAnm__14dFile_select_cFUc                      */
+/* 8018D68C-8018D764 00D8+00 rc=8 efc=0 .text      selectWakuAlpahAnm__14dFile_select_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectWakuAlpahAnm__14dFile_select_cFUc) {
+asm void dFile_select_c::selectWakuAlpahAnm(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectWakuAlpahAnm__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018D764-8018D884 0120+00 .text      selFileCursorShow__14dFile_select_cFv                        */
+/* 8018D764-8018D884 0120+00 rc=6 efc=0 .text      selFileCursorShow__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selFileCursorShow__14dFile_select_cFv) {
+asm void dFile_select_c::selFileCursorShow() {
 	nofralloc
 #include "asm/d/file/d_file_select/selFileCursorShow__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018D884-8018D8C8 0044+00 .text      menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc              */
+/* 8018D884-8018D8C8 0044+00 rc=1 efc=0 .text      menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc) {
+asm void dFile_select_c::menuWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 8018D8C8-8018DA10 0148+00 .text      menuWakuAlpahAnm__14dFile_select_cFUc                        */
+/* 8018D8C8-8018DA10 0148+00 rc=1 efc=0 .text      menuWakuAlpahAnm__14dFile_select_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuWakuAlpahAnm__14dFile_select_cFUc) {
+asm void dFile_select_c::menuWakuAlpahAnm(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuWakuAlpahAnm__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018DA10-8018DB80 0170+00 .text      menuCursorShow__14dFile_select_cFv                           */
+/* 8018DA10-8018DB80 0170+00 rc=4 efc=0 .text      menuCursorShow__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuCursorShow__14dFile_select_cFv) {
+asm void dFile_select_c::menuCursorShow() {
 	nofralloc
 #include "asm/d/file/d_file_select/menuCursorShow__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018DB80-8018DBCC 004C+00 .text      yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc             */
+/* 8018DB80-8018DBCC 004C+00 rc=2 efc=0 .text      yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc) {
+asm void dFile_select_c::yesnoWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 8018DBCC-8018DD38 016C+00 .text      yesnoWakuAlpahAnm__14dFile_select_cFUc                       */
+/* 8018DBCC-8018DD38 016C+00 rc=4 efc=0 .text      yesnoWakuAlpahAnm__14dFile_select_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(yesnoWakuAlpahAnm__14dFile_select_cFUc) {
+asm void dFile_select_c::yesnoWakuAlpahAnm(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoWakuAlpahAnm__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018DD38-8018DEBC 0184+00 .text      _draw__14dFile_select_cFv                                    */
+/* 8018DD38-8018DEBC 0184+00 rc=1 efc=1 .text      _draw__14dFile_select_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__14dFile_select_cFv) {
+asm void dFile_select_c::_draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/_draw__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018DEBC-8018DEF4 0038+00 .text      draw__15dDlst_FileSel_cFv                                    */
+/* 8018DEBC-8018DEF4 0038+00 rc=1 efc=0 .text      draw__15dDlst_FileSel_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15dDlst_FileSel_cFv) {
+asm void dDlst_FileSel_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__15dDlst_FileSel_cFv.s"
 }
 #pragma pop
 
 
-/* 8018DEF4-8018DFFC 0108+00 .text      draw__17dDlst_FileSelDt_cFv                                  */
+/* 8018DEF4-8018DFFC 0108+00 rc=1 efc=0 .text      draw__17dDlst_FileSelDt_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dDlst_FileSelDt_cFv) {
+asm void dDlst_FileSelDt_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__17dDlst_FileSelDt_cFv.s"
 }
 #pragma pop
 
 
-/* 8018DFFC-8018E0C0 00C4+00 .text      draw__17dDlst_FileSelCp_cFv                                  */
+/* 8018DFFC-8018E0C0 00C4+00 rc=1 efc=0 .text      draw__17dDlst_FileSelCp_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dDlst_FileSelCp_cFv) {
+asm void dDlst_FileSelCp_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__17dDlst_FileSelCp_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E0C0-8018E0F8 0038+00 .text      draw__17dDlst_FileSelYn_cFv                                  */
+/* 8018E0C0-8018E0F8 0038+00 rc=1 efc=0 .text      draw__17dDlst_FileSelYn_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dDlst_FileSelYn_cFv) {
+asm void dDlst_FileSelYn_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__17dDlst_FileSelYn_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E0F8-8018E130 0038+00 .text      draw__17dDlst_FileSel3m_cFv                                  */
+/* 8018E0F8-8018E130 0038+00 rc=1 efc=0 .text      draw__17dDlst_FileSel3m_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dDlst_FileSel3m_cFv) {
+asm void dDlst_FileSel3m_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__17dDlst_FileSel3m_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E130-8018E1C0 0090+00 .text      errorMoveAnmInitSet__14dFile_select_cFii                     */
+/* 8018E130-8018E1C0 0090+00 rc=4 efc=0 .text      errorMoveAnmInitSet__14dFile_select_cFii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errorMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::errorMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/errorMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 8018E1C0-8018E2B4 00F4+00 .text      errorMoveAnm__14dFile_select_cFv                             */
+/* 8018E1C0-8018E2B4 00F4+00 rc=5 efc=0 .text      errorMoveAnm__14dFile_select_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errorMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::errorMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/errorMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E2B4-8018E4CC 0218+00 .text      errDispInitSet__14dFile_select_cFii                          */
+/* 8018E2B4-8018E4CC 0218+00 rc=1 efc=0 .text      errDispInitSet__14dFile_select_cFii                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errDispInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::errDispInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/errDispInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 8018E4CC-8018E504 0038+00 .text      MemCardCheckMain__14dFile_select_cFv                         */
+/* 8018E4CC-8018E504 0038+00 rc=1 efc=0 .text      MemCardCheckMain__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardCheckMain__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardCheckMain() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardCheckMain__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E504-8018E7C4 02C0+00 .text      MemCardStatCheck__14dFile_select_cFv                         */
+/* 8018E504-8018E7C4 02C0+00 rc=2 efc=0 .text      MemCardStatCheck__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardStatCheck__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardStatCheck() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardStatCheck__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E7C4-8018E93C 0178+00 .text      MemCardLoadWait__14dFile_select_cFv                          */
+/* 8018E7C4-8018E93C 0178+00 rc=1 efc=0 .text      MemCardLoadWait__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardLoadWait__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardLoadWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardLoadWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E93C-8018E9B0 0074+00 .text      MemCardErrMsgWaitKey__14dFile_select_cFv                     */
+/* 8018E93C-8018E9B0 0074+00 rc=1 efc=0 .text      MemCardErrMsgWaitKey__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardErrMsgWaitKey__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardErrMsgWaitKey() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardErrMsgWaitKey__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E9B0-8018E9D4 0024+00 .text      noFileSpaceDispInit__14dFile_select_cFv                      */
+/* 8018E9B0-8018E9D4 0024+00 rc=1 efc=0 .text      noFileSpaceDispInit__14dFile_select_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(noFileSpaceDispInit__14dFile_select_cFv) {
+asm void dFile_select_c::noFileSpaceDispInit() {
 	nofralloc
 #include "asm/d/file/d_file_select/noFileSpaceDispInit__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018E9D4-8018EA3C 0068+00 .text      MemCardNoFileSpaceDisp__14dFile_select_cFv                   */
+/* 8018E9D4-8018EA3C 0068+00 rc=1 efc=0 .text      MemCardNoFileSpaceDisp__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardNoFileSpaceDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardNoFileSpaceDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardNoFileSpaceDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EA3C-8018EA90 0054+00 .text      iplSelDispInit__14dFile_select_cFv                           */
+/* 8018EA3C-8018EA90 0054+00 rc=1 efc=0 .text      iplSelDispInit__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iplSelDispInit__14dFile_select_cFv) {
+asm void dFile_select_c::iplSelDispInit() {
 	nofralloc
 #include "asm/d/file/d_file_select/iplSelDispInit__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EA90-8018EB10 0080+00 .text      MemCardGotoIPLSelectDisp__14dFile_select_cFv                 */
+/* 8018EA90-8018EB10 0080+00 rc=1 efc=0 .text      MemCardGotoIPLSelectDisp__14dFile_select_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardGotoIPLSelectDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardGotoIPLSelectDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardGotoIPLSelectDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EB10-8018EBCC 00BC+00 .text      MemCardGotoIPLSelect__14dFile_select_cFv                     */
+/* 8018EB10-8018EBCC 00BC+00 rc=1 efc=0 .text      MemCardGotoIPLSelect__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardGotoIPLSelect__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardGotoIPLSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardGotoIPLSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EBCC-8018EC4C 0080+00 .text      MemCardGotoIPL__14dFile_select_cFv                           */
+/* 8018EBCC-8018EC4C 0080+00 rc=1 efc=0 .text      MemCardGotoIPL__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardGotoIPL__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardGotoIPL() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardGotoIPL__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EC4C-8018ECBC 0070+00 .text      noSaveSelDispInit__14dFile_select_cFv                        */
+/* 8018EC4C-8018ECBC 0070+00 rc=7 efc=0 .text      noSaveSelDispInit__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(noSaveSelDispInit__14dFile_select_cFv) {
+asm void dFile_select_c::noSaveSelDispInit() {
 	nofralloc
 #include "asm/d/file/d_file_select/noSaveSelDispInit__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018ECBC-8018ED80 00C4+00 .text      MemCardNoSaveSelDisp__14dFile_select_cFv                     */
+/* 8018ECBC-8018ED80 00C4+00 rc=1 efc=0 .text      MemCardNoSaveSelDisp__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardNoSaveSelDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardNoSaveSelDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardNoSaveSelDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018ED80-8018EF5C 01DC+00 .text      MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv               */
+/* 8018ED80-8018EF5C 01DC+00 rc=1 efc=0 .text      MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardErrMsgWaitNoSaveSel() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardErrMsgWaitNoSaveSel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EF5C-8018EFAC 0050+00 .text      formatYesSelDispInitSet__14dFile_select_cFv                  */
+/* 8018EF5C-8018EFAC 0050+00 rc=1 efc=0 .text      formatYesSelDispInitSet__14dFile_select_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(formatYesSelDispInitSet__14dFile_select_cFv) {
+asm void dFile_select_c::formatYesSelDispInitSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/formatYesSelDispInitSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EFAC-8018EFFC 0050+00 .text      formatNoSelDispInitSet__14dFile_select_cFv                   */
+/* 8018EFAC-8018EFFC 0050+00 rc=2 efc=0 .text      formatNoSelDispInitSet__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(formatNoSelDispInitSet__14dFile_select_cFv) {
+asm void dFile_select_c::formatNoSelDispInitSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/formatNoSelDispInitSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018EFFC-8018F080 0084+00 .text      MemCardFormatYesSelDisp__14dFile_select_cFv                  */
+/* 8018EFFC-8018F080 0084+00 rc=1 efc=0 .text      MemCardFormatYesSelDisp__14dFile_select_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormatYesSelDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormatYesSelDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormatYesSelDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F080-8018F128 00A8+00 .text      MemCardFormatNoSelDisp__14dFile_select_cFv                   */
+/* 8018F080-8018F128 00A8+00 rc=1 efc=0 .text      MemCardFormatNoSelDisp__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormatNoSelDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormatNoSelDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormatNoSelDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F128-8018F17C 0054+00 .text      MemCardErrMsgWaitFormatSel__14dFile_select_cFv               */
+/* 8018F128-8018F17C 0054+00 rc=1 efc=0 .text      MemCardErrMsgWaitFormatSel__14dFile_select_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardErrMsgWaitFormatSel__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardErrMsgWaitFormatSel() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardErrMsgWaitFormatSel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F17C-8018F1CC 0050+00 .text      formatYesSel2DispInitSet__14dFile_select_cFv                 */
+/* 8018F17C-8018F1CC 0050+00 rc=1 efc=0 .text      formatYesSel2DispInitSet__14dFile_select_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(formatYesSel2DispInitSet__14dFile_select_cFv) {
+asm void dFile_select_c::formatYesSel2DispInitSet() {
 	nofralloc
 #include "asm/d/file/d_file_select/formatYesSel2DispInitSet__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F1CC-8018F228 005C+00 .text      MemCardErrMsgWaitFormatSel2__14dFile_select_cFv              */
+/* 8018F1CC-8018F228 005C+00 rc=1 efc=0 .text      MemCardErrMsgWaitFormatSel2__14dFile_select_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardErrMsgWaitFormatSel2__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardErrMsgWaitFormatSel2() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardErrMsgWaitFormatSel2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F228-8018F2A4 007C+00 .text      MemCardFormatYesSel2Disp__14dFile_select_cFv                 */
+/* 8018F228-8018F2A4 007C+00 rc=1 efc=0 .text      MemCardFormatYesSel2Disp__14dFile_select_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormatYesSel2Disp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormatYesSel2Disp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormatYesSel2Disp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F2A4-8018F304 0060+00 .text      MemCardFormat__14dFile_select_cFv                            */
+/* 8018F2A4-8018F304 0060+00 rc=1 efc=0 .text      MemCardFormat__14dFile_select_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormat__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormat() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormat__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F304-8018F374 0070+00 .text      MemCardFormatWait__14dFile_select_cFv                        */
+/* 8018F304-8018F374 0070+00 rc=1 efc=0 .text      MemCardFormatWait__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormatWait__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormatWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormatWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F374-8018F400 008C+00 .text      MemCardFormatCheck__14dFile_select_cFv                       */
+/* 8018F374-8018F400 008C+00 rc=1 efc=0 .text      MemCardFormatCheck__14dFile_select_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardFormatCheck__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardFormatCheck() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardFormatCheck__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F400-8018F488 0088+00 .text      MemCardMakeGameFileSel__14dFile_select_cFv                   */
+/* 8018F400-8018F488 0088+00 rc=1 efc=0 .text      MemCardMakeGameFileSel__14dFile_select_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMakeGameFileSel__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMakeGameFileSel() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMakeGameFileSel__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F488-8018F580 00F8+00 .text      MemCardMakeGameFileSelDisp__14dFile_select_cFv               */
+/* 8018F488-8018F580 00F8+00 rc=1 efc=0 .text      MemCardMakeGameFileSelDisp__14dFile_select_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMakeGameFileSelDisp__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMakeGameFileSelDisp() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMakeGameFileSelDisp__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F580-8018F5E0 0060+00 .text      MemCardMakeGameFile__14dFile_select_cFv                      */
+/* 8018F580-8018F5E0 0060+00 rc=1 efc=0 .text      MemCardMakeGameFile__14dFile_select_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMakeGameFile__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMakeGameFile() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMakeGameFile__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F5E0-8018F650 0070+00 .text      MemCardMakeGameFileWait__14dFile_select_cFv                  */
+/* 8018F5E0-8018F650 0070+00 rc=1 efc=0 .text      MemCardMakeGameFileWait__14dFile_select_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMakeGameFileWait__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMakeGameFileWait() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMakeGameFileWait__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F650-8018F6DC 008C+00 .text      MemCardMakeGameFileCheck__14dFile_select_cFv                 */
+/* 8018F650-8018F6DC 008C+00 rc=1 efc=0 .text      MemCardMakeGameFileCheck__14dFile_select_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMakeGameFileCheck__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMakeGameFileCheck() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMakeGameFileCheck__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F6DC-8018F8D8 01FC+00 .text      MemCardMsgWindowInitOpen__14dFile_select_cFv                 */
+/* 8018F6DC-8018F8D8 01FC+00 rc=1 efc=0 .text      MemCardMsgWindowInitOpen__14dFile_select_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMsgWindowInitOpen__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMsgWindowInitOpen() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMsgWindowInitOpen__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F8D8-8018F974 009C+00 .text      MemCardMsgWindowOpen__14dFile_select_cFv                     */
+/* 8018F8D8-8018F974 009C+00 rc=1 efc=0 .text      MemCardMsgWindowOpen__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMsgWindowOpen__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMsgWindowOpen() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMsgWindowOpen__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018F974-8018FA2C 00B8+00 .text      MemCardMsgWindowClose__14dFile_select_cFv                    */
+/* 8018F974-8018FA2C 00B8+00 rc=1 efc=0 .text      MemCardMsgWindowClose__14dFile_select_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardMsgWindowClose__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardMsgWindowClose() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardMsgWindowClose__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FA2C-8018FB80 0154+00 .text      errYesNoSelect__14dFile_select_cFv                           */
+/* 8018FA2C-8018FB80 0154+00 rc=5 efc=0 .text      errYesNoSelect__14dFile_select_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errYesNoSelect__14dFile_select_cFv) {
+asm void dFile_select_c::errYesNoSelect() {
 	nofralloc
 #include "asm/d/file/d_file_select/errYesNoSelect__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FB80-8018FBF8 0078+00 .text      errCurMove__14dFile_select_cFUc                              */
+/* 8018FB80-8018FBF8 0078+00 rc=1 efc=0 .text      errCurMove__14dFile_select_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errCurMove__14dFile_select_cFUc) {
+asm void dFile_select_c::errCurMove(char field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/errCurMove__14dFile_select_cFUc.s"
 }
 #pragma pop
 
 
-/* 8018FBF8-8018FC64 006C+00 .text      MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv             */
+/* 8018FBF8-8018FC64 006C+00 rc=1 efc=0 .text      MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardErrYesNoCursorMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardErrYesNoCursorMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FC64-8018FD30 00CC+00 .text      errorTxtSet__14dFile_select_cFUs                             */
+/* 8018FC64-8018FD30 00CC+00 rc=9 efc=0 .text      errorTxtSet__14dFile_select_cFUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errorTxtSet__14dFile_select_cFUs) {
+asm void dFile_select_c::errorTxtSet(u16 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/errorTxtSet__14dFile_select_cFUs.s"
 }
 #pragma pop
 
 
-/* 8018FD30-8018FE18 00E8+00 .text      errorTxtChangeAnm__14dFile_select_cFv                        */
+/* 8018FD30-8018FE18 00E8+00 rc=9 efc=0 .text      errorTxtChangeAnm__14dFile_select_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(errorTxtChangeAnm__14dFile_select_cFv) {
+asm void dFile_select_c::errorTxtChangeAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/errorTxtChangeAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FE18-8018FE64 004C+00 .text      fileRecScaleAnm__14dFile_select_cFv                          */
+/* 8018FE18-8018FE64 004C+00 rc=1 efc=0 .text      fileRecScaleAnm__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fileRecScaleAnm__14dFile_select_cFv) {
+asm void dFile_select_c::fileRecScaleAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/fileRecScaleAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FE64-8018FEF4 0090+00 .text      fileRecScaleAnmInitSet2__14dFile_select_cFff                 */
+/* 8018FE64-8018FEF4 0090+00 rc=2 efc=0 .text      fileRecScaleAnmInitSet2__14dFile_select_cFff                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fileRecScaleAnmInitSet2__14dFile_select_cFff) {
+asm void dFile_select_c::fileRecScaleAnmInitSet2(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/fileRecScaleAnmInitSet2__14dFile_select_cFff.s"
 }
 #pragma pop
 
 
-/* 8018FEF4-8018FF9C 00A8+00 .text      fileRecScaleAnm2__14dFile_select_cFv                         */
+/* 8018FEF4-8018FF9C 00A8+00 rc=2 efc=0 .text      fileRecScaleAnm2__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fileRecScaleAnm2__14dFile_select_cFv) {
+asm void dFile_select_c::fileRecScaleAnm2() {
 	nofralloc
 #include "asm/d/file/d_file_select/fileRecScaleAnm2__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 8018FF9C-80190074 00D8+00 .text      fileInfoScaleAnm__14dFile_select_cFv                         */
+/* 8018FF9C-80190074 00D8+00 rc=1 efc=0 .text      fileInfoScaleAnm__14dFile_select_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fileInfoScaleAnm__14dFile_select_cFv) {
+asm void dFile_select_c::fileInfoScaleAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/fileInfoScaleAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80190074-80190124 00B0+00 .text      nameMoveAnmInitSet__14dFile_select_cFii                      */
+/* 80190074-80190124 00B0+00 rc=5 efc=0 .text      nameMoveAnmInitSet__14dFile_select_cFii                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameMoveAnmInitSet__14dFile_select_cFii) {
+asm void dFile_select_c::nameMoveAnmInitSet(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/nameMoveAnmInitSet__14dFile_select_cFii.s"
 }
 #pragma pop
 
 
-/* 80190124-80190208 00E4+00 .text      nameMoveAnm__14dFile_select_cFv                              */
+/* 80190124-80190208 00E4+00 rc=9 efc=0 .text      nameMoveAnm__14dFile_select_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameMoveAnm__14dFile_select_cFv) {
+asm void dFile_select_c::nameMoveAnm() {
 	nofralloc
 #include "asm/d/file/d_file_select/nameMoveAnm__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80190208-80190254 004C+00 .text      MemCardSaveDataClear__14dFile_select_cFv                     */
+/* 80190208-80190254 004C+00 rc=1 efc=0 .text      MemCardSaveDataClear__14dFile_select_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MemCardSaveDataClear__14dFile_select_cFv) {
+asm void dFile_select_c::MemCardSaveDataClear() {
 	nofralloc
 #include "asm/d/file/d_file_select/MemCardSaveDataClear__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 80190254-801902B8 0064+00 .text      setInitSaveData__14dFile_select_cFv                          */
+/* 80190254-801902B8 0064+00 rc=2 efc=0 .text      setInitSaveData__14dFile_select_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInitSaveData__14dFile_select_cFv) {
+asm void dFile_select_c::setInitSaveData() {
 	nofralloc
 #include "asm/d/file/d_file_select/setInitSaveData__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801902B8-801902F0 0038+00 .text      dataSave__14dFile_select_cFv                                 */
+/* 801902B8-801902F0 0038+00 rc=2 efc=0 .text      dataSave__14dFile_select_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dataSave__14dFile_select_cFv) {
+asm void dFile_select_c::dataSave() {
 	nofralloc
 #include "asm/d/file/d_file_select/dataSave__14dFile_select_cFv.s"
 }
 #pragma pop
 
 
-/* 801902F0-80190380 0090+00 .text      __ct__16dFile_select3D_cFv                                   */
+/* 801902F0-80190380 0090+00 rc=1 efc=0 .text      __ct__16dFile_select3D_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dFile_select3D_cFv) {
+asm dFile_select3D_c::dFile_select3D_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__ct__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 80190380-801903DC 005C+00 .text      __dt__16dFile_select3D_cFv                                   */
+/* 80190380-801903DC 005C+00 rc=1 efc=0 .text      __dt__16dFile_select3D_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dFile_select3D_cFv) {
+asm dFile_select3D_c::~dFile_select3D_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 801903DC-8019049C 00C0+00 .text      _create__16dFile_select3D_cFUcUc                             */
+/* 801903DC-8019049C 00C0+00 rc=1 efc=0 .text      _create__16dFile_select3D_cFUcUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__16dFile_select3D_cFUcUc) {
+asm void dFile_select3D_c::_create(char field_0, char field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/_create__16dFile_select3D_cFUcUc.s"
 }
 #pragma pop
 
 
-/* 8019049C-801904A0 0004+00 .text      _delete__16dFile_select3D_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__16dFile_select3D_cFv) {
-	nofralloc
-#include "asm/d/file/d_file_select/_delete__16dFile_select3D_cFv.s"
+/* 8019049C-801904A0 0004+00 rc=1 efc=0 .text      _delete__16dFile_select3D_cFv                                */
+void dFile_select3D_c::_delete() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801904A0-801904E4 0044+00 .text      freeHeap__16dFile_select3D_cFv                               */
+/* 801904A0-801904E4 0044+00 rc=2 efc=0 .text      freeHeap__16dFile_select3D_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(freeHeap__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::freeHeap() {
 	nofralloc
 #include "asm/d/file/d_file_select/freeHeap__16dFile_select3D_cFv.s"
 }
@@ -3758,36 +4676,36 @@ ASM_FUNCTION(freeHeap__16dFile_select3D_cFv) {
 
 
 /* ############################################################################################## */
-/* 804539B4-804539B8 0004+00 .sdata2    @8459                                                        */
+/* 804539B4-804539B8 0004+00 rc=1 efc=0 .sdata2    @8459                                                        */
 f32 lit_8459 = 720.0f;
 
-/* 801904E4-801905A8 00C4+00 .text      _move__16dFile_select3D_cFv                                  */
+/* 801904E4-801905A8 00C4+00 rc=1 efc=0 .text      _move__16dFile_select3D_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::_move() {
 	nofralloc
 #include "asm/d/file/d_file_select/_move__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 801905A8-8019065C 00B4+00 .text      draw__16dFile_select3D_cFv                                   */
+/* 801905A8-8019065C 00B4+00 rc=1 efc=0 .text      draw__16dFile_select3D_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::draw() {
 	nofralloc
 #include "asm/d/file/d_file_select/draw__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 8019065C-8019095C 0300+00 .text      setJ3D__16dFile_select3D_cFPCcPCcPCc                         */
+/* 8019065C-8019095C 0300+00 rc=2 efc=0 .text      setJ3D__16dFile_select3D_cFPCcPCcPCc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setJ3D__16dFile_select3D_cFPCcPCcPCc) {
+asm void dFile_select3D_c::setJ3D(char const* field_0, char const* field_1, char const* field_2) {
 	nofralloc
 #include "asm/d/file/d_file_select/setJ3D__16dFile_select3D_cFPCcPCcPCc.s"
 }
@@ -3795,58 +4713,58 @@ ASM_FUNCTION(setJ3D__16dFile_select3D_cFPCcPCcPCc) {
 
 
 /* ############################################################################################## */
-/* 804539B8-804539BC 0004+00 .sdata2    @8608                                                        */
+/* 804539B8-804539BC 0004+00 rc=1 efc=0 .sdata2    @8608                                                        */
 f32 lit_8608 = 1.0f / 10.0f;
 
-/* 8019095C-80190A14 00B8+00 .text      set_mtx__16dFile_select3D_cFv                                */
+/* 8019095C-80190A14 00B8+00 rc=2 efc=0 .text      set_mtx__16dFile_select3D_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::set_mtx() {
 	nofralloc
 #include "asm/d/file/d_file_select/set_mtx__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 80190A14-80190B44 0130+00 .text      animePlay__16dFile_select3D_cFv                              */
+/* 80190A14-80190B44 0130+00 rc=1 efc=0 .text      animePlay__16dFile_select3D_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animePlay__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::animePlay() {
 	nofralloc
 #include "asm/d/file/d_file_select/animePlay__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 80190B44-80190BA8 0064+00 .text      animeEntry__16dFile_select3D_cFv                             */
+/* 80190B44-80190BA8 0064+00 rc=1 efc=0 .text      animeEntry__16dFile_select3D_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animeEntry__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::animeEntry() {
 	nofralloc
 #include "asm/d/file/d_file_select/animeEntry__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 80190BA8-80190D68 01C0+00 .text      createMaskModel__16dFile_select3D_cFv                        */
+/* 80190BA8-80190D68 01C0+00 rc=1 efc=0 .text      createMaskModel__16dFile_select3D_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createMaskModel__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::createMaskModel() {
 	nofralloc
 #include "asm/d/file/d_file_select/createMaskModel__16dFile_select3D_cFv.s"
 }
 #pragma pop
 
 
-/* 80190D68-80190FE8 0280+00 .text      createMirrorModel__16dFile_select3D_cFv                      */
+/* 80190D68-80190FE8 0280+00 rc=1 efc=0 .text      createMirrorModel__16dFile_select3D_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createMirrorModel__16dFile_select3D_cFv) {
+asm void dFile_select3D_c::createMirrorModel() {
 	nofralloc
 #include "asm/d/file/d_file_select/createMirrorModel__16dFile_select3D_cFv.s"
 }
@@ -3854,24 +4772,24 @@ ASM_FUNCTION(createMirrorModel__16dFile_select3D_cFv) {
 
 
 /* ############################################################################################## */
-/* 804539BC-804539C0 0004+00 .sdata2    @8978                                                        */
+/* 804539BC-804539C0 0004+00 rc=1 efc=0 .sdata2    @8978                                                        */
 f32 lit_8978 = 2.0f;
 
-/* 804539C0-804539C8 0004+04 .sdata2    @8979                                                        */
+/* 804539C0-804539C8 0004+04 rc=1 efc=0 .sdata2    @8979                                                        */
 f32 lit_8979 = -100.0f;
 /* padding 4 bytes */
 
-/* 804539C8-804539D0 0008+00 .sdata2    @8980                                                        */
+/* 804539C8-804539D0 0008+00 rc=1 efc=0 .sdata2    @8980                                                        */
 f64 lit_8980 = 0.39269909262657166;
 
-/* 804539D0-804539D4 0004+00 .sdata2    @8981                                                        */
+/* 804539D0-804539D4 0004+00 rc=1 efc=0 .sdata2    @8981                                                        */
 f32 lit_8981 = 19.0f / 14.0f;
 
-/* 80190FE8-801910D4 00EC+00 .text      toItem3Dpos__16dFile_select3D_cFfffP4cXyz                    */
+/* 80190FE8-801910D4 00EC+00 rc=1 efc=0 .text      toItem3Dpos__16dFile_select3D_cFfffP4cXyz                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(toItem3Dpos__16dFile_select3D_cFfffP4cXyz) {
+asm void dFile_select3D_c::toItem3Dpos(f32 field_0, f32 field_1, f32 field_2, cXyz* field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/toItem3Dpos__16dFile_select3D_cFfffP4cXyz.s"
 }
@@ -3879,128 +4797,122 @@ ASM_FUNCTION(toItem3Dpos__16dFile_select3D_cFfffP4cXyz) {
 
 
 /* ############################################################################################## */
-/* 804539D4-804539D8 0004+00 .sdata2    @8993                                                        */
+/* 804539D4-804539D8 0004+00 rc=1 efc=0 .sdata2    @8993                                                        */
 f32 d_file_d_file_select__lit_8993 = -1000.0f;
 
-/* 801910D4-80191130 005C+00 .text      calcViewMtx__16dFile_select3D_cFPA4_f                        */
+/* 801910D4-80191130 005C+00 rc=1 efc=0 .text      calcViewMtx__16dFile_select3D_cFPA4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcViewMtx__16dFile_select3D_cFPA4_f) {
+extern "C" asm static void calcViewMtx__16dFile_select3D_cFPA4_f() {
 	nofralloc
 #include "asm/d/file/d_file_select/calcViewMtx__16dFile_select3D_cFPA4_f.s"
 }
 #pragma pop
 
 
-/* 80191130-80191134 0004+00 .text      getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo) {
-	nofralloc
-#include "asm/d/file/d_file_select/getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo.s"
+/* 80191130-80191134 0004+00 rc=1 efc=0 .text      getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo       */
+void J2DAnmTransform::getTransform(u16 field_0, J3DTransformInfo* field_1) const {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80191134-8019117C 0048+00 .text      __dt__10JUTNameTabFv                                         */
+/* 80191134-8019117C 0048+00 rc=1 efc=0 .text      __dt__10JUTNameTabFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JUTNameTabFv) {
+asm JUTNameTab::~JUTNameTab() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__10JUTNameTabFv.s"
 }
 #pragma pop
 
 
-/* 8019117C-801911F4 0078+00 .text      __dt__17dDlst_FileSel3m_cFv                                  */
+/* 8019117C-801911F4 0078+00 rc=1 efc=0 .text      __dt__17dDlst_FileSel3m_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dDlst_FileSel3m_cFv) {
+asm dDlst_FileSel3m_c::~dDlst_FileSel3m_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__17dDlst_FileSel3m_cFv.s"
 }
 #pragma pop
 
 
-/* 801911F4-8019126C 0078+00 .text      __dt__17dDlst_FileSelYn_cFv                                  */
+/* 801911F4-8019126C 0078+00 rc=1 efc=0 .text      __dt__17dDlst_FileSelYn_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dDlst_FileSelYn_cFv) {
+asm dDlst_FileSelYn_c::~dDlst_FileSelYn_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__17dDlst_FileSelYn_cFv.s"
 }
 #pragma pop
 
 
-/* 8019126C-801912E4 0078+00 .text      __dt__17dDlst_FileSelCp_cFv                                  */
+/* 8019126C-801912E4 0078+00 rc=1 efc=0 .text      __dt__17dDlst_FileSelCp_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dDlst_FileSelCp_cFv) {
+asm dDlst_FileSelCp_c::~dDlst_FileSelCp_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__17dDlst_FileSelCp_cFv.s"
 }
 #pragma pop
 
 
-/* 801912E4-8019135C 0078+00 .text      __dt__17dDlst_FileSelDt_cFv                                  */
+/* 801912E4-8019135C 0078+00 rc=1 efc=0 .text      __dt__17dDlst_FileSelDt_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dDlst_FileSelDt_cFv) {
+asm dDlst_FileSelDt_c::~dDlst_FileSelDt_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__17dDlst_FileSelDt_cFv.s"
 }
 #pragma pop
 
 
-/* 8019135C-801913E0 0084+00 .text      __dt__15dDlst_FileSel_cFv                                    */
+/* 8019135C-801913E0 0084+00 rc=1 efc=0 .text      __dt__15dDlst_FileSel_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dDlst_FileSel_cFv) {
+asm dDlst_FileSel_c::~dDlst_FileSel_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__15dDlst_FileSel_cFv.s"
 }
 #pragma pop
 
 
-/* 801913E0-80191428 0048+00 .text      __dt__9dFs_HIO_cFv                                           */
+/* 801913E0-80191428 0048+00 rc=2 efc=0 .text      __dt__9dFs_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dFs_HIO_cFv) {
+asm dFs_HIO_c::~dFs_HIO_c() {
 	nofralloc
 #include "asm/d/file/d_file_select/__dt__9dFs_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 80191428-80191B6C 0744+00 .text      __sinit_d_file_select_cpp                                    */
+/* 80191428-80191B6C 0744+00 rc=1 efc=1 .text      __sinit_d_file_select_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_file_select_cpp) {
+extern "C" asm void __sinit_d_file_select_cpp() {
 	nofralloc
 #include "asm/d/file/d_file_select/__sinit_d_file_select_cpp.s"
 }
 #pragma pop
 
 
-/* 80191B6C-80191BAC 0040+00 .text      getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80191B6C-80191BAC 0040+00 rc=1 efc=1 .text      getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgString_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
 	nofralloc
 #include "asm/d/file/d_file_select/getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

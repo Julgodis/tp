@@ -6,29 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjHBarrel_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjHBarrel_c {
+	daObjHBarrel_c();
+	~daObjHBarrel_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setModelMtx();
+	void hitAction();
+	void callEmt();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjHBarrel_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__14daObjHBarrel_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__14daObjHBarrel_cFv();
-extern "C" extern void createHeap__14daObjHBarrel_cFv();
-extern "C" extern void create__14daObjHBarrel_cFv();
-extern "C" extern void Delete__14daObjHBarrel_cFv();
-extern "C" extern void draw__14daObjHBarrel_cFv();
-extern "C" extern void execute__14daObjHBarrel_cFv();
-extern "C" extern void init__14daObjHBarrel_cFv();
-extern "C" extern void setModelMtx__14daObjHBarrel_cFv();
-extern "C" extern void hitAction__14daObjHBarrel_cFv();
-extern "C" extern void callEmt__14daObjHBarrel_cFv();
-extern "C" extern void daObjHBarrel_create__FP14daObjHBarrel_c();
-extern "C" extern void daObjHBarrel_Delete__FP14daObjHBarrel_c();
-extern "C" extern void daObjHBarrel_execute__FP14daObjHBarrel_c();
-extern "C" extern void daObjHBarrel_draw__FP14daObjHBarrel_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daObjHBarrel_c_createHeap(fopAc_ac_c*);
+void daObjHBarrel_create(daObjHBarrel_c*);
+void daObjHBarrel_Delete(daObjHBarrel_c*);
+void daObjHBarrel_execute(daObjHBarrel_c*);
+void daObjHBarrel_draw(daObjHBarrel_c*);
+
+extern "C" void daObjHBarrel_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__14daObjHBarrel_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__14daObjHBarrel_cFv();
+extern "C" void createHeap__14daObjHBarrel_cFv();
+extern "C" void create__14daObjHBarrel_cFv();
+extern "C" void Delete__14daObjHBarrel_cFv();
+extern "C" void draw__14daObjHBarrel_cFv();
+extern "C" void execute__14daObjHBarrel_cFv();
+extern "C" void init__14daObjHBarrel_cFv();
+extern "C" void setModelMtx__14daObjHBarrel_cFv();
+extern "C" void hitAction__14daObjHBarrel_cFv();
+extern "C" void callEmt__14daObjHBarrel_cFv();
+extern "C" void daObjHBarrel_create__FP14daObjHBarrel_c();
+extern "C" void daObjHBarrel_Delete__FP14daObjHBarrel_c();
+extern "C" void daObjHBarrel_execute__FP14daObjHBarrel_c();
+extern "C" void daObjHBarrel_draw__FP14daObjHBarrel_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 s_CcDCyl__14daObjHBarrel_c[68];
 SECTION_RODATA extern const u32 lit_3826;
 SECTION_RODATA extern const u32 lit_3827;
@@ -50,7 +96,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -60,7 +108,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBarrel_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjHBarrel_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/daObjHBarrel_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -71,7 +119,7 @@ ASM_FUNCTION(daObjHBarrel_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObjHBarrel_cFv) {
+asm daObjHBarrel_c::daObjHBarrel_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__ct__14daObjHBarrel_cFv.s"
 }
@@ -82,7 +130,7 @@ ASM_FUNCTION(__ct__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__dt__8cM3dGCylFv.s"
 }
@@ -93,7 +141,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__dt__8cM3dGAabFv.s"
 }
@@ -104,7 +152,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__dt__10dCcD_GSttsFv.s"
 }
@@ -115,7 +163,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjHBarrel_cFv) {
+asm daObjHBarrel_c::~daObjHBarrel_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__dt__14daObjHBarrel_cFv.s"
 }
@@ -126,7 +174,7 @@ ASM_FUNCTION(__dt__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/createHeap__14daObjHBarrel_cFv.s"
 }
@@ -137,7 +185,7 @@ ASM_FUNCTION(createHeap__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/create__14daObjHBarrel_cFv.s"
 }
@@ -148,7 +196,7 @@ ASM_FUNCTION(create__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/Delete__14daObjHBarrel_cFv.s"
 }
@@ -159,7 +207,7 @@ ASM_FUNCTION(Delete__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/draw__14daObjHBarrel_cFv.s"
 }
@@ -170,7 +218,7 @@ ASM_FUNCTION(draw__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/execute__14daObjHBarrel_cFv.s"
 }
@@ -181,7 +229,7 @@ ASM_FUNCTION(execute__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/init__14daObjHBarrel_cFv.s"
 }
@@ -192,7 +240,7 @@ ASM_FUNCTION(init__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/setModelMtx__14daObjHBarrel_cFv.s"
 }
@@ -203,7 +251,7 @@ ASM_FUNCTION(setModelMtx__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitAction__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::hitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/hitAction__14daObjHBarrel_cFv.s"
 }
@@ -214,7 +262,7 @@ ASM_FUNCTION(hitAction__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callEmt__14daObjHBarrel_cFv) {
+asm void daObjHBarrel_c::callEmt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/callEmt__14daObjHBarrel_cFv.s"
 }
@@ -225,7 +273,7 @@ ASM_FUNCTION(callEmt__14daObjHBarrel_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBarrel_create__FP14daObjHBarrel_c) {
+asm void daObjHBarrel_create(daObjHBarrel_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/daObjHBarrel_create__FP14daObjHBarrel_c.s"
 }
@@ -236,7 +284,7 @@ ASM_FUNCTION(daObjHBarrel_create__FP14daObjHBarrel_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBarrel_Delete__FP14daObjHBarrel_c) {
+asm void daObjHBarrel_Delete(daObjHBarrel_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/daObjHBarrel_Delete__FP14daObjHBarrel_c.s"
 }
@@ -247,7 +295,7 @@ ASM_FUNCTION(daObjHBarrel_Delete__FP14daObjHBarrel_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBarrel_execute__FP14daObjHBarrel_c) {
+asm void daObjHBarrel_execute(daObjHBarrel_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/daObjHBarrel_execute__FP14daObjHBarrel_c.s"
 }
@@ -258,7 +306,7 @@ ASM_FUNCTION(daObjHBarrel_execute__FP14daObjHBarrel_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBarrel_draw__FP14daObjHBarrel_c) {
+asm void daObjHBarrel_draw(daObjHBarrel_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/daObjHBarrel_draw__FP14daObjHBarrel_c.s"
 }
@@ -269,7 +317,7 @@ ASM_FUNCTION(daObjHBarrel_draw__FP14daObjHBarrel_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hakai_brl/d_a_obj_hakai_brl/__dt__10cCcD_GSttsFv.s"
 }

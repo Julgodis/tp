@@ -6,13 +6,35 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct Vec;
+struct daTagGuard_c;
+
+struct Vec {
+};
+
+struct daTagGuard_c {
+	void getAppearPoint(Vec*);
+	void createGuard(u32);
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getAppearPoint__12daTagGuard_cFP3Vec();
-extern "C" extern void createGuard__12daTagGuard_cFUl();
-extern "C" extern void daTagGuard_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagGuard_Delete__FP12daTagGuard_c();
+void daTagGuard_Create(fopAc_ac_c*);
+void daTagGuard_Delete(daTagGuard_c*);
+
+extern "C" void getAppearPoint__12daTagGuard_cFP3Vec();
+extern "C" void createGuard__12daTagGuard_cFUl();
+extern "C" void daTagGuard_Create__FP10fopAc_ac_c();
+extern "C" void daTagGuard_Delete__FP12daTagGuard_c();
 SECTION_DATA extern u8 l_daTagGuard_Method[32];
 SECTION_DATA extern u8 g_profile_TAG_GUARD[48];
 
@@ -20,7 +42,9 @@ SECTION_DATA extern u8 g_profile_TAG_GUARD[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -30,7 +54,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAppearPoint__12daTagGuard_cFP3Vec) {
+asm void daTagGuard_c::getAppearPoint(Vec* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/getAppearPoint__12daTagGuard_cFP3Vec.s"
 }
@@ -41,7 +65,7 @@ ASM_FUNCTION(getAppearPoint__12daTagGuard_cFP3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createGuard__12daTagGuard_cFUl) {
+asm void daTagGuard_c::createGuard(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/createGuard__12daTagGuard_cFUl.s"
 }
@@ -52,7 +76,7 @@ ASM_FUNCTION(createGuard__12daTagGuard_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGuard_Create__FP10fopAc_ac_c) {
+asm void daTagGuard_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/daTagGuard_Create__FP10fopAc_ac_c.s"
 }
@@ -63,7 +87,7 @@ ASM_FUNCTION(daTagGuard_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGuard_Delete__FP12daTagGuard_c) {
+asm void daTagGuard_Delete(daTagGuard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_guard/d_a_tag_guard/daTagGuard_Delete__FP12daTagGuard_c.s"
 }

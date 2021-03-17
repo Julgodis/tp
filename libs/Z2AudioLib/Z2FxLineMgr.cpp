@@ -6,34 +6,120 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Z2FxLineMgr (Z2FxLineMgr) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	/* 802D5D38 */ void getResource(u16);
+	/* 802D610C */ void countResource() const;
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+// build Z2FxLineConfig (Z2FxLineConfig) False/False
+/* top-level dependencies (begin Z2FxLineConfig) */
+/* top-level dependencies (end Z2FxLineConfig) */
+struct Z2FxLineConfig {
+};
+
+/* top-level dependencies (begin Z2FxLineMgr) */
+// outer dependency: JKRArchive
+// outer dependency: JKRHeap
+// outer dependency: Z2FxLineConfig
+/* top-level dependencies (end Z2FxLineMgr) */
+struct Z2FxLineMgr {
+	// JKRArchive
+	// JKRHeap
+	// Z2FxLineConfig
+	/* 802BA7DC */ Z2FxLineMgr();
+	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
+	/* 802BAC28 */ void setLineID(char, bool, bool);
+	/* 802BAC74 */ void setLine(Z2FxLineConfig*, bool, bool);
+	/* 802BAE1C */ void setFxForceOff(bool);
+	/* 802BAE48 */ void setUnderWaterFx(bool);
+	/* 802BAEB8 */ void setSceneFx(s32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build JKRHeap (JKRHeap) True/True
+// build Z2FxLineConfig (Z2FxLineConfig) True/True
+// build JASDsp (JASDsp) False/False
+// build JASDsp (JASDsp) True/False
+struct JASDsp;
+/* top-level dependencies (begin JASDsp) */
+// outer dependency: JASDsp::FxlineConfig_
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// JASDsp::FxlineConfig_
+	// build FxlineConfig_ (JASDsp::FxlineConfig_) False/False
+	/* dependencies (begin JASDsp::FxlineConfig_) */
+	/* dependencies (end JASDsp::FxlineConfig_) */
+	struct FxlineConfig_ {
+	};
+
+	/* 8029DB78 */ void setFXLine(char, s16*, JASDsp::FxlineConfig_*);
+};
+
+// build JSUInputStream (JSUInputStream) False/False
+/* top-level dependencies (begin JSUInputStream) */
+/* top-level dependencies (end JSUInputStream) */
+struct JSUInputStream {
+	/* 802DC23C */ ~JSUInputStream();
+	/* 802DC298 */ void read(void*, s32);
+};
+
+// build JSUMemoryInputStream (JSUMemoryInputStream) False/False
+/* top-level dependencies (begin JSUMemoryInputStream) */
+/* top-level dependencies (end JSUMemoryInputStream) */
+struct JSUMemoryInputStream {
+	/* 802DC520 */ void setBuffer(void const*, s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11Z2FxLineMgrFv();
-extern "C" extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern "C" extern void setLineID__11Z2FxLineMgrFScbb();
-extern "C" extern void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
-extern "C" extern void setFxForceOff__11Z2FxLineMgrFb();
-extern "C" extern void setUnderWaterFx__11Z2FxLineMgrFb();
-extern "C" extern void setSceneFx__11Z2FxLineMgrFl();
+
+extern "C" void __ct__11Z2FxLineMgrFv();
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" void setLineID__11Z2FxLineMgrFScbb();
+extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
+extern "C" void setFxForceOff__11Z2FxLineMgrFb();
+extern "C" void setUnderWaterFx__11Z2FxLineMgrFb();
+extern "C" void setSceneFx__11Z2FxLineMgrFl();
 SECTION_DATA extern void*lit_3566[76];
 
 // 
 // External References:
 // 
 
-extern "C" extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void getResource__10JKRArchiveFUs();
-extern "C" extern void countResource__10JKRArchiveCFv();
-extern "C" extern void __dt__14JSUInputStreamFv();
-extern "C" extern void read__14JSUInputStreamFPvl();
-extern "C" extern void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_28();
+void* operator new[](u32, JKRHeap*, s32);
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_28();
+
+extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void getResource__10JKRArchiveFUs();
+extern "C" void countResource__10JKRArchiveCFv();
+extern "C" void __dt__14JSUInputStreamFv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_28();
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];
@@ -45,66 +131,66 @@ SECTION_SBSS extern u8 data_80450B80[4];
 // Declarations:
 // 
 
-/* 802BA7DC-802BA7FC 0020+00 .text      __ct__11Z2FxLineMgrFv                                        */
+/* 802BA7DC-802BA7FC 0020+00 rc=1 efc=1 .text      __ct__11Z2FxLineMgrFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11Z2FxLineMgrFv) {
+asm Z2FxLineMgr::Z2FxLineMgr() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/__ct__11Z2FxLineMgrFv.s"
 }
 #pragma pop
 
 
-/* 802BA7FC-802BAC28 042C+00 .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
+/* 802BA7FC-802BAC28 042C+00 rc=1 efc=1 .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap) {
+asm void Z2FxLineMgr::initDataArc(JKRArchive* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 802BAC28-802BAC74 004C+00 .text      setLineID__11Z2FxLineMgrFScbb                                */
+/* 802BAC28-802BAC74 004C+00 rc=4 efc=0 .text      setLineID__11Z2FxLineMgrFScbb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLineID__11Z2FxLineMgrFScbb) {
+asm void Z2FxLineMgr::setLineID(char field_0, bool field_1, bool field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setLineID__11Z2FxLineMgrFScbb.s"
 }
 #pragma pop
 
 
-/* 802BAC74-802BAE1C 01A8+00 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
+/* 802BAC74-802BAE1C 01A8+00 rc=1 efc=0 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb) {
+asm void Z2FxLineMgr::setLine(Z2FxLineConfig* field_0, bool field_1, bool field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb.s"
 }
 #pragma pop
 
 
-/* 802BAE1C-802BAE48 002C+00 .text      setFxForceOff__11Z2FxLineMgrFb                               */
+/* 802BAE1C-802BAE48 002C+00 rc=1 efc=1 .text      setFxForceOff__11Z2FxLineMgrFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFxForceOff__11Z2FxLineMgrFb) {
+asm void Z2FxLineMgr::setFxForceOff(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setFxForceOff__11Z2FxLineMgrFb.s"
 }
 #pragma pop
 
 
-/* 802BAE48-802BAEB8 0070+00 .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
+/* 802BAE48-802BAEB8 0070+00 rc=1 efc=1 .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setUnderWaterFx__11Z2FxLineMgrFb) {
+asm void Z2FxLineMgr::setUnderWaterFx(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setUnderWaterFx__11Z2FxLineMgrFb.s"
 }
@@ -112,7 +198,7 @@ ASM_FUNCTION(setUnderWaterFx__11Z2FxLineMgrFb) {
 
 
 /* ############################################################################################## */
-/* 803CAB18-803CAC48 0130+00 .data      @3566                                                        */
+/* 803CAB18-803CAC48 0130+00 rc=1 efc=0 .data      @3566                                                        */
 void* lit_3566[76] = {
 	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x88),
 	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
@@ -192,15 +278,14 @@ void* lit_3566[76] = {
 	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
 };
 
-/* 802BAEB8-802BB00C 0154+00 .text      setSceneFx__11Z2FxLineMgrFl                                  */
+/* 802BAEB8-802BB00C 0154+00 rc=3 efc=1 .text      setSceneFx__11Z2FxLineMgrFl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSceneFx__11Z2FxLineMgrFl) {
+asm void Z2FxLineMgr::setSceneFx(s32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setSceneFx__11Z2FxLineMgrFl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

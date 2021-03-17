@@ -6,14 +6,30 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASLfo (JASLfo) False/False
+/* top-level dependencies (begin JASLfo) */
+/* top-level dependencies (end JASLfo) */
+struct JASLfo {
+	/* 8029BD14 */ JASLfo();
+	/* 8029BD44 */ void getValue() const;
+	/* 8029BDD8 */ void incCounter(f32);
+	/* 8029BE2C */ void resetCounter();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__6JASLfoFv();
-extern "C" extern void getValue__6JASLfoCFv();
-extern "C" extern void incCounter__6JASLfoFf();
-extern "C" extern void resetCounter__6JASLfoFv();
-extern "C" extern void __sinit_JASLfo_cpp();
+extern "C" void __sinit_JASLfo_cpp();
+
+extern "C" void __ct__6JASLfoFv();
+extern "C" void getValue__6JASLfoCFv();
+extern "C" void incCounter__6JASLfoFf();
+extern "C" void resetCounter__6JASLfoFv();
+extern "C" void __sinit_JASLfo_cpp();
 SECTION_BSS extern u8 sFreeRunLfo__6JASLfo[24];
 SECTION_SDATA2 extern u8 JASLfo__lit_341[4];
 SECTION_SDATA2 extern f32 JASLfo__lit_342;
@@ -25,6 +41,7 @@ SECTION_SDATA2 extern f32 JASLfo__lit_376;
 // External References:
 // 
 
+
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 
 // 
@@ -32,19 +49,19 @@ SECTION_BSS extern u8 sincosTable___5JMath[65536];
 // 
 
 /* ############################################################################################## */
-/* 804556E0-804556E4 0004+00 .sdata2    @341                                                         */
+/* 804556E0-804556E4 0004+00 rc=3 efc=0 .sdata2    @341                                                         */
 u8 JASLfo__lit_341[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804556E4-804556E8 0004+00 .sdata2    @342                                                         */
+/* 804556E4-804556E8 0004+00 rc=2 efc=0 .sdata2    @342                                                         */
 f32 JASLfo__lit_342 = 1.0f;
 
-/* 8029BD14-8029BD44 0030+00 .text      __ct__6JASLfoFv                                              */
+/* 8029BD14-8029BD44 0030+00 rc=2 efc=1 .text      __ct__6JASLfoFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__6JASLfoFv) {
+asm JASLfo::JASLfo() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASLfo/__ct__6JASLfoFv.s"
 }
@@ -52,17 +69,17 @@ ASM_FUNCTION(__ct__6JASLfoFv) {
 
 
 /* ############################################################################################## */
-/* 804556E8-804556EC 0004+00 .sdata2    @363                                                         */
+/* 804556E8-804556EC 0004+00 rc=1 efc=0 .sdata2    @363                                                         */
 f32 JASLfo__lit_363 = -8192.0f;
 
-/* 804556EC-804556F0 0004+00 .sdata2    @364                                                         */
+/* 804556EC-804556F0 0004+00 rc=1 efc=0 .sdata2    @364                                                         */
 f32 JASLfo__lit_364 = 8192.0f;
 
-/* 8029BD44-8029BDD8 0094+00 .text      getValue__6JASLfoCFv                                         */
+/* 8029BD44-8029BDD8 0094+00 rc=3 efc=3 .text      getValue__6JASLfoCFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValue__6JASLfoCFv) {
+asm void JASLfo::getValue() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASLfo/getValue__6JASLfoCFv.s"
 }
@@ -70,15 +87,15 @@ ASM_FUNCTION(getValue__6JASLfoCFv) {
 
 
 /* ############################################################################################## */
-/* 804556F0-804556F8 0004+04 .sdata2    @376                                                         */
+/* 804556F0-804556F8 0004+04 rc=1 efc=0 .sdata2    @376                                                         */
 f32 JASLfo__lit_376 = 1.0f / 72.0f;
 /* padding 4 bytes */
 
-/* 8029BDD8-8029BE2C 0054+00 .text      incCounter__6JASLfoFf                                        */
+/* 8029BDD8-8029BE2C 0054+00 rc=2 efc=2 .text      incCounter__6JASLfoFf                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(incCounter__6JASLfoFf) {
+asm void JASLfo::incCounter(f32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASLfo/incCounter__6JASLfoFf.s"
 }
@@ -86,29 +103,28 @@ ASM_FUNCTION(incCounter__6JASLfoFf) {
 
 
 /* ############################################################################################## */
-/* 80431C40-80431C58 0018+00 .bss       sFreeRunLfo__6JASLfo                                         */
+/* 80431C40-80431C58 0018+00 rc=3 efc=1 .bss       sFreeRunLfo__6JASLfo                                         */
 u8 sFreeRunLfo__6JASLfo[24];
 
-/* 8029BE2C-8029BE6C 0040+00 .text      resetCounter__6JASLfoFv                                      */
+/* 8029BE2C-8029BE6C 0040+00 rc=1 efc=1 .text      resetCounter__6JASLfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetCounter__6JASLfoFv) {
+asm void JASLfo::resetCounter() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASLfo/resetCounter__6JASLfoFv.s"
 }
 #pragma pop
 
 
-/* 8029BE6C-8029BE94 0028+00 .text      __sinit_JASLfo_cpp                                           */
+/* 8029BE6C-8029BE94 0028+00 rc=1 efc=1 .text      __sinit_JASLfo_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JASLfo_cpp) {
+extern "C" asm void __sinit_JASLfo_cpp() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASLfo/__sinit_JASLfo_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

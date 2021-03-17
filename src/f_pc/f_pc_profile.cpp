@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void fpcPf_Get__Fs();
+void fpcPf_Get(s16);
+
+extern "C" void fpcPf_Get__Fs();
 SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
 // 
@@ -17,23 +19,23 @@ SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80450D50-80450D58 0004+04 .sbss      g_fpcPf_ProfileList_p                                        */
+/* 80450D50-80450D58 0004+04 rc=1 efc=0 .sbss      g_fpcPf_ProfileList_p                                        */
 u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
-/* 80023564-80023578 0014+00 .text      fpcPf_Get__Fs                                                */
+/* 80023564-80023578 0014+00 rc=1 efc=1 .text      fpcPf_Get__Fs                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcPf_Get__Fs) {
+asm void fpcPf_Get(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_profile/fpcPf_Get__Fs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

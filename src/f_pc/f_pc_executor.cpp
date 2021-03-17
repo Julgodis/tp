@@ -6,125 +6,173 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build base_process_class (base_process_class) False/False
+/* top-level dependencies (begin base_process_class) */
+/* top-level dependencies (end base_process_class) */
+struct base_process_class {
+};
+
+// build layer_management_tag_class (layer_management_tag_class) False/False
+/* top-level dependencies (begin layer_management_tag_class) */
+/* top-level dependencies (end layer_management_tag_class) */
+struct layer_management_tag_class {
+};
+
+// build line_tag (line_tag) False/False
+/* top-level dependencies (begin line_tag) */
+/* top-level dependencies (end line_tag) */
+struct line_tag {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcEx_Search__FPFPvPv_PvPv();
-extern "C" extern void fpcEx_SearchByID__FUi();
-extern "C" extern void fpcEx_IsExist__FUi();
-extern "C" extern void fpcEx_Execute__FP18base_process_class();
-extern "C" extern void fpcEx_ToLineQ__FP18base_process_class();
-extern "C" extern void fpcEx_ExecuteQTo__FP18base_process_class();
-extern "C" extern void fpcEx_ToExecuteQ__FP18base_process_class();
-extern "C" extern void fpcEx_Handler__FPFPvPv_i();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+void fpcEx_SearchByID(s32);
+void fpcEx_IsExist(s32);
+void fpcEx_Execute(base_process_class*);
+static void fpcEx_ToLineQ(base_process_class*);
+void fpcEx_ExecuteQTo(base_process_class*);
+void fpcEx_ToExecuteQ(base_process_class*);
+extern "C" void fpcEx_Handler__FPFPvPv_i();
+
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcEx_Execute__FP18base_process_class();
+extern "C" static void fpcEx_ToLineQ__FP18base_process_class();
+extern "C" void fpcEx_ExecuteQTo__FP18base_process_class();
+extern "C" void fpcEx_ToExecuteQ__FP18base_process_class();
+extern "C" void fpcEx_Handler__FPFPvPv_i();
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcBs_Is_JustOfType__Fii();
-extern "C" extern void fpcBs_Execute__FP18base_process_class();
-extern "C" extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern "C" extern void fpcLyIt_AllJudge__FPFPvPv_PvPv();
-extern "C" extern void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
-extern "C" extern void fpcLyTg_QueueTo__FP26layer_management_tag_class();
-extern "C" extern void fpcSch_JudgeByID__FPvPv();
-extern "C" extern void fpcLnTg_ToQueue__FP8line_tagi();
-extern "C" extern void fpcLnIt_Queue__FPFPvPv_i();
-extern "C" extern void fpcPause_IsEnable__FPvUc();
-extern "C" extern void cTg_IsUse__FP16create_tag_class();
+void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Execute(base_process_class*);
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
+void fpcLyTg_ToQueue(layer_management_tag_class*, s32, u16, u16);
+void fpcLyTg_QueueTo(layer_management_tag_class*);
+void fpcSch_JudgeByID(void*, void*);
+void fpcLnTg_ToQueue(line_tag*, s32);
+extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+void fpcPause_IsEnable(void*, char);
+void cTg_IsUse(create_tag_class*);
+
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcBs_Execute__FP18base_process_class();
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcLnTg_ToQueue__FP8line_tagi();
+extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+extern "C" void fpcPause_IsEnable__FPvUc();
+extern "C" void cTg_IsUse__FP16create_tag_class();
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80021338-80021358 0020+00 .text      fpcEx_Search__FPFPvPv_PvPv                                   */
+/* 80021338-80021358 0020+00 rc=10 efc=9 .text      fpcEx_Search__FPFPvPv_PvPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_Search__FPFPvPv_PvPv) {
+extern "C" asm void fpcEx_Search__FPFPvPv_PvPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Search__FPFPvPv_PvPv.s"
 }
 #pragma pop
 
 
-/* 80021358-8002139C 0044+00 .text      fpcEx_SearchByID__FUi                                        */
+/* 80021358-8002139C 0044+00 rc=6 efc=5 .text      fpcEx_SearchByID__FUi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_SearchByID__FUi) {
+asm void fpcEx_SearchByID(s32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_SearchByID__FUi.s"
 }
 #pragma pop
 
 
-/* 8002139C-800213C4 0028+00 .text      fpcEx_IsExist__FUi                                           */
+/* 8002139C-800213C4 0028+00 rc=7 efc=7 .text      fpcEx_IsExist__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_IsExist__FUi) {
+asm void fpcEx_IsExist(s32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_IsExist__FUi.s"
 }
 #pragma pop
 
 
-/* 800213C4-80021418 0054+00 .text      fpcEx_Execute__FP18base_process_class                        */
+/* 800213C4-80021418 0054+00 rc=1 efc=1 .text      fpcEx_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_Execute__FP18base_process_class) {
+asm void fpcEx_Execute(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Execute__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80021418-800214C4 00AC+00 .text      fpcEx_ToLineQ__FP18base_process_class                        */
+/* 80021418-800214C4 00AC+00 rc=1 efc=0 .text      fpcEx_ToLineQ__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_ToLineQ__FP18base_process_class) {
+asm static void fpcEx_ToLineQ(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ToLineQ__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 800214C4-80021510 004C+00 .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
+/* 800214C4-80021510 004C+00 rc=1 efc=1 .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_ExecuteQTo__FP18base_process_class) {
+asm void fpcEx_ExecuteQTo(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ExecuteQTo__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80021510-80021568 0058+00 .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
+/* 80021510-80021568 0058+00 rc=1 efc=1 .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_ToExecuteQ__FP18base_process_class) {
+asm void fpcEx_ToExecuteQ(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ToExecuteQ__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80021568-80021588 0020+00 .text      fpcEx_Handler__FPFPvPv_i                                     */
+/* 80021568-80021588 0020+00 rc=1 efc=1 .text      fpcEx_Handler__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcEx_Handler__FPFPvPv_i) {
+extern "C" asm void fpcEx_Handler__FPFPvPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Handler__FPFPvPv_i.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

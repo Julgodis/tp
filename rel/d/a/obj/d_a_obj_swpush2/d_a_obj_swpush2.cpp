@@ -6,57 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgW {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getArcName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getBmdName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getDzbName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getNmlBtkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getNmlBrkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getOnBtkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getRunBpkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getRunBrkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void getRunBtkName__Q212daObjSwpush25Act_cFv();
-extern "C" extern void prmZ_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void is_switch2__Q212daObjSwpush25Act_cCFv();
-extern "C" extern void solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c();
-extern "C" extern void create_heap__Q212daObjSwpush25Act_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void create_res_load__Q212daObjSwpush25Act_cFv();
-extern "C" extern void Mthd_Create__Q212daObjSwpush25Act_cFv();
-extern "C" extern void Mthd_Delete__Q212daObjSwpush25Act_cFv();
-extern "C" extern void set_mtx__Q212daObjSwpush25Act_cFv();
-extern "C" extern void init_mtx__Q212daObjSwpush25Act_cFv();
-extern "C" extern void rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void calc_top_pos__Q212daObjSwpush25Act_cFv();
-extern "C" extern void set_push_flag__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_upper_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_upper__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_u_l_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_u_l__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_lower_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_lower__Q212daObjSwpush25Act_cFv();
-extern "C" extern void mode_l_u__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_non_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_non__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_reqPause_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_reqPause__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_runPause_init__Q212daObjSwpush25Act_cFi();
-extern "C" extern void demo_runPause__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_stop_puase__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_reqSw_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_reqSw__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_runSw_init__Q212daObjSwpush25Act_cFv();
-extern "C" extern void demo_runSw__Q212daObjSwpush25Act_cFv();
-extern "C" extern void Mthd_Execute__Q212daObjSwpush25Act_cFv();
-extern "C" extern void Mthd_Draw__Q212daObjSwpush25Act_cFv();
-extern "C" extern void func_80CFFB50();
-extern "C" extern void func_80CFFB70();
-extern "C" extern void func_80CFFB90();
-extern "C" extern void func_80CFFBB0();
-extern "C" extern void func_80CFFBD0();
+extern "C" void func_80CFFB50();
+extern "C" void func_80CFFB70();
+extern "C" void func_80CFFB90();
+extern "C" void func_80CFFBB0();
+extern "C" void func_80CFFBD0();
+
+extern "C" void getArcName__Q212daObjSwpush25Act_cFv();
+extern "C" void getBmdName__Q212daObjSwpush25Act_cFv();
+extern "C" void getDzbName__Q212daObjSwpush25Act_cFv();
+extern "C" void getNmlBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getNmlBrkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getOnBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBpkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBrkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void prmZ_init__Q212daObjSwpush25Act_cFv();
+extern "C" void is_switch2__Q212daObjSwpush25Act_cCFv();
+extern "C" void solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c();
+extern "C" void create_heap__Q212daObjSwpush25Act_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create_init__Q212daObjSwpush25Act_cFv();
+extern "C" void create_res_load__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Create__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Delete__Q212daObjSwpush25Act_cFv();
+extern "C" void set_mtx__Q212daObjSwpush25Act_cFv();
+extern "C" void init_mtx__Q212daObjSwpush25Act_cFv();
+extern "C" void rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void calc_top_pos__Q212daObjSwpush25Act_cFv();
+extern "C" void set_push_flag__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_upper_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_upper__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_u_l_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_u_l__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_lower_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_lower__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_l_u__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_non_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_non__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqPause_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqPause__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runPause_init__Q212daObjSwpush25Act_cFi();
+extern "C" void demo_runPause__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_stop_puase__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqSw_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqSw__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runSw_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runSw__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Execute__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Draw__Q212daObjSwpush25Act_cFv();
+extern "C" void func_80CFFB50();
+extern "C" void func_80CFFB70();
+extern "C" void func_80CFFB90();
+extern "C" void func_80CFFBB0();
+extern "C" void func_80CFFBD0();
 SECTION_RODATA extern const u8 M_arcname__Q212daObjSwpush25Act_c[9 + 3 /* padding */];
 SECTION_RODATA extern const u8 M_attr__Q212daObjSwpush25Act_c[224];
 SECTION_RODATA extern const u32 lit_3857;
@@ -96,7 +119,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -106,7 +131,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getArcName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getArcName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -117,7 +142,7 @@ ASM_FUNCTION(getArcName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmdName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getBmdName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getBmdName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -128,7 +153,7 @@ ASM_FUNCTION(getBmdName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDzbName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getDzbName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getDzbName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -139,7 +164,7 @@ ASM_FUNCTION(getDzbName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNmlBtkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getNmlBtkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getNmlBtkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -150,7 +175,7 @@ ASM_FUNCTION(getNmlBtkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNmlBrkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getNmlBrkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getNmlBrkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -161,7 +186,7 @@ ASM_FUNCTION(getNmlBrkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOnBtkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getOnBtkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getOnBtkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -172,7 +197,7 @@ ASM_FUNCTION(getOnBtkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRunBpkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getRunBpkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getRunBpkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -183,7 +208,7 @@ ASM_FUNCTION(getRunBpkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRunBrkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getRunBrkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getRunBrkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -194,7 +219,7 @@ ASM_FUNCTION(getRunBrkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRunBtkName__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::getRunBtkName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/getRunBtkName__Q212daObjSwpush25Act_cFv.s"
 }
@@ -205,7 +230,7 @@ ASM_FUNCTION(getRunBtkName__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prmZ_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::prmZ_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/prmZ_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -216,7 +241,7 @@ ASM_FUNCTION(prmZ_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(is_switch2__Q212daObjSwpush25Act_cCFv) {
+asm void daObjSwpush2::Act_c::is_switch2() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/is_switch2__Q212daObjSwpush25Act_cCFv.s"
 }
@@ -227,7 +252,7 @@ ASM_FUNCTION(is_switch2__Q212daObjSwpush25Act_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c) {
+asm void daObjSwpush2::Act_c::solidHeapCB(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c.s"
 }
@@ -238,7 +263,7 @@ ASM_FUNCTION(solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_heap__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::create_heap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/create_heap__Q212daObjSwpush25Act_cFv.s"
 }
@@ -249,7 +274,7 @@ ASM_FUNCTION(create_heap__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -260,7 +285,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/create_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -271,7 +296,7 @@ ASM_FUNCTION(create_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_res_load__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::create_res_load() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/create_res_load__Q212daObjSwpush25Act_cFv.s"
 }
@@ -282,7 +307,7 @@ ASM_FUNCTION(create_res_load__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Create__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::Mthd_Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/Mthd_Create__Q212daObjSwpush25Act_cFv.s"
 }
@@ -293,7 +318,7 @@ ASM_FUNCTION(Mthd_Create__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Delete__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::Mthd_Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/Mthd_Delete__Q212daObjSwpush25Act_cFv.s"
 }
@@ -304,7 +329,7 @@ ASM_FUNCTION(Mthd_Delete__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/set_mtx__Q212daObjSwpush25Act_cFv.s"
 }
@@ -315,7 +340,7 @@ ASM_FUNCTION(set_mtx__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_mtx__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::init_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/init_mtx__Q212daObjSwpush25Act_cFv.s"
 }
@@ -326,7 +351,7 @@ ASM_FUNCTION(init_mtx__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daObjSwpush2::Act_c::rideCB(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -337,7 +362,7 @@ ASM_FUNCTION(rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_top_pos__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::calc_top_pos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/calc_top_pos__Q212daObjSwpush25Act_cFv.s"
 }
@@ -348,7 +373,7 @@ ASM_FUNCTION(calc_top_pos__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_push_flag__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::set_push_flag() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/set_push_flag__Q212daObjSwpush25Act_cFv.s"
 }
@@ -359,7 +384,7 @@ ASM_FUNCTION(set_push_flag__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_upper_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_upper_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_upper_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -370,7 +395,7 @@ ASM_FUNCTION(mode_upper_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_upper__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_upper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_upper__Q212daObjSwpush25Act_cFv.s"
 }
@@ -381,7 +406,7 @@ ASM_FUNCTION(mode_upper__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_u_l_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_u_l_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_u_l_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -392,7 +417,7 @@ ASM_FUNCTION(mode_u_l_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_u_l__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_u_l() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_u_l__Q212daObjSwpush25Act_cFv.s"
 }
@@ -403,7 +428,7 @@ ASM_FUNCTION(mode_u_l__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_lower_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_lower_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_lower_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -411,21 +436,16 @@ ASM_FUNCTION(mode_lower_init__Q212daObjSwpush25Act_cFv) {
 
 
 /* 80CFF188-80CFF18C 0004+00 .text      mode_lower__Q212daObjSwpush25Act_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_lower__Q212daObjSwpush25Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_lower__Q212daObjSwpush25Act_cFv.s"
+void daObjSwpush2::Act_c::mode_lower() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CFF18C-80CFF24C 00C0+00 .text      mode_l_u__Q212daObjSwpush25Act_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_l_u__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::mode_l_u() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_l_u__Q212daObjSwpush25Act_cFv.s"
 }
@@ -436,7 +456,7 @@ ASM_FUNCTION(mode_l_u__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_non_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_non_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_non_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -444,21 +464,16 @@ ASM_FUNCTION(demo_non_init__Q212daObjSwpush25Act_cFv) {
 
 
 /* 80CFF258-80CFF25C 0004+00 .text      demo_non__Q212daObjSwpush25Act_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demo_non__Q212daObjSwpush25Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_non__Q212daObjSwpush25Act_cFv.s"
+void daObjSwpush2::Act_c::demo_non() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CFF25C-80CFF2B4 0058+00 .text      demo_reqPause_init__Q212daObjSwpush25Act_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqPause_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_reqPause_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_reqPause_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -469,7 +484,7 @@ ASM_FUNCTION(demo_reqPause_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqPause__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_reqPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_reqPause__Q212daObjSwpush25Act_cFv.s"
 }
@@ -480,7 +495,7 @@ ASM_FUNCTION(demo_reqPause__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runPause_init__Q212daObjSwpush25Act_cFi) {
+asm void daObjSwpush2::Act_c::demo_runPause_init(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_runPause_init__Q212daObjSwpush25Act_cFi.s"
 }
@@ -491,7 +506,7 @@ ASM_FUNCTION(demo_runPause_init__Q212daObjSwpush25Act_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runPause__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_runPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_runPause__Q212daObjSwpush25Act_cFv.s"
 }
@@ -502,7 +517,7 @@ ASM_FUNCTION(demo_runPause__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_stop_puase__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_stop_puase() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_stop_puase__Q212daObjSwpush25Act_cFv.s"
 }
@@ -513,7 +528,7 @@ ASM_FUNCTION(demo_stop_puase__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqSw_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_reqSw_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_reqSw_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -524,7 +539,7 @@ ASM_FUNCTION(demo_reqSw_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqSw__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_reqSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_reqSw__Q212daObjSwpush25Act_cFv.s"
 }
@@ -535,7 +550,7 @@ ASM_FUNCTION(demo_reqSw__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runSw_init__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_runSw_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_runSw_init__Q212daObjSwpush25Act_cFv.s"
 }
@@ -546,7 +561,7 @@ ASM_FUNCTION(demo_runSw_init__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runSw__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::demo_runSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_runSw__Q212daObjSwpush25Act_cFv.s"
 }
@@ -557,7 +572,7 @@ ASM_FUNCTION(demo_runSw__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Execute__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::Mthd_Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/Mthd_Execute__Q212daObjSwpush25Act_cFv.s"
 }
@@ -568,7 +583,7 @@ ASM_FUNCTION(Mthd_Execute__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Draw__Q212daObjSwpush25Act_cFv) {
+asm void daObjSwpush2::Act_c::Mthd_Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/Mthd_Draw__Q212daObjSwpush25Act_cFv.s"
 }
@@ -579,7 +594,7 @@ ASM_FUNCTION(Mthd_Draw__Q212daObjSwpush25Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFFB50) {
+extern "C" asm void func_80CFFB50() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/func_80CFFB50.s"
 }
@@ -590,7 +605,7 @@ ASM_FUNCTION(func_80CFFB50) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFFB70) {
+extern "C" asm void func_80CFFB70() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/func_80CFFB70.s"
 }
@@ -601,7 +616,7 @@ ASM_FUNCTION(func_80CFFB70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFFB90) {
+extern "C" asm void func_80CFFB90() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/func_80CFFB90.s"
 }
@@ -612,7 +627,7 @@ ASM_FUNCTION(func_80CFFB90) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFFBB0) {
+extern "C" asm void func_80CFFBB0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/func_80CFFBB0.s"
 }
@@ -623,7 +638,7 @@ ASM_FUNCTION(func_80CFFBB0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFFBD0) {
+extern "C" asm void func_80CFFBD0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/func_80CFFBD0.s"
 }

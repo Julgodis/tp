@@ -6,34 +6,88 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct sq_class;
+
+struct daSq_HIO_c {
+	daSq_HIO_c();
+	~daSq_HIO_c();
+};
+
+struct sq_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daSq_HIO_cFv();
-extern "C" extern void anm_init__FP8sq_classifUcfi();
-extern "C" extern void daSq_Draw__FP8sq_class();
-extern "C" extern void way_bg_check__FP8sq_class();
-extern "C" extern void turn_set__FP8sq_class();
-extern "C" extern void sq_normal__FP8sq_class();
-extern "C" extern void sq_away__FP8sq_class();
-extern "C" extern void sq_carry__FP8sq_class();
-extern "C" extern void sq_fly__FP8sq_class();
-extern "C" extern void sq_message__FP8sq_class();
-extern "C" extern void action__FP8sq_class();
-extern "C" extern void message__FP8sq_class();
-extern "C" extern void daSq_Execute__FP8sq_class();
-extern "C" extern void daSq_IsDelete__FP8sq_class();
-extern "C" extern void daSq_Delete__FP8sq_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daSq_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10daSq_HIO_cFv();
-extern "C" extern void __sinit_d_a_sq_cpp();
-extern "C" extern void func_805A1134();
-extern "C" extern void func_805A113C();
+void anm_init(sq_class*, s32, f32, u8, f32, s32);
+void daSq_Draw(sq_class*);
+void way_bg_check(sq_class*);
+void turn_set(sq_class*);
+void sq_normal(sq_class*);
+void sq_away(sq_class*);
+void sq_carry(sq_class*);
+void sq_fly(sq_class*);
+void sq_message(sq_class*);
+void action(sq_class*);
+void message(sq_class*);
+void daSq_Execute(sq_class*);
+bool daSq_IsDelete(sq_class*);
+void daSq_Delete(sq_class*);
+void useHeapInit(fopAc_ac_c*);
+void daSq_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_sq_cpp();
+extern "C" void func_805A1134();
+extern "C" void func_805A113C();
+
+extern "C" void __ct__10daSq_HIO_cFv();
+extern "C" void anm_init__FP8sq_classifUcfi();
+extern "C" void daSq_Draw__FP8sq_class();
+extern "C" void way_bg_check__FP8sq_class();
+extern "C" void turn_set__FP8sq_class();
+extern "C" void sq_normal__FP8sq_class();
+extern "C" void sq_away__FP8sq_class();
+extern "C" void sq_carry__FP8sq_class();
+extern "C" void sq_fly__FP8sq_class();
+extern "C" void sq_message__FP8sq_class();
+extern "C" void action__FP8sq_class();
+extern "C" void message__FP8sq_class();
+extern "C" void daSq_Execute__FP8sq_class();
+extern "C" bool daSq_IsDelete__FP8sq_class();
+extern "C" void daSq_Delete__FP8sq_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daSq_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10daSq_HIO_cFv();
+extern "C" void __sinit_d_a_sq_cpp();
+extern "C" void func_805A1134();
+extern "C" void func_805A113C();
 SECTION_RODATA extern const u32 lit_3769;
 SECTION_RODATA extern const u32 lit_3770;
 SECTION_RODATA extern const u32 lit_3771;
@@ -87,8 +141,11 @@ SECTION_BSS extern u8 l_HIO[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -98,7 +155,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daSq_HIO_cFv) {
+asm daSq_HIO_c::daSq_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__ct__10daSq_HIO_cFv.s"
 }
@@ -109,7 +166,7 @@ ASM_FUNCTION(__ct__10daSq_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP8sq_classifUcfi) {
+asm void anm_init(sq_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4, s32 field_5) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/anm_init__FP8sq_classifUcfi.s"
 }
@@ -120,7 +177,7 @@ ASM_FUNCTION(anm_init__FP8sq_classifUcfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSq_Draw__FP8sq_class) {
+asm void daSq_Draw(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_Draw__FP8sq_class.s"
 }
@@ -131,7 +188,7 @@ ASM_FUNCTION(daSq_Draw__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP8sq_class) {
+asm void way_bg_check(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/way_bg_check__FP8sq_class.s"
 }
@@ -142,7 +199,7 @@ ASM_FUNCTION(way_bg_check__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_set__FP8sq_class) {
+asm void turn_set(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/turn_set__FP8sq_class.s"
 }
@@ -153,7 +210,7 @@ ASM_FUNCTION(turn_set__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sq_normal__FP8sq_class) {
+asm void sq_normal(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/sq_normal__FP8sq_class.s"
 }
@@ -164,7 +221,7 @@ ASM_FUNCTION(sq_normal__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sq_away__FP8sq_class) {
+asm void sq_away(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/sq_away__FP8sq_class.s"
 }
@@ -175,7 +232,7 @@ ASM_FUNCTION(sq_away__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sq_carry__FP8sq_class) {
+asm void sq_carry(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/sq_carry__FP8sq_class.s"
 }
@@ -186,7 +243,7 @@ ASM_FUNCTION(sq_carry__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sq_fly__FP8sq_class) {
+asm void sq_fly(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/sq_fly__FP8sq_class.s"
 }
@@ -197,7 +254,7 @@ ASM_FUNCTION(sq_fly__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sq_message__FP8sq_class) {
+asm void sq_message(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/sq_message__FP8sq_class.s"
 }
@@ -208,7 +265,7 @@ ASM_FUNCTION(sq_message__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP8sq_class) {
+asm void action(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/action__FP8sq_class.s"
 }
@@ -219,7 +276,7 @@ ASM_FUNCTION(action__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP8sq_class) {
+asm void message(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/message__FP8sq_class.s"
 }
@@ -230,7 +287,7 @@ ASM_FUNCTION(message__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSq_Execute__FP8sq_class) {
+asm void daSq_Execute(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_Execute__FP8sq_class.s"
 }
@@ -238,21 +295,16 @@ ASM_FUNCTION(daSq_Execute__FP8sq_class) {
 
 
 /* 805A09EC-805A09F4 0008+00 .text      daSq_IsDelete__FP8sq_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daSq_IsDelete__FP8sq_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_IsDelete__FP8sq_class.s"
+bool daSq_IsDelete(sq_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A09F4-805A0A48 0054+00 .text      daSq_Delete__FP8sq_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSq_Delete__FP8sq_class) {
+asm void daSq_Delete(sq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_Delete__FP8sq_class.s"
 }
@@ -263,7 +315,7 @@ ASM_FUNCTION(daSq_Delete__FP8sq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -274,7 +326,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__dt__12J3DFrameCtrlFv.s"
 }
@@ -285,7 +337,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSq_Create__FP10fopAc_ac_c) {
+asm void daSq_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_Create__FP10fopAc_ac_c.s"
 }
@@ -296,7 +348,7 @@ ASM_FUNCTION(daSq_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__dt__8cM3dGSphFv.s"
 }
@@ -307,7 +359,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__dt__8cM3dGAabFv.s"
 }
@@ -318,7 +370,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -329,7 +381,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daSq_HIO_cFv) {
+asm daSq_HIO_c::~daSq_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__dt__10daSq_HIO_cFv.s"
 }
@@ -340,7 +392,7 @@ ASM_FUNCTION(__dt__10daSq_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_sq_cpp) {
+extern "C" asm void __sinit_d_a_sq_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/__sinit_d_a_sq_cpp.s"
 }
@@ -351,7 +403,7 @@ ASM_FUNCTION(__sinit_d_a_sq_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A1134) {
+extern "C" asm void func_805A1134() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/func_805A1134.s"
 }
@@ -362,7 +414,7 @@ ASM_FUNCTION(func_805A1134) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A113C) {
+extern "C" asm void func_805A113C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_sq/d_a_sq/func_805A113C.s"
 }

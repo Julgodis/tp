@@ -6,26 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjKaisou_c;
+struct J3DModel;
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daObjKaisou_c {
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void initCcCylinder();
+	void setCcCylinder();
+	void ObjHit();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__FP8J3DJointi();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObjKaisou_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjKaisou_Delete__FP13daObjKaisou_c();
-extern "C" extern void initCcCylinder__13daObjKaisou_cFv();
-extern "C" extern void setCcCylinder__13daObjKaisou_cFv();
-extern "C" extern void ObjHit__13daObjKaisou_cFv();
-extern "C" extern void Execute__13daObjKaisou_cFv();
-extern "C" extern void Delete__13daObjKaisou_cFv();
-extern "C" extern void setBaseMtx__13daObjKaisou_cFv();
-extern "C" extern void daObjKaisou_Draw__FP13daObjKaisou_c();
-extern "C" extern void daObjKaisou_Execute__FP13daObjKaisou_c();
-extern "C" extern void create__13daObjKaisou_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjKaisou_IsDelete__FP13daObjKaisou_c();
+void JointCallBack(J3DJoint*, s32);
+void useHeapInit(fopAc_ac_c*);
+void daObjKaisou_Create(fopAc_ac_c*);
+void daObjKaisou_Delete(daObjKaisou_c*);
+void daObjKaisou_Draw(daObjKaisou_c*);
+void daObjKaisou_Execute(daObjKaisou_c*);
+bool daObjKaisou_IsDelete(daObjKaisou_c*);
+
+extern "C" void ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__FP8J3DJointi();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObjKaisou_Create__FP10fopAc_ac_c();
+extern "C" void daObjKaisou_Delete__FP13daObjKaisou_c();
+extern "C" void initCcCylinder__13daObjKaisou_cFv();
+extern "C" void setCcCylinder__13daObjKaisou_cFv();
+extern "C" void ObjHit__13daObjKaisou_cFv();
+extern "C" void Execute__13daObjKaisou_cFv();
+extern "C" void Delete__13daObjKaisou_cFv();
+extern "C" void setBaseMtx__13daObjKaisou_cFv();
+extern "C" void daObjKaisou_Draw__FP13daObjKaisou_c();
+extern "C" void daObjKaisou_Execute__FP13daObjKaisou_c();
+extern "C" void create__13daObjKaisou_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjKaisou_IsDelete__FP13daObjKaisou_c();
 SECTION_RODATA extern const u32 lit_3806;
 SECTION_RODATA extern const u32 lit_3807;
 SECTION_RODATA extern const u8 lit_3809[8];
@@ -61,7 +106,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -71,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel) {
+asm void daObjKaisou_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel.s"
 }
@@ -82,7 +129,7 @@ ASM_FUNCTION(ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__FP8J3DJointi) {
+asm void JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/JointCallBack__FP8J3DJointi.s"
 }
@@ -93,7 +140,7 @@ ASM_FUNCTION(JointCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -104,7 +151,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKaisou_Create__FP10fopAc_ac_c) {
+asm void daObjKaisou_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Create__FP10fopAc_ac_c.s"
 }
@@ -115,7 +162,7 @@ ASM_FUNCTION(daObjKaisou_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKaisou_Delete__FP13daObjKaisou_c) {
+asm void daObjKaisou_Delete(daObjKaisou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Delete__FP13daObjKaisou_c.s"
 }
@@ -126,7 +173,7 @@ ASM_FUNCTION(daObjKaisou_Delete__FP13daObjKaisou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/initCcCylinder__13daObjKaisou_cFv.s"
 }
@@ -137,7 +184,7 @@ ASM_FUNCTION(initCcCylinder__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::setCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/setCcCylinder__13daObjKaisou_cFv.s"
 }
@@ -148,7 +195,7 @@ ASM_FUNCTION(setCcCylinder__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/ObjHit__13daObjKaisou_cFv.s"
 }
@@ -159,7 +206,7 @@ ASM_FUNCTION(ObjHit__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/Execute__13daObjKaisou_cFv.s"
 }
@@ -170,7 +217,7 @@ ASM_FUNCTION(Execute__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/Delete__13daObjKaisou_cFv.s"
 }
@@ -181,7 +228,7 @@ ASM_FUNCTION(Delete__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/setBaseMtx__13daObjKaisou_cFv.s"
 }
@@ -192,7 +239,7 @@ ASM_FUNCTION(setBaseMtx__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKaisou_Draw__FP13daObjKaisou_c) {
+asm void daObjKaisou_Draw(daObjKaisou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Draw__FP13daObjKaisou_c.s"
 }
@@ -203,7 +250,7 @@ ASM_FUNCTION(daObjKaisou_Draw__FP13daObjKaisou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKaisou_Execute__FP13daObjKaisou_c) {
+asm void daObjKaisou_Execute(daObjKaisou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Execute__FP13daObjKaisou_c.s"
 }
@@ -214,7 +261,7 @@ ASM_FUNCTION(daObjKaisou_Execute__FP13daObjKaisou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjKaisou_cFv) {
+asm void daObjKaisou_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/create__13daObjKaisou_cFv.s"
 }
@@ -225,7 +272,7 @@ ASM_FUNCTION(create__13daObjKaisou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/__dt__8cM3dGCylFv.s"
 }
@@ -236,7 +283,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/__dt__8cM3dGAabFv.s"
 }
@@ -244,14 +291,9 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80C34EDC-80C34EE4 0008+00 .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKaisou_IsDelete__FP13daObjKaisou_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_IsDelete__FP13daObjKaisou_c.s"
+bool daObjKaisou_IsDelete(daObjKaisou_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

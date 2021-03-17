@@ -6,37 +6,78 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daDoorPush_c;
+
+struct daDoorPush_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void init_modeWait();
+	void modeWait();
+	void event_proc_call();
+	void actionOpenWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void demoProc();
+	void rotateInit();
+	void rotate();
+	void setGoal();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void initBaseMtx__12daDoorPush_cFv();
-extern "C" extern void setBaseMtx__12daDoorPush_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void Create__12daDoorPush_cFv();
-extern "C" extern void CreateHeap__12daDoorPush_cFv();
-extern "C" extern void create1st__12daDoorPush_cFv();
-extern "C" extern void Execute__12daDoorPush_cFPPA3_A4_f();
-extern "C" extern void action__12daDoorPush_cFv();
-extern "C" extern void init_modeWait__12daDoorPush_cFv();
-extern "C" extern void modeWait__12daDoorPush_cFv();
-extern "C" extern void event_proc_call__12daDoorPush_cFv();
-extern "C" extern void actionOpenWait__12daDoorPush_cFv();
-extern "C" extern void actionOrderEvent__12daDoorPush_cFv();
-extern "C" extern void actionEvent__12daDoorPush_cFv();
-extern "C" extern void demoProc__12daDoorPush_cFv();
-extern "C" extern void rotateInit__12daDoorPush_cFv();
-extern "C" extern void rotate__12daDoorPush_cFv();
-extern "C" extern void setGoal__12daDoorPush_cFv();
-extern "C" extern void Draw__12daDoorPush_cFv();
-extern "C" extern void Delete__12daDoorPush_cFv();
-extern "C" extern void daDoorPush_create1st__FP12daDoorPush_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daDoorPush_MoveBGDelete__FP12daDoorPush_c();
-extern "C" extern void daDoorPush_MoveBGExecute__FP12daDoorPush_c();
-extern "C" extern void daDoorPush_MoveBGDraw__FP12daDoorPush_c();
-extern "C" extern void func_80678EA8();
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void Execute__12daDoorPush_cFPPA3_A4_f();
+void daDoorPush_create1st(daDoorPush_c*);
+void daDoorPush_MoveBGDelete(daDoorPush_c*);
+void daDoorPush_MoveBGExecute(daDoorPush_c*);
+void daDoorPush_MoveBGDraw(daDoorPush_c*);
+extern "C" void func_80678EA8();
+
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void initBaseMtx__12daDoorPush_cFv();
+extern "C" void setBaseMtx__12daDoorPush_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void Create__12daDoorPush_cFv();
+extern "C" void CreateHeap__12daDoorPush_cFv();
+extern "C" void create1st__12daDoorPush_cFv();
+extern "C" void Execute__12daDoorPush_cFPPA3_A4_f();
+extern "C" void action__12daDoorPush_cFv();
+extern "C" void init_modeWait__12daDoorPush_cFv();
+extern "C" void modeWait__12daDoorPush_cFv();
+extern "C" void event_proc_call__12daDoorPush_cFv();
+extern "C" void actionOpenWait__12daDoorPush_cFv();
+extern "C" void actionOrderEvent__12daDoorPush_cFv();
+extern "C" void actionEvent__12daDoorPush_cFv();
+extern "C" void demoProc__12daDoorPush_cFv();
+extern "C" void rotateInit__12daDoorPush_cFv();
+extern "C" void rotate__12daDoorPush_cFv();
+extern "C" void setGoal__12daDoorPush_cFv();
+extern "C" void Draw__12daDoorPush_cFv();
+extern "C" void Delete__12daDoorPush_cFv();
+extern "C" void daDoorPush_create1st__FP12daDoorPush_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void daDoorPush_MoveBGDelete__FP12daDoorPush_c();
+extern "C" void daDoorPush_MoveBGExecute__FP12daDoorPush_c();
+extern "C" void daDoorPush_MoveBGDraw__FP12daDoorPush_c();
+extern "C" void func_80678EA8();
 SECTION_RODATA extern const u32 lit_3688;
 SECTION_RODATA extern const u8 lit_3689[4];
 SECTION_RODATA extern const u32 lit_3690;
@@ -74,7 +115,9 @@ SECTION_DATA extern void*const __vt__12daDoorPush_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -84,7 +127,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
 }
@@ -95,7 +138,7 @@ ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
 }
@@ -106,7 +149,7 @@ ASM_FUNCTION(PPCallBack2__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabe
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daDoorPush_cFv) {
+asm void daDoorPush_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/initBaseMtx__12daDoorPush_cFv.s"
 }
@@ -117,7 +160,7 @@ ASM_FUNCTION(initBaseMtx__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daDoorPush_cFv) {
+asm void daDoorPush_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/setBaseMtx__12daDoorPush_cFv.s"
 }
@@ -128,7 +171,7 @@ ASM_FUNCTION(setBaseMtx__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/__dt__4cXyzFv.s"
 }
@@ -139,7 +182,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daDoorPush_cFv) {
+asm void daDoorPush_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/Create__12daDoorPush_cFv.s"
 }
@@ -150,7 +193,7 @@ ASM_FUNCTION(Create__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daDoorPush_cFv) {
+asm void daDoorPush_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/CreateHeap__12daDoorPush_cFv.s"
 }
@@ -161,7 +204,7 @@ ASM_FUNCTION(CreateHeap__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daDoorPush_cFv) {
+asm void daDoorPush_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/create1st__12daDoorPush_cFv.s"
 }
@@ -172,7 +215,7 @@ ASM_FUNCTION(create1st__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daDoorPush_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daDoorPush_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/Execute__12daDoorPush_cFPPA3_A4_f.s"
 }
@@ -183,7 +226,7 @@ ASM_FUNCTION(Execute__12daDoorPush_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__12daDoorPush_cFv) {
+asm void daDoorPush_c::action() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/action__12daDoorPush_cFv.s"
 }
@@ -194,7 +237,7 @@ ASM_FUNCTION(action__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daDoorPush_cFv) {
+asm void daDoorPush_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/init_modeWait__12daDoorPush_cFv.s"
 }
@@ -205,7 +248,7 @@ ASM_FUNCTION(init_modeWait__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daDoorPush_cFv) {
+asm void daDoorPush_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/modeWait__12daDoorPush_cFv.s"
 }
@@ -216,7 +259,7 @@ ASM_FUNCTION(modeWait__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__12daDoorPush_cFv) {
+asm void daDoorPush_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/event_proc_call__12daDoorPush_cFv.s"
 }
@@ -227,7 +270,7 @@ ASM_FUNCTION(event_proc_call__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpenWait__12daDoorPush_cFv) {
+asm void daDoorPush_c::actionOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/actionOpenWait__12daDoorPush_cFv.s"
 }
@@ -238,7 +281,7 @@ ASM_FUNCTION(actionOpenWait__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__12daDoorPush_cFv) {
+asm void daDoorPush_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/actionOrderEvent__12daDoorPush_cFv.s"
 }
@@ -249,7 +292,7 @@ ASM_FUNCTION(actionOrderEvent__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__12daDoorPush_cFv) {
+asm void daDoorPush_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/actionEvent__12daDoorPush_cFv.s"
 }
@@ -260,7 +303,7 @@ ASM_FUNCTION(actionEvent__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__12daDoorPush_cFv) {
+asm void daDoorPush_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/demoProc__12daDoorPush_cFv.s"
 }
@@ -271,7 +314,7 @@ ASM_FUNCTION(demoProc__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rotateInit__12daDoorPush_cFv) {
+asm void daDoorPush_c::rotateInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/rotateInit__12daDoorPush_cFv.s"
 }
@@ -282,7 +325,7 @@ ASM_FUNCTION(rotateInit__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rotate__12daDoorPush_cFv) {
+asm void daDoorPush_c::rotate() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/rotate__12daDoorPush_cFv.s"
 }
@@ -293,7 +336,7 @@ ASM_FUNCTION(rotate__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoal__12daDoorPush_cFv) {
+asm void daDoorPush_c::setGoal() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/setGoal__12daDoorPush_cFv.s"
 }
@@ -304,7 +347,7 @@ ASM_FUNCTION(setGoal__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daDoorPush_cFv) {
+asm void daDoorPush_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/Draw__12daDoorPush_cFv.s"
 }
@@ -315,7 +358,7 @@ ASM_FUNCTION(Draw__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daDoorPush_cFv) {
+asm void daDoorPush_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/Delete__12daDoorPush_cFv.s"
 }
@@ -326,7 +369,7 @@ ASM_FUNCTION(Delete__12daDoorPush_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoorPush_create1st__FP12daDoorPush_c) {
+asm void daDoorPush_create1st(daDoorPush_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/daDoorPush_create1st__FP12daDoorPush_c.s"
 }
@@ -334,21 +377,16 @@ ASM_FUNCTION(daDoorPush_create1st__FP12daDoorPush_c) {
 
 
 /* 80678E38-80678E3C 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80678E3C-80678E5C 0020+00 .text      daDoorPush_MoveBGDelete__FP12daDoorPush_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoorPush_MoveBGDelete__FP12daDoorPush_c) {
+asm void daDoorPush_MoveBGDelete(daDoorPush_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/daDoorPush_MoveBGDelete__FP12daDoorPush_c.s"
 }
@@ -359,7 +397,7 @@ ASM_FUNCTION(daDoorPush_MoveBGDelete__FP12daDoorPush_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoorPush_MoveBGExecute__FP12daDoorPush_c) {
+asm void daDoorPush_MoveBGExecute(daDoorPush_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/daDoorPush_MoveBGExecute__FP12daDoorPush_c.s"
 }
@@ -370,7 +408,7 @@ ASM_FUNCTION(daDoorPush_MoveBGExecute__FP12daDoorPush_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoorPush_MoveBGDraw__FP12daDoorPush_c) {
+asm void daDoorPush_MoveBGDraw(daDoorPush_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/daDoorPush_MoveBGDraw__FP12daDoorPush_c.s"
 }
@@ -381,7 +419,7 @@ ASM_FUNCTION(daDoorPush_MoveBGDraw__FP12daDoorPush_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80678EA8) {
+extern "C" asm void func_80678EA8() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_push/d_a_door_push/func_80678EA8.s"
 }

@@ -6,23 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMirror6Pole_c;
+
+struct daObjMirror6Pole_c {
+	void initWait();
+	void executeWait();
+	void initDemo();
+	void executeDemo();
+	void setBaseMtx();
+	void createHeapCallBack(fopAc_ac_c*);
+	void CreateHeap();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initWait__18daObjMirror6Pole_cFv();
-extern "C" extern void executeWait__18daObjMirror6Pole_cFv();
-extern "C" extern void initDemo__18daObjMirror6Pole_cFv();
-extern "C" extern void executeDemo__18daObjMirror6Pole_cFv();
-extern "C" extern void setBaseMtx__18daObjMirror6Pole_cFv();
-extern "C" extern void createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__18daObjMirror6Pole_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjMirror6Pole_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c();
-extern "C" extern void daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c();
-extern "C" extern void daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c();
-extern "C" extern void daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c();
-extern "C" extern void __sinit_d_a_obj_mirror_6pole_cpp();
+void daObjMirror6Pole_Create(fopAc_ac_c*);
+void daObjMirror6Pole_Delete(daObjMirror6Pole_c*);
+void daObjMirror6Pole_Execute(daObjMirror6Pole_c*);
+void daObjMirror6Pole_Draw(daObjMirror6Pole_c*);
+bool daObjMirror6Pole_IsDelete(daObjMirror6Pole_c*);
+extern "C" void __sinit_d_a_obj_mirror_6pole_cpp();
+
+extern "C" void initWait__18daObjMirror6Pole_cFv();
+extern "C" void executeWait__18daObjMirror6Pole_cFv();
+extern "C" void initDemo__18daObjMirror6Pole_cFv();
+extern "C" void executeDemo__18daObjMirror6Pole_cFv();
+extern "C" void setBaseMtx__18daObjMirror6Pole_cFv();
+extern "C" void createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__18daObjMirror6Pole_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjMirror6Pole_Create__FP10fopAc_ac_c();
+extern "C" void daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c();
+extern "C" void daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c();
+extern "C" void daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c();
+extern "C" bool daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c();
+extern "C" void __sinit_d_a_obj_mirror_6pole_cpp();
 SECTION_RODATA extern const u8 lit_3630[4];
 SECTION_RODATA extern const u32 lit_3755;
 SECTION_RODATA extern const u8 lit_3757[8];
@@ -44,7 +75,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +87,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__18daObjMirror6Pole_cFv) {
+asm void daObjMirror6Pole_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/initWait__18daObjMirror6Pole_cFv.s"
 }
@@ -65,7 +98,7 @@ ASM_FUNCTION(initWait__18daObjMirror6Pole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__18daObjMirror6Pole_cFv) {
+asm void daObjMirror6Pole_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/executeWait__18daObjMirror6Pole_cFv.s"
 }
@@ -73,21 +106,16 @@ ASM_FUNCTION(executeWait__18daObjMirror6Pole_cFv) {
 
 
 /* 80C95E88-80C95E8C 0004+00 .text      initDemo__18daObjMirror6Pole_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(initDemo__18daObjMirror6Pole_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/initDemo__18daObjMirror6Pole_cFv.s"
+void daObjMirror6Pole_c::initDemo() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C95E8C-80C95EFC 0070+00 .text      executeDemo__18daObjMirror6Pole_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemo__18daObjMirror6Pole_cFv) {
+asm void daObjMirror6Pole_c::executeDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/executeDemo__18daObjMirror6Pole_cFv.s"
 }
@@ -98,7 +126,7 @@ ASM_FUNCTION(executeDemo__18daObjMirror6Pole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__18daObjMirror6Pole_cFv) {
+asm void daObjMirror6Pole_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/setBaseMtx__18daObjMirror6Pole_cFv.s"
 }
@@ -109,7 +137,7 @@ ASM_FUNCTION(setBaseMtx__18daObjMirror6Pole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c) {
+asm void daObjMirror6Pole_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/func_80C95F50.s"
 }
@@ -120,7 +148,7 @@ ASM_FUNCTION(createHeapCallBack__18daObjMirror6Pole_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__18daObjMirror6Pole_cFv) {
+asm void daObjMirror6Pole_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/CreateHeap__18daObjMirror6Pole_cFv.s"
 }
@@ -131,7 +159,7 @@ ASM_FUNCTION(CreateHeap__18daObjMirror6Pole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/__dt__12J3DFrameCtrlFv.s"
 }
@@ -142,7 +170,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirror6Pole_Create__FP10fopAc_ac_c) {
+asm void daObjMirror6Pole_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_Create__FP10fopAc_ac_c.s"
 }
@@ -153,7 +181,7 @@ ASM_FUNCTION(daObjMirror6Pole_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c) {
+asm void daObjMirror6Pole_Delete(daObjMirror6Pole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c.s"
 }
@@ -164,7 +192,7 @@ ASM_FUNCTION(daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c) {
+asm void daObjMirror6Pole_Execute(daObjMirror6Pole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c.s"
 }
@@ -175,7 +203,7 @@ ASM_FUNCTION(daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c) {
+asm void daObjMirror6Pole_Draw(daObjMirror6Pole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c.s"
 }
@@ -183,21 +211,16 @@ ASM_FUNCTION(daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c) {
 
 
 /* 80C9648C-80C96494 0008+00 .text      daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c.s"
+bool daObjMirror6Pole_IsDelete(daObjMirror6Pole_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C96494-80C96504 0070+00 .text      __sinit_d_a_obj_mirror_6pole_cpp                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_mirror_6pole_cpp) {
+extern "C" asm void __sinit_d_a_obj_mirror_6pole_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/__sinit_d_a_obj_mirror_6pole_cpp.s"
 }

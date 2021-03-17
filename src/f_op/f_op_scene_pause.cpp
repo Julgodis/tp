@@ -6,45 +6,62 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopScnPause_Enable__FP11scene_class();
-extern "C" extern void fopScnPause_Disable__FP11scene_class();
+void fopScnPause_Enable(scene_class*);
+void fopScnPause_Disable(scene_class*);
+
+extern "C" void fopScnPause_Enable__FP11scene_class();
+extern "C" void fopScnPause_Disable__FP11scene_class();
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcEx_IsExist__FUi();
-extern "C" extern void fpcM_IsPause__FPvUc();
-extern "C" extern void fpcM_PauseEnable__FPvUc();
-extern "C" extern void fpcM_PauseDisable__FPvUc();
+void fpcEx_IsExist(s32);
+void fpcM_IsPause(void*, char);
+void fpcM_PauseEnable(void*, char);
+void fpcM_PauseDisable(void*, char);
+
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcM_IsPause__FPvUc();
+extern "C" void fpcM_PauseEnable__FPvUc();
+extern "C" void fpcM_PauseDisable__FPvUc();
 
 // 
 // Declarations:
 // 
 
-/* 80020548-80020594 004C+00 .text      fopScnPause_Enable__FP11scene_class                          */
+/* 80020548-80020594 004C+00 rc=2 efc=2 .text      fopScnPause_Enable__FP11scene_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnPause_Enable__FP11scene_class) {
+asm void fopScnPause_Enable(scene_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_pause/fopScnPause_Enable__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 80020594-8002064C 00B8+00 .text      fopScnPause_Disable__FP11scene_class                         */
+/* 80020594-8002064C 00B8+00 rc=2 efc=2 .text      fopScnPause_Disable__FP11scene_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnPause_Disable__FP11scene_class) {
+asm void fopScnPause_Disable(scene_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_pause/fopScnPause_Disable__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

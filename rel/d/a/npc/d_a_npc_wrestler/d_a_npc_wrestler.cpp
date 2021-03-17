@@ -6,123 +6,318 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daNpcWrestler_c {
+	daNpcWrestler_c();
+	~daNpcWrestler_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void checkStartUp();
+	void setExpressionAnm(s32, bool);
+	void setExpressionBtp(s32);
+	void setMotionAnm(s32, f32);
+	void reset();
+	void checkArenaInfo();
+	void checkArenaSub(fopAc_ac_c*);
+	void setOnToArena(f32);
+	void wait(void*);
+	void setMotion(s32, f32, s32);
+	void setExpression(s32, f32);
+	void talk(void*);
+	void demo(void*);
+	void gotoArena(void*);
+	void gotoLiving(void*);
+	void sumouReady(void*);
+	void sumouWait(void*);
+	void checkOutOfArenaP();
+	void setNextAction();
+	void sumouPunchHit(void*);
+	void sumouPunchChaseHit(void*);
+	void sumouPunchMiss(void*);
+	void checkOutOfArenaW();
+	void getJointPos(s32);
+	void sumouPunchDraw(void*);
+	void sumouTackleHit(void*);
+	void sumouTackleMiss(void*);
+	void sumouTackleDraw(void*);
+	void sumouSideStep(void*);
+	void sumouLostBalance(void*);
+	void sumouPunchShock(void*);
+	void sumouPunchChaseShock(void*);
+	void sumouPunchStagger(void*);
+	void sumouTackleShock(void*);
+	void sumouTackleStagger(void*);
+	void sumouTackleStaggerRelease(void*);
+	void sumouTacklePush(void*);
+	void sumouTackleRelease(void*);
+	void demoSumouReady(void*);
+	void demoSumouWin(void*);
+	void demoSumouLose(void*);
+	void demoSumouWin2(void*);
+	void demoSumouLose2(void*);
+	void demoSumouUnilateralWin(void*);
+	void demoTalkAfterLose(void*);
+	void EvCut_grDSEntry(s32);
+	void EvCut_grDSEntry2(s32);
+	void EvCut_grDSEntry3_4(s32);
+	void EvCut_grDSEntry5(s32);
+	void EvCut_grDSLose(s32);
+	void setParam();
+	void main();
+	void setWrestlerVoice();
+	void playMotion();
+	void ctrlBtk();
+	void setAttnPos();
+	void lookat();
+	bool drawDbgInfo();
+	void drawOtherMdls();
+	void adjustShapeAngle();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void setCollisions();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daTagArena_c {
+	void getArenaPos();
+};
+
+struct daPy_py_c {
+	void getRightFootPos() const;
+	void getLeftFootPos() const;
+};
+
+struct daNpcWrestler_Param_c {
+	~daNpcWrestler_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daNpcWrestler_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__15daNpcWrestler_cFv();
-extern "C" extern void Create__15daNpcWrestler_cFv();
-extern "C" extern void CreateHeap__15daNpcWrestler_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__15daNpcWrestler_cFv();
-extern "C" extern void Execute__15daNpcWrestler_cFv();
-extern "C" extern void Draw__15daNpcWrestler_cFv();
-extern "C" extern void ctrlJoint__15daNpcWrestler_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__15daNpcWrestler_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__15daNpcWrestler_cFP8J3DJointi();
-extern "C" extern void checkStartUp__15daNpcWrestler_cFv();
-extern "C" extern void setExpressionAnm__15daNpcWrestler_cFib();
-extern "C" extern void setExpressionBtp__15daNpcWrestler_cFi();
-extern "C" extern void setMotionAnm__15daNpcWrestler_cFif();
-extern "C" extern void reset__15daNpcWrestler_cFv();
-extern "C" extern void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b();
-extern "C" extern void s_sub1__FPvPv();
-extern "C" extern void checkArenaInfo__15daNpcWrestler_cFv();
-extern "C" extern void checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c();
-extern "C" extern void s_sub2__FPvPv();
-extern "C" extern void setOnToArena__15daNpcWrestler_cFf();
-extern "C" extern void wait__15daNpcWrestler_cFPv();
-extern "C" extern void setMotion__15daNpcWrestler_cFifi();
-extern "C" extern void setExpression__15daNpcWrestler_cFif();
-extern "C" extern void talk__15daNpcWrestler_cFPv();
-extern "C" extern void demo__15daNpcWrestler_cFPv();
-extern "C" extern void gotoArena__15daNpcWrestler_cFPv();
-extern "C" extern void gotoLiving__15daNpcWrestler_cFPv();
-extern "C" extern void sumouReady__15daNpcWrestler_cFPv();
-extern "C" extern void sumouWait__15daNpcWrestler_cFPv();
-extern "C" extern void checkOutOfArenaP__15daNpcWrestler_cFv();
-extern "C" extern void setNextAction__15daNpcWrestler_cFv();
-extern "C" extern void sumouPunchHit__15daNpcWrestler_cFPv();
-extern "C" extern void sumouPunchChaseHit__15daNpcWrestler_cFPv();
-extern "C" extern void sumouPunchMiss__15daNpcWrestler_cFPv();
-extern "C" extern void checkOutOfArenaW__15daNpcWrestler_cFv();
-extern "C" extern void getJointPos__15daNpcWrestler_cFi();
-extern "C" extern void sumouPunchDraw__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleHit__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleMiss__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleDraw__15daNpcWrestler_cFPv();
-extern "C" extern void sumouSideStep__15daNpcWrestler_cFPv();
-extern "C" extern void sumouLostBalance__15daNpcWrestler_cFPv();
-extern "C" extern void sumouPunchShock__15daNpcWrestler_cFPv();
-extern "C" extern void sumouPunchChaseShock__15daNpcWrestler_cFPv();
-extern "C" extern void sumouPunchStagger__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleShock__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleStagger__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleStaggerRelease__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTacklePush__15daNpcWrestler_cFPv();
-extern "C" extern void sumouTackleRelease__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouReady__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouWin__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouLose__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouWin2__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouLose2__15daNpcWrestler_cFPv();
-extern "C" extern void demoSumouUnilateralWin__15daNpcWrestler_cFPv();
-extern "C" extern void demoTalkAfterLose__15daNpcWrestler_cFPv();
-extern "C" extern void EvCut_grDSEntry__15daNpcWrestler_cFi();
-extern "C" extern void EvCut_grDSEntry2__15daNpcWrestler_cFi();
-extern "C" extern void EvCut_grDSEntry3_4__15daNpcWrestler_cFi();
-extern "C" extern void EvCut_grDSEntry5__15daNpcWrestler_cFi();
-extern "C" extern void EvCut_grDSLose__15daNpcWrestler_cFi();
-extern "C" extern void daNpcWrestler_Create__FPv();
-extern "C" extern void daNpcWrestler_Delete__FPv();
-extern "C" extern void daNpcWrestler_Execute__FPv();
-extern "C" extern void daNpcWrestler_Draw__FPv();
-extern "C" extern void daNpcWrestler_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void setParam__15daNpcWrestler_cFv();
-extern "C" extern void main__15daNpcWrestler_cFv();
-extern "C" extern void setWrestlerVoice__15daNpcWrestler_cFv();
-extern "C" extern void playMotion__15daNpcWrestler_cFv();
-extern "C" extern void ctrlBtk__15daNpcWrestler_cFv();
-extern "C" extern void setAttnPos__15daNpcWrestler_cFv();
-extern "C" extern void lookat__15daNpcWrestler_cFv();
-extern "C" extern void drawDbgInfo__15daNpcWrestler_cFv();
-extern "C" extern void drawOtherMdls__15daNpcWrestler_cFv();
-extern "C" extern void func_80B40D28();
-extern "C" extern void __sinit_d_a_npc_wrestler_cpp();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void getArenaPos__12daTagArena_cFv();
-extern "C" extern void getRightFootPos__9daPy_py_cCFv();
-extern "C" extern void getLeftFootPos__9daPy_py_cCFv();
-extern "C" extern void adjustShapeAngle__15daNpcWrestler_cFv();
-extern "C" extern void __dt__21daNpcWrestler_Param_cFv();
-extern "C" extern void func_80B416B8();
-extern "C" extern void func_80B416C0();
+extern "C" void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b();
+void s_sub1(void*, void*);
+void s_sub2(void*, void*);
+void daNpcWrestler_Create(void*);
+void daNpcWrestler_Delete(void*);
+void daNpcWrestler_Execute(void*);
+void daNpcWrestler_Draw(void*);
+bool daNpcWrestler_IsDelete(void*);
+extern "C" void func_80B40D28();
+extern "C" void __sinit_d_a_npc_wrestler_cpp();
+extern "C" void func_80B416B8();
+extern "C" void func_80B416C0();
+
+extern "C" void __ct__15daNpcWrestler_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__15daNpcWrestler_cFv();
+extern "C" void Create__15daNpcWrestler_cFv();
+extern "C" void CreateHeap__15daNpcWrestler_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__15daNpcWrestler_cFv();
+extern "C" void Execute__15daNpcWrestler_cFv();
+extern "C" void Draw__15daNpcWrestler_cFv();
+extern "C" void ctrlJoint__15daNpcWrestler_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__15daNpcWrestler_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__15daNpcWrestler_cFP8J3DJointi();
+extern "C" void checkStartUp__15daNpcWrestler_cFv();
+extern "C" void setExpressionAnm__15daNpcWrestler_cFib();
+extern "C" void setExpressionBtp__15daNpcWrestler_cFi();
+extern "C" void setMotionAnm__15daNpcWrestler_cFif();
+extern "C" void reset__15daNpcWrestler_cFv();
+extern "C" void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b();
+extern "C" void s_sub1__FPvPv();
+extern "C" void checkArenaInfo__15daNpcWrestler_cFv();
+extern "C" void checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c();
+extern "C" void s_sub2__FPvPv();
+extern "C" void setOnToArena__15daNpcWrestler_cFf();
+extern "C" void wait__15daNpcWrestler_cFPv();
+extern "C" void setMotion__15daNpcWrestler_cFifi();
+extern "C" void setExpression__15daNpcWrestler_cFif();
+extern "C" void talk__15daNpcWrestler_cFPv();
+extern "C" void demo__15daNpcWrestler_cFPv();
+extern "C" void gotoArena__15daNpcWrestler_cFPv();
+extern "C" void gotoLiving__15daNpcWrestler_cFPv();
+extern "C" void sumouReady__15daNpcWrestler_cFPv();
+extern "C" void sumouWait__15daNpcWrestler_cFPv();
+extern "C" void checkOutOfArenaP__15daNpcWrestler_cFv();
+extern "C" void setNextAction__15daNpcWrestler_cFv();
+extern "C" void sumouPunchHit__15daNpcWrestler_cFPv();
+extern "C" void sumouPunchChaseHit__15daNpcWrestler_cFPv();
+extern "C" void sumouPunchMiss__15daNpcWrestler_cFPv();
+extern "C" void checkOutOfArenaW__15daNpcWrestler_cFv();
+extern "C" void getJointPos__15daNpcWrestler_cFi();
+extern "C" void sumouPunchDraw__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleHit__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleMiss__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleDraw__15daNpcWrestler_cFPv();
+extern "C" void sumouSideStep__15daNpcWrestler_cFPv();
+extern "C" void sumouLostBalance__15daNpcWrestler_cFPv();
+extern "C" void sumouPunchShock__15daNpcWrestler_cFPv();
+extern "C" void sumouPunchChaseShock__15daNpcWrestler_cFPv();
+extern "C" void sumouPunchStagger__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleShock__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleStagger__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleStaggerRelease__15daNpcWrestler_cFPv();
+extern "C" void sumouTacklePush__15daNpcWrestler_cFPv();
+extern "C" void sumouTackleRelease__15daNpcWrestler_cFPv();
+extern "C" void demoSumouReady__15daNpcWrestler_cFPv();
+extern "C" void demoSumouWin__15daNpcWrestler_cFPv();
+extern "C" void demoSumouLose__15daNpcWrestler_cFPv();
+extern "C" void demoSumouWin2__15daNpcWrestler_cFPv();
+extern "C" void demoSumouLose2__15daNpcWrestler_cFPv();
+extern "C" void demoSumouUnilateralWin__15daNpcWrestler_cFPv();
+extern "C" void demoTalkAfterLose__15daNpcWrestler_cFPv();
+extern "C" void EvCut_grDSEntry__15daNpcWrestler_cFi();
+extern "C" void EvCut_grDSEntry2__15daNpcWrestler_cFi();
+extern "C" void EvCut_grDSEntry3_4__15daNpcWrestler_cFi();
+extern "C" void EvCut_grDSEntry5__15daNpcWrestler_cFi();
+extern "C" void EvCut_grDSLose__15daNpcWrestler_cFi();
+extern "C" void daNpcWrestler_Create__FPv();
+extern "C" void daNpcWrestler_Delete__FPv();
+extern "C" void daNpcWrestler_Execute__FPv();
+extern "C" void daNpcWrestler_Draw__FPv();
+extern "C" bool daNpcWrestler_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void setParam__15daNpcWrestler_cFv();
+extern "C" void main__15daNpcWrestler_cFv();
+extern "C" void setWrestlerVoice__15daNpcWrestler_cFv();
+extern "C" void playMotion__15daNpcWrestler_cFv();
+extern "C" void ctrlBtk__15daNpcWrestler_cFv();
+extern "C" void setAttnPos__15daNpcWrestler_cFv();
+extern "C" void lookat__15daNpcWrestler_cFv();
+extern "C" bool drawDbgInfo__15daNpcWrestler_cFv();
+extern "C" void drawOtherMdls__15daNpcWrestler_cFv();
+extern "C" void func_80B40D28();
+extern "C" void __sinit_d_a_npc_wrestler_cpp();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void getArenaPos__12daTagArena_cFv();
+extern "C" void getRightFootPos__9daPy_py_cCFv();
+extern "C" void getLeftFootPos__9daPy_py_cCFv();
+extern "C" void adjustShapeAngle__15daNpcWrestler_cFv();
+extern "C" void __dt__21daNpcWrestler_Param_cFv();
+extern "C" void func_80B416B8();
+extern "C" void func_80B416C0();
 SECTION_RODATA extern const u8 m__21daNpcWrestler_Param_c[404];
 SECTION_RODATA extern const u32 lit_4358;
 SECTION_RODATA extern const u32 lit_4359;
@@ -453,8 +648,11 @@ SECTION_BSS extern u8 data_80B42E38[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -464,7 +662,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daNpcWrestler_cFv) {
+asm daNpcWrestler_c::daNpcWrestler_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__15daNpcWrestler_cFv.s"
 }
@@ -475,7 +673,7 @@ ASM_FUNCTION(__ct__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__8cM3dGCylFv.s"
 }
@@ -486,7 +684,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__8cM3dGAabFv.s"
 }
@@ -497,7 +695,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcWrestler_cFv) {
+asm daNpcWrestler_c::~daNpcWrestler_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__15daNpcWrestler_cFv.s"
 }
@@ -508,7 +706,7 @@ ASM_FUNCTION(__dt__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/Create__15daNpcWrestler_cFv.s"
 }
@@ -519,7 +717,7 @@ ASM_FUNCTION(Create__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/CreateHeap__15daNpcWrestler_cFv.s"
 }
@@ -530,7 +728,7 @@ ASM_FUNCTION(CreateHeap__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -541,7 +739,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -552,7 +750,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__14J3DTevColorAnmFv.s"
 }
@@ -563,7 +761,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__14J3DTevColorAnmFv.s"
 }
@@ -574,7 +772,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__11J3DTexNoAnmFv.s"
 }
@@ -585,7 +783,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__11J3DTexNoAnmFv.s"
 }
@@ -596,7 +794,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -607,7 +805,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -618,7 +816,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__14J3DMatColorAnmFv.s"
 }
@@ -629,7 +827,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__14J3DMatColorAnmFv.s"
 }
@@ -640,7 +838,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/Delete__15daNpcWrestler_cFv.s"
 }
@@ -651,7 +849,7 @@ ASM_FUNCTION(Delete__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/Execute__15daNpcWrestler_cFv.s"
 }
@@ -662,7 +860,7 @@ ASM_FUNCTION(Execute__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/Draw__15daNpcWrestler_cFv.s"
 }
@@ -673,7 +871,7 @@ ASM_FUNCTION(Draw__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__15daNpcWrestler_cFP8J3DJointP8J3DModel) {
+asm void daNpcWrestler_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/ctrlJoint__15daNpcWrestler_cFP8J3DJointP8J3DModel.s"
 }
@@ -684,7 +882,7 @@ ASM_FUNCTION(ctrlJoint__15daNpcWrestler_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__15daNpcWrestler_cFP10fopAc_ac_c) {
+asm void daNpcWrestler_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/createHeapCallBack__15daNpcWrestler_cFP10fopAc_ac_c.s"
 }
@@ -695,7 +893,7 @@ ASM_FUNCTION(createHeapCallBack__15daNpcWrestler_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__15daNpcWrestler_cFP8J3DJointi) {
+asm void daNpcWrestler_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/ctrlJointCallBack__15daNpcWrestler_cFP8J3DJointi.s"
 }
@@ -706,7 +904,7 @@ ASM_FUNCTION(ctrlJointCallBack__15daNpcWrestler_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkStartUp__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::checkStartUp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/checkStartUp__15daNpcWrestler_cFv.s"
 }
@@ -717,7 +915,7 @@ ASM_FUNCTION(checkStartUp__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__15daNpcWrestler_cFib) {
+asm void daNpcWrestler_c::setExpressionAnm(s32 field_0, bool field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setExpressionAnm__15daNpcWrestler_cFib.s"
 }
@@ -728,7 +926,7 @@ ASM_FUNCTION(setExpressionAnm__15daNpcWrestler_cFib) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::setExpressionBtp(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setExpressionBtp__15daNpcWrestler_cFi.s"
 }
@@ -739,7 +937,7 @@ ASM_FUNCTION(setExpressionBtp__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__15daNpcWrestler_cFif) {
+asm void daNpcWrestler_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setMotionAnm__15daNpcWrestler_cFif.s"
 }
@@ -750,7 +948,7 @@ ASM_FUNCTION(setMotionAnm__15daNpcWrestler_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/reset__15daNpcWrestler_cFv.s"
 }
@@ -761,7 +959,7 @@ ASM_FUNCTION(reset__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b) {
+extern "C" asm void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b.s"
 }
@@ -772,7 +970,7 @@ ASM_FUNCTION(setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub1__FPvPv) {
+asm void s_sub1(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/s_sub1__FPvPv.s"
 }
@@ -783,7 +981,7 @@ ASM_FUNCTION(s_sub1__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArenaInfo__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::checkArenaInfo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/checkArenaInfo__15daNpcWrestler_cFv.s"
 }
@@ -794,7 +992,7 @@ ASM_FUNCTION(checkArenaInfo__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c) {
+asm void daNpcWrestler_c::checkArenaSub(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c.s"
 }
@@ -805,7 +1003,7 @@ ASM_FUNCTION(checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub2__FPvPv) {
+asm void s_sub2(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/s_sub2__FPvPv.s"
 }
@@ -816,7 +1014,7 @@ ASM_FUNCTION(s_sub2__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOnToArena__15daNpcWrestler_cFf) {
+asm void daNpcWrestler_c::setOnToArena(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setOnToArena__15daNpcWrestler_cFf.s"
 }
@@ -827,7 +1025,7 @@ ASM_FUNCTION(setOnToArena__15daNpcWrestler_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/wait__15daNpcWrestler_cFPv.s"
 }
@@ -838,7 +1036,7 @@ ASM_FUNCTION(wait__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__15daNpcWrestler_cFifi) {
+asm void daNpcWrestler_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setMotion__15daNpcWrestler_cFifi.s"
 }
@@ -849,7 +1047,7 @@ ASM_FUNCTION(setMotion__15daNpcWrestler_cFifi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpression__15daNpcWrestler_cFif) {
+asm void daNpcWrestler_c::setExpression(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setExpression__15daNpcWrestler_cFif.s"
 }
@@ -860,7 +1058,7 @@ ASM_FUNCTION(setExpression__15daNpcWrestler_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/talk__15daNpcWrestler_cFPv.s"
 }
@@ -871,7 +1069,7 @@ ASM_FUNCTION(talk__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demo__15daNpcWrestler_cFPv.s"
 }
@@ -882,7 +1080,7 @@ ASM_FUNCTION(demo__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(gotoArena__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::gotoArena(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/gotoArena__15daNpcWrestler_cFPv.s"
 }
@@ -893,7 +1091,7 @@ ASM_FUNCTION(gotoArena__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(gotoLiving__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::gotoLiving(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/gotoLiving__15daNpcWrestler_cFPv.s"
 }
@@ -904,7 +1102,7 @@ ASM_FUNCTION(gotoLiving__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouReady__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouReady(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouReady__15daNpcWrestler_cFPv.s"
 }
@@ -915,7 +1113,7 @@ ASM_FUNCTION(sumouReady__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouWait__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouWait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouWait__15daNpcWrestler_cFPv.s"
 }
@@ -926,7 +1124,7 @@ ASM_FUNCTION(sumouWait__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOutOfArenaP__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::checkOutOfArenaP() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/checkOutOfArenaP__15daNpcWrestler_cFv.s"
 }
@@ -937,7 +1135,7 @@ ASM_FUNCTION(checkOutOfArenaP__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextAction__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::setNextAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setNextAction__15daNpcWrestler_cFv.s"
 }
@@ -948,7 +1146,7 @@ ASM_FUNCTION(setNextAction__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchHit__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchHit(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchHit__15daNpcWrestler_cFPv.s"
 }
@@ -959,7 +1157,7 @@ ASM_FUNCTION(sumouPunchHit__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchChaseHit__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchChaseHit(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchChaseHit__15daNpcWrestler_cFPv.s"
 }
@@ -970,7 +1168,7 @@ ASM_FUNCTION(sumouPunchChaseHit__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchMiss__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchMiss(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchMiss__15daNpcWrestler_cFPv.s"
 }
@@ -981,7 +1179,7 @@ ASM_FUNCTION(sumouPunchMiss__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOutOfArenaW__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::checkOutOfArenaW() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/checkOutOfArenaW__15daNpcWrestler_cFv.s"
 }
@@ -992,7 +1190,7 @@ ASM_FUNCTION(checkOutOfArenaW__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJointPos__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::getJointPos(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/getJointPos__15daNpcWrestler_cFi.s"
 }
@@ -1003,7 +1201,7 @@ ASM_FUNCTION(getJointPos__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchDraw__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchDraw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchDraw__15daNpcWrestler_cFPv.s"
 }
@@ -1014,7 +1212,7 @@ ASM_FUNCTION(sumouPunchDraw__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleHit__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleHit(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleHit__15daNpcWrestler_cFPv.s"
 }
@@ -1025,7 +1223,7 @@ ASM_FUNCTION(sumouTackleHit__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleMiss__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleMiss(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleMiss__15daNpcWrestler_cFPv.s"
 }
@@ -1036,7 +1234,7 @@ ASM_FUNCTION(sumouTackleMiss__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleDraw__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleDraw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleDraw__15daNpcWrestler_cFPv.s"
 }
@@ -1047,7 +1245,7 @@ ASM_FUNCTION(sumouTackleDraw__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouSideStep__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouSideStep(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouSideStep__15daNpcWrestler_cFPv.s"
 }
@@ -1058,7 +1256,7 @@ ASM_FUNCTION(sumouSideStep__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouLostBalance__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouLostBalance(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouLostBalance__15daNpcWrestler_cFPv.s"
 }
@@ -1069,7 +1267,7 @@ ASM_FUNCTION(sumouLostBalance__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchShock__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchShock(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchShock__15daNpcWrestler_cFPv.s"
 }
@@ -1080,7 +1278,7 @@ ASM_FUNCTION(sumouPunchShock__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchChaseShock__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchChaseShock(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchChaseShock__15daNpcWrestler_cFPv.s"
 }
@@ -1091,7 +1289,7 @@ ASM_FUNCTION(sumouPunchChaseShock__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouPunchStagger__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouPunchStagger(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouPunchStagger__15daNpcWrestler_cFPv.s"
 }
@@ -1102,7 +1300,7 @@ ASM_FUNCTION(sumouPunchStagger__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleShock__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleShock(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleShock__15daNpcWrestler_cFPv.s"
 }
@@ -1113,7 +1311,7 @@ ASM_FUNCTION(sumouTackleShock__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleStagger__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleStagger(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleStagger__15daNpcWrestler_cFPv.s"
 }
@@ -1124,7 +1322,7 @@ ASM_FUNCTION(sumouTackleStagger__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleStaggerRelease__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleStaggerRelease(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleStaggerRelease__15daNpcWrestler_cFPv.s"
 }
@@ -1135,7 +1333,7 @@ ASM_FUNCTION(sumouTackleStaggerRelease__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTacklePush__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTacklePush(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTacklePush__15daNpcWrestler_cFPv.s"
 }
@@ -1146,7 +1344,7 @@ ASM_FUNCTION(sumouTacklePush__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sumouTackleRelease__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::sumouTackleRelease(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/sumouTackleRelease__15daNpcWrestler_cFPv.s"
 }
@@ -1157,7 +1355,7 @@ ASM_FUNCTION(sumouTackleRelease__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouReady__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouReady(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouReady__15daNpcWrestler_cFPv.s"
 }
@@ -1168,7 +1366,7 @@ ASM_FUNCTION(demoSumouReady__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouWin__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouWin(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouWin__15daNpcWrestler_cFPv.s"
 }
@@ -1179,7 +1377,7 @@ ASM_FUNCTION(demoSumouWin__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouLose__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouLose(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouLose__15daNpcWrestler_cFPv.s"
 }
@@ -1190,7 +1388,7 @@ ASM_FUNCTION(demoSumouLose__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouWin2__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouWin2(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouWin2__15daNpcWrestler_cFPv.s"
 }
@@ -1201,7 +1399,7 @@ ASM_FUNCTION(demoSumouWin2__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouLose2__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouLose2(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouLose2__15daNpcWrestler_cFPv.s"
 }
@@ -1212,7 +1410,7 @@ ASM_FUNCTION(demoSumouLose2__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoSumouUnilateralWin__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoSumouUnilateralWin(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoSumouUnilateralWin__15daNpcWrestler_cFPv.s"
 }
@@ -1223,7 +1421,7 @@ ASM_FUNCTION(demoSumouUnilateralWin__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoTalkAfterLose__15daNpcWrestler_cFPv) {
+asm void daNpcWrestler_c::demoTalkAfterLose(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/demoTalkAfterLose__15daNpcWrestler_cFPv.s"
 }
@@ -1234,7 +1432,7 @@ ASM_FUNCTION(demoTalkAfterLose__15daNpcWrestler_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_grDSEntry__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::EvCut_grDSEntry(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/EvCut_grDSEntry__15daNpcWrestler_cFi.s"
 }
@@ -1245,7 +1443,7 @@ ASM_FUNCTION(EvCut_grDSEntry__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_grDSEntry2__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::EvCut_grDSEntry2(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/EvCut_grDSEntry2__15daNpcWrestler_cFi.s"
 }
@@ -1256,7 +1454,7 @@ ASM_FUNCTION(EvCut_grDSEntry2__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_grDSEntry3_4__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::EvCut_grDSEntry3_4(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/EvCut_grDSEntry3_4__15daNpcWrestler_cFi.s"
 }
@@ -1267,7 +1465,7 @@ ASM_FUNCTION(EvCut_grDSEntry3_4__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_grDSEntry5__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::EvCut_grDSEntry5(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/EvCut_grDSEntry5__15daNpcWrestler_cFi.s"
 }
@@ -1278,7 +1476,7 @@ ASM_FUNCTION(EvCut_grDSEntry5__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_grDSLose__15daNpcWrestler_cFi) {
+asm void daNpcWrestler_c::EvCut_grDSLose(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/EvCut_grDSLose__15daNpcWrestler_cFi.s"
 }
@@ -1289,7 +1487,7 @@ ASM_FUNCTION(EvCut_grDSLose__15daNpcWrestler_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcWrestler_Create__FPv) {
+asm void daNpcWrestler_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_Create__FPv.s"
 }
@@ -1300,7 +1498,7 @@ ASM_FUNCTION(daNpcWrestler_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcWrestler_Delete__FPv) {
+asm void daNpcWrestler_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_Delete__FPv.s"
 }
@@ -1311,7 +1509,7 @@ ASM_FUNCTION(daNpcWrestler_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcWrestler_Execute__FPv) {
+asm void daNpcWrestler_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_Execute__FPv.s"
 }
@@ -1322,7 +1520,7 @@ ASM_FUNCTION(daNpcWrestler_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcWrestler_Draw__FPv) {
+asm void daNpcWrestler_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_Draw__FPv.s"
 }
@@ -1330,21 +1528,16 @@ ASM_FUNCTION(daNpcWrestler_Draw__FPv) {
 
 
 /* 80B3EAAC-80B3EAB4 0008+00 .text      daNpcWrestler_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcWrestler_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_IsDelete__FPv.s"
+bool daNpcWrestler_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B3EAB4-80B3EAE4 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -1355,7 +1548,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setParam__15daNpcWrestler_cFv.s"
 }
@@ -1366,7 +1559,7 @@ ASM_FUNCTION(setParam__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/main__15daNpcWrestler_cFv.s"
 }
@@ -1377,7 +1570,7 @@ ASM_FUNCTION(main__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWrestlerVoice__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::setWrestlerVoice() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setWrestlerVoice__15daNpcWrestler_cFv.s"
 }
@@ -1388,7 +1581,7 @@ ASM_FUNCTION(setWrestlerVoice__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/playMotion__15daNpcWrestler_cFv.s"
 }
@@ -1399,7 +1592,7 @@ ASM_FUNCTION(playMotion__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::ctrlBtk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/ctrlBtk__15daNpcWrestler_cFv.s"
 }
@@ -1410,7 +1603,7 @@ ASM_FUNCTION(ctrlBtk__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setAttnPos__15daNpcWrestler_cFv.s"
 }
@@ -1421,7 +1614,7 @@ ASM_FUNCTION(setAttnPos__15daNpcWrestler_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__15daNpcWrestler_cFv) {
+asm void daNpcWrestler_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/lookat__15daNpcWrestler_cFv.s"
 }
@@ -1429,32 +1622,22 @@ ASM_FUNCTION(lookat__15daNpcWrestler_cFv) {
 
 
 /* 80B40D1C-80B40D24 0008+00 .text      drawDbgInfo__15daNpcWrestler_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__15daNpcWrestler_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/drawDbgInfo__15daNpcWrestler_cFv.s"
+bool daNpcWrestler_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B40D24-80B40D28 0004+00 .text      drawOtherMdls__15daNpcWrestler_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__15daNpcWrestler_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/drawOtherMdls__15daNpcWrestler_cFv.s"
+void daNpcWrestler_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B40D28-80B40D34 000C+00 .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B40D28) {
+extern "C" asm void func_80B40D28() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/func_80B40D28.s"
 }
@@ -1465,7 +1648,7 @@ ASM_FUNCTION(func_80B40D28) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_wrestler_cpp) {
+extern "C" asm void __sinit_d_a_npc_wrestler_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__sinit_d_a_npc_wrestler_cpp.s"
 }
@@ -1476,7 +1659,7 @@ ASM_FUNCTION(__sinit_d_a_npc_wrestler_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1487,7 +1670,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1498,7 +1681,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -1509,7 +1692,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__5csXyzFv.s"
 }
@@ -1517,21 +1700,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80B40FC8-80B40FCC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B40FCC-80B41008 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__4cXyzFv.s"
 }
@@ -1539,21 +1717,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80B41008-80B4100C 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B4100C-80B41258 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__8daNpcF_cFv.s"
 }
@@ -1564,7 +1737,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__8daNpcF_cFv.s"
 }
@@ -1575,7 +1748,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1586,7 +1759,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__10dCcD_GSttsFv.s"
 }
@@ -1597,7 +1770,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1608,7 +1781,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1616,21 +1789,16 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80B415CC-80B415D0 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B415D0-80B41618 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__10cCcD_GSttsFv.s"
 }
@@ -1641,7 +1809,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArenaPos__12daTagArena_cFv) {
+asm void daTagArena_c::getArenaPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/getArenaPos__12daTagArena_cFv.s"
 }
@@ -1652,7 +1820,7 @@ ASM_FUNCTION(getArenaPos__12daTagArena_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRightFootPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getRightFootPos() const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/getRightFootPos__9daPy_py_cCFv.s"
 }
@@ -1663,7 +1831,7 @@ ASM_FUNCTION(getRightFootPos__9daPy_py_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftFootPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getLeftFootPos() const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/getLeftFootPos__9daPy_py_cCFv.s"
 }
@@ -1671,21 +1839,16 @@ ASM_FUNCTION(getLeftFootPos__9daPy_py_cCFv) {
 
 
 /* 80B4166C-80B41670 0004+00 .text      adjustShapeAngle__15daNpcWrestler_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__15daNpcWrestler_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/adjustShapeAngle__15daNpcWrestler_cFv.s"
+void daNpcWrestler_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B41670-80B416B8 0048+00 .text      __dt__21daNpcWrestler_Param_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daNpcWrestler_Param_cFv) {
+asm daNpcWrestler_Param_c::~daNpcWrestler_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__dt__21daNpcWrestler_Param_cFv.s"
 }
@@ -1696,7 +1859,7 @@ ASM_FUNCTION(__dt__21daNpcWrestler_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B416B8) {
+extern "C" asm void func_80B416B8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/func_80B416B8.s"
 }
@@ -1707,7 +1870,7 @@ ASM_FUNCTION(func_80B416B8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B416C0) {
+extern "C" asm void func_80B416C0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/func_80B416C0.s"
 }

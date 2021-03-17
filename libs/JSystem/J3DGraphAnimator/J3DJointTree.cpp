@@ -6,15 +6,93 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DJointTree (J3DJointTree) False/False
+// build J3DModelHierarchy (J3DModelHierarchy) False/False
+/* top-level dependencies (begin J3DModelHierarchy) */
+/* top-level dependencies (end J3DModelHierarchy) */
+struct J3DModelHierarchy {
+};
+
+// build J3DShapeTable (J3DShapeTable) False/False
+/* top-level dependencies (begin J3DShapeTable) */
+/* top-level dependencies (end J3DShapeTable) */
+struct J3DShapeTable {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+// build J3DJoint (J3DJoint) False/False
+/* top-level dependencies (begin J3DJoint) */
+/* top-level dependencies (end J3DJoint) */
+struct J3DJoint {
+	/* 8032F13C */ void appendChild(J3DJoint*);
+	/* 8032F3F8 */ void recursiveCalc();
+};
+
+/* top-level dependencies (begin J3DJointTree) */
+// outer dependency: J3DModelHierarchy
+// outer dependency: J3DShapeTable
+// outer dependency: J3DMaterialTable
+// outer dependency: J3DJoint
+/* top-level dependencies (end J3DJointTree) */
+struct J3DJointTree {
+	// J3DModelHierarchy
+	// J3DShapeTable
+	// J3DMaterialTable
+	// J3DJoint
+	/* 80325A18 */ J3DJointTree();
+	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
+	/* 80325C00 */ void findImportantMtxIndex();
+	/* 80325D24 */ ~J3DJointTree();
+};
+
+// build J3DJoint (J3DJoint) True/True
+// build J3DModelHierarchy (J3DModelHierarchy) True/True
+// build J3DMaterialTable (J3DMaterialTable) True/True
+// build J3DShapeTable (J3DShapeTable) True/True
+// build J3DMtxCalc (J3DMtxCalc) False/False
+// build J3DMtxBuffer (J3DMtxBuffer) False/False
+/* top-level dependencies (begin J3DMtxBuffer) */
+/* top-level dependencies (end J3DMtxBuffer) */
+struct J3DMtxBuffer {
+};
+
+/* top-level dependencies (begin J3DMtxCalc) */
+// outer dependency: J3DMtxBuffer
+/* top-level dependencies (end J3DMtxCalc) */
+struct J3DMtxCalc {
+	// J3DMtxBuffer
+	/* 80325D1C */ void setMtxBuffer(J3DMtxBuffer*);
+};
+
+// build J3DMtxBuffer (J3DMtxBuffer) True/True
+// build J3DDrawMtxData (J3DDrawMtxData) False/False
+/* top-level dependencies (begin J3DDrawMtxData) */
+/* top-level dependencies (end J3DDrawMtxData) */
+struct J3DDrawMtxData {
+	/* 803115E0 */ J3DDrawMtxData();
+	/* 803115F4 */ ~J3DDrawMtxData();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12J3DJointTreeFv();
-extern "C" extern void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
-extern "C" extern void findImportantMtxIndex__12J3DJointTreeFv();
-extern "C" extern void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
-extern "C" extern void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer();
-extern "C" extern void __dt__12J3DJointTreeFv();
+extern "C" static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
+
+extern "C" void __ct__12J3DJointTreeFv();
+extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
+extern "C" void findImportantMtxIndex__12J3DJointTreeFv();
+extern "C" static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
+extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer();
+extern "C" void __dt__12J3DJointTreeFv();
 SECTION_DATA extern void*lit_871[19];
 SECTION_DATA extern void*const __vt__12J3DJointTree[5];
 SECTION_SDATA2 extern f32 lit_903;
@@ -23,13 +101,17 @@ SECTION_SDATA2 extern f32 lit_903;
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__14J3DDrawMtxDataFv();
-extern "C" extern void __dt__14J3DDrawMtxDataFv();
-extern "C" extern void appendChild__8J3DJointFP8J3DJoint();
-extern "C" extern void recursiveCalc__8J3DJointFv();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _restgpr_23();
+void operator delete(void*);
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+
+extern "C" void __dl__FPv();
+extern "C" void __ct__14J3DDrawMtxDataFv();
+extern "C" void __dt__14J3DDrawMtxDataFv();
+extern "C" void appendChild__8J3DJointFP8J3DJoint();
+extern "C" void recursiveCalc__8J3DJointFv();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
 SECTION_SBSS extern u8 mMtxBuffer__10J3DMtxCalc[4];
 SECTION_SBSS extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
@@ -38,7 +120,7 @@ SECTION_SBSS extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CECA8-803CECF4 004C+00 .data      @871                                                         */
+/* 803CECA8-803CECF4 004C+00 rc=1 efc=0 .data      @871                                                         */
 void* lit_871[19] = {
 	(void*)(((char*)makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable)+0x90),
 	(void*)(((char*)makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable)+0x60),
@@ -61,7 +143,7 @@ void* lit_871[19] = {
 	(void*)(((char*)makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable)+0xCC),
 };
 
-/* 803CECF4-803CED08 0010+04 .data      __vt__12J3DJointTree                                         */
+/* 803CECF4-803CED08 0010+04 rc=3 efc=1 .data      __vt__12J3DJointTree                                         */
 void* const __vt__12J3DJointTree[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -71,22 +153,22 @@ void* const __vt__12J3DJointTree[5] = {
 	NULL,
 };
 
-/* 80325A18-80325A9C 0084+00 .text      __ct__12J3DJointTreeFv                                       */
+/* 80325A18-80325A9C 0084+00 rc=1 efc=1 .text      __ct__12J3DJointTreeFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DJointTreeFv) {
+asm J3DJointTree::J3DJointTree() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/__ct__12J3DJointTreeFv.s"
 }
 #pragma pop
 
 
-/* 80325A9C-80325C00 0164+00 .text      makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable */
+/* 80325A9C-80325C00 0164+00 rc=3 efc=2 .text      makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable) {
+asm void J3DJointTree::makeHierarchy(J3DJoint* field_0, J3DModelHierarchy const** field_1, J3DMaterialTable* field_2, J3DShapeTable* field_3) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/func_80325A9C.s"
 }
@@ -94,52 +176,51 @@ ASM_FUNCTION(makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3
 
 
 /* ############################################################################################## */
-/* 80456418-80456420 0004+04 .sdata2    @903                                                         */
+/* 80456418-80456420 0004+04 rc=1 efc=0 .sdata2    @903                                                         */
 f32 lit_903 = -1.0f / 10.0f;
 /* padding 4 bytes */
 
-/* 80325C00-80325CAC 00AC+00 .text      findImportantMtxIndex__12J3DJointTreeFv                      */
+/* 80325C00-80325CAC 00AC+00 rc=2 efc=2 .text      findImportantMtxIndex__12J3DJointTreeFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(findImportantMtxIndex__12J3DJointTreeFv) {
+asm void J3DJointTree::findImportantMtxIndex() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/findImportantMtxIndex__12J3DJointTreeFv.s"
 }
 #pragma pop
 
 
-/* 80325CAC-80325D1C 0070+00 .text      calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf          */
+/* 80325CAC-80325D1C 0070+00 rc=1 efc=0 .text      calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf) {
+extern "C" asm static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf.s"
 }
 #pragma pop
 
 
-/* 80325D1C-80325D24 0008+00 .text      setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer                   */
+/* 80325D1C-80325D24 0008+00 rc=1 efc=0 .text      setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer) {
+asm void J3DMtxCalc::setMtxBuffer(J3DMtxBuffer* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer.s"
 }
 #pragma pop
 
 
-/* 80325D24-80325D88 0064+00 .text      __dt__12J3DJointTreeFv                                       */
+/* 80325D24-80325D88 0064+00 rc=1 efc=0 .text      __dt__12J3DJointTreeFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DJointTreeFv) {
+asm J3DJointTree::~J3DJointTree() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/__dt__12J3DJointTreeFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

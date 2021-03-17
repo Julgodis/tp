@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3fvb4data;
 
 // 
@@ -16,11 +17,13 @@ SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3fvb4data;
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80455450-80455458 0004+04 .sdata2    ga4cSignature__Q37JStudio3fvb4data                           */
+/* ############################################################################################## */
+/* 80455450-80455458 0004+04 rc=1 efc=1 .sdata2    ga4cSignature__Q37JStudio3fvb4data                           */
 u32 ga4cSignature__Q37JStudio3fvb4data = 0x46564200;
 /* padding 4 bytes */
 

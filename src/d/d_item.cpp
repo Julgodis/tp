@@ -6,394 +6,877 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+/* top-level dependencies (begin dComIfG_play_c) */
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	/* 8002B36C */ void setItemBombNumCount(char, s16);
+	/* 8002C97C */ void getLayerNo(s32);
+};
+
+// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
+/* top-level dependencies (begin dSv_player_status_a_c) */
+/* top-level dependencies (end dSv_player_status_a_c) */
+struct dSv_player_status_a_c {
+	/* 80032AF8 */ void isMagicFlag(char) const;
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(s32, char);
+	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033450 */ void setEmptyBottleItemIn(char);
+	/* 80033494 */ void setEmptyBottle();
+	/* 80033514 */ void setEmptyBottle(char);
+	/* 800336E0 */ void checkBottle(char);
+	/* 80033A20 */ void setEmptyBombBagItemIn(char, bool);
+	/* 80033A50 */ void setEmptyBombBagItemIn(char, char, bool);
+	/* 80033A88 */ void setEmptyBombBag();
+	/* 80033B08 */ void setEmptyBombBag(char, char);
+	/* 80033CBC */ void setRodTypeLevelUp();
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033E60 */ void onFirstBit(char);
+	/* 80033EC8 */ void isFirstBit(char) const;
+};
+
+// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
+/* top-level dependencies (begin dSv_player_item_record_c) */
+/* top-level dependencies (end dSv_player_item_record_c) */
+struct dSv_player_item_record_c {
+	/* 80033F7C */ void getBombNum(char) const;
+	/* 80033F8C */ void setBottleNum(char, char);
+};
+
+// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
+/* top-level dependencies (begin dSv_player_item_max_c) */
+/* top-level dependencies (end dSv_player_item_max_c) */
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(char) const;
+};
+
+// build dSv_player_collect_c (dSv_player_collect_c) False/False
+/* top-level dependencies (begin dSv_player_collect_c) */
+/* top-level dependencies (end dSv_player_collect_c) */
+struct dSv_player_collect_c {
+	/* 800341E8 */ void setCollect(s32, char);
+	/* 80034208 */ void isCollect(s32, char) const;
+};
+
+// build dSv_light_drop_c (dSv_light_drop_c) False/False
+/* top-level dependencies (begin dSv_light_drop_c) */
+/* top-level dependencies (end dSv_light_drop_c) */
+struct dSv_light_drop_c {
+	/* 80034368 */ void onLightDropGetFlag(char);
+	/* 8003439C */ void isLightDropGetFlag(char) const;
+};
+
+// build dSv_memBit_c (dSv_memBit_c) False/False
+/* top-level dependencies (begin dSv_memBit_c) */
+/* top-level dependencies (end dSv_memBit_c) */
+struct dSv_memBit_c {
+	/* 80034918 */ void onDungeonItem(s32);
+	/* 80034934 */ void isDungeonItem(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(s32, s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void execItemGet__FUc();
-extern "C" extern void checkItemGet__FUci();
-extern "C" extern void item_func_HEART__Fv();
-extern "C" extern void item_func_GREEN_RUPEE__Fv();
-extern "C" extern void item_func_BLUE_RUPEE__Fv();
-extern "C" extern void item_func_YELLOW_RUPEE__Fv();
-extern "C" extern void item_func_RED_RUPEE__Fv();
-extern "C" extern void item_func_PURPLE_RUPEE__Fv();
-extern "C" extern void item_func_ORANGE_RUPEE__Fv();
-extern "C" extern void item_func_SILVER_RUPEE__Fv();
-extern "C" extern void item_func_S_MAGIC__Fv();
-extern "C" extern void item_func_L_MAGIC__Fv();
-extern "C" extern void item_func_BOMB_5__Fv();
-extern "C" extern void item_func_BOMB_10__Fv();
-extern "C" extern void item_func_BOMB_20__Fv();
-extern "C" extern void item_func_BOMB_30__Fv();
-extern "C" extern void item_func_ARROW_10__Fv();
-extern "C" extern void item_func_ARROW_20__Fv();
-extern "C" extern void item_func_ARROW_30__Fv();
-extern "C" extern void item_func_ARROW_1__Fv();
-extern "C" extern void item_func_PACHINKO_SHOT__Fv();
-extern "C" extern void item_func_WATER_BOMB_5__Fv();
-extern "C" extern void item_func_WATER_BOMB_10__Fv();
-extern "C" extern void item_func_WATER_BOMB_20__Fv();
-extern "C" extern void item_func_WATER_BOMB_30__Fv();
-extern "C" extern void item_func_BOMB_INSECT_5__Fv();
-extern "C" extern void item_func_BOMB_INSECT_10__Fv();
-extern "C" extern void item_func_BOMB_INSECT_20__Fv();
-extern "C" extern void item_func_BOMB_INSECT_30__Fv();
-extern "C" extern void item_func_RECOVER_FAILY__Fv();
-extern "C" extern void item_func_TRIPLE_HEART__Fv();
-extern "C" extern void item_func_SMALL_KEY__Fv();
-extern "C" extern void item_func_KAKERA_HEART__Fv();
-extern "C" extern void item_func_UTUWA_HEART__Fv();
-extern "C" extern void item_func_MAP__Fv();
-extern "C" extern void item_func_COMPUS__Fv();
-extern "C" extern void item_func_DUNGEON_EXIT__Fv();
-extern "C" extern void item_func_BOSS_KEY__Fv();
-extern "C" extern void item_func_DUNGEON_BACK__Fv();
-extern "C" extern void item_func_SWORD__Fv();
-extern "C" extern void item_func_MASTER_SWORD__Fv();
-extern "C" extern void item_func_WOOD_SHIELD__Fv();
-extern "C" extern void item_func_SHIELD__Fv();
-extern "C" extern void item_func_HYLIA_SHIELD__Fv();
-extern "C" extern void item_func_TKS_LETTER__Fv();
-extern "C" extern void item_func_WEAR_CASUAL__Fv();
-extern "C" extern void item_func_WEAR_KOKIRI__Fv();
-extern "C" extern void item_func_ARMOR__Fv();
-extern "C" extern void item_func_WEAR_ZORA__Fv();
-extern "C" extern void item_func_MAGIC_LV1__Fv();
-extern "C" extern void item_func_DUNGEON_EXIT_2__Fv();
-extern "C" extern void item_func_WALLET_LV1__Fv();
-extern "C" extern void item_func_WALLET_LV2__Fv();
-extern "C" extern void item_func_WALLET_LV3__Fv();
-extern "C" extern void item_func_ZORAS_JEWEL__Fv();
-extern "C" extern void item_func_HAWK_EYE__Fv();
-extern "C" extern void item_func_WOOD_STICK__Fv();
-extern "C" extern void item_func_BOOMERANG__Fv();
-extern "C" extern void item_func_SPINNER__Fv();
-extern "C" extern void item_func_IRONBALL__Fv();
-extern "C" extern void item_func_BOW__Fv();
-extern "C" extern void item_func_HOOKSHOT__Fv();
-extern "C" extern void item_func_HVY_BOOTS__Fv();
-extern "C" extern void item_func_COPY_ROD__Fv();
-extern "C" extern void item_func_W_HOOKSHOT__Fv();
-extern "C" extern void item_func_KANTERA__Fv();
-extern "C" extern void item_func_LIGHT_SWORD__Fv();
-extern "C" extern void item_func_FISHING_ROD_1__Fv();
-extern "C" extern void item_func_PACHINKO__Fv();
-extern "C" extern void item_func_COPY_ROD_2__Fv();
-extern "C" extern void item_func_BOMB_BAG_LV2__Fv();
-extern "C" extern void item_func_BOMB_BAG_LV1__Fv();
-extern "C" extern void item_func_BOMB_IN_BAG__Fv();
-extern "C" extern void item_func_LIGHT_ARROW__Fv();
-extern "C" extern void item_func_ARROW_LV1__Fv();
-extern "C" extern void item_func_ARROW_LV2__Fv();
-extern "C" extern void item_func_ARROW_LV3__Fv();
-extern "C" extern void item_func_LURE_ROD__Fv();
-extern "C" extern void item_func_BOMB_ARROW__Fv();
-extern "C" extern void item_func_HAWK_ARROW__Fv();
-extern "C" extern void item_func_BEE_ROD__Fv();
-extern "C" extern void item_func_JEWEL_ROD__Fv();
-extern "C" extern void item_func_WORM_ROD__Fv();
-extern "C" extern void item_func_JEWEL_BEE_ROD__Fv();
-extern "C" extern void item_func_JEWEL_WORM_ROD__Fv();
-extern "C" extern void item_func_EMPTY_BOTTLE__Fv();
-extern "C" extern void item_func_RED_BOTTLE__Fv();
-extern "C" extern void item_func_GREEN_BOTTLE__Fv();
-extern "C" extern void item_func_BLUE_BOTTLE__Fv();
-extern "C" extern void item_func_MILK_BOTTLE__Fv();
-extern "C" extern void item_func_HALF_MILK_BOTTLE__Fv();
-extern "C" extern void item_func_OIL_BOTTLE__Fv();
-extern "C" extern void item_func_WATER_BOTTLE__Fv();
-extern "C" extern void item_func_OIL_BOTTLE2__Fv();
-extern "C" extern void item_func_RED_BOTTLE2__Fv();
-extern "C" extern void item_func_UGLY_SOUP__Fv();
-extern "C" extern void item_func_HOT_SPRING__Fv();
-extern "C" extern void item_func_FAIRY_BOTTLE__Fv();
-extern "C" extern void item_func_HOT_SPRING2__Fv();
-extern "C" extern void item_func_OIL2__Fv();
-extern "C" extern void item_func_OIL__Fv();
-extern "C" extern void item_func_NORMAL_BOMB__Fv();
-extern "C" extern void item_func_WATER_BOMB__Fv();
-extern "C" extern void item_func_POKE_BOMB__Fv();
-extern "C" extern void item_func_FAIRY_DROP__Fv();
-extern "C" extern void item_func_WORM__Fv();
-extern "C" extern void item_func_DROP_BOTTLE__Fv();
-extern "C" extern void item_func_BEE_CHILD__Fv();
-extern "C" extern void item_func_CHUCHU_RARE__Fv();
-extern "C" extern void item_func_CHUCHU_RED__Fv();
-extern "C" extern void item_func_CHUCHU_BLUE__Fv();
-extern "C" extern void item_func_CHUCHU_GREEN__Fv();
-extern "C" extern void item_func_CHUCHU_YELLOW__Fv();
-extern "C" extern void item_func_CHUCHU_PURPLE__Fv();
-extern "C" extern void item_func_LV1_SOUP__Fv();
-extern "C" extern void item_func_LV2_SOUP__Fv();
-extern "C" extern void item_func_LV3_SOUP__Fv();
-extern "C" extern void item_func_LETTER__Fv();
-extern "C" extern void item_func_BILL__Fv();
-extern "C" extern void item_func_WOOD_STATUE__Fv();
-extern "C" extern void item_func_IRIAS_PENDANT__Fv();
-extern "C" extern void item_func_HORSE_FLUTE__Fv();
-extern "C" extern void item_func_RAFRELS_MEMO__Fv();
-extern "C" extern void item_func_ASHS_SCRIBBLING__Fv();
-extern "C" extern void item_func_CHUCHU_YELLOW2__Fv();
-extern "C" extern void item_func_OIL_BOTTLE3__Fv();
-extern "C" extern void item_func_SHOP_BEE_CHILD__Fv();
-extern "C" extern void item_func_CHUCHU_BLACK__Fv();
-extern "C" extern void item_func_LIGHT_DROP__Fv();
-extern "C" extern void item_func_DROP_CONTAINER__Fv();
-extern "C" extern void item_func_DROP_CONTAINER02__Fv();
-extern "C" extern void item_func_DROP_CONTAINER03__Fv();
-extern "C" extern void item_func_FILLED_CONTAINER__Fv();
-extern "C" extern void item_func_MIRROR_PIECE_2__Fv();
-extern "C" extern void item_func_MIRROR_PIECE_3__Fv();
-extern "C" extern void item_func_MIRROR_PIECE_4__Fv();
-extern "C" extern void item_func_SMELL_YELIA_POUCH__Fv();
-extern "C" extern void item_func_SMELL_PUMPKIN__Fv();
-extern "C" extern void item_func_SMELL_POH__Fv();
-extern "C" extern void item_func_SMELL_FISH__Fv();
-extern "C" extern void item_func_SMELL_CHILDREN__Fv();
-extern "C" extern void item_func_SMELL_MEDICINE__Fv();
-extern "C" extern void item_func_M_BEETLE__Fv();
-extern "C" extern void item_func_F_BEETLE__Fv();
-extern "C" extern void item_func_M_BUTTERFLY__Fv();
-extern "C" extern void item_func_F_BUTTERFLY__Fv();
-extern "C" extern void item_func_M_STAG_BEETLE__Fv();
-extern "C" extern void item_func_F_STAG_BEETLE__Fv();
-extern "C" extern void item_func_M_GRASSHOPPER__Fv();
-extern "C" extern void item_func_F_GRASSHOPPER__Fv();
-extern "C" extern void item_func_M_NANAFUSHI__Fv();
-extern "C" extern void item_func_F_NANAFUSHI__Fv();
-extern "C" extern void item_func_M_DANGOMUSHI__Fv();
-extern "C" extern void item_func_F_DANGOMUSHI__Fv();
-extern "C" extern void item_func_M_MANTIS__Fv();
-extern "C" extern void item_func_F_MANTIS__Fv();
-extern "C" extern void item_func_M_LADYBUG__Fv();
-extern "C" extern void item_func_F_LADYBUG__Fv();
-extern "C" extern void item_func_M_SNAIL__Fv();
-extern "C" extern void item_func_F_SNAIL__Fv();
-extern "C" extern void item_func_M_DRAGONFLY__Fv();
-extern "C" extern void item_func_F_DRAGONFLY__Fv();
-extern "C" extern void item_func_M_ANT__Fv();
-extern "C" extern void item_func_F_ANT__Fv();
-extern "C" extern void item_func_M_MAYFLY__Fv();
-extern "C" extern void item_func_F_MAYFLY__Fv();
-extern "C" extern void item_func_POU_SPIRIT__Fv();
-extern "C" extern void item_func_ANCIENT_DOCUMENT__Fv();
-extern "C" extern void item_func_AIR_LETTER__Fv();
-extern "C" extern void item_func_ANCIENT_DOCUMENT2__Fv();
-extern "C" extern void item_func_LV7_DUNGEON_EXIT__Fv();
-extern "C" extern void item_func_LINKS_SAVINGS__Fv();
-extern "C" extern void item_func_SMALL_KEY2__Fv();
-extern "C" extern void item_func_POU_FIRE1__Fv();
-extern "C" extern void item_func_POU_FIRE2__Fv();
-extern "C" extern void item_func_POU_FIRE3__Fv();
-extern "C" extern void item_func_POU_FIRE4__Fv();
-extern "C" extern void item_func_BOSSRIDER_KEY__Fv();
-extern "C" extern void item_func_TOMATO_PUREE__Fv();
-extern "C" extern void item_func_TASTE__Fv();
-extern "C" extern void item_func_LV5_BOSS_KEY__Fv();
-extern "C" extern void item_func_SURFBOARD__Fv();
-extern "C" extern void item_func_KANTERA2__Fv();
-extern "C" extern void item_func_L2_KEY_PIECES1__Fv();
-extern "C" extern void item_func_L2_KEY_PIECES2__Fv();
-extern "C" extern void item_func_L2_KEY_PIECES3__Fv();
-extern "C" extern void item_func_KEY_OF_CARAVAN__Fv();
-extern "C" extern void item_func_LV2_BOSS_KEY__Fv();
-extern "C" extern void item_func_KEY_OF_FILONE__Fv();
-extern "C" extern void item_func_noentry__Fv();
-extern "C" extern void item_getcheck_func_noentry__Fv();
-extern "C" extern void item_getcheck_func_HEART__Fv();
-extern "C" extern void item_getcheck_func_GREEN_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_BLUE_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_YELLOW_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_RED_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_PURPLE_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_ORANGE_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_SILVER_RUPEE__Fv();
-extern "C" extern void item_getcheck_func_S_MAGIC__Fv();
-extern "C" extern void item_getcheck_func_L_MAGIC__Fv();
-extern "C" extern void item_getcheck_func_BOMB_5__Fv();
-extern "C" extern void item_getcheck_func_BOMB_10__Fv();
-extern "C" extern void item_getcheck_func_BOMB_20__Fv();
-extern "C" extern void item_getcheck_func_BOMB_30__Fv();
-extern "C" extern void item_getcheck_func_ARROW_10__Fv();
-extern "C" extern void item_getcheck_func_ARROW_20__Fv();
-extern "C" extern void item_getcheck_func_ARROW_30__Fv();
-extern "C" extern void item_getcheck_func_ARROW_1__Fv();
-extern "C" extern void item_getcheck_func_PACHINKO_SHOT__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOMB_5__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOMB_10__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOMB_20__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOMB_30__Fv();
-extern "C" extern void item_getcheck_func_BOMB_INSECT_5__Fv();
-extern "C" extern void item_getcheck_func_BOMB_INSECT_10__Fv();
-extern "C" extern void item_getcheck_func_BOMB_INSECT_20__Fv();
-extern "C" extern void item_getcheck_func_BOMB_INSECT_30__Fv();
-extern "C" extern void item_getcheck_func_RECOVER_FAILY__Fv();
-extern "C" extern void item_getcheck_func_TRIPLE_HEART__Fv();
-extern "C" extern void item_getcheck_func_SMALL_KEY__Fv();
-extern "C" extern void item_getcheck_func_KAKERA_HEART__Fv();
-extern "C" extern void item_getcheck_func_UTUWA_HEART__Fv();
-extern "C" extern void item_getcheck_func_MAP__Fv();
-extern "C" extern void item_getcheck_func_COMPUS__Fv();
-extern "C" extern void item_getcheck_func_DUNGEON_EXIT__Fv();
-extern "C" extern void item_getcheck_func_BOSS_KEY__Fv();
-extern "C" extern void item_getcheck_func_DUNGEON_BACK__Fv();
-extern "C" extern void item_getcheck_func_SWORD__Fv();
-extern "C" extern void item_getcheck_func_MASTER_SWORD__Fv();
-extern "C" extern void item_getcheck_func_WOOD_SHIELD__Fv();
-extern "C" extern void item_getcheck_func_SHIELD__Fv();
-extern "C" extern void item_getcheck_func_HYLIA_SHIELD__Fv();
-extern "C" extern void item_getcheck_func_TKS_LETTER__Fv();
-extern "C" extern void item_getcheck_func_WEAR_CASUAL__Fv();
-extern "C" extern void item_getcheck_func_WEAR_KOKIRI__Fv();
-extern "C" extern void item_getcheck_func_ARMOR__Fv();
-extern "C" extern void item_getcheck_func_WEAR_ZORA__Fv();
-extern "C" extern void item_getcheck_func_MAGIC_LV1__Fv();
-extern "C" extern void item_getcheck_func_DUNGEON_EXIT_2__Fv();
-extern "C" extern void item_getcheck_func_WALLET_LV1__Fv();
-extern "C" extern void item_getcheck_func_WALLET_LV2__Fv();
-extern "C" extern void item_getcheck_func_WALLET_LV3__Fv();
-extern "C" extern void item_getcheck_func_ZORAS_JEWEL__Fv();
-extern "C" extern void item_getcheck_func_HAWK_EYE__Fv();
-extern "C" extern void item_getcheck_func_WOOD_STICK__Fv();
-extern "C" extern void item_getcheck_func_BOOMERANG__Fv();
-extern "C" extern void item_getcheck_func_SPINNER__Fv();
-extern "C" extern void item_getcheck_func_IRONBALL__Fv();
-extern "C" extern void item_getcheck_func_BOW__Fv();
-extern "C" extern void item_getcheck_func_HOOKSHOT__Fv();
-extern "C" extern void item_getcheck_func_HVY_BOOTS__Fv();
-extern "C" extern void item_getcheck_func_COPY_ROD__Fv();
-extern "C" extern void item_getcheck_func_W_HOOKSHOT__Fv();
-extern "C" extern void item_getcheck_func_KANTERA__Fv();
-extern "C" extern void item_getcheck_func_LIGHT_SWORD__Fv();
-extern "C" extern void item_getcheck_func_FISHING_ROD_1__Fv();
-extern "C" extern void item_getcheck_func_PACHINKO__Fv();
-extern "C" extern void item_getcheck_func_COPY_ROD_2__Fv();
-extern "C" extern void item_getcheck_func_BOMB_BAG_LV2__Fv();
-extern "C" extern void item_getcheck_func_BOMB_BAG_LV1__Fv();
-extern "C" extern void item_getcheck_func_BOMB_IN_BAG__Fv();
-extern "C" extern void item_getcheck_func_LIGHT_ARROW__Fv();
-extern "C" extern void item_getcheck_func_ARROW_LV1__Fv();
-extern "C" extern void item_getcheck_func_ARROW_LV2__Fv();
-extern "C" extern void item_getcheck_func_ARROW_LV3__Fv();
-extern "C" extern void item_getcheck_func_LURE_ROD__Fv();
-extern "C" extern void item_getcheck_func_BOMB_ARROW__Fv();
-extern "C" extern void item_getcheck_func_HAWK_ARROW__Fv();
-extern "C" extern void item_getcheck_func_BEE_ROD__Fv();
-extern "C" extern void item_getcheck_func_JEWEL_ROD__Fv();
-extern "C" extern void item_getcheck_func_WORM_ROD__Fv();
-extern "C" extern void item_getcheck_func_JEWEL_BEE_ROD__Fv();
-extern "C" extern void item_getcheck_func_JEWEL_WORM_ROD__Fv();
-extern "C" extern void item_getcheck_func_EMPTY_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_RED_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_GREEN_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_BLUE_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_MILK_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_HALF_MILK_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_OIL_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_OIL_BOTTLE2__Fv();
-extern "C" extern void item_getcheck_func_RED_BOTTLE2__Fv();
-extern "C" extern void item_getcheck_func_UGLY_SOUP__Fv();
-extern "C" extern void item_getcheck_func_HOT_SPRING__Fv();
-extern "C" extern void item_getcheck_func_FAIRY_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_HOT_SPRING2__Fv();
-extern "C" extern void item_getcheck_func_OIL2__Fv();
-extern "C" extern void item_getcheck_func_OIL__Fv();
-extern "C" extern void item_getcheck_func_NORMAL_BOMB__Fv();
-extern "C" extern void item_getcheck_func_WATER_BOMB__Fv();
-extern "C" extern void item_getcheck_func_POKE_BOMB__Fv();
-extern "C" extern void item_getcheck_func_FAIRY_DROP__Fv();
-extern "C" extern void item_getcheck_func_WORM__Fv();
-extern "C" extern void item_getcheck_func_DROP_BOTTLE__Fv();
-extern "C" extern void item_getcheck_func_BEE_CHILD__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_RARE__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_RED__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_BLUE__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_GREEN__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_YELLOW__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_PURPLE__Fv();
-extern "C" extern void item_getcheck_func_LV1_SOUP__Fv();
-extern "C" extern void item_getcheck_func_LV2_SOUP__Fv();
-extern "C" extern void item_getcheck_func_LV3_SOUP__Fv();
-extern "C" extern void item_getcheck_func_LETTER__Fv();
-extern "C" extern void item_getcheck_func_BILL__Fv();
-extern "C" extern void item_getcheck_func_WOOD_STATUE__Fv();
-extern "C" extern void item_getcheck_func_IRIAS_PENDANT__Fv();
-extern "C" extern void item_getcheck_func_HORSE_FLUTE__Fv();
-extern "C" extern void item_getcheck_func_RAFRELS_MEMO__Fv();
-extern "C" extern void item_getcheck_func_ASHS_SCRIBBLING__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_YELLOW2__Fv();
-extern "C" extern void item_getcheck_func_OIL_BOTTLE3__Fv();
-extern "C" extern void item_getcheck_func_SHOP_BEE_CHILD__Fv();
-extern "C" extern void item_getcheck_func_CHUCHU_BLACK__Fv();
-extern "C" extern void item_getcheck_func_LIGHT_DROP__Fv();
-extern "C" extern void item_getcheck_func_DROP_CONTAINER__Fv();
-extern "C" extern void item_getcheck_func_DROP_CONTAINER02__Fv();
-extern "C" extern void item_getcheck_func_DROP_CONTAINER03__Fv();
-extern "C" extern void item_getcheck_func_FILLED_CONTAINER__Fv();
-extern "C" extern void item_getcheck_func_MIRROR_PIECE_2__Fv();
-extern "C" extern void item_getcheck_func_MIRROR_PIECE_3__Fv();
-extern "C" extern void item_getcheck_func_MIRROR_PIECE_4__Fv();
-extern "C" extern void item_getcheck_func_SMELL_YELIA_POUCH__Fv();
-extern "C" extern void item_getcheck_func_SMELL_PUMPKIN__Fv();
-extern "C" extern void item_getcheck_func_SMELL_POH__Fv();
-extern "C" extern void item_getcheck_func_SMELL_FISH__Fv();
-extern "C" extern void item_getcheck_func_SMELL_CHILDREN__Fv();
-extern "C" extern void item_getcheck_func_SMELL_MEDICINE__Fv();
-extern "C" extern void item_getcheck_func_M_BEETLE__Fv();
-extern "C" extern void item_getcheck_func_F_BEETLE__Fv();
-extern "C" extern void item_getcheck_func_M_BUTTERFLY__Fv();
-extern "C" extern void item_getcheck_func_F_BUTTERFLY__Fv();
-extern "C" extern void item_getcheck_func_M_STAG_BEETLE__Fv();
-extern "C" extern void item_getcheck_func_F_STAG_BEETLE__Fv();
-extern "C" extern void item_getcheck_func_M_GRASSHOPPER__Fv();
-extern "C" extern void item_getcheck_func_F_GRASSHOPPER__Fv();
-extern "C" extern void item_getcheck_func_M_NANAFUSHI__Fv();
-extern "C" extern void item_getcheck_func_F_NANAFUSHI__Fv();
-extern "C" extern void item_getcheck_func_M_DANGOMUSHI__Fv();
-extern "C" extern void item_getcheck_func_F_DANGOMUSHI__Fv();
-extern "C" extern void item_getcheck_func_M_MANTIS__Fv();
-extern "C" extern void item_getcheck_func_F_MANTIS__Fv();
-extern "C" extern void item_getcheck_func_M_LADYBUG__Fv();
-extern "C" extern void item_getcheck_func_F_LADYBUG__Fv();
-extern "C" extern void item_getcheck_func_M_SNAIL__Fv();
-extern "C" extern void item_getcheck_func_F_SNAIL__Fv();
-extern "C" extern void item_getcheck_func_M_DRAGONFLY__Fv();
-extern "C" extern void item_getcheck_func_F_DRAGONFLY__Fv();
-extern "C" extern void item_getcheck_func_M_ANT__Fv();
-extern "C" extern void item_getcheck_func_F_ANT__Fv();
-extern "C" extern void item_getcheck_func_M_MAYFLY__Fv();
-extern "C" extern void item_getcheck_func_F_MAYFLY__Fv();
-extern "C" extern void item_getcheck_func_POU_SPIRIT__Fv();
-extern "C" extern void item_getcheck_func_ANCIENT_DOCUMENT__Fv();
-extern "C" extern void item_getcheck_func_AIR_LETTER__Fv();
-extern "C" extern void item_getcheck_func_ANCIENT_DOCUMENT2__Fv();
-extern "C" extern void item_getcheck_func_LV7_DUNGEON_EXIT__Fv();
-extern "C" extern void item_getcheck_func_LINKS_SAVINGS__Fv();
-extern "C" extern void item_getcheck_func_SMALL_KEY2__Fv();
-extern "C" extern void item_getcheck_func_POU_FIRE1__Fv();
-extern "C" extern void item_getcheck_func_POU_FIRE2__Fv();
-extern "C" extern void item_getcheck_func_POU_FIRE3__Fv();
-extern "C" extern void item_getcheck_func_POU_FIRE4__Fv();
-extern "C" extern void item_getcheck_func_BOSSRIDER_KEY__Fv();
-extern "C" extern void item_getcheck_func_TOMATO_PUREE__Fv();
-extern "C" extern void item_getcheck_func_TASTE__Fv();
-extern "C" extern void item_getcheck_func_LV5_BOSS_KEY__Fv();
-extern "C" extern void item_getcheck_func_SURFBOARD__Fv();
-extern "C" extern void item_getcheck_func_KANTERA2__Fv();
-extern "C" extern void item_getcheck_func_L2_KEY_PIECES1__Fv();
-extern "C" extern void item_getcheck_func_L2_KEY_PIECES2__Fv();
-extern "C" extern void item_getcheck_func_L2_KEY_PIECES3__Fv();
-extern "C" extern void item_getcheck_func_KEY_OF_CARAVAN__Fv();
-extern "C" extern void item_getcheck_func_LV2_BOSS_KEY__Fv();
-extern "C" extern void item_getcheck_func_KEY_OF_FILONE__Fv();
-extern "C" extern void isBomb__FUc();
-extern "C" extern void isArrow__FUc();
-extern "C" extern void isBottleItem__FUc();
-extern "C" extern void isHeart__FUc();
-extern "C" extern void isInsect__FUc();
-extern "C" extern void check_itemno__Fi();
-extern "C" extern void addBombCount__FUcUc();
+void execItemGet(char);
+void checkItemGet(char, s32);
+static void item_func_HEART();
+static void item_func_GREEN_RUPEE();
+static void item_func_BLUE_RUPEE();
+static void item_func_YELLOW_RUPEE();
+static void item_func_RED_RUPEE();
+static void item_func_PURPLE_RUPEE();
+static void item_func_ORANGE_RUPEE();
+static void item_func_SILVER_RUPEE();
+static void item_func_S_MAGIC();
+static void item_func_L_MAGIC();
+static void item_func_BOMB_5();
+static void item_func_BOMB_10();
+static void item_func_BOMB_20();
+static void item_func_BOMB_30();
+static void item_func_ARROW_10();
+static void item_func_ARROW_20();
+static void item_func_ARROW_30();
+static void item_func_ARROW_1();
+static void item_func_PACHINKO_SHOT();
+static void item_func_WATER_BOMB_5();
+static void item_func_WATER_BOMB_10();
+static void item_func_WATER_BOMB_20();
+static void item_func_WATER_BOMB_30();
+static void item_func_BOMB_INSECT_5();
+static void item_func_BOMB_INSECT_10();
+static void item_func_BOMB_INSECT_20();
+static void item_func_BOMB_INSECT_30();
+static void item_func_RECOVER_FAILY();
+static void item_func_TRIPLE_HEART();
+static void item_func_SMALL_KEY();
+static void item_func_KAKERA_HEART();
+static void item_func_UTUWA_HEART();
+static void item_func_MAP();
+static void item_func_COMPUS();
+static void item_func_DUNGEON_EXIT();
+static void item_func_BOSS_KEY();
+static void item_func_DUNGEON_BACK();
+static void item_func_SWORD();
+static void item_func_MASTER_SWORD();
+static void item_func_WOOD_SHIELD();
+static void item_func_SHIELD();
+static void item_func_HYLIA_SHIELD();
+static void item_func_TKS_LETTER();
+static void item_func_WEAR_CASUAL();
+static void item_func_WEAR_KOKIRI();
+static void item_func_ARMOR();
+static void item_func_WEAR_ZORA();
+static void item_func_MAGIC_LV1();
+static void item_func_DUNGEON_EXIT_2();
+static void item_func_WALLET_LV1();
+static void item_func_WALLET_LV2();
+static void item_func_WALLET_LV3();
+static void item_func_ZORAS_JEWEL();
+static void item_func_HAWK_EYE();
+static void item_func_WOOD_STICK();
+static void item_func_BOOMERANG();
+static void item_func_SPINNER();
+static void item_func_IRONBALL();
+static void item_func_BOW();
+static void item_func_HOOKSHOT();
+static void item_func_HVY_BOOTS();
+static void item_func_COPY_ROD();
+static void item_func_W_HOOKSHOT();
+static void item_func_KANTERA();
+static void item_func_LIGHT_SWORD();
+static void item_func_FISHING_ROD_1();
+static void item_func_PACHINKO();
+static void item_func_COPY_ROD_2();
+static void item_func_BOMB_BAG_LV2();
+static void item_func_BOMB_BAG_LV1();
+static void item_func_BOMB_IN_BAG();
+static void item_func_LIGHT_ARROW();
+static void item_func_ARROW_LV1();
+static void item_func_ARROW_LV2();
+static void item_func_ARROW_LV3();
+static void item_func_LURE_ROD();
+static void item_func_BOMB_ARROW();
+static void item_func_HAWK_ARROW();
+static void item_func_BEE_ROD();
+static void item_func_JEWEL_ROD();
+static void item_func_WORM_ROD();
+static void item_func_JEWEL_BEE_ROD();
+static void item_func_JEWEL_WORM_ROD();
+static void item_func_EMPTY_BOTTLE();
+static void item_func_RED_BOTTLE();
+static void item_func_GREEN_BOTTLE();
+static void item_func_BLUE_BOTTLE();
+static void item_func_MILK_BOTTLE();
+static void item_func_HALF_MILK_BOTTLE();
+static void item_func_OIL_BOTTLE();
+static void item_func_WATER_BOTTLE();
+static void item_func_OIL_BOTTLE2();
+static void item_func_RED_BOTTLE2();
+static void item_func_UGLY_SOUP();
+static void item_func_HOT_SPRING();
+static void item_func_FAIRY_BOTTLE();
+static void item_func_HOT_SPRING2();
+static void item_func_OIL2();
+static void item_func_OIL();
+static void item_func_NORMAL_BOMB();
+static void item_func_WATER_BOMB();
+static void item_func_POKE_BOMB();
+static void item_func_FAIRY_DROP();
+static void item_func_WORM();
+static void item_func_DROP_BOTTLE();
+static void item_func_BEE_CHILD();
+static void item_func_CHUCHU_RARE();
+static void item_func_CHUCHU_RED();
+static void item_func_CHUCHU_BLUE();
+static void item_func_CHUCHU_GREEN();
+static void item_func_CHUCHU_YELLOW();
+static void item_func_CHUCHU_PURPLE();
+static void item_func_LV1_SOUP();
+static void item_func_LV2_SOUP();
+static void item_func_LV3_SOUP();
+static void item_func_LETTER();
+static void item_func_BILL();
+static void item_func_WOOD_STATUE();
+static void item_func_IRIAS_PENDANT();
+static void item_func_HORSE_FLUTE();
+static void item_func_RAFRELS_MEMO();
+static void item_func_ASHS_SCRIBBLING();
+static void item_func_CHUCHU_YELLOW2();
+static void item_func_OIL_BOTTLE3();
+static void item_func_SHOP_BEE_CHILD();
+static void item_func_CHUCHU_BLACK();
+static void item_func_LIGHT_DROP();
+static void item_func_DROP_CONTAINER();
+static void item_func_DROP_CONTAINER02();
+static void item_func_DROP_CONTAINER03();
+static void item_func_FILLED_CONTAINER();
+static void item_func_MIRROR_PIECE_2();
+static void item_func_MIRROR_PIECE_3();
+static void item_func_MIRROR_PIECE_4();
+static void item_func_SMELL_YELIA_POUCH();
+static void item_func_SMELL_PUMPKIN();
+static void item_func_SMELL_POH();
+static void item_func_SMELL_FISH();
+static void item_func_SMELL_CHILDREN();
+static void item_func_SMELL_MEDICINE();
+static void item_func_M_BEETLE();
+static void item_func_F_BEETLE();
+static void item_func_M_BUTTERFLY();
+static void item_func_F_BUTTERFLY();
+static void item_func_M_STAG_BEETLE();
+static void item_func_F_STAG_BEETLE();
+static void item_func_M_GRASSHOPPER();
+static void item_func_F_GRASSHOPPER();
+static void item_func_M_NANAFUSHI();
+static void item_func_F_NANAFUSHI();
+static void item_func_M_DANGOMUSHI();
+static void item_func_F_DANGOMUSHI();
+static void item_func_M_MANTIS();
+static void item_func_F_MANTIS();
+static void item_func_M_LADYBUG();
+static void item_func_F_LADYBUG();
+static void item_func_M_SNAIL();
+static void item_func_F_SNAIL();
+static void item_func_M_DRAGONFLY();
+static void item_func_F_DRAGONFLY();
+static void item_func_M_ANT();
+static void item_func_F_ANT();
+static void item_func_M_MAYFLY();
+static void item_func_F_MAYFLY();
+static void item_func_POU_SPIRIT();
+static void item_func_ANCIENT_DOCUMENT();
+static void item_func_AIR_LETTER();
+static void item_func_ANCIENT_DOCUMENT2();
+static void item_func_LV7_DUNGEON_EXIT();
+static void item_func_LINKS_SAVINGS();
+static void item_func_SMALL_KEY2();
+static void item_func_POU_FIRE1();
+static void item_func_POU_FIRE2();
+static void item_func_POU_FIRE3();
+static void item_func_POU_FIRE4();
+static void item_func_BOSSRIDER_KEY();
+static void item_func_TOMATO_PUREE();
+static void item_func_TASTE();
+static void item_func_LV5_BOSS_KEY();
+static void item_func_SURFBOARD();
+static void item_func_KANTERA2();
+static void item_func_L2_KEY_PIECES1();
+static void item_func_L2_KEY_PIECES2();
+static void item_func_L2_KEY_PIECES3();
+static void item_func_KEY_OF_CARAVAN();
+static void item_func_LV2_BOSS_KEY();
+static void item_func_KEY_OF_FILONE();
+static void item_func_noentry();
+static s32 item_getcheck_func_noentry();
+static s32 item_getcheck_func_HEART();
+static void item_getcheck_func_GREEN_RUPEE();
+static void item_getcheck_func_BLUE_RUPEE();
+static void item_getcheck_func_YELLOW_RUPEE();
+static void item_getcheck_func_RED_RUPEE();
+static void item_getcheck_func_PURPLE_RUPEE();
+static void item_getcheck_func_ORANGE_RUPEE();
+static void item_getcheck_func_SILVER_RUPEE();
+static s32 item_getcheck_func_S_MAGIC();
+static s32 item_getcheck_func_L_MAGIC();
+static void item_getcheck_func_BOMB_5();
+static void item_getcheck_func_BOMB_10();
+static void item_getcheck_func_BOMB_20();
+static void item_getcheck_func_BOMB_30();
+static void item_getcheck_func_ARROW_10();
+static void item_getcheck_func_ARROW_20();
+static void item_getcheck_func_ARROW_30();
+static void item_getcheck_func_ARROW_1();
+static void item_getcheck_func_PACHINKO_SHOT();
+static s32 item_getcheck_func_WATER_BOMB_5();
+static s32 item_getcheck_func_WATER_BOMB_10();
+static s32 item_getcheck_func_WATER_BOMB_20();
+static s32 item_getcheck_func_WATER_BOMB_30();
+static s32 item_getcheck_func_BOMB_INSECT_5();
+static void item_getcheck_func_BOMB_INSECT_10();
+static void item_getcheck_func_BOMB_INSECT_20();
+static void item_getcheck_func_BOMB_INSECT_30();
+static s32 item_getcheck_func_RECOVER_FAILY();
+static s32 item_getcheck_func_TRIPLE_HEART();
+static s32 item_getcheck_func_SMALL_KEY();
+static s32 item_getcheck_func_KAKERA_HEART();
+static s32 item_getcheck_func_UTUWA_HEART();
+static void item_getcheck_func_MAP();
+static s32 item_getcheck_func_COMPUS();
+static void item_getcheck_func_DUNGEON_EXIT();
+static void item_getcheck_func_BOSS_KEY();
+static void item_getcheck_func_DUNGEON_BACK();
+static void item_getcheck_func_SWORD();
+static void item_getcheck_func_MASTER_SWORD();
+static void item_getcheck_func_WOOD_SHIELD();
+static void item_getcheck_func_SHIELD();
+static void item_getcheck_func_HYLIA_SHIELD();
+static void item_getcheck_func_TKS_LETTER();
+static void item_getcheck_func_WEAR_CASUAL();
+static void item_getcheck_func_WEAR_KOKIRI();
+static void item_getcheck_func_ARMOR();
+static void item_getcheck_func_WEAR_ZORA();
+static s32 item_getcheck_func_MAGIC_LV1();
+static void item_getcheck_func_DUNGEON_EXIT_2();
+static s32 item_getcheck_func_WALLET_LV1();
+static s32 item_getcheck_func_WALLET_LV2();
+static s32 item_getcheck_func_WALLET_LV3();
+static void item_getcheck_func_ZORAS_JEWEL();
+static void item_getcheck_func_HAWK_EYE();
+static void item_getcheck_func_WOOD_STICK();
+static void item_getcheck_func_BOOMERANG();
+static void item_getcheck_func_SPINNER();
+static void item_getcheck_func_IRONBALL();
+static void item_getcheck_func_BOW();
+static void item_getcheck_func_HOOKSHOT();
+static void item_getcheck_func_HVY_BOOTS();
+static void item_getcheck_func_COPY_ROD();
+static void item_getcheck_func_W_HOOKSHOT();
+static void item_getcheck_func_KANTERA();
+static void item_getcheck_func_LIGHT_SWORD();
+static void item_getcheck_func_FISHING_ROD_1();
+static void item_getcheck_func_PACHINKO();
+static s32 item_getcheck_func_COPY_ROD_2();
+static void item_getcheck_func_BOMB_BAG_LV2();
+static void item_getcheck_func_BOMB_BAG_LV1();
+static void item_getcheck_func_BOMB_IN_BAG();
+static void item_getcheck_func_LIGHT_ARROW();
+static void item_getcheck_func_ARROW_LV1();
+static void item_getcheck_func_ARROW_LV2();
+static void item_getcheck_func_ARROW_LV3();
+static s32 item_getcheck_func_LURE_ROD();
+static s32 item_getcheck_func_BOMB_ARROW();
+static s32 item_getcheck_func_HAWK_ARROW();
+static void item_getcheck_func_BEE_ROD();
+static void item_getcheck_func_JEWEL_ROD();
+static void item_getcheck_func_WORM_ROD();
+static void item_getcheck_func_JEWEL_BEE_ROD();
+static void item_getcheck_func_JEWEL_WORM_ROD();
+static void item_getcheck_func_EMPTY_BOTTLE();
+static void item_getcheck_func_RED_BOTTLE();
+static void item_getcheck_func_GREEN_BOTTLE();
+static void item_getcheck_func_BLUE_BOTTLE();
+static void item_getcheck_func_MILK_BOTTLE();
+static void item_getcheck_func_HALF_MILK_BOTTLE();
+static void item_getcheck_func_OIL_BOTTLE();
+static void item_getcheck_func_WATER_BOTTLE();
+static void item_getcheck_func_OIL_BOTTLE2();
+static void item_getcheck_func_RED_BOTTLE2();
+static void item_getcheck_func_UGLY_SOUP();
+static void item_getcheck_func_HOT_SPRING();
+static void item_getcheck_func_FAIRY_BOTTLE();
+static void item_getcheck_func_HOT_SPRING2();
+static void item_getcheck_func_OIL2();
+static void item_getcheck_func_OIL();
+static void item_getcheck_func_NORMAL_BOMB();
+static void item_getcheck_func_WATER_BOMB();
+static void item_getcheck_func_POKE_BOMB();
+static void item_getcheck_func_FAIRY_DROP();
+static void item_getcheck_func_WORM();
+static void item_getcheck_func_DROP_BOTTLE();
+static s32 item_getcheck_func_BEE_CHILD();
+static void item_getcheck_func_CHUCHU_RARE();
+static void item_getcheck_func_CHUCHU_RED();
+static void item_getcheck_func_CHUCHU_BLUE();
+static void item_getcheck_func_CHUCHU_GREEN();
+static void item_getcheck_func_CHUCHU_YELLOW();
+static void item_getcheck_func_CHUCHU_PURPLE();
+static void item_getcheck_func_LV1_SOUP();
+static void item_getcheck_func_LV2_SOUP();
+static void item_getcheck_func_LV3_SOUP();
+static void item_getcheck_func_LETTER();
+static void item_getcheck_func_BILL();
+static void item_getcheck_func_WOOD_STATUE();
+static void item_getcheck_func_IRIAS_PENDANT();
+static void item_getcheck_func_HORSE_FLUTE();
+static void item_getcheck_func_RAFRELS_MEMO();
+static void item_getcheck_func_ASHS_SCRIBBLING();
+static void item_getcheck_func_CHUCHU_YELLOW2();
+static s32 item_getcheck_func_OIL_BOTTLE3();
+static s32 item_getcheck_func_SHOP_BEE_CHILD();
+static void item_getcheck_func_CHUCHU_BLACK();
+static void item_getcheck_func_LIGHT_DROP();
+static void item_getcheck_func_DROP_CONTAINER();
+static void item_getcheck_func_DROP_CONTAINER02();
+static void item_getcheck_func_DROP_CONTAINER03();
+static s32 item_getcheck_func_FILLED_CONTAINER();
+static s32 item_getcheck_func_MIRROR_PIECE_2();
+static s32 item_getcheck_func_MIRROR_PIECE_3();
+static s32 item_getcheck_func_MIRROR_PIECE_4();
+static void item_getcheck_func_SMELL_YELIA_POUCH();
+static s32 item_getcheck_func_SMELL_PUMPKIN();
+static void item_getcheck_func_SMELL_POH();
+static void item_getcheck_func_SMELL_FISH();
+static void item_getcheck_func_SMELL_CHILDREN();
+static void item_getcheck_func_SMELL_MEDICINE();
+static void item_getcheck_func_M_BEETLE();
+static void item_getcheck_func_F_BEETLE();
+static void item_getcheck_func_M_BUTTERFLY();
+static void item_getcheck_func_F_BUTTERFLY();
+static void item_getcheck_func_M_STAG_BEETLE();
+static void item_getcheck_func_F_STAG_BEETLE();
+static void item_getcheck_func_M_GRASSHOPPER();
+static void item_getcheck_func_F_GRASSHOPPER();
+static void item_getcheck_func_M_NANAFUSHI();
+static void item_getcheck_func_F_NANAFUSHI();
+static void item_getcheck_func_M_DANGOMUSHI();
+static void item_getcheck_func_F_DANGOMUSHI();
+static void item_getcheck_func_M_MANTIS();
+static void item_getcheck_func_F_MANTIS();
+static void item_getcheck_func_M_LADYBUG();
+static void item_getcheck_func_F_LADYBUG();
+static void item_getcheck_func_M_SNAIL();
+static void item_getcheck_func_F_SNAIL();
+static void item_getcheck_func_M_DRAGONFLY();
+static void item_getcheck_func_F_DRAGONFLY();
+static void item_getcheck_func_M_ANT();
+static void item_getcheck_func_F_ANT();
+static void item_getcheck_func_M_MAYFLY();
+static void item_getcheck_func_F_MAYFLY();
+static void item_getcheck_func_POU_SPIRIT();
+static void item_getcheck_func_ANCIENT_DOCUMENT();
+static void item_getcheck_func_AIR_LETTER();
+static void item_getcheck_func_ANCIENT_DOCUMENT2();
+static void item_getcheck_func_LV7_DUNGEON_EXIT();
+static s32 item_getcheck_func_LINKS_SAVINGS();
+static s32 item_getcheck_func_SMALL_KEY2();
+static s32 item_getcheck_func_POU_FIRE1();
+static s32 item_getcheck_func_POU_FIRE2();
+static s32 item_getcheck_func_POU_FIRE3();
+static s32 item_getcheck_func_POU_FIRE4();
+static s32 item_getcheck_func_BOSSRIDER_KEY();
+static void item_getcheck_func_TOMATO_PUREE();
+static void item_getcheck_func_TASTE();
+static void item_getcheck_func_LV5_BOSS_KEY();
+static s32 item_getcheck_func_SURFBOARD();
+static s32 item_getcheck_func_KANTERA2();
+static void item_getcheck_func_L2_KEY_PIECES1();
+static void item_getcheck_func_L2_KEY_PIECES2();
+static void item_getcheck_func_L2_KEY_PIECES3();
+static void item_getcheck_func_KEY_OF_CARAVAN();
+static void item_getcheck_func_LV2_BOSS_KEY();
+static void item_getcheck_func_KEY_OF_FILONE();
+static void isBomb(char);
+static void isArrow(char);
+void isBottleItem(char);
+void isHeart(char);
+void isInsect(char);
+void check_itemno(s32);
+static void addBombCount(char, char);
+
+extern "C" void execItemGet__FUc();
+extern "C" void checkItemGet__FUci();
+extern "C" static void item_func_HEART__Fv();
+extern "C" static void item_func_GREEN_RUPEE__Fv();
+extern "C" static void item_func_BLUE_RUPEE__Fv();
+extern "C" static void item_func_YELLOW_RUPEE__Fv();
+extern "C" static void item_func_RED_RUPEE__Fv();
+extern "C" static void item_func_PURPLE_RUPEE__Fv();
+extern "C" static void item_func_ORANGE_RUPEE__Fv();
+extern "C" static void item_func_SILVER_RUPEE__Fv();
+extern "C" static void item_func_S_MAGIC__Fv();
+extern "C" static void item_func_L_MAGIC__Fv();
+extern "C" static void item_func_BOMB_5__Fv();
+extern "C" static void item_func_BOMB_10__Fv();
+extern "C" static void item_func_BOMB_20__Fv();
+extern "C" static void item_func_BOMB_30__Fv();
+extern "C" static void item_func_ARROW_10__Fv();
+extern "C" static void item_func_ARROW_20__Fv();
+extern "C" static void item_func_ARROW_30__Fv();
+extern "C" static void item_func_ARROW_1__Fv();
+extern "C" static void item_func_PACHINKO_SHOT__Fv();
+extern "C" static void item_func_WATER_BOMB_5__Fv();
+extern "C" static void item_func_WATER_BOMB_10__Fv();
+extern "C" static void item_func_WATER_BOMB_20__Fv();
+extern "C" static void item_func_WATER_BOMB_30__Fv();
+extern "C" static void item_func_BOMB_INSECT_5__Fv();
+extern "C" static void item_func_BOMB_INSECT_10__Fv();
+extern "C" static void item_func_BOMB_INSECT_20__Fv();
+extern "C" static void item_func_BOMB_INSECT_30__Fv();
+extern "C" static void item_func_RECOVER_FAILY__Fv();
+extern "C" static void item_func_TRIPLE_HEART__Fv();
+extern "C" static void item_func_SMALL_KEY__Fv();
+extern "C" static void item_func_KAKERA_HEART__Fv();
+extern "C" static void item_func_UTUWA_HEART__Fv();
+extern "C" static void item_func_MAP__Fv();
+extern "C" static void item_func_COMPUS__Fv();
+extern "C" static void item_func_DUNGEON_EXIT__Fv();
+extern "C" static void item_func_BOSS_KEY__Fv();
+extern "C" static void item_func_DUNGEON_BACK__Fv();
+extern "C" static void item_func_SWORD__Fv();
+extern "C" static void item_func_MASTER_SWORD__Fv();
+extern "C" static void item_func_WOOD_SHIELD__Fv();
+extern "C" static void item_func_SHIELD__Fv();
+extern "C" static void item_func_HYLIA_SHIELD__Fv();
+extern "C" static void item_func_TKS_LETTER__Fv();
+extern "C" static void item_func_WEAR_CASUAL__Fv();
+extern "C" static void item_func_WEAR_KOKIRI__Fv();
+extern "C" static void item_func_ARMOR__Fv();
+extern "C" static void item_func_WEAR_ZORA__Fv();
+extern "C" static void item_func_MAGIC_LV1__Fv();
+extern "C" static void item_func_DUNGEON_EXIT_2__Fv();
+extern "C" static void item_func_WALLET_LV1__Fv();
+extern "C" static void item_func_WALLET_LV2__Fv();
+extern "C" static void item_func_WALLET_LV3__Fv();
+extern "C" static void item_func_ZORAS_JEWEL__Fv();
+extern "C" static void item_func_HAWK_EYE__Fv();
+extern "C" static void item_func_WOOD_STICK__Fv();
+extern "C" static void item_func_BOOMERANG__Fv();
+extern "C" static void item_func_SPINNER__Fv();
+extern "C" static void item_func_IRONBALL__Fv();
+extern "C" static void item_func_BOW__Fv();
+extern "C" static void item_func_HOOKSHOT__Fv();
+extern "C" static void item_func_HVY_BOOTS__Fv();
+extern "C" static void item_func_COPY_ROD__Fv();
+extern "C" static void item_func_W_HOOKSHOT__Fv();
+extern "C" static void item_func_KANTERA__Fv();
+extern "C" static void item_func_LIGHT_SWORD__Fv();
+extern "C" static void item_func_FISHING_ROD_1__Fv();
+extern "C" static void item_func_PACHINKO__Fv();
+extern "C" static void item_func_COPY_ROD_2__Fv();
+extern "C" static void item_func_BOMB_BAG_LV2__Fv();
+extern "C" static void item_func_BOMB_BAG_LV1__Fv();
+extern "C" static void item_func_BOMB_IN_BAG__Fv();
+extern "C" static void item_func_LIGHT_ARROW__Fv();
+extern "C" static void item_func_ARROW_LV1__Fv();
+extern "C" static void item_func_ARROW_LV2__Fv();
+extern "C" static void item_func_ARROW_LV3__Fv();
+extern "C" static void item_func_LURE_ROD__Fv();
+extern "C" static void item_func_BOMB_ARROW__Fv();
+extern "C" static void item_func_HAWK_ARROW__Fv();
+extern "C" static void item_func_BEE_ROD__Fv();
+extern "C" static void item_func_JEWEL_ROD__Fv();
+extern "C" static void item_func_WORM_ROD__Fv();
+extern "C" static void item_func_JEWEL_BEE_ROD__Fv();
+extern "C" static void item_func_JEWEL_WORM_ROD__Fv();
+extern "C" static void item_func_EMPTY_BOTTLE__Fv();
+extern "C" static void item_func_RED_BOTTLE__Fv();
+extern "C" static void item_func_GREEN_BOTTLE__Fv();
+extern "C" static void item_func_BLUE_BOTTLE__Fv();
+extern "C" static void item_func_MILK_BOTTLE__Fv();
+extern "C" static void item_func_HALF_MILK_BOTTLE__Fv();
+extern "C" static void item_func_OIL_BOTTLE__Fv();
+extern "C" static void item_func_WATER_BOTTLE__Fv();
+extern "C" static void item_func_OIL_BOTTLE2__Fv();
+extern "C" static void item_func_RED_BOTTLE2__Fv();
+extern "C" static void item_func_UGLY_SOUP__Fv();
+extern "C" static void item_func_HOT_SPRING__Fv();
+extern "C" static void item_func_FAIRY_BOTTLE__Fv();
+extern "C" static void item_func_HOT_SPRING2__Fv();
+extern "C" static void item_func_OIL2__Fv();
+extern "C" static void item_func_OIL__Fv();
+extern "C" static void item_func_NORMAL_BOMB__Fv();
+extern "C" static void item_func_WATER_BOMB__Fv();
+extern "C" static void item_func_POKE_BOMB__Fv();
+extern "C" static void item_func_FAIRY_DROP__Fv();
+extern "C" static void item_func_WORM__Fv();
+extern "C" static void item_func_DROP_BOTTLE__Fv();
+extern "C" static void item_func_BEE_CHILD__Fv();
+extern "C" static void item_func_CHUCHU_RARE__Fv();
+extern "C" static void item_func_CHUCHU_RED__Fv();
+extern "C" static void item_func_CHUCHU_BLUE__Fv();
+extern "C" static void item_func_CHUCHU_GREEN__Fv();
+extern "C" static void item_func_CHUCHU_YELLOW__Fv();
+extern "C" static void item_func_CHUCHU_PURPLE__Fv();
+extern "C" static void item_func_LV1_SOUP__Fv();
+extern "C" static void item_func_LV2_SOUP__Fv();
+extern "C" static void item_func_LV3_SOUP__Fv();
+extern "C" static void item_func_LETTER__Fv();
+extern "C" static void item_func_BILL__Fv();
+extern "C" static void item_func_WOOD_STATUE__Fv();
+extern "C" static void item_func_IRIAS_PENDANT__Fv();
+extern "C" static void item_func_HORSE_FLUTE__Fv();
+extern "C" static void item_func_RAFRELS_MEMO__Fv();
+extern "C" static void item_func_ASHS_SCRIBBLING__Fv();
+extern "C" static void item_func_CHUCHU_YELLOW2__Fv();
+extern "C" static void item_func_OIL_BOTTLE3__Fv();
+extern "C" static void item_func_SHOP_BEE_CHILD__Fv();
+extern "C" static void item_func_CHUCHU_BLACK__Fv();
+extern "C" static void item_func_LIGHT_DROP__Fv();
+extern "C" static void item_func_DROP_CONTAINER__Fv();
+extern "C" static void item_func_DROP_CONTAINER02__Fv();
+extern "C" static void item_func_DROP_CONTAINER03__Fv();
+extern "C" static void item_func_FILLED_CONTAINER__Fv();
+extern "C" static void item_func_MIRROR_PIECE_2__Fv();
+extern "C" static void item_func_MIRROR_PIECE_3__Fv();
+extern "C" static void item_func_MIRROR_PIECE_4__Fv();
+extern "C" static void item_func_SMELL_YELIA_POUCH__Fv();
+extern "C" static void item_func_SMELL_PUMPKIN__Fv();
+extern "C" static void item_func_SMELL_POH__Fv();
+extern "C" static void item_func_SMELL_FISH__Fv();
+extern "C" static void item_func_SMELL_CHILDREN__Fv();
+extern "C" static void item_func_SMELL_MEDICINE__Fv();
+extern "C" static void item_func_M_BEETLE__Fv();
+extern "C" static void item_func_F_BEETLE__Fv();
+extern "C" static void item_func_M_BUTTERFLY__Fv();
+extern "C" static void item_func_F_BUTTERFLY__Fv();
+extern "C" static void item_func_M_STAG_BEETLE__Fv();
+extern "C" static void item_func_F_STAG_BEETLE__Fv();
+extern "C" static void item_func_M_GRASSHOPPER__Fv();
+extern "C" static void item_func_F_GRASSHOPPER__Fv();
+extern "C" static void item_func_M_NANAFUSHI__Fv();
+extern "C" static void item_func_F_NANAFUSHI__Fv();
+extern "C" static void item_func_M_DANGOMUSHI__Fv();
+extern "C" static void item_func_F_DANGOMUSHI__Fv();
+extern "C" static void item_func_M_MANTIS__Fv();
+extern "C" static void item_func_F_MANTIS__Fv();
+extern "C" static void item_func_M_LADYBUG__Fv();
+extern "C" static void item_func_F_LADYBUG__Fv();
+extern "C" static void item_func_M_SNAIL__Fv();
+extern "C" static void item_func_F_SNAIL__Fv();
+extern "C" static void item_func_M_DRAGONFLY__Fv();
+extern "C" static void item_func_F_DRAGONFLY__Fv();
+extern "C" static void item_func_M_ANT__Fv();
+extern "C" static void item_func_F_ANT__Fv();
+extern "C" static void item_func_M_MAYFLY__Fv();
+extern "C" static void item_func_F_MAYFLY__Fv();
+extern "C" static void item_func_POU_SPIRIT__Fv();
+extern "C" static void item_func_ANCIENT_DOCUMENT__Fv();
+extern "C" static void item_func_AIR_LETTER__Fv();
+extern "C" static void item_func_ANCIENT_DOCUMENT2__Fv();
+extern "C" static void item_func_LV7_DUNGEON_EXIT__Fv();
+extern "C" static void item_func_LINKS_SAVINGS__Fv();
+extern "C" static void item_func_SMALL_KEY2__Fv();
+extern "C" static void item_func_POU_FIRE1__Fv();
+extern "C" static void item_func_POU_FIRE2__Fv();
+extern "C" static void item_func_POU_FIRE3__Fv();
+extern "C" static void item_func_POU_FIRE4__Fv();
+extern "C" static void item_func_BOSSRIDER_KEY__Fv();
+extern "C" static void item_func_TOMATO_PUREE__Fv();
+extern "C" static void item_func_TASTE__Fv();
+extern "C" static void item_func_LV5_BOSS_KEY__Fv();
+extern "C" static void item_func_SURFBOARD__Fv();
+extern "C" static void item_func_KANTERA2__Fv();
+extern "C" static void item_func_L2_KEY_PIECES1__Fv();
+extern "C" static void item_func_L2_KEY_PIECES2__Fv();
+extern "C" static void item_func_L2_KEY_PIECES3__Fv();
+extern "C" static void item_func_KEY_OF_CARAVAN__Fv();
+extern "C" static void item_func_LV2_BOSS_KEY__Fv();
+extern "C" static void item_func_KEY_OF_FILONE__Fv();
+extern "C" static void item_func_noentry__Fv();
+extern "C" static s32 item_getcheck_func_noentry__Fv();
+extern "C" static s32 item_getcheck_func_HEART__Fv();
+extern "C" static void item_getcheck_func_GREEN_RUPEE__Fv();
+extern "C" static void item_getcheck_func_BLUE_RUPEE__Fv();
+extern "C" static void item_getcheck_func_YELLOW_RUPEE__Fv();
+extern "C" static void item_getcheck_func_RED_RUPEE__Fv();
+extern "C" static void item_getcheck_func_PURPLE_RUPEE__Fv();
+extern "C" static void item_getcheck_func_ORANGE_RUPEE__Fv();
+extern "C" static void item_getcheck_func_SILVER_RUPEE__Fv();
+extern "C" static s32 item_getcheck_func_S_MAGIC__Fv();
+extern "C" static s32 item_getcheck_func_L_MAGIC__Fv();
+extern "C" static void item_getcheck_func_BOMB_5__Fv();
+extern "C" static void item_getcheck_func_BOMB_10__Fv();
+extern "C" static void item_getcheck_func_BOMB_20__Fv();
+extern "C" static void item_getcheck_func_BOMB_30__Fv();
+extern "C" static void item_getcheck_func_ARROW_10__Fv();
+extern "C" static void item_getcheck_func_ARROW_20__Fv();
+extern "C" static void item_getcheck_func_ARROW_30__Fv();
+extern "C" static void item_getcheck_func_ARROW_1__Fv();
+extern "C" static void item_getcheck_func_PACHINKO_SHOT__Fv();
+extern "C" static s32 item_getcheck_func_WATER_BOMB_5__Fv();
+extern "C" static s32 item_getcheck_func_WATER_BOMB_10__Fv();
+extern "C" static s32 item_getcheck_func_WATER_BOMB_20__Fv();
+extern "C" static s32 item_getcheck_func_WATER_BOMB_30__Fv();
+extern "C" static s32 item_getcheck_func_BOMB_INSECT_5__Fv();
+extern "C" static void item_getcheck_func_BOMB_INSECT_10__Fv();
+extern "C" static void item_getcheck_func_BOMB_INSECT_20__Fv();
+extern "C" static void item_getcheck_func_BOMB_INSECT_30__Fv();
+extern "C" static s32 item_getcheck_func_RECOVER_FAILY__Fv();
+extern "C" static s32 item_getcheck_func_TRIPLE_HEART__Fv();
+extern "C" static s32 item_getcheck_func_SMALL_KEY__Fv();
+extern "C" static s32 item_getcheck_func_KAKERA_HEART__Fv();
+extern "C" static s32 item_getcheck_func_UTUWA_HEART__Fv();
+extern "C" static void item_getcheck_func_MAP__Fv();
+extern "C" static s32 item_getcheck_func_COMPUS__Fv();
+extern "C" static void item_getcheck_func_DUNGEON_EXIT__Fv();
+extern "C" static void item_getcheck_func_BOSS_KEY__Fv();
+extern "C" static void item_getcheck_func_DUNGEON_BACK__Fv();
+extern "C" static void item_getcheck_func_SWORD__Fv();
+extern "C" static void item_getcheck_func_MASTER_SWORD__Fv();
+extern "C" static void item_getcheck_func_WOOD_SHIELD__Fv();
+extern "C" static void item_getcheck_func_SHIELD__Fv();
+extern "C" static void item_getcheck_func_HYLIA_SHIELD__Fv();
+extern "C" static void item_getcheck_func_TKS_LETTER__Fv();
+extern "C" static void item_getcheck_func_WEAR_CASUAL__Fv();
+extern "C" static void item_getcheck_func_WEAR_KOKIRI__Fv();
+extern "C" static void item_getcheck_func_ARMOR__Fv();
+extern "C" static void item_getcheck_func_WEAR_ZORA__Fv();
+extern "C" static s32 item_getcheck_func_MAGIC_LV1__Fv();
+extern "C" static void item_getcheck_func_DUNGEON_EXIT_2__Fv();
+extern "C" static s32 item_getcheck_func_WALLET_LV1__Fv();
+extern "C" static s32 item_getcheck_func_WALLET_LV2__Fv();
+extern "C" static s32 item_getcheck_func_WALLET_LV3__Fv();
+extern "C" static void item_getcheck_func_ZORAS_JEWEL__Fv();
+extern "C" static void item_getcheck_func_HAWK_EYE__Fv();
+extern "C" static void item_getcheck_func_WOOD_STICK__Fv();
+extern "C" static void item_getcheck_func_BOOMERANG__Fv();
+extern "C" static void item_getcheck_func_SPINNER__Fv();
+extern "C" static void item_getcheck_func_IRONBALL__Fv();
+extern "C" static void item_getcheck_func_BOW__Fv();
+extern "C" static void item_getcheck_func_HOOKSHOT__Fv();
+extern "C" static void item_getcheck_func_HVY_BOOTS__Fv();
+extern "C" static void item_getcheck_func_COPY_ROD__Fv();
+extern "C" static void item_getcheck_func_W_HOOKSHOT__Fv();
+extern "C" static void item_getcheck_func_KANTERA__Fv();
+extern "C" static void item_getcheck_func_LIGHT_SWORD__Fv();
+extern "C" static void item_getcheck_func_FISHING_ROD_1__Fv();
+extern "C" static void item_getcheck_func_PACHINKO__Fv();
+extern "C" static s32 item_getcheck_func_COPY_ROD_2__Fv();
+extern "C" static void item_getcheck_func_BOMB_BAG_LV2__Fv();
+extern "C" static void item_getcheck_func_BOMB_BAG_LV1__Fv();
+extern "C" static void item_getcheck_func_BOMB_IN_BAG__Fv();
+extern "C" static void item_getcheck_func_LIGHT_ARROW__Fv();
+extern "C" static void item_getcheck_func_ARROW_LV1__Fv();
+extern "C" static void item_getcheck_func_ARROW_LV2__Fv();
+extern "C" static void item_getcheck_func_ARROW_LV3__Fv();
+extern "C" static s32 item_getcheck_func_LURE_ROD__Fv();
+extern "C" static s32 item_getcheck_func_BOMB_ARROW__Fv();
+extern "C" static s32 item_getcheck_func_HAWK_ARROW__Fv();
+extern "C" static void item_getcheck_func_BEE_ROD__Fv();
+extern "C" static void item_getcheck_func_JEWEL_ROD__Fv();
+extern "C" static void item_getcheck_func_WORM_ROD__Fv();
+extern "C" static void item_getcheck_func_JEWEL_BEE_ROD__Fv();
+extern "C" static void item_getcheck_func_JEWEL_WORM_ROD__Fv();
+extern "C" static void item_getcheck_func_EMPTY_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_RED_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_GREEN_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_BLUE_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_MILK_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_HALF_MILK_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_OIL_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_WATER_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_OIL_BOTTLE2__Fv();
+extern "C" static void item_getcheck_func_RED_BOTTLE2__Fv();
+extern "C" static void item_getcheck_func_UGLY_SOUP__Fv();
+extern "C" static void item_getcheck_func_HOT_SPRING__Fv();
+extern "C" static void item_getcheck_func_FAIRY_BOTTLE__Fv();
+extern "C" static void item_getcheck_func_HOT_SPRING2__Fv();
+extern "C" static void item_getcheck_func_OIL2__Fv();
+extern "C" static void item_getcheck_func_OIL__Fv();
+extern "C" static void item_getcheck_func_NORMAL_BOMB__Fv();
+extern "C" static void item_getcheck_func_WATER_BOMB__Fv();
+extern "C" static void item_getcheck_func_POKE_BOMB__Fv();
+extern "C" static void item_getcheck_func_FAIRY_DROP__Fv();
+extern "C" static void item_getcheck_func_WORM__Fv();
+extern "C" static void item_getcheck_func_DROP_BOTTLE__Fv();
+extern "C" static s32 item_getcheck_func_BEE_CHILD__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_RARE__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_RED__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_BLUE__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_GREEN__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_YELLOW__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_PURPLE__Fv();
+extern "C" static void item_getcheck_func_LV1_SOUP__Fv();
+extern "C" static void item_getcheck_func_LV2_SOUP__Fv();
+extern "C" static void item_getcheck_func_LV3_SOUP__Fv();
+extern "C" static void item_getcheck_func_LETTER__Fv();
+extern "C" static void item_getcheck_func_BILL__Fv();
+extern "C" static void item_getcheck_func_WOOD_STATUE__Fv();
+extern "C" static void item_getcheck_func_IRIAS_PENDANT__Fv();
+extern "C" static void item_getcheck_func_HORSE_FLUTE__Fv();
+extern "C" static void item_getcheck_func_RAFRELS_MEMO__Fv();
+extern "C" static void item_getcheck_func_ASHS_SCRIBBLING__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_YELLOW2__Fv();
+extern "C" static s32 item_getcheck_func_OIL_BOTTLE3__Fv();
+extern "C" static s32 item_getcheck_func_SHOP_BEE_CHILD__Fv();
+extern "C" static void item_getcheck_func_CHUCHU_BLACK__Fv();
+extern "C" static void item_getcheck_func_LIGHT_DROP__Fv();
+extern "C" static void item_getcheck_func_DROP_CONTAINER__Fv();
+extern "C" static void item_getcheck_func_DROP_CONTAINER02__Fv();
+extern "C" static void item_getcheck_func_DROP_CONTAINER03__Fv();
+extern "C" static s32 item_getcheck_func_FILLED_CONTAINER__Fv();
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_2__Fv();
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_3__Fv();
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_4__Fv();
+extern "C" static void item_getcheck_func_SMELL_YELIA_POUCH__Fv();
+extern "C" static s32 item_getcheck_func_SMELL_PUMPKIN__Fv();
+extern "C" static void item_getcheck_func_SMELL_POH__Fv();
+extern "C" static void item_getcheck_func_SMELL_FISH__Fv();
+extern "C" static void item_getcheck_func_SMELL_CHILDREN__Fv();
+extern "C" static void item_getcheck_func_SMELL_MEDICINE__Fv();
+extern "C" static void item_getcheck_func_M_BEETLE__Fv();
+extern "C" static void item_getcheck_func_F_BEETLE__Fv();
+extern "C" static void item_getcheck_func_M_BUTTERFLY__Fv();
+extern "C" static void item_getcheck_func_F_BUTTERFLY__Fv();
+extern "C" static void item_getcheck_func_M_STAG_BEETLE__Fv();
+extern "C" static void item_getcheck_func_F_STAG_BEETLE__Fv();
+extern "C" static void item_getcheck_func_M_GRASSHOPPER__Fv();
+extern "C" static void item_getcheck_func_F_GRASSHOPPER__Fv();
+extern "C" static void item_getcheck_func_M_NANAFUSHI__Fv();
+extern "C" static void item_getcheck_func_F_NANAFUSHI__Fv();
+extern "C" static void item_getcheck_func_M_DANGOMUSHI__Fv();
+extern "C" static void item_getcheck_func_F_DANGOMUSHI__Fv();
+extern "C" static void item_getcheck_func_M_MANTIS__Fv();
+extern "C" static void item_getcheck_func_F_MANTIS__Fv();
+extern "C" static void item_getcheck_func_M_LADYBUG__Fv();
+extern "C" static void item_getcheck_func_F_LADYBUG__Fv();
+extern "C" static void item_getcheck_func_M_SNAIL__Fv();
+extern "C" static void item_getcheck_func_F_SNAIL__Fv();
+extern "C" static void item_getcheck_func_M_DRAGONFLY__Fv();
+extern "C" static void item_getcheck_func_F_DRAGONFLY__Fv();
+extern "C" static void item_getcheck_func_M_ANT__Fv();
+extern "C" static void item_getcheck_func_F_ANT__Fv();
+extern "C" static void item_getcheck_func_M_MAYFLY__Fv();
+extern "C" static void item_getcheck_func_F_MAYFLY__Fv();
+extern "C" static void item_getcheck_func_POU_SPIRIT__Fv();
+extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT__Fv();
+extern "C" static void item_getcheck_func_AIR_LETTER__Fv();
+extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT2__Fv();
+extern "C" static void item_getcheck_func_LV7_DUNGEON_EXIT__Fv();
+extern "C" static s32 item_getcheck_func_LINKS_SAVINGS__Fv();
+extern "C" static s32 item_getcheck_func_SMALL_KEY2__Fv();
+extern "C" static s32 item_getcheck_func_POU_FIRE1__Fv();
+extern "C" static s32 item_getcheck_func_POU_FIRE2__Fv();
+extern "C" static s32 item_getcheck_func_POU_FIRE3__Fv();
+extern "C" static s32 item_getcheck_func_POU_FIRE4__Fv();
+extern "C" static s32 item_getcheck_func_BOSSRIDER_KEY__Fv();
+extern "C" static void item_getcheck_func_TOMATO_PUREE__Fv();
+extern "C" static void item_getcheck_func_TASTE__Fv();
+extern "C" static void item_getcheck_func_LV5_BOSS_KEY__Fv();
+extern "C" static s32 item_getcheck_func_SURFBOARD__Fv();
+extern "C" static s32 item_getcheck_func_KANTERA2__Fv();
+extern "C" static void item_getcheck_func_L2_KEY_PIECES1__Fv();
+extern "C" static void item_getcheck_func_L2_KEY_PIECES2__Fv();
+extern "C" static void item_getcheck_func_L2_KEY_PIECES3__Fv();
+extern "C" static void item_getcheck_func_KEY_OF_CARAVAN__Fv();
+extern "C" static void item_getcheck_func_LV2_BOSS_KEY__Fv();
+extern "C" static void item_getcheck_func_KEY_OF_FILONE__Fv();
+extern "C" static void isBomb__FUc();
+extern "C" static void isArrow__FUc();
+extern "C" void isBottleItem__FUc();
+extern "C" void isHeart__FUc();
+extern "C" void isInsect__FUc();
+extern "C" void check_itemno__Fi();
+extern "C" static void addBombCount__FUcUc();
 SECTION_RODATA extern const u8 d_d_item__stringBase0[8];
 SECTION_DATA extern void*item_func_ptr[256];
 SECTION_DATA extern void*item_getcheck_func_ptr[256];
@@ -406,45 +889,58 @@ SECTION_SDATA2 extern f64 d_d_item__lit_3828;
 // External References:
 // 
 
-extern "C" extern void setItemBombNumCount__14dComIfG_play_cFUcs();
-extern "C" extern void getLayerNo__14dComIfG_play_cFi();
-extern "C" extern void dComIfGs_getMaxLifeGauge__Fv();
-extern "C" extern void dComIfGs_setSelectEquipClothes__FUc();
-extern "C" extern void dComIfGs_setSelectEquipSword__FUc();
-extern "C" extern void dComIfGs_setSelectEquipShield__FUc();
-extern "C" extern void isMagicFlag__21dSv_player_status_a_cCFUc();
-extern "C" extern void setItem__17dSv_player_item_cFiUc();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern "C" extern void setEmptyBottle__17dSv_player_item_cFv();
-extern "C" extern void setEmptyBottle__17dSv_player_item_cFUc();
-extern "C" extern void checkBottle__17dSv_player_item_cFUc();
-extern "C" extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
-extern "C" extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern "C" extern void setEmptyBombBag__17dSv_player_item_cFv();
-extern "C" extern void setEmptyBombBag__17dSv_player_item_cFUcUc();
-extern "C" extern void setRodTypeLevelUp__17dSv_player_item_cFv();
-extern "C" extern void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" extern void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void setBottleNum__24dSv_player_item_record_cFUcUc();
-extern "C" extern void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" extern void setCollect__20dSv_player_collect_cFiUc();
-extern "C" extern void isCollect__20dSv_player_collect_cCFiUc();
-extern "C" extern void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern "C" extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" extern void onDungeonItem__12dSv_memBit_cFi();
-extern "C" extern void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void onSwitch__10dSv_info_cFii();
-extern "C" extern void dMeter2Info_setSword__FUcb();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strncmp();
+void dComIfGs_getMaxLifeGauge();
+void dComIfGs_setSelectEquipClothes(char);
+void dComIfGs_setSelectEquipSword(char);
+void dComIfGs_setSelectEquipShield(char);
+void dMeter2Info_setSword(char, bool);
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfGs_getMaxLifeGauge__Fv();
+extern "C" void dComIfGs_setSelectEquipClothes__FUc();
+extern "C" void dComIfGs_setSelectEquipSword__FUc();
+extern "C" void dComIfGs_setSelectEquipShield__FUc();
+extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
+extern "C" void setEmptyBottle__17dSv_player_item_cFv();
+extern "C" void setEmptyBottle__17dSv_player_item_cFUc();
+extern "C" void checkBottle__17dSv_player_item_cFUc();
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
+extern "C" void setEmptyBombBag__17dSv_player_item_cFv();
+extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc();
+extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv();
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void setCollect__20dSv_player_collect_cFiUc();
+extern "C" void isCollect__20dSv_player_collect_cCFiUc();
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void onDungeonItem__12dSv_memBit_cFi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void dMeter2Info_setSword__FUcb();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 struct_80450D64[4];
@@ -454,7 +950,7 @@ SECTION_SBSS extern u8 struct_80450D64[4];
 // 
 
 /* ############################################################################################## */
-/* 803AF178-803AF578 0400+00 .data      item_func_ptr                                                */
+/* 803AF178-803AF578 0400+00 rc=1 efc=0 .data      item_func_ptr                                                */
 void* item_func_ptr[256] = {
 	(void*)item_func_HEART__Fv,
 	(void*)item_func_GREEN_RUPEE__Fv,
@@ -714,11 +1210,11 @@ void* item_func_ptr[256] = {
 	(void*)item_func_noentry__Fv,
 };
 
-/* 80097E8C-80097EE0 0054+00 .text      execItemGet__FUc                                             */
+/* 80097E8C-80097EE0 0054+00 rc=4 efc=4 .text      execItemGet__FUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execItemGet__FUc) {
+asm void execItemGet(char field_0) {
 	nofralloc
 #include "asm/d/d_item/execItemGet__FUc.s"
 }
@@ -726,7 +1222,7 @@ ASM_FUNCTION(execItemGet__FUc) {
 
 
 /* ############################################################################################## */
-/* 803AF578-803AF978 0400+00 .data      item_getcheck_func_ptr                                       */
+/* 803AF578-803AF978 0400+00 rc=1 efc=0 .data      item_getcheck_func_ptr                                       */
 void* item_getcheck_func_ptr[256] = {
 	(void*)item_getcheck_func_HEART__Fv,
 	(void*)item_getcheck_func_GREEN_RUPEE__Fv,
@@ -986,11 +1482,11 @@ void* item_getcheck_func_ptr[256] = {
 	(void*)item_getcheck_func_noentry__Fv,
 };
 
-/* 80097EE0-80097F2C 004C+00 .text      checkItemGet__FUci                                           */
+/* 80097EE0-80097F2C 004C+00 rc=15 efc=14 .text      checkItemGet__FUci                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkItemGet__FUci) {
+asm void checkItemGet(char field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_item/checkItemGet__FUci.s"
 }
@@ -998,348 +1494,338 @@ ASM_FUNCTION(checkItemGet__FUci) {
 
 
 /* ############################################################################################## */
-/* 80452BD8-80452BDC 0004+00 .sdata2    @3655                                                        */
+/* 80452BD8-80452BDC 0004+00 rc=1 efc=0 .sdata2    @3655                                                        */
 f32 d_d_item__lit_3655 = 4.0f;
 
-/* 80097F2C-80097F50 0024+00 .text      item_func_HEART__Fv                                          */
+/* 80097F2C-80097F50 0024+00 rc=1 efc=0 .text      item_func_HEART__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HEART__Fv) {
+asm static void item_func_HEART() {
 	nofralloc
 #include "asm/d/d_item/item_func_HEART__Fv.s"
 }
 #pragma pop
 
 
-/* 80097F50-80097F68 0018+00 .text      item_func_GREEN_RUPEE__Fv                                    */
+/* 80097F50-80097F68 0018+00 rc=1 efc=0 .text      item_func_GREEN_RUPEE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_GREEN_RUPEE__Fv) {
+asm static void item_func_GREEN_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_GREEN_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097F68-80097F80 0018+00 .text      item_func_BLUE_RUPEE__Fv                                     */
+/* 80097F68-80097F80 0018+00 rc=1 efc=0 .text      item_func_BLUE_RUPEE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BLUE_RUPEE__Fv) {
+asm static void item_func_BLUE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_BLUE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097F80-80097F98 0018+00 .text      item_func_YELLOW_RUPEE__Fv                                   */
+/* 80097F80-80097F98 0018+00 rc=1 efc=0 .text      item_func_YELLOW_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_YELLOW_RUPEE__Fv) {
+asm static void item_func_YELLOW_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_YELLOW_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097F98-80097FB0 0018+00 .text      item_func_RED_RUPEE__Fv                                      */
+/* 80097F98-80097FB0 0018+00 rc=1 efc=0 .text      item_func_RED_RUPEE__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_RED_RUPEE__Fv) {
+asm static void item_func_RED_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_RED_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097FB0-80097FC8 0018+00 .text      item_func_PURPLE_RUPEE__Fv                                   */
+/* 80097FB0-80097FC8 0018+00 rc=1 efc=0 .text      item_func_PURPLE_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_PURPLE_RUPEE__Fv) {
+asm static void item_func_PURPLE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_PURPLE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097FC8-80097FE0 0018+00 .text      item_func_ORANGE_RUPEE__Fv                                   */
+/* 80097FC8-80097FE0 0018+00 rc=1 efc=0 .text      item_func_ORANGE_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ORANGE_RUPEE__Fv) {
+asm static void item_func_ORANGE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_ORANGE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097FE0-80097FF8 0018+00 .text      item_func_SILVER_RUPEE__Fv                                   */
+/* 80097FE0-80097FF8 0018+00 rc=1 efc=0 .text      item_func_SILVER_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SILVER_RUPEE__Fv) {
+asm static void item_func_SILVER_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_func_SILVER_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80097FF8-80098010 0018+00 .text      item_func_S_MAGIC__Fv                                        */
+/* 80097FF8-80098010 0018+00 rc=1 efc=0 .text      item_func_S_MAGIC__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_S_MAGIC__Fv) {
+asm static void item_func_S_MAGIC() {
 	nofralloc
 #include "asm/d/d_item/item_func_S_MAGIC__Fv.s"
 }
 #pragma pop
 
 
-/* 80098010-80098028 0018+00 .text      item_func_L_MAGIC__Fv                                        */
+/* 80098010-80098028 0018+00 rc=1 efc=0 .text      item_func_L_MAGIC__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_L_MAGIC__Fv) {
+asm static void item_func_L_MAGIC() {
 	nofralloc
 #include "asm/d/d_item/item_func_L_MAGIC__Fv.s"
 }
 #pragma pop
 
 
-/* 80098028-80098050 0028+00 .text      item_func_BOMB_5__Fv                                         */
+/* 80098028-80098050 0028+00 rc=1 efc=0 .text      item_func_BOMB_5__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_5__Fv) {
+asm static void item_func_BOMB_5() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_5__Fv.s"
 }
 #pragma pop
 
 
-/* 80098050-80098078 0028+00 .text      item_func_BOMB_10__Fv                                        */
+/* 80098050-80098078 0028+00 rc=1 efc=0 .text      item_func_BOMB_10__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_10__Fv) {
+asm static void item_func_BOMB_10() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_10__Fv.s"
 }
 #pragma pop
 
 
-/* 80098078-800980A0 0028+00 .text      item_func_BOMB_20__Fv                                        */
+/* 80098078-800980A0 0028+00 rc=1 efc=0 .text      item_func_BOMB_20__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_20__Fv) {
+asm static void item_func_BOMB_20() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_20__Fv.s"
 }
 #pragma pop
 
 
-/* 800980A0-800980C8 0028+00 .text      item_func_BOMB_30__Fv                                        */
+/* 800980A0-800980C8 0028+00 rc=1 efc=0 .text      item_func_BOMB_30__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_30__Fv) {
+asm static void item_func_BOMB_30() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_30__Fv.s"
 }
 #pragma pop
 
 
-/* 800980C8-800980E0 0018+00 .text      item_func_ARROW_10__Fv                                       */
+/* 800980C8-800980E0 0018+00 rc=1 efc=0 .text      item_func_ARROW_10__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_10__Fv) {
+asm static void item_func_ARROW_10() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_10__Fv.s"
 }
 #pragma pop
 
 
-/* 800980E0-800980F8 0018+00 .text      item_func_ARROW_20__Fv                                       */
+/* 800980E0-800980F8 0018+00 rc=1 efc=0 .text      item_func_ARROW_20__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_20__Fv) {
+asm static void item_func_ARROW_20() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_20__Fv.s"
 }
 #pragma pop
 
 
-/* 800980F8-80098110 0018+00 .text      item_func_ARROW_30__Fv                                       */
+/* 800980F8-80098110 0018+00 rc=1 efc=0 .text      item_func_ARROW_30__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_30__Fv) {
+asm static void item_func_ARROW_30() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_30__Fv.s"
 }
 #pragma pop
 
 
-/* 80098110-80098128 0018+00 .text      item_func_ARROW_1__Fv                                        */
+/* 80098110-80098128 0018+00 rc=1 efc=0 .text      item_func_ARROW_1__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_1__Fv) {
+asm static void item_func_ARROW_1() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_1__Fv.s"
 }
 #pragma pop
 
 
-/* 80098128-80098140 0018+00 .text      item_func_PACHINKO_SHOT__Fv                                  */
+/* 80098128-80098140 0018+00 rc=1 efc=0 .text      item_func_PACHINKO_SHOT__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_PACHINKO_SHOT__Fv) {
+asm static void item_func_PACHINKO_SHOT() {
 	nofralloc
 #include "asm/d/d_item/item_func_PACHINKO_SHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 80098140-80098168 0028+00 .text      item_func_WATER_BOMB_5__Fv                                   */
+/* 80098140-80098168 0028+00 rc=1 efc=0 .text      item_func_WATER_BOMB_5__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOMB_5__Fv) {
+asm static void item_func_WATER_BOMB_5() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOMB_5__Fv.s"
 }
 #pragma pop
 
 
-/* 80098168-80098190 0028+00 .text      item_func_WATER_BOMB_10__Fv                                  */
+/* 80098168-80098190 0028+00 rc=1 efc=0 .text      item_func_WATER_BOMB_10__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOMB_10__Fv) {
+asm static void item_func_WATER_BOMB_10() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOMB_10__Fv.s"
 }
 #pragma pop
 
 
-/* 80098190-800981B8 0028+00 .text      item_func_WATER_BOMB_20__Fv                                  */
+/* 80098190-800981B8 0028+00 rc=1 efc=0 .text      item_func_WATER_BOMB_20__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOMB_20__Fv) {
+asm static void item_func_WATER_BOMB_20() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOMB_20__Fv.s"
 }
 #pragma pop
 
 
-/* 800981B8-800981E0 0028+00 .text      item_func_WATER_BOMB_30__Fv                                  */
+/* 800981B8-800981E0 0028+00 rc=1 efc=0 .text      item_func_WATER_BOMB_30__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOMB_30__Fv) {
+asm static void item_func_WATER_BOMB_30() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOMB_30__Fv.s"
 }
 #pragma pop
 
 
-/* 800981E0-80098208 0028+00 .text      item_func_BOMB_INSECT_5__Fv                                  */
+/* 800981E0-80098208 0028+00 rc=1 efc=0 .text      item_func_BOMB_INSECT_5__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_INSECT_5__Fv) {
+asm static void item_func_BOMB_INSECT_5() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_INSECT_5__Fv.s"
 }
 #pragma pop
 
 
-/* 80098208-80098230 0028+00 .text      item_func_BOMB_INSECT_10__Fv                                 */
+/* 80098208-80098230 0028+00 rc=1 efc=0 .text      item_func_BOMB_INSECT_10__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_INSECT_10__Fv) {
+asm static void item_func_BOMB_INSECT_10() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_INSECT_10__Fv.s"
 }
 #pragma pop
 
 
-/* 80098230-80098258 0028+00 .text      item_func_BOMB_INSECT_20__Fv                                 */
+/* 80098230-80098258 0028+00 rc=1 efc=0 .text      item_func_BOMB_INSECT_20__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_INSECT_20__Fv) {
+asm static void item_func_BOMB_INSECT_20() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_INSECT_20__Fv.s"
 }
 #pragma pop
 
 
-/* 80098258-8009825C 0004+00 .text      item_func_BOMB_INSECT_30__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_INSECT_30__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_BOMB_INSECT_30__Fv.s"
+/* 80098258-8009825C 0004+00 rc=1 efc=0 .text      item_func_BOMB_INSECT_30__Fv                                 */
+static void item_func_BOMB_INSECT_30() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80452BDC-80452BE0 0004+00 .sdata2    @3794                                                        */
+/* 80452BDC-80452BE0 0004+00 rc=1 efc=0 .sdata2    @3794                                                        */
 f32 d_d_item__lit_3794 = 32.0f;
 
-/* 8009825C-80098280 0024+00 .text      item_func_RECOVER_FAILY__Fv                                  */
+/* 8009825C-80098280 0024+00 rc=1 efc=0 .text      item_func_RECOVER_FAILY__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_RECOVER_FAILY__Fv) {
+asm static void item_func_RECOVER_FAILY() {
 	nofralloc
 #include "asm/d/d_item/item_func_RECOVER_FAILY__Fv.s"
 }
 #pragma pop
 
 
-/* 80098280-80098284 0004+00 .text      item_func_TRIPLE_HEART__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_TRIPLE_HEART__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_TRIPLE_HEART__Fv.s"
+/* 80098280-80098284 0004+00 rc=1 efc=0 .text      item_func_TRIPLE_HEART__Fv                                   */
+static void item_func_TRIPLE_HEART() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098284-8009829C 0018+00 .text      item_func_SMALL_KEY__Fv                                      */
+/* 80098284-8009829C 0018+00 rc=1 efc=0 .text      item_func_SMALL_KEY__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMALL_KEY__Fv) {
+asm static void item_func_SMALL_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_func_SMALL_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009829C-800982B4 0018+00 .text      item_func_KAKERA_HEART__Fv                                   */
+/* 8009829C-800982B4 0018+00 rc=1 efc=0 .text      item_func_KAKERA_HEART__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_KAKERA_HEART__Fv) {
+asm static void item_func_KAKERA_HEART() {
 	nofralloc
 #include "asm/d/d_item/item_func_KAKERA_HEART__Fv.s"
 }
@@ -1347,3853 +1833,3323 @@ ASM_FUNCTION(item_func_KAKERA_HEART__Fv) {
 
 
 /* ############################################################################################## */
-/* 80452BE0-80452BE8 0008+00 .sdata2    @3828                                                        */
+/* 80452BE0-80452BE8 0008+00 rc=1 efc=0 .sdata2    @3828                                                        */
 f64 d_d_item__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 800982B4-80098344 0090+00 .text      item_func_UTUWA_HEART__Fv                                    */
+/* 800982B4-80098344 0090+00 rc=1 efc=0 .text      item_func_UTUWA_HEART__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_UTUWA_HEART__Fv) {
+asm static void item_func_UTUWA_HEART() {
 	nofralloc
 #include "asm/d/d_item/item_func_UTUWA_HEART__Fv.s"
 }
 #pragma pop
 
 
-/* 80098344-80098374 0030+00 .text      item_func_MAP__Fv                                            */
+/* 80098344-80098374 0030+00 rc=1 efc=0 .text      item_func_MAP__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_MAP__Fv) {
+asm static void item_func_MAP() {
 	nofralloc
 #include "asm/d/d_item/item_func_MAP__Fv.s"
 }
 #pragma pop
 
 
-/* 80098374-800983A4 0030+00 .text      item_func_COMPUS__Fv                                         */
+/* 80098374-800983A4 0030+00 rc=1 efc=0 .text      item_func_COMPUS__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_COMPUS__Fv) {
+asm static void item_func_COMPUS() {
 	nofralloc
 #include "asm/d/d_item/item_func_COMPUS__Fv.s"
 }
 #pragma pop
 
 
-/* 800983A4-800983EC 0048+00 .text      item_func_DUNGEON_EXIT__Fv                                   */
+/* 800983A4-800983EC 0048+00 rc=1 efc=0 .text      item_func_DUNGEON_EXIT__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DUNGEON_EXIT__Fv) {
+asm static void item_func_DUNGEON_EXIT() {
 	nofralloc
 #include "asm/d/d_item/item_func_DUNGEON_EXIT__Fv.s"
 }
 #pragma pop
 
 
-/* 800983EC-8009841C 0030+00 .text      item_func_BOSS_KEY__Fv                                       */
+/* 800983EC-8009841C 0030+00 rc=1 efc=0 .text      item_func_BOSS_KEY__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOSS_KEY__Fv) {
+asm static void item_func_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009841C-80098450 0034+00 .text      item_func_DUNGEON_BACK__Fv                                   */
+/* 8009841C-80098450 0034+00 rc=1 efc=0 .text      item_func_DUNGEON_BACK__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DUNGEON_BACK__Fv) {
+asm static void item_func_DUNGEON_BACK() {
 	nofralloc
 #include "asm/d/d_item/item_func_DUNGEON_BACK__Fv.s"
 }
 #pragma pop
 
 
-/* 80098450-8009848C 003C+00 .text      item_func_SWORD__Fv                                          */
+/* 80098450-8009848C 003C+00 rc=1 efc=0 .text      item_func_SWORD__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SWORD__Fv) {
+asm static void item_func_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_func_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009848C-800984C8 003C+00 .text      item_func_MASTER_SWORD__Fv                                   */
+/* 8009848C-800984C8 003C+00 rc=1 efc=0 .text      item_func_MASTER_SWORD__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_MASTER_SWORD__Fv) {
+asm static void item_func_MASTER_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_func_MASTER_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 800984C8-80098504 003C+00 .text      item_func_WOOD_SHIELD__Fv                                    */
+/* 800984C8-80098504 003C+00 rc=1 efc=0 .text      item_func_WOOD_SHIELD__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WOOD_SHIELD__Fv) {
+asm static void item_func_WOOD_SHIELD() {
 	nofralloc
 #include "asm/d/d_item/item_func_WOOD_SHIELD__Fv.s"
 }
 #pragma pop
 
 
-/* 80098504-80098508 0004+00 .text      item_func_SHIELD__Fv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SHIELD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SHIELD__Fv.s"
+/* 80098504-80098508 0004+00 rc=1 efc=0 .text      item_func_SHIELD__Fv                                         */
+static void item_func_SHIELD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098508-8009850C 0004+00 .text      item_func_HYLIA_SHIELD__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_HYLIA_SHIELD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_HYLIA_SHIELD__Fv.s"
+/* 80098508-8009850C 0004+00 rc=1 efc=0 .text      item_func_HYLIA_SHIELD__Fv                                   */
+static void item_func_HYLIA_SHIELD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009850C-80098540 0034+00 .text      item_func_TKS_LETTER__Fv                                     */
+/* 8009850C-80098540 0034+00 rc=1 efc=0 .text      item_func_TKS_LETTER__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_TKS_LETTER__Fv) {
+asm static void item_func_TKS_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_func_TKS_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 80098540-80098564 0024+00 .text      item_func_WEAR_CASUAL__Fv                                    */
+/* 80098540-80098564 0024+00 rc=1 efc=0 .text      item_func_WEAR_CASUAL__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WEAR_CASUAL__Fv) {
+asm static void item_func_WEAR_CASUAL() {
 	nofralloc
 #include "asm/d/d_item/item_func_WEAR_CASUAL__Fv.s"
 }
 #pragma pop
 
 
-/* 80098564-800985A0 003C+00 .text      item_func_WEAR_KOKIRI__Fv                                    */
+/* 80098564-800985A0 003C+00 rc=1 efc=0 .text      item_func_WEAR_KOKIRI__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WEAR_KOKIRI__Fv) {
+asm static void item_func_WEAR_KOKIRI() {
 	nofralloc
 #include "asm/d/d_item/item_func_WEAR_KOKIRI__Fv.s"
 }
 #pragma pop
 
 
-/* 800985A0-800985A4 0004+00 .text      item_func_ARMOR__Fv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARMOR__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_ARMOR__Fv.s"
+/* 800985A0-800985A4 0004+00 rc=1 efc=0 .text      item_func_ARMOR__Fv                                          */
+static void item_func_ARMOR() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800985A4-800985A8 0004+00 .text      item_func_WEAR_ZORA__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_WEAR_ZORA__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_WEAR_ZORA__Fv.s"
+/* 800985A4-800985A8 0004+00 rc=1 efc=0 .text      item_func_WEAR_ZORA__Fv                                      */
+static void item_func_WEAR_ZORA() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800985A8-800985CC 0024+00 .text      item_func_MAGIC_LV1__Fv                                      */
+/* 800985A8-800985CC 0024+00 rc=1 efc=0 .text      item_func_MAGIC_LV1__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_MAGIC_LV1__Fv) {
+asm static void item_func_MAGIC_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_func_MAGIC_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 800985CC-80098600 0034+00 .text      item_func_DUNGEON_EXIT_2__Fv                                 */
+/* 800985CC-80098600 0034+00 rc=1 efc=0 .text      item_func_DUNGEON_EXIT_2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DUNGEON_EXIT_2__Fv) {
+asm static void item_func_DUNGEON_EXIT_2() {
 	nofralloc
 #include "asm/d/d_item/item_func_DUNGEON_EXIT_2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098600-80098614 0014+00 .text      item_func_WALLET_LV1__Fv                                     */
+/* 80098600-80098614 0014+00 rc=1 efc=0 .text      item_func_WALLET_LV1__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WALLET_LV1__Fv) {
+asm static void item_func_WALLET_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_func_WALLET_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 80098614-80098628 0014+00 .text      item_func_WALLET_LV2__Fv                                     */
+/* 80098614-80098628 0014+00 rc=1 efc=0 .text      item_func_WALLET_LV2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WALLET_LV2__Fv) {
+asm static void item_func_WALLET_LV2() {
 	nofralloc
 #include "asm/d/d_item/item_func_WALLET_LV2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098628-8009863C 0014+00 .text      item_func_WALLET_LV3__Fv                                     */
+/* 80098628-8009863C 0014+00 rc=1 efc=0 .text      item_func_WALLET_LV3__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WALLET_LV3__Fv) {
+asm static void item_func_WALLET_LV3() {
 	nofralloc
 #include "asm/d/d_item/item_func_WALLET_LV3__Fv.s"
 }
 #pragma pop
 
 
-/* 8009863C-80098690 0054+00 .text      item_func_ZORAS_JEWEL__Fv                                    */
+/* 8009863C-80098690 0054+00 rc=1 efc=0 .text      item_func_ZORAS_JEWEL__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ZORAS_JEWEL__Fv) {
+asm static void item_func_ZORAS_JEWEL() {
 	nofralloc
 #include "asm/d/d_item/item_func_ZORAS_JEWEL__Fv.s"
 }
 #pragma pop
 
 
-/* 80098690-800986C4 0034+00 .text      item_func_HAWK_EYE__Fv                                       */
+/* 80098690-800986C4 0034+00 rc=1 efc=0 .text      item_func_HAWK_EYE__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HAWK_EYE__Fv) {
+asm static void item_func_HAWK_EYE() {
 	nofralloc
 #include "asm/d/d_item/item_func_HAWK_EYE__Fv.s"
 }
 #pragma pop
 
 
-/* 800986C4-80098718 0054+00 .text      item_func_WOOD_STICK__Fv                                     */
+/* 800986C4-80098718 0054+00 rc=1 efc=0 .text      item_func_WOOD_STICK__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WOOD_STICK__Fv) {
+asm static void item_func_WOOD_STICK() {
 	nofralloc
 #include "asm/d/d_item/item_func_WOOD_STICK__Fv.s"
 }
 #pragma pop
 
 
-/* 80098718-8009874C 0034+00 .text      item_func_BOOMERANG__Fv                                      */
+/* 80098718-8009874C 0034+00 rc=1 efc=0 .text      item_func_BOOMERANG__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOOMERANG__Fv) {
+asm static void item_func_BOOMERANG() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOOMERANG__Fv.s"
 }
 #pragma pop
 
 
-/* 8009874C-80098780 0034+00 .text      item_func_SPINNER__Fv                                        */
+/* 8009874C-80098780 0034+00 rc=1 efc=0 .text      item_func_SPINNER__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SPINNER__Fv) {
+asm static void item_func_SPINNER() {
 	nofralloc
 #include "asm/d/d_item/item_func_SPINNER__Fv.s"
 }
 #pragma pop
 
 
-/* 80098780-800987B4 0034+00 .text      item_func_IRONBALL__Fv                                       */
+/* 80098780-800987B4 0034+00 rc=1 efc=0 .text      item_func_IRONBALL__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_IRONBALL__Fv) {
+asm static void item_func_IRONBALL() {
 	nofralloc
 #include "asm/d/d_item/item_func_IRONBALL__Fv.s"
 }
 #pragma pop
 
 
-/* 800987B4-800987FC 0048+00 .text      item_func_BOW__Fv                                            */
+/* 800987B4-800987FC 0048+00 rc=1 efc=0 .text      item_func_BOW__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOW__Fv) {
+asm static void item_func_BOW() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOW__Fv.s"
 }
 #pragma pop
 
 
-/* 800987FC-80098830 0034+00 .text      item_func_HOOKSHOT__Fv                                       */
+/* 800987FC-80098830 0034+00 rc=1 efc=0 .text      item_func_HOOKSHOT__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HOOKSHOT__Fv) {
+asm static void item_func_HOOKSHOT() {
 	nofralloc
 #include "asm/d/d_item/item_func_HOOKSHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 80098830-80098864 0034+00 .text      item_func_HVY_BOOTS__Fv                                      */
+/* 80098830-80098864 0034+00 rc=1 efc=0 .text      item_func_HVY_BOOTS__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HVY_BOOTS__Fv) {
+asm static void item_func_HVY_BOOTS() {
 	nofralloc
 #include "asm/d/d_item/item_func_HVY_BOOTS__Fv.s"
 }
 #pragma pop
 
 
-/* 80098864-80098898 0034+00 .text      item_func_COPY_ROD__Fv                                       */
+/* 80098864-80098898 0034+00 rc=1 efc=0 .text      item_func_COPY_ROD__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_COPY_ROD__Fv) {
+asm static void item_func_COPY_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_func_COPY_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 80098898-800988E8 0050+00 .text      item_func_W_HOOKSHOT__Fv                                     */
+/* 80098898-800988E8 0050+00 rc=1 efc=0 .text      item_func_W_HOOKSHOT__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_W_HOOKSHOT__Fv) {
+asm static void item_func_W_HOOKSHOT() {
 	nofralloc
 #include "asm/d/d_item/item_func_W_HOOKSHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 800988E8-80098928 0040+00 .text      item_func_KANTERA__Fv                                        */
+/* 800988E8-80098928 0040+00 rc=1 efc=0 .text      item_func_KANTERA__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_KANTERA__Fv) {
+asm static void item_func_KANTERA() {
 	nofralloc
 #include "asm/d/d_item/item_func_KANTERA__Fv.s"
 }
 #pragma pop
 
 
-/* 80098928-80098968 0040+00 .text      item_func_LIGHT_SWORD__Fv                                    */
+/* 80098928-80098968 0040+00 rc=1 efc=0 .text      item_func_LIGHT_SWORD__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LIGHT_SWORD__Fv) {
+asm static void item_func_LIGHT_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_func_LIGHT_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 80098968-8009899C 0034+00 .text      item_func_FISHING_ROD_1__Fv                                  */
+/* 80098968-8009899C 0034+00 rc=1 efc=0 .text      item_func_FISHING_ROD_1__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_FISHING_ROD_1__Fv) {
+asm static void item_func_FISHING_ROD_1() {
 	nofralloc
 #include "asm/d/d_item/item_func_FISHING_ROD_1__Fv.s"
 }
 #pragma pop
 
 
-/* 8009899C-800989DC 0040+00 .text      item_func_PACHINKO__Fv                                       */
+/* 8009899C-800989DC 0040+00 rc=1 efc=0 .text      item_func_PACHINKO__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_PACHINKO__Fv) {
+asm static void item_func_PACHINKO() {
 	nofralloc
 #include "asm/d/d_item/item_func_PACHINKO__Fv.s"
 }
 #pragma pop
 
 
-/* 800989DC-80098A10 0034+00 .text      item_func_COPY_ROD_2__Fv                                     */
+/* 800989DC-80098A10 0034+00 rc=1 efc=0 .text      item_func_COPY_ROD_2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_COPY_ROD_2__Fv) {
+asm static void item_func_COPY_ROD_2() {
 	nofralloc
 #include "asm/d/d_item/item_func_COPY_ROD_2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098A10-80098A14 0004+00 .text      item_func_BOMB_BAG_LV2__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_BAG_LV2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_BOMB_BAG_LV2__Fv.s"
+/* 80098A10-80098A14 0004+00 rc=1 efc=0 .text      item_func_BOMB_BAG_LV2__Fv                                   */
+static void item_func_BOMB_BAG_LV2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098A14-80098A48 0034+00 .text      item_func_BOMB_BAG_LV1__Fv                                   */
+/* 80098A14-80098A48 0034+00 rc=1 efc=0 .text      item_func_BOMB_BAG_LV1__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_BAG_LV1__Fv) {
+asm static void item_func_BOMB_BAG_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_BAG_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 80098A48-80098A7C 0034+00 .text      item_func_BOMB_IN_BAG__Fv                                    */
+/* 80098A48-80098A7C 0034+00 rc=1 efc=0 .text      item_func_BOMB_IN_BAG__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_IN_BAG__Fv) {
+asm static void item_func_BOMB_IN_BAG() {
 	nofralloc
 #include "asm/d/d_item/item_func_BOMB_IN_BAG__Fv.s"
 }
 #pragma pop
 
 
-/* 80098A7C-80098AB0 0034+00 .text      item_func_LIGHT_ARROW__Fv                                    */
+/* 80098A7C-80098AB0 0034+00 rc=1 efc=0 .text      item_func_LIGHT_ARROW__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LIGHT_ARROW__Fv) {
+asm static void item_func_LIGHT_ARROW() {
 	nofralloc
 #include "asm/d/d_item/item_func_LIGHT_ARROW__Fv.s"
 }
 #pragma pop
 
 
-/* 80098AB0-80098AC8 0018+00 .text      item_func_ARROW_LV1__Fv                                      */
+/* 80098AB0-80098AC8 0018+00 rc=1 efc=0 .text      item_func_ARROW_LV1__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_LV1__Fv) {
+asm static void item_func_ARROW_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 80098AC8-80098AE0 0018+00 .text      item_func_ARROW_LV2__Fv                                      */
+/* 80098AC8-80098AE0 0018+00 rc=1 efc=0 .text      item_func_ARROW_LV2__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_LV2__Fv) {
+asm static void item_func_ARROW_LV2() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_LV2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098AE0-80098AF8 0018+00 .text      item_func_ARROW_LV3__Fv                                      */
+/* 80098AE0-80098AF8 0018+00 rc=1 efc=0 .text      item_func_ARROW_LV3__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ARROW_LV3__Fv) {
+asm static void item_func_ARROW_LV3() {
 	nofralloc
 #include "asm/d/d_item/item_func_ARROW_LV3__Fv.s"
 }
 #pragma pop
 
 
-/* 80098AF8-80098AFC 0004+00 .text      item_func_LURE_ROD__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_LURE_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_LURE_ROD__Fv.s"
+/* 80098AF8-80098AFC 0004+00 rc=1 efc=0 .text      item_func_LURE_ROD__Fv                                       */
+static void item_func_LURE_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098AFC-80098B00 0004+00 .text      item_func_BOMB_ARROW__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOMB_ARROW__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_BOMB_ARROW__Fv.s"
+/* 80098AFC-80098B00 0004+00 rc=1 efc=0 .text      item_func_BOMB_ARROW__Fv                                     */
+static void item_func_BOMB_ARROW() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B00-80098B04 0004+00 .text      item_func_HAWK_ARROW__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_HAWK_ARROW__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_HAWK_ARROW__Fv.s"
+/* 80098B00-80098B04 0004+00 rc=1 efc=0 .text      item_func_HAWK_ARROW__Fv                                     */
+static void item_func_HAWK_ARROW() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B04-80098B08 0004+00 .text      item_func_BEE_ROD__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_BEE_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_BEE_ROD__Fv.s"
+/* 80098B04-80098B08 0004+00 rc=1 efc=0 .text      item_func_BEE_ROD__Fv                                        */
+static void item_func_BEE_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B08-80098B0C 0004+00 .text      item_func_JEWEL_ROD__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_JEWEL_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_JEWEL_ROD__Fv.s"
+/* 80098B08-80098B0C 0004+00 rc=1 efc=0 .text      item_func_JEWEL_ROD__Fv                                      */
+static void item_func_JEWEL_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B0C-80098B10 0004+00 .text      item_func_WORM_ROD__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_WORM_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_WORM_ROD__Fv.s"
+/* 80098B0C-80098B10 0004+00 rc=1 efc=0 .text      item_func_WORM_ROD__Fv                                       */
+static void item_func_WORM_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B10-80098B14 0004+00 .text      item_func_JEWEL_BEE_ROD__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_JEWEL_BEE_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_JEWEL_BEE_ROD__Fv.s"
+/* 80098B10-80098B14 0004+00 rc=1 efc=0 .text      item_func_JEWEL_BEE_ROD__Fv                                  */
+static void item_func_JEWEL_BEE_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B14-80098B18 0004+00 .text      item_func_JEWEL_WORM_ROD__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_JEWEL_WORM_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_JEWEL_WORM_ROD__Fv.s"
+/* 80098B14-80098B18 0004+00 rc=1 efc=0 .text      item_func_JEWEL_WORM_ROD__Fv                                 */
+static void item_func_JEWEL_WORM_ROD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098B18-80098B44 002C+00 .text      item_func_EMPTY_BOTTLE__Fv                                   */
+/* 80098B18-80098B44 002C+00 rc=1 efc=0 .text      item_func_EMPTY_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_EMPTY_BOTTLE__Fv) {
+asm static void item_func_EMPTY_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_EMPTY_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098B44-80098B74 0030+00 .text      item_func_RED_BOTTLE__Fv                                     */
+/* 80098B44-80098B74 0030+00 rc=1 efc=0 .text      item_func_RED_BOTTLE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_RED_BOTTLE__Fv) {
+asm static void item_func_RED_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_RED_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098B74-80098BA4 0030+00 .text      item_func_GREEN_BOTTLE__Fv                                   */
+/* 80098B74-80098BA4 0030+00 rc=1 efc=0 .text      item_func_GREEN_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_GREEN_BOTTLE__Fv) {
+asm static void item_func_GREEN_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_GREEN_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098BA4-80098BD4 0030+00 .text      item_func_BLUE_BOTTLE__Fv                                    */
+/* 80098BA4-80098BD4 0030+00 rc=1 efc=0 .text      item_func_BLUE_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BLUE_BOTTLE__Fv) {
+asm static void item_func_BLUE_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_BLUE_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098BD4-80098C04 0030+00 .text      item_func_MILK_BOTTLE__Fv                                    */
+/* 80098BD4-80098C04 0030+00 rc=1 efc=0 .text      item_func_MILK_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_MILK_BOTTLE__Fv) {
+asm static void item_func_MILK_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_MILK_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098C04-80098C34 0030+00 .text      item_func_HALF_MILK_BOTTLE__Fv                               */
+/* 80098C04-80098C34 0030+00 rc=1 efc=0 .text      item_func_HALF_MILK_BOTTLE__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HALF_MILK_BOTTLE__Fv) {
+asm static void item_func_HALF_MILK_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_HALF_MILK_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098C34-80098C64 0030+00 .text      item_func_OIL_BOTTLE__Fv                                     */
+/* 80098C34-80098C64 0030+00 rc=1 efc=0 .text      item_func_OIL_BOTTLE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_OIL_BOTTLE__Fv) {
+asm static void item_func_OIL_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_OIL_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098C64-80098C94 0030+00 .text      item_func_WATER_BOTTLE__Fv                                   */
+/* 80098C64-80098C94 0030+00 rc=1 efc=0 .text      item_func_WATER_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOTTLE__Fv) {
+asm static void item_func_WATER_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098C94-80098CC4 0030+00 .text      item_func_OIL_BOTTLE2__Fv                                    */
+/* 80098C94-80098CC4 0030+00 rc=1 efc=0 .text      item_func_OIL_BOTTLE2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_OIL_BOTTLE2__Fv) {
+asm static void item_func_OIL_BOTTLE2() {
 	nofralloc
 #include "asm/d/d_item/item_func_OIL_BOTTLE2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098CC4-80098CF4 0030+00 .text      item_func_RED_BOTTLE2__Fv                                    */
+/* 80098CC4-80098CF4 0030+00 rc=1 efc=0 .text      item_func_RED_BOTTLE2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_RED_BOTTLE2__Fv) {
+asm static void item_func_RED_BOTTLE2() {
 	nofralloc
 #include "asm/d/d_item/item_func_RED_BOTTLE2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098CF4-80098D24 0030+00 .text      item_func_UGLY_SOUP__Fv                                      */
+/* 80098CF4-80098D24 0030+00 rc=1 efc=0 .text      item_func_UGLY_SOUP__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_UGLY_SOUP__Fv) {
+asm static void item_func_UGLY_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_func_UGLY_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 80098D24-80098D54 0030+00 .text      item_func_HOT_SPRING__Fv                                     */
+/* 80098D24-80098D54 0030+00 rc=1 efc=0 .text      item_func_HOT_SPRING__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HOT_SPRING__Fv) {
+asm static void item_func_HOT_SPRING() {
 	nofralloc
 #include "asm/d/d_item/item_func_HOT_SPRING__Fv.s"
 }
 #pragma pop
 
 
-/* 80098D54-80098D84 0030+00 .text      item_func_FAIRY_BOTTLE__Fv                                   */
+/* 80098D54-80098D84 0030+00 rc=1 efc=0 .text      item_func_FAIRY_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_FAIRY_BOTTLE__Fv) {
+asm static void item_func_FAIRY_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_FAIRY_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098D84-80098DB4 0030+00 .text      item_func_HOT_SPRING2__Fv                                    */
+/* 80098D84-80098DB4 0030+00 rc=1 efc=0 .text      item_func_HOT_SPRING2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HOT_SPRING2__Fv) {
+asm static void item_func_HOT_SPRING2() {
 	nofralloc
 #include "asm/d/d_item/item_func_HOT_SPRING2__Fv.s"
 }
 #pragma pop
 
 
-/* 80098DB4-80098DB8 0004+00 .text      item_func_OIL2__Fv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_OIL2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_OIL2__Fv.s"
+/* 80098DB4-80098DB8 0004+00 rc=1 efc=0 .text      item_func_OIL2__Fv                                           */
+static void item_func_OIL2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098DB8-80098DBC 0004+00 .text      item_func_OIL__Fv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_OIL__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_OIL__Fv.s"
+/* 80098DB8-80098DBC 0004+00 rc=1 efc=0 .text      item_func_OIL__Fv                                            */
+static void item_func_OIL() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098DBC-80098DF0 0034+00 .text      item_func_NORMAL_BOMB__Fv                                    */
+/* 80098DBC-80098DF0 0034+00 rc=1 efc=0 .text      item_func_NORMAL_BOMB__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_NORMAL_BOMB__Fv) {
+asm static void item_func_NORMAL_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_func_NORMAL_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 80098DF0-80098E38 0048+00 .text      item_func_WATER_BOMB__Fv                                     */
+/* 80098DF0-80098E38 0048+00 rc=1 efc=0 .text      item_func_WATER_BOMB__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WATER_BOMB__Fv) {
+asm static void item_func_WATER_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_func_WATER_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 80098E38-80098E80 0048+00 .text      item_func_POKE_BOMB__Fv                                      */
+/* 80098E38-80098E80 0048+00 rc=1 efc=0 .text      item_func_POKE_BOMB__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_POKE_BOMB__Fv) {
+asm static void item_func_POKE_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_func_POKE_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 80098E80-80098EB0 0030+00 .text      item_func_FAIRY_DROP__Fv                                     */
+/* 80098E80-80098EB0 0030+00 rc=1 efc=0 .text      item_func_FAIRY_DROP__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_FAIRY_DROP__Fv) {
+asm static void item_func_FAIRY_DROP() {
 	nofralloc
 #include "asm/d/d_item/item_func_FAIRY_DROP__Fv.s"
 }
 #pragma pop
 
 
-/* 80098EB0-80098EB4 0004+00 .text      item_func_WORM__Fv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_WORM__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_WORM__Fv.s"
+/* 80098EB0-80098EB4 0004+00 rc=1 efc=0 .text      item_func_WORM__Fv                                           */
+static void item_func_WORM() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80098EB4-80098EE4 0030+00 .text      item_func_DROP_BOTTLE__Fv                                    */
+/* 80098EB4-80098EE4 0030+00 rc=1 efc=0 .text      item_func_DROP_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DROP_BOTTLE__Fv) {
+asm static void item_func_DROP_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_DROP_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098EE4-80098F80 009C+00 .text      item_func_BEE_CHILD__Fv                                      */
+/* 80098EE4-80098F80 009C+00 rc=2 efc=0 .text      item_func_BEE_CHILD__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BEE_CHILD__Fv) {
+asm static void item_func_BEE_CHILD() {
 	nofralloc
 #include "asm/d/d_item/item_func_BEE_CHILD__Fv.s"
 }
 #pragma pop
 
 
-/* 80098F80-80098FB0 0030+00 .text      item_func_CHUCHU_RARE__Fv                                    */
+/* 80098F80-80098FB0 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_RARE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_RARE__Fv) {
+asm static void item_func_CHUCHU_RARE() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_RARE__Fv.s"
 }
 #pragma pop
 
 
-/* 80098FB0-80098FE0 0030+00 .text      item_func_CHUCHU_RED__Fv                                     */
+/* 80098FB0-80098FE0 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_RED__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_RED__Fv) {
+asm static void item_func_CHUCHU_RED() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_RED__Fv.s"
 }
 #pragma pop
 
 
-/* 80098FE0-80099010 0030+00 .text      item_func_CHUCHU_BLUE__Fv                                    */
+/* 80098FE0-80099010 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_BLUE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_BLUE__Fv) {
+asm static void item_func_CHUCHU_BLUE() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_BLUE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099010-80099040 0030+00 .text      item_func_CHUCHU_GREEN__Fv                                   */
+/* 80099010-80099040 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_GREEN__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_GREEN__Fv) {
+asm static void item_func_CHUCHU_GREEN() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_GREEN__Fv.s"
 }
 #pragma pop
 
 
-/* 80099040-80099070 0030+00 .text      item_func_CHUCHU_YELLOW__Fv                                  */
+/* 80099040-80099070 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_YELLOW__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_YELLOW__Fv) {
+asm static void item_func_CHUCHU_YELLOW() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_YELLOW__Fv.s"
 }
 #pragma pop
 
 
-/* 80099070-800990A0 0030+00 .text      item_func_CHUCHU_PURPLE__Fv                                  */
+/* 80099070-800990A0 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_PURPLE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_PURPLE__Fv) {
+asm static void item_func_CHUCHU_PURPLE() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_PURPLE__Fv.s"
 }
 #pragma pop
 
 
-/* 800990A0-800990D0 0030+00 .text      item_func_LV1_SOUP__Fv                                       */
+/* 800990A0-800990D0 0030+00 rc=1 efc=0 .text      item_func_LV1_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV1_SOUP__Fv) {
+asm static void item_func_LV1_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV1_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 800990D0-80099100 0030+00 .text      item_func_LV2_SOUP__Fv                                       */
+/* 800990D0-80099100 0030+00 rc=1 efc=0 .text      item_func_LV2_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV2_SOUP__Fv) {
+asm static void item_func_LV2_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV2_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 80099100-80099130 0030+00 .text      item_func_LV3_SOUP__Fv                                       */
+/* 80099100-80099130 0030+00 rc=1 efc=0 .text      item_func_LV3_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV3_SOUP__Fv) {
+asm static void item_func_LV3_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV3_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 80099130-80099164 0034+00 .text      item_func_LETTER__Fv                                         */
+/* 80099130-80099164 0034+00 rc=1 efc=0 .text      item_func_LETTER__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LETTER__Fv) {
+asm static void item_func_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_func_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 80099164-80099198 0034+00 .text      item_func_BILL__Fv                                           */
+/* 80099164-80099198 0034+00 rc=1 efc=0 .text      item_func_BILL__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_BILL__Fv) {
+asm static void item_func_BILL() {
 	nofralloc
 #include "asm/d/d_item/item_func_BILL__Fv.s"
 }
 #pragma pop
 
 
-/* 80099198-800991E8 0050+00 .text      item_func_WOOD_STATUE__Fv                                    */
+/* 80099198-800991E8 0050+00 rc=1 efc=0 .text      item_func_WOOD_STATUE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_WOOD_STATUE__Fv) {
+asm static void item_func_WOOD_STATUE() {
 	nofralloc
 #include "asm/d/d_item/item_func_WOOD_STATUE__Fv.s"
 }
 #pragma pop
 
 
-/* 800991E8-8009921C 0034+00 .text      item_func_IRIAS_PENDANT__Fv                                  */
+/* 800991E8-8009921C 0034+00 rc=1 efc=0 .text      item_func_IRIAS_PENDANT__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_IRIAS_PENDANT__Fv) {
+asm static void item_func_IRIAS_PENDANT() {
 	nofralloc
 #include "asm/d/d_item/item_func_IRIAS_PENDANT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009921C-80099250 0034+00 .text      item_func_HORSE_FLUTE__Fv                                    */
+/* 8009921C-80099250 0034+00 rc=1 efc=0 .text      item_func_HORSE_FLUTE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_HORSE_FLUTE__Fv) {
+asm static void item_func_HORSE_FLUTE() {
 	nofralloc
 #include "asm/d/d_item/item_func_HORSE_FLUTE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099250-80099284 0034+00 .text      item_func_RAFRELS_MEMO__Fv                                   */
+/* 80099250-80099284 0034+00 rc=1 efc=0 .text      item_func_RAFRELS_MEMO__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_RAFRELS_MEMO__Fv) {
+asm static void item_func_RAFRELS_MEMO() {
 	nofralloc
 #include "asm/d/d_item/item_func_RAFRELS_MEMO__Fv.s"
 }
 #pragma pop
 
 
-/* 80099284-800992B8 0034+00 .text      item_func_ASHS_SCRIBBLING__Fv                                */
+/* 80099284-800992B8 0034+00 rc=1 efc=0 .text      item_func_ASHS_SCRIBBLING__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ASHS_SCRIBBLING__Fv) {
+asm static void item_func_ASHS_SCRIBBLING() {
 	nofralloc
 #include "asm/d/d_item/item_func_ASHS_SCRIBBLING__Fv.s"
 }
 #pragma pop
 
 
-/* 800992B8-800992E8 0030+00 .text      item_func_CHUCHU_YELLOW2__Fv                                 */
+/* 800992B8-800992E8 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_YELLOW2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_YELLOW2__Fv) {
+asm static void item_func_CHUCHU_YELLOW2() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_YELLOW2__Fv.s"
 }
 #pragma pop
 
 
-/* 800992E8-80099318 0030+00 .text      item_func_OIL_BOTTLE3__Fv                                    */
+/* 800992E8-80099318 0030+00 rc=1 efc=0 .text      item_func_OIL_BOTTLE3__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_OIL_BOTTLE3__Fv) {
+asm static void item_func_OIL_BOTTLE3() {
 	nofralloc
 #include "asm/d/d_item/item_func_OIL_BOTTLE3__Fv.s"
 }
 #pragma pop
 
 
-/* 80099318-80099338 0020+00 .text      item_func_SHOP_BEE_CHILD__Fv                                 */
+/* 80099318-80099338 0020+00 rc=1 efc=0 .text      item_func_SHOP_BEE_CHILD__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SHOP_BEE_CHILD__Fv) {
+asm static void item_func_SHOP_BEE_CHILD() {
 	nofralloc
 #include "asm/d/d_item/item_func_SHOP_BEE_CHILD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099338-80099368 0030+00 .text      item_func_CHUCHU_BLACK__Fv                                   */
+/* 80099338-80099368 0030+00 rc=1 efc=0 .text      item_func_CHUCHU_BLACK__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_CHUCHU_BLACK__Fv) {
+asm static void item_func_CHUCHU_BLACK() {
 	nofralloc
 #include "asm/d/d_item/item_func_CHUCHU_BLACK__Fv.s"
 }
 #pragma pop
 
 
-/* 80099368-8009936C 0004+00 .text      item_func_LIGHT_DROP__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_LIGHT_DROP__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_LIGHT_DROP__Fv.s"
+/* 80099368-8009936C 0004+00 rc=1 efc=0 .text      item_func_LIGHT_DROP__Fv                                     */
+static void item_func_LIGHT_DROP() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009936C-8009939C 0030+00 .text      item_func_DROP_CONTAINER__Fv                                 */
+/* 8009936C-8009939C 0030+00 rc=1 efc=0 .text      item_func_DROP_CONTAINER__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DROP_CONTAINER__Fv) {
+asm static void item_func_DROP_CONTAINER() {
 	nofralloc
 #include "asm/d/d_item/item_func_DROP_CONTAINER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009939C-800993CC 0030+00 .text      item_func_DROP_CONTAINER02__Fv                               */
+/* 8009939C-800993CC 0030+00 rc=1 efc=0 .text      item_func_DROP_CONTAINER02__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DROP_CONTAINER02__Fv) {
+asm static void item_func_DROP_CONTAINER02() {
 	nofralloc
 #include "asm/d/d_item/item_func_DROP_CONTAINER02__Fv.s"
 }
 #pragma pop
 
 
-/* 800993CC-800993FC 0030+00 .text      item_func_DROP_CONTAINER03__Fv                               */
+/* 800993CC-800993FC 0030+00 rc=1 efc=0 .text      item_func_DROP_CONTAINER03__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_DROP_CONTAINER03__Fv) {
+asm static void item_func_DROP_CONTAINER03() {
 	nofralloc
 #include "asm/d/d_item/item_func_DROP_CONTAINER03__Fv.s"
 }
 #pragma pop
 
 
-/* 800993FC-80099400 0004+00 .text      item_func_FILLED_CONTAINER__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_FILLED_CONTAINER__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_FILLED_CONTAINER__Fv.s"
+/* 800993FC-80099400 0004+00 rc=1 efc=0 .text      item_func_FILLED_CONTAINER__Fv                               */
+static void item_func_FILLED_CONTAINER() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099400-80099404 0004+00 .text      item_func_MIRROR_PIECE_2__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_MIRROR_PIECE_2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_MIRROR_PIECE_2__Fv.s"
+/* 80099400-80099404 0004+00 rc=1 efc=0 .text      item_func_MIRROR_PIECE_2__Fv                                 */
+static void item_func_MIRROR_PIECE_2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099404-80099408 0004+00 .text      item_func_MIRROR_PIECE_3__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_MIRROR_PIECE_3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_MIRROR_PIECE_3__Fv.s"
+/* 80099404-80099408 0004+00 rc=1 efc=0 .text      item_func_MIRROR_PIECE_3__Fv                                 */
+static void item_func_MIRROR_PIECE_3() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099408-8009940C 0004+00 .text      item_func_MIRROR_PIECE_4__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_MIRROR_PIECE_4__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_MIRROR_PIECE_4__Fv.s"
+/* 80099408-8009940C 0004+00 rc=1 efc=0 .text      item_func_MIRROR_PIECE_4__Fv                                 */
+static void item_func_MIRROR_PIECE_4() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009940C-80099410 0004+00 .text      item_func_SMELL_YELIA_POUCH__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_YELIA_POUCH__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_YELIA_POUCH__Fv.s"
+/* 8009940C-80099410 0004+00 rc=1 efc=0 .text      item_func_SMELL_YELIA_POUCH__Fv                              */
+static void item_func_SMELL_YELIA_POUCH() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099410-80099414 0004+00 .text      item_func_SMELL_PUMPKIN__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_PUMPKIN__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_PUMPKIN__Fv.s"
+/* 80099410-80099414 0004+00 rc=1 efc=0 .text      item_func_SMELL_PUMPKIN__Fv                                  */
+static void item_func_SMELL_PUMPKIN() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099414-80099418 0004+00 .text      item_func_SMELL_POH__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_POH__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_POH__Fv.s"
+/* 80099414-80099418 0004+00 rc=1 efc=0 .text      item_func_SMELL_POH__Fv                                      */
+static void item_func_SMELL_POH() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099418-8009941C 0004+00 .text      item_func_SMELL_FISH__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_FISH__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_FISH__Fv.s"
+/* 80099418-8009941C 0004+00 rc=1 efc=0 .text      item_func_SMELL_FISH__Fv                                     */
+static void item_func_SMELL_FISH() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009941C-80099420 0004+00 .text      item_func_SMELL_CHILDREN__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_CHILDREN__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_CHILDREN__Fv.s"
+/* 8009941C-80099420 0004+00 rc=1 efc=0 .text      item_func_SMELL_CHILDREN__Fv                                 */
+static void item_func_SMELL_CHILDREN() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099420-80099424 0004+00 .text      item_func_SMELL_MEDICINE__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMELL_MEDICINE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SMELL_MEDICINE__Fv.s"
+/* 80099420-80099424 0004+00 rc=1 efc=0 .text      item_func_SMELL_MEDICINE__Fv                                 */
+static void item_func_SMELL_MEDICINE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099424-80099428 0004+00 .text      item_func_M_BEETLE__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_BEETLE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_BEETLE__Fv.s"
+/* 80099424-80099428 0004+00 rc=1 efc=0 .text      item_func_M_BEETLE__Fv                                       */
+static void item_func_M_BEETLE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099428-8009942C 0004+00 .text      item_func_F_BEETLE__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_BEETLE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_BEETLE__Fv.s"
+/* 80099428-8009942C 0004+00 rc=1 efc=0 .text      item_func_F_BEETLE__Fv                                       */
+static void item_func_F_BEETLE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009942C-80099430 0004+00 .text      item_func_M_BUTTERFLY__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_BUTTERFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_BUTTERFLY__Fv.s"
+/* 8009942C-80099430 0004+00 rc=1 efc=0 .text      item_func_M_BUTTERFLY__Fv                                    */
+static void item_func_M_BUTTERFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099430-80099434 0004+00 .text      item_func_F_BUTTERFLY__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_BUTTERFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_BUTTERFLY__Fv.s"
+/* 80099430-80099434 0004+00 rc=1 efc=0 .text      item_func_F_BUTTERFLY__Fv                                    */
+static void item_func_F_BUTTERFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099434-80099438 0004+00 .text      item_func_M_STAG_BEETLE__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_STAG_BEETLE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_STAG_BEETLE__Fv.s"
+/* 80099434-80099438 0004+00 rc=1 efc=0 .text      item_func_M_STAG_BEETLE__Fv                                  */
+static void item_func_M_STAG_BEETLE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099438-8009943C 0004+00 .text      item_func_F_STAG_BEETLE__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_STAG_BEETLE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_STAG_BEETLE__Fv.s"
+/* 80099438-8009943C 0004+00 rc=1 efc=0 .text      item_func_F_STAG_BEETLE__Fv                                  */
+static void item_func_F_STAG_BEETLE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009943C-80099440 0004+00 .text      item_func_M_GRASSHOPPER__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_GRASSHOPPER__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_GRASSHOPPER__Fv.s"
+/* 8009943C-80099440 0004+00 rc=1 efc=0 .text      item_func_M_GRASSHOPPER__Fv                                  */
+static void item_func_M_GRASSHOPPER() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099440-80099444 0004+00 .text      item_func_F_GRASSHOPPER__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_GRASSHOPPER__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_GRASSHOPPER__Fv.s"
+/* 80099440-80099444 0004+00 rc=1 efc=0 .text      item_func_F_GRASSHOPPER__Fv                                  */
+static void item_func_F_GRASSHOPPER() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099444-80099448 0004+00 .text      item_func_M_NANAFUSHI__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_NANAFUSHI__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_NANAFUSHI__Fv.s"
+/* 80099444-80099448 0004+00 rc=1 efc=0 .text      item_func_M_NANAFUSHI__Fv                                    */
+static void item_func_M_NANAFUSHI() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099448-8009944C 0004+00 .text      item_func_F_NANAFUSHI__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_NANAFUSHI__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_NANAFUSHI__Fv.s"
+/* 80099448-8009944C 0004+00 rc=1 efc=0 .text      item_func_F_NANAFUSHI__Fv                                    */
+static void item_func_F_NANAFUSHI() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009944C-80099450 0004+00 .text      item_func_M_DANGOMUSHI__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_DANGOMUSHI__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_DANGOMUSHI__Fv.s"
+/* 8009944C-80099450 0004+00 rc=1 efc=0 .text      item_func_M_DANGOMUSHI__Fv                                   */
+static void item_func_M_DANGOMUSHI() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099450-80099454 0004+00 .text      item_func_F_DANGOMUSHI__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_DANGOMUSHI__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_DANGOMUSHI__Fv.s"
+/* 80099450-80099454 0004+00 rc=1 efc=0 .text      item_func_F_DANGOMUSHI__Fv                                   */
+static void item_func_F_DANGOMUSHI() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099454-80099458 0004+00 .text      item_func_M_MANTIS__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_MANTIS__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_MANTIS__Fv.s"
+/* 80099454-80099458 0004+00 rc=1 efc=0 .text      item_func_M_MANTIS__Fv                                       */
+static void item_func_M_MANTIS() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099458-8009945C 0004+00 .text      item_func_F_MANTIS__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_MANTIS__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_MANTIS__Fv.s"
+/* 80099458-8009945C 0004+00 rc=1 efc=0 .text      item_func_F_MANTIS__Fv                                       */
+static void item_func_F_MANTIS() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009945C-80099460 0004+00 .text      item_func_M_LADYBUG__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_LADYBUG__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_LADYBUG__Fv.s"
+/* 8009945C-80099460 0004+00 rc=1 efc=0 .text      item_func_M_LADYBUG__Fv                                      */
+static void item_func_M_LADYBUG() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099460-80099464 0004+00 .text      item_func_F_LADYBUG__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_LADYBUG__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_LADYBUG__Fv.s"
+/* 80099460-80099464 0004+00 rc=1 efc=0 .text      item_func_F_LADYBUG__Fv                                      */
+static void item_func_F_LADYBUG() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099464-80099468 0004+00 .text      item_func_M_SNAIL__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_SNAIL__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_SNAIL__Fv.s"
+/* 80099464-80099468 0004+00 rc=1 efc=0 .text      item_func_M_SNAIL__Fv                                        */
+static void item_func_M_SNAIL() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099468-8009946C 0004+00 .text      item_func_F_SNAIL__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_SNAIL__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_SNAIL__Fv.s"
+/* 80099468-8009946C 0004+00 rc=1 efc=0 .text      item_func_F_SNAIL__Fv                                        */
+static void item_func_F_SNAIL() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009946C-80099470 0004+00 .text      item_func_M_DRAGONFLY__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_DRAGONFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_DRAGONFLY__Fv.s"
+/* 8009946C-80099470 0004+00 rc=1 efc=0 .text      item_func_M_DRAGONFLY__Fv                                    */
+static void item_func_M_DRAGONFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099470-80099474 0004+00 .text      item_func_F_DRAGONFLY__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_DRAGONFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_DRAGONFLY__Fv.s"
+/* 80099470-80099474 0004+00 rc=1 efc=0 .text      item_func_F_DRAGONFLY__Fv                                    */
+static void item_func_F_DRAGONFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099474-80099478 0004+00 .text      item_func_M_ANT__Fv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_ANT__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_ANT__Fv.s"
+/* 80099474-80099478 0004+00 rc=1 efc=0 .text      item_func_M_ANT__Fv                                          */
+static void item_func_M_ANT() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099478-8009947C 0004+00 .text      item_func_F_ANT__Fv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_ANT__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_ANT__Fv.s"
+/* 80099478-8009947C 0004+00 rc=1 efc=0 .text      item_func_F_ANT__Fv                                          */
+static void item_func_F_ANT() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009947C-80099480 0004+00 .text      item_func_M_MAYFLY__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_M_MAYFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_M_MAYFLY__Fv.s"
+/* 8009947C-80099480 0004+00 rc=1 efc=0 .text      item_func_M_MAYFLY__Fv                                       */
+static void item_func_M_MAYFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099480-80099484 0004+00 .text      item_func_F_MAYFLY__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_F_MAYFLY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_F_MAYFLY__Fv.s"
+/* 80099480-80099484 0004+00 rc=1 efc=0 .text      item_func_F_MAYFLY__Fv                                       */
+static void item_func_F_MAYFLY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099484-80099488 0004+00 .text      item_func_POU_SPIRIT__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_POU_SPIRIT__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_POU_SPIRIT__Fv.s"
+/* 80099484-80099488 0004+00 rc=1 efc=0 .text      item_func_POU_SPIRIT__Fv                                     */
+static void item_func_POU_SPIRIT() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099488-800994BC 0034+00 .text      item_func_ANCIENT_DOCUMENT__Fv                               */
+/* 80099488-800994BC 0034+00 rc=1 efc=0 .text      item_func_ANCIENT_DOCUMENT__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ANCIENT_DOCUMENT__Fv) {
+asm static void item_func_ANCIENT_DOCUMENT() {
 	nofralloc
 #include "asm/d/d_item/item_func_ANCIENT_DOCUMENT__Fv.s"
 }
 #pragma pop
 
 
-/* 800994BC-800994F0 0034+00 .text      item_func_AIR_LETTER__Fv                                     */
+/* 800994BC-800994F0 0034+00 rc=1 efc=0 .text      item_func_AIR_LETTER__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_AIR_LETTER__Fv) {
+asm static void item_func_AIR_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_func_AIR_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 800994F0-80099524 0034+00 .text      item_func_ANCIENT_DOCUMENT2__Fv                              */
+/* 800994F0-80099524 0034+00 rc=1 efc=0 .text      item_func_ANCIENT_DOCUMENT2__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_ANCIENT_DOCUMENT2__Fv) {
+asm static void item_func_ANCIENT_DOCUMENT2() {
 	nofralloc
 #include "asm/d/d_item/item_func_ANCIENT_DOCUMENT2__Fv.s"
 }
 #pragma pop
 
 
-/* 80099524-80099558 0034+00 .text      item_func_LV7_DUNGEON_EXIT__Fv                               */
+/* 80099524-80099558 0034+00 rc=1 efc=0 .text      item_func_LV7_DUNGEON_EXIT__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV7_DUNGEON_EXIT__Fv) {
+asm static void item_func_LV7_DUNGEON_EXIT() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV7_DUNGEON_EXIT__Fv.s"
 }
 #pragma pop
 
 
-/* 80099558-80099570 0018+00 .text      item_func_LINKS_SAVINGS__Fv                                  */
+/* 80099558-80099570 0018+00 rc=1 efc=0 .text      item_func_LINKS_SAVINGS__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LINKS_SAVINGS__Fv) {
+asm static void item_func_LINKS_SAVINGS() {
 	nofralloc
 #include "asm/d/d_item/item_func_LINKS_SAVINGS__Fv.s"
 }
 #pragma pop
 
 
-/* 80099570-80099588 0018+00 .text      item_func_SMALL_KEY2__Fv                                     */
+/* 80099570-80099588 0018+00 rc=1 efc=0 .text      item_func_SMALL_KEY2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_SMALL_KEY2__Fv) {
+asm static void item_func_SMALL_KEY2() {
 	nofralloc
 #include "asm/d/d_item/item_func_SMALL_KEY2__Fv.s"
 }
 #pragma pop
 
 
-/* 80099588-8009958C 0004+00 .text      item_func_POU_FIRE1__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_POU_FIRE1__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_POU_FIRE1__Fv.s"
+/* 80099588-8009958C 0004+00 rc=1 efc=0 .text      item_func_POU_FIRE1__Fv                                      */
+static void item_func_POU_FIRE1() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009958C-80099590 0004+00 .text      item_func_POU_FIRE2__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_POU_FIRE2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_POU_FIRE2__Fv.s"
+/* 8009958C-80099590 0004+00 rc=1 efc=0 .text      item_func_POU_FIRE2__Fv                                      */
+static void item_func_POU_FIRE2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099590-80099594 0004+00 .text      item_func_POU_FIRE3__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_POU_FIRE3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_POU_FIRE3__Fv.s"
+/* 80099590-80099594 0004+00 rc=1 efc=0 .text      item_func_POU_FIRE3__Fv                                      */
+static void item_func_POU_FIRE3() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099594-80099598 0004+00 .text      item_func_POU_FIRE4__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_POU_FIRE4__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_POU_FIRE4__Fv.s"
+/* 80099594-80099598 0004+00 rc=1 efc=0 .text      item_func_POU_FIRE4__Fv                                      */
+static void item_func_POU_FIRE4() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099598-8009959C 0004+00 .text      item_func_BOSSRIDER_KEY__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_BOSSRIDER_KEY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_BOSSRIDER_KEY__Fv.s"
+/* 80099598-8009959C 0004+00 rc=1 efc=0 .text      item_func_BOSSRIDER_KEY__Fv                                  */
+static void item_func_BOSSRIDER_KEY() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8009959C-800995A0 0004+00 .text      item_func_TOMATO_PUREE__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_TOMATO_PUREE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_TOMATO_PUREE__Fv.s"
+/* 8009959C-800995A0 0004+00 rc=1 efc=0 .text      item_func_TOMATO_PUREE__Fv                                   */
+static void item_func_TOMATO_PUREE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995A0-800995A4 0004+00 .text      item_func_TASTE__Fv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_TASTE__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_TASTE__Fv.s"
+/* 800995A0-800995A4 0004+00 rc=1 efc=0 .text      item_func_TASTE__Fv                                          */
+static void item_func_TASTE() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995A4-800995D4 0030+00 .text      item_func_LV5_BOSS_KEY__Fv                                   */
+/* 800995A4-800995D4 0030+00 rc=1 efc=0 .text      item_func_LV5_BOSS_KEY__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV5_BOSS_KEY__Fv) {
+asm static void item_func_LV5_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV5_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 800995D4-800995D8 0004+00 .text      item_func_SURFBOARD__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_SURFBOARD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_SURFBOARD__Fv.s"
+/* 800995D4-800995D8 0004+00 rc=1 efc=0 .text      item_func_SURFBOARD__Fv                                      */
+static void item_func_SURFBOARD() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995D8-800995DC 0004+00 .text      item_func_KANTERA2__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_KANTERA2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_KANTERA2__Fv.s"
+/* 800995D8-800995DC 0004+00 rc=1 efc=0 .text      item_func_KANTERA2__Fv                                       */
+static void item_func_KANTERA2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995DC-800995E0 0004+00 .text      item_func_L2_KEY_PIECES1__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_L2_KEY_PIECES1__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_L2_KEY_PIECES1__Fv.s"
+/* 800995DC-800995E0 0004+00 rc=1 efc=0 .text      item_func_L2_KEY_PIECES1__Fv                                 */
+static void item_func_L2_KEY_PIECES1() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995E0-800995E4 0004+00 .text      item_func_L2_KEY_PIECES2__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_L2_KEY_PIECES2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_L2_KEY_PIECES2__Fv.s"
+/* 800995E0-800995E4 0004+00 rc=1 efc=0 .text      item_func_L2_KEY_PIECES2__Fv                                 */
+static void item_func_L2_KEY_PIECES2() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995E4-800995E8 0004+00 .text      item_func_L2_KEY_PIECES3__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_L2_KEY_PIECES3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_L2_KEY_PIECES3__Fv.s"
+/* 800995E4-800995E8 0004+00 rc=1 efc=0 .text      item_func_L2_KEY_PIECES3__Fv                                 */
+static void item_func_L2_KEY_PIECES3() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995E8-800995EC 0004+00 .text      item_func_KEY_OF_CARAVAN__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_KEY_OF_CARAVAN__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_KEY_OF_CARAVAN__Fv.s"
+/* 800995E8-800995EC 0004+00 rc=1 efc=0 .text      item_func_KEY_OF_CARAVAN__Fv                                 */
+static void item_func_KEY_OF_CARAVAN() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800995EC-8009961C 0030+00 .text      item_func_LV2_BOSS_KEY__Fv                                   */
+/* 800995EC-8009961C 0030+00 rc=1 efc=0 .text      item_func_LV2_BOSS_KEY__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_LV2_BOSS_KEY__Fv) {
+asm static void item_func_LV2_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_func_LV2_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009961C-80099634 0018+00 .text      item_func_KEY_OF_FILONE__Fv                                  */
+/* 8009961C-80099634 0018+00 rc=1 efc=0 .text      item_func_KEY_OF_FILONE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_func_KEY_OF_FILONE__Fv) {
+asm static void item_func_KEY_OF_FILONE() {
 	nofralloc
 #include "asm/d/d_item/item_func_KEY_OF_FILONE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099634-80099638 0004+00 .text      item_func_noentry__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_func_noentry__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_func_noentry__Fv.s"
+/* 80099634-80099638 0004+00 rc=1 efc=0 .text      item_func_noentry__Fv                                        */
+static void item_func_noentry() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80099638-80099640 0008+00 .text      item_getcheck_func_noentry__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_noentry__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_noentry__Fv.s"
+/* 80099638-80099640 0008+00 rc=1 efc=0 .text      item_getcheck_func_noentry__Fv                               */
+static s32 item_getcheck_func_noentry() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099640-80099648 0008+00 .text      item_getcheck_func_HEART__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HEART__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_HEART__Fv.s"
+/* 80099640-80099648 0008+00 rc=1 efc=0 .text      item_getcheck_func_HEART__Fv                                 */
+static s32 item_getcheck_func_HEART() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099648-80099678 0030+00 .text      item_getcheck_func_GREEN_RUPEE__Fv                           */
+/* 80099648-80099678 0030+00 rc=1 efc=0 .text      item_getcheck_func_GREEN_RUPEE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_GREEN_RUPEE__Fv) {
+asm static void item_getcheck_func_GREEN_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_GREEN_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099678-800996A8 0030+00 .text      item_getcheck_func_BLUE_RUPEE__Fv                            */
+/* 80099678-800996A8 0030+00 rc=1 efc=0 .text      item_getcheck_func_BLUE_RUPEE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BLUE_RUPEE__Fv) {
+asm static void item_getcheck_func_BLUE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BLUE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 800996A8-800996D8 0030+00 .text      item_getcheck_func_YELLOW_RUPEE__Fv                          */
+/* 800996A8-800996D8 0030+00 rc=1 efc=0 .text      item_getcheck_func_YELLOW_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_YELLOW_RUPEE__Fv) {
+asm static void item_getcheck_func_YELLOW_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_YELLOW_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 800996D8-80099708 0030+00 .text      item_getcheck_func_RED_RUPEE__Fv                             */
+/* 800996D8-80099708 0030+00 rc=1 efc=0 .text      item_getcheck_func_RED_RUPEE__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_RED_RUPEE__Fv) {
+asm static void item_getcheck_func_RED_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_RED_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099708-80099738 0030+00 .text      item_getcheck_func_PURPLE_RUPEE__Fv                          */
+/* 80099708-80099738 0030+00 rc=1 efc=0 .text      item_getcheck_func_PURPLE_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_PURPLE_RUPEE__Fv) {
+asm static void item_getcheck_func_PURPLE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_PURPLE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099738-80099768 0030+00 .text      item_getcheck_func_ORANGE_RUPEE__Fv                          */
+/* 80099738-80099768 0030+00 rc=1 efc=0 .text      item_getcheck_func_ORANGE_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ORANGE_RUPEE__Fv) {
+asm static void item_getcheck_func_ORANGE_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ORANGE_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099768-80099798 0030+00 .text      item_getcheck_func_SILVER_RUPEE__Fv                          */
+/* 80099768-80099798 0030+00 rc=1 efc=0 .text      item_getcheck_func_SILVER_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SILVER_RUPEE__Fv) {
+asm static void item_getcheck_func_SILVER_RUPEE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SILVER_RUPEE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099798-800997A0 0008+00 .text      item_getcheck_func_S_MAGIC__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_S_MAGIC__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_S_MAGIC__Fv.s"
+/* 80099798-800997A0 0008+00 rc=1 efc=0 .text      item_getcheck_func_S_MAGIC__Fv                               */
+static s32 item_getcheck_func_S_MAGIC() {
+	return -1;
 }
-#pragma pop
 
 
-/* 800997A0-800997A8 0008+00 .text      item_getcheck_func_L_MAGIC__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_L_MAGIC__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_L_MAGIC__Fv.s"
+/* 800997A0-800997A8 0008+00 rc=1 efc=0 .text      item_getcheck_func_L_MAGIC__Fv                               */
+static s32 item_getcheck_func_L_MAGIC() {
+	return -1;
 }
-#pragma pop
 
 
-/* 800997A8-800997D8 0030+00 .text      item_getcheck_func_BOMB_5__Fv                                */
+/* 800997A8-800997D8 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_5__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_5__Fv) {
+asm static void item_getcheck_func_BOMB_5() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_5__Fv.s"
 }
 #pragma pop
 
 
-/* 800997D8-80099808 0030+00 .text      item_getcheck_func_BOMB_10__Fv                               */
+/* 800997D8-80099808 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_10__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_10__Fv) {
+asm static void item_getcheck_func_BOMB_10() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_10__Fv.s"
 }
 #pragma pop
 
 
-/* 80099808-80099838 0030+00 .text      item_getcheck_func_BOMB_20__Fv                               */
+/* 80099808-80099838 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_20__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_20__Fv) {
+asm static void item_getcheck_func_BOMB_20() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_20__Fv.s"
 }
 #pragma pop
 
 
-/* 80099838-80099868 0030+00 .text      item_getcheck_func_BOMB_30__Fv                               */
+/* 80099838-80099868 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_30__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_30__Fv) {
+asm static void item_getcheck_func_BOMB_30() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_30__Fv.s"
 }
 #pragma pop
 
 
-/* 80099868-80099898 0030+00 .text      item_getcheck_func_ARROW_10__Fv                              */
+/* 80099868-80099898 0030+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_10__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_10__Fv) {
+asm static void item_getcheck_func_ARROW_10() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_10__Fv.s"
 }
 #pragma pop
 
 
-/* 80099898-800998C8 0030+00 .text      item_getcheck_func_ARROW_20__Fv                              */
+/* 80099898-800998C8 0030+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_20__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_20__Fv) {
+asm static void item_getcheck_func_ARROW_20() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_20__Fv.s"
 }
 #pragma pop
 
 
-/* 800998C8-800998F8 0030+00 .text      item_getcheck_func_ARROW_30__Fv                              */
+/* 800998C8-800998F8 0030+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_30__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_30__Fv) {
+asm static void item_getcheck_func_ARROW_30() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_30__Fv.s"
 }
 #pragma pop
 
 
-/* 800998F8-80099928 0030+00 .text      item_getcheck_func_ARROW_1__Fv                               */
+/* 800998F8-80099928 0030+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_1__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_1__Fv) {
+asm static void item_getcheck_func_ARROW_1() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_1__Fv.s"
 }
 #pragma pop
 
 
-/* 80099928-80099958 0030+00 .text      item_getcheck_func_PACHINKO_SHOT__Fv                         */
+/* 80099928-80099958 0030+00 rc=1 efc=0 .text      item_getcheck_func_PACHINKO_SHOT__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_PACHINKO_SHOT__Fv) {
+asm static void item_getcheck_func_PACHINKO_SHOT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_PACHINKO_SHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 80099958-80099960 0008+00 .text      item_getcheck_func_WATER_BOMB_5__Fv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOMB_5__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WATER_BOMB_5__Fv.s"
+/* 80099958-80099960 0008+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOMB_5__Fv                          */
+static s32 item_getcheck_func_WATER_BOMB_5() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099960-80099968 0008+00 .text      item_getcheck_func_WATER_BOMB_10__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOMB_10__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WATER_BOMB_10__Fv.s"
+/* 80099960-80099968 0008+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOMB_10__Fv                         */
+static s32 item_getcheck_func_WATER_BOMB_10() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099968-80099970 0008+00 .text      item_getcheck_func_WATER_BOMB_20__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOMB_20__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WATER_BOMB_20__Fv.s"
+/* 80099968-80099970 0008+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOMB_20__Fv                         */
+static s32 item_getcheck_func_WATER_BOMB_20() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099970-80099978 0008+00 .text      item_getcheck_func_WATER_BOMB_30__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOMB_30__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WATER_BOMB_30__Fv.s"
+/* 80099970-80099978 0008+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOMB_30__Fv                         */
+static s32 item_getcheck_func_WATER_BOMB_30() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099978-80099980 0008+00 .text      item_getcheck_func_BOMB_INSECT_5__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_INSECT_5__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_BOMB_INSECT_5__Fv.s"
+/* 80099978-80099980 0008+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_INSECT_5__Fv                         */
+static s32 item_getcheck_func_BOMB_INSECT_5() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099980-800999B0 0030+00 .text      item_getcheck_func_BOMB_INSECT_10__Fv                        */
+/* 80099980-800999B0 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_INSECT_10__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_INSECT_10__Fv) {
+asm static void item_getcheck_func_BOMB_INSECT_10() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_INSECT_10__Fv.s"
 }
 #pragma pop
 
 
-/* 800999B0-800999E0 0030+00 .text      item_getcheck_func_BOMB_INSECT_20__Fv                        */
+/* 800999B0-800999E0 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_INSECT_20__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_INSECT_20__Fv) {
+asm static void item_getcheck_func_BOMB_INSECT_20() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_INSECT_20__Fv.s"
 }
 #pragma pop
 
 
-/* 800999E0-80099A10 0030+00 .text      item_getcheck_func_BOMB_INSECT_30__Fv                        */
+/* 800999E0-80099A10 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_INSECT_30__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_INSECT_30__Fv) {
+asm static void item_getcheck_func_BOMB_INSECT_30() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_INSECT_30__Fv.s"
 }
 #pragma pop
 
 
-/* 80099A10-80099A18 0008+00 .text      item_getcheck_func_RECOVER_FAILY__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_RECOVER_FAILY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_RECOVER_FAILY__Fv.s"
+/* 80099A10-80099A18 0008+00 rc=1 efc=0 .text      item_getcheck_func_RECOVER_FAILY__Fv                         */
+static s32 item_getcheck_func_RECOVER_FAILY() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A18-80099A20 0008+00 .text      item_getcheck_func_TRIPLE_HEART__Fv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_TRIPLE_HEART__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_TRIPLE_HEART__Fv.s"
+/* 80099A18-80099A20 0008+00 rc=1 efc=0 .text      item_getcheck_func_TRIPLE_HEART__Fv                          */
+static s32 item_getcheck_func_TRIPLE_HEART() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A20-80099A28 0008+00 .text      item_getcheck_func_SMALL_KEY__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMALL_KEY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_SMALL_KEY__Fv.s"
+/* 80099A20-80099A28 0008+00 rc=1 efc=0 .text      item_getcheck_func_SMALL_KEY__Fv                             */
+static s32 item_getcheck_func_SMALL_KEY() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A28-80099A30 0008+00 .text      item_getcheck_func_KAKERA_HEART__Fv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_KAKERA_HEART__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_KAKERA_HEART__Fv.s"
+/* 80099A28-80099A30 0008+00 rc=1 efc=0 .text      item_getcheck_func_KAKERA_HEART__Fv                          */
+static s32 item_getcheck_func_KAKERA_HEART() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A30-80099A38 0008+00 .text      item_getcheck_func_UTUWA_HEART__Fv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_UTUWA_HEART__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_UTUWA_HEART__Fv.s"
+/* 80099A30-80099A38 0008+00 rc=1 efc=0 .text      item_getcheck_func_UTUWA_HEART__Fv                           */
+static s32 item_getcheck_func_UTUWA_HEART() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A38-80099A68 0030+00 .text      item_getcheck_func_MAP__Fv                                   */
+/* 80099A38-80099A68 0030+00 rc=1 efc=0 .text      item_getcheck_func_MAP__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MAP__Fv) {
+asm static void item_getcheck_func_MAP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_MAP__Fv.s"
 }
 #pragma pop
 
 
-/* 80099A68-80099A70 0008+00 .text      item_getcheck_func_COMPUS__Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_COMPUS__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_COMPUS__Fv.s"
+/* 80099A68-80099A70 0008+00 rc=1 efc=0 .text      item_getcheck_func_COMPUS__Fv                                */
+static s32 item_getcheck_func_COMPUS() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099A70-80099AB4 0044+00 .text      item_getcheck_func_DUNGEON_EXIT__Fv                          */
+/* 80099A70-80099AB4 0044+00 rc=1 efc=0 .text      item_getcheck_func_DUNGEON_EXIT__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DUNGEON_EXIT__Fv) {
+asm static void item_getcheck_func_DUNGEON_EXIT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DUNGEON_EXIT__Fv.s"
 }
 #pragma pop
 
 
-/* 80099AB4-80099AE4 0030+00 .text      item_getcheck_func_BOSS_KEY__Fv                              */
+/* 80099AB4-80099AE4 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOSS_KEY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOSS_KEY__Fv) {
+asm static void item_getcheck_func_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 80099AE4-80099B28 0044+00 .text      item_getcheck_func_DUNGEON_BACK__Fv                          */
+/* 80099AE4-80099B28 0044+00 rc=1 efc=0 .text      item_getcheck_func_DUNGEON_BACK__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DUNGEON_BACK__Fv) {
+asm static void item_getcheck_func_DUNGEON_BACK() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DUNGEON_BACK__Fv.s"
 }
 #pragma pop
 
 
-/* 80099B28-80099B5C 0034+00 .text      item_getcheck_func_SWORD__Fv                                 */
+/* 80099B28-80099B5C 0034+00 rc=1 efc=0 .text      item_getcheck_func_SWORD__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SWORD__Fv) {
+asm static void item_getcheck_func_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099B5C-80099B90 0034+00 .text      item_getcheck_func_MASTER_SWORD__Fv                          */
+/* 80099B5C-80099B90 0034+00 rc=1 efc=0 .text      item_getcheck_func_MASTER_SWORD__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MASTER_SWORD__Fv) {
+asm static void item_getcheck_func_MASTER_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_MASTER_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099B90-80099BC0 0030+00 .text      item_getcheck_func_WOOD_SHIELD__Fv                           */
+/* 80099B90-80099BC0 0030+00 rc=1 efc=0 .text      item_getcheck_func_WOOD_SHIELD__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WOOD_SHIELD__Fv) {
+asm static void item_getcheck_func_WOOD_SHIELD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WOOD_SHIELD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099BC0-80099BF0 0030+00 .text      item_getcheck_func_SHIELD__Fv                                */
+/* 80099BC0-80099BF0 0030+00 rc=1 efc=0 .text      item_getcheck_func_SHIELD__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SHIELD__Fv) {
+asm static void item_getcheck_func_SHIELD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SHIELD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099BF0-80099C20 0030+00 .text      item_getcheck_func_HYLIA_SHIELD__Fv                          */
+/* 80099BF0-80099C20 0030+00 rc=1 efc=0 .text      item_getcheck_func_HYLIA_SHIELD__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HYLIA_SHIELD__Fv) {
+asm static void item_getcheck_func_HYLIA_SHIELD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HYLIA_SHIELD__Fv.s"
 }
 #pragma pop
 
 
-/* 80099C20-80099C64 0044+00 .text      item_getcheck_func_TKS_LETTER__Fv                            */
+/* 80099C20-80099C64 0044+00 rc=1 efc=0 .text      item_getcheck_func_TKS_LETTER__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_TKS_LETTER__Fv) {
+asm static void item_getcheck_func_TKS_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_TKS_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 80099C64-80099C94 0030+00 .text      item_getcheck_func_WEAR_CASUAL__Fv                           */
+/* 80099C64-80099C94 0030+00 rc=1 efc=0 .text      item_getcheck_func_WEAR_CASUAL__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WEAR_CASUAL__Fv) {
+asm static void item_getcheck_func_WEAR_CASUAL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WEAR_CASUAL__Fv.s"
 }
 #pragma pop
 
 
-/* 80099C94-80099CC8 0034+00 .text      item_getcheck_func_WEAR_KOKIRI__Fv                           */
+/* 80099C94-80099CC8 0034+00 rc=1 efc=0 .text      item_getcheck_func_WEAR_KOKIRI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WEAR_KOKIRI__Fv) {
+asm static void item_getcheck_func_WEAR_KOKIRI() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WEAR_KOKIRI__Fv.s"
 }
 #pragma pop
 
 
-/* 80099CC8-80099CF8 0030+00 .text      item_getcheck_func_ARMOR__Fv                                 */
+/* 80099CC8-80099CF8 0030+00 rc=1 efc=0 .text      item_getcheck_func_ARMOR__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARMOR__Fv) {
+asm static void item_getcheck_func_ARMOR() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARMOR__Fv.s"
 }
 #pragma pop
 
 
-/* 80099CF8-80099D28 0030+00 .text      item_getcheck_func_WEAR_ZORA__Fv                             */
+/* 80099CF8-80099D28 0030+00 rc=1 efc=0 .text      item_getcheck_func_WEAR_ZORA__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WEAR_ZORA__Fv) {
+asm static void item_getcheck_func_WEAR_ZORA() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WEAR_ZORA__Fv.s"
 }
 #pragma pop
 
 
-/* 80099D28-80099D30 0008+00 .text      item_getcheck_func_MAGIC_LV1__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MAGIC_LV1__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_MAGIC_LV1__Fv.s"
+/* 80099D28-80099D30 0008+00 rc=1 efc=0 .text      item_getcheck_func_MAGIC_LV1__Fv                             */
+static s32 item_getcheck_func_MAGIC_LV1() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099D30-80099D74 0044+00 .text      item_getcheck_func_DUNGEON_EXIT_2__Fv                        */
+/* 80099D30-80099D74 0044+00 rc=1 efc=0 .text      item_getcheck_func_DUNGEON_EXIT_2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DUNGEON_EXIT_2__Fv) {
+asm static void item_getcheck_func_DUNGEON_EXIT_2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DUNGEON_EXIT_2__Fv.s"
 }
 #pragma pop
 
 
-/* 80099D74-80099D7C 0008+00 .text      item_getcheck_func_WALLET_LV1__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WALLET_LV1__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WALLET_LV1__Fv.s"
+/* 80099D74-80099D7C 0008+00 rc=1 efc=0 .text      item_getcheck_func_WALLET_LV1__Fv                            */
+static s32 item_getcheck_func_WALLET_LV1() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099D7C-80099D84 0008+00 .text      item_getcheck_func_WALLET_LV2__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WALLET_LV2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WALLET_LV2__Fv.s"
+/* 80099D7C-80099D84 0008+00 rc=1 efc=0 .text      item_getcheck_func_WALLET_LV2__Fv                            */
+static s32 item_getcheck_func_WALLET_LV2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099D84-80099D8C 0008+00 .text      item_getcheck_func_WALLET_LV3__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WALLET_LV3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_WALLET_LV3__Fv.s"
+/* 80099D84-80099D8C 0008+00 rc=1 efc=0 .text      item_getcheck_func_WALLET_LV3__Fv                            */
+static s32 item_getcheck_func_WALLET_LV3() {
+	return -1;
 }
-#pragma pop
 
 
-/* 80099D8C-80099DD0 0044+00 .text      item_getcheck_func_ZORAS_JEWEL__Fv                           */
+/* 80099D8C-80099DD0 0044+00 rc=1 efc=0 .text      item_getcheck_func_ZORAS_JEWEL__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ZORAS_JEWEL__Fv) {
+asm static void item_getcheck_func_ZORAS_JEWEL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ZORAS_JEWEL__Fv.s"
 }
 #pragma pop
 
 
-/* 80099DD0-80099E00 0030+00 .text      item_getcheck_func_HAWK_EYE__Fv                              */
+/* 80099DD0-80099E00 0030+00 rc=1 efc=0 .text      item_getcheck_func_HAWK_EYE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HAWK_EYE__Fv) {
+asm static void item_getcheck_func_HAWK_EYE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HAWK_EYE__Fv.s"
 }
 #pragma pop
 
 
-/* 80099E00-80099E30 0030+00 .text      item_getcheck_func_WOOD_STICK__Fv                            */
+/* 80099E00-80099E30 0030+00 rc=1 efc=0 .text      item_getcheck_func_WOOD_STICK__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WOOD_STICK__Fv) {
+asm static void item_getcheck_func_WOOD_STICK() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WOOD_STICK__Fv.s"
 }
 #pragma pop
 
 
-/* 80099E30-80099E74 0044+00 .text      item_getcheck_func_BOOMERANG__Fv                             */
+/* 80099E30-80099E74 0044+00 rc=1 efc=0 .text      item_getcheck_func_BOOMERANG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOOMERANG__Fv) {
+asm static void item_getcheck_func_BOOMERANG() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOOMERANG__Fv.s"
 }
 #pragma pop
 
 
-/* 80099E74-80099EB8 0044+00 .text      item_getcheck_func_SPINNER__Fv                               */
+/* 80099E74-80099EB8 0044+00 rc=1 efc=0 .text      item_getcheck_func_SPINNER__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SPINNER__Fv) {
+asm static void item_getcheck_func_SPINNER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SPINNER__Fv.s"
 }
 #pragma pop
 
 
-/* 80099EB8-80099EFC 0044+00 .text      item_getcheck_func_IRONBALL__Fv                              */
+/* 80099EB8-80099EFC 0044+00 rc=1 efc=0 .text      item_getcheck_func_IRONBALL__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_IRONBALL__Fv) {
+asm static void item_getcheck_func_IRONBALL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_IRONBALL__Fv.s"
 }
 #pragma pop
 
 
-/* 80099EFC-80099F40 0044+00 .text      item_getcheck_func_BOW__Fv                                   */
+/* 80099EFC-80099F40 0044+00 rc=1 efc=0 .text      item_getcheck_func_BOW__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOW__Fv) {
+asm static void item_getcheck_func_BOW() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOW__Fv.s"
 }
 #pragma pop
 
 
-/* 80099F40-80099F84 0044+00 .text      item_getcheck_func_HOOKSHOT__Fv                              */
+/* 80099F40-80099F84 0044+00 rc=1 efc=0 .text      item_getcheck_func_HOOKSHOT__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HOOKSHOT__Fv) {
+asm static void item_getcheck_func_HOOKSHOT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HOOKSHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 80099F84-80099FC8 0044+00 .text      item_getcheck_func_HVY_BOOTS__Fv                             */
+/* 80099F84-80099FC8 0044+00 rc=1 efc=0 .text      item_getcheck_func_HVY_BOOTS__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HVY_BOOTS__Fv) {
+asm static void item_getcheck_func_HVY_BOOTS() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HVY_BOOTS__Fv.s"
 }
 #pragma pop
 
 
-/* 80099FC8-8009A00C 0044+00 .text      item_getcheck_func_COPY_ROD__Fv                              */
+/* 80099FC8-8009A00C 0044+00 rc=1 efc=0 .text      item_getcheck_func_COPY_ROD__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_COPY_ROD__Fv) {
+asm static void item_getcheck_func_COPY_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_COPY_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A00C-8009A050 0044+00 .text      item_getcheck_func_W_HOOKSHOT__Fv                            */
+/* 8009A00C-8009A050 0044+00 rc=1 efc=0 .text      item_getcheck_func_W_HOOKSHOT__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_W_HOOKSHOT__Fv) {
+asm static void item_getcheck_func_W_HOOKSHOT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_W_HOOKSHOT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A050-8009A094 0044+00 .text      item_getcheck_func_KANTERA__Fv                               */
+/* 8009A050-8009A094 0044+00 rc=1 efc=0 .text      item_getcheck_func_KANTERA__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_KANTERA__Fv) {
+asm static void item_getcheck_func_KANTERA() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_KANTERA__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A094-8009A0C8 0034+00 .text      item_getcheck_func_LIGHT_SWORD__Fv                           */
+/* 8009A094-8009A0C8 0034+00 rc=1 efc=0 .text      item_getcheck_func_LIGHT_SWORD__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LIGHT_SWORD__Fv) {
+asm static void item_getcheck_func_LIGHT_SWORD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LIGHT_SWORD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A0C8-8009A1FC 0134+00 .text      item_getcheck_func_FISHING_ROD_1__Fv                         */
+/* 8009A0C8-8009A1FC 0134+00 rc=7 efc=0 .text      item_getcheck_func_FISHING_ROD_1__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_FISHING_ROD_1__Fv) {
+asm static void item_getcheck_func_FISHING_ROD_1() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_FISHING_ROD_1__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A1FC-8009A240 0044+00 .text      item_getcheck_func_PACHINKO__Fv                              */
+/* 8009A1FC-8009A240 0044+00 rc=1 efc=0 .text      item_getcheck_func_PACHINKO__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_PACHINKO__Fv) {
+asm static void item_getcheck_func_PACHINKO() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_PACHINKO__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A240-8009A248 0008+00 .text      item_getcheck_func_COPY_ROD_2__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_COPY_ROD_2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_COPY_ROD_2__Fv.s"
+/* 8009A240-8009A248 0008+00 rc=1 efc=0 .text      item_getcheck_func_COPY_ROD_2__Fv                            */
+static s32 item_getcheck_func_COPY_ROD_2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009A248-8009A278 0030+00 .text      item_getcheck_func_BOMB_BAG_LV2__Fv                          */
+/* 8009A248-8009A278 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_BAG_LV2__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_BAG_LV2__Fv) {
+asm static void item_getcheck_func_BOMB_BAG_LV2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_BAG_LV2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A278-8009A2A8 0030+00 .text      item_getcheck_func_BOMB_BAG_LV1__Fv                          */
+/* 8009A278-8009A2A8 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_BAG_LV1__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_BAG_LV1__Fv) {
+asm static void item_getcheck_func_BOMB_BAG_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_BAG_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A2A8-8009A2D8 0030+00 .text      item_getcheck_func_BOMB_IN_BAG__Fv                           */
+/* 8009A2A8-8009A2D8 0030+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_IN_BAG__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_IN_BAG__Fv) {
+asm static void item_getcheck_func_BOMB_IN_BAG() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BOMB_IN_BAG__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A2D8-8009A308 0030+00 .text      item_getcheck_func_LIGHT_ARROW__Fv                           */
+/* 8009A2D8-8009A308 0030+00 rc=1 efc=0 .text      item_getcheck_func_LIGHT_ARROW__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LIGHT_ARROW__Fv) {
+asm static void item_getcheck_func_LIGHT_ARROW() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LIGHT_ARROW__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A308-8009A378 0070+00 .text      item_getcheck_func_ARROW_LV1__Fv                             */
+/* 8009A308-8009A378 0070+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_LV1__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_LV1__Fv) {
+asm static void item_getcheck_func_ARROW_LV1() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_LV1__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A378-8009A3E8 0070+00 .text      item_getcheck_func_ARROW_LV2__Fv                             */
+/* 8009A378-8009A3E8 0070+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_LV2__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_LV2__Fv) {
+asm static void item_getcheck_func_ARROW_LV2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_LV2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A3E8-8009A458 0070+00 .text      item_getcheck_func_ARROW_LV3__Fv                             */
+/* 8009A3E8-8009A458 0070+00 rc=1 efc=0 .text      item_getcheck_func_ARROW_LV3__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ARROW_LV3__Fv) {
+asm static void item_getcheck_func_ARROW_LV3() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ARROW_LV3__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A458-8009A460 0008+00 .text      item_getcheck_func_LURE_ROD__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LURE_ROD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_LURE_ROD__Fv.s"
+/* 8009A458-8009A460 0008+00 rc=1 efc=0 .text      item_getcheck_func_LURE_ROD__Fv                              */
+static s32 item_getcheck_func_LURE_ROD() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009A460-8009A468 0008+00 .text      item_getcheck_func_BOMB_ARROW__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOMB_ARROW__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_BOMB_ARROW__Fv.s"
+/* 8009A460-8009A468 0008+00 rc=1 efc=0 .text      item_getcheck_func_BOMB_ARROW__Fv                            */
+static s32 item_getcheck_func_BOMB_ARROW() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009A468-8009A470 0008+00 .text      item_getcheck_func_HAWK_ARROW__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HAWK_ARROW__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_HAWK_ARROW__Fv.s"
+/* 8009A468-8009A470 0008+00 rc=1 efc=0 .text      item_getcheck_func_HAWK_ARROW__Fv                            */
+static s32 item_getcheck_func_HAWK_ARROW() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009A470-8009A490 0020+00 .text      item_getcheck_func_BEE_ROD__Fv                               */
+/* 8009A470-8009A490 0020+00 rc=1 efc=0 .text      item_getcheck_func_BEE_ROD__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BEE_ROD__Fv) {
+asm static void item_getcheck_func_BEE_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BEE_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A490-8009A4B0 0020+00 .text      item_getcheck_func_JEWEL_ROD__Fv                             */
+/* 8009A490-8009A4B0 0020+00 rc=1 efc=0 .text      item_getcheck_func_JEWEL_ROD__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_JEWEL_ROD__Fv) {
+asm static void item_getcheck_func_JEWEL_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_JEWEL_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A4B0-8009A4D0 0020+00 .text      item_getcheck_func_WORM_ROD__Fv                              */
+/* 8009A4B0-8009A4D0 0020+00 rc=1 efc=0 .text      item_getcheck_func_WORM_ROD__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WORM_ROD__Fv) {
+asm static void item_getcheck_func_WORM_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WORM_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A4D0-8009A4F0 0020+00 .text      item_getcheck_func_JEWEL_BEE_ROD__Fv                         */
+/* 8009A4D0-8009A4F0 0020+00 rc=1 efc=0 .text      item_getcheck_func_JEWEL_BEE_ROD__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_JEWEL_BEE_ROD__Fv) {
+asm static void item_getcheck_func_JEWEL_BEE_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_JEWEL_BEE_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A4F0-8009A510 0020+00 .text      item_getcheck_func_JEWEL_WORM_ROD__Fv                        */
+/* 8009A4F0-8009A510 0020+00 rc=1 efc=0 .text      item_getcheck_func_JEWEL_WORM_ROD__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_JEWEL_WORM_ROD__Fv) {
+asm static void item_getcheck_func_JEWEL_WORM_ROD() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_JEWEL_WORM_ROD__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A510-8009A544 0034+00 .text      item_getcheck_func_EMPTY_BOTTLE__Fv                          */
+/* 8009A510-8009A544 0034+00 rc=1 efc=0 .text      item_getcheck_func_EMPTY_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_EMPTY_BOTTLE__Fv) {
+asm static void item_getcheck_func_EMPTY_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_EMPTY_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A544-8009A578 0034+00 .text      item_getcheck_func_RED_BOTTLE__Fv                            */
+/* 8009A544-8009A578 0034+00 rc=1 efc=0 .text      item_getcheck_func_RED_BOTTLE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_RED_BOTTLE__Fv) {
+asm static void item_getcheck_func_RED_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_RED_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A578-8009A5AC 0034+00 .text      item_getcheck_func_GREEN_BOTTLE__Fv                          */
+/* 8009A578-8009A5AC 0034+00 rc=1 efc=0 .text      item_getcheck_func_GREEN_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_GREEN_BOTTLE__Fv) {
+asm static void item_getcheck_func_GREEN_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_GREEN_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A5AC-8009A5E0 0034+00 .text      item_getcheck_func_BLUE_BOTTLE__Fv                           */
+/* 8009A5AC-8009A5E0 0034+00 rc=1 efc=0 .text      item_getcheck_func_BLUE_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BLUE_BOTTLE__Fv) {
+asm static void item_getcheck_func_BLUE_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BLUE_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A5E0-8009A614 0034+00 .text      item_getcheck_func_MILK_BOTTLE__Fv                           */
+/* 8009A5E0-8009A614 0034+00 rc=1 efc=0 .text      item_getcheck_func_MILK_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MILK_BOTTLE__Fv) {
+asm static void item_getcheck_func_MILK_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_MILK_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A614-8009A648 0034+00 .text      item_getcheck_func_HALF_MILK_BOTTLE__Fv                      */
+/* 8009A614-8009A648 0034+00 rc=1 efc=0 .text      item_getcheck_func_HALF_MILK_BOTTLE__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HALF_MILK_BOTTLE__Fv) {
+asm static void item_getcheck_func_HALF_MILK_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HALF_MILK_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A648-8009A67C 0034+00 .text      item_getcheck_func_OIL_BOTTLE__Fv                            */
+/* 8009A648-8009A67C 0034+00 rc=1 efc=0 .text      item_getcheck_func_OIL_BOTTLE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_OIL_BOTTLE__Fv) {
+asm static void item_getcheck_func_OIL_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_OIL_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A67C-8009A6B0 0034+00 .text      item_getcheck_func_WATER_BOTTLE__Fv                          */
+/* 8009A67C-8009A6B0 0034+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOTTLE__Fv) {
+asm static void item_getcheck_func_WATER_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WATER_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A6B0-8009A6E4 0034+00 .text      item_getcheck_func_OIL_BOTTLE2__Fv                           */
+/* 8009A6B0-8009A6E4 0034+00 rc=1 efc=0 .text      item_getcheck_func_OIL_BOTTLE2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_OIL_BOTTLE2__Fv) {
+asm static void item_getcheck_func_OIL_BOTTLE2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_OIL_BOTTLE2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A6E4-8009A718 0034+00 .text      item_getcheck_func_RED_BOTTLE2__Fv                           */
+/* 8009A6E4-8009A718 0034+00 rc=1 efc=0 .text      item_getcheck_func_RED_BOTTLE2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_RED_BOTTLE2__Fv) {
+asm static void item_getcheck_func_RED_BOTTLE2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_RED_BOTTLE2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A718-8009A74C 0034+00 .text      item_getcheck_func_UGLY_SOUP__Fv                             */
+/* 8009A718-8009A74C 0034+00 rc=1 efc=0 .text      item_getcheck_func_UGLY_SOUP__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_UGLY_SOUP__Fv) {
+asm static void item_getcheck_func_UGLY_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_UGLY_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A74C-8009A780 0034+00 .text      item_getcheck_func_HOT_SPRING__Fv                            */
+/* 8009A74C-8009A780 0034+00 rc=1 efc=0 .text      item_getcheck_func_HOT_SPRING__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HOT_SPRING__Fv) {
+asm static void item_getcheck_func_HOT_SPRING() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HOT_SPRING__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A780-8009A7B4 0034+00 .text      item_getcheck_func_FAIRY_BOTTLE__Fv                          */
+/* 8009A780-8009A7B4 0034+00 rc=1 efc=0 .text      item_getcheck_func_FAIRY_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_FAIRY_BOTTLE__Fv) {
+asm static void item_getcheck_func_FAIRY_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_FAIRY_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A7B4-8009A7E8 0034+00 .text      item_getcheck_func_HOT_SPRING2__Fv                           */
+/* 8009A7B4-8009A7E8 0034+00 rc=1 efc=0 .text      item_getcheck_func_HOT_SPRING2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HOT_SPRING2__Fv) {
+asm static void item_getcheck_func_HOT_SPRING2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HOT_SPRING2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A7E8-8009A81C 0034+00 .text      item_getcheck_func_OIL2__Fv                                  */
+/* 8009A7E8-8009A81C 0034+00 rc=1 efc=0 .text      item_getcheck_func_OIL2__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_OIL2__Fv) {
+asm static void item_getcheck_func_OIL2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_OIL2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A81C-8009A850 0034+00 .text      item_getcheck_func_OIL__Fv                                   */
+/* 8009A81C-8009A850 0034+00 rc=1 efc=0 .text      item_getcheck_func_OIL__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_OIL__Fv) {
+asm static void item_getcheck_func_OIL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_OIL__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A850-8009A880 0030+00 .text      item_getcheck_func_NORMAL_BOMB__Fv                           */
+/* 8009A850-8009A880 0030+00 rc=1 efc=0 .text      item_getcheck_func_NORMAL_BOMB__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_NORMAL_BOMB__Fv) {
+asm static void item_getcheck_func_NORMAL_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_NORMAL_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A880-8009A8B0 0030+00 .text      item_getcheck_func_WATER_BOMB__Fv                            */
+/* 8009A880-8009A8B0 0030+00 rc=1 efc=0 .text      item_getcheck_func_WATER_BOMB__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WATER_BOMB__Fv) {
+asm static void item_getcheck_func_WATER_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WATER_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A8B0-8009A8E0 0030+00 .text      item_getcheck_func_POKE_BOMB__Fv                             */
+/* 8009A8B0-8009A8E0 0030+00 rc=1 efc=0 .text      item_getcheck_func_POKE_BOMB__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POKE_BOMB__Fv) {
+asm static void item_getcheck_func_POKE_BOMB() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_POKE_BOMB__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A8E0-8009A914 0034+00 .text      item_getcheck_func_FAIRY_DROP__Fv                            */
+/* 8009A8E0-8009A914 0034+00 rc=1 efc=0 .text      item_getcheck_func_FAIRY_DROP__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_FAIRY_DROP__Fv) {
+asm static void item_getcheck_func_FAIRY_DROP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_FAIRY_DROP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A914-8009A948 0034+00 .text      item_getcheck_func_WORM__Fv                                  */
+/* 8009A914-8009A948 0034+00 rc=1 efc=0 .text      item_getcheck_func_WORM__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WORM__Fv) {
+asm static void item_getcheck_func_WORM() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WORM__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A948-8009A978 0030+00 .text      item_getcheck_func_DROP_BOTTLE__Fv                           */
+/* 8009A948-8009A978 0030+00 rc=1 efc=0 .text      item_getcheck_func_DROP_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DROP_BOTTLE__Fv) {
+asm static void item_getcheck_func_DROP_BOTTLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DROP_BOTTLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A978-8009A980 0008+00 .text      item_getcheck_func_BEE_CHILD__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BEE_CHILD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_BEE_CHILD__Fv.s"
+/* 8009A978-8009A980 0008+00 rc=1 efc=0 .text      item_getcheck_func_BEE_CHILD__Fv                             */
+static s32 item_getcheck_func_BEE_CHILD() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009A980-8009A9B4 0034+00 .text      item_getcheck_func_CHUCHU_RARE__Fv                           */
+/* 8009A980-8009A9B4 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_RARE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_RARE__Fv) {
+asm static void item_getcheck_func_CHUCHU_RARE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_RARE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A9B4-8009A9E8 0034+00 .text      item_getcheck_func_CHUCHU_RED__Fv                            */
+/* 8009A9B4-8009A9E8 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_RED__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_RED__Fv) {
+asm static void item_getcheck_func_CHUCHU_RED() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_RED__Fv.s"
 }
 #pragma pop
 
 
-/* 8009A9E8-8009AA1C 0034+00 .text      item_getcheck_func_CHUCHU_BLUE__Fv                           */
+/* 8009A9E8-8009AA1C 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_BLUE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_BLUE__Fv) {
+asm static void item_getcheck_func_CHUCHU_BLUE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_BLUE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AA1C-8009AA50 0034+00 .text      item_getcheck_func_CHUCHU_GREEN__Fv                          */
+/* 8009AA1C-8009AA50 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_GREEN__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_GREEN__Fv) {
+asm static void item_getcheck_func_CHUCHU_GREEN() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_GREEN__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AA50-8009AA84 0034+00 .text      item_getcheck_func_CHUCHU_YELLOW__Fv                         */
+/* 8009AA50-8009AA84 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_YELLOW__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_YELLOW__Fv) {
+asm static void item_getcheck_func_CHUCHU_YELLOW() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_YELLOW__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AA84-8009AAB8 0034+00 .text      item_getcheck_func_CHUCHU_PURPLE__Fv                         */
+/* 8009AA84-8009AAB8 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_PURPLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_PURPLE__Fv) {
+asm static void item_getcheck_func_CHUCHU_PURPLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_PURPLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AAB8-8009AAE8 0030+00 .text      item_getcheck_func_LV1_SOUP__Fv                              */
+/* 8009AAB8-8009AAE8 0030+00 rc=1 efc=0 .text      item_getcheck_func_LV1_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV1_SOUP__Fv) {
+asm static void item_getcheck_func_LV1_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV1_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AAE8-8009AB18 0030+00 .text      item_getcheck_func_LV2_SOUP__Fv                              */
+/* 8009AAE8-8009AB18 0030+00 rc=1 efc=0 .text      item_getcheck_func_LV2_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV2_SOUP__Fv) {
+asm static void item_getcheck_func_LV2_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV2_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AB18-8009AB48 0030+00 .text      item_getcheck_func_LV3_SOUP__Fv                              */
+/* 8009AB18-8009AB48 0030+00 rc=1 efc=0 .text      item_getcheck_func_LV3_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV3_SOUP__Fv) {
+asm static void item_getcheck_func_LV3_SOUP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV3_SOUP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AB48-8009AB8C 0044+00 .text      item_getcheck_func_LETTER__Fv                                */
+/* 8009AB48-8009AB8C 0044+00 rc=1 efc=0 .text      item_getcheck_func_LETTER__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LETTER__Fv) {
+asm static void item_getcheck_func_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AB8C-8009ABD0 0044+00 .text      item_getcheck_func_BILL__Fv                                  */
+/* 8009AB8C-8009ABD0 0044+00 rc=1 efc=0 .text      item_getcheck_func_BILL__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BILL__Fv) {
+asm static void item_getcheck_func_BILL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_BILL__Fv.s"
 }
 #pragma pop
 
 
-/* 8009ABD0-8009AC14 0044+00 .text      item_getcheck_func_WOOD_STATUE__Fv                           */
+/* 8009ABD0-8009AC14 0044+00 rc=1 efc=0 .text      item_getcheck_func_WOOD_STATUE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_WOOD_STATUE__Fv) {
+asm static void item_getcheck_func_WOOD_STATUE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_WOOD_STATUE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AC14-8009AC58 0044+00 .text      item_getcheck_func_IRIAS_PENDANT__Fv                         */
+/* 8009AC14-8009AC58 0044+00 rc=1 efc=0 .text      item_getcheck_func_IRIAS_PENDANT__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_IRIAS_PENDANT__Fv) {
+asm static void item_getcheck_func_IRIAS_PENDANT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_IRIAS_PENDANT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AC58-8009AC9C 0044+00 .text      item_getcheck_func_HORSE_FLUTE__Fv                           */
+/* 8009AC58-8009AC9C 0044+00 rc=1 efc=0 .text      item_getcheck_func_HORSE_FLUTE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_HORSE_FLUTE__Fv) {
+asm static void item_getcheck_func_HORSE_FLUTE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_HORSE_FLUTE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AC9C-8009ACE0 0044+00 .text      item_getcheck_func_RAFRELS_MEMO__Fv                          */
+/* 8009AC9C-8009ACE0 0044+00 rc=1 efc=0 .text      item_getcheck_func_RAFRELS_MEMO__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_RAFRELS_MEMO__Fv) {
+asm static void item_getcheck_func_RAFRELS_MEMO() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_RAFRELS_MEMO__Fv.s"
 }
 #pragma pop
 
 
-/* 8009ACE0-8009AD24 0044+00 .text      item_getcheck_func_ASHS_SCRIBBLING__Fv                       */
+/* 8009ACE0-8009AD24 0044+00 rc=1 efc=0 .text      item_getcheck_func_ASHS_SCRIBBLING__Fv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ASHS_SCRIBBLING__Fv) {
+asm static void item_getcheck_func_ASHS_SCRIBBLING() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ASHS_SCRIBBLING__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AD24-8009AD58 0034+00 .text      item_getcheck_func_CHUCHU_YELLOW2__Fv                        */
+/* 8009AD24-8009AD58 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_YELLOW2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_YELLOW2__Fv) {
+asm static void item_getcheck_func_CHUCHU_YELLOW2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_YELLOW2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AD58-8009AD60 0008+00 .text      item_getcheck_func_OIL_BOTTLE3__Fv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_OIL_BOTTLE3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_OIL_BOTTLE3__Fv.s"
+/* 8009AD58-8009AD60 0008+00 rc=1 efc=0 .text      item_getcheck_func_OIL_BOTTLE3__Fv                           */
+static s32 item_getcheck_func_OIL_BOTTLE3() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AD60-8009AD68 0008+00 .text      item_getcheck_func_SHOP_BEE_CHILD__Fv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SHOP_BEE_CHILD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_SHOP_BEE_CHILD__Fv.s"
+/* 8009AD60-8009AD68 0008+00 rc=1 efc=0 .text      item_getcheck_func_SHOP_BEE_CHILD__Fv                        */
+static s32 item_getcheck_func_SHOP_BEE_CHILD() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AD68-8009AD9C 0034+00 .text      item_getcheck_func_CHUCHU_BLACK__Fv                          */
+/* 8009AD68-8009AD9C 0034+00 rc=1 efc=0 .text      item_getcheck_func_CHUCHU_BLACK__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_CHUCHU_BLACK__Fv) {
+asm static void item_getcheck_func_CHUCHU_BLACK() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_CHUCHU_BLACK__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AD9C-8009ADCC 0030+00 .text      item_getcheck_func_LIGHT_DROP__Fv                            */
+/* 8009AD9C-8009ADCC 0030+00 rc=1 efc=0 .text      item_getcheck_func_LIGHT_DROP__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LIGHT_DROP__Fv) {
+asm static void item_getcheck_func_LIGHT_DROP() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LIGHT_DROP__Fv.s"
 }
 #pragma pop
 
 
-/* 8009ADCC-8009ADFC 0030+00 .text      item_getcheck_func_DROP_CONTAINER__Fv                        */
+/* 8009ADCC-8009ADFC 0030+00 rc=1 efc=0 .text      item_getcheck_func_DROP_CONTAINER__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DROP_CONTAINER__Fv) {
+asm static void item_getcheck_func_DROP_CONTAINER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DROP_CONTAINER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009ADFC-8009AE2C 0030+00 .text      item_getcheck_func_DROP_CONTAINER02__Fv                      */
+/* 8009ADFC-8009AE2C 0030+00 rc=1 efc=0 .text      item_getcheck_func_DROP_CONTAINER02__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DROP_CONTAINER02__Fv) {
+asm static void item_getcheck_func_DROP_CONTAINER02() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DROP_CONTAINER02__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AE2C-8009AE5C 0030+00 .text      item_getcheck_func_DROP_CONTAINER03__Fv                      */
+/* 8009AE2C-8009AE5C 0030+00 rc=1 efc=0 .text      item_getcheck_func_DROP_CONTAINER03__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_DROP_CONTAINER03__Fv) {
+asm static void item_getcheck_func_DROP_CONTAINER03() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_DROP_CONTAINER03__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AE5C-8009AE64 0008+00 .text      item_getcheck_func_FILLED_CONTAINER__Fv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_FILLED_CONTAINER__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_FILLED_CONTAINER__Fv.s"
+/* 8009AE5C-8009AE64 0008+00 rc=1 efc=0 .text      item_getcheck_func_FILLED_CONTAINER__Fv                      */
+static s32 item_getcheck_func_FILLED_CONTAINER() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AE64-8009AE6C 0008+00 .text      item_getcheck_func_MIRROR_PIECE_2__Fv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MIRROR_PIECE_2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_MIRROR_PIECE_2__Fv.s"
+/* 8009AE64-8009AE6C 0008+00 rc=1 efc=0 .text      item_getcheck_func_MIRROR_PIECE_2__Fv                        */
+static s32 item_getcheck_func_MIRROR_PIECE_2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AE6C-8009AE74 0008+00 .text      item_getcheck_func_MIRROR_PIECE_3__Fv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MIRROR_PIECE_3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_MIRROR_PIECE_3__Fv.s"
+/* 8009AE6C-8009AE74 0008+00 rc=1 efc=0 .text      item_getcheck_func_MIRROR_PIECE_3__Fv                        */
+static s32 item_getcheck_func_MIRROR_PIECE_3() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AE74-8009AE7C 0008+00 .text      item_getcheck_func_MIRROR_PIECE_4__Fv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_MIRROR_PIECE_4__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_MIRROR_PIECE_4__Fv.s"
+/* 8009AE74-8009AE7C 0008+00 rc=1 efc=0 .text      item_getcheck_func_MIRROR_PIECE_4__Fv                        */
+static s32 item_getcheck_func_MIRROR_PIECE_4() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AE7C-8009AE98 001C+00 .text      item_getcheck_func_SMELL_YELIA_POUCH__Fv                     */
+/* 8009AE7C-8009AE98 001C+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_YELIA_POUCH__Fv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_YELIA_POUCH__Fv) {
+asm static void item_getcheck_func_SMELL_YELIA_POUCH() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SMELL_YELIA_POUCH__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AE98-8009AEA0 0008+00 .text      item_getcheck_func_SMELL_PUMPKIN__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_PUMPKIN__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_SMELL_PUMPKIN__Fv.s"
+/* 8009AE98-8009AEA0 0008+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_PUMPKIN__Fv                         */
+static s32 item_getcheck_func_SMELL_PUMPKIN() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009AEA0-8009AEBC 001C+00 .text      item_getcheck_func_SMELL_POH__Fv                             */
+/* 8009AEA0-8009AEBC 001C+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_POH__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_POH__Fv) {
+asm static void item_getcheck_func_SMELL_POH() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SMELL_POH__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AEBC-8009AED8 001C+00 .text      item_getcheck_func_SMELL_FISH__Fv                            */
+/* 8009AEBC-8009AED8 001C+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_FISH__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_FISH__Fv) {
+asm static void item_getcheck_func_SMELL_FISH() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SMELL_FISH__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AED8-8009AEF4 001C+00 .text      item_getcheck_func_SMELL_CHILDREN__Fv                        */
+/* 8009AED8-8009AEF4 001C+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_CHILDREN__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_CHILDREN__Fv) {
+asm static void item_getcheck_func_SMELL_CHILDREN() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SMELL_CHILDREN__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AEF4-8009AF10 001C+00 .text      item_getcheck_func_SMELL_MEDICINE__Fv                        */
+/* 8009AEF4-8009AF10 001C+00 rc=1 efc=0 .text      item_getcheck_func_SMELL_MEDICINE__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMELL_MEDICINE__Fv) {
+asm static void item_getcheck_func_SMELL_MEDICINE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_SMELL_MEDICINE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AF10-8009AF40 0030+00 .text      item_getcheck_func_M_BEETLE__Fv                              */
+/* 8009AF10-8009AF40 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_BEETLE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_BEETLE__Fv) {
+asm static void item_getcheck_func_M_BEETLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_BEETLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AF40-8009AF70 0030+00 .text      item_getcheck_func_F_BEETLE__Fv                              */
+/* 8009AF40-8009AF70 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_BEETLE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_BEETLE__Fv) {
+asm static void item_getcheck_func_F_BEETLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_BEETLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AF70-8009AFA0 0030+00 .text      item_getcheck_func_M_BUTTERFLY__Fv                           */
+/* 8009AF70-8009AFA0 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_BUTTERFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_BUTTERFLY__Fv) {
+asm static void item_getcheck_func_M_BUTTERFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_BUTTERFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AFA0-8009AFD0 0030+00 .text      item_getcheck_func_F_BUTTERFLY__Fv                           */
+/* 8009AFA0-8009AFD0 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_BUTTERFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_BUTTERFLY__Fv) {
+asm static void item_getcheck_func_F_BUTTERFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_BUTTERFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009AFD0-8009B000 0030+00 .text      item_getcheck_func_M_STAG_BEETLE__Fv                         */
+/* 8009AFD0-8009B000 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_STAG_BEETLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_STAG_BEETLE__Fv) {
+asm static void item_getcheck_func_M_STAG_BEETLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_STAG_BEETLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B000-8009B030 0030+00 .text      item_getcheck_func_F_STAG_BEETLE__Fv                         */
+/* 8009B000-8009B030 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_STAG_BEETLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_STAG_BEETLE__Fv) {
+asm static void item_getcheck_func_F_STAG_BEETLE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_STAG_BEETLE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B030-8009B060 0030+00 .text      item_getcheck_func_M_GRASSHOPPER__Fv                         */
+/* 8009B030-8009B060 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_GRASSHOPPER__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_GRASSHOPPER__Fv) {
+asm static void item_getcheck_func_M_GRASSHOPPER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_GRASSHOPPER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B060-8009B090 0030+00 .text      item_getcheck_func_F_GRASSHOPPER__Fv                         */
+/* 8009B060-8009B090 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_GRASSHOPPER__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_GRASSHOPPER__Fv) {
+asm static void item_getcheck_func_F_GRASSHOPPER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_GRASSHOPPER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B090-8009B0C0 0030+00 .text      item_getcheck_func_M_NANAFUSHI__Fv                           */
+/* 8009B090-8009B0C0 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_NANAFUSHI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_NANAFUSHI__Fv) {
+asm static void item_getcheck_func_M_NANAFUSHI() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_NANAFUSHI__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B0C0-8009B0F0 0030+00 .text      item_getcheck_func_F_NANAFUSHI__Fv                           */
+/* 8009B0C0-8009B0F0 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_NANAFUSHI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_NANAFUSHI__Fv) {
+asm static void item_getcheck_func_F_NANAFUSHI() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_NANAFUSHI__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B0F0-8009B120 0030+00 .text      item_getcheck_func_M_DANGOMUSHI__Fv                          */
+/* 8009B0F0-8009B120 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_DANGOMUSHI__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_DANGOMUSHI__Fv) {
+asm static void item_getcheck_func_M_DANGOMUSHI() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_DANGOMUSHI__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B120-8009B150 0030+00 .text      item_getcheck_func_F_DANGOMUSHI__Fv                          */
+/* 8009B120-8009B150 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_DANGOMUSHI__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_DANGOMUSHI__Fv) {
+asm static void item_getcheck_func_F_DANGOMUSHI() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_DANGOMUSHI__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B150-8009B180 0030+00 .text      item_getcheck_func_M_MANTIS__Fv                              */
+/* 8009B150-8009B180 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_MANTIS__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_MANTIS__Fv) {
+asm static void item_getcheck_func_M_MANTIS() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_MANTIS__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B180-8009B1B0 0030+00 .text      item_getcheck_func_F_MANTIS__Fv                              */
+/* 8009B180-8009B1B0 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_MANTIS__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_MANTIS__Fv) {
+asm static void item_getcheck_func_F_MANTIS() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_MANTIS__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B1B0-8009B1E0 0030+00 .text      item_getcheck_func_M_LADYBUG__Fv                             */
+/* 8009B1B0-8009B1E0 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_LADYBUG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_LADYBUG__Fv) {
+asm static void item_getcheck_func_M_LADYBUG() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_LADYBUG__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B1E0-8009B210 0030+00 .text      item_getcheck_func_F_LADYBUG__Fv                             */
+/* 8009B1E0-8009B210 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_LADYBUG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_LADYBUG__Fv) {
+asm static void item_getcheck_func_F_LADYBUG() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_LADYBUG__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B210-8009B240 0030+00 .text      item_getcheck_func_M_SNAIL__Fv                               */
+/* 8009B210-8009B240 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_SNAIL__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_SNAIL__Fv) {
+asm static void item_getcheck_func_M_SNAIL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_SNAIL__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B240-8009B270 0030+00 .text      item_getcheck_func_F_SNAIL__Fv                               */
+/* 8009B240-8009B270 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_SNAIL__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_SNAIL__Fv) {
+asm static void item_getcheck_func_F_SNAIL() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_SNAIL__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B270-8009B2A0 0030+00 .text      item_getcheck_func_M_DRAGONFLY__Fv                           */
+/* 8009B270-8009B2A0 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_DRAGONFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_DRAGONFLY__Fv) {
+asm static void item_getcheck_func_M_DRAGONFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_DRAGONFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B2A0-8009B2D0 0030+00 .text      item_getcheck_func_F_DRAGONFLY__Fv                           */
+/* 8009B2A0-8009B2D0 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_DRAGONFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_DRAGONFLY__Fv) {
+asm static void item_getcheck_func_F_DRAGONFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_DRAGONFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B2D0-8009B300 0030+00 .text      item_getcheck_func_M_ANT__Fv                                 */
+/* 8009B2D0-8009B300 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_ANT__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_ANT__Fv) {
+asm static void item_getcheck_func_M_ANT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_ANT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B300-8009B330 0030+00 .text      item_getcheck_func_F_ANT__Fv                                 */
+/* 8009B300-8009B330 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_ANT__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_ANT__Fv) {
+asm static void item_getcheck_func_F_ANT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_ANT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B330-8009B360 0030+00 .text      item_getcheck_func_M_MAYFLY__Fv                              */
+/* 8009B330-8009B360 0030+00 rc=1 efc=0 .text      item_getcheck_func_M_MAYFLY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_M_MAYFLY__Fv) {
+asm static void item_getcheck_func_M_MAYFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_M_MAYFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B360-8009B390 0030+00 .text      item_getcheck_func_F_MAYFLY__Fv                              */
+/* 8009B360-8009B390 0030+00 rc=1 efc=0 .text      item_getcheck_func_F_MAYFLY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_F_MAYFLY__Fv) {
+asm static void item_getcheck_func_F_MAYFLY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_F_MAYFLY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B390-8009B3A0 0010+00 .text      item_getcheck_func_POU_SPIRIT__Fv                            */
+/* 8009B390-8009B3A0 0010+00 rc=1 efc=0 .text      item_getcheck_func_POU_SPIRIT__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POU_SPIRIT__Fv) {
+asm static void item_getcheck_func_POU_SPIRIT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_POU_SPIRIT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B3A0-8009B3E4 0044+00 .text      item_getcheck_func_ANCIENT_DOCUMENT__Fv                      */
+/* 8009B3A0-8009B3E4 0044+00 rc=1 efc=0 .text      item_getcheck_func_ANCIENT_DOCUMENT__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ANCIENT_DOCUMENT__Fv) {
+asm static void item_getcheck_func_ANCIENT_DOCUMENT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ANCIENT_DOCUMENT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B3E4-8009B428 0044+00 .text      item_getcheck_func_AIR_LETTER__Fv                            */
+/* 8009B3E4-8009B428 0044+00 rc=1 efc=0 .text      item_getcheck_func_AIR_LETTER__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_AIR_LETTER__Fv) {
+asm static void item_getcheck_func_AIR_LETTER() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_AIR_LETTER__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B428-8009B46C 0044+00 .text      item_getcheck_func_ANCIENT_DOCUMENT2__Fv                     */
+/* 8009B428-8009B46C 0044+00 rc=1 efc=0 .text      item_getcheck_func_ANCIENT_DOCUMENT2__Fv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_ANCIENT_DOCUMENT2__Fv) {
+asm static void item_getcheck_func_ANCIENT_DOCUMENT2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_ANCIENT_DOCUMENT2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B46C-8009B4B0 0044+00 .text      item_getcheck_func_LV7_DUNGEON_EXIT__Fv                      */
+/* 8009B46C-8009B4B0 0044+00 rc=1 efc=0 .text      item_getcheck_func_LV7_DUNGEON_EXIT__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV7_DUNGEON_EXIT__Fv) {
+asm static void item_getcheck_func_LV7_DUNGEON_EXIT() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV7_DUNGEON_EXIT__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B4B0-8009B4B8 0008+00 .text      item_getcheck_func_LINKS_SAVINGS__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LINKS_SAVINGS__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_LINKS_SAVINGS__Fv.s"
+/* 8009B4B0-8009B4B8 0008+00 rc=1 efc=0 .text      item_getcheck_func_LINKS_SAVINGS__Fv                         */
+static s32 item_getcheck_func_LINKS_SAVINGS() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4B8-8009B4C0 0008+00 .text      item_getcheck_func_SMALL_KEY2__Fv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SMALL_KEY2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_SMALL_KEY2__Fv.s"
+/* 8009B4B8-8009B4C0 0008+00 rc=1 efc=0 .text      item_getcheck_func_SMALL_KEY2__Fv                            */
+static s32 item_getcheck_func_SMALL_KEY2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4C0-8009B4C8 0008+00 .text      item_getcheck_func_POU_FIRE1__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POU_FIRE1__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_POU_FIRE1__Fv.s"
+/* 8009B4C0-8009B4C8 0008+00 rc=1 efc=0 .text      item_getcheck_func_POU_FIRE1__Fv                             */
+static s32 item_getcheck_func_POU_FIRE1() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4C8-8009B4D0 0008+00 .text      item_getcheck_func_POU_FIRE2__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POU_FIRE2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_POU_FIRE2__Fv.s"
+/* 8009B4C8-8009B4D0 0008+00 rc=1 efc=0 .text      item_getcheck_func_POU_FIRE2__Fv                             */
+static s32 item_getcheck_func_POU_FIRE2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4D0-8009B4D8 0008+00 .text      item_getcheck_func_POU_FIRE3__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POU_FIRE3__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_POU_FIRE3__Fv.s"
+/* 8009B4D0-8009B4D8 0008+00 rc=1 efc=0 .text      item_getcheck_func_POU_FIRE3__Fv                             */
+static s32 item_getcheck_func_POU_FIRE3() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4D8-8009B4E0 0008+00 .text      item_getcheck_func_POU_FIRE4__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_POU_FIRE4__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_POU_FIRE4__Fv.s"
+/* 8009B4D8-8009B4E0 0008+00 rc=1 efc=0 .text      item_getcheck_func_POU_FIRE4__Fv                             */
+static s32 item_getcheck_func_POU_FIRE4() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4E0-8009B4E8 0008+00 .text      item_getcheck_func_BOSSRIDER_KEY__Fv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_BOSSRIDER_KEY__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_BOSSRIDER_KEY__Fv.s"
+/* 8009B4E0-8009B4E8 0008+00 rc=1 efc=0 .text      item_getcheck_func_BOSSRIDER_KEY__Fv                         */
+static s32 item_getcheck_func_BOSSRIDER_KEY() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B4E8-8009B518 0030+00 .text      item_getcheck_func_TOMATO_PUREE__Fv                          */
+/* 8009B4E8-8009B518 0030+00 rc=1 efc=0 .text      item_getcheck_func_TOMATO_PUREE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_TOMATO_PUREE__Fv) {
+asm static void item_getcheck_func_TOMATO_PUREE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_TOMATO_PUREE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B518-8009B548 0030+00 .text      item_getcheck_func_TASTE__Fv                                 */
+/* 8009B518-8009B548 0030+00 rc=1 efc=0 .text      item_getcheck_func_TASTE__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_TASTE__Fv) {
+asm static void item_getcheck_func_TASTE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_TASTE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B548-8009B578 0030+00 .text      item_getcheck_func_LV5_BOSS_KEY__Fv                          */
+/* 8009B548-8009B578 0030+00 rc=1 efc=0 .text      item_getcheck_func_LV5_BOSS_KEY__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV5_BOSS_KEY__Fv) {
+asm static void item_getcheck_func_LV5_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV5_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B578-8009B580 0008+00 .text      item_getcheck_func_SURFBOARD__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_SURFBOARD__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_SURFBOARD__Fv.s"
+/* 8009B578-8009B580 0008+00 rc=1 efc=0 .text      item_getcheck_func_SURFBOARD__Fv                             */
+static s32 item_getcheck_func_SURFBOARD() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B580-8009B588 0008+00 .text      item_getcheck_func_KANTERA2__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_KANTERA2__Fv) {
-	nofralloc
-#include "asm/d/d_item/item_getcheck_func_KANTERA2__Fv.s"
+/* 8009B580-8009B588 0008+00 rc=1 efc=0 .text      item_getcheck_func_KANTERA2__Fv                              */
+static s32 item_getcheck_func_KANTERA2() {
+	return -1;
 }
-#pragma pop
 
 
-/* 8009B588-8009B5B8 0030+00 .text      item_getcheck_func_L2_KEY_PIECES1__Fv                        */
+/* 8009B588-8009B5B8 0030+00 rc=1 efc=0 .text      item_getcheck_func_L2_KEY_PIECES1__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_L2_KEY_PIECES1__Fv) {
+asm static void item_getcheck_func_L2_KEY_PIECES1() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_L2_KEY_PIECES1__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B5B8-8009B5E8 0030+00 .text      item_getcheck_func_L2_KEY_PIECES2__Fv                        */
+/* 8009B5B8-8009B5E8 0030+00 rc=1 efc=0 .text      item_getcheck_func_L2_KEY_PIECES2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_L2_KEY_PIECES2__Fv) {
+asm static void item_getcheck_func_L2_KEY_PIECES2() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_L2_KEY_PIECES2__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B5E8-8009B618 0030+00 .text      item_getcheck_func_L2_KEY_PIECES3__Fv                        */
+/* 8009B5E8-8009B618 0030+00 rc=1 efc=0 .text      item_getcheck_func_L2_KEY_PIECES3__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_L2_KEY_PIECES3__Fv) {
+asm static void item_getcheck_func_L2_KEY_PIECES3() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_L2_KEY_PIECES3__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B618-8009B648 0030+00 .text      item_getcheck_func_KEY_OF_CARAVAN__Fv                        */
+/* 8009B618-8009B648 0030+00 rc=1 efc=0 .text      item_getcheck_func_KEY_OF_CARAVAN__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_KEY_OF_CARAVAN__Fv) {
+asm static void item_getcheck_func_KEY_OF_CARAVAN() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_KEY_OF_CARAVAN__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B648-8009B678 0030+00 .text      item_getcheck_func_LV2_BOSS_KEY__Fv                          */
+/* 8009B648-8009B678 0030+00 rc=1 efc=0 .text      item_getcheck_func_LV2_BOSS_KEY__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_LV2_BOSS_KEY__Fv) {
+asm static void item_getcheck_func_LV2_BOSS_KEY() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_LV2_BOSS_KEY__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B678-8009B688 0010+00 .text      item_getcheck_func_KEY_OF_FILONE__Fv                         */
+/* 8009B678-8009B688 0010+00 rc=1 efc=0 .text      item_getcheck_func_KEY_OF_FILONE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(item_getcheck_func_KEY_OF_FILONE__Fv) {
+asm static void item_getcheck_func_KEY_OF_FILONE() {
 	nofralloc
 #include "asm/d/d_item/item_getcheck_func_KEY_OF_FILONE__Fv.s"
 }
 #pragma pop
 
 
-/* 8009B688-8009B6D4 004C+00 .text      isBomb__FUc                                                  */
+/* 8009B688-8009B6D4 004C+00 rc=1 efc=0 .text      isBomb__FUc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isBomb__FUc) {
+asm static void isBomb(char field_0) {
 	nofralloc
 #include "asm/d/d_item/isBomb__FUc.s"
 }
 #pragma pop
 
 
-/* 8009B6D4-8009B708 0034+00 .text      isArrow__FUc                                                 */
+/* 8009B6D4-8009B708 0034+00 rc=1 efc=0 .text      isArrow__FUc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isArrow__FUc) {
+asm static void isArrow(char field_0) {
 	nofralloc
 #include "asm/d/d_item/isArrow__FUc.s"
 }
 #pragma pop
 
 
-/* 8009B708-8009B77C 0074+00 .text      isBottleItem__FUc                                            */
+/* 8009B708-8009B77C 0074+00 rc=4 efc=4 .text      isBottleItem__FUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isBottleItem__FUc) {
+asm void isBottleItem(char field_0) {
 	nofralloc
 #include "asm/d/d_item/isBottleItem__FUc.s"
 }
 #pragma pop
 
 
-/* 8009B77C-8009B79C 0020+00 .text      isHeart__FUc                                                 */
+/* 8009B77C-8009B79C 0020+00 rc=2 efc=2 .text      isHeart__FUc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isHeart__FUc) {
+asm void isHeart(char field_0) {
 	nofralloc
 #include "asm/d/d_item/isHeart__FUc.s"
 }
 #pragma pop
 
 
-/* 8009B79C-8009B7C4 0028+00 .text      isInsect__FUc                                                */
+/* 8009B79C-8009B7C4 0028+00 rc=0 efc=0 .text      isInsect__FUc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isInsect__FUc) {
+asm void isInsect(char field_0) {
 	nofralloc
 #include "asm/d/d_item/isInsect__FUc.s"
 }
@@ -5201,7 +5157,7 @@ ASM_FUNCTION(isInsect__FUc) {
 
 
 /* ############################################################################################## */
-/* 8037B0D0-8037B0D8 0007+01 .rodata    @stringBase0                                                 */
+/* 8037B0D0-8037B0D8 0007+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -5210,22 +5166,22 @@ SECTION_DEAD char* const stringBase_8037B0D0 = "D_MN08";
 SECTION_DEAD char* const pad_8037B0D7 = "";
 #pragma pop
 
-/* 8009B7C4-8009B940 017C+00 .text      check_itemno__Fi                                             */
+/* 8009B7C4-8009B940 017C+00 rc=3 efc=3 .text      check_itemno__Fi                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_itemno__Fi) {
+asm void check_itemno(s32 field_0) {
 	nofralloc
 #include "asm/d/d_item/check_itemno__Fi.s"
 }
 #pragma pop
 
 
-/* 8009B940-8009BBD8 0298+00 .text      addBombCount__FUcUc                                          */
+/* 8009B940-8009BBD8 0298+00 rc=11 efc=0 .text      addBombCount__FUcUc                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addBombCount__FUcUc) {
+asm static void addBombCount(char field_0, char field_1) {
 	nofralloc
 #include "asm/d/d_item/addBombCount__FUcUc.s"
 }
@@ -5233,6 +5189,6 @@ ASM_FUNCTION(addBombCount__FUcUc) {
 
 
 /* ############################################################################################## */
-/* 80450F90-80450F98 0004+04 .sbss      mData__12dEnemyItem_c                                        */
+/* 80450F90-80450F98 0004+04 rc=2 efc=2 .sbss      mData__12dEnemyItem_c                                        */
 u8 mData__12dEnemyItem_c[4 + 4 /* padding */];
 

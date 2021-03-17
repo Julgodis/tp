@@ -6,20 +6,119 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRAramStream (JKRAramStream) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+// build JKRAramStreamCommand (JKRAramStreamCommand) False/False
+/* top-level dependencies (begin JKRAramStreamCommand) */
+/* top-level dependencies (end JKRAramStreamCommand) */
+struct JKRAramStreamCommand {
+	/* 802D4088 */ JKRAramStreamCommand();
+};
+
+// build JSUFileInputStream (JSUFileInputStream) False/False
+/* top-level dependencies (begin JSUFileInputStream) */
+/* top-level dependencies (end JSUFileInputStream) */
+struct JSUFileInputStream {
+};
+
+/* top-level dependencies (begin JKRAramStream) */
+// outer dependency: JKRHeap
+// outer dependency: JKRAramStreamCommand
+// outer dependency: JSUFileInputStream
+/* top-level dependencies (end JKRAramStream) */
+struct JKRAramStream {
+	// JKRHeap
+	// JKRAramStreamCommand
+	// JSUFileInputStream
+	/* 802D3B48 */ void create(s32);
+	/* 802D3BB8 */ JKRAramStream(s32);
+	/* 802D3C08 */ ~JKRAramStream();
+	/* 802D3C68 */ void run();
+	/* 802D3CD8 */ bool readFromAram();
+	/* 802D3CE0 */ void writeToAram(JKRAramStreamCommand*);
+	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
+	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, s32);
+	/* 802D4034 */ void setTransBuffer(char*, u32, JKRHeap*);
+};
+
+// build JKRAramStreamCommand (JKRAramStreamCommand) True/True
+// build JSUFileInputStream (JSUFileInputStream) True/True
+// build JKRHeap (JKRHeap) True/True
+// build JSURandomInputStream (JSURandomInputStream) False/False
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
+/* top-level dependencies (begin JSUStreamSeekFrom) */
+/* top-level dependencies (end JSUStreamSeekFrom) */
+struct JSUStreamSeekFrom {
+};
+
+/* top-level dependencies (begin JSURandomInputStream) */
+// outer dependency: JSUStreamSeekFrom
+/* top-level dependencies (end JSURandomInputStream) */
+struct JSURandomInputStream {
+	// JSUStreamSeekFrom
+	/* 802D4094 */ void getAvailable() const;
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+// build JKRThread (JKRThread) False/False
+/* top-level dependencies (begin JKRThread) */
+/* top-level dependencies (end JKRThread) */
+struct JKRThread {
+	/* 802D1568 */ JKRThread(u32, s32, s32);
+	/* 802D1758 */ ~JKRThread();
+};
+
+// build JKRAramPiece (JKRAramPiece) False/False
+// build JKRAramBlock (JKRAramBlock) False/False
+/* top-level dependencies (begin JKRAramBlock) */
+/* top-level dependencies (end JKRAramBlock) */
+struct JKRAramBlock {
+};
+
+/* top-level dependencies (begin JKRAramPiece) */
+// outer dependency: JKRAramBlock
+/* top-level dependencies (end JKRAramPiece) */
+struct JKRAramPiece {
+	// JKRAramBlock
+	/* 802D3838 */ void orderSync(s32, u32, u32, u32, JKRAramBlock*);
+};
+
+// build JKRAramBlock (JKRAramBlock) True/True
+// build JSUInputStream (JSUInputStream) False/False
+/* top-level dependencies (begin JSUInputStream) */
+/* top-level dependencies (end JSUInputStream) */
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__13JKRAramStreamFl();
-extern "C" extern void __ct__13JKRAramStreamFl();
-extern "C" extern void __dt__13JKRAramStreamFv();
-extern "C" extern void run__13JKRAramStreamFv();
-extern "C" extern void readFromAram__13JKRAramStreamFv();
-extern "C" extern void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand();
-extern "C" extern void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl();
-extern "C" extern void sync__13JKRAramStreamFP20JKRAramStreamCommandi();
-extern "C" extern void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
-extern "C" extern void __ct__20JKRAramStreamCommandFv();
-extern "C" extern void getAvailable__20JSURandomInputStreamCFv();
+
+extern "C" void create__13JKRAramStreamFl();
+extern "C" void __ct__13JKRAramStreamFl();
+extern "C" void __dt__13JKRAramStreamFv();
+extern "C" void run__13JKRAramStreamFv();
+extern "C" bool readFromAram__13JKRAramStreamFv();
+extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand();
+extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl();
+extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi();
+extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
+extern "C" void __ct__20JKRAramStreamCommandFv();
+extern "C" void getAvailable__20JSURandomInputStreamCFv();
 SECTION_RODATA extern const u8 JKRAramStream__stringBase0[48];
 SECTION_DATA extern u8 sMessageBuffer__13JKRAramStream[16];
 SECTION_DATA extern u8 sMessageQueue__13JKRAramStream[32];
@@ -33,25 +132,37 @@ SECTION_SBSS extern u8 transHeap__13JKRAramStream[4];
 // External References:
 // 
 
-extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__9JKRThreadFUlii();
-extern "C" extern void __dt__9JKRThreadFv();
-extern "C" extern void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
-extern "C" extern void read__14JSUInputStreamFPvl();
-extern "C" extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
-extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
-extern "C" extern void OSInitMessageQueue();
-extern "C" extern void OSSendMessage();
-extern "C" extern void OSReceiveMessage();
-extern "C" extern void OSResumeThread();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
+void* operator new(u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFUlii();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 
@@ -60,14 +171,14 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 80451408-8045140C 0004+00 .sbss      sAramStreamObject__13JKRAramStream                           */
+/* 80451408-8045140C 0004+00 rc=1 efc=0 .sbss      sAramStreamObject__13JKRAramStream                           */
 u8 sAramStreamObject__13JKRAramStream[4];
 
-/* 802D3B48-802D3BB8 0070+00 .text      create__13JKRAramStreamFl                                    */
+/* 802D3B48-802D3BB8 0070+00 rc=1 efc=1 .text      create__13JKRAramStreamFl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13JKRAramStreamFl) {
+asm void JKRAramStream::create(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/create__13JKRAramStreamFl.s"
 }
@@ -75,18 +186,18 @@ ASM_FUNCTION(create__13JKRAramStreamFl) {
 
 
 /* ############################################################################################## */
-/* 803CC188-803CC198 0010+00 .data      sMessageBuffer__13JKRAramStream                              */
+/* 803CC188-803CC198 0010+00 rc=1 efc=0 .data      sMessageBuffer__13JKRAramStream                              */
 u8 sMessageBuffer__13JKRAramStream[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC198-803CC1B8 0020+00 .data      sMessageQueue__13JKRAramStream                               */
+/* 803CC198-803CC1B8 0020+00 rc=2 efc=0 .data      sMessageQueue__13JKRAramStream                               */
 u8 sMessageQueue__13JKRAramStream[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC1B8-803CC1C8 0010+00 .data      __vt__13JKRAramStream                                        */
+/* 803CC1B8-803CC1C8 0010+00 rc=2 efc=0 .data      __vt__13JKRAramStream                                        */
 void* const __vt__13JKRAramStream[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -94,52 +205,47 @@ void* const __vt__13JKRAramStream[4] = {
 	(void*)run__13JKRAramStreamFv,
 };
 
-/* 802D3BB8-802D3C08 0050+00 .text      __ct__13JKRAramStreamFl                                      */
+/* 802D3BB8-802D3C08 0050+00 rc=1 efc=0 .text      __ct__13JKRAramStreamFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JKRAramStreamFl) {
+asm JKRAramStream::JKRAramStream(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/__ct__13JKRAramStreamFl.s"
 }
 #pragma pop
 
 
-/* 802D3C08-802D3C68 0060+00 .text      __dt__13JKRAramStreamFv                                      */
+/* 802D3C08-802D3C68 0060+00 rc=1 efc=0 .text      __dt__13JKRAramStreamFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13JKRAramStreamFv) {
+asm JKRAramStream::~JKRAramStream() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/__dt__13JKRAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 802D3C68-802D3CD8 0070+00 .text      run__13JKRAramStreamFv                                       */
+/* 802D3C68-802D3CD8 0070+00 rc=1 efc=0 .text      run__13JKRAramStreamFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(run__13JKRAramStreamFv) {
+asm void JKRAramStream::run() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/run__13JKRAramStreamFv.s"
 }
 #pragma pop
 
 
-/* 802D3CD8-802D3CE0 0008+00 .text      readFromAram__13JKRAramStreamFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(readFromAram__13JKRAramStreamFv) {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRAramStream/readFromAram__13JKRAramStreamFv.s"
+/* 802D3CD8-802D3CE0 0008+00 rc=1 efc=0 .text      readFromAram__13JKRAramStreamFv                              */
+bool JKRAramStream::readFromAram() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 8039D120-8039D150 002D+03 .rodata    @stringBase0                                                 */
+/* 8039D120-8039D150 002D+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -150,11 +256,11 @@ SECTION_DEAD char* const stringBase_8039D135 = ":::Cannot alloc memory\n";
 SECTION_DEAD char* const pad_8039D14D = "\0\0";
 #pragma pop
 
-/* 802D3CE0-802D3ED0 01F0+00 .text      writeToAram__13JKRAramStreamFP20JKRAramStreamCommand         */
+/* 802D3CE0-802D3ED0 01F0+00 rc=1 efc=0 .text      writeToAram__13JKRAramStreamFP20JKRAramStreamCommand         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(writeToAram__13JKRAramStreamFP20JKRAramStreamCommand) {
+asm void JKRAramStream::writeToAram(JKRAramStreamCommand* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/writeToAram__13JKRAramStreamFP20JKRAramStreamCommand.s"
 }
@@ -162,68 +268,67 @@ ASM_FUNCTION(writeToAram__13JKRAramStreamFP20JKRAramStreamCommand) {
 
 
 /* ############################################################################################## */
-/* 8045140C-80451410 0004+00 .sbss      transBuffer__13JKRAramStream                                 */
+/* 8045140C-80451410 0004+00 rc=2 efc=0 .sbss      transBuffer__13JKRAramStream                                 */
 u8 transBuffer__13JKRAramStream[4];
 
-/* 80451410-80451414 0004+00 .sbss      transSize__13JKRAramStream                                   */
+/* 80451410-80451414 0004+00 rc=2 efc=0 .sbss      transSize__13JKRAramStream                                   */
 u8 transSize__13JKRAramStream[4];
 
-/* 80451414-80451418 0004+00 .sbss      transHeap__13JKRAramStream                                   */
+/* 80451414-80451418 0004+00 rc=2 efc=0 .sbss      transHeap__13JKRAramStream                                   */
 u8 transHeap__13JKRAramStream[4];
 
-/* 802D3ED0-802D3FA0 00D0+00 .text      write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl */
+/* 802D3ED0-802D3FA0 00D0+00 rc=1 efc=1 .text      write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl) {
+asm void JKRAramStream::write_StreamToAram_Async(JSUFileInputStream* field_0, u32 field_1, u32 field_2, u32 field_3, u32* field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl.s"
 }
 #pragma pop
 
 
-/* 802D3FA0-802D4034 0094+00 .text      sync__13JKRAramStreamFP20JKRAramStreamCommandi               */
+/* 802D3FA0-802D4034 0094+00 rc=1 efc=1 .text      sync__13JKRAramStreamFP20JKRAramStreamCommandi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sync__13JKRAramStreamFP20JKRAramStreamCommandi) {
+asm void JKRAramStream::sync(JKRAramStreamCommand* field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/sync__13JKRAramStreamFP20JKRAramStreamCommandi.s"
 }
 #pragma pop
 
 
-/* 802D4034-802D4088 0054+00 .text      setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap               */
+/* 802D4034-802D4088 0054+00 rc=2 efc=1 .text      setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap) {
+asm void JKRAramStream::setTransBuffer(char* field_0, u32 field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 802D4088-802D4094 000C+00 .text      __ct__20JKRAramStreamCommandFv                               */
+/* 802D4088-802D4094 000C+00 rc=1 efc=0 .text      __ct__20JKRAramStreamCommandFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20JKRAramStreamCommandFv) {
+asm JKRAramStreamCommand::JKRAramStreamCommand() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/__ct__20JKRAramStreamCommandFv.s"
 }
 #pragma pop
 
 
-/* 802D4094-802D40F0 005C+00 .text      getAvailable__20JSURandomInputStreamCFv                      */
+/* 802D4094-802D40F0 005C+00 rc=3 efc=3 .text      getAvailable__20JSURandomInputStreamCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAvailable__20JSURandomInputStreamCFv) {
+asm void JSURandomInputStream::getAvailable() const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/getAvailable__20JSURandomInputStreamCFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

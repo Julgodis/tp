@@ -6,20 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagLv2PrChk_c;
+
+struct daTagLv2PrChk_c {
+	void Create();
+	void create();
+	void execute();
+	void action();
+	void actionCheck();
+	void actionEnd();
+	void seStartWrong();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__15daTagLv2PrChk_cFv();
-extern "C" extern void create__15daTagLv2PrChk_cFv();
-extern "C" extern void execute__15daTagLv2PrChk_cFv();
-extern "C" extern void action__15daTagLv2PrChk_cFv();
-extern "C" extern void actionCheck__15daTagLv2PrChk_cFv();
-extern "C" extern void actionEnd__15daTagLv2PrChk_cFv();
-extern "C" extern void seStartWrong__15daTagLv2PrChk_cFv();
-extern "C" extern void _delete__15daTagLv2PrChk_cFv();
-extern "C" extern void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c();
-extern "C" extern void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c();
-extern "C" extern void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c();
+void daTagLv2PrChk_Execute(daTagLv2PrChk_c*);
+void daTagLv2PrChk_Delete(daTagLv2PrChk_c*);
+void daTagLv2PrChk_Create(daTagLv2PrChk_c*);
+
+extern "C" void Create__15daTagLv2PrChk_cFv();
+extern "C" void create__15daTagLv2PrChk_cFv();
+extern "C" void execute__15daTagLv2PrChk_cFv();
+extern "C" void action__15daTagLv2PrChk_cFv();
+extern "C" void actionCheck__15daTagLv2PrChk_cFv();
+extern "C" void actionEnd__15daTagLv2PrChk_cFv();
+extern "C" void seStartWrong__15daTagLv2PrChk_cFv();
+extern "C" bool _delete__15daTagLv2PrChk_cFv();
+extern "C" void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c();
+extern "C" void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c();
+extern "C" void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c();
 SECTION_RODATA extern const u32 lit_3844;
 SECTION_RODATA extern const u32 lit_3845;
 SECTION_DATA extern u8 cNullVec__6Z2Calc[12];
@@ -35,7 +56,9 @@ SECTION_DATA extern u8 g_profile_Tag_Lv2PrChk[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +68,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/Create__15daTagLv2PrChk_cFv.s"
 }
@@ -56,7 +79,7 @@ ASM_FUNCTION(Create__15daTagLv2PrChk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/func_805A4CDC.s"
 }
@@ -67,7 +90,7 @@ ASM_FUNCTION(create__15daTagLv2PrChk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/execute__15daTagLv2PrChk_cFv.s"
 }
@@ -78,7 +101,7 @@ ASM_FUNCTION(execute__15daTagLv2PrChk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::action() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/action__15daTagLv2PrChk_cFv.s"
 }
@@ -89,7 +112,7 @@ ASM_FUNCTION(action__15daTagLv2PrChk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCheck__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::actionCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/actionCheck__15daTagLv2PrChk_cFv.s"
 }
@@ -97,21 +120,16 @@ ASM_FUNCTION(actionCheck__15daTagLv2PrChk_cFv) {
 
 
 /* 805A5290-805A5294 0004+00 .text      actionEnd__15daTagLv2PrChk_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__15daTagLv2PrChk_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/actionEnd__15daTagLv2PrChk_cFv.s"
+void daTagLv2PrChk_c::actionEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805A5294-805A52F4 0060+00 .text      seStartWrong__15daTagLv2PrChk_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStartWrong__15daTagLv2PrChk_cFv) {
+asm void daTagLv2PrChk_c::seStartWrong() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/seStartWrong__15daTagLv2PrChk_cFv.s"
 }
@@ -119,21 +137,16 @@ ASM_FUNCTION(seStartWrong__15daTagLv2PrChk_cFv) {
 
 
 /* 805A52F4-805A52FC 0008+00 .text      _delete__15daTagLv2PrChk_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daTagLv2PrChk_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/_delete__15daTagLv2PrChk_cFv.s"
+bool daTagLv2PrChk_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A52FC-805A531C 0020+00 .text      daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c) {
+asm void daTagLv2PrChk_Execute(daTagLv2PrChk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c.s"
 }
@@ -144,7 +157,7 @@ ASM_FUNCTION(daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c) {
+asm void daTagLv2PrChk_Delete(daTagLv2PrChk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c.s"
 }
@@ -155,7 +168,7 @@ ASM_FUNCTION(daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv2PrChk_Create__FP15daTagLv2PrChk_c) {
+asm void daTagLv2PrChk_Create(daTagLv2PrChk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Create__FP15daTagLv2PrChk_c.s"
 }

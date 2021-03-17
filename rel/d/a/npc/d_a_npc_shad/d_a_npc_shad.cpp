@@ -6,95 +6,264 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct Vec;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daNpcShad_c {
+	daNpcShad_c();
+	~daNpcShad_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setExpressionAnm(s32, bool);
+	void setExpressionBtp(s32);
+	void setMotionAnm(s32, f32);
+	void reset();
+	void setWaitAction();
+	void getPathPoint(u8, s32, Vec*);
+	void isSneaking();
+	void wait_type0(void*);
+	void setMotion(s32, f32, s32);
+	void setExpression(s32, f32);
+	void wait_type1(void*);
+	void wait_type2(void*);
+	void talk(void*);
+	void demo(void*);
+	void leave(void*);
+	void EvCut_Introduction(s32);
+	void EvCut_Meeting(s32);
+	void EvCut_ToChantSpell1(s32);
+	void EvCut_ToChantSpell2(s32);
+	void EvCut_ToChantSpell2Skip(s32);
+	void EvCut_DiscoveryCannon(s32);
+	void EvCut_DiscoveryCannonSkip(s32);
+	void EvCut_Disappear(s32);
+	void EvCut_DisappearSkip(s32);
+	void EvCut_CallBack(s32);
+	void EvCut_WiretapSponsor(s32);
+	void EvCut_WiretapEntrant(s32);
+	void setParam();
+	void main();
+	void playMotion();
+	void playExpression();
+	void ctrlBtk();
+	void setAttnPos();
+	void lookat();
+	bool drawDbgInfo();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct Vec {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void adjustShapeAngle();
+	void setCollisions();
+	void drawOtherMdls();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daTag_EvtArea_c {
+	void chkPointInArea(cXyz);
+};
+
+struct daNpcShad_Param_c {
+	~daNpcShad_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11daNpcShad_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__11daNpcShad_cFv();
-extern "C" extern void Create__11daNpcShad_cFv();
-extern "C" extern void CreateHeap__11daNpcShad_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__11daNpcShad_cFv();
-extern "C" extern void Execute__11daNpcShad_cFv();
-extern "C" extern void Draw__11daNpcShad_cFv();
-extern "C" extern void ctrlJoint__11daNpcShad_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__11daNpcShad_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__11daNpcShad_cFP8J3DJointi();
-extern "C" extern void setExpressionAnm__11daNpcShad_cFib();
-extern "C" extern void setExpressionBtp__11daNpcShad_cFi();
-extern "C" extern void setMotionAnm__11daNpcShad_cFif();
-extern "C" extern void reset__11daNpcShad_cFv();
-extern "C" extern void setWaitAction__11daNpcShad_cFv();
-extern "C" extern void getPathPoint__11daNpcShad_cFUciP3Vec();
-extern "C" extern void isSneaking__11daNpcShad_cFv();
-extern "C" extern void wait_type0__11daNpcShad_cFPv();
-extern "C" extern void setMotion__11daNpcShad_cFifi();
-extern "C" extern void setExpression__11daNpcShad_cFif();
-extern "C" extern void wait_type1__11daNpcShad_cFPv();
-extern "C" extern void wait_type2__11daNpcShad_cFPv();
-extern "C" extern void talk__11daNpcShad_cFPv();
-extern "C" extern void demo__11daNpcShad_cFPv();
-extern "C" extern void leave__11daNpcShad_cFPv();
-extern "C" extern void EvCut_Introduction__11daNpcShad_cFi();
-extern "C" extern void EvCut_Meeting__11daNpcShad_cFi();
-extern "C" extern void EvCut_ToChantSpell1__11daNpcShad_cFi();
-extern "C" extern void EvCut_ToChantSpell2__11daNpcShad_cFi();
-extern "C" extern void EvCut_ToChantSpell2Skip__11daNpcShad_cFi();
-extern "C" extern void EvCut_DiscoveryCannon__11daNpcShad_cFi();
-extern "C" extern void EvCut_DiscoveryCannonSkip__11daNpcShad_cFi();
-extern "C" extern void EvCut_Disappear__11daNpcShad_cFi();
-extern "C" extern void EvCut_DisappearSkip__11daNpcShad_cFi();
-extern "C" extern void EvCut_CallBack__11daNpcShad_cFi();
-extern "C" extern void EvCut_WiretapSponsor__11daNpcShad_cFi();
-extern "C" extern void EvCut_WiretapEntrant__11daNpcShad_cFi();
-extern "C" extern void daNpcShad_Create__FPv();
-extern "C" extern void daNpcShad_Delete__FPv();
-extern "C" extern void daNpcShad_Execute__FPv();
-extern "C" extern void daNpcShad_Draw__FPv();
-extern "C" extern void daNpcShad_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void setParam__11daNpcShad_cFv();
-extern "C" extern void main__11daNpcShad_cFv();
-extern "C" extern void playMotion__11daNpcShad_cFv();
-extern "C" extern void playExpression__11daNpcShad_cFv();
-extern "C" extern void ctrlBtk__11daNpcShad_cFv();
-extern "C" extern void setAttnPos__11daNpcShad_cFv();
-extern "C" extern void lookat__11daNpcShad_cFv();
-extern "C" extern void drawDbgInfo__11daNpcShad_cFv();
-extern "C" extern void func_80AE1544();
-extern "C" extern void __sinit_d_a_npc_shad_cpp();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void adjustShapeAngle__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz();
-extern "C" extern void __dt__17daNpcShad_Param_cFv();
-extern "C" extern void func_80AE1FB8();
-extern "C" extern void func_80AE1FC0();
+void daNpcShad_Create(void*);
+void daNpcShad_Delete(void*);
+void daNpcShad_Execute(void*);
+void daNpcShad_Draw(void*);
+bool daNpcShad_IsDelete(void*);
+extern "C" void func_80AE1544();
+extern "C" void __sinit_d_a_npc_shad_cpp();
+extern "C" void func_80AE1FB8();
+extern "C" void func_80AE1FC0();
+
+extern "C" void __ct__11daNpcShad_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__11daNpcShad_cFv();
+extern "C" void Create__11daNpcShad_cFv();
+extern "C" void CreateHeap__11daNpcShad_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__11daNpcShad_cFv();
+extern "C" void Execute__11daNpcShad_cFv();
+extern "C" void Draw__11daNpcShad_cFv();
+extern "C" void ctrlJoint__11daNpcShad_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__11daNpcShad_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__11daNpcShad_cFP8J3DJointi();
+extern "C" void setExpressionAnm__11daNpcShad_cFib();
+extern "C" void setExpressionBtp__11daNpcShad_cFi();
+extern "C" void setMotionAnm__11daNpcShad_cFif();
+extern "C" void reset__11daNpcShad_cFv();
+extern "C" void setWaitAction__11daNpcShad_cFv();
+extern "C" void getPathPoint__11daNpcShad_cFUciP3Vec();
+extern "C" void isSneaking__11daNpcShad_cFv();
+extern "C" void wait_type0__11daNpcShad_cFPv();
+extern "C" void setMotion__11daNpcShad_cFifi();
+extern "C" void setExpression__11daNpcShad_cFif();
+extern "C" void wait_type1__11daNpcShad_cFPv();
+extern "C" void wait_type2__11daNpcShad_cFPv();
+extern "C" void talk__11daNpcShad_cFPv();
+extern "C" void demo__11daNpcShad_cFPv();
+extern "C" void leave__11daNpcShad_cFPv();
+extern "C" void EvCut_Introduction__11daNpcShad_cFi();
+extern "C" void EvCut_Meeting__11daNpcShad_cFi();
+extern "C" void EvCut_ToChantSpell1__11daNpcShad_cFi();
+extern "C" void EvCut_ToChantSpell2__11daNpcShad_cFi();
+extern "C" void EvCut_ToChantSpell2Skip__11daNpcShad_cFi();
+extern "C" void EvCut_DiscoveryCannon__11daNpcShad_cFi();
+extern "C" void EvCut_DiscoveryCannonSkip__11daNpcShad_cFi();
+extern "C" void EvCut_Disappear__11daNpcShad_cFi();
+extern "C" void EvCut_DisappearSkip__11daNpcShad_cFi();
+extern "C" void EvCut_CallBack__11daNpcShad_cFi();
+extern "C" void EvCut_WiretapSponsor__11daNpcShad_cFi();
+extern "C" void EvCut_WiretapEntrant__11daNpcShad_cFi();
+extern "C" void daNpcShad_Create__FPv();
+extern "C" void daNpcShad_Delete__FPv();
+extern "C" void daNpcShad_Execute__FPv();
+extern "C" void daNpcShad_Draw__FPv();
+extern "C" bool daNpcShad_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void setParam__11daNpcShad_cFv();
+extern "C" void main__11daNpcShad_cFv();
+extern "C" void playMotion__11daNpcShad_cFv();
+extern "C" void playExpression__11daNpcShad_cFv();
+extern "C" void ctrlBtk__11daNpcShad_cFv();
+extern "C" void setAttnPos__11daNpcShad_cFv();
+extern "C" void lookat__11daNpcShad_cFv();
+extern "C" bool drawDbgInfo__11daNpcShad_cFv();
+extern "C" void func_80AE1544();
+extern "C" void __sinit_d_a_npc_shad_cpp();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void adjustShapeAngle__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void __dt__17daNpcShad_Param_cFv();
+extern "C" void func_80AE1FB8();
+extern "C" void func_80AE1FC0();
 SECTION_RODATA extern const u8 m__17daNpcShad_Param_c[112];
 SECTION_RODATA extern const u32 lit_4402;
 SECTION_RODATA extern const u32 lit_4403;
@@ -287,8 +456,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -298,7 +470,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daNpcShad_cFv) {
+asm daNpcShad_c::daNpcShad_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__11daNpcShad_cFv.s"
 }
@@ -309,7 +481,7 @@ ASM_FUNCTION(__ct__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__8cM3dGCylFv.s"
 }
@@ -320,7 +492,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__8cM3dGAabFv.s"
 }
@@ -331,7 +503,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daNpcShad_cFv) {
+asm daNpcShad_c::~daNpcShad_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__11daNpcShad_cFv.s"
 }
@@ -342,7 +514,7 @@ ASM_FUNCTION(__dt__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daNpcShad_cFv) {
+asm void daNpcShad_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/Create__11daNpcShad_cFv.s"
 }
@@ -353,7 +525,7 @@ ASM_FUNCTION(Create__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daNpcShad_cFv) {
+asm void daNpcShad_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/CreateHeap__11daNpcShad_cFv.s"
 }
@@ -364,7 +536,7 @@ ASM_FUNCTION(CreateHeap__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -375,7 +547,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -386,7 +558,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__14J3DTevColorAnmFv.s"
 }
@@ -397,7 +569,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__14J3DTevColorAnmFv.s"
 }
@@ -408,7 +580,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__11J3DTexNoAnmFv.s"
 }
@@ -419,7 +591,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__11J3DTexNoAnmFv.s"
 }
@@ -430,7 +602,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -441,7 +613,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -452,7 +624,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__14J3DMatColorAnmFv.s"
 }
@@ -463,7 +635,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__14J3DMatColorAnmFv.s"
 }
@@ -474,7 +646,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daNpcShad_cFv) {
+asm void daNpcShad_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/Delete__11daNpcShad_cFv.s"
 }
@@ -485,7 +657,7 @@ ASM_FUNCTION(Delete__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daNpcShad_cFv) {
+asm void daNpcShad_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/Execute__11daNpcShad_cFv.s"
 }
@@ -496,7 +668,7 @@ ASM_FUNCTION(Execute__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daNpcShad_cFv) {
+asm void daNpcShad_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/Draw__11daNpcShad_cFv.s"
 }
@@ -507,7 +679,7 @@ ASM_FUNCTION(Draw__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__11daNpcShad_cFP8J3DJointP8J3DModel) {
+asm void daNpcShad_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/ctrlJoint__11daNpcShad_cFP8J3DJointP8J3DModel.s"
 }
@@ -518,7 +690,7 @@ ASM_FUNCTION(ctrlJoint__11daNpcShad_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__11daNpcShad_cFP10fopAc_ac_c) {
+asm void daNpcShad_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/createHeapCallBack__11daNpcShad_cFP10fopAc_ac_c.s"
 }
@@ -529,7 +701,7 @@ ASM_FUNCTION(createHeapCallBack__11daNpcShad_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__11daNpcShad_cFP8J3DJointi) {
+asm void daNpcShad_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/ctrlJointCallBack__11daNpcShad_cFP8J3DJointi.s"
 }
@@ -540,7 +712,7 @@ ASM_FUNCTION(ctrlJointCallBack__11daNpcShad_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__11daNpcShad_cFib) {
+asm void daNpcShad_c::setExpressionAnm(s32 field_0, bool field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setExpressionAnm__11daNpcShad_cFib.s"
 }
@@ -551,7 +723,7 @@ ASM_FUNCTION(setExpressionAnm__11daNpcShad_cFib) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__11daNpcShad_cFi) {
+asm void daNpcShad_c::setExpressionBtp(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setExpressionBtp__11daNpcShad_cFi.s"
 }
@@ -562,7 +734,7 @@ ASM_FUNCTION(setExpressionBtp__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__11daNpcShad_cFif) {
+asm void daNpcShad_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setMotionAnm__11daNpcShad_cFif.s"
 }
@@ -573,7 +745,7 @@ ASM_FUNCTION(setMotionAnm__11daNpcShad_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__11daNpcShad_cFv) {
+asm void daNpcShad_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/reset__11daNpcShad_cFv.s"
 }
@@ -584,7 +756,7 @@ ASM_FUNCTION(reset__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaitAction__11daNpcShad_cFv) {
+asm void daNpcShad_c::setWaitAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setWaitAction__11daNpcShad_cFv.s"
 }
@@ -595,7 +767,7 @@ ASM_FUNCTION(setWaitAction__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathPoint__11daNpcShad_cFUciP3Vec) {
+asm void daNpcShad_c::getPathPoint(u8 field_0, s32 field_1, Vec* field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/getPathPoint__11daNpcShad_cFUciP3Vec.s"
 }
@@ -606,7 +778,7 @@ ASM_FUNCTION(getPathPoint__11daNpcShad_cFUciP3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSneaking__11daNpcShad_cFv) {
+asm void daNpcShad_c::isSneaking() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/isSneaking__11daNpcShad_cFv.s"
 }
@@ -617,7 +789,7 @@ ASM_FUNCTION(isSneaking__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_type0__11daNpcShad_cFPv) {
+asm void daNpcShad_c::wait_type0(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/wait_type0__11daNpcShad_cFPv.s"
 }
@@ -628,7 +800,7 @@ ASM_FUNCTION(wait_type0__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__11daNpcShad_cFifi) {
+asm void daNpcShad_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setMotion__11daNpcShad_cFifi.s"
 }
@@ -639,7 +811,7 @@ ASM_FUNCTION(setMotion__11daNpcShad_cFifi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setExpression__11daNpcShad_cFif) {
+asm void daNpcShad_c::setExpression(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setExpression__11daNpcShad_cFif.s"
 }
@@ -650,7 +822,7 @@ ASM_FUNCTION(setExpression__11daNpcShad_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_type1__11daNpcShad_cFPv) {
+asm void daNpcShad_c::wait_type1(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/wait_type1__11daNpcShad_cFPv.s"
 }
@@ -661,7 +833,7 @@ ASM_FUNCTION(wait_type1__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_type2__11daNpcShad_cFPv) {
+asm void daNpcShad_c::wait_type2(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/wait_type2__11daNpcShad_cFPv.s"
 }
@@ -672,7 +844,7 @@ ASM_FUNCTION(wait_type2__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__11daNpcShad_cFPv) {
+asm void daNpcShad_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/talk__11daNpcShad_cFPv.s"
 }
@@ -683,7 +855,7 @@ ASM_FUNCTION(talk__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__11daNpcShad_cFPv) {
+asm void daNpcShad_c::demo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/demo__11daNpcShad_cFPv.s"
 }
@@ -694,7 +866,7 @@ ASM_FUNCTION(demo__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(leave__11daNpcShad_cFPv) {
+asm void daNpcShad_c::leave(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/leave__11daNpcShad_cFPv.s"
 }
@@ -705,7 +877,7 @@ ASM_FUNCTION(leave__11daNpcShad_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_Introduction__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_Introduction(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_Introduction__11daNpcShad_cFi.s"
 }
@@ -716,7 +888,7 @@ ASM_FUNCTION(EvCut_Introduction__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_Meeting__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_Meeting(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_Meeting__11daNpcShad_cFi.s"
 }
@@ -727,7 +899,7 @@ ASM_FUNCTION(EvCut_Meeting__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_ToChantSpell1__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_ToChantSpell1(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_ToChantSpell1__11daNpcShad_cFi.s"
 }
@@ -738,7 +910,7 @@ ASM_FUNCTION(EvCut_ToChantSpell1__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_ToChantSpell2__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_ToChantSpell2(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_ToChantSpell2__11daNpcShad_cFi.s"
 }
@@ -749,7 +921,7 @@ ASM_FUNCTION(EvCut_ToChantSpell2__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_ToChantSpell2Skip__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_ToChantSpell2Skip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_ToChantSpell2Skip__11daNpcShad_cFi.s"
 }
@@ -760,7 +932,7 @@ ASM_FUNCTION(EvCut_ToChantSpell2Skip__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_DiscoveryCannon__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_DiscoveryCannon(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_DiscoveryCannon__11daNpcShad_cFi.s"
 }
@@ -771,7 +943,7 @@ ASM_FUNCTION(EvCut_DiscoveryCannon__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_DiscoveryCannonSkip__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_DiscoveryCannonSkip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_DiscoveryCannonSkip__11daNpcShad_cFi.s"
 }
@@ -782,7 +954,7 @@ ASM_FUNCTION(EvCut_DiscoveryCannonSkip__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_Disappear__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_Disappear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_Disappear__11daNpcShad_cFi.s"
 }
@@ -793,7 +965,7 @@ ASM_FUNCTION(EvCut_Disappear__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_DisappearSkip__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_DisappearSkip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_DisappearSkip__11daNpcShad_cFi.s"
 }
@@ -804,7 +976,7 @@ ASM_FUNCTION(EvCut_DisappearSkip__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_CallBack__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_CallBack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_CallBack__11daNpcShad_cFi.s"
 }
@@ -815,7 +987,7 @@ ASM_FUNCTION(EvCut_CallBack__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_WiretapSponsor__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_WiretapSponsor(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_WiretapSponsor__11daNpcShad_cFi.s"
 }
@@ -826,7 +998,7 @@ ASM_FUNCTION(EvCut_WiretapSponsor__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EvCut_WiretapEntrant__11daNpcShad_cFi) {
+asm void daNpcShad_c::EvCut_WiretapEntrant(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/EvCut_WiretapEntrant__11daNpcShad_cFi.s"
 }
@@ -837,7 +1009,7 @@ ASM_FUNCTION(EvCut_WiretapEntrant__11daNpcShad_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcShad_Create__FPv) {
+asm void daNpcShad_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/daNpcShad_Create__FPv.s"
 }
@@ -848,7 +1020,7 @@ ASM_FUNCTION(daNpcShad_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcShad_Delete__FPv) {
+asm void daNpcShad_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/daNpcShad_Delete__FPv.s"
 }
@@ -859,7 +1031,7 @@ ASM_FUNCTION(daNpcShad_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcShad_Execute__FPv) {
+asm void daNpcShad_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/daNpcShad_Execute__FPv.s"
 }
@@ -870,7 +1042,7 @@ ASM_FUNCTION(daNpcShad_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcShad_Draw__FPv) {
+asm void daNpcShad_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/daNpcShad_Draw__FPv.s"
 }
@@ -878,21 +1050,16 @@ ASM_FUNCTION(daNpcShad_Draw__FPv) {
 
 
 /* 80AE0184-80AE018C 0008+00 .text      daNpcShad_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcShad_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/daNpcShad_IsDelete__FPv.s"
+bool daNpcShad_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AE018C-80AE01BC 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -903,7 +1070,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__11daNpcShad_cFv) {
+asm void daNpcShad_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setParam__11daNpcShad_cFv.s"
 }
@@ -914,7 +1081,7 @@ ASM_FUNCTION(setParam__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__11daNpcShad_cFv) {
+asm void daNpcShad_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/main__11daNpcShad_cFv.s"
 }
@@ -925,7 +1092,7 @@ ASM_FUNCTION(main__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__11daNpcShad_cFv) {
+asm void daNpcShad_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/playMotion__11daNpcShad_cFv.s"
 }
@@ -936,7 +1103,7 @@ ASM_FUNCTION(playMotion__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playExpression__11daNpcShad_cFv) {
+asm void daNpcShad_c::playExpression() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/playExpression__11daNpcShad_cFv.s"
 }
@@ -947,7 +1114,7 @@ ASM_FUNCTION(playExpression__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__11daNpcShad_cFv) {
+asm void daNpcShad_c::ctrlBtk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/ctrlBtk__11daNpcShad_cFv.s"
 }
@@ -958,7 +1125,7 @@ ASM_FUNCTION(ctrlBtk__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__11daNpcShad_cFv) {
+asm void daNpcShad_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setAttnPos__11daNpcShad_cFv.s"
 }
@@ -969,7 +1136,7 @@ ASM_FUNCTION(setAttnPos__11daNpcShad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__11daNpcShad_cFv) {
+asm void daNpcShad_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/lookat__11daNpcShad_cFv.s"
 }
@@ -977,21 +1144,16 @@ ASM_FUNCTION(lookat__11daNpcShad_cFv) {
 
 
 /* 80AE153C-80AE1544 0008+00 .text      drawDbgInfo__11daNpcShad_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__11daNpcShad_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/drawDbgInfo__11daNpcShad_cFv.s"
+bool daNpcShad_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AE1544-80AE1550 000C+00 .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AE1544) {
+extern "C" asm void func_80AE1544() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/func_80AE1544.s"
 }
@@ -1002,7 +1164,7 @@ ASM_FUNCTION(func_80AE1544) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_shad_cpp) {
+extern "C" asm void __sinit_d_a_npc_shad_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__sinit_d_a_npc_shad_cpp.s"
 }
@@ -1013,7 +1175,7 @@ ASM_FUNCTION(__sinit_d_a_npc_shad_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1024,7 +1186,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -1035,7 +1197,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -1046,7 +1208,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__5csXyzFv.s"
 }
@@ -1054,21 +1216,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80AE18B8-80AE18BC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AE18BC-80AE18F8 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__4cXyzFv.s"
 }
@@ -1076,21 +1233,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80AE18F8-80AE18FC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AE18FC-80AE1B48 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__8daNpcF_cFv.s"
 }
@@ -1101,7 +1253,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__ct__8daNpcF_cFv.s"
 }
@@ -1112,7 +1264,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1123,7 +1275,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__10dCcD_GSttsFv.s"
 }
@@ -1134,7 +1286,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1145,7 +1297,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1153,43 +1305,28 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80AE1EBC-80AE1EC0 0004+00 .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AE1EC0-80AE1EC4 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AE1EC4-80AE1EC8 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AE1EC8-80AE1F10 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__10cCcD_GSttsFv.s"
 }
@@ -1200,7 +1337,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/chkPointInArea__15daTag_EvtArea_cF4cXyz.s"
 }
@@ -1211,7 +1348,7 @@ ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daNpcShad_Param_cFv) {
+asm daNpcShad_Param_c::~daNpcShad_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/__dt__17daNpcShad_Param_cFv.s"
 }
@@ -1222,7 +1359,7 @@ ASM_FUNCTION(__dt__17daNpcShad_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AE1FB8) {
+extern "C" asm void func_80AE1FB8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/func_80AE1FB8.s"
 }
@@ -1233,7 +1370,7 @@ ASM_FUNCTION(func_80AE1FB8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AE1FC0) {
+extern "C" asm void func_80AE1FC0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shad/d_a_npc_shad/func_80AE1FC0.s"
 }

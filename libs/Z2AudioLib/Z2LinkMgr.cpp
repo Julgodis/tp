@@ -6,52 +6,349 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Z2CreatureLink (Z2CreatureLink) False/False
+// build Z2SoundObjBase (Z2SoundObjBase) False/False
+// build Z2SoundHandlePool (Z2SoundHandlePool) False/False
+/* top-level dependencies (begin Z2SoundHandlePool) */
+/* top-level dependencies (end Z2SoundHandlePool) */
+struct Z2SoundHandlePool {
+};
+
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SoundObjBase) */
+// outer dependency: Z2SoundHandlePool
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SoundObjBase) */
+struct Z2SoundObjBase {
+	// Z2SoundHandlePool
+	// JAISoundID
+	// Vec
+	/* 802BDEF0 */ Z2SoundObjBase();
+	/* 802BDF48 */ ~Z2SoundObjBase();
+	/* 802BDFB0 */ void init(Vec*, char);
+	/* 802BDFF8 */ void deleteObject();
+	/* 802BE038 */ void framework(u32, char);
+	/* 802BE070 */ void dispose();
+	/* 802BE104 */ void stopOK(Z2SoundHandlePool&);
+	/* 802BE144 */ void startSound(JAISoundID, u32, char);
+	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2CreatureLink) */
+// outer dependency: Z2SoundObjBase
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2CreatureLink) */
+struct Z2CreatureLink {
+	// Z2SoundObjBase
+	// JAISoundID
+	// Vec
+	/* 802C321C */ void setLinkGroupInfo(char);
+	/* 802C3220 */ void setLinkHp(s32, s32);
+	/* 802C3228 */ void setLinkSwordType(s32, s32);
+	/* 802C328C */ void setLinkShieldType(s32, s32);
+	/* 802C32F0 */ void setLinkBootsType(s32);
+	/* 802C333C */ Z2CreatureLink();
+	/* 802C3500 */ ~Z2CreatureLink();
+	/* 802C35F8 */ void deleteObject();
+	/* 802C3638 */ void init(Vec*, Vec*, Vec*);
+	/* 802C3710 */ void initKantera(Vec*);
+	/* 802C374C */ void deleteKantera();
+	/* 802C3778 */ void setKanteraState(char);
+	/* 802C3780 */ void framework(u32, char);
+	/* 802C3A64 */ void setSinkDepth(char);
+	/* 802C3A6C */ void setRiding(bool);
+	/* 802C3AEC */ void setMagnetized(bool);
+	/* 802C3AFC */ void setWolfEyeOpen(bool);
+	/* 802C3BD4 */ void startLinkSound(JAISoundID, u32, char);
+	/* 802C3E68 */ void startLinkSoundLevel(JAISoundID, u32, char);
+	/* 802C4320 */ void startLinkVoice(JAISoundID, char);
+	/* 802C45B0 */ void startLinkVoiceLevel(JAISoundID, char);
+	/* 802C46F0 */ void startLinkSwordSound(JAISoundID, u32, char);
+	/* 802C4784 */ void startCollisionSE(u32, u32);
+	/* 802C4814 */ void startHitItemSE(u32, u32, Z2SoundObjBase*, f32);
+	/* 802C48D8 */ void setResumeAttack(bool);
+};
+
+// build Z2LinkSoundStarter (Z2LinkSoundStarter) False/False
+/* top-level dependencies (begin Z2LinkSoundStarter) */
+/* top-level dependencies (end Z2LinkSoundStarter) */
+struct Z2LinkSoundStarter {
+	/* 802C3464 */ ~Z2LinkSoundStarter();
+	/* 802C48E8 */ Z2LinkSoundStarter();
+};
+
+// build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
+// build Z2SoundObjBase (Z2SoundObjBase) True/True
+// build Z2CreatureRide (Z2CreatureRide) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2CreatureRide) */
+// outer dependency: Vec
+/* top-level dependencies (end Z2CreatureRide) */
+struct Z2CreatureRide {
+	// Vec
+	/* 802C4FFC */ Z2CreatureRide();
+	/* 802C5114 */ ~Z2CreatureRide();
+	/* 802C51EC */ void deleteObject();
+	/* 802C520C */ void init(Vec*, Vec*, char, char);
+	/* 802C522C */ void setLinkRiding(bool);
+};
+
+// build Z2RideSoundStarter (Z2RideSoundStarter) False/False
+// build Z2CreatureRide (Z2CreatureRide) True/True
+/* top-level dependencies (begin Z2RideSoundStarter) */
+// outer dependency: Z2CreatureRide
+/* top-level dependencies (end Z2RideSoundStarter) */
+struct Z2RideSoundStarter {
+	// Z2CreatureRide
+	/* 802C5078 */ ~Z2RideSoundStarter();
+	/* 802C5234 */ Z2RideSoundStarter(Z2CreatureRide*);
+};
+
+// build Z2SoundObjCoach (Z2SoundObjCoach) False/False
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SoundObjCoach) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SoundObjCoach) */
+struct Z2SoundObjCoach {
+	// JAISoundID
+	// Vec
+	/* 802C54B8 */ Z2SoundObjCoach();
+	/* 802C54FC */ void init(Vec*, char);
+	/* 802C551C */ void startWheelSound(f32);
+	/* 802C56C0 */ void startFireSound(u16);
+	/* 802C57C0 */ void startSound(JAISoundID, u32, char);
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build JAISound (JAISound) False/False
+/* top-level dependencies (begin JAISound) */
+/* top-level dependencies (end JAISound) */
+struct JAISound {
+	/* 802A24DC */ void stop(u32);
+};
+
+// build JAISoundParamsMove (JAISoundParamsMove) False/False
+/* top-level dependencies (begin JAISoundParamsMove) */
+/* top-level dependencies (end JAISoundParamsMove) */
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2E0C */ void movePitch(f32, u32);
+};
+
+// build JAISoundStarter (JAISoundStarter) False/False
+/* top-level dependencies (begin JAISoundStarter) */
+/* top-level dependencies (end JAISoundStarter) */
+struct JAISoundStarter {
+	/* 802A2F88 */ ~JAISoundStarter();
+};
+
+// build Z2Calc (Z2Calc) False/False
+// build Z2Calc (Z2Calc) True/False
+struct Z2Calc;
+/* top-level dependencies (begin Z2Calc) */
+// outer dependency: Z2Calc::CurveSign
+/* top-level dependencies (end Z2Calc) */
+struct Z2Calc {
+	// Z2Calc::CurveSign
+	// build CurveSign (Z2Calc::CurveSign) False/False
+	/* dependencies (begin Z2Calc::CurveSign) */
+	/* dependencies (end Z2Calc::CurveSign) */
+	struct CurveSign {
+	};
+
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+};
+
+// build Z2SoundStarter (Z2SoundStarter) False/False
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+};
+
+/* top-level dependencies (begin Z2SoundStarter) */
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end Z2SoundStarter) */
+struct Z2SoundStarter {
+	// JAISoundHandle
+	/* 802AAB94 */ Z2SoundStarter(bool);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+};
+
+// build JAISoundHandle (JAISoundHandle) True/True
+// build Z2SoundHandles (Z2SoundHandles) False/False
+// build JAISoundID (JAISoundID) True/True
+/* top-level dependencies (begin Z2SoundHandles) */
+// outer dependency: JAISoundID
+/* top-level dependencies (end Z2SoundHandles) */
+struct Z2SoundHandles {
+	// JAISoundID
+	/* 802AB254 */ void getHandleSoundID(JAISoundID);
+	/* 802AB4A0 */ void stopAllSounds(u32);
+	/* 802AB504 */ void isActive() const;
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build Z2SeqMgr (Z2SeqMgr) False/False
+/* top-level dependencies (begin Z2SeqMgr) */
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	/* 802B4844 */ void setBattleSeqState(char);
+	/* 802B4AFC */ void setBattleLastHit(char);
+};
+
+// build Z2FxLineMgr (Z2FxLineMgr) False/False
+/* top-level dependencies (begin Z2FxLineMgr) */
+/* top-level dependencies (end Z2FxLineMgr) */
+struct Z2FxLineMgr {
+	/* 802BAE1C */ void setFxForceOff(bool);
+};
+
+// build Z2Audience (Z2Audience) False/False
+/* top-level dependencies (begin Z2Audience) */
+/* top-level dependencies (end Z2Audience) */
+struct Z2Audience {
+	/* 802BD90C */ void setTargetVolume(f32, s32);
+};
+
+// build Z2SoundHandlePool (Z2SoundHandlePool) True/True
+// build Z2SoundObjSimple (Z2SoundObjSimple) False/False
+/* top-level dependencies (begin Z2SoundObjSimple) */
+/* top-level dependencies (end Z2SoundObjSimple) */
+struct Z2SoundObjSimple {
+	/* 802BE844 */ Z2SoundObjSimple();
+};
+
+// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
+/* top-level dependencies (begin Z2SoundObjMgr) */
+/* top-level dependencies (end Z2SoundObjMgr) */
+struct Z2SoundObjMgr {
+	/* 802BFFEC */ void setGhostEnemyState(char);
+};
+
+// build Z2Creature (Z2Creature) False/False
+// build Z2SoundStarter (Z2SoundStarter) True/True
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2Creature) */
+// outer dependency: Z2SoundStarter
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2Creature) */
+struct Z2Creature {
+	// Z2SoundStarter
+	// JAISoundID
+	// Vec
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C04E8 */ void deleteObject();
+	/* 802C0530 */ void init(Vec*, Vec*, char, char);
+	/* 802C05B0 */ void init(Vec*, Vec*, Vec*, char, char, char);
+	/* 802C0618 */ void setSoundStarter(Z2SoundStarter*);
+	/* 802C064C */ void framework(u32, char);
+	/* 802C0720 */ void startCreatureSound(JAISoundID, u32, char);
+	/* 802C087C */ void startCreatureSoundLevel(JAISoundID, u32, char);
+	/* 802C0A4C */ void startCreatureVoice(JAISoundID, char);
+	/* 802C0AF8 */ void startCreatureVoiceLevel(JAISoundID, char);
+	/* 802C0B70 */ void startCreatureExtraSound(JAISoundID, u32, char);
+	/* 802C0BAC */ void startCreatureExtraSoundLevel(JAISoundID, u32, char);
+	/* 802C0BE8 */ void startCollisionSE(u32, u32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setLinkGroupInfo__14Z2CreatureLinkFUc();
-extern "C" extern void setLinkHp__14Z2CreatureLinkFll();
-extern "C" extern void setLinkSwordType__14Z2CreatureLinkFll();
-extern "C" extern void setLinkShieldType__14Z2CreatureLinkFll();
-extern "C" extern void setLinkBootsType__14Z2CreatureLinkFl();
-extern "C" extern void __ct__14Z2CreatureLinkFv();
-extern "C" extern void __dt__18Z2LinkSoundStarterFv();
-extern "C" extern void __dt__14Z2CreatureLinkFv();
-extern "C" extern void deleteObject__14Z2CreatureLinkFv();
-extern "C" extern void init__14Z2CreatureLinkFP3VecP3VecP3Vec();
-extern "C" extern void initKantera__14Z2CreatureLinkFP3Vec();
-extern "C" extern void deleteKantera__14Z2CreatureLinkFv();
-extern "C" extern void setKanteraState__14Z2CreatureLinkFUc();
-extern "C" extern void framework__14Z2CreatureLinkFUlSc();
-extern "C" extern void setSinkDepth__14Z2CreatureLinkFSc();
-extern "C" extern void setRiding__14Z2CreatureLinkFb();
-extern "C" extern void setMagnetized__14Z2CreatureLinkFb();
-extern "C" extern void setWolfEyeOpen__14Z2CreatureLinkFb();
-extern "C" extern void startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc();
-extern "C" extern void startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc();
-extern "C" extern void startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc();
-extern "C" extern void startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc();
-extern "C" extern void startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc();
-extern "C" extern void startCollisionSE__14Z2CreatureLinkFUlUl();
-extern "C" extern void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef();
-extern "C" extern void setResumeAttack__14Z2CreatureLinkFb();
-extern "C" extern void __ct__18Z2LinkSoundStarterFv();
-extern "C" extern void func_802C4928();
-extern "C" extern void __ct__14Z2CreatureRideFv();
-extern "C" extern void __dt__18Z2RideSoundStarterFv();
-extern "C" extern void __dt__14Z2CreatureRideFv();
-extern "C" extern void deleteObject__14Z2CreatureRideFv();
-extern "C" extern void init__14Z2CreatureRideFP3VecP3VecUcUc();
-extern "C" extern void setLinkRiding__14Z2CreatureRideFb();
-extern "C" extern void __ct__18Z2RideSoundStarterFP14Z2CreatureRide();
-extern "C" extern void func_802C5284();
-extern "C" extern void __ct__15Z2SoundObjCoachFv();
-extern "C" extern void init__15Z2SoundObjCoachFP3VecUc();
-extern "C" extern void startWheelSound__15Z2SoundObjCoachFf();
-extern "C" extern void startFireSound__15Z2SoundObjCoachFUs();
-extern "C" extern void startSound__15Z2SoundObjCoachF10JAISoundIDUlSc();
-extern "C" extern void func_802C588C();
-extern "C" extern void func_802C5894();
+extern "C" static void func_802C4928();
+extern "C" static void func_802C5284();
+extern "C" static void func_802C588C();
+extern "C" static void func_802C5894();
+
+extern "C" void setLinkGroupInfo__14Z2CreatureLinkFUc();
+extern "C" void setLinkHp__14Z2CreatureLinkFll();
+extern "C" void setLinkSwordType__14Z2CreatureLinkFll();
+extern "C" void setLinkShieldType__14Z2CreatureLinkFll();
+extern "C" void setLinkBootsType__14Z2CreatureLinkFl();
+extern "C" void __ct__14Z2CreatureLinkFv();
+extern "C" void __dt__18Z2LinkSoundStarterFv();
+extern "C" void __dt__14Z2CreatureLinkFv();
+extern "C" void deleteObject__14Z2CreatureLinkFv();
+extern "C" void init__14Z2CreatureLinkFP3VecP3VecP3Vec();
+extern "C" void initKantera__14Z2CreatureLinkFP3Vec();
+extern "C" void deleteKantera__14Z2CreatureLinkFv();
+extern "C" void setKanteraState__14Z2CreatureLinkFUc();
+extern "C" void framework__14Z2CreatureLinkFUlSc();
+extern "C" void setSinkDepth__14Z2CreatureLinkFSc();
+extern "C" void setRiding__14Z2CreatureLinkFb();
+extern "C" void setMagnetized__14Z2CreatureLinkFb();
+extern "C" void setWolfEyeOpen__14Z2CreatureLinkFb();
+extern "C" void startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc();
+extern "C" void startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc();
+extern "C" void startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__14Z2CreatureLinkFUlUl();
+extern "C" void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef();
+extern "C" void setResumeAttack__14Z2CreatureLinkFb();
+extern "C" void __ct__18Z2LinkSoundStarterFv();
+extern "C" static void func_802C4928();
+extern "C" void __ct__14Z2CreatureRideFv();
+extern "C" void __dt__18Z2RideSoundStarterFv();
+extern "C" void __dt__14Z2CreatureRideFv();
+extern "C" void deleteObject__14Z2CreatureRideFv();
+extern "C" void init__14Z2CreatureRideFP3VecP3VecUcUc();
+extern "C" void setLinkRiding__14Z2CreatureRideFb();
+extern "C" void __ct__18Z2RideSoundStarterFP14Z2CreatureRide();
+extern "C" static void func_802C5284();
+extern "C" void __ct__15Z2SoundObjCoachFv();
+extern "C" void init__15Z2SoundObjCoachFP3VecUc();
+extern "C" void startWheelSound__15Z2SoundObjCoachFf();
+extern "C" void startFireSound__15Z2SoundObjCoachFUs();
+extern "C" void startSound__15Z2SoundObjCoachF10JAISoundIDUlSc();
+extern "C" static void func_802C588C();
+extern "C" static void func_802C5894();
 SECTION_DATA extern void*const __vt__15Z2SoundObjCoach[8];
 SECTION_DATA extern void*const __vt__18Z2RideSoundStarter[5];
 SECTION_DATA extern void*const __vt__14Z2CreatureRide[18];
@@ -98,60 +395,71 @@ SECTION_SDATA2 extern f32 Z2LinkMgr__lit_4647;
 // External References:
 // 
 
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void stop__8JAISoundFUl();
-extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" extern void movePitch__18JAISoundParamsMoveFfUl();
-extern "C" extern void __dt__15JAISoundStarterFv();
-extern "C" extern void linearTransform__6Z2CalcFfffffb();
-extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" extern void __ct__14Z2SoundStarterFb();
-extern "C" extern void func_802AABF4();
-extern "C" extern void func_802AAC3C();
-extern "C" extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" extern void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
-extern "C" extern void stopAllSounds__14Z2SoundHandlesFUl();
-extern "C" extern void isActive__14Z2SoundHandlesCFv();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void setBattleSeqState__8Z2SeqMgrFUc();
-extern "C" extern void setBattleLastHit__8Z2SeqMgrFUc();
-extern "C" extern void setFxForceOff__11Z2FxLineMgrFb();
-extern "C" extern void setTargetVolume__10Z2AudienceFfi();
-extern "C" extern void __ct__14Z2SoundObjBaseFv();
-extern "C" extern void __dt__14Z2SoundObjBaseFv();
-extern "C" extern void init__14Z2SoundObjBaseFP3VecUc();
-extern "C" extern void deleteObject__14Z2SoundObjBaseFv();
-extern "C" extern void framework__14Z2SoundObjBaseFUlSc();
-extern "C" extern void dispose__14Z2SoundObjBaseFv();
-extern "C" extern void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
-extern "C" extern void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern "C" extern void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern "C" extern void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase();
-extern "C" extern void __ct__16Z2SoundObjSimpleFv();
-extern "C" extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
-extern "C" extern void __ct__10Z2CreatureFv();
-extern "C" extern void __dt__10Z2CreatureFv();
-extern "C" extern void deleteObject__10Z2CreatureFv();
-extern "C" extern void init__10Z2CreatureFP3VecP3VecUcUc();
-extern "C" extern void init__10Z2CreatureFP3VecP3VecP3VecUcUcUc();
-extern "C" extern void setSoundStarter__10Z2CreatureFP14Z2SoundStarter();
-extern "C" extern void framework__10Z2CreatureFUlSc();
-extern "C" extern void startCreatureSound__10Z2CreatureF10JAISoundIDUlSc();
-extern "C" extern void startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
-extern "C" extern void startCreatureVoice__10Z2CreatureF10JAISoundIDSc();
-extern "C" extern void startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc();
-extern "C" extern void startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc();
-extern "C" extern void startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
-extern "C" extern void startCollisionSE__10Z2CreatureFUlUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSVECSquareDistance();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void func_802AABF4();
+extern "C" void func_802AAC3C();
+void operator delete(void*);
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void __ct__14Z2SoundStarterFb();
+extern "C" void func_802AABF4();
+extern "C" void func_802AAC3C();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
+extern "C" void stopAllSounds__14Z2SoundHandlesFUl();
+extern "C" void isActive__14Z2SoundHandlesCFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void setBattleSeqState__8Z2SeqMgrFUc();
+extern "C" void setBattleLastHit__8Z2SeqMgrFUc();
+extern "C" void setFxForceOff__11Z2FxLineMgrFb();
+extern "C" void setTargetVolume__10Z2AudienceFfi();
+extern "C" void __ct__14Z2SoundObjBaseFv();
+extern "C" void __dt__14Z2SoundObjBaseFv();
+extern "C" void init__14Z2SoundObjBaseFP3VecUc();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void framework__14Z2SoundObjBaseFUlSc();
+extern "C" void dispose__14Z2SoundObjBaseFv();
+extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
+extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc();
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void __dt__10Z2CreatureFv();
+extern "C" void deleteObject__10Z2CreatureFv();
+extern "C" void init__10Z2CreatureFP3VecP3VecUcUc();
+extern "C" void init__10Z2CreatureFP3VecP3VecP3VecUcUcUc();
+extern "C" void setSoundStarter__10Z2CreatureFP14Z2SoundStarter();
+extern "C" void framework__10Z2CreatureFUlSc();
+extern "C" void startCreatureSound__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureVoice__10Z2CreatureF10JAISoundIDSc();
+extern "C" void startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc();
+extern "C" void startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__10Z2CreatureFUlUl();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__14Z2SoundStarter[6];
 SECTION_DATA extern void*const __vt__16Z2SoundObjSimple[8];
@@ -170,55 +478,50 @@ SECTION_SBSS extern u8 data_80450B88[4];
 // Declarations:
 // 
 
-/* 802C321C-802C3220 0004+00 .text      setLinkGroupInfo__14Z2CreatureLinkFUc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setLinkGroupInfo__14Z2CreatureLinkFUc) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2LinkMgr/setLinkGroupInfo__14Z2CreatureLinkFUc.s"
+/* 802C321C-802C3220 0004+00 rc=1 efc=1 .text      setLinkGroupInfo__14Z2CreatureLinkFUc                        */
+void Z2CreatureLink::setLinkGroupInfo(char field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802C3220-802C3228 0008+00 .text      setLinkHp__14Z2CreatureLinkFll                               */
+/* 802C3220-802C3228 0008+00 rc=1 efc=1 .text      setLinkHp__14Z2CreatureLinkFll                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinkHp__14Z2CreatureLinkFll) {
+asm void Z2CreatureLink::setLinkHp(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setLinkHp__14Z2CreatureLinkFll.s"
 }
 #pragma pop
 
 
-/* 802C3228-802C328C 0064+00 .text      setLinkSwordType__14Z2CreatureLinkFll                        */
+/* 802C3228-802C328C 0064+00 rc=1 efc=1 .text      setLinkSwordType__14Z2CreatureLinkFll                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinkSwordType__14Z2CreatureLinkFll) {
+asm void Z2CreatureLink::setLinkSwordType(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setLinkSwordType__14Z2CreatureLinkFll.s"
 }
 #pragma pop
 
 
-/* 802C328C-802C32F0 0064+00 .text      setLinkShieldType__14Z2CreatureLinkFll                       */
+/* 802C328C-802C32F0 0064+00 rc=1 efc=1 .text      setLinkShieldType__14Z2CreatureLinkFll                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinkShieldType__14Z2CreatureLinkFll) {
+asm void Z2CreatureLink::setLinkShieldType(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setLinkShieldType__14Z2CreatureLinkFll.s"
 }
 #pragma pop
 
 
-/* 802C32F0-802C333C 004C+00 .text      setLinkBootsType__14Z2CreatureLinkFl                         */
+/* 802C32F0-802C333C 004C+00 rc=1 efc=1 .text      setLinkBootsType__14Z2CreatureLinkFl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinkBootsType__14Z2CreatureLinkFl) {
+asm void Z2CreatureLink::setLinkBootsType(s32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setLinkBootsType__14Z2CreatureLinkFl.s"
 }
@@ -226,7 +529,7 @@ ASM_FUNCTION(setLinkBootsType__14Z2CreatureLinkFl) {
 
 
 /* ############################################################################################## */
-/* 803CB8F0-803CB910 0020+00 .data      __vt__15Z2SoundObjCoach                                      */
+/* 803CB8F0-803CB910 0020+00 rc=1 efc=0 .data      __vt__15Z2SoundObjCoach                                      */
 void* const __vt__15Z2SoundObjCoach[8] = {
 	NULL, /* RTTI */
 	NULL,
@@ -238,7 +541,7 @@ void* const __vt__15Z2SoundObjCoach[8] = {
 	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CB910-803CB924 0014+00 .data      __vt__18Z2RideSoundStarter                                   */
+/* 803CB910-803CB924 0014+00 rc=3 efc=0 .data      __vt__18Z2RideSoundStarter                                   */
 void* const __vt__18Z2RideSoundStarter[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -247,7 +550,7 @@ void* const __vt__18Z2RideSoundStarter[5] = {
 	(void*)func_802C5284,
 };
 
-/* 803CB924-803CB96C 0048+00 .data      __vt__14Z2CreatureRide                                       */
+/* 803CB924-803CB96C 0048+00 rc=2 efc=0 .data      __vt__14Z2CreatureRide                                       */
 void* const __vt__14Z2CreatureRide[18] = {
 	NULL, /* RTTI */
 	NULL,
@@ -269,7 +572,7 @@ void* const __vt__14Z2CreatureRide[18] = {
 	(void*)__dt__14Z2CreatureRideFv,
 };
 
-/* 803CB96C-803CB980 0014+00 .data      __vt__18Z2LinkSoundStarter                                   */
+/* 803CB96C-803CB980 0014+00 rc=3 efc=0 .data      __vt__18Z2LinkSoundStarter                                   */
 void* const __vt__18Z2LinkSoundStarter[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -278,7 +581,7 @@ void* const __vt__18Z2LinkSoundStarter[5] = {
 	(void*)func_802C4928,
 };
 
-/* 803CB980-803CB9C8 0048+00 .data      __vt__14Z2CreatureLink                                       */
+/* 803CB980-803CB9C8 0048+00 rc=2 efc=0 .data      __vt__14Z2CreatureLink                                       */
 void* const __vt__14Z2CreatureLink[18] = {
 	NULL, /* RTTI */
 	NULL,
@@ -300,91 +603,91 @@ void* const __vt__14Z2CreatureLink[18] = {
 	(void*)__dt__14Z2CreatureLinkFv,
 };
 
-/* 80451360-80451368 0004+04 .sbss      mLinkPtr__14Z2CreatureLink                                   */
+/* 80451360-80451368 0004+04 rc=18 efc=15 .sbss      mLinkPtr__14Z2CreatureLink                                   */
 u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-/* 802C333C-802C3464 0128+00 .text      __ct__14Z2CreatureLinkFv                                     */
+/* 802C333C-802C3464 0128+00 rc=1 efc=1 .text      __ct__14Z2CreatureLinkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14Z2CreatureLinkFv) {
+asm Z2CreatureLink::Z2CreatureLink() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__ct__14Z2CreatureLinkFv.s"
 }
 #pragma pop
 
 
-/* 802C3464-802C3500 009C+00 .text      __dt__18Z2LinkSoundStarterFv                                 */
+/* 802C3464-802C3500 009C+00 rc=1 efc=0 .text      __dt__18Z2LinkSoundStarterFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18Z2LinkSoundStarterFv) {
+asm Z2LinkSoundStarter::~Z2LinkSoundStarter() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__dt__18Z2LinkSoundStarterFv.s"
 }
 #pragma pop
 
 
-/* 802C3500-802C35F8 00F8+00 .text      __dt__14Z2CreatureLinkFv                                     */
+/* 802C3500-802C35F8 00F8+00 rc=3 efc=1 .text      __dt__14Z2CreatureLinkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14Z2CreatureLinkFv) {
+asm Z2CreatureLink::~Z2CreatureLink() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__dt__14Z2CreatureLinkFv.s"
 }
 #pragma pop
 
 
-/* 802C35F8-802C3638 0040+00 .text      deleteObject__14Z2CreatureLinkFv                             */
+/* 802C35F8-802C3638 0040+00 rc=1 efc=0 .text      deleteObject__14Z2CreatureLinkFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteObject__14Z2CreatureLinkFv) {
+asm void Z2CreatureLink::deleteObject() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/deleteObject__14Z2CreatureLinkFv.s"
 }
 #pragma pop
 
 
-/* 802C3638-802C3710 00D8+00 .text      init__14Z2CreatureLinkFP3VecP3VecP3Vec                       */
+/* 802C3638-802C3710 00D8+00 rc=1 efc=1 .text      init__14Z2CreatureLinkFP3VecP3VecP3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14Z2CreatureLinkFP3VecP3VecP3Vec) {
+asm void Z2CreatureLink::init(Vec* field_0, Vec* field_1, Vec* field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/init__14Z2CreatureLinkFP3VecP3VecP3Vec.s"
 }
 #pragma pop
 
 
-/* 802C3710-802C374C 003C+00 .text      initKantera__14Z2CreatureLinkFP3Vec                          */
+/* 802C3710-802C374C 003C+00 rc=1 efc=1 .text      initKantera__14Z2CreatureLinkFP3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initKantera__14Z2CreatureLinkFP3Vec) {
+asm void Z2CreatureLink::initKantera(Vec* field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/initKantera__14Z2CreatureLinkFP3Vec.s"
 }
 #pragma pop
 
 
-/* 802C374C-802C3778 002C+00 .text      deleteKantera__14Z2CreatureLinkFv                            */
+/* 802C374C-802C3778 002C+00 rc=2 efc=1 .text      deleteKantera__14Z2CreatureLinkFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteKantera__14Z2CreatureLinkFv) {
+asm void Z2CreatureLink::deleteKantera() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/deleteKantera__14Z2CreatureLinkFv.s"
 }
 #pragma pop
 
 
-/* 802C3778-802C3780 0008+00 .text      setKanteraState__14Z2CreatureLinkFUc                         */
+/* 802C3778-802C3780 0008+00 rc=5 efc=5 .text      setKanteraState__14Z2CreatureLinkFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKanteraState__14Z2CreatureLinkFUc) {
+asm void Z2CreatureLink::setKanteraState(char field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setKanteraState__14Z2CreatureLinkFUc.s"
 }
@@ -392,46 +695,46 @@ ASM_FUNCTION(setKanteraState__14Z2CreatureLinkFUc) {
 
 
 /* ############################################################################################## */
-/* 80455C98-80455C9C 0004+00 .sdata2    @3721                                                        */
+/* 80455C98-80455C9C 0004+00 rc=9 efc=0 .sdata2    @3721                                                        */
 f32 Z2LinkMgr__lit_3721 = 1.0f;
 
-/* 80455C9C-80455CA0 0004+00 .sdata2    @3722                                                        */
+/* 80455C9C-80455CA0 0004+00 rc=2 efc=0 .sdata2    @3722                                                        */
 f32 lit_3722 = -1.0f;
 
-/* 80455CA0-80455CA8 0004+04 .sdata2    @3723                                                        */
+/* 80455CA0-80455CA8 0004+04 rc=11 efc=0 .sdata2    @3723                                                        */
 u8 lit_3723[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455CA8-80455CB0 0008+00 .sdata2    @3724                                                        */
+/* 80455CA8-80455CB0 0008+00 rc=1 efc=0 .sdata2    @3724                                                        */
 f64 Z2LinkMgr__lit_3724 = 0.5;
 
-/* 80455CB0-80455CB8 0008+00 .sdata2    @3725                                                        */
+/* 80455CB0-80455CB8 0008+00 rc=1 efc=0 .sdata2    @3725                                                        */
 f64 lit_3725 = 3.0;
 
-/* 80455CB8-80455CC0 0008+00 .sdata2    @3726                                                        */
+/* 80455CB8-80455CC0 0008+00 rc=1 efc=0 .sdata2    @3726                                                        */
 u8 lit_3726[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802C3780-802C3A64 02E4+00 .text      framework__14Z2CreatureLinkFUlSc                             */
+/* 802C3780-802C3A64 02E4+00 rc=1 efc=0 .text      framework__14Z2CreatureLinkFUlSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(framework__14Z2CreatureLinkFUlSc) {
+asm void Z2CreatureLink::framework(u32 field_0, char field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/framework__14Z2CreatureLinkFUlSc.s"
 }
 #pragma pop
 
 
-/* 802C3A64-802C3A6C 0008+00 .text      setSinkDepth__14Z2CreatureLinkFSc                            */
+/* 802C3A64-802C3A6C 0008+00 rc=1 efc=1 .text      setSinkDepth__14Z2CreatureLinkFSc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSinkDepth__14Z2CreatureLinkFSc) {
+asm void Z2CreatureLink::setSinkDepth(char field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setSinkDepth__14Z2CreatureLinkFSc.s"
 }
@@ -439,36 +742,36 @@ ASM_FUNCTION(setSinkDepth__14Z2CreatureLinkFSc) {
 
 
 /* ############################################################################################## */
-/* 80455CC0-80455CC4 0004+00 .sdata2    @3743                                                        */
+/* 80455CC0-80455CC4 0004+00 rc=1 efc=0 .sdata2    @3743                                                        */
 f32 Z2LinkMgr__lit_3743 = 7.0f / 20.0f;
 
-/* 802C3A6C-802C3AEC 0080+00 .text      setRiding__14Z2CreatureLinkFb                                */
+/* 802C3A6C-802C3AEC 0080+00 rc=4 efc=4 .text      setRiding__14Z2CreatureLinkFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRiding__14Z2CreatureLinkFb) {
+asm void Z2CreatureLink::setRiding(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setRiding__14Z2CreatureLinkFb.s"
 }
 #pragma pop
 
 
-/* 802C3AEC-802C3AFC 0010+00 .text      setMagnetized__14Z2CreatureLinkFb                            */
+/* 802C3AEC-802C3AFC 0010+00 rc=5 efc=5 .text      setMagnetized__14Z2CreatureLinkFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMagnetized__14Z2CreatureLinkFb) {
+asm void Z2CreatureLink::setMagnetized(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setMagnetized__14Z2CreatureLinkFb.s"
 }
 #pragma pop
 
 
-/* 802C3AFC-802C3BD4 00D8+00 .text      setWolfEyeOpen__14Z2CreatureLinkFb                           */
+/* 802C3AFC-802C3BD4 00D8+00 rc=2 efc=2 .text      setWolfEyeOpen__14Z2CreatureLinkFb                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWolfEyeOpen__14Z2CreatureLinkFb) {
+asm void Z2CreatureLink::setWolfEyeOpen(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setWolfEyeOpen__14Z2CreatureLinkFb.s"
 }
@@ -476,33 +779,33 @@ ASM_FUNCTION(setWolfEyeOpen__14Z2CreatureLinkFb) {
 
 
 /* ############################################################################################## */
-/* 80455CC4-80455CC8 0004+00 .sdata2    @3834                                                        */
+/* 80455CC4-80455CC8 0004+00 rc=1 efc=0 .sdata2    @3834                                                        */
 f32 Z2LinkMgr__lit_3834 = 32.0f;
 
-/* 80455CC8-80455CCC 0004+00 .sdata2    @3835                                                        */
+/* 80455CC8-80455CCC 0004+00 rc=4 efc=0 .sdata2    @3835                                                        */
 f32 Z2LinkMgr__lit_3835 = 127.0f;
 
-/* 80455CCC-80455CD0 0004+00 .sdata2    @3836                                                        */
+/* 80455CCC-80455CD0 0004+00 rc=2 efc=0 .sdata2    @3836                                                        */
 f32 Z2LinkMgr__lit_3836 = 2.0f / 5.0f;
 
-/* 80455CD0-80455CD4 0004+00 .sdata2    @3837                                                        */
+/* 80455CD0-80455CD4 0004+00 rc=4 efc=0 .sdata2    @3837                                                        */
 f32 Z2LinkMgr__lit_3837 = 7.0f / 10.0f;
 
-/* 80455CD4-80455CD8 0004+00 .sdata2    @3838                                                        */
+/* 80455CD4-80455CD8 0004+00 rc=3 efc=0 .sdata2    @3838                                                        */
 f32 Z2LinkMgr__lit_3838 = 23.0f;
 
-/* 80455CD8-80455CE0 0004+04 .sdata2    @3839                                                        */
+/* 80455CD8-80455CE0 0004+04 rc=4 efc=0 .sdata2    @3839                                                        */
 f32 Z2LinkMgr__lit_3839 = 0.5f;
 /* padding 4 bytes */
 
-/* 80455CE0-80455CE8 0008+00 .sdata2    @3842                                                        */
+/* 80455CE0-80455CE8 0008+00 rc=3 efc=0 .sdata2    @3842                                                        */
 f64 Z2LinkMgr__lit_3842 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802C3BD4-802C3E68 0294+00 .text      startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc            */
+/* 802C3BD4-802C3E68 0294+00 rc=6 efc=3 .text      startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc) {
+asm void Z2CreatureLink::startLinkSound(JAISoundID field_0, u32 field_1, char field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc.s"
 }
@@ -510,88 +813,88 @@ ASM_FUNCTION(startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc) {
 
 
 /* ############################################################################################## */
-/* 80455CE8-80455CEC 0004+00 .sdata2    @3941                                                        */
+/* 80455CE8-80455CEC 0004+00 rc=1 efc=0 .sdata2    @3941                                                        */
 f32 Z2LinkMgr__lit_3941 = 30.0f;
 
-/* 80455CEC-80455CF0 0004+00 .sdata2    @3942                                                        */
+/* 80455CEC-80455CF0 0004+00 rc=3 efc=0 .sdata2    @3942                                                        */
 f32 Z2LinkMgr__lit_3942 = 3.0f / 10.0f;
 
-/* 80455CF0-80455CF4 0004+00 .sdata2    @3943                                                        */
+/* 80455CF0-80455CF4 0004+00 rc=4 efc=0 .sdata2    @3943                                                        */
 f32 Z2LinkMgr__lit_3943 = 4.0f / 5.0f;
 
-/* 80455CF4-80455CF8 0004+00 .sdata2    @3944                                                        */
+/* 80455CF4-80455CF8 0004+00 rc=1 efc=0 .sdata2    @3944                                                        */
 f32 Z2LinkMgr__lit_3944 = 180.0f;
 
-/* 80455CF8-80455CFC 0004+00 .sdata2    @3945                                                        */
+/* 80455CF8-80455CFC 0004+00 rc=1 efc=0 .sdata2    @3945                                                        */
 f32 Z2LinkMgr__lit_3945 = 120.0f;
 
-/* 80455CFC-80455D00 0004+00 .sdata2    @3946                                                        */
+/* 80455CFC-80455D00 0004+00 rc=4 efc=0 .sdata2    @3946                                                        */
 f32 Z2LinkMgr__lit_3946 = 3.0f / 5.0f;
 
-/* 80455D00-80455D04 0004+00 .sdata2    @3947                                                        */
+/* 80455D00-80455D04 0004+00 rc=1 efc=0 .sdata2    @3947                                                        */
 f32 Z2LinkMgr__lit_3947 = 80.0f;
 
-/* 80455D04-80455D08 0004+00 .sdata2    @3948                                                        */
+/* 80455D04-80455D08 0004+00 rc=1 efc=0 .sdata2    @3948                                                        */
 f32 lit_3948 = 6.0f / 5.0f;
 
-/* 80455D08-80455D0C 0004+00 .sdata2    @3949                                                        */
+/* 80455D08-80455D0C 0004+00 rc=2 efc=0 .sdata2    @3949                                                        */
 f32 Z2LinkMgr__lit_3949 = 0.25f;
 
-/* 80455D0C-80455D10 0004+00 .sdata2    @3950                                                        */
+/* 80455D0C-80455D10 0004+00 rc=1 efc=0 .sdata2    @3950                                                        */
 f32 Z2LinkMgr__lit_3950 = 11.0f / 10.0f;
 
-/* 80455D10-80455D18 0008+00 .sdata2    @3954                                                        */
+/* 80455D10-80455D18 0008+00 rc=2 efc=0 .sdata2    @3954                                                        */
 f64 Z2LinkMgr__lit_3954 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802C3E68-802C4320 04B8+00 .text      startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc       */
+/* 802C3E68-802C4320 04B8+00 rc=4 efc=3 .text      startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc) {
+asm void Z2CreatureLink::startLinkSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc.s"
 }
 #pragma pop
 
 
-/* 802C4320-802C45B0 0290+00 .text      startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc              */
+/* 802C4320-802C45B0 0290+00 rc=2 efc=1 .text      startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc) {
+asm void Z2CreatureLink::startLinkVoice(JAISoundID field_0, char field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc.s"
 }
 #pragma pop
 
 
-/* 802C45B0-802C46F0 0140+00 .text      startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc         */
+/* 802C45B0-802C46F0 0140+00 rc=1 efc=1 .text      startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc) {
+asm void Z2CreatureLink::startLinkVoiceLevel(JAISoundID field_0, char field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc.s"
 }
 #pragma pop
 
 
-/* 802C46F0-802C4784 0094+00 .text      startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc       */
+/* 802C46F0-802C4784 0094+00 rc=2 efc=2 .text      startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc) {
+asm void Z2CreatureLink::startLinkSwordSound(JAISoundID field_0, u32 field_1, char field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc.s"
 }
 #pragma pop
 
 
-/* 802C4784-802C4814 0090+00 .text      startCollisionSE__14Z2CreatureLinkFUlUl                      */
+/* 802C4784-802C4814 0090+00 rc=1 efc=0 .text      startCollisionSE__14Z2CreatureLinkFUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startCollisionSE__14Z2CreatureLinkFUlUl) {
+asm void Z2CreatureLink::startCollisionSE(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startCollisionSE__14Z2CreatureLinkFUlUl.s"
 }
@@ -599,36 +902,36 @@ ASM_FUNCTION(startCollisionSE__14Z2CreatureLinkFUlUl) {
 
 
 /* ############################################################################################## */
-/* 80455D18-80455D1C 0004+00 .sdata2    @4178                                                        */
+/* 80455D18-80455D1C 0004+00 rc=1 efc=0 .sdata2    @4178                                                        */
 f32 Z2LinkMgr__lit_4178 = 100.0f;
 
-/* 802C4814-802C48D8 00C4+00 .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
+/* 802C4814-802C48D8 00C4+00 rc=4 efc=4 .text      startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef) {
+asm void Z2CreatureLink::startHitItemSE(u32 field_0, u32 field_1, Z2SoundObjBase* field_2, f32 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef.s"
 }
 #pragma pop
 
 
-/* 802C48D8-802C48E8 0010+00 .text      setResumeAttack__14Z2CreatureLinkFb                          */
+/* 802C48D8-802C48E8 0010+00 rc=1 efc=1 .text      setResumeAttack__14Z2CreatureLinkFb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setResumeAttack__14Z2CreatureLinkFb) {
+asm void Z2CreatureLink::setResumeAttack(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setResumeAttack__14Z2CreatureLinkFb.s"
 }
 #pragma pop
 
 
-/* 802C48E8-802C4928 0040+00 .text      __ct__18Z2LinkSoundStarterFv                                 */
+/* 802C48E8-802C4928 0040+00 rc=1 efc=0 .text      __ct__18Z2LinkSoundStarterFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18Z2LinkSoundStarterFv) {
+asm Z2LinkSoundStarter::Z2LinkSoundStarter() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__ct__18Z2LinkSoundStarterFv.s"
 }
@@ -636,124 +939,124 @@ ASM_FUNCTION(__ct__18Z2LinkSoundStarterFv) {
 
 
 /* ############################################################################################## */
-/* 80455D1C-80455D20 0004+00 .sdata2    @4399                                                        */
+/* 80455D1C-80455D20 0004+00 rc=2 efc=0 .sdata2    @4399                                                        */
 f32 Z2LinkMgr__lit_4399 = 9.0f / 10.0f;
 
-/* 802C4928-802C4FFC 06D4+00 .text      startSound__18Z2LinkSoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
+/* 802C4928-802C4FFC 06D4+00 rc=2 efc=0 .text      startSound__18Z2LinkSoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802C4928) {
+extern "C" asm static void func_802C4928() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/func_802C4928.s"
 }
 #pragma pop
 
 
-/* 802C4FFC-802C5078 007C+00 .text      __ct__14Z2CreatureRideFv                                     */
+/* 802C4FFC-802C5078 007C+00 rc=0 efc=0 .text      __ct__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14Z2CreatureRideFv) {
+asm Z2CreatureRide::Z2CreatureRide() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__ct__14Z2CreatureRideFv.s"
 }
 #pragma pop
 
 
-/* 802C5078-802C5114 009C+00 .text      __dt__18Z2RideSoundStarterFv                                 */
+/* 802C5078-802C5114 009C+00 rc=1 efc=0 .text      __dt__18Z2RideSoundStarterFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18Z2RideSoundStarterFv) {
+asm Z2RideSoundStarter::~Z2RideSoundStarter() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__dt__18Z2RideSoundStarterFv.s"
 }
 #pragma pop
 
 
-/* 802C5114-802C51EC 00D8+00 .text      __dt__14Z2CreatureRideFv                                     */
+/* 802C5114-802C51EC 00D8+00 rc=2 efc=0 .text      __dt__14Z2CreatureRideFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14Z2CreatureRideFv) {
+asm Z2CreatureRide::~Z2CreatureRide() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__dt__14Z2CreatureRideFv.s"
 }
 #pragma pop
 
 
-/* 802C51EC-802C520C 0020+00 .text      deleteObject__14Z2CreatureRideFv                             */
+/* 802C51EC-802C520C 0020+00 rc=1 efc=0 .text      deleteObject__14Z2CreatureRideFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteObject__14Z2CreatureRideFv) {
+asm void Z2CreatureRide::deleteObject() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/deleteObject__14Z2CreatureRideFv.s"
 }
 #pragma pop
 
 
-/* 802C520C-802C522C 0020+00 .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
+/* 802C520C-802C522C 0020+00 rc=0 efc=0 .text      init__14Z2CreatureRideFP3VecP3VecUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14Z2CreatureRideFP3VecP3VecUcUc) {
+asm void Z2CreatureRide::init(Vec* field_0, Vec* field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/init__14Z2CreatureRideFP3VecP3VecUcUc.s"
 }
 #pragma pop
 
 
-/* 802C522C-802C5234 0008+00 .text      setLinkRiding__14Z2CreatureRideFb                            */
+/* 802C522C-802C5234 0008+00 rc=2 efc=2 .text      setLinkRiding__14Z2CreatureRideFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinkRiding__14Z2CreatureRideFb) {
+asm void Z2CreatureRide::setLinkRiding(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/setLinkRiding__14Z2CreatureRideFb.s"
 }
 #pragma pop
 
 
-/* 802C5234-802C5284 0050+00 .text      __ct__18Z2RideSoundStarterFP14Z2CreatureRide                 */
+/* 802C5234-802C5284 0050+00 rc=1 efc=0 .text      __ct__18Z2RideSoundStarterFP14Z2CreatureRide                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18Z2RideSoundStarterFP14Z2CreatureRide) {
+asm Z2RideSoundStarter::Z2RideSoundStarter(Z2CreatureRide* field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__ct__18Z2RideSoundStarterFP14Z2CreatureRide.s"
 }
 #pragma pop
 
 
-/* 802C5284-802C54B8 0234+00 .text      startSound__18Z2RideSoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
+/* 802C5284-802C54B8 0234+00 rc=2 efc=0 .text      startSound__18Z2RideSoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802C5284) {
+extern "C" asm static void func_802C5284() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/func_802C5284.s"
 }
 #pragma pop
 
 
-/* 802C54B8-802C54FC 0044+00 .text      __ct__15Z2SoundObjCoachFv                                    */
+/* 802C54B8-802C54FC 0044+00 rc=0 efc=0 .text      __ct__15Z2SoundObjCoachFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15Z2SoundObjCoachFv) {
+asm Z2SoundObjCoach::Z2SoundObjCoach() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/__ct__15Z2SoundObjCoachFv.s"
 }
 #pragma pop
 
 
-/* 802C54FC-802C551C 0020+00 .text      init__15Z2SoundObjCoachFP3VecUc                              */
+/* 802C54FC-802C551C 0020+00 rc=1 efc=0 .text      init__15Z2SoundObjCoachFP3VecUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__15Z2SoundObjCoachFP3VecUc) {
+asm void Z2SoundObjCoach::init(Vec* field_0, char field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/init__15Z2SoundObjCoachFP3VecUc.s"
 }
@@ -761,26 +1064,26 @@ ASM_FUNCTION(init__15Z2SoundObjCoachFP3VecUc) {
 
 
 /* ############################################################################################## */
-/* 80455D20-80455D24 0004+00 .sdata2    @4621                                                        */
+/* 80455D20-80455D24 0004+00 rc=1 efc=0 .sdata2    @4621                                                        */
 f32 Z2LinkMgr__lit_4621 = 2.0f;
 
-/* 80455D24-80455D28 0004+00 .sdata2    @4622                                                        */
+/* 80455D24-80455D28 0004+00 rc=1 efc=0 .sdata2    @4622                                                        */
 f32 Z2LinkMgr__lit_4622 = 35.0f;
 
-/* 80455D28-80455D2C 0004+00 .sdata2    @4623                                                        */
+/* 80455D28-80455D2C 0004+00 rc=1 efc=0 .sdata2    @4623                                                        */
 f32 Z2LinkMgr__lit_4623 = 22.0f / 25.0f;
 
-/* 80455D2C-80455D30 0004+00 .sdata2    @4624                                                        */
+/* 80455D2C-80455D30 0004+00 rc=3 efc=0 .sdata2    @4624                                                        */
 f32 Z2LinkMgr__lit_4624 = 1.25f;
 
-/* 80455D30-80455D34 0004+00 .sdata2    @4625                                                        */
+/* 80455D30-80455D34 0004+00 rc=2 efc=0 .sdata2    @4625                                                        */
 f32 Z2LinkMgr__lit_4625 = 50.0f;
 
-/* 802C551C-802C56C0 01A4+00 .text      startWheelSound__15Z2SoundObjCoachFf                         */
+/* 802C551C-802C56C0 01A4+00 rc=0 efc=0 .text      startWheelSound__15Z2SoundObjCoachFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startWheelSound__15Z2SoundObjCoachFf) {
+asm void Z2SoundObjCoach::startWheelSound(f32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startWheelSound__15Z2SoundObjCoachFf.s"
 }
@@ -788,57 +1091,56 @@ ASM_FUNCTION(startWheelSound__15Z2SoundObjCoachFf) {
 
 
 /* ############################################################################################## */
-/* 80455D34-80455D38 0004+00 .sdata2    @4645                                                        */
+/* 80455D34-80455D38 0004+00 rc=1 efc=0 .sdata2    @4645                                                        */
 f32 Z2LinkMgr__lit_4645 = 1500.0f;
 
-/* 80455D38-80455D3C 0004+00 .sdata2    @4646                                                        */
+/* 80455D38-80455D3C 0004+00 rc=2 efc=0 .sdata2    @4646                                                        */
 f32 Z2LinkMgr__lit_4646 = 1.0f / 5.0f;
 
-/* 80455D3C-80455D40 0004+00 .sdata2    @4647                                                        */
+/* 80455D3C-80455D40 0004+00 rc=2 efc=0 .sdata2    @4647                                                        */
 f32 Z2LinkMgr__lit_4647 = 17.0f / 20.0f;
 
-/* 802C56C0-802C57C0 0100+00 .text      startFireSound__15Z2SoundObjCoachFUs                         */
+/* 802C56C0-802C57C0 0100+00 rc=0 efc=0 .text      startFireSound__15Z2SoundObjCoachFUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startFireSound__15Z2SoundObjCoachFUs) {
+asm void Z2SoundObjCoach::startFireSound(u16 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startFireSound__15Z2SoundObjCoachFUs.s"
 }
 #pragma pop
 
 
-/* 802C57C0-802C588C 00CC+00 .text      startSound__15Z2SoundObjCoachF10JAISoundIDUlSc               */
+/* 802C57C0-802C588C 00CC+00 rc=1 efc=0 .text      startSound__15Z2SoundObjCoachF10JAISoundIDUlSc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startSound__15Z2SoundObjCoachF10JAISoundIDUlSc) {
+asm void Z2SoundObjCoach::startSound(JAISoundID field_0, u32 field_1, char field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/startSound__15Z2SoundObjCoachF10JAISoundIDUlSc.s"
 }
 #pragma pop
 
 
-/* 802C588C-802C5894 0008+00 .text      @144@__dt__14Z2CreatureLinkFv                                */
+/* 802C588C-802C5894 0008+00 rc=1 efc=0 .text      @144@__dt__14Z2CreatureLinkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802C588C) {
+extern "C" asm static void func_802C588C() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/func_802C588C.s"
 }
 #pragma pop
 
 
-/* 802C5894-802C589C 0008+00 .text      @144@__dt__14Z2CreatureRideFv                                */
+/* 802C5894-802C589C 0008+00 rc=1 efc=0 .text      @144@__dt__14Z2CreatureRideFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802C5894) {
+extern "C" asm static void func_802C5894() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2LinkMgr/func_802C5894.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

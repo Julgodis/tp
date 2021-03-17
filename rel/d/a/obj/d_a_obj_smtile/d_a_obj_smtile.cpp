@@ -6,31 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_SMTile_c {
+	~daObj_SMTile_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void setDstPos();
+	void setPrtcls(s32, s32);
+	void touchPrtcls(f32);
+	void setMtx();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObj_SMTile_Param_c {
+	~daObj_SMTile_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__14daObj_SMTile_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void create__14daObj_SMTile_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void CreateHeap__14daObj_SMTile_cFv();
-extern "C" extern void Delete__14daObj_SMTile_cFv();
-extern "C" extern void Execute__14daObj_SMTile_cFv();
-extern "C" extern void Draw__14daObj_SMTile_cFv();
-extern "C" extern void createHeapCallBack__14daObj_SMTile_cFP10fopAc_ac_c();
-extern "C" extern void setDstPos__14daObj_SMTile_cFv();
-extern "C" extern void setPrtcls__14daObj_SMTile_cFii();
-extern "C" extern void touchPrtcls__14daObj_SMTile_cFf();
-extern "C" extern void setMtx__14daObj_SMTile_cFv();
-extern "C" extern void daObj_SMTile_Create__FPv();
-extern "C" extern void daObj_SMTile_Delete__FPv();
-extern "C" extern void daObj_SMTile_Execute__FPv();
-extern "C" extern void daObj_SMTile_Draw__FPv();
-extern "C" extern void daObj_SMTile_IsDelete__FPv();
-extern "C" extern void func_80CDE2A4();
-extern "C" extern void __sinit_d_a_obj_smtile_cpp();
-extern "C" extern void __dt__20daObj_SMTile_Param_cFv();
+void daObj_SMTile_Create(void*);
+void daObj_SMTile_Delete(void*);
+void daObj_SMTile_Execute(void*);
+void daObj_SMTile_Draw(void*);
+bool daObj_SMTile_IsDelete(void*);
+extern "C" void func_80CDE2A4();
+extern "C" void __sinit_d_a_obj_smtile_cpp();
+
+extern "C" void __dt__14daObj_SMTile_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void create__14daObj_SMTile_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void CreateHeap__14daObj_SMTile_cFv();
+extern "C" void Delete__14daObj_SMTile_cFv();
+extern "C" void Execute__14daObj_SMTile_cFv();
+extern "C" void Draw__14daObj_SMTile_cFv();
+extern "C" void createHeapCallBack__14daObj_SMTile_cFP10fopAc_ac_c();
+extern "C" void setDstPos__14daObj_SMTile_cFv();
+extern "C" void setPrtcls__14daObj_SMTile_cFii();
+extern "C" void touchPrtcls__14daObj_SMTile_cFf();
+extern "C" void setMtx__14daObj_SMTile_cFv();
+extern "C" void daObj_SMTile_Create__FPv();
+extern "C" void daObj_SMTile_Delete__FPv();
+extern "C" void daObj_SMTile_Execute__FPv();
+extern "C" void daObj_SMTile_Draw__FPv();
+extern "C" bool daObj_SMTile_IsDelete__FPv();
+extern "C" void func_80CDE2A4();
+extern "C" void __sinit_d_a_obj_smtile_cpp();
+extern "C" void __dt__20daObj_SMTile_Param_cFv();
 SECTION_RODATA extern const u8 m__20daObj_SMTile_Param_c[8];
 SECTION_RODATA extern const u8 lit_3892[4];
 SECTION_RODATA extern const u32 lit_3978;
@@ -55,8 +99,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -66,7 +113,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_SMTile_cFv) {
+asm daObj_SMTile_c::~daObj_SMTile_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__dt__14daObj_SMTile_cFv.s"
 }
@@ -77,7 +124,7 @@ ASM_FUNCTION(__dt__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__dt__4cXyzFv.s"
 }
@@ -88,7 +135,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/create__14daObj_SMTile_cFv.s"
 }
@@ -96,21 +143,16 @@ ASM_FUNCTION(create__14daObj_SMTile_cFv) {
 
 
 /* 80CDD580-80CDD584 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDD584-80CDD5CC 0048+00 .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__dt__12J3DFrameCtrlFv.s"
 }
@@ -121,7 +163,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/CreateHeap__14daObj_SMTile_cFv.s"
 }
@@ -132,7 +174,7 @@ ASM_FUNCTION(CreateHeap__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/Delete__14daObj_SMTile_cFv.s"
 }
@@ -143,7 +185,7 @@ ASM_FUNCTION(Delete__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/Execute__14daObj_SMTile_cFv.s"
 }
@@ -154,7 +196,7 @@ ASM_FUNCTION(Execute__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/Draw__14daObj_SMTile_cFv.s"
 }
@@ -165,7 +207,7 @@ ASM_FUNCTION(Draw__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daObj_SMTile_cFP10fopAc_ac_c) {
+asm void daObj_SMTile_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/createHeapCallBack__14daObj_SMTile_cFP10fopAc_ac_c.s"
 }
@@ -176,7 +218,7 @@ ASM_FUNCTION(createHeapCallBack__14daObj_SMTile_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDstPos__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::setDstPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/setDstPos__14daObj_SMTile_cFv.s"
 }
@@ -187,7 +229,7 @@ ASM_FUNCTION(setDstPos__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPrtcls__14daObj_SMTile_cFii) {
+asm void daObj_SMTile_c::setPrtcls(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/setPrtcls__14daObj_SMTile_cFii.s"
 }
@@ -198,7 +240,7 @@ ASM_FUNCTION(setPrtcls__14daObj_SMTile_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(touchPrtcls__14daObj_SMTile_cFf) {
+asm void daObj_SMTile_c::touchPrtcls(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/touchPrtcls__14daObj_SMTile_cFf.s"
 }
@@ -209,7 +251,7 @@ ASM_FUNCTION(touchPrtcls__14daObj_SMTile_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObj_SMTile_cFv) {
+asm void daObj_SMTile_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/setMtx__14daObj_SMTile_cFv.s"
 }
@@ -220,7 +262,7 @@ ASM_FUNCTION(setMtx__14daObj_SMTile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SMTile_Create__FPv) {
+asm void daObj_SMTile_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_Create__FPv.s"
 }
@@ -231,7 +273,7 @@ ASM_FUNCTION(daObj_SMTile_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SMTile_Delete__FPv) {
+asm void daObj_SMTile_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_Delete__FPv.s"
 }
@@ -242,7 +284,7 @@ ASM_FUNCTION(daObj_SMTile_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SMTile_Execute__FPv) {
+asm void daObj_SMTile_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_Execute__FPv.s"
 }
@@ -253,7 +295,7 @@ ASM_FUNCTION(daObj_SMTile_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SMTile_Draw__FPv) {
+asm void daObj_SMTile_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_Draw__FPv.s"
 }
@@ -261,21 +303,16 @@ ASM_FUNCTION(daObj_SMTile_Draw__FPv) {
 
 
 /* 80CDE29C-80CDE2A4 0008+00 .text      daObj_SMTile_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_SMTile_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_IsDelete__FPv.s"
+bool daObj_SMTile_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDE2A4-80CDE2C0 001C+00 .text      cLib_calcTimer<i>__FPi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDE2A4) {
+extern "C" asm void func_80CDE2A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/func_80CDE2A4.s"
 }
@@ -286,7 +323,7 @@ ASM_FUNCTION(func_80CDE2A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_smtile_cpp) {
+extern "C" asm void __sinit_d_a_obj_smtile_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__sinit_d_a_obj_smtile_cpp.s"
 }
@@ -297,7 +334,7 @@ ASM_FUNCTION(__sinit_d_a_obj_smtile_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daObj_SMTile_Param_cFv) {
+asm daObj_SMTile_Param_c::~daObj_SMTile_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__dt__20daObj_SMTile_Param_cFv.s"
 }

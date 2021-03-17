@@ -6,44 +6,322 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio_JStage (JStudio_JStage) False/False
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: JStudio::TAdaptor_fog
+// outer dependency: JStudio::TAdaptor_actor
+// outer dependency: JStudio::TAdaptor_ambientLight
+// outer dependency: JStudio::TAdaptor_camera
+// outer dependency: JStudio::TAdaptor_light
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build TObject (JStudio::TObject) False/False
+	/* dependencies (begin JStudio::TObject) */
+	/* dependencies (end JStudio::TObject) */
+	struct TObject {
+	};
+
+	// build stb (JStudio::stb) False/False
+	/* dependencies (begin JStudio::stb) */
+	/* dependencies (end JStudio::stb) */
+	struct stb {
+		// build data (JStudio::stb::data) False/False
+		/* dependencies (begin JStudio::stb::data) */
+		/* dependencies (end JStudio::stb::data) */
+		struct data {
+			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
+			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			struct TParse_TBlock_object {
+			};
+
+		};
+
+	};
+
+	// build TCreateObject (JStudio::TCreateObject) False/False
+	/* dependencies (begin JStudio::TCreateObject) */
+	/* dependencies (end JStudio::TCreateObject) */
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
+	};
+
+	// build TObject_actor (JStudio::TObject_actor) False/False
+	/* dependencies (begin JStudio::TObject_actor) */
+	// inner dependency: TAdaptor_actor (JStudio::TAdaptor_actor) True False (for JStudio::TObject_actor)
+	// build TAdaptor_actor (JStudio::TAdaptor_actor) False/False
+	/* dependencies (begin JStudio::TAdaptor_actor) */
+	/* dependencies (end JStudio::TAdaptor_actor) */
+	struct TAdaptor_actor {
+	};
+
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_actor)
+	// build stb (JStudio::stb) True/True
+	/* dependencies (end JStudio::TObject_actor) */
+	struct TObject_actor {
+		// JStudio::TAdaptor_actor
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 80286910 */ TObject_actor(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_actor*);
+	};
+
+	// build TAdaptor_actor (JStudio::TAdaptor_actor) True/True
+	// build TObject_ambientLight (JStudio::TObject_ambientLight) False/False
+	/* dependencies (begin JStudio::TObject_ambientLight) */
+	// inner dependency: TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True False (for JStudio::TObject_ambientLight)
+	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) False/False
+	/* dependencies (begin JStudio::TAdaptor_ambientLight) */
+	/* dependencies (end JStudio::TAdaptor_ambientLight) */
+	struct TAdaptor_ambientLight {
+	};
+
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_ambientLight)
+	// build stb (JStudio::stb) True/True
+	/* dependencies (end JStudio::TObject_ambientLight) */
+	struct TObject_ambientLight {
+		// JStudio::TAdaptor_ambientLight
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 80286CFC */ TObject_ambientLight(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_ambientLight*);
+	};
+
+	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True/True
+	// build TObject_camera (JStudio::TObject_camera) False/False
+	/* dependencies (begin JStudio::TObject_camera) */
+	// inner dependency: TAdaptor_camera (JStudio::TAdaptor_camera) True False (for JStudio::TObject_camera)
+	// build TAdaptor_camera (JStudio::TAdaptor_camera) False/False
+	/* dependencies (begin JStudio::TAdaptor_camera) */
+	/* dependencies (end JStudio::TAdaptor_camera) */
+	struct TAdaptor_camera {
+	};
+
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_camera)
+	// build stb (JStudio::stb) True/True
+	/* dependencies (end JStudio::TObject_camera) */
+	struct TObject_camera {
+		// JStudio::TAdaptor_camera
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 80286E7C */ TObject_camera(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_camera*);
+	};
+
+	// build TAdaptor_camera (JStudio::TAdaptor_camera) True/True
+	// build TObject_fog (JStudio::TObject_fog) False/False
+	/* dependencies (begin JStudio::TObject_fog) */
+	// inner dependency: TAdaptor_fog (JStudio::TAdaptor_fog) True False (for JStudio::TObject_fog)
+	// build TAdaptor_fog (JStudio::TAdaptor_fog) False/False
+	/* dependencies (begin JStudio::TAdaptor_fog) */
+	/* dependencies (end JStudio::TAdaptor_fog) */
+	struct TAdaptor_fog {
+	};
+
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_fog)
+	// build stb (JStudio::stb) True/True
+	/* dependencies (end JStudio::TObject_fog) */
+	struct TObject_fog {
+		// JStudio::TAdaptor_fog
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 802871DC */ TObject_fog(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_fog*);
+	};
+
+	// build TAdaptor_fog (JStudio::TAdaptor_fog) True/True
+	// build TObject_light (JStudio::TObject_light) False/False
+	/* dependencies (begin JStudio::TObject_light) */
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_light)
+	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_light (JStudio::TAdaptor_light) True False (for JStudio::TObject_light)
+	// build TAdaptor_light (JStudio::TAdaptor_light) False/False
+	/* dependencies (begin JStudio::TAdaptor_light) */
+	/* dependencies (end JStudio::TAdaptor_light) */
+	struct TAdaptor_light {
+	};
+
+	/* dependencies (end JStudio::TObject_light) */
+	struct TObject_light {
+		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_light
+		/* 80287368 */ TObject_light(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_light*);
+	};
+
+	// build TAdaptor_light (JStudio::TAdaptor_light) True/True
+};
+
+// build JStage (JStage) False/False
+/* top-level dependencies (begin JStage) */
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TSystem (JStage::TSystem) False/False
+	/* dependencies (begin JStage::TSystem) */
+	/* dependencies (end JStage::TSystem) */
+	struct TSystem {
+	};
+
+	// build TActor (JStage::TActor) False/False
+	/* dependencies (begin JStage::TActor) */
+	/* dependencies (end JStage::TActor) */
+	struct TActor {
+	};
+
+	// build TAmbientLight (JStage::TAmbientLight) False/False
+	/* dependencies (begin JStage::TAmbientLight) */
+	/* dependencies (end JStage::TAmbientLight) */
+	struct TAmbientLight {
+	};
+
+	// build TCamera (JStage::TCamera) False/False
+	/* dependencies (begin JStage::TCamera) */
+	/* dependencies (end JStage::TCamera) */
+	struct TCamera {
+	};
+
+	// build TFog (JStage::TFog) False/False
+	/* dependencies (begin JStage::TFog) */
+	/* dependencies (end JStage::TFog) */
+	struct TFog {
+	};
+
+	// build TLight (JStage::TLight) False/False
+	/* dependencies (begin JStage::TLight) */
+	/* dependencies (end JStage::TLight) */
+	struct TLight {
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+/* top-level dependencies (begin JStudio_JStage) */
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: JStage::TFog
+// outer dependency: JStudio::TObject
+// outer dependency: JStage::TSystem
+// outer dependency: JStage::TLight
+// outer dependency: JStage::TCamera
+// outer dependency: JStage::TAmbientLight
+// outer dependency: JStage::TActor
+/* top-level dependencies (end JStudio_JStage) */
+struct JStudio_JStage {
+	// build TCreateObject (JStudio_JStage::TCreateObject) False/False
+	/* dependencies (begin JStudio_JStage::TCreateObject) */
+	/* dependencies (end JStudio_JStage::TCreateObject) */
+	struct TCreateObject {
+		// JStudio::TObject
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 80289B00 */ ~TCreateObject();
+		/* 80289B60 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
+	};
+
+	// build TAdaptor_actor (JStudio_JStage::TAdaptor_actor) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_actor) */
+	/* dependencies (end JStudio_JStage::TAdaptor_actor) */
+	struct TAdaptor_actor {
+		// JStage::TActor
+		// JStage::TSystem
+		/* 8028A5F0 */ TAdaptor_actor(JStage::TSystem const*, JStage::TActor*);
+	};
+
+	// build TAdaptor_ambientLight (JStudio_JStage::TAdaptor_ambientLight) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_ambientLight) */
+	/* dependencies (end JStudio_JStage::TAdaptor_ambientLight) */
+	struct TAdaptor_ambientLight {
+		// JStage::TAmbientLight
+		// JStage::TSystem
+		/* 8028B610 */ TAdaptor_ambientLight(JStage::TSystem const*, JStage::TAmbientLight*);
+	};
+
+	// build TAdaptor_camera (JStudio_JStage::TAdaptor_camera) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_camera) */
+	/* dependencies (end JStudio_JStage::TAdaptor_camera) */
+	struct TAdaptor_camera {
+		// JStage::TCamera
+		// JStage::TSystem
+		/* 8028B8A0 */ TAdaptor_camera(JStage::TSystem const*, JStage::TCamera*);
+	};
+
+	// build TAdaptor_fog (JStudio_JStage::TAdaptor_fog) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_fog) */
+	/* dependencies (end JStudio_JStage::TAdaptor_fog) */
+	struct TAdaptor_fog {
+		// JStage::TSystem
+		// JStage::TFog
+		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
+	};
+
+	// build TAdaptor_light (JStudio_JStage::TAdaptor_light) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_light) */
+	/* dependencies (end JStudio_JStage::TAdaptor_light) */
+	struct TAdaptor_light {
+		// JStage::TSystem
+		// JStage::TLight
+		/* 8028CB50 */ TAdaptor_light(JStage::TSystem const*, JStage::TLight*);
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+// build JStage (JStage) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__Q214JStudio_JStage13TCreateObjectFv();
-extern "C" extern void create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" extern void func_80289CE4();
-extern "C" extern void func_80289DE8();
-extern "C" extern void func_80289EEC();
-extern "C" extern void func_80289FF0();
-extern "C" extern void func_8028A0F4();
+extern "C" static void func_80289CE4();
+extern "C" static void func_80289DE8();
+extern "C" static void func_80289EEC();
+extern "C" static void func_80289FF0();
+extern "C" static void func_8028A0F4();
+
+extern "C" void __dt__Q214JStudio_JStage13TCreateObjectFv();
+extern "C" void create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" static void func_80289CE4();
+extern "C" static void func_80289DE8();
+extern "C" static void func_80289EEC();
+extern "C" static void func_80289FF0();
+extern "C" static void func_8028A0F4();
 SECTION_DATA extern void*const __vt__Q214JStudio_JStage13TCreateObject[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__Q27JStudio13TCreateObjectFv();
-extern "C" extern void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor();
-extern "C" extern void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight();
-extern "C" extern void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera();
-extern "C" extern void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog();
-extern "C" extern void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light();
-extern "C" extern void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor();
-extern "C" extern void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
-extern "C" extern void __ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera();
-extern "C" extern void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog();
-extern "C" extern void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor();
+extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight();
+extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera();
+extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog();
+extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light();
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor();
+extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
+extern "C" void __ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera();
+extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog();
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C5720-803C5730 0010+00 .data      __vt__Q214JStudio_JStage13TCreateObject                      */
+/* 803C5720-803C5730 0010+00 rc=2 efc=1 .data      __vt__Q214JStudio_JStage13TCreateObject                      */
 void* const __vt__Q214JStudio_JStage13TCreateObject[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -51,81 +329,80 @@ void* const __vt__Q214JStudio_JStage13TCreateObject[4] = {
 	(void*)create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
 };
 
-/* 80289B00-80289B60 0060+00 .text      __dt__Q214JStudio_JStage13TCreateObjectFv                    */
+/* 80289B00-80289B60 0060+00 rc=1 efc=0 .text      __dt__Q214JStudio_JStage13TCreateObjectFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q214JStudio_JStage13TCreateObjectFv) {
+asm JStudio_JStage::TCreateObject::~TCreateObject() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/__dt__Q214JStudio_JStage13TCreateObjectFv.s"
 }
 #pragma pop
 
 
-/* 80289B60-80289CE4 0184+00 .text      create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 80289B60-80289CE4 0184+00 rc=1 efc=0 .text      create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object) {
+asm void JStudio_JStage::TCreateObject::create(JStudio::TObject** field_0, JStudio::stb::data::TParse_TBlock_object const& field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289B60.s"
 }
 #pragma pop
 
 
-/* 80289CE4-80289DE8 0104+00 .text      createObject_JSG_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+/* 80289CE4-80289DE8 0104+00 rc=1 efc=0 .text      createObject_JSG_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80289CE4) {
+extern "C" asm static void func_80289CE4() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289CE4.s"
 }
 #pragma pop
 
 
-/* 80289DE8-80289EEC 0104+00 .text      createObject_JSG_<Q214JStudio_JStage15TAdaptor_camera,Q26JStage7TCamera>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+/* 80289DE8-80289EEC 0104+00 rc=1 efc=0 .text      createObject_JSG_<Q214JStudio_JStage15TAdaptor_camera,Q26JStage7TCamera>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80289DE8) {
+extern "C" asm static void func_80289DE8() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289DE8.s"
 }
 #pragma pop
 
 
-/* 80289EEC-80289FF0 0104+00 .text      createObject_JSG_<Q214JStudio_JStage21TAdaptor_ambientLight,Q26JStage13TAmbientLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+/* 80289EEC-80289FF0 0104+00 rc=1 efc=0 .text      createObject_JSG_<Q214JStudio_JStage21TAdaptor_ambientLight,Q26JStage13TAmbientLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80289EEC) {
+extern "C" asm static void func_80289EEC() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289EEC.s"
 }
 #pragma pop
 
 
-/* 80289FF0-8028A0F4 0104+00 .text      createObject_JSG_<Q214JStudio_JStage14TAdaptor_light,Q26JStage6TLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+/* 80289FF0-8028A0F4 0104+00 rc=1 efc=0 .text      createObject_JSG_<Q214JStudio_JStage14TAdaptor_light,Q26JStage6TLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80289FF0) {
+extern "C" asm static void func_80289FF0() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_80289FF0.s"
 }
 #pragma pop
 
 
-/* 8028A0F4-8028A1F8 0104+00 .text      createObject_JSG_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+/* 8028A0F4-8028A1F8 0104+00 rc=1 efc=0 .text      createObject_JSG_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8028A0F4) {
+extern "C" asm static void func_8028A0F4() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/control/func_8028A0F4.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

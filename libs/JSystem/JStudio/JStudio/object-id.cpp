@@ -6,29 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::object::TIDData
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build object (JStudio::object) False/False
+	/* dependencies (begin JStudio::object) */
+	/* dependencies (end JStudio::object) */
+	struct object {
+		// build TIDData (JStudio::object::TIDData) False/False
+		/* dependencies (begin JStudio::object::TIDData) */
+		/* dependencies (end JStudio::object::TIDData) */
+		struct TIDData {
+			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
+		};
+
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
+
+extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80288988-80288A78 00F0+00 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData */
+/* 80288988-80288A78 00F0+00 rc=3 efc=3 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData) {
+asm void JStudio::object::TIDData::isEqual(JStudio::object::TIDData const& field_0, JStudio::object::TIDData const& field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/object-id/func_80288988.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

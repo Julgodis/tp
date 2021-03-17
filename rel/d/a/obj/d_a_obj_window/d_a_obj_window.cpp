@@ -6,24 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjWindow_c;
+
+struct daObjWindow_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjWindow_cFv();
-extern "C" extern void setBaseMtx__13daObjWindow_cFv();
-extern "C" extern void Create__13daObjWindow_cFv();
-extern "C" extern void CreateHeap__13daObjWindow_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__13daObjWindow_cFv();
-extern "C" extern void Execute__13daObjWindow_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjWindow_cFv();
-extern "C" extern void Delete__13daObjWindow_cFv();
-extern "C" extern void daObjWindow_create1st__FP13daObjWindow_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjWindow_MoveBGDelete__FP13daObjWindow_c();
-extern "C" extern void daObjWindow_MoveBGExecute__FP13daObjWindow_c();
-extern "C" extern void daObjWindow_MoveBGDraw__FP13daObjWindow_c();
+extern "C" void Execute__13daObjWindow_cFPPA3_A4_f();
+void daObjWindow_create1st(daObjWindow_c*);
+void daObjWindow_MoveBGDelete(daObjWindow_c*);
+void daObjWindow_MoveBGExecute(daObjWindow_c*);
+void daObjWindow_MoveBGDraw(daObjWindow_c*);
+
+extern "C" void initBaseMtx__13daObjWindow_cFv();
+extern "C" void setBaseMtx__13daObjWindow_cFv();
+extern "C" void Create__13daObjWindow_cFv();
+extern "C" void CreateHeap__13daObjWindow_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__13daObjWindow_cFv();
+extern "C" void Execute__13daObjWindow_cFPPA3_A4_f();
+extern "C" void Draw__13daObjWindow_cFv();
+extern "C" void Delete__13daObjWindow_cFv();
+extern "C" void daObjWindow_create1st__FP13daObjWindow_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daObjWindow_MoveBGDelete__FP13daObjWindow_c();
+extern "C" void daObjWindow_MoveBGExecute__FP13daObjWindow_c();
+extern "C" void daObjWindow_MoveBGDraw__FP13daObjWindow_c();
 SECTION_RODATA extern const u8 l_bck[12];
 SECTION_RODATA extern const u32 lit_3661;
 SECTION_RODATA extern const u32 lit_3662;
@@ -56,7 +90,9 @@ SECTION_DATA extern void*const __vt__13daObjWindow_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -66,7 +102,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjWindow_cFv) {
+asm void daObjWindow_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/initBaseMtx__13daObjWindow_cFv.s"
 }
@@ -77,7 +113,7 @@ ASM_FUNCTION(initBaseMtx__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjWindow_cFv) {
+asm void daObjWindow_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/setBaseMtx__13daObjWindow_cFv.s"
 }
@@ -88,7 +124,7 @@ ASM_FUNCTION(setBaseMtx__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjWindow_cFv) {
+asm void daObjWindow_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Create__13daObjWindow_cFv.s"
 }
@@ -99,7 +135,7 @@ ASM_FUNCTION(Create__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjWindow_cFv) {
+asm void daObjWindow_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/CreateHeap__13daObjWindow_cFv.s"
 }
@@ -110,7 +146,7 @@ ASM_FUNCTION(CreateHeap__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/__dt__12J3DFrameCtrlFv.s"
 }
@@ -121,7 +157,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjWindow_cFv) {
+asm void daObjWindow_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/create1st__13daObjWindow_cFv.s"
 }
@@ -132,7 +168,7 @@ ASM_FUNCTION(create1st__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjWindow_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjWindow_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Execute__13daObjWindow_cFPPA3_A4_f.s"
 }
@@ -143,7 +179,7 @@ ASM_FUNCTION(Execute__13daObjWindow_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjWindow_cFv) {
+asm void daObjWindow_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Draw__13daObjWindow_cFv.s"
 }
@@ -154,7 +190,7 @@ ASM_FUNCTION(Draw__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjWindow_cFv) {
+asm void daObjWindow_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Delete__13daObjWindow_cFv.s"
 }
@@ -165,7 +201,7 @@ ASM_FUNCTION(Delete__13daObjWindow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWindow_create1st__FP13daObjWindow_c) {
+asm void daObjWindow_create1st(daObjWindow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_create1st__FP13daObjWindow_c.s"
 }
@@ -176,7 +212,7 @@ ASM_FUNCTION(daObjWindow_create1st__FP13daObjWindow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/__dt__8cM3dGCylFv.s"
 }
@@ -187,7 +223,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/__dt__8cM3dGAabFv.s"
 }
@@ -198,7 +234,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWindow_MoveBGDelete__FP13daObjWindow_c) {
+asm void daObjWindow_MoveBGDelete(daObjWindow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGDelete__FP13daObjWindow_c.s"
 }
@@ -209,7 +245,7 @@ ASM_FUNCTION(daObjWindow_MoveBGDelete__FP13daObjWindow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWindow_MoveBGExecute__FP13daObjWindow_c) {
+asm void daObjWindow_MoveBGExecute(daObjWindow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGExecute__FP13daObjWindow_c.s"
 }
@@ -220,7 +256,7 @@ ASM_FUNCTION(daObjWindow_MoveBGExecute__FP13daObjWindow_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWindow_MoveBGDraw__FP13daObjWindow_c) {
+asm void daObjWindow_MoveBGDraw(daObjWindow_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGDraw__FP13daObjWindow_c.s"
 }

@@ -6,118 +6,293 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DFrameCtrl;
+struct msg_class;
+struct J3DJoint;
+struct J3DModelData;
+struct J3DModel;
+struct J3DAnmTexPattern;
+struct fopAc_ac_c;
+struct J3DAnmTransformKey;
+struct cXyz;
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct daMyna_c {
+	void baseMotion00(s32);
+	void baseMotion01(s32);
+	void baseMotion02(s32);
+	void baseMotion03(s32);
+	void baseMotion04(s32);
+	void baseMotion05(s32);
+	void baseMotion06(s32);
+	void create();
+	void destroy();
+	void draw();
+	void execute();
+	void createHeap();
+	void jntNodeCB(J3DJoint*, J3DModel*);
+	void attack_wait_init();
+	void attack_wait_move();
+	void attack_before_talk_init();
+	void attack_before_talk_move();
+	void attack_fly_init();
+	void attack_fly_move();
+	void attack_init();
+	void attack_move();
+	void attack_after_talk_init();
+	void attack_after_talk_move();
+	void greet_wait_init();
+	void greet_wait_move();
+	void greet_talk_init();
+	void greet_talk_move();
+	void shopping_wait_init();
+	void shopping_wait_move();
+	void shopping_talk_init();
+	void shopping_talk_move();
+	void thanks_talk_init();
+	void thanks_talk_move();
+	void byebye_talk_init();
+	void byebye_talk_move();
+	void turn_on_start_init();
+	void turn_on_start_move();
+	void turn_on_init();
+	void turn_on_move();
+	void turn_on_end1_init();
+	void turn_on_end1_move();
+	void turn_on_end2_init();
+	void turn_on_end2_move();
+	void turn_on_end3_init();
+	void turn_on_end3_move();
+	void wolf_talk_init();
+	void wolf_talk_move();
+	void attack_wait2_init();
+	void attack_wait2_move();
+	void attack_before_talk2_init();
+	void attack_before_talk2_move();
+	void attack_fly2_init();
+	void attack_fly2_move();
+	void attack2_init();
+	void attack2_move();
+	void attack2_talk_init();
+	void attack2_talk_move();
+	void soldoutItem(s32);
+	void fly_attack_move();
+	void fly_return_move();
+	void fly_body_wave();
+	void talkAnime(msg_class*);
+	void chkEvent();
+	void orderEvent();
+	void deleteItem(s32);
+	void deleteItem(s32);
+	void initiate();
+	void setItemInfo();
+	void setRoomNo();
+	void setCollision();
+	void set_mtx();
+	void animePlay();
+	void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, s32, s32, s32);
+	void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, s32);
+	void checkEndAnm(f32);
+	void checkEndAnm(J3DFrameCtrl*);
+	void getItemNumMax();
+	void getItemType(void*);
+	void getFlowNodeNum();
+	void checkDead();
+	void chkPlayerInEvtArea(fopAc_ac_c*, cXyz);
+	void animeControl();
+	void setAnimeType(u8, f32);
+	void playDefaultWaitAnime();
+	void setDefaultWaitAnime(u8);
+	~daMyna_c();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct J3DModel {
+};
+
+struct msg_class {
+};
+
+struct J3DAnmTransformKey {
+};
+
+struct J3DAnmTexPattern {
+};
+
+struct J3DModelData {
+};
+
+struct cXyz {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daMyna_HIO_c {
+	~daMyna_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daPy_py_c {
+	void getHeadTopPos() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void jntNodeCallBack__FP8J3DJointi();
-extern "C" extern void daMyna_searchSSItem__FPvPv();
-extern "C" extern void daMyna_searchLight__FPvPv();
-extern "C" extern void daMyna_searchEvtTag__FPvPv();
-extern "C" extern void baseMotion00__8daMyna_cFi();
-extern "C" extern void baseMotion01__8daMyna_cFi();
-extern "C" extern void baseMotion02__8daMyna_cFi();
-extern "C" extern void baseMotion03__8daMyna_cFi();
-extern "C" extern void baseMotion04__8daMyna_cFi();
-extern "C" extern void baseMotion05__8daMyna_cFi();
-extern "C" extern void baseMotion06__8daMyna_cFi();
-extern "C" extern void create__8daMyna_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void destroy__8daMyna_cFv();
-extern "C" extern void draw__8daMyna_cFv();
-extern "C" extern void execute__8daMyna_cFv();
-extern "C" extern void createHeap__8daMyna_cFv();
-extern "C" extern void jntNodeCB__8daMyna_cFP8J3DJointP8J3DModel();
-extern "C" extern void attack_wait_init__8daMyna_cFv();
-extern "C" extern void attack_wait_move__8daMyna_cFv();
-extern "C" extern void attack_before_talk_init__8daMyna_cFv();
-extern "C" extern void attack_before_talk_move__8daMyna_cFv();
-extern "C" extern void attack_fly_init__8daMyna_cFv();
-extern "C" extern void attack_fly_move__8daMyna_cFv();
-extern "C" extern void attack_init__8daMyna_cFv();
-extern "C" extern void attack_move__8daMyna_cFv();
-extern "C" extern void attack_after_talk_init__8daMyna_cFv();
-extern "C" extern void attack_after_talk_move__8daMyna_cFv();
-extern "C" extern void greet_wait_init__8daMyna_cFv();
-extern "C" extern void greet_wait_move__8daMyna_cFv();
-extern "C" extern void greet_talk_init__8daMyna_cFv();
-extern "C" extern void greet_talk_move__8daMyna_cFv();
-extern "C" extern void shopping_wait_init__8daMyna_cFv();
-extern "C" extern void shopping_wait_move__8daMyna_cFv();
-extern "C" extern void shopping_talk_init__8daMyna_cFv();
-extern "C" extern void shopping_talk_move__8daMyna_cFv();
-extern "C" extern void thanks_talk_init__8daMyna_cFv();
-extern "C" extern void thanks_talk_move__8daMyna_cFv();
-extern "C" extern void byebye_talk_init__8daMyna_cFv();
-extern "C" extern void byebye_talk_move__8daMyna_cFv();
-extern "C" extern void turn_on_start_init__8daMyna_cFv();
-extern "C" extern void turn_on_start_move__8daMyna_cFv();
-extern "C" extern void turn_on_init__8daMyna_cFv();
-extern "C" extern void turn_on_move__8daMyna_cFv();
-extern "C" extern void turn_on_end1_init__8daMyna_cFv();
-extern "C" extern void turn_on_end1_move__8daMyna_cFv();
-extern "C" extern void turn_on_end2_init__8daMyna_cFv();
-extern "C" extern void turn_on_end2_move__8daMyna_cFv();
-extern "C" extern void turn_on_end3_init__8daMyna_cFv();
-extern "C" extern void turn_on_end3_move__8daMyna_cFv();
-extern "C" extern void wolf_talk_init__8daMyna_cFv();
-extern "C" extern void wolf_talk_move__8daMyna_cFv();
-extern "C" extern void attack_wait2_init__8daMyna_cFv();
-extern "C" extern void attack_wait2_move__8daMyna_cFv();
-extern "C" extern void attack_before_talk2_init__8daMyna_cFv();
-extern "C" extern void attack_before_talk2_move__8daMyna_cFv();
-extern "C" extern void attack_fly2_init__8daMyna_cFv();
-extern "C" extern void attack_fly2_move__8daMyna_cFv();
-extern "C" extern void attack2_init__8daMyna_cFv();
-extern "C" extern void attack2_move__8daMyna_cFv();
-extern "C" extern void attack2_talk_init__8daMyna_cFv();
-extern "C" extern void attack2_talk_move__8daMyna_cFv();
-extern "C" extern void soldoutItem__8daMyna_cFUi();
-extern "C" extern void fly_attack_move__8daMyna_cFv();
-extern "C" extern void fly_return_move__8daMyna_cFv();
-extern "C" extern void fly_body_wave__8daMyna_cFv();
-extern "C" extern void talkAnime__8daMyna_cFP9msg_class();
-extern "C" extern void chkEvent__8daMyna_cFv();
-extern "C" extern void orderEvent__8daMyna_cFv();
-extern "C" extern void deleteItem__8daMyna_cFi();
-extern "C" extern void deleteItem__8daMyna_cFUi();
-extern "C" extern void initiate__8daMyna_cFv();
-extern "C" extern void setItemInfo__8daMyna_cFv();
-extern "C" extern void setRoomNo__8daMyna_cFv();
-extern "C" extern void setCollision__8daMyna_cFv();
-extern "C" extern void set_mtx__8daMyna_cFv();
-extern "C" extern void animePlay__8daMyna_cFv();
-extern "C" extern void setMcaMorfAnm__8daMyna_cFP18J3DAnmTransformKeyffiii();
-extern "C" extern void setBtpAnm__8daMyna_cFP16J3DAnmTexPatternP12J3DModelDatafi();
-extern "C" extern void getTrnsfrmKeyAnm__8daMyna_cFPc();
-extern "C" extern void getTexPtrnAnm__8daMyna_cFPc();
-extern "C" extern void checkEndAnm__8daMyna_cFf();
-extern "C" extern void checkEndAnm__8daMyna_cFP12J3DFrameCtrl();
-extern "C" extern void getItemNumMax__8daMyna_cFv();
-extern "C" extern void getItemType__8daMyna_cFPv();
-extern "C" extern void getFlowNodeNum__8daMyna_cFv();
-extern "C" extern void checkDead__8daMyna_cFv();
-extern "C" extern void chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz();
-extern "C" extern void animeControl__8daMyna_cFv();
-extern "C" extern void setAnimeType__8daMyna_cFUcf();
-extern "C" extern void playDefaultWaitAnime__8daMyna_cFv();
-extern "C" extern void setDefaultWaitAnime__8daMyna_cFUc();
-extern "C" extern void daMyna_Create__FPv();
-extern "C" extern void daMyna_Delete__FPv();
-extern "C" extern void daMyna_Execute__FPv();
-extern "C" extern void daMyna_Draw__FPv();
-extern "C" extern void daMyna_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daMyna_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void getHeadTopPos__9daPy_py_cCFv();
-extern "C" extern void __dt__8daMyna_cFv();
-extern "C" extern void func_8094ABAC();
-extern "C" extern void func_8094ABC8();
-extern "C" extern void __sinit_d_a_myna_cpp();
+void createHeapCallBack(fopAc_ac_c*);
+void jntNodeCallBack(J3DJoint*, s32);
+void daMyna_searchSSItem(void*, void*);
+void daMyna_searchLight(void*, void*);
+void daMyna_searchEvtTag(void*, void*);
+extern "C" void getTrnsfrmKeyAnm__8daMyna_cFPc();
+extern "C" void getTexPtrnAnm__8daMyna_cFPc();
+void daMyna_Create(void*);
+void daMyna_Delete(void*);
+void daMyna_Execute(void*);
+void daMyna_Draw(void*);
+bool daMyna_IsDelete(void*);
+extern "C" void func_8094ABAC();
+extern "C" void func_8094ABC8();
+extern "C" void __sinit_d_a_myna_cpp();
+
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void jntNodeCallBack__FP8J3DJointi();
+extern "C" void daMyna_searchSSItem__FPvPv();
+extern "C" void daMyna_searchLight__FPvPv();
+extern "C" void daMyna_searchEvtTag__FPvPv();
+extern "C" void baseMotion00__8daMyna_cFi();
+extern "C" void baseMotion01__8daMyna_cFi();
+extern "C" void baseMotion02__8daMyna_cFi();
+extern "C" void baseMotion03__8daMyna_cFi();
+extern "C" void baseMotion04__8daMyna_cFi();
+extern "C" void baseMotion05__8daMyna_cFi();
+extern "C" void baseMotion06__8daMyna_cFi();
+extern "C" void create__8daMyna_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void destroy__8daMyna_cFv();
+extern "C" void draw__8daMyna_cFv();
+extern "C" void execute__8daMyna_cFv();
+extern "C" void createHeap__8daMyna_cFv();
+extern "C" void jntNodeCB__8daMyna_cFP8J3DJointP8J3DModel();
+extern "C" void attack_wait_init__8daMyna_cFv();
+extern "C" void attack_wait_move__8daMyna_cFv();
+extern "C" void attack_before_talk_init__8daMyna_cFv();
+extern "C" void attack_before_talk_move__8daMyna_cFv();
+extern "C" void attack_fly_init__8daMyna_cFv();
+extern "C" void attack_fly_move__8daMyna_cFv();
+extern "C" void attack_init__8daMyna_cFv();
+extern "C" void attack_move__8daMyna_cFv();
+extern "C" void attack_after_talk_init__8daMyna_cFv();
+extern "C" void attack_after_talk_move__8daMyna_cFv();
+extern "C" void greet_wait_init__8daMyna_cFv();
+extern "C" void greet_wait_move__8daMyna_cFv();
+extern "C" void greet_talk_init__8daMyna_cFv();
+extern "C" void greet_talk_move__8daMyna_cFv();
+extern "C" void shopping_wait_init__8daMyna_cFv();
+extern "C" void shopping_wait_move__8daMyna_cFv();
+extern "C" void shopping_talk_init__8daMyna_cFv();
+extern "C" void shopping_talk_move__8daMyna_cFv();
+extern "C" void thanks_talk_init__8daMyna_cFv();
+extern "C" void thanks_talk_move__8daMyna_cFv();
+extern "C" void byebye_talk_init__8daMyna_cFv();
+extern "C" void byebye_talk_move__8daMyna_cFv();
+extern "C" void turn_on_start_init__8daMyna_cFv();
+extern "C" void turn_on_start_move__8daMyna_cFv();
+extern "C" void turn_on_init__8daMyna_cFv();
+extern "C" void turn_on_move__8daMyna_cFv();
+extern "C" void turn_on_end1_init__8daMyna_cFv();
+extern "C" void turn_on_end1_move__8daMyna_cFv();
+extern "C" void turn_on_end2_init__8daMyna_cFv();
+extern "C" void turn_on_end2_move__8daMyna_cFv();
+extern "C" void turn_on_end3_init__8daMyna_cFv();
+extern "C" void turn_on_end3_move__8daMyna_cFv();
+extern "C" void wolf_talk_init__8daMyna_cFv();
+extern "C" void wolf_talk_move__8daMyna_cFv();
+extern "C" void attack_wait2_init__8daMyna_cFv();
+extern "C" void attack_wait2_move__8daMyna_cFv();
+extern "C" void attack_before_talk2_init__8daMyna_cFv();
+extern "C" void attack_before_talk2_move__8daMyna_cFv();
+extern "C" void attack_fly2_init__8daMyna_cFv();
+extern "C" void attack_fly2_move__8daMyna_cFv();
+extern "C" void attack2_init__8daMyna_cFv();
+extern "C" void attack2_move__8daMyna_cFv();
+extern "C" void attack2_talk_init__8daMyna_cFv();
+extern "C" void attack2_talk_move__8daMyna_cFv();
+extern "C" void soldoutItem__8daMyna_cFUi();
+extern "C" void fly_attack_move__8daMyna_cFv();
+extern "C" void fly_return_move__8daMyna_cFv();
+extern "C" void fly_body_wave__8daMyna_cFv();
+extern "C" void talkAnime__8daMyna_cFP9msg_class();
+extern "C" void chkEvent__8daMyna_cFv();
+extern "C" void orderEvent__8daMyna_cFv();
+extern "C" void deleteItem__8daMyna_cFi();
+extern "C" void deleteItem__8daMyna_cFUi();
+extern "C" void initiate__8daMyna_cFv();
+extern "C" void setItemInfo__8daMyna_cFv();
+extern "C" void setRoomNo__8daMyna_cFv();
+extern "C" void setCollision__8daMyna_cFv();
+extern "C" void set_mtx__8daMyna_cFv();
+extern "C" void animePlay__8daMyna_cFv();
+extern "C" void setMcaMorfAnm__8daMyna_cFP18J3DAnmTransformKeyffiii();
+extern "C" void setBtpAnm__8daMyna_cFP16J3DAnmTexPatternP12J3DModelDatafi();
+extern "C" void getTrnsfrmKeyAnm__8daMyna_cFPc();
+extern "C" void getTexPtrnAnm__8daMyna_cFPc();
+extern "C" void checkEndAnm__8daMyna_cFf();
+extern "C" void checkEndAnm__8daMyna_cFP12J3DFrameCtrl();
+extern "C" void getItemNumMax__8daMyna_cFv();
+extern "C" void getItemType__8daMyna_cFPv();
+extern "C" void getFlowNodeNum__8daMyna_cFv();
+extern "C" void checkDead__8daMyna_cFv();
+extern "C" void chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz();
+extern "C" void animeControl__8daMyna_cFv();
+extern "C" void setAnimeType__8daMyna_cFUcf();
+extern "C" void playDefaultWaitAnime__8daMyna_cFv();
+extern "C" void setDefaultWaitAnime__8daMyna_cFUc();
+extern "C" void daMyna_Create__FPv();
+extern "C" void daMyna_Delete__FPv();
+extern "C" void daMyna_Execute__FPv();
+extern "C" void daMyna_Draw__FPv();
+extern "C" bool daMyna_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daMyna_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void getHeadTopPos__9daPy_py_cCFv();
+extern "C" void __dt__8daMyna_cFv();
+extern "C" void func_8094ABAC();
+extern "C" void func_8094ABC8();
+extern "C" void __sinit_d_a_myna_cpp();
 SECTION_RODATA extern const u8 mCcDSph__8daMyna_c[64];
 SECTION_RODATA extern const u8 lit_3926[4];
 SECTION_RODATA extern const u32 lit_4207;
@@ -264,8 +439,11 @@ SECTION_BSS extern u8 data_8094BB30[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -275,7 +453,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -286,7 +464,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jntNodeCallBack__FP8J3DJointi) {
+asm void jntNodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/jntNodeCallBack__FP8J3DJointi.s"
 }
@@ -297,7 +475,7 @@ ASM_FUNCTION(jntNodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_searchSSItem__FPvPv) {
+asm void daMyna_searchSSItem(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_searchSSItem__FPvPv.s"
 }
@@ -308,7 +486,7 @@ ASM_FUNCTION(daMyna_searchSSItem__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_searchLight__FPvPv) {
+asm void daMyna_searchLight(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_searchLight__FPvPv.s"
 }
@@ -319,7 +497,7 @@ ASM_FUNCTION(daMyna_searchLight__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_searchEvtTag__FPvPv) {
+asm void daMyna_searchEvtTag(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_searchEvtTag__FPvPv.s"
 }
@@ -330,7 +508,7 @@ ASM_FUNCTION(daMyna_searchEvtTag__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion00__8daMyna_cFi) {
+asm void daMyna_c::baseMotion00(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion00__8daMyna_cFi.s"
 }
@@ -341,7 +519,7 @@ ASM_FUNCTION(baseMotion00__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion01__8daMyna_cFi) {
+asm void daMyna_c::baseMotion01(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion01__8daMyna_cFi.s"
 }
@@ -352,7 +530,7 @@ ASM_FUNCTION(baseMotion01__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion02__8daMyna_cFi) {
+asm void daMyna_c::baseMotion02(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion02__8daMyna_cFi.s"
 }
@@ -363,7 +541,7 @@ ASM_FUNCTION(baseMotion02__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion03__8daMyna_cFi) {
+asm void daMyna_c::baseMotion03(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion03__8daMyna_cFi.s"
 }
@@ -374,7 +552,7 @@ ASM_FUNCTION(baseMotion03__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion04__8daMyna_cFi) {
+asm void daMyna_c::baseMotion04(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion04__8daMyna_cFi.s"
 }
@@ -385,7 +563,7 @@ ASM_FUNCTION(baseMotion04__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion05__8daMyna_cFi) {
+asm void daMyna_c::baseMotion05(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion05__8daMyna_cFi.s"
 }
@@ -396,7 +574,7 @@ ASM_FUNCTION(baseMotion05__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseMotion06__8daMyna_cFi) {
+asm void daMyna_c::baseMotion06(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/baseMotion06__8daMyna_cFi.s"
 }
@@ -407,7 +585,7 @@ ASM_FUNCTION(baseMotion06__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daMyna_cFv) {
+asm void daMyna_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/create__8daMyna_cFv.s"
 }
@@ -418,7 +596,7 @@ ASM_FUNCTION(create__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__8cM3dGSphFv.s"
 }
@@ -429,7 +607,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__8cM3dGAabFv.s"
 }
@@ -440,7 +618,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__10dCcD_GSttsFv.s"
 }
@@ -451,7 +629,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__12J3DFrameCtrlFv.s"
 }
@@ -462,7 +640,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroy__8daMyna_cFv) {
+asm void daMyna_c::destroy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/destroy__8daMyna_cFv.s"
 }
@@ -473,7 +651,7 @@ ASM_FUNCTION(destroy__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daMyna_cFv) {
+asm void daMyna_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/draw__8daMyna_cFv.s"
 }
@@ -484,7 +662,7 @@ ASM_FUNCTION(draw__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daMyna_cFv) {
+asm void daMyna_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/execute__8daMyna_cFv.s"
 }
@@ -495,7 +673,7 @@ ASM_FUNCTION(execute__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__8daMyna_cFv) {
+asm void daMyna_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/createHeap__8daMyna_cFv.s"
 }
@@ -506,7 +684,7 @@ ASM_FUNCTION(createHeap__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jntNodeCB__8daMyna_cFP8J3DJointP8J3DModel) {
+asm void daMyna_c::jntNodeCB(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/jntNodeCB__8daMyna_cFP8J3DJointP8J3DModel.s"
 }
@@ -517,7 +695,7 @@ ASM_FUNCTION(jntNodeCB__8daMyna_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_wait_init__8daMyna_cFv) {
+asm void daMyna_c::attack_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_wait_init__8daMyna_cFv.s"
 }
@@ -528,7 +706,7 @@ ASM_FUNCTION(attack_wait_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_wait_move__8daMyna_cFv) {
+asm void daMyna_c::attack_wait_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_wait_move__8daMyna_cFv.s"
 }
@@ -539,7 +717,7 @@ ASM_FUNCTION(attack_wait_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_before_talk_init__8daMyna_cFv) {
+asm void daMyna_c::attack_before_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_before_talk_init__8daMyna_cFv.s"
 }
@@ -550,7 +728,7 @@ ASM_FUNCTION(attack_before_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_before_talk_move__8daMyna_cFv) {
+asm void daMyna_c::attack_before_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_before_talk_move__8daMyna_cFv.s"
 }
@@ -561,7 +739,7 @@ ASM_FUNCTION(attack_before_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_fly_init__8daMyna_cFv) {
+asm void daMyna_c::attack_fly_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_fly_init__8daMyna_cFv.s"
 }
@@ -572,7 +750,7 @@ ASM_FUNCTION(attack_fly_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_fly_move__8daMyna_cFv) {
+asm void daMyna_c::attack_fly_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_fly_move__8daMyna_cFv.s"
 }
@@ -583,7 +761,7 @@ ASM_FUNCTION(attack_fly_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_init__8daMyna_cFv) {
+asm void daMyna_c::attack_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_init__8daMyna_cFv.s"
 }
@@ -594,7 +772,7 @@ ASM_FUNCTION(attack_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_move__8daMyna_cFv) {
+asm void daMyna_c::attack_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_move__8daMyna_cFv.s"
 }
@@ -605,7 +783,7 @@ ASM_FUNCTION(attack_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_after_talk_init__8daMyna_cFv) {
+asm void daMyna_c::attack_after_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_after_talk_init__8daMyna_cFv.s"
 }
@@ -616,7 +794,7 @@ ASM_FUNCTION(attack_after_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_after_talk_move__8daMyna_cFv) {
+asm void daMyna_c::attack_after_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_after_talk_move__8daMyna_cFv.s"
 }
@@ -627,7 +805,7 @@ ASM_FUNCTION(attack_after_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(greet_wait_init__8daMyna_cFv) {
+asm void daMyna_c::greet_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/greet_wait_init__8daMyna_cFv.s"
 }
@@ -638,7 +816,7 @@ ASM_FUNCTION(greet_wait_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(greet_wait_move__8daMyna_cFv) {
+asm void daMyna_c::greet_wait_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/greet_wait_move__8daMyna_cFv.s"
 }
@@ -649,7 +827,7 @@ ASM_FUNCTION(greet_wait_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(greet_talk_init__8daMyna_cFv) {
+asm void daMyna_c::greet_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/greet_talk_init__8daMyna_cFv.s"
 }
@@ -660,7 +838,7 @@ ASM_FUNCTION(greet_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(greet_talk_move__8daMyna_cFv) {
+asm void daMyna_c::greet_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/greet_talk_move__8daMyna_cFv.s"
 }
@@ -671,7 +849,7 @@ ASM_FUNCTION(greet_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shopping_wait_init__8daMyna_cFv) {
+asm void daMyna_c::shopping_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/shopping_wait_init__8daMyna_cFv.s"
 }
@@ -682,7 +860,7 @@ ASM_FUNCTION(shopping_wait_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shopping_wait_move__8daMyna_cFv) {
+asm void daMyna_c::shopping_wait_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/shopping_wait_move__8daMyna_cFv.s"
 }
@@ -693,7 +871,7 @@ ASM_FUNCTION(shopping_wait_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shopping_talk_init__8daMyna_cFv) {
+asm void daMyna_c::shopping_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/shopping_talk_init__8daMyna_cFv.s"
 }
@@ -704,7 +882,7 @@ ASM_FUNCTION(shopping_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shopping_talk_move__8daMyna_cFv) {
+asm void daMyna_c::shopping_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/shopping_talk_move__8daMyna_cFv.s"
 }
@@ -715,7 +893,7 @@ ASM_FUNCTION(shopping_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(thanks_talk_init__8daMyna_cFv) {
+asm void daMyna_c::thanks_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/thanks_talk_init__8daMyna_cFv.s"
 }
@@ -726,7 +904,7 @@ ASM_FUNCTION(thanks_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(thanks_talk_move__8daMyna_cFv) {
+asm void daMyna_c::thanks_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/thanks_talk_move__8daMyna_cFv.s"
 }
@@ -737,7 +915,7 @@ ASM_FUNCTION(thanks_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(byebye_talk_init__8daMyna_cFv) {
+asm void daMyna_c::byebye_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/byebye_talk_init__8daMyna_cFv.s"
 }
@@ -748,7 +926,7 @@ ASM_FUNCTION(byebye_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(byebye_talk_move__8daMyna_cFv) {
+asm void daMyna_c::byebye_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/byebye_talk_move__8daMyna_cFv.s"
 }
@@ -759,7 +937,7 @@ ASM_FUNCTION(byebye_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_start_init__8daMyna_cFv) {
+asm void daMyna_c::turn_on_start_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_start_init__8daMyna_cFv.s"
 }
@@ -770,7 +948,7 @@ ASM_FUNCTION(turn_on_start_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_start_move__8daMyna_cFv) {
+asm void daMyna_c::turn_on_start_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_start_move__8daMyna_cFv.s"
 }
@@ -781,7 +959,7 @@ ASM_FUNCTION(turn_on_start_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_init__8daMyna_cFv) {
+asm void daMyna_c::turn_on_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_init__8daMyna_cFv.s"
 }
@@ -792,7 +970,7 @@ ASM_FUNCTION(turn_on_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_move__8daMyna_cFv) {
+asm void daMyna_c::turn_on_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_move__8daMyna_cFv.s"
 }
@@ -803,7 +981,7 @@ ASM_FUNCTION(turn_on_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end1_init__8daMyna_cFv) {
+asm void daMyna_c::turn_on_end1_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end1_init__8daMyna_cFv.s"
 }
@@ -814,7 +992,7 @@ ASM_FUNCTION(turn_on_end1_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end1_move__8daMyna_cFv) {
+asm void daMyna_c::turn_on_end1_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end1_move__8daMyna_cFv.s"
 }
@@ -825,7 +1003,7 @@ ASM_FUNCTION(turn_on_end1_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end2_init__8daMyna_cFv) {
+asm void daMyna_c::turn_on_end2_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end2_init__8daMyna_cFv.s"
 }
@@ -836,7 +1014,7 @@ ASM_FUNCTION(turn_on_end2_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end2_move__8daMyna_cFv) {
+asm void daMyna_c::turn_on_end2_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end2_move__8daMyna_cFv.s"
 }
@@ -844,21 +1022,16 @@ ASM_FUNCTION(turn_on_end2_move__8daMyna_cFv) {
 
 
 /* 80948070-80948074 0004+00 .text      turn_on_end3_init__8daMyna_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end3_init__8daMyna_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end3_init__8daMyna_cFv.s"
+void daMyna_c::turn_on_end3_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80948074-809480E4 0070+00 .text      turn_on_end3_move__8daMyna_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_on_end3_move__8daMyna_cFv) {
+asm void daMyna_c::turn_on_end3_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end3_move__8daMyna_cFv.s"
 }
@@ -869,7 +1042,7 @@ ASM_FUNCTION(turn_on_end3_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wolf_talk_init__8daMyna_cFv) {
+asm void daMyna_c::wolf_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/wolf_talk_init__8daMyna_cFv.s"
 }
@@ -880,7 +1053,7 @@ ASM_FUNCTION(wolf_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wolf_talk_move__8daMyna_cFv) {
+asm void daMyna_c::wolf_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/wolf_talk_move__8daMyna_cFv.s"
 }
@@ -891,7 +1064,7 @@ ASM_FUNCTION(wolf_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_wait2_init__8daMyna_cFv) {
+asm void daMyna_c::attack_wait2_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_wait2_init__8daMyna_cFv.s"
 }
@@ -902,7 +1075,7 @@ ASM_FUNCTION(attack_wait2_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_wait2_move__8daMyna_cFv) {
+asm void daMyna_c::attack_wait2_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_wait2_move__8daMyna_cFv.s"
 }
@@ -913,7 +1086,7 @@ ASM_FUNCTION(attack_wait2_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_before_talk2_init__8daMyna_cFv) {
+asm void daMyna_c::attack_before_talk2_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_before_talk2_init__8daMyna_cFv.s"
 }
@@ -924,7 +1097,7 @@ ASM_FUNCTION(attack_before_talk2_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_before_talk2_move__8daMyna_cFv) {
+asm void daMyna_c::attack_before_talk2_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_before_talk2_move__8daMyna_cFv.s"
 }
@@ -935,7 +1108,7 @@ ASM_FUNCTION(attack_before_talk2_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_fly2_init__8daMyna_cFv) {
+asm void daMyna_c::attack_fly2_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_fly2_init__8daMyna_cFv.s"
 }
@@ -946,7 +1119,7 @@ ASM_FUNCTION(attack_fly2_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack_fly2_move__8daMyna_cFv) {
+asm void daMyna_c::attack_fly2_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack_fly2_move__8daMyna_cFv.s"
 }
@@ -957,7 +1130,7 @@ ASM_FUNCTION(attack_fly2_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack2_init__8daMyna_cFv) {
+asm void daMyna_c::attack2_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack2_init__8daMyna_cFv.s"
 }
@@ -968,7 +1141,7 @@ ASM_FUNCTION(attack2_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack2_move__8daMyna_cFv) {
+asm void daMyna_c::attack2_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack2_move__8daMyna_cFv.s"
 }
@@ -979,7 +1152,7 @@ ASM_FUNCTION(attack2_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack2_talk_init__8daMyna_cFv) {
+asm void daMyna_c::attack2_talk_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack2_talk_init__8daMyna_cFv.s"
 }
@@ -990,7 +1163,7 @@ ASM_FUNCTION(attack2_talk_init__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attack2_talk_move__8daMyna_cFv) {
+asm void daMyna_c::attack2_talk_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/attack2_talk_move__8daMyna_cFv.s"
 }
@@ -1001,7 +1174,7 @@ ASM_FUNCTION(attack2_talk_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(soldoutItem__8daMyna_cFUi) {
+asm void daMyna_c::soldoutItem(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/soldoutItem__8daMyna_cFUi.s"
 }
@@ -1012,7 +1185,7 @@ ASM_FUNCTION(soldoutItem__8daMyna_cFUi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fly_attack_move__8daMyna_cFv) {
+asm void daMyna_c::fly_attack_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/fly_attack_move__8daMyna_cFv.s"
 }
@@ -1023,7 +1196,7 @@ ASM_FUNCTION(fly_attack_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fly_return_move__8daMyna_cFv) {
+asm void daMyna_c::fly_return_move() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/fly_return_move__8daMyna_cFv.s"
 }
@@ -1034,7 +1207,7 @@ ASM_FUNCTION(fly_return_move__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fly_body_wave__8daMyna_cFv) {
+asm void daMyna_c::fly_body_wave() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/fly_body_wave__8daMyna_cFv.s"
 }
@@ -1045,7 +1218,7 @@ ASM_FUNCTION(fly_body_wave__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talkAnime__8daMyna_cFP9msg_class) {
+asm void daMyna_c::talkAnime(msg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/talkAnime__8daMyna_cFP9msg_class.s"
 }
@@ -1056,7 +1229,7 @@ ASM_FUNCTION(talkAnime__8daMyna_cFP9msg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkEvent__8daMyna_cFv) {
+asm void daMyna_c::chkEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/chkEvent__8daMyna_cFv.s"
 }
@@ -1067,7 +1240,7 @@ ASM_FUNCTION(chkEvent__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderEvent__8daMyna_cFv) {
+asm void daMyna_c::orderEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/orderEvent__8daMyna_cFv.s"
 }
@@ -1078,7 +1251,7 @@ ASM_FUNCTION(orderEvent__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteItem__8daMyna_cFi) {
+asm void daMyna_c::deleteItem(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/deleteItem__8daMyna_cFi.s"
 }
@@ -1089,7 +1262,7 @@ ASM_FUNCTION(deleteItem__8daMyna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteItem__8daMyna_cFUi) {
+asm void daMyna_c::deleteItem(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/deleteItem__8daMyna_cFUi.s"
 }
@@ -1100,7 +1273,7 @@ ASM_FUNCTION(deleteItem__8daMyna_cFUi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__8daMyna_cFv) {
+asm void daMyna_c::initiate() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/initiate__8daMyna_cFv.s"
 }
@@ -1111,7 +1284,7 @@ ASM_FUNCTION(initiate__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemInfo__8daMyna_cFv) {
+asm void daMyna_c::setItemInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setItemInfo__8daMyna_cFv.s"
 }
@@ -1122,7 +1295,7 @@ ASM_FUNCTION(setItemInfo__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__8daMyna_cFv) {
+asm void daMyna_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setRoomNo__8daMyna_cFv.s"
 }
@@ -1133,7 +1306,7 @@ ASM_FUNCTION(setRoomNo__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__8daMyna_cFv) {
+asm void daMyna_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setCollision__8daMyna_cFv.s"
 }
@@ -1144,7 +1317,7 @@ ASM_FUNCTION(setCollision__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__8daMyna_cFv) {
+asm void daMyna_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/set_mtx__8daMyna_cFv.s"
 }
@@ -1155,7 +1328,7 @@ ASM_FUNCTION(set_mtx__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animePlay__8daMyna_cFv) {
+asm void daMyna_c::animePlay() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/animePlay__8daMyna_cFv.s"
 }
@@ -1166,7 +1339,7 @@ ASM_FUNCTION(animePlay__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMcaMorfAnm__8daMyna_cFP18J3DAnmTransformKeyffiii) {
+asm void daMyna_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, s32 field_3, s32 field_4, s32 field_5) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setMcaMorfAnm__8daMyna_cFP18J3DAnmTransformKeyffiii.s"
 }
@@ -1177,7 +1350,7 @@ ASM_FUNCTION(setMcaMorfAnm__8daMyna_cFP18J3DAnmTransformKeyffiii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBtpAnm__8daMyna_cFP16J3DAnmTexPatternP12J3DModelDatafi) {
+asm void daMyna_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setBtpAnm__8daMyna_cFP16J3DAnmTexPatternP12J3DModelDatafi.s"
 }
@@ -1188,7 +1361,7 @@ ASM_FUNCTION(setBtpAnm__8daMyna_cFP16J3DAnmTexPatternP12J3DModelDatafi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTrnsfrmKeyAnm__8daMyna_cFPc) {
+extern "C" asm void getTrnsfrmKeyAnm__8daMyna_cFPc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getTrnsfrmKeyAnm__8daMyna_cFPc.s"
 }
@@ -1199,7 +1372,7 @@ ASM_FUNCTION(getTrnsfrmKeyAnm__8daMyna_cFPc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTexPtrnAnm__8daMyna_cFPc) {
+extern "C" asm void getTexPtrnAnm__8daMyna_cFPc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getTexPtrnAnm__8daMyna_cFPc.s"
 }
@@ -1210,7 +1383,7 @@ ASM_FUNCTION(getTexPtrnAnm__8daMyna_cFPc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEndAnm__8daMyna_cFf) {
+asm void daMyna_c::checkEndAnm(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/checkEndAnm__8daMyna_cFf.s"
 }
@@ -1221,7 +1394,7 @@ ASM_FUNCTION(checkEndAnm__8daMyna_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEndAnm__8daMyna_cFP12J3DFrameCtrl) {
+asm void daMyna_c::checkEndAnm(J3DFrameCtrl* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/checkEndAnm__8daMyna_cFP12J3DFrameCtrl.s"
 }
@@ -1232,7 +1405,7 @@ ASM_FUNCTION(checkEndAnm__8daMyna_cFP12J3DFrameCtrl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemNumMax__8daMyna_cFv) {
+asm void daMyna_c::getItemNumMax() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getItemNumMax__8daMyna_cFv.s"
 }
@@ -1243,7 +1416,7 @@ ASM_FUNCTION(getItemNumMax__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemType__8daMyna_cFPv) {
+asm void daMyna_c::getItemType(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getItemType__8daMyna_cFPv.s"
 }
@@ -1254,7 +1427,7 @@ ASM_FUNCTION(getItemType__8daMyna_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFlowNodeNum__8daMyna_cFv) {
+asm void daMyna_c::getFlowNodeNum() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getFlowNodeNum__8daMyna_cFv.s"
 }
@@ -1265,7 +1438,7 @@ ASM_FUNCTION(getFlowNodeNum__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDead__8daMyna_cFv) {
+asm void daMyna_c::checkDead() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/checkDead__8daMyna_cFv.s"
 }
@@ -1276,7 +1449,7 @@ ASM_FUNCTION(checkDead__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz) {
+asm void daMyna_c::chkPlayerInEvtArea(fopAc_ac_c* field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz.s"
 }
@@ -1287,7 +1460,7 @@ ASM_FUNCTION(chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animeControl__8daMyna_cFv) {
+asm void daMyna_c::animeControl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/animeControl__8daMyna_cFv.s"
 }
@@ -1298,7 +1471,7 @@ ASM_FUNCTION(animeControl__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimeType__8daMyna_cFUcf) {
+asm void daMyna_c::setAnimeType(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setAnimeType__8daMyna_cFUcf.s"
 }
@@ -1309,7 +1482,7 @@ ASM_FUNCTION(setAnimeType__8daMyna_cFUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playDefaultWaitAnime__8daMyna_cFv) {
+asm void daMyna_c::playDefaultWaitAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/playDefaultWaitAnime__8daMyna_cFv.s"
 }
@@ -1320,7 +1493,7 @@ ASM_FUNCTION(playDefaultWaitAnime__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDefaultWaitAnime__8daMyna_cFUc) {
+asm void daMyna_c::setDefaultWaitAnime(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/setDefaultWaitAnime__8daMyna_cFUc.s"
 }
@@ -1331,7 +1504,7 @@ ASM_FUNCTION(setDefaultWaitAnime__8daMyna_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_Create__FPv) {
+asm void daMyna_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_Create__FPv.s"
 }
@@ -1342,7 +1515,7 @@ ASM_FUNCTION(daMyna_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_Delete__FPv) {
+asm void daMyna_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_Delete__FPv.s"
 }
@@ -1353,7 +1526,7 @@ ASM_FUNCTION(daMyna_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_Execute__FPv) {
+asm void daMyna_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_Execute__FPv.s"
 }
@@ -1364,7 +1537,7 @@ ASM_FUNCTION(daMyna_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMyna_Draw__FPv) {
+asm void daMyna_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_Draw__FPv.s"
 }
@@ -1372,21 +1545,16 @@ ASM_FUNCTION(daMyna_Draw__FPv) {
 
 
 /* 8094A910-8094A918 0008+00 .text      daMyna_IsDelete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daMyna_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_IsDelete__FPv.s"
+bool daMyna_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8094A918-8094A960 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__10cCcD_GSttsFv.s"
 }
@@ -1397,7 +1565,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daMyna_HIO_cFv) {
+asm daMyna_HIO_c::~daMyna_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__12daMyna_HIO_cFv.s"
 }
@@ -1408,7 +1576,7 @@ ASM_FUNCTION(__dt__12daMyna_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -1419,7 +1587,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeadTopPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getHeadTopPos() const {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/getHeadTopPos__9daPy_py_cCFv.s"
 }
@@ -1430,7 +1598,7 @@ ASM_FUNCTION(getHeadTopPos__9daPy_py_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daMyna_cFv) {
+asm daMyna_c::~daMyna_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__dt__8daMyna_cFv.s"
 }
@@ -1441,7 +1609,7 @@ ASM_FUNCTION(__dt__8daMyna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8094ABAC) {
+extern "C" asm void func_8094ABAC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/func_8094ABAC.s"
 }
@@ -1452,7 +1620,7 @@ ASM_FUNCTION(func_8094ABAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8094ABC8) {
+extern "C" asm void func_8094ABC8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/func_8094ABC8.s"
 }
@@ -1463,7 +1631,7 @@ ASM_FUNCTION(func_8094ABC8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_myna_cpp) {
+extern "C" asm void __sinit_d_a_myna_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_myna/d_a_myna/__sinit_d_a_myna_cpp.s"
 }

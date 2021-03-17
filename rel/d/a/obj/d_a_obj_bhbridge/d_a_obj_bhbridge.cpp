@@ -6,27 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjBhbridge_c;
+struct dBgW;
+
+struct daObjBhbridge_c {
+	void Check_RideOn();
+	void initBaseMtx();
+	void setBaseMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void RideOn_Angle__15daObjBhbridge_cFRsfsf();
-extern "C" extern void Check_RideOn__15daObjBhbridge_cFv();
-extern "C" extern void initBaseMtx__15daObjBhbridge_cFv();
-extern "C" extern void setBaseMtx__15daObjBhbridge_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void daObjBhbridge_Draw__FP15daObjBhbridge_c();
-extern "C" extern void daObjBhbridge_Execute__FP15daObjBhbridge_c();
-extern "C" extern void daObjBhbridge_IsDelete__FP15daObjBhbridge_c();
-extern "C" extern void daObjBhbridge_Delete__FP15daObjBhbridge_c();
-extern "C" extern void daObjBhbridge_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__15daObjBhbridge_cFv();
-extern "C" extern void Create__15daObjBhbridge_cFv();
-extern "C" extern void Execute__15daObjBhbridge_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjBhbridge_cFv();
-extern "C" extern void Delete__15daObjBhbridge_cFv();
-extern "C" extern void func_80BB5EE8();
-extern "C" extern void func_80BB5EF0();
+extern "C" void RideOn_Angle__15daObjBhbridge_cFRsfsf();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObjBhbridge_Draw(daObjBhbridge_c*);
+void daObjBhbridge_Execute(daObjBhbridge_c*);
+bool daObjBhbridge_IsDelete(daObjBhbridge_c*);
+void daObjBhbridge_Delete(daObjBhbridge_c*);
+void daObjBhbridge_Create(fopAc_ac_c*);
+extern "C" void Execute__15daObjBhbridge_cFPPA3_A4_f();
+extern "C" void func_80BB5EE8();
+extern "C" void func_80BB5EF0();
+
+extern "C" void RideOn_Angle__15daObjBhbridge_cFRsfsf();
+extern "C" void Check_RideOn__15daObjBhbridge_cFv();
+extern "C" void initBaseMtx__15daObjBhbridge_cFv();
+extern "C" void setBaseMtx__15daObjBhbridge_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void daObjBhbridge_Draw__FP15daObjBhbridge_c();
+extern "C" void daObjBhbridge_Execute__FP15daObjBhbridge_c();
+extern "C" bool daObjBhbridge_IsDelete__FP15daObjBhbridge_c();
+extern "C" void daObjBhbridge_Delete__FP15daObjBhbridge_c();
+extern "C" void daObjBhbridge_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__15daObjBhbridge_cFv();
+extern "C" void Create__15daObjBhbridge_cFv();
+extern "C" void Execute__15daObjBhbridge_cFPPA3_A4_f();
+extern "C" void Draw__15daObjBhbridge_cFv();
+extern "C" void Delete__15daObjBhbridge_cFv();
+extern "C" void func_80BB5EE8();
+extern "C" void func_80BB5EF0();
 SECTION_RODATA extern const u8 lit_3655[8];
 SECTION_RODATA extern const u8 lit_3703[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3704[8];
@@ -66,7 +105,9 @@ SECTION_DATA extern void*const __vt__15daObjBhbridge_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -76,7 +117,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(RideOn_Angle__15daObjBhbridge_cFRsfsf) {
+extern "C" asm void RideOn_Angle__15daObjBhbridge_cFRsfsf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/RideOn_Angle__15daObjBhbridge_cFRsfsf.s"
 }
@@ -87,7 +128,7 @@ ASM_FUNCTION(RideOn_Angle__15daObjBhbridge_cFRsfsf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Check_RideOn__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::Check_RideOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/Check_RideOn__15daObjBhbridge_cFv.s"
 }
@@ -98,7 +139,7 @@ ASM_FUNCTION(Check_RideOn__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/initBaseMtx__15daObjBhbridge_cFv.s"
 }
@@ -109,7 +150,7 @@ ASM_FUNCTION(initBaseMtx__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/setBaseMtx__15daObjBhbridge_cFv.s"
 }
@@ -120,7 +161,7 @@ ASM_FUNCTION(setBaseMtx__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -131,7 +172,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBhbridge_Draw__FP15daObjBhbridge_c) {
+asm void daObjBhbridge_Draw(daObjBhbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Draw__FP15daObjBhbridge_c.s"
 }
@@ -142,7 +183,7 @@ ASM_FUNCTION(daObjBhbridge_Draw__FP15daObjBhbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBhbridge_Execute__FP15daObjBhbridge_c) {
+asm void daObjBhbridge_Execute(daObjBhbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Execute__FP15daObjBhbridge_c.s"
 }
@@ -150,21 +191,16 @@ ASM_FUNCTION(daObjBhbridge_Execute__FP15daObjBhbridge_c) {
 
 
 /* 80BB56C4-80BB56CC 0008+00 .text      daObjBhbridge_IsDelete__FP15daObjBhbridge_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjBhbridge_IsDelete__FP15daObjBhbridge_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_IsDelete__FP15daObjBhbridge_c.s"
+bool daObjBhbridge_IsDelete(daObjBhbridge_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BB56CC-80BB56F0 0024+00 .text      daObjBhbridge_Delete__FP15daObjBhbridge_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBhbridge_Delete__FP15daObjBhbridge_c) {
+asm void daObjBhbridge_Delete(daObjBhbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Delete__FP15daObjBhbridge_c.s"
 }
@@ -175,7 +211,7 @@ ASM_FUNCTION(daObjBhbridge_Delete__FP15daObjBhbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBhbridge_Create__FP10fopAc_ac_c) {
+asm void daObjBhbridge_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Create__FP10fopAc_ac_c.s"
 }
@@ -186,7 +222,7 @@ ASM_FUNCTION(daObjBhbridge_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -197,7 +233,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/CreateHeap__15daObjBhbridge_cFv.s"
 }
@@ -208,7 +244,7 @@ ASM_FUNCTION(CreateHeap__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/Create__15daObjBhbridge_cFv.s"
 }
@@ -219,7 +255,7 @@ ASM_FUNCTION(Create__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjBhbridge_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjBhbridge_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/Execute__15daObjBhbridge_cFPPA3_A4_f.s"
 }
@@ -230,7 +266,7 @@ ASM_FUNCTION(Execute__15daObjBhbridge_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/Draw__15daObjBhbridge_cFv.s"
 }
@@ -241,7 +277,7 @@ ASM_FUNCTION(Draw__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjBhbridge_cFv) {
+asm void daObjBhbridge_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/Delete__15daObjBhbridge_cFv.s"
 }
@@ -252,7 +288,7 @@ ASM_FUNCTION(Delete__15daObjBhbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB5EE8) {
+extern "C" asm void func_80BB5EE8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/func_80BB5EE8.s"
 }
@@ -263,7 +299,7 @@ ASM_FUNCTION(func_80BB5EE8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB5EF0) {
+extern "C" asm void func_80BB5EF0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/func_80BB5EF0.s"
 }

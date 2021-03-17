@@ -6,37 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv4Sand_c;
+
+struct daObjLv4Sand_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void mode_init_wait();
+	void mode_wait();
+	void mode_init_move();
+	void mode_move();
+	void mode_init_dead();
+	void mode_dead();
+	void eventStart();
+	void Draw();
+	void Delete();
+	~daObjLv4Sand_c();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjLv4Sand_cFv();
-extern "C" extern void setBaseMtx__14daObjLv4Sand_cFv();
-extern "C" extern void Create__14daObjLv4Sand_cFv();
-extern "C" extern void CreateHeap__14daObjLv4Sand_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__14daObjLv4Sand_cFv();
-extern "C" extern void Execute__14daObjLv4Sand_cFPPA3_A4_f();
-extern "C" extern void action__14daObjLv4Sand_cFv();
-extern "C" extern void mode_init_wait__14daObjLv4Sand_cFv();
-extern "C" extern void mode_wait__14daObjLv4Sand_cFv();
-extern "C" extern void mode_init_move__14daObjLv4Sand_cFv();
-extern "C" extern void mode_move__14daObjLv4Sand_cFv();
-extern "C" extern void mode_init_dead__14daObjLv4Sand_cFv();
-extern "C" extern void mode_dead__14daObjLv4Sand_cFv();
-extern "C" extern void eventStart__14daObjLv4Sand_cFv();
-extern "C" extern void Draw__14daObjLv4Sand_cFv();
-extern "C" extern void Delete__14daObjLv4Sand_cFv();
-extern "C" extern void daObjLv4Sand_create1st__FP14daObjLv4Sand_c();
-extern "C" extern void daObjLv4Sand_MoveBGDelete__FP14daObjLv4Sand_c();
-extern "C" extern void daObjLv4Sand_MoveBGExecute__FP14daObjLv4Sand_c();
-extern "C" extern void daObjLv4Sand_MoveBGDraw__FP14daObjLv4Sand_c();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__14daObjLv4Sand_cFv();
-extern "C" extern void func_80C6A3A0();
-extern "C" extern void func_80C6A3A8();
+extern "C" void Execute__14daObjLv4Sand_cFPPA3_A4_f();
+void daObjLv4Sand_create1st(daObjLv4Sand_c*);
+void daObjLv4Sand_MoveBGDelete(daObjLv4Sand_c*);
+void daObjLv4Sand_MoveBGExecute(daObjLv4Sand_c*);
+void daObjLv4Sand_MoveBGDraw(daObjLv4Sand_c*);
+extern "C" void func_80C6A3A0();
+extern "C" void func_80C6A3A8();
+
+extern "C" void initBaseMtx__14daObjLv4Sand_cFv();
+extern "C" void setBaseMtx__14daObjLv4Sand_cFv();
+extern "C" void Create__14daObjLv4Sand_cFv();
+extern "C" void CreateHeap__14daObjLv4Sand_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__14daObjLv4Sand_cFv();
+extern "C" void Execute__14daObjLv4Sand_cFPPA3_A4_f();
+extern "C" void action__14daObjLv4Sand_cFv();
+extern "C" void mode_init_wait__14daObjLv4Sand_cFv();
+extern "C" void mode_wait__14daObjLv4Sand_cFv();
+extern "C" void mode_init_move__14daObjLv4Sand_cFv();
+extern "C" void mode_move__14daObjLv4Sand_cFv();
+extern "C" void mode_init_dead__14daObjLv4Sand_cFv();
+extern "C" void mode_dead__14daObjLv4Sand_cFv();
+extern "C" void eventStart__14daObjLv4Sand_cFv();
+extern "C" void Draw__14daObjLv4Sand_cFv();
+extern "C" void Delete__14daObjLv4Sand_cFv();
+extern "C" void daObjLv4Sand_create1st__FP14daObjLv4Sand_c();
+extern "C" void daObjLv4Sand_MoveBGDelete__FP14daObjLv4Sand_c();
+extern "C" void daObjLv4Sand_MoveBGExecute__FP14daObjLv4Sand_c();
+extern "C" void daObjLv4Sand_MoveBGDraw__FP14daObjLv4Sand_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__14daObjLv4Sand_cFv();
+extern "C" void func_80C6A3A0();
+extern "C" void func_80C6A3A8();
 SECTION_RODATA extern const u32 lit_3679;
 SECTION_RODATA extern const u8 lit_3680[4];
 SECTION_RODATA extern const u32 lit_3710;
@@ -63,7 +107,9 @@ SECTION_DATA extern void*const __vt__14daObjLv4Sand_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -73,7 +119,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/initBaseMtx__14daObjLv4Sand_cFv.s"
 }
@@ -84,7 +130,7 @@ ASM_FUNCTION(initBaseMtx__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/setBaseMtx__14daObjLv4Sand_cFv.s"
 }
@@ -95,7 +141,7 @@ ASM_FUNCTION(setBaseMtx__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/Create__14daObjLv4Sand_cFv.s"
 }
@@ -106,7 +152,7 @@ ASM_FUNCTION(Create__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/CreateHeap__14daObjLv4Sand_cFv.s"
 }
@@ -117,7 +163,7 @@ ASM_FUNCTION(CreateHeap__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/__dt__12J3DFrameCtrlFv.s"
 }
@@ -128,7 +174,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/create1st__14daObjLv4Sand_cFv.s"
 }
@@ -139,7 +185,7 @@ ASM_FUNCTION(create1st__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjLv4Sand_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjLv4Sand_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/Execute__14daObjLv4Sand_cFPPA3_A4_f.s"
 }
@@ -150,7 +196,7 @@ ASM_FUNCTION(Execute__14daObjLv4Sand_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/action__14daObjLv4Sand_cFv.s"
 }
@@ -161,7 +207,7 @@ ASM_FUNCTION(action__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_init_wait__14daObjLv4Sand_cFv.s"
 }
@@ -172,7 +218,7 @@ ASM_FUNCTION(mode_init_wait__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_wait__14daObjLv4Sand_cFv.s"
 }
@@ -183,7 +229,7 @@ ASM_FUNCTION(mode_wait__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_move__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::mode_init_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_init_move__14daObjLv4Sand_cFv.s"
 }
@@ -194,7 +240,7 @@ ASM_FUNCTION(mode_init_move__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_move__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::mode_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_move__14daObjLv4Sand_cFv.s"
 }
@@ -205,7 +251,7 @@ ASM_FUNCTION(mode_move__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dead__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::mode_init_dead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_init_dead__14daObjLv4Sand_cFv.s"
 }
@@ -213,21 +259,16 @@ ASM_FUNCTION(mode_init_dead__14daObjLv4Sand_cFv) {
 
 
 /* 80C6A0A8-80C6A0AC 0004+00 .text      mode_dead__14daObjLv4Sand_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_dead__14daObjLv4Sand_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/mode_dead__14daObjLv4Sand_cFv.s"
+void daObjLv4Sand_c::mode_dead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C6A0AC-80C6A0D0 0024+00 .text      eventStart__14daObjLv4Sand_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/eventStart__14daObjLv4Sand_cFv.s"
 }
@@ -238,7 +279,7 @@ ASM_FUNCTION(eventStart__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/Draw__14daObjLv4Sand_cFv.s"
 }
@@ -249,7 +290,7 @@ ASM_FUNCTION(Draw__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjLv4Sand_cFv) {
+asm void daObjLv4Sand_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/Delete__14daObjLv4Sand_cFv.s"
 }
@@ -260,7 +301,7 @@ ASM_FUNCTION(Delete__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Sand_create1st__FP14daObjLv4Sand_c) {
+asm void daObjLv4Sand_create1st(daObjLv4Sand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/daObjLv4Sand_create1st__FP14daObjLv4Sand_c.s"
 }
@@ -271,7 +312,7 @@ ASM_FUNCTION(daObjLv4Sand_create1st__FP14daObjLv4Sand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Sand_MoveBGDelete__FP14daObjLv4Sand_c) {
+asm void daObjLv4Sand_MoveBGDelete(daObjLv4Sand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/daObjLv4Sand_MoveBGDelete__FP14daObjLv4Sand_c.s"
 }
@@ -282,7 +323,7 @@ ASM_FUNCTION(daObjLv4Sand_MoveBGDelete__FP14daObjLv4Sand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Sand_MoveBGExecute__FP14daObjLv4Sand_c) {
+asm void daObjLv4Sand_MoveBGExecute(daObjLv4Sand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/daObjLv4Sand_MoveBGExecute__FP14daObjLv4Sand_c.s"
 }
@@ -293,7 +334,7 @@ ASM_FUNCTION(daObjLv4Sand_MoveBGExecute__FP14daObjLv4Sand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Sand_MoveBGDraw__FP14daObjLv4Sand_c) {
+asm void daObjLv4Sand_MoveBGDraw(daObjLv4Sand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/daObjLv4Sand_MoveBGDraw__FP14daObjLv4Sand_c.s"
 }
@@ -304,7 +345,7 @@ ASM_FUNCTION(daObjLv4Sand_MoveBGDraw__FP14daObjLv4Sand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/__dt__17dEvLib_callback_cFv.s"
 }
@@ -312,43 +353,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C6A2F4-80C6A2FC 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C6A2FC-80C6A304 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C6A304-80C6A30C 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C6A30C-80C6A3A0 0094+00 .text      __dt__14daObjLv4Sand_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjLv4Sand_cFv) {
+asm daObjLv4Sand_c::~daObjLv4Sand_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/__dt__14daObjLv4Sand_cFv.s"
 }
@@ -359,7 +385,7 @@ ASM_FUNCTION(__dt__14daObjLv4Sand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C6A3A0) {
+extern "C" asm void func_80C6A3A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/func_80C6A3A0.s"
 }
@@ -370,7 +396,7 @@ ASM_FUNCTION(func_80C6A3A0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C6A3A8) {
+extern "C" asm void func_80C6A3A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4sand/d_a_obj_lv4sand/func_80C6A3A8.s"
 }

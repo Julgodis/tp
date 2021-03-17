@@ -6,78 +6,188 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct daNPC_TK_c;
+struct cXyz;
+
+struct daNPC_TK_HIO_c {
+	daNPC_TK_HIO_c();
+	~daNPC_TK_HIO_c();
+};
+
+struct daNPC_TK_c {
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void draw();
+	void checkBeforeBg();
+	void setActionMode(s32);
+	void setAddCalcSpeedXZ(cXyz&, cXyz const&, f32, f32, f32);
+	void getMasterPointer();
+	void setMasterShoulder(cXyz*);
+	void setAwayAction(s32);
+	void setFlySE();
+	void executeFly();
+	void initPerchDemo(s32);
+	void executePerchDemo(s32);
+	void executePerch();
+	void executeHandOn();
+	void checkWaterSurface(f32);
+	void executeAttack();
+	void executeAway();
+	void setCarryActorMtx();
+	void getTakePosY();
+	void getTakeOffPosY();
+	void executeBack();
+	void getHanjoHandPos();
+	void executeStayHanjo();
+	void executeAttackLink();
+	void executeBackHanjo();
+	void checkAttackDemo();
+	void executeAttackDemo();
+	void executeBackHanjoDemo();
+	void executeWolfEvent();
+	void calcWolfDemoCam();
+	void calcWolfDemoCam2();
+	void executeWolfPerch();
+	void executeResistanceDemo();
+	void setHawkSideCamera(cXyz);
+	void setHawkCamera(fopAc_ac_c*);
+	void endHawkCamera();
+	void calcDemoCamera();
+	void checkActionSet();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void CreateHeap();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct daPy_py_c {
+	void checkNowWolf();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNPC_TK_HIO_cFv();
-extern "C" extern void setBck__10daNPC_TK_cFiUcff();
-extern "C" extern void checkBck__10daNPC_TK_cFi();
-extern "C" extern void draw__10daNPC_TK_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daNPC_TK_Draw__FP10daNPC_TK_c();
-extern "C" extern void checkBeforeBg__10daNPC_TK_cFv();
-extern "C" extern void setActionMode__10daNPC_TK_cFi();
-extern "C" extern void setAddCalcSpeedXZ__10daNPC_TK_cFR4cXyzRC4cXyzfff();
-extern "C" extern void chaseTargetPos__10daNPC_TK_cF4cXyzffs();
-extern "C" extern void getMasterPointer__10daNPC_TK_cFv();
-extern "C" extern void setMasterShoulder__10daNPC_TK_cFP4cXyz();
-extern "C" extern void setAwayAction__10daNPC_TK_cFi();
-extern "C" extern void setFlySE__10daNPC_TK_cFv();
-extern "C" extern void checkRangeOfTake__FP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void s_obj_sub__FPvPv();
-extern "C" extern void s_hanjo__FPvPv();
-extern "C" extern void executeFly__10daNPC_TK_cFv();
-extern "C" extern void initPerchDemo__10daNPC_TK_cFi();
-extern "C" extern void executePerchDemo__10daNPC_TK_cFi();
-extern "C" extern void executePerch__10daNPC_TK_cFv();
-extern "C" extern void executeHandOn__10daNPC_TK_cFv();
-extern "C" extern void checkWaterSurface__10daNPC_TK_cFf();
-extern "C" extern void executeAttack__10daNPC_TK_cFv();
-extern "C" extern void executeAway__10daNPC_TK_cFv();
-extern "C" extern void setCarryActorMtx__10daNPC_TK_cFv();
-extern "C" extern void getTakePosY__10daNPC_TK_cFv();
-extern "C" extern void getTakeOffPosY__10daNPC_TK_cFv();
-extern "C" extern void executeBack__10daNPC_TK_cFv();
-extern "C" extern void getHanjoHandPos__10daNPC_TK_cFv();
-extern "C" extern void executeStayHanjo__10daNPC_TK_cFv();
-extern "C" extern void executeAttackLink__10daNPC_TK_cFv();
-extern "C" extern void executeBackHanjo__10daNPC_TK_cFv();
-extern "C" extern void checkAttackDemo__10daNPC_TK_cFv();
-extern "C" extern void executeAttackDemo__10daNPC_TK_cFv();
-extern "C" extern void executeBackHanjoDemo__10daNPC_TK_cFv();
-extern "C" extern void executeWolfEvent__10daNPC_TK_cFv();
-extern "C" extern void calcWolfDemoCam__10daNPC_TK_cFv();
-extern "C" extern void calcWolfDemoCam2__10daNPC_TK_cFv();
-extern "C" extern void executeWolfPerch__10daNPC_TK_cFv();
-extern "C" extern void executeResistanceDemo__10daNPC_TK_cFv();
-extern "C" extern void setHawkSideCamera__10daNPC_TK_cF4cXyz();
-extern "C" extern void setHawkCamera__10daNPC_TK_cFP10fopAc_ac_c();
-extern "C" extern void endHawkCamera__10daNPC_TK_cFv();
-extern "C" extern void calcDemoCamera__10daNPC_TK_cFv();
-extern "C" extern void checkActionSet__10daNPC_TK_cFv();
-extern "C" extern void action__10daNPC_TK_cFv();
-extern "C" extern void mtx_set__10daNPC_TK_cFv();
-extern "C" extern void cc_set__10daNPC_TK_cFv();
-extern "C" extern void execute__10daNPC_TK_cFv();
-extern "C" extern void daNPC_TK_Execute__FP10daNPC_TK_c();
-extern "C" extern void daNPC_TK_IsDelete__FP10daNPC_TK_c();
-extern "C" extern void _delete__10daNPC_TK_cFv();
-extern "C" extern void daNPC_TK_Delete__FP10daNPC_TK_c();
-extern "C" extern void ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__10daNPC_TK_cFP8J3DJointi();
-extern "C" extern void CreateHeap__10daNPC_TK_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__10daNPC_TK_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daNPC_TK_Create__FP10daNPC_TK_c();
-extern "C" extern void __dt__14daNPC_TK_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_tk_cpp();
-extern "C" extern void func_80B0C188();
-extern "C" extern void func_80B0C190();
-extern "C" extern void checkNowWolf__9daPy_py_cFv();
+void daNPC_TK_Draw(daNPC_TK_c*);
+extern "C" void chaseTargetPos__10daNPC_TK_cF4cXyzffs();
+void checkRangeOfTake(fopAc_ac_c*, fopAc_ac_c*);
+void s_obj_sub(void*, void*);
+void s_hanjo(void*, void*);
+void daNPC_TK_Execute(daNPC_TK_c*);
+bool daNPC_TK_IsDelete(daNPC_TK_c*);
+void daNPC_TK_Delete(daNPC_TK_c*);
+void useHeapInit(fopAc_ac_c*);
+void daNPC_TK_Create(daNPC_TK_c*);
+extern "C" void __sinit_d_a_npc_tk_cpp();
+extern "C" void func_80B0C188();
+extern "C" void func_80B0C190();
+
+extern "C" void __ct__14daNPC_TK_HIO_cFv();
+extern "C" void setBck__10daNPC_TK_cFiUcff();
+extern "C" void checkBck__10daNPC_TK_cFi();
+extern "C" void draw__10daNPC_TK_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daNPC_TK_Draw__FP10daNPC_TK_c();
+extern "C" void checkBeforeBg__10daNPC_TK_cFv();
+extern "C" void setActionMode__10daNPC_TK_cFi();
+extern "C" void setAddCalcSpeedXZ__10daNPC_TK_cFR4cXyzRC4cXyzfff();
+extern "C" void chaseTargetPos__10daNPC_TK_cF4cXyzffs();
+extern "C" void getMasterPointer__10daNPC_TK_cFv();
+extern "C" void setMasterShoulder__10daNPC_TK_cFP4cXyz();
+extern "C" void setAwayAction__10daNPC_TK_cFi();
+extern "C" void setFlySE__10daNPC_TK_cFv();
+extern "C" void checkRangeOfTake__FP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void s_obj_sub__FPvPv();
+extern "C" void s_hanjo__FPvPv();
+extern "C" void executeFly__10daNPC_TK_cFv();
+extern "C" void initPerchDemo__10daNPC_TK_cFi();
+extern "C" void executePerchDemo__10daNPC_TK_cFi();
+extern "C" void executePerch__10daNPC_TK_cFv();
+extern "C" void executeHandOn__10daNPC_TK_cFv();
+extern "C" void checkWaterSurface__10daNPC_TK_cFf();
+extern "C" void executeAttack__10daNPC_TK_cFv();
+extern "C" void executeAway__10daNPC_TK_cFv();
+extern "C" void setCarryActorMtx__10daNPC_TK_cFv();
+extern "C" void getTakePosY__10daNPC_TK_cFv();
+extern "C" void getTakeOffPosY__10daNPC_TK_cFv();
+extern "C" void executeBack__10daNPC_TK_cFv();
+extern "C" void getHanjoHandPos__10daNPC_TK_cFv();
+extern "C" void executeStayHanjo__10daNPC_TK_cFv();
+extern "C" void executeAttackLink__10daNPC_TK_cFv();
+extern "C" void executeBackHanjo__10daNPC_TK_cFv();
+extern "C" void checkAttackDemo__10daNPC_TK_cFv();
+extern "C" void executeAttackDemo__10daNPC_TK_cFv();
+extern "C" void executeBackHanjoDemo__10daNPC_TK_cFv();
+extern "C" void executeWolfEvent__10daNPC_TK_cFv();
+extern "C" void calcWolfDemoCam__10daNPC_TK_cFv();
+extern "C" void calcWolfDemoCam2__10daNPC_TK_cFv();
+extern "C" void executeWolfPerch__10daNPC_TK_cFv();
+extern "C" void executeResistanceDemo__10daNPC_TK_cFv();
+extern "C" void setHawkSideCamera__10daNPC_TK_cF4cXyz();
+extern "C" void setHawkCamera__10daNPC_TK_cFP10fopAc_ac_c();
+extern "C" void endHawkCamera__10daNPC_TK_cFv();
+extern "C" void calcDemoCamera__10daNPC_TK_cFv();
+extern "C" void checkActionSet__10daNPC_TK_cFv();
+extern "C" void action__10daNPC_TK_cFv();
+extern "C" void mtx_set__10daNPC_TK_cFv();
+extern "C" void cc_set__10daNPC_TK_cFv();
+extern "C" void execute__10daNPC_TK_cFv();
+extern "C" void daNPC_TK_Execute__FP10daNPC_TK_c();
+extern "C" bool daNPC_TK_IsDelete__FP10daNPC_TK_c();
+extern "C" void _delete__10daNPC_TK_cFv();
+extern "C" void daNPC_TK_Delete__FP10daNPC_TK_c();
+extern "C" void ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__10daNPC_TK_cFP8J3DJointi();
+extern "C" void CreateHeap__10daNPC_TK_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__10daNPC_TK_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void daNPC_TK_Create__FP10daNPC_TK_c();
+extern "C" void __dt__14daNPC_TK_HIO_cFv();
+extern "C" void __sinit_d_a_npc_tk_cpp();
+extern "C" void func_80B0C188();
+extern "C" void func_80B0C190();
+extern "C" void checkNowWolf__9daPy_py_cFv();
 SECTION_RODATA extern const u32 lit_3999;
 SECTION_RODATA extern const u32 lit_4000;
 SECTION_RODATA extern const u32 lit_4001;
@@ -261,8 +371,11 @@ SECTION_BSS extern u8 data_80B0C6C8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -272,7 +385,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNPC_TK_HIO_cFv) {
+asm daNPC_TK_HIO_c::daNPC_TK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__ct__14daNPC_TK_HIO_cFv.s"
 }
@@ -283,7 +396,7 @@ ASM_FUNCTION(__ct__14daNPC_TK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__10daNPC_TK_cFiUcff) {
+asm void daNPC_TK_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setBck__10daNPC_TK_cFiUcff.s"
 }
@@ -294,7 +407,7 @@ ASM_FUNCTION(setBck__10daNPC_TK_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__10daNPC_TK_cFi) {
+asm void daNPC_TK_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkBck__10daNPC_TK_cFi.s"
 }
@@ -305,7 +418,7 @@ ASM_FUNCTION(checkBck__10daNPC_TK_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/draw__10daNPC_TK_cFv.s"
 }
@@ -316,7 +429,7 @@ ASM_FUNCTION(draw__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__dt__4cXyzFv.s"
 }
@@ -327,7 +440,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TK_Draw__FP10daNPC_TK_c) {
+asm void daNPC_TK_Draw(daNPC_TK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_Draw__FP10daNPC_TK_c.s"
 }
@@ -338,7 +451,7 @@ ASM_FUNCTION(daNPC_TK_Draw__FP10daNPC_TK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBeforeBg__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::checkBeforeBg() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkBeforeBg__10daNPC_TK_cFv.s"
 }
@@ -349,7 +462,7 @@ ASM_FUNCTION(checkBeforeBg__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__10daNPC_TK_cFi) {
+asm void daNPC_TK_c::setActionMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setActionMode__10daNPC_TK_cFi.s"
 }
@@ -360,7 +473,7 @@ ASM_FUNCTION(setActionMode__10daNPC_TK_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAddCalcSpeedXZ__10daNPC_TK_cFR4cXyzRC4cXyzfff) {
+asm void daNPC_TK_c::setAddCalcSpeedXZ(cXyz& field_0, cXyz const& field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setAddCalcSpeedXZ__10daNPC_TK_cFR4cXyzRC4cXyzfff.s"
 }
@@ -371,7 +484,7 @@ ASM_FUNCTION(setAddCalcSpeedXZ__10daNPC_TK_cFR4cXyzRC4cXyzfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chaseTargetPos__10daNPC_TK_cF4cXyzffs) {
+extern "C" asm void chaseTargetPos__10daNPC_TK_cF4cXyzffs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/chaseTargetPos__10daNPC_TK_cF4cXyzffs.s"
 }
@@ -382,7 +495,7 @@ ASM_FUNCTION(chaseTargetPos__10daNPC_TK_cF4cXyzffs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMasterPointer__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::getMasterPointer() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/getMasterPointer__10daNPC_TK_cFv.s"
 }
@@ -393,7 +506,7 @@ ASM_FUNCTION(getMasterPointer__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMasterShoulder__10daNPC_TK_cFP4cXyz) {
+asm void daNPC_TK_c::setMasterShoulder(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setMasterShoulder__10daNPC_TK_cFP4cXyz.s"
 }
@@ -404,7 +517,7 @@ ASM_FUNCTION(setMasterShoulder__10daNPC_TK_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAwayAction__10daNPC_TK_cFi) {
+asm void daNPC_TK_c::setAwayAction(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setAwayAction__10daNPC_TK_cFi.s"
 }
@@ -415,7 +528,7 @@ ASM_FUNCTION(setAwayAction__10daNPC_TK_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlySE__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::setFlySE() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setFlySE__10daNPC_TK_cFv.s"
 }
@@ -426,7 +539,7 @@ ASM_FUNCTION(setFlySE__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRangeOfTake__FP10fopAc_ac_cP10fopAc_ac_c) {
+asm void checkRangeOfTake(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkRangeOfTake__FP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -437,7 +550,7 @@ ASM_FUNCTION(checkRangeOfTake__FP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_sub__FPvPv) {
+asm void s_obj_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/s_obj_sub__FPvPv.s"
 }
@@ -448,7 +561,7 @@ ASM_FUNCTION(s_obj_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_hanjo__FPvPv) {
+asm void s_hanjo(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/s_hanjo__FPvPv.s"
 }
@@ -459,7 +572,7 @@ ASM_FUNCTION(s_hanjo__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFly__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeFly() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeFly__10daNPC_TK_cFv.s"
 }
@@ -470,7 +583,7 @@ ASM_FUNCTION(executeFly__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPerchDemo__10daNPC_TK_cFi) {
+asm void daNPC_TK_c::initPerchDemo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/initPerchDemo__10daNPC_TK_cFi.s"
 }
@@ -481,7 +594,7 @@ ASM_FUNCTION(initPerchDemo__10daNPC_TK_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePerchDemo__10daNPC_TK_cFi) {
+asm void daNPC_TK_c::executePerchDemo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executePerchDemo__10daNPC_TK_cFi.s"
 }
@@ -492,7 +605,7 @@ ASM_FUNCTION(executePerchDemo__10daNPC_TK_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePerch__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executePerch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executePerch__10daNPC_TK_cFv.s"
 }
@@ -503,7 +616,7 @@ ASM_FUNCTION(executePerch__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeHandOn__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeHandOn() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeHandOn__10daNPC_TK_cFv.s"
 }
@@ -514,7 +627,7 @@ ASM_FUNCTION(executeHandOn__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterSurface__10daNPC_TK_cFf) {
+asm void daNPC_TK_c::checkWaterSurface(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkWaterSurface__10daNPC_TK_cFf.s"
 }
@@ -525,7 +638,7 @@ ASM_FUNCTION(checkWaterSurface__10daNPC_TK_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttack__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeAttack() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeAttack__10daNPC_TK_cFv.s"
 }
@@ -536,7 +649,7 @@ ASM_FUNCTION(executeAttack__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAway__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeAway() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeAway__10daNPC_TK_cFv.s"
 }
@@ -547,7 +660,7 @@ ASM_FUNCTION(executeAway__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCarryActorMtx__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::setCarryActorMtx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setCarryActorMtx__10daNPC_TK_cFv.s"
 }
@@ -558,7 +671,7 @@ ASM_FUNCTION(setCarryActorMtx__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTakePosY__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::getTakePosY() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/getTakePosY__10daNPC_TK_cFv.s"
 }
@@ -569,7 +682,7 @@ ASM_FUNCTION(getTakePosY__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTakeOffPosY__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::getTakeOffPosY() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/getTakeOffPosY__10daNPC_TK_cFv.s"
 }
@@ -580,7 +693,7 @@ ASM_FUNCTION(getTakeOffPosY__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBack__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeBack() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeBack__10daNPC_TK_cFv.s"
 }
@@ -591,7 +704,7 @@ ASM_FUNCTION(executeBack__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHanjoHandPos__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::getHanjoHandPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/getHanjoHandPos__10daNPC_TK_cFv.s"
 }
@@ -602,7 +715,7 @@ ASM_FUNCTION(getHanjoHandPos__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeStayHanjo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeStayHanjo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeStayHanjo__10daNPC_TK_cFv.s"
 }
@@ -613,7 +726,7 @@ ASM_FUNCTION(executeStayHanjo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttackLink__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeAttackLink() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeAttackLink__10daNPC_TK_cFv.s"
 }
@@ -624,7 +737,7 @@ ASM_FUNCTION(executeAttackLink__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBackHanjo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeBackHanjo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeBackHanjo__10daNPC_TK_cFv.s"
 }
@@ -635,7 +748,7 @@ ASM_FUNCTION(executeBackHanjo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAttackDemo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::checkAttackDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkAttackDemo__10daNPC_TK_cFv.s"
 }
@@ -646,7 +759,7 @@ ASM_FUNCTION(checkAttackDemo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttackDemo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeAttackDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeAttackDemo__10daNPC_TK_cFv.s"
 }
@@ -657,7 +770,7 @@ ASM_FUNCTION(executeAttackDemo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBackHanjoDemo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeBackHanjoDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeBackHanjoDemo__10daNPC_TK_cFv.s"
 }
@@ -668,7 +781,7 @@ ASM_FUNCTION(executeBackHanjoDemo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWolfEvent__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeWolfEvent() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeWolfEvent__10daNPC_TK_cFv.s"
 }
@@ -679,7 +792,7 @@ ASM_FUNCTION(executeWolfEvent__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcWolfDemoCam__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::calcWolfDemoCam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/calcWolfDemoCam__10daNPC_TK_cFv.s"
 }
@@ -690,7 +803,7 @@ ASM_FUNCTION(calcWolfDemoCam__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcWolfDemoCam2__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::calcWolfDemoCam2() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/calcWolfDemoCam2__10daNPC_TK_cFv.s"
 }
@@ -701,7 +814,7 @@ ASM_FUNCTION(calcWolfDemoCam2__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWolfPerch__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeWolfPerch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeWolfPerch__10daNPC_TK_cFv.s"
 }
@@ -712,7 +825,7 @@ ASM_FUNCTION(executeWolfPerch__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeResistanceDemo__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::executeResistanceDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/executeResistanceDemo__10daNPC_TK_cFv.s"
 }
@@ -723,7 +836,7 @@ ASM_FUNCTION(executeResistanceDemo__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHawkSideCamera__10daNPC_TK_cF4cXyz) {
+asm void daNPC_TK_c::setHawkSideCamera(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setHawkSideCamera__10daNPC_TK_cF4cXyz.s"
 }
@@ -734,7 +847,7 @@ ASM_FUNCTION(setHawkSideCamera__10daNPC_TK_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHawkCamera__10daNPC_TK_cFP10fopAc_ac_c) {
+asm void daNPC_TK_c::setHawkCamera(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/setHawkCamera__10daNPC_TK_cFP10fopAc_ac_c.s"
 }
@@ -745,7 +858,7 @@ ASM_FUNCTION(setHawkCamera__10daNPC_TK_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endHawkCamera__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::endHawkCamera() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/endHawkCamera__10daNPC_TK_cFv.s"
 }
@@ -756,7 +869,7 @@ ASM_FUNCTION(endHawkCamera__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcDemoCamera__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::calcDemoCamera() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/calcDemoCamera__10daNPC_TK_cFv.s"
 }
@@ -767,7 +880,7 @@ ASM_FUNCTION(calcDemoCamera__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkActionSet__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::checkActionSet() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkActionSet__10daNPC_TK_cFv.s"
 }
@@ -778,7 +891,7 @@ ASM_FUNCTION(checkActionSet__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/action__10daNPC_TK_cFv.s"
 }
@@ -789,7 +902,7 @@ ASM_FUNCTION(action__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/mtx_set__10daNPC_TK_cFv.s"
 }
@@ -800,7 +913,7 @@ ASM_FUNCTION(mtx_set__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/cc_set__10daNPC_TK_cFv.s"
 }
@@ -811,7 +924,7 @@ ASM_FUNCTION(cc_set__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/execute__10daNPC_TK_cFv.s"
 }
@@ -822,7 +935,7 @@ ASM_FUNCTION(execute__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TK_Execute__FP10daNPC_TK_c) {
+asm void daNPC_TK_Execute(daNPC_TK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_Execute__FP10daNPC_TK_c.s"
 }
@@ -830,21 +943,16 @@ ASM_FUNCTION(daNPC_TK_Execute__FP10daNPC_TK_c) {
 
 
 /* 80B0B910-80B0B918 0008+00 .text      daNPC_TK_IsDelete__FP10daNPC_TK_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TK_IsDelete__FP10daNPC_TK_c) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_IsDelete__FP10daNPC_TK_c.s"
+bool daNPC_TK_IsDelete(daNPC_TK_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B0B918-80B0B98C 0074+00 .text      _delete__10daNPC_TK_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/_delete__10daNPC_TK_cFv.s"
 }
@@ -855,7 +963,7 @@ ASM_FUNCTION(_delete__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TK_Delete__FP10daNPC_TK_c) {
+asm void daNPC_TK_Delete(daNPC_TK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_Delete__FP10daNPC_TK_c.s"
 }
@@ -866,7 +974,7 @@ ASM_FUNCTION(daNPC_TK_Delete__FP10daNPC_TK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel) {
+asm void daNPC_TK_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel.s"
 }
@@ -877,7 +985,7 @@ ASM_FUNCTION(ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__10daNPC_TK_cFP8J3DJointi) {
+asm void daNPC_TK_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/JointCallBack__10daNPC_TK_cFP8J3DJointi.s"
 }
@@ -888,7 +996,7 @@ ASM_FUNCTION(JointCallBack__10daNPC_TK_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/CreateHeap__10daNPC_TK_cFv.s"
 }
@@ -899,7 +1007,7 @@ ASM_FUNCTION(CreateHeap__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -910,7 +1018,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daNPC_TK_cFv) {
+asm void daNPC_TK_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/create__10daNPC_TK_cFv.s"
 }
@@ -921,7 +1029,7 @@ ASM_FUNCTION(create__10daNPC_TK_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__dt__8cM3dGSphFv.s"
 }
@@ -932,7 +1040,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__dt__8cM3dGAabFv.s"
 }
@@ -943,7 +1051,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -951,21 +1059,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80B0C0E0-80B0C0E4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B0C0E4-80B0C104 0020+00 .text      daNPC_TK_Create__FP10daNPC_TK_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_TK_Create__FP10daNPC_TK_c) {
+asm void daNPC_TK_Create(daNPC_TK_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_Create__FP10daNPC_TK_c.s"
 }
@@ -976,7 +1079,7 @@ ASM_FUNCTION(daNPC_TK_Create__FP10daNPC_TK_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNPC_TK_HIO_cFv) {
+asm daNPC_TK_HIO_c::~daNPC_TK_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__dt__14daNPC_TK_HIO_cFv.s"
 }
@@ -987,7 +1090,7 @@ ASM_FUNCTION(__dt__14daNPC_TK_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_tk_cpp) {
+extern "C" asm void __sinit_d_a_npc_tk_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__sinit_d_a_npc_tk_cpp.s"
 }
@@ -998,7 +1101,7 @@ ASM_FUNCTION(__sinit_d_a_npc_tk_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B0C188) {
+extern "C" asm void func_80B0C188() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/func_80B0C188.s"
 }
@@ -1009,7 +1112,7 @@ ASM_FUNCTION(func_80B0C188) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B0C190) {
+extern "C" asm void func_80B0C190() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/func_80B0C190.s"
 }
@@ -1020,7 +1123,7 @@ ASM_FUNCTION(func_80B0C190) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNowWolf__9daPy_py_cFv) {
+asm void daPy_py_c::checkNowWolf() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/checkNowWolf__9daPy_py_cFv.s"
 }

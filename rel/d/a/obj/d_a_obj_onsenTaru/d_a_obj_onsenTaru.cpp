@@ -6,48 +6,128 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daOnsTaru_c;
+
+struct daOnsTaru_HIO_c {
+	daOnsTaru_HIO_c();
+	~daOnsTaru_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daOnsTaru_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void chkSinkAll();
+	void chkWaterLineIn();
+	void bgCheck();
+	void Execute();
+	void mode_proc_call();
+	void mode_init_wait();
+	void mode_proc_wait();
+	void mode_init_carry();
+	void mode_proc_carry();
+	void mode_init_drop();
+	void mode_proc_drop();
+	void mode_init_break();
+	void mode_proc_break();
+	void mode_init_sink();
+	void mode_proc_sink();
+	void breakEffSet();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daOnsTaru_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daOnsTaru_cFv();
-extern "C" extern void CreateHeap__11daOnsTaru_cFv();
-extern "C" extern void create__11daOnsTaru_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void createHeapCallBack__11daOnsTaru_cFP10fopAc_ac_c();
-extern "C" extern void chkSinkAll__11daOnsTaru_cFv();
-extern "C" extern void chkWaterLineIn__11daOnsTaru_cFv();
-extern "C" extern void bgCheck__11daOnsTaru_cFv();
-extern "C" extern void Execute__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_call__11daOnsTaru_cFv();
-extern "C" extern void mode_init_wait__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_wait__11daOnsTaru_cFv();
-extern "C" extern void mode_init_carry__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_carry__11daOnsTaru_cFv();
-extern "C" extern void mode_init_drop__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_drop__11daOnsTaru_cFv();
-extern "C" extern void mode_init_break__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_break__11daOnsTaru_cFv();
-extern "C" extern void mode_init_sink__11daOnsTaru_cFv();
-extern "C" extern void mode_proc_sink__11daOnsTaru_cFv();
-extern "C" extern void breakEffSet__11daOnsTaru_cFv();
-extern "C" extern void Draw__11daOnsTaru_cFv();
-extern "C" extern void Delete__11daOnsTaru_cFv();
-extern "C" extern void daOnsTaru_Draw__FP11daOnsTaru_c();
-extern "C" extern void daOnsTaru_Execute__FP11daOnsTaru_c();
-extern "C" extern void daOnsTaru_Delete__FP11daOnsTaru_c();
-extern "C" extern void daOnsTaru_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daOnsTaru_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_onsenTaru_cpp();
-extern "C" extern void func_80CA9B54();
-extern "C" extern void func_80CA9B5C();
+void daOnsTaru_Draw(daOnsTaru_c*);
+void daOnsTaru_Execute(daOnsTaru_c*);
+void daOnsTaru_Delete(daOnsTaru_c*);
+void daOnsTaru_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_onsenTaru_cpp();
+extern "C" void func_80CA9B54();
+extern "C" void func_80CA9B5C();
+
+extern "C" void __ct__15daOnsTaru_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daOnsTaru_cFv();
+extern "C" void CreateHeap__11daOnsTaru_cFv();
+extern "C" void create__11daOnsTaru_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void createHeapCallBack__11daOnsTaru_cFP10fopAc_ac_c();
+extern "C" void chkSinkAll__11daOnsTaru_cFv();
+extern "C" void chkWaterLineIn__11daOnsTaru_cFv();
+extern "C" void bgCheck__11daOnsTaru_cFv();
+extern "C" void Execute__11daOnsTaru_cFv();
+extern "C" void mode_proc_call__11daOnsTaru_cFv();
+extern "C" void mode_init_wait__11daOnsTaru_cFv();
+extern "C" void mode_proc_wait__11daOnsTaru_cFv();
+extern "C" void mode_init_carry__11daOnsTaru_cFv();
+extern "C" void mode_proc_carry__11daOnsTaru_cFv();
+extern "C" void mode_init_drop__11daOnsTaru_cFv();
+extern "C" void mode_proc_drop__11daOnsTaru_cFv();
+extern "C" void mode_init_break__11daOnsTaru_cFv();
+extern "C" void mode_proc_break__11daOnsTaru_cFv();
+extern "C" void mode_init_sink__11daOnsTaru_cFv();
+extern "C" void mode_proc_sink__11daOnsTaru_cFv();
+extern "C" void breakEffSet__11daOnsTaru_cFv();
+extern "C" void Draw__11daOnsTaru_cFv();
+extern "C" void Delete__11daOnsTaru_cFv();
+extern "C" void daOnsTaru_Draw__FP11daOnsTaru_c();
+extern "C" void daOnsTaru_Execute__FP11daOnsTaru_c();
+extern "C" void daOnsTaru_Delete__FP11daOnsTaru_c();
+extern "C" void daOnsTaru_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daOnsTaru_HIO_cFv();
+extern "C" void __sinit_d_a_obj_onsenTaru_cpp();
+extern "C" void func_80CA9B54();
+extern "C" void func_80CA9B5C();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u8 mCcDObjInfo__11daOnsTaru_c[48];
@@ -99,8 +179,11 @@ SECTION_BSS extern u8 data_80CA9E04[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -110,7 +193,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daOnsTaru_HIO_cFv) {
+asm daOnsTaru_HIO_c::daOnsTaru_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__ct__15daOnsTaru_HIO_cFv.s"
 }
@@ -121,7 +204,7 @@ ASM_FUNCTION(__ct__15daOnsTaru_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -132,7 +215,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -143,7 +226,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/setBaseMtx__11daOnsTaru_cFv.s"
 }
@@ -154,7 +237,7 @@ ASM_FUNCTION(setBaseMtx__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/CreateHeap__11daOnsTaru_cFv.s"
 }
@@ -165,7 +248,7 @@ ASM_FUNCTION(CreateHeap__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/create__11daOnsTaru_cFv.s"
 }
@@ -176,7 +259,7 @@ ASM_FUNCTION(create__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__8cM3dGCylFv.s"
 }
@@ -187,7 +270,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__8cM3dGAabFv.s"
 }
@@ -198,7 +281,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__10dCcD_GSttsFv.s"
 }
@@ -209,7 +292,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__12dBgS_AcchCirFv.s"
 }
@@ -220,7 +303,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -231,7 +314,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__11daOnsTaru_cFP10fopAc_ac_c) {
+asm void daOnsTaru_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/createHeapCallBack__11daOnsTaru_cFP10fopAc_ac_c.s"
 }
@@ -242,7 +325,7 @@ ASM_FUNCTION(createHeapCallBack__11daOnsTaru_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSinkAll__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::chkSinkAll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/chkSinkAll__11daOnsTaru_cFv.s"
 }
@@ -253,7 +336,7 @@ ASM_FUNCTION(chkSinkAll__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWaterLineIn__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::chkWaterLineIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/chkWaterLineIn__11daOnsTaru_cFv.s"
 }
@@ -264,7 +347,7 @@ ASM_FUNCTION(chkWaterLineIn__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/bgCheck__11daOnsTaru_cFv.s"
 }
@@ -275,7 +358,7 @@ ASM_FUNCTION(bgCheck__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/Execute__11daOnsTaru_cFv.s"
 }
@@ -286,7 +369,7 @@ ASM_FUNCTION(Execute__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_call__11daOnsTaru_cFv.s"
 }
@@ -297,7 +380,7 @@ ASM_FUNCTION(mode_proc_call__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_init_wait__11daOnsTaru_cFv.s"
 }
@@ -308,7 +391,7 @@ ASM_FUNCTION(mode_init_wait__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_wait__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_proc_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_wait__11daOnsTaru_cFv.s"
 }
@@ -319,7 +402,7 @@ ASM_FUNCTION(mode_proc_wait__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_carry__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_init_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_init_carry__11daOnsTaru_cFv.s"
 }
@@ -330,7 +413,7 @@ ASM_FUNCTION(mode_init_carry__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_carry__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_proc_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_carry__11daOnsTaru_cFv.s"
 }
@@ -341,7 +424,7 @@ ASM_FUNCTION(mode_proc_carry__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_drop__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_init_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_init_drop__11daOnsTaru_cFv.s"
 }
@@ -352,7 +435,7 @@ ASM_FUNCTION(mode_init_drop__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_drop__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_proc_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_drop__11daOnsTaru_cFv.s"
 }
@@ -363,7 +446,7 @@ ASM_FUNCTION(mode_proc_drop__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_break__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_init_break() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_init_break__11daOnsTaru_cFv.s"
 }
@@ -371,21 +454,16 @@ ASM_FUNCTION(mode_init_break__11daOnsTaru_cFv) {
 
 
 /* 80CA9514-80CA9518 0004+00 .text      mode_proc_break__11daOnsTaru_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_break__11daOnsTaru_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_break__11daOnsTaru_cFv.s"
+void daOnsTaru_c::mode_proc_break() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA9518-80CA9530 0018+00 .text      mode_init_sink__11daOnsTaru_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_sink__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_init_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_init_sink__11daOnsTaru_cFv.s"
 }
@@ -396,7 +474,7 @@ ASM_FUNCTION(mode_init_sink__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_sink__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::mode_proc_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_sink__11daOnsTaru_cFv.s"
 }
@@ -407,7 +485,7 @@ ASM_FUNCTION(mode_proc_sink__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(breakEffSet__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::breakEffSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/breakEffSet__11daOnsTaru_cFv.s"
 }
@@ -418,7 +496,7 @@ ASM_FUNCTION(breakEffSet__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/Draw__11daOnsTaru_cFv.s"
 }
@@ -429,7 +507,7 @@ ASM_FUNCTION(Draw__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daOnsTaru_cFv) {
+asm void daOnsTaru_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/Delete__11daOnsTaru_cFv.s"
 }
@@ -440,7 +518,7 @@ ASM_FUNCTION(Delete__11daOnsTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOnsTaru_Draw__FP11daOnsTaru_c) {
+asm void daOnsTaru_Draw(daOnsTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/daOnsTaru_Draw__FP11daOnsTaru_c.s"
 }
@@ -451,7 +529,7 @@ ASM_FUNCTION(daOnsTaru_Draw__FP11daOnsTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOnsTaru_Execute__FP11daOnsTaru_c) {
+asm void daOnsTaru_Execute(daOnsTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/daOnsTaru_Execute__FP11daOnsTaru_c.s"
 }
@@ -462,7 +540,7 @@ ASM_FUNCTION(daOnsTaru_Execute__FP11daOnsTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOnsTaru_Delete__FP11daOnsTaru_c) {
+asm void daOnsTaru_Delete(daOnsTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/daOnsTaru_Delete__FP11daOnsTaru_c.s"
 }
@@ -473,7 +551,7 @@ ASM_FUNCTION(daOnsTaru_Delete__FP11daOnsTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daOnsTaru_Create__FP10fopAc_ac_c) {
+asm void daOnsTaru_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/daOnsTaru_Create__FP10fopAc_ac_c.s"
 }
@@ -484,7 +562,7 @@ ASM_FUNCTION(daOnsTaru_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__10cCcD_GSttsFv.s"
 }
@@ -495,7 +573,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daOnsTaru_HIO_cFv) {
+asm daOnsTaru_HIO_c::~daOnsTaru_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__dt__15daOnsTaru_HIO_cFv.s"
 }
@@ -506,7 +584,7 @@ ASM_FUNCTION(__dt__15daOnsTaru_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_onsenTaru_cpp) {
+extern "C" asm void __sinit_d_a_obj_onsenTaru_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/__sinit_d_a_obj_onsenTaru_cpp.s"
 }
@@ -517,7 +595,7 @@ ASM_FUNCTION(__sinit_d_a_obj_onsenTaru_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CA9B54) {
+extern "C" asm void func_80CA9B54() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/func_80CA9B54.s"
 }
@@ -528,7 +606,7 @@ ASM_FUNCTION(func_80CA9B54) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CA9B5C) {
+extern "C" asm void func_80CA9B5C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/func_80CA9B5C.s"
 }

@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void modf();
+extern "C" void modf();
+
+extern "C" void modf();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8036C494-8036C590 00FC+00 .text      modf                                                         */
+/* 8036C494-8036C590 00FC+00 rc=1 efc=1 .text      modf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modf) {
+extern "C" asm void modf() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/s_modf/modf.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,39 +6,111 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daCstaF_c;
+struct fopAc_ac_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daCstaF_c {
+	void CreateHeap();
+	void checkCoverModel();
+	void create();
+	~daCstaF_c();
+	void setRoomInfo();
+	void setMatrix();
+	void posMove();
+	void setCollision();
+	void setAnime();
+	void initBrk(u16);
+	void initStopBrkBtk();
+	void initStartBrkBtk();
+	void Draw();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_StatueAcch {
+	~dBgS_StatueAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daCstaF_rideCB__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void CreateHeap__9daCstaF_cFv();
-extern "C" extern void checkCoverModel__9daCstaF_cFv();
-extern "C" extern void create__9daCstaF_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__15dBgS_StatueAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daCstaF_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__9daCstaF_cFv();
-extern "C" extern void daCstaF_Delete__FP9daCstaF_c();
-extern "C" extern void setRoomInfo__9daCstaF_cFv();
-extern "C" extern void setMatrix__9daCstaF_cFv();
-extern "C" extern void posMove__9daCstaF_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setCollision__9daCstaF_cFv();
-extern "C" extern void setAnime__9daCstaF_cFv();
-extern "C" extern void initBrk__9daCstaF_cFUs();
-extern "C" extern void initStopBrkBtk__9daCstaF_cFv();
-extern "C" extern void initStartBrkBtk__9daCstaF_cFv();
-extern "C" extern void Execute__9daCstaF_cFPPA3_A4_f();
-extern "C" extern void daCstaF_Execute__FP9daCstaF_c();
-extern "C" extern void Draw__9daCstaF_cFv();
-extern "C" extern void daCstaF_Draw__FP9daCstaF_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_cstaF_cpp();
-extern "C" extern void func_804DF89C();
-extern "C" extern void func_804DF8A4();
+void daCstaF_rideCB(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daCstaF_Create(fopAc_ac_c*);
+void daCstaF_Delete(daCstaF_c*);
+extern "C" void Execute__9daCstaF_cFPPA3_A4_f();
+void daCstaF_Execute(daCstaF_c*);
+void daCstaF_Draw(daCstaF_c*);
+extern "C" void __sinit_d_a_cstaF_cpp();
+extern "C" void func_804DF89C();
+extern "C" void func_804DF8A4();
+
+extern "C" void daCstaF_rideCB__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void CreateHeap__9daCstaF_cFv();
+extern "C" void checkCoverModel__9daCstaF_cFv();
+extern "C" void create__9daCstaF_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__15dBgS_StatueAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daCstaF_Create__FP10fopAc_ac_c();
+extern "C" void __dt__9daCstaF_cFv();
+extern "C" void daCstaF_Delete__FP9daCstaF_c();
+extern "C" void setRoomInfo__9daCstaF_cFv();
+extern "C" void setMatrix__9daCstaF_cFv();
+extern "C" void posMove__9daCstaF_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setCollision__9daCstaF_cFv();
+extern "C" void setAnime__9daCstaF_cFv();
+extern "C" void initBrk__9daCstaF_cFUs();
+extern "C" void initStopBrkBtk__9daCstaF_cFv();
+extern "C" void initStartBrkBtk__9daCstaF_cFv();
+extern "C" void Execute__9daCstaF_cFPPA3_A4_f();
+extern "C" void daCstaF_Execute__FP9daCstaF_c();
+extern "C" void Draw__9daCstaF_cFv();
+extern "C" void daCstaF_Draw__FP9daCstaF_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_cstaF_cpp();
+extern "C" void func_804DF89C();
+extern "C" void func_804DF8A4();
 SECTION_RODATA extern const u8 lit_3765[12];
 SECTION_RODATA extern const u8 l_arcNameF[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 l_arcNameFB[7 + 1 /* padding */];
@@ -97,7 +169,9 @@ SECTION_BSS extern u8 l_cancelOffset[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -107,7 +181,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstaF_rideCB__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daCstaF_rideCB(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/daCstaF_rideCB__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -118,7 +192,7 @@ ASM_FUNCTION(daCstaF_rideCB__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daCstaF_cFv) {
+asm void daCstaF_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/CreateHeap__9daCstaF_cFv.s"
 }
@@ -129,7 +203,7 @@ ASM_FUNCTION(CreateHeap__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCoverModel__9daCstaF_cFv) {
+asm void daCstaF_c::checkCoverModel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/checkCoverModel__9daCstaF_cFv.s"
 }
@@ -140,7 +214,7 @@ ASM_FUNCTION(checkCoverModel__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daCstaF_cFv) {
+asm void daCstaF_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/create__9daCstaF_cFv.s"
 }
@@ -151,7 +225,7 @@ ASM_FUNCTION(create__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__8cM3dGCylFv.s"
 }
@@ -162,7 +236,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__8cM3dGAabFv.s"
 }
@@ -173,7 +247,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__10dCcD_GSttsFv.s"
 }
@@ -184,7 +258,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dBgS_StatueAcchFv) {
+asm dBgS_StatueAcch::~dBgS_StatueAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__15dBgS_StatueAcchFv.s"
 }
@@ -195,7 +269,7 @@ ASM_FUNCTION(__dt__15dBgS_StatueAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__12dBgS_AcchCirFv.s"
 }
@@ -206,7 +280,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__12J3DFrameCtrlFv.s"
 }
@@ -217,7 +291,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstaF_Create__FP10fopAc_ac_c) {
+asm void daCstaF_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/daCstaF_Create__FP10fopAc_ac_c.s"
 }
@@ -228,7 +302,7 @@ ASM_FUNCTION(daCstaF_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daCstaF_cFv) {
+asm daCstaF_c::~daCstaF_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__9daCstaF_cFv.s"
 }
@@ -239,7 +313,7 @@ ASM_FUNCTION(__dt__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstaF_Delete__FP9daCstaF_c) {
+asm void daCstaF_Delete(daCstaF_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/daCstaF_Delete__FP9daCstaF_c.s"
 }
@@ -250,7 +324,7 @@ ASM_FUNCTION(daCstaF_Delete__FP9daCstaF_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daCstaF_cFv) {
+asm void daCstaF_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/setRoomInfo__9daCstaF_cFv.s"
 }
@@ -261,7 +335,7 @@ ASM_FUNCTION(setRoomInfo__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__9daCstaF_cFv) {
+asm void daCstaF_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/setMatrix__9daCstaF_cFv.s"
 }
@@ -272,7 +346,7 @@ ASM_FUNCTION(setMatrix__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMove__9daCstaF_cFv) {
+asm void daCstaF_c::posMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/posMove__9daCstaF_cFv.s"
 }
@@ -283,7 +357,7 @@ ASM_FUNCTION(posMove__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__8cM3dGPlaFv.s"
 }
@@ -294,7 +368,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__9daCstaF_cFv) {
+asm void daCstaF_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/setCollision__9daCstaF_cFv.s"
 }
@@ -305,7 +379,7 @@ ASM_FUNCTION(setCollision__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnime__9daCstaF_cFv) {
+asm void daCstaF_c::setAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/setAnime__9daCstaF_cFv.s"
 }
@@ -316,7 +390,7 @@ ASM_FUNCTION(setAnime__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBrk__9daCstaF_cFUs) {
+asm void daCstaF_c::initBrk(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/initBrk__9daCstaF_cFUs.s"
 }
@@ -327,7 +401,7 @@ ASM_FUNCTION(initBrk__9daCstaF_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initStopBrkBtk__9daCstaF_cFv) {
+asm void daCstaF_c::initStopBrkBtk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/initStopBrkBtk__9daCstaF_cFv.s"
 }
@@ -338,7 +412,7 @@ ASM_FUNCTION(initStopBrkBtk__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initStartBrkBtk__9daCstaF_cFv) {
+asm void daCstaF_c::initStartBrkBtk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/initStartBrkBtk__9daCstaF_cFv.s"
 }
@@ -349,7 +423,7 @@ ASM_FUNCTION(initStartBrkBtk__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daCstaF_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daCstaF_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/Execute__9daCstaF_cFPPA3_A4_f.s"
 }
@@ -360,7 +434,7 @@ ASM_FUNCTION(Execute__9daCstaF_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstaF_Execute__FP9daCstaF_c) {
+asm void daCstaF_Execute(daCstaF_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/daCstaF_Execute__FP9daCstaF_c.s"
 }
@@ -371,7 +445,7 @@ ASM_FUNCTION(daCstaF_Execute__FP9daCstaF_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daCstaF_cFv) {
+asm void daCstaF_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/Draw__9daCstaF_cFv.s"
 }
@@ -382,7 +456,7 @@ ASM_FUNCTION(Draw__9daCstaF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstaF_Draw__FP9daCstaF_c) {
+asm void daCstaF_Draw(daCstaF_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/daCstaF_Draw__FP9daCstaF_c.s"
 }
@@ -393,7 +467,7 @@ ASM_FUNCTION(daCstaF_Draw__FP9daCstaF_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__dt__10cCcD_GSttsFv.s"
 }
@@ -404,7 +478,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_cstaF_cpp) {
+extern "C" asm void __sinit_d_a_cstaF_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/__sinit_d_a_cstaF_cpp.s"
 }
@@ -415,7 +489,7 @@ ASM_FUNCTION(__sinit_d_a_cstaF_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804DF89C) {
+extern "C" asm void func_804DF89C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/func_804DF89C.s"
 }
@@ -426,7 +500,7 @@ ASM_FUNCTION(func_804DF89C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804DF8A4) {
+extern "C" asm void func_804DF8A4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstaf/d_a_cstaF/func_804DF8A4.s"
 }

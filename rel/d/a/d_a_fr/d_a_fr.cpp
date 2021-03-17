@@ -6,40 +6,100 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct fr_class;
+
+struct daFr_HIO_c {
+	daFr_HIO_c();
+	~daFr_HIO_c();
+};
+
+struct fr_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daFr_HIO_cFv();
-extern "C" extern void anm_init__FP8fr_classifUcf();
-extern "C" extern void daFr_Draw__FP8fr_class();
-extern "C" extern void sibuki_set__FP8fr_class();
-extern "C" extern void s_wd_sub__FPvPv();
-extern "C" extern void wd_check__FP8fr_class();
-extern "C" extern void way_bg_check__FP8fr_class();
-extern "C" extern void fr_normal__FP8fr_class();
-extern "C" extern void fr_away__FP8fr_class();
-extern "C" extern void fr_s_normal__FP8fr_class();
-extern "C" extern void fr_s_wait__FP8fr_class();
-extern "C" extern void fr_s_away__FP8fr_class();
-extern "C" extern void fr_eat__FP8fr_class();
-extern "C" extern void swim_on__FP8fr_class();
-extern "C" extern void swim_off__FP8fr_class();
-extern "C" extern void fr_message__FP8fr_class();
-extern "C" extern void action__FP8fr_class();
-extern "C" extern void message__FP8fr_class();
-extern "C" extern void daFr_Execute__FP8fr_class();
-extern "C" extern void daFr_IsDelete__FP8fr_class();
-extern "C" extern void daFr_Delete__FP8fr_class();
-extern "C" extern void useHeapIfrt__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daFr_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10daFr_HIO_cFv();
-extern "C" extern void __sinit_d_a_fr_cpp();
-extern "C" extern void func_8051B9A4();
-extern "C" extern void func_8051B9AC();
+void anm_init(fr_class*, s32, f32, u8, f32);
+void daFr_Draw(fr_class*);
+void sibuki_set(fr_class*);
+void s_wd_sub(void*, void*);
+void wd_check(fr_class*);
+void way_bg_check(fr_class*);
+void fr_normal(fr_class*);
+void fr_away(fr_class*);
+void fr_s_normal(fr_class*);
+void fr_s_wait(fr_class*);
+void fr_s_away(fr_class*);
+void fr_eat(fr_class*);
+void swim_on(fr_class*);
+void swim_off(fr_class*);
+void fr_message(fr_class*);
+void action(fr_class*);
+void message(fr_class*);
+void daFr_Execute(fr_class*);
+bool daFr_IsDelete(fr_class*);
+void daFr_Delete(fr_class*);
+void useHeapIfrt(fopAc_ac_c*);
+void daFr_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_fr_cpp();
+extern "C" void func_8051B9A4();
+extern "C" void func_8051B9AC();
+
+extern "C" void __ct__10daFr_HIO_cFv();
+extern "C" void anm_init__FP8fr_classifUcf();
+extern "C" void daFr_Draw__FP8fr_class();
+extern "C" void sibuki_set__FP8fr_class();
+extern "C" void s_wd_sub__FPvPv();
+extern "C" void wd_check__FP8fr_class();
+extern "C" void way_bg_check__FP8fr_class();
+extern "C" void fr_normal__FP8fr_class();
+extern "C" void fr_away__FP8fr_class();
+extern "C" void fr_s_normal__FP8fr_class();
+extern "C" void fr_s_wait__FP8fr_class();
+extern "C" void fr_s_away__FP8fr_class();
+extern "C" void fr_eat__FP8fr_class();
+extern "C" void swim_on__FP8fr_class();
+extern "C" void swim_off__FP8fr_class();
+extern "C" void fr_message__FP8fr_class();
+extern "C" void action__FP8fr_class();
+extern "C" void message__FP8fr_class();
+extern "C" void daFr_Execute__FP8fr_class();
+extern "C" bool daFr_IsDelete__FP8fr_class();
+extern "C" void daFr_Delete__FP8fr_class();
+extern "C" void useHeapIfrt__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daFr_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10daFr_HIO_cFv();
+extern "C" void __sinit_d_a_fr_cpp();
+extern "C" void func_8051B9A4();
+extern "C" void func_8051B9AC();
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u32 lit_3651;
@@ -100,8 +160,11 @@ SECTION_BSS extern u8 l_HIO[44];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -111,7 +174,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daFr_HIO_cFv) {
+asm daFr_HIO_c::daFr_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__ct__10daFr_HIO_cFv.s"
 }
@@ -122,7 +185,7 @@ ASM_FUNCTION(__ct__10daFr_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP8fr_classifUcf) {
+asm void anm_init(fr_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/anm_init__FP8fr_classifUcf.s"
 }
@@ -133,7 +196,7 @@ ASM_FUNCTION(anm_init__FP8fr_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFr_Draw__FP8fr_class) {
+asm void daFr_Draw(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Draw__FP8fr_class.s"
 }
@@ -144,7 +207,7 @@ ASM_FUNCTION(daFr_Draw__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sibuki_set__FP8fr_class) {
+asm void sibuki_set(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/sibuki_set__FP8fr_class.s"
 }
@@ -155,7 +218,7 @@ ASM_FUNCTION(sibuki_set__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_wd_sub__FPvPv) {
+asm void s_wd_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/s_wd_sub__FPvPv.s"
 }
@@ -166,7 +229,7 @@ ASM_FUNCTION(s_wd_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wd_check__FP8fr_class) {
+asm void wd_check(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/wd_check__FP8fr_class.s"
 }
@@ -177,7 +240,7 @@ ASM_FUNCTION(wd_check__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP8fr_class) {
+asm void way_bg_check(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/way_bg_check__FP8fr_class.s"
 }
@@ -188,7 +251,7 @@ ASM_FUNCTION(way_bg_check__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_normal__FP8fr_class) {
+asm void fr_normal(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_normal__FP8fr_class.s"
 }
@@ -199,7 +262,7 @@ ASM_FUNCTION(fr_normal__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_away__FP8fr_class) {
+asm void fr_away(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_away__FP8fr_class.s"
 }
@@ -210,7 +273,7 @@ ASM_FUNCTION(fr_away__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_s_normal__FP8fr_class) {
+asm void fr_s_normal(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_s_normal__FP8fr_class.s"
 }
@@ -221,7 +284,7 @@ ASM_FUNCTION(fr_s_normal__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_s_wait__FP8fr_class) {
+asm void fr_s_wait(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_s_wait__FP8fr_class.s"
 }
@@ -232,7 +295,7 @@ ASM_FUNCTION(fr_s_wait__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_s_away__FP8fr_class) {
+asm void fr_s_away(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_s_away__FP8fr_class.s"
 }
@@ -243,7 +306,7 @@ ASM_FUNCTION(fr_s_away__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_eat__FP8fr_class) {
+asm void fr_eat(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_eat__FP8fr_class.s"
 }
@@ -254,7 +317,7 @@ ASM_FUNCTION(fr_eat__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(swim_on__FP8fr_class) {
+asm void swim_on(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/swim_on__FP8fr_class.s"
 }
@@ -265,7 +328,7 @@ ASM_FUNCTION(swim_on__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(swim_off__FP8fr_class) {
+asm void swim_off(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/swim_off__FP8fr_class.s"
 }
@@ -276,7 +339,7 @@ ASM_FUNCTION(swim_off__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_message__FP8fr_class) {
+asm void fr_message(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/fr_message__FP8fr_class.s"
 }
@@ -287,7 +350,7 @@ ASM_FUNCTION(fr_message__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP8fr_class) {
+asm void action(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/action__FP8fr_class.s"
 }
@@ -298,7 +361,7 @@ ASM_FUNCTION(action__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP8fr_class) {
+asm void message(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/message__FP8fr_class.s"
 }
@@ -309,7 +372,7 @@ ASM_FUNCTION(message__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFr_Execute__FP8fr_class) {
+asm void daFr_Execute(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Execute__FP8fr_class.s"
 }
@@ -317,21 +380,16 @@ ASM_FUNCTION(daFr_Execute__FP8fr_class) {
 
 
 /* 8051B354-8051B35C 0008+00 .text      daFr_IsDelete__FP8fr_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daFr_IsDelete__FP8fr_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_IsDelete__FP8fr_class.s"
+bool daFr_IsDelete(fr_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8051B35C-8051B3B0 0054+00 .text      daFr_Delete__FP8fr_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFr_Delete__FP8fr_class) {
+asm void daFr_Delete(fr_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Delete__FP8fr_class.s"
 }
@@ -342,7 +400,7 @@ ASM_FUNCTION(daFr_Delete__FP8fr_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapIfrt__FP10fopAc_ac_c) {
+asm void useHeapIfrt(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/useHeapIfrt__FP10fopAc_ac_c.s"
 }
@@ -353,7 +411,7 @@ ASM_FUNCTION(useHeapIfrt__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__dt__12J3DFrameCtrlFv.s"
 }
@@ -364,7 +422,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFr_Create__FP10fopAc_ac_c) {
+asm void daFr_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_Create__FP10fopAc_ac_c.s"
 }
@@ -375,7 +433,7 @@ ASM_FUNCTION(daFr_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__dt__8cM3dGSphFv.s"
 }
@@ -386,7 +444,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__dt__8cM3dGAabFv.s"
 }
@@ -397,7 +455,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -408,7 +466,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daFr_HIO_cFv) {
+asm daFr_HIO_c::~daFr_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__dt__10daFr_HIO_cFv.s"
 }
@@ -419,7 +477,7 @@ ASM_FUNCTION(__dt__10daFr_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_fr_cpp) {
+extern "C" asm void __sinit_d_a_fr_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/__sinit_d_a_fr_cpp.s"
 }
@@ -430,7 +488,7 @@ ASM_FUNCTION(__sinit_d_a_fr_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8051B9A4) {
+extern "C" asm void func_8051B9A4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/func_8051B9A4.s"
 }
@@ -441,7 +499,7 @@ ASM_FUNCTION(func_8051B9A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8051B9AC) {
+extern "C" asm void func_8051B9AC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_fr/d_a_fr/func_8051B9AC.s"
 }

@@ -6,25 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct daTagYami_c;
+
+struct daTagYami_c {
+	void create();
+	void Execute();
+	void calcCoC(cXyz&);
+	void col_set();
+	void chk_CoHit();
+	void getPlDist();
+	void onMidnaTagSw();
+	void offMidnaTagSw2();
+	void setCoC(cXyz);
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__11daTagYami_cFv();
-extern "C" extern void Execute__11daTagYami_cFv();
-extern "C" extern void calcCoC__11daTagYami_cFR4cXyz();
-extern "C" extern void col_set__11daTagYami_cFv();
-extern "C" extern void chk_CoHit__11daTagYami_cFv();
-extern "C" extern void getPlDist__11daTagYami_cFv();
-extern "C" extern void onMidnaTagSw__11daTagYami_cFv();
-extern "C" extern void offMidnaTagSw2__11daTagYami_cFv();
-extern "C" extern void daTagYami_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagYami_Execute__FP10fopAc_ac_c();
-extern "C" extern void daTagYami_Delete__FP11daTagYami_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void setCoC__11daTagYami_cF4cXyz();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daTagYami_Create(fopAc_ac_c*);
+void daTagYami_Execute(fopAc_ac_c*);
+void daTagYami_Delete(daTagYami_c*);
+
+extern "C" void create__11daTagYami_cFv();
+extern "C" void Execute__11daTagYami_cFv();
+extern "C" void calcCoC__11daTagYami_cFR4cXyz();
+extern "C" void col_set__11daTagYami_cFv();
+extern "C" void chk_CoHit__11daTagYami_cFv();
+extern "C" void getPlDist__11daTagYami_cFv();
+extern "C" void onMidnaTagSw__11daTagYami_cFv();
+extern "C" void offMidnaTagSw2__11daTagYami_cFv();
+extern "C" void daTagYami_Create__FP10fopAc_ac_c();
+extern "C" void daTagYami_Execute__FP10fopAc_ac_c();
+extern "C" void daTagYami_Delete__FP11daTagYami_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void setCoC__11daTagYami_cF4cXyz();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u8 l_sph_src[68];
 SECTION_RODATA extern const u32 lit_3726;
 SECTION_RODATA extern const u32 lit_3727;
@@ -44,7 +90,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +102,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTagYami_cFv) {
+asm void daTagYami_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/create__11daTagYami_cFv.s"
 }
@@ -65,7 +113,7 @@ ASM_FUNCTION(create__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daTagYami_cFv) {
+asm void daTagYami_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/Execute__11daTagYami_cFv.s"
 }
@@ -76,7 +124,7 @@ ASM_FUNCTION(Execute__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCoC__11daTagYami_cFR4cXyz) {
+asm void daTagYami_c::calcCoC(cXyz& field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/calcCoC__11daTagYami_cFR4cXyz.s"
 }
@@ -84,21 +132,16 @@ ASM_FUNCTION(calcCoC__11daTagYami_cFR4cXyz) {
 
 
 /* 80D65D08-80D65D0C 0004+00 .text      col_set__11daTagYami_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(col_set__11daTagYami_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/col_set__11daTagYami_cFv.s"
+void daTagYami_c::col_set() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D65D0C-80D65D60 0054+00 .text      chk_CoHit__11daTagYami_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chk_CoHit__11daTagYami_cFv) {
+asm void daTagYami_c::chk_CoHit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/chk_CoHit__11daTagYami_cFv.s"
 }
@@ -109,7 +152,7 @@ ASM_FUNCTION(chk_CoHit__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlDist__11daTagYami_cFv) {
+asm void daTagYami_c::getPlDist() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/getPlDist__11daTagYami_cFv.s"
 }
@@ -120,7 +163,7 @@ ASM_FUNCTION(getPlDist__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMidnaTagSw__11daTagYami_cFv) {
+asm void daTagYami_c::onMidnaTagSw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/onMidnaTagSw__11daTagYami_cFv.s"
 }
@@ -131,7 +174,7 @@ ASM_FUNCTION(onMidnaTagSw__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offMidnaTagSw2__11daTagYami_cFv) {
+asm void daTagYami_c::offMidnaTagSw2() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/offMidnaTagSw2__11daTagYami_cFv.s"
 }
@@ -142,7 +185,7 @@ ASM_FUNCTION(offMidnaTagSw2__11daTagYami_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagYami_Create__FP10fopAc_ac_c) {
+asm void daTagYami_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/daTagYami_Create__FP10fopAc_ac_c.s"
 }
@@ -153,7 +196,7 @@ ASM_FUNCTION(daTagYami_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagYami_Execute__FP10fopAc_ac_c) {
+asm void daTagYami_Execute(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/daTagYami_Execute__FP10fopAc_ac_c.s"
 }
@@ -164,7 +207,7 @@ ASM_FUNCTION(daTagYami_Execute__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagYami_Delete__FP11daTagYami_c) {
+asm void daTagYami_Delete(daTagYami_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/daTagYami_Delete__FP11daTagYami_c.s"
 }
@@ -175,7 +218,7 @@ ASM_FUNCTION(daTagYami_Delete__FP11daTagYami_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/__dt__10cCcD_GSttsFv.s"
 }
@@ -186,7 +229,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCoC__11daTagYami_cF4cXyz) {
+asm void daTagYami_c::setCoC(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/setCoC__11daTagYami_cF4cXyz.s"
 }
@@ -197,7 +240,7 @@ ASM_FUNCTION(setCoC__11daTagYami_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/__dt__10dCcD_GSttsFv.s"
 }
@@ -208,7 +251,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/__dt__8cM3dGCylFv.s"
 }
@@ -219,7 +262,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/__dt__8cM3dGAabFv.s"
 }

@@ -6,29 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCRVSTEEL_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjCRVSTEEL_c {
+	void OpenSet(f32, f32);
+	void CloseSet(f32);
+	void CloseExecute();
+	void OpenExecute();
+	void Action();
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjCRVSTEEL_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c();
-extern "C" extern void OpenSet__15daObjCRVSTEEL_cFff();
-extern "C" extern void CloseSet__15daObjCRVSTEEL_cFf();
-extern "C" extern void CloseExecute__15daObjCRVSTEEL_cFv();
-extern "C" extern void OpenExecute__15daObjCRVSTEEL_cFv();
-extern "C" extern void Action__15daObjCRVSTEEL_cFv();
-extern "C" extern void setBaseMtx__15daObjCRVSTEEL_cFv();
-extern "C" extern void daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c();
-extern "C" extern void daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c();
-extern "C" extern void CreateHeap__15daObjCRVSTEEL_cFv();
-extern "C" extern void create__15daObjCRVSTEEL_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c();
-extern "C" extern void Create__15daObjCRVSTEEL_cFv();
-extern "C" extern void Execute__15daObjCRVSTEEL_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjCRVSTEEL_cFv();
-extern "C" extern void Delete__15daObjCRVSTEEL_cFv();
-extern "C" extern void func_80BD61F0();
-extern "C" extern void func_80BD61F8();
+void daObjCRVSTEEL_Create(fopAc_ac_c*);
+void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c*);
+void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c*);
+void daObjCRVSTEEL_Execute(daObjCRVSTEEL_c*);
+bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c*);
+extern "C" void Execute__15daObjCRVSTEEL_cFPPA3_A4_f();
+extern "C" void func_80BD61F0();
+extern "C" void func_80BD61F8();
+
+extern "C" void daObjCRVSTEEL_Create__FP10fopAc_ac_c();
+extern "C" void daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c();
+extern "C" void OpenSet__15daObjCRVSTEEL_cFff();
+extern "C" void CloseSet__15daObjCRVSTEEL_cFf();
+extern "C" void CloseExecute__15daObjCRVSTEEL_cFv();
+extern "C" void OpenExecute__15daObjCRVSTEEL_cFv();
+extern "C" void Action__15daObjCRVSTEEL_cFv();
+extern "C" void setBaseMtx__15daObjCRVSTEEL_cFv();
+extern "C" void daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c();
+extern "C" void daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c();
+extern "C" void CreateHeap__15daObjCRVSTEEL_cFv();
+extern "C" void create__15daObjCRVSTEEL_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" bool daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c();
+extern "C" void Create__15daObjCRVSTEEL_cFv();
+extern "C" void Execute__15daObjCRVSTEEL_cFPPA3_A4_f();
+extern "C" void Draw__15daObjCRVSTEEL_cFv();
+extern "C" void Delete__15daObjCRVSTEEL_cFv();
+extern "C" void func_80BD61F0();
+extern "C" void func_80BD61F8();
 SECTION_RODATA extern const u32 lit_3789;
 SECTION_RODATA extern const u32 lit_3900;
 SECTION_RODATA extern const u32 lit_3901;
@@ -53,7 +90,9 @@ SECTION_DATA extern void*const __vt__15daObjCRVSTEEL_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -63,7 +102,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVSTEEL_Create__FP10fopAc_ac_c) {
+asm void daObjCRVSTEEL_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Create__FP10fopAc_ac_c.s"
 }
@@ -74,7 +113,7 @@ ASM_FUNCTION(daObjCRVSTEEL_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c) {
+asm void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c.s"
 }
@@ -85,7 +124,7 @@ ASM_FUNCTION(daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OpenSet__15daObjCRVSTEEL_cFff) {
+asm void daObjCRVSTEEL_c::OpenSet(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/OpenSet__15daObjCRVSTEEL_cFff.s"
 }
@@ -96,7 +135,7 @@ ASM_FUNCTION(OpenSet__15daObjCRVSTEEL_cFff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CloseSet__15daObjCRVSTEEL_cFf) {
+asm void daObjCRVSTEEL_c::CloseSet(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/CloseSet__15daObjCRVSTEEL_cFf.s"
 }
@@ -107,7 +146,7 @@ ASM_FUNCTION(CloseSet__15daObjCRVSTEEL_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CloseExecute__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::CloseExecute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/CloseExecute__15daObjCRVSTEEL_cFv.s"
 }
@@ -118,7 +157,7 @@ ASM_FUNCTION(CloseExecute__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OpenExecute__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::OpenExecute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/OpenExecute__15daObjCRVSTEEL_cFv.s"
 }
@@ -129,7 +168,7 @@ ASM_FUNCTION(OpenExecute__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/Action__15daObjCRVSTEEL_cFv.s"
 }
@@ -140,7 +179,7 @@ ASM_FUNCTION(Action__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/setBaseMtx__15daObjCRVSTEEL_cFv.s"
 }
@@ -151,7 +190,7 @@ ASM_FUNCTION(setBaseMtx__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c) {
+asm void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c.s"
 }
@@ -162,7 +201,7 @@ ASM_FUNCTION(daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c) {
+asm void daObjCRVSTEEL_Execute(daObjCRVSTEEL_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c.s"
 }
@@ -173,7 +212,7 @@ ASM_FUNCTION(daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/CreateHeap__15daObjCRVSTEEL_cFv.s"
 }
@@ -184,7 +223,7 @@ ASM_FUNCTION(CreateHeap__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/create__15daObjCRVSTEEL_cFv.s"
 }
@@ -195,7 +234,7 @@ ASM_FUNCTION(create__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -203,21 +242,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80BD60A0-80BD60A8 0008+00 .text      daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c.s"
+bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BD60A8-80BD60EC 0044+00 .text      Create__15daObjCRVSTEEL_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD60A8.s"
 }
@@ -228,7 +262,7 @@ ASM_FUNCTION(Create__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjCRVSTEEL_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjCRVSTEEL_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/Execute__15daObjCRVSTEEL_cFPPA3_A4_f.s"
 }
@@ -239,7 +273,7 @@ ASM_FUNCTION(Execute__15daObjCRVSTEEL_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/Draw__15daObjCRVSTEEL_cFv.s"
 }
@@ -250,7 +284,7 @@ ASM_FUNCTION(Draw__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjCRVSTEEL_cFv) {
+asm void daObjCRVSTEEL_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/Delete__15daObjCRVSTEEL_cFv.s"
 }
@@ -261,7 +295,7 @@ ASM_FUNCTION(Delete__15daObjCRVSTEEL_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD61F0) {
+extern "C" asm void func_80BD61F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD61F0.s"
 }
@@ -272,7 +306,7 @@ ASM_FUNCTION(func_80BD61F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD61F8) {
+extern "C" asm void func_80BD61F8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD61F8.s"
 }

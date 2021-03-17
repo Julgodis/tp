@@ -6,50 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build base_process_class (base_process_class) False/False
+/* top-level dependencies (begin base_process_class) */
+/* top-level dependencies (end base_process_class) */
+struct base_process_class {
+};
+
+// build layer_class (layer_class) False/False
+/* top-level dependencies (begin layer_class) */
+/* top-level dependencies (end layer_class) */
+struct layer_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcDw_Execute__FP18base_process_class();
-extern "C" extern void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+void fpcDw_Execute(base_process_class*);
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+
+extern "C" void fpcDw_Execute__FP18base_process_class();
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcBs_Is_JustOfType__Fii();
-extern "C" extern void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" extern void fpcLy_CurrentLayer__Fv();
-extern "C" extern void fpcPause_IsEnable__FPvUc();
-extern "C" extern void cAPIGph_BeforeOfDraw__Fv();
-extern "C" extern void cAPIGph_AfterOfDraw__Fv();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void fpcBs_Is_JustOfType(s32, s32);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLy_CurrentLayer();
+void fpcPause_IsEnable(void*, char);
+void cAPIGph_BeforeOfDraw();
+void cAPIGph_AfterOfDraw();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcPause_IsEnable__FPvUc();
+extern "C" void cAPIGph_BeforeOfDraw__Fv();
+extern "C" void cAPIGph_AfterOfDraw__Fv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80023954-800239F4 00A0+00 .text      fpcDw_Execute__FP18base_process_class                        */
+/* 80023954-800239F4 00A0+00 rc=1 efc=1 .text      fpcDw_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcDw_Execute__FP18base_process_class) {
+asm void fpcDw_Execute(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_draw/fpcDw_Execute__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 800239F4-80023A48 0054+00 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
+/* 800239F4-80023A48 0054+00 rc=1 efc=1 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i) {
+extern "C" asm void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_draw/fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagRetRm_c;
+
+struct daTagRetRm_c {
+	daTagRetRm_c();
+	~daTagRetRm_c();
+	void create();
+	bool Delete();
+	bool draw();
+	void execute();
+	void init();
+	void chkPlyrInTag();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daTagRetRm_cFv();
-extern "C" extern void __dt__12daTagRetRm_cFv();
-extern "C" extern void create__12daTagRetRm_cFv();
-extern "C" extern void Delete__12daTagRetRm_cFv();
-extern "C" extern void draw__12daTagRetRm_cFv();
-extern "C" extern void execute__12daTagRetRm_cFv();
-extern "C" extern void init__12daTagRetRm_cFv();
-extern "C" extern void chkPlyrInTag__12daTagRetRm_cFv();
-extern "C" extern void daTagRetRm_create__FP12daTagRetRm_c();
-extern "C" extern void daTagRetRm_Delete__FP12daTagRetRm_c();
-extern "C" extern void daTagRetRm_execute__FP12daTagRetRm_c();
-extern "C" extern void daTagRetRm_draw__FP12daTagRetRm_c();
+void daTagRetRm_create(daTagRetRm_c*);
+void daTagRetRm_Delete(daTagRetRm_c*);
+void daTagRetRm_execute(daTagRetRm_c*);
+void daTagRetRm_draw(daTagRetRm_c*);
+
+extern "C" void __ct__12daTagRetRm_cFv();
+extern "C" void __dt__12daTagRetRm_cFv();
+extern "C" void create__12daTagRetRm_cFv();
+extern "C" bool Delete__12daTagRetRm_cFv();
+extern "C" bool draw__12daTagRetRm_cFv();
+extern "C" void execute__12daTagRetRm_cFv();
+extern "C" void init__12daTagRetRm_cFv();
+extern "C" void chkPlyrInTag__12daTagRetRm_cFv();
+extern "C" void daTagRetRm_create__FP12daTagRetRm_c();
+extern "C" void daTagRetRm_Delete__FP12daTagRetRm_c();
+extern "C" void daTagRetRm_execute__FP12daTagRetRm_c();
+extern "C" void daTagRetRm_draw__FP12daTagRetRm_c();
 SECTION_RODATA extern const u32 lit_3682;
 SECTION_RODATA extern const u32 lit_3683;
 SECTION_RODATA extern const u8 lit_3718[4];
@@ -32,7 +54,9 @@ SECTION_DATA extern void*const __vt__12daTagRetRm_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +66,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daTagRetRm_cFv) {
+asm daTagRetRm_c::daTagRetRm_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/__ct__12daTagRetRm_cFv.s"
 }
@@ -53,7 +77,7 @@ ASM_FUNCTION(__ct__12daTagRetRm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagRetRm_cFv) {
+asm daTagRetRm_c::~daTagRetRm_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/__dt__12daTagRetRm_cFv.s"
 }
@@ -64,7 +88,7 @@ ASM_FUNCTION(__dt__12daTagRetRm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagRetRm_cFv) {
+asm void daTagRetRm_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/create__12daTagRetRm_cFv.s"
 }
@@ -72,32 +96,22 @@ ASM_FUNCTION(create__12daTagRetRm_cFv) {
 
 
 /* 80D5EF8C-80D5EF94 0008+00 .text      Delete__12daTagRetRm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daTagRetRm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/Delete__12daTagRetRm_cFv.s"
+bool daTagRetRm_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EF94-80D5EF9C 0008+00 .text      draw__12daTagRetRm_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12daTagRetRm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/draw__12daTagRetRm_cFv.s"
+bool daTagRetRm_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EF9C-80D5F010 0074+00 .text      execute__12daTagRetRm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagRetRm_cFv) {
+asm void daTagRetRm_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/execute__12daTagRetRm_cFv.s"
 }
@@ -108,7 +122,7 @@ ASM_FUNCTION(execute__12daTagRetRm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__12daTagRetRm_cFv) {
+asm void daTagRetRm_c::init() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/init__12daTagRetRm_cFv.s"
 }
@@ -119,7 +133,7 @@ ASM_FUNCTION(init__12daTagRetRm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPlyrInTag__12daTagRetRm_cFv) {
+asm void daTagRetRm_c::chkPlyrInTag() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/chkPlyrInTag__12daTagRetRm_cFv.s"
 }
@@ -130,7 +144,7 @@ ASM_FUNCTION(chkPlyrInTag__12daTagRetRm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRetRm_create__FP12daTagRetRm_c) {
+asm void daTagRetRm_create(daTagRetRm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_create__FP12daTagRetRm_c.s"
 }
@@ -141,7 +155,7 @@ ASM_FUNCTION(daTagRetRm_create__FP12daTagRetRm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRetRm_Delete__FP12daTagRetRm_c) {
+asm void daTagRetRm_Delete(daTagRetRm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_Delete__FP12daTagRetRm_c.s"
 }
@@ -152,7 +166,7 @@ ASM_FUNCTION(daTagRetRm_Delete__FP12daTagRetRm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRetRm_execute__FP12daTagRetRm_c) {
+asm void daTagRetRm_execute(daTagRetRm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_execute__FP12daTagRetRm_c.s"
 }
@@ -163,7 +177,7 @@ ASM_FUNCTION(daTagRetRm_execute__FP12daTagRetRm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRetRm_draw__FP12daTagRetRm_c) {
+asm void daTagRetRm_draw(daTagRetRm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_draw__FP12daTagRetRm_c.s"
 }

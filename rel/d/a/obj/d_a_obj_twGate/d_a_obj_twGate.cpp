@@ -6,26 +6,72 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTwGate_c;
+
+struct daTwGate_HIO_c {
+	daTwGate_HIO_c();
+	~daTwGate_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTwGate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daTwGate_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daTwGate_cFv();
-extern "C" extern void CreateHeap__10daTwGate_cFv();
-extern "C" extern void create__10daTwGate_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__10daTwGate_cFPPA3_A4_f();
-extern "C" extern void Draw__10daTwGate_cFv();
-extern "C" extern void Delete__10daTwGate_cFv();
-extern "C" extern void daTwGate_Draw__FP10daTwGate_c();
-extern "C" extern void daTwGate_Execute__FP10daTwGate_c();
-extern "C" extern void daTwGate_Delete__FP10daTwGate_c();
-extern "C" extern void daTwGate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daTwGate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_twGate_cpp();
+extern "C" void Execute__10daTwGate_cFPPA3_A4_f();
+void daTwGate_Draw(daTwGate_c*);
+void daTwGate_Execute(daTwGate_c*);
+void daTwGate_Delete(daTwGate_c*);
+void daTwGate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_twGate_cpp();
+
+extern "C" void __ct__14daTwGate_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daTwGate_cFv();
+extern "C" void CreateHeap__10daTwGate_cFv();
+extern "C" void create__10daTwGate_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__10daTwGate_cFPPA3_A4_f();
+extern "C" void Draw__10daTwGate_cFv();
+extern "C" void Delete__10daTwGate_cFv();
+extern "C" void daTwGate_Draw__FP10daTwGate_c();
+extern "C" void daTwGate_Execute__FP10daTwGate_c();
+extern "C" void daTwGate_Delete__FP10daTwGate_c();
+extern "C" void daTwGate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daTwGate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_twGate_cpp();
 SECTION_RODATA extern const u32 lit_3638;
 SECTION_RODATA extern const u8 l_bmdIdx[52];
 SECTION_RODATA extern const u8 l_dzbIdx[52];
@@ -54,8 +100,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -65,7 +114,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daTwGate_HIO_cFv) {
+asm daTwGate_HIO_c::daTwGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__ct__14daTwGate_HIO_cFv.s"
 }
@@ -76,7 +125,7 @@ ASM_FUNCTION(__ct__14daTwGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -87,7 +136,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -98,7 +147,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daTwGate_cFv) {
+asm void daTwGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/setBaseMtx__10daTwGate_cFv.s"
 }
@@ -109,7 +158,7 @@ ASM_FUNCTION(setBaseMtx__10daTwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daTwGate_cFv) {
+asm void daTwGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/CreateHeap__10daTwGate_cFv.s"
 }
@@ -120,7 +169,7 @@ ASM_FUNCTION(CreateHeap__10daTwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daTwGate_cFv) {
+asm void daTwGate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/create__10daTwGate_cFv.s"
 }
@@ -131,7 +180,7 @@ ASM_FUNCTION(create__10daTwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__dt__8cM3dGLinFv.s"
 }
@@ -142,7 +191,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__dt__12J3DFrameCtrlFv.s"
 }
@@ -153,7 +202,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daTwGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daTwGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/Execute__10daTwGate_cFPPA3_A4_f.s"
 }
@@ -164,7 +213,7 @@ ASM_FUNCTION(Execute__10daTwGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daTwGate_cFv) {
+asm void daTwGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/Draw__10daTwGate_cFv.s"
 }
@@ -175,7 +224,7 @@ ASM_FUNCTION(Draw__10daTwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daTwGate_cFv) {
+asm void daTwGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/Delete__10daTwGate_cFv.s"
 }
@@ -186,7 +235,7 @@ ASM_FUNCTION(Delete__10daTwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTwGate_Draw__FP10daTwGate_c) {
+asm void daTwGate_Draw(daTwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/daTwGate_Draw__FP10daTwGate_c.s"
 }
@@ -197,7 +246,7 @@ ASM_FUNCTION(daTwGate_Draw__FP10daTwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTwGate_Execute__FP10daTwGate_c) {
+asm void daTwGate_Execute(daTwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/daTwGate_Execute__FP10daTwGate_c.s"
 }
@@ -208,7 +257,7 @@ ASM_FUNCTION(daTwGate_Execute__FP10daTwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTwGate_Delete__FP10daTwGate_c) {
+asm void daTwGate_Delete(daTwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/daTwGate_Delete__FP10daTwGate_c.s"
 }
@@ -219,7 +268,7 @@ ASM_FUNCTION(daTwGate_Delete__FP10daTwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTwGate_Create__FP10fopAc_ac_c) {
+asm void daTwGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/daTwGate_Create__FP10fopAc_ac_c.s"
 }
@@ -230,7 +279,7 @@ ASM_FUNCTION(daTwGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTwGate_HIO_cFv) {
+asm daTwGate_HIO_c::~daTwGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__dt__14daTwGate_HIO_cFv.s"
 }
@@ -241,7 +290,7 @@ ASM_FUNCTION(__dt__14daTwGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_twGate_cpp) {
+extern "C" asm void __sinit_d_a_obj_twGate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_twGate/d_a_obj_twGate/__sinit_d_a_obj_twGate_cpp.s"
 }

@@ -6,75 +6,200 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct daGrass_c;
+struct cCcD_Obj;
+struct dGrass_data_c;
+struct fopAc_ac_c;
+struct dFlower_data_c;
+struct dCcMassS_HitInf;
+struct cXyz;
+
+struct daGrass_c {
+	void createGrass();
+	void deleteGrass();
+	void executeGrass();
+	void drawGrass();
+	void createFlower();
+	void deleteFlower();
+	void executeFlower();
+	void drawFlower();
+	void create();
+};
+
+struct dGrass_packet_c {
+	~dGrass_packet_c();
+	dGrass_packet_c();
+	void draw();
+	void calc();
+	void update();
+	void deleteRoom(s32);
+	void newAnm();
+};
+
+struct dFlower_packet_c {
+	~dFlower_packet_c();
+	dFlower_packet_c();
+	void draw();
+	void calc();
+	void update();
+	void deleteRoom(s32);
+	void newAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dGrass_data_c {
+	void WorkCo(fopAc_ac_c*, u32, s32);
+	void WorkAt_NoCutAnim(fopAc_ac_c*, u32, s32, dCcMassS_HitInf*, cCcD_Obj*);
+	void Direction_Set(fopAc_ac_c*, u32, s32, dCcMassS_HitInf*, cCcD_Obj*, csXyz*);
+	void WorkAt(fopAc_ac_c*, u32, s32, dCcMassS_HitInf*, u16);
+	void hitCheck(s32, u16);
+	~dGrass_data_c();
+	dGrass_data_c();
+};
+
+struct dCcMassS_HitInf {
+	~dCcMassS_HitInf();
+};
+
+struct cCcD_Obj {
+};
+
+struct csXyz {
+	~csXyz();
+};
+
+struct dGrass_room_c {
+	void newData(dGrass_data_c*);
+	void deleteData();
+	dGrass_room_c();
+};
+
+struct cXyz {
+};
+
+struct daPy_py_c {
+	void getSwordTopPos() const;
+};
+
+struct dGrass_anm_c {
+	dGrass_anm_c();
+};
+
+struct dFlower_data_c {
+	void WorkCo(fopAc_ac_c*, u32, s32);
+	void deleteAnm();
+	void WorkAt_NoCutAnim(fopAc_ac_c*, u32, s32, dCcMassS_HitInf*, cCcD_Obj*);
+	void WorkAt(fopAc_ac_c*, u32, s32, dCcMassS_HitInf*);
+	void hitCheck(fopAc_ac_c*, s32);
+	~dFlower_data_c();
+	dFlower_data_c();
+};
+
+struct dFlower_room_c {
+	void newData(dFlower_data_c*);
+	void deleteData();
+	dFlower_room_c();
+};
+
+struct dFlower_anm_c {
+	dFlower_anm_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void randam_addcol_set__FPs();
-extern "C" extern void createGrass__9daGrass_cFv();
-extern "C" extern void deleteGrass__9daGrass_cFv();
-extern "C" extern void __dt__15dGrass_packet_cFv();
-extern "C" extern void executeGrass__9daGrass_cFv();
-extern "C" extern void drawGrass__9daGrass_cFv();
-extern "C" extern void newGrassData__9daGrass_cFR4cXyziUcUcsUc();
-extern "C" extern void createFlower__9daGrass_cFv();
-extern "C" extern void deleteFlower__9daGrass_cFv();
-extern "C" extern void __dt__16dFlower_packet_cFv();
-extern "C" extern void executeFlower__9daGrass_cFv();
-extern "C" extern void drawFlower__9daGrass_cFv();
-extern "C" extern void newFlowerData__9daGrass_cFScR4cXyziScs();
-extern "C" extern void dGrass_Tex_Change__Fv();
-extern "C" extern void daGrass_create__FP9daGrass_c();
-extern "C" extern void create__9daGrass_cFv();
-extern "C" extern void daGrass_Delete__FP9daGrass_c();
-extern "C" extern void daGrass_execute__FP9daGrass_c();
-extern "C" extern void daGrass_draw__FP9daGrass_c();
-extern "C" extern void func_8051D7B4();
-extern "C" extern void __sinit_d_a_grass_cpp();
-extern "C" extern void WorkCo__13dGrass_data_cFP10fopAc_ac_cUli();
-extern "C" extern void WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
-extern "C" extern void Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz();
-extern "C" extern void WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void hitCheck__13dGrass_data_cFiUs();
-extern "C" extern void __dt__15dCcMassS_HitInfFv();
-extern "C" extern void newData__13dGrass_room_cFP13dGrass_data_c();
-extern "C" extern void deleteData__13dGrass_room_cFv();
-extern "C" extern void __ct__15dGrass_packet_cFv();
-extern "C" extern void draw__15dGrass_packet_cFv();
-extern "C" extern void calc__15dGrass_packet_cFv();
-extern "C" extern void checkGroundY__FR4cXyz();
-extern "C" extern void update__15dGrass_packet_cFv();
-extern "C" extern void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc();
-extern "C" extern void newData__15dGrass_packet_cFR4cXyziUcUcsUc();
-extern "C" extern void deleteRoom__15dGrass_packet_cFi();
-extern "C" extern void newAnm__15dGrass_packet_cFv();
-extern "C" extern void setAnm__15dGrass_packet_cFis();
-extern "C" extern void getSwordTopPos__9daPy_py_cCFv();
-extern "C" extern void __ct__13dGrass_room_cFv();
-extern "C" extern void __ct__12dGrass_anm_cFv();
-extern "C" extern void __dt__13dGrass_data_cFv();
-extern "C" extern void __ct__13dGrass_data_cFv();
-extern "C" extern void WorkCo__14dFlower_data_cFP10fopAc_ac_cUli();
-extern "C" extern void deleteAnm__14dFlower_data_cFv();
-extern "C" extern void WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
-extern "C" extern void WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf();
-extern "C" extern void hitCheck__14dFlower_data_cFP10fopAc_ac_ci();
-extern "C" extern void newData__14dFlower_room_cFP14dFlower_data_c();
-extern "C" extern void deleteData__14dFlower_room_cFv();
-extern "C" extern void __ct__16dFlower_packet_cFv();
-extern "C" extern void draw__16dFlower_packet_cFv();
-extern "C" extern void calc__16dFlower_packet_cFv();
-extern "C" extern void flowerCheckGroundY__FR4cXyz();
-extern "C" extern void update__16dFlower_packet_cFv();
-extern "C" extern void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs();
-extern "C" extern void newData__16dFlower_packet_cFScR4cXyziScs();
-extern "C" extern void deleteRoom__16dFlower_packet_cFi();
-extern "C" extern void newAnm__16dFlower_packet_cFv();
-extern "C" extern void setAnm__16dFlower_packet_cFis();
-extern "C" extern void __ct__14dFlower_room_cFv();
-extern "C" extern void __ct__13dFlower_anm_cFv();
-extern "C" extern void __dt__14dFlower_data_cFv();
-extern "C" extern void __ct__14dFlower_data_cFv();
+extern "C" void randam_addcol_set__FPs();
+extern "C" void newGrassData__9daGrass_cFR4cXyziUcUcsUc();
+extern "C" void newFlowerData__9daGrass_cFScR4cXyziScs();
+void dGrass_Tex_Change();
+void daGrass_create(daGrass_c*);
+void daGrass_Delete(daGrass_c*);
+void daGrass_execute(daGrass_c*);
+void daGrass_draw(daGrass_c*);
+extern "C" void func_8051D7B4();
+extern "C" void __sinit_d_a_grass_cpp();
+void checkGroundY(cXyz&);
+extern "C" void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc();
+extern "C" void newData__15dGrass_packet_cFR4cXyziUcUcsUc();
+extern "C" void setAnm__15dGrass_packet_cFis();
+void flowerCheckGroundY(cXyz&);
+extern "C" void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs();
+extern "C" void newData__16dFlower_packet_cFScR4cXyziScs();
+extern "C" void setAnm__16dFlower_packet_cFis();
+
+extern "C" void randam_addcol_set__FPs();
+extern "C" void createGrass__9daGrass_cFv();
+extern "C" void deleteGrass__9daGrass_cFv();
+extern "C" void __dt__15dGrass_packet_cFv();
+extern "C" void executeGrass__9daGrass_cFv();
+extern "C" void drawGrass__9daGrass_cFv();
+extern "C" void newGrassData__9daGrass_cFR4cXyziUcUcsUc();
+extern "C" void createFlower__9daGrass_cFv();
+extern "C" void deleteFlower__9daGrass_cFv();
+extern "C" void __dt__16dFlower_packet_cFv();
+extern "C" void executeFlower__9daGrass_cFv();
+extern "C" void drawFlower__9daGrass_cFv();
+extern "C" void newFlowerData__9daGrass_cFScR4cXyziScs();
+extern "C" void dGrass_Tex_Change__Fv();
+extern "C" void daGrass_create__FP9daGrass_c();
+extern "C" void create__9daGrass_cFv();
+extern "C" void daGrass_Delete__FP9daGrass_c();
+extern "C" void daGrass_execute__FP9daGrass_c();
+extern "C" void daGrass_draw__FP9daGrass_c();
+extern "C" void func_8051D7B4();
+extern "C" void __sinit_d_a_grass_cpp();
+extern "C" void WorkCo__13dGrass_data_cFP10fopAc_ac_cUli();
+extern "C" void WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
+extern "C" void Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz();
+extern "C" void WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs();
+extern "C" void __dt__5csXyzFv();
+extern "C" void hitCheck__13dGrass_data_cFiUs();
+extern "C" void __dt__15dCcMassS_HitInfFv();
+extern "C" void newData__13dGrass_room_cFP13dGrass_data_c();
+extern "C" void deleteData__13dGrass_room_cFv();
+extern "C" void __ct__15dGrass_packet_cFv();
+extern "C" void draw__15dGrass_packet_cFv();
+extern "C" void calc__15dGrass_packet_cFv();
+extern "C" void checkGroundY__FR4cXyz();
+extern "C" void update__15dGrass_packet_cFv();
+extern "C" void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc();
+extern "C" void newData__15dGrass_packet_cFR4cXyziUcUcsUc();
+extern "C" void deleteRoom__15dGrass_packet_cFi();
+extern "C" void newAnm__15dGrass_packet_cFv();
+extern "C" void setAnm__15dGrass_packet_cFis();
+extern "C" void getSwordTopPos__9daPy_py_cCFv();
+extern "C" void __ct__13dGrass_room_cFv();
+extern "C" void __ct__12dGrass_anm_cFv();
+extern "C" void __dt__13dGrass_data_cFv();
+extern "C" void __ct__13dGrass_data_cFv();
+extern "C" void WorkCo__14dFlower_data_cFP10fopAc_ac_cUli();
+extern "C" void deleteAnm__14dFlower_data_cFv();
+extern "C" void WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
+extern "C" void WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf();
+extern "C" void hitCheck__14dFlower_data_cFP10fopAc_ac_ci();
+extern "C" void newData__14dFlower_room_cFP14dFlower_data_c();
+extern "C" void deleteData__14dFlower_room_cFv();
+extern "C" void __ct__16dFlower_packet_cFv();
+extern "C" void draw__16dFlower_packet_cFv();
+extern "C" void calc__16dFlower_packet_cFv();
+extern "C" void flowerCheckGroundY__FR4cXyz();
+extern "C" void update__16dFlower_packet_cFv();
+extern "C" void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs();
+extern "C" void newData__16dFlower_packet_cFScR4cXyziScs();
+extern "C" void deleteRoom__16dFlower_packet_cFi();
+extern "C" void newAnm__16dFlower_packet_cFv();
+extern "C" void setAnm__16dFlower_packet_cFis();
+extern "C" void __ct__14dFlower_room_cFv();
+extern "C" void __ct__13dFlower_anm_cFv();
+extern "C" void __dt__14dFlower_data_cFv();
+extern "C" void __ct__14dFlower_data_cFv();
 SECTION_RODATA extern const u32 lit_3999;
 SECTION_RODATA extern const u8 lit_4000[4];
 SECTION_RODATA extern const u32 lit_4001;
@@ -336,8 +461,11 @@ SECTION_BSS extern u8 data_805289A8[42];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -347,7 +475,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(randam_addcol_set__FPs) {
+extern "C" asm void randam_addcol_set__FPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/randam_addcol_set__FPs.s"
 }
@@ -358,7 +486,7 @@ ASM_FUNCTION(randam_addcol_set__FPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createGrass__9daGrass_cFv) {
+asm void daGrass_c::createGrass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/createGrass__9daGrass_cFv.s"
 }
@@ -369,7 +497,7 @@ ASM_FUNCTION(createGrass__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteGrass__9daGrass_cFv) {
+asm void daGrass_c::deleteGrass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteGrass__9daGrass_cFv.s"
 }
@@ -380,7 +508,7 @@ ASM_FUNCTION(deleteGrass__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dGrass_packet_cFv) {
+asm dGrass_packet_c::~dGrass_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__15dGrass_packet_cFv.s"
 }
@@ -391,7 +519,7 @@ ASM_FUNCTION(__dt__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeGrass__9daGrass_cFv) {
+asm void daGrass_c::executeGrass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/executeGrass__9daGrass_cFv.s"
 }
@@ -402,7 +530,7 @@ ASM_FUNCTION(executeGrass__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawGrass__9daGrass_cFv) {
+asm void daGrass_c::drawGrass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/drawGrass__9daGrass_cFv.s"
 }
@@ -413,7 +541,7 @@ ASM_FUNCTION(drawGrass__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newGrassData__9daGrass_cFR4cXyziUcUcsUc) {
+extern "C" asm void newGrassData__9daGrass_cFR4cXyziUcUcsUc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newGrassData__9daGrass_cFR4cXyziUcUcsUc.s"
 }
@@ -424,7 +552,7 @@ ASM_FUNCTION(newGrassData__9daGrass_cFR4cXyziUcUcsUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createFlower__9daGrass_cFv) {
+asm void daGrass_c::createFlower() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/createFlower__9daGrass_cFv.s"
 }
@@ -435,7 +563,7 @@ ASM_FUNCTION(createFlower__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteFlower__9daGrass_cFv) {
+asm void daGrass_c::deleteFlower() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteFlower__9daGrass_cFv.s"
 }
@@ -446,7 +574,7 @@ ASM_FUNCTION(deleteFlower__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dFlower_packet_cFv) {
+asm dFlower_packet_c::~dFlower_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__16dFlower_packet_cFv.s"
 }
@@ -457,7 +585,7 @@ ASM_FUNCTION(__dt__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFlower__9daGrass_cFv) {
+asm void daGrass_c::executeFlower() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/executeFlower__9daGrass_cFv.s"
 }
@@ -468,7 +596,7 @@ ASM_FUNCTION(executeFlower__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFlower__9daGrass_cFv) {
+asm void daGrass_c::drawFlower() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/drawFlower__9daGrass_cFv.s"
 }
@@ -479,7 +607,7 @@ ASM_FUNCTION(drawFlower__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newFlowerData__9daGrass_cFScR4cXyziScs) {
+extern "C" asm void newFlowerData__9daGrass_cFScR4cXyziScs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newFlowerData__9daGrass_cFScR4cXyziScs.s"
 }
@@ -487,21 +615,16 @@ ASM_FUNCTION(newFlowerData__9daGrass_cFScR4cXyziScs) {
 
 
 /* 8051C2AC-8051C2B0 0004+00 .text      dGrass_Tex_Change__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dGrass_Tex_Change__Fv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/dGrass_Tex_Change__Fv.s"
+void dGrass_Tex_Change() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8051C2B0-8051C304 0054+00 .text      daGrass_create__FP9daGrass_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrass_create__FP9daGrass_c) {
+asm void daGrass_create(daGrass_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_create__FP9daGrass_c.s"
 }
@@ -512,7 +635,7 @@ ASM_FUNCTION(daGrass_create__FP9daGrass_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daGrass_cFv) {
+asm void daGrass_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/create__9daGrass_cFv.s"
 }
@@ -523,7 +646,7 @@ ASM_FUNCTION(create__9daGrass_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrass_Delete__FP9daGrass_c) {
+asm void daGrass_Delete(daGrass_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_Delete__FP9daGrass_c.s"
 }
@@ -534,7 +657,7 @@ ASM_FUNCTION(daGrass_Delete__FP9daGrass_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrass_execute__FP9daGrass_c) {
+asm void daGrass_execute(daGrass_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_execute__FP9daGrass_c.s"
 }
@@ -545,7 +668,7 @@ ASM_FUNCTION(daGrass_execute__FP9daGrass_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrass_draw__FP9daGrass_c) {
+asm void daGrass_draw(daGrass_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_draw__FP9daGrass_c.s"
 }
@@ -556,7 +679,7 @@ ASM_FUNCTION(daGrass_draw__FP9daGrass_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8051D7B4) {
+extern "C" asm void func_8051D7B4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/func_8051D7B4.s"
 }
@@ -567,7 +690,7 @@ ASM_FUNCTION(func_8051D7B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_grass_cpp) {
+extern "C" asm void __sinit_d_a_grass_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__sinit_d_a_grass_cpp.s"
 }
@@ -578,7 +701,7 @@ ASM_FUNCTION(__sinit_d_a_grass_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkCo__13dGrass_data_cFP10fopAc_ac_cUli) {
+asm void dGrass_data_c::WorkCo(fopAc_ac_c* field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkCo__13dGrass_data_cFP10fopAc_ac_cUli.s"
 }
@@ -589,7 +712,7 @@ ASM_FUNCTION(WorkCo__13dGrass_data_cFP10fopAc_ac_cUli) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj) {
+asm void dGrass_data_c::WorkAt_NoCutAnim(fopAc_ac_c* field_0, u32 field_1, s32 field_2, dCcMassS_HitInf* field_3, cCcD_Obj* field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj.s"
 }
@@ -600,7 +723,7 @@ ASM_FUNCTION(WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitIn
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz) {
+asm void dGrass_data_c::Direction_Set(fopAc_ac_c* field_0, u32 field_1, s32 field_2, dCcMassS_HitInf* field_3, cCcD_Obj* field_4, csXyz* field_5) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz.s"
 }
@@ -611,7 +734,7 @@ ASM_FUNCTION(Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs) {
+asm void dGrass_data_c::WorkAt(fopAc_ac_c* field_0, u32 field_1, s32 field_2, dCcMassS_HitInf* field_3, u16 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs.s"
 }
@@ -622,7 +745,7 @@ ASM_FUNCTION(WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__5csXyzFv.s"
 }
@@ -633,7 +756,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitCheck__13dGrass_data_cFiUs) {
+asm void dGrass_data_c::hitCheck(s32 field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/hitCheck__13dGrass_data_cFiUs.s"
 }
@@ -644,7 +767,7 @@ ASM_FUNCTION(hitCheck__13dGrass_data_cFiUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dCcMassS_HitInfFv) {
+asm dCcMassS_HitInf::~dCcMassS_HitInf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__15dCcMassS_HitInfFv.s"
 }
@@ -655,7 +778,7 @@ ASM_FUNCTION(__dt__15dCcMassS_HitInfFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newData__13dGrass_room_cFP13dGrass_data_c) {
+asm void dGrass_room_c::newData(dGrass_data_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newData__13dGrass_room_cFP13dGrass_data_c.s"
 }
@@ -666,7 +789,7 @@ ASM_FUNCTION(newData__13dGrass_room_cFP13dGrass_data_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteData__13dGrass_room_cFv) {
+asm void dGrass_room_c::deleteData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteData__13dGrass_room_cFv.s"
 }
@@ -677,7 +800,7 @@ ASM_FUNCTION(deleteData__13dGrass_room_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15dGrass_packet_cFv) {
+asm dGrass_packet_c::dGrass_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__15dGrass_packet_cFv.s"
 }
@@ -688,7 +811,7 @@ ASM_FUNCTION(__ct__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15dGrass_packet_cFv) {
+asm void dGrass_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/draw__15dGrass_packet_cFv.s"
 }
@@ -699,7 +822,7 @@ ASM_FUNCTION(draw__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__15dGrass_packet_cFv) {
+asm void dGrass_packet_c::calc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/calc__15dGrass_packet_cFv.s"
 }
@@ -710,7 +833,7 @@ ASM_FUNCTION(calc__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGroundY__FR4cXyz) {
+asm void checkGroundY(cXyz& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/checkGroundY__FR4cXyz.s"
 }
@@ -721,7 +844,7 @@ ASM_FUNCTION(checkGroundY__FR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__15dGrass_packet_cFv) {
+asm void dGrass_packet_c::update() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/update__15dGrass_packet_cFv.s"
 }
@@ -732,7 +855,7 @@ ASM_FUNCTION(update__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc) {
+extern "C" asm void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc.s"
 }
@@ -743,7 +866,7 @@ ASM_FUNCTION(setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newData__15dGrass_packet_cFR4cXyziUcUcsUc) {
+extern "C" asm void newData__15dGrass_packet_cFR4cXyziUcUcsUc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newData__15dGrass_packet_cFR4cXyziUcUcsUc.s"
 }
@@ -754,7 +877,7 @@ ASM_FUNCTION(newData__15dGrass_packet_cFR4cXyziUcUcsUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteRoom__15dGrass_packet_cFi) {
+asm void dGrass_packet_c::deleteRoom(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteRoom__15dGrass_packet_cFi.s"
 }
@@ -765,7 +888,7 @@ ASM_FUNCTION(deleteRoom__15dGrass_packet_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newAnm__15dGrass_packet_cFv) {
+asm void dGrass_packet_c::newAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newAnm__15dGrass_packet_cFv.s"
 }
@@ -776,7 +899,7 @@ ASM_FUNCTION(newAnm__15dGrass_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__15dGrass_packet_cFis) {
+extern "C" asm void setAnm__15dGrass_packet_cFis() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/setAnm__15dGrass_packet_cFis.s"
 }
@@ -787,7 +910,7 @@ ASM_FUNCTION(setAnm__15dGrass_packet_cFis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwordTopPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getSwordTopPos() const {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/getSwordTopPos__9daPy_py_cCFv.s"
 }
@@ -798,7 +921,7 @@ ASM_FUNCTION(getSwordTopPos__9daPy_py_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dGrass_room_cFv) {
+asm dGrass_room_c::dGrass_room_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__13dGrass_room_cFv.s"
 }
@@ -809,7 +932,7 @@ ASM_FUNCTION(__ct__13dGrass_room_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dGrass_anm_cFv) {
+asm dGrass_anm_c::dGrass_anm_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__12dGrass_anm_cFv.s"
 }
@@ -820,7 +943,7 @@ ASM_FUNCTION(__ct__12dGrass_anm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dGrass_data_cFv) {
+asm dGrass_data_c::~dGrass_data_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__13dGrass_data_cFv.s"
 }
@@ -831,7 +954,7 @@ ASM_FUNCTION(__dt__13dGrass_data_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dGrass_data_cFv) {
+asm dGrass_data_c::dGrass_data_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__13dGrass_data_cFv.s"
 }
@@ -842,7 +965,7 @@ ASM_FUNCTION(__ct__13dGrass_data_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkCo__14dFlower_data_cFP10fopAc_ac_cUli) {
+asm void dFlower_data_c::WorkCo(fopAc_ac_c* field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkCo__14dFlower_data_cFP10fopAc_ac_cUli.s"
 }
@@ -853,7 +976,7 @@ ASM_FUNCTION(WorkCo__14dFlower_data_cFP10fopAc_ac_cUli) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteAnm__14dFlower_data_cFv) {
+asm void dFlower_data_c::deleteAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteAnm__14dFlower_data_cFv.s"
 }
@@ -864,7 +987,7 @@ ASM_FUNCTION(deleteAnm__14dFlower_data_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj) {
+asm void dFlower_data_c::WorkAt_NoCutAnim(fopAc_ac_c* field_0, u32 field_1, s32 field_2, dCcMassS_HitInf* field_3, cCcD_Obj* field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj.s"
 }
@@ -875,7 +998,7 @@ ASM_FUNCTION(WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitI
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf) {
+asm void dFlower_data_c::WorkAt(fopAc_ac_c* field_0, u32 field_1, s32 field_2, dCcMassS_HitInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf.s"
 }
@@ -886,7 +1009,7 @@ ASM_FUNCTION(WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitCheck__14dFlower_data_cFP10fopAc_ac_ci) {
+asm void dFlower_data_c::hitCheck(fopAc_ac_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/hitCheck__14dFlower_data_cFP10fopAc_ac_ci.s"
 }
@@ -897,7 +1020,7 @@ ASM_FUNCTION(hitCheck__14dFlower_data_cFP10fopAc_ac_ci) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newData__14dFlower_room_cFP14dFlower_data_c) {
+asm void dFlower_room_c::newData(dFlower_data_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newData__14dFlower_room_cFP14dFlower_data_c.s"
 }
@@ -908,7 +1031,7 @@ ASM_FUNCTION(newData__14dFlower_room_cFP14dFlower_data_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteData__14dFlower_room_cFv) {
+asm void dFlower_room_c::deleteData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteData__14dFlower_room_cFv.s"
 }
@@ -919,7 +1042,7 @@ ASM_FUNCTION(deleteData__14dFlower_room_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dFlower_packet_cFv) {
+asm dFlower_packet_c::dFlower_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__16dFlower_packet_cFv.s"
 }
@@ -930,7 +1053,7 @@ ASM_FUNCTION(__ct__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dFlower_packet_cFv) {
+asm void dFlower_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/draw__16dFlower_packet_cFv.s"
 }
@@ -941,7 +1064,7 @@ ASM_FUNCTION(draw__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__16dFlower_packet_cFv) {
+asm void dFlower_packet_c::calc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/calc__16dFlower_packet_cFv.s"
 }
@@ -952,7 +1075,7 @@ ASM_FUNCTION(calc__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flowerCheckGroundY__FR4cXyz) {
+asm void flowerCheckGroundY(cXyz& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/flowerCheckGroundY__FR4cXyz.s"
 }
@@ -963,7 +1086,7 @@ ASM_FUNCTION(flowerCheckGroundY__FR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__16dFlower_packet_cFv) {
+asm void dFlower_packet_c::update() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/update__16dFlower_packet_cFv.s"
 }
@@ -974,7 +1097,7 @@ ASM_FUNCTION(update__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs) {
+extern "C" asm void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs.s"
 }
@@ -985,7 +1108,7 @@ ASM_FUNCTION(setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newData__16dFlower_packet_cFScR4cXyziScs) {
+extern "C" asm void newData__16dFlower_packet_cFScR4cXyziScs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newData__16dFlower_packet_cFScR4cXyziScs.s"
 }
@@ -996,7 +1119,7 @@ ASM_FUNCTION(newData__16dFlower_packet_cFScR4cXyziScs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteRoom__16dFlower_packet_cFi) {
+asm void dFlower_packet_c::deleteRoom(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/deleteRoom__16dFlower_packet_cFi.s"
 }
@@ -1007,7 +1130,7 @@ ASM_FUNCTION(deleteRoom__16dFlower_packet_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newAnm__16dFlower_packet_cFv) {
+asm void dFlower_packet_c::newAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/newAnm__16dFlower_packet_cFv.s"
 }
@@ -1018,7 +1141,7 @@ ASM_FUNCTION(newAnm__16dFlower_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__16dFlower_packet_cFis) {
+extern "C" asm void setAnm__16dFlower_packet_cFis() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/setAnm__16dFlower_packet_cFis.s"
 }
@@ -1029,7 +1152,7 @@ ASM_FUNCTION(setAnm__16dFlower_packet_cFis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dFlower_room_cFv) {
+asm dFlower_room_c::dFlower_room_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__14dFlower_room_cFv.s"
 }
@@ -1040,7 +1163,7 @@ ASM_FUNCTION(__ct__14dFlower_room_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dFlower_anm_cFv) {
+asm dFlower_anm_c::dFlower_anm_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__13dFlower_anm_cFv.s"
 }
@@ -1051,7 +1174,7 @@ ASM_FUNCTION(__ct__13dFlower_anm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dFlower_data_cFv) {
+asm dFlower_data_c::~dFlower_data_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__14dFlower_data_cFv.s"
 }
@@ -1062,7 +1185,7 @@ ASM_FUNCTION(__dt__14dFlower_data_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dFlower_data_cFv) {
+asm dFlower_data_c::dFlower_data_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/__ct__14dFlower_data_cFv.s"
 }

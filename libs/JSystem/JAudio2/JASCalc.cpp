@@ -6,16 +6,34 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASCalc (JASCalc) False/False
+/* top-level dependencies (begin JASCalc) */
+/* top-level dependencies (end JASCalc) */
+struct JASCalc {
+	/* 8028F2E8 */ void imixcopy(s16 const*, s16 const*, s16*, u32);
+	/* 8028F318 */ void bcopyfast(void const*, void*, u32);
+	/* 8028F354 */ void bcopy(void const*, void*, u32);
+	/* 8028F454 */ void bzerofast(void*, u32);
+	/* 8028F480 */ void bzero(void*, u32);
+	/* 8028F578 */ void pow2(f32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void imixcopy__7JASCalcFPCsPCsPsUl();
-extern "C" extern void bcopyfast__7JASCalcFPCvPvUl();
-extern "C" extern void bcopy__7JASCalcFPCvPvUl();
-extern "C" extern void bzerofast__7JASCalcFPvUl();
-extern "C" extern void bzero__7JASCalcFPvUl();
-extern "C" extern void pow2__7JASCalcFf();
-extern "C" extern void func_8028F69C();
+extern "C" void func_8028F69C();
+
+extern "C" void imixcopy__7JASCalcFPCsPCsPsUl();
+extern "C" void bcopyfast__7JASCalcFPCvPvUl();
+extern "C" void bcopy__7JASCalcFPCvPvUl();
+extern "C" void bzerofast__7JASCalcFPvUl();
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void pow2__7JASCalcFf();
+extern "C" void func_8028F69C();
 SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 SECTION_RODATA extern const f32 data_8039AFB8[6];
 SECTION_SDATA2 extern f32 JASCalc__lit_847;
@@ -30,62 +48,64 @@ SECTION_SDATA2 extern f32 JASCalc__lit_995;
 // External References:
 // 
 
-extern "C" extern void DCZeroRange();
+extern "C" void DCZeroRange();
+
+extern "C" void DCZeroRange();
 SECTION_SDATA extern u32 __float_huge;
 
 // 
 // Declarations:
 // 
 
-/* 8028F2E8-8028F318 0030+00 .text      imixcopy__7JASCalcFPCsPCsPsUl                                */
+/* 8028F2E8-8028F318 0030+00 rc=1 efc=1 .text      imixcopy__7JASCalcFPCsPCsPsUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(imixcopy__7JASCalcFPCsPCsPsUl) {
+asm void JASCalc::imixcopy(s16 const* field_0, s16 const* field_1, s16* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/imixcopy__7JASCalcFPCsPCsPsUl.s"
 }
 #pragma pop
 
 
-/* 8028F318-8028F354 003C+00 .text      bcopyfast__7JASCalcFPCvPvUl                                  */
+/* 8028F318-8028F354 003C+00 rc=1 efc=0 .text      bcopyfast__7JASCalcFPCvPvUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bcopyfast__7JASCalcFPCvPvUl) {
+asm void JASCalc::bcopyfast(void const* field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/bcopyfast__7JASCalcFPCvPvUl.s"
 }
 #pragma pop
 
 
-/* 8028F354-8028F454 0100+00 .text      bcopy__7JASCalcFPCvPvUl                                      */
+/* 8028F354-8028F454 0100+00 rc=3 efc=3 .text      bcopy__7JASCalcFPCvPvUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bcopy__7JASCalcFPCvPvUl) {
+asm void JASCalc::bcopy(void const* field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/bcopy__7JASCalcFPCvPvUl.s"
 }
 #pragma pop
 
 
-/* 8028F454-8028F480 002C+00 .text      bzerofast__7JASCalcFPvUl                                     */
+/* 8028F454-8028F480 002C+00 rc=1 efc=0 .text      bzerofast__7JASCalcFPvUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bzerofast__7JASCalcFPvUl) {
+asm void JASCalc::bzerofast(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/bzerofast__7JASCalcFPvUl.s"
 }
 #pragma pop
 
 
-/* 8028F480-8028F578 00F8+00 .text      bzero__7JASCalcFPvUl                                         */
+/* 8028F480-8028F578 00F8+00 rc=6 efc=6 .text      bzero__7JASCalcFPvUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bzero__7JASCalcFPvUl) {
+asm void JASCalc::bzero(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/bzero__7JASCalcFPvUl.s"
 }
@@ -93,7 +113,7 @@ ASM_FUNCTION(bzero__7JASCalcFPvUl) {
 
 
 /* ############################################################################################## */
-/* 8039ABB8-8039AFB8 0400+00 .rodata    CUTOFF_TO_IIR_TABLE__7JASCalc                                */
+/* 8039ABB8-8039AFB8 0400+00 rc=4 efc=4 .rodata    CUTOFF_TO_IIR_TABLE__7JASCalc                                */
 SECTION_RODATA const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024] = {
 	0x0F, 0x5C, 0x0A, 0x3D, 0x46, 0x65, 0x1E, 0x73, 0x0F, 0x5E, 0x0A, 0x3D, 0x46, 0x64, 0x1E, 0x73,
 	0x0F, 0x63, 0x0A, 0x3C, 0x46, 0x61, 0x1E, 0x71, 0x0F, 0x6C, 0x0A, 0x3C, 0x46, 0x5B, 0x1E, 0x6F,
@@ -161,60 +181,59 @@ SECTION_RODATA const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024] = {
 	0x7E, 0x3B, 0x00, 0x29, 0x01, 0x1B, 0x00, 0x7A, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039AFB8-8039AFD0 0018+00 .rodata    __two_to_x$982                                               */
+/* 8039AFB8-8039AFD0 0018+00 rc=1 efc=0 .rodata    __two_to_x$982                                               */
 SECTION_RODATA const f32 data_8039AFB8[6] = {
 	0.6931471824645996f, 0.240226611495018f, 0.055502913892269135f, 0.009625022299587727f, 0.0013131053419783711f, 0.0001830080582294613f
 };
 
-/* 80455558-80455560 0004+04 .sdata2    @847                                                         */
+/* 80455558-80455560 0004+04 rc=1 efc=0 .sdata2    @847                                                         */
 f32 JASCalc__lit_847 = 0.5f;
 /* padding 4 bytes */
 
-/* 80455560-80455568 0008+00 .sdata2    @850                                                         */
+/* 80455560-80455568 0008+00 rc=1 efc=0 .sdata2    @850                                                         */
 f64 JASCalc__lit_850 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80455568-8045556C 0004+00 .sdata2    @969                                                         */
+/* 80455568-8045556C 0004+00 rc=1 efc=0 .sdata2    @969                                                         */
 u8 JASCalc__lit_969[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045556C-80455574 0008+00 .sdata2    scale_frac$980                                               */
+/* 8045556C-80455574 0008+00 rc=1 efc=0 .sdata2    scale_frac$980                                               */
 u8 data_8045556C[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 };
 
-/* 80455574-8045557C 0008+00 .sdata2    two_to_frac$981                                              */
+/* 80455574-8045557C 0008+00 rc=1 efc=0 .sdata2    two_to_frac$981                                              */
 u8 data_80455574[8] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x35, 0x04, 0xF3,
 };
 
-/* 8045557C-80455580 0004+00 .sdata2    @994                                                         */
+/* 8045557C-80455580 0004+00 rc=1 efc=0 .sdata2    @994                                                         */
 f32 JASCalc__lit_994 = 0.75f;
 
-/* 80455580-80455588 0004+04 .sdata2    @995                                                         */
+/* 80455580-80455588 0004+04 rc=1 efc=0 .sdata2    @995                                                         */
 f32 JASCalc__lit_995 = 0.25f;
 /* padding 4 bytes */
 
-/* 8028F578-8028F69C 0124+00 .text      pow2__7JASCalcFf                                             */
+/* 8028F578-8028F69C 0124+00 rc=2 efc=2 .text      pow2__7JASCalcFf                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pow2__7JASCalcFf) {
+asm void JASCalc::pow2(f32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/pow2__7JASCalcFf.s"
 }
 #pragma pop
 
 
-/* 8028F69C-8028F6C4 0028+00 .text      clamp<s,l>__7JASCalcFl                                       */
+/* 8028F69C-8028F6C4 0028+00 rc=4 efc=4 .text      clamp<s,l>__7JASCalcFl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8028F69C) {
+extern "C" asm void func_8028F69C() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/func_8028F69C.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daWarpBug_c;
+
+struct daWarpBug_c {
+	void create_init();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__11daWarpBug_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daWarpBug_Draw__FP11daWarpBug_c();
-extern "C" extern void draw__11daWarpBug_cFv();
-extern "C" extern void daWarpBug_Execute__FP11daWarpBug_c();
-extern "C" extern void daWarpBug_IsDelete__FP11daWarpBug_c();
-extern "C" extern void daWarpBug_Delete__FP11daWarpBug_c();
-extern "C" extern void daWarpBug_Create__FP10fopAc_ac_c();
+void createSolidHeap(fopAc_ac_c*);
+void daWarpBug_Draw(daWarpBug_c*);
+void daWarpBug_Execute(daWarpBug_c*);
+bool daWarpBug_IsDelete(daWarpBug_c*);
+void daWarpBug_Delete(daWarpBug_c*);
+void daWarpBug_Create(fopAc_ac_c*);
+
+extern "C" void create_init__11daWarpBug_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daWarpBug_Draw__FP11daWarpBug_c();
+extern "C" void draw__11daWarpBug_cFv();
+extern "C" void daWarpBug_Execute__FP11daWarpBug_c();
+extern "C" bool daWarpBug_IsDelete__FP11daWarpBug_c();
+extern "C" void daWarpBug_Delete__FP11daWarpBug_c();
+extern "C" void daWarpBug_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3709;
 SECTION_RODATA extern const u8 stringBase0[38];
 SECTION_DATA extern u8 l_arcName[4];
@@ -29,28 +55,25 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 80D67E38-80D67E3C 0004+00 .text      create_init__11daWarpBug_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(create_init__11daWarpBug_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/create_init__11daWarpBug_cFv.s"
+void daWarpBug_c::create_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D67E3C-80D68000 01C4+00 .text      createSolidHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -61,7 +84,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/__dt__12J3DFrameCtrlFv.s"
 }
@@ -72,7 +95,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWarpBug_Draw__FP11daWarpBug_c) {
+asm void daWarpBug_Draw(daWarpBug_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_Draw__FP11daWarpBug_c.s"
 }
@@ -83,7 +106,7 @@ ASM_FUNCTION(daWarpBug_Draw__FP11daWarpBug_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daWarpBug_cFv) {
+asm void daWarpBug_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/draw__11daWarpBug_cFv.s"
 }
@@ -94,7 +117,7 @@ ASM_FUNCTION(draw__11daWarpBug_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWarpBug_Execute__FP11daWarpBug_c) {
+asm void daWarpBug_Execute(daWarpBug_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_Execute__FP11daWarpBug_c.s"
 }
@@ -102,21 +125,16 @@ ASM_FUNCTION(daWarpBug_Execute__FP11daWarpBug_c) {
 
 
 /* 80D680D8-80D680E0 0008+00 .text      daWarpBug_IsDelete__FP11daWarpBug_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daWarpBug_IsDelete__FP11daWarpBug_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_IsDelete__FP11daWarpBug_c.s"
+bool daWarpBug_IsDelete(daWarpBug_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D680E0-80D68130 0050+00 .text      daWarpBug_Delete__FP11daWarpBug_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWarpBug_Delete__FP11daWarpBug_c) {
+asm void daWarpBug_Delete(daWarpBug_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_Delete__FP11daWarpBug_c.s"
 }
@@ -127,7 +145,7 @@ ASM_FUNCTION(daWarpBug_Delete__FP11daWarpBug_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWarpBug_Create__FP10fopAc_ac_c) {
+asm void daWarpBug_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_Create__FP10fopAc_ac_c.s"
 }

@@ -6,23 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daAlldie_c;
+
+struct daAlldie_c {
+	void getEventNo();
+	void getSwbit();
+	bool actionWait();
+	void actionCheck();
+	void actionTimer();
+	void actionOrder();
+	void actionEvent();
+	void actionNext();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getEventNo__10daAlldie_cFv();
-extern "C" extern void getSwbit__10daAlldie_cFv();
-extern "C" extern void actionWait__10daAlldie_cFv();
-extern "C" extern void actionCheck__10daAlldie_cFv();
-extern "C" extern void actionTimer__10daAlldie_cFv();
-extern "C" extern void actionOrder__10daAlldie_cFv();
-extern "C" extern void actionEvent__10daAlldie_cFv();
-extern "C" extern void actionNext__10daAlldie_cFv();
-extern "C" extern void execute__10daAlldie_cFv();
-extern "C" extern void daAlldie_Draw__FP10daAlldie_c();
-extern "C" extern void daAlldie_Execute__FP10daAlldie_c();
-extern "C" extern void daAlldie_IsDelete__FP10daAlldie_c();
-extern "C" extern void daAlldie_Delete__FP10daAlldie_c();
-extern "C" extern void daAlldie_Create__FP10fopAc_ac_c();
+bool daAlldie_Draw(daAlldie_c*);
+void daAlldie_Execute(daAlldie_c*);
+bool daAlldie_IsDelete(daAlldie_c*);
+void daAlldie_Delete(daAlldie_c*);
+void daAlldie_Create(fopAc_ac_c*);
+
+extern "C" void getEventNo__10daAlldie_cFv();
+extern "C" void getSwbit__10daAlldie_cFv();
+extern "C" bool actionWait__10daAlldie_cFv();
+extern "C" void actionCheck__10daAlldie_cFv();
+extern "C" void actionTimer__10daAlldie_cFv();
+extern "C" void actionOrder__10daAlldie_cFv();
+extern "C" void actionEvent__10daAlldie_cFv();
+extern "C" void actionNext__10daAlldie_cFv();
+extern "C" void execute__10daAlldie_cFv();
+extern "C" bool daAlldie_Draw__FP10daAlldie_c();
+extern "C" void daAlldie_Execute__FP10daAlldie_c();
+extern "C" bool daAlldie_IsDelete__FP10daAlldie_c();
+extern "C" void daAlldie_Delete__FP10daAlldie_c();
+extern "C" void daAlldie_Create__FP10fopAc_ac_c();
 SECTION_DATA extern u8 l_daAlldie_Method[32];
 SECTION_DATA extern u8 g_profile_ALLDIE[48];
 
@@ -30,7 +58,9 @@ SECTION_DATA extern u8 g_profile_ALLDIE[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -40,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventNo__10daAlldie_cFv) {
+asm void daAlldie_c::getEventNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/getEventNo__10daAlldie_cFv.s"
 }
@@ -51,7 +81,7 @@ ASM_FUNCTION(getEventNo__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwbit__10daAlldie_cFv) {
+asm void daAlldie_c::getSwbit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/getSwbit__10daAlldie_cFv.s"
 }
@@ -59,21 +89,16 @@ ASM_FUNCTION(getSwbit__10daAlldie_cFv) {
 
 
 /* 804D5830-804D5838 0008+00 .text      actionWait__10daAlldie_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daAlldie_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionWait__10daAlldie_cFv.s"
+bool daAlldie_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5838-804D5888 0050+00 .text      actionCheck__10daAlldie_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCheck__10daAlldie_cFv) {
+asm void daAlldie_c::actionCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionCheck__10daAlldie_cFv.s"
 }
@@ -84,7 +109,7 @@ ASM_FUNCTION(actionCheck__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTimer__10daAlldie_cFv) {
+asm void daAlldie_c::actionTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionTimer__10daAlldie_cFv.s"
 }
@@ -95,7 +120,7 @@ ASM_FUNCTION(actionTimer__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrder__10daAlldie_cFv) {
+asm void daAlldie_c::actionOrder() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionOrder__10daAlldie_cFv.s"
 }
@@ -106,7 +131,7 @@ ASM_FUNCTION(actionOrder__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__10daAlldie_cFv) {
+asm void daAlldie_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionEvent__10daAlldie_cFv.s"
 }
@@ -117,7 +142,7 @@ ASM_FUNCTION(actionEvent__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionNext__10daAlldie_cFv) {
+asm void daAlldie_c::actionNext() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionNext__10daAlldie_cFv.s"
 }
@@ -128,7 +153,7 @@ ASM_FUNCTION(actionNext__10daAlldie_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daAlldie_cFv) {
+asm void daAlldie_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/execute__10daAlldie_cFv.s"
 }
@@ -136,21 +161,16 @@ ASM_FUNCTION(execute__10daAlldie_cFv) {
 
 
 /* 804D5B8C-804D5B94 0008+00 .text      daAlldie_Draw__FP10daAlldie_c                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daAlldie_Draw__FP10daAlldie_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Draw__FP10daAlldie_c.s"
+bool daAlldie_Draw(daAlldie_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5B94-804D5BB8 0024+00 .text      daAlldie_Execute__FP10daAlldie_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAlldie_Execute__FP10daAlldie_c) {
+asm void daAlldie_Execute(daAlldie_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Execute__FP10daAlldie_c.s"
 }
@@ -158,21 +178,16 @@ ASM_FUNCTION(daAlldie_Execute__FP10daAlldie_c) {
 
 
 /* 804D5BB8-804D5BC0 0008+00 .text      daAlldie_IsDelete__FP10daAlldie_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daAlldie_IsDelete__FP10daAlldie_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_IsDelete__FP10daAlldie_c.s"
+bool daAlldie_IsDelete(daAlldie_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5BC0-804D5BF0 0030+00 .text      daAlldie_Delete__FP10daAlldie_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAlldie_Delete__FP10daAlldie_c) {
+asm void daAlldie_Delete(daAlldie_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Delete__FP10daAlldie_c.s"
 }
@@ -183,7 +198,7 @@ ASM_FUNCTION(daAlldie_Delete__FP10daAlldie_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAlldie_Create__FP10fopAc_ac_c) {
+asm void daAlldie_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Create__FP10fopAc_ac_c.s"
 }

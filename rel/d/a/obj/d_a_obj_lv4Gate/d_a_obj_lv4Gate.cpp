@@ -6,30 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv4Gate_c;
+
+struct daLv4Gate_HIO_c {
+	daLv4Gate_HIO_c();
+	~daLv4Gate_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv4Gate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveGate();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMove();
+	void modeMove();
+	void init_modeMoveEnd();
+	void modeMoveEnd();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daLv4Gate_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daLv4Gate_cFv();
-extern "C" extern void CreateHeap__11daLv4Gate_cFv();
-extern "C" extern void create__11daLv4Gate_cFv();
-extern "C" extern void Execute__11daLv4Gate_cFPPA3_A4_f();
-extern "C" extern void moveGate__11daLv4Gate_cFv();
-extern "C" extern void init_modeWait__11daLv4Gate_cFv();
-extern "C" extern void modeWait__11daLv4Gate_cFv();
-extern "C" extern void init_modeMove__11daLv4Gate_cFv();
-extern "C" extern void modeMove__11daLv4Gate_cFv();
-extern "C" extern void init_modeMoveEnd__11daLv4Gate_cFv();
-extern "C" extern void modeMoveEnd__11daLv4Gate_cFv();
-extern "C" extern void Draw__11daLv4Gate_cFv();
-extern "C" extern void Delete__11daLv4Gate_cFv();
-extern "C" extern void daLv4Gate_Draw__FP11daLv4Gate_c();
-extern "C" extern void daLv4Gate_Execute__FP11daLv4Gate_c();
-extern "C" extern void daLv4Gate_Delete__FP11daLv4Gate_c();
-extern "C" extern void daLv4Gate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daLv4Gate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv4Gate_cpp();
+extern "C" void Execute__11daLv4Gate_cFPPA3_A4_f();
+void daLv4Gate_Draw(daLv4Gate_c*);
+void daLv4Gate_Execute(daLv4Gate_c*);
+void daLv4Gate_Delete(daLv4Gate_c*);
+void daLv4Gate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv4Gate_cpp();
+
+extern "C" void __ct__15daLv4Gate_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daLv4Gate_cFv();
+extern "C" void CreateHeap__11daLv4Gate_cFv();
+extern "C" void create__11daLv4Gate_cFv();
+extern "C" void Execute__11daLv4Gate_cFPPA3_A4_f();
+extern "C" void moveGate__11daLv4Gate_cFv();
+extern "C" void init_modeWait__11daLv4Gate_cFv();
+extern "C" void modeWait__11daLv4Gate_cFv();
+extern "C" void init_modeMove__11daLv4Gate_cFv();
+extern "C" void modeMove__11daLv4Gate_cFv();
+extern "C" void init_modeMoveEnd__11daLv4Gate_cFv();
+extern "C" void modeMoveEnd__11daLv4Gate_cFv();
+extern "C" void Draw__11daLv4Gate_cFv();
+extern "C" void Delete__11daLv4Gate_cFv();
+extern "C" void daLv4Gate_Draw__FP11daLv4Gate_c();
+extern "C" void daLv4Gate_Execute__FP11daLv4Gate_c();
+extern "C" void daLv4Gate_Delete__FP11daLv4Gate_c();
+extern "C" void daLv4Gate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daLv4Gate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv4Gate_cpp();
 SECTION_RODATA extern const u32 lit_3625;
 SECTION_RODATA extern const u8 lit_3646[4];
 SECTION_RODATA extern const u32 lit_3710;
@@ -59,8 +100,11 @@ SECTION_BSS extern u8 data_80C5F538[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +114,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daLv4Gate_HIO_cFv) {
+asm daLv4Gate_HIO_c::daLv4Gate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/__ct__15daLv4Gate_HIO_cFv.s"
 }
@@ -81,7 +125,7 @@ ASM_FUNCTION(__ct__15daLv4Gate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +136,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/setBaseMtx__11daLv4Gate_cFv.s"
 }
@@ -103,7 +147,7 @@ ASM_FUNCTION(setBaseMtx__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/CreateHeap__11daLv4Gate_cFv.s"
 }
@@ -114,7 +158,7 @@ ASM_FUNCTION(CreateHeap__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/create__11daLv4Gate_cFv.s"
 }
@@ -125,7 +169,7 @@ ASM_FUNCTION(create__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daLv4Gate_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daLv4Gate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/Execute__11daLv4Gate_cFPPA3_A4_f.s"
 }
@@ -136,7 +180,7 @@ ASM_FUNCTION(Execute__11daLv4Gate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveGate__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::moveGate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/moveGate__11daLv4Gate_cFv.s"
 }
@@ -147,7 +191,7 @@ ASM_FUNCTION(moveGate__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/init_modeWait__11daLv4Gate_cFv.s"
 }
@@ -158,7 +202,7 @@ ASM_FUNCTION(init_modeWait__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/modeWait__11daLv4Gate_cFv.s"
 }
@@ -169,7 +213,7 @@ ASM_FUNCTION(modeWait__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/init_modeMove__11daLv4Gate_cFv.s"
 }
@@ -180,7 +224,7 @@ ASM_FUNCTION(init_modeMove__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/modeMove__11daLv4Gate_cFv.s"
 }
@@ -191,7 +235,7 @@ ASM_FUNCTION(modeMove__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveEnd__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::init_modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/init_modeMoveEnd__11daLv4Gate_cFv.s"
 }
@@ -199,21 +243,16 @@ ASM_FUNCTION(init_modeMoveEnd__11daLv4Gate_cFv) {
 
 
 /* 80C5F1E4-80C5F1E8 0004+00 .text      modeMoveEnd__11daLv4Gate_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeMoveEnd__11daLv4Gate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/modeMoveEnd__11daLv4Gate_cFv.s"
+void daLv4Gate_c::modeMoveEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C5F1E8-80C5F28C 00A4+00 .text      Draw__11daLv4Gate_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/Draw__11daLv4Gate_cFv.s"
 }
@@ -224,7 +263,7 @@ ASM_FUNCTION(Draw__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daLv4Gate_cFv) {
+asm void daLv4Gate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/Delete__11daLv4Gate_cFv.s"
 }
@@ -235,7 +274,7 @@ ASM_FUNCTION(Delete__11daLv4Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4Gate_Draw__FP11daLv4Gate_c) {
+asm void daLv4Gate_Draw(daLv4Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/daLv4Gate_Draw__FP11daLv4Gate_c.s"
 }
@@ -246,7 +285,7 @@ ASM_FUNCTION(daLv4Gate_Draw__FP11daLv4Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4Gate_Execute__FP11daLv4Gate_c) {
+asm void daLv4Gate_Execute(daLv4Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/daLv4Gate_Execute__FP11daLv4Gate_c.s"
 }
@@ -257,7 +296,7 @@ ASM_FUNCTION(daLv4Gate_Execute__FP11daLv4Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4Gate_Delete__FP11daLv4Gate_c) {
+asm void daLv4Gate_Delete(daLv4Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/daLv4Gate_Delete__FP11daLv4Gate_c.s"
 }
@@ -268,7 +307,7 @@ ASM_FUNCTION(daLv4Gate_Delete__FP11daLv4Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv4Gate_Create__FP10fopAc_ac_c) {
+asm void daLv4Gate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/daLv4Gate_Create__FP10fopAc_ac_c.s"
 }
@@ -279,7 +318,7 @@ ASM_FUNCTION(daLv4Gate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daLv4Gate_HIO_cFv) {
+asm daLv4Gate_HIO_c::~daLv4Gate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/__dt__15daLv4Gate_HIO_cFv.s"
 }
@@ -290,7 +329,7 @@ ASM_FUNCTION(__dt__15daLv4Gate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv4Gate_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv4Gate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4Gate/d_a_obj_lv4Gate/__sinit_d_a_obj_lv4Gate_cpp.s"
 }

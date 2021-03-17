@@ -6,17 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMstop_c;
+
+struct daTagMstop_c {
+	void create();
+	~daTagMstop_c();
+	void eventOrder();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagMstop_cFv();
-extern "C" extern void daTagMstop_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagMstop_cFv();
-extern "C" extern void daTagMstop_Delete__FP12daTagMstop_c();
-extern "C" extern void eventOrder__12daTagMstop_cFv();
-extern "C" extern void execute__12daTagMstop_cFv();
-extern "C" extern void daTagMstop_Execute__FP12daTagMstop_c();
-extern "C" extern void daTagMstop_Draw__FP12daTagMstop_c();
+void daTagMstop_Create(fopAc_ac_c*);
+void daTagMstop_Delete(daTagMstop_c*);
+void daTagMstop_Execute(daTagMstop_c*);
+bool daTagMstop_Draw(daTagMstop_c*);
+
+extern "C" void create__12daTagMstop_cFv();
+extern "C" void daTagMstop_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagMstop_cFv();
+extern "C" void daTagMstop_Delete__FP12daTagMstop_c();
+extern "C" void eventOrder__12daTagMstop_cFv();
+extern "C" void execute__12daTagMstop_cFv();
+extern "C" void daTagMstop_Execute__FP12daTagMstop_c();
+extern "C" bool daTagMstop_Draw__FP12daTagMstop_c();
 SECTION_RODATA extern const u32 lit_3863;
 SECTION_RODATA extern const u32 lit_3864;
 SECTION_RODATA extern const u32 lit_4056;
@@ -30,7 +52,9 @@ SECTION_DATA extern u8 g_profile_Tag_Mstop[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -40,7 +64,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagMstop_cFv) {
+asm void daTagMstop_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/create__12daTagMstop_cFv.s"
 }
@@ -51,7 +75,7 @@ ASM_FUNCTION(create__12daTagMstop_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMstop_Create__FP10fopAc_ac_c) {
+asm void daTagMstop_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/daTagMstop_Create__FP10fopAc_ac_c.s"
 }
@@ -62,7 +86,7 @@ ASM_FUNCTION(daTagMstop_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagMstop_cFv) {
+asm daTagMstop_c::~daTagMstop_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/__dt__12daTagMstop_cFv.s"
 }
@@ -73,7 +97,7 @@ ASM_FUNCTION(__dt__12daTagMstop_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMstop_Delete__FP12daTagMstop_c) {
+asm void daTagMstop_Delete(daTagMstop_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/daTagMstop_Delete__FP12daTagMstop_c.s"
 }
@@ -84,7 +108,7 @@ ASM_FUNCTION(daTagMstop_Delete__FP12daTagMstop_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventOrder__12daTagMstop_cFv) {
+asm void daTagMstop_c::eventOrder() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/eventOrder__12daTagMstop_cFv.s"
 }
@@ -95,7 +119,7 @@ ASM_FUNCTION(eventOrder__12daTagMstop_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagMstop_cFv) {
+asm void daTagMstop_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/execute__12daTagMstop_cFv.s"
 }
@@ -106,7 +130,7 @@ ASM_FUNCTION(execute__12daTagMstop_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMstop_Execute__FP12daTagMstop_c) {
+asm void daTagMstop_Execute(daTagMstop_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/daTagMstop_Execute__FP12daTagMstop_c.s"
 }
@@ -114,14 +138,9 @@ ASM_FUNCTION(daTagMstop_Execute__FP12daTagMstop_c) {
 
 
 /* 805A695C-805A6964 0008+00 .text      daTagMstop_Draw__FP12daTagMstop_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagMstop_Draw__FP12daTagMstop_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/daTagMstop_Draw__FP12daTagMstop_c.s"
+bool daTagMstop_Draw(daTagMstop_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

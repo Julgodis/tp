@@ -6,22 +6,206 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE72C */ void getFreeSize();
+	/* 802CE784 */ void getTotalFreeSize();
+	/* 802CEB78 */ void setErrorFlag(bool);
+};
+
+// build OSContext (OSContext) False/False
+/* top-level dependencies (begin OSContext) */
+/* top-level dependencies (end OSContext) */
+struct OSContext {
+};
+
+// build mDoDvdThd (mDoDvdThd) False/False
+/* top-level dependencies (begin mDoDvdThd) */
+/* top-level dependencies (end mDoDvdThd) */
+struct mDoDvdThd {
+	/* 80015858 */ void create(s32);
+};
+
+// build mDoMemCd_Ctrl_c (mDoMemCd_Ctrl_c) False/False
+/* top-level dependencies (begin mDoMemCd_Ctrl_c) */
+/* top-level dependencies (end mDoMemCd_Ctrl_c) */
+struct mDoMemCd_Ctrl_c {
+	/* 80016730 */ void ThdInit();
+};
+
+// build JUTConsole (JUTConsole) False/False
+/* top-level dependencies (begin JUTConsole) */
+/* top-level dependencies (end JUTConsole) */
+struct JUTConsole {
+	/* 802E7C38 */ void print(char const*);
+	/* 802E80A8 */ void scroll(s32);
+	/* 802E8184 */ void getUsedLine() const;
+	/* 802E81A8 */ void getLineOffset() const;
+};
+
+// build cMl (cMl) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin cMl) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end cMl) */
+struct cMl {
+	// JKRHeap
+	/* 80263220 */ void init(JKRHeap*);
+};
+
+// build JFWSystem (JFWSystem) False/False
+/* top-level dependencies (begin JFWSystem) */
+/* top-level dependencies (end JFWSystem) */
+struct JFWSystem {
+	/* 80271CD0 */ void firstInit();
+	/* 80271D18 */ void init();
+};
+
+// build JKRThread (JKRThread) False/False
+// build OSThread (OSThread) False/False
+/* top-level dependencies (begin OSThread) */
+/* top-level dependencies (end OSThread) */
+struct OSThread {
+};
+
+/* top-level dependencies (begin JKRThread) */
+// outer dependency: OSThread
+/* top-level dependencies (end JKRThread) */
+struct JKRThread {
+	// OSThread
+	/* 802D16B8 */ JKRThread(OSThread*, s32);
+};
+
+// build OSThread (OSThread) True/True
+// build JKRThreadSwitch (JKRThreadSwitch) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRThreadSwitch) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRThreadSwitch) */
+struct JKRThreadSwitch {
+	// JKRHeap
+	/* 802D1A14 */ void createManager(JKRHeap*);
+};
+
+// build JKRAramStream (JKRAramStream) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRAramStream) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRAramStream) */
+struct JKRAramStream {
+	// JKRHeap
+	/* 802D4034 */ void setTransBuffer(char*, u32, JKRHeap*);
+};
+
+// build JUTDbPrint (JUTDbPrint) False/False
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JUTDbPrint) */
+// outer dependency: JUTFont
+// outer dependency: JKRHeap
+/* top-level dependencies (end JUTDbPrint) */
+struct JUTDbPrint {
+	// JUTFont
+	// JKRHeap
+	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
+};
+
+// build JUTFont (JUTFont) True/True
+// build JUTGamePad (JUTGamePad) False/False
+// build JUTGamePad (JUTGamePad) True/False
+struct JUTGamePad;
+/* top-level dependencies (begin JUTGamePad) */
+// outer dependency: JUTGamePad::EPadPort
+/* top-level dependencies (end JUTGamePad) */
+struct JUTGamePad {
+	// JUTGamePad::EPadPort
+	// build EPadPort (JUTGamePad::EPadPort) False/False
+	/* dependencies (begin JUTGamePad::EPadPort) */
+	/* dependencies (end JUTGamePad::EPadPort) */
+	struct EPadPort {
+	};
+
+	/* 802E06DC */ JUTGamePad(JUTGamePad::EPadPort);
+	/* 802E07B0 */ ~JUTGamePad();
+};
+
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E2F18 */ void isEnablePad() const;
+	/* 802E2F54 */ void readPad(u32*, u32*);
+	/* 802E3980 */ void waitTime(s32);
+	/* 802E3B0C */ void appendMapFile(char const*);
+};
+
+// build JUTAssertion (JUTAssertion) False/False
+/* top-level dependencies (begin JUTAssertion) */
+/* top-level dependencies (end JUTAssertion) */
+struct JUTAssertion {
+	/* 802E4C34 */ void setVisible(bool);
+};
+
+// build JUTVideo (JUTVideo) False/False
+/* top-level dependencies (begin JUTVideo) */
+/* top-level dependencies (end JUTVideo) */
+struct JUTVideo {
+	/* 802E4CAC */ void destroyManager();
+};
+
+// build JUTConsoleManager (JUTConsoleManager) False/False
+// build JUTConsole (JUTConsole) True/True
+/* top-level dependencies (begin JUTConsoleManager) */
+// outer dependency: JUTConsole
+/* top-level dependencies (end JUTConsoleManager) */
+struct JUTConsoleManager {
+	// JUTConsole
+	/* 802E8450 */ void drawDirect(bool) const;
+	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void myGetHeapTypeByString__FP7JKRHeap();
-extern "C" extern void myMemoryErrorRoutine__FPvUli();
-extern "C" extern void myHeapCheckRecursive__FP7JKRHeap();
-extern "C" extern void mDoMch_HeapCheckAll__Fv();
-extern "C" extern void developKeyCheck__FUlUl();
-extern "C" extern void mDoMch_IsProgressiveMode__Fv();
-extern "C" extern void exceptionReadPad__FPUlPUl();
-extern "C" extern void exceptionRestart__Fv();
-extern "C" extern void myExceptionCallback__FUsP9OSContextUlUl();
-extern "C" extern void fault_callback_scroll__FUsP9OSContextUlUl();
-extern "C" extern void my_PrintHeap__FPCcUl();
-extern "C" extern void my_SysPrintHeap__FPCcPvUl();
-extern "C" extern void mDoMch_Create__Fv();
+static void myGetHeapTypeByString(JKRHeap*);
+static void myMemoryErrorRoutine(void*, u32, s32);
+static void myHeapCheckRecursive(JKRHeap*);
+void mDoMch_HeapCheckAll();
+static void developKeyCheck(u32, u32);
+static void mDoMch_IsProgressiveMode();
+static void exceptionReadPad(u32*, u32*);
+static void exceptionRestart();
+static void myExceptionCallback(u16, OSContext*, u32, u32);
+static void fault_callback_scroll(u16, OSContext*, u32, u32);
+static void my_PrintHeap(char const*, u32);
+static void my_SysPrintHeap(char const*, void*, u32);
+void mDoMch_Create();
+
+extern "C" static void myGetHeapTypeByString__FP7JKRHeap();
+extern "C" static void myMemoryErrorRoutine__FPvUli();
+extern "C" static void myHeapCheckRecursive__FP7JKRHeap();
+extern "C" void mDoMch_HeapCheckAll__Fv();
+extern "C" static void developKeyCheck__FUlUl();
+extern "C" static void mDoMch_IsProgressiveMode__Fv();
+extern "C" static void exceptionReadPad__FPUlPUl();
+extern "C" static void exceptionRestart__Fv();
+extern "C" static void myExceptionCallback__FUsP9OSContextUlUl();
+extern "C" static void fault_callback_scroll__FUsP9OSContextUlUl();
+extern "C" static void my_PrintHeap__FPCcUl();
+extern "C" static void my_SysPrintHeap__FPCcPvUl();
+extern "C" void mDoMch_Create__Fv();
 SECTION_RODATA extern const u8 m_Do_m_Do_machine__stringBase0[728];
 SECTION_DATA extern u8 g_ntscZeldaIntDf[60];
 SECTION_DATA extern u8 g_ntscZeldaProg[60];
@@ -42,82 +226,132 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_machine__lit_3941;
 // External References:
 // 
 
-extern "C" extern void OSReportDisable();
-extern "C" extern void OSReportEnable();
-extern "C" extern void OSReport();
-extern "C" extern void OSReport_Error();
-extern "C" extern void OSReport_System();
-extern "C" extern void mDoExt_createAssertHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getDbPrintHeap__Fv();
-extern "C" extern void mDoExt_createGameHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getGameHeap__Fv();
-extern "C" extern void mDoExt_createZeldaHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getZeldaHeap__Fv();
-extern "C" extern void mDoExt_createCommandHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getCommandHeap__Fv();
-extern "C" extern void mDoExt_createArchiveHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getArchiveHeap__Fv();
-extern "C" extern void mDoExt_createJ2dHeap__FUlP7JKRHeap();
-extern "C" extern void mDoExt_getJ2dHeap__Fv();
-extern "C" extern void mDoRst_reset__FiUli();
-extern "C" extern void create__9mDoDvdThdFl();
-extern "C" extern void mDoDvdErr_ThdInit__Fv();
-extern "C" extern void ThdInit__15mDoMemCd_Ctrl_cFv();
-extern "C" extern void exception_addition__FP10JUTConsole();
-extern "C" extern void init__3cMlFP7JKRHeap();
-extern "C" extern void cAPICPad_recalibrate__Fv();
-extern "C" extern void cM_initRnd__Fiii();
-extern "C" extern void firstInit__9JFWSystemFv();
-extern "C" extern void init__9JFWSystemFv();
-extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
-extern "C" extern void getFreeSize__7JKRHeapFv();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void setErrorFlag__7JKRHeapFb();
-extern "C" extern void setErrorHandler__7JKRHeapFPFPvUli_v();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __ct__9JKRThreadFP8OSThreadi();
-extern "C" extern void createManager__15JKRThreadSwitchFP7JKRHeap();
-extern "C" extern void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
-extern "C" extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern "C" extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
-extern "C" extern void __dt__10JUTGamePadFv();
-extern "C" extern void isEnablePad__12JUTExceptionCFv();
-extern "C" extern void readPad__12JUTExceptionFPUlPUl();
-extern "C" extern void waitTime__12JUTExceptionFl();
-extern "C" extern void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" extern void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" extern void appendMapFile__12JUTExceptionFPCc();
-extern "C" extern void setVisible__12JUTAssertionFb();
-extern "C" extern void destroyManager__8JUTVideoFv();
-extern "C" extern void print_f__10JUTConsoleFPCce();
-extern "C" extern void print__10JUTConsoleFPCc();
-extern "C" extern void scroll__10JUTConsoleFi();
-extern "C" extern void getUsedLine__10JUTConsoleCFv();
-extern "C" extern void getLineOffset__10JUTConsoleCFv();
-extern "C" extern void drawDirect__17JUTConsoleManagerCFb();
-extern "C" extern void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
-extern "C" extern void PPCHalt();
-extern "C" extern void OSGetConsoleType();
-extern "C" extern void OSGetArenaHi();
-extern "C" extern void OSGetArenaLo();
-extern "C" extern void OSSetArenaHi();
-extern "C" extern void OSEnableInterrupts();
-extern "C" extern void OSResetSystem();
-extern "C" extern void OSGetResetCode();
-extern "C" extern void OSGetProgressiveMode();
-extern "C" extern void OSSetProgressiveMode();
-extern "C" extern void OSGetCurrentThread();
-extern "C" extern void OSGetThreadPriority();
-extern "C" extern void OSGetTime();
-extern "C" extern void DVDChangeDir();
-extern "C" extern void VIFlush();
-extern "C" extern void VISetBlack();
-extern "C" extern void VIGetRetraceCount();
-extern "C" extern void VIGetDTVStatus();
-extern "C" extern void GXSetDrawDoneCallback();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+extern "C" void OSReportDisable();
+extern "C" void OSReportEnable();
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_System();
+void mDoExt_createAssertHeap(JKRHeap*);
+void mDoExt_createDbPrintHeap(u32, JKRHeap*);
+void mDoExt_getDbPrintHeap();
+void mDoExt_createGameHeap(u32, JKRHeap*);
+void mDoExt_getGameHeap();
+void mDoExt_createZeldaHeap(u32, JKRHeap*);
+void mDoExt_getZeldaHeap();
+void mDoExt_createCommandHeap(u32, JKRHeap*);
+void mDoExt_getCommandHeap();
+void mDoExt_createArchiveHeap(u32, JKRHeap*);
+void mDoExt_getArchiveHeap();
+void mDoExt_createJ2dHeap(u32, JKRHeap*);
+void mDoExt_getJ2dHeap();
+void mDoRst_reset(s32, u32, s32);
+void mDoDvdErr_ThdInit();
+void exception_addition(JUTConsole*);
+void cAPICPad_recalibrate();
+void cM_initRnd(s32, s32, s32);
+extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
+void* operator new(u32);
+extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void print_f__10JUTConsoleFPCce();
+extern "C" void PPCHalt();
+extern "C" void OSGetConsoleType();
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaHi();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSResetSystem();
+extern "C" void OSGetResetCode();
+extern "C" void OSGetProgressiveMode();
+extern "C" void OSSetProgressiveMode();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSGetThreadPriority();
+extern "C" void OSGetTime();
+extern "C" void DVDChangeDir();
+extern "C" void VIFlush();
+extern "C" void VISetBlack();
+extern "C" void VIGetRetraceCount();
+extern "C" void VIGetDTVStatus();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void OSReportDisable();
+extern "C" void OSReportEnable();
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_System();
+extern "C" void mDoExt_createAssertHeap__FP7JKRHeap();
+extern "C" void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getDbPrintHeap__Fv();
+extern "C" void mDoExt_createGameHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_createZeldaHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getZeldaHeap__Fv();
+extern "C" void mDoExt_createCommandHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getCommandHeap__Fv();
+extern "C" void mDoExt_createArchiveHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_createJ2dHeap__FUlP7JKRHeap();
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void create__9mDoDvdThdFl();
+extern "C" void mDoDvdErr_ThdInit__Fv();
+extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv();
+extern "C" void exception_addition__FP10JUTConsole();
+extern "C" void init__3cMlFP7JKRHeap();
+extern "C" void cAPICPad_recalibrate__Fv();
+extern "C" void cM_initRnd__Fiii();
+extern "C" void firstInit__9JFWSystemFv();
+extern "C" void init__9JFWSystemFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void setErrorFlag__7JKRHeapFb();
+extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
+extern "C" void* __nw__FUl();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap();
+extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern "C" void __dt__10JUTGamePadFv();
+extern "C" void isEnablePad__12JUTExceptionCFv();
+extern "C" void readPad__12JUTExceptionFPUlPUl();
+extern "C" void waitTime__12JUTExceptionFl();
+extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void appendMapFile__12JUTExceptionFPCc();
+extern "C" void setVisible__12JUTAssertionFb();
+extern "C" void destroyManager__8JUTVideoFv();
+extern "C" void print_f__10JUTConsoleFPCce();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void scroll__10JUTConsoleFi();
+extern "C" void getUsedLine__10JUTConsoleCFv();
+extern "C" void getLineOffset__10JUTConsoleCFv();
+extern "C" void drawDirect__17JUTConsoleManagerCFb();
+extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" void PPCHalt();
+extern "C" void OSGetConsoleType();
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaHi();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSResetSystem();
+extern "C" void OSGetResetCode();
+extern "C" void OSGetProgressiveMode();
+extern "C" void OSSetProgressiveMode();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSGetThreadPriority();
+extern "C" void OSGetTime();
+extern "C" void DVDChangeDir();
+extern "C" void VIFlush();
+extern "C" void VISetBlack();
+extern "C" void VIGetRetraceCount();
+extern "C" void VIGetDTVStatus();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
 SECTION_SDATA extern u32 data_80450580;
 SECTION_SDATA extern u32 memMargin__7mDoMain;
@@ -153,7 +387,7 @@ SECTION_SBSS extern u8 sManager__17JUTConsoleManager[4];
 // 
 
 /* ############################################################################################## */
-/* 80373DE8-803740C0 02D8+00 .rodata    @stringBase0                                                 */
+/* 80373DE8-803740C0 02D8+00 rc=7 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -202,130 +436,130 @@ SECTION_DEAD char* const stringBase_8037409E =
     "/map/Final/Release/frameworkF.map";
 #pragma pop
 
-/* 80450BF0-80450BF4 0004+00 .sbss      None                                                         */
+/* 80450BF0-80450BF4 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80450BF0[4];
 
-/* 80450BF4-80450BF8 0004+00 .sbss      solidHeapErrors                                              */
+/* 80450BF4-80450BF8 0004+00 rc=1 efc=0 .sbss      solidHeapErrors                                              */
 u8 solidHeapErrors[4];
 
-/* 80450BF8-80450BFC 0004+00 .sbss      gameHeapErrors                                               */
+/* 80450BF8-80450BFC 0004+00 rc=1 efc=0 .sbss      gameHeapErrors                                               */
 u8 gameHeapErrors[4];
 
-/* 80450BFC-80450C00 0004+00 .sbss      zeldaHeapErrors                                              */
+/* 80450BFC-80450C00 0004+00 rc=1 efc=0 .sbss      zeldaHeapErrors                                              */
 u8 zeldaHeapErrors[4];
 
-/* 80450C00-80450C04 0004+00 .sbss      commandHeapErrors                                            */
+/* 80450C00-80450C04 0004+00 rc=1 efc=0 .sbss      commandHeapErrors                                            */
 u8 commandHeapErrors[4];
 
-/* 80450C04-80450C08 0004+00 .sbss      archiveHeapErrors                                            */
+/* 80450C04-80450C08 0004+00 rc=1 efc=0 .sbss      archiveHeapErrors                                            */
 u8 archiveHeapErrors[4];
 
-/* 80450C08-80450C0C 0004+00 .sbss      unknownHeapErrors                                            */
+/* 80450C08-80450C0C 0004+00 rc=1 efc=0 .sbss      unknownHeapErrors                                            */
 u8 unknownHeapErrors[4];
 
-/* 80450C0C-80450C10 0004+00 .sbss      heapErrors                                                   */
+/* 80450C0C-80450C10 0004+00 rc=1 efc=0 .sbss      heapErrors                                                   */
 u8 heapErrors[4];
 
-/* 80450C10-80450C18 0008+00 .sbss      None                                                         */
+/* 80450C10-80450C18 0008+00 rc=2 efc=0 .sbss      None                                                         */
 u8 struct_80450C10[8];
 /* 80450C10 0005 data_80450C10 */
 /* 80450C15 0001 data_80450C15 */
 /* 80450C16 0001 data_80450C16 */
 /* 80450C17 0001 data_80450C17 */
 
-/* 8000B1EC-8000B3EC 0200+00 .text      myGetHeapTypeByString__FP7JKRHeap                            */
+/* 8000B1EC-8000B3EC 0200+00 rc=2 efc=0 .text      myGetHeapTypeByString__FP7JKRHeap                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myGetHeapTypeByString__FP7JKRHeap) {
+asm static void myGetHeapTypeByString(JKRHeap* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/myGetHeapTypeByString__FP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8000B3EC-8000B5C8 01DC+00 .text      myMemoryErrorRoutine__FPvUli                                 */
+/* 8000B3EC-8000B5C8 01DC+00 rc=1 efc=0 .text      myMemoryErrorRoutine__FPvUli                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myMemoryErrorRoutine__FPvUli) {
+asm static void myMemoryErrorRoutine(void* field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/myMemoryErrorRoutine__FPvUli.s"
 }
 #pragma pop
 
 
-/* 8000B5C8-8000B668 00A0+00 .text      myHeapCheckRecursive__FP7JKRHeap                             */
+/* 8000B5C8-8000B668 00A0+00 rc=1 efc=0 .text      myHeapCheckRecursive__FP7JKRHeap                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myHeapCheckRecursive__FP7JKRHeap) {
+asm static void myHeapCheckRecursive(JKRHeap* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/myHeapCheckRecursive__FP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8000B668-8000B68C 0024+00 .text      mDoMch_HeapCheckAll__Fv                                      */
+/* 8000B668-8000B68C 0024+00 rc=2 efc=2 .text      mDoMch_HeapCheckAll__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMch_HeapCheckAll__Fv) {
+asm void mDoMch_HeapCheckAll() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/mDoMch_HeapCheckAll__Fv.s"
 }
 #pragma pop
 
 
-/* 8000B68C-8000B73C 00B0+00 .text      developKeyCheck__FUlUl                                       */
+/* 8000B68C-8000B73C 00B0+00 rc=1 efc=0 .text      developKeyCheck__FUlUl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(developKeyCheck__FUlUl) {
+asm static void developKeyCheck(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/developKeyCheck__FUlUl.s"
 }
 #pragma pop
 
 
-/* 8000B73C-8000B768 002C+00 .text      mDoMch_IsProgressiveMode__Fv                                 */
+/* 8000B73C-8000B768 002C+00 rc=1 efc=0 .text      mDoMch_IsProgressiveMode__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMch_IsProgressiveMode__Fv) {
+asm static void mDoMch_IsProgressiveMode() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/mDoMch_IsProgressiveMode__Fv.s"
 }
 #pragma pop
 
 
-/* 8000B768-8000B798 0030+00 .text      exceptionReadPad__FPUlPUl                                    */
+/* 8000B768-8000B798 0030+00 rc=2 efc=0 .text      exceptionReadPad__FPUlPUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exceptionReadPad__FPUlPUl) {
+asm static void exceptionReadPad(u32* field_0, u32* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/exceptionReadPad__FPUlPUl.s"
 }
 #pragma pop
 
 
-/* 8000B798-8000B7C8 0030+00 .text      exceptionRestart__Fv                                         */
+/* 8000B798-8000B7C8 0030+00 rc=1 efc=0 .text      exceptionRestart__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exceptionRestart__Fv) {
+asm static void exceptionRestart() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/exceptionRestart__Fv.s"
 }
 #pragma pop
 
 
-/* 8000B7C8-8000B95C 0194+00 .text      myExceptionCallback__FUsP9OSContextUlUl                      */
+/* 8000B7C8-8000B95C 0194+00 rc=1 efc=0 .text      myExceptionCallback__FUsP9OSContextUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myExceptionCallback__FUsP9OSContextUlUl) {
+asm static void myExceptionCallback(u16 field_0, OSContext* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/myExceptionCallback__FUsP9OSContextUlUl.s"
 }
@@ -333,39 +567,34 @@ ASM_FUNCTION(myExceptionCallback__FUsP9OSContextUlUl) {
 
 
 /* ############################################################################################## */
-/* 80451B00-80451B04 0004+00 .sdata2    @3940                                                        */
+/* 80451B00-80451B04 0004+00 rc=1 efc=0 .sdata2    @3940                                                        */
 f32 m_Do_m_Do_machine__lit_3940 = 8.0f;
 
-/* 80451B04-80451B08 0004+00 .sdata2    @3941                                                        */
+/* 80451B04-80451B08 0004+00 rc=1 efc=0 .sdata2    @3941                                                        */
 f32 m_Do_m_Do_machine__lit_3941 = 6.0f;
 
-/* 8000B95C-8000BCF4 0398+00 .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
+/* 8000B95C-8000BCF4 0398+00 rc=1 efc=0 .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fault_callback_scroll__FUsP9OSContextUlUl) {
+asm static void fault_callback_scroll(u16 field_0, OSContext* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/fault_callback_scroll__FUsP9OSContextUlUl.s"
 }
 #pragma pop
 
 
-/* 8000BCF4-8000BCF8 0004+00 .text      my_PrintHeap__FPCcUl                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(my_PrintHeap__FPCcUl) {
-	nofralloc
-#include "asm/m_Do/m_Do_machine/my_PrintHeap__FPCcUl.s"
+/* 8000BCF4-8000BCF8 0004+00 rc=1 efc=0 .text      my_PrintHeap__FPCcUl                                         */
+static void my_PrintHeap(char const* field_0, u32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8000BCF8-8000BD44 004C+00 .text      my_SysPrintHeap__FPCcPvUl                                    */
+/* 8000BCF8-8000BD44 004C+00 rc=1 efc=0 .text      my_SysPrintHeap__FPCcPvUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(my_SysPrintHeap__FPCcPvUl) {
+asm static void my_SysPrintHeap(char const* field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/my_SysPrintHeap__FPCcPvUl.s"
 }
@@ -373,7 +602,7 @@ ASM_FUNCTION(my_SysPrintHeap__FPCcPvUl) {
 
 
 /* ############################################################################################## */
-/* 803A2F60-803A2F9C 003C+00 .data      g_ntscZeldaIntDf                                             */
+/* 803A2F60-803A2F9C 003C+00 rc=1 efc=0 .data      g_ntscZeldaIntDf                                             */
 u8 g_ntscZeldaIntDf[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -381,7 +610,7 @@ u8 g_ntscZeldaIntDf[60] = {
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803A2F9C-803A2FD8 003C+00 .data      g_ntscZeldaProg                                              */
+/* 803A2F9C-803A2FD8 003C+00 rc=2 efc=1 .data      g_ntscZeldaProg                                              */
 u8 g_ntscZeldaProg[60] = {
 	0x00, 0x00, 0x00, 0x02, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -389,22 +618,21 @@ u8 g_ntscZeldaProg[60] = {
 	0x06, 0x06, 0x00, 0x00, 0x15, 0x16, 0x15, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804505A0-804505A8 0004+04 .sdata     mRenderModeObj__15mDoMch_render_c                            */
+/* 804505A0-804505A8 0004+04 rc=4 efc=3 .sdata     mRenderModeObj__15mDoMch_render_c                            */
 void* mRenderModeObj__15mDoMch_render_c[2] = {
 	(void*)&g_ntscZeldaIntDf,
 	/* padding */
 	NULL,
 };
 
-/* 8000BD44-8000C0CC 0388+00 .text      mDoMch_Create__Fv                                            */
+/* 8000BD44-8000C0CC 0388+00 rc=2 efc=2 .text      mDoMch_Create__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMch_Create__Fv) {
+asm void mDoMch_Create() {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/mDoMch_Create__Fv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

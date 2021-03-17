@@ -6,64 +6,150 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjVolcBom_c;
+
+struct daObjVolcBom_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void mode_proc_call();
+	void init_modeWaitAppear();
+	void modeWaitAppear();
+	void init_modeFall();
+	void modeFall();
+	void init_modeWaitEndFallDemo();
+	void modeWaitEndFallDemo();
+	void init_modeWait();
+	void modeWait();
+	void clrDzb();
+	void setDzb();
+	void appear();
+	void disappear();
+	void setSmoke();
+	void checkTalkDistance();
+	void calcMidnaWaitPos();
+	void setSrcEffect();
+	void setBindEffect();
+	void followBindEffect();
+	void endBindEffect();
+	void followSrcEffect();
+	void endSrcEffect();
+	void event_proc_call();
+	void orderZHintEvent();
+	void actionWait();
+	void actionOrderEvent();
+	void actionOrderATalkEvent();
+	void actionTalkEvent();
+	void actionWarpEvent();
+	void actionDead();
+	void demoProc();
+	void calcObjPos();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void initBaseMtx__14daObjVolcBom_cFv();
-extern "C" extern void setBaseMtx__14daObjVolcBom_cFv();
-extern "C" extern void Create__14daObjVolcBom_cFv();
-extern "C" extern void CreateHeap__14daObjVolcBom_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__14daObjVolcBom_cFv();
-extern "C" extern void Execute__14daObjVolcBom_cFPPA3_A4_f();
-extern "C" extern void mode_proc_call__14daObjVolcBom_cFv();
-extern "C" extern void init_modeWaitAppear__14daObjVolcBom_cFv();
-extern "C" extern void modeWaitAppear__14daObjVolcBom_cFv();
-extern "C" extern void init_modeFall__14daObjVolcBom_cFv();
-extern "C" extern void modeFall__14daObjVolcBom_cFv();
-extern "C" extern void init_modeWaitEndFallDemo__14daObjVolcBom_cFv();
-extern "C" extern void modeWaitEndFallDemo__14daObjVolcBom_cFv();
-extern "C" extern void init_modeWait__14daObjVolcBom_cFv();
-extern "C" extern void modeWait__14daObjVolcBom_cFv();
-extern "C" extern void clrDzb__14daObjVolcBom_cFv();
-extern "C" extern void setDzb__14daObjVolcBom_cFv();
-extern "C" extern void appear__14daObjVolcBom_cFv();
-extern "C" extern void disappear__14daObjVolcBom_cFv();
-extern "C" extern void setSmoke__14daObjVolcBom_cFv();
-extern "C" extern void checkTalkDistance__14daObjVolcBom_cFv();
-extern "C" extern void calcMidnaWaitPos__14daObjVolcBom_cFv();
-extern "C" extern void setSrcEffect__14daObjVolcBom_cFv();
-extern "C" extern void setBindEffect__14daObjVolcBom_cFv();
-extern "C" extern void followBindEffect__14daObjVolcBom_cFv();
-extern "C" extern void endBindEffect__14daObjVolcBom_cFv();
-extern "C" extern void followSrcEffect__14daObjVolcBom_cFv();
-extern "C" extern void endSrcEffect__14daObjVolcBom_cFv();
-extern "C" extern void event_proc_call__14daObjVolcBom_cFv();
-extern "C" extern void orderZHintEvent__14daObjVolcBom_cFv();
-extern "C" extern void actionWait__14daObjVolcBom_cFv();
-extern "C" extern void actionOrderEvent__14daObjVolcBom_cFv();
-extern "C" extern void actionOrderATalkEvent__14daObjVolcBom_cFv();
-extern "C" extern void actionTalkEvent__14daObjVolcBom_cFv();
-extern "C" extern void actionWarpEvent__14daObjVolcBom_cFv();
-extern "C" extern void actionDead__14daObjVolcBom_cFv();
-extern "C" extern void demoProc__14daObjVolcBom_cFv();
-extern "C" extern void calcObjPos__14daObjVolcBom_cFv();
-extern "C" extern void Draw__14daObjVolcBom_cFv();
-extern "C" extern void Delete__14daObjVolcBom_cFv();
-extern "C" extern void daObjVolcBom_create1st__FP14daObjVolcBom_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjVolcBom_MoveBGDelete__FP14daObjVolcBom_c();
-extern "C" extern void daObjVolcBom_MoveBGExecute__FP14daObjVolcBom_c();
-extern "C" extern void daObjVolcBom_MoveBGDraw__FP14daObjVolcBom_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80D26B28();
-extern "C" extern void func_80D26B44();
-extern "C" extern void func_80D26B4C();
+void eventCallBack(void*, s32);
+extern "C" void Execute__14daObjVolcBom_cFPPA3_A4_f();
+void daObjVolcBom_create1st(daObjVolcBom_c*);
+void daObjVolcBom_MoveBGDelete(daObjVolcBom_c*);
+void daObjVolcBom_MoveBGExecute(daObjVolcBom_c*);
+void daObjVolcBom_MoveBGDraw(daObjVolcBom_c*);
+extern "C" void func_80D26B28();
+extern "C" void func_80D26B44();
+extern "C" void func_80D26B4C();
+
+extern "C" void eventCallBack__FPvi();
+extern "C" void initBaseMtx__14daObjVolcBom_cFv();
+extern "C" void setBaseMtx__14daObjVolcBom_cFv();
+extern "C" void Create__14daObjVolcBom_cFv();
+extern "C" void CreateHeap__14daObjVolcBom_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__14daObjVolcBom_cFv();
+extern "C" void Execute__14daObjVolcBom_cFPPA3_A4_f();
+extern "C" void mode_proc_call__14daObjVolcBom_cFv();
+extern "C" void init_modeWaitAppear__14daObjVolcBom_cFv();
+extern "C" void modeWaitAppear__14daObjVolcBom_cFv();
+extern "C" void init_modeFall__14daObjVolcBom_cFv();
+extern "C" void modeFall__14daObjVolcBom_cFv();
+extern "C" void init_modeWaitEndFallDemo__14daObjVolcBom_cFv();
+extern "C" void modeWaitEndFallDemo__14daObjVolcBom_cFv();
+extern "C" void init_modeWait__14daObjVolcBom_cFv();
+extern "C" void modeWait__14daObjVolcBom_cFv();
+extern "C" void clrDzb__14daObjVolcBom_cFv();
+extern "C" void setDzb__14daObjVolcBom_cFv();
+extern "C" void appear__14daObjVolcBom_cFv();
+extern "C" void disappear__14daObjVolcBom_cFv();
+extern "C" void setSmoke__14daObjVolcBom_cFv();
+extern "C" void checkTalkDistance__14daObjVolcBom_cFv();
+extern "C" void calcMidnaWaitPos__14daObjVolcBom_cFv();
+extern "C" void setSrcEffect__14daObjVolcBom_cFv();
+extern "C" void setBindEffect__14daObjVolcBom_cFv();
+extern "C" void followBindEffect__14daObjVolcBom_cFv();
+extern "C" void endBindEffect__14daObjVolcBom_cFv();
+extern "C" void followSrcEffect__14daObjVolcBom_cFv();
+extern "C" void endSrcEffect__14daObjVolcBom_cFv();
+extern "C" void event_proc_call__14daObjVolcBom_cFv();
+extern "C" void orderZHintEvent__14daObjVolcBom_cFv();
+extern "C" void actionWait__14daObjVolcBom_cFv();
+extern "C" void actionOrderEvent__14daObjVolcBom_cFv();
+extern "C" void actionOrderATalkEvent__14daObjVolcBom_cFv();
+extern "C" void actionTalkEvent__14daObjVolcBom_cFv();
+extern "C" void actionWarpEvent__14daObjVolcBom_cFv();
+extern "C" void actionDead__14daObjVolcBom_cFv();
+extern "C" void demoProc__14daObjVolcBom_cFv();
+extern "C" void calcObjPos__14daObjVolcBom_cFv();
+extern "C" void Draw__14daObjVolcBom_cFv();
+extern "C" void Delete__14daObjVolcBom_cFv();
+extern "C" void daObjVolcBom_create1st__FP14daObjVolcBom_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjVolcBom_MoveBGDelete__FP14daObjVolcBom_c();
+extern "C" void daObjVolcBom_MoveBGExecute__FP14daObjVolcBom_c();
+extern "C" void daObjVolcBom_MoveBGDraw__FP14daObjVolcBom_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80D26B28();
+extern "C" void func_80D26B44();
+extern "C" void func_80D26B4C();
 SECTION_RODATA extern const u8 l_midna_offset[12];
 SECTION_RODATA extern const u16 l_disapp_eff;
 SECTION_RODATA extern const u8 l_start_eff[6 + 2 /* padding */];
@@ -132,7 +218,9 @@ SECTION_DATA extern void*const __vt__14daObjVolcBom_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -142,7 +230,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/eventCallBack__FPvi.s"
 }
@@ -153,7 +241,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/initBaseMtx__14daObjVolcBom_cFv.s"
 }
@@ -164,7 +252,7 @@ ASM_FUNCTION(initBaseMtx__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/setBaseMtx__14daObjVolcBom_cFv.s"
 }
@@ -175,7 +263,7 @@ ASM_FUNCTION(setBaseMtx__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/Create__14daObjVolcBom_cFv.s"
 }
@@ -186,7 +274,7 @@ ASM_FUNCTION(Create__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/CreateHeap__14daObjVolcBom_cFv.s"
 }
@@ -197,7 +285,7 @@ ASM_FUNCTION(CreateHeap__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__12J3DFrameCtrlFv.s"
 }
@@ -208,7 +296,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/create1st__14daObjVolcBom_cFv.s"
 }
@@ -219,7 +307,7 @@ ASM_FUNCTION(create1st__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjVolcBom_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjVolcBom_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/Execute__14daObjVolcBom_cFPPA3_A4_f.s"
 }
@@ -230,7 +318,7 @@ ASM_FUNCTION(Execute__14daObjVolcBom_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/mode_proc_call__14daObjVolcBom_cFv.s"
 }
@@ -241,7 +329,7 @@ ASM_FUNCTION(mode_proc_call__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitAppear__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::init_modeWaitAppear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/init_modeWaitAppear__14daObjVolcBom_cFv.s"
 }
@@ -252,7 +340,7 @@ ASM_FUNCTION(init_modeWaitAppear__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitAppear__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::modeWaitAppear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/modeWaitAppear__14daObjVolcBom_cFv.s"
 }
@@ -263,7 +351,7 @@ ASM_FUNCTION(modeWaitAppear__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeFall__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::init_modeFall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/init_modeFall__14daObjVolcBom_cFv.s"
 }
@@ -274,7 +362,7 @@ ASM_FUNCTION(init_modeFall__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeFall__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::modeFall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/modeFall__14daObjVolcBom_cFv.s"
 }
@@ -285,7 +373,7 @@ ASM_FUNCTION(modeFall__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitEndFallDemo__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::init_modeWaitEndFallDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/init_modeWaitEndFallDemo__14daObjVolcBom_cFv.s"
 }
@@ -296,7 +384,7 @@ ASM_FUNCTION(init_modeWaitEndFallDemo__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitEndFallDemo__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::modeWaitEndFallDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/modeWaitEndFallDemo__14daObjVolcBom_cFv.s"
 }
@@ -307,7 +395,7 @@ ASM_FUNCTION(modeWaitEndFallDemo__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/init_modeWait__14daObjVolcBom_cFv.s"
 }
@@ -318,7 +406,7 @@ ASM_FUNCTION(init_modeWait__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/modeWait__14daObjVolcBom_cFv.s"
 }
@@ -329,7 +417,7 @@ ASM_FUNCTION(modeWait__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clrDzb__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::clrDzb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/clrDzb__14daObjVolcBom_cFv.s"
 }
@@ -340,7 +428,7 @@ ASM_FUNCTION(clrDzb__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDzb__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::setDzb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/setDzb__14daObjVolcBom_cFv.s"
 }
@@ -351,7 +439,7 @@ ASM_FUNCTION(setDzb__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appear__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::appear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/appear__14daObjVolcBom_cFv.s"
 }
@@ -362,7 +450,7 @@ ASM_FUNCTION(appear__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(disappear__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::disappear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/disappear__14daObjVolcBom_cFv.s"
 }
@@ -373,7 +461,7 @@ ASM_FUNCTION(disappear__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmoke__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::setSmoke() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/setSmoke__14daObjVolcBom_cFv.s"
 }
@@ -384,7 +472,7 @@ ASM_FUNCTION(setSmoke__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTalkDistance__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::checkTalkDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/checkTalkDistance__14daObjVolcBom_cFv.s"
 }
@@ -395,7 +483,7 @@ ASM_FUNCTION(checkTalkDistance__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMidnaWaitPos__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::calcMidnaWaitPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/calcMidnaWaitPos__14daObjVolcBom_cFv.s"
 }
@@ -406,7 +494,7 @@ ASM_FUNCTION(calcMidnaWaitPos__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSrcEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::setSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/setSrcEffect__14daObjVolcBom_cFv.s"
 }
@@ -417,7 +505,7 @@ ASM_FUNCTION(setSrcEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBindEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::setBindEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/setBindEffect__14daObjVolcBom_cFv.s"
 }
@@ -428,7 +516,7 @@ ASM_FUNCTION(setBindEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followBindEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::followBindEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/followBindEffect__14daObjVolcBom_cFv.s"
 }
@@ -439,7 +527,7 @@ ASM_FUNCTION(followBindEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endBindEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::endBindEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/endBindEffect__14daObjVolcBom_cFv.s"
 }
@@ -450,7 +538,7 @@ ASM_FUNCTION(endBindEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(followSrcEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::followSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/followSrcEffect__14daObjVolcBom_cFv.s"
 }
@@ -461,7 +549,7 @@ ASM_FUNCTION(followSrcEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endSrcEffect__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::endSrcEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/endSrcEffect__14daObjVolcBom_cFv.s"
 }
@@ -472,7 +560,7 @@ ASM_FUNCTION(endSrcEffect__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/event_proc_call__14daObjVolcBom_cFv.s"
 }
@@ -483,7 +571,7 @@ ASM_FUNCTION(event_proc_call__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderZHintEvent__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::orderZHintEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/orderZHintEvent__14daObjVolcBom_cFv.s"
 }
@@ -494,7 +582,7 @@ ASM_FUNCTION(orderZHintEvent__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionWait__14daObjVolcBom_cFv.s"
 }
@@ -505,7 +593,7 @@ ASM_FUNCTION(actionWait__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionOrderEvent__14daObjVolcBom_cFv.s"
 }
@@ -516,7 +604,7 @@ ASM_FUNCTION(actionOrderEvent__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderATalkEvent__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::actionOrderATalkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionOrderATalkEvent__14daObjVolcBom_cFv.s"
 }
@@ -527,7 +615,7 @@ ASM_FUNCTION(actionOrderATalkEvent__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionTalkEvent__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::actionTalkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionTalkEvent__14daObjVolcBom_cFv.s"
 }
@@ -538,7 +626,7 @@ ASM_FUNCTION(actionTalkEvent__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarpEvent__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::actionWarpEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionWarpEvent__14daObjVolcBom_cFv.s"
 }
@@ -546,21 +634,16 @@ ASM_FUNCTION(actionWarpEvent__14daObjVolcBom_cFv) {
 
 
 /* 80D25EE4-80D25EE8 0004+00 .text      actionDead__14daObjVolcBom_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__14daObjVolcBom_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/actionDead__14daObjVolcBom_cFv.s"
+void daObjVolcBom_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D25EE8-80D26468 0580+00 .text      demoProc__14daObjVolcBom_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/demoProc__14daObjVolcBom_cFv.s"
 }
@@ -571,7 +654,7 @@ ASM_FUNCTION(demoProc__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcObjPos__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::calcObjPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/calcObjPos__14daObjVolcBom_cFv.s"
 }
@@ -582,7 +665,7 @@ ASM_FUNCTION(calcObjPos__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/Draw__14daObjVolcBom_cFv.s"
 }
@@ -593,7 +676,7 @@ ASM_FUNCTION(Draw__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjVolcBom_cFv) {
+asm void daObjVolcBom_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/Delete__14daObjVolcBom_cFv.s"
 }
@@ -604,7 +687,7 @@ ASM_FUNCTION(Delete__14daObjVolcBom_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBom_create1st__FP14daObjVolcBom_c) {
+asm void daObjVolcBom_create1st(daObjVolcBom_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/daObjVolcBom_create1st__FP14daObjVolcBom_c.s"
 }
@@ -615,7 +698,7 @@ ASM_FUNCTION(daObjVolcBom_create1st__FP14daObjVolcBom_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__8cM3dGCylFv.s"
 }
@@ -626,7 +709,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__8cM3dGAabFv.s"
 }
@@ -637,7 +720,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__10dCcD_GSttsFv.s"
 }
@@ -648,7 +731,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__12dBgS_AcchCirFv.s"
 }
@@ -659,7 +742,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -670,7 +753,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBom_MoveBGDelete__FP14daObjVolcBom_c) {
+asm void daObjVolcBom_MoveBGDelete(daObjVolcBom_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/daObjVolcBom_MoveBGDelete__FP14daObjVolcBom_c.s"
 }
@@ -681,7 +764,7 @@ ASM_FUNCTION(daObjVolcBom_MoveBGDelete__FP14daObjVolcBom_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBom_MoveBGExecute__FP14daObjVolcBom_c) {
+asm void daObjVolcBom_MoveBGExecute(daObjVolcBom_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/daObjVolcBom_MoveBGExecute__FP14daObjVolcBom_c.s"
 }
@@ -692,7 +775,7 @@ ASM_FUNCTION(daObjVolcBom_MoveBGExecute__FP14daObjVolcBom_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVolcBom_MoveBGDraw__FP14daObjVolcBom_c) {
+asm void daObjVolcBom_MoveBGDraw(daObjVolcBom_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/daObjVolcBom_MoveBGDraw__FP14daObjVolcBom_c.s"
 }
@@ -703,7 +786,7 @@ ASM_FUNCTION(daObjVolcBom_MoveBGDraw__FP14daObjVolcBom_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/__dt__10cCcD_GSttsFv.s"
 }
@@ -714,7 +797,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D26B28) {
+extern "C" asm void func_80D26B28() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/func_80D26B28.s"
 }
@@ -725,7 +808,7 @@ ASM_FUNCTION(func_80D26B28) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D26B44) {
+extern "C" asm void func_80D26B44() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/func_80D26B44.s"
 }
@@ -736,7 +819,7 @@ ASM_FUNCTION(func_80D26B44) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D26B4C) {
+extern "C" asm void func_80D26B4C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_volcbom/d_a_obj_volcbom/func_80D26B4C.s"
 }

@@ -6,56 +6,160 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cBgS_PolyInfo;
+struct dCcD_GObjInf;
+struct JPABaseEmitter;
+struct daObjLife_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct daObjLife_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void setEffect();
+	void endEffect00();
+	void endEffect02();
+	bool __CreateHeap();
+	void create();
+	void bg_check();
+	void actionWaitInit();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void actionSwOnWait();
+	void actionInitBoomerangCarry();
+	void actionBoomerangCarry();
+	void actionInitWait2();
+	void actionWait2();
+	void calcScale();
+	void execute();
+	void draw();
+	void setListStart();
+	void _delete();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void initBaseMtx__11daObjLife_cFv();
-extern "C" extern void setBaseMtx__11daObjLife_cFv();
-extern "C" extern void Create__11daObjLife_cFv();
-extern "C" extern void setEffect__11daObjLife_cFv();
-extern "C" extern void endEffect00__11daObjLife_cFv();
-extern "C" extern void endEffect02__11daObjLife_cFv();
-extern "C" extern void __CreateHeap__11daObjLife_cFv();
-extern "C" extern void create__11daObjLife_cFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void bg_check__11daObjLife_cFv();
-extern "C" extern void actionWaitInit__11daObjLife_cFv();
-extern "C" extern void actionWait__11daObjLife_cFv();
-extern "C" extern void initActionOrderGetDemo__11daObjLife_cFv();
-extern "C" extern void actionOrderGetDemo__11daObjLife_cFv();
-extern "C" extern void actionGetDemo__11daObjLife_cFv();
-extern "C" extern void actionSwOnWait__11daObjLife_cFv();
-extern "C" extern void actionInitBoomerangCarry__11daObjLife_cFv();
-extern "C" extern void actionBoomerangCarry__11daObjLife_cFv();
-extern "C" extern void actionInitWait2__11daObjLife_cFv();
-extern "C" extern void actionWait2__11daObjLife_cFv();
-extern "C" extern void calcScale__11daObjLife_cFv();
-extern "C" extern void execute__11daObjLife_cFv();
-extern "C" extern void draw__11daObjLife_cFv();
-extern "C" extern void setListStart__11daObjLife_cFv();
-extern "C" extern void _delete__11daObjLife_cFv();
-extern "C" extern void daObjLife_Draw__FP11daObjLife_c();
-extern "C" extern void daObjLife_Execute__FP11daObjLife_c();
-extern "C" extern void daObjLife_Delete__FP11daObjLife_c();
-extern "C" extern void daObjLife_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void func_804CE3C0();
-extern "C" extern void func_804CE3DC();
-extern "C" extern void func_804CE3E4();
+void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+void lifeGetTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void lifeGetCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daObjLife_Draw(daObjLife_c*);
+void daObjLife_Execute(daObjLife_c*);
+void daObjLife_Delete(daObjLife_c*);
+void daObjLife_Create(fopAc_ac_c*);
+extern "C" void func_804CE3C0();
+extern "C" void func_804CE3DC();
+extern "C" void func_804CE3E4();
+
+extern "C" void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void initBaseMtx__11daObjLife_cFv();
+extern "C" void setBaseMtx__11daObjLife_cFv();
+extern "C" void Create__11daObjLife_cFv();
+extern "C" void setEffect__11daObjLife_cFv();
+extern "C" void endEffect00__11daObjLife_cFv();
+extern "C" void endEffect02__11daObjLife_cFv();
+extern "C" bool __CreateHeap__11daObjLife_cFv();
+extern "C" void create__11daObjLife_cFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__11daObjLife_cFv();
+extern "C" void actionWaitInit__11daObjLife_cFv();
+extern "C" void actionWait__11daObjLife_cFv();
+extern "C" void initActionOrderGetDemo__11daObjLife_cFv();
+extern "C" void actionOrderGetDemo__11daObjLife_cFv();
+extern "C" void actionGetDemo__11daObjLife_cFv();
+extern "C" void actionSwOnWait__11daObjLife_cFv();
+extern "C" void actionInitBoomerangCarry__11daObjLife_cFv();
+extern "C" void actionBoomerangCarry__11daObjLife_cFv();
+extern "C" void actionInitWait2__11daObjLife_cFv();
+extern "C" void actionWait2__11daObjLife_cFv();
+extern "C" void calcScale__11daObjLife_cFv();
+extern "C" void execute__11daObjLife_cFv();
+extern "C" void draw__11daObjLife_cFv();
+extern "C" void setListStart__11daObjLife_cFv();
+extern "C" void _delete__11daObjLife_cFv();
+extern "C" void daObjLife_Draw__FP11daObjLife_c();
+extern "C" void daObjLife_Execute__FP11daObjLife_c();
+extern "C" void daObjLife_Delete__FP11daObjLife_c();
+extern "C" void daObjLife_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void func_804CE3C0();
+extern "C" void func_804CE3DC();
+extern "C" void func_804CE3E4();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3855[4];
 SECTION_RODATA extern const u8 lit_3856[8];
@@ -106,7 +210,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -116,7 +222,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
+asm void Reflect(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/Reflect__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -127,7 +233,7 @@ ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__8cM3dGPlaFv.s"
 }
@@ -138,7 +244,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void lifeGetTgCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCB1C.s"
 }
@@ -149,7 +255,7 @@ ASM_FUNCTION(lifeGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void lifeGetCoCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCB78.s"
 }
@@ -160,7 +266,7 @@ ASM_FUNCTION(lifeGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjLife_cFv) {
+asm void daObjLife_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/initBaseMtx__11daObjLife_cFv.s"
 }
@@ -171,7 +277,7 @@ ASM_FUNCTION(initBaseMtx__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjLife_cFv) {
+asm void daObjLife_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/setBaseMtx__11daObjLife_cFv.s"
 }
@@ -182,7 +288,7 @@ ASM_FUNCTION(setBaseMtx__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjLife_cFv) {
+asm void daObjLife_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/Create__11daObjLife_cFv.s"
 }
@@ -193,7 +299,7 @@ ASM_FUNCTION(Create__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__11daObjLife_cFv) {
+asm void daObjLife_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/setEffect__11daObjLife_cFv.s"
 }
@@ -204,7 +310,7 @@ ASM_FUNCTION(setEffect__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endEffect00__11daObjLife_cFv) {
+asm void daObjLife_c::endEffect00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/endEffect00__11daObjLife_cFv.s"
 }
@@ -215,7 +321,7 @@ ASM_FUNCTION(endEffect00__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endEffect02__11daObjLife_cFv) {
+asm void daObjLife_c::endEffect02() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/endEffect02__11daObjLife_cFv.s"
 }
@@ -223,21 +329,16 @@ ASM_FUNCTION(endEffect02__11daObjLife_cFv) {
 
 
 /* 804CCFD8-804CCFE0 0008+00 .text      __CreateHeap__11daObjLife_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__11daObjLife_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__CreateHeap__11daObjLife_cFv.s"
+bool daObjLife_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 804CCFE0-804CD258 0278+00 .text      create__11daObjLife_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjLife_cFv) {
+asm void daObjLife_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CCFE0.s"
 }
@@ -245,21 +346,16 @@ ASM_FUNCTION(create__11daObjLife_cFv) {
 
 
 /* 804CD258-804CD25C 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CD25C-804CD2A4 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__8cM3dGCylFv.s"
 }
@@ -270,7 +366,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__8cM3dGAabFv.s"
 }
@@ -281,7 +377,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__10dCcD_GSttsFv.s"
 }
@@ -292,7 +388,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__12dBgS_AcchCirFv.s"
 }
@@ -303,7 +399,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -314,7 +410,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__11daObjLife_cFv) {
+asm void daObjLife_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/bg_check__11daObjLife_cFv.s"
 }
@@ -325,7 +421,7 @@ ASM_FUNCTION(bg_check__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__11daObjLife_cFv) {
+asm void daObjLife_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionWaitInit__11daObjLife_cFv.s"
 }
@@ -336,7 +432,7 @@ ASM_FUNCTION(actionWaitInit__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__11daObjLife_cFv) {
+asm void daObjLife_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionWait__11daObjLife_cFv.s"
 }
@@ -347,7 +443,7 @@ ASM_FUNCTION(actionWait__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__11daObjLife_cFv) {
+asm void daObjLife_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/initActionOrderGetDemo__11daObjLife_cFv.s"
 }
@@ -358,7 +454,7 @@ ASM_FUNCTION(initActionOrderGetDemo__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__11daObjLife_cFv) {
+asm void daObjLife_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionOrderGetDemo__11daObjLife_cFv.s"
 }
@@ -369,7 +465,7 @@ ASM_FUNCTION(actionOrderGetDemo__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__11daObjLife_cFv) {
+asm void daObjLife_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionGetDemo__11daObjLife_cFv.s"
 }
@@ -380,7 +476,7 @@ ASM_FUNCTION(actionGetDemo__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait__11daObjLife_cFv) {
+asm void daObjLife_c::actionSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionSwOnWait__11daObjLife_cFv.s"
 }
@@ -391,7 +487,7 @@ ASM_FUNCTION(actionSwOnWait__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitBoomerangCarry__11daObjLife_cFv) {
+asm void daObjLife_c::actionInitBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionInitBoomerangCarry__11daObjLife_cFv.s"
 }
@@ -402,7 +498,7 @@ ASM_FUNCTION(actionInitBoomerangCarry__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionBoomerangCarry__11daObjLife_cFv) {
+asm void daObjLife_c::actionBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionBoomerangCarry__11daObjLife_cFv.s"
 }
@@ -413,7 +509,7 @@ ASM_FUNCTION(actionBoomerangCarry__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitWait2__11daObjLife_cFv) {
+asm void daObjLife_c::actionInitWait2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionInitWait2__11daObjLife_cFv.s"
 }
@@ -424,7 +520,7 @@ ASM_FUNCTION(actionInitWait2__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait2__11daObjLife_cFv) {
+asm void daObjLife_c::actionWait2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/actionWait2__11daObjLife_cFv.s"
 }
@@ -435,7 +531,7 @@ ASM_FUNCTION(actionWait2__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcScale__11daObjLife_cFv) {
+asm void daObjLife_c::calcScale() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/calcScale__11daObjLife_cFv.s"
 }
@@ -446,7 +542,7 @@ ASM_FUNCTION(calcScale__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjLife_cFv) {
+asm void daObjLife_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/execute__11daObjLife_cFv.s"
 }
@@ -457,7 +553,7 @@ ASM_FUNCTION(execute__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjLife_cFv) {
+asm void daObjLife_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/draw__11daObjLife_cFv.s"
 }
@@ -468,7 +564,7 @@ ASM_FUNCTION(draw__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setListStart__11daObjLife_cFv) {
+asm void daObjLife_c::setListStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/setListStart__11daObjLife_cFv.s"
 }
@@ -479,7 +575,7 @@ ASM_FUNCTION(setListStart__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daObjLife_cFv) {
+asm void daObjLife_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/_delete__11daObjLife_cFv.s"
 }
@@ -490,7 +586,7 @@ ASM_FUNCTION(_delete__11daObjLife_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLife_Draw__FP11daObjLife_c) {
+asm void daObjLife_Draw(daObjLife_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/daObjLife_Draw__FP11daObjLife_c.s"
 }
@@ -501,7 +597,7 @@ ASM_FUNCTION(daObjLife_Draw__FP11daObjLife_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLife_Execute__FP11daObjLife_c) {
+asm void daObjLife_Execute(daObjLife_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/daObjLife_Execute__FP11daObjLife_c.s"
 }
@@ -512,7 +608,7 @@ ASM_FUNCTION(daObjLife_Execute__FP11daObjLife_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLife_Delete__FP11daObjLife_c) {
+asm void daObjLife_Delete(daObjLife_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/daObjLife_Delete__FP11daObjLife_c.s"
 }
@@ -523,7 +619,7 @@ ASM_FUNCTION(daObjLife_Delete__FP11daObjLife_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLife_Create__FP10fopAc_ac_c) {
+asm void daObjLife_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/daObjLife_Create__FP10fopAc_ac_c.s"
 }
@@ -534,7 +630,7 @@ ASM_FUNCTION(daObjLife_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__10cCcD_GSttsFv.s"
 }
@@ -545,7 +641,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -553,54 +649,34 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 804CE3B0-804CE3B4 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3B4-804CE3B8 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3B8-804CE3BC 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3BC-804CE3C0 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3C0-804CE3DC 001C+00 .text      cLib_calcTimer<Uc>__FPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804CE3C0) {
+extern "C" asm void func_804CE3C0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CE3C0.s"
 }
@@ -611,7 +687,7 @@ ASM_FUNCTION(func_804CE3C0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804CE3DC) {
+extern "C" asm void func_804CE3DC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CE3DC.s"
 }
@@ -622,7 +698,7 @@ ASM_FUNCTION(func_804CE3DC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804CE3E4) {
+extern "C" asm void func_804CE3E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/func_804CE3E4.s"
 }

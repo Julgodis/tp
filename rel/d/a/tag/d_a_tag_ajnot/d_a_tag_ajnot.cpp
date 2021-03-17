@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagAJnot_c;
+
+struct daTagAJnot_c {
+	void create();
+	~daTagAJnot_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagAJnot_cFv();
-extern "C" extern void daTagAJnot_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagAJnot_cFv();
-extern "C" extern void daTagAJnot_Delete__FP12daTagAJnot_c();
-extern "C" extern void execute__12daTagAJnot_cFv();
-extern "C" extern void daTagAJnot_Execute__FP12daTagAJnot_c();
-extern "C" extern void daTagAJnot_Draw__FP12daTagAJnot_c();
+void daTagAJnot_Create(fopAc_ac_c*);
+void daTagAJnot_Delete(daTagAJnot_c*);
+void daTagAJnot_Execute(daTagAJnot_c*);
+bool daTagAJnot_Draw(daTagAJnot_c*);
+
+extern "C" void create__12daTagAJnot_cFv();
+extern "C" void daTagAJnot_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagAJnot_cFv();
+extern "C" void daTagAJnot_Delete__FP12daTagAJnot_c();
+extern "C" void execute__12daTagAJnot_cFv();
+extern "C" void daTagAJnot_Execute__FP12daTagAJnot_c();
+extern "C" bool daTagAJnot_Draw__FP12daTagAJnot_c();
 SECTION_RODATA extern const u8 lit_3713[4];
 SECTION_RODATA extern const u32 lit_3714;
 SECTION_RODATA extern const u32 lit_3715;
@@ -26,7 +47,9 @@ SECTION_DATA extern u8 g_profile_Tag_AJnot[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -36,7 +59,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagAJnot_cFv) {
+asm void daTagAJnot_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/create__12daTagAJnot_cFv.s"
 }
@@ -47,7 +70,7 @@ ASM_FUNCTION(create__12daTagAJnot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAJnot_Create__FP10fopAc_ac_c) {
+asm void daTagAJnot_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/daTagAJnot_Create__FP10fopAc_ac_c.s"
 }
@@ -58,7 +81,7 @@ ASM_FUNCTION(daTagAJnot_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagAJnot_cFv) {
+asm daTagAJnot_c::~daTagAJnot_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/__dt__12daTagAJnot_cFv.s"
 }
@@ -69,7 +92,7 @@ ASM_FUNCTION(__dt__12daTagAJnot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAJnot_Delete__FP12daTagAJnot_c) {
+asm void daTagAJnot_Delete(daTagAJnot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/daTagAJnot_Delete__FP12daTagAJnot_c.s"
 }
@@ -80,7 +103,7 @@ ASM_FUNCTION(daTagAJnot_Delete__FP12daTagAJnot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagAJnot_cFv) {
+asm void daTagAJnot_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/execute__12daTagAJnot_cFv.s"
 }
@@ -91,7 +114,7 @@ ASM_FUNCTION(execute__12daTagAJnot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAJnot_Execute__FP12daTagAJnot_c) {
+asm void daTagAJnot_Execute(daTagAJnot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/daTagAJnot_Execute__FP12daTagAJnot_c.s"
 }
@@ -99,14 +122,9 @@ ASM_FUNCTION(daTagAJnot_Execute__FP12daTagAJnot_c) {
 
 
 /* 805A2870-805A2878 0008+00 .text      daTagAJnot_Draw__FP12daTagAJnot_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagAJnot_Draw__FP12daTagAJnot_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/daTagAJnot_Draw__FP12daTagAJnot_c.s"
+bool daTagAJnot_Draw(daTagAJnot_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

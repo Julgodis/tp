@@ -34,6 +34,7 @@ typedef int BOOL;
 #define INT32_MAX (0x7fffffff)
 #define UINT32_MAX (0xffffffff)
 
+#ifndef SECTION_DEFS
 #define SECTION_INIT extern "C" __declspec(section ".init")
 #define SECTION_RODATA extern "C" __declspec(section ".rodata")
 #define SECTION_DATA extern "C" __declspec(section ".data")
@@ -48,6 +49,22 @@ typedef int BOOL;
 #define SECTION_EXTABINDEX extern "C" __declspec(section "extabindex_")
 
 #define SECTION_DEAD extern "C" __declspec(section ".dead")
+#else
+#define SECTION_INIT
+#define SECTION_RODATA
+#define SECTION_DATA
+#define SECTION_SDATA
+#define SECTION_SDATA2 
+#define SECTION_BSS
+#define SECTION_SBSS
+#define SECTION_SBSS2
+#define SECTION_CTORS
+#define SECTION_DTORS
+#define SECTION_EXTAB
+#define SECTION_EXTABINDEX 
+
+#define SECTION_DEAD
+#endif
 
 #define ASM_FUNCTION(NAME) extern "C" asm void NAME()
 

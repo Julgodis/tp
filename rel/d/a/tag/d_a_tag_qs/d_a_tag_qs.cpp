@@ -6,29 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct daTagQs_c;
+
+struct daTagQs_c {
+	~daTagQs_c();
+	void create();
+	void getPower();
+	void getSafeArea();
+	void getPower80();
+	void getCenterPower();
+	void calcPower(f32, f32);
+	void execute();
+	bool draw();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__9daTagQs_cFv();
-extern "C" extern void create__9daTagQs_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void getPower__9daTagQs_cFv();
-extern "C" extern void getSafeArea__9daTagQs_cFv();
-extern "C" extern void getPower80__9daTagQs_cFv();
-extern "C" extern void getCenterPower__9daTagQs_cFv();
-extern "C" extern void calcPower__9daTagQs_cFff();
-extern "C" extern void hikiyose__FP4cXyzP4cXyzP4cXyzf();
-extern "C" extern void search__FPvPv();
-extern "C" extern void execute__9daTagQs_cFv();
-extern "C" extern void draw__9daTagQs_cFv();
-extern "C" extern void daTagQs_Draw__FP9daTagQs_c();
-extern "C" extern void daTagQs_Execute__FP9daTagQs_c();
-extern "C" extern void daTagQs_IsDelete__FP9daTagQs_c();
-extern "C" extern void daTagQs_Delete__FP9daTagQs_c();
-extern "C" extern void daTagQs_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void hikiyose(cXyz*, cXyz*, cXyz*, f32);
+void search(void*, void*);
+void daTagQs_Draw(daTagQs_c*);
+void daTagQs_Execute(daTagQs_c*);
+bool daTagQs_IsDelete(daTagQs_c*);
+void daTagQs_Delete(daTagQs_c*);
+void daTagQs_Create(fopAc_ac_c*);
+
+extern "C" void __dt__9daTagQs_cFv();
+extern "C" void create__9daTagQs_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void getPower__9daTagQs_cFv();
+extern "C" void getSafeArea__9daTagQs_cFv();
+extern "C" void getPower80__9daTagQs_cFv();
+extern "C" void getCenterPower__9daTagQs_cFv();
+extern "C" void calcPower__9daTagQs_cFff();
+extern "C" void hikiyose__FP4cXyzP4cXyzP4cXyzf();
+extern "C" void search__FPvPv();
+extern "C" void execute__9daTagQs_cFv();
+extern "C" bool draw__9daTagQs_cFv();
+extern "C" void daTagQs_Draw__FP9daTagQs_c();
+extern "C" void daTagQs_Execute__FP9daTagQs_c();
+extern "C" bool daTagQs_IsDelete__FP9daTagQs_c();
+extern "C" void daTagQs_Delete__FP9daTagQs_c();
+extern "C" void daTagQs_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u32 lit_3734;
 SECTION_RODATA extern const u32 lit_3735;
 SECTION_RODATA extern const u32 lit_3736;
@@ -61,7 +111,9 @@ SECTION_DATA extern void*const __vt__10dCcD_GStts[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -71,7 +123,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daTagQs_cFv) {
+asm daTagQs_c::~daTagQs_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/__dt__9daTagQs_cFv.s"
 }
@@ -82,7 +134,7 @@ ASM_FUNCTION(__dt__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daTagQs_cFv) {
+asm void daTagQs_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/create__9daTagQs_cFv.s"
 }
@@ -93,7 +145,7 @@ ASM_FUNCTION(create__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/__dt__10dCcD_GSttsFv.s"
 }
@@ -104,7 +156,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/__dt__8cM3dGCylFv.s"
 }
@@ -115,7 +167,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/__dt__8cM3dGAabFv.s"
 }
@@ -126,7 +178,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPower__9daTagQs_cFv) {
+asm void daTagQs_c::getPower() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/getPower__9daTagQs_cFv.s"
 }
@@ -137,7 +189,7 @@ ASM_FUNCTION(getPower__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSafeArea__9daTagQs_cFv) {
+asm void daTagQs_c::getSafeArea() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/getSafeArea__9daTagQs_cFv.s"
 }
@@ -148,7 +200,7 @@ ASM_FUNCTION(getSafeArea__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPower80__9daTagQs_cFv) {
+asm void daTagQs_c::getPower80() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/getPower80__9daTagQs_cFv.s"
 }
@@ -159,7 +211,7 @@ ASM_FUNCTION(getPower80__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCenterPower__9daTagQs_cFv) {
+asm void daTagQs_c::getCenterPower() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/getCenterPower__9daTagQs_cFv.s"
 }
@@ -170,7 +222,7 @@ ASM_FUNCTION(getCenterPower__9daTagQs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcPower__9daTagQs_cFff) {
+asm void daTagQs_c::calcPower(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/calcPower__9daTagQs_cFff.s"
 }
@@ -181,7 +233,7 @@ ASM_FUNCTION(calcPower__9daTagQs_cFff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hikiyose__FP4cXyzP4cXyzP4cXyzf) {
+asm void hikiyose(cXyz* field_0, cXyz* field_1, cXyz* field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/hikiyose__FP4cXyzP4cXyzP4cXyzf.s"
 }
@@ -192,7 +244,7 @@ ASM_FUNCTION(hikiyose__FP4cXyzP4cXyzP4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search__FPvPv) {
+asm void search(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/search__FPvPv.s"
 }
@@ -203,7 +255,7 @@ ASM_FUNCTION(search__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daTagQs_cFv) {
+asm void daTagQs_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/execute__9daTagQs_cFv.s"
 }
@@ -211,21 +263,16 @@ ASM_FUNCTION(execute__9daTagQs_cFv) {
 
 
 /* 80D5EBF8-80D5EC00 0008+00 .text      draw__9daTagQs_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__9daTagQs_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/draw__9daTagQs_cFv.s"
+bool daTagQs_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EC00-80D5EC20 0020+00 .text      daTagQs_Draw__FP9daTagQs_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagQs_Draw__FP9daTagQs_c) {
+asm void daTagQs_Draw(daTagQs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_Draw__FP9daTagQs_c.s"
 }
@@ -236,7 +283,7 @@ ASM_FUNCTION(daTagQs_Draw__FP9daTagQs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagQs_Execute__FP9daTagQs_c) {
+asm void daTagQs_Execute(daTagQs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_Execute__FP9daTagQs_c.s"
 }
@@ -244,21 +291,16 @@ ASM_FUNCTION(daTagQs_Execute__FP9daTagQs_c) {
 
 
 /* 80D5EC40-80D5EC48 0008+00 .text      daTagQs_IsDelete__FP9daTagQs_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagQs_IsDelete__FP9daTagQs_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_IsDelete__FP9daTagQs_c.s"
+bool daTagQs_IsDelete(daTagQs_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EC48-80D5EC70 0028+00 .text      daTagQs_Delete__FP9daTagQs_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagQs_Delete__FP9daTagQs_c) {
+asm void daTagQs_Delete(daTagQs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_Delete__FP9daTagQs_c.s"
 }
@@ -269,7 +311,7 @@ ASM_FUNCTION(daTagQs_Delete__FP9daTagQs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagQs_Create__FP10fopAc_ac_c) {
+asm void daTagQs_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_Create__FP10fopAc_ac_c.s"
 }
@@ -280,7 +322,7 @@ ASM_FUNCTION(daTagQs_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/__dt__10cCcD_GSttsFv.s"
 }

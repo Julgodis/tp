@@ -9,69 +9,80 @@
 // Forward References:
 // 
 
-extern "C" extern void __CARDGetDirBlock();
-extern "C" extern void CARDDir__WriteCallback();
-extern "C" extern void CARDDir__EraseCallback();
-extern "C" extern void __CARDUpdateDir();
+extern "C" void __CARDGetDirBlock();
+extern "C" static void CARDDir__WriteCallback();
+extern "C" static void CARDDir__EraseCallback();
+extern "C" void __CARDUpdateDir();
+
+extern "C" void __CARDGetDirBlock();
+extern "C" static void CARDDir__WriteCallback();
+extern "C" static void CARDDir__EraseCallback();
+extern "C" void __CARDUpdateDir();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void DCStoreRange();
-extern "C" extern void __CARDEraseSector();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDWrite();
-extern "C" extern void __CARDCheckSum();
+SECTION_INIT void memcpy();
+extern "C" void DCStoreRange();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDWrite();
+extern "C" void __CARDCheckSum();
+
+SECTION_INIT void memcpy();
+extern "C" void DCStoreRange();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDWrite();
+extern "C" void __CARDCheckSum();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 8035577C-80355784 0008+00 .text      __CARDGetDirBlock                                            */
+/* 8035577C-80355784 0008+00 rc=10 efc=10 .text      __CARDGetDirBlock                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDGetDirBlock) {
+extern "C" asm void __CARDGetDirBlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/__CARDGetDirBlock.s"
 }
 #pragma pop
 
 
-/* 80355784-80355854 00D0+00 .text      WriteCallback                                                */
+/* 80355784-80355854 00D0+00 rc=1 efc=0 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDDir__WriteCallback) {
+extern "C" asm static void CARDDir__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/CARDDir__WriteCallback.s"
 }
 #pragma pop
 
 
-/* 80355854-8035591C 00C8+00 .text      EraseCallback                                                */
+/* 80355854-8035591C 00C8+00 rc=1 efc=0 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDDir__EraseCallback) {
+extern "C" asm static void CARDDir__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/CARDDir__EraseCallback.s"
 }
 #pragma pop
 
 
-/* 8035591C-803559E0 00C4+00 .text      __CARDUpdateDir                                              */
+/* 8035591C-803559E0 00C4+00 rc=4 efc=4 .text      __CARDUpdateDir                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDUpdateDir) {
+extern "C" asm void __CARDUpdateDir() {
 	nofralloc
 #include "asm/dolphin/card/CARDDir/__CARDUpdateDir.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

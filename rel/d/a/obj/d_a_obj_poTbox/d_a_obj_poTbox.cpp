@@ -6,32 +6,78 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daPoTbox_c;
+
+struct daPoTbox_HIO_c {
+	daPoTbox_HIO_c();
+	~daPoTbox_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daPoTbox_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void init_modeWait();
+	void modeWait();
+	void init_modeOpen();
+	void modeOpen();
+	void init_modeOpenEnd();
+	void modeOpenEnd();
+	void init_modeEnd();
+	void modeEnd();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daPoTbox_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daPoTbox_cFv();
-extern "C" extern void CreateHeap__10daPoTbox_cFv();
-extern "C" extern void create__10daPoTbox_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__10daPoTbox_cFPPA3_A4_f();
-extern "C" extern void init_modeWait__10daPoTbox_cFv();
-extern "C" extern void modeWait__10daPoTbox_cFv();
-extern "C" extern void init_modeOpen__10daPoTbox_cFv();
-extern "C" extern void modeOpen__10daPoTbox_cFv();
-extern "C" extern void init_modeOpenEnd__10daPoTbox_cFv();
-extern "C" extern void modeOpenEnd__10daPoTbox_cFv();
-extern "C" extern void init_modeEnd__10daPoTbox_cFv();
-extern "C" extern void modeEnd__10daPoTbox_cFv();
-extern "C" extern void Draw__10daPoTbox_cFv();
-extern "C" extern void Delete__10daPoTbox_cFv();
-extern "C" extern void daPoTbox_Draw__FP10daPoTbox_c();
-extern "C" extern void daPoTbox_Execute__FP10daPoTbox_c();
-extern "C" extern void daPoTbox_Delete__FP10daPoTbox_c();
-extern "C" extern void daPoTbox_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daPoTbox_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_poTbox_cpp();
+extern "C" void Execute__10daPoTbox_cFPPA3_A4_f();
+void daPoTbox_Draw(daPoTbox_c*);
+void daPoTbox_Execute(daPoTbox_c*);
+void daPoTbox_Delete(daPoTbox_c*);
+void daPoTbox_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_poTbox_cpp();
+
+extern "C" void __ct__14daPoTbox_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daPoTbox_cFv();
+extern "C" void CreateHeap__10daPoTbox_cFv();
+extern "C" void create__10daPoTbox_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__10daPoTbox_cFPPA3_A4_f();
+extern "C" void init_modeWait__10daPoTbox_cFv();
+extern "C" void modeWait__10daPoTbox_cFv();
+extern "C" void init_modeOpen__10daPoTbox_cFv();
+extern "C" void modeOpen__10daPoTbox_cFv();
+extern "C" void init_modeOpenEnd__10daPoTbox_cFv();
+extern "C" void modeOpenEnd__10daPoTbox_cFv();
+extern "C" void init_modeEnd__10daPoTbox_cFv();
+extern "C" void modeEnd__10daPoTbox_cFv();
+extern "C" void Draw__10daPoTbox_cFv();
+extern "C" void Delete__10daPoTbox_cFv();
+extern "C" void daPoTbox_Draw__FP10daPoTbox_c();
+extern "C" void daPoTbox_Execute__FP10daPoTbox_c();
+extern "C" void daPoTbox_Delete__FP10daPoTbox_c();
+extern "C" void daPoTbox_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daPoTbox_HIO_cFv();
+extern "C" void __sinit_d_a_obj_poTbox_cpp();
 SECTION_RODATA extern const u32 lit_3628;
 SECTION_RODATA extern const u32 lit_3629;
 SECTION_RODATA extern const u32 lit_3724;
@@ -63,8 +109,11 @@ SECTION_BSS extern u8 data_80CB5140[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -74,7 +123,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daPoTbox_HIO_cFv) {
+asm daPoTbox_HIO_c::daPoTbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/__ct__14daPoTbox_HIO_cFv.s"
 }
@@ -85,7 +134,7 @@ ASM_FUNCTION(__ct__14daPoTbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -96,7 +145,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daPoTbox_cFv) {
+asm void daPoTbox_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/setBaseMtx__10daPoTbox_cFv.s"
 }
@@ -107,7 +156,7 @@ ASM_FUNCTION(setBaseMtx__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daPoTbox_cFv) {
+asm void daPoTbox_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/CreateHeap__10daPoTbox_cFv.s"
 }
@@ -118,7 +167,7 @@ ASM_FUNCTION(CreateHeap__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daPoTbox_cFv) {
+asm void daPoTbox_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/create__10daPoTbox_cFv.s"
 }
@@ -129,7 +178,7 @@ ASM_FUNCTION(create__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/__dt__12J3DFrameCtrlFv.s"
 }
@@ -140,7 +189,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daPoTbox_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daPoTbox_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/Execute__10daPoTbox_cFPPA3_A4_f.s"
 }
@@ -151,7 +200,7 @@ ASM_FUNCTION(Execute__10daPoTbox_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daPoTbox_cFv) {
+asm void daPoTbox_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/init_modeWait__10daPoTbox_cFv.s"
 }
@@ -162,7 +211,7 @@ ASM_FUNCTION(init_modeWait__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daPoTbox_cFv) {
+asm void daPoTbox_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/modeWait__10daPoTbox_cFv.s"
 }
@@ -173,7 +222,7 @@ ASM_FUNCTION(modeWait__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__10daPoTbox_cFv) {
+asm void daPoTbox_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/init_modeOpen__10daPoTbox_cFv.s"
 }
@@ -184,7 +233,7 @@ ASM_FUNCTION(init_modeOpen__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__10daPoTbox_cFv) {
+asm void daPoTbox_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/modeOpen__10daPoTbox_cFv.s"
 }
@@ -195,7 +244,7 @@ ASM_FUNCTION(modeOpen__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpenEnd__10daPoTbox_cFv) {
+asm void daPoTbox_c::init_modeOpenEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/init_modeOpenEnd__10daPoTbox_cFv.s"
 }
@@ -206,7 +255,7 @@ ASM_FUNCTION(init_modeOpenEnd__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpenEnd__10daPoTbox_cFv) {
+asm void daPoTbox_c::modeOpenEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/modeOpenEnd__10daPoTbox_cFv.s"
 }
@@ -217,7 +266,7 @@ ASM_FUNCTION(modeOpenEnd__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeEnd__10daPoTbox_cFv) {
+asm void daPoTbox_c::init_modeEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/init_modeEnd__10daPoTbox_cFv.s"
 }
@@ -225,21 +274,16 @@ ASM_FUNCTION(init_modeEnd__10daPoTbox_cFv) {
 
 
 /* 80CB4C90-80CB4C94 0004+00 .text      modeEnd__10daPoTbox_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeEnd__10daPoTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/modeEnd__10daPoTbox_cFv.s"
+void daPoTbox_c::modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CB4C94-80CB4E14 0180+00 .text      Draw__10daPoTbox_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daPoTbox_cFv) {
+asm void daPoTbox_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/Draw__10daPoTbox_cFv.s"
 }
@@ -250,7 +294,7 @@ ASM_FUNCTION(Draw__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daPoTbox_cFv) {
+asm void daPoTbox_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/Delete__10daPoTbox_cFv.s"
 }
@@ -261,7 +305,7 @@ ASM_FUNCTION(Delete__10daPoTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoTbox_Draw__FP10daPoTbox_c) {
+asm void daPoTbox_Draw(daPoTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/daPoTbox_Draw__FP10daPoTbox_c.s"
 }
@@ -272,7 +316,7 @@ ASM_FUNCTION(daPoTbox_Draw__FP10daPoTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoTbox_Execute__FP10daPoTbox_c) {
+asm void daPoTbox_Execute(daPoTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/daPoTbox_Execute__FP10daPoTbox_c.s"
 }
@@ -283,7 +327,7 @@ ASM_FUNCTION(daPoTbox_Execute__FP10daPoTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoTbox_Delete__FP10daPoTbox_c) {
+asm void daPoTbox_Delete(daPoTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/daPoTbox_Delete__FP10daPoTbox_c.s"
 }
@@ -294,7 +338,7 @@ ASM_FUNCTION(daPoTbox_Delete__FP10daPoTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoTbox_Create__FP10fopAc_ac_c) {
+asm void daPoTbox_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/daPoTbox_Create__FP10fopAc_ac_c.s"
 }
@@ -305,7 +349,7 @@ ASM_FUNCTION(daPoTbox_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daPoTbox_HIO_cFv) {
+asm daPoTbox_HIO_c::~daPoTbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/__dt__14daPoTbox_HIO_cFv.s"
 }
@@ -316,7 +360,7 @@ ASM_FUNCTION(__dt__14daPoTbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_poTbox_cpp) {
+extern "C" asm void __sinit_d_a_obj_poTbox_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poTbox/d_a_obj_poTbox/__sinit_d_a_obj_poTbox_cpp.s"
 }

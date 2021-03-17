@@ -6,55 +6,151 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daE_OctBg_c;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daE_OctBg_HIO_c {
+	daE_OctBg_HIO_c();
+	~daE_OctBg_HIO_c();
+};
+
+struct daE_OctBg_c {
+	void setSparkEffect();
+	void checkExplode();
+	void action();
+	void _delete();
+	void cc_set();
+	void mtx_set();
+	void checkNormalAttack();
+	void checkChase();
+	void born_swim();
+	void swim();
+	void setChasePos(cXyz&, f32);
+	void checkCoreFishAttack();
+	void chase_core();
+	void normal_attack();
+	void core_fish_attack();
+	void back_swim();
+	void setBombCarry(s32);
+	void hook();
+	void damage();
+	void bomb_wait();
+	void damage_check();
+	void execute();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void CreateHeap();
+	void create();
+	void draw();
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daE_OctBg_HIO_cFv();
-extern "C" extern void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v();
-extern "C" extern void setSparkEffect__11daE_OctBg_cFv();
-extern "C" extern void checkExplode__11daE_OctBg_cFv();
-extern "C" extern void action__11daE_OctBg_cFv();
-extern "C" extern void _delete__11daE_OctBg_cFv();
-extern "C" extern void daE_OctBg_Delete__FP11daE_OctBg_c();
-extern "C" extern void cc_set__11daE_OctBg_cFv();
-extern "C" extern void mtx_set__11daE_OctBg_cFv();
-extern "C" extern void checkNormalAttack__11daE_OctBg_cFv();
-extern "C" extern void checkChase__11daE_OctBg_cFv();
-extern "C" extern void born_swim__11daE_OctBg_cFv();
-extern "C" extern void swim__11daE_OctBg_cFv();
-extern "C" extern void setChasePos__11daE_OctBg_cFR4cXyzf();
-extern "C" extern void checkCoreFishAttack__11daE_OctBg_cFv();
-extern "C" extern void chase_core__11daE_OctBg_cFv();
-extern "C" extern void normal_attack__11daE_OctBg_cFv();
-extern "C" extern void core_fish_attack__11daE_OctBg_cFv();
-extern "C" extern void back_swim__11daE_OctBg_cFv();
-extern "C" extern void setBombCarry__11daE_OctBg_cFi();
-extern "C" extern void hook__11daE_OctBg_cFv();
-extern "C" extern void damage__11daE_OctBg_cFv();
-extern "C" extern void bomb_wait__11daE_OctBg_cFv();
-extern "C" extern void damage_check__11daE_OctBg_cFv();
-extern "C" extern void execute__11daE_OctBg_cFv();
-extern "C" extern void daE_OctBg_Execute__FP11daE_OctBg_c();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void ctrlJoint__11daE_OctBg_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__11daE_OctBg_cFP8J3DJointi();
-extern "C" extern void CreateHeap__11daE_OctBg_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__11daE_OctBg_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void daE_OctBg_Create__FP11daE_OctBg_c();
-extern "C" extern void draw__11daE_OctBg_cFv();
-extern "C" extern void daE_OctBg_Draw__FP11daE_OctBg_c();
-extern "C" extern void daE_OctBg_IsDelete__FP11daE_OctBg_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daE_OctBg_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_oct_bg_cpp();
-extern "C" extern void func_80739D3C();
-extern "C" extern void func_80739D44();
+extern "C" void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v();
+void daE_OctBg_Delete(daE_OctBg_c*);
+void daE_OctBg_Execute(daE_OctBg_c*);
+void useHeapInit(fopAc_ac_c*);
+void daE_OctBg_Create(daE_OctBg_c*);
+void daE_OctBg_Draw(daE_OctBg_c*);
+void daE_OctBg_IsDelete(daE_OctBg_c*);
+extern "C" void __sinit_d_a_e_oct_bg_cpp();
+extern "C" void func_80739D3C();
+extern "C" void func_80739D44();
+
+extern "C" void __ct__15daE_OctBg_HIO_cFv();
+extern "C" void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v();
+extern "C" void setSparkEffect__11daE_OctBg_cFv();
+extern "C" void checkExplode__11daE_OctBg_cFv();
+extern "C" void action__11daE_OctBg_cFv();
+extern "C" void _delete__11daE_OctBg_cFv();
+extern "C" void daE_OctBg_Delete__FP11daE_OctBg_c();
+extern "C" void cc_set__11daE_OctBg_cFv();
+extern "C" void mtx_set__11daE_OctBg_cFv();
+extern "C" void checkNormalAttack__11daE_OctBg_cFv();
+extern "C" void checkChase__11daE_OctBg_cFv();
+extern "C" void born_swim__11daE_OctBg_cFv();
+extern "C" void swim__11daE_OctBg_cFv();
+extern "C" void setChasePos__11daE_OctBg_cFR4cXyzf();
+extern "C" void checkCoreFishAttack__11daE_OctBg_cFv();
+extern "C" void chase_core__11daE_OctBg_cFv();
+extern "C" void normal_attack__11daE_OctBg_cFv();
+extern "C" void core_fish_attack__11daE_OctBg_cFv();
+extern "C" void back_swim__11daE_OctBg_cFv();
+extern "C" void setBombCarry__11daE_OctBg_cFi();
+extern "C" void hook__11daE_OctBg_cFv();
+extern "C" void damage__11daE_OctBg_cFv();
+extern "C" void bomb_wait__11daE_OctBg_cFv();
+extern "C" void damage_check__11daE_OctBg_cFv();
+extern "C" void execute__11daE_OctBg_cFv();
+extern "C" void daE_OctBg_Execute__FP11daE_OctBg_c();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void ctrlJoint__11daE_OctBg_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__11daE_OctBg_cFP8J3DJointi();
+extern "C" void CreateHeap__11daE_OctBg_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__11daE_OctBg_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void daE_OctBg_Create__FP11daE_OctBg_c();
+extern "C" void draw__11daE_OctBg_cFv();
+extern "C" void daE_OctBg_Draw__FP11daE_OctBg_c();
+extern "C" void daE_OctBg_IsDelete__FP11daE_OctBg_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daE_OctBg_HIO_cFv();
+extern "C" void __sinit_d_a_e_oct_bg_cpp();
+extern "C" void func_80739D3C();
+extern "C" void func_80739D44();
 SECTION_RODATA extern const u32 lit_3768;
 SECTION_RODATA extern const u32 lit_3769;
 SECTION_RODATA extern const u32 lit_3770;
@@ -198,8 +294,11 @@ SECTION_BSS extern u8 data_8073A1D4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -209,7 +308,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daE_OctBg_HIO_cFv) {
+asm daE_OctBg_HIO_c::daE_OctBg_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__ct__15daE_OctBg_HIO_cFv.s"
 }
@@ -220,7 +319,7 @@ ASM_FUNCTION(__ct__15daE_OctBg_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v) {
+extern "C" asm void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v.s"
 }
@@ -231,7 +330,7 @@ ASM_FUNCTION(setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSparkEffect__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::setSparkEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/setSparkEffect__11daE_OctBg_cFv.s"
 }
@@ -242,7 +341,7 @@ ASM_FUNCTION(setSparkEffect__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkExplode__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::checkExplode() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/checkExplode__11daE_OctBg_cFv.s"
 }
@@ -253,7 +352,7 @@ ASM_FUNCTION(checkExplode__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::action() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/action__11daE_OctBg_cFv.s"
 }
@@ -264,7 +363,7 @@ ASM_FUNCTION(action__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/_delete__11daE_OctBg_cFv.s"
 }
@@ -275,7 +374,7 @@ ASM_FUNCTION(_delete__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_OctBg_Delete__FP11daE_OctBg_c) {
+asm void daE_OctBg_Delete(daE_OctBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/daE_OctBg_Delete__FP11daE_OctBg_c.s"
 }
@@ -286,7 +385,7 @@ ASM_FUNCTION(daE_OctBg_Delete__FP11daE_OctBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/cc_set__11daE_OctBg_cFv.s"
 }
@@ -297,7 +396,7 @@ ASM_FUNCTION(cc_set__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/mtx_set__11daE_OctBg_cFv.s"
 }
@@ -308,7 +407,7 @@ ASM_FUNCTION(mtx_set__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNormalAttack__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::checkNormalAttack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/checkNormalAttack__11daE_OctBg_cFv.s"
 }
@@ -319,7 +418,7 @@ ASM_FUNCTION(checkNormalAttack__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChase__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::checkChase() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/checkChase__11daE_OctBg_cFv.s"
 }
@@ -330,7 +429,7 @@ ASM_FUNCTION(checkChase__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(born_swim__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::born_swim() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/born_swim__11daE_OctBg_cFv.s"
 }
@@ -341,7 +440,7 @@ ASM_FUNCTION(born_swim__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(swim__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::swim() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/swim__11daE_OctBg_cFv.s"
 }
@@ -352,7 +451,7 @@ ASM_FUNCTION(swim__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setChasePos__11daE_OctBg_cFR4cXyzf) {
+asm void daE_OctBg_c::setChasePos(cXyz& field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/setChasePos__11daE_OctBg_cFR4cXyzf.s"
 }
@@ -363,7 +462,7 @@ ASM_FUNCTION(setChasePos__11daE_OctBg_cFR4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCoreFishAttack__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::checkCoreFishAttack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/checkCoreFishAttack__11daE_OctBg_cFv.s"
 }
@@ -374,7 +473,7 @@ ASM_FUNCTION(checkCoreFishAttack__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chase_core__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::chase_core() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/chase_core__11daE_OctBg_cFv.s"
 }
@@ -385,7 +484,7 @@ ASM_FUNCTION(chase_core__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(normal_attack__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::normal_attack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/normal_attack__11daE_OctBg_cFv.s"
 }
@@ -396,7 +495,7 @@ ASM_FUNCTION(normal_attack__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(core_fish_attack__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::core_fish_attack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/core_fish_attack__11daE_OctBg_cFv.s"
 }
@@ -407,7 +506,7 @@ ASM_FUNCTION(core_fish_attack__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(back_swim__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::back_swim() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/back_swim__11daE_OctBg_cFv.s"
 }
@@ -418,7 +517,7 @@ ASM_FUNCTION(back_swim__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBombCarry__11daE_OctBg_cFi) {
+asm void daE_OctBg_c::setBombCarry(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/setBombCarry__11daE_OctBg_cFi.s"
 }
@@ -429,7 +528,7 @@ ASM_FUNCTION(setBombCarry__11daE_OctBg_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hook__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::hook() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/hook__11daE_OctBg_cFv.s"
 }
@@ -440,7 +539,7 @@ ASM_FUNCTION(hook__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::damage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/damage__11daE_OctBg_cFv.s"
 }
@@ -451,7 +550,7 @@ ASM_FUNCTION(damage__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bomb_wait__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::bomb_wait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/bomb_wait__11daE_OctBg_cFv.s"
 }
@@ -462,7 +561,7 @@ ASM_FUNCTION(bomb_wait__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/damage_check__11daE_OctBg_cFv.s"
 }
@@ -473,7 +572,7 @@ ASM_FUNCTION(damage_check__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/execute__11daE_OctBg_cFv.s"
 }
@@ -484,7 +583,7 @@ ASM_FUNCTION(execute__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_OctBg_Execute__FP11daE_OctBg_c) {
+asm void daE_OctBg_Execute(daE_OctBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/daE_OctBg_Execute__FP11daE_OctBg_c.s"
 }
@@ -495,7 +594,7 @@ ASM_FUNCTION(daE_OctBg_Execute__FP11daE_OctBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -506,7 +605,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__11daE_OctBg_cFP8J3DJointP8J3DModel) {
+asm void daE_OctBg_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/ctrlJoint__11daE_OctBg_cFP8J3DJointP8J3DModel.s"
 }
@@ -517,7 +616,7 @@ ASM_FUNCTION(ctrlJoint__11daE_OctBg_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__11daE_OctBg_cFP8J3DJointi) {
+asm void daE_OctBg_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/JointCallBack__11daE_OctBg_cFP8J3DJointi.s"
 }
@@ -528,7 +627,7 @@ ASM_FUNCTION(JointCallBack__11daE_OctBg_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/CreateHeap__11daE_OctBg_cFv.s"
 }
@@ -539,7 +638,7 @@ ASM_FUNCTION(CreateHeap__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__12J3DFrameCtrlFv.s"
 }
@@ -550,7 +649,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/create__11daE_OctBg_cFv.s"
 }
@@ -561,7 +660,7 @@ ASM_FUNCTION(create__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__8cM3dGSphFv.s"
 }
@@ -572,7 +671,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__8cM3dGAabFv.s"
 }
@@ -583,7 +682,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__10dCcD_GSttsFv.s"
 }
@@ -594,7 +693,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -605,7 +704,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__12dBgS_AcchCirFv.s"
 }
@@ -616,7 +715,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_OctBg_Create__FP11daE_OctBg_c) {
+asm void daE_OctBg_Create(daE_OctBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/daE_OctBg_Create__FP11daE_OctBg_c.s"
 }
@@ -627,7 +726,7 @@ ASM_FUNCTION(daE_OctBg_Create__FP11daE_OctBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daE_OctBg_cFv) {
+asm void daE_OctBg_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/draw__11daE_OctBg_cFv.s"
 }
@@ -638,7 +737,7 @@ ASM_FUNCTION(draw__11daE_OctBg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_OctBg_Draw__FP11daE_OctBg_c) {
+asm void daE_OctBg_Draw(daE_OctBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/daE_OctBg_Draw__FP11daE_OctBg_c.s"
 }
@@ -649,7 +748,7 @@ ASM_FUNCTION(daE_OctBg_Draw__FP11daE_OctBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_OctBg_IsDelete__FP11daE_OctBg_c) {
+asm void daE_OctBg_IsDelete(daE_OctBg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/daE_OctBg_IsDelete__FP11daE_OctBg_c.s"
 }
@@ -660,7 +759,7 @@ ASM_FUNCTION(daE_OctBg_IsDelete__FP11daE_OctBg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__10cCcD_GSttsFv.s"
 }
@@ -671,7 +770,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daE_OctBg_HIO_cFv) {
+asm daE_OctBg_HIO_c::~daE_OctBg_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__dt__15daE_OctBg_HIO_cFv.s"
 }
@@ -682,7 +781,7 @@ ASM_FUNCTION(__dt__15daE_OctBg_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_oct_bg_cpp) {
+extern "C" asm void __sinit_d_a_e_oct_bg_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/__sinit_d_a_e_oct_bg_cpp.s"
 }
@@ -693,7 +792,7 @@ ASM_FUNCTION(__sinit_d_a_e_oct_bg_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80739D3C) {
+extern "C" asm void func_80739D3C() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/func_80739D3C.s"
 }
@@ -704,7 +803,7 @@ ASM_FUNCTION(func_80739D3C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80739D44) {
+extern "C" asm void func_80739D44() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/func_80739D44.s"
 }

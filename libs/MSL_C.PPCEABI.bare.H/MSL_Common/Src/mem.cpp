@@ -9,66 +9,75 @@
 // Forward References:
 // 
 
-extern "C" extern void memcmp();
-extern "C" extern void __memrchr();
-extern "C" extern void memchr();
-extern "C" extern void memmove();
+extern "C" void memcmp();
+extern "C" void __memrchr();
+extern "C" void memchr();
+extern "C" void memmove();
+
+extern "C" void memcmp();
+extern "C" void __memrchr();
+extern "C" void memchr();
+extern "C" void memmove();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __copy_longs_rev_unaligned();
-extern "C" extern void __copy_longs_unaligned();
-extern "C" extern void __copy_longs_rev_aligned();
-extern "C" extern void __copy_longs_aligned();
+extern "C" void __copy_longs_rev_unaligned();
+extern "C" void __copy_longs_unaligned();
+extern "C" void __copy_longs_rev_aligned();
+extern "C" void __copy_longs_aligned();
+
+extern "C" void __copy_longs_rev_unaligned();
+extern "C" void __copy_longs_unaligned();
+extern "C" void __copy_longs_rev_aligned();
+extern "C" void __copy_longs_aligned();
 
 // 
 // Declarations:
 // 
 
-/* 8036608C-803660D8 004C+00 .text      memcmp                                                       */
+/* 8036608C-803660D8 004C+00 rc=19 efc=19 .text      memcmp                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(memcmp) {
+extern "C" asm void memcmp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem/memcmp.s"
 }
 #pragma pop
 
 
-/* 803660D8-80366104 002C+00 .text      __memrchr                                                    */
+/* 803660D8-80366104 002C+00 rc=1 efc=1 .text      __memrchr                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__memrchr) {
+extern "C" asm void __memrchr() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem/__memrchr.s"
 }
 #pragma pop
 
 
-/* 80366104-80366130 002C+00 .text      memchr                                                       */
+/* 80366104-80366130 002C+00 rc=1 efc=1 .text      memchr                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(memchr) {
+extern "C" asm void memchr() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem/memchr.s"
 }
 #pragma pop
 
 
-/* 80366130-803661FC 00CC+00 .text      memmove                                                      */
+/* 80366130-803661FC 00CC+00 rc=2 efc=2 .text      memmove                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(memmove) {
+extern "C" asm void memmove() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem/memmove.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,22 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daCoachFire_c;
+struct fopAc_ac_c;
+
+struct daCoachFire_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void initCcSphere();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__13daCoachFire_cFv();
-extern "C" extern void initBaseMtx__13daCoachFire_cFv();
-extern "C" extern void setBaseMtx__13daCoachFire_cFv();
-extern "C" extern void initCcSphere__13daCoachFire_cFv();
-extern "C" extern void daCoachFire_Draw__FP13daCoachFire_c();
-extern "C" extern void daCoachFire_Execute__FP13daCoachFire_c();
-extern "C" extern void daCoachFire_IsDelete__FP13daCoachFire_c();
-extern "C" extern void daCoachFire_Delete__FP13daCoachFire_c();
-extern "C" extern void daCoachFire_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daCoachFire_Draw(daCoachFire_c*);
+void daCoachFire_Execute(daCoachFire_c*);
+bool daCoachFire_IsDelete(daCoachFire_c*);
+void daCoachFire_Delete(daCoachFire_c*);
+void daCoachFire_Create(fopAc_ac_c*);
+
+extern "C" void create_init__13daCoachFire_cFv();
+extern "C" void initBaseMtx__13daCoachFire_cFv();
+extern "C" void setBaseMtx__13daCoachFire_cFv();
+extern "C" void initCcSphere__13daCoachFire_cFv();
+extern "C" void daCoachFire_Draw__FP13daCoachFire_c();
+extern "C" void daCoachFire_Execute__FP13daCoachFire_c();
+extern "C" bool daCoachFire_IsDelete__FP13daCoachFire_c();
+extern "C" void daCoachFire_Delete__FP13daCoachFire_c();
+extern "C" void daCoachFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__13daCoachFire_c[16];
 SECTION_RODATA extern const u32 lit_3812;
 SECTION_RODATA extern const u32 lit_3813;
@@ -43,7 +82,9 @@ SECTION_DATA extern void*const __vt__8cM3dGSph[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -53,7 +94,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__13daCoachFire_cFv) {
+asm void daCoachFire_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/create_init__13daCoachFire_cFv.s"
 }
@@ -64,7 +105,7 @@ ASM_FUNCTION(create_init__13daCoachFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daCoachFire_cFv) {
+asm void daCoachFire_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/initBaseMtx__13daCoachFire_cFv.s"
 }
@@ -75,7 +116,7 @@ ASM_FUNCTION(initBaseMtx__13daCoachFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daCoachFire_cFv) {
+asm void daCoachFire_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/setBaseMtx__13daCoachFire_cFv.s"
 }
@@ -86,7 +127,7 @@ ASM_FUNCTION(setBaseMtx__13daCoachFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcSphere__13daCoachFire_cFv) {
+asm void daCoachFire_c::initCcSphere() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/initCcSphere__13daCoachFire_cFv.s"
 }
@@ -97,7 +138,7 @@ ASM_FUNCTION(initCcSphere__13daCoachFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoachFire_Draw__FP13daCoachFire_c) {
+asm void daCoachFire_Draw(daCoachFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Draw__FP13daCoachFire_c.s"
 }
@@ -108,7 +149,7 @@ ASM_FUNCTION(daCoachFire_Draw__FP13daCoachFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoachFire_Execute__FP13daCoachFire_c) {
+asm void daCoachFire_Execute(daCoachFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Execute__FP13daCoachFire_c.s"
 }
@@ -116,21 +157,16 @@ ASM_FUNCTION(daCoachFire_Execute__FP13daCoachFire_c) {
 
 
 /* 80658094-8065809C 0008+00 .text      daCoachFire_IsDelete__FP13daCoachFire_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daCoachFire_IsDelete__FP13daCoachFire_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_IsDelete__FP13daCoachFire_c.s"
+bool daCoachFire_IsDelete(daCoachFire_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8065809C-806581C0 0124+00 .text      daCoachFire_Delete__FP13daCoachFire_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoachFire_Delete__FP13daCoachFire_c) {
+asm void daCoachFire_Delete(daCoachFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Delete__FP13daCoachFire_c.s"
 }
@@ -141,7 +177,7 @@ ASM_FUNCTION(daCoachFire_Delete__FP13daCoachFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCoachFire_Create__FP10fopAc_ac_c) {
+asm void daCoachFire_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_Create__FP10fopAc_ac_c.s"
 }
@@ -152,7 +188,7 @@ ASM_FUNCTION(daCoachFire_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/__dt__8cM3dGSphFv.s"
 }
@@ -163,7 +199,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/__dt__8cM3dGAabFv.s"
 }
@@ -174,7 +210,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/__dt__10dCcD_GSttsFv.s"
 }
@@ -185,7 +221,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/__dt__10cCcD_GSttsFv.s"
 }

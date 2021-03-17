@@ -6,31 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build scene_tag_class (scene_tag_class) False/False
+/* top-level dependencies (begin scene_tag_class) */
+/* top-level dependencies (end scene_tag_class) */
+struct scene_tag_class {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build node_list_class (node_list_class) False/False
+/* top-level dependencies (begin node_list_class) */
+/* top-level dependencies (end node_list_class) */
+struct node_list_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopScnTg_QueueTo__FP15scene_tag_class();
-extern "C" extern void fopScnTg_ToQueue__FP15scene_tag_class();
-extern "C" extern void fopScnTg_Init__FP15scene_tag_classPv();
+void fopScnTg_QueueTo(scene_tag_class*);
+void fopScnTg_ToQueue(scene_tag_class*);
+void fopScnTg_Init(scene_tag_class*, void*);
+
+extern "C" void fopScnTg_QueueTo__FP15scene_tag_class();
+extern "C" void fopScnTg_ToQueue__FP15scene_tag_class();
+extern "C" void fopScnTg_Init__FP15scene_tag_classPv();
 SECTION_DATA extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void cTg_SingleCut__FP16create_tag_class();
-extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
+void cTg_SingleCut(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
+
+extern "C" void cTg_SingleCut__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 
 // 
 // Declarations:
 // 
 
-/* 8001F13C-8001F15C 0020+00 .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
+/* 8001F13C-8001F15C 0020+00 rc=1 efc=1 .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnTg_QueueTo__FP15scene_tag_class) {
+asm void fopScnTg_QueueTo(scene_tag_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_QueueTo__FP15scene_tag_class.s"
 }
@@ -38,33 +68,32 @@ ASM_FUNCTION(fopScnTg_QueueTo__FP15scene_tag_class) {
 
 
 /* ############################################################################################## */
-/* 803A3918-803A3928 000C+04 .data      g_fopScnTg_SceneList                                         */
+/* 803A3918-803A3928 000C+04 rc=2 efc=1 .data      g_fopScnTg_SceneList                                         */
 u8 g_fopScnTg_SceneList[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001F15C-8001F188 002C+00 .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
+/* 8001F15C-8001F188 002C+00 rc=1 efc=1 .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnTg_ToQueue__FP15scene_tag_class) {
+asm void fopScnTg_ToQueue(scene_tag_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_ToQueue__FP15scene_tag_class.s"
 }
 #pragma pop
 
 
-/* 8001F188-8001F1A8 0020+00 .text      fopScnTg_Init__FP15scene_tag_classPv                         */
+/* 8001F188-8001F1A8 0020+00 rc=1 efc=1 .text      fopScnTg_Init__FP15scene_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnTg_Init__FP15scene_tag_classPv) {
+asm void fopScnTg_Init(scene_tag_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_op/f_op_scene_tag/fopScnTg_Init__FP15scene_tag_classPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

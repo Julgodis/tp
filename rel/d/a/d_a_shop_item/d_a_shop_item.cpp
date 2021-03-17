@@ -6,33 +6,74 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daShopItem_c {
+	void getShopArcname();
+	void getHeapSize();
+	void CreateInit();
+	void set_mtx();
+	void _execute();
+	void _draw();
+	void setListStart();
+	void setShadow();
+	void chkFlag(s32);
+	void getTevFrm();
+	void getBtpFrm();
+	void getShadowSize();
+	void getCollisionH();
+	void getCollisionR();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getShopArcname__12daShopItem_cFv();
-extern "C" extern void getHeapSize__12daShopItem_cFv();
-extern "C" extern void CreateInit__12daShopItem_cFv();
-extern "C" extern void set_mtx__12daShopItem_cFv();
-extern "C" extern void _execute__12daShopItem_cFv();
-extern "C" extern void _draw__12daShopItem_cFv();
-extern "C" extern void setListStart__12daShopItem_cFv();
-extern "C" extern void setShadow__12daShopItem_cFv();
-extern "C" extern void chkFlag__12daShopItem_cFi();
-extern "C" extern void getTevFrm__12daShopItem_cFv();
-extern "C" extern void getBtpFrm__12daShopItem_cFv();
-extern "C" extern void getShadowSize__12daShopItem_cFv();
-extern "C" extern void getCollisionH__12daShopItem_cFv();
-extern "C" extern void getCollisionR__12daShopItem_cFv();
-extern "C" extern void daShopItem_Create__FPv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daShopItem_Delete__FPv();
-extern "C" extern void daShopItem_Draw__FPv();
-extern "C" extern void daShopItem_Execute__FPv();
-extern "C" extern void daShopItem_IsDelete__FPv();
-extern "C" extern void func_8059F420();
-extern "C" extern void func_8059F428();
+void daShopItem_Create(void*);
+void daShopItem_Delete(void*);
+void daShopItem_Draw(void*);
+void daShopItem_Execute(void*);
+bool daShopItem_IsDelete(void*);
+extern "C" void func_8059F420();
+extern "C" void func_8059F428();
+
+extern "C" void getShopArcname__12daShopItem_cFv();
+extern "C" void getHeapSize__12daShopItem_cFv();
+extern "C" void CreateInit__12daShopItem_cFv();
+extern "C" void set_mtx__12daShopItem_cFv();
+extern "C" void _execute__12daShopItem_cFv();
+extern "C" void _draw__12daShopItem_cFv();
+extern "C" void setListStart__12daShopItem_cFv();
+extern "C" void setShadow__12daShopItem_cFv();
+extern "C" void chkFlag__12daShopItem_cFi();
+extern "C" void getTevFrm__12daShopItem_cFv();
+extern "C" void getBtpFrm__12daShopItem_cFv();
+extern "C" void getShadowSize__12daShopItem_cFv();
+extern "C" void getCollisionH__12daShopItem_cFv();
+extern "C" void getCollisionR__12daShopItem_cFv();
+extern "C" void daShopItem_Create__FPv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daShopItem_Delete__FPv();
+extern "C" void daShopItem_Draw__FPv();
+extern "C" void daShopItem_Execute__FPv();
+extern "C" bool daShopItem_IsDelete__FPv();
+extern "C" void func_8059F420();
+extern "C" void func_8059F428();
 SECTION_RODATA extern const u32 m_cullfar_max__12daShopItem_c;
 SECTION_RODATA extern const u8 data_8059F43C[46 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_3718;
@@ -55,7 +96,9 @@ SECTION_DATA extern void*const __vt__12daShopItem_c[17];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +108,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShopArcname__12daShopItem_cFv) {
+asm void daShopItem_c::getShopArcname() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getShopArcname__12daShopItem_cFv.s"
 }
@@ -76,7 +119,7 @@ ASM_FUNCTION(getShopArcname__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeapSize__12daShopItem_cFv) {
+asm void daShopItem_c::getHeapSize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getHeapSize__12daShopItem_cFv.s"
 }
@@ -87,7 +130,7 @@ ASM_FUNCTION(getHeapSize__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__12daShopItem_cFv) {
+asm void daShopItem_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/CreateInit__12daShopItem_cFv.s"
 }
@@ -98,7 +141,7 @@ ASM_FUNCTION(CreateInit__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__12daShopItem_cFv) {
+asm void daShopItem_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/set_mtx__12daShopItem_cFv.s"
 }
@@ -109,7 +152,7 @@ ASM_FUNCTION(set_mtx__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_execute__12daShopItem_cFv) {
+asm void daShopItem_c::_execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/_execute__12daShopItem_cFv.s"
 }
@@ -120,7 +163,7 @@ ASM_FUNCTION(_execute__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__12daShopItem_cFv) {
+asm void daShopItem_c::_draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/_draw__12daShopItem_cFv.s"
 }
@@ -128,21 +171,16 @@ ASM_FUNCTION(_draw__12daShopItem_cFv) {
 
 
 /* 8059EF9C-8059EFA0 0004+00 .text      setListStart__12daShopItem_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setListStart__12daShopItem_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/setListStart__12daShopItem_cFv.s"
+void daShopItem_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059EFA0-8059F024 0084+00 .text      setShadow__12daShopItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShadow__12daShopItem_cFv) {
+asm void daShopItem_c::setShadow() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/setShadow__12daShopItem_cFv.s"
 }
@@ -153,7 +191,7 @@ ASM_FUNCTION(setShadow__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFlag__12daShopItem_cFi) {
+asm void daShopItem_c::chkFlag(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/chkFlag__12daShopItem_cFi.s"
 }
@@ -164,7 +202,7 @@ ASM_FUNCTION(chkFlag__12daShopItem_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTevFrm__12daShopItem_cFv) {
+asm void daShopItem_c::getTevFrm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getTevFrm__12daShopItem_cFv.s"
 }
@@ -175,7 +213,7 @@ ASM_FUNCTION(getTevFrm__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBtpFrm__12daShopItem_cFv) {
+asm void daShopItem_c::getBtpFrm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getBtpFrm__12daShopItem_cFv.s"
 }
@@ -186,7 +224,7 @@ ASM_FUNCTION(getBtpFrm__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShadowSize__12daShopItem_cFv) {
+asm void daShopItem_c::getShadowSize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getShadowSize__12daShopItem_cFv.s"
 }
@@ -197,7 +235,7 @@ ASM_FUNCTION(getShadowSize__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCollisionH__12daShopItem_cFv) {
+asm void daShopItem_c::getCollisionH() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getCollisionH__12daShopItem_cFv.s"
 }
@@ -208,7 +246,7 @@ ASM_FUNCTION(getCollisionH__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCollisionR__12daShopItem_cFv) {
+asm void daShopItem_c::getCollisionR() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/getCollisionR__12daShopItem_cFv.s"
 }
@@ -219,7 +257,7 @@ ASM_FUNCTION(getCollisionR__12daShopItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daShopItem_Create__FPv) {
+asm void daShopItem_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Create__FPv.s"
 }
@@ -230,7 +268,7 @@ ASM_FUNCTION(daShopItem_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/__dt__8cM3dGCylFv.s"
 }
@@ -241,7 +279,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/__dt__8cM3dGAabFv.s"
 }
@@ -252,7 +290,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -263,7 +301,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daShopItem_Delete__FPv) {
+asm void daShopItem_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Delete__FPv.s"
 }
@@ -274,7 +312,7 @@ ASM_FUNCTION(daShopItem_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daShopItem_Draw__FPv) {
+asm void daShopItem_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Draw__FPv.s"
 }
@@ -285,7 +323,7 @@ ASM_FUNCTION(daShopItem_Draw__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daShopItem_Execute__FPv) {
+asm void daShopItem_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_Execute__FPv.s"
 }
@@ -293,21 +331,16 @@ ASM_FUNCTION(daShopItem_Execute__FPv) {
 
 
 /* 8059F418-8059F420 0008+00 .text      daShopItem_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daShopItem_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_IsDelete__FPv.s"
+bool daShopItem_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8059F420-8059F428 0008+00 .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059F420) {
+extern "C" asm void func_8059F420() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/func_8059F420.s"
 }
@@ -318,7 +351,7 @@ ASM_FUNCTION(func_8059F420) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059F428) {
+extern "C" asm void func_8059F428() {
 	nofralloc
 #include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/func_8059F428.s"
 }

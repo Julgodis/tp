@@ -6,31 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
+/* top-level dependencies (begin dBgS_PolyPassChk) */
+/* top-level dependencies (end dBgS_PolyPassChk) */
+struct dBgS_PolyPassChk {
+	/* 80078D64 */ dBgS_PolyPassChk();
+	/* 80078DB0 */ ~dBgS_PolyPassChk();
+	/* 80078E0C */ void SetPassChkInfo(dBgS_PolyPassChk&);
+	/* 80078E68 */ void SetObj();
+	/* 80078E74 */ void ClrObj();
+	/* 80078E80 */ void SetCam();
+	/* 80078E8C */ void ClrCam();
+	/* 80078E98 */ void SetLink();
+	/* 80078EA4 */ void ClrLink();
+	/* 80078EB0 */ void SetArrow();
+	/* 80078EBC */ void SetBomb();
+	/* 80078EC8 */ void ClrBomb();
+	/* 80078ED4 */ void SetBoomerang();
+	/* 80078EE0 */ void SetRope();
+	/* 80078EEC */ void SetUnderwaterRoof();
+	/* 80078EF8 */ void SetHorse();
+	/* 80078F04 */ void ChkNoHorse();
+	/* 80078F7C */ void SetStatue();
+	/* 80078F88 */ void ClrStatue();
+	/* 80078F94 */ void SetIronBall();
+	/* 80078FA0 */ void ClrIronBall();
+};
+
+// build cBgS_PolyPassChk (cBgS_PolyPassChk) False/False
+/* top-level dependencies (begin cBgS_PolyPassChk) */
+/* top-level dependencies (end cBgS_PolyPassChk) */
+struct cBgS_PolyPassChk {
+	/* 80078FAC */ ~cBgS_PolyPassChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16dBgS_PolyPassChkFv();
-extern "C" extern void __dt__16dBgS_PolyPassChkFv();
-extern "C" extern void SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk();
-extern "C" extern void SetObj__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrObj__16dBgS_PolyPassChkFv();
-extern "C" extern void SetCam__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrCam__16dBgS_PolyPassChkFv();
-extern "C" extern void SetLink__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrLink__16dBgS_PolyPassChkFv();
-extern "C" extern void SetArrow__16dBgS_PolyPassChkFv();
-extern "C" extern void SetBomb__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrBomb__16dBgS_PolyPassChkFv();
-extern "C" extern void SetBoomerang__16dBgS_PolyPassChkFv();
-extern "C" extern void SetRope__16dBgS_PolyPassChkFv();
-extern "C" extern void SetUnderwaterRoof__16dBgS_PolyPassChkFv();
-extern "C" extern void SetHorse__16dBgS_PolyPassChkFv();
-extern "C" extern void ChkNoHorse__16dBgS_PolyPassChkFv();
-extern "C" extern void SetStatue__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrStatue__16dBgS_PolyPassChkFv();
-extern "C" extern void SetIronBall__16dBgS_PolyPassChkFv();
-extern "C" extern void ClrIronBall__16dBgS_PolyPassChkFv();
-extern "C" extern void __dt__16cBgS_PolyPassChkFv();
+
+extern "C" void __ct__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16dBgS_PolyPassChkFv();
+extern "C" void SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void ClrObj__16dBgS_PolyPassChkFv();
+extern "C" void SetCam__16dBgS_PolyPassChkFv();
+extern "C" void ClrCam__16dBgS_PolyPassChkFv();
+extern "C" void SetLink__16dBgS_PolyPassChkFv();
+extern "C" void ClrLink__16dBgS_PolyPassChkFv();
+extern "C" void SetArrow__16dBgS_PolyPassChkFv();
+extern "C" void SetBomb__16dBgS_PolyPassChkFv();
+extern "C" void ClrBomb__16dBgS_PolyPassChkFv();
+extern "C" void SetBoomerang__16dBgS_PolyPassChkFv();
+extern "C" void SetRope__16dBgS_PolyPassChkFv();
+extern "C" void SetUnderwaterRoof__16dBgS_PolyPassChkFv();
+extern "C" void SetHorse__16dBgS_PolyPassChkFv();
+extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv();
+extern "C" void SetStatue__16dBgS_PolyPassChkFv();
+extern "C" void ClrStatue__16dBgS_PolyPassChkFv();
+extern "C" void SetIronBall__16dBgS_PolyPassChkFv();
+extern "C" void ClrIronBall__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16cBgS_PolyPassChkFv();
 SECTION_DATA extern void*const __vt__16dBgS_PolyPassChk[3];
 SECTION_DATA extern void*const __vt__16cBgS_PolyPassChk[3];
 
@@ -38,267 +77,268 @@ SECTION_DATA extern void*const __vt__16cBgS_PolyPassChk[3];
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803ABA38-803ABA44 000C+00 .data      __vt__16dBgS_PolyPassChk                                     */
+/* 803ABA38-803ABA44 000C+00 rc=2 efc=0 .data      __vt__16dBgS_PolyPassChk                                     */
 void* const __vt__16dBgS_PolyPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16dBgS_PolyPassChkFv,
 };
 
-/* 803ABA44-803ABA50 000C+00 .data      __vt__16cBgS_PolyPassChk                                     */
+/* 803ABA44-803ABA50 000C+00 rc=3 efc=0 .data      __vt__16cBgS_PolyPassChk                                     */
 void* const __vt__16cBgS_PolyPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16cBgS_PolyPassChkFv,
 };
 
-/* 80078D64-80078DB0 004C+00 .text      __ct__16dBgS_PolyPassChkFv                                   */
+/* 80078D64-80078DB0 004C+00 rc=1 efc=1 .text      __ct__16dBgS_PolyPassChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dBgS_PolyPassChkFv) {
+asm dBgS_PolyPassChk::dBgS_PolyPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/__ct__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078DB0-80078E0C 005C+00 .text      __dt__16dBgS_PolyPassChkFv                                   */
+/* 80078DB0-80078E0C 005C+00 rc=2 efc=1 .text      __dt__16dBgS_PolyPassChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dBgS_PolyPassChkFv) {
+asm dBgS_PolyPassChk::~dBgS_PolyPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/__dt__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078E0C-80078E68 005C+00 .text      SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk       */
+/* 80078E0C-80078E68 005C+00 rc=1 efc=1 .text      SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk) {
+asm void dBgS_PolyPassChk::SetPassChkInfo(dBgS_PolyPassChk& field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk.s"
 }
 #pragma pop
 
 
-/* 80078E68-80078E74 000C+00 .text      SetObj__16dBgS_PolyPassChkFv                                 */
+/* 80078E68-80078E74 000C+00 rc=14 efc=14 .text      SetObj__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetObj__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetObj() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetObj__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078E74-80078E80 000C+00 .text      ClrObj__16dBgS_PolyPassChkFv                                 */
+/* 80078E74-80078E80 000C+00 rc=4 efc=4 .text      ClrObj__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrObj__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrObj() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrObj__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078E80-80078E8C 000C+00 .text      SetCam__16dBgS_PolyPassChkFv                                 */
+/* 80078E80-80078E8C 000C+00 rc=6 efc=6 .text      SetCam__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCam__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetCam() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetCam__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078E8C-80078E98 000C+00 .text      ClrCam__16dBgS_PolyPassChkFv                                 */
+/* 80078E8C-80078E98 000C+00 rc=2 efc=2 .text      ClrCam__16dBgS_PolyPassChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrCam__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrCam() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrCam__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078E98-80078EA4 000C+00 .text      SetLink__16dBgS_PolyPassChkFv                                */
+/* 80078E98-80078EA4 000C+00 rc=3 efc=3 .text      SetLink__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetLink__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetLink() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetLink__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EA4-80078EB0 000C+00 .text      ClrLink__16dBgS_PolyPassChkFv                                */
+/* 80078EA4-80078EB0 000C+00 rc=1 efc=1 .text      ClrLink__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrLink__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrLink() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrLink__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EB0-80078EBC 000C+00 .text      SetArrow__16dBgS_PolyPassChkFv                               */
+/* 80078EB0-80078EBC 000C+00 rc=1 efc=1 .text      SetArrow__16dBgS_PolyPassChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetArrow__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetArrow() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetArrow__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EBC-80078EC8 000C+00 .text      SetBomb__16dBgS_PolyPassChkFv                                */
+/* 80078EBC-80078EC8 000C+00 rc=2 efc=2 .text      SetBomb__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetBomb__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetBomb() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetBomb__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EC8-80078ED4 000C+00 .text      ClrBomb__16dBgS_PolyPassChkFv                                */
+/* 80078EC8-80078ED4 000C+00 rc=1 efc=1 .text      ClrBomb__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrBomb__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrBomb() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrBomb__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078ED4-80078EE0 000C+00 .text      SetBoomerang__16dBgS_PolyPassChkFv                           */
+/* 80078ED4-80078EE0 000C+00 rc=1 efc=1 .text      SetBoomerang__16dBgS_PolyPassChkFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetBoomerang__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetBoomerang() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetBoomerang__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EE0-80078EEC 000C+00 .text      SetRope__16dBgS_PolyPassChkFv                                */
+/* 80078EE0-80078EEC 000C+00 rc=1 efc=1 .text      SetRope__16dBgS_PolyPassChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetRope__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetRope() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetRope__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EEC-80078EF8 000C+00 .text      SetUnderwaterRoof__16dBgS_PolyPassChkFv                      */
+/* 80078EEC-80078EF8 000C+00 rc=3 efc=3 .text      SetUnderwaterRoof__16dBgS_PolyPassChkFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetUnderwaterRoof__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetUnderwaterRoof() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetUnderwaterRoof__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078EF8-80078F04 000C+00 .text      SetHorse__16dBgS_PolyPassChkFv                               */
+/* 80078EF8-80078F04 000C+00 rc=1 efc=1 .text      SetHorse__16dBgS_PolyPassChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetHorse__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetHorse() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetHorse__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078F04-80078F7C 0078+00 .text      ChkNoHorse__16dBgS_PolyPassChkFv                             */
+/* 80078F04-80078F7C 0078+00 rc=2 efc=2 .text      ChkNoHorse__16dBgS_PolyPassChkFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ChkNoHorse__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ChkNoHorse() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ChkNoHorse__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078F7C-80078F88 000C+00 .text      SetStatue__16dBgS_PolyPassChkFv                              */
+/* 80078F7C-80078F88 000C+00 rc=1 efc=1 .text      SetStatue__16dBgS_PolyPassChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetStatue__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetStatue() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetStatue__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078F88-80078F94 000C+00 .text      ClrStatue__16dBgS_PolyPassChkFv                              */
+/* 80078F88-80078F94 000C+00 rc=1 efc=1 .text      ClrStatue__16dBgS_PolyPassChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrStatue__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrStatue() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrStatue__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078F94-80078FA0 000C+00 .text      SetIronBall__16dBgS_PolyPassChkFv                            */
+/* 80078F94-80078FA0 000C+00 rc=1 efc=1 .text      SetIronBall__16dBgS_PolyPassChkFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetIronBall__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::SetIronBall() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/SetIronBall__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078FA0-80078FAC 000C+00 .text      ClrIronBall__16dBgS_PolyPassChkFv                            */
+/* 80078FA0-80078FAC 000C+00 rc=0 efc=0 .text      ClrIronBall__16dBgS_PolyPassChkFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrIronBall__16dBgS_PolyPassChkFv) {
+asm void dBgS_PolyPassChk::ClrIronBall() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/ClrIronBall__16dBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80078FAC-80078FF4 0048+00 .text      __dt__16cBgS_PolyPassChkFv                                   */
+/* 80078FAC-80078FF4 0048+00 rc=1 efc=0 .text      __dt__16cBgS_PolyPassChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16cBgS_PolyPassChkFv) {
+asm cBgS_PolyPassChk::~cBgS_PolyPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_poly_pass_chk/__dt__16cBgS_PolyPassChkFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

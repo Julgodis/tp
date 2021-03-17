@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void __ieee754_asin();
+extern "C" void __ieee754_asin();
+
+extern "C" void __ieee754_asin();
 SECTION_SDATA2 extern f64 Math_Double_precision_e_asin__lit_94;
 SECTION_SDATA2 extern f64 Math_Double_precision_e_asin__lit_95;
 SECTION_SDATA2 extern f64 Math_Double_precision_e_asin__lit_96;
@@ -32,7 +34,9 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_asin__lit_110;
 // External References:
 // 
 
-extern "C" extern void sqrt();
+extern "C" void sqrt();
+
+extern "C" void sqrt();
 SECTION_SDATA extern u32 __float_nan;
 
 // 
@@ -40,66 +44,65 @@ SECTION_SDATA extern u32 __float_nan;
 // 
 
 /* ############################################################################################## */
-/* 80456700-80456708 0008+00 .sdata2    @94                                                          */
+/* 80456700-80456708 0008+00 rc=1 efc=0 .sdata2    @94                                                          */
 f64 Math_Double_precision_e_asin__lit_94 = 1.5707963267948966;
 
-/* 80456708-80456710 0008+00 .sdata2    @95                                                          */
+/* 80456708-80456710 0008+00 rc=1 efc=0 .sdata2    @95                                                          */
 f64 Math_Double_precision_e_asin__lit_95 = 6.123233995736766e-17;
 
-/* 80456710-80456718 0008+00 .sdata2    @96                                                          */
+/* 80456710-80456718 0008+00 rc=1 efc=0 .sdata2    @96                                                          */
 f64 Math_Double_precision_e_asin__lit_96 = 1e+300;
 
-/* 80456718-80456720 0008+00 .sdata2    @97                                                          */
+/* 80456718-80456720 0008+00 rc=1 efc=0 .sdata2    @97                                                          */
 f64 Math_Double_precision_e_asin__lit_97 = 1.0;
 
-/* 80456720-80456728 0008+00 .sdata2    @98                                                          */
+/* 80456720-80456728 0008+00 rc=1 efc=0 .sdata2    @98                                                          */
 f64 Math_Double_precision_e_asin__lit_98 = 1.0 / 6.0;
 
-/* 80456728-80456730 0008+00 .sdata2    @99                                                          */
+/* 80456728-80456730 0008+00 rc=1 efc=0 .sdata2    @99                                                          */
 f64 Math_Double_precision_e_asin__lit_99 = -0.3255658186224009;
 
-/* 80456730-80456738 0008+00 .sdata2    @100                                                         */
+/* 80456730-80456738 0008+00 rc=1 efc=0 .sdata2    @100                                                         */
 f64 Math_Double_precision_e_asin__lit_100 = 0.20121253213486293;
 
-/* 80456738-80456740 0008+00 .sdata2    @101                                                         */
+/* 80456738-80456740 0008+00 rc=1 efc=0 .sdata2    @101                                                         */
 f64 Math_Double_precision_e_asin__lit_101 = -0.04005553450067941;
 
-/* 80456740-80456748 0008+00 .sdata2    @102                                                         */
+/* 80456740-80456748 0008+00 rc=1 efc=0 .sdata2    @102                                                         */
 f64 Math_Double_precision_e_asin__lit_102 = 0.0007915349942898145;
 
-/* 80456748-80456750 0008+00 .sdata2    @103                                                         */
+/* 80456748-80456750 0008+00 rc=1 efc=0 .sdata2    @103                                                         */
 f64 lit_103 = 3.479331075960212e-05;
 
-/* 80456750-80456758 0008+00 .sdata2    @104                                                         */
+/* 80456750-80456758 0008+00 rc=1 efc=0 .sdata2    @104                                                         */
 f64 Math_Double_precision_e_asin__lit_104 = -2.403394911734414;
 
-/* 80456758-80456760 0008+00 .sdata2    @105                                                         */
+/* 80456758-80456760 0008+00 rc=1 efc=0 .sdata2    @105                                                         */
 f64 Math_Double_precision_e_asin__lit_105 = 2.0209457602335057;
 
-/* 80456760-80456768 0008+00 .sdata2    @106                                                         */
+/* 80456760-80456768 0008+00 rc=1 efc=0 .sdata2    @106                                                         */
 f64 Math_Double_precision_e_asin__lit_106 = -0.6882839716054533;
 
-/* 80456768-80456770 0008+00 .sdata2    @107                                                         */
+/* 80456768-80456770 0008+00 rc=1 efc=0 .sdata2    @107                                                         */
 f64 Math_Double_precision_e_asin__lit_107 = 0.07703815055590194;
 
-/* 80456770-80456778 0008+00 .sdata2    @108                                                         */
+/* 80456770-80456778 0008+00 rc=1 efc=0 .sdata2    @108                                                         */
 f64 Math_Double_precision_e_asin__lit_108 = 0.5;
 
-/* 80456778-80456780 0008+00 .sdata2    @109                                                         */
+/* 80456778-80456780 0008+00 rc=1 efc=0 .sdata2    @109                                                         */
 f64 Math_Double_precision_e_asin__lit_109 = 2.0;
 
-/* 80456780-80456788 0008+00 .sdata2    @110                                                         */
+/* 80456780-80456788 0008+00 rc=1 efc=0 .sdata2    @110                                                         */
 f64 Math_Double_precision_e_asin__lit_110 = 0.7853981633974483;
 
-/* 803694B0-803696E8 0238+00 .text      __ieee754_asin                                               */
+/* 803694B0-803696E8 0238+00 rc=1 efc=1 .text      __ieee754_asin                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ieee754_asin) {
+extern "C" asm void __ieee754_asin() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/e_asin/__ieee754_asin.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

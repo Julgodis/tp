@@ -6,38 +6,100 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjPicture_c;
+struct cXyz;
+
+struct fopAc_ac_c {
+};
+
+struct daObjPicture_c {
+	daObjPicture_c();
+	~daObjPicture_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setPicModelMtx();
+	void setTmgModelMtx();
+	void getLinePosPic(s32, cXyz*);
+	void getPosTmg(cXyz*);
+	void setLinePos();
+	void moveLineFall1();
+	void moveLineFall2();
+	void chkHitRope();
+	void chkHitBombTg();
+	void setPicAtCol();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Cps {
+	~dCcD_Cps();
+	dCcD_Cps();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cXyz {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjPicture_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__14daObjPicture_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_CpsFv();
-extern "C" extern void __ct__8dCcD_CpsFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__14daObjPicture_cFv();
-extern "C" extern void createHeap__14daObjPicture_cFv();
-extern "C" extern void create__14daObjPicture_cFv();
-extern "C" extern void Delete__14daObjPicture_cFv();
-extern "C" extern void draw__14daObjPicture_cFv();
-extern "C" extern void execute__14daObjPicture_cFv();
-extern "C" extern void init__14daObjPicture_cFv();
-extern "C" extern void setPicModelMtx__14daObjPicture_cFv();
-extern "C" extern void setTmgModelMtx__14daObjPicture_cFv();
-extern "C" extern void getLinePosPic__14daObjPicture_cFiP4cXyz();
-extern "C" extern void getPosTmg__14daObjPicture_cFP4cXyz();
-extern "C" extern void setLinePos__14daObjPicture_cFv();
-extern "C" extern void moveLineFall1__14daObjPicture_cFv();
-extern "C" extern void moveLineFall2__14daObjPicture_cFv();
-extern "C" extern void chkHitRope__14daObjPicture_cFv();
-extern "C" extern void chkHitBombTg__14daObjPicture_cFv();
-extern "C" extern void setPicAtCol__14daObjPicture_cFv();
-extern "C" extern void daObjPicture_create__FP14daObjPicture_c();
-extern "C" extern void daObjPicture_Delete__FP14daObjPicture_c();
-extern "C" extern void daObjPicture_execute__FP14daObjPicture_c();
-extern "C" extern void daObjPicture_draw__FP14daObjPicture_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daObjPicture_c_createHeap(fopAc_ac_c*);
+void daObjPicture_create(daObjPicture_c*);
+void daObjPicture_Delete(daObjPicture_c*);
+void daObjPicture_execute(daObjPicture_c*);
+void daObjPicture_draw(daObjPicture_c*);
+
+extern "C" void daObjPicture_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__14daObjPicture_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_CpsFv();
+extern "C" void __ct__8dCcD_CpsFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__14daObjPicture_cFv();
+extern "C" void createHeap__14daObjPicture_cFv();
+extern "C" void create__14daObjPicture_cFv();
+extern "C" void Delete__14daObjPicture_cFv();
+extern "C" void draw__14daObjPicture_cFv();
+extern "C" void execute__14daObjPicture_cFv();
+extern "C" void init__14daObjPicture_cFv();
+extern "C" void setPicModelMtx__14daObjPicture_cFv();
+extern "C" void setTmgModelMtx__14daObjPicture_cFv();
+extern "C" void getLinePosPic__14daObjPicture_cFiP4cXyz();
+extern "C" void getPosTmg__14daObjPicture_cFP4cXyz();
+extern "C" void setLinePos__14daObjPicture_cFv();
+extern "C" void moveLineFall1__14daObjPicture_cFv();
+extern "C" void moveLineFall2__14daObjPicture_cFv();
+extern "C" void chkHitRope__14daObjPicture_cFv();
+extern "C" void chkHitBombTg__14daObjPicture_cFv();
+extern "C" void setPicAtCol__14daObjPicture_cFv();
+extern "C" void daObjPicture_create__FP14daObjPicture_c();
+extern "C" void daObjPicture_Delete__FP14daObjPicture_c();
+extern "C" void daObjPicture_execute__FP14daObjPicture_c();
+extern "C" void daObjPicture_draw__FP14daObjPicture_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_dzbIdx[8];
 SECTION_RODATA extern const u8 l_PictureBmdIdx[8];
 SECTION_RODATA extern const u32 lit_3925;
@@ -95,7 +157,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -105,7 +169,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPicture_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjPicture_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/daObjPicture_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -116,7 +180,7 @@ ASM_FUNCTION(daObjPicture_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObjPicture_cFv) {
+asm daObjPicture_c::daObjPicture_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__ct__14daObjPicture_cFv.s"
 }
@@ -127,7 +191,7 @@ ASM_FUNCTION(__ct__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__8cM3dGCylFv.s"
 }
@@ -138,7 +202,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__8cM3dGAabFv.s"
 }
@@ -149,7 +213,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CpsFv) {
+asm dCcD_Cps::~dCcD_Cps() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__8dCcD_CpsFv.s"
 }
@@ -160,7 +224,7 @@ ASM_FUNCTION(__dt__8dCcD_CpsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CpsFv) {
+asm dCcD_Cps::dCcD_Cps() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__ct__8dCcD_CpsFv.s"
 }
@@ -171,7 +235,7 @@ ASM_FUNCTION(__ct__8dCcD_CpsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__10dCcD_GSttsFv.s"
 }
@@ -182,7 +246,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjPicture_cFv) {
+asm daObjPicture_c::~daObjPicture_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__14daObjPicture_cFv.s"
 }
@@ -193,7 +257,7 @@ ASM_FUNCTION(__dt__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daObjPicture_cFv) {
+asm void daObjPicture_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/createHeap__14daObjPicture_cFv.s"
 }
@@ -204,7 +268,7 @@ ASM_FUNCTION(createHeap__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjPicture_cFv) {
+asm void daObjPicture_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/create__14daObjPicture_cFv.s"
 }
@@ -215,7 +279,7 @@ ASM_FUNCTION(create__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjPicture_cFv) {
+asm void daObjPicture_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/Delete__14daObjPicture_cFv.s"
 }
@@ -226,7 +290,7 @@ ASM_FUNCTION(Delete__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjPicture_cFv) {
+asm void daObjPicture_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/draw__14daObjPicture_cFv.s"
 }
@@ -237,7 +301,7 @@ ASM_FUNCTION(draw__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjPicture_cFv) {
+asm void daObjPicture_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/execute__14daObjPicture_cFv.s"
 }
@@ -248,7 +312,7 @@ ASM_FUNCTION(execute__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daObjPicture_cFv) {
+asm void daObjPicture_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/init__14daObjPicture_cFv.s"
 }
@@ -259,7 +323,7 @@ ASM_FUNCTION(init__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPicModelMtx__14daObjPicture_cFv) {
+asm void daObjPicture_c::setPicModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/setPicModelMtx__14daObjPicture_cFv.s"
 }
@@ -270,7 +334,7 @@ ASM_FUNCTION(setPicModelMtx__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTmgModelMtx__14daObjPicture_cFv) {
+asm void daObjPicture_c::setTmgModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/setTmgModelMtx__14daObjPicture_cFv.s"
 }
@@ -281,7 +345,7 @@ ASM_FUNCTION(setTmgModelMtx__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLinePosPic__14daObjPicture_cFiP4cXyz) {
+asm void daObjPicture_c::getLinePosPic(s32 field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/getLinePosPic__14daObjPicture_cFiP4cXyz.s"
 }
@@ -292,7 +356,7 @@ ASM_FUNCTION(getLinePosPic__14daObjPicture_cFiP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPosTmg__14daObjPicture_cFP4cXyz) {
+asm void daObjPicture_c::getPosTmg(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/getPosTmg__14daObjPicture_cFP4cXyz.s"
 }
@@ -303,7 +367,7 @@ ASM_FUNCTION(getPosTmg__14daObjPicture_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLinePos__14daObjPicture_cFv) {
+asm void daObjPicture_c::setLinePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/setLinePos__14daObjPicture_cFv.s"
 }
@@ -314,7 +378,7 @@ ASM_FUNCTION(setLinePos__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLineFall1__14daObjPicture_cFv) {
+asm void daObjPicture_c::moveLineFall1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/moveLineFall1__14daObjPicture_cFv.s"
 }
@@ -325,7 +389,7 @@ ASM_FUNCTION(moveLineFall1__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLineFall2__14daObjPicture_cFv) {
+asm void daObjPicture_c::moveLineFall2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/moveLineFall2__14daObjPicture_cFv.s"
 }
@@ -336,7 +400,7 @@ ASM_FUNCTION(moveLineFall2__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkHitRope__14daObjPicture_cFv) {
+asm void daObjPicture_c::chkHitRope() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/chkHitRope__14daObjPicture_cFv.s"
 }
@@ -347,7 +411,7 @@ ASM_FUNCTION(chkHitRope__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkHitBombTg__14daObjPicture_cFv) {
+asm void daObjPicture_c::chkHitBombTg() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/chkHitBombTg__14daObjPicture_cFv.s"
 }
@@ -358,7 +422,7 @@ ASM_FUNCTION(chkHitBombTg__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPicAtCol__14daObjPicture_cFv) {
+asm void daObjPicture_c::setPicAtCol() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/setPicAtCol__14daObjPicture_cFv.s"
 }
@@ -369,7 +433,7 @@ ASM_FUNCTION(setPicAtCol__14daObjPicture_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPicture_create__FP14daObjPicture_c) {
+asm void daObjPicture_create(daObjPicture_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/daObjPicture_create__FP14daObjPicture_c.s"
 }
@@ -380,7 +444,7 @@ ASM_FUNCTION(daObjPicture_create__FP14daObjPicture_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPicture_Delete__FP14daObjPicture_c) {
+asm void daObjPicture_Delete(daObjPicture_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/daObjPicture_Delete__FP14daObjPicture_c.s"
 }
@@ -391,7 +455,7 @@ ASM_FUNCTION(daObjPicture_Delete__FP14daObjPicture_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPicture_execute__FP14daObjPicture_c) {
+asm void daObjPicture_execute(daObjPicture_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/daObjPicture_execute__FP14daObjPicture_c.s"
 }
@@ -402,7 +466,7 @@ ASM_FUNCTION(daObjPicture_execute__FP14daObjPicture_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPicture_draw__FP14daObjPicture_c) {
+asm void daObjPicture_draw(daObjPicture_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/daObjPicture_draw__FP14daObjPicture_c.s"
 }
@@ -413,7 +477,7 @@ ASM_FUNCTION(daObjPicture_draw__FP14daObjPicture_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_picture/d_a_obj_picture/__dt__10cCcD_GSttsFv.s"
 }

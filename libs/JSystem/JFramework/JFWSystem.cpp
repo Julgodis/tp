@@ -6,11 +6,179 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JFWSystem (JFWSystem) False/False
+/* top-level dependencies (begin JFWSystem) */
+/* top-level dependencies (end JFWSystem) */
+struct JFWSystem {
+	/* 80271CD0 */ void firstInit();
+	/* 80271D18 */ void init();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, s32);
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEDB4 */ void createRoot(s32, bool);
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+// build JKRThread (JKRThread) False/False
+// build OSThread (OSThread) False/False
+/* top-level dependencies (begin OSThread) */
+/* top-level dependencies (end OSThread) */
+struct OSThread {
+};
+
+/* top-level dependencies (begin JKRThread) */
+// outer dependency: OSThread
+/* top-level dependencies (end JKRThread) */
+struct JKRThread {
+	// OSThread
+	/* 802D16B8 */ JKRThread(OSThread*, s32);
+};
+
+// build OSThread (OSThread) True/True
+// build JKRAram (JKRAram) False/False
+/* top-level dependencies (begin JKRAram) */
+/* top-level dependencies (end JKRAram) */
+struct JKRAram {
+	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
+};
+
+// build JUTGraphFifo (JUTGraphFifo) False/False
+/* top-level dependencies (begin JUTGraphFifo) */
+/* top-level dependencies (end JUTGraphFifo) */
+struct JUTGraphFifo {
+	/* 802DEB58 */ JUTGraphFifo(u32);
+};
+
+// build JUTResFont (JUTResFont) False/False
+// build JKRHeap (JKRHeap) True/True
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+/* top-level dependencies (begin JUTResFont) */
+// outer dependency: JKRHeap
+// outer dependency: ResFONT
+/* top-level dependencies (end JUTResFont) */
+struct JUTResFont {
+	// JKRHeap
+	// ResFONT
+	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
+};
+
+// build ResFONT (ResFONT) True/True
+// build JUTDbPrint (JUTDbPrint) False/False
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JUTDbPrint) */
+// outer dependency: JUTFont
+// outer dependency: JKRHeap
+/* top-level dependencies (end JUTDbPrint) */
+struct JUTDbPrint {
+	// JUTFont
+	// JKRHeap
+	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
+	/* 802E0204 */ void changeFont(JUTFont*);
+};
+
+// build JUTFont (JUTFont) True/True
+// build JUTGamePad (JUTGamePad) False/False
+/* top-level dependencies (begin JUTGamePad) */
+/* top-level dependencies (end JUTGamePad) */
+struct JUTGamePad {
+	/* 802E0898 */ void init();
+};
+
+// build JUTException (JUTException) False/False
+// build JUTDirectPrint (JUTDirectPrint) False/False
+/* top-level dependencies (begin JUTDirectPrint) */
+/* top-level dependencies (end JUTDirectPrint) */
+struct JUTDirectPrint {
+	/* 802E4240 */ void start();
+};
+
+/* top-level dependencies (begin JUTException) */
+// outer dependency: JUTDirectPrint
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	// JUTDirectPrint
+	/* 802E1E40 */ void create(JUTDirectPrint*);
+	/* 802E3FEC */ void createConsole(void*, u32);
+};
+
+// build JUTDirectPrint (JUTDirectPrint) True/True
+// build JUTAssertion (JUTAssertion) False/False
+/* top-level dependencies (begin JUTAssertion) */
+/* top-level dependencies (end JUTAssertion) */
+struct JUTAssertion {
+	/* 802E495C */ void create();
+};
+
+// build JUTVideo (JUTVideo) False/False
+// build _GXRenderModeObj (_GXRenderModeObj) False/False
+/* top-level dependencies (begin _GXRenderModeObj) */
+/* top-level dependencies (end _GXRenderModeObj) */
+struct _GXRenderModeObj {
+};
+
+/* top-level dependencies (begin JUTVideo) */
+// outer dependency: _GXRenderModeObj
+/* top-level dependencies (end JUTVideo) */
+struct JUTVideo {
+	// _GXRenderModeObj
+	/* 802E4C54 */ void createManager(_GXRenderModeObj const*);
+};
+
+// build _GXRenderModeObj (_GXRenderModeObj) True/True
+// build JUTConsole (JUTConsole) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JUTConsole) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JUTConsole) */
+struct JUTConsole {
+	// JKRHeap
+	/* 802E7354 */ void create(s32, s32, JKRHeap*);
+};
+
+// build JUTConsoleManager (JUTConsoleManager) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JUTConsoleManager) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JUTConsoleManager) */
+struct JUTConsoleManager {
+	// JKRHeap
+	/* 802E81F4 */ void createManager(JKRHeap*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void firstInit__9JFWSystemFv();
-extern "C" extern void init__9JFWSystemFv();
+
+extern "C" void firstInit__9JFWSystemFv();
+extern "C" void init__9JFWSystemFv();
 SECTION_SDATA extern u32 maxStdHeaps__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern u32 sysHeapSize__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern u32 fifoBufSize__Q29JFWSystem11CSetUpParam;
@@ -38,29 +206,36 @@ SECTION_SDATA2 extern f64 lit_2245;
 // External References:
 // 
 
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void __nw__FUl();
-extern "C" extern void createRoot__10JKRExpHeapFib();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void __ct__9JKRThreadFP8OSThreadi();
-extern "C" extern void create__7JKRAramFUlUllll();
-extern "C" extern void __ct__12JUTGraphFifoFUl();
-extern "C" extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern "C" extern void changeFont__10JUTDbPrintFP7JUTFont();
-extern "C" extern void init__10JUTGamePadFv();
-extern "C" extern void create__12JUTExceptionFP14JUTDirectPrint();
-extern "C" extern void createConsole__12JUTExceptionFPvUl();
-extern "C" extern void start__14JUTDirectPrintFv();
-extern "C" extern void create__12JUTAssertionFv();
-extern "C" extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
-extern "C" extern void create__10JUTConsoleFUiUiP7JKRHeap();
-extern "C" extern void createManager__17JUTConsoleManagerFP7JKRHeap();
-extern "C" extern void JUTSetReportConsole();
-extern "C" extern void JUTSetWarningConsole();
-extern "C" extern void OSInit();
-extern "C" extern void OSGetCurrentThread();
-extern "C" extern void DVDInit();
+void* operator new(u32);
+extern "C" void JUTSetReportConsole();
+extern "C" void JUTSetWarningConsole();
+extern "C" void OSInit();
+extern "C" void OSGetCurrentThread();
+extern "C" void DVDInit();
+
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void* __nw__FUl();
+extern "C" void createRoot__10JKRExpHeapFib();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void create__7JKRAramFUlUllll();
+extern "C" void __ct__12JUTGraphFifoFUl();
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" void changeFont__10JUTDbPrintFP7JUTFont();
+extern "C" void init__10JUTGamePadFv();
+extern "C" void create__12JUTExceptionFP14JUTDirectPrint();
+extern "C" void createConsole__12JUTExceptionFPvUl();
+extern "C" void start__14JUTDirectPrintFv();
+extern "C" void create__12JUTAssertionFv();
+extern "C" void createManager__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void create__10JUTConsoleFUiUiP7JKRHeap();
+extern "C" void createManager__17JUTConsoleManagerFP7JKRHeap();
+extern "C" void JUTSetReportConsole();
+extern "C" void JUTSetWarningConsole();
+extern "C" void OSInit();
+extern "C" void OSGetCurrentThread();
+extern "C" void DVDInit();
 SECTION_RODATA extern const u8 JUTResFONT_Ascfont_fix12[16736];
 SECTION_DATA extern u8 GXNtsc480IntDf[60];
 
@@ -69,23 +244,23 @@ SECTION_DATA extern u8 GXNtsc480IntDf[60];
 // 
 
 /* ############################################################################################## */
-/* 80450770-80450774 0004+00 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam                       */
+/* 80450770-80450774 0004+00 rc=2 efc=1 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam                       */
 u32 maxStdHeaps__Q29JFWSystem11CSetUpParam = 0x00000002;
 
-/* 80450774-80450778 0004+00 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam                       */
+/* 80450774-80450778 0004+00 rc=2 efc=1 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam                       */
 u32 sysHeapSize__Q29JFWSystem11CSetUpParam = 0x00400000;
 
-/* 804511A0-804511A4 0004+00 .sbss      rootHeap__9JFWSystem                                         */
+/* 804511A0-804511A4 0004+00 rc=2 efc=0 .sbss      rootHeap__9JFWSystem                                         */
 u8 rootHeap__9JFWSystem[4];
 
-/* 804511A4-804511A8 0004+00 .sbss      systemHeap__9JFWSystem                                       */
+/* 804511A4-804511A8 0004+00 rc=3 efc=1 .sbss      systemHeap__9JFWSystem                                       */
 u8 systemHeap__9JFWSystem[4];
 
-/* 80271CD0-80271D18 0048+00 .text      firstInit__9JFWSystemFv                                      */
+/* 80271CD0-80271D18 0048+00 rc=2 efc=1 .text      firstInit__9JFWSystemFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(firstInit__9JFWSystemFv) {
+asm void JFWSystem::firstInit() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWSystem/firstInit__9JFWSystemFv.s"
 }
@@ -93,70 +268,69 @@ ASM_FUNCTION(firstInit__9JFWSystemFv) {
 
 
 /* ############################################################################################## */
-/* 80450778-8045077C 0004+00 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
+/* 80450778-8045077C 0004+00 rc=2 efc=1 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
 u32 fifoBufSize__Q29JFWSystem11CSetUpParam = 0x00040000;
 
-/* 8045077C-80450780 0004+00 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
+/* 8045077C-80450780 0004+00 rc=2 efc=1 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
 u32 aramAudioBufSize__Q29JFWSystem11CSetUpParam = 0x00800000;
 
-/* 80450780-80450784 0004+00 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
+/* 80450780-80450784 0004+00 rc=2 efc=1 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
 u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam = 0x00600000;
 
-/* 80450784-80450788 0004+00 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
+/* 80450784-80450788 0004+00 rc=1 efc=0 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
 u32 streamPriority__Q29JFWSystem11CSetUpParam = 0x00000008;
 
-/* 80450788-8045078C 0004+00 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
+/* 80450788-8045078C 0004+00 rc=1 efc=0 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
 u32 decompPriority__Q29JFWSystem11CSetUpParam = 0x00000007;
 
-/* 8045078C-80450790 0004+00 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
+/* 8045078C-80450790 0004+00 rc=1 efc=0 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
 u32 aPiecePriority__Q29JFWSystem11CSetUpParam = 0x00000006;
 
-/* 80450790-80450794 0004+00 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
+/* 80450790-80450794 0004+00 rc=1 efc=0 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
 void* systemFontRes__Q29JFWSystem11CSetUpParam = (void*)&JUTResFONT_Ascfont_fix12;
 
-/* 80450794-80450798 0004+00 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
+/* 80450794-80450798 0004+00 rc=2 efc=1 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
 void* renderMode__Q29JFWSystem11CSetUpParam = (void*)&GXNtsc480IntDf;
 
-/* 80450798-804507A0 0004+04 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
+/* 80450798-804507A0 0004+04 rc=1 efc=0 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
 u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam = 0x000024FC;
 /* padding 4 bytes */
 
-/* 804511A8-804511AC 0004+00 .sbss      mainThread__9JFWSystem                                       */
+/* 804511A8-804511AC 0004+00 rc=1 efc=0 .sbss      mainThread__9JFWSystem                                       */
 u8 mainThread__9JFWSystem[4];
 
-/* 804511AC-804511B0 0004+00 .sbss      debugPrint__9JFWSystem                                       */
+/* 804511AC-804511B0 0004+00 rc=1 efc=0 .sbss      debugPrint__9JFWSystem                                       */
 u8 debugPrint__9JFWSystem[4];
 
-/* 804511B0-804511B4 0004+00 .sbss      systemFont__9JFWSystem                                       */
+/* 804511B0-804511B4 0004+00 rc=1 efc=0 .sbss      systemFont__9JFWSystem                                       */
 u8 systemFont__9JFWSystem[4];
 
-/* 804511B4-804511B8 0004+00 .sbss      systemConsoleManager__9JFWSystem                             */
+/* 804511B4-804511B8 0004+00 rc=1 efc=0 .sbss      systemConsoleManager__9JFWSystem                             */
 u8 systemConsoleManager__9JFWSystem[4];
 
-/* 804511B8-804511BC 0004+00 .sbss      systemConsole__9JFWSystem                                    */
+/* 804511B8-804511BC 0004+00 rc=8 efc=7 .sbss      systemConsole__9JFWSystem                                    */
 u8 systemConsole__9JFWSystem[4];
 
-/* 804511BC-804511C0 0004+00 .sbss      None                                                         */
+/* 804511BC-804511C0 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_804511BC[4];
 
-/* 80455240-80455244 0004+00 .sdata2    @2242                                                        */
+/* 80455240-80455244 0004+00 rc=1 efc=0 .sdata2    @2242                                                        */
 f32 JFWSystem__lit_2242 = 0.5f;
 
-/* 80455244-80455248 0004+00 .sdata2    @2243                                                        */
+/* 80455244-80455248 0004+00 rc=1 efc=0 .sdata2    @2243                                                        */
 f32 lit_2243 = 17.0f / 20.0f;
 
-/* 80455248-80455250 0008+00 .sdata2    @2245                                                        */
+/* 80455248-80455250 0008+00 rc=1 efc=0 .sdata2    @2245                                                        */
 f64 lit_2245 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80271D18-80272040 0328+00 .text      init__9JFWSystemFv                                           */
+/* 80271D18-80272040 0328+00 rc=1 efc=1 .text      init__9JFWSystemFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__9JFWSystemFv) {
+asm void JFWSystem::init() {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWSystem/init__9JFWSystemFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

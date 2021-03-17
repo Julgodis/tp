@@ -6,30 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv9SwShutter_c;
+
+struct daLv9SwShutter_HIO_c {
+	daLv9SwShutter_HIO_c();
+	~daLv9SwShutter_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv9SwShutter_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveShutter();
+	void init_modeWait();
+	void modeWait();
+	void init_modeOpen();
+	void modeOpen();
+	void init_modeClose();
+	void modeClose();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__20daLv9SwShutter_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__16daLv9SwShutter_cFv();
-extern "C" extern void CreateHeap__16daLv9SwShutter_cFv();
-extern "C" extern void create__16daLv9SwShutter_cFv();
-extern "C" extern void Execute__16daLv9SwShutter_cFPPA3_A4_f();
-extern "C" extern void moveShutter__16daLv9SwShutter_cFv();
-extern "C" extern void init_modeWait__16daLv9SwShutter_cFv();
-extern "C" extern void modeWait__16daLv9SwShutter_cFv();
-extern "C" extern void init_modeOpen__16daLv9SwShutter_cFv();
-extern "C" extern void modeOpen__16daLv9SwShutter_cFv();
-extern "C" extern void init_modeClose__16daLv9SwShutter_cFv();
-extern "C" extern void modeClose__16daLv9SwShutter_cFv();
-extern "C" extern void Draw__16daLv9SwShutter_cFv();
-extern "C" extern void Delete__16daLv9SwShutter_cFv();
-extern "C" extern void daLv9SwShutter_Draw__FP16daLv9SwShutter_c();
-extern "C" extern void daLv9SwShutter_Execute__FP16daLv9SwShutter_c();
-extern "C" extern void daLv9SwShutter_Delete__FP16daLv9SwShutter_c();
-extern "C" extern void daLv9SwShutter_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__20daLv9SwShutter_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv9SwShutter_cpp();
+extern "C" void Execute__16daLv9SwShutter_cFPPA3_A4_f();
+void daLv9SwShutter_Draw(daLv9SwShutter_c*);
+void daLv9SwShutter_Execute(daLv9SwShutter_c*);
+void daLv9SwShutter_Delete(daLv9SwShutter_c*);
+void daLv9SwShutter_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv9SwShutter_cpp();
+
+extern "C" void __ct__20daLv9SwShutter_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__16daLv9SwShutter_cFv();
+extern "C" void CreateHeap__16daLv9SwShutter_cFv();
+extern "C" void create__16daLv9SwShutter_cFv();
+extern "C" void Execute__16daLv9SwShutter_cFPPA3_A4_f();
+extern "C" void moveShutter__16daLv9SwShutter_cFv();
+extern "C" void init_modeWait__16daLv9SwShutter_cFv();
+extern "C" void modeWait__16daLv9SwShutter_cFv();
+extern "C" void init_modeOpen__16daLv9SwShutter_cFv();
+extern "C" void modeOpen__16daLv9SwShutter_cFv();
+extern "C" void init_modeClose__16daLv9SwShutter_cFv();
+extern "C" void modeClose__16daLv9SwShutter_cFv();
+extern "C" void Draw__16daLv9SwShutter_cFv();
+extern "C" void Delete__16daLv9SwShutter_cFv();
+extern "C" void daLv9SwShutter_Draw__FP16daLv9SwShutter_c();
+extern "C" void daLv9SwShutter_Execute__FP16daLv9SwShutter_c();
+extern "C" void daLv9SwShutter_Delete__FP16daLv9SwShutter_c();
+extern "C" void daLv9SwShutter_Create__FP10fopAc_ac_c();
+extern "C" void __dt__20daLv9SwShutter_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv9SwShutter_cpp();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u32 lit_3628;
 SECTION_RODATA extern const u32 lit_3629;
@@ -60,8 +101,11 @@ SECTION_BSS extern u8 data_80C8D930[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -71,7 +115,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__20daLv9SwShutter_HIO_cFv) {
+asm daLv9SwShutter_HIO_c::daLv9SwShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/__ct__20daLv9SwShutter_HIO_cFv.s"
 }
@@ -82,7 +126,7 @@ ASM_FUNCTION(__ct__20daLv9SwShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -93,7 +137,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/setBaseMtx__16daLv9SwShutter_cFv.s"
 }
@@ -104,7 +148,7 @@ ASM_FUNCTION(setBaseMtx__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/CreateHeap__16daLv9SwShutter_cFv.s"
 }
@@ -115,7 +159,7 @@ ASM_FUNCTION(CreateHeap__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/create__16daLv9SwShutter_cFv.s"
 }
@@ -126,7 +170,7 @@ ASM_FUNCTION(create__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daLv9SwShutter_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daLv9SwShutter_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/Execute__16daLv9SwShutter_cFPPA3_A4_f.s"
 }
@@ -137,7 +181,7 @@ ASM_FUNCTION(Execute__16daLv9SwShutter_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveShutter__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::moveShutter() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/moveShutter__16daLv9SwShutter_cFv.s"
 }
@@ -148,7 +192,7 @@ ASM_FUNCTION(moveShutter__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/init_modeWait__16daLv9SwShutter_cFv.s"
 }
@@ -156,21 +200,16 @@ ASM_FUNCTION(init_modeWait__16daLv9SwShutter_cFv) {
 
 
 /* 80C8D2C8-80C8D2CC 0004+00 .text      modeWait__16daLv9SwShutter_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__16daLv9SwShutter_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/modeWait__16daLv9SwShutter_cFv.s"
+void daLv9SwShutter_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C8D2CC-80C8D2D8 000C+00 .text      init_modeOpen__16daLv9SwShutter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/init_modeOpen__16daLv9SwShutter_cFv.s"
 }
@@ -181,7 +220,7 @@ ASM_FUNCTION(init_modeOpen__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/modeOpen__16daLv9SwShutter_cFv.s"
 }
@@ -192,7 +231,7 @@ ASM_FUNCTION(modeOpen__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeClose__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::init_modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/init_modeClose__16daLv9SwShutter_cFv.s"
 }
@@ -203,7 +242,7 @@ ASM_FUNCTION(init_modeClose__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/modeClose__16daLv9SwShutter_cFv.s"
 }
@@ -214,7 +253,7 @@ ASM_FUNCTION(modeClose__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/Draw__16daLv9SwShutter_cFv.s"
 }
@@ -225,7 +264,7 @@ ASM_FUNCTION(Draw__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daLv9SwShutter_cFv) {
+asm void daLv9SwShutter_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/Delete__16daLv9SwShutter_cFv.s"
 }
@@ -236,7 +275,7 @@ ASM_FUNCTION(Delete__16daLv9SwShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv9SwShutter_Draw__FP16daLv9SwShutter_c) {
+asm void daLv9SwShutter_Draw(daLv9SwShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/daLv9SwShutter_Draw__FP16daLv9SwShutter_c.s"
 }
@@ -247,7 +286,7 @@ ASM_FUNCTION(daLv9SwShutter_Draw__FP16daLv9SwShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv9SwShutter_Execute__FP16daLv9SwShutter_c) {
+asm void daLv9SwShutter_Execute(daLv9SwShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/daLv9SwShutter_Execute__FP16daLv9SwShutter_c.s"
 }
@@ -258,7 +297,7 @@ ASM_FUNCTION(daLv9SwShutter_Execute__FP16daLv9SwShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv9SwShutter_Delete__FP16daLv9SwShutter_c) {
+asm void daLv9SwShutter_Delete(daLv9SwShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/daLv9SwShutter_Delete__FP16daLv9SwShutter_c.s"
 }
@@ -269,7 +308,7 @@ ASM_FUNCTION(daLv9SwShutter_Delete__FP16daLv9SwShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv9SwShutter_Create__FP10fopAc_ac_c) {
+asm void daLv9SwShutter_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/daLv9SwShutter_Create__FP10fopAc_ac_c.s"
 }
@@ -280,7 +319,7 @@ ASM_FUNCTION(daLv9SwShutter_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daLv9SwShutter_HIO_cFv) {
+asm daLv9SwShutter_HIO_c::~daLv9SwShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/__dt__20daLv9SwShutter_HIO_cFv.s"
 }
@@ -291,7 +330,7 @@ ASM_FUNCTION(__dt__20daLv9SwShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv9SwShutter_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv9SwShutter_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv9SwShutter/d_a_obj_lv9SwShutter/__sinit_d_a_obj_lv9SwShutter_cpp.s"
 }

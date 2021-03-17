@@ -6,60 +6,148 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct cXyz;
+struct do_class;
+
+struct daDo_HIO_c {
+	daDo_HIO_c();
+	~daDo_HIO_c();
+};
+
+struct do_class {
+	do_class();
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daDo_HIO_cFv();
-extern "C" extern void anm_init__FP8do_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daDo_Draw__FP8do_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daDo_other_bg_check__FP8do_classP10fopAc_ac_c();
-extern "C" extern void daDo_other_bg_check2__FP8do_classP4cXyz();
-extern "C" extern void s_w_sub__FPvPv();
-extern "C" extern void search_food__FP8do_class();
-extern "C" extern void food_check__FP8do_class();
-extern "C" extern void do_carry_check__FP8do_class();
-extern "C" extern void depth_check__FP8do_class4cXyzf();
-extern "C" extern void water_check__FP8do_class();
-extern "C" extern void dansa_check__FP8do_class4cXyzf();
-extern "C" extern void dansa_check2__FP8do_classf();
-extern "C" extern void move_dansa_check__FP8do_classf();
-extern "C" extern void area_check__FP8do_class();
-extern "C" extern void do_stay__FP8do_class();
-extern "C" extern void do_walk__FP8do_class();
-extern "C" extern void do_walk_run__FP8do_class();
-extern "C" extern void do_run__FP8do_class();
-extern "C" extern void do_run_walk__FP8do_class();
-extern "C" extern void do_wait_1__FP8do_class();
-extern "C" extern void do_wait_2__FP8do_class();
-extern "C" extern void do_sit__FP8do_class();
-extern "C" extern void hang_set__FP8do_class();
-extern "C" extern void do_hang__FP8do_class();
-extern "C" extern void do_food__FP8do_class();
-extern "C" extern void do_swim__FP8do_class();
-extern "C" extern void s_c_sub__FPvPv();
-extern "C" extern void do_help__FP8do_class();
-extern "C" extern void do_boat__FP8do_class();
-extern "C" extern void do_a_swim__FP8do_class();
-extern "C" extern void do_carry__FP8do_class();
-extern "C" extern void do_message__FP8do_class();
-extern "C" extern void action__FP8do_class();
-extern "C" extern void message__FP8do_class();
-extern "C" extern void daDo_Execute__FP8do_class();
-extern "C" extern void daDo_IsDelete__FP8do_class();
-extern "C" extern void daDo_Delete__FP8do_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daDo_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__8do_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10daDo_HIO_cFv();
-extern "C" extern void __sinit_d_a_do_cpp();
-extern "C" extern void func_8066EDC4();
-extern "C" extern void func_8066EDCC();
+void anm_init(do_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daDo_Draw(do_class*);
+void daDo_other_bg_check(do_class*, fopAc_ac_c*);
+void daDo_other_bg_check2(do_class*, cXyz*);
+void s_w_sub(void*, void*);
+void search_food(do_class*);
+void food_check(do_class*);
+void do_carry_check(do_class*);
+void depth_check(do_class*, cXyz, f32);
+void water_check(do_class*);
+void dansa_check(do_class*, cXyz, f32);
+void dansa_check2(do_class*, f32);
+void move_dansa_check(do_class*, f32);
+void area_check(do_class*);
+void do_stay(do_class*);
+void do_walk(do_class*);
+void do_walk_run(do_class*);
+void do_run(do_class*);
+void do_run_walk(do_class*);
+void do_wait_1(do_class*);
+void do_wait_2(do_class*);
+void do_sit(do_class*);
+void hang_set(do_class*);
+void do_hang(do_class*);
+void do_food(do_class*);
+void do_swim(do_class*);
+void s_c_sub(void*, void*);
+void do_help(do_class*);
+void do_boat(do_class*);
+void do_a_swim(do_class*);
+void do_carry(do_class*);
+void do_message(do_class*);
+void action(do_class*);
+void message(do_class*);
+void daDo_Execute(do_class*);
+bool daDo_IsDelete(do_class*);
+void daDo_Delete(do_class*);
+void useHeapInit(fopAc_ac_c*);
+void daDo_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_do_cpp();
+extern "C" void func_8066EDC4();
+extern "C" void func_8066EDCC();
+
+extern "C" void __ct__10daDo_HIO_cFv();
+extern "C" void anm_init__FP8do_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daDo_Draw__FP8do_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daDo_other_bg_check__FP8do_classP10fopAc_ac_c();
+extern "C" void daDo_other_bg_check2__FP8do_classP4cXyz();
+extern "C" void s_w_sub__FPvPv();
+extern "C" void search_food__FP8do_class();
+extern "C" void food_check__FP8do_class();
+extern "C" void do_carry_check__FP8do_class();
+extern "C" void depth_check__FP8do_class4cXyzf();
+extern "C" void water_check__FP8do_class();
+extern "C" void dansa_check__FP8do_class4cXyzf();
+extern "C" void dansa_check2__FP8do_classf();
+extern "C" void move_dansa_check__FP8do_classf();
+extern "C" void area_check__FP8do_class();
+extern "C" void do_stay__FP8do_class();
+extern "C" void do_walk__FP8do_class();
+extern "C" void do_walk_run__FP8do_class();
+extern "C" void do_run__FP8do_class();
+extern "C" void do_run_walk__FP8do_class();
+extern "C" void do_wait_1__FP8do_class();
+extern "C" void do_wait_2__FP8do_class();
+extern "C" void do_sit__FP8do_class();
+extern "C" void hang_set__FP8do_class();
+extern "C" void do_hang__FP8do_class();
+extern "C" void do_food__FP8do_class();
+extern "C" void do_swim__FP8do_class();
+extern "C" void s_c_sub__FPvPv();
+extern "C" void do_help__FP8do_class();
+extern "C" void do_boat__FP8do_class();
+extern "C" void do_a_swim__FP8do_class();
+extern "C" void do_carry__FP8do_class();
+extern "C" void do_message__FP8do_class();
+extern "C" void action__FP8do_class();
+extern "C" void message__FP8do_class();
+extern "C" void daDo_Execute__FP8do_class();
+extern "C" bool daDo_IsDelete__FP8do_class();
+extern "C" void daDo_Delete__FP8do_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daDo_Create__FP10fopAc_ac_c();
+extern "C" void __ct__8do_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10daDo_HIO_cFv();
+extern "C" void __sinit_d_a_do_cpp();
+extern "C" void func_8066EDC4();
+extern "C" void func_8066EDCC();
 SECTION_RODATA extern const u32 lit_3662;
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_RODATA extern const u32 lit_3664;
@@ -238,8 +326,11 @@ SECTION_BSS extern u8 data_8066F38C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -249,7 +340,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daDo_HIO_cFv) {
+asm daDo_HIO_c::daDo_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__ct__10daDo_HIO_cFv.s"
 }
@@ -260,7 +351,7 @@ ASM_FUNCTION(__ct__10daDo_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP8do_classifUcf) {
+asm void anm_init(do_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/anm_init__FP8do_classifUcf.s"
 }
@@ -271,7 +362,7 @@ ASM_FUNCTION(anm_init__FP8do_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/nodeCallBack__FP8J3DJointi.s"
 }
@@ -282,7 +373,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_Draw__FP8do_class) {
+asm void daDo_Draw(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_Draw__FP8do_class.s"
 }
@@ -293,7 +384,7 @@ ASM_FUNCTION(daDo_Draw__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__4cXyzFv.s"
 }
@@ -304,7 +395,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_other_bg_check__FP8do_classP10fopAc_ac_c) {
+asm void daDo_other_bg_check(do_class* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_other_bg_check__FP8do_classP10fopAc_ac_c.s"
 }
@@ -315,7 +406,7 @@ ASM_FUNCTION(daDo_other_bg_check__FP8do_classP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_other_bg_check2__FP8do_classP4cXyz) {
+asm void daDo_other_bg_check2(do_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_other_bg_check2__FP8do_classP4cXyz.s"
 }
@@ -326,7 +417,7 @@ ASM_FUNCTION(daDo_other_bg_check2__FP8do_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_w_sub__FPvPv) {
+asm void s_w_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/s_w_sub__FPvPv.s"
 }
@@ -337,7 +428,7 @@ ASM_FUNCTION(s_w_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_food__FP8do_class) {
+asm void search_food(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/search_food__FP8do_class.s"
 }
@@ -348,7 +439,7 @@ ASM_FUNCTION(search_food__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(food_check__FP8do_class) {
+asm void food_check(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/food_check__FP8do_class.s"
 }
@@ -359,7 +450,7 @@ ASM_FUNCTION(food_check__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_carry_check__FP8do_class) {
+asm void do_carry_check(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_carry_check__FP8do_class.s"
 }
@@ -370,7 +461,7 @@ ASM_FUNCTION(do_carry_check__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(depth_check__FP8do_class4cXyzf) {
+asm void depth_check(do_class* field_0, cXyz field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/depth_check__FP8do_class4cXyzf.s"
 }
@@ -381,7 +472,7 @@ ASM_FUNCTION(depth_check__FP8do_class4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP8do_class) {
+asm void water_check(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/water_check__FP8do_class.s"
 }
@@ -392,7 +483,7 @@ ASM_FUNCTION(water_check__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dansa_check__FP8do_class4cXyzf) {
+asm void dansa_check(do_class* field_0, cXyz field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/dansa_check__FP8do_class4cXyzf.s"
 }
@@ -403,7 +494,7 @@ ASM_FUNCTION(dansa_check__FP8do_class4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dansa_check2__FP8do_classf) {
+asm void dansa_check2(do_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/dansa_check2__FP8do_classf.s"
 }
@@ -414,7 +505,7 @@ ASM_FUNCTION(dansa_check2__FP8do_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move_dansa_check__FP8do_classf) {
+asm void move_dansa_check(do_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/move_dansa_check__FP8do_classf.s"
 }
@@ -425,7 +516,7 @@ ASM_FUNCTION(move_dansa_check__FP8do_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(area_check__FP8do_class) {
+asm void area_check(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/area_check__FP8do_class.s"
 }
@@ -436,7 +527,7 @@ ASM_FUNCTION(area_check__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_stay__FP8do_class) {
+asm void do_stay(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_stay__FP8do_class.s"
 }
@@ -447,7 +538,7 @@ ASM_FUNCTION(do_stay__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_walk__FP8do_class) {
+asm void do_walk(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_walk__FP8do_class.s"
 }
@@ -458,7 +549,7 @@ ASM_FUNCTION(do_walk__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_walk_run__FP8do_class) {
+asm void do_walk_run(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_walk_run__FP8do_class.s"
 }
@@ -469,7 +560,7 @@ ASM_FUNCTION(do_walk_run__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_run__FP8do_class) {
+asm void do_run(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_run__FP8do_class.s"
 }
@@ -480,7 +571,7 @@ ASM_FUNCTION(do_run__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_run_walk__FP8do_class) {
+asm void do_run_walk(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_run_walk__FP8do_class.s"
 }
@@ -491,7 +582,7 @@ ASM_FUNCTION(do_run_walk__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_wait_1__FP8do_class) {
+asm void do_wait_1(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_wait_1__FP8do_class.s"
 }
@@ -502,7 +593,7 @@ ASM_FUNCTION(do_wait_1__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_wait_2__FP8do_class) {
+asm void do_wait_2(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_wait_2__FP8do_class.s"
 }
@@ -513,7 +604,7 @@ ASM_FUNCTION(do_wait_2__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_sit__FP8do_class) {
+asm void do_sit(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_sit__FP8do_class.s"
 }
@@ -524,7 +615,7 @@ ASM_FUNCTION(do_sit__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hang_set__FP8do_class) {
+asm void hang_set(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/hang_set__FP8do_class.s"
 }
@@ -535,7 +626,7 @@ ASM_FUNCTION(hang_set__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_hang__FP8do_class) {
+asm void do_hang(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_hang__FP8do_class.s"
 }
@@ -546,7 +637,7 @@ ASM_FUNCTION(do_hang__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_food__FP8do_class) {
+asm void do_food(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_food__FP8do_class.s"
 }
@@ -557,7 +648,7 @@ ASM_FUNCTION(do_food__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_swim__FP8do_class) {
+asm void do_swim(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_swim__FP8do_class.s"
 }
@@ -568,7 +659,7 @@ ASM_FUNCTION(do_swim__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_c_sub__FPvPv) {
+asm void s_c_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/s_c_sub__FPvPv.s"
 }
@@ -579,7 +670,7 @@ ASM_FUNCTION(s_c_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_help__FP8do_class) {
+asm void do_help(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_help__FP8do_class.s"
 }
@@ -590,7 +681,7 @@ ASM_FUNCTION(do_help__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_boat__FP8do_class) {
+asm void do_boat(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_boat__FP8do_class.s"
 }
@@ -601,7 +692,7 @@ ASM_FUNCTION(do_boat__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_a_swim__FP8do_class) {
+asm void do_a_swim(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_a_swim__FP8do_class.s"
 }
@@ -612,7 +703,7 @@ ASM_FUNCTION(do_a_swim__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_carry__FP8do_class) {
+asm void do_carry(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_carry__FP8do_class.s"
 }
@@ -623,7 +714,7 @@ ASM_FUNCTION(do_carry__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_message__FP8do_class) {
+asm void do_message(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/do_message__FP8do_class.s"
 }
@@ -634,7 +725,7 @@ ASM_FUNCTION(do_message__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP8do_class) {
+asm void action(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/action__FP8do_class.s"
 }
@@ -645,7 +736,7 @@ ASM_FUNCTION(action__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP8do_class) {
+asm void message(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/message__FP8do_class.s"
 }
@@ -656,7 +747,7 @@ ASM_FUNCTION(message__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_Execute__FP8do_class) {
+asm void daDo_Execute(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_Execute__FP8do_class.s"
 }
@@ -664,21 +755,16 @@ ASM_FUNCTION(daDo_Execute__FP8do_class) {
 
 
 /* 8066E494-8066E49C 0008+00 .text      daDo_IsDelete__FP8do_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDo_IsDelete__FP8do_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_do/d_a_do/daDo_IsDelete__FP8do_class.s"
+bool daDo_IsDelete(do_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8066E49C-8066E504 0068+00 .text      daDo_Delete__FP8do_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_Delete__FP8do_class) {
+asm void daDo_Delete(do_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_Delete__FP8do_class.s"
 }
@@ -689,7 +775,7 @@ ASM_FUNCTION(daDo_Delete__FP8do_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -700,7 +786,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__12J3DFrameCtrlFv.s"
 }
@@ -711,7 +797,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDo_Create__FP10fopAc_ac_c) {
+asm void daDo_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/daDo_Create__FP10fopAc_ac_c.s"
 }
@@ -722,7 +808,7 @@ ASM_FUNCTION(daDo_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8do_classFv) {
+asm do_class::do_class() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__ct__8do_classFv.s"
 }
@@ -733,7 +819,7 @@ ASM_FUNCTION(__ct__8do_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__8cM3dGSphFv.s"
 }
@@ -744,7 +830,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__8cM3dGAabFv.s"
 }
@@ -755,7 +841,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -766,7 +852,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daDo_HIO_cFv) {
+asm daDo_HIO_c::~daDo_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__dt__10daDo_HIO_cFv.s"
 }
@@ -777,7 +863,7 @@ ASM_FUNCTION(__dt__10daDo_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_do_cpp) {
+extern "C" asm void __sinit_d_a_do_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/__sinit_d_a_do_cpp.s"
 }
@@ -788,7 +874,7 @@ ASM_FUNCTION(__sinit_d_a_do_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8066EDC4) {
+extern "C" asm void func_8066EDC4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/func_8066EDC4.s"
 }
@@ -799,7 +885,7 @@ ASM_FUNCTION(func_8066EDC4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8066EDCC) {
+extern "C" asm void func_8066EDCC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_do/d_a_do/func_8066EDCC.s"
 }

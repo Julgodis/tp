@@ -9,10 +9,15 @@
 // Forward References:
 // 
 
-extern "C" extern void GDInitGDLObj();
-extern "C" extern void GDFlushCurrToMem();
-extern "C" extern void GDPadCurr32();
-extern "C" extern void GDOverflowed();
+extern "C" void GDInitGDLObj();
+extern "C" void GDFlushCurrToMem();
+extern "C" void GDPadCurr32();
+extern "C" void GDOverflowed();
+
+extern "C" void GDInitGDLObj();
+extern "C" void GDFlushCurrToMem();
+extern "C" void GDPadCurr32();
+extern "C" void GDOverflowed();
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 SECTION_SBSS extern u8 overflowcb[4];
 
@@ -20,17 +25,19 @@ SECTION_SBSS extern u8 overflowcb[4];
 // External References:
 // 
 
-extern "C" extern void DCFlushRange();
+extern "C" void DCFlushRange();
+
+extern "C" void DCFlushRange();
 
 // 
 // Declarations:
 // 
 
-/* 80360F98-80360FB0 0018+00 .text      GDInitGDLObj                                                 */
+/* 80360F98-80360FB0 0018+00 rc=6 efc=6 .text      GDInitGDLObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDInitGDLObj) {
+extern "C" asm void GDInitGDLObj() {
 	nofralloc
 #include "asm/dolphin/gd/GDBase/GDInitGDLObj.s"
 }
@@ -38,25 +45,25 @@ ASM_FUNCTION(GDInitGDLObj) {
 
 
 /* ############################################################################################## */
-/* 80451980-80451984 0004+00 .sbss      __GDCurrentDL                                                */
+/* 80451980-80451984 0004+00 rc=102 efc=100 .sbss      __GDCurrentDL                                                */
 u8 __GDCurrentDL[4];
 
-/* 80360FB0-80360FDC 002C+00 .text      GDFlushCurrToMem                                             */
+/* 80360FB0-80360FDC 002C+00 rc=2 efc=2 .text      GDFlushCurrToMem                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDFlushCurrToMem) {
+extern "C" asm void GDFlushCurrToMem() {
 	nofralloc
 #include "asm/dolphin/gd/GDBase/GDFlushCurrToMem.s"
 }
 #pragma pop
 
 
-/* 80360FDC-803610D4 00F8+00 .text      GDPadCurr32                                                  */
+/* 80360FDC-803610D4 00F8+00 rc=2 efc=2 .text      GDPadCurr32                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDPadCurr32) {
+extern "C" asm void GDPadCurr32() {
 	nofralloc
 #include "asm/dolphin/gd/GDBase/GDPadCurr32.s"
 }
@@ -64,18 +71,17 @@ ASM_FUNCTION(GDPadCurr32) {
 
 
 /* ############################################################################################## */
-/* 80451984-80451988 0004+00 .sbss      overflowcb                                                   */
+/* 80451984-80451988 0004+00 rc=1 efc=0 .sbss      overflowcb                                                   */
 u8 overflowcb[4];
 
-/* 803610D4-80361104 0030+00 .text      GDOverflowed                                                 */
+/* 803610D4-80361104 0030+00 rc=41 efc=41 .text      GDOverflowed                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDOverflowed) {
+extern "C" asm void GDOverflowed() {
 	nofralloc
 #include "asm/dolphin/gd/GDBase/GDOverflowed.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

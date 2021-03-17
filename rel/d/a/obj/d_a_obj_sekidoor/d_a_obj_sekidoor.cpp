@@ -6,27 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObj_SekiDoor_c {
+	void create();
+	void CreateHeap();
+	void Create();
+	void Delete();
+	void Draw();
+	void evtSkip();
+	void setPrtcls();
+	void initBaseMtx();
+	void setBaseMtx();
+};
+
+struct daObj_SekiDoor_Param_c {
+	~daObj_SekiDoor_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__16daObj_SekiDoor_cFv();
-extern "C" extern void CreateHeap__16daObj_SekiDoor_cFv();
-extern "C" extern void Create__16daObj_SekiDoor_cFv();
-extern "C" extern void Delete__16daObj_SekiDoor_cFv();
-extern "C" extern void Execute__16daObj_SekiDoor_cFPPA3_A4_f();
-extern "C" extern void dComIfGp_event_runCheck__Fv();
-extern "C" extern void Draw__16daObj_SekiDoor_cFv();
-extern "C" extern void evtSkip__16daObj_SekiDoor_cFv();
-extern "C" extern void setPrtcls__16daObj_SekiDoor_cFv();
-extern "C" extern void initBaseMtx__16daObj_SekiDoor_cFv();
-extern "C" extern void setBaseMtx__16daObj_SekiDoor_cFv();
-extern "C" extern void daObj_SekiDoor_Create__FPv();
-extern "C" extern void daObj_SekiDoor_Delete__FPv();
-extern "C" extern void daObj_SekiDoor_Execute__FPv();
-extern "C" extern void daObj_SekiDoor_Draw__FPv();
-extern "C" extern void daObj_SekiDoor_IsDelete__FPv();
-extern "C" extern void __sinit_d_a_obj_sekidoor_cpp();
-extern "C" extern void __dt__22daObj_SekiDoor_Param_cFv();
+extern "C" void Execute__16daObj_SekiDoor_cFPPA3_A4_f();
+void dComIfGp_event_runCheck();
+void daObj_SekiDoor_Create(void*);
+void daObj_SekiDoor_Delete(void*);
+void daObj_SekiDoor_Execute(void*);
+void daObj_SekiDoor_Draw(void*);
+bool daObj_SekiDoor_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_sekidoor_cpp();
+
+extern "C" void create__16daObj_SekiDoor_cFv();
+extern "C" void CreateHeap__16daObj_SekiDoor_cFv();
+extern "C" void Create__16daObj_SekiDoor_cFv();
+extern "C" void Delete__16daObj_SekiDoor_cFv();
+extern "C" void Execute__16daObj_SekiDoor_cFPPA3_A4_f();
+extern "C" void dComIfGp_event_runCheck__Fv();
+extern "C" void Draw__16daObj_SekiDoor_cFv();
+extern "C" void evtSkip__16daObj_SekiDoor_cFv();
+extern "C" void setPrtcls__16daObj_SekiDoor_cFv();
+extern "C" void initBaseMtx__16daObj_SekiDoor_cFv();
+extern "C" void setBaseMtx__16daObj_SekiDoor_cFv();
+extern "C" void daObj_SekiDoor_Create__FPv();
+extern "C" void daObj_SekiDoor_Delete__FPv();
+extern "C" void daObj_SekiDoor_Execute__FPv();
+extern "C" void daObj_SekiDoor_Draw__FPv();
+extern "C" bool daObj_SekiDoor_IsDelete__FPv();
+extern "C" void __sinit_d_a_obj_sekidoor_cpp();
+extern "C" void __dt__22daObj_SekiDoor_Param_cFv();
 SECTION_RODATA extern const u8 m__22daObj_SekiDoor_Param_c[1 + 3 /* padding */];
 SECTION_RODATA extern const u32 lit_3956;
 SECTION_RODATA extern const u32 lit_3957;
@@ -53,8 +82,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -64,7 +96,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/create__16daObj_SekiDoor_cFv.s"
 }
@@ -75,7 +107,7 @@ ASM_FUNCTION(create__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/CreateHeap__16daObj_SekiDoor_cFv.s"
 }
@@ -86,7 +118,7 @@ ASM_FUNCTION(CreateHeap__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/func_80CCD1F0.s"
 }
@@ -97,7 +129,7 @@ ASM_FUNCTION(Create__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/Delete__16daObj_SekiDoor_cFv.s"
 }
@@ -108,7 +140,7 @@ ASM_FUNCTION(Delete__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObj_SekiDoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObj_SekiDoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/Execute__16daObj_SekiDoor_cFPPA3_A4_f.s"
 }
@@ -119,7 +151,7 @@ ASM_FUNCTION(Execute__16daObj_SekiDoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
+asm void dComIfGp_event_runCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/dComIfGp_event_runCheck__Fv.s"
 }
@@ -130,7 +162,7 @@ ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/Draw__16daObj_SekiDoor_cFv.s"
 }
@@ -141,7 +173,7 @@ ASM_FUNCTION(Draw__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtSkip__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::evtSkip() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/evtSkip__16daObj_SekiDoor_cFv.s"
 }
@@ -152,7 +184,7 @@ ASM_FUNCTION(evtSkip__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPrtcls__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::setPrtcls() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/setPrtcls__16daObj_SekiDoor_cFv.s"
 }
@@ -163,7 +195,7 @@ ASM_FUNCTION(setPrtcls__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/initBaseMtx__16daObj_SekiDoor_cFv.s"
 }
@@ -174,7 +206,7 @@ ASM_FUNCTION(initBaseMtx__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObj_SekiDoor_cFv) {
+asm void daObj_SekiDoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/setBaseMtx__16daObj_SekiDoor_cFv.s"
 }
@@ -185,7 +217,7 @@ ASM_FUNCTION(setBaseMtx__16daObj_SekiDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SekiDoor_Create__FPv) {
+asm void daObj_SekiDoor_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/daObj_SekiDoor_Create__FPv.s"
 }
@@ -196,7 +228,7 @@ ASM_FUNCTION(daObj_SekiDoor_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SekiDoor_Delete__FPv) {
+asm void daObj_SekiDoor_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/daObj_SekiDoor_Delete__FPv.s"
 }
@@ -207,7 +239,7 @@ ASM_FUNCTION(daObj_SekiDoor_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SekiDoor_Execute__FPv) {
+asm void daObj_SekiDoor_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/daObj_SekiDoor_Execute__FPv.s"
 }
@@ -218,7 +250,7 @@ ASM_FUNCTION(daObj_SekiDoor_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SekiDoor_Draw__FPv) {
+asm void daObj_SekiDoor_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/daObj_SekiDoor_Draw__FPv.s"
 }
@@ -226,21 +258,16 @@ ASM_FUNCTION(daObj_SekiDoor_Draw__FPv) {
 
 
 /* 80CCD964-80CCD96C 0008+00 .text      daObj_SekiDoor_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_SekiDoor_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/daObj_SekiDoor_IsDelete__FPv.s"
+bool daObj_SekiDoor_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CCD96C-80CCD9AC 0040+00 .text      __sinit_d_a_obj_sekidoor_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_sekidoor_cpp) {
+extern "C" asm void __sinit_d_a_obj_sekidoor_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/__sinit_d_a_obj_sekidoor_cpp.s"
 }
@@ -251,7 +278,7 @@ ASM_FUNCTION(__sinit_d_a_obj_sekidoor_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daObj_SekiDoor_Param_cFv) {
+asm daObj_SekiDoor_Param_c::~daObj_SekiDoor_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekidoor/d_a_obj_sekidoor/__dt__22daObj_SekiDoor_Param_cFv.s"
 }

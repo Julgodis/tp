@@ -6,30 +6,106 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build node_create_request (node_create_request) False/False
+/* top-level dependencies (begin node_create_request) */
+/* top-level dependencies (end node_create_request) */
+struct node_create_request {
+};
+
+// build process_node_class (process_node_class) False/False
+/* top-level dependencies (begin process_node_class) */
+/* top-level dependencies (end process_node_class) */
+struct process_node_class {
+};
+
+// build node_create_request_method_class (node_create_request_method_class) False/False
+/* top-level dependencies (begin node_create_request_method_class) */
+/* top-level dependencies (end node_create_request_method_class) */
+struct node_create_request_method_class {
+};
+
+// build process_method_tag_class (process_method_tag_class) False/False
+/* top-level dependencies (begin process_method_tag_class) */
+/* top-level dependencies (end process_method_tag_class) */
+struct process_method_tag_class {
+};
+
+// build layer_class (layer_class) False/False
+/* top-level dependencies (begin layer_class) */
+/* top-level dependencies (end layer_class) */
+struct layer_class {
+};
+
+// build cMl (cMl) False/False
+/* top-level dependencies (begin cMl) */
+/* top-level dependencies (end cMl) */
+struct cMl {
+	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263260 */ void free(void*);
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build node_list_class (node_list_class) False/False
+/* top-level dependencies (begin node_list_class) */
+/* top-level dependencies (end node_list_class) */
+struct node_list_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcNdRq_RequestQTo__FP19node_create_request();
-extern "C" extern void fpcNdRq_ToRequestQ__FP19node_create_request();
-extern "C" extern void fpcNdRq_phase_IsCreated__FP19node_create_request();
-extern "C" extern void fpcNdRq_phase_Create__FP19node_create_request();
-extern "C" extern void fpcNdRq_phase_IsDeleteTiming__FP19node_create_request();
-extern "C" extern void fpcNdRq_phase_IsDeleted__FP19node_create_request();
-extern "C" extern void fpcNdRq_phase_Delete__FP19node_create_request();
-extern "C" extern void fpcNdRq_DoPhase__FP19node_create_request();
-extern "C" extern void fpcNdRq_Execute__FP19node_create_request();
-extern "C" extern void fpcNdRq_Delete__FP19node_create_request();
-extern "C" extern void fpcNdRq_Cancel__FP19node_create_request();
-extern "C" extern void fpcNdRq_Handler__Fv();
-extern "C" extern void fpcNdRq_IsPossibleTarget__FP18process_node_class();
-extern "C" extern void fpcNdRq_IsIng__FP18process_node_class();
-extern "C" extern void fpcNdRq_Create__FUl();
-extern "C" extern void fpcNdRq_ChangeNode__FUlP18process_node_classsPv();
-extern "C" extern void fpcNdRq_DeleteNode__FUlP18process_node_class();
-extern "C" extern void fpcNdRq_CreateNode__FUlsPv();
-extern "C" extern void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
-extern "C" extern void fpcNdRq_ReChangeNode__FUisPv();
-extern "C" extern void fpcNdRq_ReRequest__FUisPv();
+static void fpcNdRq_RequestQTo(node_create_request*);
+static void fpcNdRq_ToRequestQ(node_create_request*);
+static void fpcNdRq_phase_IsCreated(node_create_request*);
+static void fpcNdRq_phase_Create(node_create_request*);
+static s32 fpcNdRq_phase_IsDeleteTiming(node_create_request*);
+static void fpcNdRq_phase_IsDeleted(node_create_request*);
+static void fpcNdRq_phase_Delete(node_create_request*);
+static void fpcNdRq_DoPhase(node_create_request*);
+void fpcNdRq_Execute(node_create_request*);
+void fpcNdRq_Delete(node_create_request*);
+static void fpcNdRq_Cancel(node_create_request*);
+void fpcNdRq_Handler();
+static void fpcNdRq_IsPossibleTarget(process_node_class*);
+static void fpcNdRq_IsIng(process_node_class*);
+static void fpcNdRq_Create(u32);
+static void fpcNdRq_ChangeNode(u32, process_node_class*, s16, void*);
+static void fpcNdRq_DeleteNode(u32, process_node_class*);
+static void fpcNdRq_CreateNode(u32, s16, void*);
+void fpcNdRq_Request(u32, s32, process_node_class*, s16, void*, node_create_request_method_class*);
+static void fpcNdRq_ReChangeNode(s32, s16, void*);
+void fpcNdRq_ReRequest(s32, s16, void*);
+
+extern "C" static void fpcNdRq_RequestQTo__FP19node_create_request();
+extern "C" static void fpcNdRq_ToRequestQ__FP19node_create_request();
+extern "C" static void fpcNdRq_phase_IsCreated__FP19node_create_request();
+extern "C" static void fpcNdRq_phase_Create__FP19node_create_request();
+extern "C" static s32 fpcNdRq_phase_IsDeleteTiming__FP19node_create_request();
+extern "C" static void fpcNdRq_phase_IsDeleted__FP19node_create_request();
+extern "C" static void fpcNdRq_phase_Delete__FP19node_create_request();
+extern "C" static void fpcNdRq_DoPhase__FP19node_create_request();
+extern "C" void fpcNdRq_Execute__FP19node_create_request();
+extern "C" void fpcNdRq_Delete__FP19node_create_request();
+extern "C" static void fpcNdRq_Cancel__FP19node_create_request();
+extern "C" void fpcNdRq_Handler__Fv();
+extern "C" static void fpcNdRq_IsPossibleTarget__FP18process_node_class();
+extern "C" static void fpcNdRq_IsIng__FP18process_node_class();
+extern "C" static void fpcNdRq_Create__FUl();
+extern "C" static void fpcNdRq_ChangeNode__FUlP18process_node_classsPv();
+extern "C" static void fpcNdRq_DeleteNode__FUlP18process_node_class();
+extern "C" static void fpcNdRq_CreateNode__FUlsPv();
+extern "C" void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
+extern "C" static void fpcNdRq_ReChangeNode__FUisPv();
+extern "C" void fpcNdRq_ReRequest__FUisPv();
 SECTION_DATA extern u8 l_fpcNdRq_Queue[12];
 SECTION_DATA extern u8 data_803A3A44[100];
 SECTION_DATA extern void*data_803A3AA8[6];
@@ -42,39 +118,61 @@ SECTION_SBSS extern u8 data_80450D4C[4];
 // External References:
 // 
 
-extern "C" extern void fpcCtRq_IsCreatingByID__FUi();
-extern "C" extern void fpcDt_IsComplete__Fv();
-extern "C" extern void fpcDt_Delete__FPv();
-extern "C" extern void fpcEx_IsExist__FUi();
-extern "C" extern void fpcLy_CancelQTo__FP24process_method_tag_class();
-extern "C" extern void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
-extern "C" extern void fpcLy_CreatingMesg__FP11layer_class();
-extern "C" extern void fpcLy_CreatedMesg__FP11layer_class();
-extern "C" extern void fpcLy_CurrentLayer__Fv();
-extern "C" extern void fpcMtd_Method__FPFPv_iPv();
-extern "C" extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" extern void memalignB__3cMlFiUl();
-extern "C" extern void free__3cMlFPv();
-extern "C" extern void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void cTg_SingleCut__FP16create_tag_class();
-extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
-extern "C" extern void sBs_ClearArea__FPvUl();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void fpcCtRq_IsCreatingByID(s32);
+void fpcDt_IsComplete();
+void fpcDt_Delete(void*);
+void fpcEx_IsExist(s32);
+void fpcLy_CancelQTo(process_method_tag_class*);
+void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
+void fpcLy_CreatingMesg(layer_class*);
+void fpcLy_CreatedMesg(layer_class*);
+void fpcLy_CurrentLayer();
+extern "C" void fpcMtd_Method__FPFPv_iPv();
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+void cTg_SingleCut(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
+void sBs_ClearArea(void*, u32);
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void fpcCtRq_IsCreatingByID__FUi();
+extern "C" void fpcDt_IsComplete__Fv();
+extern "C" void fpcDt_Delete__FPv();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
+extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
+extern "C" void fpcLy_CreatingMesg__FP11layer_class();
+extern "C" void fpcLy_CreatedMesg__FP11layer_class();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcMtd_Method__FPFPv_iPv();
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void free__3cMlFPv();
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void cTg_SingleCut__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void sBs_ClearArea__FPvUl();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 800227C4-80022804 0040+00 .text      fpcNdRq_RequestQTo__FP19node_create_request                  */
+/* 800227C4-80022804 0040+00 rc=1 efc=0 .text      fpcNdRq_RequestQTo__FP19node_create_request                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_RequestQTo__FP19node_create_request) {
+asm static void fpcNdRq_RequestQTo(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_RequestQTo__FP19node_create_request.s"
 }
@@ -82,148 +180,143 @@ ASM_FUNCTION(fpcNdRq_RequestQTo__FP19node_create_request) {
 
 
 /* ############################################################################################## */
-/* 803A3A38-803A3A44 000C+00 .data      l_fpcNdRq_Queue                                              */
+/* 803A3A38-803A3A44 000C+00 rc=5 efc=0 .data      l_fpcNdRq_Queue                                              */
 u8 l_fpcNdRq_Queue[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80022804-80022850 004C+00 .text      fpcNdRq_ToRequestQ__FP19node_create_request                  */
+/* 80022804-80022850 004C+00 rc=1 efc=0 .text      fpcNdRq_ToRequestQ__FP19node_create_request                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_ToRequestQ__FP19node_create_request) {
+asm static void fpcNdRq_ToRequestQ(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ToRequestQ__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022850-800228A8 0058+00 .text      fpcNdRq_phase_IsCreated__FP19node_create_request             */
+/* 80022850-800228A8 0058+00 rc=2 efc=0 .text      fpcNdRq_phase_IsCreated__FP19node_create_request             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_phase_IsCreated__FP19node_create_request) {
+asm static void fpcNdRq_phase_IsCreated(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_phase_IsCreated__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 800228A8-80022904 005C+00 .text      fpcNdRq_phase_Create__FP19node_create_request                */
+/* 800228A8-80022904 005C+00 rc=2 efc=0 .text      fpcNdRq_phase_Create__FP19node_create_request                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_phase_Create__FP19node_create_request) {
+asm static void fpcNdRq_phase_Create(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_phase_Create__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022904-8002290C 0008+00 .text      fpcNdRq_phase_IsDeleteTiming__FP19node_create_request        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_phase_IsDeleteTiming__FP19node_create_request) {
-	nofralloc
-#include "asm/f_pc/f_pc_node_req/fpcNdRq_phase_IsDeleteTiming__FP19node_create_request.s"
+/* 80022904-8002290C 0008+00 rc=2 efc=0 .text      fpcNdRq_phase_IsDeleteTiming__FP19node_create_request        */
+static s32 fpcNdRq_phase_IsDeleteTiming(node_create_request* field_0) {
+	return 2;
 }
-#pragma pop
 
 
-/* 8002290C-8002293C 0030+00 .text      fpcNdRq_phase_IsDeleted__FP19node_create_request             */
+/* 8002290C-8002293C 0030+00 rc=2 efc=0 .text      fpcNdRq_phase_IsDeleted__FP19node_create_request             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_phase_IsDeleted__FP19node_create_request) {
+asm static void fpcNdRq_phase_IsDeleted(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_phase_IsDeleted__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 8002293C-80022990 0054+00 .text      fpcNdRq_phase_Delete__FP19node_create_request                */
+/* 8002293C-80022990 0054+00 rc=2 efc=0 .text      fpcNdRq_phase_Delete__FP19node_create_request                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_phase_Delete__FP19node_create_request) {
+asm static void fpcNdRq_phase_Delete(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_phase_Delete__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022990-800229D8 0048+00 .text      fpcNdRq_DoPhase__FP19node_create_request                     */
+/* 80022990-800229D8 0048+00 rc=1 efc=0 .text      fpcNdRq_DoPhase__FP19node_create_request                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_DoPhase__FP19node_create_request) {
+asm static void fpcNdRq_DoPhase(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_DoPhase__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 800229D8-80022A3C 0064+00 .text      fpcNdRq_Execute__FP19node_create_request                     */
+/* 800229D8-80022A3C 0064+00 rc=1 efc=1 .text      fpcNdRq_Execute__FP19node_create_request                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Execute__FP19node_create_request) {
+asm void fpcNdRq_Execute(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Execute__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022A3C-80022AA4 0068+00 .text      fpcNdRq_Delete__FP19node_create_request                      */
+/* 80022A3C-80022AA4 0068+00 rc=3 efc=1 .text      fpcNdRq_Delete__FP19node_create_request                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Delete__FP19node_create_request) {
+asm void fpcNdRq_Delete(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Delete__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022AA4-80022AFC 0058+00 .text      fpcNdRq_Cancel__FP19node_create_request                      */
+/* 80022AA4-80022AFC 0058+00 rc=2 efc=0 .text      fpcNdRq_Cancel__FP19node_create_request                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Cancel__FP19node_create_request) {
+asm static void fpcNdRq_Cancel(node_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Cancel__FP19node_create_request.s"
 }
 #pragma pop
 
 
-/* 80022AFC-80022BE4 00E8+00 .text      fpcNdRq_Handler__Fv                                          */
+/* 80022AFC-80022BE4 00E8+00 rc=1 efc=1 .text      fpcNdRq_Handler__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Handler__Fv) {
+asm void fpcNdRq_Handler() {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Handler__Fv.s"
 }
 #pragma pop
 
 
-/* 80022BE4-80022C50 006C+00 .text      fpcNdRq_IsPossibleTarget__FP18process_node_class             */
+/* 80022BE4-80022C50 006C+00 rc=3 efc=0 .text      fpcNdRq_IsPossibleTarget__FP18process_node_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_IsPossibleTarget__FP18process_node_class) {
+asm static void fpcNdRq_IsPossibleTarget(process_node_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_IsPossibleTarget__FP18process_node_class.s"
 }
 #pragma pop
 
 
-/* 80022C50-80022C9C 004C+00 .text      fpcNdRq_IsIng__FP18process_node_class                        */
+/* 80022C50-80022C9C 004C+00 rc=2 efc=0 .text      fpcNdRq_IsIng__FP18process_node_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_IsIng__FP18process_node_class) {
+asm static void fpcNdRq_IsIng(process_node_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_IsIng__FP18process_node_class.s"
 }
@@ -231,7 +324,7 @@ ASM_FUNCTION(fpcNdRq_IsIng__FP18process_node_class) {
 
 
 /* ############################################################################################## */
-/* 803A3A44-803A3AA8 0064+00 .data      clear$2359                                                   */
+/* 803A3A44-803A3AA8 0064+00 rc=1 efc=0 .data      clear$2359                                                   */
 u8 data_803A3A44[100] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -242,17 +335,17 @@ u8 data_803A3A44[100] = {
 	0x7F, 0xFF, 0x00, 0x00,
 };
 
-/* 80450D48-80450D4C 0004+00 .sbss      request_id$2360                                              */
+/* 80450D48-80450D4C 0004+00 rc=1 efc=0 .sbss      request_id$2360                                              */
 u8 data_80450D48[4];
 
-/* 80450D4C-80450D50 0004+00 .sbss      None                                                         */
+/* 80450D4C-80450D50 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80450D4C[4];
 
-/* 80022C9C-80022E14 0178+00 .text      fpcNdRq_Create__FUl                                          */
+/* 80022C9C-80022E14 0178+00 rc=3 efc=0 .text      fpcNdRq_Create__FUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Create__FUl) {
+asm static void fpcNdRq_Create(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Create__FUl.s"
 }
@@ -260,7 +353,7 @@ ASM_FUNCTION(fpcNdRq_Create__FUl) {
 
 
 /* ############################################################################################## */
-/* 803A3AA8-803A3AC0 0018+00 .data      methods$2376                                                 */
+/* 803A3AA8-803A3AC0 0018+00 rc=1 efc=0 .data      methods$2376                                                 */
 void* data_803A3AA8[6] = {
 	(void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
 	(void*)fpcNdRq_phase_Delete__FP19node_create_request,
@@ -270,11 +363,11 @@ void* data_803A3AA8[6] = {
 	NULL,
 };
 
-/* 80022E14-80022EB0 009C+00 .text      fpcNdRq_ChangeNode__FUlP18process_node_classsPv              */
+/* 80022E14-80022EB0 009C+00 rc=1 efc=0 .text      fpcNdRq_ChangeNode__FUlP18process_node_classsPv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_ChangeNode__FUlP18process_node_classsPv) {
+asm static void fpcNdRq_ChangeNode(u32 field_0, process_node_class* field_1, s16 field_2, void* field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ChangeNode__FUlP18process_node_classsPv.s"
 }
@@ -282,7 +375,7 @@ ASM_FUNCTION(fpcNdRq_ChangeNode__FUlP18process_node_classsPv) {
 
 
 /* ############################################################################################## */
-/* 803A3AC0-803A3AD0 0010+00 .data      methods$2386                                                 */
+/* 803A3AC0-803A3AD0 0010+00 rc=1 efc=0 .data      methods$2386                                                 */
 void* data_803A3AC0[4] = {
 	(void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
 	(void*)fpcNdRq_phase_Delete__FP19node_create_request,
@@ -290,11 +383,11 @@ void* data_803A3AC0[4] = {
 	NULL,
 };
 
-/* 80022EB0-80022F3C 008C+00 .text      fpcNdRq_DeleteNode__FUlP18process_node_class                 */
+/* 80022EB0-80022F3C 008C+00 rc=1 efc=0 .text      fpcNdRq_DeleteNode__FUlP18process_node_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_DeleteNode__FUlP18process_node_class) {
+asm static void fpcNdRq_DeleteNode(u32 field_0, process_node_class* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_DeleteNode__FUlP18process_node_class.s"
 }
@@ -302,7 +395,7 @@ ASM_FUNCTION(fpcNdRq_DeleteNode__FUlP18process_node_class) {
 
 
 /* ############################################################################################## */
-/* 803A3AD0-803A3AE0 000C+04 .data      methods$2397                                                 */
+/* 803A3AD0-803A3AE0 000C+04 rc=1 efc=0 .data      methods$2397                                                 */
 void* data_803A3AD0[4] = {
 	(void*)fpcNdRq_phase_Create__FP19node_create_request,
 	(void*)fpcNdRq_phase_IsCreated__FP19node_create_request,
@@ -311,48 +404,47 @@ void* data_803A3AD0[4] = {
 	NULL,
 };
 
-/* 80022F3C-80022FE8 00AC+00 .text      fpcNdRq_CreateNode__FUlsPv                                   */
+/* 80022F3C-80022FE8 00AC+00 rc=1 efc=0 .text      fpcNdRq_CreateNode__FUlsPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_CreateNode__FUlsPv) {
+asm static void fpcNdRq_CreateNode(u32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_CreateNode__FUlsPv.s"
 }
 #pragma pop
 
 
-/* 80022FE8-80023098 00B0+00 .text      fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class */
+/* 80022FE8-80023098 00B0+00 rc=1 efc=1 .text      fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class) {
+asm void fpcNdRq_Request(u32 field_0, s32 field_1, process_node_class* field_2, s16 field_3, void* field_4, node_create_request_method_class* field_5) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class.s"
 }
 #pragma pop
 
 
-/* 80023098-80023110 0078+00 .text      fpcNdRq_ReChangeNode__FUisPv                                 */
+/* 80023098-80023110 0078+00 rc=1 efc=0 .text      fpcNdRq_ReChangeNode__FUisPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_ReChangeNode__FUisPv) {
+asm static void fpcNdRq_ReChangeNode(s32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ReChangeNode__FUisPv.s"
 }
 #pragma pop
 
 
-/* 80023110-80023130 0020+00 .text      fpcNdRq_ReRequest__FUisPv                                    */
+/* 80023110-80023130 0020+00 rc=1 efc=1 .text      fpcNdRq_ReRequest__FUisPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcNdRq_ReRequest__FUisPv) {
+asm void fpcNdRq_ReRequest(s32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ReRequest__FUisPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

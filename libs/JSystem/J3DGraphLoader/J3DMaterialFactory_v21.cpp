@@ -6,36 +6,129 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DMaterialFactory_v21 (J3DMaterialFactory_v21) False/False
+// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) False/False
+/* top-level dependencies (begin J3DMaterialBlock_v21) */
+/* top-level dependencies (end J3DMaterialBlock_v21) */
+struct J3DMaterialBlock_v21 {
+};
+
+// build J3DMaterial (J3DMaterial) False/False
+/* top-level dependencies (begin J3DMaterial) */
+/* top-level dependencies (end J3DMaterial) */
+struct J3DMaterial {
+	/* 803157A0 */ void createColorBlock(u32);
+	/* 803159A0 */ void createTexGenBlock(u32);
+	/* 80315B04 */ void createTevBlock(s32);
+	/* 80315E78 */ void createIndBlock(s32);
+	/* 80315F60 */ void createPEBlock(u32, u32);
+	/* 80316240 */ void initialize();
+};
+
+/* top-level dependencies (begin J3DMaterialFactory_v21) */
+// outer dependency: J3DMaterialBlock_v21
+// outer dependency: J3DMaterial
+/* top-level dependencies (end J3DMaterialFactory_v21) */
+struct J3DMaterialFactory_v21 {
+	// J3DMaterialBlock_v21
+	// J3DMaterial
+	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
+	/* 80332F84 */ void countUniqueMaterials();
+	/* 80332FA8 */ void countTexGens(s32) const;
+	/* 80332FE0 */ void countStages(s32) const;
+	/* 80333068 */ void create(J3DMaterial*, s32, u32) const;
+	/* 803337D8 */ void newMatColor(s32, s32) const;
+	/* 80333834 */ void newColorChanNum(s32) const;
+	/* 8033386C */ void newColorChan(s32, s32) const;
+	/* 80333A10 */ void newTexGenNum(s32) const;
+	/* 80333A48 */ void newTexCoord(s32, s32) const;
+	/* 80333AA8 */ void newTexMtx(s32, s32) const;
+	/* 80333B30 */ void newCullMode(s32) const;
+	/* 80333B70 */ void newTexNo(s32, s32) const;
+	/* 80333BB8 */ void newTevOrder(s32, s32) const;
+	/* 80333C04 */ void newTevColor(s32, s32) const;
+	/* 80333C74 */ void newTevKColor(s32, s32) const;
+	/* 80333CD0 */ void newTevStageNum(s32) const;
+	/* 80333D08 */ void newTevStage(s32, s32) const;
+	/* 80333D68 */ void newTevSwapModeTable(s32, s32) const;
+	/* 80333E04 */ void newFog(s32) const;
+	/* 80333EE0 */ void newAlphaComp(s32) const;
+	/* 80333F60 */ void newBlend(s32) const;
+	/* 80333FA4 */ void newZMode(s32) const;
+	/* 80334004 */ void newZCompLoc(s32) const;
+	/* 8033403C */ void newDither(s32) const;
+	/* 80334074 */ void newNBTScale(s32) const;
+};
+
+// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
+// build J3DMaterial (J3DMaterial) True/True
+// build J3DTevStage (J3DTevStage) False/False
+// build J3DTevStageInfo (J3DTevStageInfo) False/False
+/* top-level dependencies (begin J3DTevStageInfo) */
+/* top-level dependencies (end J3DTevStageInfo) */
+struct J3DTevStageInfo {
+};
+
+/* top-level dependencies (begin J3DTevStage) */
+// outer dependency: J3DTevStageInfo
+/* top-level dependencies (end J3DTevStage) */
+struct J3DTevStage {
+	// J3DTevStageInfo
+	/* 8000E230 */ J3DTevStage();
+	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
+};
+
+// build J3DTevStageInfo (J3DTevStageInfo) True/True
+// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
+/* top-level dependencies (begin J3DTexMtxInfo) */
+/* top-level dependencies (end J3DTexMtxInfo) */
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+};
+
+// build J3DFogInfo (J3DFogInfo) False/False
+/* top-level dependencies (begin J3DFogInfo) */
+/* top-level dependencies (end J3DFogInfo) */
+struct J3DFogInfo {
+	/* 80325800 */ void operator=(J3DFogInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21();
-extern "C" extern void countUniqueMaterials__22J3DMaterialFactory_v21Fv();
-extern "C" extern void countTexGens__22J3DMaterialFactory_v21CFi();
-extern "C" extern void countStages__22J3DMaterialFactory_v21CFi();
-extern "C" extern void create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl();
-extern "C" extern void newMatColor__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newColorChanNum__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newColorChan__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTexGenNum__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newTexCoord__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTexMtx__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newCullMode__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newTexNo__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTevOrder__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTevColor__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTevKColor__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTevStageNum__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newTevStage__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newTevSwapModeTable__22J3DMaterialFactory_v21CFii();
-extern "C" extern void newFog__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newAlphaComp__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newBlend__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newZMode__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newZCompLoc__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newDither__22J3DMaterialFactory_v21CFi();
-extern "C" extern void newNBTScale__22J3DMaterialFactory_v21CFi();
-extern "C" extern void func_80334118();
+extern "C" static void func_80334118();
+
+extern "C" void __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21();
+extern "C" void countUniqueMaterials__22J3DMaterialFactory_v21Fv();
+extern "C" void countTexGens__22J3DMaterialFactory_v21CFi();
+extern "C" void countStages__22J3DMaterialFactory_v21CFi();
+extern "C" void create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl();
+extern "C" void newMatColor__22J3DMaterialFactory_v21CFii();
+extern "C" void newColorChanNum__22J3DMaterialFactory_v21CFi();
+extern "C" void newColorChan__22J3DMaterialFactory_v21CFii();
+extern "C" void newTexGenNum__22J3DMaterialFactory_v21CFi();
+extern "C" void newTexCoord__22J3DMaterialFactory_v21CFii();
+extern "C" void newTexMtx__22J3DMaterialFactory_v21CFii();
+extern "C" void newCullMode__22J3DMaterialFactory_v21CFi();
+extern "C" void newTexNo__22J3DMaterialFactory_v21CFii();
+extern "C" void newTevOrder__22J3DMaterialFactory_v21CFii();
+extern "C" void newTevColor__22J3DMaterialFactory_v21CFii();
+extern "C" void newTevKColor__22J3DMaterialFactory_v21CFii();
+extern "C" void newTevStageNum__22J3DMaterialFactory_v21CFi();
+extern "C" void newTevStage__22J3DMaterialFactory_v21CFii();
+extern "C" void newTevSwapModeTable__22J3DMaterialFactory_v21CFii();
+extern "C" void newFog__22J3DMaterialFactory_v21CFi();
+extern "C" void newAlphaComp__22J3DMaterialFactory_v21CFi();
+extern "C" void newBlend__22J3DMaterialFactory_v21CFi();
+extern "C" void newZMode__22J3DMaterialFactory_v21CFi();
+extern "C" void newZCompLoc__22J3DMaterialFactory_v21CFi();
+extern "C" void newDither__22J3DMaterialFactory_v21CFi();
+extern "C" void newNBTScale__22J3DMaterialFactory_v21CFi();
+extern "C" static void func_80334118();
 SECTION_SDATA2 extern u32 lit_1130;
 SECTION_SDATA2 extern u32 lit_1317;
 SECTION_SBSS2 extern u8 lit_1299[4];
@@ -45,39 +138,63 @@ SECTION_SBSS2 extern u8 data_80456BC4[4];
 // External References:
 // 
 
-extern "C" extern void __ct__11J3DTevStageFv();
-extern "C" extern void __ct__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" extern void __nw__FUl();
-extern "C" extern void func_802F41E8();
-extern "C" extern void func_802F4260();
-extern "C" extern void func_802F4278();
-extern "C" extern void func_802F4290();
-extern "C" extern void func_802F42C0();
-extern "C" extern void createColorBlock__11J3DMaterialFUl();
-extern "C" extern void createTexGenBlock__11J3DMaterialFUl();
-extern "C" extern void createTevBlock__11J3DMaterialFi();
-extern "C" extern void createIndBlock__11J3DMaterialFi();
-extern "C" extern void createPEBlock__11J3DMaterialFUlUl();
-extern "C" extern void initialize__11J3DMaterialFv();
-extern "C" extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" extern void __as__10J3DFogInfoFRC10J3DFogInfo();
-extern "C" extern void func_80332C24();
-extern "C" extern void func_80332C3C();
-extern "C" extern void func_80332C54();
-extern "C" extern void func_80332C6C();
-extern "C" extern void func_80332C84();
-extern "C" extern void func_80332C9C();
-extern "C" extern void func_80332CB4();
-extern "C" extern void func_80332CCC();
-extern "C" extern void func_80332CE4();
-extern "C" extern void func_80332CFC();
-extern "C" extern void func_80332D14();
-extern "C" extern void func_80332D2C();
-extern "C" extern void func_80332D5C();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+extern "C" void func_802F41E8();
+extern "C" void func_802F4260();
+extern "C" void func_802F4278();
+extern "C" void func_802F4290();
+extern "C" void func_802F42C0();
+extern "C" void func_80332C24();
+extern "C" void func_80332C3C();
+extern "C" void func_80332C54();
+extern "C" void func_80332C6C();
+extern "C" void func_80332C84();
+extern "C" void func_80332C9C();
+extern "C" void func_80332CB4();
+extern "C" void func_80332CCC();
+extern "C" void func_80332CE4();
+extern "C" void func_80332CFC();
+extern "C" void func_80332D14();
+extern "C" void func_80332D2C();
+extern "C" void func_80332D5C();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_29();
+
+extern "C" void __ct__11J3DTevStageFv();
+extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" void* __nw__FUl();
+extern "C" void func_802F41E8();
+extern "C" void func_802F4260();
+extern "C" void func_802F4278();
+extern "C" void func_802F4290();
+extern "C" void func_802F42C0();
+extern "C" void createColorBlock__11J3DMaterialFUl();
+extern "C" void createTexGenBlock__11J3DMaterialFUl();
+extern "C" void createTevBlock__11J3DMaterialFi();
+extern "C" void createIndBlock__11J3DMaterialFi();
+extern "C" void createPEBlock__11J3DMaterialFUlUl();
+extern "C" void initialize__11J3DMaterialFv();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
+extern "C" void func_80332C24();
+extern "C" void func_80332C3C();
+extern "C" void func_80332C54();
+extern "C" void func_80332C6C();
+extern "C" void func_80332C84();
+extern "C" void func_80332C9C();
+extern "C" void func_80332CB4();
+extern "C" void func_80332CCC();
+extern "C" void func_80332CE4();
+extern "C" void func_80332CFC();
+extern "C" void func_80332D14();
+extern "C" void func_80332D2C();
+extern "C" void func_80332D5C();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_29();
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j3dDefaultFogInfo[44];
 SECTION_RODATA extern const u8 j3dDefaultNBTScaleInfo[16];
@@ -92,55 +209,55 @@ SECTION_SDATA2 extern u16 j3dDefaultZModeID;
 // Declarations:
 // 
 
-/* 80332DA4-80332F84 01E0+00 .text      __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21      */
+/* 80332DA4-80332F84 01E0+00 rc=2 efc=2 .text      __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21) {
+asm J3DMaterialFactory_v21::J3DMaterialFactory_v21(J3DMaterialBlock_v21 const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/__ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21.s"
 }
 #pragma pop
 
 
-/* 80332F84-80332FA8 0024+00 .text      countUniqueMaterials__22J3DMaterialFactory_v21Fv             */
+/* 80332F84-80332FA8 0024+00 rc=1 efc=1 .text      countUniqueMaterials__22J3DMaterialFactory_v21Fv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(countUniqueMaterials__22J3DMaterialFactory_v21Fv) {
+asm void J3DMaterialFactory_v21::countUniqueMaterials() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/countUniqueMaterials__22J3DMaterialFactory_v21Fv.s"
 }
 #pragma pop
 
 
-/* 80332FA8-80332FE0 0038+00 .text      countTexGens__22J3DMaterialFactory_v21CFi                    */
+/* 80332FA8-80332FE0 0038+00 rc=1 efc=0 .text      countTexGens__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(countTexGens__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::countTexGens(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/countTexGens__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80332FE0-80333068 0088+00 .text      countStages__22J3DMaterialFactory_v21CFi                     */
+/* 80332FE0-80333068 0088+00 rc=1 efc=0 .text      countStages__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(countStages__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::countStages(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/countStages__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333068-803337D8 0770+00 .text      create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl          */
+/* 80333068-803337D8 0770+00 rc=2 efc=2 .text      create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl) {
+asm void J3DMaterialFactory_v21::create(J3DMaterial* field_0, s32 field_1, u32 field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl.s"
 }
@@ -148,102 +265,102 @@ ASM_FUNCTION(create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl) {
 
 
 /* ############################################################################################## */
-/* 804564B8-804564BC 0004+00 .sdata2    @1130                                                        */
+/* 804564B8-804564BC 0004+00 rc=1 efc=0 .sdata2    @1130                                                        */
 u32 lit_1130 = 0xFFFFFFFF;
 
-/* 803337D8-80333834 005C+00 .text      newMatColor__22J3DMaterialFactory_v21CFii                    */
+/* 803337D8-80333834 005C+00 rc=1 efc=0 .text      newMatColor__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newMatColor__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newMatColor(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newMatColor__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333834-8033386C 0038+00 .text      newColorChanNum__22J3DMaterialFactory_v21CFi                 */
+/* 80333834-8033386C 0038+00 rc=1 efc=0 .text      newColorChanNum__22J3DMaterialFactory_v21CFi                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newColorChanNum__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newColorChanNum(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newColorChanNum__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 8033386C-80333A10 01A4+00 .text      newColorChan__22J3DMaterialFactory_v21CFii                   */
+/* 8033386C-80333A10 01A4+00 rc=1 efc=0 .text      newColorChan__22J3DMaterialFactory_v21CFii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newColorChan__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newColorChan(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newColorChan__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333A10-80333A48 0038+00 .text      newTexGenNum__22J3DMaterialFactory_v21CFi                    */
+/* 80333A10-80333A48 0038+00 rc=1 efc=0 .text      newTexGenNum__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTexGenNum__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newTexGenNum(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexGenNum__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333A48-80333AA8 0060+00 .text      newTexCoord__22J3DMaterialFactory_v21CFii                    */
+/* 80333A48-80333AA8 0060+00 rc=1 efc=0 .text      newTexCoord__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTexCoord__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTexCoord(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexCoord__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333AA8-80333B30 0088+00 .text      newTexMtx__22J3DMaterialFactory_v21CFii                      */
+/* 80333AA8-80333B30 0088+00 rc=1 efc=0 .text      newTexMtx__22J3DMaterialFactory_v21CFii                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTexMtx__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTexMtx(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexMtx__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333B30-80333B70 0040+00 .text      newCullMode__22J3DMaterialFactory_v21CFi                     */
+/* 80333B30-80333B70 0040+00 rc=1 efc=0 .text      newCullMode__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newCullMode__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newCullMode(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newCullMode__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333B70-80333BB8 0048+00 .text      newTexNo__22J3DMaterialFactory_v21CFii                       */
+/* 80333B70-80333BB8 0048+00 rc=1 efc=0 .text      newTexNo__22J3DMaterialFactory_v21CFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTexNo__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTexNo(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexNo__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333BB8-80333C04 004C+00 .text      newTevOrder__22J3DMaterialFactory_v21CFii                    */
+/* 80333BB8-80333C04 004C+00 rc=1 efc=0 .text      newTevOrder__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevOrder__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTevOrder(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevOrder__22J3DMaterialFactory_v21CFii.s"
 }
@@ -251,17 +368,17 @@ ASM_FUNCTION(newTevOrder__22J3DMaterialFactory_v21CFii) {
 
 
 /* ############################################################################################## */
-/* 80456BC0-80456BC4 0004+00 .sbss2     @1299                                                        */
+/* 80456BC0-80456BC4 0004+00 rc=1 efc=0 .sbss2     @1299                                                        */
 u8 lit_1299[4];
 
-/* 80456BC4-80456BC8 0004+00 .sbss2     None                                                         */
+/* 80456BC4-80456BC8 0004+00 rc=1 efc=0 .sbss2     None                                                         */
 u8 data_80456BC4[4];
 
-/* 80333C04-80333C74 0070+00 .text      newTevColor__22J3DMaterialFactory_v21CFii                    */
+/* 80333C04-80333C74 0070+00 rc=1 efc=0 .text      newTevColor__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevColor__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTevColor(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevColor__22J3DMaterialFactory_v21CFii.s"
 }
@@ -269,139 +386,138 @@ ASM_FUNCTION(newTevColor__22J3DMaterialFactory_v21CFii) {
 
 
 /* ############################################################################################## */
-/* 804564BC-804564C0 0004+00 .sdata2    @1317                                                        */
+/* 804564BC-804564C0 0004+00 rc=1 efc=0 .sdata2    @1317                                                        */
 u32 lit_1317 = 0xFFFFFFFF;
 
-/* 80333C74-80333CD0 005C+00 .text      newTevKColor__22J3DMaterialFactory_v21CFii                   */
+/* 80333C74-80333CD0 005C+00 rc=1 efc=0 .text      newTevKColor__22J3DMaterialFactory_v21CFii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevKColor__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTevKColor(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevKColor__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333CD0-80333D08 0038+00 .text      newTevStageNum__22J3DMaterialFactory_v21CFi                  */
+/* 80333CD0-80333D08 0038+00 rc=1 efc=0 .text      newTevStageNum__22J3DMaterialFactory_v21CFi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevStageNum__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newTevStageNum(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevStageNum__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333D08-80333D68 0060+00 .text      newTevStage__22J3DMaterialFactory_v21CFii                    */
+/* 80333D08-80333D68 0060+00 rc=1 efc=0 .text      newTevStage__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevStage__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTevStage(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevStage__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333D68-80333E04 009C+00 .text      newTevSwapModeTable__22J3DMaterialFactory_v21CFii            */
+/* 80333D68-80333E04 009C+00 rc=1 efc=0 .text      newTevSwapModeTable__22J3DMaterialFactory_v21CFii            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newTevSwapModeTable__22J3DMaterialFactory_v21CFii) {
+asm void J3DMaterialFactory_v21::newTevSwapModeTable(s32 field_0, s32 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevSwapModeTable__22J3DMaterialFactory_v21CFii.s"
 }
 #pragma pop
 
 
-/* 80333E04-80333EE0 00DC+00 .text      newFog__22J3DMaterialFactory_v21CFi                          */
+/* 80333E04-80333EE0 00DC+00 rc=1 efc=0 .text      newFog__22J3DMaterialFactory_v21CFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newFog__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newFog(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newFog__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333EE0-80333F60 0080+00 .text      newAlphaComp__22J3DMaterialFactory_v21CFi                    */
+/* 80333EE0-80333F60 0080+00 rc=1 efc=0 .text      newAlphaComp__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newAlphaComp__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newAlphaComp(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newAlphaComp__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333F60-80333FA4 0044+00 .text      newBlend__22J3DMaterialFactory_v21CFi                        */
+/* 80333F60-80333FA4 0044+00 rc=1 efc=0 .text      newBlend__22J3DMaterialFactory_v21CFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newBlend__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newBlend(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newBlend__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80333FA4-80334004 0060+00 .text      newZMode__22J3DMaterialFactory_v21CFi                        */
+/* 80333FA4-80334004 0060+00 rc=1 efc=0 .text      newZMode__22J3DMaterialFactory_v21CFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newZMode__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newZMode(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newZMode__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80334004-8033403C 0038+00 .text      newZCompLoc__22J3DMaterialFactory_v21CFi                     */
+/* 80334004-8033403C 0038+00 rc=1 efc=0 .text      newZCompLoc__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newZCompLoc__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newZCompLoc(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newZCompLoc__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 8033403C-80334074 0038+00 .text      newDither__22J3DMaterialFactory_v21CFi                       */
+/* 8033403C-80334074 0038+00 rc=1 efc=0 .text      newDither__22J3DMaterialFactory_v21CFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newDither__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newDither(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newDither__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80334074-80334118 00A4+00 .text      newNBTScale__22J3DMaterialFactory_v21CFi                     */
+/* 80334074-80334118 00A4+00 rc=1 efc=0 .text      newNBTScale__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newNBTScale__22J3DMaterialFactory_v21CFi) {
+asm void J3DMaterialFactory_v21::newNBTScale(s32 field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newNBTScale__22J3DMaterialFactory_v21CFi.s"
 }
 #pragma pop
 
 
-/* 80334118-80334130 0018+00 .text      JSUConvertOffsetToPtr<23J3DMaterialInitData_v21>__FPCvPCv    */
+/* 80334118-80334130 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<23J3DMaterialInitData_v21>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80334118) {
+extern "C" asm static void func_80334118() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/func_80334118.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

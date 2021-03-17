@@ -6,42 +6,113 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daB_ZANTZ_c;
+
+struct daB_ZANTZ_HIO_c {
+	daB_ZANTZ_HIO_c();
+	~daB_ZANTZ_HIO_c();
+};
+
+struct daB_ZANTZ_c {
+	void draw();
+	void setSnortEffect(s32);
+	void calcSnortEffect();
+	void setMouthMode(u8);
+	void setAppearMode(u8);
+	void getGroundPos();
+	void action();
+	void cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daB_ZANTZ_HIO_cFv();
-extern "C" extern void draw__11daB_ZANTZ_cFv();
-extern "C" extern void daB_ZANTZ_Draw__FP11daB_ZANTZ_c();
-extern "C" extern void setSnortEffect__11daB_ZANTZ_cFi();
-extern "C" extern void calcSnortEffect__11daB_ZANTZ_cFv();
-extern "C" extern void setMouthMode__11daB_ZANTZ_cFUc();
-extern "C" extern void setAppearMode__11daB_ZANTZ_cFUc();
-extern "C" extern void getGroundPos__11daB_ZANTZ_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void action__11daB_ZANTZ_cFv();
-extern "C" extern void cc_set__11daB_ZANTZ_cFv();
-extern "C" extern void execute__11daB_ZANTZ_cFv();
-extern "C" extern void daB_ZANTZ_Execute__FP11daB_ZANTZ_c();
-extern "C" extern void daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c();
-extern "C" extern void _delete__11daB_ZANTZ_cFv();
-extern "C" extern void daB_ZANTZ_Delete__FP11daB_ZANTZ_c();
-extern "C" extern void CreateHeap__11daB_ZANTZ_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__11daB_ZANTZ_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void daB_ZANTZ_Create__FP11daB_ZANTZ_c();
-extern "C" extern void __dt__15daB_ZANTZ_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_zant_mobile_cpp();
-extern "C" extern void func_80652710();
-extern "C" extern void func_80652718();
-extern "C" extern void func_80652720();
+void daB_ZANTZ_Draw(daB_ZANTZ_c*);
+void daB_ZANTZ_Execute(daB_ZANTZ_c*);
+bool daB_ZANTZ_IsDelete(daB_ZANTZ_c*);
+void daB_ZANTZ_Delete(daB_ZANTZ_c*);
+void useHeapInit(fopAc_ac_c*);
+void daB_ZANTZ_Create(daB_ZANTZ_c*);
+extern "C" void __sinit_d_a_b_zant_mobile_cpp();
+extern "C" void func_80652710();
+extern "C" void func_80652718();
+extern "C" void func_80652720();
+
+extern "C" void __ct__15daB_ZANTZ_HIO_cFv();
+extern "C" void draw__11daB_ZANTZ_cFv();
+extern "C" void daB_ZANTZ_Draw__FP11daB_ZANTZ_c();
+extern "C" void setSnortEffect__11daB_ZANTZ_cFi();
+extern "C" void calcSnortEffect__11daB_ZANTZ_cFv();
+extern "C" void setMouthMode__11daB_ZANTZ_cFUc();
+extern "C" void setAppearMode__11daB_ZANTZ_cFUc();
+extern "C" void getGroundPos__11daB_ZANTZ_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void action__11daB_ZANTZ_cFv();
+extern "C" void cc_set__11daB_ZANTZ_cFv();
+extern "C" void execute__11daB_ZANTZ_cFv();
+extern "C" void daB_ZANTZ_Execute__FP11daB_ZANTZ_c();
+extern "C" bool daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c();
+extern "C" void _delete__11daB_ZANTZ_cFv();
+extern "C" void daB_ZANTZ_Delete__FP11daB_ZANTZ_c();
+extern "C" void CreateHeap__11daB_ZANTZ_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__11daB_ZANTZ_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void daB_ZANTZ_Create__FP11daB_ZANTZ_c();
+extern "C" void __dt__15daB_ZANTZ_HIO_cFv();
+extern "C" void __sinit_d_a_b_zant_mobile_cpp();
+extern "C" void func_80652710();
+extern "C" void func_80652718();
+extern "C" void func_80652720();
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u32 lit_3688;
 SECTION_RODATA extern const u32 lit_3746;
@@ -97,8 +168,11 @@ SECTION_BSS extern u8 l_HIO[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -108,7 +182,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daB_ZANTZ_HIO_cFv) {
+asm daB_ZANTZ_HIO_c::daB_ZANTZ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__ct__15daB_ZANTZ_HIO_cFv.s"
 }
@@ -119,7 +193,7 @@ ASM_FUNCTION(__ct__15daB_ZANTZ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/draw__11daB_ZANTZ_cFv.s"
 }
@@ -130,7 +204,7 @@ ASM_FUNCTION(draw__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTZ_Draw__FP11daB_ZANTZ_c) {
+asm void daB_ZANTZ_Draw(daB_ZANTZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Draw__FP11daB_ZANTZ_c.s"
 }
@@ -141,7 +215,7 @@ ASM_FUNCTION(daB_ZANTZ_Draw__FP11daB_ZANTZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSnortEffect__11daB_ZANTZ_cFi) {
+asm void daB_ZANTZ_c::setSnortEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/setSnortEffect__11daB_ZANTZ_cFi.s"
 }
@@ -152,7 +226,7 @@ ASM_FUNCTION(setSnortEffect__11daB_ZANTZ_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSnortEffect__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::calcSnortEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/calcSnortEffect__11daB_ZANTZ_cFv.s"
 }
@@ -163,7 +237,7 @@ ASM_FUNCTION(calcSnortEffect__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMouthMode__11daB_ZANTZ_cFUc) {
+asm void daB_ZANTZ_c::setMouthMode(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/setMouthMode__11daB_ZANTZ_cFUc.s"
 }
@@ -174,7 +248,7 @@ ASM_FUNCTION(setMouthMode__11daB_ZANTZ_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAppearMode__11daB_ZANTZ_cFUc) {
+asm void daB_ZANTZ_c::setAppearMode(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/setAppearMode__11daB_ZANTZ_cFUc.s"
 }
@@ -185,7 +259,7 @@ ASM_FUNCTION(setAppearMode__11daB_ZANTZ_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroundPos__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::getGroundPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/getGroundPos__11daB_ZANTZ_cFv.s"
 }
@@ -196,7 +270,7 @@ ASM_FUNCTION(getGroundPos__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -207,7 +281,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/action__11daB_ZANTZ_cFv.s"
 }
@@ -218,7 +292,7 @@ ASM_FUNCTION(action__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/cc_set__11daB_ZANTZ_cFv.s"
 }
@@ -229,7 +303,7 @@ ASM_FUNCTION(cc_set__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/execute__11daB_ZANTZ_cFv.s"
 }
@@ -240,7 +314,7 @@ ASM_FUNCTION(execute__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTZ_Execute__FP11daB_ZANTZ_c) {
+asm void daB_ZANTZ_Execute(daB_ZANTZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Execute__FP11daB_ZANTZ_c.s"
 }
@@ -248,21 +322,16 @@ ASM_FUNCTION(daB_ZANTZ_Execute__FP11daB_ZANTZ_c) {
 
 
 /* 80651D14-80651D1C 0008+00 .text      daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c.s"
+bool daB_ZANTZ_IsDelete(daB_ZANTZ_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80651D1C-80651DA4 0088+00 .text      _delete__11daB_ZANTZ_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/_delete__11daB_ZANTZ_cFv.s"
 }
@@ -273,7 +342,7 @@ ASM_FUNCTION(_delete__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTZ_Delete__FP11daB_ZANTZ_c) {
+asm void daB_ZANTZ_Delete(daB_ZANTZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Delete__FP11daB_ZANTZ_c.s"
 }
@@ -284,7 +353,7 @@ ASM_FUNCTION(daB_ZANTZ_Delete__FP11daB_ZANTZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/CreateHeap__11daB_ZANTZ_cFv.s"
 }
@@ -295,7 +364,7 @@ ASM_FUNCTION(CreateHeap__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__12J3DFrameCtrlFv.s"
 }
@@ -306,7 +375,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -317,7 +386,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daB_ZANTZ_cFv) {
+asm void daB_ZANTZ_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/create__11daB_ZANTZ_cFv.s"
 }
@@ -328,7 +397,7 @@ ASM_FUNCTION(create__11daB_ZANTZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__8dCcD_CylFv.s"
 }
@@ -339,7 +408,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__ct__8dCcD_CylFv.s"
 }
@@ -350,7 +419,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__8cM3dGCylFv.s"
 }
@@ -361,7 +430,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__8cM3dGAabFv.s"
 }
@@ -372,7 +441,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__8dCcD_SphFv.s"
 }
@@ -383,7 +452,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__ct__8dCcD_SphFv.s"
 }
@@ -394,7 +463,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__8cM3dGSphFv.s"
 }
@@ -405,7 +474,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTZ_Create__FP11daB_ZANTZ_c) {
+asm void daB_ZANTZ_Create(daB_ZANTZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_Create__FP11daB_ZANTZ_c.s"
 }
@@ -416,7 +485,7 @@ ASM_FUNCTION(daB_ZANTZ_Create__FP11daB_ZANTZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daB_ZANTZ_HIO_cFv) {
+asm daB_ZANTZ_HIO_c::~daB_ZANTZ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__dt__15daB_ZANTZ_HIO_cFv.s"
 }
@@ -427,7 +496,7 @@ ASM_FUNCTION(__dt__15daB_ZANTZ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_zant_mobile_cpp) {
+extern "C" asm void __sinit_d_a_b_zant_mobile_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/__sinit_d_a_b_zant_mobile_cpp.s"
 }
@@ -438,7 +507,7 @@ ASM_FUNCTION(__sinit_d_a_b_zant_mobile_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80652710) {
+extern "C" asm void func_80652710() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652710.s"
 }
@@ -449,7 +518,7 @@ ASM_FUNCTION(func_80652710) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80652718) {
+extern "C" asm void func_80652718() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652718.s"
 }
@@ -460,7 +529,7 @@ ASM_FUNCTION(func_80652718) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80652720) {
+extern "C" asm void func_80652720() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/func_80652720.s"
 }

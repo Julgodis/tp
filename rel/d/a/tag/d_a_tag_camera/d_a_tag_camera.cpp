@@ -6,45 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTag_Cam_c;
+
+struct daTag_Cam_c {
+	void getSwType();
+	void getPrio();
+	void getSwBit();
+	void getCondition();
+	void getCameraId();
+	void getRailID();
+	void getAreaType();
+	void getAreaNoChk();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void func_80489A98();
-extern "C" extern void func_80489AA0();
-extern "C" extern void func_80489B18();
-extern "C" extern void func_80489B2C();
-extern "C" extern void func_80489B6C();
-extern "C" extern void func_80489BE0();
-extern "C" extern void func_80489C04();
-extern "C" extern void func_80489C1C();
-extern "C" extern void func_80489C34();
-extern "C" extern void func_80489C6C();
-extern "C" extern void func_80489CAC();
-extern "C" extern void func_80489CE4();
-extern "C" extern void func_80489CF8();
-extern "C" extern void func_80489D30();
-extern "C" extern void func_80489D5C();
-extern "C" extern void func_80489D70();
-extern "C" extern void func_80489DB0();
-extern "C" extern void func_80489DE4();
-extern "C" extern void func_80489DF8();
-extern "C" extern void func_80489E18();
-extern "C" extern void func_80489E8C();
-extern "C" extern void func_80489EDC();
-extern "C" extern void getSwType__11daTag_Cam_cFv();
-extern "C" extern void getPrio__11daTag_Cam_cFv();
-extern "C" extern void getSwBit__11daTag_Cam_cFv();
-extern "C" extern void getCondition__11daTag_Cam_cFv();
-extern "C" extern void getCameraId__11daTag_Cam_cFv();
-extern "C" extern void getRailID__11daTag_Cam_cFv();
-extern "C" extern void getAreaType__11daTag_Cam_cFv();
-extern "C" extern void getAreaNoChk__11daTag_Cam_cFv();
-extern "C" extern void execute__11daTag_Cam_cFv();
-extern "C" extern void daTag_Cam_Draw__FP11daTag_Cam_c();
-extern "C" extern void daTag_Cam_Execute__FP11daTag_Cam_c();
-extern "C" extern void daTag_Cam_IsDelete__FP11daTag_Cam_c();
-extern "C" extern void daTag_Cam_Delete__FP11daTag_Cam_c();
-extern "C" extern void daTag_Cam_Create__FP10fopAc_ac_c();
+extern "C" bool func_80489A98();
+extern "C" void func_80489AA0();
+extern "C" void func_80489B18();
+extern "C" void func_80489B2C();
+extern "C" void func_80489B6C();
+extern "C" void func_80489BE0();
+extern "C" void func_80489C04();
+extern "C" void func_80489C1C();
+extern "C" void func_80489C34();
+extern "C" void func_80489C6C();
+extern "C" void func_80489CAC();
+extern "C" void func_80489CE4();
+extern "C" void func_80489CF8();
+extern "C" void func_80489D30();
+extern "C" void func_80489D5C();
+extern "C" void func_80489D70();
+extern "C" void func_80489DB0();
+extern "C" void func_80489DE4();
+extern "C" void func_80489DF8();
+extern "C" void func_80489E18();
+extern "C" void func_80489E8C();
+extern "C" void func_80489EDC();
+bool daTag_Cam_Draw(daTag_Cam_c*);
+void daTag_Cam_Execute(daTag_Cam_c*);
+bool daTag_Cam_IsDelete(daTag_Cam_c*);
+void daTag_Cam_Delete(daTag_Cam_c*);
+void daTag_Cam_Create(fopAc_ac_c*);
+
+extern "C" bool func_80489A98();
+extern "C" void func_80489AA0();
+extern "C" void func_80489B18();
+extern "C" void func_80489B2C();
+extern "C" void func_80489B6C();
+extern "C" void func_80489BE0();
+extern "C" void func_80489C04();
+extern "C" void func_80489C1C();
+extern "C" void func_80489C34();
+extern "C" void func_80489C6C();
+extern "C" void func_80489CAC();
+extern "C" void func_80489CE4();
+extern "C" void func_80489CF8();
+extern "C" void func_80489D30();
+extern "C" void func_80489D5C();
+extern "C" void func_80489D70();
+extern "C" void func_80489DB0();
+extern "C" void func_80489DE4();
+extern "C" void func_80489DF8();
+extern "C" void func_80489E18();
+extern "C" void func_80489E8C();
+extern "C" void func_80489EDC();
+extern "C" void getSwType__11daTag_Cam_cFv();
+extern "C" void getPrio__11daTag_Cam_cFv();
+extern "C" void getSwBit__11daTag_Cam_cFv();
+extern "C" void getCondition__11daTag_Cam_cFv();
+extern "C" void getCameraId__11daTag_Cam_cFv();
+extern "C" void getRailID__11daTag_Cam_cFv();
+extern "C" void getAreaType__11daTag_Cam_cFv();
+extern "C" void getAreaNoChk__11daTag_Cam_cFv();
+extern "C" void execute__11daTag_Cam_cFv();
+extern "C" bool daTag_Cam_Draw__FP11daTag_Cam_c();
+extern "C" void daTag_Cam_Execute__FP11daTag_Cam_c();
+extern "C" bool daTag_Cam_IsDelete__FP11daTag_Cam_c();
+extern "C" void daTag_Cam_Delete__FP11daTag_Cam_c();
+extern "C" void daTag_Cam_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3874[12];
 SECTION_RODATA extern const u8 lit_4358[88];
 SECTION_RODATA extern const u32 lit_4466;
@@ -62,28 +112,25 @@ SECTION_BSS extern u8 data_8048A670[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 80489A98-80489AA0 0008+00 .text      always_true__28@unnamed@d_a_tag_camera_cpp@Fv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_80489A98) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489A98.s"
+extern "C" bool func_80489A98() {
+	return true;
 }
-#pragma pop
 
 
 /* 80489AA0-80489B18 0078+00 .text      is_player_riding_horse__28@unnamed@d_a_tag_camera_cpp@Fv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489AA0) {
+extern "C" asm void func_80489AA0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489AA0.s"
 }
@@ -94,7 +141,7 @@ ASM_FUNCTION(func_80489AA0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489B18) {
+extern "C" asm void func_80489B18() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B18.s"
 }
@@ -105,7 +152,7 @@ ASM_FUNCTION(func_80489B18) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489B2C) {
+extern "C" asm void func_80489B2C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B2C.s"
 }
@@ -116,7 +163,7 @@ ASM_FUNCTION(func_80489B2C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489B6C) {
+extern "C" asm void func_80489B6C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489B6C.s"
 }
@@ -127,7 +174,7 @@ ASM_FUNCTION(func_80489B6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489BE0) {
+extern "C" asm void func_80489BE0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489BE0.s"
 }
@@ -138,7 +185,7 @@ ASM_FUNCTION(func_80489BE0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489C04) {
+extern "C" asm void func_80489C04() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C04.s"
 }
@@ -149,7 +196,7 @@ ASM_FUNCTION(func_80489C04) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489C1C) {
+extern "C" asm void func_80489C1C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C1C.s"
 }
@@ -160,7 +207,7 @@ ASM_FUNCTION(func_80489C1C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489C34) {
+extern "C" asm void func_80489C34() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C34.s"
 }
@@ -171,7 +218,7 @@ ASM_FUNCTION(func_80489C34) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489C6C) {
+extern "C" asm void func_80489C6C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489C6C.s"
 }
@@ -182,7 +229,7 @@ ASM_FUNCTION(func_80489C6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489CAC) {
+extern "C" asm void func_80489CAC() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489CAC.s"
 }
@@ -193,7 +240,7 @@ ASM_FUNCTION(func_80489CAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489CE4) {
+extern "C" asm void func_80489CE4() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489CE4.s"
 }
@@ -204,7 +251,7 @@ ASM_FUNCTION(func_80489CE4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489CF8) {
+extern "C" asm void func_80489CF8() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489CF8.s"
 }
@@ -215,7 +262,7 @@ ASM_FUNCTION(func_80489CF8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489D30) {
+extern "C" asm void func_80489D30() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D30.s"
 }
@@ -226,7 +273,7 @@ ASM_FUNCTION(func_80489D30) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489D5C) {
+extern "C" asm void func_80489D5C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D5C.s"
 }
@@ -237,7 +284,7 @@ ASM_FUNCTION(func_80489D5C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489D70) {
+extern "C" asm void func_80489D70() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489D70.s"
 }
@@ -248,7 +295,7 @@ ASM_FUNCTION(func_80489D70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489DB0) {
+extern "C" asm void func_80489DB0() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DB0.s"
 }
@@ -259,7 +306,7 @@ ASM_FUNCTION(func_80489DB0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489DE4) {
+extern "C" asm void func_80489DE4() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DE4.s"
 }
@@ -270,7 +317,7 @@ ASM_FUNCTION(func_80489DE4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489DF8) {
+extern "C" asm void func_80489DF8() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489DF8.s"
 }
@@ -281,7 +328,7 @@ ASM_FUNCTION(func_80489DF8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489E18) {
+extern "C" asm void func_80489E18() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489E18.s"
 }
@@ -292,7 +339,7 @@ ASM_FUNCTION(func_80489E18) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489E8C) {
+extern "C" asm void func_80489E8C() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489E8C.s"
 }
@@ -303,7 +350,7 @@ ASM_FUNCTION(func_80489E8C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80489EDC) {
+extern "C" asm void func_80489EDC() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489EDC.s"
 }
@@ -314,7 +361,7 @@ ASM_FUNCTION(func_80489EDC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwType__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getSwType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getSwType__11daTag_Cam_cFv.s"
 }
@@ -325,7 +372,7 @@ ASM_FUNCTION(getSwType__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPrio__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getPrio() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getPrio__11daTag_Cam_cFv.s"
 }
@@ -336,7 +383,7 @@ ASM_FUNCTION(getPrio__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwBit__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getSwBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getSwBit__11daTag_Cam_cFv.s"
 }
@@ -347,7 +394,7 @@ ASM_FUNCTION(getSwBit__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCondition__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getCondition() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getCondition__11daTag_Cam_cFv.s"
 }
@@ -358,7 +405,7 @@ ASM_FUNCTION(getCondition__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCameraId__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getCameraId() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getCameraId__11daTag_Cam_cFv.s"
 }
@@ -369,7 +416,7 @@ ASM_FUNCTION(getCameraId__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRailID__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getRailID() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getRailID__11daTag_Cam_cFv.s"
 }
@@ -380,7 +427,7 @@ ASM_FUNCTION(getRailID__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAreaType__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getAreaType() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getAreaType__11daTag_Cam_cFv.s"
 }
@@ -391,7 +438,7 @@ ASM_FUNCTION(getAreaType__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAreaNoChk__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::getAreaNoChk() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/getAreaNoChk__11daTag_Cam_cFv.s"
 }
@@ -402,7 +449,7 @@ ASM_FUNCTION(getAreaNoChk__11daTag_Cam_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daTag_Cam_cFv) {
+asm void daTag_Cam_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/execute__11daTag_Cam_cFv.s"
 }
@@ -410,21 +457,16 @@ ASM_FUNCTION(execute__11daTag_Cam_cFv) {
 
 
 /* 8048A378-8048A380 0008+00 .text      daTag_Cam_Draw__FP11daTag_Cam_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Cam_Draw__FP11daTag_Cam_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Draw__FP11daTag_Cam_c.s"
+bool daTag_Cam_Draw(daTag_Cam_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A380-8048A3A4 0024+00 .text      daTag_Cam_Execute__FP11daTag_Cam_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Cam_Execute__FP11daTag_Cam_c) {
+asm void daTag_Cam_Execute(daTag_Cam_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Execute__FP11daTag_Cam_c.s"
 }
@@ -432,21 +474,16 @@ ASM_FUNCTION(daTag_Cam_Execute__FP11daTag_Cam_c) {
 
 
 /* 8048A3A4-8048A3AC 0008+00 .text      daTag_Cam_IsDelete__FP11daTag_Cam_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Cam_IsDelete__FP11daTag_Cam_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_IsDelete__FP11daTag_Cam_c.s"
+bool daTag_Cam_IsDelete(daTag_Cam_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A3AC-8048A3DC 0030+00 .text      daTag_Cam_Delete__FP11daTag_Cam_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Cam_Delete__FP11daTag_Cam_c) {
+asm void daTag_Cam_Delete(daTag_Cam_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Delete__FP11daTag_Cam_c.s"
 }
@@ -457,7 +494,7 @@ ASM_FUNCTION(daTag_Cam_Delete__FP11daTag_Cam_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Cam_Create__FP10fopAc_ac_c) {
+asm void daTag_Cam_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Create__FP10fopAc_ac_c.s"
 }

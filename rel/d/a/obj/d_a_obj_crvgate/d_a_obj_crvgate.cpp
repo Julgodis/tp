@@ -6,52 +6,127 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCRVGATE_c;
+
+struct daObjCRVGATE_c {
+	void initCcCylinder();
+	void setCcCylinder();
+	void checkOpen();
+	void actionStartEvent();
+	void actionWaitEvent();
+	void Demo_Set();
+	void SetOpen();
+	void actionDemoEvent();
+	void event_proc_call();
+	void CheckVec();
+	void KeyVib();
+	void DoorVib();
+	void VibStop();
+	void CloseVibration();
+	void CloseAction();
+	void OpenAction();
+	void HakaiMotion();
+	void DoorAction();
+	void B_CloseAction();
+	void SetB_Close();
+	void setBaseMtx();
+	void CreateHeap();
+	void SetDoor();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initCcCylinder__14daObjCRVGATE_cFv();
-extern "C" extern void setCcCylinder__14daObjCRVGATE_cFv();
-extern "C" extern void daObjCRVGATE_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVGATE_Delete__FP14daObjCRVGATE_c();
-extern "C" extern void checkOpen__14daObjCRVGATE_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void actionStartEvent__14daObjCRVGATE_cFv();
-extern "C" extern void actionWaitEvent__14daObjCRVGATE_cFv();
-extern "C" extern void Demo_Set__14daObjCRVGATE_cFv();
-extern "C" extern void SetOpen__14daObjCRVGATE_cFv();
-extern "C" extern void actionDemoEvent__14daObjCRVGATE_cFv();
-extern "C" extern void event_proc_call__14daObjCRVGATE_cFv();
-extern "C" extern void CheckVec__14daObjCRVGATE_cFv();
-extern "C" extern void KeyVib__14daObjCRVGATE_cFv();
-extern "C" extern void DoorVib__14daObjCRVGATE_cFv();
-extern "C" extern void VibStop__14daObjCRVGATE_cFv();
-extern "C" extern void CloseVibration__14daObjCRVGATE_cFv();
-extern "C" extern void CloseAction__14daObjCRVGATE_cFv();
-extern "C" extern void OpenAction__14daObjCRVGATE_cFv();
-extern "C" extern void HakaiMotion__14daObjCRVGATE_cFv();
-extern "C" extern void DoorAction__14daObjCRVGATE_cFv();
-extern "C" extern void B_CloseAction__14daObjCRVGATE_cFv();
-extern "C" extern void SetB_Close__14daObjCRVGATE_cFv();
-extern "C" extern void setBaseMtx__14daObjCRVGATE_cFv();
-extern "C" extern void daObjCRVGATE_Draw__FP14daObjCRVGATE_c();
-extern "C" extern void daObjCRVGATE_Execute__FP14daObjCRVGATE_c();
-extern "C" extern void CreateHeap__14daObjCRVGATE_cFv();
-extern "C" extern void SetDoor__14daObjCRVGATE_cFv();
-extern "C" extern void create__14daObjCRVGATE_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c();
-extern "C" extern void Create__14daObjCRVGATE_cFv();
-extern "C" extern void Execute__14daObjCRVGATE_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjCRVGATE_cFv();
-extern "C" extern void Delete__14daObjCRVGATE_cFv();
-extern "C" extern void func_80BD30A8();
-extern "C" extern void func_80BD30B0();
+void daObjCRVGATE_Create(fopAc_ac_c*);
+void daObjCRVGATE_Delete(daObjCRVGATE_c*);
+void daObjCRVGATE_Draw(daObjCRVGATE_c*);
+void daObjCRVGATE_Execute(daObjCRVGATE_c*);
+bool daObjCRVGATE_IsDelete(daObjCRVGATE_c*);
+extern "C" void Execute__14daObjCRVGATE_cFPPA3_A4_f();
+extern "C" void func_80BD30A8();
+extern "C" void func_80BD30B0();
+
+extern "C" void initCcCylinder__14daObjCRVGATE_cFv();
+extern "C" void setCcCylinder__14daObjCRVGATE_cFv();
+extern "C" void daObjCRVGATE_Create__FP10fopAc_ac_c();
+extern "C" void daObjCRVGATE_Delete__FP14daObjCRVGATE_c();
+extern "C" void checkOpen__14daObjCRVGATE_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void actionStartEvent__14daObjCRVGATE_cFv();
+extern "C" void actionWaitEvent__14daObjCRVGATE_cFv();
+extern "C" void Demo_Set__14daObjCRVGATE_cFv();
+extern "C" void SetOpen__14daObjCRVGATE_cFv();
+extern "C" void actionDemoEvent__14daObjCRVGATE_cFv();
+extern "C" void event_proc_call__14daObjCRVGATE_cFv();
+extern "C" void CheckVec__14daObjCRVGATE_cFv();
+extern "C" void KeyVib__14daObjCRVGATE_cFv();
+extern "C" void DoorVib__14daObjCRVGATE_cFv();
+extern "C" void VibStop__14daObjCRVGATE_cFv();
+extern "C" void CloseVibration__14daObjCRVGATE_cFv();
+extern "C" void CloseAction__14daObjCRVGATE_cFv();
+extern "C" void OpenAction__14daObjCRVGATE_cFv();
+extern "C" void HakaiMotion__14daObjCRVGATE_cFv();
+extern "C" void DoorAction__14daObjCRVGATE_cFv();
+extern "C" void B_CloseAction__14daObjCRVGATE_cFv();
+extern "C" void SetB_Close__14daObjCRVGATE_cFv();
+extern "C" void setBaseMtx__14daObjCRVGATE_cFv();
+extern "C" void daObjCRVGATE_Draw__FP14daObjCRVGATE_c();
+extern "C" void daObjCRVGATE_Execute__FP14daObjCRVGATE_c();
+extern "C" void CreateHeap__14daObjCRVGATE_cFv();
+extern "C" void SetDoor__14daObjCRVGATE_cFv();
+extern "C" void create__14daObjCRVGATE_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c();
+extern "C" void Create__14daObjCRVGATE_cFv();
+extern "C" void Execute__14daObjCRVGATE_cFPPA3_A4_f();
+extern "C" void Draw__14daObjCRVGATE_cFv();
+extern "C" void Delete__14daObjCRVGATE_cFv();
+extern "C" void func_80BD30A8();
+extern "C" void func_80BD30B0();
 SECTION_RODATA extern const u8 data_80BD30C0[64];
 SECTION_RODATA extern const u32 lit_3792;
 SECTION_RODATA extern const u32 lit_3793;
@@ -108,7 +183,9 @@ SECTION_BSS extern u8 data_80BD32B8[2 + 2 /* padding */];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -118,7 +195,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/initCcCylinder__14daObjCRVGATE_cFv.s"
 }
@@ -129,7 +206,7 @@ ASM_FUNCTION(initCcCylinder__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::setCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/setCcCylinder__14daObjCRVGATE_cFv.s"
 }
@@ -140,7 +217,7 @@ ASM_FUNCTION(setCcCylinder__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVGATE_Create__FP10fopAc_ac_c) {
+asm void daObjCRVGATE_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Create__FP10fopAc_ac_c.s"
 }
@@ -151,7 +228,7 @@ ASM_FUNCTION(daObjCRVGATE_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVGATE_Delete__FP14daObjCRVGATE_c) {
+asm void daObjCRVGATE_Delete(daObjCRVGATE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Delete__FP14daObjCRVGATE_c.s"
 }
@@ -162,7 +239,7 @@ ASM_FUNCTION(daObjCRVGATE_Delete__FP14daObjCRVGATE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpen__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::checkOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/checkOpen__14daObjCRVGATE_cFv.s"
 }
@@ -173,7 +250,7 @@ ASM_FUNCTION(checkOpen__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__4cXyzFv.s"
 }
@@ -184,7 +261,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionStartEvent__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::actionStartEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/actionStartEvent__14daObjCRVGATE_cFv.s"
 }
@@ -195,7 +272,7 @@ ASM_FUNCTION(actionStartEvent__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitEvent__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::actionWaitEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/actionWaitEvent__14daObjCRVGATE_cFv.s"
 }
@@ -206,7 +283,7 @@ ASM_FUNCTION(actionWaitEvent__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Demo_Set__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::Demo_Set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/Demo_Set__14daObjCRVGATE_cFv.s"
 }
@@ -217,7 +294,7 @@ ASM_FUNCTION(Demo_Set__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetOpen__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::SetOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/SetOpen__14daObjCRVGATE_cFv.s"
 }
@@ -228,7 +305,7 @@ ASM_FUNCTION(SetOpen__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDemoEvent__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::actionDemoEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/actionDemoEvent__14daObjCRVGATE_cFv.s"
 }
@@ -239,7 +316,7 @@ ASM_FUNCTION(actionDemoEvent__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/event_proc_call__14daObjCRVGATE_cFv.s"
 }
@@ -250,7 +327,7 @@ ASM_FUNCTION(event_proc_call__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckVec__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::CheckVec() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/CheckVec__14daObjCRVGATE_cFv.s"
 }
@@ -261,7 +338,7 @@ ASM_FUNCTION(CheckVec__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(KeyVib__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::KeyVib() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/KeyVib__14daObjCRVGATE_cFv.s"
 }
@@ -272,7 +349,7 @@ ASM_FUNCTION(KeyVib__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DoorVib__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::DoorVib() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/DoorVib__14daObjCRVGATE_cFv.s"
 }
@@ -283,7 +360,7 @@ ASM_FUNCTION(DoorVib__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(VibStop__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::VibStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/VibStop__14daObjCRVGATE_cFv.s"
 }
@@ -294,7 +371,7 @@ ASM_FUNCTION(VibStop__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CloseVibration__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::CloseVibration() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/CloseVibration__14daObjCRVGATE_cFv.s"
 }
@@ -305,7 +382,7 @@ ASM_FUNCTION(CloseVibration__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CloseAction__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::CloseAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/CloseAction__14daObjCRVGATE_cFv.s"
 }
@@ -316,7 +393,7 @@ ASM_FUNCTION(CloseAction__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OpenAction__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::OpenAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/OpenAction__14daObjCRVGATE_cFv.s"
 }
@@ -327,7 +404,7 @@ ASM_FUNCTION(OpenAction__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HakaiMotion__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::HakaiMotion() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/HakaiMotion__14daObjCRVGATE_cFv.s"
 }
@@ -338,7 +415,7 @@ ASM_FUNCTION(HakaiMotion__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DoorAction__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::DoorAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/DoorAction__14daObjCRVGATE_cFv.s"
 }
@@ -349,7 +426,7 @@ ASM_FUNCTION(DoorAction__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(B_CloseAction__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::B_CloseAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/B_CloseAction__14daObjCRVGATE_cFv.s"
 }
@@ -360,7 +437,7 @@ ASM_FUNCTION(B_CloseAction__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetB_Close__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::SetB_Close() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/SetB_Close__14daObjCRVGATE_cFv.s"
 }
@@ -371,7 +448,7 @@ ASM_FUNCTION(SetB_Close__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/setBaseMtx__14daObjCRVGATE_cFv.s"
 }
@@ -382,7 +459,7 @@ ASM_FUNCTION(setBaseMtx__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVGATE_Draw__FP14daObjCRVGATE_c) {
+asm void daObjCRVGATE_Draw(daObjCRVGATE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Draw__FP14daObjCRVGATE_c.s"
 }
@@ -393,7 +470,7 @@ ASM_FUNCTION(daObjCRVGATE_Draw__FP14daObjCRVGATE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVGATE_Execute__FP14daObjCRVGATE_c) {
+asm void daObjCRVGATE_Execute(daObjCRVGATE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_Execute__FP14daObjCRVGATE_c.s"
 }
@@ -404,7 +481,7 @@ ASM_FUNCTION(daObjCRVGATE_Execute__FP14daObjCRVGATE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/CreateHeap__14daObjCRVGATE_cFv.s"
 }
@@ -415,7 +492,7 @@ ASM_FUNCTION(CreateHeap__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetDoor__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::SetDoor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/SetDoor__14daObjCRVGATE_cFv.s"
 }
@@ -426,7 +503,7 @@ ASM_FUNCTION(SetDoor__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/create__14daObjCRVGATE_cFv.s"
 }
@@ -437,7 +514,7 @@ ASM_FUNCTION(create__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__8cM3dGCylFv.s"
 }
@@ -448,7 +525,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__8cM3dGAabFv.s"
 }
@@ -459,7 +536,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__8dCcD_SphFv.s"
 }
@@ -470,7 +547,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__ct__8dCcD_SphFv.s"
 }
@@ -481,7 +558,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__8cM3dGSphFv.s"
 }
@@ -492,7 +569,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -500,32 +577,22 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80BD2E7C-80BD2E80 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD2E80-80BD2E88 0008+00 .text      daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/daObjCRVGATE_IsDelete__FP14daObjCRVGATE_c.s"
+bool daObjCRVGATE_IsDelete(daObjCRVGATE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BD2E88-80BD2ECC 0044+00 .text      Create__14daObjCRVGATE_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD2E88.s"
 }
@@ -536,7 +603,7 @@ ASM_FUNCTION(Create__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjCRVGATE_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjCRVGATE_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/Execute__14daObjCRVGATE_cFPPA3_A4_f.s"
 }
@@ -547,7 +614,7 @@ ASM_FUNCTION(Execute__14daObjCRVGATE_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/Draw__14daObjCRVGATE_cFv.s"
 }
@@ -558,7 +625,7 @@ ASM_FUNCTION(Draw__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjCRVGATE_cFv) {
+asm void daObjCRVGATE_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/Delete__14daObjCRVGATE_cFv.s"
 }
@@ -569,7 +636,7 @@ ASM_FUNCTION(Delete__14daObjCRVGATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD30A8) {
+extern "C" asm void func_80BD30A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD30A8.s"
 }
@@ -580,7 +647,7 @@ ASM_FUNCTION(func_80BD30A8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD30B0) {
+extern "C" asm void func_80BD30B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvgate/d_a_obj_crvgate/func_80BD30B0.s"
 }

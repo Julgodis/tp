@@ -6,50 +6,148 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) False/False
+// build JKRHeap (JKRHeap) True/False
+struct JKRHeap;
+/* top-level dependencies (begin JKRHeap) */
+// outer dependency: JKRHeap::TState
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	// JKRHeap::TState
+	// build TState (JKRHeap::TState) False/False
+	/* dependencies (begin JKRHeap::TState) */
+	/* dependencies (end JKRHeap::TState) */
+	struct TState {
+	};
+
+	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
+	/* 802CE264 */ ~JKRHeap();
+	/* 802CE378 */ void initArena(char**, u32*, s32);
+	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE574 */ void callAllDisposer();
+	/* 802CE784 */ void getTotalFreeSize();
+	/* 802CE7DC */ void getMaxAllocatableSize(s32);
+	/* 802CE894 */ void find(void*) const;
+	/* 802CEA78 */ void dispose(void*, u32);
+	/* 802CEAC0 */ void dispose();
+	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build JKRExpHeap (JKRExpHeap) True/False
+struct JKRExpHeap;
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+// outer dependency: JKRHeap::TState
+// outer dependency: JKRExpHeap::CMemBlock
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap::TState
+	// JKRHeap
+	// JKRExpHeap::CMemBlock
+	// build CMemBlock (JKRExpHeap::CMemBlock) False/False
+	/* dependencies (begin JKRExpHeap::CMemBlock) */
+	// inner dependency:  (JKRExpHeap) False False (for JKRExpHeap::CMemBlock)
+	/* dependencies (end JKRExpHeap::CMemBlock) */
+	struct CMemBlock {
+		// JKRExpHeap
+		/* 802D0810 */ void initiate(JKRExpHeap::CMemBlock*, JKRExpHeap::CMemBlock*, u32, char, char);
+		/* 802D0830 */ void allocFore(u32, char, char, char, char);
+		/* 802D0874 */ void allocBack(u32, char, char, char, char);
+		/* 802D08CC */ void free(JKRExpHeap*);
+		/* 802D091C */ void getHeapBlock(void*);
+	};
+
+	/* 802CEDB4 */ void createRoot(s32, bool);
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+	/* 802CEF00 */ void create(void*, u32, JKRHeap*, bool);
+	/* 802CEFAC */ void do_destroy();
+	/* 802CF030 */ JKRExpHeap(void*, u32, JKRHeap*, bool);
+	/* 802CF0C0 */ ~JKRExpHeap();
+	/* 802CF128 */ void do_alloc(u32, s32);
+	/* 802CF234 */ void allocFromHead(u32, s32);
+	/* 802CF490 */ void allocFromHead(u32);
+	/* 802CF574 */ void allocFromTail(u32, s32);
+	/* 802CF6D4 */ void allocFromTail(u32);
+	/* 802CF7AC */ void do_free(void*);
+	/* 802CF820 */ void do_freeAll();
+	/* 802CF89C */ void do_freeTail();
+	/* 802CF924 */ void do_fillFreeArea();
+	/* 802CF928 */ void do_changeGroupID(char);
+	/* 802CF978 */ void do_resize(void*, u32);
+	/* 802CFB24 */ void do_getSize(void*);
+	/* 802CFBA4 */ void do_getFreeSize();
+	/* 802CFC10 */ void do_getMaxFreeBlock();
+	/* 802CFC84 */ void do_getTotalFreeSize();
+	/* 802CFCE8 */ void getUsedSize(char) const;
+	/* 802CFD64 */ void getTotalUsedSize() const;
+	/* 802CFDCC */ void appendUsedList(JKRExpHeap::CMemBlock*);
+	/* 802CFE68 */ void setFreeBlock(JKRExpHeap::CMemBlock*, JKRExpHeap::CMemBlock*, JKRExpHeap::CMemBlock*);
+	/* 802CFEB4 */ void removeFreeBlock(JKRExpHeap::CMemBlock*);
+	/* 802CFEE8 */ void removeUsedBlock(JKRExpHeap::CMemBlock*);
+	/* 802CFF1C */ void recycleFreeBlock(JKRExpHeap::CMemBlock*);
+	/* 802D00B4 */ void joinTwoBlocks(JKRExpHeap::CMemBlock*);
+	/* 802D0190 */ void check();
+	/* 802D03B8 */ void dump();
+	/* 802D05CC */ void dump_sort();
+	/* 802D0938 */ void state_register(JKRHeap::TState*, u32) const;
+	/* 802D09E0 */ void state_compare(JKRHeap::TState const&, JKRHeap::TState const&) const;
+	/* 802D0A10 */ void getHeapType();
+	/* 802D0A1C */ void do_getCurrentGroupId();
+};
+
+// build JKRHeap (JKRHeap) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void createRoot__10JKRExpHeapFib();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void create__10JKRExpHeapFPvUlP7JKRHeapb();
-extern "C" extern void do_destroy__10JKRExpHeapFv();
-extern "C" extern void __ct__10JKRExpHeapFPvUlP7JKRHeapb();
-extern "C" extern void __dt__10JKRExpHeapFv();
-extern "C" extern void do_alloc__10JKRExpHeapFUli();
-extern "C" extern void allocFromHead__10JKRExpHeapFUli();
-extern "C" extern void allocFromHead__10JKRExpHeapFUl();
-extern "C" extern void allocFromTail__10JKRExpHeapFUli();
-extern "C" extern void allocFromTail__10JKRExpHeapFUl();
-extern "C" extern void do_free__10JKRExpHeapFPv();
-extern "C" extern void do_freeAll__10JKRExpHeapFv();
-extern "C" extern void do_freeTail__10JKRExpHeapFv();
-extern "C" extern void do_fillFreeArea__10JKRExpHeapFv();
-extern "C" extern void do_changeGroupID__10JKRExpHeapFUc();
-extern "C" extern void do_resize__10JKRExpHeapFPvUl();
-extern "C" extern void do_getSize__10JKRExpHeapFPv();
-extern "C" extern void do_getFreeSize__10JKRExpHeapFv();
-extern "C" extern void do_getMaxFreeBlock__10JKRExpHeapFv();
-extern "C" extern void do_getTotalFreeSize__10JKRExpHeapFv();
-extern "C" extern void getUsedSize__10JKRExpHeapCFUc();
-extern "C" extern void getTotalUsedSize__10JKRExpHeapCFv();
-extern "C" extern void appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
-extern "C" extern void check__10JKRExpHeapFv();
-extern "C" extern void dump__10JKRExpHeapFv();
-extern "C" extern void dump_sort__10JKRExpHeapFv();
-extern "C" extern void initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc();
-extern "C" extern void allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc();
-extern "C" extern void allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc();
-extern "C" extern void free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap();
-extern "C" extern void getHeapBlock__Q210JKRExpHeap9CMemBlockFPv();
-extern "C" extern void state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl();
-extern "C" extern void state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
-extern "C" extern void getHeapType__10JKRExpHeapFv();
-extern "C" extern void do_getCurrentGroupId__10JKRExpHeapFv();
+
+extern "C" void createRoot__10JKRExpHeapFib();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void create__10JKRExpHeapFPvUlP7JKRHeapb();
+extern "C" void do_destroy__10JKRExpHeapFv();
+extern "C" void __ct__10JKRExpHeapFPvUlP7JKRHeapb();
+extern "C" void __dt__10JKRExpHeapFv();
+extern "C" void do_alloc__10JKRExpHeapFUli();
+extern "C" void allocFromHead__10JKRExpHeapFUli();
+extern "C" void allocFromHead__10JKRExpHeapFUl();
+extern "C" void allocFromTail__10JKRExpHeapFUli();
+extern "C" void allocFromTail__10JKRExpHeapFUl();
+extern "C" void do_free__10JKRExpHeapFPv();
+extern "C" void do_freeAll__10JKRExpHeapFv();
+extern "C" void do_freeTail__10JKRExpHeapFv();
+extern "C" void do_fillFreeArea__10JKRExpHeapFv();
+extern "C" void do_changeGroupID__10JKRExpHeapFUc();
+extern "C" void do_resize__10JKRExpHeapFPvUl();
+extern "C" void do_getSize__10JKRExpHeapFPv();
+extern "C" void do_getFreeSize__10JKRExpHeapFv();
+extern "C" void do_getMaxFreeBlock__10JKRExpHeapFv();
+extern "C" void do_getTotalFreeSize__10JKRExpHeapFv();
+extern "C" void getUsedSize__10JKRExpHeapCFUc();
+extern "C" void getTotalUsedSize__10JKRExpHeapCFv();
+extern "C" void appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
+extern "C" void setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock();
+extern "C" void removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
+extern "C" void removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
+extern "C" void recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
+extern "C" void joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock();
+extern "C" void check__10JKRExpHeapFv();
+extern "C" void dump__10JKRExpHeapFv();
+extern "C" void dump_sort__10JKRExpHeapFv();
+extern "C" void initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc();
+extern "C" void allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc();
+extern "C" void allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc();
+extern "C" void free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap();
+extern "C" void getHeapBlock__Q210JKRExpHeap9CMemBlockFPv();
+extern "C" void state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl();
+extern "C" void state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
+extern "C" void getHeapType__10JKRExpHeapFv();
+extern "C" void do_getCurrentGroupId__10JKRExpHeapFv();
 SECTION_RODATA extern const u8 JKRExpHeap__stringBase0[864];
 SECTION_DATA extern void*const __vt__10JKRExpHeap[24];
 SECTION_SBSS extern u8 DBfoundSize[4];
@@ -64,34 +162,51 @@ SECTION_SDATA2 extern f64 lit_1123;
 // External References:
 // 
 
-extern "C" extern void __ct__7JKRHeapFPvUlP7JKRHeapb();
-extern "C" extern void __dt__7JKRHeapFv();
-extern "C" extern void initArena__7JKRHeapFPPcPUli();
-extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void callAllDisposer__7JKRHeapFv();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void getMaxAllocatableSize__7JKRHeapFi();
-extern "C" extern void find__7JKRHeapCFPv();
-extern "C" extern void dispose__7JKRHeapFPvUl();
-extern "C" extern void dispose__7JKRHeapFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
-extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
-extern "C" extern void JUTReportConsole_f();
-extern "C" extern void JUTReportConsole();
-extern "C" extern void JUTWarningConsole_f();
-extern "C" extern void JUTWarningConsole();
-extern "C" extern void OSLockMutex();
-extern "C" extern void OSUnlockMutex();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void JUTReportConsole_f();
+extern "C" void JUTReportConsole();
+extern "C" void JUTWarningConsole_f();
+extern "C" void JUTWarningConsole();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb();
+extern "C" void __dt__7JKRHeapFv();
+extern "C" void initArena__7JKRHeapFPPcPUli();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void callAllDisposer__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void getMaxAllocatableSize__7JKRHeapFi();
+extern "C" void find__7JKRHeapCFPv();
+extern "C" void dispose__7JKRHeapFPvUl();
+extern "C" void dispose__7JKRHeapFv();
+extern "C" void __dl__FPv();
+extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void JUTReportConsole_f();
+extern "C" void JUTReportConsole();
+extern "C" void JUTWarningConsole_f();
+extern "C" void JUTWarningConsole();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 mErrorHandler__7JKRHeap[4];
@@ -100,44 +215,44 @@ SECTION_SBSS extern u8 mErrorHandler__7JKRHeap[4];
 // Declarations:
 // 
 
-/* 802CEDB4-802CEE2C 0078+00 .text      createRoot__10JKRExpHeapFib                                  */
+/* 802CEDB4-802CEE2C 0078+00 rc=1 efc=1 .text      createRoot__10JKRExpHeapFib                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createRoot__10JKRExpHeapFib) {
+asm void JKRExpHeap::createRoot(s32 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/createRoot__10JKRExpHeapFib.s"
 }
 #pragma pop
 
 
-/* 802CEE2C-802CEF00 00D4+00 .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
+/* 802CEE2C-802CEF00 00D4+00 rc=19 efc=19 .text      create__10JKRExpHeapFUlP7JKRHeapb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10JKRExpHeapFUlP7JKRHeapb) {
+asm void JKRExpHeap::create(u32 field_0, JKRHeap* field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/create__10JKRExpHeapFUlP7JKRHeapb.s"
 }
 #pragma pop
 
 
-/* 802CEF00-802CEFAC 00AC+00 .text      create__10JKRExpHeapFPvUlP7JKRHeapb                          */
+/* 802CEF00-802CEFAC 00AC+00 rc=1 efc=1 .text      create__10JKRExpHeapFPvUlP7JKRHeapb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10JKRExpHeapFPvUlP7JKRHeapb) {
+asm void JKRExpHeap::create(void* field_0, u32 field_1, JKRHeap* field_2, bool field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/create__10JKRExpHeapFPvUlP7JKRHeapb.s"
 }
 #pragma pop
 
 
-/* 802CEFAC-802CF030 0084+00 .text      do_destroy__10JKRExpHeapFv                                   */
+/* 802CEFAC-802CF030 0084+00 rc=1 efc=0 .text      do_destroy__10JKRExpHeapFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_destroy__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_destroy() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_destroy__10JKRExpHeapFv.s"
 }
@@ -145,7 +260,7 @@ ASM_FUNCTION(do_destroy__10JKRExpHeapFv) {
 
 
 /* ############################################################################################## */
-/* 803CBFD0-803CC030 0060+00 .data      __vt__10JKRExpHeap                                           */
+/* 803CBFD0-803CC030 0060+00 rc=2 efc=0 .data      __vt__10JKRExpHeap                                           */
 void* const __vt__10JKRExpHeap[24] = {
 	NULL, /* RTTI */
 	NULL,
@@ -173,22 +288,22 @@ void* const __vt__10JKRExpHeap[24] = {
 	(void*)state_dump__7JKRHeapCFRCQ27JKRHeap6TState,
 };
 
-/* 802CF030-802CF0C0 0090+00 .text      __ct__10JKRExpHeapFPvUlP7JKRHeapb                            */
+/* 802CF030-802CF0C0 0090+00 rc=3 efc=0 .text      __ct__10JKRExpHeapFPvUlP7JKRHeapb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JKRExpHeapFPvUlP7JKRHeapb) {
+asm JKRExpHeap::JKRExpHeap(void* field_0, u32 field_1, JKRHeap* field_2, bool field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/__ct__10JKRExpHeapFPvUlP7JKRHeapb.s"
 }
 #pragma pop
 
 
-/* 802CF0C0-802CF128 0068+00 .text      __dt__10JKRExpHeapFv                                         */
+/* 802CF0C0-802CF128 0068+00 rc=1 efc=0 .text      __dt__10JKRExpHeapFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JKRExpHeapFv) {
+asm JKRExpHeap::~JKRExpHeap() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/__dt__10JKRExpHeapFv.s"
 }
@@ -196,7 +311,7 @@ ASM_FUNCTION(__dt__10JKRExpHeapFv) {
 
 
 /* ############################################################################################## */
-/* 8039CAF0-8039CE50 0360+00 .rodata    @stringBase0                                                 */
+/* 8039CAF0-8039CE50 0360+00 rc=6 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -250,11 +365,11 @@ SECTION_DEAD char* const stringBase_8039CE2A = "| ---- UsedLast\n";
 SECTION_DEAD char* const stringBase_8039CE3B = "+---------------End\n";
 #pragma pop
 
-/* 802CF128-802CF234 010C+00 .text      do_alloc__10JKRExpHeapFUli                                   */
+/* 802CF128-802CF234 010C+00 rc=1 efc=0 .text      do_alloc__10JKRExpHeapFUli                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_alloc__10JKRExpHeapFUli) {
+asm void JKRExpHeap::do_alloc(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_alloc__10JKRExpHeapFUli.s"
 }
@@ -262,268 +377,263 @@ ASM_FUNCTION(do_alloc__10JKRExpHeapFUli) {
 
 
 /* ############################################################################################## */
-/* 80451398-8045139C 0004+00 .sbss      DBfoundSize                                                  */
+/* 80451398-8045139C 0004+00 rc=1 efc=0 .sbss      DBfoundSize                                                  */
 u8 DBfoundSize[4];
 
-/* 8045139C-804513A0 0004+00 .sbss      DBfoundOffset                                                */
+/* 8045139C-804513A0 0004+00 rc=1 efc=0 .sbss      DBfoundOffset                                                */
 u8 DBfoundOffset[4];
 
-/* 804513A0-804513A4 0004+00 .sbss      DBfoundBlock                                                 */
+/* 804513A0-804513A4 0004+00 rc=1 efc=0 .sbss      DBfoundBlock                                                 */
 u8 DBfoundBlock[4];
 
-/* 804513A4-804513A8 0004+00 .sbss      DBnewFreeBlock                                               */
+/* 804513A4-804513A8 0004+00 rc=1 efc=0 .sbss      DBnewFreeBlock                                               */
 u8 DBnewFreeBlock[4];
 
-/* 804513A8-804513B0 0004+04 .sbss      DBnewUsedBlock                                               */
+/* 804513A8-804513B0 0004+04 rc=1 efc=0 .sbss      DBnewUsedBlock                                               */
 u8 DBnewUsedBlock[4 + 4 /* padding */];
 
-/* 802CF234-802CF490 025C+00 .text      allocFromHead__10JKRExpHeapFUli                              */
+/* 802CF234-802CF490 025C+00 rc=1 efc=0 .text      allocFromHead__10JKRExpHeapFUli                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocFromHead__10JKRExpHeapFUli) {
+asm void JKRExpHeap::allocFromHead(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocFromHead__10JKRExpHeapFUli.s"
 }
 #pragma pop
 
 
-/* 802CF490-802CF574 00E4+00 .text      allocFromHead__10JKRExpHeapFUl                               */
+/* 802CF490-802CF574 00E4+00 rc=1 efc=0 .text      allocFromHead__10JKRExpHeapFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocFromHead__10JKRExpHeapFUl) {
+asm void JKRExpHeap::allocFromHead(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocFromHead__10JKRExpHeapFUl.s"
 }
 #pragma pop
 
 
-/* 802CF574-802CF6D4 0160+00 .text      allocFromTail__10JKRExpHeapFUli                              */
+/* 802CF574-802CF6D4 0160+00 rc=1 efc=0 .text      allocFromTail__10JKRExpHeapFUli                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocFromTail__10JKRExpHeapFUli) {
+asm void JKRExpHeap::allocFromTail(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocFromTail__10JKRExpHeapFUli.s"
 }
 #pragma pop
 
 
-/* 802CF6D4-802CF7AC 00D8+00 .text      allocFromTail__10JKRExpHeapFUl                               */
+/* 802CF6D4-802CF7AC 00D8+00 rc=1 efc=0 .text      allocFromTail__10JKRExpHeapFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocFromTail__10JKRExpHeapFUl) {
+asm void JKRExpHeap::allocFromTail(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocFromTail__10JKRExpHeapFUl.s"
 }
 #pragma pop
 
 
-/* 802CF7AC-802CF820 0074+00 .text      do_free__10JKRExpHeapFPv                                     */
+/* 802CF7AC-802CF820 0074+00 rc=1 efc=0 .text      do_free__10JKRExpHeapFPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_free__10JKRExpHeapFPv) {
+asm void JKRExpHeap::do_free(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_free__10JKRExpHeapFPv.s"
 }
 #pragma pop
 
 
-/* 802CF820-802CF89C 007C+00 .text      do_freeAll__10JKRExpHeapFv                                   */
+/* 802CF820-802CF89C 007C+00 rc=1 efc=0 .text      do_freeAll__10JKRExpHeapFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_freeAll__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_freeAll() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_freeAll__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802CF89C-802CF924 0088+00 .text      do_freeTail__10JKRExpHeapFv                                  */
+/* 802CF89C-802CF924 0088+00 rc=1 efc=0 .text      do_freeTail__10JKRExpHeapFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_freeTail__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_freeTail() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_freeTail__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802CF924-802CF928 0004+00 .text      do_fillFreeArea__10JKRExpHeapFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(do_fillFreeArea__10JKRExpHeapFv) {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRExpHeap/do_fillFreeArea__10JKRExpHeapFv.s"
+/* 802CF924-802CF928 0004+00 rc=1 efc=0 .text      do_fillFreeArea__10JKRExpHeapFv                              */
+void JKRExpHeap::do_fillFreeArea() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802CF928-802CF978 0050+00 .text      do_changeGroupID__10JKRExpHeapFUc                            */
+/* 802CF928-802CF978 0050+00 rc=1 efc=0 .text      do_changeGroupID__10JKRExpHeapFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_changeGroupID__10JKRExpHeapFUc) {
+asm void JKRExpHeap::do_changeGroupID(char field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_changeGroupID__10JKRExpHeapFUc.s"
 }
 #pragma pop
 
 
-/* 802CF978-802CFB24 01AC+00 .text      do_resize__10JKRExpHeapFPvUl                                 */
+/* 802CF978-802CFB24 01AC+00 rc=1 efc=0 .text      do_resize__10JKRExpHeapFPvUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_resize__10JKRExpHeapFPvUl) {
+asm void JKRExpHeap::do_resize(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_resize__10JKRExpHeapFPvUl.s"
 }
 #pragma pop
 
 
-/* 802CFB24-802CFBA4 0080+00 .text      do_getSize__10JKRExpHeapFPv                                  */
+/* 802CFB24-802CFBA4 0080+00 rc=1 efc=0 .text      do_getSize__10JKRExpHeapFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_getSize__10JKRExpHeapFPv) {
+asm void JKRExpHeap::do_getSize(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_getSize__10JKRExpHeapFPv.s"
 }
 #pragma pop
 
 
-/* 802CFBA4-802CFC10 006C+00 .text      do_getFreeSize__10JKRExpHeapFv                               */
+/* 802CFBA4-802CFC10 006C+00 rc=1 efc=0 .text      do_getFreeSize__10JKRExpHeapFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_getFreeSize__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_getFreeSize() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_getFreeSize__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802CFC10-802CFC84 0074+00 .text      do_getMaxFreeBlock__10JKRExpHeapFv                           */
+/* 802CFC10-802CFC84 0074+00 rc=1 efc=0 .text      do_getMaxFreeBlock__10JKRExpHeapFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_getMaxFreeBlock__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_getMaxFreeBlock() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_getMaxFreeBlock__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802CFC84-802CFCE8 0064+00 .text      do_getTotalFreeSize__10JKRExpHeapFv                          */
+/* 802CFC84-802CFCE8 0064+00 rc=1 efc=0 .text      do_getTotalFreeSize__10JKRExpHeapFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_getTotalFreeSize__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_getTotalFreeSize() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_getTotalFreeSize__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802CFCE8-802CFD64 007C+00 .text      getUsedSize__10JKRExpHeapCFUc                                */
+/* 802CFCE8-802CFD64 007C+00 rc=1 efc=0 .text      getUsedSize__10JKRExpHeapCFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getUsedSize__10JKRExpHeapCFUc) {
+asm void JKRExpHeap::getUsedSize(char field_0) const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/getUsedSize__10JKRExpHeapCFUc.s"
 }
 #pragma pop
 
 
-/* 802CFD64-802CFDCC 0068+00 .text      getTotalUsedSize__10JKRExpHeapCFv                            */
+/* 802CFD64-802CFDCC 0068+00 rc=5 efc=5 .text      getTotalUsedSize__10JKRExpHeapCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTotalUsedSize__10JKRExpHeapCFv) {
+asm void JKRExpHeap::getTotalUsedSize() const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/getTotalUsedSize__10JKRExpHeapCFv.s"
 }
 #pragma pop
 
 
-/* 802CFDCC-802CFE68 009C+00 .text      appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock       */
+/* 802CFDCC-802CFE68 009C+00 rc=4 efc=0 .text      appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::appendUsedList(JKRExpHeap::CMemBlock* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/appendUsedList__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock.s"
 }
 #pragma pop
 
 
-/* 802CFE68-802CFEB4 004C+00 .text      setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock */
+/* 802CFE68-802CFEB4 004C+00 rc=5 efc=0 .text      setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::setFreeBlock(JKRExpHeap::CMemBlock* field_0, JKRExpHeap::CMemBlock* field_1, JKRExpHeap::CMemBlock* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/func_802CFE68.s"
 }
 #pragma pop
 
 
-/* 802CFEB4-802CFEE8 0034+00 .text      removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock      */
+/* 802CFEB4-802CFEE8 0034+00 rc=5 efc=0 .text      removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::removeFreeBlock(JKRExpHeap::CMemBlock* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/removeFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock.s"
 }
 #pragma pop
 
 
-/* 802CFEE8-802CFF1C 0034+00 .text      removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock      */
+/* 802CFEE8-802CFF1C 0034+00 rc=1 efc=0 .text      removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::removeUsedBlock(JKRExpHeap::CMemBlock* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/removeUsedBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock.s"
 }
 #pragma pop
 
 
-/* 802CFF1C-802D00B4 0198+00 .text      recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock     */
+/* 802CFF1C-802D00B4 0198+00 rc=2 efc=0 .text      recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::recycleFreeBlock(JKRExpHeap::CMemBlock* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/recycleFreeBlock__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock.s"
 }
 #pragma pop
 
 
-/* 802D00B4-802D0190 00DC+00 .text      joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock        */
+/* 802D00B4-802D0190 00DC+00 rc=1 efc=0 .text      joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock) {
+asm void JKRExpHeap::joinTwoBlocks(JKRExpHeap::CMemBlock* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/joinTwoBlocks__10JKRExpHeapFPQ210JKRExpHeap9CMemBlock.s"
 }
 #pragma pop
 
 
-/* 802D0190-802D03B8 0228+00 .text      check__10JKRExpHeapFv                                        */
+/* 802D0190-802D03B8 0228+00 rc=1 efc=0 .text      check__10JKRExpHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check__10JKRExpHeapFv) {
+asm void JKRExpHeap::check() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/check__10JKRExpHeapFv.s"
 }
@@ -531,132 +641,131 @@ ASM_FUNCTION(check__10JKRExpHeapFv) {
 
 
 /* ############################################################################################## */
-/* 80455F98-80455FA0 0004+04 .sdata2    @1121                                                        */
+/* 80455F98-80455FA0 0004+04 rc=2 efc=0 .sdata2    @1121                                                        */
 f32 JKRExpHeap__lit_1121 = 100.0f;
 /* padding 4 bytes */
 
-/* 80455FA0-80455FA8 0008+00 .sdata2    @1123                                                        */
+/* 80455FA0-80455FA8 0008+00 rc=2 efc=0 .sdata2    @1123                                                        */
 f64 lit_1123 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802D03B8-802D05CC 0214+00 .text      dump__10JKRExpHeapFv                                         */
+/* 802D03B8-802D05CC 0214+00 rc=1 efc=0 .text      dump__10JKRExpHeapFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump__10JKRExpHeapFv) {
+asm void JKRExpHeap::dump() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/dump__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802D05CC-802D0810 0244+00 .text      dump_sort__10JKRExpHeapFv                                    */
+/* 802D05CC-802D0810 0244+00 rc=1 efc=0 .text      dump_sort__10JKRExpHeapFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump_sort__10JKRExpHeapFv) {
+asm void JKRExpHeap::dump_sort() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/dump_sort__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802D0810-802D0830 0020+00 .text      initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc */
+/* 802D0810-802D0830 0020+00 rc=4 efc=0 .text      initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiate__Q210JKRExpHeap9CMemBlockFPQ210JKRExpHeap9CMemBlockPQ210JKRExpHeap9CMemBlockUlUcUc) {
+asm void JKRExpHeap::CMemBlock::initiate(JKRExpHeap::CMemBlock* field_0, JKRExpHeap::CMemBlock* field_1, u32 field_2, char field_3, char field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/func_802D0810.s"
 }
 #pragma pop
 
 
-/* 802D0830-802D0874 0044+00 .text      allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc               */
+/* 802D0830-802D0874 0044+00 rc=3 efc=0 .text      allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc) {
+asm void JKRExpHeap::CMemBlock::allocFore(u32 field_0, char field_1, char field_2, char field_3, char field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocFore__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 802D0874-802D08CC 0058+00 .text      allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc               */
+/* 802D0874-802D08CC 0058+00 rc=1 efc=0 .text      allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc) {
+asm void JKRExpHeap::CMemBlock::allocBack(u32 field_0, char field_1, char field_2, char field_3, char field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/allocBack__Q210JKRExpHeap9CMemBlockFUlUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 802D08CC-802D091C 0050+00 .text      free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap                 */
+/* 802D08CC-802D091C 0050+00 rc=2 efc=0 .text      free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap) {
+asm void JKRExpHeap::CMemBlock::free(JKRExpHeap* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/free__Q210JKRExpHeap9CMemBlockFP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 802D091C-802D0938 001C+00 .text      getHeapBlock__Q210JKRExpHeap9CMemBlockFPv                    */
+/* 802D091C-802D0938 001C+00 rc=3 efc=0 .text      getHeapBlock__Q210JKRExpHeap9CMemBlockFPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeapBlock__Q210JKRExpHeap9CMemBlockFPv) {
+asm void JKRExpHeap::CMemBlock::getHeapBlock(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/getHeapBlock__Q210JKRExpHeap9CMemBlockFPv.s"
 }
 #pragma pop
 
 
-/* 802D0938-802D09E0 00A8+00 .text      state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl           */
+/* 802D0938-802D09E0 00A8+00 rc=1 efc=0 .text      state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl) {
+asm void JKRExpHeap::state_register(JKRHeap::TState* field_0, u32 field_1) const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl.s"
 }
 #pragma pop
 
 
-/* 802D09E0-802D0A10 0030+00 .text      state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState */
+/* 802D09E0-802D0A10 0030+00 rc=1 efc=0 .text      state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState) {
+asm void JKRExpHeap::state_compare(JKRHeap::TState const& field_0, JKRHeap::TState const& field_1) const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState.s"
 }
 #pragma pop
 
 
-/* 802D0A10-802D0A1C 000C+00 .text      getHeapType__10JKRExpHeapFv                                  */
+/* 802D0A10-802D0A1C 000C+00 rc=1 efc=0 .text      getHeapType__10JKRExpHeapFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHeapType__10JKRExpHeapFv) {
+asm void JKRExpHeap::getHeapType() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/getHeapType__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* 802D0A1C-802D0A24 0008+00 .text      do_getCurrentGroupId__10JKRExpHeapFv                         */
+/* 802D0A1C-802D0A24 0008+00 rc=1 efc=0 .text      do_getCurrentGroupId__10JKRExpHeapFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(do_getCurrentGroupId__10JKRExpHeapFv) {
+asm void JKRExpHeap::do_getCurrentGroupId() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRExpHeap/do_getCurrentGroupId__10JKRExpHeapFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

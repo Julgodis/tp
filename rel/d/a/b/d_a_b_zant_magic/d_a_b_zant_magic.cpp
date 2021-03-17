@@ -6,31 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daB_ZANTM_c;
+
+struct daB_ZANTM_c {
+	void draw();
+	void setMagicEffect();
+	void setMagicHitEffect();
+	void executeSmall();
+	void cc_set();
+	void execute();
+	bool _delete();
+	void create();
+	daB_ZANTM_c();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__11daB_ZANTM_cFv();
-extern "C" extern void daB_ZANTM_Draw__FP11daB_ZANTM_c();
-extern "C" extern void setMagicEffect__11daB_ZANTM_cFv();
-extern "C" extern void setMagicHitEffect__11daB_ZANTM_cFv();
-extern "C" extern void executeSmall__11daB_ZANTM_cFv();
-extern "C" extern void cc_set__11daB_ZANTM_cFv();
-extern "C" extern void execute__11daB_ZANTM_cFv();
-extern "C" extern void daB_ZANTM_Execute__FP11daB_ZANTM_c();
-extern "C" extern void daB_ZANTM_IsDelete__FP11daB_ZANTM_c();
-extern "C" extern void _delete__11daB_ZANTM_cFv();
-extern "C" extern void daB_ZANTM_Delete__FP11daB_ZANTM_c();
-extern "C" extern void create__11daB_ZANTM_cFv();
-extern "C" extern void __ct__11daB_ZANTM_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void daB_ZANTM_Create__FP11daB_ZANTM_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80650484();
-extern "C" extern void func_8065048C();
+void daB_ZANTM_Draw(daB_ZANTM_c*);
+void daB_ZANTM_Execute(daB_ZANTM_c*);
+bool daB_ZANTM_IsDelete(daB_ZANTM_c*);
+void daB_ZANTM_Delete(daB_ZANTM_c*);
+void daB_ZANTM_Create(daB_ZANTM_c*);
+extern "C" void func_80650484();
+extern "C" void func_8065048C();
+
+extern "C" void draw__11daB_ZANTM_cFv();
+extern "C" void daB_ZANTM_Draw__FP11daB_ZANTM_c();
+extern "C" void setMagicEffect__11daB_ZANTM_cFv();
+extern "C" void setMagicHitEffect__11daB_ZANTM_cFv();
+extern "C" void executeSmall__11daB_ZANTM_cFv();
+extern "C" void cc_set__11daB_ZANTM_cFv();
+extern "C" void execute__11daB_ZANTM_cFv();
+extern "C" void daB_ZANTM_Execute__FP11daB_ZANTM_c();
+extern "C" bool daB_ZANTM_IsDelete__FP11daB_ZANTM_c();
+extern "C" bool _delete__11daB_ZANTM_cFv();
+extern "C" void daB_ZANTM_Delete__FP11daB_ZANTM_c();
+extern "C" void create__11daB_ZANTM_cFv();
+extern "C" void __ct__11daB_ZANTM_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void daB_ZANTM_Create__FP11daB_ZANTM_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80650484();
+extern "C" void func_8065048C();
 SECTION_RODATA extern const u32 lit_3721;
 SECTION_RODATA extern const u32 lit_3722;
 SECTION_RODATA extern const u32 lit_3723;
@@ -69,7 +119,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +131,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/draw__11daB_ZANTM_cFv.s"
 }
@@ -90,7 +142,7 @@ ASM_FUNCTION(draw__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTM_Draw__FP11daB_ZANTM_c) {
+asm void daB_ZANTM_Draw(daB_ZANTM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_Draw__FP11daB_ZANTM_c.s"
 }
@@ -101,7 +153,7 @@ ASM_FUNCTION(daB_ZANTM_Draw__FP11daB_ZANTM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMagicEffect__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::setMagicEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/setMagicEffect__11daB_ZANTM_cFv.s"
 }
@@ -112,7 +164,7 @@ ASM_FUNCTION(setMagicEffect__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMagicHitEffect__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::setMagicHitEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/setMagicHitEffect__11daB_ZANTM_cFv.s"
 }
@@ -123,7 +175,7 @@ ASM_FUNCTION(setMagicHitEffect__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSmall__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::executeSmall() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/executeSmall__11daB_ZANTM_cFv.s"
 }
@@ -134,7 +186,7 @@ ASM_FUNCTION(executeSmall__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/cc_set__11daB_ZANTM_cFv.s"
 }
@@ -145,7 +197,7 @@ ASM_FUNCTION(cc_set__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/execute__11daB_ZANTM_cFv.s"
 }
@@ -156,7 +208,7 @@ ASM_FUNCTION(execute__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTM_Execute__FP11daB_ZANTM_c) {
+asm void daB_ZANTM_Execute(daB_ZANTM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_Execute__FP11daB_ZANTM_c.s"
 }
@@ -164,32 +216,22 @@ ASM_FUNCTION(daB_ZANTM_Execute__FP11daB_ZANTM_c) {
 
 
 /* 8064FF24-8064FF2C 0008+00 .text      daB_ZANTM_IsDelete__FP11daB_ZANTM_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTM_IsDelete__FP11daB_ZANTM_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_IsDelete__FP11daB_ZANTM_c.s"
+bool daB_ZANTM_IsDelete(daB_ZANTM_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8064FF2C-8064FF34 0008+00 .text      _delete__11daB_ZANTM_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daB_ZANTM_cFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/_delete__11daB_ZANTM_cFv.s"
+bool daB_ZANTM_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8064FF34-8064FF54 0020+00 .text      daB_ZANTM_Delete__FP11daB_ZANTM_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTM_Delete__FP11daB_ZANTM_c) {
+asm void daB_ZANTM_Delete(daB_ZANTM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_Delete__FP11daB_ZANTM_c.s"
 }
@@ -200,7 +242,7 @@ ASM_FUNCTION(daB_ZANTM_Delete__FP11daB_ZANTM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daB_ZANTM_cFv) {
+asm void daB_ZANTM_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/create__11daB_ZANTM_cFv.s"
 }
@@ -211,7 +253,7 @@ ASM_FUNCTION(create__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daB_ZANTM_cFv) {
+asm daB_ZANTM_c::daB_ZANTM_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__ct__11daB_ZANTM_cFv.s"
 }
@@ -222,7 +264,7 @@ ASM_FUNCTION(__ct__11daB_ZANTM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__8cM3dGSphFv.s"
 }
@@ -233,7 +275,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__8cM3dGAabFv.s"
 }
@@ -244,7 +286,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__10dCcD_GSttsFv.s"
 }
@@ -255,7 +297,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -266,7 +308,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__12dBgS_AcchCirFv.s"
 }
@@ -277,7 +319,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTM_Create__FP11daB_ZANTM_c) {
+asm void daB_ZANTM_Create(daB_ZANTM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_Create__FP11daB_ZANTM_c.s"
 }
@@ -288,7 +330,7 @@ ASM_FUNCTION(daB_ZANTM_Create__FP11daB_ZANTM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/__dt__10cCcD_GSttsFv.s"
 }
@@ -299,7 +341,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80650484) {
+extern "C" asm void func_80650484() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/func_80650484.s"
 }
@@ -310,7 +352,7 @@ ASM_FUNCTION(func_80650484) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8065048C) {
+extern "C" asm void func_8065048C() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/func_8065048C.s"
 }

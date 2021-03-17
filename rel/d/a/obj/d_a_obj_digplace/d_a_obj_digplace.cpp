@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjDigpl_c;
+
+struct daObjDigpl_c {
+	void create();
+	~daObjDigpl_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daObjDigpl_cFv();
-extern "C" extern void daObjDigpl_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daObjDigpl_cFv();
-extern "C" extern void daObjDigpl_Delete__FP12daObjDigpl_c();
-extern "C" extern void execute__12daObjDigpl_cFv();
-extern "C" extern void daObjDigpl_Execute__FP12daObjDigpl_c();
-extern "C" extern void daObjDigpl_Draw__FP12daObjDigpl_c();
+void daObjDigpl_Create(fopAc_ac_c*);
+void daObjDigpl_Delete(daObjDigpl_c*);
+void daObjDigpl_Execute(daObjDigpl_c*);
+bool daObjDigpl_Draw(daObjDigpl_c*);
+
+extern "C" void create__12daObjDigpl_cFv();
+extern "C" void daObjDigpl_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daObjDigpl_cFv();
+extern "C" void daObjDigpl_Delete__FP12daObjDigpl_c();
+extern "C" void execute__12daObjDigpl_cFv();
+extern "C" void daObjDigpl_Execute__FP12daObjDigpl_c();
+extern "C" bool daObjDigpl_Draw__FP12daObjDigpl_c();
 SECTION_RODATA extern const u32 lit_3822;
 SECTION_RODATA extern const u32 lit_3823;
 SECTION_RODATA extern const u32 lit_3824;
@@ -38,7 +59,9 @@ SECTION_DATA extern void*const __vt__12daObjDigpl_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +71,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjDigpl_cFv) {
+asm void daObjDigpl_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/create__12daObjDigpl_cFv.s"
 }
@@ -59,7 +82,7 @@ ASM_FUNCTION(create__12daObjDigpl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigpl_Create__FP10fopAc_ac_c) {
+asm void daObjDigpl_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Create__FP10fopAc_ac_c.s"
 }
@@ -70,7 +93,7 @@ ASM_FUNCTION(daObjDigpl_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObjDigpl_cFv) {
+asm daObjDigpl_c::~daObjDigpl_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/__dt__12daObjDigpl_cFv.s"
 }
@@ -81,7 +104,7 @@ ASM_FUNCTION(__dt__12daObjDigpl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigpl_Delete__FP12daObjDigpl_c) {
+asm void daObjDigpl_Delete(daObjDigpl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Delete__FP12daObjDigpl_c.s"
 }
@@ -92,7 +115,7 @@ ASM_FUNCTION(daObjDigpl_Delete__FP12daObjDigpl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjDigpl_cFv) {
+asm void daObjDigpl_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/execute__12daObjDigpl_cFv.s"
 }
@@ -103,7 +126,7 @@ ASM_FUNCTION(execute__12daObjDigpl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDigpl_Execute__FP12daObjDigpl_c) {
+asm void daObjDigpl_Execute(daObjDigpl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Execute__FP12daObjDigpl_c.s"
 }
@@ -111,14 +134,9 @@ ASM_FUNCTION(daObjDigpl_Execute__FP12daObjDigpl_c) {
 
 
 /* 8057C8A0-8057C8A8 0008+00 .text      daObjDigpl_Draw__FP12daObjDigpl_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjDigpl_Draw__FP12daObjDigpl_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Draw__FP12daObjDigpl_c.s"
+bool daObjDigpl_Draw(daObjDigpl_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

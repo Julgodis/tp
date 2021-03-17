@@ -6,15 +6,35 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMyna2_c;
+
+struct daTagMyna2_c {
+	void create();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagMyna2_cFv();
-extern "C" extern void execute__12daTagMyna2_cFv();
-extern "C" extern void daTagMyna2_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagMyna2_Execute__FP12daTagMyna2_c();
-extern "C" extern void daTagMyna2_Delete__FP12daTagMyna2_c();
-extern "C" extern void func_80D5CA18();
+void daTagMyna2_Create(fopAc_ac_c*);
+void daTagMyna2_Execute(daTagMyna2_c*);
+void daTagMyna2_Delete(daTagMyna2_c*);
+extern "C" void func_80D5CA18();
+
+extern "C" void create__12daTagMyna2_cFv();
+extern "C" void execute__12daTagMyna2_cFv();
+extern "C" void daTagMyna2_Create__FP10fopAc_ac_c();
+extern "C" void daTagMyna2_Execute__FP12daTagMyna2_c();
+extern "C" void daTagMyna2_Delete__FP12daTagMyna2_c();
+extern "C" void func_80D5CA18();
 SECTION_RODATA extern const u8 lit_3743[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3744[8];
 SECTION_RODATA extern const u8 lit_3745[8];
@@ -28,7 +48,9 @@ SECTION_DATA extern u8 g_profile_TAG_MYNA2[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -38,7 +60,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagMyna2_cFv) {
+asm void daTagMyna2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/create__12daTagMyna2_cFv.s"
 }
@@ -49,7 +71,7 @@ ASM_FUNCTION(create__12daTagMyna2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagMyna2_cFv) {
+asm void daTagMyna2_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/execute__12daTagMyna2_cFv.s"
 }
@@ -60,7 +82,7 @@ ASM_FUNCTION(execute__12daTagMyna2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMyna2_Create__FP10fopAc_ac_c) {
+asm void daTagMyna2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Create__FP10fopAc_ac_c.s"
 }
@@ -71,7 +93,7 @@ ASM_FUNCTION(daTagMyna2_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMyna2_Execute__FP12daTagMyna2_c) {
+asm void daTagMyna2_Execute(daTagMyna2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Execute__FP12daTagMyna2_c.s"
 }
@@ -82,7 +104,7 @@ ASM_FUNCTION(daTagMyna2_Execute__FP12daTagMyna2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMyna2_Delete__FP12daTagMyna2_c) {
+asm void daTagMyna2_Delete(daTagMyna2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Delete__FP12daTagMyna2_c.s"
 }
@@ -93,7 +115,7 @@ ASM_FUNCTION(daTagMyna2_Delete__FP12daTagMyna2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D5CA18) {
+extern "C" asm void func_80D5CA18() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/func_80D5CA18.s"
 }

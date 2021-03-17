@@ -9,15 +9,20 @@
 // Forward References:
 // 
 
-extern "C" extern void GXSetGPMetric();
-extern "C" extern void GXClearGPMetric();
-extern "C" extern void GXReadXfRasMetric();
+extern "C" void GXSetGPMetric();
+extern "C" void GXClearGPMetric();
+extern "C" void GXReadXfRasMetric();
+
+extern "C" void GXSetGPMetric();
+extern "C" void GXClearGPMetric();
+extern "C" void GXReadXfRasMetric();
 SECTION_DATA extern void*lit_182[23];
 SECTION_DATA extern void*lit_181[37];
 
 // 
 // External References:
 // 
+
 
 SECTION_SBSS extern u8 __cpReg[4];
 SECTION_SDATA2 extern void*__GXData;
@@ -27,7 +32,7 @@ SECTION_SDATA2 extern void*__GXData;
 // 
 
 /* ############################################################################################## */
-/* 803D2858-803D28B4 005C+00 .data      @182                                                         */
+/* 803D2858-803D28B4 005C+00 rc=1 efc=0 .data      @182                                                         */
 void* lit_182[23] = {
 	(void*)(((char*)GXSetGPMetric)+0x568),
 	(void*)(((char*)GXSetGPMetric)+0x584),
@@ -54,7 +59,7 @@ void* lit_182[23] = {
 	(void*)(((char*)GXSetGPMetric)+0x838),
 };
 
-/* 803D28B4-803D2948 0090+04 .data      @181                                                         */
+/* 803D28B4-803D2948 0090+04 rc=1 efc=0 .data      @181                                                         */
 void* lit_181[37] = {
 	(void*)(((char*)GXSetGPMetric)+0x13C),
 	(void*)(((char*)GXSetGPMetric)+0x15C),
@@ -96,37 +101,36 @@ void* lit_181[37] = {
 	NULL,
 };
 
-/* 8036067C-80360EC4 0848+00 .text      GXSetGPMetric                                                */
+/* 8036067C-80360EC4 0848+00 rc=3 efc=1 .text      GXSetGPMetric                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetGPMetric) {
+extern "C" asm void GXSetGPMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXSetGPMetric.s"
 }
 #pragma pop
 
 
-/* 80360EC4-80360ED4 0010+00 .text      GXClearGPMetric                                              */
+/* 80360EC4-80360ED4 0010+00 rc=1 efc=1 .text      GXClearGPMetric                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXClearGPMetric) {
+extern "C" asm void GXClearGPMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXClearGPMetric.s"
 }
 #pragma pop
 
 
-/* 80360ED4-80360F98 00C4+00 .text      GXReadXfRasMetric                                            */
+/* 80360ED4-80360F98 00C4+00 rc=1 efc=1 .text      GXReadXfRasMetric                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXReadXfRasMetric) {
+extern "C" asm void GXReadXfRasMetric() {
 	nofralloc
 #include "asm/dolphin/gx/GXPerf/GXReadXfRasMetric.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

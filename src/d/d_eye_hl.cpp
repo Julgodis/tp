@@ -6,14 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dEyeHL_c (dEyeHL_c) False/False
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+/* top-level dependencies (begin dEyeHL_c) */
+// outer dependency: J3DModelData
+/* top-level dependencies (end dEyeHL_c) */
+struct dEyeHL_c {
+	// J3DModelData
+	/* 8009C964 */ void entry(J3DModelData*, char const*);
+	/* 8009CA28 */ void remove();
+};
+
+// build J3DModelData (J3DModelData) True/True
+// build dEyeHL_mng_c (dEyeHL_mng_c) False/False
+// build dEyeHL_c (dEyeHL_c) True/True
+/* top-level dependencies (begin dEyeHL_mng_c) */
+// outer dependency: dEyeHL_c
+/* top-level dependencies (end dEyeHL_mng_c) */
+struct dEyeHL_mng_c {
+	// dEyeHL_c
+	/* 8009CA48 */ void update();
+	/* 8009CB14 */ void entry(dEyeHL_c*);
+	/* 8009CB34 */ void remove(dEyeHL_c*);
+};
+
+// build JUTNameTab (JUTNameTab) False/False
+/* top-level dependencies (begin JUTNameTab) */
+/* top-level dependencies (end JUTNameTab) */
+struct JUTNameTab {
+	/* 802DEAF8 */ void getName(u16) const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void entry__8dEyeHL_cFP12J3DModelDataPCc();
-extern "C" extern void remove__8dEyeHL_cFv();
-extern "C" extern void update__12dEyeHL_mng_cFv();
-extern "C" extern void entry__12dEyeHL_mng_cFP8dEyeHL_c();
-extern "C" extern void remove__12dEyeHL_mng_cFP8dEyeHL_c();
+
+extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc();
+extern "C" void remove__8dEyeHL_cFv();
+extern "C" void update__12dEyeHL_mng_cFv();
+extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c();
+extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c();
 SECTION_RODATA extern const u8 d_d_eye_hl__stringBase0[64];
 SECTION_SBSS extern u8 m_obj__12dEyeHL_mng_c[4 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80450FB0[8];
@@ -26,11 +67,16 @@ SECTION_SDATA2 extern f32 d_d_eye_hl__lit_3863;
 // External References:
 // 
 
-extern "C" extern void OSReport_Error();
-extern "C" extern void getName__10JUTNameTabCFUs();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
-extern "C" extern void strcmp();
+extern "C" void OSReport_Error();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void strcmp();
+
+extern "C" void OSReport_Error();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void strcmp();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_envHIO[68];
 
@@ -39,7 +85,7 @@ SECTION_BSS extern u8 g_envHIO[68];
 // 
 
 /* ############################################################################################## */
-/* 8037B100-8037B140 002A+16 .rodata    @stringBase0                                                 */
+/* 8037B100-8037B140 002A+16 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -48,22 +94,22 @@ SECTION_DEAD char* const stringBase_8037B100 = "目のハイライトテクス�
 SECTION_DEAD char* const pad_8037B12A = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 #pragma pop
 
-/* 8009C964-8009CA28 00C4+00 .text      entry__8dEyeHL_cFP12J3DModelDataPCc                          */
+/* 8009C964-8009CA28 00C4+00 rc=2 efc=2 .text      entry__8dEyeHL_cFP12J3DModelDataPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entry__8dEyeHL_cFP12J3DModelDataPCc) {
+asm void dEyeHL_c::entry(J3DModelData* field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/d_eye_hl/entry__8dEyeHL_cFP12J3DModelDataPCc.s"
 }
 #pragma pop
 
 
-/* 8009CA28-8009CA48 0020+00 .text      remove__8dEyeHL_cFv                                          */
+/* 8009CA28-8009CA48 0020+00 rc=3 efc=3 .text      remove__8dEyeHL_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__8dEyeHL_cFv) {
+asm void dEyeHL_c::remove() {
 	nofralloc
 #include "asm/d/d_eye_hl/remove__8dEyeHL_cFv.s"
 }
@@ -71,42 +117,42 @@ ASM_FUNCTION(remove__8dEyeHL_cFv) {
 
 
 /* ############################################################################################## */
-/* 80450FA8-80450FB0 0004+04 .sbss      m_obj__12dEyeHL_mng_c                                        */
+/* 80450FA8-80450FB0 0004+04 rc=3 efc=0 .sbss      m_obj__12dEyeHL_mng_c                                        */
 u8 m_obj__12dEyeHL_mng_c[4 + 4 /* padding */];
 
-/* 80452C10-80452C14 0004+00 .sdata2    @3862                                                        */
+/* 80452C10-80452C14 0004+00 rc=1 efc=0 .sdata2    @3862                                                        */
 f32 d_d_eye_hl__lit_3862 = 2.0f;
 
-/* 80452C14-80452C18 0004+00 .sdata2    @3863                                                        */
+/* 80452C14-80452C18 0004+00 rc=1 efc=0 .sdata2    @3863                                                        */
 f32 d_d_eye_hl__lit_3863 = 45.0f;
 
-/* 8009CA48-8009CB14 00CC+00 .text      update__12dEyeHL_mng_cFv                                     */
+/* 8009CA48-8009CB14 00CC+00 rc=1 efc=1 .text      update__12dEyeHL_mng_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__12dEyeHL_mng_cFv) {
+asm void dEyeHL_mng_c::update() {
 	nofralloc
 #include "asm/d/d_eye_hl/update__12dEyeHL_mng_cFv.s"
 }
 #pragma pop
 
 
-/* 8009CB14-8009CB34 0020+00 .text      entry__12dEyeHL_mng_cFP8dEyeHL_c                             */
+/* 8009CB14-8009CB34 0020+00 rc=1 efc=0 .text      entry__12dEyeHL_mng_cFP8dEyeHL_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entry__12dEyeHL_mng_cFP8dEyeHL_c) {
+asm void dEyeHL_mng_c::entry(dEyeHL_c* field_0) {
 	nofralloc
 #include "asm/d/d_eye_hl/entry__12dEyeHL_mng_cFP8dEyeHL_c.s"
 }
 #pragma pop
 
 
-/* 8009CB34-8009CB88 0054+00 .text      remove__12dEyeHL_mng_cFP8dEyeHL_c                            */
+/* 8009CB34-8009CB88 0054+00 rc=1 efc=0 .text      remove__12dEyeHL_mng_cFP8dEyeHL_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__12dEyeHL_mng_cFP8dEyeHL_c) {
+asm void dEyeHL_mng_c::remove(dEyeHL_c* field_0) {
 	nofralloc
 #include "asm/d/d_eye_hl/remove__12dEyeHL_mng_cFP8dEyeHL_c.s"
 }
@@ -114,20 +160,20 @@ ASM_FUNCTION(remove__12dEyeHL_mng_cFP8dEyeHL_c) {
 
 
 /* ############################################################################################## */
-/* 80450FB0-80450FB8 0008+00 .sbss      None                                                         */
+/* 80450FB0-80450FB8 0008+00 rc=2 efc=2 .sbss      None                                                         */
 u8 struct_80450FB0[8];
 /* 80450FB0 0001 data_80450FB0 */
 /* 80450FB1 0001 data_80450FB1 */
 /* 80450FB2 0006 data_80450FB2 */
 
-/* 80450FB8-80450FBC 0004+00 .sbss      None                                                         */
+/* 80450FB8-80450FBC 0004+00 rc=1 efc=1 .sbss      None                                                         */
 u8 struct_80450FB8[4];
 /* 80450FB8 0001 data_80450FB8 */
 /* 80450FB9 0001 data_80450FB9 */
 /* 80450FBA 0001 data_80450FBA */
 /* 80450FBB 0001 data_80450FBB */
 
-/* 80450FBC-80450FC0 0004+00 .sbss      None                                                         */
+/* 80450FBC-80450FC0 0004+00 rc=1 efc=1 .sbss      None                                                         */
 u8 struct_80450FBC[4];
 /* 80450FBC 0001 data_80450FBC */
 /* 80450FBD 0003 data_80450FBD */

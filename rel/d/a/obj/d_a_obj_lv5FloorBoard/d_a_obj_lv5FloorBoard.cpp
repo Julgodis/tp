@@ -6,33 +6,92 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daFlorBoad_c;
+
+struct daFlorBoad_HIO_c {
+	daFlorBoad_HIO_c();
+	~daFlorBoad_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daFlorBoad_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void procMain();
+	void init_modeWait();
+	void modeWait();
+	void init_modeBreak();
+	void modeBreak();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daFlorBoad_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daFlorBoad_cFv();
-extern "C" extern void CreateHeap__12daFlorBoad_cFv();
-extern "C" extern void create__12daFlorBoad_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__12daFlorBoad_cFPPA3_A4_f();
-extern "C" extern void procMain__12daFlorBoad_cFv();
-extern "C" extern void init_modeWait__12daFlorBoad_cFv();
-extern "C" extern void modeWait__12daFlorBoad_cFv();
-extern "C" extern void init_modeBreak__12daFlorBoad_cFv();
-extern "C" extern void modeBreak__12daFlorBoad_cFv();
-extern "C" extern void Draw__12daFlorBoad_cFv();
-extern "C" extern void Delete__12daFlorBoad_cFv();
-extern "C" extern void daFlorBoad_Draw__FP12daFlorBoad_c();
-extern "C" extern void daFlorBoad_Execute__FP12daFlorBoad_c();
-extern "C" extern void daFlorBoad_Delete__FP12daFlorBoad_c();
-extern "C" extern void daFlorBoad_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daFlorBoad_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv5FloorBoard_cpp();
+extern "C" void Execute__12daFlorBoad_cFPPA3_A4_f();
+void daFlorBoad_Draw(daFlorBoad_c*);
+void daFlorBoad_Execute(daFlorBoad_c*);
+void daFlorBoad_Delete(daFlorBoad_c*);
+void daFlorBoad_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv5FloorBoard_cpp();
+
+extern "C" void __ct__16daFlorBoad_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daFlorBoad_cFv();
+extern "C" void CreateHeap__12daFlorBoad_cFv();
+extern "C" void create__12daFlorBoad_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__12daFlorBoad_cFPPA3_A4_f();
+extern "C" void procMain__12daFlorBoad_cFv();
+extern "C" void init_modeWait__12daFlorBoad_cFv();
+extern "C" void modeWait__12daFlorBoad_cFv();
+extern "C" void init_modeBreak__12daFlorBoad_cFv();
+extern "C" void modeBreak__12daFlorBoad_cFv();
+extern "C" void Draw__12daFlorBoad_cFv();
+extern "C" void Delete__12daFlorBoad_cFv();
+extern "C" void daFlorBoad_Draw__FP12daFlorBoad_c();
+extern "C" void daFlorBoad_Execute__FP12daFlorBoad_c();
+extern "C" void daFlorBoad_Delete__FP12daFlorBoad_c();
+extern "C" void daFlorBoad_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daFlorBoad_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv5FloorBoard_cpp();
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u8 mCcDObjInfo__12daFlorBoad_c[48];
 SECTION_RODATA extern const u32 lit_3870;
@@ -65,8 +124,11 @@ SECTION_BSS extern u8 data_80C6B320[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -76,7 +138,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daFlorBoad_HIO_cFv) {
+asm daFlorBoad_HIO_c::daFlorBoad_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__ct__16daFlorBoad_HIO_cFv.s"
 }
@@ -87,7 +149,7 @@ ASM_FUNCTION(__ct__16daFlorBoad_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -98,7 +160,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -109,7 +171,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/setBaseMtx__12daFlorBoad_cFv.s"
 }
@@ -120,7 +182,7 @@ ASM_FUNCTION(setBaseMtx__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/CreateHeap__12daFlorBoad_cFv.s"
 }
@@ -131,7 +193,7 @@ ASM_FUNCTION(CreateHeap__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/create__12daFlorBoad_cFv.s"
 }
@@ -142,7 +204,7 @@ ASM_FUNCTION(create__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__8cM3dGCylFv.s"
 }
@@ -153,7 +215,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__8cM3dGAabFv.s"
 }
@@ -164,7 +226,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__10dCcD_GSttsFv.s"
 }
@@ -175,7 +237,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daFlorBoad_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daFlorBoad_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/Execute__12daFlorBoad_cFPPA3_A4_f.s"
 }
@@ -186,7 +248,7 @@ ASM_FUNCTION(Execute__12daFlorBoad_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/procMain__12daFlorBoad_cFv.s"
 }
@@ -197,7 +259,7 @@ ASM_FUNCTION(procMain__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/init_modeWait__12daFlorBoad_cFv.s"
 }
@@ -208,7 +270,7 @@ ASM_FUNCTION(init_modeWait__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/modeWait__12daFlorBoad_cFv.s"
 }
@@ -219,7 +281,7 @@ ASM_FUNCTION(modeWait__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/init_modeBreak__12daFlorBoad_cFv.s"
 }
@@ -230,7 +292,7 @@ ASM_FUNCTION(init_modeBreak__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/modeBreak__12daFlorBoad_cFv.s"
 }
@@ -241,7 +303,7 @@ ASM_FUNCTION(modeBreak__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/Draw__12daFlorBoad_cFv.s"
 }
@@ -252,7 +314,7 @@ ASM_FUNCTION(Draw__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daFlorBoad_cFv) {
+asm void daFlorBoad_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/Delete__12daFlorBoad_cFv.s"
 }
@@ -263,7 +325,7 @@ ASM_FUNCTION(Delete__12daFlorBoad_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFlorBoad_Draw__FP12daFlorBoad_c) {
+asm void daFlorBoad_Draw(daFlorBoad_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Draw__FP12daFlorBoad_c.s"
 }
@@ -274,7 +336,7 @@ ASM_FUNCTION(daFlorBoad_Draw__FP12daFlorBoad_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFlorBoad_Execute__FP12daFlorBoad_c) {
+asm void daFlorBoad_Execute(daFlorBoad_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Execute__FP12daFlorBoad_c.s"
 }
@@ -285,7 +347,7 @@ ASM_FUNCTION(daFlorBoad_Execute__FP12daFlorBoad_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFlorBoad_Delete__FP12daFlorBoad_c) {
+asm void daFlorBoad_Delete(daFlorBoad_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Delete__FP12daFlorBoad_c.s"
 }
@@ -296,7 +358,7 @@ ASM_FUNCTION(daFlorBoad_Delete__FP12daFlorBoad_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFlorBoad_Create__FP10fopAc_ac_c) {
+asm void daFlorBoad_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Create__FP10fopAc_ac_c.s"
 }
@@ -307,7 +369,7 @@ ASM_FUNCTION(daFlorBoad_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__10cCcD_GSttsFv.s"
 }
@@ -318,7 +380,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daFlorBoad_HIO_cFv) {
+asm daFlorBoad_HIO_c::~daFlorBoad_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__dt__16daFlorBoad_HIO_cFv.s"
 }
@@ -329,7 +391,7 @@ ASM_FUNCTION(__dt__16daFlorBoad_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv5FloorBoard_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv5FloorBoard_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/__sinit_d_a_obj_lv5FloorBoard_cpp.s"
 }

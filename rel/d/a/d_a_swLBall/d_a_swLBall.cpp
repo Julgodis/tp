@@ -6,25 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSwLBall_c;
+
+struct fopAc_ac_c {
+};
+
+struct daSwLBall_c {
+	void checkArea_sub(fopAc_ac_c*);
+	void checkArea();
+	void search_lb();
+	void Create();
+	void create();
+	void execute();
+	void actionInit();
+	void actionRun();
+	void actionStop();
+	void PutCrrPos();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void s_lb_sub__FPvPv();
-extern "C" extern void checkArea_sub__11daSwLBall_cFP10fopAc_ac_c();
-extern "C" extern void checkArea__11daSwLBall_cFv();
-extern "C" extern void search_lb__11daSwLBall_cFv();
-extern "C" extern void Create__11daSwLBall_cFv();
-extern "C" extern void create__11daSwLBall_cFv();
-extern "C" extern void execute__11daSwLBall_cFv();
-extern "C" extern void actionInit__11daSwLBall_cFv();
-extern "C" extern void actionRun__11daSwLBall_cFv();
-extern "C" extern void actionStop__11daSwLBall_cFv();
-extern "C" extern void PutCrrPos__11daSwLBall_cFv();
-extern "C" extern void _delete__11daSwLBall_cFv();
-extern "C" extern void daSwLBall_Execute__FP11daSwLBall_c();
-extern "C" extern void daSwLBall_Delete__FP11daSwLBall_c();
-extern "C" extern void daSwLBall_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80D4F4AC();
+void s_lb_sub(void*, void*);
+void daSwLBall_Execute(daSwLBall_c*);
+void daSwLBall_Delete(daSwLBall_c*);
+void daSwLBall_Create(fopAc_ac_c*);
+extern "C" void func_80D4F4AC();
+
+extern "C" void s_lb_sub__FPvPv();
+extern "C" void checkArea_sub__11daSwLBall_cFP10fopAc_ac_c();
+extern "C" void checkArea__11daSwLBall_cFv();
+extern "C" void search_lb__11daSwLBall_cFv();
+extern "C" void Create__11daSwLBall_cFv();
+extern "C" void create__11daSwLBall_cFv();
+extern "C" void execute__11daSwLBall_cFv();
+extern "C" void actionInit__11daSwLBall_cFv();
+extern "C" void actionRun__11daSwLBall_cFv();
+extern "C" void actionStop__11daSwLBall_cFv();
+extern "C" void PutCrrPos__11daSwLBall_cFv();
+extern "C" bool _delete__11daSwLBall_cFv();
+extern "C" void daSwLBall_Execute__FP11daSwLBall_c();
+extern "C" void daSwLBall_Delete__FP11daSwLBall_c();
+extern "C" void daSwLBall_Create__FP10fopAc_ac_c();
+extern "C" void func_80D4F4AC();
 SECTION_RODATA extern const u32 lit_3723;
 SECTION_RODATA extern const u32 lit_3724;
 SECTION_RODATA extern const u32 lit_3725;
@@ -47,7 +77,9 @@ SECTION_BSS extern u8 data_80D4F5AC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +89,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_lb_sub__FPvPv) {
+asm void s_lb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/s_lb_sub__FPvPv.s"
 }
@@ -68,7 +100,7 @@ ASM_FUNCTION(s_lb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea_sub__11daSwLBall_cFP10fopAc_ac_c) {
+asm void daSwLBall_c::checkArea_sub(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/checkArea_sub__11daSwLBall_cFP10fopAc_ac_c.s"
 }
@@ -79,7 +111,7 @@ ASM_FUNCTION(checkArea_sub__11daSwLBall_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__11daSwLBall_cFv) {
+asm void daSwLBall_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/checkArea__11daSwLBall_cFv.s"
 }
@@ -90,7 +122,7 @@ ASM_FUNCTION(checkArea__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_lb__11daSwLBall_cFv) {
+asm void daSwLBall_c::search_lb() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/search_lb__11daSwLBall_cFv.s"
 }
@@ -101,7 +133,7 @@ ASM_FUNCTION(search_lb__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daSwLBall_cFv) {
+asm void daSwLBall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/Create__11daSwLBall_cFv.s"
 }
@@ -112,7 +144,7 @@ ASM_FUNCTION(Create__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daSwLBall_cFv) {
+asm void daSwLBall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/func_80D4EEF8.s"
 }
@@ -123,7 +155,7 @@ ASM_FUNCTION(create__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daSwLBall_cFv) {
+asm void daSwLBall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/execute__11daSwLBall_cFv.s"
 }
@@ -134,7 +166,7 @@ ASM_FUNCTION(execute__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__11daSwLBall_cFv) {
+asm void daSwLBall_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/actionInit__11daSwLBall_cFv.s"
 }
@@ -145,7 +177,7 @@ ASM_FUNCTION(actionInit__11daSwLBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionRun__11daSwLBall_cFv) {
+asm void daSwLBall_c::actionRun() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/actionRun__11daSwLBall_cFv.s"
 }
@@ -153,21 +185,16 @@ ASM_FUNCTION(actionRun__11daSwLBall_cFv) {
 
 
 /* 80D4F220-80D4F224 0004+00 .text      actionStop__11daSwLBall_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionStop__11daSwLBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/actionStop__11daSwLBall_cFv.s"
+void daSwLBall_c::actionStop() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D4F224-80D4F444 0220+00 .text      PutCrrPos__11daSwLBall_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PutCrrPos__11daSwLBall_cFv) {
+asm void daSwLBall_c::PutCrrPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/PutCrrPos__11daSwLBall_cFv.s"
 }
@@ -175,21 +202,16 @@ ASM_FUNCTION(PutCrrPos__11daSwLBall_cFv) {
 
 
 /* 80D4F444-80D4F44C 0008+00 .text      _delete__11daSwLBall_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daSwLBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/_delete__11daSwLBall_cFv.s"
+bool daSwLBall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4F44C-80D4F46C 0020+00 .text      daSwLBall_Execute__FP11daSwLBall_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwLBall_Execute__FP11daSwLBall_c) {
+asm void daSwLBall_Execute(daSwLBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/daSwLBall_Execute__FP11daSwLBall_c.s"
 }
@@ -200,7 +222,7 @@ ASM_FUNCTION(daSwLBall_Execute__FP11daSwLBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwLBall_Delete__FP11daSwLBall_c) {
+asm void daSwLBall_Delete(daSwLBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/daSwLBall_Delete__FP11daSwLBall_c.s"
 }
@@ -211,7 +233,7 @@ ASM_FUNCTION(daSwLBall_Delete__FP11daSwLBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwLBall_Create__FP10fopAc_ac_c) {
+asm void daSwLBall_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/daSwLBall_Create__FP10fopAc_ac_c.s"
 }
@@ -222,7 +244,7 @@ ASM_FUNCTION(daSwLBall_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D4F4AC) {
+extern "C" asm void func_80D4F4AC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swLBall/d_a_swLBall/func_80D4F4AC.s"
 }

@@ -6,80 +6,115 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build leafdraw_method_class (leafdraw_method_class) False/False
+/* top-level dependencies (begin leafdraw_method_class) */
+/* top-level dependencies (end leafdraw_method_class) */
+struct leafdraw_method_class {
+};
+
+// build process_method_class (process_method_class) False/False
+/* top-level dependencies (begin process_method_class) */
+/* top-level dependencies (end process_method_class) */
+struct process_method_class {
+};
+
+// build request_base_class (request_base_class) False/False
+/* top-level dependencies (begin request_base_class) */
+/* top-level dependencies (end request_base_class) */
+struct request_base_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopOvlp_Draw__FPv();
-extern "C" extern void fopOvlp_Execute__FPv();
-extern "C" extern void fopOvlp_IsDelete__FPv();
-extern "C" extern void fopOvlp_Delete__FPv();
-extern "C" extern void fopOvlp_Create__FPv();
+static void fopOvlp_Draw(void*);
+static void fopOvlp_Execute(void*);
+static void fopOvlp_IsDelete(void*);
+static void fopOvlp_Delete(void*);
+static void fopOvlp_Create(void*);
+
+extern "C" static void fopOvlp_Draw__FPv();
+extern "C" static void fopOvlp_Execute__FPv();
+extern "C" static void fopOvlp_IsDelete__FPv();
+extern "C" static void fopOvlp_Delete__FPv();
+extern "C" static void fopOvlp_Create__FPv();
 SECTION_DATA extern void*g_fopOvlp_Method[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
-extern "C" extern void cReq_Create__FP18request_base_classUc();
+void fpcLf_DrawMethod(leafdraw_method_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+void cReq_Create(request_base_class*, char);
+
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void cReq_Create__FP18request_base_classUc();
 
 // 
 // Declarations:
 // 
 
-/* 8001E37C-8001E3A4 0028+00 .text      fopOvlp_Draw__FPv                                            */
+/* 8001E37C-8001E3A4 0028+00 rc=1 efc=0 .text      fopOvlp_Draw__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopOvlp_Draw__FPv) {
+asm static void fopOvlp_Draw(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap/fopOvlp_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8001E3A4-8001E3CC 0028+00 .text      fopOvlp_Execute__FPv                                         */
+/* 8001E3A4-8001E3CC 0028+00 rc=1 efc=0 .text      fopOvlp_Execute__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopOvlp_Execute__FPv) {
+asm static void fopOvlp_Execute(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap/fopOvlp_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8001E3CC-8001E3F4 0028+00 .text      fopOvlp_IsDelete__FPv                                        */
+/* 8001E3CC-8001E3F4 0028+00 rc=1 efc=0 .text      fopOvlp_IsDelete__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopOvlp_IsDelete__FPv) {
+asm static void fopOvlp_IsDelete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap/fopOvlp_IsDelete__FPv.s"
 }
 #pragma pop
 
 
-/* 8001E3F4-8001E41C 0028+00 .text      fopOvlp_Delete__FPv                                          */
+/* 8001E3F4-8001E41C 0028+00 rc=1 efc=0 .text      fopOvlp_Delete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopOvlp_Delete__FPv) {
+asm static void fopOvlp_Delete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap/fopOvlp_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8001E41C-8001E484 0068+00 .text      fopOvlp_Create__FPv                                          */
+/* 8001E41C-8001E484 0068+00 rc=1 efc=0 .text      fopOvlp_Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopOvlp_Create__FPv) {
+asm static void fopOvlp_Create(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap/fopOvlp_Create__FPv.s"
 }
@@ -87,7 +122,7 @@ ASM_FUNCTION(fopOvlp_Create__FPv) {
 
 
 /* ############################################################################################## */
-/* 803A3878-803A3890 0014+04 .data      g_fopOvlp_Method                                             */
+/* 803A3878-803A3890 0014+04 rc=10 efc=10 .data      g_fopOvlp_Method                                             */
 void* g_fopOvlp_Method[6] = {
 	(void*)fopOvlp_Create__FPv,
 	(void*)fopOvlp_Delete__FPv,

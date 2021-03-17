@@ -9,14 +9,23 @@
 // Forward References:
 // 
 
-extern "C" extern void PackArgs();
-extern "C" extern void Run();
-extern "C" extern void ReadDisc();
-extern "C" extern void OSExec__Callback();
-extern "C" extern void __OSGetExecParams();
-extern "C" extern void GetApploaderPosition();
-extern "C" extern void __OSBootDolSimple();
-extern "C" extern void __OSBootDol();
+extern "C" static void PackArgs();
+extern "C" static void Run();
+extern "C" static void ReadDisc();
+extern "C" static void OSExec__Callback();
+extern "C" void __OSGetExecParams();
+extern "C" static void GetApploaderPosition();
+extern "C" static void __OSBootDolSimple();
+extern "C" void __OSBootDol();
+
+extern "C" static void PackArgs();
+extern "C" static void Run();
+extern "C" static void ReadDisc();
+extern "C" static void OSExec__Callback();
+extern "C" void __OSGetExecParams();
+extern "C" static void GetApploaderPosition();
+extern "C" static void __OSBootDolSimple();
+extern "C" void __OSBootDol();
 SECTION_DATA extern u8 OSExec__lit_115[11 + 5 /* padding */];
 SECTION_SDATA extern u8 OSExec__lit_213[3 + 5 /* padding */];
 SECTION_SBSS extern u8 Prepared[4];
@@ -26,68 +35,98 @@ SECTION_SBSS extern u8 data_8045165C[4];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void memcpy();
-extern "C" extern void OSReport();
-extern "C" extern void OSSetArenaLo();
-extern "C" extern void OSAllocFromArenaLo();
-extern "C" extern void ICInvalidateRange();
-extern "C" extern void ICFlashInvalidate();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSEnableInterrupts();
-extern "C" extern void __OSMaskInterrupts();
-extern "C" extern void __OSUnmaskInterrupts();
-extern "C" extern void OSGetSaveRegion();
-extern "C" extern void __OSDoHotReset();
-extern "C" extern void DVDInit();
-extern "C" extern void DVDReadAbsAsyncPrio();
-extern "C" extern void DVDCancelStreamAsync();
-extern "C" extern void DVDGetCommandBlockStatus();
-extern "C" extern void DVDSetAutoInvalidation();
-extern "C" extern void DVDResume();
-extern "C" extern void DVDGetCurrentDiskID();
-extern "C" extern void DVDCheckDisk();
-extern "C" extern void __DVDPrepareResetAsync();
-extern "C" extern void AISetStreamPlayState();
-extern "C" extern void AISetStreamVolLeft();
-extern "C" extern void AISetStreamVolRight();
-extern "C" extern void sprintf();
-extern "C" extern void strncmp();
-extern "C" extern void strcpy();
-extern "C" extern void strlen();
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
+extern "C" void ICInvalidateRange();
+extern "C" void ICFlashInvalidate();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSEnableInterrupts();
+extern "C" void __OSMaskInterrupts();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetSaveRegion();
+extern "C" void __OSDoHotReset();
+extern "C" void DVDInit();
+extern "C" void DVDReadAbsAsyncPrio();
+extern "C" void DVDCancelStreamAsync();
+extern "C" void DVDGetCommandBlockStatus();
+extern "C" void DVDSetAutoInvalidation();
+extern "C" void DVDResume();
+extern "C" void DVDGetCurrentDiskID();
+extern "C" void DVDCheckDisk();
+extern "C" void __DVDPrepareResetAsync();
+extern "C" void AISetStreamPlayState();
+extern "C" void AISetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" void sprintf();
+extern "C" void strncmp();
+extern "C" void strcpy();
+extern "C" void strlen();
+
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
+extern "C" void ICInvalidateRange();
+extern "C" void ICFlashInvalidate();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSEnableInterrupts();
+extern "C" void __OSMaskInterrupts();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetSaveRegion();
+extern "C" void __OSDoHotReset();
+extern "C" void DVDInit();
+extern "C" void DVDReadAbsAsyncPrio();
+extern "C" void DVDCancelStreamAsync();
+extern "C" void DVDGetCommandBlockStatus();
+extern "C" void DVDSetAutoInvalidation();
+extern "C" void DVDResume();
+extern "C" void DVDGetCurrentDiskID();
+extern "C" void DVDCheckDisk();
+extern "C" void __DVDPrepareResetAsync();
+extern "C" void AISetStreamPlayState();
+extern "C" void AISetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" void sprintf();
+extern "C" void strncmp();
+extern "C" void strcpy();
+extern "C" void strlen();
 SECTION_SBSS extern u8 __OSIsGcam[4];
 
 // 
 // Declarations:
 // 
 
-/* 8033CA80-8033CC08 0188+00 .text      PackArgs                                                     */
+/* 8033CA80-8033CC08 0188+00 rc=1 efc=0 .text      PackArgs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PackArgs) {
+extern "C" asm static void PackArgs() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/PackArgs.s"
 }
 #pragma pop
 
 
-/* 8033CC08-8033CC44 003C+00 .text      Run                                                          */
+/* 8033CC08-8033CC44 003C+00 rc=1 efc=0 .text      Run                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Run) {
+extern "C" asm static void Run() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/Run.s"
 }
 #pragma pop
 
 
-/* 8033CC44-8033CCB0 006C+00 .text      ReadDisc                                                     */
+/* 8033CC44-8033CCB0 006C+00 rc=1 efc=0 .text      ReadDisc                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ReadDisc) {
+extern "C" asm static void ReadDisc() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/ReadDisc.s"
 }
@@ -95,25 +134,25 @@ ASM_FUNCTION(ReadDisc) {
 
 
 /* ############################################################################################## */
-/* 80451658-8045165C 0004+00 .sbss      Prepared                                                     */
+/* 80451658-8045165C 0004+00 rc=2 efc=0 .sbss      Prepared                                                     */
 u8 Prepared[4];
 
-/* 8033CCB0-8033CCBC 000C+00 .text      Callback                                                     */
+/* 8033CCB0-8033CCBC 000C+00 rc=1 efc=0 .text      Callback                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSExec__Callback) {
+extern "C" asm static void OSExec__Callback() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/OSExec__Callback.s"
 }
 #pragma pop
 
 
-/* 8033CCBC-8033CCFC 0040+00 .text      __OSGetExecParams                                            */
+/* 8033CCBC-8033CCFC 0040+00 rc=1 efc=1 .text      __OSGetExecParams                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSGetExecParams) {
+extern "C" asm void __OSGetExecParams() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/__OSGetExecParams.s"
 }
@@ -121,14 +160,14 @@ ASM_FUNCTION(__OSGetExecParams) {
 
 
 /* ############################################################################################## */
-/* 8045165C-80451660 0004+00 .sbss      apploaderPosition$69                                         */
+/* 8045165C-80451660 0004+00 rc=2 efc=0 .sbss      apploaderPosition$69                                         */
 u8 data_8045165C[4];
 
-/* 8033CCFC-8033CDC0 00C4+00 .text      GetApploaderPosition                                         */
+/* 8033CCFC-8033CDC0 00C4+00 rc=1 efc=0 .text      GetApploaderPosition                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetApploaderPosition) {
+extern "C" asm static void GetApploaderPosition() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/GetApploaderPosition.s"
 }
@@ -136,18 +175,18 @@ ASM_FUNCTION(GetApploaderPosition) {
 
 
 /* ############################################################################################## */
-/* 803CFC38-803CFC48 000B+05 .data      @115                                                         */
+/* 803CFC38-803CFC48 000B+05 rc=1 efc=0 .data      @115                                                         */
 u8 OSExec__lit_115[16] = {
 	0x32, 0x30, 0x30, 0x34, 0x2F, 0x30, 0x32, 0x2F, 0x30, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033CDC0-8033D244 0484+00 .text      __OSBootDolSimple                                            */
+/* 8033CDC0-8033D244 0484+00 rc=1 efc=0 .text      __OSBootDolSimple                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSBootDolSimple) {
+extern "C" asm static void __OSBootDolSimple() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/__OSBootDolSimple.s"
 }
@@ -155,22 +194,21 @@ ASM_FUNCTION(__OSBootDolSimple) {
 
 
 /* ############################################################################################## */
-/* 804509A8-804509B0 0003+05 .sdata     @213                                                         */
+/* 804509A8-804509B0 0003+05 rc=1 efc=0 .sdata     @213                                                         */
 u8 OSExec__lit_213[8] = {
 	0x25, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033D244-8033D3E0 019C+00 .text      __OSBootDol                                                  */
+/* 8033D244-8033D3E0 019C+00 rc=1 efc=1 .text      __OSBootDol                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSBootDol) {
+extern "C" asm void __OSBootDol() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/__OSBootDol.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

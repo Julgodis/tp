@@ -6,43 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct e_hzelda_class;
+struct fopAc_ac_c;
+
+struct daE_HZELDA_HIO_c {
+	daE_HZELDA_HIO_c();
+	~daE_HZELDA_HIO_c();
+};
+
+struct e_hzelda_class {
+	e_hzelda_class();
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daE_HZELDA_HIO_cFv();
-extern "C" extern void anm_init__FP14e_hzelda_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daE_HZELDA_Draw__FP14e_hzelda_class();
-extern "C" extern void shot_s_sub__FPvPv();
-extern "C" extern void e_hzelda_wait__FP14e_hzelda_class();
-extern "C" extern void e_hzelda_attack_a__FP14e_hzelda_class();
-extern "C" extern void e_hzelda_attack_b__FP14e_hzelda_class();
-extern "C" extern void ball_crash_eff_set__FP14e_hzelda_classf();
-extern "C" extern void e_hzelda_attack_c__FP14e_hzelda_class();
-extern "C" extern void e_hzelda_damage__FP14e_hzelda_class();
-extern "C" extern void action__FP14e_hzelda_class();
-extern "C" extern void ball_bg_check__FP14e_hzelda_class();
-extern "C" extern void demo_camera__FP14e_hzelda_class();
-extern "C" extern void anm_se_set__FP14e_hzelda_class();
-extern "C" extern void daE_HZELDA_Execute__FP14e_hzelda_class();
-extern "C" extern void daE_HZELDA_IsDelete__FP14e_hzelda_class();
-extern "C" extern void daE_HZELDA_Delete__FP14e_hzelda_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daE_HZELDA_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__14e_hzelda_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daE_HZELDA_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_hzelda_cpp();
-extern "C" extern void func_806F54F0();
-extern "C" extern void func_806F54F8();
+void anm_init(e_hzelda_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daE_HZELDA_Draw(e_hzelda_class*);
+void shot_s_sub(void*, void*);
+void e_hzelda_wait(e_hzelda_class*);
+void e_hzelda_attack_a(e_hzelda_class*);
+void e_hzelda_attack_b(e_hzelda_class*);
+void ball_crash_eff_set(e_hzelda_class*, f32);
+void e_hzelda_attack_c(e_hzelda_class*);
+void e_hzelda_damage(e_hzelda_class*);
+void action(e_hzelda_class*);
+void ball_bg_check(e_hzelda_class*);
+void demo_camera(e_hzelda_class*);
+void anm_se_set(e_hzelda_class*);
+void daE_HZELDA_Execute(e_hzelda_class*);
+bool daE_HZELDA_IsDelete(e_hzelda_class*);
+void daE_HZELDA_Delete(e_hzelda_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_HZELDA_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_hzelda_cpp();
+extern "C" void func_806F54F0();
+extern "C" void func_806F54F8();
+
+extern "C" void __ct__16daE_HZELDA_HIO_cFv();
+extern "C" void anm_init__FP14e_hzelda_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daE_HZELDA_Draw__FP14e_hzelda_class();
+extern "C" void shot_s_sub__FPvPv();
+extern "C" void e_hzelda_wait__FP14e_hzelda_class();
+extern "C" void e_hzelda_attack_a__FP14e_hzelda_class();
+extern "C" void e_hzelda_attack_b__FP14e_hzelda_class();
+extern "C" void ball_crash_eff_set__FP14e_hzelda_classf();
+extern "C" void e_hzelda_attack_c__FP14e_hzelda_class();
+extern "C" void e_hzelda_damage__FP14e_hzelda_class();
+extern "C" void action__FP14e_hzelda_class();
+extern "C" void ball_bg_check__FP14e_hzelda_class();
+extern "C" void demo_camera__FP14e_hzelda_class();
+extern "C" void anm_se_set__FP14e_hzelda_class();
+extern "C" void daE_HZELDA_Execute__FP14e_hzelda_class();
+extern "C" bool daE_HZELDA_IsDelete__FP14e_hzelda_class();
+extern "C" void daE_HZELDA_Delete__FP14e_hzelda_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daE_HZELDA_Create__FP10fopAc_ac_c();
+extern "C" void __ct__14e_hzelda_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daE_HZELDA_HIO_cFv();
+extern "C" void __sinit_d_a_e_hzelda_cpp();
+extern "C" void func_806F54F0();
+extern "C" void func_806F54F8();
 SECTION_RODATA extern const u32 lit_3767;
 SECTION_RODATA extern const u8 lit_3781[4];
 SECTION_RODATA extern const u32 lit_3782;
@@ -151,8 +230,11 @@ SECTION_BSS extern u8 l_HIO[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -162,7 +244,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daE_HZELDA_HIO_cFv) {
+asm daE_HZELDA_HIO_c::daE_HZELDA_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__ct__16daE_HZELDA_HIO_cFv.s"
 }
@@ -173,7 +255,7 @@ ASM_FUNCTION(__ct__16daE_HZELDA_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP14e_hzelda_classifUcf) {
+asm void anm_init(e_hzelda_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/anm_init__FP14e_hzelda_classifUcf.s"
 }
@@ -184,7 +266,7 @@ ASM_FUNCTION(anm_init__FP14e_hzelda_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/nodeCallBack__FP8J3DJointi.s"
 }
@@ -195,7 +277,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZELDA_Draw__FP14e_hzelda_class) {
+asm void daE_HZELDA_Draw(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_Draw__FP14e_hzelda_class.s"
 }
@@ -206,7 +288,7 @@ ASM_FUNCTION(daE_HZELDA_Draw__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shot_s_sub__FPvPv) {
+asm void shot_s_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/shot_s_sub__FPvPv.s"
 }
@@ -217,7 +299,7 @@ ASM_FUNCTION(shot_s_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_hzelda_wait__FP14e_hzelda_class) {
+asm void e_hzelda_wait(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/e_hzelda_wait__FP14e_hzelda_class.s"
 }
@@ -228,7 +310,7 @@ ASM_FUNCTION(e_hzelda_wait__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_hzelda_attack_a__FP14e_hzelda_class) {
+asm void e_hzelda_attack_a(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/e_hzelda_attack_a__FP14e_hzelda_class.s"
 }
@@ -239,7 +321,7 @@ ASM_FUNCTION(e_hzelda_attack_a__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_hzelda_attack_b__FP14e_hzelda_class) {
+asm void e_hzelda_attack_b(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/e_hzelda_attack_b__FP14e_hzelda_class.s"
 }
@@ -250,7 +332,7 @@ ASM_FUNCTION(e_hzelda_attack_b__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ball_crash_eff_set__FP14e_hzelda_classf) {
+asm void ball_crash_eff_set(e_hzelda_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/ball_crash_eff_set__FP14e_hzelda_classf.s"
 }
@@ -261,7 +343,7 @@ ASM_FUNCTION(ball_crash_eff_set__FP14e_hzelda_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_hzelda_attack_c__FP14e_hzelda_class) {
+asm void e_hzelda_attack_c(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/e_hzelda_attack_c__FP14e_hzelda_class.s"
 }
@@ -272,7 +354,7 @@ ASM_FUNCTION(e_hzelda_attack_c__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_hzelda_damage__FP14e_hzelda_class) {
+asm void e_hzelda_damage(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/e_hzelda_damage__FP14e_hzelda_class.s"
 }
@@ -283,7 +365,7 @@ ASM_FUNCTION(e_hzelda_damage__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14e_hzelda_class) {
+asm void action(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/action__FP14e_hzelda_class.s"
 }
@@ -294,7 +376,7 @@ ASM_FUNCTION(action__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ball_bg_check__FP14e_hzelda_class) {
+asm void ball_bg_check(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/ball_bg_check__FP14e_hzelda_class.s"
 }
@@ -305,7 +387,7 @@ ASM_FUNCTION(ball_bg_check__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP14e_hzelda_class) {
+asm void demo_camera(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/demo_camera__FP14e_hzelda_class.s"
 }
@@ -316,7 +398,7 @@ ASM_FUNCTION(demo_camera__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP14e_hzelda_class) {
+asm void anm_se_set(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/anm_se_set__FP14e_hzelda_class.s"
 }
@@ -327,7 +409,7 @@ ASM_FUNCTION(anm_se_set__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZELDA_Execute__FP14e_hzelda_class) {
+asm void daE_HZELDA_Execute(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_Execute__FP14e_hzelda_class.s"
 }
@@ -335,21 +417,16 @@ ASM_FUNCTION(daE_HZELDA_Execute__FP14e_hzelda_class) {
 
 
 /* 806F474C-806F4754 0008+00 .text      daE_HZELDA_IsDelete__FP14e_hzelda_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_HZELDA_IsDelete__FP14e_hzelda_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_IsDelete__FP14e_hzelda_class.s"
+bool daE_HZELDA_IsDelete(e_hzelda_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806F4754-806F47C4 0070+00 .text      daE_HZELDA_Delete__FP14e_hzelda_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZELDA_Delete__FP14e_hzelda_class) {
+asm void daE_HZELDA_Delete(e_hzelda_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_Delete__FP14e_hzelda_class.s"
 }
@@ -360,7 +437,7 @@ ASM_FUNCTION(daE_HZELDA_Delete__FP14e_hzelda_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -371,7 +448,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__12J3DFrameCtrlFv.s"
 }
@@ -382,7 +459,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZELDA_Create__FP10fopAc_ac_c) {
+asm void daE_HZELDA_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_Create__FP10fopAc_ac_c.s"
 }
@@ -393,7 +470,7 @@ ASM_FUNCTION(daE_HZELDA_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14e_hzelda_classFv) {
+asm e_hzelda_class::e_hzelda_class() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__ct__14e_hzelda_classFv.s"
 }
@@ -404,7 +481,7 @@ ASM_FUNCTION(__ct__14e_hzelda_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__8cM3dGSphFv.s"
 }
@@ -415,7 +492,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__8cM3dGAabFv.s"
 }
@@ -426,7 +503,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__8dCcD_SphFv.s"
 }
@@ -437,7 +514,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__ct__8dCcD_SphFv.s"
 }
@@ -448,7 +525,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__10dCcD_GSttsFv.s"
 }
@@ -459,7 +536,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -470,7 +547,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__12dBgS_AcchCirFv.s"
 }
@@ -481,7 +558,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__10cCcD_GSttsFv.s"
 }
@@ -492,7 +569,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daE_HZELDA_HIO_cFv) {
+asm daE_HZELDA_HIO_c::~daE_HZELDA_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__dt__16daE_HZELDA_HIO_cFv.s"
 }
@@ -503,7 +580,7 @@ ASM_FUNCTION(__dt__16daE_HZELDA_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_hzelda_cpp) {
+extern "C" asm void __sinit_d_a_e_hzelda_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/__sinit_d_a_e_hzelda_cpp.s"
 }
@@ -514,7 +591,7 @@ ASM_FUNCTION(__sinit_d_a_e_hzelda_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806F54F0) {
+extern "C" asm void func_806F54F0() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/func_806F54F0.s"
 }
@@ -525,7 +602,7 @@ ASM_FUNCTION(func_806F54F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806F54F8) {
+extern "C" asm void func_806F54F8() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/func_806F54F8.s"
 }

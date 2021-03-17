@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_BSS extern u8 struct_80C25F98[4];
 
 // 
@@ -16,10 +17,12 @@ SECTION_BSS extern u8 struct_80C25F98[4];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
+/* ############################################################################################## */
 /* 80C25F98-80C25F9C 0004+00 .bss       None                                                         */
 u8 struct_80C25F98[4];
 /* 80C25F98 0001 data_80C25F98 */

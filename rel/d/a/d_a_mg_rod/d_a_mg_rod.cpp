@@ -6,110 +6,281 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct Vec;
+struct dmg_rod_class;
+struct wd_ss;
+struct J3DJoint;
+struct mg_fish_class;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct dmg_rod_HIO_c {
+	dmg_rod_HIO_c();
+	~dmg_rod_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct dmg_rod_class {
+	dmg_rod_class();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cXyz {
+	cXyz();
+	~cXyz();
+	cXyz(f32, f32, f32);
+	cXyz(cXyz const&);
+	void abs() const;
+	void operator=(cXyz const&);
+};
+
+struct wd_ss {
+};
+
+struct mg_fish_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct mg_hook_s {
+	~mg_hook_s();
+	mg_hook_s();
+};
+
+struct csXyz {
+	csXyz();
+	~csXyz();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void cancelOriginalDemo();
+	void changeOriginalDemo();
+};
+
+struct Vec {
+};
+
+struct mDoCPd_c {
+	void getTrigZ(u32);
+	void getTrigA(u32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13dmg_rod_HIO_cFv();
-extern "C" extern void frog_nodeCallBack__FP8J3DJointi();
-extern "C" extern void ws_nodeCallBack__FP8J3DJointi();
-extern "C" extern void Reel_CallBack__FP8J3DJointi();
-extern "C" extern void Worm_nodeCallBack__FP8J3DJointi();
-extern "C" extern void dmg_rod_Draw__FP13dmg_rod_class();
-extern "C" extern void rod_control__FP13dmg_rod_class();
-extern "C" extern void rod_main__FP13dmg_rod_class();
-extern "C" extern void line_control1__FP13dmg_rod_class();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void line_control2__FP13dmg_rod_class();
-extern "C" extern void line_control1_u__FP13dmg_rod_class();
-extern "C" extern void line_control2_u__FP13dmg_rod_class();
-extern "C" extern void line_main__FP13dmg_rod_class();
-extern "C" extern void depth_check__FP13dmg_rod_classP4cXyz();
-extern "C" extern void sibuki_set__FP13dmg_rod_classfP4cXyzi();
-extern "C" extern void s_boat_sub__FPvPv();
-extern "C" extern void lure_onboat__FP13dmg_rod_class();
-extern "C" extern void lure_standby__FP13dmg_rod_class();
-extern "C" extern void lure_bound_se_set__FP13dmg_rod_class();
-extern "C" extern void lure_cast__FP13dmg_rod_class();
-extern "C" extern void simple_bg_check__FP13dmg_rod_classf();
-extern "C" extern void s_wd_sub__FPvPv();
-extern "C" extern void wd_check__FP13dmg_rod_class();
-extern "C" extern void fr_action__FP13dmg_rod_classf();
-extern "C" extern void pe_action__FP13dmg_rod_classf();
-extern "C" extern void po_action__FP13dmg_rod_classf();
-extern "C" extern void ws_action__FP13dmg_rod_classf();
-extern "C" extern void sp_action__FP13dmg_rod_classf();
-extern "C" extern void ground_action__FP13dmg_rod_class();
-extern "C" extern void wd_action__FP13dmg_rod_classfP5wd_ss();
-extern "C" extern void heart_action__FP13dmg_rod_classf();
-extern "C" extern void action_eff_set__FP13dmg_rod_class();
-extern "C" extern void lure_action__FP13dmg_rod_class();
-extern "C" extern void lure_hit__FP13dmg_rod_classP13mg_fish_class();
-extern "C" extern void lure_catch__FP13dmg_rod_class();
-extern "C" extern void lure_bare__FP13dmg_rod_class();
-extern "C" extern void lure_heart__FP13dmg_rod_class();
-extern "C" extern void hook_set__FP13dmg_rod_classP4cXyzi();
-extern "C" extern void lure_disp__FP13dmg_rod_class();
-extern "C" extern void lure_main__FP13dmg_rod_class();
-extern "C" extern void uki_calc__FP13dmg_rod_class();
-extern "C" extern void uki_ready__FP13dmg_rod_class();
-extern "C" extern void uki_rod_bg_check__FP13dmg_rod_class();
-extern "C" extern void uki_pl_arm_calc__FP13dmg_rod_class();
-extern "C" extern void uki_standby__FP13dmg_rod_class();
-extern "C" extern void uki_hit__FP13dmg_rod_class();
-extern "C" extern void bb_get__FP13dmg_rod_class();
-extern "C" extern void uki_catch__FP13dmg_rod_class();
-extern "C" extern void s_sg_sub__FPvPv();
-extern "C" extern void s_bb_sub__FPvPv();
-extern "C" extern void s_lh_sub__FPvPv();
-extern "C" extern void s_bt_sub__FPvPv();
-extern "C" extern void uki_main__FP13dmg_rod_class();
-extern "C" extern void cam_3d_morf__FP13dmg_rod_classf();
-extern "C" extern void play_camera__FP13dmg_rod_class();
-extern "C" extern void play_camera_u__FP13dmg_rod_class();
-extern "C" extern void dmg_rod_Execute__FP13dmg_rod_class();
-extern "C" extern void dmg_rod_IsDelete__FP13dmg_rod_class();
-extern "C" extern void dmg_rod_Delete__FP13dmg_rod_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void dmg_rod_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__13dmg_rod_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__9mg_hook_sFv();
-extern "C" extern void __ct__9mg_hook_sFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__13dmg_rod_HIO_cFv();
-extern "C" extern void __sinit_d_a_mg_rod_cpp();
-extern "C" extern void func_804BB130();
-extern "C" extern void func_804BB168();
-extern "C" extern void func_804BB170();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daAlink_getAlinkActorClass__Fv();
-extern "C" extern void dComIfGp_event_runCheck__Fv();
-extern "C" extern void dComIfGp_checkPlayerStatus0__FiUl();
-extern "C" extern void __ct__4cXyzFfff();
-extern "C" extern void dComIfGp_getCamera__Fi();
-extern "C" extern void dComIfGp_getPlayerCameraID__Fi();
-extern "C" extern void dComIfGp_getPlayer__Fi();
-extern "C" extern void cancelOriginalDemo__9daPy_py_cFv();
-extern "C" extern void daPy_getPlayerActorClass__Fv();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void JMAFastSqrt__Ff();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void changeOriginalDemo__9daPy_py_cFv();
-extern "C" extern void mDoAud_seStart__FUlPC3VecUlSc();
-extern "C" extern void cM_ssin__Fs();
-extern "C" extern void abs__4cXyzCFv();
-extern "C" extern void __as__4cXyzFRC4cXyz();
-extern "C" extern void getTrigZ__8mDoCPd_cFUl();
-extern "C" extern void getTrigA__8mDoCPd_cFUl();
-extern "C" extern void dComIfGp_setDoStatusForce__FUcUc();
-extern "C" extern void dComIfGp_setZStatusForce__FUcUc();
+void frog_nodeCallBack(J3DJoint*, s32);
+void ws_nodeCallBack(J3DJoint*, s32);
+void Reel_CallBack(J3DJoint*, s32);
+void Worm_nodeCallBack(J3DJoint*, s32);
+void dmg_rod_Draw(dmg_rod_class*);
+void rod_control(dmg_rod_class*);
+void rod_main(dmg_rod_class*);
+void line_control1(dmg_rod_class*);
+void line_control2(dmg_rod_class*);
+void line_control1_u(dmg_rod_class*);
+void line_control2_u(dmg_rod_class*);
+void line_main(dmg_rod_class*);
+void depth_check(dmg_rod_class*, cXyz*);
+void sibuki_set(dmg_rod_class*, f32, cXyz*, s32);
+void s_boat_sub(void*, void*);
+void lure_onboat(dmg_rod_class*);
+void lure_standby(dmg_rod_class*);
+void lure_bound_se_set(dmg_rod_class*);
+void lure_cast(dmg_rod_class*);
+void simple_bg_check(dmg_rod_class*, f32);
+void s_wd_sub(void*, void*);
+void wd_check(dmg_rod_class*);
+void fr_action(dmg_rod_class*, f32);
+void pe_action(dmg_rod_class*, f32);
+void po_action(dmg_rod_class*, f32);
+void ws_action(dmg_rod_class*, f32);
+void sp_action(dmg_rod_class*, f32);
+void ground_action(dmg_rod_class*);
+void wd_action(dmg_rod_class*, f32, wd_ss*);
+void heart_action(dmg_rod_class*, f32);
+void action_eff_set(dmg_rod_class*);
+void lure_action(dmg_rod_class*);
+void lure_hit(dmg_rod_class*, mg_fish_class*);
+void lure_catch(dmg_rod_class*);
+void lure_bare(dmg_rod_class*);
+void lure_heart(dmg_rod_class*);
+void hook_set(dmg_rod_class*, cXyz*, s32);
+void lure_disp(dmg_rod_class*);
+void lure_main(dmg_rod_class*);
+void uki_calc(dmg_rod_class*);
+void uki_ready(dmg_rod_class*);
+void uki_rod_bg_check(dmg_rod_class*);
+void uki_pl_arm_calc(dmg_rod_class*);
+void uki_standby(dmg_rod_class*);
+void uki_hit(dmg_rod_class*);
+void bb_get(dmg_rod_class*);
+void uki_catch(dmg_rod_class*);
+void s_sg_sub(void*, void*);
+void s_bb_sub(void*, void*);
+void s_lh_sub(void*, void*);
+void s_bt_sub(void*, void*);
+void uki_main(dmg_rod_class*);
+void cam_3d_morf(dmg_rod_class*, f32);
+void play_camera(dmg_rod_class*);
+void play_camera_u(dmg_rod_class*);
+void dmg_rod_Execute(dmg_rod_class*);
+void dmg_rod_IsDelete(dmg_rod_class*);
+void dmg_rod_Delete(dmg_rod_class*);
+void useHeapInit(fopAc_ac_c*);
+void dmg_rod_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_mg_rod_cpp();
+extern "C" void func_804BB130();
+extern "C" void func_804BB168();
+extern "C" void func_804BB170();
+void daAlink_getAlinkActorClass();
+void dComIfGp_event_runCheck();
+void dComIfGp_checkPlayerStatus0(s32, u32);
+void dComIfGp_getCamera(s32);
+void dComIfGp_getPlayerCameraID(s32);
+void dComIfGp_getPlayer(s32);
+void daPy_getPlayerActorClass();
+void JMAFastSqrt(f32);
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+void mDoAud_seStart(u32, Vec const*, u32, s8);
+extern "C" void cM_ssin__Fs();
+void dComIfGp_setDoStatusForce(u8, u8);
+void dComIfGp_setZStatusForce(u8, u8);
+
+extern "C" void __ct__13dmg_rod_HIO_cFv();
+extern "C" void frog_nodeCallBack__FP8J3DJointi();
+extern "C" void ws_nodeCallBack__FP8J3DJointi();
+extern "C" void Reel_CallBack__FP8J3DJointi();
+extern "C" void Worm_nodeCallBack__FP8J3DJointi();
+extern "C" void dmg_rod_Draw__FP13dmg_rod_class();
+extern "C" void rod_control__FP13dmg_rod_class();
+extern "C" void rod_main__FP13dmg_rod_class();
+extern "C" void line_control1__FP13dmg_rod_class();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void line_control2__FP13dmg_rod_class();
+extern "C" void line_control1_u__FP13dmg_rod_class();
+extern "C" void line_control2_u__FP13dmg_rod_class();
+extern "C" void line_main__FP13dmg_rod_class();
+extern "C" void depth_check__FP13dmg_rod_classP4cXyz();
+extern "C" void sibuki_set__FP13dmg_rod_classfP4cXyzi();
+extern "C" void s_boat_sub__FPvPv();
+extern "C" void lure_onboat__FP13dmg_rod_class();
+extern "C" void lure_standby__FP13dmg_rod_class();
+extern "C" void lure_bound_se_set__FP13dmg_rod_class();
+extern "C" void lure_cast__FP13dmg_rod_class();
+extern "C" void simple_bg_check__FP13dmg_rod_classf();
+extern "C" void s_wd_sub__FPvPv();
+extern "C" void wd_check__FP13dmg_rod_class();
+extern "C" void fr_action__FP13dmg_rod_classf();
+extern "C" void pe_action__FP13dmg_rod_classf();
+extern "C" void po_action__FP13dmg_rod_classf();
+extern "C" void ws_action__FP13dmg_rod_classf();
+extern "C" void sp_action__FP13dmg_rod_classf();
+extern "C" void ground_action__FP13dmg_rod_class();
+extern "C" void wd_action__FP13dmg_rod_classfP5wd_ss();
+extern "C" void heart_action__FP13dmg_rod_classf();
+extern "C" void action_eff_set__FP13dmg_rod_class();
+extern "C" void lure_action__FP13dmg_rod_class();
+extern "C" void lure_hit__FP13dmg_rod_classP13mg_fish_class();
+extern "C" void lure_catch__FP13dmg_rod_class();
+extern "C" void lure_bare__FP13dmg_rod_class();
+extern "C" void lure_heart__FP13dmg_rod_class();
+extern "C" void hook_set__FP13dmg_rod_classP4cXyzi();
+extern "C" void lure_disp__FP13dmg_rod_class();
+extern "C" void lure_main__FP13dmg_rod_class();
+extern "C" void uki_calc__FP13dmg_rod_class();
+extern "C" void uki_ready__FP13dmg_rod_class();
+extern "C" void uki_rod_bg_check__FP13dmg_rod_class();
+extern "C" void uki_pl_arm_calc__FP13dmg_rod_class();
+extern "C" void uki_standby__FP13dmg_rod_class();
+extern "C" void uki_hit__FP13dmg_rod_class();
+extern "C" void bb_get__FP13dmg_rod_class();
+extern "C" void uki_catch__FP13dmg_rod_class();
+extern "C" void s_sg_sub__FPvPv();
+extern "C" void s_bb_sub__FPvPv();
+extern "C" void s_lh_sub__FPvPv();
+extern "C" void s_bt_sub__FPvPv();
+extern "C" void uki_main__FP13dmg_rod_class();
+extern "C" void cam_3d_morf__FP13dmg_rod_classf();
+extern "C" void play_camera__FP13dmg_rod_class();
+extern "C" void play_camera_u__FP13dmg_rod_class();
+extern "C" void dmg_rod_Execute__FP13dmg_rod_class();
+extern "C" void dmg_rod_IsDelete__FP13dmg_rod_class();
+extern "C" void dmg_rod_Delete__FP13dmg_rod_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void dmg_rod_Create__FP10fopAc_ac_c();
+extern "C" void __ct__13dmg_rod_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__9mg_hook_sFv();
+extern "C" void __ct__9mg_hook_sFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__13dmg_rod_HIO_cFv();
+extern "C" void __sinit_d_a_mg_rod_cpp();
+extern "C" void func_804BB130();
+extern "C" void func_804BB168();
+extern "C" void func_804BB170();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daAlink_getAlinkActorClass__Fv();
+extern "C" void dComIfGp_event_runCheck__Fv();
+extern "C" void dComIfGp_checkPlayerStatus0__FiUl();
+extern "C" void __ct__4cXyzFfff();
+extern "C" void dComIfGp_getCamera__Fi();
+extern "C" void dComIfGp_getPlayerCameraID__Fi();
+extern "C" void dComIfGp_getPlayer__Fi();
+extern "C" void cancelOriginalDemo__9daPy_py_cFv();
+extern "C" void daPy_getPlayerActorClass__Fv();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void JMAFastSqrt__Ff();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void changeOriginalDemo__9daPy_py_cFv();
+extern "C" void mDoAud_seStart__FUlPC3VecUlSc();
+extern "C" void cM_ssin__Fs();
+extern "C" void abs__4cXyzCFv();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void getTrigZ__8mDoCPd_cFUl();
+extern "C" void getTrigA__8mDoCPd_cFUl();
+extern "C" void dComIfGp_setDoStatusForce__FUcUc();
+extern "C" void dComIfGp_setZStatusForce__FUcUc();
 SECTION_RODATA extern const u8 lit_3879[12];
 SECTION_RODATA extern const u32 lit_4285;
 SECTION_RODATA extern const u32 lit_4286;
@@ -404,8 +575,11 @@ SECTION_BSS extern u8 data_804BC18C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -415,7 +589,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dmg_rod_HIO_cFv) {
+asm dmg_rod_HIO_c::dmg_rod_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__13dmg_rod_HIO_cFv.s"
 }
@@ -426,7 +600,7 @@ ASM_FUNCTION(__ct__13dmg_rod_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frog_nodeCallBack__FP8J3DJointi) {
+asm void frog_nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/frog_nodeCallBack__FP8J3DJointi.s"
 }
@@ -437,7 +611,7 @@ ASM_FUNCTION(frog_nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ws_nodeCallBack__FP8J3DJointi) {
+asm void ws_nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/ws_nodeCallBack__FP8J3DJointi.s"
 }
@@ -448,7 +622,7 @@ ASM_FUNCTION(ws_nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reel_CallBack__FP8J3DJointi) {
+asm void Reel_CallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/Reel_CallBack__FP8J3DJointi.s"
 }
@@ -459,7 +633,7 @@ ASM_FUNCTION(Reel_CallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Worm_nodeCallBack__FP8J3DJointi) {
+asm void Worm_nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/Worm_nodeCallBack__FP8J3DJointi.s"
 }
@@ -470,7 +644,7 @@ ASM_FUNCTION(Worm_nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmg_rod_Draw__FP13dmg_rod_class) {
+asm void dmg_rod_Draw(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Draw__FP13dmg_rod_class.s"
 }
@@ -481,7 +655,7 @@ ASM_FUNCTION(dmg_rod_Draw__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rod_control__FP13dmg_rod_class) {
+asm void rod_control(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/rod_control__FP13dmg_rod_class.s"
 }
@@ -492,7 +666,7 @@ ASM_FUNCTION(rod_control__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rod_main__FP13dmg_rod_class) {
+asm void rod_main(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/rod_main__FP13dmg_rod_class.s"
 }
@@ -503,7 +677,7 @@ ASM_FUNCTION(rod_main__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(line_control1__FP13dmg_rod_class) {
+asm void line_control1(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/line_control1__FP13dmg_rod_class.s"
 }
@@ -514,7 +688,7 @@ ASM_FUNCTION(line_control1__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__8cM3dGPlaFv.s"
 }
@@ -525,7 +699,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(line_control2__FP13dmg_rod_class) {
+asm void line_control2(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/line_control2__FP13dmg_rod_class.s"
 }
@@ -536,7 +710,7 @@ ASM_FUNCTION(line_control2__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(line_control1_u__FP13dmg_rod_class) {
+asm void line_control1_u(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/line_control1_u__FP13dmg_rod_class.s"
 }
@@ -547,7 +721,7 @@ ASM_FUNCTION(line_control1_u__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(line_control2_u__FP13dmg_rod_class) {
+asm void line_control2_u(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/line_control2_u__FP13dmg_rod_class.s"
 }
@@ -558,7 +732,7 @@ ASM_FUNCTION(line_control2_u__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(line_main__FP13dmg_rod_class) {
+asm void line_main(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/line_main__FP13dmg_rod_class.s"
 }
@@ -569,7 +743,7 @@ ASM_FUNCTION(line_main__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(depth_check__FP13dmg_rod_classP4cXyz) {
+asm void depth_check(dmg_rod_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/depth_check__FP13dmg_rod_classP4cXyz.s"
 }
@@ -580,7 +754,7 @@ ASM_FUNCTION(depth_check__FP13dmg_rod_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sibuki_set__FP13dmg_rod_classfP4cXyzi) {
+asm void sibuki_set(dmg_rod_class* field_0, f32 field_1, cXyz* field_2, s32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/sibuki_set__FP13dmg_rod_classfP4cXyzi.s"
 }
@@ -591,7 +765,7 @@ ASM_FUNCTION(sibuki_set__FP13dmg_rod_classfP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_boat_sub__FPvPv) {
+asm void s_boat_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_boat_sub__FPvPv.s"
 }
@@ -602,7 +776,7 @@ ASM_FUNCTION(s_boat_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_onboat__FP13dmg_rod_class) {
+asm void lure_onboat(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_onboat__FP13dmg_rod_class.s"
 }
@@ -613,7 +787,7 @@ ASM_FUNCTION(lure_onboat__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_standby__FP13dmg_rod_class) {
+asm void lure_standby(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_standby__FP13dmg_rod_class.s"
 }
@@ -624,7 +798,7 @@ ASM_FUNCTION(lure_standby__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_bound_se_set__FP13dmg_rod_class) {
+asm void lure_bound_se_set(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_bound_se_set__FP13dmg_rod_class.s"
 }
@@ -635,7 +809,7 @@ ASM_FUNCTION(lure_bound_se_set__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_cast__FP13dmg_rod_class) {
+asm void lure_cast(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_cast__FP13dmg_rod_class.s"
 }
@@ -646,7 +820,7 @@ ASM_FUNCTION(lure_cast__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(simple_bg_check__FP13dmg_rod_classf) {
+asm void simple_bg_check(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/simple_bg_check__FP13dmg_rod_classf.s"
 }
@@ -657,7 +831,7 @@ ASM_FUNCTION(simple_bg_check__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_wd_sub__FPvPv) {
+asm void s_wd_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_wd_sub__FPvPv.s"
 }
@@ -668,7 +842,7 @@ ASM_FUNCTION(s_wd_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wd_check__FP13dmg_rod_class) {
+asm void wd_check(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/wd_check__FP13dmg_rod_class.s"
 }
@@ -679,7 +853,7 @@ ASM_FUNCTION(wd_check__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fr_action__FP13dmg_rod_classf) {
+asm void fr_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/fr_action__FP13dmg_rod_classf.s"
 }
@@ -690,7 +864,7 @@ ASM_FUNCTION(fr_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pe_action__FP13dmg_rod_classf) {
+asm void pe_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/pe_action__FP13dmg_rod_classf.s"
 }
@@ -701,7 +875,7 @@ ASM_FUNCTION(pe_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(po_action__FP13dmg_rod_classf) {
+asm void po_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/po_action__FP13dmg_rod_classf.s"
 }
@@ -712,7 +886,7 @@ ASM_FUNCTION(po_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ws_action__FP13dmg_rod_classf) {
+asm void ws_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/ws_action__FP13dmg_rod_classf.s"
 }
@@ -723,7 +897,7 @@ ASM_FUNCTION(ws_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sp_action__FP13dmg_rod_classf) {
+asm void sp_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/sp_action__FP13dmg_rod_classf.s"
 }
@@ -734,7 +908,7 @@ ASM_FUNCTION(sp_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ground_action__FP13dmg_rod_class) {
+asm void ground_action(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/ground_action__FP13dmg_rod_class.s"
 }
@@ -745,7 +919,7 @@ ASM_FUNCTION(ground_action__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wd_action__FP13dmg_rod_classfP5wd_ss) {
+asm void wd_action(dmg_rod_class* field_0, f32 field_1, wd_ss* field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/wd_action__FP13dmg_rod_classfP5wd_ss.s"
 }
@@ -756,7 +930,7 @@ ASM_FUNCTION(wd_action__FP13dmg_rod_classfP5wd_ss) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(heart_action__FP13dmg_rod_classf) {
+asm void heart_action(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/heart_action__FP13dmg_rod_classf.s"
 }
@@ -767,7 +941,7 @@ ASM_FUNCTION(heart_action__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_eff_set__FP13dmg_rod_class) {
+asm void action_eff_set(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/action_eff_set__FP13dmg_rod_class.s"
 }
@@ -778,7 +952,7 @@ ASM_FUNCTION(action_eff_set__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_action__FP13dmg_rod_class) {
+asm void lure_action(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_action__FP13dmg_rod_class.s"
 }
@@ -789,7 +963,7 @@ ASM_FUNCTION(lure_action__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_hit__FP13dmg_rod_classP13mg_fish_class) {
+asm void lure_hit(dmg_rod_class* field_0, mg_fish_class* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_hit__FP13dmg_rod_classP13mg_fish_class.s"
 }
@@ -800,7 +974,7 @@ ASM_FUNCTION(lure_hit__FP13dmg_rod_classP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_catch__FP13dmg_rod_class) {
+asm void lure_catch(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_catch__FP13dmg_rod_class.s"
 }
@@ -811,7 +985,7 @@ ASM_FUNCTION(lure_catch__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_bare__FP13dmg_rod_class) {
+asm void lure_bare(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_bare__FP13dmg_rod_class.s"
 }
@@ -822,7 +996,7 @@ ASM_FUNCTION(lure_bare__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_heart__FP13dmg_rod_class) {
+asm void lure_heart(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_heart__FP13dmg_rod_class.s"
 }
@@ -833,7 +1007,7 @@ ASM_FUNCTION(lure_heart__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hook_set__FP13dmg_rod_classP4cXyzi) {
+asm void hook_set(dmg_rod_class* field_0, cXyz* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/hook_set__FP13dmg_rod_classP4cXyzi.s"
 }
@@ -844,7 +1018,7 @@ ASM_FUNCTION(hook_set__FP13dmg_rod_classP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_disp__FP13dmg_rod_class) {
+asm void lure_disp(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_disp__FP13dmg_rod_class.s"
 }
@@ -855,7 +1029,7 @@ ASM_FUNCTION(lure_disp__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lure_main__FP13dmg_rod_class) {
+asm void lure_main(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/lure_main__FP13dmg_rod_class.s"
 }
@@ -866,7 +1040,7 @@ ASM_FUNCTION(lure_main__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_calc__FP13dmg_rod_class) {
+asm void uki_calc(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_calc__FP13dmg_rod_class.s"
 }
@@ -877,7 +1051,7 @@ ASM_FUNCTION(uki_calc__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_ready__FP13dmg_rod_class) {
+asm void uki_ready(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_ready__FP13dmg_rod_class.s"
 }
@@ -888,7 +1062,7 @@ ASM_FUNCTION(uki_ready__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_rod_bg_check__FP13dmg_rod_class) {
+asm void uki_rod_bg_check(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_rod_bg_check__FP13dmg_rod_class.s"
 }
@@ -899,7 +1073,7 @@ ASM_FUNCTION(uki_rod_bg_check__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_pl_arm_calc__FP13dmg_rod_class) {
+asm void uki_pl_arm_calc(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_pl_arm_calc__FP13dmg_rod_class.s"
 }
@@ -910,7 +1084,7 @@ ASM_FUNCTION(uki_pl_arm_calc__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_standby__FP13dmg_rod_class) {
+asm void uki_standby(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_standby__FP13dmg_rod_class.s"
 }
@@ -921,7 +1095,7 @@ ASM_FUNCTION(uki_standby__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_hit__FP13dmg_rod_class) {
+asm void uki_hit(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_hit__FP13dmg_rod_class.s"
 }
@@ -932,7 +1106,7 @@ ASM_FUNCTION(uki_hit__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bb_get__FP13dmg_rod_class) {
+asm void bb_get(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/bb_get__FP13dmg_rod_class.s"
 }
@@ -943,7 +1117,7 @@ ASM_FUNCTION(bb_get__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_catch__FP13dmg_rod_class) {
+asm void uki_catch(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_catch__FP13dmg_rod_class.s"
 }
@@ -954,7 +1128,7 @@ ASM_FUNCTION(uki_catch__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sg_sub__FPvPv) {
+asm void s_sg_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_sg_sub__FPvPv.s"
 }
@@ -965,7 +1139,7 @@ ASM_FUNCTION(s_sg_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bb_sub__FPvPv) {
+asm void s_bb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_bb_sub__FPvPv.s"
 }
@@ -976,7 +1150,7 @@ ASM_FUNCTION(s_bb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_lh_sub__FPvPv) {
+asm void s_lh_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_lh_sub__FPvPv.s"
 }
@@ -987,7 +1161,7 @@ ASM_FUNCTION(s_lh_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bt_sub__FPvPv) {
+asm void s_bt_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/s_bt_sub__FPvPv.s"
 }
@@ -998,7 +1172,7 @@ ASM_FUNCTION(s_bt_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(uki_main__FP13dmg_rod_class) {
+asm void uki_main(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/uki_main__FP13dmg_rod_class.s"
 }
@@ -1009,7 +1183,7 @@ ASM_FUNCTION(uki_main__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cam_3d_morf__FP13dmg_rod_classf) {
+asm void cam_3d_morf(dmg_rod_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/cam_3d_morf__FP13dmg_rod_classf.s"
 }
@@ -1020,7 +1194,7 @@ ASM_FUNCTION(cam_3d_morf__FP13dmg_rod_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(play_camera__FP13dmg_rod_class) {
+asm void play_camera(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/play_camera__FP13dmg_rod_class.s"
 }
@@ -1031,7 +1205,7 @@ ASM_FUNCTION(play_camera__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(play_camera_u__FP13dmg_rod_class) {
+asm void play_camera_u(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/play_camera_u__FP13dmg_rod_class.s"
 }
@@ -1042,7 +1216,7 @@ ASM_FUNCTION(play_camera_u__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmg_rod_Execute__FP13dmg_rod_class) {
+asm void dmg_rod_Execute(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Execute__FP13dmg_rod_class.s"
 }
@@ -1053,7 +1227,7 @@ ASM_FUNCTION(dmg_rod_Execute__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmg_rod_IsDelete__FP13dmg_rod_class) {
+asm void dmg_rod_IsDelete(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_IsDelete__FP13dmg_rod_class.s"
 }
@@ -1064,7 +1238,7 @@ ASM_FUNCTION(dmg_rod_IsDelete__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmg_rod_Delete__FP13dmg_rod_class) {
+asm void dmg_rod_Delete(dmg_rod_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Delete__FP13dmg_rod_class.s"
 }
@@ -1075,7 +1249,7 @@ ASM_FUNCTION(dmg_rod_Delete__FP13dmg_rod_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1086,7 +1260,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmg_rod_Create__FP10fopAc_ac_c) {
+asm void dmg_rod_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dmg_rod_Create__FP10fopAc_ac_c.s"
 }
@@ -1097,7 +1271,7 @@ ASM_FUNCTION(dmg_rod_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dmg_rod_classFv) {
+asm dmg_rod_class::dmg_rod_class() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__13dmg_rod_classFv.s"
 }
@@ -1108,7 +1282,7 @@ ASM_FUNCTION(__ct__13dmg_rod_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__8cM3dGSphFv.s"
 }
@@ -1119,7 +1293,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__8cM3dGAabFv.s"
 }
@@ -1130,7 +1304,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__10dCcD_GSttsFv.s"
 }
@@ -1141,7 +1315,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1152,7 +1326,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1163,7 +1337,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9mg_hook_sFv) {
+asm mg_hook_s::~mg_hook_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__9mg_hook_sFv.s"
 }
@@ -1174,7 +1348,7 @@ ASM_FUNCTION(__dt__9mg_hook_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9mg_hook_sFv) {
+asm mg_hook_s::mg_hook_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__9mg_hook_sFv.s"
 }
@@ -1182,32 +1356,22 @@ ASM_FUNCTION(__ct__9mg_hook_sFv) {
 
 
 /* 804BB020-804BB024 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BB024-804BB028 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BB028-804BB070 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__10cCcD_GSttsFv.s"
 }
@@ -1218,7 +1382,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dmg_rod_HIO_cFv) {
+asm dmg_rod_HIO_c::~dmg_rod_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__13dmg_rod_HIO_cFv.s"
 }
@@ -1229,7 +1393,7 @@ ASM_FUNCTION(__dt__13dmg_rod_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_mg_rod_cpp) {
+extern "C" asm void __sinit_d_a_mg_rod_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__sinit_d_a_mg_rod_cpp.s"
 }
@@ -1240,7 +1404,7 @@ ASM_FUNCTION(__sinit_d_a_mg_rod_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804BB130) {
+extern "C" asm void func_804BB130() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/func_804BB130.s"
 }
@@ -1251,7 +1415,7 @@ ASM_FUNCTION(func_804BB130) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804BB168) {
+extern "C" asm void func_804BB168() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/func_804BB168.s"
 }
@@ -1262,7 +1426,7 @@ ASM_FUNCTION(func_804BB168) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804BB170) {
+extern "C" asm void func_804BB170() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/func_804BB170.s"
 }
@@ -1273,7 +1437,7 @@ ASM_FUNCTION(func_804BB170) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__5csXyzFv.s"
 }
@@ -1284,7 +1448,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__dt__4cXyzFv.s"
 }
@@ -1295,7 +1459,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAlink_getAlinkActorClass__Fv) {
+asm void daAlink_getAlinkActorClass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/daAlink_getAlinkActorClass__Fv.s"
 }
@@ -1306,7 +1470,7 @@ ASM_FUNCTION(daAlink_getAlinkActorClass__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
+asm void dComIfGp_event_runCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_event_runCheck__Fv.s"
 }
@@ -1317,7 +1481,7 @@ ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_checkPlayerStatus0__FiUl) {
+asm void dComIfGp_checkPlayerStatus0(s32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_checkPlayerStatus0__FiUl.s"
 }
@@ -1328,7 +1492,7 @@ ASM_FUNCTION(dComIfGp_checkPlayerStatus0__FiUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFfff) {
+asm cXyz::cXyz(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__4cXyzFfff.s"
 }
@@ -1339,7 +1503,7 @@ ASM_FUNCTION(__ct__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getCamera__Fi) {
+asm void dComIfGp_getCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_getCamera__Fi.s"
 }
@@ -1350,7 +1514,7 @@ ASM_FUNCTION(dComIfGp_getCamera__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
+asm void dComIfGp_getPlayerCameraID(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_getPlayerCameraID__Fi.s"
 }
@@ -1361,7 +1525,7 @@ ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
+asm void dComIfGp_getPlayer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_getPlayer__Fi.s"
 }
@@ -1372,7 +1536,7 @@ ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::cancelOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/cancelOriginalDemo__9daPy_py_cFv.s"
 }
@@ -1383,7 +1547,7 @@ ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
+asm void daPy_getPlayerActorClass() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/daPy_getPlayerActorClass__Fv.s"
 }
@@ -1394,7 +1558,7 @@ ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__4cXyzFRC4cXyz.s"
 }
@@ -1405,7 +1569,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAFastSqrt__Ff) {
+asm void JMAFastSqrt(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/JMAFastSqrt__Ff.s"
 }
@@ -1416,7 +1580,7 @@ ASM_FUNCTION(JMAFastSqrt__Ff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -1427,7 +1591,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::changeOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/changeOriginalDemo__9daPy_py_cFv.s"
 }
@@ -1438,7 +1602,7 @@ ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
+asm void mDoAud_seStart(u32 field_0, Vec const* field_1, u32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/mDoAud_seStart__FUlPC3VecUlSc.s"
 }
@@ -1449,7 +1613,7 @@ ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_ssin__Fs) {
+extern "C" asm void cM_ssin__Fs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/cM_ssin__Fs.s"
 }
@@ -1460,7 +1624,7 @@ ASM_FUNCTION(cM_ssin__Fs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs__4cXyzCFv) {
+asm void cXyz::abs() const {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/abs__4cXyzCFv.s"
 }
@@ -1471,7 +1635,7 @@ ASM_FUNCTION(abs__4cXyzCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__as__4cXyzFRC4cXyz.s"
 }
@@ -1482,7 +1646,7 @@ ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTrigZ__8mDoCPd_cFUl) {
+asm void mDoCPd_c::getTrigZ(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/getTrigZ__8mDoCPd_cFUl.s"
 }
@@ -1493,7 +1657,7 @@ ASM_FUNCTION(getTrigZ__8mDoCPd_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTrigA__8mDoCPd_cFUl) {
+asm void mDoCPd_c::getTrigA(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/getTrigA__8mDoCPd_cFUl.s"
 }
@@ -1504,7 +1668,7 @@ ASM_FUNCTION(getTrigA__8mDoCPd_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setDoStatusForce__FUcUc) {
+asm void dComIfGp_setDoStatusForce(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_setDoStatusForce__FUcUc.s"
 }
@@ -1515,7 +1679,7 @@ ASM_FUNCTION(dComIfGp_setDoStatusForce__FUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setZStatusForce__FUcUc) {
+asm void dComIfGp_setZStatusForce(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/dComIfGp_setZStatusForce__FUcUc.s"
 }

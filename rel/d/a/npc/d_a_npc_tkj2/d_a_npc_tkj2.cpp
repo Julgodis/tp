@@ -6,46 +6,126 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct cXyz;
+struct npc_tkj2_class;
+
+struct daNpc_Tkj2_HIO_c {
+	daNpc_Tkj2_HIO_c();
+	~daNpc_Tkj2_HIO_c();
+};
+
+struct npc_tkj2_class {
+};
+
+struct J3DJoint {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daNpc_Tkj2_HIO_cFv();
-extern "C" extern void anm_init__FP14npc_tkj2_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Tkj2_Draw__FP14npc_tkj2_class();
-extern "C" extern void npc_tkj2_carry_check__FP14npc_tkj2_class();
-extern "C" extern void mode_init_boomCarry__FP14npc_tkj2_class();
-extern "C" extern void Wind_effect__FP14npc_tkj2_class();
-extern "C" extern void CheckRoof__FP14npc_tkj2_class();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void CheckWall__FP14npc_tkj2_classs();
-extern "C" extern void GndCheck2__FP14npc_tkj2_class();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void GndCheck__FP14npc_tkj2_class4cXyz();
-extern "C" extern void npc_tkj2_normal__FP14npc_tkj2_class();
-extern "C" extern void return_pos_get__FP14npc_tkj2_class();
-extern "C" extern void npc_tkj2_carry__FP14npc_tkj2_class();
-extern "C" extern void npc_tkj2_fly__FP14npc_tkj2_class();
-extern "C" extern void npc_tkj2_drop__FP14npc_tkj2_class();
-extern "C" extern void npc_tkj2_return__FP14npc_tkj2_class();
-extern "C" extern void ObjHit__FP14npc_tkj2_class();
-extern "C" extern void action__FP14npc_tkj2_class();
-extern "C" extern void daNpc_Tkj2_Execute__FP14npc_tkj2_class();
-extern "C" extern void daNpc_Tkj2_IsDelete__FP14npc_tkj2_class();
-extern "C" extern void daNpc_Tkj2_Delete__FP14npc_tkj2_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNpc_Tkj2_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__16daNpc_Tkj2_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_tkj2_cpp();
-extern "C" extern void func_80B142A0();
-extern "C" extern void func_80B142A8();
-extern "C" extern void func_80B142B0();
-extern "C" extern void func_80B142B8();
-extern "C" extern void func_80B142C0();
+void anm_init(npc_tkj2_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Tkj2_Draw(npc_tkj2_class*);
+void npc_tkj2_carry_check(npc_tkj2_class*);
+void mode_init_boomCarry(npc_tkj2_class*);
+void Wind_effect(npc_tkj2_class*);
+void CheckRoof(npc_tkj2_class*);
+extern "C" void CheckWall__FP14npc_tkj2_classs();
+void GndCheck2(npc_tkj2_class*);
+void GndCheck(npc_tkj2_class*, cXyz);
+void npc_tkj2_normal(npc_tkj2_class*);
+void return_pos_get(npc_tkj2_class*);
+void npc_tkj2_carry(npc_tkj2_class*);
+void npc_tkj2_fly(npc_tkj2_class*);
+void npc_tkj2_drop(npc_tkj2_class*);
+void npc_tkj2_return(npc_tkj2_class*);
+void ObjHit(npc_tkj2_class*);
+void action(npc_tkj2_class*);
+void daNpc_Tkj2_Execute(npc_tkj2_class*);
+bool daNpc_Tkj2_IsDelete(npc_tkj2_class*);
+void daNpc_Tkj2_Delete(npc_tkj2_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNpc_Tkj2_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_tkj2_cpp();
+extern "C" void func_80B142A0();
+extern "C" void func_80B142A8();
+extern "C" void func_80B142B0();
+extern "C" void func_80B142B8();
+extern "C" void func_80B142C0();
+
+extern "C" void __ct__16daNpc_Tkj2_HIO_cFv();
+extern "C" void anm_init__FP14npc_tkj2_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Tkj2_Draw__FP14npc_tkj2_class();
+extern "C" void npc_tkj2_carry_check__FP14npc_tkj2_class();
+extern "C" void mode_init_boomCarry__FP14npc_tkj2_class();
+extern "C" void Wind_effect__FP14npc_tkj2_class();
+extern "C" void CheckRoof__FP14npc_tkj2_class();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void CheckWall__FP14npc_tkj2_classs();
+extern "C" void GndCheck2__FP14npc_tkj2_class();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void GndCheck__FP14npc_tkj2_class4cXyz();
+extern "C" void npc_tkj2_normal__FP14npc_tkj2_class();
+extern "C" void return_pos_get__FP14npc_tkj2_class();
+extern "C" void npc_tkj2_carry__FP14npc_tkj2_class();
+extern "C" void npc_tkj2_fly__FP14npc_tkj2_class();
+extern "C" void npc_tkj2_drop__FP14npc_tkj2_class();
+extern "C" void npc_tkj2_return__FP14npc_tkj2_class();
+extern "C" void ObjHit__FP14npc_tkj2_class();
+extern "C" void action__FP14npc_tkj2_class();
+extern "C" void daNpc_Tkj2_Execute__FP14npc_tkj2_class();
+extern "C" bool daNpc_Tkj2_IsDelete__FP14npc_tkj2_class();
+extern "C" void daNpc_Tkj2_Delete__FP14npc_tkj2_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNpc_Tkj2_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__16daNpc_Tkj2_HIO_cFv();
+extern "C" void __sinit_d_a_npc_tkj2_cpp();
+extern "C" void func_80B142A0();
+extern "C" void func_80B142A8();
+extern "C" void func_80B142B0();
+extern "C" void func_80B142B8();
+extern "C" void func_80B142C0();
 SECTION_RODATA extern const u32 lit_3648;
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u8 lit_3663[4];
@@ -114,8 +194,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -125,7 +208,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daNpc_Tkj2_HIO_cFv) {
+asm daNpc_Tkj2_HIO_c::daNpc_Tkj2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__ct__16daNpc_Tkj2_HIO_cFv.s"
 }
@@ -136,7 +219,7 @@ ASM_FUNCTION(__ct__16daNpc_Tkj2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP14npc_tkj2_classifUcf) {
+asm void anm_init(npc_tkj2_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/anm_init__FP14npc_tkj2_classifUcf.s"
 }
@@ -147,7 +230,7 @@ ASM_FUNCTION(anm_init__FP14npc_tkj2_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/nodeCallBack__FP8J3DJointi.s"
 }
@@ -158,7 +241,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Tkj2_Draw__FP14npc_tkj2_class) {
+asm void daNpc_Tkj2_Draw(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Draw__FP14npc_tkj2_class.s"
 }
@@ -169,7 +252,7 @@ ASM_FUNCTION(daNpc_Tkj2_Draw__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_carry_check__FP14npc_tkj2_class) {
+asm void npc_tkj2_carry_check(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_carry_check__FP14npc_tkj2_class.s"
 }
@@ -180,7 +263,7 @@ ASM_FUNCTION(npc_tkj2_carry_check__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_boomCarry__FP14npc_tkj2_class) {
+asm void mode_init_boomCarry(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/mode_init_boomCarry__FP14npc_tkj2_class.s"
 }
@@ -191,7 +274,7 @@ ASM_FUNCTION(mode_init_boomCarry__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Wind_effect__FP14npc_tkj2_class) {
+asm void Wind_effect(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/Wind_effect__FP14npc_tkj2_class.s"
 }
@@ -202,7 +285,7 @@ ASM_FUNCTION(Wind_effect__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckRoof__FP14npc_tkj2_class) {
+asm void CheckRoof(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/CheckRoof__FP14npc_tkj2_class.s"
 }
@@ -213,7 +296,7 @@ ASM_FUNCTION(CheckRoof__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__8cM3dGPlaFv.s"
 }
@@ -224,7 +307,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckWall__FP14npc_tkj2_classs) {
+extern "C" asm void CheckWall__FP14npc_tkj2_classs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/CheckWall__FP14npc_tkj2_classs.s"
 }
@@ -235,7 +318,7 @@ ASM_FUNCTION(CheckWall__FP14npc_tkj2_classs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GndCheck2__FP14npc_tkj2_class) {
+asm void GndCheck2(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/GndCheck2__FP14npc_tkj2_class.s"
 }
@@ -246,7 +329,7 @@ ASM_FUNCTION(GndCheck2__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -257,7 +340,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GndCheck__FP14npc_tkj2_class4cXyz) {
+asm void GndCheck(npc_tkj2_class* field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/GndCheck__FP14npc_tkj2_class4cXyz.s"
 }
@@ -268,7 +351,7 @@ ASM_FUNCTION(GndCheck__FP14npc_tkj2_class4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_normal__FP14npc_tkj2_class) {
+asm void npc_tkj2_normal(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_normal__FP14npc_tkj2_class.s"
 }
@@ -279,7 +362,7 @@ ASM_FUNCTION(npc_tkj2_normal__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(return_pos_get__FP14npc_tkj2_class) {
+asm void return_pos_get(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/return_pos_get__FP14npc_tkj2_class.s"
 }
@@ -290,7 +373,7 @@ ASM_FUNCTION(return_pos_get__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_carry__FP14npc_tkj2_class) {
+asm void npc_tkj2_carry(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_carry__FP14npc_tkj2_class.s"
 }
@@ -301,7 +384,7 @@ ASM_FUNCTION(npc_tkj2_carry__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_fly__FP14npc_tkj2_class) {
+asm void npc_tkj2_fly(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_fly__FP14npc_tkj2_class.s"
 }
@@ -312,7 +395,7 @@ ASM_FUNCTION(npc_tkj2_fly__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_drop__FP14npc_tkj2_class) {
+asm void npc_tkj2_drop(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_drop__FP14npc_tkj2_class.s"
 }
@@ -323,7 +406,7 @@ ASM_FUNCTION(npc_tkj2_drop__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_tkj2_return__FP14npc_tkj2_class) {
+asm void npc_tkj2_return(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/npc_tkj2_return__FP14npc_tkj2_class.s"
 }
@@ -334,7 +417,7 @@ ASM_FUNCTION(npc_tkj2_return__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__FP14npc_tkj2_class) {
+asm void ObjHit(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/ObjHit__FP14npc_tkj2_class.s"
 }
@@ -345,7 +428,7 @@ ASM_FUNCTION(ObjHit__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14npc_tkj2_class) {
+asm void action(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/action__FP14npc_tkj2_class.s"
 }
@@ -356,7 +439,7 @@ ASM_FUNCTION(action__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Tkj2_Execute__FP14npc_tkj2_class) {
+asm void daNpc_Tkj2_Execute(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Execute__FP14npc_tkj2_class.s"
 }
@@ -364,21 +447,16 @@ ASM_FUNCTION(daNpc_Tkj2_Execute__FP14npc_tkj2_class) {
 
 
 /* 80B13B38-80B13B40 0008+00 .text      daNpc_Tkj2_IsDelete__FP14npc_tkj2_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Tkj2_IsDelete__FP14npc_tkj2_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_IsDelete__FP14npc_tkj2_class.s"
+bool daNpc_Tkj2_IsDelete(npc_tkj2_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B13B40-80B13BA8 0068+00 .text      daNpc_Tkj2_Delete__FP14npc_tkj2_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Tkj2_Delete__FP14npc_tkj2_class) {
+asm void daNpc_Tkj2_Delete(npc_tkj2_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Delete__FP14npc_tkj2_class.s"
 }
@@ -389,7 +467,7 @@ ASM_FUNCTION(daNpc_Tkj2_Delete__FP14npc_tkj2_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -400,7 +478,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -411,7 +489,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Tkj2_Create__FP10fopAc_ac_c) {
+asm void daNpc_Tkj2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_Create__FP10fopAc_ac_c.s"
 }
@@ -422,7 +500,7 @@ ASM_FUNCTION(daNpc_Tkj2_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__8cM3dGSphFv.s"
 }
@@ -433,7 +511,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__8cM3dGAabFv.s"
 }
@@ -444,7 +522,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -455,7 +533,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daNpc_Tkj2_HIO_cFv) {
+asm daNpc_Tkj2_HIO_c::~daNpc_Tkj2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__dt__16daNpc_Tkj2_HIO_cFv.s"
 }
@@ -466,7 +544,7 @@ ASM_FUNCTION(__dt__16daNpc_Tkj2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_tkj2_cpp) {
+extern "C" asm void __sinit_d_a_npc_tkj2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/__sinit_d_a_npc_tkj2_cpp.s"
 }
@@ -477,7 +555,7 @@ ASM_FUNCTION(__sinit_d_a_npc_tkj2_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B142A0) {
+extern "C" asm void func_80B142A0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142A0.s"
 }
@@ -488,7 +566,7 @@ ASM_FUNCTION(func_80B142A0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B142A8) {
+extern "C" asm void func_80B142A8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142A8.s"
 }
@@ -499,7 +577,7 @@ ASM_FUNCTION(func_80B142A8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B142B0) {
+extern "C" asm void func_80B142B0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142B0.s"
 }
@@ -510,7 +588,7 @@ ASM_FUNCTION(func_80B142B0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B142B8) {
+extern "C" asm void func_80B142B8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142B8.s"
 }
@@ -521,7 +599,7 @@ ASM_FUNCTION(func_80B142B8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B142C0) {
+extern "C" asm void func_80B142C0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/func_80B142C0.s"
 }

@@ -6,78 +6,274 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASSeqParser (JASSeqParser) False/False
+// build JASTrack (JASTrack) False/False
+// build JASOscillator (JASOscillator) False/False
+/* top-level dependencies (begin JASOscillator) */
+/* top-level dependencies (end JASOscillator) */
+struct JASOscillator {
+	// build Point (JASOscillator::Point) False/False
+	/* dependencies (begin JASOscillator::Point) */
+	/* dependencies (end JASOscillator::Point) */
+	struct Point {
+	};
+
+};
+
+/* top-level dependencies (begin JASTrack) */
+// outer dependency: JASOscillator::Point
+/* top-level dependencies (end JASTrack) */
+struct JASTrack {
+	// JASOscillator::Point
+	/* 80291A08 */ void setSeqData(void*, u32);
+	/* 80291ABC */ void start();
+	/* 80291BB8 */ void closeChild(u32);
+	/* 80291C30 */ void openChild(u32);
+	/* 80291DAC */ void connectBus(s32, s32);
+	/* 80291DBC */ void setLatestKey(char);
+	/* 80291F38 */ void noteOn(u32, u32, u32);
+	/* 80292008 */ void gateOn(u32, u32, f32, u32);
+	/* 80292198 */ void noteOff(u32, u16);
+	/* 802926E0 */ void setParam(u32, f32, u32);
+	/* 802927D8 */ void setOscScale(u32, f32);
+	/* 802927E8 */ void setOscTable(u32, JASOscillator::Point const*);
+	/* 80292808 */ void setOscAdsr(s16, s16, s16, s16, u16);
+	/* 8029285C */ void setFIR(s16 const*);
+	/* 8029289C */ void setIIR(s16 const*);
+	/* 802928D0 */ void readPortSelf(u32);
+	/* 802928F4 */ void writePortSelf(u32, u16);
+	/* 80292918 */ void writePort(u32, u16);
+	/* 8029297C */ void readPort(u32);
+	/* 80292B58 */ void setTempo(u16);
+	/* 80292BC0 */ void setTimebase(u16);
+};
+
+// build JASSeqParser (JASSeqParser) True/False
+struct JASSeqParser;
+/* top-level dependencies (begin JASSeqParser) */
+// outer dependency: JASTrack
+// outer dependency: JASSeqParser::BranchCondition
+/* top-level dependencies (end JASSeqParser) */
+struct JASSeqParser {
+	// JASTrack
+	// JASSeqParser::BranchCondition
+	// build BranchCondition (JASSeqParser::BranchCondition) False/False
+	/* dependencies (begin JASSeqParser::BranchCondition) */
+	/* dependencies (end JASSeqParser::BranchCondition) */
+	struct BranchCondition {
+	};
+
+	/* 80293CAC */ ~JASSeqParser();
+	/* 80293CF4 */ void conditionCheck(JASTrack*, JASSeqParser::BranchCondition);
+	/* 80293DC4 */ void writeReg(JASTrack*, u32, u32);
+	/* 80293FC8 */ void readReg(JASTrack*, u32) const;
+	/* 80294188 */ void cmdOpenTrack(JASTrack*, u32*);
+	/* 802941F0 */ void cmdCloseTrack(JASTrack*, u32*);
+	/* 8029421C */ void cmdCall(JASTrack*, u32*);
+	/* 80294248 */ void cmdCallF(JASTrack*, u32*);
+	/* 8029429C */ void cmdRet(JASTrack*, u32*);
+	/* 802942D4 */ void cmdRetF(JASTrack*, u32*);
+	/* 80294328 */ void cmdJmp(JASTrack*, u32*);
+	/* 80294340 */ void cmdJmpF(JASTrack*, u32*);
+	/* 80294398 */ void cmdJmpTable(JASTrack*, u32*);
+	/* 802943CC */ void cmdCallTable(JASTrack*, u32*);
+	/* 8029441C */ void cmdLoopS(JASTrack*, u32*);
+	/* 80294448 */ void cmdLoopE(JASTrack*, u32*);
+	/* 80294470 */ void cmdNote(JASTrack*, u32*);
+	/* 802944B4 */ void cmdNoteOn(JASTrack*, u32*);
+	/* 802944F4 */ void cmdNoteOff(JASTrack*, u32*);
+	/* 80294528 */ void cmdReadPort(JASTrack*, u32*);
+	/* 80294588 */ void cmdWritePort(JASTrack*, u32*);
+	/* 802945BC */ void cmdParentWritePort(JASTrack*, u32*);
+	/* 802945F8 */ void cmdChildWritePort(JASTrack*, u32*);
+	/* 80294644 */ void cmdParentReadPort(JASTrack*, u32*);
+	/* 802946AC */ void cmdChildReadPort(JASTrack*, u32*);
+	/* 80294724 */ void cmdCheckPortImport(JASTrack*, u32*);
+	/* 80294770 */ void cmdCheckPortExport(JASTrack*, u32*);
+	/* 802947BC */ void cmdWait(JASTrack*, u32*);
+	/* 802947F4 */ void cmdWaitByte(JASTrack*, u32*);
+	/* 80294804 */ void cmdSetLastNote(JASTrack*, u32*);
+	/* 8029483C */ void cmdEnvScaleSet(JASTrack*, u32*);
+	/* 8029488C */ void cmdEnvSet(JASTrack*, u32*);
+	/* 802948C8 */ void cmdSimpleADSR(JASTrack*, u32*);
+	/* 8029491C */ void cmdBusConnect(JASTrack*, u32*);
+	/* 8029494C */ void cmdSetIntTable(JASTrack*, u32*);
+	/* 8029495C */ void cmdSetInterrupt(JASTrack*, u32*);
+	/* 80294988 */ void cmdDisInterrupt(JASTrack*, u32*);
+	/* 802949B4 */ void cmdClrI(JASTrack*, u32*);
+	/* 802949E4 */ void cmdRetI(JASTrack*, u32*);
+	/* 80294A20 */ void cmdIntTimer(JASTrack*, u32*);
+	/* 80294A3C */ void cmdSyncCPU(JASTrack*, u32*);
+	/* 80294AA4 */ void cmdTempo(JASTrack*, u32*);
+	/* 80294AD4 */ s32 cmdFinish(JASTrack*, u32*);
+	/* 80294ADC */ bool cmdNop(JASTrack*, u32*);
+	/* 80294AE4 */ void cmdFIRSet(JASTrack*, u32*);
+	/* 80294B1C */ void cmdIIRSet(JASTrack*, u32*);
+	/* 80294B70 */ void cmdIIRCutOff(JASTrack*, u32*);
+	/* 80294BB4 */ void cmdBankPrg(JASTrack*, u32*);
+	/* 80294BD0 */ void cmdBank(JASTrack*, u32*);
+	/* 80294BE4 */ void cmdPrg(JASTrack*, u32*);
+	/* 80294BF8 */ void cmdParamI(JASTrack*, u32*);
+	/* 80294C54 */ void cmdParamII(JASTrack*, u32*);
+	/* 80294CB0 */ void cmdParamE(JASTrack*, u32*);
+	/* 80294D2C */ void cmdParamEI(JASTrack*, u32*);
+	/* 80294DA8 */ void cmdReg(JASTrack*, u32*);
+	/* 80294F10 */ void cmdRegLoad(JASTrack*, u32*);
+	/* 80294F40 */ void cmdRegUni(JASTrack*, u32*);
+	/* 80294FB4 */ void cmdRegTblLoad(JASTrack*, u32*);
+	/* 80295088 */ void cmdDump(JASTrack*, u32*);
+	/* 8029526C */ void cmdPrintf(JASTrack*, u32*);
+	/* 80295498 */ void execNoteOnGate(JASTrack*, u32, u32, u32, u32);
+	/* 80295540 */ void execNoteOnMidi(JASTrack*, u32, u32, u32);
+	/* 80295570 */ void execNoteOff(JASTrack*, u32);
+	/* 802955C8 */ void parseNoteOff(JASTrack*, char);
+	/* 80295600 */ void parseNoteOn(JASTrack*, char);
+	/* 802956B0 */ void parseCommand(JASTrack*, char, u16);
+	/* 80295864 */ void parseRegCommand(JASTrack*, s32);
+	/* 802958D4 */ void parse(JASTrack*);
+};
+
+// build JASTrack (JASTrack) True/True
+// build JASOscillator (JASOscillator) True/True
+// build JASTrackPort (JASTrackPort) False/False
+/* top-level dependencies (begin JASTrackPort) */
+/* top-level dependencies (end JASTrackPort) */
+struct JASTrackPort {
+	/* 8029360C */ void checkImport(u32) const;
+	/* 80293628 */ void checkExport(u32) const;
+};
+
+// build JASRegisterParam (JASRegisterParam) False/False
+// build JASRegisterParam (JASRegisterParam) True/False
+struct JASRegisterParam;
+/* top-level dependencies (begin JASRegisterParam) */
+// outer dependency: JASRegisterParam::RegID
+/* top-level dependencies (end JASRegisterParam) */
+struct JASRegisterParam {
+	// JASRegisterParam::RegID
+	// build RegID (JASRegisterParam::RegID) False/False
+	/* dependencies (begin JASRegisterParam::RegID) */
+	/* dependencies (end JASRegisterParam::RegID) */
+	struct RegID {
+	};
+
+	/* 80293684 */ void write(JASRegisterParam::RegID, u32);
+	/* 802937B8 */ void read(JASRegisterParam::RegID);
+};
+
+// build JASSeqCtrl (JASSeqCtrl) False/False
+/* top-level dependencies (begin JASSeqCtrl) */
+/* top-level dependencies (end JASSeqCtrl) */
+struct JASSeqCtrl {
+	/* 80293AE0 */ void setIntrMask(u32);
+	/* 80293AF0 */ void clrIntrMask(u32);
+	/* 80293B00 */ void retIntr();
+	/* 80293B78 */ void checkIntr();
+};
+
+// build JASSeqReader (JASSeqReader) False/False
+/* top-level dependencies (begin JASSeqReader) */
+/* top-level dependencies (end JASSeqReader) */
+struct JASSeqReader {
+	/* 8029618C */ void call(u32);
+	/* 802961CC */ void loopStart(u32);
+	/* 80296210 */ void loopEnd();
+	/* 8029627C */ void ret();
+	/* 802962B0 */ void readMidiValue();
+};
+
+// build JMath (JMath) False/False
+/* top-level dependencies (begin JMath) */
+/* top-level dependencies (end JMath) */
+struct JMath {
+	// build TRandom_fast_ (JMath::TRandom_fast_) False/False
+	/* dependencies (begin JMath::TRandom_fast_) */
+	/* dependencies (end JMath::TRandom_fast_) */
+	struct TRandom_fast_ {
+		/* 80339AE4 */ TRandom_fast_(u32);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition();
-extern "C" extern void writeReg__12JASSeqParserFP8JASTrackUlUl();
-extern "C" extern void readReg__12JASSeqParserCFP8JASTrackUl();
-extern "C" extern void cmdOpenTrack__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCloseTrack__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCall__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCallF__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRet__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRetF__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdJmp__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdJmpF__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdJmpTable__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCallTable__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdLoopS__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdLoopE__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdNote__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdNoteOn__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdNoteOff__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdReadPort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdWritePort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParentWritePort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdChildWritePort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParentReadPort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdChildReadPort__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdWait__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdWaitByte__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdSetLastNote__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdEnvSet__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdBusConnect__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdSetIntTable__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdClrI__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRetI__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdIntTimer__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdSyncCPU__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdTempo__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdFinish__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdNop__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdFIRSet__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdIIRSet__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdBankPrg__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdBank__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdPrg__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParamI__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParamII__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParamE__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdParamEI__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdReg__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRegLoad__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRegUni__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdDump__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void cmdPrintf__12JASSeqParserFP8JASTrackPUl();
-extern "C" extern void execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl();
-extern "C" extern void execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl();
-extern "C" extern void execNoteOff__12JASSeqParserFP8JASTrackUl();
-extern "C" extern void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl();
-extern "C" extern void parseNoteOff__12JASSeqParserFP8JASTrackUc();
-extern "C" extern void parseNoteOn__12JASSeqParserFP8JASTrackUc();
-extern "C" extern void parseCommand__12JASSeqParserFP8JASTrackUcUs();
-extern "C" extern void parseRegCommand__12JASSeqParserFP8JASTracki();
-extern "C" extern void parse__12JASSeqParserFP8JASTrack();
-extern "C" extern void __sinit_JASSeqParser_cpp();
+extern "C" static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl();
+extern "C" void __sinit_JASSeqParser_cpp();
+
+extern "C" void conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition();
+extern "C" void writeReg__12JASSeqParserFP8JASTrackUlUl();
+extern "C" void readReg__12JASSeqParserCFP8JASTrackUl();
+extern "C" void cmdOpenTrack__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCloseTrack__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCall__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCallF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRetF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmp__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmpF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmpTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCallTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdLoopS__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdLoopE__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNote__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNoteOn__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNoteOff__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParentWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdChildWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParentReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdChildReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWait__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWaitByte__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetLastNote__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdEnvSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBusConnect__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetIntTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdClrI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRetI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIntTimer__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSyncCPU__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdTempo__12JASSeqParserFP8JASTrackPUl();
+extern "C" s32 cmdFinish__12JASSeqParserFP8JASTrackPUl();
+extern "C" bool cmdNop__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdFIRSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIIRSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBankPrg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBank__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdPrg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamII__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamE__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamEI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdReg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegLoad__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegUni__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdDump__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdPrintf__12JASSeqParserFP8JASTrackPUl();
+extern "C" void execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl();
+extern "C" void execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl();
+extern "C" void execNoteOff__12JASSeqParserFP8JASTrackUl();
+extern "C" static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl();
+extern "C" void parseNoteOff__12JASSeqParserFP8JASTrackUc();
+extern "C" void parseNoteOn__12JASSeqParserFP8JASTrackUc();
+extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs();
+extern "C" void parseRegCommand__12JASSeqParserFP8JASTracki();
+extern "C" void parse__12JASSeqParserFP8JASTrack();
+extern "C" void __sinit_JASSeqParser_cpp();
 SECTION_RODATA extern const u8 JASSeqParser__stringBase0[336];
 SECTION_DATA extern void*JASSeqParser__lit_486[3];
 SECTION_DATA extern void*JASSeqParser__lit_487[3];
@@ -160,54 +356,67 @@ SECTION_SDATA2 extern f64 JASSeqParser__lit_1064;
 // External References:
 // 
 
-extern "C" extern void JASReport__FPCce();
-extern "C" extern void setSeqData__8JASTrackFPvUl();
-extern "C" extern void start__8JASTrackFv();
-extern "C" extern void closeChild__8JASTrackFUl();
-extern "C" extern void openChild__8JASTrackFUl();
-extern "C" extern void connectBus__8JASTrackFii();
-extern "C" extern void setLatestKey__8JASTrackFUc();
-extern "C" extern void noteOn__8JASTrackFUlUlUl();
-extern "C" extern void gateOn__8JASTrackFUlUlfUl();
-extern "C" extern void noteOff__8JASTrackFUlUs();
-extern "C" extern void setParam__8JASTrackFUlfUl();
-extern "C" extern void setOscScale__8JASTrackFUlf();
-extern "C" extern void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point();
-extern "C" extern void setOscAdsr__8JASTrackFssssUs();
-extern "C" extern void setFIR__8JASTrackFPCs();
-extern "C" extern void setIIR__8JASTrackFPCs();
-extern "C" extern void readPortSelf__8JASTrackFUl();
-extern "C" extern void writePortSelf__8JASTrackFUlUs();
-extern "C" extern void writePort__8JASTrackFUlUs();
-extern "C" extern void readPort__8JASTrackFUl();
-extern "C" extern void setTempo__8JASTrackFUs();
-extern "C" extern void setTimebase__8JASTrackFUs();
-extern "C" extern void checkImport__12JASTrackPortCFUl();
-extern "C" extern void checkExport__12JASTrackPortCFUl();
-extern "C" extern void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
-extern "C" extern void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
-extern "C" extern void setIntrMask__10JASSeqCtrlFUl();
-extern "C" extern void clrIntrMask__10JASSeqCtrlFUl();
-extern "C" extern void retIntr__10JASSeqCtrlFv();
-extern "C" extern void checkIntr__10JASSeqCtrlFv();
-extern "C" extern void __dt__12JASSeqParserFv();
-extern "C" extern void call__12JASSeqReaderFUl();
-extern "C" extern void loopStart__12JASSeqReaderFUl();
-extern "C" extern void loopEnd__12JASSeqReaderFv();
-extern "C" extern void ret__12JASSeqReaderFv();
-extern "C" extern void readMidiValue__12JASSeqReaderFv();
-extern "C" extern void __ct__Q25JMath13TRandom_fast_FUl();
-extern "C" extern void __ptmf_test();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void JASReport__FPCce();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void JASReport__FPCce();
+extern "C" void setSeqData__8JASTrackFPvUl();
+extern "C" void start__8JASTrackFv();
+extern "C" void closeChild__8JASTrackFUl();
+extern "C" void openChild__8JASTrackFUl();
+extern "C" void connectBus__8JASTrackFii();
+extern "C" void setLatestKey__8JASTrackFUc();
+extern "C" void noteOn__8JASTrackFUlUlUl();
+extern "C" void gateOn__8JASTrackFUlUlfUl();
+extern "C" void noteOff__8JASTrackFUlUs();
+extern "C" void setParam__8JASTrackFUlfUl();
+extern "C" void setOscScale__8JASTrackFUlf();
+extern "C" void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point();
+extern "C" void setOscAdsr__8JASTrackFssssUs();
+extern "C" void setFIR__8JASTrackFPCs();
+extern "C" void setIIR__8JASTrackFPCs();
+extern "C" void readPortSelf__8JASTrackFUl();
+extern "C" void writePortSelf__8JASTrackFUlUs();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void readPort__8JASTrackFUl();
+extern "C" void setTempo__8JASTrackFUs();
+extern "C" void setTimebase__8JASTrackFUs();
+extern "C" void checkImport__12JASTrackPortCFUl();
+extern "C" void checkExport__12JASTrackPortCFUl();
+extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
+extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
+extern "C" void setIntrMask__10JASSeqCtrlFUl();
+extern "C" void clrIntrMask__10JASSeqCtrlFUl();
+extern "C" void retIntr__10JASSeqCtrlFv();
+extern "C" void checkIntr__10JASSeqCtrlFv();
+extern "C" void __dt__12JASSeqParserFv();
+extern "C" void call__12JASSeqReaderFUl();
+extern "C" void loopStart__12JASSeqReaderFUl();
+extern "C" void loopEnd__12JASSeqReaderFv();
+extern "C" void ret__12JASSeqReaderFv();
+extern "C" void readMidiValue__12JASSeqReaderFv();
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 
@@ -215,11 +424,11 @@ SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80293CF4-80293DC4 00D0+00 .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
+/* 80293CF4-80293DC4 00D0+00 rc=3 efc=0 .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition) {
+asm void JASSeqParser::conditionCheck(JASTrack* field_0, JASSeqParser::BranchCondition field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition.s"
 }
@@ -227,399 +436,399 @@ ASM_FUNCTION(conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCo
 
 
 /* ############################################################################################## */
-/* 803C5BE0-803C5BEC 000C+00 .data      @486                                                         */
+/* 803C5BE0-803C5BEC 000C+00 rc=1 efc=0 .data      @486                                                         */
 void* JASSeqParser__lit_486[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdNoteOn__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BEC-803C5BF8 000C+00 .data      @487                                                         */
+/* 803C5BEC-803C5BF8 000C+00 rc=0 efc=0 .data      @487                                                         */
 void* JASSeqParser__lit_487[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdNoteOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BF8-803C5C04 000C+00 .data      @488                                                         */
+/* 803C5BF8-803C5C04 000C+00 rc=0 efc=0 .data      @488                                                         */
 void* JASSeqParser__lit_488[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C04-803C5C10 000C+00 .data      @489                                                         */
+/* 803C5C04-803C5C10 000C+00 rc=0 efc=0 .data      @489                                                         */
 void* JASSeqParser__lit_489[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdSetLastNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C10-803C5C1C 000C+00 .data      @490                                                         */
+/* 803C5C10-803C5C1C 000C+00 rc=0 efc=0 .data      @490                                                         */
 void* JASSeqParser__lit_490[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParamE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C1C-803C5C28 000C+00 .data      @491                                                         */
+/* 803C5C1C-803C5C28 000C+00 rc=0 efc=0 .data      @491                                                         */
 void* JASSeqParser__lit_491[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParamI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C28-803C5C34 000C+00 .data      @492                                                         */
+/* 803C5C28-803C5C34 000C+00 rc=0 efc=0 .data      @492                                                         */
 void* JASSeqParser__lit_492[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParamEI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C34-803C5C40 000C+00 .data      @493                                                         */
+/* 803C5C34-803C5C40 000C+00 rc=0 efc=0 .data      @493                                                         */
 void* JASSeqParser__lit_493[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParamII__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C40-803C5C4C 000C+00 .data      @494                                                         */
+/* 803C5C40-803C5C4C 000C+00 rc=0 efc=0 .data      @494                                                         */
 void* lit_494[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdOpenTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C4C-803C5C58 000C+00 .data      @495                                                         */
+/* 803C5C4C-803C5C58 000C+00 rc=0 efc=0 .data      @495                                                         */
 void* lit_495[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCloseTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C58-803C5C64 000C+00 .data      @496                                                         */
+/* 803C5C58-803C5C64 000C+00 rc=0 efc=0 .data      @496                                                         */
 void* lit_496[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCall__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C64-803C5C70 000C+00 .data      @497                                                         */
+/* 803C5C64-803C5C70 000C+00 rc=0 efc=0 .data      @497                                                         */
 void* lit_497[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCallF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C70-803C5C7C 000C+00 .data      @498                                                         */
+/* 803C5C70-803C5C7C 000C+00 rc=0 efc=0 .data      @498                                                         */
 void* JASSeqParser__lit_498[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C7C-803C5C88 000C+00 .data      @499                                                         */
+/* 803C5C7C-803C5C88 000C+00 rc=0 efc=0 .data      @499                                                         */
 void* JASSeqParser__lit_499[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRetF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C88-803C5C94 000C+00 .data      @500                                                         */
+/* 803C5C88-803C5C94 000C+00 rc=0 efc=0 .data      @500                                                         */
 void* lit_500[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdJmp__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C94-803C5CA0 000C+00 .data      @501                                                         */
+/* 803C5C94-803C5CA0 000C+00 rc=0 efc=0 .data      @501                                                         */
 void* lit_501[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdJmpF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CA0-803C5CAC 000C+00 .data      @502                                                         */
+/* 803C5CA0-803C5CAC 000C+00 rc=0 efc=0 .data      @502                                                         */
 void* lit_502[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdJmpTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CAC-803C5CB8 000C+00 .data      @503                                                         */
+/* 803C5CAC-803C5CB8 000C+00 rc=0 efc=0 .data      @503                                                         */
 void* JASSeqParser__lit_503[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCallTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CB8-803C5CC4 000C+00 .data      @504                                                         */
+/* 803C5CB8-803C5CC4 000C+00 rc=0 efc=0 .data      @504                                                         */
 void* JASSeqParser__lit_504[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdLoopS__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CC4-803C5CD0 000C+00 .data      @505                                                         */
+/* 803C5CC4-803C5CD0 000C+00 rc=0 efc=0 .data      @505                                                         */
 void* JASSeqParser__lit_505[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdLoopE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CD0-803C5CDC 000C+00 .data      @506                                                         */
+/* 803C5CD0-803C5CDC 000C+00 rc=0 efc=0 .data      @506                                                         */
 void* JASSeqParser__lit_506[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CDC-803C5CE8 000C+00 .data      @507                                                         */
+/* 803C5CDC-803C5CE8 000C+00 rc=0 efc=0 .data      @507                                                         */
 void* JASSeqParser__lit_507[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CE8-803C5CF4 000C+00 .data      @508                                                         */
+/* 803C5CE8-803C5CF4 000C+00 rc=0 efc=0 .data      @508                                                         */
 void* JASSeqParser__lit_508[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CF4-803C5D00 000C+00 .data      @509                                                         */
+/* 803C5CF4-803C5D00 000C+00 rc=0 efc=0 .data      @509                                                         */
 void* JASSeqParser__lit_509[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D00-803C5D0C 000C+00 .data      @510                                                         */
+/* 803C5D00-803C5D0C 000C+00 rc=0 efc=0 .data      @510                                                         */
 void* JASSeqParser__lit_510[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParentWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D0C-803C5D18 000C+00 .data      @511                                                         */
+/* 803C5D0C-803C5D18 000C+00 rc=0 efc=0 .data      @511                                                         */
 void* JASSeqParser__lit_511[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdChildWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D18-803C5D24 000C+00 .data      @512                                                         */
+/* 803C5D18-803C5D24 000C+00 rc=0 efc=0 .data      @512                                                         */
 void* JASSeqParser__lit_512[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdParentReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D24-803C5D30 000C+00 .data      @513                                                         */
+/* 803C5D24-803C5D30 000C+00 rc=0 efc=0 .data      @513                                                         */
 void* lit_513[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdChildReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D30-803C5D3C 000C+00 .data      @514                                                         */
+/* 803C5D30-803C5D3C 000C+00 rc=0 efc=0 .data      @514                                                         */
 void* JASSeqParser__lit_514[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRegLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D3C-803C5D48 000C+00 .data      @515                                                         */
+/* 803C5D3C-803C5D48 000C+00 rc=0 efc=0 .data      @515                                                         */
 void* lit_515[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D48-803C5D54 000C+00 .data      @516                                                         */
+/* 803C5D48-803C5D54 000C+00 rc=0 efc=0 .data      @516                                                         */
 void* lit_516[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D54-803C5D60 000C+00 .data      @517                                                         */
+/* 803C5D54-803C5D60 000C+00 rc=0 efc=0 .data      @517                                                         */
 void* lit_517[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRegUni__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D60-803C5D6C 000C+00 .data      @518                                                         */
+/* 803C5D60-803C5D6C 000C+00 rc=0 efc=0 .data      @518                                                         */
 void* lit_518[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D6C-803C5D78 000C+00 .data      @519                                                         */
+/* 803C5D6C-803C5D78 000C+00 rc=0 efc=0 .data      @519                                                         */
 void* lit_519[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdTempo__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D78-803C5D84 000C+00 .data      @520                                                         */
+/* 803C5D78-803C5D84 000C+00 rc=0 efc=0 .data      @520                                                         */
 void* lit_520[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdBankPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D84-803C5D90 000C+00 .data      @521                                                         */
+/* 803C5D84-803C5D90 000C+00 rc=0 efc=0 .data      @521                                                         */
 void* lit_521[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdBank__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D90-803C5D9C 000C+00 .data      @522                                                         */
+/* 803C5D90-803C5D9C 000C+00 rc=0 efc=0 .data      @522                                                         */
 void* JASSeqParser__lit_522[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D9C-803C5DA8 000C+00 .data      @523                                                         */
+/* 803C5D9C-803C5DA8 000C+00 rc=0 efc=0 .data      @523                                                         */
 void* lit_523[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DA8-803C5DB4 000C+00 .data      @524                                                         */
+/* 803C5DA8-803C5DB4 000C+00 rc=0 efc=0 .data      @524                                                         */
 void* lit_524[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdEnvSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DB4-803C5DC0 000C+00 .data      @525                                                         */
+/* 803C5DB4-803C5DC0 000C+00 rc=0 efc=0 .data      @525                                                         */
 void* JASSeqParser__lit_525[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DC0-803C5DCC 000C+00 .data      @526                                                         */
+/* 803C5DC0-803C5DCC 000C+00 rc=0 efc=0 .data      @526                                                         */
 void* JASSeqParser__lit_526[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdBusConnect__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DCC-803C5DD8 000C+00 .data      @527                                                         */
+/* 803C5DCC-803C5DD8 000C+00 rc=0 efc=0 .data      @527                                                         */
 void* lit_527[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DD8-803C5DE4 000C+00 .data      @528                                                         */
+/* 803C5DD8-803C5DE4 000C+00 rc=0 efc=0 .data      @528                                                         */
 void* lit_528[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdIIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DE4-803C5DF0 000C+00 .data      @529                                                         */
+/* 803C5DE4-803C5DF0 000C+00 rc=0 efc=0 .data      @529                                                         */
 void* lit_529[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdFIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DF0-803C5DFC 000C+00 .data      @530                                                         */
+/* 803C5DF0-803C5DFC 000C+00 rc=0 efc=0 .data      @530                                                         */
 void* lit_530[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdWait__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DFC-803C5E08 000C+00 .data      @531                                                         */
+/* 803C5DFC-803C5E08 000C+00 rc=0 efc=0 .data      @531                                                         */
 void* JASSeqParser__lit_531[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdWaitByte__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E08-803C5E14 000C+00 .data      @532                                                         */
+/* 803C5E08-803C5E14 000C+00 rc=0 efc=0 .data      @532                                                         */
 void* lit_532[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdSetIntTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E14-803C5E20 000C+00 .data      @533                                                         */
+/* 803C5E14-803C5E20 000C+00 rc=0 efc=0 .data      @533                                                         */
 void* JASSeqParser__lit_533[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E20-803C5E2C 000C+00 .data      @534                                                         */
+/* 803C5E20-803C5E2C 000C+00 rc=0 efc=0 .data      @534                                                         */
 void* lit_534[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E2C-803C5E38 000C+00 .data      @535                                                         */
+/* 803C5E2C-803C5E38 000C+00 rc=0 efc=0 .data      @535                                                         */
 void* JASSeqParser__lit_535[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdRetI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E38-803C5E44 000C+00 .data      @536                                                         */
+/* 803C5E38-803C5E44 000C+00 rc=0 efc=0 .data      @536                                                         */
 void* JASSeqParser__lit_536[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdClrI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E44-803C5E50 000C+00 .data      @537                                                         */
+/* 803C5E44-803C5E50 000C+00 rc=0 efc=0 .data      @537                                                         */
 void* JASSeqParser__lit_537[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdIntTimer__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E50-803C5E5C 000C+00 .data      @538                                                         */
+/* 803C5E50-803C5E5C 000C+00 rc=0 efc=0 .data      @538                                                         */
 void* JASSeqParser__lit_538[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdSyncCPU__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E5C-803C5E68 000C+00 .data      @539                                                         */
+/* 803C5E5C-803C5E68 000C+00 rc=0 efc=0 .data      @539                                                         */
 void* lit_539[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdPrintf__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E68-803C5E74 000C+00 .data      @540                                                         */
+/* 803C5E68-803C5E74 000C+00 rc=0 efc=0 .data      @540                                                         */
 void* lit_540[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdNop__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E74-803C5E80 000C+00 .data      @541                                                         */
+/* 803C5E74-803C5E80 000C+00 rc=0 efc=0 .data      @541                                                         */
 void* lit_541[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdFinish__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E80-803C6480 0600+00 .data      sCmdInfo__12JASSeqParser                                     */
+/* 803C5E80-803C6480 0600+00 rc=1 efc=0 .data      sCmdInfo__12JASSeqParser                                     */
 u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -719,14 +928,14 @@ u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C6480-803C648C 000C+00 .data      @542                                                         */
+/* 803C6480-803C648C 000C+00 rc=0 efc=0 .data      @542                                                         */
 void* lit_542[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)cmdDump__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C648C-803C747C 0FF0+00 .data      sExtCmdInfo__12JASSeqParser                                  */
+/* 803C648C-803C747C 0FF0+00 rc=1 efc=0 .data      sExtCmdInfo__12JASSeqParser                                  */
 u8 sExtCmdInfo__12JASSeqParser[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -985,7 +1194,7 @@ u8 sExtCmdInfo__12JASSeqParser[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C747C-803C7550 00D4+00 .data      @632                                                         */
+/* 803C747C-803C7550 00D4+00 rc=1 efc=0 .data      @632                                                         */
 void* JASSeqParser__lit_632[53] = {
 	(void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
 	(void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
@@ -1042,30 +1251,30 @@ void* JASSeqParser__lit_632[53] = {
 	(void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x1E8),
 };
 
-/* 804555D8-804555DC 0004+00 .sdata2    @627                                                         */
+/* 804555D8-804555DC 0004+00 rc=6 efc=0 .sdata2    @627                                                         */
 f32 JASSeqParser__lit_627 = 32767.0f;
 
-/* 804555DC-804555E0 0004+00 .sdata2    @628                                                         */
+/* 804555DC-804555E0 0004+00 rc=2 efc=0 .sdata2    @628                                                         */
 f32 JASSeqParser__lit_628 = 1524.0f;
 
-/* 804555E0-804555E4 0004+00 .sdata2    @629                                                         */
+/* 804555E0-804555E4 0004+00 rc=2 efc=0 .sdata2    @629                                                         */
 f32 lit_629 = 12192.0f;
 
-/* 804555E4-804555E8 0004+00 .sdata2    @630                                                         */
+/* 804555E4-804555E8 0004+00 rc=1 efc=0 .sdata2    @630                                                         */
 f32 lit_630 = 0.00390625f;
 
-/* 804555E8-804555F0 0004+04 .sdata2    @631                                                         */
+/* 804555E8-804555F0 0004+04 rc=1 efc=0 .sdata2    @631                                                         */
 f32 lit_631 = 0.015625f;
 /* padding 4 bytes */
 
-/* 804555F0-804555F8 0008+00 .sdata2    @634                                                         */
+/* 804555F0-804555F8 0008+00 rc=3 efc=0 .sdata2    @634                                                         */
 f64 lit_634 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80293DC4-80293FC8 0204+00 .text      writeReg__12JASSeqParserFP8JASTrackUlUl                      */
+/* 80293DC4-80293FC8 0204+00 rc=8 efc=0 .text      writeReg__12JASSeqParserFP8JASTrackUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(writeReg__12JASSeqParserFP8JASTrackUlUl) {
+asm void JASSeqParser::writeReg(JASTrack* field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/writeReg__12JASSeqParserFP8JASTrackUlUl.s"
 }
@@ -1073,7 +1282,7 @@ ASM_FUNCTION(writeReg__12JASSeqParserFP8JASTrackUlUl) {
 
 
 /* ############################################################################################## */
-/* 803C7550-803C7624 00D4+00 .data      @720                                                         */
+/* 803C7550-803C7624 00D4+00 rc=1 efc=0 .data      @720                                                         */
 void* lit_720[53] = {
 	(void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x4C),
 	(void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x4C),
@@ -1130,303 +1339,303 @@ void* lit_720[53] = {
 	(void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x1AC),
 };
 
-/* 804555F8-804555FC 0004+00 .sdata2    @718                                                         */
+/* 804555F8-804555FC 0004+00 rc=1 efc=0 .sdata2    @718                                                         */
 f32 lit_718 = 256.0f;
 
-/* 804555FC-80455600 0004+00 .sdata2    @719                                                         */
+/* 804555FC-80455600 0004+00 rc=1 efc=0 .sdata2    @719                                                         */
 f32 lit_719 = 64.0f;
 
-/* 80293FC8-80294188 01C0+00 .text      readReg__12JASSeqParserCFP8JASTrackUl                        */
+/* 80293FC8-80294188 01C0+00 rc=7 efc=0 .text      readReg__12JASSeqParserCFP8JASTrackUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(readReg__12JASSeqParserCFP8JASTrackUl) {
+asm void JASSeqParser::readReg(JASTrack* field_0, u32 field_1) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/readReg__12JASSeqParserCFP8JASTrackUl.s"
 }
 #pragma pop
 
 
-/* 80294188-802941F0 0068+00 .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294188-802941F0 0068+00 rc=1 efc=0 .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdOpenTrack__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdOpenTrack(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdOpenTrack__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802941F0-8029421C 002C+00 .text      cmdCloseTrack__12JASSeqParserFP8JASTrackPUl                  */
+/* 802941F0-8029421C 002C+00 rc=1 efc=0 .text      cmdCloseTrack__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCloseTrack__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCloseTrack(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCloseTrack__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029421C-80294248 002C+00 .text      cmdCall__12JASSeqParserFP8JASTrackPUl                        */
+/* 8029421C-80294248 002C+00 rc=1 efc=0 .text      cmdCall__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCall__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCall(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCall__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294248-8029429C 0054+00 .text      cmdCallF__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294248-8029429C 0054+00 rc=1 efc=0 .text      cmdCallF__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCallF__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCallF(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCallF__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029429C-802942D4 0038+00 .text      cmdRet__12JASSeqParserFP8JASTrackPUl                         */
+/* 8029429C-802942D4 0038+00 rc=1 efc=0 .text      cmdRet__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRet__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRet(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRet__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802942D4-80294328 0054+00 .text      cmdRetF__12JASSeqParserFP8JASTrackPUl                        */
+/* 802942D4-80294328 0054+00 rc=1 efc=0 .text      cmdRetF__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRetF__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRetF(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRetF__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294328-80294340 0018+00 .text      cmdJmp__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294328-80294340 0018+00 rc=1 efc=0 .text      cmdJmp__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdJmp__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdJmp(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdJmp__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294340-80294398 0058+00 .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294340-80294398 0058+00 rc=1 efc=0 .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdJmpF__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdJmpF(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdJmpF__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294398-802943CC 0034+00 .text      cmdJmpTable__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294398-802943CC 0034+00 rc=1 efc=0 .text      cmdJmpTable__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdJmpTable__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdJmpTable(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdJmpTable__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802943CC-8029441C 0050+00 .text      cmdCallTable__12JASSeqParserFP8JASTrackPUl                   */
+/* 802943CC-8029441C 0050+00 rc=1 efc=0 .text      cmdCallTable__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCallTable__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCallTable(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCallTable__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029441C-80294448 002C+00 .text      cmdLoopS__12JASSeqParserFP8JASTrackPUl                       */
+/* 8029441C-80294448 002C+00 rc=1 efc=0 .text      cmdLoopS__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdLoopS__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdLoopS(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdLoopS__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294448-80294470 0028+00 .text      cmdLoopE__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294448-80294470 0028+00 rc=1 efc=0 .text      cmdLoopE__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdLoopE__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdLoopE(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdLoopE__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294470-802944B4 0044+00 .text      cmdNote__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294470-802944B4 0044+00 rc=1 efc=0 .text      cmdNote__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdNote__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdNote(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdNote__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802944B4-802944F4 0040+00 .text      cmdNoteOn__12JASSeqParserFP8JASTrackPUl                      */
+/* 802944B4-802944F4 0040+00 rc=1 efc=0 .text      cmdNoteOn__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdNoteOn__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdNoteOn(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdNoteOn__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802944F4-80294528 0034+00 .text      cmdNoteOff__12JASSeqParserFP8JASTrackPUl                     */
+/* 802944F4-80294528 0034+00 rc=1 efc=0 .text      cmdNoteOff__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdNoteOff__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdNoteOff(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdNoteOff__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294528-80294588 0060+00 .text      cmdReadPort__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294528-80294588 0060+00 rc=1 efc=0 .text      cmdReadPort__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdReadPort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdReadPort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdReadPort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294588-802945BC 0034+00 .text      cmdWritePort__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294588-802945BC 0034+00 rc=1 efc=0 .text      cmdWritePort__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdWritePort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdWritePort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdWritePort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802945BC-802945F8 003C+00 .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl             */
+/* 802945BC-802945F8 003C+00 rc=1 efc=0 .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParentWritePort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParentWritePort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParentWritePort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802945F8-80294644 004C+00 .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl              */
+/* 802945F8-80294644 004C+00 rc=1 efc=0 .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdChildWritePort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdChildWritePort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdChildWritePort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294644-802946AC 0068+00 .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl              */
+/* 80294644-802946AC 0068+00 rc=1 efc=0 .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParentReadPort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParentReadPort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParentReadPort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802946AC-80294724 0078+00 .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl               */
+/* 802946AC-80294724 0078+00 rc=1 efc=0 .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdChildReadPort__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdChildReadPort(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdChildReadPort__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294724-80294770 004C+00 .text      cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl             */
+/* 80294724-80294770 004C+00 rc=1 efc=0 .text      cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCheckPortImport(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294770-802947BC 004C+00 .text      cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl             */
+/* 80294770-802947BC 004C+00 rc=1 efc=0 .text      cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdCheckPortExport(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802947BC-802947F4 0038+00 .text      cmdWait__12JASSeqParserFP8JASTrackPUl                        */
+/* 802947BC-802947F4 0038+00 rc=1 efc=0 .text      cmdWait__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdWait__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdWait(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdWait__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802947F4-80294804 0010+00 .text      cmdWaitByte__12JASSeqParserFP8JASTrackPUl                    */
+/* 802947F4-80294804 0010+00 rc=1 efc=0 .text      cmdWaitByte__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdWaitByte__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdWaitByte(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdWaitByte__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294804-8029483C 0038+00 .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl                 */
+/* 80294804-8029483C 0038+00 rc=1 efc=0 .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdSetLastNote__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdSetLastNote(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdSetLastNote__12JASSeqParserFP8JASTrackPUl.s"
 }
@@ -1434,114 +1643,114 @@ ASM_FUNCTION(cmdSetLastNote__12JASSeqParserFP8JASTrackPUl) {
 
 
 /* ############################################################################################## */
-/* 80455600-80455608 0004+04 .sdata2    @931                                                         */
+/* 80455600-80455608 0004+04 rc=1 efc=0 .sdata2    @931                                                         */
 f32 JASSeqParser__lit_931 = 16383.0f;
 /* padding 4 bytes */
 
-/* 8029483C-8029488C 0050+00 .text      cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl                 */
+/* 8029483C-8029488C 0050+00 rc=1 efc=0 .text      cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdEnvScaleSet(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029488C-802948C8 003C+00 .text      cmdEnvSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 8029488C-802948C8 003C+00 rc=1 efc=0 .text      cmdEnvSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdEnvSet__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdEnvSet(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdEnvSet__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802948C8-8029491C 0054+00 .text      cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl                  */
+/* 802948C8-8029491C 0054+00 rc=1 efc=0 .text      cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdSimpleADSR(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029491C-8029494C 0030+00 .text      cmdBusConnect__12JASSeqParserFP8JASTrackPUl                  */
+/* 8029491C-8029494C 0030+00 rc=1 efc=0 .text      cmdBusConnect__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdBusConnect__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdBusConnect(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdBusConnect__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029494C-8029495C 0010+00 .text      cmdSetIntTable__12JASSeqParserFP8JASTrackPUl                 */
+/* 8029494C-8029495C 0010+00 rc=1 efc=0 .text      cmdSetIntTable__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdSetIntTable__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdSetIntTable(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdSetIntTable__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029495C-80294988 002C+00 .text      cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl                */
+/* 8029495C-80294988 002C+00 rc=1 efc=0 .text      cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdSetInterrupt(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294988-802949B4 002C+00 .text      cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl                */
+/* 80294988-802949B4 002C+00 rc=1 efc=0 .text      cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdDisInterrupt(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802949B4-802949E4 0030+00 .text      cmdClrI__12JASSeqParserFP8JASTrackPUl                        */
+/* 802949B4-802949E4 0030+00 rc=1 efc=0 .text      cmdClrI__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdClrI__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdClrI(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdClrI__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 802949E4-80294A20 003C+00 .text      cmdRetI__12JASSeqParserFP8JASTrackPUl                        */
+/* 802949E4-80294A20 003C+00 rc=1 efc=0 .text      cmdRetI__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRetI__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRetI(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRetI__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294A20-80294A3C 001C+00 .text      cmdIntTimer__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294A20-80294A3C 001C+00 rc=1 efc=0 .text      cmdIntTimer__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdIntTimer__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdIntTimer(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdIntTimer__12JASSeqParserFP8JASTrackPUl.s"
 }
@@ -1549,113 +1758,103 @@ ASM_FUNCTION(cmdIntTimer__12JASSeqParserFP8JASTrackPUl) {
 
 
 /* ############################################################################################## */
-/* 80451240-80451244 0004+00 .sbss      sCallBackFunc__12JASSeqParser                                */
+/* 80451240-80451244 0004+00 rc=2 efc=1 .sbss      sCallBackFunc__12JASSeqParser                                */
 u8 sCallBackFunc__12JASSeqParser[4];
 
-/* 80294A3C-80294AA4 0068+00 .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294A3C-80294AA4 0068+00 rc=1 efc=0 .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdSyncCPU__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdSyncCPU(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdSyncCPU__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294AA4-80294AD4 0030+00 .text      cmdTempo__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294AA4-80294AD4 0030+00 rc=1 efc=0 .text      cmdTempo__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdTempo__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdTempo(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdTempo__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294AD4-80294ADC 0008+00 .text      cmdFinish__12JASSeqParserFP8JASTrackPUl                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cmdFinish__12JASSeqParserFP8JASTrackPUl) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASSeqParser/cmdFinish__12JASSeqParserFP8JASTrackPUl.s"
+/* 80294AD4-80294ADC 0008+00 rc=1 efc=0 .text      cmdFinish__12JASSeqParserFP8JASTrackPUl                      */
+s32 JASSeqParser::cmdFinish(JASTrack* field_0, u32* field_1) {
+	return -1;
 }
-#pragma pop
 
 
-/* 80294ADC-80294AE4 0008+00 .text      cmdNop__12JASSeqParserFP8JASTrackPUl                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cmdNop__12JASSeqParserFP8JASTrackPUl) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASSeqParser/cmdNop__12JASSeqParserFP8JASTrackPUl.s"
+/* 80294ADC-80294AE4 0008+00 rc=1 efc=0 .text      cmdNop__12JASSeqParserFP8JASTrackPUl                         */
+bool JASSeqParser::cmdNop(JASTrack* field_0, u32* field_1) {
+	return false;
 }
-#pragma pop
 
 
-/* 80294AE4-80294B1C 0038+00 .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294AE4-80294B1C 0038+00 rc=1 efc=0 .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdFIRSet__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdFIRSet(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdFIRSet__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294B1C-80294B70 0054+00 .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294B1C-80294B70 0054+00 rc=1 efc=0 .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdIIRSet__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdIIRSet(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdIIRSet__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294B70-80294BB4 0044+00 .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294B70-80294BB4 0044+00 rc=1 efc=0 .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdIIRCutOff(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294BB4-80294BD0 001C+00 .text      cmdBankPrg__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294BB4-80294BD0 001C+00 rc=1 efc=0 .text      cmdBankPrg__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdBankPrg__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdBankPrg(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdBankPrg__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294BD0-80294BE4 0014+00 .text      cmdBank__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294BD0-80294BE4 0014+00 rc=1 efc=0 .text      cmdBank__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdBank__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdBank(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdBank__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294BE4-80294BF8 0014+00 .text      cmdPrg__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294BE4-80294BF8 0014+00 rc=1 efc=0 .text      cmdPrg__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdPrg__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdPrg(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdPrg__12JASSeqParserFP8JASTrackPUl.s"
 }
@@ -1663,47 +1862,47 @@ ASM_FUNCTION(cmdPrg__12JASSeqParserFP8JASTrackPUl) {
 
 
 /* ############################################################################################## */
-/* 80455608-80455610 0008+00 .sdata2    @1064                                                        */
+/* 80455608-80455610 0008+00 rc=4 efc=0 .sdata2    @1064                                                        */
 f64 JASSeqParser__lit_1064 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80294BF8-80294C54 005C+00 .text      cmdParamI__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294BF8-80294C54 005C+00 rc=1 efc=0 .text      cmdParamI__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParamI__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParamI(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParamI__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294C54-80294CB0 005C+00 .text      cmdParamII__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294C54-80294CB0 005C+00 rc=1 efc=0 .text      cmdParamII__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParamII__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParamII(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParamII__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294CB0-80294D2C 007C+00 .text      cmdParamE__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294CB0-80294D2C 007C+00 rc=1 efc=0 .text      cmdParamE__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParamE__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParamE(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParamE__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294D2C-80294DA8 007C+00 .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294D2C-80294DA8 007C+00 rc=1 efc=0 .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdParamEI__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdParamEI(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdParamEI__12JASSeqParserFP8JASTrackPUl.s"
 }
@@ -1711,7 +1910,7 @@ ASM_FUNCTION(cmdParamEI__12JASSeqParserFP8JASTrackPUl) {
 
 
 /* ############################################################################################## */
-/* 803C7624-803C7650 002C+00 .data      @1124                                                        */
+/* 803C7624-803C7650 002C+00 rc=1 efc=0 .data      @1124                                                        */
 void* lit_1124[11] = {
 	(void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x138),
 	(void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x48),
@@ -1726,50 +1925,50 @@ void* lit_1124[11] = {
 	(void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x120),
 };
 
-/* 80451244-80451248 0004+00 .sbss      None                                                         */
+/* 80451244-80451248 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80451244[4];
 
-/* 80451248-80451250 0004+04 .sbss      oRandom$1099                                                 */
+/* 80451248-80451250 0004+04 rc=1 efc=0 .sbss      oRandom$1099                                                 */
 u8 data_80451248[4 + 4 /* padding */];
 
-/* 80294DA8-80294F10 0168+00 .text      cmdReg__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294DA8-80294F10 0168+00 rc=3 efc=0 .text      cmdReg__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdReg__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdReg(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdReg__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294F10-80294F40 0030+00 .text      cmdRegLoad__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294F10-80294F40 0030+00 rc=1 efc=0 .text      cmdRegLoad__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRegLoad__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRegLoad(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRegLoad__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294F40-80294FB4 0074+00 .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294F40-80294FB4 0074+00 rc=1 efc=0 .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRegUni__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRegUni(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRegUni__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80294FB4-80295088 00D4+00 .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl                  */
+/* 80294FB4-80295088 00D4+00 rc=1 efc=0 .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdRegTblLoad(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl.s"
 }
@@ -1777,7 +1976,7 @@ ASM_FUNCTION(cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl) {
 
 
 /* ############################################################################################## */
-/* 8039B018-8039B168 014A+06 .rodata    @stringBase0                                                 */
+/* 8039B018-8039B168 014A+06 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -1803,132 +2002,132 @@ SECTION_DEAD char* const stringBase_8039B13B =
 SECTION_DEAD char* const pad_8039B162 = "\0\0\0\0\0";
 #pragma pop
 
-/* 80295088-8029526C 01E4+00 .text      cmdDump__12JASSeqParserFP8JASTrackPUl                        */
+/* 80295088-8029526C 01E4+00 rc=1 efc=0 .text      cmdDump__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdDump__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdDump(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdDump__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 8029526C-80295498 022C+00 .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl                      */
+/* 8029526C-80295498 022C+00 rc=1 efc=0 .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cmdPrintf__12JASSeqParserFP8JASTrackPUl) {
+asm void JASSeqParser::cmdPrintf(JASTrack* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/cmdPrintf__12JASSeqParserFP8JASTrackPUl.s"
 }
 #pragma pop
 
 
-/* 80295498-80295540 00A8+00 .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl            */
+/* 80295498-80295540 00A8+00 rc=1 efc=0 .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl) {
+asm void JASSeqParser::execNoteOnGate(JASTrack* field_0, u32 field_1, u32 field_2, u32 field_3, u32 field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl.s"
 }
 #pragma pop
 
 
-/* 80295540-80295570 0030+00 .text      execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl              */
+/* 80295540-80295570 0030+00 rc=1 efc=0 .text      execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl) {
+asm void JASSeqParser::execNoteOnMidi(JASTrack* field_0, u32 field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl.s"
 }
 #pragma pop
 
 
-/* 80295570-8029559C 002C+00 .text      execNoteOff__12JASSeqParserFP8JASTrackUl                     */
+/* 80295570-8029559C 002C+00 rc=1 efc=0 .text      execNoteOff__12JASSeqParserFP8JASTrackUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execNoteOff__12JASSeqParserFP8JASTrackUl) {
+asm void JASSeqParser::execNoteOff(JASTrack* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/execNoteOff__12JASSeqParserFP8JASTrackUl.s"
 }
 #pragma pop
 
 
-/* 8029559C-802955C8 002C+00 .text      execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl */
+/* 8029559C-802955C8 002C+00 rc=1 efc=0 .text      execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl) {
+extern "C" asm static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl.s"
 }
 #pragma pop
 
 
-/* 802955C8-80295600 0038+00 .text      parseNoteOff__12JASSeqParserFP8JASTrackUc                    */
+/* 802955C8-80295600 0038+00 rc=1 efc=0 .text      parseNoteOff__12JASSeqParserFP8JASTrackUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseNoteOff__12JASSeqParserFP8JASTrackUc) {
+asm void JASSeqParser::parseNoteOff(JASTrack* field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseNoteOff__12JASSeqParserFP8JASTrackUc.s"
 }
 #pragma pop
 
 
-/* 80295600-802956B0 00B0+00 .text      parseNoteOn__12JASSeqParserFP8JASTrackUc                     */
+/* 80295600-802956B0 00B0+00 rc=1 efc=0 .text      parseNoteOn__12JASSeqParserFP8JASTrackUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseNoteOn__12JASSeqParserFP8JASTrackUc) {
+asm void JASSeqParser::parseNoteOn(JASTrack* field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseNoteOn__12JASSeqParserFP8JASTrackUc.s"
 }
 #pragma pop
 
 
-/* 802956B0-80295864 01B4+00 .text      parseCommand__12JASSeqParserFP8JASTrackUcUs                  */
+/* 802956B0-80295864 01B4+00 rc=2 efc=0 .text      parseCommand__12JASSeqParserFP8JASTrackUcUs                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseCommand__12JASSeqParserFP8JASTrackUcUs) {
+asm void JASSeqParser::parseCommand(JASTrack* field_0, char field_1, u16 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseCommand__12JASSeqParserFP8JASTrackUcUs.s"
 }
 #pragma pop
 
 
-/* 80295864-802958D4 0070+00 .text      parseRegCommand__12JASSeqParserFP8JASTracki                  */
+/* 80295864-802958D4 0070+00 rc=1 efc=0 .text      parseRegCommand__12JASSeqParserFP8JASTracki                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parseRegCommand__12JASSeqParserFP8JASTracki) {
+asm void JASSeqParser::parseRegCommand(JASTrack* field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseRegCommand__12JASSeqParserFP8JASTracki.s"
 }
 #pragma pop
 
 
-/* 802958D4-80295950 007C+00 .text      parse__12JASSeqParserFP8JASTrack                             */
+/* 802958D4-80295950 007C+00 rc=1 efc=0 .text      parse__12JASSeqParserFP8JASTrack                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(parse__12JASSeqParserFP8JASTrack) {
+asm void JASSeqParser::parse(JASTrack* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parse__12JASSeqParserFP8JASTrack.s"
 }
 #pragma pop
 
 
-/* 80295950-80296108 07B8+00 .text      __sinit_JASSeqParser_cpp                                     */
+/* 80295950-80296108 07B8+00 rc=1 efc=1 .text      __sinit_JASSeqParser_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JASSeqParser_cpp) {
+extern "C" asm void __sinit_JASSeqParser_cpp() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/__sinit_JASSeqParser_cpp.s"
 }
@@ -1936,7 +2135,7 @@ ASM_FUNCTION(__sinit_JASSeqParser_cpp) {
 
 
 /* ############################################################################################## */
-/* 803C7650-803C7670 0020+00 .data      __vt__12JASSeqParser                                         */
+/* 803C7650-803C7670 0020+00 rc=2 efc=2 .data      __vt__12JASSeqParser                                         */
 void* const __vt__12JASSeqParser[8] = {
 	NULL, /* RTTI */
 	NULL,

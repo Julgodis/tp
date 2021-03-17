@@ -6,30 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRDisposer (JKRDisposer) False/False
+/* top-level dependencies (begin JKRDisposer) */
+/* top-level dependencies (end JKRDisposer) */
+struct JKRDisposer {
+	/* 802D147C */ JKRDisposer();
+	/* 802D14E4 */ ~JKRDisposer();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) True/True
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11JKRDisposerFv();
-extern "C" extern void __dt__11JKRDisposerFv();
+
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
 SECTION_DATA extern void*const __vt__11JKRDisposer[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void findFromRoot__7JKRHeapFPv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__10JSUPtrLinkFPv();
-extern "C" extern void __dt__10JSUPtrLinkFv();
-extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
+void operator delete(void*);
+
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CC0F0-803CC100 000C+04 .data      __vt__11JKRDisposer                                          */
+/* 803CC0F0-803CC100 000C+04 rc=2 efc=0 .data      __vt__11JKRDisposer                                          */
 void* const __vt__11JKRDisposer[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -38,26 +79,25 @@ void* const __vt__11JKRDisposer[4] = {
 	NULL,
 };
 
-/* 802D147C-802D14E4 0068+00 .text      __ct__11JKRDisposerFv                                        */
+/* 802D147C-802D14E4 0068+00 rc=12 efc=12 .text      __ct__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11JKRDisposerFv) {
+asm JKRDisposer::JKRDisposer() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDisposer/__ct__11JKRDisposerFv.s"
 }
 #pragma pop
 
 
-/* 802D14E4-802D1568 0084+00 .text      __dt__11JKRDisposerFv                                        */
+/* 802D14E4-802D1568 0084+00 rc=11 efc=10 .text      __dt__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11JKRDisposerFv) {
+asm JKRDisposer::~JKRDisposer() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDisposer/__dt__11JKRDisposerFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

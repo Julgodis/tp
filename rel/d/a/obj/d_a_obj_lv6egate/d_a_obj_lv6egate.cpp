@@ -6,29 +6,74 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv6EGate_c;
+
+struct daObjLv6EGate_c {
+	void create1st();
+	void setMtx();
+	bool CreateHeap();
+	void Create();
+	void offDisp();
+	void onDisp();
+	void Draw();
+	void Delete();
+	~daObjLv6EGate_c();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__15daObjLv6EGate_cFv();
-extern "C" extern void setMtx__15daObjLv6EGate_cFv();
-extern "C" extern void CreateHeap__15daObjLv6EGate_cFv();
-extern "C" extern void Create__15daObjLv6EGate_cFv();
-extern "C" extern void offDisp__15daObjLv6EGate_cFv();
-extern "C" extern void onDisp__15daObjLv6EGate_cFv();
-extern "C" extern void Execute__15daObjLv6EGate_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjLv6EGate_cFv();
-extern "C" extern void Delete__15daObjLv6EGate_cFv();
-extern "C" extern void daObjLv6EGate_create1st__FP15daObjLv6EGate_c();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjLv6EGate_MoveBGDelete__FP15daObjLv6EGate_c();
-extern "C" extern void daObjLv6EGate_MoveBGExecute__FP15daObjLv6EGate_c();
-extern "C" extern void daObjLv6EGate_MoveBGDraw__FP15daObjLv6EGate_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daObjLv6EGate_cFv();
+extern "C" void Execute__15daObjLv6EGate_cFPPA3_A4_f();
+void daObjLv6EGate_create1st(daObjLv6EGate_c*);
+void daObjLv6EGate_MoveBGDelete(daObjLv6EGate_c*);
+void daObjLv6EGate_MoveBGExecute(daObjLv6EGate_c*);
+void daObjLv6EGate_MoveBGDraw(daObjLv6EGate_c*);
+
+extern "C" void create1st__15daObjLv6EGate_cFv();
+extern "C" void setMtx__15daObjLv6EGate_cFv();
+extern "C" bool CreateHeap__15daObjLv6EGate_cFv();
+extern "C" void Create__15daObjLv6EGate_cFv();
+extern "C" void offDisp__15daObjLv6EGate_cFv();
+extern "C" void onDisp__15daObjLv6EGate_cFv();
+extern "C" void Execute__15daObjLv6EGate_cFPPA3_A4_f();
+extern "C" void Draw__15daObjLv6EGate_cFv();
+extern "C" void Delete__15daObjLv6EGate_cFv();
+extern "C" void daObjLv6EGate_create1st__FP15daObjLv6EGate_c();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjLv6EGate_MoveBGDelete__FP15daObjLv6EGate_c();
+extern "C" void daObjLv6EGate_MoveBGExecute__FP15daObjLv6EGate_c();
+extern "C" void daObjLv6EGate_MoveBGDraw__FP15daObjLv6EGate_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daObjLv6EGate_cFv();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3798;
 SECTION_RODATA extern const u32 lit_3799;
@@ -52,7 +97,9 @@ SECTION_DATA extern void*const __vt__15daObjLv6EGate_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -62,7 +109,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/create1st__15daObjLv6EGate_cFv.s"
 }
@@ -73,7 +120,7 @@ ASM_FUNCTION(create1st__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/setMtx__15daObjLv6EGate_cFv.s"
 }
@@ -81,21 +128,16 @@ ASM_FUNCTION(setMtx__15daObjLv6EGate_cFv) {
 
 
 /* 80C82178-80C82180 0008+00 .text      CreateHeap__15daObjLv6EGate_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjLv6EGate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/CreateHeap__15daObjLv6EGate_cFv.s"
+bool daObjLv6EGate_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C82180-80C822DC 015C+00 .text      Create__15daObjLv6EGate_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/Create__15daObjLv6EGate_cFv.s"
 }
@@ -106,7 +148,7 @@ ASM_FUNCTION(Create__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offDisp__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::offDisp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/offDisp__15daObjLv6EGate_cFv.s"
 }
@@ -117,7 +159,7 @@ ASM_FUNCTION(offDisp__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onDisp__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::onDisp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/onDisp__15daObjLv6EGate_cFv.s"
 }
@@ -128,7 +170,7 @@ ASM_FUNCTION(onDisp__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjLv6EGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjLv6EGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/Execute__15daObjLv6EGate_cFPPA3_A4_f.s"
 }
@@ -139,7 +181,7 @@ ASM_FUNCTION(Execute__15daObjLv6EGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/Draw__15daObjLv6EGate_cFv.s"
 }
@@ -150,7 +192,7 @@ ASM_FUNCTION(Draw__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjLv6EGate_cFv) {
+asm void daObjLv6EGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/Delete__15daObjLv6EGate_cFv.s"
 }
@@ -161,7 +203,7 @@ ASM_FUNCTION(Delete__15daObjLv6EGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6EGate_create1st__FP15daObjLv6EGate_c) {
+asm void daObjLv6EGate_create1st(daObjLv6EGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/daObjLv6EGate_create1st__FP15daObjLv6EGate_c.s"
 }
@@ -172,7 +214,7 @@ ASM_FUNCTION(daObjLv6EGate_create1st__FP15daObjLv6EGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__8dCcD_CylFv.s"
 }
@@ -183,7 +225,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__ct__8dCcD_CylFv.s"
 }
@@ -194,7 +236,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__8cM3dGCylFv.s"
 }
@@ -205,7 +247,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__8cM3dGAabFv.s"
 }
@@ -216,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__10dCcD_GSttsFv.s"
 }
@@ -227,7 +269,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6EGate_MoveBGDelete__FP15daObjLv6EGate_c) {
+asm void daObjLv6EGate_MoveBGDelete(daObjLv6EGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/daObjLv6EGate_MoveBGDelete__FP15daObjLv6EGate_c.s"
 }
@@ -238,7 +280,7 @@ ASM_FUNCTION(daObjLv6EGate_MoveBGDelete__FP15daObjLv6EGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6EGate_MoveBGExecute__FP15daObjLv6EGate_c) {
+asm void daObjLv6EGate_MoveBGExecute(daObjLv6EGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/daObjLv6EGate_MoveBGExecute__FP15daObjLv6EGate_c.s"
 }
@@ -249,7 +291,7 @@ ASM_FUNCTION(daObjLv6EGate_MoveBGExecute__FP15daObjLv6EGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6EGate_MoveBGDraw__FP15daObjLv6EGate_c) {
+asm void daObjLv6EGate_MoveBGDraw(daObjLv6EGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/daObjLv6EGate_MoveBGDraw__FP15daObjLv6EGate_c.s"
 }
@@ -260,7 +302,7 @@ ASM_FUNCTION(daObjLv6EGate_MoveBGDraw__FP15daObjLv6EGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__10cCcD_GSttsFv.s"
 }
@@ -271,7 +313,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjLv6EGate_cFv) {
+asm daObjLv6EGate_c::~daObjLv6EGate_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/__dt__15daObjLv6EGate_cFv.s"
 }

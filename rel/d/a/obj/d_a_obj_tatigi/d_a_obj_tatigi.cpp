@@ -6,20 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_tatigi_class;
+
+struct obj_tatigi_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct tg_ss {
+	~tg_ss();
+	tg_ss();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Tatigi_Draw__FP16obj_tatigi_class();
-extern "C" extern void daObj_Tatigi_Execute__FP16obj_tatigi_class();
-extern "C" extern void daObj_Tatigi_IsDelete__FP16obj_tatigi_class();
-extern "C" extern void daObj_Tatigi_Delete__FP16obj_tatigi_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void set_pos_check__FP16obj_tatigi_classi();
-extern "C" extern void daObj_Tatigi_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__5tg_ssFv();
-extern "C" extern void __ct__5tg_ssFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daObj_Tatigi_Draw(obj_tatigi_class*);
+void daObj_Tatigi_Execute(obj_tatigi_class*);
+bool daObj_Tatigi_IsDelete(obj_tatigi_class*);
+void daObj_Tatigi_Delete(obj_tatigi_class*);
+void useHeapInit(fopAc_ac_c*);
+void set_pos_check(obj_tatigi_class*, s32);
+void daObj_Tatigi_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Tatigi_Draw__FP16obj_tatigi_class();
+extern "C" void daObj_Tatigi_Execute__FP16obj_tatigi_class();
+extern "C" bool daObj_Tatigi_IsDelete__FP16obj_tatigi_class();
+extern "C" void daObj_Tatigi_Delete__FP16obj_tatigi_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void set_pos_check__FP16obj_tatigi_classi();
+extern "C" void daObj_Tatigi_Create__FP10fopAc_ac_c();
+extern "C" void __dt__5tg_ssFv();
+extern "C" void __ct__5tg_ssFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u32 lit_3867;
 SECTION_RODATA extern const u32 lit_3868;
 SECTION_RODATA extern const u32 lit_3869;
@@ -48,7 +82,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -58,7 +94,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tatigi_Draw__FP16obj_tatigi_class) {
+asm void daObj_Tatigi_Draw(obj_tatigi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_Draw__FP16obj_tatigi_class.s"
 }
@@ -69,7 +105,7 @@ ASM_FUNCTION(daObj_Tatigi_Draw__FP16obj_tatigi_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tatigi_Execute__FP16obj_tatigi_class) {
+asm void daObj_Tatigi_Execute(obj_tatigi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_Execute__FP16obj_tatigi_class.s"
 }
@@ -77,21 +113,16 @@ ASM_FUNCTION(daObj_Tatigi_Execute__FP16obj_tatigi_class) {
 
 
 /* 80D07CE8-80D07CF0 0008+00 .text      daObj_Tatigi_IsDelete__FP16obj_tatigi_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tatigi_IsDelete__FP16obj_tatigi_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_IsDelete__FP16obj_tatigi_class.s"
+bool daObj_Tatigi_IsDelete(obj_tatigi_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D07CF0-80D07D78 0088+00 .text      daObj_Tatigi_Delete__FP16obj_tatigi_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tatigi_Delete__FP16obj_tatigi_class) {
+asm void daObj_Tatigi_Delete(obj_tatigi_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_Delete__FP16obj_tatigi_class.s"
 }
@@ -102,7 +133,7 @@ ASM_FUNCTION(daObj_Tatigi_Delete__FP16obj_tatigi_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -113,7 +144,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_pos_check__FP16obj_tatigi_classi) {
+asm void set_pos_check(obj_tatigi_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/set_pos_check__FP16obj_tatigi_classi.s"
 }
@@ -124,7 +155,7 @@ ASM_FUNCTION(set_pos_check__FP16obj_tatigi_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tatigi_Create__FP10fopAc_ac_c) {
+asm void daObj_Tatigi_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_Create__FP10fopAc_ac_c.s"
 }
@@ -135,7 +166,7 @@ ASM_FUNCTION(daObj_Tatigi_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5tg_ssFv) {
+asm tg_ss::~tg_ss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/__dt__5tg_ssFv.s"
 }
@@ -146,7 +177,7 @@ ASM_FUNCTION(__dt__5tg_ssFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__5tg_ssFv) {
+asm tg_ss::tg_ss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/__ct__5tg_ssFv.s"
 }
@@ -157,7 +188,7 @@ ASM_FUNCTION(__ct__5tg_ssFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/__dt__8cM3dGCylFv.s"
 }
@@ -168,7 +199,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/__dt__8cM3dGAabFv.s"
 }

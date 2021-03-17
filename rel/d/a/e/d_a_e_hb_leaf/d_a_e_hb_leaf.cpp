@@ -6,15 +6,29 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct e_hb_leaf_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_HB_LEAF_Draw__FP15e_hb_leaf_class();
-extern "C" extern void daE_HB_LEAF_Execute__FP15e_hb_leaf_class();
-extern "C" extern void daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class();
-extern "C" extern void daE_HB_LEAF_Delete__FP15e_hb_leaf_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_HB_LEAF_Create__FP10fopAc_ac_c();
+void daE_HB_LEAF_Draw(e_hb_leaf_class*);
+void daE_HB_LEAF_Execute(e_hb_leaf_class*);
+bool daE_HB_LEAF_IsDelete(e_hb_leaf_class*);
+void daE_HB_LEAF_Delete(e_hb_leaf_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_HB_LEAF_Create(fopAc_ac_c*);
+
+extern "C" void daE_HB_LEAF_Draw__FP15e_hb_leaf_class();
+extern "C" void daE_HB_LEAF_Execute__FP15e_hb_leaf_class();
+extern "C" bool daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class();
+extern "C" void daE_HB_LEAF_Delete__FP15e_hb_leaf_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_HB_LEAF_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3690;
 SECTION_RODATA extern const u8 stringBase0[5];
 SECTION_DATA extern u8 l_daE_HB_LEAF_Method[32];
@@ -24,7 +38,9 @@ SECTION_DATA extern u8 g_profile_E_HB_LEAF[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -34,7 +50,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HB_LEAF_Draw__FP15e_hb_leaf_class) {
+asm void daE_HB_LEAF_Draw(e_hb_leaf_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Draw__FP15e_hb_leaf_class.s"
 }
@@ -45,7 +61,7 @@ ASM_FUNCTION(daE_HB_LEAF_Draw__FP15e_hb_leaf_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HB_LEAF_Execute__FP15e_hb_leaf_class) {
+asm void daE_HB_LEAF_Execute(e_hb_leaf_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Execute__FP15e_hb_leaf_class.s"
 }
@@ -53,21 +69,16 @@ ASM_FUNCTION(daE_HB_LEAF_Execute__FP15e_hb_leaf_class) {
 
 
 /* 806E00A0-806E00A8 0008+00 .text      daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_IsDelete__FP15e_hb_leaf_class.s"
+bool daE_HB_LEAF_IsDelete(e_hb_leaf_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806E00A8-806E00D8 0030+00 .text      daE_HB_LEAF_Delete__FP15e_hb_leaf_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HB_LEAF_Delete__FP15e_hb_leaf_class) {
+asm void daE_HB_LEAF_Delete(e_hb_leaf_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Delete__FP15e_hb_leaf_class.s"
 }
@@ -78,7 +89,7 @@ ASM_FUNCTION(daE_HB_LEAF_Delete__FP15e_hb_leaf_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -89,7 +100,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HB_LEAF_Create__FP10fopAc_ac_c) {
+asm void daE_HB_LEAF_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hb_leaf/d_a_e_hb_leaf/daE_HB_LEAF_Create__FP10fopAc_ac_c.s"
 }

@@ -6,47 +6,117 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjKAM_c;
+
+struct daObj_KamHIO_c {
+	daObj_KamHIO_c();
+	~daObj_KamHIO_c();
+};
+
+struct daObjKAM_c {
+	void InitCcSph();
+	void SetCcSph();
+	void CreateHeap();
+	void ShopWaitAction();
+	void WaitAction();
+	void WallCheck();
+	void SpeedSet();
+	void WallWalk();
+	void WalkAction();
+	void MoveAction();
+	void Action();
+	void ShopAction();
+	void Insect_Release();
+	void Z_BufferChk();
+	void ParticleSet();
+	void BoomChk();
+	void ObjHit();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_KamHIO_cFv();
-extern "C" extern void InitCcSph__10daObjKAM_cFv();
-extern "C" extern void SetCcSph__10daObjKAM_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daObjKAM_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjKAM_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjKAM_Delete__FP10daObjKAM_c();
-extern "C" extern void ShopWaitAction__10daObjKAM_cFv();
-extern "C" extern void WaitAction__10daObjKAM_cFv();
-extern "C" extern void WallCheck__10daObjKAM_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void SpeedSet__10daObjKAM_cFv();
-extern "C" extern void WallWalk__10daObjKAM_cFv();
-extern "C" extern void WalkAction__10daObjKAM_cFv();
-extern "C" extern void MoveAction__10daObjKAM_cFv();
-extern "C" extern void Action__10daObjKAM_cFv();
-extern "C" extern void ShopAction__10daObjKAM_cFv();
-extern "C" extern void Insect_Release__10daObjKAM_cFv();
-extern "C" extern void Z_BufferChk__10daObjKAM_cFv();
-extern "C" extern void ParticleSet__10daObjKAM_cFv();
-extern "C" extern void BoomChk__10daObjKAM_cFv();
-extern "C" extern void ObjHit__10daObjKAM_cFv();
-extern "C" extern void Execute__10daObjKAM_cFv();
-extern "C" extern void Delete__10daObjKAM_cFv();
-extern "C" extern void setBaseMtx__10daObjKAM_cFv();
-extern "C" extern void daObjKAM_Draw__FP10daObjKAM_c();
-extern "C" extern void daObjKAM_Execute__FP10daObjKAM_c();
-extern "C" extern void CreateChk__10daObjKAM_cFv();
-extern "C" extern void create__10daObjKAM_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjKAM_IsDelete__FP10daObjKAM_c();
-extern "C" extern void __dt__14daObj_KamHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kamakiri_cpp();
-extern "C" extern void func_80C383E4();
-extern "C" extern void func_80C383EC();
+void useHeapInit(fopAc_ac_c*);
+void daObjKAM_Create(fopAc_ac_c*);
+void daObjKAM_Delete(daObjKAM_c*);
+void daObjKAM_Draw(daObjKAM_c*);
+void daObjKAM_Execute(daObjKAM_c*);
+bool daObjKAM_IsDelete(daObjKAM_c*);
+extern "C" void __sinit_d_a_obj_kamakiri_cpp();
+extern "C" void func_80C383E4();
+extern "C" void func_80C383EC();
+
+extern "C" void __ct__14daObj_KamHIO_cFv();
+extern "C" void InitCcSph__10daObjKAM_cFv();
+extern "C" void SetCcSph__10daObjKAM_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daObjKAM_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjKAM_Create__FP10fopAc_ac_c();
+extern "C" void daObjKAM_Delete__FP10daObjKAM_c();
+extern "C" void ShopWaitAction__10daObjKAM_cFv();
+extern "C" void WaitAction__10daObjKAM_cFv();
+extern "C" void WallCheck__10daObjKAM_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void SpeedSet__10daObjKAM_cFv();
+extern "C" void WallWalk__10daObjKAM_cFv();
+extern "C" void WalkAction__10daObjKAM_cFv();
+extern "C" void MoveAction__10daObjKAM_cFv();
+extern "C" void Action__10daObjKAM_cFv();
+extern "C" void ShopAction__10daObjKAM_cFv();
+extern "C" void Insect_Release__10daObjKAM_cFv();
+extern "C" void Z_BufferChk__10daObjKAM_cFv();
+extern "C" void ParticleSet__10daObjKAM_cFv();
+extern "C" void BoomChk__10daObjKAM_cFv();
+extern "C" void ObjHit__10daObjKAM_cFv();
+extern "C" void Execute__10daObjKAM_cFv();
+extern "C" void Delete__10daObjKAM_cFv();
+extern "C" void setBaseMtx__10daObjKAM_cFv();
+extern "C" void daObjKAM_Draw__FP10daObjKAM_c();
+extern "C" void daObjKAM_Execute__FP10daObjKAM_c();
+extern "C" void CreateChk__10daObjKAM_cFv();
+extern "C" void create__10daObjKAM_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjKAM_IsDelete__FP10daObjKAM_c();
+extern "C" void __dt__14daObj_KamHIO_cFv();
+extern "C" void __sinit_d_a_obj_kamakiri_cpp();
+extern "C" void func_80C383E4();
+extern "C" void func_80C383EC();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u8 data_80C38410[64];
@@ -107,8 +177,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -118,7 +191,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_KamHIO_cFv) {
+asm daObj_KamHIO_c::daObj_KamHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__ct__14daObj_KamHIO_cFv.s"
 }
@@ -129,7 +202,7 @@ ASM_FUNCTION(__ct__14daObj_KamHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__10daObjKAM_cFv) {
+asm void daObjKAM_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/InitCcSph__10daObjKAM_cFv.s"
 }
@@ -140,7 +213,7 @@ ASM_FUNCTION(InitCcSph__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__10daObjKAM_cFv) {
+asm void daObjKAM_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/SetCcSph__10daObjKAM_cFv.s"
 }
@@ -151,7 +224,7 @@ ASM_FUNCTION(SetCcSph__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -162,7 +235,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjKAM_cFv) {
+asm void daObjKAM_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/CreateHeap__10daObjKAM_cFv.s"
 }
@@ -173,7 +246,7 @@ ASM_FUNCTION(CreateHeap__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__12J3DFrameCtrlFv.s"
 }
@@ -184,7 +257,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKAM_Create__FP10fopAc_ac_c) {
+asm void daObjKAM_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Create__FP10fopAc_ac_c.s"
 }
@@ -195,7 +268,7 @@ ASM_FUNCTION(daObjKAM_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKAM_Delete__FP10daObjKAM_c) {
+asm void daObjKAM_Delete(daObjKAM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Delete__FP10daObjKAM_c.s"
 }
@@ -206,7 +279,7 @@ ASM_FUNCTION(daObjKAM_Delete__FP10daObjKAM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopWaitAction__10daObjKAM_cFv) {
+asm void daObjKAM_c::ShopWaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/ShopWaitAction__10daObjKAM_cFv.s"
 }
@@ -217,7 +290,7 @@ ASM_FUNCTION(ShopWaitAction__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__10daObjKAM_cFv) {
+asm void daObjKAM_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/WaitAction__10daObjKAM_cFv.s"
 }
@@ -228,7 +301,7 @@ ASM_FUNCTION(WaitAction__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallCheck__10daObjKAM_cFv) {
+asm void daObjKAM_c::WallCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/WallCheck__10daObjKAM_cFv.s"
 }
@@ -239,7 +312,7 @@ ASM_FUNCTION(WallCheck__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__8cM3dGPlaFv.s"
 }
@@ -250,7 +323,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__10daObjKAM_cFv) {
+asm void daObjKAM_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/SpeedSet__10daObjKAM_cFv.s"
 }
@@ -261,7 +334,7 @@ ASM_FUNCTION(SpeedSet__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallWalk__10daObjKAM_cFv) {
+asm void daObjKAM_c::WallWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/WallWalk__10daObjKAM_cFv.s"
 }
@@ -272,7 +345,7 @@ ASM_FUNCTION(WallWalk__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WalkAction__10daObjKAM_cFv) {
+asm void daObjKAM_c::WalkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/WalkAction__10daObjKAM_cFv.s"
 }
@@ -283,7 +356,7 @@ ASM_FUNCTION(WalkAction__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__10daObjKAM_cFv) {
+asm void daObjKAM_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/MoveAction__10daObjKAM_cFv.s"
 }
@@ -294,7 +367,7 @@ ASM_FUNCTION(MoveAction__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__10daObjKAM_cFv) {
+asm void daObjKAM_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/Action__10daObjKAM_cFv.s"
 }
@@ -305,7 +378,7 @@ ASM_FUNCTION(Action__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopAction__10daObjKAM_cFv) {
+asm void daObjKAM_c::ShopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/ShopAction__10daObjKAM_cFv.s"
 }
@@ -316,7 +389,7 @@ ASM_FUNCTION(ShopAction__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__10daObjKAM_cFv) {
+asm void daObjKAM_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/Insect_Release__10daObjKAM_cFv.s"
 }
@@ -327,7 +400,7 @@ ASM_FUNCTION(Insect_Release__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__10daObjKAM_cFv) {
+asm void daObjKAM_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/Z_BufferChk__10daObjKAM_cFv.s"
 }
@@ -338,7 +411,7 @@ ASM_FUNCTION(Z_BufferChk__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__10daObjKAM_cFv) {
+asm void daObjKAM_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/ParticleSet__10daObjKAM_cFv.s"
 }
@@ -349,7 +422,7 @@ ASM_FUNCTION(ParticleSet__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BoomChk__10daObjKAM_cFv) {
+asm void daObjKAM_c::BoomChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/BoomChk__10daObjKAM_cFv.s"
 }
@@ -360,7 +433,7 @@ ASM_FUNCTION(BoomChk__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__10daObjKAM_cFv) {
+asm void daObjKAM_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/ObjHit__10daObjKAM_cFv.s"
 }
@@ -371,7 +444,7 @@ ASM_FUNCTION(ObjHit__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjKAM_cFv) {
+asm void daObjKAM_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/Execute__10daObjKAM_cFv.s"
 }
@@ -382,7 +455,7 @@ ASM_FUNCTION(Execute__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjKAM_cFv) {
+asm void daObjKAM_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/Delete__10daObjKAM_cFv.s"
 }
@@ -393,7 +466,7 @@ ASM_FUNCTION(Delete__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjKAM_cFv) {
+asm void daObjKAM_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/setBaseMtx__10daObjKAM_cFv.s"
 }
@@ -404,7 +477,7 @@ ASM_FUNCTION(setBaseMtx__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKAM_Draw__FP10daObjKAM_c) {
+asm void daObjKAM_Draw(daObjKAM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Draw__FP10daObjKAM_c.s"
 }
@@ -415,7 +488,7 @@ ASM_FUNCTION(daObjKAM_Draw__FP10daObjKAM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKAM_Execute__FP10daObjKAM_c) {
+asm void daObjKAM_Execute(daObjKAM_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_Execute__FP10daObjKAM_c.s"
 }
@@ -426,7 +499,7 @@ ASM_FUNCTION(daObjKAM_Execute__FP10daObjKAM_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__10daObjKAM_cFv) {
+asm void daObjKAM_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/CreateChk__10daObjKAM_cFv.s"
 }
@@ -437,7 +510,7 @@ ASM_FUNCTION(CreateChk__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjKAM_cFv) {
+asm void daObjKAM_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/create__10daObjKAM_cFv.s"
 }
@@ -448,7 +521,7 @@ ASM_FUNCTION(create__10daObjKAM_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -459,7 +532,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__8cM3dGSphFv.s"
 }
@@ -470,7 +543,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__8cM3dGAabFv.s"
 }
@@ -478,21 +551,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80C38358-80C38360 0008+00 .text      daObjKAM_IsDelete__FP10daObjKAM_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKAM_IsDelete__FP10daObjKAM_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_IsDelete__FP10daObjKAM_c.s"
+bool daObjKAM_IsDelete(daObjKAM_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C38360-80C383A8 0048+00 .text      __dt__14daObj_KamHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_KamHIO_cFv) {
+asm daObj_KamHIO_c::~daObj_KamHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__dt__14daObj_KamHIO_cFv.s"
 }
@@ -503,7 +571,7 @@ ASM_FUNCTION(__dt__14daObj_KamHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kamakiri_cpp) {
+extern "C" asm void __sinit_d_a_obj_kamakiri_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/__sinit_d_a_obj_kamakiri_cpp.s"
 }
@@ -514,7 +582,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kamakiri_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C383E4) {
+extern "C" asm void func_80C383E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/func_80C383E4.s"
 }
@@ -525,7 +593,7 @@ ASM_FUNCTION(func_80C383E4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C383EC) {
+extern "C" asm void func_80C383EC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/func_80C383EC.s"
 }

@@ -6,97 +6,245 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daNpcBlueNS_c {
+	daNpcBlueNS_c();
+	~daNpcBlueNS_c();
+	void Create();
+	void CreateHeap();
+	void isDelete();
+	void Delete();
+	void Execute();
+	void _Execute();
+	void callEvt_changeYami();
+	void create_Yamijin(s32);
+	void col_check();
+	void holyball_check_main(fopAc_ac_c*);
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void srchActor();
+	void srchHollyBall();
+	void srchTagYami();
+	void _search_Tag(void*, void*);
+	void _search_HollyBall_Y(void*, void*);
+	void _search_HollyBall_G(void*, void*);
+	void main();
+	void setAttnPos();
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void reset();
+	void playMotion();
+	void setLookMode(s32);
+	void lookat();
+	void chkFindPlayer();
+	void wait(s32);
+	void down(s32);
+	void talk(s32);
+	void demo(s32);
+	void ChgPtclDisp();
+	void downSE();
+	void lightsowrdSE();
+	void appearSE();
+	void _Evt_ChgYami_Chibi(s32);
+	void _Evt_ChgYami_Chibi_CutInit(s32 const&);
+	void _Evt_ChgYami_Chibi_CutMain(s32 const&);
+	void _Evt_ChgYami_Debu(s32);
+	void _Evt_ChgYami_Debu_CutInit(s32 const&);
+	void _Evt_ChgYami_Debu_CutMain(s32 const&);
+	void _Evt_ChgYami_Noppo(s32);
+	void _Evt_ChgYami_Noppo_CutInit(s32 const&);
+	void _Evt_ChgYami_Noppo_CutMain(s32 const&);
+	void _Evt_ChgYami_STNoppo(s32);
+	void _Evt_ChgYami_STNoppo_CutInit(s32 const&);
+	void _Evt_ChgYami_STNoppo_CutMain(s32 const&);
+	void adjustShapeAngle();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void setCollisions();
+	bool ctrlBtk();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+	void drawOtherMdls();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcBlueNS_Param_c {
+	~daNpcBlueNS_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daNpcBlueNS_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__13daNpcBlueNS_cFv();
-extern "C" extern void Create__13daNpcBlueNS_cFv();
-extern "C" extern void CreateHeap__13daNpcBlueNS_cFv();
-extern "C" extern void isDelete__13daNpcBlueNS_cFv();
-extern "C" extern void Delete__13daNpcBlueNS_cFv();
-extern "C" extern void Execute__13daNpcBlueNS_cFv();
-extern "C" extern void _Execute__13daNpcBlueNS_cFv();
-extern "C" extern void callEvt_changeYami__13daNpcBlueNS_cFv();
-extern "C" extern void create_Yamijin__13daNpcBlueNS_cFi();
-extern "C" extern void col_check__13daNpcBlueNS_cFv();
-extern "C" extern void holyball_check_main__13daNpcBlueNS_cFP10fopAc_ac_c();
-extern "C" extern void Draw__13daNpcBlueNS_cFv();
-extern "C" extern void ctrlJoint__13daNpcBlueNS_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__13daNpcBlueNS_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpcBlueNS_cFP8J3DJointi();
-extern "C" extern void setParam__13daNpcBlueNS_cFv();
-extern "C" extern void srchActor__13daNpcBlueNS_cFv();
-extern "C" extern void srchHollyBall__13daNpcBlueNS_cFv();
-extern "C" extern void srchTagYami__13daNpcBlueNS_cFv();
-extern "C" extern void _search_Tag__13daNpcBlueNS_cFPvPv();
-extern "C" extern void _search_HollyBall_Y__13daNpcBlueNS_cFPvPv();
-extern "C" extern void _search_HollyBall_G__13daNpcBlueNS_cFPvPv();
-extern "C" extern void main__13daNpcBlueNS_cFv();
-extern "C" extern void setAttnPos__13daNpcBlueNS_cFv();
-extern "C" extern void setMotionAnm__13daNpcBlueNS_cFif();
-extern "C" extern void setMotion__13daNpcBlueNS_cFifi();
-extern "C" extern void drawDbgInfo__13daNpcBlueNS_cFv();
-extern "C" extern void reset__13daNpcBlueNS_cFv();
-extern "C" extern void playMotion__13daNpcBlueNS_cFv();
-extern "C" extern void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i();
-extern "C" extern void setLookMode__13daNpcBlueNS_cFi();
-extern "C" extern void lookat__13daNpcBlueNS_cFv();
-extern "C" extern void step__13daNpcBlueNS_cFsi();
-extern "C" extern void chkFindPlayer__13daNpcBlueNS_cFv();
-extern "C" extern void wait__13daNpcBlueNS_cFi();
-extern "C" extern void down__13daNpcBlueNS_cFi();
-extern "C" extern void talk__13daNpcBlueNS_cFi();
-extern "C" extern void demo__13daNpcBlueNS_cFi();
-extern "C" extern void ChgPtclDisp__13daNpcBlueNS_cFv();
-extern "C" extern void downSE__13daNpcBlueNS_cFv();
-extern "C" extern void lightsowrdSE__13daNpcBlueNS_cFv();
-extern "C" extern void appearSE__13daNpcBlueNS_cFv();
-extern "C" extern void _Evt_ChgYami_Chibi__13daNpcBlueNS_cFi();
-extern "C" extern void _Evt_ChgYami_Chibi_CutInit__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_Chibi_CutMain__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_Debu__13daNpcBlueNS_cFi();
-extern "C" extern void _Evt_ChgYami_Debu_CutInit__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_Debu_CutMain__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_Noppo__13daNpcBlueNS_cFi();
-extern "C" extern void _Evt_ChgYami_Noppo_CutInit__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_Noppo_CutMain__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_STNoppo__13daNpcBlueNS_cFi();
-extern "C" extern void _Evt_ChgYami_STNoppo_CutInit__13daNpcBlueNS_cFRCi();
-extern "C" extern void _Evt_ChgYami_STNoppo_CutMain__13daNpcBlueNS_cFRCi();
-extern "C" extern void daNpcBlueNS_Create__FPv();
-extern "C" extern void daNpcBlueNS_Delete__FPv();
-extern "C" extern void daNpcBlueNS_Execute__FPv();
-extern "C" extern void daNpcBlueNS_Draw__FPv();
-extern "C" extern void daNpcBlueNS_IsDelete__FPv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void ctrlBtk__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_8096C790();
-extern "C" extern void __sinit_d_a_npc_blue_ns_cpp();
-extern "C" extern void adjustShapeAngle__13daNpcBlueNS_cFv();
-extern "C" extern void __dt__19daNpcBlueNS_Param_cFv();
-extern "C" extern void func_8096C8FC();
-extern "C" extern void func_8096C904();
+extern "C" void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i();
+extern "C" void step__13daNpcBlueNS_cFsi();
+void daNpcBlueNS_Create(void*);
+void daNpcBlueNS_Delete(void*);
+void daNpcBlueNS_Execute(void*);
+void daNpcBlueNS_Draw(void*);
+bool daNpcBlueNS_IsDelete(void*);
+extern "C" void func_8096C790();
+extern "C" void __sinit_d_a_npc_blue_ns_cpp();
+extern "C" void func_8096C8FC();
+extern "C" void func_8096C904();
+
+extern "C" void __ct__13daNpcBlueNS_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__13daNpcBlueNS_cFv();
+extern "C" void Create__13daNpcBlueNS_cFv();
+extern "C" void CreateHeap__13daNpcBlueNS_cFv();
+extern "C" void isDelete__13daNpcBlueNS_cFv();
+extern "C" void Delete__13daNpcBlueNS_cFv();
+extern "C" void Execute__13daNpcBlueNS_cFv();
+extern "C" void _Execute__13daNpcBlueNS_cFv();
+extern "C" void callEvt_changeYami__13daNpcBlueNS_cFv();
+extern "C" void create_Yamijin__13daNpcBlueNS_cFi();
+extern "C" void col_check__13daNpcBlueNS_cFv();
+extern "C" void holyball_check_main__13daNpcBlueNS_cFP10fopAc_ac_c();
+extern "C" void Draw__13daNpcBlueNS_cFv();
+extern "C" void ctrlJoint__13daNpcBlueNS_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__13daNpcBlueNS_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpcBlueNS_cFP8J3DJointi();
+extern "C" void setParam__13daNpcBlueNS_cFv();
+extern "C" void srchActor__13daNpcBlueNS_cFv();
+extern "C" void srchHollyBall__13daNpcBlueNS_cFv();
+extern "C" void srchTagYami__13daNpcBlueNS_cFv();
+extern "C" void _search_Tag__13daNpcBlueNS_cFPvPv();
+extern "C" void _search_HollyBall_Y__13daNpcBlueNS_cFPvPv();
+extern "C" void _search_HollyBall_G__13daNpcBlueNS_cFPvPv();
+extern "C" void main__13daNpcBlueNS_cFv();
+extern "C" void setAttnPos__13daNpcBlueNS_cFv();
+extern "C" void setMotionAnm__13daNpcBlueNS_cFif();
+extern "C" void setMotion__13daNpcBlueNS_cFifi();
+extern "C" bool drawDbgInfo__13daNpcBlueNS_cFv();
+extern "C" void reset__13daNpcBlueNS_cFv();
+extern "C" void playMotion__13daNpcBlueNS_cFv();
+extern "C" void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i();
+extern "C" void setLookMode__13daNpcBlueNS_cFi();
+extern "C" void lookat__13daNpcBlueNS_cFv();
+extern "C" void step__13daNpcBlueNS_cFsi();
+extern "C" void chkFindPlayer__13daNpcBlueNS_cFv();
+extern "C" void wait__13daNpcBlueNS_cFi();
+extern "C" void down__13daNpcBlueNS_cFi();
+extern "C" void talk__13daNpcBlueNS_cFi();
+extern "C" void demo__13daNpcBlueNS_cFi();
+extern "C" void ChgPtclDisp__13daNpcBlueNS_cFv();
+extern "C" void downSE__13daNpcBlueNS_cFv();
+extern "C" void lightsowrdSE__13daNpcBlueNS_cFv();
+extern "C" void appearSE__13daNpcBlueNS_cFv();
+extern "C" void _Evt_ChgYami_Chibi__13daNpcBlueNS_cFi();
+extern "C" void _Evt_ChgYami_Chibi_CutInit__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_Chibi_CutMain__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_Debu__13daNpcBlueNS_cFi();
+extern "C" void _Evt_ChgYami_Debu_CutInit__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_Debu_CutMain__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_Noppo__13daNpcBlueNS_cFi();
+extern "C" void _Evt_ChgYami_Noppo_CutInit__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_Noppo_CutMain__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_STNoppo__13daNpcBlueNS_cFi();
+extern "C" void _Evt_ChgYami_STNoppo_CutInit__13daNpcBlueNS_cFRCi();
+extern "C" void _Evt_ChgYami_STNoppo_CutMain__13daNpcBlueNS_cFRCi();
+extern "C" void daNpcBlueNS_Create__FPv();
+extern "C" void daNpcBlueNS_Delete__FPv();
+extern "C" void daNpcBlueNS_Execute__FPv();
+extern "C" void daNpcBlueNS_Draw__FPv();
+extern "C" bool daNpcBlueNS_IsDelete__FPv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool ctrlBtk__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_8096C790();
+extern "C" void __sinit_d_a_npc_blue_ns_cpp();
+extern "C" void adjustShapeAngle__13daNpcBlueNS_cFv();
+extern "C" void __dt__19daNpcBlueNS_Param_cFv();
+extern "C" void func_8096C8FC();
+extern "C" void func_8096C904();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 m__19daNpcBlueNS_Param_c[112];
 SECTION_RODATA extern const u32 lit_4265;
@@ -193,8 +341,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -204,7 +355,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpcBlueNS_cFv) {
+asm daNpcBlueNS_c::daNpcBlueNS_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__ct__13daNpcBlueNS_cFv.s"
 }
@@ -215,7 +366,7 @@ ASM_FUNCTION(__ct__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__8cM3dGCylFv.s"
 }
@@ -226,7 +377,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__8cM3dGAabFv.s"
 }
@@ -237,7 +388,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcBlueNS_cFv) {
+asm daNpcBlueNS_c::~daNpcBlueNS_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__13daNpcBlueNS_cFv.s"
 }
@@ -248,7 +399,7 @@ ASM_FUNCTION(__dt__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/Create__13daNpcBlueNS_cFv.s"
 }
@@ -259,7 +410,7 @@ ASM_FUNCTION(Create__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/CreateHeap__13daNpcBlueNS_cFv.s"
 }
@@ -270,7 +421,7 @@ ASM_FUNCTION(CreateHeap__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/isDelete__13daNpcBlueNS_cFv.s"
 }
@@ -281,7 +432,7 @@ ASM_FUNCTION(isDelete__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/Delete__13daNpcBlueNS_cFv.s"
 }
@@ -292,7 +443,7 @@ ASM_FUNCTION(Delete__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/Execute__13daNpcBlueNS_cFv.s"
 }
@@ -303,7 +454,7 @@ ASM_FUNCTION(Execute__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Execute__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::_Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Execute__13daNpcBlueNS_cFv.s"
 }
@@ -314,7 +465,7 @@ ASM_FUNCTION(_Execute__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callEvt_changeYami__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::callEvt_changeYami() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/callEvt_changeYami__13daNpcBlueNS_cFv.s"
 }
@@ -325,7 +476,7 @@ ASM_FUNCTION(callEvt_changeYami__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_Yamijin__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::create_Yamijin(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/create_Yamijin__13daNpcBlueNS_cFi.s"
 }
@@ -336,7 +487,7 @@ ASM_FUNCTION(create_Yamijin__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_check__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::col_check() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/col_check__13daNpcBlueNS_cFv.s"
 }
@@ -347,7 +498,7 @@ ASM_FUNCTION(col_check__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(holyball_check_main__13daNpcBlueNS_cFP10fopAc_ac_c) {
+asm void daNpcBlueNS_c::holyball_check_main(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/holyball_check_main__13daNpcBlueNS_cFP10fopAc_ac_c.s"
 }
@@ -358,7 +509,7 @@ ASM_FUNCTION(holyball_check_main__13daNpcBlueNS_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/Draw__13daNpcBlueNS_cFv.s"
 }
@@ -369,7 +520,7 @@ ASM_FUNCTION(Draw__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__13daNpcBlueNS_cFP8J3DJointP8J3DModel) {
+asm void daNpcBlueNS_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/ctrlJoint__13daNpcBlueNS_cFP8J3DJointP8J3DModel.s"
 }
@@ -380,7 +531,7 @@ ASM_FUNCTION(ctrlJoint__13daNpcBlueNS_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpcBlueNS_cFP10fopAc_ac_c) {
+asm void daNpcBlueNS_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/createHeapCallBack__13daNpcBlueNS_cFP10fopAc_ac_c.s"
 }
@@ -391,7 +542,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpcBlueNS_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpcBlueNS_cFP8J3DJointi) {
+asm void daNpcBlueNS_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/ctrlJointCallBack__13daNpcBlueNS_cFP8J3DJointi.s"
 }
@@ -402,7 +553,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpcBlueNS_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setParam__13daNpcBlueNS_cFv.s"
 }
@@ -413,7 +564,7 @@ ASM_FUNCTION(setParam__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActor__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::srchActor() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/srchActor__13daNpcBlueNS_cFv.s"
 }
@@ -424,7 +575,7 @@ ASM_FUNCTION(srchActor__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchHollyBall__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::srchHollyBall() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/srchHollyBall__13daNpcBlueNS_cFv.s"
 }
@@ -435,7 +586,7 @@ ASM_FUNCTION(srchHollyBall__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchTagYami__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::srchTagYami() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/srchTagYami__13daNpcBlueNS_cFv.s"
 }
@@ -446,7 +597,7 @@ ASM_FUNCTION(srchTagYami__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_search_Tag__13daNpcBlueNS_cFPvPv) {
+asm void daNpcBlueNS_c::_search_Tag(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_search_Tag__13daNpcBlueNS_cFPvPv.s"
 }
@@ -457,7 +608,7 @@ ASM_FUNCTION(_search_Tag__13daNpcBlueNS_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_search_HollyBall_Y__13daNpcBlueNS_cFPvPv) {
+asm void daNpcBlueNS_c::_search_HollyBall_Y(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_search_HollyBall_Y__13daNpcBlueNS_cFPvPv.s"
 }
@@ -468,7 +619,7 @@ ASM_FUNCTION(_search_HollyBall_Y__13daNpcBlueNS_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_search_HollyBall_G__13daNpcBlueNS_cFPvPv) {
+asm void daNpcBlueNS_c::_search_HollyBall_G(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_search_HollyBall_G__13daNpcBlueNS_cFPvPv.s"
 }
@@ -479,7 +630,7 @@ ASM_FUNCTION(_search_HollyBall_G__13daNpcBlueNS_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/main__13daNpcBlueNS_cFv.s"
 }
@@ -490,7 +641,7 @@ ASM_FUNCTION(main__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setAttnPos__13daNpcBlueNS_cFv.s"
 }
@@ -501,7 +652,7 @@ ASM_FUNCTION(setAttnPos__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__13daNpcBlueNS_cFif) {
+asm void daNpcBlueNS_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setMotionAnm__13daNpcBlueNS_cFif.s"
 }
@@ -512,7 +663,7 @@ ASM_FUNCTION(setMotionAnm__13daNpcBlueNS_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__13daNpcBlueNS_cFifi) {
+asm void daNpcBlueNS_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setMotion__13daNpcBlueNS_cFifi.s"
 }
@@ -520,21 +671,16 @@ ASM_FUNCTION(setMotion__13daNpcBlueNS_cFifi) {
 
 
 /* 8096A350-8096A358 0008+00 .text      drawDbgInfo__13daNpcBlueNS_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpcBlueNS_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/drawDbgInfo__13daNpcBlueNS_cFv.s"
+bool daNpcBlueNS_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8096A358-8096A518 01C0+00 .text      reset__13daNpcBlueNS_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/reset__13daNpcBlueNS_cFv.s"
 }
@@ -545,7 +691,7 @@ ASM_FUNCTION(reset__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/playMotion__13daNpcBlueNS_cFv.s"
 }
@@ -556,7 +702,7 @@ ASM_FUNCTION(playMotion__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i) {
+extern "C" asm void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i.s"
 }
@@ -567,7 +713,7 @@ ASM_FUNCTION(setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setLookMode__13daNpcBlueNS_cFi.s"
 }
@@ -578,7 +724,7 @@ ASM_FUNCTION(setLookMode__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/lookat__13daNpcBlueNS_cFv.s"
 }
@@ -589,7 +735,7 @@ ASM_FUNCTION(lookat__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(step__13daNpcBlueNS_cFsi) {
+extern "C" asm void step__13daNpcBlueNS_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/step__13daNpcBlueNS_cFsi.s"
 }
@@ -600,7 +746,7 @@ ASM_FUNCTION(step__13daNpcBlueNS_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFindPlayer__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::chkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/chkFindPlayer__13daNpcBlueNS_cFv.s"
 }
@@ -611,7 +757,7 @@ ASM_FUNCTION(chkFindPlayer__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/wait__13daNpcBlueNS_cFi.s"
 }
@@ -622,7 +768,7 @@ ASM_FUNCTION(wait__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(down__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::down(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/down__13daNpcBlueNS_cFi.s"
 }
@@ -633,7 +779,7 @@ ASM_FUNCTION(down__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::talk(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/talk__13daNpcBlueNS_cFi.s"
 }
@@ -644,7 +790,7 @@ ASM_FUNCTION(talk__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::demo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/demo__13daNpcBlueNS_cFi.s"
 }
@@ -655,7 +801,7 @@ ASM_FUNCTION(demo__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ChgPtclDisp__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::ChgPtclDisp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/ChgPtclDisp__13daNpcBlueNS_cFv.s"
 }
@@ -666,7 +812,7 @@ ASM_FUNCTION(ChgPtclDisp__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(downSE__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::downSE() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/downSE__13daNpcBlueNS_cFv.s"
 }
@@ -677,7 +823,7 @@ ASM_FUNCTION(downSE__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightsowrdSE__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::lightsowrdSE() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/lightsowrdSE__13daNpcBlueNS_cFv.s"
 }
@@ -688,7 +834,7 @@ ASM_FUNCTION(lightsowrdSE__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appearSE__13daNpcBlueNS_cFv) {
+asm void daNpcBlueNS_c::appearSE() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/appearSE__13daNpcBlueNS_cFv.s"
 }
@@ -699,7 +845,7 @@ ASM_FUNCTION(appearSE__13daNpcBlueNS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Chibi__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Chibi(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Chibi__13daNpcBlueNS_cFi.s"
 }
@@ -710,7 +856,7 @@ ASM_FUNCTION(_Evt_ChgYami_Chibi__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Chibi_CutInit__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Chibi_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Chibi_CutInit__13daNpcBlueNS_cFRCi.s"
 }
@@ -721,7 +867,7 @@ ASM_FUNCTION(_Evt_ChgYami_Chibi_CutInit__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Chibi_CutMain__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Chibi_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Chibi_CutMain__13daNpcBlueNS_cFRCi.s"
 }
@@ -732,7 +878,7 @@ ASM_FUNCTION(_Evt_ChgYami_Chibi_CutMain__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Debu__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Debu(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Debu__13daNpcBlueNS_cFi.s"
 }
@@ -743,7 +889,7 @@ ASM_FUNCTION(_Evt_ChgYami_Debu__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Debu_CutInit__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Debu_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Debu_CutInit__13daNpcBlueNS_cFRCi.s"
 }
@@ -754,7 +900,7 @@ ASM_FUNCTION(_Evt_ChgYami_Debu_CutInit__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Debu_CutMain__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Debu_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Debu_CutMain__13daNpcBlueNS_cFRCi.s"
 }
@@ -765,7 +911,7 @@ ASM_FUNCTION(_Evt_ChgYami_Debu_CutMain__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Noppo__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Noppo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Noppo__13daNpcBlueNS_cFi.s"
 }
@@ -776,7 +922,7 @@ ASM_FUNCTION(_Evt_ChgYami_Noppo__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Noppo_CutInit__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Noppo_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Noppo_CutInit__13daNpcBlueNS_cFRCi.s"
 }
@@ -787,7 +933,7 @@ ASM_FUNCTION(_Evt_ChgYami_Noppo_CutInit__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_Noppo_CutMain__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_Noppo_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_Noppo_CutMain__13daNpcBlueNS_cFRCi.s"
 }
@@ -798,7 +944,7 @@ ASM_FUNCTION(_Evt_ChgYami_Noppo_CutMain__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_STNoppo__13daNpcBlueNS_cFi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_STNoppo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_STNoppo__13daNpcBlueNS_cFi.s"
 }
@@ -809,7 +955,7 @@ ASM_FUNCTION(_Evt_ChgYami_STNoppo__13daNpcBlueNS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_STNoppo_CutInit__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_STNoppo_CutInit(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_STNoppo_CutInit__13daNpcBlueNS_cFRCi.s"
 }
@@ -820,7 +966,7 @@ ASM_FUNCTION(_Evt_ChgYami_STNoppo_CutInit__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_Evt_ChgYami_STNoppo_CutMain__13daNpcBlueNS_cFRCi) {
+asm void daNpcBlueNS_c::_Evt_ChgYami_STNoppo_CutMain(s32 const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/_Evt_ChgYami_STNoppo_CutMain__13daNpcBlueNS_cFRCi.s"
 }
@@ -831,7 +977,7 @@ ASM_FUNCTION(_Evt_ChgYami_STNoppo_CutMain__13daNpcBlueNS_cFRCi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcBlueNS_Create__FPv) {
+asm void daNpcBlueNS_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/daNpcBlueNS_Create__FPv.s"
 }
@@ -842,7 +988,7 @@ ASM_FUNCTION(daNpcBlueNS_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcBlueNS_Delete__FPv) {
+asm void daNpcBlueNS_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/daNpcBlueNS_Delete__FPv.s"
 }
@@ -853,7 +999,7 @@ ASM_FUNCTION(daNpcBlueNS_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcBlueNS_Execute__FPv) {
+asm void daNpcBlueNS_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/daNpcBlueNS_Execute__FPv.s"
 }
@@ -864,7 +1010,7 @@ ASM_FUNCTION(daNpcBlueNS_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcBlueNS_Draw__FPv) {
+asm void daNpcBlueNS_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/daNpcBlueNS_Draw__FPv.s"
 }
@@ -872,21 +1018,16 @@ ASM_FUNCTION(daNpcBlueNS_Draw__FPv) {
 
 
 /* 8096BF88-8096BF90 0008+00 .text      daNpcBlueNS_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcBlueNS_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/daNpcBlueNS_IsDelete__FPv.s"
+bool daNpcBlueNS_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8096BF90-8096BFD8 0048+00 .text      __dt__18daNpcF_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -897,7 +1038,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -908,7 +1049,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -919,7 +1060,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__5csXyzFv.s"
 }
@@ -927,21 +1068,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 8096C120-8096C124 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C124-8096C160 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__4cXyzFv.s"
 }
@@ -949,21 +1085,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 8096C160-8096C164 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C164-8096C3B0 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__8daNpcF_cFv.s"
 }
@@ -974,7 +1105,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__ct__8daNpcF_cFv.s"
 }
@@ -985,7 +1116,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__12dBgS_AcchCirFv.s"
 }
@@ -996,7 +1127,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__10dCcD_GSttsFv.s"
 }
@@ -1007,7 +1138,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1018,7 +1149,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1026,76 +1157,46 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 8096C724-8096C728 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C728-8096C730 0008+00 .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 8096C730-8096C738 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 8096C738-8096C740 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8096C740-8096C744 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C744-8096C748 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C748-8096C790 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__10cCcD_GSttsFv.s"
 }
@@ -1106,7 +1207,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8096C790) {
+extern "C" asm void func_8096C790() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/func_8096C790.s"
 }
@@ -1117,7 +1218,7 @@ ASM_FUNCTION(func_8096C790) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_blue_ns_cpp) {
+extern "C" asm void __sinit_d_a_npc_blue_ns_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__sinit_d_a_npc_blue_ns_cpp.s"
 }
@@ -1125,21 +1226,16 @@ ASM_FUNCTION(__sinit_d_a_npc_blue_ns_cpp) {
 
 
 /* 8096C8B0-8096C8B4 0004+00 .text      adjustShapeAngle__13daNpcBlueNS_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__13daNpcBlueNS_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/adjustShapeAngle__13daNpcBlueNS_cFv.s"
+void daNpcBlueNS_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8096C8B4-8096C8FC 0048+00 .text      __dt__19daNpcBlueNS_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpcBlueNS_Param_cFv) {
+asm daNpcBlueNS_Param_c::~daNpcBlueNS_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/__dt__19daNpcBlueNS_Param_cFv.s"
 }
@@ -1150,7 +1246,7 @@ ASM_FUNCTION(__dt__19daNpcBlueNS_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8096C8FC) {
+extern "C" asm void func_8096C8FC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/func_8096C8FC.s"
 }
@@ -1161,7 +1257,7 @@ ASM_FUNCTION(func_8096C8FC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8096C904) {
+extern "C" asm void func_8096C904() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/func_8096C904.s"
 }

@@ -1,6 +1,8 @@
 import util
 import struct
 import dataclasses
+import data_types
+import globals
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Dict, Tuple, Set
@@ -8,6 +10,7 @@ from globals import ExecutableSection
 from disassembler import AccessCollector
 from builder import AsyncBuilder
 from exception import Dol2ZelException
+from data_types import Type, NamedType, PointerType, BuiltinType
 
 @dataclass
 class Identifier:
@@ -39,6 +42,8 @@ class Symbol:
     size: int
     padding: int = 0
     alignment: int = 0
+    reference_count: int = 0
+    external_reference_count: int = 0
     source: str = None
     _internal_references = None
     _module: str = None
@@ -50,7 +55,20 @@ class Symbol:
         return hash(self.addr)
 
     def __eq__(self, other):
+        if not hasattr(self, 'addr'):
+            return True
         return self.addr == other.addr and self.size == other.size
+
+    """
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        if self.label == "setDemoName__11Z2StatusMgrFPc":
+            globals.LOG.debug(state)
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+    """
 
     @property
     def start(self):
@@ -63,6 +81,19 @@ class Symbol:
     @property
     def offset(self):
         return self.addr - self.section.addr
+
+    @property
+    def label(self):
+        return self.identifier.label
+
+    def add_reference(self, referencer):
+        self.reference_count += 1
+        self.external_reference_count += 1
+        if referencer:
+            if self._module == referencer._module:
+                if self._library == referencer._library:
+                    if self._translation_unit == referencer._translation_unit:
+                        self.external_reference_count -= 1
 
     def valid_reference(self, addr):
         return addr == self.addr
@@ -80,20 +111,35 @@ class Symbol:
     def _get_internal_references(self, context, symbol_table):
         return set()
 
-    def internal_references(self, context, symbol_table):
+    def internal_references_addr(self, context, symbol_table):
         if not self._internal_references:
-            self._internal_references = self._get_internal_references(context, symbol_table)
+            refs = self._get_internal_references(context, symbol_table)
+            refs.discard((self._module, self.addr))
+
+            self._internal_references = frozenset(refs)
+
+            if self.label == "setDemoName__11Z2StatusMgrFPc":
+                context.error(f"### CALCULATE {id(self)} {self.label} ({len(self._internal_references)}) ###")
+        else:
+            if self.label == "setDemoName__11Z2StatusMgrFPc":
+                context.error(f"### RE-CALCULATE {id(self)} {self.label} ({len(self._internal_references)}) ###")
+
         return self._internal_references
 
-    def internal_references_no_calculate(self):
-        assert self._internal_references
-        return self._internal_references
+    def internal_references(self, context, symbol_table):
+        refs = self.internal_references_addr(context, symbol_table)
+        symbols = symbol_table.resolve_set(refs)
+        # TODO: cache symbols. (remember that pickle this will not work)
+        return symbols
 
     def relocation_symbols(self, context, symbol_table, section):
         return set()
 
     def resolve_references(self, context, symbol_table, section):
         pass
+
+    def types(self):
+        return set()
 
 @dataclass
 class Section:
@@ -214,7 +260,10 @@ class Module:
 
 @dataclass(eq=False)
 class LinkerGenerated(Symbol):
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         pad_str = ""
         if self.padding > 0:
@@ -226,7 +275,10 @@ class LinkerGenerated(Symbol):
 
 @dataclass(eq=False)
 class ZeroData(Symbol):
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         pad_str = ""
         if self.padding > 0:
@@ -271,7 +323,10 @@ class ZeroStruct(Symbol):
 
         return None
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         pad_str = ""
         if self.padding > 0:
@@ -330,7 +385,10 @@ class Data(Symbol):
             offset = addr - self.addr
             return f"(((char*)&{self.identifier.label})+0x{offset:X})"
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         pad_str = ""
         if self.padding > 0:
@@ -459,9 +517,12 @@ class VirtualTable(Data):
                     self.functions.append((addr, None))
                     
     def _get_internal_references(self, context, symbol_table):
-        return set([ x[1] for x in self.functions if x[1]])
+        return set([ (x[1]._module, x[1].addr) for x in self.functions if x[1]])
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "void*", forward=True)
         count = len(self.functions) + self.padding // 4
         await builder.write(f"{decl_type}const {self.identifier.label}[{count}];")
@@ -492,7 +553,7 @@ class VirtualTable(Data):
 @dataclass(eq=False)
 class ReferenceArray(Data):
     references: List[Tuple[int,Symbol]] = field(default_factory=list,repr=False)
-    rsymbols: List[Symbol] = field(default_factory=list,repr=False)
+    rsymbols: List[Tuple[int,int]] = field(default_factory=list,repr=False)
 
     def valid_reference(self, addr):
         return addr % 4 == 0
@@ -508,7 +569,7 @@ class ReferenceArray(Data):
             if offset in relocations:
                 relocation = relocations[offset]
                 addr, symbol = symbol_table[-1, relocation]
-                self.rsymbols.append(symbol)
+                self.rsymbols.append((symbol._module, symbol.addr))
                 self.references.append((addr, symbol))
             elif addr == 0:
                 self.references.append((addr, None))
@@ -521,12 +582,18 @@ class ReferenceArray(Data):
             offset += 4
                     
     def _get_internal_references(self, context, symbol_table):
-        return set([ x[1] for x in self.references if x[1]])
+        return set([ 
+            (x[1]._module, x[1].addr) 
+            for x in self.references if x[1]
+        ])
 
     def relocation_symbols(self, context, symbol_table, section):
         return self.rsymbols
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "void*", forward=True)
 
         # TODO: 
@@ -679,7 +746,10 @@ class StringBase(Data):
             padding_data = padding_data,
             strings = strings)
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, "u8", forward=True)
         count = self.size + self.padding
         await builder.write(f"{decl_type} {self.identifier.label}[{count}];")
@@ -706,7 +776,10 @@ class Literal(Data):
     value_type: str = None
     values: List[str] = field(default_factory=list)
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
+        if not c_export:
+            return
+
         decl_type = exporter.symbol_get_desc(self, self.value_type, forward=True)
         count = len(self.values)
         if count == 1:
@@ -753,6 +826,131 @@ class FloatFraction32(Float32):
 class FloatFraction64(Float64):
     pass
 
+#
+
+special_func_no_return = set([
+    "ct",
+    "dt"
+])
+
+@dataclass(eq=False)
+class Function(Symbol):
+    return_type: Type = None
+    argument_types: List[Type] = field(default_factory=list)
+    class_name: str = None
+    func_name: str = None
+    special_func_name: str = None
+    func_is_const: bool = False
+
+    @property
+    def label(self):
+        return self.identifier.label
+
+    def function_name(self, original, in_class):
+        if self.func_name and not original:
+            if self.class_name and not in_class:
+                return f"{self.class_name}::{self.func_name}"
+            return self.func_name.split("::")[-1]
+
+        return self.identifier.label
+
+    def is_demangled(self):
+        return self.func_name != None
+
+    def valid_reference(self, addr):
+        return addr % 4 == 0
+    
+    def cpp_reference(self, accessor, addr):
+        if addr == self.addr:
+            return self.label
+        else:
+            offset = addr - self.addr
+            return f"(((char*){self.label})+0x{offset:X})"
+
+    def relocation_symbols(self, context, symbol_table, section):
+        return section.relocations_in_range(symbol_table, self.start, self.end)
+
+    def types(self):
+        return set()
+
+    async def export_function_header(self, exporter, builder: AsyncBuilder, forward: bool, asm: bool = False, original: bool = False, in_class: bool = False):
+        # prints internal references for the function
+        if False:
+            if not forward:
+                refs = self.internal_references(exporter.context, exporter.gst)
+                await builder.write(f"/* internal references (count {len(refs)})")
+                for ref in refs:
+                    await builder.write(f"// {ref.addr:08X} {ref.label}")
+
+
+        declspec = "extern \"C\" "
+        if not original and self.is_demangled():
+            declspec = ""
+
+        if self._section == ".init":
+            declspec = "SECTION_INIT "
+
+
+        await builder.write_nonewline(f"{declspec}")
+        if asm and not forward:
+            await builder.write_nonewline(f"asm ")
+
+        if not in_class and not self.class_name:
+            # this symbol is only referenced by other symbol in the same translation unit
+            if self.reference_count > 0 and self.external_reference_count == 0:
+                await builder.write_nonewline(f"static ")
+
+        if not self.special_func_name in special_func_no_return or original:
+            if not self.return_type:
+                await builder.write_nonewline(f"{data_types.VOID.type()} ")
+            else:
+                await builder.write_nonewline(f"{self.return_type.type()} ")
+        await builder.write_nonewline(f"{self.function_name(original, in_class)}")
+
+        arg_type = ""
+        if not original and self.is_demangled():
+            if forward:
+                arg_type = ", ".join([x.type() for x in self.argument_types])
+            else:
+                arg_type = ", ".join([x.decl(f"field_{i}") for i, x in zip(range(len(self.argument_types)), self.argument_types)])
+        await builder.write_nonewline(f"({arg_type})")
+        if not original and self.class_name and self.func_is_const:
+            await builder.write_nonewline(f" const")
+
+
+    async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False, in_class: bool = False):
+        if not in_class:
+            if c_export or not self.is_demangled():
+                # export unmangled name
+                await self.export_function_header(exporter, builder, forward = True, original = True)
+                await builder.write(f";")
+            elif self.is_demangled():
+                # forward references are not written for class functions
+                if not self.class_name:
+                    await self.export_function_header(exporter, builder, forward = True)
+                    await builder.write(f";")
+        else:
+            # export the function as a class method
+            await self.export_function_header(exporter, builder, forward = True, in_class = True)
+            await builder.write(f";")       
+        
+    async def export_function_body(self, exporter, builder: AsyncBuilder):
+        assert False
+
+    async def export_declaration(self, exporter, builder: AsyncBuilder):
+        assert self.padding == 0
+
+        if self.alignment:
+            await builder.write("#pragma push")
+            await builder.write(f"#pragma function_align {self.alignment}")
+
+        await self.export_function_header(exporter, builder, forward = False)
+        await self.export_function_body(exporter, builder)
+
+        if self.alignment:
+            await builder.write("#pragma pop")
+        await builder.write("")
+
 @dataclass(eq=False)
 class Block(Data):
     sda_hack_references: Set[int] = field(default=None,repr=False)
@@ -762,15 +960,13 @@ class Block(Data):
         for x in collector.execute_generator(self.addr, self.data, self.size):
             pass
         sda_hack_symbols = [symbol_table[self._module, x] for x in collector.sda_hack_references]
-        self.sda_hack_references = set([ x for x in sda_hack_symbols if x ])
+        self.sda_hack_references = set([ (x._module, x.addr) for x in sda_hack_symbols if x ])
         symbols = [symbol_table[self._module, x.addr] for x in collector.accesses.values()]
-        return set([ x for x in symbols if x ])
+        return set([ (x._module, x.addr) for x in symbols if x ])
 
 @dataclass(eq=False)
-class Function(Symbol):
+class ASMFunction(Function):
     blocks: List[str] = field(default_factory=list,repr=False)
-    return_type: str = None
-    argument_types: List[str] = field(default_factory=list)
     include_path: Path = None
 
     @property
@@ -780,46 +976,32 @@ class Function(Symbol):
             refs.update(block.sda_hack_references if block.sda_hack_references else set())
         return refs
 
-    def valid_reference(self, addr):
-        return addr % 4 == 0
-
-    def cpp_reference(self, accessor, addr):
-        if addr == self.addr:
-            return self.identifier.label
-        else:
-            offset = addr - self.addr
-            return f"(((char*){self.identifier.label})+0x{offset:X})"
-
     def _get_internal_references(self, context, symbol_table):
         refs = set()
         for block in self.blocks:
-            refs.update(block.internal_references(context, symbol_table))
+            refs.update(block.internal_references_addr(context, symbol_table))
         return refs
 
-    def relocation_symbols(self, context, symbol_table, section):
-        return section.relocations_in_range(symbol_table, self.start, self.end)
+    async def export_function_header(self, exporter, builder: AsyncBuilder, forward: bool, asm: bool = False, original: bool = False, in_class: bool = False):
+        await super().export_function_header(exporter, builder, forward, True, original, in_class)
 
-    async def export_forward_references(self, exporter, builder: AsyncBuilder):
-        decl_type = exporter.symbol_get_desc(self, "void", forward=True)
-        await builder.write(f"{decl_type} {self.identifier.label}();")
+    async def export_function_body(self, exporter, builder: AsyncBuilder):
+        await builder.write(f" {{")
+        await builder.write(f"\tnofralloc")
+        await builder.write(f"#include \"{self.include_path}\"")
+        await builder.write(f"}}")
 
     async def export_declaration(self, exporter, builder: AsyncBuilder):
+        assert self.padding == 0
+
         await builder.write("#pragma push")
         await builder.write("#pragma optimization_level 0")
         await builder.write("#pragma optimizewithasm off")
         if self.alignment:
             await builder.write(f"#pragma function_align {self.alignment}")
 
-        include_path = "TODO"
-
-        await builder.write(f"ASM_FUNCTION({self.identifier.label}) {{")
-        await builder.write(f"\tnofralloc")
-        await builder.write(f"#include \"{self.include_path}\"")
-        await builder.write(f"}}")
-
-        if self.padding != 0:
-            raise Dol2ZelException(f"function {self.identifier} has padding")
-            await builder.write("/* function padding */")
+        await self.export_function_header(exporter, builder, forward = False)
+        await self.export_function_body(exporter, builder)
 
         await builder.write("#pragma pop")
         await builder.write("")
@@ -852,12 +1034,32 @@ class Function(Symbol):
             blocks[-1].size -= end_padding
             end -= end_padding
 
-        return Function(Identifier("func", start, first.name), 
+        return ASMFunction(
+            Identifier("func", start, first.name), 
             addr = start, 
             size = end - start, 
             padding = last.padding + end_padding, 
             alignment = 0,
             blocks = blocks,
             source = first.source)
+
+
+
+@dataclass(eq=False)
+class ReturnFunction(Function):
+    return_value: str = None
+
+    def export_return_value(self):
+        return self.return_value
+
+    async def export_function_body(self, exporter, builder: AsyncBuilder):
+        return_value = self.export_return_value()
+        await builder.write(f" {{")
+        if return_value:
+            await builder.write(f"\treturn {return_value};")
+        else:
+            await builder.write(f"\t/* empty function */")
+        await builder.write(f"}}")
+
 
 

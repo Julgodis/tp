@@ -6,20 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjBombf_c;
+
+struct daObjBombf_c {
+	void createHeap();
+	void create();
+	~daObjBombf_c();
+	void setMatrix();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__12daObjBombf_cFv();
-extern "C" extern void daObjBombf_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__12daObjBombf_cFv();
-extern "C" extern void daObjBombf_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daObjBombf_cFv();
-extern "C" extern void daObjBombf_Delete__FP12daObjBombf_c();
-extern "C" extern void setMatrix__12daObjBombf_cFv();
-extern "C" extern void execute__12daObjBombf_cFv();
-extern "C" extern void daObjBombf_Execute__FP12daObjBombf_c();
-extern "C" extern void draw__12daObjBombf_cFv();
-extern "C" extern void daObjBombf_Draw__FP12daObjBombf_c();
+void daObjBombf_createHeap(fopAc_ac_c*);
+void daObjBombf_Create(fopAc_ac_c*);
+void daObjBombf_Delete(daObjBombf_c*);
+void daObjBombf_Execute(daObjBombf_c*);
+void daObjBombf_Draw(daObjBombf_c*);
+
+extern "C" void createHeap__12daObjBombf_cFv();
+extern "C" void daObjBombf_createHeap__FP10fopAc_ac_c();
+extern "C" void create__12daObjBombf_cFv();
+extern "C" void daObjBombf_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daObjBombf_cFv();
+extern "C" void daObjBombf_Delete__FP12daObjBombf_c();
+extern "C" void setMatrix__12daObjBombf_cFv();
+extern "C" void execute__12daObjBombf_cFv();
+extern "C" void daObjBombf_Execute__FP12daObjBombf_c();
+extern "C" void draw__12daObjBombf_cFv();
+extern "C" void daObjBombf_Draw__FP12daObjBombf_c();
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_3687;
 SECTION_RODATA extern const u8 lit_3688[4];
@@ -33,7 +58,9 @@ SECTION_DATA extern u8 g_profile_Obj_Bombf[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -43,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__12daObjBombf_cFv) {
+asm void daObjBombf_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/createHeap__12daObjBombf_cFv.s"
 }
@@ -54,7 +81,7 @@ ASM_FUNCTION(createHeap__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBombf_createHeap__FP10fopAc_ac_c) {
+asm void daObjBombf_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_createHeap__FP10fopAc_ac_c.s"
 }
@@ -65,7 +92,7 @@ ASM_FUNCTION(daObjBombf_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjBombf_cFv) {
+asm void daObjBombf_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/create__12daObjBombf_cFv.s"
 }
@@ -76,7 +103,7 @@ ASM_FUNCTION(create__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBombf_Create__FP10fopAc_ac_c) {
+asm void daObjBombf_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Create__FP10fopAc_ac_c.s"
 }
@@ -87,7 +114,7 @@ ASM_FUNCTION(daObjBombf_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObjBombf_cFv) {
+asm daObjBombf_c::~daObjBombf_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/__dt__12daObjBombf_cFv.s"
 }
@@ -98,7 +125,7 @@ ASM_FUNCTION(__dt__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBombf_Delete__FP12daObjBombf_c) {
+asm void daObjBombf_Delete(daObjBombf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Delete__FP12daObjBombf_c.s"
 }
@@ -109,7 +136,7 @@ ASM_FUNCTION(daObjBombf_Delete__FP12daObjBombf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__12daObjBombf_cFv) {
+asm void daObjBombf_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/setMatrix__12daObjBombf_cFv.s"
 }
@@ -120,7 +147,7 @@ ASM_FUNCTION(setMatrix__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjBombf_cFv) {
+asm void daObjBombf_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/execute__12daObjBombf_cFv.s"
 }
@@ -131,7 +158,7 @@ ASM_FUNCTION(execute__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBombf_Execute__FP12daObjBombf_c) {
+asm void daObjBombf_Execute(daObjBombf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Execute__FP12daObjBombf_c.s"
 }
@@ -142,7 +169,7 @@ ASM_FUNCTION(daObjBombf_Execute__FP12daObjBombf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjBombf_cFv) {
+asm void daObjBombf_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/draw__12daObjBombf_cFv.s"
 }
@@ -153,7 +180,7 @@ ASM_FUNCTION(draw__12daObjBombf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBombf_Draw__FP12daObjBombf_c) {
+asm void daObjBombf_Draw(daObjBombf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bombf/d_a_obj_bombf/daObjBombf_Draw__FP12daObjBombf_c.s"
 }

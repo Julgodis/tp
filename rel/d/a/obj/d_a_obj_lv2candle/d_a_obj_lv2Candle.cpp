@@ -6,32 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv2Candle_c;
+
+struct daLv2Candle_HIO_c {
+	daLv2Candle_HIO_c();
+	~daLv2Candle_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv2Candle_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void isSwitch();
+	void createHeapCallBack(fopAc_ac_c*);
+	void searchDemoTagAct(void*, void*);
+	void lightInit();
+	void setLight();
+	void cutLight();
+	void pointLightProc();
+	void Execute();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daLv2Candle_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daLv2Candle_cFv();
-extern "C" extern void CreateHeap__13daLv2Candle_cFv();
-extern "C" extern void create__13daLv2Candle_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void isSwitch__13daLv2Candle_cFv();
-extern "C" extern void createHeapCallBack__13daLv2Candle_cFP10fopAc_ac_c();
-extern "C" extern void searchDemoTagAct__13daLv2Candle_cFPvPv();
-extern "C" extern void lightInit__13daLv2Candle_cFv();
-extern "C" extern void setLight__13daLv2Candle_cFv();
-extern "C" extern void cutLight__13daLv2Candle_cFv();
-extern "C" extern void pointLightProc__13daLv2Candle_cFv();
-extern "C" extern void Execute__13daLv2Candle_cFv();
-extern "C" extern void Draw__13daLv2Candle_cFv();
-extern "C" extern void Delete__13daLv2Candle_cFv();
-extern "C" extern void daLv2Candle_Draw__FP13daLv2Candle_c();
-extern "C" extern void daLv2Candle_Execute__FP13daLv2Candle_c();
-extern "C" extern void daLv2Candle_Delete__FP13daLv2Candle_c();
-extern "C" extern void daLv2Candle_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daLv2Candle_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv2Candle_cpp();
+void daLv2Candle_Draw(daLv2Candle_c*);
+void daLv2Candle_Execute(daLv2Candle_c*);
+void daLv2Candle_Delete(daLv2Candle_c*);
+void daLv2Candle_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv2Candle_cpp();
+
+extern "C" void __ct__17daLv2Candle_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv2Candle_cFv();
+extern "C" void CreateHeap__13daLv2Candle_cFv();
+extern "C" void create__13daLv2Candle_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void isSwitch__13daLv2Candle_cFv();
+extern "C" void createHeapCallBack__13daLv2Candle_cFP10fopAc_ac_c();
+extern "C" void searchDemoTagAct__13daLv2Candle_cFPvPv();
+extern "C" void lightInit__13daLv2Candle_cFv();
+extern "C" void setLight__13daLv2Candle_cFv();
+extern "C" void cutLight__13daLv2Candle_cFv();
+extern "C" void pointLightProc__13daLv2Candle_cFv();
+extern "C" void Execute__13daLv2Candle_cFv();
+extern "C" void Draw__13daLv2Candle_cFv();
+extern "C" void Delete__13daLv2Candle_cFv();
+extern "C" void daLv2Candle_Draw__FP13daLv2Candle_c();
+extern "C" void daLv2Candle_Execute__FP13daLv2Candle_c();
+extern "C" void daLv2Candle_Delete__FP13daLv2Candle_c();
+extern "C" void daLv2Candle_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daLv2Candle_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv2Candle_cpp();
 SECTION_RODATA extern const u32 lit_3637;
 SECTION_RODATA extern const u32 lit_3638;
 SECTION_RODATA extern const u32 lit_3639;
@@ -66,8 +115,11 @@ SECTION_BSS extern u8 l_HIO[52];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -77,7 +129,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daLv2Candle_HIO_cFv) {
+asm daLv2Candle_HIO_c::daLv2Candle_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__ct__17daLv2Candle_HIO_cFv.s"
 }
@@ -88,7 +140,7 @@ ASM_FUNCTION(__ct__17daLv2Candle_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -99,7 +151,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/setBaseMtx__13daLv2Candle_cFv.s"
 }
@@ -110,7 +162,7 @@ ASM_FUNCTION(setBaseMtx__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/CreateHeap__13daLv2Candle_cFv.s"
 }
@@ -121,7 +173,7 @@ ASM_FUNCTION(CreateHeap__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/create__13daLv2Candle_cFv.s"
 }
@@ -132,7 +184,7 @@ ASM_FUNCTION(create__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__dt__8cM3dGCylFv.s"
 }
@@ -143,7 +195,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__dt__8cM3dGAabFv.s"
 }
@@ -154,7 +206,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSwitch__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::isSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/isSwitch__13daLv2Candle_cFv.s"
 }
@@ -165,7 +217,7 @@ ASM_FUNCTION(isSwitch__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daLv2Candle_cFP10fopAc_ac_c) {
+asm void daLv2Candle_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/createHeapCallBack__13daLv2Candle_cFP10fopAc_ac_c.s"
 }
@@ -176,7 +228,7 @@ ASM_FUNCTION(createHeapCallBack__13daLv2Candle_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchDemoTagAct__13daLv2Candle_cFPvPv) {
+asm void daLv2Candle_c::searchDemoTagAct(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/searchDemoTagAct__13daLv2Candle_cFPvPv.s"
 }
@@ -187,7 +239,7 @@ ASM_FUNCTION(searchDemoTagAct__13daLv2Candle_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightInit__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::lightInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/lightInit__13daLv2Candle_cFv.s"
 }
@@ -198,7 +250,7 @@ ASM_FUNCTION(lightInit__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLight__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::setLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/setLight__13daLv2Candle_cFv.s"
 }
@@ -209,7 +261,7 @@ ASM_FUNCTION(setLight__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutLight__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::cutLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/cutLight__13daLv2Candle_cFv.s"
 }
@@ -220,7 +272,7 @@ ASM_FUNCTION(cutLight__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pointLightProc__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::pointLightProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/pointLightProc__13daLv2Candle_cFv.s"
 }
@@ -231,7 +283,7 @@ ASM_FUNCTION(pointLightProc__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/Execute__13daLv2Candle_cFv.s"
 }
@@ -242,7 +294,7 @@ ASM_FUNCTION(Execute__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/Draw__13daLv2Candle_cFv.s"
 }
@@ -253,7 +305,7 @@ ASM_FUNCTION(Draw__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daLv2Candle_cFv) {
+asm void daLv2Candle_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/Delete__13daLv2Candle_cFv.s"
 }
@@ -264,7 +316,7 @@ ASM_FUNCTION(Delete__13daLv2Candle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv2Candle_Draw__FP13daLv2Candle_c) {
+asm void daLv2Candle_Draw(daLv2Candle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/daLv2Candle_Draw__FP13daLv2Candle_c.s"
 }
@@ -275,7 +327,7 @@ ASM_FUNCTION(daLv2Candle_Draw__FP13daLv2Candle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv2Candle_Execute__FP13daLv2Candle_c) {
+asm void daLv2Candle_Execute(daLv2Candle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/daLv2Candle_Execute__FP13daLv2Candle_c.s"
 }
@@ -286,7 +338,7 @@ ASM_FUNCTION(daLv2Candle_Execute__FP13daLv2Candle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv2Candle_Delete__FP13daLv2Candle_c) {
+asm void daLv2Candle_Delete(daLv2Candle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/daLv2Candle_Delete__FP13daLv2Candle_c.s"
 }
@@ -297,7 +349,7 @@ ASM_FUNCTION(daLv2Candle_Delete__FP13daLv2Candle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv2Candle_Create__FP10fopAc_ac_c) {
+asm void daLv2Candle_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/daLv2Candle_Create__FP10fopAc_ac_c.s"
 }
@@ -308,7 +360,7 @@ ASM_FUNCTION(daLv2Candle_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv2Candle_HIO_cFv) {
+asm daLv2Candle_HIO_c::~daLv2Candle_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__dt__17daLv2Candle_HIO_cFv.s"
 }
@@ -319,7 +371,7 @@ ASM_FUNCTION(__dt__17daLv2Candle_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv2Candle_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv2Candle_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv2candle/d_a_obj_lv2Candle/__sinit_d_a_obj_lv2Candle_cpp.s"
 }

@@ -6,30 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daKekaiTrap_c;
+
+struct daKekaiTrap_HIO_c {
+	daKekaiTrap_HIO_c();
+	~daKekaiTrap_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daKekaiTrap_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveMain();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveUp();
+	void modeMoveUp();
+	void init_modeMoveDown();
+	void modeMoveDown();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daKekaiTrap_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daKekaiTrap_cFv();
-extern "C" extern void CreateHeap__13daKekaiTrap_cFv();
-extern "C" extern void create__13daKekaiTrap_cFv();
-extern "C" extern void Execute__13daKekaiTrap_cFPPA3_A4_f();
-extern "C" extern void moveMain__13daKekaiTrap_cFv();
-extern "C" extern void init_modeWait__13daKekaiTrap_cFv();
-extern "C" extern void modeWait__13daKekaiTrap_cFv();
-extern "C" extern void init_modeMoveUp__13daKekaiTrap_cFv();
-extern "C" extern void modeMoveUp__13daKekaiTrap_cFv();
-extern "C" extern void init_modeMoveDown__13daKekaiTrap_cFv();
-extern "C" extern void modeMoveDown__13daKekaiTrap_cFv();
-extern "C" extern void Draw__13daKekaiTrap_cFv();
-extern "C" extern void Delete__13daKekaiTrap_cFv();
-extern "C" extern void daKekaiTrap_Draw__FP13daKekaiTrap_c();
-extern "C" extern void daKekaiTrap_Execute__FP13daKekaiTrap_c();
-extern "C" extern void daKekaiTrap_Delete__FP13daKekaiTrap_c();
-extern "C" extern void daKekaiTrap_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daKekaiTrap_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv8KekkaiTrap_cpp();
+extern "C" void Execute__13daKekaiTrap_cFPPA3_A4_f();
+void daKekaiTrap_Draw(daKekaiTrap_c*);
+void daKekaiTrap_Execute(daKekaiTrap_c*);
+void daKekaiTrap_Delete(daKekaiTrap_c*);
+void daKekaiTrap_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv8KekkaiTrap_cpp();
+
+extern "C" void __ct__17daKekaiTrap_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daKekaiTrap_cFv();
+extern "C" void CreateHeap__13daKekaiTrap_cFv();
+extern "C" void create__13daKekaiTrap_cFv();
+extern "C" void Execute__13daKekaiTrap_cFPPA3_A4_f();
+extern "C" void moveMain__13daKekaiTrap_cFv();
+extern "C" void init_modeWait__13daKekaiTrap_cFv();
+extern "C" void modeWait__13daKekaiTrap_cFv();
+extern "C" void init_modeMoveUp__13daKekaiTrap_cFv();
+extern "C" void modeMoveUp__13daKekaiTrap_cFv();
+extern "C" void init_modeMoveDown__13daKekaiTrap_cFv();
+extern "C" void modeMoveDown__13daKekaiTrap_cFv();
+extern "C" void Draw__13daKekaiTrap_cFv();
+extern "C" void Delete__13daKekaiTrap_cFv();
+extern "C" void daKekaiTrap_Draw__FP13daKekaiTrap_c();
+extern "C" void daKekaiTrap_Execute__FP13daKekaiTrap_c();
+extern "C" void daKekaiTrap_Delete__FP13daKekaiTrap_c();
+extern "C" void daKekaiTrap_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daKekaiTrap_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv8KekkaiTrap_cpp();
 SECTION_RODATA extern const u8 lit_3651[4];
 SECTION_RODATA extern const u32 lit_3652;
 SECTION_RODATA extern const u32 lit_3802;
@@ -59,8 +100,11 @@ SECTION_BSS extern u8 data_80C88638[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +114,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daKekaiTrap_HIO_cFv) {
+asm daKekaiTrap_HIO_c::daKekaiTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/__ct__17daKekaiTrap_HIO_cFv.s"
 }
@@ -81,7 +125,7 @@ ASM_FUNCTION(__ct__17daKekaiTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +136,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/setBaseMtx__13daKekaiTrap_cFv.s"
 }
@@ -103,7 +147,7 @@ ASM_FUNCTION(setBaseMtx__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/CreateHeap__13daKekaiTrap_cFv.s"
 }
@@ -114,7 +158,7 @@ ASM_FUNCTION(CreateHeap__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/create__13daKekaiTrap_cFv.s"
 }
@@ -125,7 +169,7 @@ ASM_FUNCTION(create__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daKekaiTrap_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daKekaiTrap_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/Execute__13daKekaiTrap_cFPPA3_A4_f.s"
 }
@@ -136,7 +180,7 @@ ASM_FUNCTION(Execute__13daKekaiTrap_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveMain__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::moveMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/moveMain__13daKekaiTrap_cFv.s"
 }
@@ -147,7 +191,7 @@ ASM_FUNCTION(moveMain__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/init_modeWait__13daKekaiTrap_cFv.s"
 }
@@ -155,21 +199,16 @@ ASM_FUNCTION(init_modeWait__13daKekaiTrap_cFv) {
 
 
 /* 80C88110-80C88114 0004+00 .text      modeWait__13daKekaiTrap_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daKekaiTrap_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/modeWait__13daKekaiTrap_cFv.s"
+void daKekaiTrap_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C88114-80C88138 0024+00 .text      init_modeMoveUp__13daKekaiTrap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveUp__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::init_modeMoveUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/init_modeMoveUp__13daKekaiTrap_cFv.s"
 }
@@ -180,7 +219,7 @@ ASM_FUNCTION(init_modeMoveUp__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveUp__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::modeMoveUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/modeMoveUp__13daKekaiTrap_cFv.s"
 }
@@ -191,7 +230,7 @@ ASM_FUNCTION(modeMoveUp__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveDown__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::init_modeMoveDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/init_modeMoveDown__13daKekaiTrap_cFv.s"
 }
@@ -202,7 +241,7 @@ ASM_FUNCTION(init_modeMoveDown__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveDown__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::modeMoveDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/modeMoveDown__13daKekaiTrap_cFv.s"
 }
@@ -213,7 +252,7 @@ ASM_FUNCTION(modeMoveDown__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/Draw__13daKekaiTrap_cFv.s"
 }
@@ -224,7 +263,7 @@ ASM_FUNCTION(Draw__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daKekaiTrap_cFv) {
+asm void daKekaiTrap_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/Delete__13daKekaiTrap_cFv.s"
 }
@@ -235,7 +274,7 @@ ASM_FUNCTION(Delete__13daKekaiTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKekaiTrap_Draw__FP13daKekaiTrap_c) {
+asm void daKekaiTrap_Draw(daKekaiTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Draw__FP13daKekaiTrap_c.s"
 }
@@ -246,7 +285,7 @@ ASM_FUNCTION(daKekaiTrap_Draw__FP13daKekaiTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKekaiTrap_Execute__FP13daKekaiTrap_c) {
+asm void daKekaiTrap_Execute(daKekaiTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Execute__FP13daKekaiTrap_c.s"
 }
@@ -257,7 +296,7 @@ ASM_FUNCTION(daKekaiTrap_Execute__FP13daKekaiTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKekaiTrap_Delete__FP13daKekaiTrap_c) {
+asm void daKekaiTrap_Delete(daKekaiTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Delete__FP13daKekaiTrap_c.s"
 }
@@ -268,7 +307,7 @@ ASM_FUNCTION(daKekaiTrap_Delete__FP13daKekaiTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKekaiTrap_Create__FP10fopAc_ac_c) {
+asm void daKekaiTrap_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/daKekaiTrap_Create__FP10fopAc_ac_c.s"
 }
@@ -279,7 +318,7 @@ ASM_FUNCTION(daKekaiTrap_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daKekaiTrap_HIO_cFv) {
+asm daKekaiTrap_HIO_c::~daKekaiTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/__dt__17daKekaiTrap_HIO_cFv.s"
 }
@@ -290,7 +329,7 @@ ASM_FUNCTION(__dt__17daKekaiTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv8KekkaiTrap_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv8KekkaiTrap_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8KekkaiTrap/d_a_obj_lv8KekkaiTrap/__sinit_d_a_obj_lv8KekkaiTrap_cpp.s"
 }

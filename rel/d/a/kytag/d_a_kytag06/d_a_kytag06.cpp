@@ -6,38 +6,85 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct kytag06_class;
+
+struct kytag06_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dice_wether_init__FUcff();
-extern "C" extern void dice_wether_execute__FUcff();
-extern "C" extern void dice_rain_minus__Fv();
-extern "C" extern void dKy_event_proc__Fv();
-extern "C" extern void daKytag06_type_04_Execute__FP13kytag06_class();
-extern "C" extern void set_path_info__FP10fopAc_ac_c();
-extern "C" extern void near_rail_get__FP13kytag06_classP4cXyz();
-extern "C" extern void daKytag06_Draw__FP13kytag06_class();
-extern "C" extern void daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc();
-extern "C" extern void daKytag06_Ganon_wether_proc__FP13kytag06_classUc();
-extern "C" extern void daKytag06_wether_proc__FP13kytag06_classUc();
-extern "C" extern void daKytag06_type_07_wether_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_07_Execute__FP13kytag06_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daKytag06_type_06_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_08_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_09_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_10_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_11_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_05_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_type_03_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_Execute__FP13kytag06_class();
-extern "C" extern void daKytag06_IsDelete__FP13kytag06_class();
-extern "C" extern void daKytag06_Delete__FP13kytag06_class();
-extern "C" extern void daKytag06_type04_init__FP10fopAc_ac_c();
-extern "C" extern void daKytag06_type06_init__FP10fopAc_ac_c();
-extern "C" extern void daKytag06_type02_init__FP10fopAc_ac_c();
-extern "C" extern void daKytag06_type03_init__FP10fopAc_ac_c();
-extern "C" extern void daKytag06_Create__FP10fopAc_ac_c();
+void dice_wether_init(u8, f32, f32);
+void dice_wether_execute(u8, f32, f32);
+void dice_rain_minus();
+void dKy_event_proc();
+void daKytag06_type_04_Execute(kytag06_class*);
+void set_path_info(fopAc_ac_c*);
+void near_rail_get(kytag06_class*, cXyz*);
+void daKytag06_Draw(kytag06_class*);
+void daKytag06_lv7_boss_wether_proc(kytag06_class*, u8);
+void daKytag06_Ganon_wether_proc(kytag06_class*, u8);
+void daKytag06_wether_proc(kytag06_class*, u8);
+void daKytag06_type_07_wether_Execute(kytag06_class*);
+void daKytag06_type_07_Execute(kytag06_class*);
+void daKytag06_type_06_Execute(kytag06_class*);
+void daKytag06_type_08_Execute(kytag06_class*);
+void daKytag06_type_09_Execute(kytag06_class*);
+void daKytag06_type_10_Execute(kytag06_class*);
+void daKytag06_type_11_Execute(kytag06_class*);
+void daKytag06_type_05_Execute(kytag06_class*);
+void daKytag06_type_03_Execute(kytag06_class*);
+void daKytag06_Execute(kytag06_class*);
+bool daKytag06_IsDelete(kytag06_class*);
+void daKytag06_Delete(kytag06_class*);
+void daKytag06_type04_init(fopAc_ac_c*);
+void daKytag06_type06_init(fopAc_ac_c*);
+void daKytag06_type02_init(fopAc_ac_c*);
+void daKytag06_type03_init(fopAc_ac_c*);
+void daKytag06_Create(fopAc_ac_c*);
+
+extern "C" void dice_wether_init__FUcff();
+extern "C" void dice_wether_execute__FUcff();
+extern "C" void dice_rain_minus__Fv();
+extern "C" void dKy_event_proc__Fv();
+extern "C" void daKytag06_type_04_Execute__FP13kytag06_class();
+extern "C" void set_path_info__FP10fopAc_ac_c();
+extern "C" void near_rail_get__FP13kytag06_classP4cXyz();
+extern "C" void daKytag06_Draw__FP13kytag06_class();
+extern "C" void daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc();
+extern "C" void daKytag06_Ganon_wether_proc__FP13kytag06_classUc();
+extern "C" void daKytag06_wether_proc__FP13kytag06_classUc();
+extern "C" void daKytag06_type_07_wether_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_07_Execute__FP13kytag06_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daKytag06_type_06_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_08_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_09_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_10_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_11_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_05_Execute__FP13kytag06_class();
+extern "C" void daKytag06_type_03_Execute__FP13kytag06_class();
+extern "C" void daKytag06_Execute__FP13kytag06_class();
+extern "C" bool daKytag06_IsDelete__FP13kytag06_class();
+extern "C" void daKytag06_Delete__FP13kytag06_class();
+extern "C" void daKytag06_type04_init__FP10fopAc_ac_c();
+extern "C" void daKytag06_type06_init__FP10fopAc_ac_c();
+extern "C" void daKytag06_type02_init__FP10fopAc_ac_c();
+extern "C" void daKytag06_type03_init__FP10fopAc_ac_c();
+extern "C" void daKytag06_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3740;
 SECTION_RODATA extern const u32 lit_3877;
 SECTION_RODATA extern const u32 lit_3878;
@@ -173,8 +220,11 @@ SECTION_BSS extern u8 data_8085A1EC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -184,7 +234,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dice_wether_init__FUcff) {
+asm void dice_wether_init(u8 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/dice_wether_init__FUcff.s"
 }
@@ -195,7 +245,7 @@ ASM_FUNCTION(dice_wether_init__FUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dice_wether_execute__FUcff) {
+asm void dice_wether_execute(u8 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/dice_wether_execute__FUcff.s"
 }
@@ -206,7 +256,7 @@ ASM_FUNCTION(dice_wether_execute__FUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dice_rain_minus__Fv) {
+asm void dice_rain_minus() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/dice_rain_minus__Fv.s"
 }
@@ -217,7 +267,7 @@ ASM_FUNCTION(dice_rain_minus__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKy_event_proc__Fv) {
+asm void dKy_event_proc() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/dKy_event_proc__Fv.s"
 }
@@ -228,7 +278,7 @@ ASM_FUNCTION(dKy_event_proc__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_04_Execute__FP13kytag06_class) {
+asm void daKytag06_type_04_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_04_Execute__FP13kytag06_class.s"
 }
@@ -239,7 +289,7 @@ ASM_FUNCTION(daKytag06_type_04_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
+asm void set_path_info(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/set_path_info__FP10fopAc_ac_c.s"
 }
@@ -250,7 +300,7 @@ ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(near_rail_get__FP13kytag06_classP4cXyz) {
+asm void near_rail_get(kytag06_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/near_rail_get__FP13kytag06_classP4cXyz.s"
 }
@@ -261,7 +311,7 @@ ASM_FUNCTION(near_rail_get__FP13kytag06_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_Draw__FP13kytag06_class) {
+asm void daKytag06_Draw(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Draw__FP13kytag06_class.s"
 }
@@ -272,7 +322,7 @@ ASM_FUNCTION(daKytag06_Draw__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc) {
+asm void daKytag06_lv7_boss_wether_proc(kytag06_class* field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc.s"
 }
@@ -283,7 +333,7 @@ ASM_FUNCTION(daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_Ganon_wether_proc__FP13kytag06_classUc) {
+asm void daKytag06_Ganon_wether_proc(kytag06_class* field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Ganon_wether_proc__FP13kytag06_classUc.s"
 }
@@ -294,7 +344,7 @@ ASM_FUNCTION(daKytag06_Ganon_wether_proc__FP13kytag06_classUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_wether_proc__FP13kytag06_classUc) {
+asm void daKytag06_wether_proc(kytag06_class* field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_wether_proc__FP13kytag06_classUc.s"
 }
@@ -305,7 +355,7 @@ ASM_FUNCTION(daKytag06_wether_proc__FP13kytag06_classUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_07_wether_Execute__FP13kytag06_class) {
+asm void daKytag06_type_07_wether_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_07_wether_Execute__FP13kytag06_class.s"
 }
@@ -316,7 +366,7 @@ ASM_FUNCTION(daKytag06_type_07_wether_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_07_Execute__FP13kytag06_class) {
+asm void daKytag06_type_07_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_07_Execute__FP13kytag06_class.s"
 }
@@ -327,7 +377,7 @@ ASM_FUNCTION(daKytag06_type_07_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/__dt__4cXyzFv.s"
 }
@@ -338,7 +388,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_06_Execute__FP13kytag06_class) {
+asm void daKytag06_type_06_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_06_Execute__FP13kytag06_class.s"
 }
@@ -349,7 +399,7 @@ ASM_FUNCTION(daKytag06_type_06_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_08_Execute__FP13kytag06_class) {
+asm void daKytag06_type_08_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_08_Execute__FP13kytag06_class.s"
 }
@@ -360,7 +410,7 @@ ASM_FUNCTION(daKytag06_type_08_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_09_Execute__FP13kytag06_class) {
+asm void daKytag06_type_09_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_09_Execute__FP13kytag06_class.s"
 }
@@ -371,7 +421,7 @@ ASM_FUNCTION(daKytag06_type_09_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_10_Execute__FP13kytag06_class) {
+asm void daKytag06_type_10_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_10_Execute__FP13kytag06_class.s"
 }
@@ -382,7 +432,7 @@ ASM_FUNCTION(daKytag06_type_10_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_11_Execute__FP13kytag06_class) {
+asm void daKytag06_type_11_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_11_Execute__FP13kytag06_class.s"
 }
@@ -393,7 +443,7 @@ ASM_FUNCTION(daKytag06_type_11_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_05_Execute__FP13kytag06_class) {
+asm void daKytag06_type_05_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_05_Execute__FP13kytag06_class.s"
 }
@@ -404,7 +454,7 @@ ASM_FUNCTION(daKytag06_type_05_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type_03_Execute__FP13kytag06_class) {
+asm void daKytag06_type_03_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_03_Execute__FP13kytag06_class.s"
 }
@@ -415,7 +465,7 @@ ASM_FUNCTION(daKytag06_type_03_Execute__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_Execute__FP13kytag06_class) {
+asm void daKytag06_Execute(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Execute__FP13kytag06_class.s"
 }
@@ -423,21 +473,16 @@ ASM_FUNCTION(daKytag06_Execute__FP13kytag06_class) {
 
 
 /* 80859A88-80859A90 0008+00 .text      daKytag06_IsDelete__FP13kytag06_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_IsDelete__FP13kytag06_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_IsDelete__FP13kytag06_class.s"
+bool daKytag06_IsDelete(kytag06_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80859A90-80859AD0 0040+00 .text      daKytag06_Delete__FP13kytag06_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_Delete__FP13kytag06_class) {
+asm void daKytag06_Delete(kytag06_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Delete__FP13kytag06_class.s"
 }
@@ -448,7 +493,7 @@ ASM_FUNCTION(daKytag06_Delete__FP13kytag06_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type04_init__FP10fopAc_ac_c) {
+asm void daKytag06_type04_init(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type04_init__FP10fopAc_ac_c.s"
 }
@@ -459,7 +504,7 @@ ASM_FUNCTION(daKytag06_type04_init__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type06_init__FP10fopAc_ac_c) {
+asm void daKytag06_type06_init(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type06_init__FP10fopAc_ac_c.s"
 }
@@ -470,7 +515,7 @@ ASM_FUNCTION(daKytag06_type06_init__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type02_init__FP10fopAc_ac_c) {
+asm void daKytag06_type02_init(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type02_init__FP10fopAc_ac_c.s"
 }
@@ -481,7 +526,7 @@ ASM_FUNCTION(daKytag06_type02_init__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_type03_init__FP10fopAc_ac_c) {
+asm void daKytag06_type03_init(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type03_init__FP10fopAc_ac_c.s"
 }
@@ -492,7 +537,7 @@ ASM_FUNCTION(daKytag06_type03_init__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag06_Create__FP10fopAc_ac_c) {
+asm void daKytag06_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Create__FP10fopAc_ac_c.s"
 }

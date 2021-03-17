@@ -6,45 +6,124 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct csXyz;
+struct daObjYobikusa_c;
+
+struct daObjYobikusa_c {
+	struct Mode_e {
+	};
+
+	void setAction(daObjYobikusa_c::Mode_e);
+	void callInit();
+	void callExecute();
+	void initSwingWind();
+	void executeSwingWind();
+	void initPushDown();
+	void executePushDown();
+	void initPickLeaf();
+	void executePickLeaf();
+	void create_init();
+	void initBaseMtx();
+	void getJointAngle(csXyz*, s32);
+	void getJointScale(s32);
+	void initCcCylinder();
+	void setCcCylinder();
+	void toPickLeaf();
+	void setNewLeaf();
+	void execute();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e();
-extern "C" extern void callInit__15daObjYobikusa_cFv();
-extern "C" extern void callExecute__15daObjYobikusa_cFv();
-extern "C" extern void initSwingWind__15daObjYobikusa_cFv();
-extern "C" extern void executeSwingWind__15daObjYobikusa_cFv();
-extern "C" extern void initPushDown__15daObjYobikusa_cFv();
-extern "C" extern void executePushDown__15daObjYobikusa_cFv();
-extern "C" extern void initPickLeaf__15daObjYobikusa_cFv();
-extern "C" extern void executePickLeaf__15daObjYobikusa_cFv();
-extern "C" extern void create_init__15daObjYobikusa_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void initBaseMtx__15daObjYobikusa_cFv();
-extern "C" extern void getJointAngle__15daObjYobikusa_cFP5csXyzi();
-extern "C" extern void getJointScale__15daObjYobikusa_cFi();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void initCcCylinder__15daObjYobikusa_cFv();
-extern "C" extern void setCcCylinder__15daObjYobikusa_cFv();
-extern "C" extern void toPickLeaf__15daObjYobikusa_cFv();
-extern "C" extern void setNewLeaf__15daObjYobikusa_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjYobikusa_Draw__FP15daObjYobikusa_c();
-extern "C" extern void daObjYobikusa_Execute__FP15daObjYobikusa_c();
-extern "C" extern void execute__15daObjYobikusa_cFv();
-extern "C" extern void daObjYobikusa_IsDelete__FP15daObjYobikusa_c();
-extern "C" extern void daObjYobikusa_Delete__FP15daObjYobikusa_c();
-extern "C" extern void daObjYobikusa_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_yobikusa_cpp();
-extern "C" extern void func_8059DE60();
-extern "C" extern void func_8059DE68();
+void nodeCallBack(J3DJoint*, s32);
+void createSolidHeap(fopAc_ac_c*);
+void daObjYobikusa_Draw(daObjYobikusa_c*);
+void daObjYobikusa_Execute(daObjYobikusa_c*);
+bool daObjYobikusa_IsDelete(daObjYobikusa_c*);
+void daObjYobikusa_Delete(daObjYobikusa_c*);
+void daObjYobikusa_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_yobikusa_cpp();
+extern "C" void func_8059DE60();
+extern "C" void func_8059DE68();
+
+extern "C" void setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e();
+extern "C" void callInit__15daObjYobikusa_cFv();
+extern "C" void callExecute__15daObjYobikusa_cFv();
+extern "C" void initSwingWind__15daObjYobikusa_cFv();
+extern "C" void executeSwingWind__15daObjYobikusa_cFv();
+extern "C" void initPushDown__15daObjYobikusa_cFv();
+extern "C" void executePushDown__15daObjYobikusa_cFv();
+extern "C" void initPickLeaf__15daObjYobikusa_cFv();
+extern "C" void executePickLeaf__15daObjYobikusa_cFv();
+extern "C" void create_init__15daObjYobikusa_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void initBaseMtx__15daObjYobikusa_cFv();
+extern "C" void getJointAngle__15daObjYobikusa_cFP5csXyzi();
+extern "C" void getJointScale__15daObjYobikusa_cFi();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void __dt__5csXyzFv();
+extern "C" void initCcCylinder__15daObjYobikusa_cFv();
+extern "C" void setCcCylinder__15daObjYobikusa_cFv();
+extern "C" void toPickLeaf__15daObjYobikusa_cFv();
+extern "C" void setNewLeaf__15daObjYobikusa_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjYobikusa_Draw__FP15daObjYobikusa_c();
+extern "C" void daObjYobikusa_Execute__FP15daObjYobikusa_c();
+extern "C" void execute__15daObjYobikusa_cFv();
+extern "C" bool daObjYobikusa_IsDelete__FP15daObjYobikusa_c();
+extern "C" void daObjYobikusa_Delete__FP15daObjYobikusa_c();
+extern "C" void daObjYobikusa_Create__FP10fopAc_ac_c();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_yobikusa_cpp();
+extern "C" void func_8059DE60();
+extern "C" void func_8059DE68();
 SECTION_RODATA extern const u8 M_attr__15daObjYobikusa_c[64];
 SECTION_RODATA extern const u8 lit_3699[4];
 SECTION_RODATA extern const u32 lit_3724;
@@ -82,7 +161,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -92,7 +173,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e) {
+asm void daObjYobikusa_c::setAction(daObjYobikusa_c::Mode_e field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e.s"
 }
@@ -103,7 +184,7 @@ ASM_FUNCTION(setAction__15daObjYobikusa_cFQ215daObjYobikusa_c6Mode_e) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callInit__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::callInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/callInit__15daObjYobikusa_cFv.s"
 }
@@ -114,7 +195,7 @@ ASM_FUNCTION(callInit__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callExecute__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::callExecute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/callExecute__15daObjYobikusa_cFv.s"
 }
@@ -125,7 +206,7 @@ ASM_FUNCTION(callExecute__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initSwingWind__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::initSwingWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/initSwingWind__15daObjYobikusa_cFv.s"
 }
@@ -136,7 +217,7 @@ ASM_FUNCTION(initSwingWind__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSwingWind__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::executeSwingWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/executeSwingWind__15daObjYobikusa_cFv.s"
 }
@@ -147,7 +228,7 @@ ASM_FUNCTION(executeSwingWind__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPushDown__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::initPushDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/initPushDown__15daObjYobikusa_cFv.s"
 }
@@ -158,7 +239,7 @@ ASM_FUNCTION(initPushDown__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePushDown__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::executePushDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/executePushDown__15daObjYobikusa_cFv.s"
 }
@@ -169,7 +250,7 @@ ASM_FUNCTION(executePushDown__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPickLeaf__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::initPickLeaf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/initPickLeaf__15daObjYobikusa_cFv.s"
 }
@@ -180,7 +261,7 @@ ASM_FUNCTION(initPickLeaf__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePickLeaf__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::executePickLeaf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/executePickLeaf__15daObjYobikusa_cFv.s"
 }
@@ -191,7 +272,7 @@ ASM_FUNCTION(executePickLeaf__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/create_init__15daObjYobikusa_cFv.s"
 }
@@ -202,7 +283,7 @@ ASM_FUNCTION(create_init__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -213,7 +294,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__12dBgS_AcchCirFv.s"
 }
@@ -224,7 +305,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/initBaseMtx__15daObjYobikusa_cFv.s"
 }
@@ -235,7 +316,7 @@ ASM_FUNCTION(initBaseMtx__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJointAngle__15daObjYobikusa_cFP5csXyzi) {
+asm void daObjYobikusa_c::getJointAngle(csXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/getJointAngle__15daObjYobikusa_cFP5csXyzi.s"
 }
@@ -246,7 +327,7 @@ ASM_FUNCTION(getJointAngle__15daObjYobikusa_cFP5csXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJointScale__15daObjYobikusa_cFi) {
+asm void daObjYobikusa_c::getJointScale(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/getJointScale__15daObjYobikusa_cFi.s"
 }
@@ -257,7 +338,7 @@ ASM_FUNCTION(getJointScale__15daObjYobikusa_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/nodeCallBack__FP8J3DJointi.s"
 }
@@ -268,7 +349,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__5csXyzFv.s"
 }
@@ -279,7 +360,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/initCcCylinder__15daObjYobikusa_cFv.s"
 }
@@ -290,7 +371,7 @@ ASM_FUNCTION(initCcCylinder__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcCylinder__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::setCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/setCcCylinder__15daObjYobikusa_cFv.s"
 }
@@ -301,7 +382,7 @@ ASM_FUNCTION(setCcCylinder__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(toPickLeaf__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::toPickLeaf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/toPickLeaf__15daObjYobikusa_cFv.s"
 }
@@ -312,7 +393,7 @@ ASM_FUNCTION(toPickLeaf__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNewLeaf__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::setNewLeaf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/setNewLeaf__15daObjYobikusa_cFv.s"
 }
@@ -323,7 +404,7 @@ ASM_FUNCTION(setNewLeaf__15daObjYobikusa_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -334,7 +415,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYobikusa_Draw__FP15daObjYobikusa_c) {
+asm void daObjYobikusa_Draw(daObjYobikusa_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_Draw__FP15daObjYobikusa_c.s"
 }
@@ -345,7 +426,7 @@ ASM_FUNCTION(daObjYobikusa_Draw__FP15daObjYobikusa_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYobikusa_Execute__FP15daObjYobikusa_c) {
+asm void daObjYobikusa_Execute(daObjYobikusa_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_Execute__FP15daObjYobikusa_c.s"
 }
@@ -356,7 +437,7 @@ ASM_FUNCTION(daObjYobikusa_Execute__FP15daObjYobikusa_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjYobikusa_cFv) {
+asm void daObjYobikusa_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/execute__15daObjYobikusa_cFv.s"
 }
@@ -364,21 +445,16 @@ ASM_FUNCTION(execute__15daObjYobikusa_cFv) {
 
 
 /* 8059D9A0-8059D9A8 0008+00 .text      daObjYobikusa_IsDelete__FP15daObjYobikusa_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjYobikusa_IsDelete__FP15daObjYobikusa_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_IsDelete__FP15daObjYobikusa_c.s"
+bool daObjYobikusa_IsDelete(daObjYobikusa_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8059D9A8-8059DAF4 014C+00 .text      daObjYobikusa_Delete__FP15daObjYobikusa_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYobikusa_Delete__FP15daObjYobikusa_c) {
+asm void daObjYobikusa_Delete(daObjYobikusa_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_Delete__FP15daObjYobikusa_c.s"
 }
@@ -389,7 +465,7 @@ ASM_FUNCTION(daObjYobikusa_Delete__FP15daObjYobikusa_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYobikusa_Create__FP10fopAc_ac_c) {
+asm void daObjYobikusa_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_Create__FP10fopAc_ac_c.s"
 }
@@ -397,21 +473,16 @@ ASM_FUNCTION(daObjYobikusa_Create__FP10fopAc_ac_c) {
 
 
 /* 8059DC88-8059DC8C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059DC8C-8059DCD4 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__8cM3dGCylFv.s"
 }
@@ -422,7 +493,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__8cM3dGAabFv.s"
 }
@@ -433,7 +504,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__10dCcD_GSttsFv.s"
 }
@@ -444,7 +515,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__dt__10cCcD_GSttsFv.s"
 }
@@ -455,7 +526,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_yobikusa_cpp) {
+extern "C" asm void __sinit_d_a_obj_yobikusa_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__sinit_d_a_obj_yobikusa_cpp.s"
 }
@@ -466,7 +537,7 @@ ASM_FUNCTION(__sinit_d_a_obj_yobikusa_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059DE60) {
+extern "C" asm void func_8059DE60() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/func_8059DE60.s"
 }
@@ -477,7 +548,7 @@ ASM_FUNCTION(func_8059DE60) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059DE68) {
+extern "C" asm void func_8059DE68() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/func_8059DE68.s"
 }

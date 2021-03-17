@@ -6,31 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daAndsw2_c;
+
+struct daAndsw2_c {
+	void getEventNo();
+	void getSwbit();
+	void getSwbit2();
+	void getType();
+	void getTimer();
+	void getNum();
+	void getTopSw();
+	void getSwAns();
+	void chkAllSw2();
+	void chkSwStatus();
+	void chkSwStatus2();
+	~daAndsw2_c();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getEventNo__10daAndsw2_cFv();
-extern "C" extern void getSwbit__10daAndsw2_cFv();
-extern "C" extern void getSwbit2__10daAndsw2_cFv();
-extern "C" extern void getType__10daAndsw2_cFv();
-extern "C" extern void getTimer__10daAndsw2_cFv();
-extern "C" extern void getNum__10daAndsw2_cFv();
-extern "C" extern void getTopSw__10daAndsw2_cFv();
-extern "C" extern void getSwAns__10daAndsw2_cFv();
-extern "C" extern void chkAllSw2__10daAndsw2_cFv();
-extern "C" extern void chkSwStatus__10daAndsw2_cFv();
-extern "C" extern void chkSwStatus2__10daAndsw2_cFv();
-extern "C" extern void __dt__10daAndsw2_cFv();
-extern "C" extern void create__10daAndsw2_cFv();
-extern "C" extern void daAndsw2_actionOnAll__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_actionTimer__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_actionOrder__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_actionEvent__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_actionOff__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_actionWait__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_Execute__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_Delete__FP10daAndsw2_c();
-extern "C" extern void daAndsw2_Create__FP10fopAc_ac_c();
+void daAndsw2_actionOnAll(daAndsw2_c*);
+void daAndsw2_actionTimer(daAndsw2_c*);
+void daAndsw2_actionOrder(daAndsw2_c*);
+void daAndsw2_actionEvent(daAndsw2_c*);
+void daAndsw2_actionOff(daAndsw2_c*);
+bool daAndsw2_actionWait(daAndsw2_c*);
+void daAndsw2_Execute(daAndsw2_c*);
+void daAndsw2_Delete(daAndsw2_c*);
+void daAndsw2_Create(fopAc_ac_c*);
+
+extern "C" void getEventNo__10daAndsw2_cFv();
+extern "C" void getSwbit__10daAndsw2_cFv();
+extern "C" void getSwbit2__10daAndsw2_cFv();
+extern "C" void getType__10daAndsw2_cFv();
+extern "C" void getTimer__10daAndsw2_cFv();
+extern "C" void getNum__10daAndsw2_cFv();
+extern "C" void getTopSw__10daAndsw2_cFv();
+extern "C" void getSwAns__10daAndsw2_cFv();
+extern "C" void chkAllSw2__10daAndsw2_cFv();
+extern "C" void chkSwStatus__10daAndsw2_cFv();
+extern "C" void chkSwStatus2__10daAndsw2_cFv();
+extern "C" void __dt__10daAndsw2_cFv();
+extern "C" void create__10daAndsw2_cFv();
+extern "C" void daAndsw2_actionOnAll__FP10daAndsw2_c();
+extern "C" void daAndsw2_actionTimer__FP10daAndsw2_c();
+extern "C" void daAndsw2_actionOrder__FP10daAndsw2_c();
+extern "C" void daAndsw2_actionEvent__FP10daAndsw2_c();
+extern "C" void daAndsw2_actionOff__FP10daAndsw2_c();
+extern "C" bool daAndsw2_actionWait__FP10daAndsw2_c();
+extern "C" void daAndsw2_Execute__FP10daAndsw2_c();
+extern "C" void daAndsw2_Delete__FP10daAndsw2_c();
+extern "C" void daAndsw2_Create__FP10fopAc_ac_c();
 SECTION_DATA extern u8 lit_3821[28];
 SECTION_DATA extern u8 data_804D6AE4[24];
 SECTION_DATA extern u8 l_daAndsw2_Method[32];
@@ -40,7 +76,9 @@ SECTION_DATA extern u8 g_profile_ANDSW2[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -50,7 +88,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventNo__10daAndsw2_cFv) {
+asm void daAndsw2_c::getEventNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getEventNo__10daAndsw2_cFv.s"
 }
@@ -61,7 +99,7 @@ ASM_FUNCTION(getEventNo__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwbit__10daAndsw2_cFv) {
+asm void daAndsw2_c::getSwbit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getSwbit__10daAndsw2_cFv.s"
 }
@@ -72,7 +110,7 @@ ASM_FUNCTION(getSwbit__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwbit2__10daAndsw2_cFv) {
+asm void daAndsw2_c::getSwbit2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getSwbit2__10daAndsw2_cFv.s"
 }
@@ -83,7 +121,7 @@ ASM_FUNCTION(getSwbit2__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__10daAndsw2_cFv) {
+asm void daAndsw2_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getType__10daAndsw2_cFv.s"
 }
@@ -94,7 +132,7 @@ ASM_FUNCTION(getType__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimer__10daAndsw2_cFv) {
+asm void daAndsw2_c::getTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getTimer__10daAndsw2_cFv.s"
 }
@@ -105,7 +143,7 @@ ASM_FUNCTION(getTimer__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNum__10daAndsw2_cFv) {
+asm void daAndsw2_c::getNum() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getNum__10daAndsw2_cFv.s"
 }
@@ -116,7 +154,7 @@ ASM_FUNCTION(getNum__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTopSw__10daAndsw2_cFv) {
+asm void daAndsw2_c::getTopSw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getTopSw__10daAndsw2_cFv.s"
 }
@@ -127,7 +165,7 @@ ASM_FUNCTION(getTopSw__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwAns__10daAndsw2_cFv) {
+asm void daAndsw2_c::getSwAns() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/getSwAns__10daAndsw2_cFv.s"
 }
@@ -138,7 +176,7 @@ ASM_FUNCTION(getSwAns__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAllSw2__10daAndsw2_cFv) {
+asm void daAndsw2_c::chkAllSw2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/chkAllSw2__10daAndsw2_cFv.s"
 }
@@ -149,7 +187,7 @@ ASM_FUNCTION(chkAllSw2__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSwStatus__10daAndsw2_cFv) {
+asm void daAndsw2_c::chkSwStatus() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/chkSwStatus__10daAndsw2_cFv.s"
 }
@@ -160,7 +198,7 @@ ASM_FUNCTION(chkSwStatus__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSwStatus2__10daAndsw2_cFv) {
+asm void daAndsw2_c::chkSwStatus2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/chkSwStatus2__10daAndsw2_cFv.s"
 }
@@ -171,7 +209,7 @@ ASM_FUNCTION(chkSwStatus2__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daAndsw2_cFv) {
+asm daAndsw2_c::~daAndsw2_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/__dt__10daAndsw2_cFv.s"
 }
@@ -182,7 +220,7 @@ ASM_FUNCTION(__dt__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daAndsw2_cFv) {
+asm void daAndsw2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/create__10daAndsw2_cFv.s"
 }
@@ -193,7 +231,7 @@ ASM_FUNCTION(create__10daAndsw2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionOnAll__FP10daAndsw2_c) {
+asm void daAndsw2_actionOnAll(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOnAll__FP10daAndsw2_c.s"
 }
@@ -204,7 +242,7 @@ ASM_FUNCTION(daAndsw2_actionOnAll__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionTimer__FP10daAndsw2_c) {
+asm void daAndsw2_actionTimer(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionTimer__FP10daAndsw2_c.s"
 }
@@ -215,7 +253,7 @@ ASM_FUNCTION(daAndsw2_actionTimer__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionOrder__FP10daAndsw2_c) {
+asm void daAndsw2_actionOrder(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOrder__FP10daAndsw2_c.s"
 }
@@ -226,7 +264,7 @@ ASM_FUNCTION(daAndsw2_actionOrder__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionEvent__FP10daAndsw2_c) {
+asm void daAndsw2_actionEvent(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionEvent__FP10daAndsw2_c.s"
 }
@@ -237,7 +275,7 @@ ASM_FUNCTION(daAndsw2_actionEvent__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionOff__FP10daAndsw2_c) {
+asm void daAndsw2_actionOff(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOff__FP10daAndsw2_c.s"
 }
@@ -245,21 +283,16 @@ ASM_FUNCTION(daAndsw2_actionOff__FP10daAndsw2_c) {
 
 
 /* 804D6A34-804D6A3C 0008+00 .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_actionWait__FP10daAndsw2_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionWait__FP10daAndsw2_c.s"
+bool daAndsw2_actionWait(daAndsw2_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D6A3C-804D6A78 003C+00 .text      daAndsw2_Execute__FP10daAndsw2_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_Execute__FP10daAndsw2_c) {
+asm void daAndsw2_Execute(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Execute__FP10daAndsw2_c.s"
 }
@@ -270,7 +303,7 @@ ASM_FUNCTION(daAndsw2_Execute__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_Delete__FP10daAndsw2_c) {
+asm void daAndsw2_Delete(daAndsw2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Delete__FP10daAndsw2_c.s"
 }
@@ -281,7 +314,7 @@ ASM_FUNCTION(daAndsw2_Delete__FP10daAndsw2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAndsw2_Create__FP10fopAc_ac_c) {
+asm void daAndsw2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Create__FP10fopAc_ac_c.s"
 }

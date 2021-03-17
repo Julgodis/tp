@@ -6,19 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct kytag10_class;
+struct cXyz;
+struct dPath;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void get_rail_ratio_pos__FP5dPathifPsPs();
-extern "C" extern void set_path_info__FP10fopAc_ac_c();
-extern "C" extern void get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi();
-extern "C" extern void get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi();
-extern "C" extern void sparks_move__FP13kytag10_class();
-extern "C" extern void daKytag10_Draw__FP13kytag10_class();
-extern "C" extern void daKytag10_Execute__FP13kytag10_class();
-extern "C" extern void daKytag10_IsDelete__FP13kytag10_class();
-extern "C" extern void daKytag10_Delete__FP13kytag10_class();
-extern "C" extern void daKytag10_Create__FP10fopAc_ac_c();
+extern "C" void get_rail_ratio_pos__FP5dPathifPsPs();
+void set_path_info(fopAc_ac_c*);
+void get_Extent_pos_start_get(kytag10_class*, dPath*, cXyz*, f32, s32*);
+void get_Extent_pos_end_get(kytag10_class*, dPath*, cXyz*, f32, s32*);
+void sparks_move(kytag10_class*);
+bool daKytag10_Draw(kytag10_class*);
+void daKytag10_Execute(kytag10_class*);
+bool daKytag10_IsDelete(kytag10_class*);
+void daKytag10_Delete(kytag10_class*);
+void daKytag10_Create(fopAc_ac_c*);
+
+extern "C" void get_rail_ratio_pos__FP5dPathifPsPs();
+extern "C" void set_path_info__FP10fopAc_ac_c();
+extern "C" void get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi();
+extern "C" void get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi();
+extern "C" void sparks_move__FP13kytag10_class();
+extern "C" bool daKytag10_Draw__FP13kytag10_class();
+extern "C" void daKytag10_Execute__FP13kytag10_class();
+extern "C" bool daKytag10_IsDelete__FP13kytag10_class();
+extern "C" void daKytag10_Delete__FP13kytag10_class();
+extern "C" void daKytag10_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3788[4];
 SECTION_RODATA extern const u32 lit_3950;
 SECTION_RODATA extern const u32 lit_3951;
@@ -38,7 +58,9 @@ SECTION_DATA extern u8 g_profile_KYTAG10[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_rail_ratio_pos__FP5dPathifPsPs) {
+extern "C" asm void get_rail_ratio_pos__FP5dPathifPsPs() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/get_rail_ratio_pos__FP5dPathifPsPs.s"
 }
@@ -59,7 +81,7 @@ ASM_FUNCTION(get_rail_ratio_pos__FP5dPathifPsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
+asm void set_path_info(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/set_path_info__FP10fopAc_ac_c.s"
 }
@@ -70,7 +92,7 @@ ASM_FUNCTION(set_path_info__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi) {
+asm void get_Extent_pos_start_get(kytag10_class* field_0, dPath* field_1, cXyz* field_2, f32 field_3, s32* field_4) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi.s"
 }
@@ -81,7 +103,7 @@ ASM_FUNCTION(get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi) {
+asm void get_Extent_pos_end_get(kytag10_class* field_0, dPath* field_1, cXyz* field_2, f32 field_3, s32* field_4) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi.s"
 }
@@ -92,7 +114,7 @@ ASM_FUNCTION(get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sparks_move__FP13kytag10_class) {
+asm void sparks_move(kytag10_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/sparks_move__FP13kytag10_class.s"
 }
@@ -100,21 +122,16 @@ ASM_FUNCTION(sparks_move__FP13kytag10_class) {
 
 
 /* 80529148-80529150 0008+00 .text      daKytag10_Draw__FP13kytag10_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag10_Draw__FP13kytag10_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/daKytag10_Draw__FP13kytag10_class.s"
+bool daKytag10_Draw(kytag10_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80529150-80529174 0024+00 .text      daKytag10_Execute__FP13kytag10_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag10_Execute__FP13kytag10_class) {
+asm void daKytag10_Execute(kytag10_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/daKytag10_Execute__FP13kytag10_class.s"
 }
@@ -122,21 +139,16 @@ ASM_FUNCTION(daKytag10_Execute__FP13kytag10_class) {
 
 
 /* 80529174-8052917C 0008+00 .text      daKytag10_IsDelete__FP13kytag10_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag10_IsDelete__FP13kytag10_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/daKytag10_IsDelete__FP13kytag10_class.s"
+bool daKytag10_IsDelete(kytag10_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8052917C-80529248 00CC+00 .text      daKytag10_Delete__FP13kytag10_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag10_Delete__FP13kytag10_class) {
+asm void daKytag10_Delete(kytag10_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/daKytag10_Delete__FP13kytag10_class.s"
 }
@@ -147,7 +159,7 @@ ASM_FUNCTION(daKytag10_Delete__FP13kytag10_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag10_Create__FP10fopAc_ac_c) {
+asm void daKytag10_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag10/d_a_kytag10/daKytag10_Create__FP10fopAc_ac_c.s"
 }

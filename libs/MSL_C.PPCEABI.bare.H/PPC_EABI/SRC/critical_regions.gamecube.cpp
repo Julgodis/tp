@@ -9,50 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
-extern "C" extern void __kill_critical_regions();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void __kill_critical_regions();
+
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void __kill_critical_regions();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80365464-80365468 0004+00 .text      __end_critical_region                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__end_critical_region) {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__end_critical_region.s"
+/* 80365464-80365468 0004+00 rc=12 efc=12 .text      __end_critical_region                                        */
+extern "C" void __end_critical_region() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80365468-8036546C 0004+00 .text      __begin_critical_region                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__begin_critical_region) {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__begin_critical_region.s"
+/* 80365468-8036546C 0004+00 rc=12 efc=12 .text      __begin_critical_region                                      */
+extern "C" void __begin_critical_region() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8036546C-80365470 0004+00 .text      __kill_critical_regions                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__kill_critical_regions) {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__kill_critical_regions.s"
+/* 8036546C-80365470 0004+00 rc=2 efc=2 .text      __kill_critical_regions                                      */
+extern "C" void __kill_critical_regions() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

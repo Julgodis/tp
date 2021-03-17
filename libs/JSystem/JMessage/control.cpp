@@ -6,39 +6,98 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JMessage (JMessage) False/False
+// build JMessage (JMessage) True/False
+struct JMessage;
+/* top-level dependencies (begin JMessage) */
+// outer dependency: JMessage::TProcessor
+/* top-level dependencies (end JMessage) */
+struct JMessage {
+	// build TControl (JMessage::TControl) False/False
+	/* dependencies (begin JMessage::TControl) */
+	// inner dependency: TProcessor (JMessage::TProcessor) True False (for JMessage::TControl)
+	// build TProcessor (JMessage::TProcessor) False/False
+	/* dependencies (begin JMessage::TProcessor) */
+	/* dependencies (end JMessage::TProcessor) */
+	struct TProcessor {
+		/* 802A7B90 */ void reset();
+		/* 802A7C54 */ void getResource_groupID(u16) const;
+		/* 802A7CD4 */ void toMessageCode_messageID(u32, u32, bool*) const;
+		/* 802A828C */ void process_onCharacterEnd_normal_(JMessage::TProcessor*);
+	};
+
+	/* dependencies (end JMessage::TControl) */
+	struct TControl {
+		// JMessage::TProcessor
+		/* 802A7548 */ TControl();
+		/* 802A758C */ ~TControl();
+		/* 802A75D4 */ void reset();
+		/* 802A7634 */ void update();
+		/* 802A76BC */ void render();
+		/* 802A77E8 */ void setMessageCode(u16, u16);
+		/* 802A78F4 */ void setMessageID(u32, u32, bool*);
+		/* 802A7A20 */ void setMessageCode_inSequence_(JMessage::TProcessor const*, u16, u16);
+	};
+
+	// build TProcessor (JMessage::TProcessor) True/True
+	// build TSequenceProcessor (JMessage::TSequenceProcessor) False/False
+	/* dependencies (begin JMessage::TSequenceProcessor) */
+	/* dependencies (end JMessage::TSequenceProcessor) */
+	struct TSequenceProcessor {
+		/* 802A8418 */ void process(char const*);
+	};
+
+	// build TRenderingProcessor (JMessage::TRenderingProcessor) False/False
+	/* dependencies (begin JMessage::TRenderingProcessor) */
+	/* dependencies (end JMessage::TRenderingProcessor) */
+	struct TRenderingProcessor {
+		/* 802A8B20 */ void process(char const*);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__Q28JMessage8TControlFv();
-extern "C" extern void __dt__Q28JMessage8TControlFv();
-extern "C" extern void reset__Q28JMessage8TControlFv();
-extern "C" extern void update__Q28JMessage8TControlFv();
-extern "C" extern void render__Q28JMessage8TControlFv();
-extern "C" extern void setMessageCode__Q28JMessage8TControlFUsUs();
-extern "C" extern void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern "C" extern void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
+
+extern "C" void __ct__Q28JMessage8TControlFv();
+extern "C" void __dt__Q28JMessage8TControlFv();
+extern "C" void reset__Q28JMessage8TControlFv();
+extern "C" void update__Q28JMessage8TControlFv();
+extern "C" void render__Q28JMessage8TControlFv();
+extern "C" void setMessageCode__Q28JMessage8TControlFUsUs();
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
 SECTION_DATA extern void*const __vt__Q28JMessage8TControl[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void reset__Q28JMessage10TProcessorFv();
-extern "C" extern void getResource_groupID__Q28JMessage10TProcessorCFUs();
-extern "C" extern void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
-extern "C" extern void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
-extern "C" extern void process__Q28JMessage18TSequenceProcessorFPCc();
-extern "C" extern void process__Q28JMessage19TRenderingProcessorFPCc();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+void operator delete(void*);
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void reset__Q28JMessage10TProcessorFv();
+extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs();
+extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
+extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void process__Q28JMessage18TSequenceProcessorFPCc();
+extern "C" void process__Q28JMessage19TRenderingProcessorFPCc();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C9B60-803C9B70 000C+04 .data      __vt__Q28JMessage8TControl                                   */
+/* 803C9B60-803C9B70 000C+04 rc=2 efc=0 .data      __vt__Q28JMessage8TControl                                   */
 void* const __vt__Q28JMessage8TControl[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -47,92 +106,91 @@ void* const __vt__Q28JMessage8TControl[4] = {
 	NULL,
 };
 
-/* 802A7548-802A758C 0044+00 .text      __ct__Q28JMessage8TControlFv                                 */
+/* 802A7548-802A758C 0044+00 rc=2 efc=2 .text      __ct__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q28JMessage8TControlFv) {
+asm JMessage::TControl::TControl() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/__ct__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
 
-/* 802A758C-802A75D4 0048+00 .text      __dt__Q28JMessage8TControlFv                                 */
+/* 802A758C-802A75D4 0048+00 rc=3 efc=2 .text      __dt__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q28JMessage8TControlFv) {
+asm JMessage::TControl::~TControl() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/__dt__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
 
-/* 802A75D4-802A7634 0060+00 .text      reset__Q28JMessage8TControlFv                                */
+/* 802A75D4-802A7634 0060+00 rc=9 efc=9 .text      reset__Q28JMessage8TControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__Q28JMessage8TControlFv) {
+asm void JMessage::TControl::reset() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/reset__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
 
-/* 802A7634-802A76BC 0088+00 .text      update__Q28JMessage8TControlFv                               */
+/* 802A7634-802A76BC 0088+00 rc=4 efc=4 .text      update__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__Q28JMessage8TControlFv) {
+asm void JMessage::TControl::update() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/update__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
 
-/* 802A76BC-802A77E8 012C+00 .text      render__Q28JMessage8TControlFv                               */
+/* 802A76BC-802A77E8 012C+00 rc=5 efc=5 .text      render__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(render__Q28JMessage8TControlFv) {
+asm void JMessage::TControl::render() {
 	nofralloc
 #include "asm/JSystem/JMessage/control/render__Q28JMessage8TControlFv.s"
 }
 #pragma pop
 
 
-/* 802A77E8-802A78F4 010C+00 .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
+/* 802A77E8-802A78F4 010C+00 rc=1 efc=1 .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageCode__Q28JMessage8TControlFUsUs) {
+asm void JMessage::TControl::setMessageCode(u16 field_0, u16 field_1) {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageCode__Q28JMessage8TControlFUsUs.s"
 }
 #pragma pop
 
 
-/* 802A78F4-802A7A20 012C+00 .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
+/* 802A78F4-802A7A20 012C+00 rc=6 efc=6 .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageID__Q28JMessage8TControlFUlUlPb) {
+asm void JMessage::TControl::setMessageID(u32 field_0, u32 field_1, bool* field_2) {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageID__Q28JMessage8TControlFUlUlPb.s"
 }
 #pragma pop
 
 
-/* 802A7A20-802A7AF8 00D8+00 .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
+/* 802A7A20-802A7AF8 00D8+00 rc=3 efc=1 .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs) {
+asm void JMessage::TControl::setMessageCode_inSequence_(JMessage::TProcessor const* field_0, u16 field_1, u16 field_2) {
 	nofralloc
 #include "asm/JSystem/JMessage/control/setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

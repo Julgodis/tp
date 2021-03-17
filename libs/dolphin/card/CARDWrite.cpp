@@ -9,77 +9,96 @@
 // Forward References:
 // 
 
-extern "C" extern void CARDWrite__WriteCallback();
-extern "C" extern void CARDWrite__EraseCallback();
-extern "C" extern void CARDWriteAsync();
-extern "C" extern void CARDWrite();
+extern "C" static void CARDWrite__WriteCallback();
+extern "C" static void CARDWrite__EraseCallback();
+extern "C" static void CARDWriteAsync();
+extern "C" void CARDWrite();
+
+extern "C" static void CARDWrite__WriteCallback();
+extern "C" static void CARDWrite__EraseCallback();
+extern "C" static void CARDWriteAsync();
+extern "C" void CARDWrite();
 
 // 
 // External References:
 // 
 
-extern "C" extern void DCStoreRange();
-extern "C" extern void OSGetTime();
-extern "C" extern void __CARDDefaultApiCallback();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDEraseSector();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDWrite();
-extern "C" extern void __CARDGetFatBlock();
-extern "C" extern void __CARDGetDirBlock();
-extern "C" extern void __CARDUpdateDir();
-extern "C" extern void __CARDIsWritable();
-extern "C" extern void __CARDSeek();
-extern "C" extern void __div2i();
+extern "C" void DCStoreRange();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDWrite();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDIsWritable();
+extern "C" void __CARDSeek();
+extern "C" void __div2i();
+
+extern "C" void DCStoreRange();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDWrite();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDIsWritable();
+extern "C" void __CARDSeek();
+extern "C" void __div2i();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 80358914-80358A84 0170+00 .text      WriteCallback                                                */
+/* 80358914-80358A84 0170+00 rc=1 efc=0 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDWrite__WriteCallback) {
+extern "C" asm static void CARDWrite__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__WriteCallback.s"
 }
 #pragma pop
 
 
-/* 80358A84-80358B34 00B0+00 .text      EraseCallback                                                */
+/* 80358A84-80358B34 00B0+00 rc=2 efc=0 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDWrite__EraseCallback) {
+extern "C" asm static void CARDWrite__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__EraseCallback.s"
 }
 #pragma pop
 
 
-/* 80358B34-80358C48 0114+00 .text      CARDWriteAsync                                               */
+/* 80358B34-80358C48 0114+00 rc=1 efc=0 .text      CARDWriteAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDWriteAsync) {
+extern "C" asm static void CARDWriteAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWriteAsync.s"
 }
 #pragma pop
 
 
-/* 80358C48-80358C90 0048+00 .text      CARDWrite                                                    */
+/* 80358C48-80358C90 0048+00 rc=2 efc=2 .text      CARDWrite                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDWrite) {
+extern "C" asm void CARDWrite() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

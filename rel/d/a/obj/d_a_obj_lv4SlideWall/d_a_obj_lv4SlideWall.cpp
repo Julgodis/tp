@@ -6,31 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSldWall_c;
+
+struct daSldWall_HIO_c {
+	daSldWall_HIO_c();
+	~daSldWall_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daSldWall_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveWall();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveOpen();
+	void modeMoveOpen();
+	void init_modeMoveClose();
+	void modeMoveClose();
+	void setSe();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daSldWall_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daSldWall_cFv();
-extern "C" extern void CreateHeap__11daSldWall_cFv();
-extern "C" extern void create__11daSldWall_cFv();
-extern "C" extern void Execute__11daSldWall_cFPPA3_A4_f();
-extern "C" extern void moveWall__11daSldWall_cFv();
-extern "C" extern void init_modeWait__11daSldWall_cFv();
-extern "C" extern void modeWait__11daSldWall_cFv();
-extern "C" extern void init_modeMoveOpen__11daSldWall_cFv();
-extern "C" extern void modeMoveOpen__11daSldWall_cFv();
-extern "C" extern void init_modeMoveClose__11daSldWall_cFv();
-extern "C" extern void modeMoveClose__11daSldWall_cFv();
-extern "C" extern void setSe__11daSldWall_cFv();
-extern "C" extern void Draw__11daSldWall_cFv();
-extern "C" extern void Delete__11daSldWall_cFv();
-extern "C" extern void daSldWall_Draw__FP11daSldWall_c();
-extern "C" extern void daSldWall_Execute__FP11daSldWall_c();
-extern "C" extern void daSldWall_Delete__FP11daSldWall_c();
-extern "C" extern void daSldWall_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daSldWall_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv4SlideWall_cpp();
+extern "C" void Execute__11daSldWall_cFPPA3_A4_f();
+void daSldWall_Draw(daSldWall_c*);
+void daSldWall_Execute(daSldWall_c*);
+void daSldWall_Delete(daSldWall_c*);
+void daSldWall_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv4SlideWall_cpp();
+
+extern "C" void __ct__15daSldWall_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daSldWall_cFv();
+extern "C" void CreateHeap__11daSldWall_cFv();
+extern "C" void create__11daSldWall_cFv();
+extern "C" void Execute__11daSldWall_cFPPA3_A4_f();
+extern "C" void moveWall__11daSldWall_cFv();
+extern "C" void init_modeWait__11daSldWall_cFv();
+extern "C" void modeWait__11daSldWall_cFv();
+extern "C" void init_modeMoveOpen__11daSldWall_cFv();
+extern "C" void modeMoveOpen__11daSldWall_cFv();
+extern "C" void init_modeMoveClose__11daSldWall_cFv();
+extern "C" void modeMoveClose__11daSldWall_cFv();
+extern "C" void setSe__11daSldWall_cFv();
+extern "C" void Draw__11daSldWall_cFv();
+extern "C" void Delete__11daSldWall_cFv();
+extern "C" void daSldWall_Draw__FP11daSldWall_c();
+extern "C" void daSldWall_Execute__FP11daSldWall_c();
+extern "C" void daSldWall_Delete__FP11daSldWall_c();
+extern "C" void daSldWall_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daSldWall_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv4SlideWall_cpp();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u32 lit_3628;
 SECTION_RODATA extern const u8 lit_3649[4];
@@ -59,8 +101,11 @@ SECTION_BSS extern u8 data_80C627EC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +115,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daSldWall_HIO_cFv) {
+asm daSldWall_HIO_c::daSldWall_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/__ct__15daSldWall_HIO_cFv.s"
 }
@@ -81,7 +126,7 @@ ASM_FUNCTION(__ct__15daSldWall_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +137,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daSldWall_cFv) {
+asm void daSldWall_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/setBaseMtx__11daSldWall_cFv.s"
 }
@@ -103,7 +148,7 @@ ASM_FUNCTION(setBaseMtx__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daSldWall_cFv) {
+asm void daSldWall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/CreateHeap__11daSldWall_cFv.s"
 }
@@ -114,7 +159,7 @@ ASM_FUNCTION(CreateHeap__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daSldWall_cFv) {
+asm void daSldWall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/create__11daSldWall_cFv.s"
 }
@@ -125,7 +170,7 @@ ASM_FUNCTION(create__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daSldWall_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daSldWall_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/Execute__11daSldWall_cFPPA3_A4_f.s"
 }
@@ -136,7 +181,7 @@ ASM_FUNCTION(Execute__11daSldWall_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveWall__11daSldWall_cFv) {
+asm void daSldWall_c::moveWall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/moveWall__11daSldWall_cFv.s"
 }
@@ -147,7 +192,7 @@ ASM_FUNCTION(moveWall__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daSldWall_cFv) {
+asm void daSldWall_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/init_modeWait__11daSldWall_cFv.s"
 }
@@ -155,21 +200,16 @@ ASM_FUNCTION(init_modeWait__11daSldWall_cFv) {
 
 
 /* 80C62244-80C62248 0004+00 .text      modeWait__11daSldWall_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daSldWall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/modeWait__11daSldWall_cFv.s"
+void daSldWall_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C62248-80C62254 000C+00 .text      init_modeMoveOpen__11daSldWall_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveOpen__11daSldWall_cFv) {
+asm void daSldWall_c::init_modeMoveOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/init_modeMoveOpen__11daSldWall_cFv.s"
 }
@@ -180,7 +220,7 @@ ASM_FUNCTION(init_modeMoveOpen__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveOpen__11daSldWall_cFv) {
+asm void daSldWall_c::modeMoveOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/modeMoveOpen__11daSldWall_cFv.s"
 }
@@ -191,7 +231,7 @@ ASM_FUNCTION(modeMoveOpen__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveClose__11daSldWall_cFv) {
+asm void daSldWall_c::init_modeMoveClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/init_modeMoveClose__11daSldWall_cFv.s"
 }
@@ -202,7 +242,7 @@ ASM_FUNCTION(init_modeMoveClose__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveClose__11daSldWall_cFv) {
+asm void daSldWall_c::modeMoveClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/modeMoveClose__11daSldWall_cFv.s"
 }
@@ -213,7 +253,7 @@ ASM_FUNCTION(modeMoveClose__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSe__11daSldWall_cFv) {
+asm void daSldWall_c::setSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/setSe__11daSldWall_cFv.s"
 }
@@ -224,7 +264,7 @@ ASM_FUNCTION(setSe__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daSldWall_cFv) {
+asm void daSldWall_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/Draw__11daSldWall_cFv.s"
 }
@@ -235,7 +275,7 @@ ASM_FUNCTION(Draw__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daSldWall_cFv) {
+asm void daSldWall_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/Delete__11daSldWall_cFv.s"
 }
@@ -246,7 +286,7 @@ ASM_FUNCTION(Delete__11daSldWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSldWall_Draw__FP11daSldWall_c) {
+asm void daSldWall_Draw(daSldWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Draw__FP11daSldWall_c.s"
 }
@@ -257,7 +297,7 @@ ASM_FUNCTION(daSldWall_Draw__FP11daSldWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSldWall_Execute__FP11daSldWall_c) {
+asm void daSldWall_Execute(daSldWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Execute__FP11daSldWall_c.s"
 }
@@ -268,7 +308,7 @@ ASM_FUNCTION(daSldWall_Execute__FP11daSldWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSldWall_Delete__FP11daSldWall_c) {
+asm void daSldWall_Delete(daSldWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Delete__FP11daSldWall_c.s"
 }
@@ -279,7 +319,7 @@ ASM_FUNCTION(daSldWall_Delete__FP11daSldWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSldWall_Create__FP10fopAc_ac_c) {
+asm void daSldWall_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/daSldWall_Create__FP10fopAc_ac_c.s"
 }
@@ -290,7 +330,7 @@ ASM_FUNCTION(daSldWall_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daSldWall_HIO_cFv) {
+asm daSldWall_HIO_c::~daSldWall_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/__dt__15daSldWall_HIO_cFv.s"
 }
@@ -301,7 +341,7 @@ ASM_FUNCTION(__dt__15daSldWall_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv4SlideWall_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv4SlideWall_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4SlideWall/d_a_obj_lv4SlideWall/__sinit_d_a_obj_lv4SlideWall_cpp.s"
 }

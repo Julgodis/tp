@@ -6,179 +6,399 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cBgS_PolyInfo;
+struct dCcD_GObjInf;
+struct daObjCarry_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct daObjCarry_c {
+	void data();
+	void getArcName();
+	void getBmdName();
+	void checkFlag(u8);
+	void initBaseMtx();
+	void setBaseMtx();
+	void preInit();
+	daObjCarry_c();
+	void checkBreakWolfAttack();
+	void checkCarryBoomerang();
+	void checkCarryHookshot();
+	void checkCarryWolf();
+	void checkCarryOneHand();
+	void Create();
+	void CreateInit_tsubo();
+	void CreateInit_ootubo();
+	void CreateInit_kibako();
+	void CreateInit_ironball();
+	void CreateInit_taru();
+	void CreateInit_dokuro();
+	void CreateInit_bokkuri();
+	void CreateInit_LightBall();
+	void CreateInit_Lv8Ball();
+	void CreateHeap();
+	void create();
+	void checkCreate_LightBallA();
+	void checkCreate_LightBallB();
+	void checkCreate_Lv8Ball();
+	void resetIconPosForLightBallA();
+	void setIconPosForLightBallAAtR00();
+	void setIconPosForLightBallBAtR00();
+	void resetIconPosForLightBallB();
+	void execute();
+	void checkCulling();
+	void draw();
+	void debugDraw();
+	void _delete();
+	void crr_pos();
+	void check_sink(f32*);
+	void calc_gravity();
+	void checkRollAngle();
+	void mode_proc_call();
+	void mode_init_wait();
+	void mode_proc_wait();
+	void mode_init_walk(u8);
+	void mode_proc_walk();
+	void mode_init_carry();
+	void mode_proc_carry();
+	void mode_init_drop(u8);
+	void mode_proc_drop();
+	void mode_init_float();
+	void mode_proc_float();
+	void mode_init_sink();
+	void mode_proc_sink();
+	void mode_init_yogan();
+	void mode_proc_yogan();
+	bool mode_proc_magne();
+	bool mode_proc_magneCarry();
+	void mode_init_boomCarry();
+	void mode_proc_boomCarry();
+	void mode_init_growth();
+	void mode_proc_growth();
+	bool mode_proc_end();
+	void mode_init_dbDrop(u8);
+	void mode_proc_dbDrop();
+	void mode_init_hookCarry();
+	void mode_proc_hookCarry();
+	void mode_init_fit();
+	void mode_proc_fit();
+	void mode_proc_controled();
+	void mode_init_resetLightBall();
+	void mode_proc_resetLightBall();
+	void chkSinkAll();
+	void chkWaterLineIn();
+	void chkSinkObj();
+	void bg_check();
+	void check_bg_damage_proc_base();
+	void bg_damage_proc_kotubo();
+	void bg_damage_proc_ootubo();
+	void bg_damage_proc_kibako();
+	bool bg_damage_proc_ironball();
+	void bg_damage_proc_taru();
+	void bg_damage_proc_dokuro();
+	void bg_damage_proc_bokkuri();
+	bool bg_damage_proc_LightBall();
+	bool bg_damage_proc_Lv8Ball();
+	void obj_break(bool, bool, bool);
+	void check_cc_damage_proc_base(bool);
+	void cc_damage_proc_kotubo();
+	void cc_damage_proc_ootubo();
+	void cc_damage_proc_kibako();
+	void cc_damage_proc_ironball();
+	void cc_damage_proc_taru();
+	void cc_damage_proc_dokuro();
+	void cc_damage_proc_bokkuri();
+	bool cc_damage_proc_LightBall();
+	bool cc_damage_proc_Lv8Ball();
+	void eff_break_tuboBmd(u16, cXyz);
+	void eff_break_kibakoBmd(cXyz);
+	void eff_break_tsubo();
+	void eff_break_ootubo();
+	void eff_break_kibako();
+	void eff_break_ironball();
+	void eff_break_taru();
+	void eff_break_dokuro();
+	void eff_break_bokkuri();
+	void eff_break_kotubo2();
+	void eff_break_LightBall();
+	void eff_break_ootubo2();
+	void eff_break_Lv8Ball();
+	void eff_break_tsuboL8();
+	void eff_break_ootuboL8();
+	void se_break(cBgS_PolyInfo*);
+	void se_put(cBgS_PolyInfo*);
+	void se_put_water();
+	void se_fall_water();
+	void calc_rot_axis_base(u8);
+	void calc_rot_axis_tsubo();
+	void calc_rot_axis_ootubo();
+	void calc_rot_axis_kibako();
+	void calc_rot_axis_ironball();
+	void calc_rot_axis_taru();
+	void calc_rot_axis_dokuro();
+	void calc_rot_axis_bokkuri();
+	void calc_rot_axis_kotubo2();
+	void calc_rot_axis_LightBall();
+	void calc_rot_axis_Lv8Ball();
+	void set_wind_power();
+	void exec_proc_tsubo();
+	void exec_proc_ootubo();
+	void exec_proc_kibako();
+	void exec_proc_ironball();
+	void exec_proc_taru();
+	void exec_proc_dokuro();
+	void exec_proc_bokkuri();
+	void exec_proc_LightBall();
+	void exec_proc_Lv8Ball();
+	void bg_damage_proc_call();
+	void cc_damage_proc_call();
+	void eff_break_call();
+	void calc_rot_call();
+	void obj_execute_proc_call();
+	void setTgHitCallBack();
+	void setCoHitCallBack();
+	void CreateInitCall();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void bound__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void s_swA_sub__FPvPv();
-extern "C" extern void s_sw_sub__FPvPv();
-extern "C" extern void s_setA_sub__FPvPv();
-extern "C" extern void s_setB_sub__FPvPv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void data__12daObjCarry_cFv();
-extern "C" extern void getArcName__12daObjCarry_cFv();
-extern "C" extern void getBmdName__12daObjCarry_cFv();
-extern "C" extern void checkFlag__12daObjCarry_cFUc();
-extern "C" extern void initBaseMtx__12daObjCarry_cFv();
-extern "C" extern void setBaseMtx__12daObjCarry_cFv();
-extern "C" extern void preInit__12daObjCarry_cFv();
-extern "C" extern void __ct__12daObjCarry_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void checkBreakWolfAttack__12daObjCarry_cFv();
-extern "C" extern void checkCarryBoomerang__12daObjCarry_cFv();
-extern "C" extern void checkCarryHookshot__12daObjCarry_cFv();
-extern "C" extern void checkCarryWolf__12daObjCarry_cFv();
-extern "C" extern void checkCarryOneHand__12daObjCarry_cFv();
-extern "C" extern void Create__12daObjCarry_cFv();
-extern "C" extern void CreateInit_tsubo__12daObjCarry_cFv();
-extern "C" extern void CreateInit_ootubo__12daObjCarry_cFv();
-extern "C" extern void CreateInit_kibako__12daObjCarry_cFv();
-extern "C" extern void CreateInit_ironball__12daObjCarry_cFv();
-extern "C" extern void CreateInit_taru__12daObjCarry_cFv();
-extern "C" extern void CreateInit_dokuro__12daObjCarry_cFv();
-extern "C" extern void CreateInit_bokkuri__12daObjCarry_cFv();
-extern "C" extern void CreateInit_LightBall__12daObjCarry_cFv();
-extern "C" extern void CreateInit_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void CreateHeap__12daObjCarry_cFv();
-extern "C" extern void create__12daObjCarry_cFv();
-extern "C" extern void checkCreate_LightBallA__12daObjCarry_cFv();
-extern "C" extern void checkCreate_LightBallB__12daObjCarry_cFv();
-extern "C" extern void checkCreate_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void resetIconPosForLightBallA__12daObjCarry_cFv();
-extern "C" extern void setIconPosForLightBallAAtR00__12daObjCarry_cFv();
-extern "C" extern void setIconPosForLightBallBAtR00__12daObjCarry_cFv();
-extern "C" extern void resetIconPosForLightBallB__12daObjCarry_cFv();
-extern "C" extern void execute__12daObjCarry_cFv();
-extern "C" extern void checkCulling__12daObjCarry_cFv();
-extern "C" extern void draw__12daObjCarry_cFv();
-extern "C" extern void debugDraw__12daObjCarry_cFv();
-extern "C" extern void _delete__12daObjCarry_cFv();
-extern "C" extern void crr_pos__12daObjCarry_cFv();
-extern "C" extern void check_sink__12daObjCarry_cFPf();
-extern "C" extern void calc_gravity__12daObjCarry_cFv();
-extern "C" extern void checkRollAngle__12daObjCarry_cFv();
-extern "C" extern void mode_proc_call__12daObjCarry_cFv();
-extern "C" extern void mode_init_wait__12daObjCarry_cFv();
-extern "C" extern void mode_proc_wait__12daObjCarry_cFv();
-extern "C" extern void mode_init_walk__12daObjCarry_cFUc();
-extern "C" extern void mode_proc_walk__12daObjCarry_cFv();
-extern "C" extern void mode_init_carry__12daObjCarry_cFv();
-extern "C" extern void mode_proc_carry__12daObjCarry_cFv();
-extern "C" extern void mode_init_drop__12daObjCarry_cFUc();
-extern "C" extern void mode_proc_drop__12daObjCarry_cFv();
-extern "C" extern void mode_init_float__12daObjCarry_cFv();
-extern "C" extern void mode_proc_float__12daObjCarry_cFv();
-extern "C" extern void mode_init_sink__12daObjCarry_cFv();
-extern "C" extern void mode_proc_sink__12daObjCarry_cFv();
-extern "C" extern void mode_init_yogan__12daObjCarry_cFv();
-extern "C" extern void mode_proc_yogan__12daObjCarry_cFv();
-extern "C" extern void mode_proc_magne__12daObjCarry_cFv();
-extern "C" extern void mode_proc_magneCarry__12daObjCarry_cFv();
-extern "C" extern void mode_init_boomCarry__12daObjCarry_cFv();
-extern "C" extern void mode_proc_boomCarry__12daObjCarry_cFv();
-extern "C" extern void mode_init_growth__12daObjCarry_cFv();
-extern "C" extern void mode_proc_growth__12daObjCarry_cFv();
-extern "C" extern void mode_proc_end__12daObjCarry_cFv();
-extern "C" extern void mode_init_dbDrop__12daObjCarry_cFUc();
-extern "C" extern void mode_proc_dbDrop__12daObjCarry_cFv();
-extern "C" extern void mode_init_hookCarry__12daObjCarry_cFv();
-extern "C" extern void mode_proc_hookCarry__12daObjCarry_cFv();
-extern "C" extern void mode_init_fit__12daObjCarry_cFv();
-extern "C" extern void mode_proc_fit__12daObjCarry_cFv();
-extern "C" extern void mode_proc_controled__12daObjCarry_cFv();
-extern "C" extern void mode_init_resetLightBall__12daObjCarry_cFv();
-extern "C" extern void mode_proc_resetLightBall__12daObjCarry_cFv();
-extern "C" extern void chkSinkAll__12daObjCarry_cFv();
-extern "C" extern void chkWaterLineIn__12daObjCarry_cFv();
-extern "C" extern void chkSinkObj__12daObjCarry_cFv();
-extern "C" extern void bg_check__12daObjCarry_cFv();
-extern "C" extern void check_bg_damage_proc_base__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_kotubo__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_ootubo__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_kibako__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_ironball__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_taru__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_dokuro__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_bokkuri__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_LightBall__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void obj_break__12daObjCarry_cFbbb();
-extern "C" extern void check_cc_damage_proc_base__12daObjCarry_cFb();
-extern "C" extern void cc_damage_proc_kotubo__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_ootubo__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_kibako__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_ironball__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_taru__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_dokuro__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_bokkuri__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_LightBall__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void eff_break_tuboBmd__12daObjCarry_cFUs4cXyz();
-extern "C" extern void eff_break_kibakoBmd__12daObjCarry_cF4cXyz();
-extern "C" extern void eff_break_tsubo__12daObjCarry_cFv();
-extern "C" extern void eff_break_ootubo__12daObjCarry_cFv();
-extern "C" extern void eff_break_kibako__12daObjCarry_cFv();
-extern "C" extern void eff_break_ironball__12daObjCarry_cFv();
-extern "C" extern void eff_break_taru__12daObjCarry_cFv();
-extern "C" extern void eff_break_dokuro__12daObjCarry_cFv();
-extern "C" extern void eff_break_bokkuri__12daObjCarry_cFv();
-extern "C" extern void eff_break_kotubo2__12daObjCarry_cFv();
-extern "C" extern void eff_break_LightBall__12daObjCarry_cFv();
-extern "C" extern void eff_break_ootubo2__12daObjCarry_cFv();
-extern "C" extern void eff_break_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void eff_break_tsuboL8__12daObjCarry_cFv();
-extern "C" extern void eff_break_ootuboL8__12daObjCarry_cFv();
-extern "C" extern void se_break__12daObjCarry_cFP13cBgS_PolyInfo();
-extern "C" extern void se_put__12daObjCarry_cFP13cBgS_PolyInfo();
-extern "C" extern void se_put_water__12daObjCarry_cFv();
-extern "C" extern void se_fall_water__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_base__12daObjCarry_cFUc();
-extern "C" extern void calc_rot_axis_tsubo__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_ootubo__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_kibako__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_ironball__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_taru__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_dokuro__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_bokkuri__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_kotubo2__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_LightBall__12daObjCarry_cFv();
-extern "C" extern void calc_rot_axis_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void set_wind_power__12daObjCarry_cFv();
-extern "C" extern void exec_proc_tsubo__12daObjCarry_cFv();
-extern "C" extern void exec_proc_ootubo__12daObjCarry_cFv();
-extern "C" extern void exec_proc_kibako__12daObjCarry_cFv();
-extern "C" extern void exec_proc_ironball__12daObjCarry_cFv();
-extern "C" extern void exec_proc_taru__12daObjCarry_cFv();
-extern "C" extern void exec_proc_dokuro__12daObjCarry_cFv();
-extern "C" extern void exec_proc_bokkuri__12daObjCarry_cFv();
-extern "C" extern void exec_proc_LightBall__12daObjCarry_cFv();
-extern "C" extern void exec_proc_Lv8Ball__12daObjCarry_cFv();
-extern "C" extern void bg_damage_proc_call__12daObjCarry_cFv();
-extern "C" extern void cc_damage_proc_call__12daObjCarry_cFv();
-extern "C" extern void eff_break_call__12daObjCarry_cFv();
-extern "C" extern void calc_rot_call__12daObjCarry_cFv();
-extern "C" extern void obj_execute_proc_call__12daObjCarry_cFv();
-extern "C" extern void setTgHitCallBack__12daObjCarry_cFv();
-extern "C" extern void setCoHitCallBack__12daObjCarry_cFv();
-extern "C" extern void CreateInitCall__12daObjCarry_cFv();
-extern "C" extern void daObjCarry_Draw__FP12daObjCarry_c();
-extern "C" extern void daObjCarry_Execute__FP12daObjCarry_c();
-extern "C" extern void daObjCarry_Delete__FP12daObjCarry_c();
-extern "C" extern void daObjCarry_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_804798D8();
-extern "C" extern void func_804798F4();
-extern "C" extern void func_804798FC();
+void bound(cXyz*, cBgS_PolyInfo const&, f32);
+void TgHitCallBackBase(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void TgHitCallBackBokkuri(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void CoHitCallBackBase(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void CoHitCallBackBokkuri(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void s_swA_sub(void*, void*);
+void s_sw_sub(void*, void*);
+void s_setA_sub(void*, void*);
+void s_setB_sub(void*, void*);
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjCarry_Draw(daObjCarry_c*);
+void daObjCarry_Execute(daObjCarry_c*);
+void daObjCarry_Delete(daObjCarry_c*);
+void daObjCarry_Create(fopAc_ac_c*);
+extern "C" void func_804798D8();
+extern "C" void func_804798F4();
+extern "C" void func_804798FC();
+
+extern "C" void bound__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void s_swA_sub__FPvPv();
+extern "C" void s_sw_sub__FPvPv();
+extern "C" void s_setA_sub__FPvPv();
+extern "C" void s_setB_sub__FPvPv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void data__12daObjCarry_cFv();
+extern "C" void getArcName__12daObjCarry_cFv();
+extern "C" void getBmdName__12daObjCarry_cFv();
+extern "C" void checkFlag__12daObjCarry_cFUc();
+extern "C" void initBaseMtx__12daObjCarry_cFv();
+extern "C" void setBaseMtx__12daObjCarry_cFv();
+extern "C" void preInit__12daObjCarry_cFv();
+extern "C" void __ct__12daObjCarry_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void checkBreakWolfAttack__12daObjCarry_cFv();
+extern "C" void checkCarryBoomerang__12daObjCarry_cFv();
+extern "C" void checkCarryHookshot__12daObjCarry_cFv();
+extern "C" void checkCarryWolf__12daObjCarry_cFv();
+extern "C" void checkCarryOneHand__12daObjCarry_cFv();
+extern "C" void Create__12daObjCarry_cFv();
+extern "C" void CreateInit_tsubo__12daObjCarry_cFv();
+extern "C" void CreateInit_ootubo__12daObjCarry_cFv();
+extern "C" void CreateInit_kibako__12daObjCarry_cFv();
+extern "C" void CreateInit_ironball__12daObjCarry_cFv();
+extern "C" void CreateInit_taru__12daObjCarry_cFv();
+extern "C" void CreateInit_dokuro__12daObjCarry_cFv();
+extern "C" void CreateInit_bokkuri__12daObjCarry_cFv();
+extern "C" void CreateInit_LightBall__12daObjCarry_cFv();
+extern "C" void CreateInit_Lv8Ball__12daObjCarry_cFv();
+extern "C" void CreateHeap__12daObjCarry_cFv();
+extern "C" void create__12daObjCarry_cFv();
+extern "C" void checkCreate_LightBallA__12daObjCarry_cFv();
+extern "C" void checkCreate_LightBallB__12daObjCarry_cFv();
+extern "C" void checkCreate_Lv8Ball__12daObjCarry_cFv();
+extern "C" void resetIconPosForLightBallA__12daObjCarry_cFv();
+extern "C" void setIconPosForLightBallAAtR00__12daObjCarry_cFv();
+extern "C" void setIconPosForLightBallBAtR00__12daObjCarry_cFv();
+extern "C" void resetIconPosForLightBallB__12daObjCarry_cFv();
+extern "C" void execute__12daObjCarry_cFv();
+extern "C" void checkCulling__12daObjCarry_cFv();
+extern "C" void draw__12daObjCarry_cFv();
+extern "C" void debugDraw__12daObjCarry_cFv();
+extern "C" void _delete__12daObjCarry_cFv();
+extern "C" void crr_pos__12daObjCarry_cFv();
+extern "C" void check_sink__12daObjCarry_cFPf();
+extern "C" void calc_gravity__12daObjCarry_cFv();
+extern "C" void checkRollAngle__12daObjCarry_cFv();
+extern "C" void mode_proc_call__12daObjCarry_cFv();
+extern "C" void mode_init_wait__12daObjCarry_cFv();
+extern "C" void mode_proc_wait__12daObjCarry_cFv();
+extern "C" void mode_init_walk__12daObjCarry_cFUc();
+extern "C" void mode_proc_walk__12daObjCarry_cFv();
+extern "C" void mode_init_carry__12daObjCarry_cFv();
+extern "C" void mode_proc_carry__12daObjCarry_cFv();
+extern "C" void mode_init_drop__12daObjCarry_cFUc();
+extern "C" void mode_proc_drop__12daObjCarry_cFv();
+extern "C" void mode_init_float__12daObjCarry_cFv();
+extern "C" void mode_proc_float__12daObjCarry_cFv();
+extern "C" void mode_init_sink__12daObjCarry_cFv();
+extern "C" void mode_proc_sink__12daObjCarry_cFv();
+extern "C" void mode_init_yogan__12daObjCarry_cFv();
+extern "C" void mode_proc_yogan__12daObjCarry_cFv();
+extern "C" bool mode_proc_magne__12daObjCarry_cFv();
+extern "C" bool mode_proc_magneCarry__12daObjCarry_cFv();
+extern "C" void mode_init_boomCarry__12daObjCarry_cFv();
+extern "C" void mode_proc_boomCarry__12daObjCarry_cFv();
+extern "C" void mode_init_growth__12daObjCarry_cFv();
+extern "C" void mode_proc_growth__12daObjCarry_cFv();
+extern "C" bool mode_proc_end__12daObjCarry_cFv();
+extern "C" void mode_init_dbDrop__12daObjCarry_cFUc();
+extern "C" void mode_proc_dbDrop__12daObjCarry_cFv();
+extern "C" void mode_init_hookCarry__12daObjCarry_cFv();
+extern "C" void mode_proc_hookCarry__12daObjCarry_cFv();
+extern "C" void mode_init_fit__12daObjCarry_cFv();
+extern "C" void mode_proc_fit__12daObjCarry_cFv();
+extern "C" void mode_proc_controled__12daObjCarry_cFv();
+extern "C" void mode_init_resetLightBall__12daObjCarry_cFv();
+extern "C" void mode_proc_resetLightBall__12daObjCarry_cFv();
+extern "C" void chkSinkAll__12daObjCarry_cFv();
+extern "C" void chkWaterLineIn__12daObjCarry_cFv();
+extern "C" void chkSinkObj__12daObjCarry_cFv();
+extern "C" void bg_check__12daObjCarry_cFv();
+extern "C" void check_bg_damage_proc_base__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_kotubo__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_ootubo__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_kibako__12daObjCarry_cFv();
+extern "C" bool bg_damage_proc_ironball__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_taru__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_dokuro__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_bokkuri__12daObjCarry_cFv();
+extern "C" bool bg_damage_proc_LightBall__12daObjCarry_cFv();
+extern "C" bool bg_damage_proc_Lv8Ball__12daObjCarry_cFv();
+extern "C" void obj_break__12daObjCarry_cFbbb();
+extern "C" void check_cc_damage_proc_base__12daObjCarry_cFb();
+extern "C" void cc_damage_proc_kotubo__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_ootubo__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_kibako__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_ironball__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_taru__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_dokuro__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_bokkuri__12daObjCarry_cFv();
+extern "C" bool cc_damage_proc_LightBall__12daObjCarry_cFv();
+extern "C" bool cc_damage_proc_Lv8Ball__12daObjCarry_cFv();
+extern "C" void eff_break_tuboBmd__12daObjCarry_cFUs4cXyz();
+extern "C" void eff_break_kibakoBmd__12daObjCarry_cF4cXyz();
+extern "C" void eff_break_tsubo__12daObjCarry_cFv();
+extern "C" void eff_break_ootubo__12daObjCarry_cFv();
+extern "C" void eff_break_kibako__12daObjCarry_cFv();
+extern "C" void eff_break_ironball__12daObjCarry_cFv();
+extern "C" void eff_break_taru__12daObjCarry_cFv();
+extern "C" void eff_break_dokuro__12daObjCarry_cFv();
+extern "C" void eff_break_bokkuri__12daObjCarry_cFv();
+extern "C" void eff_break_kotubo2__12daObjCarry_cFv();
+extern "C" void eff_break_LightBall__12daObjCarry_cFv();
+extern "C" void eff_break_ootubo2__12daObjCarry_cFv();
+extern "C" void eff_break_Lv8Ball__12daObjCarry_cFv();
+extern "C" void eff_break_tsuboL8__12daObjCarry_cFv();
+extern "C" void eff_break_ootuboL8__12daObjCarry_cFv();
+extern "C" void se_break__12daObjCarry_cFP13cBgS_PolyInfo();
+extern "C" void se_put__12daObjCarry_cFP13cBgS_PolyInfo();
+extern "C" void se_put_water__12daObjCarry_cFv();
+extern "C" void se_fall_water__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_base__12daObjCarry_cFUc();
+extern "C" void calc_rot_axis_tsubo__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_ootubo__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_kibako__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_ironball__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_taru__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_dokuro__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_bokkuri__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_kotubo2__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_LightBall__12daObjCarry_cFv();
+extern "C" void calc_rot_axis_Lv8Ball__12daObjCarry_cFv();
+extern "C" void set_wind_power__12daObjCarry_cFv();
+extern "C" void exec_proc_tsubo__12daObjCarry_cFv();
+extern "C" void exec_proc_ootubo__12daObjCarry_cFv();
+extern "C" void exec_proc_kibako__12daObjCarry_cFv();
+extern "C" void exec_proc_ironball__12daObjCarry_cFv();
+extern "C" void exec_proc_taru__12daObjCarry_cFv();
+extern "C" void exec_proc_dokuro__12daObjCarry_cFv();
+extern "C" void exec_proc_bokkuri__12daObjCarry_cFv();
+extern "C" void exec_proc_LightBall__12daObjCarry_cFv();
+extern "C" void exec_proc_Lv8Ball__12daObjCarry_cFv();
+extern "C" void bg_damage_proc_call__12daObjCarry_cFv();
+extern "C" void cc_damage_proc_call__12daObjCarry_cFv();
+extern "C" void eff_break_call__12daObjCarry_cFv();
+extern "C" void calc_rot_call__12daObjCarry_cFv();
+extern "C" void obj_execute_proc_call__12daObjCarry_cFv();
+extern "C" void setTgHitCallBack__12daObjCarry_cFv();
+extern "C" void setCoHitCallBack__12daObjCarry_cFv();
+extern "C" void CreateInitCall__12daObjCarry_cFv();
+extern "C" void daObjCarry_Draw__FP12daObjCarry_c();
+extern "C" void daObjCarry_Execute__FP12daObjCarry_c();
+extern "C" void daObjCarry_Delete__FP12daObjCarry_c();
+extern "C" void daObjCarry_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_804798D8();
+extern "C" void func_804798F4();
+extern "C" void func_804798FC();
 SECTION_RODATA extern const u8 l_cyl_info[280];
 SECTION_RODATA extern const u8 mData__12daObjCarry_c[2072];
 SECTION_RODATA extern const u8 l_cyl_src[68];
@@ -402,7 +622,9 @@ SECTION_BSS extern u8 struct_8047B1E0[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -412,7 +634,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bound__FP4cXyzRC13cBgS_PolyInfof) {
+asm void bound(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bound__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -423,7 +645,7 @@ ASM_FUNCTION(bound__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__8cM3dGPlaFv.s"
 }
@@ -431,21 +653,16 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 
 
 /* 8046F33C-8046F340 0004+00 .text      TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F33C.s"
+void TgHitCallBackBase(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8046F340-8046F3E0 00A0+00 .text      TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void TgHitCallBackBokkuri(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F340.s"
 }
@@ -453,21 +670,16 @@ ASM_FUNCTION(TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12
 
 
 /* 8046F3E0-8046F3E4 0004+00 .text      CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F3E0.s"
+void CoHitCallBackBase(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8046F3E4-8046F4AC 00C8+00 .text      CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void CoHitCallBackBokkuri(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F3E4.s"
 }
@@ -478,7 +690,7 @@ ASM_FUNCTION(CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_swA_sub__FPvPv) {
+asm void s_swA_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/s_swA_sub__FPvPv.s"
 }
@@ -489,7 +701,7 @@ ASM_FUNCTION(s_swA_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sw_sub__FPvPv) {
+asm void s_sw_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/s_sw_sub__FPvPv.s"
 }
@@ -500,7 +712,7 @@ ASM_FUNCTION(s_sw_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_setA_sub__FPvPv) {
+asm void s_setA_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/s_setA_sub__FPvPv.s"
 }
@@ -511,7 +723,7 @@ ASM_FUNCTION(s_setA_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_setB_sub__FPvPv) {
+asm void s_setB_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/s_setB_sub__FPvPv.s"
 }
@@ -522,7 +734,7 @@ ASM_FUNCTION(s_setB_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -533,7 +745,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(data__12daObjCarry_cFv) {
+asm void daObjCarry_c::data() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/data__12daObjCarry_cFv.s"
 }
@@ -544,7 +756,7 @@ ASM_FUNCTION(data__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcName__12daObjCarry_cFv) {
+asm void daObjCarry_c::getArcName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/getArcName__12daObjCarry_cFv.s"
 }
@@ -555,7 +767,7 @@ ASM_FUNCTION(getArcName__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmdName__12daObjCarry_cFv) {
+asm void daObjCarry_c::getBmdName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/getBmdName__12daObjCarry_cFv.s"
 }
@@ -566,7 +778,7 @@ ASM_FUNCTION(getBmdName__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFlag__12daObjCarry_cFUc) {
+asm void daObjCarry_c::checkFlag(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkFlag__12daObjCarry_cFUc.s"
 }
@@ -577,7 +789,7 @@ ASM_FUNCTION(checkFlag__12daObjCarry_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjCarry_cFv) {
+asm void daObjCarry_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/initBaseMtx__12daObjCarry_cFv.s"
 }
@@ -588,7 +800,7 @@ ASM_FUNCTION(initBaseMtx__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjCarry_cFv) {
+asm void daObjCarry_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/setBaseMtx__12daObjCarry_cFv.s"
 }
@@ -599,7 +811,7 @@ ASM_FUNCTION(setBaseMtx__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preInit__12daObjCarry_cFv) {
+asm void daObjCarry_c::preInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/preInit__12daObjCarry_cFv.s"
 }
@@ -610,7 +822,7 @@ ASM_FUNCTION(preInit__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daObjCarry_cFv) {
+asm daObjCarry_c::daObjCarry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__ct__12daObjCarry_cFv.s"
 }
@@ -621,7 +833,7 @@ ASM_FUNCTION(__ct__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__8cM3dGSphFv.s"
 }
@@ -632,7 +844,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__8cM3dGCylFv.s"
 }
@@ -643,7 +855,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__8cM3dGAabFv.s"
 }
@@ -654,7 +866,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__10dCcD_GSttsFv.s"
 }
@@ -665,7 +877,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__12dBgS_AcchCirFv.s"
 }
@@ -676,7 +888,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -687,7 +899,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBreakWolfAttack__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkBreakWolfAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkBreakWolfAttack__12daObjCarry_cFv.s"
 }
@@ -698,7 +910,7 @@ ASM_FUNCTION(checkBreakWolfAttack__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCarryBoomerang__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCarryBoomerang() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCarryBoomerang__12daObjCarry_cFv.s"
 }
@@ -709,7 +921,7 @@ ASM_FUNCTION(checkCarryBoomerang__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCarryHookshot__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCarryHookshot() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCarryHookshot__12daObjCarry_cFv.s"
 }
@@ -720,7 +932,7 @@ ASM_FUNCTION(checkCarryHookshot__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCarryWolf__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCarryWolf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCarryWolf__12daObjCarry_cFv.s"
 }
@@ -731,7 +943,7 @@ ASM_FUNCTION(checkCarryWolf__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCarryOneHand__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCarryOneHand() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCarryOneHand__12daObjCarry_cFv.s"
 }
@@ -742,7 +954,7 @@ ASM_FUNCTION(checkCarryOneHand__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjCarry_cFv) {
+asm void daObjCarry_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/Create__12daObjCarry_cFv.s"
 }
@@ -753,7 +965,7 @@ ASM_FUNCTION(Create__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_tsubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_tsubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_tsubo__12daObjCarry_cFv.s"
 }
@@ -764,7 +976,7 @@ ASM_FUNCTION(CreateInit_tsubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_ootubo__12daObjCarry_cFv.s"
 }
@@ -775,7 +987,7 @@ ASM_FUNCTION(CreateInit_ootubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_kibako__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_kibako() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_kibako__12daObjCarry_cFv.s"
 }
@@ -786,7 +998,7 @@ ASM_FUNCTION(CreateInit_kibako__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_ironball__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_ironball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_ironball__12daObjCarry_cFv.s"
 }
@@ -797,7 +1009,7 @@ ASM_FUNCTION(CreateInit_ironball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_taru__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_taru() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_taru__12daObjCarry_cFv.s"
 }
@@ -808,7 +1020,7 @@ ASM_FUNCTION(CreateInit_taru__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_dokuro__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_dokuro() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_dokuro__12daObjCarry_cFv.s"
 }
@@ -819,7 +1031,7 @@ ASM_FUNCTION(CreateInit_dokuro__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_bokkuri__12daObjCarry_cFv.s"
 }
@@ -830,7 +1042,7 @@ ASM_FUNCTION(CreateInit_bokkuri__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_LightBall__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_LightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_LightBall__12daObjCarry_cFv.s"
 }
@@ -841,7 +1053,7 @@ ASM_FUNCTION(CreateInit_LightBall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit_Lv8Ball__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInit_Lv8Ball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInit_Lv8Ball__12daObjCarry_cFv.s"
 }
@@ -852,7 +1064,7 @@ ASM_FUNCTION(CreateInit_Lv8Ball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateHeap__12daObjCarry_cFv.s"
 }
@@ -863,7 +1075,7 @@ ASM_FUNCTION(CreateHeap__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjCarry_cFv) {
+asm void daObjCarry_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_80470BF4.s"
 }
@@ -874,7 +1086,7 @@ ASM_FUNCTION(create__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCreate_LightBallA__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCreate_LightBallA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCreate_LightBallA__12daObjCarry_cFv.s"
 }
@@ -885,7 +1097,7 @@ ASM_FUNCTION(checkCreate_LightBallA__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCreate_LightBallB__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCreate_LightBallB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCreate_LightBallB__12daObjCarry_cFv.s"
 }
@@ -896,7 +1108,7 @@ ASM_FUNCTION(checkCreate_LightBallB__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCreate_Lv8Ball__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCreate_Lv8Ball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCreate_Lv8Ball__12daObjCarry_cFv.s"
 }
@@ -907,7 +1119,7 @@ ASM_FUNCTION(checkCreate_Lv8Ball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetIconPosForLightBallA__12daObjCarry_cFv) {
+asm void daObjCarry_c::resetIconPosForLightBallA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/resetIconPosForLightBallA__12daObjCarry_cFv.s"
 }
@@ -918,7 +1130,7 @@ ASM_FUNCTION(resetIconPosForLightBallA__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIconPosForLightBallAAtR00__12daObjCarry_cFv) {
+asm void daObjCarry_c::setIconPosForLightBallAAtR00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/setIconPosForLightBallAAtR00__12daObjCarry_cFv.s"
 }
@@ -929,7 +1141,7 @@ ASM_FUNCTION(setIconPosForLightBallAAtR00__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIconPosForLightBallBAtR00__12daObjCarry_cFv) {
+asm void daObjCarry_c::setIconPosForLightBallBAtR00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/setIconPosForLightBallBAtR00__12daObjCarry_cFv.s"
 }
@@ -940,7 +1152,7 @@ ASM_FUNCTION(setIconPosForLightBallBAtR00__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetIconPosForLightBallB__12daObjCarry_cFv) {
+asm void daObjCarry_c::resetIconPosForLightBallB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/resetIconPosForLightBallB__12daObjCarry_cFv.s"
 }
@@ -951,7 +1163,7 @@ ASM_FUNCTION(resetIconPosForLightBallB__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjCarry_cFv) {
+asm void daObjCarry_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/execute__12daObjCarry_cFv.s"
 }
@@ -962,7 +1174,7 @@ ASM_FUNCTION(execute__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCulling__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkCulling() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkCulling__12daObjCarry_cFv.s"
 }
@@ -973,7 +1185,7 @@ ASM_FUNCTION(checkCulling__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjCarry_cFv) {
+asm void daObjCarry_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/draw__12daObjCarry_cFv.s"
 }
@@ -981,21 +1193,16 @@ ASM_FUNCTION(draw__12daObjCarry_cFv) {
 
 
 /* 80472730-80472734 0004+00 .text      debugDraw__12daObjCarry_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(debugDraw__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/debugDraw__12daObjCarry_cFv.s"
+void daObjCarry_c::debugDraw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80472734-80472B54 0420+00 .text      _delete__12daObjCarry_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjCarry_cFv) {
+asm void daObjCarry_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/_delete__12daObjCarry_cFv.s"
 }
@@ -1006,7 +1213,7 @@ ASM_FUNCTION(_delete__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(crr_pos__12daObjCarry_cFv) {
+asm void daObjCarry_c::crr_pos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/crr_pos__12daObjCarry_cFv.s"
 }
@@ -1017,7 +1224,7 @@ ASM_FUNCTION(crr_pos__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_sink__12daObjCarry_cFPf) {
+asm void daObjCarry_c::check_sink(f32* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/check_sink__12daObjCarry_cFPf.s"
 }
@@ -1028,7 +1235,7 @@ ASM_FUNCTION(check_sink__12daObjCarry_cFPf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_gravity__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_gravity() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_gravity__12daObjCarry_cFv.s"
 }
@@ -1039,7 +1246,7 @@ ASM_FUNCTION(calc_gravity__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRollAngle__12daObjCarry_cFv) {
+asm void daObjCarry_c::checkRollAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/checkRollAngle__12daObjCarry_cFv.s"
 }
@@ -1050,7 +1257,7 @@ ASM_FUNCTION(checkRollAngle__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_call__12daObjCarry_cFv.s"
 }
@@ -1061,7 +1268,7 @@ ASM_FUNCTION(mode_proc_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_wait__12daObjCarry_cFv.s"
 }
@@ -1072,7 +1279,7 @@ ASM_FUNCTION(mode_init_wait__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_wait__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_wait__12daObjCarry_cFv.s"
 }
@@ -1083,7 +1290,7 @@ ASM_FUNCTION(mode_proc_wait__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_walk__12daObjCarry_cFUc) {
+asm void daObjCarry_c::mode_init_walk(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_walk__12daObjCarry_cFUc.s"
 }
@@ -1094,7 +1301,7 @@ ASM_FUNCTION(mode_init_walk__12daObjCarry_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_walk__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_walk__12daObjCarry_cFv.s"
 }
@@ -1105,7 +1312,7 @@ ASM_FUNCTION(mode_proc_walk__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_carry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_carry__12daObjCarry_cFv.s"
 }
@@ -1116,7 +1323,7 @@ ASM_FUNCTION(mode_init_carry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_carry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_carry__12daObjCarry_cFv.s"
 }
@@ -1127,7 +1334,7 @@ ASM_FUNCTION(mode_proc_carry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_drop__12daObjCarry_cFUc) {
+asm void daObjCarry_c::mode_init_drop(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_drop__12daObjCarry_cFUc.s"
 }
@@ -1138,7 +1345,7 @@ ASM_FUNCTION(mode_init_drop__12daObjCarry_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_drop__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_drop__12daObjCarry_cFv.s"
 }
@@ -1149,7 +1356,7 @@ ASM_FUNCTION(mode_proc_drop__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_float__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_float() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_float__12daObjCarry_cFv.s"
 }
@@ -1160,7 +1367,7 @@ ASM_FUNCTION(mode_init_float__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_float__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_float() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_float__12daObjCarry_cFv.s"
 }
@@ -1171,7 +1378,7 @@ ASM_FUNCTION(mode_proc_float__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_sink__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_sink__12daObjCarry_cFv.s"
 }
@@ -1182,7 +1389,7 @@ ASM_FUNCTION(mode_init_sink__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_sink__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_sink__12daObjCarry_cFv.s"
 }
@@ -1193,7 +1400,7 @@ ASM_FUNCTION(mode_proc_sink__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_yogan__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_yogan() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_yogan__12daObjCarry_cFv.s"
 }
@@ -1204,7 +1411,7 @@ ASM_FUNCTION(mode_init_yogan__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_yogan__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_yogan() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_yogan__12daObjCarry_cFv.s"
 }
@@ -1212,32 +1419,22 @@ ASM_FUNCTION(mode_proc_yogan__12daObjCarry_cFv) {
 
 
 /* 80474E98-80474EA0 0008+00 .text      mode_proc_magne__12daObjCarry_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_magne__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_magne__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_magne() {
+	return true;
 }
-#pragma pop
 
 
 /* 80474EA0-80474EA8 0008+00 .text      mode_proc_magneCarry__12daObjCarry_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_magneCarry__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_magneCarry__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_magneCarry() {
+	return true;
 }
-#pragma pop
 
 
 /* 80474EA8-80474FA8 0100+00 .text      mode_init_boomCarry__12daObjCarry_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_boomCarry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_boomCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_boomCarry__12daObjCarry_cFv.s"
 }
@@ -1248,7 +1445,7 @@ ASM_FUNCTION(mode_init_boomCarry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_boomCarry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_boomCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_boomCarry__12daObjCarry_cFv.s"
 }
@@ -1259,7 +1456,7 @@ ASM_FUNCTION(mode_proc_boomCarry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_growth__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_growth() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_growth__12daObjCarry_cFv.s"
 }
@@ -1270,7 +1467,7 @@ ASM_FUNCTION(mode_init_growth__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_growth__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_growth() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_growth__12daObjCarry_cFv.s"
 }
@@ -1278,21 +1475,16 @@ ASM_FUNCTION(mode_proc_growth__12daObjCarry_cFv) {
 
 
 /* 8047515C-80475164 0008+00 .text      mode_proc_end__12daObjCarry_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_end__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_end__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_end() {
+	return true;
 }
-#pragma pop
 
 
 /* 80475164-80475210 00AC+00 .text      mode_init_dbDrop__12daObjCarry_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_dbDrop__12daObjCarry_cFUc) {
+asm void daObjCarry_c::mode_init_dbDrop(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_dbDrop__12daObjCarry_cFUc.s"
 }
@@ -1303,7 +1495,7 @@ ASM_FUNCTION(mode_init_dbDrop__12daObjCarry_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_dbDrop__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_dbDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_dbDrop__12daObjCarry_cFv.s"
 }
@@ -1314,7 +1506,7 @@ ASM_FUNCTION(mode_proc_dbDrop__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_hookCarry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_hookCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_hookCarry__12daObjCarry_cFv.s"
 }
@@ -1325,7 +1517,7 @@ ASM_FUNCTION(mode_init_hookCarry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_hookCarry__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_hookCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_hookCarry__12daObjCarry_cFv.s"
 }
@@ -1336,7 +1528,7 @@ ASM_FUNCTION(mode_proc_hookCarry__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_fit__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_fit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_fit__12daObjCarry_cFv.s"
 }
@@ -1347,7 +1539,7 @@ ASM_FUNCTION(mode_init_fit__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_fit__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_fit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_fit__12daObjCarry_cFv.s"
 }
@@ -1358,7 +1550,7 @@ ASM_FUNCTION(mode_proc_fit__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_controled__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_controled() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_controled__12daObjCarry_cFv.s"
 }
@@ -1369,7 +1561,7 @@ ASM_FUNCTION(mode_proc_controled__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_resetLightBall__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_init_resetLightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_init_resetLightBall__12daObjCarry_cFv.s"
 }
@@ -1380,7 +1572,7 @@ ASM_FUNCTION(mode_init_resetLightBall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_resetLightBall__12daObjCarry_cFv) {
+asm void daObjCarry_c::mode_proc_resetLightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_resetLightBall__12daObjCarry_cFv.s"
 }
@@ -1391,7 +1583,7 @@ ASM_FUNCTION(mode_proc_resetLightBall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSinkAll__12daObjCarry_cFv) {
+asm void daObjCarry_c::chkSinkAll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/chkSinkAll__12daObjCarry_cFv.s"
 }
@@ -1402,7 +1594,7 @@ ASM_FUNCTION(chkSinkAll__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWaterLineIn__12daObjCarry_cFv) {
+asm void daObjCarry_c::chkWaterLineIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/chkWaterLineIn__12daObjCarry_cFv.s"
 }
@@ -1413,7 +1605,7 @@ ASM_FUNCTION(chkWaterLineIn__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSinkObj__12daObjCarry_cFv) {
+asm void daObjCarry_c::chkSinkObj() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/chkSinkObj__12daObjCarry_cFv.s"
 }
@@ -1424,7 +1616,7 @@ ASM_FUNCTION(chkSinkObj__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_check__12daObjCarry_cFv.s"
 }
@@ -1435,7 +1627,7 @@ ASM_FUNCTION(bg_check__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_bg_damage_proc_base__12daObjCarry_cFv) {
+asm void daObjCarry_c::check_bg_damage_proc_base() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/check_bg_damage_proc_base__12daObjCarry_cFv.s"
 }
@@ -1446,7 +1638,7 @@ ASM_FUNCTION(check_bg_damage_proc_base__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_kotubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_kotubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_kotubo__12daObjCarry_cFv.s"
 }
@@ -1457,7 +1649,7 @@ ASM_FUNCTION(bg_damage_proc_kotubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_ootubo__12daObjCarry_cFv.s"
 }
@@ -1468,7 +1660,7 @@ ASM_FUNCTION(bg_damage_proc_ootubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_kibako__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_kibako() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_kibako__12daObjCarry_cFv.s"
 }
@@ -1476,21 +1668,16 @@ ASM_FUNCTION(bg_damage_proc_kibako__12daObjCarry_cFv) {
 
 
 /* 80476804-8047680C 0008+00 .text      bg_damage_proc_ironball__12daObjCarry_cFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_ironball__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_ironball__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_ironball() {
+	return false;
 }
-#pragma pop
 
 
 /* 8047680C-8047682C 0020+00 .text      bg_damage_proc_taru__12daObjCarry_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_taru__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_taru() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_taru__12daObjCarry_cFv.s"
 }
@@ -1501,7 +1688,7 @@ ASM_FUNCTION(bg_damage_proc_taru__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_dokuro__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_dokuro() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_dokuro__12daObjCarry_cFv.s"
 }
@@ -1512,7 +1699,7 @@ ASM_FUNCTION(bg_damage_proc_dokuro__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_bokkuri__12daObjCarry_cFv.s"
 }
@@ -1520,32 +1707,22 @@ ASM_FUNCTION(bg_damage_proc_bokkuri__12daObjCarry_cFv) {
 
 
 /* 80476930-80476938 0008+00 .text      bg_damage_proc_LightBall__12daObjCarry_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_LightBall__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_LightBall__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_LightBall() {
+	return false;
 }
-#pragma pop
 
 
 /* 80476938-80476940 0008+00 .text      bg_damage_proc_Lv8Ball__12daObjCarry_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_Lv8Ball__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_Lv8Ball__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_Lv8Ball() {
+	return false;
 }
-#pragma pop
 
 
 /* 80476940-80476A5C 011C+00 .text      obj_break__12daObjCarry_cFbbb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_break__12daObjCarry_cFbbb) {
+asm void daObjCarry_c::obj_break(bool field_0, bool field_1, bool field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/obj_break__12daObjCarry_cFbbb.s"
 }
@@ -1556,7 +1733,7 @@ ASM_FUNCTION(obj_break__12daObjCarry_cFbbb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_cc_damage_proc_base__12daObjCarry_cFb) {
+asm void daObjCarry_c::check_cc_damage_proc_base(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/check_cc_damage_proc_base__12daObjCarry_cFb.s"
 }
@@ -1567,7 +1744,7 @@ ASM_FUNCTION(check_cc_damage_proc_base__12daObjCarry_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_kotubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_kotubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_kotubo__12daObjCarry_cFv.s"
 }
@@ -1578,7 +1755,7 @@ ASM_FUNCTION(cc_damage_proc_kotubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_ootubo__12daObjCarry_cFv.s"
 }
@@ -1589,7 +1766,7 @@ ASM_FUNCTION(cc_damage_proc_ootubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_kibako__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_kibako() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_kibako__12daObjCarry_cFv.s"
 }
@@ -1600,7 +1777,7 @@ ASM_FUNCTION(cc_damage_proc_kibako__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_ironball__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_ironball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_ironball__12daObjCarry_cFv.s"
 }
@@ -1611,7 +1788,7 @@ ASM_FUNCTION(cc_damage_proc_ironball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_taru__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_taru() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_taru__12daObjCarry_cFv.s"
 }
@@ -1622,7 +1799,7 @@ ASM_FUNCTION(cc_damage_proc_taru__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_dokuro__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_dokuro() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_dokuro__12daObjCarry_cFv.s"
 }
@@ -1633,7 +1810,7 @@ ASM_FUNCTION(cc_damage_proc_dokuro__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_bokkuri__12daObjCarry_cFv.s"
 }
@@ -1641,32 +1818,22 @@ ASM_FUNCTION(cc_damage_proc_bokkuri__12daObjCarry_cFv) {
 
 
 /* 804771B0-804771B8 0008+00 .text      cc_damage_proc_LightBall__12daObjCarry_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_LightBall__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_LightBall__12daObjCarry_cFv.s"
+bool daObjCarry_c::cc_damage_proc_LightBall() {
+	return false;
 }
-#pragma pop
 
 
 /* 804771B8-804771C0 0008+00 .text      cc_damage_proc_Lv8Ball__12daObjCarry_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_Lv8Ball__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_Lv8Ball__12daObjCarry_cFv.s"
+bool daObjCarry_c::cc_damage_proc_Lv8Ball() {
+	return false;
 }
-#pragma pop
 
 
 /* 804771C0-8047731C 015C+00 .text      eff_break_tuboBmd__12daObjCarry_cFUs4cXyz                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_tuboBmd__12daObjCarry_cFUs4cXyz) {
+asm void daObjCarry_c::eff_break_tuboBmd(u16 field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_tuboBmd__12daObjCarry_cFUs4cXyz.s"
 }
@@ -1677,7 +1844,7 @@ ASM_FUNCTION(eff_break_tuboBmd__12daObjCarry_cFUs4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_kibakoBmd__12daObjCarry_cF4cXyz) {
+asm void daObjCarry_c::eff_break_kibakoBmd(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_kibakoBmd__12daObjCarry_cF4cXyz.s"
 }
@@ -1688,7 +1855,7 @@ ASM_FUNCTION(eff_break_kibakoBmd__12daObjCarry_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_tsubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_tsubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_tsubo__12daObjCarry_cFv.s"
 }
@@ -1699,7 +1866,7 @@ ASM_FUNCTION(eff_break_tsubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_ootubo__12daObjCarry_cFv.s"
 }
@@ -1710,7 +1877,7 @@ ASM_FUNCTION(eff_break_ootubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_kibako__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_kibako() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_kibako__12daObjCarry_cFv.s"
 }
@@ -1718,21 +1885,16 @@ ASM_FUNCTION(eff_break_kibako__12daObjCarry_cFv) {
 
 
 /* 80477574-80477578 0004+00 .text      eff_break_ironball__12daObjCarry_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eff_break_ironball__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_ironball__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_ironball() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80477578-804775BC 0044+00 .text      eff_break_taru__12daObjCarry_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_taru__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_taru() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_taru__12daObjCarry_cFv.s"
 }
@@ -1743,7 +1905,7 @@ ASM_FUNCTION(eff_break_taru__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_dokuro__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_dokuro() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_dokuro__12daObjCarry_cFv.s"
 }
@@ -1754,7 +1916,7 @@ ASM_FUNCTION(eff_break_dokuro__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_bokkuri__12daObjCarry_cFv.s"
 }
@@ -1765,7 +1927,7 @@ ASM_FUNCTION(eff_break_bokkuri__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_kotubo2__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_kotubo2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_kotubo2__12daObjCarry_cFv.s"
 }
@@ -1773,21 +1935,16 @@ ASM_FUNCTION(eff_break_kotubo2__12daObjCarry_cFv) {
 
 
 /* 804777F0-804777F4 0004+00 .text      eff_break_LightBall__12daObjCarry_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eff_break_LightBall__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_LightBall__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_LightBall() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804777F4-8047784C 0058+00 .text      eff_break_ootubo2__12daObjCarry_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_ootubo2__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_ootubo2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_ootubo2__12daObjCarry_cFv.s"
 }
@@ -1795,21 +1952,16 @@ ASM_FUNCTION(eff_break_ootubo2__12daObjCarry_cFv) {
 
 
 /* 8047784C-80477850 0004+00 .text      eff_break_Lv8Ball__12daObjCarry_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eff_break_Lv8Ball__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_Lv8Ball__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_Lv8Ball() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80477850-804778A8 0058+00 .text      eff_break_tsuboL8__12daObjCarry_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_tsuboL8__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_tsuboL8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_tsuboL8__12daObjCarry_cFv.s"
 }
@@ -1820,7 +1972,7 @@ ASM_FUNCTION(eff_break_tsuboL8__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_ootuboL8__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_ootuboL8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_ootuboL8__12daObjCarry_cFv.s"
 }
@@ -1831,7 +1983,7 @@ ASM_FUNCTION(eff_break_ootuboL8__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(se_break__12daObjCarry_cFP13cBgS_PolyInfo) {
+asm void daObjCarry_c::se_break(cBgS_PolyInfo* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/se_break__12daObjCarry_cFP13cBgS_PolyInfo.s"
 }
@@ -1842,7 +1994,7 @@ ASM_FUNCTION(se_break__12daObjCarry_cFP13cBgS_PolyInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(se_put__12daObjCarry_cFP13cBgS_PolyInfo) {
+asm void daObjCarry_c::se_put(cBgS_PolyInfo* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/se_put__12daObjCarry_cFP13cBgS_PolyInfo.s"
 }
@@ -1853,7 +2005,7 @@ ASM_FUNCTION(se_put__12daObjCarry_cFP13cBgS_PolyInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(se_put_water__12daObjCarry_cFv) {
+asm void daObjCarry_c::se_put_water() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/se_put_water__12daObjCarry_cFv.s"
 }
@@ -1864,7 +2016,7 @@ ASM_FUNCTION(se_put_water__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(se_fall_water__12daObjCarry_cFv) {
+asm void daObjCarry_c::se_fall_water() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/se_fall_water__12daObjCarry_cFv.s"
 }
@@ -1875,7 +2027,7 @@ ASM_FUNCTION(se_fall_water__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_base__12daObjCarry_cFUc) {
+asm void daObjCarry_c::calc_rot_axis_base(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_base__12daObjCarry_cFUc.s"
 }
@@ -1886,7 +2038,7 @@ ASM_FUNCTION(calc_rot_axis_base__12daObjCarry_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_tsubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_tsubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_tsubo__12daObjCarry_cFv.s"
 }
@@ -1897,7 +2049,7 @@ ASM_FUNCTION(calc_rot_axis_tsubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_ootubo__12daObjCarry_cFv.s"
 }
@@ -1908,7 +2060,7 @@ ASM_FUNCTION(calc_rot_axis_ootubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_kibako__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_kibako() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_kibako__12daObjCarry_cFv.s"
 }
@@ -1919,7 +2071,7 @@ ASM_FUNCTION(calc_rot_axis_kibako__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_ironball__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_ironball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_ironball__12daObjCarry_cFv.s"
 }
@@ -1930,7 +2082,7 @@ ASM_FUNCTION(calc_rot_axis_ironball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_taru__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_taru() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_taru__12daObjCarry_cFv.s"
 }
@@ -1941,7 +2093,7 @@ ASM_FUNCTION(calc_rot_axis_taru__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_dokuro__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_dokuro() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_dokuro__12daObjCarry_cFv.s"
 }
@@ -1952,7 +2104,7 @@ ASM_FUNCTION(calc_rot_axis_dokuro__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_bokkuri__12daObjCarry_cFv.s"
 }
@@ -1963,7 +2115,7 @@ ASM_FUNCTION(calc_rot_axis_bokkuri__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_kotubo2__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_kotubo2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_kotubo2__12daObjCarry_cFv.s"
 }
@@ -1974,7 +2126,7 @@ ASM_FUNCTION(calc_rot_axis_kotubo2__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_LightBall__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_LightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_LightBall__12daObjCarry_cFv.s"
 }
@@ -1985,7 +2137,7 @@ ASM_FUNCTION(calc_rot_axis_LightBall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_axis_Lv8Ball__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_axis_Lv8Ball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_axis_Lv8Ball__12daObjCarry_cFv.s"
 }
@@ -1996,7 +2148,7 @@ ASM_FUNCTION(calc_rot_axis_Lv8Ball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_wind_power__12daObjCarry_cFv) {
+asm void daObjCarry_c::set_wind_power() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/set_wind_power__12daObjCarry_cFv.s"
 }
@@ -2007,7 +2159,7 @@ ASM_FUNCTION(set_wind_power__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_tsubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_tsubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_tsubo__12daObjCarry_cFv.s"
 }
@@ -2018,7 +2170,7 @@ ASM_FUNCTION(exec_proc_tsubo__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_ootubo__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_ootubo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_ootubo__12daObjCarry_cFv.s"
 }
@@ -2026,21 +2178,16 @@ ASM_FUNCTION(exec_proc_ootubo__12daObjCarry_cFv) {
 
 
 /* 80478848-8047884C 0004+00 .text      exec_proc_kibako__12daObjCarry_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_kibako__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_kibako__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_kibako() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8047884C-804788C4 0078+00 .text      exec_proc_ironball__12daObjCarry_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_ironball__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_ironball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_ironball__12daObjCarry_cFv.s"
 }
@@ -2048,32 +2195,22 @@ ASM_FUNCTION(exec_proc_ironball__12daObjCarry_cFv) {
 
 
 /* 804788C4-804788C8 0004+00 .text      exec_proc_taru__12daObjCarry_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_taru__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_taru__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_taru() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804788C8-804788CC 0004+00 .text      exec_proc_dokuro__12daObjCarry_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_dokuro__12daObjCarry_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_dokuro__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_dokuro() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804788CC-80478C18 034C+00 .text      exec_proc_bokkuri__12daObjCarry_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_bokkuri__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_bokkuri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_bokkuri__12daObjCarry_cFv.s"
 }
@@ -2084,7 +2221,7 @@ ASM_FUNCTION(exec_proc_bokkuri__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_LightBall__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_LightBall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_LightBall__12daObjCarry_cFv.s"
 }
@@ -2095,7 +2232,7 @@ ASM_FUNCTION(exec_proc_LightBall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec_proc_Lv8Ball__12daObjCarry_cFv) {
+asm void daObjCarry_c::exec_proc_Lv8Ball() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_Lv8Ball__12daObjCarry_cFv.s"
 }
@@ -2106,7 +2243,7 @@ ASM_FUNCTION(exec_proc_Lv8Ball__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_damage_proc_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::bg_damage_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_call__12daObjCarry_cFv.s"
 }
@@ -2117,7 +2254,7 @@ ASM_FUNCTION(bg_damage_proc_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_damage_proc_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::cc_damage_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_call__12daObjCarry_cFv.s"
 }
@@ -2128,7 +2265,7 @@ ASM_FUNCTION(cc_damage_proc_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_break_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::eff_break_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_call__12daObjCarry_cFv.s"
 }
@@ -2139,7 +2276,7 @@ ASM_FUNCTION(eff_break_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_rot_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::calc_rot_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/calc_rot_call__12daObjCarry_cFv.s"
 }
@@ -2150,7 +2287,7 @@ ASM_FUNCTION(calc_rot_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_execute_proc_call__12daObjCarry_cFv) {
+asm void daObjCarry_c::obj_execute_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/obj_execute_proc_call__12daObjCarry_cFv.s"
 }
@@ -2161,7 +2298,7 @@ ASM_FUNCTION(obj_execute_proc_call__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgHitCallBack__12daObjCarry_cFv) {
+asm void daObjCarry_c::setTgHitCallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/setTgHitCallBack__12daObjCarry_cFv.s"
 }
@@ -2172,7 +2309,7 @@ ASM_FUNCTION(setTgHitCallBack__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCoHitCallBack__12daObjCarry_cFv) {
+asm void daObjCarry_c::setCoHitCallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/setCoHitCallBack__12daObjCarry_cFv.s"
 }
@@ -2183,7 +2320,7 @@ ASM_FUNCTION(setCoHitCallBack__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInitCall__12daObjCarry_cFv) {
+asm void daObjCarry_c::CreateInitCall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/CreateInitCall__12daObjCarry_cFv.s"
 }
@@ -2194,7 +2331,7 @@ ASM_FUNCTION(CreateInitCall__12daObjCarry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCarry_Draw__FP12daObjCarry_c) {
+asm void daObjCarry_Draw(daObjCarry_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/daObjCarry_Draw__FP12daObjCarry_c.s"
 }
@@ -2205,7 +2342,7 @@ ASM_FUNCTION(daObjCarry_Draw__FP12daObjCarry_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCarry_Execute__FP12daObjCarry_c) {
+asm void daObjCarry_Execute(daObjCarry_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/daObjCarry_Execute__FP12daObjCarry_c.s"
 }
@@ -2216,7 +2353,7 @@ ASM_FUNCTION(daObjCarry_Execute__FP12daObjCarry_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCarry_Delete__FP12daObjCarry_c) {
+asm void daObjCarry_Delete(daObjCarry_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/daObjCarry_Delete__FP12daObjCarry_c.s"
 }
@@ -2227,7 +2364,7 @@ ASM_FUNCTION(daObjCarry_Delete__FP12daObjCarry_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCarry_Create__FP10fopAc_ac_c) {
+asm void daObjCarry_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/daObjCarry_Create__FP10fopAc_ac_c.s"
 }
@@ -2238,7 +2375,7 @@ ASM_FUNCTION(daObjCarry_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/__dt__10cCcD_GSttsFv.s"
 }
@@ -2249,7 +2386,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804798D8) {
+extern "C" asm void func_804798D8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_804798D8.s"
 }
@@ -2260,7 +2397,7 @@ ASM_FUNCTION(func_804798D8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804798F4) {
+extern "C" asm void func_804798F4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_804798F4.s"
 }
@@ -2271,7 +2408,7 @@ ASM_FUNCTION(func_804798F4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804798FC) {
+extern "C" asm void func_804798FC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_804798FC.s"
 }

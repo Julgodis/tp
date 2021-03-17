@@ -6,144 +6,331 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct THPVideoInfo;
+struct daMP_THPReadBuffer;
+struct daMP_c;
+struct dDlst_base_c;
+struct _GXRenderModeObj;
+struct fopAc_ac_c;
+struct THPAudioInfo;
+
+struct daMP_THPReadBuffer {
+};
+
+struct _GXRenderModeObj {
+};
+
+struct mDoGph_gInf_c {
+	void fadeIn(f32);
+	void isFade();
+	void setFrameRate(u16);
+};
+
+struct THPVideoInfo {
+};
+
+struct THPAudioInfo {
+};
+
+struct JUTVideo {
+	void getRenderMode() const;
+	void getManager();
+};
+
+struct dComIfG_play_c {
+	void getEvent();
+};
+
+struct daMP_c {
+	void daMP_c_Get_arg_demoNo();
+	void daMP_c_Get_arg_movieNo();
+	void daMP_c_Init();
+	void daMP_c_Finish();
+	void daMP_c_Main();
+	void daMP_c_Draw();
+	void daMP_c_Callback_Init(fopAc_ac_c*);
+	daMP_c();
+	void daMP_c_Callback_Finish(daMP_c*);
+	void daMP_c_Callback_Main(daMP_c*);
+	void daMP_c_Callback_Draw(daMP_c*);
+};
+
+struct JFWDisplay {
+	void setFrameRate(u16);
+	void getManager();
+};
+
+struct daMP_Dlst_base_c {
+	void draw();
+	daMP_Dlst_base_c();
+};
+
+struct dDlst_base_c {
+	dDlst_base_c();
+	void draw();
+};
+
+struct dDlst_list_c {
+	void set2DOpa(dDlst_base_c*);
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void THPAudioDecode();
-extern "C" extern void __THPAudioGetNewSample();
-extern "C" extern void __THPAudioInitialize();
-extern "C" extern void THPVideoDecode();
-extern "C" extern void __THPSetupBuffers();
-extern "C" extern void __THPReadFrameHeader();
-extern "C" extern void __THPReadScaneHeader();
-extern "C" extern void __THPReadQuantizationTable();
-extern "C" extern void __THPReadHuffmanTableSpecification();
-extern "C" extern void __THPHuffGenerateSizeTable();
-extern "C" extern void __THPHuffGenerateCodeTable();
-extern "C" extern void __THPHuffGenerateDecoderTables();
-extern "C" extern void __THPRestartDefinition();
-extern "C" extern void __THPPrepBitStream();
-extern "C" extern void __THPDecompressYUV();
-extern "C" extern void __THPGQRRestore();
-extern "C" extern void __THPGQRSetup();
-extern "C" extern void __THPDecompressiMCURow512x448();
-extern "C" extern void __THPInverseDCTY8();
-extern "C" extern void __THPInverseDCTNoYPos();
-extern "C" extern void __THPDecompressiMCURow640x480();
-extern "C" extern void __THPDecompressiMCURowNxN();
-extern "C" extern void __THPHuffDecodeDCTCompY();
-extern "C" extern void __THPHuffDecodeTab();
-extern "C" extern void __THPHuffDecodeDCTCompU();
-extern "C" extern void __THPHuffDecodeDCTCompV();
-extern "C" extern void THPInit();
-extern "C" extern void OSInitFastCast();
-extern "C" extern void daMP_PopReadedBuffer__Fv();
-extern "C" extern void daMP_PushReadedBuffer__FPv();
-extern "C" extern void daMP_PopFreeReadBuffer__Fv();
-extern "C" extern void daMP_PushFreeReadBuffer__FPv();
-extern "C" extern void daMP_PopReadedBuffer2__Fv();
-extern "C" extern void daMP_PushReadedBuffer2__FPv();
-extern "C" extern void daMP_ReadThreadStart__Fv();
-extern "C" extern void daMP_ReadThreadCancel__Fv();
-extern "C" extern void daMP_Reader__FPv();
-extern "C" extern void daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer();
-extern "C" extern void daMP_CreateReadThread__Fl();
-extern "C" extern void daMP_PopFreeTextureSet__Fv();
-extern "C" extern void daMP_PushFreeTextureSet__FPv();
-extern "C" extern void daMP_PopDecodedTextureSet__Fl();
-extern "C" extern void daMP_PushDecodedTextureSet__FPv();
-extern "C" extern void daMP_VideoDecode__FP18daMP_THPReadBuffer();
-extern "C" extern void daMP_VideoDecoder__FPv();
-extern "C" extern void daMP_VideoDecoderForOnMemory__FPv();
-extern "C" extern void daMP_CreateVideoDecodeThread__FlPUc();
-extern "C" extern void daMP_VideoDecodeThreadStart__Fv();
-extern "C" extern void daMP_VideoDecodeThreadCancel__Fv();
-extern "C" extern void daMP_PopFreeAudioBuffer__Fv();
-extern "C" extern void daMP_PushFreeAudioBuffer__FPv();
-extern "C" extern void daMP_PopDecodedAudioBuffer__Fl();
-extern "C" extern void daMP_PushDecodedAudioBuffer__FPv();
-extern "C" extern void daMP_AudioDecode__FP18daMP_THPReadBuffer();
-extern "C" extern void daMP_AudioDecoder__FPv();
-extern "C" extern void daMP_AudioDecoderForOnMemory__FPv();
-extern "C" extern void daMP_CreateAudioDecodeThread__FlPUc();
-extern "C" extern void daMP_AudioDecodeThreadStart__Fv();
-extern "C" extern void daMP_AudioDecodeThreadCancel__Fv();
-extern "C" extern void daMP_THPGXRestore__Fv();
-extern "C" extern void daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj();
-extern "C" extern void GXSetTexCoordGen();
-extern "C" extern void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss();
-extern "C" extern void GXEnd();
-extern "C" extern void GXTexCoord2u16();
-extern "C" extern void GXPosition3s16();
-extern "C" extern void daMP_MixAudio__FPsPsUl();
-extern "C" extern void daMP_audioCallbackWithMSound__Fl();
-extern "C" extern void daMP_audioInitWithMSound__Fv();
-extern "C" extern void daMP_audioQuitWithMSound__Fv();
-extern "C" extern void daMP_PushUsedTextureSet__FPv();
-extern "C" extern void daMP_PopUsedTextureSet__Fv();
-extern "C" extern void daMP_THPPlayerInit__Fl();
-extern "C" extern void daMP_THPPlayerQuit__Fv();
-extern "C" extern void daMP_THPPlayerOpen__FPCci();
-extern "C" extern void daMP_THPPlayerClose__Fv();
-extern "C" extern void daMP_THPPlayerCalcNeedMemory__Fv();
-extern "C" extern void daMP_THPPlayerSetBuffer__FPUc();
-extern "C" extern void daMP_InitAllMessageQueue__Fv();
-extern "C" extern void daMP_ProperTimingForStart__Fv();
-extern "C" extern void daMP_ProperTimingForGettingNextFrame__Fv();
-extern "C" extern void daMP_PlayControl__FUl();
-extern "C" extern void daMP_WaitUntilPrepare__Fv();
-extern "C" extern void daMP_PrepareReady__Fi();
-extern "C" extern void daMP_THPPlayerPrepare__Flll();
-extern "C" extern void daMP_THPPlayerDrawDone__Fv();
-extern "C" extern void daMP_THPPlayerPlay__Fv();
-extern "C" extern void daMP_THPPlayerStop__Fv();
-extern "C" extern void daMP_THPPlayerPause__Fv();
-extern "C" extern void daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl();
-extern "C" extern void fadeIn__13mDoGph_gInf_cFf();
-extern "C" extern void isFade__13mDoGph_gInf_cFv();
-extern "C" extern void daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo();
-extern "C" extern void daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo();
-extern "C" extern void daMP_THPPlayerGetTotalFrame__Fv();
-extern "C" extern void daMP_THPPlayerGetState__Fv();
-extern "C" extern void daMP_THPPlayerSetVolume__Fll();
-extern "C" extern void daMP_ActivePlayer_Init__FPCc();
-extern "C" extern void getRenderMode__8JUTVideoCFv();
-extern "C" extern void getManager__8JUTVideoFv();
-extern "C" extern void daMP_ActivePlayer_Finish__Fv();
-extern "C" extern void JKRFree__FPv();
-extern "C" extern void daMP_ActivePlayer_Main__Fv();
-extern "C" extern void daMP_ActivePlayer_Draw__Fv();
-extern "C" extern void dComIfGp_event_reset__Fv();
-extern "C" extern void getEvent__14dComIfG_play_cFv();
-extern "C" extern void daMP_Get_MovieRestFrame__Fv();
-extern "C" extern void daMP_Set_PercentMovieVolume__Ff();
-extern "C" extern void daMP_c_Get_arg_demoNo__6daMP_cFv();
-extern "C" extern void fopAcM_GetParam__FPCv();
-extern "C" extern void fpcM_GetParam__FPCv();
-extern "C" extern void daMP_c_Get_arg_movieNo__6daMP_cFv();
-extern "C" extern void daMP_c_Init__6daMP_cFv();
-extern "C" extern void setFrameRate__13mDoGph_gInf_cFUs();
-extern "C" extern void setFrameRate__10JFWDisplayFUs();
-extern "C" extern void getManager__10JFWDisplayFv();
-extern "C" extern void daMP_c_Finish__6daMP_cFv();
-extern "C" extern void daMP_c_Main__6daMP_cFv();
-extern "C" extern void draw__16daMP_Dlst_base_cFv();
-extern "C" extern void daMP_c_Draw__6daMP_cFv();
-extern "C" extern void dComIfGd_set2DOpa__FP12dDlst_base_c();
-extern "C" extern void set2DOpa__12dDlst_list_cFP12dDlst_base_c();
-extern "C" extern void daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c();
-extern "C" extern void fopAcM_OnCondition__FP10fopAc_ac_cUl();
-extern "C" extern void __ct__6daMP_cFv();
-extern "C" extern void __nw__FUlPv();
-extern "C" extern void fopAcM_CheckCondition__FP10fopAc_ac_cUl();
-extern "C" extern void daMP_c_Callback_Finish__6daMP_cFP6daMP_c();
-extern "C" extern void daMP_c_Callback_Main__6daMP_cFP6daMP_c();
-extern "C" extern void daMP_c_Callback_Draw__6daMP_cFP6daMP_c();
-extern "C" extern void daMP_Callback_Dummy__FP6daMP_c();
-extern "C" extern void __sinit_d_a_movie_player_cpp();
-extern "C" extern void __ct__16daMP_Dlst_base_cFv();
-extern "C" extern void __ct__12dDlst_base_cFv();
-extern "C" extern void draw__12dDlst_base_cFv();
+extern "C" void THPAudioDecode();
+extern "C" void __THPAudioGetNewSample();
+extern "C" void __THPAudioInitialize();
+extern "C" void THPVideoDecode();
+extern "C" void __THPSetupBuffers();
+extern "C" void __THPReadFrameHeader();
+extern "C" void __THPReadScaneHeader();
+extern "C" void __THPReadQuantizationTable();
+extern "C" void __THPReadHuffmanTableSpecification();
+extern "C" void __THPHuffGenerateSizeTable();
+extern "C" void __THPHuffGenerateCodeTable();
+extern "C" void __THPHuffGenerateDecoderTables();
+extern "C" void __THPRestartDefinition();
+extern "C" void __THPPrepBitStream();
+extern "C" void __THPDecompressYUV();
+extern "C" void __THPGQRRestore();
+extern "C" void __THPGQRSetup();
+extern "C" void __THPDecompressiMCURow512x448();
+extern "C" void __THPInverseDCTY8();
+extern "C" void __THPInverseDCTNoYPos();
+extern "C" void __THPDecompressiMCURow640x480();
+extern "C" void __THPDecompressiMCURowNxN();
+extern "C" void __THPHuffDecodeDCTCompY();
+extern "C" void __THPHuffDecodeTab();
+extern "C" void __THPHuffDecodeDCTCompU();
+extern "C" void __THPHuffDecodeDCTCompV();
+extern "C" void THPInit();
+extern "C" void OSInitFastCast();
+void daMP_PopReadedBuffer();
+void daMP_PushReadedBuffer(void*);
+void daMP_PopFreeReadBuffer();
+void daMP_PushFreeReadBuffer(void*);
+void daMP_PopReadedBuffer2();
+void daMP_PushReadedBuffer2(void*);
+void daMP_ReadThreadStart();
+void daMP_ReadThreadCancel();
+void daMP_Reader(void*);
+void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer*);
+extern "C" void daMP_CreateReadThread__Fl();
+void daMP_PopFreeTextureSet();
+void daMP_PushFreeTextureSet(void*);
+extern "C" void daMP_PopDecodedTextureSet__Fl();
+void daMP_PushDecodedTextureSet(void*);
+void daMP_VideoDecode(daMP_THPReadBuffer*);
+void daMP_VideoDecoder(void*);
+void daMP_VideoDecoderForOnMemory(void*);
+extern "C" void daMP_CreateVideoDecodeThread__FlPUc();
+void daMP_VideoDecodeThreadStart();
+void daMP_VideoDecodeThreadCancel();
+void daMP_PopFreeAudioBuffer();
+void daMP_PushFreeAudioBuffer(void*);
+extern "C" void daMP_PopDecodedAudioBuffer__Fl();
+void daMP_PushDecodedAudioBuffer(void*);
+void daMP_AudioDecode(daMP_THPReadBuffer*);
+void daMP_AudioDecoder(void*);
+void daMP_AudioDecoderForOnMemory(void*);
+extern "C" void daMP_CreateAudioDecodeThread__FlPUc();
+void daMP_AudioDecodeThreadStart();
+void daMP_AudioDecodeThreadCancel();
+void daMP_THPGXRestore();
+void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const*);
+extern "C" void GXSetTexCoordGen();
+extern "C" void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss();
+extern "C" void GXEnd();
+extern "C" void GXTexCoord2u16();
+extern "C" void GXPosition3s16();
+extern "C" void daMP_MixAudio__FPsPsUl();
+extern "C" void daMP_audioCallbackWithMSound__Fl();
+void daMP_audioInitWithMSound();
+void daMP_audioQuitWithMSound();
+void daMP_PushUsedTextureSet(void*);
+void daMP_PopUsedTextureSet();
+extern "C" void daMP_THPPlayerInit__Fl();
+void daMP_THPPlayerQuit();
+extern "C" void daMP_THPPlayerOpen__FPCci();
+void daMP_THPPlayerClose();
+void daMP_THPPlayerCalcNeedMemory();
+void daMP_THPPlayerSetBuffer(u8*);
+void daMP_InitAllMessageQueue();
+void daMP_ProperTimingForStart();
+void daMP_ProperTimingForGettingNextFrame();
+void daMP_PlayControl(u32);
+void daMP_WaitUntilPrepare();
+void daMP_PrepareReady(s32);
+extern "C" void daMP_THPPlayerPrepare__Flll();
+void daMP_THPPlayerDrawDone();
+void daMP_THPPlayerPlay();
+void daMP_THPPlayerStop();
+void daMP_THPPlayerPause();
+void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const*, u32, u32, u32, u32);
+void daMP_THPPlayerGetVideoInfo(THPVideoInfo*);
+void daMP_THPPlayerGetAudioInfo(THPAudioInfo*);
+void daMP_THPPlayerGetTotalFrame();
+void daMP_THPPlayerGetState();
+extern "C" void daMP_THPPlayerSetVolume__Fll();
+extern "C" void daMP_ActivePlayer_Init__FPCc();
+void daMP_ActivePlayer_Finish();
+void JKRFree(void*);
+void daMP_ActivePlayer_Main();
+void daMP_ActivePlayer_Draw();
+void dComIfGp_event_reset();
+void daMP_Get_MovieRestFrame();
+void daMP_Set_PercentMovieVolume(f32);
+void fopAcM_GetParam(void const*);
+void fpcM_GetParam(void const*);
+void dComIfGd_set2DOpa(dDlst_base_c*);
+void fopAcM_OnCondition(fopAc_ac_c*, u32);
+void* operator new(u32, void*);
+void fopAcM_CheckCondition(fopAc_ac_c*, u32);
+bool daMP_Callback_Dummy(daMP_c*);
+extern "C" void __sinit_d_a_movie_player_cpp();
+
+extern "C" void THPAudioDecode();
+extern "C" void __THPAudioGetNewSample();
+extern "C" void __THPAudioInitialize();
+extern "C" void THPVideoDecode();
+extern "C" void __THPSetupBuffers();
+extern "C" void __THPReadFrameHeader();
+extern "C" void __THPReadScaneHeader();
+extern "C" void __THPReadQuantizationTable();
+extern "C" void __THPReadHuffmanTableSpecification();
+extern "C" void __THPHuffGenerateSizeTable();
+extern "C" void __THPHuffGenerateCodeTable();
+extern "C" void __THPHuffGenerateDecoderTables();
+extern "C" void __THPRestartDefinition();
+extern "C" void __THPPrepBitStream();
+extern "C" void __THPDecompressYUV();
+extern "C" void __THPGQRRestore();
+extern "C" void __THPGQRSetup();
+extern "C" void __THPDecompressiMCURow512x448();
+extern "C" void __THPInverseDCTY8();
+extern "C" void __THPInverseDCTNoYPos();
+extern "C" void __THPDecompressiMCURow640x480();
+extern "C" void __THPDecompressiMCURowNxN();
+extern "C" void __THPHuffDecodeDCTCompY();
+extern "C" void __THPHuffDecodeTab();
+extern "C" void __THPHuffDecodeDCTCompU();
+extern "C" void __THPHuffDecodeDCTCompV();
+extern "C" void THPInit();
+extern "C" void OSInitFastCast();
+extern "C" void daMP_PopReadedBuffer__Fv();
+extern "C" void daMP_PushReadedBuffer__FPv();
+extern "C" void daMP_PopFreeReadBuffer__Fv();
+extern "C" void daMP_PushFreeReadBuffer__FPv();
+extern "C" void daMP_PopReadedBuffer2__Fv();
+extern "C" void daMP_PushReadedBuffer2__FPv();
+extern "C" void daMP_ReadThreadStart__Fv();
+extern "C" void daMP_ReadThreadCancel__Fv();
+extern "C" void daMP_Reader__FPv();
+extern "C" void daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer();
+extern "C" void daMP_CreateReadThread__Fl();
+extern "C" void daMP_PopFreeTextureSet__Fv();
+extern "C" void daMP_PushFreeTextureSet__FPv();
+extern "C" void daMP_PopDecodedTextureSet__Fl();
+extern "C" void daMP_PushDecodedTextureSet__FPv();
+extern "C" void daMP_VideoDecode__FP18daMP_THPReadBuffer();
+extern "C" void daMP_VideoDecoder__FPv();
+extern "C" void daMP_VideoDecoderForOnMemory__FPv();
+extern "C" void daMP_CreateVideoDecodeThread__FlPUc();
+extern "C" void daMP_VideoDecodeThreadStart__Fv();
+extern "C" void daMP_VideoDecodeThreadCancel__Fv();
+extern "C" void daMP_PopFreeAudioBuffer__Fv();
+extern "C" void daMP_PushFreeAudioBuffer__FPv();
+extern "C" void daMP_PopDecodedAudioBuffer__Fl();
+extern "C" void daMP_PushDecodedAudioBuffer__FPv();
+extern "C" void daMP_AudioDecode__FP18daMP_THPReadBuffer();
+extern "C" void daMP_AudioDecoder__FPv();
+extern "C" void daMP_AudioDecoderForOnMemory__FPv();
+extern "C" void daMP_CreateAudioDecodeThread__FlPUc();
+extern "C" void daMP_AudioDecodeThreadStart__Fv();
+extern "C" void daMP_AudioDecodeThreadCancel__Fv();
+extern "C" void daMP_THPGXRestore__Fv();
+extern "C" void daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj();
+extern "C" void GXSetTexCoordGen();
+extern "C" void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss();
+extern "C" void GXEnd();
+extern "C" void GXTexCoord2u16();
+extern "C" void GXPosition3s16();
+extern "C" void daMP_MixAudio__FPsPsUl();
+extern "C" void daMP_audioCallbackWithMSound__Fl();
+extern "C" void daMP_audioInitWithMSound__Fv();
+extern "C" void daMP_audioQuitWithMSound__Fv();
+extern "C" void daMP_PushUsedTextureSet__FPv();
+extern "C" void daMP_PopUsedTextureSet__Fv();
+extern "C" void daMP_THPPlayerInit__Fl();
+extern "C" void daMP_THPPlayerQuit__Fv();
+extern "C" void daMP_THPPlayerOpen__FPCci();
+extern "C" void daMP_THPPlayerClose__Fv();
+extern "C" void daMP_THPPlayerCalcNeedMemory__Fv();
+extern "C" void daMP_THPPlayerSetBuffer__FPUc();
+extern "C" void daMP_InitAllMessageQueue__Fv();
+extern "C" void daMP_ProperTimingForStart__Fv();
+extern "C" void daMP_ProperTimingForGettingNextFrame__Fv();
+extern "C" void daMP_PlayControl__FUl();
+extern "C" void daMP_WaitUntilPrepare__Fv();
+extern "C" void daMP_PrepareReady__Fi();
+extern "C" void daMP_THPPlayerPrepare__Flll();
+extern "C" void daMP_THPPlayerDrawDone__Fv();
+extern "C" void daMP_THPPlayerPlay__Fv();
+extern "C" void daMP_THPPlayerStop__Fv();
+extern "C" void daMP_THPPlayerPause__Fv();
+extern "C" void daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl();
+extern "C" void fadeIn__13mDoGph_gInf_cFf();
+extern "C" void isFade__13mDoGph_gInf_cFv();
+extern "C" void daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo();
+extern "C" void daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo();
+extern "C" void daMP_THPPlayerGetTotalFrame__Fv();
+extern "C" void daMP_THPPlayerGetState__Fv();
+extern "C" void daMP_THPPlayerSetVolume__Fll();
+extern "C" void daMP_ActivePlayer_Init__FPCc();
+extern "C" void getRenderMode__8JUTVideoCFv();
+extern "C" void getManager__8JUTVideoFv();
+extern "C" void daMP_ActivePlayer_Finish__Fv();
+extern "C" void JKRFree__FPv();
+extern "C" void daMP_ActivePlayer_Main__Fv();
+extern "C" void daMP_ActivePlayer_Draw__Fv();
+extern "C" void dComIfGp_event_reset__Fv();
+extern "C" void getEvent__14dComIfG_play_cFv();
+extern "C" void daMP_Get_MovieRestFrame__Fv();
+extern "C" void daMP_Set_PercentMovieVolume__Ff();
+extern "C" void daMP_c_Get_arg_demoNo__6daMP_cFv();
+extern "C" void fopAcM_GetParam__FPCv();
+extern "C" void fpcM_GetParam__FPCv();
+extern "C" void daMP_c_Get_arg_movieNo__6daMP_cFv();
+extern "C" void daMP_c_Init__6daMP_cFv();
+extern "C" void setFrameRate__13mDoGph_gInf_cFUs();
+extern "C" void setFrameRate__10JFWDisplayFUs();
+extern "C" void getManager__10JFWDisplayFv();
+extern "C" void daMP_c_Finish__6daMP_cFv();
+extern "C" void daMP_c_Main__6daMP_cFv();
+extern "C" void draw__16daMP_Dlst_base_cFv();
+extern "C" void daMP_c_Draw__6daMP_cFv();
+extern "C" void dComIfGd_set2DOpa__FP12dDlst_base_c();
+extern "C" void set2DOpa__12dDlst_list_cFP12dDlst_base_c();
+extern "C" void daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c();
+extern "C" void fopAcM_OnCondition__FP10fopAc_ac_cUl();
+extern "C" void __ct__6daMP_cFv();
+extern "C" void* __nw__FUlPv();
+extern "C" void fopAcM_CheckCondition__FP10fopAc_ac_cUl();
+extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c();
+extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c();
+extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c();
+extern "C" bool daMP_Callback_Dummy__FP6daMP_c();
+extern "C" void __sinit_d_a_movie_player_cpp();
+extern "C" void __ct__16daMP_Dlst_base_cFv();
+extern "C" void __ct__12dDlst_base_cFv();
+extern "C" void draw__12dDlst_base_cFv();
 SECTION_RODATA extern const u8 __THPJpegNaturalOrder[80];
 SECTION_RODATA extern const u8 __THPAANScaleFactor[64];
 SECTION_RODATA extern const u8 lit_3998[8];
@@ -283,7 +470,9 @@ SECTION_BSS extern u8 data_80945B70[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -293,7 +482,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(THPAudioDecode) {
+extern "C" asm void THPAudioDecode() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/THPAudioDecode.s"
 }
@@ -304,7 +493,7 @@ ASM_FUNCTION(THPAudioDecode) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPAudioGetNewSample) {
+extern "C" asm void __THPAudioGetNewSample() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPAudioGetNewSample.s"
 }
@@ -315,7 +504,7 @@ ASM_FUNCTION(__THPAudioGetNewSample) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPAudioInitialize) {
+extern "C" asm void __THPAudioInitialize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPAudioInitialize.s"
 }
@@ -326,7 +515,7 @@ ASM_FUNCTION(__THPAudioInitialize) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(THPVideoDecode) {
+extern "C" asm void THPVideoDecode() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/THPVideoDecode.s"
 }
@@ -337,7 +526,7 @@ ASM_FUNCTION(THPVideoDecode) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPSetupBuffers) {
+extern "C" asm void __THPSetupBuffers() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPSetupBuffers.s"
 }
@@ -348,7 +537,7 @@ ASM_FUNCTION(__THPSetupBuffers) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPReadFrameHeader) {
+extern "C" asm void __THPReadFrameHeader() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPReadFrameHeader.s"
 }
@@ -359,7 +548,7 @@ ASM_FUNCTION(__THPReadFrameHeader) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPReadScaneHeader) {
+extern "C" asm void __THPReadScaneHeader() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPReadScaneHeader.s"
 }
@@ -370,7 +559,7 @@ ASM_FUNCTION(__THPReadScaneHeader) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPReadQuantizationTable) {
+extern "C" asm void __THPReadQuantizationTable() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPReadQuantizationTable.s"
 }
@@ -381,7 +570,7 @@ ASM_FUNCTION(__THPReadQuantizationTable) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPReadHuffmanTableSpecification) {
+extern "C" asm void __THPReadHuffmanTableSpecification() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPReadHuffmanTableSpecification.s"
 }
@@ -392,7 +581,7 @@ ASM_FUNCTION(__THPReadHuffmanTableSpecification) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffGenerateSizeTable) {
+extern "C" asm void __THPHuffGenerateSizeTable() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffGenerateSizeTable.s"
 }
@@ -403,7 +592,7 @@ ASM_FUNCTION(__THPHuffGenerateSizeTable) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffGenerateCodeTable) {
+extern "C" asm void __THPHuffGenerateCodeTable() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffGenerateCodeTable.s"
 }
@@ -414,7 +603,7 @@ ASM_FUNCTION(__THPHuffGenerateCodeTable) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffGenerateDecoderTables) {
+extern "C" asm void __THPHuffGenerateDecoderTables() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffGenerateDecoderTables.s"
 }
@@ -425,7 +614,7 @@ ASM_FUNCTION(__THPHuffGenerateDecoderTables) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPRestartDefinition) {
+extern "C" asm void __THPRestartDefinition() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPRestartDefinition.s"
 }
@@ -436,7 +625,7 @@ ASM_FUNCTION(__THPRestartDefinition) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPPrepBitStream) {
+extern "C" asm void __THPPrepBitStream() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPPrepBitStream.s"
 }
@@ -447,7 +636,7 @@ ASM_FUNCTION(__THPPrepBitStream) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPDecompressYUV) {
+extern "C" asm void __THPDecompressYUV() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPDecompressYUV.s"
 }
@@ -458,7 +647,7 @@ ASM_FUNCTION(__THPDecompressYUV) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPGQRRestore) {
+extern "C" asm void __THPGQRRestore() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPGQRRestore.s"
 }
@@ -469,7 +658,7 @@ ASM_FUNCTION(__THPGQRRestore) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPGQRSetup) {
+extern "C" asm void __THPGQRSetup() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPGQRSetup.s"
 }
@@ -480,7 +669,7 @@ ASM_FUNCTION(__THPGQRSetup) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPDecompressiMCURow512x448) {
+extern "C" asm void __THPDecompressiMCURow512x448() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPDecompressiMCURow512x448.s"
 }
@@ -491,7 +680,7 @@ ASM_FUNCTION(__THPDecompressiMCURow512x448) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPInverseDCTY8) {
+extern "C" asm void __THPInverseDCTY8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPInverseDCTY8.s"
 }
@@ -502,7 +691,7 @@ ASM_FUNCTION(__THPInverseDCTY8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPInverseDCTNoYPos) {
+extern "C" asm void __THPInverseDCTNoYPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPInverseDCTNoYPos.s"
 }
@@ -513,7 +702,7 @@ ASM_FUNCTION(__THPInverseDCTNoYPos) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPDecompressiMCURow640x480) {
+extern "C" asm void __THPDecompressiMCURow640x480() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPDecompressiMCURow640x480.s"
 }
@@ -524,7 +713,7 @@ ASM_FUNCTION(__THPDecompressiMCURow640x480) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPDecompressiMCURowNxN) {
+extern "C" asm void __THPDecompressiMCURowNxN() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPDecompressiMCURowNxN.s"
 }
@@ -535,7 +724,7 @@ ASM_FUNCTION(__THPDecompressiMCURowNxN) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffDecodeDCTCompY) {
+extern "C" asm void __THPHuffDecodeDCTCompY() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffDecodeDCTCompY.s"
 }
@@ -546,7 +735,7 @@ ASM_FUNCTION(__THPHuffDecodeDCTCompY) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffDecodeTab) {
+extern "C" asm void __THPHuffDecodeTab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffDecodeTab.s"
 }
@@ -557,7 +746,7 @@ ASM_FUNCTION(__THPHuffDecodeTab) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffDecodeDCTCompU) {
+extern "C" asm void __THPHuffDecodeDCTCompU() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffDecodeDCTCompU.s"
 }
@@ -568,7 +757,7 @@ ASM_FUNCTION(__THPHuffDecodeDCTCompU) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__THPHuffDecodeDCTCompV) {
+extern "C" asm void __THPHuffDecodeDCTCompV() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__THPHuffDecodeDCTCompV.s"
 }
@@ -579,7 +768,7 @@ ASM_FUNCTION(__THPHuffDecodeDCTCompV) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(THPInit) {
+extern "C" asm void THPInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/THPInit.s"
 }
@@ -590,7 +779,7 @@ ASM_FUNCTION(THPInit) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSInitFastCast) {
+extern "C" asm void OSInitFastCast() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/OSInitFastCast.s"
 }
@@ -601,7 +790,7 @@ ASM_FUNCTION(OSInitFastCast) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopReadedBuffer__Fv) {
+asm void daMP_PopReadedBuffer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopReadedBuffer__Fv.s"
 }
@@ -612,7 +801,7 @@ ASM_FUNCTION(daMP_PopReadedBuffer__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushReadedBuffer__FPv) {
+asm void daMP_PushReadedBuffer(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushReadedBuffer__FPv.s"
 }
@@ -623,7 +812,7 @@ ASM_FUNCTION(daMP_PushReadedBuffer__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopFreeReadBuffer__Fv) {
+asm void daMP_PopFreeReadBuffer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeReadBuffer__Fv.s"
 }
@@ -634,7 +823,7 @@ ASM_FUNCTION(daMP_PopFreeReadBuffer__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushFreeReadBuffer__FPv) {
+asm void daMP_PushFreeReadBuffer(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeReadBuffer__FPv.s"
 }
@@ -645,7 +834,7 @@ ASM_FUNCTION(daMP_PushFreeReadBuffer__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopReadedBuffer2__Fv) {
+asm void daMP_PopReadedBuffer2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopReadedBuffer2__Fv.s"
 }
@@ -656,7 +845,7 @@ ASM_FUNCTION(daMP_PopReadedBuffer2__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushReadedBuffer2__FPv) {
+asm void daMP_PushReadedBuffer2(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushReadedBuffer2__FPv.s"
 }
@@ -667,7 +856,7 @@ ASM_FUNCTION(daMP_PushReadedBuffer2__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ReadThreadStart__Fv) {
+asm void daMP_ReadThreadStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ReadThreadStart__Fv.s"
 }
@@ -678,7 +867,7 @@ ASM_FUNCTION(daMP_ReadThreadStart__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ReadThreadCancel__Fv) {
+asm void daMP_ReadThreadCancel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ReadThreadCancel__Fv.s"
 }
@@ -689,7 +878,7 @@ ASM_FUNCTION(daMP_ReadThreadCancel__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_Reader__FPv) {
+asm void daMP_Reader(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Reader__FPv.s"
 }
@@ -700,7 +889,7 @@ ASM_FUNCTION(daMP_Reader__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer) {
+asm void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer.s"
 }
@@ -711,7 +900,7 @@ ASM_FUNCTION(daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_CreateReadThread__Fl) {
+extern "C" asm void daMP_CreateReadThread__Fl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateReadThread__Fl.s"
 }
@@ -722,7 +911,7 @@ ASM_FUNCTION(daMP_CreateReadThread__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopFreeTextureSet__Fv) {
+asm void daMP_PopFreeTextureSet() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeTextureSet__Fv.s"
 }
@@ -733,7 +922,7 @@ ASM_FUNCTION(daMP_PopFreeTextureSet__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushFreeTextureSet__FPv) {
+asm void daMP_PushFreeTextureSet(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeTextureSet__FPv.s"
 }
@@ -744,7 +933,7 @@ ASM_FUNCTION(daMP_PushFreeTextureSet__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopDecodedTextureSet__Fl) {
+extern "C" asm void daMP_PopDecodedTextureSet__Fl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedTextureSet__Fl.s"
 }
@@ -755,7 +944,7 @@ ASM_FUNCTION(daMP_PopDecodedTextureSet__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushDecodedTextureSet__FPv) {
+asm void daMP_PushDecodedTextureSet(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedTextureSet__FPv.s"
 }
@@ -766,7 +955,7 @@ ASM_FUNCTION(daMP_PushDecodedTextureSet__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_VideoDecode__FP18daMP_THPReadBuffer) {
+asm void daMP_VideoDecode(daMP_THPReadBuffer* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecode__FP18daMP_THPReadBuffer.s"
 }
@@ -777,7 +966,7 @@ ASM_FUNCTION(daMP_VideoDecode__FP18daMP_THPReadBuffer) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_VideoDecoder__FPv) {
+asm void daMP_VideoDecoder(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoder__FPv.s"
 }
@@ -788,7 +977,7 @@ ASM_FUNCTION(daMP_VideoDecoder__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_VideoDecoderForOnMemory__FPv) {
+asm void daMP_VideoDecoderForOnMemory(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoderForOnMemory__FPv.s"
 }
@@ -799,7 +988,7 @@ ASM_FUNCTION(daMP_VideoDecoderForOnMemory__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_CreateVideoDecodeThread__FlPUc) {
+extern "C" asm void daMP_CreateVideoDecodeThread__FlPUc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateVideoDecodeThread__FlPUc.s"
 }
@@ -810,7 +999,7 @@ ASM_FUNCTION(daMP_CreateVideoDecodeThread__FlPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_VideoDecodeThreadStart__Fv) {
+asm void daMP_VideoDecodeThreadStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadStart__Fv.s"
 }
@@ -821,7 +1010,7 @@ ASM_FUNCTION(daMP_VideoDecodeThreadStart__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_VideoDecodeThreadCancel__Fv) {
+asm void daMP_VideoDecodeThreadCancel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadCancel__Fv.s"
 }
@@ -832,7 +1021,7 @@ ASM_FUNCTION(daMP_VideoDecodeThreadCancel__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopFreeAudioBuffer__Fv) {
+asm void daMP_PopFreeAudioBuffer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeAudioBuffer__Fv.s"
 }
@@ -843,7 +1032,7 @@ ASM_FUNCTION(daMP_PopFreeAudioBuffer__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushFreeAudioBuffer__FPv) {
+asm void daMP_PushFreeAudioBuffer(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeAudioBuffer__FPv.s"
 }
@@ -854,7 +1043,7 @@ ASM_FUNCTION(daMP_PushFreeAudioBuffer__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopDecodedAudioBuffer__Fl) {
+extern "C" asm void daMP_PopDecodedAudioBuffer__Fl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedAudioBuffer__Fl.s"
 }
@@ -865,7 +1054,7 @@ ASM_FUNCTION(daMP_PopDecodedAudioBuffer__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushDecodedAudioBuffer__FPv) {
+asm void daMP_PushDecodedAudioBuffer(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedAudioBuffer__FPv.s"
 }
@@ -876,7 +1065,7 @@ ASM_FUNCTION(daMP_PushDecodedAudioBuffer__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_AudioDecode__FP18daMP_THPReadBuffer) {
+asm void daMP_AudioDecode(daMP_THPReadBuffer* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecode__FP18daMP_THPReadBuffer.s"
 }
@@ -887,7 +1076,7 @@ ASM_FUNCTION(daMP_AudioDecode__FP18daMP_THPReadBuffer) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_AudioDecoder__FPv) {
+asm void daMP_AudioDecoder(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoder__FPv.s"
 }
@@ -898,7 +1087,7 @@ ASM_FUNCTION(daMP_AudioDecoder__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_AudioDecoderForOnMemory__FPv) {
+asm void daMP_AudioDecoderForOnMemory(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoderForOnMemory__FPv.s"
 }
@@ -909,7 +1098,7 @@ ASM_FUNCTION(daMP_AudioDecoderForOnMemory__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_CreateAudioDecodeThread__FlPUc) {
+extern "C" asm void daMP_CreateAudioDecodeThread__FlPUc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateAudioDecodeThread__FlPUc.s"
 }
@@ -920,7 +1109,7 @@ ASM_FUNCTION(daMP_CreateAudioDecodeThread__FlPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_AudioDecodeThreadStart__Fv) {
+asm void daMP_AudioDecodeThreadStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadStart__Fv.s"
 }
@@ -931,7 +1120,7 @@ ASM_FUNCTION(daMP_AudioDecodeThreadStart__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_AudioDecodeThreadCancel__Fv) {
+asm void daMP_AudioDecodeThreadCancel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadCancel__Fv.s"
 }
@@ -942,7 +1131,7 @@ ASM_FUNCTION(daMP_AudioDecodeThreadCancel__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPGXRestore__Fv) {
+asm void daMP_THPGXRestore() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXRestore__Fv.s"
 }
@@ -953,7 +1142,7 @@ ASM_FUNCTION(daMP_THPGXRestore__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj) {
+asm void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj.s"
 }
@@ -964,7 +1153,7 @@ ASM_FUNCTION(daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetTexCoordGen) {
+extern "C" asm void GXSetTexCoordGen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXSetTexCoordGen.s"
 }
@@ -975,7 +1164,7 @@ ASM_FUNCTION(GXSetTexCoordGen) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss) {
+extern "C" asm void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss.s"
 }
@@ -983,21 +1172,16 @@ ASM_FUNCTION(daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss) {
 
 
 /* 80876DE4-80876DE8 0004+00 .text      GXEnd                                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(GXEnd) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXEnd.s"
+extern "C" void GXEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80876DE8-80876DF8 0010+00 .text      GXTexCoord2u16                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXTexCoord2u16) {
+extern "C" asm void GXTexCoord2u16() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXTexCoord2u16.s"
 }
@@ -1008,7 +1192,7 @@ ASM_FUNCTION(GXTexCoord2u16) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXPosition3s16) {
+extern "C" asm void GXPosition3s16() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXPosition3s16.s"
 }
@@ -1019,7 +1203,7 @@ ASM_FUNCTION(GXPosition3s16) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_MixAudio__FPsPsUl) {
+extern "C" asm void daMP_MixAudio__FPsPsUl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_MixAudio__FPsPsUl.s"
 }
@@ -1030,7 +1214,7 @@ ASM_FUNCTION(daMP_MixAudio__FPsPsUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_audioCallbackWithMSound__Fl) {
+extern "C" asm void daMP_audioCallbackWithMSound__Fl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioCallbackWithMSound__Fl.s"
 }
@@ -1041,7 +1225,7 @@ ASM_FUNCTION(daMP_audioCallbackWithMSound__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_audioInitWithMSound__Fv) {
+asm void daMP_audioInitWithMSound() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioInitWithMSound__Fv.s"
 }
@@ -1052,7 +1236,7 @@ ASM_FUNCTION(daMP_audioInitWithMSound__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_audioQuitWithMSound__Fv) {
+asm void daMP_audioQuitWithMSound() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioQuitWithMSound__Fv.s"
 }
@@ -1063,7 +1247,7 @@ ASM_FUNCTION(daMP_audioQuitWithMSound__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PushUsedTextureSet__FPv) {
+asm void daMP_PushUsedTextureSet(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushUsedTextureSet__FPv.s"
 }
@@ -1074,7 +1258,7 @@ ASM_FUNCTION(daMP_PushUsedTextureSet__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PopUsedTextureSet__Fv) {
+asm void daMP_PopUsedTextureSet() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopUsedTextureSet__Fv.s"
 }
@@ -1085,7 +1269,7 @@ ASM_FUNCTION(daMP_PopUsedTextureSet__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerInit__Fl) {
+extern "C" asm void daMP_THPPlayerInit__Fl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerInit__Fl.s"
 }
@@ -1096,7 +1280,7 @@ ASM_FUNCTION(daMP_THPPlayerInit__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerQuit__Fv) {
+asm void daMP_THPPlayerQuit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerQuit__Fv.s"
 }
@@ -1107,7 +1291,7 @@ ASM_FUNCTION(daMP_THPPlayerQuit__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerOpen__FPCci) {
+extern "C" asm void daMP_THPPlayerOpen__FPCci() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerOpen__FPCci.s"
 }
@@ -1118,7 +1302,7 @@ ASM_FUNCTION(daMP_THPPlayerOpen__FPCci) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerClose__Fv) {
+asm void daMP_THPPlayerClose() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerClose__Fv.s"
 }
@@ -1129,7 +1313,7 @@ ASM_FUNCTION(daMP_THPPlayerClose__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerCalcNeedMemory__Fv) {
+asm void daMP_THPPlayerCalcNeedMemory() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerCalcNeedMemory__Fv.s"
 }
@@ -1140,7 +1324,7 @@ ASM_FUNCTION(daMP_THPPlayerCalcNeedMemory__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerSetBuffer__FPUc) {
+asm void daMP_THPPlayerSetBuffer(u8* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetBuffer__FPUc.s"
 }
@@ -1151,7 +1335,7 @@ ASM_FUNCTION(daMP_THPPlayerSetBuffer__FPUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_InitAllMessageQueue__Fv) {
+asm void daMP_InitAllMessageQueue() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_InitAllMessageQueue__Fv.s"
 }
@@ -1162,7 +1346,7 @@ ASM_FUNCTION(daMP_InitAllMessageQueue__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ProperTimingForStart__Fv) {
+asm void daMP_ProperTimingForStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForStart__Fv.s"
 }
@@ -1173,7 +1357,7 @@ ASM_FUNCTION(daMP_ProperTimingForStart__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ProperTimingForGettingNextFrame__Fv) {
+asm void daMP_ProperTimingForGettingNextFrame() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForGettingNextFrame__Fv.s"
 }
@@ -1184,7 +1368,7 @@ ASM_FUNCTION(daMP_ProperTimingForGettingNextFrame__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PlayControl__FUl) {
+asm void daMP_PlayControl(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PlayControl__FUl.s"
 }
@@ -1195,7 +1379,7 @@ ASM_FUNCTION(daMP_PlayControl__FUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_WaitUntilPrepare__Fv) {
+asm void daMP_WaitUntilPrepare() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_WaitUntilPrepare__Fv.s"
 }
@@ -1206,7 +1390,7 @@ ASM_FUNCTION(daMP_WaitUntilPrepare__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_PrepareReady__Fi) {
+asm void daMP_PrepareReady(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PrepareReady__Fi.s"
 }
@@ -1217,7 +1401,7 @@ ASM_FUNCTION(daMP_PrepareReady__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerPrepare__Flll) {
+extern "C" asm void daMP_THPPlayerPrepare__Flll() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPrepare__Flll.s"
 }
@@ -1228,7 +1412,7 @@ ASM_FUNCTION(daMP_THPPlayerPrepare__Flll) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerDrawDone__Fv) {
+asm void daMP_THPPlayerDrawDone() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawDone__Fv.s"
 }
@@ -1239,7 +1423,7 @@ ASM_FUNCTION(daMP_THPPlayerDrawDone__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerPlay__Fv) {
+asm void daMP_THPPlayerPlay() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPlay__Fv.s"
 }
@@ -1250,7 +1434,7 @@ ASM_FUNCTION(daMP_THPPlayerPlay__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerStop__Fv) {
+asm void daMP_THPPlayerStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerStop__Fv.s"
 }
@@ -1261,7 +1445,7 @@ ASM_FUNCTION(daMP_THPPlayerStop__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerPause__Fv) {
+asm void daMP_THPPlayerPause() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPause__Fv.s"
 }
@@ -1272,7 +1456,7 @@ ASM_FUNCTION(daMP_THPPlayerPause__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl) {
+asm void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const* field_0, u32 field_1, u32 field_2, u32 field_3, u32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl.s"
 }
@@ -1283,7 +1467,7 @@ ASM_FUNCTION(daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fadeIn__13mDoGph_gInf_cFf) {
+asm void mDoGph_gInf_c::fadeIn(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fadeIn__13mDoGph_gInf_cFf.s"
 }
@@ -1294,7 +1478,7 @@ ASM_FUNCTION(fadeIn__13mDoGph_gInf_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isFade__13mDoGph_gInf_cFv) {
+asm void mDoGph_gInf_c::isFade() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/isFade__13mDoGph_gInf_cFv.s"
 }
@@ -1305,7 +1489,7 @@ ASM_FUNCTION(isFade__13mDoGph_gInf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo) {
+asm void daMP_THPPlayerGetVideoInfo(THPVideoInfo* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo.s"
 }
@@ -1316,7 +1500,7 @@ ASM_FUNCTION(daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo) {
+asm void daMP_THPPlayerGetAudioInfo(THPAudioInfo* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo.s"
 }
@@ -1327,7 +1511,7 @@ ASM_FUNCTION(daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerGetTotalFrame__Fv) {
+asm void daMP_THPPlayerGetTotalFrame() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetTotalFrame__Fv.s"
 }
@@ -1338,7 +1522,7 @@ ASM_FUNCTION(daMP_THPPlayerGetTotalFrame__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerGetState__Fv) {
+asm void daMP_THPPlayerGetState() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetState__Fv.s"
 }
@@ -1349,7 +1533,7 @@ ASM_FUNCTION(daMP_THPPlayerGetState__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_THPPlayerSetVolume__Fll) {
+extern "C" asm void daMP_THPPlayerSetVolume__Fll() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetVolume__Fll.s"
 }
@@ -1360,7 +1544,7 @@ ASM_FUNCTION(daMP_THPPlayerSetVolume__Fll) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ActivePlayer_Init__FPCc) {
+extern "C" asm void daMP_ActivePlayer_Init__FPCc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Init__FPCc.s"
 }
@@ -1371,7 +1555,7 @@ ASM_FUNCTION(daMP_ActivePlayer_Init__FPCc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRenderMode__8JUTVideoCFv) {
+asm void JUTVideo::getRenderMode() const {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getRenderMode__8JUTVideoCFv.s"
 }
@@ -1382,7 +1566,7 @@ ASM_FUNCTION(getRenderMode__8JUTVideoCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getManager__8JUTVideoFv) {
+asm void JUTVideo::getManager() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__8JUTVideoFv.s"
 }
@@ -1393,7 +1577,7 @@ ASM_FUNCTION(getManager__8JUTVideoFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ActivePlayer_Finish__Fv) {
+asm void daMP_ActivePlayer_Finish() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Finish__Fv.s"
 }
@@ -1404,7 +1588,7 @@ ASM_FUNCTION(daMP_ActivePlayer_Finish__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JKRFree__FPv) {
+asm void JKRFree(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/JKRFree__FPv.s"
 }
@@ -1415,7 +1599,7 @@ ASM_FUNCTION(JKRFree__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ActivePlayer_Main__Fv) {
+asm void daMP_ActivePlayer_Main() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Main__Fv.s"
 }
@@ -1426,7 +1610,7 @@ ASM_FUNCTION(daMP_ActivePlayer_Main__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_ActivePlayer_Draw__Fv) {
+asm void daMP_ActivePlayer_Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Draw__Fv.s"
 }
@@ -1437,7 +1621,7 @@ ASM_FUNCTION(daMP_ActivePlayer_Draw__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_reset__Fv) {
+asm void dComIfGp_event_reset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGp_event_reset__Fv.s"
 }
@@ -1448,7 +1632,7 @@ ASM_FUNCTION(dComIfGp_event_reset__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEvent__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getEvent__14dComIfG_play_cFv.s"
 }
@@ -1459,7 +1643,7 @@ ASM_FUNCTION(getEvent__14dComIfG_play_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_Get_MovieRestFrame__Fv) {
+asm void daMP_Get_MovieRestFrame() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Get_MovieRestFrame__Fv.s"
 }
@@ -1470,7 +1654,7 @@ ASM_FUNCTION(daMP_Get_MovieRestFrame__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_Set_PercentMovieVolume__Ff) {
+asm void daMP_Set_PercentMovieVolume(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Set_PercentMovieVolume__Ff.s"
 }
@@ -1481,7 +1665,7 @@ ASM_FUNCTION(daMP_Set_PercentMovieVolume__Ff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Get_arg_demoNo__6daMP_cFv) {
+asm void daMP_c::daMP_c_Get_arg_demoNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_demoNo__6daMP_cFv.s"
 }
@@ -1492,7 +1676,7 @@ ASM_FUNCTION(daMP_c_Get_arg_demoNo__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcM_GetParam__FPCv) {
+asm void fopAcM_GetParam(void const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_GetParam__FPCv.s"
 }
@@ -1503,7 +1687,7 @@ ASM_FUNCTION(fopAcM_GetParam__FPCv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcM_GetParam__FPCv) {
+asm void fpcM_GetParam(void const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fpcM_GetParam__FPCv.s"
 }
@@ -1514,7 +1698,7 @@ ASM_FUNCTION(fpcM_GetParam__FPCv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Get_arg_movieNo__6daMP_cFv) {
+asm void daMP_c::daMP_c_Get_arg_movieNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_movieNo__6daMP_cFv.s"
 }
@@ -1525,7 +1709,7 @@ ASM_FUNCTION(daMP_c_Get_arg_movieNo__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Init__6daMP_cFv) {
+asm void daMP_c::daMP_c_Init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Init__6daMP_cFv.s"
 }
@@ -1536,7 +1720,7 @@ ASM_FUNCTION(daMP_c_Init__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFrameRate__13mDoGph_gInf_cFUs) {
+asm void mDoGph_gInf_c::setFrameRate(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__13mDoGph_gInf_cFUs.s"
 }
@@ -1547,7 +1731,7 @@ ASM_FUNCTION(setFrameRate__13mDoGph_gInf_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFrameRate__10JFWDisplayFUs) {
+asm void JFWDisplay::setFrameRate(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__10JFWDisplayFUs.s"
 }
@@ -1558,7 +1742,7 @@ ASM_FUNCTION(setFrameRate__10JFWDisplayFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getManager__10JFWDisplayFv) {
+asm void JFWDisplay::getManager() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__10JFWDisplayFv.s"
 }
@@ -1569,7 +1753,7 @@ ASM_FUNCTION(getManager__10JFWDisplayFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Finish__6daMP_cFv) {
+asm void daMP_c::daMP_c_Finish() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Finish__6daMP_cFv.s"
 }
@@ -1580,7 +1764,7 @@ ASM_FUNCTION(daMP_c_Finish__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Main__6daMP_cFv) {
+asm void daMP_c::daMP_c_Main() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Main__6daMP_cFv.s"
 }
@@ -1591,7 +1775,7 @@ ASM_FUNCTION(daMP_c_Main__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16daMP_Dlst_base_cFv) {
+asm void daMP_Dlst_base_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__16daMP_Dlst_base_cFv.s"
 }
@@ -1602,7 +1786,7 @@ ASM_FUNCTION(draw__16daMP_Dlst_base_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Draw__6daMP_cFv) {
+asm void daMP_c::daMP_c_Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Draw__6daMP_cFv.s"
 }
@@ -1613,7 +1797,7 @@ ASM_FUNCTION(daMP_c_Draw__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGd_set2DOpa__FP12dDlst_base_c) {
+asm void dComIfGd_set2DOpa(dDlst_base_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGd_set2DOpa__FP12dDlst_base_c.s"
 }
@@ -1624,7 +1808,7 @@ ASM_FUNCTION(dComIfGd_set2DOpa__FP12dDlst_base_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set2DOpa__12dDlst_list_cFP12dDlst_base_c) {
+asm void dDlst_list_c::set2DOpa(dDlst_base_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/set2DOpa__12dDlst_list_cFP12dDlst_base_c.s"
 }
@@ -1635,7 +1819,7 @@ ASM_FUNCTION(set2DOpa__12dDlst_list_cFP12dDlst_base_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c) {
+asm void daMP_c::daMP_c_Callback_Init(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c.s"
 }
@@ -1646,7 +1830,7 @@ ASM_FUNCTION(daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcM_OnCondition__FP10fopAc_ac_cUl) {
+asm void fopAcM_OnCondition(fopAc_ac_c* field_0, u32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_OnCondition__FP10fopAc_ac_cUl.s"
 }
@@ -1657,7 +1841,7 @@ ASM_FUNCTION(fopAcM_OnCondition__FP10fopAc_ac_cUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__6daMP_cFv) {
+asm daMP_c::daMP_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__6daMP_cFv.s"
 }
@@ -1668,7 +1852,7 @@ ASM_FUNCTION(__ct__6daMP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__nw__FUlPv) {
+asm void* operator new(u32 field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__nw__FUlPv.s"
 }
@@ -1679,7 +1863,7 @@ ASM_FUNCTION(__nw__FUlPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcM_CheckCondition__FP10fopAc_ac_cUl) {
+asm void fopAcM_CheckCondition(fopAc_ac_c* field_0, u32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_CheckCondition__FP10fopAc_ac_cUl.s"
 }
@@ -1690,7 +1874,7 @@ ASM_FUNCTION(fopAcM_CheckCondition__FP10fopAc_ac_cUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Callback_Finish__6daMP_cFP6daMP_c) {
+asm void daMP_c::daMP_c_Callback_Finish(daMP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Finish__6daMP_cFP6daMP_c.s"
 }
@@ -1701,7 +1885,7 @@ ASM_FUNCTION(daMP_c_Callback_Finish__6daMP_cFP6daMP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Callback_Main__6daMP_cFP6daMP_c) {
+asm void daMP_c::daMP_c_Callback_Main(daMP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Main__6daMP_cFP6daMP_c.s"
 }
@@ -1712,7 +1896,7 @@ ASM_FUNCTION(daMP_c_Callback_Main__6daMP_cFP6daMP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMP_c_Callback_Draw__6daMP_cFP6daMP_c) {
+asm void daMP_c::daMP_c_Callback_Draw(daMP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Draw__6daMP_cFP6daMP_c.s"
 }
@@ -1720,21 +1904,16 @@ ASM_FUNCTION(daMP_c_Callback_Draw__6daMP_cFP6daMP_c) {
 
 
 /* 80878FA8-80878FB0 0008+00 .text      daMP_Callback_Dummy__FP6daMP_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daMP_Callback_Dummy__FP6daMP_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Callback_Dummy__FP6daMP_c.s"
+bool daMP_Callback_Dummy(daMP_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80878FB0-80878FD8 0028+00 .text      __sinit_d_a_movie_player_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_movie_player_cpp) {
+extern "C" asm void __sinit_d_a_movie_player_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__sinit_d_a_movie_player_cpp.s"
 }
@@ -1745,7 +1924,7 @@ ASM_FUNCTION(__sinit_d_a_movie_player_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daMP_Dlst_base_cFv) {
+asm daMP_Dlst_base_c::daMP_Dlst_base_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__16daMP_Dlst_base_cFv.s"
 }
@@ -1756,7 +1935,7 @@ ASM_FUNCTION(__ct__16daMP_Dlst_base_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dDlst_base_cFv) {
+asm dDlst_base_c::dDlst_base_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__12dDlst_base_cFv.s"
 }
@@ -1764,14 +1943,9 @@ ASM_FUNCTION(__ct__12dDlst_base_cFv) {
 
 
 /* 80879024-80879028 0004+00 .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12dDlst_base_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

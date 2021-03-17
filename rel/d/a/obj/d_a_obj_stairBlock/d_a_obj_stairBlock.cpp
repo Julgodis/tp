@@ -6,31 +6,88 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daStairBlock_c;
+
+struct daStairBlock_HIO_c {
+	daStairBlock_HIO_c();
+	~daStairBlock_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daStairBlock_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void Execute();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct mDoExt_bckAnm {
+	~mDoExt_bckAnm();
+	mDoExt_bckAnm();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18daStairBlock_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__14daStairBlock_cFv();
-extern "C" extern void CreateHeap__14daStairBlock_cFv();
-extern "C" extern void create__14daStairBlock_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__13mDoExt_bckAnmFv();
-extern "C" extern void __ct__13mDoExt_bckAnmFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c();
-extern "C" extern void Execute__14daStairBlock_cFv();
-extern "C" extern void Draw__14daStairBlock_cFv();
-extern "C" extern void Delete__14daStairBlock_cFv();
-extern "C" extern void daStairBlock_Draw__FP14daStairBlock_c();
-extern "C" extern void daStairBlock_Execute__FP14daStairBlock_c();
-extern "C" extern void daStairBlock_Delete__FP14daStairBlock_c();
-extern "C" extern void daStairBlock_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__18daStairBlock_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_stairBlock_cpp();
+void daStairBlock_Draw(daStairBlock_c*);
+void daStairBlock_Execute(daStairBlock_c*);
+void daStairBlock_Delete(daStairBlock_c*);
+void daStairBlock_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_stairBlock_cpp();
+
+extern "C" void __ct__18daStairBlock_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daStairBlock_cFv();
+extern "C" void CreateHeap__14daStairBlock_cFv();
+extern "C" void create__14daStairBlock_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__13mDoExt_bckAnmFv();
+extern "C" void __ct__13mDoExt_bckAnmFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c();
+extern "C" void Execute__14daStairBlock_cFv();
+extern "C" void Draw__14daStairBlock_cFv();
+extern "C" void Delete__14daStairBlock_cFv();
+extern "C" void daStairBlock_Draw__FP14daStairBlock_c();
+extern "C" void daStairBlock_Execute__FP14daStairBlock_c();
+extern "C" void daStairBlock_Delete__FP14daStairBlock_c();
+extern "C" void daStairBlock_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daStairBlock_HIO_cFv();
+extern "C" void __sinit_d_a_obj_stairBlock_cpp();
 SECTION_RODATA extern const u8 lit_3651[4];
 SECTION_RODATA extern const u8 mCcDObjInfo__14daStairBlock_c[48];
 SECTION_RODATA extern const u8 l_bmdIdx[40];
@@ -57,8 +114,11 @@ SECTION_BSS extern u8 l_HIO[44];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -68,7 +128,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daStairBlock_HIO_cFv) {
+asm daStairBlock_HIO_c::daStairBlock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__ct__18daStairBlock_HIO_cFv.s"
 }
@@ -79,7 +139,7 @@ ASM_FUNCTION(__ct__18daStairBlock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -90,7 +150,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daStairBlock_cFv) {
+asm void daStairBlock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/setBaseMtx__14daStairBlock_cFv.s"
 }
@@ -101,7 +161,7 @@ ASM_FUNCTION(setBaseMtx__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daStairBlock_cFv) {
+asm void daStairBlock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/CreateHeap__14daStairBlock_cFv.s"
 }
@@ -112,7 +172,7 @@ ASM_FUNCTION(CreateHeap__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daStairBlock_cFv) {
+asm void daStairBlock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/create__14daStairBlock_cFv.s"
 }
@@ -123,7 +183,7 @@ ASM_FUNCTION(create__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__8dCcD_SphFv.s"
 }
@@ -134,7 +194,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__ct__8dCcD_SphFv.s"
 }
@@ -145,7 +205,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__8cM3dGSphFv.s"
 }
@@ -156,7 +216,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__8cM3dGAabFv.s"
 }
@@ -167,7 +227,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13mDoExt_bckAnmFv) {
+asm mDoExt_bckAnm::~mDoExt_bckAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__13mDoExt_bckAnmFv.s"
 }
@@ -178,7 +238,7 @@ ASM_FUNCTION(__dt__13mDoExt_bckAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13mDoExt_bckAnmFv) {
+asm mDoExt_bckAnm::mDoExt_bckAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__ct__13mDoExt_bckAnmFv.s"
 }
@@ -189,7 +249,7 @@ ASM_FUNCTION(__ct__13mDoExt_bckAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__12J3DFrameCtrlFv.s"
 }
@@ -200,7 +260,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c) {
+asm void daStairBlock_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c.s"
 }
@@ -211,7 +271,7 @@ ASM_FUNCTION(createHeapCallBack__14daStairBlock_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daStairBlock_cFv) {
+asm void daStairBlock_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/Execute__14daStairBlock_cFv.s"
 }
@@ -222,7 +282,7 @@ ASM_FUNCTION(Execute__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daStairBlock_cFv) {
+asm void daStairBlock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/Draw__14daStairBlock_cFv.s"
 }
@@ -233,7 +293,7 @@ ASM_FUNCTION(Draw__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daStairBlock_cFv) {
+asm void daStairBlock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/Delete__14daStairBlock_cFv.s"
 }
@@ -244,7 +304,7 @@ ASM_FUNCTION(Delete__14daStairBlock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daStairBlock_Draw__FP14daStairBlock_c) {
+asm void daStairBlock_Draw(daStairBlock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Draw__FP14daStairBlock_c.s"
 }
@@ -255,7 +315,7 @@ ASM_FUNCTION(daStairBlock_Draw__FP14daStairBlock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daStairBlock_Execute__FP14daStairBlock_c) {
+asm void daStairBlock_Execute(daStairBlock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Execute__FP14daStairBlock_c.s"
 }
@@ -266,7 +326,7 @@ ASM_FUNCTION(daStairBlock_Execute__FP14daStairBlock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daStairBlock_Delete__FP14daStairBlock_c) {
+asm void daStairBlock_Delete(daStairBlock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Delete__FP14daStairBlock_c.s"
 }
@@ -277,7 +337,7 @@ ASM_FUNCTION(daStairBlock_Delete__FP14daStairBlock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daStairBlock_Create__FP10fopAc_ac_c) {
+asm void daStairBlock_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/daStairBlock_Create__FP10fopAc_ac_c.s"
 }
@@ -288,7 +348,7 @@ ASM_FUNCTION(daStairBlock_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daStairBlock_HIO_cFv) {
+asm daStairBlock_HIO_c::~daStairBlock_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__dt__18daStairBlock_HIO_cFv.s"
 }
@@ -299,7 +359,7 @@ ASM_FUNCTION(__dt__18daStairBlock_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_stairBlock_cpp) {
+extern "C" asm void __sinit_d_a_obj_stairBlock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stairBlock/d_a_obj_stairBlock/__sinit_d_a_obj_stairBlock_cpp.s"
 }

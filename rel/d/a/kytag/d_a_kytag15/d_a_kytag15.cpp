@@ -6,16 +6,40 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct kytag15_class;
+
+struct kytag15_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daKytag15_Draw__FP13kytag15_class();
-extern "C" extern void daKytag15_Execute__FP13kytag15_class();
-extern "C" extern void daKytag15_IsDelete__FP13kytag15_class();
-extern "C" extern void daKytag15_Delete__FP13kytag15_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daKytag15_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
+void daKytag15_Draw(kytag15_class*);
+void daKytag15_Execute(kytag15_class*);
+bool daKytag15_IsDelete(kytag15_class*);
+void daKytag15_Delete(kytag15_class*);
+void useHeapInit(fopAc_ac_c*);
+void daKytag15_Create(fopAc_ac_c*);
+
+extern "C" void daKytag15_Draw__FP13kytag15_class();
+extern "C" void daKytag15_Execute__FP13kytag15_class();
+extern "C" bool daKytag15_IsDelete__FP13kytag15_class();
+extern "C" void daKytag15_Delete__FP13kytag15_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daKytag15_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
 SECTION_RODATA extern const u8 lit_3823[4];
 SECTION_RODATA extern const u32 lit_3824;
 SECTION_RODATA extern const u32 lit_3825;
@@ -34,7 +58,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag15_Draw__FP13kytag15_class) {
+asm void daKytag15_Draw(kytag15_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_Draw__FP13kytag15_class.s"
 }
@@ -55,7 +81,7 @@ ASM_FUNCTION(daKytag15_Draw__FP13kytag15_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag15_Execute__FP13kytag15_class) {
+asm void daKytag15_Execute(kytag15_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_Execute__FP13kytag15_class.s"
 }
@@ -63,21 +89,16 @@ ASM_FUNCTION(daKytag15_Execute__FP13kytag15_class) {
 
 
 /* 808608B0-808608B8 0008+00 .text      daKytag15_IsDelete__FP13kytag15_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag15_IsDelete__FP13kytag15_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_IsDelete__FP13kytag15_class.s"
+bool daKytag15_IsDelete(kytag15_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808608B8-808608E8 0030+00 .text      daKytag15_Delete__FP13kytag15_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag15_Delete__FP13kytag15_class) {
+asm void daKytag15_Delete(kytag15_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_Delete__FP13kytag15_class.s"
 }
@@ -88,7 +109,7 @@ ASM_FUNCTION(daKytag15_Delete__FP13kytag15_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -99,7 +120,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag15_Create__FP10fopAc_ac_c) {
+asm void daKytag15_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_Create__FP10fopAc_ac_c.s"
 }
@@ -110,7 +131,7 @@ ASM_FUNCTION(daKytag15_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/__dt__12J3DFrameCtrlFv.s"
 }

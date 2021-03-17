@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKDispatchMessage();
-extern "C" extern void TRKInitializeDispatcher();
+extern "C" void TRKDispatchMessage();
+extern "C" bool TRKInitializeDispatcher();
+
+extern "C" void TRKDispatchMessage();
+extern "C" bool TRKInitializeDispatcher();
 SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_126[25 + 3 /* padding */];
 SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_127[29 + 7 /* padding */];
 SECTION_DATA extern void*MetroTRK_Portable_dispatch__lit_128[28];
@@ -19,29 +22,46 @@ SECTION_DATA extern void*MetroTRK_Portable_dispatch__lit_128[28];
 // External References:
 // 
 
-extern "C" extern void TRKSetBufferPosition();
-extern "C" extern void TRKDoSetOption();
-extern "C" extern void TRKDoStop();
-extern "C" extern void TRKDoStep();
-extern "C" extern void TRKDoContinue();
-extern "C" extern void TRKDoWriteRegisters();
-extern "C" extern void TRKDoReadRegisters();
-extern "C" extern void TRKDoWriteMemory();
-extern "C" extern void TRKDoReadMemory();
-extern "C" extern void TRKDoSupportMask();
-extern "C" extern void TRKDoVersions();
-extern "C" extern void TRKDoOverride();
-extern "C" extern void TRKDoReset();
-extern "C" extern void TRKDoDisconnect();
-extern "C" extern void TRKDoConnect();
-extern "C" extern void MWTRACE();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void MWTRACE();
+
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2890-803A28AC 0019+03 .rodata    @126                                                         */
+/* 803A2890-803A28AC 0019+03 rc=1 efc=0 .rodata    @126                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_126[28] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
@@ -49,7 +69,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_126[28] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803A28AC-803A28D0 001D+07 .rodata    @127                                                         */
+/* 803A28AC-803A28D0 001D+07 rc=1 efc=0 .rodata    @127                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_127[36] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74,
 	0x65, 0x20, 0x65, 0x72, 0x72, 0x20, 0x3D, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
@@ -57,7 +77,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_127[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D3190-803D3200 006C+04 .data      @128                                                         */
+/* 803D3190-803D3200 006C+04 rc=1 efc=0 .data      @128                                                         */
 void* MetroTRK_Portable_dispatch__lit_128[28] = {
 	(void*)(((char*)TRKDispatchMessage)+0x13C),
 	(void*)(((char*)TRKDispatchMessage)+0x60),
@@ -90,26 +110,20 @@ void* MetroTRK_Portable_dispatch__lit_128[28] = {
 	NULL,
 };
 
-/* 8036DB9C-8036DD0C 0170+00 .text      TRKDispatchMessage                                           */
+/* 8036DB9C-8036DD0C 0170+00 rc=2 efc=1 .text      TRKDispatchMessage                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDispatchMessage) {
+extern "C" asm void TRKDispatchMessage() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/dispatch/TRKDispatchMessage.s"
 }
 #pragma pop
 
 
-/* 8036DD0C-8036DD14 0008+00 .text      TRKInitializeDispatcher                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKInitializeDispatcher) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/dispatch/TRKInitializeDispatcher.s"
+/* 8036DD0C-8036DD14 0008+00 rc=1 efc=1 .text      TRKInitializeDispatcher                                      */
+extern "C" bool TRKInitializeDispatcher() {
+	return false;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

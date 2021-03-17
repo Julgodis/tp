@@ -6,47 +6,117 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjDAN_c;
+
+struct daObj_DanHIO_c {
+	daObj_DanHIO_c();
+	~daObj_DanHIO_c();
+};
+
+struct daObjDAN_c {
+	void InitCcSph();
+	void SetCcSph();
+	void CreateHeap();
+	void SpeedSet();
+	void LinkChk();
+	void MoveAction();
+	void DamageAction();
+	void Action();
+	void checkGroundPos();
+	void Insect_Release();
+	void Z_BufferChk();
+	void ParticleSet();
+	void ObjHit();
+	void BoomChk();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_DanHIO_cFv();
-extern "C" extern void InitCcSph__10daObjDAN_cFv();
-extern "C" extern void SetCcSph__10daObjDAN_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daObjDAN_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjDAN_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjDAN_Delete__FP10daObjDAN_c();
-extern "C" extern void SpeedSet__10daObjDAN_cFv();
-extern "C" extern void LinkChk__10daObjDAN_cFv();
-extern "C" extern void MoveAction__10daObjDAN_cFv();
-extern "C" extern void DamageAction__10daObjDAN_cFv();
-extern "C" extern void Action__10daObjDAN_cFv();
-extern "C" extern void checkGroundPos__10daObjDAN_cFv();
-extern "C" extern void Insect_Release__10daObjDAN_cFv();
-extern "C" extern void Z_BufferChk__10daObjDAN_cFv();
-extern "C" extern void ParticleSet__10daObjDAN_cFv();
-extern "C" extern void ObjHit__10daObjDAN_cFv();
-extern "C" extern void BoomChk__10daObjDAN_cFv();
-extern "C" extern void Execute__10daObjDAN_cFv();
-extern "C" extern void Delete__10daObjDAN_cFv();
-extern "C" extern void setBaseMtx__10daObjDAN_cFv();
-extern "C" extern void daObjDAN_Draw__FP10daObjDAN_c();
-extern "C" extern void daObjDAN_Execute__FP10daObjDAN_c();
-extern "C" extern void CreateChk__10daObjDAN_cFv();
-extern "C" extern void create__10daObjDAN_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjDAN_IsDelete__FP10daObjDAN_c();
-extern "C" extern void __dt__14daObj_DanHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_dan_cpp();
-extern "C" extern void func_80BDC374();
-extern "C" extern void func_80BDC37C();
-extern "C" extern void func_80BDC384();
-extern "C" extern void func_80BDC38C();
-extern "C" extern void func_80BDC394();
+void useHeapInit(fopAc_ac_c*);
+void daObjDAN_Create(fopAc_ac_c*);
+void daObjDAN_Delete(daObjDAN_c*);
+void daObjDAN_Draw(daObjDAN_c*);
+void daObjDAN_Execute(daObjDAN_c*);
+bool daObjDAN_IsDelete(daObjDAN_c*);
+extern "C" void __sinit_d_a_obj_dan_cpp();
+extern "C" void func_80BDC374();
+extern "C" void func_80BDC37C();
+extern "C" void func_80BDC384();
+extern "C" void func_80BDC38C();
+extern "C" void func_80BDC394();
+
+extern "C" void __ct__14daObj_DanHIO_cFv();
+extern "C" void InitCcSph__10daObjDAN_cFv();
+extern "C" void SetCcSph__10daObjDAN_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daObjDAN_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjDAN_Create__FP10fopAc_ac_c();
+extern "C" void daObjDAN_Delete__FP10daObjDAN_c();
+extern "C" void SpeedSet__10daObjDAN_cFv();
+extern "C" void LinkChk__10daObjDAN_cFv();
+extern "C" void MoveAction__10daObjDAN_cFv();
+extern "C" void DamageAction__10daObjDAN_cFv();
+extern "C" void Action__10daObjDAN_cFv();
+extern "C" void checkGroundPos__10daObjDAN_cFv();
+extern "C" void Insect_Release__10daObjDAN_cFv();
+extern "C" void Z_BufferChk__10daObjDAN_cFv();
+extern "C" void ParticleSet__10daObjDAN_cFv();
+extern "C" void ObjHit__10daObjDAN_cFv();
+extern "C" void BoomChk__10daObjDAN_cFv();
+extern "C" void Execute__10daObjDAN_cFv();
+extern "C" void Delete__10daObjDAN_cFv();
+extern "C" void setBaseMtx__10daObjDAN_cFv();
+extern "C" void daObjDAN_Draw__FP10daObjDAN_c();
+extern "C" void daObjDAN_Execute__FP10daObjDAN_c();
+extern "C" void CreateChk__10daObjDAN_cFv();
+extern "C" void create__10daObjDAN_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjDAN_IsDelete__FP10daObjDAN_c();
+extern "C" void __dt__14daObj_DanHIO_cFv();
+extern "C" void __sinit_d_a_obj_dan_cpp();
+extern "C" void func_80BDC374();
+extern "C" void func_80BDC37C();
+extern "C" void func_80BDC384();
+extern "C" void func_80BDC38C();
+extern "C" void func_80BDC394();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u8 data_80BDC3B4[64];
 SECTION_RODATA extern const u32 lit_3788;
@@ -95,8 +165,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -106,7 +179,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_DanHIO_cFv) {
+asm daObj_DanHIO_c::daObj_DanHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__ct__14daObj_DanHIO_cFv.s"
 }
@@ -117,7 +190,7 @@ ASM_FUNCTION(__ct__14daObj_DanHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__10daObjDAN_cFv) {
+asm void daObjDAN_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/InitCcSph__10daObjDAN_cFv.s"
 }
@@ -128,7 +201,7 @@ ASM_FUNCTION(InitCcSph__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__10daObjDAN_cFv) {
+asm void daObjDAN_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/SetCcSph__10daObjDAN_cFv.s"
 }
@@ -139,7 +212,7 @@ ASM_FUNCTION(SetCcSph__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -150,7 +223,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjDAN_cFv) {
+asm void daObjDAN_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/CreateHeap__10daObjDAN_cFv.s"
 }
@@ -161,7 +234,7 @@ ASM_FUNCTION(CreateHeap__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__12J3DFrameCtrlFv.s"
 }
@@ -172,7 +245,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDAN_Create__FP10fopAc_ac_c) {
+asm void daObjDAN_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/daObjDAN_Create__FP10fopAc_ac_c.s"
 }
@@ -183,7 +256,7 @@ ASM_FUNCTION(daObjDAN_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDAN_Delete__FP10daObjDAN_c) {
+asm void daObjDAN_Delete(daObjDAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/daObjDAN_Delete__FP10daObjDAN_c.s"
 }
@@ -194,7 +267,7 @@ ASM_FUNCTION(daObjDAN_Delete__FP10daObjDAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__10daObjDAN_cFv) {
+asm void daObjDAN_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/SpeedSet__10daObjDAN_cFv.s"
 }
@@ -205,7 +278,7 @@ ASM_FUNCTION(SpeedSet__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LinkChk__10daObjDAN_cFv) {
+asm void daObjDAN_c::LinkChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/LinkChk__10daObjDAN_cFv.s"
 }
@@ -216,7 +289,7 @@ ASM_FUNCTION(LinkChk__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__10daObjDAN_cFv) {
+asm void daObjDAN_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/MoveAction__10daObjDAN_cFv.s"
 }
@@ -227,7 +300,7 @@ ASM_FUNCTION(MoveAction__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DamageAction__10daObjDAN_cFv) {
+asm void daObjDAN_c::DamageAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/DamageAction__10daObjDAN_cFv.s"
 }
@@ -238,7 +311,7 @@ ASM_FUNCTION(DamageAction__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__10daObjDAN_cFv) {
+asm void daObjDAN_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/Action__10daObjDAN_cFv.s"
 }
@@ -249,7 +322,7 @@ ASM_FUNCTION(Action__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGroundPos__10daObjDAN_cFv) {
+asm void daObjDAN_c::checkGroundPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/checkGroundPos__10daObjDAN_cFv.s"
 }
@@ -260,7 +333,7 @@ ASM_FUNCTION(checkGroundPos__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__10daObjDAN_cFv) {
+asm void daObjDAN_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/Insect_Release__10daObjDAN_cFv.s"
 }
@@ -271,7 +344,7 @@ ASM_FUNCTION(Insect_Release__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__10daObjDAN_cFv) {
+asm void daObjDAN_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/Z_BufferChk__10daObjDAN_cFv.s"
 }
@@ -282,7 +355,7 @@ ASM_FUNCTION(Z_BufferChk__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__10daObjDAN_cFv) {
+asm void daObjDAN_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/ParticleSet__10daObjDAN_cFv.s"
 }
@@ -293,7 +366,7 @@ ASM_FUNCTION(ParticleSet__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__10daObjDAN_cFv) {
+asm void daObjDAN_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/ObjHit__10daObjDAN_cFv.s"
 }
@@ -304,7 +377,7 @@ ASM_FUNCTION(ObjHit__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BoomChk__10daObjDAN_cFv) {
+asm void daObjDAN_c::BoomChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/BoomChk__10daObjDAN_cFv.s"
 }
@@ -315,7 +388,7 @@ ASM_FUNCTION(BoomChk__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjDAN_cFv) {
+asm void daObjDAN_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/Execute__10daObjDAN_cFv.s"
 }
@@ -326,7 +399,7 @@ ASM_FUNCTION(Execute__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjDAN_cFv) {
+asm void daObjDAN_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/Delete__10daObjDAN_cFv.s"
 }
@@ -337,7 +410,7 @@ ASM_FUNCTION(Delete__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjDAN_cFv) {
+asm void daObjDAN_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/setBaseMtx__10daObjDAN_cFv.s"
 }
@@ -348,7 +421,7 @@ ASM_FUNCTION(setBaseMtx__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDAN_Draw__FP10daObjDAN_c) {
+asm void daObjDAN_Draw(daObjDAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/daObjDAN_Draw__FP10daObjDAN_c.s"
 }
@@ -359,7 +432,7 @@ ASM_FUNCTION(daObjDAN_Draw__FP10daObjDAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjDAN_Execute__FP10daObjDAN_c) {
+asm void daObjDAN_Execute(daObjDAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/daObjDAN_Execute__FP10daObjDAN_c.s"
 }
@@ -370,7 +443,7 @@ ASM_FUNCTION(daObjDAN_Execute__FP10daObjDAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__10daObjDAN_cFv) {
+asm void daObjDAN_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/CreateChk__10daObjDAN_cFv.s"
 }
@@ -381,7 +454,7 @@ ASM_FUNCTION(CreateChk__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjDAN_cFv) {
+asm void daObjDAN_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/create__10daObjDAN_cFv.s"
 }
@@ -392,7 +465,7 @@ ASM_FUNCTION(create__10daObjDAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -403,7 +476,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -414,7 +487,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__8cM3dGSphFv.s"
 }
@@ -425,7 +498,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__8cM3dGAabFv.s"
 }
@@ -433,21 +506,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80BDC2E8-80BDC2F0 0008+00 .text      daObjDAN_IsDelete__FP10daObjDAN_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjDAN_IsDelete__FP10daObjDAN_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/daObjDAN_IsDelete__FP10daObjDAN_c.s"
+bool daObjDAN_IsDelete(daObjDAN_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BDC2F0-80BDC338 0048+00 .text      __dt__14daObj_DanHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_DanHIO_cFv) {
+asm daObj_DanHIO_c::~daObj_DanHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__dt__14daObj_DanHIO_cFv.s"
 }
@@ -458,7 +526,7 @@ ASM_FUNCTION(__dt__14daObj_DanHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_dan_cpp) {
+extern "C" asm void __sinit_d_a_obj_dan_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/__sinit_d_a_obj_dan_cpp.s"
 }
@@ -469,7 +537,7 @@ ASM_FUNCTION(__sinit_d_a_obj_dan_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDC374) {
+extern "C" asm void func_80BDC374() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/func_80BDC374.s"
 }
@@ -480,7 +548,7 @@ ASM_FUNCTION(func_80BDC374) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDC37C) {
+extern "C" asm void func_80BDC37C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/func_80BDC37C.s"
 }
@@ -491,7 +559,7 @@ ASM_FUNCTION(func_80BDC37C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDC384) {
+extern "C" asm void func_80BDC384() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/func_80BDC384.s"
 }
@@ -502,7 +570,7 @@ ASM_FUNCTION(func_80BDC384) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDC38C) {
+extern "C" asm void func_80BDC38C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/func_80BDC38C.s"
 }
@@ -513,7 +581,7 @@ ASM_FUNCTION(func_80BDC38C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BDC394) {
+extern "C" asm void func_80BDC394() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dan/d_a_obj_dan/func_80BDC394.s"
 }

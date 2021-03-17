@@ -6,40 +6,111 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct dMdl_obj_c;
+struct daObjLv4Chan_c;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjLv4Chan_c {
+	struct ChainPos {
+		~daObjLv4Chan_c::ChainPos();
+		daObjLv4Chan_c::ChainPos();
+	};
+
+	void create1st();
+	void setMtxChain(daObjLv4Chan_c::ChainPos*, dMdl_obj_c*, s32);
+	void setMtx();
+	void rideActor(fopAc_ac_c*);
+	void CreateHeap();
+	void Create();
+	void constraintChain(daObjLv4Chan_c::ChainPos*, s32);
+	void constraintBase();
+	void calcVec(daObjLv4Chan_c::ChainPos*, s32);
+	void chkGnd();
+	void Draw();
+	void Delete();
+};
+
+struct dMdl_obj_c {
+	dMdl_obj_c();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daObjSwChain_c {
+	void checkTight();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void create1st__14daObjLv4Chan_cFv();
-extern "C" extern void setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_obj_ci();
-extern "C" extern void setMtx__14daObjLv4Chan_cFv();
-extern "C" extern void rideActor__14daObjLv4Chan_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__14daObjLv4Chan_cFv();
-extern "C" extern void searchSwChain__FPvPv();
-extern "C" extern void Create__14daObjLv4Chan_cFv();
-extern "C" extern void constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi();
-extern "C" extern void constraintBase__14daObjLv4Chan_cFv();
-extern "C" extern void calcVec__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi();
-extern "C" extern void chkGnd__14daObjLv4Chan_cFv();
-extern "C" extern void Execute__14daObjLv4Chan_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjLv4Chan_cFv();
-extern "C" extern void Delete__14daObjLv4Chan_cFv();
-extern "C" extern void daObjLv4Chan_create1st__FP14daObjLv4Chan_c();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjLv4Chan_MoveBGDelete__FP14daObjLv4Chan_c();
-extern "C" extern void daObjLv4Chan_MoveBGExecute__FP14daObjLv4Chan_c();
-extern "C" extern void daObjLv4Chan_MoveBGDraw__FP14daObjLv4Chan_c();
-extern "C" extern void func_80C66540();
-extern "C" extern void func_80C66548();
-extern "C" extern void func_80C66550();
-extern "C" extern void __ct__10dMdl_obj_cFv();
-extern "C" extern void __dt__Q214daObjLv4Chan_c8ChainPosFv();
-extern "C" extern void __ct__Q214daObjLv4Chan_c8ChainPosFv();
-extern "C" extern void checkTight__14daObjSwChain_cFv();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void searchSwChain(void*, void*);
+extern "C" void Execute__14daObjLv4Chan_cFPPA3_A4_f();
+void daObjLv4Chan_create1st(daObjLv4Chan_c*);
+void daObjLv4Chan_MoveBGDelete(daObjLv4Chan_c*);
+void daObjLv4Chan_MoveBGExecute(daObjLv4Chan_c*);
+void daObjLv4Chan_MoveBGDraw(daObjLv4Chan_c*);
+extern "C" void func_80C66540();
+extern "C" void func_80C66548();
+extern "C" void func_80C66550();
+
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void create1st__14daObjLv4Chan_cFv();
+extern "C" void setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_obj_ci();
+extern "C" void setMtx__14daObjLv4Chan_cFv();
+extern "C" void rideActor__14daObjLv4Chan_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__14daObjLv4Chan_cFv();
+extern "C" void searchSwChain__FPvPv();
+extern "C" void Create__14daObjLv4Chan_cFv();
+extern "C" void constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi();
+extern "C" void constraintBase__14daObjLv4Chan_cFv();
+extern "C" void calcVec__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi();
+extern "C" void chkGnd__14daObjLv4Chan_cFv();
+extern "C" void Execute__14daObjLv4Chan_cFPPA3_A4_f();
+extern "C" void Draw__14daObjLv4Chan_cFv();
+extern "C" void Delete__14daObjLv4Chan_cFv();
+extern "C" void daObjLv4Chan_create1st__FP14daObjLv4Chan_c();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daObjLv4Chan_MoveBGDelete__FP14daObjLv4Chan_c();
+extern "C" void daObjLv4Chan_MoveBGExecute__FP14daObjLv4Chan_c();
+extern "C" void daObjLv4Chan_MoveBGDraw__FP14daObjLv4Chan_c();
+extern "C" void func_80C66540();
+extern "C" void func_80C66548();
+extern "C" void func_80C66550();
+extern "C" void __ct__10dMdl_obj_cFv();
+extern "C" void __dt__Q214daObjLv4Chan_c8ChainPosFv();
+extern "C" void __ct__Q214daObjLv4Chan_c8ChainPosFv();
+extern "C" void checkTight__14daObjSwChain_cFv();
 SECTION_RODATA extern const u8 l_bmdidx[8];
 SECTION_RODATA extern const u32 lit_3767;
 SECTION_RODATA extern const u32 lit_3768;
@@ -106,7 +177,9 @@ SECTION_DATA extern void*const __vt__14daObjLv4Chan_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -116,7 +189,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -127,7 +200,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/create1st__14daObjLv4Chan_cFv.s"
 }
@@ -138,7 +211,7 @@ ASM_FUNCTION(create1st__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_obj_ci) {
+asm void daObjLv4Chan_c::setMtxChain(daObjLv4Chan_c::ChainPos* field_0, dMdl_obj_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C634CC.s"
 }
@@ -149,7 +222,7 @@ ASM_FUNCTION(setMtxChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosP10dMdl_o
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/setMtx__14daObjLv4Chan_cFv.s"
 }
@@ -160,7 +233,7 @@ ASM_FUNCTION(setMtx__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideActor__14daObjLv4Chan_cFP10fopAc_ac_c) {
+asm void daObjLv4Chan_c::rideActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/rideActor__14daObjLv4Chan_cFP10fopAc_ac_c.s"
 }
@@ -171,7 +244,7 @@ ASM_FUNCTION(rideActor__14daObjLv4Chan_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/CreateHeap__14daObjLv4Chan_cFv.s"
 }
@@ -182,7 +255,7 @@ ASM_FUNCTION(CreateHeap__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchSwChain__FPvPv) {
+asm void searchSwChain(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/searchSwChain__FPvPv.s"
 }
@@ -193,7 +266,7 @@ ASM_FUNCTION(searchSwChain__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/Create__14daObjLv4Chan_cFv.s"
 }
@@ -204,7 +277,7 @@ ASM_FUNCTION(Create__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi) {
+asm void daObjLv4Chan_c::constraintChain(daObjLv4Chan_c::ChainPos* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C6449C.s"
 }
@@ -215,7 +288,7 @@ ASM_FUNCTION(constraintChain__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(constraintBase__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::constraintBase() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/constraintBase__14daObjLv4Chan_cFv.s"
 }
@@ -226,7 +299,7 @@ ASM_FUNCTION(constraintBase__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcVec__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi) {
+asm void daObjLv4Chan_c::calcVec(daObjLv4Chan_c::ChainPos* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/calcVec__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi.s"
 }
@@ -237,7 +310,7 @@ ASM_FUNCTION(calcVec__14daObjLv4Chan_cFPQ214daObjLv4Chan_c8ChainPosi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkGnd__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::chkGnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/chkGnd__14daObjLv4Chan_cFv.s"
 }
@@ -248,7 +321,7 @@ ASM_FUNCTION(chkGnd__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjLv4Chan_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjLv4Chan_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/Execute__14daObjLv4Chan_cFPPA3_A4_f.s"
 }
@@ -259,7 +332,7 @@ ASM_FUNCTION(Execute__14daObjLv4Chan_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/Draw__14daObjLv4Chan_cFv.s"
 }
@@ -270,7 +343,7 @@ ASM_FUNCTION(Draw__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjLv4Chan_cFv) {
+asm void daObjLv4Chan_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/Delete__14daObjLv4Chan_cFv.s"
 }
@@ -281,7 +354,7 @@ ASM_FUNCTION(Delete__14daObjLv4Chan_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Chan_create1st__FP14daObjLv4Chan_c) {
+asm void daObjLv4Chan_create1st(daObjLv4Chan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/daObjLv4Chan_create1st__FP14daObjLv4Chan_c.s"
 }
@@ -292,7 +365,7 @@ ASM_FUNCTION(daObjLv4Chan_create1st__FP14daObjLv4Chan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -303,7 +376,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__dt__8dCcD_SphFv.s"
 }
@@ -314,7 +387,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__ct__8dCcD_SphFv.s"
 }
@@ -325,7 +398,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__dt__8cM3dGSphFv.s"
 }
@@ -336,7 +409,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__dt__8cM3dGAabFv.s"
 }
@@ -347,7 +420,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Chan_MoveBGDelete__FP14daObjLv4Chan_c) {
+asm void daObjLv4Chan_MoveBGDelete(daObjLv4Chan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/daObjLv4Chan_MoveBGDelete__FP14daObjLv4Chan_c.s"
 }
@@ -358,7 +431,7 @@ ASM_FUNCTION(daObjLv4Chan_MoveBGDelete__FP14daObjLv4Chan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Chan_MoveBGExecute__FP14daObjLv4Chan_c) {
+asm void daObjLv4Chan_MoveBGExecute(daObjLv4Chan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/daObjLv4Chan_MoveBGExecute__FP14daObjLv4Chan_c.s"
 }
@@ -369,7 +442,7 @@ ASM_FUNCTION(daObjLv4Chan_MoveBGExecute__FP14daObjLv4Chan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Chan_MoveBGDraw__FP14daObjLv4Chan_c) {
+asm void daObjLv4Chan_MoveBGDraw(daObjLv4Chan_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/daObjLv4Chan_MoveBGDraw__FP14daObjLv4Chan_c.s"
 }
@@ -380,7 +453,7 @@ ASM_FUNCTION(daObjLv4Chan_MoveBGDraw__FP14daObjLv4Chan_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C66540) {
+extern "C" asm void func_80C66540() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C66540.s"
 }
@@ -391,7 +464,7 @@ ASM_FUNCTION(func_80C66540) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C66548) {
+extern "C" asm void func_80C66548() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C66548.s"
 }
@@ -402,7 +475,7 @@ ASM_FUNCTION(func_80C66548) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C66550) {
+extern "C" asm void func_80C66550() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/func_80C66550.s"
 }
@@ -413,7 +486,7 @@ ASM_FUNCTION(func_80C66550) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dMdl_obj_cFv) {
+asm dMdl_obj_c::dMdl_obj_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__ct__10dMdl_obj_cFv.s"
 }
@@ -424,7 +497,7 @@ ASM_FUNCTION(__ct__10dMdl_obj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q214daObjLv4Chan_c8ChainPosFv) {
+asm daObjLv4Chan_c::ChainPos::~daObjLv4Chan_c::ChainPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__dt__Q214daObjLv4Chan_c8ChainPosFv.s"
 }
@@ -432,21 +505,16 @@ ASM_FUNCTION(__dt__Q214daObjLv4Chan_c8ChainPosFv) {
 
 
 /* 80C665A0-80C665A4 0004+00 .text      __ct__Q214daObjLv4Chan_c8ChainPosFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q214daObjLv4Chan_c8ChainPosFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/__ct__Q214daObjLv4Chan_c8ChainPosFv.s"
+daObjLv4Chan_c::ChainPos::daObjLv4Chan_c::ChainPos() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C665A4-80C66858 02B4+00 .text      checkTight__14daObjSwChain_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTight__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::checkTight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4chandelier/d_a_obj_lv4chandelier/checkTight__14daObjSwChain_cFv.s"
 }

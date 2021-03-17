@@ -6,30 +6,94 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::fvb::data::TParse_TParagraph::TData
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build fvb (JStudio::fvb) False/False
+	/* dependencies (begin JStudio::fvb) */
+	/* dependencies (end JStudio::fvb) */
+	namespace fvb {
+		// build data (JStudio::fvb::data) False/False
+		/* dependencies (begin JStudio::fvb::data) */
+		/* dependencies (end JStudio::fvb::data) */
+		struct data {
+			// build TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph) False/False
+			/* dependencies (begin JStudio::fvb::data::TParse_TParagraph) */
+			// inner dependency: TParse_TParagraph (JStudio::fvb::data::TParse_TParagraph::TData) True False (for JStudio::fvb::data::TParse_TParagraph)
+			/* dependencies (end JStudio::fvb::data::TParse_TParagraph) */
+			struct TParse_TParagraph {
+				// JStudio::fvb::data::TParse_TParagraph::TData
+				// build TData (JStudio::fvb::data::TParse_TParagraph::TData) False/False
+				/* dependencies (begin JStudio::fvb::data::TParse_TParagraph::TData) */
+				/* dependencies (end JStudio::fvb::data::TParse_TParagraph::TData) */
+				struct TData {
+				};
+
+				/* 802850AC */ void getData(JStudio::fvb::data::TParse_TParagraph::TData*) const;
+			};
+
+		};
+
+	};
+
+};
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::binary::TEBit
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	// inner dependency: binary (JGadget::binary::TEBit) True False (for JGadget::binary)
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// JGadget::binary::TEBit
+		// build TEBit (JGadget::binary::TEBit) False/False
+		/* dependencies (begin JGadget::binary::TEBit) */
+		/* dependencies (end JGadget::binary::TEBit) */
+		struct TEBit {
+		};
+
+		/* 802DC864 */ void parseVariableUInt_16_32_following(void const*, u32*, u32*, JGadget::binary::TEBit*);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData();
+
+extern "C" void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData();
 
 // 
 // External References:
 // 
 
-extern "C" extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
 
 // 
 // Declarations:
 // 
 
-/* 802850AC-80285114 0068+00 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
+/* 802850AC-80285114 0068+00 rc=1 efc=1 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData) {
+asm void JStudio::fvb::data::TParse_TParagraph::getData(JStudio::fvb::data::TParse_TParagraph::TData* field_0) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/fvb-data-parse/func_802850AC.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

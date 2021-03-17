@@ -9,28 +9,31 @@
 // Forward References:
 // 
 
-extern "C" extern void __stdio_atexit();
+extern "C" void __stdio_atexit();
+
+extern "C" void __stdio_atexit();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __close_all();
+extern "C" void __close_all();
+
+extern "C" void __close_all();
 SECTION_SBSS extern u8 __stdio_exit[4];
 
 // 
 // Declarations:
 // 
 
-/* 803664CC-803664DC 0010+00 .text      __stdio_atexit                                               */
+/* 803664CC-803664DC 0010+00 rc=2 efc=2 .text      __stdio_atexit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__stdio_atexit) {
+extern "C" asm void __stdio_atexit() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/misc_io/__stdio_atexit.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

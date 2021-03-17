@@ -28,11 +28,11 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x804D50A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x804D50CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x804D50F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
-	{'addr':0x804D5118,'size':200,'pad':0,'label':"create__7daSus_cFv",'name':"create__7daSus_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x804D51E0,'size':84,'pad':0,'label':"daSus_create__FP7daSus_c",'name':"daSus_create__FP7daSus_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x804D50A0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x804D50CC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x804D50F8,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"ASMFunction"},
+	{'addr':0x804D5118,'size':200,'pad':0,'label':"create__7daSus_cFv",'name':"create__7daSus_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x804D51E0,'size':84,'pad':0,'label':"daSus_create__FP7daSus_c",'name':"daSus_create__FP7daSus_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
 	{'addr':0x804D5234,'size':4,'pad':0,'label':"data_804D5234",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
 	{'addr':0x804D5238,'size':4,'pad':0,'label':"data_804D5238",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
 	{'addr':0x804D523C,'size':4,'pad':0,'label':"lit_3640",'name':"@3640",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},

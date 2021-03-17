@@ -6,38 +6,110 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cBgS_PolyInfo;
+struct daItemKantera_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct daItemKantera_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool __CreateHeap();
+	void create();
+	void bg_check();
+	void actionInit();
+	void actionWaitInit();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void initBaseMtx__15daItemKantera_cFv();
-extern "C" extern void setBaseMtx__15daItemKantera_cFv();
-extern "C" extern void Create__15daItemKantera_cFv();
-extern "C" extern void __CreateHeap__15daItemKantera_cFv();
-extern "C" extern void create__15daItemKantera_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void bg_check__15daItemKantera_cFv();
-extern "C" extern void actionInit__15daItemKantera_cFv();
-extern "C" extern void actionWaitInit__15daItemKantera_cFv();
-extern "C" extern void actionWait__15daItemKantera_cFv();
-extern "C" extern void initActionOrderGetDemo__15daItemKantera_cFv();
-extern "C" extern void actionOrderGetDemo__15daItemKantera_cFv();
-extern "C" extern void actionGetDemo__15daItemKantera_cFv();
-extern "C" extern void execute__15daItemKantera_cFv();
-extern "C" extern void draw__15daItemKantera_cFv();
-extern "C" extern void _delete__15daItemKantera_cFv();
-extern "C" extern void daItemKantera_Draw__FP15daItemKantera_c();
-extern "C" extern void daItemKantera_Execute__FP15daItemKantera_c();
-extern "C" extern void daItemKantera_Delete__FP15daItemKantera_c();
-extern "C" extern void daItemKantera_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80C39630();
-extern "C" extern void func_80C39638();
+void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+void daItemKantera_Draw(daItemKantera_c*);
+void daItemKantera_Execute(daItemKantera_c*);
+void daItemKantera_Delete(daItemKantera_c*);
+void daItemKantera_Create(fopAc_ac_c*);
+extern "C" void func_80C39630();
+extern "C" void func_80C39638();
+
+extern "C" void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void initBaseMtx__15daItemKantera_cFv();
+extern "C" void setBaseMtx__15daItemKantera_cFv();
+extern "C" void Create__15daItemKantera_cFv();
+extern "C" bool __CreateHeap__15daItemKantera_cFv();
+extern "C" void create__15daItemKantera_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__15daItemKantera_cFv();
+extern "C" void actionInit__15daItemKantera_cFv();
+extern "C" void actionWaitInit__15daItemKantera_cFv();
+extern "C" void actionWait__15daItemKantera_cFv();
+extern "C" void initActionOrderGetDemo__15daItemKantera_cFv();
+extern "C" void actionOrderGetDemo__15daItemKantera_cFv();
+extern "C" void actionGetDemo__15daItemKantera_cFv();
+extern "C" void execute__15daItemKantera_cFv();
+extern "C" void draw__15daItemKantera_cFv();
+extern "C" void _delete__15daItemKantera_cFv();
+extern "C" void daItemKantera_Draw__FP15daItemKantera_c();
+extern "C" void daItemKantera_Execute__FP15daItemKantera_c();
+extern "C" void daItemKantera_Delete__FP15daItemKantera_c();
+extern "C" void daItemKantera_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80C39630();
+extern "C" void func_80C39638();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3855[4];
 SECTION_RODATA extern const u8 lit_3856[8];
@@ -75,7 +147,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -85,7 +159,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
+asm void Reflect(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/Reflect__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -96,7 +170,7 @@ ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__8cM3dGPlaFv.s"
 }
@@ -107,7 +181,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daItemKantera_cFv) {
+asm void daItemKantera_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/initBaseMtx__15daItemKantera_cFv.s"
 }
@@ -118,7 +192,7 @@ ASM_FUNCTION(initBaseMtx__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daItemKantera_cFv) {
+asm void daItemKantera_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/setBaseMtx__15daItemKantera_cFv.s"
 }
@@ -129,7 +203,7 @@ ASM_FUNCTION(setBaseMtx__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daItemKantera_cFv) {
+asm void daItemKantera_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/Create__15daItemKantera_cFv.s"
 }
@@ -137,21 +211,16 @@ ASM_FUNCTION(Create__15daItemKantera_cFv) {
 
 
 /* 80C38BA8-80C38BB0 0008+00 .text      __CreateHeap__15daItemKantera_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__15daItemKantera_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__CreateHeap__15daItemKantera_cFv.s"
+bool daItemKantera_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C38BB0-80C38DAC 01FC+00 .text      create__15daItemKantera_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daItemKantera_cFv) {
+asm void daItemKantera_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/func_80C38BB0.s"
 }
@@ -162,7 +231,7 @@ ASM_FUNCTION(create__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__8cM3dGCylFv.s"
 }
@@ -173,7 +242,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__8cM3dGAabFv.s"
 }
@@ -184,7 +253,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__10dCcD_GSttsFv.s"
 }
@@ -195,7 +264,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__12dBgS_AcchCirFv.s"
 }
@@ -206,7 +275,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -217,7 +286,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__15daItemKantera_cFv) {
+asm void daItemKantera_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/bg_check__15daItemKantera_cFv.s"
 }
@@ -228,7 +297,7 @@ ASM_FUNCTION(bg_check__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__15daItemKantera_cFv) {
+asm void daItemKantera_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/actionInit__15daItemKantera_cFv.s"
 }
@@ -239,7 +308,7 @@ ASM_FUNCTION(actionInit__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__15daItemKantera_cFv) {
+asm void daItemKantera_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/actionWaitInit__15daItemKantera_cFv.s"
 }
@@ -250,7 +319,7 @@ ASM_FUNCTION(actionWaitInit__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__15daItemKantera_cFv) {
+asm void daItemKantera_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/actionWait__15daItemKantera_cFv.s"
 }
@@ -261,7 +330,7 @@ ASM_FUNCTION(actionWait__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__15daItemKantera_cFv) {
+asm void daItemKantera_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/initActionOrderGetDemo__15daItemKantera_cFv.s"
 }
@@ -272,7 +341,7 @@ ASM_FUNCTION(initActionOrderGetDemo__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__15daItemKantera_cFv) {
+asm void daItemKantera_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/actionOrderGetDemo__15daItemKantera_cFv.s"
 }
@@ -283,7 +352,7 @@ ASM_FUNCTION(actionOrderGetDemo__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__15daItemKantera_cFv) {
+asm void daItemKantera_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/actionGetDemo__15daItemKantera_cFv.s"
 }
@@ -294,7 +363,7 @@ ASM_FUNCTION(actionGetDemo__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daItemKantera_cFv) {
+asm void daItemKantera_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/execute__15daItemKantera_cFv.s"
 }
@@ -305,7 +374,7 @@ ASM_FUNCTION(execute__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daItemKantera_cFv) {
+asm void daItemKantera_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/draw__15daItemKantera_cFv.s"
 }
@@ -316,7 +385,7 @@ ASM_FUNCTION(draw__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daItemKantera_cFv) {
+asm void daItemKantera_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/_delete__15daItemKantera_cFv.s"
 }
@@ -327,7 +396,7 @@ ASM_FUNCTION(_delete__15daItemKantera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemKantera_Draw__FP15daItemKantera_c) {
+asm void daItemKantera_Draw(daItemKantera_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/daItemKantera_Draw__FP15daItemKantera_c.s"
 }
@@ -338,7 +407,7 @@ ASM_FUNCTION(daItemKantera_Draw__FP15daItemKantera_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemKantera_Execute__FP15daItemKantera_c) {
+asm void daItemKantera_Execute(daItemKantera_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/daItemKantera_Execute__FP15daItemKantera_c.s"
 }
@@ -349,7 +418,7 @@ ASM_FUNCTION(daItemKantera_Execute__FP15daItemKantera_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemKantera_Delete__FP15daItemKantera_c) {
+asm void daItemKantera_Delete(daItemKantera_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/daItemKantera_Delete__FP15daItemKantera_c.s"
 }
@@ -360,7 +429,7 @@ ASM_FUNCTION(daItemKantera_Delete__FP15daItemKantera_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemKantera_Create__FP10fopAc_ac_c) {
+asm void daItemKantera_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/daItemKantera_Create__FP10fopAc_ac_c.s"
 }
@@ -371,7 +440,7 @@ ASM_FUNCTION(daItemKantera_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__dt__10cCcD_GSttsFv.s"
 }
@@ -382,7 +451,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C39630) {
+extern "C" asm void func_80C39630() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/func_80C39630.s"
 }
@@ -393,7 +462,7 @@ ASM_FUNCTION(func_80C39630) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C39638) {
+extern "C" asm void func_80C39638() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/func_80C39638.s"
 }

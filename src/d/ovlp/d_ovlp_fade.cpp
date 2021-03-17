@@ -6,18 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build overlap1_class (overlap1_class) False/False
+/* top-level dependencies (begin overlap1_class) */
+/* top-level dependencies (end overlap1_class) */
+struct overlap1_class {
+};
+
+// build overlap_task_class (overlap_task_class) False/False
+/* top-level dependencies (begin overlap_task_class) */
+/* top-level dependencies (end overlap_task_class) */
+struct overlap_task_class {
+};
+
+// build JUTFader (JUTFader) False/False
+// build JUTFader (JUTFader) True/False
+struct JUTFader;
+/* top-level dependencies (begin JUTFader) */
+// outer dependency: JUTFader::EStatus
+/* top-level dependencies (end JUTFader) */
+struct JUTFader {
+	// JUTFader::EStatus
+	// build EStatus (JUTFader::EStatus) False/False
+	/* dependencies (begin JUTFader::EStatus) */
+	/* dependencies (end JUTFader::EStatus) */
+	struct EStatus {
+	};
+
+	/* 802E57D0 */ void setStatus(JUTFader::EStatus, s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dOvlpFd_Draw__FP14overlap1_class();
-extern "C" extern void dOvlpFd_startFadeIn__Fi();
-extern "C" extern void dOvlpFd_FadeOut__FP14overlap1_class();
-extern "C" extern void dOvlpFd_Wait__FP14overlap1_class();
-extern "C" extern void dOvlpFd_FadeIn__FP14overlap1_class();
-extern "C" extern void dOvlpFd_Execute__FP14overlap1_class();
-extern "C" extern void dOvlpFd_IsDelete__FP14overlap1_class();
-extern "C" extern void dOvlpFd_Delete__FP14overlap1_class();
-extern "C" extern void dOvlpFd_Create__FPv();
+static bool dOvlpFd_Draw(overlap1_class*);
+static void dOvlpFd_startFadeIn(s32);
+static void dOvlpFd_FadeOut(overlap1_class*);
+static void dOvlpFd_Wait(overlap1_class*);
+static void dOvlpFd_FadeIn(overlap1_class*);
+static void dOvlpFd_Execute(overlap1_class*);
+static bool dOvlpFd_IsDelete(overlap1_class*);
+static bool dOvlpFd_Delete(overlap1_class*);
+static void dOvlpFd_Create(void*);
+
+extern "C" static bool dOvlpFd_Draw__FP14overlap1_class();
+extern "C" static void dOvlpFd_startFadeIn__Fi();
+extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class();
+extern "C" static void dOvlpFd_Wait__FP14overlap1_class();
+extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class();
+extern "C" static void dOvlpFd_Execute__FP14overlap1_class();
+extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class();
+extern "C" static bool dOvlpFd_Delete__FP14overlap1_class();
+extern "C" static void dOvlpFd_Create__FPv();
 SECTION_DATA extern void*l_dOvlpFd_Method[5];
 SECTION_DATA extern void*g_profile_OVERLAP0[10];
 SECTION_DATA extern void*g_profile_OVERLAP1[10];
@@ -33,12 +76,18 @@ SECTION_SBSS extern u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void mDoAud_setFadeOutStart__FUc();
-extern "C" extern void mDoAud_setFadeInStart__FUc();
-extern "C" extern void fopOvlpM_SceneIsStart__Fv();
-extern "C" extern void fopOvlpM_IsOutReq__FP18overlap_task_class();
-extern "C" extern void fopOvlpM_Done__FP18overlap_task_class();
-extern "C" extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+void mDoAud_setFadeOutStart(char);
+void mDoAud_setFadeInStart(char);
+void fopOvlpM_SceneIsStart();
+void fopOvlpM_IsOutReq(overlap_task_class*);
+void fopOvlpM_Done(overlap_task_class*);
+
+extern "C" void mDoAud_setFadeOutStart__FUc();
+extern "C" void mDoAud_setFadeInStart__FUc();
+extern "C" void fopOvlpM_SceneIsStart__Fv();
+extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class();
+extern "C" void fopOvlpM_Done__FP18overlap_task_class();
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
 SECTION_DATA extern void*g_fopOvlp_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -48,33 +97,28 @@ SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
 // Declarations:
 // 
 
-/* 8025217C-80252184 0008+00 .text      dOvlpFd_Draw__FP14overlap1_class                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_Draw__FP14overlap1_class) {
-	nofralloc
-#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Draw__FP14overlap1_class.s"
+/* 8025217C-80252184 0008+00 rc=1 efc=0 .text      dOvlpFd_Draw__FP14overlap1_class                             */
+static bool dOvlpFd_Draw(overlap1_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
-/* 80252184-802521F4 0070+00 .text      dOvlpFd_startFadeIn__Fi                                      */
+/* 80252184-802521F4 0070+00 rc=1 efc=0 .text      dOvlpFd_startFadeIn__Fi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_startFadeIn__Fi) {
+asm static void dOvlpFd_startFadeIn(s32 field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_startFadeIn__Fi.s"
 }
 #pragma pop
 
 
-/* 802521F4-802522C8 00D4+00 .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
+/* 802521F4-802522C8 00D4+00 rc=1 efc=0 .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_FadeOut__FP14overlap1_class) {
+asm static void dOvlpFd_FadeOut(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_FadeOut__FP14overlap1_class.s"
 }
@@ -82,69 +126,59 @@ ASM_FUNCTION(dOvlpFd_FadeOut__FP14overlap1_class) {
 
 
 /* ############################################################################################## */
-/* 804510E0-804510E8 0004+04 .sbss      dOvlpFd_execute_f                                            */
+/* 804510E0-804510E8 0004+04 rc=4 efc=0 .sbss      dOvlpFd_execute_f                                            */
 u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 
-/* 802522C8-80252300 0038+00 .text      dOvlpFd_Wait__FP14overlap1_class                             */
+/* 802522C8-80252300 0038+00 rc=1 efc=0 .text      dOvlpFd_Wait__FP14overlap1_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_Wait__FP14overlap1_class) {
+asm static void dOvlpFd_Wait(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Wait__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 80252300-8025242C 012C+00 .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
+/* 80252300-8025242C 012C+00 rc=1 efc=0 .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_FadeIn__FP14overlap1_class) {
+asm static void dOvlpFd_FadeIn(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_FadeIn__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 8025242C-80252458 002C+00 .text      dOvlpFd_Execute__FP14overlap1_class                          */
+/* 8025242C-80252458 002C+00 rc=1 efc=0 .text      dOvlpFd_Execute__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_Execute__FP14overlap1_class) {
+asm static void dOvlpFd_Execute(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Execute__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 80252458-80252460 0008+00 .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_IsDelete__FP14overlap1_class) {
-	nofralloc
-#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_IsDelete__FP14overlap1_class.s"
+/* 80252458-80252460 0008+00 rc=1 efc=0 .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
+static bool dOvlpFd_IsDelete(overlap1_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
-/* 80252460-80252468 0008+00 .text      dOvlpFd_Delete__FP14overlap1_class                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_Delete__FP14overlap1_class) {
-	nofralloc
-#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Delete__FP14overlap1_class.s"
+/* 80252460-80252468 0008+00 rc=1 efc=0 .text      dOvlpFd_Delete__FP14overlap1_class                           */
+static bool dOvlpFd_Delete(overlap1_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
-/* 80252468-8025247C 0014+00 .text      dOvlpFd_Create__FPv                                          */
+/* 80252468-8025247C 0014+00 rc=1 efc=0 .text      dOvlpFd_Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dOvlpFd_Create__FPv) {
+asm static void dOvlpFd_Create(void* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Create__FPv.s"
 }
@@ -152,7 +186,7 @@ ASM_FUNCTION(dOvlpFd_Create__FPv) {
 
 
 /* ############################################################################################## */
-/* 803C2B98-803C2BAC 0014+00 .data      l_dOvlpFd_Method                                             */
+/* 803C2B98-803C2BAC 0014+00 rc=8 efc=0 .data      l_dOvlpFd_Method                                             */
 void* l_dOvlpFd_Method[5] = {
 	(void*)dOvlpFd_Create__FPv,
 	(void*)dOvlpFd_Delete__FP14overlap1_class,
@@ -161,7 +195,7 @@ void* l_dOvlpFd_Method[5] = {
 	(void*)dOvlpFd_Draw__FP14overlap1_class,
 };
 
-/* 803C2BAC-803C2BD4 0028+00 .data      g_profile_OVERLAP0                                           */
+/* 803C2BAC-803C2BD4 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP0                                           */
 void* g_profile_OVERLAP0[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -175,7 +209,7 @@ void* g_profile_OVERLAP0[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BD4-803C2BFC 0028+00 .data      g_profile_OVERLAP1                                           */
+/* 803C2BD4-803C2BFC 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP1                                           */
 void* g_profile_OVERLAP1[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -189,7 +223,7 @@ void* g_profile_OVERLAP1[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BFC-803C2C24 0028+00 .data      g_profile_OVERLAP6                                           */
+/* 803C2BFC-803C2C24 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP6                                           */
 void* g_profile_OVERLAP6[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -203,7 +237,7 @@ void* g_profile_OVERLAP6[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C24-803C2C4C 0028+00 .data      g_profile_OVERLAP7                                           */
+/* 803C2C24-803C2C4C 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP7                                           */
 void* g_profile_OVERLAP7[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -217,7 +251,7 @@ void* g_profile_OVERLAP7[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C4C-803C2C74 0028+00 .data      g_profile_OVERLAP8                                           */
+/* 803C2C4C-803C2C74 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP8                                           */
 void* g_profile_OVERLAP8[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -231,7 +265,7 @@ void* g_profile_OVERLAP8[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C74-803C2C9C 0028+00 .data      g_profile_OVERLAP9                                           */
+/* 803C2C74-803C2C9C 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP9                                           */
 void* g_profile_OVERLAP9[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -245,7 +279,7 @@ void* g_profile_OVERLAP9[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C9C-803C2CC4 0028+00 .data      g_profile_OVERLAP10                                          */
+/* 803C2C9C-803C2CC4 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP10                                          */
 void* g_profile_OVERLAP10[10] = {
 	NULL,
 	(void*)0x0000FFFD,
@@ -259,7 +293,7 @@ void* g_profile_OVERLAP10[10] = {
 	(void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2CC4-803C2CF0 0028+04 .data      g_profile_OVERLAP11                                          */
+/* 803C2CC4-803C2CF0 0028+04 rc=0 efc=0 .data      g_profile_OVERLAP11                                          */
 void* g_profile_OVERLAP11[11] = {
 	NULL,
 	(void*)0x0000FFFD,

@@ -6,25 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjTrnd_c;
+
+struct daObjTrnd_c {
+	void setPntWind();
+	void cutPntWind();
+	void movePntWind();
+	void setCpsInfo();
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	bool draw();
+	void _delete();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setPntWind__11daObjTrnd_cFv();
-extern "C" extern void cutPntWind__11daObjTrnd_cFv();
-extern "C" extern void movePntWind__11daObjTrnd_cFv();
-extern "C" extern void setCpsInfo__11daObjTrnd_cFv();
-extern "C" extern void initBaseMtx__11daObjTrnd_cFv();
-extern "C" extern void setBaseMtx__11daObjTrnd_cFv();
-extern "C" extern void Create__11daObjTrnd_cFv();
-extern "C" extern void create__11daObjTrnd_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__11daObjTrnd_cFv();
-extern "C" extern void draw__11daObjTrnd_cFv();
-extern "C" extern void _delete__11daObjTrnd_cFv();
-extern "C" extern void daObjTrnd_Draw__FP11daObjTrnd_c();
-extern "C" extern void daObjTrnd_Execute__FP11daObjTrnd_c();
-extern "C" extern void daObjTrnd_Delete__FP11daObjTrnd_c();
-extern "C" extern void daObjTrnd_Create__FP11daObjTrnd_c();
+void daObjTrnd_Draw(daObjTrnd_c*);
+void daObjTrnd_Execute(daObjTrnd_c*);
+void daObjTrnd_Delete(daObjTrnd_c*);
+void daObjTrnd_Create(daObjTrnd_c*);
+
+extern "C" void setPntWind__11daObjTrnd_cFv();
+extern "C" void cutPntWind__11daObjTrnd_cFv();
+extern "C" void movePntWind__11daObjTrnd_cFv();
+extern "C" void setCpsInfo__11daObjTrnd_cFv();
+extern "C" void initBaseMtx__11daObjTrnd_cFv();
+extern "C" void setBaseMtx__11daObjTrnd_cFv();
+extern "C" void Create__11daObjTrnd_cFv();
+extern "C" void create__11daObjTrnd_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__11daObjTrnd_cFv();
+extern "C" bool draw__11daObjTrnd_cFv();
+extern "C" void _delete__11daObjTrnd_cFv();
+extern "C" void daObjTrnd_Draw__FP11daObjTrnd_c();
+extern "C" void daObjTrnd_Execute__FP11daObjTrnd_c();
+extern "C" void daObjTrnd_Delete__FP11daObjTrnd_c();
+extern "C" void daObjTrnd_Create__FP11daObjTrnd_c();
 SECTION_RODATA extern const u8 lit_3628[4];
 SECTION_RODATA extern const u32 lit_3629;
 SECTION_RODATA extern const u32 lit_3630;
@@ -54,7 +83,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -64,7 +95,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPntWind__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::setPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/setPntWind__11daObjTrnd_cFv.s"
 }
@@ -75,7 +106,7 @@ ASM_FUNCTION(setPntWind__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutPntWind__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::cutPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/cutPntWind__11daObjTrnd_cFv.s"
 }
@@ -86,7 +117,7 @@ ASM_FUNCTION(cutPntWind__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(movePntWind__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::movePntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/movePntWind__11daObjTrnd_cFv.s"
 }
@@ -97,7 +128,7 @@ ASM_FUNCTION(movePntWind__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCpsInfo__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::setCpsInfo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/setCpsInfo__11daObjTrnd_cFv.s"
 }
@@ -108,7 +139,7 @@ ASM_FUNCTION(setCpsInfo__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/initBaseMtx__11daObjTrnd_cFv.s"
 }
@@ -119,7 +150,7 @@ ASM_FUNCTION(initBaseMtx__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/setBaseMtx__11daObjTrnd_cFv.s"
 }
@@ -130,7 +161,7 @@ ASM_FUNCTION(setBaseMtx__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/Create__11daObjTrnd_cFv.s"
 }
@@ -141,7 +172,7 @@ ASM_FUNCTION(Create__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/func_80D1BFB0.s"
 }
@@ -152,7 +183,7 @@ ASM_FUNCTION(create__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/__dt__8cM3dGAabFv.s"
 }
@@ -163,7 +194,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/execute__11daObjTrnd_cFv.s"
 }
@@ -171,21 +202,16 @@ ASM_FUNCTION(execute__11daObjTrnd_cFv) {
 
 
 /* 80D1C290-80D1C298 0008+00 .text      draw__11daObjTrnd_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjTrnd_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/draw__11daObjTrnd_cFv.s"
+bool daObjTrnd_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1C298-80D1C2CC 0034+00 .text      _delete__11daObjTrnd_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daObjTrnd_cFv) {
+asm void daObjTrnd_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/_delete__11daObjTrnd_cFv.s"
 }
@@ -196,7 +222,7 @@ ASM_FUNCTION(_delete__11daObjTrnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd_Draw__FP11daObjTrnd_c) {
+asm void daObjTrnd_Draw(daObjTrnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/daObjTrnd_Draw__FP11daObjTrnd_c.s"
 }
@@ -207,7 +233,7 @@ ASM_FUNCTION(daObjTrnd_Draw__FP11daObjTrnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd_Execute__FP11daObjTrnd_c) {
+asm void daObjTrnd_Execute(daObjTrnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/daObjTrnd_Execute__FP11daObjTrnd_c.s"
 }
@@ -218,7 +244,7 @@ ASM_FUNCTION(daObjTrnd_Execute__FP11daObjTrnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd_Delete__FP11daObjTrnd_c) {
+asm void daObjTrnd_Delete(daObjTrnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/daObjTrnd_Delete__FP11daObjTrnd_c.s"
 }
@@ -229,7 +255,7 @@ ASM_FUNCTION(daObjTrnd_Delete__FP11daObjTrnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd_Create__FP11daObjTrnd_c) {
+asm void daObjTrnd_Create(daObjTrnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/daObjTrnd_Create__FP11daObjTrnd_c.s"
 }

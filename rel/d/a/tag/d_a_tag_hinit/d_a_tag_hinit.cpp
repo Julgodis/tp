@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagHinit_c;
+struct fopAc_ac_c;
+
+struct daTagHinit_c {
+	void create();
+	~daTagHinit_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagHinit_cFv();
-extern "C" extern void daTagHinit_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagHinit_cFv();
-extern "C" extern void daTagHinit_Delete__FP12daTagHinit_c();
-extern "C" extern void execute__12daTagHinit_cFv();
-extern "C" extern void daTagHinit_Execute__FP12daTagHinit_c();
-extern "C" extern void daTagHinit_Draw__FP12daTagHinit_c();
+void daTagHinit_Create(fopAc_ac_c*);
+void daTagHinit_Delete(daTagHinit_c*);
+void daTagHinit_Execute(daTagHinit_c*);
+bool daTagHinit_Draw(daTagHinit_c*);
+
+extern "C" void create__12daTagHinit_cFv();
+extern "C" void daTagHinit_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagHinit_cFv();
+extern "C" void daTagHinit_Delete__FP12daTagHinit_c();
+extern "C" void execute__12daTagHinit_cFv();
+extern "C" void daTagHinit_Execute__FP12daTagHinit_c();
+extern "C" bool daTagHinit_Draw__FP12daTagHinit_c();
 SECTION_DATA extern u8 l_daTagHinit_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Hinit[48];
 
@@ -23,7 +44,9 @@ SECTION_DATA extern u8 g_profile_Tag_Hinit[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -33,7 +56,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagHinit_cFv) {
+asm void daTagHinit_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/create__12daTagHinit_cFv.s"
 }
@@ -44,7 +67,7 @@ ASM_FUNCTION(create__12daTagHinit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHinit_Create__FP10fopAc_ac_c) {
+asm void daTagHinit_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/daTagHinit_Create__FP10fopAc_ac_c.s"
 }
@@ -55,7 +78,7 @@ ASM_FUNCTION(daTagHinit_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagHinit_cFv) {
+asm daTagHinit_c::~daTagHinit_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/__dt__12daTagHinit_cFv.s"
 }
@@ -66,7 +89,7 @@ ASM_FUNCTION(__dt__12daTagHinit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHinit_Delete__FP12daTagHinit_c) {
+asm void daTagHinit_Delete(daTagHinit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/daTagHinit_Delete__FP12daTagHinit_c.s"
 }
@@ -77,7 +100,7 @@ ASM_FUNCTION(daTagHinit_Delete__FP12daTagHinit_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagHinit_cFv) {
+asm void daTagHinit_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/execute__12daTagHinit_cFv.s"
 }
@@ -88,7 +111,7 @@ ASM_FUNCTION(execute__12daTagHinit_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHinit_Execute__FP12daTagHinit_c) {
+asm void daTagHinit_Execute(daTagHinit_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/daTagHinit_Execute__FP12daTagHinit_c.s"
 }
@@ -96,14 +119,9 @@ ASM_FUNCTION(daTagHinit_Execute__FP12daTagHinit_c) {
 
 
 /* 805A39D8-805A39E0 0008+00 .text      daTagHinit_Draw__FP12daTagHinit_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagHinit_Draw__FP12daTagHinit_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/daTagHinit_Draw__FP12daTagHinit_c.s"
+bool daTagHinit_Draw(daTagHinit_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

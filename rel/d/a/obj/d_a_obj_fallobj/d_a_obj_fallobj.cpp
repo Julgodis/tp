@@ -6,34 +6,69 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjFallObj_c;
+
+struct daObjFallObj_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void getFallTime();
+	void getFallHeight();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void action_wait(bool);
+	void action_fallStart();
+	void action_countdown();
+	void action_fall();
+	void action_end();
+	void action_follow_fall();
+	void checkHang();
+	void checkHang2();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjFallObj_cFv();
-extern "C" extern void setBaseMtx__14daObjFallObj_cFv();
-extern "C" extern void Create__14daObjFallObj_cFv();
-extern "C" extern void getFallTime__14daObjFallObj_cFv();
-extern "C" extern void getFallHeight__14daObjFallObj_cFv();
-extern "C" extern void CreateHeap__14daObjFallObj_cFv();
-extern "C" extern void create1st__14daObjFallObj_cFv();
-extern "C" extern void Execute__14daObjFallObj_cFPPA3_A4_f();
-extern "C" extern void action__14daObjFallObj_cFv();
-extern "C" extern void action_wait__14daObjFallObj_cFb();
-extern "C" extern void action_fallStart__14daObjFallObj_cFv();
-extern "C" extern void action_countdown__14daObjFallObj_cFv();
-extern "C" extern void action_fall__14daObjFallObj_cFv();
-extern "C" extern void action_end__14daObjFallObj_cFv();
-extern "C" extern void action_follow_fall__14daObjFallObj_cFv();
-extern "C" extern void checkHang__14daObjFallObj_cFv();
-extern "C" extern void checkHang2__14daObjFallObj_cFv();
-extern "C" extern void Draw__14daObjFallObj_cFv();
-extern "C" extern void Delete__14daObjFallObj_cFv();
-extern "C" extern void daObjFallObj_create1st__FP14daObjFallObj_c();
-extern "C" extern void daObjFallObj_MoveBGDelete__FP14daObjFallObj_c();
-extern "C" extern void daObjFallObj_MoveBGExecute__FP14daObjFallObj_c();
-extern "C" extern void daObjFallObj_MoveBGDraw__FP14daObjFallObj_c();
-extern "C" extern void func_80BE4A70();
-extern "C" extern void func_80BE4A8C();
+extern "C" void Execute__14daObjFallObj_cFPPA3_A4_f();
+void daObjFallObj_create1st(daObjFallObj_c*);
+void daObjFallObj_MoveBGDelete(daObjFallObj_c*);
+void daObjFallObj_MoveBGExecute(daObjFallObj_c*);
+void daObjFallObj_MoveBGDraw(daObjFallObj_c*);
+extern "C" void func_80BE4A70();
+extern "C" void func_80BE4A8C();
+
+extern "C" void initBaseMtx__14daObjFallObj_cFv();
+extern "C" void setBaseMtx__14daObjFallObj_cFv();
+extern "C" void Create__14daObjFallObj_cFv();
+extern "C" void getFallTime__14daObjFallObj_cFv();
+extern "C" void getFallHeight__14daObjFallObj_cFv();
+extern "C" void CreateHeap__14daObjFallObj_cFv();
+extern "C" void create1st__14daObjFallObj_cFv();
+extern "C" void Execute__14daObjFallObj_cFPPA3_A4_f();
+extern "C" void action__14daObjFallObj_cFv();
+extern "C" void action_wait__14daObjFallObj_cFb();
+extern "C" void action_fallStart__14daObjFallObj_cFv();
+extern "C" void action_countdown__14daObjFallObj_cFv();
+extern "C" void action_fall__14daObjFallObj_cFv();
+extern "C" void action_end__14daObjFallObj_cFv();
+extern "C" void action_follow_fall__14daObjFallObj_cFv();
+extern "C" void checkHang__14daObjFallObj_cFv();
+extern "C" void checkHang2__14daObjFallObj_cFv();
+extern "C" void Draw__14daObjFallObj_cFv();
+extern "C" void Delete__14daObjFallObj_cFv();
+extern "C" void daObjFallObj_create1st__FP14daObjFallObj_c();
+extern "C" void daObjFallObj_MoveBGDelete__FP14daObjFallObj_c();
+extern "C" void daObjFallObj_MoveBGExecute__FP14daObjFallObj_c();
+extern "C" void daObjFallObj_MoveBGDraw__FP14daObjFallObj_c();
+extern "C" void func_80BE4A70();
+extern "C" void func_80BE4A8C();
 SECTION_RODATA extern const u8 lit_3677[4];
 SECTION_RODATA extern const u32 lit_3678;
 SECTION_RODATA extern const u32 lit_3679;
@@ -64,7 +99,9 @@ SECTION_DATA extern void*const __vt__14daObjFallObj_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -74,7 +111,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/initBaseMtx__14daObjFallObj_cFv.s"
 }
@@ -85,7 +122,7 @@ ASM_FUNCTION(initBaseMtx__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/setBaseMtx__14daObjFallObj_cFv.s"
 }
@@ -96,7 +133,7 @@ ASM_FUNCTION(setBaseMtx__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Create__14daObjFallObj_cFv.s"
 }
@@ -107,7 +144,7 @@ ASM_FUNCTION(Create__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFallTime__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::getFallTime() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallTime__14daObjFallObj_cFv.s"
 }
@@ -118,7 +155,7 @@ ASM_FUNCTION(getFallTime__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFallHeight__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::getFallHeight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/getFallHeight__14daObjFallObj_cFv.s"
 }
@@ -129,7 +166,7 @@ ASM_FUNCTION(getFallHeight__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/CreateHeap__14daObjFallObj_cFv.s"
 }
@@ -140,7 +177,7 @@ ASM_FUNCTION(CreateHeap__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/create1st__14daObjFallObj_cFv.s"
 }
@@ -151,7 +188,7 @@ ASM_FUNCTION(create1st__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjFallObj_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjFallObj_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Execute__14daObjFallObj_cFPPA3_A4_f.s"
 }
@@ -162,7 +199,7 @@ ASM_FUNCTION(Execute__14daObjFallObj_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action__14daObjFallObj_cFv.s"
 }
@@ -173,7 +210,7 @@ ASM_FUNCTION(action__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_wait__14daObjFallObj_cFb) {
+asm void daObjFallObj_c::action_wait(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_wait__14daObjFallObj_cFb.s"
 }
@@ -184,7 +221,7 @@ ASM_FUNCTION(action_wait__14daObjFallObj_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_fallStart__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::action_fallStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_fallStart__14daObjFallObj_cFv.s"
 }
@@ -195,7 +232,7 @@ ASM_FUNCTION(action_fallStart__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_countdown__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::action_countdown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_countdown__14daObjFallObj_cFv.s"
 }
@@ -206,7 +243,7 @@ ASM_FUNCTION(action_countdown__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_fall__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::action_fall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_fall__14daObjFallObj_cFv.s"
 }
@@ -214,21 +251,16 @@ ASM_FUNCTION(action_fall__14daObjFallObj_cFv) {
 
 
 /* 80BE466C-80BE4670 0004+00 .text      action_end__14daObjFallObj_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(action_end__14daObjFallObj_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_end__14daObjFallObj_cFv.s"
+void daObjFallObj_c::action_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE4670-80BE4700 0090+00 .text      action_follow_fall__14daObjFallObj_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_follow_fall__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::action_follow_fall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/action_follow_fall__14daObjFallObj_cFv.s"
 }
@@ -239,7 +271,7 @@ ASM_FUNCTION(action_follow_fall__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHang__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::checkHang() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/checkHang__14daObjFallObj_cFv.s"
 }
@@ -250,7 +282,7 @@ ASM_FUNCTION(checkHang__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHang2__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::checkHang2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/checkHang2__14daObjFallObj_cFv.s"
 }
@@ -261,7 +293,7 @@ ASM_FUNCTION(checkHang2__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Draw__14daObjFallObj_cFv.s"
 }
@@ -272,7 +304,7 @@ ASM_FUNCTION(Draw__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjFallObj_cFv) {
+asm void daObjFallObj_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/Delete__14daObjFallObj_cFv.s"
 }
@@ -283,7 +315,7 @@ ASM_FUNCTION(Delete__14daObjFallObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFallObj_create1st__FP14daObjFallObj_c) {
+asm void daObjFallObj_create1st(daObjFallObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_create1st__FP14daObjFallObj_c.s"
 }
@@ -294,7 +326,7 @@ ASM_FUNCTION(daObjFallObj_create1st__FP14daObjFallObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFallObj_MoveBGDelete__FP14daObjFallObj_c) {
+asm void daObjFallObj_MoveBGDelete(daObjFallObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGDelete__FP14daObjFallObj_c.s"
 }
@@ -305,7 +337,7 @@ ASM_FUNCTION(daObjFallObj_MoveBGDelete__FP14daObjFallObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFallObj_MoveBGExecute__FP14daObjFallObj_c) {
+asm void daObjFallObj_MoveBGExecute(daObjFallObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGExecute__FP14daObjFallObj_c.s"
 }
@@ -316,7 +348,7 @@ ASM_FUNCTION(daObjFallObj_MoveBGExecute__FP14daObjFallObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFallObj_MoveBGDraw__FP14daObjFallObj_c) {
+asm void daObjFallObj_MoveBGDraw(daObjFallObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/daObjFallObj_MoveBGDraw__FP14daObjFallObj_c.s"
 }
@@ -327,7 +359,7 @@ ASM_FUNCTION(daObjFallObj_MoveBGDraw__FP14daObjFallObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BE4A70) {
+extern "C" asm void func_80BE4A70() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/func_80BE4A70.s"
 }
@@ -338,7 +370,7 @@ ASM_FUNCTION(func_80BE4A70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BE4A8C) {
+extern "C" asm void func_80BE4A8C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fallobj/d_a_obj_fallobj/func_80BE4A8C.s"
 }

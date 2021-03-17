@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagLv8Gate_c;
+
+struct fopAc_ac_c {
+};
+
+struct daTagLv8Gate_c {
+	void createHeap();
+	void execute();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void createHeap__14daTagLv8Gate_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daTagLv8Gate_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagLv8Gate_Execute__FP14daTagLv8Gate_c();
-extern "C" extern void execute__14daTagLv8Gate_cFv();
-extern "C" extern void daTagLv8Gate_Draw__FP14daTagLv8Gate_c();
-extern "C" extern void daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c();
-extern "C" extern void daTagLv8Gate_Delete__FP14daTagLv8Gate_c();
+void createSolidHeap(fopAc_ac_c*);
+void daTagLv8Gate_Create(fopAc_ac_c*);
+void daTagLv8Gate_Execute(daTagLv8Gate_c*);
+void daTagLv8Gate_Draw(daTagLv8Gate_c*);
+bool daTagLv8Gate_IsDelete(daTagLv8Gate_c*);
+void daTagLv8Gate_Delete(daTagLv8Gate_c*);
+
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__14daTagLv8Gate_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daTagLv8Gate_Create__FP10fopAc_ac_c();
+extern "C" void daTagLv8Gate_Execute__FP14daTagLv8Gate_c();
+extern "C" void execute__14daTagLv8Gate_cFv();
+extern "C" void daTagLv8Gate_Draw__FP14daTagLv8Gate_c();
+extern "C" bool daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c();
+extern "C" void daTagLv8Gate_Delete__FP14daTagLv8Gate_c();
 SECTION_RODATA extern const u32 lit_3749;
 SECTION_RODATA extern const u32 lit_3805;
 SECTION_RODATA extern const u32 lit_3806;
@@ -37,7 +63,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +75,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -58,7 +86,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daTagLv8Gate_cFv) {
+asm void daTagLv8Gate_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/createHeap__14daTagLv8Gate_cFv.s"
 }
@@ -69,7 +97,7 @@ ASM_FUNCTION(createHeap__14daTagLv8Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/__dt__12J3DFrameCtrlFv.s"
 }
@@ -80,7 +108,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv8Gate_Create__FP10fopAc_ac_c) {
+asm void daTagLv8Gate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/daTagLv8Gate_Create__FP10fopAc_ac_c.s"
 }
@@ -91,7 +119,7 @@ ASM_FUNCTION(daTagLv8Gate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv8Gate_Execute__FP14daTagLv8Gate_c) {
+asm void daTagLv8Gate_Execute(daTagLv8Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/daTagLv8Gate_Execute__FP14daTagLv8Gate_c.s"
 }
@@ -102,7 +130,7 @@ ASM_FUNCTION(daTagLv8Gate_Execute__FP14daTagLv8Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagLv8Gate_cFv) {
+asm void daTagLv8Gate_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/execute__14daTagLv8Gate_cFv.s"
 }
@@ -113,7 +141,7 @@ ASM_FUNCTION(execute__14daTagLv8Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv8Gate_Draw__FP14daTagLv8Gate_c) {
+asm void daTagLv8Gate_Draw(daTagLv8Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/daTagLv8Gate_Draw__FP14daTagLv8Gate_c.s"
 }
@@ -121,21 +149,16 @@ ASM_FUNCTION(daTagLv8Gate_Draw__FP14daTagLv8Gate_c) {
 
 
 /* 80D5246C-80D52474 0008+00 .text      daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/daTagLv8Gate_IsDelete__FP14daTagLv8Gate_c.s"
+bool daTagLv8Gate_IsDelete(daTagLv8Gate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D52474-80D524C4 0050+00 .text      daTagLv8Gate_Delete__FP14daTagLv8Gate_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv8Gate_Delete__FP14daTagLv8Gate_c) {
+asm void daTagLv8Gate_Delete(daTagLv8Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv8Gate/d_a_tag_Lv8Gate/daTagLv8Gate_Delete__FP14daTagLv8Gate_c.s"
 }

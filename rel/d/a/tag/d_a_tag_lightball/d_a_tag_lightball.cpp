@@ -6,20 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagLightBall_c;
+
+struct daTagLightBall_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	bool draw();
+	void _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__16daTagLightBall_cFv();
-extern "C" extern void setBaseMtx__16daTagLightBall_cFv();
-extern "C" extern void Create__16daTagLightBall_cFv();
-extern "C" extern void create__16daTagLightBall_cFv();
-extern "C" extern void execute__16daTagLightBall_cFv();
-extern "C" extern void draw__16daTagLightBall_cFv();
-extern "C" extern void _delete__16daTagLightBall_cFv();
-extern "C" extern void daTagLightBall_Draw__FP16daTagLightBall_c();
-extern "C" extern void daTagLightBall_Execute__FP16daTagLightBall_c();
-extern "C" extern void daTagLightBall_Delete__FP16daTagLightBall_c();
-extern "C" extern void daTagLightBall_Create__FP10fopAc_ac_c();
+void daTagLightBall_Draw(daTagLightBall_c*);
+void daTagLightBall_Execute(daTagLightBall_c*);
+void daTagLightBall_Delete(daTagLightBall_c*);
+void daTagLightBall_Create(fopAc_ac_c*);
+
+extern "C" void initBaseMtx__16daTagLightBall_cFv();
+extern "C" void setBaseMtx__16daTagLightBall_cFv();
+extern "C" void Create__16daTagLightBall_cFv();
+extern "C" void create__16daTagLightBall_cFv();
+extern "C" void execute__16daTagLightBall_cFv();
+extern "C" bool draw__16daTagLightBall_cFv();
+extern "C" void _delete__16daTagLightBall_cFv();
+extern "C" void daTagLightBall_Draw__FP16daTagLightBall_c();
+extern "C" void daTagLightBall_Execute__FP16daTagLightBall_c();
+extern "C" void daTagLightBall_Delete__FP16daTagLightBall_c();
+extern "C" void daTagLightBall_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3682;
 SECTION_DATA extern u8 l_daTagLightBall_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_LightBall[48];
@@ -28,7 +53,9 @@ SECTION_DATA extern u8 g_profile_Tag_LightBall[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -38,7 +65,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/initBaseMtx__16daTagLightBall_cFv.s"
 }
@@ -49,7 +76,7 @@ ASM_FUNCTION(initBaseMtx__16daTagLightBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/setBaseMtx__16daTagLightBall_cFv.s"
 }
@@ -60,7 +87,7 @@ ASM_FUNCTION(setBaseMtx__16daTagLightBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/Create__16daTagLightBall_cFv.s"
 }
@@ -71,7 +98,7 @@ ASM_FUNCTION(Create__16daTagLightBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/func_80D5A9B8.s"
 }
@@ -82,7 +109,7 @@ ASM_FUNCTION(create__16daTagLightBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/execute__16daTagLightBall_cFv.s"
 }
@@ -90,21 +117,16 @@ ASM_FUNCTION(execute__16daTagLightBall_cFv) {
 
 
 /* 80D5ABA0-80D5ABA8 0008+00 .text      draw__16daTagLightBall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__16daTagLightBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/draw__16daTagLightBall_cFv.s"
+bool daTagLightBall_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5ABA8-80D5ABF0 0048+00 .text      _delete__16daTagLightBall_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__16daTagLightBall_cFv) {
+asm void daTagLightBall_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/_delete__16daTagLightBall_cFv.s"
 }
@@ -115,7 +137,7 @@ ASM_FUNCTION(_delete__16daTagLightBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLightBall_Draw__FP16daTagLightBall_c) {
+asm void daTagLightBall_Draw(daTagLightBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Draw__FP16daTagLightBall_c.s"
 }
@@ -126,7 +148,7 @@ ASM_FUNCTION(daTagLightBall_Draw__FP16daTagLightBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLightBall_Execute__FP16daTagLightBall_c) {
+asm void daTagLightBall_Execute(daTagLightBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Execute__FP16daTagLightBall_c.s"
 }
@@ -137,7 +159,7 @@ ASM_FUNCTION(daTagLightBall_Execute__FP16daTagLightBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLightBall_Delete__FP16daTagLightBall_c) {
+asm void daTagLightBall_Delete(daTagLightBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Delete__FP16daTagLightBall_c.s"
 }
@@ -148,7 +170,7 @@ ASM_FUNCTION(daTagLightBall_Delete__FP16daTagLightBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLightBall_Create__FP10fopAc_ac_c) {
+asm void daTagLightBall_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Create__FP10fopAc_ac_c.s"
 }

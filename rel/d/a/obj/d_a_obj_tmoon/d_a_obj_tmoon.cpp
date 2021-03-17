@@ -6,22 +6,49 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjTMoon_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjTMoon_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__12daObjTMoon_cFv();
-extern "C" extern void setBaseMtx__12daObjTMoon_cFv();
-extern "C" extern void Create__12daObjTMoon_cFv();
-extern "C" extern void CreateHeap__12daObjTMoon_cFv();
-extern "C" extern void create__12daObjTMoon_cFv();
-extern "C" extern void execute__12daObjTMoon_cFv();
-extern "C" extern void draw__12daObjTMoon_cFv();
-extern "C" extern void _delete__12daObjTMoon_cFv();
-extern "C" extern void daObjTMoon_Draw__FP12daObjTMoon_c();
-extern "C" extern void daObjTMoon_Execute__FP12daObjTMoon_c();
-extern "C" extern void daObjTMoon_Delete__FP12daObjTMoon_c();
-extern "C" extern void daObjTMoon_Create__FP12daObjTMoon_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjTMoon_Draw(daObjTMoon_c*);
+void daObjTMoon_Execute(daObjTMoon_c*);
+void daObjTMoon_Delete(daObjTMoon_c*);
+void daObjTMoon_Create(daObjTMoon_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__12daObjTMoon_cFv();
+extern "C" void setBaseMtx__12daObjTMoon_cFv();
+extern "C" void Create__12daObjTMoon_cFv();
+extern "C" void CreateHeap__12daObjTMoon_cFv();
+extern "C" void create__12daObjTMoon_cFv();
+extern "C" void execute__12daObjTMoon_cFv();
+extern "C" void draw__12daObjTMoon_cFv();
+extern "C" void _delete__12daObjTMoon_cFv();
+extern "C" void daObjTMoon_Draw__FP12daObjTMoon_c();
+extern "C" void daObjTMoon_Execute__FP12daObjTMoon_c();
+extern "C" void daObjTMoon_Delete__FP12daObjTMoon_c();
+extern "C" void daObjTMoon_Create__FP12daObjTMoon_c();
 SECTION_RODATA extern const u8 stringBase0[8];
 SECTION_DATA extern u8 l_arcName[4];
 SECTION_DATA extern u8 l_daObjTMoon_Method[32];
@@ -31,7 +58,9 @@ SECTION_DATA extern u8 g_profile_Obj_TMoon[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -52,7 +81,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/initBaseMtx__12daObjTMoon_cFv.s"
 }
@@ -63,7 +92,7 @@ ASM_FUNCTION(initBaseMtx__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/setBaseMtx__12daObjTMoon_cFv.s"
 }
@@ -74,7 +103,7 @@ ASM_FUNCTION(setBaseMtx__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/Create__12daObjTMoon_cFv.s"
 }
@@ -85,7 +114,7 @@ ASM_FUNCTION(Create__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/CreateHeap__12daObjTMoon_cFv.s"
 }
@@ -96,7 +125,7 @@ ASM_FUNCTION(CreateHeap__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/func_80D12D0C.s"
 }
@@ -107,7 +136,7 @@ ASM_FUNCTION(create__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/execute__12daObjTMoon_cFv.s"
 }
@@ -118,7 +147,7 @@ ASM_FUNCTION(execute__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/draw__12daObjTMoon_cFv.s"
 }
@@ -129,7 +158,7 @@ ASM_FUNCTION(draw__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjTMoon_cFv) {
+asm void daObjTMoon_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/_delete__12daObjTMoon_cFv.s"
 }
@@ -140,7 +169,7 @@ ASM_FUNCTION(_delete__12daObjTMoon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTMoon_Draw__FP12daObjTMoon_c) {
+asm void daObjTMoon_Draw(daObjTMoon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Draw__FP12daObjTMoon_c.s"
 }
@@ -151,7 +180,7 @@ ASM_FUNCTION(daObjTMoon_Draw__FP12daObjTMoon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTMoon_Execute__FP12daObjTMoon_c) {
+asm void daObjTMoon_Execute(daObjTMoon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Execute__FP12daObjTMoon_c.s"
 }
@@ -162,7 +191,7 @@ ASM_FUNCTION(daObjTMoon_Execute__FP12daObjTMoon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTMoon_Delete__FP12daObjTMoon_c) {
+asm void daObjTMoon_Delete(daObjTMoon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Delete__FP12daObjTMoon_c.s"
 }
@@ -173,7 +202,7 @@ ASM_FUNCTION(daObjTMoon_Delete__FP12daObjTMoon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTMoon_Create__FP12daObjTMoon_c) {
+asm void daObjTMoon_Create(daObjTMoon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tmoon/d_a_obj_tmoon/daObjTMoon_Create__FP12daObjTMoon_c.s"
 }

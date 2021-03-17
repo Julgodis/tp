@@ -6,81 +6,228 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct mDoExt_invisibleModel;
+struct J3DMaterial;
+struct J3DAnmTransform;
+struct daMidna_c;
+struct J3DJoint;
+struct J3DModelData;
+struct J3DModel;
+struct fopAc_ac_c;
+struct J3DTransformInfo;
+
+struct daMidna_matAnm_c {
+	void init();
+	void calc(J3DMaterial*) const;
+	~daMidna_matAnm_c();
+};
+
+struct J3DMaterial {
+};
+
+struct J3DTransformInfo {
+};
+
+struct daMidna_McaMorfCB1_c {
+	void execute(u16, J3DTransformInfo*);
+	~daMidna_McaMorfCB1_c();
+};
+
+struct daMidna_c {
+	struct daMidna_ANM {
+	};
+
+	void modelCallBack(s32);
+	void changeUpperBck();
+	void changeFaceBck();
+	void baseModelCallBack(s32);
+	void initInvModel(u16, J3DModel**, mDoExt_invisibleModel*, u32);
+	void createHeap();
+	void create();
+	void allAnimePlay();
+	void setMatrix();
+	void setBodyPartMatrix();
+	void setRoomInfo();
+	void setBodyPartPos();
+	void checkAppear();
+	void checkMidnaPosState();
+	void setUpperAnime(u16, u16);
+	void setUpperAnimeAndSe(daMidna_c::daMidna_ANM);
+	void setFaceAnime(u16, u16);
+	void endHighModel();
+	void setDemoAnm();
+	void setFaceBtp(u16, s32);
+	void setFaceBtk(u16, s32);
+	void setLeftHandShape(u16);
+	void setRightHandShape(u16);
+	void checkHairOnlyAnime(s32) const;
+	void setBckAnime(J3DAnmTransform*, s32, f32);
+	void setAnm();
+	void clearEyeMove();
+	void setNeckAngle();
+	void initHairAngle();
+	void setHairAngle();
+	void setDemoData();
+	void setSimpleBrk(J3DModelData*, u16);
+	void setSimpleBtk(J3DModelData*, u16);
+	void initMidnaModel();
+	void setMidnaNoDrawFlg();
+	void checkMetamorphoseEnableBase();
+	void checkNoDrawState();
+	void setSound();
+	void execute();
+	void draw();
+	~daMidna_c();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct mDoExt_invisibleModel {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daPy_anmHeap_c {
+	void __defctor();
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DModelData {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__16daMidna_matAnm_cFv();
-extern "C" extern void calc__16daMidna_matAnm_cCFP11J3DMaterial();
-extern "C" extern void execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo();
-extern "C" extern void modelCallBack__9daMidna_cFi();
-extern "C" extern void changeUpperBck__9daMidna_cFv();
-extern "C" extern void changeFaceBck__9daMidna_cFv();
-extern "C" extern void baseModelCallBack__9daMidna_cFi();
-extern "C" extern void daMidna_modelCallBack__FP8J3DJointi();
-extern "C" extern void initInvModel__9daMidna_cFUsPP8J3DModelP21mDoExt_invisibleModelUl();
-extern "C" extern void initDemoModel__9daMidna_cFPP8J3DModelPCcUl();
-extern "C" extern void createHeap__9daMidna_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void daMidna_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__9daMidna_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __defctor__14daPy_anmHeap_cFv();
-extern "C" extern void daMidna_Create__FP10fopAc_ac_c();
-extern "C" extern void allAnimePlay__9daMidna_cFv();
-extern "C" extern void setMatrix__9daMidna_cFv();
-extern "C" extern void setBodyPartMatrix__9daMidna_cFv();
-extern "C" extern void setRoomInfo__9daMidna_cFv();
-extern "C" extern void setBodyPartPos__9daMidna_cFv();
-extern "C" extern void checkAppear__9daMidna_cFv();
-extern "C" extern void checkMidnaPosState__9daMidna_cFv();
-extern "C" extern void setUpperAnime__9daMidna_cFUsUs();
-extern "C" extern void setUpperAnimeAndSe__9daMidna_cFQ29daMidna_c11daMidna_ANM();
-extern "C" extern void setFaceAnime__9daMidna_cFUsUs();
-extern "C" extern void endHighModel__9daMidna_cFv();
-extern "C" extern void setDemoAnm__9daMidna_cFv();
-extern "C" extern void setFaceBtp__9daMidna_cFUsi();
-extern "C" extern void setFaceBtk__9daMidna_cFUsi();
-extern "C" extern void setLeftHandShape__9daMidna_cFUs();
-extern "C" extern void setRightHandShape__9daMidna_cFUs();
-extern "C" extern void checkHairOnlyAnime__9daMidna_cCFi();
-extern "C" extern void setBckAnime__9daMidna_cFP15J3DAnmTransformif();
-extern "C" extern void setAnm__9daMidna_cFv();
-extern "C" extern void getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs();
-extern "C" extern void clearEyeMove__9daMidna_cFv();
-extern "C" extern void setEyeMove__9daMidna_cFPC4cXyzss();
-extern "C" extern void setNeckAngle__9daMidna_cFv();
-extern "C" extern void initHairAngle__9daMidna_cFv();
-extern "C" extern void setHairAngle__9daMidna_cFv();
-extern "C" extern void setDemoData__9daMidna_cFv();
-extern "C" extern void setSimpleBrk__9daMidna_cFP12J3DModelDataUs();
-extern "C" extern void setSimpleBtk__9daMidna_cFP12J3DModelDataUs();
-extern "C" extern void initMidnaModel__9daMidna_cFv();
-extern "C" extern void daMidna_searchNpc__FP10fopAc_ac_cPv();
-extern "C" extern void setMidnaNoDrawFlg__9daMidna_cFv();
-extern "C" extern void checkMetamorphoseEnableBase__9daMidna_cFv();
-extern "C" extern void checkNoDrawState__9daMidna_cFv();
-extern "C" extern void setSound__9daMidna_cFv();
-extern "C" extern void execute__9daMidna_cFv();
-extern "C" extern void daMidna_Execute__FP9daMidna_c();
-extern "C" extern void draw__9daMidna_cFv();
-extern "C" extern void daMidna_Draw__FP9daMidna_c();
-extern "C" extern void __dt__9daMidna_cFv();
-extern "C" extern void daMidna_Delete__FP9daMidna_c();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void func_804C637C();
-extern "C" extern void __dt__20daMidna_McaMorfCB1_cFv();
-extern "C" extern void __dt__16daMidna_matAnm_cFv();
+void daMidna_modelCallBack(J3DJoint*, s32);
+extern "C" void initDemoModel__9daMidna_cFPP8J3DModelPCcUl();
+void daMidna_createHeap(fopAc_ac_c*);
+void daMidna_Create(fopAc_ac_c*);
+extern "C" void getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs();
+extern "C" void setEyeMove__9daMidna_cFPC4cXyzss();
+void daMidna_searchNpc(fopAc_ac_c*, void*);
+void daMidna_Execute(daMidna_c*);
+void daMidna_Draw(daMidna_c*);
+void daMidna_Delete(daMidna_c*);
+extern "C" void func_804C637C();
+
+extern "C" void init__16daMidna_matAnm_cFv();
+extern "C" void calc__16daMidna_matAnm_cCFP11J3DMaterial();
+extern "C" void execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo();
+extern "C" void modelCallBack__9daMidna_cFi();
+extern "C" void changeUpperBck__9daMidna_cFv();
+extern "C" void changeFaceBck__9daMidna_cFv();
+extern "C" void baseModelCallBack__9daMidna_cFi();
+extern "C" void daMidna_modelCallBack__FP8J3DJointi();
+extern "C" void initInvModel__9daMidna_cFUsPP8J3DModelP21mDoExt_invisibleModelUl();
+extern "C" void initDemoModel__9daMidna_cFPP8J3DModelPCcUl();
+extern "C" void createHeap__9daMidna_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void daMidna_createHeap__FP10fopAc_ac_c();
+extern "C" void create__9daMidna_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __defctor__14daPy_anmHeap_cFv();
+extern "C" void daMidna_Create__FP10fopAc_ac_c();
+extern "C" void allAnimePlay__9daMidna_cFv();
+extern "C" void setMatrix__9daMidna_cFv();
+extern "C" void setBodyPartMatrix__9daMidna_cFv();
+extern "C" void setRoomInfo__9daMidna_cFv();
+extern "C" void setBodyPartPos__9daMidna_cFv();
+extern "C" void checkAppear__9daMidna_cFv();
+extern "C" void checkMidnaPosState__9daMidna_cFv();
+extern "C" void setUpperAnime__9daMidna_cFUsUs();
+extern "C" void setUpperAnimeAndSe__9daMidna_cFQ29daMidna_c11daMidna_ANM();
+extern "C" void setFaceAnime__9daMidna_cFUsUs();
+extern "C" void endHighModel__9daMidna_cFv();
+extern "C" void setDemoAnm__9daMidna_cFv();
+extern "C" void setFaceBtp__9daMidna_cFUsi();
+extern "C" void setFaceBtk__9daMidna_cFUsi();
+extern "C" void setLeftHandShape__9daMidna_cFUs();
+extern "C" void setRightHandShape__9daMidna_cFUs();
+extern "C" void checkHairOnlyAnime__9daMidna_cCFi();
+extern "C" void setBckAnime__9daMidna_cFP15J3DAnmTransformif();
+extern "C" void setAnm__9daMidna_cFv();
+extern "C" void getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs();
+extern "C" void clearEyeMove__9daMidna_cFv();
+extern "C" void setEyeMove__9daMidna_cFPC4cXyzss();
+extern "C" void setNeckAngle__9daMidna_cFv();
+extern "C" void initHairAngle__9daMidna_cFv();
+extern "C" void setHairAngle__9daMidna_cFv();
+extern "C" void setDemoData__9daMidna_cFv();
+extern "C" void setSimpleBrk__9daMidna_cFP12J3DModelDataUs();
+extern "C" void setSimpleBtk__9daMidna_cFP12J3DModelDataUs();
+extern "C" void initMidnaModel__9daMidna_cFv();
+extern "C" void daMidna_searchNpc__FP10fopAc_ac_cPv();
+extern "C" void setMidnaNoDrawFlg__9daMidna_cFv();
+extern "C" void checkMetamorphoseEnableBase__9daMidna_cFv();
+extern "C" void checkNoDrawState__9daMidna_cFv();
+extern "C" void setSound__9daMidna_cFv();
+extern "C" void execute__9daMidna_cFv();
+extern "C" void daMidna_Execute__FP9daMidna_c();
+extern "C" void draw__9daMidna_cFv();
+extern "C" void daMidna_Draw__FP9daMidna_c();
+extern "C" void __dt__9daMidna_cFv();
+extern "C" void daMidna_Delete__FP9daMidna_c();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void func_804C637C();
+extern "C" void __dt__20daMidna_McaMorfCB1_cFv();
+extern "C" void __dt__16daMidna_matAnm_cFv();
 SECTION_RODATA extern const u8 lit_3777[12];
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 l_eyeOffset[12];
@@ -205,7 +352,9 @@ SECTION_DATA extern void*const __vt__16daMidna_matAnm_c[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -215,7 +364,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__16daMidna_matAnm_cFv) {
+asm void daMidna_matAnm_c::init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/init__16daMidna_matAnm_cFv.s"
 }
@@ -226,7 +375,7 @@ ASM_FUNCTION(init__16daMidna_matAnm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__16daMidna_matAnm_cCFP11J3DMaterial) {
+asm void daMidna_matAnm_c::calc(J3DMaterial* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/calc__16daMidna_matAnm_cCFP11J3DMaterial.s"
 }
@@ -237,7 +386,7 @@ ASM_FUNCTION(calc__16daMidna_matAnm_cCFP11J3DMaterial) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo) {
+asm void daMidna_McaMorfCB1_c::execute(u16 field_0, J3DTransformInfo* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo.s"
 }
@@ -248,7 +397,7 @@ ASM_FUNCTION(execute__20daMidna_McaMorfCB1_cFUsP16J3DTransformInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modelCallBack__9daMidna_cFi) {
+asm void daMidna_c::modelCallBack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/modelCallBack__9daMidna_cFi.s"
 }
@@ -259,7 +408,7 @@ ASM_FUNCTION(modelCallBack__9daMidna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeUpperBck__9daMidna_cFv) {
+asm void daMidna_c::changeUpperBck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/changeUpperBck__9daMidna_cFv.s"
 }
@@ -270,7 +419,7 @@ ASM_FUNCTION(changeUpperBck__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeFaceBck__9daMidna_cFv) {
+asm void daMidna_c::changeFaceBck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/changeFaceBck__9daMidna_cFv.s"
 }
@@ -281,7 +430,7 @@ ASM_FUNCTION(changeFaceBck__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseModelCallBack__9daMidna_cFi) {
+asm void daMidna_c::baseModelCallBack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/baseModelCallBack__9daMidna_cFi.s"
 }
@@ -292,7 +441,7 @@ ASM_FUNCTION(baseModelCallBack__9daMidna_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_modelCallBack__FP8J3DJointi) {
+asm void daMidna_modelCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_modelCallBack__FP8J3DJointi.s"
 }
@@ -303,7 +452,7 @@ ASM_FUNCTION(daMidna_modelCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initInvModel__9daMidna_cFUsPP8J3DModelP21mDoExt_invisibleModelUl) {
+asm void daMidna_c::initInvModel(u16 field_0, J3DModel** field_1, mDoExt_invisibleModel* field_2, u32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/initInvModel__9daMidna_cFUsPP8J3DModelP21mDoExt_invisibleModelUl.s"
 }
@@ -314,7 +463,7 @@ ASM_FUNCTION(initInvModel__9daMidna_cFUsPP8J3DModelP21mDoExt_invisibleModelUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDemoModel__9daMidna_cFPP8J3DModelPCcUl) {
+extern "C" asm void initDemoModel__9daMidna_cFPP8J3DModelPCcUl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/initDemoModel__9daMidna_cFPP8J3DModelPCcUl.s"
 }
@@ -325,7 +474,7 @@ ASM_FUNCTION(initDemoModel__9daMidna_cFPP8J3DModelPCcUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__9daMidna_cFv) {
+asm void daMidna_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/createHeap__9daMidna_cFv.s"
 }
@@ -336,7 +485,7 @@ ASM_FUNCTION(createHeap__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__12J3DFrameCtrlFv.s"
 }
@@ -347,7 +496,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -358,7 +507,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -369,7 +518,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__14J3DTevColorAnmFv.s"
 }
@@ -380,7 +529,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__14J3DTevColorAnmFv.s"
 }
@@ -391,7 +540,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__11J3DTexNoAnmFv.s"
 }
@@ -402,7 +551,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__11J3DTexNoAnmFv.s"
 }
@@ -413,7 +562,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -424,7 +573,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -435,7 +584,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__14J3DMatColorAnmFv.s"
 }
@@ -446,7 +595,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__14J3DMatColorAnmFv.s"
 }
@@ -457,7 +606,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_createHeap__FP10fopAc_ac_c) {
+asm void daMidna_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_createHeap__FP10fopAc_ac_c.s"
 }
@@ -468,7 +617,7 @@ ASM_FUNCTION(daMidna_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daMidna_cFv) {
+asm void daMidna_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/create__9daMidna_cFv.s"
 }
@@ -479,7 +628,7 @@ ASM_FUNCTION(create__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__4cXyzFv.s"
 }
@@ -487,21 +636,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 804BD8F4-804BD8F8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BD8F8-804BD91C 0024+00 .text      __defctor__14daPy_anmHeap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__14daPy_anmHeap_cFv) {
+asm void daPy_anmHeap_c::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__defctor__14daPy_anmHeap_cFv.s"
 }
@@ -512,7 +656,7 @@ ASM_FUNCTION(__defctor__14daPy_anmHeap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_Create__FP10fopAc_ac_c) {
+asm void daMidna_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Create__FP10fopAc_ac_c.s"
 }
@@ -523,7 +667,7 @@ ASM_FUNCTION(daMidna_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allAnimePlay__9daMidna_cFv) {
+asm void daMidna_c::allAnimePlay() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/allAnimePlay__9daMidna_cFv.s"
 }
@@ -534,7 +678,7 @@ ASM_FUNCTION(allAnimePlay__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__9daMidna_cFv) {
+asm void daMidna_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setMatrix__9daMidna_cFv.s"
 }
@@ -545,7 +689,7 @@ ASM_FUNCTION(setMatrix__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyPartMatrix__9daMidna_cFv) {
+asm void daMidna_c::setBodyPartMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setBodyPartMatrix__9daMidna_cFv.s"
 }
@@ -556,7 +700,7 @@ ASM_FUNCTION(setBodyPartMatrix__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daMidna_cFv) {
+asm void daMidna_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setRoomInfo__9daMidna_cFv.s"
 }
@@ -567,7 +711,7 @@ ASM_FUNCTION(setRoomInfo__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyPartPos__9daMidna_cFv) {
+asm void daMidna_c::setBodyPartPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setBodyPartPos__9daMidna_cFv.s"
 }
@@ -578,7 +722,7 @@ ASM_FUNCTION(setBodyPartPos__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAppear__9daMidna_cFv) {
+asm void daMidna_c::checkAppear() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/checkAppear__9daMidna_cFv.s"
 }
@@ -589,7 +733,7 @@ ASM_FUNCTION(checkAppear__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkMidnaPosState__9daMidna_cFv) {
+asm void daMidna_c::checkMidnaPosState() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/checkMidnaPosState__9daMidna_cFv.s"
 }
@@ -600,7 +744,7 @@ ASM_FUNCTION(checkMidnaPosState__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setUpperAnime__9daMidna_cFUsUs) {
+asm void daMidna_c::setUpperAnime(u16 field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setUpperAnime__9daMidna_cFUsUs.s"
 }
@@ -611,7 +755,7 @@ ASM_FUNCTION(setUpperAnime__9daMidna_cFUsUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setUpperAnimeAndSe__9daMidna_cFQ29daMidna_c11daMidna_ANM) {
+asm void daMidna_c::setUpperAnimeAndSe(daMidna_c::daMidna_ANM field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setUpperAnimeAndSe__9daMidna_cFQ29daMidna_c11daMidna_ANM.s"
 }
@@ -622,7 +766,7 @@ ASM_FUNCTION(setUpperAnimeAndSe__9daMidna_cFQ29daMidna_c11daMidna_ANM) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceAnime__9daMidna_cFUsUs) {
+asm void daMidna_c::setFaceAnime(u16 field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setFaceAnime__9daMidna_cFUsUs.s"
 }
@@ -633,7 +777,7 @@ ASM_FUNCTION(setFaceAnime__9daMidna_cFUsUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endHighModel__9daMidna_cFv) {
+asm void daMidna_c::endHighModel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/endHighModel__9daMidna_cFv.s"
 }
@@ -644,7 +788,7 @@ ASM_FUNCTION(endHighModel__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoAnm__9daMidna_cFv) {
+asm void daMidna_c::setDemoAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setDemoAnm__9daMidna_cFv.s"
 }
@@ -655,7 +799,7 @@ ASM_FUNCTION(setDemoAnm__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceBtp__9daMidna_cFUsi) {
+asm void daMidna_c::setFaceBtp(u16 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setFaceBtp__9daMidna_cFUsi.s"
 }
@@ -666,7 +810,7 @@ ASM_FUNCTION(setFaceBtp__9daMidna_cFUsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceBtk__9daMidna_cFUsi) {
+asm void daMidna_c::setFaceBtk(u16 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setFaceBtk__9daMidna_cFUsi.s"
 }
@@ -677,7 +821,7 @@ ASM_FUNCTION(setFaceBtk__9daMidna_cFUsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLeftHandShape__9daMidna_cFUs) {
+asm void daMidna_c::setLeftHandShape(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setLeftHandShape__9daMidna_cFUs.s"
 }
@@ -688,7 +832,7 @@ ASM_FUNCTION(setLeftHandShape__9daMidna_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRightHandShape__9daMidna_cFUs) {
+asm void daMidna_c::setRightHandShape(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setRightHandShape__9daMidna_cFUs.s"
 }
@@ -699,7 +843,7 @@ ASM_FUNCTION(setRightHandShape__9daMidna_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHairOnlyAnime__9daMidna_cCFi) {
+asm void daMidna_c::checkHairOnlyAnime(s32 field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/checkHairOnlyAnime__9daMidna_cCFi.s"
 }
@@ -710,7 +854,7 @@ ASM_FUNCTION(checkHairOnlyAnime__9daMidna_cCFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBckAnime__9daMidna_cFP15J3DAnmTransformif) {
+asm void daMidna_c::setBckAnime(J3DAnmTransform* field_0, s32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setBckAnime__9daMidna_cFP15J3DAnmTransformif.s"
 }
@@ -721,7 +865,7 @@ ASM_FUNCTION(setBckAnime__9daMidna_cFP15J3DAnmTransformif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__9daMidna_cFv) {
+asm void daMidna_c::setAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setAnm__9daMidna_cFv.s"
 }
@@ -732,7 +876,7 @@ ASM_FUNCTION(setAnm__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs) {
+extern "C" asm void getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs.s"
 }
@@ -743,7 +887,7 @@ ASM_FUNCTION(getNeckAimAngle__9daMidna_cFPC4cXyzPsPsPsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearEyeMove__9daMidna_cFv) {
+asm void daMidna_c::clearEyeMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/clearEyeMove__9daMidna_cFv.s"
 }
@@ -754,7 +898,7 @@ ASM_FUNCTION(clearEyeMove__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeMove__9daMidna_cFPC4cXyzss) {
+extern "C" asm void setEyeMove__9daMidna_cFPC4cXyzss() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setEyeMove__9daMidna_cFPC4cXyzss.s"
 }
@@ -765,7 +909,7 @@ ASM_FUNCTION(setEyeMove__9daMidna_cFPC4cXyzss) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNeckAngle__9daMidna_cFv) {
+asm void daMidna_c::setNeckAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setNeckAngle__9daMidna_cFv.s"
 }
@@ -776,7 +920,7 @@ ASM_FUNCTION(setNeckAngle__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initHairAngle__9daMidna_cFv) {
+asm void daMidna_c::initHairAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/initHairAngle__9daMidna_cFv.s"
 }
@@ -787,7 +931,7 @@ ASM_FUNCTION(initHairAngle__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHairAngle__9daMidna_cFv) {
+asm void daMidna_c::setHairAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setHairAngle__9daMidna_cFv.s"
 }
@@ -798,7 +942,7 @@ ASM_FUNCTION(setHairAngle__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemoData__9daMidna_cFv) {
+asm void daMidna_c::setDemoData() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setDemoData__9daMidna_cFv.s"
 }
@@ -809,7 +953,7 @@ ASM_FUNCTION(setDemoData__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSimpleBrk__9daMidna_cFP12J3DModelDataUs) {
+asm void daMidna_c::setSimpleBrk(J3DModelData* field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setSimpleBrk__9daMidna_cFP12J3DModelDataUs.s"
 }
@@ -820,7 +964,7 @@ ASM_FUNCTION(setSimpleBrk__9daMidna_cFP12J3DModelDataUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSimpleBtk__9daMidna_cFP12J3DModelDataUs) {
+asm void daMidna_c::setSimpleBtk(J3DModelData* field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setSimpleBtk__9daMidna_cFP12J3DModelDataUs.s"
 }
@@ -831,7 +975,7 @@ ASM_FUNCTION(setSimpleBtk__9daMidna_cFP12J3DModelDataUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initMidnaModel__9daMidna_cFv) {
+asm void daMidna_c::initMidnaModel() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/initMidnaModel__9daMidna_cFv.s"
 }
@@ -842,7 +986,7 @@ ASM_FUNCTION(initMidnaModel__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_searchNpc__FP10fopAc_ac_cPv) {
+asm void daMidna_searchNpc(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_searchNpc__FP10fopAc_ac_cPv.s"
 }
@@ -853,7 +997,7 @@ ASM_FUNCTION(daMidna_searchNpc__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaNoDrawFlg__9daMidna_cFv) {
+asm void daMidna_c::setMidnaNoDrawFlg() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setMidnaNoDrawFlg__9daMidna_cFv.s"
 }
@@ -864,7 +1008,7 @@ ASM_FUNCTION(setMidnaNoDrawFlg__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkMetamorphoseEnableBase__9daMidna_cFv) {
+asm void daMidna_c::checkMetamorphoseEnableBase() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/checkMetamorphoseEnableBase__9daMidna_cFv.s"
 }
@@ -875,7 +1019,7 @@ ASM_FUNCTION(checkMetamorphoseEnableBase__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNoDrawState__9daMidna_cFv) {
+asm void daMidna_c::checkNoDrawState() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/checkNoDrawState__9daMidna_cFv.s"
 }
@@ -886,7 +1030,7 @@ ASM_FUNCTION(checkNoDrawState__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSound__9daMidna_cFv) {
+asm void daMidna_c::setSound() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/setSound__9daMidna_cFv.s"
 }
@@ -897,7 +1041,7 @@ ASM_FUNCTION(setSound__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daMidna_cFv) {
+asm void daMidna_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/execute__9daMidna_cFv.s"
 }
@@ -908,7 +1052,7 @@ ASM_FUNCTION(execute__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_Execute__FP9daMidna_c) {
+asm void daMidna_Execute(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Execute__FP9daMidna_c.s"
 }
@@ -919,7 +1063,7 @@ ASM_FUNCTION(daMidna_Execute__FP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daMidna_cFv) {
+asm void daMidna_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/draw__9daMidna_cFv.s"
 }
@@ -930,7 +1074,7 @@ ASM_FUNCTION(draw__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_Draw__FP9daMidna_c) {
+asm void daMidna_Draw(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Draw__FP9daMidna_c.s"
 }
@@ -941,7 +1085,7 @@ ASM_FUNCTION(daMidna_Draw__FP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daMidna_cFv) {
+asm daMidna_c::~daMidna_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__9daMidna_cFv.s"
 }
@@ -952,7 +1096,7 @@ ASM_FUNCTION(__dt__9daMidna_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMidna_Delete__FP9daMidna_c) {
+asm void daMidna_Delete(daMidna_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/daMidna_Delete__FP9daMidna_c.s"
 }
@@ -963,7 +1107,7 @@ ASM_FUNCTION(daMidna_Delete__FP9daMidna_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -974,7 +1118,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804C637C) {
+extern "C" asm void func_804C637C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/func_804C637C.s"
 }
@@ -985,7 +1129,7 @@ ASM_FUNCTION(func_804C637C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daMidna_McaMorfCB1_cFv) {
+asm daMidna_McaMorfCB1_c::~daMidna_McaMorfCB1_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__20daMidna_McaMorfCB1_cFv.s"
 }
@@ -996,7 +1140,7 @@ ASM_FUNCTION(__dt__20daMidna_McaMorfCB1_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daMidna_matAnm_cFv) {
+asm daMidna_matAnm_c::~daMidna_matAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_midna/d_a_midna/__dt__16daMidna_matAnm_cFv.s"
 }

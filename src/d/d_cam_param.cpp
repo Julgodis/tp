@@ -6,27 +6,130 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dCamMath (dCamMath) False/False
+// build cSAngle (cSAngle) False/False
+/* top-level dependencies (begin cSAngle) */
+/* top-level dependencies (end cSAngle) */
+struct cSAngle {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin dCamMath) */
+// outer dependency: cSAngle
+// outer dependency: cXyz
+/* top-level dependencies (end dCamMath) */
+struct dCamMath {
+	// cSAngle
+	// cXyz
+	/* 8008813C */ void rationalBezierRatio(f32, f32);
+	/* 80088284 */ void zoomFovy(f32, f32);
+	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
+	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
+	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
+};
+
+// build cDegree (cDegree) False/False
+/* top-level dependencies (begin cDegree) */
+/* top-level dependencies (end cDegree) */
+struct cDegree {
+	/* 800882E0 */ ~cDegree();
+	/* 8027134C */ cDegree(f32);
+	/* 802713F0 */ void Sin() const;
+	/* 80271418 */ void Cos() const;
+};
+
+// build cXyz (cXyz) True/True
+// build cSAngle (cSAngle) True/True
+// build dCstick_c (dCstick_c) False/False
+/* top-level dependencies (begin dCstick_c) */
+/* top-level dependencies (end dCstick_c) */
+struct dCstick_c {
+	/* 80088434 */ dCstick_c();
+	/* 8008845C */ bool Shift(u32);
+	/* 800889B0 */ ~dCstick_c();
+};
+
+// build dCamBGChk_c (dCamBGChk_c) False/False
+/* top-level dependencies (begin dCamBGChk_c) */
+/* top-level dependencies (end dCamBGChk_c) */
+struct dCamBGChk_c {
+	/* 80088464 */ dCamBGChk_c();
+};
+
+// build dCamParam_c (dCamParam_c) False/False
+/* top-level dependencies (begin dCamParam_c) */
+/* top-level dependencies (end dCamParam_c) */
+struct dCamParam_c {
+	/* 800884F0 */ dCamParam_c(s32);
+	/* 8008858C */ ~dCamParam_c();
+	/* 800885D4 */ void Change(s32);
+	/* 80088620 */ void SearchStyle(u32);
+};
+
+// build dCamSetup_c (dCamSetup_c) False/False
+/* top-level dependencies (begin dCamSetup_c) */
+/* top-level dependencies (end dCamSetup_c) */
+struct dCamSetup_c {
+	/* 80088668 */ dCamSetup_c();
+	/* 800888B8 */ ~dCamSetup_c();
+	/* 80088918 */ void CheckLatitudeRange(s16*);
+	/* 80088988 */ void PlayerHideDist();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dCamera_c (dCamera_c) False/False
+/* top-level dependencies (begin dCamera_c) */
+/* top-level dependencies (end dCamera_c) */
+struct dCamera_c {
+	/* 80180A40 */ void EventRecoverNotime();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rationalBezierRatio__8dCamMathFff();
-extern "C" extern void zoomFovy__8dCamMathFff();
-extern "C" extern void __dt__7cDegreeFv();
-extern "C" extern void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
-extern "C" extern void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
-extern "C" extern void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
-extern "C" extern void __ct__9dCstick_cFv();
-extern "C" extern void Shift__9dCstick_cFUl();
-extern "C" extern void __ct__11dCamBGChk_cFv();
-extern "C" extern void __ct__11dCamParam_cFl();
-extern "C" extern void __dt__11dCamParam_cFv();
-extern "C" extern void Change__11dCamParam_cFl();
-extern "C" extern void SearchStyle__11dCamParam_cFUl();
-extern "C" extern void __ct__11dCamSetup_cFv();
-extern "C" extern void __dt__11dCamSetup_cFv();
-extern "C" extern void CheckLatitudeRange__11dCamSetup_cFPs();
-extern "C" extern void PlayerHideDist__11dCamSetup_cFv();
-extern "C" extern void __dt__9dCstick_cFv();
+
+extern "C" void rationalBezierRatio__8dCamMathFff();
+extern "C" void zoomFovy__8dCamMathFff();
+extern "C" void __dt__7cDegreeFv();
+extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
+extern "C" void __ct__9dCstick_cFv();
+extern "C" bool Shift__9dCstick_cFUl();
+extern "C" void __ct__11dCamBGChk_cFv();
+extern "C" void __ct__11dCamParam_cFl();
+extern "C" void __dt__11dCamParam_cFv();
+extern "C" void Change__11dCamParam_cFl();
+extern "C" void SearchStyle__11dCamParam_cFUl();
+extern "C" void __ct__11dCamSetup_cFv();
+extern "C" void __dt__11dCamSetup_cFv();
+extern "C" void CheckLatitudeRange__11dCamSetup_cFPs();
+extern "C" void PlayerHideDist__11dCamSetup_cFv();
+extern "C" void __dt__9dCstick_cFv();
 SECTION_RODATA extern const u8 d_d_cam_param__stringBase0[16];
 SECTION_DATA extern void*const __vt__11dCamSetup_c[3];
 SECTION_DATA extern void*const __vt__11dCamParam_c[3];
@@ -87,18 +190,26 @@ SECTION_SDATA2 extern f32 d_d_cam_param__lit_4173;
 // External References:
 // 
 
-extern "C" extern void mDoMtx_XrotS__FPA4_fs();
-extern "C" extern void mDoMtx_YrotS__FPA4_fs();
-extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" extern void EventRecoverNotime__9dCamera_cFv();
-extern "C" extern void dCam_getBody__Fv();
-extern "C" extern void cM_atan2f__Fff();
-extern "C" extern void __ct__7cDegreeFf();
-extern "C" extern void Sin__7cDegreeCFv();
-extern "C" extern void Cos__7cDegreeCFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void sqrt();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+void dCam_getBody();
+void cM_atan2f(f32, f32);
+void operator delete(void*);
+extern "C" void PSMTXMultVec();
+extern "C" void sqrt();
+
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void EventRecoverNotime__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void cM_atan2f__Fff();
+extern "C" void __ct__7cDegreeFf();
+extern "C" void Sin__7cDegreeCFv();
+extern "C" void Cos__7cDegreeCFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void sqrt();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -106,44 +217,44 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 804527C8-804527D0 0004+04 .sdata2    @3769                                                        */
+/* 804527C8-804527D0 0004+04 rc=2 efc=0 .sdata2    @3769                                                        */
 u8 d_d_cam_param__lit_3769[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804527D0-804527D8 0008+00 .sdata2    @3770                                                        */
+/* 804527D0-804527D8 0008+00 rc=1 efc=0 .sdata2    @3770                                                        */
 f64 d_d_cam_param__lit_3770 = 1.0;
 
-/* 804527D8-804527E0 0008+00 .sdata2    @3771                                                        */
+/* 804527D8-804527E0 0008+00 rc=1 efc=0 .sdata2    @3771                                                        */
 f64 d_d_cam_param__lit_3771 = -1.0;
 
-/* 804527E0-804527E8 0008+00 .sdata2    @3772                                                        */
+/* 804527E0-804527E8 0008+00 rc=1 efc=0 .sdata2    @3772                                                        */
 f64 d_d_cam_param__lit_3772 = 2.0;
 
-/* 804527E8-804527F0 0008+00 .sdata2    @3773                                                        */
+/* 804527E8-804527F0 0008+00 rc=1 efc=0 .sdata2    @3773                                                        */
 f64 d_d_cam_param__lit_3773 = 4.0;
 
-/* 804527F0-804527F8 0008+00 .sdata2    @3774                                                        */
+/* 804527F0-804527F8 0008+00 rc=1 efc=0 .sdata2    @3774                                                        */
 u8 d_d_cam_param__lit_3774[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804527F8-80452800 0008+00 .sdata2    @3775                                                        */
+/* 804527F8-80452800 0008+00 rc=1 efc=0 .sdata2    @3775                                                        */
 f64 d_d_cam_param__lit_3775 = 1e-07;
 
-/* 80452800-80452808 0008+00 .sdata2    @3776                                                        */
+/* 80452800-80452808 0008+00 rc=1 efc=0 .sdata2    @3776                                                        */
 f64 d_d_cam_param__lit_3776 = -1e-07;
 
-/* 80452808-80452810 0008+00 .sdata2    @3777                                                        */
+/* 80452808-80452810 0008+00 rc=1 efc=0 .sdata2    @3777                                                        */
 f64 d_d_cam_param__lit_3777 = 1.0000000116860974e-07;
 
-/* 8008813C-80088284 0148+00 .text      rationalBezierRatio__8dCamMathFff                            */
+/* 8008813C-80088284 0148+00 rc=12 efc=12 .text      rationalBezierRatio__8dCamMathFff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rationalBezierRatio__8dCamMathFff) {
+asm void dCamMath::rationalBezierRatio(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_cam_param/rationalBezierRatio__8dCamMathFff.s"
 }
@@ -151,61 +262,61 @@ ASM_FUNCTION(rationalBezierRatio__8dCamMathFff) {
 
 
 /* ############################################################################################## */
-/* 80452810-80452814 0004+00 .sdata2    @3791                                                        */
+/* 80452810-80452814 0004+00 rc=2 efc=0 .sdata2    @3791                                                        */
 f32 d_d_cam_param__lit_3791 = 1.0f;
 
-/* 80452814-80452818 0004+00 .sdata2    @3807                                                        */
+/* 80452814-80452818 0004+00 rc=1 efc=0 .sdata2    @3807                                                        */
 f32 d_d_cam_param__lit_3807 = 57.2957763671875f;
 
-/* 80088284-800882E0 005C+00 .text      zoomFovy__8dCamMathFff                                       */
+/* 80088284-800882E0 005C+00 rc=1 efc=1 .text      zoomFovy__8dCamMathFff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomFovy__8dCamMathFff) {
+asm void dCamMath::zoomFovy(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_cam_param/zoomFovy__8dCamMathFff.s"
 }
 #pragma pop
 
 
-/* 800882E0-8008831C 003C+00 .text      __dt__7cDegreeFv                                             */
+/* 800882E0-8008831C 003C+00 rc=1 efc=1 .text      __dt__7cDegreeFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7cDegreeFv) {
+asm cDegree::~cDegree() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__7cDegreeFv.s"
 }
 #pragma pop
 
 
-/* 8008831C-80088384 0068+00 .text      xyzRotateX__8dCamMathFR4cXyz7cSAngle                         */
+/* 8008831C-80088384 0068+00 rc=1 efc=1 .text      xyzRotateX__8dCamMathFR4cXyz7cSAngle                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(xyzRotateX__8dCamMathFR4cXyz7cSAngle) {
+asm void dCamMath::xyzRotateX(cXyz& field_0, cSAngle field_1) {
 	nofralloc
 #include "asm/d/d_cam_param/xyzRotateX__8dCamMathFR4cXyz7cSAngle.s"
 }
 #pragma pop
 
 
-/* 80088384-800883EC 0068+00 .text      xyzRotateY__8dCamMathFR4cXyz7cSAngle                         */
+/* 80088384-800883EC 0068+00 rc=13 efc=13 .text      xyzRotateY__8dCamMathFR4cXyz7cSAngle                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(xyzRotateY__8dCamMathFR4cXyz7cSAngle) {
+asm void dCamMath::xyzRotateY(cXyz& field_0, cSAngle field_1) {
 	nofralloc
 #include "asm/d/d_cam_param/xyzRotateY__8dCamMathFR4cXyz7cSAngle.s"
 }
 #pragma pop
 
 
-/* 800883EC-80088434 0048+00 .text      xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz                */
+/* 800883EC-80088434 0048+00 rc=9 efc=9 .text      xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz) {
+asm void dCamMath::xyzHorizontalDistance(cXyz& field_0, cXyz& field_1) {
 	nofralloc
 #include "asm/d/d_cam_param/xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz.s"
 }
@@ -213,21 +324,21 @@ ASM_FUNCTION(xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz) {
 
 
 /* ############################################################################################## */
-/* 803AC500-803AC50C 000C+00 .data      __vt__11dCamSetup_c                                          */
+/* 803AC500-803AC50C 000C+00 rc=2 efc=0 .data      __vt__11dCamSetup_c                                          */
 void* const __vt__11dCamSetup_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dCamSetup_cFv,
 };
 
-/* 803AC50C-803AC518 000C+00 .data      __vt__11dCamParam_c                                          */
+/* 803AC50C-803AC518 000C+00 rc=2 efc=0 .data      __vt__11dCamParam_c                                          */
 void* const __vt__11dCamParam_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dCamParam_cFv,
 };
 
-/* 803AC518-803AC528 000C+04 .data      __vt__9dCstick_c                                             */
+/* 803AC518-803AC528 000C+04 rc=3 efc=0 .data      __vt__9dCstick_c                                             */
 void* const __vt__9dCstick_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -236,82 +347,77 @@ void* const __vt__9dCstick_c[4] = {
 	NULL,
 };
 
-/* 80452818-8045281C 0004+00 .sdata2    @3991                                                        */
+/* 80452818-8045281C 0004+00 rc=3 efc=0 .sdata2    @3991                                                        */
 f32 lit_3991 = 1.0f / 5.0f;
 
-/* 8045281C-80452820 0004+00 .sdata2    @3992                                                        */
+/* 8045281C-80452820 0004+00 rc=1 efc=0 .sdata2    @3992                                                        */
 f32 d_d_cam_param__lit_3992 = 19.0f / 20.0f;
 
-/* 80088434-8008845C 0028+00 .text      __ct__9dCstick_cFv                                           */
+/* 80088434-8008845C 0028+00 rc=1 efc=0 .text      __ct__9dCstick_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dCstick_cFv) {
+asm dCstick_c::dCstick_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__9dCstick_cFv.s"
 }
 #pragma pop
 
 
-/* 8008845C-80088464 0008+00 .text      Shift__9dCstick_cFUl                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Shift__9dCstick_cFUl) {
-	nofralloc
-#include "asm/d/d_cam_param/Shift__9dCstick_cFUl.s"
+/* 8008845C-80088464 0008+00 rc=1 efc=1 .text      Shift__9dCstick_cFUl                                         */
+bool dCstick_c::Shift(u32 field_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80452820-80452824 0004+00 .sdata2    @4001                                                        */
+/* 80452820-80452824 0004+00 rc=1 efc=0 .sdata2    @4001                                                        */
 f32 d_d_cam_param__lit_4001 = 32.0f;
 
-/* 80452824-80452828 0004+00 .sdata2    @4002                                                        */
+/* 80452824-80452828 0004+00 rc=2 efc=0 .sdata2    @4002                                                        */
 f32 lit_4002 = 25.0f;
 
-/* 80452828-8045282C 0004+00 .sdata2    @4003                                                        */
+/* 80452828-8045282C 0004+00 rc=2 efc=0 .sdata2    @4003                                                        */
 f32 d_d_cam_param__lit_4003 = 2.0f / 5.0f;
 
-/* 8045282C-80452830 0004+00 .sdata2    @4004                                                        */
+/* 8045282C-80452830 0004+00 rc=1 efc=0 .sdata2    @4004                                                        */
 f32 lit_4004 = 3.0f / 5.0f;
 
-/* 80452830-80452834 0004+00 .sdata2    @4005                                                        */
+/* 80452830-80452834 0004+00 rc=1 efc=0 .sdata2    @4005                                                        */
 f32 lit_4005 = 3.0f;
 
-/* 80452834-80452838 0004+00 .sdata2    @4006                                                        */
+/* 80452834-80452838 0004+00 rc=2 efc=0 .sdata2    @4006                                                        */
 f32 lit_4006 = 15.0f;
 
-/* 80452838-8045283C 0004+00 .sdata2    @4007                                                        */
+/* 80452838-8045283C 0004+00 rc=2 efc=0 .sdata2    @4007                                                        */
 f32 lit_4007 = 0.5f;
 
-/* 8045283C-80452840 0004+00 .sdata2    @4008                                                        */
+/* 8045283C-80452840 0004+00 rc=2 efc=0 .sdata2    @4008                                                        */
 f32 lit_4008 = 3.0f / 10.0f;
 
-/* 80452840-80452844 0004+00 .sdata2    @4009                                                        */
+/* 80452840-80452844 0004+00 rc=2 efc=0 .sdata2    @4009                                                        */
 f32 d_d_cam_param__lit_4009 = 10.0f;
 
-/* 80452844-80452848 0004+00 .sdata2    @4010                                                        */
+/* 80452844-80452848 0004+00 rc=2 efc=0 .sdata2    @4010                                                        */
 f32 d_d_cam_param__lit_4010 = 1.0f / 10.0f;
 
-/* 80452848-8045284C 0004+00 .sdata2    @4011                                                        */
+/* 80452848-8045284C 0004+00 rc=2 efc=0 .sdata2    @4011                                                        */
 f32 d_d_cam_param__lit_4011 = 0.75f;
 
-/* 8045284C-80452850 0004+00 .sdata2    @4012                                                        */
+/* 8045284C-80452850 0004+00 rc=2 efc=0 .sdata2    @4012                                                        */
 f32 d_d_cam_param__lit_4012 = 80.0f;
 
-/* 80452850-80452854 0004+00 .sdata2    @4013                                                        */
+/* 80452850-80452854 0004+00 rc=1 efc=0 .sdata2    @4013                                                        */
 f32 d_d_cam_param__lit_4013 = 2.0f / 25.0f;
 
-/* 80452854-80452858 0004+00 .sdata2    @4014                                                        */
+/* 80452854-80452858 0004+00 rc=2 efc=0 .sdata2    @4014                                                        */
 f32 lit_4014 = 120.0f;
 
-/* 80088464-800884F0 008C+00 .text      __ct__11dCamBGChk_cFv                                        */
+/* 80088464-800884F0 008C+00 rc=1 efc=0 .text      __ct__11dCamBGChk_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dCamBGChk_cFv) {
+asm dCamBGChk_c::dCamBGChk_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__11dCamBGChk_cFv.s"
 }
@@ -319,7 +425,7 @@ ASM_FUNCTION(__ct__11dCamBGChk_cFv) {
 
 
 /* ############################################################################################## */
-/* 8037A7E0-8037A7F0 000D+03 .rodata    @stringBase0                                                 */
+/* 8037A7E0-8037A7F0 000D+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -328,44 +434,44 @@ SECTION_DEAD char* const stringBase_8037A7E0 = "camstyle.dat";
 SECTION_DEAD char* const pad_8037A7ED = "\0\0";
 #pragma pop
 
-/* 800884F0-8008858C 009C+00 .text      __ct__11dCamParam_cFl                                        */
+/* 800884F0-8008858C 009C+00 rc=1 efc=1 .text      __ct__11dCamParam_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dCamParam_cFl) {
+asm dCamParam_c::dCamParam_c(s32 field_0) {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__11dCamParam_cFl.s"
 }
 #pragma pop
 
 
-/* 8008858C-800885D4 0048+00 .text      __dt__11dCamParam_cFv                                        */
+/* 8008858C-800885D4 0048+00 rc=2 efc=1 .text      __dt__11dCamParam_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dCamParam_cFv) {
+asm dCamParam_c::~dCamParam_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__11dCamParam_cFv.s"
 }
 #pragma pop
 
 
-/* 800885D4-80088620 004C+00 .text      Change__11dCamParam_cFl                                      */
+/* 800885D4-80088620 004C+00 rc=8 efc=7 .text      Change__11dCamParam_cFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Change__11dCamParam_cFl) {
+asm void dCamParam_c::Change(s32 field_0) {
 	nofralloc
 #include "asm/d/d_cam_param/Change__11dCamParam_cFl.s"
 }
 #pragma pop
 
 
-/* 80088620-80088668 0048+00 .text      SearchStyle__11dCamParam_cFUl                                */
+/* 80088620-80088668 0048+00 rc=4 efc=4 .text      SearchStyle__11dCamParam_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SearchStyle__11dCamParam_cFUl) {
+asm void dCamParam_c::SearchStyle(u32 field_0) {
 	nofralloc
 #include "asm/d/d_cam_param/SearchStyle__11dCamParam_cFUl.s"
 }
@@ -373,91 +479,91 @@ ASM_FUNCTION(SearchStyle__11dCamParam_cFUl) {
 
 
 /* ############################################################################################## */
-/* 80452858-8045285C 0004+00 .sdata2    @4058                                                        */
+/* 80452858-8045285C 0004+00 rc=1 efc=0 .sdata2    @4058                                                        */
 f32 d_d_cam_param__lit_4058 = 0.25f;
 
-/* 8045285C-80452860 0004+00 .sdata2    @4119                                                        */
+/* 8045285C-80452860 0004+00 rc=1 efc=0 .sdata2    @4119                                                        */
 f32 d_d_cam_param__lit_4119 = 100000.0f;
 
-/* 80452860-80452864 0004+00 .sdata2    @4120                                                        */
+/* 80452860-80452864 0004+00 rc=1 efc=0 .sdata2    @4120                                                        */
 f32 d_d_cam_param__lit_4120 = 1.0f / 20.0f;
 
-/* 80452864-80452868 0004+00 .sdata2    @4121                                                        */
+/* 80452864-80452868 0004+00 rc=1 efc=0 .sdata2    @4121                                                        */
 f32 d_d_cam_param__lit_4121 = -60.0f;
 
-/* 80452868-8045286C 0004+00 .sdata2    @4122                                                        */
+/* 80452868-8045286C 0004+00 rc=1 efc=0 .sdata2    @4122                                                        */
 f32 d_d_cam_param__lit_4122 = 33.0f / 100.0f;
 
-/* 8045286C-80452870 0004+00 .sdata2    @4123                                                        */
+/* 8045286C-80452870 0004+00 rc=1 efc=0 .sdata2    @4123                                                        */
 f32 d_d_cam_param__lit_4123 = 1.0f / 50.0f;
 
-/* 80452870-80452874 0004+00 .sdata2    @4124                                                        */
+/* 80452870-80452874 0004+00 rc=1 efc=0 .sdata2    @4124                                                        */
 f32 d_d_cam_param__lit_4124 = 100.0f;
 
-/* 80452874-80452878 0004+00 .sdata2    @4125                                                        */
+/* 80452874-80452878 0004+00 rc=1 efc=0 .sdata2    @4125                                                        */
 f32 d_d_cam_param__lit_4125 = 7.0f / 25.0f;
 
-/* 80452878-8045287C 0004+00 .sdata2    @4126                                                        */
+/* 80452878-8045287C 0004+00 rc=1 efc=0 .sdata2    @4126                                                        */
 f32 d_d_cam_param__lit_4126 = 3.0f / 20.0f;
 
-/* 8045287C-80452880 0004+00 .sdata2    @4127                                                        */
+/* 8045287C-80452880 0004+00 rc=1 efc=0 .sdata2    @4127                                                        */
 f32 d_d_cam_param__lit_4127 = 0.004999999888241291f;
 
-/* 80452880-80452884 0004+00 .sdata2    @4128                                                        */
+/* 80452880-80452884 0004+00 rc=1 efc=0 .sdata2    @4128                                                        */
 f32 d_d_cam_param__lit_4128 = 3.0f / 50.0f;
 
-/* 80452884-80452888 0004+00 .sdata2    @4129                                                        */
+/* 80452884-80452888 0004+00 rc=1 efc=0 .sdata2    @4129                                                        */
 f32 d_d_cam_param__lit_4129 = 70.0f;
 
-/* 80452888-8045288C 0004+00 .sdata2    @4130                                                        */
+/* 80452888-8045288C 0004+00 rc=1 efc=0 .sdata2    @4130                                                        */
 f32 d_d_cam_param__lit_4130 = 60.0f;
 
-/* 8045288C-80452890 0004+00 .sdata2    @4131                                                        */
+/* 8045288C-80452890 0004+00 rc=1 efc=0 .sdata2    @4131                                                        */
 f32 d_d_cam_param__lit_4131 = 35.0f;
 
-/* 80452890-80452894 0004+00 .sdata2    @4132                                                        */
+/* 80452890-80452894 0004+00 rc=1 efc=0 .sdata2    @4132                                                        */
 f32 d_d_cam_param__lit_4132 = 65.0f;
 
-/* 80452894-80452898 0004+00 .sdata2    @4133                                                        */
+/* 80452894-80452898 0004+00 rc=1 efc=0 .sdata2    @4133                                                        */
 f32 d_d_cam_param__lit_4133 = 30.0f;
 
-/* 80452898-8045289C 0004+00 .sdata2    @4134                                                        */
+/* 80452898-8045289C 0004+00 rc=1 efc=0 .sdata2    @4134                                                        */
 f32 d_d_cam_param__lit_4134 = 27.0f;
 
-/* 8045289C-804528A0 0004+00 .sdata2    @4135                                                        */
+/* 8045289C-804528A0 0004+00 rc=1 efc=0 .sdata2    @4135                                                        */
 f32 d_d_cam_param__lit_4135 = 45.0f;
 
-/* 804528A0-804528A4 0004+00 .sdata2    @4136                                                        */
+/* 804528A0-804528A4 0004+00 rc=1 efc=0 .sdata2    @4136                                                        */
 f32 d_d_cam_param__lit_4136 = 3500.0f;
 
-/* 804528A4-804528A8 0004+00 .sdata2    @4137                                                        */
+/* 804528A4-804528A8 0004+00 rc=1 efc=0 .sdata2    @4137                                                        */
 f32 d_d_cam_param__lit_4137 = 4.0f;
 
-/* 804528A8-804528AC 0004+00 .sdata2    @4138                                                        */
+/* 804528A8-804528AC 0004+00 rc=1 efc=0 .sdata2    @4138                                                        */
 f32 d_d_cam_param__lit_4138 = 1200.0f;
 
-/* 804528AC-804528B0 0004+00 .sdata2    @4139                                                        */
+/* 804528AC-804528B0 0004+00 rc=1 efc=0 .sdata2    @4139                                                        */
 f32 d_d_cam_param__lit_4139 = 17.0f / 20.0f;
 
-/* 804528B0-804528B4 0004+00 .sdata2    @4140                                                        */
+/* 804528B0-804528B4 0004+00 rc=1 efc=0 .sdata2    @4140                                                        */
 f32 d_d_cam_param__lit_4140 = 50.0f;
 
-/* 80088668-800888B8 0250+00 .text      __ct__11dCamSetup_cFv                                        */
+/* 80088668-800888B8 0250+00 rc=1 efc=1 .text      __ct__11dCamSetup_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dCamSetup_cFv) {
+asm dCamSetup_c::dCamSetup_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__ct__11dCamSetup_cFv.s"
 }
 #pragma pop
 
 
-/* 800888B8-80088918 0060+00 .text      __dt__11dCamSetup_cFv                                        */
+/* 800888B8-80088918 0060+00 rc=2 efc=1 .text      __dt__11dCamSetup_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dCamSetup_cFv) {
+asm dCamSetup_c::~dCamSetup_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__11dCamSetup_cFv.s"
 }
@@ -465,40 +571,39 @@ ASM_FUNCTION(__dt__11dCamSetup_cFv) {
 
 
 /* ############################################################################################## */
-/* 804528B4-804528B8 0004+00 .sdata2    @4173                                                        */
+/* 804528B4-804528B8 0004+00 rc=1 efc=0 .sdata2    @4173                                                        */
 f32 d_d_cam_param__lit_4173 = 182.04444885253906f;
 
-/* 80088918-80088988 0070+00 .text      CheckLatitudeRange__11dCamSetup_cFPs                         */
+/* 80088918-80088988 0070+00 rc=1 efc=1 .text      CheckLatitudeRange__11dCamSetup_cFPs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckLatitudeRange__11dCamSetup_cFPs) {
+asm void dCamSetup_c::CheckLatitudeRange(s16* field_0) {
 	nofralloc
 #include "asm/d/d_cam_param/CheckLatitudeRange__11dCamSetup_cFPs.s"
 }
 #pragma pop
 
 
-/* 80088988-800889B0 0028+00 .text      PlayerHideDist__11dCamSetup_cFv                              */
+/* 80088988-800889B0 0028+00 rc=1 efc=1 .text      PlayerHideDist__11dCamSetup_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PlayerHideDist__11dCamSetup_cFv) {
+asm void dCamSetup_c::PlayerHideDist() {
 	nofralloc
 #include "asm/d/d_cam_param/PlayerHideDist__11dCamSetup_cFv.s"
 }
 #pragma pop
 
 
-/* 800889B0-800889F8 0048+00 .text      __dt__9dCstick_cFv                                           */
+/* 800889B0-800889F8 0048+00 rc=1 efc=0 .text      __dt__9dCstick_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dCstick_cFv) {
+asm dCstick_c::~dCstick_c() {
 	nofralloc
 #include "asm/d/d_cam_param/__dt__9dCstick_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

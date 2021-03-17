@@ -6,26 +6,69 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daFireWood_c;
+
+struct daFireWood_HIO_c {
+	daFireWood_HIO_c();
+	~daFireWood_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daFireWood_c {
+	void setBaseMtx();
+	void create();
+	void lightInit();
+	void setLight();
+	void Execute();
+	bool Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daFireWood_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daFireWood_cFv();
-extern "C" extern void create__12daFireWood_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void lightInit__12daFireWood_cFv();
-extern "C" extern void setLight__12daFireWood_cFv();
-extern "C" extern void Execute__12daFireWood_cFv();
-extern "C" extern void Draw__12daFireWood_cFv();
-extern "C" extern void Delete__12daFireWood_cFv();
-extern "C" extern void daFireWood_Draw__FP12daFireWood_c();
-extern "C" extern void daFireWood_Execute__FP12daFireWood_c();
-extern "C" extern void daFireWood_Delete__FP12daFireWood_c();
-extern "C" extern void daFireWood_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daFireWood_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_fireWood_cpp();
+void daFireWood_Draw(daFireWood_c*);
+void daFireWood_Execute(daFireWood_c*);
+void daFireWood_Delete(daFireWood_c*);
+void daFireWood_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_fireWood_cpp();
+
+extern "C" void __ct__16daFireWood_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daFireWood_cFv();
+extern "C" void create__12daFireWood_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void lightInit__12daFireWood_cFv();
+extern "C" void setLight__12daFireWood_cFv();
+extern "C" void Execute__12daFireWood_cFv();
+extern "C" bool Draw__12daFireWood_cFv();
+extern "C" void Delete__12daFireWood_cFv();
+extern "C" void daFireWood_Draw__FP12daFireWood_c();
+extern "C" void daFireWood_Execute__FP12daFireWood_c();
+extern "C" void daFireWood_Delete__FP12daFireWood_c();
+extern "C" void daFireWood_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daFireWood_HIO_cFv();
+extern "C" void __sinit_d_a_obj_fireWood_cpp();
 SECTION_RODATA extern const u8 lit_3625[4];
 SECTION_RODATA extern const u32 lit_3626;
 SECTION_RODATA extern const u8 mCcDObjInfo__12daFireWood_c[48];
@@ -49,8 +92,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -60,7 +106,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daFireWood_HIO_cFv) {
+asm daFireWood_HIO_c::daFireWood_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__ct__16daFireWood_HIO_cFv.s"
 }
@@ -71,7 +117,7 @@ ASM_FUNCTION(__ct__16daFireWood_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -82,7 +128,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daFireWood_cFv) {
+asm void daFireWood_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/setBaseMtx__12daFireWood_cFv.s"
 }
@@ -93,7 +139,7 @@ ASM_FUNCTION(setBaseMtx__12daFireWood_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daFireWood_cFv) {
+asm void daFireWood_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/create__12daFireWood_cFv.s"
 }
@@ -104,7 +150,7 @@ ASM_FUNCTION(create__12daFireWood_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__dt__8cM3dGCylFv.s"
 }
@@ -115,7 +161,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__dt__8cM3dGAabFv.s"
 }
@@ -126,7 +172,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightInit__12daFireWood_cFv) {
+asm void daFireWood_c::lightInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/lightInit__12daFireWood_cFv.s"
 }
@@ -137,7 +183,7 @@ ASM_FUNCTION(lightInit__12daFireWood_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLight__12daFireWood_cFv) {
+asm void daFireWood_c::setLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/setLight__12daFireWood_cFv.s"
 }
@@ -148,7 +194,7 @@ ASM_FUNCTION(setLight__12daFireWood_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daFireWood_cFv) {
+asm void daFireWood_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/Execute__12daFireWood_cFv.s"
 }
@@ -156,21 +202,16 @@ ASM_FUNCTION(Execute__12daFireWood_cFv) {
 
 
 /* 80BE7E74-80BE7E7C 0008+00 .text      Draw__12daFireWood_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daFireWood_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/Draw__12daFireWood_cFv.s"
+bool daFireWood_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE7E7C-80BE7EA4 0028+00 .text      Delete__12daFireWood_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daFireWood_cFv) {
+asm void daFireWood_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/Delete__12daFireWood_cFv.s"
 }
@@ -181,7 +222,7 @@ ASM_FUNCTION(Delete__12daFireWood_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFireWood_Draw__FP12daFireWood_c) {
+asm void daFireWood_Draw(daFireWood_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/daFireWood_Draw__FP12daFireWood_c.s"
 }
@@ -192,7 +233,7 @@ ASM_FUNCTION(daFireWood_Draw__FP12daFireWood_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFireWood_Execute__FP12daFireWood_c) {
+asm void daFireWood_Execute(daFireWood_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/daFireWood_Execute__FP12daFireWood_c.s"
 }
@@ -203,7 +244,7 @@ ASM_FUNCTION(daFireWood_Execute__FP12daFireWood_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFireWood_Delete__FP12daFireWood_c) {
+asm void daFireWood_Delete(daFireWood_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/daFireWood_Delete__FP12daFireWood_c.s"
 }
@@ -214,7 +255,7 @@ ASM_FUNCTION(daFireWood_Delete__FP12daFireWood_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daFireWood_Create__FP10fopAc_ac_c) {
+asm void daFireWood_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/daFireWood_Create__FP10fopAc_ac_c.s"
 }
@@ -225,7 +266,7 @@ ASM_FUNCTION(daFireWood_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daFireWood_HIO_cFv) {
+asm daFireWood_HIO_c::~daFireWood_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__dt__16daFireWood_HIO_cFv.s"
 }
@@ -236,7 +277,7 @@ ASM_FUNCTION(__dt__16daFireWood_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_fireWood_cpp) {
+extern "C" asm void __sinit_d_a_obj_fireWood_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fireWood/d_a_obj_fireWood/__sinit_d_a_obj_fireWood_cpp.s"
 }

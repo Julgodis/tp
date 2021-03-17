@@ -6,37 +6,355 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DWindow (J2DWindow) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+// build J2DMaterial (J2DMaterial) False/False
+/* top-level dependencies (begin J2DMaterial) */
+/* top-level dependencies (end J2DMaterial) */
+struct J2DMaterial {
+};
+
+// build J2DPane (J2DPane) False/False
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
+};
+
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+// build JSURandomInputStream (JSURandomInputStream) False/False
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) False/False
+/* top-level dependencies (begin JSUStreamSeekFrom) */
+/* top-level dependencies (end JSUStreamSeekFrom) */
+struct JSUStreamSeekFrom {
+};
+
+/* top-level dependencies (begin JSURandomInputStream) */
+// outer dependency: JSUStreamSeekFrom
+/* top-level dependencies (end JSURandomInputStream) */
+struct JSURandomInputStream {
+	// JSUStreamSeekFrom
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
+/* top-level dependencies (begin J2DAnmVisibilityFull) */
+/* top-level dependencies (end J2DAnmVisibilityFull) */
+struct J2DAnmVisibilityFull {
+};
+
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build J2DAnmBase (J2DAnmBase) False/False
+/* top-level dependencies (begin J2DAnmBase) */
+/* top-level dependencies (end J2DAnmBase) */
+struct J2DAnmBase {
+};
+
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: _GXCullMode
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: J2DAnmColor
+// outer dependency: JSURandomInputStream
+// outer dependency: JKRArchive
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: ResTIMG
+// outer dependency: ResFONT
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmBase
+// outer dependency: J2DAnmTransform
+// outer dependency: J2DAnmTexPattern
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// _GXCullMode
+	// J2DAnmVtxColor
+	// J2DAnmTevRegKey
+	// J2DAnmColor
+	// JSURandomInputStream
+	// JKRArchive
+	// J2DAnmVisibilityFull
+	// ResTIMG
+	// ResFONT
+	// J2DAnmTextureSRTKey
+	// J2DAnmBase
+	// J2DAnmTransform
+	// J2DAnmTexPattern
+	/* 80020158 */ void setAlpha(char);
+	/* 80053BC0 */ void calcMtx();
+	/* 80053C00 */ void makeMatrix(f32, f32);
+	/* 80126350 */ void setAnimation(J2DAnmTevRegKey*);
+	/* 80126354 */ void setAnimation(J2DAnmColor*);
+	/* 8018BF28 */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
+	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
+	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
+	/* 802F5BF8 */ J2DPane();
+	/* 802F60C4 */ void makePaneStream(J2DPane*, JSURandomInputStream*);
+	/* 802F658C */ ~J2DPane();
+	/* 802F6F60 */ void move(f32, f32);
+	/* 802F6FB4 */ void add(f32, f32);
+	/* 802F6FF8 */ void resize(f32, f32);
+	/* 802F72E0 */ void search(u64);
+	/* 802F7388 */ void searchUserInfo(u64);
+	/* 802F7430 */ void isUsed(ResTIMG const*);
+	/* 802F74B8 */ void isUsed(ResFONT const*);
+	/* 802F7540 */ void makeMatrix(f32, f32, f32, f32);
+	/* 802F7680 */ void setCullBack(_GXCullMode);
+	/* 802F7B18 */ void makePaneExStream(J2DPane*, JSURandomInputStream*);
+	/* 802F7DB8 */ void getPointer(JSURandomInputStream*, u32, JKRArchive*);
+	/* 802F7EF4 */ void setAnimation(J2DAnmBase*);
+	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
+	/* 802F8004 */ void clearAnmTransform();
+	/* 802F8080 */ void animationTransform(J2DAnmTransform const*);
+	/* 802F8118 */ void setVisibileAnimation(J2DAnmVisibilityFull*);
+	/* 802F81A0 */ void setVtxColorAnimation(J2DAnmVtxColor*);
+	/* 802F8228 */ void animationPane(J2DAnmTransform const*);
+	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
+	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
+	/* 802F8428 */ void setCullBack(bool);
+	/* 802F8464 */ void setConnectParent(bool);
+	/* 802F8474 */ void update();
+};
+
+// build JSURandomInputStream (JSURandomInputStream) True/True
+// build JKRArchive (JKRArchive) True/True
+// build ResTIMG (ResTIMG) True/True
+// build J2DWindow (J2DWindow) True/False
+struct J2DWindow;
+// build ResFONT (ResFONT) True/True
+// build JUTTexture (JUTTexture) False/False
+// build ResTIMG (ResTIMG) True/True
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: ResTIMG
+// outer dependency: _GXTexMapID
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// ResTIMG
+	// _GXTexMapID
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+/* top-level dependencies (begin J2DWindow) */
+// outer dependency: JUtility::TColor
+// outer dependency: J2DMaterial
+// outer dependency: J2DPane
+// outer dependency: JSURandomInputStream
+// outer dependency: JKRArchive
+// outer dependency: ResTIMG
+// outer dependency: J2DWindow::TMaterial
+// outer dependency: ResFONT
+// outer dependency: JUTTexture
+/* top-level dependencies (end J2DWindow) */
+struct J2DWindow {
+	// JUtility::TColor
+	// J2DMaterial
+	// J2DPane
+	// JSURandomInputStream
+	// JKRArchive
+	// ResTIMG
+	// J2DWindow::TMaterial
+	// ResFONT
+	// JUTTexture
+	// build TMaterial (J2DWindow::TMaterial) False/False
+	/* dependencies (begin J2DWindow::TMaterial) */
+	/* dependencies (end J2DWindow::TMaterial) */
+	struct TMaterial {
+	};
+
+	/* 80254000 */ void getBlack() const;
+	/* 8025400C */ void getWhite() const;
+	/* 802543E0 */ void setWhite(JUtility::TColor);
+	/* 80254430 */ void setBlack(JUtility::TColor);
+	/* 80254568 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 802F9A7C */ J2DWindow();
+	/* 802F9B74 */ J2DWindow(J2DPane*, JSURandomInputStream*, JKRArchive*);
+	/* 802F9C10 */ J2DWindow(J2DPane*, JSURandomInputStream*, J2DMaterial*);
+	/* 802FA118 */ void private_readStream(J2DPane*, JSURandomInputStream*, JKRArchive*);
+	/* 802FA604 */ void initinfo2();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB12C */ void setContentsColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FB634 */ void drawFrameTexture(JUTTexture*, f32, f32, f32, f32, u16, u16, u16, u16, bool);
+	/* 802FB7C8 */ void drawFrameTexture(JUTTexture*, f32, f32, bool, bool, bool);
+	/* 802FB868 */ void drawContentsTexture(f32, f32, f32, f32);
+	/* 802FBB90 */ void setTevMode(JUTTexture*, JUtility::TColor, JUtility::TColor);
+	/* 802FBE60 */ void getFrameTexture(char, char) const;
+	/* 802FBEDC */ void isUsed(ResTIMG const*);
+	/* 802FBF98 */ s32 getTypeID() const;
+	/* 802FBFA0 */ void draw(f32, f32, f32, f32);
+	/* 802FBFE8 */ void getContentsTexture(char) const;
+	/* 802FC000 */ void getMaterial(J2DWindow::TMaterial&) const;
+	/* 802FC01C */ bool getFrameMaterial(char) const;
+	/* 802FC024 */ bool getContentsMaterial() const;
+	/* 802FC02C */ void isUsed(ResFONT const*);
+	/* 802FC04C */ void rewriteAlpha();
+};
+
+// build J2DPane (J2DPane) True/True
+// build JSURandomInputStream (JSURandomInputStream) True/True
+// build JKRArchive (JKRArchive) True/True
+// build J2DMaterial (J2DMaterial) True/True
+// build JUtility (JUtility) True/True
+// build JUTTexture (JUTTexture) True/True
+// build ResTIMG (ResTIMG) True/True
+// build ResFONT (ResFONT) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build JSUInputStream (JSUInputStream) False/False
+/* top-level dependencies (begin JSUInputStream) */
+/* top-level dependencies (end JSUInputStream) */
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+// build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// build _GXTexMapID (_GXTexMapID) True/True
+// build JUTPalette (JUTPalette) False/False
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
+// build ResTLUT (ResTLUT) False/False
+/* top-level dependencies (begin ResTLUT) */
+/* top-level dependencies (end ResTLUT) */
+struct ResTLUT {
+};
+
+/* top-level dependencies (begin JUTPalette) */
+// outer dependency: _GXTlut
+// outer dependency: ResTLUT
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+	// _GXTlut
+	// ResTLUT
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+// build _GXTlut (_GXTlut) True/True
+// build ResTLUT (ResTLUT) True/True
+// build _GXCullMode (_GXCullMode) True/True
+// build J2DAnmBase (J2DAnmBase) True/True
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__9J2DWindowFv();
-extern "C" extern void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
-extern "C" extern void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
-extern "C" extern void private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
-extern "C" extern void initinfo2__9J2DWindowFv();
-extern "C" extern void __dt__9J2DWindowFv();
-extern "C" extern void func_802FA928();
-extern "C" extern void func_802FAA5C();
-extern "C" extern void func_802FAED0();
-extern "C" extern void resize__9J2DWindowFff();
-extern "C" extern void setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void drawSelf__9J2DWindowFff();
-extern "C" extern void drawSelf__9J2DWindowFffPA3_A4_f();
-extern "C" extern void func_802FB338();
-extern "C" extern void drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb();
-extern "C" extern void drawFrameTexture__9J2DWindowFP10JUTTextureffbbb();
-extern "C" extern void drawContentsTexture__9J2DWindowFffff();
-extern "C" extern void setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void getFrameTexture__9J2DWindowCFUcUc();
-extern "C" extern void isUsed__9J2DWindowFPC7ResTIMG();
-extern "C" extern void getTypeID__9J2DWindowCFv();
-extern "C" extern void draw__9J2DWindowFffff();
-extern "C" extern void getContentsTexture__9J2DWindowCFUc();
-extern "C" extern void getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial();
-extern "C" extern void getFrameMaterial__9J2DWindowCFUc();
-extern "C" extern void getContentsMaterial__9J2DWindowCFv();
-extern "C" extern void isUsed__9J2DWindowFPC7ResFONT();
-extern "C" extern void rewriteAlpha__9J2DWindowFv();
+extern "C" static void func_802FA928();
+extern "C" static void func_802FAA5C();
+extern "C" static void func_802FAED0();
+extern "C" static void drawSelf__9J2DWindowFffPA3_A4_f();
+extern "C" static void func_802FB338();
+
+extern "C" void __ct__9J2DWindowFv();
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
+extern "C" void private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
+extern "C" void initinfo2__9J2DWindowFv();
+extern "C" void __dt__9J2DWindowFv();
+extern "C" static void func_802FA928();
+extern "C" static void func_802FAA5C();
+extern "C" static void func_802FAED0();
+extern "C" void resize__9J2DWindowFff();
+extern "C" void setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void drawSelf__9J2DWindowFff();
+extern "C" static void drawSelf__9J2DWindowFffPA3_A4_f();
+extern "C" static void func_802FB338();
+extern "C" void drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb();
+extern "C" void drawFrameTexture__9J2DWindowFP10JUTTextureffbbb();
+extern "C" void drawContentsTexture__9J2DWindowFffff();
+extern "C" void setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void getFrameTexture__9J2DWindowCFUcUc();
+extern "C" void isUsed__9J2DWindowFPC7ResTIMG();
+extern "C" s32 getTypeID__9J2DWindowCFv();
+extern "C" void draw__9J2DWindowFffff();
+extern "C" void getContentsTexture__9J2DWindowCFUc();
+extern "C" void getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial();
+extern "C" bool getFrameMaterial__9J2DWindowCFUc();
+extern "C" bool getContentsMaterial__9J2DWindowCFv();
+extern "C" void isUsed__9J2DWindowFPC7ResFONT();
+extern "C" void rewriteAlpha__9J2DWindowFv();
 SECTION_RODATA extern const u8 J2DWindow__lit_1831[16];
 SECTION_RODATA extern const u8 lit_1849[16];
 SECTION_RODATA extern const u8 lit_3028[16];
@@ -52,94 +370,129 @@ SECTION_SDATA2 extern f32 lit_2985;
 // External References:
 // 
 
-extern "C" extern void setAlpha__7J2DPaneFUc();
-extern "C" extern void calcMtx__7J2DPaneFv();
-extern "C" extern void makeMatrix__7J2DPaneFff();
-extern "C" extern void setAnimation__7J2DPaneFP15J2DAnmTevRegKey();
-extern "C" extern void setAnimation__7J2DPaneFP11J2DAnmColor();
-extern "C" extern void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
-extern "C" extern void getBlack__9J2DWindowCFv();
-extern "C" extern void getWhite__9J2DWindowCFv();
-extern "C" extern void setWhite__9J2DWindowFQ28JUtility6TColor();
-extern "C" extern void setBlack__9J2DWindowFQ28JUtility6TColor();
-extern "C" extern void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void read__14JSUInputStreamFPvl();
-extern "C" extern void peek__20JSURandomInputStreamFPvl();
-extern "C" extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
-extern "C" extern void __dt__10JUTTextureFv();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern "C" extern void load__10JUTTextureF11_GXTexMapID();
-extern "C" extern void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
-extern "C" extern void __ct__7J2DPaneFv();
-extern "C" extern void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
-extern "C" extern void __dt__7J2DPaneFv();
-extern "C" extern void move__7J2DPaneFff();
-extern "C" extern void add__7J2DPaneFff();
-extern "C" extern void resize__7J2DPaneFff();
-extern "C" extern void func_802F7264();
-extern "C" extern void search__7J2DPaneFUx();
-extern "C" extern void searchUserInfo__7J2DPaneFUx();
-extern "C" extern void isUsed__7J2DPaneFPC7ResTIMG();
-extern "C" extern void isUsed__7J2DPaneFPC7ResFONT();
-extern "C" extern void makeMatrix__7J2DPaneFffff();
-extern "C" extern void setCullBack__7J2DPaneF11_GXCullMode();
-extern "C" extern void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
-extern "C" extern void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" extern void setAnimation__7J2DPaneFP10J2DAnmBase();
-extern "C" extern void setAnimation__7J2DPaneFP15J2DAnmTransform();
-extern "C" extern void clearAnmTransform__7J2DPaneFv();
-extern "C" extern void animationTransform__7J2DPaneFPC15J2DAnmTransform();
-extern "C" extern void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void animationPane__7J2DPaneFPC15J2DAnmTransform();
-extern "C" extern void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void setCullBack__7J2DPaneFb();
-extern "C" extern void setConnectParent__7J2DPaneFb();
-extern "C" extern void update__7J2DPaneFv();
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXSetTexCoordGen2();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXBegin();
-extern "C" extern void GXSetNumChans();
-extern "C" extern void GXSetChanCtrl();
-extern "C" extern void GXSetNumIndStages();
-extern "C" extern void GXSetTevDirect();
-extern "C" extern void GXSetTevOp();
-extern "C" extern void GXSetTevColorIn();
-extern "C" extern void GXSetTevAlphaIn();
-extern "C" extern void GXSetTevColorOp();
-extern "C" extern void GXSetTevAlphaOp();
-extern "C" extern void GXSetTevColor();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXSetBlendMode();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802F7264();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void setAlpha__7J2DPaneFUc();
+extern "C" void calcMtx__7J2DPaneFv();
+extern "C" void makeMatrix__7J2DPaneFff();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey();
+extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor();
+extern "C" void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
+extern "C" void getBlack__9J2DWindowCFv();
+extern "C" void getWhite__9J2DWindowCFv();
+extern "C" void setWhite__9J2DWindowFQ28JUtility6TColor();
+extern "C" void setBlack__9J2DWindowFQ28JUtility6TColor();
+extern "C" void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void peek__20JSURandomInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
+extern "C" void __ct__7J2DPaneFv();
+extern "C" void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+extern "C" void __dt__7J2DPaneFv();
+extern "C" void move__7J2DPaneFff();
+extern "C" void add__7J2DPaneFff();
+extern "C" void resize__7J2DPaneFff();
+extern "C" void func_802F7264();
+extern "C" void search__7J2DPaneFUx();
+extern "C" void searchUserInfo__7J2DPaneFUx();
+extern "C" void isUsed__7J2DPaneFPC7ResTIMG();
+extern "C" void isUsed__7J2DPaneFPC7ResFONT();
+extern "C" void makeMatrix__7J2DPaneFffff();
+extern "C" void setCullBack__7J2DPaneF11_GXCullMode();
+extern "C" void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+extern "C" void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
+extern "C" void clearAnmTransform__7J2DPaneFv();
+extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setCullBack__7J2DPaneFb();
+extern "C" void setConnectParent__7J2DPaneFb();
+extern "C" void update__7J2DPaneFv();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CD108-803CD1D8 00CC+04 .data      __vt__9J2DWindow                                             */
+/* 803CD108-803CD1D8 00CC+04 rc=4 efc=0 .data      __vt__9J2DWindow                                             */
 void* const __vt__9J2DWindow[52] = {
 	NULL, /* RTTI */
 	NULL,
@@ -196,22 +549,22 @@ void* const __vt__9J2DWindow[52] = {
 	NULL,
 };
 
-/* 802F9A7C-802F9B74 00F8+00 .text      __ct__9J2DWindowFv                                           */
+/* 802F9A7C-802F9B74 00F8+00 rc=1 efc=1 .text      __ct__9J2DWindowFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9J2DWindowFv) {
+asm J2DWindow::J2DWindow() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/__ct__9J2DWindowFv.s"
 }
 #pragma pop
 
 
-/* 802F9B74-802F9C10 009C+00 .text      __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
+/* 802F9B74-802F9C10 009C+00 rc=1 efc=1 .text      __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive) {
+asm J2DWindow::J2DWindow(J2DPane* field_0, JSURandomInputStream* field_1, JKRArchive* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/__ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive.s"
 }
@@ -219,60 +572,60 @@ ASM_FUNCTION(__ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive) {
 
 
 /* ############################################################################################## */
-/* 803A1C10-803A1C20 0010+00 .rodata    @1831                                                        */
+/* 803A1C10-803A1C20 0010+00 rc=1 efc=0 .rodata    @1831                                                        */
 SECTION_RODATA const u8 J2DWindow__lit_1831[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1C20-803A1C30 0010+00 .rodata    @1849                                                        */
+/* 803A1C20-803A1C30 0010+00 rc=1 efc=0 .rodata    @1849                                                        */
 SECTION_RODATA const u8 lit_1849[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456240-80456248 0008+00 .sdata2    @1971                                                        */
+/* 80456240-80456248 0008+00 rc=7 efc=0 .sdata2    @1971                                                        */
 f64 lit_1971 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80456248-80456250 0008+00 .sdata2    @1974                                                        */
+/* 80456248-80456250 0008+00 rc=2 efc=0 .sdata2    @1974                                                        */
 f64 lit_1974 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802F9C10-802FA118 0508+00 .text      __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial */
+/* 802F9C10-802FA118 0508+00 rc=1 efc=1 .text      __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial) {
+asm J2DWindow::J2DWindow(J2DPane* field_0, JSURandomInputStream* field_1, J2DMaterial* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/__ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial.s"
 }
 #pragma pop
 
 
-/* 802FA118-802FA604 04EC+00 .text      private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
+/* 802FA118-802FA604 04EC+00 rc=1 efc=0 .text      private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive) {
+asm void J2DWindow::private_readStream(J2DPane* field_0, JSURandomInputStream* field_1, JKRArchive* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/private_readStream__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive.s"
 }
 #pragma pop
 
 
-/* 802FA604-802FA880 027C+00 .text      initinfo2__9J2DWindowFv                                      */
+/* 802FA604-802FA880 027C+00 rc=2 efc=0 .text      initinfo2__9J2DWindowFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initinfo2__9J2DWindowFv) {
+asm void J2DWindow::initinfo2() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/initinfo2__9J2DWindowFv.s"
 }
 #pragma pop
 
 
-/* 802FA880-802FA928 00A8+00 .text      __dt__9J2DWindowFv                                           */
+/* 802FA880-802FA928 00A8+00 rc=2 efc=1 .text      __dt__9J2DWindowFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9J2DWindowFv) {
+asm J2DWindow::~J2DWindow() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/__dt__9J2DWindowFv.s"
 }
@@ -280,115 +633,115 @@ ASM_FUNCTION(__dt__9J2DWindowFv) {
 
 
 /* ############################################################################################## */
-/* 80456250-80456254 0004+00 .sdata2    @2156                                                        */
+/* 80456250-80456254 0004+00 rc=5 efc=0 .sdata2    @2156                                                        */
 u8 lit_2156[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802FA928-802FAA5C 0134+00 .text      draw__9J2DWindowFRCQ29JGeometry8TBox2<f>                     */
+/* 802FA928-802FAA5C 0134+00 rc=1 efc=0 .text      draw__9J2DWindowFRCQ29JGeometry8TBox2<f>                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802FA928) {
+extern "C" asm static void func_802FA928() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/func_802FA928.s"
 }
 #pragma pop
 
 
-/* 802FAA5C-802FAED0 0474+00 .text      draw_private__9J2DWindowFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 802FAA5C-802FAED0 0474+00 rc=2 efc=0 .text      draw_private__9J2DWindowFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802FAA5C) {
+extern "C" asm static void func_802FAA5C() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/func_802FAA5C.s"
 }
 #pragma pop
 
 
-/* 802FAED0-802FB000 0130+00 .text      draw__9J2DWindowFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 802FAED0-802FB000 0130+00 rc=1 efc=0 .text      draw__9J2DWindowFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802FAED0) {
+extern "C" asm static void func_802FAED0() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/func_802FAED0.s"
 }
 #pragma pop
 
 
-/* 802FB000-802FB12C 012C+00 .text      resize__9J2DWindowFff                                        */
+/* 802FB000-802FB12C 012C+00 rc=2 efc=1 .text      resize__9J2DWindowFff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resize__9J2DWindowFff) {
+asm void J2DWindow::resize(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/resize__9J2DWindowFff.s"
 }
 #pragma pop
 
 
-/* 802FB12C-802FB1D8 00AC+00 .text      setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+/* 802FB12C-802FB1D8 00AC+00 rc=1 efc=0 .text      setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DWindow::setContentsColor(JUtility::TColor field_0, JUtility::TColor field_1, JUtility::TColor field_2, JUtility::TColor field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/func_802FB12C.s"
 }
 #pragma pop
 
 
-/* 802FB1D8-802FB240 0068+00 .text      drawSelf__9J2DWindowFff                                      */
+/* 802FB1D8-802FB240 0068+00 rc=2 efc=1 .text      drawSelf__9J2DWindowFff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSelf__9J2DWindowFff) {
+asm void J2DWindow::drawSelf(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawSelf__9J2DWindowFff.s"
 }
 #pragma pop
 
 
-/* 802FB240-802FB338 00F8+00 .text      drawSelf__9J2DWindowFffPA3_A4_f                              */
+/* 802FB240-802FB338 00F8+00 rc=1 efc=0 .text      drawSelf__9J2DWindowFffPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSelf__9J2DWindowFffPA3_A4_f) {
+extern "C" asm static void drawSelf__9J2DWindowFffPA3_A4_f() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawSelf__9J2DWindowFffPA3_A4_f.s"
 }
 #pragma pop
 
 
-/* 802FB338-802FB634 02FC+00 .text      drawContents__9J2DWindowFRCQ29JGeometry8TBox2<f>             */
+/* 802FB338-802FB634 02FC+00 rc=1 efc=0 .text      drawContents__9J2DWindowFRCQ29JGeometry8TBox2<f>             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802FB338) {
+extern "C" asm static void func_802FB338() {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/func_802FB338.s"
 }
 #pragma pop
 
 
-/* 802FB634-802FB7C8 0194+00 .text      drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb      */
+/* 802FB634-802FB7C8 0194+00 rc=2 efc=0 .text      drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb) {
+asm void J2DWindow::drawFrameTexture(JUTTexture* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, u16 field_5, u16 field_6, u16 field_7, u16 field_8, bool field_9) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb.s"
 }
 #pragma pop
 
 
-/* 802FB7C8-802FB868 00A0+00 .text      drawFrameTexture__9J2DWindowFP10JUTTextureffbbb              */
+/* 802FB7C8-802FB868 00A0+00 rc=1 efc=0 .text      drawFrameTexture__9J2DWindowFP10JUTTextureffbbb              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFrameTexture__9J2DWindowFP10JUTTextureffbbb) {
+asm void J2DWindow::drawFrameTexture(JUTTexture* field_0, f32 field_1, f32 field_2, bool field_3, bool field_4, bool field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawFrameTexture__9J2DWindowFP10JUTTextureffbbb.s"
 }
@@ -396,29 +749,29 @@ ASM_FUNCTION(drawFrameTexture__9J2DWindowFP10JUTTextureffbbb) {
 
 
 /* ############################################################################################## */
-/* 80456254-80456258 0004+00 .sdata2    @2984                                                        */
+/* 80456254-80456258 0004+00 rc=1 efc=0 .sdata2    @2984                                                        */
 f32 lit_2984 = 1.0f;
 
-/* 80456258-80456260 0004+04 .sdata2    @2985                                                        */
+/* 80456258-80456260 0004+04 rc=1 efc=0 .sdata2    @2985                                                        */
 f32 lit_2985 = 0.5f;
 /* padding 4 bytes */
 
-/* 802FB868-802FBB90 0328+00 .text      drawContentsTexture__9J2DWindowFffff                         */
+/* 802FB868-802FBB90 0328+00 rc=1 efc=0 .text      drawContentsTexture__9J2DWindowFffff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawContentsTexture__9J2DWindowFffff) {
+asm void J2DWindow::drawContentsTexture(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawContentsTexture__9J2DWindowFffff.s"
 }
 #pragma pop
 
 
-/* 802FBB90-802FBE60 02D0+00 .text      setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor */
+/* 802FBB90-802FBE60 02D0+00 rc=2 efc=0 .text      setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor) {
+asm void J2DWindow::setTevMode(JUTTexture* field_0, JUtility::TColor field_1, JUtility::TColor field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor.s"
 }
@@ -426,16 +779,16 @@ ASM_FUNCTION(setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6T
 
 
 /* ############################################################################################## */
-/* 803A1C30-803A1C40 0010+00 .rodata    @3028                                                        */
+/* 803A1C30-803A1C40 0010+00 rc=1 efc=0 .rodata    @3028                                                        */
 SECTION_RODATA const u8 lit_3028[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802FBE60-802FBEDC 007C+00 .text      getFrameTexture__9J2DWindowCFUcUc                            */
+/* 802FBE60-802FBEDC 007C+00 rc=1 efc=0 .text      getFrameTexture__9J2DWindowCFUcUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFrameTexture__9J2DWindowCFUcUc) {
+asm void J2DWindow::getFrameTexture(char field_0, char field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/getFrameTexture__9J2DWindowCFUcUc.s"
 }
@@ -443,7 +796,7 @@ ASM_FUNCTION(getFrameTexture__9J2DWindowCFUcUc) {
 
 
 /* ############################################################################################## */
-/* 803A1C40-803A1C58 0014+04 .rodata    @3037                                                        */
+/* 803A1C40-803A1C58 0014+04 rc=1 efc=0 .rodata    @3037                                                        */
 SECTION_RODATA const u8 lit_3037[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -451,103 +804,82 @@ SECTION_RODATA const u8 lit_3037[24] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802FBEDC-802FBF98 00BC+00 .text      isUsed__9J2DWindowFPC7ResTIMG                                */
+/* 802FBEDC-802FBF98 00BC+00 rc=1 efc=0 .text      isUsed__9J2DWindowFPC7ResTIMG                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isUsed__9J2DWindowFPC7ResTIMG) {
+asm void J2DWindow::isUsed(ResTIMG const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/isUsed__9J2DWindowFPC7ResTIMG.s"
 }
 #pragma pop
 
 
-/* 802FBF98-802FBFA0 0008+00 .text      getTypeID__9J2DWindowCFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getTypeID__9J2DWindowCFv) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getTypeID__9J2DWindowCFv.s"
+/* 802FBF98-802FBFA0 0008+00 rc=2 efc=1 .text      getTypeID__9J2DWindowCFv                                     */
+s32 J2DWindow::getTypeID() const {
+	return 17;
 }
-#pragma pop
 
 
-/* 802FBFA0-802FBFE8 0048+00 .text      draw__9J2DWindowFffff                                        */
+/* 802FBFA0-802FBFE8 0048+00 rc=1 efc=0 .text      draw__9J2DWindowFffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9J2DWindowFffff) {
+asm void J2DWindow::draw(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/draw__9J2DWindowFffff.s"
 }
 #pragma pop
 
 
-/* 802FBFE8-802FC000 0018+00 .text      getContentsTexture__9J2DWindowCFUc                           */
+/* 802FBFE8-802FC000 0018+00 rc=1 efc=0 .text      getContentsTexture__9J2DWindowCFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getContentsTexture__9J2DWindowCFUc) {
+asm void J2DWindow::getContentsTexture(char field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/getContentsTexture__9J2DWindowCFUc.s"
 }
 #pragma pop
 
 
-/* 802FC000-802FC01C 001C+00 .text      getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial             */
+/* 802FC000-802FC01C 001C+00 rc=1 efc=0 .text      getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial) {
+asm void J2DWindow::getMaterial(J2DWindow::TMaterial& field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial.s"
 }
 #pragma pop
 
 
-/* 802FC01C-802FC024 0008+00 .text      getFrameMaterial__9J2DWindowCFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFrameMaterial__9J2DWindowCFUc) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getFrameMaterial__9J2DWindowCFUc.s"
+/* 802FC01C-802FC024 0008+00 rc=1 efc=0 .text      getFrameMaterial__9J2DWindowCFUc                             */
+bool J2DWindow::getFrameMaterial(char field_0) const {
+	return false;
 }
-#pragma pop
 
 
-/* 802FC024-802FC02C 0008+00 .text      getContentsMaterial__9J2DWindowCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getContentsMaterial__9J2DWindowCFv) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getContentsMaterial__9J2DWindowCFv.s"
+/* 802FC024-802FC02C 0008+00 rc=1 efc=0 .text      getContentsMaterial__9J2DWindowCFv                           */
+bool J2DWindow::getContentsMaterial() const {
+	return false;
 }
-#pragma pop
 
 
-/* 802FC02C-802FC04C 0020+00 .text      isUsed__9J2DWindowFPC7ResFONT                                */
+/* 802FC02C-802FC04C 0020+00 rc=1 efc=0 .text      isUsed__9J2DWindowFPC7ResFONT                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isUsed__9J2DWindowFPC7ResFONT) {
+asm void J2DWindow::isUsed(ResFONT const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/isUsed__9J2DWindowFPC7ResFONT.s"
 }
 #pragma pop
 
 
-/* 802FC04C-802FC050 0004+00 .text      rewriteAlpha__9J2DWindowFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(rewriteAlpha__9J2DWindowFv) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/rewriteAlpha__9J2DWindowFv.s"
+/* 802FC04C-802FC050 0004+00 rc=1 efc=0 .text      rewriteAlpha__9J2DWindowFv                                   */
+void J2DWindow::rewriteAlpha() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

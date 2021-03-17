@@ -6,15 +6,29 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_fmobj_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Fmobj_Draw__FP15obj_fmobj_class();
-extern "C" extern void daObj_Fmobj_Execute__FP15obj_fmobj_class();
-extern "C" extern void daObj_Fmobj_IsDelete__FP15obj_fmobj_class();
-extern "C" extern void daObj_Fmobj_Delete__FP15obj_fmobj_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Fmobj_Create__FP10fopAc_ac_c();
+void daObj_Fmobj_Draw(obj_fmobj_class*);
+void daObj_Fmobj_Execute(obj_fmobj_class*);
+bool daObj_Fmobj_IsDelete(obj_fmobj_class*);
+void daObj_Fmobj_Delete(obj_fmobj_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Fmobj_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Fmobj_Draw__FP15obj_fmobj_class();
+extern "C" void daObj_Fmobj_Execute__FP15obj_fmobj_class();
+extern "C" bool daObj_Fmobj_IsDelete__FP15obj_fmobj_class();
+extern "C" void daObj_Fmobj_Delete__FP15obj_fmobj_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Fmobj_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3743;
 SECTION_RODATA extern const u8 lit_3744[4];
 SECTION_RODATA extern const u32 lit_3745;
@@ -26,7 +40,9 @@ SECTION_DATA extern u8 g_profile_OBJ_FMOBJ[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -36,7 +52,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Fmobj_Draw__FP15obj_fmobj_class) {
+asm void daObj_Fmobj_Draw(obj_fmobj_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Draw__FP15obj_fmobj_class.s"
 }
@@ -47,7 +63,7 @@ ASM_FUNCTION(daObj_Fmobj_Draw__FP15obj_fmobj_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Fmobj_Execute__FP15obj_fmobj_class) {
+asm void daObj_Fmobj_Execute(obj_fmobj_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Execute__FP15obj_fmobj_class.s"
 }
@@ -55,21 +71,16 @@ ASM_FUNCTION(daObj_Fmobj_Execute__FP15obj_fmobj_class) {
 
 
 /* 8057CC84-8057CC8C 0008+00 .text      daObj_Fmobj_IsDelete__FP15obj_fmobj_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Fmobj_IsDelete__FP15obj_fmobj_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_IsDelete__FP15obj_fmobj_class.s"
+bool daObj_Fmobj_IsDelete(obj_fmobj_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CC8C-8057CCDC 0050+00 .text      daObj_Fmobj_Delete__FP15obj_fmobj_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Fmobj_Delete__FP15obj_fmobj_class) {
+asm void daObj_Fmobj_Delete(obj_fmobj_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Delete__FP15obj_fmobj_class.s"
 }
@@ -80,7 +91,7 @@ ASM_FUNCTION(daObj_Fmobj_Delete__FP15obj_fmobj_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -91,7 +102,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Fmobj_Create__FP10fopAc_ac_c) {
+asm void daObj_Fmobj_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_fmobj/d_a_obj_fmobj/daObj_Fmobj_Create__FP10fopAc_ac_c.s"
 }

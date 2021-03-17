@@ -6,36 +6,99 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_kbox_class;
+struct dBgW;
+
+struct daObj_Kbox_HIO_c {
+	daObj_Kbox_HIO_c();
+	~daObj_Kbox_HIO_c();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct obj_kbox_class {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Kbox_HIO_cFv();
-extern "C" extern void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void break_eff__FP14obj_kbox_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObj_Kbox_Draw__FP14obj_kbox_class();
-extern "C" extern void kbox_ground__FP14obj_kbox_class();
-extern "C" extern void kbox_carry__FP14obj_kbox_class();
-extern "C" extern void water_check__FP14obj_kbox_class();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void kbox_drop__FP14obj_kbox_class();
-extern "C" extern void kbox_float__FP14obj_kbox_class();
-extern "C" extern void action__FP14obj_kbox_class();
-extern "C" extern void daObj_Kbox_Execute__FP14obj_kbox_class();
-extern "C" extern void daObj_Kbox_IsDelete__FP14obj_kbox_class();
-extern "C" extern void daObj_Kbox_Delete__FP14obj_kbox_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Kbox_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__16daObj_Kbox_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kbox_cpp();
-extern "C" extern void func_80C3F01C();
-extern "C" extern void func_80C3F024();
-extern "C" extern void func_80C3F02C();
-extern "C" extern void func_80C3F034();
-extern "C" extern void func_80C3F03C();
+void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void break_eff(obj_kbox_class*);
+void daObj_Kbox_Draw(obj_kbox_class*);
+void kbox_ground(obj_kbox_class*);
+void kbox_carry(obj_kbox_class*);
+void water_check(obj_kbox_class*);
+void kbox_drop(obj_kbox_class*);
+void kbox_float(obj_kbox_class*);
+void action(obj_kbox_class*);
+void daObj_Kbox_Execute(obj_kbox_class*);
+bool daObj_Kbox_IsDelete(obj_kbox_class*);
+void daObj_Kbox_Delete(obj_kbox_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Kbox_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_kbox_cpp();
+extern "C" void func_80C3F01C();
+extern "C" void func_80C3F024();
+extern "C" void func_80C3F02C();
+extern "C" void func_80C3F034();
+extern "C" void func_80C3F03C();
+
+extern "C" void __ct__16daObj_Kbox_HIO_cFv();
+extern "C" void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void break_eff__FP14obj_kbox_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObj_Kbox_Draw__FP14obj_kbox_class();
+extern "C" void kbox_ground__FP14obj_kbox_class();
+extern "C" void kbox_carry__FP14obj_kbox_class();
+extern "C" void water_check__FP14obj_kbox_class();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void kbox_drop__FP14obj_kbox_class();
+extern "C" void kbox_float__FP14obj_kbox_class();
+extern "C" void action__FP14obj_kbox_class();
+extern "C" void daObj_Kbox_Execute__FP14obj_kbox_class();
+extern "C" bool daObj_Kbox_IsDelete__FP14obj_kbox_class();
+extern "C" void daObj_Kbox_Delete__FP14obj_kbox_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Kbox_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__16daObj_Kbox_HIO_cFv();
+extern "C" void __sinit_d_a_obj_kbox_cpp();
+extern "C" void func_80C3F01C();
+extern "C" void func_80C3F024();
+extern "C" void func_80C3F02C();
+extern "C" void func_80C3F034();
+extern "C" void func_80C3F03C();
 SECTION_RODATA extern const u32 lit_3648;
 SECTION_RODATA extern const u32 lit_3668;
 SECTION_RODATA extern const u8 lit_3669[4];
@@ -139,8 +202,11 @@ SECTION_BSS extern u8 data_80C3F31C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -150,7 +216,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Kbox_HIO_cFv) {
+asm daObj_Kbox_HIO_c::daObj_Kbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__ct__16daObj_Kbox_HIO_cFv.s"
 }
@@ -161,7 +227,7 @@ ASM_FUNCTION(__ct__16daObj_Kbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -172,7 +238,7 @@ ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(break_eff__FP14obj_kbox_class) {
+asm void break_eff(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/break_eff__FP14obj_kbox_class.s"
 }
@@ -183,7 +249,7 @@ ASM_FUNCTION(break_eff__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__4cXyzFv.s"
 }
@@ -194,7 +260,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kbox_Draw__FP14obj_kbox_class) {
+asm void daObj_Kbox_Draw(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Draw__FP14obj_kbox_class.s"
 }
@@ -205,7 +271,7 @@ ASM_FUNCTION(daObj_Kbox_Draw__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kbox_ground__FP14obj_kbox_class) {
+asm void kbox_ground(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/kbox_ground__FP14obj_kbox_class.s"
 }
@@ -216,7 +282,7 @@ ASM_FUNCTION(kbox_ground__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kbox_carry__FP14obj_kbox_class) {
+asm void kbox_carry(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/kbox_carry__FP14obj_kbox_class.s"
 }
@@ -227,7 +293,7 @@ ASM_FUNCTION(kbox_carry__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP14obj_kbox_class) {
+asm void water_check(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/water_check__FP14obj_kbox_class.s"
 }
@@ -238,7 +304,7 @@ ASM_FUNCTION(water_check__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -249,7 +315,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kbox_drop__FP14obj_kbox_class) {
+asm void kbox_drop(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/kbox_drop__FP14obj_kbox_class.s"
 }
@@ -260,7 +326,7 @@ ASM_FUNCTION(kbox_drop__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kbox_float__FP14obj_kbox_class) {
+asm void kbox_float(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/kbox_float__FP14obj_kbox_class.s"
 }
@@ -271,7 +337,7 @@ ASM_FUNCTION(kbox_float__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14obj_kbox_class) {
+asm void action(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/action__FP14obj_kbox_class.s"
 }
@@ -282,7 +348,7 @@ ASM_FUNCTION(action__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kbox_Execute__FP14obj_kbox_class) {
+asm void daObj_Kbox_Execute(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Execute__FP14obj_kbox_class.s"
 }
@@ -290,21 +356,16 @@ ASM_FUNCTION(daObj_Kbox_Execute__FP14obj_kbox_class) {
 
 
 /* 80C3EA24-80C3EA2C 0008+00 .text      daObj_Kbox_IsDelete__FP14obj_kbox_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kbox_IsDelete__FP14obj_kbox_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_IsDelete__FP14obj_kbox_class.s"
+bool daObj_Kbox_IsDelete(obj_kbox_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C3EA2C-80C3EAAC 0080+00 .text      daObj_Kbox_Delete__FP14obj_kbox_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kbox_Delete__FP14obj_kbox_class) {
+asm void daObj_Kbox_Delete(obj_kbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Delete__FP14obj_kbox_class.s"
 }
@@ -315,7 +376,7 @@ ASM_FUNCTION(daObj_Kbox_Delete__FP14obj_kbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -326,7 +387,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kbox_Create__FP10fopAc_ac_c) {
+asm void daObj_Kbox_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_Create__FP10fopAc_ac_c.s"
 }
@@ -337,7 +398,7 @@ ASM_FUNCTION(daObj_Kbox_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__8cM3dGSphFv.s"
 }
@@ -348,7 +409,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__8cM3dGAabFv.s"
 }
@@ -359,7 +420,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -370,7 +431,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Kbox_HIO_cFv) {
+asm daObj_Kbox_HIO_c::~daObj_Kbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__dt__16daObj_Kbox_HIO_cFv.s"
 }
@@ -381,7 +442,7 @@ ASM_FUNCTION(__dt__16daObj_Kbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kbox_cpp) {
+extern "C" asm void __sinit_d_a_obj_kbox_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/__sinit_d_a_obj_kbox_cpp.s"
 }
@@ -392,7 +453,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kbox_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C3F01C) {
+extern "C" asm void func_80C3F01C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F01C.s"
 }
@@ -403,7 +464,7 @@ ASM_FUNCTION(func_80C3F01C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C3F024) {
+extern "C" asm void func_80C3F024() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F024.s"
 }
@@ -414,7 +475,7 @@ ASM_FUNCTION(func_80C3F024) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C3F02C) {
+extern "C" asm void func_80C3F02C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F02C.s"
 }
@@ -425,7 +486,7 @@ ASM_FUNCTION(func_80C3F02C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C3F034) {
+extern "C" asm void func_80C3F034() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F034.s"
 }
@@ -436,7 +497,7 @@ ASM_FUNCTION(func_80C3F034) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C3F03C) {
+extern "C" asm void func_80C3F03C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/func_80C3F03C.s"
 }

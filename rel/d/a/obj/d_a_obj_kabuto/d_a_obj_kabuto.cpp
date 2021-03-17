@@ -6,46 +6,115 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjKABUTO_c;
+
+struct daObj_KabHIO_c {
+	daObj_KabHIO_c();
+	~daObj_KabHIO_c();
+};
+
+struct daObjKABUTO_c {
+	void InitCcSph();
+	void SetCcSph();
+	void CreateHeap();
+	void ShopWaitAction();
+	void WaitAction();
+	void WallCheck();
+	void SpeedSet();
+	void WallWalk();
+	void WalkAction();
+	void MoveAction();
+	void Z_BufferChk();
+	void Action();
+	void ShopAction();
+	void Insect_Release();
+	void ParticleSet();
+	void Execute();
+	void ObjHit();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_KabHIO_cFv();
-extern "C" extern void InitCcSph__13daObjKABUTO_cFv();
-extern "C" extern void SetCcSph__13daObjKABUTO_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__13daObjKABUTO_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjKABUTO_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjKABUTO_Delete__FP13daObjKABUTO_c();
-extern "C" extern void ShopWaitAction__13daObjKABUTO_cFv();
-extern "C" extern void WaitAction__13daObjKABUTO_cFv();
-extern "C" extern void WallCheck__13daObjKABUTO_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void SpeedSet__13daObjKABUTO_cFv();
-extern "C" extern void WallWalk__13daObjKABUTO_cFv();
-extern "C" extern void WalkAction__13daObjKABUTO_cFv();
-extern "C" extern void MoveAction__13daObjKABUTO_cFv();
-extern "C" extern void Z_BufferChk__13daObjKABUTO_cFv();
-extern "C" extern void Action__13daObjKABUTO_cFv();
-extern "C" extern void ShopAction__13daObjKABUTO_cFv();
-extern "C" extern void Insect_Release__13daObjKABUTO_cFv();
-extern "C" extern void ParticleSet__13daObjKABUTO_cFv();
-extern "C" extern void Execute__13daObjKABUTO_cFv();
-extern "C" extern void ObjHit__13daObjKABUTO_cFv();
-extern "C" extern void Delete__13daObjKABUTO_cFv();
-extern "C" extern void setBaseMtx__13daObjKABUTO_cFv();
-extern "C" extern void daObjKABUTO_Draw__FP13daObjKABUTO_c();
-extern "C" extern void daObjKABUTO_Execute__FP13daObjKABUTO_c();
-extern "C" extern void CreateChk__13daObjKABUTO_cFv();
-extern "C" extern void create__13daObjKABUTO_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjKABUTO_IsDelete__FP13daObjKABUTO_c();
-extern "C" extern void __dt__14daObj_KabHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kabuto_cpp();
-extern "C" extern void func_80C2E0EC();
-extern "C" extern void func_80C2E0F4();
+void useHeapInit(fopAc_ac_c*);
+void daObjKABUTO_Create(fopAc_ac_c*);
+void daObjKABUTO_Delete(daObjKABUTO_c*);
+void daObjKABUTO_Draw(daObjKABUTO_c*);
+void daObjKABUTO_Execute(daObjKABUTO_c*);
+bool daObjKABUTO_IsDelete(daObjKABUTO_c*);
+extern "C" void __sinit_d_a_obj_kabuto_cpp();
+extern "C" void func_80C2E0EC();
+extern "C" void func_80C2E0F4();
+
+extern "C" void __ct__14daObj_KabHIO_cFv();
+extern "C" void InitCcSph__13daObjKABUTO_cFv();
+extern "C" void SetCcSph__13daObjKABUTO_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__13daObjKABUTO_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjKABUTO_Create__FP10fopAc_ac_c();
+extern "C" void daObjKABUTO_Delete__FP13daObjKABUTO_c();
+extern "C" void ShopWaitAction__13daObjKABUTO_cFv();
+extern "C" void WaitAction__13daObjKABUTO_cFv();
+extern "C" void WallCheck__13daObjKABUTO_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void SpeedSet__13daObjKABUTO_cFv();
+extern "C" void WallWalk__13daObjKABUTO_cFv();
+extern "C" void WalkAction__13daObjKABUTO_cFv();
+extern "C" void MoveAction__13daObjKABUTO_cFv();
+extern "C" void Z_BufferChk__13daObjKABUTO_cFv();
+extern "C" void Action__13daObjKABUTO_cFv();
+extern "C" void ShopAction__13daObjKABUTO_cFv();
+extern "C" void Insect_Release__13daObjKABUTO_cFv();
+extern "C" void ParticleSet__13daObjKABUTO_cFv();
+extern "C" void Execute__13daObjKABUTO_cFv();
+extern "C" void ObjHit__13daObjKABUTO_cFv();
+extern "C" void Delete__13daObjKABUTO_cFv();
+extern "C" void setBaseMtx__13daObjKABUTO_cFv();
+extern "C" void daObjKABUTO_Draw__FP13daObjKABUTO_c();
+extern "C" void daObjKABUTO_Execute__FP13daObjKABUTO_c();
+extern "C" void CreateChk__13daObjKABUTO_cFv();
+extern "C" void create__13daObjKABUTO_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjKABUTO_IsDelete__FP13daObjKABUTO_c();
+extern "C" void __dt__14daObj_KabHIO_cFv();
+extern "C" void __sinit_d_a_obj_kabuto_cpp();
+extern "C" void func_80C2E0EC();
+extern "C" void func_80C2E0F4();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u32 lit_3777;
@@ -110,8 +179,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -121,7 +193,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_KabHIO_cFv) {
+asm daObj_KabHIO_c::daObj_KabHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__ct__14daObj_KabHIO_cFv.s"
 }
@@ -132,7 +204,7 @@ ASM_FUNCTION(__ct__14daObj_KabHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/InitCcSph__13daObjKABUTO_cFv.s"
 }
@@ -143,7 +215,7 @@ ASM_FUNCTION(InitCcSph__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/SetCcSph__13daObjKABUTO_cFv.s"
 }
@@ -154,7 +226,7 @@ ASM_FUNCTION(SetCcSph__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -165,7 +237,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/CreateHeap__13daObjKABUTO_cFv.s"
 }
@@ -176,7 +248,7 @@ ASM_FUNCTION(CreateHeap__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__12J3DFrameCtrlFv.s"
 }
@@ -187,7 +259,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKABUTO_Create__FP10fopAc_ac_c) {
+asm void daObjKABUTO_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/daObjKABUTO_Create__FP10fopAc_ac_c.s"
 }
@@ -198,7 +270,7 @@ ASM_FUNCTION(daObjKABUTO_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKABUTO_Delete__FP13daObjKABUTO_c) {
+asm void daObjKABUTO_Delete(daObjKABUTO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/daObjKABUTO_Delete__FP13daObjKABUTO_c.s"
 }
@@ -209,7 +281,7 @@ ASM_FUNCTION(daObjKABUTO_Delete__FP13daObjKABUTO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopWaitAction__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::ShopWaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/ShopWaitAction__13daObjKABUTO_cFv.s"
 }
@@ -220,7 +292,7 @@ ASM_FUNCTION(ShopWaitAction__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/WaitAction__13daObjKABUTO_cFv.s"
 }
@@ -231,7 +303,7 @@ ASM_FUNCTION(WaitAction__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallCheck__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::WallCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/WallCheck__13daObjKABUTO_cFv.s"
 }
@@ -242,7 +314,7 @@ ASM_FUNCTION(WallCheck__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__8cM3dGPlaFv.s"
 }
@@ -253,7 +325,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/SpeedSet__13daObjKABUTO_cFv.s"
 }
@@ -264,7 +336,7 @@ ASM_FUNCTION(SpeedSet__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallWalk__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::WallWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/WallWalk__13daObjKABUTO_cFv.s"
 }
@@ -275,7 +347,7 @@ ASM_FUNCTION(WallWalk__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WalkAction__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::WalkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/WalkAction__13daObjKABUTO_cFv.s"
 }
@@ -286,7 +358,7 @@ ASM_FUNCTION(WalkAction__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/MoveAction__13daObjKABUTO_cFv.s"
 }
@@ -297,7 +369,7 @@ ASM_FUNCTION(MoveAction__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/Z_BufferChk__13daObjKABUTO_cFv.s"
 }
@@ -308,7 +380,7 @@ ASM_FUNCTION(Z_BufferChk__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/Action__13daObjKABUTO_cFv.s"
 }
@@ -319,7 +391,7 @@ ASM_FUNCTION(Action__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopAction__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::ShopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/ShopAction__13daObjKABUTO_cFv.s"
 }
@@ -330,7 +402,7 @@ ASM_FUNCTION(ShopAction__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/Insect_Release__13daObjKABUTO_cFv.s"
 }
@@ -341,7 +413,7 @@ ASM_FUNCTION(Insect_Release__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/ParticleSet__13daObjKABUTO_cFv.s"
 }
@@ -352,7 +424,7 @@ ASM_FUNCTION(ParticleSet__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/Execute__13daObjKABUTO_cFv.s"
 }
@@ -363,7 +435,7 @@ ASM_FUNCTION(Execute__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/ObjHit__13daObjKABUTO_cFv.s"
 }
@@ -374,7 +446,7 @@ ASM_FUNCTION(ObjHit__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/Delete__13daObjKABUTO_cFv.s"
 }
@@ -385,7 +457,7 @@ ASM_FUNCTION(Delete__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/setBaseMtx__13daObjKABUTO_cFv.s"
 }
@@ -396,7 +468,7 @@ ASM_FUNCTION(setBaseMtx__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKABUTO_Draw__FP13daObjKABUTO_c) {
+asm void daObjKABUTO_Draw(daObjKABUTO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/daObjKABUTO_Draw__FP13daObjKABUTO_c.s"
 }
@@ -407,7 +479,7 @@ ASM_FUNCTION(daObjKABUTO_Draw__FP13daObjKABUTO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKABUTO_Execute__FP13daObjKABUTO_c) {
+asm void daObjKABUTO_Execute(daObjKABUTO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/daObjKABUTO_Execute__FP13daObjKABUTO_c.s"
 }
@@ -418,7 +490,7 @@ ASM_FUNCTION(daObjKABUTO_Execute__FP13daObjKABUTO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/CreateChk__13daObjKABUTO_cFv.s"
 }
@@ -429,7 +501,7 @@ ASM_FUNCTION(CreateChk__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObjKABUTO_cFv) {
+asm void daObjKABUTO_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/create__13daObjKABUTO_cFv.s"
 }
@@ -440,7 +512,7 @@ ASM_FUNCTION(create__13daObjKABUTO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -451,7 +523,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__8cM3dGSphFv.s"
 }
@@ -462,7 +534,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__8cM3dGAabFv.s"
 }
@@ -470,21 +542,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80C2E060-80C2E068 0008+00 .text      daObjKABUTO_IsDelete__FP13daObjKABUTO_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKABUTO_IsDelete__FP13daObjKABUTO_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/daObjKABUTO_IsDelete__FP13daObjKABUTO_c.s"
+bool daObjKABUTO_IsDelete(daObjKABUTO_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C2E068-80C2E0B0 0048+00 .text      __dt__14daObj_KabHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_KabHIO_cFv) {
+asm daObj_KabHIO_c::~daObj_KabHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__dt__14daObj_KabHIO_cFv.s"
 }
@@ -495,7 +562,7 @@ ASM_FUNCTION(__dt__14daObj_KabHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kabuto_cpp) {
+extern "C" asm void __sinit_d_a_obj_kabuto_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/__sinit_d_a_obj_kabuto_cpp.s"
 }
@@ -506,7 +573,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kabuto_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C2E0EC) {
+extern "C" asm void func_80C2E0EC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/func_80C2E0EC.s"
 }
@@ -517,7 +584,7 @@ ASM_FUNCTION(func_80C2E0EC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C2E0F4) {
+extern "C" asm void func_80C2E0F4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kabuto/d_a_obj_kabuto/func_80C2E0F4.s"
 }

@@ -6,22 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_Howl_c {
+	void create();
+	bool destroy();
+	void execute();
+	bool draw();
+	void isAreaCheck();
+	void getParam();
+	void getSwitchBit();
+	~daTag_Howl_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTag_Howl_cFv();
-extern "C" extern void destroy__12daTag_Howl_cFv();
-extern "C" extern void execute__12daTag_Howl_cFv();
-extern "C" extern void draw__12daTag_Howl_cFv();
-extern "C" extern void isAreaCheck__12daTag_Howl_cFv();
-extern "C" extern void getParam__12daTag_Howl_cFv();
-extern "C" extern void getSwitchBit__12daTag_Howl_cFv();
-extern "C" extern void daTag_Howl_Create__FPv();
-extern "C" extern void daTag_Howl_Delete__FPv();
-extern "C" extern void daTag_Howl_Execute__FPv();
-extern "C" extern void daTag_Howl_Draw__FPv();
-extern "C" extern void daTag_Howl_IsDelete__FPv();
-extern "C" extern void __dt__12daTag_Howl_cFv();
+void daTag_Howl_Create(void*);
+void daTag_Howl_Delete(void*);
+void daTag_Howl_Execute(void*);
+void daTag_Howl_Draw(void*);
+bool daTag_Howl_IsDelete(void*);
+
+extern "C" void create__12daTag_Howl_cFv();
+extern "C" bool destroy__12daTag_Howl_cFv();
+extern "C" void execute__12daTag_Howl_cFv();
+extern "C" bool draw__12daTag_Howl_cFv();
+extern "C" void isAreaCheck__12daTag_Howl_cFv();
+extern "C" void getParam__12daTag_Howl_cFv();
+extern "C" void getSwitchBit__12daTag_Howl_cFv();
+extern "C" void daTag_Howl_Create__FPv();
+extern "C" void daTag_Howl_Delete__FPv();
+extern "C" void daTag_Howl_Execute__FPv();
+extern "C" void daTag_Howl_Draw__FPv();
+extern "C" bool daTag_Howl_IsDelete__FPv();
+extern "C" void __dt__12daTag_Howl_cFv();
 SECTION_RODATA extern const u8 lit_3739[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3740[8];
 SECTION_RODATA extern const u8 lit_3741[8];
@@ -35,7 +56,9 @@ SECTION_DATA extern void*const __vt__12daTag_Howl_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +68,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTag_Howl_cFv) {
+asm void daTag_Howl_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/create__12daTag_Howl_cFv.s"
 }
@@ -53,21 +76,16 @@ ASM_FUNCTION(create__12daTag_Howl_cFv) {
 
 
 /* 8048D9BC-8048D9C4 0008+00 .text      destroy__12daTag_Howl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(destroy__12daTag_Howl_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/destroy__12daTag_Howl_cFv.s"
+bool daTag_Howl_c::destroy() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D9C4-8048DA24 0060+00 .text      execute__12daTag_Howl_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTag_Howl_cFv) {
+asm void daTag_Howl_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/execute__12daTag_Howl_cFv.s"
 }
@@ -75,21 +93,16 @@ ASM_FUNCTION(execute__12daTag_Howl_cFv) {
 
 
 /* 8048DA24-8048DA2C 0008+00 .text      draw__12daTag_Howl_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12daTag_Howl_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/draw__12daTag_Howl_cFv.s"
+bool daTag_Howl_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048DA2C-8048DC1C 01F0+00 .text      isAreaCheck__12daTag_Howl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isAreaCheck__12daTag_Howl_cFv) {
+asm void daTag_Howl_c::isAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/isAreaCheck__12daTag_Howl_cFv.s"
 }
@@ -100,7 +113,7 @@ ASM_FUNCTION(isAreaCheck__12daTag_Howl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getParam__12daTag_Howl_cFv) {
+asm void daTag_Howl_c::getParam() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/getParam__12daTag_Howl_cFv.s"
 }
@@ -111,7 +124,7 @@ ASM_FUNCTION(getParam__12daTag_Howl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwitchBit__12daTag_Howl_cFv) {
+asm void daTag_Howl_c::getSwitchBit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/getSwitchBit__12daTag_Howl_cFv.s"
 }
@@ -122,7 +135,7 @@ ASM_FUNCTION(getSwitchBit__12daTag_Howl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Howl_Create__FPv) {
+asm void daTag_Howl_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Create__FPv.s"
 }
@@ -133,7 +146,7 @@ ASM_FUNCTION(daTag_Howl_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Howl_Delete__FPv) {
+asm void daTag_Howl_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Delete__FPv.s"
 }
@@ -144,7 +157,7 @@ ASM_FUNCTION(daTag_Howl_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Howl_Execute__FPv) {
+asm void daTag_Howl_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Execute__FPv.s"
 }
@@ -155,7 +168,7 @@ ASM_FUNCTION(daTag_Howl_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Howl_Draw__FPv) {
+asm void daTag_Howl_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Draw__FPv.s"
 }
@@ -163,21 +176,16 @@ ASM_FUNCTION(daTag_Howl_Draw__FPv) {
 
 
 /* 8048DCF4-8048DCFC 0008+00 .text      daTag_Howl_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Howl_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_IsDelete__FPv.s"
+bool daTag_Howl_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048DCFC-8048DD5C 0060+00 .text      __dt__12daTag_Howl_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTag_Howl_cFv) {
+asm daTag_Howl_c::~daTag_Howl_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/__dt__12daTag_Howl_cFv.s"
 }

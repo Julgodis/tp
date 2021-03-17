@@ -6,54 +6,134 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daObjLv6Bm_c;
+
+struct J3DJoint {
+};
+
+struct daObjLv6Bm_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void calcBeam();
+	void checkFindPlayer();
+	void checkSearchPlayer();
+	void getSearchDistance();
+	void getBeamSearchDistance();
+	void effect_proc();
+	void effectWait();
+	void initEffectSet0();
+	void effectSet0();
+	void initActionSwWait();
+	void actionSwWait();
+	void initActionWarning();
+	void actionWarning();
+	void initActionFindPlayer();
+	void actionFindPlayer();
+	void initActionAttack();
+	void actionAttack();
+	void initActionDead();
+	void actionDead();
+	void initActionEnd();
+	void actionEnd();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__12daObjLv6Bm_cFv();
-extern "C" extern void setBaseMtx__12daObjLv6Bm_cFv();
-extern "C" extern void Create__12daObjLv6Bm_cFv();
-extern "C" extern void CreateHeap__12daObjLv6Bm_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__12daObjLv6Bm_cFv();
-extern "C" extern void Execute__12daObjLv6Bm_cFPPA3_A4_f();
-extern "C" extern void action__12daObjLv6Bm_cFv();
-extern "C" extern void calcBeam__12daObjLv6Bm_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void checkFindPlayer__12daObjLv6Bm_cFv();
-extern "C" extern void checkSearchPlayer__12daObjLv6Bm_cFv();
-extern "C" extern void getSearchDistance__12daObjLv6Bm_cFv();
-extern "C" extern void getBeamSearchDistance__12daObjLv6Bm_cFv();
-extern "C" extern void effect_proc__12daObjLv6Bm_cFv();
-extern "C" extern void effectWait__12daObjLv6Bm_cFv();
-extern "C" extern void initEffectSet0__12daObjLv6Bm_cFv();
-extern "C" extern void effectSet0__12daObjLv6Bm_cFv();
-extern "C" extern void initActionSwWait__12daObjLv6Bm_cFv();
-extern "C" extern void actionSwWait__12daObjLv6Bm_cFv();
-extern "C" extern void initActionWarning__12daObjLv6Bm_cFv();
-extern "C" extern void actionWarning__12daObjLv6Bm_cFv();
-extern "C" extern void initActionFindPlayer__12daObjLv6Bm_cFv();
-extern "C" extern void actionFindPlayer__12daObjLv6Bm_cFv();
-extern "C" extern void initActionAttack__12daObjLv6Bm_cFv();
-extern "C" extern void actionAttack__12daObjLv6Bm_cFv();
-extern "C" extern void initActionDead__12daObjLv6Bm_cFv();
-extern "C" extern void actionDead__12daObjLv6Bm_cFv();
-extern "C" extern void initActionEnd__12daObjLv6Bm_cFv();
-extern "C" extern void actionEnd__12daObjLv6Bm_cFv();
-extern "C" extern void Draw__12daObjLv6Bm_cFv();
-extern "C" extern void Delete__12daObjLv6Bm_cFv();
-extern "C" extern void daObjLv6Bm_create1st__FP12daObjLv6Bm_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjLv6Bm_MoveBGDelete__FP12daObjLv6Bm_c();
-extern "C" extern void daObjLv6Bm_MoveBGExecute__FP12daObjLv6Bm_c();
-extern "C" extern void daObjLv6Bm_MoveBGDraw__FP12daObjLv6Bm_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80C81BB0();
-extern "C" extern void func_80C81BCC();
-extern "C" extern void __sinit_d_a_obj_lv6bemos2_cpp();
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__12daObjLv6Bm_cFPPA3_A4_f();
+void daObjLv6Bm_create1st(daObjLv6Bm_c*);
+void daObjLv6Bm_MoveBGDelete(daObjLv6Bm_c*);
+void daObjLv6Bm_MoveBGExecute(daObjLv6Bm_c*);
+void daObjLv6Bm_MoveBGDraw(daObjLv6Bm_c*);
+extern "C" void func_80C81BB0();
+extern "C" void func_80C81BCC();
+extern "C" void __sinit_d_a_obj_lv6bemos2_cpp();
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__12daObjLv6Bm_cFv();
+extern "C" void setBaseMtx__12daObjLv6Bm_cFv();
+extern "C" void Create__12daObjLv6Bm_cFv();
+extern "C" void CreateHeap__12daObjLv6Bm_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__12daObjLv6Bm_cFv();
+extern "C" void Execute__12daObjLv6Bm_cFPPA3_A4_f();
+extern "C" void action__12daObjLv6Bm_cFv();
+extern "C" void calcBeam__12daObjLv6Bm_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void checkFindPlayer__12daObjLv6Bm_cFv();
+extern "C" void checkSearchPlayer__12daObjLv6Bm_cFv();
+extern "C" void getSearchDistance__12daObjLv6Bm_cFv();
+extern "C" void getBeamSearchDistance__12daObjLv6Bm_cFv();
+extern "C" void effect_proc__12daObjLv6Bm_cFv();
+extern "C" void effectWait__12daObjLv6Bm_cFv();
+extern "C" void initEffectSet0__12daObjLv6Bm_cFv();
+extern "C" void effectSet0__12daObjLv6Bm_cFv();
+extern "C" void initActionSwWait__12daObjLv6Bm_cFv();
+extern "C" void actionSwWait__12daObjLv6Bm_cFv();
+extern "C" void initActionWarning__12daObjLv6Bm_cFv();
+extern "C" void actionWarning__12daObjLv6Bm_cFv();
+extern "C" void initActionFindPlayer__12daObjLv6Bm_cFv();
+extern "C" void actionFindPlayer__12daObjLv6Bm_cFv();
+extern "C" void initActionAttack__12daObjLv6Bm_cFv();
+extern "C" void actionAttack__12daObjLv6Bm_cFv();
+extern "C" void initActionDead__12daObjLv6Bm_cFv();
+extern "C" void actionDead__12daObjLv6Bm_cFv();
+extern "C" void initActionEnd__12daObjLv6Bm_cFv();
+extern "C" void actionEnd__12daObjLv6Bm_cFv();
+extern "C" void Draw__12daObjLv6Bm_cFv();
+extern "C" void Delete__12daObjLv6Bm_cFv();
+extern "C" void daObjLv6Bm_create1st__FP12daObjLv6Bm_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjLv6Bm_MoveBGDelete__FP12daObjLv6Bm_c();
+extern "C" void daObjLv6Bm_MoveBGExecute__FP12daObjLv6Bm_c();
+extern "C" void daObjLv6Bm_MoveBGDraw__FP12daObjLv6Bm_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80C81BB0();
+extern "C" void func_80C81BCC();
+extern "C" void __sinit_d_a_obj_lv6bemos2_cpp();
 SECTION_RODATA extern const u8 l_eye_offset[12];
 SECTION_RODATA extern const u8 l_beam_offsetPos[12];
 SECTION_RODATA extern const u32 lit_3854;
@@ -125,7 +205,9 @@ SECTION_DATA extern void*const __vt__12daObjLv6Bm_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -135,7 +217,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/nodeCallBack__FP8J3DJointi.s"
 }
@@ -146,7 +228,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initBaseMtx__12daObjLv6Bm_cFv.s"
 }
@@ -157,7 +239,7 @@ ASM_FUNCTION(initBaseMtx__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/setBaseMtx__12daObjLv6Bm_cFv.s"
 }
@@ -168,7 +250,7 @@ ASM_FUNCTION(setBaseMtx__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/Create__12daObjLv6Bm_cFv.s"
 }
@@ -179,7 +261,7 @@ ASM_FUNCTION(Create__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/CreateHeap__12daObjLv6Bm_cFv.s"
 }
@@ -190,7 +272,7 @@ ASM_FUNCTION(CreateHeap__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -201,7 +283,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/create1st__12daObjLv6Bm_cFv.s"
 }
@@ -212,7 +294,7 @@ ASM_FUNCTION(create1st__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjLv6Bm_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjLv6Bm_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/Execute__12daObjLv6Bm_cFPPA3_A4_f.s"
 }
@@ -223,7 +305,7 @@ ASM_FUNCTION(Execute__12daObjLv6Bm_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/action__12daObjLv6Bm_cFv.s"
 }
@@ -234,7 +316,7 @@ ASM_FUNCTION(action__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcBeam__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::calcBeam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/calcBeam__12daObjLv6Bm_cFv.s"
 }
@@ -245,7 +327,7 @@ ASM_FUNCTION(calcBeam__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__8cM3dGPlaFv.s"
 }
@@ -256,7 +338,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFindPlayer__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::checkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/checkFindPlayer__12daObjLv6Bm_cFv.s"
 }
@@ -267,7 +349,7 @@ ASM_FUNCTION(checkFindPlayer__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSearchPlayer__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::checkSearchPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/checkSearchPlayer__12daObjLv6Bm_cFv.s"
 }
@@ -278,7 +360,7 @@ ASM_FUNCTION(checkSearchPlayer__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSearchDistance__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::getSearchDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/getSearchDistance__12daObjLv6Bm_cFv.s"
 }
@@ -289,7 +371,7 @@ ASM_FUNCTION(getSearchDistance__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBeamSearchDistance__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::getBeamSearchDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/getBeamSearchDistance__12daObjLv6Bm_cFv.s"
 }
@@ -300,7 +382,7 @@ ASM_FUNCTION(getBeamSearchDistance__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effect_proc__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::effect_proc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/effect_proc__12daObjLv6Bm_cFv.s"
 }
@@ -308,21 +390,16 @@ ASM_FUNCTION(effect_proc__12daObjLv6Bm_cFv) {
 
 
 /* 80C7FD8C-80C7FD90 0004+00 .text      effectWait__12daObjLv6Bm_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectWait__12daObjLv6Bm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/effectWait__12daObjLv6Bm_cFv.s"
+void daObjLv6Bm_c::effectWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C7FD90-80C7FEC4 0134+00 .text      initEffectSet0__12daObjLv6Bm_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEffectSet0__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initEffectSet0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initEffectSet0__12daObjLv6Bm_cFv.s"
 }
@@ -333,7 +410,7 @@ ASM_FUNCTION(initEffectSet0__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet0__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::effectSet0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/effectSet0__12daObjLv6Bm_cFv.s"
 }
@@ -344,7 +421,7 @@ ASM_FUNCTION(effectSet0__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionSwWait__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionSwWait__12daObjLv6Bm_cFv.s"
 }
@@ -355,7 +432,7 @@ ASM_FUNCTION(initActionSwWait__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWait__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::actionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionSwWait__12daObjLv6Bm_cFv.s"
 }
@@ -366,7 +443,7 @@ ASM_FUNCTION(actionSwWait__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionWarning__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionWarning__12daObjLv6Bm_cFv.s"
 }
@@ -377,7 +454,7 @@ ASM_FUNCTION(initActionWarning__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarning__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::actionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionWarning__12daObjLv6Bm_cFv.s"
 }
@@ -388,7 +465,7 @@ ASM_FUNCTION(actionWarning__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionFindPlayer__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionFindPlayer__12daObjLv6Bm_cFv.s"
 }
@@ -399,7 +476,7 @@ ASM_FUNCTION(initActionFindPlayer__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionFindPlayer__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::actionFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionFindPlayer__12daObjLv6Bm_cFv.s"
 }
@@ -410,7 +487,7 @@ ASM_FUNCTION(actionFindPlayer__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionAttack__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionAttack__12daObjLv6Bm_cFv.s"
 }
@@ -421,7 +498,7 @@ ASM_FUNCTION(initActionAttack__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionAttack__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::actionAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionAttack__12daObjLv6Bm_cFv.s"
 }
@@ -432,7 +509,7 @@ ASM_FUNCTION(actionAttack__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionDead__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionDead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionDead__12daObjLv6Bm_cFv.s"
 }
@@ -443,7 +520,7 @@ ASM_FUNCTION(initActionDead__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDead__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::actionDead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionDead__12daObjLv6Bm_cFv.s"
 }
@@ -454,7 +531,7 @@ ASM_FUNCTION(actionDead__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionEnd__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::initActionEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/initActionEnd__12daObjLv6Bm_cFv.s"
 }
@@ -462,21 +539,16 @@ ASM_FUNCTION(initActionEnd__12daObjLv6Bm_cFv) {
 
 
 /* 80C814FC-80C81500 0004+00 .text      actionEnd__12daObjLv6Bm_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__12daObjLv6Bm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/actionEnd__12daObjLv6Bm_cFv.s"
+void daObjLv6Bm_c::actionEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C81500-80C816A8 01A8+00 .text      Draw__12daObjLv6Bm_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/Draw__12daObjLv6Bm_cFv.s"
 }
@@ -487,7 +559,7 @@ ASM_FUNCTION(Draw__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjLv6Bm_cFv) {
+asm void daObjLv6Bm_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/Delete__12daObjLv6Bm_cFv.s"
 }
@@ -498,7 +570,7 @@ ASM_FUNCTION(Delete__12daObjLv6Bm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6Bm_create1st__FP12daObjLv6Bm_c) {
+asm void daObjLv6Bm_create1st(daObjLv6Bm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/daObjLv6Bm_create1st__FP12daObjLv6Bm_c.s"
 }
@@ -509,7 +581,7 @@ ASM_FUNCTION(daObjLv6Bm_create1st__FP12daObjLv6Bm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__8cM3dGCylFv.s"
 }
@@ -520,7 +592,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__8cM3dGSphFv.s"
 }
@@ -531,7 +603,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__8cM3dGAabFv.s"
 }
@@ -542,7 +614,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__10dCcD_GSttsFv.s"
 }
@@ -553,7 +625,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6Bm_MoveBGDelete__FP12daObjLv6Bm_c) {
+asm void daObjLv6Bm_MoveBGDelete(daObjLv6Bm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/daObjLv6Bm_MoveBGDelete__FP12daObjLv6Bm_c.s"
 }
@@ -564,7 +636,7 @@ ASM_FUNCTION(daObjLv6Bm_MoveBGDelete__FP12daObjLv6Bm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6Bm_MoveBGExecute__FP12daObjLv6Bm_c) {
+asm void daObjLv6Bm_MoveBGExecute(daObjLv6Bm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/daObjLv6Bm_MoveBGExecute__FP12daObjLv6Bm_c.s"
 }
@@ -575,7 +647,7 @@ ASM_FUNCTION(daObjLv6Bm_MoveBGExecute__FP12daObjLv6Bm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6Bm_MoveBGDraw__FP12daObjLv6Bm_c) {
+asm void daObjLv6Bm_MoveBGDraw(daObjLv6Bm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/daObjLv6Bm_MoveBGDraw__FP12daObjLv6Bm_c.s"
 }
@@ -586,7 +658,7 @@ ASM_FUNCTION(daObjLv6Bm_MoveBGDraw__FP12daObjLv6Bm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__dt__10cCcD_GSttsFv.s"
 }
@@ -597,7 +669,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C81BB0) {
+extern "C" asm void func_80C81BB0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/func_80C81BB0.s"
 }
@@ -608,7 +680,7 @@ ASM_FUNCTION(func_80C81BB0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C81BCC) {
+extern "C" asm void func_80C81BCC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/func_80C81BCC.s"
 }
@@ -619,7 +691,7 @@ ASM_FUNCTION(func_80C81BCC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6bemos2_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6bemos2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6bemos2/d_a_obj_lv6bemos2/__sinit_d_a_obj_lv6bemos2_cpp.s"
 }

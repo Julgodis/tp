@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_DATA extern u8 g_profile_Obj_TestCube[48];
 
 // 
@@ -16,10 +17,12 @@ SECTION_DATA extern u8 g_profile_Obj_TestCube[48];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
+/* ############################################################################################## */
 /* 80D0BB60-80D0BB90 0030+00 .data      g_profile_Obj_TestCube                                       */
 u8 g_profile_Obj_TestCube[48] = {
 	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

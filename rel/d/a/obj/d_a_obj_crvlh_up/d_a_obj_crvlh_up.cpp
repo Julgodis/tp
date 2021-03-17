@@ -6,28 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCRVLH_UP_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjCRVLH_UP_c {
+	void HakaiSet();
+	void UpMotion();
+	void Hakai();
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjCRVLH_UP_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVLH_UP_Delete__FP15daObjCRVLH_UP_c();
-extern "C" extern void HakaiSet__15daObjCRVLH_UP_cFv();
-extern "C" extern void UpMotion__15daObjCRVLH_UP_cFv();
-extern "C" extern void Hakai__15daObjCRVLH_UP_cFv();
-extern "C" extern void setBaseMtx__15daObjCRVLH_UP_cFv();
-extern "C" extern void daObjCRVLH_UP_Draw__FP15daObjCRVLH_UP_c();
-extern "C" extern void daObjCRVLH_UP_Execute__FP15daObjCRVLH_UP_c();
-extern "C" extern void CreateHeap__15daObjCRVLH_UP_cFv();
-extern "C" extern void create__15daObjCRVLH_UP_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjCRVLH_UP_IsDelete__FP15daObjCRVLH_UP_c();
-extern "C" extern void Create__15daObjCRVLH_UP_cFv();
-extern "C" extern void Execute__15daObjCRVLH_UP_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjCRVLH_UP_cFv();
-extern "C" extern void Delete__15daObjCRVLH_UP_cFv();
+void daObjCRVLH_UP_Create(fopAc_ac_c*);
+void daObjCRVLH_UP_Delete(daObjCRVLH_UP_c*);
+void daObjCRVLH_UP_Draw(daObjCRVLH_UP_c*);
+void daObjCRVLH_UP_Execute(daObjCRVLH_UP_c*);
+bool daObjCRVLH_UP_IsDelete(daObjCRVLH_UP_c*);
+extern "C" void Execute__15daObjCRVLH_UP_cFPPA3_A4_f();
+
+extern "C" void daObjCRVLH_UP_Create__FP10fopAc_ac_c();
+extern "C" void daObjCRVLH_UP_Delete__FP15daObjCRVLH_UP_c();
+extern "C" void HakaiSet__15daObjCRVLH_UP_cFv();
+extern "C" void UpMotion__15daObjCRVLH_UP_cFv();
+extern "C" void Hakai__15daObjCRVLH_UP_cFv();
+extern "C" void setBaseMtx__15daObjCRVLH_UP_cFv();
+extern "C" void daObjCRVLH_UP_Draw__FP15daObjCRVLH_UP_c();
+extern "C" void daObjCRVLH_UP_Execute__FP15daObjCRVLH_UP_c();
+extern "C" void CreateHeap__15daObjCRVLH_UP_cFv();
+extern "C" void create__15daObjCRVLH_UP_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjCRVLH_UP_IsDelete__FP15daObjCRVLH_UP_c();
+extern "C" void Create__15daObjCRVLH_UP_cFv();
+extern "C" void Execute__15daObjCRVLH_UP_cFPPA3_A4_f();
+extern "C" void Draw__15daObjCRVLH_UP_cFv();
+extern "C" void Delete__15daObjCRVLH_UP_cFv();
 SECTION_RODATA extern const u32 lit_3672;
 SECTION_RODATA extern const u32 lit_3681;
 SECTION_RODATA extern const u32 lit_3682;
@@ -64,7 +106,9 @@ SECTION_DATA extern void*const __vt__15daObjCRVLH_UP_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -74,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVLH_UP_Create__FP10fopAc_ac_c) {
+asm void daObjCRVLH_UP_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/daObjCRVLH_UP_Create__FP10fopAc_ac_c.s"
 }
@@ -85,7 +129,7 @@ ASM_FUNCTION(daObjCRVLH_UP_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVLH_UP_Delete__FP15daObjCRVLH_UP_c) {
+asm void daObjCRVLH_UP_Delete(daObjCRVLH_UP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/daObjCRVLH_UP_Delete__FP15daObjCRVLH_UP_c.s"
 }
@@ -96,7 +140,7 @@ ASM_FUNCTION(daObjCRVLH_UP_Delete__FP15daObjCRVLH_UP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HakaiSet__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::HakaiSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/HakaiSet__15daObjCRVLH_UP_cFv.s"
 }
@@ -107,7 +151,7 @@ ASM_FUNCTION(HakaiSet__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(UpMotion__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::UpMotion() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/UpMotion__15daObjCRVLH_UP_cFv.s"
 }
@@ -118,7 +162,7 @@ ASM_FUNCTION(UpMotion__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Hakai__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::Hakai() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/Hakai__15daObjCRVLH_UP_cFv.s"
 }
@@ -129,7 +173,7 @@ ASM_FUNCTION(Hakai__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/setBaseMtx__15daObjCRVLH_UP_cFv.s"
 }
@@ -140,7 +184,7 @@ ASM_FUNCTION(setBaseMtx__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVLH_UP_Draw__FP15daObjCRVLH_UP_c) {
+asm void daObjCRVLH_UP_Draw(daObjCRVLH_UP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/daObjCRVLH_UP_Draw__FP15daObjCRVLH_UP_c.s"
 }
@@ -151,7 +195,7 @@ ASM_FUNCTION(daObjCRVLH_UP_Draw__FP15daObjCRVLH_UP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVLH_UP_Execute__FP15daObjCRVLH_UP_c) {
+asm void daObjCRVLH_UP_Execute(daObjCRVLH_UP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/daObjCRVLH_UP_Execute__FP15daObjCRVLH_UP_c.s"
 }
@@ -162,7 +206,7 @@ ASM_FUNCTION(daObjCRVLH_UP_Execute__FP15daObjCRVLH_UP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/CreateHeap__15daObjCRVLH_UP_cFv.s"
 }
@@ -173,7 +217,7 @@ ASM_FUNCTION(CreateHeap__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/create__15daObjCRVLH_UP_cFv.s"
 }
@@ -184,7 +228,7 @@ ASM_FUNCTION(create__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/__dt__8cM3dGCylFv.s"
 }
@@ -195,7 +239,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/__dt__8cM3dGAabFv.s"
 }
@@ -206,7 +250,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/__dt__4cXyzFv.s"
 }
@@ -214,32 +258,22 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80BD56E0-80BD56E4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD56E4-80BD56EC 0008+00 .text      daObjCRVLH_UP_IsDelete__FP15daObjCRVLH_UP_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVLH_UP_IsDelete__FP15daObjCRVLH_UP_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/daObjCRVLH_UP_IsDelete__FP15daObjCRVLH_UP_c.s"
+bool daObjCRVLH_UP_IsDelete(daObjCRVLH_UP_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BD56EC-80BD5730 0044+00 .text      Create__15daObjCRVLH_UP_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/func_80BD56EC.s"
 }
@@ -250,7 +284,7 @@ ASM_FUNCTION(Create__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjCRVLH_UP_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjCRVLH_UP_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/Execute__15daObjCRVLH_UP_cFPPA3_A4_f.s"
 }
@@ -261,7 +295,7 @@ ASM_FUNCTION(Execute__15daObjCRVLH_UP_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/Draw__15daObjCRVLH_UP_cFv.s"
 }
@@ -272,7 +306,7 @@ ASM_FUNCTION(Draw__15daObjCRVLH_UP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjCRVLH_UP_cFv) {
+asm void daObjCRVLH_UP_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_up/d_a_obj_crvlh_up/Delete__15daObjCRVLH_UP_cFv.s"
 }

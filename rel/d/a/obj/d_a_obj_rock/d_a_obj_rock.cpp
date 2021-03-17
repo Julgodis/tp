@@ -6,20 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_rock_class;
+
+struct obj_rock_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct rock_ss {
+	~rock_ss();
+	rock_ss();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Rock_Draw__FP14obj_rock_class();
-extern "C" extern void daObj_Rock_Execute__FP14obj_rock_class();
-extern "C" extern void daObj_Rock_IsDelete__FP14obj_rock_class();
-extern "C" extern void daObj_Rock_Delete__FP14obj_rock_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void set_pos_check__FP14obj_rock_classi();
-extern "C" extern void daObj_Rock_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__7rock_ssFv();
-extern "C" extern void __ct__7rock_ssFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daObj_Rock_Draw(obj_rock_class*);
+void daObj_Rock_Execute(obj_rock_class*);
+bool daObj_Rock_IsDelete(obj_rock_class*);
+void daObj_Rock_Delete(obj_rock_class*);
+void useHeapInit(fopAc_ac_c*);
+void set_pos_check(obj_rock_class*, s32);
+void daObj_Rock_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Rock_Draw__FP14obj_rock_class();
+extern "C" void daObj_Rock_Execute__FP14obj_rock_class();
+extern "C" bool daObj_Rock_IsDelete__FP14obj_rock_class();
+extern "C" void daObj_Rock_Delete__FP14obj_rock_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void set_pos_check__FP14obj_rock_classi();
+extern "C" void daObj_Rock_Create__FP10fopAc_ac_c();
+extern "C" void __dt__7rock_ssFv();
+extern "C" void __ct__7rock_ssFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u32 lit_3814;
 SECTION_RODATA extern const u8 lit_3894[4];
 SECTION_RODATA extern const u8 lit_3895[8];
@@ -43,7 +77,9 @@ SECTION_DATA extern void*const __vt__8cM3dGSph[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -53,7 +89,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Rock_Draw__FP14obj_rock_class) {
+asm void daObj_Rock_Draw(obj_rock_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Draw__FP14obj_rock_class.s"
 }
@@ -64,7 +100,7 @@ ASM_FUNCTION(daObj_Rock_Draw__FP14obj_rock_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Rock_Execute__FP14obj_rock_class) {
+asm void daObj_Rock_Execute(obj_rock_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Execute__FP14obj_rock_class.s"
 }
@@ -72,21 +108,16 @@ ASM_FUNCTION(daObj_Rock_Execute__FP14obj_rock_class) {
 
 
 /* 80CBDE48-80CBDE50 0008+00 .text      daObj_Rock_IsDelete__FP14obj_rock_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Rock_IsDelete__FP14obj_rock_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_IsDelete__FP14obj_rock_class.s"
+bool daObj_Rock_IsDelete(obj_rock_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CBDE50-80CBDED8 0088+00 .text      daObj_Rock_Delete__FP14obj_rock_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Rock_Delete__FP14obj_rock_class) {
+asm void daObj_Rock_Delete(obj_rock_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Delete__FP14obj_rock_class.s"
 }
@@ -97,7 +128,7 @@ ASM_FUNCTION(daObj_Rock_Delete__FP14obj_rock_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -108,7 +139,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_pos_check__FP14obj_rock_classi) {
+asm void set_pos_check(obj_rock_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/set_pos_check__FP14obj_rock_classi.s"
 }
@@ -119,7 +150,7 @@ ASM_FUNCTION(set_pos_check__FP14obj_rock_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Rock_Create__FP10fopAc_ac_c) {
+asm void daObj_Rock_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_Create__FP10fopAc_ac_c.s"
 }
@@ -130,7 +161,7 @@ ASM_FUNCTION(daObj_Rock_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7rock_ssFv) {
+asm rock_ss::~rock_ss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/__dt__7rock_ssFv.s"
 }
@@ -141,7 +172,7 @@ ASM_FUNCTION(__dt__7rock_ssFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7rock_ssFv) {
+asm rock_ss::rock_ss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/__ct__7rock_ssFv.s"
 }
@@ -152,7 +183,7 @@ ASM_FUNCTION(__ct__7rock_ssFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/__dt__8cM3dGSphFv.s"
 }
@@ -163,7 +194,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/__dt__8cM3dGAabFv.s"
 }

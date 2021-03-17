@@ -6,57 +6,142 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObj_Kanban2_c;
+struct csXyz;
+struct cXyz;
+
+struct daObj_Kanban2_HIO_c {
+	daObj_Kanban2_HIO_c();
+	~daObj_Kanban2_HIO_c();
+};
+
+struct daObj_Kanban2_c {
+	void draw();
+	void setKanbanSE(s32);
+	void createBreakParts(u32, csXyz);
+	void createWallHitBreak();
+	void getKanbanCutType();
+	void getKanbanWolfCutType();
+	void damage_check();
+	void float_damage_check();
+	void deletePart();
+	void getWallAngle();
+	void setGroundAngle();
+	void checkWaterSurface();
+	void setCullMtx();
+	void setSmokeEffect(cXyz);
+	void setWaterEffect();
+	void setCenterPos();
+	void checkCarryOn();
+	void setActionMode(s32, s32);
+	void calcNormalSwing();
+	void executeNormal();
+	void initPart();
+	void executePart();
+	void executeFloat();
+	void executeCarry();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct csXyz {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19daObj_Kanban2_HIO_cFv();
-extern "C" extern void draw__15daObj_Kanban2_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObj_Kanban2_Draw__FP15daObj_Kanban2_c();
-extern "C" extern void setKanbanSE__15daObj_Kanban2_cFi();
-extern "C" extern void createBreakParts__15daObj_Kanban2_cFUl5csXyz();
-extern "C" extern void createWallHitBreak__15daObj_Kanban2_cFv();
-extern "C" extern void getKanbanCutType__15daObj_Kanban2_cFv();
-extern "C" extern void getKanbanWolfCutType__15daObj_Kanban2_cFv();
-extern "C" extern void damage_check__15daObj_Kanban2_cFv();
-extern "C" extern void float_damage_check__15daObj_Kanban2_cFv();
-extern "C" extern void deletePart__15daObj_Kanban2_cFv();
-extern "C" extern void getWallAngle__15daObj_Kanban2_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setGroundAngle__15daObj_Kanban2_cFv();
-extern "C" extern void checkWaterSurface__15daObj_Kanban2_cFv();
-extern "C" extern void checkPataGround__15daObj_Kanban2_cFss();
-extern "C" extern void setCullMtx__15daObj_Kanban2_cFv();
-extern "C" extern void setSmokeEffect__15daObj_Kanban2_cF4cXyz();
-extern "C" extern void setWaterEffect__15daObj_Kanban2_cFv();
-extern "C" extern void setCenterPos__15daObj_Kanban2_cFv();
-extern "C" extern void checkCarryOn__15daObj_Kanban2_cFv();
-extern "C" extern void setActionMode__15daObj_Kanban2_cFii();
-extern "C" extern void calcNormalSwing__15daObj_Kanban2_cFv();
-extern "C" extern void executeNormal__15daObj_Kanban2_cFv();
-extern "C" extern void initPart__15daObj_Kanban2_cFv();
-extern "C" extern void executePart__15daObj_Kanban2_cFv();
-extern "C" extern void executeFloat__15daObj_Kanban2_cFv();
-extern "C" extern void executeCarry__15daObj_Kanban2_cFv();
-extern "C" extern void action__15daObj_Kanban2_cFv();
-extern "C" extern void mtx_set__15daObj_Kanban2_cFv();
-extern "C" extern void cc_set__15daObj_Kanban2_cFv();
-extern "C" extern void execute__15daObj_Kanban2_cFv();
-extern "C" extern void daObj_Kanban2_Execute__FP15daObj_Kanban2_c();
-extern "C" extern void daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c();
-extern "C" extern void _delete__15daObj_Kanban2_cFv();
-extern "C" extern void daObj_Kanban2_Delete__FP15daObj_Kanban2_c();
-extern "C" extern void CreateHeap__15daObj_Kanban2_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__15daObj_Kanban2_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObj_Kanban2_Create__FP15daObj_Kanban2_c();
-extern "C" extern void __dt__19daObj_Kanban2_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kanban2_cpp();
-extern "C" extern void func_805855FC();
-extern "C" extern void func_80585604();
+void daObj_Kanban2_Draw(daObj_Kanban2_c*);
+extern "C" void checkPataGround__15daObj_Kanban2_cFss();
+void daObj_Kanban2_Execute(daObj_Kanban2_c*);
+bool daObj_Kanban2_IsDelete(daObj_Kanban2_c*);
+void daObj_Kanban2_Delete(daObj_Kanban2_c*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Kanban2_Create(daObj_Kanban2_c*);
+extern "C" void __sinit_d_a_obj_kanban2_cpp();
+extern "C" void func_805855FC();
+extern "C" void func_80585604();
+
+extern "C" void __ct__19daObj_Kanban2_HIO_cFv();
+extern "C" void draw__15daObj_Kanban2_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObj_Kanban2_Draw__FP15daObj_Kanban2_c();
+extern "C" void setKanbanSE__15daObj_Kanban2_cFi();
+extern "C" void createBreakParts__15daObj_Kanban2_cFUl5csXyz();
+extern "C" void createWallHitBreak__15daObj_Kanban2_cFv();
+extern "C" void getKanbanCutType__15daObj_Kanban2_cFv();
+extern "C" void getKanbanWolfCutType__15daObj_Kanban2_cFv();
+extern "C" void damage_check__15daObj_Kanban2_cFv();
+extern "C" void float_damage_check__15daObj_Kanban2_cFv();
+extern "C" void deletePart__15daObj_Kanban2_cFv();
+extern "C" void getWallAngle__15daObj_Kanban2_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setGroundAngle__15daObj_Kanban2_cFv();
+extern "C" void checkWaterSurface__15daObj_Kanban2_cFv();
+extern "C" void checkPataGround__15daObj_Kanban2_cFss();
+extern "C" void setCullMtx__15daObj_Kanban2_cFv();
+extern "C" void setSmokeEffect__15daObj_Kanban2_cF4cXyz();
+extern "C" void setWaterEffect__15daObj_Kanban2_cFv();
+extern "C" void setCenterPos__15daObj_Kanban2_cFv();
+extern "C" void checkCarryOn__15daObj_Kanban2_cFv();
+extern "C" void setActionMode__15daObj_Kanban2_cFii();
+extern "C" void calcNormalSwing__15daObj_Kanban2_cFv();
+extern "C" void executeNormal__15daObj_Kanban2_cFv();
+extern "C" void initPart__15daObj_Kanban2_cFv();
+extern "C" void executePart__15daObj_Kanban2_cFv();
+extern "C" void executeFloat__15daObj_Kanban2_cFv();
+extern "C" void executeCarry__15daObj_Kanban2_cFv();
+extern "C" void action__15daObj_Kanban2_cFv();
+extern "C" void mtx_set__15daObj_Kanban2_cFv();
+extern "C" void cc_set__15daObj_Kanban2_cFv();
+extern "C" void execute__15daObj_Kanban2_cFv();
+extern "C" void daObj_Kanban2_Execute__FP15daObj_Kanban2_c();
+extern "C" bool daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c();
+extern "C" void _delete__15daObj_Kanban2_cFv();
+extern "C" void daObj_Kanban2_Delete__FP15daObj_Kanban2_c();
+extern "C" void CreateHeap__15daObj_Kanban2_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__15daObj_Kanban2_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObj_Kanban2_Create__FP15daObj_Kanban2_c();
+extern "C" void __dt__19daObj_Kanban2_HIO_cFv();
+extern "C" void __sinit_d_a_obj_kanban2_cpp();
+extern "C" void func_805855FC();
+extern "C" void func_80585604();
 SECTION_RODATA extern const u32 lit_3970;
 SECTION_RODATA extern const u32 lit_4013;
 SECTION_RODATA extern const u32 lit_4014;
@@ -181,8 +266,11 @@ SECTION_BSS extern u8 data_80585D4C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -192,7 +280,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19daObj_Kanban2_HIO_cFv) {
+asm daObj_Kanban2_HIO_c::daObj_Kanban2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__ct__19daObj_Kanban2_HIO_cFv.s"
 }
@@ -203,7 +291,7 @@ ASM_FUNCTION(__ct__19daObj_Kanban2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/draw__15daObj_Kanban2_cFv.s"
 }
@@ -214,7 +302,7 @@ ASM_FUNCTION(draw__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__4cXyzFv.s"
 }
@@ -225,7 +313,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kanban2_Draw__FP15daObj_Kanban2_c) {
+asm void daObj_Kanban2_Draw(daObj_Kanban2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Draw__FP15daObj_Kanban2_c.s"
 }
@@ -236,7 +324,7 @@ ASM_FUNCTION(daObj_Kanban2_Draw__FP15daObj_Kanban2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKanbanSE__15daObj_Kanban2_cFi) {
+asm void daObj_Kanban2_c::setKanbanSE(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setKanbanSE__15daObj_Kanban2_cFi.s"
 }
@@ -247,7 +335,7 @@ ASM_FUNCTION(setKanbanSE__15daObj_Kanban2_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createBreakParts__15daObj_Kanban2_cFUl5csXyz) {
+asm void daObj_Kanban2_c::createBreakParts(u32 field_0, csXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/createBreakParts__15daObj_Kanban2_cFUl5csXyz.s"
 }
@@ -258,7 +346,7 @@ ASM_FUNCTION(createBreakParts__15daObj_Kanban2_cFUl5csXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createWallHitBreak__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::createWallHitBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/createWallHitBreak__15daObj_Kanban2_cFv.s"
 }
@@ -269,7 +357,7 @@ ASM_FUNCTION(createWallHitBreak__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getKanbanCutType__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::getKanbanCutType() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/getKanbanCutType__15daObj_Kanban2_cFv.s"
 }
@@ -280,7 +368,7 @@ ASM_FUNCTION(getKanbanCutType__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getKanbanWolfCutType__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::getKanbanWolfCutType() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/getKanbanWolfCutType__15daObj_Kanban2_cFv.s"
 }
@@ -291,7 +379,7 @@ ASM_FUNCTION(getKanbanWolfCutType__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/damage_check__15daObj_Kanban2_cFv.s"
 }
@@ -302,7 +390,7 @@ ASM_FUNCTION(damage_check__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(float_damage_check__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::float_damage_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/float_damage_check__15daObj_Kanban2_cFv.s"
 }
@@ -313,7 +401,7 @@ ASM_FUNCTION(float_damage_check__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deletePart__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::deletePart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/deletePart__15daObj_Kanban2_cFv.s"
 }
@@ -324,7 +412,7 @@ ASM_FUNCTION(deletePart__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWallAngle__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::getWallAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/getWallAngle__15daObj_Kanban2_cFv.s"
 }
@@ -335,7 +423,7 @@ ASM_FUNCTION(getWallAngle__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__8cM3dGPlaFv.s"
 }
@@ -346,7 +434,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGroundAngle__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::setGroundAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setGroundAngle__15daObj_Kanban2_cFv.s"
 }
@@ -357,7 +445,7 @@ ASM_FUNCTION(setGroundAngle__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterSurface__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::checkWaterSurface() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/checkWaterSurface__15daObj_Kanban2_cFv.s"
 }
@@ -368,7 +456,7 @@ ASM_FUNCTION(checkWaterSurface__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPataGround__15daObj_Kanban2_cFss) {
+extern "C" asm void checkPataGround__15daObj_Kanban2_cFss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/checkPataGround__15daObj_Kanban2_cFss.s"
 }
@@ -379,7 +467,7 @@ ASM_FUNCTION(checkPataGround__15daObj_Kanban2_cFss) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCullMtx__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::setCullMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setCullMtx__15daObj_Kanban2_cFv.s"
 }
@@ -390,7 +478,7 @@ ASM_FUNCTION(setCullMtx__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokeEffect__15daObj_Kanban2_cF4cXyz) {
+asm void daObj_Kanban2_c::setSmokeEffect(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setSmokeEffect__15daObj_Kanban2_cF4cXyz.s"
 }
@@ -401,7 +489,7 @@ ASM_FUNCTION(setSmokeEffect__15daObj_Kanban2_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterEffect__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::setWaterEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setWaterEffect__15daObj_Kanban2_cFv.s"
 }
@@ -412,7 +500,7 @@ ASM_FUNCTION(setWaterEffect__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCenterPos__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::setCenterPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setCenterPos__15daObj_Kanban2_cFv.s"
 }
@@ -423,7 +511,7 @@ ASM_FUNCTION(setCenterPos__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCarryOn__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::checkCarryOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/checkCarryOn__15daObj_Kanban2_cFv.s"
 }
@@ -434,7 +522,7 @@ ASM_FUNCTION(checkCarryOn__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__15daObj_Kanban2_cFii) {
+asm void daObj_Kanban2_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/setActionMode__15daObj_Kanban2_cFii.s"
 }
@@ -445,7 +533,7 @@ ASM_FUNCTION(setActionMode__15daObj_Kanban2_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcNormalSwing__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::calcNormalSwing() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/calcNormalSwing__15daObj_Kanban2_cFv.s"
 }
@@ -456,7 +544,7 @@ ASM_FUNCTION(calcNormalSwing__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeNormal__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::executeNormal() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/executeNormal__15daObj_Kanban2_cFv.s"
 }
@@ -467,7 +555,7 @@ ASM_FUNCTION(executeNormal__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPart__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::initPart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/initPart__15daObj_Kanban2_cFv.s"
 }
@@ -478,7 +566,7 @@ ASM_FUNCTION(initPart__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePart__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::executePart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/executePart__15daObj_Kanban2_cFv.s"
 }
@@ -489,7 +577,7 @@ ASM_FUNCTION(executePart__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFloat__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::executeFloat() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/executeFloat__15daObj_Kanban2_cFv.s"
 }
@@ -500,7 +588,7 @@ ASM_FUNCTION(executeFloat__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCarry__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::executeCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/executeCarry__15daObj_Kanban2_cFv.s"
 }
@@ -511,7 +599,7 @@ ASM_FUNCTION(executeCarry__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/action__15daObj_Kanban2_cFv.s"
 }
@@ -522,7 +610,7 @@ ASM_FUNCTION(action__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/mtx_set__15daObj_Kanban2_cFv.s"
 }
@@ -533,7 +621,7 @@ ASM_FUNCTION(mtx_set__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/cc_set__15daObj_Kanban2_cFv.s"
 }
@@ -544,7 +632,7 @@ ASM_FUNCTION(cc_set__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/execute__15daObj_Kanban2_cFv.s"
 }
@@ -555,7 +643,7 @@ ASM_FUNCTION(execute__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kanban2_Execute__FP15daObj_Kanban2_c) {
+asm void daObj_Kanban2_Execute(daObj_Kanban2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Execute__FP15daObj_Kanban2_c.s"
 }
@@ -563,21 +651,16 @@ ASM_FUNCTION(daObj_Kanban2_Execute__FP15daObj_Kanban2_c) {
 
 
 /* 80584ED0-80584ED8 0008+00 .text      daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c.s"
+bool daObj_Kanban2_IsDelete(daObj_Kanban2_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80584ED8-80584F44 006C+00 .text      _delete__15daObj_Kanban2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/_delete__15daObj_Kanban2_cFv.s"
 }
@@ -588,7 +671,7 @@ ASM_FUNCTION(_delete__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kanban2_Delete__FP15daObj_Kanban2_c) {
+asm void daObj_Kanban2_Delete(daObj_Kanban2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Delete__FP15daObj_Kanban2_c.s"
 }
@@ -599,7 +682,7 @@ ASM_FUNCTION(daObj_Kanban2_Delete__FP15daObj_Kanban2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/CreateHeap__15daObj_Kanban2_cFv.s"
 }
@@ -610,7 +693,7 @@ ASM_FUNCTION(CreateHeap__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -621,7 +704,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObj_Kanban2_cFv) {
+asm void daObj_Kanban2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/create__15daObj_Kanban2_cFv.s"
 }
@@ -632,7 +715,7 @@ ASM_FUNCTION(create__15daObj_Kanban2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__8cM3dGSphFv.s"
 }
@@ -643,7 +726,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__8cM3dGAabFv.s"
 }
@@ -654,7 +737,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -665,7 +748,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kanban2_Create__FP15daObj_Kanban2_c) {
+asm void daObj_Kanban2_Create(daObj_Kanban2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_Create__FP15daObj_Kanban2_c.s"
 }
@@ -676,7 +759,7 @@ ASM_FUNCTION(daObj_Kanban2_Create__FP15daObj_Kanban2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObj_Kanban2_HIO_cFv) {
+asm daObj_Kanban2_HIO_c::~daObj_Kanban2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__dt__19daObj_Kanban2_HIO_cFv.s"
 }
@@ -687,7 +770,7 @@ ASM_FUNCTION(__dt__19daObj_Kanban2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kanban2_cpp) {
+extern "C" asm void __sinit_d_a_obj_kanban2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/__sinit_d_a_obj_kanban2_cpp.s"
 }
@@ -698,7 +781,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kanban2_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805855FC) {
+extern "C" asm void func_805855FC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/func_805855FC.s"
 }
@@ -709,7 +792,7 @@ ASM_FUNCTION(func_805855FC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80585604) {
+extern "C" asm void func_80585604() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/func_80585604.s"
 }

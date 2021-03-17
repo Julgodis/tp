@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void cCt_Counter__Fi();
+void cCt_Counter(s32);
+
+extern "C" void cCt_Counter__Fi();
 SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 
 // 
@@ -17,23 +19,23 @@ SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80430CD8-80430CE8 000C+04 .bss       g_Counter                                                    */
+/* 80430CD8-80430CE8 000C+04 rc=13 efc=12 .bss       g_Counter                                                    */
 u8 g_Counter[12 + 4 /* padding */];
 
-/* 80265E1C-80265E64 0048+00 .text      cCt_Counter__Fi                                              */
+/* 80265E1C-80265E64 0048+00 rc=1 efc=1 .text      cCt_Counter__Fi                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cCt_Counter__Fi) {
+asm void cCt_Counter(s32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_counter/cCt_Counter__Fi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

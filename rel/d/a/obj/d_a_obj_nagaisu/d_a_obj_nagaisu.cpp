@@ -6,38 +6,107 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjNagaisu_c;
+struct fopAc_ac_c;
+struct dMdl_c;
+struct dCcD_Stts;
+
+struct fopAc_ac_c {
+};
+
+struct daObjNagaisu_c {
+	daObjNagaisu_c();
+	~daObjNagaisu_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setIsu();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct daObjIsuChild_c {
+	daObjIsuChild_c();
+	~daObjIsuChild_c();
+	void createHeap();
+	void create(daObjNagaisu_c*, dCcD_Stts*);
+	void execute();
+	void draw(dMdl_c*);
+	void Delete();
+	void chkHit();
+	void callEmt();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Stts {
+};
+
+struct dMdl_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjNagaisu_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__14daObjNagaisu_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__14daObjNagaisu_cFv();
-extern "C" extern void createHeap__14daObjNagaisu_cFv();
-extern "C" extern void create__14daObjNagaisu_cFv();
-extern "C" extern void Delete__14daObjNagaisu_cFv();
-extern "C" extern void draw__14daObjNagaisu_cFv();
-extern "C" extern void execute__14daObjNagaisu_cFv();
-extern "C" extern void init__14daObjNagaisu_cFv();
-extern "C" extern void setIsu__14daObjNagaisu_cFv();
-extern "C" extern void __ct__15daObjIsuChild_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__15daObjIsuChild_cFv();
-extern "C" extern void createHeap__15daObjIsuChild_cFv();
-extern "C" extern void create__15daObjIsuChild_cFP14daObjNagaisu_cP9dCcD_Stts();
-extern "C" extern void execute__15daObjIsuChild_cFv();
-extern "C" extern void draw__15daObjIsuChild_cFP6dMdl_c();
-extern "C" extern void Delete__15daObjIsuChild_cFv();
-extern "C" extern void chkHit__15daObjIsuChild_cFv();
-extern "C" extern void callEmt__15daObjIsuChild_cFv();
-extern "C" extern void daObjNagaisu_create__FP14daObjNagaisu_c();
-extern "C" extern void daObjNagaisu_Delete__FP14daObjNagaisu_c();
-extern "C" extern void daObjNagaisu_execute__FP14daObjNagaisu_c();
-extern "C" extern void daObjNagaisu_draw__FP14daObjNagaisu_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daObjNagaisu_c_createHeap(fopAc_ac_c*);
+void daObjNagaisu_create(daObjNagaisu_c*);
+void daObjNagaisu_Delete(daObjNagaisu_c*);
+void daObjNagaisu_execute(daObjNagaisu_c*);
+void daObjNagaisu_draw(daObjNagaisu_c*);
+
+extern "C" void daObjNagaisu_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__14daObjNagaisu_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__14daObjNagaisu_cFv();
+extern "C" void createHeap__14daObjNagaisu_cFv();
+extern "C" void create__14daObjNagaisu_cFv();
+extern "C" void Delete__14daObjNagaisu_cFv();
+extern "C" void draw__14daObjNagaisu_cFv();
+extern "C" void execute__14daObjNagaisu_cFv();
+extern "C" void init__14daObjNagaisu_cFv();
+extern "C" void setIsu__14daObjNagaisu_cFv();
+extern "C" void __ct__15daObjIsuChild_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__15daObjIsuChild_cFv();
+extern "C" void createHeap__15daObjIsuChild_cFv();
+extern "C" void create__15daObjIsuChild_cFP14daObjNagaisu_cP9dCcD_Stts();
+extern "C" void execute__15daObjIsuChild_cFv();
+extern "C" void draw__15daObjIsuChild_cFP6dMdl_c();
+extern "C" void Delete__15daObjIsuChild_cFv();
+extern "C" void chkHit__15daObjIsuChild_cFv();
+extern "C" void callEmt__15daObjIsuChild_cFv();
+extern "C" void daObjNagaisu_create__FP14daObjNagaisu_c();
+extern "C" void daObjNagaisu_Delete__FP14daObjNagaisu_c();
+extern "C" void daObjNagaisu_execute__FP14daObjNagaisu_c();
+extern "C" void daObjNagaisu_draw__FP14daObjNagaisu_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 REMOVE_ISU_IDX__14daObjNagaisu_c[28];
 SECTION_RODATA extern const u8 s_CcDCyl__15daObjIsuChild_c[68];
 SECTION_RODATA extern const u32 lit_3731;
@@ -69,7 +138,9 @@ SECTION_DATA extern void*const __vt__10dCcD_GStts[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +150,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNagaisu_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjNagaisu_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/daObjNagaisu_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -90,7 +161,7 @@ ASM_FUNCTION(daObjNagaisu_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObjNagaisu_cFv) {
+asm daObjNagaisu_c::daObjNagaisu_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__ct__14daObjNagaisu_cFv.s"
 }
@@ -101,7 +172,7 @@ ASM_FUNCTION(__ct__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__10dCcD_GSttsFv.s"
 }
@@ -112,7 +183,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjNagaisu_cFv) {
+asm daObjNagaisu_c::~daObjNagaisu_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__14daObjNagaisu_cFv.s"
 }
@@ -123,7 +194,7 @@ ASM_FUNCTION(__dt__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/createHeap__14daObjNagaisu_cFv.s"
 }
@@ -134,7 +205,7 @@ ASM_FUNCTION(createHeap__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/create__14daObjNagaisu_cFv.s"
 }
@@ -145,7 +216,7 @@ ASM_FUNCTION(create__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/Delete__14daObjNagaisu_cFv.s"
 }
@@ -156,7 +227,7 @@ ASM_FUNCTION(Delete__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/draw__14daObjNagaisu_cFv.s"
 }
@@ -167,7 +238,7 @@ ASM_FUNCTION(draw__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/execute__14daObjNagaisu_cFv.s"
 }
@@ -178,7 +249,7 @@ ASM_FUNCTION(execute__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/init__14daObjNagaisu_cFv.s"
 }
@@ -189,7 +260,7 @@ ASM_FUNCTION(init__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIsu__14daObjNagaisu_cFv) {
+asm void daObjNagaisu_c::setIsu() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/setIsu__14daObjNagaisu_cFv.s"
 }
@@ -200,7 +271,7 @@ ASM_FUNCTION(setIsu__14daObjNagaisu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daObjIsuChild_cFv) {
+asm daObjIsuChild_c::daObjIsuChild_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__ct__15daObjIsuChild_cFv.s"
 }
@@ -211,7 +282,7 @@ ASM_FUNCTION(__ct__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__8dCcD_CylFv.s"
 }
@@ -222,7 +293,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__ct__8dCcD_CylFv.s"
 }
@@ -233,7 +304,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__8cM3dGCylFv.s"
 }
@@ -244,7 +315,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__8cM3dGAabFv.s"
 }
@@ -255,7 +326,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjIsuChild_cFv) {
+asm daObjIsuChild_c::~daObjIsuChild_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__15daObjIsuChild_cFv.s"
 }
@@ -266,7 +337,7 @@ ASM_FUNCTION(__dt__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__15daObjIsuChild_cFv) {
+asm void daObjIsuChild_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/createHeap__15daObjIsuChild_cFv.s"
 }
@@ -277,7 +348,7 @@ ASM_FUNCTION(createHeap__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjIsuChild_cFP14daObjNagaisu_cP9dCcD_Stts) {
+asm void daObjIsuChild_c::create(daObjNagaisu_c* field_0, dCcD_Stts* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/create__15daObjIsuChild_cFP14daObjNagaisu_cP9dCcD_Stts.s"
 }
@@ -288,7 +359,7 @@ ASM_FUNCTION(create__15daObjIsuChild_cFP14daObjNagaisu_cP9dCcD_Stts) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjIsuChild_cFv) {
+asm void daObjIsuChild_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/execute__15daObjIsuChild_cFv.s"
 }
@@ -299,7 +370,7 @@ ASM_FUNCTION(execute__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObjIsuChild_cFP6dMdl_c) {
+asm void daObjIsuChild_c::draw(dMdl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/draw__15daObjIsuChild_cFP6dMdl_c.s"
 }
@@ -310,7 +381,7 @@ ASM_FUNCTION(draw__15daObjIsuChild_cFP6dMdl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjIsuChild_cFv) {
+asm void daObjIsuChild_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/Delete__15daObjIsuChild_cFv.s"
 }
@@ -321,7 +392,7 @@ ASM_FUNCTION(Delete__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkHit__15daObjIsuChild_cFv) {
+asm void daObjIsuChild_c::chkHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/chkHit__15daObjIsuChild_cFv.s"
 }
@@ -332,7 +403,7 @@ ASM_FUNCTION(chkHit__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callEmt__15daObjIsuChild_cFv) {
+asm void daObjIsuChild_c::callEmt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/callEmt__15daObjIsuChild_cFv.s"
 }
@@ -343,7 +414,7 @@ ASM_FUNCTION(callEmt__15daObjIsuChild_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNagaisu_create__FP14daObjNagaisu_c) {
+asm void daObjNagaisu_create(daObjNagaisu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/daObjNagaisu_create__FP14daObjNagaisu_c.s"
 }
@@ -354,7 +425,7 @@ ASM_FUNCTION(daObjNagaisu_create__FP14daObjNagaisu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNagaisu_Delete__FP14daObjNagaisu_c) {
+asm void daObjNagaisu_Delete(daObjNagaisu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/daObjNagaisu_Delete__FP14daObjNagaisu_c.s"
 }
@@ -365,7 +436,7 @@ ASM_FUNCTION(daObjNagaisu_Delete__FP14daObjNagaisu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNagaisu_execute__FP14daObjNagaisu_c) {
+asm void daObjNagaisu_execute(daObjNagaisu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/daObjNagaisu_execute__FP14daObjNagaisu_c.s"
 }
@@ -376,7 +447,7 @@ ASM_FUNCTION(daObjNagaisu_execute__FP14daObjNagaisu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNagaisu_draw__FP14daObjNagaisu_c) {
+asm void daObjNagaisu_draw(daObjNagaisu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/daObjNagaisu_draw__FP14daObjNagaisu_c.s"
 }
@@ -387,7 +458,7 @@ ASM_FUNCTION(daObjNagaisu_draw__FP14daObjNagaisu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nagaisu/d_a_obj_nagaisu/__dt__10cCcD_GSttsFv.s"
 }

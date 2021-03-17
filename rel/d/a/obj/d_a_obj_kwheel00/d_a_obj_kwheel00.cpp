@@ -6,35 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjKWheel00_c;
+
+struct daObjKWheel00_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	void eventStart();
+	~daObjKWheel00_c();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__15daObjKWheel00_cFv();
-extern "C" extern void searchLv3Water__FPvPv();
-extern "C" extern void setMtx__15daObjKWheel00_cFv();
-extern "C" extern void CreateHeap__15daObjKWheel00_cFv();
-extern "C" extern void Create__15daObjKWheel00_cFv();
-extern "C" extern void Execute__15daObjKWheel00_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjKWheel00_cFv();
-extern "C" extern void Delete__15daObjKWheel00_cFv();
-extern "C" extern void eventStart__15daObjKWheel00_cFv();
-extern "C" extern void daObjKWheel00_create1st__FP15daObjKWheel00_c();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjKWheel00_MoveBGDelete__FP15daObjKWheel00_c();
-extern "C" extern void daObjKWheel00_MoveBGExecute__FP15daObjKWheel00_c();
-extern "C" extern void daObjKWheel00_MoveBGDraw__FP15daObjKWheel00_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__15daObjKWheel00_cFv();
-extern "C" extern void func_80C4E7E8();
-extern "C" extern void func_80C4E7F0();
+void searchLv3Water(void*, void*);
+extern "C" void Execute__15daObjKWheel00_cFPPA3_A4_f();
+void daObjKWheel00_create1st(daObjKWheel00_c*);
+void daObjKWheel00_MoveBGDelete(daObjKWheel00_c*);
+void daObjKWheel00_MoveBGExecute(daObjKWheel00_c*);
+void daObjKWheel00_MoveBGDraw(daObjKWheel00_c*);
+extern "C" void func_80C4E7E8();
+extern "C" void func_80C4E7F0();
+
+extern "C" void create1st__15daObjKWheel00_cFv();
+extern "C" void searchLv3Water__FPvPv();
+extern "C" void setMtx__15daObjKWheel00_cFv();
+extern "C" void CreateHeap__15daObjKWheel00_cFv();
+extern "C" void Create__15daObjKWheel00_cFv();
+extern "C" void Execute__15daObjKWheel00_cFPPA3_A4_f();
+extern "C" void Draw__15daObjKWheel00_cFv();
+extern "C" void Delete__15daObjKWheel00_cFv();
+extern "C" void eventStart__15daObjKWheel00_cFv();
+extern "C" void daObjKWheel00_create1st__FP15daObjKWheel00_c();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjKWheel00_MoveBGDelete__FP15daObjKWheel00_c();
+extern "C" void daObjKWheel00_MoveBGExecute__FP15daObjKWheel00_c();
+extern "C" void daObjKWheel00_MoveBGDraw__FP15daObjKWheel00_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__15daObjKWheel00_cFv();
+extern "C" void func_80C4E7E8();
+extern "C" void func_80C4E7F0();
 SECTION_RODATA extern const u8 l_dzbidx[8];
 SECTION_RODATA extern const u8 l_bmdidx[8];
 SECTION_RODATA extern const u8 l_cull_box[48];
@@ -63,7 +117,9 @@ SECTION_DATA extern void*const __vt__15daObjKWheel00_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -73,7 +129,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/create1st__15daObjKWheel00_cFv.s"
 }
@@ -84,7 +140,7 @@ ASM_FUNCTION(create1st__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchLv3Water__FPvPv) {
+asm void searchLv3Water(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/searchLv3Water__FPvPv.s"
 }
@@ -95,7 +151,7 @@ ASM_FUNCTION(searchLv3Water__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/setMtx__15daObjKWheel00_cFv.s"
 }
@@ -106,7 +162,7 @@ ASM_FUNCTION(setMtx__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/CreateHeap__15daObjKWheel00_cFv.s"
 }
@@ -117,7 +173,7 @@ ASM_FUNCTION(CreateHeap__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/Create__15daObjKWheel00_cFv.s"
 }
@@ -128,7 +184,7 @@ ASM_FUNCTION(Create__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjKWheel00_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjKWheel00_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/Execute__15daObjKWheel00_cFPPA3_A4_f.s"
 }
@@ -139,7 +195,7 @@ ASM_FUNCTION(Execute__15daObjKWheel00_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/Draw__15daObjKWheel00_cFv.s"
 }
@@ -150,7 +206,7 @@ ASM_FUNCTION(Draw__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/Delete__15daObjKWheel00_cFv.s"
 }
@@ -161,7 +217,7 @@ ASM_FUNCTION(Delete__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__15daObjKWheel00_cFv) {
+asm void daObjKWheel00_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/eventStart__15daObjKWheel00_cFv.s"
 }
@@ -172,7 +228,7 @@ ASM_FUNCTION(eventStart__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel00_create1st__FP15daObjKWheel00_c) {
+asm void daObjKWheel00_create1st(daObjKWheel00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/daObjKWheel00_create1st__FP15daObjKWheel00_c.s"
 }
@@ -183,7 +239,7 @@ ASM_FUNCTION(daObjKWheel00_create1st__FP15daObjKWheel00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__8dCcD_SphFv.s"
 }
@@ -194,7 +250,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__ct__8dCcD_SphFv.s"
 }
@@ -205,7 +261,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__8cM3dGSphFv.s"
 }
@@ -216,7 +272,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__8cM3dGAabFv.s"
 }
@@ -227,7 +283,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__10dCcD_GSttsFv.s"
 }
@@ -238,7 +294,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel00_MoveBGDelete__FP15daObjKWheel00_c) {
+asm void daObjKWheel00_MoveBGDelete(daObjKWheel00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/daObjKWheel00_MoveBGDelete__FP15daObjKWheel00_c.s"
 }
@@ -249,7 +305,7 @@ ASM_FUNCTION(daObjKWheel00_MoveBGDelete__FP15daObjKWheel00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel00_MoveBGExecute__FP15daObjKWheel00_c) {
+asm void daObjKWheel00_MoveBGExecute(daObjKWheel00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/daObjKWheel00_MoveBGExecute__FP15daObjKWheel00_c.s"
 }
@@ -260,7 +316,7 @@ ASM_FUNCTION(daObjKWheel00_MoveBGExecute__FP15daObjKWheel00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel00_MoveBGDraw__FP15daObjKWheel00_c) {
+asm void daObjKWheel00_MoveBGDraw(daObjKWheel00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/daObjKWheel00_MoveBGDraw__FP15daObjKWheel00_c.s"
 }
@@ -271,7 +327,7 @@ ASM_FUNCTION(daObjKWheel00_MoveBGDraw__FP15daObjKWheel00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__10cCcD_GSttsFv.s"
 }
@@ -282,7 +338,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__17dEvLib_callback_cFv.s"
 }
@@ -290,43 +346,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C4E6CC-80C4E6D4 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4E6D4-80C4E6DC 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4E6DC-80C4E6E4 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4E6E4-80C4E7E8 0104+00 .text      __dt__15daObjKWheel00_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjKWheel00_cFv) {
+asm daObjKWheel00_c::~daObjKWheel00_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/__dt__15daObjKWheel00_cFv.s"
 }
@@ -337,7 +378,7 @@ ASM_FUNCTION(__dt__15daObjKWheel00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4E7E8) {
+extern "C" asm void func_80C4E7E8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/func_80C4E7E8.s"
 }
@@ -348,7 +389,7 @@ ASM_FUNCTION(func_80C4E7E8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4E7F0) {
+extern "C" asm void func_80C4E7F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel00/d_a_obj_kwheel00/func_80C4E7F0.s"
 }

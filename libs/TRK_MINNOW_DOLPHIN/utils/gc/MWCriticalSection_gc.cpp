@@ -9,52 +9,53 @@
 // Forward References:
 // 
 
-extern "C" extern void MWExitCriticalSection();
-extern "C" extern void MWEnterCriticalSection();
-extern "C" extern void MWInitializeCriticalSection();
+extern "C" void MWExitCriticalSection();
+extern "C" void MWEnterCriticalSection();
+extern "C" void MWInitializeCriticalSection();
+
+extern "C" void MWExitCriticalSection();
+extern "C" void MWEnterCriticalSection();
+extern "C" void MWInitializeCriticalSection();
 
 // 
 // External References:
 // 
 
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
 
 // 
 // Declarations:
 // 
 
-/* 80372CA4-80372CC8 0024+00 .text      MWExitCriticalSection                                        */
+/* 80372CA4-80372CC8 0024+00 rc=2 efc=2 .text      MWExitCriticalSection                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MWExitCriticalSection) {
+extern "C" asm void MWExitCriticalSection() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/gc/MWCriticalSection_gc/MWExitCriticalSection.s"
 }
 #pragma pop
 
 
-/* 80372CC8-80372CF8 0030+00 .text      MWEnterCriticalSection                                       */
+/* 80372CC8-80372CF8 0030+00 rc=2 efc=2 .text      MWEnterCriticalSection                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MWEnterCriticalSection) {
+extern "C" asm void MWEnterCriticalSection() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/utils/gc/MWCriticalSection_gc/MWEnterCriticalSection.s"
 }
 #pragma pop
 
 
-/* 80372CF8-80372CFC 0004+00 .text      MWInitializeCriticalSection                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(MWInitializeCriticalSection) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/utils/gc/MWCriticalSection_gc/MWInitializeCriticalSection.s"
+/* 80372CF8-80372CFC 0004+00 rc=1 efc=1 .text      MWInitializeCriticalSection                                  */
+extern "C" void MWInitializeCriticalSection() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

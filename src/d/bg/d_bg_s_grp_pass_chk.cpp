@@ -6,12 +6,32 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgS_GrpPassChk (dBgS_GrpPassChk) False/False
+/* top-level dependencies (begin dBgS_GrpPassChk) */
+/* top-level dependencies (end dBgS_GrpPassChk) */
+struct dBgS_GrpPassChk {
+	/* 80077BA0 */ dBgS_GrpPassChk();
+	/* 80077BC4 */ ~dBgS_GrpPassChk();
+};
+
+// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
+/* top-level dependencies (begin cBgS_GrpPassChk) */
+/* top-level dependencies (end cBgS_GrpPassChk) */
+struct cBgS_GrpPassChk {
+	/* 80077C20 */ ~cBgS_GrpPassChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15dBgS_GrpPassChkFv();
-extern "C" extern void __dt__15dBgS_GrpPassChkFv();
-extern "C" extern void __dt__15cBgS_GrpPassChkFv();
+
+extern "C" void __ct__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15cBgS_GrpPassChkFv();
 SECTION_DATA extern void*const __vt__15dBgS_GrpPassChk[3];
 SECTION_DATA extern void*const __vt__15cBgS_GrpPassChk[3];
 
@@ -19,58 +39,59 @@ SECTION_DATA extern void*const __vt__15cBgS_GrpPassChk[3];
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803AB7A8-803AB7B4 000C+00 .data      __vt__15dBgS_GrpPassChk                                      */
+/* 803AB7A8-803AB7B4 000C+00 rc=2 efc=0 .data      __vt__15dBgS_GrpPassChk                                      */
 void* const __vt__15dBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_GrpPassChkFv,
 };
 
-/* 803AB7B4-803AB7C0 000C+00 .data      __vt__15cBgS_GrpPassChk                                      */
+/* 803AB7B4-803AB7C0 000C+00 rc=3 efc=0 .data      __vt__15cBgS_GrpPassChk                                      */
 void* const __vt__15cBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15cBgS_GrpPassChkFv,
 };
 
-/* 80077BA0-80077BC4 0024+00 .text      __ct__15dBgS_GrpPassChkFv                                    */
+/* 80077BA0-80077BC4 0024+00 rc=1 efc=1 .text      __ct__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15dBgS_GrpPassChkFv) {
+asm dBgS_GrpPassChk::dBgS_GrpPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__ct__15dBgS_GrpPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80077BC4-80077C20 005C+00 .text      __dt__15dBgS_GrpPassChkFv                                    */
+/* 80077BC4-80077C20 005C+00 rc=2 efc=1 .text      __dt__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dBgS_GrpPassChkFv) {
+asm dBgS_GrpPassChk::~dBgS_GrpPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__dt__15dBgS_GrpPassChkFv.s"
 }
 #pragma pop
 
 
-/* 80077C20-80077C68 0048+00 .text      __dt__15cBgS_GrpPassChkFv                                    */
+/* 80077C20-80077C68 0048+00 rc=1 efc=0 .text      __dt__15cBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15cBgS_GrpPassChkFv) {
+asm cBgS_GrpPassChk::~cBgS_GrpPassChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_grp_pass_chk/__dt__15cBgS_GrpPassChkFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

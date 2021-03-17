@@ -6,22 +6,80 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASSeqCtrl (JASSeqCtrl) False/False
+// build JASTrack (JASTrack) False/False
+/* top-level dependencies (begin JASTrack) */
+/* top-level dependencies (end JASTrack) */
+struct JASTrack {
+	/* 80292220 */ void checkNoteStop(u32) const;
+};
+
+// build JASSeqCtrl (JASSeqCtrl) True/False
+struct JASSeqCtrl;
+/* top-level dependencies (begin JASSeqCtrl) */
+// outer dependency: JASTrack
+// outer dependency: JASSeqCtrl::IntrType
+/* top-level dependencies (end JASSeqCtrl) */
+struct JASSeqCtrl {
+	// JASTrack
+	// JASSeqCtrl::IntrType
+	// build IntrType (JASSeqCtrl::IntrType) False/False
+	/* dependencies (begin JASSeqCtrl::IntrType) */
+	/* dependencies (end JASSeqCtrl::IntrType) */
+	struct IntrType {
+	};
+
+	/* 802938BC */ JASSeqCtrl();
+	/* 80293924 */ void init();
+	/* 80293980 */ void start(void*, u32);
+	/* 802939C4 */ void tickProc(JASTrack*);
+	/* 80293ABC */ void interrupt(JASSeqCtrl::IntrType);
+	/* 80293AE0 */ void setIntrMask(u32);
+	/* 80293AF0 */ void clrIntrMask(u32);
+	/* 80293B00 */ void retIntr();
+	/* 80293B28 */ void findIntr();
+	/* 80293B78 */ void checkIntr();
+	/* 80293BE8 */ void timerProcess();
+};
+
+// build JASTrack (JASTrack) True/True
+// build JASSeqParser (JASSeqParser) False/False
+/* top-level dependencies (begin JASSeqParser) */
+/* top-level dependencies (end JASSeqParser) */
+struct JASSeqParser {
+	/* 80293CAC */ ~JASSeqParser();
+};
+
+// build JASSeqReader (JASSeqReader) False/False
+/* top-level dependencies (begin JASSeqReader) */
+/* top-level dependencies (end JASSeqReader) */
+struct JASSeqReader {
+	/* 80296108 */ void init();
+	/* 80296148 */ void init(void*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10JASSeqCtrlFv();
-extern "C" extern void init__10JASSeqCtrlFv();
-extern "C" extern void start__10JASSeqCtrlFPvUl();
-extern "C" extern void tickProc__10JASSeqCtrlFP8JASTrack();
-extern "C" extern void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
-extern "C" extern void setIntrMask__10JASSeqCtrlFUl();
-extern "C" extern void clrIntrMask__10JASSeqCtrlFUl();
-extern "C" extern void retIntr__10JASSeqCtrlFv();
-extern "C" extern void findIntr__10JASSeqCtrlFv();
-extern "C" extern void checkIntr__10JASSeqCtrlFv();
-extern "C" extern void timerProcess__10JASSeqCtrlFv();
-extern "C" extern void __sinit_JASSeqCtrl_cpp();
-extern "C" extern void __dt__12JASSeqParserFv();
+extern "C" void __sinit_JASSeqCtrl_cpp();
+
+extern "C" void __ct__10JASSeqCtrlFv();
+extern "C" void init__10JASSeqCtrlFv();
+extern "C" void start__10JASSeqCtrlFPvUl();
+extern "C" void tickProc__10JASSeqCtrlFP8JASTrack();
+extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
+extern "C" void setIntrMask__10JASSeqCtrlFUl();
+extern "C" void clrIntrMask__10JASSeqCtrlFUl();
+extern "C" void retIntr__10JASSeqCtrlFv();
+extern "C" void findIntr__10JASSeqCtrlFv();
+extern "C" void checkIntr__10JASSeqCtrlFv();
+extern "C" void timerProcess__10JASSeqCtrlFv();
+extern "C" void __sinit_JASSeqCtrl_cpp();
+extern "C" void __dt__12JASSeqParserFv();
 SECTION_BSS extern u8 JASSeqCtrl__lit_433[12 + 4 /* padding */];
 SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 
@@ -29,11 +87,14 @@ SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void checkNoteStop__8JASTrackCFUl();
-extern "C" extern void init__12JASSeqReaderFv();
-extern "C" extern void init__12JASSeqReaderFPv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __register_global_object();
+void operator delete(void*);
+extern "C" void __register_global_object();
+
+extern "C" void checkNoteStop__8JASTrackCFUl();
+extern "C" void init__12JASSeqReaderFv();
+extern "C" void init__12JASSeqReaderFPv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
 SECTION_DATA extern void*const __vt__12JASSeqParser[8];
 
 // 
@@ -41,124 +102,124 @@ SECTION_DATA extern void*const __vt__12JASSeqParser[8];
 // 
 
 /* ############################################################################################## */
-/* 80451238-80451240 0004+04 .sbss      sDefaultParser__10JASSeqCtrl                                 */
+/* 80451238-80451240 0004+04 rc=3 efc=0 .sbss      sDefaultParser__10JASSeqCtrl                                 */
 u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 
-/* 802938BC-80293924 0068+00 .text      __ct__10JASSeqCtrlFv                                         */
+/* 802938BC-80293924 0068+00 rc=1 efc=1 .text      __ct__10JASSeqCtrlFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JASSeqCtrlFv) {
+asm JASSeqCtrl::JASSeqCtrl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/__ct__10JASSeqCtrlFv.s"
 }
 #pragma pop
 
 
-/* 80293924-80293980 005C+00 .text      init__10JASSeqCtrlFv                                         */
+/* 80293924-80293980 005C+00 rc=1 efc=1 .text      init__10JASSeqCtrlFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__10JASSeqCtrlFv) {
+asm void JASSeqCtrl::init() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/init__10JASSeqCtrlFv.s"
 }
 #pragma pop
 
 
-/* 80293980-802939C4 0044+00 .text      start__10JASSeqCtrlFPvUl                                     */
+/* 80293980-802939C4 0044+00 rc=1 efc=1 .text      start__10JASSeqCtrlFPvUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__10JASSeqCtrlFPvUl) {
+asm void JASSeqCtrl::start(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/start__10JASSeqCtrlFPvUl.s"
 }
 #pragma pop
 
 
-/* 802939C4-80293ABC 00F8+00 .text      tickProc__10JASSeqCtrlFP8JASTrack                            */
+/* 802939C4-80293ABC 00F8+00 rc=1 efc=1 .text      tickProc__10JASSeqCtrlFP8JASTrack                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tickProc__10JASSeqCtrlFP8JASTrack) {
+asm void JASSeqCtrl::tickProc(JASTrack* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/tickProc__10JASSeqCtrlFP8JASTrack.s"
 }
 #pragma pop
 
 
-/* 80293ABC-80293AE0 0024+00 .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              */
+/* 80293ABC-80293AE0 0024+00 rc=4 efc=2 .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType) {
+asm void JASSeqCtrl::interrupt(JASSeqCtrl::IntrType field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType.s"
 }
 #pragma pop
 
 
-/* 80293AE0-80293AF0 0010+00 .text      setIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AE0-80293AF0 0010+00 rc=1 efc=1 .text      setIntrMask__10JASSeqCtrlFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIntrMask__10JASSeqCtrlFUl) {
+asm void JASSeqCtrl::setIntrMask(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/setIntrMask__10JASSeqCtrlFUl.s"
 }
 #pragma pop
 
 
-/* 80293AF0-80293B00 0010+00 .text      clrIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AF0-80293B00 0010+00 rc=1 efc=1 .text      clrIntrMask__10JASSeqCtrlFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clrIntrMask__10JASSeqCtrlFUl) {
+asm void JASSeqCtrl::clrIntrMask(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/clrIntrMask__10JASSeqCtrlFUl.s"
 }
 #pragma pop
 
 
-/* 80293B00-80293B28 0028+00 .text      retIntr__10JASSeqCtrlFv                                      */
+/* 80293B00-80293B28 0028+00 rc=1 efc=1 .text      retIntr__10JASSeqCtrlFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(retIntr__10JASSeqCtrlFv) {
+asm void JASSeqCtrl::retIntr() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/retIntr__10JASSeqCtrlFv.s"
 }
 #pragma pop
 
 
-/* 80293B28-80293B78 0050+00 .text      findIntr__10JASSeqCtrlFv                                     */
+/* 80293B28-80293B78 0050+00 rc=1 efc=0 .text      findIntr__10JASSeqCtrlFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(findIntr__10JASSeqCtrlFv) {
+asm void JASSeqCtrl::findIntr() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/findIntr__10JASSeqCtrlFv.s"
 }
 #pragma pop
 
 
-/* 80293B78-80293BE8 0070+00 .text      checkIntr__10JASSeqCtrlFv                                    */
+/* 80293B78-80293BE8 0070+00 rc=3 efc=2 .text      checkIntr__10JASSeqCtrlFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkIntr__10JASSeqCtrlFv) {
+asm void JASSeqCtrl::checkIntr() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/checkIntr__10JASSeqCtrlFv.s"
 }
 #pragma pop
 
 
-/* 80293BE8-80293C6C 0084+00 .text      timerProcess__10JASSeqCtrlFv                                 */
+/* 80293BE8-80293C6C 0084+00 rc=1 efc=0 .text      timerProcess__10JASSeqCtrlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(timerProcess__10JASSeqCtrlFv) {
+asm void JASSeqCtrl::timerProcess() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/timerProcess__10JASSeqCtrlFv.s"
 }
@@ -166,29 +227,28 @@ ASM_FUNCTION(timerProcess__10JASSeqCtrlFv) {
 
 
 /* ############################################################################################## */
-/* 80431B18-80431B28 000C+04 .bss       @433                                                         */
+/* 80431B18-80431B28 000C+04 rc=1 efc=0 .bss       @433                                                         */
 u8 JASSeqCtrl__lit_433[12 + 4 /* padding */];
 
-/* 80293C6C-80293CAC 0040+00 .text      __sinit_JASSeqCtrl_cpp                                       */
+/* 80293C6C-80293CAC 0040+00 rc=1 efc=1 .text      __sinit_JASSeqCtrl_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JASSeqCtrl_cpp) {
+extern "C" asm void __sinit_JASSeqCtrl_cpp() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/__sinit_JASSeqCtrl_cpp.s"
 }
 #pragma pop
 
 
-/* 80293CAC-80293CF4 0048+00 .text      __dt__12JASSeqParserFv                                       */
+/* 80293CAC-80293CF4 0048+00 rc=2 efc=1 .text      __dt__12JASSeqParserFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12JASSeqParserFv) {
+asm JASSeqParser::~JASSeqParser() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqCtrl/__dt__12JASSeqParserFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

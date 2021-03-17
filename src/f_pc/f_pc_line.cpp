@@ -6,10 +6,22 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build node_list_class (node_list_class) False/False
+/* top-level dependencies (begin node_list_class) */
+/* top-level dependencies (end node_list_class) */
+struct node_list_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcLn_Create__Fv();
+void fpcLn_Create();
+
+extern "C" void fpcLn_Create__Fv();
 SECTION_BSS extern u8 l_fpcLn_Line[192];
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
@@ -17,21 +29,23 @@ SECTION_SDATA extern void*g_fpcLn_Queue[2];
 // External References:
 // 
 
-extern "C" extern void cLs_Create__FP15node_list_class();
+void cLs_Create(node_list_class*);
+
+extern "C" void cLs_Create__FP15node_list_class();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803F4CF0-803F4DB0 00C0+00 .bss       l_fpcLn_Line                                                 */
+/* 803F4CF0-803F4DB0 00C0+00 rc=2 efc=0 .bss       l_fpcLn_Line                                                 */
 u8 l_fpcLn_Line[192];
 
-/* 80021F64-80021FB8 0054+00 .text      fpcLn_Create__Fv                                             */
+/* 80021F64-80021FB8 0054+00 rc=1 efc=1 .text      fpcLn_Create__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLn_Create__Fv) {
+asm void fpcLn_Create() {
 	nofralloc
 #include "asm/f_pc/f_pc_line/fpcLn_Create__Fv.s"
 }
@@ -39,7 +53,7 @@ ASM_FUNCTION(fpcLn_Create__Fv) {
 
 
 /* ############################################################################################## */
-/* 804505D8-804505E0 0008+00 .sdata     g_fpcLn_Queue                                                */
+/* 804505D8-804505E0 0008+00 rc=2 efc=2 .sdata     g_fpcLn_Queue                                                */
 void* g_fpcLn_Queue[2] = {
 	(void*)&l_fpcLn_Line,
 	(void*)0x00000010,

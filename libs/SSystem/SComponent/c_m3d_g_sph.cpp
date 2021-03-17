@@ -6,103 +6,156 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cM3dGSph (cM3dGSph) False/False
+// build cM3dGSphS (cM3dGSphS) False/False
+/* top-level dependencies (begin cM3dGSphS) */
+/* top-level dependencies (end cM3dGSphS) */
+struct cM3dGSphS {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build cM3dGCyl (cM3dGCyl) False/False
+/* top-level dependencies (begin cM3dGCyl) */
+/* top-level dependencies (end cM3dGCyl) */
+struct cM3dGCyl {
+};
+
+/* top-level dependencies (begin cM3dGSph) */
+// outer dependency: cM3dGSphS
+// outer dependency: cXyz
+// outer dependency: cM3dGCyl
+/* top-level dependencies (end cM3dGSph) */
+struct cM3dGSph {
+	// cM3dGSphS
+	// cXyz
+	// cM3dGCyl
+	/* 8026F648 */ void SetC(cXyz const&);
+	/* 8026F664 */ void Set(cXyz const&, f32);
+	/* 8026F6A8 */ void Set(cM3dGSphS const&);
+	/* 8026F708 */ void SetR(f32);
+	/* 8026F710 */ void cross(cM3dGSph const*, cXyz*) const;
+	/* 8026F73C */ void cross(cM3dGCyl const*, cXyz*) const;
+	/* 8026F76C */ void GetMinMaxCube(cXyz&, cXyz&) const;
+};
+
+// build cXyz (cXyz) True/True
+// build cM3dGSphS (cM3dGSphS) True/True
+// build cM3dGCyl (cM3dGCyl) True/True
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void SetC__8cM3dGSphFRC4cXyz();
-extern "C" extern void Set__8cM3dGSphFRC4cXyzf();
-extern "C" extern void Set__8cM3dGSphFRC9cM3dGSphS();
-extern "C" extern void SetR__8cM3dGSphFf();
-extern "C" extern void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
-extern "C" extern void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
-extern "C" extern void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz();
+
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void Set__8cM3dGSphFRC4cXyzf();
+extern "C" void Set__8cM3dGSphFRC9cM3dGSphS();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
+extern "C" void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
+extern "C" void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
-extern "C" extern void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec();
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*);
+void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, Vec*);
+
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
+extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec();
 
 // 
 // Declarations:
 // 
 
-/* 8026F648-8026F664 001C+00 .text      SetC__8cM3dGSphFRC4cXyz                                      */
+/* 8026F648-8026F664 001C+00 rc=7 efc=5 .text      SetC__8cM3dGSphFRC4cXyz                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetC__8cM3dGSphFRC4cXyz) {
+asm void cM3dGSph::SetC(cXyz const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/SetC__8cM3dGSphFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F664-8026F6A8 0044+00 .text      Set__8cM3dGSphFRC4cXyzf                                      */
+/* 8026F664-8026F6A8 0044+00 rc=3 efc=3 .text      Set__8cM3dGSphFRC4cXyzf                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGSphFRC4cXyzf) {
+asm void cM3dGSph::Set(cXyz const& field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/Set__8cM3dGSphFRC4cXyzf.s"
 }
 #pragma pop
 
 
-/* 8026F6A8-8026F708 0060+00 .text      Set__8cM3dGSphFRC9cM3dGSphS                                  */
+/* 8026F6A8-8026F708 0060+00 rc=2 efc=2 .text      Set__8cM3dGSphFRC9cM3dGSphS                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGSphFRC9cM3dGSphS) {
+asm void cM3dGSph::Set(cM3dGSphS const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/Set__8cM3dGSphFRC9cM3dGSphS.s"
 }
 #pragma pop
 
 
-/* 8026F708-8026F710 0008+00 .text      SetR__8cM3dGSphFf                                            */
+/* 8026F708-8026F710 0008+00 rc=12 efc=10 .text      SetR__8cM3dGSphFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetR__8cM3dGSphFf) {
+asm void cM3dGSph::SetR(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/SetR__8cM3dGSphFf.s"
 }
 #pragma pop
 
 
-/* 8026F710-8026F73C 002C+00 .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz                          */
+/* 8026F710-8026F73C 002C+00 rc=1 efc=1 .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cross__8cM3dGSphCFPC8cM3dGSphP4cXyz) {
+asm void cM3dGSph::cross(cM3dGSph const* field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/cross__8cM3dGSphCFPC8cM3dGSphP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F73C-8026F76C 0030+00 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz                          */
+/* 8026F73C-8026F76C 0030+00 rc=1 efc=1 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cross__8cM3dGSphCFPC8cM3dGCylP4cXyz) {
+asm void cM3dGSph::cross(cM3dGCyl const* field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/cross__8cM3dGSphCFPC8cM3dGCylP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F76C-8026F7B0 0044+00 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz                       */
+/* 8026F76C-8026F7B0 0044+00 rc=1 efc=1 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz) {
+asm void cM3dGSph::GetMinMaxCube(cXyz& field_0, cXyz& field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_sph/GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

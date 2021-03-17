@@ -9,13 +9,18 @@
 // Forward References:
 // 
 
-extern "C" extern void cAPIGph_Painter__Fv();
-extern "C" extern void cAPIGph_BeforeOfDraw__Fv();
-extern "C" extern void cAPIGph_AfterOfDraw__Fv();
+void cAPIGph_Painter();
+void cAPIGph_BeforeOfDraw();
+void cAPIGph_AfterOfDraw();
+
+extern "C" void cAPIGph_Painter__Fv();
+extern "C" void cAPIGph_BeforeOfDraw__Fv();
+extern "C" void cAPIGph_AfterOfDraw__Fv();
 
 // 
 // External References:
 // 
+
 
 SECTION_DATA extern void*g_cAPI_Interface[6];
 
@@ -23,37 +28,36 @@ SECTION_DATA extern void*g_cAPI_Interface[6];
 // Declarations:
 // 
 
-/* 802632C8-802632F8 0030+00 .text      cAPIGph_Painter__Fv                                          */
+/* 802632C8-802632F8 0030+00 rc=1 efc=1 .text      cAPIGph_Painter__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cAPIGph_Painter__Fv) {
+asm void cAPIGph_Painter() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_graphic/cAPIGph_Painter__Fv.s"
 }
 #pragma pop
 
 
-/* 802632F8-80263328 0030+00 .text      cAPIGph_BeforeOfDraw__Fv                                     */
+/* 802632F8-80263328 0030+00 rc=1 efc=1 .text      cAPIGph_BeforeOfDraw__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cAPIGph_BeforeOfDraw__Fv) {
+asm void cAPIGph_BeforeOfDraw() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_graphic/cAPIGph_BeforeOfDraw__Fv.s"
 }
 #pragma pop
 
 
-/* 80263328-80263358 0030+00 .text      cAPIGph_AfterOfDraw__Fv                                      */
+/* 80263328-80263358 0030+00 rc=1 efc=1 .text      cAPIGph_AfterOfDraw__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cAPIGph_AfterOfDraw__Fv) {
+asm void cAPIGph_AfterOfDraw() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_API_graphic/cAPIGph_AfterOfDraw__Fv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

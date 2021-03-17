@@ -6,31 +6,85 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daBubbPilar_c;
+
+struct daBubbPilar_HIO_c {
+	daBubbPilar_HIO_c();
+	~daBubbPilar_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daBubbPilar_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void initModeWait();
+	void modeWait();
+	void initModeEffOn();
+	void modeEffOn();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daBubbPilar_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daBubbPilar_cFv();
-extern "C" extern void CreateHeap__13daBubbPilar_cFv();
-extern "C" extern void create__13daBubbPilar_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__13daBubbPilar_cFPPA3_A4_f();
-extern "C" extern void initModeWait__13daBubbPilar_cFv();
-extern "C" extern void modeWait__13daBubbPilar_cFv();
-extern "C" extern void initModeEffOn__13daBubbPilar_cFv();
-extern "C" extern void modeEffOn__13daBubbPilar_cFv();
-extern "C" extern void Draw__13daBubbPilar_cFv();
-extern "C" extern void Delete__13daBubbPilar_cFv();
-extern "C" extern void daBubbPilar_Draw__FP13daBubbPilar_c();
-extern "C" extern void daBubbPilar_Execute__FP13daBubbPilar_c();
-extern "C" extern void daBubbPilar_Delete__FP13daBubbPilar_c();
-extern "C" extern void daBubbPilar_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17daBubbPilar_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_bubblePilar_cpp();
+extern "C" void Execute__13daBubbPilar_cFPPA3_A4_f();
+void daBubbPilar_Draw(daBubbPilar_c*);
+void daBubbPilar_Execute(daBubbPilar_c*);
+void daBubbPilar_Delete(daBubbPilar_c*);
+void daBubbPilar_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_bubblePilar_cpp();
+
+extern "C" void __ct__17daBubbPilar_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daBubbPilar_cFv();
+extern "C" void CreateHeap__13daBubbPilar_cFv();
+extern "C" void create__13daBubbPilar_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__13daBubbPilar_cFPPA3_A4_f();
+extern "C" void initModeWait__13daBubbPilar_cFv();
+extern "C" void modeWait__13daBubbPilar_cFv();
+extern "C" void initModeEffOn__13daBubbPilar_cFv();
+extern "C" void modeEffOn__13daBubbPilar_cFv();
+extern "C" void Draw__13daBubbPilar_cFv();
+extern "C" void Delete__13daBubbPilar_cFv();
+extern "C" void daBubbPilar_Draw__FP13daBubbPilar_c();
+extern "C" void daBubbPilar_Execute__FP13daBubbPilar_c();
+extern "C" void daBubbPilar_Delete__FP13daBubbPilar_c();
+extern "C" void daBubbPilar_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17daBubbPilar_HIO_cFv();
+extern "C" void __sinit_d_a_obj_bubblePilar_cpp();
 SECTION_RODATA extern const u8 mCcDObjInfo__13daBubbPilar_c[48];
 SECTION_RODATA extern const u32 lit_3654;
 SECTION_RODATA extern const u32 lit_3939;
@@ -61,8 +115,11 @@ SECTION_BSS extern u8 data_80BC422C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -72,7 +129,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daBubbPilar_HIO_cFv) {
+asm daBubbPilar_HIO_c::daBubbPilar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__ct__17daBubbPilar_HIO_cFv.s"
 }
@@ -83,7 +140,7 @@ ASM_FUNCTION(__ct__17daBubbPilar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -94,7 +151,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/setBaseMtx__13daBubbPilar_cFv.s"
 }
@@ -105,7 +162,7 @@ ASM_FUNCTION(setBaseMtx__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/CreateHeap__13daBubbPilar_cFv.s"
 }
@@ -116,7 +173,7 @@ ASM_FUNCTION(CreateHeap__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/create__13daBubbPilar_cFv.s"
 }
@@ -127,7 +184,7 @@ ASM_FUNCTION(create__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__8cM3dGCylFv.s"
 }
@@ -138,7 +195,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__8cM3dGAabFv.s"
 }
@@ -149,7 +206,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__10dCcD_GSttsFv.s"
 }
@@ -160,7 +217,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daBubbPilar_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daBubbPilar_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/Execute__13daBubbPilar_cFPPA3_A4_f.s"
 }
@@ -171,7 +228,7 @@ ASM_FUNCTION(Execute__13daBubbPilar_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initModeWait__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::initModeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/initModeWait__13daBubbPilar_cFv.s"
 }
@@ -182,7 +239,7 @@ ASM_FUNCTION(initModeWait__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/modeWait__13daBubbPilar_cFv.s"
 }
@@ -193,7 +250,7 @@ ASM_FUNCTION(modeWait__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initModeEffOn__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::initModeEffOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/initModeEffOn__13daBubbPilar_cFv.s"
 }
@@ -204,7 +261,7 @@ ASM_FUNCTION(initModeEffOn__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeEffOn__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::modeEffOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/modeEffOn__13daBubbPilar_cFv.s"
 }
@@ -215,7 +272,7 @@ ASM_FUNCTION(modeEffOn__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/Draw__13daBubbPilar_cFv.s"
 }
@@ -226,7 +283,7 @@ ASM_FUNCTION(Draw__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daBubbPilar_cFv) {
+asm void daBubbPilar_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/Delete__13daBubbPilar_cFv.s"
 }
@@ -237,7 +294,7 @@ ASM_FUNCTION(Delete__13daBubbPilar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBubbPilar_Draw__FP13daBubbPilar_c) {
+asm void daBubbPilar_Draw(daBubbPilar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Draw__FP13daBubbPilar_c.s"
 }
@@ -248,7 +305,7 @@ ASM_FUNCTION(daBubbPilar_Draw__FP13daBubbPilar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBubbPilar_Execute__FP13daBubbPilar_c) {
+asm void daBubbPilar_Execute(daBubbPilar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Execute__FP13daBubbPilar_c.s"
 }
@@ -259,7 +316,7 @@ ASM_FUNCTION(daBubbPilar_Execute__FP13daBubbPilar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBubbPilar_Delete__FP13daBubbPilar_c) {
+asm void daBubbPilar_Delete(daBubbPilar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Delete__FP13daBubbPilar_c.s"
 }
@@ -270,7 +327,7 @@ ASM_FUNCTION(daBubbPilar_Delete__FP13daBubbPilar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBubbPilar_Create__FP10fopAc_ac_c) {
+asm void daBubbPilar_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Create__FP10fopAc_ac_c.s"
 }
@@ -281,7 +338,7 @@ ASM_FUNCTION(daBubbPilar_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__10cCcD_GSttsFv.s"
 }
@@ -292,7 +349,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daBubbPilar_HIO_cFv) {
+asm daBubbPilar_HIO_c::~daBubbPilar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__dt__17daBubbPilar_HIO_cFv.s"
 }
@@ -303,7 +360,7 @@ ASM_FUNCTION(__dt__17daBubbPilar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_bubblePilar_cpp) {
+extern "C" asm void __sinit_d_a_obj_bubblePilar_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/__sinit_d_a_obj_bubblePilar_cpp.s"
 }

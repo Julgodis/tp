@@ -6,13 +6,25 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagAssist_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagAssist_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagAssist_Execute__FP13daTagAssist_c();
-extern "C" extern void daTagAssist_IsDelete__FP13daTagAssist_c();
-extern "C" extern void daTagAssist_Delete__FP13daTagAssist_c();
+void daTagAssist_Create(fopAc_ac_c*);
+void daTagAssist_Execute(daTagAssist_c*);
+bool daTagAssist_IsDelete(daTagAssist_c*);
+void daTagAssist_Delete(daTagAssist_c*);
+
+extern "C" void daTagAssist_Create__FP10fopAc_ac_c();
+extern "C" void daTagAssist_Execute__FP13daTagAssist_c();
+extern "C" bool daTagAssist_IsDelete__FP13daTagAssist_c();
+extern "C" void daTagAssist_Delete__FP13daTagAssist_c();
 SECTION_DATA extern u8 l_daTagAssist_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Assist[48];
 
@@ -20,7 +32,9 @@ SECTION_DATA extern u8 g_profile_Tag_Assist[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -30,7 +44,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAssist_Create__FP10fopAc_ac_c) {
+asm void daTagAssist_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_assistance/d_a_tag_assistance/daTagAssist_Create__FP10fopAc_ac_c.s"
 }
@@ -41,7 +55,7 @@ ASM_FUNCTION(daTagAssist_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAssist_Execute__FP13daTagAssist_c) {
+asm void daTagAssist_Execute(daTagAssist_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_assistance/d_a_tag_assistance/daTagAssist_Execute__FP13daTagAssist_c.s"
 }
@@ -49,21 +63,16 @@ ASM_FUNCTION(daTagAssist_Execute__FP13daTagAssist_c) {
 
 
 /* 80D55EC8-80D55ED0 0008+00 .text      daTagAssist_IsDelete__FP13daTagAssist_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagAssist_IsDelete__FP13daTagAssist_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_assistance/d_a_tag_assistance/daTagAssist_IsDelete__FP13daTagAssist_c.s"
+bool daTagAssist_IsDelete(daTagAssist_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D55ED0-80D55F00 0030+00 .text      daTagAssist_Delete__FP13daTagAssist_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAssist_Delete__FP13daTagAssist_c) {
+asm void daTagAssist_Delete(daTagAssist_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_assistance/d_a_tag_assistance/daTagAssist_Delete__FP13daTagAssist_c.s"
 }

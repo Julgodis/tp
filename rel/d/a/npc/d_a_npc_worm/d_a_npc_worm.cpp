@@ -6,23 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct npc_worm_class;
+
+struct J3DJoint {
+};
+
+struct npc_worm_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daPy_py_c {
+	void getLeftHandPos() const;
+};
+
+struct dInsect_c {
+	void Insect_Release();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNPC_WORM_Draw__FP14npc_worm_class();
-extern "C" extern void npc_worm_ground__FP14npc_worm_class();
-extern "C" extern void npc_worm_normal__FP14npc_worm_class();
-extern "C" extern void npc_worm_dive__FP14npc_worm_class();
-extern "C" extern void npc_worm_binwait__FP14npc_worm_class();
-extern "C" extern void action__FP14npc_worm_class();
-extern "C" extern void daNPC_WORM_Execute__FP14npc_worm_class();
-extern "C" extern void daNPC_WORM_IsDelete__FP14npc_worm_class();
-extern "C" extern void daNPC_WORM_Delete__FP14npc_worm_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daNPC_WORM_Create__FP10fopAc_ac_c();
-extern "C" extern void getLeftHandPos__9daPy_py_cCFv();
-extern "C" extern void Insect_Release__9dInsect_cFv();
+void nodeCallBack(J3DJoint*, s32);
+void daNPC_WORM_Draw(npc_worm_class*);
+void npc_worm_ground(npc_worm_class*);
+void npc_worm_normal(npc_worm_class*);
+void npc_worm_dive(npc_worm_class*);
+void npc_worm_binwait(npc_worm_class*);
+void action(npc_worm_class*);
+void daNPC_WORM_Execute(npc_worm_class*);
+bool daNPC_WORM_IsDelete(npc_worm_class*);
+void daNPC_WORM_Delete(npc_worm_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNPC_WORM_Create(fopAc_ac_c*);
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNPC_WORM_Draw__FP14npc_worm_class();
+extern "C" void npc_worm_ground__FP14npc_worm_class();
+extern "C" void npc_worm_normal__FP14npc_worm_class();
+extern "C" void npc_worm_dive__FP14npc_worm_class();
+extern "C" void npc_worm_binwait__FP14npc_worm_class();
+extern "C" void action__FP14npc_worm_class();
+extern "C" void daNPC_WORM_Execute__FP14npc_worm_class();
+extern "C" bool daNPC_WORM_IsDelete__FP14npc_worm_class();
+extern "C" void daNPC_WORM_Delete__FP14npc_worm_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daNPC_WORM_Create__FP10fopAc_ac_c();
+extern "C" void getLeftHandPos__9daPy_py_cCFv();
+extern "C" void Insect_Release__9dInsect_cFv();
 SECTION_RODATA extern const u32 lit_3717;
 SECTION_RODATA extern const u8 lit_3774[4];
 SECTION_RODATA extern const u8 lit_3775[8];
@@ -70,7 +108,9 @@ SECTION_DATA extern void*const __vt__14npc_worm_class[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -80,7 +120,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/nodeCallBack__FP8J3DJointi.s"
 }
@@ -91,7 +131,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_WORM_Draw__FP14npc_worm_class) {
+asm void daNPC_WORM_Draw(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Draw__FP14npc_worm_class.s"
 }
@@ -102,7 +142,7 @@ ASM_FUNCTION(daNPC_WORM_Draw__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_worm_ground__FP14npc_worm_class) {
+asm void npc_worm_ground(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/npc_worm_ground__FP14npc_worm_class.s"
 }
@@ -113,7 +153,7 @@ ASM_FUNCTION(npc_worm_ground__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_worm_normal__FP14npc_worm_class) {
+asm void npc_worm_normal(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/npc_worm_normal__FP14npc_worm_class.s"
 }
@@ -124,7 +164,7 @@ ASM_FUNCTION(npc_worm_normal__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_worm_dive__FP14npc_worm_class) {
+asm void npc_worm_dive(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/npc_worm_dive__FP14npc_worm_class.s"
 }
@@ -135,7 +175,7 @@ ASM_FUNCTION(npc_worm_dive__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_worm_binwait__FP14npc_worm_class) {
+asm void npc_worm_binwait(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/npc_worm_binwait__FP14npc_worm_class.s"
 }
@@ -146,7 +186,7 @@ ASM_FUNCTION(npc_worm_binwait__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14npc_worm_class) {
+asm void action(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/action__FP14npc_worm_class.s"
 }
@@ -157,7 +197,7 @@ ASM_FUNCTION(action__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_WORM_Execute__FP14npc_worm_class) {
+asm void daNPC_WORM_Execute(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Execute__FP14npc_worm_class.s"
 }
@@ -165,21 +205,16 @@ ASM_FUNCTION(daNPC_WORM_Execute__FP14npc_worm_class) {
 
 
 /* 80B2EDD0-80B2EDD8 0008+00 .text      daNPC_WORM_IsDelete__FP14npc_worm_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNPC_WORM_IsDelete__FP14npc_worm_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_IsDelete__FP14npc_worm_class.s"
+bool daNPC_WORM_IsDelete(npc_worm_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B2EDD8-80B2EE08 0030+00 .text      daNPC_WORM_Delete__FP14npc_worm_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_WORM_Delete__FP14npc_worm_class) {
+asm void daNPC_WORM_Delete(npc_worm_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Delete__FP14npc_worm_class.s"
 }
@@ -190,7 +225,7 @@ ASM_FUNCTION(daNPC_WORM_Delete__FP14npc_worm_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -201,7 +236,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNPC_WORM_Create__FP10fopAc_ac_c) {
+asm void daNPC_WORM_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_Create__FP10fopAc_ac_c.s"
 }
@@ -212,7 +247,7 @@ ASM_FUNCTION(daNPC_WORM_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLeftHandPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getLeftHandPos() const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/getLeftHandPos__9daPy_py_cCFv.s"
 }
@@ -223,7 +258,7 @@ ASM_FUNCTION(getLeftHandPos__9daPy_py_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__9dInsect_cFv) {
+asm void dInsect_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/Insect_Release__9dInsect_cFv.s"
 }

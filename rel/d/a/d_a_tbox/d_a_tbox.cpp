@@ -6,100 +6,235 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTbox_c;
+struct cXyz;
+
+struct daTbox_HIO_c {
+	daTbox_HIO_c();
+	~daTbox_HIO_c();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTbox_c {
+	void getModelInfo();
+	void commonShapeSet();
+	s32 effectShapeSet();
+	s32 envShapeSet();
+	void bgCheckSet();
+	void lightReady();
+	void setLightPos();
+	bool checkEnv();
+	void checkAppear();
+	void checkOpen();
+	void clrDzb();
+	void setDzb();
+	void surfaceProc();
+	void checkNormal();
+	void checkEnvEffectTbox();
+	void calcHeapSize();
+	void CreateHeap();
+	void CreateInit();
+	void initPos();
+	void initAnm();
+	void boxCheck();
+	void demoProcOpen();
+	void lightColorProc();
+	void environmentProc();
+	void lightUpProc();
+	void lightDownProc();
+	void dropProcInitCall();
+	void dropProcInit();
+	void getDir();
+	void setRotAxis(cXyz const*, cXyz const*);
+	void dropProcInit2();
+	void dropProc();
+	void demoInitAppear();
+	void demoProcAppear();
+	void demoProc();
+	void OpenInit_com();
+	void OpenInit();
+	bool actionWait();
+	void actionDemo();
+	void actionDemo2();
+	void actionDropDemo();
+	void getBombItemNo(u8, u8);
+	void getBombItemNo2(u8, u8, u8);
+	void getBombItemNo3(u8, u8, u8, u8);
+	void getBombItemNoMain(u8);
+	void setGetDemoItem();
+	void actionOpenWait();
+	void actionNotOpenDemo();
+	void checkDrop();
+	void settingDropDemoCamera();
+	void actionSwOnWait();
+	void actionSwOnWait2();
+	void actionDropWait();
+	void actionGenocide();
+	void actionDropWaitForWeb();
+	void actionDropForWeb();
+	void initBaseMtx();
+	void setBaseMtx();
+	void mode_proc_call();
+	void mode_exec_wait();
+	void mode_exec();
+	void create1st();
+	void Draw();
+	void Delete();
+	bool Create();
+	bool checkSmallTbox();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daTbox_HIO_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void getModelInfo__8daTbox_cFv();
-extern "C" extern void commonShapeSet__8daTbox_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void effectShapeSet__8daTbox_cFv();
-extern "C" extern void envShapeSet__8daTbox_cFv();
-extern "C" extern void bgCheckSet__8daTbox_cFv();
-extern "C" extern void lightReady__8daTbox_cFv();
-extern "C" extern void setLightPos__8daTbox_cFv();
-extern "C" extern void checkEnv__8daTbox_cFv();
-extern "C" extern void checkAppear__8daTbox_cFv();
-extern "C" extern void checkOpen__8daTbox_cFv();
-extern "C" extern void clrDzb__8daTbox_cFv();
-extern "C" extern void setDzb__8daTbox_cFv();
-extern "C" extern void surfaceProc__8daTbox_cFv();
-extern "C" extern void checkNormal__8daTbox_cFv();
-extern "C" extern void checkEnvEffectTbox__8daTbox_cFv();
-extern "C" extern void calcHeapSize__8daTbox_cFv();
-extern "C" extern void CreateHeap__8daTbox_cFv();
-extern "C" extern void CreateInit__8daTbox_cFv();
-extern "C" extern void initPos__8daTbox_cFv();
-extern "C" extern void initAnm__8daTbox_cFv();
-extern "C" extern void boxCheck__8daTbox_cFv();
-extern "C" extern void demoProcOpen__8daTbox_cFv();
-extern "C" extern void lightColorProc__8daTbox_cFv();
-extern "C" extern void environmentProc__8daTbox_cFv();
-extern "C" extern void lightUpProc__8daTbox_cFv();
-extern "C" extern void lightDownProc__8daTbox_cFv();
-extern "C" extern void dropProcInitCall__8daTbox_cFv();
-extern "C" extern void dropProcInit__8daTbox_cFv();
-extern "C" extern void calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs();
-extern "C" extern void getDropSAngle__8daTbox_cFPs();
-extern "C" extern void getDir__8daTbox_cFv();
-extern "C" extern void setRotAxis__8daTbox_cFPC4cXyzPC4cXyz();
-extern "C" extern void dropProcInit2__8daTbox_cFv();
-extern "C" extern void dropProc__8daTbox_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void demoInitAppear__8daTbox_cFv();
-extern "C" extern void demoProcAppear__8daTbox_cFv();
-extern "C" extern void demoProc__8daTbox_cFv();
-extern "C" extern void OpenInit_com__8daTbox_cFv();
-extern "C" extern void OpenInit__8daTbox_cFv();
-extern "C" extern void actionWait__8daTbox_cFv();
-extern "C" extern void actionDemo__8daTbox_cFv();
-extern "C" extern void actionDemo2__8daTbox_cFv();
-extern "C" extern void actionDropDemo__8daTbox_cFv();
-extern "C" extern void getBombItemNo__8daTbox_cFUcUc();
-extern "C" extern void getBombItemNo2__8daTbox_cFUcUcUc();
-extern "C" extern void getBombItemNo3__8daTbox_cFUcUcUcUc();
-extern "C" extern void getBombItemNoMain__8daTbox_cFUc();
-extern "C" extern void setGetDemoItem__8daTbox_cFv();
-extern "C" extern void actionOpenWait__8daTbox_cFv();
-extern "C" extern void actionNotOpenDemo__8daTbox_cFv();
-extern "C" extern void checkDrop__8daTbox_cFv();
-extern "C" extern void settingDropDemoCamera__8daTbox_cFv();
-extern "C" extern void actionSwOnWait__8daTbox_cFv();
-extern "C" extern void actionSwOnWait2__8daTbox_cFv();
-extern "C" extern void actionDropWait__8daTbox_cFv();
-extern "C" extern void actionGenocide__8daTbox_cFv();
-extern "C" extern void actionDropWaitForWeb__8daTbox_cFv();
-extern "C" extern void actionDropForWeb__8daTbox_cFv();
-extern "C" extern void initBaseMtx__8daTbox_cFv();
-extern "C" extern void setBaseMtx__8daTbox_cFv();
-extern "C" extern void mode_proc_call__8daTbox_cFv();
-extern "C" extern void mode_exec_wait__8daTbox_cFv();
-extern "C" extern void mode_exec__8daTbox_cFv();
-extern "C" extern void create1st__8daTbox_cFv();
-extern "C" extern void Execute__8daTbox_cFPPA3_A4_f();
-extern "C" extern void Draw__8daTbox_cFv();
-extern "C" extern void Delete__8daTbox_cFv();
-extern "C" extern void daTbox_create1st__FP8daTbox_c();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daTbox_MoveBGDelete__FP8daTbox_c();
-extern "C" extern void daTbox_MoveBGExecute__FP8daTbox_c();
-extern "C" extern void daTbox_MoveBGDraw__FP8daTbox_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daTbox_HIO_cFv();
-extern "C" extern void __sinit_d_a_tbox_cpp();
-extern "C" extern void func_80496188();
-extern "C" extern void func_80496190();
-extern "C" extern void func_80496198();
-extern "C" extern void func_804961A0();
-extern "C" extern void func_804961A8();
-extern "C" extern void Create__8daTbox_cFv();
-extern "C" extern void checkSmallTbox__8daTbox_cFv();
+extern "C" void calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs();
+extern "C" void getDropSAngle__8daTbox_cFPs();
+extern "C" void Execute__8daTbox_cFPPA3_A4_f();
+void daTbox_create1st(daTbox_c*);
+void daTbox_MoveBGDelete(daTbox_c*);
+void daTbox_MoveBGExecute(daTbox_c*);
+void daTbox_MoveBGDraw(daTbox_c*);
+extern "C" void __sinit_d_a_tbox_cpp();
+extern "C" void func_80496188();
+extern "C" void func_80496190();
+extern "C" void func_80496198();
+extern "C" void func_804961A0();
+extern "C" void func_804961A8();
+
+extern "C" void __ct__12daTbox_HIO_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void getModelInfo__8daTbox_cFv();
+extern "C" void commonShapeSet__8daTbox_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" s32 effectShapeSet__8daTbox_cFv();
+extern "C" s32 envShapeSet__8daTbox_cFv();
+extern "C" void bgCheckSet__8daTbox_cFv();
+extern "C" void lightReady__8daTbox_cFv();
+extern "C" void setLightPos__8daTbox_cFv();
+extern "C" bool checkEnv__8daTbox_cFv();
+extern "C" void checkAppear__8daTbox_cFv();
+extern "C" void checkOpen__8daTbox_cFv();
+extern "C" void clrDzb__8daTbox_cFv();
+extern "C" void setDzb__8daTbox_cFv();
+extern "C" void surfaceProc__8daTbox_cFv();
+extern "C" void checkNormal__8daTbox_cFv();
+extern "C" void checkEnvEffectTbox__8daTbox_cFv();
+extern "C" void calcHeapSize__8daTbox_cFv();
+extern "C" void CreateHeap__8daTbox_cFv();
+extern "C" void CreateInit__8daTbox_cFv();
+extern "C" void initPos__8daTbox_cFv();
+extern "C" void initAnm__8daTbox_cFv();
+extern "C" void boxCheck__8daTbox_cFv();
+extern "C" void demoProcOpen__8daTbox_cFv();
+extern "C" void lightColorProc__8daTbox_cFv();
+extern "C" void environmentProc__8daTbox_cFv();
+extern "C" void lightUpProc__8daTbox_cFv();
+extern "C" void lightDownProc__8daTbox_cFv();
+extern "C" void dropProcInitCall__8daTbox_cFv();
+extern "C" void dropProcInit__8daTbox_cFv();
+extern "C" void calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs();
+extern "C" void getDropSAngle__8daTbox_cFPs();
+extern "C" void getDir__8daTbox_cFv();
+extern "C" void setRotAxis__8daTbox_cFPC4cXyzPC4cXyz();
+extern "C" void dropProcInit2__8daTbox_cFv();
+extern "C" void dropProc__8daTbox_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void demoInitAppear__8daTbox_cFv();
+extern "C" void demoProcAppear__8daTbox_cFv();
+extern "C" void demoProc__8daTbox_cFv();
+extern "C" void OpenInit_com__8daTbox_cFv();
+extern "C" void OpenInit__8daTbox_cFv();
+extern "C" bool actionWait__8daTbox_cFv();
+extern "C" void actionDemo__8daTbox_cFv();
+extern "C" void actionDemo2__8daTbox_cFv();
+extern "C" void actionDropDemo__8daTbox_cFv();
+extern "C" void getBombItemNo__8daTbox_cFUcUc();
+extern "C" void getBombItemNo2__8daTbox_cFUcUcUc();
+extern "C" void getBombItemNo3__8daTbox_cFUcUcUcUc();
+extern "C" void getBombItemNoMain__8daTbox_cFUc();
+extern "C" void setGetDemoItem__8daTbox_cFv();
+extern "C" void actionOpenWait__8daTbox_cFv();
+extern "C" void actionNotOpenDemo__8daTbox_cFv();
+extern "C" void checkDrop__8daTbox_cFv();
+extern "C" void settingDropDemoCamera__8daTbox_cFv();
+extern "C" void actionSwOnWait__8daTbox_cFv();
+extern "C" void actionSwOnWait2__8daTbox_cFv();
+extern "C" void actionDropWait__8daTbox_cFv();
+extern "C" void actionGenocide__8daTbox_cFv();
+extern "C" void actionDropWaitForWeb__8daTbox_cFv();
+extern "C" void actionDropForWeb__8daTbox_cFv();
+extern "C" void initBaseMtx__8daTbox_cFv();
+extern "C" void setBaseMtx__8daTbox_cFv();
+extern "C" void mode_proc_call__8daTbox_cFv();
+extern "C" void mode_exec_wait__8daTbox_cFv();
+extern "C" void mode_exec__8daTbox_cFv();
+extern "C" void create1st__8daTbox_cFv();
+extern "C" void Execute__8daTbox_cFPPA3_A4_f();
+extern "C" void Draw__8daTbox_cFv();
+extern "C" void Delete__8daTbox_cFv();
+extern "C" void daTbox_create1st__FP8daTbox_c();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daTbox_MoveBGDelete__FP8daTbox_c();
+extern "C" void daTbox_MoveBGExecute__FP8daTbox_c();
+extern "C" void daTbox_MoveBGDraw__FP8daTbox_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daTbox_HIO_cFv();
+extern "C" void __sinit_d_a_tbox_cpp();
+extern "C" void func_80496188();
+extern "C" void func_80496190();
+extern "C" void func_80496198();
+extern "C" void func_804961A0();
+extern "C" void func_804961A8();
+extern "C" bool Create__8daTbox_cFv();
+extern "C" bool checkSmallTbox__8daTbox_cFv();
 SECTION_RODATA extern const u8 l_cull_size_box[24];
 SECTION_RODATA extern const u8 l_cyl_info[60];
 SECTION_RODATA extern const u32 lit_3833;
@@ -242,8 +377,11 @@ SECTION_BSS extern u8 data_80496994[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -253,7 +391,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daTbox_HIO_cFv) {
+asm daTbox_HIO_c::daTbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__ct__12daTbox_HIO_cFv.s"
 }
@@ -264,7 +402,7 @@ ASM_FUNCTION(__ct__12daTbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__4cXyzFv.s"
 }
@@ -275,7 +413,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -286,7 +424,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModelInfo__8daTbox_cFv) {
+asm void daTbox_c::getModelInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getModelInfo__8daTbox_cFv.s"
 }
@@ -297,7 +435,7 @@ ASM_FUNCTION(getModelInfo__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(commonShapeSet__8daTbox_cFv) {
+asm void daTbox_c::commonShapeSet() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/commonShapeSet__8daTbox_cFv.s"
 }
@@ -308,7 +446,7 @@ ASM_FUNCTION(commonShapeSet__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__12J3DFrameCtrlFv.s"
 }
@@ -316,32 +454,22 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 804911B8-804911C0 0008+00 .text      effectShapeSet__8daTbox_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectShapeSet__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/effectShapeSet__8daTbox_cFv.s"
+s32 daTbox_c::effectShapeSet() {
+	return 4;
 }
-#pragma pop
 
 
 /* 804911C0-804911C8 0008+00 .text      envShapeSet__8daTbox_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(envShapeSet__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/envShapeSet__8daTbox_cFv.s"
+s32 daTbox_c::envShapeSet() {
+	return 4;
 }
-#pragma pop
 
 
 /* 804911C8-8049129C 00D4+00 .text      bgCheckSet__8daTbox_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheckSet__8daTbox_cFv) {
+asm void daTbox_c::bgCheckSet() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/bgCheckSet__8daTbox_cFv.s"
 }
@@ -352,7 +480,7 @@ ASM_FUNCTION(bgCheckSet__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightReady__8daTbox_cFv) {
+asm void daTbox_c::lightReady() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/lightReady__8daTbox_cFv.s"
 }
@@ -363,7 +491,7 @@ ASM_FUNCTION(lightReady__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightPos__8daTbox_cFv) {
+asm void daTbox_c::setLightPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/setLightPos__8daTbox_cFv.s"
 }
@@ -371,21 +499,16 @@ ASM_FUNCTION(setLightPos__8daTbox_cFv) {
 
 
 /* 8049135C-80491364 0008+00 .text      checkEnv__8daTbox_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkEnv__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkEnv__8daTbox_cFv.s"
+bool daTbox_c::checkEnv() {
+	return true;
 }
-#pragma pop
 
 
 /* 80491364-8049139C 0038+00 .text      checkAppear__8daTbox_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAppear__8daTbox_cFv) {
+asm void daTbox_c::checkAppear() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkAppear__8daTbox_cFv.s"
 }
@@ -396,7 +519,7 @@ ASM_FUNCTION(checkAppear__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpen__8daTbox_cFv) {
+asm void daTbox_c::checkOpen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkOpen__8daTbox_cFv.s"
 }
@@ -407,7 +530,7 @@ ASM_FUNCTION(checkOpen__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clrDzb__8daTbox_cFv) {
+asm void daTbox_c::clrDzb() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/clrDzb__8daTbox_cFv.s"
 }
@@ -418,7 +541,7 @@ ASM_FUNCTION(clrDzb__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDzb__8daTbox_cFv) {
+asm void daTbox_c::setDzb() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/setDzb__8daTbox_cFv.s"
 }
@@ -429,7 +552,7 @@ ASM_FUNCTION(setDzb__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(surfaceProc__8daTbox_cFv) {
+asm void daTbox_c::surfaceProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/surfaceProc__8daTbox_cFv.s"
 }
@@ -440,7 +563,7 @@ ASM_FUNCTION(surfaceProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNormal__8daTbox_cFv) {
+asm void daTbox_c::checkNormal() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkNormal__8daTbox_cFv.s"
 }
@@ -451,7 +574,7 @@ ASM_FUNCTION(checkNormal__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEnvEffectTbox__8daTbox_cFv) {
+asm void daTbox_c::checkEnvEffectTbox() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkEnvEffectTbox__8daTbox_cFv.s"
 }
@@ -462,7 +585,7 @@ ASM_FUNCTION(checkEnvEffectTbox__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHeapSize__8daTbox_cFv) {
+asm void daTbox_c::calcHeapSize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/calcHeapSize__8daTbox_cFv.s"
 }
@@ -473,7 +596,7 @@ ASM_FUNCTION(calcHeapSize__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daTbox_cFv) {
+asm void daTbox_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/CreateHeap__8daTbox_cFv.s"
 }
@@ -484,7 +607,7 @@ ASM_FUNCTION(CreateHeap__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__8daTbox_cFv) {
+asm void daTbox_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/CreateInit__8daTbox_cFv.s"
 }
@@ -495,7 +618,7 @@ ASM_FUNCTION(CreateInit__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPos__8daTbox_cFv) {
+asm void daTbox_c::initPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/initPos__8daTbox_cFv.s"
 }
@@ -506,7 +629,7 @@ ASM_FUNCTION(initPos__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initAnm__8daTbox_cFv) {
+asm void daTbox_c::initAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/initAnm__8daTbox_cFv.s"
 }
@@ -517,7 +640,7 @@ ASM_FUNCTION(initAnm__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(boxCheck__8daTbox_cFv) {
+asm void daTbox_c::boxCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/boxCheck__8daTbox_cFv.s"
 }
@@ -528,7 +651,7 @@ ASM_FUNCTION(boxCheck__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProcOpen__8daTbox_cFv) {
+asm void daTbox_c::demoProcOpen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/demoProcOpen__8daTbox_cFv.s"
 }
@@ -539,7 +662,7 @@ ASM_FUNCTION(demoProcOpen__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightColorProc__8daTbox_cFv) {
+asm void daTbox_c::lightColorProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/lightColorProc__8daTbox_cFv.s"
 }
@@ -550,7 +673,7 @@ ASM_FUNCTION(lightColorProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(environmentProc__8daTbox_cFv) {
+asm void daTbox_c::environmentProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/environmentProc__8daTbox_cFv.s"
 }
@@ -561,7 +684,7 @@ ASM_FUNCTION(environmentProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightUpProc__8daTbox_cFv) {
+asm void daTbox_c::lightUpProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/lightUpProc__8daTbox_cFv.s"
 }
@@ -572,7 +695,7 @@ ASM_FUNCTION(lightUpProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightDownProc__8daTbox_cFv) {
+asm void daTbox_c::lightDownProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/lightDownProc__8daTbox_cFv.s"
 }
@@ -583,7 +706,7 @@ ASM_FUNCTION(lightDownProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dropProcInitCall__8daTbox_cFv) {
+asm void daTbox_c::dropProcInitCall() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/dropProcInitCall__8daTbox_cFv.s"
 }
@@ -594,7 +717,7 @@ ASM_FUNCTION(dropProcInitCall__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dropProcInit__8daTbox_cFv) {
+asm void daTbox_c::dropProcInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/dropProcInit__8daTbox_cFv.s"
 }
@@ -605,7 +728,7 @@ ASM_FUNCTION(dropProcInit__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs) {
+extern "C" asm void calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs.s"
 }
@@ -616,7 +739,7 @@ ASM_FUNCTION(calcJumpGoalAndAngle__8daTbox_cFP4cXyzPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDropSAngle__8daTbox_cFPs) {
+extern "C" asm void getDropSAngle__8daTbox_cFPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getDropSAngle__8daTbox_cFPs.s"
 }
@@ -627,7 +750,7 @@ ASM_FUNCTION(getDropSAngle__8daTbox_cFPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDir__8daTbox_cFv) {
+asm void daTbox_c::getDir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getDir__8daTbox_cFv.s"
 }
@@ -638,7 +761,7 @@ ASM_FUNCTION(getDir__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRotAxis__8daTbox_cFPC4cXyzPC4cXyz) {
+asm void daTbox_c::setRotAxis(cXyz const* field_0, cXyz const* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/setRotAxis__8daTbox_cFPC4cXyzPC4cXyz.s"
 }
@@ -649,7 +772,7 @@ ASM_FUNCTION(setRotAxis__8daTbox_cFPC4cXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dropProcInit2__8daTbox_cFv) {
+asm void daTbox_c::dropProcInit2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/dropProcInit2__8daTbox_cFv.s"
 }
@@ -660,7 +783,7 @@ ASM_FUNCTION(dropProcInit2__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dropProc__8daTbox_cFv) {
+asm void daTbox_c::dropProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/dropProc__8daTbox_cFv.s"
 }
@@ -671,7 +794,7 @@ ASM_FUNCTION(dropProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -682,7 +805,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitAppear__8daTbox_cFv) {
+asm void daTbox_c::demoInitAppear() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/demoInitAppear__8daTbox_cFv.s"
 }
@@ -693,7 +816,7 @@ ASM_FUNCTION(demoInitAppear__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProcAppear__8daTbox_cFv) {
+asm void daTbox_c::demoProcAppear() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/demoProcAppear__8daTbox_cFv.s"
 }
@@ -704,7 +827,7 @@ ASM_FUNCTION(demoProcAppear__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__8daTbox_cFv) {
+asm void daTbox_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/demoProc__8daTbox_cFv.s"
 }
@@ -715,7 +838,7 @@ ASM_FUNCTION(demoProc__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OpenInit_com__8daTbox_cFv) {
+asm void daTbox_c::OpenInit_com() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/OpenInit_com__8daTbox_cFv.s"
 }
@@ -726,7 +849,7 @@ ASM_FUNCTION(OpenInit_com__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OpenInit__8daTbox_cFv) {
+asm void daTbox_c::OpenInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/OpenInit__8daTbox_cFv.s"
 }
@@ -734,21 +857,16 @@ ASM_FUNCTION(OpenInit__8daTbox_cFv) {
 
 
 /* 804939F4-804939FC 0008+00 .text      actionWait__8daTbox_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionWait__8daTbox_cFv.s"
+bool daTbox_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 804939FC-80493CC8 02CC+00 .text      actionDemo__8daTbox_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDemo__8daTbox_cFv) {
+asm void daTbox_c::actionDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDemo__8daTbox_cFv.s"
 }
@@ -759,7 +877,7 @@ ASM_FUNCTION(actionDemo__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDemo2__8daTbox_cFv) {
+asm void daTbox_c::actionDemo2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDemo2__8daTbox_cFv.s"
 }
@@ -770,7 +888,7 @@ ASM_FUNCTION(actionDemo2__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDropDemo__8daTbox_cFv) {
+asm void daTbox_c::actionDropDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDropDemo__8daTbox_cFv.s"
 }
@@ -781,7 +899,7 @@ ASM_FUNCTION(actionDropDemo__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombItemNo__8daTbox_cFUcUc) {
+asm void daTbox_c::getBombItemNo(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getBombItemNo__8daTbox_cFUcUc.s"
 }
@@ -792,7 +910,7 @@ ASM_FUNCTION(getBombItemNo__8daTbox_cFUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombItemNo2__8daTbox_cFUcUcUc) {
+asm void daTbox_c::getBombItemNo2(u8 field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getBombItemNo2__8daTbox_cFUcUcUc.s"
 }
@@ -803,7 +921,7 @@ ASM_FUNCTION(getBombItemNo2__8daTbox_cFUcUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombItemNo3__8daTbox_cFUcUcUcUc) {
+asm void daTbox_c::getBombItemNo3(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getBombItemNo3__8daTbox_cFUcUcUcUc.s"
 }
@@ -814,7 +932,7 @@ ASM_FUNCTION(getBombItemNo3__8daTbox_cFUcUcUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBombItemNoMain__8daTbox_cFUc) {
+asm void daTbox_c::getBombItemNoMain(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/getBombItemNoMain__8daTbox_cFUc.s"
 }
@@ -825,7 +943,7 @@ ASM_FUNCTION(getBombItemNoMain__8daTbox_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGetDemoItem__8daTbox_cFv) {
+asm void daTbox_c::setGetDemoItem() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/setGetDemoItem__8daTbox_cFv.s"
 }
@@ -836,7 +954,7 @@ ASM_FUNCTION(setGetDemoItem__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpenWait__8daTbox_cFv) {
+asm void daTbox_c::actionOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionOpenWait__8daTbox_cFv.s"
 }
@@ -847,7 +965,7 @@ ASM_FUNCTION(actionOpenWait__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionNotOpenDemo__8daTbox_cFv) {
+asm void daTbox_c::actionNotOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionNotOpenDemo__8daTbox_cFv.s"
 }
@@ -858,7 +976,7 @@ ASM_FUNCTION(actionNotOpenDemo__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDrop__8daTbox_cFv) {
+asm void daTbox_c::checkDrop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkDrop__8daTbox_cFv.s"
 }
@@ -869,7 +987,7 @@ ASM_FUNCTION(checkDrop__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(settingDropDemoCamera__8daTbox_cFv) {
+asm void daTbox_c::settingDropDemoCamera() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/settingDropDemoCamera__8daTbox_cFv.s"
 }
@@ -880,7 +998,7 @@ ASM_FUNCTION(settingDropDemoCamera__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait__8daTbox_cFv) {
+asm void daTbox_c::actionSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionSwOnWait__8daTbox_cFv.s"
 }
@@ -891,7 +1009,7 @@ ASM_FUNCTION(actionSwOnWait__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait2__8daTbox_cFv) {
+asm void daTbox_c::actionSwOnWait2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionSwOnWait2__8daTbox_cFv.s"
 }
@@ -902,7 +1020,7 @@ ASM_FUNCTION(actionSwOnWait2__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDropWait__8daTbox_cFv) {
+asm void daTbox_c::actionDropWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDropWait__8daTbox_cFv.s"
 }
@@ -913,7 +1031,7 @@ ASM_FUNCTION(actionDropWait__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGenocide__8daTbox_cFv) {
+asm void daTbox_c::actionGenocide() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionGenocide__8daTbox_cFv.s"
 }
@@ -924,7 +1042,7 @@ ASM_FUNCTION(actionGenocide__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDropWaitForWeb__8daTbox_cFv) {
+asm void daTbox_c::actionDropWaitForWeb() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDropWaitForWeb__8daTbox_cFv.s"
 }
@@ -935,7 +1053,7 @@ ASM_FUNCTION(actionDropWaitForWeb__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDropForWeb__8daTbox_cFv) {
+asm void daTbox_c::actionDropForWeb() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionDropForWeb__8daTbox_cFv.s"
 }
@@ -946,7 +1064,7 @@ ASM_FUNCTION(actionDropForWeb__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__8daTbox_cFv) {
+asm void daTbox_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/initBaseMtx__8daTbox_cFv.s"
 }
@@ -957,7 +1075,7 @@ ASM_FUNCTION(initBaseMtx__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__8daTbox_cFv) {
+asm void daTbox_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/setBaseMtx__8daTbox_cFv.s"
 }
@@ -968,7 +1086,7 @@ ASM_FUNCTION(setBaseMtx__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__8daTbox_cFv) {
+asm void daTbox_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/mode_proc_call__8daTbox_cFv.s"
 }
@@ -979,7 +1097,7 @@ ASM_FUNCTION(mode_proc_call__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_exec_wait__8daTbox_cFv) {
+asm void daTbox_c::mode_exec_wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/mode_exec_wait__8daTbox_cFv.s"
 }
@@ -990,7 +1108,7 @@ ASM_FUNCTION(mode_exec_wait__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_exec__8daTbox_cFv) {
+asm void daTbox_c::mode_exec() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/mode_exec__8daTbox_cFv.s"
 }
@@ -1001,7 +1119,7 @@ ASM_FUNCTION(mode_exec__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__8daTbox_cFv) {
+asm void daTbox_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/create1st__8daTbox_cFv.s"
 }
@@ -1012,7 +1130,7 @@ ASM_FUNCTION(create1st__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__8daTbox_cFPPA3_A4_f) {
+extern "C" asm void Execute__8daTbox_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/Execute__8daTbox_cFPPA3_A4_f.s"
 }
@@ -1023,7 +1141,7 @@ ASM_FUNCTION(Execute__8daTbox_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__8daTbox_cFv) {
+asm void daTbox_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/Draw__8daTbox_cFv.s"
 }
@@ -1034,7 +1152,7 @@ ASM_FUNCTION(Draw__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__8daTbox_cFv) {
+asm void daTbox_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/Delete__8daTbox_cFv.s"
 }
@@ -1045,7 +1163,7 @@ ASM_FUNCTION(Delete__8daTbox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox_create1st__FP8daTbox_c) {
+asm void daTbox_create1st(daTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/daTbox_create1st__FP8daTbox_c.s"
 }
@@ -1056,7 +1174,7 @@ ASM_FUNCTION(daTbox_create1st__FP8daTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1067,7 +1185,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1078,7 +1196,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__8cM3dGCylFv.s"
 }
@@ -1089,7 +1207,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__8cM3dGAabFv.s"
 }
@@ -1100,7 +1218,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__10dCcD_GSttsFv.s"
 }
@@ -1111,7 +1229,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox_MoveBGDelete__FP8daTbox_c) {
+asm void daTbox_MoveBGDelete(daTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/daTbox_MoveBGDelete__FP8daTbox_c.s"
 }
@@ -1122,7 +1240,7 @@ ASM_FUNCTION(daTbox_MoveBGDelete__FP8daTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox_MoveBGExecute__FP8daTbox_c) {
+asm void daTbox_MoveBGExecute(daTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/daTbox_MoveBGExecute__FP8daTbox_c.s"
 }
@@ -1133,7 +1251,7 @@ ASM_FUNCTION(daTbox_MoveBGExecute__FP8daTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox_MoveBGDraw__FP8daTbox_c) {
+asm void daTbox_MoveBGDraw(daTbox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/daTbox_MoveBGDraw__FP8daTbox_c.s"
 }
@@ -1144,7 +1262,7 @@ ASM_FUNCTION(daTbox_MoveBGDraw__FP8daTbox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__10cCcD_GSttsFv.s"
 }
@@ -1155,7 +1273,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTbox_HIO_cFv) {
+asm daTbox_HIO_c::~daTbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__dt__12daTbox_HIO_cFv.s"
 }
@@ -1166,7 +1284,7 @@ ASM_FUNCTION(__dt__12daTbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tbox_cpp) {
+extern "C" asm void __sinit_d_a_tbox_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/__sinit_d_a_tbox_cpp.s"
 }
@@ -1177,7 +1295,7 @@ ASM_FUNCTION(__sinit_d_a_tbox_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80496188) {
+extern "C" asm void func_80496188() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/func_80496188.s"
 }
@@ -1188,7 +1306,7 @@ ASM_FUNCTION(func_80496188) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80496190) {
+extern "C" asm void func_80496190() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/func_80496190.s"
 }
@@ -1199,7 +1317,7 @@ ASM_FUNCTION(func_80496190) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80496198) {
+extern "C" asm void func_80496198() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/func_80496198.s"
 }
@@ -1210,7 +1328,7 @@ ASM_FUNCTION(func_80496198) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804961A0) {
+extern "C" asm void func_804961A0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/func_804961A0.s"
 }
@@ -1221,7 +1339,7 @@ ASM_FUNCTION(func_804961A0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804961A8) {
+extern "C" asm void func_804961A8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox/d_a_tbox/func_804961A8.s"
 }
@@ -1229,25 +1347,15 @@ ASM_FUNCTION(func_804961A8) {
 
 
 /* 804961B0-804961B8 0008+00 .text      Create__8daTbox_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Create__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/Create__8daTbox_cFv.s"
+bool daTbox_c::Create() {
+	return true;
 }
-#pragma pop
 
 
 /* 804961B8-804961C0 0008+00 .text      checkSmallTbox__8daTbox_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkSmallTbox__8daTbox_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkSmallTbox__8daTbox_cFv.s"
+bool daTbox_c::checkSmallTbox() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjPDwall_c;
+
+struct daObjPDwall_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjPDwall_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__13daObjPDwall_cFv();
-extern "C" extern void setMtx__13daObjPDwall_cFv();
-extern "C" extern void CreateHeap__13daObjPDwall_cFv();
-extern "C" extern void Create__13daObjPDwall_cFv();
-extern "C" extern void Execute__13daObjPDwall_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjPDwall_cFv();
-extern "C" extern void Delete__13daObjPDwall_cFv();
-extern "C" extern void daObjPDwall_create1st__FP13daObjPDwall_c();
-extern "C" extern void daObjPDwall_MoveBGDelete__FP13daObjPDwall_c();
-extern "C" extern void daObjPDwall_MoveBGExecute__FP13daObjPDwall_c();
-extern "C" extern void daObjPDwall_MoveBGDraw__FP13daObjPDwall_c();
-extern "C" extern void __dt__13daObjPDwall_cFv();
+extern "C" void Execute__13daObjPDwall_cFPPA3_A4_f();
+void daObjPDwall_create1st(daObjPDwall_c*);
+void daObjPDwall_MoveBGDelete(daObjPDwall_c*);
+void daObjPDwall_MoveBGExecute(daObjPDwall_c*);
+void daObjPDwall_MoveBGDraw(daObjPDwall_c*);
+
+extern "C" void create1st__13daObjPDwall_cFv();
+extern "C" void setMtx__13daObjPDwall_cFv();
+extern "C" void CreateHeap__13daObjPDwall_cFv();
+extern "C" void Create__13daObjPDwall_cFv();
+extern "C" void Execute__13daObjPDwall_cFPPA3_A4_f();
+extern "C" void Draw__13daObjPDwall_cFv();
+extern "C" void Delete__13daObjPDwall_cFv();
+extern "C" void daObjPDwall_create1st__FP13daObjPDwall_c();
+extern "C" void daObjPDwall_MoveBGDelete__FP13daObjPDwall_c();
+extern "C" void daObjPDwall_MoveBGExecute__FP13daObjPDwall_c();
+extern "C" void daObjPDwall_MoveBGDraw__FP13daObjPDwall_c();
+extern "C" void __dt__13daObjPDwall_cFv();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3666;
 SECTION_RODATA extern const u8 lit_3667[4];
@@ -40,7 +62,9 @@ SECTION_DATA extern void*const __vt__13daObjPDwall_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -50,7 +74,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/create1st__13daObjPDwall_cFv.s"
 }
@@ -61,7 +85,7 @@ ASM_FUNCTION(create1st__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/setMtx__13daObjPDwall_cFv.s"
 }
@@ -72,7 +96,7 @@ ASM_FUNCTION(setMtx__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/CreateHeap__13daObjPDwall_cFv.s"
 }
@@ -83,7 +107,7 @@ ASM_FUNCTION(CreateHeap__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/Create__13daObjPDwall_cFv.s"
 }
@@ -94,7 +118,7 @@ ASM_FUNCTION(Create__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjPDwall_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjPDwall_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/Execute__13daObjPDwall_cFPPA3_A4_f.s"
 }
@@ -105,7 +129,7 @@ ASM_FUNCTION(Execute__13daObjPDwall_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/Draw__13daObjPDwall_cFv.s"
 }
@@ -116,7 +140,7 @@ ASM_FUNCTION(Draw__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjPDwall_cFv) {
+asm void daObjPDwall_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/Delete__13daObjPDwall_cFv.s"
 }
@@ -127,7 +151,7 @@ ASM_FUNCTION(Delete__13daObjPDwall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDwall_create1st__FP13daObjPDwall_c) {
+asm void daObjPDwall_create1st(daObjPDwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_create1st__FP13daObjPDwall_c.s"
 }
@@ -138,7 +162,7 @@ ASM_FUNCTION(daObjPDwall_create1st__FP13daObjPDwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDwall_MoveBGDelete__FP13daObjPDwall_c) {
+asm void daObjPDwall_MoveBGDelete(daObjPDwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGDelete__FP13daObjPDwall_c.s"
 }
@@ -149,7 +173,7 @@ ASM_FUNCTION(daObjPDwall_MoveBGDelete__FP13daObjPDwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDwall_MoveBGExecute__FP13daObjPDwall_c) {
+asm void daObjPDwall_MoveBGExecute(daObjPDwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGExecute__FP13daObjPDwall_c.s"
 }
@@ -160,7 +184,7 @@ ASM_FUNCTION(daObjPDwall_MoveBGExecute__FP13daObjPDwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDwall_MoveBGDraw__FP13daObjPDwall_c) {
+asm void daObjPDwall_MoveBGDraw(daObjPDwall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGDraw__FP13daObjPDwall_c.s"
 }
@@ -171,7 +195,7 @@ ASM_FUNCTION(daObjPDwall_MoveBGDraw__FP13daObjPDwall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObjPDwall_cFv) {
+asm daObjPDwall_c::~daObjPDwall_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/__dt__13daObjPDwall_cFv.s"
 }

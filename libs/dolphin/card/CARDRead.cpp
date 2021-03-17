@@ -9,73 +9,88 @@
 // Forward References:
 // 
 
-extern "C" extern void __CARDSeek();
-extern "C" extern void ReadCallback();
-extern "C" extern void CARDReadAsync();
-extern "C" extern void CARDRead();
+extern "C" void __CARDSeek();
+extern "C" static void ReadCallback();
+extern "C" static void CARDReadAsync();
+extern "C" void CARDRead();
+
+extern "C" void __CARDSeek();
+extern "C" static void ReadCallback();
+extern "C" static void CARDReadAsync();
+extern "C" void CARDRead();
 
 // 
 // External References:
 // 
 
-extern "C" extern void DCInvalidateRange();
-extern "C" extern void __CARDDefaultApiCallback();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void __CARDRead();
-extern "C" extern void __CARDGetFatBlock();
-extern "C" extern void __CARDGetDirBlock();
-extern "C" extern void __CARDIsReadable();
+extern "C" void DCInvalidateRange();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDRead();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDIsReadable();
+
+extern "C" void DCInvalidateRange();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDRead();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDIsReadable();
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 803584A0-80358658 01B8+00 .text      __CARDSeek                                                   */
+/* 803584A0-80358658 01B8+00 rc=2 efc=1 .text      __CARDSeek                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDSeek) {
+extern "C" asm void __CARDSeek() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/__CARDSeek.s"
 }
 #pragma pop
 
 
-/* 80358658-80358788 0130+00 .text      ReadCallback                                                 */
+/* 80358658-80358788 0130+00 rc=1 efc=0 .text      ReadCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ReadCallback) {
+extern "C" asm static void ReadCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/ReadCallback.s"
 }
 #pragma pop
 
 
-/* 80358788-803588CC 0144+00 .text      CARDReadAsync                                                */
+/* 80358788-803588CC 0144+00 rc=1 efc=0 .text      CARDReadAsync                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDReadAsync) {
+extern "C" asm static void CARDReadAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/CARDReadAsync.s"
 }
 #pragma pop
 
 
-/* 803588CC-80358914 0048+00 .text      CARDRead                                                     */
+/* 803588CC-80358914 0048+00 rc=2 efc=2 .text      CARDRead                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDRead) {
+extern "C" asm void CARDRead() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/CARDRead.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,20 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_Lv5Soup_c {
+	void create();
+	bool Delete();
+	void Execute();
+	bool Draw();
+	void isAreaCheck();
+	~daTag_Lv5Soup_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__15daTag_Lv5Soup_cFv();
-extern "C" extern void Delete__15daTag_Lv5Soup_cFv();
-extern "C" extern void Execute__15daTag_Lv5Soup_cFv();
-extern "C" extern void Draw__15daTag_Lv5Soup_cFv();
-extern "C" extern void isAreaCheck__15daTag_Lv5Soup_cFv();
-extern "C" extern void daTag_Lv5Soup_Create__FPv();
-extern "C" extern void daTag_Lv5Soup_Delete__FPv();
-extern "C" extern void daTag_Lv5Soup_Execute__FPv();
-extern "C" extern void daTag_Lv5Soup_Draw__FPv();
-extern "C" extern void daTag_Lv5Soup_IsDelete__FPv();
-extern "C" extern void __dt__15daTag_Lv5Soup_cFv();
+void daTag_Lv5Soup_Create(void*);
+void daTag_Lv5Soup_Delete(void*);
+void daTag_Lv5Soup_Execute(void*);
+void daTag_Lv5Soup_Draw(void*);
+bool daTag_Lv5Soup_IsDelete(void*);
+
+extern "C" void create__15daTag_Lv5Soup_cFv();
+extern "C" bool Delete__15daTag_Lv5Soup_cFv();
+extern "C" void Execute__15daTag_Lv5Soup_cFv();
+extern "C" bool Draw__15daTag_Lv5Soup_cFv();
+extern "C" void isAreaCheck__15daTag_Lv5Soup_cFv();
+extern "C" void daTag_Lv5Soup_Create__FPv();
+extern "C" void daTag_Lv5Soup_Delete__FPv();
+extern "C" void daTag_Lv5Soup_Execute__FPv();
+extern "C" void daTag_Lv5Soup_Draw__FPv();
+extern "C" bool daTag_Lv5Soup_IsDelete__FPv();
+extern "C" void __dt__15daTag_Lv5Soup_cFv();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u32 lit_3657;
@@ -37,7 +56,9 @@ SECTION_DATA extern void*const __vt__15daTag_Lv5Soup_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +68,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daTag_Lv5Soup_cFv) {
+asm void daTag_Lv5Soup_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/create__15daTag_Lv5Soup_cFv.s"
 }
@@ -55,21 +76,16 @@ ASM_FUNCTION(create__15daTag_Lv5Soup_cFv) {
 
 
 /* 80D5ADEC-80D5ADF4 0008+00 .text      Delete__15daTag_Lv5Soup_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daTag_Lv5Soup_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/Delete__15daTag_Lv5Soup_cFv.s"
+bool daTag_Lv5Soup_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5ADF4-80D5AE9C 00A8+00 .text      Execute__15daTag_Lv5Soup_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daTag_Lv5Soup_cFv) {
+asm void daTag_Lv5Soup_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/Execute__15daTag_Lv5Soup_cFv.s"
 }
@@ -77,21 +93,16 @@ ASM_FUNCTION(Execute__15daTag_Lv5Soup_cFv) {
 
 
 /* 80D5AE9C-80D5AEA4 0008+00 .text      Draw__15daTag_Lv5Soup_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daTag_Lv5Soup_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/Draw__15daTag_Lv5Soup_cFv.s"
+bool daTag_Lv5Soup_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5AEA4-80D5B06C 01C8+00 .text      isAreaCheck__15daTag_Lv5Soup_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isAreaCheck__15daTag_Lv5Soup_cFv) {
+asm void daTag_Lv5Soup_c::isAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/isAreaCheck__15daTag_Lv5Soup_cFv.s"
 }
@@ -102,7 +113,7 @@ ASM_FUNCTION(isAreaCheck__15daTag_Lv5Soup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lv5Soup_Create__FPv) {
+asm void daTag_Lv5Soup_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Create__FPv.s"
 }
@@ -113,7 +124,7 @@ ASM_FUNCTION(daTag_Lv5Soup_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lv5Soup_Delete__FPv) {
+asm void daTag_Lv5Soup_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Delete__FPv.s"
 }
@@ -124,7 +135,7 @@ ASM_FUNCTION(daTag_Lv5Soup_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lv5Soup_Execute__FPv) {
+asm void daTag_Lv5Soup_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Execute__FPv.s"
 }
@@ -135,7 +146,7 @@ ASM_FUNCTION(daTag_Lv5Soup_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lv5Soup_Draw__FPv) {
+asm void daTag_Lv5Soup_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_Draw__FPv.s"
 }
@@ -143,21 +154,16 @@ ASM_FUNCTION(daTag_Lv5Soup_Draw__FPv) {
 
 
 /* 80D5B0EC-80D5B0F4 0008+00 .text      daTag_Lv5Soup_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_Lv5Soup_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/daTag_Lv5Soup_IsDelete__FPv.s"
+bool daTag_Lv5Soup_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5B0F4-80D5B154 0060+00 .text      __dt__15daTag_Lv5Soup_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTag_Lv5Soup_cFv) {
+asm daTag_Lv5Soup_c::~daTag_Lv5Soup_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv5soup/d_a_tag_lv5soup/__dt__15daTag_Lv5Soup_cFv.s"
 }

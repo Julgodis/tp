@@ -6,14 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagMagne_c;
+struct fopAc_ac_c;
+
+struct daTagMagne_c {
+	void Create();
+	void create();
+	void _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__12daTagMagne_cFv();
-extern "C" extern void create__12daTagMagne_cFv();
-extern "C" extern void _delete__12daTagMagne_cFv();
-extern "C" extern void daTagMagne_Delete__FP12daTagMagne_c();
-extern "C" extern void daTagMagne_Create__FP10fopAc_ac_c();
+void daTagMagne_Delete(daTagMagne_c*);
+void daTagMagne_Create(fopAc_ac_c*);
+
+extern "C" void Create__12daTagMagne_cFv();
+extern "C" void create__12daTagMagne_cFv();
+extern "C" void _delete__12daTagMagne_cFv();
+extern "C" void daTagMagne_Delete__FP12daTagMagne_c();
+extern "C" void daTagMagne_Create__FP10fopAc_ac_c();
 SECTION_DATA extern u8 l_daTagMagne_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Magne[48];
 
@@ -21,7 +40,9 @@ SECTION_DATA extern u8 g_profile_Tag_Magne[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -31,7 +52,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daTagMagne_cFv) {
+asm void daTagMagne_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/Create__12daTagMagne_cFv.s"
 }
@@ -42,7 +63,7 @@ ASM_FUNCTION(Create__12daTagMagne_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagMagne_cFv) {
+asm void daTagMagne_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/func_805A54DC.s"
 }
@@ -53,7 +74,7 @@ ASM_FUNCTION(create__12daTagMagne_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daTagMagne_cFv) {
+asm void daTagMagne_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/_delete__12daTagMagne_cFv.s"
 }
@@ -64,7 +85,7 @@ ASM_FUNCTION(_delete__12daTagMagne_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMagne_Delete__FP12daTagMagne_c) {
+asm void daTagMagne_Delete(daTagMagne_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/daTagMagne_Delete__FP12daTagMagne_c.s"
 }
@@ -75,7 +96,7 @@ ASM_FUNCTION(daTagMagne_Delete__FP12daTagMagne_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMagne_Create__FP10fopAc_ac_c) {
+asm void daTagMagne_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_magne/d_a_tag_magne/daTagMagne_Create__FP10fopAc_ac_c.s"
 }

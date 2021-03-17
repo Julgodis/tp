@@ -6,24 +6,38 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAIAudible (JAIAudible) False/False
+/* top-level dependencies (begin JAIAudible) */
+/* top-level dependencies (end JAIAudible) */
+struct JAIAudible {
+	/* 8029EFAC */ ~JAIAudible();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__10JAIAudibleFv();
+
+extern "C" void __dt__10JAIAudibleFv();
 SECTION_DATA extern void*const __vt__10JAIAudible[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C9820-803C9838 0014+04 .data      __vt__10JAIAudible                                           */
+/* 803C9820-803C9838 0014+04 rc=2 efc=1 .data      __vt__10JAIAudible                                           */
 void* const __vt__10JAIAudible[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -34,15 +48,14 @@ void* const __vt__10JAIAudible[6] = {
 	NULL,
 };
 
-/* 8029EFAC-8029EFF4 0048+00 .text      __dt__10JAIAudibleFv                                         */
+/* 8029EFAC-8029EFF4 0048+00 rc=2 efc=1 .text      __dt__10JAIAudibleFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JAIAudibleFv) {
+asm JAIAudible::~JAIAudible() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIAudible/__dt__10JAIAudibleFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

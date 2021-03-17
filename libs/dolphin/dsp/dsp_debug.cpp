@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void __DSP_debug_printf();
+extern "C" void __DSP_debug_printf();
+
+extern "C" void __DSP_debug_printf();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80352580-803525D0 0050+00 .text      __DSP_debug_printf                                           */
+/* 80352580-803525D0 0050+00 rc=2 efc=2 .text      __DSP_debug_printf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DSP_debug_printf) {
+extern "C" asm void __DSP_debug_printf() {
 	nofralloc
 #include "asm/dolphin/dsp/dsp_debug/__DSP_debug_printf.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

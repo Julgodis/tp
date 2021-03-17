@@ -6,29 +6,82 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct ito_s;
+struct fopAc_ac_c;
+struct obj_ito_class;
+
+struct daObj_Ito_HIO_c {
+	daObj_Ito_HIO_c();
+	~daObj_Ito_HIO_c();
+};
+
+struct obj_ito_class {
+};
+
+struct ito_s {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daObj_Ito_HIO_cFv();
-extern "C" extern void daObj_Ito_Draw__FP13obj_ito_class();
-extern "C" extern void cut_line_calc__FP13obj_ito_classP5ito_si();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void cut_line__FP13obj_ito_class();
-extern "C" extern void cut_set__FP13obj_ito_classi();
-extern "C" extern void ito_end__FP5ito_s();
-extern "C" extern void action__FP13obj_ito_class();
-extern "C" extern void daObj_Ito_Execute__FP13obj_ito_class();
-extern "C" extern void daObj_Ito_IsDelete__FP13obj_ito_class();
-extern "C" extern void daObj_Ito_Delete__FP13obj_ito_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Ito_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__15daObj_Ito_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_ito_cpp();
+void daObj_Ito_Draw(obj_ito_class*);
+void cut_line_calc(obj_ito_class*, ito_s*, s32);
+void cut_line(obj_ito_class*);
+void cut_set(obj_ito_class*, s32);
+void ito_end(ito_s*);
+void action(obj_ito_class*);
+void daObj_Ito_Execute(obj_ito_class*);
+bool daObj_Ito_IsDelete(obj_ito_class*);
+void daObj_Ito_Delete(obj_ito_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Ito_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_ito_cpp();
+
+extern "C" void __ct__15daObj_Ito_HIO_cFv();
+extern "C" void daObj_Ito_Draw__FP13obj_ito_class();
+extern "C" void cut_line_calc__FP13obj_ito_classP5ito_si();
+extern "C" void __dt__4cXyzFv();
+extern "C" void cut_line__FP13obj_ito_class();
+extern "C" void cut_set__FP13obj_ito_classi();
+extern "C" void ito_end__FP5ito_s();
+extern "C" void action__FP13obj_ito_class();
+extern "C" void daObj_Ito_Execute__FP13obj_ito_class();
+extern "C" bool daObj_Ito_IsDelete__FP13obj_ito_class();
+extern "C" void daObj_Ito_Delete__FP13obj_ito_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Ito_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__15daObj_Ito_HIO_cFv();
+extern "C" void __sinit_d_a_obj_ito_cpp();
 SECTION_RODATA extern const u32 lit_3770;
 SECTION_RODATA extern const u32 lit_3771;
 SECTION_RODATA extern const u32 lit_3794;
@@ -89,8 +142,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -100,7 +156,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daObj_Ito_HIO_cFv) {
+asm daObj_Ito_HIO_c::daObj_Ito_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__ct__15daObj_Ito_HIO_cFv.s"
 }
@@ -111,7 +167,7 @@ ASM_FUNCTION(__ct__15daObj_Ito_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ito_Draw__FP13obj_ito_class) {
+asm void daObj_Ito_Draw(obj_ito_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_Draw__FP13obj_ito_class.s"
 }
@@ -122,7 +178,7 @@ ASM_FUNCTION(daObj_Ito_Draw__FP13obj_ito_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_line_calc__FP13obj_ito_classP5ito_si) {
+asm void cut_line_calc(obj_ito_class* field_0, ito_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/cut_line_calc__FP13obj_ito_classP5ito_si.s"
 }
@@ -133,7 +189,7 @@ ASM_FUNCTION(cut_line_calc__FP13obj_ito_classP5ito_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__dt__4cXyzFv.s"
 }
@@ -144,7 +200,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_line__FP13obj_ito_class) {
+asm void cut_line(obj_ito_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/cut_line__FP13obj_ito_class.s"
 }
@@ -155,7 +211,7 @@ ASM_FUNCTION(cut_line__FP13obj_ito_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_set__FP13obj_ito_classi) {
+asm void cut_set(obj_ito_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/cut_set__FP13obj_ito_classi.s"
 }
@@ -166,7 +222,7 @@ ASM_FUNCTION(cut_set__FP13obj_ito_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ito_end__FP5ito_s) {
+asm void ito_end(ito_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/ito_end__FP5ito_s.s"
 }
@@ -177,7 +233,7 @@ ASM_FUNCTION(ito_end__FP5ito_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP13obj_ito_class) {
+asm void action(obj_ito_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/action__FP13obj_ito_class.s"
 }
@@ -188,7 +244,7 @@ ASM_FUNCTION(action__FP13obj_ito_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ito_Execute__FP13obj_ito_class) {
+asm void daObj_Ito_Execute(obj_ito_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_Execute__FP13obj_ito_class.s"
 }
@@ -196,21 +252,16 @@ ASM_FUNCTION(daObj_Ito_Execute__FP13obj_ito_class) {
 
 
 /* 8047CFA8-8047CFB0 0008+00 .text      daObj_Ito_IsDelete__FP13obj_ito_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ito_IsDelete__FP13obj_ito_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_IsDelete__FP13obj_ito_class.s"
+bool daObj_Ito_IsDelete(obj_ito_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8047CFB0-8047D024 0074+00 .text      daObj_Ito_Delete__FP13obj_ito_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ito_Delete__FP13obj_ito_class) {
+asm void daObj_Ito_Delete(obj_ito_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_Delete__FP13obj_ito_class.s"
 }
@@ -221,7 +272,7 @@ ASM_FUNCTION(daObj_Ito_Delete__FP13obj_ito_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -232,7 +283,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ito_Create__FP10fopAc_ac_c) {
+asm void daObj_Ito_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_Create__FP10fopAc_ac_c.s"
 }
@@ -240,21 +291,16 @@ ASM_FUNCTION(daObj_Ito_Create__FP10fopAc_ac_c) {
 
 
 /* 8047D594-8047D598 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8047D598-8047D664 00CC+00 .text      __dt__8dCcD_SphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__dt__8dCcD_SphFv.s"
 }
@@ -265,7 +311,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__ct__8dCcD_SphFv.s"
 }
@@ -276,7 +322,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__dt__8cM3dGSphFv.s"
 }
@@ -287,7 +333,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__dt__8cM3dGAabFv.s"
 }
@@ -298,7 +344,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_Ito_HIO_cFv) {
+asm daObj_Ito_HIO_c::~daObj_Ito_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__dt__15daObj_Ito_HIO_cFv.s"
 }
@@ -309,7 +355,7 @@ ASM_FUNCTION(__dt__15daObj_Ito_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ito_cpp) {
+extern "C" asm void __sinit_d_a_obj_ito_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__sinit_d_a_obj_ito_cpp.s"
 }

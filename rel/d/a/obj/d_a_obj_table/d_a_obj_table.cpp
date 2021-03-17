@@ -6,19 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjTable_c;
+
+struct daObjTable_c {
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjTable_Draw__FP12daObjTable_c();
-extern "C" extern void daObjTable_Execute__FP12daObjTable_c();
-extern "C" extern void daObjTable_IsDelete__FP12daObjTable_c();
-extern "C" extern void daObjTable_Delete__FP12daObjTable_c();
-extern "C" extern void daObjTable_Create__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__12daObjTable_cFv();
-extern "C" extern void Create__12daObjTable_cFv();
-extern "C" extern void Execute__12daObjTable_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjTable_cFv();
-extern "C" extern void Delete__12daObjTable_cFv();
+void daObjTable_Draw(daObjTable_c*);
+void daObjTable_Execute(daObjTable_c*);
+bool daObjTable_IsDelete(daObjTable_c*);
+void daObjTable_Delete(daObjTable_c*);
+void daObjTable_Create(fopAc_ac_c*);
+extern "C" void Execute__12daObjTable_cFPPA3_A4_f();
+
+extern "C" void daObjTable_Draw__FP12daObjTable_c();
+extern "C" void daObjTable_Execute__FP12daObjTable_c();
+extern "C" bool daObjTable_IsDelete__FP12daObjTable_c();
+extern "C" void daObjTable_Delete__FP12daObjTable_c();
+extern "C" void daObjTable_Create__FP10fopAc_ac_c();
+extern "C" void CreateHeap__12daObjTable_cFv();
+extern "C" void Create__12daObjTable_cFv();
+extern "C" void Execute__12daObjTable_cFPPA3_A4_f();
+extern "C" void Draw__12daObjTable_cFv();
+extern "C" void Delete__12daObjTable_cFv();
 SECTION_RODATA extern const u32 lit_4017;
 SECTION_RODATA extern const u32 lit_4077;
 SECTION_RODATA extern const u8 stringBase0[16];
@@ -31,7 +55,9 @@ SECTION_DATA extern void*const __vt__12daObjTable_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +67,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTable_Draw__FP12daObjTable_c) {
+asm void daObjTable_Draw(daObjTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/daObjTable_Draw__FP12daObjTable_c.s"
 }
@@ -52,7 +78,7 @@ ASM_FUNCTION(daObjTable_Draw__FP12daObjTable_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTable_Execute__FP12daObjTable_c) {
+asm void daObjTable_Execute(daObjTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/daObjTable_Execute__FP12daObjTable_c.s"
 }
@@ -60,21 +86,16 @@ ASM_FUNCTION(daObjTable_Execute__FP12daObjTable_c) {
 
 
 /* 80D06484-80D0648C 0008+00 .text      daObjTable_IsDelete__FP12daObjTable_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjTable_IsDelete__FP12daObjTable_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/daObjTable_IsDelete__FP12daObjTable_c.s"
+bool daObjTable_IsDelete(daObjTable_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D0648C-80D064B0 0024+00 .text      daObjTable_Delete__FP12daObjTable_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTable_Delete__FP12daObjTable_c) {
+asm void daObjTable_Delete(daObjTable_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/daObjTable_Delete__FP12daObjTable_c.s"
 }
@@ -85,7 +106,7 @@ ASM_FUNCTION(daObjTable_Delete__FP12daObjTable_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTable_Create__FP10fopAc_ac_c) {
+asm void daObjTable_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/daObjTable_Create__FP10fopAc_ac_c.s"
 }
@@ -96,7 +117,7 @@ ASM_FUNCTION(daObjTable_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjTable_cFv) {
+asm void daObjTable_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/CreateHeap__12daObjTable_cFv.s"
 }
@@ -107,7 +128,7 @@ ASM_FUNCTION(CreateHeap__12daObjTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjTable_cFv) {
+asm void daObjTable_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/Create__12daObjTable_cFv.s"
 }
@@ -118,7 +139,7 @@ ASM_FUNCTION(Create__12daObjTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjTable_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjTable_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/Execute__12daObjTable_cFPPA3_A4_f.s"
 }
@@ -129,7 +150,7 @@ ASM_FUNCTION(Execute__12daObjTable_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjTable_cFv) {
+asm void daObjTable_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/Draw__12daObjTable_cFv.s"
 }
@@ -140,7 +161,7 @@ ASM_FUNCTION(Draw__12daObjTable_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjTable_cFv) {
+asm void daObjTable_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_table/d_a_obj_table/Delete__12daObjTable_cFv.s"
 }

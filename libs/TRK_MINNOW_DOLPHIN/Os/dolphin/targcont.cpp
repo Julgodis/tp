@@ -9,30 +9,36 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKTargetContinue();
+extern "C" void TRKTargetContinue();
+
+extern "C" void TRKTargetContinue();
 
 // 
 // External References:
 // 
 
-extern "C" extern void TRKSwapAndGo();
-extern "C" extern void TRKTargetSetStopped();
-extern "C" extern void UnreserveEXI2Port();
-extern "C" extern void ReserveEXI2Port();
+extern "C" void TRKSwapAndGo();
+extern "C" void TRKTargetSetStopped();
+extern "C" void UnreserveEXI2Port();
+extern "C" void ReserveEXI2Port();
+
+extern "C" void TRKSwapAndGo();
+extern "C" void TRKTargetSetStopped();
+extern "C" void UnreserveEXI2Port();
+extern "C" void ReserveEXI2Port();
 
 // 
 // Declarations:
 // 
 
-/* 8037214C-80372180 0034+00 .text      TRKTargetContinue                                            */
+/* 8037214C-80372180 0034+00 rc=2 efc=2 .text      TRKTargetContinue                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKTargetContinue) {
+extern "C" asm void TRKTargetContinue() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/targcont/TRKTargetContinue.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

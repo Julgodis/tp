@@ -6,39 +6,106 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cBgS_PolyInfo;
+struct daObjSwChain_c;
+struct cXyz;
+
+struct fopAc_ac_c {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct daObjSwChain_c {
+	struct chain_s {
+		~daObjSwChain_c::chain_s();
+		daObjSwChain_c::chain_s();
+	};
+
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void execute();
+	void getChainBasePos(cXyz*);
+	void chain_control();
+	void chain_control2();
+	void initChainMtx();
+	void setChainMtx();
+	void chain_count_control();
+	void setTension();
+	void getTopChainNo();
+	void checkPlayerPull();
+	void draw();
+	void _delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cXyz {
+};
+
+struct daPy_py_c {
+	void getRightHandPos() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void GetActorName__FR13cBgS_PolyInfo();
-extern "C" extern void Create__14daObjSwChain_cFv();
-extern "C" extern void CreateHeap__14daObjSwChain_cFv();
-extern "C" extern void __dt__Q214daObjSwChain_c7chain_sFv();
-extern "C" extern void __ct__Q214daObjSwChain_c7chain_sFv();
-extern "C" extern void create1st__14daObjSwChain_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__14daObjSwChain_cFv();
-extern "C" extern void getChainBasePos__14daObjSwChain_cFP4cXyz();
-extern "C" extern void chain_control__14daObjSwChain_cFv();
-extern "C" extern void chain_control2__14daObjSwChain_cFv();
-extern "C" extern void initChainMtx__14daObjSwChain_cFv();
-extern "C" extern void setChainMtx__14daObjSwChain_cFv();
-extern "C" extern void chain_count_control__14daObjSwChain_cFv();
-extern "C" extern void setTension__14daObjSwChain_cFv();
-extern "C" extern void getTopChainNo__14daObjSwChain_cFv();
-extern "C" extern void checkPlayerPull__14daObjSwChain_cFv();
-extern "C" extern void draw__14daObjSwChain_cFv();
-extern "C" extern void _delete__14daObjSwChain_cFv();
-extern "C" extern void daObjSwChain_Draw__FP14daObjSwChain_c();
-extern "C" extern void daObjSwChain_Execute__FP14daObjSwChain_c();
-extern "C" extern void daObjSwChain_Delete__FP14daObjSwChain_c();
-extern "C" extern void daObjSwChain_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80CFB69C();
-extern "C" extern void func_80CFB6B8();
-extern "C" extern void func_80CFB6C0();
-extern "C" extern void getRightHandPos__9daPy_py_cCFv();
+void CheckCreateHeap(fopAc_ac_c*);
+void GetActorName(cBgS_PolyInfo&);
+void daObjSwChain_Draw(daObjSwChain_c*);
+void daObjSwChain_Execute(daObjSwChain_c*);
+void daObjSwChain_Delete(daObjSwChain_c*);
+void daObjSwChain_Create(fopAc_ac_c*);
+extern "C" void func_80CFB69C();
+extern "C" void func_80CFB6B8();
+extern "C" void func_80CFB6C0();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void GetActorName__FR13cBgS_PolyInfo();
+extern "C" void Create__14daObjSwChain_cFv();
+extern "C" void CreateHeap__14daObjSwChain_cFv();
+extern "C" void __dt__Q214daObjSwChain_c7chain_sFv();
+extern "C" void __ct__Q214daObjSwChain_c7chain_sFv();
+extern "C" void create1st__14daObjSwChain_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__14daObjSwChain_cFv();
+extern "C" void getChainBasePos__14daObjSwChain_cFP4cXyz();
+extern "C" void chain_control__14daObjSwChain_cFv();
+extern "C" void chain_control2__14daObjSwChain_cFv();
+extern "C" void initChainMtx__14daObjSwChain_cFv();
+extern "C" void setChainMtx__14daObjSwChain_cFv();
+extern "C" void chain_count_control__14daObjSwChain_cFv();
+extern "C" void setTension__14daObjSwChain_cFv();
+extern "C" void getTopChainNo__14daObjSwChain_cFv();
+extern "C" void checkPlayerPull__14daObjSwChain_cFv();
+extern "C" void draw__14daObjSwChain_cFv();
+extern "C" void _delete__14daObjSwChain_cFv();
+extern "C" void daObjSwChain_Draw__FP14daObjSwChain_c();
+extern "C" void daObjSwChain_Execute__FP14daObjSwChain_c();
+extern "C" void daObjSwChain_Delete__FP14daObjSwChain_c();
+extern "C" void daObjSwChain_Create__FP10fopAc_ac_c();
+extern "C" void func_80CFB69C();
+extern "C" void func_80CFB6B8();
+extern "C" void func_80CFB6C0();
+extern "C" void getRightHandPos__9daPy_py_cCFv();
 SECTION_RODATA extern const u8 lit_3734[4];
 SECTION_RODATA extern const u32 lit_3735;
 SECTION_RODATA extern const u32 lit_3736;
@@ -90,7 +157,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -100,7 +169,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -111,7 +180,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetActorName__FR13cBgS_PolyInfo) {
+asm void GetActorName(cBgS_PolyInfo& field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/GetActorName__FR13cBgS_PolyInfo.s"
 }
@@ -122,7 +191,7 @@ ASM_FUNCTION(GetActorName__FR13cBgS_PolyInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/Create__14daObjSwChain_cFv.s"
 }
@@ -133,7 +202,7 @@ ASM_FUNCTION(Create__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/CreateHeap__14daObjSwChain_cFv.s"
 }
@@ -144,7 +213,7 @@ ASM_FUNCTION(CreateHeap__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q214daObjSwChain_c7chain_sFv) {
+asm daObjSwChain_c::chain_s::~daObjSwChain_c::chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/__dt__Q214daObjSwChain_c7chain_sFv.s"
 }
@@ -155,7 +224,7 @@ ASM_FUNCTION(__dt__Q214daObjSwChain_c7chain_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q214daObjSwChain_c7chain_sFv) {
+asm daObjSwChain_c::chain_s::daObjSwChain_c::chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/__ct__Q214daObjSwChain_c7chain_sFv.s"
 }
@@ -166,7 +235,7 @@ ASM_FUNCTION(__ct__Q214daObjSwChain_c7chain_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/create1st__14daObjSwChain_cFv.s"
 }
@@ -177,7 +246,7 @@ ASM_FUNCTION(create1st__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -188,7 +257,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/__dt__8cM3dGSphFv.s"
 }
@@ -199,7 +268,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/__dt__8cM3dGAabFv.s"
 }
@@ -210,7 +279,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/execute__14daObjSwChain_cFv.s"
 }
@@ -221,7 +290,7 @@ ASM_FUNCTION(execute__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChainBasePos__14daObjSwChain_cFP4cXyz) {
+asm void daObjSwChain_c::getChainBasePos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/getChainBasePos__14daObjSwChain_cFP4cXyz.s"
 }
@@ -232,7 +301,7 @@ ASM_FUNCTION(getChainBasePos__14daObjSwChain_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::chain_control() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/chain_control__14daObjSwChain_cFv.s"
 }
@@ -243,7 +312,7 @@ ASM_FUNCTION(chain_control__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control2__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::chain_control2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/chain_control2__14daObjSwChain_cFv.s"
 }
@@ -254,7 +323,7 @@ ASM_FUNCTION(chain_control2__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initChainMtx__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::initChainMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/initChainMtx__14daObjSwChain_cFv.s"
 }
@@ -265,7 +334,7 @@ ASM_FUNCTION(initChainMtx__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setChainMtx__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::setChainMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/setChainMtx__14daObjSwChain_cFv.s"
 }
@@ -276,7 +345,7 @@ ASM_FUNCTION(setChainMtx__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_count_control__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::chain_count_control() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/chain_count_control__14daObjSwChain_cFv.s"
 }
@@ -287,7 +356,7 @@ ASM_FUNCTION(chain_count_control__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTension__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::setTension() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/setTension__14daObjSwChain_cFv.s"
 }
@@ -298,7 +367,7 @@ ASM_FUNCTION(setTension__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTopChainNo__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::getTopChainNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/getTopChainNo__14daObjSwChain_cFv.s"
 }
@@ -309,7 +378,7 @@ ASM_FUNCTION(getTopChainNo__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerPull__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::checkPlayerPull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/checkPlayerPull__14daObjSwChain_cFv.s"
 }
@@ -320,7 +389,7 @@ ASM_FUNCTION(checkPlayerPull__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/draw__14daObjSwChain_cFv.s"
 }
@@ -331,7 +400,7 @@ ASM_FUNCTION(draw__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjSwChain_cFv) {
+asm void daObjSwChain_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/_delete__14daObjSwChain_cFv.s"
 }
@@ -342,7 +411,7 @@ ASM_FUNCTION(_delete__14daObjSwChain_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwChain_Draw__FP14daObjSwChain_c) {
+asm void daObjSwChain_Draw(daObjSwChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/daObjSwChain_Draw__FP14daObjSwChain_c.s"
 }
@@ -353,7 +422,7 @@ ASM_FUNCTION(daObjSwChain_Draw__FP14daObjSwChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwChain_Execute__FP14daObjSwChain_c) {
+asm void daObjSwChain_Execute(daObjSwChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/daObjSwChain_Execute__FP14daObjSwChain_c.s"
 }
@@ -364,7 +433,7 @@ ASM_FUNCTION(daObjSwChain_Execute__FP14daObjSwChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwChain_Delete__FP14daObjSwChain_c) {
+asm void daObjSwChain_Delete(daObjSwChain_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/daObjSwChain_Delete__FP14daObjSwChain_c.s"
 }
@@ -375,7 +444,7 @@ ASM_FUNCTION(daObjSwChain_Delete__FP14daObjSwChain_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwChain_Create__FP10fopAc_ac_c) {
+asm void daObjSwChain_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/daObjSwChain_Create__FP10fopAc_ac_c.s"
 }
@@ -386,7 +455,7 @@ ASM_FUNCTION(daObjSwChain_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFB69C) {
+extern "C" asm void func_80CFB69C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/func_80CFB69C.s"
 }
@@ -397,7 +466,7 @@ ASM_FUNCTION(func_80CFB69C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFB6B8) {
+extern "C" asm void func_80CFB6B8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/func_80CFB6B8.s"
 }
@@ -408,7 +477,7 @@ ASM_FUNCTION(func_80CFB6B8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFB6C0) {
+extern "C" asm void func_80CFB6C0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/func_80CFB6C0.s"
 }
@@ -419,7 +488,7 @@ ASM_FUNCTION(func_80CFB6C0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRightHandPos__9daPy_py_cCFv) {
+asm void daPy_py_c::getRightHandPos() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swchain/d_a_obj_swchain/getRightHandPos__9daPy_py_cCFv.s"
 }

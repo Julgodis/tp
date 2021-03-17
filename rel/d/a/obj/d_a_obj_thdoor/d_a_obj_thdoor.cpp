@@ -6,39 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjThDoor_c;
+struct fopAc_ac_c;
+struct dCcD_GObjInf;
+
+struct daObjThDoor_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void set_cyl();
+	void action();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void checkArea();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void checkPlayerPos__FP13daObjThDoor_c();
-extern "C" extern void doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void initBaseMtx__13daObjThDoor_cFv();
-extern "C" extern void setBaseMtx__13daObjThDoor_cFv();
-extern "C" extern void Create__13daObjThDoor_cFv();
-extern "C" extern void CreateHeap__13daObjThDoor_cFv();
-extern "C" extern void create1st__13daObjThDoor_cFv();
-extern "C" extern void Execute__13daObjThDoor_cFPPA3_A4_f();
-extern "C" extern void set_cyl__13daObjThDoor_cFv();
-extern "C" extern void action__13daObjThDoor_cFv();
-extern "C" extern void event_proc_call__13daObjThDoor_cFv();
-extern "C" extern void actionWait__13daObjThDoor_cFv();
-extern "C" extern void actionOrderEvent__13daObjThDoor_cFv();
-extern "C" extern void actionEvent__13daObjThDoor_cFv();
-extern "C" extern void actionDead__13daObjThDoor_cFv();
-extern "C" extern void demoProc__13daObjThDoor_cFv();
-extern "C" extern void checkArea__13daObjThDoor_cFv();
-extern "C" extern void Draw__13daObjThDoor_cFv();
-extern "C" extern void Delete__13daObjThDoor_cFv();
-extern "C" extern void daObjThDoor_create1st__FP13daObjThDoor_c();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjThDoor_MoveBGDelete__FP13daObjThDoor_c();
-extern "C" extern void daObjThDoor_MoveBGExecute__FP13daObjThDoor_c();
-extern "C" extern void daObjThDoor_MoveBGDraw__FP13daObjThDoor_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80D0E5D4();
+void checkPlayerPos(daObjThDoor_c*);
+void doorCoHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+extern "C" void Execute__13daObjThDoor_cFPPA3_A4_f();
+void daObjThDoor_create1st(daObjThDoor_c*);
+void daObjThDoor_MoveBGDelete(daObjThDoor_c*);
+void daObjThDoor_MoveBGExecute(daObjThDoor_c*);
+void daObjThDoor_MoveBGDraw(daObjThDoor_c*);
+extern "C" void func_80D0E5D4();
+
+extern "C" void checkPlayerPos__FP13daObjThDoor_c();
+extern "C" void doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void initBaseMtx__13daObjThDoor_cFv();
+extern "C" void setBaseMtx__13daObjThDoor_cFv();
+extern "C" void Create__13daObjThDoor_cFv();
+extern "C" void CreateHeap__13daObjThDoor_cFv();
+extern "C" void create1st__13daObjThDoor_cFv();
+extern "C" void Execute__13daObjThDoor_cFPPA3_A4_f();
+extern "C" void set_cyl__13daObjThDoor_cFv();
+extern "C" void action__13daObjThDoor_cFv();
+extern "C" void event_proc_call__13daObjThDoor_cFv();
+extern "C" void actionWait__13daObjThDoor_cFv();
+extern "C" void actionOrderEvent__13daObjThDoor_cFv();
+extern "C" void actionEvent__13daObjThDoor_cFv();
+extern "C" void actionDead__13daObjThDoor_cFv();
+extern "C" void demoProc__13daObjThDoor_cFv();
+extern "C" void checkArea__13daObjThDoor_cFv();
+extern "C" void Draw__13daObjThDoor_cFv();
+extern "C" void Delete__13daObjThDoor_cFv();
+extern "C" void daObjThDoor_create1st__FP13daObjThDoor_c();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjThDoor_MoveBGDelete__FP13daObjThDoor_c();
+extern "C" void daObjThDoor_MoveBGExecute__FP13daObjThDoor_c();
+extern "C" void daObjThDoor_MoveBGDraw__FP13daObjThDoor_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80D0E5D4();
 SECTION_RODATA extern const u8 lit_3663[4];
 SECTION_RODATA extern const u32 lit_3681;
 SECTION_RODATA extern const u32 lit_3765;
@@ -75,7 +138,9 @@ SECTION_DATA extern void*const __vt__13daObjThDoor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -85,7 +150,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerPos__FP13daObjThDoor_c) {
+asm void checkPlayerPos(daObjThDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/checkPlayerPos__FP13daObjThDoor_c.s"
 }
@@ -96,7 +161,7 @@ ASM_FUNCTION(checkPlayerPos__FP13daObjThDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void doorCoHitCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/func_80D0D59C.s"
 }
@@ -107,7 +172,7 @@ ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/initBaseMtx__13daObjThDoor_cFv.s"
 }
@@ -118,7 +183,7 @@ ASM_FUNCTION(initBaseMtx__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/setBaseMtx__13daObjThDoor_cFv.s"
 }
@@ -129,7 +194,7 @@ ASM_FUNCTION(setBaseMtx__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/Create__13daObjThDoor_cFv.s"
 }
@@ -140,7 +205,7 @@ ASM_FUNCTION(Create__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/CreateHeap__13daObjThDoor_cFv.s"
 }
@@ -151,7 +216,7 @@ ASM_FUNCTION(CreateHeap__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/create1st__13daObjThDoor_cFv.s"
 }
@@ -162,7 +227,7 @@ ASM_FUNCTION(create1st__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjThDoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjThDoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/Execute__13daObjThDoor_cFPPA3_A4_f.s"
 }
@@ -173,7 +238,7 @@ ASM_FUNCTION(Execute__13daObjThDoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_cyl__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::set_cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/set_cyl__13daObjThDoor_cFv.s"
 }
@@ -184,7 +249,7 @@ ASM_FUNCTION(set_cyl__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/action__13daObjThDoor_cFv.s"
 }
@@ -195,7 +260,7 @@ ASM_FUNCTION(action__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/event_proc_call__13daObjThDoor_cFv.s"
 }
@@ -206,7 +271,7 @@ ASM_FUNCTION(event_proc_call__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/actionWait__13daObjThDoor_cFv.s"
 }
@@ -217,7 +282,7 @@ ASM_FUNCTION(actionWait__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/actionOrderEvent__13daObjThDoor_cFv.s"
 }
@@ -228,7 +293,7 @@ ASM_FUNCTION(actionOrderEvent__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/actionEvent__13daObjThDoor_cFv.s"
 }
@@ -236,21 +301,16 @@ ASM_FUNCTION(actionEvent__13daObjThDoor_cFv) {
 
 
 /* 80D0DE30-80D0DE34 0004+00 .text      actionDead__13daObjThDoor_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__13daObjThDoor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/actionDead__13daObjThDoor_cFv.s"
+void daObjThDoor_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D0DE34-80D0E06C 0238+00 .text      demoProc__13daObjThDoor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/demoProc__13daObjThDoor_cFv.s"
 }
@@ -261,7 +321,7 @@ ASM_FUNCTION(demoProc__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/checkArea__13daObjThDoor_cFv.s"
 }
@@ -272,7 +332,7 @@ ASM_FUNCTION(checkArea__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/Draw__13daObjThDoor_cFv.s"
 }
@@ -283,7 +343,7 @@ ASM_FUNCTION(Draw__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjThDoor_cFv) {
+asm void daObjThDoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/Delete__13daObjThDoor_cFv.s"
 }
@@ -294,7 +354,7 @@ ASM_FUNCTION(Delete__13daObjThDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjThDoor_create1st__FP13daObjThDoor_c) {
+asm void daObjThDoor_create1st(daObjThDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_create1st__FP13daObjThDoor_c.s"
 }
@@ -305,7 +365,7 @@ ASM_FUNCTION(daObjThDoor_create1st__FP13daObjThDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__dt__8dCcD_CylFv.s"
 }
@@ -316,7 +376,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__ct__8dCcD_CylFv.s"
 }
@@ -327,7 +387,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__dt__8cM3dGCylFv.s"
 }
@@ -338,7 +398,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__dt__8cM3dGAabFv.s"
 }
@@ -349,7 +409,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__dt__10dCcD_GSttsFv.s"
 }
@@ -360,7 +420,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjThDoor_MoveBGDelete__FP13daObjThDoor_c) {
+asm void daObjThDoor_MoveBGDelete(daObjThDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGDelete__FP13daObjThDoor_c.s"
 }
@@ -371,7 +431,7 @@ ASM_FUNCTION(daObjThDoor_MoveBGDelete__FP13daObjThDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjThDoor_MoveBGExecute__FP13daObjThDoor_c) {
+asm void daObjThDoor_MoveBGExecute(daObjThDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGExecute__FP13daObjThDoor_c.s"
 }
@@ -382,7 +442,7 @@ ASM_FUNCTION(daObjThDoor_MoveBGExecute__FP13daObjThDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjThDoor_MoveBGDraw__FP13daObjThDoor_c) {
+asm void daObjThDoor_MoveBGDraw(daObjThDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGDraw__FP13daObjThDoor_c.s"
 }
@@ -393,7 +453,7 @@ ASM_FUNCTION(daObjThDoor_MoveBGDraw__FP13daObjThDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/__dt__10cCcD_GSttsFv.s"
 }
@@ -404,7 +464,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D0E5D4) {
+extern "C" asm void func_80D0E5D4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/func_80D0E5D4.s"
 }

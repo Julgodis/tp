@@ -6,11 +6,21 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagArena_c;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daTagArena_Create__FP10fopAc_ac_c();
-extern "C" extern void daTagArena_Delete__FP12daTagArena_c();
+void daTagArena_Create(fopAc_ac_c*);
+void daTagArena_Delete(daTagArena_c*);
+
+extern "C" void daTagArena_Create__FP10fopAc_ac_c();
+extern "C" void daTagArena_Delete__FP12daTagArena_c();
 SECTION_DATA extern u8 l_daTagArena_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Arena[48];
 
@@ -18,7 +28,9 @@ SECTION_DATA extern u8 g_profile_Tag_Arena[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -28,7 +40,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagArena_Create__FP10fopAc_ac_c) {
+asm void daTagArena_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_arena/d_a_tag_arena/daTagArena_Create__FP10fopAc_ac_c.s"
 }
@@ -39,7 +51,7 @@ ASM_FUNCTION(daTagArena_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagArena_Delete__FP12daTagArena_c) {
+asm void daTagArena_Delete(daTagArena_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_arena/d_a_tag_arena/daTagArena_Delete__FP12daTagArena_c.s"
 }

@@ -6,103 +6,510 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMenu_Fmap2DBack_c (dMenu_Fmap2DBack_c) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+};
+
+/* top-level dependencies (begin dMenu_Fmap2DBack_c) */
+// outer dependency: ResTIMG
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_Fmap2DBack_c) */
+struct dMenu_Fmap2DBack_c {
+	// ResTIMG
+	// STControl
+	/* 801CF56C */ dMenu_Fmap2DBack_c();
+	/* 801CFCDC */ ~dMenu_Fmap2DBack_c();
+	/* 801CFF34 */ void draw();
+	/* 801D0804 */ void setRegionTexData(char, ResTIMG*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
+	/* 801D0AC8 */ void calcAllMapPos();
+	/* 801D0BF8 */ void calcAllMapScaleRate();
+	/* 801D0C6C */ void calcAllMapPos2DFirst(f32, f32, f32*, f32*);
+	/* 801D0D18 */ void calcAllMapPos2D(f32, f32, f32*, f32*);
+	/* 801D0D50 */ void calcAllMapPos2D(char const*, f32, f32, f32*, f32*);
+	/* 801D0E00 */ void calcAllMapPos2D(f32, f32, f32*, f32*, f32, f32, f32);
+	/* 801D0F7C */ void calcAllMapPosWorld(f32, f32, f32*, f32*);
+	/* 801D1094 */ void setSpotPane(ResTIMG*);
+	/* 801D10F4 */ void deleteSpotPane();
+	/* 801D1148 */ void zoomMapCalc(f32);
+	/* 801D1478 */ void zoomMapCalc2(f32);
+	/* 801D1858 */ void zoomMapCalcHIO();
+	/* 801D1AA4 */ void scrollCalc(f32);
+	/* 801D1D50 */ void mapBlink(s16*);
+	/* 801D1D74 */ void setSpotCursor(char);
+	/* 801D1DC4 */ void allmap_move2(STControl*);
+	/* 801D2100 */ void setIcon2DPos(char, f32, f32, f32, char, bool);
+	/* 801D241C */ void setIcon2DPos(char, char const*, f32, f32, f32, char, bool);
+	/* 801D2454 */ void setIcon2DPos(char, char, char const*, f32, f32, f32, char, bool);
+	/* 801D2508 */ void isShowRegion(s32);
+	/* 801D2658 */ void getMapAreaGlobalPosX();
+	/* 801D2668 */ void getMapAreaGlobalPosY();
+	/* 801D2678 */ void getMapAreaGlobalCenterPosX();
+	/* 801D26C8 */ void getMapAreaGlobalCenterPosY();
+	/* 801D2718 */ void getMapAreaSizeX();
+	/* 801D2728 */ void getMapAreaSizeY();
+	/* 801D2738 */ void getMapScissorAreaLX();
+	/* 801D2790 */ void getMapScissorAreaLY();
+	/* 801D27E8 */ void getMapScissorAreaSizeX();
+	/* 801D2860 */ void getMapScissorAreaSizeRealX();
+	/* 801D2880 */ void getMapScissorAreaCenterPosX();
+	/* 801D28D0 */ void getMapScissorAreaCenterPosY();
+	/* 801D2920 */ void getMapScissorAreaSizeY();
+	/* 801D2998 */ void getMapScissorAreaSizeRealY();
+	/* 801D29B8 */ void calcRenderingPos();
+	/* 801D2A34 */ void calcRenderingScale();
+	/* 801D2AC8 */ void getPathScale(f32);
+	/* 801D2B5C */ void getAllMapZoomRate();
+	/* 801D2B64 */ void getRegionMapZoomRate(s32);
+	/* 801D2C4C */ void getSpotMapZoomRate();
+	/* 801D2C88 */ void getStageOriginPath(char, f32*, f32*);
+	/* 801D2CC8 */ void calcOffset(char, char const*, f32*, f32*);
+	/* 801D2DA8 */ void regionTextureDraw();
+	/* 801D3094 */ void stageTextureDraw();
+	/* 801D31D0 */ void worldGridDraw();
+	/* 801D34DC */ void regionGridDraw();
+	/* 801D382C */ void worldOriginDraw();
+	/* 801D38FC */ void scrollAreaDraw();
+	/* 801D3AF8 */ void regionOriginDraw();
+	/* 801D3BBC */ void stageOriginDraw();
+	/* 801D3CB8 */ void calcBlink();
+	/* 801D4928 */ void calcBackAlpha(bool);
+	/* 801D49E0 */ void btkAnimeLoop(f32);
+	/* 801D4AFC */ void setBaseBackAlpha(char);
+	/* 801D4B2C */ void regionMapMove(STControl*);
+	/* 801D4E80 */ void stageMapMove(STControl*, char, bool);
+	/* 801D5334 */ void setAllAlphaRate(f32, bool);
+	/* 801D5388 */ void drawDebugStageArea();
+	/* 801D564C */ void drawDebugRegionArea();
+	/* 801D58F8 */ void setArrowPos3D(char, char const*, f32, f32);
+	/* 801D59C0 */ void setArrowPos3DOffset(char, char const*, f32, f32, f32);
+	/* 801D5AC4 */ void calcDrawPriority();
+	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build STControl (STControl) True/True
+// build dMenu_Fmap2DTop_c (dMenu_Fmap2DTop_c) False/False
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build STControl (STControl) True/True
+/* top-level dependencies (begin dMenu_Fmap2DTop_c) */
+// outer dependency: CPaneMgrAlpha
+// outer dependency: JKRExpHeap
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_Fmap2DTop_c) */
+struct dMenu_Fmap2DTop_c {
+	// CPaneMgrAlpha
+	// JKRExpHeap
+	// J2DAnmTextureSRTKey
+	// STControl
+	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
+	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
+	/* 801D6A44 */ void _execute();
+	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
+	/* 801D6C98 */ void draw();
+	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
+	/* 801D6EDC */ void setMoyaAlpha(char);
+	/* 801D6F38 */ void setTitleNameString(u32);
+	/* 801D7010 */ void setAreaNameString(u32);
+	/* 801D70E8 */ void setZButtonString(u32, char);
+	/* 801D7210 */ void setBButtonString(u32, char);
+	/* 801D72D4 */ void setAButtonString(u32, char);
+	/* 801D7398 */ void setCrossLRString(u32);
+	/* 801D74EC */ void set3DStickString(u32);
+	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
+	/* 801D76C0 */ void deleteExplain();
+	/* 801D7714 */ void setArrowAlphaRatio(char, f32);
+	/* 801D77C4 */ void setAlphaAnimeMin(CPaneMgrAlpha*);
+	/* 801D7858 */ void setAlphaAnimeMid(CPaneMgrAlpha*);
+	/* 801D78FC */ void setAlphaAnimeMax(CPaneMgrAlpha*);
+	/* 801D7994 */ void checkPlayerWarpAccept();
+	/* 801D7A08 */ void checkWarpAcceptRegion(s32);
+	/* 801D7AB4 */ void checkWarpAcceptRegion4();
+	/* 801D7B58 */ void checkWarpAcceptCannon();
+	/* 801D7BCC */ void setHIO(bool);
+	/* 801D8088 */ void isWarpAccept();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
+/* top-level dependencies (begin dSv_player_field_last_stay_info_c) */
+/* top-level dependencies (end dSv_player_field_last_stay_info_c) */
+struct dSv_player_field_last_stay_info_c {
+	/* 80032E78 */ void isRegionBit(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin dMenuMapCommon_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dMenuMapCommon_c) */
+struct dMenuMapCommon_c {
+	// JKRArchive
+	/* 801C2718 */ dMenuMapCommon_c();
+	/* 801C27B4 */ ~dMenuMapCommon_c();
+	/* 801C28D8 */ void initiate(JKRArchive*);
+	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
+	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C452C */ void blinkMove(s16);
+	/* 801C4600 */ void moveLightDropAnime();
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build renderingFmap_c (renderingFmap_c) False/False
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
+/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+struct dMenu_Fmap_region_data_c {
+};
+
+/* top-level dependencies (begin renderingFmap_c) */
+// outer dependency: dMenu_Fmap_region_data_c
+/* top-level dependencies (end renderingFmap_c) */
+struct renderingFmap_c {
+	// dMenu_Fmap_region_data_c
+	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, s32, s32*, s32*);
+};
+
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
+// build dMeterHaihai_c (dMeterHaihai_c) False/False
+/* top-level dependencies (begin dMeterHaihai_c) */
+/* top-level dependencies (end dMeterHaihai_c) */
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(char);
+	/* 8020B518 */ void drawHaihai(char);
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
+/* top-level dependencies (begin JMSMesgEntry_c) */
+/* top-level dependencies (end JMSMesgEntry_c) */
+struct JMSMesgEntry_c {
+};
+
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: JMSMesgEntry_c
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// JMSMesgEntry_c
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
+// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
+// build dMsgScrnExplain_c (dMsgScrnExplain_c) False/False
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+};
+
+// build STControl (STControl) True/True
+/* top-level dependencies (begin dMsgScrnExplain_c) */
+// outer dependency: J2DOrthoGraph
+// outer dependency: STControl
+/* top-level dependencies (end dMsgScrnExplain_c) */
+struct dMsgScrnExplain_c {
+	// J2DOrthoGraph
+	// STControl
+	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, char, bool, char);
+	/* 8023D918 */ void draw(J2DOrthoGraph*);
+};
+
+// build J2DOrthoGraph (J2DOrthoGraph) True/True
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlphaMorf) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlphaMorf) */
+struct CPaneMgrAlphaMorf {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80255DD0 */ void setBackupAlpha();
+	/* 80255E28 */ void setAlphaMorfRate(f32);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DRotateAxis
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DRotateAxis
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F7AFC */ void getParentPane();
+};
+
+// build J2DRotateAxis (J2DRotateAxis) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) True/True
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void __dt__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void draw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff();
-extern "C" extern void calcAllMapPos__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" extern void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" extern void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf();
-extern "C" extern void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff();
-extern "C" extern void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" extern void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG();
-extern "C" extern void deleteSpotPane__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void zoomMapCalc__18dMenu_Fmap2DBack_cFf();
-extern "C" extern void zoomMapCalc2__18dMenu_Fmap2DBack_cFf();
-extern "C" extern void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void scrollCalc__18dMenu_Fmap2DBack_cFf();
-extern "C" extern void mapBlink__18dMenu_Fmap2DBack_cFPs();
-extern "C" extern void setSpotCursor__18dMenu_Fmap2DBack_cFUc();
-extern "C" extern void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl();
-extern "C" extern void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb();
-extern "C" extern void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb();
-extern "C" extern void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb();
-extern "C" extern void isShowRegion__18dMenu_Fmap2DBack_cFi();
-extern "C" extern void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcRenderingPos__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcRenderingScale__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getPathScale__18dMenu_Fmap2DBack_cFf();
-extern "C" extern void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi();
-extern "C" extern void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf();
-extern "C" extern void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf();
-extern "C" extern void regionTextureDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void stageTextureDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void worldGridDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void regionGridDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void worldOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void scrollAreaDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void regionOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void stageOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcBlink__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void calcBackAlpha__18dMenu_Fmap2DBack_cFb();
-extern "C" extern void btkAnimeLoop__18dMenu_Fmap2DBack_cFf();
-extern "C" extern void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc();
-extern "C" extern void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl();
-extern "C" extern void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb();
-extern "C" extern void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb();
-extern "C" extern void drawDebugStageArea__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff();
-extern "C" extern void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff();
-extern "C" extern void calcDrawPriority__18dMenu_Fmap2DBack_cFv();
-extern "C" extern void setArrowPosAxis__18dMenu_Fmap2DBack_cFff();
-extern "C" extern void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
-extern "C" extern void __dt__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void _execute__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb();
-extern "C" extern void draw__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf();
-extern "C" extern void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc();
-extern "C" extern void setTitleNameString__17dMenu_Fmap2DTop_cFUl();
-extern "C" extern void setAreaNameString__17dMenu_Fmap2DTop_cFUl();
-extern "C" extern void setZButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" extern void setBButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" extern void setAButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" extern void setCrossLRString__17dMenu_Fmap2DTop_cFUl();
-extern "C" extern void set3DStickString__17dMenu_Fmap2DTop_cFUl();
-extern "C" extern void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
-extern "C" extern void deleteExplain__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf();
-extern "C" extern void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" extern void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" extern void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" extern void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi();
-extern "C" extern void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void setHIO__17dMenu_Fmap2DTop_cFb();
-extern "C" extern void isWarpAccept__17dMenu_Fmap2DTop_cFv();
-extern "C" extern void func_801D810C();
+extern "C" static void func_801D810C();
+
+extern "C" void __ct__18dMenu_Fmap2DBack_cFv();
+extern "C" void __dt__18dMenu_Fmap2DBack_cFv();
+extern "C" void draw__18dMenu_Fmap2DBack_cFv();
+extern "C" void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff();
+extern "C" void calcAllMapPos__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff();
+extern "C" void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG();
+extern "C" void deleteSpotPane__18dMenu_Fmap2DBack_cFv();
+extern "C" void zoomMapCalc__18dMenu_Fmap2DBack_cFf();
+extern "C" void zoomMapCalc2__18dMenu_Fmap2DBack_cFf();
+extern "C" void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv();
+extern "C" void scrollCalc__18dMenu_Fmap2DBack_cFf();
+extern "C" void mapBlink__18dMenu_Fmap2DBack_cFPs();
+extern "C" void setSpotCursor__18dMenu_Fmap2DBack_cFUc();
+extern "C" void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb();
+extern "C" void isShowRegion__18dMenu_Fmap2DBack_cFi();
+extern "C" void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcRenderingPos__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcRenderingScale__18dMenu_Fmap2DBack_cFv();
+extern "C" void getPathScale__18dMenu_Fmap2DBack_cFf();
+extern "C" void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi();
+extern "C" void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf();
+extern "C" void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf();
+extern "C" void regionTextureDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void stageTextureDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void worldGridDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void regionGridDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void worldOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void scrollAreaDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void regionOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void stageOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcBlink__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcBackAlpha__18dMenu_Fmap2DBack_cFb();
+extern "C" void btkAnimeLoop__18dMenu_Fmap2DBack_cFf();
+extern "C" void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc();
+extern "C" void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl();
+extern "C" void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb();
+extern "C" void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb();
+extern "C" void drawDebugStageArea__18dMenu_Fmap2DBack_cFv();
+extern "C" void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv();
+extern "C" void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff();
+extern "C" void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff();
+extern "C" void calcDrawPriority__18dMenu_Fmap2DBack_cFv();
+extern "C" void setArrowPosAxis__18dMenu_Fmap2DBack_cFff();
+extern "C" void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+extern "C" void __dt__17dMenu_Fmap2DTop_cFv();
+extern "C" void _execute__17dMenu_Fmap2DTop_cFv();
+extern "C" void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb();
+extern "C" void draw__17dMenu_Fmap2DTop_cFv();
+extern "C" void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf();
+extern "C" void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc();
+extern "C" void setTitleNameString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void setAreaNameString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void setZButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setBButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setAButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setCrossLRString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void set3DStickString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+extern "C" void deleteExplain__17dMenu_Fmap2DTop_cFv();
+extern "C" void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf();
+extern "C" void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv();
+extern "C" void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi();
+extern "C" void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv();
+extern "C" void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv();
+extern "C" void setHIO__17dMenu_Fmap2DTop_cFb();
+extern "C" void isWarpAccept__17dMenu_Fmap2DTop_cFv();
+extern "C" static void func_801D810C();
 SECTION_RODATA extern const u8 data_80396248[32];
 SECTION_RODATA extern const u8 data_80396268[32];
 SECTION_RODATA extern const u8 data_80396288[24];
@@ -156,74 +563,108 @@ SECTION_SDATA2 extern f32 lit_6325;
 // External References:
 // 
 
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getRubyFont__Fv();
-extern "C" extern void dComIfGs_isStageSwitch__Fii();
-extern "C" extern void dComIfGp_getNowLevel__Fv();
-extern "C" extern void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void __ct__16dMenuMapCommon_cFv();
-extern "C" extern void __dt__16dMenuMapCommon_cFv();
-extern "C" extern void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern "C" extern void drawIcon__16dMenuMapCommon_cFffff();
-extern "C" extern void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern "C" extern void blinkMove__16dMenuMapCommon_cFs();
-extern "C" extern void moveLightDropAnime__16dMenuMapCommon_cFv();
-extern "C" extern void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
-extern "C" extern void __ct__14dMeterHaihai_cFUc();
-extern "C" extern void drawHaihai__14dMeterHaihai_cFUc();
-extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void dMeter2Info_getPixel__FffffffPC7ResTIMG();
-extern "C" extern void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
-extern "C" extern void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void paneTrans__8CPaneMgrFff();
-extern "C" extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" extern void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void setBackupAlpha__17CPaneMgrAlphaMorfFv();
-extern "C" extern void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
-extern "C" extern void cLib_addCalc2__FPffff();
-extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void func_802E90C0();
-extern "C" extern void J2DDrawLine__FffffQ28JUtility6TColori();
-extern "C" extern void J2DFillBox__FffffQ28JUtility6TColor();
-extern "C" extern void J2DDrawFrame__FffffQ28JUtility6TColorUc();
-extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" extern void getParentPane__7J2DPaneFv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void GXGetScissor();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
-extern "C" extern void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGp_getNowLevel();
+void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802E90C0();
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, s32);
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, char);
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void dComIfGp_getNowLevel__Fv();
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void __ct__16dMenuMapCommon_cFv();
+extern "C" void __dt__16dMenuMapCommon_cFv();
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" void blinkMove__16dMenuMapCommon_cFs();
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
+extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void drawHaihai__14dMeterHaihai_cFUc();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG();
+extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
+extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void func_802E90C0();
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void GXGetScissor();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -238,31 +679,31 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80396248-80396268 0020+00 .rodata    cur_tag$3868                                                 */
+/* 80396248-80396268 0020+00 rc=2 efc=0 .rodata    cur_tag$3868                                                 */
 SECTION_RODATA const u8 data_80396248[32] = {
 	0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x72, 0x75, 0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x72, 0x64,
 	0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x6C, 0x64, 0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x6C, 0x75,
 };
 
-/* 80396268-80396288 0020+00 .rodata    cur_tag$4092                                                 */
+/* 80396268-80396288 0020+00 rc=1 efc=0 .rodata    cur_tag$4092                                                 */
 SECTION_RODATA const u8 data_80396268[32] = {
 	0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x72, 0x75, 0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x72, 0x64,
 	0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x6C, 0x64, 0x00, 0x66, 0x5F, 0x70, 0x6F, 0x5F, 0x6C, 0x75,
 };
 
-/* 80396288-803962A0 0018+00 .rodata    area_name$5814                                               */
+/* 80396288-803962A0 0018+00 rc=0 efc=0 .rodata    area_name$5814                                               */
 SECTION_RODATA const u8 data_80396288[24] = {
 	0x69, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x73, 0x00, 0x00, 0x69, 0x5F, 0x6E, 0x61, 0x6D, 0x65,
 	0x00, 0x69, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x31,
 };
 
-/* 803962A0-803962B8 0018+00 .rodata    farea_name$5815                                              */
+/* 803962A0-803962B8 0018+00 rc=0 efc=0 .rodata    farea_name$5815                                              */
 SECTION_RODATA const u8 data_803962A0[24] = {
 	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31, 0x00, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x33,
 	0x00, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x32,
 };
 
-/* 803962B8-803962F0 0038+00 .rodata    sfont_name$5821                                              */
+/* 803962B8-803962F0 0038+00 rc=0 efc=0 .rodata    sfont_name$5821                                              */
 SECTION_RODATA const u8 data_803962B8[56] = {
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x30, 0x30, 0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x30,
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x31, 0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x32,
@@ -270,7 +711,7 @@ SECTION_RODATA const u8 data_803962B8[56] = {
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x32,
 };
 
-/* 803962F0-80396328 0038+00 .rodata    ffont_name$5822                                              */
+/* 803962F0-80396328 0038+00 rc=0 efc=0 .rodata    ffont_name$5822                                              */
 SECTION_RODATA const u8 data_803962F0[56] = {
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x30, 0x30, 0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x30,
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x31, 0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x32,
@@ -278,77 +719,77 @@ SECTION_RODATA const u8 data_803962F0[56] = {
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x34,
 };
 
-/* 80396328-80396350 0028+00 .rodata    cont_zt$5828                                                 */
+/* 80396328-80396350 0028+00 rc=0 efc=0 .rodata    cont_zt$5828                                                 */
 SECTION_RODATA const u8 data_80396328[40] = {
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x31,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x32, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x33,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x34,
 };
 
-/* 80396350-80396378 0028+00 .rodata    font_zt$5829                                                 */
+/* 80396350-80396378 0028+00 rc=0 efc=0 .rodata    font_zt$5829                                                 */
 SECTION_RODATA const u8 data_80396350[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x35,
 };
 
-/* 80396378-803963A0 0028+00 .rodata    cont_bt$5835                                                 */
+/* 80396378-803963A0 0028+00 rc=0 efc=0 .rodata    cont_bt$5835                                                 */
 SECTION_RODATA const u8 data_80396378[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74,
 };
 
-/* 803963A0-803963C8 0028+00 .rodata    font_bt$5836                                                 */
+/* 803963A0-803963C8 0028+00 rc=0 efc=0 .rodata    font_bt$5836                                                 */
 SECTION_RODATA const u8 data_803963A0[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x35,
 };
 
-/* 803963C8-803963F0 0028+00 .rodata    cont_at$5842                                                 */
+/* 803963C8-803963F0 0028+00 rc=0 efc=0 .rodata    cont_at$5842                                                 */
 SECTION_RODATA const u8 data_803963C8[40] = {
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 };
 
-/* 803963F0-80396418 0028+00 .rodata    font_at$5843                                                 */
+/* 803963F0-80396418 0028+00 rc=0 efc=0 .rodata    font_at$5843                                                 */
 SECTION_RODATA const u8 data_803963F0[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x35,
 };
 
-/* 80396418-80396440 0028+00 .rodata    juji_c$5849                                                  */
+/* 80396418-80396440 0028+00 rc=0 efc=0 .rodata    juji_c$5849                                                  */
 SECTION_RODATA const u8 data_80396418[40] = {
 	0x6A, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x30, 0x6A, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x31,
 	0x6A, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x32, 0x6A, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x33,
 	0x6A, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x34,
 };
 
-/* 80396440-80396468 0028+00 .rodata    fuji_c$5850                                                  */
+/* 80396440-80396468 0028+00 rc=0 efc=0 .rodata    fuji_c$5850                                                  */
 SECTION_RODATA const u8 data_80396440[40] = {
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x30, 0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x31,
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x32, 0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x33,
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x34,
 };
 
-/* 80396468-80396490 0028+00 .rodata    ast_c$5856                                                   */
+/* 80396468-80396490 0028+00 rc=0 efc=0 .rodata    ast_c$5856                                                   */
 SECTION_RODATA const u8 data_80396468[40] = {
 	0x00, 0x00, 0x61, 0x73, 0x74, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x61, 0x73, 0x74, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x61, 0x73, 0x74, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x61, 0x73, 0x74, 0x5F, 0x30, 0x33,
 	0x00, 0x00, 0x61, 0x73, 0x74, 0x5F, 0x30, 0x34,
 };
 
-/* 80396490-803964B8 0028+00 .rodata    fst_c$5857                                                   */
+/* 80396490-803964B8 0028+00 rc=0 efc=0 .rodata    fst_c$5857                                                   */
 SECTION_RODATA const u8 data_80396490[40] = {
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x33,
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x34,
 };
 
-/* 803964B8-803964F0 0038+00 .rodata    ffont_name$6110                                              */
+/* 803964B8-803964F0 0038+00 rc=1 efc=0 .rodata    ffont_name$6110                                              */
 SECTION_RODATA const u8 data_803964B8[56] = {
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x30, 0x30, 0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x30,
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x31, 0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x32,
@@ -356,48 +797,48 @@ SECTION_RODATA const u8 data_803964B8[56] = {
 	0x00, 0x66, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x34,
 };
 
-/* 803964F0-80396508 0018+00 .rodata    farea_name$6125                                              */
+/* 803964F0-80396508 0018+00 rc=1 efc=0 .rodata    farea_name$6125                                              */
 SECTION_RODATA const u8 data_803964F0[24] = {
 	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31, 0x00, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x33,
 	0x00, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x32,
 };
 
-/* 80396508-80396530 0028+00 .rodata    font_zt$6148                                                 */
+/* 80396508-80396530 0028+00 rc=1 efc=0 .rodata    font_zt$6148                                                 */
 SECTION_RODATA const u8 data_80396508[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x35,
 };
 
-/* 80396530-80396558 0028+00 .rodata    font_bt$6176                                                 */
+/* 80396530-80396558 0028+00 rc=1 efc=0 .rodata    font_bt$6176                                                 */
 SECTION_RODATA const u8 data_80396530[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x35,
 };
 
-/* 80396558-80396580 0028+00 .rodata    font_at$6194                                                 */
+/* 80396558-80396580 0028+00 rc=1 efc=0 .rodata    font_at$6194                                                 */
 SECTION_RODATA const u8 data_80396558[40] = {
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x35,
 };
 
-/* 80396580-803965A8 0028+00 .rodata    juji_c$6209                                                  */
+/* 80396580-803965A8 0028+00 rc=1 efc=0 .rodata    juji_c$6209                                                  */
 SECTION_RODATA const u8 data_80396580[40] = {
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x30, 0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x31,
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x32, 0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x33,
 	0x66, 0x75, 0x6A, 0x69, 0x5F, 0x63, 0x30, 0x34,
 };
 
-/* 803965A8-803965D0 0028+00 .rodata    ast_c$6233                                                   */
+/* 803965A8-803965D0 0028+00 rc=1 efc=0 .rodata    ast_c$6233                                                   */
 SECTION_RODATA const u8 data_803965A8[40] = {
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x33,
 	0x00, 0x00, 0x66, 0x73, 0x74, 0x5F, 0x30, 0x34,
 };
 
-/* 803965D0-80396690 00BC+04 .rodata    @stringBase0                                                 */
+/* 803965D0-80396690 00BC+04 rc=6 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -414,7 +855,7 @@ SECTION_DEAD char* const stringBase_8039668B = "";
 SECTION_DEAD char* const pad_8039668C = "\0\0\0";
 #pragma pop
 
-/* 803BD750-803BD760 0010+00 .data      __vt__17dMenu_Fmap2DTop_c                                    */
+/* 803BD750-803BD760 0010+00 rc=2 efc=0 .data      __vt__17dMenu_Fmap2DTop_c                                    */
 void* const __vt__17dMenu_Fmap2DTop_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -422,7 +863,7 @@ void* const __vt__17dMenu_Fmap2DTop_c[4] = {
 	(void*)__dt__17dMenu_Fmap2DTop_cFv,
 };
 
-/* 803BD760-803BD780 001C+04 .data      __vt__18dMenu_Fmap2DBack_c                                   */
+/* 803BD760-803BD780 001C+04 rc=2 efc=0 .data      __vt__18dMenu_Fmap2DBack_c                                   */
 void* const __vt__18dMenu_Fmap2DBack_c[8] = {
 	NULL, /* RTTI */
 	NULL,
@@ -435,33 +876,33 @@ void* const __vt__18dMenu_Fmap2DBack_c[8] = {
 	NULL,
 };
 
-/* 804541D0-804541D4 0004+00 .sdata2    @3970                                                        */
+/* 804541D0-804541D4 0004+00 rc=21 efc=0 .sdata2    @3970                                                        */
 u8 d_menu_d_menu_fmap2D__lit_3970[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804541D4-804541D8 0004+00 .sdata2    @3971                                                        */
+/* 804541D4-804541D8 0004+00 rc=14 efc=0 .sdata2    @3971                                                        */
 f32 lit_3971 = 1.0f;
 
-/* 804541D8-804541DC 0004+00 .sdata2    @3972                                                        */
+/* 804541D8-804541DC 0004+00 rc=2 efc=0 .sdata2    @3972                                                        */
 f32 lit_3972 = 360.0f;
 
-/* 801CF56C-801CFCDC 0770+00 .text      __ct__18dMenu_Fmap2DBack_cFv                                 */
+/* 801CF56C-801CFCDC 0770+00 rc=1 efc=1 .text      __ct__18dMenu_Fmap2DBack_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18dMenu_Fmap2DBack_cFv) {
+asm dMenu_Fmap2DBack_c::dMenu_Fmap2DBack_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/__ct__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801CFCDC-801CFF34 0258+00 .text      __dt__18dMenu_Fmap2DBack_cFv                                 */
+/* 801CFCDC-801CFF34 0258+00 rc=2 efc=0 .text      __dt__18dMenu_Fmap2DBack_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dMenu_Fmap2DBack_cFv) {
+asm dMenu_Fmap2DBack_c::~dMenu_Fmap2DBack_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/__dt__18dMenu_Fmap2DBack_cFv.s"
 }
@@ -469,35 +910,35 @@ ASM_FUNCTION(__dt__18dMenu_Fmap2DBack_cFv) {
 
 
 /* ############################################################################################## */
-/* 804541DC-804541E0 0004+00 .sdata2    @4199                                                        */
+/* 804541DC-804541E0 0004+00 rc=6 efc=0 .sdata2    @4199                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4199 = 608.0f;
 
-/* 804541E0-804541E4 0004+00 .sdata2    @4200                                                        */
+/* 804541E0-804541E4 0004+00 rc=5 efc=0 .sdata2    @4200                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4200 = 448.0f;
 
-/* 804541E4-804541E8 0004+00 .sdata2    @4201                                                        */
+/* 804541E4-804541E8 0004+00 rc=4 efc=0 .sdata2    @4201                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4201 = 255.0f;
 
-/* 804541E8-804541EC 0004+00 .sdata2    @4202                                                        */
+/* 804541E8-804541EC 0004+00 rc=18 efc=0 .sdata2    @4202                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4202 = 0.5f;
 
-/* 804541EC-804541F0 0004+00 .sdata2    @4203                                                        */
+/* 804541EC-804541F0 0004+00 rc=2 efc=0 .sdata2    @4203                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4203 = 2.0f;
 
-/* 804541F0-804541F4 0004+00 .sdata2    @4204                                                        */
+/* 804541F0-804541F4 0004+00 rc=5 efc=0 .sdata2    @4204                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4204 = 3.0f;
 
-/* 804541F4-804541F8 0004+00 .sdata2    @4205                                                        */
+/* 804541F4-804541F8 0004+00 rc=6 efc=0 .sdata2    @4205                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4205 = 6.0f;
 
-/* 804541F8-80454200 0008+00 .sdata2    @4207                                                        */
+/* 804541F8-80454200 0008+00 rc=4 efc=0 .sdata2    @4207                                                        */
 f64 d_menu_d_menu_fmap2D__lit_4207 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801CFF34-801D0804 08D0+00 .text      draw__18dMenu_Fmap2DBack_cFv                                 */
+/* 801CFF34-801D0804 08D0+00 rc=1 efc=0 .text      draw__18dMenu_Fmap2DBack_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/draw__18dMenu_Fmap2DBack_cFv.s"
 }
@@ -505,521 +946,521 @@ ASM_FUNCTION(draw__18dMenu_Fmap2DBack_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454200-80454208 0004+04 .sdata2    @4260                                                        */
+/* 80454200-80454208 0004+04 rc=4 efc=0 .sdata2    @4260                                                        */
 f32 d_menu_d_menu_fmap2D__lit_4260 = 100.0f;
 /* padding 4 bytes */
 
-/* 801D0804-801D0AC8 02C4+00 .text      setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff  */
+/* 801D0804-801D0AC8 02C4+00 rc=1 efc=1 .text      setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff) {
+asm void dMenu_Fmap2DBack_c::setRegionTexData(char field_0, ResTIMG* field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, f32 field_9, f32 field_10) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff.s"
 }
 #pragma pop
 
 
-/* 801D0AC8-801D0BF8 0130+00 .text      calcAllMapPos__18dMenu_Fmap2DBack_cFv                        */
+/* 801D0AC8-801D0BF8 0130+00 rc=2 efc=1 .text      calcAllMapPos__18dMenu_Fmap2DBack_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPos__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPos() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPos__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D0BF8-801D0C6C 0074+00 .text      calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv                  */
+/* 801D0BF8-801D0C6C 0074+00 rc=1 efc=0 .text      calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcAllMapScaleRate() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D0C6C-801D0D18 00AC+00 .text      calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf            */
+/* 801D0C6C-801D0D18 00AC+00 rc=1 efc=0 .text      calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPos2DFirst(f32 field_0, f32 field_1, f32* field_2, f32* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf.s"
 }
 #pragma pop
 
 
-/* 801D0D18-801D0D50 0038+00 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf                 */
+/* 801D0D18-801D0D50 0038+00 rc=14 efc=1 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPos2D(f32 field_0, f32 field_1, f32* field_2, f32* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf.s"
 }
 #pragma pop
 
 
-/* 801D0D50-801D0E00 00B0+00 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf              */
+/* 801D0D50-801D0E00 00B0+00 rc=1 efc=1 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPos2D(char const* field_0, f32 field_1, f32 field_2, f32* field_3, f32* field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf.s"
 }
 #pragma pop
 
 
-/* 801D0E00-801D0F7C 017C+00 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff              */
+/* 801D0E00-801D0F7C 017C+00 rc=3 efc=0 .text      calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPos2D(f32 field_0, f32 field_1, f32* field_2, f32* field_3, f32 field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff.s"
 }
 #pragma pop
 
 
-/* 801D0F7C-801D1094 0118+00 .text      calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf              */
+/* 801D0F7C-801D1094 0118+00 rc=11 efc=3 .text      calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf) {
+asm void dMenu_Fmap2DBack_c::calcAllMapPosWorld(f32 field_0, f32 field_1, f32* field_2, f32* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf.s"
 }
 #pragma pop
 
 
-/* 801D1094-801D10F4 0060+00 .text      setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG                  */
+/* 801D1094-801D10F4 0060+00 rc=1 efc=1 .text      setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG) {
+asm void dMenu_Fmap2DBack_c::setSpotPane(ResTIMG* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG.s"
 }
 #pragma pop
 
 
-/* 801D10F4-801D1148 0054+00 .text      deleteSpotPane__18dMenu_Fmap2DBack_cFv                       */
+/* 801D10F4-801D1148 0054+00 rc=2 efc=1 .text      deleteSpotPane__18dMenu_Fmap2DBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteSpotPane__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::deleteSpotPane() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/deleteSpotPane__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D1148-801D1478 0330+00 .text      zoomMapCalc__18dMenu_Fmap2DBack_cFf                          */
+/* 801D1148-801D1478 0330+00 rc=8 efc=8 .text      zoomMapCalc__18dMenu_Fmap2DBack_cFf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomMapCalc__18dMenu_Fmap2DBack_cFf) {
+asm void dMenu_Fmap2DBack_c::zoomMapCalc(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/zoomMapCalc__18dMenu_Fmap2DBack_cFf.s"
 }
 #pragma pop
 
 
-/* 801D1478-801D1858 03E0+00 .text      zoomMapCalc2__18dMenu_Fmap2DBack_cFf                         */
+/* 801D1478-801D1858 03E0+00 rc=10 efc=10 .text      zoomMapCalc2__18dMenu_Fmap2DBack_cFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomMapCalc2__18dMenu_Fmap2DBack_cFf) {
+asm void dMenu_Fmap2DBack_c::zoomMapCalc2(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/zoomMapCalc2__18dMenu_Fmap2DBack_cFf.s"
 }
 #pragma pop
 
 
-/* 801D1858-801D1AA4 024C+00 .text      zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv                       */
+/* 801D1858-801D1AA4 024C+00 rc=1 efc=1 .text      zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::zoomMapCalcHIO() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D1AA4-801D1D50 02AC+00 .text      scrollCalc__18dMenu_Fmap2DBack_cFf                           */
+/* 801D1AA4-801D1D50 02AC+00 rc=2 efc=0 .text      scrollCalc__18dMenu_Fmap2DBack_cFf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(scrollCalc__18dMenu_Fmap2DBack_cFf) {
+asm void dMenu_Fmap2DBack_c::scrollCalc(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/scrollCalc__18dMenu_Fmap2DBack_cFf.s"
 }
 #pragma pop
 
 
-/* 801D1D50-801D1D74 0024+00 .text      mapBlink__18dMenu_Fmap2DBack_cFPs                            */
+/* 801D1D50-801D1D74 0024+00 rc=1 efc=1 .text      mapBlink__18dMenu_Fmap2DBack_cFPs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapBlink__18dMenu_Fmap2DBack_cFPs) {
+asm void dMenu_Fmap2DBack_c::mapBlink(s16* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/mapBlink__18dMenu_Fmap2DBack_cFPs.s"
 }
 #pragma pop
 
 
-/* 801D1D74-801D1DC4 0050+00 .text      setSpotCursor__18dMenu_Fmap2DBack_cFUc                       */
+/* 801D1D74-801D1DC4 0050+00 rc=6 efc=5 .text      setSpotCursor__18dMenu_Fmap2DBack_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSpotCursor__18dMenu_Fmap2DBack_cFUc) {
+asm void dMenu_Fmap2DBack_c::setSpotCursor(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setSpotCursor__18dMenu_Fmap2DBack_cFUc.s"
 }
 #pragma pop
 
 
-/* 801D1DC4-801D2100 033C+00 .text      allmap_move2__18dMenu_Fmap2DBack_cFP9STControl               */
+/* 801D1DC4-801D2100 033C+00 rc=1 efc=1 .text      allmap_move2__18dMenu_Fmap2DBack_cFP9STControl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allmap_move2__18dMenu_Fmap2DBack_cFP9STControl) {
+asm void dMenu_Fmap2DBack_c::allmap_move2(STControl* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/allmap_move2__18dMenu_Fmap2DBack_cFP9STControl.s"
 }
 #pragma pop
 
 
-/* 801D2100-801D241C 031C+00 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb                  */
+/* 801D2100-801D241C 031C+00 rc=4 efc=3 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, f32 field_1, f32 field_2, f32 field_3, char field_4, bool field_5) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb.s"
 }
 #pragma pop
 
 
-/* 801D241C-801D2454 0038+00 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb               */
+/* 801D241C-801D2454 0038+00 rc=2 efc=2 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4, char field_5, bool field_6) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb.s"
 }
 #pragma pop
 
 
-/* 801D2454-801D2508 00B4+00 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb             */
+/* 801D2454-801D2508 00B4+00 rc=1 efc=0 .text      setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char field_1, char const* field_2, f32 field_3, f32 field_4, f32 field_5, char field_6, bool field_7) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb.s"
 }
 #pragma pop
 
 
-/* 801D2508-801D2658 0150+00 .text      isShowRegion__18dMenu_Fmap2DBack_cFi                         */
+/* 801D2508-801D2658 0150+00 rc=2 efc=1 .text      isShowRegion__18dMenu_Fmap2DBack_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isShowRegion__18dMenu_Fmap2DBack_cFi) {
+asm void dMenu_Fmap2DBack_c::isShowRegion(s32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/isShowRegion__18dMenu_Fmap2DBack_cFi.s"
 }
 #pragma pop
 
 
-/* 801D2658-801D2668 0010+00 .text      getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv                 */
+/* 801D2658-801D2668 0010+00 rc=2 efc=0 .text      getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaGlobalPosX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2668-801D2678 0010+00 .text      getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv                 */
+/* 801D2668-801D2678 0010+00 rc=2 efc=0 .text      getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaGlobalPosY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2678-801D26C8 0050+00 .text      getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv           */
+/* 801D2678-801D26C8 0050+00 rc=8 efc=1 .text      getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaGlobalCenterPosX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D26C8-801D2718 0050+00 .text      getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv           */
+/* 801D26C8-801D2718 0050+00 rc=8 efc=1 .text      getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaGlobalCenterPosY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2718-801D2728 0010+00 .text      getMapAreaSizeX__18dMenu_Fmap2DBack_cFv                      */
+/* 801D2718-801D2728 0010+00 rc=8 efc=0 .text      getMapAreaSizeX__18dMenu_Fmap2DBack_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaSizeX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaSizeX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaSizeX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2728-801D2738 0010+00 .text      getMapAreaSizeY__18dMenu_Fmap2DBack_cFv                      */
+/* 801D2728-801D2738 0010+00 rc=6 efc=0 .text      getMapAreaSizeY__18dMenu_Fmap2DBack_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapAreaSizeY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapAreaSizeY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapAreaSizeY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2738-801D2790 0058+00 .text      getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv                  */
+/* 801D2738-801D2790 0058+00 rc=10 efc=0 .text      getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaLX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2790-801D27E8 0058+00 .text      getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv                  */
+/* 801D2790-801D27E8 0058+00 rc=9 efc=0 .text      getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaLY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D27E8-801D2860 0078+00 .text      getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv               */
+/* 801D27E8-801D2860 0078+00 rc=2 efc=0 .text      getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaSizeX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2860-801D2880 0020+00 .text      getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv           */
+/* 801D2860-801D2880 0020+00 rc=8 efc=0 .text      getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaSizeRealX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2880-801D28D0 0050+00 .text      getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv          */
+/* 801D2880-801D28D0 0050+00 rc=3 efc=0 .text      getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaCenterPosX() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D28D0-801D2920 0050+00 .text      getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv          */
+/* 801D28D0-801D2920 0050+00 rc=3 efc=0 .text      getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaCenterPosY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2920-801D2998 0078+00 .text      getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv               */
+/* 801D2920-801D2998 0078+00 rc=2 efc=0 .text      getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaSizeY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2998-801D29B8 0020+00 .text      getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv           */
+/* 801D2998-801D29B8 0020+00 rc=11 efc=0 .text      getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getMapScissorAreaSizeRealY() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D29B8-801D2A34 007C+00 .text      calcRenderingPos__18dMenu_Fmap2DBack_cFv                     */
+/* 801D29B8-801D2A34 007C+00 rc=6 efc=0 .text      calcRenderingPos__18dMenu_Fmap2DBack_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRenderingPos__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcRenderingPos() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcRenderingPos__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2A34-801D2AC8 0094+00 .text      calcRenderingScale__18dMenu_Fmap2DBack_cFv                   */
+/* 801D2A34-801D2AC8 0094+00 rc=7 efc=0 .text      calcRenderingScale__18dMenu_Fmap2DBack_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRenderingScale__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcRenderingScale() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcRenderingScale__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2AC8-801D2B5C 0094+00 .text      getPathScale__18dMenu_Fmap2DBack_cFf                         */
+/* 801D2AC8-801D2B5C 0094+00 rc=1 efc=0 .text      getPathScale__18dMenu_Fmap2DBack_cFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathScale__18dMenu_Fmap2DBack_cFf) {
+asm void dMenu_Fmap2DBack_c::getPathScale(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getPathScale__18dMenu_Fmap2DBack_cFf.s"
 }
 #pragma pop
 
 
-/* 801D2B5C-801D2B64 0008+00 .text      getAllMapZoomRate__18dMenu_Fmap2DBack_cFv                    */
+/* 801D2B5C-801D2B64 0008+00 rc=6 efc=0 .text      getAllMapZoomRate__18dMenu_Fmap2DBack_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAllMapZoomRate__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getAllMapZoomRate() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getAllMapZoomRate__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2B64-801D2C4C 00E8+00 .text      getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi                 */
+/* 801D2B64-801D2C4C 00E8+00 rc=6 efc=0 .text      getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi) {
+asm void dMenu_Fmap2DBack_c::getRegionMapZoomRate(s32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi.s"
 }
 #pragma pop
 
 
-/* 801D2C4C-801D2C88 003C+00 .text      getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv                   */
+/* 801D2C4C-801D2C88 003C+00 rc=4 efc=0 .text      getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::getSpotMapZoomRate() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D2C88-801D2CC8 0040+00 .text      getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf              */
+/* 801D2C88-801D2CC8 0040+00 rc=1 efc=0 .text      getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf) {
+asm void dMenu_Fmap2DBack_c::getStageOriginPath(char field_0, f32* field_1, f32* field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf.s"
 }
 #pragma pop
 
 
-/* 801D2CC8-801D2DA8 00E0+00 .text      calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf                   */
+/* 801D2CC8-801D2DA8 00E0+00 rc=4 efc=0 .text      calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf) {
+asm void dMenu_Fmap2DBack_c::calcOffset(char field_0, char const* field_1, f32* field_2, f32* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf.s"
 }
 #pragma pop
 
 
-/* 801D2DA8-801D3094 02EC+00 .text      regionTextureDraw__18dMenu_Fmap2DBack_cFv                    */
+/* 801D2DA8-801D3094 02EC+00 rc=1 efc=0 .text      regionTextureDraw__18dMenu_Fmap2DBack_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regionTextureDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::regionTextureDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/regionTextureDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D3094-801D31D0 013C+00 .text      stageTextureDraw__18dMenu_Fmap2DBack_cFv                     */
+/* 801D3094-801D31D0 013C+00 rc=1 efc=0 .text      stageTextureDraw__18dMenu_Fmap2DBack_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stageTextureDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::stageTextureDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/stageTextureDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D31D0-801D34DC 030C+00 .text      worldGridDraw__18dMenu_Fmap2DBack_cFv                        */
+/* 801D31D0-801D34DC 030C+00 rc=1 efc=0 .text      worldGridDraw__18dMenu_Fmap2DBack_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(worldGridDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::worldGridDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/worldGridDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D34DC-801D382C 0350+00 .text      regionGridDraw__18dMenu_Fmap2DBack_cFv                       */
+/* 801D34DC-801D382C 0350+00 rc=1 efc=0 .text      regionGridDraw__18dMenu_Fmap2DBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regionGridDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::regionGridDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/regionGridDraw__18dMenu_Fmap2DBack_cFv.s"
 }
@@ -1027,64 +1468,64 @@ ASM_FUNCTION(regionGridDraw__18dMenu_Fmap2DBack_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454208-80454210 0008+00 .sdata2    @4496                                                        */
+/* 80454208-80454210 0008+00 rc=8 efc=0 .sdata2    @4496                                                        */
 f64 d_menu_d_menu_fmap2D__lit_4496 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80454210-80454214 0004+00 .sdata2    @5133                                                        */
+/* 80454210-80454214 0004+00 rc=1 efc=0 .sdata2    @5133                                                        */
 f32 d_menu_d_menu_fmap2D__lit_5133 = -0.0f;
 
-/* 80454214-80454218 0004+00 .sdata2    @5134                                                        */
+/* 80454214-80454218 0004+00 rc=1 efc=0 .sdata2    @5134                                                        */
 f32 d_menu_d_menu_fmap2D__lit_5134 = -608.0f;
 
-/* 801D382C-801D38FC 00D0+00 .text      worldOriginDraw__18dMenu_Fmap2DBack_cFv                      */
+/* 801D382C-801D38FC 00D0+00 rc=1 efc=0 .text      worldOriginDraw__18dMenu_Fmap2DBack_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(worldOriginDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::worldOriginDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/worldOriginDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D38FC-801D3AF8 01FC+00 .text      scrollAreaDraw__18dMenu_Fmap2DBack_cFv                       */
+/* 801D38FC-801D3AF8 01FC+00 rc=1 efc=0 .text      scrollAreaDraw__18dMenu_Fmap2DBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(scrollAreaDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::scrollAreaDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/scrollAreaDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D3AF8-801D3BBC 00C4+00 .text      regionOriginDraw__18dMenu_Fmap2DBack_cFv                     */
+/* 801D3AF8-801D3BBC 00C4+00 rc=1 efc=0 .text      regionOriginDraw__18dMenu_Fmap2DBack_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regionOriginDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::regionOriginDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/regionOriginDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D3BBC-801D3CB8 00FC+00 .text      stageOriginDraw__18dMenu_Fmap2DBack_cFv                      */
+/* 801D3BBC-801D3CB8 00FC+00 rc=1 efc=0 .text      stageOriginDraw__18dMenu_Fmap2DBack_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stageOriginDraw__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::stageOriginDraw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/stageOriginDraw__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D3CB8-801D4928 0C70+00 .text      calcBlink__18dMenu_Fmap2DBack_cFv                            */
+/* 801D3CB8-801D4928 0C70+00 rc=1 efc=0 .text      calcBlink__18dMenu_Fmap2DBack_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcBlink__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcBlink() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcBlink__18dMenu_Fmap2DBack_cFv.s"
 }
@@ -1092,50 +1533,50 @@ ASM_FUNCTION(calcBlink__18dMenu_Fmap2DBack_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454218-8045421C 0004+00 .sdata2    @5433                                                        */
+/* 80454218-8045421C 0004+00 rc=1 efc=0 .sdata2    @5433                                                        */
 f32 d_menu_d_menu_fmap2D__lit_5433 = 2.0f / 5.0f;
 
-/* 8045421C-80454220 0004+00 .sdata2    @5434                                                        */
+/* 8045421C-80454220 0004+00 rc=1 efc=0 .sdata2    @5434                                                        */
 f32 lit_5434 = 1.0f / 10.0f;
 
-/* 801D4928-801D49E0 00B8+00 .text      calcBackAlpha__18dMenu_Fmap2DBack_cFb                        */
+/* 801D4928-801D49E0 00B8+00 rc=1 efc=1 .text      calcBackAlpha__18dMenu_Fmap2DBack_cFb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcBackAlpha__18dMenu_Fmap2DBack_cFb) {
+asm void dMenu_Fmap2DBack_c::calcBackAlpha(bool field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcBackAlpha__18dMenu_Fmap2DBack_cFb.s"
 }
 #pragma pop
 
 
-/* 801D49E0-801D4AFC 011C+00 .text      btkAnimeLoop__18dMenu_Fmap2DBack_cFf                         */
+/* 801D49E0-801D4AFC 011C+00 rc=1 efc=1 .text      btkAnimeLoop__18dMenu_Fmap2DBack_cFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(btkAnimeLoop__18dMenu_Fmap2DBack_cFf) {
+asm void dMenu_Fmap2DBack_c::btkAnimeLoop(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/btkAnimeLoop__18dMenu_Fmap2DBack_cFf.s"
 }
 #pragma pop
 
 
-/* 801D4AFC-801D4B2C 0030+00 .text      setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc                    */
+/* 801D4AFC-801D4B2C 0030+00 rc=1 efc=1 .text      setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc) {
+asm void dMenu_Fmap2DBack_c::setBaseBackAlpha(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc.s"
 }
 #pragma pop
 
 
-/* 801D4B2C-801D4E80 0354+00 .text      regionMapMove__18dMenu_Fmap2DBack_cFP9STControl              */
+/* 801D4B2C-801D4E80 0354+00 rc=3 efc=3 .text      regionMapMove__18dMenu_Fmap2DBack_cFP9STControl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(regionMapMove__18dMenu_Fmap2DBack_cFP9STControl) {
+asm void dMenu_Fmap2DBack_c::regionMapMove(STControl* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/regionMapMove__18dMenu_Fmap2DBack_cFP9STControl.s"
 }
@@ -1143,25 +1584,25 @@ ASM_FUNCTION(regionMapMove__18dMenu_Fmap2DBack_cFP9STControl) {
 
 
 /* ############################################################################################## */
-/* 80454220-80454224 0004+00 .sdata2    @5568                                                        */
+/* 80454220-80454224 0004+00 rc=1 efc=0 .sdata2    @5568                                                        */
 f32 lit_5568 = -1.0f;
 
-/* 801D4E80-801D5334 04B4+00 .text      stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb            */
+/* 801D4E80-801D5334 04B4+00 rc=1 efc=1 .text      stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb) {
+asm void dMenu_Fmap2DBack_c::stageMapMove(STControl* field_0, char field_1, bool field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb.s"
 }
 #pragma pop
 
 
-/* 801D5334-801D5388 0054+00 .text      setAllAlphaRate__18dMenu_Fmap2DBack_cFfb                     */
+/* 801D5334-801D5388 0054+00 rc=2 efc=2 .text      setAllAlphaRate__18dMenu_Fmap2DBack_cFfb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAllAlphaRate__18dMenu_Fmap2DBack_cFfb) {
+asm void dMenu_Fmap2DBack_c::setAllAlphaRate(f32 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAllAlphaRate__18dMenu_Fmap2DBack_cFfb.s"
 }
@@ -1169,259 +1610,259 @@ ASM_FUNCTION(setAllAlphaRate__18dMenu_Fmap2DBack_cFfb) {
 
 
 /* ############################################################################################## */
-/* 80454224-80454228 0004+00 .sdata2    @5632                                                        */
+/* 80454224-80454228 0004+00 rc=1 efc=0 .sdata2    @5632                                                        */
 f32 d_menu_d_menu_fmap2D__lit_5632 = 304.0f;
 
-/* 80454228-8045422C 0004+00 .sdata2    @5633                                                        */
+/* 80454228-8045422C 0004+00 rc=1 efc=0 .sdata2    @5633                                                        */
 f32 d_menu_d_menu_fmap2D__lit_5633 = 224.0f;
 
-/* 801D5388-801D564C 02C4+00 .text      drawDebugStageArea__18dMenu_Fmap2DBack_cFv                   */
+/* 801D5388-801D564C 02C4+00 rc=1 efc=0 .text      drawDebugStageArea__18dMenu_Fmap2DBack_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawDebugStageArea__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::drawDebugStageArea() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/drawDebugStageArea__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D564C-801D58F8 02AC+00 .text      drawDebugRegionArea__18dMenu_Fmap2DBack_cFv                  */
+/* 801D564C-801D58F8 02AC+00 rc=1 efc=0 .text      drawDebugRegionArea__18dMenu_Fmap2DBack_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawDebugRegionArea__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::drawDebugRegionArea() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/drawDebugRegionArea__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D58F8-801D59C0 00C8+00 .text      setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff                  */
+/* 801D58F8-801D59C0 00C8+00 rc=2 efc=2 .text      setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff) {
+asm void dMenu_Fmap2DBack_c::setArrowPos3D(char field_0, char const* field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff.s"
 }
 #pragma pop
 
 
-/* 801D59C0-801D5AC4 0104+00 .text      setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff           */
+/* 801D59C0-801D5AC4 0104+00 rc=1 efc=1 .text      setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff) {
+asm void dMenu_Fmap2DBack_c::setArrowPos3DOffset(char field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff.s"
 }
 #pragma pop
 
 
-/* 801D5AC4-801D5BB8 00F4+00 .text      calcDrawPriority__18dMenu_Fmap2DBack_cFv                     */
+/* 801D5AC4-801D5BB8 00F4+00 rc=2 efc=2 .text      calcDrawPriority__18dMenu_Fmap2DBack_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcDrawPriority__18dMenu_Fmap2DBack_cFv) {
+asm void dMenu_Fmap2DBack_c::calcDrawPriority() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcDrawPriority__18dMenu_Fmap2DBack_cFv.s"
 }
 #pragma pop
 
 
-/* 801D5BB8-801D5BD0 0018+00 .text      setArrowPosAxis__18dMenu_Fmap2DBack_cFff                     */
+/* 801D5BB8-801D5BD0 0018+00 rc=3 efc=3 .text      setArrowPosAxis__18dMenu_Fmap2DBack_cFff                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowPosAxis__18dMenu_Fmap2DBack_cFff) {
+asm void dMenu_Fmap2DBack_c::setArrowPosAxis(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowPosAxis__18dMenu_Fmap2DBack_cFff.s"
 }
 #pragma pop
 
 
-/* 801D5BD0-801D6700 0B30+00 .text      __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl           */
+/* 801D5BD0-801D6700 0B30+00 rc=1 efc=1 .text      __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl) {
+asm dMenu_Fmap2DTop_c::dMenu_Fmap2DTop_c(JKRExpHeap* field_0, STControl* field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/__ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl.s"
 }
 #pragma pop
 
 
-/* 801D6700-801D6A44 0344+00 .text      __dt__17dMenu_Fmap2DTop_cFv                                  */
+/* 801D6700-801D6A44 0344+00 rc=1 efc=0 .text      __dt__17dMenu_Fmap2DTop_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dMenu_Fmap2DTop_cFv) {
+asm dMenu_Fmap2DTop_c::~dMenu_Fmap2DTop_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/__dt__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D6A44-801D6C44 0200+00 .text      _execute__17dMenu_Fmap2DTop_cFv                              */
+/* 801D6A44-801D6C44 0200+00 rc=1 efc=1 .text      _execute__17dMenu_Fmap2DTop_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_execute__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::_execute() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/_execute__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D6C44-801D6C98 0054+00 .text      setAllAlphaRate__17dMenu_Fmap2DTop_cFfb                      */
+/* 801D6C44-801D6C98 0054+00 rc=2 efc=2 .text      setAllAlphaRate__17dMenu_Fmap2DTop_cFfb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAllAlphaRate__17dMenu_Fmap2DTop_cFfb) {
+asm void dMenu_Fmap2DTop_c::setAllAlphaRate(f32 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAllAlphaRate__17dMenu_Fmap2DTop_cFfb.s"
 }
 #pragma pop
 
 
-/* 801D6C98-801D6DF8 0160+00 .text      draw__17dMenu_Fmap2DTop_cFv                                  */
+/* 801D6C98-801D6DF8 0160+00 rc=1 efc=0 .text      draw__17dMenu_Fmap2DTop_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/draw__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D6DF8-801D6EDC 00E4+00 .text      btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf    */
+/* 801D6DF8-801D6EDC 00E4+00 rc=1 efc=1 .text      btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf) {
+asm void dMenu_Fmap2DTop_c::btkAnimeLoop(J2DAnmTextureSRTKey* field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf.s"
 }
 #pragma pop
 
 
-/* 801D6EDC-801D6F38 005C+00 .text      setMoyaAlpha__17dMenu_Fmap2DTop_cFUc                         */
+/* 801D6EDC-801D6F38 005C+00 rc=1 efc=1 .text      setMoyaAlpha__17dMenu_Fmap2DTop_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMoyaAlpha__17dMenu_Fmap2DTop_cFUc) {
+asm void dMenu_Fmap2DTop_c::setMoyaAlpha(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setMoyaAlpha__17dMenu_Fmap2DTop_cFUc.s"
 }
 #pragma pop
 
 
-/* 801D6F38-801D7010 00D8+00 .text      setTitleNameString__17dMenu_Fmap2DTop_cFUl                   */
+/* 801D6F38-801D7010 00D8+00 rc=2 efc=1 .text      setTitleNameString__17dMenu_Fmap2DTop_cFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTitleNameString__17dMenu_Fmap2DTop_cFUl) {
+asm void dMenu_Fmap2DTop_c::setTitleNameString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setTitleNameString__17dMenu_Fmap2DTop_cFUl.s"
 }
 #pragma pop
 
 
-/* 801D7010-801D70E8 00D8+00 .text      setAreaNameString__17dMenu_Fmap2DTop_cFUl                    */
+/* 801D7010-801D70E8 00D8+00 rc=2 efc=2 .text      setAreaNameString__17dMenu_Fmap2DTop_cFUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAreaNameString__17dMenu_Fmap2DTop_cFUl) {
+asm void dMenu_Fmap2DTop_c::setAreaNameString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAreaNameString__17dMenu_Fmap2DTop_cFUl.s"
 }
 #pragma pop
 
 
-/* 801D70E8-801D7210 0128+00 .text      setZButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
+/* 801D70E8-801D7210 0128+00 rc=13 efc=12 .text      setZButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setZButtonString__17dMenu_Fmap2DTop_cFUlUc) {
+asm void dMenu_Fmap2DTop_c::setZButtonString(u32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setZButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
 #pragma pop
 
 
-/* 801D7210-801D72D4 00C4+00 .text      setBButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
+/* 801D7210-801D72D4 00C4+00 rc=10 efc=9 .text      setBButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBButtonString__17dMenu_Fmap2DTop_cFUlUc) {
+asm void dMenu_Fmap2DTop_c::setBButtonString(u32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setBButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
 #pragma pop
 
 
-/* 801D72D4-801D7398 00C4+00 .text      setAButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
+/* 801D72D4-801D7398 00C4+00 rc=15 efc=14 .text      setAButtonString__17dMenu_Fmap2DTop_cFUlUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAButtonString__17dMenu_Fmap2DTop_cFUlUc) {
+asm void dMenu_Fmap2DTop_c::setAButtonString(u32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
 #pragma pop
 
 
-/* 801D7398-801D74EC 0154+00 .text      setCrossLRString__17dMenu_Fmap2DTop_cFUl                     */
+/* 801D7398-801D74EC 0154+00 rc=9 efc=8 .text      setCrossLRString__17dMenu_Fmap2DTop_cFUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCrossLRString__17dMenu_Fmap2DTop_cFUl) {
+asm void dMenu_Fmap2DTop_c::setCrossLRString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setCrossLRString__17dMenu_Fmap2DTop_cFUl.s"
 }
 #pragma pop
 
 
-/* 801D74EC-801D7640 0154+00 .text      set3DStickString__17dMenu_Fmap2DTop_cFUl                     */
+/* 801D74EC-801D7640 0154+00 rc=11 efc=10 .text      set3DStickString__17dMenu_Fmap2DTop_cFUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set3DStickString__17dMenu_Fmap2DTop_cFUl) {
+asm void dMenu_Fmap2DTop_c::set3DStickString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/set3DStickString__17dMenu_Fmap2DTop_cFUl.s"
 }
 #pragma pop
 
 
-/* 801D7640-801D76C0 0080+00 .text      createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl  */
+/* 801D7640-801D76C0 0080+00 rc=5 efc=5 .text      createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl) {
+asm void dMenu_Fmap2DTop_c::createExplain(JKRExpHeap* field_0, STControl* field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl.s"
 }
 #pragma pop
 
 
-/* 801D76C0-801D7714 0054+00 .text      deleteExplain__17dMenu_Fmap2DTop_cFv                         */
+/* 801D76C0-801D7714 0054+00 rc=3 efc=2 .text      deleteExplain__17dMenu_Fmap2DTop_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteExplain__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::deleteExplain() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/deleteExplain__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D7714-801D77C4 00B0+00 .text      setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf                  */
+/* 801D7714-801D77C4 00B0+00 rc=12 efc=12 .text      setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf) {
+asm void dMenu_Fmap2DTop_c::setArrowAlphaRatio(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf.s"
 }
@@ -1429,14 +1870,14 @@ ASM_FUNCTION(setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf) {
 
 
 /* ############################################################################################## */
-/* 8045422C-80454230 0004+00 .sdata2    @6309                                                        */
+/* 8045422C-80454230 0004+00 rc=2 efc=0 .sdata2    @6309                                                        */
 f32 lit_6309 = 5.0f;
 
-/* 801D77C4-801D7858 0094+00 .text      setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
+/* 801D77C4-801D7858 0094+00 rc=1 efc=0 .text      setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha) {
+asm void dMenu_Fmap2DTop_c::setAlphaAnimeMin(CPaneMgrAlpha* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha.s"
 }
@@ -1444,107 +1885,106 @@ ASM_FUNCTION(setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha) {
 
 
 /* ############################################################################################## */
-/* 80454230-80454238 0004+04 .sdata2    @6325                                                        */
+/* 80454230-80454238 0004+04 rc=1 efc=0 .sdata2    @6325                                                        */
 f32 lit_6325 = 0.25f;
 /* padding 4 bytes */
 
-/* 801D7858-801D78FC 00A4+00 .text      setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
+/* 801D7858-801D78FC 00A4+00 rc=1 efc=0 .text      setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha) {
+asm void dMenu_Fmap2DTop_c::setAlphaAnimeMid(CPaneMgrAlpha* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha.s"
 }
 #pragma pop
 
 
-/* 801D78FC-801D7994 0098+00 .text      setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
+/* 801D78FC-801D7994 0098+00 rc=1 efc=0 .text      setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha) {
+asm void dMenu_Fmap2DTop_c::setAlphaAnimeMax(CPaneMgrAlpha* field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha.s"
 }
 #pragma pop
 
 
-/* 801D7994-801D7A08 0074+00 .text      checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv                 */
+/* 801D7994-801D7A08 0074+00 rc=4 efc=3 .text      checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::checkPlayerWarpAccept() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D7A08-801D7AB4 00AC+00 .text      checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi                 */
+/* 801D7A08-801D7AB4 00AC+00 rc=1 efc=0 .text      checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi) {
+asm void dMenu_Fmap2DTop_c::checkWarpAcceptRegion(s32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi.s"
 }
 #pragma pop
 
 
-/* 801D7AB4-801D7B58 00A4+00 .text      checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv                */
+/* 801D7AB4-801D7B58 00A4+00 rc=4 efc=3 .text      checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::checkWarpAcceptRegion4() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D7B58-801D7BCC 0074+00 .text      checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv                 */
+/* 801D7B58-801D7BCC 0074+00 rc=4 efc=3 .text      checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::checkWarpAcceptCannon() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D7BCC-801D8088 04BC+00 .text      setHIO__17dMenu_Fmap2DTop_cFb                                */
+/* 801D7BCC-801D8088 04BC+00 rc=2 efc=0 .text      setHIO__17dMenu_Fmap2DTop_cFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHIO__17dMenu_Fmap2DTop_cFb) {
+asm void dMenu_Fmap2DTop_c::setHIO(bool field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setHIO__17dMenu_Fmap2DTop_cFb.s"
 }
 #pragma pop
 
 
-/* 801D8088-801D810C 0084+00 .text      isWarpAccept__17dMenu_Fmap2DTop_cFv                          */
+/* 801D8088-801D810C 0084+00 rc=4 efc=3 .text      isWarpAccept__17dMenu_Fmap2DTop_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isWarpAccept__17dMenu_Fmap2DTop_cFv) {
+asm void dMenu_Fmap2DTop_c::isWarpAccept() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/isWarpAccept__17dMenu_Fmap2DTop_cFv.s"
 }
 #pragma pop
 
 
-/* 801D810C-801D8114 0008+00 .text      @4@__dt__18dMenu_Fmap2DBack_cFv                              */
+/* 801D810C-801D8114 0008+00 rc=1 efc=0 .text      @4@__dt__18dMenu_Fmap2DBack_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_801D810C) {
+extern "C" asm static void func_801D810C() {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/func_801D810C.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

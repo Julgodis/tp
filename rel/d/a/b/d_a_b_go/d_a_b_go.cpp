@@ -6,31 +6,82 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct b_go_class;
+struct fopAc_ac_c;
+
+struct daB_GO_HIO_c {
+	daB_GO_HIO_c();
+	~daB_GO_HIO_c();
+};
+
+struct b_go_class {
+	b_go_class();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daB_GO_HIO_cFv();
-extern "C" extern void daB_GO_Draw__FP10b_go_class();
-extern "C" extern void anm_init__FP10b_go_classifUcf();
-extern "C" extern void damage_check__FP10b_go_class();
-extern "C" extern void h_wait__FP10b_go_class();
-extern "C" extern void h_walk__FP10b_go_class();
-extern "C" extern void h_attack__FP10b_go_class();
-extern "C" extern void action__FP10b_go_class();
-extern "C" extern void daB_GO_Execute__FP10b_go_class();
-extern "C" extern void daB_GO_IsDelete__FP10b_go_class();
-extern "C" extern void daB_GO_Delete__FP10b_go_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daB_GO_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__10b_go_classFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12daB_GO_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_go_cpp();
-extern "C" extern void func_80604020();
-extern "C" extern void func_80604028();
+void daB_GO_Draw(b_go_class*);
+void anm_init(b_go_class*, s32, f32, u8, f32);
+void damage_check(b_go_class*);
+void h_wait(b_go_class*);
+void h_walk(b_go_class*);
+void h_attack(b_go_class*);
+void action(b_go_class*);
+void daB_GO_Execute(b_go_class*);
+bool daB_GO_IsDelete(b_go_class*);
+void daB_GO_Delete(b_go_class*);
+void useHeapInit(fopAc_ac_c*);
+void daB_GO_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_b_go_cpp();
+extern "C" void func_80604020();
+extern "C" void func_80604028();
+
+extern "C" void __ct__12daB_GO_HIO_cFv();
+extern "C" void daB_GO_Draw__FP10b_go_class();
+extern "C" void anm_init__FP10b_go_classifUcf();
+extern "C" void damage_check__FP10b_go_class();
+extern "C" void h_wait__FP10b_go_class();
+extern "C" void h_walk__FP10b_go_class();
+extern "C" void h_attack__FP10b_go_class();
+extern "C" void action__FP10b_go_class();
+extern "C" void daB_GO_Execute__FP10b_go_class();
+extern "C" bool daB_GO_IsDelete__FP10b_go_class();
+extern "C" void daB_GO_Delete__FP10b_go_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daB_GO_Create__FP10fopAc_ac_c();
+extern "C" void __ct__10b_go_classFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12daB_GO_HIO_cFv();
+extern "C" void __sinit_d_a_b_go_cpp();
+extern "C" void func_80604020();
+extern "C" void func_80604028();
 SECTION_RODATA extern const u32 lit_3646;
 SECTION_RODATA extern const u32 lit_3647;
 SECTION_RODATA extern const u32 lit_3648;
@@ -65,8 +116,11 @@ SECTION_BSS extern u8 l_HIO[24];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -76,7 +130,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daB_GO_HIO_cFv) {
+asm daB_GO_HIO_c::daB_GO_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__ct__12daB_GO_HIO_cFv.s"
 }
@@ -87,7 +141,7 @@ ASM_FUNCTION(__ct__12daB_GO_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GO_Draw__FP10b_go_class) {
+asm void daB_GO_Draw(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_Draw__FP10b_go_class.s"
 }
@@ -98,7 +152,7 @@ ASM_FUNCTION(daB_GO_Draw__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10b_go_classifUcf) {
+asm void anm_init(b_go_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/anm_init__FP10b_go_classifUcf.s"
 }
@@ -106,21 +160,16 @@ ASM_FUNCTION(anm_init__FP10b_go_classifUcf) {
 
 
 /* 8060331C-80603320 0004+00 .text      damage_check__FP10b_go_class                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10b_go_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/damage_check__FP10b_go_class.s"
+void damage_check(b_go_class* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80603320-806033F0 00D0+00 .text      h_wait__FP10b_go_class                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(h_wait__FP10b_go_class) {
+asm void h_wait(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/h_wait__FP10b_go_class.s"
 }
@@ -131,7 +180,7 @@ ASM_FUNCTION(h_wait__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(h_walk__FP10b_go_class) {
+asm void h_walk(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/h_walk__FP10b_go_class.s"
 }
@@ -142,7 +191,7 @@ ASM_FUNCTION(h_walk__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(h_attack__FP10b_go_class) {
+asm void h_attack(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/h_attack__FP10b_go_class.s"
 }
@@ -153,7 +202,7 @@ ASM_FUNCTION(h_attack__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10b_go_class) {
+asm void action(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/action__FP10b_go_class.s"
 }
@@ -164,7 +213,7 @@ ASM_FUNCTION(action__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GO_Execute__FP10b_go_class) {
+asm void daB_GO_Execute(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_Execute__FP10b_go_class.s"
 }
@@ -172,21 +221,16 @@ ASM_FUNCTION(daB_GO_Execute__FP10b_go_class) {
 
 
 /* 806038EC-806038F4 0008+00 .text      daB_GO_IsDelete__FP10b_go_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_GO_IsDelete__FP10b_go_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_IsDelete__FP10b_go_class.s"
+bool daB_GO_IsDelete(b_go_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806038F4-8060395C 0068+00 .text      daB_GO_Delete__FP10b_go_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GO_Delete__FP10b_go_class) {
+asm void daB_GO_Delete(b_go_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_Delete__FP10b_go_class.s"
 }
@@ -197,7 +241,7 @@ ASM_FUNCTION(daB_GO_Delete__FP10b_go_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -208,7 +252,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_GO_Create__FP10fopAc_ac_c) {
+asm void daB_GO_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_Create__FP10fopAc_ac_c.s"
 }
@@ -219,7 +263,7 @@ ASM_FUNCTION(daB_GO_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10b_go_classFv) {
+asm b_go_class::b_go_class() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__ct__10b_go_classFv.s"
 }
@@ -230,7 +274,7 @@ ASM_FUNCTION(__ct__10b_go_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__dt__8cM3dGCylFv.s"
 }
@@ -241,7 +285,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__dt__8cM3dGSphFv.s"
 }
@@ -252,7 +296,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__dt__8cM3dGAabFv.s"
 }
@@ -263,7 +307,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -274,7 +318,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daB_GO_HIO_cFv) {
+asm daB_GO_HIO_c::~daB_GO_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__dt__12daB_GO_HIO_cFv.s"
 }
@@ -285,7 +329,7 @@ ASM_FUNCTION(__dt__12daB_GO_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_go_cpp) {
+extern "C" asm void __sinit_d_a_b_go_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/__sinit_d_a_b_go_cpp.s"
 }
@@ -296,7 +340,7 @@ ASM_FUNCTION(__sinit_d_a_b_go_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80604020) {
+extern "C" asm void func_80604020() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/func_80604020.s"
 }
@@ -307,7 +351,7 @@ ASM_FUNCTION(func_80604020) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80604028) {
+extern "C" asm void func_80604028() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/func_80604028.s"
 }

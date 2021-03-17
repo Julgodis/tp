@@ -6,46 +6,108 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjSw5_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct daObjSw5_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void setting_ride_flag();
+	bool checkPushable();
+	void event_proc_call();
+	void actionPauseNoneInit();
+	void actionPauseNone();
+	void actionPauseOrderInit();
+	void actionPauseOrder();
+	void actionPauseInit();
+	void actionPause();
+	void actionWait();
+	void actionOrder();
+	void actionEvent();
+	void calc_top_pos();
+	void mode_proc_call();
+	void modeWaitLowerInit();
+	void modeWaitLower();
+	void modeLowerInit();
+	void modeLower();
+	void modeWaitUpperInit();
+	void modeWaitUpper();
+	void modeUpperInit();
+	void modeUpper();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__10daObjSw5_cFv();
-extern "C" extern void setBaseMtx__10daObjSw5_cFv();
-extern "C" extern void Create__10daObjSw5_cFv();
-extern "C" extern void CreateHeap__10daObjSw5_cFv();
-extern "C" extern void create__10daObjSw5_cFv();
-extern "C" extern void Execute__10daObjSw5_cFPPA3_A4_f();
-extern "C" extern void setting_ride_flag__10daObjSw5_cFv();
-extern "C" extern void checkPushable__10daObjSw5_cFv();
-extern "C" extern void event_proc_call__10daObjSw5_cFv();
-extern "C" extern void actionPauseNoneInit__10daObjSw5_cFv();
-extern "C" extern void actionPauseNone__10daObjSw5_cFv();
-extern "C" extern void actionPauseOrderInit__10daObjSw5_cFv();
-extern "C" extern void actionPauseOrder__10daObjSw5_cFv();
-extern "C" extern void actionPauseInit__10daObjSw5_cFv();
-extern "C" extern void actionPause__10daObjSw5_cFv();
-extern "C" extern void actionWait__10daObjSw5_cFv();
-extern "C" extern void actionOrder__10daObjSw5_cFv();
-extern "C" extern void actionEvent__10daObjSw5_cFv();
-extern "C" extern void calc_top_pos__10daObjSw5_cFv();
-extern "C" extern void mode_proc_call__10daObjSw5_cFv();
-extern "C" extern void modeWaitLowerInit__10daObjSw5_cFv();
-extern "C" extern void modeWaitLower__10daObjSw5_cFv();
-extern "C" extern void modeLowerInit__10daObjSw5_cFv();
-extern "C" extern void modeLower__10daObjSw5_cFv();
-extern "C" extern void modeWaitUpperInit__10daObjSw5_cFv();
-extern "C" extern void modeWaitUpper__10daObjSw5_cFv();
-extern "C" extern void modeUpperInit__10daObjSw5_cFv();
-extern "C" extern void modeUpper__10daObjSw5_cFv();
-extern "C" extern void Draw__10daObjSw5_cFv();
-extern "C" extern void Delete__10daObjSw5_cFv();
-extern "C" extern void daObjSw5_Draw__FP10daObjSw5_c();
-extern "C" extern void daObjSw5_Execute__FP10daObjSw5_c();
-extern "C" extern void daObjSw5_Delete__FP10daObjSw5_c();
-extern "C" extern void daObjSw5_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__4cXyzFv();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__10daObjSw5_cFPPA3_A4_f();
+void daObjSw5_Draw(daObjSw5_c*);
+void daObjSw5_Execute(daObjSw5_c*);
+void daObjSw5_Delete(daObjSw5_c*);
+void daObjSw5_Create(fopAc_ac_c*);
+
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__10daObjSw5_cFv();
+extern "C" void setBaseMtx__10daObjSw5_cFv();
+extern "C" void Create__10daObjSw5_cFv();
+extern "C" void CreateHeap__10daObjSw5_cFv();
+extern "C" void create__10daObjSw5_cFv();
+extern "C" void Execute__10daObjSw5_cFPPA3_A4_f();
+extern "C" void setting_ride_flag__10daObjSw5_cFv();
+extern "C" bool checkPushable__10daObjSw5_cFv();
+extern "C" void event_proc_call__10daObjSw5_cFv();
+extern "C" void actionPauseNoneInit__10daObjSw5_cFv();
+extern "C" void actionPauseNone__10daObjSw5_cFv();
+extern "C" void actionPauseOrderInit__10daObjSw5_cFv();
+extern "C" void actionPauseOrder__10daObjSw5_cFv();
+extern "C" void actionPauseInit__10daObjSw5_cFv();
+extern "C" void actionPause__10daObjSw5_cFv();
+extern "C" void actionWait__10daObjSw5_cFv();
+extern "C" void actionOrder__10daObjSw5_cFv();
+extern "C" void actionEvent__10daObjSw5_cFv();
+extern "C" void calc_top_pos__10daObjSw5_cFv();
+extern "C" void mode_proc_call__10daObjSw5_cFv();
+extern "C" void modeWaitLowerInit__10daObjSw5_cFv();
+extern "C" void modeWaitLower__10daObjSw5_cFv();
+extern "C" void modeLowerInit__10daObjSw5_cFv();
+extern "C" void modeLower__10daObjSw5_cFv();
+extern "C" void modeWaitUpperInit__10daObjSw5_cFv();
+extern "C" void modeWaitUpper__10daObjSw5_cFv();
+extern "C" void modeUpperInit__10daObjSw5_cFv();
+extern "C" void modeUpper__10daObjSw5_cFv();
+extern "C" void Draw__10daObjSw5_cFv();
+extern "C" void Delete__10daObjSw5_cFv();
+extern "C" void daObjSw5_Draw__FP10daObjSw5_c();
+extern "C" void daObjSw5_Execute__FP10daObjSw5_c();
+extern "C" void daObjSw5_Delete__FP10daObjSw5_c();
+extern "C" void daObjSw5_Create__FP10fopAc_ac_c();
+extern "C" void __dt__4cXyzFv();
 SECTION_RODATA extern const u8 l_dzbIdx[8];
 SECTION_RODATA extern const u32 lit_3718;
 SECTION_RODATA extern const u8 lit_3719[4];
@@ -128,8 +190,11 @@ SECTION_BSS extern u8 data_8059C978[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -139,7 +204,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -150,7 +215,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/nodeCallBack__FP8J3DJointi.s"
 }
@@ -161,7 +226,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daObjSw5_cFv) {
+asm void daObjSw5_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/initBaseMtx__10daObjSw5_cFv.s"
 }
@@ -172,7 +237,7 @@ ASM_FUNCTION(initBaseMtx__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjSw5_cFv) {
+asm void daObjSw5_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/setBaseMtx__10daObjSw5_cFv.s"
 }
@@ -183,7 +248,7 @@ ASM_FUNCTION(setBaseMtx__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daObjSw5_cFv) {
+asm void daObjSw5_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/Create__10daObjSw5_cFv.s"
 }
@@ -194,7 +259,7 @@ ASM_FUNCTION(Create__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjSw5_cFv) {
+asm void daObjSw5_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/CreateHeap__10daObjSw5_cFv.s"
 }
@@ -205,7 +270,7 @@ ASM_FUNCTION(CreateHeap__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjSw5_cFv) {
+asm void daObjSw5_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/func_8059BB1C.s"
 }
@@ -216,7 +281,7 @@ ASM_FUNCTION(create__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjSw5_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daObjSw5_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/Execute__10daObjSw5_cFPPA3_A4_f.s"
 }
@@ -227,7 +292,7 @@ ASM_FUNCTION(Execute__10daObjSw5_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setting_ride_flag__10daObjSw5_cFv) {
+asm void daObjSw5_c::setting_ride_flag() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/setting_ride_flag__10daObjSw5_cFv.s"
 }
@@ -235,21 +300,16 @@ ASM_FUNCTION(setting_ride_flag__10daObjSw5_cFv) {
 
 
 /* 8059BD24-8059BD2C 0008+00 .text      checkPushable__10daObjSw5_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkPushable__10daObjSw5_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/checkPushable__10daObjSw5_cFv.s"
+bool daObjSw5_c::checkPushable() {
+	return true;
 }
-#pragma pop
 
 
 /* 8059BD2C-8059BE18 00EC+00 .text      event_proc_call__10daObjSw5_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__10daObjSw5_cFv) {
+asm void daObjSw5_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/event_proc_call__10daObjSw5_cFv.s"
 }
@@ -260,7 +320,7 @@ ASM_FUNCTION(event_proc_call__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPauseNoneInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::actionPauseNoneInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseNoneInit__10daObjSw5_cFv.s"
 }
@@ -268,21 +328,16 @@ ASM_FUNCTION(actionPauseNoneInit__10daObjSw5_cFv) {
 
 
 /* 8059BE24-8059BE28 0004+00 .text      actionPauseNone__10daObjSw5_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionPauseNone__10daObjSw5_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseNone__10daObjSw5_cFv.s"
+void daObjSw5_c::actionPauseNone() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BE28-8059BE80 0058+00 .text      actionPauseOrderInit__10daObjSw5_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPauseOrderInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::actionPauseOrderInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseOrderInit__10daObjSw5_cFv.s"
 }
@@ -293,7 +348,7 @@ ASM_FUNCTION(actionPauseOrderInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPauseOrder__10daObjSw5_cFv) {
+asm void daObjSw5_c::actionPauseOrder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseOrder__10daObjSw5_cFv.s"
 }
@@ -304,7 +359,7 @@ ASM_FUNCTION(actionPauseOrder__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPauseInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::actionPauseInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseInit__10daObjSw5_cFv.s"
 }
@@ -315,7 +370,7 @@ ASM_FUNCTION(actionPauseInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionPause__10daObjSw5_cFv) {
+asm void daObjSw5_c::actionPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPause__10daObjSw5_cFv.s"
 }
@@ -323,43 +378,28 @@ ASM_FUNCTION(actionPause__10daObjSw5_cFv) {
 
 
 /* 8059BF48-8059BF4C 0004+00 .text      actionWait__10daObjSw5_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daObjSw5_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionWait__10daObjSw5_cFv.s"
+void daObjSw5_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF4C-8059BF50 0004+00 .text      actionOrder__10daObjSw5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionOrder__10daObjSw5_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionOrder__10daObjSw5_cFv.s"
+void daObjSw5_c::actionOrder() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF50-8059BF54 0004+00 .text      actionEvent__10daObjSw5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__10daObjSw5_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionEvent__10daObjSw5_cFv.s"
+void daObjSw5_c::actionEvent() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF54-8059BFE4 0090+00 .text      calc_top_pos__10daObjSw5_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_top_pos__10daObjSw5_cFv) {
+asm void daObjSw5_c::calc_top_pos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/calc_top_pos__10daObjSw5_cFv.s"
 }
@@ -370,7 +410,7 @@ ASM_FUNCTION(calc_top_pos__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__10daObjSw5_cFv) {
+asm void daObjSw5_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/mode_proc_call__10daObjSw5_cFv.s"
 }
@@ -381,7 +421,7 @@ ASM_FUNCTION(mode_proc_call__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitLowerInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeWaitLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeWaitLowerInit__10daObjSw5_cFv.s"
 }
@@ -392,7 +432,7 @@ ASM_FUNCTION(modeWaitLowerInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitLower__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeWaitLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeWaitLower__10daObjSw5_cFv.s"
 }
@@ -403,7 +443,7 @@ ASM_FUNCTION(modeWaitLower__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLowerInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeLowerInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeLowerInit__10daObjSw5_cFv.s"
 }
@@ -414,7 +454,7 @@ ASM_FUNCTION(modeLowerInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLower__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeLower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeLower__10daObjSw5_cFv.s"
 }
@@ -425,7 +465,7 @@ ASM_FUNCTION(modeLower__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitUpperInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeWaitUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeWaitUpperInit__10daObjSw5_cFv.s"
 }
@@ -436,7 +476,7 @@ ASM_FUNCTION(modeWaitUpperInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitUpper__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeWaitUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeWaitUpper__10daObjSw5_cFv.s"
 }
@@ -447,7 +487,7 @@ ASM_FUNCTION(modeWaitUpper__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpperInit__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeUpperInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeUpperInit__10daObjSw5_cFv.s"
 }
@@ -458,7 +498,7 @@ ASM_FUNCTION(modeUpperInit__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpper__10daObjSw5_cFv) {
+asm void daObjSw5_c::modeUpper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/modeUpper__10daObjSw5_cFv.s"
 }
@@ -469,7 +509,7 @@ ASM_FUNCTION(modeUpper__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daObjSw5_cFv) {
+asm void daObjSw5_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/Draw__10daObjSw5_cFv.s"
 }
@@ -480,7 +520,7 @@ ASM_FUNCTION(Draw__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjSw5_cFv) {
+asm void daObjSw5_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/Delete__10daObjSw5_cFv.s"
 }
@@ -491,7 +531,7 @@ ASM_FUNCTION(Delete__10daObjSw5_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSw5_Draw__FP10daObjSw5_c) {
+asm void daObjSw5_Draw(daObjSw5_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/daObjSw5_Draw__FP10daObjSw5_c.s"
 }
@@ -502,7 +542,7 @@ ASM_FUNCTION(daObjSw5_Draw__FP10daObjSw5_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSw5_Execute__FP10daObjSw5_c) {
+asm void daObjSw5_Execute(daObjSw5_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/daObjSw5_Execute__FP10daObjSw5_c.s"
 }
@@ -513,7 +553,7 @@ ASM_FUNCTION(daObjSw5_Execute__FP10daObjSw5_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSw5_Delete__FP10daObjSw5_c) {
+asm void daObjSw5_Delete(daObjSw5_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/daObjSw5_Delete__FP10daObjSw5_c.s"
 }
@@ -524,7 +564,7 @@ ASM_FUNCTION(daObjSw5_Delete__FP10daObjSw5_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSw5_Create__FP10fopAc_ac_c) {
+asm void daObjSw5_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/daObjSw5_Create__FP10fopAc_ac_c.s"
 }
@@ -535,7 +575,7 @@ ASM_FUNCTION(daObjSw5_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/__dt__4cXyzFv.s"
 }

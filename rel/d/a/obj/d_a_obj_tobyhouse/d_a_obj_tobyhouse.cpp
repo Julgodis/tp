@@ -6,35 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daObjTobyHouse_c;
+
+struct J3DJoint {
+};
+
+struct daObjTobyHouse_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void action();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void sceneChange();
+	void Draw();
+	void checkLODModel();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void s_b_sub__FPvPv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void initBaseMtx__16daObjTobyHouse_cFv();
-extern "C" extern void setBaseMtx__16daObjTobyHouse_cFv();
-extern "C" extern void Create__16daObjTobyHouse_cFv();
-extern "C" extern void CreateHeap__16daObjTobyHouse_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__16daObjTobyHouse_cFv();
-extern "C" extern void Execute__16daObjTobyHouse_cFPPA3_A4_f();
-extern "C" extern void action__16daObjTobyHouse_cFv();
-extern "C" extern void actionWait__16daObjTobyHouse_cFv();
-extern "C" extern void actionOrderEvent__16daObjTobyHouse_cFv();
-extern "C" extern void actionEvent__16daObjTobyHouse_cFv();
-extern "C" extern void actionDead__16daObjTobyHouse_cFv();
-extern "C" extern void demoProc__16daObjTobyHouse_cFv();
-extern "C" extern void sceneChange__16daObjTobyHouse_cFv();
-extern "C" extern void Draw__16daObjTobyHouse_cFv();
-extern "C" extern void checkLODModel__16daObjTobyHouse_cFv();
-extern "C" extern void Delete__16daObjTobyHouse_cFv();
-extern "C" extern void daObjTobyHouse_create1st__FP16daObjTobyHouse_c();
-extern "C" extern void daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c();
-extern "C" extern void daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c();
-extern "C" extern void daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c();
-extern "C" extern void func_80D176E4();
-extern "C" extern void __dt__4cXyzFv();
+void s_b_sub(void*, void*);
+void nodeCallBack(J3DJoint*, s32);
+void eventCallBack(void*, s32);
+extern "C" void Execute__16daObjTobyHouse_cFPPA3_A4_f();
+void daObjTobyHouse_create1st(daObjTobyHouse_c*);
+void daObjTobyHouse_MoveBGDelete(daObjTobyHouse_c*);
+void daObjTobyHouse_MoveBGExecute(daObjTobyHouse_c*);
+void daObjTobyHouse_MoveBGDraw(daObjTobyHouse_c*);
+extern "C" void func_80D176E4();
+
+extern "C" void s_b_sub__FPvPv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void eventCallBack__FPvi();
+extern "C" void initBaseMtx__16daObjTobyHouse_cFv();
+extern "C" void setBaseMtx__16daObjTobyHouse_cFv();
+extern "C" void Create__16daObjTobyHouse_cFv();
+extern "C" void CreateHeap__16daObjTobyHouse_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__16daObjTobyHouse_cFv();
+extern "C" void Execute__16daObjTobyHouse_cFPPA3_A4_f();
+extern "C" void action__16daObjTobyHouse_cFv();
+extern "C" void actionWait__16daObjTobyHouse_cFv();
+extern "C" void actionOrderEvent__16daObjTobyHouse_cFv();
+extern "C" void actionEvent__16daObjTobyHouse_cFv();
+extern "C" void actionDead__16daObjTobyHouse_cFv();
+extern "C" void demoProc__16daObjTobyHouse_cFv();
+extern "C" void sceneChange__16daObjTobyHouse_cFv();
+extern "C" void Draw__16daObjTobyHouse_cFv();
+extern "C" void checkLODModel__16daObjTobyHouse_cFv();
+extern "C" void Delete__16daObjTobyHouse_cFv();
+extern "C" void daObjTobyHouse_create1st__FP16daObjTobyHouse_c();
+extern "C" void daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c();
+extern "C" void daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c();
+extern "C" void daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c();
+extern "C" void func_80D176E4();
+extern "C" void __dt__4cXyzFv();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_LodBmd[8];
@@ -122,8 +168,11 @@ SECTION_BSS extern u8 data_80D17A7C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -133,7 +182,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_b_sub__FPvPv) {
+asm void s_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/s_b_sub__FPvPv.s"
 }
@@ -144,7 +193,7 @@ ASM_FUNCTION(s_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/nodeCallBack__FP8J3DJointi.s"
 }
@@ -155,7 +204,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/eventCallBack__FPvi.s"
 }
@@ -166,7 +215,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/initBaseMtx__16daObjTobyHouse_cFv.s"
 }
@@ -177,7 +226,7 @@ ASM_FUNCTION(initBaseMtx__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/setBaseMtx__16daObjTobyHouse_cFv.s"
 }
@@ -188,7 +237,7 @@ ASM_FUNCTION(setBaseMtx__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/Create__16daObjTobyHouse_cFv.s"
 }
@@ -199,7 +248,7 @@ ASM_FUNCTION(Create__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/CreateHeap__16daObjTobyHouse_cFv.s"
 }
@@ -210,7 +259,7 @@ ASM_FUNCTION(CreateHeap__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/__dt__12J3DFrameCtrlFv.s"
 }
@@ -221,7 +270,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/create1st__16daObjTobyHouse_cFv.s"
 }
@@ -232,7 +281,7 @@ ASM_FUNCTION(create1st__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjTobyHouse_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjTobyHouse_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/Execute__16daObjTobyHouse_cFPPA3_A4_f.s"
 }
@@ -243,7 +292,7 @@ ASM_FUNCTION(Execute__16daObjTobyHouse_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/action__16daObjTobyHouse_cFv.s"
 }
@@ -254,7 +303,7 @@ ASM_FUNCTION(action__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/actionWait__16daObjTobyHouse_cFv.s"
 }
@@ -265,7 +314,7 @@ ASM_FUNCTION(actionWait__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/actionOrderEvent__16daObjTobyHouse_cFv.s"
 }
@@ -276,7 +325,7 @@ ASM_FUNCTION(actionOrderEvent__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/actionEvent__16daObjTobyHouse_cFv.s"
 }
@@ -284,21 +333,16 @@ ASM_FUNCTION(actionEvent__16daObjTobyHouse_cFv) {
 
 
 /* 80D16860-80D16864 0004+00 .text      actionDead__16daObjTobyHouse_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__16daObjTobyHouse_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/actionDead__16daObjTobyHouse_cFv.s"
+void daObjTobyHouse_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D16864-80D171C0 095C+00 .text      demoProc__16daObjTobyHouse_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/demoProc__16daObjTobyHouse_cFv.s"
 }
@@ -309,7 +353,7 @@ ASM_FUNCTION(demoProc__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sceneChange__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::sceneChange() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/sceneChange__16daObjTobyHouse_cFv.s"
 }
@@ -320,7 +364,7 @@ ASM_FUNCTION(sceneChange__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/Draw__16daObjTobyHouse_cFv.s"
 }
@@ -331,7 +375,7 @@ ASM_FUNCTION(Draw__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkLODModel__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::checkLODModel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/checkLODModel__16daObjTobyHouse_cFv.s"
 }
@@ -342,7 +386,7 @@ ASM_FUNCTION(checkLODModel__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjTobyHouse_cFv) {
+asm void daObjTobyHouse_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/Delete__16daObjTobyHouse_cFv.s"
 }
@@ -353,7 +397,7 @@ ASM_FUNCTION(Delete__16daObjTobyHouse_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTobyHouse_create1st__FP16daObjTobyHouse_c) {
+asm void daObjTobyHouse_create1st(daObjTobyHouse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/daObjTobyHouse_create1st__FP16daObjTobyHouse_c.s"
 }
@@ -364,7 +408,7 @@ ASM_FUNCTION(daObjTobyHouse_create1st__FP16daObjTobyHouse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c) {
+asm void daObjTobyHouse_MoveBGDelete(daObjTobyHouse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c.s"
 }
@@ -375,7 +419,7 @@ ASM_FUNCTION(daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c) {
+asm void daObjTobyHouse_MoveBGExecute(daObjTobyHouse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c.s"
 }
@@ -386,7 +430,7 @@ ASM_FUNCTION(daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c) {
+asm void daObjTobyHouse_MoveBGDraw(daObjTobyHouse_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c.s"
 }
@@ -397,7 +441,7 @@ ASM_FUNCTION(daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D176E4) {
+extern "C" asm void func_80D176E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/func_80D176E4.s"
 }
@@ -408,7 +452,7 @@ ASM_FUNCTION(func_80D176E4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tobyhouse/d_a_obj_tobyhouse/__dt__4cXyzFv.s"
 }

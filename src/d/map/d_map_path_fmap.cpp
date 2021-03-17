@@ -6,34 +6,188 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build fmpTresTypeGroupDataList_c (fmpTresTypeGroupDataList_c) False/False
+// build dTres_c (dTres_c) False/False
+// build dTres_c (dTres_c) True/False
+struct dTres_c;
+/* top-level dependencies (begin dTres_c) */
+// outer dependency: dTres_c::typeGroupData_c
+/* top-level dependencies (end dTres_c) */
+struct dTres_c {
+	// dTres_c::typeGroupData_c
+	// build data_s (dTres_c::data_s) False/False
+	/* dependencies (begin dTres_c::data_s) */
+	/* dependencies (end dTres_c::data_s) */
+	struct data_s {
+	};
+
+	// build typeGroupData_c (dTres_c::typeGroupData_c) False/False
+	/* dependencies (begin dTres_c::typeGroupData_c) */
+	/* dependencies (end dTres_c::typeGroupData_c) */
+	struct typeGroupData_c {
+	};
+
+	/* 8009C360 */ void getFirstData(char);
+	/* 8009C39C */ void getNextData(dTres_c::typeGroupData_c*);
+	/* 8009C49C */ void getTypeGroupNoToType(char);
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(char);
+};
+
+/* top-level dependencies (begin fmpTresTypeGroupDataList_c) */
+// outer dependency: dTres_c::data_s
+/* top-level dependencies (end fmpTresTypeGroupDataList_c) */
+struct fmpTresTypeGroupDataList_c {
+	// dTres_c::data_s
+	/* 8003D790 */ void addTypeGroupData(char, dTres_c::data_s const*);
+	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
+	/* 8003EC90 */ fmpTresTypeGroupDataList_c();
+};
+
+// build dTres_c (dTres_c) True/True
+// build dMenu_Fmap_room_data_c (dMenu_Fmap_room_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_room_data_c) */
+/* top-level dependencies (end dMenu_Fmap_room_data_c) */
+struct dMenu_Fmap_room_data_c {
+	/* 8003D818 */ void isArrival();
+	/* 8003D868 */ void buildTresTypeGroup(s32, s32, s32);
+	/* 8003D92C */ void buildFmapRoomData(s32, s32, f32, f32, f32, f32);
+};
+
+// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_stage_data_c) */
+/* top-level dependencies (end dMenu_Fmap_stage_data_c) */
+struct dMenu_Fmap_stage_data_c {
+	/* 8003D95C */ void isArrival();
+	/* 8003D9D8 */ void buildFmapStageData(s32, f32, f32);
+};
+
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
+/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB48 */ void getMenuFmapStageData(s32);
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, s32, s32*, s32*);
+	/* 8003DEE0 */ void buildFmapRegionData(s32);
+};
+
+// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
+/* top-level dependencies (begin dMenu_Fmap_world_data_c) */
+// outer dependency: dMenu_Fmap_region_data_c
+/* top-level dependencies (end dMenu_Fmap_world_data_c) */
+struct dMenu_Fmap_world_data_c {
+	// dMenu_Fmap_region_data_c
+	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
+	/* 8003E04C */ void buildFmapWorldData();
+};
+
+// build dMenuFmapIconPointer_c (dMenuFmapIconPointer_c) False/False
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
+// build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) True/True
+/* top-level dependencies (begin dMenuFmapIconPointer_c) */
+// outer dependency: dMenu_Fmap_region_data_c
+// outer dependency: dMenu_Fmap_stage_data_c
+/* top-level dependencies (end dMenuFmapIconPointer_c) */
+struct dMenuFmapIconPointer_c {
+	// dMenu_Fmap_region_data_c
+	// dMenu_Fmap_stage_data_c
+	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, char, s32, s32);
+	/* 8003E1C0 */ void getFirstData();
+	/* 8003E2BC */ void getData();
+	/* 8003E350 */ void getFirstRoomData();
+	/* 8003E37C */ void getNextRoomData();
+	/* 8003E3A4 */ void getNextStageData();
+	/* 8003E3D8 */ void getNextData();
+	/* 8003E490 */ void nextData();
+	/* 8003E510 */ void getValidData();
+};
+
+// build dMenuFmapIconDisp_c (dMenuFmapIconDisp_c) False/False
+// build dTres_c (dTres_c) True/True
+/* top-level dependencies (begin dMenuFmapIconDisp_c) */
+// outer dependency: dTres_c::data_s
+/* top-level dependencies (end dMenuFmapIconDisp_c) */
+struct dMenuFmapIconDisp_c {
+	// dTres_c::data_s
+	/* 8003E578 */ void getPosition(s32*, s32*, f32*, f32*, dTres_c::data_s const**);
+	/* 8003E6E8 */ void isDrawDisp();
+};
+
+// build fmpTresTypeGroupData_c (fmpTresTypeGroupData_c) False/False
+/* top-level dependencies (begin fmpTresTypeGroupData_c) */
+/* top-level dependencies (end fmpTresTypeGroupData_c) */
+struct fmpTresTypeGroupData_c {
+	/* 8003EB70 */ ~fmpTresTypeGroupData_c();
+};
+
+// build dSv_memBit_c (dSv_memBit_c) False/False
+/* top-level dependencies (begin dSv_memBit_c) */
+/* top-level dependencies (end dSv_memBit_c) */
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dSv_memory2_c (dSv_memory2_c) False/False
+/* top-level dependencies (begin dSv_memory2_c) */
+/* top-level dependencies (end dSv_memory2_c) */
+struct dSv_memory2_c {
+	/* 80034AEC */ void isVisitedRoom(s32);
+};
+
+// build dSv_save_c (dSv_save_c) False/False
+/* top-level dependencies (begin dSv_save_c) */
+/* top-level dependencies (end dSv_save_c) */
+struct dSv_save_c {
+	/* 800350A8 */ void getSave2(s32);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s();
-extern "C" extern void isArrival__22dMenu_Fmap_room_data_cFv();
-extern "C" extern void buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii();
-extern "C" extern void buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff();
-extern "C" extern void isArrival__23dMenu_Fmap_stage_data_cFv();
-extern "C" extern void buildFmapStageData__23dMenu_Fmap_stage_data_cFiff();
-extern "C" extern void getMenuFmapStageData__24dMenu_Fmap_region_data_cFi();
-extern "C" extern void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi();
-extern "C" extern void buildFmapRegionData__24dMenu_Fmap_region_data_cFi();
-extern "C" extern void create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c();
-extern "C" extern void buildFmapWorldData__23dMenu_Fmap_world_data_cFv();
-extern "C" extern void init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii();
-extern "C" extern void getFirstData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getFirstRoomData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getNextRoomData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getNextStageData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getNextData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void nextData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getValidData__22dMenuFmapIconPointer_cFv();
-extern "C" extern void getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s();
-extern "C" extern void isDrawDisp__19dMenuFmapIconDisp_cFv();
-extern "C" extern void __dt__26fmpTresTypeGroupDataList_cFv();
-extern "C" extern void __dt__22fmpTresTypeGroupData_cFv();
-extern "C" extern void __ct__26fmpTresTypeGroupDataList_cFv();
+
+extern "C" void addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s();
+extern "C" void isArrival__22dMenu_Fmap_room_data_cFv();
+extern "C" void buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii();
+extern "C" void buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff();
+extern "C" void isArrival__23dMenu_Fmap_stage_data_cFv();
+extern "C" void buildFmapStageData__23dMenu_Fmap_stage_data_cFiff();
+extern "C" void getMenuFmapStageData__24dMenu_Fmap_region_data_cFi();
+extern "C" void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi();
+extern "C" void buildFmapRegionData__24dMenu_Fmap_region_data_cFi();
+extern "C" void create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c();
+extern "C" void buildFmapWorldData__23dMenu_Fmap_world_data_cFv();
+extern "C" void init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii();
+extern "C" void getFirstData__22dMenuFmapIconPointer_cFv();
+extern "C" void getData__22dMenuFmapIconPointer_cFv();
+extern "C" void getFirstRoomData__22dMenuFmapIconPointer_cFv();
+extern "C" void getNextRoomData__22dMenuFmapIconPointer_cFv();
+extern "C" void getNextStageData__22dMenuFmapIconPointer_cFv();
+extern "C" void getNextData__22dMenuFmapIconPointer_cFv();
+extern "C" void nextData__22dMenuFmapIconPointer_cFv();
+extern "C" void getValidData__22dMenuFmapIconPointer_cFv();
+extern "C" void getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s();
+extern "C" void isDrawDisp__19dMenuFmapIconDisp_cFv();
+extern "C" void __dt__26fmpTresTypeGroupDataList_cFv();
+extern "C" void __dt__22fmpTresTypeGroupData_cFv();
+extern "C" void __ct__26fmpTresTypeGroupDataList_cFv();
 SECTION_DATA extern void*d_map_d_map_path_fmap__lit_4467[15];
 SECTION_DATA extern void*const __vt__19dMenuFmapIconDisp_c[3];
 SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
@@ -42,35 +196,56 @@ SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void dComIfGs_isStageTbox__Fii();
-extern "C" extern void dComIfGs_isStageSwitch__Fii();
-extern "C" extern void dComIfGp_isLightDropMapVisible__Fv();
-extern "C" extern void isTbox__12dSv_memBit_cCFi();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void isVisitedRoom__13dSv_memory2_cFi();
-extern "C" extern void getSave2__10dSv_save_cFi();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void getFirstData__7dTres_cFUc();
-extern "C" extern void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c();
-extern "C" extern void getTypeGroupNoToType__7dTres_cFUc();
-extern "C" extern void getTypeToTypeGroupNo__7dTres_cFUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSVECCrossProduct();
-extern "C" extern void __construct_array();
-extern "C" extern void __save_gpr();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void __restore_gpr();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+void dComIfGs_isStageTbox(s32, s32);
+void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGp_isLightDropMapVisible();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void PSVECCrossProduct();
+extern "C" void __construct_array();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+extern "C" void dComIfGs_isStageTbox__Fii();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void dComIfGp_isLightDropMapVisible__Fv();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isVisitedRoom__13dSv_memory2_cFi();
+extern "C" void getSave2__10dSv_save_cFi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getFirstData__7dTres_cFUc();
+extern "C" void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c();
+extern "C" void getTypeGroupNoToType__7dTres_cFUc();
+extern "C" void getTypeToTypeGroupNo__7dTres_cFUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void PSVECCrossProduct();
+extern "C" void __construct_array();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u32 __float_max;
@@ -79,55 +254,55 @@ SECTION_SDATA extern u32 __float_max;
 // Declarations:
 // 
 
-/* 8003D790-8003D818 0088+00 .text      addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s */
+/* 8003D790-8003D818 0088+00 rc=1 efc=0 .text      addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s) {
+asm void fmpTresTypeGroupDataList_c::addTypeGroupData(char field_0, dTres_c::data_s const* field_1) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s.s"
 }
 #pragma pop
 
 
-/* 8003D818-8003D868 0050+00 .text      isArrival__22dMenu_Fmap_room_data_cFv                        */
+/* 8003D818-8003D868 0050+00 rc=2 efc=1 .text      isArrival__22dMenu_Fmap_room_data_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isArrival__22dMenu_Fmap_room_data_cFv) {
+asm void dMenu_Fmap_room_data_c::isArrival() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/isArrival__22dMenu_Fmap_room_data_cFv.s"
 }
 #pragma pop
 
 
-/* 8003D868-8003D92C 00C4+00 .text      buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii             */
+/* 8003D868-8003D92C 00C4+00 rc=1 efc=0 .text      buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii) {
+asm void dMenu_Fmap_room_data_c::buildTresTypeGroup(s32 field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii.s"
 }
 #pragma pop
 
 
-/* 8003D92C-8003D95C 0030+00 .text      buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff           */
+/* 8003D92C-8003D95C 0030+00 rc=1 efc=0 .text      buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff) {
+asm void dMenu_Fmap_room_data_c::buildFmapRoomData(s32 field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff.s"
 }
 #pragma pop
 
 
-/* 8003D95C-8003D9D8 007C+00 .text      isArrival__23dMenu_Fmap_stage_data_cFv                       */
+/* 8003D95C-8003D9D8 007C+00 rc=1 efc=0 .text      isArrival__23dMenu_Fmap_stage_data_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isArrival__23dMenu_Fmap_stage_data_cFv) {
+asm void dMenu_Fmap_stage_data_c::isArrival() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/isArrival__23dMenu_Fmap_stage_data_cFv.s"
 }
@@ -135,183 +310,183 @@ ASM_FUNCTION(isArrival__23dMenu_Fmap_stage_data_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451E20-80451E28 0004+04 .sdata2    @3894                                                        */
+/* 80451E20-80451E28 0004+04 rc=5 efc=0 .sdata2    @3894                                                        */
 u8 d_map_d_map_path_fmap__lit_3894[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8003D9D8-8003DB48 0170+00 .text      buildFmapStageData__23dMenu_Fmap_stage_data_cFiff            */
+/* 8003D9D8-8003DB48 0170+00 rc=1 efc=0 .text      buildFmapStageData__23dMenu_Fmap_stage_data_cFiff            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buildFmapStageData__23dMenu_Fmap_stage_data_cFiff) {
+asm void dMenu_Fmap_stage_data_c::buildFmapStageData(s32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapStageData__23dMenu_Fmap_stage_data_cFiff.s"
 }
 #pragma pop
 
 
-/* 8003DB48-8003DB70 0028+00 .text      getMenuFmapStageData__24dMenu_Fmap_region_data_cFi           */
+/* 8003DB48-8003DB70 0028+00 rc=1 efc=1 .text      getMenuFmapStageData__24dMenu_Fmap_region_data_cFi           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMenuFmapStageData__24dMenu_Fmap_region_data_cFi) {
+asm void dMenu_Fmap_region_data_c::getMenuFmapStageData(s32 field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getMenuFmapStageData__24dMenu_Fmap_region_data_cFi.s"
 }
 #pragma pop
 
 
-/* 8003DB70-8003DEE0 0370+00 .text      getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi */
+/* 8003DB70-8003DEE0 0370+00 rc=1 efc=1 .text      getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi) {
+asm void dMenu_Fmap_region_data_c::getPointStagePathInnerNo(f32 field_0, f32 field_1, s32 field_2, s32* field_3, s32* field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi.s"
 }
 #pragma pop
 
 
-/* 8003DEE0-8003E028 0148+00 .text      buildFmapRegionData__24dMenu_Fmap_region_data_cFi            */
+/* 8003DEE0-8003E028 0148+00 rc=1 efc=1 .text      buildFmapRegionData__24dMenu_Fmap_region_data_cFi            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buildFmapRegionData__24dMenu_Fmap_region_data_cFi) {
+asm void dMenu_Fmap_region_data_c::buildFmapRegionData(s32 field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapRegionData__24dMenu_Fmap_region_data_cFi.s"
 }
 #pragma pop
 
 
-/* 8003E028-8003E04C 0024+00 .text      create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c */
+/* 8003E028-8003E04C 0024+00 rc=1 efc=1 .text      create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c) {
+asm void dMenu_Fmap_world_data_c::create(dMenu_Fmap_region_data_c* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c.s"
 }
 #pragma pop
 
 
-/* 8003E04C-8003E114 00C8+00 .text      buildFmapWorldData__23dMenu_Fmap_world_data_cFv              */
+/* 8003E04C-8003E114 00C8+00 rc=1 efc=0 .text      buildFmapWorldData__23dMenu_Fmap_world_data_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buildFmapWorldData__23dMenu_Fmap_world_data_cFv) {
+asm void dMenu_Fmap_world_data_c::buildFmapWorldData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapWorldData__23dMenu_Fmap_world_data_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E114-8003E1C0 00AC+00 .text      init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii */
+/* 8003E114-8003E1C0 00AC+00 rc=3 efc=3 .text      init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii) {
+asm void dMenuFmapIconPointer_c::init(dMenu_Fmap_region_data_c* field_0, dMenu_Fmap_stage_data_c* field_1, char field_2, s32 field_3, s32 field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii.s"
 }
 #pragma pop
 
 
-/* 8003E1C0-8003E2BC 00FC+00 .text      getFirstData__22dMenuFmapIconPointer_cFv                     */
+/* 8003E1C0-8003E2BC 00FC+00 rc=2 efc=0 .text      getFirstData__22dMenuFmapIconPointer_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFirstData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getFirstData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getFirstData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E2BC-8003E350 0094+00 .text      getData__22dMenuFmapIconPointer_cFv                          */
+/* 8003E2BC-8003E350 0094+00 rc=1 efc=0 .text      getData__22dMenuFmapIconPointer_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E350-8003E37C 002C+00 .text      getFirstRoomData__22dMenuFmapIconPointer_cFv                 */
+/* 8003E350-8003E37C 002C+00 rc=2 efc=0 .text      getFirstRoomData__22dMenuFmapIconPointer_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFirstRoomData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getFirstRoomData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getFirstRoomData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E37C-8003E3A4 0028+00 .text      getNextRoomData__22dMenuFmapIconPointer_cFv                  */
+/* 8003E37C-8003E3A4 0028+00 rc=1 efc=0 .text      getNextRoomData__22dMenuFmapIconPointer_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNextRoomData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getNextRoomData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getNextRoomData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E3A4-8003E3D8 0034+00 .text      getNextStageData__22dMenuFmapIconPointer_cFv                 */
+/* 8003E3A4-8003E3D8 0034+00 rc=1 efc=0 .text      getNextStageData__22dMenuFmapIconPointer_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNextStageData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getNextStageData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getNextStageData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E3D8-8003E490 00B8+00 .text      getNextData__22dMenuFmapIconPointer_cFv                      */
+/* 8003E3D8-8003E490 00B8+00 rc=1 efc=0 .text      getNextData__22dMenuFmapIconPointer_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNextData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getNextData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getNextData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E490-8003E510 0080+00 .text      nextData__22dMenuFmapIconPointer_cFv                         */
+/* 8003E490-8003E510 0080+00 rc=4 efc=3 .text      nextData__22dMenuFmapIconPointer_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nextData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::nextData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/nextData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E510-8003E578 0068+00 .text      getValidData__22dMenuFmapIconPointer_cFv                     */
+/* 8003E510-8003E578 0068+00 rc=3 efc=3 .text      getValidData__22dMenuFmapIconPointer_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValidData__22dMenuFmapIconPointer_cFv) {
+asm void dMenuFmapIconPointer_c::getValidData() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getValidData__22dMenuFmapIconPointer_cFv.s"
 }
 #pragma pop
 
 
-/* 8003E578-8003E6E8 0170+00 .text      getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s */
+/* 8003E578-8003E6E8 0170+00 rc=3 efc=3 .text      getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s) {
+asm void dMenuFmapIconDisp_c::getPosition(s32* field_0, s32* field_1, f32* field_2, f32* field_3, dTres_c::data_s const** field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s.s"
 }
@@ -319,7 +494,7 @@ ASM_FUNCTION(getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s) {
 
 
 /* ############################################################################################## */
-/* 803A7D38-803A7D74 003C+00 .data      @4467                                                        */
+/* 803A7D38-803A7D74 003C+00 rc=1 efc=0 .data      @4467                                                        */
 void* d_map_d_map_path_fmap__lit_4467[15] = {
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
@@ -338,44 +513,44 @@ void* d_map_d_map_path_fmap__lit_4467[15] = {
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
 };
 
-/* 8003E6E8-8003EB10 0428+00 .text      isDrawDisp__19dMenuFmapIconDisp_cFv                          */
+/* 8003E6E8-8003EB10 0428+00 rc=5 efc=3 .text      isDrawDisp__19dMenuFmapIconDisp_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDrawDisp__19dMenuFmapIconDisp_cFv) {
+asm void dMenuFmapIconDisp_c::isDrawDisp() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/isDrawDisp__19dMenuFmapIconDisp_cFv.s"
 }
 #pragma pop
 
 
-/* 8003EB10-8003EB70 0060+00 .text      __dt__26fmpTresTypeGroupDataList_cFv                         */
+/* 8003EB10-8003EB70 0060+00 rc=2 efc=1 .text      __dt__26fmpTresTypeGroupDataList_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__26fmpTresTypeGroupDataList_cFv) {
+asm fmpTresTypeGroupDataList_c::~fmpTresTypeGroupDataList_c() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/__dt__26fmpTresTypeGroupDataList_cFv.s"
 }
 #pragma pop
 
 
-/* 8003EB70-8003EC90 0120+00 .text      __dt__22fmpTresTypeGroupData_cFv                             */
+/* 8003EB70-8003EC90 0120+00 rc=1 efc=0 .text      __dt__22fmpTresTypeGroupData_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22fmpTresTypeGroupData_cFv) {
+asm fmpTresTypeGroupData_c::~fmpTresTypeGroupData_c() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/__dt__22fmpTresTypeGroupData_cFv.s"
 }
 #pragma pop
 
 
-/* 8003EC90-8003ECA0 0010+00 .text      __ct__26fmpTresTypeGroupDataList_cFv                         */
+/* 8003EC90-8003ECA0 0010+00 rc=1 efc=0 .text      __ct__26fmpTresTypeGroupDataList_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__26fmpTresTypeGroupDataList_cFv) {
+asm fmpTresTypeGroupDataList_c::fmpTresTypeGroupDataList_c() {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/__ct__26fmpTresTypeGroupDataList_cFv.s"
 }
@@ -383,7 +558,7 @@ ASM_FUNCTION(__ct__26fmpTresTypeGroupDataList_cFv) {
 
 
 /* ############################################################################################## */
-/* 803A7D74-803A7D80 000C+00 .data      __vt__19dMenuFmapIconDisp_c                                  */
+/* 803A7D74-803A7D80 000C+00 rc=3 efc=3 .data      __vt__19dMenuFmapIconDisp_c                                  */
 void* const __vt__19dMenuFmapIconDisp_c[3] = {
 	NULL, /* RTTI */
 	NULL,

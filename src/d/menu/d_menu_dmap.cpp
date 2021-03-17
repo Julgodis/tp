@@ -6,95 +6,647 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMenu_DmapBg_c (dMenu_DmapBg_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE548 */ void free(void*);
+	/* 802CE72C */ void getFreeSize();
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+/* top-level dependencies (begin dMenu_DmapBg_c) */
+// outer dependency: JKRExpHeap
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_DmapBg_c) */
+struct dMenu_DmapBg_c {
+	// JKRExpHeap
+	// STControl
+	/* 801B7F20 */ dMenu_DmapBg_c(JKRExpHeap*, STControl*);
+	/* 801B8110 */ void mapScreenInit();
+	/* 801B884C */ void mapScreenAnime();
+	/* 801B88F4 */ void mapIconScaleSet(char);
+	/* 801B893C */ void iconScaleAnmInit(f32, f32, char);
+	/* 801B8954 */ void iconScaleAnm();
+	/* 801B8A0C */ void buttonIconScreenInit();
+	/* 801B8DE4 */ void setAButtonString(u32);
+	/* 801B8EBC */ void setBButtonString(u32);
+	/* 801B8F94 */ void setCButtonString(u32);
+	/* 801B90BC */ void setJButtonString(u32);
+	/* 801B90E0 */ void createExplain();
+	/* 801B9164 */ void deleteExplain();
+	/* 801B91DC */ void baseScreenInit();
+	/* 801B944C */ void setFloorMessage();
+	/* 801BA0B4 */ bool dpdMove(char, char, char, char*, char);
+	/* 801BA0BC */ ~dMenu_DmapBg_c();
+	/* 801BA60C */ void setAllAlphaRate(f32, bool);
+	/* 801BA700 */ void setGoldAnimation(bool);
+	/* 801BA7F0 */ void setGoldFrameAlphaRate(f32);
+	/* 801BA974 */ void addGoldFrameAlphaRate();
+	/* 801BAA4C */ void decGoldFrameAlphaRate();
+	/* 801BAB10 */ void draw();
+	/* 801BB334 */ void update();
+	/* 801BB464 */ void calcCursor();
+	/* 801BB468 */ void drawCursor();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build STControl (STControl) True/True
+// build dMenu_Dmap_c (dMenu_Dmap_c) False/False
+// build STControl (STControl) True/True
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+};
+
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build CSTControl (CSTControl) False/False
+/* top-level dependencies (begin CSTControl) */
+/* top-level dependencies (end CSTControl) */
+struct CSTControl {
+};
+
+/* top-level dependencies (begin dMenu_Dmap_c) */
+// outer dependency: STControl
+// outer dependency: J2DOrthoGraph
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: CSTControl
+/* top-level dependencies (end dMenu_Dmap_c) */
+struct dMenu_Dmap_c {
+	// J2DOrthoGraph
+	// CSTControl
+	// J2DScreen
+	// JKRExpHeap
+	// STControl
+	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, char, char);
+	/* 801BB634 */ void screenInit();
+	/* 801BC788 */ void getPlayerIconPos(char, f32);
+	/* 801BC848 */ void getIconPos(char, f32);
+	/* 801BCDF4 */ ~dMenu_Dmap_c();
+	/* 801BD1D4 */ void getCurFloorPos();
+	/* 801BD1E8 */ void getDefaultCurFloorPos();
+	/* 801BD208 */ void iconMoveCalc();
+	/* 801BD3B8 */ void drawFloorScreenBack(J2DScreen*, f32, f32, J2DOrthoGraph*);
+	/* 801BD524 */ void drawFloorScreenTop(J2DScreen*, f32, f32, J2DOrthoGraph*);
+	/* 801BD690 */ void isMapMoveState();
+	/* 801BD6C4 */ void floorChangeMode();
+	/* 801BD7C0 */ void _create();
+	/* 801BDDA4 */ void _move();
+	/* 801BDEF8 */ void setMapTexture();
+	/* 801BDF48 */ void mapBgAnime();
+	/* 801BDF6C */ void mapControl();
+	/* 801BE328 */ void isOpen();
+	/* 801BE670 */ void isClose();
+	/* 801BE7E0 */ void _draw();
+	/* 801BEAFC */ void itemInfo_init_proc();
+	/* 801BEB0C */ void itemInfo_proc();
+	/* 801BEB44 */ void itemSelect();
+	/* 801BEF28 */ void getNextItem(s32);
+	/* 801BEFCC */ void itemSelectAnmInit();
+	/* 801BF030 */ void itemSelectAnm();
+	/* 801BF180 */ void itemInfoOpenAnm();
+	/* 801BF18C */ void itemInfoWait();
+	/* 801BF278 */ void itemInfoCloseAnm();
+	/* 801BF334 */ void getNextStatus();
+	/* 801BF410 */ void isSync();
+	/* 801BF464 */ void isKeyCheck();
+	/* 801BF4A4 */ void infoModeChange_init_proc();
+	/* 801BF528 */ void infoModeChange_proc();
+	/* 801BF688 */ void mapModeChange_init_proc();
+	/* 801BF70C */ void mapModeChange_proc();
+	/* 801BF8A0 */ void lv5_talk_init_proc();
+	/* 801BF8F8 */ void lv5_talk_proc();
+	/* 801BF9D4 */ void mapMode_init_proc();
+	/* 801BF9E0 */ void mapMode_proc();
+	/* 801BFA84 */ void floorSelect_init_proc();
+	/* 801BFA88 */ void floorSelect_proc();
+	/* 801BFC78 */ void itemCarryCheck();
+	/* 801BFCAC */ void floorChange_init_proc();
+	/* 801BFD5C */ void floorChange_proc();
+	/* 801BFF84 */ void zoomWait_init_proc();
+	/* 801BFF88 */ void zoomWait_proc();
+	/* 801C008C */ void zoomIn_init_proc();
+	/* 801C01A0 */ void zoomIn_proc();
+	/* 801C023C */ void zoomOut_init_proc();
+	/* 801C02F0 */ void zoomOut_proc();
+};
+
+// build CSTControl (CSTControl) True/True
+// build dMenu_DmapMapCtrl_c (dMenu_DmapMapCtrl_c) False/False
+/* top-level dependencies (begin dMenu_DmapMapCtrl_c) */
+/* top-level dependencies (end dMenu_DmapMapCtrl_c) */
+struct dMenu_DmapMapCtrl_c {
+	/* 801BD144 */ ~dMenu_DmapMapCtrl_c();
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build J2DOrthoGraph (J2DOrthoGraph) True/True
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 801BDD40 */ void append(ResTIMG const*, f32);
+	/* 801BDD70 */ void insert(ResTIMG const*, char, f32);
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build renderingDmap_c (renderingDmap_c) False/False
+/* top-level dependencies (begin renderingDmap_c) */
+/* top-level dependencies (end renderingDmap_c) */
+struct renderingDmap_c {
+	/* 801C0380 */ ~renderingDmap_c();
+	/* 801C051C */ renderingDmap_c();
+};
+
+// build dMenu_StageMapCtrl_c (dMenu_StageMapCtrl_c) False/False
+/* top-level dependencies (begin dMenu_StageMapCtrl_c) */
+/* top-level dependencies (end dMenu_StageMapCtrl_c) */
+struct dMenu_StageMapCtrl_c {
+	/* 801C042C */ ~dMenu_StageMapCtrl_c();
+	/* 801C0EE0 */ void getMapBlendPer() const;
+	/* 801C0F24 */ void getPixelStageSizeX() const;
+	/* 801C0F3C */ void getPixelStageSizeZ() const;
+	/* 801C0F54 */ void getPixelCenterX() const;
+	/* 801C0F74 */ void getPixelCenterZ() const;
+	/* 801C0F94 */ void initGetTreasureList(char, char);
+	/* 801C0FF8 */ void getTreasureList(f32*, f32*, char*, char*, char*);
+	/* 801C1194 */ void getPlayerDrawInfo(f32*, f32*, s16*) const;
+	/* 801C1218 */ void getRestartDrawInfo(f32*, f32*, s16*) const;
+	/* 801C12A8 */ void setPlusNowStayFloorNo(char, char);
+	/* 801C1C40 */ void initZoomIn(char);
+	/* 801C1CEC */ void initZoomIn(char, f32, f32);
+	/* 801C1E00 */ void initZoomInCenterHold(char);
+	/* 801C1F2C */ void initZoomOut(char);
+	/* 801C1F70 */ void initZoomWait(f32, f32);
+	/* 801C2234 */ void move();
+	/* 801C22F8 */ void getPlayerStayFloorNo() const;
+	/* 801C231C */ void _create(u16, u16, u16, u16, void*);
+	/* 801C235C */ void _create(u16, u16, u16, u16, char, void*);
+	/* 801C2518 */ void _delete();
+	/* 801C2538 */ void isEnableZoomIn();
+	/* 801C2578 */ void isEnableZoomOut();
+	/* 801C2588 */ void setPlusZoomCenterX(f32);
+	/* 801C2590 */ void setPlusZoomCenterZ(f32);
+};
+
+// build dMenu_DmapMap_c (dMenu_DmapMap_c) False/False
+/* top-level dependencies (begin dMenu_DmapMap_c) */
+/* top-level dependencies (end dMenu_DmapMap_c) */
+struct dMenu_DmapMap_c {
+	/* 801C04AC */ ~dMenu_DmapMap_c();
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+struct mDoDvdThd_mountArchive_c {
+	// JKRHeap
+	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+};
+
+// build dSv_memBit_c (dSv_memBit_c) False/False
+/* top-level dependencies (begin dSv_memBit_c) */
+/* top-level dependencies (end dSv_memBit_c) */
+struct dSv_memBit_c {
+	/* 80034860 */ void isSwitch(s32) const;
+	/* 80034934 */ void isDungeonItem(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build dTres_c (dTres_c) False/False
+/* top-level dependencies (begin dTres_c) */
+/* top-level dependencies (end dTres_c) */
+struct dTres_c {
+	/* 8009C27C */ void getBossIconFloorNo(s32*);
+};
+
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DPane (J2DPane) False/False
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DBasePosition
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DBasePosition
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	// J2DPane
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DPane (J2DPane) True/True
+// build dMenuMapCommon_c (dMenuMapCommon_c) False/False
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin dMenuMapCommon_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dMenuMapCommon_c) */
+struct dMenuMapCommon_c {
+	// JKRArchive
+	/* 801C2718 */ dMenuMapCommon_c();
+	/* 801C27B4 */ ~dMenuMapCommon_c();
+	/* 801C28D8 */ void initiate(JKRArchive*);
+	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
+	/* 801C3EC4 */ void iconScale(s32, f32, f32, f32);
+	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C443C */ void clearIconInfo();
+};
+
+// build dMenu_ItemExplain_c (dMenu_ItemExplain_c) False/False
+// build J2DOrthoGraph (J2DOrthoGraph) True/True
+// build JKRArchive (JKRArchive) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build STControl (STControl) True/True
+/* top-level dependencies (begin dMenu_ItemExplain_c) */
+// outer dependency: J2DOrthoGraph
+// outer dependency: JKRArchive
+// outer dependency: JKRExpHeap
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_ItemExplain_c) */
+struct dMenu_ItemExplain_c {
+	// J2DOrthoGraph
+	// JKRArchive
+	// JKRExpHeap
+	// STControl
+	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
+	/* 801DB470 */ void move();
+	/* 801DB514 */ void draw(J2DOrthoGraph*);
+	/* 801DC3C8 */ void openExplainDmap(char, char, char, bool, char);
+};
+
+// build dMeterHaihai_c (dMeterHaihai_c) False/False
+/* top-level dependencies (begin dMeterHaihai_c) */
+/* top-level dependencies (end dMeterHaihai_c) */
+struct dMeterHaihai_c {
+	/* 8020AE8C */ dMeterHaihai_c(char);
+	/* 8020B814 */ void drawHaihai(char, f32, f32, f32, f32);
+	/* 8020BC20 */ void setScale(f32);
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
+/* top-level dependencies (begin JMSMesgEntry_c) */
+/* top-level dependencies (end JMSMesgEntry_c) */
+struct JMSMesgEntry_c {
+};
+
+// build J2DPicture (J2DPicture) True/True
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: JMSMesgEntry_c
+// outer dependency: J2DPicture
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// JMSMesgEntry_c
+	// J2DPicture
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+};
+
+// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
+// build dMsgObject_c (dMsgObject_c) False/False
+/* top-level dependencies (begin dMsgObject_c) */
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	/* 80237AE0 */ void setTalkHeap(void*);
+	/* 80237B54 */ void getTalkHeap();
+	/* 8023822C */ void getStatus();
+};
+
+// build dMsgString_c (dMsgString_c) False/False
+/* top-level dependencies (begin dMsgString_c) */
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build dMsgFlow_c (dMsgFlow_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dMsgFlow_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dMsgFlow_c) */
+struct dMsgFlow_c {
+	// fopAc_ac_c
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F48 */ ~dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, s32, s32, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80253930 */ CPaneMgr();
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255878 */ void alphaAnime(s16, char, char, char);
+};
+
+// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlphaMorf) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlphaMorf) */
+struct CPaneMgrAlphaMorf {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80255DD0 */ void setBackupAlpha();
+	/* 80255E28 */ void setAlphaMorfRate(f32);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DBasePosition (J2DBasePosition) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl();
-extern "C" extern void mapScreenInit__14dMenu_DmapBg_cFv();
-extern "C" extern void mapScreenAnime__14dMenu_DmapBg_cFv();
-extern "C" extern void mapIconScaleSet__14dMenu_DmapBg_cFUc();
-extern "C" extern void iconScaleAnmInit__14dMenu_DmapBg_cFffUc();
-extern "C" extern void iconScaleAnm__14dMenu_DmapBg_cFv();
-extern "C" extern void buttonIconScreenInit__14dMenu_DmapBg_cFv();
-extern "C" extern void setAButtonString__14dMenu_DmapBg_cFUl();
-extern "C" extern void setBButtonString__14dMenu_DmapBg_cFUl();
-extern "C" extern void setCButtonString__14dMenu_DmapBg_cFUl();
-extern "C" extern void setJButtonString__14dMenu_DmapBg_cFUl();
-extern "C" extern void createExplain__14dMenu_DmapBg_cFv();
-extern "C" extern void deleteExplain__14dMenu_DmapBg_cFv();
-extern "C" extern void baseScreenInit__14dMenu_DmapBg_cFv();
-extern "C" extern void setFloorMessage__14dMenu_DmapBg_cFv();
-extern "C" extern void dpdMove__14dMenu_DmapBg_cFScScScPUcUc();
-extern "C" extern void __dt__14dMenu_DmapBg_cFv();
-extern "C" extern void setAllAlphaRate__14dMenu_DmapBg_cFfb();
-extern "C" extern void setGoldAnimation__14dMenu_DmapBg_cFb();
-extern "C" extern void setGoldFrameAlphaRate__14dMenu_DmapBg_cFf();
-extern "C" extern void addGoldFrameAlphaRate__14dMenu_DmapBg_cFv();
-extern "C" extern void decGoldFrameAlphaRate__14dMenu_DmapBg_cFv();
-extern "C" extern void draw__14dMenu_DmapBg_cFv();
-extern "C" extern void update__14dMenu_DmapBg_cFv();
-extern "C" extern void calcCursor__14dMenu_DmapBg_cFv();
-extern "C" extern void drawCursor__14dMenu_DmapBg_cFv();
-extern "C" extern void __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc();
-extern "C" extern void screenInit__12dMenu_Dmap_cFv();
-extern "C" extern void getPlayerIconPos__12dMenu_Dmap_cFScf();
-extern "C" extern void getIconPos__12dMenu_Dmap_cFScf();
-extern "C" extern void __dt__12dMenu_Dmap_cFv();
-extern "C" extern void __dt__19dMenu_DmapMapCtrl_cFv();
-extern "C" extern void getCurFloorPos__12dMenu_Dmap_cFv();
-extern "C" extern void getDefaultCurFloorPos__12dMenu_Dmap_cFv();
-extern "C" extern void iconMoveCalc__12dMenu_Dmap_cFv();
-extern "C" extern void drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph();
-extern "C" extern void drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph();
-extern "C" extern void isMapMoveState__12dMenu_Dmap_cFv();
-extern "C" extern void floorChangeMode__12dMenu_Dmap_cFv();
-extern "C" extern void _create__12dMenu_Dmap_cFv();
-extern "C" extern void append__10J2DPictureFPC7ResTIMGf();
-extern "C" extern void insert__10J2DPictureFPC7ResTIMGUcf();
-extern "C" extern void _move__12dMenu_Dmap_cFv();
-extern "C" extern void setMapTexture__12dMenu_Dmap_cFv();
-extern "C" extern void mapBgAnime__12dMenu_Dmap_cFv();
-extern "C" extern void mapControl__12dMenu_Dmap_cFv();
-extern "C" extern void isOpen__12dMenu_Dmap_cFv();
-extern "C" extern void isClose__12dMenu_Dmap_cFv();
-extern "C" extern void _draw__12dMenu_Dmap_cFv();
-extern "C" extern void itemInfo_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void itemInfo_proc__12dMenu_Dmap_cFv();
-extern "C" extern void itemSelect__12dMenu_Dmap_cFv();
-extern "C" extern void getNextItem__12dMenu_Dmap_cFi();
-extern "C" extern void itemSelectAnmInit__12dMenu_Dmap_cFv();
-extern "C" extern void itemSelectAnm__12dMenu_Dmap_cFv();
-extern "C" extern void itemInfoOpenAnm__12dMenu_Dmap_cFv();
-extern "C" extern void itemInfoWait__12dMenu_Dmap_cFv();
-extern "C" extern void itemInfoCloseAnm__12dMenu_Dmap_cFv();
-extern "C" extern void getNextStatus__12dMenu_Dmap_cFv();
-extern "C" extern void isSync__12dMenu_Dmap_cFv();
-extern "C" extern void isKeyCheck__12dMenu_Dmap_cFv();
-extern "C" extern void infoModeChange_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void infoModeChange_proc__12dMenu_Dmap_cFv();
-extern "C" extern void mapModeChange_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void mapModeChange_proc__12dMenu_Dmap_cFv();
-extern "C" extern void lv5_talk_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void lv5_talk_proc__12dMenu_Dmap_cFv();
-extern "C" extern void mapMode_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void mapMode_proc__12dMenu_Dmap_cFv();
-extern "C" extern void floorSelect_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void floorSelect_proc__12dMenu_Dmap_cFv();
-extern "C" extern void itemCarryCheck__12dMenu_Dmap_cFv();
-extern "C" extern void floorChange_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void floorChange_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomWait_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomWait_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomIn_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomIn_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomOut_init_proc__12dMenu_Dmap_cFv();
-extern "C" extern void zoomOut_proc__12dMenu_Dmap_cFv();
-extern "C" extern void __dt__15renderingDmap_cFv();
-extern "C" extern void __dt__20dMenu_StageMapCtrl_cFv();
-extern "C" extern void __dt__15dMenu_DmapMap_cFv();
-extern "C" extern void __ct__15renderingDmap_cFv();
-extern "C" extern void __sinit_d_menu_dmap_cpp();
-extern "C" extern void func_801C0844();
+extern "C" void __sinit_d_menu_dmap_cpp();
+extern "C" static void func_801C0844();
+
+extern "C" void __ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl();
+extern "C" void mapScreenInit__14dMenu_DmapBg_cFv();
+extern "C" void mapScreenAnime__14dMenu_DmapBg_cFv();
+extern "C" void mapIconScaleSet__14dMenu_DmapBg_cFUc();
+extern "C" void iconScaleAnmInit__14dMenu_DmapBg_cFffUc();
+extern "C" void iconScaleAnm__14dMenu_DmapBg_cFv();
+extern "C" void buttonIconScreenInit__14dMenu_DmapBg_cFv();
+extern "C" void setAButtonString__14dMenu_DmapBg_cFUl();
+extern "C" void setBButtonString__14dMenu_DmapBg_cFUl();
+extern "C" void setCButtonString__14dMenu_DmapBg_cFUl();
+extern "C" void setJButtonString__14dMenu_DmapBg_cFUl();
+extern "C" void createExplain__14dMenu_DmapBg_cFv();
+extern "C" void deleteExplain__14dMenu_DmapBg_cFv();
+extern "C" void baseScreenInit__14dMenu_DmapBg_cFv();
+extern "C" void setFloorMessage__14dMenu_DmapBg_cFv();
+extern "C" bool dpdMove__14dMenu_DmapBg_cFScScScPUcUc();
+extern "C" void __dt__14dMenu_DmapBg_cFv();
+extern "C" void setAllAlphaRate__14dMenu_DmapBg_cFfb();
+extern "C" void setGoldAnimation__14dMenu_DmapBg_cFb();
+extern "C" void setGoldFrameAlphaRate__14dMenu_DmapBg_cFf();
+extern "C" void addGoldFrameAlphaRate__14dMenu_DmapBg_cFv();
+extern "C" void decGoldFrameAlphaRate__14dMenu_DmapBg_cFv();
+extern "C" void draw__14dMenu_DmapBg_cFv();
+extern "C" void update__14dMenu_DmapBg_cFv();
+extern "C" void calcCursor__14dMenu_DmapBg_cFv();
+extern "C" void drawCursor__14dMenu_DmapBg_cFv();
+extern "C" void __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc();
+extern "C" void screenInit__12dMenu_Dmap_cFv();
+extern "C" void getPlayerIconPos__12dMenu_Dmap_cFScf();
+extern "C" void getIconPos__12dMenu_Dmap_cFScf();
+extern "C" void __dt__12dMenu_Dmap_cFv();
+extern "C" void __dt__19dMenu_DmapMapCtrl_cFv();
+extern "C" void getCurFloorPos__12dMenu_Dmap_cFv();
+extern "C" void getDefaultCurFloorPos__12dMenu_Dmap_cFv();
+extern "C" void iconMoveCalc__12dMenu_Dmap_cFv();
+extern "C" void drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph();
+extern "C" void drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph();
+extern "C" void isMapMoveState__12dMenu_Dmap_cFv();
+extern "C" void floorChangeMode__12dMenu_Dmap_cFv();
+extern "C" void _create__12dMenu_Dmap_cFv();
+extern "C" void append__10J2DPictureFPC7ResTIMGf();
+extern "C" void insert__10J2DPictureFPC7ResTIMGUcf();
+extern "C" void _move__12dMenu_Dmap_cFv();
+extern "C" void setMapTexture__12dMenu_Dmap_cFv();
+extern "C" void mapBgAnime__12dMenu_Dmap_cFv();
+extern "C" void mapControl__12dMenu_Dmap_cFv();
+extern "C" void isOpen__12dMenu_Dmap_cFv();
+extern "C" void isClose__12dMenu_Dmap_cFv();
+extern "C" void _draw__12dMenu_Dmap_cFv();
+extern "C" void itemInfo_init_proc__12dMenu_Dmap_cFv();
+extern "C" void itemInfo_proc__12dMenu_Dmap_cFv();
+extern "C" void itemSelect__12dMenu_Dmap_cFv();
+extern "C" void getNextItem__12dMenu_Dmap_cFi();
+extern "C" void itemSelectAnmInit__12dMenu_Dmap_cFv();
+extern "C" void itemSelectAnm__12dMenu_Dmap_cFv();
+extern "C" void itemInfoOpenAnm__12dMenu_Dmap_cFv();
+extern "C" void itemInfoWait__12dMenu_Dmap_cFv();
+extern "C" void itemInfoCloseAnm__12dMenu_Dmap_cFv();
+extern "C" void getNextStatus__12dMenu_Dmap_cFv();
+extern "C" void isSync__12dMenu_Dmap_cFv();
+extern "C" void isKeyCheck__12dMenu_Dmap_cFv();
+extern "C" void infoModeChange_init_proc__12dMenu_Dmap_cFv();
+extern "C" void infoModeChange_proc__12dMenu_Dmap_cFv();
+extern "C" void mapModeChange_init_proc__12dMenu_Dmap_cFv();
+extern "C" void mapModeChange_proc__12dMenu_Dmap_cFv();
+extern "C" void lv5_talk_init_proc__12dMenu_Dmap_cFv();
+extern "C" void lv5_talk_proc__12dMenu_Dmap_cFv();
+extern "C" void mapMode_init_proc__12dMenu_Dmap_cFv();
+extern "C" void mapMode_proc__12dMenu_Dmap_cFv();
+extern "C" void floorSelect_init_proc__12dMenu_Dmap_cFv();
+extern "C" void floorSelect_proc__12dMenu_Dmap_cFv();
+extern "C" void itemCarryCheck__12dMenu_Dmap_cFv();
+extern "C" void floorChange_init_proc__12dMenu_Dmap_cFv();
+extern "C" void floorChange_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomWait_init_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomWait_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomIn_init_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomIn_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomOut_init_proc__12dMenu_Dmap_cFv();
+extern "C" void zoomOut_proc__12dMenu_Dmap_cFv();
+extern "C" void __dt__15renderingDmap_cFv();
+extern "C" void __dt__20dMenu_StageMapCtrl_cFv();
+extern "C" void __dt__15dMenu_DmapMap_cFv();
+extern "C" void __ct__15renderingDmap_cFv();
+extern "C" void __sinit_d_menu_dmap_cpp();
+extern "C" static void func_801C0844();
 SECTION_RODATA extern const u8 data_80395518[40];
 SECTION_RODATA extern const u8 data_80395540[40];
 SECTION_RODATA extern const u8 data_80395568[40];
@@ -185,142 +737,181 @@ SECTION_SDATA2 extern f32 lit_6181;
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void memcpy();
-extern "C" extern void mDoExt_getJ2dHeap__Fv();
-extern "C" extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getSubFont__Fv();
-extern "C" extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern "C" extern void fopMsgM_valueIncrease__FiiUc();
-extern "C" extern void dComIfGp_isLightDropMapVisible__Fv();
-extern "C" extern void __ct__9STControlFssssffss();
-extern "C" extern void checkTrigger__9STControlFv();
-extern "C" extern void checkLeftTrigger__9STControlFv();
-extern "C" extern void checkRightTrigger__9STControlFv();
-extern "C" extern void checkUpTrigger__9STControlFv();
-extern "C" extern void checkDownTrigger__9STControlFv();
-extern "C" extern void isSwitch__12dSv_memBit_cCFi();
-extern "C" extern void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void checkItemGet__FUci();
-extern "C" extern void getBossIconFloorNo__7dTres_cFPi();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void getMapBlendPer__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void getPixelStageSizeX__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void getPixelStageSizeZ__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void getPixelCenterX__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void getPixelCenterZ__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void initGetTreasureList__20dMenu_StageMapCtrl_cFUcSc();
-extern "C" extern void getTreasureList__20dMenu_StageMapCtrl_cFPfPfPScPUcPSc();
-extern "C" extern void getPlayerDrawInfo__20dMenu_StageMapCtrl_cCFPfPfPs();
-extern "C" extern void getRestartDrawInfo__20dMenu_StageMapCtrl_cCFPfPfPs();
-extern "C" extern void setPlusNowStayFloorNo__20dMenu_StageMapCtrl_cFScUc();
-extern "C" extern void initZoomIn__20dMenu_StageMapCtrl_cFUc();
-extern "C" extern void initZoomIn__20dMenu_StageMapCtrl_cFUcff();
-extern "C" extern void initZoomInCenterHold__20dMenu_StageMapCtrl_cFUc();
-extern "C" extern void initZoomOut__20dMenu_StageMapCtrl_cFUc();
-extern "C" extern void initZoomWait__20dMenu_StageMapCtrl_cFff();
-extern "C" extern void move__20dMenu_StageMapCtrl_cFv();
-extern "C" extern void getPlayerStayFloorNo__20dMenu_StageMapCtrl_cCFv();
-extern "C" extern void _create__20dMenu_StageMapCtrl_cFUsUsUsUsPv();
-extern "C" extern void _create__20dMenu_StageMapCtrl_cFUsUsUsUsScPv();
-extern "C" extern void _delete__20dMenu_StageMapCtrl_cFv();
-extern "C" extern void isEnableZoomIn__20dMenu_StageMapCtrl_cFv();
-extern "C" extern void isEnableZoomOut__20dMenu_StageMapCtrl_cFv();
-extern "C" extern void setPlusZoomCenterX__20dMenu_StageMapCtrl_cFf();
-extern "C" extern void setPlusZoomCenterZ__20dMenu_StageMapCtrl_cFf();
-extern "C" extern void __ct__16dMenuMapCommon_cFv();
-extern "C" extern void __dt__16dMenuMapCommon_cFv();
-extern "C" extern void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern "C" extern void drawIcon__16dMenuMapCommon_cFffff();
-extern "C" extern void iconScale__16dMenuMapCommon_cFifff();
-extern "C" extern void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern "C" extern void clearIconInfo__16dMenuMapCommon_cFv();
-extern "C" extern void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb();
-extern "C" extern void move__19dMenu_ItemExplain_cFv();
-extern "C" extern void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph();
-extern "C" extern void openExplainDmap__19dMenu_ItemExplain_cFUcUcUcbUc();
-extern "C" extern void dMw_LEFT_TRIGGER__Fv();
-extern "C" extern void dMw_RIGHT_TRIGGER__Fv();
-extern "C" extern void dMw_B_TRIGGER__Fv();
-extern "C" extern void __ct__14dMeterHaihai_cFUc();
-extern "C" extern void drawHaihai__14dMeterHaihai_cFUcffff();
-extern "C" extern void setScale__14dMeterHaihai_cFf();
-extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
-extern "C" extern void setTalkHeap__12dMsgObject_cFPv();
-extern "C" extern void getTalkHeap__12dMsgObject_cFv();
-extern "C" extern void getStatus__12dMsgObject_cFv();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __ct__10dMsgFlow_cFv();
-extern "C" extern void __dt__10dMsgFlow_cFv();
-extern "C" extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
-extern "C" extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
-extern "C" extern void __ct__8CPaneMgrFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __dt__8CPaneMgrFv();
-extern "C" extern void paneTrans__8CPaneMgrFff();
-extern "C" extern void scaleAnime__8CPaneMgrFsffUc();
-extern "C" extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
-extern "C" extern void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void setBackupAlpha__17CPaneMgrAlphaMorfFv();
-extern "C" extern void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
-extern "C" extern void cLib_addCalc2__FPffff();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void getFreeSize__7JKRHeapFv();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void func_802E90C0();
-extern "C" extern void getBounds__7J2DPaneFv();
-extern "C" extern void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void GXGetScissor();
-extern "C" extern void __destroy_arr();
-extern "C" extern void __construct_array();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcpy();
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+void mDoExt_getJ2dHeap();
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getSubFont();
+void fopMsgM_valueIncrease(s32, s32, char);
+void dComIfGp_isLightDropMapVisible();
+void checkItemGet(char, s32);
+void dMw_LEFT_TRIGGER();
+void dMw_RIGHT_TRIGGER();
+void dMw_B_TRIGGER();
+void dMeter2Info_getNumberTextureName(s32);
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802E90C0();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
+
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void fopMsgM_valueIncrease__FiiUc();
+extern "C" void dComIfGp_isLightDropMapVisible__Fv();
+extern "C" void __ct__9STControlFssssffss();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void checkItemGet__FUci();
+extern "C" void getBossIconFloorNo__7dTres_cFPi();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void getMapBlendPer__20dMenu_StageMapCtrl_cCFv();
+extern "C" void getPixelStageSizeX__20dMenu_StageMapCtrl_cCFv();
+extern "C" void getPixelStageSizeZ__20dMenu_StageMapCtrl_cCFv();
+extern "C" void getPixelCenterX__20dMenu_StageMapCtrl_cCFv();
+extern "C" void getPixelCenterZ__20dMenu_StageMapCtrl_cCFv();
+extern "C" void initGetTreasureList__20dMenu_StageMapCtrl_cFUcSc();
+extern "C" void getTreasureList__20dMenu_StageMapCtrl_cFPfPfPScPUcPSc();
+extern "C" void getPlayerDrawInfo__20dMenu_StageMapCtrl_cCFPfPfPs();
+extern "C" void getRestartDrawInfo__20dMenu_StageMapCtrl_cCFPfPfPs();
+extern "C" void setPlusNowStayFloorNo__20dMenu_StageMapCtrl_cFScUc();
+extern "C" void initZoomIn__20dMenu_StageMapCtrl_cFUc();
+extern "C" void initZoomIn__20dMenu_StageMapCtrl_cFUcff();
+extern "C" void initZoomInCenterHold__20dMenu_StageMapCtrl_cFUc();
+extern "C" void initZoomOut__20dMenu_StageMapCtrl_cFUc();
+extern "C" void initZoomWait__20dMenu_StageMapCtrl_cFff();
+extern "C" void move__20dMenu_StageMapCtrl_cFv();
+extern "C" void getPlayerStayFloorNo__20dMenu_StageMapCtrl_cCFv();
+extern "C" void _create__20dMenu_StageMapCtrl_cFUsUsUsUsPv();
+extern "C" void _create__20dMenu_StageMapCtrl_cFUsUsUsUsScPv();
+extern "C" void _delete__20dMenu_StageMapCtrl_cFv();
+extern "C" void isEnableZoomIn__20dMenu_StageMapCtrl_cFv();
+extern "C" void isEnableZoomOut__20dMenu_StageMapCtrl_cFv();
+extern "C" void setPlusZoomCenterX__20dMenu_StageMapCtrl_cFf();
+extern "C" void setPlusZoomCenterZ__20dMenu_StageMapCtrl_cFf();
+extern "C" void __ct__16dMenuMapCommon_cFv();
+extern "C" void __dt__16dMenuMapCommon_cFv();
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" void iconScale__16dMenuMapCommon_cFifff();
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" void clearIconInfo__16dMenuMapCommon_cFv();
+extern "C" void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb();
+extern "C" void move__19dMenu_ItemExplain_cFv();
+extern "C" void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph();
+extern "C" void openExplainDmap__19dMenu_ItemExplain_cFUcUcUcbUc();
+extern "C" void dMw_LEFT_TRIGGER__Fv();
+extern "C" void dMw_RIGHT_TRIGGER__Fv();
+extern "C" void dMw_B_TRIGGER__Fv();
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void drawHaihai__14dMeterHaihai_cFUcffff();
+extern "C" void setScale__14dMeterHaihai_cFf();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void setTalkHeap__12dMsgObject_cFPv();
+extern "C" void getTalkHeap__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void scaleAnime__8CPaneMgrFsffUc();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void func_802E90C0();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void GXGetScissor();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*const __vt__28dDrawPathWithNormalPattern_c[16];
 SECTION_DATA extern void*const __vt__15dRenderingMap_c[23];
@@ -344,59 +935,59 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80395518-80395540 0028+00 .rodata    cont_at$4145                                                 */
+/* 80395518-80395540 0028+00 rc=2 efc=0 .rodata    cont_at$4145                                                 */
 SECTION_RODATA const u8 data_80395518[40] = {
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 };
 
-/* 80395540-80395568 0028+00 .rodata    cont_bt$4146                                                 */
+/* 80395540-80395568 0028+00 rc=0 efc=0 .rodata    cont_bt$4146                                                 */
 SECTION_RODATA const u8 data_80395540[40] = {
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 };
 
-/* 80395568-80395590 0028+00 .rodata    font_at$4147                                                 */
+/* 80395568-80395590 0028+00 rc=0 efc=0 .rodata    font_at$4147                                                 */
 SECTION_RODATA const u8 data_80395568[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 };
 
-/* 80395590-803955B8 0028+00 .rodata    font_bt$4148                                                 */
+/* 80395590-803955B8 0028+00 rc=0 efc=0 .rodata    font_bt$4148                                                 */
 SECTION_RODATA const u8 data_80395590[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 };
 
-/* 803955B8-803955C8 0010+00 .rodata    c_tag$4155                                                   */
+/* 803955B8-803955C8 0010+00 rc=0 efc=0 .rodata    c_tag$4155                                                   */
 SECTION_RODATA const u8 data_803955B8[16] = {
 	0x66, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x66, 0x5F, 0x74, 0x65, 0x78, 0x74,
 };
 
-/* 803955C8-803955F0 0028+00 .rodata    cont_at$4196                                                 */
+/* 803955C8-803955F0 0028+00 rc=1 efc=0 .rodata    cont_at$4196                                                 */
 SECTION_RODATA const u8 data_803955C8[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 };
 
-/* 803955F0-80395618 0028+00 .rodata    cont_bt$4211                                                 */
+/* 803955F0-80395618 0028+00 rc=1 efc=0 .rodata    cont_bt$4211                                                 */
 SECTION_RODATA const u8 data_803955F0[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 };
 
-/* 80395618-80395628 0010+00 .rodata    c_tag$4229                                                   */
+/* 80395618-80395628 0010+00 rc=1 efc=0 .rodata    c_tag$4229                                                   */
 SECTION_RODATA const u8 data_80395618[16] = {
 	0x66, 0x5F, 0x74, 0x65, 0x78, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x66, 0x5F, 0x74, 0x65, 0x78, 0x74,
 };
 
-/* 80395628-80395648 001A+06 .rodata    @4325                                                        */
+/* 80395628-80395648 001A+06 rc=1 efc=0 .rodata    @4325                                                        */
 SECTION_RODATA const u8 d_menu_d_menu_dmap__lit_4325[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x03, 0xDB, 0x03, 0xDA, 0x03, 0x6B, 0x03, 0x6C, 0x03, 0x6D, 0x03, 0x6E,
 	0x03, 0x6F, 0x03, 0xDC, 0x03, 0xDD, 0x03, 0xD9, 0x03, 0xD8,
@@ -404,7 +995,7 @@ SECTION_RODATA const u8 d_menu_d_menu_dmap__lit_4325[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80395648-80395688 0040+00 .rodata    floor_tag$4932                                               */
+/* 80395648-80395688 0040+00 rc=0 efc=0 .rodata    floor_tag$4932                                               */
 SECTION_RODATA const u8 data_80395648[64] = {
 	0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x37, 0x5F, 0x6E, 0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x30, 0x5F, 0x6E,
 	0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x31, 0x5F, 0x6E, 0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x32, 0x5F, 0x6E,
@@ -412,7 +1003,7 @@ SECTION_RODATA const u8 data_80395648[64] = {
 	0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x35, 0x5F, 0x6E, 0x66, 0x6C, 0x6F, 0x6F, 0x72, 0x36, 0x5F, 0x6E,
 };
 
-/* 80395688-803956C8 0040+00 .rodata    icon_tag$4933                                                */
+/* 80395688-803956C8 0040+00 rc=0 efc=0 .rodata    icon_tag$4933                                                */
 SECTION_RODATA const u8 data_80395688[64] = {
 	0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x37, 0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x30,
 	0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x31, 0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x32,
@@ -420,7 +1011,7 @@ SECTION_RODATA const u8 data_80395688[64] = {
 	0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x35, 0x69, 0x63, 0x6F, 0x5F, 0x73, 0x65, 0x74, 0x36,
 };
 
-/* 803956C8-80395708 0040+00 .rodata    boss_tag$4934                                                */
+/* 803956C8-80395708 0040+00 rc=0 efc=0 .rodata    boss_tag$4934                                                */
 SECTION_RODATA const u8 data_803956C8[64] = {
 	0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x37, 0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x30,
 	0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x31, 0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x32,
@@ -428,30 +1019,30 @@ SECTION_RODATA const u8 data_803956C8[64] = {
 	0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x35, 0x69, 0x63, 0x5F, 0x73, 0x74, 0x5F, 0x62, 0x36,
 };
 
-/* 80395708-80395718 0010+00 .rodata    stay_tag$4935                                                */
+/* 80395708-80395718 0010+00 rc=0 efc=0 .rodata    stay_tag$4935                                                */
 SECTION_RODATA const u8 data_80395708[16] = {
 	0x72, 0x69, 0x6E, 0x6B, 0x5F, 0x6E, 0x75, 0x6C, 0x62, 0x6F, 0x73, 0x73, 0x5F, 0x6E, 0x75, 0x6C,
 };
 
-/* 80395718-80395730 0018+00 .rodata    waku_tag$4973                                                */
+/* 80395718-80395730 0018+00 rc=0 efc=0 .rodata    waku_tag$4973                                                */
 SECTION_RODATA const u8 data_80395718[24] = {
 	0x67, 0x72, 0x61, 0x79, 0x5F, 0x6D, 0x61, 0x70, 0x67, 0x72, 0x61, 0x79, 0x5F, 0x63, 0x6F, 0x6E,
 	0x67, 0x72, 0x61, 0x79, 0x5F, 0x6B, 0x65, 0x79,
 };
 
-/* 80395730-80395748 0018+00 .rodata    key_tag$5002                                                 */
+/* 80395730-80395748 0018+00 rc=0 efc=0 .rodata    key_tag$5002                                                 */
 SECTION_RODATA const u8 data_80395730[24] = {
 	0x00, 0x00, 0x6B, 0x65, 0x79, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x6B, 0x65, 0x79, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x6B, 0x65, 0x79, 0x5F, 0x30, 0x32,
 };
 
-/* 80395748-80395760 0018+00 .rodata    item_tag$5040                                                */
+/* 80395748-80395760 0018+00 rc=0 efc=0 .rodata    item_tag$5040                                                */
 SECTION_RODATA const u8 data_80395748[24] = {
 	0x00, 0x00, 0x6D, 0x61, 0x70, 0x30, 0x30, 0x30, 0x00, 0x00, 0x63, 0x6F, 0x6E, 0x30, 0x30, 0x30,
 	0x00, 0x69, 0x5F, 0x6B, 0x65, 0x79, 0x5F, 0x6E,
 };
 
-/* 80395760-80395860 00EB+15 .rodata    @stringBase0                                                 */
+/* 80395760-80395860 00EB+15 rc=10 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -472,47 +1063,47 @@ SECTION_DEAD char* const stringBase_8039583E = "dat/data.dat";
 SECTION_DEAD char* const pad_8039584B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 #pragma pop
 
-/* 803BC7E0-803BC7EC 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BC7E0-803BC7EC 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_menu_d_menu_dmap__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC7EC-803BC7F8 000C+00 .data      @4861                                                        */
+/* 803BC7EC-803BC7F8 000C+00 rc=0 efc=0 .data      @4861                                                        */
 void* lit_4861[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemInfo_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC7F8-803BC804 000C+00 .data      @4862                                                        */
+/* 803BC7F8-803BC804 000C+00 rc=0 efc=0 .data      @4862                                                        */
 void* d_menu_d_menu_dmap__lit_4862[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)mapMode_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC804-803BC810 000C+00 .data      @4863                                                        */
+/* 803BC804-803BC810 000C+00 rc=0 efc=0 .data      @4863                                                        */
 void* lit_4863[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)infoModeChange_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC810-803BC81C 000C+00 .data      @4864                                                        */
+/* 803BC810-803BC81C 000C+00 rc=0 efc=0 .data      @4864                                                        */
 void* lit_4864[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)mapModeChange_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC81C-803BC828 000C+00 .data      @4865                                                        */
+/* 803BC81C-803BC828 000C+00 rc=0 efc=0 .data      @4865                                                        */
 void* lit_4865[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)lv5_talk_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC828-803BC864 003C+00 .data      init_process                                                 */
+/* 803BC828-803BC864 003C+00 rc=2 efc=0 .data      init_process                                                 */
 u8 d_menu_d_menu_dmap__init_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -520,42 +1111,42 @@ u8 d_menu_d_menu_dmap__init_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC864-803BC870 000C+00 .data      @4866                                                        */
+/* 803BC864-803BC870 000C+00 rc=0 efc=0 .data      @4866                                                        */
 void* lit_4866[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemInfo_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC870-803BC87C 000C+00 .data      @4867                                                        */
+/* 803BC870-803BC87C 000C+00 rc=0 efc=0 .data      @4867                                                        */
 void* lit_4867[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)mapMode_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC87C-803BC888 000C+00 .data      @4868                                                        */
+/* 803BC87C-803BC888 000C+00 rc=0 efc=0 .data      @4868                                                        */
 void* lit_4868[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)infoModeChange_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC888-803BC894 000C+00 .data      @4869                                                        */
+/* 803BC888-803BC894 000C+00 rc=0 efc=0 .data      @4869                                                        */
 void* lit_4869[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)mapModeChange_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC894-803BC8A0 000C+00 .data      @4870                                                        */
+/* 803BC894-803BC8A0 000C+00 rc=0 efc=0 .data      @4870                                                        */
 void* lit_4870[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)lv5_talk_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC8A0-803BC8DC 003C+00 .data      move_process                                                 */
+/* 803BC8A0-803BC8DC 003C+00 rc=1 efc=0 .data      move_process                                                 */
 u8 d_menu_d_menu_dmap__move_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -563,42 +1154,42 @@ u8 d_menu_d_menu_dmap__move_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC8DC-803BC8E8 000C+00 .data      @4871                                                        */
+/* 803BC8DC-803BC8E8 000C+00 rc=0 efc=0 .data      @4871                                                        */
 void* lit_4871[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemSelect__12dMenu_Dmap_cFv,
 };
 
-/* 803BC8E8-803BC8F4 000C+00 .data      @4872                                                        */
+/* 803BC8E8-803BC8F4 000C+00 rc=0 efc=0 .data      @4872                                                        */
 void* lit_4872[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemSelectAnm__12dMenu_Dmap_cFv,
 };
 
-/* 803BC8F4-803BC900 000C+00 .data      @4873                                                        */
+/* 803BC8F4-803BC900 000C+00 rc=0 efc=0 .data      @4873                                                        */
 void* lit_4873[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemInfoOpenAnm__12dMenu_Dmap_cFv,
 };
 
-/* 803BC900-803BC90C 000C+00 .data      @4874                                                        */
+/* 803BC900-803BC90C 000C+00 rc=0 efc=0 .data      @4874                                                        */
 void* lit_4874[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemInfoWait__12dMenu_Dmap_cFv,
 };
 
-/* 803BC90C-803BC918 000C+00 .data      @4875                                                        */
+/* 803BC90C-803BC918 000C+00 rc=0 efc=0 .data      @4875                                                        */
 void* d_menu_d_menu_dmap__lit_4875[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)itemInfoCloseAnm__12dMenu_Dmap_cFv,
 };
 
-/* 803BC918-803BC954 003C+00 .data      itemInfo_subProcess                                          */
+/* 803BC918-803BC954 003C+00 rc=1 efc=0 .data      itemInfo_subProcess                                          */
 u8 itemInfo_subProcess[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -606,96 +1197,96 @@ u8 itemInfo_subProcess[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC954-803BC960 000C+00 .data      @4876                                                        */
+/* 803BC954-803BC960 000C+00 rc=0 efc=0 .data      @4876                                                        */
 void* d_menu_d_menu_dmap__lit_4876[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)floorSelect_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC960-803BC96C 000C+00 .data      @4877                                                        */
+/* 803BC960-803BC96C 000C+00 rc=0 efc=0 .data      @4877                                                        */
 void* lit_4877[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)floorChange_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC96C-803BC984 0018+00 .data      floor_init_process                                           */
+/* 803BC96C-803BC984 0018+00 rc=1 efc=0 .data      floor_init_process                                           */
 u8 floor_init_process[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC984-803BC990 000C+00 .data      @4878                                                        */
+/* 803BC984-803BC990 000C+00 rc=0 efc=0 .data      @4878                                                        */
 void* lit_4878[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)floorSelect_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC990-803BC99C 000C+00 .data      @4879                                                        */
+/* 803BC990-803BC99C 000C+00 rc=0 efc=0 .data      @4879                                                        */
 void* d_menu_d_menu_dmap__lit_4879[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)floorChange_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC99C-803BC9B4 0018+00 .data      floor_move_process                                           */
+/* 803BC99C-803BC9B4 0018+00 rc=1 efc=0 .data      floor_move_process                                           */
 u8 floor_move_process[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC9B4-803BC9C0 000C+00 .data      @4880                                                        */
+/* 803BC9B4-803BC9C0 000C+00 rc=0 efc=0 .data      @4880                                                        */
 void* lit_4880[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomWait_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC9C0-803BC9CC 000C+00 .data      @4881                                                        */
+/* 803BC9C0-803BC9CC 000C+00 rc=0 efc=0 .data      @4881                                                        */
 void* lit_4881[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomIn_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC9CC-803BC9D8 000C+00 .data      @4882                                                        */
+/* 803BC9CC-803BC9D8 000C+00 rc=0 efc=0 .data      @4882                                                        */
 void* lit_4882[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomOut_init_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BC9D8-803BC9FC 0024+00 .data      map_init_process                                             */
+/* 803BC9D8-803BC9FC 0024+00 rc=3 efc=0 .data      map_init_process                                             */
 u8 d_menu_d_menu_dmap__map_init_process[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC9FC-803BCA08 000C+00 .data      @4883                                                        */
+/* 803BC9FC-803BCA08 000C+00 rc=0 efc=0 .data      @4883                                                        */
 void* lit_4883[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomWait_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BCA08-803BCA14 000C+00 .data      @4884                                                        */
+/* 803BCA08-803BCA14 000C+00 rc=0 efc=0 .data      @4884                                                        */
 void* lit_4884[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomIn_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BCA14-803BCA20 000C+00 .data      @4885                                                        */
+/* 803BCA14-803BCA20 000C+00 rc=0 efc=0 .data      @4885                                                        */
 void* lit_4885[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)zoomOut_proc__12dMenu_Dmap_cFv,
 };
 
-/* 803BCA20-803BCAE0 0024+9C .data      map_move_process                                             */
+/* 803BCA20-803BCAE0 0024+9C rc=1 efc=0 .data      map_move_process                                             */
 u8 d_menu_d_menu_dmap__map_move_process[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -713,14 +1304,14 @@ u8 d_menu_d_menu_dmap__map_move_process[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BCAE0-803BCAEC 000C+00 .data      __vt__15dMenu_DmapMap_c                                      */
+/* 803BCAE0-803BCAEC 000C+00 rc=4 efc=0 .data      __vt__15dMenu_DmapMap_c                                      */
 void* const __vt__15dMenu_DmapMap_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dMenu_DmapMap_cFv,
 };
 
-/* 803BCAEC-803BCB10 0024+00 .data      __vt__20dMenu_StageMapCtrl_c                                 */
+/* 803BCAEC-803BCB10 0024+00 rc=3 efc=0 .data      __vt__20dMenu_StageMapCtrl_c                                 */
 void* const __vt__20dMenu_StageMapCtrl_c[9] = {
 	NULL, /* RTTI */
 	NULL,
@@ -733,7 +1324,7 @@ void* const __vt__20dMenu_StageMapCtrl_c[9] = {
 	NULL,
 };
 
-/* 803BCB10-803BCB38 000C+1C .data      __vt__12dMenu_Dmap_c                                         */
+/* 803BCB10-803BCB38 000C+1C rc=2 efc=0 .data      __vt__12dMenu_Dmap_c                                         */
 void* const __vt__12dMenu_Dmap_c[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -748,7 +1339,7 @@ void* const __vt__12dMenu_Dmap_c[10] = {
 	NULL,
 };
 
-/* 803BCB38-803BCB60 001C+0C .data      __vt__14dMenu_DmapBg_c                                       */
+/* 803BCB38-803BCB60 001C+0C rc=2 efc=0 .data      __vt__14dMenu_DmapBg_c                                       */
 void* const __vt__14dMenu_DmapBg_c[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -763,19 +1354,19 @@ void* const __vt__14dMenu_DmapBg_c[10] = {
 	NULL,
 };
 
-/* 80453FE8-80453FEC 0004+00 .sdata2    @3962                                                        */
+/* 80453FE8-80453FEC 0004+00 rc=20 efc=0 .sdata2    @3962                                                        */
 u8 d_menu_d_menu_dmap__lit_3962[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453FEC-80453FF0 0004+00 .sdata2    @3963                                                        */
+/* 80453FEC-80453FF0 0004+00 rc=26 efc=0 .sdata2    @3963                                                        */
 f32 d_menu_d_menu_dmap__lit_3963 = 1.0f;
 
-/* 801B7F20-801B8110 01F0+00 .text      __ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl              */
+/* 801B7F20-801B8110 01F0+00 rc=1 efc=0 .text      __ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl) {
+asm dMenu_DmapBg_c::dMenu_DmapBg_c(JKRExpHeap* field_0, STControl* field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl.s"
 }
@@ -783,14 +1374,14 @@ ASM_FUNCTION(__ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl) {
 
 
 /* ############################################################################################## */
-/* 80453FF0-80453FF4 0004+00 .sdata2    @4073                                                        */
+/* 80453FF0-80453FF4 0004+00 rc=1 efc=0 .sdata2    @4073                                                        */
 f32 d_menu_d_menu_dmap__lit_4073 = -15.0f;
 
-/* 801B8110-801B884C 073C+00 .text      mapScreenInit__14dMenu_DmapBg_cFv                            */
+/* 801B8110-801B884C 073C+00 rc=1 efc=0 .text      mapScreenInit__14dMenu_DmapBg_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapScreenInit__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::mapScreenInit() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapScreenInit__14dMenu_DmapBg_cFv.s"
 }
@@ -798,39 +1389,39 @@ ASM_FUNCTION(mapScreenInit__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453FF4-80453FF8 0004+00 .sdata2    @4106                                                        */
+/* 80453FF4-80453FF8 0004+00 rc=2 efc=0 .sdata2    @4106                                                        */
 f32 d_menu_d_menu_dmap__lit_4106 = 2.0f / 5.0f;
 
-/* 80453FF8-80454000 0008+00 .sdata2    @4108                                                        */
+/* 80453FF8-80454000 0008+00 rc=8 efc=0 .sdata2    @4108                                                        */
 f64 d_menu_d_menu_dmap__lit_4108 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801B884C-801B88F4 00A8+00 .text      mapScreenAnime__14dMenu_DmapBg_cFv                           */
+/* 801B884C-801B88F4 00A8+00 rc=1 efc=0 .text      mapScreenAnime__14dMenu_DmapBg_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapScreenAnime__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::mapScreenAnime() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapScreenAnime__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801B88F4-801B893C 0048+00 .text      mapIconScaleSet__14dMenu_DmapBg_cFUc                         */
+/* 801B88F4-801B893C 0048+00 rc=1 efc=0 .text      mapIconScaleSet__14dMenu_DmapBg_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapIconScaleSet__14dMenu_DmapBg_cFUc) {
+asm void dMenu_DmapBg_c::mapIconScaleSet(char field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapIconScaleSet__14dMenu_DmapBg_cFUc.s"
 }
 #pragma pop
 
 
-/* 801B893C-801B8954 0018+00 .text      iconScaleAnmInit__14dMenu_DmapBg_cFffUc                      */
+/* 801B893C-801B8954 0018+00 rc=2 efc=0 .text      iconScaleAnmInit__14dMenu_DmapBg_cFffUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iconScaleAnmInit__14dMenu_DmapBg_cFffUc) {
+asm void dMenu_DmapBg_c::iconScaleAnmInit(f32 field_0, f32 field_1, char field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/iconScaleAnmInit__14dMenu_DmapBg_cFffUc.s"
 }
@@ -838,14 +1429,14 @@ ASM_FUNCTION(iconScaleAnmInit__14dMenu_DmapBg_cFffUc) {
 
 
 /* ############################################################################################## */
-/* 80454000-80454004 0004+00 .sdata2    @4133                                                        */
+/* 80454000-80454004 0004+00 rc=1 efc=0 .sdata2    @4133                                                        */
 f32 d_menu_d_menu_dmap__lit_4133 = 1.0f / 20.0f;
 
-/* 801B8954-801B8A0C 00B8+00 .text      iconScaleAnm__14dMenu_DmapBg_cFv                             */
+/* 801B8954-801B8A0C 00B8+00 rc=2 efc=0 .text      iconScaleAnm__14dMenu_DmapBg_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iconScaleAnm__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::iconScaleAnm() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/iconScaleAnm__14dMenu_DmapBg_cFv.s"
 }
@@ -853,39 +1444,39 @@ ASM_FUNCTION(iconScaleAnm__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454004-80454008 0004+00 .sdata2    @4191                                                        */
+/* 80454004-80454008 0004+00 rc=1 efc=0 .sdata2    @4191                                                        */
 f32 d_menu_d_menu_dmap__lit_4191 = 160.0f;
 
-/* 80454008-8045400C 0004+00 .sdata2    @4192                                                        */
+/* 80454008-8045400C 0004+00 rc=1 efc=0 .sdata2    @4192                                                        */
 f32 d_menu_d_menu_dmap__lit_4192 = 321.0f;
 
-/* 801B8A0C-801B8DE4 03D8+00 .text      buttonIconScreenInit__14dMenu_DmapBg_cFv                     */
+/* 801B8A0C-801B8DE4 03D8+00 rc=1 efc=0 .text      buttonIconScreenInit__14dMenu_DmapBg_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(buttonIconScreenInit__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::buttonIconScreenInit() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/buttonIconScreenInit__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801B8DE4-801B8EBC 00D8+00 .text      setAButtonString__14dMenu_DmapBg_cFUl                        */
+/* 801B8DE4-801B8EBC 00D8+00 rc=7 efc=0 .text      setAButtonString__14dMenu_DmapBg_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAButtonString__14dMenu_DmapBg_cFUl) {
+asm void dMenu_DmapBg_c::setAButtonString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setAButtonString__14dMenu_DmapBg_cFUl.s"
 }
 #pragma pop
 
 
-/* 801B8EBC-801B8F94 00D8+00 .text      setBButtonString__14dMenu_DmapBg_cFUl                        */
+/* 801B8EBC-801B8F94 00D8+00 rc=8 efc=0 .text      setBButtonString__14dMenu_DmapBg_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBButtonString__14dMenu_DmapBg_cFUl) {
+asm void dMenu_DmapBg_c::setBButtonString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setBButtonString__14dMenu_DmapBg_cFUl.s"
 }
@@ -893,56 +1484,56 @@ ASM_FUNCTION(setBButtonString__14dMenu_DmapBg_cFUl) {
 
 
 /* ############################################################################################## */
-/* 80451078-8045107C 0004+00 .sbss      player_px                                                    */
+/* 80451078-8045107C 0004+00 rc=1 efc=0 .sbss      player_px                                                    */
 u8 player_px[4];
 
-/* 8045107C-80451080 0004+00 .sbss      player_py                                                    */
+/* 8045107C-80451080 0004+00 rc=1 efc=0 .sbss      player_py                                                    */
 u8 player_py[4];
 
-/* 80451080-80451088 0004+04 .sbss      myclass__12dMenu_Dmap_c                                      */
+/* 80451080-80451088 0004+04 rc=6 efc=0 .sbss      myclass__12dMenu_Dmap_c                                      */
 u8 myclass__12dMenu_Dmap_c[4 + 4 /* padding */];
 
-/* 8045400C-80454010 0004+00 .sdata2    @4249                                                        */
+/* 8045400C-80454010 0004+00 rc=7 efc=0 .sdata2    @4249                                                        */
 f32 d_menu_d_menu_dmap__lit_4249 = 0.5f;
 
-/* 801B8F94-801B90BC 0128+00 .text      setCButtonString__14dMenu_DmapBg_cFUl                        */
+/* 801B8F94-801B90BC 0128+00 rc=1 efc=0 .text      setCButtonString__14dMenu_DmapBg_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCButtonString__14dMenu_DmapBg_cFUl) {
+asm void dMenu_DmapBg_c::setCButtonString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setCButtonString__14dMenu_DmapBg_cFUl.s"
 }
 #pragma pop
 
 
-/* 801B90BC-801B90E0 0024+00 .text      setJButtonString__14dMenu_DmapBg_cFUl                        */
+/* 801B90BC-801B90E0 0024+00 rc=1 efc=0 .text      setJButtonString__14dMenu_DmapBg_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setJButtonString__14dMenu_DmapBg_cFUl) {
+asm void dMenu_DmapBg_c::setJButtonString(u32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setJButtonString__14dMenu_DmapBg_cFUl.s"
 }
 #pragma pop
 
 
-/* 801B90E0-801B9164 0084+00 .text      createExplain__14dMenu_DmapBg_cFv                            */
+/* 801B90E0-801B9164 0084+00 rc=1 efc=0 .text      createExplain__14dMenu_DmapBg_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createExplain__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::createExplain() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/createExplain__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801B9164-801B91DC 0078+00 .text      deleteExplain__14dMenu_DmapBg_cFv                            */
+/* 801B9164-801B91DC 0078+00 rc=2 efc=0 .text      deleteExplain__14dMenu_DmapBg_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteExplain__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::deleteExplain() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/deleteExplain__14dMenu_DmapBg_cFv.s"
 }
@@ -950,78 +1541,73 @@ ASM_FUNCTION(deleteExplain__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454010-80454014 0004+00 .sdata2    @4312                                                        */
+/* 80454010-80454014 0004+00 rc=1 efc=0 .sdata2    @4312                                                        */
 f32 d_menu_d_menu_dmap__lit_4312 = 19.0f / 20.0f;
 
-/* 80454014-80454018 0004+00 .sdata2    @4313                                                        */
+/* 80454014-80454018 0004+00 rc=7 efc=0 .sdata2    @4313                                                        */
 f32 d_menu_d_menu_dmap__lit_4313 = 9.0f / 10.0f;
 
-/* 80454018-8045401C 0004+00 .sdata2    @4314                                                        */
+/* 80454018-8045401C 0004+00 rc=1 efc=0 .sdata2    @4314                                                        */
 f32 d_menu_d_menu_dmap__lit_4314 = 1.0f / 10.0f;
 
-/* 8045401C-80454020 0004+00 .sdata2    @4315                                                        */
+/* 8045401C-80454020 0004+00 rc=1 efc=0 .sdata2    @4315                                                        */
 f32 d_menu_d_menu_dmap__lit_4315 = 3.0f / 5.0f;
 
-/* 801B91DC-801B944C 0270+00 .text      baseScreenInit__14dMenu_DmapBg_cFv                           */
+/* 801B91DC-801B944C 0270+00 rc=1 efc=0 .text      baseScreenInit__14dMenu_DmapBg_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(baseScreenInit__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::baseScreenInit() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/baseScreenInit__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801B944C-801BA0B4 0C68+00 .text      setFloorMessage__14dMenu_DmapBg_cFv                          */
+/* 801B944C-801BA0B4 0C68+00 rc=1 efc=0 .text      setFloorMessage__14dMenu_DmapBg_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFloorMessage__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::setFloorMessage() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setFloorMessage__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801BA0B4-801BA0BC 0008+00 .text      dpdMove__14dMenu_DmapBg_cFScScScPUcUc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dpdMove__14dMenu_DmapBg_cFScScScPUcUc) {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/dpdMove__14dMenu_DmapBg_cFScScScPUcUc.s"
+/* 801BA0B4-801BA0BC 0008+00 rc=1 efc=0 .text      dpdMove__14dMenu_DmapBg_cFScScScPUcUc                        */
+bool dMenu_DmapBg_c::dpdMove(char field_0, char field_1, char field_2, char* field_3, char field_4) {
+	return false;
 }
-#pragma pop
 
 
-/* 801BA0BC-801BA60C 0550+00 .text      __dt__14dMenu_DmapBg_cFv                                     */
+/* 801BA0BC-801BA60C 0550+00 rc=2 efc=0 .text      __dt__14dMenu_DmapBg_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dMenu_DmapBg_cFv) {
+asm dMenu_DmapBg_c::~dMenu_DmapBg_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801BA60C-801BA700 00F4+00 .text      setAllAlphaRate__14dMenu_DmapBg_cFfb                         */
+/* 801BA60C-801BA700 00F4+00 rc=2 efc=0 .text      setAllAlphaRate__14dMenu_DmapBg_cFfb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAllAlphaRate__14dMenu_DmapBg_cFfb) {
+asm void dMenu_DmapBg_c::setAllAlphaRate(f32 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setAllAlphaRate__14dMenu_DmapBg_cFfb.s"
 }
 #pragma pop
 
 
-/* 801BA700-801BA7F0 00F0+00 .text      setGoldAnimation__14dMenu_DmapBg_cFb                         */
+/* 801BA700-801BA7F0 00F0+00 rc=3 efc=0 .text      setGoldAnimation__14dMenu_DmapBg_cFb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoldAnimation__14dMenu_DmapBg_cFb) {
+asm void dMenu_DmapBg_c::setGoldAnimation(bool field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setGoldAnimation__14dMenu_DmapBg_cFb.s"
 }
@@ -1029,36 +1615,36 @@ ASM_FUNCTION(setGoldAnimation__14dMenu_DmapBg_cFb) {
 
 
 /* ############################################################################################## */
-/* 80454020-80454024 0004+00 .sdata2    @4643                                                        */
+/* 80454020-80454024 0004+00 rc=3 efc=0 .sdata2    @4643                                                        */
 f32 d_menu_d_menu_dmap__lit_4643 = 255.0f;
 
-/* 801BA7F0-801BA974 0184+00 .text      setGoldFrameAlphaRate__14dMenu_DmapBg_cFf                    */
+/* 801BA7F0-801BA974 0184+00 rc=3 efc=0 .text      setGoldFrameAlphaRate__14dMenu_DmapBg_cFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoldFrameAlphaRate__14dMenu_DmapBg_cFf) {
+asm void dMenu_DmapBg_c::setGoldFrameAlphaRate(f32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setGoldFrameAlphaRate__14dMenu_DmapBg_cFf.s"
 }
 #pragma pop
 
 
-/* 801BA974-801BAA4C 00D8+00 .text      addGoldFrameAlphaRate__14dMenu_DmapBg_cFv                    */
+/* 801BA974-801BAA4C 00D8+00 rc=1 efc=0 .text      addGoldFrameAlphaRate__14dMenu_DmapBg_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addGoldFrameAlphaRate__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::addGoldFrameAlphaRate() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/addGoldFrameAlphaRate__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801BAA4C-801BAB10 00C4+00 .text      decGoldFrameAlphaRate__14dMenu_DmapBg_cFv                    */
+/* 801BAA4C-801BAB10 00C4+00 rc=1 efc=0 .text      decGoldFrameAlphaRate__14dMenu_DmapBg_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decGoldFrameAlphaRate__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::decGoldFrameAlphaRate() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/decGoldFrameAlphaRate__14dMenu_DmapBg_cFv.s"
 }
@@ -1066,29 +1652,29 @@ ASM_FUNCTION(decGoldFrameAlphaRate__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454024-80454028 0004+00 .sdata2    @4784                                                        */
+/* 80454024-80454028 0004+00 rc=4 efc=0 .sdata2    @4784                                                        */
 f32 d_menu_d_menu_dmap__lit_4784 = 608.0f;
 
-/* 80454028-8045402C 0004+00 .sdata2    @4785                                                        */
+/* 80454028-8045402C 0004+00 rc=4 efc=0 .sdata2    @4785                                                        */
 f32 d_menu_d_menu_dmap__lit_4785 = 448.0f;
 
-/* 8045402C-80454030 0004+00 .sdata2    @4786                                                        */
+/* 8045402C-80454030 0004+00 rc=1 efc=0 .sdata2    @4786                                                        */
 f32 d_menu_d_menu_dmap__lit_4786 = 2.0f;
 
-/* 80454030-80454034 0004+00 .sdata2    @4787                                                        */
+/* 80454030-80454034 0004+00 rc=1 efc=0 .sdata2    @4787                                                        */
 f32 d_menu_d_menu_dmap__lit_4787 = 7.0f / 10.0f;
 
-/* 80454034-80454038 0004+00 .sdata2    @4788                                                        */
+/* 80454034-80454038 0004+00 rc=1 efc=0 .sdata2    @4788                                                        */
 f32 d_menu_d_menu_dmap__lit_4788 = -35.0f;
 
-/* 80454038-80454040 0008+00 .sdata2    @4790                                                        */
+/* 80454038-80454040 0008+00 rc=2 efc=0 .sdata2    @4790                                                        */
 f64 d_menu_d_menu_dmap__lit_4790 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801BAB10-801BB334 0824+00 .text      draw__14dMenu_DmapBg_cFv                                     */
+/* 801BAB10-801BB334 0824+00 rc=1 efc=0 .text      draw__14dMenu_DmapBg_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/draw__14dMenu_DmapBg_cFv.s"
 }
@@ -1096,36 +1682,31 @@ ASM_FUNCTION(draw__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454040-80454044 0004+00 .sdata2    @4848                                                        */
+/* 80454040-80454044 0004+00 rc=1 efc=0 .sdata2    @4848                                                        */
 f32 lit_4848 = 25.5f;
 
-/* 801BB334-801BB464 0130+00 .text      update__14dMenu_DmapBg_cFv                                   */
+/* 801BB334-801BB464 0130+00 rc=1 efc=0 .text      update__14dMenu_DmapBg_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::update() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/update__14dMenu_DmapBg_cFv.s"
 }
 #pragma pop
 
 
-/* 801BB464-801BB468 0004+00 .text      calcCursor__14dMenu_DmapBg_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(calcCursor__14dMenu_DmapBg_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/calcCursor__14dMenu_DmapBg_cFv.s"
+/* 801BB464-801BB468 0004+00 rc=1 efc=0 .text      calcCursor__14dMenu_DmapBg_cFv                               */
+void dMenu_DmapBg_c::calcCursor() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801BB468-801BB498 0030+00 .text      drawCursor__14dMenu_DmapBg_cFv                               */
+/* 801BB468-801BB498 0030+00 rc=1 efc=0 .text      drawCursor__14dMenu_DmapBg_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawCursor__14dMenu_DmapBg_cFv) {
+asm void dMenu_DmapBg_c::drawCursor() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/drawCursor__14dMenu_DmapBg_cFv.s"
 }
@@ -1133,17 +1714,17 @@ ASM_FUNCTION(drawCursor__14dMenu_DmapBg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454044-80454048 0004+00 .sdata2    @4926                                                        */
+/* 80454044-80454048 0004+00 rc=3 efc=0 .sdata2    @4926                                                        */
 f32 lit_4926 = -608.0f;
 
-/* 80454048-8045404C 0004+00 .sdata2    @4927                                                        */
+/* 80454048-8045404C 0004+00 rc=3 efc=0 .sdata2    @4927                                                        */
 f32 lit_4927 = -448.0f;
 
-/* 801BB498-801BB634 019C+00 .text      __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc */
+/* 801BB498-801BB634 019C+00 rc=1 efc=1 .text      __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc) {
+asm dMenu_Dmap_c::dMenu_Dmap_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, char field_3, char field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc.s"
 }
@@ -1151,14 +1732,14 @@ ASM_FUNCTION(__ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc) {
 
 
 /* ############################################################################################## */
-/* 8045404C-80454050 0004+00 .sdata2    @5277                                                        */
+/* 8045404C-80454050 0004+00 rc=1 efc=0 .sdata2    @5277                                                        */
 f32 lit_5277 = 7.0f;
 
-/* 801BB634-801BC788 1154+00 .text      screenInit__12dMenu_Dmap_cFv                                 */
+/* 801BB634-801BC788 1154+00 rc=1 efc=0 .text      screenInit__12dMenu_Dmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenInit__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::screenInit() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/screenInit__12dMenu_Dmap_cFv.s"
 }
@@ -1166,157 +1747,157 @@ ASM_FUNCTION(screenInit__12dMenu_Dmap_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454050-80454054 0004+00 .sdata2    @5288                                                        */
+/* 80454050-80454054 0004+00 rc=2 efc=0 .sdata2    @5288                                                        */
 f32 lit_5288 = 0.0054931640625f;
 
-/* 801BC788-801BC848 00C0+00 .text      getPlayerIconPos__12dMenu_Dmap_cFScf                         */
+/* 801BC788-801BC848 00C0+00 rc=1 efc=0 .text      getPlayerIconPos__12dMenu_Dmap_cFScf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayerIconPos__12dMenu_Dmap_cFScf) {
+asm void dMenu_Dmap_c::getPlayerIconPos(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getPlayerIconPos__12dMenu_Dmap_cFScf.s"
 }
 #pragma pop
 
 
-/* 801BC848-801BCDF4 05AC+00 .text      getIconPos__12dMenu_Dmap_cFScf                               */
+/* 801BC848-801BCDF4 05AC+00 rc=2 efc=0 .text      getIconPos__12dMenu_Dmap_cFScf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIconPos__12dMenu_Dmap_cFScf) {
+asm void dMenu_Dmap_c::getIconPos(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getIconPos__12dMenu_Dmap_cFScf.s"
 }
 #pragma pop
 
 
-/* 801BCDF4-801BD144 0350+00 .text      __dt__12dMenu_Dmap_cFv                                       */
+/* 801BCDF4-801BD144 0350+00 rc=1 efc=0 .text      __dt__12dMenu_Dmap_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dMenu_Dmap_cFv) {
+asm dMenu_Dmap_c::~dMenu_Dmap_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD144-801BD1D4 0090+00 .text      __dt__19dMenu_DmapMapCtrl_cFv                                */
+/* 801BD144-801BD1D4 0090+00 rc=1 efc=1 .text      __dt__19dMenu_DmapMapCtrl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dMenu_DmapMapCtrl_cFv) {
+asm dMenu_DmapMapCtrl_c::~dMenu_DmapMapCtrl_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__19dMenu_DmapMapCtrl_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD1D4-801BD1E8 0014+00 .text      getCurFloorPos__12dMenu_Dmap_cFv                             */
+/* 801BD1D4-801BD1E8 0014+00 rc=10 efc=0 .text      getCurFloorPos__12dMenu_Dmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCurFloorPos__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::getCurFloorPos() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getCurFloorPos__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD1E8-801BD208 0020+00 .text      getDefaultCurFloorPos__12dMenu_Dmap_cFv                      */
+/* 801BD1E8-801BD208 0020+00 rc=4 efc=0 .text      getDefaultCurFloorPos__12dMenu_Dmap_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDefaultCurFloorPos__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::getDefaultCurFloorPos() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getDefaultCurFloorPos__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD208-801BD3B8 01B0+00 .text      iconMoveCalc__12dMenu_Dmap_cFv                               */
+/* 801BD208-801BD3B8 01B0+00 rc=4 efc=0 .text      iconMoveCalc__12dMenu_Dmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iconMoveCalc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::iconMoveCalc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/iconMoveCalc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD3B8-801BD524 016C+00 .text      drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph */
+/* 801BD3B8-801BD524 016C+00 rc=1 efc=0 .text      drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph) {
+asm void dMenu_Dmap_c::drawFloorScreenBack(J2DScreen* field_0, f32 field_1, f32 field_2, J2DOrthoGraph* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/drawFloorScreenBack__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph.s"
 }
 #pragma pop
 
 
-/* 801BD524-801BD690 016C+00 .text      drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph */
+/* 801BD524-801BD690 016C+00 rc=1 efc=0 .text      drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph) {
+asm void dMenu_Dmap_c::drawFloorScreenTop(J2DScreen* field_0, f32 field_1, f32 field_2, J2DOrthoGraph* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/drawFloorScreenTop__12dMenu_Dmap_cFP9J2DScreenffP13J2DOrthoGraph.s"
 }
 #pragma pop
 
 
-/* 801BD690-801BD6C4 0034+00 .text      isMapMoveState__12dMenu_Dmap_cFv                             */
+/* 801BD690-801BD6C4 0034+00 rc=3 efc=0 .text      isMapMoveState__12dMenu_Dmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMapMoveState__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::isMapMoveState() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/isMapMoveState__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD6C4-801BD7C0 00FC+00 .text      floorChangeMode__12dMenu_Dmap_cFv                            */
+/* 801BD6C4-801BD7C0 00FC+00 rc=1 efc=0 .text      floorChangeMode__12dMenu_Dmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(floorChangeMode__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::floorChangeMode() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/floorChangeMode__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BD7C0-801BDD40 0580+00 .text      _create__12dMenu_Dmap_cFv                                    */
+/* 801BD7C0-801BDD40 0580+00 rc=1 efc=0 .text      _create__12dMenu_Dmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::_create() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/_create__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BDD40-801BDD70 0030+00 .text      append__10J2DPictureFPC7ResTIMGf                             */
+/* 801BDD40-801BDD70 0030+00 rc=1 efc=1 .text      append__10J2DPictureFPC7ResTIMGf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(append__10J2DPictureFPC7ResTIMGf) {
+asm void J2DPicture::append(ResTIMG const* field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/append__10J2DPictureFPC7ResTIMGf.s"
 }
 #pragma pop
 
 
-/* 801BDD70-801BDDA4 0034+00 .text      insert__10J2DPictureFPC7ResTIMGUcf                           */
+/* 801BDD70-801BDDA4 0034+00 rc=1 efc=1 .text      insert__10J2DPictureFPC7ResTIMGUcf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__10J2DPictureFPC7ResTIMGUcf) {
+asm void J2DPicture::insert(ResTIMG const* field_0, char field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/insert__10J2DPictureFPC7ResTIMGUcf.s"
 }
@@ -1324,36 +1905,36 @@ ASM_FUNCTION(insert__10J2DPictureFPC7ResTIMGUcf) {
 
 
 /* ############################################################################################## */
-/* 80454054-80454058 0004+00 .sdata2    @6017                                                        */
+/* 80454054-80454058 0004+00 rc=1 efc=0 .sdata2    @6017                                                        */
 f32 d_menu_d_menu_dmap__lit_6017 = 12.0f / 17.0f;
 
-/* 801BDDA4-801BDEF8 0154+00 .text      _move__12dMenu_Dmap_cFv                                      */
+/* 801BDDA4-801BDEF8 0154+00 rc=1 efc=1 .text      _move__12dMenu_Dmap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/_move__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BDEF8-801BDF48 0050+00 .text      setMapTexture__12dMenu_Dmap_cFv                              */
+/* 801BDEF8-801BDF48 0050+00 rc=1 efc=0 .text      setMapTexture__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMapTexture__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::setMapTexture() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/setMapTexture__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BDF48-801BDF6C 0024+00 .text      mapBgAnime__12dMenu_Dmap_cFv                                 */
+/* 801BDF48-801BDF6C 0024+00 rc=1 efc=0 .text      mapBgAnime__12dMenu_Dmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapBgAnime__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapBgAnime() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapBgAnime__12dMenu_Dmap_cFv.s"
 }
@@ -1361,461 +1942,450 @@ ASM_FUNCTION(mapBgAnime__12dMenu_Dmap_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454058-8045405C 0004+00 .sdata2    @6180                                                        */
+/* 80454058-8045405C 0004+00 rc=2 efc=0 .sdata2    @6180                                                        */
 f32 d_menu_d_menu_dmap__lit_6180 = 100.0f;
 
-/* 8045405C-80454060 0004+00 .sdata2    @6181                                                        */
+/* 8045405C-80454060 0004+00 rc=7 efc=0 .sdata2    @6181                                                        */
 f32 lit_6181 = -1.0f;
 
-/* 801BDF6C-801BE328 03BC+00 .text      mapControl__12dMenu_Dmap_cFv                                 */
+/* 801BDF6C-801BE328 03BC+00 rc=1 efc=0 .text      mapControl__12dMenu_Dmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapControl__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapControl() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapControl__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BE328-801BE670 0348+00 .text      isOpen__12dMenu_Dmap_cFv                                     */
+/* 801BE328-801BE670 0348+00 rc=1 efc=1 .text      isOpen__12dMenu_Dmap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isOpen__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::isOpen() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/isOpen__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BE670-801BE7E0 0170+00 .text      isClose__12dMenu_Dmap_cFv                                    */
+/* 801BE670-801BE7E0 0170+00 rc=1 efc=1 .text      isClose__12dMenu_Dmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isClose__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::isClose() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/isClose__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BE7E0-801BEAFC 031C+00 .text      _draw__12dMenu_Dmap_cFv                                      */
+/* 801BE7E0-801BEAFC 031C+00 rc=1 efc=1 .text      _draw__12dMenu_Dmap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::_draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/_draw__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BEAFC-801BEB0C 0010+00 .text      itemInfo_init_proc__12dMenu_Dmap_cFv                         */
+/* 801BEAFC-801BEB0C 0010+00 rc=1 efc=0 .text      itemInfo_init_proc__12dMenu_Dmap_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInfo_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemInfo_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemInfo_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BEB0C-801BEB44 0038+00 .text      itemInfo_proc__12dMenu_Dmap_cFv                              */
+/* 801BEB0C-801BEB44 0038+00 rc=1 efc=0 .text      itemInfo_proc__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInfo_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemInfo_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemInfo_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BEB44-801BEF28 03E4+00 .text      itemSelect__12dMenu_Dmap_cFv                                 */
+/* 801BEB44-801BEF28 03E4+00 rc=1 efc=0 .text      itemSelect__12dMenu_Dmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemSelect__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemSelect() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemSelect__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BEF28-801BEFCC 00A4+00 .text      getNextItem__12dMenu_Dmap_cFi                                */
+/* 801BEF28-801BEFCC 00A4+00 rc=1 efc=0 .text      getNextItem__12dMenu_Dmap_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNextItem__12dMenu_Dmap_cFi) {
+asm void dMenu_Dmap_c::getNextItem(s32 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getNextItem__12dMenu_Dmap_cFi.s"
 }
 #pragma pop
 
 
-/* 801BEFCC-801BF030 0064+00 .text      itemSelectAnmInit__12dMenu_Dmap_cFv                          */
+/* 801BEFCC-801BF030 0064+00 rc=1 efc=0 .text      itemSelectAnmInit__12dMenu_Dmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemSelectAnmInit__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemSelectAnmInit() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemSelectAnmInit__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF030-801BF180 0150+00 .text      itemSelectAnm__12dMenu_Dmap_cFv                              */
+/* 801BF030-801BF180 0150+00 rc=1 efc=0 .text      itemSelectAnm__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemSelectAnm__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemSelectAnm() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemSelectAnm__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF180-801BF18C 000C+00 .text      itemInfoOpenAnm__12dMenu_Dmap_cFv                            */
+/* 801BF180-801BF18C 000C+00 rc=1 efc=0 .text      itemInfoOpenAnm__12dMenu_Dmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInfoOpenAnm__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemInfoOpenAnm() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemInfoOpenAnm__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF18C-801BF278 00EC+00 .text      itemInfoWait__12dMenu_Dmap_cFv                               */
+/* 801BF18C-801BF278 00EC+00 rc=1 efc=0 .text      itemInfoWait__12dMenu_Dmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInfoWait__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemInfoWait() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemInfoWait__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF278-801BF334 00BC+00 .text      itemInfoCloseAnm__12dMenu_Dmap_cFv                           */
+/* 801BF278-801BF334 00BC+00 rc=1 efc=0 .text      itemInfoCloseAnm__12dMenu_Dmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInfoCloseAnm__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemInfoCloseAnm() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemInfoCloseAnm__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF334-801BF410 00DC+00 .text      getNextStatus__12dMenu_Dmap_cFv                              */
+/* 801BF334-801BF410 00DC+00 rc=1 efc=1 .text      getNextStatus__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNextStatus__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::getNextStatus() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getNextStatus__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF410-801BF464 0054+00 .text      isSync__12dMenu_Dmap_cFv                                     */
+/* 801BF410-801BF464 0054+00 rc=2 efc=1 .text      isSync__12dMenu_Dmap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSync__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::isSync() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/isSync__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF464-801BF4A4 0040+00 .text      isKeyCheck__12dMenu_Dmap_cFv                                 */
+/* 801BF464-801BF4A4 0040+00 rc=1 efc=0 .text      isKeyCheck__12dMenu_Dmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isKeyCheck__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::isKeyCheck() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/isKeyCheck__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF4A4-801BF528 0084+00 .text      infoModeChange_init_proc__12dMenu_Dmap_cFv                   */
+/* 801BF4A4-801BF528 0084+00 rc=1 efc=0 .text      infoModeChange_init_proc__12dMenu_Dmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(infoModeChange_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::infoModeChange_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/infoModeChange_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF528-801BF688 0160+00 .text      infoModeChange_proc__12dMenu_Dmap_cFv                        */
+/* 801BF528-801BF688 0160+00 rc=1 efc=0 .text      infoModeChange_proc__12dMenu_Dmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(infoModeChange_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::infoModeChange_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/infoModeChange_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF688-801BF70C 0084+00 .text      mapModeChange_init_proc__12dMenu_Dmap_cFv                    */
+/* 801BF688-801BF70C 0084+00 rc=1 efc=0 .text      mapModeChange_init_proc__12dMenu_Dmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapModeChange_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapModeChange_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapModeChange_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF70C-801BF8A0 0194+00 .text      mapModeChange_proc__12dMenu_Dmap_cFv                         */
+/* 801BF70C-801BF8A0 0194+00 rc=1 efc=0 .text      mapModeChange_proc__12dMenu_Dmap_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapModeChange_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapModeChange_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapModeChange_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF8A0-801BF8F8 0058+00 .text      lv5_talk_init_proc__12dMenu_Dmap_cFv                         */
+/* 801BF8A0-801BF8F8 0058+00 rc=1 efc=0 .text      lv5_talk_init_proc__12dMenu_Dmap_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lv5_talk_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::lv5_talk_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/lv5_talk_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF8F8-801BF9D4 00DC+00 .text      lv5_talk_proc__12dMenu_Dmap_cFv                              */
+/* 801BF8F8-801BF9D4 00DC+00 rc=1 efc=0 .text      lv5_talk_proc__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lv5_talk_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::lv5_talk_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/lv5_talk_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF9D4-801BF9E0 000C+00 .text      mapMode_init_proc__12dMenu_Dmap_cFv                          */
+/* 801BF9D4-801BF9E0 000C+00 rc=1 efc=0 .text      mapMode_init_proc__12dMenu_Dmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapMode_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapMode_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapMode_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BF9E0-801BFA84 00A4+00 .text      mapMode_proc__12dMenu_Dmap_cFv                               */
+/* 801BF9E0-801BFA84 00A4+00 rc=1 efc=0 .text      mapMode_proc__12dMenu_Dmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mapMode_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::mapMode_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapMode_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BFA84-801BFA88 0004+00 .text      floorSelect_init_proc__12dMenu_Dmap_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(floorSelect_init_proc__12dMenu_Dmap_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/floorSelect_init_proc__12dMenu_Dmap_cFv.s"
+/* 801BFA84-801BFA88 0004+00 rc=1 efc=0 .text      floorSelect_init_proc__12dMenu_Dmap_cFv                      */
+void dMenu_Dmap_c::floorSelect_init_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801BFA88-801BFC78 01F0+00 .text      floorSelect_proc__12dMenu_Dmap_cFv                           */
+/* 801BFA88-801BFC78 01F0+00 rc=1 efc=0 .text      floorSelect_proc__12dMenu_Dmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(floorSelect_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::floorSelect_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/floorSelect_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BFC78-801BFCAC 0034+00 .text      itemCarryCheck__12dMenu_Dmap_cFv                             */
+/* 801BFC78-801BFCAC 0034+00 rc=2 efc=0 .text      itemCarryCheck__12dMenu_Dmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemCarryCheck__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::itemCarryCheck() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/itemCarryCheck__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BFCAC-801BFD5C 00B0+00 .text      floorChange_init_proc__12dMenu_Dmap_cFv                      */
+/* 801BFCAC-801BFD5C 00B0+00 rc=1 efc=0 .text      floorChange_init_proc__12dMenu_Dmap_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(floorChange_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::floorChange_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/floorChange_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BFD5C-801BFF84 0228+00 .text      floorChange_proc__12dMenu_Dmap_cFv                           */
+/* 801BFD5C-801BFF84 0228+00 rc=1 efc=0 .text      floorChange_proc__12dMenu_Dmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(floorChange_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::floorChange_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/floorChange_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801BFF84-801BFF88 0004+00 .text      zoomWait_init_proc__12dMenu_Dmap_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(zoomWait_init_proc__12dMenu_Dmap_cFv) {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/zoomWait_init_proc__12dMenu_Dmap_cFv.s"
+/* 801BFF84-801BFF88 0004+00 rc=1 efc=0 .text      zoomWait_init_proc__12dMenu_Dmap_cFv                         */
+void dMenu_Dmap_c::zoomWait_init_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 801BFF88-801C008C 0104+00 .text      zoomWait_proc__12dMenu_Dmap_cFv                              */
+/* 801BFF88-801C008C 0104+00 rc=1 efc=0 .text      zoomWait_proc__12dMenu_Dmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomWait_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::zoomWait_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/zoomWait_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C008C-801C01A0 0114+00 .text      zoomIn_init_proc__12dMenu_Dmap_cFv                           */
+/* 801C008C-801C01A0 0114+00 rc=1 efc=0 .text      zoomIn_init_proc__12dMenu_Dmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomIn_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::zoomIn_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/zoomIn_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C01A0-801C023C 009C+00 .text      zoomIn_proc__12dMenu_Dmap_cFv                                */
+/* 801C01A0-801C023C 009C+00 rc=1 efc=0 .text      zoomIn_proc__12dMenu_Dmap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomIn_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::zoomIn_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/zoomIn_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C023C-801C02F0 00B4+00 .text      zoomOut_init_proc__12dMenu_Dmap_cFv                          */
+/* 801C023C-801C02F0 00B4+00 rc=1 efc=0 .text      zoomOut_init_proc__12dMenu_Dmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomOut_init_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::zoomOut_init_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/zoomOut_init_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C02F0-801C0380 0090+00 .text      zoomOut_proc__12dMenu_Dmap_cFv                               */
+/* 801C02F0-801C0380 0090+00 rc=1 efc=0 .text      zoomOut_proc__12dMenu_Dmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoomOut_proc__12dMenu_Dmap_cFv) {
+asm void dMenu_Dmap_c::zoomOut_proc() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/zoomOut_proc__12dMenu_Dmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C0380-801C042C 00AC+00 .text      __dt__15renderingDmap_cFv                                    */
+/* 801C0380-801C042C 00AC+00 rc=5 efc=1 .text      __dt__15renderingDmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15renderingDmap_cFv) {
+asm renderingDmap_c::~renderingDmap_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__15renderingDmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C042C-801C04AC 0080+00 .text      __dt__20dMenu_StageMapCtrl_cFv                               */
+/* 801C042C-801C04AC 0080+00 rc=1 efc=0 .text      __dt__20dMenu_StageMapCtrl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20dMenu_StageMapCtrl_cFv) {
+asm dMenu_StageMapCtrl_c::~dMenu_StageMapCtrl_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__20dMenu_StageMapCtrl_cFv.s"
 }
 #pragma pop
 
 
-/* 801C04AC-801C051C 0070+00 .text      __dt__15dMenu_DmapMap_cFv                                    */
+/* 801C04AC-801C051C 0070+00 rc=1 efc=0 .text      __dt__15dMenu_DmapMap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dMenu_DmapMap_cFv) {
+asm dMenu_DmapMap_c::~dMenu_DmapMap_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__dt__15dMenu_DmapMap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C051C-801C05C4 00A8+00 .text      __ct__15renderingDmap_cFv                                    */
+/* 801C051C-801C05C4 00A8+00 rc=1 efc=0 .text      __ct__15renderingDmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15renderingDmap_cFv) {
+asm renderingDmap_c::renderingDmap_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__ct__15renderingDmap_cFv.s"
 }
 #pragma pop
 
 
-/* 801C05C4-801C0844 0280+00 .text      __sinit_d_menu_dmap_cpp                                      */
+/* 801C05C4-801C0844 0280+00 rc=1 efc=1 .text      __sinit_d_menu_dmap_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_menu_dmap_cpp) {
+extern "C" asm void __sinit_d_menu_dmap_cpp() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__sinit_d_menu_dmap_cpp.s"
 }
 #pragma pop
 
 
-/* 801C0844-801C084C 0008+00 .text      @4@__dt__14dMenu_DmapBg_cFv                                  */
+/* 801C0844-801C084C 0008+00 rc=1 efc=0 .text      @4@__dt__14dMenu_DmapBg_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_801C0844) {
+extern "C" asm static void func_801C0844() {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/func_801C0844.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

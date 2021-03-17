@@ -6,28 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+// build JAISound (JAISound) False/False
+// build JASTrack (JASTrack) False/False
+// build JASSoundParams (JASSoundParams) False/False
+/* top-level dependencies (begin JASSoundParams) */
+/* top-level dependencies (end JASSoundParams) */
+struct JASSoundParams {
+};
+
+/* top-level dependencies (begin JASTrack) */
+// outer dependency: JASSoundParams
+/* top-level dependencies (end JASTrack) */
+struct JASTrack {
+	// JASSoundParams
+	/* 80291444 */ void setChannelMgrCount(u32);
+	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
+};
+
+// build JAISoundHandle (JAISoundHandle) True/True
+/* top-level dependencies (begin JAISound) */
+// outer dependency: JASTrack
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end JAISound) */
+struct JAISound {
+	// JASTrack
+	// JAISoundHandle
+	/* 802A21A0 */ void releaseHandle();
+	/* 802A21BC */ void attachHandle(JAISoundHandle*);
+	/* 802A22F8 */ JAISound();
+	/* 802A244C */ void acceptsNewAudible() const;
+	/* 802A24DC */ void stop(u32);
+	/* 802A2598 */ void stop();
+	/* 802A25D8 */ bool asSe();
+	/* 802A25E0 */ bool asSeq();
+	/* 802A25E8 */ bool asStream();
+	/* 802A25F0 */ void die_JAISound_();
+	/* 802A266C */ void increasePrepareCount_JAISound_();
+	/* 802A26B8 */ void calc_JAISound_();
+	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
+};
+
+// build JAISoundStatus_ (JAISoundStatus_) False/False
+/* top-level dependencies (begin JAISoundStatus_) */
+/* top-level dependencies (end JAISoundStatus_) */
+struct JAISoundStatus_ {
+	/* 802A2220 */ void lockWhenPrepared();
+	/* 802A2244 */ void unlockIfLocked();
+};
+
+// build JAISoundParams (JAISoundParams) False/False
+// build JASSoundParams (JASSoundParams) True/True
+/* top-level dependencies (begin JAISoundParams) */
+// outer dependency: JASSoundParams
+/* top-level dependencies (end JAISoundParams) */
+struct JAISoundParams {
+	// JASSoundParams
+	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
+};
+
+// build JASSoundParams (JASSoundParams) True/True
+// build JASTrack (JASTrack) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void releaseSound__14JAISoundHandleFv();
-extern "C" extern void releaseHandle__8JAISoundFv();
-extern "C" extern void attachHandle__8JAISoundFP14JAISoundHandle();
-extern "C" extern void lockWhenPrepared__15JAISoundStatus_Fv();
-extern "C" extern void unlockIfLocked__15JAISoundStatus_Fv();
-extern "C" extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
-extern "C" extern void __ct__8JAISoundFv();
-extern "C" extern void func_802A2328();
-extern "C" extern void acceptsNewAudible__8JAISoundCFv();
-extern "C" extern void func_802A2474();
-extern "C" extern void stop__8JAISoundFUl();
-extern "C" extern void stop__8JAISoundFv();
-extern "C" extern void asSe__8JAISoundFv();
-extern "C" extern void asSeq__8JAISoundFv();
-extern "C" extern void asStream__8JAISoundFv();
-extern "C" extern void die_JAISound___8JAISoundFv();
-extern "C" extern void increasePrepareCount_JAISound___8JAISoundFv();
-extern "C" extern void calc_JAISound___8JAISoundFv();
-extern "C" extern void initTrack_JAISound___8JAISoundFP8JASTrack();
+extern "C" void func_802A2328();
+extern "C" void func_802A2474();
+
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void releaseHandle__8JAISoundFv();
+extern "C" void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" void lockWhenPrepared__15JAISoundStatus_Fv();
+extern "C" void unlockIfLocked__15JAISoundStatus_Fv();
+extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+extern "C" void __ct__8JAISoundFv();
+extern "C" void func_802A2328();
+extern "C" void acceptsNewAudible__8JAISoundCFv();
+extern "C" void func_802A2474();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" bool asSe__8JAISoundFv();
+extern "C" bool asSeq__8JAISoundFv();
+extern "C" bool asStream__8JAISoundFv();
+extern "C" void die_JAISound___8JAISoundFv();
+extern "C" void increasePrepareCount_JAISound___8JAISoundFv();
+extern "C" void calc_JAISound___8JAISoundFv();
+extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack();
 SECTION_RODATA extern const u8 JAISound__stringBase0[64];
 SECTION_DATA extern void*const __vt__8JAISound[12];
 SECTION_SDATA2 extern f32 lit_659;
@@ -40,65 +114,69 @@ SECTION_SDATA2 extern f32 lit_887;
 // External References:
 // 
 
-extern "C" extern void JASReport__FPCce();
-extern "C" extern void setChannelMgrCount__8JASTrackFUl();
-extern "C" extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
+extern "C" void JASReport__FPCce();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+
+extern "C" void JASReport__FPCce();
+extern "C" void setChannelMgrCount__8JASTrackFUl();
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:
 // 
 
-/* 802A2184-802A21A0 001C+00 .text      releaseSound__14JAISoundHandleFv                             */
+/* 802A2184-802A21A0 001C+00 rc=14 efc=14 .text      releaseSound__14JAISoundHandleFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(releaseSound__14JAISoundHandleFv) {
+asm void JAISoundHandle::releaseSound() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/releaseSound__14JAISoundHandleFv.s"
 }
 #pragma pop
 
 
-/* 802A21A0-802A21BC 001C+00 .text      releaseHandle__8JAISoundFv                                   */
+/* 802A21A0-802A21BC 001C+00 rc=6 efc=3 .text      releaseHandle__8JAISoundFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(releaseHandle__8JAISoundFv) {
+asm void JAISound::releaseHandle() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/releaseHandle__8JAISoundFv.s"
 }
 #pragma pop
 
 
-/* 802A21BC-802A2220 0064+00 .text      attachHandle__8JAISoundFP14JAISoundHandle                    */
+/* 802A21BC-802A2220 0064+00 rc=3 efc=3 .text      attachHandle__8JAISoundFP14JAISoundHandle                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attachHandle__8JAISoundFP14JAISoundHandle) {
+asm void JAISound::attachHandle(JAISoundHandle* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/attachHandle__8JAISoundFP14JAISoundHandle.s"
 }
 #pragma pop
 
 
-/* 802A2220-802A2244 0024+00 .text      lockWhenPrepared__15JAISoundStatus_Fv                        */
+/* 802A2220-802A2244 0024+00 rc=2 efc=2 .text      lockWhenPrepared__15JAISoundStatus_Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lockWhenPrepared__15JAISoundStatus_Fv) {
+asm void JAISoundStatus_::lockWhenPrepared() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/lockWhenPrepared__15JAISoundStatus_Fv.s"
 }
 #pragma pop
 
 
-/* 802A2244-802A2280 003C+00 .text      unlockIfLocked__15JAISoundStatus_Fv                          */
+/* 802A2244-802A2280 003C+00 rc=2 efc=2 .text      unlockIfLocked__15JAISoundStatus_Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(unlockIfLocked__15JAISoundStatus_Fv) {
+asm void JAISoundStatus_::unlockIfLocked() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/unlockIfLocked__15JAISoundStatus_Fv.s"
 }
@@ -106,14 +184,14 @@ ASM_FUNCTION(unlockIfLocked__15JAISoundStatus_Fv) {
 
 
 /* ############################################################################################## */
-/* 804557B8-804557BC 0004+00 .sdata2    @659                                                         */
+/* 804557B8-804557BC 0004+00 rc=3 efc=0 .sdata2    @659                                                         */
 f32 lit_659 = 0.5f;
 
-/* 802A2280-802A22F8 0078+00 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
+/* 802A2280-802A22F8 0078+00 rc=4 efc=4 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf) {
+asm void JAISoundParams::mixOutAll(JASSoundParams const& field_0, JASSoundParams* field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf.s"
 }
@@ -121,7 +199,7 @@ ASM_FUNCTION(mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf) {
 
 
 /* ############################################################################################## */
-/* 803C9970-803C99A0 0030+00 .data      __vt__8JAISound                                              */
+/* 803C9970-803C99A0 0030+00 rc=1 efc=0 .data      __vt__8JAISound                                              */
 void* const __vt__8JAISound[12] = {
 	NULL, /* RTTI */
 	NULL,
@@ -137,54 +215,54 @@ void* const __vt__8JAISound[12] = {
 	NULL,
 };
 
-/* 804557BC-804557C0 0004+00 .sdata2    @697                                                         */
+/* 804557BC-804557C0 0004+00 rc=2 efc=0 .sdata2    @697                                                         */
 f32 JAISound__lit_697 = 1.0f;
 
-/* 804557C0-804557C8 0004+04 .sdata2    @698                                                         */
+/* 804557C0-804557C8 0004+04 rc=4 efc=0 .sdata2    @698                                                         */
 u8 lit_698[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802A22F8-802A2328 0030+00 .text      __ct__8JAISoundFv                                            */
+/* 802A22F8-802A2328 0030+00 rc=3 efc=3 .text      __ct__8JAISoundFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8JAISoundFv) {
+asm JAISound::JAISound() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/__ct__8JAISoundFv.s"
 }
 #pragma pop
 
 
-/* 802A2328-802A244C 0124+00 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+/* 802A2328-802A244C 0124+00 rc=3 efc=3 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802A2328) {
+extern "C" asm void func_802A2328() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/func_802A2328.s"
 }
 #pragma pop
 
 
-/* 802A244C-802A2474 0028+00 .text      acceptsNewAudible__8JAISoundCFv                              */
+/* 802A244C-802A2474 0028+00 rc=2 efc=2 .text      acceptsNewAudible__8JAISoundCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(acceptsNewAudible__8JAISoundCFv) {
+asm void JAISound::acceptsNewAudible() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/acceptsNewAudible__8JAISoundCFv.s"
 }
 #pragma pop
 
 
-/* 802A2474-802A24DC 0068+00 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
+/* 802A2474-802A24DC 0068+00 rc=2 efc=2 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802A2474) {
+extern "C" asm void func_802A2474() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/func_802A2474.s"
 }
@@ -192,69 +270,54 @@ ASM_FUNCTION(func_802A2474) {
 
 
 /* ############################################################################################## */
-/* 804557C8-804557D0 0008+00 .sdata2    @766                                                         */
+/* 804557C8-804557D0 0008+00 rc=1 efc=0 .sdata2    @766                                                         */
 f64 JAISound__lit_766 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802A24DC-802A2598 00BC+00 .text      stop__8JAISoundFUl                                           */
+/* 802A24DC-802A2598 00BC+00 rc=24 efc=24 .text      stop__8JAISoundFUl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stop__8JAISoundFUl) {
+asm void JAISound::stop(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/stop__8JAISoundFUl.s"
 }
 #pragma pop
 
 
-/* 802A2598-802A25D8 0040+00 .text      stop__8JAISoundFv                                            */
+/* 802A2598-802A25D8 0040+00 rc=23 efc=21 .text      stop__8JAISoundFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stop__8JAISoundFv) {
+asm void JAISound::stop() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/stop__8JAISoundFv.s"
 }
 #pragma pop
 
 
-/* 802A25D8-802A25E0 0008+00 .text      asSe__8JAISoundFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(asSe__8JAISoundFv) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISound/asSe__8JAISoundFv.s"
+/* 802A25D8-802A25E0 0008+00 rc=3 efc=2 .text      asSe__8JAISoundFv                                            */
+bool JAISound::asSe() {
+	return false;
 }
-#pragma pop
 
 
-/* 802A25E0-802A25E8 0008+00 .text      asSeq__8JAISoundFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(asSeq__8JAISoundFv) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISound/asSeq__8JAISoundFv.s"
+/* 802A25E0-802A25E8 0008+00 rc=3 efc=2 .text      asSeq__8JAISoundFv                                           */
+bool JAISound::asSeq() {
+	return false;
 }
-#pragma pop
 
 
-/* 802A25E8-802A25F0 0008+00 .text      asStream__8JAISoundFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(asStream__8JAISoundFv) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISound/asStream__8JAISoundFv.s"
+/* 802A25E8-802A25F0 0008+00 rc=3 efc=2 .text      asStream__8JAISoundFv                                        */
+bool JAISound::asStream() {
+	return false;
 }
-#pragma pop
 
 
-/* 802A25F0-802A266C 007C+00 .text      die_JAISound___8JAISoundFv                                   */
+/* 802A25F0-802A266C 007C+00 rc=3 efc=3 .text      die_JAISound___8JAISoundFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(die_JAISound___8JAISoundFv) {
+asm void JAISound::die_JAISound_() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/die_JAISound___8JAISoundFv.s"
 }
@@ -262,7 +325,7 @@ ASM_FUNCTION(die_JAISound___8JAISoundFv) {
 
 
 /* ############################################################################################## */
-/* 8039B910-8039B950 003A+06 .rodata    @stringBase0                                                 */
+/* 8039B910-8039B950 003A+06 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -273,11 +336,11 @@ SECTION_DEAD char* const stringBase_8039B910 =
 SECTION_DEAD char* const pad_8039B94A = "\0\0\0\0\0";
 #pragma pop
 
-/* 802A266C-802A26B8 004C+00 .text      increasePrepareCount_JAISound___8JAISoundFv                  */
+/* 802A266C-802A26B8 004C+00 rc=3 efc=3 .text      increasePrepareCount_JAISound___8JAISoundFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(increasePrepareCount_JAISound___8JAISoundFv) {
+asm void JAISound::increasePrepareCount_JAISound_() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/increasePrepareCount_JAISound___8JAISoundFv.s"
 }
@@ -285,30 +348,29 @@ ASM_FUNCTION(increasePrepareCount_JAISound___8JAISoundFv) {
 
 
 /* ############################################################################################## */
-/* 804557D0-804557D8 0004+04 .sdata2    @887                                                         */
+/* 804557D0-804557D8 0004+04 rc=1 efc=0 .sdata2    @887                                                         */
 f32 lit_887 = 1.0f / 100.0f;
 /* padding 4 bytes */
 
-/* 802A26B8-802A29DC 0324+00 .text      calc_JAISound___8JAISoundFv                                  */
+/* 802A26B8-802A29DC 0324+00 rc=3 efc=3 .text      calc_JAISound___8JAISoundFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_JAISound___8JAISoundFv) {
+asm void JAISound::calc_JAISound_() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/calc_JAISound___8JAISoundFv.s"
 }
 #pragma pop
 
 
-/* 802A29DC-802A2AB0 00D4+00 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    */
+/* 802A29DC-802A2AB0 00D4+00 rc=2 efc=2 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initTrack_JAISound___8JAISoundFP8JASTrack) {
+asm void JAISound::initTrack_JAISound_(JASTrack* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISound/initTrack_JAISound___8JAISoundFP8JASTrack.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

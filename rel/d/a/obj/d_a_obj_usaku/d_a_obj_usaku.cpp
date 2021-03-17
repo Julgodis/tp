@@ -6,15 +6,29 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_usaku_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Usaku_Draw__FP15obj_usaku_class();
-extern "C" extern void daObj_Usaku_Execute__FP15obj_usaku_class();
-extern "C" extern void daObj_Usaku_IsDelete__FP15obj_usaku_class();
-extern "C" extern void daObj_Usaku_Delete__FP15obj_usaku_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Usaku_Create__FP10fopAc_ac_c();
+void daObj_Usaku_Draw(obj_usaku_class*);
+void daObj_Usaku_Execute(obj_usaku_class*);
+bool daObj_Usaku_IsDelete(obj_usaku_class*);
+void daObj_Usaku_Delete(obj_usaku_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Usaku_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Usaku_Draw__FP15obj_usaku_class();
+extern "C" void daObj_Usaku_Execute__FP15obj_usaku_class();
+extern "C" bool daObj_Usaku_IsDelete__FP15obj_usaku_class();
+extern "C" void daObj_Usaku_Delete__FP15obj_usaku_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Usaku_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3744;
 SECTION_RODATA extern const u32 lit_3745;
 SECTION_RODATA extern const u32 lit_3746;
@@ -27,7 +41,9 @@ SECTION_DATA extern u8 g_profile_OBJ_USAKU[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -37,7 +53,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Usaku_Draw__FP15obj_usaku_class) {
+asm void daObj_Usaku_Draw(obj_usaku_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_Draw__FP15obj_usaku_class.s"
 }
@@ -48,7 +64,7 @@ ASM_FUNCTION(daObj_Usaku_Draw__FP15obj_usaku_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Usaku_Execute__FP15obj_usaku_class) {
+asm void daObj_Usaku_Execute(obj_usaku_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_Execute__FP15obj_usaku_class.s"
 }
@@ -56,21 +72,16 @@ ASM_FUNCTION(daObj_Usaku_Execute__FP15obj_usaku_class) {
 
 
 /* 80D21048-80D21050 0008+00 .text      daObj_Usaku_IsDelete__FP15obj_usaku_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Usaku_IsDelete__FP15obj_usaku_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_IsDelete__FP15obj_usaku_class.s"
+bool daObj_Usaku_IsDelete(obj_usaku_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D21050-80D210A8 0058+00 .text      daObj_Usaku_Delete__FP15obj_usaku_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Usaku_Delete__FP15obj_usaku_class) {
+asm void daObj_Usaku_Delete(obj_usaku_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_Delete__FP15obj_usaku_class.s"
 }
@@ -81,7 +92,7 @@ ASM_FUNCTION(daObj_Usaku_Delete__FP15obj_usaku_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -92,7 +103,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Usaku_Create__FP10fopAc_ac_c) {
+asm void daObj_Usaku_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_Create__FP10fopAc_ac_c.s"
 }

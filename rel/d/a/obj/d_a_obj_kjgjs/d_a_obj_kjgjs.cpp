@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjKJgjs_c;
+
+struct daObjKJgjs_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjKJgjs_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__12daObjKJgjs_cFv();
-extern "C" extern void setMtx__12daObjKJgjs_cFv();
-extern "C" extern void CreateHeap__12daObjKJgjs_cFv();
-extern "C" extern void Create__12daObjKJgjs_cFv();
-extern "C" extern void Execute__12daObjKJgjs_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjKJgjs_cFv();
-extern "C" extern void Delete__12daObjKJgjs_cFv();
-extern "C" extern void daObjKJgjs_create1st__FP12daObjKJgjs_c();
-extern "C" extern void daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c();
-extern "C" extern void daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c();
-extern "C" extern void daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c();
-extern "C" extern void __dt__12daObjKJgjs_cFv();
+extern "C" void Execute__12daObjKJgjs_cFPPA3_A4_f();
+void daObjKJgjs_create1st(daObjKJgjs_c*);
+void daObjKJgjs_MoveBGDelete(daObjKJgjs_c*);
+void daObjKJgjs_MoveBGExecute(daObjKJgjs_c*);
+void daObjKJgjs_MoveBGDraw(daObjKJgjs_c*);
+
+extern "C" void create1st__12daObjKJgjs_cFv();
+extern "C" void setMtx__12daObjKJgjs_cFv();
+extern "C" void CreateHeap__12daObjKJgjs_cFv();
+extern "C" void Create__12daObjKJgjs_cFv();
+extern "C" void Execute__12daObjKJgjs_cFPPA3_A4_f();
+extern "C" void Draw__12daObjKJgjs_cFv();
+extern "C" void Delete__12daObjKJgjs_cFv();
+extern "C" void daObjKJgjs_create1st__FP12daObjKJgjs_c();
+extern "C" void daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c();
+extern "C" void daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c();
+extern "C" void daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c();
+extern "C" void __dt__12daObjKJgjs_cFv();
 SECTION_RODATA extern const u8 l_dzbidx[8];
 SECTION_RODATA extern const u8 l_bmdidx[8];
 SECTION_RODATA extern const u8 l_cull_box[48];
@@ -34,7 +56,9 @@ SECTION_DATA extern void*const __vt__12daObjKJgjs_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +68,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/create1st__12daObjKJgjs_cFv.s"
 }
@@ -55,7 +79,7 @@ ASM_FUNCTION(create1st__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/setMtx__12daObjKJgjs_cFv.s"
 }
@@ -66,7 +90,7 @@ ASM_FUNCTION(setMtx__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/CreateHeap__12daObjKJgjs_cFv.s"
 }
@@ -77,7 +101,7 @@ ASM_FUNCTION(CreateHeap__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/Create__12daObjKJgjs_cFv.s"
 }
@@ -88,7 +112,7 @@ ASM_FUNCTION(Create__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjKJgjs_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjKJgjs_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/Execute__12daObjKJgjs_cFPPA3_A4_f.s"
 }
@@ -99,7 +123,7 @@ ASM_FUNCTION(Execute__12daObjKJgjs_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/Draw__12daObjKJgjs_cFv.s"
 }
@@ -110,7 +134,7 @@ ASM_FUNCTION(Draw__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjKJgjs_cFv) {
+asm void daObjKJgjs_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/Delete__12daObjKJgjs_cFv.s"
 }
@@ -121,7 +145,7 @@ ASM_FUNCTION(Delete__12daObjKJgjs_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKJgjs_create1st__FP12daObjKJgjs_c) {
+asm void daObjKJgjs_create1st(daObjKJgjs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_create1st__FP12daObjKJgjs_c.s"
 }
@@ -132,7 +156,7 @@ ASM_FUNCTION(daObjKJgjs_create1st__FP12daObjKJgjs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c) {
+asm void daObjKJgjs_MoveBGDelete(daObjKJgjs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c.s"
 }
@@ -143,7 +167,7 @@ ASM_FUNCTION(daObjKJgjs_MoveBGDelete__FP12daObjKJgjs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c) {
+asm void daObjKJgjs_MoveBGExecute(daObjKJgjs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c.s"
 }
@@ -154,7 +178,7 @@ ASM_FUNCTION(daObjKJgjs_MoveBGExecute__FP12daObjKJgjs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c) {
+asm void daObjKJgjs_MoveBGDraw(daObjKJgjs_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c.s"
 }
@@ -165,7 +189,7 @@ ASM_FUNCTION(daObjKJgjs_MoveBGDraw__FP12daObjKJgjs_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObjKJgjs_cFv) {
+asm daObjKJgjs_c::~daObjKJgjs_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kjgjs/d_a_obj_kjgjs/__dt__12daObjKJgjs_cFv.s"
 }

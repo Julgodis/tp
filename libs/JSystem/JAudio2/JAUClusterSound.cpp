@@ -6,29 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+	/* 802A4AC4 */ JAISoundHandle();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14JAISoundHandleFv();
+
+extern "C" void __ct__14JAISoundHandleFv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 802A4AC4-802A4AD0 000C+00 .text      __ct__14JAISoundHandleFv                                     */
+/* 802A4AC4-802A4AD0 000C+00 rc=1 efc=1 .text      __ct__14JAISoundHandleFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14JAISoundHandleFv) {
+asm JAISoundHandle::JAISoundHandle() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUClusterSound/__ct__14JAISoundHandleFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

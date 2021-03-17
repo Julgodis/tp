@@ -9,23 +9,29 @@
 // Forward References:
 // 
 
-extern "C" extern void ErrorCode2Num();
-extern "C" extern void __DVDStoreErrorCode();
+extern "C" static void ErrorCode2Num();
+extern "C" void __DVDStoreErrorCode();
+
+extern "C" static void ErrorCode2Num();
+extern "C" void __DVDStoreErrorCode();
 SECTION_DATA extern u8 ErrorTable[72];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __OSLockSramEx();
-extern "C" extern void __OSUnlockSramEx();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D16A8-803D16F0 0048+00 .data      ErrorTable                                                   */
+/* 803D16A8-803D16F0 0048+00 rc=1 efc=0 .data      ErrorTable                                                   */
 u8 ErrorTable[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x3A, 0x00, 0x00, 0x06, 0x28, 0x00, 0x00, 0x03, 0x02, 0x00,
 	0x00, 0x03, 0x11, 0x00, 0x00, 0x05, 0x20, 0x00, 0x00, 0x05, 0x20, 0x01, 0x00, 0x05, 0x21, 0x00,
@@ -34,26 +40,25 @@ u8 ErrorTable[72] = {
 	0x00, 0x10, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8034BA6C-8034BB88 011C+00 .text      ErrorCode2Num                                                */
+/* 8034BA6C-8034BB88 011C+00 rc=1 efc=0 .text      ErrorCode2Num                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ErrorCode2Num) {
+extern "C" asm static void ErrorCode2Num() {
 	nofralloc
 #include "asm/dolphin/dvd/dvderror/ErrorCode2Num.s"
 }
 #pragma pop
 
 
-/* 8034BB88-8034BC04 007C+00 .text      __DVDStoreErrorCode                                          */
+/* 8034BB88-8034BC04 007C+00 rc=12 efc=12 .text      __DVDStoreErrorCode                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDStoreErrorCode) {
+extern "C" asm void __DVDStoreErrorCode() {
 	nofralloc
 #include "asm/dolphin/dvd/dvderror/__DVDStoreErrorCode.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

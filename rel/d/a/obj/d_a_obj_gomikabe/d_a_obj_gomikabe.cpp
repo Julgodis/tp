@@ -6,49 +6,128 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjGOMIKABE_c;
+struct cXyz;
+
+struct daObjGOMIKABE_HIO_c {
+	daObjGOMIKABE_HIO_c();
+	~daObjGOMIKABE_HIO_c();
+};
+
+struct daObjGOMIKABE_c {
+	void initCcCylinder();
+	void SetCcCyl();
+	void WaitAction();
+	void BreakChk();
+	void BreakSet();
+	void getWaterStream(cXyz&, cXyz&, f32);
+	void SpeedSet();
+	void BreakAction();
+	void CheckCull();
+	void checkViewArea(cXyz);
+	void Action();
+	void setBaseMtx();
+	void setBaseMtx2();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+	dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19daObjGOMIKABE_HIO_cFv();
-extern "C" extern void initCcCylinder__15daObjGOMIKABE_cFv();
-extern "C" extern void SetCcCyl__15daObjGOMIKABE_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObjGOMIKABE_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c();
-extern "C" extern void WaitAction__15daObjGOMIKABE_cFv();
-extern "C" extern void BreakChk__15daObjGOMIKABE_cFv();
-extern "C" extern void BreakSet__15daObjGOMIKABE_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf();
-extern "C" extern void SpeedSet__15daObjGOMIKABE_cFv();
-extern "C" extern void BreakAction__15daObjGOMIKABE_cFv();
-extern "C" extern void CheckCull__15daObjGOMIKABE_cFv();
-extern "C" extern void checkViewArea__15daObjGOMIKABE_cF4cXyz();
-extern "C" extern void Action__15daObjGOMIKABE_cFv();
-extern "C" extern void setBaseMtx__15daObjGOMIKABE_cFv();
-extern "C" extern void setBaseMtx2__15daObjGOMIKABE_cFv();
-extern "C" extern void daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c();
-extern "C" extern void daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c();
-extern "C" extern void CreateHeap__15daObjGOMIKABE_cFv();
-extern "C" extern void create__15daObjGOMIKABE_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __ct__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c();
-extern "C" extern void Create__15daObjGOMIKABE_cFv();
-extern "C" extern void Execute__15daObjGOMIKABE_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjGOMIKABE_cFv();
-extern "C" extern void Delete__15daObjGOMIKABE_cFv();
-extern "C" extern void __dt__19daObjGOMIKABE_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_gomikabe_cpp();
-extern "C" extern void func_80BFFBF8();
-extern "C" extern void func_80BFFC00();
+void daObjGOMIKABE_Create(fopAc_ac_c*);
+void daObjGOMIKABE_Delete(daObjGOMIKABE_c*);
+void daObjGOMIKABE_Draw(daObjGOMIKABE_c*);
+void daObjGOMIKABE_Execute(daObjGOMIKABE_c*);
+bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c*);
+extern "C" void Execute__15daObjGOMIKABE_cFPPA3_A4_f();
+extern "C" void __sinit_d_a_obj_gomikabe_cpp();
+extern "C" void func_80BFFBF8();
+extern "C" void func_80BFFC00();
+
+extern "C" void __ct__19daObjGOMIKABE_HIO_cFv();
+extern "C" void initCcCylinder__15daObjGOMIKABE_cFv();
+extern "C" void SetCcCyl__15daObjGOMIKABE_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObjGOMIKABE_Create__FP10fopAc_ac_c();
+extern "C" void daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c();
+extern "C" void WaitAction__15daObjGOMIKABE_cFv();
+extern "C" void BreakChk__15daObjGOMIKABE_cFv();
+extern "C" void BreakSet__15daObjGOMIKABE_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf();
+extern "C" void SpeedSet__15daObjGOMIKABE_cFv();
+extern "C" void BreakAction__15daObjGOMIKABE_cFv();
+extern "C" void CheckCull__15daObjGOMIKABE_cFv();
+extern "C" void checkViewArea__15daObjGOMIKABE_cF4cXyz();
+extern "C" void Action__15daObjGOMIKABE_cFv();
+extern "C" void setBaseMtx__15daObjGOMIKABE_cFv();
+extern "C" void setBaseMtx2__15daObjGOMIKABE_cFv();
+extern "C" void daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c();
+extern "C" void daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c();
+extern "C" void CreateHeap__15daObjGOMIKABE_cFv();
+extern "C" void create__15daObjGOMIKABE_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __ct__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c();
+extern "C" void Create__15daObjGOMIKABE_cFv();
+extern "C" void Execute__15daObjGOMIKABE_cFPPA3_A4_f();
+extern "C" void Draw__15daObjGOMIKABE_cFv();
+extern "C" void Delete__15daObjGOMIKABE_cFv();
+extern "C" void __dt__19daObjGOMIKABE_HIO_cFv();
+extern "C" void __sinit_d_a_obj_gomikabe_cpp();
+extern "C" void func_80BFFBF8();
+extern "C" void func_80BFFC00();
 SECTION_RODATA extern const u8 data_80BFFC1C[64];
 SECTION_RODATA extern const u32 lit_3801;
 SECTION_RODATA extern const u8 lit_3802[4];
@@ -100,8 +179,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -111,7 +193,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19daObjGOMIKABE_HIO_cFv) {
+asm daObjGOMIKABE_HIO_c::daObjGOMIKABE_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__19daObjGOMIKABE_HIO_cFv.s"
 }
@@ -122,7 +204,7 @@ ASM_FUNCTION(__ct__19daObjGOMIKABE_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcCylinder__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::initCcCylinder() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/initCcCylinder__15daObjGOMIKABE_cFv.s"
 }
@@ -133,7 +215,7 @@ ASM_FUNCTION(initCcCylinder__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcCyl__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::SetCcCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/SetCcCyl__15daObjGOMIKABE_cFv.s"
 }
@@ -144,7 +226,7 @@ ASM_FUNCTION(SetCcCyl__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__4cXyzFv.s"
 }
@@ -155,7 +237,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGOMIKABE_Create__FP10fopAc_ac_c) {
+asm void daObjGOMIKABE_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Create__FP10fopAc_ac_c.s"
 }
@@ -166,7 +248,7 @@ ASM_FUNCTION(daObjGOMIKABE_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c) {
+asm void daObjGOMIKABE_Delete(daObjGOMIKABE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c.s"
 }
@@ -177,7 +259,7 @@ ASM_FUNCTION(daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/WaitAction__15daObjGOMIKABE_cFv.s"
 }
@@ -188,7 +270,7 @@ ASM_FUNCTION(WaitAction__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakChk__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::BreakChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakChk__15daObjGOMIKABE_cFv.s"
 }
@@ -199,7 +281,7 @@ ASM_FUNCTION(BreakChk__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakSet__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::BreakSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakSet__15daObjGOMIKABE_cFv.s"
 }
@@ -210,7 +292,7 @@ ASM_FUNCTION(BreakSet__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__5csXyzFv.s"
 }
@@ -221,7 +303,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf) {
+asm void daObjGOMIKABE_c::getWaterStream(cXyz& field_0, cXyz& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf.s"
 }
@@ -232,7 +314,7 @@ ASM_FUNCTION(getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/SpeedSet__15daObjGOMIKABE_cFv.s"
 }
@@ -243,7 +325,7 @@ ASM_FUNCTION(SpeedSet__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreakAction__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::BreakAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakAction__15daObjGOMIKABE_cFv.s"
 }
@@ -254,7 +336,7 @@ ASM_FUNCTION(BreakAction__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCull__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::CheckCull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/CheckCull__15daObjGOMIKABE_cFv.s"
 }
@@ -265,7 +347,7 @@ ASM_FUNCTION(CheckCull__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkViewArea__15daObjGOMIKABE_cF4cXyz) {
+asm void daObjGOMIKABE_c::checkViewArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/checkViewArea__15daObjGOMIKABE_cF4cXyz.s"
 }
@@ -276,7 +358,7 @@ ASM_FUNCTION(checkViewArea__15daObjGOMIKABE_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/Action__15daObjGOMIKABE_cFv.s"
 }
@@ -287,7 +369,7 @@ ASM_FUNCTION(Action__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/setBaseMtx__15daObjGOMIKABE_cFv.s"
 }
@@ -298,7 +380,7 @@ ASM_FUNCTION(setBaseMtx__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx2__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::setBaseMtx2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/setBaseMtx2__15daObjGOMIKABE_cFv.s"
 }
@@ -309,7 +391,7 @@ ASM_FUNCTION(setBaseMtx2__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c) {
+asm void daObjGOMIKABE_Draw(daObjGOMIKABE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c.s"
 }
@@ -320,7 +402,7 @@ ASM_FUNCTION(daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c) {
+asm void daObjGOMIKABE_Execute(daObjGOMIKABE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c.s"
 }
@@ -331,7 +413,7 @@ ASM_FUNCTION(daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/CreateHeap__15daObjGOMIKABE_cFv.s"
 }
@@ -342,7 +424,7 @@ ASM_FUNCTION(CreateHeap__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/create__15daObjGOMIKABE_cFv.s"
 }
@@ -353,7 +435,7 @@ ASM_FUNCTION(create__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__8dCcD_SphFv.s"
 }
@@ -364,7 +446,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__8dCcD_SphFv.s"
 }
@@ -375,7 +457,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__8cM3dGSphFv.s"
 }
@@ -386,7 +468,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__8cM3dGAabFv.s"
 }
@@ -397,7 +479,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -408,7 +490,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__12dBgS_ObjAcchFv.s"
 }
@@ -419,7 +501,7 @@ ASM_FUNCTION(__ct__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__12dBgS_AcchCirFv.s"
 }
@@ -427,43 +509,28 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 
 
 /* 80BFF8C8-80BFF8CC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFF8CC-80BFF8D0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFF8D0-80BFF8D8 0008+00 .text      daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c.s"
+bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BFF8D8-80BFF938 0060+00 .text      Create__15daObjGOMIKABE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFF8D8.s"
 }
@@ -474,7 +541,7 @@ ASM_FUNCTION(Create__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjGOMIKABE_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjGOMIKABE_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/Execute__15daObjGOMIKABE_cFPPA3_A4_f.s"
 }
@@ -485,7 +552,7 @@ ASM_FUNCTION(Execute__15daObjGOMIKABE_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/Draw__15daObjGOMIKABE_cFv.s"
 }
@@ -496,7 +563,7 @@ ASM_FUNCTION(Draw__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjGOMIKABE_cFv) {
+asm void daObjGOMIKABE_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/Delete__15daObjGOMIKABE_cFv.s"
 }
@@ -507,7 +574,7 @@ ASM_FUNCTION(Delete__15daObjGOMIKABE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObjGOMIKABE_HIO_cFv) {
+asm daObjGOMIKABE_HIO_c::~daObjGOMIKABE_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__19daObjGOMIKABE_HIO_cFv.s"
 }
@@ -518,7 +585,7 @@ ASM_FUNCTION(__dt__19daObjGOMIKABE_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_gomikabe_cpp) {
+extern "C" asm void __sinit_d_a_obj_gomikabe_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__sinit_d_a_obj_gomikabe_cpp.s"
 }
@@ -529,7 +596,7 @@ ASM_FUNCTION(__sinit_d_a_obj_gomikabe_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BFFBF8) {
+extern "C" asm void func_80BFFBF8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFFBF8.s"
 }
@@ -540,7 +607,7 @@ ASM_FUNCTION(func_80BFFBF8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BFFC00) {
+extern "C" asm void func_80BFFC00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFFC00.s"
 }

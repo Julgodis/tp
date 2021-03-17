@@ -6,47 +6,119 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_SSItem_c {
+	~daObj_SSItem_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void setSoldOut();
+	void getProcessID();
+	void getExchangeItemPtr();
+	void getResName();
+	void getTypeFromParam();
+	void getFlowNodeNum();
+	void getValue();
+	void restart();
+	void initialize();
+	void setParam();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+	void setAttnPos();
+	void wait(void*);
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__14daObj_SSItem_cFv();
-extern "C" extern void create__14daObj_SSItem_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__14daObj_SSItem_cFv();
-extern "C" extern void Delete__14daObj_SSItem_cFv();
-extern "C" extern void Execute__14daObj_SSItem_cFv();
-extern "C" extern void Draw__14daObj_SSItem_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void createHeapCallBack__14daObj_SSItem_cFP10fopAc_ac_c();
-extern "C" extern void setSoldOut__14daObj_SSItem_cFv();
-extern "C" extern void getProcessID__14daObj_SSItem_cFv();
-extern "C" extern void getExchangeItemPtr__14daObj_SSItem_cFv();
-extern "C" extern void getResName__14daObj_SSItem_cFv();
-extern "C" extern void getTypeFromParam__14daObj_SSItem_cFv();
-extern "C" extern void getFlowNodeNum__14daObj_SSItem_cFv();
-extern "C" extern void getValue__14daObj_SSItem_cFv();
-extern "C" extern void restart__14daObj_SSItem_cFv();
-extern "C" extern void initialize__14daObj_SSItem_cFv();
-extern "C" extern void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i();
-extern "C" extern void setParam__14daObj_SSItem_cFv();
-extern "C" extern void setEnvTevColor__14daObj_SSItem_cFv();
-extern "C" extern void setRoomNo__14daObj_SSItem_cFv();
-extern "C" extern void setMtx__14daObj_SSItem_cFv();
-extern "C" extern void setAttnPos__14daObj_SSItem_cFv();
-extern "C" extern void wait__14daObj_SSItem_cFPv();
-extern "C" extern void daObj_SSItem_Create__FPv();
-extern "C" extern void daObj_SSItem_Delete__FPv();
-extern "C" extern void daObj_SSItem_Execute__FPv();
-extern "C" extern void daObj_SSItem_Draw__FPv();
-extern "C" extern void daObj_SSItem_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_ss_item_cpp();
-extern "C" extern void func_80CE7E94();
-extern "C" extern void func_80CE7E9C();
+extern "C" void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i();
+void daObj_SSItem_Create(void*);
+void daObj_SSItem_Delete(void*);
+void daObj_SSItem_Execute(void*);
+void daObj_SSItem_Draw(void*);
+bool daObj_SSItem_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_ss_item_cpp();
+extern "C" void func_80CE7E94();
+extern "C" void func_80CE7E9C();
+
+extern "C" void __dt__14daObj_SSItem_cFv();
+extern "C" void create__14daObj_SSItem_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__14daObj_SSItem_cFv();
+extern "C" void Delete__14daObj_SSItem_cFv();
+extern "C" void Execute__14daObj_SSItem_cFv();
+extern "C" void Draw__14daObj_SSItem_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void createHeapCallBack__14daObj_SSItem_cFP10fopAc_ac_c();
+extern "C" void setSoldOut__14daObj_SSItem_cFv();
+extern "C" void getProcessID__14daObj_SSItem_cFv();
+extern "C" void getExchangeItemPtr__14daObj_SSItem_cFv();
+extern "C" void getResName__14daObj_SSItem_cFv();
+extern "C" void getTypeFromParam__14daObj_SSItem_cFv();
+extern "C" void getFlowNodeNum__14daObj_SSItem_cFv();
+extern "C" void getValue__14daObj_SSItem_cFv();
+extern "C" void restart__14daObj_SSItem_cFv();
+extern "C" void initialize__14daObj_SSItem_cFv();
+extern "C" void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i();
+extern "C" void setParam__14daObj_SSItem_cFv();
+extern "C" void setEnvTevColor__14daObj_SSItem_cFv();
+extern "C" void setRoomNo__14daObj_SSItem_cFv();
+extern "C" void setMtx__14daObj_SSItem_cFv();
+extern "C" void setAttnPos__14daObj_SSItem_cFv();
+extern "C" void wait__14daObj_SSItem_cFPv();
+extern "C" void daObj_SSItem_Create__FPv();
+extern "C" void daObj_SSItem_Delete__FPv();
+extern "C" void daObj_SSItem_Execute__FPv();
+extern "C" void daObj_SSItem_Draw__FPv();
+extern "C" bool daObj_SSItem_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_ss_item_cpp();
+extern "C" void func_80CE7E94();
+extern "C" void func_80CE7E9C();
 SECTION_RODATA extern const u8 mCcDObjInfo__14daObj_SSItem_c[48];
 SECTION_RODATA extern const u8 lit_4205[4];
 SECTION_RODATA extern const u32 lit_4206;
@@ -83,7 +155,9 @@ SECTION_DATA extern void*const __vt__14daObj_SSItem_c[5];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -93,7 +167,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_SSItem_cFv) {
+asm daObj_SSItem_c::~daObj_SSItem_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__14daObj_SSItem_cFv.s"
 }
@@ -104,7 +178,7 @@ ASM_FUNCTION(__dt__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/create__14daObj_SSItem_cFv.s"
 }
@@ -115,7 +189,7 @@ ASM_FUNCTION(create__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__8cM3dGCylFv.s"
 }
@@ -126,7 +200,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__8cM3dGAabFv.s"
 }
@@ -137,7 +211,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__12dBgS_AcchCirFv.s"
 }
@@ -148,7 +222,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__10dCcD_GSttsFv.s"
 }
@@ -159,7 +233,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -170,7 +244,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/CreateHeap__14daObj_SSItem_cFv.s"
 }
@@ -181,7 +255,7 @@ ASM_FUNCTION(CreateHeap__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/Delete__14daObj_SSItem_cFv.s"
 }
@@ -192,7 +266,7 @@ ASM_FUNCTION(Delete__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/Execute__14daObj_SSItem_cFv.s"
 }
@@ -203,7 +277,7 @@ ASM_FUNCTION(Execute__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/Draw__14daObj_SSItem_cFv.s"
 }
@@ -214,7 +288,7 @@ ASM_FUNCTION(Draw__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__8cM3dGPlaFv.s"
 }
@@ -225,7 +299,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daObj_SSItem_cFP10fopAc_ac_c) {
+asm void daObj_SSItem_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/createHeapCallBack__14daObj_SSItem_cFP10fopAc_ac_c.s"
 }
@@ -236,7 +310,7 @@ ASM_FUNCTION(createHeapCallBack__14daObj_SSItem_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSoldOut__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setSoldOut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setSoldOut__14daObj_SSItem_cFv.s"
 }
@@ -247,7 +321,7 @@ ASM_FUNCTION(setSoldOut__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getProcessID__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getProcessID() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getProcessID__14daObj_SSItem_cFv.s"
 }
@@ -258,7 +332,7 @@ ASM_FUNCTION(getProcessID__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getExchangeItemPtr__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getExchangeItemPtr() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getExchangeItemPtr__14daObj_SSItem_cFv.s"
 }
@@ -269,7 +343,7 @@ ASM_FUNCTION(getExchangeItemPtr__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getResName__14daObj_SSItem_cFv.s"
 }
@@ -280,7 +354,7 @@ ASM_FUNCTION(getResName__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getTypeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getTypeFromParam__14daObj_SSItem_cFv.s"
 }
@@ -291,7 +365,7 @@ ASM_FUNCTION(getTypeFromParam__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFlowNodeNum__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getFlowNodeNum() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getFlowNodeNum__14daObj_SSItem_cFv.s"
 }
@@ -302,7 +376,7 @@ ASM_FUNCTION(getFlowNodeNum__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValue__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::getValue() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/getValue__14daObj_SSItem_cFv.s"
 }
@@ -313,7 +387,7 @@ ASM_FUNCTION(getValue__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(restart__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::restart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/restart__14daObj_SSItem_cFv.s"
 }
@@ -324,7 +398,7 @@ ASM_FUNCTION(restart__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/initialize__14daObj_SSItem_cFv.s"
 }
@@ -335,7 +409,7 @@ ASM_FUNCTION(initialize__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i) {
+extern "C" asm void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i.s"
 }
@@ -346,7 +420,7 @@ ASM_FUNCTION(setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setParam__14daObj_SSItem_cFv.s"
 }
@@ -357,7 +431,7 @@ ASM_FUNCTION(setParam__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setEnvTevColor__14daObj_SSItem_cFv.s"
 }
@@ -368,7 +442,7 @@ ASM_FUNCTION(setEnvTevColor__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setRoomNo__14daObj_SSItem_cFv.s"
 }
@@ -379,7 +453,7 @@ ASM_FUNCTION(setRoomNo__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setMtx__14daObj_SSItem_cFv.s"
 }
@@ -390,7 +464,7 @@ ASM_FUNCTION(setMtx__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__14daObj_SSItem_cFv) {
+asm void daObj_SSItem_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setAttnPos__14daObj_SSItem_cFv.s"
 }
@@ -401,7 +475,7 @@ ASM_FUNCTION(setAttnPos__14daObj_SSItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__14daObj_SSItem_cFPv) {
+asm void daObj_SSItem_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/wait__14daObj_SSItem_cFPv.s"
 }
@@ -412,7 +486,7 @@ ASM_FUNCTION(wait__14daObj_SSItem_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSItem_Create__FPv) {
+asm void daObj_SSItem_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_Create__FPv.s"
 }
@@ -423,7 +497,7 @@ ASM_FUNCTION(daObj_SSItem_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSItem_Delete__FPv) {
+asm void daObj_SSItem_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_Delete__FPv.s"
 }
@@ -434,7 +508,7 @@ ASM_FUNCTION(daObj_SSItem_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSItem_Execute__FPv) {
+asm void daObj_SSItem_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_Execute__FPv.s"
 }
@@ -445,7 +519,7 @@ ASM_FUNCTION(daObj_SSItem_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSItem_Draw__FPv) {
+asm void daObj_SSItem_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_Draw__FPv.s"
 }
@@ -453,21 +527,16 @@ ASM_FUNCTION(daObj_SSItem_Draw__FPv) {
 
 
 /* 80CE7E0C-80CE7E14 0008+00 .text      daObj_SSItem_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_SSItem_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_IsDelete__FPv.s"
+bool daObj_SSItem_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE7E14-80CE7E5C 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__dt__10cCcD_GSttsFv.s"
 }
@@ -478,7 +547,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ss_item_cpp) {
+extern "C" asm void __sinit_d_a_obj_ss_item_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/__sinit_d_a_obj_ss_item_cpp.s"
 }
@@ -489,7 +558,7 @@ ASM_FUNCTION(__sinit_d_a_obj_ss_item_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CE7E94) {
+extern "C" asm void func_80CE7E94() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/func_80CE7E94.s"
 }
@@ -500,7 +569,7 @@ ASM_FUNCTION(func_80CE7E94) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CE7E9C) {
+extern "C" asm void func_80CE7E9C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/func_80CE7E9C.s"
 }

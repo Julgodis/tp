@@ -6,26 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjFuta_c;
+
+struct daObjFuta_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void mode_proc_call();
+	void mode_wait();
+	void mode_move();
+	void mode_end();
+	void Draw();
+	void Delete();
+};
+
+struct csXyz {
+	~csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjFuta_cFv();
-extern "C" extern void setBaseMtx__11daObjFuta_cFv();
-extern "C" extern void Create__11daObjFuta_cFv();
-extern "C" extern void CreateHeap__11daObjFuta_cFv();
-extern "C" extern void create1st__11daObjFuta_cFv();
-extern "C" extern void Execute__11daObjFuta_cFPPA3_A4_f();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void mode_proc_call__11daObjFuta_cFv();
-extern "C" extern void mode_wait__11daObjFuta_cFv();
-extern "C" extern void mode_move__11daObjFuta_cFv();
-extern "C" extern void mode_end__11daObjFuta_cFv();
-extern "C" extern void Draw__11daObjFuta_cFv();
-extern "C" extern void Delete__11daObjFuta_cFv();
-extern "C" extern void daObjFuta_create1st__FP11daObjFuta_c();
-extern "C" extern void daObjFuta_MoveBGDelete__FP11daObjFuta_c();
-extern "C" extern void daObjFuta_MoveBGExecute__FP11daObjFuta_c();
-extern "C" extern void daObjFuta_MoveBGDraw__FP11daObjFuta_c();
+extern "C" void Execute__11daObjFuta_cFPPA3_A4_f();
+void daObjFuta_create1st(daObjFuta_c*);
+void daObjFuta_MoveBGDelete(daObjFuta_c*);
+void daObjFuta_MoveBGExecute(daObjFuta_c*);
+void daObjFuta_MoveBGDraw(daObjFuta_c*);
+
+extern "C" void initBaseMtx__11daObjFuta_cFv();
+extern "C" void setBaseMtx__11daObjFuta_cFv();
+extern "C" void Create__11daObjFuta_cFv();
+extern "C" void CreateHeap__11daObjFuta_cFv();
+extern "C" void create1st__11daObjFuta_cFv();
+extern "C" void Execute__11daObjFuta_cFPPA3_A4_f();
+extern "C" void __dt__5csXyzFv();
+extern "C" void mode_proc_call__11daObjFuta_cFv();
+extern "C" void mode_wait__11daObjFuta_cFv();
+extern "C" void mode_move__11daObjFuta_cFv();
+extern "C" void mode_end__11daObjFuta_cFv();
+extern "C" void Draw__11daObjFuta_cFv();
+extern "C" void Delete__11daObjFuta_cFv();
+extern "C" void daObjFuta_create1st__FP11daObjFuta_c();
+extern "C" void daObjFuta_MoveBGDelete__FP11daObjFuta_c();
+extern "C" void daObjFuta_MoveBGExecute__FP11daObjFuta_c();
+extern "C" void daObjFuta_MoveBGDraw__FP11daObjFuta_c();
 SECTION_RODATA extern const u8 lit_3644[4];
 SECTION_RODATA extern const u32 lit_3645;
 SECTION_RODATA extern const u32 lit_3646;
@@ -136,8 +166,11 @@ SECTION_BSS extern u8 data_80C1F33C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -147,7 +180,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjFuta_cFv) {
+asm void daObjFuta_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/initBaseMtx__11daObjFuta_cFv.s"
 }
@@ -158,7 +191,7 @@ ASM_FUNCTION(initBaseMtx__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjFuta_cFv) {
+asm void daObjFuta_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/setBaseMtx__11daObjFuta_cFv.s"
 }
@@ -169,7 +202,7 @@ ASM_FUNCTION(setBaseMtx__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjFuta_cFv) {
+asm void daObjFuta_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/Create__11daObjFuta_cFv.s"
 }
@@ -180,7 +213,7 @@ ASM_FUNCTION(Create__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjFuta_cFv) {
+asm void daObjFuta_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/CreateHeap__11daObjFuta_cFv.s"
 }
@@ -191,7 +224,7 @@ ASM_FUNCTION(CreateHeap__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__11daObjFuta_cFv) {
+asm void daObjFuta_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/create1st__11daObjFuta_cFv.s"
 }
@@ -202,7 +235,7 @@ ASM_FUNCTION(create1st__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjFuta_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjFuta_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/Execute__11daObjFuta_cFPPA3_A4_f.s"
 }
@@ -213,7 +246,7 @@ ASM_FUNCTION(Execute__11daObjFuta_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/__dt__5csXyzFv.s"
 }
@@ -224,7 +257,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__11daObjFuta_cFv) {
+asm void daObjFuta_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/mode_proc_call__11daObjFuta_cFv.s"
 }
@@ -235,7 +268,7 @@ ASM_FUNCTION(mode_proc_call__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__11daObjFuta_cFv) {
+asm void daObjFuta_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/mode_wait__11daObjFuta_cFv.s"
 }
@@ -246,7 +279,7 @@ ASM_FUNCTION(mode_wait__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_move__11daObjFuta_cFv) {
+asm void daObjFuta_c::mode_move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/mode_move__11daObjFuta_cFv.s"
 }
@@ -257,7 +290,7 @@ ASM_FUNCTION(mode_move__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_end__11daObjFuta_cFv) {
+asm void daObjFuta_c::mode_end() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/mode_end__11daObjFuta_cFv.s"
 }
@@ -268,7 +301,7 @@ ASM_FUNCTION(mode_end__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjFuta_cFv) {
+asm void daObjFuta_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/Draw__11daObjFuta_cFv.s"
 }
@@ -279,7 +312,7 @@ ASM_FUNCTION(Draw__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjFuta_cFv) {
+asm void daObjFuta_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/Delete__11daObjFuta_cFv.s"
 }
@@ -290,7 +323,7 @@ ASM_FUNCTION(Delete__11daObjFuta_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFuta_create1st__FP11daObjFuta_c) {
+asm void daObjFuta_create1st(daObjFuta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/daObjFuta_create1st__FP11daObjFuta_c.s"
 }
@@ -301,7 +334,7 @@ ASM_FUNCTION(daObjFuta_create1st__FP11daObjFuta_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFuta_MoveBGDelete__FP11daObjFuta_c) {
+asm void daObjFuta_MoveBGDelete(daObjFuta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/daObjFuta_MoveBGDelete__FP11daObjFuta_c.s"
 }
@@ -312,7 +345,7 @@ ASM_FUNCTION(daObjFuta_MoveBGDelete__FP11daObjFuta_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFuta_MoveBGExecute__FP11daObjFuta_c) {
+asm void daObjFuta_MoveBGExecute(daObjFuta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/daObjFuta_MoveBGExecute__FP11daObjFuta_c.s"
 }
@@ -323,7 +356,7 @@ ASM_FUNCTION(daObjFuta_MoveBGExecute__FP11daObjFuta_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFuta_MoveBGDraw__FP11daObjFuta_c) {
+asm void daObjFuta_MoveBGDraw(daObjFuta_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hfuta/d_a_obj_hfuta/daObjFuta_MoveBGDraw__FP11daObjFuta_c.s"
 }

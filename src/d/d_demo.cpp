@@ -6,95 +6,823 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dDemo_actor_c (dDemo_actor_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin dDemo_actor_c) */
+// outer dependency: fopAc_ac_c
+// outer dependency: Vec
+/* top-level dependencies (end dDemo_actor_c) */
+struct dDemo_actor_c {
+	// fopAc_ac_c
+	// Vec
+	/* 80038020 */ dDemo_actor_c();
+	/* 80038098 */ ~dDemo_actor_c();
+	/* 80038128 */ void getActor();
+	/* 8003815C */ void setActor(fopAc_ac_c*);
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(s32*, s32*, s32*, u16*, char*);
+	/* 800387EC */ void JSGSetData(u32, void const*, u32);
+	/* 80038920 */ void JSGSetTranslation(Vec const&);
+	/* 80038980 */ void JSGSetScaling(Vec const&);
+	/* 800389A8 */ void JSGSetRotation(Vec const&);
+	/* 80038A0C */ void JSGSetShape(u32);
+	/* 80038A20 */ void JSGSetAnimation(u32);
+	/* 80038A40 */ void JSGSetAnimationFrame(f32);
+	/* 80038A54 */ void JSGSetAnimationTransition(f32);
+	/* 80038A68 */ void JSGSetTextureAnimation(u32);
+	/* 80038A7C */ void JSGSetTextureAnimationFrame(f32);
+	/* 8003A05C */ void JSGFindNodeID(char const*) const;
+	/* 8003A0C8 */ void JSGGetAnimationFrameMax() const;
+	/* 8003A0D0 */ void JSGGetTextureAnimationFrameMax() const;
+	/* 8003A0D8 */ void JSGGetTranslation(Vec*) const;
+	/* 8003A0F4 */ void JSGGetScaling(Vec*) const;
+	/* 8003A110 */ void JSGGetRotation(Vec*) const;
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build mDoExt_McaMorf (mDoExt_McaMorf) False/False
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
+// build Vec (Vec) True/True
+/* top-level dependencies (begin mDoExt_McaMorf) */
+// outer dependency: J3DAnmTransform
+// outer dependency: Vec
+/* top-level dependencies (end mDoExt_McaMorf) */
+struct mDoExt_McaMorf {
+	// J3DAnmTransform
+	// Vec
+	/* 8001037C */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32, void*);
+	/* 800105C8 */ void play(Vec*, u32, char);
+};
+
+// build Vec (Vec) True/True
+// build dDemo_camera_c (dDemo_camera_c) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin dDemo_camera_c) */
+// outer dependency: Vec
+/* top-level dependencies (end dDemo_camera_c) */
+struct dDemo_camera_c {
+	// Vec
+	/* 80038AC4 */ void JSGGetProjectionNear() const;
+	/* 80038AF8 */ void JSGSetProjectionNear(f32);
+	/* 80038B0C */ void JSGGetProjectionFar() const;
+	/* 80038B40 */ void JSGSetProjectionFar(f32);
+	/* 80038B54 */ void JSGGetProjectionFovy() const;
+	/* 80038B88 */ void JSGSetProjectionFovy(f32);
+	/* 80038B9C */ void JSGGetProjectionAspect() const;
+	/* 80038BD0 */ void JSGSetProjectionAspect(f32);
+	/* 80038BE4 */ void JSGGetViewPosition(Vec*) const;
+	/* 80038C44 */ void JSGSetViewPosition(Vec const&);
+	/* 80038C6C */ void JSGGetViewUpVector(Vec*) const;
+	/* 80038CD0 */ void JSGSetViewUpVector(Vec const&);
+	/* 80038CF8 */ void JSGGetViewTargetPosition(Vec*) const;
+	/* 80038D5C */ void JSGSetViewTargetPosition(Vec const&);
+	/* 80038D84 */ void JSGGetViewRoll() const;
+	/* 80038DDC */ void JSGSetViewRoll(f32);
+	/* 80039FFC */ ~dDemo_camera_c();
+};
+
+// build dDemo_ambient_c (dDemo_ambient_c) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+/* top-level dependencies (begin dDemo_ambient_c) */
+// outer dependency: _GXColor
+/* top-level dependencies (end dDemo_ambient_c) */
+struct dDemo_ambient_c {
+	// _GXColor
+	/* 80038DF0 */ void JSGSetColor(_GXColor);
+	/* 800394C8 */ ~dDemo_ambient_c();
+};
+
+// build _GXColor (_GXColor) True/True
+// build dDemo_light_c (dDemo_light_c) False/False
+// build _GXDistAttnFn (_GXDistAttnFn) False/False
+/* top-level dependencies (begin _GXDistAttnFn) */
+/* top-level dependencies (end _GXDistAttnFn) */
+struct _GXDistAttnFn {
+};
+
+// build Vec (Vec) True/True
+// build _GXColor (_GXColor) True/True
+// build _GXSpotFn (_GXSpotFn) False/False
+/* top-level dependencies (begin _GXSpotFn) */
+/* top-level dependencies (end _GXSpotFn) */
+struct _GXSpotFn {
+};
+
+// build JStage (JStage) False/False
+// build JStage (JStage) True/False
+struct JStage;
+// build JStage (JStage) True/True
+// build Vec (Vec) True/True
+// build _GXDistAttnFn (_GXDistAttnFn) True/True
+// build _GXSpotFn (_GXSpotFn) True/True
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+/* top-level dependencies (begin JStage) */
+// outer dependency: JStage::TECameraView
+// outer dependency: JStage::TECameraProjection
+// outer dependency: Vec
+// outer dependency: _GXDistAttnFn
+// outer dependency: _GXSpotFn
+// outer dependency: JStage::TObject
+// outer dependency: JStage::TEObject
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TELight (JStage::TELight) False/False
+	/* dependencies (begin JStage::TELight) */
+	/* dependencies (end JStage::TELight) */
+	struct TELight {
+	};
+
+	// build TObject (JStage::TObject) False/False
+	/* dependencies (begin JStage::TObject) */
+	/* dependencies (end JStage::TObject) */
+	struct TObject {
+		/* 80280E1C */ bool JSGGetName() const;
+		/* 80280E24 */ void JSGUpdate();
+		/* 80280E28 */ bool JSGGetFlag() const;
+		/* 80280E30 */ void JSGSetFlag(u32);
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
+		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
+		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
+		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
+		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+	};
+
+	// build TEObject (JStage::TEObject) False/False
+	/* dependencies (begin JStage::TEObject) */
+	/* dependencies (end JStage::TEObject) */
+	struct TEObject {
+	};
+
+	// build TActor (JStage::TActor) False/False
+	/* dependencies (begin JStage::TActor) */
+	/* dependencies (end JStage::TActor) */
+	struct TActor {
+		/* 80280A48 */ ~TActor();
+		/* 80280AA8 */ s32 JSGFGetType() const;
+		/* 80280AC8 */ s32 JSGGetShape() const;
+		/* 80280AD4 */ s32 JSGGetAnimation() const;
+		/* 80280AE0 */ void JSGGetAnimationFrame() const;
+		/* 80280AF4 */ void JSGGetAnimationTransition() const;
+		/* 80280B00 */ s32 JSGGetTextureAnimation() const;
+		/* 80280B0C */ void JSGGetTextureAnimationFrame() const;
+	};
+
+	// build TAmbientLight (JStage::TAmbientLight) False/False
+	/* dependencies (begin JStage::TAmbientLight) */
+	/* dependencies (end JStage::TAmbientLight) */
+	struct TAmbientLight {
+		/* 80280B20 */ ~TAmbientLight();
+		/* 80280B80 */ s32 JSGFGetType() const;
+		/* 80280B88 */ void JSGGetColor() const;
+	};
+
+	// build TCamera (JStage::TCamera) False/False
+	/* dependencies (begin JStage::TCamera) */
+	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
+	// build TECameraView (JStage::TECameraView) False/False
+	/* dependencies (begin JStage::TECameraView) */
+	/* dependencies (end JStage::TECameraView) */
+	struct TECameraView {
+	};
+
+	// inner dependency: TECameraProjection (JStage::TECameraProjection) True False (for JStage::TCamera)
+	// build TECameraProjection (JStage::TECameraProjection) False/False
+	/* dependencies (begin JStage::TECameraProjection) */
+	/* dependencies (end JStage::TECameraProjection) */
+	struct TECameraProjection {
+	};
+
+	/* dependencies (end JStage::TCamera) */
+	struct TCamera {
+		// JStage::TECameraView
+		// JStage::TECameraProjection
+		/* 80280BA0 */ ~TCamera();
+		/* 80280C00 */ s32 JSGFGetType() const;
+		/* 80280C08 */ bool JSGGetProjectionType() const;
+		/* 80280C10 */ void JSGSetProjectionType(JStage::TECameraProjection);
+		/* 80280C48 */ void JSGGetProjectionField(f32*) const;
+		/* 80280C4C */ void JSGSetProjectionField(f32 const*);
+		/* 80280C50 */ bool JSGGetViewType() const;
+		/* 80280C58 */ void JSGSetViewType(JStage::TECameraView);
+	};
+
+	// build TECameraProjection (JStage::TECameraProjection) True/True
+	// build TECameraView (JStage::TECameraView) True/True
+	// build TFog (JStage::TFog) False/False
+	/* dependencies (begin JStage::TFog) */
+	/* dependencies (end JStage::TFog) */
+	struct TFog {
+		/* 80280C80 */ ~TFog();
+		/* 80280CE0 */ s32 JSGFGetType() const;
+		/* 80280CE8 */ bool JSGGetFogFunction() const;
+		/* 80280CF4 */ void JSGGetStartZ() const;
+		/* 80280D00 */ void JSGGetEndZ() const;
+		/* 80280D10 */ void JSGGetColor() const;
+	};
+
+	// build TLight (JStage::TLight) False/False
+	/* dependencies (begin JStage::TLight) */
+	/* dependencies (end JStage::TLight) */
+	struct TLight {
+		// _GXSpotFn
+		// Vec
+		// _GXDistAttnFn
+		/* 80280D28 */ ~TLight();
+		/* 80280D88 */ s32 JSGFGetType() const;
+		/* 80280D90 */ bool JSGGetLightType() const;
+		/* 80280D9C */ void JSGGetColor() const;
+		/* 80280DB4 */ void JSGGetDistanceAttenuation(f32*, f32*, _GXDistAttnFn*) const;
+		/* 80280DBC */ void JSGGetAngleAttenuation(f32*, _GXSpotFn*) const;
+		/* 80280DC4 */ void JSGGetPosition(Vec*) const;
+		/* 80280DCC */ void JSGGetDirection(Vec*) const;
+	};
+
+	// build TSystem (JStage::TSystem) False/False
+	/* dependencies (begin JStage::TSystem) */
+	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
+	// build TObject (JStage::TObject) True/True
+	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
+	// build TEObject (JStage::TEObject) True/True
+	/* dependencies (end JStage::TSystem) */
+	struct TSystem {
+		// JStage::TObject
+		// JStage::TEObject
+		/* 80280E90 */ ~TSystem();
+		/* 80280EF0 */ bool JSGFGetType() const;
+		/* 80280F00 */ bool JSGCreateObject(char const*, JStage::TEObject, u32);
+		/* 80280F08 */ void JSGDestroyObject(JStage::TObject*);
+		/* 80280F0C */ bool JSGGetSystemData(u32);
+		/* 80280F14 */ void JSGSetSystemData(u32, u32);
+	};
+
+};
+
+/* top-level dependencies (begin dDemo_light_c) */
+// outer dependency: _GXDistAttnFn
+// outer dependency: Vec
+// outer dependency: _GXColor
+// outer dependency: _GXSpotFn
+// outer dependency: JStage::TELight
+/* top-level dependencies (end dDemo_light_c) */
+struct dDemo_light_c {
+	// _GXDistAttnFn
+	// _GXColor
+	// Vec
+	// _GXSpotFn
+	// JStage::TELight
+	/* 80038E20 */ void JSGSetLightType(JStage::TELight);
+	/* 80038E34 */ void JSGSetPosition(Vec const&);
+	/* 80038E5C */ void JSGSetColor(_GXColor);
+	/* 80038E8C */ void JSGSetDistanceAttenuation(f32, f32, _GXDistAttnFn);
+	/* 80038EA8 */ void JSGSetAngleAttenuation(f32, _GXSpotFn);
+	/* 80038EC0 */ void JSGSetDirection(Vec const&);
+	/* 80039468 */ ~dDemo_light_c();
+};
+
+// build JStage (JStage) True/True
+// build _GXDistAttnFn (_GXDistAttnFn) True/True
+// build _GXSpotFn (_GXSpotFn) True/True
+// build dDemo_fog_c (dDemo_fog_c) False/False
+// build _GXColor (_GXColor) True/True
+// build _GXFogType (_GXFogType) False/False
+/* top-level dependencies (begin _GXFogType) */
+/* top-level dependencies (end _GXFogType) */
+struct _GXFogType {
+};
+
+/* top-level dependencies (begin dDemo_fog_c) */
+// outer dependency: _GXColor
+// outer dependency: _GXFogType
+/* top-level dependencies (end dDemo_fog_c) */
+struct dDemo_fog_c {
+	// _GXColor
+	// _GXFogType
+	/* 80038EE8 */ void JSGSetFogFunction(_GXFogType);
+	/* 80038EFC */ void JSGSetStartZ(f32);
+	/* 80038F10 */ void JSGSetEndZ(f32);
+	/* 80038F24 */ void JSGSetColor(_GXColor);
+	/* 80039408 */ ~dDemo_fog_c();
+};
+
+// build _GXFogType (_GXFogType) True/True
+// build dDemo_object_c (dDemo_object_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dDemo_object_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dDemo_object_c) */
+struct dDemo_object_c {
+	// fopAc_ac_c
+	/* 80038F54 */ dDemo_object_c();
+	/* 80038F70 */ ~dDemo_object_c();
+	/* 80038FC0 */ void appendActor(fopAc_ac_c*);
+	/* 80039088 */ void getActor(char);
+	/* 800390AC */ void createCamera();
+	/* 80039128 */ void getActiveCamera();
+	/* 8003913C */ void createAmbient();
+	/* 800391B8 */ void appendLight();
+	/* 80039258 */ void createFog();
+	/* 800392D4 */ void remove();
+};
+
+// build dDemo_system_c (dDemo_system_c) False/False
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
+/* top-level dependencies (begin dDemo_system_c) */
+// outer dependency: JStage::TObject
+// outer dependency: JStage::TEObject
+/* top-level dependencies (end dDemo_system_c) */
+struct dDemo_system_c {
+	// JStage::TObject
+	// JStage::TEObject
+	/* 80039528 */ void JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
+	/* 80039AAC */ ~dDemo_system_c();
+};
+
+// build dDemo_c (dDemo_c) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
+/* top-level dependencies (begin dDemo_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dDemo_c) */
+struct dDemo_c {
+	// cXyz
+	/* 80039678 */ void create();
+	/* 80039910 */ void remove();
+	/* 80039B6C */ void start(char const*, cXyz*, f32);
+	/* 80039CF8 */ void end();
+	/* 80039D4C */ void branch();
+	/* 80039DA4 */ void update();
+	/* 80039EDC */ void setBranchType(u16);
+	/* 80039EEC */ void setBranchId(u16, s16);
+	/* 80039F04 */ void reset();
+};
+
+// build jmessage_tControl (jmessage_tControl) False/False
+/* top-level dependencies (begin jmessage_tControl) */
+/* top-level dependencies (end jmessage_tControl) */
+struct jmessage_tControl {
+	/* 80039B0C */ ~jmessage_tControl();
+	/* 802299EC */ jmessage_tControl();
+};
+
+// build cXyz (cXyz) True/True
+// build dDemo_particle_c (dDemo_particle_c) False/False
+/* top-level dependencies (begin dDemo_particle_c) */
+/* top-level dependencies (end dDemo_particle_c) */
+struct dDemo_particle_c {
+	/* 80039F1C */ void emitter_create(u32);
+	/* 80039F9C */ ~dDemo_particle_c();
+};
+
+// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
+// build _GXColor (_GXColor) True/True
+/* top-level dependencies (begin mDoGph_gInf_c) */
+// outer dependency: _GXColor
+/* top-level dependencies (end mDoGph_gInf_c) */
+struct mDoGph_gInf_c {
+	// _GXColor
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+};
+
+// build J3DAnmTransform (J3DAnmTransform) True/True
+// build daMP_c (daMP_c) False/False
+/* top-level dependencies (begin daMP_c) */
+/* top-level dependencies (end daMP_c) */
+struct daMP_c {
+	/* 80031AD0 */ void daMP_c_THPPlayerPlay();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dPa_control_c (dPa_control_c) False/False
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
+/* top-level dependencies (begin dPa_levelEcallBack) */
+/* top-level dependencies (end dPa_levelEcallBack) */
+struct dPa_levelEcallBack {
+};
+
+// build _GXColor (_GXColor) True/True
+// build cXyz (cXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin dPa_control_c) */
+// outer dependency: csXyz
+// outer dependency: dPa_levelEcallBack
+// outer dependency: _GXColor
+// outer dependency: cXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	// csXyz
+	// _GXColor
+	// dPa_levelEcallBack
+	// cXyz
+	// dKy_tevstr_c
+	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
+// build dPa_levelEcallBack (dPa_levelEcallBack) True/True
+// build dMsgObject_c (dMsgObject_c) False/False
+/* top-level dependencies (begin dMsgObject_c) */
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	/* 80237AB0 */ void setDemoMessage(u32);
+};
+
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build Vec (Vec) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::TAdaptor_message
+// outer dependency: JStudio::TControl
+// outer dependency: JStudio::stb::data::TParse_TParagraph_data::TData
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: Vec
+// outer dependency: JStudio::TCreateObject
+// outer dependency: JStudio::TFactory
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build ctb (JStudio::ctb) False/False
+	/* dependencies (begin JStudio::ctb) */
+	/* dependencies (end JStudio::ctb) */
+	namespace ctb {
+		// build TControl (JStudio::ctb::TControl) False/False
+		/* dependencies (begin JStudio::ctb::TControl) */
+		/* dependencies (end JStudio::ctb::TControl) */
+		struct TControl {
+			/* 8028112C */ void destroyObject_all();
+		};
+
+	};
+
+	// build fvb (JStudio::fvb) False/False
+	/* dependencies (begin JStudio::fvb) */
+	/* dependencies (end JStudio::fvb) */
+	namespace fvb {
+		// build TControl (JStudio::fvb::TControl) False/False
+		/* dependencies (begin JStudio::fvb::TControl) */
+		/* dependencies (end JStudio::fvb::TControl) */
+		struct TControl {
+			/* 802847D0 */ void destroyObject_all();
+		};
+
+	};
+
+	// build TControl (JStudio::TControl) False/False
+	/* dependencies (begin JStudio::TControl) */
+	// inner dependency: TFactory (JStudio::TFactory) True False (for JStudio::TControl)
+	// build TFactory (JStudio::TFactory) False/False
+	/* dependencies (begin JStudio::TFactory) */
+	// inner dependency: TCreateObject (JStudio::TCreateObject) True False (for JStudio::TFactory)
+	// build TCreateObject (JStudio::TCreateObject) False/False
+	/* dependencies (begin JStudio::TCreateObject) */
+	/* dependencies (end JStudio::TCreateObject) */
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
+	};
+
+	/* dependencies (end JStudio::TFactory) */
+	struct TFactory {
+		// JStudio::TCreateObject
+		/* 80285560 */ void appendCreateObject(JStudio::TCreateObject*);
+	};
+
+	/* dependencies (end JStudio::TControl) */
+	struct TControl {
+		// Vec
+		// JStudio::TFactory
+		/* 80285114 */ TControl();
+		/* 80285228 */ void setFactory(JStudio::TFactory*);
+		/* 80285250 */ void transformOnSet_setOrigin_TxyzRy(Vec const&, f32);
+		/* 802852D0 */ void transformOnGet_setOrigin_TxyzRy(Vec const&, f32);
+	};
+
+	// build TFactory (JStudio::TFactory) True/True
+	// build TCreateObject (JStudio::TCreateObject) True/True
+	// build TParse (JStudio::TParse) False/False
+	/* dependencies (begin JStudio::TParse) */
+	// inner dependency: TControl (JStudio::TControl) True False (for JStudio::TParse)
+	// build TControl (JStudio::TControl) True/True
+	/* dependencies (end JStudio::TParse) */
+	struct TParse {
+		// JStudio::TControl
+		/* 8028566C */ TParse(JStudio::TControl*);
+		/* 802856A8 */ ~TParse();
+	};
+
+	// build TAdaptor (JStudio::TAdaptor) False/False
+	/* dependencies (begin JStudio::TAdaptor) */
+	/* dependencies (end JStudio::TAdaptor) */
+	struct TAdaptor {
+		/* 80286018 */ void adaptor_do_prepare();
+		/* 8028601C */ void adaptor_do_begin();
+		/* 80286020 */ void adaptor_do_end();
+		/* 80286024 */ void adaptor_do_update(u32);
+		/* 80286028 */ void adaptor_do_data(void const*, u32, void const*, u32);
+	};
+
+	// build TAdaptor_message (JStudio::TAdaptor_message) False/False
+	/* dependencies (begin JStudio::TAdaptor_message) */
+	/* dependencies (end JStudio::TAdaptor_message) */
+	struct TAdaptor_message {
+		/* 802875E0 */ ~TAdaptor_message();
+	};
+
+	// build TObject_message (JStudio::TObject_message) False/False
+	/* dependencies (begin JStudio::TObject_message) */
+	// inner dependency: TAdaptor_message (JStudio::TAdaptor_message) True False (for JStudio::TObject_message)
+	// build TAdaptor_message (JStudio::TAdaptor_message) True/True
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_message)
+	// build stb (JStudio::stb) False/False
+	/* dependencies (begin JStudio::stb) */
+	/* dependencies (end JStudio::stb) */
+	struct stb {
+		// build data (JStudio::stb::data) False/False
+		/* dependencies (begin JStudio::stb::data) */
+		/* dependencies (end JStudio::stb::data) */
+		struct data {
+			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
+			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			struct TParse_TBlock_object {
+			};
+
+			// build TParse_TParagraph_data (JStudio::stb::data::TParse_TParagraph_data) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TParagraph_data) */
+			// inner dependency: TParse_TParagraph_data (JStudio::stb::data::TParse_TParagraph_data::TData) True False (for JStudio::stb::data::TParse_TParagraph_data)
+			/* dependencies (end JStudio::stb::data::TParse_TParagraph_data) */
+			struct TParse_TParagraph_data {
+				// JStudio::stb::data::TParse_TParagraph_data::TData
+				// build TData (JStudio::stb::data::TParse_TParagraph_data::TData) False/False
+				/* dependencies (begin JStudio::stb::data::TParse_TParagraph_data::TData) */
+				/* dependencies (end JStudio::stb::data::TParse_TParagraph_data::TData) */
+				struct TData {
+				};
+
+				/* 80289A80 */ void getData(JStudio::stb::data::TParse_TParagraph_data::TData*) const;
+			};
+
+		};
+
+		// build TControl (JStudio::stb::TControl) False/False
+		/* dependencies (begin JStudio::stb::TControl) */
+		/* dependencies (end JStudio::stb::TControl) */
+		struct TControl {
+			/* 80289300 */ void destroyObject_all();
+			/* 80289404 */ void reset();
+			/* 802894B4 */ void forward(u32);
+		};
+
+	};
+
+	/* dependencies (end JStudio::TObject_message) */
+	struct TObject_message {
+		// JStudio::TAdaptor_message
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 80287640 */ TObject_message(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_message*);
+	};
+
+	// build stb (JStudio::stb) True/True
+	// build TObject (JStudio::TObject) False/False
+	/* dependencies (begin JStudio::TObject) */
+	/* dependencies (end JStudio::TObject) */
+	struct TObject {
+	};
+
+};
+
+// build JStudio_JParticle (JStudio_JParticle) False/False
+// build JStudio (JStudio) True/True
+// build JPABaseEmitter (JPABaseEmitter) False/False
+/* top-level dependencies (begin JPABaseEmitter) */
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+};
+
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio_JParticle) */
+// outer dependency: JStudio::TObject
+// outer dependency: JPABaseEmitter
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+/* top-level dependencies (end JStudio_JParticle) */
+struct JStudio_JParticle {
+	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
+	/* dependencies (begin JStudio_JParticle::TCreateObject) */
+	/* dependencies (end JStudio_JParticle::TCreateObject) */
+	struct TCreateObject {
+		// JStudio::TObject
+		// JPABaseEmitter
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 8028E3A0 */ ~TCreateObject();
+		/* 8028E400 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
+		/* 8028E4E4 */ void emitter_destroy(JPABaseEmitter*);
+	};
+
+};
+
+// build JPABaseEmitter (JPABaseEmitter) True/True
+// build JMessage (JMessage) False/False
+/* top-level dependencies (begin JMessage) */
+/* top-level dependencies (end JMessage) */
+struct JMessage {
+	// build TControl (JMessage::TControl) False/False
+	/* dependencies (begin JMessage::TControl) */
+	/* dependencies (end JMessage::TControl) */
+	struct TControl {
+		/* 802A758C */ ~TControl();
+	};
+
+};
+
+// build JGadget (JGadget) False/False
+/* top-level dependencies (begin JGadget) */
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
+		/* dependencies (begin JGadget::binary::TParse_header_block) */
+		/* dependencies (end JGadget::binary::TParse_header_block) */
+		struct TParse_header_block {
+			/* 802DC910 */ void parse_next(void const**, u32);
+		};
+
+	};
+
+};
+
+// build JUTNameTab (JUTNameTab) False/False
+/* top-level dependencies (begin JUTNameTab) */
+/* top-level dependencies (end JUTNameTab) */
+struct JUTNameTab {
+	/* 802DEA58 */ void getIndex(char const*) const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void func_80037DE4();
-extern "C" extern void func_80037E44();
-extern "C" extern void func_80037E74();
-extern "C" extern void func_80037ED4();
-extern "C" extern void __ct__13dDemo_actor_cFv();
-extern "C" extern void __dt__13dDemo_actor_cFv();
-extern "C" extern void getActor__13dDemo_actor_cFv();
-extern "C" extern void setActor__13dDemo_actor_cFP10fopAc_ac_c();
-extern "C" extern void getPrm_Morf__13dDemo_actor_cFv();
-extern "C" extern void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc();
-extern "C" extern void dDemo_getJaiPointer__FPCcUliPUs();
-extern "C" extern void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc();
-extern "C" extern void branchFile__FPCc();
-extern "C" extern void JSGSetData__13dDemo_actor_cFUlPCvUl();
-extern "C" extern void JSGSetTranslation__13dDemo_actor_cFRC3Vec();
-extern "C" extern void JSGSetScaling__13dDemo_actor_cFRC3Vec();
-extern "C" extern void JSGSetRotation__13dDemo_actor_cFRC3Vec();
-extern "C" extern void JSGSetShape__13dDemo_actor_cFUl();
-extern "C" extern void JSGSetAnimation__13dDemo_actor_cFUl();
-extern "C" extern void JSGSetAnimationFrame__13dDemo_actor_cFf();
-extern "C" extern void JSGSetAnimationTransition__13dDemo_actor_cFf();
-extern "C" extern void JSGSetTextureAnimation__13dDemo_actor_cFUl();
-extern "C" extern void JSGSetTextureAnimationFrame__13dDemo_actor_cFf();
-extern "C" extern void getView__Fv();
-extern "C" extern void JSGGetProjectionNear__14dDemo_camera_cCFv();
-extern "C" extern void JSGSetProjectionNear__14dDemo_camera_cFf();
-extern "C" extern void JSGGetProjectionFar__14dDemo_camera_cCFv();
-extern "C" extern void JSGSetProjectionFar__14dDemo_camera_cFf();
-extern "C" extern void JSGGetProjectionFovy__14dDemo_camera_cCFv();
-extern "C" extern void JSGSetProjectionFovy__14dDemo_camera_cFf();
-extern "C" extern void JSGGetProjectionAspect__14dDemo_camera_cCFv();
-extern "C" extern void JSGSetProjectionAspect__14dDemo_camera_cFf();
-extern "C" extern void JSGGetViewPosition__14dDemo_camera_cCFP3Vec();
-extern "C" extern void JSGSetViewPosition__14dDemo_camera_cFRC3Vec();
-extern "C" extern void JSGGetViewUpVector__14dDemo_camera_cCFP3Vec();
-extern "C" extern void JSGSetViewUpVector__14dDemo_camera_cFRC3Vec();
-extern "C" extern void JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec();
-extern "C" extern void JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec();
-extern "C" extern void JSGGetViewRoll__14dDemo_camera_cCFv();
-extern "C" extern void JSGSetViewRoll__14dDemo_camera_cFf();
-extern "C" extern void JSGSetColor__15dDemo_ambient_cF8_GXColor();
-extern "C" extern void JSGSetLightType__13dDemo_light_cFQ26JStage7TELight();
-extern "C" extern void JSGSetPosition__13dDemo_light_cFRC3Vec();
-extern "C" extern void JSGSetColor__13dDemo_light_cF8_GXColor();
-extern "C" extern void JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn();
-extern "C" extern void JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn();
-extern "C" extern void JSGSetDirection__13dDemo_light_cFRC3Vec();
-extern "C" extern void JSGSetFogFunction__11dDemo_fog_cF10_GXFogType();
-extern "C" extern void JSGSetStartZ__11dDemo_fog_cFf();
-extern "C" extern void JSGSetEndZ__11dDemo_fog_cFf();
-extern "C" extern void JSGSetColor__11dDemo_fog_cF8_GXColor();
-extern "C" extern void __ct__14dDemo_object_cFv();
-extern "C" extern void __dt__14dDemo_object_cFv();
-extern "C" extern void appendActor__14dDemo_object_cFP10fopAc_ac_c();
-extern "C" extern void getActor__14dDemo_object_cFUc();
-extern "C" extern void createCamera__14dDemo_object_cFv();
-extern "C" extern void getActiveCamera__14dDemo_object_cFv();
-extern "C" extern void createAmbient__14dDemo_object_cFv();
-extern "C" extern void appendLight__14dDemo_object_cFv();
-extern "C" extern void createFog__14dDemo_object_cFv();
-extern "C" extern void remove__14dDemo_object_cFv();
-extern "C" extern void __dt__11dDemo_fog_cFv();
-extern "C" extern void __dt__13dDemo_light_cFv();
-extern "C" extern void __dt__15dDemo_ambient_cFv();
-extern "C" extern void JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
-extern "C" extern void create__7dDemo_cFv();
-extern "C" extern void remove__7dDemo_cFv();
-extern "C" extern void __dt__14dDemo_system_cFv();
-extern "C" extern void __dt__17jmessage_tControlFv();
-extern "C" extern void start__7dDemo_cFPCUcP4cXyzf();
-extern "C" extern void end__7dDemo_cFv();
-extern "C" extern void branch__7dDemo_cFv();
-extern "C" extern void update__7dDemo_cFv();
-extern "C" extern void setBranchType__7dDemo_cFUs();
-extern "C" extern void setBranchId__7dDemo_cFUss();
-extern "C" extern void reset__7dDemo_cFv();
-extern "C" extern void emitter_create__16dDemo_particle_cFUl();
-extern "C" extern void __dt__16dDemo_particle_cFv();
-extern "C" extern void __dt__14dDemo_camera_cFv();
-extern "C" extern void JSGFindNodeID__13dDemo_actor_cCFPCc();
-extern "C" extern void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
-extern "C" extern void JSGGetAnimationFrameMax__13dDemo_actor_cCFv();
-extern "C" extern void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv();
-extern "C" extern void JSGGetTranslation__13dDemo_actor_cCFP3Vec();
-extern "C" extern void JSGGetScaling__13dDemo_actor_cCFP3Vec();
-extern "C" extern void JSGGetRotation__13dDemo_actor_cCFP3Vec();
+extern "C" static void func_80037DE4();
+extern "C" static void func_80037E44();
+extern "C" static void func_80037E74();
+extern "C" static void func_80037ED4();
+static void dDemo_getJaiPointer(char const*, u32, s32, u16*);
+void dDemo_setDemoData(fopAc_ac_c*, char, mDoExt_McaMorf*, char const*, s32, u16*, u32, char);
+static void branchFile(char const*);
+static void getView();
+extern "C" static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
+
+extern "C" static void func_80037DE4();
+extern "C" static void func_80037E44();
+extern "C" static void func_80037E74();
+extern "C" static void func_80037ED4();
+extern "C" void __ct__13dDemo_actor_cFv();
+extern "C" void __dt__13dDemo_actor_cFv();
+extern "C" void getActor__13dDemo_actor_cFv();
+extern "C" void setActor__13dDemo_actor_cFP10fopAc_ac_c();
+extern "C" void getPrm_Morf__13dDemo_actor_cFv();
+extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc();
+extern "C" static void dDemo_getJaiPointer__FPCcUliPUs();
+extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc();
+extern "C" static void branchFile__FPCc();
+extern "C" void JSGSetData__13dDemo_actor_cFUlPCvUl();
+extern "C" void JSGSetTranslation__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetScaling__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetRotation__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetShape__13dDemo_actor_cFUl();
+extern "C" void JSGSetAnimation__13dDemo_actor_cFUl();
+extern "C" void JSGSetAnimationFrame__13dDemo_actor_cFf();
+extern "C" void JSGSetAnimationTransition__13dDemo_actor_cFf();
+extern "C" void JSGSetTextureAnimation__13dDemo_actor_cFUl();
+extern "C" void JSGSetTextureAnimationFrame__13dDemo_actor_cFf();
+extern "C" static void getView__Fv();
+extern "C" void JSGGetProjectionNear__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionNear__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionFar__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionFar__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionFovy__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionFovy__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionAspect__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionAspect__14dDemo_camera_cFf();
+extern "C" void JSGGetViewPosition__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewPosition__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewUpVector__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewUpVector__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewRoll__14dDemo_camera_cCFv();
+extern "C" void JSGSetViewRoll__14dDemo_camera_cFf();
+extern "C" void JSGSetColor__15dDemo_ambient_cF8_GXColor();
+extern "C" void JSGSetLightType__13dDemo_light_cFQ26JStage7TELight();
+extern "C" void JSGSetPosition__13dDemo_light_cFRC3Vec();
+extern "C" void JSGSetColor__13dDemo_light_cF8_GXColor();
+extern "C" void JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn();
+extern "C" void JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn();
+extern "C" void JSGSetDirection__13dDemo_light_cFRC3Vec();
+extern "C" void JSGSetFogFunction__11dDemo_fog_cF10_GXFogType();
+extern "C" void JSGSetStartZ__11dDemo_fog_cFf();
+extern "C" void JSGSetEndZ__11dDemo_fog_cFf();
+extern "C" void JSGSetColor__11dDemo_fog_cF8_GXColor();
+extern "C" void __ct__14dDemo_object_cFv();
+extern "C" void __dt__14dDemo_object_cFv();
+extern "C" void appendActor__14dDemo_object_cFP10fopAc_ac_c();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void createCamera__14dDemo_object_cFv();
+extern "C" void getActiveCamera__14dDemo_object_cFv();
+extern "C" void createAmbient__14dDemo_object_cFv();
+extern "C" void appendLight__14dDemo_object_cFv();
+extern "C" void createFog__14dDemo_object_cFv();
+extern "C" void remove__14dDemo_object_cFv();
+extern "C" void __dt__11dDemo_fog_cFv();
+extern "C" void __dt__13dDemo_light_cFv();
+extern "C" void __dt__15dDemo_ambient_cFv();
+extern "C" void JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
+extern "C" void create__7dDemo_cFv();
+extern "C" void remove__7dDemo_cFv();
+extern "C" void __dt__14dDemo_system_cFv();
+extern "C" void __dt__17jmessage_tControlFv();
+extern "C" void start__7dDemo_cFPCUcP4cXyzf();
+extern "C" void end__7dDemo_cFv();
+extern "C" void branch__7dDemo_cFv();
+extern "C" void update__7dDemo_cFv();
+extern "C" void setBranchType__7dDemo_cFUs();
+extern "C" void setBranchId__7dDemo_cFUss();
+extern "C" void reset__7dDemo_cFv();
+extern "C" void emitter_create__16dDemo_particle_cFUl();
+extern "C" void __dt__16dDemo_particle_cFv();
+extern "C" void __dt__14dDemo_camera_cFv();
+extern "C" void JSGFindNodeID__13dDemo_actor_cCFPCc();
+extern "C" static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
+extern "C" void JSGGetAnimationFrameMax__13dDemo_actor_cCFv();
+extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv();
+extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec();
+extern "C" void JSGGetScaling__13dDemo_actor_cCFP3Vec();
+extern "C" void JSGGetRotation__13dDemo_actor_cCFP3Vec();
 SECTION_RODATA extern const u8 d_d_demo__stringBase0[72];
 SECTION_DATA extern void*const __vt__16dDemo_particle_c[6];
 SECTION_DATA extern void*const __vt__17jmessage_tControl[3];
@@ -150,115 +878,139 @@ SECTION_SDATA2 extern f32 lit_5322;
 // External References:
 // 
 
-extern "C" extern void OSReport_Error();
-extern "C" extern void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
-extern "C" extern void play__14mDoExt_McaMorfFP3VecUlSc();
-extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" extern void fopAcM_setStageLayer__FPv();
-extern "C" extern void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv();
-extern "C" extern void fopAcM_searchFromName__FPCcUlUl();
-extern "C" extern void fpcSch_JudgeByID__FPvPv();
-extern "C" extern void dComIfGs_staffroll_next_go_check__Fv();
-extern "C" extern void daMP_c_THPPlayerPlay__6daMP_cFv();
-extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" extern void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
-extern "C" extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" extern void __ct__17jmessage_tControlFv();
-extern "C" extern void setDemoMessage__12dMsgObject_cFUl();
-extern "C" extern void __dt__Q26JStage6TActorFv();
-extern "C" extern void JSGFGetType__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetShape__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetAnimation__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetAnimationFrame__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetAnimationTransition__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetTextureAnimation__Q26JStage6TActorCFv();
-extern "C" extern void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
-extern "C" extern void __dt__Q26JStage13TAmbientLightFv();
-extern "C" extern void JSGFGetType__Q26JStage13TAmbientLightCFv();
-extern "C" extern void JSGGetColor__Q26JStage13TAmbientLightCFv();
-extern "C" extern void __dt__Q26JStage7TCameraFv();
-extern "C" extern void JSGFGetType__Q26JStage7TCameraCFv();
-extern "C" extern void JSGGetProjectionType__Q26JStage7TCameraCFv();
-extern "C" extern void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
-extern "C" extern void JSGGetProjectionField__Q26JStage7TCameraCFPf();
-extern "C" extern void JSGSetProjectionField__Q26JStage7TCameraFPCf();
-extern "C" extern void JSGGetViewType__Q26JStage7TCameraCFv();
-extern "C" extern void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
-extern "C" extern void __dt__Q26JStage4TFogFv();
-extern "C" extern void JSGFGetType__Q26JStage4TFogCFv();
-extern "C" extern void JSGGetFogFunction__Q26JStage4TFogCFv();
-extern "C" extern void JSGGetStartZ__Q26JStage4TFogCFv();
-extern "C" extern void JSGGetEndZ__Q26JStage4TFogCFv();
-extern "C" extern void JSGGetColor__Q26JStage4TFogCFv();
-extern "C" extern void __dt__Q26JStage6TLightFv();
-extern "C" extern void JSGFGetType__Q26JStage6TLightCFv();
-extern "C" extern void JSGGetLightType__Q26JStage6TLightCFv();
-extern "C" extern void JSGGetColor__Q26JStage6TLightCFv();
-extern "C" extern void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
-extern "C" extern void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
-extern "C" extern void JSGGetPosition__Q26JStage6TLightCFP3Vec();
-extern "C" extern void JSGGetDirection__Q26JStage6TLightCFP3Vec();
-extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
-extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern "C" extern void __dt__Q26JStage7TSystemFv();
-extern "C" extern void JSGFGetType__Q26JStage7TSystemCFv();
-extern "C" extern void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
-extern "C" extern void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
-extern "C" extern void JSGGetSystemData__Q26JStage7TSystemFUl();
-extern "C" extern void JSGSetSystemData__Q26JStage7TSystemFUlUl();
-extern "C" extern void destroyObject_all__Q37JStudio3ctb8TControlFv();
-extern "C" extern void destroyObject_all__Q37JStudio3fvb8TControlFv();
-extern "C" extern void __ct__Q27JStudio8TControlFv();
-extern "C" extern void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory();
-extern "C" extern void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
-extern "C" extern void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
-extern "C" extern void __dt__Q27JStudio13TCreateObjectFv();
-extern "C" extern void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject();
-extern "C" extern void __ct__Q27JStudio6TParseFPQ27JStudio8TControl();
-extern "C" extern void __dt__Q27JStudio6TParseFv();
-extern "C" extern void adaptor_do_prepare__Q27JStudio8TAdaptorFv();
-extern "C" extern void adaptor_do_begin__Q27JStudio8TAdaptorFv();
-extern "C" extern void adaptor_do_end__Q27JStudio8TAdaptorFv();
-extern "C" extern void adaptor_do_update__Q27JStudio8TAdaptorFUl();
-extern "C" extern void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
-extern "C" extern void __dt__Q27JStudio16TAdaptor_messageFv();
-extern "C" extern void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message();
-extern "C" extern void destroyObject_all__Q37JStudio3stb8TControlFv();
-extern "C" extern void reset__Q37JStudio3stb8TControlFv();
-extern "C" extern void forward__Q37JStudio3stb8TControlFUl();
-extern "C" extern void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
-extern "C" extern void __dt__Q217JStudio_JParticle13TCreateObjectFv();
-extern "C" extern void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" extern void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
-extern "C" extern void __dt__Q28JMessage8TControlFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
-extern "C" extern void getIndex__10JUTNameTabCFPCc();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strncmp();
-extern "C" extern void strcmp();
-extern "C" extern void strlen();
+extern "C" void OSReport_Error();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+void fopAcM_setStageLayer(void*);
+extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv();
+void fopAcM_searchFromName(char const*, u32, u32);
+void fpcSch_JudgeByID(void*, void*);
+void dComIfGs_staffroll_next_go_check();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void PSMTXCopy();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+extern "C" void strcmp();
+extern "C" void strlen();
+
+extern "C" void OSReport_Error();
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
+extern "C" void play__14mDoExt_McaMorfFP3VecUlSc();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv();
+extern "C" void fopAcM_searchFromName__FPCcUlUl();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void dComIfGs_staffroll_next_go_check__Fv();
+extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__17jmessage_tControlFv();
+extern "C" void setDemoMessage__12dMsgObject_cFUl();
+extern "C" void __dt__Q26JStage6TActorFv();
+extern "C" s32 JSGFGetType__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetShape__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void __dt__Q26JStage13TAmbientLightFv();
+extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv();
+extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv();
+extern "C" void __dt__Q26JStage7TCameraFv();
+extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv();
+extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
+extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf();
+extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf();
+extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
+extern "C" void __dt__Q26JStage4TFogFv();
+extern "C" s32 JSGFGetType__Q26JStage4TFogCFv();
+extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv();
+extern "C" void JSGGetStartZ__Q26JStage4TFogCFv();
+extern "C" void JSGGetEndZ__Q26JStage4TFogCFv();
+extern "C" void JSGGetColor__Q26JStage4TFogCFv();
+extern "C" void __dt__Q26JStage6TLightFv();
+extern "C" s32 JSGFGetType__Q26JStage6TLightCFv();
+extern "C" bool JSGGetLightType__Q26JStage6TLightCFv();
+extern "C" void JSGGetColor__Q26JStage6TLightCFv();
+extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
+extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
+extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec();
+extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dt__Q26JStage7TSystemFv();
+extern "C" bool JSGFGetType__Q26JStage7TSystemCFv();
+extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
+extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl();
+extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv();
+extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv();
+extern "C" void __ct__Q27JStudio8TControlFv();
+extern "C" void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory();
+extern "C" void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject();
+extern "C" void __ct__Q27JStudio6TParseFPQ27JStudio8TControl();
+extern "C" void __dt__Q27JStudio6TParseFv();
+extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl();
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
+extern "C" void __dt__Q27JStudio16TAdaptor_messageFv();
+extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message();
+extern "C" void destroyObject_all__Q37JStudio3stb8TControlFv();
+extern "C" void reset__Q37JStudio3stb8TControlFv();
+extern "C" void forward__Q37JStudio3stb8TControlFUl();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv();
+extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
+extern "C" void __dt__Q28JMessage8TControlFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void PSMTXCopy();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+extern "C" void strcmp();
+extern "C" void strlen();
 SECTION_DATA extern void*const __vt__Q26JStage6TActor[36];
 SECTION_DATA extern void*const __vt__Q26JStage13TAmbientLight[18];
 SECTION_DATA extern void*const __vt__Q26JStage7TCamera[38];
@@ -288,7 +1040,7 @@ SECTION_SBSS extern u8 mEmitterMng__13dPa_control_c[4];
 // 
 
 /* ############################################################################################## */
-/* 803A7910-803A7928 0018+00 .data      __vt__16dDemo_particle_c                                     */
+/* 803A7910-803A7928 0018+00 rc=2 efc=0 .data      __vt__16dDemo_particle_c                                     */
 void* const __vt__16dDemo_particle_c[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -298,14 +1050,14 @@ void* const __vt__16dDemo_particle_c[6] = {
 	(void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
 };
 
-/* 803A7928-803A7934 000C+00 .data      __vt__17jmessage_tControl                                    */
+/* 803A7928-803A7934 000C+00 rc=2 efc=1 .data      __vt__17jmessage_tControl                                    */
 void* const __vt__17jmessage_tControl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17jmessage_tControlFv,
 };
 
-/* 803A7934-803A7944 0010+00 .data      __vt__Q27JStudio13TCreateObject                              */
+/* 803A7934-803A7944 0010+00 rc=2 efc=1 .data      __vt__Q27JStudio13TCreateObject                              */
 void* const __vt__Q27JStudio13TCreateObject[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -313,7 +1065,7 @@ void* const __vt__Q27JStudio13TCreateObject[4] = {
 	NULL,
 };
 
-/* 803A7944-803A7994 0050+00 .data      __vt__14dDemo_system_c                                       */
+/* 803A7944-803A7994 0050+00 rc=2 efc=0 .data      __vt__14dDemo_system_c                                       */
 void* const __vt__14dDemo_system_c[20] = {
 	NULL, /* RTTI */
 	NULL,
@@ -337,7 +1089,7 @@ void* const __vt__14dDemo_system_c[20] = {
 	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
-/* 803A7994-803A79F0 005C+00 .data      __vt__11dDemo_fog_c                                          */
+/* 803A7994-803A79F0 005C+00 rc=2 efc=0 .data      __vt__11dDemo_fog_c                                          */
 void* const __vt__11dDemo_fog_c[23] = {
 	NULL, /* RTTI */
 	NULL,
@@ -364,7 +1116,7 @@ void* const __vt__11dDemo_fog_c[23] = {
 	(void*)JSGSetColor__11dDemo_fog_cF8_GXColor,
 };
 
-/* 803A79F0-803A7A5C 006C+00 .data      __vt__13dDemo_light_c                                        */
+/* 803A79F0-803A7A5C 006C+00 rc=2 efc=0 .data      __vt__13dDemo_light_c                                        */
 void* const __vt__13dDemo_light_c[27] = {
 	NULL, /* RTTI */
 	NULL,
@@ -395,7 +1147,7 @@ void* const __vt__13dDemo_light_c[27] = {
 	(void*)JSGSetDirection__13dDemo_light_cFRC3Vec,
 };
 
-/* 803A7A5C-803A7AA0 0044+00 .data      __vt__15dDemo_ambient_c                                      */
+/* 803A7A5C-803A7AA0 0044+00 rc=2 efc=0 .data      __vt__15dDemo_ambient_c                                      */
 void* const __vt__15dDemo_ambient_c[17] = {
 	NULL, /* RTTI */
 	NULL,
@@ -416,7 +1168,7 @@ void* const __vt__15dDemo_ambient_c[17] = {
 	(void*)JSGSetColor__15dDemo_ambient_cF8_GXColor,
 };
 
-/* 803A7AA0-803A7B34 0094+00 .data      __vt__14dDemo_camera_c                                       */
+/* 803A7AA0-803A7B34 0094+00 rc=2 efc=0 .data      __vt__14dDemo_camera_c                                       */
 void* const __vt__14dDemo_camera_c[37] = {
 	NULL, /* RTTI */
 	NULL,
@@ -457,7 +1209,7 @@ void* const __vt__14dDemo_camera_c[37] = {
 	(void*)JSGSetViewRoll__14dDemo_camera_cFf,
 };
 
-/* 803A7B34-803A7BC0 008C+00 .data      __vt__13dDemo_actor_c                                        */
+/* 803A7B34-803A7BC0 008C+00 rc=2 efc=0 .data      __vt__13dDemo_actor_c                                        */
 void* const __vt__13dDemo_actor_c[35] = {
 	NULL, /* RTTI */
 	NULL,
@@ -496,7 +1248,7 @@ void* const __vt__13dDemo_actor_c[35] = {
 	(void*)JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv,
 };
 
-/* 803A7BC0-803A7BE4 0024+00 .data      __vt__Q27JStudio16TAdaptor_message                           */
+/* 803A7BC0-803A7BE4 0024+00 rc=2 efc=1 .data      __vt__Q27JStudio16TAdaptor_message                           */
 void* const __vt__Q27JStudio16TAdaptor_message[9] = {
 	NULL, /* RTTI */
 	NULL,
@@ -509,7 +1261,7 @@ void* const __vt__Q27JStudio16TAdaptor_message[9] = {
 	NULL,
 };
 
-/* 803A7BE4-803A7BF4 0010+00 .data      __vt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_message */
+/* 803A7BE4-803A7BF4 0010+00 rc=2 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_message */
 void* const data_803A7BE4[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -517,7 +1269,7 @@ void* const data_803A7BE4[4] = {
 	(void*)func_80037ED4,
 };
 
-/* 803A7BF4-803A7C18 0024+00 .data      __vt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_message     */
+/* 803A7BF4-803A7C18 0024+00 rc=2 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_message     */
 void* const data_803A7BF4[9] = {
 	NULL, /* RTTI */
 	NULL,
@@ -530,44 +1282,44 @@ void* const data_803A7BF4[9] = {
 	(void*)func_80037E44,
 };
 
-/* 80037DE4-80037E44 0060+00 .text      __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv   */
+/* 80037DE4-80037E44 0060+00 rc=1 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80037DE4) {
+extern "C" asm static void func_80037DE4() {
 	nofralloc
 #include "asm/d/d_demo/func_80037DE4.s"
 }
 #pragma pop
 
 
-/* 80037E44-80037E74 0030+00 .text      adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
+/* 80037E44-80037E74 0030+00 rc=1 efc=0 .text      adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80037E44) {
+extern "C" asm static void func_80037E44() {
 	nofralloc
 #include "asm/d/d_demo/func_80037E44.s"
 }
 #pragma pop
 
 
-/* 80037E74-80037ED4 0060+00 .text      __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
+/* 80037E74-80037ED4 0060+00 rc=1 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80037E74) {
+extern "C" asm static void func_80037E74() {
 	nofralloc
 #include "asm/d/d_demo/func_80037E74.s"
 }
 #pragma pop
 
 
-/* 80037ED4-80038020 014C+00 .text      create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 80037ED4-80038020 014C+00 rc=1 efc=0 .text      create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80037ED4) {
+extern "C" asm static void func_80037ED4() {
 	nofralloc
 #include "asm/d/d_demo/func_80037ED4.s"
 }
@@ -575,52 +1327,52 @@ ASM_FUNCTION(func_80037ED4) {
 
 
 /* ############################################################################################## */
-/* 80451DB0-80451DB4 0004+00 .sdata2    @4040                                                        */
+/* 80451DB0-80451DB4 0004+00 rc=9 efc=0 .sdata2    @4040                                                        */
 u8 d_d_demo__lit_4040[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451DB4-80451DB8 0004+00 .sdata2    @4041                                                        */
+/* 80451DB4-80451DB8 0004+00 rc=6 efc=0 .sdata2    @4041                                                        */
 f32 d_d_demo__lit_4041 = 1.0f;
 
-/* 80038020-80038098 0078+00 .text      __ct__13dDemo_actor_cFv                                      */
+/* 80038020-80038098 0078+00 rc=1 efc=0 .text      __ct__13dDemo_actor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dDemo_actor_cFv) {
+asm dDemo_actor_c::dDemo_actor_c() {
 	nofralloc
 #include "asm/d/d_demo/__ct__13dDemo_actor_cFv.s"
 }
 #pragma pop
 
 
-/* 80038098-80038128 0090+00 .text      __dt__13dDemo_actor_cFv                                      */
+/* 80038098-80038128 0090+00 rc=1 efc=0 .text      __dt__13dDemo_actor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dDemo_actor_cFv) {
+asm dDemo_actor_c::~dDemo_actor_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__13dDemo_actor_cFv.s"
 }
 #pragma pop
 
 
-/* 80038128-8003815C 0034+00 .text      getActor__13dDemo_actor_cFv                                  */
+/* 80038128-8003815C 0034+00 rc=1 efc=0 .text      getActor__13dDemo_actor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActor__13dDemo_actor_cFv) {
+asm void dDemo_actor_c::getActor() {
 	nofralloc
 #include "asm/d/d_demo/getActor__13dDemo_actor_cFv.s"
 }
 #pragma pop
 
 
-/* 8003815C-8003819C 0040+00 .text      setActor__13dDemo_actor_cFP10fopAc_ac_c                      */
+/* 8003815C-8003819C 0040+00 rc=2 efc=1 .text      setActor__13dDemo_actor_cFP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActor__13dDemo_actor_cFP10fopAc_ac_c) {
+asm void dDemo_actor_c::setActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_demo/setActor__13dDemo_actor_cFP10fopAc_ac_c.s"
 }
@@ -628,14 +1380,14 @@ ASM_FUNCTION(setActor__13dDemo_actor_cFP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80451DB8-80451DC0 0008+00 .sdata2    @4127                                                        */
+/* 80451DB8-80451DC0 0008+00 rc=4 efc=0 .sdata2    @4127                                                        */
 f64 d_d_demo__lit_4127 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8003819C-80038338 019C+00 .text      getPrm_Morf__13dDemo_actor_cFv                               */
+/* 8003819C-80038338 019C+00 rc=2 efc=1 .text      getPrm_Morf__13dDemo_actor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPrm_Morf__13dDemo_actor_cFv) {
+asm void dDemo_actor_c::getPrm_Morf() {
 	nofralloc
 #include "asm/d/d_demo/getPrm_Morf__13dDemo_actor_cFv.s"
 }
@@ -643,87 +1395,87 @@ ASM_FUNCTION(getPrm_Morf__13dDemo_actor_cFv) {
 
 
 /* ############################################################################################## */
-/* 80424648-8042465C 0014+00 .bss       dummy$4203                                                   */
+/* 80424648-8042465C 0014+00 rc=1 efc=0 .bss       dummy$4203                                                   */
 u8 data_80424648[20];
 
-/* 80450E00-80450E04 0004+00 .sbss      m_system__7dDemo_c                                           */
+/* 80450E00-80450E04 0004+00 rc=2 efc=0 .sbss      m_system__7dDemo_c                                           */
 u8 m_system__7dDemo_c[4];
 
-/* 80450E04-80450E08 0004+00 .sbss      m_control__7dDemo_c                                          */
+/* 80450E04-80450E08 0004+00 rc=9 efc=3 .sbss      m_control__7dDemo_c                                          */
 u8 m_control__7dDemo_c[4];
 
-/* 80450E08-80450E0C 0004+00 .sbss      m_stage__7dDemo_c                                            */
+/* 80450E08-80450E0C 0004+00 rc=2 efc=0 .sbss      m_stage__7dDemo_c                                            */
 u8 m_stage__7dDemo_c[4];
 
-/* 80450E0C-80450E10 0004+00 .sbss      m_audio__7dDemo_c                                            */
+/* 80450E0C-80450E10 0004+00 rc=2 efc=0 .sbss      m_audio__7dDemo_c                                            */
 u8 m_audio__7dDemo_c[4];
 
-/* 80450E10-80450E14 0004+00 .sbss      m_particle__7dDemo_c                                         */
+/* 80450E10-80450E14 0004+00 rc=2 efc=0 .sbss      m_particle__7dDemo_c                                         */
 u8 m_particle__7dDemo_c[4];
 
-/* 80450E14-80450E18 0004+00 .sbss      m_message__7dDemo_c                                          */
+/* 80450E14-80450E18 0004+00 rc=2 efc=0 .sbss      m_message__7dDemo_c                                          */
 u8 m_message__7dDemo_c[4];
 
-/* 80450E18-80450E1C 0004+00 .sbss      m_factory__7dDemo_c                                          */
+/* 80450E18-80450E1C 0004+00 rc=2 efc=0 .sbss      m_factory__7dDemo_c                                          */
 u8 m_factory__7dDemo_c[4];
 
-/* 80450E1C-80450E20 0004+00 .sbss      m_mesgControl__7dDemo_c                                      */
+/* 80450E1C-80450E20 0004+00 rc=3 efc=1 .sbss      m_mesgControl__7dDemo_c                                      */
 u8 m_mesgControl__7dDemo_c[4];
 
-/* 80450E20-80450E24 0004+00 .sbss      m_object__7dDemo_c                                           */
+/* 80450E20-80450E24 0004+00 rc=14 efc=9 .sbss      m_object__7dDemo_c                                           */
 u8 m_object__7dDemo_c[4];
 
-/* 80450E24-80450E28 0004+00 .sbss      m_data__7dDemo_c                                             */
+/* 80450E24-80450E28 0004+00 rc=4 efc=0 .sbss      m_data__7dDemo_c                                             */
 u8 m_data__7dDemo_c[4];
 
-/* 80450E28-80450E2C 0004+00 .sbss      m_frame__7dDemo_c                                            */
+/* 80450E28-80450E2C 0004+00 rc=2 efc=0 .sbss      m_frame__7dDemo_c                                            */
 u8 m_frame__7dDemo_c[4];
 
-/* 80450E2C-80450E30 0004+00 .sbss      m_translation__7dDemo_c                                      */
+/* 80450E2C-80450E30 0004+00 rc=2 efc=0 .sbss      m_translation__7dDemo_c                                      */
 u8 m_translation__7dDemo_c[4];
 
-/* 80450E30-80450E34 0004+00 .sbss      m_rotationY__7dDemo_c                                        */
+/* 80450E30-80450E34 0004+00 rc=2 efc=0 .sbss      m_rotationY__7dDemo_c                                        */
 u8 m_rotationY__7dDemo_c[4];
 
-/* 80450E34-80450E38 0004+00 .sbss      m_frameNoMsg__7dDemo_c                                       */
+/* 80450E34-80450E38 0004+00 rc=3 efc=1 .sbss      m_frameNoMsg__7dDemo_c                                       */
 u8 m_frameNoMsg__7dDemo_c[4];
 
-/* 80450E38-80450E3C 0004+00 .sbss      m_mode__7dDemo_c                                             */
+/* 80450E38-80450E3C 0004+00 rc=8 efc=4 .sbss      m_mode__7dDemo_c                                             */
 u8 m_mode__7dDemo_c[4];
 
-/* 80450E3C-80450E40 0004+00 .sbss      m_status__7dDemo_c                                           */
+/* 80450E3C-80450E40 0004+00 rc=3 efc=1 .sbss      m_status__7dDemo_c                                           */
 u8 m_status__7dDemo_c[4];
 
-/* 80450E40-80450E44 0002+02 .sbss      m_branchType__7dDemo_c                                       */
+/* 80450E40-80450E44 0002+02 rc=2 efc=0 .sbss      m_branchType__7dDemo_c                                       */
 u8 m_branchType__7dDemo_c[2 + 2 /* padding */];
 
-/* 80450E44-80450E48 0004+00 .sbss      m_branchData__7dDemo_c                                       */
+/* 80450E44-80450E48 0004+00 rc=5 efc=0 .sbss      m_branchData__7dDemo_c                                       */
 u8 m_branchData__7dDemo_c[4];
 
-/* 80450E48-80450E4C 0004+00 .sbss      None                                                         */
+/* 80450E48-80450E4C 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 struct_80450E48[4];
 /* 80450E48 0001 data_80450E48 */
 /* 80450E49 0003 data_80450E49 */
 
-/* 80450E4C-80450E50 0004+00 .sbss      it$4206                                                      */
+/* 80450E4C-80450E50 0004+00 rc=1 efc=0 .sbss      it$4206                                                      */
 u8 data_80450E4C[4];
 
-/* 80038338-80038490 0158+00 .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
+/* 80038338-80038490 0158+00 rc=1 efc=1 .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc) {
+asm void dDemo_actor_c::getDemoIDData(s32* field_0, s32* field_1, s32* field_2, u16* field_3, char* field_4) {
 	nofralloc
 #include "asm/d/d_demo/getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc.s"
 }
 #pragma pop
 
 
-/* 80038490-80038518 0088+00 .text      dDemo_getJaiPointer__FPCcUliPUs                              */
+/* 80038490-80038518 0088+00 rc=1 efc=0 .text      dDemo_getJaiPointer__FPCcUliPUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dDemo_getJaiPointer__FPCcUliPUs) {
+asm static void dDemo_getJaiPointer(char const* field_0, u32 field_1, s32 field_2, u16* field_3) {
 	nofralloc
 #include "asm/d/d_demo/dDemo_getJaiPointer__FPCcUliPUs.s"
 }
@@ -731,25 +1483,25 @@ ASM_FUNCTION(dDemo_getJaiPointer__FPCcUliPUs) {
 
 
 /* ############################################################################################## */
-/* 80451DC0-80451DC4 0004+00 .sdata2    @4152                                                        */
+/* 80451DC0-80451DC4 0004+00 rc=1 efc=0 .sdata2    @4152                                                        */
 f32 d_d_demo__lit_4152 = -1.0f;
 
-/* 80038518-800387A8 0290+00 .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
+/* 80038518-800387A8 0290+00 rc=0 efc=0 .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc) {
+asm void dDemo_setDemoData(fopAc_ac_c* field_0, char field_1, mDoExt_McaMorf* field_2, char const* field_3, s32 field_4, u16* field_5, u32 field_6, char field_7) {
 	nofralloc
 #include "asm/d/d_demo/dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc.s"
 }
 #pragma pop
 
 
-/* 800387A8-800387EC 0044+00 .text      branchFile__FPCc                                             */
+/* 800387A8-800387EC 0044+00 rc=1 efc=0 .text      branchFile__FPCc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(branchFile__FPCc) {
+asm static void branchFile(char const* field_0) {
 	nofralloc
 #include "asm/d/d_demo/branchFile__FPCc.s"
 }
@@ -757,7 +1509,7 @@ ASM_FUNCTION(branchFile__FPCc) {
 
 
 /* ############################################################################################## */
-/* 803797F8-80379840 0046+02 .rodata    @stringBase0                                                 */
+/* 803797F8-80379840 0046+02 rc=3 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -769,15 +1521,15 @@ SECTION_DEAD char* const stringBase_8037981E = "デモデータ再読み込み�
 SECTION_DEAD char* const pad_8037983E = "\0";
 #pragma pop
 
-/* 80450620-80450628 0002+06 .sdata     m_branchId__7dDemo_c                                         */
+/* 80450620-80450628 0002+06 rc=4 efc=1 .sdata     m_branchId__7dDemo_c                                         */
 u16 m_branchId__7dDemo_c = 0xFFFF;
 /* padding 6 bytes */
 
-/* 800387EC-80038920 0134+00 .text      JSGSetData__13dDemo_actor_cFUlPCvUl                          */
+/* 800387EC-80038920 0134+00 rc=1 efc=0 .text      JSGSetData__13dDemo_actor_cFUlPCvUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetData__13dDemo_actor_cFUlPCvUl) {
+asm void dDemo_actor_c::JSGSetData(u32 field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetData__13dDemo_actor_cFUlPCvUl.s"
 }
@@ -785,28 +1537,28 @@ ASM_FUNCTION(JSGSetData__13dDemo_actor_cFUlPCvUl) {
 
 
 /* ############################################################################################## */
-/* 80451DC4-80451DC8 0004+00 .sdata2    @4553                                                        */
+/* 80451DC4-80451DC8 0004+00 rc=1 efc=0 .sdata2    @4553                                                        */
 f32 d_d_demo__lit_4553 = -1.0000000331813535e+32f;
 
-/* 80451DC8-80451DCC 0004+00 .sdata2    @4554                                                        */
+/* 80451DC8-80451DCC 0004+00 rc=1 efc=0 .sdata2    @4554                                                        */
 f32 d_d_demo__lit_4554 = 1.0000000331813535e+32f;
 
-/* 80038920-80038980 0060+00 .text      JSGSetTranslation__13dDemo_actor_cFRC3Vec                    */
+/* 80038920-80038980 0060+00 rc=1 efc=0 .text      JSGSetTranslation__13dDemo_actor_cFRC3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetTranslation__13dDemo_actor_cFRC3Vec) {
+asm void dDemo_actor_c::JSGSetTranslation(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetTranslation__13dDemo_actor_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038980-800389A8 0028+00 .text      JSGSetScaling__13dDemo_actor_cFRC3Vec                        */
+/* 80038980-800389A8 0028+00 rc=1 efc=0 .text      JSGSetScaling__13dDemo_actor_cFRC3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetScaling__13dDemo_actor_cFRC3Vec) {
+asm void dDemo_actor_c::JSGSetScaling(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetScaling__13dDemo_actor_cFRC3Vec.s"
 }
@@ -814,135 +1566,135 @@ ASM_FUNCTION(JSGSetScaling__13dDemo_actor_cFRC3Vec) {
 
 
 /* ############################################################################################## */
-/* 80451DCC-80451DD0 0004+00 .sdata2    @4567                                                        */
+/* 80451DCC-80451DD0 0004+00 rc=1 efc=0 .sdata2    @4567                                                        */
 f32 d_d_demo__lit_4567 = 182.04444885253906f;
 
-/* 800389A8-80038A0C 0064+00 .text      JSGSetRotation__13dDemo_actor_cFRC3Vec                       */
+/* 800389A8-80038A0C 0064+00 rc=1 efc=0 .text      JSGSetRotation__13dDemo_actor_cFRC3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetRotation__13dDemo_actor_cFRC3Vec) {
+asm void dDemo_actor_c::JSGSetRotation(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetRotation__13dDemo_actor_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038A0C-80038A20 0014+00 .text      JSGSetShape__13dDemo_actor_cFUl                              */
+/* 80038A0C-80038A20 0014+00 rc=1 efc=0 .text      JSGSetShape__13dDemo_actor_cFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetShape__13dDemo_actor_cFUl) {
+asm void dDemo_actor_c::JSGSetShape(u32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetShape__13dDemo_actor_cFUl.s"
 }
 #pragma pop
 
 
-/* 80038A20-80038A40 0020+00 .text      JSGSetAnimation__13dDemo_actor_cFUl                          */
+/* 80038A20-80038A40 0020+00 rc=1 efc=0 .text      JSGSetAnimation__13dDemo_actor_cFUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetAnimation__13dDemo_actor_cFUl) {
+asm void dDemo_actor_c::JSGSetAnimation(u32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetAnimation__13dDemo_actor_cFUl.s"
 }
 #pragma pop
 
 
-/* 80038A40-80038A54 0014+00 .text      JSGSetAnimationFrame__13dDemo_actor_cFf                      */
+/* 80038A40-80038A54 0014+00 rc=1 efc=0 .text      JSGSetAnimationFrame__13dDemo_actor_cFf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetAnimationFrame__13dDemo_actor_cFf) {
+asm void dDemo_actor_c::JSGSetAnimationFrame(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetAnimationFrame__13dDemo_actor_cFf.s"
 }
 #pragma pop
 
 
-/* 80038A54-80038A68 0014+00 .text      JSGSetAnimationTransition__13dDemo_actor_cFf                 */
+/* 80038A54-80038A68 0014+00 rc=1 efc=0 .text      JSGSetAnimationTransition__13dDemo_actor_cFf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetAnimationTransition__13dDemo_actor_cFf) {
+asm void dDemo_actor_c::JSGSetAnimationTransition(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetAnimationTransition__13dDemo_actor_cFf.s"
 }
 #pragma pop
 
 
-/* 80038A68-80038A7C 0014+00 .text      JSGSetTextureAnimation__13dDemo_actor_cFUl                   */
+/* 80038A68-80038A7C 0014+00 rc=1 efc=0 .text      JSGSetTextureAnimation__13dDemo_actor_cFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetTextureAnimation__13dDemo_actor_cFUl) {
+asm void dDemo_actor_c::JSGSetTextureAnimation(u32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetTextureAnimation__13dDemo_actor_cFUl.s"
 }
 #pragma pop
 
 
-/* 80038A7C-80038A90 0014+00 .text      JSGSetTextureAnimationFrame__13dDemo_actor_cFf               */
+/* 80038A7C-80038A90 0014+00 rc=1 efc=0 .text      JSGSetTextureAnimationFrame__13dDemo_actor_cFf               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetTextureAnimationFrame__13dDemo_actor_cFf) {
+asm void dDemo_actor_c::JSGSetTextureAnimationFrame(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetTextureAnimationFrame__13dDemo_actor_cFf.s"
 }
 #pragma pop
 
 
-/* 80038A90-80038AC4 0034+00 .text      getView__Fv                                                  */
+/* 80038A90-80038AC4 0034+00 rc=8 efc=0 .text      getView__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getView__Fv) {
+asm static void getView() {
 	nofralloc
 #include "asm/d/d_demo/getView__Fv.s"
 }
 #pragma pop
 
 
-/* 80038AC4-80038AF8 0034+00 .text      JSGGetProjectionNear__14dDemo_camera_cCFv                    */
+/* 80038AC4-80038AF8 0034+00 rc=1 efc=0 .text      JSGGetProjectionNear__14dDemo_camera_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetProjectionNear__14dDemo_camera_cCFv) {
+asm void dDemo_camera_c::JSGGetProjectionNear() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetProjectionNear__14dDemo_camera_cCFv.s"
 }
 #pragma pop
 
 
-/* 80038AF8-80038B0C 0014+00 .text      JSGSetProjectionNear__14dDemo_camera_cFf                     */
+/* 80038AF8-80038B0C 0014+00 rc=1 efc=0 .text      JSGSetProjectionNear__14dDemo_camera_cFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetProjectionNear__14dDemo_camera_cFf) {
+asm void dDemo_camera_c::JSGSetProjectionNear(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetProjectionNear__14dDemo_camera_cFf.s"
 }
 #pragma pop
 
 
-/* 80038B0C-80038B40 0034+00 .text      JSGGetProjectionFar__14dDemo_camera_cCFv                     */
+/* 80038B0C-80038B40 0034+00 rc=1 efc=0 .text      JSGGetProjectionFar__14dDemo_camera_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetProjectionFar__14dDemo_camera_cCFv) {
+asm void dDemo_camera_c::JSGGetProjectionFar() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetProjectionFar__14dDemo_camera_cCFv.s"
 }
 #pragma pop
 
 
-/* 80038B40-80038B54 0014+00 .text      JSGSetProjectionFar__14dDemo_camera_cFf                      */
+/* 80038B40-80038B54 0014+00 rc=1 efc=0 .text      JSGSetProjectionFar__14dDemo_camera_cFf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetProjectionFar__14dDemo_camera_cFf) {
+asm void dDemo_camera_c::JSGSetProjectionFar(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetProjectionFar__14dDemo_camera_cFf.s"
 }
@@ -950,25 +1702,25 @@ ASM_FUNCTION(JSGSetProjectionFar__14dDemo_camera_cFf) {
 
 
 /* ############################################################################################## */
-/* 80451DD0-80451DD4 0004+00 .sdata2    @4642                                                        */
+/* 80451DD0-80451DD4 0004+00 rc=1 efc=0 .sdata2    @4642                                                        */
 f32 d_d_demo__lit_4642 = 60.0f;
 
-/* 80038B54-80038B88 0034+00 .text      JSGGetProjectionFovy__14dDemo_camera_cCFv                    */
+/* 80038B54-80038B88 0034+00 rc=1 efc=0 .text      JSGGetProjectionFovy__14dDemo_camera_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetProjectionFovy__14dDemo_camera_cCFv) {
+asm void dDemo_camera_c::JSGGetProjectionFovy() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetProjectionFovy__14dDemo_camera_cCFv.s"
 }
 #pragma pop
 
 
-/* 80038B88-80038B9C 0014+00 .text      JSGSetProjectionFovy__14dDemo_camera_cFf                     */
+/* 80038B88-80038B9C 0014+00 rc=1 efc=0 .text      JSGSetProjectionFovy__14dDemo_camera_cFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetProjectionFovy__14dDemo_camera_cFf) {
+asm void dDemo_camera_c::JSGSetProjectionFovy(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetProjectionFovy__14dDemo_camera_cFf.s"
 }
@@ -976,91 +1728,91 @@ ASM_FUNCTION(JSGSetProjectionFovy__14dDemo_camera_cFf) {
 
 
 /* ############################################################################################## */
-/* 80451DD4-80451DD8 0004+00 .sdata2    @4655                                                        */
+/* 80451DD4-80451DD8 0004+00 rc=1 efc=0 .sdata2    @4655                                                        */
 f32 d_d_demo__lit_4655 = 19.0f / 14.0f;
 
-/* 80038B9C-80038BD0 0034+00 .text      JSGGetProjectionAspect__14dDemo_camera_cCFv                  */
+/* 80038B9C-80038BD0 0034+00 rc=1 efc=0 .text      JSGGetProjectionAspect__14dDemo_camera_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetProjectionAspect__14dDemo_camera_cCFv) {
+asm void dDemo_camera_c::JSGGetProjectionAspect() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetProjectionAspect__14dDemo_camera_cCFv.s"
 }
 #pragma pop
 
 
-/* 80038BD0-80038BE4 0014+00 .text      JSGSetProjectionAspect__14dDemo_camera_cFf                   */
+/* 80038BD0-80038BE4 0014+00 rc=1 efc=0 .text      JSGSetProjectionAspect__14dDemo_camera_cFf                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetProjectionAspect__14dDemo_camera_cFf) {
+asm void dDemo_camera_c::JSGSetProjectionAspect(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetProjectionAspect__14dDemo_camera_cFf.s"
 }
 #pragma pop
 
 
-/* 80038BE4-80038C44 0060+00 .text      JSGGetViewPosition__14dDemo_camera_cCFP3Vec                  */
+/* 80038BE4-80038C44 0060+00 rc=1 efc=0 .text      JSGGetViewPosition__14dDemo_camera_cCFP3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetViewPosition__14dDemo_camera_cCFP3Vec) {
+asm void dDemo_camera_c::JSGGetViewPosition(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetViewPosition__14dDemo_camera_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* 80038C44-80038C6C 0028+00 .text      JSGSetViewPosition__14dDemo_camera_cFRC3Vec                  */
+/* 80038C44-80038C6C 0028+00 rc=1 efc=0 .text      JSGSetViewPosition__14dDemo_camera_cFRC3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetViewPosition__14dDemo_camera_cFRC3Vec) {
+asm void dDemo_camera_c::JSGSetViewPosition(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetViewPosition__14dDemo_camera_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038C6C-80038CD0 0064+00 .text      JSGGetViewUpVector__14dDemo_camera_cCFP3Vec                  */
+/* 80038C6C-80038CD0 0064+00 rc=1 efc=0 .text      JSGGetViewUpVector__14dDemo_camera_cCFP3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetViewUpVector__14dDemo_camera_cCFP3Vec) {
+asm void dDemo_camera_c::JSGGetViewUpVector(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetViewUpVector__14dDemo_camera_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* 80038CD0-80038CF8 0028+00 .text      JSGSetViewUpVector__14dDemo_camera_cFRC3Vec                  */
+/* 80038CD0-80038CF8 0028+00 rc=1 efc=0 .text      JSGSetViewUpVector__14dDemo_camera_cFRC3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetViewUpVector__14dDemo_camera_cFRC3Vec) {
+asm void dDemo_camera_c::JSGSetViewUpVector(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetViewUpVector__14dDemo_camera_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038CF8-80038D5C 0064+00 .text      JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec            */
+/* 80038CF8-80038D5C 0064+00 rc=1 efc=0 .text      JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec) {
+asm void dDemo_camera_c::JSGGetViewTargetPosition(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* 80038D5C-80038D84 0028+00 .text      JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec            */
+/* 80038D5C-80038D84 0028+00 rc=1 efc=0 .text      JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec) {
+asm void dDemo_camera_c::JSGSetViewTargetPosition(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec.s"
 }
@@ -1068,301 +1820,301 @@ ASM_FUNCTION(JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec) {
 
 
 /* ############################################################################################## */
-/* 80451DD8-80451DE0 0004+04 .sdata2    @4710                                                        */
+/* 80451DD8-80451DE0 0004+04 rc=2 efc=0 .sdata2    @4710                                                        */
 f32 d_d_demo__lit_4710 = 0.0054931640625f;
 /* padding 4 bytes */
 
-/* 80038D84-80038DDC 0058+00 .text      JSGGetViewRoll__14dDemo_camera_cCFv                          */
+/* 80038D84-80038DDC 0058+00 rc=1 efc=0 .text      JSGGetViewRoll__14dDemo_camera_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetViewRoll__14dDemo_camera_cCFv) {
+asm void dDemo_camera_c::JSGGetViewRoll() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetViewRoll__14dDemo_camera_cCFv.s"
 }
 #pragma pop
 
 
-/* 80038DDC-80038DF0 0014+00 .text      JSGSetViewRoll__14dDemo_camera_cFf                           */
+/* 80038DDC-80038DF0 0014+00 rc=1 efc=0 .text      JSGSetViewRoll__14dDemo_camera_cFf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetViewRoll__14dDemo_camera_cFf) {
+asm void dDemo_camera_c::JSGSetViewRoll(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetViewRoll__14dDemo_camera_cFf.s"
 }
 #pragma pop
 
 
-/* 80038DF0-80038E20 0030+00 .text      JSGSetColor__15dDemo_ambient_cF8_GXColor                     */
+/* 80038DF0-80038E20 0030+00 rc=1 efc=0 .text      JSGSetColor__15dDemo_ambient_cF8_GXColor                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetColor__15dDemo_ambient_cF8_GXColor) {
+asm void dDemo_ambient_c::JSGSetColor(_GXColor field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetColor__15dDemo_ambient_cF8_GXColor.s"
 }
 #pragma pop
 
 
-/* 80038E20-80038E34 0014+00 .text      JSGSetLightType__13dDemo_light_cFQ26JStage7TELight           */
+/* 80038E20-80038E34 0014+00 rc=1 efc=0 .text      JSGSetLightType__13dDemo_light_cFQ26JStage7TELight           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetLightType__13dDemo_light_cFQ26JStage7TELight) {
+asm void dDemo_light_c::JSGSetLightType(JStage::TELight field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetLightType__13dDemo_light_cFQ26JStage7TELight.s"
 }
 #pragma pop
 
 
-/* 80038E34-80038E5C 0028+00 .text      JSGSetPosition__13dDemo_light_cFRC3Vec                       */
+/* 80038E34-80038E5C 0028+00 rc=1 efc=0 .text      JSGSetPosition__13dDemo_light_cFRC3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetPosition__13dDemo_light_cFRC3Vec) {
+asm void dDemo_light_c::JSGSetPosition(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetPosition__13dDemo_light_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038E5C-80038E8C 0030+00 .text      JSGSetColor__13dDemo_light_cF8_GXColor                       */
+/* 80038E5C-80038E8C 0030+00 rc=1 efc=0 .text      JSGSetColor__13dDemo_light_cF8_GXColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetColor__13dDemo_light_cF8_GXColor) {
+asm void dDemo_light_c::JSGSetColor(_GXColor field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetColor__13dDemo_light_cF8_GXColor.s"
 }
 #pragma pop
 
 
-/* 80038E8C-80038EA8 001C+00 .text      JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn */
+/* 80038E8C-80038EA8 001C+00 rc=1 efc=0 .text      JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn) {
+asm void dDemo_light_c::JSGSetDistanceAttenuation(f32 field_0, f32 field_1, _GXDistAttnFn field_2) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn.s"
 }
 #pragma pop
 
 
-/* 80038EA8-80038EC0 0018+00 .text      JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn          */
+/* 80038EA8-80038EC0 0018+00 rc=1 efc=0 .text      JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn) {
+asm void dDemo_light_c::JSGSetAngleAttenuation(f32 field_0, _GXSpotFn field_1) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn.s"
 }
 #pragma pop
 
 
-/* 80038EC0-80038EE8 0028+00 .text      JSGSetDirection__13dDemo_light_cFRC3Vec                      */
+/* 80038EC0-80038EE8 0028+00 rc=1 efc=0 .text      JSGSetDirection__13dDemo_light_cFRC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetDirection__13dDemo_light_cFRC3Vec) {
+asm void dDemo_light_c::JSGSetDirection(Vec const& field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetDirection__13dDemo_light_cFRC3Vec.s"
 }
 #pragma pop
 
 
-/* 80038EE8-80038EFC 0014+00 .text      JSGSetFogFunction__11dDemo_fog_cF10_GXFogType                */
+/* 80038EE8-80038EFC 0014+00 rc=1 efc=0 .text      JSGSetFogFunction__11dDemo_fog_cF10_GXFogType                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetFogFunction__11dDemo_fog_cF10_GXFogType) {
+asm void dDemo_fog_c::JSGSetFogFunction(_GXFogType field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetFogFunction__11dDemo_fog_cF10_GXFogType.s"
 }
 #pragma pop
 
 
-/* 80038EFC-80038F10 0014+00 .text      JSGSetStartZ__11dDemo_fog_cFf                                */
+/* 80038EFC-80038F10 0014+00 rc=1 efc=0 .text      JSGSetStartZ__11dDemo_fog_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetStartZ__11dDemo_fog_cFf) {
+asm void dDemo_fog_c::JSGSetStartZ(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetStartZ__11dDemo_fog_cFf.s"
 }
 #pragma pop
 
 
-/* 80038F10-80038F24 0014+00 .text      JSGSetEndZ__11dDemo_fog_cFf                                  */
+/* 80038F10-80038F24 0014+00 rc=1 efc=0 .text      JSGSetEndZ__11dDemo_fog_cFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetEndZ__11dDemo_fog_cFf) {
+asm void dDemo_fog_c::JSGSetEndZ(f32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetEndZ__11dDemo_fog_cFf.s"
 }
 #pragma pop
 
 
-/* 80038F24-80038F54 0030+00 .text      JSGSetColor__11dDemo_fog_cF8_GXColor                         */
+/* 80038F24-80038F54 0030+00 rc=1 efc=0 .text      JSGSetColor__11dDemo_fog_cF8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGSetColor__11dDemo_fog_cF8_GXColor) {
+asm void dDemo_fog_c::JSGSetColor(_GXColor field_0) {
 	nofralloc
 #include "asm/d/d_demo/JSGSetColor__11dDemo_fog_cF8_GXColor.s"
 }
 #pragma pop
 
 
-/* 80038F54-80038F70 001C+00 .text      __ct__14dDemo_object_cFv                                     */
+/* 80038F54-80038F70 001C+00 rc=1 efc=0 .text      __ct__14dDemo_object_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dDemo_object_cFv) {
+asm dDemo_object_c::dDemo_object_c() {
 	nofralloc
 #include "asm/d/d_demo/__ct__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 80038F70-80038FC0 0050+00 .text      __dt__14dDemo_object_cFv                                     */
+/* 80038F70-80038FC0 0050+00 rc=1 efc=0 .text      __dt__14dDemo_object_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dDemo_object_cFv) {
+asm dDemo_object_c::~dDemo_object_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 80038FC0-80039088 00C8+00 .text      appendActor__14dDemo_object_cFP10fopAc_ac_c                  */
+/* 80038FC0-80039088 00C8+00 rc=1 efc=0 .text      appendActor__14dDemo_object_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appendActor__14dDemo_object_cFP10fopAc_ac_c) {
+asm void dDemo_object_c::appendActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_demo/appendActor__14dDemo_object_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80039088-800390AC 0024+00 .text      getActor__14dDemo_object_cFUc                                */
+/* 80039088-800390AC 0024+00 rc=8 efc=6 .text      getActor__14dDemo_object_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActor__14dDemo_object_cFUc) {
+asm void dDemo_object_c::getActor(char field_0) {
 	nofralloc
 #include "asm/d/d_demo/getActor__14dDemo_object_cFUc.s"
 }
 #pragma pop
 
 
-/* 800390AC-80039128 007C+00 .text      createCamera__14dDemo_object_cFv                             */
+/* 800390AC-80039128 007C+00 rc=1 efc=0 .text      createCamera__14dDemo_object_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createCamera__14dDemo_object_cFv) {
+asm void dDemo_object_c::createCamera() {
 	nofralloc
 #include "asm/d/d_demo/createCamera__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 80039128-8003913C 0014+00 .text      getActiveCamera__14dDemo_object_cFv                          */
+/* 80039128-8003913C 0014+00 rc=3 efc=3 .text      getActiveCamera__14dDemo_object_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActiveCamera__14dDemo_object_cFv) {
+asm void dDemo_object_c::getActiveCamera() {
 	nofralloc
 #include "asm/d/d_demo/getActiveCamera__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 8003913C-800391B8 007C+00 .text      createAmbient__14dDemo_object_cFv                            */
+/* 8003913C-800391B8 007C+00 rc=1 efc=0 .text      createAmbient__14dDemo_object_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createAmbient__14dDemo_object_cFv) {
+asm void dDemo_object_c::createAmbient() {
 	nofralloc
 #include "asm/d/d_demo/createAmbient__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 800391B8-80039258 00A0+00 .text      appendLight__14dDemo_object_cFv                              */
+/* 800391B8-80039258 00A0+00 rc=1 efc=0 .text      appendLight__14dDemo_object_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appendLight__14dDemo_object_cFv) {
+asm void dDemo_object_c::appendLight() {
 	nofralloc
 #include "asm/d/d_demo/appendLight__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 80039258-800392D4 007C+00 .text      createFog__14dDemo_object_cFv                                */
+/* 80039258-800392D4 007C+00 rc=1 efc=0 .text      createFog__14dDemo_object_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createFog__14dDemo_object_cFv) {
+asm void dDemo_object_c::createFog() {
 	nofralloc
 #include "asm/d/d_demo/createFog__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 800392D4-80039408 0134+00 .text      remove__14dDemo_object_cFv                                   */
+/* 800392D4-80039408 0134+00 rc=2 efc=0 .text      remove__14dDemo_object_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__14dDemo_object_cFv) {
+asm void dDemo_object_c::remove() {
 	nofralloc
 #include "asm/d/d_demo/remove__14dDemo_object_cFv.s"
 }
 #pragma pop
 
 
-/* 80039408-80039468 0060+00 .text      __dt__11dDemo_fog_cFv                                        */
+/* 80039408-80039468 0060+00 rc=1 efc=0 .text      __dt__11dDemo_fog_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dDemo_fog_cFv) {
+asm dDemo_fog_c::~dDemo_fog_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__11dDemo_fog_cFv.s"
 }
 #pragma pop
 
 
-/* 80039468-800394C8 0060+00 .text      __dt__13dDemo_light_cFv                                      */
+/* 80039468-800394C8 0060+00 rc=1 efc=0 .text      __dt__13dDemo_light_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dDemo_light_cFv) {
+asm dDemo_light_c::~dDemo_light_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__13dDemo_light_cFv.s"
 }
 #pragma pop
 
 
-/* 800394C8-80039528 0060+00 .text      __dt__15dDemo_ambient_cFv                                    */
+/* 800394C8-80039528 0060+00 rc=1 efc=0 .text      __dt__15dDemo_ambient_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dDemo_ambient_cFv) {
+asm dDemo_ambient_c::~dDemo_ambient_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__15dDemo_ambient_cFv.s"
 }
 #pragma pop
 
 
-/* 80039528-80039678 0150+00 .text      JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+/* 80039528-80039678 0150+00 rc=1 efc=0 .text      JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject) {
+asm void dDemo_system_c::JSGFindObject(JStage::TObject** field_0, char const* field_1, JStage::TEObject field_2) const {
 	nofralloc
 #include "asm/d/d_demo/JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject.s"
 }
@@ -1370,47 +2122,47 @@ ASM_FUNCTION(JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TE
 
 
 /* ############################################################################################## */
-/* 80451DE0-80451DE8 0008+00 .sdata2    @5123                                                        */
+/* 80451DE0-80451DE8 0008+00 rc=1 efc=0 .sdata2    @5123                                                        */
 f64 d_d_demo__lit_5123 = 0.03333333507180214;
 
-/* 80039678-80039910 0298+00 .text      create__7dDemo_cFv                                           */
+/* 80039678-80039910 0298+00 rc=1 efc=1 .text      create__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__7dDemo_cFv) {
+asm void dDemo_c::create() {
 	nofralloc
 #include "asm/d/d_demo/create__7dDemo_cFv.s"
 }
 #pragma pop
 
 
-/* 80039910-80039AAC 019C+00 .text      remove__7dDemo_cFv                                           */
+/* 80039910-80039AAC 019C+00 rc=1 efc=1 .text      remove__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__7dDemo_cFv) {
+asm void dDemo_c::remove() {
 	nofralloc
 #include "asm/d/d_demo/remove__7dDemo_cFv.s"
 }
 #pragma pop
 
 
-/* 80039AAC-80039B0C 0060+00 .text      __dt__14dDemo_system_cFv                                     */
+/* 80039AAC-80039B0C 0060+00 rc=1 efc=0 .text      __dt__14dDemo_system_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dDemo_system_cFv) {
+asm dDemo_system_c::~dDemo_system_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__14dDemo_system_cFv.s"
 }
 #pragma pop
 
 
-/* 80039B0C-80039B6C 0060+00 .text      __dt__17jmessage_tControlFv                                  */
+/* 80039B0C-80039B6C 0060+00 rc=1 efc=0 .text      __dt__17jmessage_tControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17jmessage_tControlFv) {
+asm jmessage_tControl::~jmessage_tControl() {
 	nofralloc
 #include "asm/d/d_demo/__dt__17jmessage_tControlFv.s"
 }
@@ -1418,42 +2170,42 @@ ASM_FUNCTION(__dt__17jmessage_tControlFv) {
 
 
 /* ############################################################################################## */
-/* 8042465C-80424668 000C+00 .bss       @5233                                                        */
+/* 8042465C-80424668 000C+00 rc=1 efc=0 .bss       @5233                                                        */
 u8 d_d_demo__lit_5233[12];
 
-/* 80424668-80424678 000C+04 .bss       l_translation$5232                                           */
+/* 80424668-80424678 000C+04 rc=1 efc=0 .bss       l_translation$5232                                           */
 u8 data_80424668[12 + 4 /* padding */];
 
-/* 80450E50-80450E58 0008+00 .sbss      None                                                         */
+/* 80450E50-80450E58 0008+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80450E50[8];
 
-/* 80039B6C-80039CF8 018C+00 .text      start__7dDemo_cFPCUcP4cXyzf                                  */
+/* 80039B6C-80039CF8 018C+00 rc=2 efc=1 .text      start__7dDemo_cFPCUcP4cXyzf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start__7dDemo_cFPCUcP4cXyzf) {
+asm void dDemo_c::start(char const* field_0, cXyz* field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_demo/start__7dDemo_cFPCUcP4cXyzf.s"
 }
 #pragma pop
 
 
-/* 80039CF8-80039D4C 0054+00 .text      end__7dDemo_cFv                                              */
+/* 80039CF8-80039D4C 0054+00 rc=3 efc=2 .text      end__7dDemo_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(end__7dDemo_cFv) {
+asm void dDemo_c::end() {
 	nofralloc
 #include "asm/d/d_demo/end__7dDemo_cFv.s"
 }
 #pragma pop
 
 
-/* 80039D4C-80039DA4 0058+00 .text      branch__7dDemo_cFv                                           */
+/* 80039D4C-80039DA4 0058+00 rc=1 efc=0 .text      branch__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(branch__7dDemo_cFv) {
+asm void dDemo_c::branch() {
 	nofralloc
 #include "asm/d/d_demo/branch__7dDemo_cFv.s"
 }
@@ -1461,162 +2213,161 @@ ASM_FUNCTION(branch__7dDemo_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451DE8-80451DF0 0004+04 .sdata2    @5322                                                        */
+/* 80451DE8-80451DF0 0004+04 rc=1 efc=0 .sdata2    @5322                                                        */
 f32 lit_5322 = 1.0f / 10.0f;
 /* padding 4 bytes */
 
-/* 80039DA4-80039EDC 0138+00 .text      update__7dDemo_cFv                                           */
+/* 80039DA4-80039EDC 0138+00 rc=1 efc=1 .text      update__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__7dDemo_cFv) {
+asm void dDemo_c::update() {
 	nofralloc
 #include "asm/d/d_demo/update__7dDemo_cFv.s"
 }
 #pragma pop
 
 
-/* 80039EDC-80039EEC 0010+00 .text      setBranchType__7dDemo_cFUs                                   */
+/* 80039EDC-80039EEC 0010+00 rc=1 efc=0 .text      setBranchType__7dDemo_cFUs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBranchType__7dDemo_cFUs) {
+asm void dDemo_c::setBranchType(u16 field_0) {
 	nofralloc
 #include "asm/d/d_demo/setBranchType__7dDemo_cFUs.s"
 }
 #pragma pop
 
 
-/* 80039EEC-80039F04 0018+00 .text      setBranchId__7dDemo_cFUss                                    */
+/* 80039EEC-80039F04 0018+00 rc=2 efc=2 .text      setBranchId__7dDemo_cFUss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBranchId__7dDemo_cFUss) {
+asm void dDemo_c::setBranchId(u16 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/d_demo/setBranchId__7dDemo_cFUss.s"
 }
 #pragma pop
 
 
-/* 80039F04-80039F1C 0018+00 .text      reset__7dDemo_cFv                                            */
+/* 80039F04-80039F1C 0018+00 rc=2 efc=0 .text      reset__7dDemo_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__7dDemo_cFv) {
+asm void dDemo_c::reset() {
 	nofralloc
 #include "asm/d/d_demo/reset__7dDemo_cFv.s"
 }
 #pragma pop
 
 
-/* 80039F1C-80039F9C 0080+00 .text      emitter_create__16dDemo_particle_cFUl                        */
+/* 80039F1C-80039F9C 0080+00 rc=1 efc=0 .text      emitter_create__16dDemo_particle_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(emitter_create__16dDemo_particle_cFUl) {
+asm void dDemo_particle_c::emitter_create(u32 field_0) {
 	nofralloc
 #include "asm/d/d_demo/emitter_create__16dDemo_particle_cFUl.s"
 }
 #pragma pop
 
 
-/* 80039F9C-80039FFC 0060+00 .text      __dt__16dDemo_particle_cFv                                   */
+/* 80039F9C-80039FFC 0060+00 rc=1 efc=0 .text      __dt__16dDemo_particle_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dDemo_particle_cFv) {
+asm dDemo_particle_c::~dDemo_particle_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__16dDemo_particle_cFv.s"
 }
 #pragma pop
 
 
-/* 80039FFC-8003A05C 0060+00 .text      __dt__14dDemo_camera_cFv                                     */
+/* 80039FFC-8003A05C 0060+00 rc=1 efc=0 .text      __dt__14dDemo_camera_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dDemo_camera_cFv) {
+asm dDemo_camera_c::~dDemo_camera_c() {
 	nofralloc
 #include "asm/d/d_demo/__dt__14dDemo_camera_cFv.s"
 }
 #pragma pop
 
 
-/* 8003A05C-8003A088 002C+00 .text      JSGFindNodeID__13dDemo_actor_cCFPCc                          */
+/* 8003A05C-8003A088 002C+00 rc=1 efc=0 .text      JSGFindNodeID__13dDemo_actor_cCFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGFindNodeID__13dDemo_actor_cCFPCc) {
+asm void dDemo_actor_c::JSGFindNodeID(char const* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGFindNodeID__13dDemo_actor_cCFPCc.s"
 }
 #pragma pop
 
 
-/* 8003A088-8003A0C8 0040+00 .text      JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f           */
+/* 8003A088-8003A0C8 0040+00 rc=1 efc=0 .text      JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f) {
+extern "C" asm static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f() {
 	nofralloc
 #include "asm/d/d_demo/JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f.s"
 }
 #pragma pop
 
 
-/* 8003A0C8-8003A0D0 0008+00 .text      JSGGetAnimationFrameMax__13dDemo_actor_cCFv                  */
+/* 8003A0C8-8003A0D0 0008+00 rc=1 efc=0 .text      JSGGetAnimationFrameMax__13dDemo_actor_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetAnimationFrameMax__13dDemo_actor_cCFv) {
+asm void dDemo_actor_c::JSGGetAnimationFrameMax() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetAnimationFrameMax__13dDemo_actor_cCFv.s"
 }
 #pragma pop
 
 
-/* 8003A0D0-8003A0D8 0008+00 .text      JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv           */
+/* 8003A0D0-8003A0D8 0008+00 rc=1 efc=0 .text      JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv) {
+asm void dDemo_actor_c::JSGGetTextureAnimationFrameMax() const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv.s"
 }
 #pragma pop
 
 
-/* 8003A0D8-8003A0F4 001C+00 .text      JSGGetTranslation__13dDemo_actor_cCFP3Vec                    */
+/* 8003A0D8-8003A0F4 001C+00 rc=1 efc=0 .text      JSGGetTranslation__13dDemo_actor_cCFP3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetTranslation__13dDemo_actor_cCFP3Vec) {
+asm void dDemo_actor_c::JSGGetTranslation(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetTranslation__13dDemo_actor_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* 8003A0F4-8003A110 001C+00 .text      JSGGetScaling__13dDemo_actor_cCFP3Vec                        */
+/* 8003A0F4-8003A110 001C+00 rc=1 efc=0 .text      JSGGetScaling__13dDemo_actor_cCFP3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetScaling__13dDemo_actor_cCFP3Vec) {
+asm void dDemo_actor_c::JSGGetScaling(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetScaling__13dDemo_actor_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* 8003A110-8003A188 0078+00 .text      JSGGetRotation__13dDemo_actor_cCFP3Vec                       */
+/* 8003A110-8003A188 0078+00 rc=1 efc=0 .text      JSGGetRotation__13dDemo_actor_cCFP3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetRotation__13dDemo_actor_cCFP3Vec) {
+asm void dDemo_actor_c::JSGGetRotation(Vec* field_0) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetRotation__13dDemo_actor_cCFP3Vec.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

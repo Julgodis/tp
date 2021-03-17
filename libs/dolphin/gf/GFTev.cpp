@@ -6,29 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build _GXTevRegID (_GXTevRegID) False/False
+/* top-level dependencies (begin _GXTevRegID) */
+/* top-level dependencies (end _GXTevRegID) */
+struct _GXTevRegID {
+};
+
+// build _GXColorS10 (_GXColorS10) False/False
+/* top-level dependencies (begin _GXColorS10) */
+/* top-level dependencies (end _GXColorS10) */
+struct _GXColorS10 {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+void GFSetTevColorS10(_GXTevRegID, _GXColorS10);
+
+extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 802CE0D0-802CE138 0068+00 .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                */
+/* 802CE0D0-802CE138 0068+00 rc=0 efc=0 .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GFSetTevColorS10__F11_GXTevRegID11_GXColorS10) {
+asm void GFSetTevColorS10(_GXTevRegID field_0, _GXColorS10 field_1) {
 	nofralloc
 #include "asm/dolphin/gf/GFTev/GFSetTevColorS10__F11_GXTevRegID11_GXColorS10.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

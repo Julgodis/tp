@@ -6,20 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_brakeeff_class;
+
+struct obj_brakeeff_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Brakeeff_Draw__FP18obj_brakeeff_class();
-extern "C" extern void obj_brakeeff_1__FP18obj_brakeeff_class();
-extern "C" extern void action__FP18obj_brakeeff_class();
-extern "C" extern void daObj_Brakeeff_Execute__FP18obj_brakeeff_class();
-extern "C" extern void daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class();
-extern "C" extern void daObj_Brakeeff_Delete__FP18obj_brakeeff_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Brakeeff_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daObj_Brakeeff_Draw(obj_brakeeff_class*);
+void obj_brakeeff_1(obj_brakeeff_class*);
+void action(obj_brakeeff_class*);
+void daObj_Brakeeff_Execute(obj_brakeeff_class*);
+bool daObj_Brakeeff_IsDelete(obj_brakeeff_class*);
+void daObj_Brakeeff_Delete(obj_brakeeff_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Brakeeff_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Brakeeff_Draw__FP18obj_brakeeff_class();
+extern "C" void obj_brakeeff_1__FP18obj_brakeeff_class();
+extern "C" void action__FP18obj_brakeeff_class();
+extern "C" void daObj_Brakeeff_Execute__FP18obj_brakeeff_class();
+extern "C" bool daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class();
+extern "C" void daObj_Brakeeff_Delete__FP18obj_brakeeff_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Brakeeff_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u32 lit_3879;
 SECTION_RODATA extern const u32 lit_3880;
 SECTION_RODATA extern const u32 lit_3881;
@@ -39,7 +73,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -49,7 +85,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brakeeff_Draw__FP18obj_brakeeff_class) {
+asm void daObj_Brakeeff_Draw(obj_brakeeff_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Draw__FP18obj_brakeeff_class.s"
 }
@@ -60,7 +96,7 @@ ASM_FUNCTION(daObj_Brakeeff_Draw__FP18obj_brakeeff_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_brakeeff_1__FP18obj_brakeeff_class) {
+asm void obj_brakeeff_1(obj_brakeeff_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/obj_brakeeff_1__FP18obj_brakeeff_class.s"
 }
@@ -71,7 +107,7 @@ ASM_FUNCTION(obj_brakeeff_1__FP18obj_brakeeff_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP18obj_brakeeff_class) {
+asm void action(obj_brakeeff_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/action__FP18obj_brakeeff_class.s"
 }
@@ -82,7 +118,7 @@ ASM_FUNCTION(action__FP18obj_brakeeff_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brakeeff_Execute__FP18obj_brakeeff_class) {
+asm void daObj_Brakeeff_Execute(obj_brakeeff_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Execute__FP18obj_brakeeff_class.s"
 }
@@ -90,21 +126,16 @@ ASM_FUNCTION(daObj_Brakeeff_Execute__FP18obj_brakeeff_class) {
 
 
 /* 8046E098-8046E0A0 0008+00 .text      daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class.s"
+bool daObj_Brakeeff_IsDelete(obj_brakeeff_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046E0A0-8046E0F0 0050+00 .text      daObj_Brakeeff_Delete__FP18obj_brakeeff_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brakeeff_Delete__FP18obj_brakeeff_class) {
+asm void daObj_Brakeeff_Delete(obj_brakeeff_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Delete__FP18obj_brakeeff_class.s"
 }
@@ -115,7 +146,7 @@ ASM_FUNCTION(daObj_Brakeeff_Delete__FP18obj_brakeeff_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -126,7 +157,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/__dt__12J3DFrameCtrlFv.s"
 }
@@ -137,7 +168,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brakeeff_Create__FP10fopAc_ac_c) {
+asm void daObj_Brakeeff_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_Create__FP10fopAc_ac_c.s"
 }
@@ -148,7 +179,7 @@ ASM_FUNCTION(daObj_Brakeeff_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/__dt__8cM3dGSphFv.s"
 }
@@ -159,7 +190,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/__dt__8cM3dGAabFv.s"
 }

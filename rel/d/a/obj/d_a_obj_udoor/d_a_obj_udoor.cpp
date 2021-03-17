@@ -6,17 +6,45 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_udoor_class;
+
+struct obj_udoor_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Udoor_Draw__FP15obj_udoor_class();
-extern "C" extern void daObj_Udoor_Execute__FP15obj_udoor_class();
-extern "C" extern void daObj_Udoor_IsDelete__FP15obj_udoor_class();
-extern "C" extern void daObj_Udoor_Delete__FP15obj_udoor_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Udoor_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
+void daObj_Udoor_Draw(obj_udoor_class*);
+void daObj_Udoor_Execute(obj_udoor_class*);
+bool daObj_Udoor_IsDelete(obj_udoor_class*);
+void daObj_Udoor_Delete(obj_udoor_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Udoor_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Udoor_Draw__FP15obj_udoor_class();
+extern "C" void daObj_Udoor_Execute__FP15obj_udoor_class();
+extern "C" bool daObj_Udoor_IsDelete__FP15obj_udoor_class();
+extern "C" void daObj_Udoor_Delete__FP15obj_udoor_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Udoor_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
 SECTION_RODATA extern const u32 lit_3707;
 SECTION_RODATA extern const u32 lit_3708;
 SECTION_RODATA extern const u32 lit_3709;
@@ -42,7 +70,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -52,7 +82,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Udoor_Draw__FP15obj_udoor_class) {
+asm void daObj_Udoor_Draw(obj_udoor_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Draw__FP15obj_udoor_class.s"
 }
@@ -63,7 +93,7 @@ ASM_FUNCTION(daObj_Udoor_Draw__FP15obj_udoor_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Udoor_Execute__FP15obj_udoor_class) {
+asm void daObj_Udoor_Execute(obj_udoor_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Execute__FP15obj_udoor_class.s"
 }
@@ -71,21 +101,16 @@ ASM_FUNCTION(daObj_Udoor_Execute__FP15obj_udoor_class) {
 
 
 /* 80D209BC-80D209C4 0008+00 .text      daObj_Udoor_IsDelete__FP15obj_udoor_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Udoor_IsDelete__FP15obj_udoor_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_IsDelete__FP15obj_udoor_class.s"
+bool daObj_Udoor_IsDelete(obj_udoor_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D209C4-80D20A1C 0058+00 .text      daObj_Udoor_Delete__FP15obj_udoor_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Udoor_Delete__FP15obj_udoor_class) {
+asm void daObj_Udoor_Delete(obj_udoor_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Delete__FP15obj_udoor_class.s"
 }
@@ -96,7 +121,7 @@ ASM_FUNCTION(daObj_Udoor_Delete__FP15obj_udoor_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -107,7 +132,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Udoor_Create__FP10fopAc_ac_c) {
+asm void daObj_Udoor_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Create__FP10fopAc_ac_c.s"
 }
@@ -118,7 +143,7 @@ ASM_FUNCTION(daObj_Udoor_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/__dt__8cM3dGSphFv.s"
 }
@@ -129,7 +154,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/__dt__8cM3dGAabFv.s"
 }

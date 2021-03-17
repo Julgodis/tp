@@ -6,73 +6,197 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+
+struct daNpc_SoldierA_c {
+	daNpc_SoldierA_c();
+	~daNpc_SoldierA_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void main();
+	bool ctrlBtk();
+	void setAttnPos();
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void drawOtherMdls();
+	void getTypeFromParam();
+	void isDelete();
+	void reset();
+	void playMotion();
+	void selectAction();
+	void doNormalAction(s32);
+	void doEvent();
+	void setLookMode(s32);
+	void lookat();
+	void wait(void*);
+	void talk(void*);
+	void ECut_talkLake(s32);
+	void ECut_listenLake(s32);
+	void test(void*);
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_c {
+	~daNpcF_c();
+	daNpcF_c();
+	void adjustShapeAngle();
+	void setCollisions();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpc_SoldierA_Param_c {
+	~daNpc_SoldierA_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daNpc_SoldierA_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__16daNpc_SoldierA_cFv();
-extern "C" extern void create__16daNpc_SoldierA_cFv();
-extern "C" extern void CreateHeap__16daNpc_SoldierA_cFv();
-extern "C" extern void Delete__16daNpc_SoldierA_cFv();
-extern "C" extern void Execute__16daNpc_SoldierA_cFv();
-extern "C" extern void Draw__16daNpc_SoldierA_cFv();
-extern "C" extern void ctrlJoint__16daNpc_SoldierA_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__16daNpc_SoldierA_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__16daNpc_SoldierA_cFP8J3DJointi();
-extern "C" extern void setParam__16daNpc_SoldierA_cFv();
-extern "C" extern void main__16daNpc_SoldierA_cFv();
-extern "C" extern void ctrlBtk__16daNpc_SoldierA_cFv();
-extern "C" extern void setAttnPos__16daNpc_SoldierA_cFv();
-extern "C" extern void setMotionAnm__16daNpc_SoldierA_cFif();
-extern "C" extern void setMotion__16daNpc_SoldierA_cFifi();
-extern "C" extern void drawDbgInfo__16daNpc_SoldierA_cFv();
-extern "C" extern void drawOtherMdls__16daNpc_SoldierA_cFv();
-extern "C" extern void getTypeFromParam__16daNpc_SoldierA_cFv();
-extern "C" extern void isDelete__16daNpc_SoldierA_cFv();
-extern "C" extern void reset__16daNpc_SoldierA_cFv();
-extern "C" extern void playMotion__16daNpc_SoldierA_cFv();
-extern "C" extern void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
-extern "C" extern void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
-extern "C" extern void selectAction__16daNpc_SoldierA_cFv();
-extern "C" extern void doNormalAction__16daNpc_SoldierA_cFi();
-extern "C" extern void doEvent__16daNpc_SoldierA_cFv();
-extern "C" extern void setLookMode__16daNpc_SoldierA_cFi();
-extern "C" extern void lookat__16daNpc_SoldierA_cFv();
-extern "C" extern void wait__16daNpc_SoldierA_cFPv();
-extern "C" extern void talk__16daNpc_SoldierA_cFPv();
-extern "C" extern void ECut_talkLake__16daNpc_SoldierA_cFi();
-extern "C" extern void ECut_listenLake__16daNpc_SoldierA_cFi();
-extern "C" extern void test__16daNpc_SoldierA_cFPv();
-extern "C" extern void daNpc_SoldierA_Create__FPv();
-extern "C" extern void daNpc_SoldierA_Delete__FPv();
-extern "C" extern void daNpc_SoldierA_Execute__FPv();
-extern "C" extern void daNpc_SoldierA_Draw__FPv();
-extern "C" extern void daNpc_SoldierA_IsDelete__FPv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void adjustShapeAngle__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_npc_soldierA_cpp();
-extern "C" extern void __dt__22daNpc_SoldierA_Param_cFv();
-extern "C" extern void func_80AF26C4();
-extern "C" extern void func_80AF26CC();
+extern "C" void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
+extern "C" void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
+void daNpc_SoldierA_Create(void*);
+void daNpc_SoldierA_Delete(void*);
+void daNpc_SoldierA_Execute(void*);
+void daNpc_SoldierA_Draw(void*);
+bool daNpc_SoldierA_IsDelete(void*);
+extern "C" void __sinit_d_a_npc_soldierA_cpp();
+extern "C" void func_80AF26C4();
+extern "C" void func_80AF26CC();
+
+extern "C" void __ct__16daNpc_SoldierA_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__16daNpc_SoldierA_cFv();
+extern "C" void create__16daNpc_SoldierA_cFv();
+extern "C" void CreateHeap__16daNpc_SoldierA_cFv();
+extern "C" void Delete__16daNpc_SoldierA_cFv();
+extern "C" void Execute__16daNpc_SoldierA_cFv();
+extern "C" void Draw__16daNpc_SoldierA_cFv();
+extern "C" void ctrlJoint__16daNpc_SoldierA_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__16daNpc_SoldierA_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__16daNpc_SoldierA_cFP8J3DJointi();
+extern "C" void setParam__16daNpc_SoldierA_cFv();
+extern "C" void main__16daNpc_SoldierA_cFv();
+extern "C" bool ctrlBtk__16daNpc_SoldierA_cFv();
+extern "C" void setAttnPos__16daNpc_SoldierA_cFv();
+extern "C" void setMotionAnm__16daNpc_SoldierA_cFif();
+extern "C" void setMotion__16daNpc_SoldierA_cFifi();
+extern "C" bool drawDbgInfo__16daNpc_SoldierA_cFv();
+extern "C" void drawOtherMdls__16daNpc_SoldierA_cFv();
+extern "C" void getTypeFromParam__16daNpc_SoldierA_cFv();
+extern "C" void isDelete__16daNpc_SoldierA_cFv();
+extern "C" void reset__16daNpc_SoldierA_cFv();
+extern "C" void playMotion__16daNpc_SoldierA_cFv();
+extern "C" void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
+extern "C" void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i();
+extern "C" void selectAction__16daNpc_SoldierA_cFv();
+extern "C" void doNormalAction__16daNpc_SoldierA_cFi();
+extern "C" void doEvent__16daNpc_SoldierA_cFv();
+extern "C" void setLookMode__16daNpc_SoldierA_cFi();
+extern "C" void lookat__16daNpc_SoldierA_cFv();
+extern "C" void wait__16daNpc_SoldierA_cFPv();
+extern "C" void talk__16daNpc_SoldierA_cFPv();
+extern "C" void ECut_talkLake__16daNpc_SoldierA_cFi();
+extern "C" void ECut_listenLake__16daNpc_SoldierA_cFi();
+extern "C" void test__16daNpc_SoldierA_cFPv();
+extern "C" void daNpc_SoldierA_Create__FPv();
+extern "C" void daNpc_SoldierA_Delete__FPv();
+extern "C" void daNpc_SoldierA_Execute__FPv();
+extern "C" void daNpc_SoldierA_Draw__FPv();
+extern "C" bool daNpc_SoldierA_IsDelete__FPv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void adjustShapeAngle__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_npc_soldierA_cpp();
+extern "C" void __dt__22daNpc_SoldierA_Param_cFv();
+extern "C" void func_80AF26C4();
+extern "C" void func_80AF26CC();
 SECTION_RODATA extern const u8 m__22daNpc_SoldierA_Param_c[108];
 SECTION_RODATA extern const u32 lit_4394;
 SECTION_RODATA extern const u32 lit_4395;
@@ -193,8 +317,11 @@ SECTION_BSS extern u8 data_80AF2BBC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -204,7 +331,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daNpc_SoldierA_cFv) {
+asm daNpc_SoldierA_c::daNpc_SoldierA_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__ct__16daNpc_SoldierA_cFv.s"
 }
@@ -215,7 +342,7 @@ ASM_FUNCTION(__ct__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__8cM3dGCylFv.s"
 }
@@ -226,7 +353,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__8cM3dGAabFv.s"
 }
@@ -237,7 +364,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daNpc_SoldierA_cFv) {
+asm daNpc_SoldierA_c::~daNpc_SoldierA_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__16daNpc_SoldierA_cFv.s"
 }
@@ -248,7 +375,7 @@ ASM_FUNCTION(__dt__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/create__16daNpc_SoldierA_cFv.s"
 }
@@ -259,7 +386,7 @@ ASM_FUNCTION(create__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/CreateHeap__16daNpc_SoldierA_cFv.s"
 }
@@ -270,7 +397,7 @@ ASM_FUNCTION(CreateHeap__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/Delete__16daNpc_SoldierA_cFv.s"
 }
@@ -281,7 +408,7 @@ ASM_FUNCTION(Delete__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/Execute__16daNpc_SoldierA_cFv.s"
 }
@@ -292,7 +419,7 @@ ASM_FUNCTION(Execute__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/Draw__16daNpc_SoldierA_cFv.s"
 }
@@ -303,7 +430,7 @@ ASM_FUNCTION(Draw__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__16daNpc_SoldierA_cFP8J3DJointP8J3DModel) {
+asm void daNpc_SoldierA_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/ctrlJoint__16daNpc_SoldierA_cFP8J3DJointP8J3DModel.s"
 }
@@ -314,7 +441,7 @@ ASM_FUNCTION(ctrlJoint__16daNpc_SoldierA_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__16daNpc_SoldierA_cFP10fopAc_ac_c) {
+asm void daNpc_SoldierA_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/createHeapCallBack__16daNpc_SoldierA_cFP10fopAc_ac_c.s"
 }
@@ -325,7 +452,7 @@ ASM_FUNCTION(createHeapCallBack__16daNpc_SoldierA_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__16daNpc_SoldierA_cFP8J3DJointi) {
+asm void daNpc_SoldierA_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/ctrlJointCallBack__16daNpc_SoldierA_cFP8J3DJointi.s"
 }
@@ -336,7 +463,7 @@ ASM_FUNCTION(ctrlJointCallBack__16daNpc_SoldierA_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setParam__16daNpc_SoldierA_cFv.s"
 }
@@ -347,7 +474,7 @@ ASM_FUNCTION(setParam__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/main__16daNpc_SoldierA_cFv.s"
 }
@@ -355,21 +482,16 @@ ASM_FUNCTION(main__16daNpc_SoldierA_cFv) {
 
 
 /* 80AF0428-80AF0430 0008+00 .text      ctrlBtk__16daNpc_SoldierA_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__16daNpc_SoldierA_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/ctrlBtk__16daNpc_SoldierA_cFv.s"
+bool daNpc_SoldierA_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AF0430-80AF0928 04F8+00 .text      setAttnPos__16daNpc_SoldierA_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setAttnPos__16daNpc_SoldierA_cFv.s"
 }
@@ -380,7 +502,7 @@ ASM_FUNCTION(setAttnPos__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__16daNpc_SoldierA_cFif) {
+asm void daNpc_SoldierA_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setMotionAnm__16daNpc_SoldierA_cFif.s"
 }
@@ -391,7 +513,7 @@ ASM_FUNCTION(setMotionAnm__16daNpc_SoldierA_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__16daNpc_SoldierA_cFifi) {
+asm void daNpc_SoldierA_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setMotion__16daNpc_SoldierA_cFifi.s"
 }
@@ -399,21 +521,16 @@ ASM_FUNCTION(setMotion__16daNpc_SoldierA_cFifi) {
 
 
 /* 80AF0A7C-80AF0A84 0008+00 .text      drawDbgInfo__16daNpc_SoldierA_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__16daNpc_SoldierA_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/drawDbgInfo__16daNpc_SoldierA_cFv.s"
+bool daNpc_SoldierA_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AF0A84-80AF0B30 00AC+00 .text      drawOtherMdls__16daNpc_SoldierA_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::drawOtherMdls() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/drawOtherMdls__16daNpc_SoldierA_cFv.s"
 }
@@ -424,7 +541,7 @@ ASM_FUNCTION(drawOtherMdls__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::getTypeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/getTypeFromParam__16daNpc_SoldierA_cFv.s"
 }
@@ -435,7 +552,7 @@ ASM_FUNCTION(getTypeFromParam__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/isDelete__16daNpc_SoldierA_cFv.s"
 }
@@ -446,7 +563,7 @@ ASM_FUNCTION(isDelete__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/reset__16daNpc_SoldierA_cFv.s"
 }
@@ -457,7 +574,7 @@ ASM_FUNCTION(reset__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/playMotion__16daNpc_SoldierA_cFv.s"
 }
@@ -468,7 +585,7 @@ ASM_FUNCTION(playMotion__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i) {
+extern "C" asm void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i.s"
 }
@@ -479,7 +596,7 @@ ASM_FUNCTION(chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i) {
+extern "C" asm void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i.s"
 }
@@ -490,7 +607,7 @@ ASM_FUNCTION(setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/selectAction__16daNpc_SoldierA_cFv.s"
 }
@@ -501,7 +618,7 @@ ASM_FUNCTION(selectAction__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doNormalAction__16daNpc_SoldierA_cFi) {
+asm void daNpc_SoldierA_c::doNormalAction(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/doNormalAction__16daNpc_SoldierA_cFi.s"
 }
@@ -512,7 +629,7 @@ ASM_FUNCTION(doNormalAction__16daNpc_SoldierA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doEvent__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::doEvent() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/doEvent__16daNpc_SoldierA_cFv.s"
 }
@@ -523,7 +640,7 @@ ASM_FUNCTION(doEvent__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__16daNpc_SoldierA_cFi) {
+asm void daNpc_SoldierA_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setLookMode__16daNpc_SoldierA_cFi.s"
 }
@@ -534,7 +651,7 @@ ASM_FUNCTION(setLookMode__16daNpc_SoldierA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__16daNpc_SoldierA_cFv) {
+asm void daNpc_SoldierA_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/lookat__16daNpc_SoldierA_cFv.s"
 }
@@ -545,7 +662,7 @@ ASM_FUNCTION(lookat__16daNpc_SoldierA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__16daNpc_SoldierA_cFPv) {
+asm void daNpc_SoldierA_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/wait__16daNpc_SoldierA_cFPv.s"
 }
@@ -556,7 +673,7 @@ ASM_FUNCTION(wait__16daNpc_SoldierA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__16daNpc_SoldierA_cFPv) {
+asm void daNpc_SoldierA_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/talk__16daNpc_SoldierA_cFPv.s"
 }
@@ -567,7 +684,7 @@ ASM_FUNCTION(talk__16daNpc_SoldierA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_talkLake__16daNpc_SoldierA_cFi) {
+asm void daNpc_SoldierA_c::ECut_talkLake(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/ECut_talkLake__16daNpc_SoldierA_cFi.s"
 }
@@ -578,7 +695,7 @@ ASM_FUNCTION(ECut_talkLake__16daNpc_SoldierA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ECut_listenLake__16daNpc_SoldierA_cFi) {
+asm void daNpc_SoldierA_c::ECut_listenLake(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/ECut_listenLake__16daNpc_SoldierA_cFi.s"
 }
@@ -589,7 +706,7 @@ ASM_FUNCTION(ECut_listenLake__16daNpc_SoldierA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(test__16daNpc_SoldierA_cFPv) {
+asm void daNpc_SoldierA_c::test(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/test__16daNpc_SoldierA_cFPv.s"
 }
@@ -600,7 +717,7 @@ ASM_FUNCTION(test__16daNpc_SoldierA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_SoldierA_Create__FPv) {
+asm void daNpc_SoldierA_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/daNpc_SoldierA_Create__FPv.s"
 }
@@ -611,7 +728,7 @@ ASM_FUNCTION(daNpc_SoldierA_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_SoldierA_Delete__FPv) {
+asm void daNpc_SoldierA_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/daNpc_SoldierA_Delete__FPv.s"
 }
@@ -622,7 +739,7 @@ ASM_FUNCTION(daNpc_SoldierA_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_SoldierA_Execute__FPv) {
+asm void daNpc_SoldierA_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/daNpc_SoldierA_Execute__FPv.s"
 }
@@ -633,7 +750,7 @@ ASM_FUNCTION(daNpc_SoldierA_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_SoldierA_Draw__FPv) {
+asm void daNpc_SoldierA_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/daNpc_SoldierA_Draw__FPv.s"
 }
@@ -641,21 +758,16 @@ ASM_FUNCTION(daNpc_SoldierA_Draw__FPv) {
 
 
 /* 80AF1DD8-80AF1DE0 0008+00 .text      daNpc_SoldierA_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_SoldierA_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/daNpc_SoldierA_IsDelete__FPv.s"
+bool daNpc_SoldierA_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF1DE0-80AF1E28 0048+00 .text      __dt__18daNpcF_ActorMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -666,7 +778,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -677,7 +789,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -688,7 +800,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__5csXyzFv.s"
 }
@@ -696,21 +808,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80AF1F70-80AF1F74 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF1F74-80AF1FB0 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__4cXyzFv.s"
 }
@@ -718,21 +825,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80AF1FB0-80AF1FB4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF1FB4-80AF2200 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__8daNpcF_cFv.s"
 }
@@ -743,7 +845,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__ct__8daNpcF_cFv.s"
 }
@@ -754,7 +856,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__12dBgS_AcchCirFv.s"
 }
@@ -765,7 +867,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__10dCcD_GSttsFv.s"
 }
@@ -776,7 +878,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -787,7 +889,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__12J3DFrameCtrlFv.s"
 }
@@ -795,65 +897,40 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80AF2574-80AF2578 0004+00 .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF2578-80AF257C 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF257C-80AF2584 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF2584-80AF258C 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF258C-80AF2590 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF2590-80AF25D8 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__10cCcD_GSttsFv.s"
 }
@@ -864,7 +941,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_soldierA_cpp) {
+extern "C" asm void __sinit_d_a_npc_soldierA_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__sinit_d_a_npc_soldierA_cpp.s"
 }
@@ -875,7 +952,7 @@ ASM_FUNCTION(__sinit_d_a_npc_soldierA_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpc_SoldierA_Param_cFv) {
+asm daNpc_SoldierA_Param_c::~daNpc_SoldierA_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/__dt__22daNpc_SoldierA_Param_cFv.s"
 }
@@ -886,7 +963,7 @@ ASM_FUNCTION(__dt__22daNpc_SoldierA_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AF26C4) {
+extern "C" asm void func_80AF26C4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/func_80AF26C4.s"
 }
@@ -897,7 +974,7 @@ ASM_FUNCTION(func_80AF26C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80AF26CC) {
+extern "C" asm void func_80AF26CC() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/func_80AF26CC.s"
 }

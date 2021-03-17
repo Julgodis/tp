@@ -9,41 +9,42 @@
 // Forward References:
 // 
 
-extern "C" extern void usr_put_initialize();
-extern "C" extern void usr_puts_serial();
+extern "C" void usr_put_initialize();
+extern "C" void usr_puts_serial();
+
+extern "C" void usr_put_initialize();
+extern "C" void usr_puts_serial();
 
 // 
 // External References:
 // 
 
-extern "C" extern void OSReport();
-extern "C" extern void SetTRKConnected();
-extern "C" extern void GetTRKConnected();
+extern "C" void OSReport();
+extern "C" void SetTRKConnected();
+extern "C" void GetTRKConnected();
+
+extern "C" void OSReport();
+extern "C" void SetTRKConnected();
+extern "C" void GetTRKConnected();
 
 // 
 // Declarations:
 // 
 
-/* 8036DB10-8036DB14 0004+00 .text      usr_put_initialize                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(usr_put_initialize) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put/usr_put_initialize.s"
+/* 8036DB10-8036DB14 0004+00 rc=1 efc=1 .text      usr_put_initialize                                           */
+extern "C" void usr_put_initialize() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8036DB14-8036DB9C 0088+00 .text      usr_puts_serial                                              */
+/* 8036DB14-8036DB9C 0088+00 rc=2 efc=2 .text      usr_puts_serial                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(usr_puts_serial) {
+extern "C" asm void usr_puts_serial() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put/usr_puts_serial.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

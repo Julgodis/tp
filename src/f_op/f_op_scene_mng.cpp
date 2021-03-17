@@ -6,37 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopScnM_SearchByID__FUi();
-extern "C" extern void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" extern void fopScnM_DeleteReq__FP11scene_class();
-extern "C" extern void fopScnM_CreateReq__FssUsUl();
-extern "C" extern void fopScnM_ReRequest__FsUl();
-extern "C" extern void fopScnM_Management__Fv();
-extern "C" extern void fopScnM_Init__Fv();
+void fopScnM_SearchByID(s32);
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void fopScnM_DeleteReq(scene_class*);
+void fopScnM_CreateReq(s16, s16, u16, u32);
+void fopScnM_ReRequest(s16, u32);
+void fopScnM_Management();
+void fopScnM_Init();
+
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void fopScnM_DeleteReq__FP11scene_class();
+extern "C" void fopScnM_CreateReq__FssUsUl();
+extern "C" void fopScnM_ReRequest__FsUl();
+extern "C" void fopScnM_Management__Fv();
+extern "C" void fopScnM_Init__Fv();
 SECTION_SDATA extern u32 l_scnRqID;
 
 // 
 // External References:
 // 
 
-extern "C" extern void fopScnIt_Judge__FPFPvPv_PvPv();
-extern "C" extern void fopScnRq_Request__FiP11scene_classsPvsUs();
-extern "C" extern void fopScnRq_ReRequest__FUisPv();
-extern "C" extern void fopScnRq_Handler__Fv();
-extern "C" extern void fpcSch_JudgeByID__FPvPv();
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
+void fopScnRq_Request(s32, scene_class*, s16, void*, s16, u16);
+void fopScnRq_ReRequest(s32, s16, void*);
+void fopScnRq_Handler();
+void fpcSch_JudgeByID(void*, void*);
+
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopScnRq_Request__FiP11scene_classsPvsUs();
+extern "C" void fopScnRq_ReRequest__FUisPv();
+extern "C" void fopScnRq_Handler__Fv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
 
 // 
 // Declarations:
 // 
 
-/* 8001ECB0-8001ECE0 0030+00 .text      fopScnM_SearchByID__FUi                                      */
+/* 8001ECB0-8001ECE0 0030+00 rc=7 efc=7 .text      fopScnM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_SearchByID__FUi) {
+asm void fopScnM_SearchByID(s32 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_SearchByID__FUi.s"
 }
@@ -44,74 +68,68 @@ ASM_FUNCTION(fopScnM_SearchByID__FUi) {
 
 
 /* ############################################################################################## */
-/* 804505B8-804505C0 0004+04 .sdata     l_scnRqID                                                    */
+/* 804505B8-804505C0 0004+04 rc=2 efc=0 .sdata     l_scnRqID                                                    */
 u32 l_scnRqID = 0xFFFFFFFF;
 /* padding 4 bytes */
 
-/* 8001ECE0-8001ED3C 005C+00 .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
+/* 8001ECE0-8001ED3C 005C+00 rc=4 efc=4 .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_ChangeReq__FP11scene_classssUs) {
+asm void fopScnM_ChangeReq(scene_class* field_0, s16 field_1, s16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_ChangeReq__FP11scene_classssUs.s"
 }
 #pragma pop
 
 
-/* 8001ED3C-8001ED84 0048+00 .text      fopScnM_DeleteReq__FP11scene_class                           */
+/* 8001ED3C-8001ED84 0048+00 rc=1 efc=1 .text      fopScnM_DeleteReq__FP11scene_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_DeleteReq__FP11scene_class) {
+asm void fopScnM_DeleteReq(scene_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_DeleteReq__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 8001ED84-8001EDCC 0048+00 .text      fopScnM_CreateReq__FssUsUl                                   */
+/* 8001ED84-8001EDCC 0048+00 rc=2 efc=2 .text      fopScnM_CreateReq__FssUsUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_CreateReq__FssUsUl) {
+asm void fopScnM_CreateReq(s16 field_0, s16 field_1, u16 field_2, u32 field_3) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_CreateReq__FssUsUl.s"
 }
 #pragma pop
 
 
-/* 8001EDCC-8001EE10 0044+00 .text      fopScnM_ReRequest__FsUl                                      */
+/* 8001EDCC-8001EE10 0044+00 rc=1 efc=1 .text      fopScnM_ReRequest__FsUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_ReRequest__FsUl) {
+asm void fopScnM_ReRequest(s16 field_0, u32 field_1) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_ReRequest__FsUl.s"
 }
 #pragma pop
 
 
-/* 8001EE10-8001EE30 0020+00 .text      fopScnM_Management__Fv                                       */
+/* 8001EE10-8001EE30 0020+00 rc=1 efc=1 .text      fopScnM_Management__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_Management__Fv) {
+asm void fopScnM_Management() {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_Management__Fv.s"
 }
 #pragma pop
 
 
-/* 8001EE30-8001EE34 0004+00 .text      fopScnM_Init__Fv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fopScnM_Init__Fv) {
-	nofralloc
-#include "asm/f_op/f_op_scene_mng/fopScnM_Init__Fv.s"
+/* 8001EE30-8001EE34 0004+00 rc=1 efc=1 .text      fopScnM_Init__Fv                                             */
+void fopScnM_Init() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

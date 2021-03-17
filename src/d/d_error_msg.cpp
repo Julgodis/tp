@@ -6,14 +6,129 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dDvdErrorMsg_c (dDvdErrorMsg_c) False/False
+/* top-level dependencies (begin dDvdErrorMsg_c) */
+/* top-level dependencies (end dDvdErrorMsg_c) */
+struct dDvdErrorMsg_c {
+	/* 8009D194 */ void draw(s32);
+	/* 8009D354 */ void execute();
+};
+
+// build dShutdownErrorMsg_c (dShutdownErrorMsg_c) False/False
+/* top-level dependencies (begin dShutdownErrorMsg_c) */
+/* top-level dependencies (end dShutdownErrorMsg_c) */
+struct dShutdownErrorMsg_c {
+	/* 8009D790 */ void execute();
+};
+
+// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
+/* top-level dependencies (begin mDoGph_gInf_c) */
+/* top-level dependencies (end mDoGph_gInf_c) */
+struct mDoGph_gInf_c {
+	/* 80007F90 */ void beginRender();
+};
+
+// build Z2AudioMgr (Z2AudioMgr) False/False
+/* top-level dependencies (begin Z2AudioMgr) */
+/* top-level dependencies (end Z2AudioMgr) */
+struct Z2AudioMgr {
+	/* 802CD974 */ void resetProcess(u32, bool);
+};
+
+// build JUTResFont (JUTResFont) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+/* top-level dependencies (begin JUTResFont) */
+// outer dependency: JKRHeap
+// outer dependency: ResFONT
+/* top-level dependencies (end JUTResFont) */
+struct JUTResFont {
+	// JKRHeap
+	// ResFONT
+	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
+	/* 802DF000 */ ~JUTResFont();
+};
+
+// build ResFONT (ResFONT) True/True
+// build JKRHeap (JKRHeap) True/True
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+	/* 802E97B4 */ void setPort();
+};
+
+// build J2DPicture (J2DPicture) False/False
+/* top-level dependencies (begin J2DPicture) */
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	/* 802FCFF0 */ ~J2DPicture();
+	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+// build ResFONT (ResFONT) True/True
+// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
+/* top-level dependencies (begin J2DTextBoxVBinding) */
+/* top-level dependencies (end J2DTextBoxVBinding) */
+struct J2DTextBoxVBinding {
+};
+
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
+/* top-level dependencies (begin J2DTextBoxHBinding) */
+/* top-level dependencies (end J2DTextBoxHBinding) */
+struct J2DTextBoxHBinding {
+};
+
+/* top-level dependencies (begin J2DTextBox) */
+// outer dependency: ResFONT
+// outer dependency: J2DTextBoxVBinding
+// outer dependency: J2DTextBoxHBinding
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	// ResFONT
+	// J2DTextBoxVBinding
+	// J2DTextBoxHBinding
+	/* 802FFC58 */ void initiate(ResFONT const*, char const*, s16, J2DTextBoxHBinding, J2DTextBoxVBinding);
+	/* 803001E0 */ ~J2DTextBox();
+	/* 80300490 */ void draw(f32, f32, f32, J2DTextBoxHBinding);
+};
+
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
+// build J2DTextBoxVBinding (J2DTextBoxVBinding) True/True
+// build J3DSys (J3DSys) False/False
+/* top-level dependencies (begin J3DSys) */
+/* top-level dependencies (end J3DSys) */
+struct J3DSys {
+	/* 803100BC */ void drawInit();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void messageSet__FUlb();
-extern "C" extern void draw__14dDvdErrorMsg_cFl();
-extern "C" extern void execute__14dDvdErrorMsg_cFv();
-extern "C" extern void drawCapture__FUc();
-extern "C" extern void execute__19dShutdownErrorMsg_cFv();
+static void messageSet(u32, bool);
+static void drawCapture(char);
+
+extern "C" static void messageSet__FUlb();
+extern "C" void draw__14dDvdErrorMsg_cFl();
+extern "C" void execute__14dDvdErrorMsg_cFv();
+extern "C" static void drawCapture__FUc();
+extern "C" void execute__19dShutdownErrorMsg_cFv();
 SECTION_RODATA extern const u8 black_tex[64];
 SECTION_RODATA extern const u8 msg_data[608];
 SECTION_RODATA extern const void*const font_data[18584];
@@ -36,62 +151,107 @@ SECTION_SBSS2 extern u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void OSReport_Error();
-extern "C" extern void mDoAud_resetRecover__Fv();
-extern "C" extern void beginRender__13mDoGph_gInf_cFv();
-extern "C" extern void mDoGph_drawFilterQuad__FScSc();
-extern "C" extern void mDoRst_reset__FiUli();
-extern "C" extern void cLib_chaseUC__FPUcUcUc();
-extern "C" extern void resetProcess__10Z2AudioMgrFUlb();
-extern "C" extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" extern void __dt__10JUTResFontFv();
-extern "C" extern void __ct__13J2DOrthoGraphFffffff();
-extern "C" extern void setPort__13J2DOrthoGraphFv();
-extern "C" extern void func_802E980C();
-extern "C" extern void func_802FC800();
-extern "C" extern void __dt__10J2DPictureFv();
-extern "C" extern void draw__10J2DPictureFffffbbb();
-extern "C" extern void func_802FFBC4();
-extern "C" extern void initiate__10J2DTextBoxFPC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding();
-extern "C" extern void __dt__10J2DTextBoxFv();
-extern "C" extern void draw__10J2DTextBoxFfff18J2DTextBoxHBinding();
-extern "C" extern void drawInit__6J3DSysFv();
-extern "C" extern void C_MTXOrtho();
-extern "C" extern void DVDGetDriveStatus();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXSetTexCoordGen2();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXSetCullMode();
-extern "C" extern void GXSetTexCopySrc();
-extern "C" extern void GXSetTexCopyDst();
-extern "C" extern void GXCopyTex();
-extern "C" extern void GXSetNumChans();
-extern "C" extern void GXInitTexObj();
-extern "C" extern void GXInitTexObjLOD();
-extern "C" extern void GXLoadTexObj();
-extern "C" extern void GXSetNumIndStages();
-extern "C" extern void GXSetTevColorIn();
-extern "C" extern void GXSetTevAlphaIn();
-extern "C" extern void GXSetTevColorOp();
-extern "C" extern void GXSetTevAlphaOp();
-extern "C" extern void GXSetTevColor();
-extern "C" extern void GXSetAlphaCompare();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXSetFog();
-extern "C" extern void GXSetFogRangeAdj();
-extern "C" extern void GXSetBlendMode();
-extern "C" extern void GXSetAlphaUpdate();
-extern "C" extern void GXSetZMode();
-extern "C" extern void GXSetZCompLoc();
-extern "C" extern void GXSetDither();
-extern "C" extern void GXSetProjection();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
+extern "C" void OSReport_Error();
+void mDoAud_resetRecover();
+void mDoGph_drawFilterQuad(char, char);
+void mDoRst_reset(s32, u32, s32);
+void cLib_chaseUC(char*, char, char);
+extern "C" void func_802E980C();
+extern "C" void func_802FC800();
+extern "C" void func_802FFBC4();
+extern "C" void C_MTXOrtho();
+extern "C" void DVDGetDriveStatus();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetFogRangeAdj();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+
+extern "C" void OSReport_Error();
+extern "C" void mDoAud_resetRecover__Fv();
+extern "C" void beginRender__13mDoGph_gInf_cFv();
+extern "C" void mDoGph_drawFilterQuad__FScSc();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void resetProcess__10Z2AudioMgrFUlb();
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" void __dt__10JUTResFontFv();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void func_802E980C();
+extern "C" void func_802FC800();
+extern "C" void __dt__10J2DPictureFv();
+extern "C" void draw__10J2DPictureFffffbbb();
+extern "C" void func_802FFBC4();
+extern "C" void initiate__10J2DTextBoxFPC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding();
+extern "C" void __dt__10J2DTextBoxFv();
+extern "C" void draw__10J2DTextBoxFfff18J2DTextBoxHBinding();
+extern "C" void drawInit__6J3DSysFv();
+extern "C" void C_MTXOrtho();
+extern "C" void DVDGetDriveStatus();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetFogRangeAdj();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
@@ -113,7 +273,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 8037B140-8037B180 0040+00 .rodata    black_tex                                                    */
+/* 8037B140-8037B180 0040+00 rc=1 efc=0 .rodata    black_tex                                                    */
 SECTION_RODATA const u8 black_tex[64] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x08, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20,
@@ -121,7 +281,7 @@ SECTION_RODATA const u8 black_tex[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037B180-8037B3E0 0260+00 .rodata    msg_data                                                     */
+/* 8037B180-8037B3E0 0260+00 rc=1 efc=0 .rodata    msg_data                                                     */
 SECTION_RODATA const u8 msg_data[608] = {
 	0x4D, 0x45, 0x53, 0x47, 0x62, 0x6D, 0x67, 0x31, 0x00, 0x00, 0x02, 0x60, 0x00, 0x00, 0x00, 0x02,
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -163,7 +323,7 @@ SECTION_RODATA const u8 msg_data[608] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037B3E0-8038D640 12260+00 .rodata    font_data                                                    */
+/* 8037B3E0-8038D640 12260+00 rc=1 efc=0 .rodata    font_data                                                    */
 SECTION_RODATA const void* const font_data[18584] = {
 	(void*)0x464F4E54,
 	(void*)0x62666E31,
@@ -18751,46 +18911,46 @@ SECTION_RODATA const void* const font_data[18584] = {
 	(void*)0xE1B80000,
 };
 
-/* 80452C18-80452C1C 0004+00 .sdata2    @3758                                                        */
+/* 80452C18-80452C1C 0004+00 rc=3 efc=0 .sdata2    @3758                                                        */
 u8 d_d_error_msg__lit_3758[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80452C1C-80452C20 0004+00 .sdata2    @3759                                                        */
+/* 80452C1C-80452C20 0004+00 rc=2 efc=0 .sdata2    @3759                                                        */
 f32 d_d_error_msg__lit_3759 = 608.0f;
 
-/* 80452C20-80452C24 0004+00 .sdata2    @3760                                                        */
+/* 80452C20-80452C24 0004+00 rc=1 efc=0 .sdata2    @3760                                                        */
 f32 d_d_error_msg__lit_3760 = 200.0f;
 
-/* 80452C24-80452C28 0004+00 .sdata2    @3761                                                        */
+/* 80452C24-80452C28 0004+00 rc=2 efc=0 .sdata2    @3761                                                        */
 f32 d_d_error_msg__lit_3761 = 448.0f;
 
-/* 80452C28-80452C2C 0004+00 .sdata2    @3762                                                        */
+/* 80452C28-80452C2C 0004+00 rc=1 efc=0 .sdata2    @3762                                                        */
 f32 d_d_error_msg__lit_3762 = 23.0f;
 
-/* 80452C2C-80452C30 0004+00 .sdata2    @3763                                                        */
+/* 80452C2C-80452C30 0004+00 rc=1 efc=0 .sdata2    @3763                                                        */
 f32 d_d_error_msg__lit_3763 = 22.0f;
 
-/* 80452C30-80452C34 0004+00 .sdata2    @3764                                                        */
+/* 80452C30-80452C34 0004+00 rc=3 efc=0 .sdata2    @3764                                                        */
 f32 d_d_error_msg__lit_3764 = 1.0f;
 
-/* 80452C34-80452C38 0004+00 .sdata2    @3765                                                        */
+/* 80452C34-80452C38 0004+00 rc=1 efc=0 .sdata2    @3765                                                        */
 f32 d_d_error_msg__lit_3765 = 0.5f;
 
-/* 80452C38-80452C3C 0004+00 .sdata2    @3766                                                        */
+/* 80452C38-80452C3C 0004+00 rc=1 efc=0 .sdata2    @3766                                                        */
 f32 d_d_error_msg__lit_3766 = 2.0f;
 
-/* 80452C3C-80452C40 0004+00 .sdata2    @3767                                                        */
+/* 80452C3C-80452C40 0004+00 rc=2 efc=0 .sdata2    @3767                                                        */
 f32 d_d_error_msg__lit_3767 = 10.0f;
 
-/* 80452C40-80452C48 0008+00 .sdata2    @3769                                                        */
+/* 80452C40-80452C48 0008+00 rc=1 efc=0 .sdata2    @3769                                                        */
 f64 d_d_error_msg__lit_3769 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8009CB88-8009D194 060C+00 .text      messageSet__FUlb                                             */
+/* 8009CB88-8009D194 060C+00 rc=1 efc=0 .text      messageSet__FUlb                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(messageSet__FUlb) {
+asm static void messageSet(u32 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/d_error_msg/messageSet__FUlb.s"
 }
@@ -18798,15 +18958,15 @@ ASM_FUNCTION(messageSet__FUlb) {
 
 
 /* ############################################################################################## */
-/* 80452C48-80452C50 0004+04 .sdata2    @3835                                                        */
+/* 80452C48-80452C50 0004+04 rc=1 efc=0 .sdata2    @3835                                                        */
 f32 d_d_error_msg__lit_3835 = -1.0f;
 /* padding 4 bytes */
 
-/* 8009D194-8009D354 01C0+00 .text      draw__14dDvdErrorMsg_cFl                                     */
+/* 8009D194-8009D354 01C0+00 rc=1 efc=0 .text      draw__14dDvdErrorMsg_cFl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14dDvdErrorMsg_cFl) {
+asm void dDvdErrorMsg_c::draw(s32 field_0) {
 	nofralloc
 #include "asm/d/d_error_msg/draw__14dDvdErrorMsg_cFl.s"
 }
@@ -18814,7 +18974,7 @@ ASM_FUNCTION(draw__14dDvdErrorMsg_cFl) {
 
 
 /* ############################################################################################## */
-/* 8038D640-8038D658 0013+05 .rodata    @stringBase0                                                 */
+/* 8038D640-8038D658 0013+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -18823,11 +18983,11 @@ SECTION_DEAD char* const stringBase_8038D640 = "DVD Error !! <%d>\n";
 SECTION_DEAD char* const pad_8038D653 = "\0\0\0\0";
 #pragma pop
 
-/* 8009D354-8009D410 00BC+00 .text      execute__14dDvdErrorMsg_cFv                                  */
+/* 8009D354-8009D410 00BC+00 rc=1 efc=1 .text      execute__14dDvdErrorMsg_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14dDvdErrorMsg_cFv) {
+asm void dDvdErrorMsg_c::execute() {
 	nofralloc
 #include "asm/d/d_error_msg/execute__14dDvdErrorMsg_cFv.s"
 }
@@ -18835,29 +18995,28 @@ ASM_FUNCTION(execute__14dDvdErrorMsg_cFv) {
 
 
 /* ############################################################################################## */
-/* 80456B78-80456B80 0004+04 .sbss2     @3873                                                        */
+/* 80456B78-80456B80 0004+04 rc=1 efc=0 .sbss2     @3873                                                        */
 u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
 
-/* 8009D410-8009D790 0380+00 .text      drawCapture__FUc                                             */
+/* 8009D410-8009D790 0380+00 rc=1 efc=0 .text      drawCapture__FUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawCapture__FUc) {
+asm static void drawCapture(char field_0) {
 	nofralloc
 #include "asm/d/d_error_msg/drawCapture__FUc.s"
 }
 #pragma pop
 
 
-/* 8009D790-8009D87C 00EC+00 .text      execute__19dShutdownErrorMsg_cFv                             */
+/* 8009D790-8009D87C 00EC+00 rc=1 efc=1 .text      execute__19dShutdownErrorMsg_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__19dShutdownErrorMsg_cFv) {
+asm void dShutdownErrorMsg_c::execute() {
 	nofralloc
 #include "asm/d/d_error_msg/execute__19dShutdownErrorMsg_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

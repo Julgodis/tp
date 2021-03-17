@@ -6,33 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build camera_class (camera_class) False/False
+/* top-level dependencies (begin camera_class) */
+/* top-level dependencies (end camera_class) */
+struct camera_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopCamM_GetParam__FP12camera_class();
-extern "C" extern void fopCamM_Create__FisPv();
-extern "C" extern void fopCamM_Management__Fv();
-extern "C" extern void fopCamM_Init__Fv();
+void fopCamM_GetParam(camera_class*);
+void fopCamM_Create(s32, s16, void*);
+void fopCamM_Management();
+void fopCamM_Init();
+
+extern "C" void fopCamM_GetParam__FP12camera_class();
+extern "C" void fopCamM_Create__FisPv();
+extern "C" void fopCamM_Management__Fv();
+extern "C" void fopCamM_Init__Fv();
 SECTION_BSS extern u8 l_fopCamM_id[16];
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcLy_CurrentLayer__Fv();
-extern "C" extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void fpcLy_CurrentLayer();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 8001E308-8001E310 0008+00 .text      fopCamM_GetParam__FP12camera_class                           */
+/* 8001E308-8001E310 0008+00 rc=12 efc=12 .text      fopCamM_GetParam__FP12camera_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopCamM_GetParam__FP12camera_class) {
+asm void fopCamM_GetParam(camera_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_camera_mng/fopCamM_GetParam__FP12camera_class.s"
 }
@@ -40,40 +60,29 @@ ASM_FUNCTION(fopCamM_GetParam__FP12camera_class) {
 
 
 /* ############################################################################################## */
-/* 803F1DD8-803F1DE8 0010+00 .bss       l_fopCamM_id                                                 */
+/* 803F1DD8-803F1DE8 0010+00 rc=1 efc=0 .bss       l_fopCamM_id                                                 */
 u8 l_fopCamM_id[16];
 
-/* 8001E310-8001E374 0064+00 .text      fopCamM_Create__FisPv                                        */
+/* 8001E310-8001E374 0064+00 rc=1 efc=1 .text      fopCamM_Create__FisPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopCamM_Create__FisPv) {
+asm void fopCamM_Create(s32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_camera_mng/fopCamM_Create__FisPv.s"
 }
 #pragma pop
 
 
-/* 8001E374-8001E378 0004+00 .text      fopCamM_Management__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fopCamM_Management__Fv) {
-	nofralloc
-#include "asm/f_op/f_op_camera_mng/fopCamM_Management__Fv.s"
+/* 8001E374-8001E378 0004+00 rc=1 efc=1 .text      fopCamM_Management__Fv                                       */
+void fopCamM_Management() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8001E378-8001E37C 0004+00 .text      fopCamM_Init__Fv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fopCamM_Init__Fv) {
-	nofralloc
-#include "asm/f_op/f_op_camera_mng/fopCamM_Init__Fv.s"
+/* 8001E378-8001E37C 0004+00 rc=1 efc=1 .text      fopCamM_Init__Fv                                             */
+void fopCamM_Init() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

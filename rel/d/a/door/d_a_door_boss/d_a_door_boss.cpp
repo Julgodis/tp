@@ -6,43 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daBdoor_c;
+struct cXyz;
+
+struct daBdoor_c {
+	void getArcName();
+	void getBmd();
+	void getDzb();
+	void getBmd2();
+	void getDoorModelData();
+	void CreateHeap();
+	void calcMtx();
+	void CreateInit();
+	void create();
+	void getDemoAction();
+	void demoProc();
+	void calcGoal(cXyz*, s32);
+	void smokeInit();
+	void checkArea();
+	void checkFront();
+	void checkOpen();
+	bool actionWait();
+	void actionCloseWait();
+	void actionOpen();
+	void actionEnd();
+	void execute();
+	void checkDraw();
+	void draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getArcName__9daBdoor_cFv();
-extern "C" extern void getBmd__9daBdoor_cFv();
-extern "C" extern void getDzb__9daBdoor_cFv();
-extern "C" extern void getBmd2__9daBdoor_cFv();
-extern "C" extern void getDoorModelData__9daBdoor_cFv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__9daBdoor_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void calcMtx__9daBdoor_cFv();
-extern "C" extern void CreateInit__9daBdoor_cFv();
-extern "C" extern void create__9daBdoor_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void getDemoAction__9daBdoor_cFv();
-extern "C" extern void demoProc__9daBdoor_cFv();
-extern "C" extern void calcGoal__9daBdoor_cFP4cXyzi();
-extern "C" extern void smokeInit__9daBdoor_cFv();
-extern "C" extern void checkArea__9daBdoor_cFv();
-extern "C" extern void checkFront__9daBdoor_cFv();
-extern "C" extern void checkOpen__9daBdoor_cFv();
-extern "C" extern void actionWait__9daBdoor_cFv();
-extern "C" extern void actionCloseWait__9daBdoor_cFv();
-extern "C" extern void actionOpen__9daBdoor_cFv();
-extern "C" extern void actionEnd__9daBdoor_cFv();
-extern "C" extern void execute__9daBdoor_cFv();
-extern "C" extern void checkDraw__9daBdoor_cFv();
-extern "C" extern void draw__9daBdoor_cFv();
-extern "C" extern void Delete__9daBdoor_cFv();
-extern "C" extern void daBdoor_Draw__FP9daBdoor_c();
-extern "C" extern void daBdoor_Execute__FP9daBdoor_c();
-extern "C" extern void daBdoor_Delete__FP9daBdoor_c();
-extern "C" extern void daBdoor_Create__FP10fopAc_ac_c();
-extern "C" extern void func_806708FC();
-extern "C" extern void func_80670904();
+void CheckCreateHeap(fopAc_ac_c*);
+void daBdoor_Draw(daBdoor_c*);
+void daBdoor_Execute(daBdoor_c*);
+void daBdoor_Delete(daBdoor_c*);
+void daBdoor_Create(fopAc_ac_c*);
+extern "C" void func_806708FC();
+extern "C" void func_80670904();
+
+extern "C" void getArcName__9daBdoor_cFv();
+extern "C" void getBmd__9daBdoor_cFv();
+extern "C" void getDzb__9daBdoor_cFv();
+extern "C" void getBmd2__9daBdoor_cFv();
+extern "C" void getDoorModelData__9daBdoor_cFv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void CreateHeap__9daBdoor_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void calcMtx__9daBdoor_cFv();
+extern "C" void CreateInit__9daBdoor_cFv();
+extern "C" void create__9daBdoor_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void getDemoAction__9daBdoor_cFv();
+extern "C" void demoProc__9daBdoor_cFv();
+extern "C" void calcGoal__9daBdoor_cFP4cXyzi();
+extern "C" void smokeInit__9daBdoor_cFv();
+extern "C" void checkArea__9daBdoor_cFv();
+extern "C" void checkFront__9daBdoor_cFv();
+extern "C" void checkOpen__9daBdoor_cFv();
+extern "C" bool actionWait__9daBdoor_cFv();
+extern "C" void actionCloseWait__9daBdoor_cFv();
+extern "C" void actionOpen__9daBdoor_cFv();
+extern "C" void actionEnd__9daBdoor_cFv();
+extern "C" void execute__9daBdoor_cFv();
+extern "C" void checkDraw__9daBdoor_cFv();
+extern "C" void draw__9daBdoor_cFv();
+extern "C" void Delete__9daBdoor_cFv();
+extern "C" void daBdoor_Draw__FP9daBdoor_c();
+extern "C" void daBdoor_Execute__FP9daBdoor_c();
+extern "C" void daBdoor_Delete__FP9daBdoor_c();
+extern "C" void daBdoor_Create__FP10fopAc_ac_c();
+extern "C" void func_806708FC();
+extern "C" void func_80670904();
 SECTION_RODATA extern const u32 lit_3726;
 SECTION_RODATA extern const u32 lit_3755;
 SECTION_RODATA extern const u32 lit_3769;
@@ -83,7 +144,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -93,7 +156,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcName__9daBdoor_cFv) {
+asm void daBdoor_c::getArcName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getArcName__9daBdoor_cFv.s"
 }
@@ -104,7 +167,7 @@ ASM_FUNCTION(getArcName__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmd__9daBdoor_cFv) {
+asm void daBdoor_c::getBmd() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getBmd__9daBdoor_cFv.s"
 }
@@ -115,7 +178,7 @@ ASM_FUNCTION(getBmd__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDzb__9daBdoor_cFv) {
+asm void daBdoor_c::getDzb() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getDzb__9daBdoor_cFv.s"
 }
@@ -126,7 +189,7 @@ ASM_FUNCTION(getDzb__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmd2__9daBdoor_cFv) {
+asm void daBdoor_c::getBmd2() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getBmd2__9daBdoor_cFv.s"
 }
@@ -137,7 +200,7 @@ ASM_FUNCTION(getBmd2__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDoorModelData__9daBdoor_cFv) {
+asm void daBdoor_c::getDoorModelData() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getDoorModelData__9daBdoor_cFv.s"
 }
@@ -148,7 +211,7 @@ ASM_FUNCTION(getDoorModelData__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -159,7 +222,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daBdoor_cFv) {
+asm void daBdoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/CreateHeap__9daBdoor_cFv.s"
 }
@@ -170,7 +233,7 @@ ASM_FUNCTION(CreateHeap__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/__dt__12J3DFrameCtrlFv.s"
 }
@@ -181,7 +244,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMtx__9daBdoor_cFv) {
+asm void daBdoor_c::calcMtx() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/calcMtx__9daBdoor_cFv.s"
 }
@@ -192,7 +255,7 @@ ASM_FUNCTION(calcMtx__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__9daBdoor_cFv) {
+asm void daBdoor_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/CreateInit__9daBdoor_cFv.s"
 }
@@ -203,7 +266,7 @@ ASM_FUNCTION(CreateInit__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daBdoor_cFv) {
+asm void daBdoor_c::create() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/create__9daBdoor_cFv.s"
 }
@@ -214,7 +277,7 @@ ASM_FUNCTION(create__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/__dt__12dBgS_AcchCirFv.s"
 }
@@ -225,7 +288,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -236,7 +299,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoAction__9daBdoor_cFv) {
+asm void daBdoor_c::getDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/getDemoAction__9daBdoor_cFv.s"
 }
@@ -247,7 +310,7 @@ ASM_FUNCTION(getDemoAction__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__9daBdoor_cFv) {
+asm void daBdoor_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/demoProc__9daBdoor_cFv.s"
 }
@@ -258,7 +321,7 @@ ASM_FUNCTION(demoProc__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcGoal__9daBdoor_cFP4cXyzi) {
+asm void daBdoor_c::calcGoal(cXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/calcGoal__9daBdoor_cFP4cXyzi.s"
 }
@@ -269,7 +332,7 @@ ASM_FUNCTION(calcGoal__9daBdoor_cFP4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(smokeInit__9daBdoor_cFv) {
+asm void daBdoor_c::smokeInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/smokeInit__9daBdoor_cFv.s"
 }
@@ -280,7 +343,7 @@ ASM_FUNCTION(smokeInit__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__9daBdoor_cFv) {
+asm void daBdoor_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/checkArea__9daBdoor_cFv.s"
 }
@@ -291,7 +354,7 @@ ASM_FUNCTION(checkArea__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFront__9daBdoor_cFv) {
+asm void daBdoor_c::checkFront() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/checkFront__9daBdoor_cFv.s"
 }
@@ -302,7 +365,7 @@ ASM_FUNCTION(checkFront__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpen__9daBdoor_cFv) {
+asm void daBdoor_c::checkOpen() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/checkOpen__9daBdoor_cFv.s"
 }
@@ -310,21 +373,16 @@ ASM_FUNCTION(checkOpen__9daBdoor_cFv) {
 
 
 /* 80670320-80670328 0008+00 .text      actionWait__9daBdoor_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__9daBdoor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/actionWait__9daBdoor_cFv.s"
+bool daBdoor_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 80670328-806703C0 0098+00 .text      actionCloseWait__9daBdoor_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCloseWait__9daBdoor_cFv) {
+asm void daBdoor_c::actionCloseWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/actionCloseWait__9daBdoor_cFv.s"
 }
@@ -335,7 +393,7 @@ ASM_FUNCTION(actionCloseWait__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpen__9daBdoor_cFv) {
+asm void daBdoor_c::actionOpen() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/actionOpen__9daBdoor_cFv.s"
 }
@@ -346,7 +404,7 @@ ASM_FUNCTION(actionOpen__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__9daBdoor_cFv) {
+asm void daBdoor_c::actionEnd() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/actionEnd__9daBdoor_cFv.s"
 }
@@ -357,7 +415,7 @@ ASM_FUNCTION(actionEnd__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daBdoor_cFv) {
+asm void daBdoor_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/execute__9daBdoor_cFv.s"
 }
@@ -368,7 +426,7 @@ ASM_FUNCTION(execute__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDraw__9daBdoor_cFv) {
+asm void daBdoor_c::checkDraw() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/checkDraw__9daBdoor_cFv.s"
 }
@@ -379,7 +437,7 @@ ASM_FUNCTION(checkDraw__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daBdoor_cFv) {
+asm void daBdoor_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/draw__9daBdoor_cFv.s"
 }
@@ -390,7 +448,7 @@ ASM_FUNCTION(draw__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daBdoor_cFv) {
+asm void daBdoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/Delete__9daBdoor_cFv.s"
 }
@@ -401,7 +459,7 @@ ASM_FUNCTION(Delete__9daBdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBdoor_Draw__FP9daBdoor_c) {
+asm void daBdoor_Draw(daBdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/daBdoor_Draw__FP9daBdoor_c.s"
 }
@@ -412,7 +470,7 @@ ASM_FUNCTION(daBdoor_Draw__FP9daBdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBdoor_Execute__FP9daBdoor_c) {
+asm void daBdoor_Execute(daBdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/daBdoor_Execute__FP9daBdoor_c.s"
 }
@@ -423,7 +481,7 @@ ASM_FUNCTION(daBdoor_Execute__FP9daBdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBdoor_Delete__FP9daBdoor_c) {
+asm void daBdoor_Delete(daBdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/daBdoor_Delete__FP9daBdoor_c.s"
 }
@@ -434,7 +492,7 @@ ASM_FUNCTION(daBdoor_Delete__FP9daBdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBdoor_Create__FP10fopAc_ac_c) {
+asm void daBdoor_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/daBdoor_Create__FP10fopAc_ac_c.s"
 }
@@ -445,7 +503,7 @@ ASM_FUNCTION(daBdoor_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806708FC) {
+extern "C" asm void func_806708FC() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/func_806708FC.s"
 }
@@ -456,7 +514,7 @@ ASM_FUNCTION(func_806708FC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80670904) {
+extern "C" asm void func_80670904() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/func_80670904.s"
 }

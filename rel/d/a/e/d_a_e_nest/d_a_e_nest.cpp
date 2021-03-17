@@ -6,43 +6,110 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct nest_hahen_s;
+struct fopAc_ac_c;
+struct e_nest_class;
+
+struct daE_Nest_HIO_c {
+	daE_Nest_HIO_c();
+	~daE_Nest_HIO_c();
+};
+
+struct e_nest_class {
+};
+
+struct nest_hahen_s {
+	~nest_hahen_s();
+	nest_hahen_s();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daE_Nest_HIO_cFv();
-extern "C" extern void hahen_draw__FP12e_nest_class();
-extern "C" extern void s_bomb_sub__FPvPv();
-extern "C" extern void hahen_normal__FP12e_nest_classP12nest_hahen_s();
-extern "C" extern void hahen_move__FP12e_nest_class();
-extern "C" extern void daE_Nest_Draw__FP12e_nest_class();
-extern "C" extern void mtx_cc_set__FP12e_nest_class();
-extern "C" extern void e_nest_normal__FP12e_nest_class();
-extern "C" extern void wall_angle_get__FP12e_nest_class();
-extern "C" extern void e_nest_drop__FP12e_nest_class();
-extern "C" extern void e_nest_carry__FP12e_nest_class();
-extern "C" extern void water_check__FP12e_nest_class();
-extern "C" extern void simple_bg_check__FP12e_nest_class();
-extern "C" extern void e_nest_float__FP12e_nest_class();
-extern "C" extern void e_nest_hahen__FP12e_nest_class();
-extern "C" extern void e_nest_hook__FP12e_nest_class();
-extern "C" extern void bee_nest_action__FP12e_nest_class();
-extern "C" extern void shot_b_sub__FPvPv();
-extern "C" extern void demo_camera__FP12e_nest_class();
-extern "C" extern void daE_Nest_Execute__FP12e_nest_class();
-extern "C" extern void daE_Nest_IsDelete__FP12e_nest_class();
-extern "C" extern void daE_Nest_Delete__FP12e_nest_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_Nest_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12nest_hahen_sFv();
-extern "C" extern void __ct__12nest_hahen_sFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__14daE_Nest_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_nest_cpp();
-extern "C" extern void func_805046B8();
-extern "C" extern void func_805046C0();
+void hahen_draw(e_nest_class*);
+void s_bomb_sub(void*, void*);
+void hahen_normal(e_nest_class*, nest_hahen_s*);
+void hahen_move(e_nest_class*);
+void daE_Nest_Draw(e_nest_class*);
+void mtx_cc_set(e_nest_class*);
+void e_nest_normal(e_nest_class*);
+void wall_angle_get(e_nest_class*);
+void e_nest_drop(e_nest_class*);
+void e_nest_carry(e_nest_class*);
+void water_check(e_nest_class*);
+void simple_bg_check(e_nest_class*);
+void e_nest_float(e_nest_class*);
+void e_nest_hahen(e_nest_class*);
+void e_nest_hook(e_nest_class*);
+void bee_nest_action(e_nest_class*);
+void shot_b_sub(void*, void*);
+void demo_camera(e_nest_class*);
+void daE_Nest_Execute(e_nest_class*);
+bool daE_Nest_IsDelete(e_nest_class*);
+void daE_Nest_Delete(e_nest_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_Nest_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_nest_cpp();
+extern "C" void func_805046B8();
+extern "C" void func_805046C0();
+
+extern "C" void __ct__14daE_Nest_HIO_cFv();
+extern "C" void hahen_draw__FP12e_nest_class();
+extern "C" void s_bomb_sub__FPvPv();
+extern "C" void hahen_normal__FP12e_nest_classP12nest_hahen_s();
+extern "C" void hahen_move__FP12e_nest_class();
+extern "C" void daE_Nest_Draw__FP12e_nest_class();
+extern "C" void mtx_cc_set__FP12e_nest_class();
+extern "C" void e_nest_normal__FP12e_nest_class();
+extern "C" void wall_angle_get__FP12e_nest_class();
+extern "C" void e_nest_drop__FP12e_nest_class();
+extern "C" void e_nest_carry__FP12e_nest_class();
+extern "C" void water_check__FP12e_nest_class();
+extern "C" void simple_bg_check__FP12e_nest_class();
+extern "C" void e_nest_float__FP12e_nest_class();
+extern "C" void e_nest_hahen__FP12e_nest_class();
+extern "C" void e_nest_hook__FP12e_nest_class();
+extern "C" void bee_nest_action__FP12e_nest_class();
+extern "C" void shot_b_sub__FPvPv();
+extern "C" void demo_camera__FP12e_nest_class();
+extern "C" void daE_Nest_Execute__FP12e_nest_class();
+extern "C" bool daE_Nest_IsDelete__FP12e_nest_class();
+extern "C" void daE_Nest_Delete__FP12e_nest_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_Nest_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12nest_hahen_sFv();
+extern "C" void __ct__12nest_hahen_sFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__14daE_Nest_HIO_cFv();
+extern "C" void __sinit_d_a_e_nest_cpp();
+extern "C" void func_805046B8();
+extern "C" void func_805046C0();
 SECTION_RODATA extern const u32 lit_3999;
 SECTION_RODATA extern const u8 lit_4066[4];
 SECTION_RODATA extern const u8 lit_4067[8];
@@ -127,8 +194,11 @@ SECTION_BSS extern u8 l_HIO[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -138,7 +208,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daE_Nest_HIO_cFv) {
+asm daE_Nest_HIO_c::daE_Nest_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__ct__14daE_Nest_HIO_cFv.s"
 }
@@ -149,7 +219,7 @@ ASM_FUNCTION(__ct__14daE_Nest_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_draw__FP12e_nest_class) {
+asm void hahen_draw(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/hahen_draw__FP12e_nest_class.s"
 }
@@ -160,7 +230,7 @@ ASM_FUNCTION(hahen_draw__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bomb_sub__FPvPv) {
+asm void s_bomb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/s_bomb_sub__FPvPv.s"
 }
@@ -171,7 +241,7 @@ ASM_FUNCTION(s_bomb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_normal__FP12e_nest_classP12nest_hahen_s) {
+asm void hahen_normal(e_nest_class* field_0, nest_hahen_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/hahen_normal__FP12e_nest_classP12nest_hahen_s.s"
 }
@@ -182,7 +252,7 @@ ASM_FUNCTION(hahen_normal__FP12e_nest_classP12nest_hahen_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hahen_move__FP12e_nest_class) {
+asm void hahen_move(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/hahen_move__FP12e_nest_class.s"
 }
@@ -193,7 +263,7 @@ ASM_FUNCTION(hahen_move__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Nest_Draw__FP12e_nest_class) {
+asm void daE_Nest_Draw(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Draw__FP12e_nest_class.s"
 }
@@ -204,7 +274,7 @@ ASM_FUNCTION(daE_Nest_Draw__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_cc_set__FP12e_nest_class) {
+asm void mtx_cc_set(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/mtx_cc_set__FP12e_nest_class.s"
 }
@@ -215,7 +285,7 @@ ASM_FUNCTION(mtx_cc_set__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_normal__FP12e_nest_class) {
+asm void e_nest_normal(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_normal__FP12e_nest_class.s"
 }
@@ -226,7 +296,7 @@ ASM_FUNCTION(e_nest_normal__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_angle_get__FP12e_nest_class) {
+asm void wall_angle_get(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/wall_angle_get__FP12e_nest_class.s"
 }
@@ -237,7 +307,7 @@ ASM_FUNCTION(wall_angle_get__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_drop__FP12e_nest_class) {
+asm void e_nest_drop(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_drop__FP12e_nest_class.s"
 }
@@ -248,7 +318,7 @@ ASM_FUNCTION(e_nest_drop__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_carry__FP12e_nest_class) {
+asm void e_nest_carry(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_carry__FP12e_nest_class.s"
 }
@@ -259,7 +329,7 @@ ASM_FUNCTION(e_nest_carry__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP12e_nest_class) {
+asm void water_check(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/water_check__FP12e_nest_class.s"
 }
@@ -270,7 +340,7 @@ ASM_FUNCTION(water_check__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(simple_bg_check__FP12e_nest_class) {
+asm void simple_bg_check(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/simple_bg_check__FP12e_nest_class.s"
 }
@@ -281,7 +351,7 @@ ASM_FUNCTION(simple_bg_check__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_float__FP12e_nest_class) {
+asm void e_nest_float(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_float__FP12e_nest_class.s"
 }
@@ -292,7 +362,7 @@ ASM_FUNCTION(e_nest_float__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_hahen__FP12e_nest_class) {
+asm void e_nest_hahen(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_hahen__FP12e_nest_class.s"
 }
@@ -303,7 +373,7 @@ ASM_FUNCTION(e_nest_hahen__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_nest_hook__FP12e_nest_class) {
+asm void e_nest_hook(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/e_nest_hook__FP12e_nest_class.s"
 }
@@ -314,7 +384,7 @@ ASM_FUNCTION(e_nest_hook__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bee_nest_action__FP12e_nest_class) {
+asm void bee_nest_action(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/bee_nest_action__FP12e_nest_class.s"
 }
@@ -325,7 +395,7 @@ ASM_FUNCTION(bee_nest_action__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shot_b_sub__FPvPv) {
+asm void shot_b_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/shot_b_sub__FPvPv.s"
 }
@@ -336,7 +406,7 @@ ASM_FUNCTION(shot_b_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP12e_nest_class) {
+asm void demo_camera(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/demo_camera__FP12e_nest_class.s"
 }
@@ -347,7 +417,7 @@ ASM_FUNCTION(demo_camera__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Nest_Execute__FP12e_nest_class) {
+asm void daE_Nest_Execute(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Execute__FP12e_nest_class.s"
 }
@@ -355,21 +425,16 @@ ASM_FUNCTION(daE_Nest_Execute__FP12e_nest_class) {
 
 
 /* 80503E24-80503E2C 0008+00 .text      daE_Nest_IsDelete__FP12e_nest_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_Nest_IsDelete__FP12e_nest_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_IsDelete__FP12e_nest_class.s"
+bool daE_Nest_IsDelete(e_nest_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80503E2C-80503EA0 0074+00 .text      daE_Nest_Delete__FP12e_nest_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Nest_Delete__FP12e_nest_class) {
+asm void daE_Nest_Delete(e_nest_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Delete__FP12e_nest_class.s"
 }
@@ -380,7 +445,7 @@ ASM_FUNCTION(daE_Nest_Delete__FP12e_nest_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -391,7 +456,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Nest_Create__FP10fopAc_ac_c) {
+asm void daE_Nest_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Create__FP10fopAc_ac_c.s"
 }
@@ -402,7 +467,7 @@ ASM_FUNCTION(daE_Nest_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12nest_hahen_sFv) {
+asm nest_hahen_s::~nest_hahen_s() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__12nest_hahen_sFv.s"
 }
@@ -410,21 +475,16 @@ ASM_FUNCTION(__dt__12nest_hahen_sFv) {
 
 
 /* 805044E8-805044EC 0004+00 .text      __ct__12nest_hahen_sFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__12nest_hahen_sFv) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__ct__12nest_hahen_sFv.s"
+nest_hahen_s::nest_hahen_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805044EC-80504534 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__8cM3dGCylFv.s"
 }
@@ -435,7 +495,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__8cM3dGSphFv.s"
 }
@@ -446,7 +506,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__8cM3dGAabFv.s"
 }
@@ -457,7 +517,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -468,7 +528,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daE_Nest_HIO_cFv) {
+asm daE_Nest_HIO_c::~daE_Nest_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__dt__14daE_Nest_HIO_cFv.s"
 }
@@ -479,7 +539,7 @@ ASM_FUNCTION(__dt__14daE_Nest_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_nest_cpp) {
+extern "C" asm void __sinit_d_a_e_nest_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__sinit_d_a_e_nest_cpp.s"
 }
@@ -490,7 +550,7 @@ ASM_FUNCTION(__sinit_d_a_e_nest_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805046B8) {
+extern "C" asm void func_805046B8() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/func_805046B8.s"
 }
@@ -501,7 +561,7 @@ ASM_FUNCTION(func_805046B8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805046C0) {
+extern "C" asm void func_805046C0() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/func_805046C0.s"
 }

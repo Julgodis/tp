@@ -6,32 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSZbridge_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjSZbridge_c {
+	void rideActor(fopAc_ac_c*);
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void chkBg();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjSZbridge_c();
+};
+
+struct dBgS_WtrChk {
+	~dBgS_WtrChk();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void rideActor__15daObjSZbridge_cFP10fopAc_ac_c();
-extern "C" extern void create1st__15daObjSZbridge_cFv();
-extern "C" extern void setMtx__15daObjSZbridge_cFv();
-extern "C" extern void CreateHeap__15daObjSZbridge_cFv();
-extern "C" extern void chkBg__15daObjSZbridge_cFv();
-extern "C" extern void __dt__11dBgS_WtrChkFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void Create__15daObjSZbridge_cFv();
-extern "C" extern void Execute__15daObjSZbridge_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjSZbridge_cFv();
-extern "C" extern void Delete__15daObjSZbridge_cFv();
-extern "C" extern void daObjSZbridge_create1st__FP15daObjSZbridge_c();
-extern "C" extern void daObjSZbridge_MoveBGDelete__FP15daObjSZbridge_c();
-extern "C" extern void daObjSZbridge_MoveBGExecute__FP15daObjSZbridge_c();
-extern "C" extern void daObjSZbridge_MoveBGDraw__FP15daObjSZbridge_c();
-extern "C" extern void __dt__15daObjSZbridge_cFv();
-extern "C" extern void func_80D04C00();
-extern "C" extern void func_80D04C08();
-extern "C" extern void func_80D04C10();
-extern "C" extern void func_80D04C18();
-extern "C" extern void func_80D04C20();
-extern "C" extern void func_80D04C28();
+void rideCallback(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__15daObjSZbridge_cFPPA3_A4_f();
+void daObjSZbridge_create1st(daObjSZbridge_c*);
+void daObjSZbridge_MoveBGDelete(daObjSZbridge_c*);
+void daObjSZbridge_MoveBGExecute(daObjSZbridge_c*);
+void daObjSZbridge_MoveBGDraw(daObjSZbridge_c*);
+extern "C" void func_80D04C00();
+extern "C" void func_80D04C08();
+extern "C" void func_80D04C10();
+extern "C" void func_80D04C18();
+extern "C" void func_80D04C20();
+extern "C" void func_80D04C28();
+
+extern "C" void rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void rideActor__15daObjSZbridge_cFP10fopAc_ac_c();
+extern "C" void create1st__15daObjSZbridge_cFv();
+extern "C" void setMtx__15daObjSZbridge_cFv();
+extern "C" void CreateHeap__15daObjSZbridge_cFv();
+extern "C" void chkBg__15daObjSZbridge_cFv();
+extern "C" void __dt__11dBgS_WtrChkFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void Create__15daObjSZbridge_cFv();
+extern "C" void Execute__15daObjSZbridge_cFPPA3_A4_f();
+extern "C" void Draw__15daObjSZbridge_cFv();
+extern "C" void Delete__15daObjSZbridge_cFv();
+extern "C" void daObjSZbridge_create1st__FP15daObjSZbridge_c();
+extern "C" void daObjSZbridge_MoveBGDelete__FP15daObjSZbridge_c();
+extern "C" void daObjSZbridge_MoveBGExecute__FP15daObjSZbridge_c();
+extern "C" void daObjSZbridge_MoveBGDraw__FP15daObjSZbridge_c();
+extern "C" void __dt__15daObjSZbridge_cFv();
+extern "C" void func_80D04C00();
+extern "C" void func_80D04C08();
+extern "C" void func_80D04C10();
+extern "C" void func_80D04C18();
+extern "C" void func_80D04C20();
+extern "C" void func_80D04C28();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3642;
 SECTION_RODATA extern const u32 lit_3643;
@@ -57,7 +104,9 @@ SECTION_DATA extern void*const __vt__15daObjSZbridge_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -67,7 +116,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallback(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -78,7 +127,7 @@ ASM_FUNCTION(rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideActor__15daObjSZbridge_cFP10fopAc_ac_c) {
+asm void daObjSZbridge_c::rideActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/rideActor__15daObjSZbridge_cFP10fopAc_ac_c.s"
 }
@@ -89,7 +138,7 @@ ASM_FUNCTION(rideActor__15daObjSZbridge_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/create1st__15daObjSZbridge_cFv.s"
 }
@@ -100,7 +149,7 @@ ASM_FUNCTION(create1st__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/setMtx__15daObjSZbridge_cFv.s"
 }
@@ -111,7 +160,7 @@ ASM_FUNCTION(setMtx__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/CreateHeap__15daObjSZbridge_cFv.s"
 }
@@ -122,7 +171,7 @@ ASM_FUNCTION(CreateHeap__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkBg__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::chkBg() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/chkBg__15daObjSZbridge_cFv.s"
 }
@@ -133,7 +182,7 @@ ASM_FUNCTION(chkBg__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dBgS_WtrChkFv) {
+asm dBgS_WtrChk::~dBgS_WtrChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/__dt__11dBgS_WtrChkFv.s"
 }
@@ -144,7 +193,7 @@ ASM_FUNCTION(__dt__11dBgS_WtrChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -155,7 +204,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/Create__15daObjSZbridge_cFv.s"
 }
@@ -166,7 +215,7 @@ ASM_FUNCTION(Create__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjSZbridge_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjSZbridge_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/Execute__15daObjSZbridge_cFPPA3_A4_f.s"
 }
@@ -177,7 +226,7 @@ ASM_FUNCTION(Execute__15daObjSZbridge_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/Draw__15daObjSZbridge_cFv.s"
 }
@@ -188,7 +237,7 @@ ASM_FUNCTION(Draw__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjSZbridge_cFv) {
+asm void daObjSZbridge_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/Delete__15daObjSZbridge_cFv.s"
 }
@@ -199,7 +248,7 @@ ASM_FUNCTION(Delete__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSZbridge_create1st__FP15daObjSZbridge_c) {
+asm void daObjSZbridge_create1st(daObjSZbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/daObjSZbridge_create1st__FP15daObjSZbridge_c.s"
 }
@@ -210,7 +259,7 @@ ASM_FUNCTION(daObjSZbridge_create1st__FP15daObjSZbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSZbridge_MoveBGDelete__FP15daObjSZbridge_c) {
+asm void daObjSZbridge_MoveBGDelete(daObjSZbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/daObjSZbridge_MoveBGDelete__FP15daObjSZbridge_c.s"
 }
@@ -221,7 +270,7 @@ ASM_FUNCTION(daObjSZbridge_MoveBGDelete__FP15daObjSZbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSZbridge_MoveBGExecute__FP15daObjSZbridge_c) {
+asm void daObjSZbridge_MoveBGExecute(daObjSZbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/daObjSZbridge_MoveBGExecute__FP15daObjSZbridge_c.s"
 }
@@ -232,7 +281,7 @@ ASM_FUNCTION(daObjSZbridge_MoveBGExecute__FP15daObjSZbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSZbridge_MoveBGDraw__FP15daObjSZbridge_c) {
+asm void daObjSZbridge_MoveBGDraw(daObjSZbridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/daObjSZbridge_MoveBGDraw__FP15daObjSZbridge_c.s"
 }
@@ -243,7 +292,7 @@ ASM_FUNCTION(daObjSZbridge_MoveBGDraw__FP15daObjSZbridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjSZbridge_cFv) {
+asm daObjSZbridge_c::~daObjSZbridge_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/__dt__15daObjSZbridge_cFv.s"
 }
@@ -254,7 +303,7 @@ ASM_FUNCTION(__dt__15daObjSZbridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C00) {
+extern "C" asm void func_80D04C00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C00.s"
 }
@@ -265,7 +314,7 @@ ASM_FUNCTION(func_80D04C00) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C08) {
+extern "C" asm void func_80D04C08() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C08.s"
 }
@@ -276,7 +325,7 @@ ASM_FUNCTION(func_80D04C08) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C10) {
+extern "C" asm void func_80D04C10() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C10.s"
 }
@@ -287,7 +336,7 @@ ASM_FUNCTION(func_80D04C10) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C18) {
+extern "C" asm void func_80D04C18() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C18.s"
 }
@@ -298,7 +347,7 @@ ASM_FUNCTION(func_80D04C18) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C20) {
+extern "C" asm void func_80D04C20() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C20.s"
 }
@@ -309,7 +358,7 @@ ASM_FUNCTION(func_80D04C20) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D04C28) {
+extern "C" asm void func_80D04C28() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_szbridge/d_a_obj_szbridge/func_80D04C28.s"
 }

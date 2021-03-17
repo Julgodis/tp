@@ -6,33 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_mk_bo_class;
+
+struct e_mk_bo_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daE_MK_BO_Draw__FP13e_mk_bo_class();
-extern "C" extern void hit_check__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_shot__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_start__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_r04__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_hasira__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_demo_ground__FP13e_mk_bo_class();
-extern "C" extern void e_mk_bo_demo_spin__FP13e_mk_bo_class();
-extern "C" extern void action__FP13e_mk_bo_class();
-extern "C" extern void daE_MK_BO_Execute__FP13e_mk_bo_class();
-extern "C" extern void daE_MK_BO_IsDelete__FP13e_mk_bo_class();
-extern "C" extern void daE_MK_BO_Delete__FP13e_mk_bo_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daE_MK_BO_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_8071F5E4();
-extern "C" extern void func_8071F5EC();
-extern "C" extern void __dt__4cXyzFv();
+void daE_MK_BO_Draw(e_mk_bo_class*);
+void hit_check(e_mk_bo_class*);
+void e_mk_bo_shot(e_mk_bo_class*);
+void e_mk_bo_start(e_mk_bo_class*);
+void e_mk_bo_r04(e_mk_bo_class*);
+void e_mk_bo_hasira(e_mk_bo_class*);
+void e_mk_bo_demo_ground(e_mk_bo_class*);
+void e_mk_bo_demo_spin(e_mk_bo_class*);
+void action(e_mk_bo_class*);
+void daE_MK_BO_Execute(e_mk_bo_class*);
+bool daE_MK_BO_IsDelete(e_mk_bo_class*);
+void daE_MK_BO_Delete(e_mk_bo_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_MK_BO_Create(fopAc_ac_c*);
+extern "C" void func_8071F5E4();
+extern "C" void func_8071F5EC();
+
+extern "C" void daE_MK_BO_Draw__FP13e_mk_bo_class();
+extern "C" void hit_check__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_shot__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_start__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_r04__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_hasira__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_demo_ground__FP13e_mk_bo_class();
+extern "C" void e_mk_bo_demo_spin__FP13e_mk_bo_class();
+extern "C" void action__FP13e_mk_bo_class();
+extern "C" void daE_MK_BO_Execute__FP13e_mk_bo_class();
+extern "C" bool daE_MK_BO_IsDelete__FP13e_mk_bo_class();
+extern "C" void daE_MK_BO_Delete__FP13e_mk_bo_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daE_MK_BO_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_8071F5E4();
+extern "C" void func_8071F5EC();
+extern "C" void __dt__4cXyzFv();
 SECTION_RODATA extern const u8 lit_3776[4];
 SECTION_RODATA extern const u32 lit_3777;
 SECTION_RODATA extern const u32 lit_3778;
@@ -132,8 +194,11 @@ SECTION_BSS extern u8 data_8071F8DC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -143,7 +208,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_BO_Draw__FP13e_mk_bo_class) {
+asm void daE_MK_BO_Draw(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/daE_MK_BO_Draw__FP13e_mk_bo_class.s"
 }
@@ -154,7 +219,7 @@ ASM_FUNCTION(daE_MK_BO_Draw__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_check__FP13e_mk_bo_class) {
+asm void hit_check(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/hit_check__FP13e_mk_bo_class.s"
 }
@@ -165,7 +230,7 @@ ASM_FUNCTION(hit_check__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_shot__FP13e_mk_bo_class) {
+asm void e_mk_bo_shot(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_shot__FP13e_mk_bo_class.s"
 }
@@ -176,7 +241,7 @@ ASM_FUNCTION(e_mk_bo_shot__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_start__FP13e_mk_bo_class) {
+asm void e_mk_bo_start(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_start__FP13e_mk_bo_class.s"
 }
@@ -187,7 +252,7 @@ ASM_FUNCTION(e_mk_bo_start__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_r04__FP13e_mk_bo_class) {
+asm void e_mk_bo_r04(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_r04__FP13e_mk_bo_class.s"
 }
@@ -198,7 +263,7 @@ ASM_FUNCTION(e_mk_bo_r04__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_hasira__FP13e_mk_bo_class) {
+asm void e_mk_bo_hasira(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_hasira__FP13e_mk_bo_class.s"
 }
@@ -209,7 +274,7 @@ ASM_FUNCTION(e_mk_bo_hasira__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_demo_ground__FP13e_mk_bo_class) {
+asm void e_mk_bo_demo_ground(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_demo_ground__FP13e_mk_bo_class.s"
 }
@@ -220,7 +285,7 @@ ASM_FUNCTION(e_mk_bo_demo_ground__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_mk_bo_demo_spin__FP13e_mk_bo_class) {
+asm void e_mk_bo_demo_spin(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/e_mk_bo_demo_spin__FP13e_mk_bo_class.s"
 }
@@ -231,7 +296,7 @@ ASM_FUNCTION(e_mk_bo_demo_spin__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP13e_mk_bo_class) {
+asm void action(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/action__FP13e_mk_bo_class.s"
 }
@@ -242,7 +307,7 @@ ASM_FUNCTION(action__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_BO_Execute__FP13e_mk_bo_class) {
+asm void daE_MK_BO_Execute(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/daE_MK_BO_Execute__FP13e_mk_bo_class.s"
 }
@@ -250,21 +315,16 @@ ASM_FUNCTION(daE_MK_BO_Execute__FP13e_mk_bo_class) {
 
 
 /* 8071EECC-8071EED4 0008+00 .text      daE_MK_BO_IsDelete__FP13e_mk_bo_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_BO_IsDelete__FP13e_mk_bo_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/daE_MK_BO_IsDelete__FP13e_mk_bo_class.s"
+bool daE_MK_BO_IsDelete(e_mk_bo_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8071EED4-8071EF24 0050+00 .text      daE_MK_BO_Delete__FP13e_mk_bo_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_BO_Delete__FP13e_mk_bo_class) {
+asm void daE_MK_BO_Delete(e_mk_bo_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/daE_MK_BO_Delete__FP13e_mk_bo_class.s"
 }
@@ -275,7 +335,7 @@ ASM_FUNCTION(daE_MK_BO_Delete__FP13e_mk_bo_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -286,7 +346,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__12J3DFrameCtrlFv.s"
 }
@@ -297,7 +357,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_MK_BO_Create__FP10fopAc_ac_c) {
+asm void daE_MK_BO_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/daE_MK_BO_Create__FP10fopAc_ac_c.s"
 }
@@ -308,7 +368,7 @@ ASM_FUNCTION(daE_MK_BO_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__8cM3dGSphFv.s"
 }
@@ -319,7 +379,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__8cM3dGAabFv.s"
 }
@@ -330,7 +390,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__10dCcD_GSttsFv.s"
 }
@@ -341,7 +401,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -352,7 +412,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__12dBgS_AcchCirFv.s"
 }
@@ -363,7 +423,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__10cCcD_GSttsFv.s"
 }
@@ -374,7 +434,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8071F5E4) {
+extern "C" asm void func_8071F5E4() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/func_8071F5E4.s"
 }
@@ -385,7 +445,7 @@ ASM_FUNCTION(func_8071F5E4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8071F5EC) {
+extern "C" asm void func_8071F5EC() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/func_8071F5EC.s"
 }
@@ -396,7 +456,7 @@ ASM_FUNCTION(func_8071F5EC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_mk_bo/d_a_e_mk_bo/__dt__4cXyzFv.s"
 }

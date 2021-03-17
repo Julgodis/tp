@@ -9,128 +9,143 @@
 // Forward References:
 // 
 
-extern "C" extern void __GXSetDirtyState();
-extern "C" extern void GXBegin();
-extern "C" extern void __GXSendFlushPrim();
-extern "C" extern void GXSetLineWidth();
-extern "C" extern void GXSetPointSize();
-extern "C" extern void GXEnableTexOffsets();
-extern "C" extern void GXSetCullMode();
-extern "C" extern void GXSetCoPlanar();
-extern "C" extern void __GXSetGenMode();
+extern "C" void __GXSetDirtyState();
+extern "C" void GXBegin();
+extern "C" void __GXSendFlushPrim();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXEnableTexOffsets();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetCoPlanar();
+extern "C" static void __GXSetGenMode();
+
+extern "C" void __GXSetDirtyState();
+extern "C" void GXBegin();
+extern "C" void __GXSendFlushPrim();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXEnableTexOffsets();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetCoPlanar();
+extern "C" static void __GXSetGenMode();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __GXSetVCD();
-extern "C" extern void __GXCalculateVLim();
-extern "C" extern void __GXSetVAT();
-extern "C" extern void __GXSetSUTexRegs();
-extern "C" extern void __GXUpdateBPMask();
+extern "C" void __GXSetVCD();
+extern "C" void __GXCalculateVLim();
+extern "C" void __GXSetVAT();
+extern "C" void __GXSetSUTexRegs();
+extern "C" void __GXUpdateBPMask();
+
+extern "C" void __GXSetVCD();
+extern "C" void __GXCalculateVLim();
+extern "C" void __GXSetVAT();
+extern "C" void __GXSetSUTexRegs();
+extern "C" void __GXUpdateBPMask();
 SECTION_SDATA2 extern void*__GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035C6E4-8035C764 0080+00 .text      __GXSetDirtyState                                            */
+/* 8035C6E4-8035C764 0080+00 rc=4 efc=4 .text      __GXSetDirtyState                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__GXSetDirtyState) {
+extern "C" asm void __GXSetDirtyState() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/__GXSetDirtyState.s"
 }
 #pragma pop
 
 
-/* 8035C764-8035C834 00D0+00 .text      GXBegin                                                      */
+/* 8035C764-8035C834 00D0+00 rc=66 efc=66 .text      GXBegin                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXBegin) {
+extern "C" asm void GXBegin() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXBegin.s"
 }
 #pragma pop
 
 
-/* 8035C834-8035C8BC 0088+00 .text      __GXSendFlushPrim                                            */
+/* 8035C834-8035C8BC 0088+00 rc=2 efc=1 .text      __GXSendFlushPrim                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__GXSendFlushPrim) {
+extern "C" asm void __GXSendFlushPrim() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/__GXSendFlushPrim.s"
 }
 #pragma pop
 
 
-/* 8035C8BC-8035C8FC 0040+00 .text      GXSetLineWidth                                               */
+/* 8035C8BC-8035C8FC 0040+00 rc=8 efc=8 .text      GXSetLineWidth                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetLineWidth) {
+extern "C" asm void GXSetLineWidth() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXSetLineWidth.s"
 }
 #pragma pop
 
 
-/* 8035C8FC-8035C93C 0040+00 .text      GXSetPointSize                                               */
+/* 8035C8FC-8035C93C 0040+00 rc=5 efc=5 .text      GXSetPointSize                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetPointSize) {
+extern "C" asm void GXSetPointSize() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXSetPointSize.s"
 }
 #pragma pop
 
 
-/* 8035C93C-8035C984 0048+00 .text      GXEnableTexOffsets                                           */
+/* 8035C93C-8035C984 0048+00 rc=3 efc=3 .text      GXEnableTexOffsets                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXEnableTexOffsets) {
+extern "C" asm void GXEnableTexOffsets() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXEnableTexOffsets.s"
 }
 #pragma pop
 
 
-/* 8035C984-8035C9AC 0028+00 .text      GXSetCullMode                                                */
+/* 8035C984-8035C9AC 0028+00 rc=33 efc=33 .text      GXSetCullMode                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetCullMode) {
+extern "C" asm void GXSetCullMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXSetCullMode.s"
 }
 #pragma pop
 
 
-/* 8035C9AC-8035C9E0 0034+00 .text      GXSetCoPlanar                                                */
+/* 8035C9AC-8035C9E0 0034+00 rc=6 efc=6 .text      GXSetCoPlanar                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GXSetCoPlanar) {
+extern "C" asm void GXSetCoPlanar() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/GXSetCoPlanar.s"
 }
 #pragma pop
 
 
-/* 8035C9E0-8035CA04 0024+00 .text      __GXSetGenMode                                               */
+/* 8035C9E0-8035CA04 0024+00 rc=2 efc=0 .text      __GXSetGenMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__GXSetGenMode) {
+extern "C" asm static void __GXSetGenMode() {
 	nofralloc
 #include "asm/dolphin/gx/GXGeometry/__GXSetGenMode.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,28 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMHole_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjMHole_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void checkParent();
+	void CreateHeap();
+	void create();
+	void execute();
+	void effectSet();
+	void effectEnd();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void searchParentSub__FPvPv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__12daObjMHole_cFv();
-extern "C" extern void setBaseMtx__12daObjMHole_cFv();
-extern "C" extern void Create__12daObjMHole_cFv();
-extern "C" extern void checkParent__12daObjMHole_cFv();
-extern "C" extern void CreateHeap__12daObjMHole_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__12daObjMHole_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__12daObjMHole_cFv();
-extern "C" extern void effectSet__12daObjMHole_cFv();
-extern "C" extern void effectEnd__12daObjMHole_cFv();
-extern "C" extern void draw__12daObjMHole_cFv();
-extern "C" extern void _delete__12daObjMHole_cFv();
-extern "C" extern void daObjMHole_Draw__FP12daObjMHole_c();
-extern "C" extern void daObjMHole_Execute__FP12daObjMHole_c();
-extern "C" extern void daObjMHole_Delete__FP12daObjMHole_c();
-extern "C" extern void daObjMHole_Create__FP10fopAc_ac_c();
+void searchParentSub(void*, void*);
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjMHole_Draw(daObjMHole_c*);
+void daObjMHole_Execute(daObjMHole_c*);
+void daObjMHole_Delete(daObjMHole_c*);
+void daObjMHole_Create(fopAc_ac_c*);
+
+extern "C" void searchParentSub__FPvPv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__12daObjMHole_cFv();
+extern "C" void setBaseMtx__12daObjMHole_cFv();
+extern "C" void Create__12daObjMHole_cFv();
+extern "C" void checkParent__12daObjMHole_cFv();
+extern "C" void CreateHeap__12daObjMHole_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__12daObjMHole_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__12daObjMHole_cFv();
+extern "C" void effectSet__12daObjMHole_cFv();
+extern "C" void effectEnd__12daObjMHole_cFv();
+extern "C" void draw__12daObjMHole_cFv();
+extern "C" void _delete__12daObjMHole_cFv();
+extern "C" void daObjMHole_Draw__FP12daObjMHole_c();
+extern "C" void daObjMHole_Execute__FP12daObjMHole_c();
+extern "C" void daObjMHole_Delete__FP12daObjMHole_c();
+extern "C" void daObjMHole_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_brk[8];
 SECTION_RODATA extern const u8 l_btk1[8];
@@ -56,7 +95,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -66,7 +107,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchParentSub__FPvPv) {
+asm void searchParentSub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/searchParentSub__FPvPv.s"
 }
@@ -77,7 +118,7 @@ ASM_FUNCTION(searchParentSub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -88,7 +129,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjMHole_cFv) {
+asm void daObjMHole_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/initBaseMtx__12daObjMHole_cFv.s"
 }
@@ -99,7 +140,7 @@ ASM_FUNCTION(initBaseMtx__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjMHole_cFv) {
+asm void daObjMHole_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/setBaseMtx__12daObjMHole_cFv.s"
 }
@@ -110,7 +151,7 @@ ASM_FUNCTION(setBaseMtx__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjMHole_cFv) {
+asm void daObjMHole_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/Create__12daObjMHole_cFv.s"
 }
@@ -121,7 +162,7 @@ ASM_FUNCTION(Create__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkParent__12daObjMHole_cFv) {
+asm void daObjMHole_c::checkParent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/checkParent__12daObjMHole_cFv.s"
 }
@@ -132,7 +173,7 @@ ASM_FUNCTION(checkParent__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjMHole_cFv) {
+asm void daObjMHole_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/CreateHeap__12daObjMHole_cFv.s"
 }
@@ -143,7 +184,7 @@ ASM_FUNCTION(CreateHeap__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/__dt__12J3DFrameCtrlFv.s"
 }
@@ -154,7 +195,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjMHole_cFv) {
+asm void daObjMHole_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/func_80C934E0.s"
 }
@@ -165,7 +206,7 @@ ASM_FUNCTION(create__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/__dt__8cM3dGAabFv.s"
 }
@@ -176,7 +217,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjMHole_cFv) {
+asm void daObjMHole_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/execute__12daObjMHole_cFv.s"
 }
@@ -187,7 +228,7 @@ ASM_FUNCTION(execute__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet__12daObjMHole_cFv) {
+asm void daObjMHole_c::effectSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/effectSet__12daObjMHole_cFv.s"
 }
@@ -198,7 +239,7 @@ ASM_FUNCTION(effectSet__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectEnd__12daObjMHole_cFv) {
+asm void daObjMHole_c::effectEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/effectEnd__12daObjMHole_cFv.s"
 }
@@ -209,7 +250,7 @@ ASM_FUNCTION(effectEnd__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjMHole_cFv) {
+asm void daObjMHole_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/draw__12daObjMHole_cFv.s"
 }
@@ -220,7 +261,7 @@ ASM_FUNCTION(draw__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjMHole_cFv) {
+asm void daObjMHole_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/_delete__12daObjMHole_cFv.s"
 }
@@ -231,7 +272,7 @@ ASM_FUNCTION(_delete__12daObjMHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHole_Draw__FP12daObjMHole_c) {
+asm void daObjMHole_Draw(daObjMHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/daObjMHole_Draw__FP12daObjMHole_c.s"
 }
@@ -242,7 +283,7 @@ ASM_FUNCTION(daObjMHole_Draw__FP12daObjMHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHole_Execute__FP12daObjMHole_c) {
+asm void daObjMHole_Execute(daObjMHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/daObjMHole_Execute__FP12daObjMHole_c.s"
 }
@@ -253,7 +294,7 @@ ASM_FUNCTION(daObjMHole_Execute__FP12daObjMHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHole_Delete__FP12daObjMHole_c) {
+asm void daObjMHole_Delete(daObjMHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/daObjMHole_Delete__FP12daObjMHole_c.s"
 }
@@ -264,7 +305,7 @@ ASM_FUNCTION(daObjMHole_Delete__FP12daObjMHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHole_Create__FP10fopAc_ac_c) {
+asm void daObjMHole_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mhole/d_a_obj_mhole/daObjMHole_Create__FP10fopAc_ac_c.s"
 }

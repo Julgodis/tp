@@ -6,119 +6,156 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JGadget (JGadget) False/False
+/* top-level dependencies (begin JGadget) */
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build vector (JGadget::vector) False/False
+	/* dependencies (begin JGadget::vector) */
+	/* dependencies (end JGadget::vector) */
+	struct vector {
+		/* 802DCCC8 */ void extend_default(u32, u32, u32);
+	};
+
+	// build TVector_pointer_void (JGadget::TVector_pointer_void) False/False
+	/* dependencies (begin JGadget::TVector_pointer_void) */
+	/* dependencies (end JGadget::TVector_pointer_void) */
+	struct TVector_pointer_void {
+		/* 802DCCFC */ ~TVector_pointer_void();
+		/* 802DCDA4 */ void insert(void**, void const*&);
+		/* 802DCDC4 */ void erase(void**, void**);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void extend_default__Q27JGadget6vectorFUlUlUl();
-extern "C" extern void func_802DCCD0();
-extern "C" extern void __dt__Q27JGadget20TVector_pointer_voidFv();
-extern "C" extern void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv();
-extern "C" extern void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
-extern "C" extern void func_802DCE1C();
-extern "C" extern void func_802DCE8C();
-extern "C" extern void func_802DD130();
+extern "C" void func_802DCCD0();
+extern "C" static void func_802DCE1C();
+extern "C" static void func_802DCE8C();
+extern "C" static void func_802DD130();
+
+extern "C" void extend_default__Q27JGadget6vectorFUlUlUl();
+extern "C" void func_802DCCD0();
+extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv();
+extern "C" void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv();
+extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
+extern "C" static void func_802DCE1C();
+extern "C" static void func_802DCE8C();
+extern "C" static void func_802DD130();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_29();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
-/* 802DCCC8-802DCCD0 0008+00 .text      extend_default__Q27JGadget6vectorFUlUlUl                     */
+/* 802DCCC8-802DCCD0 0008+00 rc=1 efc=0 .text      extend_default__Q27JGadget6vectorFUlUlUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(extend_default__Q27JGadget6vectorFUlUlUl) {
+asm void JGadget::vector::extend_default(u32 field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/extend_default__Q27JGadget6vectorFUlUlUl.s"
 }
 #pragma pop
 
 
-/* 802DCCD0-802DCCFC 002C+00 .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
+/* 802DCCD0-802DCCFC 002C+00 rc=1 efc=1 .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802DCCD0) {
+extern "C" asm void func_802DCCD0() {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DCCD0.s"
 }
 #pragma pop
 
 
-/* 802DCCFC-802DCDA4 00A8+00 .text      __dt__Q27JGadget20TVector_pointer_voidFv                     */
+/* 802DCCFC-802DCDA4 00A8+00 rc=2 efc=2 .text      __dt__Q27JGadget20TVector_pointer_voidFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q27JGadget20TVector_pointer_voidFv) {
+asm JGadget::TVector_pointer_void::~TVector_pointer_void() {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/__dt__Q27JGadget20TVector_pointer_voidFv.s"
 }
 #pragma pop
 
 
-/* 802DCDA4-802DCDC4 0020+00 .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             */
+/* 802DCDA4-802DCDC4 0020+00 rc=1 efc=1 .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insert__Q27JGadget20TVector_pointer_voidFPPvRCPv) {
+asm void JGadget::TVector_pointer_void::insert(void** field_0, void const*& field_1) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/insert__Q27JGadget20TVector_pointer_voidFPPvRCPv.s"
 }
 #pragma pop
 
 
-/* 802DCDC4-802DCE1C 0058+00 .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               */
+/* 802DCDC4-802DCE1C 0058+00 rc=1 efc=1 .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(erase__Q27JGadget20TVector_pointer_voidFPPvPPv) {
+asm void JGadget::TVector_pointer_void::erase(void** field_0, void** field_1) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/erase__Q27JGadget20TVector_pointer_voidFPPvPPv.s"
 }
 #pragma pop
 
 
-/* 802DCE1C-802DCE8C 0070+00 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
+/* 802DCE1C-802DCE8C 0070+00 rc=1 efc=0 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802DCE1C) {
+extern "C" asm static void func_802DCE1C() {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DCE1C.s"
 }
 #pragma pop
 
 
-/* 802DCE8C-802DD130 02A4+00 .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
+/* 802DCE8C-802DD130 02A4+00 rc=1 efc=0 .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802DCE8C) {
+extern "C" asm static void func_802DCE8C() {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DCE8C.s"
 }
 #pragma pop
 
 
-/* 802DD130-802DD188 0058+00 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
+/* 802DD130-802DD188 0058+00 rc=1 efc=0 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802DD130) {
+extern "C" asm static void func_802DD130() {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DD130.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

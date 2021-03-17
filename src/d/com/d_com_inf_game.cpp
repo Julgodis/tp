@@ -6,194 +6,989 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+// build dStage_startStage_c (dStage_startStage_c) False/False
+/* top-level dependencies (begin dStage_startStage_c) */
+/* top-level dependencies (end dStage_startStage_c) */
+struct dStage_startStage_c {
+};
+
+// build dTimer_c (dTimer_c) False/False
+/* top-level dependencies (begin dTimer_c) */
+/* top-level dependencies (end dTimer_c) */
+struct dTimer_c {
+	/* 8025D524 */ void deleteCheck();
+	/* 8025D538 */ void start(s32);
+	/* 8025D618 */ void start(s32, s16);
+	/* 8025D7E8 */ void stop(char);
+	/* 8025D86C */ void restart(char);
+	/* 8025D920 */ void end(s32);
+	/* 8025D9E0 */ void deleteRequest();
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+/* top-level dependencies (begin dComIfG_play_c) */
+// outer dependency: J3DModelData
+// outer dependency: dStage_startStage_c
+// outer dependency: dTimer_c
+// outer dependency: cXyz
+// outer dependency: J3DModel
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	// cXyz
+	// dStage_startStage_c
+	// J3DModelData
+	// dTimer_c
+	// J3DModel
+	/* 8002B1DC */ void ct();
+	/* 8002B22C */ void init();
+	/* 8002B2C8 */ void itemInit();
+	/* 8002B36C */ void setItemBombNumCount(char, s16);
+	/* 8002B384 */ void getItemBombNumCount(char);
+	/* 8002B394 */ void clearItemBombNumCount(char);
+	/* 8002B3A8 */ void setNowVibration(char);
+	/* 8002B3B0 */ void getNowVibration();
+	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
+	/* 8002B434 */ void getLayerNo_common_common(char const*, s32, s32);
+	/* 8002C950 */ void getLayerNo_common(char const*, s32, s32);
+	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C9D8 */ void createParticle();
+	/* 8002CA1C */ void createSimpleModel();
+	/* 8002CA70 */ void deleteSimpleModel();
+	/* 8002CAC4 */ void drawSimpleModel();
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, s32, char);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, s32);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, s32);
+	/* 8002CB94 */ void setTimerNowTimeMs(s32);
+	/* 8002CB9C */ void getTimerNowTimeMs();
+	/* 8002CBA4 */ void setTimerLimitTimeMs(s32);
+	/* 8002CBAC */ void getTimerLimitTimeMs();
+	/* 8002CBB4 */ void setTimerMode(s32);
+	/* 8002CBBC */ void getTimerMode();
+	/* 8002CBC4 */ void setTimerType(char);
+	/* 8002CBCC */ void getTimerType();
+	/* 8002CBD4 */ void setTimerPtr(dTimer_c*);
+	/* 8002CBDC */ void getTimerPtr();
+	/* 8002F128 */ void setWarpItemData(char const*, cXyz, s16, char, char, char);
+	/* 8002FDE8 */ ~dComIfG_play_c();
+};
+
+// build dStage_startStage_c (dStage_startStage_c) True/True
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) True/True
+// build dTimer_c (dTimer_c) True/True
+// build dComIfG_inf_c (dComIfG_inf_c) False/False
+/* top-level dependencies (begin dComIfG_inf_c) */
+/* top-level dependencies (end dComIfG_inf_c) */
+struct dComIfG_inf_c {
+	/* 8002CBE4 */ void ct();
+	/* 8002FD74 */ ~dComIfG_inf_c();
+	/* 80030244 */ dComIfG_inf_c();
+};
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// build request_of_phase_process_class (request_of_phase_process_class) False/False
+/* top-level dependencies (begin request_of_phase_process_class) */
+/* top-level dependencies (end request_of_phase_process_class) */
+struct request_of_phase_process_class {
+};
+
+// build phaseParam_c (phaseParam_c) False/False
+/* top-level dependencies (begin phaseParam_c) */
+/* top-level dependencies (end phaseParam_c) */
+struct phaseParam_c {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+// build cXyz (cXyz) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+	/* 802680F8 */ void ChkSetInfo() const;
+};
+
+// build _GXTexObj (_GXTexObj) False/False
+/* top-level dependencies (begin _GXTexObj) */
+/* top-level dependencies (end _GXTexObj) */
+struct _GXTexObj {
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024338 */ void initZone();
+	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 8002D9B0 */ void getZoneNo(s32);
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+// build dComIfG_resLoader_c (dComIfG_resLoader_c) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin dComIfG_resLoader_c) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end dComIfG_resLoader_c) */
+struct dComIfG_resLoader_c {
+	// JKRHeap
+	/* 8002F314 */ dComIfG_resLoader_c();
+	/* 8002F328 */ ~dComIfG_resLoader_c();
+	/* 8002F3B4 */ void load(char const**, JKRHeap*);
+};
+
+// build cBgS_ChkElm (cBgS_ChkElm) False/False
+/* top-level dependencies (begin cBgS_ChkElm) */
+/* top-level dependencies (end cBgS_ChkElm) */
+struct cBgS_ChkElm {
+	/* 8002FEF8 */ ~cBgS_ChkElm();
+	/* 80030D38 */ cBgS_ChkElm();
+	/* 800740F4 */ void Init();
+};
+
+// build dCcS (dCcS) False/False
+/* top-level dependencies (begin dCcS) */
+/* top-level dependencies (end dCcS) */
+struct dCcS {
+	/* 8002FF40 */ ~dCcS();
+};
+
+// build dCcMassS_Obj (dCcMassS_Obj) False/False
+/* top-level dependencies (begin dCcMassS_Obj) */
+/* top-level dependencies (end dCcMassS_Obj) */
+struct dCcMassS_Obj {
+	/* 800300F4 */ ~dCcMassS_Obj();
+};
+
+// build dEvt_order_c (dEvt_order_c) False/False
+/* top-level dependencies (begin dEvt_order_c) */
+/* top-level dependencies (end dEvt_order_c) */
+struct dEvt_order_c {
+	/* 80030154 */ ~dEvt_order_c();
+};
+
+// build dEvDtBase_c (dEvDtBase_c) False/False
+/* top-level dependencies (begin dEvDtBase_c) */
+/* top-level dependencies (end dEvDtBase_c) */
+struct dEvDtBase_c {
+	/* 80030190 */ ~dEvDtBase_c();
+};
+
+// build dDlst_window_c (dDlst_window_c) False/False
+/* top-level dependencies (begin dDlst_window_c) */
+/* top-level dependencies (end dDlst_window_c) */
+struct dDlst_window_c {
+	/* 800301CC */ ~dDlst_window_c();
+	/* 800304CC */ dDlst_window_c();
+};
+
+// build dComIfG_camera_info_class (dComIfG_camera_info_class) False/False
+/* top-level dependencies (begin dComIfG_camera_info_class) */
+/* top-level dependencies (end dComIfG_camera_info_class) */
+struct dComIfG_camera_info_class {
+	/* 80030208 */ ~dComIfG_camera_info_class();
+	/* 800304C8 */ dComIfG_camera_info_class();
+};
+
+// build dAttList_c (dAttList_c) False/False
+/* top-level dependencies (begin dAttList_c) */
+/* top-level dependencies (end dAttList_c) */
+struct dAttList_c {
+	/* 800304D0 */ ~dAttList_c();
+	/* 8003050C */ dAttList_c();
+};
+
+// build cSAngle (cSAngle) False/False
+/* top-level dependencies (begin cSAngle) */
+/* top-level dependencies (end cSAngle) */
+struct cSAngle {
+	/* 80030510 */ ~cSAngle();
+};
+
+// build dAttDraw_c (dAttDraw_c) False/False
+/* top-level dependencies (begin dAttDraw_c) */
+/* top-level dependencies (end dAttDraw_c) */
+struct dAttDraw_c {
+	/* 8003054C */ ~dAttDraw_c();
+	/* 800307F0 */ dAttDraw_c();
+};
+
+// build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+/* top-level dependencies (begin mDoExt_bckAnm) */
+/* top-level dependencies (end mDoExt_bckAnm) */
+struct mDoExt_bckAnm {
+	/* 800306A0 */ ~mDoExt_bckAnm();
+	/* 80030A2C */ mDoExt_bckAnm();
+};
+
+// build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
+/* top-level dependencies (begin mDoExt_bpkAnm) */
+/* top-level dependencies (end mDoExt_bpkAnm) */
+struct mDoExt_bpkAnm {
+	/* 800306F4 */ ~mDoExt_bpkAnm();
+	/* 800309E4 */ mDoExt_bpkAnm();
+};
+
+// build mDoExt_brkAnm (mDoExt_brkAnm) False/False
+/* top-level dependencies (begin mDoExt_brkAnm) */
+/* top-level dependencies (end mDoExt_brkAnm) */
+struct mDoExt_brkAnm {
+	/* 80030748 */ ~mDoExt_brkAnm();
+	/* 8003099C */ mDoExt_brkAnm();
+};
+
+// build mDoExt_btkAnm (mDoExt_btkAnm) False/False
+/* top-level dependencies (begin mDoExt_btkAnm) */
+/* top-level dependencies (end mDoExt_btkAnm) */
+struct mDoExt_btkAnm {
+	/* 8003079C */ ~mDoExt_btkAnm();
+	/* 80030954 */ mDoExt_btkAnm();
+};
+
+// build dCcMassS_Mng (dCcMassS_Mng) False/False
+/* top-level dependencies (begin dCcMassS_Mng) */
+/* top-level dependencies (end dCcMassS_Mng) */
+struct dCcMassS_Mng {
+	/* 80030A74 */ ~dCcMassS_Mng();
+	/* 80085350 */ dCcMassS_Mng();
+};
+
+// build cCcS (cCcS) False/False
+/* top-level dependencies (begin cCcS) */
+/* top-level dependencies (end cCcS) */
+struct cCcS {
+	/* 80030BDC */ ~cCcS();
+	/* 80264A6C */ cCcS();
+};
+
+// build dBgS (dBgS) False/False
+/* top-level dependencies (begin dBgS) */
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	/* 80030C50 */ ~dBgS();
+};
+
+// build cBgS (cBgS) False/False
+// build cM3dGPla (cM3dGPla) False/False
+/* top-level dependencies (begin cM3dGPla) */
+/* top-level dependencies (end cM3dGPla) */
+struct cM3dGPla {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin cBgS) */
+// outer dependency: cM3dGPla
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end cBgS) */
+struct cBgS {
+	// cM3dGPla
+	// cBgS_PolyInfo
+	/* 80030CCC */ ~cBgS();
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+};
+
+// build dSv_zone_c (dSv_zone_c) False/False
+/* top-level dependencies (begin dSv_zone_c) */
+/* top-level dependencies (end dSv_zone_c) */
+struct dSv_zone_c {
+	/* 80030D74 */ dSv_zone_c();
+};
+
+// build dSv_memory2_c (dSv_memory2_c) False/False
+/* top-level dependencies (begin dSv_memory2_c) */
+/* top-level dependencies (end dSv_memory2_c) */
+struct dSv_memory2_c {
+	/* 80030D80 */ dSv_memory2_c();
+	/* 80034A84 */ void init();
+	/* 80034AA4 */ void onVisitedRoom(s32);
+	/* 80034AC8 */ void offVisitedRoom(s32);
+	/* 80034AEC */ void isVisitedRoom(s32);
+};
+
+// build dSv_memory_c (dSv_memory_c) False/False
+/* top-level dependencies (begin dSv_memory_c) */
+/* top-level dependencies (end dSv_memory_c) */
+struct dSv_memory_c {
+	/* 80030DB0 */ dSv_memory_c();
+	/* 80034A64 */ void init();
+};
+
+// build cCcD_DivideArea (cCcD_DivideArea) False/False
+/* top-level dependencies (begin cCcD_DivideArea) */
+/* top-level dependencies (end cCcD_DivideArea) */
+struct cCcD_DivideArea {
+	/* 80030DE0 */ ~cCcD_DivideArea();
+};
+
+// build cM3dGCyl (cM3dGCyl) False/False
+/* top-level dependencies (begin cM3dGCyl) */
+/* top-level dependencies (end cM3dGCyl) */
+struct cM3dGCyl {
+	/* 80030E3C */ ~cM3dGCyl();
+};
+
+// build cM3dGAab (cM3dGAab) False/False
+/* top-level dependencies (begin cM3dGAab) */
+/* top-level dependencies (end cM3dGAab) */
+struct cM3dGAab {
+	/* 80030E84 */ ~cM3dGAab();
+};
+
+// build cCcD_DivideInfo (cCcD_DivideInfo) False/False
+/* top-level dependencies (begin cCcD_DivideInfo) */
+/* top-level dependencies (end cCcD_DivideInfo) */
+struct cCcD_DivideInfo {
+	/* 80030ECC */ ~cCcD_DivideInfo();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+// build dStage_nextStage_c (dStage_nextStage_c) False/False
+/* top-level dependencies (begin dStage_nextStage_c) */
+/* top-level dependencies (end dStage_nextStage_c) */
+struct dStage_nextStage_c {
+	/* 80023E28 */ void set(char const*, char, s16, char, char, char);
+};
+
+// build roomRead_class (roomRead_class) False/False
+/* top-level dependencies (begin roomRead_class) */
+/* top-level dependencies (end roomRead_class) */
+struct roomRead_class {
+};
+
+// build dSv_player_status_a_c (dSv_player_status_a_c) False/False
+/* top-level dependencies (begin dSv_player_status_a_c) */
+/* top-level dependencies (end dSv_player_status_a_c) */
+struct dSv_player_status_a_c {
+	/* 80032A48 */ void setSelectItemIndex(s32, char);
+	/* 80032A5C */ void getSelectItemIndex(s32) const;
+	/* 80032A78 */ void setMixItemIndex(s32, char);
+	/* 80032A8C */ void getMixItemIndex(s32) const;
+};
+
+// build dSv_player_status_b_c (dSv_player_status_b_c) False/False
+/* top-level dependencies (begin dSv_player_status_b_c) */
+/* top-level dependencies (end dSv_player_status_b_c) */
+struct dSv_player_status_b_c {
+	/* 80032BB0 */ void isDarkClearLV(s32) const;
+	/* 80032BEC */ void isTransformLV(s32) const;
+};
+
+// build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin dSv_player_field_last_stay_info_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dSv_player_field_last_stay_info_c) */
+struct dSv_player_field_last_stay_info_c {
+	// cXyz
+	/* 80032DE0 */ void set(char const*, cXyz const&, s16, char, char);
+	/* 80032E4C */ void onRegionBit(s32);
+	/* 80032E78 */ void isRegionBit(s32) const;
+};
+
+// build dSv_player_last_mark_info_c (dSv_player_last_mark_info_c) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin dSv_player_last_mark_info_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dSv_player_last_mark_info_c) */
+struct dSv_player_last_mark_info_c {
+	// cXyz
+	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, char, char, char);
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(s32, bool) const;
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033EC8 */ void isFirstBit(char) const;
+};
+
+// build dSv_player_item_record_c (dSv_player_item_record_c) False/False
+/* top-level dependencies (begin dSv_player_item_record_c) */
+/* top-level dependencies (end dSv_player_item_record_c) */
+struct dSv_player_item_record_c {
+	/* 80033F6C */ void setBombNum(char, char);
+	/* 80033F7C */ void getBombNum(char) const;
+	/* 80033F8C */ void setBottleNum(char, char);
+	/* 80033F9C */ void addBottleNum(char, s16);
+	/* 80034030 */ void getBottleNum(char) const;
+};
+
+// build dSv_player_item_max_c (dSv_player_item_max_c) False/False
+/* top-level dependencies (begin dSv_player_item_max_c) */
+/* top-level dependencies (end dSv_player_item_max_c) */
+struct dSv_player_item_max_c {
+	/* 800340F8 */ void getBombNum(char) const;
+};
+
+// build dSv_player_collect_c (dSv_player_collect_c) False/False
+/* top-level dependencies (begin dSv_player_collect_c) */
+/* top-level dependencies (end dSv_player_collect_c) */
+struct dSv_player_collect_c {
+	/* 800341E8 */ void setCollect(s32, char);
+};
+
+// build dSv_light_drop_c (dSv_light_drop_c) False/False
+/* top-level dependencies (begin dSv_light_drop_c) */
+/* top-level dependencies (end dSv_light_drop_c) */
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(char) const;
+	/* 8003439C */ void isLightDropGetFlag(char) const;
+};
+
+// build dSv_player_config_c (dSv_player_config_c) False/False
+/* top-level dependencies (begin dSv_player_config_c) */
+/* top-level dependencies (end dSv_player_config_c) */
+struct dSv_player_config_c {
+	/* 80034694 */ void getVibration();
+};
+
+// build dSv_memBit_c (dSv_memBit_c) False/False
+/* top-level dependencies (begin dSv_memBit_c) */
+/* top-level dependencies (end dSv_memBit_c) */
+struct dSv_memBit_c {
+	/* 800347E8 */ void isTbox(s32) const;
+	/* 80034810 */ void onSwitch(s32);
+	/* 80034838 */ void offSwitch(s32);
+	/* 80034860 */ void isSwitch(s32) const;
+	/* 80034918 */ void onDungeonItem(s32);
+	/* 80034934 */ void isDungeonItem(s32) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dSv_zoneBit_c (dSv_zoneBit_c) False/False
+/* top-level dependencies (begin dSv_zoneBit_c) */
+/* top-level dependencies (end dSv_zoneBit_c) */
+struct dSv_zoneBit_c {
+	/* 80034D04 */ void onSwitch(s32);
+	/* 80034D2C */ void offSwitch(s32);
+	/* 80034D50 */ void isSwitch(s32) const;
+	/* 80034DAC */ void onOneSwitch(s32);
+	/* 80034DC8 */ void offOneSwitch(s32);
+	/* 80034DE0 */ void isOneSwitch(s32) const;
+	/* 80034E50 */ void isItem(s32) const;
+	/* 80034E98 */ void isOneItem(s32) const;
+};
+
+// build dSv_save_c (dSv_save_c) False/False
+/* top-level dependencies (begin dSv_save_c) */
+/* top-level dependencies (end dSv_save_c) */
+struct dSv_save_c {
+	/* 800350A8 */ void getSave2(s32);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035200 */ void onSwitch(s32, s32);
+	/* 800352B0 */ void offSwitch(s32, s32);
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+	/* 8003A260 */ dRes_info_c();
+	/* 8003A280 */ ~dRes_info_c();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build JKRHeap (JKRHeap) True/True
+// build dRes_info_c (dRes_info_c) True/True
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: JKRHeap
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// JKRHeap
+	// dRes_info_c
+	/* 8003BFB0 */ ~dRes_control_c();
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+};
+
+// build dMapInfo_n (dMapInfo_n) False/False
+/* top-level dependencies (begin dMapInfo_n) */
+/* top-level dependencies (end dMapInfo_n) */
+struct dMapInfo_n {
+	/* 8003EE5C */ void getMapPlayerPos();
+};
+
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 80041580 */ dEvt_control_c();
+};
+
+// build dEvent_manager_c (dEvent_manager_c) False/False
+/* top-level dependencies (begin dEvent_manager_c) */
+/* top-level dependencies (end dEvent_manager_c) */
+struct dEvent_manager_c {
+	/* 80046688 */ dEvent_manager_c();
+};
+
+// build dSmplMdl_draw_c (dSmplMdl_draw_c) False/False
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) True/True
+/* top-level dependencies (begin dSmplMdl_draw_c) */
+// outer dependency: J3DModelData
+// outer dependency: J3DModel
+/* top-level dependencies (end dSmplMdl_draw_c) */
+struct dSmplMdl_draw_c {
+	// J3DModelData
+	// J3DModel
+	/* 80048CB4 */ dSmplMdl_draw_c();
+	/* 80048E0C */ void draw();
+	/* 80048EBC */ void entry(J3DModel*, s32);
+	/* 80048F70 */ void addModel(J3DModelData*, s32, char);
+	/* 80049058 */ void removeModel(J3DModelData*, s32);
+};
+
+// build dPa_control_c (dPa_control_c) False/False
+/* top-level dependencies (begin dPa_control_c) */
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	/* 8004BACC */ dPa_control_c();
+};
+
+// build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
+// build cXyz (cXyz) True/True
+// build _GXTexObj (_GXTexObj) True/True
+// build J3DModel (J3DModel) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+/* top-level dependencies (begin dDlst_shadowControl_c) */
+// outer dependency: cXyz
+// outer dependency: _GXTexObj
+// outer dependency: J3DModel
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dDlst_shadowControl_c) */
+struct dDlst_shadowControl_c {
+	// cXyz
+	// _GXTexObj
+	// J3DModel
+	// dKy_tevstr_c
+	/* 80055C74 */ void setReal(u32, char, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
+	/* 80055F84 */ void setSimple(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+/* top-level dependencies (begin dDlst_list_c) */
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	/* 800560F0 */ dDlst_list_c();
+	/* 8005648C */ ~dDlst_list_c();
+};
+
+// build dAttention_c (dAttention_c) False/False
+/* top-level dependencies (begin dAttention_c) */
+/* top-level dependencies (end dAttention_c) */
+struct dAttention_c {
+	/* 80070774 */ ~dAttention_c();
+};
+
+// build cM3dGPla (cM3dGPla) True/True
+// build daAlink_c (daAlink_c) False/False
+/* top-level dependencies (begin daAlink_c) */
+/* top-level dependencies (end daAlink_c) */
+struct daAlink_c {
+	/* 800BDE48 */ void setLastSceneMode(u32*);
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+/* top-level dependencies (begin dMeter2Info_c) */
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	/* 8021BE68 */ void init();
+	/* 8021E290 */ void setSaveStageName(char const*);
+};
+
+// build cM3dGCps (cM3dGCps) False/False
+/* top-level dependencies (begin cM3dGCps) */
+/* top-level dependencies (end cM3dGCps) */
+struct cM3dGCps {
+	/* 8026EFA4 */ ~cM3dGCps();
+};
+
+// build Z2SeqMgr (Z2SeqMgr) False/False
+/* top-level dependencies (begin Z2SeqMgr) */
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	/* 802AF408 */ void bgmStop(u32, s32);
+};
+
+// build J3DFrameCtrl (J3DFrameCtrl) False/False
+/* top-level dependencies (begin J3DFrameCtrl) */
+/* top-level dependencies (end J3DFrameCtrl) */
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ct__14dComIfG_play_cFv();
-extern "C" extern void init__14dComIfG_play_cFv();
-extern "C" extern void dComIfGp_checkItemGet__FUci();
-extern "C" extern void itemInit__14dComIfG_play_cFv();
-extern "C" extern void setItemBombNumCount__14dComIfG_play_cFUcs();
-extern "C" extern void getItemBombNumCount__14dComIfG_play_cFUc();
-extern "C" extern void clearItemBombNumCount__14dComIfG_play_cFUc();
-extern "C" extern void setNowVibration__14dComIfG_play_cFUc();
-extern "C" extern void getNowVibration__14dComIfG_play_cFv();
-extern "C" extern void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
-extern "C" extern void dComIfG_get_timelayer__FPi();
-extern "C" extern void getLayerNo_common_common__14dComIfG_play_cFPCcii();
-extern "C" extern void getLayerNo_common__14dComIfG_play_cFPCcii();
-extern "C" extern void getLayerNo__14dComIfG_play_cFi();
-extern "C" extern void createParticle__14dComIfG_play_cFv();
-extern "C" extern void createSimpleModel__14dComIfG_play_cFv();
-extern "C" extern void deleteSimpleModel__14dComIfG_play_cFv();
-extern "C" extern void drawSimpleModel__14dComIfG_play_cFv();
-extern "C" extern void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc();
-extern "C" extern void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai();
-extern "C" extern void entrySimpleModel__14dComIfG_play_cFP8J3DModeli();
-extern "C" extern void setTimerNowTimeMs__14dComIfG_play_cFi();
-extern "C" extern void getTimerNowTimeMs__14dComIfG_play_cFv();
-extern "C" extern void setTimerLimitTimeMs__14dComIfG_play_cFi();
-extern "C" extern void getTimerLimitTimeMs__14dComIfG_play_cFv();
-extern "C" extern void setTimerMode__14dComIfG_play_cFi();
-extern "C" extern void getTimerMode__14dComIfG_play_cFv();
-extern "C" extern void setTimerType__14dComIfG_play_cFUc();
-extern "C" extern void getTimerType__14dComIfG_play_cFv();
-extern "C" extern void setTimerPtr__14dComIfG_play_cFP8dTimer_c();
-extern "C" extern void getTimerPtr__14dComIfG_play_cFv();
-extern "C" extern void ct__13dComIfG_inf_cFv();
-extern "C" extern void dComIfG_changeOpeningScene__FP11scene_classs();
-extern "C" extern void dComIfG_resetToOpening__FP11scene_class();
-extern "C" extern void d_com_d_com_inf_game__phase_1__FPc();
-extern "C" extern void d_com_d_com_inf_game__phase_2__FPc();
-extern "C" extern void phase_3__FPc();
-extern "C" extern void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" extern void phase_01__FP12phaseParam_c();
-extern "C" extern void phase_02__FP12phaseParam_c();
-extern "C" extern void phase_03__FP12phaseParam_c();
-extern "C" extern void dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap();
-extern "C" extern void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" extern void dComIfGp_getReverb__Fi();
-extern "C" extern void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
-extern "C" extern void dComIfGp_getMapTrans__FiPfPfPs();
-extern "C" extern void dComIfGp_getRoomCamera__Fi();
-extern "C" extern void dComIfGp_getRoomArrow__Fi();
-extern "C" extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
-extern "C" extern void dComIfGp_setNextStage__FPCcsScSc();
-extern "C" extern void dComIfGs_isStageTbox__Fii();
-extern "C" extern void dComIfGs_onStageSwitch__Fii();
-extern "C" extern void dComIfGs_offStageSwitch__Fii();
-extern "C" extern void dComIfGs_isStageSwitch__Fii();
-extern "C" extern void dComIfGs_onStageBossEnemy__Fi();
-extern "C" extern void dComIfGs_isDungeonItemWarp__Fi();
-extern "C" extern void dComIfGs_BossLife_public_Set__FSc();
-extern "C" extern void dComIfGs_BossLife_public_Get__Fv();
-extern "C" extern void dComIfGs_sense_type_change_Set__FSc();
-extern "C" extern void dComIfGs_sense_type_change_Get__Fv();
-extern "C" extern void dComIfGs_onZoneSwitch__Fii();
-extern "C" extern void getZoneNo__20dStage_roomControl_cFi();
-extern "C" extern void dComIfGs_offZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isZoneSwitch__Fii();
-extern "C" extern void dComIfGs_onOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_offOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isOneZoneSwitch__Fii();
-extern "C" extern void dComIfGs_isZoneItem__Fii();
-extern "C" extern void dComIfGs_isOneZoneItem__Fii();
-extern "C" extern void dComIfGs_getMaxLifeGauge__Fv();
-extern "C" extern void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" extern void dComIfGs_setMixItemIndex__FiUc();
-extern "C" extern void dComIfGs_getSelectMixItemNoArrowIndex__Fi();
-extern "C" extern void dComIfGs_getMixItemIndex__Fi();
-extern "C" extern void dComIfGp_setSelectItem__Fi();
-extern "C" extern void dComIfGp_getSelectItem__Fi();
-extern "C" extern void dComIfGp_mapShow__Fv();
-extern "C" extern void dComIfGp_mapHide__Fv();
-extern "C" extern void dComIfGp_checkMapShow__Fv();
-extern "C" extern void dComIfGp_setHeapLockFlag__FUc();
-extern "C" extern void dComIfGp_offHeapLockFlag__Fi();
-extern "C" extern void dComIfGp_createSubExpHeap2D__Fv();
-extern "C" extern void dComIfGp_destroySubExpHeap2D__Fv();
-extern "C" extern void dComIfGp_checkEmptySubHeap2D__Fv();
-extern "C" extern void dComIfGp_searchUseSubHeap2D__Fi();
-extern "C" extern void dComIfGp_getSubHeap2D__Fi();
-extern "C" extern void dComIfGs_checkGetInsectNum__Fv();
-extern "C" extern void dComIfGs_checkGetItem__FUc();
-extern "C" extern void dComIfGs_getBottleMax__Fv();
-extern "C" extern void dComIfGp_getSelectItemNum__Fi();
-extern "C" extern void dComIfGp_getSelectItemMaxNum__Fi();
-extern "C" extern void dComIfGp_setSelectItemNum__Fis();
-extern "C" extern void dComIfGp_addSelectItemNum__Fis();
-extern "C" extern void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
-extern "C" extern void dComIfGs_gameStart__Fv();
-extern "C" extern void dComIfG_getTrigA__FUl();
-extern "C" extern void dComIfGp_calcNowRegion__Fv();
-extern "C" extern void dComIfG_getNowCalcRegion__Fv();
-extern "C" extern void dComIfGp_isLightDropMapVisible__Fv();
-extern "C" extern void dComIfGp_getNowLevel__Fv();
-extern "C" extern void dComIfGs_setSelectEquipClothes__FUc();
-extern "C" extern void dComIfGs_setSelectEquipSword__FUc();
-extern "C" extern void dComIfGs_setSelectEquipShield__FUc();
-extern "C" extern void dComIfGs_setKeyNum__FiUc();
-extern "C" extern void dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc();
-extern "C" extern void setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc();
-extern "C" extern void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
-extern "C" extern void dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc();
-extern "C" extern void dComIfGs_getWarpStageName__Fv();
-extern "C" extern void dComIfGs_getWarpPlayerPos__Fv();
-extern "C" extern void dComIfGs_getWarpPlayerAngleY__Fv();
-extern "C" extern void dComIfGs_getWarpRoomNo__Fv();
-extern "C" extern void dComIfGs_getWarpMarkFlag__Fv();
-extern "C" extern void dComIfGs_setWarpMarkFlag__FUc();
-extern "C" extern void __ct__19dComIfG_resLoader_cFv();
-extern "C" extern void __dt__19dComIfG_resLoader_cFv();
-extern "C" extern void load__19dComIfG_resLoader_cFPPCcP7JKRHeap();
-extern "C" extern void dComIfG_getStageRes__FPCc();
-extern "C" extern void dComIfG_getOldStageRes__FPCc();
-extern "C" extern void dComIfG_getRoomArcName__Fi();
-extern "C" extern void dComIfGp_ret_wp_set__FSc();
-extern "C" extern void dComIfGp_world_dark_set__FUc();
-extern "C" extern void dComIfGp_world_dark_get__Fv();
-extern "C" extern void dComIfG_TimerStart__Fis();
-extern "C" extern void dComIfG_TimerStop__Fi();
-extern "C" extern void dComIfG_TimerReStart__Fi();
-extern "C" extern void dComIfG_TimerEnd__Fii();
-extern "C" extern void dComIfG_TimerDeleteCheck__Fi();
-extern "C" extern void dComIfG_TimerDeleteRequest__Fi();
-extern "C" extern void dComIfGs_Wolf_Change_Check__Fv();
-extern "C" extern void dComIfGs_PolyDamageOff_Set__FSc();
-extern "C" extern void dComIfGs_PolyDamageOff_Check__Fv();
-extern "C" extern void dComIfGs_shake_kandelaar__Fv();
-extern "C" extern void dComIfGs_shake_kandelaar_check__Fv();
-extern "C" extern void dComIfGs_wolfeye_effect_check__Fv();
-extern "C" extern void dComIfGs_Grass_hide_Set__FSc();
-extern "C" extern void dComIfGp_TargetWarpPt_set__FUc();
-extern "C" extern void dComIfGp_SelectWarpPt_set__FUc();
-extern "C" extern void dComIfGp_TargetWarpPt_get__Fv();
-extern "C" extern void dComIfGp_SelectWarpPt_get__Fv();
-extern "C" extern void dComIfGp_TransportWarp_check__Fv();
-extern "C" extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void dComIfGs_onVisitedRoom__Fi();
-extern "C" extern void dComIfGs_offVisitedRoom__Fi();
-extern "C" extern void dComIfGs_isVisitedRoom__Fi();
-extern "C" extern void dComIfGs_staffroll_next_go__Fv();
-extern "C" extern void dComIfGs_staffroll_next_go_check__Fv();
-extern "C" extern void __sinit_d_com_inf_game_cpp();
-extern "C" extern void __dt__13dComIfG_inf_cFv();
-extern "C" extern void __dt__14dComIfG_play_cFv();
-extern "C" extern void __dt__11cBgS_ChkElmFv();
-extern "C" extern void __dt__4dCcSFv();
-extern "C" extern void __dt__12dCcMassS_ObjFv();
-extern "C" extern void __dt__12dEvt_order_cFv();
-extern "C" extern void __dt__11dEvDtBase_cFv();
-extern "C" extern void __dt__14dDlst_window_cFv();
-extern "C" extern void __dt__25dComIfG_camera_info_classFv();
-extern "C" extern void __ct__13dComIfG_inf_cFv();
-extern "C" extern void __ct__25dComIfG_camera_info_classFv();
-extern "C" extern void __ct__14dDlst_window_cFv();
-extern "C" extern void __dt__10dAttList_cFv();
-extern "C" extern void __ct__10dAttList_cFv();
-extern "C" extern void __dt__7cSAngleFv();
-extern "C" extern void __dt__10dAttDraw_cFv();
-extern "C" extern void __dt__13mDoExt_bckAnmFv();
-extern "C" extern void __dt__13mDoExt_bpkAnmFv();
-extern "C" extern void __dt__13mDoExt_brkAnmFv();
-extern "C" extern void __dt__13mDoExt_btkAnmFv();
-extern "C" extern void __ct__10dAttDraw_cFv();
-extern "C" extern void __ct__13mDoExt_btkAnmFv();
-extern "C" extern void __ct__13mDoExt_brkAnmFv();
-extern "C" extern void __ct__13mDoExt_bpkAnmFv();
-extern "C" extern void __ct__13mDoExt_bckAnmFv();
-extern "C" extern void __dt__12dCcMassS_MngFv();
-extern "C" extern void __dt__4cCcSFv();
-extern "C" extern void __dt__4dBgSFv();
-extern "C" extern void __dt__4cBgSFv();
-extern "C" extern void __ct__11cBgS_ChkElmFv();
-extern "C" extern void __ct__10dSv_zone_cFv();
-extern "C" extern void __ct__13dSv_memory2_cFv();
-extern "C" extern void __ct__12dSv_memory_cFv();
-extern "C" extern void __dt__15cCcD_DivideAreaFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__15cCcD_DivideInfoFv();
+void dComIfGp_checkItemGet(char, s32);
+static void dComIfG_get_timelayer(s32*);
+void dComIfG_changeOpeningScene(scene_class*, s16);
+void dComIfG_resetToOpening(scene_class*);
+static void phase_1(char*);
+static void phase_2(char*);
+static s32 phase_3(char*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+static void phase_01(phaseParam_c*);
+static void phase_02(phaseParam_c*);
+static bool phase_03(phaseParam_c*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*, JKRHeap*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(s32);
+void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
+void dComIfGp_getMapTrans(s32, f32*, f32*, s16*);
+void dComIfGp_getRoomCamera(s32);
+void dComIfGp_getRoomArrow(s32);
+void dComIfGp_setNextStage(char const*, s16, char, char, f32, u32, s32, char, s16, s32, s32);
+void dComIfGp_setNextStage(char const*, s16, char, char);
+void dComIfGs_isStageTbox(s32, s32);
+void dComIfGs_onStageSwitch(s32, s32);
+void dComIfGs_offStageSwitch(s32, s32);
+void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGs_onStageBossEnemy(s32);
+void dComIfGs_isDungeonItemWarp(s32);
+void dComIfGs_BossLife_public_Set(char);
+void dComIfGs_BossLife_public_Get();
+void dComIfGs_sense_type_change_Set(char);
+void dComIfGs_sense_type_change_Get();
+void dComIfGs_onZoneSwitch(s32, s32);
+void dComIfGs_offZoneSwitch(s32, s32);
+void dComIfGs_isZoneSwitch(s32, s32);
+void dComIfGs_onOneZoneSwitch(s32, s32);
+void dComIfGs_offOneZoneSwitch(s32, s32);
+void dComIfGs_isOneZoneSwitch(s32, s32);
+void dComIfGs_isZoneItem(s32, s32);
+void dComIfGs_isOneZoneItem(s32, s32);
+void dComIfGs_getMaxLifeGauge();
+void dComIfGs_setSelectItemIndex(s32, char);
+void dComIfGs_setMixItemIndex(s32, char);
+void dComIfGs_getSelectMixItemNoArrowIndex(s32);
+void dComIfGs_getMixItemIndex(s32);
+void dComIfGp_setSelectItem(s32);
+void dComIfGp_getSelectItem(s32);
+void dComIfGp_mapShow();
+void dComIfGp_mapHide();
+void dComIfGp_checkMapShow();
+void dComIfGp_setHeapLockFlag(char);
+void dComIfGp_offHeapLockFlag(s32);
+static void dComIfGp_createSubExpHeap2D();
+static void dComIfGp_destroySubExpHeap2D();
+static void dComIfGp_checkEmptySubHeap2D();
+static void dComIfGp_searchUseSubHeap2D(s32);
+void dComIfGp_getSubHeap2D(s32);
+void dComIfGs_checkGetInsectNum();
+static void dComIfGs_checkGetItem(char);
+s32 dComIfGs_getBottleMax();
+void dComIfGp_getSelectItemNum(s32);
+void dComIfGp_getSelectItemMaxNum(s32);
+void dComIfGp_setSelectItemNum(s32, s16);
+void dComIfGp_addSelectItemNum(s32, s16);
+void dComIfGd_setShadow(u32, char, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfGs_gameStart();
+void dComIfG_getTrigA(u32);
+void dComIfGp_calcNowRegion();
+static void dComIfG_getNowCalcRegion();
+void dComIfGp_isLightDropMapVisible();
+void dComIfGp_getNowLevel();
+void dComIfGs_setSelectEquipClothes(char);
+void dComIfGs_setSelectEquipSword(char);
+void dComIfGs_setSelectEquipShield(char);
+void dComIfGs_setKeyNum(s32, char);
+static void dComIfGs_setWarpItemData(s32, char const*, cXyz, s16, char, char, char);
+void dComIfGs_setWarpItemData(char const*, cXyz, s16, char, char, char);
+static void dComIfGs_setLastWarpMarkItemData(char const*, cXyz, s16, char, char, char);
+void dComIfGs_getWarpStageName();
+void dComIfGs_getWarpPlayerPos();
+void dComIfGs_getWarpPlayerAngleY();
+void dComIfGs_getWarpRoomNo();
+void dComIfGs_getWarpMarkFlag();
+void dComIfGs_setWarpMarkFlag(char);
+void dComIfG_getStageRes(char const*);
+void dComIfG_getOldStageRes(char const*);
+void dComIfG_getRoomArcName(s32);
+void dComIfGp_ret_wp_set(char);
+void dComIfGp_world_dark_set(char);
+void dComIfGp_world_dark_get();
+void dComIfG_TimerStart(s32, s16);
+void dComIfG_TimerStop(s32);
+void dComIfG_TimerReStart(s32);
+void dComIfG_TimerEnd(s32, s32);
+void dComIfG_TimerDeleteCheck(s32);
+void dComIfG_TimerDeleteRequest(s32);
+void dComIfGs_Wolf_Change_Check();
+void dComIfGs_PolyDamageOff_Set(char);
+void dComIfGs_PolyDamageOff_Check();
+void dComIfGs_shake_kandelaar();
+void dComIfGs_shake_kandelaar_check();
+void dComIfGs_wolfeye_effect_check();
+void dComIfGs_Grass_hide_Set(char);
+void dComIfGp_TargetWarpPt_set(char);
+void dComIfGp_SelectWarpPt_set(char);
+void dComIfGp_TargetWarpPt_get();
+void dComIfGp_SelectWarpPt_get();
+void dComIfGp_TransportWarp_check();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+void dComIfGs_onVisitedRoom(s32);
+void dComIfGs_offVisitedRoom(s32);
+void dComIfGs_isVisitedRoom(s32);
+void dComIfGs_staffroll_next_go();
+void dComIfGs_staffroll_next_go_check();
+extern "C" void __sinit_d_com_inf_game_cpp();
+
+extern "C" void ct__14dComIfG_play_cFv();
+extern "C" void init__14dComIfG_play_cFv();
+extern "C" void dComIfGp_checkItemGet__FUci();
+extern "C" void itemInit__14dComIfG_play_cFv();
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
+extern "C" void getItemBombNumCount__14dComIfG_play_cFUc();
+extern "C" void clearItemBombNumCount__14dComIfG_play_cFUc();
+extern "C" void setNowVibration__14dComIfG_play_cFUc();
+extern "C" void getNowVibration__14dComIfG_play_cFv();
+extern "C" void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
+extern "C" static void dComIfG_get_timelayer__FPi();
+extern "C" void getLayerNo_common_common__14dComIfG_play_cFPCcii();
+extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void createParticle__14dComIfG_play_cFv();
+extern "C" void createSimpleModel__14dComIfG_play_cFv();
+extern "C" void deleteSimpleModel__14dComIfG_play_cFv();
+extern "C" void drawSimpleModel__14dComIfG_play_cFv();
+extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc();
+extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai();
+extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli();
+extern "C" void setTimerNowTimeMs__14dComIfG_play_cFi();
+extern "C" void getTimerNowTimeMs__14dComIfG_play_cFv();
+extern "C" void setTimerLimitTimeMs__14dComIfG_play_cFi();
+extern "C" void getTimerLimitTimeMs__14dComIfG_play_cFv();
+extern "C" void setTimerMode__14dComIfG_play_cFi();
+extern "C" void getTimerMode__14dComIfG_play_cFv();
+extern "C" void setTimerType__14dComIfG_play_cFUc();
+extern "C" void getTimerType__14dComIfG_play_cFv();
+extern "C" void setTimerPtr__14dComIfG_play_cFP8dTimer_c();
+extern "C" void getTimerPtr__14dComIfG_play_cFv();
+extern "C" void ct__13dComIfG_inf_cFv();
+extern "C" void dComIfG_changeOpeningScene__FP11scene_classs();
+extern "C" void dComIfG_resetToOpening__FP11scene_class();
+extern "C" static void d_com_d_com_inf_game__phase_1__FPc();
+extern "C" static void d_com_d_com_inf_game__phase_2__FPc();
+extern "C" static s32 phase_3__FPc();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" static void phase_01__FP12phaseParam_c();
+extern "C" static void phase_02__FP12phaseParam_c();
+extern "C" static bool phase_03__FP12phaseParam_c();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
+extern "C" void dComIfGp_getMapTrans__FiPfPfPs();
+extern "C" void dComIfGp_getRoomCamera__Fi();
+extern "C" void dComIfGp_getRoomArrow__Fi();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfGp_setNextStage__FPCcsScSc();
+extern "C" void dComIfGs_isStageTbox__Fii();
+extern "C" void dComIfGs_onStageSwitch__Fii();
+extern "C" void dComIfGs_offStageSwitch__Fii();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void dComIfGs_onStageBossEnemy__Fi();
+extern "C" void dComIfGs_isDungeonItemWarp__Fi();
+extern "C" void dComIfGs_BossLife_public_Set__FSc();
+extern "C" void dComIfGs_BossLife_public_Get__Fv();
+extern "C" void dComIfGs_sense_type_change_Set__FSc();
+extern "C" void dComIfGs_sense_type_change_Get__Fv();
+extern "C" void dComIfGs_onZoneSwitch__Fii();
+extern "C" void getZoneNo__20dStage_roomControl_cFi();
+extern "C" void dComIfGs_offZoneSwitch__Fii();
+extern "C" void dComIfGs_isZoneSwitch__Fii();
+extern "C" void dComIfGs_onOneZoneSwitch__Fii();
+extern "C" void dComIfGs_offOneZoneSwitch__Fii();
+extern "C" void dComIfGs_isOneZoneSwitch__Fii();
+extern "C" void dComIfGs_isZoneItem__Fii();
+extern "C" void dComIfGs_isOneZoneItem__Fii();
+extern "C" void dComIfGs_getMaxLifeGauge__Fv();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getSelectMixItemNoArrowIndex__Fi();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" void dComIfGp_setSelectItem__Fi();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" void dComIfGp_mapShow__Fv();
+extern "C" void dComIfGp_mapHide__Fv();
+extern "C" void dComIfGp_checkMapShow__Fv();
+extern "C" void dComIfGp_setHeapLockFlag__FUc();
+extern "C" void dComIfGp_offHeapLockFlag__Fi();
+extern "C" static void dComIfGp_createSubExpHeap2D__Fv();
+extern "C" static void dComIfGp_destroySubExpHeap2D__Fv();
+extern "C" static void dComIfGp_checkEmptySubHeap2D__Fv();
+extern "C" static void dComIfGp_searchUseSubHeap2D__Fi();
+extern "C" void dComIfGp_getSubHeap2D__Fi();
+extern "C" void dComIfGs_checkGetInsectNum__Fv();
+extern "C" static void dComIfGs_checkGetItem__FUc();
+extern "C" s32 dComIfGs_getBottleMax__Fv();
+extern "C" void dComIfGp_getSelectItemNum__Fi();
+extern "C" void dComIfGp_getSelectItemMaxNum__Fi();
+extern "C" void dComIfGp_setSelectItemNum__Fis();
+extern "C" void dComIfGp_addSelectItemNum__Fis();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void dComIfGs_gameStart__Fv();
+extern "C" void dComIfG_getTrigA__FUl();
+extern "C" void dComIfGp_calcNowRegion__Fv();
+extern "C" static void dComIfG_getNowCalcRegion__Fv();
+extern "C" void dComIfGp_isLightDropMapVisible__Fv();
+extern "C" void dComIfGp_getNowLevel__Fv();
+extern "C" void dComIfGs_setSelectEquipClothes__FUc();
+extern "C" void dComIfGs_setSelectEquipSword__FUc();
+extern "C" void dComIfGs_setSelectEquipShield__FUc();
+extern "C" void dComIfGs_setKeyNum__FiUc();
+extern "C" static void dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc();
+extern "C" void setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc();
+extern "C" void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
+extern "C" static void dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc();
+extern "C" void dComIfGs_getWarpStageName__Fv();
+extern "C" void dComIfGs_getWarpPlayerPos__Fv();
+extern "C" void dComIfGs_getWarpPlayerAngleY__Fv();
+extern "C" void dComIfGs_getWarpRoomNo__Fv();
+extern "C" void dComIfGs_getWarpMarkFlag__Fv();
+extern "C" void dComIfGs_setWarpMarkFlag__FUc();
+extern "C" void __ct__19dComIfG_resLoader_cFv();
+extern "C" void __dt__19dComIfG_resLoader_cFv();
+extern "C" void load__19dComIfG_resLoader_cFPPCcP7JKRHeap();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfG_getOldStageRes__FPCc();
+extern "C" void dComIfG_getRoomArcName__Fi();
+extern "C" void dComIfGp_ret_wp_set__FSc();
+extern "C" void dComIfGp_world_dark_set__FUc();
+extern "C" void dComIfGp_world_dark_get__Fv();
+extern "C" void dComIfG_TimerStart__Fis();
+extern "C" void dComIfG_TimerStop__Fi();
+extern "C" void dComIfG_TimerReStart__Fi();
+extern "C" void dComIfG_TimerEnd__Fii();
+extern "C" void dComIfG_TimerDeleteCheck__Fi();
+extern "C" void dComIfG_TimerDeleteRequest__Fi();
+extern "C" void dComIfGs_Wolf_Change_Check__Fv();
+extern "C" void dComIfGs_PolyDamageOff_Set__FSc();
+extern "C" void dComIfGs_PolyDamageOff_Check__Fv();
+extern "C" void dComIfGs_shake_kandelaar__Fv();
+extern "C" void dComIfGs_shake_kandelaar_check__Fv();
+extern "C" void dComIfGs_wolfeye_effect_check__Fv();
+extern "C" void dComIfGs_Grass_hide_Set__FSc();
+extern "C" void dComIfGp_TargetWarpPt_set__FUc();
+extern "C" void dComIfGp_SelectWarpPt_set__FUc();
+extern "C" void dComIfGp_TargetWarpPt_get__Fv();
+extern "C" void dComIfGp_SelectWarpPt_get__Fv();
+extern "C" void dComIfGp_TransportWarp_check__Fv();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void dComIfGs_onVisitedRoom__Fi();
+extern "C" void dComIfGs_offVisitedRoom__Fi();
+extern "C" void dComIfGs_isVisitedRoom__Fi();
+extern "C" void dComIfGs_staffroll_next_go__Fv();
+extern "C" void dComIfGs_staffroll_next_go_check__Fv();
+extern "C" void __sinit_d_com_inf_game_cpp();
+extern "C" void __dt__13dComIfG_inf_cFv();
+extern "C" void __dt__14dComIfG_play_cFv();
+extern "C" void __dt__11cBgS_ChkElmFv();
+extern "C" void __dt__4dCcSFv();
+extern "C" void __dt__12dCcMassS_ObjFv();
+extern "C" void __dt__12dEvt_order_cFv();
+extern "C" void __dt__11dEvDtBase_cFv();
+extern "C" void __dt__14dDlst_window_cFv();
+extern "C" void __dt__25dComIfG_camera_info_classFv();
+extern "C" void __ct__13dComIfG_inf_cFv();
+extern "C" void __ct__25dComIfG_camera_info_classFv();
+extern "C" void __ct__14dDlst_window_cFv();
+extern "C" void __dt__10dAttList_cFv();
+extern "C" void __ct__10dAttList_cFv();
+extern "C" void __dt__7cSAngleFv();
+extern "C" void __dt__10dAttDraw_cFv();
+extern "C" void __dt__13mDoExt_bckAnmFv();
+extern "C" void __dt__13mDoExt_bpkAnmFv();
+extern "C" void __dt__13mDoExt_brkAnmFv();
+extern "C" void __dt__13mDoExt_btkAnmFv();
+extern "C" void __ct__10dAttDraw_cFv();
+extern "C" void __ct__13mDoExt_btkAnmFv();
+extern "C" void __ct__13mDoExt_brkAnmFv();
+extern "C" void __ct__13mDoExt_bpkAnmFv();
+extern "C" void __ct__13mDoExt_bckAnmFv();
+extern "C" void __dt__12dCcMassS_MngFv();
+extern "C" void __dt__4cCcSFv();
+extern "C" void __dt__4dBgSFv();
+extern "C" void __dt__4cBgSFv();
+extern "C" void __ct__11cBgS_ChkElmFv();
+extern "C" void __ct__10dSv_zone_cFv();
+extern "C" void __ct__13dSv_memory2_cFv();
+extern "C" void __ct__12dSv_memory_cFv();
+extern "C" void __dt__15cCcD_DivideAreaFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__15cCcD_DivideInfoFv();
 SECTION_RODATA extern const u8 d_com_d_com_inf_game__stringBase0[376];
 SECTION_DATA extern void*data_803A71B8[3];
 SECTION_DATA extern void*data_803A71C4[3];
@@ -225,132 +1020,167 @@ SECTION_SDATA2 extern f64 lit_7580;
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void OSReport_Error();
-extern "C" extern void mDoAud_setSceneName__FPCcll();
-extern "C" extern void mDoAud_resetProcess__Fv();
-extern "C" extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern "C" extern void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" extern void fopScnM_ReRequest__FsUl();
-extern "C" extern void set__18dStage_nextStage_cFPCcScsScScUc();
-extern "C" extern void initZone__20dStage_roomControl_cFv();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
-extern "C" extern void setSelectItemIndex__21dSv_player_status_a_cFiUc();
-extern "C" extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" extern void setMixItemIndex__21dSv_player_status_a_cFiUc();
-extern "C" extern void getMixItemIndex__21dSv_player_status_a_cCFi();
-extern "C" extern void isDarkClearLV__21dSv_player_status_b_cCFi();
-extern "C" extern void isTransformLV__21dSv_player_status_b_cCFi();
-extern "C" extern void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
-extern "C" extern void onRegionBit__33dSv_player_field_last_stay_info_cFi();
-extern "C" extern void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
-extern "C" extern void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" extern void setBombNum__24dSv_player_item_record_cFUcUc();
-extern "C" extern void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void setBottleNum__24dSv_player_item_record_cFUcUc();
-extern "C" extern void addBottleNum__24dSv_player_item_record_cFUcs();
-extern "C" extern void getBottleNum__24dSv_player_item_record_cCFUc();
-extern "C" extern void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" extern void setCollect__20dSv_player_collect_cFiUc();
-extern "C" extern void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" extern void getVibration__19dSv_player_config_cFv();
-extern "C" extern void isTbox__12dSv_memBit_cCFi();
-extern "C" extern void onSwitch__12dSv_memBit_cFi();
-extern "C" extern void offSwitch__12dSv_memBit_cFi();
-extern "C" extern void isSwitch__12dSv_memBit_cCFi();
-extern "C" extern void onDungeonItem__12dSv_memBit_cFi();
-extern "C" extern void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void offEventBit__11dSv_event_cFUs();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void init__12dSv_memory_cFv();
-extern "C" extern void init__13dSv_memory2_cFv();
-extern "C" extern void onVisitedRoom__13dSv_memory2_cFi();
-extern "C" extern void offVisitedRoom__13dSv_memory2_cFi();
-extern "C" extern void isVisitedRoom__13dSv_memory2_cFi();
-extern "C" extern void onSwitch__13dSv_zoneBit_cFi();
-extern "C" extern void offSwitch__13dSv_zoneBit_cFi();
-extern "C" extern void isSwitch__13dSv_zoneBit_cCFi();
-extern "C" extern void onOneSwitch__13dSv_zoneBit_cFi();
-extern "C" extern void offOneSwitch__13dSv_zoneBit_cFi();
-extern "C" extern void isOneSwitch__13dSv_zoneBit_cCFi();
-extern "C" extern void isItem__13dSv_zoneBit_cCFi();
-extern "C" extern void isOneItem__13dSv_zoneBit_cCFi();
-extern "C" extern void getSave2__10dSv_save_cFi();
-extern "C" extern void onSwitch__10dSv_info_cFii();
-extern "C" extern void offSwitch__10dSv_info_cFii();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void __ct__11dRes_info_cFv();
-extern "C" extern void __dt__11dRes_info_cFv();
-extern "C" extern void __dt__14dRes_control_cFv();
-extern "C" extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" extern void getMapPlayerPos__10dMapInfo_nFv();
-extern "C" extern void __ct__14dEvt_control_cFv();
-extern "C" extern void __ct__16dEvent_manager_cFv();
-extern "C" extern void __ct__15dSmplMdl_draw_cFv();
-extern "C" extern void draw__15dSmplMdl_draw_cFv();
-extern "C" extern void entry__15dSmplMdl_draw_cFP8J3DModeli();
-extern "C" extern void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc();
-extern "C" extern void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai();
-extern "C" extern void __ct__13dPa_control_cFv();
-extern "C" extern void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c();
-extern "C" extern void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
-extern "C" extern void __ct__12dDlst_list_cFv();
-extern "C" extern void __dt__12dDlst_list_cFv();
-extern "C" extern void __dt__12dAttention_cFv();
-extern "C" extern void Init__11cBgS_ChkElmFv();
-extern "C" extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern "C" extern void __ct__12dCcMassS_MngFv();
-extern "C" extern void checkItemGet__FUci();
-extern "C" extern void setLastSceneMode__9daAlink_cFPUl();
-extern "C" extern void dKy_daynight_check__Fv();
-extern "C" extern void dKy_darkworld_stage_check__FPCci();
-extern "C" extern void dMenuFmap_getStartStageName__FPv();
-extern "C" extern void init__13dMeter2Info_cFv();
-extern "C" extern void setSaveStageName__13dMeter2Info_cFPCc();
-extern "C" extern void deleteCheck__8dTimer_cFv();
-extern "C" extern void start__8dTimer_cFi();
-extern "C" extern void start__8dTimer_cFis();
-extern "C" extern void stop__8dTimer_cFUc();
-extern "C" extern void restart__8dTimer_cFUc();
-extern "C" extern void end__8dTimer_cFi();
-extern "C" extern void deleteRequest__8dTimer_cFv();
-extern "C" extern void __ct__4cCcSFv();
-extern "C" extern void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void ChkSetInfo__13cBgS_PolyInfoCFv();
-extern "C" extern void __dt__8cM3dGCpsFv();
-extern "C" extern void bgmStop__8Z2SeqMgrFUll();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void init__12J3DFrameCtrlFs();
-extern "C" extern void __register_global_object();
-extern "C" extern void __destroy_arr();
-extern "C" extern void __construct_array();
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void strcmp();
-extern "C" extern void strcpy();
+SECTION_INIT void memset();
+extern "C" void OSReport_Error();
+void mDoAud_setSceneName(char const*, s32, s32);
+void mDoAud_resetProcess();
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void fopScnM_ReRequest(s16, u32);
+void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, s32);
+void checkItemGet(char, s32);
+void dKy_daynight_check();
+void dKy_darkworld_stage_check(char const*, s32);
+void dMenuFmap_getStartStageName(void*);
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcmp();
+extern "C" void strcpy();
+
+SECTION_INIT void memset();
+extern "C" void OSReport_Error();
+extern "C" void mDoAud_setSceneName__FPCcll();
+extern "C" void mDoAud_resetProcess__Fv();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void fopScnM_ReRequest__FsUl();
+extern "C" void set__18dStage_nextStage_cFPCcScsScScUc();
+extern "C" void initZone__20dStage_roomControl_cFv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
+extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void setMixItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" void getMixItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
+extern "C" void onRegionBit__33dSv_player_field_last_stay_info_cFi();
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+extern "C" void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc();
+extern "C" void addBottleNum__24dSv_player_item_record_cFUcs();
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void setCollect__20dSv_player_collect_cFiUc();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void getVibration__19dSv_player_config_cFv();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void onSwitch__12dSv_memBit_cFi();
+extern "C" void offSwitch__12dSv_memBit_cFi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void onDungeonItem__12dSv_memBit_cFi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void init__12dSv_memory_cFv();
+extern "C" void init__13dSv_memory2_cFv();
+extern "C" void onVisitedRoom__13dSv_memory2_cFi();
+extern "C" void offVisitedRoom__13dSv_memory2_cFi();
+extern "C" void isVisitedRoom__13dSv_memory2_cFi();
+extern "C" void onSwitch__13dSv_zoneBit_cFi();
+extern "C" void offSwitch__13dSv_zoneBit_cFi();
+extern "C" void isSwitch__13dSv_zoneBit_cCFi();
+extern "C" void onOneSwitch__13dSv_zoneBit_cFi();
+extern "C" void offOneSwitch__13dSv_zoneBit_cFi();
+extern "C" void isOneSwitch__13dSv_zoneBit_cCFi();
+extern "C" void isItem__13dSv_zoneBit_cCFi();
+extern "C" void isOneItem__13dSv_zoneBit_cCFi();
+extern "C" void getSave2__10dSv_save_cFi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __ct__11dRes_info_cFv();
+extern "C" void __dt__11dRes_info_cFv();
+extern "C" void __dt__14dRes_control_cFv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getMapPlayerPos__10dMapInfo_nFv();
+extern "C" void __ct__14dEvt_control_cFv();
+extern "C" void __ct__16dEvent_manager_cFv();
+extern "C" void __ct__15dSmplMdl_draw_cFv();
+extern "C" void draw__15dSmplMdl_draw_cFv();
+extern "C" void entry__15dSmplMdl_draw_cFP8J3DModeli();
+extern "C" void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc();
+extern "C" void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai();
+extern "C" void __ct__13dPa_control_cFv();
+extern "C" void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c();
+extern "C" void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
+extern "C" void __ct__12dDlst_list_cFv();
+extern "C" void __dt__12dDlst_list_cFv();
+extern "C" void __dt__12dAttention_cFv();
+extern "C" void Init__11cBgS_ChkElmFv();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void __ct__12dCcMassS_MngFv();
+extern "C" void checkItemGet__FUci();
+extern "C" void setLastSceneMode__9daAlink_cFPUl();
+extern "C" void dKy_daynight_check__Fv();
+extern "C" void dKy_darkworld_stage_check__FPCci();
+extern "C" void dMenuFmap_getStartStageName__FPv();
+extern "C" void init__13dMeter2Info_cFv();
+extern "C" void setSaveStageName__13dMeter2Info_cFPCc();
+extern "C" void deleteCheck__8dTimer_cFv();
+extern "C" void start__8dTimer_cFi();
+extern "C" void start__8dTimer_cFis();
+extern "C" void stop__8dTimer_cFUc();
+extern "C" void restart__8dTimer_cFUc();
+extern "C" void end__8dTimer_cFi();
+extern "C" void deleteRequest__8dTimer_cFv();
+extern "C" void __ct__4cCcSFv();
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void ChkSetInfo__13cBgS_PolyInfoCFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcmp();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*const __vt__16dStage_stageDt_c[93];
@@ -379,11 +1209,11 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8002B1DC-8002B22C 0050+00 .text      ct__14dComIfG_play_cFv                                       */
+/* 8002B1DC-8002B22C 0050+00 rc=2 efc=0 .text      ct__14dComIfG_play_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ct__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::ct() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/ct__14dComIfG_play_cFv.s"
 }
@@ -391,119 +1221,119 @@ ASM_FUNCTION(ct__14dComIfG_play_cFv) {
 
 
 /* ############################################################################################## */
-/* 804061A0-804061B4 0014+00 .bss       dComIfG_mTimerInfo                                           */
+/* 804061A0-804061B4 0014+00 rc=1 efc=0 .bss       dComIfG_mTimerInfo                                           */
 u8 dComIfG_mTimerInfo[20];
 
-/* 804061B4-804061C0 000C+00 .bss       @5065                                                        */
+/* 804061B4-804061C0 000C+00 rc=1 efc=0 .bss       @5065                                                        */
 u8 d_com_d_com_inf_game__lit_5065[12];
 
-/* 804061C0-80423FD0 1DE10+00 .bss       g_dComIfG_gameInfo                                           */
+/* 804061C0-80423FD0 1DE10+00 rc=2363 efc=2264 .bss       g_dComIfG_gameInfo                                           */
 u8 g_dComIfG_gameInfo[122384];
 
-/* 8002B22C-8002B2A8 007C+00 .text      init__14dComIfG_play_cFv                                     */
+/* 8002B22C-8002B2A8 007C+00 rc=2 efc=1 .text      init__14dComIfG_play_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::init() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/init__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002B2A8-8002B2C8 0020+00 .text      dComIfGp_checkItemGet__FUci                                  */
+/* 8002B2A8-8002B2C8 0020+00 rc=1 efc=1 .text      dComIfGp_checkItemGet__FUci                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_checkItemGet__FUci) {
+asm void dComIfGp_checkItemGet(char field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_checkItemGet__FUci.s"
 }
 #pragma pop
 
 
-/* 8002B2C8-8002B36C 00A4+00 .text      itemInit__14dComIfG_play_cFv                                 */
+/* 8002B2C8-8002B36C 00A4+00 rc=1 efc=1 .text      itemInit__14dComIfG_play_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(itemInit__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::itemInit() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/itemInit__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002B36C-8002B384 0018+00 .text      setItemBombNumCount__14dComIfG_play_cFUcs                    */
+/* 8002B36C-8002B384 0018+00 rc=4 efc=3 .text      setItemBombNumCount__14dComIfG_play_cFUcs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemBombNumCount__14dComIfG_play_cFUcs) {
+asm void dComIfG_play_c::setItemBombNumCount(char field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setItemBombNumCount__14dComIfG_play_cFUcs.s"
 }
 #pragma pop
 
 
-/* 8002B384-8002B394 0010+00 .text      getItemBombNumCount__14dComIfG_play_cFUc                     */
+/* 8002B384-8002B394 0010+00 rc=1 efc=1 .text      getItemBombNumCount__14dComIfG_play_cFUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemBombNumCount__14dComIfG_play_cFUc) {
+asm void dComIfG_play_c::getItemBombNumCount(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getItemBombNumCount__14dComIfG_play_cFUc.s"
 }
 #pragma pop
 
 
-/* 8002B394-8002B3A8 0014+00 .text      clearItemBombNumCount__14dComIfG_play_cFUc                   */
+/* 8002B394-8002B3A8 0014+00 rc=1 efc=1 .text      clearItemBombNumCount__14dComIfG_play_cFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clearItemBombNumCount__14dComIfG_play_cFUc) {
+asm void dComIfG_play_c::clearItemBombNumCount(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/clearItemBombNumCount__14dComIfG_play_cFUc.s"
 }
 #pragma pop
 
 
-/* 8002B3A8-8002B3B0 0008+00 .text      setNowVibration__14dComIfG_play_cFUc                         */
+/* 8002B3A8-8002B3B0 0008+00 rc=2 efc=2 .text      setNowVibration__14dComIfG_play_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNowVibration__14dComIfG_play_cFUc) {
+asm void dComIfG_play_c::setNowVibration(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setNowVibration__14dComIfG_play_cFUc.s"
 }
 #pragma pop
 
 
-/* 8002B3B0-8002B3B8 0008+00 .text      getNowVibration__14dComIfG_play_cFv                          */
+/* 8002B3B0-8002B3B8 0008+00 rc=2 efc=2 .text      getNowVibration__14dComIfG_play_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowVibration__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getNowVibration() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getNowVibration__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002B3B8-8002B3F4 003C+00 .text      setStartStage__14dComIfG_play_cFP19dStage_startStage_c       */
+/* 8002B3B8-8002B3F4 003C+00 rc=1 efc=1 .text      setStartStage__14dComIfG_play_cFP19dStage_startStage_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStartStage__14dComIfG_play_cFP19dStage_startStage_c) {
+asm void dComIfG_play_c::setStartStage(dStage_startStage_c* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setStartStage__14dComIfG_play_cFP19dStage_startStage_c.s"
 }
 #pragma pop
 
 
-/* 8002B3F4-8002B434 0040+00 .text      dComIfG_get_timelayer__FPi                                   */
+/* 8002B3F4-8002B434 0040+00 rc=1 efc=0 .text      dComIfG_get_timelayer__FPi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_get_timelayer__FPi) {
+asm static void dComIfG_get_timelayer(s32* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_get_timelayer__FPi.s"
 }
@@ -511,7 +1341,7 @@ ASM_FUNCTION(dComIfG_get_timelayer__FPi) {
 
 
 /* ############################################################################################## */
-/* 80378F38-803790B0 0177+01 .rodata    @stringBase0                                                 */
+/* 80378F38-803790B0 0177+01 rc=12 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -562,231 +1392,231 @@ SECTION_DEAD char* const stringBase_803790A6 = "R%02d_00";
 SECTION_DEAD char* const pad_803790AF = "";
 #pragma pop
 
-/* 8002B434-8002C950 151C+00 .text      getLayerNo_common_common__14dComIfG_play_cFPCcii             */
+/* 8002B434-8002C950 151C+00 rc=2 efc=1 .text      getLayerNo_common_common__14dComIfG_play_cFPCcii             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLayerNo_common_common__14dComIfG_play_cFPCcii) {
+asm void dComIfG_play_c::getLayerNo_common_common(char const* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo_common_common__14dComIfG_play_cFPCcii.s"
 }
 #pragma pop
 
 
-/* 8002C950-8002C97C 002C+00 .text      getLayerNo_common__14dComIfG_play_cFPCcii                    */
+/* 8002C950-8002C97C 002C+00 rc=4 efc=3 .text      getLayerNo_common__14dComIfG_play_cFPCcii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLayerNo_common__14dComIfG_play_cFPCcii) {
+asm void dComIfG_play_c::getLayerNo_common(char const* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo_common__14dComIfG_play_cFPCcii.s"
 }
 #pragma pop
 
 
-/* 8002C97C-8002C9D8 005C+00 .text      getLayerNo__14dComIfG_play_cFi                               */
+/* 8002C97C-8002C9D8 005C+00 rc=23 efc=22 .text      getLayerNo__14dComIfG_play_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLayerNo__14dComIfG_play_cFi) {
+asm void dComIfG_play_c::getLayerNo(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo__14dComIfG_play_cFi.s"
 }
 #pragma pop
 
 
-/* 8002C9D8-8002CA1C 0044+00 .text      createParticle__14dComIfG_play_cFv                           */
+/* 8002C9D8-8002CA1C 0044+00 rc=1 efc=1 .text      createParticle__14dComIfG_play_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createParticle__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::createParticle() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/createParticle__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CA1C-8002CA70 0054+00 .text      createSimpleModel__14dComIfG_play_cFv                        */
+/* 8002CA1C-8002CA70 0054+00 rc=1 efc=1 .text      createSimpleModel__14dComIfG_play_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSimpleModel__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::createSimpleModel() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/createSimpleModel__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CA70-8002CAC4 0054+00 .text      deleteSimpleModel__14dComIfG_play_cFv                        */
+/* 8002CA70-8002CAC4 0054+00 rc=1 efc=1 .text      deleteSimpleModel__14dComIfG_play_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteSimpleModel__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::deleteSimpleModel() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/deleteSimpleModel__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CAC4-8002CAF0 002C+00 .text      drawSimpleModel__14dComIfG_play_cFv                          */
+/* 8002CAC4-8002CAF0 002C+00 rc=1 efc=1 .text      drawSimpleModel__14dComIfG_play_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawSimpleModel__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::drawSimpleModel() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/drawSimpleModel__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CAF0-8002CB30 0040+00 .text      addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc          */
+/* 8002CAF0-8002CB30 0040+00 rc=0 efc=0 .text      addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc) {
+asm void dComIfG_play_c::addSimpleModel(J3DModelData* field_0, s32 field_1, char field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc.s"
 }
 #pragma pop
 
 
-/* 8002CB30-8002CB68 0038+00 .text      removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai         */
+/* 8002CB30-8002CB68 0038+00 rc=0 efc=0 .text      removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai) {
+asm void dComIfG_play_c::removeSimpleModel(J3DModelData* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai.s"
 }
 #pragma pop
 
 
-/* 8002CB68-8002CB94 002C+00 .text      entrySimpleModel__14dComIfG_play_cFP8J3DModeli               */
+/* 8002CB68-8002CB94 002C+00 rc=0 efc=0 .text      entrySimpleModel__14dComIfG_play_cFP8J3DModeli               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entrySimpleModel__14dComIfG_play_cFP8J3DModeli) {
+asm void dComIfG_play_c::entrySimpleModel(J3DModel* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/entrySimpleModel__14dComIfG_play_cFP8J3DModeli.s"
 }
 #pragma pop
 
 
-/* 8002CB94-8002CB9C 0008+00 .text      setTimerNowTimeMs__14dComIfG_play_cFi                        */
+/* 8002CB94-8002CB9C 0008+00 rc=4 efc=4 .text      setTimerNowTimeMs__14dComIfG_play_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimerNowTimeMs__14dComIfG_play_cFi) {
+asm void dComIfG_play_c::setTimerNowTimeMs(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerNowTimeMs__14dComIfG_play_cFi.s"
 }
 #pragma pop
 
 
-/* 8002CB9C-8002CBA4 0008+00 .text      getTimerNowTimeMs__14dComIfG_play_cFv                        */
+/* 8002CB9C-8002CBA4 0008+00 rc=2 efc=2 .text      getTimerNowTimeMs__14dComIfG_play_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimerNowTimeMs__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getTimerNowTimeMs() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getTimerNowTimeMs__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CBA4-8002CBAC 0008+00 .text      setTimerLimitTimeMs__14dComIfG_play_cFi                      */
+/* 8002CBA4-8002CBAC 0008+00 rc=3 efc=3 .text      setTimerLimitTimeMs__14dComIfG_play_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimerLimitTimeMs__14dComIfG_play_cFi) {
+asm void dComIfG_play_c::setTimerLimitTimeMs(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerLimitTimeMs__14dComIfG_play_cFi.s"
 }
 #pragma pop
 
 
-/* 8002CBAC-8002CBB4 0008+00 .text      getTimerLimitTimeMs__14dComIfG_play_cFv                      */
+/* 8002CBAC-8002CBB4 0008+00 rc=1 efc=1 .text      getTimerLimitTimeMs__14dComIfG_play_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimerLimitTimeMs__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getTimerLimitTimeMs() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getTimerLimitTimeMs__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CBB4-8002CBBC 0008+00 .text      setTimerMode__14dComIfG_play_cFi                             */
+/* 8002CBB4-8002CBBC 0008+00 rc=3 efc=3 .text      setTimerMode__14dComIfG_play_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimerMode__14dComIfG_play_cFi) {
+asm void dComIfG_play_c::setTimerMode(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerMode__14dComIfG_play_cFi.s"
 }
 #pragma pop
 
 
-/* 8002CBBC-8002CBC4 0008+00 .text      getTimerMode__14dComIfG_play_cFv                             */
+/* 8002CBBC-8002CBC4 0008+00 rc=14 efc=8 .text      getTimerMode__14dComIfG_play_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimerMode__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getTimerMode() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getTimerMode__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CBC4-8002CBCC 0008+00 .text      setTimerType__14dComIfG_play_cFUc                            */
+/* 8002CBC4-8002CBCC 0008+00 rc=1 efc=1 .text      setTimerType__14dComIfG_play_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimerType__14dComIfG_play_cFUc) {
+asm void dComIfG_play_c::setTimerType(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerType__14dComIfG_play_cFUc.s"
 }
 #pragma pop
 
 
-/* 8002CBCC-8002CBD4 0008+00 .text      getTimerType__14dComIfG_play_cFv                             */
+/* 8002CBCC-8002CBD4 0008+00 rc=1 efc=1 .text      getTimerType__14dComIfG_play_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimerType__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getTimerType() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getTimerType__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CBD4-8002CBDC 0008+00 .text      setTimerPtr__14dComIfG_play_cFP8dTimer_c                     */
+/* 8002CBD4-8002CBDC 0008+00 rc=2 efc=2 .text      setTimerPtr__14dComIfG_play_cFP8dTimer_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimerPtr__14dComIfG_play_cFP8dTimer_c) {
+asm void dComIfG_play_c::setTimerPtr(dTimer_c* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerPtr__14dComIfG_play_cFP8dTimer_c.s"
 }
 #pragma pop
 
 
-/* 8002CBDC-8002CBE4 0008+00 .text      getTimerPtr__14dComIfG_play_cFv                              */
+/* 8002CBDC-8002CBE4 0008+00 rc=13 efc=7 .text      getTimerPtr__14dComIfG_play_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimerPtr__14dComIfG_play_cFv) {
+asm void dComIfG_play_c::getTimerPtr() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getTimerPtr__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002CBE4-8002CC54 0070+00 .text      ct__13dComIfG_inf_cFv                                        */
+/* 8002CBE4-8002CC54 0070+00 rc=2 efc=1 .text      ct__13dComIfG_inf_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ct__13dComIfG_inf_cFv) {
+asm void dComIfG_inf_c::ct() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/ct__13dComIfG_inf_cFv.s"
 }
@@ -794,156 +1624,146 @@ ASM_FUNCTION(ct__13dComIfG_inf_cFv) {
 
 
 /* ############################################################################################## */
-/* 80450600-80450604 0004+00 .sdata     g_clearColor                                                 */
+/* 80450600-80450604 0004+00 rc=18 efc=18 .sdata     g_clearColor                                                 */
 u8 g_clearColor[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450604-80450608 0004+00 .sdata     g_blackColor                                                 */
+/* 80450604-80450608 0004+00 rc=11 efc=10 .sdata     g_blackColor                                                 */
 u32 g_blackColor = 0x000000FF;
 
-/* 8002CC54-8002CD44 00F0+00 .text      dComIfG_changeOpeningScene__FP11scene_classs                 */
+/* 8002CC54-8002CD44 00F0+00 rc=2 efc=1 .text      dComIfG_changeOpeningScene__FP11scene_classs                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_changeOpeningScene__FP11scene_classs) {
+asm void dComIfG_changeOpeningScene(scene_class* field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_changeOpeningScene__FP11scene_classs.s"
 }
 #pragma pop
 
 
-/* 8002CD44-8002CDB8 0074+00 .text      dComIfG_resetToOpening__FP11scene_class                      */
+/* 8002CD44-8002CDB8 0074+00 rc=2 efc=2 .text      dComIfG_resetToOpening__FP11scene_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_resetToOpening__FP11scene_class) {
+asm void dComIfG_resetToOpening(scene_class* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_resetToOpening__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 8002CDB8-8002CE38 0080+00 .text      phase_1__FPc                                                 */
+/* 8002CDB8-8002CE38 0080+00 rc=1 efc=0 .text      phase_1__FPc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(d_com_d_com_inf_game__phase_1__FPc) {
+asm static void phase_1(char* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/d_com_d_com_inf_game__phase_1__FPc.s"
 }
 #pragma pop
 
 
-/* 8002CE38-8002CEB4 007C+00 .text      phase_2__FPc                                                 */
+/* 8002CE38-8002CEB4 007C+00 rc=1 efc=0 .text      phase_2__FPc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(d_com_d_com_inf_game__phase_2__FPc) {
+asm static void phase_2(char* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/d_com_d_com_inf_game__phase_2__FPc.s"
 }
 #pragma pop
 
 
-/* 8002CEB4-8002CEBC 0008+00 .text      phase_3__FPc                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_3__FPc) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/phase_3__FPc.s"
+/* 8002CEB4-8002CEBC 0008+00 rc=1 efc=0 .text      phase_3__FPc                                                 */
+static s32 phase_3(char* field_0) {
+	return 4;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 803A71B8-803A71C4 000C+00 .data      l_method$5017                                                */
+/* 803A71B8-803A71C4 000C+00 rc=1 efc=0 .data      l_method$5017                                                */
 void* data_803A71B8[3] = {
 	(void*)d_com_d_com_inf_game__phase_1__FPc,
 	(void*)d_com_d_com_inf_game__phase_2__FPc,
 	(void*)phase_3__FPc,
 };
 
-/* 8002CEBC-8002CEFC 0040+00 .text      dComIfG_resLoad__FP30request_of_phase_process_classPCc       */
+/* 8002CEBC-8002CEFC 0040+00 rc=7 efc=7 .text      dComIfG_resLoad__FP30request_of_phase_process_classPCc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_resLoad__FP30request_of_phase_process_classPCc) {
+asm void dComIfG_resLoad(request_of_phase_process_class* field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_resLoad__FP30request_of_phase_process_classPCc.s"
 }
 #pragma pop
 
 
-/* 8002CEFC-8002CF5C 0060+00 .text      phase_01__FP12phaseParam_c                                   */
+/* 8002CEFC-8002CF5C 0060+00 rc=1 efc=0 .text      phase_01__FP12phaseParam_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_01__FP12phaseParam_c) {
+asm static void phase_01(phaseParam_c* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/phase_01__FP12phaseParam_c.s"
 }
 #pragma pop
 
 
-/* 8002CF5C-8002CFB8 005C+00 .text      phase_02__FP12phaseParam_c                                   */
+/* 8002CF5C-8002CFB8 005C+00 rc=1 efc=0 .text      phase_02__FP12phaseParam_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_02__FP12phaseParam_c) {
+asm static void phase_02(phaseParam_c* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/phase_02__FP12phaseParam_c.s"
 }
 #pragma pop
 
 
-/* 8002CFB8-8002CFC0 0008+00 .text      phase_03__FP12phaseParam_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_03__FP12phaseParam_c) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/phase_03__FP12phaseParam_c.s"
+/* 8002CFB8-8002CFC0 0008+00 rc=1 efc=0 .text      phase_03__FP12phaseParam_c                                   */
+static bool phase_03(phaseParam_c* field_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 803A71C4-803A71D0 000C+00 .data      l_method$5051                                                */
+/* 803A71C4-803A71D0 000C+00 rc=1 efc=0 .data      l_method$5051                                                */
 void* data_803A71C4[3] = {
 	(void*)phase_01__FP12phaseParam_c,
 	(void*)phase_02__FP12phaseParam_c,
 	(void*)phase_03__FP12phaseParam_c,
 };
 
-/* 8002CFC0-8002D008 0048+00 .text      dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap */
+/* 8002CFC0-8002D008 0048+00 rc=4 efc=3 .text      dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap) {
+asm void dComIfG_resLoad(request_of_phase_process_class* field_0, char const* field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8002D008-8002D06C 0064+00 .text      dComIfG_resDelete__FP30request_of_phase_process_classPCc     */
+/* 8002D008-8002D06C 0064+00 rc=11 efc=10 .text      dComIfG_resDelete__FP30request_of_phase_process_classPCc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_resDelete__FP30request_of_phase_process_classPCc) {
+asm void dComIfG_resDelete(request_of_phase_process_class* field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_resDelete__FP30request_of_phase_process_classPCc.s"
 }
 #pragma pop
 
 
-/* 8002D06C-8002D0B4 0048+00 .text      dComIfGp_getReverb__Fi                                       */
+/* 8002D06C-8002D0B4 0048+00 rc=14 efc=14 .text      dComIfGp_getReverb__Fi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getReverb__Fi) {
+asm void dComIfGp_getReverb(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getReverb__Fi.s"
 }
@@ -951,58 +1771,58 @@ ASM_FUNCTION(dComIfGp_getReverb__Fi) {
 
 
 /* ############################################################################################## */
-/* 80451D00-80451D04 0004+00 .sdata2    @5090                                                        */
+/* 80451D00-80451D04 0004+00 rc=2 efc=0 .sdata2    @5090                                                        */
 f32 lit_5090 = -1000000000.0f;
 
-/* 8002D0B4-8002D1AC 00F8+00 .text      dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj */
+/* 8002D0B4-8002D1AC 00F8+00 rc=3 efc=3 .text      dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj) {
+asm void dComIfGd_setSimpleShadow(cXyz* field_0, f32 field_1, f32 field_2, cBgS_PolyInfo& field_3, s16 field_4, f32 field_5, _GXTexObj* field_6) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj.s"
 }
 #pragma pop
 
 
-/* 8002D1AC-8002D25C 00B0+00 .text      dComIfGp_getMapTrans__FiPfPfPs                               */
+/* 8002D1AC-8002D25C 00B0+00 rc=0 efc=0 .text      dComIfGp_getMapTrans__FiPfPfPs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getMapTrans__FiPfPfPs) {
+asm void dComIfGp_getMapTrans(s32 field_0, f32* field_1, f32* field_2, s16* field_3) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getMapTrans__FiPfPfPs.s"
 }
 #pragma pop
 
 
-/* 8002D25C-8002D2AC 0050+00 .text      dComIfGp_getRoomCamera__Fi                                   */
+/* 8002D25C-8002D2AC 0050+00 rc=3 efc=3 .text      dComIfGp_getRoomCamera__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getRoomCamera__Fi) {
+asm void dComIfGp_getRoomCamera(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getRoomCamera__Fi.s"
 }
 #pragma pop
 
 
-/* 8002D2AC-8002D2FC 0050+00 .text      dComIfGp_getRoomArrow__Fi                                    */
+/* 8002D2AC-8002D2FC 0050+00 rc=3 efc=3 .text      dComIfGp_getRoomArrow__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getRoomArrow__Fi) {
+asm void dComIfGp_getRoomArrow(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getRoomArrow__Fi.s"
 }
 #pragma pop
 
 
-/* 8002D2FC-8002D554 0258+00 .text      dComIfGp_setNextStage__FPCcsScScfUliScsii                    */
+/* 8002D2FC-8002D554 0258+00 rc=9 efc=7 .text      dComIfGp_setNextStage__FPCcsScScfUliScsii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setNextStage__FPCcsScScfUliScsii) {
+asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, char field_2, char field_3, f32 field_4, u32 field_5, s32 field_6, char field_7, s16 field_8, s32 field_9, s32 field_10) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setNextStage__FPCcsScScfUliScsii.s"
 }
@@ -1010,357 +1830,357 @@ ASM_FUNCTION(dComIfGp_setNextStage__FPCcsScScfUliScsii) {
 
 
 /* ############################################################################################## */
-/* 80451D04-80451D08 0004+00 .sdata2    @5226                                                        */
+/* 80451D04-80451D08 0004+00 rc=2 efc=0 .sdata2    @5226                                                        */
 u8 lit_5226[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8002D554-8002D598 0044+00 .text      dComIfGp_setNextStage__FPCcsScSc                             */
+/* 8002D554-8002D598 0044+00 rc=2 efc=1 .text      dComIfGp_setNextStage__FPCcsScSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setNextStage__FPCcsScSc) {
+asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setNextStage__FPCcsScSc.s"
 }
 #pragma pop
 
 
-/* 8002D598-8002D628 0090+00 .text      dComIfGs_isStageTbox__Fii                                    */
+/* 8002D598-8002D628 0090+00 rc=1 efc=1 .text      dComIfGs_isStageTbox__Fii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isStageTbox__Fii) {
+asm void dComIfGs_isStageTbox(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isStageTbox__Fii.s"
 }
 #pragma pop
 
 
-/* 8002D628-8002D6B4 008C+00 .text      dComIfGs_onStageSwitch__Fii                                  */
+/* 8002D628-8002D6B4 008C+00 rc=1 efc=1 .text      dComIfGs_onStageSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onStageSwitch__Fii) {
+asm void dComIfGs_onStageSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onStageSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002D6B4-8002D740 008C+00 .text      dComIfGs_offStageSwitch__Fii                                 */
+/* 8002D6B4-8002D740 008C+00 rc=1 efc=1 .text      dComIfGs_offStageSwitch__Fii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_offStageSwitch__Fii) {
+asm void dComIfGs_offStageSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offStageSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002D740-8002D7D0 0090+00 .text      dComIfGs_isStageSwitch__Fii                                  */
+/* 8002D740-8002D7D0 0090+00 rc=6 efc=6 .text      dComIfGs_isStageSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isStageSwitch__Fii) {
+asm void dComIfGs_isStageSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isStageSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002D7D0-8002D878 00A8+00 .text      dComIfGs_onStageBossEnemy__Fi                                */
+/* 8002D7D0-8002D878 00A8+00 rc=0 efc=0 .text      dComIfGs_onStageBossEnemy__Fi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onStageBossEnemy__Fi) {
+asm void dComIfGs_onStageBossEnemy(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onStageBossEnemy__Fi.s"
 }
 #pragma pop
 
 
-/* 8002D878-8002D8FC 0084+00 .text      dComIfGs_isDungeonItemWarp__Fi                               */
+/* 8002D878-8002D8FC 0084+00 rc=1 efc=1 .text      dComIfGs_isDungeonItemWarp__Fi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isDungeonItemWarp__Fi) {
+asm void dComIfGs_isDungeonItemWarp(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isDungeonItemWarp__Fi.s"
 }
 #pragma pop
 
 
-/* 8002D8FC-8002D910 0014+00 .text      dComIfGs_BossLife_public_Set__FSc                            */
+/* 8002D8FC-8002D910 0014+00 rc=1 efc=1 .text      dComIfGs_BossLife_public_Set__FSc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_BossLife_public_Set__FSc) {
+asm void dComIfGs_BossLife_public_Set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_BossLife_public_Set__FSc.s"
 }
 #pragma pop
 
 
-/* 8002D910-8002D924 0014+00 .text      dComIfGs_BossLife_public_Get__Fv                             */
+/* 8002D910-8002D924 0014+00 rc=0 efc=0 .text      dComIfGs_BossLife_public_Get__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_BossLife_public_Get__Fv) {
+asm void dComIfGs_BossLife_public_Get() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_BossLife_public_Get__Fv.s"
 }
 #pragma pop
 
 
-/* 8002D924-8002D938 0014+00 .text      dComIfGs_sense_type_change_Set__FSc                          */
+/* 8002D924-8002D938 0014+00 rc=0 efc=0 .text      dComIfGs_sense_type_change_Set__FSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_sense_type_change_Set__FSc) {
+asm void dComIfGs_sense_type_change_Set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_sense_type_change_Set__FSc.s"
 }
 #pragma pop
 
 
-/* 8002D938-8002D94C 0014+00 .text      dComIfGs_sense_type_change_Get__Fv                           */
+/* 8002D938-8002D94C 0014+00 rc=1 efc=1 .text      dComIfGs_sense_type_change_Get__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_sense_type_change_Get__Fv) {
+asm void dComIfGs_sense_type_change_Get() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_sense_type_change_Get__Fv.s"
 }
 #pragma pop
 
 
-/* 8002D94C-8002D9B0 0064+00 .text      dComIfGs_onZoneSwitch__Fii                                   */
+/* 8002D94C-8002D9B0 0064+00 rc=1 efc=1 .text      dComIfGs_onZoneSwitch__Fii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onZoneSwitch__Fii) {
+asm void dComIfGs_onZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002D9B0-8002D9CC 001C+00 .text      getZoneNo__20dStage_roomControl_cFi                          */
+/* 8002D9B0-8002D9CC 001C+00 rc=19 efc=11 .text      getZoneNo__20dStage_roomControl_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getZoneNo__20dStage_roomControl_cFi) {
+asm void dStage_roomControl_c::getZoneNo(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getZoneNo__20dStage_roomControl_cFi.s"
 }
 #pragma pop
 
 
-/* 8002D9CC-8002DA30 0064+00 .text      dComIfGs_offZoneSwitch__Fii                                  */
+/* 8002D9CC-8002DA30 0064+00 rc=1 efc=1 .text      dComIfGs_offZoneSwitch__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_offZoneSwitch__Fii) {
+asm void dComIfGs_offZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DA30-8002DA9C 006C+00 .text      dComIfGs_isZoneSwitch__Fii                                   */
+/* 8002DA30-8002DA9C 006C+00 rc=1 efc=1 .text      dComIfGs_isZoneSwitch__Fii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isZoneSwitch__Fii) {
+asm void dComIfGs_isZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DA9C-8002DB00 0064+00 .text      dComIfGs_onOneZoneSwitch__Fii                                */
+/* 8002DA9C-8002DB00 0064+00 rc=1 efc=1 .text      dComIfGs_onOneZoneSwitch__Fii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onOneZoneSwitch__Fii) {
+asm void dComIfGs_onOneZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onOneZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DB00-8002DB64 0064+00 .text      dComIfGs_offOneZoneSwitch__Fii                               */
+/* 8002DB00-8002DB64 0064+00 rc=1 efc=1 .text      dComIfGs_offOneZoneSwitch__Fii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_offOneZoneSwitch__Fii) {
+asm void dComIfGs_offOneZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offOneZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DB64-8002DBD0 006C+00 .text      dComIfGs_isOneZoneSwitch__Fii                                */
+/* 8002DB64-8002DBD0 006C+00 rc=5 efc=5 .text      dComIfGs_isOneZoneSwitch__Fii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isOneZoneSwitch__Fii) {
+asm void dComIfGs_isOneZoneSwitch(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isOneZoneSwitch__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DBD0-8002DC3C 006C+00 .text      dComIfGs_isZoneItem__Fii                                     */
+/* 8002DBD0-8002DC3C 006C+00 rc=1 efc=1 .text      dComIfGs_isZoneItem__Fii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isZoneItem__Fii) {
+asm void dComIfGs_isZoneItem(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isZoneItem__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DC3C-8002DCA8 006C+00 .text      dComIfGs_isOneZoneItem__Fii                                  */
+/* 8002DC3C-8002DCA8 006C+00 rc=1 efc=1 .text      dComIfGs_isOneZoneItem__Fii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isOneZoneItem__Fii) {
+asm void dComIfGs_isOneZoneItem(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isOneZoneItem__Fii.s"
 }
 #pragma pop
 
 
-/* 8002DCA8-8002DCC4 001C+00 .text      dComIfGs_getMaxLifeGauge__Fv                                 */
+/* 8002DCA8-8002DCC4 001C+00 rc=5 efc=5 .text      dComIfGs_getMaxLifeGauge__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getMaxLifeGauge__Fv) {
+asm void dComIfGs_getMaxLifeGauge() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getMaxLifeGauge__Fv.s"
 }
 #pragma pop
 
 
-/* 8002DCC4-8002DD08 0044+00 .text      dComIfGs_setSelectItemIndex__FiUc                            */
+/* 8002DCC4-8002DD08 0044+00 rc=8 efc=7 .text      dComIfGs_setSelectItemIndex__FiUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setSelectItemIndex__FiUc) {
+asm void dComIfGs_setSelectItemIndex(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectItemIndex__FiUc.s"
 }
 #pragma pop
 
 
-/* 8002DD08-8002DD3C 0034+00 .text      dComIfGs_setMixItemIndex__FiUc                               */
+/* 8002DD08-8002DD3C 0034+00 rc=6 efc=6 .text      dComIfGs_setMixItemIndex__FiUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setMixItemIndex__FiUc) {
+asm void dComIfGs_setMixItemIndex(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setMixItemIndex__FiUc.s"
 }
 #pragma pop
 
 
-/* 8002DD3C-8002DDC8 008C+00 .text      dComIfGs_getSelectMixItemNoArrowIndex__Fi                    */
+/* 8002DD3C-8002DDC8 008C+00 rc=4 efc=1 .text      dComIfGs_getSelectMixItemNoArrowIndex__Fi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getSelectMixItemNoArrowIndex__Fi) {
+asm void dComIfGs_getSelectMixItemNoArrowIndex(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getSelectMixItemNoArrowIndex__Fi.s"
 }
 #pragma pop
 
 
-/* 8002DDC8-8002DDF4 002C+00 .text      dComIfGs_getMixItemIndex__Fi                                 */
+/* 8002DDC8-8002DDF4 002C+00 rc=13 efc=11 .text      dComIfGs_getMixItemIndex__Fi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getMixItemIndex__Fi) {
+asm void dComIfGs_getMixItemIndex(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getMixItemIndex__Fi.s"
 }
 #pragma pop
 
 
-/* 8002DDF4-8002DF1C 0128+00 .text      dComIfGp_setSelectItem__Fi                                   */
+/* 8002DDF4-8002DF1C 0128+00 rc=14 efc=13 .text      dComIfGp_setSelectItem__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setSelectItem__Fi) {
+asm void dComIfGp_setSelectItem(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setSelectItem__Fi.s"
 }
 #pragma pop
 
 
-/* 8002DF1C-8002E048 012C+00 .text      dComIfGp_getSelectItem__Fi                                   */
+/* 8002DF1C-8002E048 012C+00 rc=23 efc=19 .text      dComIfGp_getSelectItem__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getSelectItem__Fi) {
+asm void dComIfGp_getSelectItem(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItem__Fi.s"
 }
 #pragma pop
 
 
-/* 8002E048-8002E078 0030+00 .text      dComIfGp_mapShow__Fv                                         */
+/* 8002E048-8002E078 0030+00 rc=2 efc=2 .text      dComIfGp_mapShow__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_mapShow__Fv) {
+asm void dComIfGp_mapShow() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_mapShow__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E078-8002E0A8 0030+00 .text      dComIfGp_mapHide__Fv                                         */
+/* 8002E078-8002E0A8 0030+00 rc=2 efc=2 .text      dComIfGp_mapHide__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_mapHide__Fv) {
+asm void dComIfGp_mapHide() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_mapHide__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E0A8-8002E0E0 0038+00 .text      dComIfGp_checkMapShow__Fv                                    */
+/* 8002E0A8-8002E0E0 0038+00 rc=1 efc=1 .text      dComIfGp_checkMapShow__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_checkMapShow__Fv) {
+asm void dComIfGp_checkMapShow() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_checkMapShow__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E0E0-8002E188 00A8+00 .text      dComIfGp_setHeapLockFlag__FUc                                */
+/* 8002E0E0-8002E188 00A8+00 rc=9 efc=9 .text      dComIfGp_setHeapLockFlag__FUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setHeapLockFlag__FUc) {
+asm void dComIfGp_setHeapLockFlag(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setHeapLockFlag__FUc.s"
 }
 #pragma pop
 
 
-/* 8002E188-8002E22C 00A4+00 .text      dComIfGp_offHeapLockFlag__Fi                                 */
+/* 8002E188-8002E22C 00A4+00 rc=8 efc=7 .text      dComIfGp_offHeapLockFlag__Fi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_offHeapLockFlag__Fi) {
+asm void dComIfGp_offHeapLockFlag(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_offHeapLockFlag__Fi.s"
 }
@@ -1368,62 +2188,62 @@ ASM_FUNCTION(dComIfGp_offHeapLockFlag__Fi) {
 
 
 /* ############################################################################################## */
-/* 80451D08-80451D10 0004+04 .sdata2    @6335                                                        */
+/* 80451D08-80451D10 0004+04 rc=1 efc=0 .sdata2    @6335                                                        */
 f32 lit_6335 = 2.0f / 5.0f;
 /* padding 4 bytes */
 
-/* 80451D10-80451D18 0008+00 .sdata2    @6337                                                        */
+/* 80451D10-80451D18 0008+00 rc=1 efc=0 .sdata2    @6337                                                        */
 f64 lit_6337 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8002E22C-8002E2DC 00B0+00 .text      dComIfGp_createSubExpHeap2D__Fv                              */
+/* 8002E22C-8002E2DC 00B0+00 rc=1 efc=0 .text      dComIfGp_createSubExpHeap2D__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_createSubExpHeap2D__Fv) {
+asm static void dComIfGp_createSubExpHeap2D() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_createSubExpHeap2D__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E2DC-8002E348 006C+00 .text      dComIfGp_destroySubExpHeap2D__Fv                             */
+/* 8002E2DC-8002E348 006C+00 rc=1 efc=0 .text      dComIfGp_destroySubExpHeap2D__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_destroySubExpHeap2D__Fv) {
+asm static void dComIfGp_destroySubExpHeap2D() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_destroySubExpHeap2D__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E348-8002E388 0040+00 .text      dComIfGp_checkEmptySubHeap2D__Fv                             */
+/* 8002E348-8002E388 0040+00 rc=1 efc=0 .text      dComIfGp_checkEmptySubHeap2D__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_checkEmptySubHeap2D__Fv) {
+asm static void dComIfGp_checkEmptySubHeap2D() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_checkEmptySubHeap2D__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E388-8002E3D0 0048+00 .text      dComIfGp_searchUseSubHeap2D__Fi                              */
+/* 8002E388-8002E3D0 0048+00 rc=1 efc=0 .text      dComIfGp_searchUseSubHeap2D__Fi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_searchUseSubHeap2D__Fi) {
+asm static void dComIfGp_searchUseSubHeap2D(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_searchUseSubHeap2D__Fi.s"
 }
 #pragma pop
 
 
-/* 8002E3D0-8002E428 0058+00 .text      dComIfGp_getSubHeap2D__Fi                                    */
+/* 8002E3D0-8002E428 0058+00 rc=9 efc=9 .text      dComIfGp_getSubHeap2D__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getSubHeap2D__Fi) {
+asm void dComIfGp_getSubHeap2D(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSubHeap2D__Fi.s"
 }
@@ -1431,116 +2251,111 @@ ASM_FUNCTION(dComIfGp_getSubHeap2D__Fi) {
 
 
 /* ############################################################################################## */
-/* 803A71D0-803A71E8 0018+00 .data      l_itemno$6402                                                */
+/* 803A71D0-803A71E8 0018+00 rc=1 efc=0 .data      l_itemno$6402                                                */
 u8 data_803A71D0[24] = {
 	0xC0, 0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF,
 	0xD0, 0xD1, 0xD2, 0xD3, 0xD4, 0xD5, 0xD6, 0xD7,
 };
 
-/* 8002E428-8002E4CC 00A4+00 .text      dComIfGs_checkGetInsectNum__Fv                               */
+/* 8002E428-8002E4CC 00A4+00 rc=4 efc=4 .text      dComIfGs_checkGetInsectNum__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_checkGetInsectNum__Fv) {
+asm void dComIfGs_checkGetInsectNum() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_checkGetInsectNum__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E4CC-8002E5B8 00EC+00 .text      dComIfGs_checkGetItem__FUc                                   */
+/* 8002E4CC-8002E5B8 00EC+00 rc=1 efc=0 .text      dComIfGs_checkGetItem__FUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_checkGetItem__FUc) {
+asm static void dComIfGs_checkGetItem(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_checkGetItem__FUc.s"
 }
 #pragma pop
 
 
-/* 8002E5B8-8002E5C0 0008+00 .text      dComIfGs_getBottleMax__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getBottleMax__Fv) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGs_getBottleMax__Fv.s"
+/* 8002E5B8-8002E5C0 0008+00 rc=5 efc=3 .text      dComIfGs_getBottleMax__Fv                                    */
+s32 dComIfGs_getBottleMax() {
+	return 10;
 }
-#pragma pop
 
 
-/* 8002E5C0-8002E688 00C8+00 .text      dComIfGp_getSelectItemNum__Fi                                */
+/* 8002E5C0-8002E688 00C8+00 rc=11 efc=11 .text      dComIfGp_getSelectItemNum__Fi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getSelectItemNum__Fi) {
+asm void dComIfGp_getSelectItemNum(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItemNum__Fi.s"
 }
 #pragma pop
 
 
-/* 8002E688-8002E714 008C+00 .text      dComIfGp_getSelectItemMaxNum__Fi                             */
+/* 8002E688-8002E714 008C+00 rc=5 efc=5 .text      dComIfGp_getSelectItemMaxNum__Fi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getSelectItemMaxNum__Fi) {
+asm void dComIfGp_getSelectItemMaxNum(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItemMaxNum__Fi.s"
 }
 #pragma pop
 
 
-/* 8002E714-8002E83C 0128+00 .text      dComIfGp_setSelectItemNum__Fis                               */
+/* 8002E714-8002E83C 0128+00 rc=2 efc=2 .text      dComIfGp_setSelectItemNum__Fis                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setSelectItemNum__Fis) {
+asm void dComIfGp_setSelectItemNum(s32 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setSelectItemNum__Fis.s"
 }
 #pragma pop
 
 
-/* 8002E83C-8002E910 00D4+00 .text      dComIfGp_addSelectItemNum__Fis                               */
+/* 8002E83C-8002E910 00D4+00 rc=5 efc=5 .text      dComIfGp_addSelectItemNum__Fis                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_addSelectItemNum__Fis) {
+asm void dComIfGp_addSelectItemNum(s32 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_addSelectItemNum__Fis.s"
 }
 #pragma pop
 
 
-/* 8002E910-8002E974 0064+00 .text      dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj */
+/* 8002E910-8002E974 0064+00 rc=5 efc=5 .text      dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj) {
+asm void dComIfGd_setShadow(u32 field_0, char field_1, J3DModel* field_2, cXyz* field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, cBgS_PolyInfo& field_8, dKy_tevstr_c* field_9, s16 field_10, f32 field_11, _GXTexObj* field_12) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj.s"
 }
 #pragma pop
 
 
-/* 8002E974-8002E9D4 0060+00 .text      dComIfGs_gameStart__Fv                                       */
+/* 8002E974-8002E9D4 0060+00 rc=1 efc=1 .text      dComIfGs_gameStart__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_gameStart__Fv) {
+asm void dComIfGs_gameStart() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_gameStart__Fv.s"
 }
 #pragma pop
 
 
-/* 8002E9D4-8002E9F0 001C+00 .text      dComIfG_getTrigA__FUl                                        */
+/* 8002E9D4-8002E9F0 001C+00 rc=0 efc=0 .text      dComIfG_getTrigA__FUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getTrigA__FUl) {
+asm void dComIfG_getTrigA(u32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getTrigA__FUl.s"
 }
@@ -1548,259 +2363,254 @@ ASM_FUNCTION(dComIfG_getTrigA__FUl) {
 
 
 /* ############################################################################################## */
-/* 80451D18-80451D1C 0004+00 .sdata2    @6980                                                        */
+/* 80451D18-80451D1C 0004+00 rc=1 efc=0 .sdata2    @6980                                                        */
 f32 lit_6980 = -90300.0f;
 
-/* 80451D1C-80451D20 0004+00 .sdata2    @6981                                                        */
+/* 80451D1C-80451D20 0004+00 rc=1 efc=0 .sdata2    @6981                                                        */
 f32 lit_6981 = 51800.0f;
 
-/* 8002E9F0-8002EC54 0264+00 .text      dComIfGp_calcNowRegion__Fv                                   */
+/* 8002E9F0-8002EC54 0264+00 rc=1 efc=1 .text      dComIfGp_calcNowRegion__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_calcNowRegion__Fv) {
+asm void dComIfGp_calcNowRegion() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_calcNowRegion__Fv.s"
 }
 #pragma pop
 
 
-/* 8002EC54-8002EDE0 018C+00 .text      dComIfG_getNowCalcRegion__Fv                                 */
+/* 8002EC54-8002EDE0 018C+00 rc=1 efc=0 .text      dComIfG_getNowCalcRegion__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getNowCalcRegion__Fv) {
+asm static void dComIfG_getNowCalcRegion() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getNowCalcRegion__Fv.s"
 }
 #pragma pop
 
 
-/* 8002EDE0-8002EE60 0080+00 .text      dComIfGp_isLightDropMapVisible__Fv                           */
+/* 8002EDE0-8002EE60 0080+00 rc=4 efc=4 .text      dComIfGp_isLightDropMapVisible__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_isLightDropMapVisible__Fv) {
+asm void dComIfGp_isLightDropMapVisible() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_isLightDropMapVisible__Fv.s"
 }
 #pragma pop
 
 
-/* 8002EE60-8002EEB0 0050+00 .text      dComIfGp_getNowLevel__Fv                                     */
+/* 8002EE60-8002EEB0 0050+00 rc=12 efc=11 .text      dComIfGp_getNowLevel__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getNowLevel__Fv) {
+asm void dComIfGp_getNowLevel() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getNowLevel__Fv.s"
 }
 #pragma pop
 
 
-/* 8002EEB0-8002EEC0 0010+00 .text      dComIfGs_setSelectEquipClothes__FUc                          */
+/* 8002EEB0-8002EEC0 0010+00 rc=4 efc=4 .text      dComIfGs_setSelectEquipClothes__FUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setSelectEquipClothes__FUc) {
+asm void dComIfGs_setSelectEquipClothes(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipClothes__FUc.s"
 }
 #pragma pop
 
 
-/* 8002EEC0-8002EF94 00D4+00 .text      dComIfGs_setSelectEquipSword__FUc                            */
+/* 8002EEC0-8002EF94 00D4+00 rc=4 efc=4 .text      dComIfGs_setSelectEquipSword__FUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setSelectEquipSword__FUc) {
+asm void dComIfGs_setSelectEquipSword(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipSword__FUc.s"
 }
 #pragma pop
 
 
-/* 8002EF94-8002F040 00AC+00 .text      dComIfGs_setSelectEquipShield__FUc                           */
+/* 8002EF94-8002F040 00AC+00 rc=2 efc=2 .text      dComIfGs_setSelectEquipShield__FUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setSelectEquipShield__FUc) {
+asm void dComIfGs_setSelectEquipShield(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipShield__FUc.s"
 }
 #pragma pop
 
 
-/* 8002F040-8002F0E0 00A0+00 .text      dComIfGs_setKeyNum__FiUc                                     */
+/* 8002F040-8002F0E0 00A0+00 rc=2 efc=1 .text      dComIfGs_setKeyNum__FiUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setKeyNum__FiUc) {
+asm void dComIfGs_setKeyNum(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setKeyNum__FiUc.s"
 }
 #pragma pop
 
 
-/* 8002F0E0-8002F128 0048+00 .text      dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc                  */
+/* 8002F0E0-8002F128 0048+00 rc=1 efc=0 .text      dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc) {
+asm static void dComIfGs_setWarpItemData(s32 field_0, char const* field_1, cXyz field_2, s16 field_3, char field_4, char field_5, char field_6) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc.s"
 }
 #pragma pop
 
 
-/* 8002F128-8002F19C 0074+00 .text      setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc            */
+/* 8002F128-8002F19C 0074+00 rc=1 efc=0 .text      setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc) {
+asm void dComIfG_play_c::setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc.s"
 }
 #pragma pop
 
 
-/* 8002F19C-8002F24C 00B0+00 .text      dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc                   */
+/* 8002F19C-8002F24C 00B0+00 rc=1 efc=1 .text      dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc) {
+asm void dComIfGs_setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc.s"
 }
 #pragma pop
 
 
-/* 8002F24C-8002F2AC 0060+00 .text      dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc           */
+/* 8002F24C-8002F2AC 0060+00 rc=1 efc=0 .text      dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc) {
+asm static void dComIfGs_setLastWarpMarkItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc.s"
 }
 #pragma pop
 
 
-/* 8002F2AC-8002F2BC 0010+00 .text      dComIfGs_getWarpStageName__Fv                                */
+/* 8002F2AC-8002F2BC 0010+00 rc=2 efc=2 .text      dComIfGs_getWarpStageName__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getWarpStageName__Fv) {
+asm void dComIfGs_getWarpStageName() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getWarpStageName__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F2BC-8002F2CC 0010+00 .text      dComIfGs_getWarpPlayerPos__Fv                                */
+/* 8002F2BC-8002F2CC 0010+00 rc=1 efc=1 .text      dComIfGs_getWarpPlayerPos__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getWarpPlayerPos__Fv) {
+asm void dComIfGs_getWarpPlayerPos() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getWarpPlayerPos__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F2CC-8002F2DC 0010+00 .text      dComIfGs_getWarpPlayerAngleY__Fv                             */
+/* 8002F2CC-8002F2DC 0010+00 rc=1 efc=1 .text      dComIfGs_getWarpPlayerAngleY__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getWarpPlayerAngleY__Fv) {
+asm void dComIfGs_getWarpPlayerAngleY() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getWarpPlayerAngleY__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F2DC-8002F2F0 0014+00 .text      dComIfGs_getWarpRoomNo__Fv                                   */
+/* 8002F2DC-8002F2F0 0014+00 rc=1 efc=1 .text      dComIfGs_getWarpRoomNo__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getWarpRoomNo__Fv) {
+asm void dComIfGs_getWarpRoomNo() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getWarpRoomNo__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F2F0-8002F310 0020+00 .text      dComIfGs_getWarpMarkFlag__Fv                                 */
+/* 8002F2F0-8002F310 0020+00 rc=1 efc=1 .text      dComIfGs_getWarpMarkFlag__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getWarpMarkFlag__Fv) {
+asm void dComIfGs_getWarpMarkFlag() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getWarpMarkFlag__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F310-8002F314 0004+00 .text      dComIfGs_setWarpMarkFlag__FUc                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setWarpMarkFlag__FUc) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGs_setWarpMarkFlag__FUc.s"
+/* 8002F310-8002F314 0004+00 rc=1 efc=1 .text      dComIfGs_setWarpMarkFlag__FUc                                */
+void dComIfGs_setWarpMarkFlag(char field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8002F314-8002F328 0014+00 .text      __ct__19dComIfG_resLoader_cFv                                */
+/* 8002F314-8002F328 0014+00 rc=0 efc=0 .text      __ct__19dComIfG_resLoader_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19dComIfG_resLoader_cFv) {
+asm dComIfG_resLoader_c::dComIfG_resLoader_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__19dComIfG_resLoader_cFv.s"
 }
 #pragma pop
 
 
-/* 8002F328-8002F3B4 008C+00 .text      __dt__19dComIfG_resLoader_cFv                                */
+/* 8002F328-8002F3B4 008C+00 rc=0 efc=0 .text      __dt__19dComIfG_resLoader_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dComIfG_resLoader_cFv) {
+asm dComIfG_resLoader_c::~dComIfG_resLoader_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__19dComIfG_resLoader_cFv.s"
 }
 #pragma pop
 
 
-/* 8002F3B4-8002F434 0080+00 .text      load__19dComIfG_resLoader_cFPPCcP7JKRHeap                    */
+/* 8002F3B4-8002F434 0080+00 rc=0 efc=0 .text      load__19dComIfG_resLoader_cFPPCcP7JKRHeap                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load__19dComIfG_resLoader_cFPPCcP7JKRHeap) {
+asm void dComIfG_resLoader_c::load(char const** field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/load__19dComIfG_resLoader_cFPPCcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8002F434-8002F478 0044+00 .text      dComIfG_getStageRes__FPCc                                    */
+/* 8002F434-8002F478 0044+00 rc=12 efc=12 .text      dComIfG_getStageRes__FPCc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getStageRes__FPCc) {
+asm void dComIfG_getStageRes(char const* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getStageRes__FPCc.s"
 }
 #pragma pop
 
 
-/* 8002F478-8002F4BC 0044+00 .text      dComIfG_getOldStageRes__FPCc                                 */
+/* 8002F478-8002F4BC 0044+00 rc=1 efc=1 .text      dComIfG_getOldStageRes__FPCc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getOldStageRes__FPCc) {
+asm void dComIfG_getOldStageRes(char const* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getOldStageRes__FPCc.s"
 }
@@ -1808,168 +2618,163 @@ ASM_FUNCTION(dComIfG_getOldStageRes__FPCc) {
 
 
 /* ############################################################################################## */
-/* 80423FD0-80423FF0 0020+00 .bss       buf$7371                                                     */
+/* 80423FD0-80423FF0 0020+00 rc=1 efc=0 .bss       buf$7371                                                     */
 u8 data_80423FD0[32];
 
-/* 8002F4BC-8002F500 0044+00 .text      dComIfG_getRoomArcName__Fi                                   */
+/* 8002F4BC-8002F500 0044+00 rc=5 efc=5 .text      dComIfG_getRoomArcName__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getRoomArcName__Fi) {
+asm void dComIfG_getRoomArcName(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getRoomArcName__Fi.s"
 }
 #pragma pop
 
 
-/* 8002F500-8002F504 0004+00 .text      dComIfGp_ret_wp_set__FSc                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_ret_wp_set__FSc) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGp_ret_wp_set__FSc.s"
+/* 8002F500-8002F504 0004+00 rc=1 efc=1 .text      dComIfGp_ret_wp_set__FSc                                     */
+void dComIfGp_ret_wp_set(char field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8002F504-8002F518 0014+00 .text      dComIfGp_world_dark_set__FUc                                 */
+/* 8002F504-8002F518 0014+00 rc=1 efc=1 .text      dComIfGp_world_dark_set__FUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_world_dark_set__FUc) {
+asm void dComIfGp_world_dark_set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_world_dark_set__FUc.s"
 }
 #pragma pop
 
 
-/* 8002F518-8002F52C 0014+00 .text      dComIfGp_world_dark_get__Fv                                  */
+/* 8002F518-8002F52C 0014+00 rc=1 efc=1 .text      dComIfGp_world_dark_get__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_world_dark_get__Fv) {
+asm void dComIfGp_world_dark_get() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_world_dark_get__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F52C-8002F5C0 0094+00 .text      dComIfG_TimerStart__Fis                                      */
+/* 8002F52C-8002F5C0 0094+00 rc=0 efc=0 .text      dComIfG_TimerStart__Fis                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerStart__Fis) {
+asm void dComIfG_TimerStart(s32 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerStart__Fis.s"
 }
 #pragma pop
 
 
-/* 8002F5C0-8002F638 0078+00 .text      dComIfG_TimerStop__Fi                                        */
+/* 8002F5C0-8002F638 0078+00 rc=0 efc=0 .text      dComIfG_TimerStop__Fi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerStop__Fi) {
+asm void dComIfG_TimerStop(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerStop__Fi.s"
 }
 #pragma pop
 
 
-/* 8002F638-8002F6B0 0078+00 .text      dComIfG_TimerReStart__Fi                                     */
+/* 8002F638-8002F6B0 0078+00 rc=0 efc=0 .text      dComIfG_TimerReStart__Fi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerReStart__Fi) {
+asm void dComIfG_TimerReStart(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerReStart__Fi.s"
 }
 #pragma pop
 
 
-/* 8002F6B0-8002F72C 007C+00 .text      dComIfG_TimerEnd__Fii                                        */
+/* 8002F6B0-8002F72C 007C+00 rc=0 efc=0 .text      dComIfG_TimerEnd__Fii                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerEnd__Fii) {
+asm void dComIfG_TimerEnd(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerEnd__Fii.s"
 }
 #pragma pop
 
 
-/* 8002F72C-8002F79C 0070+00 .text      dComIfG_TimerDeleteCheck__Fi                                 */
+/* 8002F72C-8002F79C 0070+00 rc=0 efc=0 .text      dComIfG_TimerDeleteCheck__Fi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerDeleteCheck__Fi) {
+asm void dComIfG_TimerDeleteCheck(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerDeleteCheck__Fi.s"
 }
 #pragma pop
 
 
-/* 8002F79C-8002F810 0074+00 .text      dComIfG_TimerDeleteRequest__Fi                               */
+/* 8002F79C-8002F810 0074+00 rc=1 efc=1 .text      dComIfG_TimerDeleteRequest__Fi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_TimerDeleteRequest__Fi) {
+asm void dComIfG_TimerDeleteRequest(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerDeleteRequest__Fi.s"
 }
 #pragma pop
 
 
-/* 8002F810-8002F9F0 01E0+00 .text      dComIfGs_Wolf_Change_Check__Fv                               */
+/* 8002F810-8002F9F0 01E0+00 rc=1 efc=1 .text      dComIfGs_Wolf_Change_Check__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_Wolf_Change_Check__Fv) {
+asm void dComIfGs_Wolf_Change_Check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_Wolf_Change_Check__Fv.s"
 }
 #pragma pop
 
 
-/* 8002F9F0-8002FA04 0014+00 .text      dComIfGs_PolyDamageOff_Set__FSc                              */
+/* 8002F9F0-8002FA04 0014+00 rc=2 efc=2 .text      dComIfGs_PolyDamageOff_Set__FSc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_PolyDamageOff_Set__FSc) {
+asm void dComIfGs_PolyDamageOff_Set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_PolyDamageOff_Set__FSc.s"
 }
 #pragma pop
 
 
-/* 8002FA04-8002FA18 0014+00 .text      dComIfGs_PolyDamageOff_Check__Fv                             */
+/* 8002FA04-8002FA18 0014+00 rc=1 efc=1 .text      dComIfGs_PolyDamageOff_Check__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_PolyDamageOff_Check__Fv) {
+asm void dComIfGs_PolyDamageOff_Check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_PolyDamageOff_Check__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FA18-8002FA30 0018+00 .text      dComIfGs_shake_kandelaar__Fv                                 */
+/* 8002FA18-8002FA30 0018+00 rc=0 efc=0 .text      dComIfGs_shake_kandelaar__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_shake_kandelaar__Fv) {
+asm void dComIfGs_shake_kandelaar() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_shake_kandelaar__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FA30-8002FA54 0024+00 .text      dComIfGs_shake_kandelaar_check__Fv                           */
+/* 8002FA30-8002FA54 0024+00 rc=0 efc=0 .text      dComIfGs_shake_kandelaar_check__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_shake_kandelaar_check__Fv) {
+asm void dComIfGs_shake_kandelaar_check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_shake_kandelaar_check__Fv.s"
 }
@@ -1977,190 +2782,190 @@ ASM_FUNCTION(dComIfGs_shake_kandelaar_check__Fv) {
 
 
 /* ############################################################################################## */
-/* 80451D20-80451D28 0008+00 .sdata2    @7580                                                        */
+/* 80451D20-80451D28 0008+00 rc=1 efc=0 .sdata2    @7580                                                        */
 f64 lit_7580 = 0.6;
 
-/* 8002FA54-8002FA84 0030+00 .text      dComIfGs_wolfeye_effect_check__Fv                            */
+/* 8002FA54-8002FA84 0030+00 rc=4 efc=4 .text      dComIfGs_wolfeye_effect_check__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_wolfeye_effect_check__Fv) {
+asm void dComIfGs_wolfeye_effect_check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_wolfeye_effect_check__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FA84-8002FA98 0014+00 .text      dComIfGs_Grass_hide_Set__FSc                                 */
+/* 8002FA84-8002FA98 0014+00 rc=0 efc=0 .text      dComIfGs_Grass_hide_Set__FSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_Grass_hide_Set__FSc) {
+asm void dComIfGs_Grass_hide_Set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_Grass_hide_Set__FSc.s"
 }
 #pragma pop
 
 
-/* 8002FA98-8002FAAC 0014+00 .text      dComIfGp_TargetWarpPt_set__FUc                               */
+/* 8002FA98-8002FAAC 0014+00 rc=1 efc=1 .text      dComIfGp_TargetWarpPt_set__FUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_TargetWarpPt_set__FUc) {
+asm void dComIfGp_TargetWarpPt_set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_TargetWarpPt_set__FUc.s"
 }
 #pragma pop
 
 
-/* 8002FAAC-8002FAC0 0014+00 .text      dComIfGp_SelectWarpPt_set__FUc                               */
+/* 8002FAAC-8002FAC0 0014+00 rc=1 efc=1 .text      dComIfGp_SelectWarpPt_set__FUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_SelectWarpPt_set__FUc) {
+asm void dComIfGp_SelectWarpPt_set(char field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_SelectWarpPt_set__FUc.s"
 }
 #pragma pop
 
 
-/* 8002FAC0-8002FAD4 0014+00 .text      dComIfGp_TargetWarpPt_get__Fv                                */
+/* 8002FAC0-8002FAD4 0014+00 rc=3 efc=3 .text      dComIfGp_TargetWarpPt_get__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_TargetWarpPt_get__Fv) {
+asm void dComIfGp_TargetWarpPt_get() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_TargetWarpPt_get__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FAD4-8002FAE8 0014+00 .text      dComIfGp_SelectWarpPt_get__Fv                                */
+/* 8002FAD4-8002FAE8 0014+00 rc=1 efc=1 .text      dComIfGp_SelectWarpPt_get__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_SelectWarpPt_get__Fv) {
+asm void dComIfGp_SelectWarpPt_get() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_SelectWarpPt_get__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FAE8-8002FB20 0038+00 .text      dComIfGp_TransportWarp_check__Fv                             */
+/* 8002FAE8-8002FB20 0038+00 rc=2 efc=2 .text      dComIfGp_TransportWarp_check__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_TransportWarp_check__Fv) {
+asm void dComIfGp_TransportWarp_check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_TransportWarp_check__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FB20-8002FB80 0060+00 .text      dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
+/* 8002FB20-8002FB80 0060+00 rc=8 efc=6 .text      dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv) {
+extern "C" asm void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv.s"
 }
 #pragma pop
 
 
-/* 8002FB80-8002FC3C 00BC+00 .text      dComIfGs_onVisitedRoom__Fi                                   */
+/* 8002FB80-8002FC3C 00BC+00 rc=1 efc=1 .text      dComIfGs_onVisitedRoom__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onVisitedRoom__Fi) {
+asm void dComIfGs_onVisitedRoom(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onVisitedRoom__Fi.s"
 }
 #pragma pop
 
 
-/* 8002FC3C-8002FC98 005C+00 .text      dComIfGs_offVisitedRoom__Fi                                  */
+/* 8002FC3C-8002FC98 005C+00 rc=0 efc=0 .text      dComIfGs_offVisitedRoom__Fi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_offVisitedRoom__Fi) {
+asm void dComIfGs_offVisitedRoom(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offVisitedRoom__Fi.s"
 }
 #pragma pop
 
 
-/* 8002FC98-8002FCF4 005C+00 .text      dComIfGs_isVisitedRoom__Fi                                   */
+/* 8002FC98-8002FCF4 005C+00 rc=1 efc=1 .text      dComIfGs_isVisitedRoom__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isVisitedRoom__Fi) {
+asm void dComIfGs_isVisitedRoom(s32 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isVisitedRoom__Fi.s"
 }
 #pragma pop
 
 
-/* 8002FCF4-8002FD08 0014+00 .text      dComIfGs_staffroll_next_go__Fv                               */
+/* 8002FCF4-8002FD08 0014+00 rc=1 efc=1 .text      dComIfGs_staffroll_next_go__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_staffroll_next_go__Fv) {
+asm void dComIfGs_staffroll_next_go() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_staffroll_next_go__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FD08-8002FD18 0010+00 .text      dComIfGs_staffroll_next_go_check__Fv                         */
+/* 8002FD08-8002FD18 0010+00 rc=1 efc=1 .text      dComIfGs_staffroll_next_go_check__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_staffroll_next_go_check__Fv) {
+asm void dComIfGs_staffroll_next_go_check() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_staffroll_next_go_check__Fv.s"
 }
 #pragma pop
 
 
-/* 8002FD18-8002FD74 005C+00 .text      __sinit_d_com_inf_game_cpp                                   */
+/* 8002FD18-8002FD74 005C+00 rc=1 efc=1 .text      __sinit_d_com_inf_game_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_com_inf_game_cpp) {
+extern "C" asm void __sinit_d_com_inf_game_cpp() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__sinit_d_com_inf_game_cpp.s"
 }
 #pragma pop
 
 
-/* 8002FD74-8002FDE8 0074+00 .text      __dt__13dComIfG_inf_cFv                                      */
+/* 8002FD74-8002FDE8 0074+00 rc=1 efc=0 .text      __dt__13dComIfG_inf_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dComIfG_inf_cFv) {
+asm dComIfG_inf_c::~dComIfG_inf_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__13dComIfG_inf_cFv.s"
 }
 #pragma pop
 
 
-/* 8002FDE8-8002FEF8 0110+00 .text      __dt__14dComIfG_play_cFv                                     */
+/* 8002FDE8-8002FEF8 0110+00 rc=1 efc=0 .text      __dt__14dComIfG_play_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dComIfG_play_cFv) {
+asm dComIfG_play_c::~dComIfG_play_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__14dComIfG_play_cFv.s"
 }
 #pragma pop
 
 
-/* 8002FEF8-8002FF40 0048+00 .text      __dt__11cBgS_ChkElmFv                                        */
+/* 8002FEF8-8002FF40 0048+00 rc=5 efc=1 .text      __dt__11cBgS_ChkElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11cBgS_ChkElmFv) {
+asm cBgS_ChkElm::~cBgS_ChkElm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__11cBgS_ChkElmFv.s"
 }
@@ -2168,49 +2973,49 @@ ASM_FUNCTION(__dt__11cBgS_ChkElmFv) {
 
 
 /* ############################################################################################## */
-/* 803A71E8-803A71F4 000C+00 .data      __vt__25mDoExt_McaMorfCallBack1_c                            */
+/* 803A71E8-803A71F4 000C+00 rc=2 efc=1 .data      __vt__25mDoExt_McaMorfCallBack1_c                            */
 void* const __vt__25mDoExt_McaMorfCallBack1_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 };
 
-/* 803A71F4-803A7200 000C+00 .data      __vt__12dCcMassS_Obj                                         */
+/* 803A71F4-803A7200 000C+00 rc=2 efc=1 .data      __vt__12dCcMassS_Obj                                         */
 void* const __vt__12dCcMassS_Obj[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dCcMassS_ObjFv,
 };
 
-/* 803A7200-803A720C 000C+00 .data      __vt__15cCcD_DivideArea                                      */
+/* 803A7200-803A720C 000C+00 rc=6 efc=2 .data      __vt__15cCcD_DivideArea                                      */
 void* const __vt__15cCcD_DivideArea[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15cCcD_DivideAreaFv,
 };
 
-/* 803A720C-803A7218 000C+00 .data      __vt__8cM3dGCyl                                              */
+/* 803A720C-803A7218 000C+00 rc=14 efc=11 .data      __vt__8cM3dGCyl                                              */
 void* const __vt__8cM3dGCyl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM3dGCylFv,
 };
 
-/* 803A7218-803A7224 000C+00 .data      __vt__8cM3dGAab                                              */
+/* 803A7218-803A7224 000C+00 rc=33 efc=28 .data      __vt__8cM3dGAab                                              */
 void* const __vt__8cM3dGAab[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM3dGAabFv,
 };
 
-/* 803A7224-803A7230 000C+00 .data      __vt__15cCcD_DivideInfo                                      */
+/* 803A7224-803A7230 000C+00 rc=13 efc=9 .data      __vt__15cCcD_DivideInfo                                      */
 void* const __vt__15cCcD_DivideInfo[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15cCcD_DivideInfoFv,
 };
 
-/* 803A7230-803A7240 000C+04 .data      __vt__12dCcMassS_Mng                                         */
+/* 803A7230-803A7240 000C+04 rc=3 efc=1 .data      __vt__12dCcMassS_Mng                                         */
 void* const __vt__12dCcMassS_Mng[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -2219,374 +3024,359 @@ void* const __vt__12dCcMassS_Mng[4] = {
 	NULL,
 };
 
-/* 8002FF40-800300F4 01B4+00 .text      __dt__4dCcSFv                                                */
+/* 8002FF40-800300F4 01B4+00 rc=2 efc=1 .text      __dt__4dCcSFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dCcSFv) {
+asm dCcS::~dCcS() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__4dCcSFv.s"
 }
 #pragma pop
 
 
-/* 800300F4-80030154 0060+00 .text      __dt__12dCcMassS_ObjFv                                       */
+/* 800300F4-80030154 0060+00 rc=4 efc=1 .text      __dt__12dCcMassS_ObjFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dCcMassS_ObjFv) {
+asm dCcMassS_Obj::~dCcMassS_Obj() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__12dCcMassS_ObjFv.s"
 }
 #pragma pop
 
 
-/* 80030154-80030190 003C+00 .text      __dt__12dEvt_order_cFv                                       */
+/* 80030154-80030190 003C+00 rc=2 efc=1 .text      __dt__12dEvt_order_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dEvt_order_cFv) {
+asm dEvt_order_c::~dEvt_order_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__12dEvt_order_cFv.s"
 }
 #pragma pop
 
 
-/* 80030190-800301CC 003C+00 .text      __dt__11dEvDtBase_cFv                                        */
+/* 80030190-800301CC 003C+00 rc=2 efc=1 .text      __dt__11dEvDtBase_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dEvDtBase_cFv) {
+asm dEvDtBase_c::~dEvDtBase_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__11dEvDtBase_cFv.s"
 }
 #pragma pop
 
 
-/* 800301CC-80030208 003C+00 .text      __dt__14dDlst_window_cFv                                     */
+/* 800301CC-80030208 003C+00 rc=2 efc=0 .text      __dt__14dDlst_window_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dDlst_window_cFv) {
+asm dDlst_window_c::~dDlst_window_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__14dDlst_window_cFv.s"
 }
 #pragma pop
 
 
-/* 80030208-80030244 003C+00 .text      __dt__25dComIfG_camera_info_classFv                          */
+/* 80030208-80030244 003C+00 rc=2 efc=0 .text      __dt__25dComIfG_camera_info_classFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__25dComIfG_camera_info_classFv) {
+asm dComIfG_camera_info_class::~dComIfG_camera_info_class() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__25dComIfG_camera_info_classFv.s"
 }
 #pragma pop
 
 
-/* 80030244-800304C8 0284+00 .text      __ct__13dComIfG_inf_cFv                                      */
+/* 80030244-800304C8 0284+00 rc=1 efc=0 .text      __ct__13dComIfG_inf_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dComIfG_inf_cFv) {
+asm dComIfG_inf_c::dComIfG_inf_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13dComIfG_inf_cFv.s"
 }
 #pragma pop
 
 
-/* 800304C8-800304CC 0004+00 .text      __ct__25dComIfG_camera_info_classFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__25dComIfG_camera_info_classFv) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__25dComIfG_camera_info_classFv.s"
+/* 800304C8-800304CC 0004+00 rc=1 efc=0 .text      __ct__25dComIfG_camera_info_classFv                          */
+dComIfG_camera_info_class::dComIfG_camera_info_class() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800304CC-800304D0 0004+00 .text      __ct__14dDlst_window_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dDlst_window_cFv) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__14dDlst_window_cFv.s"
+/* 800304CC-800304D0 0004+00 rc=1 efc=0 .text      __ct__14dDlst_window_cFv                                     */
+dDlst_window_c::dDlst_window_c() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800304D0-8003050C 003C+00 .text      __dt__10dAttList_cFv                                         */
+/* 800304D0-8003050C 003C+00 rc=3 efc=2 .text      __dt__10dAttList_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dAttList_cFv) {
+asm dAttList_c::~dAttList_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__10dAttList_cFv.s"
 }
 #pragma pop
 
 
-/* 8003050C-80030510 0004+00 .text      __ct__10dAttList_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dAttList_cFv) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__10dAttList_cFv.s"
+/* 8003050C-80030510 0004+00 rc=2 efc=1 .text      __ct__10dAttList_cFv                                         */
+dAttList_c::dAttList_c() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80030510-8003054C 003C+00 .text      __dt__7cSAngleFv                                             */
+/* 80030510-8003054C 003C+00 rc=9 efc=9 .text      __dt__7cSAngleFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7cSAngleFv) {
+asm cSAngle::~cSAngle() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__7cSAngleFv.s"
 }
 #pragma pop
 
 
-/* 8003054C-800306A0 0154+00 .text      __dt__10dAttDraw_cFv                                         */
+/* 8003054C-800306A0 0154+00 rc=3 efc=2 .text      __dt__10dAttDraw_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dAttDraw_cFv) {
+asm dAttDraw_c::~dAttDraw_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__10dAttDraw_cFv.s"
 }
 #pragma pop
 
 
-/* 800306A0-800306F4 0054+00 .text      __dt__13mDoExt_bckAnmFv                                      */
+/* 800306A0-800306F4 0054+00 rc=2 efc=0 .text      __dt__13mDoExt_bckAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13mDoExt_bckAnmFv) {
+asm mDoExt_bckAnm::~mDoExt_bckAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__13mDoExt_bckAnmFv.s"
 }
 #pragma pop
 
 
-/* 800306F4-80030748 0054+00 .text      __dt__13mDoExt_bpkAnmFv                                      */
+/* 800306F4-80030748 0054+00 rc=2 efc=0 .text      __dt__13mDoExt_bpkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13mDoExt_bpkAnmFv) {
+asm mDoExt_bpkAnm::~mDoExt_bpkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__13mDoExt_bpkAnmFv.s"
 }
 #pragma pop
 
 
-/* 80030748-8003079C 0054+00 .text      __dt__13mDoExt_brkAnmFv                                      */
+/* 80030748-8003079C 0054+00 rc=2 efc=0 .text      __dt__13mDoExt_brkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13mDoExt_brkAnmFv) {
+asm mDoExt_brkAnm::~mDoExt_brkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__13mDoExt_brkAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003079C-800307F0 0054+00 .text      __dt__13mDoExt_btkAnmFv                                      */
+/* 8003079C-800307F0 0054+00 rc=2 efc=0 .text      __dt__13mDoExt_btkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13mDoExt_btkAnmFv) {
+asm mDoExt_btkAnm::~mDoExt_btkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__13mDoExt_btkAnmFv.s"
 }
 #pragma pop
 
 
-/* 800307F0-80030954 0164+00 .text      __ct__10dAttDraw_cFv                                         */
+/* 800307F0-80030954 0164+00 rc=2 efc=1 .text      __ct__10dAttDraw_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dAttDraw_cFv) {
+asm dAttDraw_c::dAttDraw_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__10dAttDraw_cFv.s"
 }
 #pragma pop
 
 
-/* 80030954-8003099C 0048+00 .text      __ct__13mDoExt_btkAnmFv                                      */
+/* 80030954-8003099C 0048+00 rc=1 efc=0 .text      __ct__13mDoExt_btkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13mDoExt_btkAnmFv) {
+asm mDoExt_btkAnm::mDoExt_btkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13mDoExt_btkAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003099C-800309E4 0048+00 .text      __ct__13mDoExt_brkAnmFv                                      */
+/* 8003099C-800309E4 0048+00 rc=1 efc=0 .text      __ct__13mDoExt_brkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13mDoExt_brkAnmFv) {
+asm mDoExt_brkAnm::mDoExt_brkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13mDoExt_brkAnmFv.s"
 }
 #pragma pop
 
 
-/* 800309E4-80030A2C 0048+00 .text      __ct__13mDoExt_bpkAnmFv                                      */
+/* 800309E4-80030A2C 0048+00 rc=1 efc=0 .text      __ct__13mDoExt_bpkAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13mDoExt_bpkAnmFv) {
+asm mDoExt_bpkAnm::mDoExt_bpkAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13mDoExt_bpkAnmFv.s"
 }
 #pragma pop
 
 
-/* 80030A2C-80030A74 0048+00 .text      __ct__13mDoExt_bckAnmFv                                      */
+/* 80030A2C-80030A74 0048+00 rc=1 efc=0 .text      __ct__13mDoExt_bckAnmFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13mDoExt_bckAnmFv) {
+asm mDoExt_bckAnm::mDoExt_bckAnm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13mDoExt_bckAnmFv.s"
 }
 #pragma pop
 
 
-/* 80030A74-80030BDC 0168+00 .text      __dt__12dCcMassS_MngFv                                       */
+/* 80030A74-80030BDC 0168+00 rc=1 efc=0 .text      __dt__12dCcMassS_MngFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dCcMassS_MngFv) {
+asm dCcMassS_Mng::~dCcMassS_Mng() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__12dCcMassS_MngFv.s"
 }
 #pragma pop
 
 
-/* 80030BDC-80030C50 0074+00 .text      __dt__4cCcSFv                                                */
+/* 80030BDC-80030C50 0074+00 rc=1 efc=1 .text      __dt__4cCcSFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cCcSFv) {
+asm cCcS::~cCcS() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__4cCcSFv.s"
 }
 #pragma pop
 
 
-/* 80030C50-80030CCC 007C+00 .text      __dt__4dBgSFv                                                */
+/* 80030C50-80030CCC 007C+00 rc=1 efc=1 .text      __dt__4dBgSFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dBgSFv) {
+asm dBgS::~dBgS() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__4dBgSFv.s"
 }
 #pragma pop
 
 
-/* 80030CCC-80030D38 006C+00 .text      __dt__4cBgSFv                                                */
+/* 80030CCC-80030D38 006C+00 rc=1 efc=1 .text      __dt__4cBgSFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cBgSFv) {
+asm cBgS::~cBgS() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__4cBgSFv.s"
 }
 #pragma pop
 
 
-/* 80030D38-80030D74 003C+00 .text      __ct__11cBgS_ChkElmFv                                        */
+/* 80030D38-80030D74 003C+00 rc=1 efc=0 .text      __ct__11cBgS_ChkElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11cBgS_ChkElmFv) {
+asm cBgS_ChkElm::cBgS_ChkElm() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__11cBgS_ChkElmFv.s"
 }
 #pragma pop
 
 
-/* 80030D74-80030D80 000C+00 .text      __ct__10dSv_zone_cFv                                         */
+/* 80030D74-80030D80 000C+00 rc=1 efc=0 .text      __ct__10dSv_zone_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10dSv_zone_cFv) {
+asm dSv_zone_c::dSv_zone_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__10dSv_zone_cFv.s"
 }
 #pragma pop
 
 
-/* 80030D80-80030DB0 0030+00 .text      __ct__13dSv_memory2_cFv                                      */
+/* 80030D80-80030DB0 0030+00 rc=2 efc=1 .text      __ct__13dSv_memory2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dSv_memory2_cFv) {
+asm dSv_memory2_c::dSv_memory2_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__13dSv_memory2_cFv.s"
 }
 #pragma pop
 
 
-/* 80030DB0-80030DE0 0030+00 .text      __ct__12dSv_memory_cFv                                       */
+/* 80030DB0-80030DE0 0030+00 rc=2 efc=1 .text      __ct__12dSv_memory_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dSv_memory_cFv) {
+asm dSv_memory_c::dSv_memory_c() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__ct__12dSv_memory_cFv.s"
 }
 #pragma pop
 
 
-/* 80030DE0-80030E3C 005C+00 .text      __dt__15cCcD_DivideAreaFv                                    */
+/* 80030DE0-80030E3C 005C+00 rc=1 efc=0 .text      __dt__15cCcD_DivideAreaFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15cCcD_DivideAreaFv) {
+asm cCcD_DivideArea::~cCcD_DivideArea() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__15cCcD_DivideAreaFv.s"
 }
 #pragma pop
 
 
-/* 80030E3C-80030E84 0048+00 .text      __dt__8cM3dGCylFv                                            */
+/* 80030E3C-80030E84 0048+00 rc=2 efc=1 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__8cM3dGCylFv.s"
 }
 #pragma pop
 
 
-/* 80030E84-80030ECC 0048+00 .text      __dt__8cM3dGAabFv                                            */
+/* 80030E84-80030ECC 0048+00 rc=1 efc=0 .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__8cM3dGAabFv.s"
 }
 #pragma pop
 
 
-/* 80030ECC-80030F14 0048+00 .text      __dt__15cCcD_DivideInfoFv                                    */
+/* 80030ECC-80030F14 0048+00 rc=1 efc=0 .text      __dt__15cCcD_DivideInfoFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15cCcD_DivideInfoFv) {
+asm cCcD_DivideInfo::~cCcD_DivideInfo() {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/__dt__15cCcD_DivideInfoFv.s"
 }
@@ -2594,9 +3384,9 @@ ASM_FUNCTION(__dt__15cCcD_DivideInfoFv) {
 
 
 /* ############################################################################################## */
-/* 80450608-8045060C 0004+00 .sdata     g_whiteColor                                                 */
+/* 80450608-8045060C 0004+00 rc=6 efc=6 .sdata     g_whiteColor                                                 */
 u32 g_whiteColor = 0xFFFFFFFF;
 
-/* 8045060C-80450610 0004+00 .sdata     g_saftyWhiteColor                                            */
+/* 8045060C-80450610 0004+00 rc=3 efc=3 .sdata     g_saftyWhiteColor                                            */
 u32 g_saftyWhiteColor = 0xA0A0A0FF;
 

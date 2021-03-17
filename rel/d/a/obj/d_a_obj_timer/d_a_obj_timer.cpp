@@ -6,22 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void _create__Q210daObjTimer5Act_cFv();
-extern "C" extern void _delete__Q210daObjTimer5Act_cFv();
-extern "C" extern void mode_wait_init__Q210daObjTimer5Act_cFv();
-extern "C" extern void mode_wait__Q210daObjTimer5Act_cFv();
-extern "C" extern void mode_count_init__Q210daObjTimer5Act_cFv();
-extern "C" extern void mode_count__Q210daObjTimer5Act_cFv();
-extern "C" extern void _execute__Q210daObjTimer5Act_cFv();
-extern "C" extern void func_804855A4();
-extern "C" extern void func_804855C4();
-extern "C" extern void func_804855E8();
-extern "C" extern void func_8048560C();
-extern "C" extern void func_80485614();
-extern "C" extern void func_8048561C();
+extern "C" void func_804855A4();
+extern "C" void func_804855C4();
+extern "C" void func_804855E8();
+extern "C" bool func_8048560C();
+extern "C" bool func_80485614();
+extern "C" void func_8048561C();
+
+extern "C" void _create__Q210daObjTimer5Act_cFv();
+extern "C" bool _delete__Q210daObjTimer5Act_cFv();
+extern "C" void mode_wait_init__Q210daObjTimer5Act_cFv();
+extern "C" void mode_wait__Q210daObjTimer5Act_cFv();
+extern "C" void mode_count_init__Q210daObjTimer5Act_cFv();
+extern "C" void mode_count__Q210daObjTimer5Act_cFv();
+extern "C" void _execute__Q210daObjTimer5Act_cFv();
+extern "C" void func_804855A4();
+extern "C" void func_804855C4();
+extern "C" void func_804855E8();
+extern "C" bool func_8048560C();
+extern "C" bool func_80485614();
+extern "C" void func_8048561C();
 SECTION_RODATA extern const u32 lit_3720;
 SECTION_RODATA extern const u32 lit_3721;
 SECTION_DATA extern u8 cNullVec__6Z2Calc[12];
@@ -37,7 +48,9 @@ SECTION_DATA extern u8 g_profile_Obj_Timer[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +60,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::_create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/_create__Q210daObjTimer5Act_cFv.s"
 }
@@ -55,21 +68,16 @@ ASM_FUNCTION(_create__Q210daObjTimer5Act_cFv) {
 
 
 /* 8048526C-80485274 0008+00 .text      _delete__Q210daObjTimer5Act_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__Q210daObjTimer5Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/_delete__Q210daObjTimer5Act_cFv.s"
+bool daObjTimer::Act_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80485274-80485284 0010+00 .text      mode_wait_init__Q210daObjTimer5Act_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait_init__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::mode_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/mode_wait_init__Q210daObjTimer5Act_cFv.s"
 }
@@ -80,7 +88,7 @@ ASM_FUNCTION(mode_wait_init__Q210daObjTimer5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/mode_wait__Q210daObjTimer5Act_cFv.s"
 }
@@ -91,7 +99,7 @@ ASM_FUNCTION(mode_wait__Q210daObjTimer5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_count_init__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::mode_count_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/mode_count_init__Q210daObjTimer5Act_cFv.s"
 }
@@ -102,7 +110,7 @@ ASM_FUNCTION(mode_count_init__Q210daObjTimer5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_count__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::mode_count() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/mode_count__Q210daObjTimer5Act_cFv.s"
 }
@@ -113,7 +121,7 @@ ASM_FUNCTION(mode_count__Q210daObjTimer5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_execute__Q210daObjTimer5Act_cFv) {
+asm void daObjTimer::Act_c::_execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/_execute__Q210daObjTimer5Act_cFv.s"
 }
@@ -124,7 +132,7 @@ ASM_FUNCTION(_execute__Q210daObjTimer5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804855A4) {
+extern "C" asm void func_804855A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_804855A4.s"
 }
@@ -135,7 +143,7 @@ ASM_FUNCTION(func_804855A4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804855C4) {
+extern "C" asm void func_804855C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_804855C4.s"
 }
@@ -146,7 +154,7 @@ ASM_FUNCTION(func_804855C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804855E8) {
+extern "C" asm void func_804855E8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_804855E8.s"
 }
@@ -154,32 +162,22 @@ ASM_FUNCTION(func_804855E8) {
 
 
 /* 8048560C-80485614 0008+00 .text      Mthd_Draw__Q210daObjTimer27@unnamed@d_a_obj_timer_cpp@FPv    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_8048560C) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_8048560C.s"
+extern "C" bool func_8048560C() {
+	return true;
 }
-#pragma pop
 
 
 /* 80485614-8048561C 0008+00 .text      Mthd_IsDelete__Q210daObjTimer27@unnamed@d_a_obj_timer_cpp@FPv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_80485614) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_80485614.s"
+extern "C" bool func_80485614() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048561C-80485638 001C+00 .text      PrmAbstract<Q310daObjTimer5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ310daObjTimer5Act_c5Prm_eQ310daObjTimer5Act_c5Prm_e */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8048561C) {
+extern "C" asm void func_8048561C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_8048561C.s"
 }

@@ -6,38 +6,105 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daZrTuraRc_c;
+
+struct daZrTuraRc_HIO_c {
+	daZrTuraRc_HIO_c();
+	~daZrTuraRc_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daZrTuraRc_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void Execute();
+	void move();
+	void init_modeDrop();
+	void modeDrop();
+	void bgCheck();
+	void init_modeDropEnd();
+	void modeDropEnd();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daZrTuraRc_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daZrTuraRc_cFv();
-extern "C" extern void CreateHeap__12daZrTuraRc_cFv();
-extern "C" extern void create__12daZrTuraRc_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void createHeapCallBack__12daZrTuraRc_cFP10fopAc_ac_c();
-extern "C" extern void Execute__12daZrTuraRc_cFv();
-extern "C" extern void move__12daZrTuraRc_cFv();
-extern "C" extern void init_modeDrop__12daZrTuraRc_cFv();
-extern "C" extern void modeDrop__12daZrTuraRc_cFv();
-extern "C" extern void bgCheck__12daZrTuraRc_cFv();
-extern "C" extern void init_modeDropEnd__12daZrTuraRc_cFv();
-extern "C" extern void modeDropEnd__12daZrTuraRc_cFv();
-extern "C" extern void Draw__12daZrTuraRc_cFv();
-extern "C" extern void Delete__12daZrTuraRc_cFv();
-extern "C" extern void daZrTuraRc_Draw__FP12daZrTuraRc_c();
-extern "C" extern void daZrTuraRc_Execute__FP12daZrTuraRc_c();
-extern "C" extern void daZrTuraRc_Delete__FP12daZrTuraRc_c();
-extern "C" extern void daZrTuraRc_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daZrTuraRc_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_zrTuraraRock_cpp();
-extern "C" extern void func_80D4239C();
-extern "C" extern void func_80D423A4();
+void daZrTuraRc_Draw(daZrTuraRc_c*);
+void daZrTuraRc_Execute(daZrTuraRc_c*);
+void daZrTuraRc_Delete(daZrTuraRc_c*);
+void daZrTuraRc_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_zrTuraraRock_cpp();
+extern "C" void func_80D4239C();
+extern "C" void func_80D423A4();
+
+extern "C" void __ct__16daZrTuraRc_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daZrTuraRc_cFv();
+extern "C" void CreateHeap__12daZrTuraRc_cFv();
+extern "C" void create__12daZrTuraRc_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void createHeapCallBack__12daZrTuraRc_cFP10fopAc_ac_c();
+extern "C" void Execute__12daZrTuraRc_cFv();
+extern "C" void move__12daZrTuraRc_cFv();
+extern "C" void init_modeDrop__12daZrTuraRc_cFv();
+extern "C" void modeDrop__12daZrTuraRc_cFv();
+extern "C" void bgCheck__12daZrTuraRc_cFv();
+extern "C" void init_modeDropEnd__12daZrTuraRc_cFv();
+extern "C" void modeDropEnd__12daZrTuraRc_cFv();
+extern "C" void Draw__12daZrTuraRc_cFv();
+extern "C" void Delete__12daZrTuraRc_cFv();
+extern "C" void daZrTuraRc_Draw__FP12daZrTuraRc_c();
+extern "C" void daZrTuraRc_Execute__FP12daZrTuraRc_c();
+extern "C" void daZrTuraRc_Delete__FP12daZrTuraRc_c();
+extern "C" void daZrTuraRc_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daZrTuraRc_HIO_cFv();
+extern "C" void __sinit_d_a_obj_zrTuraraRock_cpp();
+extern "C" void func_80D4239C();
+extern "C" void func_80D423A4();
 SECTION_RODATA extern const u32 lit_3653;
 SECTION_RODATA extern const u32 lit_3654;
 SECTION_RODATA extern const u32 lit_3655;
@@ -80,8 +147,11 @@ SECTION_BSS extern u8 data_80D425CC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -91,7 +161,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daZrTuraRc_HIO_cFv) {
+asm daZrTuraRc_HIO_c::daZrTuraRc_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__ct__16daZrTuraRc_HIO_cFv.s"
 }
@@ -102,7 +172,7 @@ ASM_FUNCTION(__ct__16daZrTuraRc_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -113,7 +183,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/setBaseMtx__12daZrTuraRc_cFv.s"
 }
@@ -124,7 +194,7 @@ ASM_FUNCTION(setBaseMtx__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/CreateHeap__12daZrTuraRc_cFv.s"
 }
@@ -135,7 +205,7 @@ ASM_FUNCTION(CreateHeap__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/create__12daZrTuraRc_cFv.s"
 }
@@ -146,7 +216,7 @@ ASM_FUNCTION(create__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -157,7 +227,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__12dBgS_AcchCirFv.s"
 }
@@ -168,7 +238,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__8cM3dGSphFv.s"
 }
@@ -179,7 +249,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__8cM3dGAabFv.s"
 }
@@ -190,7 +260,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__10dCcD_GSttsFv.s"
 }
@@ -201,7 +271,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__12daZrTuraRc_cFP10fopAc_ac_c) {
+asm void daZrTuraRc_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/createHeapCallBack__12daZrTuraRc_cFP10fopAc_ac_c.s"
 }
@@ -212,7 +282,7 @@ ASM_FUNCTION(createHeapCallBack__12daZrTuraRc_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/Execute__12daZrTuraRc_cFv.s"
 }
@@ -223,7 +293,7 @@ ASM_FUNCTION(Execute__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/move__12daZrTuraRc_cFv.s"
 }
@@ -234,7 +304,7 @@ ASM_FUNCTION(move__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDrop__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::init_modeDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/init_modeDrop__12daZrTuraRc_cFv.s"
 }
@@ -245,7 +315,7 @@ ASM_FUNCTION(init_modeDrop__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDrop__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::modeDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/modeDrop__12daZrTuraRc_cFv.s"
 }
@@ -256,7 +326,7 @@ ASM_FUNCTION(modeDrop__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/bgCheck__12daZrTuraRc_cFv.s"
 }
@@ -267,7 +337,7 @@ ASM_FUNCTION(bgCheck__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDropEnd__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::init_modeDropEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/init_modeDropEnd__12daZrTuraRc_cFv.s"
 }
@@ -275,21 +345,16 @@ ASM_FUNCTION(init_modeDropEnd__12daZrTuraRc_cFv) {
 
 
 /* 80D4215C-80D42160 0004+00 .text      modeDropEnd__12daZrTuraRc_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeDropEnd__12daZrTuraRc_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/modeDropEnd__12daZrTuraRc_cFv.s"
+void daZrTuraRc_c::modeDropEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D42160-80D421C4 0064+00 .text      Draw__12daZrTuraRc_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/Draw__12daZrTuraRc_cFv.s"
 }
@@ -300,7 +365,7 @@ ASM_FUNCTION(Draw__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daZrTuraRc_cFv) {
+asm void daZrTuraRc_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/Delete__12daZrTuraRc_cFv.s"
 }
@@ -311,7 +376,7 @@ ASM_FUNCTION(Delete__12daZrTuraRc_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZrTuraRc_Draw__FP12daZrTuraRc_c) {
+asm void daZrTuraRc_Draw(daZrTuraRc_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/daZrTuraRc_Draw__FP12daZrTuraRc_c.s"
 }
@@ -322,7 +387,7 @@ ASM_FUNCTION(daZrTuraRc_Draw__FP12daZrTuraRc_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZrTuraRc_Execute__FP12daZrTuraRc_c) {
+asm void daZrTuraRc_Execute(daZrTuraRc_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/daZrTuraRc_Execute__FP12daZrTuraRc_c.s"
 }
@@ -333,7 +398,7 @@ ASM_FUNCTION(daZrTuraRc_Execute__FP12daZrTuraRc_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZrTuraRc_Delete__FP12daZrTuraRc_c) {
+asm void daZrTuraRc_Delete(daZrTuraRc_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/daZrTuraRc_Delete__FP12daZrTuraRc_c.s"
 }
@@ -344,7 +409,7 @@ ASM_FUNCTION(daZrTuraRc_Delete__FP12daZrTuraRc_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZrTuraRc_Create__FP10fopAc_ac_c) {
+asm void daZrTuraRc_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/daZrTuraRc_Create__FP10fopAc_ac_c.s"
 }
@@ -355,7 +420,7 @@ ASM_FUNCTION(daZrTuraRc_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__10cCcD_GSttsFv.s"
 }
@@ -366,7 +431,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daZrTuraRc_HIO_cFv) {
+asm daZrTuraRc_HIO_c::~daZrTuraRc_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__dt__16daZrTuraRc_HIO_cFv.s"
 }
@@ -377,7 +442,7 @@ ASM_FUNCTION(__dt__16daZrTuraRc_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_zrTuraraRock_cpp) {
+extern "C" asm void __sinit_d_a_obj_zrTuraraRock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/__sinit_d_a_obj_zrTuraraRock_cpp.s"
 }
@@ -388,7 +453,7 @@ ASM_FUNCTION(__sinit_d_a_obj_zrTuraraRock_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D4239C) {
+extern "C" asm void func_80D4239C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/func_80D4239C.s"
 }
@@ -399,7 +464,7 @@ ASM_FUNCTION(func_80D4239C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D423A4) {
+extern "C" asm void func_80D423A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/func_80D423A4.s"
 }

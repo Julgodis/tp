@@ -6,24 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObj_Roten_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+	void getResName();
+	~daObj_Roten_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObj_Roten_cFv();
-extern "C" extern void setBaseMtx__13daObj_Roten_cFv();
-extern "C" extern void Create__13daObj_Roten_cFv();
-extern "C" extern void CreateHeap__13daObj_Roten_cFv();
-extern "C" extern void create__13daObj_Roten_cFv();
-extern "C" extern void Execute__13daObj_Roten_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObj_Roten_cFv();
-extern "C" extern void Delete__13daObj_Roten_cFv();
-extern "C" extern void getResName__13daObj_Roten_cFv();
-extern "C" extern void daObj_Roten_Create__FPv();
-extern "C" extern void daObj_Roten_Delete__FPv();
-extern "C" extern void daObj_Roten_Execute__FPv();
-extern "C" extern void daObj_Roten_Draw__FPv();
-extern "C" extern void daObj_Roten_IsDelete__FPv();
-extern "C" extern void __dt__13daObj_Roten_cFv();
+extern "C" void Execute__13daObj_Roten_cFPPA3_A4_f();
+void daObj_Roten_Create(void*);
+void daObj_Roten_Delete(void*);
+void daObj_Roten_Execute(void*);
+void daObj_Roten_Draw(void*);
+bool daObj_Roten_IsDelete(void*);
+
+extern "C" void initBaseMtx__13daObj_Roten_cFv();
+extern "C" void setBaseMtx__13daObj_Roten_cFv();
+extern "C" void Create__13daObj_Roten_cFv();
+extern "C" void CreateHeap__13daObj_Roten_cFv();
+extern "C" void create__13daObj_Roten_cFv();
+extern "C" void Execute__13daObj_Roten_cFPPA3_A4_f();
+extern "C" void Draw__13daObj_Roten_cFv();
+extern "C" void Delete__13daObj_Roten_cFv();
+extern "C" void getResName__13daObj_Roten_cFv();
+extern "C" void daObj_Roten_Create__FPv();
+extern "C" void daObj_Roten_Delete__FPv();
+extern "C" void daObj_Roten_Execute__FPv();
+extern "C" void daObj_Roten_Draw__FPv();
+extern "C" bool daObj_Roten_IsDelete__FPv();
+extern "C" void __dt__13daObj_Roten_cFv();
 SECTION_RODATA extern const u32 lit_3778;
 SECTION_RODATA extern const u32 lit_3779;
 SECTION_RODATA extern const u32 lit_3780;
@@ -52,7 +75,9 @@ SECTION_DATA extern void*const __vt__13daObj_Roten_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -62,7 +87,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/initBaseMtx__13daObj_Roten_cFv.s"
 }
@@ -73,7 +98,7 @@ ASM_FUNCTION(initBaseMtx__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/setBaseMtx__13daObj_Roten_cFv.s"
 }
@@ -84,7 +109,7 @@ ASM_FUNCTION(setBaseMtx__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Create__13daObj_Roten_cFv.s"
 }
@@ -95,7 +120,7 @@ ASM_FUNCTION(Create__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/CreateHeap__13daObj_Roten_cFv.s"
 }
@@ -106,7 +131,7 @@ ASM_FUNCTION(CreateHeap__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40.s"
 }
@@ -117,7 +142,7 @@ ASM_FUNCTION(create__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObj_Roten_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObj_Roten_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Execute__13daObj_Roten_cFPPA3_A4_f.s"
 }
@@ -128,7 +153,7 @@ ASM_FUNCTION(Execute__13daObj_Roten_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Draw__13daObj_Roten_cFv.s"
 }
@@ -139,7 +164,7 @@ ASM_FUNCTION(Draw__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Delete__13daObj_Roten_cFv.s"
 }
@@ -150,7 +175,7 @@ ASM_FUNCTION(Delete__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__13daObj_Roten_cFv) {
+asm void daObj_Roten_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/getResName__13daObj_Roten_cFv.s"
 }
@@ -161,7 +186,7 @@ ASM_FUNCTION(getResName__13daObj_Roten_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Roten_Create__FPv) {
+asm void daObj_Roten_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Create__FPv.s"
 }
@@ -172,7 +197,7 @@ ASM_FUNCTION(daObj_Roten_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Roten_Delete__FPv) {
+asm void daObj_Roten_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Delete__FPv.s"
 }
@@ -183,7 +208,7 @@ ASM_FUNCTION(daObj_Roten_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Roten_Execute__FPv) {
+asm void daObj_Roten_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Execute__FPv.s"
 }
@@ -194,7 +219,7 @@ ASM_FUNCTION(daObj_Roten_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Roten_Draw__FPv) {
+asm void daObj_Roten_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Draw__FPv.s"
 }
@@ -202,21 +227,16 @@ ASM_FUNCTION(daObj_Roten_Draw__FPv) {
 
 
 /* 80CC1380-80CC1388 0008+00 .text      daObj_Roten_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Roten_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_IsDelete__FPv.s"
+bool daObj_Roten_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CC1388-80CC13F8 0070+00 .text      __dt__13daObj_Roten_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObj_Roten_cFv) {
+asm daObj_Roten_c::~daObj_Roten_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/__dt__13daObj_Roten_cFv.s"
 }

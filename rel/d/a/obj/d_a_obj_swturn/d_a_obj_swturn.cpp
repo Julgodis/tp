@@ -6,29 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjSwTurn_c;
+
+struct daObjSwTurn_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void mode_proc_call();
+	void init_modeWait();
+	void modeWait();
+	void init_modeRotate();
+	void modeRotate();
+	void rotate_sub_0();
+	void rotate_sub_1();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void initBaseMtx__13daObjSwTurn_cFv();
-extern "C" extern void setBaseMtx__13daObjSwTurn_cFv();
-extern "C" extern void Create__13daObjSwTurn_cFv();
-extern "C" extern void CreateHeap__13daObjSwTurn_cFv();
-extern "C" extern void create1st__13daObjSwTurn_cFv();
-extern "C" extern void Execute__13daObjSwTurn_cFPPA3_A4_f();
-extern "C" extern void mode_proc_call__13daObjSwTurn_cFv();
-extern "C" extern void init_modeWait__13daObjSwTurn_cFv();
-extern "C" extern void modeWait__13daObjSwTurn_cFv();
-extern "C" extern void init_modeRotate__13daObjSwTurn_cFv();
-extern "C" extern void modeRotate__13daObjSwTurn_cFv();
-extern "C" extern void rotate_sub_0__13daObjSwTurn_cFv();
-extern "C" extern void rotate_sub_1__13daObjSwTurn_cFv();
-extern "C" extern void Draw__13daObjSwTurn_cFv();
-extern "C" extern void Delete__13daObjSwTurn_cFv();
-extern "C" extern void daObjSwTurn_create1st__FP13daObjSwTurn_c();
-extern "C" extern void daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c();
-extern "C" extern void daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c();
-extern "C" extern void daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c();
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void Execute__13daObjSwTurn_cFPPA3_A4_f();
+void daObjSwTurn_create1st(daObjSwTurn_c*);
+void daObjSwTurn_MoveBGDelete(daObjSwTurn_c*);
+void daObjSwTurn_MoveBGExecute(daObjSwTurn_c*);
+void daObjSwTurn_MoveBGDraw(daObjSwTurn_c*);
+
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void initBaseMtx__13daObjSwTurn_cFv();
+extern "C" void setBaseMtx__13daObjSwTurn_cFv();
+extern "C" void Create__13daObjSwTurn_cFv();
+extern "C" void CreateHeap__13daObjSwTurn_cFv();
+extern "C" void create1st__13daObjSwTurn_cFv();
+extern "C" void Execute__13daObjSwTurn_cFPPA3_A4_f();
+extern "C" void mode_proc_call__13daObjSwTurn_cFv();
+extern "C" void init_modeWait__13daObjSwTurn_cFv();
+extern "C" void modeWait__13daObjSwTurn_cFv();
+extern "C" void init_modeRotate__13daObjSwTurn_cFv();
+extern "C" void modeRotate__13daObjSwTurn_cFv();
+extern "C" void rotate_sub_0__13daObjSwTurn_cFv();
+extern "C" void rotate_sub_1__13daObjSwTurn_cFv();
+extern "C" void Draw__13daObjSwTurn_cFv();
+extern "C" void Delete__13daObjSwTurn_cFv();
+extern "C" void daObjSwTurn_create1st__FP13daObjSwTurn_c();
+extern "C" void daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c();
+extern "C" void daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c();
+extern "C" void daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_heap_size[8];
@@ -59,7 +89,9 @@ SECTION_DATA extern void*const __vt__13daObjSwTurn_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -69,7 +101,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
 }
@@ -80,7 +112,7 @@ ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/initBaseMtx__13daObjSwTurn_cFv.s"
 }
@@ -91,7 +123,7 @@ ASM_FUNCTION(initBaseMtx__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/setBaseMtx__13daObjSwTurn_cFv.s"
 }
@@ -102,7 +134,7 @@ ASM_FUNCTION(setBaseMtx__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/Create__13daObjSwTurn_cFv.s"
 }
@@ -113,7 +145,7 @@ ASM_FUNCTION(Create__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/CreateHeap__13daObjSwTurn_cFv.s"
 }
@@ -124,7 +156,7 @@ ASM_FUNCTION(CreateHeap__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/create1st__13daObjSwTurn_cFv.s"
 }
@@ -135,7 +167,7 @@ ASM_FUNCTION(create1st__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjSwTurn_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjSwTurn_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/Execute__13daObjSwTurn_cFPPA3_A4_f.s"
 }
@@ -146,7 +178,7 @@ ASM_FUNCTION(Execute__13daObjSwTurn_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/mode_proc_call__13daObjSwTurn_cFv.s"
 }
@@ -157,7 +189,7 @@ ASM_FUNCTION(mode_proc_call__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/init_modeWait__13daObjSwTurn_cFv.s"
 }
@@ -168,7 +200,7 @@ ASM_FUNCTION(init_modeWait__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/modeWait__13daObjSwTurn_cFv.s"
 }
@@ -179,7 +211,7 @@ ASM_FUNCTION(modeWait__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeRotate__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::init_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/init_modeRotate__13daObjSwTurn_cFv.s"
 }
@@ -190,7 +222,7 @@ ASM_FUNCTION(init_modeRotate__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeRotate__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/modeRotate__13daObjSwTurn_cFv.s"
 }
@@ -201,7 +233,7 @@ ASM_FUNCTION(modeRotate__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rotate_sub_0__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::rotate_sub_0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/rotate_sub_0__13daObjSwTurn_cFv.s"
 }
@@ -212,7 +244,7 @@ ASM_FUNCTION(rotate_sub_0__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rotate_sub_1__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::rotate_sub_1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/rotate_sub_1__13daObjSwTurn_cFv.s"
 }
@@ -223,7 +255,7 @@ ASM_FUNCTION(rotate_sub_1__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/Draw__13daObjSwTurn_cFv.s"
 }
@@ -234,7 +266,7 @@ ASM_FUNCTION(Draw__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjSwTurn_cFv) {
+asm void daObjSwTurn_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/Delete__13daObjSwTurn_cFv.s"
 }
@@ -245,7 +277,7 @@ ASM_FUNCTION(Delete__13daObjSwTurn_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwTurn_create1st__FP13daObjSwTurn_c) {
+asm void daObjSwTurn_create1st(daObjSwTurn_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_create1st__FP13daObjSwTurn_c.s"
 }
@@ -256,7 +288,7 @@ ASM_FUNCTION(daObjSwTurn_create1st__FP13daObjSwTurn_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c) {
+asm void daObjSwTurn_MoveBGDelete(daObjSwTurn_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c.s"
 }
@@ -267,7 +299,7 @@ ASM_FUNCTION(daObjSwTurn_MoveBGDelete__FP13daObjSwTurn_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c) {
+asm void daObjSwTurn_MoveBGExecute(daObjSwTurn_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c.s"
 }
@@ -278,7 +310,7 @@ ASM_FUNCTION(daObjSwTurn_MoveBGExecute__FP13daObjSwTurn_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c) {
+asm void daObjSwTurn_MoveBGDraw(daObjSwTurn_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swturn/d_a_obj_swturn/daObjSwTurn_MoveBGDraw__FP13daObjSwTurn_c.s"
 }

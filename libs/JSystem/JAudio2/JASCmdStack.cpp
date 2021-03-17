@@ -6,14 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASPortCmd (JASPortCmd) False/False
+/* top-level dependencies (begin JASPortCmd) */
+/* top-level dependencies (end JASPortCmd) */
+struct JASPortCmd {
+	// build TPortHead (JASPortCmd::TPortHead) False/False
+	/* dependencies (begin JASPortCmd::TPortHead) */
+	/* dependencies (end JASPortCmd::TPortHead) */
+	struct TPortHead {
+		/* 80291094 */ void execCommandOnce();
+		/* 8029110C */ void execCommandStay();
+		/* 802911D0 */ ~TPortHead();
+	};
+
+	/* 80291060 */ void execAllCommand();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+};
+
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// build JSUPtrLink (JSUPtrLink) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void execAllCommand__10JASPortCmdFv();
-extern "C" extern void execCommandOnce__Q210JASPortCmd9TPortHeadFv();
-extern "C" extern void execCommandStay__Q210JASPortCmd9TPortHeadFv();
-extern "C" extern void __sinit_JASCmdStack_cpp();
-extern "C" extern void __dt__Q210JASPortCmd9TPortHeadFv();
+extern "C" void __sinit_JASCmdStack_cpp();
+
+extern "C" void execAllCommand__10JASPortCmdFv();
+extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv();
+extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv();
+extern "C" void __sinit_JASCmdStack_cpp();
+extern "C" void __dt__Q210JASPortCmd9TPortHeadFv();
 SECTION_BSS extern u8 JASCmdStack__lit_80[12];
 SECTION_BSS extern u8 sCommandListOnce__10JASPortCmd[12];
 SECTION_BSS extern u8 JASCmdStack__lit_82[12];
@@ -23,86 +63,92 @@ SECTION_BSS extern u8 sCommandListStay__10JASPortCmd[12];
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dt__10JSUPtrListFv();
-extern "C" extern void initiate__10JSUPtrListFv();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80431678-80431684 000C+00 .bss       @80                                                          */
+/* 80431678-80431684 000C+00 rc=1 efc=0 .bss       @80                                                          */
 u8 JASCmdStack__lit_80[12];
 
-/* 80431684-80431690 000C+00 .bss       sCommandListOnce__10JASPortCmd                               */
+/* 80431684-80431690 000C+00 rc=1 efc=0 .bss       sCommandListOnce__10JASPortCmd                               */
 u8 sCommandListOnce__10JASPortCmd[12];
 
-/* 80431690-8043169C 000C+00 .bss       @82                                                          */
+/* 80431690-8043169C 000C+00 rc=0 efc=0 .bss       @82                                                          */
 u8 JASCmdStack__lit_82[12];
 
-/* 8043169C-804316A8 000C+00 .bss       sCommandListStay__10JASPortCmd                               */
+/* 8043169C-804316A8 000C+00 rc=1 efc=0 .bss       sCommandListStay__10JASPortCmd                               */
 u8 sCommandListStay__10JASPortCmd[12];
 
-/* 80291060-80291094 0034+00 .text      execAllCommand__10JASPortCmdFv                               */
+/* 80291060-80291094 0034+00 rc=1 efc=1 .text      execAllCommand__10JASPortCmdFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execAllCommand__10JASPortCmdFv) {
+asm void JASPortCmd::execAllCommand() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCmdStack/execAllCommand__10JASPortCmdFv.s"
 }
 #pragma pop
 
 
-/* 80291094-8029110C 0078+00 .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
+/* 80291094-8029110C 0078+00 rc=1 efc=0 .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execCommandOnce__Q210JASPortCmd9TPortHeadFv) {
+asm void JASPortCmd::TPortHead::execCommandOnce() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCmdStack/execCommandOnce__Q210JASPortCmd9TPortHeadFv.s"
 }
 #pragma pop
 
 
-/* 8029110C-8029116C 0060+00 .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
+/* 8029110C-8029116C 0060+00 rc=1 efc=0 .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execCommandStay__Q210JASPortCmd9TPortHeadFv) {
+asm void JASPortCmd::TPortHead::execCommandStay() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCmdStack/execCommandStay__Q210JASPortCmd9TPortHeadFv.s"
 }
 #pragma pop
 
 
-/* 8029116C-802911D0 0064+00 .text      __sinit_JASCmdStack_cpp                                      */
+/* 8029116C-802911D0 0064+00 rc=1 efc=1 .text      __sinit_JASCmdStack_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JASCmdStack_cpp) {
+extern "C" asm void __sinit_JASCmdStack_cpp() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCmdStack/__sinit_JASCmdStack_cpp.s"
 }
 #pragma pop
 
 
-/* 802911D0-80291228 0058+00 .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
+/* 802911D0-80291228 0058+00 rc=1 efc=0 .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q210JASPortCmd9TPortHeadFv) {
+asm JASPortCmd::TPortHead::~TPortHead() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCmdStack/__dt__Q210JASPortCmd9TPortHeadFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

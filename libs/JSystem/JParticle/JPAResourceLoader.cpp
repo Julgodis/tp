@@ -6,57 +6,170 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPAResourceLoader (JPAResourceLoader) False/False
+// build JPAResourceManager (JPAResourceManager) False/False
+// build JPATexture (JPATexture) False/False
+/* top-level dependencies (begin JPATexture) */
+/* top-level dependencies (end JPATexture) */
+struct JPATexture {
+	/* 8027D7D4 */ JPATexture(char const*);
+};
+
+// build JPAResource (JPAResource) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+/* top-level dependencies (begin JPAResource) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JPAResource) */
+struct JPAResource {
+	// JKRHeap
+	/* 80274010 */ JPAResource();
+	/* 80274080 */ void init(JKRHeap*);
+};
+
+/* top-level dependencies (begin JPAResourceManager) */
+// outer dependency: JPATexture
+// outer dependency: JPAResource
+/* top-level dependencies (end JPAResourceManager) */
+struct JPAResourceManager {
+	// JPATexture
+	// JPAResource
+	/* 80273F8C */ void registRes(JPAResource*);
+	/* 80273FAC */ void registTex(JPATexture*);
+};
+
+/* top-level dependencies (begin JPAResourceLoader) */
+// outer dependency: JPAResourceManager
+/* top-level dependencies (end JPAResourceLoader) */
+struct JPAResourceLoader {
+	// JPAResourceManager
+	/* 8027D8A0 */ JPAResourceLoader(char const*, JPAResourceManager*);
+	/* 8027D8E0 */ void load_jpc(char const*, JPAResourceManager*);
+};
+
+// build JPAResourceManager (JPAResourceManager) True/True
+// build JPAResource (JPAResource) True/True
+// build JPATexture (JPATexture) True/True
+// build JKRHeap (JKRHeap) True/True
+// build JPABaseShape (JPABaseShape) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JPABaseShape) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JPABaseShape) */
+struct JPABaseShape {
+	// JKRHeap
+	/* 8027A6DC */ JPABaseShape(char const*, JKRHeap*);
+};
+
+// build JPAExtraShape (JPAExtraShape) False/False
+/* top-level dependencies (begin JPAExtraShape) */
+/* top-level dependencies (end JPAExtraShape) */
+struct JPAExtraShape {
+	/* 8027AD88 */ JPAExtraShape(char const*);
+};
+
+// build JPAChildShape (JPAChildShape) False/False
+/* top-level dependencies (begin JPAChildShape) */
+/* top-level dependencies (end JPAChildShape) */
+struct JPAChildShape {
+	/* 8027B038 */ JPAChildShape(char const*);
+};
+
+// build JPAExTexShape (JPAExTexShape) False/False
+/* top-level dependencies (begin JPAExTexShape) */
+/* top-level dependencies (end JPAExTexShape) */
+struct JPAExTexShape {
+	/* 8027B13C */ JPAExTexShape(char const*);
+};
+
+// build JPADynamicsBlock (JPADynamicsBlock) False/False
+/* top-level dependencies (begin JPADynamicsBlock) */
+/* top-level dependencies (end JPADynamicsBlock) */
+struct JPADynamicsBlock {
+	/* 8027BB18 */ JPADynamicsBlock(char const*);
+};
+
+// build JPAFieldBlock (JPAFieldBlock) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JPAFieldBlock) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JPAFieldBlock) */
+struct JPAFieldBlock {
+	// JKRHeap
+	/* 8027D088 */ JPAFieldBlock(char const*, JKRHeap*);
+};
+
+// build JPAKeyBlock (JPAKeyBlock) False/False
+/* top-level dependencies (begin JPAKeyBlock) */
+/* top-level dependencies (end JPAKeyBlock) */
+struct JPAKeyBlock {
+	/* 8027D730 */ JPAKeyBlock(char const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern "C" extern void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+
+extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
 
 // 
 // External References:
 // 
 
-extern "C" extern void registRes__18JPAResourceManagerFP11JPAResource();
-extern "C" extern void registTex__18JPAResourceManagerFP10JPATexture();
-extern "C" extern void __ct__11JPAResourceFv();
-extern "C" extern void init__11JPAResourceFP7JKRHeap();
-extern "C" extern void __ct__12JPABaseShapeFPCUcP7JKRHeap();
-extern "C" extern void __ct__13JPAExtraShapeFPCUc();
-extern "C" extern void __ct__13JPAChildShapeFPCUc();
-extern "C" extern void __ct__13JPAExTexShapeFPCUc();
-extern "C" extern void __ct__16JPADynamicsBlockFPCUc();
-extern "C" extern void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
-extern "C" extern void __ct__11JPAKeyBlockFPCUc();
-extern "C" extern void __ct__10JPATextureFPCUc();
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void _savegpr_18();
-extern "C" extern void _restgpr_18();
+void* operator new(u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, s32);
+extern "C" void _savegpr_18();
+extern "C" void _restgpr_18();
+
+extern "C" void registRes__18JPAResourceManagerFP11JPAResource();
+extern "C" void registTex__18JPAResourceManagerFP10JPATexture();
+extern "C" void __ct__11JPAResourceFv();
+extern "C" void init__11JPAResourceFP7JKRHeap();
+extern "C" void __ct__12JPABaseShapeFPCUcP7JKRHeap();
+extern "C" void __ct__13JPAExtraShapeFPCUc();
+extern "C" void __ct__13JPAChildShapeFPCUc();
+extern "C" void __ct__13JPAExTexShapeFPCUc();
+extern "C" void __ct__16JPADynamicsBlockFPCUc();
+extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+extern "C" void __ct__11JPAKeyBlockFPCUc();
+extern "C" void __ct__10JPATextureFPCUc();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void _savegpr_18();
+extern "C" void _restgpr_18();
 
 // 
 // Declarations:
 // 
 
-/* 8027D8A0-8027D8E0 0040+00 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
+/* 8027D8A0-8027D8E0 0040+00 rc=1 efc=1 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17JPAResourceLoaderFPCUcP18JPAResourceManager) {
+asm JPAResourceLoader::JPAResourceLoader(char const* field_0, JPAResourceManager* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/__ct__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }
 #pragma pop
 
 
-/* 8027D8E0-8027DCA0 03C0+00 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
+/* 8027D8E0-8027DCA0 03C0+00 rc=1 efc=0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager) {
+asm void JPAResourceLoader::load_jpc(char const* field_0, JPAResourceManager* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

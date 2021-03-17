@@ -6,25 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjKnBullet_c;
+struct fopAc_ac_c;
+
+struct daObjKnBullet_c {
+	void Create();
+	void Execute();
+	bool Draw();
+	bool Delete();
+	void setBaseMtx();
+	void col_init();
+	void col_chk();
+	void hitPrtclSet();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__15daObjKnBullet_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void Execute__15daObjKnBullet_cFv();
-extern "C" extern void Draw__15daObjKnBullet_cFv();
-extern "C" extern void Delete__15daObjKnBullet_cFv();
-extern "C" extern void setBaseMtx__15daObjKnBullet_cFv();
-extern "C" extern void col_init__15daObjKnBullet_cFv();
-extern "C" extern void col_chk__15daObjKnBullet_cFv();
-extern "C" extern void hitPrtclSet__15daObjKnBullet_cFv();
-extern "C" extern void daObjKnBullet_Execute__FP15daObjKnBullet_c();
-extern "C" extern void daObjKnBullet_Draw__FP15daObjKnBullet_c();
-extern "C" extern void daObjKnBullet_IsDelete__FP15daObjKnBullet_c();
-extern "C" extern void daObjKnBullet_Delete__FP15daObjKnBullet_c();
-extern "C" extern void daObjKnBullet_create__FP10fopAc_ac_c();
-extern "C" extern void func_80C4792C();
+void daObjKnBullet_Execute(daObjKnBullet_c*);
+void daObjKnBullet_Draw(daObjKnBullet_c*);
+bool daObjKnBullet_IsDelete(daObjKnBullet_c*);
+void daObjKnBullet_Delete(daObjKnBullet_c*);
+void daObjKnBullet_create(fopAc_ac_c*);
+extern "C" void func_80C4792C();
+
+extern "C" void Create__15daObjKnBullet_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__15daObjKnBullet_cFv();
+extern "C" bool Draw__15daObjKnBullet_cFv();
+extern "C" bool Delete__15daObjKnBullet_cFv();
+extern "C" void setBaseMtx__15daObjKnBullet_cFv();
+extern "C" void col_init__15daObjKnBullet_cFv();
+extern "C" void col_chk__15daObjKnBullet_cFv();
+extern "C" void hitPrtclSet__15daObjKnBullet_cFv();
+extern "C" void daObjKnBullet_Execute__FP15daObjKnBullet_c();
+extern "C" void daObjKnBullet_Draw__FP15daObjKnBullet_c();
+extern "C" bool daObjKnBullet_IsDelete__FP15daObjKnBullet_c();
+extern "C" void daObjKnBullet_Delete__FP15daObjKnBullet_c();
+extern "C" void daObjKnBullet_create__FP10fopAc_ac_c();
+extern "C" void func_80C4792C();
 SECTION_RODATA extern const u8 l_DATA[12];
 SECTION_RODATA extern const u8 l_sph_src[64];
 SECTION_RODATA extern const u32 lit_3907;
@@ -46,7 +82,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -56,7 +94,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Create__15daObjKnBullet_cFv.s"
 }
@@ -67,7 +105,7 @@ ASM_FUNCTION(Create__15daObjKnBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/__dt__8cM3dGSphFv.s"
 }
@@ -78,7 +116,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/__dt__8cM3dGAabFv.s"
 }
@@ -89,7 +127,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Execute__15daObjKnBullet_cFv.s"
 }
@@ -97,32 +135,22 @@ ASM_FUNCTION(Execute__15daObjKnBullet_cFv) {
 
 
 /* 80C47480-80C47488 0008+00 .text      Draw__15daObjKnBullet_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjKnBullet_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Draw__15daObjKnBullet_cFv.s"
+bool daObjKnBullet_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C47488-80C47490 0008+00 .text      Delete__15daObjKnBullet_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjKnBullet_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Delete__15daObjKnBullet_cFv.s"
+bool daObjKnBullet_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C47490-80C474E8 0058+00 .text      setBaseMtx__15daObjKnBullet_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/setBaseMtx__15daObjKnBullet_cFv.s"
 }
@@ -133,7 +161,7 @@ ASM_FUNCTION(setBaseMtx__15daObjKnBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_init__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::col_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/col_init__15daObjKnBullet_cFv.s"
 }
@@ -144,7 +172,7 @@ ASM_FUNCTION(col_init__15daObjKnBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(col_chk__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::col_chk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/col_chk__15daObjKnBullet_cFv.s"
 }
@@ -155,7 +183,7 @@ ASM_FUNCTION(col_chk__15daObjKnBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitPrtclSet__15daObjKnBullet_cFv) {
+asm void daObjKnBullet_c::hitPrtclSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/hitPrtclSet__15daObjKnBullet_cFv.s"
 }
@@ -166,7 +194,7 @@ ASM_FUNCTION(hitPrtclSet__15daObjKnBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKnBullet_Execute__FP15daObjKnBullet_c) {
+asm void daObjKnBullet_Execute(daObjKnBullet_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Execute__FP15daObjKnBullet_c.s"
 }
@@ -177,7 +205,7 @@ ASM_FUNCTION(daObjKnBullet_Execute__FP15daObjKnBullet_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKnBullet_Draw__FP15daObjKnBullet_c) {
+asm void daObjKnBullet_Draw(daObjKnBullet_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Draw__FP15daObjKnBullet_c.s"
 }
@@ -185,21 +213,16 @@ ASM_FUNCTION(daObjKnBullet_Draw__FP15daObjKnBullet_c) {
 
 
 /* 80C478E4-80C478EC 0008+00 .text      daObjKnBullet_IsDelete__FP15daObjKnBullet_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKnBullet_IsDelete__FP15daObjKnBullet_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_IsDelete__FP15daObjKnBullet_c.s"
+bool daObjKnBullet_IsDelete(daObjKnBullet_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C478EC-80C4790C 0020+00 .text      daObjKnBullet_Delete__FP15daObjKnBullet_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKnBullet_Delete__FP15daObjKnBullet_c) {
+asm void daObjKnBullet_Delete(daObjKnBullet_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Delete__FP15daObjKnBullet_c.s"
 }
@@ -210,7 +233,7 @@ ASM_FUNCTION(daObjKnBullet_Delete__FP15daObjKnBullet_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKnBullet_create__FP10fopAc_ac_c) {
+asm void daObjKnBullet_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_create__FP10fopAc_ac_c.s"
 }
@@ -221,7 +244,7 @@ ASM_FUNCTION(daObjKnBullet_create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4792C) {
+extern "C" asm void func_80C4792C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/func_80C4792C.s"
 }

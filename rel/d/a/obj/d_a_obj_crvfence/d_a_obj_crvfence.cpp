@@ -6,40 +6,101 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCRVFENCE_c;
+struct cXyz;
+
+struct daObjCRVFENCE_c {
+	void CheckVec();
+	void Wall_Check(cXyz, cXyz);
+	void BgRelease();
+	void PosSet(cXyz*);
+	void BrokenAction();
+	void NormalAction();
+	void checkViewArea(cXyz*);
+	void Action();
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckVec__15daObjCRVFENCE_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz();
-extern "C" extern void daObjCRVFENCE_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c();
-extern "C" extern void BgRelease__15daObjCRVFENCE_cFv();
-extern "C" extern void PosSet__15daObjCRVFENCE_cFP4cXyz();
-extern "C" extern void FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs();
-extern "C" extern void BrokenAction__15daObjCRVFENCE_cFv();
-extern "C" extern void s_obj_sub__FPvPv();
-extern "C" extern void NormalAction__15daObjCRVFENCE_cFv();
-extern "C" extern void checkViewArea__15daObjCRVFENCE_cFP4cXyz();
-extern "C" extern void Action__15daObjCRVFENCE_cFv();
-extern "C" extern void setBaseMtx__15daObjCRVFENCE_cFv();
-extern "C" extern void daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c();
-extern "C" extern void daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c();
-extern "C" extern void CreateHeap__15daObjCRVFENCE_cFv();
-extern "C" extern void create__15daObjCRVFENCE_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c();
-extern "C" extern void Create__15daObjCRVFENCE_cFv();
-extern "C" extern void Execute__15daObjCRVFENCE_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjCRVFENCE_cFv();
-extern "C" extern void Delete__15daObjCRVFENCE_cFv();
-extern "C" extern void func_80BD0170();
-extern "C" extern void func_80BD0178();
+void daObjCRVFENCE_Create(fopAc_ac_c*);
+void daObjCRVFENCE_Delete(daObjCRVFENCE_c*);
+extern "C" void FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs();
+void s_obj_sub(void*, void*);
+void daObjCRVFENCE_Draw(daObjCRVFENCE_c*);
+void daObjCRVFENCE_Execute(daObjCRVFENCE_c*);
+bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c*);
+extern "C" void Execute__15daObjCRVFENCE_cFPPA3_A4_f();
+extern "C" void func_80BD0170();
+extern "C" void func_80BD0178();
+
+extern "C" void CheckVec__15daObjCRVFENCE_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz();
+extern "C" void daObjCRVFENCE_Create__FP10fopAc_ac_c();
+extern "C" void daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c();
+extern "C" void BgRelease__15daObjCRVFENCE_cFv();
+extern "C" void PosSet__15daObjCRVFENCE_cFP4cXyz();
+extern "C" void FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs();
+extern "C" void BrokenAction__15daObjCRVFENCE_cFv();
+extern "C" void s_obj_sub__FPvPv();
+extern "C" void NormalAction__15daObjCRVFENCE_cFv();
+extern "C" void checkViewArea__15daObjCRVFENCE_cFP4cXyz();
+extern "C" void Action__15daObjCRVFENCE_cFv();
+extern "C" void setBaseMtx__15daObjCRVFENCE_cFv();
+extern "C" void daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c();
+extern "C" void daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c();
+extern "C" void CreateHeap__15daObjCRVFENCE_cFv();
+extern "C" void create__15daObjCRVFENCE_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c();
+extern "C" void Create__15daObjCRVFENCE_cFv();
+extern "C" void Execute__15daObjCRVFENCE_cFPPA3_A4_f();
+extern "C" void Draw__15daObjCRVFENCE_cFv();
+extern "C" void Delete__15daObjCRVFENCE_cFv();
+extern "C" void func_80BD0170();
+extern "C" void func_80BD0178();
 SECTION_RODATA extern const u8 lit_3685[4];
 SECTION_RODATA extern const u32 lit_3761;
 SECTION_RODATA extern const u32 lit_3762;
@@ -86,7 +147,9 @@ SECTION_DATA extern void*const __vt__15daObjCRVFENCE_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -96,7 +159,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckVec__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::CheckVec() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/CheckVec__15daObjCRVFENCE_cFv.s"
 }
@@ -107,7 +170,7 @@ ASM_FUNCTION(CheckVec__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__dt__4cXyzFv.s"
 }
@@ -118,7 +181,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz) {
+asm void daObjCRVFENCE_c::Wall_Check(cXyz field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz.s"
 }
@@ -129,7 +192,7 @@ ASM_FUNCTION(Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVFENCE_Create__FP10fopAc_ac_c) {
+asm void daObjCRVFENCE_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Create__FP10fopAc_ac_c.s"
 }
@@ -140,7 +203,7 @@ ASM_FUNCTION(daObjCRVFENCE_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c) {
+asm void daObjCRVFENCE_Delete(daObjCRVFENCE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c.s"
 }
@@ -151,7 +214,7 @@ ASM_FUNCTION(daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BgRelease__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::BgRelease() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/BgRelease__15daObjCRVFENCE_cFv.s"
 }
@@ -162,7 +225,7 @@ ASM_FUNCTION(BgRelease__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PosSet__15daObjCRVFENCE_cFP4cXyz) {
+asm void daObjCRVFENCE_c::PosSet(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/PosSet__15daObjCRVFENCE_cFP4cXyz.s"
 }
@@ -173,7 +236,7 @@ ASM_FUNCTION(PosSet__15daObjCRVFENCE_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs) {
+extern "C" asm void FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs.s"
 }
@@ -184,7 +247,7 @@ ASM_FUNCTION(FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BrokenAction__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::BrokenAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/BrokenAction__15daObjCRVFENCE_cFv.s"
 }
@@ -195,7 +258,7 @@ ASM_FUNCTION(BrokenAction__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_sub__FPvPv) {
+asm void s_obj_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/s_obj_sub__FPvPv.s"
 }
@@ -206,7 +269,7 @@ ASM_FUNCTION(s_obj_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(NormalAction__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::NormalAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/NormalAction__15daObjCRVFENCE_cFv.s"
 }
@@ -217,7 +280,7 @@ ASM_FUNCTION(NormalAction__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkViewArea__15daObjCRVFENCE_cFP4cXyz) {
+asm void daObjCRVFENCE_c::checkViewArea(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/checkViewArea__15daObjCRVFENCE_cFP4cXyz.s"
 }
@@ -228,7 +291,7 @@ ASM_FUNCTION(checkViewArea__15daObjCRVFENCE_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/Action__15daObjCRVFENCE_cFv.s"
 }
@@ -239,7 +302,7 @@ ASM_FUNCTION(Action__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/setBaseMtx__15daObjCRVFENCE_cFv.s"
 }
@@ -250,7 +313,7 @@ ASM_FUNCTION(setBaseMtx__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c) {
+asm void daObjCRVFENCE_Draw(daObjCRVFENCE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c.s"
 }
@@ -261,7 +324,7 @@ ASM_FUNCTION(daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c) {
+asm void daObjCRVFENCE_Execute(daObjCRVFENCE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c.s"
 }
@@ -272,7 +335,7 @@ ASM_FUNCTION(daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/CreateHeap__15daObjCRVFENCE_cFv.s"
 }
@@ -283,7 +346,7 @@ ASM_FUNCTION(CreateHeap__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/create__15daObjCRVFENCE_cFv.s"
 }
@@ -294,7 +357,7 @@ ASM_FUNCTION(create__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__dt__8dCcD_SphFv.s"
 }
@@ -305,7 +368,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__ct__8dCcD_SphFv.s"
 }
@@ -316,7 +379,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__dt__8cM3dGSphFv.s"
 }
@@ -327,7 +390,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__dt__8cM3dGAabFv.s"
 }
@@ -338,7 +401,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -346,32 +409,22 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80BCFFBC-80BCFFC0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BCFFC0-80BCFFC8 0008+00 .text      daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c.s"
+bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BCFFC8-80BD000C 0044+00 .text      Create__15daObjCRVFENCE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BCFFC8.s"
 }
@@ -382,7 +435,7 @@ ASM_FUNCTION(Create__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjCRVFENCE_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjCRVFENCE_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/Execute__15daObjCRVFENCE_cFPPA3_A4_f.s"
 }
@@ -393,7 +446,7 @@ ASM_FUNCTION(Execute__15daObjCRVFENCE_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/Draw__15daObjCRVFENCE_cFv.s"
 }
@@ -404,7 +457,7 @@ ASM_FUNCTION(Draw__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjCRVFENCE_cFv) {
+asm void daObjCRVFENCE_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/Delete__15daObjCRVFENCE_cFv.s"
 }
@@ -415,7 +468,7 @@ ASM_FUNCTION(Delete__15daObjCRVFENCE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD0170) {
+extern "C" asm void func_80BD0170() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BD0170.s"
 }
@@ -426,7 +479,7 @@ ASM_FUNCTION(func_80BD0170) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BD0178) {
+extern "C" asm void func_80BD0178() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BD0178.s"
 }

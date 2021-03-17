@@ -6,19 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCatDoor_c;
+
+struct daObjCatDoor_c {
+	void attr() const;
+	void initBaseMtx();
+	void setBaseMtx();
+	void calcOpen();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void attr__14daObjCatDoor_cCFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__14daObjCatDoor_cFv();
-extern "C" extern void setBaseMtx__14daObjCatDoor_cFv();
-extern "C" extern void calcOpen__14daObjCatDoor_cFv();
-extern "C" extern void daObjCatDoor_Draw__FP14daObjCatDoor_c();
-extern "C" extern void daObjCatDoor_Execute__FP14daObjCatDoor_c();
-extern "C" extern void daObjCatDoor_IsDelete__FP14daObjCatDoor_c();
-extern "C" extern void daObjCatDoor_Delete__FP14daObjCatDoor_c();
-extern "C" extern void daObjCatDoor_Create__FP10fopAc_ac_c();
+void createSolidHeap(fopAc_ac_c*);
+void daObjCatDoor_Draw(daObjCatDoor_c*);
+void daObjCatDoor_Execute(daObjCatDoor_c*);
+bool daObjCatDoor_IsDelete(daObjCatDoor_c*);
+void daObjCatDoor_Delete(daObjCatDoor_c*);
+void daObjCatDoor_Create(fopAc_ac_c*);
+
+extern "C" void attr__14daObjCatDoor_cCFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__14daObjCatDoor_cFv();
+extern "C" void setBaseMtx__14daObjCatDoor_cFv();
+extern "C" void calcOpen__14daObjCatDoor_cFv();
+extern "C" void daObjCatDoor_Draw__FP14daObjCatDoor_c();
+extern "C" void daObjCatDoor_Execute__FP14daObjCatDoor_c();
+extern "C" bool daObjCatDoor_IsDelete__FP14daObjCatDoor_c();
+extern "C" void daObjCatDoor_Delete__FP14daObjCatDoor_c();
+extern "C" void daObjCatDoor_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 M_attr__14daObjCatDoor_c;
 SECTION_RODATA extern const u32 lit_3712;
 SECTION_RODATA extern const u32 lit_3713;
@@ -37,7 +61,9 @@ SECTION_DATA extern u8 g_profile_Obj_CatDoor[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +73,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(attr__14daObjCatDoor_cCFv) {
+asm void daObjCatDoor_c::attr() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/attr__14daObjCatDoor_cCFv.s"
 }
@@ -58,7 +84,7 @@ ASM_FUNCTION(attr__14daObjCatDoor_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -69,7 +95,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjCatDoor_cFv) {
+asm void daObjCatDoor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/initBaseMtx__14daObjCatDoor_cFv.s"
 }
@@ -80,7 +106,7 @@ ASM_FUNCTION(initBaseMtx__14daObjCatDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjCatDoor_cFv) {
+asm void daObjCatDoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/setBaseMtx__14daObjCatDoor_cFv.s"
 }
@@ -91,7 +117,7 @@ ASM_FUNCTION(setBaseMtx__14daObjCatDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcOpen__14daObjCatDoor_cFv) {
+asm void daObjCatDoor_c::calcOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/calcOpen__14daObjCatDoor_cFv.s"
 }
@@ -102,7 +128,7 @@ ASM_FUNCTION(calcOpen__14daObjCatDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCatDoor_Draw__FP14daObjCatDoor_c) {
+asm void daObjCatDoor_Draw(daObjCatDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_Draw__FP14daObjCatDoor_c.s"
 }
@@ -113,7 +139,7 @@ ASM_FUNCTION(daObjCatDoor_Draw__FP14daObjCatDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCatDoor_Execute__FP14daObjCatDoor_c) {
+asm void daObjCatDoor_Execute(daObjCatDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_Execute__FP14daObjCatDoor_c.s"
 }
@@ -121,21 +147,16 @@ ASM_FUNCTION(daObjCatDoor_Execute__FP14daObjCatDoor_c) {
 
 
 /* 80BC4760-80BC4768 0008+00 .text      daObjCatDoor_IsDelete__FP14daObjCatDoor_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCatDoor_IsDelete__FP14daObjCatDoor_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_IsDelete__FP14daObjCatDoor_c.s"
+bool daObjCatDoor_IsDelete(daObjCatDoor_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BC4768-80BC4848 00E0+00 .text      daObjCatDoor_Delete__FP14daObjCatDoor_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCatDoor_Delete__FP14daObjCatDoor_c) {
+asm void daObjCatDoor_Delete(daObjCatDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_Delete__FP14daObjCatDoor_c.s"
 }
@@ -146,7 +167,7 @@ ASM_FUNCTION(daObjCatDoor_Delete__FP14daObjCatDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCatDoor_Create__FP10fopAc_ac_c) {
+asm void daObjCatDoor_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_Create__FP10fopAc_ac_c.s"
 }

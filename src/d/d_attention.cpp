@@ -6,80 +6,468 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dAttParam_c (dAttParam_c) False/False
+/* top-level dependencies (begin dAttParam_c) */
+/* top-level dependencies (end dAttParam_c) */
+struct dAttParam_c {
+	/* 80070038 */ dAttParam_c(s32);
+	/* 80070110 */ ~dAttParam_c();
+};
+
+// build dAttDrawParam_c (dAttDrawParam_c) False/False
+/* top-level dependencies (begin dAttDrawParam_c) */
+/* top-level dependencies (end dAttDrawParam_c) */
+struct dAttDrawParam_c {
+	/* 80070158 */ dAttDrawParam_c();
+	/* 80073FC4 */ ~dAttDrawParam_c();
+};
+
+// build dAttDraw_CallBack_c (dAttDraw_CallBack_c) False/False
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
+/* top-level dependencies (begin dAttDraw_CallBack_c) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end dAttDraw_CallBack_c) */
+struct dAttDraw_CallBack_c {
+	// J3DTransformInfo
+	/* 80070178 */ void execute(u16, J3DTransformInfo*);
+};
+
+// build J3DTransformInfo (J3DTransformInfo) True/True
+// build dAttention_c (dAttention_c) False/False
+// build cSAngle (cSAngle) False/False
+/* top-level dependencies (begin cSAngle) */
+/* top-level dependencies (end cSAngle) */
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
+};
+
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dAttention_c) */
+// outer dependency: cSAngle
+// outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttention_c) */
+struct dAttention_c {
+	// cSAngle
+	// cXyz
+	// fopAc_ac_c
+	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
+	/* 80070774 */ ~dAttention_c();
+	/* 80070844 */ void GetLockonList(s32);
+	/* 80070880 */ void getActionBtnB();
+	/* 80070974 */ void getActionBtnXY();
+	/* 80070A70 */ void chkAttMask(u32, u32);
+	/* 80070E90 */ void calcWeight(s32, fopAc_ac_c*, f32, s16, s16, u32*);
+	/* 800710C0 */ void setList(s32, fopAc_ac_c*, f32, f32, cSAngle, u32);
+	/* 80071240 */ void initList(u32);
+	/* 800713CC */ void makeList();
+	/* 80071424 */ void setOwnerAttentionPos();
+	/* 80071488 */ void SelectAttention(fopAc_ac_c*);
+	/* 800716B8 */ void sortList();
+	/* 800718A4 */ void stockAttention();
+	/* 80071960 */ void nextAttention();
+	/* 80071A68 */ void freeAttention();
+	/* 80071A98 */ void chaseAttention();
+	/* 80071CC0 */ void EnemyDistance(fopAc_ac_c*);
+	/* 80071DEC */ void runSoundProc();
+	/* 80071E84 */ void runDrawProc();
+	/* 800720F4 */ void runDebugDisp();
+	/* 800720F8 */ void checkButton();
+	/* 800722A0 */ void triggerProc();
+	/* 800722EC */ void lostCheck();
+	/* 80072344 */ void judgementStatus4Hold();
+	/* 800725F0 */ void judgementStatus4Switch();
+	/* 80072924 */ void Run();
+	/* 80072BD4 */ void Draw();
+	/* 80072D80 */ void lockSoundStart(u32);
+	/* 8007353C */ void LockonTarget(s32);
+	/* 800735DC */ void LockonReleaseDistanse();
+	/* 800736CC */ void LockonTargetPId(s32);
+	/* 80073734 */ void ActionTarget(s32);
+	/* 8007378C */ void CheckObjectTarget(s32);
+	/* 800737E4 */ void LockonTruth();
+	/* 80073838 */ void checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build cXyz (cXyz) True/True
+// build cSAngle (cSAngle) True/True
+// build cSGlobe (cSGlobe) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cSGlobe) */
+// outer dependency: cXyz
+/* top-level dependencies (end cSGlobe) */
+struct cSGlobe {
+	// cXyz
+	/* 8007167C */ ~cSGlobe();
+	/* 80271880 */ cSGlobe(cXyz const&);
+};
+
+// build dAttDraw_c (dAttDraw_c) False/False
+/* top-level dependencies (begin dAttDraw_c) */
+/* top-level dependencies (end dAttDraw_c) */
+struct dAttDraw_c {
+	/* 8003054C */ ~dAttDraw_c();
+	/* 800307F0 */ dAttDraw_c();
+	/* 80072DD8 */ void setAnm(char, f32);
+	/* 80072FE8 */ void setAlphaAnm(char, char);
+	/* 80073004 */ void alphaAnm();
+};
+
+// build J3DTevBlock (J3DTevBlock) False/False
+// build J3DGXColor (J3DGXColor) False/False
+/* top-level dependencies (begin J3DGXColor) */
+/* top-level dependencies (end J3DGXColor) */
+struct J3DGXColor {
+};
+
+/* top-level dependencies (begin J3DTevBlock) */
+// outer dependency: J3DGXColor
+/* top-level dependencies (end J3DTevBlock) */
+struct J3DTevBlock {
+	// J3DGXColor
+	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
+};
+
+// build J3DGXColor (J3DGXColor) True/True
+// build dAttList_c (dAttList_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dAttList_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttList_c) */
+struct dAttList_c {
+	// fopAc_ac_c
+	/* 800304D0 */ ~dAttList_c();
+	/* 8003050C */ dAttList_c();
+	/* 80073864 */ void getActor();
+	/* 80073898 */ void setActor(fopAc_ac_c*);
+};
+
+// build dAttHint_c (dAttHint_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dAttHint_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttHint_c) */
+struct dAttHint_c {
+	// fopAc_ac_c
+	/* 800738B4 */ void getPId(void*);
+	/* 800738CC */ void convPId(s32);
+	/* 800738FC */ void request(fopAc_ac_c*, s32);
+	/* 80073958 */ void init();
+	/* 80073970 */ void proc();
+};
+
+// build dAttCatch_c (dAttCatch_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dAttCatch_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttCatch_c) */
+struct dAttCatch_c {
+	// fopAc_ac_c
+	/* 8007398C */ void convPId(s32);
+	/* 800739BC */ void init();
+	/* 800739DC */ void proc();
+	/* 80073A08 */ void request(fopAc_ac_c*, char, f32, f32, f32, s16, s32);
+};
+
+// build dAttLook_c (dAttLook_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dAttLook_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttLook_c) */
+struct dAttLook_c {
+	// fopAc_ac_c
+	/* 80073CA4 */ void convPId(s32);
+	/* 80073CD4 */ void init();
+	/* 80073CEC */ void proc();
+	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, s32);
+};
+
+// build mDoExt_baseAnm (mDoExt_baseAnm) False/False
+/* top-level dependencies (begin mDoExt_baseAnm) */
+/* top-level dependencies (end mDoExt_baseAnm) */
+struct mDoExt_baseAnm {
+	/* 8000D428 */ void play();
+};
+
+// build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
+// build J3DAnmColor (J3DAnmColor) False/False
+/* top-level dependencies (begin J3DAnmColor) */
+/* top-level dependencies (end J3DAnmColor) */
+struct J3DAnmColor {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+/* top-level dependencies (begin mDoExt_bpkAnm) */
+// outer dependency: J3DAnmColor
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_bpkAnm) */
+struct mDoExt_bpkAnm {
+	// J3DAnmColor
+	// J3DMaterialTable
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, s32, s32, f32, s16, s16);
+	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+// build J3DAnmColor (J3DAnmColor) True/True
+// build mDoExt_btkAnm (mDoExt_btkAnm) False/False
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+/* top-level dependencies (begin mDoExt_btkAnm) */
+// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_btkAnm) */
+struct mDoExt_btkAnm {
+	// J3DAnmTextureSRTKey
+	// J3DMaterialTable
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
+// build mDoExt_brkAnm (mDoExt_brkAnm) False/False
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) True/True
+/* top-level dependencies (begin mDoExt_brkAnm) */
+// outer dependency: J3DAnmTevRegKey
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end mDoExt_brkAnm) */
+struct mDoExt_brkAnm {
+	// J3DAnmTevRegKey
+	// J3DMaterialTable
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
+};
+
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
+// build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+/* top-level dependencies (begin mDoExt_bckAnm) */
+// outer dependency: J3DAnmTransform
+// outer dependency: J3DModelData
+/* top-level dependencies (end mDoExt_bckAnm) */
+struct mDoExt_bckAnm {
+	// J3DAnmTransform
+	// J3DModelData
+	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+// build J3DAnmTransform (J3DAnmTransform) True/True
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+};
+
+// build dSv_danBit_c (dSv_danBit_c) False/False
+/* top-level dependencies (begin dSv_danBit_c) */
+/* top-level dependencies (end dSv_danBit_c) */
+struct dSv_danBit_c {
+	/* 80034BE8 */ void isSwitch(s32) const;
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build daPy_py_c (daPy_py_c) False/False
+/* top-level dependencies (begin daPy_py_c) */
+/* top-level dependencies (end daPy_py_c) */
+struct daPy_py_c {
+	/* 8015F3FC */ void getAttentionOffsetY();
+};
+
+// build Vec (Vec) True/True
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Z2SeqMgr (Z2SeqMgr) False/False
+/* top-level dependencies (begin Z2SeqMgr) */
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	/* 802B5E88 */ void bgmNowBattle(f32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void func_80070018();
-extern "C" extern void __ct__11dAttParam_cFl();
-extern "C" extern void __dt__11dAttParam_cFv();
-extern "C" extern void __ct__15dAttDrawParam_cFv();
-extern "C" extern void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo();
-extern "C" extern void __ct__12dAttention_cFP10fopAc_ac_cUl();
-extern "C" extern void __dt__12dAttention_cFv();
-extern "C" extern void GetLockonList__12dAttention_cFl();
-extern "C" extern void getActionBtnB__12dAttention_cFv();
-extern "C" extern void getActionBtnXY__12dAttention_cFv();
-extern "C" extern void chkAttMask__12dAttention_cFUlUl();
-extern "C" extern void check_event_condition__FUlUs();
-extern "C" extern void check_flontofplayer__FUlss();
-extern "C" extern void distace_weight__Ffsf();
-extern "C" extern void distace_angle_adjust__Ffsf();
-extern "C" extern void check_distace__FP4cXyzsP4cXyzffff();
-extern "C" extern void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl();
-extern "C" extern void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl();
-extern "C" extern void initList__12dAttention_cFUl();
-extern "C" extern void select_attention__FP10fopAc_ac_cPv();
-extern "C" extern void makeList__12dAttention_cFv();
-extern "C" extern void setOwnerAttentionPos__12dAttention_cFv();
-extern "C" extern void SelectAttention__12dAttention_cFP10fopAc_ac_c();
-extern "C" extern void __dt__7cSGlobeFv();
-extern "C" extern void sortList__12dAttention_cFv();
-extern "C" extern void stockAttention__12dAttention_cFv();
-extern "C" extern void nextAttention__12dAttention_cFv();
-extern "C" extern void freeAttention__12dAttention_cFv();
-extern "C" extern void chaseAttention__12dAttention_cFv();
-extern "C" extern void EnemyDistance__12dAttention_cFP10fopAc_ac_c();
-extern "C" extern void sound_attention__FP10fopAc_ac_cPv();
-extern "C" extern void runSoundProc__12dAttention_cFv();
-extern "C" extern void runDrawProc__12dAttention_cFv();
-extern "C" extern void runDebugDisp__12dAttention_cFv();
-extern "C" extern void checkButton__12dAttention_cFv();
-extern "C" extern void triggerProc__12dAttention_cFv();
-extern "C" extern void lostCheck__12dAttention_cFv();
-extern "C" extern void judgementStatus4Hold__12dAttention_cFv();
-extern "C" extern void judgementStatus4Switch__12dAttention_cFv();
-extern "C" extern void Run__12dAttention_cFv();
-extern "C" extern void Draw__12dAttention_cFv();
-extern "C" extern void lockSoundStart__12dAttention_cFUl();
-extern "C" extern void setAnm__10dAttDraw_cFUcf();
-extern "C" extern void setAlphaAnm__10dAttDraw_cFUcUc();
-extern "C" extern void alphaAnm__10dAttDraw_cFv();
-extern "C" extern void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
-extern "C" extern void draw__10dAttDraw_cFR4cXyzPA4_f();
-extern "C" extern void LockonTarget__12dAttention_cFl();
-extern "C" extern void LockonReleaseDistanse__12dAttention_cFv();
-extern "C" extern void LockonTargetPId__12dAttention_cFl();
-extern "C" extern void ActionTarget__12dAttention_cFl();
-extern "C" extern void CheckObjectTarget__12dAttention_cFl();
-extern "C" extern void LockonTruth__12dAttention_cFv();
-extern "C" extern void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
-extern "C" extern void getActor__10dAttList_cFv();
-extern "C" extern void setActor__10dAttList_cFP10fopAc_ac_c();
-extern "C" extern void getPId__10dAttHint_cFPv();
-extern "C" extern void convPId__10dAttHint_cFUi();
-extern "C" extern void request__10dAttHint_cFP10fopAc_ac_ci();
-extern "C" extern void init__10dAttHint_cFv();
-extern "C" extern void proc__10dAttHint_cFv();
-extern "C" extern void convPId__11dAttCatch_cFUi();
-extern "C" extern void init__11dAttCatch_cFv();
-extern "C" extern void proc__11dAttCatch_cFv();
-extern "C" extern void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
-extern "C" extern void convPId__10dAttLook_cFUi();
-extern "C" extern void init__10dAttLook_cFv();
-extern "C" extern void proc__10dAttLook_cFv();
-extern "C" extern void request__10dAttLook_cFP10fopAc_ac_cfffsi();
-extern "C" extern void __dt__15dAttDrawParam_cFv();
-extern "C" extern void __sinit_d_attention_cpp();
+extern "C" static void func_80070018();
+static void check_event_condition(u32, u16);
+static void check_flontofplayer(u32, s16, s16);
+static void distace_weight(f32, s16, f32);
+static void distace_angle_adjust(f32, s16, f32);
+static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32);
+static void select_attention(fopAc_ac_c*, void*);
+static void sound_attention(fopAc_ac_c*, void*);
+extern "C" static void draw__10dAttDraw_cFR4cXyzPA4_f();
+extern "C" void __sinit_d_attention_cpp();
+
+extern "C" static void func_80070018();
+extern "C" void __ct__11dAttParam_cFl();
+extern "C" void __dt__11dAttParam_cFv();
+extern "C" void __ct__15dAttDrawParam_cFv();
+extern "C" void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo();
+extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl();
+extern "C" void __dt__12dAttention_cFv();
+extern "C" void GetLockonList__12dAttention_cFl();
+extern "C" void getActionBtnB__12dAttention_cFv();
+extern "C" void getActionBtnXY__12dAttention_cFv();
+extern "C" void chkAttMask__12dAttention_cFUlUl();
+extern "C" static void check_event_condition__FUlUs();
+extern "C" static void check_flontofplayer__FUlss();
+extern "C" static void distace_weight__Ffsf();
+extern "C" static void distace_angle_adjust__Ffsf();
+extern "C" static void check_distace__FP4cXyzsP4cXyzffff();
+extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl();
+extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl();
+extern "C" void initList__12dAttention_cFUl();
+extern "C" static void select_attention__FP10fopAc_ac_cPv();
+extern "C" void makeList__12dAttention_cFv();
+extern "C" void setOwnerAttentionPos__12dAttention_cFv();
+extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c();
+extern "C" void __dt__7cSGlobeFv();
+extern "C" void sortList__12dAttention_cFv();
+extern "C" void stockAttention__12dAttention_cFv();
+extern "C" void nextAttention__12dAttention_cFv();
+extern "C" void freeAttention__12dAttention_cFv();
+extern "C" void chaseAttention__12dAttention_cFv();
+extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c();
+extern "C" static void sound_attention__FP10fopAc_ac_cPv();
+extern "C" void runSoundProc__12dAttention_cFv();
+extern "C" void runDrawProc__12dAttention_cFv();
+extern "C" void runDebugDisp__12dAttention_cFv();
+extern "C" void checkButton__12dAttention_cFv();
+extern "C" void triggerProc__12dAttention_cFv();
+extern "C" void lostCheck__12dAttention_cFv();
+extern "C" void judgementStatus4Hold__12dAttention_cFv();
+extern "C" void judgementStatus4Switch__12dAttention_cFv();
+extern "C" void Run__12dAttention_cFv();
+extern "C" void Draw__12dAttention_cFv();
+extern "C" void lockSoundStart__12dAttention_cFUl();
+extern "C" void setAnm__10dAttDraw_cFUcf();
+extern "C" void setAlphaAnm__10dAttDraw_cFUcUc();
+extern "C" void alphaAnm__10dAttDraw_cFv();
+extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
+extern "C" static void draw__10dAttDraw_cFR4cXyzPA4_f();
+extern "C" void LockonTarget__12dAttention_cFl();
+extern "C" void LockonReleaseDistanse__12dAttention_cFv();
+extern "C" void LockonTargetPId__12dAttention_cFl();
+extern "C" void ActionTarget__12dAttention_cFl();
+extern "C" void CheckObjectTarget__12dAttention_cFl();
+extern "C" void LockonTruth__12dAttention_cFv();
+extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
+extern "C" void getActor__10dAttList_cFv();
+extern "C" void setActor__10dAttList_cFP10fopAc_ac_c();
+extern "C" void getPId__10dAttHint_cFPv();
+extern "C" void convPId__10dAttHint_cFUi();
+extern "C" void request__10dAttHint_cFP10fopAc_ac_ci();
+extern "C" void init__10dAttHint_cFv();
+extern "C" void proc__10dAttHint_cFv();
+extern "C" void convPId__11dAttCatch_cFUi();
+extern "C" void init__11dAttCatch_cFv();
+extern "C" void proc__11dAttCatch_cFv();
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+extern "C" void convPId__10dAttLook_cFUi();
+extern "C" void init__10dAttLook_cFv();
+extern "C" void proc__10dAttLook_cFv();
+extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi();
+extern "C" void __dt__15dAttDrawParam_cFv();
+extern "C" void __sinit_d_attention_cpp();
 SECTION_RODATA extern const u8 d_d_attention__stringBase0[16];
 SECTION_DATA extern u8 loc_type_tbl__12dAttention_c[12];
 SECTION_DATA extern u8 act_type_tbl__12dAttention_c[20];
@@ -132,68 +520,107 @@ SECTION_SDATA2 extern f32 d_d_attention__lit_5785;
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void play__14mDoExt_baseAnmFv();
-extern "C" extern void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
-extern "C" extern void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern "C" extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
-extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" extern void fopAcIt_Executor__FPFPvPv_iPv();
-extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" extern void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
-extern "C" extern void fpcSch_JudgeByID__FPvPv();
-extern "C" extern void __dt__10dAttList_cFv();
-extern "C" extern void __ct__10dAttList_cFv();
-extern "C" extern void __dt__10dAttDraw_cFv();
-extern "C" extern void __ct__10dAttDraw_cFv();
-extern "C" extern void isSwitch__12dSv_danBit_cCFi();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void getAttentionOffsetY__9daPy_py_cFv();
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void __ct__7cSAngleFRC7cSAngle();
-extern "C" extern void __ct__7cSAngleFs();
-extern "C" extern void Inv__7cSAngleCFv();
-extern "C" extern void __mi__7cSAngleCFs();
-extern "C" extern void __ct__7cSGlobeFRC4cXyz();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void bgmNowBattle__8Z2SeqMgrFf();
-extern "C" extern void __dl__FPv();
-extern "C" extern void DCStoreRangeNoSync();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXInverse();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void __register_global_object();
-extern "C" extern void __destroy_arr();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
-extern "C" extern void tan();
+SECTION_INIT void memcpy();
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
+void fpcSch_JudgeByID(void*, void*);
+void operator delete(void*);
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void tan();
+
+SECTION_INIT void memcpy();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void __dt__10dAttList_cFv();
+extern "C" void __ct__10dAttList_cFv();
+extern "C" void __dt__10dAttDraw_cFv();
+extern "C" void __ct__10dAttDraw_cFv();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getAttentionOffsetY__9daPy_py_cFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ct__7cSAngleFRC7cSAngle();
+extern "C" void __ct__7cSAngleFs();
+extern "C" void Inv__7cSAngleCFv();
+extern "C" void __mi__7cSAngleCFs();
+extern "C" void __ct__7cSGlobeFRC4cXyz();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmNowBattle__8Z2SeqMgrFf();
+extern "C" void __dl__FPv();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void tan();
 SECTION_DATA extern void*const __vt__25mDoExt_McaMorfCallBack1_c[3];
 SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
@@ -210,11 +637,11 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80070018-80070038 0020+00 .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 */
+/* 80070018-80070038 0020+00 rc=2 efc=0 .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80070018) {
+extern "C" asm static void func_80070018() {
 	nofralloc
 #include "asm/d/d_attention/func_80070018.s"
 }
@@ -222,7 +649,7 @@ ASM_FUNCTION(func_80070018) {
 
 
 /* ############################################################################################## */
-/* 8037A770-8037A780 000F+01 .rodata    @stringBase0                                                 */
+/* 8037A770-8037A780 000F+01 rc=2 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -232,44 +659,44 @@ SECTION_DEAD char* const stringBase_8037A778 = "Always";
 SECTION_DEAD char* const pad_8037A77F = "";
 #pragma pop
 
-/* 803A9BF8-803A9C04 000C+00 .data      loc_type_tbl__12dAttention_c                                 */
+/* 803A9BF8-803A9C04 000C+00 rc=2 efc=0 .data      loc_type_tbl__12dAttention_c                                 */
 u8 loc_type_tbl__12dAttention_c[12] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x02, 0x00, 0x02, 0x00, 0x04,
 };
 
-/* 803A9C04-803A9C18 0014+00 .data      act_type_tbl__12dAttention_c                                 */
+/* 803A9C04-803A9C18 0014+00 rc=1 efc=0 .data      act_type_tbl__12dAttention_c                                 */
 u8 act_type_tbl__12dAttention_c[20] = {
 	0x00, 0x03, 0x00, 0x08, 0x00, 0x04, 0x00, 0x10, 0x00, 0x05, 0x00, 0x20, 0x00, 0x06, 0x00, 0x40,
 	0x00, 0x07, 0x00, 0x80,
 };
 
-/* 803A9C18-803A9C3C 0024+00 .data      ftp_table$4417                                               */
+/* 803A9C18-803A9C3C 0024+00 rc=1 efc=0 .data      ftp_table$4417                                               */
 u8 data_803A9C18[36] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08,
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80,
 	0x00, 0x00, 0x01, 0x00,
 };
 
-/* 803A9C3C-803A9C48 000C+00 .data      ang_table2$4419                                              */
+/* 803A9C3C-803A9C48 000C+00 rc=1 efc=0 .data      ang_table2$4419                                              */
 u8 data_803A9C3C[12] = {
 	0x0A, 0xAA, 0x20, 0x00, 0x2A, 0xAA, 0x40, 0x00, 0x4E, 0x38, 0x60, 0x00,
 };
 
-/* 803A9C48-803A9C54 000C+00 .data      __vt__19dAttDraw_CallBack_c                                  */
+/* 803A9C48-803A9C54 000C+00 rc=2 efc=1 .data      __vt__19dAttDraw_CallBack_c                                  */
 void* const __vt__19dAttDraw_CallBack_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
 };
 
-/* 803A9C54-803A9C60 000C+00 .data      __vt__15dAttDrawParam_c                                      */
+/* 803A9C54-803A9C60 000C+00 rc=2 efc=0 .data      __vt__15dAttDrawParam_c                                      */
 void* const __vt__15dAttDrawParam_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dAttDrawParam_cFv,
 };
 
-/* 803A9C60-803A9C70 000C+04 .data      __vt__11dAttParam_c                                          */
+/* 803A9C60-803A9C70 000C+04 rc=4 efc=1 .data      __vt__11dAttParam_c                                          */
 void* const __vt__11dAttParam_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -278,63 +705,63 @@ void* const __vt__11dAttParam_c[4] = {
 	NULL,
 };
 
-/* 80452628-8045262C 0004+00 .sdata2    @4061                                                        */
+/* 80452628-8045262C 0004+00 rc=1 efc=0 .sdata2    @4061                                                        */
 f32 d_d_attention__lit_4061 = 45.0f;
 
-/* 8045262C-80452630 0004+00 .sdata2    @4062                                                        */
+/* 8045262C-80452630 0004+00 rc=1 efc=0 .sdata2    @4062                                                        */
 f32 d_d_attention__lit_4062 = 30.0f;
 
-/* 80452630-80452634 0004+00 .sdata2    @4063                                                        */
+/* 80452630-80452634 0004+00 rc=1 efc=0 .sdata2    @4063                                                        */
 f32 d_d_attention__lit_4063 = 90.0f;
 
-/* 80452634-80452638 0004+00 .sdata2    @4064                                                        */
+/* 80452634-80452638 0004+00 rc=2 efc=0 .sdata2    @4064                                                        */
 f32 d_d_attention__lit_4064 = -9.0f / 10.0f;
 
-/* 80452638-8045263C 0004+00 .sdata2    @4065                                                        */
+/* 80452638-8045263C 0004+00 rc=1 efc=0 .sdata2    @4065                                                        */
 f32 d_d_attention__lit_4065 = 3000.0f;
 
-/* 8045263C-80452640 0004+00 .sdata2    @4066                                                        */
+/* 8045263C-80452640 0004+00 rc=1 efc=0 .sdata2    @4066                                                        */
 f32 d_d_attention__lit_4066 = 1000.0f;
 
-/* 80452640-80452644 0004+00 .sdata2    @4067                                                        */
+/* 80452640-80452644 0004+00 rc=1 efc=0 .sdata2    @4067                                                        */
 f32 d_d_attention__lit_4067 = 6.0f;
 
-/* 80452644-80452648 0004+00 .sdata2    @4068                                                        */
+/* 80452644-80452648 0004+00 rc=1 efc=0 .sdata2    @4068                                                        */
 f32 d_d_attention__lit_4068 = 4.5f;
 
-/* 80452648-8045264C 0004+00 .sdata2    @4069                                                        */
+/* 80452648-8045264C 0004+00 rc=1 efc=0 .sdata2    @4069                                                        */
 f32 d_d_attention__lit_4069 = 14.0f;
 
-/* 8045264C-80452650 0004+00 .sdata2    @4070                                                        */
+/* 8045264C-80452650 0004+00 rc=1 efc=0 .sdata2    @4070                                                        */
 f32 d_d_attention__lit_4070 = 10.0f;
 
-/* 80452650-80452654 0004+00 .sdata2    @4071                                                        */
+/* 80452650-80452654 0004+00 rc=12 efc=0 .sdata2    @4071                                                        */
 u8 d_d_attention__lit_4071[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80452654-80452658 0004+00 .sdata2    @4072                                                        */
+/* 80452654-80452658 0004+00 rc=1 efc=0 .sdata2    @4072                                                        */
 f32 d_d_attention__lit_4072 = 17.0f / 10.0f;
 
-/* 80452658-8045265C 0004+00 .sdata2    @4073                                                        */
+/* 80452658-8045265C 0004+00 rc=10 efc=0 .sdata2    @4073                                                        */
 f32 d_d_attention__lit_4073 = 1.0f;
 
-/* 80070038-80070110 00D8+00 .text      __ct__11dAttParam_cFl                                        */
+/* 80070038-80070110 00D8+00 rc=1 efc=0 .text      __ct__11dAttParam_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dAttParam_cFl) {
+asm dAttParam_c::dAttParam_c(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/__ct__11dAttParam_cFl.s"
 }
 #pragma pop
 
 
-/* 80070110-80070158 0048+00 .text      __dt__11dAttParam_cFv                                        */
+/* 80070110-80070158 0048+00 rc=2 efc=0 .text      __dt__11dAttParam_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dAttParam_cFv) {
+asm dAttParam_c::~dAttParam_c() {
 	nofralloc
 #include "asm/d/d_attention/__dt__11dAttParam_cFv.s"
 }
@@ -342,17 +769,17 @@ ASM_FUNCTION(__dt__11dAttParam_cFv) {
 
 
 /* ############################################################################################## */
-/* 8045265C-80452660 0004+00 .sdata2    @4084                                                        */
+/* 8045265C-80452660 0004+00 rc=1 efc=0 .sdata2    @4084                                                        */
 f32 d_d_attention__lit_4084 = 250.0f;
 
-/* 80452660-80452664 0004+00 .sdata2    @4085                                                        */
+/* 80452660-80452664 0004+00 rc=1 efc=0 .sdata2    @4085                                                        */
 f32 d_d_attention__lit_4085 = 2.0f;
 
-/* 80070158-80070178 0020+00 .text      __ct__15dAttDrawParam_cFv                                    */
+/* 80070158-80070178 0020+00 rc=1 efc=0 .text      __ct__15dAttDrawParam_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15dAttDrawParam_cFv) {
+asm dAttDrawParam_c::dAttDrawParam_c() {
 	nofralloc
 #include "asm/d/d_attention/__ct__15dAttDrawParam_cFv.s"
 }
@@ -360,14 +787,14 @@ ASM_FUNCTION(__ct__15dAttDrawParam_cFv) {
 
 
 /* ############################################################################################## */
-/* 80452664-80452668 0004+00 .sdata2    @4092                                                        */
+/* 80452664-80452668 0004+00 rc=1 efc=0 .sdata2    @4092                                                        */
 f32 d_d_attention__lit_4092 = 3.0f / 5.0f;
 
-/* 80070178-80070198 0020+00 .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
+/* 80070178-80070198 0020+00 rc=1 efc=0 .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo) {
+asm void dAttDraw_CallBack_c::execute(u16 field_0, J3DTransformInfo* field_1) {
 	nofralloc
 #include "asm/d/d_attention/execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo.s"
 }
@@ -375,61 +802,61 @@ ASM_FUNCTION(execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo) {
 
 
 /* ############################################################################################## */
-/* 80424B00-80424B0C 000C+00 .bss       @4093                                                        */
+/* 80424B00-80424B0C 000C+00 rc=1 efc=0 .bss       @4093                                                        */
 u8 d_d_attention__lit_4093[12];
 
-/* 80424B0C-80424B20 0010+04 .bss       g_AttDwHIO                                                   */
+/* 80424B0C-80424B20 0010+04 rc=3 efc=0 .bss       g_AttDwHIO                                                   */
 u8 g_AttDwHIO[16 + 4 /* padding */];
 
-/* 80070198-80070774 05DC+00 .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         */
+/* 80070198-80070774 05DC+00 rc=1 efc=1 .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12dAttention_cFP10fopAc_ac_cUl) {
+asm dAttention_c::dAttention_c(fopAc_ac_c* field_0, u32 field_1) {
 	nofralloc
 #include "asm/d/d_attention/__ct__12dAttention_cFP10fopAc_ac_cUl.s"
 }
 #pragma pop
 
 
-/* 80070774-80070844 00D0+00 .text      __dt__12dAttention_cFv                                       */
+/* 80070774-80070844 00D0+00 rc=2 efc=2 .text      __dt__12dAttention_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dAttention_cFv) {
+asm dAttention_c::~dAttention_c() {
 	nofralloc
 #include "asm/d/d_attention/__dt__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80070844-80070880 003C+00 .text      GetLockonList__12dAttention_cFl                              */
+/* 80070844-80070880 003C+00 rc=4 efc=2 .text      GetLockonList__12dAttention_cFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetLockonList__12dAttention_cFl) {
+asm void dAttention_c::GetLockonList(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/GetLockonList__12dAttention_cFl.s"
 }
 #pragma pop
 
 
-/* 80070880-80070974 00F4+00 .text      getActionBtnB__12dAttention_cFv                              */
+/* 80070880-80070974 00F4+00 rc=5 efc=5 .text      getActionBtnB__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActionBtnB__12dAttention_cFv) {
+asm void dAttention_c::getActionBtnB() {
 	nofralloc
 #include "asm/d/d_attention/getActionBtnB__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80070974-80070A70 00FC+00 .text      getActionBtnXY__12dAttention_cFv                             */
+/* 80070974-80070A70 00FC+00 rc=1 efc=1 .text      getActionBtnXY__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActionBtnXY__12dAttention_cFv) {
+asm void dAttention_c::getActionBtnXY() {
 	nofralloc
 #include "asm/d/d_attention/getActionBtnXY__12dAttention_cFv.s"
 }
@@ -437,25 +864,25 @@ ASM_FUNCTION(getActionBtnXY__12dAttention_cFv) {
 
 
 /* ############################################################################################## */
-/* 80450660-80450664 0004+00 .sdata     loc_type_num__12dAttention_c                                 */
+/* 80450660-80450664 0004+00 rc=2 efc=0 .sdata     loc_type_num__12dAttention_c                                 */
 u32 loc_type_num__12dAttention_c = 0x00000003;
 
-/* 80070A70-80070AC0 0050+00 .text      chkAttMask__12dAttention_cFUlUl                              */
+/* 80070A70-80070AC0 0050+00 rc=1 efc=0 .text      chkAttMask__12dAttention_cFUlUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAttMask__12dAttention_cFUlUl) {
+asm void dAttention_c::chkAttMask(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/d/d_attention/chkAttMask__12dAttention_cFUlUl.s"
 }
 #pragma pop
 
 
-/* 80070AC0-80070B2C 006C+00 .text      check_event_condition__FUlUs                                 */
+/* 80070AC0-80070B2C 006C+00 rc=2 efc=0 .text      check_event_condition__FUlUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_event_condition__FUlUs) {
+asm static void check_event_condition(u32 field_0, u16 field_1) {
 	nofralloc
 #include "asm/d/d_attention/check_event_condition__FUlUs.s"
 }
@@ -463,30 +890,30 @@ ASM_FUNCTION(check_event_condition__FUlUs) {
 
 
 /* ############################################################################################## */
-/* 80450664-80450668 0004+00 .sdata     act_type_num__12dAttention_c                                 */
+/* 80450664-80450668 0004+00 rc=1 efc=0 .sdata     act_type_num__12dAttention_c                                 */
 u32 act_type_num__12dAttention_c = 0x00000005;
 
-/* 80450668-8045066C 0004+00 .sdata     chk_type_tbl__12dAttention_c                                 */
+/* 80450668-8045066C 0004+00 rc=1 efc=0 .sdata     chk_type_tbl__12dAttention_c                                 */
 u32 chk_type_tbl__12dAttention_c = 0x00080100;
 
-/* 8045066C-80450670 0004+00 .sdata     chk_type_num__12dAttention_c                                 */
+/* 8045066C-80450670 0004+00 rc=1 efc=0 .sdata     chk_type_num__12dAttention_c                                 */
 u32 chk_type_num__12dAttention_c = 0x00000001;
 
-/* 80450670-80450674 0004+00 .sdata     None                                                         */
+/* 80450670-80450674 0004+00 rc=2 efc=0 .sdata     None                                                         */
 u32 data_80450670 = 0x01000000;
 
-/* 80450674-80450680 0006+06 .sdata     ang_table$4418                                               */
+/* 80450674-80450680 0006+06 rc=1 efc=0 .sdata     ang_table$4418                                               */
 u8 data_80450674[12] = {
 	0x40, 0x00, 0x20, 0x00, 0x0A, 0xAA,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80070B2C-80070BF4 00C8+00 .text      check_flontofplayer__FUlss                                   */
+/* 80070B2C-80070BF4 00C8+00 rc=2 efc=0 .text      check_flontofplayer__FUlss                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_flontofplayer__FUlss) {
+asm static void check_flontofplayer(u32 field_0, s16 field_1, s16 field_2) {
 	nofralloc
 #include "asm/d/d_attention/check_flontofplayer__FUlss.s"
 }
@@ -494,29 +921,29 @@ ASM_FUNCTION(check_flontofplayer__FUlss) {
 
 
 /* ############################################################################################## */
-/* 80452668-80452670 0004+04 .sdata2    @4448                                                        */
+/* 80452668-80452670 0004+04 rc=2 efc=0 .sdata2    @4448                                                        */
 f32 d_d_attention__lit_4448 = 32768.0f;
 /* padding 4 bytes */
 
-/* 80452670-80452678 0008+00 .sdata2    @4450                                                        */
+/* 80452670-80452678 0008+00 rc=3 efc=0 .sdata2    @4450                                                        */
 f64 d_d_attention__lit_4450 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80070BF4-80070C40 004C+00 .text      distace_weight__Ffsf                                         */
+/* 80070BF4-80070C40 004C+00 rc=2 efc=0 .text      distace_weight__Ffsf                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(distace_weight__Ffsf) {
+asm static void distace_weight(f32 field_0, s16 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_attention/distace_weight__Ffsf.s"
 }
 #pragma pop
 
 
-/* 80070C40-80070CA0 0060+00 .text      distace_angle_adjust__Ffsf                                   */
+/* 80070C40-80070CA0 0060+00 rc=2 efc=0 .text      distace_angle_adjust__Ffsf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(distace_angle_adjust__Ffsf) {
+asm static void distace_angle_adjust(f32 field_0, s16 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_attention/distace_angle_adjust__Ffsf.s"
 }
@@ -524,22 +951,22 @@ ASM_FUNCTION(distace_angle_adjust__Ffsf) {
 
 
 /* ############################################################################################## */
-/* 80452678-80452680 0008+00 .sdata2    @4514                                                        */
+/* 80452678-80452680 0008+00 rc=3 efc=0 .sdata2    @4514                                                        */
 f64 d_d_attention__lit_4514 = 0.5;
 
-/* 80452680-80452688 0008+00 .sdata2    @4515                                                        */
+/* 80452680-80452688 0008+00 rc=3 efc=0 .sdata2    @4515                                                        */
 f64 d_d_attention__lit_4515 = 3.0;
 
-/* 80452688-80452690 0008+00 .sdata2    @4516                                                        */
+/* 80452688-80452690 0008+00 rc=3 efc=0 .sdata2    @4516                                                        */
 u8 d_d_attention__lit_4516[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80070CA0-80070E90 01F0+00 .text      check_distace__FP4cXyzsP4cXyzffff                            */
+/* 80070CA0-80070E90 01F0+00 rc=3 efc=0 .text      check_distace__FP4cXyzsP4cXyzffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_distace__FP4cXyzsP4cXyzffff) {
+asm static void check_distace(cXyz* field_0, s16 field_1, cXyz* field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/d_attention/check_distace__FP4cXyzsP4cXyzffff.s"
 }
@@ -547,171 +974,171 @@ ASM_FUNCTION(check_distace__FP4cXyzsP4cXyzffff) {
 
 
 /* ############################################################################################## */
-/* 80452690-80452694 0004+00 .sdata2    @4562                                                        */
+/* 80452690-80452694 0004+00 rc=3 efc=0 .sdata2    @4562                                                        */
 f32 d_d_attention__lit_4562 = -1.0f;
 
-/* 80452694-80452698 0004+00 .sdata2    @4563                                                        */
+/* 80452694-80452698 0004+00 rc=3 efc=0 .sdata2    @4563                                                        */
 f32 d_d_attention__lit_4563 = 0.5f;
 
-/* 80070E90-800710C0 0230+00 .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
+/* 80070E90-800710C0 0230+00 rc=2 efc=0 .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl) {
+asm void dAttention_c::calcWeight(s32 field_0, fopAc_ac_c* field_1, f32 field_2, s16 field_3, s16 field_4, u32* field_5) {
 	nofralloc
 #include "asm/d/d_attention/calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl.s"
 }
 #pragma pop
 
 
-/* 800710C0-80071240 0180+00 .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           */
+/* 800710C0-80071240 0180+00 rc=1 efc=0 .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl) {
+asm void dAttention_c::setList(s32 field_0, fopAc_ac_c* field_1, f32 field_2, f32 field_3, cSAngle field_4, u32 field_5) {
 	nofralloc
 #include "asm/d/d_attention/setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl.s"
 }
 #pragma pop
 
 
-/* 80071240-8007138C 014C+00 .text      initList__12dAttention_cFUl                                  */
+/* 80071240-8007138C 014C+00 rc=6 efc=0 .text      initList__12dAttention_cFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initList__12dAttention_cFUl) {
+asm void dAttention_c::initList(u32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/initList__12dAttention_cFUl.s"
 }
 #pragma pop
 
 
-/* 8007138C-800713CC 0040+00 .text      select_attention__FP10fopAc_ac_cPv                           */
+/* 8007138C-800713CC 0040+00 rc=1 efc=0 .text      select_attention__FP10fopAc_ac_cPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(select_attention__FP10fopAc_ac_cPv) {
+asm static void select_attention(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/d_attention/select_attention__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* 800713CC-80071424 0058+00 .text      makeList__12dAttention_cFv                                   */
+/* 800713CC-80071424 0058+00 rc=4 efc=0 .text      makeList__12dAttention_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeList__12dAttention_cFv) {
+asm void dAttention_c::makeList() {
 	nofralloc
 #include "asm/d/d_attention/makeList__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071424-80071488 0064+00 .text      setOwnerAttentionPos__12dAttention_cFv                       */
+/* 80071424-80071488 0064+00 rc=1 efc=0 .text      setOwnerAttentionPos__12dAttention_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOwnerAttentionPos__12dAttention_cFv) {
+asm void dAttention_c::setOwnerAttentionPos() {
 	nofralloc
 #include "asm/d/d_attention/setOwnerAttentionPos__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071488-8007167C 01F4+00 .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                */
+/* 80071488-8007167C 01F4+00 rc=1 efc=0 .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SelectAttention__12dAttention_cFP10fopAc_ac_c) {
+asm void dAttention_c::SelectAttention(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_attention/SelectAttention__12dAttention_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8007167C-800716B8 003C+00 .text      __dt__7cSGlobeFv                                             */
+/* 8007167C-800716B8 003C+00 rc=9 efc=9 .text      __dt__7cSGlobeFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7cSGlobeFv) {
+asm cSGlobe::~cSGlobe() {
 	nofralloc
 #include "asm/d/d_attention/__dt__7cSGlobeFv.s"
 }
 #pragma pop
 
 
-/* 800716B8-800718A4 01EC+00 .text      sortList__12dAttention_cFv                                   */
+/* 800716B8-800718A4 01EC+00 rc=4 efc=0 .text      sortList__12dAttention_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sortList__12dAttention_cFv) {
+asm void dAttention_c::sortList() {
 	nofralloc
 #include "asm/d/d_attention/sortList__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800718A4-80071960 00BC+00 .text      stockAttention__12dAttention_cFv                             */
+/* 800718A4-80071960 00BC+00 rc=2 efc=0 .text      stockAttention__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stockAttention__12dAttention_cFv) {
+asm void dAttention_c::stockAttention() {
 	nofralloc
 #include "asm/d/d_attention/stockAttention__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071960-80071A68 0108+00 .text      nextAttention__12dAttention_cFv                              */
+/* 80071960-80071A68 0108+00 rc=2 efc=0 .text      nextAttention__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nextAttention__12dAttention_cFv) {
+asm void dAttention_c::nextAttention() {
 	nofralloc
 #include "asm/d/d_attention/nextAttention__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071A68-80071A98 0030+00 .text      freeAttention__12dAttention_cFv                              */
+/* 80071A68-80071A98 0030+00 rc=3 efc=0 .text      freeAttention__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(freeAttention__12dAttention_cFv) {
+asm void dAttention_c::freeAttention() {
 	nofralloc
 #include "asm/d/d_attention/freeAttention__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071A98-80071CC0 0228+00 .text      chaseAttention__12dAttention_cFv                             */
+/* 80071A98-80071CC0 0228+00 rc=2 efc=0 .text      chaseAttention__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chaseAttention__12dAttention_cFv) {
+asm void dAttention_c::chaseAttention() {
 	nofralloc
 #include "asm/d/d_attention/chaseAttention__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071CC0-80071D6C 00AC+00 .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  */
+/* 80071CC0-80071D6C 00AC+00 rc=1 efc=0 .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EnemyDistance__12dAttention_cFP10fopAc_ac_c) {
+asm void dAttention_c::EnemyDistance(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_attention/EnemyDistance__12dAttention_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80071D6C-80071DEC 0080+00 .text      sound_attention__FP10fopAc_ac_cPv                            */
+/* 80071D6C-80071DEC 0080+00 rc=1 efc=0 .text      sound_attention__FP10fopAc_ac_cPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sound_attention__FP10fopAc_ac_cPv) {
+asm static void sound_attention(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/d_attention/sound_attention__FP10fopAc_ac_cPv.s"
 }
@@ -719,149 +1146,144 @@ ASM_FUNCTION(sound_attention__FP10fopAc_ac_cPv) {
 
 
 /* ############################################################################################## */
-/* 80452698-8045269C 0004+00 .sdata2    @5137                                                        */
+/* 80452698-8045269C 0004+00 rc=1 efc=0 .sdata2    @5137                                                        */
 f32 lit_5137 = 10000.0f;
 
-/* 8045269C-804526A0 0004+00 .sdata2    @5138                                                        */
+/* 8045269C-804526A0 0004+00 rc=1 efc=0 .sdata2    @5138                                                        */
 f32 lit_5138 = 1.0f / 10.0f;
 
-/* 80071DEC-80071E84 0098+00 .text      runSoundProc__12dAttention_cFv                               */
+/* 80071DEC-80071E84 0098+00 rc=1 efc=0 .text      runSoundProc__12dAttention_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(runSoundProc__12dAttention_cFv) {
+asm void dAttention_c::runSoundProc() {
 	nofralloc
 #include "asm/d/d_attention/runSoundProc__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80071E84-800720F4 0270+00 .text      runDrawProc__12dAttention_cFv                                */
+/* 80071E84-800720F4 0270+00 rc=1 efc=0 .text      runDrawProc__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(runDrawProc__12dAttention_cFv) {
+asm void dAttention_c::runDrawProc() {
 	nofralloc
 #include "asm/d/d_attention/runDrawProc__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800720F4-800720F8 0004+00 .text      runDebugDisp__12dAttention_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(runDebugDisp__12dAttention_cFv) {
-	nofralloc
-#include "asm/d/d_attention/runDebugDisp__12dAttention_cFv.s"
+/* 800720F4-800720F8 0004+00 rc=1 efc=0 .text      runDebugDisp__12dAttention_cFv                               */
+void dAttention_c::runDebugDisp() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800720F8-800722A0 01A8+00 .text      checkButton__12dAttention_cFv                                */
+/* 800720F8-800722A0 01A8+00 rc=1 efc=0 .text      checkButton__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkButton__12dAttention_cFv) {
+asm void dAttention_c::checkButton() {
 	nofralloc
 #include "asm/d/d_attention/checkButton__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800722A0-800722EC 004C+00 .text      triggerProc__12dAttention_cFv                                */
+/* 800722A0-800722EC 004C+00 rc=2 efc=0 .text      triggerProc__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(triggerProc__12dAttention_cFv) {
+asm void dAttention_c::triggerProc() {
 	nofralloc
 #include "asm/d/d_attention/triggerProc__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800722EC-80072344 0058+00 .text      lostCheck__12dAttention_cFv                                  */
+/* 800722EC-80072344 0058+00 rc=2 efc=0 .text      lostCheck__12dAttention_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lostCheck__12dAttention_cFv) {
+asm void dAttention_c::lostCheck() {
 	nofralloc
 #include "asm/d/d_attention/lostCheck__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80072344-800725F0 02AC+00 .text      judgementStatus4Hold__12dAttention_cFv                       */
+/* 80072344-800725F0 02AC+00 rc=1 efc=0 .text      judgementStatus4Hold__12dAttention_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(judgementStatus4Hold__12dAttention_cFv) {
+asm void dAttention_c::judgementStatus4Hold() {
 	nofralloc
 #include "asm/d/d_attention/judgementStatus4Hold__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800725F0-80072924 0334+00 .text      judgementStatus4Switch__12dAttention_cFv                     */
+/* 800725F0-80072924 0334+00 rc=1 efc=0 .text      judgementStatus4Switch__12dAttention_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(judgementStatus4Switch__12dAttention_cFv) {
+asm void dAttention_c::judgementStatus4Switch() {
 	nofralloc
 #include "asm/d/d_attention/judgementStatus4Switch__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80072924-80072BD4 02B0+00 .text      Run__12dAttention_cFv                                        */
+/* 80072924-80072BD4 02B0+00 rc=1 efc=1 .text      Run__12dAttention_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Run__12dAttention_cFv) {
+asm void dAttention_c::Run() {
 	nofralloc
 #include "asm/d/d_attention/Run__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80072BD4-80072D80 01AC+00 .text      Draw__12dAttention_cFv                                       */
+/* 80072BD4-80072D80 01AC+00 rc=1 efc=1 .text      Draw__12dAttention_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12dAttention_cFv) {
+asm void dAttention_c::Draw() {
 	nofralloc
 #include "asm/d/d_attention/Draw__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80072D80-80072DD8 0058+00 .text      lockSoundStart__12dAttention_cFUl                            */
+/* 80072D80-80072DD8 0058+00 rc=2 efc=0 .text      lockSoundStart__12dAttention_cFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lockSoundStart__12dAttention_cFUl) {
+asm void dAttention_c::lockSoundStart(u32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/lockSoundStart__12dAttention_cFUl.s"
 }
 #pragma pop
 
 
-/* 80072DD8-80072FE8 0210+00 .text      setAnm__10dAttDraw_cFUcf                                     */
+/* 80072DD8-80072FE8 0210+00 rc=1 efc=0 .text      setAnm__10dAttDraw_cFUcf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnm__10dAttDraw_cFUcf) {
+asm void dAttDraw_c::setAnm(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_attention/setAnm__10dAttDraw_cFUcf.s"
 }
 #pragma pop
 
 
-/* 80072FE8-80073004 001C+00 .text      setAlphaAnm__10dAttDraw_cFUcUc                               */
+/* 80072FE8-80073004 001C+00 rc=1 efc=0 .text      setAlphaAnm__10dAttDraw_cFUcUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnm__10dAttDraw_cFUcUc) {
+asm void dAttDraw_c::setAlphaAnm(char field_0, char field_1) {
 	nofralloc
 #include "asm/d/d_attention/setAlphaAnm__10dAttDraw_cFUcUc.s"
 }
@@ -869,311 +1291,306 @@ ASM_FUNCTION(setAlphaAnm__10dAttDraw_cFUcUc) {
 
 
 /* ############################################################################################## */
-/* 804526A0-804526A8 0004+04 .sdata2    @5668                                                        */
+/* 804526A0-804526A8 0004+04 rc=1 efc=0 .sdata2    @5668                                                        */
 f32 lit_5668 = 255.0f;
 /* padding 4 bytes */
 
-/* 804526A8-804526B0 0008+00 .sdata2    @5670                                                        */
+/* 804526A8-804526B0 0008+00 rc=1 efc=0 .sdata2    @5670                                                        */
 f64 lit_5670 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80073004-800732AC 02A8+00 .text      alphaAnm__10dAttDraw_cFv                                     */
+/* 80073004-800732AC 02A8+00 rc=1 efc=0 .text      alphaAnm__10dAttDraw_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alphaAnm__10dAttDraw_cFv) {
+asm void dAttDraw_c::alphaAnm() {
 	nofralloc
 #include "asm/d/d_attention/alphaAnm__10dAttDraw_cFv.s"
 }
 #pragma pop
 
 
-/* 800732AC-800732B0 0004+00 .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setTevKColor__11J3DTevBlockFUlPC10J3DGXColor) {
-	nofralloc
-#include "asm/d/d_attention/setTevKColor__11J3DTevBlockFUlPC10J3DGXColor.s"
+/* 800732AC-800732B0 0004+00 rc=3 efc=3 .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
+void J3DTevBlock::setTevKColor(u32 field_0, J3DGXColor const* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 804526B0-804526B4 0004+00 .sdata2    @5784                                                        */
+/* 804526B0-804526B4 0004+00 rc=1 efc=0 .sdata2    @5784                                                        */
 f32 d_d_attention__lit_5784 = 0.01745329238474369f;
 
-/* 804526B4-804526B8 0004+00 .sdata2    @5785                                                        */
+/* 804526B4-804526B8 0004+00 rc=1 efc=0 .sdata2    @5785                                                        */
 f32 d_d_attention__lit_5785 = -100.0f;
 
-/* 800732B0-8007353C 028C+00 .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
+/* 800732B0-8007353C 028C+00 rc=1 efc=0 .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10dAttDraw_cFR4cXyzPA4_f) {
+extern "C" asm static void draw__10dAttDraw_cFR4cXyzPA4_f() {
 	nofralloc
 #include "asm/d/d_attention/draw__10dAttDraw_cFR4cXyzPA4_f.s"
 }
 #pragma pop
 
 
-/* 8007353C-800735DC 00A0+00 .text      LockonTarget__12dAttention_cFl                               */
+/* 8007353C-800735DC 00A0+00 rc=21 efc=13 .text      LockonTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LockonTarget__12dAttention_cFl) {
+asm void dAttention_c::LockonTarget(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/LockonTarget__12dAttention_cFl.s"
 }
 #pragma pop
 
 
-/* 800735DC-800736CC 00F0+00 .text      LockonReleaseDistanse__12dAttention_cFv                      */
+/* 800735DC-800736CC 00F0+00 rc=1 efc=1 .text      LockonReleaseDistanse__12dAttention_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LockonReleaseDistanse__12dAttention_cFv) {
+asm void dAttention_c::LockonReleaseDistanse() {
 	nofralloc
 #include "asm/d/d_attention/LockonReleaseDistanse__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 800736CC-80073734 0068+00 .text      LockonTargetPId__12dAttention_cFl                            */
+/* 800736CC-80073734 0068+00 rc=2 efc=0 .text      LockonTargetPId__12dAttention_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LockonTargetPId__12dAttention_cFl) {
+asm void dAttention_c::LockonTargetPId(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/LockonTargetPId__12dAttention_cFl.s"
 }
 #pragma pop
 
 
-/* 80073734-8007378C 0058+00 .text      ActionTarget__12dAttention_cFl                               */
+/* 80073734-8007378C 0058+00 rc=3 efc=3 .text      ActionTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ActionTarget__12dAttention_cFl) {
+asm void dAttention_c::ActionTarget(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/ActionTarget__12dAttention_cFl.s"
 }
 #pragma pop
 
 
-/* 8007378C-800737E4 0058+00 .text      CheckObjectTarget__12dAttention_cFl                          */
+/* 8007378C-800737E4 0058+00 rc=3 efc=3 .text      CheckObjectTarget__12dAttention_cFl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckObjectTarget__12dAttention_cFl) {
+asm void dAttention_c::CheckObjectTarget(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/CheckObjectTarget__12dAttention_cFl.s"
 }
 #pragma pop
 
 
-/* 800737E4-80073838 0054+00 .text      LockonTruth__12dAttention_cFv                                */
+/* 800737E4-80073838 0054+00 rc=56 efc=53 .text      LockonTruth__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LockonTruth__12dAttention_cFv) {
+asm void dAttention_c::LockonTruth() {
 	nofralloc
 #include "asm/d/d_attention/LockonTruth__12dAttention_cFv.s"
 }
 #pragma pop
 
 
-/* 80073838-80073864 002C+00 .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              */
+/* 80073838-80073864 002C+00 rc=1 efc=1 .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDistance__12dAttention_cFP4cXyzsP4cXyzffff) {
+asm void dAttention_c::checkDistance(cXyz* field_0, s16 field_1, cXyz* field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/d_attention/checkDistance__12dAttention_cFP4cXyzsP4cXyzffff.s"
 }
 #pragma pop
 
 
-/* 80073864-80073898 0034+00 .text      getActor__10dAttList_cFv                                     */
+/* 80073864-80073898 0034+00 rc=14 efc=3 .text      getActor__10dAttList_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActor__10dAttList_cFv) {
+asm void dAttList_c::getActor() {
 	nofralloc
 #include "asm/d/d_attention/getActor__10dAttList_cFv.s"
 }
 #pragma pop
 
 
-/* 80073898-800738B4 001C+00 .text      setActor__10dAttList_cFP10fopAc_ac_c                         */
+/* 80073898-800738B4 001C+00 rc=3 efc=0 .text      setActor__10dAttList_cFP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActor__10dAttList_cFP10fopAc_ac_c) {
+asm void dAttList_c::setActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/d_attention/setActor__10dAttList_cFP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 800738B4-800738CC 0018+00 .text      getPId__10dAttHint_cFPv                                      */
+/* 800738B4-800738CC 0018+00 rc=1 efc=0 .text      getPId__10dAttHint_cFPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPId__10dAttHint_cFPv) {
+asm void dAttHint_c::getPId(void* field_0) {
 	nofralloc
 #include "asm/d/d_attention/getPId__10dAttHint_cFPv.s"
 }
 #pragma pop
 
 
-/* 800738CC-800738FC 0030+00 .text      convPId__10dAttHint_cFUi                                     */
+/* 800738CC-800738FC 0030+00 rc=1 efc=1 .text      convPId__10dAttHint_cFUi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(convPId__10dAttHint_cFUi) {
+asm void dAttHint_c::convPId(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__10dAttHint_cFUi.s"
 }
 #pragma pop
 
 
-/* 800738FC-80073958 005C+00 .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
+/* 800738FC-80073958 005C+00 rc=0 efc=0 .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(request__10dAttHint_cFP10fopAc_ac_ci) {
+asm void dAttHint_c::request(fopAc_ac_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_attention/request__10dAttHint_cFP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 80073958-80073970 0018+00 .text      init__10dAttHint_cFv                                         */
+/* 80073958-80073970 0018+00 rc=1 efc=0 .text      init__10dAttHint_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__10dAttHint_cFv) {
+asm void dAttHint_c::init() {
 	nofralloc
 #include "asm/d/d_attention/init__10dAttHint_cFv.s"
 }
 #pragma pop
 
 
-/* 80073970-8007398C 001C+00 .text      proc__10dAttHint_cFv                                         */
+/* 80073970-8007398C 001C+00 rc=1 efc=0 .text      proc__10dAttHint_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(proc__10dAttHint_cFv) {
+asm void dAttHint_c::proc() {
 	nofralloc
 #include "asm/d/d_attention/proc__10dAttHint_cFv.s"
 }
 #pragma pop
 
 
-/* 8007398C-800739BC 0030+00 .text      convPId__11dAttCatch_cFUi                                    */
+/* 8007398C-800739BC 0030+00 rc=4 efc=4 .text      convPId__11dAttCatch_cFUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(convPId__11dAttCatch_cFUi) {
+asm void dAttCatch_c::convPId(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__11dAttCatch_cFUi.s"
 }
 #pragma pop
 
 
-/* 800739BC-800739DC 0020+00 .text      init__11dAttCatch_cFv                                        */
+/* 800739BC-800739DC 0020+00 rc=1 efc=0 .text      init__11dAttCatch_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11dAttCatch_cFv) {
+asm void dAttCatch_c::init() {
 	nofralloc
 #include "asm/d/d_attention/init__11dAttCatch_cFv.s"
 }
 #pragma pop
 
 
-/* 800739DC-80073A08 002C+00 .text      proc__11dAttCatch_cFv                                        */
+/* 800739DC-80073A08 002C+00 rc=1 efc=0 .text      proc__11dAttCatch_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(proc__11dAttCatch_cFv) {
+asm void dAttCatch_c::proc() {
 	nofralloc
 #include "asm/d/d_attention/proc__11dAttCatch_cFv.s"
 }
 #pragma pop
 
 
-/* 80073A08-80073CA4 029C+00 .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
+/* 80073A08-80073CA4 029C+00 rc=0 efc=0 .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(request__11dAttCatch_cFP10fopAc_ac_cUcfffsi) {
+asm void dAttCatch_c::request(fopAc_ac_c* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, s16 field_5, s32 field_6) {
 	nofralloc
 #include "asm/d/d_attention/request__11dAttCatch_cFP10fopAc_ac_cUcfffsi.s"
 }
 #pragma pop
 
 
-/* 80073CA4-80073CD4 0030+00 .text      convPId__10dAttLook_cFUi                                     */
+/* 80073CA4-80073CD4 0030+00 rc=1 efc=1 .text      convPId__10dAttLook_cFUi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(convPId__10dAttLook_cFUi) {
+asm void dAttLook_c::convPId(s32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__10dAttLook_cFUi.s"
 }
 #pragma pop
 
 
-/* 80073CD4-80073CEC 0018+00 .text      init__10dAttLook_cFv                                         */
+/* 80073CD4-80073CEC 0018+00 rc=1 efc=0 .text      init__10dAttLook_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__10dAttLook_cFv) {
+asm void dAttLook_c::init() {
 	nofralloc
 #include "asm/d/d_attention/init__10dAttLook_cFv.s"
 }
 #pragma pop
 
 
-/* 80073CEC-80073D08 001C+00 .text      proc__10dAttLook_cFv                                         */
+/* 80073CEC-80073D08 001C+00 rc=1 efc=0 .text      proc__10dAttLook_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(proc__10dAttLook_cFv) {
+asm void dAttLook_c::proc() {
 	nofralloc
 #include "asm/d/d_attention/proc__10dAttLook_cFv.s"
 }
 #pragma pop
 
 
-/* 80073D08-80073FC4 02BC+00 .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
+/* 80073D08-80073FC4 02BC+00 rc=0 efc=0 .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(request__10dAttLook_cFP10fopAc_ac_cfffsi) {
+asm void dAttLook_c::request(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 field_3, s16 field_4, s32 field_5) {
 	nofralloc
 #include "asm/d/d_attention/request__10dAttLook_cFP10fopAc_ac_cfffsi.s"
 }
 #pragma pop
 
 
-/* 80073FC4-8007400C 0048+00 .text      __dt__15dAttDrawParam_cFv                                    */
+/* 80073FC4-8007400C 0048+00 rc=2 efc=0 .text      __dt__15dAttDrawParam_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dAttDrawParam_cFv) {
+asm dAttDrawParam_c::~dAttDrawParam_c() {
 	nofralloc
 #include "asm/d/d_attention/__dt__15dAttDrawParam_cFv.s"
 }
 #pragma pop
 
 
-/* 8007400C-80074048 003C+00 .text      __sinit_d_attention_cpp                                      */
+/* 8007400C-80074048 003C+00 rc=1 efc=1 .text      __sinit_d_attention_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_attention_cpp) {
+extern "C" asm void __sinit_d_attention_cpp() {
 	nofralloc
 #include "asm/d/d_attention/__sinit_d_attention_cpp.s"
 }
@@ -1181,12 +1598,12 @@ ASM_FUNCTION(__sinit_d_attention_cpp) {
 
 
 /* ############################################################################################## */
-/* 80450680-80450688 0008+00 .sdata     None                                                         */
+/* 80450680-80450688 0008+00 rc=2 efc=2 .sdata     None                                                         */
 u8 data_80450680[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450688-80450690 0008+00 .sdata     None                                                         */
+/* 80450688-80450690 0008+00 rc=1 efc=1 .sdata     None                                                         */
 u8 data_80450688[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

@@ -6,58 +6,162 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cBgS_PolyInfo;
+struct daGpTaru_c;
+struct cXyz;
+
+struct daGpTaru_HIO_c {
+	daGpTaru_HIO_c();
+	~daGpTaru_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daGpTaru_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void chkSinkAll();
+	void chkWaterLineIn();
+	void bgCheck();
+	void Execute();
+	void mode_proc_call();
+	void mode_init_wait();
+	void mode_proc_wait();
+	void mode_init_carry();
+	void mode_proc_carry();
+	void mode_init_drop();
+	void mode_proc_drop();
+	void mode_init_roll();
+	void mode_proc_roll();
+	void mode_init_exploInit();
+	void mode_proc_exploInit();
+	void mode_init_explosion();
+	void mode_proc_explosion();
+	void mode_init_sink();
+	void mode_proc_sink();
+	void breakEffSet();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daGpTaru_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daGpTaru_cFv();
-extern "C" extern void CreateHeap__10daGpTaru_cFv();
-extern "C" extern void create__10daGpTaru_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void createHeapCallBack__10daGpTaru_cFP10fopAc_ac_c();
-extern "C" extern void bound__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void chkSinkAll__10daGpTaru_cFv();
-extern "C" extern void chkWaterLineIn__10daGpTaru_cFv();
-extern "C" extern void bgCheck__10daGpTaru_cFv();
-extern "C" extern void Execute__10daGpTaru_cFv();
-extern "C" extern void mode_proc_call__10daGpTaru_cFv();
-extern "C" extern void mode_init_wait__10daGpTaru_cFv();
-extern "C" extern void mode_proc_wait__10daGpTaru_cFv();
-extern "C" extern void mode_init_carry__10daGpTaru_cFv();
-extern "C" extern void mode_proc_carry__10daGpTaru_cFv();
-extern "C" extern void mode_init_drop__10daGpTaru_cFv();
-extern "C" extern void mode_proc_drop__10daGpTaru_cFv();
-extern "C" extern void mode_init_roll__10daGpTaru_cFv();
-extern "C" extern void mode_proc_roll__10daGpTaru_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void mode_init_exploInit__10daGpTaru_cFv();
-extern "C" extern void mode_proc_exploInit__10daGpTaru_cFv();
-extern "C" extern void mode_init_explosion__10daGpTaru_cFv();
-extern "C" extern void mode_proc_explosion__10daGpTaru_cFv();
-extern "C" extern void mode_init_sink__10daGpTaru_cFv();
-extern "C" extern void mode_proc_sink__10daGpTaru_cFv();
-extern "C" extern void breakEffSet__10daGpTaru_cFv();
-extern "C" extern void Draw__10daGpTaru_cFv();
-extern "C" extern void Delete__10daGpTaru_cFv();
-extern "C" extern void daGpTaru_Draw__FP10daGpTaru_c();
-extern "C" extern void daGpTaru_Execute__FP10daGpTaru_c();
-extern "C" extern void daGpTaru_Delete__FP10daGpTaru_c();
-extern "C" extern void daGpTaru_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daGpTaru_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_gpTaru_cpp();
-extern "C" extern void func_8057F534();
-extern "C" extern void func_8057F53C();
-extern "C" extern void func_8057F544();
-extern "C" extern void func_8057F54C();
-extern "C" extern void func_8057F554();
+void bound(cXyz*, cBgS_PolyInfo const&, f32);
+void daGpTaru_Draw(daGpTaru_c*);
+void daGpTaru_Execute(daGpTaru_c*);
+void daGpTaru_Delete(daGpTaru_c*);
+void daGpTaru_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_gpTaru_cpp();
+extern "C" void func_8057F534();
+extern "C" void func_8057F53C();
+extern "C" void func_8057F544();
+extern "C" void func_8057F54C();
+extern "C" void func_8057F554();
+
+extern "C" void __ct__14daGpTaru_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daGpTaru_cFv();
+extern "C" void CreateHeap__10daGpTaru_cFv();
+extern "C" void create__10daGpTaru_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void createHeapCallBack__10daGpTaru_cFP10fopAc_ac_c();
+extern "C" void bound__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void chkSinkAll__10daGpTaru_cFv();
+extern "C" void chkWaterLineIn__10daGpTaru_cFv();
+extern "C" void bgCheck__10daGpTaru_cFv();
+extern "C" void Execute__10daGpTaru_cFv();
+extern "C" void mode_proc_call__10daGpTaru_cFv();
+extern "C" void mode_init_wait__10daGpTaru_cFv();
+extern "C" void mode_proc_wait__10daGpTaru_cFv();
+extern "C" void mode_init_carry__10daGpTaru_cFv();
+extern "C" void mode_proc_carry__10daGpTaru_cFv();
+extern "C" void mode_init_drop__10daGpTaru_cFv();
+extern "C" void mode_proc_drop__10daGpTaru_cFv();
+extern "C" void mode_init_roll__10daGpTaru_cFv();
+extern "C" void mode_proc_roll__10daGpTaru_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void mode_init_exploInit__10daGpTaru_cFv();
+extern "C" void mode_proc_exploInit__10daGpTaru_cFv();
+extern "C" void mode_init_explosion__10daGpTaru_cFv();
+extern "C" void mode_proc_explosion__10daGpTaru_cFv();
+extern "C" void mode_init_sink__10daGpTaru_cFv();
+extern "C" void mode_proc_sink__10daGpTaru_cFv();
+extern "C" void breakEffSet__10daGpTaru_cFv();
+extern "C" void Draw__10daGpTaru_cFv();
+extern "C" void Delete__10daGpTaru_cFv();
+extern "C" void daGpTaru_Draw__FP10daGpTaru_c();
+extern "C" void daGpTaru_Execute__FP10daGpTaru_c();
+extern "C" void daGpTaru_Delete__FP10daGpTaru_c();
+extern "C" void daGpTaru_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daGpTaru_HIO_cFv();
+extern "C" void __sinit_d_a_obj_gpTaru_cpp();
+extern "C" void func_8057F534();
+extern "C" void func_8057F53C();
+extern "C" void func_8057F544();
+extern "C" void func_8057F54C();
+extern "C" void func_8057F554();
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u32 lit_3657;
 SECTION_RODATA extern const u32 lit_3658;
@@ -141,8 +245,11 @@ SECTION_BSS extern u8 data_8057F920[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -152,7 +259,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daGpTaru_HIO_cFv) {
+asm daGpTaru_HIO_c::daGpTaru_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__ct__14daGpTaru_HIO_cFv.s"
 }
@@ -163,7 +270,7 @@ ASM_FUNCTION(__ct__14daGpTaru_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -174,7 +281,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -185,7 +292,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daGpTaru_cFv) {
+asm void daGpTaru_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/setBaseMtx__10daGpTaru_cFv.s"
 }
@@ -196,7 +303,7 @@ ASM_FUNCTION(setBaseMtx__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daGpTaru_cFv) {
+asm void daGpTaru_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/CreateHeap__10daGpTaru_cFv.s"
 }
@@ -207,7 +314,7 @@ ASM_FUNCTION(CreateHeap__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daGpTaru_cFv) {
+asm void daGpTaru_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/create__10daGpTaru_cFv.s"
 }
@@ -218,7 +325,7 @@ ASM_FUNCTION(create__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__8cM3dGCylFv.s"
 }
@@ -229,7 +336,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__8cM3dGAabFv.s"
 }
@@ -240,7 +347,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__10dCcD_GSttsFv.s"
 }
@@ -251,7 +358,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__12dBgS_AcchCirFv.s"
 }
@@ -262,7 +369,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -273,7 +380,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__10daGpTaru_cFP10fopAc_ac_c) {
+asm void daGpTaru_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/createHeapCallBack__10daGpTaru_cFP10fopAc_ac_c.s"
 }
@@ -284,7 +391,7 @@ ASM_FUNCTION(createHeapCallBack__10daGpTaru_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bound__FP4cXyzRC13cBgS_PolyInfof) {
+asm void bound(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/bound__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -295,7 +402,7 @@ ASM_FUNCTION(bound__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__8cM3dGPlaFv.s"
 }
@@ -306,7 +413,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkSinkAll__10daGpTaru_cFv) {
+asm void daGpTaru_c::chkSinkAll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/chkSinkAll__10daGpTaru_cFv.s"
 }
@@ -317,7 +424,7 @@ ASM_FUNCTION(chkSinkAll__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWaterLineIn__10daGpTaru_cFv) {
+asm void daGpTaru_c::chkWaterLineIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/chkWaterLineIn__10daGpTaru_cFv.s"
 }
@@ -328,7 +435,7 @@ ASM_FUNCTION(chkWaterLineIn__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgCheck__10daGpTaru_cFv) {
+asm void daGpTaru_c::bgCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/bgCheck__10daGpTaru_cFv.s"
 }
@@ -339,7 +446,7 @@ ASM_FUNCTION(bgCheck__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daGpTaru_cFv) {
+asm void daGpTaru_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/Execute__10daGpTaru_cFv.s"
 }
@@ -350,7 +457,7 @@ ASM_FUNCTION(Execute__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_call__10daGpTaru_cFv.s"
 }
@@ -361,7 +468,7 @@ ASM_FUNCTION(mode_proc_call__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_wait__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_wait__10daGpTaru_cFv.s"
 }
@@ -372,7 +479,7 @@ ASM_FUNCTION(mode_init_wait__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_wait__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_wait__10daGpTaru_cFv.s"
 }
@@ -383,7 +490,7 @@ ASM_FUNCTION(mode_proc_wait__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_carry__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_carry__10daGpTaru_cFv.s"
 }
@@ -394,7 +501,7 @@ ASM_FUNCTION(mode_init_carry__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_carry__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_carry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_carry__10daGpTaru_cFv.s"
 }
@@ -405,7 +512,7 @@ ASM_FUNCTION(mode_proc_carry__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_drop__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_drop__10daGpTaru_cFv.s"
 }
@@ -416,7 +523,7 @@ ASM_FUNCTION(mode_init_drop__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_drop__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_drop__10daGpTaru_cFv.s"
 }
@@ -427,7 +534,7 @@ ASM_FUNCTION(mode_proc_drop__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_roll__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_roll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_roll__10daGpTaru_cFv.s"
 }
@@ -438,7 +545,7 @@ ASM_FUNCTION(mode_init_roll__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_roll__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_roll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_roll__10daGpTaru_cFv.s"
 }
@@ -449,7 +556,7 @@ ASM_FUNCTION(mode_proc_roll__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -460,7 +567,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_exploInit__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_exploInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_exploInit__10daGpTaru_cFv.s"
 }
@@ -471,7 +578,7 @@ ASM_FUNCTION(mode_init_exploInit__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_exploInit__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_exploInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_exploInit__10daGpTaru_cFv.s"
 }
@@ -482,7 +589,7 @@ ASM_FUNCTION(mode_proc_exploInit__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_explosion__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_explosion() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_explosion__10daGpTaru_cFv.s"
 }
@@ -493,7 +600,7 @@ ASM_FUNCTION(mode_init_explosion__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_explosion__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_explosion() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_explosion__10daGpTaru_cFv.s"
 }
@@ -504,7 +611,7 @@ ASM_FUNCTION(mode_proc_explosion__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_sink__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_init_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_init_sink__10daGpTaru_cFv.s"
 }
@@ -515,7 +622,7 @@ ASM_FUNCTION(mode_init_sink__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_sink__10daGpTaru_cFv) {
+asm void daGpTaru_c::mode_proc_sink() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/mode_proc_sink__10daGpTaru_cFv.s"
 }
@@ -526,7 +633,7 @@ ASM_FUNCTION(mode_proc_sink__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(breakEffSet__10daGpTaru_cFv) {
+asm void daGpTaru_c::breakEffSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/breakEffSet__10daGpTaru_cFv.s"
 }
@@ -537,7 +644,7 @@ ASM_FUNCTION(breakEffSet__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daGpTaru_cFv) {
+asm void daGpTaru_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/Draw__10daGpTaru_cFv.s"
 }
@@ -548,7 +655,7 @@ ASM_FUNCTION(Draw__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daGpTaru_cFv) {
+asm void daGpTaru_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/Delete__10daGpTaru_cFv.s"
 }
@@ -559,7 +666,7 @@ ASM_FUNCTION(Delete__10daGpTaru_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGpTaru_Draw__FP10daGpTaru_c) {
+asm void daGpTaru_Draw(daGpTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/daGpTaru_Draw__FP10daGpTaru_c.s"
 }
@@ -570,7 +677,7 @@ ASM_FUNCTION(daGpTaru_Draw__FP10daGpTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGpTaru_Execute__FP10daGpTaru_c) {
+asm void daGpTaru_Execute(daGpTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/daGpTaru_Execute__FP10daGpTaru_c.s"
 }
@@ -581,7 +688,7 @@ ASM_FUNCTION(daGpTaru_Execute__FP10daGpTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGpTaru_Delete__FP10daGpTaru_c) {
+asm void daGpTaru_Delete(daGpTaru_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/daGpTaru_Delete__FP10daGpTaru_c.s"
 }
@@ -592,7 +699,7 @@ ASM_FUNCTION(daGpTaru_Delete__FP10daGpTaru_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGpTaru_Create__FP10fopAc_ac_c) {
+asm void daGpTaru_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/daGpTaru_Create__FP10fopAc_ac_c.s"
 }
@@ -603,7 +710,7 @@ ASM_FUNCTION(daGpTaru_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__10cCcD_GSttsFv.s"
 }
@@ -614,7 +721,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daGpTaru_HIO_cFv) {
+asm daGpTaru_HIO_c::~daGpTaru_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__dt__14daGpTaru_HIO_cFv.s"
 }
@@ -625,7 +732,7 @@ ASM_FUNCTION(__dt__14daGpTaru_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_gpTaru_cpp) {
+extern "C" asm void __sinit_d_a_obj_gpTaru_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/__sinit_d_a_obj_gpTaru_cpp.s"
 }
@@ -636,7 +743,7 @@ ASM_FUNCTION(__sinit_d_a_obj_gpTaru_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057F534) {
+extern "C" asm void func_8057F534() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/func_8057F534.s"
 }
@@ -647,7 +754,7 @@ ASM_FUNCTION(func_8057F534) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057F53C) {
+extern "C" asm void func_8057F53C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/func_8057F53C.s"
 }
@@ -658,7 +765,7 @@ ASM_FUNCTION(func_8057F53C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057F544) {
+extern "C" asm void func_8057F544() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/func_8057F544.s"
 }
@@ -669,7 +776,7 @@ ASM_FUNCTION(func_8057F544) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057F54C) {
+extern "C" asm void func_8057F54C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/func_8057F54C.s"
 }
@@ -680,7 +787,7 @@ ASM_FUNCTION(func_8057F54C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057F554) {
+extern "C" asm void func_8057F554() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gptaru/d_a_obj_gpTaru/func_8057F554.s"
 }

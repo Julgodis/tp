@@ -6,15 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build _GXTexObj (_GXTexObj) False/False
+/* top-level dependencies (begin _GXTexObj) */
+/* top-level dependencies (end _GXTexObj) */
+struct _GXTexObj {
+};
+
+// build _GXTlutObj (_GXTlutObj) False/False
+/* top-level dependencies (begin _GXTlutObj) */
+/* top-level dependencies (end _GXTlutObj) */
+struct _GXTlutObj {
+};
+
+// build mDoLib_clipper (mDoLib_clipper) False/False
+/* top-level dependencies (begin mDoLib_clipper) */
+/* top-level dependencies (end mDoLib_clipper) */
+struct mDoLib_clipper {
+	/* 8001528C */ void setup(f32, f32, f32, f32);
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// build J3DUClipper (J3DUClipper) False/False
+/* top-level dependencies (begin J3DUClipper) */
+/* top-level dependencies (end J3DUClipper) */
+struct J3DUClipper {
+	/* 80015590 */ ~J3DUClipper();
+	/* 80273778 */ void init();
+	/* 8027378C */ void calcViewFrustum();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern "C" extern void setup__14mDoLib_clipperFffff();
-extern "C" extern void mDoLib_project__FP3VecP3Vec();
-extern "C" extern void mDoLib_pos2camera__FP3VecP3Vec();
-extern "C" extern void __sinit_m_Do_lib_cpp();
-extern "C" extern void __dt__11J3DUClipperFv();
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
+void mDoLib_project(Vec*, Vec*);
+void mDoLib_pos2camera(Vec*, Vec*);
+extern "C" void __sinit_m_Do_lib_cpp();
+
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
+extern "C" void setup__14mDoLib_clipperFffff();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
+extern "C" void __sinit_m_Do_lib_cpp();
+extern "C" void __dt__11J3DUClipperFv();
 SECTION_DATA extern void*const __vt__11J3DUClipper[4];
 SECTION_BSS extern u8 lit_3727[12];
 SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
@@ -37,17 +86,27 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3791;
 // External References:
 // 
 
-extern "C" extern void init__11J3DUClipperFv();
-extern "C" extern void calcViewFrustum__11J3DUClipperFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void GXInitTexObj();
-extern "C" extern void GXInitTexObjCI();
-extern "C" extern void GXInitTexObjLOD();
-extern "C" extern void GXInitTlutObj();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void operator delete(void*);
+extern "C" void PSMTXMultVec();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXInitTlutObj();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void init__11J3DUClipperFv();
+extern "C" void calcViewFrustum__11J3DUClipperFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXInitTlutObj();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 
@@ -56,20 +115,20 @@ SECTION_BSS extern u8 sincosTable___5JMath[65536];
 // 
 
 /* ############################################################################################## */
-/* 80451B70-80451B74 0004+00 .sdata2    @3634                                                        */
+/* 80451B70-80451B74 0004+00 rc=1 efc=0 .sdata2    @3634                                                        */
 f32 lit_3634 = 0.125f;
 
-/* 80451B74-80451B78 0004+00 .sdata2    @3635                                                        */
+/* 80451B74-80451B78 0004+00 rc=1 efc=0 .sdata2    @3635                                                        */
 f32 lit_3635 = 1.0f / 100.0f;
 
-/* 80451B78-80451B80 0008+00 .sdata2    @3638                                                        */
+/* 80451B78-80451B80 0008+00 rc=1 efc=0 .sdata2    @3638                                                        */
 f64 lit_3638 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8001513C-8001528C 0150+00 .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
+/* 8001513C-8001528C 0150+00 rc=3 efc=3 .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj) {
+asm void mDoLib_setResTimgObj(ResTIMG const* field_0, _GXTexObj* field_1, u32 field_2, _GXTlutObj* field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj.s"
 }
@@ -77,26 +136,26 @@ ASM_FUNCTION(mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj) {
 
 
 /* ############################################################################################## */
-/* 803DD8D8-803DD8E4 000C+00 .bss       @3727                                                        */
+/* 803DD8D8-803DD8E4 000C+00 rc=1 efc=0 .bss       @3727                                                        */
 u8 lit_3727[12];
 
-/* 803DD8E4-803DD940 005C+00 .bss       mClipper__14mDoLib_clipper                                   */
+/* 803DD8E4-803DD940 005C+00 rc=7 efc=5 .bss       mClipper__14mDoLib_clipper                                   */
 u8 mClipper__14mDoLib_clipper[92];
 
-/* 80450C70-80450C74 0004+00 .sbss      mSystemFar__14mDoLib_clipper                                 */
+/* 80450C70-80450C74 0004+00 rc=3 efc=2 .sbss      mSystemFar__14mDoLib_clipper                                 */
 u8 mSystemFar__14mDoLib_clipper[4];
 
-/* 80450C74-80450C78 0004+00 .sbss      mFovyRate__14mDoLib_clipper                                  */
+/* 80450C74-80450C78 0004+00 rc=2 efc=1 .sbss      mFovyRate__14mDoLib_clipper                                  */
 u8 mFovyRate__14mDoLib_clipper[4];
 
-/* 80451B80-80451B84 0004+00 .sdata2    @3739                                                        */
+/* 80451B80-80451B84 0004+00 rc=1 efc=0 .sdata2    @3739                                                        */
 f32 m_Do_m_Do_lib__lit_3739 = 182.04444885253906f;
 
-/* 8001528C-80015310 0084+00 .text      setup__14mDoLib_clipperFffff                                 */
+/* 8001528C-80015310 0084+00 rc=1 efc=1 .text      setup__14mDoLib_clipperFffff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setup__14mDoLib_clipperFffff) {
+asm void mDoLib_clipper::setup(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/setup__14mDoLib_clipperFffff.s"
 }
@@ -104,49 +163,49 @@ ASM_FUNCTION(setup__14mDoLib_clipperFffff) {
 
 
 /* ############################################################################################## */
-/* 80451B84-80451B88 0004+00 .sdata2    @3784                                                        */
+/* 80451B84-80451B88 0004+00 rc=2 efc=0 .sdata2    @3784                                                        */
 u8 lit_3784[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451B88-80451B8C 0004+00 .sdata2    @3785                                                        */
+/* 80451B88-80451B8C 0004+00 rc=1 efc=0 .sdata2    @3785                                                        */
 f32 m_Do_m_Do_lib__lit_3785 = 500000.0f;
 
-/* 80451B8C-80451B90 0004+00 .sdata2    @3786                                                        */
+/* 80451B8C-80451B90 0004+00 rc=1 efc=0 .sdata2    @3786                                                        */
 f32 lit_3786 = 0.5f;
 
-/* 80451B90-80451B94 0004+00 .sdata2    @3787                                                        */
+/* 80451B90-80451B94 0004+00 rc=1 efc=0 .sdata2    @3787                                                        */
 f32 m_Do_m_Do_lib__lit_3787 = 2.0f;
 
-/* 80451B94-80451B98 0004+00 .sdata2    @3788                                                        */
+/* 80451B94-80451B98 0004+00 rc=1 efc=0 .sdata2    @3788                                                        */
 f32 m_Do_m_Do_lib__lit_3788 = 304.0f;
 
-/* 80451B98-80451B9C 0004+00 .sdata2    @3789                                                        */
+/* 80451B98-80451B9C 0004+00 rc=1 efc=0 .sdata2    @3789                                                        */
 f32 m_Do_m_Do_lib__lit_3789 = 608.0f;
 
-/* 80451B9C-80451BA0 0004+00 .sdata2    @3790                                                        */
+/* 80451B9C-80451BA0 0004+00 rc=1 efc=0 .sdata2    @3790                                                        */
 f32 m_Do_m_Do_lib__lit_3790 = 224.0f;
 
-/* 80451BA0-80451BA8 0004+04 .sdata2    @3791                                                        */
+/* 80451BA0-80451BA8 0004+04 rc=1 efc=0 .sdata2    @3791                                                        */
 f32 m_Do_m_Do_lib__lit_3791 = 448.0f;
 /* padding 4 bytes */
 
-/* 80015310-800154EC 01DC+00 .text      mDoLib_project__FP3VecP3Vec                                  */
+/* 80015310-800154EC 01DC+00 rc=21 efc=21 .text      mDoLib_project__FP3VecP3Vec                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoLib_project__FP3VecP3Vec) {
+asm void mDoLib_project(Vec* field_0, Vec* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/mDoLib_project__FP3VecP3Vec.s"
 }
 #pragma pop
 
 
-/* 800154EC-80015544 0058+00 .text      mDoLib_pos2camera__FP3VecP3Vec                               */
+/* 800154EC-80015544 0058+00 rc=2 efc=2 .text      mDoLib_pos2camera__FP3VecP3Vec                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoLib_pos2camera__FP3VecP3Vec) {
+asm void mDoLib_pos2camera(Vec* field_0, Vec* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/mDoLib_pos2camera__FP3VecP3Vec.s"
 }
@@ -154,7 +213,7 @@ ASM_FUNCTION(mDoLib_pos2camera__FP3VecP3Vec) {
 
 
 /* ############################################################################################## */
-/* 803A3498-803A34A8 000C+04 .data      __vt__11J3DUClipper                                          */
+/* 803A3498-803A34A8 000C+04 rc=2 efc=0 .data      __vt__11J3DUClipper                                          */
 void* const __vt__11J3DUClipper[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -163,26 +222,25 @@ void* const __vt__11J3DUClipper[4] = {
 	NULL,
 };
 
-/* 80015544-80015590 004C+00 .text      __sinit_m_Do_lib_cpp                                         */
+/* 80015544-80015590 004C+00 rc=1 efc=1 .text      __sinit_m_Do_lib_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_m_Do_lib_cpp) {
+extern "C" asm void __sinit_m_Do_lib_cpp() {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/__sinit_m_Do_lib_cpp.s"
 }
 #pragma pop
 
 
-/* 80015590-800155D8 0048+00 .text      __dt__11J3DUClipperFv                                        */
+/* 80015590-800155D8 0048+00 rc=2 efc=0 .text      __dt__11J3DUClipperFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DUClipperFv) {
+asm J3DUClipper::~J3DUClipper() {
 	nofralloc
 #include "asm/m_Do/m_Do_lib/__dt__11J3DUClipperFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,10 +6,22 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
+void GFSetGenMode2(char, char, char, char, _GXCullMode);
+
+extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
 SECTION_SDATA extern u8 data_804508A8[4 + 4 /* padding */];
 SECTION_SDATA extern u8 data_804508B0[8];
 
@@ -18,23 +30,24 @@ SECTION_SDATA extern u8 data_804508B0[8];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804508A8-804508B0 0004+04 .sdata     cm2hw$539                                                    */
+/* 804508A8-804508B0 0004+04 rc=1 efc=0 .sdata     cm2hw$539                                                    */
 u8 data_804508A8[8] = {
 	0x00, 0x02, 0x01, 0x03,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802CDDC8-802CDE54 008C+00 .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode                        */
+/* 802CDDC8-802CDE54 008C+00 rc=0 efc=0 .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GFSetGenMode2__FUcUcUcUc11_GXCullMode) {
+asm void GFSetGenMode2(char field_0, char field_1, char field_2, char field_3, _GXCullMode field_4) {
 	nofralloc
 #include "asm/dolphin/gf/GFGeometry/GFSetGenMode2__FUcUcUcUc11_GXCullMode.s"
 }
@@ -42,7 +55,7 @@ ASM_FUNCTION(GFSetGenMode2__FUcUcUcUc11_GXCullMode) {
 
 
 /* ############################################################################################## */
-/* 804508B0-804508B8 0008+00 .sdata     None                                                         */
+/* 804508B0-804508B8 0008+00 rc=2 efc=2 .sdata     None                                                         */
 u8 data_804508B0[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

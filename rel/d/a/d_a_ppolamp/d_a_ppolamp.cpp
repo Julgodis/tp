@@ -6,25 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daPPolamp_c;
+
+struct fopAc_ac_c {
+};
+
+struct daPPolamp_c {
+	~daPPolamp_c();
+	void create();
+	void execute();
+	void draw();
+	void Delete();
+	void setModelMtx();
+	void setPclModelMtx();
+	void createHeap();
+	void moveSwing();
+	void initParam();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daPPolamp_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__11daPPolamp_cFv();
-extern "C" extern void create__11daPPolamp_cFv();
-extern "C" extern void execute__11daPPolamp_cFv();
-extern "C" extern void draw__11daPPolamp_cFv();
-extern "C" extern void Delete__11daPPolamp_cFv();
-extern "C" extern void setModelMtx__11daPPolamp_cFv();
-extern "C" extern void setPclModelMtx__11daPPolamp_cFv();
-extern "C" extern void createHeap__11daPPolamp_cFv();
-extern "C" extern void moveSwing__11daPPolamp_cFv();
-extern "C" extern void initParam__11daPPolamp_cFv();
-extern "C" extern void daPPolamp_create__FP11daPPolamp_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daPPolamp_Delete__FP11daPPolamp_c();
-extern "C" extern void daPPolamp_execute__FP11daPPolamp_c();
-extern "C" extern void daPPolamp_draw__FP11daPPolamp_c();
+void daPPolamp_c_createHeap(fopAc_ac_c*);
+void daPPolamp_create(daPPolamp_c*);
+void daPPolamp_Delete(daPPolamp_c*);
+void daPPolamp_execute(daPPolamp_c*);
+void daPPolamp_draw(daPPolamp_c*);
+
+extern "C" void daPPolamp_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __dt__11daPPolamp_cFv();
+extern "C" void create__11daPPolamp_cFv();
+extern "C" void execute__11daPPolamp_cFv();
+extern "C" void draw__11daPPolamp_cFv();
+extern "C" void Delete__11daPPolamp_cFv();
+extern "C" void setModelMtx__11daPPolamp_cFv();
+extern "C" void setPclModelMtx__11daPPolamp_cFv();
+extern "C" void createHeap__11daPPolamp_cFv();
+extern "C" void moveSwing__11daPPolamp_cFv();
+extern "C" void initParam__11daPPolamp_cFv();
+extern "C" void daPPolamp_create__FP11daPPolamp_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daPPolamp_Delete__FP11daPPolamp_c();
+extern "C" void daPPolamp_execute__FP11daPPolamp_c();
+extern "C" void daPPolamp_draw__FP11daPPolamp_c();
 SECTION_RODATA extern const u8 lit_3757[12];
 SECTION_RODATA extern const u8 lit_3797[8];
 SECTION_RODATA extern const u8 lit_3802[8];
@@ -91,7 +124,9 @@ SECTION_BSS extern u8 data_80D4D3F4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -101,7 +136,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPPolamp_c_createHeap__FP10fopAc_ac_c) {
+asm void daPPolamp_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -112,7 +147,7 @@ ASM_FUNCTION(daPPolamp_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daPPolamp_cFv) {
+asm daPPolamp_c::~daPPolamp_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/__dt__11daPPolamp_cFv.s"
 }
@@ -123,7 +158,7 @@ ASM_FUNCTION(__dt__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daPPolamp_cFv) {
+asm void daPPolamp_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/create__11daPPolamp_cFv.s"
 }
@@ -134,7 +169,7 @@ ASM_FUNCTION(create__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daPPolamp_cFv) {
+asm void daPPolamp_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/execute__11daPPolamp_cFv.s"
 }
@@ -145,7 +180,7 @@ ASM_FUNCTION(execute__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daPPolamp_cFv) {
+asm void daPPolamp_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/draw__11daPPolamp_cFv.s"
 }
@@ -156,7 +191,7 @@ ASM_FUNCTION(draw__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daPPolamp_cFv) {
+asm void daPPolamp_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/Delete__11daPPolamp_cFv.s"
 }
@@ -167,7 +202,7 @@ ASM_FUNCTION(Delete__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__11daPPolamp_cFv) {
+asm void daPPolamp_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/setModelMtx__11daPPolamp_cFv.s"
 }
@@ -178,7 +213,7 @@ ASM_FUNCTION(setModelMtx__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPclModelMtx__11daPPolamp_cFv) {
+asm void daPPolamp_c::setPclModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/setPclModelMtx__11daPPolamp_cFv.s"
 }
@@ -189,7 +224,7 @@ ASM_FUNCTION(setPclModelMtx__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daPPolamp_cFv) {
+asm void daPPolamp_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/createHeap__11daPPolamp_cFv.s"
 }
@@ -200,7 +235,7 @@ ASM_FUNCTION(createHeap__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveSwing__11daPPolamp_cFv) {
+asm void daPPolamp_c::moveSwing() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/moveSwing__11daPPolamp_cFv.s"
 }
@@ -211,7 +246,7 @@ ASM_FUNCTION(moveSwing__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initParam__11daPPolamp_cFv) {
+asm void daPPolamp_c::initParam() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/initParam__11daPPolamp_cFv.s"
 }
@@ -222,7 +257,7 @@ ASM_FUNCTION(initParam__11daPPolamp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPPolamp_create__FP11daPPolamp_c) {
+asm void daPPolamp_create(daPPolamp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_create__FP11daPPolamp_c.s"
 }
@@ -233,7 +268,7 @@ ASM_FUNCTION(daPPolamp_create__FP11daPPolamp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/__dt__12J3DFrameCtrlFv.s"
 }
@@ -244,7 +279,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPPolamp_Delete__FP11daPPolamp_c) {
+asm void daPPolamp_Delete(daPPolamp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_Delete__FP11daPPolamp_c.s"
 }
@@ -255,7 +290,7 @@ ASM_FUNCTION(daPPolamp_Delete__FP11daPPolamp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPPolamp_execute__FP11daPPolamp_c) {
+asm void daPPolamp_execute(daPPolamp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_execute__FP11daPPolamp_c.s"
 }
@@ -266,7 +301,7 @@ ASM_FUNCTION(daPPolamp_execute__FP11daPPolamp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPPolamp_draw__FP11daPPolamp_c) {
+asm void daPPolamp_draw(daPPolamp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ppolamp/d_a_ppolamp/daPPolamp_draw__FP11daPPolamp_c.s"
 }

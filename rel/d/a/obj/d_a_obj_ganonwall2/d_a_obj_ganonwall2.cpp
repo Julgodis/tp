@@ -6,22 +6,48 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjGWall2_c;
+
+struct daObjGWall2_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daObjGWall2_cFv();
-extern "C" extern void setBaseMtx__13daObjGWall2_cFv();
-extern "C" extern void Create__13daObjGWall2_cFv();
-extern "C" extern void CreateHeap__13daObjGWall2_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__13daObjGWall2_cFv();
-extern "C" extern void Execute__13daObjGWall2_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjGWall2_cFv();
-extern "C" extern void Delete__13daObjGWall2_cFv();
-extern "C" extern void daObjGWall2_create1st__FP13daObjGWall2_c();
-extern "C" extern void daObjGWall2_MoveBGDelete__FP13daObjGWall2_c();
-extern "C" extern void daObjGWall2_MoveBGExecute__FP13daObjGWall2_c();
-extern "C" extern void daObjGWall2_MoveBGDraw__FP13daObjGWall2_c();
+extern "C" void Execute__13daObjGWall2_cFPPA3_A4_f();
+void daObjGWall2_create1st(daObjGWall2_c*);
+void daObjGWall2_MoveBGDelete(daObjGWall2_c*);
+void daObjGWall2_MoveBGExecute(daObjGWall2_c*);
+void daObjGWall2_MoveBGDraw(daObjGWall2_c*);
+
+extern "C" void initBaseMtx__13daObjGWall2_cFv();
+extern "C" void setBaseMtx__13daObjGWall2_cFv();
+extern "C" void Create__13daObjGWall2_cFv();
+extern "C" void CreateHeap__13daObjGWall2_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__13daObjGWall2_cFv();
+extern "C" void Execute__13daObjGWall2_cFPPA3_A4_f();
+extern "C" void Draw__13daObjGWall2_cFv();
+extern "C" void Delete__13daObjGWall2_cFv();
+extern "C" void daObjGWall2_create1st__FP13daObjGWall2_c();
+extern "C" void daObjGWall2_MoveBGDelete__FP13daObjGWall2_c();
+extern "C" void daObjGWall2_MoveBGExecute__FP13daObjGWall2_c();
+extern "C" void daObjGWall2_MoveBGDraw__FP13daObjGWall2_c();
 SECTION_RODATA extern const u8 l_idx[96];
 SECTION_RODATA extern const u8 l_color[96];
 SECTION_RODATA extern const u8 lit_3670[4];
@@ -46,7 +72,9 @@ SECTION_DATA extern void*const __vt__13daObjGWall2_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -56,7 +84,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/initBaseMtx__13daObjGWall2_cFv.s"
 }
@@ -67,7 +95,7 @@ ASM_FUNCTION(initBaseMtx__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/setBaseMtx__13daObjGWall2_cFv.s"
 }
@@ -78,7 +106,7 @@ ASM_FUNCTION(setBaseMtx__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/Create__13daObjGWall2_cFv.s"
 }
@@ -89,7 +117,7 @@ ASM_FUNCTION(Create__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/CreateHeap__13daObjGWall2_cFv.s"
 }
@@ -100,7 +128,7 @@ ASM_FUNCTION(CreateHeap__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -111,7 +139,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/create1st__13daObjGWall2_cFv.s"
 }
@@ -122,7 +150,7 @@ ASM_FUNCTION(create1st__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjGWall2_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjGWall2_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/Execute__13daObjGWall2_cFPPA3_A4_f.s"
 }
@@ -133,7 +161,7 @@ ASM_FUNCTION(Execute__13daObjGWall2_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/Draw__13daObjGWall2_cFv.s"
 }
@@ -144,7 +172,7 @@ ASM_FUNCTION(Draw__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjGWall2_cFv) {
+asm void daObjGWall2_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/Delete__13daObjGWall2_cFv.s"
 }
@@ -155,7 +183,7 @@ ASM_FUNCTION(Delete__13daObjGWall2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall2_create1st__FP13daObjGWall2_c) {
+asm void daObjGWall2_create1st(daObjGWall2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/daObjGWall2_create1st__FP13daObjGWall2_c.s"
 }
@@ -166,7 +194,7 @@ ASM_FUNCTION(daObjGWall2_create1st__FP13daObjGWall2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall2_MoveBGDelete__FP13daObjGWall2_c) {
+asm void daObjGWall2_MoveBGDelete(daObjGWall2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/daObjGWall2_MoveBGDelete__FP13daObjGWall2_c.s"
 }
@@ -177,7 +205,7 @@ ASM_FUNCTION(daObjGWall2_MoveBGDelete__FP13daObjGWall2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall2_MoveBGExecute__FP13daObjGWall2_c) {
+asm void daObjGWall2_MoveBGExecute(daObjGWall2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/daObjGWall2_MoveBGExecute__FP13daObjGWall2_c.s"
 }
@@ -188,7 +216,7 @@ ASM_FUNCTION(daObjGWall2_MoveBGExecute__FP13daObjGWall2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall2_MoveBGDraw__FP13daObjGWall2_c) {
+asm void daObjGWall2_MoveBGDraw(daObjGWall2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall2/d_a_obj_ganonwall2/daObjGWall2_MoveBGDraw__FP13daObjGWall2_c.s"
 }

@@ -6,32 +6,118 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) False/False
+/* top-level dependencies (begin J2DScreen) */
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7A8C */ void getFirstChildPane();
+	/* 802F7AC4 */ void getNextChildPane();
+};
+
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 802553EC */ CPaneMgrAlpha();
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 8025546C */ ~CPaneMgrAlpha();
+	/* 802554E0 */ void initiateAlpha(J2DPane*, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 80255658 */ void rateCalc(s16, s16, char);
+	/* 80255758 */ void setAlpha(char);
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+	/* 80255878 */ void alphaAnime(s16, char, char, char);
+	/* 80255964 */ void alphaAnimeLoop(s16, char, char, char);
+	/* 80255A60 */ void childPaneCount(J2DPane*);
+	/* 80255ACC */ void childPaneGetAlpha(J2DPane*);
+	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, char);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
+// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin CPaneMgrAlphaMorf) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgrAlphaMorf) */
+struct CPaneMgrAlphaMorf {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80255CAC */ ~CPaneMgrAlphaMorf();
+	/* 80255D48 */ void initiateAlphaMorf();
+	/* 80255DD0 */ void setBackupAlpha();
+	/* 80255E28 */ void setAlphaMorfRate(f32);
+	/* 80255E98 */ void childPaneBackupAlpha(J2DPane*);
+	/* 80255F28 */ void childPaneSetAlphaMorf(J2DPane*, f32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE548 */ void free(void*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13CPaneMgrAlphaFv();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __dt__13CPaneMgrAlphaFv();
-extern "C" extern void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void isVisible__13CPaneMgrAlphaFv();
-extern "C" extern void rateCalc__13CPaneMgrAlphaFssUc();
-extern "C" extern void setAlpha__13CPaneMgrAlphaFUc();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" extern void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
-extern "C" extern void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc();
-extern "C" extern void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
-extern "C" extern void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
-extern "C" extern void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
-extern "C" extern void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __dt__17CPaneMgrAlphaMorfFv();
-extern "C" extern void initiateAlphaMorf__17CPaneMgrAlphaMorfFv();
-extern "C" extern void setBackupAlpha__17CPaneMgrAlphaMorfFv();
-extern "C" extern void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
-extern "C" extern void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane();
-extern "C" extern void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef();
+
+extern "C" void __ct__13CPaneMgrAlphaFv();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__13CPaneMgrAlphaFv();
+extern "C" void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void rateCalc__13CPaneMgrAlphaFssUc();
+extern "C" void setAlpha__13CPaneMgrAlphaFUc();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
+extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
+extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__17CPaneMgrAlphaMorfFv();
+extern "C" void initiateAlphaMorf__17CPaneMgrAlphaMorfFv();
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
+extern "C" void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane();
+extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef();
 SECTION_DATA extern void*const __vt__17CPaneMgrAlphaMorf[4];
 SECTION_DATA extern void*const __vt__13CPaneMgrAlpha[4];
 SECTION_SDATA2 extern f32 d_pane_d_pane_class_alpha__lit_3692;
@@ -43,23 +129,30 @@ SECTION_SDATA2 extern u8 d_pane_d_pane_class_alpha__lit_3721[4 + 4 /* padding */
 // External References:
 // 
 
-extern "C" extern void mDoExt_getCurrentHeap__Fv();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getFirstChildPane__7J2DPaneFv();
-extern "C" extern void getNextChildPane__7J2DPaneFv();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void mDoExt_getCurrentHeap();
+void operator delete(void*);
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void mDoExt_getCurrentHeap__Fv();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void getFirstChildPane__7J2DPaneFv();
+extern "C" void getNextChildPane__7J2DPaneFv();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C2E18-803C2E28 0010+00 .data      __vt__17CPaneMgrAlphaMorf                                    */
+/* 803C2E18-803C2E28 0010+00 rc=2 efc=0 .data      __vt__17CPaneMgrAlphaMorf                                    */
 void* const __vt__17CPaneMgrAlphaMorf[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -67,7 +160,7 @@ void* const __vt__17CPaneMgrAlphaMorf[4] = {
 	(void*)setAlpha__13CPaneMgrAlphaFUc,
 };
 
-/* 803C2E28-803C2E38 0010+00 .data      __vt__13CPaneMgrAlpha                                        */
+/* 803C2E28-803C2E38 0010+00 rc=3 efc=0 .data      __vt__13CPaneMgrAlpha                                        */
 void* const __vt__13CPaneMgrAlpha[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -75,77 +168,77 @@ void* const __vt__13CPaneMgrAlpha[4] = {
 	(void*)setAlpha__13CPaneMgrAlphaFUc,
 };
 
-/* 802553EC-802553FC 0010+00 .text      __ct__13CPaneMgrAlphaFv                                      */
+/* 802553EC-802553FC 0010+00 rc=2 efc=2 .text      __ct__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13CPaneMgrAlphaFv) {
+asm CPaneMgrAlpha::CPaneMgrAlpha() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__ct__13CPaneMgrAlphaFv.s"
 }
 #pragma pop
 
 
-/* 802553FC-8025546C 0070+00 .text      __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap           */
+/* 802553FC-8025546C 0070+00 rc=10 efc=9 .text      __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap) {
+asm CPaneMgrAlpha::CPaneMgrAlpha(J2DScreen* field_0, u64 field_1, char field_2, JKRExpHeap* field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 8025546C-802554E0 0074+00 .text      __dt__13CPaneMgrAlphaFv                                      */
+/* 8025546C-802554E0 0074+00 rc=3 efc=1 .text      __dt__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13CPaneMgrAlphaFv) {
+asm CPaneMgrAlpha::~CPaneMgrAlpha() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__dt__13CPaneMgrAlphaFv.s"
 }
 #pragma pop
 
 
-/* 802554E0-802555C8 00E8+00 .text      initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap        */
+/* 802554E0-802555C8 00E8+00 rc=1 efc=0 .text      initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap) {
+asm void CPaneMgrAlpha::initiateAlpha(J2DPane* field_0, JKRExpHeap* field_1) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 802555C8-80255608 0040+00 .text      show__13CPaneMgrAlphaFv                                      */
+/* 802555C8-80255608 0040+00 rc=40 efc=40 .text      show__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(show__13CPaneMgrAlphaFv) {
+asm void CPaneMgrAlpha::show() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/show__13CPaneMgrAlphaFv.s"
 }
 #pragma pop
 
 
-/* 80255608-8025564C 0044+00 .text      hide__13CPaneMgrAlphaFv                                      */
+/* 80255608-8025564C 0044+00 rc=46 efc=46 .text      hide__13CPaneMgrAlphaFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hide__13CPaneMgrAlphaFv) {
+asm void CPaneMgrAlpha::hide() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/hide__13CPaneMgrAlphaFv.s"
 }
 #pragma pop
 
 
-/* 8025564C-80255658 000C+00 .text      isVisible__13CPaneMgrAlphaFv                                 */
+/* 8025564C-80255658 000C+00 rc=14 efc=12 .text      isVisible__13CPaneMgrAlphaFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isVisible__13CPaneMgrAlphaFv) {
+asm void CPaneMgrAlpha::isVisible() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/isVisible__13CPaneMgrAlphaFv.s"
 }
@@ -153,29 +246,29 @@ ASM_FUNCTION(isVisible__13CPaneMgrAlphaFv) {
 
 
 /* ############################################################################################## */
-/* 80454EB8-80454EC0 0004+04 .sdata2    @3692                                                        */
+/* 80454EB8-80454EC0 0004+04 rc=1 efc=0 .sdata2    @3692                                                        */
 f32 d_pane_d_pane_class_alpha__lit_3692 = 1.0f;
 /* padding 4 bytes */
 
-/* 80454EC0-80454EC8 0008+00 .sdata2    @3694                                                        */
+/* 80454EC0-80454EC8 0008+00 rc=3 efc=0 .sdata2    @3694                                                        */
 f64 d_pane_d_pane_class_alpha__lit_3694 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80255658-80255758 0100+00 .text      rateCalc__13CPaneMgrAlphaFssUc                               */
+/* 80255658-80255758 0100+00 rc=4 efc=2 .text      rateCalc__13CPaneMgrAlphaFssUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rateCalc__13CPaneMgrAlphaFssUc) {
+asm void CPaneMgrAlpha::rateCalc(s16 field_0, s16 field_1, char field_2) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/rateCalc__13CPaneMgrAlphaFssUc.s"
 }
 #pragma pop
 
 
-/* 80255758-802557D0 0078+00 .text      setAlpha__13CPaneMgrAlphaFUc                                 */
+/* 80255758-802557D0 0078+00 rc=2 efc=0 .text      setAlpha__13CPaneMgrAlphaFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlpha__13CPaneMgrAlphaFUc) {
+asm void CPaneMgrAlpha::setAlpha(char field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/setAlpha__13CPaneMgrAlphaFUc.s"
 }
@@ -183,14 +276,14 @@ ASM_FUNCTION(setAlpha__13CPaneMgrAlphaFUc) {
 
 
 /* ############################################################################################## */
-/* 80454EC8-80454ED0 0008+00 .sdata2    @3708                                                        */
+/* 80454EC8-80454ED0 0008+00 rc=6 efc=0 .sdata2    @3708                                                        */
 f64 lit_3708 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802557D0-80255828 0058+00 .text      setAlphaRate__13CPaneMgrAlphaFf                              */
+/* 802557D0-80255828 0058+00 rc=174 efc=173 .text      setAlphaRate__13CPaneMgrAlphaFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRate__13CPaneMgrAlphaFf) {
+asm void CPaneMgrAlpha::setAlphaRate(f32 field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/setAlphaRate__13CPaneMgrAlphaFf.s"
 }
@@ -198,154 +291,153 @@ ASM_FUNCTION(setAlphaRate__13CPaneMgrAlphaFf) {
 
 
 /* ############################################################################################## */
-/* 80454ED0-80454ED8 0004+04 .sdata2    @3721                                                        */
+/* 80454ED0-80454ED8 0004+04 rc=2 efc=0 .sdata2    @3721                                                        */
 u8 d_pane_d_pane_class_alpha__lit_3721[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80255828-80255878 0050+00 .text      getAlphaRate__13CPaneMgrAlphaFv                              */
+/* 80255828-80255878 0050+00 rc=107 efc=107 .text      getAlphaRate__13CPaneMgrAlphaFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAlphaRate__13CPaneMgrAlphaFv) {
+asm void CPaneMgrAlpha::getAlphaRate() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/getAlphaRate__13CPaneMgrAlphaFv.s"
 }
 #pragma pop
 
 
-/* 80255878-80255964 00EC+00 .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc                          */
+/* 80255878-80255964 00EC+00 rc=31 efc=31 .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alphaAnime__13CPaneMgrAlphaFsUcUcUc) {
+asm void CPaneMgrAlpha::alphaAnime(s16 field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/alphaAnime__13CPaneMgrAlphaFsUcUcUc.s"
 }
 #pragma pop
 
 
-/* 80255964-80255A60 00FC+00 .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc                      */
+/* 80255964-80255A60 00FC+00 rc=0 efc=0 .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc) {
+asm void CPaneMgrAlpha::alphaAnimeLoop(s16 field_0, char field_1, char field_2, char field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc.s"
 }
 #pragma pop
 
 
-/* 80255A60-80255ACC 006C+00 .text      childPaneCount__13CPaneMgrAlphaFP7J2DPane                    */
+/* 80255A60-80255ACC 006C+00 rc=2 efc=1 .text      childPaneCount__13CPaneMgrAlphaFP7J2DPane                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(childPaneCount__13CPaneMgrAlphaFP7J2DPane) {
+asm void CPaneMgrAlpha::childPaneCount(J2DPane* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneCount__13CPaneMgrAlphaFP7J2DPane.s"
 }
 #pragma pop
 
 
-/* 80255ACC-80255B5C 0090+00 .text      childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane                 */
+/* 80255ACC-80255B5C 0090+00 rc=2 efc=1 .text      childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane) {
+asm void CPaneMgrAlpha::childPaneGetAlpha(J2DPane* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane.s"
 }
 #pragma pop
 
 
-/* 80255B5C-80255C68 010C+00 .text      childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc               */
+/* 80255B5C-80255C68 010C+00 rc=2 efc=1 .text      childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc) {
+asm void CPaneMgrAlpha::childPaneSetAlpha(J2DPane* field_0, char field_1) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc.s"
 }
 #pragma pop
 
 
-/* 80255C68-80255CAC 0044+00 .text      __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap       */
+/* 80255C68-80255CAC 0044+00 rc=5 efc=5 .text      __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap) {
+asm CPaneMgrAlphaMorf::CPaneMgrAlphaMorf(J2DScreen* field_0, u64 field_1, char field_2, JKRExpHeap* field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 80255CAC-80255D48 009C+00 .text      __dt__17CPaneMgrAlphaMorfFv                                  */
+/* 80255CAC-80255D48 009C+00 rc=1 efc=0 .text      __dt__17CPaneMgrAlphaMorfFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17CPaneMgrAlphaMorfFv) {
+asm CPaneMgrAlphaMorf::~CPaneMgrAlphaMorf() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__dt__17CPaneMgrAlphaMorfFv.s"
 }
 #pragma pop
 
 
-/* 80255D48-80255DD0 0088+00 .text      initiateAlphaMorf__17CPaneMgrAlphaMorfFv                     */
+/* 80255D48-80255DD0 0088+00 rc=1 efc=0 .text      initiateAlphaMorf__17CPaneMgrAlphaMorfFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initiateAlphaMorf__17CPaneMgrAlphaMorfFv) {
+asm void CPaneMgrAlphaMorf::initiateAlphaMorf() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/initiateAlphaMorf__17CPaneMgrAlphaMorfFv.s"
 }
 #pragma pop
 
 
-/* 80255DD0-80255E28 0058+00 .text      setBackupAlpha__17CPaneMgrAlphaMorfFv                        */
+/* 80255DD0-80255E28 0058+00 rc=4 efc=3 .text      setBackupAlpha__17CPaneMgrAlphaMorfFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBackupAlpha__17CPaneMgrAlphaMorfFv) {
+asm void CPaneMgrAlphaMorf::setBackupAlpha() {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/setBackupAlpha__17CPaneMgrAlphaMorfFv.s"
 }
 #pragma pop
 
 
-/* 80255E28-80255E98 0070+00 .text      setAlphaMorfRate__17CPaneMgrAlphaMorfFf                      */
+/* 80255E28-80255E98 0070+00 rc=3 efc=3 .text      setAlphaMorfRate__17CPaneMgrAlphaMorfFf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaMorfRate__17CPaneMgrAlphaMorfFf) {
+asm void CPaneMgrAlphaMorf::setAlphaMorfRate(f32 field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/setAlphaMorfRate__17CPaneMgrAlphaMorfFf.s"
 }
 #pragma pop
 
 
-/* 80255E98-80255F28 0090+00 .text      childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane          */
+/* 80255E98-80255F28 0090+00 rc=1 efc=0 .text      childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane) {
+asm void CPaneMgrAlphaMorf::childPaneBackupAlpha(J2DPane* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane.s"
 }
 #pragma pop
 
 
-/* 80255F28-80256018 00F0+00 .text      childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef        */
+/* 80255F28-80256018 00F0+00 rc=1 efc=0 .text      childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef) {
+asm void CPaneMgrAlphaMorf::childPaneSetAlphaMorf(J2DPane* field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

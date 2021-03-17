@@ -9,16 +9,23 @@
 // Forward References:
 // 
 
-extern "C" extern void _prolog();
-extern "C" extern void _epilog();
-extern "C" extern void _unresolved();
+extern "C" void _prolog();
+extern "C" void _epilog();
+extern "C" void _unresolved();
+
+extern "C" void _prolog();
+extern "C" void _epilog();
+extern "C" void _unresolved();
 
 // 
 // External References:
 // 
 
-extern "C" extern void ModuleProlog();
-extern "C" extern void ModuleEpilog();
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
 
 // 
 // Declarations:
@@ -28,7 +35,7 @@ extern "C" extern void ModuleEpilog();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_prolog) {
+extern "C" asm void _prolog() {
 	nofralloc
 #include "asm/rel/f_pc/f_pc_profile_lst/executor/_prolog.s"
 }
@@ -39,7 +46,7 @@ ASM_FUNCTION(_prolog) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_epilog) {
+extern "C" asm void _epilog() {
 	nofralloc
 #include "asm/rel/f_pc/f_pc_profile_lst/executor/_epilog.s"
 }
@@ -50,11 +57,10 @@ ASM_FUNCTION(_epilog) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_unresolved) {
+extern "C" asm void _unresolved() {
 	nofralloc
 #include "asm/rel/f_pc/f_pc_profile_lst/executor/_unresolved.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

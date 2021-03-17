@@ -6,21 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagSpinner_c;
+
+struct fopAc_ac_c {
+};
+
+struct daTagSpinner_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool CreateHeap();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void search_spinner_sub__FPvPv();
-extern "C" extern void initBaseMtx__14daTagSpinner_cFv();
-extern "C" extern void setBaseMtx__14daTagSpinner_cFv();
-extern "C" extern void Create__14daTagSpinner_cFv();
-extern "C" extern void CreateHeap__14daTagSpinner_cFv();
-extern "C" extern void create__14daTagSpinner_cFv();
-extern "C" extern void execute__14daTagSpinner_cFv();
-extern "C" extern void _delete__14daTagSpinner_cFv();
-extern "C" extern void daTagSpinner_Execute__FP14daTagSpinner_c();
-extern "C" extern void daTagSpinner_Delete__FP14daTagSpinner_c();
-extern "C" extern void daTagSpinner_Create__FP10fopAc_ac_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void search_spinner_sub(void*, void*);
+void daTagSpinner_Execute(daTagSpinner_c*);
+void daTagSpinner_Delete(daTagSpinner_c*);
+void daTagSpinner_Create(fopAc_ac_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void search_spinner_sub__FPvPv();
+extern "C" void initBaseMtx__14daTagSpinner_cFv();
+extern "C" void setBaseMtx__14daTagSpinner_cFv();
+extern "C" void Create__14daTagSpinner_cFv();
+extern "C" bool CreateHeap__14daTagSpinner_cFv();
+extern "C" void create__14daTagSpinner_cFv();
+extern "C" void execute__14daTagSpinner_cFv();
+extern "C" bool _delete__14daTagSpinner_cFv();
+extern "C" void daTagSpinner_Execute__FP14daTagSpinner_c();
+extern "C" void daTagSpinner_Delete__FP14daTagSpinner_c();
+extern "C" void daTagSpinner_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3689[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3690[8];
 SECTION_RODATA extern const u8 lit_3691[8];
@@ -33,7 +59,9 @@ SECTION_DATA extern u8 g_profile_Tag_Spinner[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -43,7 +71,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -54,7 +82,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_spinner_sub__FPvPv) {
+asm void search_spinner_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/search_spinner_sub__FPvPv.s"
 }
@@ -65,7 +93,7 @@ ASM_FUNCTION(search_spinner_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daTagSpinner_cFv) {
+asm void daTagSpinner_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/initBaseMtx__14daTagSpinner_cFv.s"
 }
@@ -76,7 +104,7 @@ ASM_FUNCTION(initBaseMtx__14daTagSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daTagSpinner_cFv) {
+asm void daTagSpinner_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/setBaseMtx__14daTagSpinner_cFv.s"
 }
@@ -87,7 +115,7 @@ ASM_FUNCTION(setBaseMtx__14daTagSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daTagSpinner_cFv) {
+asm void daTagSpinner_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/Create__14daTagSpinner_cFv.s"
 }
@@ -95,21 +123,16 @@ ASM_FUNCTION(Create__14daTagSpinner_cFv) {
 
 
 /* 80D6196C-80D61974 0008+00 .text      CreateHeap__14daTagSpinner_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daTagSpinner_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/CreateHeap__14daTagSpinner_cFv.s"
+bool daTagSpinner_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61974-80D61A00 008C+00 .text      create__14daTagSpinner_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagSpinner_cFv) {
+asm void daTagSpinner_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/func_80D61974.s"
 }
@@ -120,7 +143,7 @@ ASM_FUNCTION(create__14daTagSpinner_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagSpinner_cFv) {
+asm void daTagSpinner_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/execute__14daTagSpinner_cFv.s"
 }
@@ -128,21 +151,16 @@ ASM_FUNCTION(execute__14daTagSpinner_cFv) {
 
 
 /* 80D61AB4-80D61ABC 0008+00 .text      _delete__14daTagSpinner_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daTagSpinner_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/_delete__14daTagSpinner_cFv.s"
+bool daTagSpinner_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61ABC-80D61ADC 0020+00 .text      daTagSpinner_Execute__FP14daTagSpinner_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpinner_Execute__FP14daTagSpinner_c) {
+asm void daTagSpinner_Execute(daTagSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/daTagSpinner_Execute__FP14daTagSpinner_c.s"
 }
@@ -153,7 +171,7 @@ ASM_FUNCTION(daTagSpinner_Execute__FP14daTagSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpinner_Delete__FP14daTagSpinner_c) {
+asm void daTagSpinner_Delete(daTagSpinner_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/daTagSpinner_Delete__FP14daTagSpinner_c.s"
 }
@@ -164,7 +182,7 @@ ASM_FUNCTION(daTagSpinner_Delete__FP14daTagSpinner_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSpinner_Create__FP10fopAc_ac_c) {
+asm void daTagSpinner_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spinner/d_a_tag_spinner/daTagSpinner_Create__FP10fopAc_ac_c.s"
 }

@@ -6,69 +6,94 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build base_process_class (base_process_class) False/False
+/* top-level dependencies (begin base_process_class) */
+/* top-level dependencies (end base_process_class) */
+struct base_process_class {
+};
+
+// build create_request (create_request) False/False
+/* top-level dependencies (begin create_request) */
+/* top-level dependencies (end create_request) */
+struct create_request {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcCt_IsCreatingByID__FUi();
-extern "C" extern void fpcCt_IsDoing__FP18base_process_class();
-extern "C" extern void fpcCt_Abort__FP18base_process_class();
-extern "C" extern void fpcCt_Handler__Fv();
+void fpcCt_IsCreatingByID(s32);
+void fpcCt_IsDoing(base_process_class*);
+void fpcCt_Abort(base_process_class*);
+void fpcCt_Handler();
+
+extern "C" void fpcCt_IsCreatingByID__FUi();
+extern "C" void fpcCt_IsDoing__FP18base_process_class();
+extern "C" void fpcCt_Abort__FP18base_process_class();
+extern "C" void fpcCt_Handler__Fv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcCtRq_IsCreatingByID__FUi();
-extern "C" extern void fpcCtRq_Cancel__FP14create_request();
-extern "C" extern void fpcCtRq_IsDoing__FP14create_request();
-extern "C" extern void fpcCtRq_Handler__Fv();
+void fpcCtRq_IsCreatingByID(s32);
+void fpcCtRq_Cancel(create_request*);
+void fpcCtRq_IsDoing(create_request*);
+void fpcCtRq_Handler();
+
+extern "C" void fpcCtRq_IsCreatingByID__FUi();
+extern "C" void fpcCtRq_Cancel__FP14create_request();
+extern "C" void fpcCtRq_IsDoing__FP14create_request();
+extern "C" void fpcCtRq_Handler__Fv();
 
 // 
 // Declarations:
 // 
 
-/* 80020EA8-80020EC8 0020+00 .text      fpcCt_IsCreatingByID__FUi                                    */
+/* 80020EA8-80020EC8 0020+00 rc=1 efc=1 .text      fpcCt_IsCreatingByID__FUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcCt_IsCreatingByID__FUi) {
+asm void fpcCt_IsCreatingByID(s32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_IsCreatingByID__FUi.s"
 }
 #pragma pop
 
 
-/* 80020EC8-80020EEC 0024+00 .text      fpcCt_IsDoing__FP18base_process_class                        */
+/* 80020EC8-80020EEC 0024+00 rc=1 efc=1 .text      fpcCt_IsDoing__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcCt_IsDoing__FP18base_process_class) {
+asm void fpcCt_IsDoing(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_IsDoing__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80020EEC-80020F10 0024+00 .text      fpcCt_Abort__FP18base_process_class                          */
+/* 80020EEC-80020F10 0024+00 rc=1 efc=1 .text      fpcCt_Abort__FP18base_process_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcCt_Abort__FP18base_process_class) {
+asm void fpcCt_Abort(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_Abort__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80020F10-80020F30 0020+00 .text      fpcCt_Handler__Fv                                            */
+/* 80020F10-80020F30 0020+00 rc=1 efc=1 .text      fpcCt_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcCt_Handler__Fv) {
+asm void fpcCt_Handler() {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_Handler__Fv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

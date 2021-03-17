@@ -6,125 +6,323 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+
+struct daNpc_Besu_c {
+	~daNpc_Besu_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void getType();
+	void isDelete();
+	void reset();
+	void chkNurse();
+	void chkBesu3();
+	void afterJntAnm(s32);
+	void setParam();
+	void checkChangeEvt();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void beforeMove();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void drawOtherMdl();
+	void setCupAnm(s32, s32, f32);
+	void afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+	void selectAction();
+	void mop(s32, s32);
+	void cutConversationAboutSaru(s32);
+	void cutConversationAboutPachinko(s32);
+	void cutConversationAboutWoodSwd(s32);
+	void cutSwdTutorial(s32);
+	void cutFindMonkey(s32);
+	void cutGetWoodSwd(s32);
+	void cutCacaricoConversation(s32);
+	void cutSurprise(s32);
+	void cutConversationInHotel(s32);
+	void cutConversationAboutDeathMt(s32);
+	void cutConversationAboutGoron(s32);
+	void cutNurse(s32);
+	void cutClothTry(s32);
+	void cutThankYou(s32);
+	void wait(void*);
+	void swdTutorial(void*);
+	void nurse(void*);
+	void giveHotWater(void*);
+	void talk(void*);
+	s32 getEyeballMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+	bool getEyeballLMaterialNo();
+	bool getEyeballRMaterialNo();
+	bool evtEndProc();
+	void afterMoved();
+	bool chkXYItems();
+	void decTmr();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+	daNpcT_ActorMngr_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpc_Besu_Param_c {
+	~daNpc_Besu_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__12daNpc_Besu_cFv();
-extern "C" extern void create__12daNpc_Besu_cFv();
-extern "C" extern void CreateHeap__12daNpc_Besu_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__12daNpc_Besu_cFv();
-extern "C" extern void Execute__12daNpc_Besu_cFv();
-extern "C" extern void Draw__12daNpc_Besu_cFv();
-extern "C" extern void createHeapCallBack__12daNpc_Besu_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__12daNpc_Besu_cFP8J3DJointi();
-extern "C" extern void getType__12daNpc_Besu_cFv();
-extern "C" extern void isDelete__12daNpc_Besu_cFv();
-extern "C" extern void reset__12daNpc_Besu_cFv();
-extern "C" extern void chkNurse__12daNpc_Besu_cFv();
-extern "C" extern void chkBesu3__12daNpc_Besu_cFv();
-extern "C" extern void afterJntAnm__12daNpc_Besu_cFi();
-extern "C" extern void setParam__12daNpc_Besu_cFv();
-extern "C" extern void checkChangeEvt__12daNpc_Besu_cFv();
-extern "C" extern void setAfterTalkMotion__12daNpc_Besu_cFv();
-extern "C" extern void srchActors__12daNpc_Besu_cFv();
-extern "C" extern void evtTalk__12daNpc_Besu_cFv();
-extern "C" extern void evtCutProc__12daNpc_Besu_cFv();
-extern "C" extern void action__12daNpc_Besu_cFv();
-extern "C" extern void beforeMove__12daNpc_Besu_cFv();
-extern "C" extern void setAttnPos__12daNpc_Besu_cFv();
-extern "C" extern void setCollision__12daNpc_Besu_cFv();
-extern "C" extern void drawDbgInfo__12daNpc_Besu_cFv();
-extern "C" extern void drawOtherMdl__12daNpc_Besu_cFv();
-extern "C" extern void setCupAnm__12daNpc_Besu_cFiif();
-extern "C" extern void afterSetMotionAnm__12daNpc_Besu_cFiifi();
-extern "C" extern void getFaceMotionAnm__12daNpc_Besu_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void changeAnm__12daNpc_Besu_cFPiPi();
-extern "C" extern void changeBck__12daNpc_Besu_cFPiPi();
-extern "C" extern void changeBtp__12daNpc_Besu_cFPiPi();
-extern "C" extern void changeBtk__12daNpc_Besu_cFPiPi();
-extern "C" extern void selectAction__12daNpc_Besu_cFv();
-extern "C" extern void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
-extern "C" extern void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
-extern "C" extern void mop__12daNpc_Besu_cFii();
-extern "C" extern void cutConversationAboutSaru__12daNpc_Besu_cFi();
-extern "C" extern void cutConversationAboutPachinko__12daNpc_Besu_cFi();
-extern "C" extern void cutConversationAboutWoodSwd__12daNpc_Besu_cFi();
-extern "C" extern void cutSwdTutorial__12daNpc_Besu_cFi();
-extern "C" extern void cutFindMonkey__12daNpc_Besu_cFi();
-extern "C" extern void cutGetWoodSwd__12daNpc_Besu_cFi();
-extern "C" extern void cutCacaricoConversation__12daNpc_Besu_cFi();
-extern "C" extern void cutSurprise__12daNpc_Besu_cFi();
-extern "C" extern void cutConversationInHotel__12daNpc_Besu_cFi();
-extern "C" extern void cutConversationAboutDeathMt__12daNpc_Besu_cFi();
-extern "C" extern void cutConversationAboutGoron__12daNpc_Besu_cFi();
-extern "C" extern void cutNurse__12daNpc_Besu_cFi();
-extern "C" extern void cutClothTry__12daNpc_Besu_cFi();
-extern "C" extern void cutThankYou__12daNpc_Besu_cFi();
-extern "C" extern void wait__12daNpc_Besu_cFPv();
-extern "C" extern void swdTutorial__12daNpc_Besu_cFPv();
-extern "C" extern void nurse__12daNpc_Besu_cFPv();
-extern "C" extern void giveHotWater__12daNpc_Besu_cFPv();
-extern "C" extern void talk__12daNpc_Besu_cFPv();
-extern "C" extern void daNpc_Besu_Create__FPv();
-extern "C" extern void daNpc_Besu_Delete__FPv();
-extern "C" extern void daNpc_Besu_Execute__FPv();
-extern "C" extern void daNpc_Besu_Draw__FPv();
-extern "C" extern void daNpc_Besu_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getFootLJointNo__8daNpcT_cFv();
-extern "C" extern void getFootRJointNo__8daNpcT_cFv();
-extern "C" extern void getEyeballLMaterialNo__8daNpcT_cFv();
-extern "C" extern void getEyeballRMaterialNo__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void afterMoved__8daNpcT_cFv();
-extern "C" extern void chkXYItems__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void func_8053E334();
-extern "C" extern void func_8053E350();
-extern "C" extern void __sinit_d_a_npc_besu_cpp();
-extern "C" extern void __ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void getEyeballMaterialNo__12daNpc_Besu_cFv();
-extern "C" extern void getHeadJointNo__12daNpc_Besu_cFv();
-extern "C" extern void getNeckJointNo__12daNpc_Besu_cFv();
-extern "C" extern void getBackboneJointNo__12daNpc_Besu_cFv();
-extern "C" extern void checkChangeJoint__12daNpc_Besu_cFi();
-extern "C" extern void checkRemoveJoint__12daNpc_Besu_cFi();
-extern "C" extern void __dt__18daNpc_Besu_Param_cFv();
-extern "C" extern void func_8053E730();
-extern "C" extern void func_8053E738();
+extern "C" void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
+extern "C" void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
+void daNpc_Besu_Create(void*);
+void daNpc_Besu_Delete(void*);
+void daNpc_Besu_Execute(void*);
+void daNpc_Besu_Draw(void*);
+bool daNpc_Besu_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void func_8053E334();
+extern "C" void func_8053E350();
+extern "C" void __sinit_d_a_npc_besu_cpp();
+extern "C" void __ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_8053E730();
+extern "C" void func_8053E738();
+
+extern "C" void __dt__12daNpc_Besu_cFv();
+extern "C" void create__12daNpc_Besu_cFv();
+extern "C" void CreateHeap__12daNpc_Besu_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__12daNpc_Besu_cFv();
+extern "C" void Execute__12daNpc_Besu_cFv();
+extern "C" void Draw__12daNpc_Besu_cFv();
+extern "C" void createHeapCallBack__12daNpc_Besu_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__12daNpc_Besu_cFP8J3DJointi();
+extern "C" void getType__12daNpc_Besu_cFv();
+extern "C" void isDelete__12daNpc_Besu_cFv();
+extern "C" void reset__12daNpc_Besu_cFv();
+extern "C" void chkNurse__12daNpc_Besu_cFv();
+extern "C" void chkBesu3__12daNpc_Besu_cFv();
+extern "C" void afterJntAnm__12daNpc_Besu_cFi();
+extern "C" void setParam__12daNpc_Besu_cFv();
+extern "C" void checkChangeEvt__12daNpc_Besu_cFv();
+extern "C" void setAfterTalkMotion__12daNpc_Besu_cFv();
+extern "C" void srchActors__12daNpc_Besu_cFv();
+extern "C" void evtTalk__12daNpc_Besu_cFv();
+extern "C" void evtCutProc__12daNpc_Besu_cFv();
+extern "C" void action__12daNpc_Besu_cFv();
+extern "C" void beforeMove__12daNpc_Besu_cFv();
+extern "C" void setAttnPos__12daNpc_Besu_cFv();
+extern "C" void setCollision__12daNpc_Besu_cFv();
+extern "C" bool drawDbgInfo__12daNpc_Besu_cFv();
+extern "C" void drawOtherMdl__12daNpc_Besu_cFv();
+extern "C" void setCupAnm__12daNpc_Besu_cFiif();
+extern "C" void afterSetMotionAnm__12daNpc_Besu_cFiifi();
+extern "C" void getFaceMotionAnm__12daNpc_Besu_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void changeAnm__12daNpc_Besu_cFPiPi();
+extern "C" void changeBck__12daNpc_Besu_cFPiPi();
+extern "C" void changeBtp__12daNpc_Besu_cFPiPi();
+extern "C" void changeBtk__12daNpc_Besu_cFPiPi();
+extern "C" void selectAction__12daNpc_Besu_cFv();
+extern "C" void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
+extern "C" void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i();
+extern "C" void mop__12daNpc_Besu_cFii();
+extern "C" void cutConversationAboutSaru__12daNpc_Besu_cFi();
+extern "C" void cutConversationAboutPachinko__12daNpc_Besu_cFi();
+extern "C" void cutConversationAboutWoodSwd__12daNpc_Besu_cFi();
+extern "C" void cutSwdTutorial__12daNpc_Besu_cFi();
+extern "C" void cutFindMonkey__12daNpc_Besu_cFi();
+extern "C" void cutGetWoodSwd__12daNpc_Besu_cFi();
+extern "C" void cutCacaricoConversation__12daNpc_Besu_cFi();
+extern "C" void cutSurprise__12daNpc_Besu_cFi();
+extern "C" void cutConversationInHotel__12daNpc_Besu_cFi();
+extern "C" void cutConversationAboutDeathMt__12daNpc_Besu_cFi();
+extern "C" void cutConversationAboutGoron__12daNpc_Besu_cFi();
+extern "C" void cutNurse__12daNpc_Besu_cFi();
+extern "C" void cutClothTry__12daNpc_Besu_cFi();
+extern "C" void cutThankYou__12daNpc_Besu_cFi();
+extern "C" void wait__12daNpc_Besu_cFPv();
+extern "C" void swdTutorial__12daNpc_Besu_cFPv();
+extern "C" void nurse__12daNpc_Besu_cFPv();
+extern "C" void giveHotWater__12daNpc_Besu_cFPv();
+extern "C" void talk__12daNpc_Besu_cFPv();
+extern "C" void daNpc_Besu_Create__FPv();
+extern "C" void daNpc_Besu_Delete__FPv();
+extern "C" void daNpc_Besu_Execute__FPv();
+extern "C" void daNpc_Besu_Draw__FPv();
+extern "C" bool daNpc_Besu_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void func_8053E334();
+extern "C" void func_8053E350();
+extern "C" void __sinit_d_a_npc_besu_cpp();
+extern "C" void __ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" s32 getEyeballMaterialNo__12daNpc_Besu_cFv();
+extern "C" s32 getHeadJointNo__12daNpc_Besu_cFv();
+extern "C" s32 getNeckJointNo__12daNpc_Besu_cFv();
+extern "C" bool getBackboneJointNo__12daNpc_Besu_cFv();
+extern "C" void checkChangeJoint__12daNpc_Besu_cFi();
+extern "C" void checkRemoveJoint__12daNpc_Besu_cFi();
+extern "C" void __dt__18daNpc_Besu_Param_cFv();
+extern "C" void func_8053E730();
+extern "C" void func_8053E738();
 SECTION_RODATA extern const u8 m__18daNpc_Besu_Param_c[144];
 SECTION_RODATA extern const u8 data_8053E7E4[76];
 SECTION_RODATA extern const u32 lit_4162;
@@ -246,8 +444,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -257,7 +458,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daNpc_Besu_cFv) {
+asm daNpc_Besu_c::~daNpc_Besu_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__12daNpc_Besu_cFv.s"
 }
@@ -268,7 +469,7 @@ ASM_FUNCTION(__dt__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/create__12daNpc_Besu_cFv.s"
 }
@@ -279,7 +480,7 @@ ASM_FUNCTION(create__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/CreateHeap__12daNpc_Besu_cFv.s"
 }
@@ -290,7 +491,7 @@ ASM_FUNCTION(CreateHeap__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -301,7 +502,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -312,7 +513,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__14J3DTevColorAnmFv.s"
 }
@@ -323,7 +524,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__14J3DTevColorAnmFv.s"
 }
@@ -334,7 +535,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__11J3DTexNoAnmFv.s"
 }
@@ -345,7 +546,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__11J3DTexNoAnmFv.s"
 }
@@ -356,7 +557,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -367,7 +568,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -378,7 +579,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__14J3DMatColorAnmFv.s"
 }
@@ -389,7 +590,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__14J3DMatColorAnmFv.s"
 }
@@ -400,7 +601,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/Delete__12daNpc_Besu_cFv.s"
 }
@@ -411,7 +612,7 @@ ASM_FUNCTION(Delete__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/Execute__12daNpc_Besu_cFv.s"
 }
@@ -422,7 +623,7 @@ ASM_FUNCTION(Execute__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/Draw__12daNpc_Besu_cFv.s"
 }
@@ -433,7 +634,7 @@ ASM_FUNCTION(Draw__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__12daNpc_Besu_cFP10fopAc_ac_c) {
+asm void daNpc_Besu_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/createHeapCallBack__12daNpc_Besu_cFP10fopAc_ac_c.s"
 }
@@ -444,7 +645,7 @@ ASM_FUNCTION(createHeapCallBack__12daNpc_Besu_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__12daNpc_Besu_cFP8J3DJointi) {
+asm void daNpc_Besu_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/ctrlJointCallBack__12daNpc_Besu_cFP8J3DJointi.s"
 }
@@ -455,7 +656,7 @@ ASM_FUNCTION(ctrlJointCallBack__12daNpc_Besu_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getType__12daNpc_Besu_cFv.s"
 }
@@ -466,7 +667,7 @@ ASM_FUNCTION(getType__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/isDelete__12daNpc_Besu_cFv.s"
 }
@@ -477,7 +678,7 @@ ASM_FUNCTION(isDelete__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/reset__12daNpc_Besu_cFv.s"
 }
@@ -488,7 +689,7 @@ ASM_FUNCTION(reset__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkNurse__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::chkNurse() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/chkNurse__12daNpc_Besu_cFv.s"
 }
@@ -499,7 +700,7 @@ ASM_FUNCTION(chkNurse__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkBesu3__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::chkBesu3() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/chkBesu3__12daNpc_Besu_cFv.s"
 }
@@ -510,7 +711,7 @@ ASM_FUNCTION(chkBesu3__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::afterJntAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/afterJntAnm__12daNpc_Besu_cFi.s"
 }
@@ -521,7 +722,7 @@ ASM_FUNCTION(afterJntAnm__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setParam__12daNpc_Besu_cFv.s"
 }
@@ -532,7 +733,7 @@ ASM_FUNCTION(setParam__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::checkChangeEvt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/checkChangeEvt__12daNpc_Besu_cFv.s"
 }
@@ -543,7 +744,7 @@ ASM_FUNCTION(checkChangeEvt__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setAfterTalkMotion__12daNpc_Besu_cFv.s"
 }
@@ -554,7 +755,7 @@ ASM_FUNCTION(setAfterTalkMotion__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActors__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::srchActors() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/srchActors__12daNpc_Besu_cFv.s"
 }
@@ -565,7 +766,7 @@ ASM_FUNCTION(srchActors__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/evtTalk__12daNpc_Besu_cFv.s"
 }
@@ -576,7 +777,7 @@ ASM_FUNCTION(evtTalk__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/evtCutProc__12daNpc_Besu_cFv.s"
 }
@@ -587,7 +788,7 @@ ASM_FUNCTION(evtCutProc__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/action__12daNpc_Besu_cFv.s"
 }
@@ -598,7 +799,7 @@ ASM_FUNCTION(action__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/beforeMove__12daNpc_Besu_cFv.s"
 }
@@ -609,7 +810,7 @@ ASM_FUNCTION(beforeMove__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setAttnPos__12daNpc_Besu_cFv.s"
 }
@@ -620,7 +821,7 @@ ASM_FUNCTION(setAttnPos__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setCollision__12daNpc_Besu_cFv.s"
 }
@@ -628,21 +829,16 @@ ASM_FUNCTION(setCollision__12daNpc_Besu_cFv) {
 
 
 /* 80539494-8053949C 0008+00 .text      drawDbgInfo__12daNpc_Besu_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__12daNpc_Besu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/drawDbgInfo__12daNpc_Besu_cFv.s"
+bool daNpc_Besu_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8053949C-805395F4 0158+00 .text      drawOtherMdl__12daNpc_Besu_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::drawOtherMdl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/drawOtherMdl__12daNpc_Besu_cFv.s"
 }
@@ -653,7 +849,7 @@ ASM_FUNCTION(drawOtherMdl__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCupAnm__12daNpc_Besu_cFiif) {
+asm void daNpc_Besu_c::setCupAnm(s32 field_0, s32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setCupAnm__12daNpc_Besu_cFiif.s"
 }
@@ -664,7 +860,7 @@ ASM_FUNCTION(setCupAnm__12daNpc_Besu_cFiif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__12daNpc_Besu_cFiifi) {
+asm void daNpc_Besu_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/afterSetMotionAnm__12daNpc_Besu_cFiifi.s"
 }
@@ -675,7 +871,7 @@ ASM_FUNCTION(afterSetMotionAnm__12daNpc_Besu_cFiifi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__12daNpc_Besu_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpc_Besu_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getFaceMotionAnm__12daNpc_Besu_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -686,7 +882,7 @@ ASM_FUNCTION(getFaceMotionAnm__12daNpc_Besu_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__12daNpc_Besu_cFPiPi) {
+asm void daNpc_Besu_c::changeAnm(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/changeAnm__12daNpc_Besu_cFPiPi.s"
 }
@@ -697,7 +893,7 @@ ASM_FUNCTION(changeAnm__12daNpc_Besu_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeBck__12daNpc_Besu_cFPiPi) {
+asm void daNpc_Besu_c::changeBck(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/changeBck__12daNpc_Besu_cFPiPi.s"
 }
@@ -708,7 +904,7 @@ ASM_FUNCTION(changeBck__12daNpc_Besu_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__12daNpc_Besu_cFPiPi) {
+asm void daNpc_Besu_c::changeBtp(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/changeBtp__12daNpc_Besu_cFPiPi.s"
 }
@@ -719,7 +915,7 @@ ASM_FUNCTION(changeBtp__12daNpc_Besu_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__12daNpc_Besu_cFPiPi) {
+asm void daNpc_Besu_c::changeBtk(s32* field_0, s32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/changeBtk__12daNpc_Besu_cFPiPi.s"
 }
@@ -730,7 +926,7 @@ ASM_FUNCTION(changeBtk__12daNpc_Besu_cFPiPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__12daNpc_Besu_cFv) {
+asm void daNpc_Besu_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/selectAction__12daNpc_Besu_cFv.s"
 }
@@ -741,7 +937,7 @@ ASM_FUNCTION(selectAction__12daNpc_Besu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i) {
+extern "C" asm void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i.s"
 }
@@ -752,7 +948,7 @@ ASM_FUNCTION(chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i) {
+extern "C" asm void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i.s"
 }
@@ -763,7 +959,7 @@ ASM_FUNCTION(setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mop__12daNpc_Besu_cFii) {
+asm void daNpc_Besu_c::mop(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/mop__12daNpc_Besu_cFii.s"
 }
@@ -774,7 +970,7 @@ ASM_FUNCTION(mop__12daNpc_Besu_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutSaru__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationAboutSaru(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationAboutSaru__12daNpc_Besu_cFi.s"
 }
@@ -785,7 +981,7 @@ ASM_FUNCTION(cutConversationAboutSaru__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutPachinko__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationAboutPachinko(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationAboutPachinko__12daNpc_Besu_cFi.s"
 }
@@ -796,7 +992,7 @@ ASM_FUNCTION(cutConversationAboutPachinko__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutWoodSwd__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationAboutWoodSwd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationAboutWoodSwd__12daNpc_Besu_cFi.s"
 }
@@ -807,7 +1003,7 @@ ASM_FUNCTION(cutConversationAboutWoodSwd__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutSwdTutorial__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutSwdTutorial(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutSwdTutorial__12daNpc_Besu_cFi.s"
 }
@@ -818,7 +1014,7 @@ ASM_FUNCTION(cutSwdTutorial__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutFindMonkey__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutFindMonkey(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutFindMonkey__12daNpc_Besu_cFi.s"
 }
@@ -829,7 +1025,7 @@ ASM_FUNCTION(cutFindMonkey__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutGetWoodSwd__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutGetWoodSwd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutGetWoodSwd__12daNpc_Besu_cFi.s"
 }
@@ -840,7 +1036,7 @@ ASM_FUNCTION(cutGetWoodSwd__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutCacaricoConversation__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutCacaricoConversation(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutCacaricoConversation__12daNpc_Besu_cFi.s"
 }
@@ -851,7 +1047,7 @@ ASM_FUNCTION(cutCacaricoConversation__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutSurprise__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutSurprise(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutSurprise__12daNpc_Besu_cFi.s"
 }
@@ -862,7 +1058,7 @@ ASM_FUNCTION(cutSurprise__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationInHotel__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationInHotel(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationInHotel__12daNpc_Besu_cFi.s"
 }
@@ -873,7 +1069,7 @@ ASM_FUNCTION(cutConversationInHotel__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutDeathMt__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationAboutDeathMt(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationAboutDeathMt__12daNpc_Besu_cFi.s"
 }
@@ -884,7 +1080,7 @@ ASM_FUNCTION(cutConversationAboutDeathMt__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutGoron__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutConversationAboutGoron(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutConversationAboutGoron__12daNpc_Besu_cFi.s"
 }
@@ -895,7 +1091,7 @@ ASM_FUNCTION(cutConversationAboutGoron__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutNurse__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutNurse(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutNurse__12daNpc_Besu_cFi.s"
 }
@@ -906,7 +1102,7 @@ ASM_FUNCTION(cutNurse__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutClothTry__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutClothTry(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutClothTry__12daNpc_Besu_cFi.s"
 }
@@ -917,7 +1113,7 @@ ASM_FUNCTION(cutClothTry__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutThankYou__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::cutThankYou(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/cutThankYou__12daNpc_Besu_cFi.s"
 }
@@ -928,7 +1124,7 @@ ASM_FUNCTION(cutThankYou__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__12daNpc_Besu_cFPv) {
+asm void daNpc_Besu_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/wait__12daNpc_Besu_cFPv.s"
 }
@@ -939,7 +1135,7 @@ ASM_FUNCTION(wait__12daNpc_Besu_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(swdTutorial__12daNpc_Besu_cFPv) {
+asm void daNpc_Besu_c::swdTutorial(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/swdTutorial__12daNpc_Besu_cFPv.s"
 }
@@ -950,7 +1146,7 @@ ASM_FUNCTION(swdTutorial__12daNpc_Besu_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nurse__12daNpc_Besu_cFPv) {
+asm void daNpc_Besu_c::nurse(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/nurse__12daNpc_Besu_cFPv.s"
 }
@@ -961,7 +1157,7 @@ ASM_FUNCTION(nurse__12daNpc_Besu_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(giveHotWater__12daNpc_Besu_cFPv) {
+asm void daNpc_Besu_c::giveHotWater(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/giveHotWater__12daNpc_Besu_cFPv.s"
 }
@@ -972,7 +1168,7 @@ ASM_FUNCTION(giveHotWater__12daNpc_Besu_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__12daNpc_Besu_cFPv) {
+asm void daNpc_Besu_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/talk__12daNpc_Besu_cFPv.s"
 }
@@ -983,7 +1179,7 @@ ASM_FUNCTION(talk__12daNpc_Besu_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Besu_Create__FPv) {
+asm void daNpc_Besu_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/daNpc_Besu_Create__FPv.s"
 }
@@ -994,7 +1190,7 @@ ASM_FUNCTION(daNpc_Besu_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Besu_Delete__FPv) {
+asm void daNpc_Besu_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/daNpc_Besu_Delete__FPv.s"
 }
@@ -1005,7 +1201,7 @@ ASM_FUNCTION(daNpc_Besu_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Besu_Execute__FPv) {
+asm void daNpc_Besu_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/daNpc_Besu_Execute__FPv.s"
 }
@@ -1016,7 +1212,7 @@ ASM_FUNCTION(daNpc_Besu_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Besu_Draw__FPv) {
+asm void daNpc_Besu_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/daNpc_Besu_Draw__FPv.s"
 }
@@ -1024,21 +1220,16 @@ ASM_FUNCTION(daNpc_Besu_Draw__FPv) {
 
 
 /* 8053D31C-8053D324 0008+00 .text      daNpc_Besu_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Besu_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/daNpc_Besu_IsDelete__FPv.s"
+bool daNpc_Besu_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8053D324-8053D354 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -1049,7 +1240,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__10cCcD_GSttsFv.s"
 }
@@ -1060,7 +1251,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__8daNpcT_cFv.s"
 }
@@ -1071,7 +1262,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__4cXyzFv.s"
 }
@@ -1082,7 +1273,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__5csXyzFv.s"
 }
@@ -1093,7 +1284,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1104,7 +1295,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1115,7 +1306,7 @@ ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__8cM3dGCylFv.s"
 }
@@ -1126,7 +1317,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__8cM3dGAabFv.s"
 }
@@ -1137,7 +1328,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053D8B0.s"
 }
@@ -1145,21 +1336,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 8053DCB4-8053DCB8 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053DCB8-8053DDB4 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -1167,21 +1353,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 8053DDB4-8053DDB8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053DDB8-8053DE00 0048+00 .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -1192,7 +1373,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1203,7 +1384,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__10dCcD_GSttsFv.s"
 }
@@ -1214,7 +1395,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1225,7 +1406,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1236,7 +1417,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -1247,7 +1428,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -1255,98 +1436,58 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 8053E2A8-8053E2AC 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053E2AC-8053E2B4 0008+00 .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 8053E2B4-8053E2BC 0008+00 .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 8053E2BC-8053E2C4 0008+00 .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8053E2C4-8053E2CC 0008+00 .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8053E2CC-8053E2D4 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 8053E2D4-8053E2D8 0004+00 .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053E2D8-8053E2E0 0008+00 .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 8053E2E0-8053E2F8 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/decTmr__8daNpcT_cFv.s"
 }
@@ -1354,32 +1495,22 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 8053E2F8-8053E2FC 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053E2FC-8053E304 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 8053E304-8053E334 0030+00 .text      getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1390,7 +1521,7 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053E334) {
+extern "C" asm void func_8053E334() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053E334.s"
 }
@@ -1401,7 +1532,7 @@ ASM_FUNCTION(func_8053E334) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053E350) {
+extern "C" asm void func_8053E350() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053E350.s"
 }
@@ -1412,7 +1543,7 @@ ASM_FUNCTION(func_8053E350) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_besu_cpp) {
+extern "C" asm void __sinit_d_a_npc_besu_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__sinit_d_a_npc_besu_cpp.s"
 }
@@ -1423,7 +1554,7 @@ ASM_FUNCTION(__sinit_d_a_npc_besu_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053E588.s"
 }
@@ -1431,54 +1562,34 @@ ASM_FUNCTION(__ct__12daNpc_Besu_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motio
 
 
 /* 8053E6A8-8053E6B0 0008+00 .text      getEyeballMaterialNo__12daNpc_Besu_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__12daNpc_Besu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getEyeballMaterialNo__12daNpc_Besu_cFv.s"
+s32 daNpc_Besu_c::getEyeballMaterialNo() {
+	return 2;
 }
-#pragma pop
 
 
 /* 8053E6B0-8053E6B8 0008+00 .text      getHeadJointNo__12daNpc_Besu_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__12daNpc_Besu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getHeadJointNo__12daNpc_Besu_cFv.s"
+s32 daNpc_Besu_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 8053E6B8-8053E6C0 0008+00 .text      getNeckJointNo__12daNpc_Besu_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__12daNpc_Besu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getNeckJointNo__12daNpc_Besu_cFv.s"
+s32 daNpc_Besu_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 8053E6C0-8053E6C8 0008+00 .text      getBackboneJointNo__12daNpc_Besu_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__12daNpc_Besu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/getBackboneJointNo__12daNpc_Besu_cFv.s"
+bool daNpc_Besu_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 8053E6C8-8053E6D8 0010+00 .text      checkChangeJoint__12daNpc_Besu_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/checkChangeJoint__12daNpc_Besu_cFi.s"
 }
@@ -1489,7 +1600,7 @@ ASM_FUNCTION(checkChangeJoint__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__12daNpc_Besu_cFi) {
+asm void daNpc_Besu_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/checkRemoveJoint__12daNpc_Besu_cFi.s"
 }
@@ -1500,7 +1611,7 @@ ASM_FUNCTION(checkRemoveJoint__12daNpc_Besu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpc_Besu_Param_cFv) {
+asm daNpc_Besu_Param_c::~daNpc_Besu_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/__dt__18daNpc_Besu_Param_cFv.s"
 }
@@ -1511,7 +1622,7 @@ ASM_FUNCTION(__dt__18daNpc_Besu_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053E730) {
+extern "C" asm void func_8053E730() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053E730.s"
 }
@@ -1522,7 +1633,7 @@ ASM_FUNCTION(func_8053E730) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053E738) {
+extern "C" asm void func_8053E738() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/func_8053E738.s"
 }

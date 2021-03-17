@@ -6,23 +6,111 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cDylPhs (cDylPhs) False/False
+// build request_of_phase_process_class (request_of_phase_process_class) False/False
+/* top-level dependencies (begin request_of_phase_process_class) */
+/* top-level dependencies (end request_of_phase_process_class) */
+struct request_of_phase_process_class {
+};
+
+/* top-level dependencies (begin cDylPhs) */
+// outer dependency: request_of_phase_process_class
+/* top-level dependencies (end cDylPhs) */
+struct cDylPhs {
+	// request_of_phase_process_class
+	/* 80018804 */ s32 phase_01(void*);
+	/* 8001880C */ void phase_02(s16*);
+	/* 80018844 */ bool phase_03(void*);
+	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
+	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
+};
+
+// build request_of_phase_process_class (request_of_phase_process_class) True/True
+// build DynamicModuleControlBase (DynamicModuleControlBase) False/False
+/* top-level dependencies (begin DynamicModuleControlBase) */
+/* top-level dependencies (end DynamicModuleControlBase) */
+struct DynamicModuleControlBase {
+	/* 800188DC */ bool getModuleName() const;
+	/* 802621CC */ ~DynamicModuleControlBase();
+	/* 802622D0 */ void link();
+	/* 80262364 */ void unlink();
+	/* 802623EC */ void load_async();
+};
+
+// build DynamicModuleControl (DynamicModuleControl) False/False
+/* top-level dependencies (begin DynamicModuleControl) */
+/* top-level dependencies (end DynamicModuleControl) */
+struct DynamicModuleControl {
+	/* 800188E4 */ ~DynamicModuleControl();
+	/* 80262660 */ DynamicModuleControl(char const*);
+	/* 8026275C */ void initialize();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+};
+
+// build JKRSolidHeap (JKRSolidHeap) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRSolidHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+	// JKRHeap
+	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
+	/* 802D0BF4 */ void adjustSize();
+};
+
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4224 */ void getGlbResource(char const*);
+	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
+};
+
+// build JKRFileCache (JKRFileCache) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRFileCache) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRFileCache) */
+struct JKRFileCache {
+	// JKRHeap
+	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void cCc_Init__Fv();
-extern "C" extern void cDyl_IsLinked__Fs();
-extern "C" extern void cDyl_Unlink__Fs();
-extern "C" extern void cDyl_LinkASync__Fs();
-extern "C" extern void cDyl_InitCallback__FPv();
-extern "C" extern void cDyl_InitAsync__Fv();
-extern "C" extern void cDyl_InitAsyncIsDone__Fv();
-extern "C" extern void phase_01__7cDylPhsFPv();
-extern "C" extern void phase_02__7cDylPhsFPs();
-extern "C" extern void phase_03__7cDylPhsFPv();
-extern "C" extern void Link__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" extern void Unlink__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" extern void getModuleName__24DynamicModuleControlBaseCFv();
-extern "C" extern void __dt__20DynamicModuleControlFv();
+static void cCc_Init();
+void cDyl_IsLinked(s16);
+void cDyl_Unlink(s16);
+void cDyl_LinkASync(s16);
+static void cDyl_InitCallback(void*);
+void cDyl_InitAsync();
+void cDyl_InitAsyncIsDone();
+
+extern "C" static void cCc_Init__Fv();
+extern "C" void cDyl_IsLinked__Fs();
+extern "C" void cDyl_Unlink__Fs();
+extern "C" void cDyl_LinkASync__Fs();
+extern "C" static void cDyl_InitCallback__FPv();
+extern "C" void cDyl_InitAsync__Fv();
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" s32 phase_01__7cDylPhsFPv();
+extern "C" void phase_02__7cDylPhsFPs();
+extern "C" bool phase_03__7cDylPhsFPv();
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
+extern "C" void __dt__20DynamicModuleControlFv();
 SECTION_RODATA extern const void*const DynamicNameTable[1514];
 SECTION_RODATA extern const u8 c_c_dylink__stringBase0[10896];
 SECTION_DATA extern void*data_803A3590[4];
@@ -35,30 +123,43 @@ SECTION_SBSS extern u8 cDyl_DVD[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void OSReport_Error();
-extern "C" extern void mDoExt_getArchiveHeap__Fv();
-extern "C" extern void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-extern "C" extern void fopScnM_CreateReq__FssUsUl();
-extern "C" extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void __dt__24DynamicModuleControlBaseFv();
-extern "C" extern void link__24DynamicModuleControlBaseFv();
-extern "C" extern void unlink__24DynamicModuleControlBaseFv();
-extern "C" extern void load_async__24DynamicModuleControlBaseFv();
-extern "C" extern void __ct__20DynamicModuleControlFPCc();
-extern "C" extern void initialize__20DynamicModuleControlFv();
-extern "C" extern void becomeCurrentHeap__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" extern void adjustSize__12JKRSolidHeapFv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCc();
-extern "C" extern void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" extern void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
-extern "C" extern void OSSetStringTable();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _restgpr_23();
-extern "C" extern void strcmp();
+SECTION_INIT void memset();
+extern "C" void OSReport_Error();
+void mDoExt_getArchiveHeap();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+void fopScnM_CreateReq(s16, s16, u16, u32);
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void OSSetStringTable();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+extern "C" void strcmp();
+
+SECTION_INIT void memset();
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" void fopScnM_CreateReq__FssUsUl();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void __dt__24DynamicModuleControlBaseFv();
+extern "C" void link__24DynamicModuleControlBaseFv();
+extern "C" void unlink__24DynamicModuleControlBaseFv();
+extern "C" void load_async__24DynamicModuleControlBaseFv();
+extern "C" void __ct__20DynamicModuleControlFPCc();
+extern "C" void initialize__20DynamicModuleControlFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
+extern "C" void adjustSize__12JKRSolidHeapFv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCc();
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
+extern "C" void OSSetStringTable();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+extern "C" void strcmp();
 SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
 
 // 
@@ -66,7 +167,7 @@ SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
 // 
 
 /* ############################################################################################## */
-/* 80374640-80375DE8 17A8+00 .rodata    DynamicNameTable                                             */
+/* 80374640-80375DE8 17A8+00 rc=1 efc=0 .rodata    DynamicNameTable                                             */
 SECTION_RODATA const void* const DynamicNameTable[1514] = {
 	(void*)0x00140000,
 	(void*)&c_c_dylink__stringBase0,
@@ -1584,39 +1685,39 @@ SECTION_RODATA const void* const DynamicNameTable[1514] = {
 	NULL,
 };
 
-/* 803F0F50-803F1BB0 0C60+00 .bss       DMC                                                          */
+/* 803F0F50-803F1BB0 0C60+00 rc=4 efc=0 .bss       DMC                                                          */
 u8 DMC[3168];
 
-/* 80450CA8-80450CAC 0004+00 .sbss      None                                                         */
+/* 80450CA8-80450CAC 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80450CA8[4];
 
-/* 800183DC-80018544 0168+00 .text      cCc_Init__Fv                                                 */
+/* 800183DC-80018544 0168+00 rc=1 efc=0 .text      cCc_Init__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cCc_Init__Fv) {
+asm static void cCc_Init() {
 	nofralloc
 #include "asm/c/c_dylink/cCc_Init__Fv.s"
 }
 #pragma pop
 
 
-/* 80018544-8001857C 0038+00 .text      cDyl_IsLinked__Fs                                            */
+/* 80018544-8001857C 0038+00 rc=1 efc=1 .text      cDyl_IsLinked__Fs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_IsLinked__Fs) {
+asm void cDyl_IsLinked(s16 field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_IsLinked__Fs.s"
 }
 #pragma pop
 
 
-/* 8001857C-800185C0 0044+00 .text      cDyl_Unlink__Fs                                              */
+/* 8001857C-800185C0 0044+00 rc=2 efc=1 .text      cDyl_Unlink__Fs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_Unlink__Fs) {
+asm void cDyl_Unlink(s16 field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_Unlink__Fs.s"
 }
@@ -1624,7 +1725,7 @@ ASM_FUNCTION(cDyl_Unlink__Fs) {
 
 
 /* ############################################################################################## */
-/* 80375DE8-80378878 2A8F+01 .rodata    @stringBase0                                                 */
+/* 80375DE8-80378878 2A8F+01 rc=3 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -2395,25 +2496,25 @@ SECTION_DEAD char* const stringBase_80378866 = "f_pc_profile_lst";
 SECTION_DEAD char* const pad_80378877 = "";
 #pragma pop
 
-/* 80450CAC-80450CB0 0004+00 .sbss      cDyl_Initialized                                             */
+/* 80450CAC-80450CB0 0004+00 rc=2 efc=0 .sbss      cDyl_Initialized                                             */
 u8 cDyl_Initialized[4];
 
-/* 800185C0-80018688 00C8+00 .text      cDyl_LinkASync__Fs                                           */
+/* 800185C0-80018688 00C8+00 rc=2 efc=1 .text      cDyl_LinkASync__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_LinkASync__Fs) {
+asm void cDyl_LinkASync(s16 field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_LinkASync__Fs.s"
 }
 #pragma pop
 
 
-/* 80018688-80018764 00DC+00 .text      cDyl_InitCallback__FPv                                       */
+/* 80018688-80018764 00DC+00 rc=1 efc=0 .text      cDyl_InitCallback__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_InitCallback__FPv) {
+asm static void cDyl_InitCallback(void* field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_InitCallback__FPv.s"
 }
@@ -2421,66 +2522,56 @@ ASM_FUNCTION(cDyl_InitCallback__FPv) {
 
 
 /* ############################################################################################## */
-/* 80450CB0-80450CB8 0004+04 .sbss      cDyl_DVD                                                     */
+/* 80450CB0-80450CB8 0004+04 rc=2 efc=0 .sbss      cDyl_DVD                                                     */
 u8 cDyl_DVD[4 + 4 /* padding */];
 
-/* 80018764-80018798 0034+00 .text      cDyl_InitAsync__Fv                                           */
+/* 80018764-80018798 0034+00 rc=1 efc=1 .text      cDyl_InitAsync__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_InitAsync__Fv) {
+asm void cDyl_InitAsync() {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_InitAsync__Fv.s"
 }
 #pragma pop
 
 
-/* 80018798-80018804 006C+00 .text      cDyl_InitAsyncIsDone__Fv                                     */
+/* 80018798-80018804 006C+00 rc=2 efc=2 .text      cDyl_InitAsyncIsDone__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cDyl_InitAsyncIsDone__Fv) {
+asm void cDyl_InitAsyncIsDone() {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_InitAsyncIsDone__Fv.s"
 }
 #pragma pop
 
 
-/* 80018804-8001880C 0008+00 .text      phase_01__7cDylPhsFPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_01__7cDylPhsFPv) {
-	nofralloc
-#include "asm/c/c_dylink/phase_01__7cDylPhsFPv.s"
+/* 80018804-8001880C 0008+00 rc=1 efc=0 .text      phase_01__7cDylPhsFPv                                        */
+s32 cDylPhs::phase_01(void* field_0) {
+	return 2;
 }
-#pragma pop
 
 
-/* 8001880C-80018844 0038+00 .text      phase_02__7cDylPhsFPs                                        */
+/* 8001880C-80018844 0038+00 rc=1 efc=0 .text      phase_02__7cDylPhsFPs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_02__7cDylPhsFPs) {
+asm void cDylPhs::phase_02(s16* field_0) {
 	nofralloc
 #include "asm/c/c_dylink/phase_02__7cDylPhsFPs.s"
 }
 #pragma pop
 
 
-/* 80018844-8001884C 0008+00 .text      phase_03__7cDylPhsFPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_03__7cDylPhsFPv) {
-	nofralloc
-#include "asm/c/c_dylink/phase_03__7cDylPhsFPv.s"
+/* 80018844-8001884C 0008+00 rc=1 efc=0 .text      phase_03__7cDylPhsFPv                                        */
+bool cDylPhs::phase_03(void* field_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 803A3590-803A35A0 000C+04 .data      l_method$3807                                                */
+/* 803A3590-803A35A0 000C+04 rc=1 efc=0 .data      l_method$3807                                                */
 void* data_803A3590[4] = {
 	(void*)phase_01__7cDylPhsFPv,
 	(void*)phase_02__7cDylPhsFPs,
@@ -2489,48 +2580,42 @@ void* data_803A3590[4] = {
 	NULL,
 };
 
-/* 8001884C-80018890 0044+00 .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
+/* 8001884C-80018890 0044+00 rc=2 efc=2 .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Link__7cDylPhsFP30request_of_phase_process_classs) {
+asm void cDylPhs::Link(request_of_phase_process_class* field_0, s16 field_1) {
 	nofralloc
 #include "asm/c/c_dylink/Link__7cDylPhsFP30request_of_phase_process_classs.s"
 }
 #pragma pop
 
 
-/* 80018890-800188DC 004C+00 .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
+/* 80018890-800188DC 004C+00 rc=1 efc=1 .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Unlink__7cDylPhsFP30request_of_phase_process_classs) {
+asm void cDylPhs::Unlink(request_of_phase_process_class* field_0, s16 field_1) {
 	nofralloc
 #include "asm/c/c_dylink/Unlink__7cDylPhsFP30request_of_phase_process_classs.s"
 }
 #pragma pop
 
 
-/* 800188DC-800188E4 0008+00 .text      getModuleName__24DynamicModuleControlBaseCFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getModuleName__24DynamicModuleControlBaseCFv) {
-	nofralloc
-#include "asm/c/c_dylink/getModuleName__24DynamicModuleControlBaseCFv.s"
+/* 800188DC-800188E4 0008+00 rc=1 efc=1 .text      getModuleName__24DynamicModuleControlBaseCFv                 */
+bool DynamicModuleControlBase::getModuleName() const {
+	return false;
 }
-#pragma pop
 
 
-/* 800188E4-80018944 0060+00 .text      __dt__20DynamicModuleControlFv                               */
+/* 800188E4-80018944 0060+00 rc=1 efc=1 .text      __dt__20DynamicModuleControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20DynamicModuleControlFv) {
+asm DynamicModuleControl::~DynamicModuleControl() {
 	nofralloc
 #include "asm/c/c_dylink/__dt__20DynamicModuleControlFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

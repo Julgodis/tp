@@ -6,45 +6,132 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daCstatue_c;
+struct fopAc_ac_c;
+struct dCcD_GObjInf;
+
+struct fopAc_ac_c {
+};
+
+struct daCstatue_c {
+	void atHitCallback(fopAc_ac_c*);
+	void createHeap();
+	void create();
+	~daCstatue_c();
+	void setRoomInfo();
+	void setMatrix();
+	void posMove();
+	void setCollision();
+	void checkHammerReverse();
+	void setDemo();
+	void setAnime();
+	void initBrk(u16);
+	void initStopBrkBtk();
+	void initStartBrkBtk();
+	void execute();
+	void draw();
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_StatueAcch {
+	~dBgS_StatueAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void atHitCallback__11daCstatue_cFP10fopAc_ac_c();
-extern "C" extern void daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void createHeap__11daCstatue_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void daCstatue_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__11daCstatue_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__15dBgS_StatueAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daCstatue_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__11daCstatue_cFv();
-extern "C" extern void daCstatue_Delete__FP11daCstatue_c();
-extern "C" extern void setRoomInfo__11daCstatue_cFv();
-extern "C" extern void setMatrix__11daCstatue_cFv();
-extern "C" extern void posMove__11daCstatue_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setCollision__11daCstatue_cFv();
-extern "C" extern void checkHammerReverse__11daCstatue_cFv();
-extern "C" extern void setDemo__11daCstatue_cFv();
-extern "C" extern void setAnime__11daCstatue_cFv();
-extern "C" extern void initBrk__11daCstatue_cFUs();
-extern "C" extern void initStopBrkBtk__11daCstatue_cFv();
-extern "C" extern void initStartBrkBtk__11daCstatue_cFv();
-extern "C" extern void execute__11daCstatue_cFv();
-extern "C" extern void daCstatue_Execute__FP11daCstatue_c();
-extern "C" extern void draw__11daCstatue_cFv();
-extern "C" extern void daCstatue_Draw__FP11daCstatue_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80667678();
-extern "C" extern void func_80667680();
+void daCstatue_atHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daCstatue_createHeap(fopAc_ac_c*);
+void daCstatue_Create(fopAc_ac_c*);
+void daCstatue_Delete(daCstatue_c*);
+void daCstatue_Execute(daCstatue_c*);
+void daCstatue_Draw(daCstatue_c*);
+extern "C" void func_80667678();
+extern "C" void func_80667680();
+
+extern "C" void atHitCallback__11daCstatue_cFP10fopAc_ac_c();
+extern "C" void daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void createHeap__11daCstatue_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void daCstatue_createHeap__FP10fopAc_ac_c();
+extern "C" void create__11daCstatue_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__15dBgS_StatueAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daCstatue_Create__FP10fopAc_ac_c();
+extern "C" void __dt__11daCstatue_cFv();
+extern "C" void daCstatue_Delete__FP11daCstatue_c();
+extern "C" void setRoomInfo__11daCstatue_cFv();
+extern "C" void setMatrix__11daCstatue_cFv();
+extern "C" void posMove__11daCstatue_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setCollision__11daCstatue_cFv();
+extern "C" void checkHammerReverse__11daCstatue_cFv();
+extern "C" void setDemo__11daCstatue_cFv();
+extern "C" void setAnime__11daCstatue_cFv();
+extern "C" void initBrk__11daCstatue_cFUs();
+extern "C" void initStopBrkBtk__11daCstatue_cFv();
+extern "C" void initStartBrkBtk__11daCstatue_cFv();
+extern "C" void execute__11daCstatue_cFv();
+extern "C" void daCstatue_Execute__FP11daCstatue_c();
+extern "C" void draw__11daCstatue_cFv();
+extern "C" void daCstatue_Draw__FP11daCstatue_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80667678();
+extern "C" void func_80667680();
 SECTION_RODATA extern const u8 lit_3768[12];
 SECTION_RODATA extern const u8 l_arcName[8];
 SECTION_RODATA extern const u8 l_arcNameBS[7 + 1 /* padding */];
@@ -196,8 +283,11 @@ SECTION_BSS extern u8 data_80667C40[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -207,7 +297,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(atHitCallback__11daCstatue_cFP10fopAc_ac_c) {
+asm void daCstatue_c::atHitCallback(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/atHitCallback__11daCstatue_cFP10fopAc_ac_c.s"
 }
@@ -218,7 +308,7 @@ ASM_FUNCTION(atHitCallback__11daCstatue_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daCstatue_atHitCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -229,7 +319,7 @@ ASM_FUNCTION(daCstatue_atHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daCstatue_cFv) {
+asm void daCstatue_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/createHeap__11daCstatue_cFv.s"
 }
@@ -240,7 +330,7 @@ ASM_FUNCTION(createHeap__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__8cM3dGCylFv.s"
 }
@@ -251,7 +341,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__8cM3dGAabFv.s"
 }
@@ -262,7 +352,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__4cXyzFv.s"
 }
@@ -273,7 +363,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__8dCcD_SphFv.s"
 }
@@ -284,7 +374,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__ct__8dCcD_SphFv.s"
 }
@@ -295,7 +385,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__8cM3dGSphFv.s"
 }
@@ -306,7 +396,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_createHeap__FP10fopAc_ac_c) {
+asm void daCstatue_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_createHeap__FP10fopAc_ac_c.s"
 }
@@ -317,7 +407,7 @@ ASM_FUNCTION(daCstatue_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daCstatue_cFv) {
+asm void daCstatue_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/create__11daCstatue_cFv.s"
 }
@@ -328,7 +418,7 @@ ASM_FUNCTION(create__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__10dCcD_GSttsFv.s"
 }
@@ -339,7 +429,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dBgS_StatueAcchFv) {
+asm dBgS_StatueAcch::~dBgS_StatueAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__15dBgS_StatueAcchFv.s"
 }
@@ -350,7 +440,7 @@ ASM_FUNCTION(__dt__15dBgS_StatueAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__12dBgS_AcchCirFv.s"
 }
@@ -361,7 +451,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__12J3DFrameCtrlFv.s"
 }
@@ -372,7 +462,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_Create__FP10fopAc_ac_c) {
+asm void daCstatue_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Create__FP10fopAc_ac_c.s"
 }
@@ -383,7 +473,7 @@ ASM_FUNCTION(daCstatue_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daCstatue_cFv) {
+asm daCstatue_c::~daCstatue_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__11daCstatue_cFv.s"
 }
@@ -394,7 +484,7 @@ ASM_FUNCTION(__dt__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_Delete__FP11daCstatue_c) {
+asm void daCstatue_Delete(daCstatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Delete__FP11daCstatue_c.s"
 }
@@ -405,7 +495,7 @@ ASM_FUNCTION(daCstatue_Delete__FP11daCstatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__11daCstatue_cFv) {
+asm void daCstatue_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/setRoomInfo__11daCstatue_cFv.s"
 }
@@ -416,7 +506,7 @@ ASM_FUNCTION(setRoomInfo__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__11daCstatue_cFv) {
+asm void daCstatue_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/setMatrix__11daCstatue_cFv.s"
 }
@@ -427,7 +517,7 @@ ASM_FUNCTION(setMatrix__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMove__11daCstatue_cFv) {
+asm void daCstatue_c::posMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/posMove__11daCstatue_cFv.s"
 }
@@ -438,7 +528,7 @@ ASM_FUNCTION(posMove__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__8cM3dGPlaFv.s"
 }
@@ -449,7 +539,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__11daCstatue_cFv) {
+asm void daCstatue_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/setCollision__11daCstatue_cFv.s"
 }
@@ -460,7 +550,7 @@ ASM_FUNCTION(setCollision__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHammerReverse__11daCstatue_cFv) {
+asm void daCstatue_c::checkHammerReverse() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/checkHammerReverse__11daCstatue_cFv.s"
 }
@@ -471,7 +561,7 @@ ASM_FUNCTION(checkHammerReverse__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDemo__11daCstatue_cFv) {
+asm void daCstatue_c::setDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/setDemo__11daCstatue_cFv.s"
 }
@@ -482,7 +572,7 @@ ASM_FUNCTION(setDemo__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnime__11daCstatue_cFv) {
+asm void daCstatue_c::setAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/setAnime__11daCstatue_cFv.s"
 }
@@ -493,7 +583,7 @@ ASM_FUNCTION(setAnime__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBrk__11daCstatue_cFUs) {
+asm void daCstatue_c::initBrk(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/initBrk__11daCstatue_cFUs.s"
 }
@@ -504,7 +594,7 @@ ASM_FUNCTION(initBrk__11daCstatue_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initStopBrkBtk__11daCstatue_cFv) {
+asm void daCstatue_c::initStopBrkBtk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/initStopBrkBtk__11daCstatue_cFv.s"
 }
@@ -515,7 +605,7 @@ ASM_FUNCTION(initStopBrkBtk__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initStartBrkBtk__11daCstatue_cFv) {
+asm void daCstatue_c::initStartBrkBtk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/initStartBrkBtk__11daCstatue_cFv.s"
 }
@@ -526,7 +616,7 @@ ASM_FUNCTION(initStartBrkBtk__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daCstatue_cFv) {
+asm void daCstatue_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/execute__11daCstatue_cFv.s"
 }
@@ -537,7 +627,7 @@ ASM_FUNCTION(execute__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_Execute__FP11daCstatue_c) {
+asm void daCstatue_Execute(daCstatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Execute__FP11daCstatue_c.s"
 }
@@ -548,7 +638,7 @@ ASM_FUNCTION(daCstatue_Execute__FP11daCstatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daCstatue_cFv) {
+asm void daCstatue_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/draw__11daCstatue_cFv.s"
 }
@@ -559,7 +649,7 @@ ASM_FUNCTION(draw__11daCstatue_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCstatue_Draw__FP11daCstatue_c) {
+asm void daCstatue_Draw(daCstatue_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/daCstatue_Draw__FP11daCstatue_c.s"
 }
@@ -570,7 +660,7 @@ ASM_FUNCTION(daCstatue_Draw__FP11daCstatue_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/__dt__10cCcD_GSttsFv.s"
 }
@@ -581,7 +671,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80667678) {
+extern "C" asm void func_80667678() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/func_80667678.s"
 }
@@ -592,7 +682,7 @@ ASM_FUNCTION(func_80667678) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80667680) {
+extern "C" asm void func_80667680() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cstatue/d_a_cstatue/func_80667680.s"
 }

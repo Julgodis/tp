@@ -9,110 +9,79 @@
 // Forward References:
 // 
 
-extern "C" extern void EXI2_Init();
-extern "C" extern void EXI2_EnableInterrupts();
-extern "C" extern void EXI2_Poll();
-extern "C" extern void EXI2_ReadN();
-extern "C" extern void EXI2_WriteN();
-extern "C" extern void EXI2_Reserve();
-extern "C" extern void EXI2_Unreserve();
-extern "C" extern void AMC_IsStub();
+extern "C" void EXI2_Init();
+extern "C" void EXI2_EnableInterrupts();
+extern "C" bool EXI2_Poll();
+extern "C" bool EXI2_ReadN();
+extern "C" bool EXI2_WriteN();
+extern "C" void EXI2_Reserve();
+extern "C" void EXI2_Unreserve();
+extern "C" bool AMC_IsStub();
+
+extern "C" void EXI2_Init();
+extern "C" void EXI2_EnableInterrupts();
+extern "C" bool EXI2_Poll();
+extern "C" bool EXI2_ReadN();
+extern "C" bool EXI2_WriteN();
+extern "C" void EXI2_Reserve();
+extern "C" void EXI2_Unreserve();
+extern "C" bool AMC_IsStub();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80372CFC-80372D00 0004+00 .text      EXI2_Init                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_Init) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_Init.s"
+/* 80372CFC-80372D00 0004+00 rc=1 efc=1 .text      EXI2_Init                                                    */
+extern "C" void EXI2_Init() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80372D00-80372D04 0004+00 .text      EXI2_EnableInterrupts                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_EnableInterrupts) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_EnableInterrupts.s"
+/* 80372D00-80372D04 0004+00 rc=1 efc=1 .text      EXI2_EnableInterrupts                                        */
+extern "C" void EXI2_EnableInterrupts() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80372D04-80372D0C 0008+00 .text      EXI2_Poll                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_Poll) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_Poll.s"
+/* 80372D04-80372D0C 0008+00 rc=2 efc=2 .text      EXI2_Poll                                                    */
+extern "C" bool EXI2_Poll() {
+	return false;
 }
-#pragma pop
 
 
-/* 80372D0C-80372D14 0008+00 .text      EXI2_ReadN                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_ReadN) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_ReadN.s"
+/* 80372D0C-80372D14 0008+00 rc=2 efc=2 .text      EXI2_ReadN                                                   */
+extern "C" bool EXI2_ReadN() {
+	return false;
 }
-#pragma pop
 
 
-/* 80372D14-80372D1C 0008+00 .text      EXI2_WriteN                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_WriteN) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_WriteN.s"
+/* 80372D14-80372D1C 0008+00 rc=1 efc=1 .text      EXI2_WriteN                                                  */
+extern "C" bool EXI2_WriteN() {
+	return false;
 }
-#pragma pop
 
 
-/* 80372D1C-80372D20 0004+00 .text      EXI2_Reserve                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_Reserve) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_Reserve.s"
+/* 80372D1C-80372D20 0004+00 rc=1 efc=1 .text      EXI2_Reserve                                                 */
+extern "C" void EXI2_Reserve() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80372D20-80372D24 0004+00 .text      EXI2_Unreserve                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(EXI2_Unreserve) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/EXI2_Unreserve.s"
+/* 80372D20-80372D24 0004+00 rc=1 efc=1 .text      EXI2_Unreserve                                               */
+extern "C" void EXI2_Unreserve() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80372D24-80372D2C 0008+00 .text      AMC_IsStub                                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(AMC_IsStub) {
-	nofralloc
-#include "asm/amcstubs/AmcExi2Stubs/AMC_IsStub.s"
+/* 80372D24-80372D2C 0008+00 rc=1 efc=1 .text      AMC_IsStub                                                   */
+extern "C" bool AMC_IsStub() {
+	return true;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

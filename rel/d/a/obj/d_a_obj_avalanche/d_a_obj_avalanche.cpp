@@ -6,32 +6,68 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjAvalanche_c;
+
+struct daObjAvalanche_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void checkCollapse();
+	void move();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void setEffect();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__16daObjAvalanche_cFv();
-extern "C" extern void setBaseMtx__16daObjAvalanche_cFv();
-extern "C" extern void Create__16daObjAvalanche_cFv();
-extern "C" extern void CreateHeap__16daObjAvalanche_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__16daObjAvalanche_cFv();
-extern "C" extern void Execute__16daObjAvalanche_cFPPA3_A4_f();
-extern "C" extern void checkCollapse__16daObjAvalanche_cFv();
-extern "C" extern void move__16daObjAvalanche_cFv();
-extern "C" extern void event_proc_call__16daObjAvalanche_cFv();
-extern "C" extern void actionWait__16daObjAvalanche_cFv();
-extern "C" extern void actionOrderEvent__16daObjAvalanche_cFv();
-extern "C" extern void actionEvent__16daObjAvalanche_cFv();
-extern "C" extern void actionDead__16daObjAvalanche_cFv();
-extern "C" extern void demoProc__16daObjAvalanche_cFv();
-extern "C" extern void setEffect__16daObjAvalanche_cFv();
-extern "C" extern void Draw__16daObjAvalanche_cFv();
-extern "C" extern void Delete__16daObjAvalanche_cFv();
-extern "C" extern void daObjAvalanche_create1st__FP16daObjAvalanche_c();
-extern "C" extern void daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c();
-extern "C" extern void daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c();
-extern "C" extern void daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c();
-extern "C" extern void func_80BA7CD8();
+extern "C" void Execute__16daObjAvalanche_cFPPA3_A4_f();
+void daObjAvalanche_create1st(daObjAvalanche_c*);
+void daObjAvalanche_MoveBGDelete(daObjAvalanche_c*);
+void daObjAvalanche_MoveBGExecute(daObjAvalanche_c*);
+void daObjAvalanche_MoveBGDraw(daObjAvalanche_c*);
+extern "C" void func_80BA7CD8();
+
+extern "C" void initBaseMtx__16daObjAvalanche_cFv();
+extern "C" void setBaseMtx__16daObjAvalanche_cFv();
+extern "C" void Create__16daObjAvalanche_cFv();
+extern "C" void CreateHeap__16daObjAvalanche_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__16daObjAvalanche_cFv();
+extern "C" void Execute__16daObjAvalanche_cFPPA3_A4_f();
+extern "C" void checkCollapse__16daObjAvalanche_cFv();
+extern "C" void move__16daObjAvalanche_cFv();
+extern "C" void event_proc_call__16daObjAvalanche_cFv();
+extern "C" void actionWait__16daObjAvalanche_cFv();
+extern "C" void actionOrderEvent__16daObjAvalanche_cFv();
+extern "C" void actionEvent__16daObjAvalanche_cFv();
+extern "C" void actionDead__16daObjAvalanche_cFv();
+extern "C" void demoProc__16daObjAvalanche_cFv();
+extern "C" void setEffect__16daObjAvalanche_cFv();
+extern "C" void Draw__16daObjAvalanche_cFv();
+extern "C" void Delete__16daObjAvalanche_cFv();
+extern "C" void daObjAvalanche_create1st__FP16daObjAvalanche_c();
+extern "C" void daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c();
+extern "C" void daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c();
+extern "C" void daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c();
+extern "C" void func_80BA7CD8();
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_check_pos[24];
 SECTION_RODATA extern const u8 lit_3663[4];
@@ -64,7 +100,9 @@ SECTION_DATA extern void*const __vt__16daObjAvalanche_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -74,7 +112,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/initBaseMtx__16daObjAvalanche_cFv.s"
 }
@@ -85,7 +123,7 @@ ASM_FUNCTION(initBaseMtx__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/setBaseMtx__16daObjAvalanche_cFv.s"
 }
@@ -96,7 +134,7 @@ ASM_FUNCTION(setBaseMtx__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/Create__16daObjAvalanche_cFv.s"
 }
@@ -107,7 +145,7 @@ ASM_FUNCTION(Create__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/CreateHeap__16daObjAvalanche_cFv.s"
 }
@@ -118,7 +156,7 @@ ASM_FUNCTION(CreateHeap__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/__dt__12J3DFrameCtrlFv.s"
 }
@@ -129,7 +167,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/create1st__16daObjAvalanche_cFv.s"
 }
@@ -140,7 +178,7 @@ ASM_FUNCTION(create1st__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjAvalanche_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjAvalanche_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/Execute__16daObjAvalanche_cFPPA3_A4_f.s"
 }
@@ -151,7 +189,7 @@ ASM_FUNCTION(Execute__16daObjAvalanche_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCollapse__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::checkCollapse() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/checkCollapse__16daObjAvalanche_cFv.s"
 }
@@ -162,7 +200,7 @@ ASM_FUNCTION(checkCollapse__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/move__16daObjAvalanche_cFv.s"
 }
@@ -173,7 +211,7 @@ ASM_FUNCTION(move__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/event_proc_call__16daObjAvalanche_cFv.s"
 }
@@ -184,7 +222,7 @@ ASM_FUNCTION(event_proc_call__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/actionWait__16daObjAvalanche_cFv.s"
 }
@@ -195,7 +233,7 @@ ASM_FUNCTION(actionWait__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/actionOrderEvent__16daObjAvalanche_cFv.s"
 }
@@ -206,7 +244,7 @@ ASM_FUNCTION(actionOrderEvent__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/actionEvent__16daObjAvalanche_cFv.s"
 }
@@ -214,21 +252,16 @@ ASM_FUNCTION(actionEvent__16daObjAvalanche_cFv) {
 
 
 /* 80BA7888-80BA788C 0004+00 .text      actionDead__16daObjAvalanche_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__16daObjAvalanche_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/actionDead__16daObjAvalanche_cFv.s"
+void daObjAvalanche_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BA788C-80BA7A50 01C4+00 .text      demoProc__16daObjAvalanche_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/demoProc__16daObjAvalanche_cFv.s"
 }
@@ -239,7 +272,7 @@ ASM_FUNCTION(demoProc__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/setEffect__16daObjAvalanche_cFv.s"
 }
@@ -250,7 +283,7 @@ ASM_FUNCTION(setEffect__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/Draw__16daObjAvalanche_cFv.s"
 }
@@ -261,7 +294,7 @@ ASM_FUNCTION(Draw__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjAvalanche_cFv) {
+asm void daObjAvalanche_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/Delete__16daObjAvalanche_cFv.s"
 }
@@ -272,7 +305,7 @@ ASM_FUNCTION(Delete__16daObjAvalanche_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjAvalanche_create1st__FP16daObjAvalanche_c) {
+asm void daObjAvalanche_create1st(daObjAvalanche_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_create1st__FP16daObjAvalanche_c.s"
 }
@@ -283,7 +316,7 @@ ASM_FUNCTION(daObjAvalanche_create1st__FP16daObjAvalanche_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c) {
+asm void daObjAvalanche_MoveBGDelete(daObjAvalanche_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c.s"
 }
@@ -294,7 +327,7 @@ ASM_FUNCTION(daObjAvalanche_MoveBGDelete__FP16daObjAvalanche_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c) {
+asm void daObjAvalanche_MoveBGExecute(daObjAvalanche_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c.s"
 }
@@ -305,7 +338,7 @@ ASM_FUNCTION(daObjAvalanche_MoveBGExecute__FP16daObjAvalanche_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c) {
+asm void daObjAvalanche_MoveBGDraw(daObjAvalanche_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c.s"
 }
@@ -316,7 +349,7 @@ ASM_FUNCTION(daObjAvalanche_MoveBGDraw__FP16daObjAvalanche_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA7CD8) {
+extern "C" asm void func_80BA7CD8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_avalanche/d_a_obj_avalanche/func_80BA7CD8.s"
 }

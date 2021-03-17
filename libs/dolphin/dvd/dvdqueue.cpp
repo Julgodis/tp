@@ -9,81 +9,89 @@
 // Forward References:
 // 
 
-extern "C" extern void __DVDClearWaitingQueue();
-extern "C" extern void __DVDPushWaitingQueue();
-extern "C" extern void __DVDPopWaitingQueue();
-extern "C" extern void __DVDCheckWaitingQueue();
-extern "C" extern void __DVDDequeueWaitingQueue();
+extern "C" void __DVDClearWaitingQueue();
+extern "C" void __DVDPushWaitingQueue();
+extern "C" void __DVDPopWaitingQueue();
+extern "C" void __DVDCheckWaitingQueue();
+extern "C" void __DVDDequeueWaitingQueue();
+
+extern "C" void __DVDClearWaitingQueue();
+extern "C" void __DVDPushWaitingQueue();
+extern "C" void __DVDPopWaitingQueue();
+extern "C" void __DVDCheckWaitingQueue();
+extern "C" void __DVDDequeueWaitingQueue();
 SECTION_BSS extern u8 WaitingQueue[32];
 
 // 
 // External References:
 // 
 
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8044C998-8044C9B8 0020+00 .bss       WaitingQueue                                                 */
+/* 8044C998-8044C9B8 0020+00 rc=4 efc=0 .bss       WaitingQueue                                                 */
 u8 WaitingQueue[32];
 
-/* 8034B874-8034B8AC 0038+00 .text      __DVDClearWaitingQueue                                       */
+/* 8034B874-8034B8AC 0038+00 rc=5 efc=5 .text      __DVDClearWaitingQueue                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDClearWaitingQueue) {
+extern "C" asm void __DVDClearWaitingQueue() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdqueue/__DVDClearWaitingQueue.s"
 }
 #pragma pop
 
 
-/* 8034B8AC-8034B914 0068+00 .text      __DVDPushWaitingQueue                                        */
+/* 8034B8AC-8034B914 0068+00 rc=5 efc=5 .text      __DVDPushWaitingQueue                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDPushWaitingQueue) {
+extern "C" asm void __DVDPushWaitingQueue() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdqueue/__DVDPushWaitingQueue.s"
 }
 #pragma pop
 
 
-/* 8034B914-8034B9B4 00A0+00 .text      __DVDPopWaitingQueue                                         */
+/* 8034B914-8034B9B4 00A0+00 rc=2 efc=2 .text      __DVDPopWaitingQueue                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDPopWaitingQueue) {
+extern "C" asm void __DVDPopWaitingQueue() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdqueue/__DVDPopWaitingQueue.s"
 }
 #pragma pop
 
 
-/* 8034B9B4-8034BA0C 0058+00 .text      __DVDCheckWaitingQueue                                       */
+/* 8034B9B4-8034BA0C 0058+00 rc=1 efc=1 .text      __DVDCheckWaitingQueue                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDCheckWaitingQueue) {
+extern "C" asm void __DVDCheckWaitingQueue() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdqueue/__DVDCheckWaitingQueue.s"
 }
 #pragma pop
 
 
-/* 8034BA0C-8034BA6C 0060+00 .text      __DVDDequeueWaitingQueue                                     */
+/* 8034BA0C-8034BA6C 0060+00 rc=1 efc=1 .text      __DVDDequeueWaitingQueue                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDDequeueWaitingQueue) {
+extern "C" asm void __DVDDequeueWaitingQueue() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdqueue/__DVDDequeueWaitingQueue.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

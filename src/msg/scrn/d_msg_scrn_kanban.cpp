@@ -6,16 +6,145 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMsgScrnKanban_c (dMsgScrnKanban_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+/* top-level dependencies (begin dMsgScrnKanban_c) */
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end dMsgScrnKanban_c) */
+struct dMsgScrnKanban_c {
+	// JKRExpHeap
+	/* 80244E38 */ dMsgScrnKanban_c(JKRExpHeap*);
+	/* 8024534C */ ~dMsgScrnKanban_c();
+	/* 80245528 */ void exec();
+	/* 80245618 */ void draw();
+	/* 802456A0 */ void fukiAlpha(f32);
+	/* 80245754 */ void fukiScale(f32);
+	/* 80245758 */ void fukiTrans(f32, f32);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build dMsgScrnBase_c (dMsgScrnBase_c) False/False
+/* top-level dependencies (begin dMsgScrnBase_c) */
+/* top-level dependencies (end dMsgScrnBase_c) */
+struct dMsgScrnBase_c {
+	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
+	/* 80238C44 */ void setSelectString(char*, char*, char*);
+	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
+	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C54 */ void arwAnimeMove();
+	/* 80238C58 */ void arwAnimeInit();
+	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C60 */ bool isSelect();
+	/* 80238C68 */ bool selectAnimeEnd();
+	/* 80238C70 */ void dotAnimeMove();
+	/* 80238C74 */ void dotAnimeInit();
+	/* 8023C0DC */ dMsgScrnBase_c();
+	/* 8023C124 */ ~dMsgScrnBase_c();
+	/* 8023C16C */ void init();
+	/* 8023C234 */ void multiDraw();
+	/* 8023C300 */ void drawSelf();
+	/* 8023C4F4 */ void fontAlpha(f32);
+	/* 8023C574 */ void isTalkNow();
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802542E8 */ void getGlobalPosX();
+	/* 80254364 */ void getGlobalPosY();
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7FCC */ void animationTransform();
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
-extern "C" extern void __dt__16dMsgScrnKanban_cFv();
-extern "C" extern void exec__16dMsgScrnKanban_cFv();
-extern "C" extern void draw__16dMsgScrnKanban_cFv();
-extern "C" extern void fukiAlpha__16dMsgScrnKanban_cFf();
-extern "C" extern void fukiScale__16dMsgScrnKanban_cFf();
-extern "C" extern void fukiTrans__16dMsgScrnKanban_cFff();
+
+extern "C" void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
+extern "C" void __dt__16dMsgScrnKanban_cFv();
+extern "C" void exec__16dMsgScrnKanban_cFv();
+extern "C" void draw__16dMsgScrnKanban_cFv();
+extern "C" void fukiAlpha__16dMsgScrnKanban_cFf();
+extern "C" void fukiScale__16dMsgScrnKanban_cFf();
+extern "C" void fukiTrans__16dMsgScrnKanban_cFff();
 SECTION_RODATA extern const u8 data_80399AA0[24];
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_kanban__stringBase0[80];
 SECTION_DATA extern void*const __vt__16dMsgScrnKanban_c[22];
@@ -28,45 +157,55 @@ SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_kanban__lit_4033;
 // External References:
 // 
 
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void dComIfGp_getSubHeap2D__Fi();
-extern "C" extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
-extern "C" extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern "C" extern void selectAnimeMove__14dMsgScrnBase_cFUcUcb();
-extern "C" extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
-extern "C" extern void arwAnimeMove__14dMsgScrnBase_cFv();
-extern "C" extern void arwAnimeInit__14dMsgScrnBase_cFv();
-extern "C" extern void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern "C" extern void isSelect__14dMsgScrnBase_cFv();
-extern "C" extern void selectAnimeEnd__14dMsgScrnBase_cFv();
-extern "C" extern void dotAnimeMove__14dMsgScrnBase_cFv();
-extern "C" extern void dotAnimeInit__14dMsgScrnBase_cFv();
-extern "C" extern void __ct__14dMsgScrnBase_cFv();
-extern "C" extern void __dt__14dMsgScrnBase_cFv();
-extern "C" extern void init__14dMsgScrnBase_cFv();
-extern "C" extern void multiDraw__14dMsgScrnBase_cFv();
-extern "C" extern void drawSelf__14dMsgScrnBase_cFv();
-extern "C" extern void fontAlpha__14dMsgScrnBase_cFf();
-extern "C" extern void isTalkNow__14dMsgScrnBase_cFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void getGlobalPosX__8CPaneMgrFv();
-extern "C" extern void getGlobalPosY__8CPaneMgrFv();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getTotalFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void animationTransform__7J2DPaneFv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+void mDoExt_getMesgFont();
+void dComIfGp_getSubHeap2D(s32);
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfGp_getSubHeap2D__Fi();
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" bool isSelect__14dMsgScrnBase_cFv();
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void __ct__14dMsgScrnBase_cFv();
+extern "C" void __dt__14dMsgScrnBase_cFv();
+extern "C" void init__14dMsgScrnBase_cFv();
+extern "C" void multiDraw__14dMsgScrnBase_cFv();
+extern "C" void drawSelf__14dMsgScrnBase_cFv();
+extern "C" void fontAlpha__14dMsgScrnBase_cFf();
+extern "C" void isTalkNow__14dMsgScrnBase_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void getGlobalPosX__8CPaneMgrFv();
+extern "C" void getGlobalPosY__8CPaneMgrFv();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 
@@ -75,13 +214,13 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399AA0-80399AB8 0018+00 .rodata    t_tag$3768                                                   */
+/* 80399AA0-80399AB8 0018+00 rc=1 efc=0 .rodata    t_tag$3768                                                   */
 SECTION_RODATA const u8 data_80399AA0[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
 
-/* 80399AB8-80399B08 004B+05 .rodata    @stringBase0                                                 */
+/* 80399AB8-80399B08 004B+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -92,7 +231,7 @@ SECTION_DEAD char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
 SECTION_DEAD char* const pad_80399B03 = "\0\0\0\0";
 #pragma pop
 
-/* 803C1240-803C1298 0058+00 .data      __vt__16dMsgScrnKanban_c                                     */
+/* 803C1240-803C1298 0058+00 rc=2 efc=0 .data      __vt__16dMsgScrnKanban_c                                     */
 void* const __vt__16dMsgScrnKanban_c[22] = {
 	NULL, /* RTTI */
 	NULL,
@@ -118,34 +257,34 @@ void* const __vt__16dMsgScrnKanban_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454CC0-80454CC4 0004+00 .sdata2    @3944                                                        */
+/* 80454CC0-80454CC4 0004+00 rc=2 efc=0 .sdata2    @3944                                                        */
 u8 msg_scrn_d_msg_scrn_kanban__lit_3944[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454CC4-80454CC8 0004+00 .sdata2    @3945                                                        */
+/* 80454CC4-80454CC8 0004+00 rc=3 efc=0 .sdata2    @3945                                                        */
 f32 msg_scrn_d_msg_scrn_kanban__lit_3945 = 1.0f;
 
-/* 80454CC8-80454CD0 0004+04 .sdata2    @3946                                                        */
+/* 80454CC8-80454CD0 0004+04 rc=1 efc=0 .sdata2    @3946                                                        */
 f32 msg_scrn_d_msg_scrn_kanban__lit_3946 = 6.0f / 5.0f;
 /* padding 4 bytes */
 
-/* 80244E38-8024534C 0514+00 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       */
+/* 80244E38-8024534C 0514+00 rc=1 efc=1 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dMsgScrnKanban_cFP10JKRExpHeap) {
+asm dMsgScrnKanban_c::dMsgScrnKanban_c(JKRExpHeap* field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_kanban/__ct__16dMsgScrnKanban_cFP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 8024534C-80245528 01DC+00 .text      __dt__16dMsgScrnKanban_cFv                                   */
+/* 8024534C-80245528 01DC+00 rc=1 efc=0 .text      __dt__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dMsgScrnKanban_cFv) {
+asm dMsgScrnKanban_c::~dMsgScrnKanban_c() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_kanban/__dt__16dMsgScrnKanban_cFv.s"
 }
@@ -153,62 +292,51 @@ ASM_FUNCTION(__dt__16dMsgScrnKanban_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454CD0-80454CD8 0008+00 .sdata2    @4033                                                        */
+/* 80454CD0-80454CD8 0008+00 rc=1 efc=0 .sdata2    @4033                                                        */
 f64 msg_scrn_d_msg_scrn_kanban__lit_4033 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80245528-80245618 00F0+00 .text      exec__16dMsgScrnKanban_cFv                                   */
+/* 80245528-80245618 00F0+00 rc=1 efc=0 .text      exec__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec__16dMsgScrnKanban_cFv) {
+asm void dMsgScrnKanban_c::exec() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_kanban/exec__16dMsgScrnKanban_cFv.s"
 }
 #pragma pop
 
 
-/* 80245618-802456A0 0088+00 .text      draw__16dMsgScrnKanban_cFv                                   */
+/* 80245618-802456A0 0088+00 rc=1 efc=0 .text      draw__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dMsgScrnKanban_cFv) {
+asm void dMsgScrnKanban_c::draw() {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_kanban/draw__16dMsgScrnKanban_cFv.s"
 }
 #pragma pop
 
 
-/* 802456A0-80245754 00B4+00 .text      fukiAlpha__16dMsgScrnKanban_cFf                              */
+/* 802456A0-80245754 00B4+00 rc=1 efc=0 .text      fukiAlpha__16dMsgScrnKanban_cFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fukiAlpha__16dMsgScrnKanban_cFf) {
+asm void dMsgScrnKanban_c::fukiAlpha(f32 field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_kanban/fukiAlpha__16dMsgScrnKanban_cFf.s"
 }
 #pragma pop
 
 
-/* 80245754-80245758 0004+00 .text      fukiScale__16dMsgScrnKanban_cFf                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fukiScale__16dMsgScrnKanban_cFf) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_kanban/fukiScale__16dMsgScrnKanban_cFf.s"
+/* 80245754-80245758 0004+00 rc=1 efc=0 .text      fukiScale__16dMsgScrnKanban_cFf                              */
+void dMsgScrnKanban_c::fukiScale(f32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80245758-8024575C 0004+00 .text      fukiTrans__16dMsgScrnKanban_cFff                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fukiTrans__16dMsgScrnKanban_cFff) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_kanban/fukiTrans__16dMsgScrnKanban_cFff.s"
+/* 80245758-8024575C 0004+00 rc=1 efc=0 .text      fukiTrans__16dMsgScrnKanban_cFff                             */
+void dMsgScrnKanban_c::fukiTrans(f32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

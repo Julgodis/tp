@@ -6,35 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct obj_key_class;
+
+struct daObj_Key_HIO_c {
+	daObj_Key_HIO_c();
+	~daObj_Key_HIO_c();
+};
+
+struct obj_key_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daKey_c {
+	void setPos(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daObj_Key_HIO_cFv();
-extern "C" extern void daObj_Key_Draw__FP13obj_key_class();
-extern "C" extern void s_count_sub__FPvPv();
-extern "C" extern void s_master_sub__FPvPv();
-extern "C" extern void masterkey_check__FP13obj_key_class();
-extern "C" extern void action_check__FP13obj_key_class();
-extern "C" extern void chain_control_00__FP13obj_key_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void chain_control_01__FP13obj_key_class();
-extern "C" extern void action__FP13obj_key_class();
-extern "C" extern void daObj_Key_Execute__FP13obj_key_class();
-extern "C" extern void daObj_Key_IsDelete__FP13obj_key_class();
-extern "C" extern void daObj_Key_Delete__FP13obj_key_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Key_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__15daObj_Key_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_key_cpp();
-extern "C" extern void func_80C40FAC();
-extern "C" extern void func_80C40FB4();
-extern "C" extern void setPos__7daKey_cF4cXyz();
+void daObj_Key_Draw(obj_key_class*);
+void s_count_sub(void*, void*);
+void s_master_sub(void*, void*);
+void masterkey_check(obj_key_class*);
+void action_check(obj_key_class*);
+void chain_control_00(obj_key_class*);
+void chain_control_01(obj_key_class*);
+void action(obj_key_class*);
+void daObj_Key_Execute(obj_key_class*);
+bool daObj_Key_IsDelete(obj_key_class*);
+void daObj_Key_Delete(obj_key_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Key_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_key_cpp();
+extern "C" void func_80C40FAC();
+extern "C" void func_80C40FB4();
+
+extern "C" void __ct__15daObj_Key_HIO_cFv();
+extern "C" void daObj_Key_Draw__FP13obj_key_class();
+extern "C" void s_count_sub__FPvPv();
+extern "C" void s_master_sub__FPvPv();
+extern "C" void masterkey_check__FP13obj_key_class();
+extern "C" void action_check__FP13obj_key_class();
+extern "C" void chain_control_00__FP13obj_key_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void chain_control_01__FP13obj_key_class();
+extern "C" void action__FP13obj_key_class();
+extern "C" void daObj_Key_Execute__FP13obj_key_class();
+extern "C" bool daObj_Key_IsDelete__FP13obj_key_class();
+extern "C" void daObj_Key_Delete__FP13obj_key_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Key_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__15daObj_Key_HIO_cFv();
+extern "C" void __sinit_d_a_obj_key_cpp();
+extern "C" void func_80C40FAC();
+extern "C" void func_80C40FB4();
+extern "C" void setPos__7daKey_cF4cXyz();
 SECTION_RODATA extern const u32 lit_3778;
 SECTION_RODATA extern const u32 lit_3779;
 SECTION_RODATA extern const u32 lit_3836;
@@ -84,8 +146,11 @@ SECTION_BSS extern u8 target_info_count[2];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -95,7 +160,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daObj_Key_HIO_cFv) {
+asm daObj_Key_HIO_c::daObj_Key_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__ct__15daObj_Key_HIO_cFv.s"
 }
@@ -106,7 +171,7 @@ ASM_FUNCTION(__ct__15daObj_Key_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Key_Draw__FP13obj_key_class) {
+asm void daObj_Key_Draw(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Draw__FP13obj_key_class.s"
 }
@@ -117,7 +182,7 @@ ASM_FUNCTION(daObj_Key_Draw__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_count_sub__FPvPv) {
+asm void s_count_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/s_count_sub__FPvPv.s"
 }
@@ -128,7 +193,7 @@ ASM_FUNCTION(s_count_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_master_sub__FPvPv) {
+asm void s_master_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/s_master_sub__FPvPv.s"
 }
@@ -139,7 +204,7 @@ ASM_FUNCTION(s_master_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(masterkey_check__FP13obj_key_class) {
+asm void masterkey_check(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/masterkey_check__FP13obj_key_class.s"
 }
@@ -150,7 +215,7 @@ ASM_FUNCTION(masterkey_check__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_check__FP13obj_key_class) {
+asm void action_check(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/action_check__FP13obj_key_class.s"
 }
@@ -161,7 +226,7 @@ ASM_FUNCTION(action_check__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_00__FP13obj_key_class) {
+asm void chain_control_00(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/chain_control_00__FP13obj_key_class.s"
 }
@@ -172,7 +237,7 @@ ASM_FUNCTION(chain_control_00__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__4cXyzFv.s"
 }
@@ -183,7 +248,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chain_control_01__FP13obj_key_class) {
+asm void chain_control_01(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/chain_control_01__FP13obj_key_class.s"
 }
@@ -194,7 +259,7 @@ ASM_FUNCTION(chain_control_01__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP13obj_key_class) {
+asm void action(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/action__FP13obj_key_class.s"
 }
@@ -205,7 +270,7 @@ ASM_FUNCTION(action__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Key_Execute__FP13obj_key_class) {
+asm void daObj_Key_Execute(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Execute__FP13obj_key_class.s"
 }
@@ -213,21 +278,16 @@ ASM_FUNCTION(daObj_Key_Execute__FP13obj_key_class) {
 
 
 /* 80C4093C-80C40944 0008+00 .text      daObj_Key_IsDelete__FP13obj_key_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Key_IsDelete__FP13obj_key_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_IsDelete__FP13obj_key_class.s"
+bool daObj_Key_IsDelete(obj_key_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C40944-80C409AC 0068+00 .text      daObj_Key_Delete__FP13obj_key_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Key_Delete__FP13obj_key_class) {
+asm void daObj_Key_Delete(obj_key_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Delete__FP13obj_key_class.s"
 }
@@ -238,7 +298,7 @@ ASM_FUNCTION(daObj_Key_Delete__FP13obj_key_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -249,7 +309,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Key_Create__FP10fopAc_ac_c) {
+asm void daObj_Key_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Create__FP10fopAc_ac_c.s"
 }
@@ -260,7 +320,7 @@ ASM_FUNCTION(daObj_Key_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__8cM3dGSphFv.s"
 }
@@ -271,7 +331,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__8cM3dGAabFv.s"
 }
@@ -282,7 +342,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -293,7 +353,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__5csXyzFv.s"
 }
@@ -301,32 +361,22 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80C40F20-80C40F24 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C40F24-80C40F28 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C40F28-80C40F70 0048+00 .text      __dt__15daObj_Key_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_Key_HIO_cFv) {
+asm daObj_Key_HIO_c::~daObj_Key_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__dt__15daObj_Key_HIO_cFv.s"
 }
@@ -337,7 +387,7 @@ ASM_FUNCTION(__dt__15daObj_Key_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_key_cpp) {
+extern "C" asm void __sinit_d_a_obj_key_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__sinit_d_a_obj_key_cpp.s"
 }
@@ -348,7 +398,7 @@ ASM_FUNCTION(__sinit_d_a_obj_key_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C40FAC) {
+extern "C" asm void func_80C40FAC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/func_80C40FAC.s"
 }
@@ -359,7 +409,7 @@ ASM_FUNCTION(func_80C40FAC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C40FB4) {
+extern "C" asm void func_80C40FB4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/func_80C40FB4.s"
 }
@@ -370,7 +420,7 @@ ASM_FUNCTION(func_80C40FB4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__7daKey_cF4cXyz) {
+asm void daKey_c::setPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/setPos__7daKey_cF4cXyz.s"
 }

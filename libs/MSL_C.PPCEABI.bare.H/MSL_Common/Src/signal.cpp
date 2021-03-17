@@ -9,34 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void raise();
+extern "C" void raise();
+
+extern "C" void raise();
 SECTION_BSS extern u8 signal_funcs[24];
 
 // 
 // External References:
 // 
 
-extern "C" extern void exit();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
+extern "C" void exit();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+
+extern "C" void exit();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8044D878-8044D890 0018+00 .bss       signal_funcs                                                 */
+/* 8044D878-8044D890 0018+00 rc=1 efc=0 .bss       signal_funcs                                                 */
 u8 signal_funcs[24];
 
-/* 8036881C-803688DC 00C0+00 .text      raise                                                        */
+/* 8036881C-803688DC 00C0+00 rc=1 efc=1 .text      raise                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(raise) {
+extern "C" asm void raise() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/signal/raise.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

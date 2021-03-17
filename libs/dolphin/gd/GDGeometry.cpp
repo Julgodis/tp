@@ -9,16 +9,22 @@
 // Forward References:
 // 
 
-extern "C" extern void GDSetVtxDescv();
-extern "C" extern void GDSetArray();
-extern "C" extern void GDSetArrayRaw();
+extern "C" void GDSetVtxDescv();
+extern "C" void GDSetArray();
+extern "C" void GDSetArrayRaw();
+
+extern "C" void GDSetVtxDescv();
+extern "C" void GDSetArray();
+extern "C" void GDSetArrayRaw();
 SECTION_DATA extern void*GDGeometry__lit_121[26];
 
 // 
 // External References:
 // 
 
-extern "C" extern void GDOverflowed();
+extern "C" void GDOverflowed();
+
+extern "C" void GDOverflowed();
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 
 // 
@@ -26,7 +32,7 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 // 
 
 /* ############################################################################################## */
-/* 803D2948-803D29B0 0068+00 .data      @121                                                         */
+/* 803D2948-803D29B0 0068+00 rc=1 efc=0 .data      @121                                                         */
 void* GDGeometry__lit_121[26] = {
 	(void*)(((char*)GDSetVtxDescv)+0x78),
 	(void*)(((char*)GDSetVtxDescv)+0x80),
@@ -56,37 +62,36 @@ void* GDGeometry__lit_121[26] = {
 	(void*)(((char*)GDSetVtxDescv)+0x13C),
 };
 
-/* 80361104-80361700 05FC+00 .text      GDSetVtxDescv                                                */
+/* 80361104-80361700 05FC+00 rc=2 efc=1 .text      GDSetVtxDescv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDSetVtxDescv) {
+extern "C" asm void GDSetVtxDescv() {
 	nofralloc
 #include "asm/dolphin/gd/GDGeometry/GDSetVtxDescv.s"
 }
 #pragma pop
 
 
-/* 80361700-8036190C 020C+00 .text      GDSetArray                                                   */
+/* 80361700-8036190C 020C+00 rc=1 efc=1 .text      GDSetArray                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDSetArray) {
+extern "C" asm void GDSetArray() {
 	nofralloc
 #include "asm/dolphin/gd/GDGeometry/GDSetArray.s"
 }
 #pragma pop
 
 
-/* 8036190C-80361B14 0208+00 .text      GDSetArrayRaw                                                */
+/* 8036190C-80361B14 0208+00 rc=1 efc=1 .text      GDSetArrayRaw                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GDSetArrayRaw) {
+extern "C" asm void GDSetArrayRaw() {
 	nofralloc
 #include "asm/dolphin/gd/GDGeometry/GDSetArrayRaw.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

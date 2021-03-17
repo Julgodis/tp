@@ -27,14 +27,14 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x80529920,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x8052994C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80529978,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"Function"},
-	{'addr':0x80529998,'size':8,'pad':0,'label':"daKytag14_Draw__FP13kytag14_class",'name':"daKytag14_Draw__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x805299A0,'size':404,'pad':0,'label':"daKytag14_Execute__FP13kytag14_class",'name':"daKytag14_Execute__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80529B34,'size':8,'pad':0,'label':"daKytag14_IsDelete__FP13kytag14_class",'name':"daKytag14_IsDelete__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80529B3C,'size':8,'pad':0,'label':"daKytag14_Delete__FP13kytag14_class",'name':"daKytag14_Delete__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80529B44,'size':156,'pad':0,'label':"daKytag14_Create__FP10fopAc_ac_c",'name':"daKytag14_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
+	{'addr':0x80529920,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x8052994C,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80529978,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':4,'type':"ASMFunction"},
+	{'addr':0x80529998,'size':8,'pad':0,'label':"daKytag14_Draw__FP13kytag14_class",'name':"daKytag14_Draw__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ReturnFunction"},
+	{'addr':0x805299A0,'size':404,'pad':0,'label':"daKytag14_Execute__FP13kytag14_class",'name':"daKytag14_Execute__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80529B34,'size':8,'pad':0,'label':"daKytag14_IsDelete__FP13kytag14_class",'name':"daKytag14_IsDelete__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ReturnFunction"},
+	{'addr':0x80529B3C,'size':8,'pad':0,'label':"daKytag14_Delete__FP13kytag14_class",'name':"daKytag14_Delete__FP13kytag14_class",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ReturnFunction"},
+	{'addr':0x80529B44,'size':156,'pad':0,'label':"daKytag14_Create__FP10fopAc_ac_c",'name':"daKytag14_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
 	{'addr':0x80529BE0,'size':4,'pad':0,'label':"data_80529BE0",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
 	{'addr':0x80529BE4,'size':4,'pad':0,'label':"data_80529BE4",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
 	{'addr':0x80529BE8,'size':32,'pad':0,'label':"l_daKytag14_Method",'name':"l_daKytag14_Method",'lib':-1,'tu':4,'section':3,'rc':0,'type':"InitData"},

@@ -6,57 +6,155 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daGlwSph_c;
+
+struct daGlwSph_HIO_c {
+	daGlwSph_HIO_c();
+	~daGlwSph_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daGlwSph_c {
+	void getSphMng();
+	void setBaseMtx();
+	void createHeapCallBack(fopAc_ac_c*);
+	void CreateHeap();
+	void create();
+	void execute();
+	void actionMain();
+	void effectSet();
+	void getSE();
+	void getVibe();
+	void actionWaitInit();
+	void actionWait();
+	void actionGetInit();
+	void actionGet();
+	void actionMoveInit();
+	void actionMove();
+	void draw();
+	void _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct _GlSph_Mng_c {
+	void _clrLstBuf();
+	void entry(daGlwSph_c*);
+	void remove(daGlwSph_c*);
+	void _setting_main();
+	void _chkAllGet_main();
+	void SphSeProc();
+	void clrSphSe();
+	void getSphSe();
+	void incSphSe();
+	~_GlSph_Mng_c();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct _GlSph_LstInfo_c {
+	~_GlSph_LstInfo_c();
+	_GlSph_LstInfo_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daGlwSph_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void getSphMng__10daGlwSph_cFv();
-extern "C" extern void setBaseMtx__10daGlwSph_cFv();
-extern "C" extern void createHeapCallBack__10daGlwSph_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daGlwSph_cFv();
-extern "C" extern void create__10daGlwSph_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void execute__10daGlwSph_cFv();
-extern "C" extern void actionMain__10daGlwSph_cFv();
-extern "C" extern void effectSet__10daGlwSph_cFv();
-extern "C" extern void getSE__10daGlwSph_cFv();
-extern "C" extern void getVibe__10daGlwSph_cFv();
-extern "C" extern void actionWaitInit__10daGlwSph_cFv();
-extern "C" extern void actionWait__10daGlwSph_cFv();
-extern "C" extern void actionGetInit__10daGlwSph_cFv();
-extern "C" extern void actionGet__10daGlwSph_cFv();
-extern "C" extern void actionMoveInit__10daGlwSph_cFv();
-extern "C" extern void actionMove__10daGlwSph_cFv();
-extern "C" extern void draw__10daGlwSph_cFv();
-extern "C" extern void _delete__10daGlwSph_cFv();
-extern "C" extern void daGlwSph_Draw__FP10daGlwSph_c();
-extern "C" extern void daGlwSph_Execute__FP10daGlwSph_c();
-extern "C" extern void daGlwSph_Delete__FP10daGlwSph_c();
-extern "C" extern void daGlwSph_Create__FP10fopAc_ac_c();
-extern "C" extern void _clrLstBuf__12_GlSph_Mng_cFv();
-extern "C" extern void entry__12_GlSph_Mng_cFP10daGlwSph_c();
-extern "C" extern void remove__12_GlSph_Mng_cFP10daGlwSph_c();
-extern "C" extern void _setting_main__12_GlSph_Mng_cFv();
-extern "C" extern void _chkAllGet_main__12_GlSph_Mng_cFv();
-extern "C" extern void SphSeProc__12_GlSph_Mng_cFv();
-extern "C" extern void clrSphSe__12_GlSph_Mng_cFv();
-extern "C" extern void getSphSe__12_GlSph_Mng_cFv();
-extern "C" extern void incSphSe__12_GlSph_Mng_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daGlwSph_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_glowSphere_cpp();
-extern "C" extern void __dt__12_GlSph_Mng_cFv();
-extern "C" extern void __dt__16_GlSph_LstInfo_cFv();
-extern "C" extern void __ct__16_GlSph_LstInfo_cFv();
-extern "C" extern void func_80BFA94C();
-extern "C" extern void func_80BFA954();
+void daGlwSph_Draw(daGlwSph_c*);
+void daGlwSph_Execute(daGlwSph_c*);
+void daGlwSph_Delete(daGlwSph_c*);
+void daGlwSph_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_glowSphere_cpp();
+extern "C" void func_80BFA94C();
+extern "C" void func_80BFA954();
+
+extern "C" void __ct__14daGlwSph_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void getSphMng__10daGlwSph_cFv();
+extern "C" void setBaseMtx__10daGlwSph_cFv();
+extern "C" void createHeapCallBack__10daGlwSph_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__10daGlwSph_cFv();
+extern "C" void create__10daGlwSph_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void execute__10daGlwSph_cFv();
+extern "C" void actionMain__10daGlwSph_cFv();
+extern "C" void effectSet__10daGlwSph_cFv();
+extern "C" void getSE__10daGlwSph_cFv();
+extern "C" void getVibe__10daGlwSph_cFv();
+extern "C" void actionWaitInit__10daGlwSph_cFv();
+extern "C" void actionWait__10daGlwSph_cFv();
+extern "C" void actionGetInit__10daGlwSph_cFv();
+extern "C" void actionGet__10daGlwSph_cFv();
+extern "C" void actionMoveInit__10daGlwSph_cFv();
+extern "C" void actionMove__10daGlwSph_cFv();
+extern "C" void draw__10daGlwSph_cFv();
+extern "C" void _delete__10daGlwSph_cFv();
+extern "C" void daGlwSph_Draw__FP10daGlwSph_c();
+extern "C" void daGlwSph_Execute__FP10daGlwSph_c();
+extern "C" void daGlwSph_Delete__FP10daGlwSph_c();
+extern "C" void daGlwSph_Create__FP10fopAc_ac_c();
+extern "C" void _clrLstBuf__12_GlSph_Mng_cFv();
+extern "C" void entry__12_GlSph_Mng_cFP10daGlwSph_c();
+extern "C" void remove__12_GlSph_Mng_cFP10daGlwSph_c();
+extern "C" void _setting_main__12_GlSph_Mng_cFv();
+extern "C" void _chkAllGet_main__12_GlSph_Mng_cFv();
+extern "C" void SphSeProc__12_GlSph_Mng_cFv();
+extern "C" void clrSphSe__12_GlSph_Mng_cFv();
+extern "C" void getSphSe__12_GlSph_Mng_cFv();
+extern "C" void incSphSe__12_GlSph_Mng_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daGlwSph_HIO_cFv();
+extern "C" void __sinit_d_a_obj_glowSphere_cpp();
+extern "C" void __dt__12_GlSph_Mng_cFv();
+extern "C" void __dt__16_GlSph_LstInfo_cFv();
+extern "C" void __ct__16_GlSph_LstInfo_cFv();
+extern "C" void func_80BFA94C();
+extern "C" void func_80BFA954();
 SECTION_RODATA extern const u32 lit_3665;
 SECTION_RODATA extern const u32 lit_3666;
 SECTION_RODATA extern const u8 mCcDObjInfo__10daGlwSph_c[48];
@@ -151,8 +249,11 @@ SECTION_BSS extern u8 data_80BFB04C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -162,7 +263,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daGlwSph_HIO_cFv) {
+asm daGlwSph_HIO_c::daGlwSph_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__ct__14daGlwSph_HIO_cFv.s"
 }
@@ -173,7 +274,7 @@ ASM_FUNCTION(__ct__14daGlwSph_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -184,7 +285,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -195,7 +296,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSphMng__10daGlwSph_cFv) {
+asm void daGlwSph_c::getSphMng() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/getSphMng__10daGlwSph_cFv.s"
 }
@@ -206,7 +307,7 @@ ASM_FUNCTION(getSphMng__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daGlwSph_cFv) {
+asm void daGlwSph_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/setBaseMtx__10daGlwSph_cFv.s"
 }
@@ -217,7 +318,7 @@ ASM_FUNCTION(setBaseMtx__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__10daGlwSph_cFP10fopAc_ac_c) {
+asm void daGlwSph_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/createHeapCallBack__10daGlwSph_cFP10fopAc_ac_c.s"
 }
@@ -228,7 +329,7 @@ ASM_FUNCTION(createHeapCallBack__10daGlwSph_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daGlwSph_cFv) {
+asm void daGlwSph_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/CreateHeap__10daGlwSph_cFv.s"
 }
@@ -239,7 +340,7 @@ ASM_FUNCTION(CreateHeap__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daGlwSph_cFv) {
+asm void daGlwSph_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/create__10daGlwSph_cFv.s"
 }
@@ -250,7 +351,7 @@ ASM_FUNCTION(create__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__8cM3dGSphFv.s"
 }
@@ -261,7 +362,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__8cM3dGAabFv.s"
 }
@@ -272,7 +373,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__10dCcD_GSttsFv.s"
 }
@@ -283,7 +384,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__12dBgS_AcchCirFv.s"
 }
@@ -294,7 +395,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -305,7 +406,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__12J3DFrameCtrlFv.s"
 }
@@ -316,7 +417,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daGlwSph_cFv) {
+asm void daGlwSph_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/execute__10daGlwSph_cFv.s"
 }
@@ -327,7 +428,7 @@ ASM_FUNCTION(execute__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMain__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionMain__10daGlwSph_cFv.s"
 }
@@ -338,7 +439,7 @@ ASM_FUNCTION(actionMain__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet__10daGlwSph_cFv) {
+asm void daGlwSph_c::effectSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/effectSet__10daGlwSph_cFv.s"
 }
@@ -349,7 +450,7 @@ ASM_FUNCTION(effectSet__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSE__10daGlwSph_cFv) {
+asm void daGlwSph_c::getSE() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/getSE__10daGlwSph_cFv.s"
 }
@@ -360,7 +461,7 @@ ASM_FUNCTION(getSE__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getVibe__10daGlwSph_cFv) {
+asm void daGlwSph_c::getVibe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/getVibe__10daGlwSph_cFv.s"
 }
@@ -371,7 +472,7 @@ ASM_FUNCTION(getVibe__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionWaitInit__10daGlwSph_cFv.s"
 }
@@ -379,21 +480,16 @@ ASM_FUNCTION(actionWaitInit__10daGlwSph_cFv) {
 
 
 /* 80BFA070-80BFA074 0004+00 .text      actionWait__10daGlwSph_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daGlwSph_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionWait__10daGlwSph_cFv.s"
+void daGlwSph_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFA074-80BFA130 00BC+00 .text      actionGetInit__10daGlwSph_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetInit__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionGetInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionGetInit__10daGlwSph_cFv.s"
 }
@@ -404,7 +500,7 @@ ASM_FUNCTION(actionGetInit__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGet__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionGet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionGet__10daGlwSph_cFv.s"
 }
@@ -415,7 +511,7 @@ ASM_FUNCTION(actionGet__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMoveInit__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionMoveInit__10daGlwSph_cFv.s"
 }
@@ -426,7 +522,7 @@ ASM_FUNCTION(actionMoveInit__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionMove__10daGlwSph_cFv) {
+asm void daGlwSph_c::actionMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionMove__10daGlwSph_cFv.s"
 }
@@ -437,7 +533,7 @@ ASM_FUNCTION(actionMove__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daGlwSph_cFv) {
+asm void daGlwSph_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/draw__10daGlwSph_cFv.s"
 }
@@ -448,7 +544,7 @@ ASM_FUNCTION(draw__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daGlwSph_cFv) {
+asm void daGlwSph_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/_delete__10daGlwSph_cFv.s"
 }
@@ -459,7 +555,7 @@ ASM_FUNCTION(_delete__10daGlwSph_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGlwSph_Draw__FP10daGlwSph_c) {
+asm void daGlwSph_Draw(daGlwSph_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Draw__FP10daGlwSph_c.s"
 }
@@ -470,7 +566,7 @@ ASM_FUNCTION(daGlwSph_Draw__FP10daGlwSph_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGlwSph_Execute__FP10daGlwSph_c) {
+asm void daGlwSph_Execute(daGlwSph_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Execute__FP10daGlwSph_c.s"
 }
@@ -481,7 +577,7 @@ ASM_FUNCTION(daGlwSph_Execute__FP10daGlwSph_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGlwSph_Delete__FP10daGlwSph_c) {
+asm void daGlwSph_Delete(daGlwSph_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Delete__FP10daGlwSph_c.s"
 }
@@ -492,7 +588,7 @@ ASM_FUNCTION(daGlwSph_Delete__FP10daGlwSph_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGlwSph_Create__FP10fopAc_ac_c) {
+asm void daGlwSph_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/daGlwSph_Create__FP10fopAc_ac_c.s"
 }
@@ -503,7 +599,7 @@ ASM_FUNCTION(daGlwSph_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_clrLstBuf__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::_clrLstBuf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/_clrLstBuf__12_GlSph_Mng_cFv.s"
 }
@@ -514,7 +610,7 @@ ASM_FUNCTION(_clrLstBuf__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entry__12_GlSph_Mng_cFP10daGlwSph_c) {
+asm void _GlSph_Mng_c::entry(daGlwSph_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/entry__12_GlSph_Mng_cFP10daGlwSph_c.s"
 }
@@ -525,7 +621,7 @@ ASM_FUNCTION(entry__12_GlSph_Mng_cFP10daGlwSph_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__12_GlSph_Mng_cFP10daGlwSph_c) {
+asm void _GlSph_Mng_c::remove(daGlwSph_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/remove__12_GlSph_Mng_cFP10daGlwSph_c.s"
 }
@@ -536,7 +632,7 @@ ASM_FUNCTION(remove__12_GlSph_Mng_cFP10daGlwSph_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_setting_main__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::_setting_main() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/_setting_main__12_GlSph_Mng_cFv.s"
 }
@@ -547,7 +643,7 @@ ASM_FUNCTION(_setting_main__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_chkAllGet_main__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::_chkAllGet_main() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/_chkAllGet_main__12_GlSph_Mng_cFv.s"
 }
@@ -558,7 +654,7 @@ ASM_FUNCTION(_chkAllGet_main__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SphSeProc__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::SphSeProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/SphSeProc__12_GlSph_Mng_cFv.s"
 }
@@ -569,7 +665,7 @@ ASM_FUNCTION(SphSeProc__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clrSphSe__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::clrSphSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/clrSphSe__12_GlSph_Mng_cFv.s"
 }
@@ -580,7 +676,7 @@ ASM_FUNCTION(clrSphSe__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSphSe__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::getSphSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/getSphSe__12_GlSph_Mng_cFv.s"
 }
@@ -591,7 +687,7 @@ ASM_FUNCTION(getSphSe__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(incSphSe__12_GlSph_Mng_cFv) {
+asm void _GlSph_Mng_c::incSphSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/incSphSe__12_GlSph_Mng_cFv.s"
 }
@@ -602,7 +698,7 @@ ASM_FUNCTION(incSphSe__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__10cCcD_GSttsFv.s"
 }
@@ -613,7 +709,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daGlwSph_HIO_cFv) {
+asm daGlwSph_HIO_c::~daGlwSph_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__14daGlwSph_HIO_cFv.s"
 }
@@ -624,7 +720,7 @@ ASM_FUNCTION(__dt__14daGlwSph_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_glowSphere_cpp) {
+extern "C" asm void __sinit_d_a_obj_glowSphere_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__sinit_d_a_obj_glowSphere_cpp.s"
 }
@@ -635,7 +731,7 @@ ASM_FUNCTION(__sinit_d_a_obj_glowSphere_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12_GlSph_Mng_cFv) {
+asm _GlSph_Mng_c::~_GlSph_Mng_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__12_GlSph_Mng_cFv.s"
 }
@@ -646,7 +742,7 @@ ASM_FUNCTION(__dt__12_GlSph_Mng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16_GlSph_LstInfo_cFv) {
+asm _GlSph_LstInfo_c::~_GlSph_LstInfo_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__dt__16_GlSph_LstInfo_cFv.s"
 }
@@ -657,7 +753,7 @@ ASM_FUNCTION(__dt__16_GlSph_LstInfo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16_GlSph_LstInfo_cFv) {
+asm _GlSph_LstInfo_c::_GlSph_LstInfo_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/__ct__16_GlSph_LstInfo_cFv.s"
 }
@@ -668,7 +764,7 @@ ASM_FUNCTION(__ct__16_GlSph_LstInfo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BFA94C) {
+extern "C" asm void func_80BFA94C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/func_80BFA94C.s"
 }
@@ -679,7 +775,7 @@ ASM_FUNCTION(func_80BFA94C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BFA954) {
+extern "C" asm void func_80BFA954() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/func_80BFA954.s"
 }

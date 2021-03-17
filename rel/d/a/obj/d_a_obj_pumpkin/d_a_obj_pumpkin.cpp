@@ -6,45 +6,121 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_Pumpkin_c {
+	~daObj_Pumpkin_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void isDelete();
+	void setEnvTevColor();
+	void setRoomNo();
+	void reset();
+	void setMtx();
+	void setSmokePrtcl();
+	void setWaterPrtcl();
+	void setHamonPrtcl();
+	void crash();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_Pumpkin_Param_c {
+	~daObj_Pumpkin_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__15daObj_Pumpkin_cFv();
-extern "C" extern void create__15daObj_Pumpkin_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__15daObj_Pumpkin_cFv();
-extern "C" extern void Delete__15daObj_Pumpkin_cFv();
-extern "C" extern void Execute__15daObj_Pumpkin_cFv();
-extern "C" extern void Draw__15daObj_Pumpkin_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void createHeapCallBack__15daObj_Pumpkin_cFP10fopAc_ac_c();
-extern "C" extern void isDelete__15daObj_Pumpkin_cFv();
-extern "C" extern void setEnvTevColor__15daObj_Pumpkin_cFv();
-extern "C" extern void setRoomNo__15daObj_Pumpkin_cFv();
-extern "C" extern void reset__15daObj_Pumpkin_cFv();
-extern "C" extern void setMtx__15daObj_Pumpkin_cFv();
-extern "C" extern void calcRollAngle__15daObj_Pumpkin_cFsi();
-extern "C" extern void getWallAngle__15daObj_Pumpkin_cFsPs();
-extern "C" extern void setSmokePrtcl__15daObj_Pumpkin_cFv();
-extern "C" extern void setWaterPrtcl__15daObj_Pumpkin_cFv();
-extern "C" extern void setHamonPrtcl__15daObj_Pumpkin_cFv();
-extern "C" extern void crash__15daObj_Pumpkin_cFv();
-extern "C" extern void daObj_Pumpkin_Create__FPv();
-extern "C" extern void daObj_Pumpkin_Delete__FPv();
-extern "C" extern void daObj_Pumpkin_Execute__FPv();
-extern "C" extern void daObj_Pumpkin_Draw__FPv();
-extern "C" extern void daObj_Pumpkin_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80CB8274();
-extern "C" extern void __sinit_d_a_obj_pumpkin_cpp();
-extern "C" extern void __dt__21daObj_Pumpkin_Param_cFv();
-extern "C" extern void func_80CB834C();
-extern "C" extern void func_80CB8354();
+extern "C" void calcRollAngle__15daObj_Pumpkin_cFsi();
+extern "C" void getWallAngle__15daObj_Pumpkin_cFsPs();
+void daObj_Pumpkin_Create(void*);
+void daObj_Pumpkin_Delete(void*);
+void daObj_Pumpkin_Execute(void*);
+void daObj_Pumpkin_Draw(void*);
+bool daObj_Pumpkin_IsDelete(void*);
+extern "C" void func_80CB8274();
+extern "C" void __sinit_d_a_obj_pumpkin_cpp();
+extern "C" void func_80CB834C();
+extern "C" void func_80CB8354();
+
+extern "C" void __dt__15daObj_Pumpkin_cFv();
+extern "C" void create__15daObj_Pumpkin_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__15daObj_Pumpkin_cFv();
+extern "C" void Delete__15daObj_Pumpkin_cFv();
+extern "C" void Execute__15daObj_Pumpkin_cFv();
+extern "C" void Draw__15daObj_Pumpkin_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void createHeapCallBack__15daObj_Pumpkin_cFP10fopAc_ac_c();
+extern "C" void isDelete__15daObj_Pumpkin_cFv();
+extern "C" void setEnvTevColor__15daObj_Pumpkin_cFv();
+extern "C" void setRoomNo__15daObj_Pumpkin_cFv();
+extern "C" void reset__15daObj_Pumpkin_cFv();
+extern "C" void setMtx__15daObj_Pumpkin_cFv();
+extern "C" void calcRollAngle__15daObj_Pumpkin_cFsi();
+extern "C" void getWallAngle__15daObj_Pumpkin_cFsPs();
+extern "C" void setSmokePrtcl__15daObj_Pumpkin_cFv();
+extern "C" void setWaterPrtcl__15daObj_Pumpkin_cFv();
+extern "C" void setHamonPrtcl__15daObj_Pumpkin_cFv();
+extern "C" void crash__15daObj_Pumpkin_cFv();
+extern "C" void daObj_Pumpkin_Create__FPv();
+extern "C" void daObj_Pumpkin_Delete__FPv();
+extern "C" void daObj_Pumpkin_Execute__FPv();
+extern "C" void daObj_Pumpkin_Draw__FPv();
+extern "C" bool daObj_Pumpkin_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80CB8274();
+extern "C" void __sinit_d_a_obj_pumpkin_cpp();
+extern "C" void __dt__21daObj_Pumpkin_Param_cFv();
+extern "C" void func_80CB834C();
+extern "C" void func_80CB8354();
 SECTION_RODATA extern const u8 m__21daObj_Pumpkin_Param_c[52];
 SECTION_RODATA extern const u8 l_ccDObjData[48];
 SECTION_RODATA extern const u32 lit_4022;
@@ -108,8 +184,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -119,7 +198,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObj_Pumpkin_cFv) {
+asm daObj_Pumpkin_c::~daObj_Pumpkin_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__15daObj_Pumpkin_cFv.s"
 }
@@ -130,7 +209,7 @@ ASM_FUNCTION(__dt__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/create__15daObj_Pumpkin_cFv.s"
 }
@@ -141,7 +220,7 @@ ASM_FUNCTION(create__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__8cM3dGLinFv.s"
 }
@@ -152,7 +231,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__8cM3dGCylFv.s"
 }
@@ -163,7 +242,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__8cM3dGAabFv.s"
 }
@@ -174,7 +253,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__12dBgS_AcchCirFv.s"
 }
@@ -185,7 +264,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__10dCcD_GSttsFv.s"
 }
@@ -196,7 +275,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -207,7 +286,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/CreateHeap__15daObj_Pumpkin_cFv.s"
 }
@@ -218,7 +297,7 @@ ASM_FUNCTION(CreateHeap__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/Delete__15daObj_Pumpkin_cFv.s"
 }
@@ -229,7 +308,7 @@ ASM_FUNCTION(Delete__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/Execute__15daObj_Pumpkin_cFv.s"
 }
@@ -240,7 +319,7 @@ ASM_FUNCTION(Execute__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/Draw__15daObj_Pumpkin_cFv.s"
 }
@@ -251,7 +330,7 @@ ASM_FUNCTION(Draw__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__8cM3dGPlaFv.s"
 }
@@ -262,7 +341,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__15daObj_Pumpkin_cFP10fopAc_ac_c) {
+asm void daObj_Pumpkin_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/createHeapCallBack__15daObj_Pumpkin_cFP10fopAc_ac_c.s"
 }
@@ -273,7 +352,7 @@ ASM_FUNCTION(createHeapCallBack__15daObj_Pumpkin_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/isDelete__15daObj_Pumpkin_cFv.s"
 }
@@ -284,7 +363,7 @@ ASM_FUNCTION(isDelete__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setEnvTevColor__15daObj_Pumpkin_cFv.s"
 }
@@ -295,7 +374,7 @@ ASM_FUNCTION(setEnvTevColor__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setRoomNo__15daObj_Pumpkin_cFv.s"
 }
@@ -306,7 +385,7 @@ ASM_FUNCTION(setRoomNo__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/reset__15daObj_Pumpkin_cFv.s"
 }
@@ -317,7 +396,7 @@ ASM_FUNCTION(reset__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setMtx__15daObj_Pumpkin_cFv.s"
 }
@@ -328,7 +407,7 @@ ASM_FUNCTION(setMtx__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRollAngle__15daObj_Pumpkin_cFsi) {
+extern "C" asm void calcRollAngle__15daObj_Pumpkin_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/calcRollAngle__15daObj_Pumpkin_cFsi.s"
 }
@@ -339,7 +418,7 @@ ASM_FUNCTION(calcRollAngle__15daObj_Pumpkin_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWallAngle__15daObj_Pumpkin_cFsPs) {
+extern "C" asm void getWallAngle__15daObj_Pumpkin_cFsPs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/getWallAngle__15daObj_Pumpkin_cFsPs.s"
 }
@@ -350,7 +429,7 @@ ASM_FUNCTION(getWallAngle__15daObj_Pumpkin_cFsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokePrtcl__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setSmokePrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setSmokePrtcl__15daObj_Pumpkin_cFv.s"
 }
@@ -361,7 +440,7 @@ ASM_FUNCTION(setSmokePrtcl__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterPrtcl__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setWaterPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setWaterPrtcl__15daObj_Pumpkin_cFv.s"
 }
@@ -372,7 +451,7 @@ ASM_FUNCTION(setWaterPrtcl__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHamonPrtcl__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::setHamonPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/setHamonPrtcl__15daObj_Pumpkin_cFv.s"
 }
@@ -383,7 +462,7 @@ ASM_FUNCTION(setHamonPrtcl__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(crash__15daObj_Pumpkin_cFv) {
+asm void daObj_Pumpkin_c::crash() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/crash__15daObj_Pumpkin_cFv.s"
 }
@@ -394,7 +473,7 @@ ASM_FUNCTION(crash__15daObj_Pumpkin_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pumpkin_Create__FPv) {
+asm void daObj_Pumpkin_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_Create__FPv.s"
 }
@@ -405,7 +484,7 @@ ASM_FUNCTION(daObj_Pumpkin_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pumpkin_Delete__FPv) {
+asm void daObj_Pumpkin_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_Delete__FPv.s"
 }
@@ -416,7 +495,7 @@ ASM_FUNCTION(daObj_Pumpkin_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pumpkin_Execute__FPv) {
+asm void daObj_Pumpkin_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_Execute__FPv.s"
 }
@@ -427,7 +506,7 @@ ASM_FUNCTION(daObj_Pumpkin_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pumpkin_Draw__FPv) {
+asm void daObj_Pumpkin_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_Draw__FPv.s"
 }
@@ -435,21 +514,16 @@ ASM_FUNCTION(daObj_Pumpkin_Draw__FPv) {
 
 
 /* 80CB8224-80CB822C 0008+00 .text      daObj_Pumpkin_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pumpkin_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_IsDelete__FPv.s"
+bool daObj_Pumpkin_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB822C-80CB8274 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__10cCcD_GSttsFv.s"
 }
@@ -460,7 +534,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB8274) {
+extern "C" asm void func_80CB8274() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/func_80CB8274.s"
 }
@@ -471,7 +545,7 @@ ASM_FUNCTION(func_80CB8274) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_pumpkin_cpp) {
+extern "C" asm void __sinit_d_a_obj_pumpkin_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__sinit_d_a_obj_pumpkin_cpp.s"
 }
@@ -482,7 +556,7 @@ ASM_FUNCTION(__sinit_d_a_obj_pumpkin_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daObj_Pumpkin_Param_cFv) {
+asm daObj_Pumpkin_Param_c::~daObj_Pumpkin_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/__dt__21daObj_Pumpkin_Param_cFv.s"
 }
@@ -493,7 +567,7 @@ ASM_FUNCTION(__dt__21daObj_Pumpkin_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB834C) {
+extern "C" asm void func_80CB834C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/func_80CB834C.s"
 }
@@ -504,7 +578,7 @@ ASM_FUNCTION(func_80CB834C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB8354) {
+extern "C" asm void func_80CB8354() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/func_80CB8354.s"
 }

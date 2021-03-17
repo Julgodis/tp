@@ -6,43 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
+/* top-level dependencies (begin JPAEmitterWorkData) */
+/* top-level dependencies (end JPAEmitterWorkData) */
+struct JPAEmitterWorkData {
+};
+
+// build JPAExTexShape (JPAExTexShape) False/False
+/* top-level dependencies (begin JPAExTexShape) */
+/* top-level dependencies (end JPAExTexShape) */
+struct JPAExTexShape {
+	/* 8027B13C */ JPAExTexShape(char const*);
+};
+
+// build JUTTexture (JUTTexture) False/False
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: _GXTexMapID
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// _GXTexMapID
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+// build _GXTexMapID (_GXTexMapID) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void JPALoadExTex__FP18JPAEmitterWorkData();
-extern "C" extern void __ct__13JPAExTexShapeFPCUc();
+void JPALoadExTex(JPAEmitterWorkData*);
+
+extern "C" void JPALoadExTex__FP18JPAEmitterWorkData();
+extern "C" void __ct__13JPAExTexShapeFPCUc();
 
 // 
 // External References:
 // 
 
-extern "C" extern void load__10JUTTextureF11_GXTexMapID();
-extern "C" extern void GXSetTexCoordGen2();
+extern "C" void GXSetTexCoordGen2();
+
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void GXSetTexCoordGen2();
 
 // 
 // Declarations:
 // 
 
-/* 8027B040-8027B13C 00FC+00 .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
+/* 8027B040-8027B13C 00FC+00 rc=1 efc=1 .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPALoadExTex__FP18JPAEmitterWorkData) {
+asm void JPALoadExTex(JPAEmitterWorkData* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExTexShape/JPALoadExTex__FP18JPAEmitterWorkData.s"
 }
 #pragma pop
 
 
-/* 8027B13C-8027B144 0008+00 .text      __ct__13JPAExTexShapeFPCUc                                   */
+/* 8027B13C-8027B144 0008+00 rc=1 efc=1 .text      __ct__13JPAExTexShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JPAExTexShapeFPCUc) {
+asm JPAExTexShape::JPAExTexShape(char const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExTexShape/__ct__13JPAExTexShapeFPCUc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

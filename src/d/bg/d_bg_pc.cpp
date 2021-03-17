@@ -6,29 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgPc (dBgPc) False/False
+// build sBgPc (sBgPc) False/False
+/* top-level dependencies (begin sBgPc) */
+/* top-level dependencies (end sBgPc) */
+struct sBgPc {
+};
+
+/* top-level dependencies (begin dBgPc) */
+// outer dependency: sBgPc
+/* top-level dependencies (end dBgPc) */
+struct dBgPc {
+	// sBgPc
+	/* 80074048 */ void setCode(sBgPc&);
+};
+
+// build sBgPc (sBgPc) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void setCode__5dBgPcFR5sBgPc();
+
+extern "C" void setCode__5dBgPcFR5sBgPc();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80074048-80074074 002C+00 .text      setCode__5dBgPcFR5sBgPc                                      */
+/* 80074048-80074074 002C+00 rc=1 efc=1 .text      setCode__5dBgPcFR5sBgPc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCode__5dBgPcFR5sBgPc) {
+asm void dBgPc::setCode(sBgPc& field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_pc/setCode__5dBgPcFR5sBgPc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

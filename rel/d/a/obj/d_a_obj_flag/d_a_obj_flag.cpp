@@ -6,25 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct FlagJoint_c;
+struct J3DJoint;
+struct daObjFlag_c;
+struct fopAc_ac_c;
+
+struct daObjFlag_c {
+	void create_init();
+	void initBaseMtx();
+	void getJointAngle(csXyz*, s32);
+	void calcJointAngle();
+	void calcAngleSwingZ(FlagJoint_c*, f32);
+	void calcAngleSwingX(FlagJoint_c*, f32);
+	void getSwingY(f32);
+};
+
+struct csXyz {
+};
+
+struct FlagJoint_c {
+	~FlagJoint_c();
+	FlagJoint_c();
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__11daObjFlag_cFv();
-extern "C" extern void initBaseMtx__11daObjFlag_cFv();
-extern "C" extern void getJointAngle__11daObjFlag_cFP5csXyzi();
-extern "C" extern void calcJointAngle__11daObjFlag_cFv();
-extern "C" extern void calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf();
-extern "C" extern void calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf();
-extern "C" extern void getSwingY__11daObjFlag_cFf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjFlag_Draw__FP11daObjFlag_c();
-extern "C" extern void daObjFlag_Execute__FP11daObjFlag_c();
-extern "C" extern void daObjFlag_IsDelete__FP11daObjFlag_c();
-extern "C" extern void daObjFlag_Delete__FP11daObjFlag_c();
-extern "C" extern void __dt__11FlagJoint_cFv();
-extern "C" extern void daObjFlag_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__11FlagJoint_cFv();
+void nodeCallBack(J3DJoint*, s32);
+void createSolidHeap(fopAc_ac_c*);
+void daObjFlag_Draw(daObjFlag_c*);
+void daObjFlag_Execute(daObjFlag_c*);
+bool daObjFlag_IsDelete(daObjFlag_c*);
+void daObjFlag_Delete(daObjFlag_c*);
+void daObjFlag_Create(fopAc_ac_c*);
+
+extern "C" void create_init__11daObjFlag_cFv();
+extern "C" void initBaseMtx__11daObjFlag_cFv();
+extern "C" void getJointAngle__11daObjFlag_cFP5csXyzi();
+extern "C" void calcJointAngle__11daObjFlag_cFv();
+extern "C" void calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf();
+extern "C" void calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf();
+extern "C" void getSwingY__11daObjFlag_cFf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjFlag_Draw__FP11daObjFlag_c();
+extern "C" void daObjFlag_Execute__FP11daObjFlag_c();
+extern "C" bool daObjFlag_IsDelete__FP11daObjFlag_c();
+extern "C" void daObjFlag_Delete__FP11daObjFlag_c();
+extern "C" void __dt__11FlagJoint_cFv();
+extern "C" void daObjFlag_Create__FP10fopAc_ac_c();
+extern "C" void __ct__11FlagJoint_cFv();
 SECTION_RODATA extern const u8 M_attr__11daObjFlag_c[52];
 SECTION_RODATA extern const u32 lit_3637;
 SECTION_RODATA extern const u8 lit_3639[8];
@@ -45,7 +87,9 @@ SECTION_DATA extern u8 g_profile_Obj_Flag[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -55,7 +99,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__11daObjFlag_cFv) {
+asm void daObjFlag_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/create_init__11daObjFlag_cFv.s"
 }
@@ -66,7 +110,7 @@ ASM_FUNCTION(create_init__11daObjFlag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjFlag_cFv) {
+asm void daObjFlag_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/initBaseMtx__11daObjFlag_cFv.s"
 }
@@ -77,7 +121,7 @@ ASM_FUNCTION(initBaseMtx__11daObjFlag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJointAngle__11daObjFlag_cFP5csXyzi) {
+asm void daObjFlag_c::getJointAngle(csXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/getJointAngle__11daObjFlag_cFP5csXyzi.s"
 }
@@ -88,7 +132,7 @@ ASM_FUNCTION(getJointAngle__11daObjFlag_cFP5csXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcJointAngle__11daObjFlag_cFv) {
+asm void daObjFlag_c::calcJointAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/calcJointAngle__11daObjFlag_cFv.s"
 }
@@ -99,7 +143,7 @@ ASM_FUNCTION(calcJointAngle__11daObjFlag_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf) {
+asm void daObjFlag_c::calcAngleSwingZ(FlagJoint_c* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf.s"
 }
@@ -110,7 +154,7 @@ ASM_FUNCTION(calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf) {
+asm void daObjFlag_c::calcAngleSwingX(FlagJoint_c* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf.s"
 }
@@ -121,7 +165,7 @@ ASM_FUNCTION(calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwingY__11daObjFlag_cFf) {
+asm void daObjFlag_c::getSwingY(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/getSwingY__11daObjFlag_cFf.s"
 }
@@ -132,7 +176,7 @@ ASM_FUNCTION(getSwingY__11daObjFlag_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/nodeCallBack__FP8J3DJointi.s"
 }
@@ -143,7 +187,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -154,7 +198,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag_Draw__FP11daObjFlag_c) {
+asm void daObjFlag_Draw(daObjFlag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Draw__FP11daObjFlag_c.s"
 }
@@ -165,7 +209,7 @@ ASM_FUNCTION(daObjFlag_Draw__FP11daObjFlag_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag_Execute__FP11daObjFlag_c) {
+asm void daObjFlag_Execute(daObjFlag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Execute__FP11daObjFlag_c.s"
 }
@@ -173,21 +217,16 @@ ASM_FUNCTION(daObjFlag_Execute__FP11daObjFlag_c) {
 
 
 /* 80BEC338-80BEC340 0008+00 .text      daObjFlag_IsDelete__FP11daObjFlag_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag_IsDelete__FP11daObjFlag_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_IsDelete__FP11daObjFlag_c.s"
+bool daObjFlag_IsDelete(daObjFlag_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BEC340-80BEC3BC 007C+00 .text      daObjFlag_Delete__FP11daObjFlag_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag_Delete__FP11daObjFlag_c) {
+asm void daObjFlag_Delete(daObjFlag_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Delete__FP11daObjFlag_c.s"
 }
@@ -198,7 +237,7 @@ ASM_FUNCTION(daObjFlag_Delete__FP11daObjFlag_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11FlagJoint_cFv) {
+asm FlagJoint_c::~FlagJoint_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/__dt__11FlagJoint_cFv.s"
 }
@@ -209,7 +248,7 @@ ASM_FUNCTION(__dt__11FlagJoint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjFlag_Create__FP10fopAc_ac_c) {
+asm void daObjFlag_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Create__FP10fopAc_ac_c.s"
 }
@@ -217,14 +256,9 @@ ASM_FUNCTION(daObjFlag_Create__FP10fopAc_ac_c) {
 
 
 /* 80BEC4E0-80BEC4E4 0004+00 .text      __ct__11FlagJoint_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__11FlagJoint_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/__ct__11FlagJoint_cFv.s"
+FlagJoint_c::FlagJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

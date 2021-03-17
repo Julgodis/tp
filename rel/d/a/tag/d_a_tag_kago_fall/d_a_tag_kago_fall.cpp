@@ -6,18 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagKagoFall_c;
+
+struct daTagKagoFall_c {
+	void create();
+	void execute();
+	void setActionMode(u8, u8);
+	void actionWaitRiver();
+	void actionWaitFall();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__15daTagKagoFall_cFv();
-extern "C" extern void execute__15daTagKagoFall_cFv();
-extern "C" extern void setActionMode__15daTagKagoFall_cFUcUc();
-extern "C" extern void actionWaitRiver__15daTagKagoFall_cFv();
-extern "C" extern void actionWaitFall__15daTagKagoFall_cFv();
-extern "C" extern void _delete__15daTagKagoFall_cFv();
-extern "C" extern void daTagKagoFall_Execute__FP15daTagKagoFall_c();
-extern "C" extern void daTagKagoFall_Delete__FP15daTagKagoFall_c();
-extern "C" extern void daTagKagoFall_Create__FP15daTagKagoFall_c();
+void daTagKagoFall_Execute(daTagKagoFall_c*);
+void daTagKagoFall_Delete(daTagKagoFall_c*);
+void daTagKagoFall_Create(daTagKagoFall_c*);
+
+extern "C" void create__15daTagKagoFall_cFv();
+extern "C" void execute__15daTagKagoFall_cFv();
+extern "C" void setActionMode__15daTagKagoFall_cFUcUc();
+extern "C" void actionWaitRiver__15daTagKagoFall_cFv();
+extern "C" void actionWaitFall__15daTagKagoFall_cFv();
+extern "C" bool _delete__15daTagKagoFall_cFv();
+extern "C" void daTagKagoFall_Execute__FP15daTagKagoFall_c();
+extern "C" void daTagKagoFall_Delete__FP15daTagKagoFall_c();
+extern "C" void daTagKagoFall_Create__FP15daTagKagoFall_c();
 SECTION_RODATA extern const u32 lit_3907;
 SECTION_RODATA extern const u32 lit_3908;
 SECTION_RODATA extern const u32 lit_4022;
@@ -34,7 +53,9 @@ SECTION_DATA extern u8 g_profile_Tag_KagoFall[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +65,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daTagKagoFall_cFv) {
+asm void daTagKagoFall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/create__15daTagKagoFall_cFv.s"
 }
@@ -55,7 +76,7 @@ ASM_FUNCTION(create__15daTagKagoFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daTagKagoFall_cFv) {
+asm void daTagKagoFall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/execute__15daTagKagoFall_cFv.s"
 }
@@ -66,7 +87,7 @@ ASM_FUNCTION(execute__15daTagKagoFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__15daTagKagoFall_cFUcUc) {
+asm void daTagKagoFall_c::setActionMode(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/setActionMode__15daTagKagoFall_cFUcUc.s"
 }
@@ -77,7 +98,7 @@ ASM_FUNCTION(setActionMode__15daTagKagoFall_cFUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitRiver__15daTagKagoFall_cFv) {
+asm void daTagKagoFall_c::actionWaitRiver() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/actionWaitRiver__15daTagKagoFall_cFv.s"
 }
@@ -88,7 +109,7 @@ ASM_FUNCTION(actionWaitRiver__15daTagKagoFall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitFall__15daTagKagoFall_cFv) {
+asm void daTagKagoFall_c::actionWaitFall() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/actionWaitFall__15daTagKagoFall_cFv.s"
 }
@@ -96,21 +117,16 @@ ASM_FUNCTION(actionWaitFall__15daTagKagoFall_cFv) {
 
 
 /* 80D5A67C-80D5A684 0008+00 .text      _delete__15daTagKagoFall_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daTagKagoFall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/_delete__15daTagKagoFall_cFv.s"
+bool daTagKagoFall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5A684-80D5A6A4 0020+00 .text      daTagKagoFall_Execute__FP15daTagKagoFall_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagKagoFall_Execute__FP15daTagKagoFall_c) {
+asm void daTagKagoFall_Execute(daTagKagoFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Execute__FP15daTagKagoFall_c.s"
 }
@@ -121,7 +137,7 @@ ASM_FUNCTION(daTagKagoFall_Execute__FP15daTagKagoFall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagKagoFall_Delete__FP15daTagKagoFall_c) {
+asm void daTagKagoFall_Delete(daTagKagoFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Delete__FP15daTagKagoFall_c.s"
 }
@@ -132,7 +148,7 @@ ASM_FUNCTION(daTagKagoFall_Delete__FP15daTagKagoFall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagKagoFall_Create__FP15daTagKagoFall_c) {
+asm void daTagKagoFall_Create(daTagKagoFall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Create__FP15daTagKagoFall_c.s"
 }

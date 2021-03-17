@@ -6,42 +6,108 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct bd_class;
+
+struct daBd_HIO_c {
+	daBd_HIO_c();
+	~daBd_HIO_c();
+};
+
+struct bd_class {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10daBd_HIO_cFv();
-extern "C" extern void anm_init__FP8bd_classifUcf();
-extern "C" extern void daBd_Draw__FP8bd_class();
-extern "C" extern void way_bg_check__FP8bd_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void s_a_sub__FPvPv();
-extern "C" extern void pl_check__FP8bd_class();
-extern "C" extern void pointBgCheck__FP4cXyzP4cXyz();
-extern "C" extern void land_check__FP8bd_class();
-extern "C" extern void drop_check__FP8bd_class();
-extern "C" extern void turn_set__FP8bd_class();
-extern "C" extern void bd_ground__FP8bd_class();
-extern "C" extern void bd_fly__FP8bd_class();
-extern "C" extern void bd_landing__FP8bd_class();
-extern "C" extern void bd_landing2__FP8bd_class();
-extern "C" extern void bd_landing3__FP8bd_class();
-extern "C" extern void bd_rope__FP8bd_class();
-extern "C" extern void bd_kkri__FP8bd_class();
-extern "C" extern void bd_drop__FP8bd_class();
-extern "C" extern void action__FP8bd_class();
-extern "C" extern void daBd_Execute__FP8bd_class();
-extern "C" extern void daBd_IsDelete__FP8bd_class();
-extern "C" extern void daBd_Delete__FP8bd_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daBd_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__10daBd_HIO_cFv();
-extern "C" extern void __sinit_d_a_bd_cpp();
-extern "C" extern void func_804D9E40();
-extern "C" extern void func_804D9E48();
+void anm_init(bd_class*, s32, f32, u8, f32);
+void daBd_Draw(bd_class*);
+void way_bg_check(bd_class*);
+void s_a_sub(void*, void*);
+void pl_check(bd_class*);
+void pointBgCheck(cXyz*, cXyz*);
+void land_check(bd_class*);
+void drop_check(bd_class*);
+void turn_set(bd_class*);
+void bd_ground(bd_class*);
+void bd_fly(bd_class*);
+void bd_landing(bd_class*);
+void bd_landing2(bd_class*);
+void bd_landing3(bd_class*);
+void bd_rope(bd_class*);
+void bd_kkri(bd_class*);
+void bd_drop(bd_class*);
+void action(bd_class*);
+void daBd_Execute(bd_class*);
+bool daBd_IsDelete(bd_class*);
+void daBd_Delete(bd_class*);
+void useHeapInit(fopAc_ac_c*);
+void daBd_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_bd_cpp();
+extern "C" void func_804D9E40();
+extern "C" void func_804D9E48();
+
+extern "C" void __ct__10daBd_HIO_cFv();
+extern "C" void anm_init__FP8bd_classifUcf();
+extern "C" void daBd_Draw__FP8bd_class();
+extern "C" void way_bg_check__FP8bd_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void s_a_sub__FPvPv();
+extern "C" void pl_check__FP8bd_class();
+extern "C" void pointBgCheck__FP4cXyzP4cXyz();
+extern "C" void land_check__FP8bd_class();
+extern "C" void drop_check__FP8bd_class();
+extern "C" void turn_set__FP8bd_class();
+extern "C" void bd_ground__FP8bd_class();
+extern "C" void bd_fly__FP8bd_class();
+extern "C" void bd_landing__FP8bd_class();
+extern "C" void bd_landing2__FP8bd_class();
+extern "C" void bd_landing3__FP8bd_class();
+extern "C" void bd_rope__FP8bd_class();
+extern "C" void bd_kkri__FP8bd_class();
+extern "C" void bd_drop__FP8bd_class();
+extern "C" void action__FP8bd_class();
+extern "C" void daBd_Execute__FP8bd_class();
+extern "C" bool daBd_IsDelete__FP8bd_class();
+extern "C" void daBd_Delete__FP8bd_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daBd_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10daBd_HIO_cFv();
+extern "C" void __sinit_d_a_bd_cpp();
+extern "C" void func_804D9E40();
+extern "C" void func_804D9E48();
 SECTION_RODATA extern const u32 lit_3942;
 SECTION_RODATA extern const u32 lit_3943;
 SECTION_RODATA extern const u32 lit_3944;
@@ -169,8 +235,11 @@ SECTION_BSS extern u8 data_804DA450[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -180,7 +249,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daBd_HIO_cFv) {
+asm daBd_HIO_c::daBd_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__ct__10daBd_HIO_cFv.s"
 }
@@ -191,7 +260,7 @@ ASM_FUNCTION(__ct__10daBd_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP8bd_classifUcf) {
+asm void anm_init(bd_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/anm_init__FP8bd_classifUcf.s"
 }
@@ -202,7 +271,7 @@ ASM_FUNCTION(anm_init__FP8bd_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBd_Draw__FP8bd_class) {
+asm void daBd_Draw(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_Draw__FP8bd_class.s"
 }
@@ -213,7 +282,7 @@ ASM_FUNCTION(daBd_Draw__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP8bd_class) {
+asm void way_bg_check(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/way_bg_check__FP8bd_class.s"
 }
@@ -224,7 +293,7 @@ ASM_FUNCTION(way_bg_check__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__4cXyzFv.s"
 }
@@ -235,7 +304,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_a_sub__FPvPv) {
+asm void s_a_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/s_a_sub__FPvPv.s"
 }
@@ -246,7 +315,7 @@ ASM_FUNCTION(s_a_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_check__FP8bd_class) {
+asm void pl_check(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/pl_check__FP8bd_class.s"
 }
@@ -257,7 +326,7 @@ ASM_FUNCTION(pl_check__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pointBgCheck__FP4cXyzP4cXyz) {
+asm void pointBgCheck(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/pointBgCheck__FP4cXyzP4cXyz.s"
 }
@@ -268,7 +337,7 @@ ASM_FUNCTION(pointBgCheck__FP4cXyzP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(land_check__FP8bd_class) {
+asm void land_check(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/land_check__FP8bd_class.s"
 }
@@ -279,7 +348,7 @@ ASM_FUNCTION(land_check__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drop_check__FP8bd_class) {
+asm void drop_check(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/drop_check__FP8bd_class.s"
 }
@@ -290,7 +359,7 @@ ASM_FUNCTION(drop_check__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_set__FP8bd_class) {
+asm void turn_set(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/turn_set__FP8bd_class.s"
 }
@@ -301,7 +370,7 @@ ASM_FUNCTION(turn_set__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_ground__FP8bd_class) {
+asm void bd_ground(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_ground__FP8bd_class.s"
 }
@@ -312,7 +381,7 @@ ASM_FUNCTION(bd_ground__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_fly__FP8bd_class) {
+asm void bd_fly(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_fly__FP8bd_class.s"
 }
@@ -323,7 +392,7 @@ ASM_FUNCTION(bd_fly__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_landing__FP8bd_class) {
+asm void bd_landing(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_landing__FP8bd_class.s"
 }
@@ -334,7 +403,7 @@ ASM_FUNCTION(bd_landing__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_landing2__FP8bd_class) {
+asm void bd_landing2(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_landing2__FP8bd_class.s"
 }
@@ -345,7 +414,7 @@ ASM_FUNCTION(bd_landing2__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_landing3__FP8bd_class) {
+asm void bd_landing3(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_landing3__FP8bd_class.s"
 }
@@ -356,7 +425,7 @@ ASM_FUNCTION(bd_landing3__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_rope__FP8bd_class) {
+asm void bd_rope(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_rope__FP8bd_class.s"
 }
@@ -367,7 +436,7 @@ ASM_FUNCTION(bd_rope__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_kkri__FP8bd_class) {
+asm void bd_kkri(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_kkri__FP8bd_class.s"
 }
@@ -378,7 +447,7 @@ ASM_FUNCTION(bd_kkri__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bd_drop__FP8bd_class) {
+asm void bd_drop(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/bd_drop__FP8bd_class.s"
 }
@@ -389,7 +458,7 @@ ASM_FUNCTION(bd_drop__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP8bd_class) {
+asm void action(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/action__FP8bd_class.s"
 }
@@ -400,7 +469,7 @@ ASM_FUNCTION(action__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBd_Execute__FP8bd_class) {
+asm void daBd_Execute(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_Execute__FP8bd_class.s"
 }
@@ -408,21 +477,16 @@ ASM_FUNCTION(daBd_Execute__FP8bd_class) {
 
 
 /* 804D959C-804D95A4 0008+00 .text      daBd_IsDelete__FP8bd_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daBd_IsDelete__FP8bd_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_IsDelete__FP8bd_class.s"
+bool daBd_IsDelete(bd_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D95A4-804D960C 0068+00 .text      daBd_Delete__FP8bd_class                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBd_Delete__FP8bd_class) {
+asm void daBd_Delete(bd_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_Delete__FP8bd_class.s"
 }
@@ -433,7 +497,7 @@ ASM_FUNCTION(daBd_Delete__FP8bd_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -444,7 +508,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__12J3DFrameCtrlFv.s"
 }
@@ -455,7 +519,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBd_Create__FP10fopAc_ac_c) {
+asm void daBd_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_Create__FP10fopAc_ac_c.s"
 }
@@ -466,7 +530,7 @@ ASM_FUNCTION(daBd_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__8cM3dGSphFv.s"
 }
@@ -477,7 +541,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__8cM3dGAabFv.s"
 }
@@ -488,7 +552,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -499,7 +563,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daBd_HIO_cFv) {
+asm daBd_HIO_c::~daBd_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__dt__10daBd_HIO_cFv.s"
 }
@@ -510,7 +574,7 @@ ASM_FUNCTION(__dt__10daBd_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_bd_cpp) {
+extern "C" asm void __sinit_d_a_bd_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/__sinit_d_a_bd_cpp.s"
 }
@@ -521,7 +585,7 @@ ASM_FUNCTION(__sinit_d_a_bd_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D9E40) {
+extern "C" asm void func_804D9E40() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/func_804D9E40.s"
 }
@@ -532,7 +596,7 @@ ASM_FUNCTION(func_804D9E40) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804D9E48) {
+extern "C" asm void func_804D9E48() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bd/d_a_bd/func_804D9E48.s"
 }

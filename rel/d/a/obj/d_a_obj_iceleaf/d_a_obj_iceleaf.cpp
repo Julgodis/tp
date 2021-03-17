@@ -6,43 +6,112 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjIceLeaf_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjIceLeaf_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void setAnmPos();
+	void CreateHeap();
+	void create();
+	void execute();
+	void action();
+	void modeDropWait();
+	void modeDrop();
+	void modePlayerWait();
+	void modeRide();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void setFallSE();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__14daObjIceLeaf_cFv();
-extern "C" extern void setBaseMtx__14daObjIceLeaf_cFv();
-extern "C" extern void Create__14daObjIceLeaf_cFv();
-extern "C" extern void setAnmPos__14daObjIceLeaf_cFv();
-extern "C" extern void CreateHeap__14daObjIceLeaf_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__14daObjIceLeaf_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void execute__14daObjIceLeaf_cFv();
-extern "C" extern void action__14daObjIceLeaf_cFv();
-extern "C" extern void modeDropWait__14daObjIceLeaf_cFv();
-extern "C" extern void modeDrop__14daObjIceLeaf_cFv();
-extern "C" extern void modePlayerWait__14daObjIceLeaf_cFv();
-extern "C" extern void modeRide__14daObjIceLeaf_cFv();
-extern "C" extern void event_proc_call__14daObjIceLeaf_cFv();
-extern "C" extern void actionWait__14daObjIceLeaf_cFv();
-extern "C" extern void actionOrderEvent__14daObjIceLeaf_cFv();
-extern "C" extern void actionEvent__14daObjIceLeaf_cFv();
-extern "C" extern void actionDead__14daObjIceLeaf_cFv();
-extern "C" extern void setFallSE__14daObjIceLeaf_cFv();
-extern "C" extern void draw__14daObjIceLeaf_cFv();
-extern "C" extern void _delete__14daObjIceLeaf_cFv();
-extern "C" extern void daObjIceLeaf_Draw__FP14daObjIceLeaf_c();
-extern "C" extern void daObjIceLeaf_Execute__FP14daObjIceLeaf_c();
-extern "C" extern void daObjIceLeaf_Delete__FP14daObjIceLeaf_c();
-extern "C" extern void daObjIceLeaf_Create__FP14daObjIceLeaf_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80C25D4C();
-extern "C" extern void func_80C25D54();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjIceLeaf_Draw(daObjIceLeaf_c*);
+void daObjIceLeaf_Execute(daObjIceLeaf_c*);
+void daObjIceLeaf_Delete(daObjIceLeaf_c*);
+void daObjIceLeaf_Create(daObjIceLeaf_c*);
+extern "C" void func_80C25D4C();
+extern "C" void func_80C25D54();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__14daObjIceLeaf_cFv();
+extern "C" void setBaseMtx__14daObjIceLeaf_cFv();
+extern "C" void Create__14daObjIceLeaf_cFv();
+extern "C" void setAnmPos__14daObjIceLeaf_cFv();
+extern "C" void CreateHeap__14daObjIceLeaf_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__14daObjIceLeaf_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void execute__14daObjIceLeaf_cFv();
+extern "C" void action__14daObjIceLeaf_cFv();
+extern "C" void modeDropWait__14daObjIceLeaf_cFv();
+extern "C" void modeDrop__14daObjIceLeaf_cFv();
+extern "C" void modePlayerWait__14daObjIceLeaf_cFv();
+extern "C" void modeRide__14daObjIceLeaf_cFv();
+extern "C" void event_proc_call__14daObjIceLeaf_cFv();
+extern "C" void actionWait__14daObjIceLeaf_cFv();
+extern "C" void actionOrderEvent__14daObjIceLeaf_cFv();
+extern "C" void actionEvent__14daObjIceLeaf_cFv();
+extern "C" void actionDead__14daObjIceLeaf_cFv();
+extern "C" void setFallSE__14daObjIceLeaf_cFv();
+extern "C" void draw__14daObjIceLeaf_cFv();
+extern "C" void _delete__14daObjIceLeaf_cFv();
+extern "C" void daObjIceLeaf_Draw__FP14daObjIceLeaf_c();
+extern "C" void daObjIceLeaf_Execute__FP14daObjIceLeaf_c();
+extern "C" void daObjIceLeaf_Delete__FP14daObjIceLeaf_c();
+extern "C" void daObjIceLeaf_Create__FP14daObjIceLeaf_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80C25D4C();
+extern "C" void func_80C25D54();
 SECTION_RODATA extern const u8 lit_3703[4];
 SECTION_RODATA extern const u32 lit_3704;
 SECTION_RODATA extern const u32 lit_3757;
@@ -86,7 +155,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -96,7 +167,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -107,7 +178,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/initBaseMtx__14daObjIceLeaf_cFv.s"
 }
@@ -118,7 +189,7 @@ ASM_FUNCTION(initBaseMtx__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/setBaseMtx__14daObjIceLeaf_cFv.s"
 }
@@ -129,7 +200,7 @@ ASM_FUNCTION(setBaseMtx__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/Create__14daObjIceLeaf_cFv.s"
 }
@@ -140,7 +211,7 @@ ASM_FUNCTION(Create__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnmPos__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::setAnmPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/setAnmPos__14daObjIceLeaf_cFv.s"
 }
@@ -151,7 +222,7 @@ ASM_FUNCTION(setAnmPos__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/CreateHeap__14daObjIceLeaf_cFv.s"
 }
@@ -162,7 +233,7 @@ ASM_FUNCTION(CreateHeap__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__12J3DFrameCtrlFv.s"
 }
@@ -173,7 +244,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C24E14.s"
 }
@@ -184,7 +255,7 @@ ASM_FUNCTION(create__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__8cM3dGCylFv.s"
 }
@@ -195,7 +266,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__8cM3dGAabFv.s"
 }
@@ -206,7 +277,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__10dCcD_GSttsFv.s"
 }
@@ -217,7 +288,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__12dBgS_AcchCirFv.s"
 }
@@ -228,7 +299,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -239,7 +310,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/execute__14daObjIceLeaf_cFv.s"
 }
@@ -250,7 +321,7 @@ ASM_FUNCTION(execute__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/action__14daObjIceLeaf_cFv.s"
 }
@@ -261,7 +332,7 @@ ASM_FUNCTION(action__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDropWait__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::modeDropWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/modeDropWait__14daObjIceLeaf_cFv.s"
 }
@@ -272,7 +343,7 @@ ASM_FUNCTION(modeDropWait__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDrop__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::modeDrop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/modeDrop__14daObjIceLeaf_cFv.s"
 }
@@ -283,7 +354,7 @@ ASM_FUNCTION(modeDrop__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modePlayerWait__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::modePlayerWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/modePlayerWait__14daObjIceLeaf_cFv.s"
 }
@@ -291,21 +362,16 @@ ASM_FUNCTION(modePlayerWait__14daObjIceLeaf_cFv) {
 
 
 /* 80C25904-80C25908 0004+00 .text      modeRide__14daObjIceLeaf_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeRide__14daObjIceLeaf_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/modeRide__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::modeRide() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C25908-80C259C4 00BC+00 .text      event_proc_call__14daObjIceLeaf_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/event_proc_call__14daObjIceLeaf_cFv.s"
 }
@@ -313,21 +379,16 @@ ASM_FUNCTION(event_proc_call__14daObjIceLeaf_cFv) {
 
 
 /* 80C259C4-80C259C8 0004+00 .text      actionWait__14daObjIceLeaf_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daObjIceLeaf_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionWait__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C259C8-80C25A68 00A0+00 .text      actionOrderEvent__14daObjIceLeaf_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionOrderEvent__14daObjIceLeaf_cFv.s"
 }
@@ -338,7 +399,7 @@ ASM_FUNCTION(actionOrderEvent__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionEvent__14daObjIceLeaf_cFv.s"
 }
@@ -346,21 +407,16 @@ ASM_FUNCTION(actionEvent__14daObjIceLeaf_cFv) {
 
 
 /* 80C25AC4-80C25AC8 0004+00 .text      actionDead__14daObjIceLeaf_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__14daObjIceLeaf_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionDead__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C25AC8-80C25BB8 00F0+00 .text      setFallSE__14daObjIceLeaf_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFallSE__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::setFallSE() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/setFallSE__14daObjIceLeaf_cFv.s"
 }
@@ -371,7 +427,7 @@ ASM_FUNCTION(setFallSE__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/draw__14daObjIceLeaf_cFv.s"
 }
@@ -382,7 +438,7 @@ ASM_FUNCTION(draw__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjIceLeaf_cFv) {
+asm void daObjIceLeaf_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/_delete__14daObjIceLeaf_cFv.s"
 }
@@ -393,7 +449,7 @@ ASM_FUNCTION(_delete__14daObjIceLeaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceLeaf_Draw__FP14daObjIceLeaf_c) {
+asm void daObjIceLeaf_Draw(daObjIceLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/daObjIceLeaf_Draw__FP14daObjIceLeaf_c.s"
 }
@@ -404,7 +460,7 @@ ASM_FUNCTION(daObjIceLeaf_Draw__FP14daObjIceLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceLeaf_Execute__FP14daObjIceLeaf_c) {
+asm void daObjIceLeaf_Execute(daObjIceLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/daObjIceLeaf_Execute__FP14daObjIceLeaf_c.s"
 }
@@ -415,7 +471,7 @@ ASM_FUNCTION(daObjIceLeaf_Execute__FP14daObjIceLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceLeaf_Delete__FP14daObjIceLeaf_c) {
+asm void daObjIceLeaf_Delete(daObjIceLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/daObjIceLeaf_Delete__FP14daObjIceLeaf_c.s"
 }
@@ -426,7 +482,7 @@ ASM_FUNCTION(daObjIceLeaf_Delete__FP14daObjIceLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjIceLeaf_Create__FP14daObjIceLeaf_c) {
+asm void daObjIceLeaf_Create(daObjIceLeaf_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/daObjIceLeaf_Create__FP14daObjIceLeaf_c.s"
 }
@@ -437,7 +493,7 @@ ASM_FUNCTION(daObjIceLeaf_Create__FP14daObjIceLeaf_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/__dt__10cCcD_GSttsFv.s"
 }
@@ -448,7 +504,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C25D4C) {
+extern "C" asm void func_80C25D4C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C25D4C.s"
 }
@@ -459,7 +515,7 @@ ASM_FUNCTION(func_80C25D4C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C25D54) {
+extern "C" asm void func_80C25D54() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/func_80C25D54.s"
 }

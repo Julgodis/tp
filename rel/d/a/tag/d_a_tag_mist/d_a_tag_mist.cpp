@@ -6,21 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMist_c;
+
+struct daTagMist_c {
+	void offSw();
+	void onMySw();
+	void isMySw();
+	void Create();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void offSw__11daTagMist_cFv();
-extern "C" extern void onMySw__11daTagMist_cFv();
-extern "C" extern void isMySw__11daTagMist_cFv();
-extern "C" extern void Create__11daTagMist_cFv();
-extern "C" extern void create__11daTagMist_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void execute__11daTagMist_cFv();
-extern "C" extern void _delete__11daTagMist_cFv();
-extern "C" extern void daTagMist_Execute__FP11daTagMist_c();
-extern "C" extern void daTagMist_Delete__FP11daTagMist_c();
-extern "C" extern void daTagMist_Create__FP10fopAc_ac_c();
+void daTagMist_Execute(daTagMist_c*);
+void daTagMist_Delete(daTagMist_c*);
+void daTagMist_Create(fopAc_ac_c*);
+
+extern "C" void offSw__11daTagMist_cFv();
+extern "C" void onMySw__11daTagMist_cFv();
+extern "C" void isMySw__11daTagMist_cFv();
+extern "C" void Create__11daTagMist_cFv();
+extern "C" void create__11daTagMist_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__11daTagMist_cFv();
+extern "C" bool _delete__11daTagMist_cFv();
+extern "C" void daTagMist_Execute__FP11daTagMist_c();
+extern "C" void daTagMist_Delete__FP11daTagMist_c();
+extern "C" void daTagMist_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3678;
 SECTION_RODATA extern const u32 lit_3679;
 SECTION_RODATA extern const u8 lit_3680[4];
@@ -31,7 +60,9 @@ SECTION_DATA extern u8 g_profile_Tag_Mist[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +72,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offSw__11daTagMist_cFv) {
+asm void daTagMist_c::offSw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/offSw__11daTagMist_cFv.s"
 }
@@ -52,7 +83,7 @@ ASM_FUNCTION(offSw__11daTagMist_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onMySw__11daTagMist_cFv) {
+asm void daTagMist_c::onMySw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/onMySw__11daTagMist_cFv.s"
 }
@@ -63,7 +94,7 @@ ASM_FUNCTION(onMySw__11daTagMist_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMySw__11daTagMist_cFv) {
+asm void daTagMist_c::isMySw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/isMySw__11daTagMist_cFv.s"
 }
@@ -74,7 +105,7 @@ ASM_FUNCTION(isMySw__11daTagMist_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daTagMist_cFv) {
+asm void daTagMist_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/Create__11daTagMist_cFv.s"
 }
@@ -85,7 +116,7 @@ ASM_FUNCTION(Create__11daTagMist_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTagMist_cFv) {
+asm void daTagMist_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/func_8048F444.s"
 }
@@ -96,7 +127,7 @@ ASM_FUNCTION(create__11daTagMist_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/__dt__4cXyzFv.s"
 }
@@ -104,21 +135,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 8048F554-8048F558 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048F558-8048F690 0138+00 .text      execute__11daTagMist_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daTagMist_cFv) {
+asm void daTagMist_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/execute__11daTagMist_cFv.s"
 }
@@ -126,21 +152,16 @@ ASM_FUNCTION(execute__11daTagMist_cFv) {
 
 
 /* 8048F690-8048F698 0008+00 .text      _delete__11daTagMist_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daTagMist_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/_delete__11daTagMist_cFv.s"
+bool daTagMist_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048F698-8048F6B8 0020+00 .text      daTagMist_Execute__FP11daTagMist_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMist_Execute__FP11daTagMist_c) {
+asm void daTagMist_Execute(daTagMist_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Execute__FP11daTagMist_c.s"
 }
@@ -151,7 +172,7 @@ ASM_FUNCTION(daTagMist_Execute__FP11daTagMist_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMist_Delete__FP11daTagMist_c) {
+asm void daTagMist_Delete(daTagMist_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Delete__FP11daTagMist_c.s"
 }
@@ -162,7 +183,7 @@ ASM_FUNCTION(daTagMist_Delete__FP11daTagMist_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMist_Create__FP10fopAc_ac_c) {
+asm void daTagMist_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Create__FP10fopAc_ac_c.s"
 }

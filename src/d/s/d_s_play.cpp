@@ -6,36 +6,450 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dScnPly_c (dScnPly_c) False/False
+/* top-level dependencies (begin dScnPly_c) */
+/* top-level dependencies (end dScnPly_c) */
+struct dScnPly_c {
+	/* 80259400 */ void calcPauseTimer();
+	/* 80259AC4 */ void resetGame();
+	/* 80259BFC */ void offReset();
+};
+
+// build dScnPly_env_otherHIO_c (dScnPly_env_otherHIO_c) False/False
+/* top-level dependencies (begin dScnPly_env_otherHIO_c) */
+/* top-level dependencies (end dScnPly_env_otherHIO_c) */
+struct dScnPly_env_otherHIO_c {
+	/* 80259440 */ dScnPly_env_otherHIO_c();
+	/* 8025AC0C */ ~dScnPly_env_otherHIO_c();
+};
+
+// build dScnPly_env_debugHIO_c (dScnPly_env_debugHIO_c) False/False
+/* top-level dependencies (begin dScnPly_env_debugHIO_c) */
+/* top-level dependencies (end dScnPly_env_debugHIO_c) */
+struct dScnPly_env_debugHIO_c {
+	/* 80259468 */ dScnPly_env_debugHIO_c();
+	/* 8025ABC4 */ ~dScnPly_env_debugHIO_c();
+};
+
+// build scene_class (scene_class) False/False
+/* top-level dependencies (begin scene_class) */
+/* top-level dependencies (end scene_class) */
+struct scene_class {
+};
+
+// build dScnPly_env_HIO_c (dScnPly_env_HIO_c) False/False
+/* top-level dependencies (begin dScnPly_env_HIO_c) */
+/* top-level dependencies (end dScnPly_env_HIO_c) */
+struct dScnPly_env_HIO_c {
+	/* 8025AD04 */ ~dScnPly_env_HIO_c();
+};
+
+// build dScnPly_reg_HIO_c (dScnPly_reg_HIO_c) False/False
+/* top-level dependencies (begin dScnPly_reg_HIO_c) */
+/* top-level dependencies (end dScnPly_reg_HIO_c) */
+struct dScnPly_reg_HIO_c {
+	/* 8025AD78 */ ~dScnPly_reg_HIO_c();
+};
+
+// build dScnPly_preLoad_HIO_c (dScnPly_preLoad_HIO_c) False/False
+/* top-level dependencies (begin dScnPly_preLoad_HIO_c) */
+/* top-level dependencies (end dScnPly_preLoad_HIO_c) */
+struct dScnPly_preLoad_HIO_c {
+	/* 8025ADC0 */ ~dScnPly_preLoad_HIO_c();
+};
+
+// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
+/* top-level dependencies (begin mDoGph_gInf_c) */
+/* top-level dependencies (end mDoGph_gInf_c) */
+struct mDoGph_gInf_c {
+	// build bloom_c (mDoGph_gInf_c::bloom_c) False/False
+	/* dependencies (begin mDoGph_gInf_c::bloom_c) */
+	/* dependencies (end mDoGph_gInf_c::bloom_c) */
+	struct bloom_c {
+		/* 800095F8 */ void remove();
+	};
+
+};
+
+// build cDylPhs (cDylPhs) False/False
+// build request_of_phase_process_class (request_of_phase_process_class) False/False
+/* top-level dependencies (begin request_of_phase_process_class) */
+/* top-level dependencies (end request_of_phase_process_class) */
+struct request_of_phase_process_class {
+};
+
+/* top-level dependencies (begin cDylPhs) */
+// outer dependency: request_of_phase_process_class
+/* top-level dependencies (end cDylPhs) */
+struct cDylPhs {
+	// request_of_phase_process_class
+	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
+	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
+};
+
+// build request_of_phase_process_class (request_of_phase_process_class) True/True
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024954 */ void resetArchiveBank(s32);
+};
+
+// build stage_stag_info_class (stage_stag_info_class) False/False
+/* top-level dependencies (begin stage_stag_info_class) */
+/* top-level dependencies (end stage_stag_info_class) */
+struct stage_stag_info_class {
+};
+
+// build dComIfG_play_c (dComIfG_play_c) False/False
+// build dStage_startStage_c (dStage_startStage_c) False/False
+/* top-level dependencies (begin dStage_startStage_c) */
+/* top-level dependencies (end dStage_startStage_c) */
+struct dStage_startStage_c {
+};
+
+/* top-level dependencies (begin dComIfG_play_c) */
+// outer dependency: dStage_startStage_c
+/* top-level dependencies (end dComIfG_play_c) */
+struct dComIfG_play_c {
+	// dStage_startStage_c
+	/* 8002B22C */ void init();
+	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
+	/* 8002B434 */ void getLayerNo_common_common(char const*, s32, s32);
+	/* 8002C950 */ void getLayerNo_common(char const*, s32, s32);
+	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002CA1C */ void createSimpleModel();
+	/* 8002CA70 */ void deleteSimpleModel();
+};
+
+// build dStage_startStage_c (dStage_startStage_c) True/True
+// build daSus_c (daSus_c) False/False
+/* top-level dependencies (begin daSus_c) */
+/* top-level dependencies (end daSus_c) */
+struct daSus_c {
+	/* 800313BC */ void reset();
+	/* 800315A4 */ void execute();
+};
+
+// build dSv_player_status_b_c (dSv_player_status_b_c) False/False
+/* top-level dependencies (begin dSv_player_status_b_c) */
+/* top-level dependencies (end dSv_player_status_b_c) */
+struct dSv_player_status_b_c {
+	/* 80032B94 */ void onDarkClearLV(s32);
+	/* 80032BD0 */ void onTransformLV(s32);
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80032FB8 */ void setItem(s32, char);
+};
+
+// build dSv_player_get_item_c (dSv_player_get_item_c) False/False
+/* top-level dependencies (begin dSv_player_get_item_c) */
+/* top-level dependencies (end dSv_player_get_item_c) */
+struct dSv_player_get_item_c {
+	/* 80033E60 */ void onFirstBit(char);
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+};
+
+// build dSv_danBit_c (dSv_danBit_c) False/False
+/* top-level dependencies (begin dSv_danBit_c) */
+/* top-level dependencies (end dSv_danBit_c) */
+struct dSv_danBit_c {
+	/* 80034B98 */ void onSwitch(s32);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80034FCC */ void init();
+};
+
+// build dDemo_c (dDemo_c) False/False
+/* top-level dependencies (begin dDemo_c) */
+/* top-level dependencies (end dDemo_c) */
+struct dDemo_c {
+	/* 80039678 */ void create();
+	/* 80039910 */ void remove();
+	/* 80039DA4 */ void update();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build JKRHeap (JKRHeap) True/True
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: JKRHeap
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// JKRHeap
+	// dRes_info_c
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dMpath_c (dMpath_c) False/False
+/* top-level dependencies (begin dMpath_c) */
+/* top-level dependencies (end dMpath_c) */
+struct dMpath_c {
+	/* 8003FB70 */ void create();
+	/* 8003FC70 */ void remove();
+};
+
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 80042BBC */ void Step();
+	/* 800431E8 */ void remove();
+};
+
+// build dPa_control_c (dPa_control_c) False/False
+// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) False/False
+/* top-level dependencies (begin mDoDvdThd_toMainRam_c) */
+/* top-level dependencies (end mDoDvdThd_toMainRam_c) */
+struct mDoDvdThd_toMainRam_c {
+};
+
+/* top-level dependencies (begin dPa_control_c) */
+// outer dependency: mDoDvdThd_toMainRam_c
+/* top-level dependencies (end dPa_control_c) */
+struct dPa_control_c {
+	// mDoDvdThd_toMainRam_c
+	/* 8004BDFC */ void readScene(char, mDoDvdThd_toMainRam_c**);
+	/* 8004BEB0 */ void createScene(void const*);
+	/* 8004BFD4 */ void removeScene(bool);
+	/* 8004C054 */ void cleanup();
+	/* 8004C078 */ void calc3D();
+	/* 8004C0EC */ void calc2D();
+};
+
+// build mDoDvdThd_toMainRam_c (mDoDvdThd_toMainRam_c) True/True
+// build dDlst_window_c (dDlst_window_c) False/False
+/* top-level dependencies (begin dDlst_window_c) */
+/* top-level dependencies (end dDlst_window_c) */
+struct dDlst_window_c {
+	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
+	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
+};
+
+// build dVibration_c (dVibration_c) False/False
+/* top-level dependencies (begin dVibration_c) */
+/* top-level dependencies (end dVibration_c) */
+struct dVibration_c {
+	/* 8006F268 */ void Run();
+	/* 8006FF04 */ void Init();
+	/* 8006FF38 */ void Pause();
+	/* 8006FFF8 */ void Remove();
+};
+
+// build dAttention_c (dAttention_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dAttention_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dAttention_c) */
+struct dAttention_c {
+	// fopAc_ac_c
+	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
+	/* 80070774 */ ~dAttention_c();
+	/* 80072924 */ void Run();
+	/* 80072BD4 */ void Draw();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dBgS (dBgS) False/False
+/* top-level dependencies (begin dBgS) */
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	/* 8007493C */ void ClrMoveFlag();
+	/* 800749A8 */ void Move();
+};
+
+// build dCcS (dCcS) False/False
+/* top-level dependencies (begin dCcS) */
+/* top-level dependencies (end dCcS) */
+struct dCcS {
+	/* 80085ED4 */ void Ct();
+	/* 80085F08 */ void Dt();
+	/* 800872B0 */ void Move();
+	/* 800872D0 */ void Draw();
+};
+
+// build dTres_c (dTres_c) False/False
+/* top-level dependencies (begin dTres_c) */
+/* top-level dependencies (end dTres_c) */
+struct dTres_c {
+	/* 8009BC18 */ void create();
+	/* 8009BC60 */ void remove();
+};
+
+// build dMdl_mng_c (dMdl_mng_c) False/False
+/* top-level dependencies (begin dMdl_mng_c) */
+/* top-level dependencies (end dMdl_mng_c) */
+struct dMdl_mng_c {
+	/* 8009C7AC */ void create();
+	/* 8009C864 */ void remove();
+	/* 8009C8C0 */ void reset();
+};
+
+// build dEyeHL_mng_c (dEyeHL_mng_c) False/False
+/* top-level dependencies (begin dEyeHL_mng_c) */
+/* top-level dependencies (end dEyeHL_mng_c) */
+struct dEyeHL_mng_c {
+	/* 8009CA48 */ void update();
+};
+
+// build daPy_py_c (daPy_py_c) False/False
+/* top-level dependencies (begin daPy_py_c) */
+/* top-level dependencies (end daPy_py_c) */
+struct daPy_py_c {
+	/* 8015F660 */ void checkRoomRestartStart();
+};
+
+// build dMsgObject_c (dMsgObject_c) False/False
+// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+/* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
+/* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
+struct mDoDvdThd_mountXArchive_c {
+};
+
+/* top-level dependencies (begin dMsgObject_c) */
+// outer dependency: mDoDvdThd_mountXArchive_c
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	// mDoDvdThd_mountXArchive_c
+	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
+};
+
+// build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+	/* 80268120 */ void ClearPi();
+};
+
+// build Z2SceneMgr (Z2SceneMgr) False/False
+/* top-level dependencies (begin Z2SceneMgr) */
+/* top-level dependencies (end Z2SceneMgr) */
+struct Z2SceneMgr {
+	/* 802B68B0 */ void setInDarkness(bool);
+	/* 802BA09C */ void check1stDynamicWave();
+	/* 802BA120 */ void load2ndDynamicWave();
+	/* 802BA294 */ void sceneBgmStart();
+};
+
+// build JUTAssertion (JUTAssertion) False/False
+/* top-level dependencies (begin JUTAssertion) */
+/* top-level dependencies (end JUTAssertion) */
+struct JUTAssertion {
+	/* 802E4C3C */ void setMessageCount(s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void calcPauseTimer__9dScnPly_cFv();
-extern "C" extern void __ct__22dScnPly_env_otherHIO_cFv();
-extern "C" extern void __ct__22dScnPly_env_debugHIO_cFv();
-extern "C" extern void dScnPly_Draw__FP9dScnPly_c();
-extern "C" extern void dScnPly_Execute__FP9dScnPly_c();
-extern "C" extern void dScnPly_IsDelete__F9dScnPly_c();
-extern "C" extern void dScnPly_Delete__FP9dScnPly_c();
-extern "C" extern void resetGame__9dScnPly_cFv();
-extern "C" extern void offReset__9dScnPly_cFv();
-extern "C" extern void phase_00__FP9dScnPly_c();
-extern "C" extern void phase_01__FP9dScnPly_c();
-extern "C" extern void phase_0__FP9dScnPly_c();
-extern "C" extern void phase_1__FP9dScnPly_c();
-extern "C" extern void phase_1_0__FP9dScnPly_c();
-extern "C" extern void phase_2__FP9dScnPly_c();
-extern "C" extern void phase_3__FP9dScnPly_c();
-extern "C" extern void phase_4__FP9dScnPly_c();
-extern "C" extern void phase_5__FP9dScnPly_c();
-extern "C" extern void phase_6__FP9dScnPly_c();
-extern "C" extern void phase_compleate__FPv();
-extern "C" extern void dScnPly_Create__FP11scene_class();
-extern "C" extern void __dt__22dScnPly_env_debugHIO_cFv();
-extern "C" extern void __dt__22dScnPly_env_otherHIO_cFv();
-extern "C" extern void __sinit_d_s_play_cpp();
-extern "C" extern void __dt__17dScnPly_env_HIO_cFv();
-extern "C" extern void __dt__17dScnPly_reg_HIO_cFv();
-extern "C" extern void __dt__21dScnPly_preLoad_HIO_cFv();
+static void dScnPly_Draw(dScnPly_c*);
+static void dScnPly_Execute(dScnPly_c*);
+static void dScnPly_IsDelete(dScnPly_c);
+static void dScnPly_Delete(dScnPly_c*);
+static void phase_00(dScnPly_c*);
+static void phase_01(dScnPly_c*);
+static s32 phase_0(dScnPly_c*);
+static void phase_1(dScnPly_c*);
+static void phase_1_0(dScnPly_c*);
+static void phase_2(dScnPly_c*);
+static void phase_3(dScnPly_c*);
+static void phase_4(dScnPly_c*);
+static void phase_5(dScnPly_c*);
+static void phase_6(dScnPly_c*);
+static s32 phase_compleate(void*);
+static void dScnPly_Create(scene_class*);
+extern "C" void __sinit_d_s_play_cpp();
+
+extern "C" void calcPauseTimer__9dScnPly_cFv();
+extern "C" void __ct__22dScnPly_env_otherHIO_cFv();
+extern "C" void __ct__22dScnPly_env_debugHIO_cFv();
+extern "C" static void dScnPly_Draw__FP9dScnPly_c();
+extern "C" static void dScnPly_Execute__FP9dScnPly_c();
+extern "C" static void dScnPly_IsDelete__F9dScnPly_c();
+extern "C" static void dScnPly_Delete__FP9dScnPly_c();
+extern "C" void resetGame__9dScnPly_cFv();
+extern "C" void offReset__9dScnPly_cFv();
+extern "C" static void phase_00__FP9dScnPly_c();
+extern "C" static void phase_01__FP9dScnPly_c();
+extern "C" static s32 phase_0__FP9dScnPly_c();
+extern "C" static void phase_1__FP9dScnPly_c();
+extern "C" static void phase_1_0__FP9dScnPly_c();
+extern "C" static void phase_2__FP9dScnPly_c();
+extern "C" static void phase_3__FP9dScnPly_c();
+extern "C" static void phase_4__FP9dScnPly_c();
+extern "C" static void phase_5__FP9dScnPly_c();
+extern "C" static void phase_6__FP9dScnPly_c();
+extern "C" static s32 phase_compleate__FPv();
+extern "C" static void dScnPly_Create__FP11scene_class();
+extern "C" void __dt__22dScnPly_env_debugHIO_cFv();
+extern "C" void __dt__22dScnPly_env_otherHIO_cFv();
+extern "C" void __sinit_d_s_play_cpp();
+extern "C" void __dt__17dScnPly_env_HIO_cFv();
+extern "C" void __dt__17dScnPly_reg_HIO_cFv();
+extern "C" void __dt__21dScnPly_preLoad_HIO_cFv();
 SECTION_RODATA extern const void*const PreLoadInfoT[4];
 SECTION_RODATA extern const u8 d_s_d_s_play__stringBase0[176];
 SECTION_DATA extern u8 data_803C3158[46 + 2 /* padding */];
@@ -80,120 +494,168 @@ SECTION_SDATA2 extern f32 d_s_d_s_play__lit_4806;
 // External References:
 // 
 
-extern "C" extern void mDoAud_setSceneName__FPCcll();
-extern "C" extern void mDoAud_load1stDynamicWave__Fv();
-extern "C" extern void mDoAud_resetRecover__Fv();
-extern "C" extern void remove__Q213mDoGph_gInf_c7bloom_cFv();
-extern "C" extern void mDoRst_resetCallBack__FiPv();
-extern "C" extern void Link__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" extern void Unlink__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" extern void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
-extern "C" extern void fopOvlpM_IsPeek__Fv();
-extern "C" extern void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
-extern "C" extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
-extern "C" extern void fopDwIt_Begin__Fv();
-extern "C" extern void fopDwIt_Next__FP16create_tag_class();
-extern "C" extern void fpcM_Draw__FPv();
-extern "C" extern void resetArchiveBank__20dStage_roomControl_cFi();
-extern "C" extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
-extern "C" extern void dStage_infoCreate__Fv();
-extern "C" extern void dStage_Create__Fv();
-extern "C" extern void dStage_Delete__Fv();
-extern "C" extern void init__14dComIfG_play_cFv();
-extern "C" extern void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
-extern "C" extern void getLayerNo_common_common__14dComIfG_play_cFPCcii();
-extern "C" extern void getLayerNo_common__14dComIfG_play_cFPCcii();
-extern "C" extern void getLayerNo__14dComIfG_play_cFi();
-extern "C" extern void createSimpleModel__14dComIfG_play_cFv();
-extern "C" extern void deleteSimpleModel__14dComIfG_play_cFv();
-extern "C" extern void dComIfG_resetToOpening__FP11scene_class();
-extern "C" extern void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" extern void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" extern void dComIfGs_BossLife_public_Set__FSc();
-extern "C" extern void dComIfGp_calcNowRegion__Fv();
-extern "C" extern void dComIfGp_world_dark_set__FUc();
-extern "C" extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" extern void reset__7daSus_cFv();
-extern "C" extern void execute__7daSus_cFv();
-extern "C" extern void onDarkClearLV__21dSv_player_status_b_cFi();
-extern "C" extern void onTransformLV__21dSv_player_status_b_cFi();
-extern "C" extern void setItem__17dSv_player_item_cFiUc();
-extern "C" extern void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void onSwitch__12dSv_danBit_cFi();
-extern "C" extern void init__10dSv_info_cFv();
-extern "C" extern void create__7dDemo_cFv();
-extern "C" extern void remove__7dDemo_cFv();
-extern "C" extern void update__7dDemo_cFv();
-extern "C" extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void syncAllRes__14dRes_control_cFP11dRes_info_ci();
-extern "C" extern void setStageRes__14dRes_control_cFPCcP7JKRHeap();
-extern "C" extern void create__8dMpath_cFv();
-extern "C" extern void remove__8dMpath_cFv();
-extern "C" extern void Step__14dEvt_control_cFv();
-extern "C" extern void remove__14dEvt_control_cFv();
-extern "C" extern void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
-extern "C" extern void createScene__13dPa_control_cFPCv();
-extern "C" extern void removeScene__13dPa_control_cFb();
-extern "C" extern void cleanup__13dPa_control_cFv();
-extern "C" extern void calc3D__13dPa_control_cFv();
-extern "C" extern void calc2D__13dPa_control_cFv();
-extern "C" extern void setViewPort__14dDlst_window_cFffffff();
-extern "C" extern void setScissor__14dDlst_window_cFffff();
-extern "C" extern void Run__12dVibration_cFv();
-extern "C" extern void Init__12dVibration_cFv();
-extern "C" extern void Pause__12dVibration_cFv();
-extern "C" extern void Remove__12dVibration_cFv();
-extern "C" extern void __ct__12dAttention_cFP10fopAc_ac_cUl();
-extern "C" extern void __dt__12dAttention_cFv();
-extern "C" extern void Run__12dAttention_cFv();
-extern "C" extern void Draw__12dAttention_cFv();
-extern "C" extern void ClrMoveFlag__4dBgSFv();
-extern "C" extern void Move__4dBgSFv();
-extern "C" extern void Ct__4dCcSFv();
-extern "C" extern void Dt__4dCcSFv();
-extern "C" extern void Move__4dCcSFv();
-extern "C" extern void Draw__4dCcSFv();
-extern "C" extern void execItemGet__FUc();
-extern "C" extern void create__7dTres_cFv();
-extern "C" extern void remove__7dTres_cFv();
-extern "C" extern void create__10dMdl_mng_cFv();
-extern "C" extern void remove__10dMdl_mng_cFv();
-extern "C" extern void reset__10dMdl_mng_cFv();
-extern "C" extern void update__12dEyeHL_mng_cFv();
-extern "C" extern void checkRoomRestartStart__9daPy_py_cFv();
-extern "C" extern void dKy_getdaytime_hour__Fv();
-extern "C" extern void dKy_getdaytime_minute__Fv();
-extern "C" extern void dKy_itudemo_se__Fv();
-extern "C" extern void dKy_get_dayofweek__Fv();
-extern "C" extern void dKy_darkworld_check__Fv();
-extern "C" extern void dKy_darkworld_stage_check__FPCci();
-extern "C" extern void dKy_darkworld_spot_check__FPCci();
-extern "C" extern void dKy_darkworld_Area_set__FPCci();
-extern "C" extern void dMeter2Info_setCloth__FUcb();
-extern "C" extern void dMeter2Info_setSword__FUcb();
-extern "C" extern void dMeter2Info_setShield__FUcb();
-extern "C" extern void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" extern void func_80252E70();
-extern "C" extern void ClearPi__13cBgS_PolyInfoFv();
-extern "C" extern void setInDarkness__10Z2SceneMgrFb();
-extern "C" extern void check1stDynamicWave__10Z2SceneMgrFv();
-extern "C" extern void load2ndDynamicWave__10Z2SceneMgrFv();
-extern "C" extern void sceneBgmStart__10Z2SceneMgrFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void setMessageCount__12JUTAssertionFi();
-extern "C" extern void JUTReportConsole_f();
-extern "C" extern void OSGetTime();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+void mDoAud_setSceneName(char const*, s32, s32);
+void mDoAud_load1stDynamicWave();
+void mDoAud_resetRecover();
+void mDoRst_resetCallBack(s32, void*);
+void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void fopOvlpM_IsPeek();
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void fopMsgM_createExpHeap(u32, JKRHeap*);
+void fopMsgM_destroyExpHeap(JKRExpHeap*);
+void fopDwIt_Begin();
+void fopDwIt_Next(create_tag_class*);
+void fpcM_Draw(void*);
+void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, s32);
+void dStage_infoCreate();
+void dStage_Create();
+void dStage_Delete();
+void dComIfG_resetToOpening(scene_class*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGs_BossLife_public_Set(char);
+void dComIfGp_calcNowRegion();
+void dComIfGp_world_dark_set(char);
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+void execItemGet(char);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void dKy_itudemo_se();
+void dKy_get_dayofweek();
+void dKy_darkworld_check();
+void dKy_darkworld_stage_check(char const*, s32);
+void dKy_darkworld_spot_check(char const*, s32);
+void dKy_darkworld_Area_set(char const*, s32);
+void dMeter2Info_setCloth(char, bool);
+void dMeter2Info_setSword(char, bool);
+void dMeter2Info_setShield(char, bool);
+extern "C" void func_80252E70();
+void operator delete(void*);
+extern "C" void JUTReportConsole_f();
+extern "C" void OSGetTime();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+extern "C" void mDoAud_setSceneName__FPCcll();
+extern "C" void mDoAud_load1stDynamicWave__Fv();
+extern "C" void mDoAud_resetRecover__Fv();
+extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv();
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void fopDwIt_Begin__Fv();
+extern "C" void fopDwIt_Next__FP16create_tag_class();
+extern "C" void fpcM_Draw__FPv();
+extern "C" void resetArchiveBank__20dStage_roomControl_cFi();
+extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+extern "C" void dStage_infoCreate__Fv();
+extern "C" void dStage_Create__Fv();
+extern "C" void dStage_Delete__Fv();
+extern "C" void init__14dComIfG_play_cFv();
+extern "C" void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
+extern "C" void getLayerNo_common_common__14dComIfG_play_cFPCcii();
+extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void createSimpleModel__14dComIfG_play_cFv();
+extern "C" void deleteSimpleModel__14dComIfG_play_cFv();
+extern "C" void dComIfG_resetToOpening__FP11scene_class();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGs_BossLife_public_Set__FSc();
+extern "C" void dComIfGp_calcNowRegion__Fv();
+extern "C" void dComIfGp_world_dark_set__FUc();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void reset__7daSus_cFv();
+extern "C" void execute__7daSus_cFv();
+extern "C" void onDarkClearLV__21dSv_player_status_b_cFi();
+extern "C" void onTransformLV__21dSv_player_status_b_cFi();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void init__10dSv_info_cFv();
+extern "C" void create__7dDemo_cFv();
+extern "C" void remove__7dDemo_cFv();
+extern "C" void update__7dDemo_cFv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
+extern "C" void create__8dMpath_cFv();
+extern "C" void remove__8dMpath_cFv();
+extern "C" void Step__14dEvt_control_cFv();
+extern "C" void remove__14dEvt_control_cFv();
+extern "C" void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
+extern "C" void createScene__13dPa_control_cFPCv();
+extern "C" void removeScene__13dPa_control_cFb();
+extern "C" void cleanup__13dPa_control_cFv();
+extern "C" void calc3D__13dPa_control_cFv();
+extern "C" void calc2D__13dPa_control_cFv();
+extern "C" void setViewPort__14dDlst_window_cFffffff();
+extern "C" void setScissor__14dDlst_window_cFffff();
+extern "C" void Run__12dVibration_cFv();
+extern "C" void Init__12dVibration_cFv();
+extern "C" void Pause__12dVibration_cFv();
+extern "C" void Remove__12dVibration_cFv();
+extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl();
+extern "C" void __dt__12dAttention_cFv();
+extern "C" void Run__12dAttention_cFv();
+extern "C" void Draw__12dAttention_cFv();
+extern "C" void ClrMoveFlag__4dBgSFv();
+extern "C" void Move__4dBgSFv();
+extern "C" void Ct__4dCcSFv();
+extern "C" void Dt__4dCcSFv();
+extern "C" void Move__4dCcSFv();
+extern "C" void Draw__4dCcSFv();
+extern "C" void execItemGet__FUc();
+extern "C" void create__7dTres_cFv();
+extern "C" void remove__7dTres_cFv();
+extern "C" void create__10dMdl_mng_cFv();
+extern "C" void remove__10dMdl_mng_cFv();
+extern "C" void reset__10dMdl_mng_cFv();
+extern "C" void update__12dEyeHL_mng_cFv();
+extern "C" void checkRoomRestartStart__9daPy_py_cFv();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void dKy_itudemo_se__Fv();
+extern "C" void dKy_get_dayofweek__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void dKy_darkworld_stage_check__FPCci();
+extern "C" void dKy_darkworld_spot_check__FPCci();
+extern "C" void dKy_darkworld_Area_set__FPCci();
+extern "C" void dMeter2Info_setCloth__FUcb();
+extern "C" void dMeter2Info_setSword__FUcb();
+extern "C" void dMeter2Info_setShield__FUcb();
+extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
+extern "C" void func_80252E70();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void setInDarkness__10Z2SceneMgrFb();
+extern "C" void check1stDynamicWave__10Z2SceneMgrFv();
+extern "C" void load2ndDynamicWave__10Z2SceneMgrFv();
+extern "C" void sceneBgmStart__10Z2SceneMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void setMessageCount__12JUTAssertionFi();
+extern "C" void JUTReportConsole_f();
+extern "C" void OSGetTime();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 SECTION_DATA extern void*g_fopScn_Method[6];
 SECTION_DATA extern void*g_fpcNd_Method[6];
 SECTION_DATA extern void*const __vt__14mDoHIO_entry_c[3];
@@ -230,43 +692,43 @@ SECTION_SBSS extern u8 struct_80451500[4];
 // 
 
 /* ############################################################################################## */
-/* 804510F8-80451100 0008+00 .sbss      resPhase                                                     */
+/* 804510F8-80451100 0008+00 rc=2 efc=0 .sbss      resPhase                                                     */
 u8 resPhase[8];
 
-/* 80451100-80451108 0008+00 .sbss      dylPhase                                                     */
+/* 80451100-80451108 0008+00 rc=2 efc=0 .sbss      dylPhase                                                     */
 u8 dylPhase[8];
 
-/* 80451108-8045110C 0004+00 .sbss      dylPreLoadTime1                                              */
+/* 80451108-8045110C 0004+00 rc=1 efc=0 .sbss      dylPreLoadTime1                                              */
 u8 dylPreLoadTime1[4];
 
-/* 8045110C-80451110 0004+00 .sbss      None                                                         */
+/* 8045110C-80451110 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_8045110C[4];
 
-/* 80451110-80451114 0004+00 .sbss      resPreLoadTime0                                              */
+/* 80451110-80451114 0004+00 rc=1 efc=0 .sbss      resPreLoadTime0                                              */
 u8 resPreLoadTime0[4];
 
-/* 80451114-80451118 0004+00 .sbss      None                                                         */
+/* 80451114-80451118 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80451114[4];
 
-/* 80451118-8045111C 0004+00 .sbss      resPreLoadTime1                                              */
+/* 80451118-8045111C 0004+00 rc=1 efc=0 .sbss      resPreLoadTime1                                              */
 u8 resPreLoadTime1[4];
 
-/* 8045111C-80451120 0004+00 .sbss      None                                                         */
+/* 8045111C-80451120 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_8045111C[4];
 
-/* 80451120-80451124 0004+00 .sbss      g_preLoadHIO                                                 */
+/* 80451120-80451124 0004+00 rc=1 efc=0 .sbss      g_preLoadHIO                                                 */
 u8 g_preLoadHIO[4];
 
-/* 80451124-80451128 0004+00 .sbss      None                                                         */
+/* 80451124-80451128 0004+00 rc=10 efc=7 .sbss      None                                                         */
 u8 struct_80451124[4];
 /* 80451124 0001 data_80451124 */
 /* 80451125 0003 data_80451125 */
 
-/* 80259400-80259440 0040+00 .text      calcPauseTimer__9dScnPly_cFv                                 */
+/* 80259400-80259440 0040+00 rc=1 efc=0 .text      calcPauseTimer__9dScnPly_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcPauseTimer__9dScnPly_cFv) {
+asm void dScnPly_c::calcPauseTimer() {
 	nofralloc
 #include "asm/d/s/d_s_play/calcPauseTimer__9dScnPly_cFv.s"
 }
@@ -274,7 +736,7 @@ ASM_FUNCTION(calcPauseTimer__9dScnPly_cFv) {
 
 
 /* ############################################################################################## */
-/* 803C3158-803C3188 002E+02 .data      l_wipeType$4081                                              */
+/* 803C3158-803C3188 002E+02 rc=1 efc=0 .data      l_wipeType$4081                                              */
 u8 data_803C3158[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x02, 0x00, 0x02, 0x00, 0x01, 0x00, 0x03, 0x00, 0x01,
 	0x00, 0x04, 0x00, 0x04, 0x00, 0x05, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
@@ -283,14 +745,14 @@ u8 data_803C3158[48] = {
 	0x00, 0x00,
 };
 
-/* 803C3188-803C3194 000A+02 .data      camparamarc$4608                                             */
+/* 803C3188-803C3194 000A+02 rc=1 efc=0 .data      camparamarc$4608                                             */
 u8 data_803C3188[12] = {
 	0x43, 0x61, 0x6D, 0x50, 0x61, 0x72, 0x61, 0x6D, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803C3194-803C31C0 002C+00 .data      l_method$4860                                                */
+/* 803C3194-803C31C0 002C+00 rc=1 efc=0 .data      l_method$4860                                                */
 void* data_803C3194[11] = {
 	(void*)phase_00__FP9dScnPly_c,
 	(void*)phase_1__FP9dScnPly_c,
@@ -305,7 +767,7 @@ void* data_803C3194[11] = {
 	(void*)phase_compleate__FPv,
 };
 
-/* 803C31C0-803C31D4 0014+00 .data      l_dScnPly_Method                                             */
+/* 803C31C0-803C31D4 0014+00 rc=2 efc=0 .data      l_dScnPly_Method                                             */
 void* l_dScnPly_Method[5] = {
 	(void*)dScnPly_Create__FP11scene_class,
 	(void*)dScnPly_Delete__FP9dScnPly_c,
@@ -314,7 +776,7 @@ void* l_dScnPly_Method[5] = {
 	(void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 rc=0 efc=0 .data      g_profile_PLAY_SCENE                                         */
 void* g_profile_PLAY_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,
@@ -328,7 +790,7 @@ void* g_profile_PLAY_SCENE[10] = {
 	NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 rc=0 efc=0 .data      g_profile_OPENING_SCENE                                      */
 void* g_profile_OPENING_SCENE[10] = {
 	NULL,
 	(void*)0x0001FFFD,
@@ -342,32 +804,32 @@ void* g_profile_OPENING_SCENE[10] = {
 	NULL,
 };
 
-/* 803C3224-803C3230 000C+00 .data      __vt__22dScnPly_env_debugHIO_c                               */
+/* 803C3224-803C3230 000C+00 rc=3 efc=0 .data      __vt__22dScnPly_env_debugHIO_c                               */
 void* const __vt__22dScnPly_env_debugHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dScnPly_env_debugHIO_cFv,
 };
 
-/* 803C3230-803C323C 000C+00 .data      __vt__22dScnPly_env_otherHIO_c                               */
+/* 803C3230-803C323C 000C+00 rc=3 efc=0 .data      __vt__22dScnPly_env_otherHIO_c                               */
 void* const __vt__22dScnPly_env_otherHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dScnPly_env_otherHIO_cFv,
 };
 
-/* 80454F18-80454F1C 0002+02 .sdata2    T_JOINT_dylKeyTbl                                            */
+/* 80454F18-80454F1C 0002+02 rc=1 efc=0 .sdata2    T_JOINT_dylKeyTbl                                            */
 u16 T_JOINT_dylKeyTbl = 0x0106;
 /* padding 2 bytes */
 
-/* 80454F1C-80454F20 0004+00 .sdata2    @4055                                                        */
+/* 80454F1C-80454F20 0004+00 rc=1 efc=0 .sdata2    @4055                                                        */
 f32 d_s_d_s_play__lit_4055 = 255.0f;
 
-/* 80259440-80259468 0028+00 .text      __ct__22dScnPly_env_otherHIO_cFv                             */
+/* 80259440-80259468 0028+00 rc=1 efc=0 .text      __ct__22dScnPly_env_otherHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__22dScnPly_env_otherHIO_cFv) {
+asm dScnPly_env_otherHIO_c::dScnPly_env_otherHIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__ct__22dScnPly_env_otherHIO_cFv.s"
 }
@@ -375,22 +837,22 @@ ASM_FUNCTION(__ct__22dScnPly_env_otherHIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454F20-80454F24 0004+00 .sdata2    @4066                                                        */
+/* 80454F20-80454F24 0004+00 rc=1 efc=0 .sdata2    @4066                                                        */
 f32 d_s_d_s_play__lit_4066 = -100.0f;
 
-/* 80454F24-80454F28 0004+00 .sdata2    @4067                                                        */
+/* 80454F24-80454F28 0004+00 rc=1 efc=0 .sdata2    @4067                                                        */
 f32 d_s_d_s_play__lit_4067 = 100.0f;
 
-/* 80454F28-80454F2C 0004+00 .sdata2    @4068                                                        */
+/* 80454F28-80454F2C 0004+00 rc=2 efc=0 .sdata2    @4068                                                        */
 u8 d_s_d_s_play__lit_4068[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80259468-802594AC 0044+00 .text      __ct__22dScnPly_env_debugHIO_cFv                             */
+/* 80259468-802594AC 0044+00 rc=1 efc=0 .text      __ct__22dScnPly_env_debugHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__22dScnPly_env_debugHIO_cFv) {
+asm dScnPly_env_debugHIO_c::dScnPly_env_debugHIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__ct__22dScnPly_env_debugHIO_cFv.s"
 }
@@ -398,36 +860,36 @@ ASM_FUNCTION(__ct__22dScnPly_env_debugHIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454F2C-80454F30 0004+00 .sdata2    @4100                                                        */
+/* 80454F2C-80454F30 0004+00 rc=1 efc=0 .sdata2    @4100                                                        */
 u32 d_s_d_s_play__lit_4100 = 0x2A1E46FF;
 
-/* 802594AC-802597B8 030C+00 .text      dScnPly_Draw__FP9dScnPly_c                                   */
+/* 802594AC-802597B8 030C+00 rc=1 efc=0 .text      dScnPly_Draw__FP9dScnPly_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnPly_Draw__FP9dScnPly_c) {
+asm static void dScnPly_Draw(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/dScnPly_Draw__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 802597B8-8025987C 00C4+00 .text      dScnPly_Execute__FP9dScnPly_c                                */
+/* 802597B8-8025987C 00C4+00 rc=1 efc=0 .text      dScnPly_Execute__FP9dScnPly_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnPly_Execute__FP9dScnPly_c) {
+asm static void dScnPly_Execute(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/dScnPly_Execute__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025987C-802598AC 0030+00 .text      dScnPly_IsDelete__F9dScnPly_c                                */
+/* 8025987C-802598AC 0030+00 rc=1 efc=0 .text      dScnPly_IsDelete__F9dScnPly_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnPly_IsDelete__F9dScnPly_c) {
+asm static void dScnPly_IsDelete(dScnPly_c field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/dScnPly_IsDelete__F9dScnPly_c.s"
 }
@@ -435,7 +897,7 @@ ASM_FUNCTION(dScnPly_IsDelete__F9dScnPly_c) {
 
 
 /* ############################################################################################## */
-/* 8039A2C8-8039A2D8 0010+00 .rodata    PreLoadInfoT                                                 */
+/* 8039A2C8-8039A2D8 0010+00 rc=4 efc=0 .rodata    PreLoadInfoT                                                 */
 SECTION_RODATA const void* const PreLoadInfoT[4] = {
 	(void*)0x8039A2DF,
 	(void*)&T_JOINT_dylKeyTbl,
@@ -443,10 +905,10 @@ SECTION_RODATA const void* const PreLoadInfoT[4] = {
 	(void*)0x01010000,
 };
 
-/* 80450760-80450764 0004+00 .sdata     T_JOINT_resName                                              */
+/* 80450760-80450764 0004+00 rc=1 efc=0 .sdata     T_JOINT_resName                                              */
 void* T_JOINT_resName = (void*)&d_s_d_s_play__stringBase0;
 
-/* 80450764-80450768 0004+00 .sdata     None                                                         */
+/* 80450764-80450768 0004+00 rc=4 efc=0 .sdata     None                                                         */
 u8 struct_80450764[4] = {
 	/* data_80450764 */
 	0xFF,
@@ -454,11 +916,11 @@ u8 struct_80450764[4] = {
 	0x01, 0x00, 0x00,
 };
 
-/* 802598AC-80259AC4 0218+00 .text      dScnPly_Delete__FP9dScnPly_c                                 */
+/* 802598AC-80259AC4 0218+00 rc=1 efc=0 .text      dScnPly_Delete__FP9dScnPly_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnPly_Delete__FP9dScnPly_c) {
+asm static void dScnPly_Delete(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/dScnPly_Delete__FP9dScnPly_c.s"
 }
@@ -466,7 +928,7 @@ ASM_FUNCTION(dScnPly_Delete__FP9dScnPly_c) {
 
 
 /* ############################################################################################## */
-/* 8039A2D8-8039A388 00A9+07 .rodata    @stringBase0                                                 */
+/* 8039A2D8-8039A388 00A9+07 rc=4 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -492,99 +954,94 @@ SECTION_DEAD char* const stringBase_8039A378 = "CamParam";
 SECTION_DEAD char* const pad_8039A381 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 80259AC4-80259BFC 0138+00 .text      resetGame__9dScnPly_cFv                                      */
+/* 80259AC4-80259BFC 0138+00 rc=1 efc=0 .text      resetGame__9dScnPly_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetGame__9dScnPly_cFv) {
+asm void dScnPly_c::resetGame() {
 	nofralloc
 #include "asm/d/s/d_s_play/resetGame__9dScnPly_cFv.s"
 }
 #pragma pop
 
 
-/* 80259BFC-80259C70 0074+00 .text      offReset__9dScnPly_cFv                                       */
+/* 80259BFC-80259C70 0074+00 rc=1 efc=0 .text      offReset__9dScnPly_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offReset__9dScnPly_cFv) {
+asm void dScnPly_c::offReset() {
 	nofralloc
 #include "asm/d/s/d_s_play/offReset__9dScnPly_cFv.s"
 }
 #pragma pop
 
 
-/* 80259C70-80259CAC 003C+00 .text      phase_00__FP9dScnPly_c                                       */
+/* 80259C70-80259CAC 003C+00 rc=1 efc=0 .text      phase_00__FP9dScnPly_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_00__FP9dScnPly_c) {
+asm static void phase_00(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_00__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 80259CAC-80259D7C 00D0+00 .text      phase_01__FP9dScnPly_c                                       */
+/* 80259CAC-80259D7C 00D0+00 rc=1 efc=0 .text      phase_01__FP9dScnPly_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_01__FP9dScnPly_c) {
+asm static void phase_01(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_01__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 80259D7C-80259D84 0008+00 .text      phase_0__FP9dScnPly_c                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_0__FP9dScnPly_c) {
-	nofralloc
-#include "asm/d/s/d_s_play/phase_0__FP9dScnPly_c.s"
+/* 80259D7C-80259D84 0008+00 rc=1 efc=0 .text      phase_0__FP9dScnPly_c                                        */
+static s32 phase_0(dScnPly_c* field_0) {
+	return 2;
 }
-#pragma pop
 
 
-/* 80259D84-8025A438 06B4+00 .text      phase_1__FP9dScnPly_c                                        */
+/* 80259D84-8025A438 06B4+00 rc=1 efc=0 .text      phase_1__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_1__FP9dScnPly_c) {
+asm static void phase_1(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_1__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025A438-8025A4F8 00C0+00 .text      phase_1_0__FP9dScnPly_c                                      */
+/* 8025A438-8025A4F8 00C0+00 rc=1 efc=0 .text      phase_1_0__FP9dScnPly_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_1_0__FP9dScnPly_c) {
+asm static void phase_1_0(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_1_0__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025A4F8-8025A5D4 00DC+00 .text      phase_2__FP9dScnPly_c                                        */
+/* 8025A4F8-8025A5D4 00DC+00 rc=1 efc=0 .text      phase_2__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_2__FP9dScnPly_c) {
+asm static void phase_2(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_2__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025A5D4-8025A654 0080+00 .text      phase_3__FP9dScnPly_c                                        */
+/* 8025A5D4-8025A654 0080+00 rc=1 efc=0 .text      phase_3__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_3__FP9dScnPly_c) {
+asm static void phase_3(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_3__FP9dScnPly_c.s"
 }
@@ -592,99 +1049,94 @@ ASM_FUNCTION(phase_3__FP9dScnPly_c) {
 
 
 /* ############################################################################################## */
-/* 80430778-80430784 000C+00 .bss       @4041                                                        */
+/* 80430778-80430784 000C+00 rc=1 efc=0 .bss       @4041                                                        */
 u8 d_s_d_s_play__lit_4041[12];
 
-/* 80430784-80430790 000C+00 .bss       @4049                                                        */
+/* 80430784-80430790 000C+00 rc=0 efc=0 .bss       @4049                                                        */
 u8 d_s_d_s_play__lit_4049[12];
 
-/* 80430790-8043079C 000C+00 .bss       @4050                                                        */
+/* 80430790-8043079C 000C+00 rc=0 efc=0 .bss       @4050                                                        */
 u8 d_s_d_s_play__lit_4050[12];
 
-/* 8043079C-804307E0 0044+00 .bss       g_envHIO                                                     */
+/* 8043079C-804307E0 0044+00 rc=4 efc=3 .bss       g_envHIO                                                     */
 u8 g_envHIO[68];
 
-/* 80454F30-80454F34 0004+00 .sdata2    @4804                                                        */
+/* 80454F30-80454F34 0004+00 rc=1 efc=0 .sdata2    @4804                                                        */
 f32 d_s_d_s_play__lit_4804 = 608.0f;
 
-/* 80454F34-80454F38 0004+00 .sdata2    @4805                                                        */
+/* 80454F34-80454F38 0004+00 rc=1 efc=0 .sdata2    @4805                                                        */
 f32 d_s_d_s_play__lit_4805 = 448.0f;
 
-/* 80454F38-80454F40 0004+04 .sdata2    @4806                                                        */
+/* 80454F38-80454F40 0004+04 rc=1 efc=0 .sdata2    @4806                                                        */
 f32 d_s_d_s_play__lit_4806 = 1.0f;
 /* padding 4 bytes */
 
-/* 8025A654-8025A9F4 03A0+00 .text      phase_4__FP9dScnPly_c                                        */
+/* 8025A654-8025A9F4 03A0+00 rc=1 efc=0 .text      phase_4__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_4__FP9dScnPly_c) {
+asm static void phase_4(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_4__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025A9F4-8025AAC0 00CC+00 .text      phase_5__FP9dScnPly_c                                        */
+/* 8025A9F4-8025AAC0 00CC+00 rc=1 efc=0 .text      phase_5__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_5__FP9dScnPly_c) {
+asm static void phase_5(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_5__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025AAC0-8025AB8C 00CC+00 .text      phase_6__FP9dScnPly_c                                        */
+/* 8025AAC0-8025AB8C 00CC+00 rc=1 efc=0 .text      phase_6__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_6__FP9dScnPly_c) {
+asm static void phase_6(dScnPly_c* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/phase_6__FP9dScnPly_c.s"
 }
 #pragma pop
 
 
-/* 8025AB8C-8025AB94 0008+00 .text      phase_compleate__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_compleate__FPv) {
-	nofralloc
-#include "asm/d/s/d_s_play/phase_compleate__FPv.s"
+/* 8025AB8C-8025AB94 0008+00 rc=1 efc=0 .text      phase_compleate__FPv                                         */
+static s32 phase_compleate(void* field_0) {
+	return 4;
 }
-#pragma pop
 
 
-/* 8025AB94-8025ABC4 0030+00 .text      dScnPly_Create__FP11scene_class                              */
+/* 8025AB94-8025ABC4 0030+00 rc=1 efc=0 .text      dScnPly_Create__FP11scene_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dScnPly_Create__FP11scene_class) {
+asm static void dScnPly_Create(scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_play/dScnPly_Create__FP11scene_class.s"
 }
 #pragma pop
 
 
-/* 8025ABC4-8025AC0C 0048+00 .text      __dt__22dScnPly_env_debugHIO_cFv                             */
+/* 8025ABC4-8025AC0C 0048+00 rc=1 efc=0 .text      __dt__22dScnPly_env_debugHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22dScnPly_env_debugHIO_cFv) {
+asm dScnPly_env_debugHIO_c::~dScnPly_env_debugHIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__dt__22dScnPly_env_debugHIO_cFv.s"
 }
 #pragma pop
 
 
-/* 8025AC0C-8025AC54 0048+00 .text      __dt__22dScnPly_env_otherHIO_cFv                             */
+/* 8025AC0C-8025AC54 0048+00 rc=1 efc=0 .text      __dt__22dScnPly_env_otherHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22dScnPly_env_otherHIO_cFv) {
+asm dScnPly_env_otherHIO_c::~dScnPly_env_otherHIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__dt__22dScnPly_env_otherHIO_cFv.s"
 }
@@ -692,72 +1144,71 @@ ASM_FUNCTION(__dt__22dScnPly_env_otherHIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 803C323C-803C3248 000C+00 .data      __vt__17dScnPly_env_HIO_c                                    */
+/* 803C323C-803C3248 000C+00 rc=2 efc=0 .data      __vt__17dScnPly_env_HIO_c                                    */
 void* const __vt__17dScnPly_env_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dScnPly_env_HIO_cFv,
 };
 
-/* 803C3248-803C3254 000C+00 .data      __vt__17dScnPly_reg_HIO_c                                    */
+/* 803C3248-803C3254 000C+00 rc=2 efc=0 .data      __vt__17dScnPly_reg_HIO_c                                    */
 void* const __vt__17dScnPly_reg_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dScnPly_reg_HIO_cFv,
 };
 
-/* 803C3254-803C3260 000C+00 .data      __vt__21dScnPly_preLoad_HIO_c                                */
+/* 803C3254-803C3260 000C+00 rc=2 efc=0 .data      __vt__21dScnPly_preLoad_HIO_c                                */
 void* const __vt__21dScnPly_preLoad_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21dScnPly_preLoad_HIO_cFv,
 };
 
-/* 80451128-80451130 0004+04 .sbss      g_regHIO                                                     */
+/* 80451128-80451130 0004+04 rc=1 efc=0 .sbss      g_regHIO                                                     */
 u8 g_regHIO[4 + 4 /* padding */];
 
-/* 8025AC54-8025AD04 00B0+00 .text      __sinit_d_s_play_cpp                                         */
+/* 8025AC54-8025AD04 00B0+00 rc=1 efc=1 .text      __sinit_d_s_play_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_s_play_cpp) {
+extern "C" asm void __sinit_d_s_play_cpp() {
 	nofralloc
 #include "asm/d/s/d_s_play/__sinit_d_s_play_cpp.s"
 }
 #pragma pop
 
 
-/* 8025AD04-8025AD78 0074+00 .text      __dt__17dScnPly_env_HIO_cFv                                  */
+/* 8025AD04-8025AD78 0074+00 rc=2 efc=0 .text      __dt__17dScnPly_env_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dScnPly_env_HIO_cFv) {
+asm dScnPly_env_HIO_c::~dScnPly_env_HIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__dt__17dScnPly_env_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 8025AD78-8025ADC0 0048+00 .text      __dt__17dScnPly_reg_HIO_cFv                                  */
+/* 8025AD78-8025ADC0 0048+00 rc=2 efc=0 .text      __dt__17dScnPly_reg_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dScnPly_reg_HIO_cFv) {
+asm dScnPly_reg_HIO_c::~dScnPly_reg_HIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__dt__17dScnPly_reg_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 8025ADC0-8025AE1C 005C+00 .text      __dt__21dScnPly_preLoad_HIO_cFv                              */
+/* 8025ADC0-8025AE1C 005C+00 rc=2 efc=0 .text      __dt__21dScnPly_preLoad_HIO_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21dScnPly_preLoad_HIO_cFv) {
+asm dScnPly_preLoad_HIO_c::~dScnPly_preLoad_HIO_c() {
 	nofralloc
 #include "asm/d/s/d_s_play/__dt__21dScnPly_preLoad_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

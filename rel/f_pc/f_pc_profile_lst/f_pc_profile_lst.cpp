@@ -9,13 +9,17 @@
 // Forward References:
 // 
 
-extern "C" extern void ModuleProlog();
-extern "C" extern void ModuleEpilog();
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
 SECTION_DATA extern u8 g_fpcPfLst_ProfileList[3172];
 
 // 
 // External References:
 // 
+
 
 
 // 
@@ -26,7 +30,7 @@ SECTION_DATA extern u8 g_fpcPfLst_ProfileList[3172];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ModuleProlog) {
+extern "C" asm void ModuleProlog() {
 	nofralloc
 #include "asm/rel/f_pc/f_pc_profile_lst/f_pc_profile_lst/ModuleProlog.s"
 }
@@ -37,7 +41,7 @@ ASM_FUNCTION(ModuleProlog) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ModuleEpilog) {
+extern "C" asm void ModuleEpilog() {
 	nofralloc
 #include "asm/rel/f_pc/f_pc_profile_lst/f_pc_profile_lst/ModuleEpilog.s"
 }

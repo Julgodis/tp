@@ -6,19 +6,125 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBrightCheck_c (dBrightCheck_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin dBrightCheck_c) */
+// outer dependency: JKRArchive
+/* top-level dependencies (end dBrightCheck_c) */
+struct dBrightCheck_c {
+	// JKRArchive
+	/* 80192F10 */ dBrightCheck_c(JKRArchive*);
+	/* 80192F98 */ ~dBrightCheck_c();
+	/* 80193030 */ void screenSet();
+	/* 801934D0 */ void _move();
+	/* 80193508 */ void modeWait();
+	/* 8019350C */ void modeMove();
+	/* 80193594 */ void _draw();
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build dDlst_BrightCheck_c (dDlst_BrightCheck_c) False/False
+/* top-level dependencies (begin dDlst_BrightCheck_c) */
+/* top-level dependencies (end dDlst_BrightCheck_c) */
+struct dDlst_BrightCheck_c {
+	/* 801935D0 */ void draw();
+	/* 80193648 */ ~dDlst_BrightCheck_c();
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build dMsgString_c (dMsgString_c) False/False
+/* top-level dependencies (begin dMsgString_c) */
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+// build J2DGrafContext (J2DGrafContext) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14dBrightCheck_cFP10JKRArchive();
-extern "C" extern void __dt__14dBrightCheck_cFv();
-extern "C" extern void screenSet__14dBrightCheck_cFv();
-extern "C" extern void _move__14dBrightCheck_cFv();
-extern "C" extern void modeWait__14dBrightCheck_cFv();
-extern "C" extern void modeMove__14dBrightCheck_cFv();
-extern "C" extern void _draw__14dBrightCheck_cFv();
-extern "C" extern void draw__19dDlst_BrightCheck_cFv();
-extern "C" extern void __sinit_d_bright_check_cpp();
-extern "C" extern void __dt__19dDlst_BrightCheck_cFv();
+extern "C" void __sinit_d_bright_check_cpp();
+
+extern "C" void __ct__14dBrightCheck_cFP10JKRArchive();
+extern "C" void __dt__14dBrightCheck_cFv();
+extern "C" void screenSet__14dBrightCheck_cFv();
+extern "C" void _move__14dBrightCheck_cFv();
+extern "C" void modeWait__14dBrightCheck_cFv();
+extern "C" void modeMove__14dBrightCheck_cFv();
+extern "C" void _draw__14dBrightCheck_cFv();
+extern "C" void draw__19dDlst_BrightCheck_cFv();
+extern "C" void __sinit_d_bright_check_cpp();
+extern "C" void __dt__19dDlst_BrightCheck_cFv();
 SECTION_RODATA extern const u8 data_80394910[40];
 SECTION_RODATA extern const u8 data_80394938[40];
 SECTION_RODATA extern const u8 data_80394960[80];
@@ -38,21 +144,30 @@ SECTION_SDATA2 extern f32 d_d_bright_check__lit_3822;
 // External References:
 // 
 
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getRubyFont__Fv();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _restgpr_22();
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _restgpr_22();
+
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _restgpr_22();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -63,32 +178,32 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803BB5B0-803BB5BC 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BB5B0-803BB5BC 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_d_bright_check__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB5BC-803BB5C8 000C+00 .data      @3797                                                        */
+/* 803BB5BC-803BB5C8 000C+00 rc=0 efc=0 .data      @3797                                                        */
 void* d_d_bright_check__lit_3797[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeWait__14dBrightCheck_cFv,
 };
 
-/* 803BB5C8-803BB5D4 000C+00 .data      @3798                                                        */
+/* 803BB5C8-803BB5D4 000C+00 rc=0 efc=0 .data      @3798                                                        */
 void* d_d_bright_check__lit_3798[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeMove__14dBrightCheck_cFv,
 };
 
-/* 803BB5D4-803BB5EC 0018+00 .data      brightChackProc                                              */
+/* 803BB5D4-803BB5EC 0018+00 rc=1 efc=0 .data      brightChackProc                                              */
 u8 brightChackProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB5EC-803BB5FC 0010+00 .data      __vt__19dDlst_BrightCheck_c                                  */
+/* 803BB5EC-803BB5FC 0010+00 rc=3 efc=0 .data      __vt__19dDlst_BrightCheck_c                                  */
 void* const __vt__19dDlst_BrightCheck_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -96,7 +211,7 @@ void* const __vt__19dDlst_BrightCheck_c[4] = {
 	(void*)__dt__19dDlst_BrightCheck_cFv,
 };
 
-/* 803BB5FC-803BB618 000C+10 .data      __vt__14dBrightCheck_c                                       */
+/* 803BB5FC-803BB618 000C+10 rc=2 efc=0 .data      __vt__14dBrightCheck_c                                       */
 void* const __vt__14dBrightCheck_c[7] = {
 	NULL, /* RTTI */
 	NULL,
@@ -108,22 +223,22 @@ void* const __vt__14dBrightCheck_c[7] = {
 	NULL,
 };
 
-/* 80192F10-80192F98 0088+00 .text      __ct__14dBrightCheck_cFP10JKRArchive                         */
+/* 80192F10-80192F98 0088+00 rc=1 efc=1 .text      __ct__14dBrightCheck_cFP10JKRArchive                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dBrightCheck_cFP10JKRArchive) {
+asm dBrightCheck_c::dBrightCheck_c(JKRArchive* field_0) {
 	nofralloc
 #include "asm/d/d_bright_check/__ct__14dBrightCheck_cFP10JKRArchive.s"
 }
 #pragma pop
 
 
-/* 80192F98-80193030 0098+00 .text      __dt__14dBrightCheck_cFv                                     */
+/* 80192F98-80193030 0098+00 rc=1 efc=0 .text      __dt__14dBrightCheck_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBrightCheck_cFv) {
+asm dBrightCheck_c::~dBrightCheck_c() {
 	nofralloc
 #include "asm/d/d_bright_check/__dt__14dBrightCheck_cFv.s"
 }
@@ -131,21 +246,21 @@ ASM_FUNCTION(__dt__14dBrightCheck_cFv) {
 
 
 /* ############################################################################################## */
-/* 80394910-80394938 0028+00 .rodata    tv_btnA$3744                                                 */
+/* 80394910-80394938 0028+00 rc=1 efc=0 .rodata    tv_btnA$3744                                                 */
 SECTION_RODATA const u8 data_80394910[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74,
 };
 
-/* 80394938-80394960 0028+00 .rodata    ftv_btnA$3745                                                */
+/* 80394938-80394960 0028+00 rc=0 efc=0 .rodata    ftv_btnA$3745                                                */
 SECTION_RODATA const u8 data_80394938[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74,
 };
 
-/* 80394960-803949B0 0050+00 .rodata    txTV$3751                                                    */
+/* 80394960-803949B0 0050+00 rc=0 efc=0 .rodata    txTV$3751                                                    */
 SECTION_RODATA const u8 data_80394960[80] = {
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x31, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39, 0x31, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31,
@@ -154,14 +269,14 @@ SECTION_RODATA const u8 data_80394960[80] = {
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x38, 0x31, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34,
 };
 
-/* 803949B0-803949D8 0028+00 .rodata    txTVhide$3752                                                */
+/* 803949B0-803949D8 0028+00 rc=0 efc=0 .rodata    txTVhide$3752                                                */
 SECTION_RODATA const u8 data_803949B0[40] = {
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x36, 0x6E, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x39, 0x6E,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x30, 0x6E, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x37, 0x6E,
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x38, 0x6E,
 };
 
-/* 803949D8-803949F0 0018+00 .rodata    @stringBase0                                                 */
+/* 803949D8-803949F0 0018+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -169,105 +284,99 @@ SECTION_DEAD char* const stringBase_803949D8 = "zelda_option_check.blo";
 SECTION_DEAD char* const stringBase_803949EF = "";
 #pragma pop
 
-/* 80453A00-80453A04 0004+00 .sdata2    @3792                                                        */
+/* 80453A00-80453A04 0004+00 rc=2 efc=0 .sdata2    @3792                                                        */
 u8 d_d_bright_check__lit_3792[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80193030-801934D0 04A0+00 .text      screenSet__14dBrightCheck_cFv                                */
+/* 80193030-801934D0 04A0+00 rc=1 efc=0 .text      screenSet__14dBrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSet__14dBrightCheck_cFv) {
+asm void dBrightCheck_c::screenSet() {
 	nofralloc
 #include "asm/d/d_bright_check/screenSet__14dBrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* 801934D0-80193508 0038+00 .text      _move__14dBrightCheck_cFv                                    */
+/* 801934D0-80193508 0038+00 rc=1 efc=1 .text      _move__14dBrightCheck_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__14dBrightCheck_cFv) {
+asm void dBrightCheck_c::_move() {
 	nofralloc
 #include "asm/d/d_bright_check/_move__14dBrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* 80193508-8019350C 0004+00 .text      modeWait__14dBrightCheck_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__14dBrightCheck_cFv) {
-	nofralloc
-#include "asm/d/d_bright_check/modeWait__14dBrightCheck_cFv.s"
+/* 80193508-8019350C 0004+00 rc=1 efc=0 .text      modeWait__14dBrightCheck_cFv                                 */
+void dBrightCheck_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80453A04-80453A08 0004+00 .sdata2    @3821                                                        */
+/* 80453A04-80453A08 0004+00 rc=1 efc=0 .sdata2    @3821                                                        */
 f32 d_d_bright_check__lit_3821 = 1.0f;
 
-/* 80453A08-80453A10 0004+04 .sdata2    @3822                                                        */
+/* 80453A08-80453A10 0004+04 rc=1 efc=0 .sdata2    @3822                                                        */
 f32 d_d_bright_check__lit_3822 = -1.0f;
 /* padding 4 bytes */
 
-/* 8019350C-80193594 0088+00 .text      modeMove__14dBrightCheck_cFv                                 */
+/* 8019350C-80193594 0088+00 rc=1 efc=0 .text      modeMove__14dBrightCheck_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__14dBrightCheck_cFv) {
+asm void dBrightCheck_c::modeMove() {
 	nofralloc
 #include "asm/d/d_bright_check/modeMove__14dBrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* 80193594-801935D0 003C+00 .text      _draw__14dBrightCheck_cFv                                    */
+/* 80193594-801935D0 003C+00 rc=1 efc=1 .text      _draw__14dBrightCheck_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__14dBrightCheck_cFv) {
+asm void dBrightCheck_c::_draw() {
 	nofralloc
 #include "asm/d/d_bright_check/_draw__14dBrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* 801935D0-80193608 0038+00 .text      draw__19dDlst_BrightCheck_cFv                                */
+/* 801935D0-80193608 0038+00 rc=1 efc=0 .text      draw__19dDlst_BrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__19dDlst_BrightCheck_cFv) {
+asm void dDlst_BrightCheck_c::draw() {
 	nofralloc
 #include "asm/d/d_bright_check/draw__19dDlst_BrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* 80193608-80193648 0040+00 .text      __sinit_d_bright_check_cpp                                   */
+/* 80193608-80193648 0040+00 rc=1 efc=1 .text      __sinit_d_bright_check_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_bright_check_cpp) {
+extern "C" asm void __sinit_d_bright_check_cpp() {
 	nofralloc
 #include "asm/d/d_bright_check/__sinit_d_bright_check_cpp.s"
 }
 #pragma pop
 
 
-/* 80193648-80193690 0048+00 .text      __dt__19dDlst_BrightCheck_cFv                                */
+/* 80193648-80193690 0048+00 rc=1 efc=0 .text      __dt__19dDlst_BrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dDlst_BrightCheck_cFv) {
+asm dDlst_BrightCheck_c::~dDlst_BrightCheck_c() {
 	nofralloc
 #include "asm/d/d_bright_check/__dt__19dDlst_BrightCheck_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

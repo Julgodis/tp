@@ -6,41 +6,107 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daL7ODR_c;
+struct fopAc_ac_c;
+struct Vec;
+struct cXyz;
+
+struct daL7ODR_c {
+	void action();
+	void dr_action();
+	void mtx_set();
+	void draw();
+	void wait();
+	void pl_walk();
+	void setZoomOutCamPos(cXyz&, cXyz&, f32);
+	void dr_wait();
+	void dr_fly();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void check_start();
+	void create();
+};
+
+struct cXyz {
+	void abs(Vec const&) const;
+	cXyz(cXyz const&);
+	void operator=(cXyz const&);
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct daPy_py_c {
+	void changeDemoPos0(cXyz const*);
+};
+
+struct mDoExt_morf_c {
+	void isStop();
+};
+
+struct Vec {
+};
+
+struct mDoMtx_stack_c {
+	void multVecZero(Vec*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
-extern "C" extern void action__9daL7ODR_cFv();
-extern "C" extern void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
-extern "C" extern void dr_action__9daL7ODR_cFv();
-extern "C" extern void mtx_set__9daL7ODR_cFv();
-extern "C" extern void draw__9daL7ODR_cFv();
-extern "C" extern void daL7ODR_Draw__FP9daL7ODR_c();
-extern "C" extern void wait__9daL7ODR_cFv();
-extern "C" extern void pl_walk__9daL7ODR_cFv();
-extern "C" extern void setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf();
-extern "C" extern void dr_wait__9daL7ODR_cFv();
-extern "C" extern void dr_fly__9daL7ODR_cFv();
-extern "C" extern void execute__9daL7ODR_cFv();
-extern "C" extern void daL7ODR_Execute__FP9daL7ODR_c();
-extern "C" extern void daL7ODR_IsDelete__FP9daL7ODR_c();
-extern "C" extern void _delete__9daL7ODR_cFv();
-extern "C" extern void daL7ODR_Delete__FP9daL7ODR_c();
-extern "C" extern void CreateHeap__9daL7ODR_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void check_start__9daL7ODR_cFv();
-extern "C" extern void create__9daL7ODR_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daL7ODR_Create__FP9daL7ODR_c();
-extern "C" extern void func_805ADD68();
-extern "C" extern void func_805ADD70();
-extern "C" extern void changeDemoPos0__9daPy_py_cFPC4cXyz();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void isStop__13mDoExt_morf_cFv();
-extern "C" extern void abs__4cXyzCFRC3Vec();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void multVecZero__14mDoMtx_stack_cFP3Vec();
-extern "C" extern void __as__4cXyzFRC4cXyz();
+extern "C" void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
+extern "C" void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
+void daL7ODR_Draw(daL7ODR_c*);
+void daL7ODR_Execute(daL7ODR_c*);
+bool daL7ODR_IsDelete(daL7ODR_c*);
+void daL7ODR_Delete(daL7ODR_c*);
+void useHeapInit(fopAc_ac_c*);
+void daL7ODR_Create(daL7ODR_c*);
+extern "C" void func_805ADD68();
+extern "C" void func_805ADD70();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+
+extern "C" void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
+extern "C" void action__9daL7ODR_cFv();
+extern "C" void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v();
+extern "C" void dr_action__9daL7ODR_cFv();
+extern "C" void mtx_set__9daL7ODR_cFv();
+extern "C" void draw__9daL7ODR_cFv();
+extern "C" void daL7ODR_Draw__FP9daL7ODR_c();
+extern "C" void wait__9daL7ODR_cFv();
+extern "C" void pl_walk__9daL7ODR_cFv();
+extern "C" void setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf();
+extern "C" void dr_wait__9daL7ODR_cFv();
+extern "C" void dr_fly__9daL7ODR_cFv();
+extern "C" void execute__9daL7ODR_cFv();
+extern "C" void daL7ODR_Execute__FP9daL7ODR_c();
+extern "C" bool daL7ODR_IsDelete__FP9daL7ODR_c();
+extern "C" void _delete__9daL7ODR_cFv();
+extern "C" void daL7ODR_Delete__FP9daL7ODR_c();
+extern "C" void CreateHeap__9daL7ODR_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void check_start__9daL7ODR_cFv();
+extern "C" void create__9daL7ODR_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daL7ODR_Create__FP9daL7ODR_c();
+extern "C" void func_805ADD68();
+extern "C" void func_805ADD70();
+extern "C" void changeDemoPos0__9daPy_py_cFPC4cXyz();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void isStop__13mDoExt_morf_cFv();
+extern "C" void abs__4cXyzCFRC3Vec();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void multVecZero__14mDoMtx_stack_cFP3Vec();
+extern "C" void __as__4cXyzFRC4cXyz();
 SECTION_RODATA extern const u32 lit_3850;
 SECTION_RODATA extern const u32 lit_3851;
 SECTION_RODATA extern const u8 lit_3852[4];
@@ -139,7 +205,9 @@ SECTION_DATA extern void*const __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -149,7 +217,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v) {
+extern "C" asm void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v.s"
 }
@@ -160,7 +228,7 @@ ASM_FUNCTION(setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__9daL7ODR_cFv) {
+asm void daL7ODR_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/action__9daL7ODR_cFv.s"
 }
@@ -171,7 +239,7 @@ ASM_FUNCTION(action__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v) {
+extern "C" asm void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v.s"
 }
@@ -182,7 +250,7 @@ ASM_FUNCTION(setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dr_action__9daL7ODR_cFv) {
+asm void daL7ODR_c::dr_action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/dr_action__9daL7ODR_cFv.s"
 }
@@ -193,7 +261,7 @@ ASM_FUNCTION(dr_action__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__9daL7ODR_cFv) {
+asm void daL7ODR_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/mtx_set__9daL7ODR_cFv.s"
 }
@@ -204,7 +272,7 @@ ASM_FUNCTION(mtx_set__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daL7ODR_cFv) {
+asm void daL7ODR_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/draw__9daL7ODR_cFv.s"
 }
@@ -215,7 +283,7 @@ ASM_FUNCTION(draw__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daL7ODR_Draw__FP9daL7ODR_c) {
+asm void daL7ODR_Draw(daL7ODR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Draw__FP9daL7ODR_c.s"
 }
@@ -226,7 +294,7 @@ ASM_FUNCTION(daL7ODR_Draw__FP9daL7ODR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__9daL7ODR_cFv) {
+asm void daL7ODR_c::wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/wait__9daL7ODR_cFv.s"
 }
@@ -237,7 +305,7 @@ ASM_FUNCTION(wait__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_walk__9daL7ODR_cFv) {
+asm void daL7ODR_c::pl_walk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/pl_walk__9daL7ODR_cFv.s"
 }
@@ -248,7 +316,7 @@ ASM_FUNCTION(pl_walk__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf) {
+asm void daL7ODR_c::setZoomOutCamPos(cXyz& field_0, cXyz& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf.s"
 }
@@ -259,7 +327,7 @@ ASM_FUNCTION(setZoomOutCamPos__9daL7ODR_cFR4cXyzR4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dr_wait__9daL7ODR_cFv) {
+asm void daL7ODR_c::dr_wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/dr_wait__9daL7ODR_cFv.s"
 }
@@ -270,7 +338,7 @@ ASM_FUNCTION(dr_wait__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dr_fly__9daL7ODR_cFv) {
+asm void daL7ODR_c::dr_fly() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/dr_fly__9daL7ODR_cFv.s"
 }
@@ -281,7 +349,7 @@ ASM_FUNCTION(dr_fly__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daL7ODR_cFv) {
+asm void daL7ODR_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/execute__9daL7ODR_cFv.s"
 }
@@ -292,7 +360,7 @@ ASM_FUNCTION(execute__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daL7ODR_Execute__FP9daL7ODR_c) {
+asm void daL7ODR_Execute(daL7ODR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Execute__FP9daL7ODR_c.s"
 }
@@ -300,21 +368,16 @@ ASM_FUNCTION(daL7ODR_Execute__FP9daL7ODR_c) {
 
 
 /* 805AD874-805AD87C 0008+00 .text      daL7ODR_IsDelete__FP9daL7ODR_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daL7ODR_IsDelete__FP9daL7ODR_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_IsDelete__FP9daL7ODR_c.s"
+bool daL7ODR_IsDelete(daL7ODR_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805AD87C-805AD8EC 0070+00 .text      _delete__9daL7ODR_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__9daL7ODR_cFv) {
+asm void daL7ODR_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/_delete__9daL7ODR_cFv.s"
 }
@@ -325,7 +388,7 @@ ASM_FUNCTION(_delete__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daL7ODR_Delete__FP9daL7ODR_c) {
+asm void daL7ODR_Delete(daL7ODR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Delete__FP9daL7ODR_c.s"
 }
@@ -336,7 +399,7 @@ ASM_FUNCTION(daL7ODR_Delete__FP9daL7ODR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daL7ODR_cFv) {
+asm void daL7ODR_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/CreateHeap__9daL7ODR_cFv.s"
 }
@@ -347,7 +410,7 @@ ASM_FUNCTION(CreateHeap__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -358,7 +421,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_start__9daL7ODR_cFv) {
+asm void daL7ODR_c::check_start() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/check_start__9daL7ODR_cFv.s"
 }
@@ -369,7 +432,7 @@ ASM_FUNCTION(check_start__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daL7ODR_cFv) {
+asm void daL7ODR_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/create__9daL7ODR_cFv.s"
 }
@@ -380,7 +443,7 @@ ASM_FUNCTION(create__9daL7ODR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -391,7 +454,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daL7ODR_Create__FP9daL7ODR_c) {
+asm void daL7ODR_Create(daL7ODR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_Create__FP9daL7ODR_c.s"
 }
@@ -402,7 +465,7 @@ ASM_FUNCTION(daL7ODR_Create__FP9daL7ODR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805ADD68) {
+extern "C" asm void func_805ADD68() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/func_805ADD68.s"
 }
@@ -413,7 +476,7 @@ ASM_FUNCTION(func_805ADD68) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805ADD70) {
+extern "C" asm void func_805ADD70() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/func_805ADD70.s"
 }
@@ -424,7 +487,7 @@ ASM_FUNCTION(func_805ADD70) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
+asm void daPy_py_c::changeDemoPos0(cXyz const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/changeDemoPos0__9daPy_py_cFPC4cXyz.s"
 }
@@ -435,7 +498,7 @@ ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -446,7 +509,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isStop__13mDoExt_morf_cFv) {
+asm void mDoExt_morf_c::isStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/isStop__13mDoExt_morf_cFv.s"
 }
@@ -457,7 +520,7 @@ ASM_FUNCTION(isStop__13mDoExt_morf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs__4cXyzCFRC3Vec) {
+asm void cXyz::abs(Vec const& field_0) const {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/abs__4cXyzCFRC3Vec.s"
 }
@@ -468,7 +531,7 @@ ASM_FUNCTION(abs__4cXyzCFRC3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/__ct__4cXyzFRC4cXyz.s"
 }
@@ -479,7 +542,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(multVecZero__14mDoMtx_stack_cFP3Vec) {
+asm void mDoMtx_stack_c::multVecZero(Vec* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/multVecZero__14mDoMtx_stack_cFP3Vec.s"
 }
@@ -490,7 +553,7 @@ ASM_FUNCTION(multVecZero__14mDoMtx_stack_cFP3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/__as__4cXyzFRC4cXyz.s"
 }

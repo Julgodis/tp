@@ -6,27 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSnowSoup_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjSnowSoup_c {
+	daObjSnowSoup_c();
+	~daObjSnowSoup_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setModelMtx();
+	void createSmkEmtCommon();
+	void deleteSmkEmtCommon();
+	void createSmkEmtChange(s32);
+	void deleteSmkEmtChange(s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjSnowSoup_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__15daObjSnowSoup_cFv();
-extern "C" extern void __dt__15daObjSnowSoup_cFv();
-extern "C" extern void createHeap__15daObjSnowSoup_cFv();
-extern "C" extern void create__15daObjSnowSoup_cFv();
-extern "C" extern void Delete__15daObjSnowSoup_cFv();
-extern "C" extern void draw__15daObjSnowSoup_cFv();
-extern "C" extern void execute__15daObjSnowSoup_cFv();
-extern "C" extern void init__15daObjSnowSoup_cFv();
-extern "C" extern void setModelMtx__15daObjSnowSoup_cFv();
-extern "C" extern void createSmkEmtCommon__15daObjSnowSoup_cFv();
-extern "C" extern void deleteSmkEmtCommon__15daObjSnowSoup_cFv();
-extern "C" extern void createSmkEmtChange__15daObjSnowSoup_cFi();
-extern "C" extern void deleteSmkEmtChange__15daObjSnowSoup_cFi();
-extern "C" extern void daObjSnowSoup_create__FP15daObjSnowSoup_c();
-extern "C" extern void daObjSnowSoup_Delete__FP15daObjSnowSoup_c();
-extern "C" extern void daObjSnowSoup_execute__FP15daObjSnowSoup_c();
-extern "C" extern void daObjSnowSoup_draw__FP15daObjSnowSoup_c();
+void daObjSnowSoup_c_createHeap(fopAc_ac_c*);
+void daObjSnowSoup_create(daObjSnowSoup_c*);
+void daObjSnowSoup_Delete(daObjSnowSoup_c*);
+void daObjSnowSoup_execute(daObjSnowSoup_c*);
+void daObjSnowSoup_draw(daObjSnowSoup_c*);
+
+extern "C" void daObjSnowSoup_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__15daObjSnowSoup_cFv();
+extern "C" void __dt__15daObjSnowSoup_cFv();
+extern "C" void createHeap__15daObjSnowSoup_cFv();
+extern "C" void create__15daObjSnowSoup_cFv();
+extern "C" void Delete__15daObjSnowSoup_cFv();
+extern "C" void draw__15daObjSnowSoup_cFv();
+extern "C" void execute__15daObjSnowSoup_cFv();
+extern "C" void init__15daObjSnowSoup_cFv();
+extern "C" void setModelMtx__15daObjSnowSoup_cFv();
+extern "C" void createSmkEmtCommon__15daObjSnowSoup_cFv();
+extern "C" void deleteSmkEmtCommon__15daObjSnowSoup_cFv();
+extern "C" void createSmkEmtChange__15daObjSnowSoup_cFi();
+extern "C" void deleteSmkEmtChange__15daObjSnowSoup_cFi();
+extern "C" void daObjSnowSoup_create__FP15daObjSnowSoup_c();
+extern "C" void daObjSnowSoup_Delete__FP15daObjSnowSoup_c();
+extern "C" void daObjSnowSoup_execute__FP15daObjSnowSoup_c();
+extern "C" void daObjSnowSoup_draw__FP15daObjSnowSoup_c();
 SECTION_RODATA extern const u8 SOUP_MODEL_OFFSET[12];
 SECTION_RODATA extern const u8 data_80CE0248[12];
 SECTION_RODATA extern const u8 lit_3706[4];
@@ -44,7 +76,9 @@ SECTION_DATA extern void*const __vt__15daObjSnowSoup_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +88,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSnowSoup_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjSnowSoup_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/daObjSnowSoup_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -65,7 +99,7 @@ ASM_FUNCTION(daObjSnowSoup_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daObjSnowSoup_cFv) {
+asm daObjSnowSoup_c::daObjSnowSoup_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/__ct__15daObjSnowSoup_cFv.s"
 }
@@ -76,7 +110,7 @@ ASM_FUNCTION(__ct__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjSnowSoup_cFv) {
+asm daObjSnowSoup_c::~daObjSnowSoup_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/__dt__15daObjSnowSoup_cFv.s"
 }
@@ -87,7 +121,7 @@ ASM_FUNCTION(__dt__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/createHeap__15daObjSnowSoup_cFv.s"
 }
@@ -98,7 +132,7 @@ ASM_FUNCTION(createHeap__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/create__15daObjSnowSoup_cFv.s"
 }
@@ -109,7 +143,7 @@ ASM_FUNCTION(create__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/Delete__15daObjSnowSoup_cFv.s"
 }
@@ -120,7 +154,7 @@ ASM_FUNCTION(Delete__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/draw__15daObjSnowSoup_cFv.s"
 }
@@ -131,7 +165,7 @@ ASM_FUNCTION(draw__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/execute__15daObjSnowSoup_cFv.s"
 }
@@ -142,7 +176,7 @@ ASM_FUNCTION(execute__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/init__15daObjSnowSoup_cFv.s"
 }
@@ -153,7 +187,7 @@ ASM_FUNCTION(init__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/setModelMtx__15daObjSnowSoup_cFv.s"
 }
@@ -164,7 +198,7 @@ ASM_FUNCTION(setModelMtx__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSmkEmtCommon__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::createSmkEmtCommon() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/createSmkEmtCommon__15daObjSnowSoup_cFv.s"
 }
@@ -175,7 +209,7 @@ ASM_FUNCTION(createSmkEmtCommon__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteSmkEmtCommon__15daObjSnowSoup_cFv) {
+asm void daObjSnowSoup_c::deleteSmkEmtCommon() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/deleteSmkEmtCommon__15daObjSnowSoup_cFv.s"
 }
@@ -186,7 +220,7 @@ ASM_FUNCTION(deleteSmkEmtCommon__15daObjSnowSoup_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSmkEmtChange__15daObjSnowSoup_cFi) {
+asm void daObjSnowSoup_c::createSmkEmtChange(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/createSmkEmtChange__15daObjSnowSoup_cFi.s"
 }
@@ -197,7 +231,7 @@ ASM_FUNCTION(createSmkEmtChange__15daObjSnowSoup_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteSmkEmtChange__15daObjSnowSoup_cFi) {
+asm void daObjSnowSoup_c::deleteSmkEmtChange(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/deleteSmkEmtChange__15daObjSnowSoup_cFi.s"
 }
@@ -208,7 +242,7 @@ ASM_FUNCTION(deleteSmkEmtChange__15daObjSnowSoup_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSnowSoup_create__FP15daObjSnowSoup_c) {
+asm void daObjSnowSoup_create(daObjSnowSoup_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/daObjSnowSoup_create__FP15daObjSnowSoup_c.s"
 }
@@ -219,7 +253,7 @@ ASM_FUNCTION(daObjSnowSoup_create__FP15daObjSnowSoup_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSnowSoup_Delete__FP15daObjSnowSoup_c) {
+asm void daObjSnowSoup_Delete(daObjSnowSoup_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/daObjSnowSoup_Delete__FP15daObjSnowSoup_c.s"
 }
@@ -230,7 +264,7 @@ ASM_FUNCTION(daObjSnowSoup_Delete__FP15daObjSnowSoup_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSnowSoup_execute__FP15daObjSnowSoup_c) {
+asm void daObjSnowSoup_execute(daObjSnowSoup_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/daObjSnowSoup_execute__FP15daObjSnowSoup_c.s"
 }
@@ -241,7 +275,7 @@ ASM_FUNCTION(daObjSnowSoup_execute__FP15daObjSnowSoup_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSnowSoup_draw__FP15daObjSnowSoup_c) {
+asm void daObjSnowSoup_draw(daObjSnowSoup_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_snow_soup/d_a_obj_snow_soup/daObjSnowSoup_draw__FP15daObjSnowSoup_c.s"
 }

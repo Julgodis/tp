@@ -6,48 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTogeRoll_c;
+struct fopAc_ac_c;
+
+struct daTogeRoll_HIO_c {
+	daTogeRoll_HIO_c();
+	~daTogeRoll_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTogeRoll_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveTogeRoll();
+	void init_modeBound();
+	void modeBound();
+	void modeBound2();
+	void init_modeBoundWait();
+	void modeBoundWait();
+	void init_modeAcc();
+	void modeAcc();
+	void init_modeMove();
+	void modeMove();
+	void init_modeBrk();
+	void modeBrk();
+	void init_modeWaitInit();
+	void modeWaitInit();
+	void init_modeWait();
+	void modeWait();
+	void init_modeBreak();
+	void modeBreak();
+	void setNextPoint();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daTogeRoll_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daTogeRoll_cFv();
-extern "C" extern void CreateHeap__12daTogeRoll_cFv();
-extern "C" extern void create__12daTogeRoll_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__12daTogeRoll_cFPPA3_A4_f();
-extern "C" extern void moveTogeRoll__12daTogeRoll_cFv();
-extern "C" extern void init_modeBound__12daTogeRoll_cFv();
-extern "C" extern void modeBound__12daTogeRoll_cFv();
-extern "C" extern void modeBound2__12daTogeRoll_cFv();
-extern "C" extern void init_modeBoundWait__12daTogeRoll_cFv();
-extern "C" extern void modeBoundWait__12daTogeRoll_cFv();
-extern "C" extern void init_modeAcc__12daTogeRoll_cFv();
-extern "C" extern void modeAcc__12daTogeRoll_cFv();
-extern "C" extern void init_modeMove__12daTogeRoll_cFv();
-extern "C" extern void modeMove__12daTogeRoll_cFv();
-extern "C" extern void init_modeBrk__12daTogeRoll_cFv();
-extern "C" extern void modeBrk__12daTogeRoll_cFv();
-extern "C" extern void init_modeWaitInit__12daTogeRoll_cFv();
-extern "C" extern void modeWaitInit__12daTogeRoll_cFv();
-extern "C" extern void init_modeWait__12daTogeRoll_cFv();
-extern "C" extern void modeWait__12daTogeRoll_cFv();
-extern "C" extern void init_modeBreak__12daTogeRoll_cFv();
-extern "C" extern void modeBreak__12daTogeRoll_cFv();
-extern "C" extern void setNextPoint__12daTogeRoll_cFv();
-extern "C" extern void Draw__12daTogeRoll_cFv();
-extern "C" extern void Delete__12daTogeRoll_cFv();
-extern "C" extern void daTogeRoll_Draw__FP12daTogeRoll_c();
-extern "C" extern void daTogeRoll_Execute__FP12daTogeRoll_c();
-extern "C" extern void daTogeRoll_Delete__FP12daTogeRoll_c();
-extern "C" extern void daTogeRoll_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daTogeRoll_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6TogeRoll_cpp();
+extern "C" void Execute__12daTogeRoll_cFPPA3_A4_f();
+void daTogeRoll_Draw(daTogeRoll_c*);
+void daTogeRoll_Execute(daTogeRoll_c*);
+void daTogeRoll_Delete(daTogeRoll_c*);
+void daTogeRoll_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6TogeRoll_cpp();
+
+extern "C" void __ct__16daTogeRoll_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daTogeRoll_cFv();
+extern "C" void CreateHeap__12daTogeRoll_cFv();
+extern "C" void create__12daTogeRoll_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__12daTogeRoll_cFPPA3_A4_f();
+extern "C" void moveTogeRoll__12daTogeRoll_cFv();
+extern "C" void init_modeBound__12daTogeRoll_cFv();
+extern "C" void modeBound__12daTogeRoll_cFv();
+extern "C" void modeBound2__12daTogeRoll_cFv();
+extern "C" void init_modeBoundWait__12daTogeRoll_cFv();
+extern "C" void modeBoundWait__12daTogeRoll_cFv();
+extern "C" void init_modeAcc__12daTogeRoll_cFv();
+extern "C" void modeAcc__12daTogeRoll_cFv();
+extern "C" void init_modeMove__12daTogeRoll_cFv();
+extern "C" void modeMove__12daTogeRoll_cFv();
+extern "C" void init_modeBrk__12daTogeRoll_cFv();
+extern "C" void modeBrk__12daTogeRoll_cFv();
+extern "C" void init_modeWaitInit__12daTogeRoll_cFv();
+extern "C" void modeWaitInit__12daTogeRoll_cFv();
+extern "C" void init_modeWait__12daTogeRoll_cFv();
+extern "C" void modeWait__12daTogeRoll_cFv();
+extern "C" void init_modeBreak__12daTogeRoll_cFv();
+extern "C" void modeBreak__12daTogeRoll_cFv();
+extern "C" void setNextPoint__12daTogeRoll_cFv();
+extern "C" void Draw__12daTogeRoll_cFv();
+extern "C" void Delete__12daTogeRoll_cFv();
+extern "C" void daTogeRoll_Draw__FP12daTogeRoll_c();
+extern "C" void daTogeRoll_Execute__FP12daTogeRoll_c();
+extern "C" void daTogeRoll_Delete__FP12daTogeRoll_c();
+extern "C" void daTogeRoll_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daTogeRoll_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6TogeRoll_cpp();
 SECTION_RODATA extern const u32 lit_3651;
 SECTION_RODATA extern const u32 lit_3652;
 SECTION_RODATA extern const u32 lit_3653;
@@ -104,8 +178,11 @@ SECTION_BSS extern u8 data_80C79D58[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -115,7 +192,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daTogeRoll_HIO_cFv) {
+asm daTogeRoll_HIO_c::daTogeRoll_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__ct__16daTogeRoll_HIO_cFv.s"
 }
@@ -126,7 +203,7 @@ ASM_FUNCTION(__ct__16daTogeRoll_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -137,7 +214,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/setBaseMtx__12daTogeRoll_cFv.s"
 }
@@ -148,7 +225,7 @@ ASM_FUNCTION(setBaseMtx__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/CreateHeap__12daTogeRoll_cFv.s"
 }
@@ -159,7 +236,7 @@ ASM_FUNCTION(CreateHeap__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/create__12daTogeRoll_cFv.s"
 }
@@ -170,7 +247,7 @@ ASM_FUNCTION(create__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__8cM3dGAabFv.s"
 }
@@ -181,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__8dCcD_SphFv.s"
 }
@@ -192,7 +269,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__ct__8dCcD_SphFv.s"
 }
@@ -203,7 +280,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__8cM3dGSphFv.s"
 }
@@ -214,7 +291,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__10dCcD_GSttsFv.s"
 }
@@ -225,7 +302,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daTogeRoll_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daTogeRoll_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/Execute__12daTogeRoll_cFPPA3_A4_f.s"
 }
@@ -236,7 +313,7 @@ ASM_FUNCTION(Execute__12daTogeRoll_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveTogeRoll__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::moveTogeRoll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/moveTogeRoll__12daTogeRoll_cFv.s"
 }
@@ -247,7 +324,7 @@ ASM_FUNCTION(moveTogeRoll__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBound__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeBound() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeBound__12daTogeRoll_cFv.s"
 }
@@ -258,7 +335,7 @@ ASM_FUNCTION(init_modeBound__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBound__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeBound() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeBound__12daTogeRoll_cFv.s"
 }
@@ -269,7 +346,7 @@ ASM_FUNCTION(modeBound__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBound2__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeBound2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeBound2__12daTogeRoll_cFv.s"
 }
@@ -280,7 +357,7 @@ ASM_FUNCTION(modeBound2__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBoundWait__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeBoundWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeBoundWait__12daTogeRoll_cFv.s"
 }
@@ -291,7 +368,7 @@ ASM_FUNCTION(init_modeBoundWait__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBoundWait__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeBoundWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeBoundWait__12daTogeRoll_cFv.s"
 }
@@ -302,7 +379,7 @@ ASM_FUNCTION(modeBoundWait__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeAcc__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeAcc__12daTogeRoll_cFv.s"
 }
@@ -313,7 +390,7 @@ ASM_FUNCTION(init_modeAcc__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeAcc__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeAcc__12daTogeRoll_cFv.s"
 }
@@ -324,7 +401,7 @@ ASM_FUNCTION(modeAcc__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeMove__12daTogeRoll_cFv.s"
 }
@@ -335,7 +412,7 @@ ASM_FUNCTION(init_modeMove__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeMove__12daTogeRoll_cFv.s"
 }
@@ -346,7 +423,7 @@ ASM_FUNCTION(modeMove__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBrk__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeBrk__12daTogeRoll_cFv.s"
 }
@@ -357,7 +434,7 @@ ASM_FUNCTION(init_modeBrk__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBrk__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeBrk__12daTogeRoll_cFv.s"
 }
@@ -368,7 +445,7 @@ ASM_FUNCTION(modeBrk__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitInit__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeWaitInit__12daTogeRoll_cFv.s"
 }
@@ -379,7 +456,7 @@ ASM_FUNCTION(init_modeWaitInit__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitInit__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeWaitInit__12daTogeRoll_cFv.s"
 }
@@ -390,7 +467,7 @@ ASM_FUNCTION(modeWaitInit__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeWait__12daTogeRoll_cFv.s"
 }
@@ -401,7 +478,7 @@ ASM_FUNCTION(init_modeWait__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeWait__12daTogeRoll_cFv.s"
 }
@@ -412,7 +489,7 @@ ASM_FUNCTION(modeWait__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/init_modeBreak__12daTogeRoll_cFv.s"
 }
@@ -423,7 +500,7 @@ ASM_FUNCTION(init_modeBreak__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/modeBreak__12daTogeRoll_cFv.s"
 }
@@ -434,7 +511,7 @@ ASM_FUNCTION(modeBreak__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPoint__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::setNextPoint() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/setNextPoint__12daTogeRoll_cFv.s"
 }
@@ -445,7 +522,7 @@ ASM_FUNCTION(setNextPoint__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/Draw__12daTogeRoll_cFv.s"
 }
@@ -456,7 +533,7 @@ ASM_FUNCTION(Draw__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daTogeRoll_cFv) {
+asm void daTogeRoll_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/Delete__12daTogeRoll_cFv.s"
 }
@@ -467,7 +544,7 @@ ASM_FUNCTION(Delete__12daTogeRoll_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTogeRoll_Draw__FP12daTogeRoll_c) {
+asm void daTogeRoll_Draw(daTogeRoll_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/daTogeRoll_Draw__FP12daTogeRoll_c.s"
 }
@@ -478,7 +555,7 @@ ASM_FUNCTION(daTogeRoll_Draw__FP12daTogeRoll_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTogeRoll_Execute__FP12daTogeRoll_c) {
+asm void daTogeRoll_Execute(daTogeRoll_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/daTogeRoll_Execute__FP12daTogeRoll_c.s"
 }
@@ -489,7 +566,7 @@ ASM_FUNCTION(daTogeRoll_Execute__FP12daTogeRoll_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTogeRoll_Delete__FP12daTogeRoll_c) {
+asm void daTogeRoll_Delete(daTogeRoll_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/daTogeRoll_Delete__FP12daTogeRoll_c.s"
 }
@@ -500,7 +577,7 @@ ASM_FUNCTION(daTogeRoll_Delete__FP12daTogeRoll_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTogeRoll_Create__FP10fopAc_ac_c) {
+asm void daTogeRoll_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/daTogeRoll_Create__FP10fopAc_ac_c.s"
 }
@@ -511,7 +588,7 @@ ASM_FUNCTION(daTogeRoll_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__10cCcD_GSttsFv.s"
 }
@@ -522,7 +599,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daTogeRoll_HIO_cFv) {
+asm daTogeRoll_HIO_c::~daTogeRoll_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__dt__16daTogeRoll_HIO_cFv.s"
 }
@@ -533,7 +610,7 @@ ASM_FUNCTION(__dt__16daTogeRoll_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6TogeRoll_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6TogeRoll_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6TogeRoll/d_a_obj_lv6TogeRoll/__sinit_d_a_obj_lv6TogeRoll_cpp.s"
 }

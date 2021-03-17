@@ -6,39 +6,103 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daBullet_c {
+	~daBullet_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void getResName();
+	void getBmdName();
+	void getTypeFromParam();
+	void initialize();
+	void wait(void*);
+	void move(void*);
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daBullet_Param_c {
+	~daBullet_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__10daBullet_cFv();
-extern "C" extern void create__10daBullet_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__10daBullet_cFv();
-extern "C" extern void Delete__10daBullet_cFv();
-extern "C" extern void Execute__10daBullet_cFv();
-extern "C" extern void Draw__10daBullet_cFv();
-extern "C" extern void createHeapCallBack__10daBullet_cFP10fopAc_ac_c();
-extern "C" extern void getResName__10daBullet_cFv();
-extern "C" extern void getBmdName__10daBullet_cFv();
-extern "C" extern void getTypeFromParam__10daBullet_cFv();
-extern "C" extern void initialize__10daBullet_cFv();
-extern "C" extern void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i();
-extern "C" extern void wait__10daBullet_cFPv();
-extern "C" extern void move__10daBullet_cFPv();
-extern "C" extern void daBullet_Create__FPv();
-extern "C" extern void daBullet_Delete__FPv();
-extern "C" extern void daBullet_Execute__FPv();
-extern "C" extern void daBullet_Draw__FPv();
-extern "C" extern void daBullet_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80656618();
-extern "C" extern void __sinit_d_a_bullet_cpp();
-extern "C" extern void __dt__16daBullet_Param_cFv();
-extern "C" extern void func_806566F0();
-extern "C" extern void func_806566F8();
+extern "C" void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i();
+void daBullet_Create(void*);
+void daBullet_Delete(void*);
+void daBullet_Execute(void*);
+void daBullet_Draw(void*);
+bool daBullet_IsDelete(void*);
+extern "C" void func_80656618();
+extern "C" void __sinit_d_a_bullet_cpp();
+extern "C" void func_806566F0();
+extern "C" void func_806566F8();
+
+extern "C" void __dt__10daBullet_cFv();
+extern "C" void create__10daBullet_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__10daBullet_cFv();
+extern "C" void Delete__10daBullet_cFv();
+extern "C" void Execute__10daBullet_cFv();
+extern "C" void Draw__10daBullet_cFv();
+extern "C" void createHeapCallBack__10daBullet_cFP10fopAc_ac_c();
+extern "C" void getResName__10daBullet_cFv();
+extern "C" void getBmdName__10daBullet_cFv();
+extern "C" void getTypeFromParam__10daBullet_cFv();
+extern "C" void initialize__10daBullet_cFv();
+extern "C" void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i();
+extern "C" void wait__10daBullet_cFPv();
+extern "C" void move__10daBullet_cFPv();
+extern "C" void daBullet_Create__FPv();
+extern "C" void daBullet_Delete__FPv();
+extern "C" void daBullet_Execute__FPv();
+extern "C" void daBullet_Draw__FPv();
+extern "C" bool daBullet_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80656618();
+extern "C" void __sinit_d_a_bullet_cpp();
+extern "C" void __dt__16daBullet_Param_cFv();
+extern "C" void func_806566F0();
+extern "C" void func_806566F8();
 SECTION_RODATA extern const u8 mCcDObjInfo__10daBullet_c[48];
 SECTION_RODATA extern const u8 m__16daBullet_Param_c[24];
 SECTION_RODATA extern const u32 lit_3824;
@@ -70,8 +134,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -81,7 +148,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daBullet_cFv) {
+asm daBullet_c::~daBullet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__10daBullet_cFv.s"
 }
@@ -92,7 +159,7 @@ ASM_FUNCTION(__dt__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daBullet_cFv) {
+asm void daBullet_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/create__10daBullet_cFv.s"
 }
@@ -103,7 +170,7 @@ ASM_FUNCTION(create__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__8cM3dGSphFv.s"
 }
@@ -114,7 +181,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__8cM3dGAabFv.s"
 }
@@ -125,7 +192,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__12dBgS_AcchCirFv.s"
 }
@@ -136,7 +203,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__10dCcD_GSttsFv.s"
 }
@@ -147,7 +214,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -158,7 +225,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daBullet_cFv) {
+asm void daBullet_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/CreateHeap__10daBullet_cFv.s"
 }
@@ -169,7 +236,7 @@ ASM_FUNCTION(CreateHeap__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daBullet_cFv) {
+asm void daBullet_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/Delete__10daBullet_cFv.s"
 }
@@ -180,7 +247,7 @@ ASM_FUNCTION(Delete__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daBullet_cFv) {
+asm void daBullet_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/Execute__10daBullet_cFv.s"
 }
@@ -191,7 +258,7 @@ ASM_FUNCTION(Execute__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daBullet_cFv) {
+asm void daBullet_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/Draw__10daBullet_cFv.s"
 }
@@ -202,7 +269,7 @@ ASM_FUNCTION(Draw__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__10daBullet_cFP10fopAc_ac_c) {
+asm void daBullet_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/createHeapCallBack__10daBullet_cFP10fopAc_ac_c.s"
 }
@@ -213,7 +280,7 @@ ASM_FUNCTION(createHeapCallBack__10daBullet_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__10daBullet_cFv) {
+asm void daBullet_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/getResName__10daBullet_cFv.s"
 }
@@ -224,7 +291,7 @@ ASM_FUNCTION(getResName__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmdName__10daBullet_cFv) {
+asm void daBullet_c::getBmdName() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/getBmdName__10daBullet_cFv.s"
 }
@@ -235,7 +302,7 @@ ASM_FUNCTION(getBmdName__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTypeFromParam__10daBullet_cFv) {
+asm void daBullet_c::getTypeFromParam() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/getTypeFromParam__10daBullet_cFv.s"
 }
@@ -246,7 +313,7 @@ ASM_FUNCTION(getTypeFromParam__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__10daBullet_cFv) {
+asm void daBullet_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/initialize__10daBullet_cFv.s"
 }
@@ -257,7 +324,7 @@ ASM_FUNCTION(initialize__10daBullet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i) {
+extern "C" asm void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i.s"
 }
@@ -268,7 +335,7 @@ ASM_FUNCTION(setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__10daBullet_cFPv) {
+asm void daBullet_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/wait__10daBullet_cFPv.s"
 }
@@ -279,7 +346,7 @@ ASM_FUNCTION(wait__10daBullet_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__10daBullet_cFPv) {
+asm void daBullet_c::move(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/move__10daBullet_cFPv.s"
 }
@@ -290,7 +357,7 @@ ASM_FUNCTION(move__10daBullet_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBullet_Create__FPv) {
+asm void daBullet_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Create__FPv.s"
 }
@@ -301,7 +368,7 @@ ASM_FUNCTION(daBullet_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBullet_Delete__FPv) {
+asm void daBullet_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Delete__FPv.s"
 }
@@ -312,7 +379,7 @@ ASM_FUNCTION(daBullet_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBullet_Execute__FPv) {
+asm void daBullet_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Execute__FPv.s"
 }
@@ -323,7 +390,7 @@ ASM_FUNCTION(daBullet_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBullet_Draw__FPv) {
+asm void daBullet_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_Draw__FPv.s"
 }
@@ -331,21 +398,16 @@ ASM_FUNCTION(daBullet_Draw__FPv) {
 
 
 /* 806565C8-806565D0 0008+00 .text      daBullet_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daBullet_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_IsDelete__FPv.s"
+bool daBullet_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806565D0-80656618 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__10cCcD_GSttsFv.s"
 }
@@ -356,7 +418,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80656618) {
+extern "C" asm void func_80656618() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/func_80656618.s"
 }
@@ -367,7 +429,7 @@ ASM_FUNCTION(func_80656618) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_bullet_cpp) {
+extern "C" asm void __sinit_d_a_bullet_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__sinit_d_a_bullet_cpp.s"
 }
@@ -378,7 +440,7 @@ ASM_FUNCTION(__sinit_d_a_bullet_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daBullet_Param_cFv) {
+asm daBullet_Param_c::~daBullet_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/__dt__16daBullet_Param_cFv.s"
 }
@@ -389,7 +451,7 @@ ASM_FUNCTION(__dt__16daBullet_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806566F0) {
+extern "C" asm void func_806566F0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/func_806566F0.s"
 }
@@ -400,7 +462,7 @@ ASM_FUNCTION(func_806566F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806566F8) {
+extern "C" asm void func_806566F8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/func_806566F8.s"
 }

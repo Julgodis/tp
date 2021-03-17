@@ -6,43 +6,115 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjNAN_c;
+
+struct daObj_NanHIO_c {
+	daObj_NanHIO_c();
+	~daObj_NanHIO_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daObjNAN_c {
+	void nan_posMove();
+	void turn();
+	void nan_WalkAnm();
+	void wait();
+	void walk();
+	void bin_wait();
+	void bin_action();
+	void nan_setParticle();
+	void hook();
+	void boomerang();
+	void drop();
+	void hit_check();
+	void action();
+	void execute();
+	void _delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dInsect_c {
+	void Insect_Release();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_NanHIO_cFv();
-extern "C" extern void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjNAN_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjNAN_Delete__FP10daObjNAN_c();
-extern "C" extern void nan_posMove__10daObjNAN_cFv();
-extern "C" extern void turn__10daObjNAN_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void nan_WalkAnm__10daObjNAN_cFv();
-extern "C" extern void wait__10daObjNAN_cFv();
-extern "C" extern void walk__10daObjNAN_cFv();
-extern "C" extern void bin_wait__10daObjNAN_cFv();
-extern "C" extern void bin_action__10daObjNAN_cFv();
-extern "C" extern void nan_setParticle__10daObjNAN_cFv();
-extern "C" extern void hook__10daObjNAN_cFv();
-extern "C" extern void boomerang__10daObjNAN_cFv();
-extern "C" extern void drop__10daObjNAN_cFv();
-extern "C" extern void hit_check__10daObjNAN_cFv();
-extern "C" extern void action__10daObjNAN_cFv();
-extern "C" extern void execute__10daObjNAN_cFv();
-extern "C" extern void _delete__10daObjNAN_cFv();
-extern "C" extern void setBaseMtx__10daObjNAN_cFv();
-extern "C" extern void daObjNAN_Draw__FP10daObjNAN_c();
-extern "C" extern void daObjNAN_Execute__FP10daObjNAN_c();
-extern "C" extern void create__10daObjNAN_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjNAN_IsDelete__FP10daObjNAN_c();
-extern "C" extern void __dt__14daObj_NanHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_nan_cpp();
-extern "C" extern void Insect_Release__9dInsect_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+extern "C" void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v();
+void useHeapInit(fopAc_ac_c*);
+void daObjNAN_Create(fopAc_ac_c*);
+void daObjNAN_Delete(daObjNAN_c*);
+void daObjNAN_Draw(daObjNAN_c*);
+void daObjNAN_Execute(daObjNAN_c*);
+bool daObjNAN_IsDelete(daObjNAN_c*);
+extern "C" void __sinit_d_a_obj_nan_cpp();
+
+extern "C" void __ct__14daObj_NanHIO_cFv();
+extern "C" void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjNAN_Create__FP10fopAc_ac_c();
+extern "C" void daObjNAN_Delete__FP10daObjNAN_c();
+extern "C" void nan_posMove__10daObjNAN_cFv();
+extern "C" void turn__10daObjNAN_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void nan_WalkAnm__10daObjNAN_cFv();
+extern "C" void wait__10daObjNAN_cFv();
+extern "C" void walk__10daObjNAN_cFv();
+extern "C" void bin_wait__10daObjNAN_cFv();
+extern "C" void bin_action__10daObjNAN_cFv();
+extern "C" void nan_setParticle__10daObjNAN_cFv();
+extern "C" void hook__10daObjNAN_cFv();
+extern "C" void boomerang__10daObjNAN_cFv();
+extern "C" void drop__10daObjNAN_cFv();
+extern "C" void hit_check__10daObjNAN_cFv();
+extern "C" void action__10daObjNAN_cFv();
+extern "C" void execute__10daObjNAN_cFv();
+extern "C" void _delete__10daObjNAN_cFv();
+extern "C" void setBaseMtx__10daObjNAN_cFv();
+extern "C" void daObjNAN_Draw__FP10daObjNAN_c();
+extern "C" void daObjNAN_Execute__FP10daObjNAN_c();
+extern "C" void create__10daObjNAN_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" bool daObjNAN_IsDelete__FP10daObjNAN_c();
+extern "C" void __dt__14daObj_NanHIO_cFv();
+extern "C" void __sinit_d_a_obj_nan_cpp();
+extern "C" void Insect_Release__9dInsect_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u32 lit_3774;
 SECTION_RODATA extern const u8 l_nan_brk_index[8];
 SECTION_RODATA extern const u8 l_nan_btk_index[8];
@@ -130,8 +202,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -141,7 +216,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_NanHIO_cFv) {
+asm daObj_NanHIO_c::daObj_NanHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__ct__14daObj_NanHIO_cFv.s"
 }
@@ -152,7 +227,7 @@ ASM_FUNCTION(__ct__14daObj_NanHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v) {
+extern "C" asm void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v.s"
 }
@@ -163,7 +238,7 @@ ASM_FUNCTION(setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -174,7 +249,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__12J3DFrameCtrlFv.s"
 }
@@ -185,7 +260,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNAN_Create__FP10fopAc_ac_c) {
+asm void daObjNAN_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/daObjNAN_Create__FP10fopAc_ac_c.s"
 }
@@ -196,7 +271,7 @@ ASM_FUNCTION(daObjNAN_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNAN_Delete__FP10daObjNAN_c) {
+asm void daObjNAN_Delete(daObjNAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/daObjNAN_Delete__FP10daObjNAN_c.s"
 }
@@ -207,7 +282,7 @@ ASM_FUNCTION(daObjNAN_Delete__FP10daObjNAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nan_posMove__10daObjNAN_cFv) {
+asm void daObjNAN_c::nan_posMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/nan_posMove__10daObjNAN_cFv.s"
 }
@@ -218,7 +293,7 @@ ASM_FUNCTION(nan_posMove__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn__10daObjNAN_cFv) {
+asm void daObjNAN_c::turn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/turn__10daObjNAN_cFv.s"
 }
@@ -229,7 +304,7 @@ ASM_FUNCTION(turn__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__8cM3dGPlaFv.s"
 }
@@ -240,7 +315,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nan_WalkAnm__10daObjNAN_cFv) {
+asm void daObjNAN_c::nan_WalkAnm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/nan_WalkAnm__10daObjNAN_cFv.s"
 }
@@ -251,7 +326,7 @@ ASM_FUNCTION(nan_WalkAnm__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__10daObjNAN_cFv) {
+asm void daObjNAN_c::wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/wait__10daObjNAN_cFv.s"
 }
@@ -262,7 +337,7 @@ ASM_FUNCTION(wait__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(walk__10daObjNAN_cFv) {
+asm void daObjNAN_c::walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/walk__10daObjNAN_cFv.s"
 }
@@ -273,7 +348,7 @@ ASM_FUNCTION(walk__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bin_wait__10daObjNAN_cFv) {
+asm void daObjNAN_c::bin_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/bin_wait__10daObjNAN_cFv.s"
 }
@@ -284,7 +359,7 @@ ASM_FUNCTION(bin_wait__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bin_action__10daObjNAN_cFv) {
+asm void daObjNAN_c::bin_action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/bin_action__10daObjNAN_cFv.s"
 }
@@ -295,7 +370,7 @@ ASM_FUNCTION(bin_action__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nan_setParticle__10daObjNAN_cFv) {
+asm void daObjNAN_c::nan_setParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/nan_setParticle__10daObjNAN_cFv.s"
 }
@@ -306,7 +381,7 @@ ASM_FUNCTION(nan_setParticle__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hook__10daObjNAN_cFv) {
+asm void daObjNAN_c::hook() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/hook__10daObjNAN_cFv.s"
 }
@@ -317,7 +392,7 @@ ASM_FUNCTION(hook__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(boomerang__10daObjNAN_cFv) {
+asm void daObjNAN_c::boomerang() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/boomerang__10daObjNAN_cFv.s"
 }
@@ -328,7 +403,7 @@ ASM_FUNCTION(boomerang__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drop__10daObjNAN_cFv) {
+asm void daObjNAN_c::drop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/drop__10daObjNAN_cFv.s"
 }
@@ -339,7 +414,7 @@ ASM_FUNCTION(drop__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_check__10daObjNAN_cFv) {
+asm void daObjNAN_c::hit_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/hit_check__10daObjNAN_cFv.s"
 }
@@ -350,7 +425,7 @@ ASM_FUNCTION(hit_check__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__10daObjNAN_cFv) {
+asm void daObjNAN_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/action__10daObjNAN_cFv.s"
 }
@@ -361,7 +436,7 @@ ASM_FUNCTION(action__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daObjNAN_cFv) {
+asm void daObjNAN_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/execute__10daObjNAN_cFv.s"
 }
@@ -372,7 +447,7 @@ ASM_FUNCTION(execute__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daObjNAN_cFv) {
+asm void daObjNAN_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/_delete__10daObjNAN_cFv.s"
 }
@@ -383,7 +458,7 @@ ASM_FUNCTION(_delete__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjNAN_cFv) {
+asm void daObjNAN_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/setBaseMtx__10daObjNAN_cFv.s"
 }
@@ -394,7 +469,7 @@ ASM_FUNCTION(setBaseMtx__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNAN_Draw__FP10daObjNAN_c) {
+asm void daObjNAN_Draw(daObjNAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/daObjNAN_Draw__FP10daObjNAN_c.s"
 }
@@ -405,7 +480,7 @@ ASM_FUNCTION(daObjNAN_Draw__FP10daObjNAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNAN_Execute__FP10daObjNAN_c) {
+asm void daObjNAN_Execute(daObjNAN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/daObjNAN_Execute__FP10daObjNAN_c.s"
 }
@@ -416,7 +491,7 @@ ASM_FUNCTION(daObjNAN_Execute__FP10daObjNAN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjNAN_cFv) {
+asm void daObjNAN_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/create__10daObjNAN_cFv.s"
 }
@@ -427,7 +502,7 @@ ASM_FUNCTION(create__10daObjNAN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__8cM3dGSphFv.s"
 }
@@ -438,7 +513,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__8cM3dGAabFv.s"
 }
@@ -449,7 +524,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__10dCcD_GSttsFv.s"
 }
@@ -457,21 +532,16 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 
 
 /* 80CA30C8-80CA30D0 0008+00 .text      daObjNAN_IsDelete__FP10daObjNAN_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjNAN_IsDelete__FP10daObjNAN_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/daObjNAN_IsDelete__FP10daObjNAN_c.s"
+bool daObjNAN_IsDelete(daObjNAN_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CA30D0-80CA3118 0048+00 .text      __dt__14daObj_NanHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_NanHIO_cFv) {
+asm daObj_NanHIO_c::~daObj_NanHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__14daObj_NanHIO_cFv.s"
 }
@@ -482,7 +552,7 @@ ASM_FUNCTION(__dt__14daObj_NanHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_nan_cpp) {
+extern "C" asm void __sinit_d_a_obj_nan_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__sinit_d_a_obj_nan_cpp.s"
 }
@@ -493,7 +563,7 @@ ASM_FUNCTION(__sinit_d_a_obj_nan_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__9dInsect_cFv) {
+asm void dInsect_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/Insect_Release__9dInsect_cFv.s"
 }
@@ -504,7 +574,7 @@ ASM_FUNCTION(Insect_Release__9dInsect_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/__dt__10cCcD_GSttsFv.s"
 }

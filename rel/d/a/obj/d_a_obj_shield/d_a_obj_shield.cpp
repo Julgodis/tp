@@ -6,45 +6,124 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cBgS_PolyInfo;
+struct daItemShield_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct daItemShield_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool __CreateHeap();
+	void create();
+	void bg_check();
+	void action_proc_call();
+	void actionInit();
+	void actionWaitInit();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void event_proc_call();
+	void actionWaitCamDemo();
+	void actionOrderCamDemo();
+	void actionCamDemo();
+	void actionCamDemoEnd();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void initBaseMtx__14daItemShield_cFv();
-extern "C" extern void setBaseMtx__14daItemShield_cFv();
-extern "C" extern void Create__14daItemShield_cFv();
-extern "C" extern void __CreateHeap__14daItemShield_cFv();
-extern "C" extern void create__14daItemShield_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void bg_check__14daItemShield_cFv();
-extern "C" extern void action_proc_call__14daItemShield_cFv();
-extern "C" extern void actionInit__14daItemShield_cFv();
-extern "C" extern void actionWaitInit__14daItemShield_cFv();
-extern "C" extern void actionWait__14daItemShield_cFv();
-extern "C" extern void initActionOrderGetDemo__14daItemShield_cFv();
-extern "C" extern void actionOrderGetDemo__14daItemShield_cFv();
-extern "C" extern void actionGetDemo__14daItemShield_cFv();
-extern "C" extern void event_proc_call__14daItemShield_cFv();
-extern "C" extern void actionWaitCamDemo__14daItemShield_cFv();
-extern "C" extern void actionOrderCamDemo__14daItemShield_cFv();
-extern "C" extern void actionCamDemo__14daItemShield_cFv();
-extern "C" extern void actionCamDemoEnd__14daItemShield_cFv();
-extern "C" extern void execute__14daItemShield_cFv();
-extern "C" extern void draw__14daItemShield_cFv();
-extern "C" extern void _delete__14daItemShield_cFv();
-extern "C" extern void daItemShield_Draw__FP14daItemShield_c();
-extern "C" extern void daItemShield_Execute__FP14daItemShield_c();
-extern "C" extern void daItemShield_Delete__FP14daItemShield_c();
-extern "C" extern void daItemShield_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80CD8240();
-extern "C" extern void func_80CD825C();
-extern "C" extern void func_80CD8264();
+void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+void daItemShield_Draw(daItemShield_c*);
+void daItemShield_Execute(daItemShield_c*);
+void daItemShield_Delete(daItemShield_c*);
+void daItemShield_Create(fopAc_ac_c*);
+extern "C" void func_80CD8240();
+extern "C" void func_80CD825C();
+extern "C" void func_80CD8264();
+
+extern "C" void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void initBaseMtx__14daItemShield_cFv();
+extern "C" void setBaseMtx__14daItemShield_cFv();
+extern "C" void Create__14daItemShield_cFv();
+extern "C" bool __CreateHeap__14daItemShield_cFv();
+extern "C" void create__14daItemShield_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__14daItemShield_cFv();
+extern "C" void action_proc_call__14daItemShield_cFv();
+extern "C" void actionInit__14daItemShield_cFv();
+extern "C" void actionWaitInit__14daItemShield_cFv();
+extern "C" void actionWait__14daItemShield_cFv();
+extern "C" void initActionOrderGetDemo__14daItemShield_cFv();
+extern "C" void actionOrderGetDemo__14daItemShield_cFv();
+extern "C" void actionGetDemo__14daItemShield_cFv();
+extern "C" void event_proc_call__14daItemShield_cFv();
+extern "C" void actionWaitCamDemo__14daItemShield_cFv();
+extern "C" void actionOrderCamDemo__14daItemShield_cFv();
+extern "C" void actionCamDemo__14daItemShield_cFv();
+extern "C" void actionCamDemoEnd__14daItemShield_cFv();
+extern "C" void execute__14daItemShield_cFv();
+extern "C" void draw__14daItemShield_cFv();
+extern "C" void _delete__14daItemShield_cFv();
+extern "C" void daItemShield_Draw__FP14daItemShield_c();
+extern "C" void daItemShield_Execute__FP14daItemShield_c();
+extern "C" void daItemShield_Delete__FP14daItemShield_c();
+extern "C" void daItemShield_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80CD8240();
+extern "C" void func_80CD825C();
+extern "C" void func_80CD8264();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3856[4];
 SECTION_RODATA extern const u8 lit_3857[8];
@@ -97,7 +176,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -107,7 +188,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
+asm void Reflect(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/Reflect__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -118,7 +199,7 @@ ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__8cM3dGPlaFv.s"
 }
@@ -129,7 +210,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daItemShield_cFv) {
+asm void daItemShield_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/initBaseMtx__14daItemShield_cFv.s"
 }
@@ -140,7 +221,7 @@ ASM_FUNCTION(initBaseMtx__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daItemShield_cFv) {
+asm void daItemShield_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/setBaseMtx__14daItemShield_cFv.s"
 }
@@ -151,7 +232,7 @@ ASM_FUNCTION(setBaseMtx__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daItemShield_cFv) {
+asm void daItemShield_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/Create__14daItemShield_cFv.s"
 }
@@ -159,21 +240,16 @@ ASM_FUNCTION(Create__14daItemShield_cFv) {
 
 
 /* 80CD724C-80CD7254 0008+00 .text      __CreateHeap__14daItemShield_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__14daItemShield_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__CreateHeap__14daItemShield_cFv.s"
+bool daItemShield_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CD7254-80CD7420 01CC+00 .text      create__14daItemShield_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daItemShield_cFv) {
+asm void daItemShield_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD7254.s"
 }
@@ -184,7 +260,7 @@ ASM_FUNCTION(create__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__8cM3dGCylFv.s"
 }
@@ -195,7 +271,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__8cM3dGAabFv.s"
 }
@@ -206,7 +282,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__10dCcD_GSttsFv.s"
 }
@@ -217,7 +293,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__12dBgS_AcchCirFv.s"
 }
@@ -228,7 +304,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -239,7 +315,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__14daItemShield_cFv) {
+asm void daItemShield_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/bg_check__14daItemShield_cFv.s"
 }
@@ -250,7 +326,7 @@ ASM_FUNCTION(bg_check__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_proc_call__14daItemShield_cFv) {
+asm void daItemShield_c::action_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/action_proc_call__14daItemShield_cFv.s"
 }
@@ -261,7 +337,7 @@ ASM_FUNCTION(action_proc_call__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__14daItemShield_cFv) {
+asm void daItemShield_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionInit__14daItemShield_cFv.s"
 }
@@ -272,7 +348,7 @@ ASM_FUNCTION(actionInit__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__14daItemShield_cFv) {
+asm void daItemShield_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionWaitInit__14daItemShield_cFv.s"
 }
@@ -283,7 +359,7 @@ ASM_FUNCTION(actionWaitInit__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daItemShield_cFv) {
+asm void daItemShield_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionWait__14daItemShield_cFv.s"
 }
@@ -294,7 +370,7 @@ ASM_FUNCTION(actionWait__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__14daItemShield_cFv) {
+asm void daItemShield_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/initActionOrderGetDemo__14daItemShield_cFv.s"
 }
@@ -305,7 +381,7 @@ ASM_FUNCTION(initActionOrderGetDemo__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__14daItemShield_cFv) {
+asm void daItemShield_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionOrderGetDemo__14daItemShield_cFv.s"
 }
@@ -316,7 +392,7 @@ ASM_FUNCTION(actionOrderGetDemo__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__14daItemShield_cFv) {
+asm void daItemShield_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionGetDemo__14daItemShield_cFv.s"
 }
@@ -327,7 +403,7 @@ ASM_FUNCTION(actionGetDemo__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__14daItemShield_cFv) {
+asm void daItemShield_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/event_proc_call__14daItemShield_cFv.s"
 }
@@ -338,7 +414,7 @@ ASM_FUNCTION(event_proc_call__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitCamDemo__14daItemShield_cFv) {
+asm void daItemShield_c::actionWaitCamDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionWaitCamDemo__14daItemShield_cFv.s"
 }
@@ -349,7 +425,7 @@ ASM_FUNCTION(actionWaitCamDemo__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderCamDemo__14daItemShield_cFv) {
+asm void daItemShield_c::actionOrderCamDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionOrderCamDemo__14daItemShield_cFv.s"
 }
@@ -360,7 +436,7 @@ ASM_FUNCTION(actionOrderCamDemo__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCamDemo__14daItemShield_cFv) {
+asm void daItemShield_c::actionCamDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionCamDemo__14daItemShield_cFv.s"
 }
@@ -368,21 +444,16 @@ ASM_FUNCTION(actionCamDemo__14daItemShield_cFv) {
 
 
 /* 80CD7FE4-80CD7FE8 0004+00 .text      actionCamDemoEnd__14daItemShield_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionCamDemoEnd__14daItemShield_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionCamDemoEnd__14daItemShield_cFv.s"
+void daItemShield_c::actionCamDemoEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CD7FE8-80CD80EC 0104+00 .text      execute__14daItemShield_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daItemShield_cFv) {
+asm void daItemShield_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/execute__14daItemShield_cFv.s"
 }
@@ -393,7 +464,7 @@ ASM_FUNCTION(execute__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daItemShield_cFv) {
+asm void daItemShield_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/draw__14daItemShield_cFv.s"
 }
@@ -404,7 +475,7 @@ ASM_FUNCTION(draw__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daItemShield_cFv) {
+asm void daItemShield_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/_delete__14daItemShield_cFv.s"
 }
@@ -415,7 +486,7 @@ ASM_FUNCTION(_delete__14daItemShield_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemShield_Draw__FP14daItemShield_c) {
+asm void daItemShield_Draw(daItemShield_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/daItemShield_Draw__FP14daItemShield_c.s"
 }
@@ -426,7 +497,7 @@ ASM_FUNCTION(daItemShield_Draw__FP14daItemShield_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemShield_Execute__FP14daItemShield_c) {
+asm void daItemShield_Execute(daItemShield_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/daItemShield_Execute__FP14daItemShield_c.s"
 }
@@ -437,7 +508,7 @@ ASM_FUNCTION(daItemShield_Execute__FP14daItemShield_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemShield_Delete__FP14daItemShield_c) {
+asm void daItemShield_Delete(daItemShield_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/daItemShield_Delete__FP14daItemShield_c.s"
 }
@@ -448,7 +519,7 @@ ASM_FUNCTION(daItemShield_Delete__FP14daItemShield_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daItemShield_Create__FP10fopAc_ac_c) {
+asm void daItemShield_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/daItemShield_Create__FP10fopAc_ac_c.s"
 }
@@ -459,7 +530,7 @@ ASM_FUNCTION(daItemShield_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__dt__10cCcD_GSttsFv.s"
 }
@@ -470,7 +541,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CD8240) {
+extern "C" asm void func_80CD8240() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD8240.s"
 }
@@ -481,7 +552,7 @@ ASM_FUNCTION(func_80CD8240) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CD825C) {
+extern "C" asm void func_80CD825C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD825C.s"
 }
@@ -492,7 +563,7 @@ ASM_FUNCTION(func_80CD825C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CD8264) {
+extern "C" asm void func_80CD8264() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/func_80CD8264.s"
 }

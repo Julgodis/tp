@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void __kernel_rem_pio2();
+extern "C" void __kernel_rem_pio2();
+
+extern "C" void __kernel_rem_pio2();
 SECTION_RODATA extern const u8 init_jk[16];
 SECTION_RODATA extern const u8 PIo2[64];
 SECTION_SDATA2 extern u8 Math_Double_precision_k_rem_pio2__lit_436[8];
@@ -25,22 +27,27 @@ SECTION_SDATA2 extern f64 lit_445;
 // External References:
 // 
 
-extern "C" extern void _savefpr_25();
-extern "C" extern void _restfpr_25();
-extern "C" extern void floor();
-extern "C" extern void ldexp();
+extern "C" void _savefpr_25();
+extern "C" void _restfpr_25();
+extern "C" void floor();
+extern "C" void ldexp();
+
+extern "C" void _savefpr_25();
+extern "C" void _restfpr_25();
+extern "C" void floor();
+extern "C" void ldexp();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2538-803A2548 0010+00 .rodata    init_jk                                                      */
+/* 803A2538-803A2548 0010+00 rc=1 efc=0 .rodata    init_jk                                                      */
 SECTION_RODATA const u8 init_jk[16] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x06,
 };
 
-/* 803A2548-803A2588 0040+00 .rodata    PIo2                                                         */
+/* 803A2548-803A2588 0040+00 rc=1 efc=0 .rodata    PIo2                                                         */
 SECTION_RODATA const u8 PIo2[64] = {
 	0x3F, 0xF9, 0x21, 0xFB, 0x40, 0x00, 0x00, 0x00, 0x3E, 0x74, 0x44, 0x2D, 0x00, 0x00, 0x00, 0x00,
 	0x3C, 0xF8, 0x46, 0x98, 0x80, 0x00, 0x00, 0x00, 0x3B, 0x78, 0xCC, 0x51, 0x60, 0x00, 0x00, 0x00,
@@ -48,41 +55,40 @@ SECTION_RODATA const u8 PIo2[64] = {
 	0x36, 0xE3, 0x82, 0x22, 0x80, 0x00, 0x00, 0x00, 0x35, 0x69, 0xF3, 0x1D, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456A08-80456A10 0008+00 .sdata2    @436                                                         */
+/* 80456A08-80456A10 0008+00 rc=1 efc=0 .sdata2    @436                                                         */
 u8 Math_Double_precision_k_rem_pio2__lit_436[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456A10-80456A18 0008+00 .sdata2    @437                                                         */
+/* 80456A10-80456A18 0008+00 rc=1 efc=0 .sdata2    @437                                                         */
 f64 Math_Double_precision_k_rem_pio2__lit_437 = 5.960464477539063e-08;
 
-/* 80456A18-80456A20 0008+00 .sdata2    @438                                                         */
+/* 80456A18-80456A20 0008+00 rc=1 efc=0 .sdata2    @438                                                         */
 f64 Math_Double_precision_k_rem_pio2__lit_438 = 16777216.0;
 
-/* 80456A20-80456A28 0008+00 .sdata2    @439                                                         */
+/* 80456A20-80456A28 0008+00 rc=1 efc=0 .sdata2    @439                                                         */
 f64 Math_Double_precision_k_rem_pio2__lit_439 = 8.0;
 
-/* 80456A28-80456A30 0008+00 .sdata2    @440                                                         */
+/* 80456A28-80456A30 0008+00 rc=1 efc=0 .sdata2    @440                                                         */
 f64 lit_440 = 0.125;
 
-/* 80456A30-80456A38 0008+00 .sdata2    @441                                                         */
+/* 80456A30-80456A38 0008+00 rc=1 efc=0 .sdata2    @441                                                         */
 f64 Math_Double_precision_k_rem_pio2__lit_441 = 0.5;
 
-/* 80456A38-80456A40 0008+00 .sdata2    @442                                                         */
+/* 80456A38-80456A40 0008+00 rc=1 efc=0 .sdata2    @442                                                         */
 f64 lit_442 = 1.0;
 
-/* 80456A40-80456A48 0008+00 .sdata2    @445                                                         */
+/* 80456A40-80456A48 0008+00 rc=1 efc=0 .sdata2    @445                                                         */
 f64 lit_445 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8036AB9C-8036B9F0 0E54+00 .text      __kernel_rem_pio2                                            */
+/* 8036AB9C-8036B9F0 0E54+00 rc=1 efc=1 .text      __kernel_rem_pio2                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__kernel_rem_pio2) {
+extern "C" asm void __kernel_rem_pio2() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/k_rem_pio2/__kernel_rem_pio2.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

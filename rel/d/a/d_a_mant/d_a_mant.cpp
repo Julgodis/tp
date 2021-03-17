@@ -6,23 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct mant_j_s;
+struct mant_class;
+
+struct daMant_packet_c {
+	void draw();
+	~daMant_packet_c();
+};
+
+struct mant_class {
+};
+
+struct mant_j_s {
+	~mant_j_s();
+	mant_j_s();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__15daMant_packet_cFv();
-extern "C" extern void daMant_Draw__FP10mant_class();
-extern "C" extern void joint_control__FP10mant_classP8mant_j_siff();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void mant_v_calc__FP10mant_class();
-extern "C" extern void mant_move__FP10mant_class();
-extern "C" extern void daMant_Execute__FP10mant_class();
-extern "C" extern void daMant_IsDelete__FP10mant_class();
-extern "C" extern void daMant_Delete__FP10mant_class();
-extern "C" extern void daMant_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8mant_j_sFv();
-extern "C" extern void __ct__8mant_j_sFv();
-extern "C" extern void __dt__15daMant_packet_cFv();
-extern "C" extern void __ct__4cXyzFv();
+void daMant_Draw(mant_class*);
+void joint_control(mant_class*, mant_j_s*, s32, f32, f32);
+void mant_v_calc(mant_class*);
+void mant_move(mant_class*);
+void daMant_Execute(mant_class*);
+bool daMant_IsDelete(mant_class*);
+bool daMant_Delete(mant_class*);
+void daMant_Create(fopAc_ac_c*);
+
+extern "C" void draw__15daMant_packet_cFv();
+extern "C" void daMant_Draw__FP10mant_class();
+extern "C" void joint_control__FP10mant_classP8mant_j_siff();
+extern "C" void __dt__4cXyzFv();
+extern "C" void mant_v_calc__FP10mant_class();
+extern "C" void mant_move__FP10mant_class();
+extern "C" void daMant_Execute__FP10mant_class();
+extern "C" bool daMant_IsDelete__FP10mant_class();
+extern "C" bool daMant_Delete__FP10mant_class();
+extern "C" void daMant_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8mant_j_sFv();
+extern "C" void __ct__8mant_j_sFv();
+extern "C" void __dt__15daMant_packet_cFv();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3815;
 SECTION_RODATA extern const u32 lit_3818;
 SECTION_RODATA extern const u8 lit_3821[4];
@@ -94,7 +132,9 @@ SECTION_BSS extern u8 mant_cut_type[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -104,7 +144,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daMant_packet_cFv) {
+asm void daMant_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/draw__15daMant_packet_cFv.s"
 }
@@ -115,7 +155,7 @@ ASM_FUNCTION(draw__15daMant_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMant_Draw__FP10mant_class) {
+asm void daMant_Draw(mant_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Draw__FP10mant_class.s"
 }
@@ -126,7 +166,7 @@ ASM_FUNCTION(daMant_Draw__FP10mant_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(joint_control__FP10mant_classP8mant_j_siff) {
+asm void joint_control(mant_class* field_0, mant_j_s* field_1, s32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/joint_control__FP10mant_classP8mant_j_siff.s"
 }
@@ -137,7 +177,7 @@ ASM_FUNCTION(joint_control__FP10mant_classP8mant_j_siff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/__dt__4cXyzFv.s"
 }
@@ -148,7 +188,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mant_v_calc__FP10mant_class) {
+asm void mant_v_calc(mant_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/mant_v_calc__FP10mant_class.s"
 }
@@ -159,7 +199,7 @@ ASM_FUNCTION(mant_v_calc__FP10mant_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mant_move__FP10mant_class) {
+asm void mant_move(mant_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/mant_move__FP10mant_class.s"
 }
@@ -170,7 +210,7 @@ ASM_FUNCTION(mant_move__FP10mant_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMant_Execute__FP10mant_class) {
+asm void daMant_Execute(mant_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Execute__FP10mant_class.s"
 }
@@ -178,32 +218,22 @@ ASM_FUNCTION(daMant_Execute__FP10mant_class) {
 
 
 /* 80862908-80862910 0008+00 .text      daMant_IsDelete__FP10mant_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daMant_IsDelete__FP10mant_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_IsDelete__FP10mant_class.s"
+bool daMant_IsDelete(mant_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80862910-80862918 0008+00 .text      daMant_Delete__FP10mant_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daMant_Delete__FP10mant_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Delete__FP10mant_class.s"
+bool daMant_Delete(mant_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80862918-80862AC0 01A8+00 .text      daMant_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMant_Create__FP10fopAc_ac_c) {
+asm void daMant_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Create__FP10fopAc_ac_c.s"
 }
@@ -214,7 +244,7 @@ ASM_FUNCTION(daMant_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8mant_j_sFv) {
+asm mant_j_s::~mant_j_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/__dt__8mant_j_sFv.s"
 }
@@ -225,7 +255,7 @@ ASM_FUNCTION(__dt__8mant_j_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8mant_j_sFv) {
+asm mant_j_s::mant_j_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/__ct__8mant_j_sFv.s"
 }
@@ -236,7 +266,7 @@ ASM_FUNCTION(__ct__8mant_j_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daMant_packet_cFv) {
+asm daMant_packet_c::~daMant_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/__dt__15daMant_packet_cFv.s"
 }
@@ -244,14 +274,9 @@ ASM_FUNCTION(__dt__15daMant_packet_cFv) {
 
 
 /* 80862C40-80862C44 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

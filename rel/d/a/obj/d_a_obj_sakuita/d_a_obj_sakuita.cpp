@@ -6,25 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSakuita_c;
+
+struct daObjSakuita_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void setPlatePos();
+	void calcAngle();
+	~daObjSakuita_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__14daObjSakuita_cFv();
-extern "C" extern void initBaseMtx__14daObjSakuita_cFv();
-extern "C" extern void setBaseMtx__14daObjSakuita_cFv();
-extern "C" extern void setPlatePos__14daObjSakuita_cFv();
-extern "C" extern void calcAngle__14daObjSakuita_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjSakuita_Draw__FP14daObjSakuita_c();
-extern "C" extern void daObjSakuita_Execute__FP14daObjSakuita_c();
-extern "C" extern void daObjSakuita_IsDelete__FP14daObjSakuita_c();
-extern "C" extern void daObjSakuita_Delete__FP14daObjSakuita_c();
-extern "C" extern void __dt__14daObjSakuita_cFv();
-extern "C" extern void daObjSakuita_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjSakuita_Draw(daObjSakuita_c*);
+void daObjSakuita_Execute(daObjSakuita_c*);
+bool daObjSakuita_IsDelete(daObjSakuita_c*);
+void daObjSakuita_Delete(daObjSakuita_c*);
+void daObjSakuita_Create(fopAc_ac_c*);
+
+extern "C" void create_init__14daObjSakuita_cFv();
+extern "C" void initBaseMtx__14daObjSakuita_cFv();
+extern "C" void setBaseMtx__14daObjSakuita_cFv();
+extern "C" void setPlatePos__14daObjSakuita_cFv();
+extern "C" void calcAngle__14daObjSakuita_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjSakuita_Draw__FP14daObjSakuita_c();
+extern "C" void daObjSakuita_Execute__FP14daObjSakuita_c();
+extern "C" bool daObjSakuita_IsDelete__FP14daObjSakuita_c();
+extern "C" void daObjSakuita_Delete__FP14daObjSakuita_c();
+extern "C" void __dt__14daObjSakuita_cFv();
+extern "C" void daObjSakuita_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__14daObjSakuita_c[44];
 SECTION_RODATA extern const u32 lit_3658;
 SECTION_RODATA extern const u32 lit_3659;
@@ -51,7 +93,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -61,7 +105,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daObjSakuita_cFv) {
+asm void daObjSakuita_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/create_init__14daObjSakuita_cFv.s"
 }
@@ -72,7 +116,7 @@ ASM_FUNCTION(create_init__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjSakuita_cFv) {
+asm void daObjSakuita_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/initBaseMtx__14daObjSakuita_cFv.s"
 }
@@ -83,7 +127,7 @@ ASM_FUNCTION(initBaseMtx__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjSakuita_cFv) {
+asm void daObjSakuita_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/setBaseMtx__14daObjSakuita_cFv.s"
 }
@@ -94,7 +138,7 @@ ASM_FUNCTION(setBaseMtx__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlatePos__14daObjSakuita_cFv) {
+asm void daObjSakuita_c::setPlatePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/setPlatePos__14daObjSakuita_cFv.s"
 }
@@ -105,7 +149,7 @@ ASM_FUNCTION(setPlatePos__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAngle__14daObjSakuita_cFv) {
+asm void daObjSakuita_c::calcAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/calcAngle__14daObjSakuita_cFv.s"
 }
@@ -116,7 +160,7 @@ ASM_FUNCTION(calcAngle__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -127,7 +171,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSakuita_Draw__FP14daObjSakuita_c) {
+asm void daObjSakuita_Draw(daObjSakuita_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Draw__FP14daObjSakuita_c.s"
 }
@@ -138,7 +182,7 @@ ASM_FUNCTION(daObjSakuita_Draw__FP14daObjSakuita_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSakuita_Execute__FP14daObjSakuita_c) {
+asm void daObjSakuita_Execute(daObjSakuita_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Execute__FP14daObjSakuita_c.s"
 }
@@ -146,21 +190,16 @@ ASM_FUNCTION(daObjSakuita_Execute__FP14daObjSakuita_c) {
 
 
 /* 80CC4C6C-80CC4C74 0008+00 .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjSakuita_IsDelete__FP14daObjSakuita_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_IsDelete__FP14daObjSakuita_c.s"
+bool daObjSakuita_IsDelete(daObjSakuita_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CC4C74-80CC4C9C 0028+00 .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSakuita_Delete__FP14daObjSakuita_c) {
+asm void daObjSakuita_Delete(daObjSakuita_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Delete__FP14daObjSakuita_c.s"
 }
@@ -171,7 +210,7 @@ ASM_FUNCTION(daObjSakuita_Delete__FP14daObjSakuita_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjSakuita_cFv) {
+asm daObjSakuita_c::~daObjSakuita_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/__dt__14daObjSakuita_cFv.s"
 }
@@ -182,7 +221,7 @@ ASM_FUNCTION(__dt__14daObjSakuita_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSakuita_Create__FP10fopAc_ac_c) {
+asm void daObjSakuita_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Create__FP10fopAc_ac_c.s"
 }
@@ -193,7 +232,7 @@ ASM_FUNCTION(daObjSakuita_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/__dt__8cM3dGCylFv.s"
 }
@@ -204,7 +243,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/__dt__8cM3dGAabFv.s"
 }
@@ -215,7 +254,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/__dt__10dCcD_GSttsFv.s"
 }
@@ -226,7 +265,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/__dt__10cCcD_GSttsFv.s"
 }

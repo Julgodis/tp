@@ -9,36 +9,47 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKNubMainLoop();
+extern "C" void TRKNubMainLoop();
+
+extern "C" void TRKNubMainLoop();
 
 // 
 // External References:
 // 
 
-extern "C" extern void TRKDestructEvent();
-extern "C" extern void TRKGetNextEvent();
-extern "C" extern void TRKGetBuffer();
-extern "C" extern void TRKGetInput();
-extern "C" extern void TRKDispatchMessage();
-extern "C" extern void TRKTargetStopped();
-extern "C" extern void TRKTargetSupportRequest();
-extern "C" extern void TRKTargetInterrupt();
-extern "C" extern void TRKTargetContinue();
+extern "C" void TRKDestructEvent();
+extern "C" void TRKGetNextEvent();
+extern "C" void TRKGetBuffer();
+extern "C" void TRKGetInput();
+extern "C" void TRKDispatchMessage();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetSupportRequest();
+extern "C" void TRKTargetInterrupt();
+extern "C" void TRKTargetContinue();
+
+extern "C" void TRKDestructEvent();
+extern "C" void TRKGetNextEvent();
+extern "C" void TRKGetBuffer();
+extern "C" void TRKGetInput();
+extern "C" void TRKDispatchMessage();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetSupportRequest();
+extern "C" void TRKTargetInterrupt();
+extern "C" void TRKTargetContinue();
 SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 8036CB20-8036CC18 00F8+00 .text      TRKNubMainLoop                                               */
+/* 8036CB20-8036CC18 00F8+00 rc=1 efc=1 .text      TRKNubMainLoop                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKNubMainLoop) {
+extern "C" asm void TRKNubMainLoop() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mainloop/TRKNubMainLoop.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

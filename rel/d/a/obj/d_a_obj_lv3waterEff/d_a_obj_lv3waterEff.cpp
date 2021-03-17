@@ -6,18 +6,44 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjWaterEff_c;
+
+struct daObjWaterEff_c {
+	void Create();
+	void create();
+	void execute();
+	void _delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__15daObjWaterEff_cFv();
-extern "C" extern void create__15daObjWaterEff_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void execute__15daObjWaterEff_cFv();
-extern "C" extern void _delete__15daObjWaterEff_cFv();
-extern "C" extern void daObjWaterEff_Execute__FP15daObjWaterEff_c();
-extern "C" extern void daObjWaterEff_Delete__FP15daObjWaterEff_c();
-extern "C" extern void daObjWaterEff_Create__FP10fopAc_ac_c();
+void daObjWaterEff_Execute(daObjWaterEff_c*);
+void daObjWaterEff_Delete(daObjWaterEff_c*);
+void daObjWaterEff_Create(fopAc_ac_c*);
+
+extern "C" void Create__15daObjWaterEff_cFv();
+extern "C" void create__15daObjWaterEff_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__15daObjWaterEff_cFv();
+extern "C" void _delete__15daObjWaterEff_cFv();
+extern "C" void daObjWaterEff_Execute__FP15daObjWaterEff_c();
+extern "C" void daObjWaterEff_Delete__FP15daObjWaterEff_c();
+extern "C" void daObjWaterEff_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_eff_id[8];
 SECTION_RODATA extern const u32 lit_3637;
 SECTION_RODATA extern const u32 lit_3638;
@@ -34,7 +60,9 @@ SECTION_DATA extern u8 g_profile_Obj_WaterEff[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +72,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjWaterEff_cFv) {
+asm void daObjWaterEff_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/Create__15daObjWaterEff_cFv.s"
 }
@@ -55,7 +83,7 @@ ASM_FUNCTION(Create__15daObjWaterEff_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjWaterEff_cFv) {
+asm void daObjWaterEff_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/func_80C5C5DC.s"
 }
@@ -66,7 +94,7 @@ ASM_FUNCTION(create__15daObjWaterEff_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/__dt__4cXyzFv.s"
 }
@@ -74,21 +102,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80C5C6AC-80C5C6B0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C5C6B0-80C5C7B8 0108+00 .text      execute__15daObjWaterEff_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjWaterEff_cFv) {
+asm void daObjWaterEff_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/execute__15daObjWaterEff_cFv.s"
 }
@@ -99,7 +122,7 @@ ASM_FUNCTION(execute__15daObjWaterEff_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObjWaterEff_cFv) {
+asm void daObjWaterEff_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/_delete__15daObjWaterEff_cFv.s"
 }
@@ -110,7 +133,7 @@ ASM_FUNCTION(_delete__15daObjWaterEff_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWaterEff_Execute__FP15daObjWaterEff_c) {
+asm void daObjWaterEff_Execute(daObjWaterEff_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Execute__FP15daObjWaterEff_c.s"
 }
@@ -121,7 +144,7 @@ ASM_FUNCTION(daObjWaterEff_Execute__FP15daObjWaterEff_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWaterEff_Delete__FP15daObjWaterEff_c) {
+asm void daObjWaterEff_Delete(daObjWaterEff_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Delete__FP15daObjWaterEff_c.s"
 }
@@ -132,7 +155,7 @@ ASM_FUNCTION(daObjWaterEff_Delete__FP15daObjWaterEff_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjWaterEff_Create__FP10fopAc_ac_c) {
+asm void daObjWaterEff_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3waterEff/d_a_obj_lv3waterEff/daObjWaterEff_Create__FP10fopAc_ac_c.s"
 }

@@ -6,22 +6,72 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagSppath_c;
+struct dPath;
+struct cXyz;
+
+struct daTagSppath_c {
+	void create();
+	~daTagSppath_c();
+	void getNearPathPos(cXyz*, dPath*);
+	void execute();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+};
+
+struct dPath {
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__13daTagSppath_cFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daTagSppath_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daTagSppath_cFv();
-extern "C" extern void daTagSppath_Delete__FP13daTagSppath_c();
-extern "C" extern void getNearPathPos__13daTagSppath_cFP4cXyzP5dPath();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void execute__13daTagSppath_cFv();
-extern "C" extern void daTagSppath_Execute__FP13daTagSppath_c();
-extern "C" extern void daTagSppath_Draw__FP13daTagSppath_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daTagSppath_Create(fopAc_ac_c*);
+void daTagSppath_Delete(daTagSppath_c*);
+void daTagSppath_Execute(daTagSppath_c*);
+bool daTagSppath_Draw(daTagSppath_c*);
+
+extern "C" void create__13daTagSppath_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daTagSppath_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagSppath_cFv();
+extern "C" void daTagSppath_Delete__FP13daTagSppath_c();
+extern "C" void getNearPathPos__13daTagSppath_cFP4cXyzP5dPath();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void execute__13daTagSppath_cFv();
+extern "C" void daTagSppath_Execute__FP13daTagSppath_c();
+extern "C" bool daTagSppath_Draw__FP13daTagSppath_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u32 lit_3694;
 SECTION_RODATA extern const u32 lit_3695;
 SECTION_RODATA extern const u8 lit_4100[4 + 4 /* padding */];
@@ -45,7 +95,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -55,7 +107,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagSppath_cFv) {
+asm void daTagSppath_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/create__13daTagSppath_cFv.s"
 }
@@ -66,7 +118,7 @@ ASM_FUNCTION(create__13daTagSppath_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__10dCcD_GSttsFv.s"
 }
@@ -77,7 +129,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__8cM3dGCylFv.s"
 }
@@ -88,7 +140,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__8cM3dGAabFv.s"
 }
@@ -99,7 +151,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSppath_Create__FP10fopAc_ac_c) {
+asm void daTagSppath_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Create__FP10fopAc_ac_c.s"
 }
@@ -110,7 +162,7 @@ ASM_FUNCTION(daTagSppath_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagSppath_cFv) {
+asm daTagSppath_c::~daTagSppath_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__13daTagSppath_cFv.s"
 }
@@ -121,7 +173,7 @@ ASM_FUNCTION(__dt__13daTagSppath_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSppath_Delete__FP13daTagSppath_c) {
+asm void daTagSppath_Delete(daTagSppath_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Delete__FP13daTagSppath_c.s"
 }
@@ -132,7 +184,7 @@ ASM_FUNCTION(daTagSppath_Delete__FP13daTagSppath_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNearPathPos__13daTagSppath_cFP4cXyzP5dPath) {
+asm void daTagSppath_c::getNearPathPos(cXyz* field_0, dPath* field_1) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/getNearPathPos__13daTagSppath_cFP4cXyzP5dPath.s"
 }
@@ -143,7 +195,7 @@ ASM_FUNCTION(getNearPathPos__13daTagSppath_cFP4cXyzP5dPath) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__8cM3dGLinFv.s"
 }
@@ -154,7 +206,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagSppath_cFv) {
+asm void daTagSppath_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/execute__13daTagSppath_cFv.s"
 }
@@ -165,7 +217,7 @@ ASM_FUNCTION(execute__13daTagSppath_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSppath_Execute__FP13daTagSppath_c) {
+asm void daTagSppath_Execute(daTagSppath_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Execute__FP13daTagSppath_c.s"
 }
@@ -173,21 +225,16 @@ ASM_FUNCTION(daTagSppath_Execute__FP13daTagSppath_c) {
 
 
 /* 80D62BC0-80D62BC8 0008+00 .text      daTagSppath_Draw__FP13daTagSppath_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagSppath_Draw__FP13daTagSppath_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Draw__FP13daTagSppath_c.s"
+bool daTagSppath_Draw(daTagSppath_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D62BC8-80D62C10 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/__dt__10cCcD_GSttsFv.s"
 }

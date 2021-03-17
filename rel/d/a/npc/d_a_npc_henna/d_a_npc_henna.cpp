@@ -6,85 +6,215 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct _GXColor;
+struct Vec;
+struct J3DJoint;
+struct fopAc_ac_c;
+struct npc_henna_class;
+struct cXyz;
+
+struct daNpc_Henna_HIO_c {
+	daNpc_Henna_HIO_c();
+	~daNpc_Henna_HIO_c();
+};
+
+struct npc_henna_class {
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz(cXyz const&);
+	void abs() const;
+	void set(f32, f32, f32);
+	void operator+=(Vec const&);
+	void operator=(cXyz const&);
+	cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daPy_py_c {
+	void cancelOriginalDemo();
+	void offPlayerNoDraw();
+	void onPlayerNoDraw();
+	void changeOriginalDemo();
+};
+
+struct Vec {
+};
+
+struct mDoCPd_c {
+	void getSubStickX(u32);
+	void getStickX3D(u32);
+	void getTrigA(u32);
+};
+
+struct _GXColor {
+};
+
+struct mDoGph_gInf_c {
+	void fadeIn(f32, _GXColor&);
+};
+
+struct std {
+	void fabsf(f32);
+};
+
+struct dEvt_info_c {
+	void onCondition(u16);
+	void checkCommandDemoAccrpt();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daNpc_Henna_HIO_cFv();
-extern "C" extern void anm_init__FP15npc_henna_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Henna_Draw__FP15npc_henna_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void s_npc_sub__FPvPv();
-extern "C" extern void s_piro_sub__FPvPv();
-extern "C" extern void s_du_sub__FPvPv();
-extern "C" extern void s_shop_sub__FPvPv();
-extern "C" extern void s_koro2ball_sub__FPvPv();
-extern "C" extern void message_shop__FP15npc_henna_class();
-extern "C" extern void henna_shop__FP15npc_henna_class();
-extern "C" extern void s_rod_sub__FPvPv();
-extern "C" extern void s_fish_sub__FPvPv();
-extern "C" extern void henna_ride__FP15npc_henna_class();
-extern "C" extern void action__FP15npc_henna_class();
-extern "C" extern void cam_3d_morf__FP15npc_henna_classf();
-extern "C" extern void demo_camera__FP15npc_henna_class();
-extern "C" extern void zoom_check__FP15npc_henna_classP4cXyzs();
-extern "C" extern void demo_camera_shop__FP15npc_henna_class();
-extern "C" extern void message_guide__FP15npc_henna_class();
-extern "C" extern void s_boat_sub__FPvPv();
-extern "C" extern void env_control__FP15npc_henna_class();
-extern "C" extern void daNpc_Henna_Execute__FP15npc_henna_class();
-extern "C" extern void daNpc_Henna_IsDelete__FP15npc_henna_class();
-extern "C" extern void daNpc_Henna_Delete__FP15npc_henna_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNpc_Henna_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daNpc_Henna_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_henna_cpp();
-extern "C" extern void cancelOriginalDemo__9daPy_py_cFv();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void mDoAud_seStart__FUlPC3VecUlSc();
-extern "C" extern void getSubStickX__8mDoCPd_cFUl();
-extern "C" extern void getStickX3D__8mDoCPd_cFUl();
-extern "C" extern void dComIfGp_setDoStatusForce__FUcUc();
-extern "C" extern void dComIfGs_setEventReg__FUsUc();
-extern "C" extern void Z2GetAudioMgr__Fv();
-extern "C" extern void dComIfG_getTimerPtr__Fv();
-extern "C" extern void fadeIn__13mDoGph_gInf_cFfR8_GXColor();
-extern "C" extern void fpcM_Search__FPFPvPv_PvPv();
-extern "C" extern void getTrigA__8mDoCPd_cFUl();
-extern "C" extern void dComIfGp_event_reset__Fv();
-extern "C" extern void offPlayerNoDraw__9daPy_py_cFv();
-extern "C" extern void dComIfGp_setMessageCountNumber__Fl();
-extern "C" extern void dComIfGp_event_offHindFlag__FUs();
-extern "C" extern void dKy_getEnvlight__Fv();
-extern "C" extern void cMtx_XrotM__FPA4_fs();
-extern "C" extern void abs__4cXyzCFv();
-extern "C" extern void onPlayerNoDraw__9daPy_py_cFv();
-extern "C" extern void dComIfGp_setItemRupeeCount__Fl();
-extern "C" extern void dComIfGs_getRupee__Fv();
-extern "C" extern void fabsf__3stdFf();
-extern "C" extern void set__4cXyzFfff();
-extern "C" extern void __apl__4cXyzFRC3Vec();
-extern "C" extern void cMtx_YrotS__FPA4_fs();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void changeOriginalDemo__9daPy_py_cFv();
-extern "C" extern void daPy_getPlayerActorClass__Fv();
-extern "C" extern void onCondition__11dEvt_info_cFUs();
-extern "C" extern void checkCommandDemoAccrpt__11dEvt_info_cFv();
-extern "C" extern void __as__4cXyzFRC4cXyz();
-extern "C" extern void dComIfGp_checkPlayerStatus0__FiUl();
-extern "C" extern void JMAFastSqrt__Ff();
-extern "C" extern void dComIfGs_getEventReg__FUs();
-extern "C" extern void dComIfGs_isEventBit__FUs();
-extern "C" extern void dComIfGp_event_runCheck__Fv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void dComIfGp_getCamera__Fi();
-extern "C" extern void dComIfGp_getPlayerCameraID__Fi();
-extern "C" extern void dComIfGp_getPlayer__Fi();
-extern "C" extern void dMsgObject_getSelectCursorPos__Fv();
-extern "C" extern void fopAcM_GetRoomNo__FPC10fopAc_ac_c();
-extern "C" extern void dComIfGs_onEventBit__FUs();
+void anm_init(npc_henna_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Henna_Draw(npc_henna_class*);
+void s_npc_sub(void*, void*);
+void s_piro_sub(void*, void*);
+void s_du_sub(void*, void*);
+void s_shop_sub(void*, void*);
+void s_koro2ball_sub(void*, void*);
+void message_shop(npc_henna_class*);
+void henna_shop(npc_henna_class*);
+void s_rod_sub(void*, void*);
+void s_fish_sub(void*, void*);
+void henna_ride(npc_henna_class*);
+void action(npc_henna_class*);
+void cam_3d_morf(npc_henna_class*, f32);
+void demo_camera(npc_henna_class*);
+extern "C" void zoom_check__FP15npc_henna_classP4cXyzs();
+void demo_camera_shop(npc_henna_class*);
+void message_guide(npc_henna_class*);
+void s_boat_sub(void*, void*);
+void env_control(npc_henna_class*);
+void daNpc_Henna_Execute(npc_henna_class*);
+bool daNpc_Henna_IsDelete(npc_henna_class*);
+void daNpc_Henna_Delete(npc_henna_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNpc_Henna_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_henna_cpp();
+void mDoAud_seStart(u32, Vec const*, u32, s8);
+void dComIfGp_setDoStatusForce(u8, u8);
+void dComIfGs_setEventReg(u16, u8);
+void Z2GetAudioMgr();
+void dComIfG_getTimerPtr();
+extern "C" void fpcM_Search__FPFPvPv_PvPv();
+void dComIfGp_event_reset();
+extern "C" void dComIfGp_setMessageCountNumber__Fl();
+void dComIfGp_event_offHindFlag(u16);
+void dKy_getEnvlight();
+extern "C" void cMtx_XrotM__FPA4_fs();
+extern "C" void dComIfGp_setItemRupeeCount__Fl();
+void dComIfGs_getRupee();
+extern "C" void cMtx_YrotS__FPA4_fs();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+void daPy_getPlayerActorClass();
+void dComIfGp_checkPlayerStatus0(s32, u32);
+void JMAFastSqrt(f32);
+void dComIfGs_getEventReg(u16);
+void dComIfGs_isEventBit(u16);
+void dComIfGp_event_runCheck();
+void dComIfGp_getCamera(s32);
+void dComIfGp_getPlayerCameraID(s32);
+void dComIfGp_getPlayer(s32);
+void dMsgObject_getSelectCursorPos();
+void fopAcM_GetRoomNo(fopAc_ac_c const*);
+void dComIfGs_onEventBit(u16);
+
+extern "C" void __ct__17daNpc_Henna_HIO_cFv();
+extern "C" void anm_init__FP15npc_henna_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Henna_Draw__FP15npc_henna_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void s_npc_sub__FPvPv();
+extern "C" void s_piro_sub__FPvPv();
+extern "C" void s_du_sub__FPvPv();
+extern "C" void s_shop_sub__FPvPv();
+extern "C" void s_koro2ball_sub__FPvPv();
+extern "C" void message_shop__FP15npc_henna_class();
+extern "C" void henna_shop__FP15npc_henna_class();
+extern "C" void s_rod_sub__FPvPv();
+extern "C" void s_fish_sub__FPvPv();
+extern "C" void henna_ride__FP15npc_henna_class();
+extern "C" void action__FP15npc_henna_class();
+extern "C" void cam_3d_morf__FP15npc_henna_classf();
+extern "C" void demo_camera__FP15npc_henna_class();
+extern "C" void zoom_check__FP15npc_henna_classP4cXyzs();
+extern "C" void demo_camera_shop__FP15npc_henna_class();
+extern "C" void message_guide__FP15npc_henna_class();
+extern "C" void s_boat_sub__FPvPv();
+extern "C" void env_control__FP15npc_henna_class();
+extern "C" void daNpc_Henna_Execute__FP15npc_henna_class();
+extern "C" bool daNpc_Henna_IsDelete__FP15npc_henna_class();
+extern "C" void daNpc_Henna_Delete__FP15npc_henna_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNpc_Henna_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daNpc_Henna_HIO_cFv();
+extern "C" void __sinit_d_a_npc_henna_cpp();
+extern "C" void cancelOriginalDemo__9daPy_py_cFv();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void mDoAud_seStart__FUlPC3VecUlSc();
+extern "C" void getSubStickX__8mDoCPd_cFUl();
+extern "C" void getStickX3D__8mDoCPd_cFUl();
+extern "C" void dComIfGp_setDoStatusForce__FUcUc();
+extern "C" void dComIfGs_setEventReg__FUsUc();
+extern "C" void Z2GetAudioMgr__Fv();
+extern "C" void dComIfG_getTimerPtr__Fv();
+extern "C" void fadeIn__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fpcM_Search__FPFPvPv_PvPv();
+extern "C" void getTrigA__8mDoCPd_cFUl();
+extern "C" void dComIfGp_event_reset__Fv();
+extern "C" void offPlayerNoDraw__9daPy_py_cFv();
+extern "C" void dComIfGp_setMessageCountNumber__Fl();
+extern "C" void dComIfGp_event_offHindFlag__FUs();
+extern "C" void dKy_getEnvlight__Fv();
+extern "C" void cMtx_XrotM__FPA4_fs();
+extern "C" void abs__4cXyzCFv();
+extern "C" void onPlayerNoDraw__9daPy_py_cFv();
+extern "C" void dComIfGp_setItemRupeeCount__Fl();
+extern "C" void dComIfGs_getRupee__Fv();
+extern "C" void fabsf__3stdFf();
+extern "C" void set__4cXyzFfff();
+extern "C" void __apl__4cXyzFRC3Vec();
+extern "C" void cMtx_YrotS__FPA4_fs();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void changeOriginalDemo__9daPy_py_cFv();
+extern "C" void daPy_getPlayerActorClass__Fv();
+extern "C" void onCondition__11dEvt_info_cFUs();
+extern "C" void checkCommandDemoAccrpt__11dEvt_info_cFv();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void dComIfGp_checkPlayerStatus0__FiUl();
+extern "C" void JMAFastSqrt__Ff();
+extern "C" void dComIfGs_getEventReg__FUs();
+extern "C" void dComIfGs_isEventBit__FUs();
+extern "C" void dComIfGp_event_runCheck__Fv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void dComIfGp_getCamera__Fi();
+extern "C" void dComIfGp_getPlayerCameraID__Fi();
+extern "C" void dComIfGp_getPlayer__Fi();
+extern "C" void dMsgObject_getSelectCursorPos__Fv();
+extern "C" void fopAcM_GetRoomNo__FPC10fopAc_ac_c();
+extern "C" void dComIfGs_onEventBit__FUs();
 SECTION_RODATA extern const u32 lit_3905;
 SECTION_RODATA extern const u32 lit_3906;
 SECTION_RODATA extern const u32 lit_3907;
@@ -362,8 +492,11 @@ SECTION_BSS extern u8 data_8054B264[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -373,7 +506,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daNpc_Henna_HIO_cFv) {
+asm daNpc_Henna_HIO_c::daNpc_Henna_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__ct__17daNpc_Henna_HIO_cFv.s"
 }
@@ -384,7 +517,7 @@ ASM_FUNCTION(__ct__17daNpc_Henna_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP15npc_henna_classifUcf) {
+asm void anm_init(npc_henna_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/anm_init__FP15npc_henna_classifUcf.s"
 }
@@ -395,7 +528,7 @@ ASM_FUNCTION(anm_init__FP15npc_henna_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/nodeCallBack__FP8J3DJointi.s"
 }
@@ -406,7 +539,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Henna_Draw__FP15npc_henna_class) {
+asm void daNpc_Henna_Draw(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Draw__FP15npc_henna_class.s"
 }
@@ -417,7 +550,7 @@ ASM_FUNCTION(daNpc_Henna_Draw__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__dt__4cXyzFv.s"
 }
@@ -428,7 +561,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__dt__8cM3dGPlaFv.s"
 }
@@ -439,7 +572,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_npc_sub__FPvPv) {
+asm void s_npc_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_npc_sub__FPvPv.s"
 }
@@ -450,7 +583,7 @@ ASM_FUNCTION(s_npc_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_piro_sub__FPvPv) {
+asm void s_piro_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_piro_sub__FPvPv.s"
 }
@@ -461,7 +594,7 @@ ASM_FUNCTION(s_piro_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_du_sub__FPvPv) {
+asm void s_du_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_du_sub__FPvPv.s"
 }
@@ -472,7 +605,7 @@ ASM_FUNCTION(s_du_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_shop_sub__FPvPv) {
+asm void s_shop_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_shop_sub__FPvPv.s"
 }
@@ -483,7 +616,7 @@ ASM_FUNCTION(s_shop_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_koro2ball_sub__FPvPv) {
+asm void s_koro2ball_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_koro2ball_sub__FPvPv.s"
 }
@@ -494,7 +627,7 @@ ASM_FUNCTION(s_koro2ball_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message_shop__FP15npc_henna_class) {
+asm void message_shop(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/message_shop__FP15npc_henna_class.s"
 }
@@ -505,7 +638,7 @@ ASM_FUNCTION(message_shop__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(henna_shop__FP15npc_henna_class) {
+asm void henna_shop(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/henna_shop__FP15npc_henna_class.s"
 }
@@ -516,7 +649,7 @@ ASM_FUNCTION(henna_shop__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_rod_sub__FPvPv) {
+asm void s_rod_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_rod_sub__FPvPv.s"
 }
@@ -527,7 +660,7 @@ ASM_FUNCTION(s_rod_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fish_sub__FPvPv) {
+asm void s_fish_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_fish_sub__FPvPv.s"
 }
@@ -538,7 +671,7 @@ ASM_FUNCTION(s_fish_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(henna_ride__FP15npc_henna_class) {
+asm void henna_ride(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/henna_ride__FP15npc_henna_class.s"
 }
@@ -549,7 +682,7 @@ ASM_FUNCTION(henna_ride__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP15npc_henna_class) {
+asm void action(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/action__FP15npc_henna_class.s"
 }
@@ -560,7 +693,7 @@ ASM_FUNCTION(action__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cam_3d_morf__FP15npc_henna_classf) {
+asm void cam_3d_morf(npc_henna_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/cam_3d_morf__FP15npc_henna_classf.s"
 }
@@ -571,7 +704,7 @@ ASM_FUNCTION(cam_3d_morf__FP15npc_henna_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP15npc_henna_class) {
+asm void demo_camera(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/demo_camera__FP15npc_henna_class.s"
 }
@@ -582,7 +715,7 @@ ASM_FUNCTION(demo_camera__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zoom_check__FP15npc_henna_classP4cXyzs) {
+extern "C" asm void zoom_check__FP15npc_henna_classP4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/zoom_check__FP15npc_henna_classP4cXyzs.s"
 }
@@ -593,7 +726,7 @@ ASM_FUNCTION(zoom_check__FP15npc_henna_classP4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera_shop__FP15npc_henna_class) {
+asm void demo_camera_shop(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/demo_camera_shop__FP15npc_henna_class.s"
 }
@@ -604,7 +737,7 @@ ASM_FUNCTION(demo_camera_shop__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message_guide__FP15npc_henna_class) {
+asm void message_guide(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/message_guide__FP15npc_henna_class.s"
 }
@@ -615,7 +748,7 @@ ASM_FUNCTION(message_guide__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_boat_sub__FPvPv) {
+asm void s_boat_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/s_boat_sub__FPvPv.s"
 }
@@ -626,7 +759,7 @@ ASM_FUNCTION(s_boat_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(env_control__FP15npc_henna_class) {
+asm void env_control(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/env_control__FP15npc_henna_class.s"
 }
@@ -637,7 +770,7 @@ ASM_FUNCTION(env_control__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Henna_Execute__FP15npc_henna_class) {
+asm void daNpc_Henna_Execute(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Execute__FP15npc_henna_class.s"
 }
@@ -645,21 +778,16 @@ ASM_FUNCTION(daNpc_Henna_Execute__FP15npc_henna_class) {
 
 
 /* 805492A4-805492AC 0008+00 .text      daNpc_Henna_IsDelete__FP15npc_henna_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Henna_IsDelete__FP15npc_henna_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_IsDelete__FP15npc_henna_class.s"
+bool daNpc_Henna_IsDelete(npc_henna_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805492AC-80549300 0054+00 .text      daNpc_Henna_Delete__FP15npc_henna_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Henna_Delete__FP15npc_henna_class) {
+asm void daNpc_Henna_Delete(npc_henna_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Delete__FP15npc_henna_class.s"
 }
@@ -670,7 +798,7 @@ ASM_FUNCTION(daNpc_Henna_Delete__FP15npc_henna_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -681,7 +809,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__dt__12J3DFrameCtrlFv.s"
 }
@@ -692,7 +820,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Henna_Create__FP10fopAc_ac_c) {
+asm void daNpc_Henna_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_Create__FP10fopAc_ac_c.s"
 }
@@ -703,7 +831,7 @@ ASM_FUNCTION(daNpc_Henna_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daNpc_Henna_HIO_cFv) {
+asm daNpc_Henna_HIO_c::~daNpc_Henna_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__dt__17daNpc_Henna_HIO_cFv.s"
 }
@@ -714,7 +842,7 @@ ASM_FUNCTION(__dt__17daNpc_Henna_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_henna_cpp) {
+extern "C" asm void __sinit_d_a_npc_henna_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__sinit_d_a_npc_henna_cpp.s"
 }
@@ -725,7 +853,7 @@ ASM_FUNCTION(__sinit_d_a_npc_henna_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::cancelOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/cancelOriginalDemo__9daPy_py_cFv.s"
 }
@@ -736,7 +864,7 @@ ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__ct__4cXyzFRC4cXyz.s"
 }
@@ -747,7 +875,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
+asm void mDoAud_seStart(u32 field_0, Vec const* field_1, u32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/mDoAud_seStart__FUlPC3VecUlSc.s"
 }
@@ -758,7 +886,7 @@ ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSubStickX__8mDoCPd_cFUl) {
+asm void mDoCPd_c::getSubStickX(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/getSubStickX__8mDoCPd_cFUl.s"
 }
@@ -769,7 +897,7 @@ ASM_FUNCTION(getSubStickX__8mDoCPd_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStickX3D__8mDoCPd_cFUl) {
+asm void mDoCPd_c::getStickX3D(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/getStickX3D__8mDoCPd_cFUl.s"
 }
@@ -780,7 +908,7 @@ ASM_FUNCTION(getStickX3D__8mDoCPd_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setDoStatusForce__FUcUc) {
+asm void dComIfGp_setDoStatusForce(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_setDoStatusForce__FUcUc.s"
 }
@@ -791,7 +919,7 @@ ASM_FUNCTION(dComIfGp_setDoStatusForce__FUcUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_setEventReg__FUsUc) {
+asm void dComIfGs_setEventReg(u16 field_0, u8 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGs_setEventReg__FUsUc.s"
 }
@@ -802,7 +930,7 @@ ASM_FUNCTION(dComIfGs_setEventReg__FUsUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z2GetAudioMgr__Fv) {
+asm void Z2GetAudioMgr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/Z2GetAudioMgr__Fv.s"
 }
@@ -813,7 +941,7 @@ ASM_FUNCTION(Z2GetAudioMgr__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfG_getTimerPtr__Fv) {
+asm void dComIfG_getTimerPtr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfG_getTimerPtr__Fv.s"
 }
@@ -824,7 +952,7 @@ ASM_FUNCTION(dComIfG_getTimerPtr__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fadeIn__13mDoGph_gInf_cFfR8_GXColor) {
+asm void mDoGph_gInf_c::fadeIn(f32 field_0, _GXColor& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/fadeIn__13mDoGph_gInf_cFfR8_GXColor.s"
 }
@@ -835,7 +963,7 @@ ASM_FUNCTION(fadeIn__13mDoGph_gInf_cFfR8_GXColor) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcM_Search__FPFPvPv_PvPv) {
+extern "C" asm void fpcM_Search__FPFPvPv_PvPv() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/fpcM_Search__FPFPvPv_PvPv.s"
 }
@@ -846,7 +974,7 @@ ASM_FUNCTION(fpcM_Search__FPFPvPv_PvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTrigA__8mDoCPd_cFUl) {
+asm void mDoCPd_c::getTrigA(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/getTrigA__8mDoCPd_cFUl.s"
 }
@@ -857,7 +985,7 @@ ASM_FUNCTION(getTrigA__8mDoCPd_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_reset__Fv) {
+asm void dComIfGp_event_reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_event_reset__Fv.s"
 }
@@ -868,7 +996,7 @@ ASM_FUNCTION(dComIfGp_event_reset__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offPlayerNoDraw__9daPy_py_cFv) {
+asm void daPy_py_c::offPlayerNoDraw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/offPlayerNoDraw__9daPy_py_cFv.s"
 }
@@ -879,7 +1007,7 @@ ASM_FUNCTION(offPlayerNoDraw__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setMessageCountNumber__Fl) {
+extern "C" asm void dComIfGp_setMessageCountNumber__Fl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_setMessageCountNumber__Fl.s"
 }
@@ -890,7 +1018,7 @@ ASM_FUNCTION(dComIfGp_setMessageCountNumber__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_offHindFlag__FUs) {
+asm void dComIfGp_event_offHindFlag(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_event_offHindFlag__FUs.s"
 }
@@ -901,7 +1029,7 @@ ASM_FUNCTION(dComIfGp_event_offHindFlag__FUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKy_getEnvlight__Fv) {
+asm void dKy_getEnvlight() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dKy_getEnvlight__Fv.s"
 }
@@ -912,7 +1040,7 @@ ASM_FUNCTION(dKy_getEnvlight__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cMtx_XrotM__FPA4_fs) {
+extern "C" asm void cMtx_XrotM__FPA4_fs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/cMtx_XrotM__FPA4_fs.s"
 }
@@ -923,7 +1051,7 @@ ASM_FUNCTION(cMtx_XrotM__FPA4_fs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs__4cXyzCFv) {
+asm void cXyz::abs() const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/abs__4cXyzCFv.s"
 }
@@ -934,7 +1062,7 @@ ASM_FUNCTION(abs__4cXyzCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onPlayerNoDraw__9daPy_py_cFv) {
+asm void daPy_py_c::onPlayerNoDraw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/onPlayerNoDraw__9daPy_py_cFv.s"
 }
@@ -945,7 +1073,7 @@ ASM_FUNCTION(onPlayerNoDraw__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_setItemRupeeCount__Fl) {
+extern "C" asm void dComIfGp_setItemRupeeCount__Fl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_setItemRupeeCount__Fl.s"
 }
@@ -956,7 +1084,7 @@ ASM_FUNCTION(dComIfGp_setItemRupeeCount__Fl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getRupee__Fv) {
+asm void dComIfGs_getRupee() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGs_getRupee__Fv.s"
 }
@@ -967,7 +1095,7 @@ ASM_FUNCTION(dComIfGs_getRupee__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fabsf__3stdFf) {
+asm void std::fabsf(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/fabsf__3stdFf.s"
 }
@@ -978,7 +1106,7 @@ ASM_FUNCTION(fabsf__3stdFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__4cXyzFfff) {
+asm void cXyz::set(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/set__4cXyzFfff.s"
 }
@@ -989,7 +1117,7 @@ ASM_FUNCTION(set__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__apl__4cXyzFRC3Vec) {
+asm void cXyz::operator+=(Vec const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__apl__4cXyzFRC3Vec.s"
 }
@@ -1000,7 +1128,7 @@ ASM_FUNCTION(__apl__4cXyzFRC3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cMtx_YrotS__FPA4_fs) {
+extern "C" asm void cMtx_YrotS__FPA4_fs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/cMtx_YrotS__FPA4_fs.s"
 }
@@ -1011,7 +1139,7 @@ ASM_FUNCTION(cMtx_YrotS__FPA4_fs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -1022,7 +1150,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::changeOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/changeOriginalDemo__9daPy_py_cFv.s"
 }
@@ -1033,7 +1161,7 @@ ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
+asm void daPy_getPlayerActorClass() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daPy_getPlayerActorClass__Fv.s"
 }
@@ -1044,7 +1172,7 @@ ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
+asm void dEvt_info_c::onCondition(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/onCondition__11dEvt_info_cFUs.s"
 }
@@ -1055,7 +1183,7 @@ ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
+asm void dEvt_info_c::checkCommandDemoAccrpt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/checkCommandDemoAccrpt__11dEvt_info_cFv.s"
 }
@@ -1066,7 +1194,7 @@ ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__as__4cXyzFRC4cXyz.s"
 }
@@ -1077,7 +1205,7 @@ ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_checkPlayerStatus0__FiUl) {
+asm void dComIfGp_checkPlayerStatus0(s32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_checkPlayerStatus0__FiUl.s"
 }
@@ -1088,7 +1216,7 @@ ASM_FUNCTION(dComIfGp_checkPlayerStatus0__FiUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JMAFastSqrt__Ff) {
+asm void JMAFastSqrt(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/JMAFastSqrt__Ff.s"
 }
@@ -1099,7 +1227,7 @@ ASM_FUNCTION(JMAFastSqrt__Ff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_getEventReg__FUs) {
+asm void dComIfGs_getEventReg(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGs_getEventReg__FUs.s"
 }
@@ -1110,7 +1238,7 @@ ASM_FUNCTION(dComIfGs_getEventReg__FUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_isEventBit__FUs) {
+asm void dComIfGs_isEventBit(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGs_isEventBit__FUs.s"
 }
@@ -1121,7 +1249,7 @@ ASM_FUNCTION(dComIfGs_isEventBit__FUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
+asm void dComIfGp_event_runCheck() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_event_runCheck__Fv.s"
 }
@@ -1129,21 +1257,16 @@ ASM_FUNCTION(dComIfGp_event_runCheck__Fv) {
 
 
 /* 8054A8A4-8054A8A8 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8054A8A8-8054A8C0 0018+00 .text      dComIfGp_getCamera__Fi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getCamera__Fi) {
+asm void dComIfGp_getCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_getCamera__Fi.s"
 }
@@ -1154,7 +1277,7 @@ ASM_FUNCTION(dComIfGp_getCamera__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
+asm void dComIfGp_getPlayerCameraID(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_getPlayerCameraID__Fi.s"
 }
@@ -1165,7 +1288,7 @@ ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
+asm void dComIfGp_getPlayer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGp_getPlayer__Fi.s"
 }
@@ -1176,7 +1299,7 @@ ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dMsgObject_getSelectCursorPos__Fv) {
+asm void dMsgObject_getSelectCursorPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dMsgObject_getSelectCursorPos__Fv.s"
 }
@@ -1187,7 +1310,7 @@ ASM_FUNCTION(dMsgObject_getSelectCursorPos__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcM_GetRoomNo__FPC10fopAc_ac_c) {
+asm void fopAcM_GetRoomNo(fopAc_ac_c const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/fopAcM_GetRoomNo__FPC10fopAc_ac_c.s"
 }
@@ -1198,7 +1321,7 @@ ASM_FUNCTION(fopAcM_GetRoomNo__FPC10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onEventBit__FUs) {
+asm void dComIfGs_onEventBit(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/dComIfGs_onEventBit__FUs.s"
 }

@@ -6,27 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjPDoor_c;
+
+struct daObjPDoor_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void mode_proc_call();
+	void init_modeWait();
+	void modeWait();
+	void init_modeRotate();
+	void modeRotate();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void initBaseMtx__12daObjPDoor_cFv();
-extern "C" extern void setBaseMtx__12daObjPDoor_cFv();
-extern "C" extern void Create__12daObjPDoor_cFv();
-extern "C" extern void CreateHeap__12daObjPDoor_cFv();
-extern "C" extern void create1st__12daObjPDoor_cFv();
-extern "C" extern void Execute__12daObjPDoor_cFPPA3_A4_f();
-extern "C" extern void mode_proc_call__12daObjPDoor_cFv();
-extern "C" extern void init_modeWait__12daObjPDoor_cFv();
-extern "C" extern void modeWait__12daObjPDoor_cFv();
-extern "C" extern void init_modeRotate__12daObjPDoor_cFv();
-extern "C" extern void modeRotate__12daObjPDoor_cFv();
-extern "C" extern void Draw__12daObjPDoor_cFv();
-extern "C" extern void Delete__12daObjPDoor_cFv();
-extern "C" extern void daObjPDoor_create1st__FP12daObjPDoor_c();
-extern "C" extern void daObjPDoor_MoveBGDelete__FP12daObjPDoor_c();
-extern "C" extern void daObjPDoor_MoveBGExecute__FP12daObjPDoor_c();
-extern "C" extern void daObjPDoor_MoveBGDraw__FP12daObjPDoor_c();
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void Execute__12daObjPDoor_cFPPA3_A4_f();
+void daObjPDoor_create1st(daObjPDoor_c*);
+void daObjPDoor_MoveBGDelete(daObjPDoor_c*);
+void daObjPDoor_MoveBGExecute(daObjPDoor_c*);
+void daObjPDoor_MoveBGDraw(daObjPDoor_c*);
+
+extern "C" void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void initBaseMtx__12daObjPDoor_cFv();
+extern "C" void setBaseMtx__12daObjPDoor_cFv();
+extern "C" void Create__12daObjPDoor_cFv();
+extern "C" void CreateHeap__12daObjPDoor_cFv();
+extern "C" void create1st__12daObjPDoor_cFv();
+extern "C" void Execute__12daObjPDoor_cFPPA3_A4_f();
+extern "C" void mode_proc_call__12daObjPDoor_cFv();
+extern "C" void init_modeWait__12daObjPDoor_cFv();
+extern "C" void modeWait__12daObjPDoor_cFv();
+extern "C" void init_modeRotate__12daObjPDoor_cFv();
+extern "C" void modeRotate__12daObjPDoor_cFv();
+extern "C" void Draw__12daObjPDoor_cFv();
+extern "C" void Delete__12daObjPDoor_cFv();
+extern "C" void daObjPDoor_create1st__FP12daObjPDoor_c();
+extern "C" void daObjPDoor_MoveBGDelete__FP12daObjPDoor_c();
+extern "C" void daObjPDoor_MoveBGExecute__FP12daObjPDoor_c();
+extern "C" void daObjPDoor_MoveBGDraw__FP12daObjPDoor_c();
 SECTION_RODATA extern const u8 lit_3695[4];
 SECTION_RODATA extern const u32 lit_3942;
 SECTION_RODATA extern const u8 lit_3944[8];
@@ -51,7 +79,9 @@ SECTION_DATA extern void*const __vt__12daObjPDoor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -61,7 +91,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel.s"
 }
@@ -72,7 +102,7 @@ ASM_FUNCTION(PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/initBaseMtx__12daObjPDoor_cFv.s"
 }
@@ -83,7 +113,7 @@ ASM_FUNCTION(initBaseMtx__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/setBaseMtx__12daObjPDoor_cFv.s"
 }
@@ -94,7 +124,7 @@ ASM_FUNCTION(setBaseMtx__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/Create__12daObjPDoor_cFv.s"
 }
@@ -105,7 +135,7 @@ ASM_FUNCTION(Create__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/CreateHeap__12daObjPDoor_cFv.s"
 }
@@ -116,7 +146,7 @@ ASM_FUNCTION(CreateHeap__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/create1st__12daObjPDoor_cFv.s"
 }
@@ -127,7 +157,7 @@ ASM_FUNCTION(create1st__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjPDoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjPDoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/Execute__12daObjPDoor_cFPPA3_A4_f.s"
 }
@@ -138,7 +168,7 @@ ASM_FUNCTION(Execute__12daObjPDoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/mode_proc_call__12daObjPDoor_cFv.s"
 }
@@ -149,7 +179,7 @@ ASM_FUNCTION(mode_proc_call__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/init_modeWait__12daObjPDoor_cFv.s"
 }
@@ -160,7 +190,7 @@ ASM_FUNCTION(init_modeWait__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/modeWait__12daObjPDoor_cFv.s"
 }
@@ -171,7 +201,7 @@ ASM_FUNCTION(modeWait__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeRotate__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::init_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/init_modeRotate__12daObjPDoor_cFv.s"
 }
@@ -182,7 +212,7 @@ ASM_FUNCTION(init_modeRotate__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeRotate__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/modeRotate__12daObjPDoor_cFv.s"
 }
@@ -193,7 +223,7 @@ ASM_FUNCTION(modeRotate__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/Draw__12daObjPDoor_cFv.s"
 }
@@ -204,7 +234,7 @@ ASM_FUNCTION(Draw__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjPDoor_cFv) {
+asm void daObjPDoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/Delete__12daObjPDoor_cFv.s"
 }
@@ -215,7 +245,7 @@ ASM_FUNCTION(Delete__12daObjPDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDoor_create1st__FP12daObjPDoor_c) {
+asm void daObjPDoor_create1st(daObjPDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/daObjPDoor_create1st__FP12daObjPDoor_c.s"
 }
@@ -226,7 +256,7 @@ ASM_FUNCTION(daObjPDoor_create1st__FP12daObjPDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDoor_MoveBGDelete__FP12daObjPDoor_c) {
+asm void daObjPDoor_MoveBGDelete(daObjPDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/daObjPDoor_MoveBGDelete__FP12daObjPDoor_c.s"
 }
@@ -237,7 +267,7 @@ ASM_FUNCTION(daObjPDoor_MoveBGDelete__FP12daObjPDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDoor_MoveBGExecute__FP12daObjPDoor_c) {
+asm void daObjPDoor_MoveBGExecute(daObjPDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/daObjPDoor_MoveBGExecute__FP12daObjPDoor_c.s"
 }
@@ -248,7 +278,7 @@ ASM_FUNCTION(daObjPDoor_MoveBGExecute__FP12daObjPDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDoor_MoveBGDraw__FP12daObjPDoor_c) {
+asm void daObjPDoor_MoveBGDraw(daObjPDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdoor/d_a_obj_pdoor/daObjPDoor_MoveBGDraw__FP12daObjPDoor_c.s"
 }

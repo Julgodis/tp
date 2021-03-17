@@ -9,11 +9,17 @@
 // Forward References:
 // 
 
-extern "C" extern void OSGetArenaHi();
-extern "C" extern void OSGetArenaLo();
-extern "C" extern void OSSetArenaHi();
-extern "C" extern void OSSetArenaLo();
-extern "C" extern void OSAllocFromArenaLo();
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaHi();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
+
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaHi();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
 SECTION_SDATA extern u32 __OSArenaLo;
 SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 
@@ -22,19 +28,20 @@ SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451650-80451658 0004+04 .sbss      __OSArenaHi                                                  */
+/* 80451650-80451658 0004+04 rc=2 efc=0 .sbss      __OSArenaHi                                                  */
 u8 __OSArenaHi[4 + 4 /* padding */];
 
-/* 8033B28C-8033B294 0008+00 .text      OSGetArenaHi                                                 */
+/* 8033B28C-8033B294 0008+00 rc=7 efc=7 .text      OSGetArenaHi                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSGetArenaHi) {
+extern "C" asm void OSGetArenaHi() {
 	nofralloc
 #include "asm/dolphin/os/OSArena/OSGetArenaHi.s"
 }
@@ -42,52 +49,51 @@ ASM_FUNCTION(OSGetArenaHi) {
 
 
 /* ############################################################################################## */
-/* 80450998-804509A0 0004+04 .sdata     __OSArenaLo                                                  */
+/* 80450998-804509A0 0004+04 rc=3 efc=0 .sdata     __OSArenaLo                                                  */
 u32 __OSArenaLo = 0xFFFFFFFF;
 /* padding 4 bytes */
 
-/* 8033B294-8033B29C 0008+00 .text      OSGetArenaLo                                                 */
+/* 8033B294-8033B29C 0008+00 rc=4 efc=4 .text      OSGetArenaLo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSGetArenaLo) {
+extern "C" asm void OSGetArenaLo() {
 	nofralloc
 #include "asm/dolphin/os/OSArena/OSGetArenaLo.s"
 }
 #pragma pop
 
 
-/* 8033B29C-8033B2A4 0008+00 .text      OSSetArenaHi                                                 */
+/* 8033B29C-8033B2A4 0008+00 rc=5 efc=5 .text      OSSetArenaHi                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetArenaHi) {
+extern "C" asm void OSSetArenaHi() {
 	nofralloc
 #include "asm/dolphin/os/OSArena/OSSetArenaHi.s"
 }
 #pragma pop
 
 
-/* 8033B2A4-8033B2AC 0008+00 .text      OSSetArenaLo                                                 */
+/* 8033B2A4-8033B2AC 0008+00 rc=5 efc=5 .text      OSSetArenaLo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetArenaLo) {
+extern "C" asm void OSSetArenaLo() {
 	nofralloc
 #include "asm/dolphin/os/OSArena/OSSetArenaLo.s"
 }
 #pragma pop
 
 
-/* 8033B2AC-8033B2D8 002C+00 .text      OSAllocFromArenaLo                                           */
+/* 8033B2AC-8033B2D8 002C+00 rc=4 efc=4 .text      OSAllocFromArenaLo                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSAllocFromArenaLo) {
+extern "C" asm void OSAllocFromArenaLo() {
 	nofralloc
 #include "asm/dolphin/os/OSArena/OSAllocFromArenaLo.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

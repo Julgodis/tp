@@ -284,7 +284,7 @@ with open("test.lcf", "w") as file:
         if symbol['type'] == "LinkerGenerated":
             continue
 
-        file.write(f"\t\"{symbol['name']}\" = 0x{symbol['addr']:08X};\n")
+        file.write(f"\t\"{symbol['label']}\" = 0x{symbol['addr']:08X};\n")
 
     file.write("\n")
     file.write("\t/* @stringBase0 */\n")

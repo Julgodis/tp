@@ -6,13 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStage (JStage) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build JStage (JStage) True/False
+struct JStage;
+/* top-level dependencies (begin JStage) */
+// outer dependency: _GXColor
+// outer dependency: JStage::TObject
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TAmbientLight (JStage::TAmbientLight) False/False
+	/* dependencies (begin JStage::TAmbientLight) */
+	/* dependencies (end JStage::TAmbientLight) */
+	struct TAmbientLight {
+		// _GXColor
+		/* 80280B20 */ ~TAmbientLight();
+		/* 80280B80 */ s32 JSGFGetType() const;
+		/* 80280B88 */ void JSGGetColor() const;
+		/* 80280B9C */ void JSGSetColor(_GXColor);
+	};
+
+	// build TObject (JStage::TObject) False/False
+	/* dependencies (begin JStage::TObject) */
+	/* dependencies (end JStage::TObject) */
+	struct TObject {
+		/* 80280DD4 */ ~TObject();
+		/* 80280E1C */ bool JSGGetName() const;
+		/* 80280E24 */ void JSGUpdate();
+		/* 80280E28 */ bool JSGGetFlag() const;
+		/* 80280E30 */ void JSGSetFlag(u32);
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
+		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
+		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
+		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
+		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+	};
+
+};
+
+// build _GXColor (_GXColor) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__Q26JStage13TAmbientLightFv();
-extern "C" extern void JSGFGetType__Q26JStage13TAmbientLightCFv();
-extern "C" extern void JSGGetColor__Q26JStage13TAmbientLightCFv();
-extern "C" extern void JSGSetColor__Q26JStage13TAmbientLightF8_GXColor();
+
+extern "C" void __dt__Q26JStage13TAmbientLightFv();
+extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv();
+extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv();
+extern "C" void JSGSetColor__Q26JStage13TAmbientLightF8_GXColor();
 SECTION_DATA extern void*const __vt__Q26JStage13TAmbientLight[18];
 SECTION_SDATA2 extern u32 lit_302;
 
@@ -20,26 +70,29 @@ SECTION_SDATA2 extern u32 lit_302;
 // External References:
 // 
 
-extern "C" extern void __dt__Q26JStage7TObjectFv();
-extern "C" extern void JSGGetName__Q26JStage7TObjectCFv();
-extern "C" extern void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" extern void JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" extern void JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" extern void JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern "C" extern void __dl__FPv();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+void operator delete(void*);
+
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C4638-803C4680 0044+04 .data      __vt__Q26JStage13TAmbientLight                               */
+/* 803C4638-803C4680 0044+04 rc=2 efc=1 .data      __vt__Q26JStage13TAmbientLight                               */
 void* const __vt__Q26JStage13TAmbientLight[18] = {
 	NULL, /* RTTI */
 	NULL,
@@ -62,53 +115,42 @@ void* const __vt__Q26JStage13TAmbientLight[18] = {
 	NULL,
 };
 
-/* 80280B20-80280B80 0060+00 .text      __dt__Q26JStage13TAmbientLightFv                             */
+/* 80280B20-80280B80 0060+00 rc=1 efc=1 .text      __dt__Q26JStage13TAmbientLightFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q26JStage13TAmbientLightFv) {
+asm JStage::TAmbientLight::~TAmbientLight() {
 	nofralloc
 #include "asm/JSystem/JStage/JSGAmbientLight/__dt__Q26JStage13TAmbientLightFv.s"
 }
 #pragma pop
 
 
-/* 80280B80-80280B88 0008+00 .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGFGetType__Q26JStage13TAmbientLightCFv) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGAmbientLight/JSGFGetType__Q26JStage13TAmbientLightCFv.s"
+/* 80280B80-80280B88 0008+00 rc=2 efc=1 .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
+s32 JStage::TAmbientLight::JSGFGetType() const {
+	return 4;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 804553D0-804553D8 0004+04 .sdata2    @302                                                         */
+/* 804553D0-804553D8 0004+04 rc=1 efc=0 .sdata2    @302                                                         */
 u32 lit_302 = 0xFFFFFFFF;
 /* padding 4 bytes */
 
-/* 80280B88-80280B9C 0014+00 .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
+/* 80280B88-80280B9C 0014+00 rc=2 efc=1 .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JSGGetColor__Q26JStage13TAmbientLightCFv) {
+asm void JStage::TAmbientLight::JSGGetColor() const {
 	nofralloc
 #include "asm/JSystem/JStage/JSGAmbientLight/JSGGetColor__Q26JStage13TAmbientLightCFv.s"
 }
 #pragma pop
 
 
-/* 80280B9C-80280BA0 0004+00 .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(JSGSetColor__Q26JStage13TAmbientLightF8_GXColor) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGAmbientLight/JSGSetColor__Q26JStage13TAmbientLightF8_GXColor.s"
+/* 80280B9C-80280BA0 0004+00 rc=1 efc=0 .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
+void JStage::TAmbientLight::JSGSetColor(_GXColor field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

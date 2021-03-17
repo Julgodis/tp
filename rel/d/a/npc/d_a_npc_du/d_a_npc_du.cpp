@@ -6,32 +6,88 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct npc_du_class;
+
+struct daNpc_Du_HIO_c {
+	daNpc_Du_HIO_c();
+	~daNpc_Du_HIO_c();
+};
+
+struct npc_du_class {
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNpc_Du_HIO_cFv();
-extern "C" extern void anm_init__FP12npc_du_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Du_Draw__FP12npc_du_class();
-extern "C" extern void npc_du_normal__FP12npc_du_class();
-extern "C" extern void npc_du_away__FP12npc_du_class();
-extern "C" extern void npc_du_swim__FP12npc_du_class();
-extern "C" extern void npc_du_message__FP12npc_du_class();
-extern "C" extern void action__FP12npc_du_class();
-extern "C" extern void message__FP12npc_du_class();
-extern "C" extern void daNpc_Du_Execute__FP12npc_du_class();
-extern "C" extern void daNpc_Du_IsDelete__FP12npc_du_class();
-extern "C" extern void daNpc_Du_Delete__FP12npc_du_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNpc_Du_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__14daNpc_Du_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_du_cpp();
-extern "C" extern void func_809B1824();
-extern "C" extern void func_809B182C();
+void anm_init(npc_du_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Du_Draw(npc_du_class*);
+void npc_du_normal(npc_du_class*);
+void npc_du_away(npc_du_class*);
+void npc_du_swim(npc_du_class*);
+void npc_du_message(npc_du_class*);
+void action(npc_du_class*);
+void message(npc_du_class*);
+void daNpc_Du_Execute(npc_du_class*);
+bool daNpc_Du_IsDelete(npc_du_class*);
+void daNpc_Du_Delete(npc_du_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNpc_Du_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_du_cpp();
+extern "C" void func_809B1824();
+extern "C" void func_809B182C();
+
+extern "C" void __ct__14daNpc_Du_HIO_cFv();
+extern "C" void anm_init__FP12npc_du_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Du_Draw__FP12npc_du_class();
+extern "C" void npc_du_normal__FP12npc_du_class();
+extern "C" void npc_du_away__FP12npc_du_class();
+extern "C" void npc_du_swim__FP12npc_du_class();
+extern "C" void npc_du_message__FP12npc_du_class();
+extern "C" void action__FP12npc_du_class();
+extern "C" void message__FP12npc_du_class();
+extern "C" void daNpc_Du_Execute__FP12npc_du_class();
+extern "C" bool daNpc_Du_IsDelete__FP12npc_du_class();
+extern "C" void daNpc_Du_Delete__FP12npc_du_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNpc_Du_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__14daNpc_Du_HIO_cFv();
+extern "C" void __sinit_d_a_npc_du_cpp();
+extern "C" void func_809B1824();
+extern "C" void func_809B182C();
 SECTION_RODATA extern const u32 lit_3762;
 SECTION_RODATA extern const u8 lit_3776[4];
 SECTION_RODATA extern const u32 lit_3777;
@@ -87,8 +143,11 @@ SECTION_BSS extern u8 l_HIO[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -98,7 +157,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNpc_Du_HIO_cFv) {
+asm daNpc_Du_HIO_c::daNpc_Du_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__ct__14daNpc_Du_HIO_cFv.s"
 }
@@ -109,7 +168,7 @@ ASM_FUNCTION(__ct__14daNpc_Du_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP12npc_du_classifUcf) {
+asm void anm_init(npc_du_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/anm_init__FP12npc_du_classifUcf.s"
 }
@@ -120,7 +179,7 @@ ASM_FUNCTION(anm_init__FP12npc_du_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/nodeCallBack__FP8J3DJointi.s"
 }
@@ -131,7 +190,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Du_Draw__FP12npc_du_class) {
+asm void daNpc_Du_Draw(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_Draw__FP12npc_du_class.s"
 }
@@ -142,7 +201,7 @@ ASM_FUNCTION(daNpc_Du_Draw__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_du_normal__FP12npc_du_class) {
+asm void npc_du_normal(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/npc_du_normal__FP12npc_du_class.s"
 }
@@ -153,7 +212,7 @@ ASM_FUNCTION(npc_du_normal__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_du_away__FP12npc_du_class) {
+asm void npc_du_away(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/npc_du_away__FP12npc_du_class.s"
 }
@@ -164,7 +223,7 @@ ASM_FUNCTION(npc_du_away__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_du_swim__FP12npc_du_class) {
+asm void npc_du_swim(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/npc_du_swim__FP12npc_du_class.s"
 }
@@ -175,7 +234,7 @@ ASM_FUNCTION(npc_du_swim__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_du_message__FP12npc_du_class) {
+asm void npc_du_message(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/npc_du_message__FP12npc_du_class.s"
 }
@@ -186,7 +245,7 @@ ASM_FUNCTION(npc_du_message__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12npc_du_class) {
+asm void action(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/action__FP12npc_du_class.s"
 }
@@ -197,7 +256,7 @@ ASM_FUNCTION(action__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP12npc_du_class) {
+asm void message(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/message__FP12npc_du_class.s"
 }
@@ -208,7 +267,7 @@ ASM_FUNCTION(message__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Du_Execute__FP12npc_du_class) {
+asm void daNpc_Du_Execute(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_Execute__FP12npc_du_class.s"
 }
@@ -216,21 +275,16 @@ ASM_FUNCTION(daNpc_Du_Execute__FP12npc_du_class) {
 
 
 /* 809B116C-809B1174 0008+00 .text      daNpc_Du_IsDelete__FP12npc_du_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Du_IsDelete__FP12npc_du_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_IsDelete__FP12npc_du_class.s"
+bool daNpc_Du_IsDelete(npc_du_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809B1174-809B11E0 006C+00 .text      daNpc_Du_Delete__FP12npc_du_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Du_Delete__FP12npc_du_class) {
+asm void daNpc_Du_Delete(npc_du_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_Delete__FP12npc_du_class.s"
 }
@@ -241,7 +295,7 @@ ASM_FUNCTION(daNpc_Du_Delete__FP12npc_du_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -252,7 +306,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__dt__12J3DFrameCtrlFv.s"
 }
@@ -263,7 +317,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Du_Create__FP10fopAc_ac_c) {
+asm void daNpc_Du_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_Create__FP10fopAc_ac_c.s"
 }
@@ -274,7 +328,7 @@ ASM_FUNCTION(daNpc_Du_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__dt__8cM3dGSphFv.s"
 }
@@ -285,7 +339,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__dt__8cM3dGAabFv.s"
 }
@@ -296,7 +350,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -307,7 +361,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpc_Du_HIO_cFv) {
+asm daNpc_Du_HIO_c::~daNpc_Du_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__dt__14daNpc_Du_HIO_cFv.s"
 }
@@ -318,7 +372,7 @@ ASM_FUNCTION(__dt__14daNpc_Du_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_du_cpp) {
+extern "C" asm void __sinit_d_a_npc_du_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/__sinit_d_a_npc_du_cpp.s"
 }
@@ -329,7 +383,7 @@ ASM_FUNCTION(__sinit_d_a_npc_du_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809B1824) {
+extern "C" asm void func_809B1824() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/func_809B1824.s"
 }
@@ -340,7 +394,7 @@ ASM_FUNCTION(func_809B1824) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809B182C) {
+extern "C" asm void func_809B182C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/func_809B182C.s"
 }

@@ -6,40 +6,107 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCBlk_c;
+struct cXyz;
+
+struct daObjCBlk_c {
+	struct chain_s {
+		~daObjCBlk_c::chain_s();
+		daObjCBlk_c::chain_s();
+	};
+
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void initWait();
+	void modeWait();
+	void initWalk();
+	void modeWalk();
+	void getChainBasePos(cXyz*);
+	void setPower(f32);
+	void checkWall();
+	bool Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct dCcD_Cyl {
+	dCcD_Cyl();
+	~dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjCBlk_cFv();
-extern "C" extern void setBaseMtx__11daObjCBlk_cFv();
-extern "C" extern void Create__11daObjCBlk_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void CreateHeap__11daObjCBlk_cFv();
-extern "C" extern void __dt__Q211daObjCBlk_c7chain_sFv();
-extern "C" extern void __ct__Q211daObjCBlk_c7chain_sFv();
-extern "C" extern void create__11daObjCBlk_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__11daObjCBlk_cFPPA3_A4_f();
-extern "C" extern void initWait__11daObjCBlk_cFv();
-extern "C" extern void modeWait__11daObjCBlk_cFv();
-extern "C" extern void initWalk__11daObjCBlk_cFv();
-extern "C" extern void modeWalk__11daObjCBlk_cFv();
-extern "C" extern void getChainBasePos__11daObjCBlk_cFP4cXyz();
-extern "C" extern void setPower__11daObjCBlk_cFf();
-extern "C" extern void checkWall__11daObjCBlk_cFv();
-extern "C" extern void Draw__11daObjCBlk_cFv();
-extern "C" extern void Delete__11daObjCBlk_cFv();
-extern "C" extern void daObjCBlk_Draw__FP11daObjCBlk_c();
-extern "C" extern void daObjCBlk_Execute__FP11daObjCBlk_c();
-extern "C" extern void daObjCBlk_Delete__FP11daObjCBlk_c();
-extern "C" extern void daObjCBlk_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BC6978();
-extern "C" extern void __sinit_d_a_obj_cblock_cpp();
+extern "C" void Execute__11daObjCBlk_cFPPA3_A4_f();
+void daObjCBlk_Draw(daObjCBlk_c*);
+void daObjCBlk_Execute(daObjCBlk_c*);
+void daObjCBlk_Delete(daObjCBlk_c*);
+void daObjCBlk_Create(fopAc_ac_c*);
+extern "C" void func_80BC6978();
+extern "C" void __sinit_d_a_obj_cblock_cpp();
+
+extern "C" void initBaseMtx__11daObjCBlk_cFv();
+extern "C" void setBaseMtx__11daObjCBlk_cFv();
+extern "C" void Create__11daObjCBlk_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void CreateHeap__11daObjCBlk_cFv();
+extern "C" void __dt__Q211daObjCBlk_c7chain_sFv();
+extern "C" void __ct__Q211daObjCBlk_c7chain_sFv();
+extern "C" void create__11daObjCBlk_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__11daObjCBlk_cFPPA3_A4_f();
+extern "C" void initWait__11daObjCBlk_cFv();
+extern "C" void modeWait__11daObjCBlk_cFv();
+extern "C" void initWalk__11daObjCBlk_cFv();
+extern "C" void modeWalk__11daObjCBlk_cFv();
+extern "C" void getChainBasePos__11daObjCBlk_cFP4cXyz();
+extern "C" void setPower__11daObjCBlk_cFf();
+extern "C" void checkWall__11daObjCBlk_cFv();
+extern "C" bool Draw__11daObjCBlk_cFv();
+extern "C" void Delete__11daObjCBlk_cFv();
+extern "C" void daObjCBlk_Draw__FP11daObjCBlk_c();
+extern "C" void daObjCBlk_Execute__FP11daObjCBlk_c();
+extern "C" void daObjCBlk_Delete__FP11daObjCBlk_c();
+extern "C" void daObjCBlk_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BC6978();
+extern "C" void __sinit_d_a_obj_cblock_cpp();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u8 lit_3731[4];
 SECTION_RODATA extern const u32 lit_3732;
@@ -133,8 +200,11 @@ SECTION_BSS extern u8 data_80BC6D24[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -144,7 +214,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/initBaseMtx__11daObjCBlk_cFv.s"
 }
@@ -155,7 +225,7 @@ ASM_FUNCTION(initBaseMtx__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/setBaseMtx__11daObjCBlk_cFv.s"
 }
@@ -166,7 +236,7 @@ ASM_FUNCTION(setBaseMtx__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/Create__11daObjCBlk_cFv.s"
 }
@@ -177,7 +247,7 @@ ASM_FUNCTION(Create__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__4cXyzFv.s"
 }
@@ -188,7 +258,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/CreateHeap__11daObjCBlk_cFv.s"
 }
@@ -199,7 +269,7 @@ ASM_FUNCTION(CreateHeap__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q211daObjCBlk_c7chain_sFv) {
+asm daObjCBlk_c::chain_s::~daObjCBlk_c::chain_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__Q211daObjCBlk_c7chain_sFv.s"
 }
@@ -207,21 +277,16 @@ ASM_FUNCTION(__dt__Q211daObjCBlk_c7chain_sFv) {
 
 
 /* 80BC5E94-80BC5E98 0004+00 .text      __ct__Q211daObjCBlk_c7chain_sFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q211daObjCBlk_c7chain_sFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__ct__Q211daObjCBlk_c7chain_sFv.s"
+daObjCBlk_c::chain_s::daObjCBlk_c::chain_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BC5E98-80BC6020 0188+00 .text      create__11daObjCBlk_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/func_80BC5E98.s"
 }
@@ -229,21 +294,16 @@ ASM_FUNCTION(create__11daObjCBlk_cFv) {
 
 
 /* 80BC6020-80BC6024 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BC6024-80BC60A8 0084+00 .text      __ct__8dCcD_CylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__ct__8dCcD_CylFv.s"
 }
@@ -254,7 +314,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__8dCcD_CylFv.s"
 }
@@ -265,7 +325,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__8cM3dGCylFv.s"
 }
@@ -276,7 +336,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__8cM3dGAabFv.s"
 }
@@ -287,7 +347,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__10dCcD_GSttsFv.s"
 }
@@ -298,7 +358,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjCBlk_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjCBlk_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/Execute__11daObjCBlk_cFPPA3_A4_f.s"
 }
@@ -309,7 +369,7 @@ ASM_FUNCTION(Execute__11daObjCBlk_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWait__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::initWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/initWait__11daObjCBlk_cFv.s"
 }
@@ -320,7 +380,7 @@ ASM_FUNCTION(initWait__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/modeWait__11daObjCBlk_cFv.s"
 }
@@ -331,7 +391,7 @@ ASM_FUNCTION(modeWait__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initWalk__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::initWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/initWalk__11daObjCBlk_cFv.s"
 }
@@ -342,7 +402,7 @@ ASM_FUNCTION(initWalk__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWalk__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::modeWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/modeWalk__11daObjCBlk_cFv.s"
 }
@@ -353,7 +413,7 @@ ASM_FUNCTION(modeWalk__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChainBasePos__11daObjCBlk_cFP4cXyz) {
+asm void daObjCBlk_c::getChainBasePos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/getChainBasePos__11daObjCBlk_cFP4cXyz.s"
 }
@@ -364,7 +424,7 @@ ASM_FUNCTION(getChainBasePos__11daObjCBlk_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPower__11daObjCBlk_cFf) {
+asm void daObjCBlk_c::setPower(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/setPower__11daObjCBlk_cFf.s"
 }
@@ -375,7 +435,7 @@ ASM_FUNCTION(setPower__11daObjCBlk_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWall__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::checkWall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/checkWall__11daObjCBlk_cFv.s"
 }
@@ -383,21 +443,16 @@ ASM_FUNCTION(checkWall__11daObjCBlk_cFv) {
 
 
 /* 80BC6868-80BC6870 0008+00 .text      Draw__11daObjCBlk_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjCBlk_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/Draw__11daObjCBlk_cFv.s"
+bool daObjCBlk_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BC6870-80BC68A4 0034+00 .text      Delete__11daObjCBlk_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjCBlk_cFv) {
+asm void daObjCBlk_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/Delete__11daObjCBlk_cFv.s"
 }
@@ -408,7 +463,7 @@ ASM_FUNCTION(Delete__11daObjCBlk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCBlk_Draw__FP11daObjCBlk_c) {
+asm void daObjCBlk_Draw(daObjCBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/daObjCBlk_Draw__FP11daObjCBlk_c.s"
 }
@@ -419,7 +474,7 @@ ASM_FUNCTION(daObjCBlk_Draw__FP11daObjCBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCBlk_Execute__FP11daObjCBlk_c) {
+asm void daObjCBlk_Execute(daObjCBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/daObjCBlk_Execute__FP11daObjCBlk_c.s"
 }
@@ -430,7 +485,7 @@ ASM_FUNCTION(daObjCBlk_Execute__FP11daObjCBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCBlk_Delete__FP11daObjCBlk_c) {
+asm void daObjCBlk_Delete(daObjCBlk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/daObjCBlk_Delete__FP11daObjCBlk_c.s"
 }
@@ -441,7 +496,7 @@ ASM_FUNCTION(daObjCBlk_Delete__FP11daObjCBlk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCBlk_Create__FP10fopAc_ac_c) {
+asm void daObjCBlk_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/daObjCBlk_Create__FP10fopAc_ac_c.s"
 }
@@ -452,7 +507,7 @@ ASM_FUNCTION(daObjCBlk_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__dt__10cCcD_GSttsFv.s"
 }
@@ -463,7 +518,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC6978) {
+extern "C" asm void func_80BC6978() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/func_80BC6978.s"
 }
@@ -474,7 +529,7 @@ ASM_FUNCTION(func_80BC6978) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_cblock_cpp) {
+extern "C" asm void __sinit_d_a_obj_cblock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cblock/d_a_obj_cblock/__sinit_d_a_obj_cblock_cpp.s"
 }

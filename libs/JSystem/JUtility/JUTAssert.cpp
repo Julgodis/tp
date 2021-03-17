@@ -6,15 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTAssertion (JUTAssertion) False/False
+/* top-level dependencies (begin JUTAssertion) */
+/* top-level dependencies (end JUTAssertion) */
+struct JUTAssertion {
+	/* 802E495C */ void create();
+	/* 802E4960 */ void flush_subroutine();
+	/* 802E499C */ void flushMessage();
+	/* 802E4A54 */ void flushMessage_dbPrint();
+	/* 802E4C34 */ void setVisible(bool);
+	/* 802E4C3C */ void setMessageCount(s32);
+};
+
+// build JUTFont (JUTFont) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin JUTFont) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+	// JUtility::TColor
+	/* 802DED70 */ void setCharColor(JUtility::TColor);
+	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+// build JUtility (JUtility) True/True
+// build JUTDirectPrint (JUTDirectPrint) False/False
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin JUTDirectPrint) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTDirectPrint) */
+struct JUTDirectPrint {
+	// JUtility::TColor
+	/* 802E46D8 */ void drawString(u16, u16, char*);
+	/* 802E4798 */ void setCharColor(JUtility::TColor);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12JUTAssertionFv();
-extern "C" extern void flush_subroutine__12JUTAssertionFv();
-extern "C" extern void flushMessage__12JUTAssertionFv();
-extern "C" extern void flushMessage_dbPrint__12JUTAssertionFv();
-extern "C" extern void setVisible__12JUTAssertionFb();
-extern "C" extern void setMessageCount__12JUTAssertionFi();
+
+extern "C" void create__12JUTAssertionFv();
+extern "C" void flush_subroutine__12JUTAssertionFv();
+extern "C" void flushMessage__12JUTAssertionFv();
+extern "C" void flushMessage_dbPrint__12JUTAssertionFv();
+extern "C" void setVisible__12JUTAssertionFb();
+extern "C" void setMessageCount__12JUTAssertionFi();
 SECTION_BSS extern u8 data_80434870[64];
 SECTION_BSS extern u8 data_804348B0[256];
 SECTION_SBSS extern u8 data_80451530[4 + 4 /* padding */];
@@ -27,12 +78,15 @@ SECTION_SDATA2 extern f64 lit_728;
 // External References:
 // 
 
-extern "C" extern void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern "C" extern void drawString_size_scale__7JUTFontFffffPCcUlb();
-extern "C" extern void drawString__14JUTDirectPrintFUsUsPc();
-extern "C" extern void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
-extern "C" extern void VIGetRetraceCount();
-extern "C" extern void strlen();
+extern "C" void VIGetRetraceCount();
+extern "C" void strlen();
+
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" void drawString__14JUTDirectPrintFUsUsPc();
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+extern "C" void VIGetRetraceCount();
+extern "C" void strlen();
 SECTION_SDATA extern u8 data_804508F8[8];
 SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
@@ -41,26 +95,21 @@ SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 802E495C-802E4960 0004+00 .text      create__12JUTAssertionFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(create__12JUTAssertionFv) {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTAssert/create__12JUTAssertionFv.s"
+/* 802E495C-802E4960 0004+00 rc=1 efc=1 .text      create__12JUTAssertionFv                                     */
+void JUTAssertion::create() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 80451530-80451538 0004+04 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@      */
+/* 80451530-80451538 0004+04 rc=2 efc=0 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@      */
 u8 data_80451530[4 + 4 /* padding */];
 
-/* 802E4960-802E499C 003C+00 .text      flush_subroutine__12JUTAssertionFv                           */
+/* 802E4960-802E499C 003C+00 rc=2 efc=0 .text      flush_subroutine__12JUTAssertionFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flush_subroutine__12JUTAssertionFv) {
+asm void JUTAssertion::flush_subroutine() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/flush_subroutine__12JUTAssertionFv.s"
 }
@@ -68,17 +117,17 @@ ASM_FUNCTION(flush_subroutine__12JUTAssertionFv) {
 
 
 /* ############################################################################################## */
-/* 80434870-804348B0 0040+00 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@  */
+/* 80434870-804348B0 0040+00 rc=2 efc=0 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@  */
 u8 data_80434870[64];
 
-/* 804348B0-804349B0 0100+00 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@    */
+/* 804348B0-804349B0 0100+00 rc=2 efc=0 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@    */
 u8 data_804348B0[256];
 
-/* 802E499C-802E4A54 00B8+00 .text      flushMessage__12JUTAssertionFv                               */
+/* 802E499C-802E4A54 00B8+00 rc=1 efc=1 .text      flushMessage__12JUTAssertionFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flushMessage__12JUTAssertionFv) {
+asm void JUTAssertion::flushMessage() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/flushMessage__12JUTAssertionFv.s"
 }
@@ -86,50 +135,49 @@ ASM_FUNCTION(flushMessage__12JUTAssertionFv) {
 
 
 /* ############################################################################################## */
-/* 804560B8-804560BC 0004+00 .sdata2    @724                                                         */
+/* 804560B8-804560BC 0004+00 rc=1 efc=0 .sdata2    @724                                                         */
 f32 lit_724 = 30.0f;
 
-/* 804560BC-804560C0 0004+00 .sdata2    @725                                                         */
+/* 804560BC-804560C0 0004+00 rc=1 efc=0 .sdata2    @725                                                         */
 f32 lit_725 = 36.0f;
 
-/* 804560C0-804560C8 0004+04 .sdata2    @726                                                         */
+/* 804560C0-804560C8 0004+04 rc=1 efc=0 .sdata2    @726                                                         */
 f32 lit_726 = 54.0f;
 /* padding 4 bytes */
 
-/* 804560C8-804560D0 0008+00 .sdata2    @728                                                         */
+/* 804560C8-804560D0 0008+00 rc=1 efc=0 .sdata2    @728                                                         */
 f64 lit_728 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E4A54-802E4C34 01E0+00 .text      flushMessage_dbPrint__12JUTAssertionFv                       */
+/* 802E4A54-802E4C34 01E0+00 rc=1 efc=1 .text      flushMessage_dbPrint__12JUTAssertionFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flushMessage_dbPrint__12JUTAssertionFv) {
+asm void JUTAssertion::flushMessage_dbPrint() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/flushMessage_dbPrint__12JUTAssertionFv.s"
 }
 #pragma pop
 
 
-/* 802E4C34-802E4C3C 0008+00 .text      setVisible__12JUTAssertionFb                                 */
+/* 802E4C34-802E4C3C 0008+00 rc=2 efc=2 .text      setVisible__12JUTAssertionFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setVisible__12JUTAssertionFb) {
+asm void JUTAssertion::setVisible(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/setVisible__12JUTAssertionFb.s"
 }
 #pragma pop
 
 
-/* 802E4C3C-802E4C54 0018+00 .text      setMessageCount__12JUTAssertionFi                            */
+/* 802E4C3C-802E4C54 0018+00 rc=2 efc=2 .text      setMessageCount__12JUTAssertionFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMessageCount__12JUTAssertionFi) {
+asm void JUTAssertion::setMessageCount(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/setMessageCount__12JUTAssertionFi.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

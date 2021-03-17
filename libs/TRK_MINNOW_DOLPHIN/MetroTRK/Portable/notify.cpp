@@ -9,31 +9,38 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKDoNotifyStopped();
+extern "C" void TRKDoNotifyStopped();
+
+extern "C" void TRKDoNotifyStopped();
 
 // 
 // External References:
 // 
 
-extern "C" extern void TRKReleaseBuffer();
-extern "C" extern void TRKGetFreeBuffer();
-extern "C" extern void TRKRequestSend();
-extern "C" extern void TRKTargetAddExceptionInfo();
-extern "C" extern void TRKTargetAddStopInfo();
+extern "C" void TRKReleaseBuffer();
+extern "C" void TRKGetFreeBuffer();
+extern "C" void TRKRequestSend();
+extern "C" void TRKTargetAddExceptionInfo();
+extern "C" void TRKTargetAddStopInfo();
+
+extern "C" void TRKReleaseBuffer();
+extern "C" void TRKGetFreeBuffer();
+extern "C" void TRKRequestSend();
+extern "C" void TRKTargetAddExceptionInfo();
+extern "C" void TRKTargetAddStopInfo();
 
 // 
 // Declarations:
 // 
 
-/* 8036F4B0-8036F548 0098+00 .text      TRKDoNotifyStopped                                           */
+/* 8036F4B0-8036F548 0098+00 rc=1 efc=1 .text      TRKDoNotifyStopped                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoNotifyStopped) {
+extern "C" asm void TRKDoNotifyStopped() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/notify/TRKDoNotifyStopped.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

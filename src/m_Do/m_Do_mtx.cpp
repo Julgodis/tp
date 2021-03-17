@@ -6,41 +6,130 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Quaternion (Quaternion) False/False
+/* top-level dependencies (begin Quaternion) */
+/* top-level dependencies (end Quaternion) */
+struct Quaternion {
+};
+
+// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266CBC */ void outprod(Vec const&) const;
+	/* 80266EF4 */ void normalize();
+	/* 80266FDC */ void normalizeRS();
+};
+
+// build Quaternion (Quaternion) True/True
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+/* top-level dependencies (begin mDoMtx_stack_c) */
+// outer dependency: cXyz
+// outer dependency: Quaternion
+// outer dependency: csXyz
+/* top-level dependencies (end mDoMtx_stack_c) */
+struct mDoMtx_stack_c {
+	// cXyz
+	// Quaternion
+	// csXyz
+	/* 8000CCC8 */ void push();
+	/* 8000CD14 */ void pop();
+	/* 8000CD64 */ void transS(cXyz const&);
+	/* 8000CD9C */ void transM(f32, f32, f32);
+	/* 8000CDD4 */ void transM(cXyz const&);
+	/* 8000CE00 */ void scaleS(cXyz const&);
+	/* 8000CE38 */ void scaleM(f32, f32, f32);
+	/* 8000CE70 */ void scaleM(cXyz const&);
+	/* 8000CE9C */ void XYZrotS(csXyz const&);
+	/* 8000CED4 */ void XYZrotM(csXyz const&);
+	/* 8000CF0C */ void ZXYrotS(csXyz const&);
+	/* 8000CF44 */ void ZXYrotM(csXyz const&);
+	/* 8000CF7C */ void quatM(Quaternion const*);
+	/* 8000D070 */ ~mDoMtx_stack_c();
+};
+
+// build cXyz (cXyz) True/True
+// build csXyz (csXyz) True/True
+// build mDoMtx_quatStack_c (mDoMtx_quatStack_c) False/False
+/* top-level dependencies (begin mDoMtx_quatStack_c) */
+/* top-level dependencies (end mDoMtx_quatStack_c) */
+struct mDoMtx_quatStack_c {
+	/* 8000D034 */ ~mDoMtx_quatStack_c();
+};
+
+// build Vec (Vec) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void mDoMtx_XYZrotS__FPA4_fsss();
-extern "C" extern void mDoMtx_XYZrotM__FPA4_fsss();
-extern "C" extern void mDoMtx_ZXYrotS__FPA4_fsss();
-extern "C" extern void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" extern void mDoMtx_XrotS__FPA4_fs();
-extern "C" extern void mDoMtx_XrotM__FPA4_fs();
-extern "C" extern void mDoMtx_YrotS__FPA4_fs();
-extern "C" extern void mDoMtx_YrotM__FPA4_fs();
-extern "C" extern void mDoMtx_ZrotS__FPA4_fs();
-extern "C" extern void mDoMtx_ZrotM__FPA4_fs();
-extern "C" extern void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" extern void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-extern "C" extern void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
-extern "C" extern void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
-extern "C" extern void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion();
-extern "C" extern void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
-extern "C" extern void push__14mDoMtx_stack_cFv();
-extern "C" extern void pop__14mDoMtx_stack_cFv();
-extern "C" extern void transS__14mDoMtx_stack_cFRC4cXyz();
-extern "C" extern void transM__14mDoMtx_stack_cFfff();
-extern "C" extern void transM__14mDoMtx_stack_cFRC4cXyz();
-extern "C" extern void scaleS__14mDoMtx_stack_cFRC4cXyz();
-extern "C" extern void scaleM__14mDoMtx_stack_cFfff();
-extern "C" extern void scaleM__14mDoMtx_stack_cFRC4cXyz();
-extern "C" extern void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
-extern "C" extern void XYZrotM__14mDoMtx_stack_cFRC5csXyz();
-extern "C" extern void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
-extern "C" extern void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
-extern "C" extern void quatM__14mDoMtx_stack_cFPC10Quaternion();
-extern "C" extern void __sinit_m_Do_mtx_cpp();
-extern "C" extern void __dt__18mDoMtx_quatStack_cFv();
-extern "C" extern void __dt__14mDoMtx_stack_cFv();
+extern "C" static void mDoMtx_XYZrotS__FPA4_fsss();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotS__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*);
+extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+extern "C" void __sinit_m_Do_mtx_cpp();
+
+extern "C" static void mDoMtx_XYZrotS__FPA4_fsss();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotS__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+extern "C" void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion();
+extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+extern "C" void push__14mDoMtx_stack_cFv();
+extern "C" void pop__14mDoMtx_stack_cFv();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion();
+extern "C" void __sinit_m_Do_mtx_cpp();
+extern "C" void __dt__18mDoMtx_quatStack_cFv();
+extern "C" void __dt__14mDoMtx_stack_cFv();
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 buffer__14mDoMtx_stack_c[768];
@@ -58,23 +147,37 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_mtx__lit_3840;
 // External References:
 // 
 
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void outprod__4cXyzCFRC3Vec();
-extern "C" extern void normalize__4cXyzFv();
-extern "C" extern void normalizeRS__4cXyzFv();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSMTXScale();
-extern "C" extern void PSMTXQuat();
-extern "C" extern void C_MTXLookAt();
-extern "C" extern void PSVECDotProduct();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+void cM_atan2s(f32, f32);
+void operator delete(void*);
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXQuat();
+extern "C" void C_MTXLookAt();
+extern "C" void PSVECDotProduct();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void outprod__4cXyzCFRC3Vec();
+extern "C" void normalize__4cXyzFv();
+extern "C" void normalizeRS__4cXyzFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXQuat();
+extern "C" void C_MTXLookAt();
+extern "C" void PSVECDotProduct();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 __float_epsilon;
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
@@ -83,44 +186,44 @@ SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8000C0CC-8000C164 0098+00 .text      mDoMtx_XYZrotS__FPA4_fsss                                    */
+/* 8000C0CC-8000C164 0098+00 rc=1 efc=0 .text      mDoMtx_XYZrotS__FPA4_fsss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_XYZrotS__FPA4_fsss) {
+extern "C" asm static void mDoMtx_XYZrotS__FPA4_fsss() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XYZrotS__FPA4_fsss.s"
 }
 #pragma pop
 
 
-/* 8000C164-8000C208 00A4+00 .text      mDoMtx_XYZrotM__FPA4_fsss                                    */
+/* 8000C164-8000C208 00A4+00 rc=9 efc=8 .text      mDoMtx_XYZrotM__FPA4_fsss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_XYZrotM__FPA4_fsss) {
+extern "C" asm void mDoMtx_XYZrotM__FPA4_fsss() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XYZrotM__FPA4_fsss.s"
 }
 #pragma pop
 
 
-/* 8000C208-8000C2A0 0098+00 .text      mDoMtx_ZXYrotS__FPA4_fsss                                    */
+/* 8000C208-8000C2A0 0098+00 rc=11 efc=10 .text      mDoMtx_ZXYrotS__FPA4_fsss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_ZXYrotS__FPA4_fsss) {
+extern "C" asm void mDoMtx_ZXYrotS__FPA4_fsss() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZXYrotS__FPA4_fsss.s"
 }
 #pragma pop
 
 
-/* 8000C2A0-8000C344 00A4+00 .text      mDoMtx_ZXYrotM__FPA4_fsss                                    */
+/* 8000C2A0-8000C344 00A4+00 rc=20 efc=19 .text      mDoMtx_ZXYrotM__FPA4_fsss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_ZXYrotM__FPA4_fsss) {
+extern "C" asm void mDoMtx_ZXYrotM__FPA4_fsss() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZXYrotM__FPA4_fsss.s"
 }
@@ -128,85 +231,85 @@ ASM_FUNCTION(mDoMtx_ZXYrotM__FPA4_fsss) {
 
 
 /* ############################################################################################## */
-/* 80451B08-80451B0C 0004+00 .sdata2    @3676                                                        */
+/* 80451B08-80451B0C 0004+00 rc=6 efc=0 .sdata2    @3676                                                        */
 f32 lit_3676 = 1.0f;
 
-/* 80451B0C-80451B10 0004+00 .sdata2    @3677                                                        */
+/* 80451B0C-80451B10 0004+00 rc=7 efc=0 .sdata2    @3677                                                        */
 u8 m_Do_m_Do_mtx__lit_3677[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8000C344-8000C39C 0058+00 .text      mDoMtx_XrotS__FPA4_fs                                        */
+/* 8000C344-8000C39C 0058+00 rc=12 efc=7 .text      mDoMtx_XrotS__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_XrotS__FPA4_fs) {
+extern "C" asm void mDoMtx_XrotS__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XrotS__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C39C-8000C3DC 0040+00 .text      mDoMtx_XrotM__FPA4_fs                                        */
+/* 8000C39C-8000C3DC 0040+00 rc=11 efc=11 .text      mDoMtx_XrotM__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_XrotM__FPA4_fs) {
+extern "C" asm void mDoMtx_XrotM__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XrotM__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C3DC-8000C434 0058+00 .text      mDoMtx_YrotS__FPA4_fs                                        */
+/* 8000C3DC-8000C434 0058+00 rc=29 efc=24 .text      mDoMtx_YrotS__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_YrotS__FPA4_fs) {
+extern "C" asm void mDoMtx_YrotS__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_YrotS__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C434-8000C474 0040+00 .text      mDoMtx_YrotM__FPA4_fs                                        */
+/* 8000C434-8000C474 0040+00 rc=44 efc=44 .text      mDoMtx_YrotM__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_YrotM__FPA4_fs) {
+extern "C" asm void mDoMtx_YrotM__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_YrotM__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C474-8000C4CC 0058+00 .text      mDoMtx_ZrotS__FPA4_fs                                        */
+/* 8000C474-8000C4CC 0058+00 rc=8 efc=1 .text      mDoMtx_ZrotS__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_ZrotS__FPA4_fs) {
+extern "C" asm void mDoMtx_ZrotS__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZrotS__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C4CC-8000C50C 0040+00 .text      mDoMtx_ZrotM__FPA4_fs                                        */
+/* 8000C4CC-8000C50C 0040+00 rc=9 efc=9 .text      mDoMtx_ZrotM__FPA4_fs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_ZrotM__FPA4_fs) {
+extern "C" asm void mDoMtx_ZrotM__FPA4_fs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZrotM__FPA4_fs.s"
 }
 #pragma pop
 
 
-/* 8000C50C-8000C710 0204+00 .text      mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs                           */
+/* 8000C50C-8000C710 0204+00 rc=3 efc=3 .text      mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs) {
+extern "C" asm void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs.s"
 }
@@ -214,59 +317,59 @@ ASM_FUNCTION(mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs) {
 
 
 /* ############################################################################################## */
-/* 80451B10-80451B18 0004+04 .sdata2    @3840                                                        */
+/* 80451B10-80451B18 0004+04 rc=1 efc=0 .sdata2    @3840                                                        */
 f32 m_Do_m_Do_mtx__lit_3840 = 32.0f;
 /* padding 4 bytes */
 
-/* 8000C710-8000C8D0 01C0+00 .text      mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs                     */
+/* 8000C710-8000C8D0 01C0+00 rc=10 efc=10 .text      mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs) {
+extern "C" asm void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs.s"
 }
 #pragma pop
 
 
-/* 8000C8D0-8000C9B0 00E0+00 .text      mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f                    */
+/* 8000C8D0-8000C9B0 00E0+00 rc=2 efc=2 .text      mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f) {
+extern "C" asm void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f.s"
 }
 #pragma pop
 
 
-/* 8000C9B0-8000CB5C 01AC+00 .text      mDoMtx_inverseTranspose__FPA4_CfPA4_f                        */
+/* 8000C9B0-8000CB5C 01AC+00 rc=1 efc=1 .text      mDoMtx_inverseTranspose__FPA4_CfPA4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_inverseTranspose__FPA4_CfPA4_f) {
+extern "C" asm void mDoMtx_inverseTranspose__FPA4_CfPA4_f() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_inverseTranspose__FPA4_CfPA4_f.s"
 }
 #pragma pop
 
 
-/* 8000CB5C-8000CC00 00A4+00 .text      mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion */
+/* 8000CB5C-8000CC00 00A4+00 rc=2 efc=2 .text      mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion) {
+asm void mDoMtx_QuatConcat(Quaternion const* field_0, Quaternion const* field_1, Quaternion* field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion.s"
 }
 #pragma pop
 
 
-/* 8000CC00-8000CCC8 00C8+00 .text      mDoMtx_MtxToRot__FPA4_CfP5csXyz                              */
+/* 8000CC00-8000CCC8 00C8+00 rc=11 efc=11 .text      mDoMtx_MtxToRot__FPA4_CfP5csXyz                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoMtx_MtxToRot__FPA4_CfP5csXyz) {
+extern "C" asm void mDoMtx_MtxToRot__FPA4_CfP5csXyz() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_MtxToRot__FPA4_CfP5csXyz.s"
 }
@@ -274,20 +377,20 @@ ASM_FUNCTION(mDoMtx_MtxToRot__FPA4_CfP5csXyz) {
 
 
 /* ############################################################################################## */
-/* 803DD470-803DD4A0 0030+00 .bss       now__14mDoMtx_stack_c                                        */
+/* 803DD470-803DD4A0 0030+00 rc=154 efc=142 .bss       now__14mDoMtx_stack_c                                        */
 u8 now__14mDoMtx_stack_c[48];
 
-/* 804505A8-804505AC 0004+00 .sdata     next__14mDoMtx_stack_c                                       */
+/* 804505A8-804505AC 0004+00 rc=3 efc=0 .sdata     next__14mDoMtx_stack_c                                       */
 void* next__14mDoMtx_stack_c = (void*)&buffer__14mDoMtx_stack_c;
 
-/* 804505AC-804505B0 0004+00 .sdata     end__14mDoMtx_stack_c                                        */
+/* 804505AC-804505B0 0004+00 rc=2 efc=0 .sdata     end__14mDoMtx_stack_c                                        */
 void* end__14mDoMtx_stack_c = (void*)&m_Do_m_Do_mtx__lit_4048;
 
-/* 8000CCC8-8000CD14 004C+00 .text      push__14mDoMtx_stack_cFv                                     */
+/* 8000CCC8-8000CD14 004C+00 rc=0 efc=0 .text      push__14mDoMtx_stack_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(push__14mDoMtx_stack_cFv) {
+asm void mDoMtx_stack_c::push() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/push__14mDoMtx_stack_cFv.s"
 }
@@ -295,135 +398,135 @@ ASM_FUNCTION(push__14mDoMtx_stack_cFv) {
 
 
 /* ############################################################################################## */
-/* 803DD4A0-803DD7A0 0300+00 .bss       buffer__14mDoMtx_stack_c                                     */
+/* 803DD4A0-803DD7A0 0300+00 rc=2 efc=0 .bss       buffer__14mDoMtx_stack_c                                     */
 u8 buffer__14mDoMtx_stack_c[768];
 
-/* 8000CD14-8000CD64 0050+00 .text      pop__14mDoMtx_stack_cFv                                      */
+/* 8000CD14-8000CD64 0050+00 rc=0 efc=0 .text      pop__14mDoMtx_stack_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pop__14mDoMtx_stack_cFv) {
+asm void mDoMtx_stack_c::pop() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/pop__14mDoMtx_stack_cFv.s"
 }
 #pragma pop
 
 
-/* 8000CD64-8000CD9C 0038+00 .text      transS__14mDoMtx_stack_cFRC4cXyz                             */
+/* 8000CD64-8000CD9C 0038+00 rc=50 efc=50 .text      transS__14mDoMtx_stack_cFRC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(transS__14mDoMtx_stack_cFRC4cXyz) {
+asm void mDoMtx_stack_c::transS(cXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/transS__14mDoMtx_stack_cFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8000CD9C-8000CDD4 0038+00 .text      transM__14mDoMtx_stack_cFfff                                 */
+/* 8000CD9C-8000CDD4 0038+00 rc=30 efc=29 .text      transM__14mDoMtx_stack_cFfff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(transM__14mDoMtx_stack_cFfff) {
+asm void mDoMtx_stack_c::transM(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/transM__14mDoMtx_stack_cFfff.s"
 }
 #pragma pop
 
 
-/* 8000CDD4-8000CE00 002C+00 .text      transM__14mDoMtx_stack_cFRC4cXyz                             */
+/* 8000CDD4-8000CE00 002C+00 rc=3 efc=3 .text      transM__14mDoMtx_stack_cFRC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(transM__14mDoMtx_stack_cFRC4cXyz) {
+asm void mDoMtx_stack_c::transM(cXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/transM__14mDoMtx_stack_cFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8000CE00-8000CE38 0038+00 .text      scaleS__14mDoMtx_stack_cFRC4cXyz                             */
+/* 8000CE00-8000CE38 0038+00 rc=0 efc=0 .text      scaleS__14mDoMtx_stack_cFRC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(scaleS__14mDoMtx_stack_cFRC4cXyz) {
+asm void mDoMtx_stack_c::scaleS(cXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/scaleS__14mDoMtx_stack_cFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8000CE38-8000CE70 0038+00 .text      scaleM__14mDoMtx_stack_cFfff                                 */
+/* 8000CE38-8000CE70 0038+00 rc=14 efc=13 .text      scaleM__14mDoMtx_stack_cFfff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(scaleM__14mDoMtx_stack_cFfff) {
+asm void mDoMtx_stack_c::scaleM(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/scaleM__14mDoMtx_stack_cFfff.s"
 }
 #pragma pop
 
 
-/* 8000CE70-8000CE9C 002C+00 .text      scaleM__14mDoMtx_stack_cFRC4cXyz                             */
+/* 8000CE70-8000CE9C 002C+00 rc=7 efc=7 .text      scaleM__14mDoMtx_stack_cFRC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(scaleM__14mDoMtx_stack_cFRC4cXyz) {
+asm void mDoMtx_stack_c::scaleM(cXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/scaleM__14mDoMtx_stack_cFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8000CE9C-8000CED4 0038+00 .text      XYZrotS__14mDoMtx_stack_cFRC5csXyz                           */
+/* 8000CE9C-8000CED4 0038+00 rc=3 efc=3 .text      XYZrotS__14mDoMtx_stack_cFRC5csXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(XYZrotS__14mDoMtx_stack_cFRC5csXyz) {
+asm void mDoMtx_stack_c::XYZrotS(csXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/XYZrotS__14mDoMtx_stack_cFRC5csXyz.s"
 }
 #pragma pop
 
 
-/* 8000CED4-8000CF0C 0038+00 .text      XYZrotM__14mDoMtx_stack_cFRC5csXyz                           */
+/* 8000CED4-8000CF0C 0038+00 rc=1 efc=1 .text      XYZrotM__14mDoMtx_stack_cFRC5csXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(XYZrotM__14mDoMtx_stack_cFRC5csXyz) {
+asm void mDoMtx_stack_c::XYZrotM(csXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/XYZrotM__14mDoMtx_stack_cFRC5csXyz.s"
 }
 #pragma pop
 
 
-/* 8000CF0C-8000CF44 0038+00 .text      ZXYrotS__14mDoMtx_stack_cFRC5csXyz                           */
+/* 8000CF0C-8000CF44 0038+00 rc=5 efc=5 .text      ZXYrotS__14mDoMtx_stack_cFRC5csXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ZXYrotS__14mDoMtx_stack_cFRC5csXyz) {
+asm void mDoMtx_stack_c::ZXYrotS(csXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/ZXYrotS__14mDoMtx_stack_cFRC5csXyz.s"
 }
 #pragma pop
 
 
-/* 8000CF44-8000CF7C 0038+00 .text      ZXYrotM__14mDoMtx_stack_cFRC5csXyz                           */
+/* 8000CF44-8000CF7C 0038+00 rc=24 efc=24 .text      ZXYrotM__14mDoMtx_stack_cFRC5csXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ZXYrotM__14mDoMtx_stack_cFRC5csXyz) {
+asm void mDoMtx_stack_c::ZXYrotM(csXyz const& field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/ZXYrotM__14mDoMtx_stack_cFRC5csXyz.s"
 }
 #pragma pop
 
 
-/* 8000CF7C-8000CFB8 003C+00 .text      quatM__14mDoMtx_stack_cFPC10Quaternion                       */
+/* 8000CF7C-8000CFB8 003C+00 rc=1 efc=1 .text      quatM__14mDoMtx_stack_cFPC10Quaternion                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(quatM__14mDoMtx_stack_cFPC10Quaternion) {
+asm void mDoMtx_stack_c::quatM(Quaternion const* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/quatM__14mDoMtx_stack_cFPC10Quaternion.s"
 }
@@ -431,36 +534,36 @@ ASM_FUNCTION(quatM__14mDoMtx_stack_cFPC10Quaternion) {
 
 
 /* ############################################################################################## */
-/* 80450C18-80450C20 0001+07 .sbss      mDoMtx_stack                                                 */
+/* 80450C18-80450C20 0001+07 rc=1 efc=0 .sbss      mDoMtx_stack                                                 */
 u8 mDoMtx_stack[1 + 7 /* padding */];
 
-/* 8000CFB8-8000D034 007C+00 .text      __sinit_m_Do_mtx_cpp                                         */
+/* 8000CFB8-8000D034 007C+00 rc=1 efc=1 .text      __sinit_m_Do_mtx_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_m_Do_mtx_cpp) {
+extern "C" asm void __sinit_m_Do_mtx_cpp() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/__sinit_m_Do_mtx_cpp.s"
 }
 #pragma pop
 
 
-/* 8000D034-8000D070 003C+00 .text      __dt__18mDoMtx_quatStack_cFv                                 */
+/* 8000D034-8000D070 003C+00 rc=1 efc=0 .text      __dt__18mDoMtx_quatStack_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18mDoMtx_quatStack_cFv) {
+asm mDoMtx_quatStack_c::~mDoMtx_quatStack_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/__dt__18mDoMtx_quatStack_cFv.s"
 }
 #pragma pop
 
 
-/* 8000D070-8000D0AC 003C+00 .text      __dt__14mDoMtx_stack_cFv                                     */
+/* 8000D070-8000D0AC 003C+00 rc=1 efc=0 .text      __dt__14mDoMtx_stack_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoMtx_stack_cFv) {
+asm mDoMtx_stack_c::~mDoMtx_stack_c() {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/__dt__14mDoMtx_stack_cFv.s"
 }
@@ -468,7 +571,7 @@ ASM_FUNCTION(__dt__14mDoMtx_stack_cFv) {
 
 
 /* ############################################################################################## */
-/* 803A2FD8-803A3020 0030+18 .data      g_mDoMtx_identity                                            */
+/* 803A2FD8-803A3020 0030+18 rc=23 efc=23 .data      g_mDoMtx_identity                                            */
 u8 g_mDoMtx_identity[72] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -478,12 +581,12 @@ u8 g_mDoMtx_identity[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803DD7A0-803DD7AC 000C+00 .bss       @4048                                                        */
+/* 803DD7A0-803DD7AC 000C+00 rc=1 efc=0 .bss       @4048                                                        */
 u8 m_Do_m_Do_mtx__lit_4048[12];
 
-/* 803DD7AC-803DD7B8 000C+00 .bss       @4078                                                        */
+/* 803DD7AC-803DD7B8 000C+00 rc=0 efc=0 .bss       @4078                                                        */
 u8 m_Do_m_Do_mtx__lit_4078[12];
 
-/* 803DD7B8-803DD8D8 011C+04 .bss       mDoMtx_quatStack                                             */
+/* 803DD7B8-803DD8D8 011C+04 rc=0 efc=0 .bss       mDoMtx_quatStack                                             */
 u8 mDoMtx_quatStack[284 + 4 /* padding */];
 

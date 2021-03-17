@@ -6,32 +6,85 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dCcD_GObjInf;
+struct daZdoor_c;
+
+struct daZdoor_c {
+	void init_cyl();
+	void set_cyl();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void checkPlayerPos__FP9daZdoor_c();
-extern "C" extern void doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void init_cyl__9daZdoor_cFv();
-extern "C" extern void set_cyl__9daZdoor_cFv();
-extern "C" extern void setBaseMtx__9daZdoor_cFv();
-extern "C" extern void Create__9daZdoor_cFv();
-extern "C" extern void CreateHeap__9daZdoor_cFv();
-extern "C" extern void create1st__9daZdoor_cFv();
-extern "C" extern void Execute__9daZdoor_cFPPA3_A4_f();
-extern "C" extern void Draw__9daZdoor_cFv();
-extern "C" extern void Delete__9daZdoor_cFv();
-extern "C" extern void daZdoor_create1st__FP9daZdoor_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daZdoor_MoveBGDelete__FP9daZdoor_c();
-extern "C" extern void daZdoor_MoveBGExecute__FP9daZdoor_c();
-extern "C" extern void daZdoor_MoveBGDraw__FP9daZdoor_c();
-extern "C" extern void func_80D401D4();
-extern "C" extern void func_80D401DC();
+void checkPlayerPos(daZdoor_c*);
+void doorCoHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void doorTgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+extern "C" void Execute__9daZdoor_cFPPA3_A4_f();
+void daZdoor_create1st(daZdoor_c*);
+void daZdoor_MoveBGDelete(daZdoor_c*);
+void daZdoor_MoveBGExecute(daZdoor_c*);
+void daZdoor_MoveBGDraw(daZdoor_c*);
+extern "C" void func_80D401D4();
+extern "C" void func_80D401DC();
+
+extern "C" void checkPlayerPos__FP9daZdoor_c();
+extern "C" void doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void init_cyl__9daZdoor_cFv();
+extern "C" void set_cyl__9daZdoor_cFv();
+extern "C" void setBaseMtx__9daZdoor_cFv();
+extern "C" void Create__9daZdoor_cFv();
+extern "C" void CreateHeap__9daZdoor_cFv();
+extern "C" void create1st__9daZdoor_cFv();
+extern "C" void Execute__9daZdoor_cFPPA3_A4_f();
+extern "C" void Draw__9daZdoor_cFv();
+extern "C" void Delete__9daZdoor_cFv();
+extern "C" void daZdoor_create1st__FP9daZdoor_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daZdoor_MoveBGDelete__FP9daZdoor_c();
+extern "C" void daZdoor_MoveBGExecute__FP9daZdoor_c();
+extern "C" void daZdoor_MoveBGDraw__FP9daZdoor_c();
+extern "C" void func_80D401D4();
+extern "C" void func_80D401DC();
 SECTION_RODATA extern const u8 l_cyl_data[60];
 SECTION_RODATA extern const u8 l_cyl_data2[60];
 SECTION_RODATA extern const u8 l_open_limit_max[6 + 2 /* padding */];
@@ -65,7 +118,9 @@ SECTION_DATA extern void*const __vt__9daZdoor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +130,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerPos__FP9daZdoor_c) {
+asm void checkPlayerPos(daZdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/checkPlayerPos__FP9daZdoor_c.s"
 }
@@ -86,7 +141,7 @@ ASM_FUNCTION(checkPlayerPos__FP9daZdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void doorCoHitCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D3F4DC.s"
 }
@@ -97,7 +152,7 @@ ASM_FUNCTION(doorCoHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void doorTgHitCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D3F570.s"
 }
@@ -108,7 +163,7 @@ ASM_FUNCTION(doorTgHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_cyl__9daZdoor_cFv) {
+asm void daZdoor_c::init_cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/init_cyl__9daZdoor_cFv.s"
 }
@@ -119,7 +174,7 @@ ASM_FUNCTION(init_cyl__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_cyl__9daZdoor_cFv) {
+asm void daZdoor_c::set_cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/set_cyl__9daZdoor_cFv.s"
 }
@@ -130,7 +185,7 @@ ASM_FUNCTION(set_cyl__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daZdoor_cFv) {
+asm void daZdoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/setBaseMtx__9daZdoor_cFv.s"
 }
@@ -141,7 +196,7 @@ ASM_FUNCTION(setBaseMtx__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__9daZdoor_cFv) {
+asm void daZdoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/Create__9daZdoor_cFv.s"
 }
@@ -152,7 +207,7 @@ ASM_FUNCTION(Create__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daZdoor_cFv) {
+asm void daZdoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/CreateHeap__9daZdoor_cFv.s"
 }
@@ -163,7 +218,7 @@ ASM_FUNCTION(CreateHeap__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__9daZdoor_cFv) {
+asm void daZdoor_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/create1st__9daZdoor_cFv.s"
 }
@@ -174,7 +229,7 @@ ASM_FUNCTION(create1st__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daZdoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daZdoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/Execute__9daZdoor_cFPPA3_A4_f.s"
 }
@@ -185,7 +240,7 @@ ASM_FUNCTION(Execute__9daZdoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daZdoor_cFv) {
+asm void daZdoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/Draw__9daZdoor_cFv.s"
 }
@@ -196,7 +251,7 @@ ASM_FUNCTION(Draw__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daZdoor_cFv) {
+asm void daZdoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/Delete__9daZdoor_cFv.s"
 }
@@ -207,7 +262,7 @@ ASM_FUNCTION(Delete__9daZdoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZdoor_create1st__FP9daZdoor_c) {
+asm void daZdoor_create1st(daZdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/daZdoor_create1st__FP9daZdoor_c.s"
 }
@@ -218,7 +273,7 @@ ASM_FUNCTION(daZdoor_create1st__FP9daZdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/__dt__8cM3dGCylFv.s"
 }
@@ -229,7 +284,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/__dt__8cM3dGAabFv.s"
 }
@@ -240,7 +295,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/__dt__8dCcD_CylFv.s"
 }
@@ -251,7 +306,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/__ct__8dCcD_CylFv.s"
 }
@@ -262,7 +317,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -273,7 +328,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZdoor_MoveBGDelete__FP9daZdoor_c) {
+asm void daZdoor_MoveBGDelete(daZdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/daZdoor_MoveBGDelete__FP9daZdoor_c.s"
 }
@@ -284,7 +339,7 @@ ASM_FUNCTION(daZdoor_MoveBGDelete__FP9daZdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZdoor_MoveBGExecute__FP9daZdoor_c) {
+asm void daZdoor_MoveBGExecute(daZdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/daZdoor_MoveBGExecute__FP9daZdoor_c.s"
 }
@@ -295,7 +350,7 @@ ASM_FUNCTION(daZdoor_MoveBGExecute__FP9daZdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daZdoor_MoveBGDraw__FP9daZdoor_c) {
+asm void daZdoor_MoveBGDraw(daZdoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/daZdoor_MoveBGDraw__FP9daZdoor_c.s"
 }
@@ -306,7 +361,7 @@ ASM_FUNCTION(daZdoor_MoveBGDraw__FP9daZdoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D401D4) {
+extern "C" asm void func_80D401D4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D401D4.s"
 }
@@ -317,7 +372,7 @@ ASM_FUNCTION(func_80D401D4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D401DC) {
+extern "C" asm void func_80D401DC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zdoor/d_a_obj_zdoor/func_80D401DC.s"
 }

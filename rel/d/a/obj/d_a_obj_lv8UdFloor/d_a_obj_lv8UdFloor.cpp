@@ -6,35 +6,81 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daUdFloor_c;
+
+struct daUdFloor_HIO_c {
+	daUdFloor_HIO_c();
+	~daUdFloor_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daUdFloor_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveLift();
+	void init_modeWait();
+	void modeWait();
+	void init_modeUpMoveInit();
+	void modeUpMoveInit();
+	void colorAnm(s32);
+	void init_modeUpMove();
+	void modeUpMove();
+	void init_modeDownMoveInit();
+	void modeDownMoveInit();
+	void init_modeDownMove();
+	void modeDownMove();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daUdFloor_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daUdFloor_cFv();
-extern "C" extern void CreateHeap__11daUdFloor_cFv();
-extern "C" extern void create__11daUdFloor_cFv();
-extern "C" extern void Execute__11daUdFloor_cFPPA3_A4_f();
-extern "C" extern void moveLift__11daUdFloor_cFv();
-extern "C" extern void init_modeWait__11daUdFloor_cFv();
-extern "C" extern void modeWait__11daUdFloor_cFv();
-extern "C" extern void init_modeUpMoveInit__11daUdFloor_cFv();
-extern "C" extern void modeUpMoveInit__11daUdFloor_cFv();
-extern "C" extern void colorAnm__11daUdFloor_cFi();
-extern "C" extern void init_modeUpMove__11daUdFloor_cFv();
-extern "C" extern void modeUpMove__11daUdFloor_cFv();
-extern "C" extern void init_modeDownMoveInit__11daUdFloor_cFv();
-extern "C" extern void modeDownMoveInit__11daUdFloor_cFv();
-extern "C" extern void init_modeDownMove__11daUdFloor_cFv();
-extern "C" extern void modeDownMove__11daUdFloor_cFv();
-extern "C" extern void Draw__11daUdFloor_cFv();
-extern "C" extern void Delete__11daUdFloor_cFv();
-extern "C" extern void daUdFloor_Draw__FP11daUdFloor_c();
-extern "C" extern void daUdFloor_Execute__FP11daUdFloor_c();
-extern "C" extern void daUdFloor_Delete__FP11daUdFloor_c();
-extern "C" extern void daUdFloor_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daUdFloor_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv8UdFloor_cpp();
+extern "C" void Execute__11daUdFloor_cFPPA3_A4_f();
+void daUdFloor_Draw(daUdFloor_c*);
+void daUdFloor_Execute(daUdFloor_c*);
+void daUdFloor_Delete(daUdFloor_c*);
+void daUdFloor_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv8UdFloor_cpp();
+
+extern "C" void __ct__15daUdFloor_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daUdFloor_cFv();
+extern "C" void CreateHeap__11daUdFloor_cFv();
+extern "C" void create__11daUdFloor_cFv();
+extern "C" void Execute__11daUdFloor_cFPPA3_A4_f();
+extern "C" void moveLift__11daUdFloor_cFv();
+extern "C" void init_modeWait__11daUdFloor_cFv();
+extern "C" void modeWait__11daUdFloor_cFv();
+extern "C" void init_modeUpMoveInit__11daUdFloor_cFv();
+extern "C" void modeUpMoveInit__11daUdFloor_cFv();
+extern "C" void colorAnm__11daUdFloor_cFi();
+extern "C" void init_modeUpMove__11daUdFloor_cFv();
+extern "C" void modeUpMove__11daUdFloor_cFv();
+extern "C" void init_modeDownMoveInit__11daUdFloor_cFv();
+extern "C" void modeDownMoveInit__11daUdFloor_cFv();
+extern "C" void init_modeDownMove__11daUdFloor_cFv();
+extern "C" void modeDownMove__11daUdFloor_cFv();
+extern "C" void Draw__11daUdFloor_cFv();
+extern "C" void Delete__11daUdFloor_cFv();
+extern "C" void daUdFloor_Draw__FP11daUdFloor_c();
+extern "C" void daUdFloor_Execute__FP11daUdFloor_c();
+extern "C" void daUdFloor_Delete__FP11daUdFloor_c();
+extern "C" void daUdFloor_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daUdFloor_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv8UdFloor_cpp();
 SECTION_RODATA extern const u8 lit_3628[4];
 SECTION_RODATA extern const u8 l_bmdIdx[8];
 SECTION_RODATA extern const u8 l_dzbIdx[8];
@@ -71,8 +117,11 @@ SECTION_BSS extern u8 data_80C8CDA4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -82,7 +131,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daUdFloor_HIO_cFv) {
+asm daUdFloor_HIO_c::daUdFloor_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/__ct__15daUdFloor_HIO_cFv.s"
 }
@@ -93,7 +142,7 @@ ASM_FUNCTION(__ct__15daUdFloor_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -104,7 +153,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daUdFloor_cFv) {
+asm void daUdFloor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/setBaseMtx__11daUdFloor_cFv.s"
 }
@@ -115,7 +164,7 @@ ASM_FUNCTION(setBaseMtx__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daUdFloor_cFv) {
+asm void daUdFloor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/CreateHeap__11daUdFloor_cFv.s"
 }
@@ -126,7 +175,7 @@ ASM_FUNCTION(CreateHeap__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daUdFloor_cFv) {
+asm void daUdFloor_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/create__11daUdFloor_cFv.s"
 }
@@ -137,7 +186,7 @@ ASM_FUNCTION(create__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daUdFloor_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daUdFloor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/Execute__11daUdFloor_cFPPA3_A4_f.s"
 }
@@ -148,7 +197,7 @@ ASM_FUNCTION(Execute__11daUdFloor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLift__11daUdFloor_cFv) {
+asm void daUdFloor_c::moveLift() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/moveLift__11daUdFloor_cFv.s"
 }
@@ -159,7 +208,7 @@ ASM_FUNCTION(moveLift__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daUdFloor_cFv) {
+asm void daUdFloor_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/init_modeWait__11daUdFloor_cFv.s"
 }
@@ -167,21 +216,16 @@ ASM_FUNCTION(init_modeWait__11daUdFloor_cFv) {
 
 
 /* 80C8C270-80C8C274 0004+00 .text      modeWait__11daUdFloor_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daUdFloor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/modeWait__11daUdFloor_cFv.s"
+void daUdFloor_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C8C274-80C8C310 009C+00 .text      init_modeUpMoveInit__11daUdFloor_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeUpMoveInit__11daUdFloor_cFv) {
+asm void daUdFloor_c::init_modeUpMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/init_modeUpMoveInit__11daUdFloor_cFv.s"
 }
@@ -192,7 +236,7 @@ ASM_FUNCTION(init_modeUpMoveInit__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpMoveInit__11daUdFloor_cFv) {
+asm void daUdFloor_c::modeUpMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/modeUpMoveInit__11daUdFloor_cFv.s"
 }
@@ -203,7 +247,7 @@ ASM_FUNCTION(modeUpMoveInit__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(colorAnm__11daUdFloor_cFi) {
+asm void daUdFloor_c::colorAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/colorAnm__11daUdFloor_cFi.s"
 }
@@ -214,7 +258,7 @@ ASM_FUNCTION(colorAnm__11daUdFloor_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeUpMove__11daUdFloor_cFv) {
+asm void daUdFloor_c::init_modeUpMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/init_modeUpMove__11daUdFloor_cFv.s"
 }
@@ -225,7 +269,7 @@ ASM_FUNCTION(init_modeUpMove__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpMove__11daUdFloor_cFv) {
+asm void daUdFloor_c::modeUpMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/modeUpMove__11daUdFloor_cFv.s"
 }
@@ -236,7 +280,7 @@ ASM_FUNCTION(modeUpMove__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDownMoveInit__11daUdFloor_cFv) {
+asm void daUdFloor_c::init_modeDownMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/init_modeDownMoveInit__11daUdFloor_cFv.s"
 }
@@ -247,7 +291,7 @@ ASM_FUNCTION(init_modeDownMoveInit__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDownMoveInit__11daUdFloor_cFv) {
+asm void daUdFloor_c::modeDownMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/modeDownMoveInit__11daUdFloor_cFv.s"
 }
@@ -258,7 +302,7 @@ ASM_FUNCTION(modeDownMoveInit__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDownMove__11daUdFloor_cFv) {
+asm void daUdFloor_c::init_modeDownMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/init_modeDownMove__11daUdFloor_cFv.s"
 }
@@ -269,7 +313,7 @@ ASM_FUNCTION(init_modeDownMove__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDownMove__11daUdFloor_cFv) {
+asm void daUdFloor_c::modeDownMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/modeDownMove__11daUdFloor_cFv.s"
 }
@@ -280,7 +324,7 @@ ASM_FUNCTION(modeDownMove__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daUdFloor_cFv) {
+asm void daUdFloor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/Draw__11daUdFloor_cFv.s"
 }
@@ -291,7 +335,7 @@ ASM_FUNCTION(Draw__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daUdFloor_cFv) {
+asm void daUdFloor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/Delete__11daUdFloor_cFv.s"
 }
@@ -302,7 +346,7 @@ ASM_FUNCTION(Delete__11daUdFloor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daUdFloor_Draw__FP11daUdFloor_c) {
+asm void daUdFloor_Draw(daUdFloor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Draw__FP11daUdFloor_c.s"
 }
@@ -313,7 +357,7 @@ ASM_FUNCTION(daUdFloor_Draw__FP11daUdFloor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daUdFloor_Execute__FP11daUdFloor_c) {
+asm void daUdFloor_Execute(daUdFloor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Execute__FP11daUdFloor_c.s"
 }
@@ -324,7 +368,7 @@ ASM_FUNCTION(daUdFloor_Execute__FP11daUdFloor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daUdFloor_Delete__FP11daUdFloor_c) {
+asm void daUdFloor_Delete(daUdFloor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Delete__FP11daUdFloor_c.s"
 }
@@ -335,7 +379,7 @@ ASM_FUNCTION(daUdFloor_Delete__FP11daUdFloor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daUdFloor_Create__FP10fopAc_ac_c) {
+asm void daUdFloor_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Create__FP10fopAc_ac_c.s"
 }
@@ -346,7 +390,7 @@ ASM_FUNCTION(daUdFloor_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daUdFloor_HIO_cFv) {
+asm daUdFloor_HIO_c::~daUdFloor_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/__dt__15daUdFloor_HIO_cFv.s"
 }
@@ -357,7 +401,7 @@ ASM_FUNCTION(__dt__15daUdFloor_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv8UdFloor_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv8UdFloor_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/__sinit_d_a_obj_lv8UdFloor_cpp.s"
 }

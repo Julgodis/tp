@@ -6,14 +6,134 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio_JParticle (JStudio_JParticle) False/False
+// build JStudio_JParticle (JStudio_JParticle) True/False
+struct JStudio_JParticle;
+// build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::TAdaptor_particle
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build TObject (JStudio::TObject) False/False
+	/* dependencies (begin JStudio::TObject) */
+	/* dependencies (end JStudio::TObject) */
+	struct TObject {
+	};
+
+	// build stb (JStudio::stb) False/False
+	/* dependencies (begin JStudio::stb) */
+	/* dependencies (end JStudio::stb) */
+	struct stb {
+		// build data (JStudio::stb::data) False/False
+		/* dependencies (begin JStudio::stb::data) */
+		/* dependencies (end JStudio::stb::data) */
+		struct data {
+			// build TParse_TBlock_object (JStudio::stb::data::TParse_TBlock_object) False/False
+			/* dependencies (begin JStudio::stb::data::TParse_TBlock_object) */
+			/* dependencies (end JStudio::stb::data::TParse_TBlock_object) */
+			struct TParse_TBlock_object {
+			};
+
+		};
+
+	};
+
+	// build TCreateObject (JStudio::TCreateObject) False/False
+	/* dependencies (begin JStudio::TCreateObject) */
+	/* dependencies (end JStudio::TCreateObject) */
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
+	};
+
+	// build TObject_particle (JStudio::TObject_particle) False/False
+	/* dependencies (begin JStudio::TObject_particle) */
+	// inner dependency: TAdaptor_particle (JStudio::TAdaptor_particle) True False (for JStudio::TObject_particle)
+	// build TAdaptor_particle (JStudio::TAdaptor_particle) False/False
+	/* dependencies (begin JStudio::TAdaptor_particle) */
+	/* dependencies (end JStudio::TAdaptor_particle) */
+	struct TAdaptor_particle {
+	};
+
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_particle)
+	// build stb (JStudio::stb) True/True
+	/* dependencies (end JStudio::TObject_particle) */
+	struct TObject_particle {
+		// JStudio::TAdaptor_particle
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
+	};
+
+	// build TAdaptor_particle (JStudio::TAdaptor_particle) True/True
+};
+
+// build JStudio (JStudio) True/True
+// build JPABaseEmitter (JPABaseEmitter) False/False
+/* top-level dependencies (begin JPABaseEmitter) */
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+};
+
+/* top-level dependencies (begin JStudio_JParticle) */
+// outer dependency: JStudio_JParticle::TCreateObject
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: JStudio::TObject
+// outer dependency: JPABaseEmitter
+/* top-level dependencies (end JStudio_JParticle) */
+struct JStudio_JParticle {
+	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
+	/* dependencies (begin JStudio_JParticle::TCreateObject) */
+	/* dependencies (end JStudio_JParticle::TCreateObject) */
+	struct TCreateObject {
+		// JStudio::TObject
+		// JPABaseEmitter
+		// JStudio::stb::data::TParse_TBlock_object
+		/* 8028E3A0 */ ~TCreateObject();
+		/* 8028E400 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
+		/* 8028E474 */ void emitter_create(u32);
+		/* 8028E4E4 */ void emitter_destroy(JPABaseEmitter*);
+		/* 8028E508 */ void createObject_JPA_PARTICLE_(JStudio::stb::data::TParse_TBlock_object const&, JStudio_JParticle::TCreateObject*);
+	};
+
+	// build TAdaptor_particle (JStudio_JParticle::TAdaptor_particle) False/False
+	/* dependencies (begin JStudio_JParticle::TAdaptor_particle) */
+	// inner dependency: TCreateObject (JStudio_JParticle::TCreateObject) True False (for JStudio_JParticle::TAdaptor_particle)
+	// build TCreateObject (JStudio_JParticle::TCreateObject) True/True
+	/* dependencies (end JStudio_JParticle::TAdaptor_particle) */
+	struct TAdaptor_particle {
+		// JStudio_JParticle::TCreateObject
+		/* 8028E60C */ TAdaptor_particle(JStudio_JParticle::TCreateObject*);
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+// build JPABaseEmitter (JPABaseEmitter) True/True
+// build JPAEmitterManager (JPAEmitterManager) False/False
+// build JPABaseEmitter (JPABaseEmitter) True/True
+/* top-level dependencies (begin JPAEmitterManager) */
+// outer dependency: JPABaseEmitter
+/* top-level dependencies (end JPAEmitterManager) */
+struct JPAEmitterManager {
+	// JPABaseEmitter
+	/* 8027E2D8 */ void forceDeleteEmitter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__Q217JStudio_JParticle13TCreateObjectFv();
-extern "C" extern void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" extern void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl();
-extern "C" extern void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
-extern "C" extern void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject();
+
+extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv();
+extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl();
+extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
+extern "C" void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject();
 SECTION_RODATA extern const u8 lit_1172[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__Q217JStudio_JParticle13TCreateObject[6];
 
@@ -21,22 +141,28 @@ SECTION_DATA extern void*const __vt__Q217JStudio_JParticle13TCreateObject[6];
 // External References:
 // 
 
-extern "C" extern void func_8027DEBC();
-extern "C" extern void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
-extern "C" extern void __dt__Q27JStudio13TCreateObjectFv();
-extern "C" extern void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
-extern "C" extern void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
+extern "C" void func_8027DEBC();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+
+extern "C" void func_8027DEBC();
+extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
+extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C5AD8-803C5AF0 0018+00 .data      __vt__Q217JStudio_JParticle13TCreateObject                   */
+/* 803C5AD8-803C5AF0 0018+00 rc=2 efc=1 .data      __vt__Q217JStudio_JParticle13TCreateObject                   */
 void* const __vt__Q217JStudio_JParticle13TCreateObject[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -46,22 +172,22 @@ void* const __vt__Q217JStudio_JParticle13TCreateObject[6] = {
 	(void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
 };
 
-/* 8028E3A0-8028E400 0060+00 .text      __dt__Q217JStudio_JParticle13TCreateObjectFv                 */
+/* 8028E3A0-8028E400 0060+00 rc=2 efc=1 .text      __dt__Q217JStudio_JParticle13TCreateObjectFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q217JStudio_JParticle13TCreateObjectFv) {
+asm JStudio_JParticle::TCreateObject::~TCreateObject() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/control/__dt__Q217JStudio_JParticle13TCreateObjectFv.s"
 }
 #pragma pop
 
 
-/* 8028E400-8028E474 0074+00 .text      create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 8028E400-8028E474 0074+00 rc=2 efc=1 .text      create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object) {
+asm void JStudio_JParticle::TCreateObject::create(JStudio::TObject** field_0, JStudio::stb::data::TParse_TBlock_object const& field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/control/func_8028E400.s"
 }
@@ -69,44 +195,43 @@ ASM_FUNCTION(create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRC
 
 
 /* ############################################################################################## */
-/* 8039ABA8-8039ABB8 000C+04 .rodata    @1172                                                        */
+/* 8039ABA8-8039ABB8 000C+04 rc=1 efc=0 .rodata    @1172                                                        */
 SECTION_RODATA const u8 lit_1172[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8028E474-8028E4E4 0070+00 .text      emitter_create__Q217JStudio_JParticle13TCreateObjectFUl      */
+/* 8028E474-8028E4E4 0070+00 rc=1 efc=0 .text      emitter_create__Q217JStudio_JParticle13TCreateObjectFUl      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(emitter_create__Q217JStudio_JParticle13TCreateObjectFUl) {
+asm void JStudio_JParticle::TCreateObject::emitter_create(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/control/emitter_create__Q217JStudio_JParticle13TCreateObjectFUl.s"
 }
 #pragma pop
 
 
-/* 8028E4E4-8028E508 0024+00 .text      emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter */
+/* 8028E4E4-8028E508 0024+00 rc=2 efc=1 .text      emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter) {
+asm void JStudio_JParticle::TCreateObject::emitter_destroy(JPABaseEmitter* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/control/emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter.s"
 }
 #pragma pop
 
 
-/* 8028E508-8028E60C 0104+00 .text      createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject */
+/* 8028E508-8028E60C 0104+00 rc=1 efc=0 .text      createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject) {
+asm void JStudio_JParticle::TCreateObject::createObject_JPA_PARTICLE_(JStudio::stb::data::TParse_TBlock_object const& field_0, JStudio_JParticle::TCreateObject* field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/control/func_8028E508.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

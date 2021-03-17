@@ -6,13 +6,31 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daScex_c;
+
+struct daScex_c {
+	void checkWork();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void checkWork__8daScex_cFv();
-extern "C" extern void daScex_Create__FP10fopAc_ac_c();
-extern "C" extern void daScex_Execute__FP8daScex_c();
-extern "C" extern void execute__8daScex_cFv();
+void daScex_Create(fopAc_ac_c*);
+void daScex_Execute(daScex_c*);
+
+extern "C" void checkWork__8daScex_cFv();
+extern "C" void daScex_Create__FP10fopAc_ac_c();
+extern "C" void daScex_Execute__FP8daScex_c();
+extern "C" void execute__8daScex_cFv();
 SECTION_RODATA extern const u32 lit_3758;
 SECTION_RODATA extern const u32 lit_3759;
 SECTION_RODATA extern const u8 lit_3840[4];
@@ -25,7 +43,9 @@ SECTION_DATA extern u8 g_profile_SCENE_EXIT[52];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -35,7 +55,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWork__8daScex_cFv) {
+asm void daScex_c::checkWork() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/checkWork__8daScex_cFv.s"
 }
@@ -46,7 +66,7 @@ ASM_FUNCTION(checkWork__8daScex_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScex_Create__FP10fopAc_ac_c) {
+asm void daScex_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/daScex_Create__FP10fopAc_ac_c.s"
 }
@@ -57,7 +77,7 @@ ASM_FUNCTION(daScex_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daScex_Execute__FP8daScex_c) {
+asm void daScex_Execute(daScex_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/daScex_Execute__FP8daScex_c.s"
 }
@@ -68,7 +88,7 @@ ASM_FUNCTION(daScex_Execute__FP8daScex_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daScex_cFv) {
+asm void daScex_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/execute__8daScex_cFv.s"
 }

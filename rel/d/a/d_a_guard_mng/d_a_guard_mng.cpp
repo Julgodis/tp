@@ -6,16 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daGuardMng_c;
+struct daTagGuard_c;
+
+struct daGuardMng_c {
+	void checkMerchantNum();
+	void checkAppearTag(daTagGuard_c*);
+};
+
+struct daTagGuard_c {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void s_sub__FPvPv();
-extern "C" extern void checkMerchantNum__12daGuardMng_cFv();
-extern "C" extern void checkAppearTag__12daGuardMng_cFP12daTagGuard_c();
-extern "C" extern void daGuardMng_Execute__FP12daGuardMng_c();
-extern "C" extern void daGuardMng_IsDelete__FP12daGuardMng_c();
-extern "C" extern void daGuardMng_Delete__FP12daGuardMng_c();
-extern "C" extern void daGuardMng_Create__FP10fopAc_ac_c();
+void s_sub(void*, void*);
+void daGuardMng_Execute(daGuardMng_c*);
+bool daGuardMng_IsDelete(daGuardMng_c*);
+void daGuardMng_Delete(daGuardMng_c*);
+void daGuardMng_Create(fopAc_ac_c*);
+
+extern "C" void s_sub__FPvPv();
+extern "C" void checkMerchantNum__12daGuardMng_cFv();
+extern "C" void checkAppearTag__12daGuardMng_cFP12daTagGuard_c();
+extern "C" void daGuardMng_Execute__FP12daGuardMng_c();
+extern "C" bool daGuardMng_IsDelete__FP12daGuardMng_c();
+extern "C" void daGuardMng_Delete__FP12daGuardMng_c();
+extern "C" void daGuardMng_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 data_80837DE4[8];
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_DATA extern u8 l_daGuardMng_Method[32];
@@ -25,7 +50,9 @@ SECTION_DATA extern u8 g_profile_GUARD_MNG[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -35,7 +62,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub__FPvPv) {
+asm void s_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/s_sub__FPvPv.s"
 }
@@ -46,7 +73,7 @@ ASM_FUNCTION(s_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkMerchantNum__12daGuardMng_cFv) {
+asm void daGuardMng_c::checkMerchantNum() {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/checkMerchantNum__12daGuardMng_cFv.s"
 }
@@ -57,7 +84,7 @@ ASM_FUNCTION(checkMerchantNum__12daGuardMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAppearTag__12daGuardMng_cFP12daTagGuard_c) {
+asm void daGuardMng_c::checkAppearTag(daTagGuard_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/checkAppearTag__12daGuardMng_cFP12daTagGuard_c.s"
 }
@@ -68,7 +95,7 @@ ASM_FUNCTION(checkAppearTag__12daGuardMng_cFP12daTagGuard_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGuardMng_Execute__FP12daGuardMng_c) {
+asm void daGuardMng_Execute(daGuardMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Execute__FP12daGuardMng_c.s"
 }
@@ -76,21 +103,16 @@ ASM_FUNCTION(daGuardMng_Execute__FP12daGuardMng_c) {
 
 
 /* 80837D44-80837D4C 0008+00 .text      daGuardMng_IsDelete__FP12daGuardMng_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daGuardMng_IsDelete__FP12daGuardMng_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_IsDelete__FP12daGuardMng_c.s"
+bool daGuardMng_IsDelete(daGuardMng_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80837D4C-80837D7C 0030+00 .text      daGuardMng_Delete__FP12daGuardMng_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGuardMng_Delete__FP12daGuardMng_c) {
+asm void daGuardMng_Delete(daGuardMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Delete__FP12daGuardMng_c.s"
 }
@@ -101,7 +123,7 @@ ASM_FUNCTION(daGuardMng_Delete__FP12daGuardMng_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGuardMng_Create__FP10fopAc_ac_c) {
+asm void daGuardMng_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Create__FP10fopAc_ac_c.s"
 }

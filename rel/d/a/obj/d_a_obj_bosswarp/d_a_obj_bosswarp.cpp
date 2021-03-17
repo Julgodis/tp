@@ -6,45 +6,108 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjBossWarp_c;
+struct cXyz;
+
+struct fopAc_ac_c {
+};
+
+struct daObjBossWarp_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void appear(s32);
+	void set_appear();
+	void disappear(s32);
+	void checkDistance();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionWaitWarp();
+	void actionOrderWarpEvent();
+	void actionWarpEvent();
+	void actionDead();
+	void actionOrderChkEvent();
+	void actionChkEvent();
+	void actionOrderCancelEvent();
+	void actionCancelEvent();
+	void demoProc();
+	void setGoal();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cXyz {
+};
+
+struct daObjLife_c {
+	void setPos(cXyz);
+};
+
+struct obj_ystone_class {
+	void setCurrentPos(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void getNowLevel__Fv();
-extern "C" extern void initBaseMtx__15daObjBossWarp_cFv();
-extern "C" extern void setBaseMtx__15daObjBossWarp_cFv();
-extern "C" extern void Create__15daObjBossWarp_cFv();
-extern "C" extern void CreateHeap__15daObjBossWarp_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__15daObjBossWarp_cFv();
-extern "C" extern void appear__15daObjBossWarp_cFi();
-extern "C" extern void set_appear__15daObjBossWarp_cFv();
-extern "C" extern void disappear__15daObjBossWarp_cFi();
-extern "C" extern void checkDistance__15daObjBossWarp_cFv();
-extern "C" extern void execute__15daObjBossWarp_cFv();
-extern "C" extern void event_proc_call__15daObjBossWarp_cFv();
-extern "C" extern void actionWait__15daObjBossWarp_cFv();
-extern "C" extern void actionOrderEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionWaitWarp__15daObjBossWarp_cFv();
-extern "C" extern void actionOrderWarpEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionWarpEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionDead__15daObjBossWarp_cFv();
-extern "C" extern void actionOrderChkEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionChkEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionOrderCancelEvent__15daObjBossWarp_cFv();
-extern "C" extern void actionCancelEvent__15daObjBossWarp_cFv();
-extern "C" extern void demoProc__15daObjBossWarp_cFv();
-extern "C" extern void setGoal__15daObjBossWarp_cFv();
-extern "C" extern void draw__15daObjBossWarp_cFv();
-extern "C" extern void _delete__15daObjBossWarp_cFv();
-extern "C" extern void daObjBossWarp_Draw__FP15daObjBossWarp_c();
-extern "C" extern void daObjBossWarp_Execute__FP15daObjBossWarp_c();
-extern "C" extern void daObjBossWarp_Delete__FP15daObjBossWarp_c();
-extern "C" extern void daObjBossWarp_Create__FP10fopAc_ac_c();
-extern "C" extern void func_8057B304();
-extern "C" extern void setPos__11daObjLife_cF4cXyz();
-extern "C" extern void setCurrentPos__16obj_ystone_classF4cXyz();
+void CheckCreateHeap(fopAc_ac_c*);
+void getNowLevel();
+void daObjBossWarp_Draw(daObjBossWarp_c*);
+void daObjBossWarp_Execute(daObjBossWarp_c*);
+void daObjBossWarp_Delete(daObjBossWarp_c*);
+void daObjBossWarp_Create(fopAc_ac_c*);
+extern "C" void func_8057B304();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void getNowLevel__Fv();
+extern "C" void initBaseMtx__15daObjBossWarp_cFv();
+extern "C" void setBaseMtx__15daObjBossWarp_cFv();
+extern "C" void Create__15daObjBossWarp_cFv();
+extern "C" void CreateHeap__15daObjBossWarp_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__15daObjBossWarp_cFv();
+extern "C" void appear__15daObjBossWarp_cFi();
+extern "C" void set_appear__15daObjBossWarp_cFv();
+extern "C" void disappear__15daObjBossWarp_cFi();
+extern "C" void checkDistance__15daObjBossWarp_cFv();
+extern "C" void execute__15daObjBossWarp_cFv();
+extern "C" void event_proc_call__15daObjBossWarp_cFv();
+extern "C" void actionWait__15daObjBossWarp_cFv();
+extern "C" void actionOrderEvent__15daObjBossWarp_cFv();
+extern "C" void actionEvent__15daObjBossWarp_cFv();
+extern "C" void actionWaitWarp__15daObjBossWarp_cFv();
+extern "C" void actionOrderWarpEvent__15daObjBossWarp_cFv();
+extern "C" void actionWarpEvent__15daObjBossWarp_cFv();
+extern "C" void actionDead__15daObjBossWarp_cFv();
+extern "C" void actionOrderChkEvent__15daObjBossWarp_cFv();
+extern "C" void actionChkEvent__15daObjBossWarp_cFv();
+extern "C" void actionOrderCancelEvent__15daObjBossWarp_cFv();
+extern "C" void actionCancelEvent__15daObjBossWarp_cFv();
+extern "C" void demoProc__15daObjBossWarp_cFv();
+extern "C" void setGoal__15daObjBossWarp_cFv();
+extern "C" void draw__15daObjBossWarp_cFv();
+extern "C" void _delete__15daObjBossWarp_cFv();
+extern "C" void daObjBossWarp_Draw__FP15daObjBossWarp_c();
+extern "C" void daObjBossWarp_Execute__FP15daObjBossWarp_c();
+extern "C" void daObjBossWarp_Delete__FP15daObjBossWarp_c();
+extern "C" void daObjBossWarp_Create__FP10fopAc_ac_c();
+extern "C" void func_8057B304();
+extern "C" void setPos__11daObjLife_cF4cXyz();
+extern "C" void setCurrentPos__16obj_ystone_classF4cXyz();
 SECTION_RODATA extern const u8 l_hair_offset[84];
 SECTION_RODATA extern const u8 l_hair_rotate[84];
 SECTION_RODATA extern const u8 lit_3683[36];
@@ -112,7 +175,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -122,7 +187,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -133,7 +198,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowLevel__Fv) {
+asm void getNowLevel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/getNowLevel__Fv.s"
 }
@@ -144,7 +209,7 @@ ASM_FUNCTION(getNowLevel__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/initBaseMtx__15daObjBossWarp_cFv.s"
 }
@@ -155,7 +220,7 @@ ASM_FUNCTION(initBaseMtx__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/setBaseMtx__15daObjBossWarp_cFv.s"
 }
@@ -166,7 +231,7 @@ ASM_FUNCTION(setBaseMtx__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/Create__15daObjBossWarp_cFv.s"
 }
@@ -177,7 +242,7 @@ ASM_FUNCTION(Create__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/CreateHeap__15daObjBossWarp_cFv.s"
 }
@@ -188,7 +253,7 @@ ASM_FUNCTION(CreateHeap__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/__dt__12J3DFrameCtrlFv.s"
 }
@@ -199,7 +264,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/func_80579B70.s"
 }
@@ -210,7 +275,7 @@ ASM_FUNCTION(create__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appear__15daObjBossWarp_cFi) {
+asm void daObjBossWarp_c::appear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/appear__15daObjBossWarp_cFi.s"
 }
@@ -221,7 +286,7 @@ ASM_FUNCTION(appear__15daObjBossWarp_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_appear__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::set_appear() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/set_appear__15daObjBossWarp_cFv.s"
 }
@@ -232,7 +297,7 @@ ASM_FUNCTION(set_appear__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(disappear__15daObjBossWarp_cFi) {
+asm void daObjBossWarp_c::disappear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/disappear__15daObjBossWarp_cFi.s"
 }
@@ -243,7 +308,7 @@ ASM_FUNCTION(disappear__15daObjBossWarp_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDistance__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::checkDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/checkDistance__15daObjBossWarp_cFv.s"
 }
@@ -254,7 +319,7 @@ ASM_FUNCTION(checkDistance__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/execute__15daObjBossWarp_cFv.s"
 }
@@ -265,7 +330,7 @@ ASM_FUNCTION(execute__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/event_proc_call__15daObjBossWarp_cFv.s"
 }
@@ -276,7 +341,7 @@ ASM_FUNCTION(event_proc_call__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionWait__15daObjBossWarp_cFv.s"
 }
@@ -287,7 +352,7 @@ ASM_FUNCTION(actionWait__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionOrderEvent__15daObjBossWarp_cFv.s"
 }
@@ -298,7 +363,7 @@ ASM_FUNCTION(actionOrderEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionEvent__15daObjBossWarp_cFv.s"
 }
@@ -309,7 +374,7 @@ ASM_FUNCTION(actionEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitWarp__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionWaitWarp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionWaitWarp__15daObjBossWarp_cFv.s"
 }
@@ -320,7 +385,7 @@ ASM_FUNCTION(actionWaitWarp__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderWarpEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionOrderWarpEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionOrderWarpEvent__15daObjBossWarp_cFv.s"
 }
@@ -331,7 +396,7 @@ ASM_FUNCTION(actionOrderWarpEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarpEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionWarpEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionWarpEvent__15daObjBossWarp_cFv.s"
 }
@@ -339,21 +404,16 @@ ASM_FUNCTION(actionWarpEvent__15daObjBossWarp_cFv) {
 
 
 /* 8057A7C4-8057A7C8 0004+00 .text      actionDead__15daObjBossWarp_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__15daObjBossWarp_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionDead__15daObjBossWarp_cFv.s"
+void daObjBossWarp_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8057A7C8-8057A8B4 00EC+00 .text      actionOrderChkEvent__15daObjBossWarp_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderChkEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionOrderChkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionOrderChkEvent__15daObjBossWarp_cFv.s"
 }
@@ -364,7 +424,7 @@ ASM_FUNCTION(actionOrderChkEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionChkEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionChkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionChkEvent__15daObjBossWarp_cFv.s"
 }
@@ -375,7 +435,7 @@ ASM_FUNCTION(actionChkEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderCancelEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionOrderCancelEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionOrderCancelEvent__15daObjBossWarp_cFv.s"
 }
@@ -386,7 +446,7 @@ ASM_FUNCTION(actionOrderCancelEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCancelEvent__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::actionCancelEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionCancelEvent__15daObjBossWarp_cFv.s"
 }
@@ -397,7 +457,7 @@ ASM_FUNCTION(actionCancelEvent__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/demoProc__15daObjBossWarp_cFv.s"
 }
@@ -408,7 +468,7 @@ ASM_FUNCTION(demoProc__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoal__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::setGoal() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/setGoal__15daObjBossWarp_cFv.s"
 }
@@ -419,7 +479,7 @@ ASM_FUNCTION(setGoal__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/draw__15daObjBossWarp_cFv.s"
 }
@@ -430,7 +490,7 @@ ASM_FUNCTION(draw__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObjBossWarp_cFv) {
+asm void daObjBossWarp_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/_delete__15daObjBossWarp_cFv.s"
 }
@@ -441,7 +501,7 @@ ASM_FUNCTION(_delete__15daObjBossWarp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBossWarp_Draw__FP15daObjBossWarp_c) {
+asm void daObjBossWarp_Draw(daObjBossWarp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/daObjBossWarp_Draw__FP15daObjBossWarp_c.s"
 }
@@ -452,7 +512,7 @@ ASM_FUNCTION(daObjBossWarp_Draw__FP15daObjBossWarp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBossWarp_Execute__FP15daObjBossWarp_c) {
+asm void daObjBossWarp_Execute(daObjBossWarp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/daObjBossWarp_Execute__FP15daObjBossWarp_c.s"
 }
@@ -463,7 +523,7 @@ ASM_FUNCTION(daObjBossWarp_Execute__FP15daObjBossWarp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBossWarp_Delete__FP15daObjBossWarp_c) {
+asm void daObjBossWarp_Delete(daObjBossWarp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/daObjBossWarp_Delete__FP15daObjBossWarp_c.s"
 }
@@ -474,7 +534,7 @@ ASM_FUNCTION(daObjBossWarp_Delete__FP15daObjBossWarp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBossWarp_Create__FP10fopAc_ac_c) {
+asm void daObjBossWarp_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/daObjBossWarp_Create__FP10fopAc_ac_c.s"
 }
@@ -485,7 +545,7 @@ ASM_FUNCTION(daObjBossWarp_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8057B304) {
+extern "C" asm void func_8057B304() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/func_8057B304.s"
 }
@@ -496,7 +556,7 @@ ASM_FUNCTION(func_8057B304) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__11daObjLife_cF4cXyz) {
+asm void daObjLife_c::setPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/setPos__11daObjLife_cF4cXyz.s"
 }
@@ -507,7 +567,7 @@ ASM_FUNCTION(setPos__11daObjLife_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCurrentPos__16obj_ystone_classF4cXyz) {
+asm void obj_ystone_class::setCurrentPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/setCurrentPos__16obj_ystone_classF4cXyz.s"
 }

@@ -6,33 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daWindStone_c;
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daWindStone_c {
+	daWindStone_c();
+	~daWindStone_c();
+	void createHeap();
+	void create();
+	void execute();
+	void draw();
+	void Delete();
+	void setModelMtx();
+	void init();
+	void chkWlfInRange();
+	void chkEveOccur();
+	void exeModeHowl();
+	void exeModeMapDisp();
+	void chkMapDispMode();
+	void getGoldWolfIdx();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daWindStone_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__13daWindStone_cFv();
-extern "C" extern void __dt__13daWindStone_cFv();
-extern "C" extern void createHeap__13daWindStone_cFv();
-extern "C" extern void create__13daWindStone_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void execute__13daWindStone_cFv();
-extern "C" extern void draw__13daWindStone_cFv();
-extern "C" extern void Delete__13daWindStone_cFv();
-extern "C" extern void setModelMtx__13daWindStone_cFv();
-extern "C" extern void init__13daWindStone_cFv();
-extern "C" extern void chkWlfInRange__13daWindStone_cFv();
-extern "C" extern void chkEveOccur__13daWindStone_cFv();
-extern "C" extern void exeModeHowl__13daWindStone_cFv();
-extern "C" extern void exeModeMapDisp__13daWindStone_cFv();
-extern "C" extern void chkMapDispMode__13daWindStone_cFv();
-extern "C" extern void getGoldWolfIdx__13daWindStone_cFv();
-extern "C" extern void daWindStone_create__FP13daWindStone_c();
-extern "C" extern void daWindStone_Delete__FP13daWindStone_c();
-extern "C" extern void daWindStone_execute__FP13daWindStone_c();
-extern "C" extern void daWindStone_draw__FP13daWindStone_c();
-extern "C" extern void func_80D385F0();
-extern "C" extern void func_80D385F8();
+void daWindStone_c_createHeap(fopAc_ac_c*);
+void daWindStone_create(daWindStone_c*);
+void daWindStone_Delete(daWindStone_c*);
+void daWindStone_execute(daWindStone_c*);
+void daWindStone_draw(daWindStone_c*);
+extern "C" void func_80D385F0();
+extern "C" void func_80D385F8();
+
+extern "C" void daWindStone_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__13daWindStone_cFv();
+extern "C" void __dt__13daWindStone_cFv();
+extern "C" void createHeap__13daWindStone_cFv();
+extern "C" void create__13daWindStone_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void execute__13daWindStone_cFv();
+extern "C" void draw__13daWindStone_cFv();
+extern "C" void Delete__13daWindStone_cFv();
+extern "C" void setModelMtx__13daWindStone_cFv();
+extern "C" void init__13daWindStone_cFv();
+extern "C" void chkWlfInRange__13daWindStone_cFv();
+extern "C" void chkEveOccur__13daWindStone_cFv();
+extern "C" void exeModeHowl__13daWindStone_cFv();
+extern "C" void exeModeMapDisp__13daWindStone_cFv();
+extern "C" void chkMapDispMode__13daWindStone_cFv();
+extern "C" void getGoldWolfIdx__13daWindStone_cFv();
+extern "C" void daWindStone_create__FP13daWindStone_c();
+extern "C" void daWindStone_Delete__FP13daWindStone_c();
+extern "C" void daWindStone_execute__FP13daWindStone_c();
+extern "C" void daWindStone_draw__FP13daWindStone_c();
+extern "C" void func_80D385F0();
+extern "C" void func_80D385F8();
 SECTION_RODATA extern const u8 lit_3760[12];
 SECTION_RODATA extern const u8 lit_4127[4];
 SECTION_RODATA extern const u32 lit_4128;
@@ -51,7 +95,9 @@ SECTION_DATA extern void*const __vt__13daWindStone_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -61,7 +107,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWindStone_c_createHeap__FP10fopAc_ac_c) {
+asm void daWindStone_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/daWindStone_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -72,7 +118,7 @@ ASM_FUNCTION(daWindStone_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daWindStone_cFv) {
+asm daWindStone_c::daWindStone_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/__ct__13daWindStone_cFv.s"
 }
@@ -83,7 +129,7 @@ ASM_FUNCTION(__ct__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daWindStone_cFv) {
+asm daWindStone_c::~daWindStone_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/__dt__13daWindStone_cFv.s"
 }
@@ -94,7 +140,7 @@ ASM_FUNCTION(__dt__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__13daWindStone_cFv) {
+asm void daWindStone_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/createHeap__13daWindStone_cFv.s"
 }
@@ -105,7 +151,7 @@ ASM_FUNCTION(createHeap__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daWindStone_cFv) {
+asm void daWindStone_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/create__13daWindStone_cFv.s"
 }
@@ -116,7 +162,7 @@ ASM_FUNCTION(create__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -127,7 +173,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/__dt__12dBgS_AcchCirFv.s"
 }
@@ -138,7 +184,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daWindStone_cFv) {
+asm void daWindStone_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/execute__13daWindStone_cFv.s"
 }
@@ -149,7 +195,7 @@ ASM_FUNCTION(execute__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daWindStone_cFv) {
+asm void daWindStone_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/draw__13daWindStone_cFv.s"
 }
@@ -160,7 +206,7 @@ ASM_FUNCTION(draw__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daWindStone_cFv) {
+asm void daWindStone_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/Delete__13daWindStone_cFv.s"
 }
@@ -171,7 +217,7 @@ ASM_FUNCTION(Delete__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__13daWindStone_cFv) {
+asm void daWindStone_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/setModelMtx__13daWindStone_cFv.s"
 }
@@ -182,7 +228,7 @@ ASM_FUNCTION(setModelMtx__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13daWindStone_cFv) {
+asm void daWindStone_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/init__13daWindStone_cFv.s"
 }
@@ -193,7 +239,7 @@ ASM_FUNCTION(init__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWlfInRange__13daWindStone_cFv) {
+asm void daWindStone_c::chkWlfInRange() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/chkWlfInRange__13daWindStone_cFv.s"
 }
@@ -204,7 +250,7 @@ ASM_FUNCTION(chkWlfInRange__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkEveOccur__13daWindStone_cFv) {
+asm void daWindStone_c::chkEveOccur() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/chkEveOccur__13daWindStone_cFv.s"
 }
@@ -215,7 +261,7 @@ ASM_FUNCTION(chkEveOccur__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeHowl__13daWindStone_cFv) {
+asm void daWindStone_c::exeModeHowl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/exeModeHowl__13daWindStone_cFv.s"
 }
@@ -226,7 +272,7 @@ ASM_FUNCTION(exeModeHowl__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeMapDisp__13daWindStone_cFv) {
+asm void daWindStone_c::exeModeMapDisp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/exeModeMapDisp__13daWindStone_cFv.s"
 }
@@ -237,7 +283,7 @@ ASM_FUNCTION(exeModeMapDisp__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkMapDispMode__13daWindStone_cFv) {
+asm void daWindStone_c::chkMapDispMode() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/chkMapDispMode__13daWindStone_cFv.s"
 }
@@ -248,7 +294,7 @@ ASM_FUNCTION(chkMapDispMode__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGoldWolfIdx__13daWindStone_cFv) {
+asm void daWindStone_c::getGoldWolfIdx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/getGoldWolfIdx__13daWindStone_cFv.s"
 }
@@ -259,7 +305,7 @@ ASM_FUNCTION(getGoldWolfIdx__13daWindStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWindStone_create__FP13daWindStone_c) {
+asm void daWindStone_create(daWindStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/daWindStone_create__FP13daWindStone_c.s"
 }
@@ -270,7 +316,7 @@ ASM_FUNCTION(daWindStone_create__FP13daWindStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWindStone_Delete__FP13daWindStone_c) {
+asm void daWindStone_Delete(daWindStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/daWindStone_Delete__FP13daWindStone_c.s"
 }
@@ -281,7 +327,7 @@ ASM_FUNCTION(daWindStone_Delete__FP13daWindStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWindStone_execute__FP13daWindStone_c) {
+asm void daWindStone_execute(daWindStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/daWindStone_execute__FP13daWindStone_c.s"
 }
@@ -292,7 +338,7 @@ ASM_FUNCTION(daWindStone_execute__FP13daWindStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWindStone_draw__FP13daWindStone_c) {
+asm void daWindStone_draw(daWindStone_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/daWindStone_draw__FP13daWindStone_c.s"
 }
@@ -303,7 +349,7 @@ ASM_FUNCTION(daWindStone_draw__FP13daWindStone_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D385F0) {
+extern "C" asm void func_80D385F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/func_80D385F0.s"
 }
@@ -314,7 +360,7 @@ ASM_FUNCTION(func_80D385F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D385F8) {
+extern "C" asm void func_80D385F8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_wind_stone/d_a_obj_wind_stone/func_80D385F8.s"
 }

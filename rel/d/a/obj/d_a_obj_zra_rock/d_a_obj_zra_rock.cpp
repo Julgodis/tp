@@ -6,28 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjZraRock_c;
+
+struct daObjZraRock_c {
+	void setAttnPos();
+	void setBaseMtx();
+	void setEnvTevColor();
+	void setRoomNo();
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAttnPos__14daObjZraRock_cFv();
-extern "C" extern void setBaseMtx__14daObjZraRock_cFv();
-extern "C" extern void setEnvTevColor__14daObjZraRock_cFv();
-extern "C" extern void setRoomNo__14daObjZraRock_cFv();
-extern "C" extern void Create__14daObjZraRock_cFv();
-extern "C" extern void CreateHeap__14daObjZraRock_cFv();
-extern "C" extern void create__14daObjZraRock_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__14daObjZraRock_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjZraRock_cFv();
-extern "C" extern void Delete__14daObjZraRock_cFv();
-extern "C" extern void daObjZraRock_Draw__FP14daObjZraRock_c();
-extern "C" extern void daObjZraRock_Execute__FP14daObjZraRock_c();
-extern "C" extern void daObjZraRock_IsDelete__FP14daObjZraRock_c();
-extern "C" extern void daObjZraRock_Delete__FP14daObjZraRock_c();
-extern "C" extern void daObjZraRock_create__FP10fopAc_ac_c();
-extern "C" extern void func_80D455AC();
-extern "C" extern void func_80D455B4();
+extern "C" void Execute__14daObjZraRock_cFPPA3_A4_f();
+void daObjZraRock_Draw(daObjZraRock_c*);
+void daObjZraRock_Execute(daObjZraRock_c*);
+bool daObjZraRock_IsDelete(daObjZraRock_c*);
+void daObjZraRock_Delete(daObjZraRock_c*);
+void daObjZraRock_create(fopAc_ac_c*);
+extern "C" void func_80D455AC();
+extern "C" void func_80D455B4();
+
+extern "C" void setAttnPos__14daObjZraRock_cFv();
+extern "C" void setBaseMtx__14daObjZraRock_cFv();
+extern "C" void setEnvTevColor__14daObjZraRock_cFv();
+extern "C" void setRoomNo__14daObjZraRock_cFv();
+extern "C" void Create__14daObjZraRock_cFv();
+extern "C" void CreateHeap__14daObjZraRock_cFv();
+extern "C" void create__14daObjZraRock_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__14daObjZraRock_cFPPA3_A4_f();
+extern "C" void Draw__14daObjZraRock_cFv();
+extern "C" void Delete__14daObjZraRock_cFv();
+extern "C" void daObjZraRock_Draw__FP14daObjZraRock_c();
+extern "C" void daObjZraRock_Execute__FP14daObjZraRock_c();
+extern "C" bool daObjZraRock_IsDelete__FP14daObjZraRock_c();
+extern "C" void daObjZraRock_Delete__FP14daObjZraRock_c();
+extern "C" void daObjZraRock_create__FP10fopAc_ac_c();
+extern "C" void func_80D455AC();
+extern "C" void func_80D455B4();
 SECTION_RODATA extern const u32 lit_3814;
 SECTION_RODATA extern const u32 lit_3815;
 SECTION_RODATA extern const u8 lit_3816[4];
@@ -44,7 +83,9 @@ SECTION_DATA extern void*const __vt__14daObjZraRock_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +95,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/setAttnPos__14daObjZraRock_cFv.s"
 }
@@ -65,7 +106,7 @@ ASM_FUNCTION(setAttnPos__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/setBaseMtx__14daObjZraRock_cFv.s"
 }
@@ -76,7 +117,7 @@ ASM_FUNCTION(setBaseMtx__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/setEnvTevColor__14daObjZraRock_cFv.s"
 }
@@ -87,7 +128,7 @@ ASM_FUNCTION(setEnvTevColor__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/setRoomNo__14daObjZraRock_cFv.s"
 }
@@ -98,7 +139,7 @@ ASM_FUNCTION(setRoomNo__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/Create__14daObjZraRock_cFv.s"
 }
@@ -109,7 +150,7 @@ ASM_FUNCTION(Create__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/CreateHeap__14daObjZraRock_cFv.s"
 }
@@ -120,7 +161,7 @@ ASM_FUNCTION(CreateHeap__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D450E0.s"
 }
@@ -131,7 +172,7 @@ ASM_FUNCTION(create__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -142,7 +183,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/__dt__12J3DFrameCtrlFv.s"
 }
@@ -153,7 +194,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjZraRock_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjZraRock_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/Execute__14daObjZraRock_cFPPA3_A4_f.s"
 }
@@ -164,7 +205,7 @@ ASM_FUNCTION(Execute__14daObjZraRock_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/Draw__14daObjZraRock_cFv.s"
 }
@@ -175,7 +216,7 @@ ASM_FUNCTION(Draw__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjZraRock_cFv) {
+asm void daObjZraRock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/Delete__14daObjZraRock_cFv.s"
 }
@@ -186,7 +227,7 @@ ASM_FUNCTION(Delete__14daObjZraRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZraRock_Draw__FP14daObjZraRock_c) {
+asm void daObjZraRock_Draw(daObjZraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Draw__FP14daObjZraRock_c.s"
 }
@@ -197,7 +238,7 @@ ASM_FUNCTION(daObjZraRock_Draw__FP14daObjZraRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZraRock_Execute__FP14daObjZraRock_c) {
+asm void daObjZraRock_Execute(daObjZraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Execute__FP14daObjZraRock_c.s"
 }
@@ -205,21 +246,16 @@ ASM_FUNCTION(daObjZraRock_Execute__FP14daObjZraRock_c) {
 
 
 /* 80D45564-80D4556C 0008+00 .text      daObjZraRock_IsDelete__FP14daObjZraRock_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjZraRock_IsDelete__FP14daObjZraRock_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_IsDelete__FP14daObjZraRock_c.s"
+bool daObjZraRock_IsDelete(daObjZraRock_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4556C-80D4558C 0020+00 .text      daObjZraRock_Delete__FP14daObjZraRock_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZraRock_Delete__FP14daObjZraRock_c) {
+asm void daObjZraRock_Delete(daObjZraRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Delete__FP14daObjZraRock_c.s"
 }
@@ -230,7 +266,7 @@ ASM_FUNCTION(daObjZraRock_Delete__FP14daObjZraRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjZraRock_create__FP10fopAc_ac_c) {
+asm void daObjZraRock_create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_create__FP10fopAc_ac_c.s"
 }
@@ -241,7 +277,7 @@ ASM_FUNCTION(daObjZraRock_create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D455AC) {
+extern "C" asm void func_80D455AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D455AC.s"
 }
@@ -252,7 +288,7 @@ ASM_FUNCTION(func_80D455AC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D455B4) {
+extern "C" asm void func_80D455B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D455B4.s"
 }

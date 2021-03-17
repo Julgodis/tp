@@ -6,25 +6,65 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjOnCloth_c;
+
+struct daObjOnCloth_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void setNormalClothPos();
+	void calcJointAngle();
+	void checkPlayerMove();
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct ClothJoint_c {
+	~ClothJoint_c();
+	ClothJoint_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__14daObjOnCloth_cFv();
-extern "C" extern void initBaseMtx__14daObjOnCloth_cFv();
-extern "C" extern void setBaseMtx__14daObjOnCloth_cFv();
-extern "C" extern void setNormalClothPos__14daObjOnCloth_cFv();
-extern "C" extern void calcJointAngle__14daObjOnCloth_cFv();
-extern "C" extern void checkPlayerMove__14daObjOnCloth_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjOnCloth_Draw__FP14daObjOnCloth_c();
-extern "C" extern void daObjOnCloth_Execute__FP14daObjOnCloth_c();
-extern "C" extern void daObjOnCloth_IsDelete__FP14daObjOnCloth_c();
-extern "C" extern void daObjOnCloth_Delete__FP14daObjOnCloth_c();
-extern "C" extern void __dt__12ClothJoint_cFv();
-extern "C" extern void daObjOnCloth_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__12ClothJoint_cFv();
+void nodeCallBack(J3DJoint*, s32);
+void createSolidHeap(fopAc_ac_c*);
+void daObjOnCloth_Draw(daObjOnCloth_c*);
+void daObjOnCloth_Execute(daObjOnCloth_c*);
+bool daObjOnCloth_IsDelete(daObjOnCloth_c*);
+void daObjOnCloth_Delete(daObjOnCloth_c*);
+void daObjOnCloth_Create(fopAc_ac_c*);
+
+extern "C" void create_init__14daObjOnCloth_cFv();
+extern "C" void initBaseMtx__14daObjOnCloth_cFv();
+extern "C" void setBaseMtx__14daObjOnCloth_cFv();
+extern "C" void setNormalClothPos__14daObjOnCloth_cFv();
+extern "C" void calcJointAngle__14daObjOnCloth_cFv();
+extern "C" void checkPlayerMove__14daObjOnCloth_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjOnCloth_Draw__FP14daObjOnCloth_c();
+extern "C" void daObjOnCloth_Execute__FP14daObjOnCloth_c();
+extern "C" bool daObjOnCloth_IsDelete__FP14daObjOnCloth_c();
+extern "C" void daObjOnCloth_Delete__FP14daObjOnCloth_c();
+extern "C" void __dt__12ClothJoint_cFv();
+extern "C" void daObjOnCloth_Create__FP10fopAc_ac_c();
+extern "C" void __ct__12ClothJoint_cFv();
 SECTION_RODATA extern const u8 M_attr__14daObjOnCloth_c[48];
 SECTION_RODATA extern const u32 lit_3671;
 SECTION_RODATA extern const u32 lit_3672;
@@ -51,7 +91,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -61,7 +103,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/create_init__14daObjOnCloth_cFv.s"
 }
@@ -72,7 +114,7 @@ ASM_FUNCTION(create_init__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/initBaseMtx__14daObjOnCloth_cFv.s"
 }
@@ -83,7 +125,7 @@ ASM_FUNCTION(initBaseMtx__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/setBaseMtx__14daObjOnCloth_cFv.s"
 }
@@ -94,7 +136,7 @@ ASM_FUNCTION(setBaseMtx__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalClothPos__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::setNormalClothPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/setNormalClothPos__14daObjOnCloth_cFv.s"
 }
@@ -105,7 +147,7 @@ ASM_FUNCTION(setNormalClothPos__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcJointAngle__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::calcJointAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/calcJointAngle__14daObjOnCloth_cFv.s"
 }
@@ -116,7 +158,7 @@ ASM_FUNCTION(calcJointAngle__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerMove__14daObjOnCloth_cFv) {
+asm void daObjOnCloth_c::checkPlayerMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/checkPlayerMove__14daObjOnCloth_cFv.s"
 }
@@ -127,7 +169,7 @@ ASM_FUNCTION(checkPlayerMove__14daObjOnCloth_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/nodeCallBack__FP8J3DJointi.s"
 }
@@ -138,7 +180,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -149,7 +191,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/__dt__12J3DFrameCtrlFv.s"
 }
@@ -160,7 +202,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnCloth_Draw__FP14daObjOnCloth_c) {
+asm void daObjOnCloth_Draw(daObjOnCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Draw__FP14daObjOnCloth_c.s"
 }
@@ -171,7 +213,7 @@ ASM_FUNCTION(daObjOnCloth_Draw__FP14daObjOnCloth_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnCloth_Execute__FP14daObjOnCloth_c) {
+asm void daObjOnCloth_Execute(daObjOnCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Execute__FP14daObjOnCloth_c.s"
 }
@@ -179,21 +221,16 @@ ASM_FUNCTION(daObjOnCloth_Execute__FP14daObjOnCloth_c) {
 
 
 /* 80595B2C-80595B34 0008+00 .text      daObjOnCloth_IsDelete__FP14daObjOnCloth_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjOnCloth_IsDelete__FP14daObjOnCloth_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_IsDelete__FP14daObjOnCloth_c.s"
+bool daObjOnCloth_IsDelete(daObjOnCloth_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80595B34-80595B9C 0068+00 .text      daObjOnCloth_Delete__FP14daObjOnCloth_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnCloth_Delete__FP14daObjOnCloth_c) {
+asm void daObjOnCloth_Delete(daObjOnCloth_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Delete__FP14daObjOnCloth_c.s"
 }
@@ -204,7 +241,7 @@ ASM_FUNCTION(daObjOnCloth_Delete__FP14daObjOnCloth_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12ClothJoint_cFv) {
+asm ClothJoint_c::~ClothJoint_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/__dt__12ClothJoint_cFv.s"
 }
@@ -215,7 +252,7 @@ ASM_FUNCTION(__dt__12ClothJoint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnCloth_Create__FP10fopAc_ac_c) {
+asm void daObjOnCloth_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Create__FP10fopAc_ac_c.s"
 }
@@ -223,14 +260,9 @@ ASM_FUNCTION(daObjOnCloth_Create__FP10fopAc_ac_c) {
 
 
 /* 80595CA8-80595CAC 0004+00 .text      __ct__12ClothJoint_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__12ClothJoint_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/__ct__12ClothJoint_cFv.s"
+ClothJoint_c::ClothJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

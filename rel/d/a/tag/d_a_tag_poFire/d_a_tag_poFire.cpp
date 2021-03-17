@@ -6,22 +6,55 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagPoFire_c;
+
+struct daTagPoFire_HIO_c {
+	daTagPoFire_HIO_c();
+	~daTagPoFire_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTagPoFire_c {
+	void setBaseMtx();
+	void create();
+	void Execute();
+	bool Draw();
+	bool Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daTagPoFire_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daTagPoFire_cFv();
-extern "C" extern void create__13daTagPoFire_cFv();
-extern "C" extern void Execute__13daTagPoFire_cFv();
-extern "C" extern void Draw__13daTagPoFire_cFv();
-extern "C" extern void Delete__13daTagPoFire_cFv();
-extern "C" extern void daTagPoFire_Draw__FP13daTagPoFire_c();
-extern "C" extern void daTagPoFire_Execute__FP13daTagPoFire_c();
-extern "C" extern void daTagPoFire_Delete__FP13daTagPoFire_c();
-extern "C" extern void daTagPoFire_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daTagPoFire_HIO_cFv();
-extern "C" extern void __sinit_d_a_tag_poFire_cpp();
+void daTagPoFire_Draw(daTagPoFire_c*);
+void daTagPoFire_Execute(daTagPoFire_c*);
+void daTagPoFire_Delete(daTagPoFire_c*);
+void daTagPoFire_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_tag_poFire_cpp();
+
+extern "C" void __ct__17daTagPoFire_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daTagPoFire_cFv();
+extern "C" void create__13daTagPoFire_cFv();
+extern "C" void Execute__13daTagPoFire_cFv();
+extern "C" bool Draw__13daTagPoFire_cFv();
+extern "C" bool Delete__13daTagPoFire_cFv();
+extern "C" void daTagPoFire_Draw__FP13daTagPoFire_c();
+extern "C" void daTagPoFire_Execute__FP13daTagPoFire_c();
+extern "C" void daTagPoFire_Delete__FP13daTagPoFire_c();
+extern "C" void daTagPoFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daTagPoFire_HIO_cFv();
+extern "C" void __sinit_d_a_tag_poFire_cpp();
 SECTION_DATA extern u8 l_daTagPoFire_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_poFire[48];
 SECTION_DATA extern void*const __vt__17daTagPoFire_HIO_c[3];
@@ -33,8 +66,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -44,7 +80,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daTagPoFire_HIO_cFv) {
+asm daTagPoFire_HIO_c::daTagPoFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/__ct__17daTagPoFire_HIO_cFv.s"
 }
@@ -55,7 +91,7 @@ ASM_FUNCTION(__ct__17daTagPoFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -66,7 +102,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daTagPoFire_cFv) {
+asm void daTagPoFire_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/setBaseMtx__13daTagPoFire_cFv.s"
 }
@@ -77,7 +113,7 @@ ASM_FUNCTION(setBaseMtx__13daTagPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagPoFire_cFv) {
+asm void daTagPoFire_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/create__13daTagPoFire_cFv.s"
 }
@@ -88,7 +124,7 @@ ASM_FUNCTION(create__13daTagPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daTagPoFire_cFv) {
+asm void daTagPoFire_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/Execute__13daTagPoFire_cFv.s"
 }
@@ -96,32 +132,22 @@ ASM_FUNCTION(Execute__13daTagPoFire_cFv) {
 
 
 /* 80D5DC20-80D5DC28 0008+00 .text      Draw__13daTagPoFire_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daTagPoFire_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/Draw__13daTagPoFire_cFv.s"
+bool daTagPoFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5DC28-80D5DC30 0008+00 .text      Delete__13daTagPoFire_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daTagPoFire_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/Delete__13daTagPoFire_cFv.s"
+bool daTagPoFire_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5DC30-80D5DC50 0020+00 .text      daTagPoFire_Draw__FP13daTagPoFire_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPoFire_Draw__FP13daTagPoFire_c) {
+asm void daTagPoFire_Draw(daTagPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/daTagPoFire_Draw__FP13daTagPoFire_c.s"
 }
@@ -132,7 +158,7 @@ ASM_FUNCTION(daTagPoFire_Draw__FP13daTagPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPoFire_Execute__FP13daTagPoFire_c) {
+asm void daTagPoFire_Execute(daTagPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/daTagPoFire_Execute__FP13daTagPoFire_c.s"
 }
@@ -143,7 +169,7 @@ ASM_FUNCTION(daTagPoFire_Execute__FP13daTagPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPoFire_Delete__FP13daTagPoFire_c) {
+asm void daTagPoFire_Delete(daTagPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/daTagPoFire_Delete__FP13daTagPoFire_c.s"
 }
@@ -154,7 +180,7 @@ ASM_FUNCTION(daTagPoFire_Delete__FP13daTagPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagPoFire_Create__FP10fopAc_ac_c) {
+asm void daTagPoFire_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/daTagPoFire_Create__FP10fopAc_ac_c.s"
 }
@@ -165,7 +191,7 @@ ASM_FUNCTION(daTagPoFire_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daTagPoFire_HIO_cFv) {
+asm daTagPoFire_HIO_c::~daTagPoFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/__dt__17daTagPoFire_HIO_cFv.s"
 }
@@ -176,7 +202,7 @@ ASM_FUNCTION(__dt__17daTagPoFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_tag_poFire_cpp) {
+extern "C" asm void __sinit_d_a_tag_poFire_cpp() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/__sinit_d_a_tag_poFire_cpp.s"
 }

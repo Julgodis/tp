@@ -6,29 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daCrod_c;
+
+struct daCrod_c {
+	void createHeap();
+	void create();
+	~daCrod_c();
+	void setRoomInfo();
+	void setMatrix();
+	void posMove();
+	void setBckAnm(u16);
+	void setReturn();
+	void setLightPower();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__8daCrod_cFv();
-extern "C" extern void daCrod_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__8daCrod_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daCrod_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8daCrod_cFv();
-extern "C" extern void daCrod_Delete__FP8daCrod_c();
-extern "C" extern void setRoomInfo__8daCrod_cFv();
-extern "C" extern void setMatrix__8daCrod_cFv();
-extern "C" extern void posMove__8daCrod_cFv();
-extern "C" extern void setBckAnm__8daCrod_cFUs();
-extern "C" extern void setReturn__8daCrod_cFv();
-extern "C" extern void setLightPower__8daCrod_cFv();
-extern "C" extern void execute__8daCrod_cFv();
-extern "C" extern void daCrod_Execute__FP8daCrod_c();
-extern "C" extern void draw__8daCrod_cFv();
-extern "C" extern void daCrod_Draw__FP8daCrod_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daCrod_createHeap(fopAc_ac_c*);
+void daCrod_Create(fopAc_ac_c*);
+void daCrod_Delete(daCrod_c*);
+void daCrod_Execute(daCrod_c*);
+void daCrod_Draw(daCrod_c*);
+
+extern "C" void createHeap__8daCrod_cFv();
+extern "C" void daCrod_createHeap__FP10fopAc_ac_c();
+extern "C" void create__8daCrod_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daCrod_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8daCrod_cFv();
+extern "C" void daCrod_Delete__FP8daCrod_c();
+extern "C" void setRoomInfo__8daCrod_cFv();
+extern "C" void setMatrix__8daCrod_cFv();
+extern "C" void posMove__8daCrod_cFv();
+extern "C" void setBckAnm__8daCrod_cFUs();
+extern "C" void setReturn__8daCrod_cFv();
+extern "C" void setLightPower__8daCrod_cFv();
+extern "C" void execute__8daCrod_cFv();
+extern "C" void daCrod_Execute__FP8daCrod_c();
+extern "C" void draw__8daCrod_cFv();
+extern "C" void daCrod_Draw__FP8daCrod_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 lit_3759[12];
 SECTION_RODATA extern const u8 l_localRodPos[12];
 SECTION_RODATA extern const u32 lit_4173;
@@ -54,7 +100,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -64,7 +112,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__8daCrod_cFv) {
+asm void daCrod_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/createHeap__8daCrod_cFv.s"
 }
@@ -75,7 +123,7 @@ ASM_FUNCTION(createHeap__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCrod_createHeap__FP10fopAc_ac_c) {
+asm void daCrod_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_createHeap__FP10fopAc_ac_c.s"
 }
@@ -86,7 +134,7 @@ ASM_FUNCTION(daCrod_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daCrod_cFv) {
+asm void daCrod_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/create__8daCrod_cFv.s"
 }
@@ -97,7 +145,7 @@ ASM_FUNCTION(create__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/__dt__8cM3dGAabFv.s"
 }
@@ -108,7 +156,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/__dt__10dCcD_GSttsFv.s"
 }
@@ -119,7 +167,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/__dt__12J3DFrameCtrlFv.s"
 }
@@ -130,7 +178,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCrod_Create__FP10fopAc_ac_c) {
+asm void daCrod_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Create__FP10fopAc_ac_c.s"
 }
@@ -141,7 +189,7 @@ ASM_FUNCTION(daCrod_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daCrod_cFv) {
+asm daCrod_c::~daCrod_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/__dt__8daCrod_cFv.s"
 }
@@ -152,7 +200,7 @@ ASM_FUNCTION(__dt__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCrod_Delete__FP8daCrod_c) {
+asm void daCrod_Delete(daCrod_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Delete__FP8daCrod_c.s"
 }
@@ -160,21 +208,16 @@ ASM_FUNCTION(daCrod_Delete__FP8daCrod_c) {
 
 
 /* 804A34B0-804A34B4 0004+00 .text      setRoomInfo__8daCrod_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__8daCrod_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_crod/d_a_crod/setRoomInfo__8daCrod_cFv.s"
+void daCrod_c::setRoomInfo() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A34B4-804A3500 004C+00 .text      setMatrix__8daCrod_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__8daCrod_cFv) {
+asm void daCrod_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/setMatrix__8daCrod_cFv.s"
 }
@@ -185,7 +228,7 @@ ASM_FUNCTION(setMatrix__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMove__8daCrod_cFv) {
+asm void daCrod_c::posMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/posMove__8daCrod_cFv.s"
 }
@@ -196,7 +239,7 @@ ASM_FUNCTION(posMove__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBckAnm__8daCrod_cFUs) {
+asm void daCrod_c::setBckAnm(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/setBckAnm__8daCrod_cFUs.s"
 }
@@ -207,7 +250,7 @@ ASM_FUNCTION(setBckAnm__8daCrod_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setReturn__8daCrod_cFv) {
+asm void daCrod_c::setReturn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/setReturn__8daCrod_cFv.s"
 }
@@ -218,7 +261,7 @@ ASM_FUNCTION(setReturn__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLightPower__8daCrod_cFv) {
+asm void daCrod_c::setLightPower() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/setLightPower__8daCrod_cFv.s"
 }
@@ -229,7 +272,7 @@ ASM_FUNCTION(setLightPower__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daCrod_cFv) {
+asm void daCrod_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/execute__8daCrod_cFv.s"
 }
@@ -240,7 +283,7 @@ ASM_FUNCTION(execute__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCrod_Execute__FP8daCrod_c) {
+asm void daCrod_Execute(daCrod_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Execute__FP8daCrod_c.s"
 }
@@ -251,7 +294,7 @@ ASM_FUNCTION(daCrod_Execute__FP8daCrod_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daCrod_cFv) {
+asm void daCrod_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/draw__8daCrod_cFv.s"
 }
@@ -262,7 +305,7 @@ ASM_FUNCTION(draw__8daCrod_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCrod_Draw__FP8daCrod_c) {
+asm void daCrod_Draw(daCrod_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Draw__FP8daCrod_c.s"
 }
@@ -273,7 +316,7 @@ ASM_FUNCTION(daCrod_Draw__FP8daCrod_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/__dt__10cCcD_GSttsFv.s"
 }

@@ -6,24 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjRCircle_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjRCircle_c {
+	daObjRCircle_c();
+	~daObjRCircle_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setModelMtx();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjRCircle_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__14daObjRCircle_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__14daObjRCircle_cFv();
-extern "C" extern void createHeap__14daObjRCircle_cFv();
-extern "C" extern void create__14daObjRCircle_cFv();
-extern "C" extern void Delete__14daObjRCircle_cFv();
-extern "C" extern void draw__14daObjRCircle_cFv();
-extern "C" extern void execute__14daObjRCircle_cFv();
-extern "C" extern void init__14daObjRCircle_cFv();
-extern "C" extern void setModelMtx__14daObjRCircle_cFv();
-extern "C" extern void daObjRCircle_create__FP14daObjRCircle_c();
-extern "C" extern void daObjRCircle_Delete__FP14daObjRCircle_c();
-extern "C" extern void daObjRCircle_execute__FP14daObjRCircle_c();
-extern "C" extern void daObjRCircle_draw__FP14daObjRCircle_c();
+void daObjRCircle_c_createHeap(fopAc_ac_c*);
+void daObjRCircle_create(daObjRCircle_c*);
+void daObjRCircle_Delete(daObjRCircle_c*);
+void daObjRCircle_execute(daObjRCircle_c*);
+void daObjRCircle_draw(daObjRCircle_c*);
+
+extern "C" void daObjRCircle_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__14daObjRCircle_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__14daObjRCircle_cFv();
+extern "C" void createHeap__14daObjRCircle_cFv();
+extern "C" void create__14daObjRCircle_cFv();
+extern "C" void Delete__14daObjRCircle_cFv();
+extern "C" void draw__14daObjRCircle_cFv();
+extern "C" void execute__14daObjRCircle_cFv();
+extern "C" void init__14daObjRCircle_cFv();
+extern "C" void setModelMtx__14daObjRCircle_cFv();
+extern "C" void daObjRCircle_create__FP14daObjRCircle_c();
+extern "C" void daObjRCircle_Delete__FP14daObjRCircle_c();
+extern "C" void daObjRCircle_execute__FP14daObjRCircle_c();
+extern "C" void daObjRCircle_draw__FP14daObjRCircle_c();
 SECTION_RODATA extern const u32 lit_3701;
 SECTION_RODATA extern const u8 lit_3702[4];
 SECTION_RODATA extern const u8 stringBase0[8];
@@ -37,7 +69,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +81,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRCircle_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjRCircle_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -58,7 +92,7 @@ ASM_FUNCTION(daObjRCircle_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObjRCircle_cFv) {
+asm daObjRCircle_c::daObjRCircle_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/__ct__14daObjRCircle_cFv.s"
 }
@@ -69,7 +103,7 @@ ASM_FUNCTION(__ct__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/__dt__12J3DFrameCtrlFv.s"
 }
@@ -80,7 +114,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjRCircle_cFv) {
+asm daObjRCircle_c::~daObjRCircle_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/__dt__14daObjRCircle_cFv.s"
 }
@@ -91,7 +125,7 @@ ASM_FUNCTION(__dt__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/createHeap__14daObjRCircle_cFv.s"
 }
@@ -102,7 +136,7 @@ ASM_FUNCTION(createHeap__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/create__14daObjRCircle_cFv.s"
 }
@@ -113,7 +147,7 @@ ASM_FUNCTION(create__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/Delete__14daObjRCircle_cFv.s"
 }
@@ -124,7 +158,7 @@ ASM_FUNCTION(Delete__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/draw__14daObjRCircle_cFv.s"
 }
@@ -135,7 +169,7 @@ ASM_FUNCTION(draw__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/execute__14daObjRCircle_cFv.s"
 }
@@ -146,7 +180,7 @@ ASM_FUNCTION(execute__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/init__14daObjRCircle_cFv.s"
 }
@@ -157,7 +191,7 @@ ASM_FUNCTION(init__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__14daObjRCircle_cFv) {
+asm void daObjRCircle_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/setModelMtx__14daObjRCircle_cFv.s"
 }
@@ -168,7 +202,7 @@ ASM_FUNCTION(setModelMtx__14daObjRCircle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRCircle_create__FP14daObjRCircle_c) {
+asm void daObjRCircle_create(daObjRCircle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_create__FP14daObjRCircle_c.s"
 }
@@ -179,7 +213,7 @@ ASM_FUNCTION(daObjRCircle_create__FP14daObjRCircle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRCircle_Delete__FP14daObjRCircle_c) {
+asm void daObjRCircle_Delete(daObjRCircle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_Delete__FP14daObjRCircle_c.s"
 }
@@ -190,7 +224,7 @@ ASM_FUNCTION(daObjRCircle_Delete__FP14daObjRCircle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRCircle_execute__FP14daObjRCircle_c) {
+asm void daObjRCircle_execute(daObjRCircle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_execute__FP14daObjRCircle_c.s"
 }
@@ -201,7 +235,7 @@ ASM_FUNCTION(daObjRCircle_execute__FP14daObjRCircle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRCircle_draw__FP14daObjRCircle_c) {
+asm void daObjRCircle_draw(daObjRCircle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_draw__FP14daObjRCircle_c.s"
 }

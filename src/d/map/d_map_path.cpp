@@ -6,29 +6,181 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMpath_n (dMpath_n) False/False
+/* top-level dependencies (begin dMpath_n) */
+/* top-level dependencies (end dMpath_n) */
+struct dMpath_n {
+	// build dTexObjAggregate_c (dMpath_n::dTexObjAggregate_c) False/False
+	/* dependencies (begin dMpath_n::dTexObjAggregate_c) */
+	/* dependencies (end dMpath_n::dTexObjAggregate_c) */
+	struct dTexObjAggregate_c {
+		/* 8003C85C */ void create();
+		/* 8003C8F4 */ void remove();
+		/* 8003D740 */ ~dTexObjAggregate_c();
+	};
+
+};
+
+// build dDrawPath_c (dDrawPath_c) False/False
+// build dDrawPath_c (dDrawPath_c) True/False
+struct dDrawPath_c;
+// build dDrawPath_c (dDrawPath_c) True/True
+// build dDrawPath_c (dDrawPath_c) True/True
+// build dDrawPath_c (dDrawPath_c) True/True
+// build dDrawPath_c (dDrawPath_c) True/True
+/* top-level dependencies (begin dDrawPath_c) */
+// outer dependency: dDrawPath_c::line_class
+// outer dependency: dDrawPath_c::room_class
+// outer dependency: dDrawPath_c::poly_class
+// outer dependency: dDrawPath_c::group_class
+// outer dependency: dDrawPath_c::floor_class
+/* top-level dependencies (end dDrawPath_c) */
+struct dDrawPath_c {
+	// dDrawPath_c::line_class
+	// dDrawPath_c::room_class
+	// dDrawPath_c::group_class
+	// dDrawPath_c::poly_class
+	// dDrawPath_c::floor_class
+	// build line_class (dDrawPath_c::line_class) False/False
+	/* dependencies (begin dDrawPath_c::line_class) */
+	/* dependencies (end dDrawPath_c::line_class) */
+	struct line_class {
+	};
+
+	// build poly_class (dDrawPath_c::poly_class) False/False
+	/* dependencies (begin dDrawPath_c::poly_class) */
+	/* dependencies (end dDrawPath_c::poly_class) */
+	struct poly_class {
+	};
+
+	// build group_class (dDrawPath_c::group_class) False/False
+	/* dependencies (begin dDrawPath_c::group_class) */
+	/* dependencies (end dDrawPath_c::group_class) */
+	struct group_class {
+	};
+
+	// build floor_class (dDrawPath_c::floor_class) False/False
+	/* dependencies (begin dDrawPath_c::floor_class) */
+	/* dependencies (end dDrawPath_c::floor_class) */
+	struct floor_class {
+	};
+
+	// build room_class (dDrawPath_c::room_class) False/False
+	/* dependencies (begin dDrawPath_c::room_class) */
+	/* dependencies (end dDrawPath_c::room_class) */
+	struct room_class {
+	};
+
+	/* 8002ABF0 */ bool isDrawType(s32);
+	/* 8002AD3C */ ~dDrawPath_c();
+	/* 8002AD84 */ void getLineColor(s32, s32);
+	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
+	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
+	/* 8003CB00 */ void rendering(dDrawPath_c::group_class const*);
+	/* 8003CBBC */ void rendering(dDrawPath_c::floor_class const*);
+	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
+	/* 8003CCC4 */ void drawPath();
+};
+
+// build dRenderingMap_c (dRenderingMap_c) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin dRenderingMap_c) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end dRenderingMap_c) */
+struct dRenderingMap_c {
+	// ResTIMG
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, char*, char*, u16) const;
+	/* 8003CDAC */ void renderingMap();
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build dRenderingFDAmap_c (dRenderingFDAmap_c) False/False
+// build dDrawPath_c (dDrawPath_c) True/True
+/* top-level dependencies (begin dRenderingFDAmap_c) */
+// outer dependency: dDrawPath_c::line_class
+/* top-level dependencies (end dRenderingFDAmap_c) */
+struct dRenderingFDAmap_c {
+	// dDrawPath_c::line_class
+	/* 8002ABF8 */ ~dRenderingFDAmap_c();
+	/* 8003CE78 */ void setTevSettingNonTextureDirectColor() const;
+	/* 8003CF40 */ void setTevSettingIntensityTextureToCI() const;
+	/* 8003D0AC */ void drawBack() const;
+	/* 8003D188 */ void preRenderingMap();
+	/* 8003D320 */ void postRenderingMap();
+	/* 8003D3C0 */ void renderingDecoration(dDrawPath_c::line_class const*);
+	/* 8003D68C */ void getDecoLineColor(s32, s32);
+	/* 8003D6B8 */ void getDecorationLineWidth(s32);
+};
+
+// build _GXTexObj (_GXTexObj) False/False
+/* top-level dependencies (begin _GXTexObj) */
+/* top-level dependencies (end _GXTexObj) */
+struct _GXTexObj {
+};
+
+// build _GXTlutObj (_GXTlutObj) False/False
+/* top-level dependencies (begin _GXTlutObj) */
+/* top-level dependencies (end _GXTlutObj) */
+struct _GXTlutObj {
+};
+
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+	/* 8002ABEC */ void draw();
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__Q28dMpath_n18dTexObjAggregate_cFv();
-extern "C" extern void remove__Q28dMpath_n18dTexObjAggregate_cFv();
-extern "C" extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
-extern "C" extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
-extern "C" extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class();
-extern "C" extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class();
-extern "C" extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
-extern "C" extern void drawPath__11dDrawPath_cFv();
-extern "C" extern void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
-extern "C" extern void renderingMap__15dRenderingMap_cFv();
-extern "C" extern void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv();
-extern "C" extern void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv();
-extern "C" extern void drawBack__18dRenderingFDAmap_cCFv();
-extern "C" extern void preRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" extern void postRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" extern void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
-extern "C" extern void getDecoLineColor__18dRenderingFDAmap_cFii();
-extern "C" extern void getDecorationLineWidth__18dRenderingFDAmap_cFi();
-extern "C" extern void __sinit_d_map_path_cpp();
-extern "C" extern void __dt__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void __sinit_d_map_path_cpp();
+
+extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+extern "C" void drawPath__11dDrawPath_cFv();
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
+extern "C" void renderingMap__15dRenderingMap_cFv();
+extern "C" void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv();
+extern "C" void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv();
+extern "C" void drawBack__18dRenderingFDAmap_cCFv();
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii();
+extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi();
+extern "C" void __sinit_d_map_path_cpp();
+extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv();
 SECTION_RODATA extern const u8 data_80379C30[28];
 SECTION_RODATA extern const u8 d_map_d_map_path__stringBase0[12];
 SECTION_DATA extern void*const __vt__18dRenderingFDAmap_c[26];
@@ -45,62 +197,113 @@ SECTION_SDATA2 extern f64 d_map_d_map_path__lit_3850;
 // External References:
 // 
 
-extern "C" extern void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern "C" extern void draw__12dDlst_base_cFv();
-extern "C" extern void isDrawType__11dDrawPath_cFi();
-extern "C" extern void __dt__18dRenderingFDAmap_cFv();
-extern "C" extern void __dt__11dDrawPath_cFv();
-extern "C" extern void getLineColor__11dDrawPath_cFii();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void C_MTXOrtho();
-extern "C" extern void GXSetVtxDesc();
-extern "C" extern void GXClearVtxDesc();
-extern "C" extern void GXSetVtxAttrFmt();
-extern "C" extern void GXSetArray();
-extern "C" extern void GXSetTexCoordGen2();
-extern "C" extern void GXSetNumTexGens();
-extern "C" extern void GXPixModeSync();
-extern "C" extern void GXBegin();
-extern "C" extern void GXSetLineWidth();
-extern "C" extern void GXSetPointSize();
-extern "C" extern void GXSetCullMode();
-extern "C" extern void GXSetTexCopySrc();
-extern "C" extern void GXSetTexCopyDst();
-extern "C" extern void GXSetCopyFilter();
-extern "C" extern void GXCopyTex();
-extern "C" extern void GXSetNumChans();
-extern "C" extern void GXSetChanCtrl();
-extern "C" extern void GXLoadTexObj();
-extern "C" extern void GXSetNumIndStages();
-extern "C" extern void GXSetTevColorIn();
-extern "C" extern void GXSetTevAlphaIn();
-extern "C" extern void GXSetTevColorOp();
-extern "C" extern void GXSetTevAlphaOp();
-extern "C" extern void GXSetTevColor();
-extern "C" extern void GXSetTevKColorSel();
-extern "C" extern void GXSetAlphaCompare();
-extern "C" extern void GXSetTevOrder();
-extern "C" extern void GXSetNumTevStages();
-extern "C" extern void GXSetFog();
-extern "C" extern void GXSetBlendMode();
-extern "C" extern void GXSetZMode();
-extern "C" extern void GXSetZCompLoc();
-extern "C" extern void GXSetDither();
-extern "C" extern void GXSetProjection();
-extern "C" extern void GXLoadPosMtxImm();
-extern "C" extern void GXSetCurrentMtx();
-extern "C" extern void GXSetViewport();
-extern "C" extern void GXSetScissor();
-extern "C" extern void GXSetClipMode();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void C_MTXOrtho();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetArray();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXSetClipMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" bool isDrawType__11dDrawPath_cFi();
+extern "C" void __dt__18dRenderingFDAmap_cFv();
+extern "C" void __dt__11dDrawPath_cFv();
+extern "C" void getLineColor__11dDrawPath_cFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void C_MTXOrtho();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetArray();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXSetClipMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u8 g_clearColor[4];
@@ -110,13 +313,13 @@ SECTION_SDATA extern u8 g_clearColor[4];
 // 
 
 /* ############################################################################################## */
-/* 80379C30-80379C4C 001C+00 .rodata    data$3644                                                    */
+/* 80379C30-80379C4C 001C+00 rc=1 efc=0 .rodata    data$3644                                                    */
 SECTION_RODATA const u8 data_80379C30[28] = {
 	0x00, 0x00, 0x00, 0x4F, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x4D, 0x00, 0x00, 0x00, 0x4E,
 	0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x52,
 };
 
-/* 80379C4C-80379C58 0007+05 .rodata    @stringBase0                                                 */
+/* 80379C4C-80379C58 0007+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -125,132 +328,132 @@ SECTION_DEAD char* const stringBase_80379C4C = "Always";
 SECTION_DEAD char* const pad_80379C53 = "\0\0\0\0";
 #pragma pop
 
-/* 8003C85C-8003C8F4 0098+00 .text      create__Q28dMpath_n18dTexObjAggregate_cFv                    */
+/* 8003C85C-8003C8F4 0098+00 rc=1 efc=1 .text      create__Q28dMpath_n18dTexObjAggregate_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__Q28dMpath_n18dTexObjAggregate_cFv) {
+asm void dMpath_n::dTexObjAggregate_c::create() {
 	nofralloc
 #include "asm/d/map/d_map_path/create__Q28dMpath_n18dTexObjAggregate_cFv.s"
 }
 #pragma pop
 
 
-/* 8003C8F4-8003C94C 0058+00 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv                    */
+/* 8003C8F4-8003C94C 0058+00 rc=2 efc=1 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__Q28dMpath_n18dTexObjAggregate_cFv) {
+asm void dMpath_n::dTexObjAggregate_c::remove() {
 	nofralloc
 #include "asm/d/map/d_map_path/remove__Q28dMpath_n18dTexObjAggregate_cFv.s"
 }
 #pragma pop
 
 
-/* 8003C94C-8003CA40 00F4+00 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class       */
+/* 8003C94C-8003CA40 00F4+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class) {
+asm void dDrawPath_c::rendering(dDrawPath_c::line_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class.s"
 }
 #pragma pop
 
 
-/* 8003CA40-8003CB00 00C0+00 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class       */
+/* 8003CA40-8003CB00 00C0+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class) {
+asm void dDrawPath_c::rendering(dDrawPath_c::poly_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class.s"
 }
 #pragma pop
 
 
-/* 8003CB00-8003CBBC 00BC+00 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class      */
+/* 8003CB00-8003CBBC 00BC+00 rc=1 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class) {
+asm void dDrawPath_c::rendering(dDrawPath_c::group_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class.s"
 }
 #pragma pop
 
 
-/* 8003CBBC-8003CC24 0068+00 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class      */
+/* 8003CBBC-8003CC24 0068+00 rc=1 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class) {
+asm void dDrawPath_c::rendering(dDrawPath_c::floor_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class.s"
 }
 #pragma pop
 
 
-/* 8003CC24-8003CCC4 00A0+00 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class       */
+/* 8003CC24-8003CCC4 00A0+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class) {
+asm void dDrawPath_c::rendering(dDrawPath_c::room_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class.s"
 }
 #pragma pop
 
 
-/* 8003CCC4-8003CD38 0074+00 .text      drawPath__11dDrawPath_cFv                                    */
+/* 8003CCC4-8003CD38 0074+00 rc=11 efc=9 .text      drawPath__11dDrawPath_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawPath__11dDrawPath_cFv) {
+asm void dDrawPath_c::drawPath() {
 	nofralloc
 #include "asm/d/map/d_map_path/drawPath__11dDrawPath_cFv.s"
 }
 #pragma pop
 
 
-/* 8003CD38-8003CDAC 0074+00 .text      makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs        */
+/* 8003CD38-8003CDAC 0074+00 rc=3 efc=3 .text      makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs) {
+asm void dRenderingMap_c::makeResTIMG(ResTIMG* field_0, u16 field_1, u16 field_2, char* field_3, char* field_4, u16 field_5) const {
 	nofralloc
 #include "asm/d/map/d_map_path/makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs.s"
 }
 #pragma pop
 
 
-/* 8003CDAC-8003CE78 00CC+00 .text      renderingMap__15dRenderingMap_cFv                            */
+/* 8003CDAC-8003CE78 00CC+00 rc=2 efc=2 .text      renderingMap__15dRenderingMap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(renderingMap__15dRenderingMap_cFv) {
+asm void dRenderingMap_c::renderingMap() {
 	nofralloc
 #include "asm/d/map/d_map_path/renderingMap__15dRenderingMap_cFv.s"
 }
 #pragma pop
 
 
-/* 8003CE78-8003CF40 00C8+00 .text      setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv  */
+/* 8003CE78-8003CF40 00C8+00 rc=5 efc=3 .text      setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv) {
+asm void dRenderingFDAmap_c::setTevSettingNonTextureDirectColor() const {
 	nofralloc
 #include "asm/d/map/d_map_path/setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv.s"
 }
 #pragma pop
 
 
-/* 8003CF40-8003D0AC 016C+00 .text      setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv   */
+/* 8003CF40-8003D0AC 016C+00 rc=4 efc=3 .text      setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv) {
+asm void dRenderingFDAmap_c::setTevSettingIntensityTextureToCI() const {
 	nofralloc
 #include "asm/d/map/d_map_path/setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv.s"
 }
@@ -258,16 +461,16 @@ ASM_FUNCTION(setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv) {
 
 
 /* ############################################################################################## */
-/* 80451E08-80451E0C 0004+00 .sdata2    @3836                                                        */
+/* 80451E08-80451E0C 0004+00 rc=3 efc=0 .sdata2    @3836                                                        */
 u8 d_map_d_map_path__lit_3836[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8003D0AC-8003D188 00DC+00 .text      drawBack__18dRenderingFDAmap_cCFv                            */
+/* 8003D0AC-8003D188 00DC+00 rc=1 efc=0 .text      drawBack__18dRenderingFDAmap_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawBack__18dRenderingFDAmap_cCFv) {
+asm void dRenderingFDAmap_c::drawBack() const {
 	nofralloc
 #include "asm/d/map/d_map_path/drawBack__18dRenderingFDAmap_cCFv.s"
 }
@@ -275,34 +478,34 @@ ASM_FUNCTION(drawBack__18dRenderingFDAmap_cCFv) {
 
 
 /* ############################################################################################## */
-/* 80451E0C-80451E10 0004+00 .sdata2    @3846                                                        */
+/* 80451E0C-80451E10 0004+00 rc=1 efc=0 .sdata2    @3846                                                        */
 f32 d_map_d_map_path__lit_3846 = 1.0f;
 
-/* 80451E10-80451E14 0004+00 .sdata2    @3847                                                        */
+/* 80451E10-80451E14 0004+00 rc=1 efc=0 .sdata2    @3847                                                        */
 f32 d_map_d_map_path__lit_3847 = 0.5f;
 
-/* 80451E14-80451E18 0004+00 .sdata2    @3848                                                        */
+/* 80451E14-80451E18 0004+00 rc=1 efc=0 .sdata2    @3848                                                        */
 f32 d_map_d_map_path__lit_3848 = 10000.0f;
 
-/* 80451E18-80451E20 0008+00 .sdata2    @3850                                                        */
+/* 80451E18-80451E20 0008+00 rc=1 efc=0 .sdata2    @3850                                                        */
 f64 d_map_d_map_path__lit_3850 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8003D188-8003D320 0198+00 .text      preRenderingMap__18dRenderingFDAmap_cFv                      */
+/* 8003D188-8003D320 0198+00 rc=9 efc=8 .text      preRenderingMap__18dRenderingFDAmap_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(preRenderingMap__18dRenderingFDAmap_cFv) {
+asm void dRenderingFDAmap_c::preRenderingMap() {
 	nofralloc
 #include "asm/d/map/d_map_path/preRenderingMap__18dRenderingFDAmap_cFv.s"
 }
 #pragma pop
 
 
-/* 8003D320-8003D3C0 00A0+00 .text      postRenderingMap__18dRenderingFDAmap_cFv                     */
+/* 8003D320-8003D3C0 00A0+00 rc=8 efc=7 .text      postRenderingMap__18dRenderingFDAmap_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(postRenderingMap__18dRenderingFDAmap_cFv) {
+asm void dRenderingFDAmap_c::postRenderingMap() {
 	nofralloc
 #include "asm/d/map/d_map_path/postRenderingMap__18dRenderingFDAmap_cFv.s"
 }
@@ -310,61 +513,61 @@ ASM_FUNCTION(postRenderingMap__18dRenderingFDAmap_cFv) {
 
 
 /* ############################################################################################## */
-/* 80424678-80424684 000C+00 .bss       @3639                                                        */
+/* 80424678-80424684 000C+00 rc=1 efc=0 .bss       @3639                                                        */
 u8 lit_3639[12];
 
-/* 80424684-804246A0 001C+00 .bss       m_texObjAgg__8dMpath_n                                       */
+/* 80424684-804246A0 001C+00 rc=7 efc=5 .bss       m_texObjAgg__8dMpath_n                                       */
 u8 m_texObjAgg__8dMpath_n[28];
 
-/* 8003D3C0-8003D68C 02CC+00 .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
+/* 8003D3C0-8003D68C 02CC+00 rc=2 efc=2 .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class) {
+asm void dRenderingFDAmap_c::renderingDecoration(dDrawPath_c::line_class const* field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class.s"
 }
 #pragma pop
 
 
-/* 8003D68C-8003D6B8 002C+00 .text      getDecoLineColor__18dRenderingFDAmap_cFii                    */
+/* 8003D68C-8003D6B8 002C+00 rc=7 efc=6 .text      getDecoLineColor__18dRenderingFDAmap_cFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDecoLineColor__18dRenderingFDAmap_cFii) {
+asm void dRenderingFDAmap_c::getDecoLineColor(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/map/d_map_path/getDecoLineColor__18dRenderingFDAmap_cFii.s"
 }
 #pragma pop
 
 
-/* 8003D6B8-8003D6E4 002C+00 .text      getDecorationLineWidth__18dRenderingFDAmap_cFi               */
+/* 8003D6B8-8003D6E4 002C+00 rc=7 efc=6 .text      getDecorationLineWidth__18dRenderingFDAmap_cFi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDecorationLineWidth__18dRenderingFDAmap_cFi) {
+asm void dRenderingFDAmap_c::getDecorationLineWidth(s32 field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/getDecorationLineWidth__18dRenderingFDAmap_cFi.s"
 }
 #pragma pop
 
 
-/* 8003D6E4-8003D740 005C+00 .text      __sinit_d_map_path_cpp                                       */
+/* 8003D6E4-8003D740 005C+00 rc=1 efc=1 .text      __sinit_d_map_path_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_map_path_cpp) {
+extern "C" asm void __sinit_d_map_path_cpp() {
 	nofralloc
 #include "asm/d/map/d_map_path/__sinit_d_map_path_cpp.s"
 }
 #pragma pop
 
 
-/* 8003D740-8003D790 0050+00 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv                      */
+/* 8003D740-8003D790 0050+00 rc=1 efc=0 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q28dMpath_n18dTexObjAggregate_cFv) {
+asm dMpath_n::dTexObjAggregate_c::~dTexObjAggregate_c() {
 	nofralloc
 #include "asm/d/map/d_map_path/__dt__Q28dMpath_n18dTexObjAggregate_cFv.s"
 }
@@ -372,7 +575,7 @@ ASM_FUNCTION(__dt__Q28dMpath_n18dTexObjAggregate_cFv) {
 
 
 /* ############################################################################################## */
-/* 803A7C90-803A7CF8 0068+00 .data      __vt__18dRenderingFDAmap_c                                   */
+/* 803A7C90-803A7CF8 0068+00 rc=12 efc=12 .data      __vt__18dRenderingFDAmap_c                                   */
 void* const __vt__18dRenderingFDAmap_c[26] = {
 	NULL, /* RTTI */
 	NULL,
@@ -402,7 +605,7 @@ void* const __vt__18dRenderingFDAmap_c[26] = {
 	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
-/* 803A7CF8-803A7D38 0040+00 .data      __vt__11dDrawPath_c                                          */
+/* 803A7CF8-803A7D38 0040+00 rc=15 efc=15 .data      __vt__11dDrawPath_c                                          */
 void* const __vt__11dDrawPath_c[16] = {
 	NULL, /* RTTI */
 	NULL,

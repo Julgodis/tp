@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagGstart_c;
+
+struct daTagGstart_c {
+	void create();
+	~daTagGstart_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__13daTagGstart_cFv();
-extern "C" extern void daTagGstart_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daTagGstart_cFv();
-extern "C" extern void daTagGstart_Delete__FP13daTagGstart_c();
-extern "C" extern void execute__13daTagGstart_cFv();
-extern "C" extern void daTagGstart_Execute__FP13daTagGstart_c();
-extern "C" extern void daTagGstart_Draw__FP13daTagGstart_c();
+void daTagGstart_Create(fopAc_ac_c*);
+void daTagGstart_Delete(daTagGstart_c*);
+void daTagGstart_Execute(daTagGstart_c*);
+bool daTagGstart_Draw(daTagGstart_c*);
+
+extern "C" void create__13daTagGstart_cFv();
+extern "C" void daTagGstart_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagGstart_cFv();
+extern "C" void daTagGstart_Delete__FP13daTagGstart_c();
+extern "C" void execute__13daTagGstart_cFv();
+extern "C" void daTagGstart_Execute__FP13daTagGstart_c();
+extern "C" bool daTagGstart_Draw__FP13daTagGstart_c();
 SECTION_DATA extern u8 l_daTagGstart_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_Gstart[48];
 
@@ -23,7 +44,9 @@ SECTION_DATA extern u8 g_profile_Tag_Gstart[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -33,7 +56,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagGstart_cFv) {
+asm void daTagGstart_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/create__13daTagGstart_cFv.s"
 }
@@ -44,7 +67,7 @@ ASM_FUNCTION(create__13daTagGstart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGstart_Create__FP10fopAc_ac_c) {
+asm void daTagGstart_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/daTagGstart_Create__FP10fopAc_ac_c.s"
 }
@@ -55,7 +78,7 @@ ASM_FUNCTION(daTagGstart_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagGstart_cFv) {
+asm daTagGstart_c::~daTagGstart_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/__dt__13daTagGstart_cFv.s"
 }
@@ -66,7 +89,7 @@ ASM_FUNCTION(__dt__13daTagGstart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGstart_Delete__FP13daTagGstart_c) {
+asm void daTagGstart_Delete(daTagGstart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/daTagGstart_Delete__FP13daTagGstart_c.s"
 }
@@ -77,7 +100,7 @@ ASM_FUNCTION(daTagGstart_Delete__FP13daTagGstart_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagGstart_cFv) {
+asm void daTagGstart_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/execute__13daTagGstart_cFv.s"
 }
@@ -88,7 +111,7 @@ ASM_FUNCTION(execute__13daTagGstart_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagGstart_Execute__FP13daTagGstart_c) {
+asm void daTagGstart_Execute(daTagGstart_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/daTagGstart_Execute__FP13daTagGstart_c.s"
 }
@@ -96,14 +119,9 @@ ASM_FUNCTION(daTagGstart_Execute__FP13daTagGstart_c) {
 
 
 /* 805A3678-805A3680 0008+00 .text      daTagGstart_Draw__FP13daTagGstart_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagGstart_Draw__FP13daTagGstart_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/daTagGstart_Draw__FP13daTagGstart_c.s"
+bool daTagGstart_Draw(daTagGstart_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -6,17 +6,34 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct npc_inko_class;
+struct J3DJoint;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Inko_Draw__FP14npc_inko_class();
-extern "C" extern void anm_init__FP14npc_inko_classifUcf();
-extern "C" extern void daNpc_Inko_Execute__FP14npc_inko_class();
-extern "C" extern void daNpc_Inko_IsDelete__FP14npc_inko_class();
-extern "C" extern void daNpc_Inko_Delete__FP14npc_inko_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daNpc_Inko_Create__FP10fopAc_ac_c();
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Inko_Draw(npc_inko_class*);
+void anm_init(npc_inko_class*, s32, f32, u8, f32);
+void daNpc_Inko_Execute(npc_inko_class*);
+bool daNpc_Inko_IsDelete(npc_inko_class*);
+void daNpc_Inko_Delete(npc_inko_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNpc_Inko_Create(fopAc_ac_c*);
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Inko_Draw__FP14npc_inko_class();
+extern "C" void anm_init__FP14npc_inko_classifUcf();
+extern "C" void daNpc_Inko_Execute__FP14npc_inko_class();
+extern "C" bool daNpc_Inko_IsDelete__FP14npc_inko_class();
+extern "C" void daNpc_Inko_Delete__FP14npc_inko_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daNpc_Inko_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3849[4];
 SECTION_RODATA extern const u32 lit_3850;
 SECTION_RODATA extern const u32 lit_4329;
@@ -70,7 +87,9 @@ SECTION_DATA extern u8 g_profile_NPC_INKO[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -80,7 +99,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/nodeCallBack__FP8J3DJointi.s"
 }
@@ -91,7 +110,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Inko_Draw__FP14npc_inko_class) {
+asm void daNpc_Inko_Draw(npc_inko_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Draw__FP14npc_inko_class.s"
 }
@@ -102,7 +121,7 @@ ASM_FUNCTION(daNpc_Inko_Draw__FP14npc_inko_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP14npc_inko_classifUcf) {
+asm void anm_init(npc_inko_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/anm_init__FP14npc_inko_classifUcf.s"
 }
@@ -113,7 +132,7 @@ ASM_FUNCTION(anm_init__FP14npc_inko_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Inko_Execute__FP14npc_inko_class) {
+asm void daNpc_Inko_Execute(npc_inko_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Execute__FP14npc_inko_class.s"
 }
@@ -121,21 +140,16 @@ ASM_FUNCTION(daNpc_Inko_Execute__FP14npc_inko_class) {
 
 
 /* 80A0DD70-80A0DD78 0008+00 .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Inko_IsDelete__FP14npc_inko_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_IsDelete__FP14npc_inko_class.s"
+bool daNpc_Inko_IsDelete(npc_inko_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A0DD78-80A0DDC8 0050+00 .text      daNpc_Inko_Delete__FP14npc_inko_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Inko_Delete__FP14npc_inko_class) {
+asm void daNpc_Inko_Delete(npc_inko_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Delete__FP14npc_inko_class.s"
 }
@@ -146,7 +160,7 @@ ASM_FUNCTION(daNpc_Inko_Delete__FP14npc_inko_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -157,7 +171,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Inko_Create__FP10fopAc_ac_c) {
+asm void daNpc_Inko_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_Create__FP10fopAc_ac_c.s"
 }

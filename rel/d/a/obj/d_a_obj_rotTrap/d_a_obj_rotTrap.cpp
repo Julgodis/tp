@@ -6,37 +6,100 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daRotTrap_c;
+
+struct daRotTrap_HIO_c {
+	daRotTrap_HIO_c();
+	~daRotTrap_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daRotTrap_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void procMain();
+	void init_modeWait();
+	void modeWait();
+	void init_modeAcc();
+	void modeAcc();
+	void init_modeMove();
+	void modeMove();
+	void seSet();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daRotTrap_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daRotTrap_cFv();
-extern "C" extern void CreateHeap__11daRotTrap_cFv();
-extern "C" extern void create__11daRotTrap_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__11daRotTrap_cFPPA3_A4_f();
-extern "C" extern void procMain__11daRotTrap_cFv();
-extern "C" extern void init_modeWait__11daRotTrap_cFv();
-extern "C" extern void modeWait__11daRotTrap_cFv();
-extern "C" extern void init_modeAcc__11daRotTrap_cFv();
-extern "C" extern void modeAcc__11daRotTrap_cFv();
-extern "C" extern void init_modeMove__11daRotTrap_cFv();
-extern "C" extern void modeMove__11daRotTrap_cFv();
-extern "C" extern void seSet__11daRotTrap_cFv();
-extern "C" extern void Draw__11daRotTrap_cFv();
-extern "C" extern void Delete__11daRotTrap_cFv();
-extern "C" extern void daRotTrap_Draw__FP11daRotTrap_c();
-extern "C" extern void daRotTrap_Execute__FP11daRotTrap_c();
-extern "C" extern void daRotTrap_Delete__FP11daRotTrap_c();
-extern "C" extern void daRotTrap_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daRotTrap_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_rotTrap_cpp();
+extern "C" void Execute__11daRotTrap_cFPPA3_A4_f();
+void daRotTrap_Draw(daRotTrap_c*);
+void daRotTrap_Execute(daRotTrap_c*);
+void daRotTrap_Delete(daRotTrap_c*);
+void daRotTrap_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_rotTrap_cpp();
+
+extern "C" void __ct__15daRotTrap_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daRotTrap_cFv();
+extern "C" void CreateHeap__11daRotTrap_cFv();
+extern "C" void create__11daRotTrap_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__11daRotTrap_cFPPA3_A4_f();
+extern "C" void procMain__11daRotTrap_cFv();
+extern "C" void init_modeWait__11daRotTrap_cFv();
+extern "C" void modeWait__11daRotTrap_cFv();
+extern "C" void init_modeAcc__11daRotTrap_cFv();
+extern "C" void modeAcc__11daRotTrap_cFv();
+extern "C" void init_modeMove__11daRotTrap_cFv();
+extern "C" void modeMove__11daRotTrap_cFv();
+extern "C" void seSet__11daRotTrap_cFv();
+extern "C" void Draw__11daRotTrap_cFv();
+extern "C" void Delete__11daRotTrap_cFv();
+extern "C" void daRotTrap_Draw__FP11daRotTrap_c();
+extern "C" void daRotTrap_Execute__FP11daRotTrap_c();
+extern "C" void daRotTrap_Delete__FP11daRotTrap_c();
+extern "C" void daRotTrap_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daRotTrap_HIO_cFv();
+extern "C" void __sinit_d_a_obj_rotTrap_cpp();
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u8 mCcDObjInfo__11daRotTrap_c[48];
 SECTION_RODATA extern const u32 lit_3880;
@@ -74,8 +137,11 @@ SECTION_BSS extern u8 data_80CC0AD4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -85,7 +151,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daRotTrap_HIO_cFv) {
+asm daRotTrap_HIO_c::daRotTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__ct__15daRotTrap_HIO_cFv.s"
 }
@@ -96,7 +162,7 @@ ASM_FUNCTION(__ct__15daRotTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -107,7 +173,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daRotTrap_cFv) {
+asm void daRotTrap_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/setBaseMtx__11daRotTrap_cFv.s"
 }
@@ -118,7 +184,7 @@ ASM_FUNCTION(setBaseMtx__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daRotTrap_cFv) {
+asm void daRotTrap_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/CreateHeap__11daRotTrap_cFv.s"
 }
@@ -129,7 +195,7 @@ ASM_FUNCTION(CreateHeap__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daRotTrap_cFv) {
+asm void daRotTrap_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/create__11daRotTrap_cFv.s"
 }
@@ -140,7 +206,7 @@ ASM_FUNCTION(create__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__8dCcD_CylFv.s"
 }
@@ -151,7 +217,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__ct__8dCcD_CylFv.s"
 }
@@ -162,7 +228,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__8cM3dGCylFv.s"
 }
@@ -173,7 +239,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__8cM3dGAabFv.s"
 }
@@ -184,7 +250,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__10dCcD_GSttsFv.s"
 }
@@ -195,7 +261,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daRotTrap_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daRotTrap_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/Execute__11daRotTrap_cFPPA3_A4_f.s"
 }
@@ -206,7 +272,7 @@ ASM_FUNCTION(Execute__11daRotTrap_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__11daRotTrap_cFv) {
+asm void daRotTrap_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/procMain__11daRotTrap_cFv.s"
 }
@@ -217,7 +283,7 @@ ASM_FUNCTION(procMain__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daRotTrap_cFv) {
+asm void daRotTrap_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/init_modeWait__11daRotTrap_cFv.s"
 }
@@ -228,7 +294,7 @@ ASM_FUNCTION(init_modeWait__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daRotTrap_cFv) {
+asm void daRotTrap_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/modeWait__11daRotTrap_cFv.s"
 }
@@ -239,7 +305,7 @@ ASM_FUNCTION(modeWait__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeAcc__11daRotTrap_cFv) {
+asm void daRotTrap_c::init_modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/init_modeAcc__11daRotTrap_cFv.s"
 }
@@ -250,7 +316,7 @@ ASM_FUNCTION(init_modeAcc__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeAcc__11daRotTrap_cFv) {
+asm void daRotTrap_c::modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/modeAcc__11daRotTrap_cFv.s"
 }
@@ -261,7 +327,7 @@ ASM_FUNCTION(modeAcc__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__11daRotTrap_cFv) {
+asm void daRotTrap_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/init_modeMove__11daRotTrap_cFv.s"
 }
@@ -272,7 +338,7 @@ ASM_FUNCTION(init_modeMove__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daRotTrap_cFv) {
+asm void daRotTrap_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/modeMove__11daRotTrap_cFv.s"
 }
@@ -283,7 +349,7 @@ ASM_FUNCTION(modeMove__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seSet__11daRotTrap_cFv) {
+asm void daRotTrap_c::seSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/seSet__11daRotTrap_cFv.s"
 }
@@ -294,7 +360,7 @@ ASM_FUNCTION(seSet__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daRotTrap_cFv) {
+asm void daRotTrap_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/Draw__11daRotTrap_cFv.s"
 }
@@ -305,7 +371,7 @@ ASM_FUNCTION(Draw__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daRotTrap_cFv) {
+asm void daRotTrap_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/Delete__11daRotTrap_cFv.s"
 }
@@ -316,7 +382,7 @@ ASM_FUNCTION(Delete__11daRotTrap_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotTrap_Draw__FP11daRotTrap_c) {
+asm void daRotTrap_Draw(daRotTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Draw__FP11daRotTrap_c.s"
 }
@@ -327,7 +393,7 @@ ASM_FUNCTION(daRotTrap_Draw__FP11daRotTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotTrap_Execute__FP11daRotTrap_c) {
+asm void daRotTrap_Execute(daRotTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Execute__FP11daRotTrap_c.s"
 }
@@ -338,7 +404,7 @@ ASM_FUNCTION(daRotTrap_Execute__FP11daRotTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotTrap_Delete__FP11daRotTrap_c) {
+asm void daRotTrap_Delete(daRotTrap_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Delete__FP11daRotTrap_c.s"
 }
@@ -349,7 +415,7 @@ ASM_FUNCTION(daRotTrap_Delete__FP11daRotTrap_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotTrap_Create__FP10fopAc_ac_c) {
+asm void daRotTrap_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Create__FP10fopAc_ac_c.s"
 }
@@ -360,7 +426,7 @@ ASM_FUNCTION(daRotTrap_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__10cCcD_GSttsFv.s"
 }
@@ -371,7 +437,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daRotTrap_HIO_cFv) {
+asm daRotTrap_HIO_c::~daRotTrap_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__dt__15daRotTrap_HIO_cFv.s"
 }
@@ -382,7 +448,7 @@ ASM_FUNCTION(__dt__15daRotTrap_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_rotTrap_cpp) {
+extern "C" asm void __sinit_d_a_obj_rotTrap_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/__sinit_d_a_obj_rotTrap_cpp.s"
 }

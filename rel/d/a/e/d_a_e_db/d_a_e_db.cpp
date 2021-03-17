@@ -6,57 +6,158 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopEn_enemy_c;
+struct Z2CreatureEnemy;
+struct fopAc_ac_c;
+struct cXyz;
+struct e_db_class;
+
+struct daE_DB_HIO_c {
+	daE_DB_HIO_c();
+	~daE_DB_HIO_c();
+};
+
+struct e_db_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_Sph {
+	dCcD_Sph();
+	~dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct csXyz {
+	csXyz();
+	~csXyz();
+};
+
+struct cXyz {
+	cXyz();
+	~cXyz();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct fopEn_enemy_c {
+};
+
+struct Z2CreatureEnemy {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_DB_HIO_cFv();
-extern "C" extern void anm_init__FP10e_db_classifUcf();
-extern "C" extern void leaf_anm_init__FP10e_db_classifUcf();
-extern "C" extern void daE_DB_Draw__FP10e_db_class();
-extern "C" extern void pl_check__FP10e_db_classf();
-extern "C" extern void damage_check__FP10e_db_class();
-extern "C" extern void e_db_stay__FP10e_db_class();
-extern "C" extern void e_db_appear__FP10e_db_class();
-extern "C" extern void e_db_appear_v__FP10e_db_class();
-extern "C" extern void e_db_wait__FP10e_db_class();
-extern "C" extern void e_db_mk_roof__FP10e_db_class();
-extern "C" extern void e_db_attack__FP10e_db_class();
-extern "C" extern void e_db_attack_s__FP10e_db_class();
-extern "C" extern void e_db_chance__FP10e_db_class();
-extern "C" extern void e_db_s_damage__FP10e_db_class();
-extern "C" extern void e_db_damage__FP10e_db_class();
-extern "C" extern void kuki_control1__FP10e_db_class();
-extern "C" extern void kuki_control2__FP10e_db_class();
-extern "C" extern void kuki_control3__FP10e_db_class();
-extern "C" extern void kuki_ha_set__FP10e_db_class();
-extern "C" extern void kuki_control1_e__FP10e_db_class();
-extern "C" extern void e_db_escape__FP10e_db_class();
-extern "C" extern void e_db_e_dead__FP10e_db_class();
-extern "C" extern void action__FP10e_db_class();
-extern "C" extern void eff_set__FP10e_db_classi();
-extern "C" extern void anm_se_set__FP10e_db_class();
-extern "C" extern void daE_DB_Execute__FP10e_db_class();
-extern "C" extern void daE_DB_IsDelete__FP10e_db_class();
-extern "C" extern void daE_DB_Delete__FP10e_db_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_DB_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daE_DB_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_db_cpp();
-extern "C" extern void func_806A145C();
-extern "C" extern void func_806A1464();
-extern "C" extern void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
+void anm_init(e_db_class*, s32, f32, u8, f32);
+void leaf_anm_init(e_db_class*, s32, f32, u8, f32);
+void daE_DB_Draw(e_db_class*);
+void pl_check(e_db_class*, f32);
+void damage_check(e_db_class*);
+void e_db_stay(e_db_class*);
+void e_db_appear(e_db_class*);
+void e_db_appear_v(e_db_class*);
+void e_db_wait(e_db_class*);
+void e_db_mk_roof(e_db_class*);
+void e_db_attack(e_db_class*);
+void e_db_attack_s(e_db_class*);
+void e_db_chance(e_db_class*);
+void e_db_s_damage(e_db_class*);
+void e_db_damage(e_db_class*);
+void kuki_control1(e_db_class*);
+void kuki_control2(e_db_class*);
+void kuki_control3(e_db_class*);
+void kuki_ha_set(e_db_class*);
+void kuki_control1_e(e_db_class*);
+void e_db_escape(e_db_class*);
+void e_db_e_dead(e_db_class*);
+void action(e_db_class*);
+void eff_set(e_db_class*, s32);
+void anm_se_set(e_db_class*);
+void daE_DB_Execute(e_db_class*);
+bool daE_DB_IsDelete(e_db_class*);
+void daE_DB_Delete(e_db_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_DB_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_db_cpp();
+extern "C" void func_806A145C();
+extern "C" void func_806A1464();
+void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*);
+
+extern "C" void __ct__12daE_DB_HIO_cFv();
+extern "C" void anm_init__FP10e_db_classifUcf();
+extern "C" void leaf_anm_init__FP10e_db_classifUcf();
+extern "C" void daE_DB_Draw__FP10e_db_class();
+extern "C" void pl_check__FP10e_db_classf();
+extern "C" void damage_check__FP10e_db_class();
+extern "C" void e_db_stay__FP10e_db_class();
+extern "C" void e_db_appear__FP10e_db_class();
+extern "C" void e_db_appear_v__FP10e_db_class();
+extern "C" void e_db_wait__FP10e_db_class();
+extern "C" void e_db_mk_roof__FP10e_db_class();
+extern "C" void e_db_attack__FP10e_db_class();
+extern "C" void e_db_attack_s__FP10e_db_class();
+extern "C" void e_db_chance__FP10e_db_class();
+extern "C" void e_db_s_damage__FP10e_db_class();
+extern "C" void e_db_damage__FP10e_db_class();
+extern "C" void kuki_control1__FP10e_db_class();
+extern "C" void kuki_control2__FP10e_db_class();
+extern "C" void kuki_control3__FP10e_db_class();
+extern "C" void kuki_ha_set__FP10e_db_class();
+extern "C" void kuki_control1_e__FP10e_db_class();
+extern "C" void e_db_escape__FP10e_db_class();
+extern "C" void e_db_e_dead__FP10e_db_class();
+extern "C" void action__FP10e_db_class();
+extern "C" void eff_set__FP10e_db_classi();
+extern "C" void anm_se_set__FP10e_db_class();
+extern "C" void daE_DB_Execute__FP10e_db_class();
+extern "C" bool daE_DB_IsDelete__FP10e_db_class();
+extern "C" void daE_DB_Delete__FP10e_db_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_DB_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daE_DB_HIO_cFv();
+extern "C" void __sinit_d_a_e_db_cpp();
+extern "C" void func_806A145C();
+extern "C" void func_806A1464();
+extern "C" void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3902;
 SECTION_RODATA extern const u8 lit_3903[4];
 SECTION_RODATA extern const u32 lit_3904;
@@ -172,8 +273,11 @@ SECTION_BSS extern u8 l_HIO[24];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -183,7 +287,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_DB_HIO_cFv) {
+asm daE_DB_HIO_c::daE_DB_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__ct__12daE_DB_HIO_cFv.s"
 }
@@ -194,7 +298,7 @@ ASM_FUNCTION(__ct__12daE_DB_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10e_db_classifUcf) {
+asm void anm_init(e_db_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/anm_init__FP10e_db_classifUcf.s"
 }
@@ -205,7 +309,7 @@ ASM_FUNCTION(anm_init__FP10e_db_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(leaf_anm_init__FP10e_db_classifUcf) {
+asm void leaf_anm_init(e_db_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/leaf_anm_init__FP10e_db_classifUcf.s"
 }
@@ -216,7 +320,7 @@ ASM_FUNCTION(leaf_anm_init__FP10e_db_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DB_Draw__FP10e_db_class) {
+asm void daE_DB_Draw(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/daE_DB_Draw__FP10e_db_class.s"
 }
@@ -227,7 +331,7 @@ ASM_FUNCTION(daE_DB_Draw__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_check__FP10e_db_classf) {
+asm void pl_check(e_db_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/pl_check__FP10e_db_classf.s"
 }
@@ -238,7 +342,7 @@ ASM_FUNCTION(pl_check__FP10e_db_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10e_db_class) {
+asm void damage_check(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/damage_check__FP10e_db_class.s"
 }
@@ -249,7 +353,7 @@ ASM_FUNCTION(damage_check__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_stay__FP10e_db_class) {
+asm void e_db_stay(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_stay__FP10e_db_class.s"
 }
@@ -260,7 +364,7 @@ ASM_FUNCTION(e_db_stay__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_appear__FP10e_db_class) {
+asm void e_db_appear(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_appear__FP10e_db_class.s"
 }
@@ -271,7 +375,7 @@ ASM_FUNCTION(e_db_appear__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_appear_v__FP10e_db_class) {
+asm void e_db_appear_v(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_appear_v__FP10e_db_class.s"
 }
@@ -282,7 +386,7 @@ ASM_FUNCTION(e_db_appear_v__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_wait__FP10e_db_class) {
+asm void e_db_wait(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_wait__FP10e_db_class.s"
 }
@@ -293,7 +397,7 @@ ASM_FUNCTION(e_db_wait__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_mk_roof__FP10e_db_class) {
+asm void e_db_mk_roof(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_mk_roof__FP10e_db_class.s"
 }
@@ -304,7 +408,7 @@ ASM_FUNCTION(e_db_mk_roof__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_attack__FP10e_db_class) {
+asm void e_db_attack(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_attack__FP10e_db_class.s"
 }
@@ -315,7 +419,7 @@ ASM_FUNCTION(e_db_attack__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_attack_s__FP10e_db_class) {
+asm void e_db_attack_s(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_attack_s__FP10e_db_class.s"
 }
@@ -326,7 +430,7 @@ ASM_FUNCTION(e_db_attack_s__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_chance__FP10e_db_class) {
+asm void e_db_chance(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_chance__FP10e_db_class.s"
 }
@@ -337,7 +441,7 @@ ASM_FUNCTION(e_db_chance__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_s_damage__FP10e_db_class) {
+asm void e_db_s_damage(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_s_damage__FP10e_db_class.s"
 }
@@ -348,7 +452,7 @@ ASM_FUNCTION(e_db_s_damage__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_damage__FP10e_db_class) {
+asm void e_db_damage(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_damage__FP10e_db_class.s"
 }
@@ -359,7 +463,7 @@ ASM_FUNCTION(e_db_damage__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kuki_control1__FP10e_db_class) {
+asm void kuki_control1(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/kuki_control1__FP10e_db_class.s"
 }
@@ -370,7 +474,7 @@ ASM_FUNCTION(kuki_control1__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kuki_control2__FP10e_db_class) {
+asm void kuki_control2(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/kuki_control2__FP10e_db_class.s"
 }
@@ -381,7 +485,7 @@ ASM_FUNCTION(kuki_control2__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kuki_control3__FP10e_db_class) {
+asm void kuki_control3(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/kuki_control3__FP10e_db_class.s"
 }
@@ -392,7 +496,7 @@ ASM_FUNCTION(kuki_control3__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kuki_ha_set__FP10e_db_class) {
+asm void kuki_ha_set(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/kuki_ha_set__FP10e_db_class.s"
 }
@@ -403,7 +507,7 @@ ASM_FUNCTION(kuki_ha_set__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kuki_control1_e__FP10e_db_class) {
+asm void kuki_control1_e(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/kuki_control1_e__FP10e_db_class.s"
 }
@@ -414,7 +518,7 @@ ASM_FUNCTION(kuki_control1_e__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_escape__FP10e_db_class) {
+asm void e_db_escape(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_escape__FP10e_db_class.s"
 }
@@ -425,7 +529,7 @@ ASM_FUNCTION(e_db_escape__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_db_e_dead__FP10e_db_class) {
+asm void e_db_e_dead(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/e_db_e_dead__FP10e_db_class.s"
 }
@@ -436,7 +540,7 @@ ASM_FUNCTION(e_db_e_dead__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10e_db_class) {
+asm void action(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/action__FP10e_db_class.s"
 }
@@ -447,7 +551,7 @@ ASM_FUNCTION(action__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eff_set__FP10e_db_classi) {
+asm void eff_set(e_db_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/eff_set__FP10e_db_classi.s"
 }
@@ -458,7 +562,7 @@ ASM_FUNCTION(eff_set__FP10e_db_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP10e_db_class) {
+asm void anm_se_set(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/anm_se_set__FP10e_db_class.s"
 }
@@ -469,7 +573,7 @@ ASM_FUNCTION(anm_se_set__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DB_Execute__FP10e_db_class) {
+asm void daE_DB_Execute(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/daE_DB_Execute__FP10e_db_class.s"
 }
@@ -477,21 +581,16 @@ ASM_FUNCTION(daE_DB_Execute__FP10e_db_class) {
 
 
 /* 806A08F0-806A08F8 0008+00 .text      daE_DB_IsDelete__FP10e_db_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_DB_IsDelete__FP10e_db_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/daE_DB_IsDelete__FP10e_db_class.s"
+bool daE_DB_IsDelete(e_db_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806A08F8-806A0960 0068+00 .text      daE_DB_Delete__FP10e_db_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DB_Delete__FP10e_db_class) {
+asm void daE_DB_Delete(e_db_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/daE_DB_Delete__FP10e_db_class.s"
 }
@@ -502,7 +601,7 @@ ASM_FUNCTION(daE_DB_Delete__FP10e_db_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -513,7 +612,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_DB_Create__FP10fopAc_ac_c) {
+asm void daE_DB_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/daE_DB_Create__FP10fopAc_ac_c.s"
 }
@@ -524,7 +623,7 @@ ASM_FUNCTION(daE_DB_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -535,7 +634,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__12dBgS_AcchCirFv.s"
 }
@@ -546,7 +645,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__ct__8dCcD_SphFv.s"
 }
@@ -557,7 +656,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__8dCcD_SphFv.s"
 }
@@ -568,7 +667,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__8cM3dGSphFv.s"
 }
@@ -579,7 +678,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__8cM3dGAabFv.s"
 }
@@ -590,7 +689,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__10dCcD_GSttsFv.s"
 }
@@ -598,32 +697,22 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 
 
 /* 806A1388-806A138C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806A138C-806A1390 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806A1390-806A13D8 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__10cCcD_GSttsFv.s"
 }
@@ -634,7 +723,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_DB_HIO_cFv) {
+asm daE_DB_HIO_c::~daE_DB_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__12daE_DB_HIO_cFv.s"
 }
@@ -645,7 +734,7 @@ ASM_FUNCTION(__dt__12daE_DB_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_db_cpp) {
+extern "C" asm void __sinit_d_a_e_db_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__sinit_d_a_e_db_cpp.s"
 }
@@ -656,7 +745,7 @@ ASM_FUNCTION(__sinit_d_a_e_db_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806A145C) {
+extern "C" asm void func_806A145C() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/func_806A145C.s"
 }
@@ -667,7 +756,7 @@ ASM_FUNCTION(func_806A145C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806A1464) {
+extern "C" asm void func_806A1464() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/func_806A1464.s"
 }
@@ -678,7 +767,7 @@ ASM_FUNCTION(func_806A1464) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz) {
+asm void setMidnaBindEffect(fopEn_enemy_c* field_0, Z2CreatureEnemy* field_1, cXyz* field_2, cXyz* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz.s"
 }
@@ -689,7 +778,7 @@ ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__5csXyzFv.s"
 }
@@ -700,7 +789,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db/d_a_e_db/__dt__4cXyzFv.s"
 }

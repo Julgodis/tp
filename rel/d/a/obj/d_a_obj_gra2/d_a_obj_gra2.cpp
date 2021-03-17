@@ -6,173 +6,398 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+struct dBgW;
+
+struct J3DJoint {
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObj_GrA_c {
+	struct daObj_GrA_prtclMngr_c {
+		~daObj_GrA_c::daObj_GrA_prtclMngr_c();
+		daObj_GrA_c::daObj_GrA_prtclMngr_c();
+	};
+
+	void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	daObj_GrA_c();
+	~daObj_GrA_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Draw();
+	void jointCtrl(J3DJoint*, J3DModel*);
+	void getResName();
+	void getMode();
+	void getPathNo();
+	void getTagNo();
+	void getJumpType();
+	void isDelete();
+	void restart();
+	void init();
+	void setBaseAnm(s32, f32);
+	void setFaceAnm(s32, bool, f32);
+	void setFaceBtp(s32);
+	void setBaseMotion(s32, f32);
+	void setFaceMotion(s32, f32);
+	void calcMotion();
+	void setParam();
+	void checkEvent();
+	void mainProc();
+	void adjustShapeAngle();
+	void setMtx(s32);
+	void setCollisions();
+	void setAttnPos();
+	void drawOtherMdls();
+	bool dbgDraw();
+	void ppMoveInit();
+	void setLookMode(s32);
+	void lookat();
+	void hitChk();
+	void wait(void*);
+	void talk(void*);
+	void ctrlMsgAnm(s32&, s32&, fopAc_ac_c*);
+	void checkTagGraSub(fopAc_ac_c*);
+	void fallAbyssCheck();
+	void setPrtcl();
+	void base000(s32);
+	void base001(s32);
+	void base003(s32);
+	void base004(s32);
+	void base005(s32);
+	void base006(s32);
+	void base007(s32);
+	void base008(s32);
+	void base009(s32);
+	void base010(s32);
+	void base013(s32);
+	void base016(s32);
+	void base017(s32);
+	void base018(s32);
+	void base019(s32);
+	void base020(s32);
+	void base021(s32);
+	void base022(s32);
+	void base023(s32);
+	void base024(s32);
+	void base025(s32);
+	void base026(s32);
+	void face000(s32);
+	void face003(s32);
+	void face004(s32);
+	void face005(s32);
+	void face006(s32);
+	void face007(s32);
+	void face008(s32);
+	void face009(s32);
+	void face010(s32);
+	void face011(s32);
+	void face012(s32);
+	void face016(s32);
+	void face017(s32);
+	void face999(s32);
+	void evtcutTalk(s32, s32);
+	void setFaceTalkAfter();
+	void getSrchCircleR();
+	void standWait(void*);
+	void walk(void*);
+	void defence(void*);
+	void toStone(void*);
+	void step(void*);
+	void rollReturn(void*);
+	void soldierDemoSkip();
+	void soldierDemo(void*);
+	void getSrchLinkR();
+	void getSrchGraR();
+	void getSpeed();
+	void standRoll(void*);
+	void rollDemo(void*);
+	void rollAttack(void*);
+	void rollAttacked(void*);
+	void rollEscape(void*);
+	void rollLanding();
+	void thrown(void*);
+	void demo_camera();
+	void rollAttackedDemo();
+	void graThrowDemo();
+	void setCarryStatus();
+	void checkThrow();
+	void calcCatchPos(f32, s32);
+	void initCrazyBeforeCatch(s32);
+	void executeCrazyBeforeCatch();
+	void initCrazyCatch(s32);
+	void executeCrazyCatch();
+	void initCrazyThrow(s32);
+	void executeCrazyThrow();
+	void initCrazyAttack();
+	void executeCrazyJumping();
+	void modeChangeCheck();
+	void checkGraSub(fopAc_ac_c*);
+	void waitDemo(void*);
+	void skipDemoGra();
+	void startDemo(void*);
+	void getAttentionPos(fopAc_ac_c*);
+	void standWaitJump(void*);
+};
+
+struct J3DModel {
+};
+
+struct daObj_GrA_Param_c {
+	~daObj_GrA_Param_c();
+};
+
+struct daBaseNpc_path_c {
+	~daBaseNpc_path_c();
+};
+
+struct cXyz {
+	cXyz();
+	~cXyz();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct daBaseNpc_acMngr_c {
+	~daBaseNpc_acMngr_c();
+};
+
+struct daBaseNpc_moveBgActor_c {
+	~daBaseNpc_moveBgActor_c();
+	bool Draw();
+	bool Create();
+	bool IsDelete();
+	bool ToFore();
+	bool ToBack();
+	bool CreateHeap();
+	bool Delete();
+};
+
+struct daTagGra_c {
+	void getGraPos();
+};
+
+struct dAttention_c {
+	void getDistTable(s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void jointCtrlCallBack__FP8J3DJointi();
-extern "C" extern void rideCallBack__11daObj_GrA_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __ct__11daObj_GrA_cFv();
-extern "C" extern void __dt__11daObj_GrA_cFv();
-extern "C" extern void create__11daObj_GrA_cFv();
-extern "C" extern void CreateHeap__11daObj_GrA_cFv();
-extern "C" extern void Delete__11daObj_GrA_cFv();
-extern "C" extern void Execute__11daObj_GrA_cFPPA3_A4_f();
-extern "C" extern void Draw__11daObj_GrA_cFv();
-extern "C" extern void jointCtrl__11daObj_GrA_cFP8J3DJointP8J3DModel();
-extern "C" extern void getResName__11daObj_GrA_cFv();
-extern "C" extern void getMode__11daObj_GrA_cFv();
-extern "C" extern void getPathNo__11daObj_GrA_cFv();
-extern "C" extern void getTagNo__11daObj_GrA_cFv();
-extern "C" extern void getJumpType__11daObj_GrA_cFv();
-extern "C" extern void isDelete__11daObj_GrA_cFv();
-extern "C" extern void restart__11daObj_GrA_cFv();
-extern "C" extern void init__11daObj_GrA_cFv();
-extern "C" extern void setBaseAnm__11daObj_GrA_cFif();
-extern "C" extern void setFaceAnm__11daObj_GrA_cFibf();
-extern "C" extern void setFaceBtp__11daObj_GrA_cFi();
-extern "C" extern void setBaseMotion__11daObj_GrA_cFif();
-extern "C" extern void setFaceMotion__11daObj_GrA_cFif();
-extern "C" extern void calcMotion__11daObj_GrA_cFv();
-extern "C" extern void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
-extern "C" extern void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
-extern "C" extern void getDistTableIdx__Fii();
-extern "C" extern void setParam__11daObj_GrA_cFv();
-extern "C" extern void checkEvent__11daObj_GrA_cFv();
-extern "C" extern void mainProc__11daObj_GrA_cFv();
-extern "C" extern void adjustShapeAngle__11daObj_GrA_cFv();
-extern "C" extern void setMtx__11daObj_GrA_cFi();
-extern "C" extern void setCollisions__11daObj_GrA_cFv();
-extern "C" extern void setAttnPos__11daObj_GrA_cFv();
-extern "C" extern void drawOtherMdls__11daObj_GrA_cFv();
-extern "C" extern void dbgDraw__11daObj_GrA_cFv();
-extern "C" extern void ppMoveInit__11daObj_GrA_cFv();
-extern "C" extern void setLookMode__11daObj_GrA_cFi();
-extern "C" extern void lookat__11daObj_GrA_cFv();
-extern "C" extern void hitChk__11daObj_GrA_cFv();
-extern "C" extern void wait__11daObj_GrA_cFPv();
-extern "C" extern void talk__11daObj_GrA_cFPv();
-extern "C" extern void ctrlMsgAnm__11daObj_GrA_cFRiRiP10fopAc_ac_c();
-extern "C" extern void s_sub__FPvPv();
-extern "C" extern void checkTagGraSub__11daObj_GrA_cFP10fopAc_ac_c();
-extern "C" extern void fallAbyssCheck__11daObj_GrA_cFv();
-extern "C" extern void setPrtcl__11daObj_GrA_cFv();
-extern "C" extern void base000__11daObj_GrA_cFi();
-extern "C" extern void base001__11daObj_GrA_cFi();
-extern "C" extern void base003__11daObj_GrA_cFi();
-extern "C" extern void base004__11daObj_GrA_cFi();
-extern "C" extern void base005__11daObj_GrA_cFi();
-extern "C" extern void base006__11daObj_GrA_cFi();
-extern "C" extern void base007__11daObj_GrA_cFi();
-extern "C" extern void base008__11daObj_GrA_cFi();
-extern "C" extern void base009__11daObj_GrA_cFi();
-extern "C" extern void base010__11daObj_GrA_cFi();
-extern "C" extern void base013__11daObj_GrA_cFi();
-extern "C" extern void base016__11daObj_GrA_cFi();
-extern "C" extern void base017__11daObj_GrA_cFi();
-extern "C" extern void base018__11daObj_GrA_cFi();
-extern "C" extern void base019__11daObj_GrA_cFi();
-extern "C" extern void base020__11daObj_GrA_cFi();
-extern "C" extern void base021__11daObj_GrA_cFi();
-extern "C" extern void base022__11daObj_GrA_cFi();
-extern "C" extern void base023__11daObj_GrA_cFi();
-extern "C" extern void base024__11daObj_GrA_cFi();
-extern "C" extern void base025__11daObj_GrA_cFi();
-extern "C" extern void base026__11daObj_GrA_cFi();
-extern "C" extern void face000__11daObj_GrA_cFi();
-extern "C" extern void face003__11daObj_GrA_cFi();
-extern "C" extern void face004__11daObj_GrA_cFi();
-extern "C" extern void face005__11daObj_GrA_cFi();
-extern "C" extern void face006__11daObj_GrA_cFi();
-extern "C" extern void face007__11daObj_GrA_cFi();
-extern "C" extern void face008__11daObj_GrA_cFi();
-extern "C" extern void face009__11daObj_GrA_cFi();
-extern "C" extern void face010__11daObj_GrA_cFi();
-extern "C" extern void face011__11daObj_GrA_cFi();
-extern "C" extern void face012__11daObj_GrA_cFi();
-extern "C" extern void face016__11daObj_GrA_cFi();
-extern "C" extern void face017__11daObj_GrA_cFi();
-extern "C" extern void face999__11daObj_GrA_cFi();
-extern "C" extern void evtcutTalk__11daObj_GrA_cFii();
-extern "C" extern void setFaceTalkAfter__11daObj_GrA_cFv();
-extern "C" extern void daObj_GrA_Create__FPv();
-extern "C" extern void daObj_GrA_Delete__FPv();
-extern "C" extern void daObj_GrA_Execute__FPv();
-extern "C" extern void daObj_GrA_Draw__FPv();
-extern "C" extern void daObj_GrA_IsDelete__FPv();
-extern "C" extern void __dt__17daObj_GrA_Param_cFv();
-extern "C" extern void __dt__16daBaseNpc_path_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv();
-extern "C" extern void __ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv();
-extern "C" extern void __dt__18daBaseNpc_acMngr_cFv();
-extern "C" extern void __dt__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void Draw__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void Create__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void IsDelete__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void ToFore__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void ToBack__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void CreateHeap__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
-extern "C" extern void Delete__23daBaseNpc_moveBgActor_cFv();
-extern "C" extern void func_80C04F3C();
-extern "C" extern void func_80C04F58();
-extern "C" extern void __sinit_d_a_obj_gra2_cpp();
-extern "C" extern void getSrchCircleR__11daObj_GrA_cFv();
-extern "C" extern void standWait__11daObj_GrA_cFPv();
-extern "C" extern void walk__11daObj_GrA_cFPv();
-extern "C" extern void defence__11daObj_GrA_cFPv();
-extern "C" extern void toStone__11daObj_GrA_cFPv();
-extern "C" extern void step__11daObj_GrA_cFPv();
-extern "C" extern void rollReturn__11daObj_GrA_cFPv();
-extern "C" extern void soldierDemoSkip__11daObj_GrA_cFv();
-extern "C" extern void soldierDemo__11daObj_GrA_cFPv();
-extern "C" extern void getSrchLinkR__11daObj_GrA_cFv();
-extern "C" extern void getSrchGraR__11daObj_GrA_cFv();
-extern "C" extern void getSpeed__11daObj_GrA_cFv();
-extern "C" extern void standRoll__11daObj_GrA_cFPv();
-extern "C" extern void rollDemo__11daObj_GrA_cFPv();
-extern "C" extern void rollAttack__11daObj_GrA_cFPv();
-extern "C" extern void rollAttacked__11daObj_GrA_cFPv();
-extern "C" extern void rollEscape__11daObj_GrA_cFPv();
-extern "C" extern void rollLanding__11daObj_GrA_cFv();
-extern "C" extern void thrown__11daObj_GrA_cFPv();
-extern "C" extern void demo_camera__11daObj_GrA_cFv();
-extern "C" extern void rollAttackedDemo__11daObj_GrA_cFv();
-extern "C" extern void graThrowDemo__11daObj_GrA_cFv();
-extern "C" extern void setCarryStatus__11daObj_GrA_cFv();
-extern "C" extern void checkThrow__11daObj_GrA_cFv();
-extern "C" extern void calcCatchPos__11daObj_GrA_cFfi();
-extern "C" extern void initCrazyBeforeCatch__11daObj_GrA_cFi();
-extern "C" extern void executeCrazyBeforeCatch__11daObj_GrA_cFv();
-extern "C" extern void initCrazyCatch__11daObj_GrA_cFi();
-extern "C" extern void executeCrazyCatch__11daObj_GrA_cFv();
-extern "C" extern void initCrazyThrow__11daObj_GrA_cFi();
-extern "C" extern void executeCrazyThrow__11daObj_GrA_cFv();
-extern "C" extern void initCrazyAttack__11daObj_GrA_cFv();
-extern "C" extern void executeCrazyJumping__11daObj_GrA_cFv();
-extern "C" extern void modeChangeCheck__11daObj_GrA_cFv();
-extern "C" extern void getGraPos__10daTagGra_cFv();
-extern "C" extern void s_sub2__FPvPv();
-extern "C" extern void checkGraSub__11daObj_GrA_cFP10fopAc_ac_c();
-extern "C" extern void waitDemo__11daObj_GrA_cFPv();
-extern "C" extern void skipDemoGra__11daObj_GrA_cFv();
-extern "C" extern void skipCallBack__FPvi();
-extern "C" extern void startDemo__11daObj_GrA_cFPv();
-extern "C" extern void turn__11daObj_GrA_cFsfi();
-extern "C" extern void turn_step__11daObj_GrA_cFsiii();
-extern "C" extern void chkFindPlayer2__11daObj_GrA_cFis();
-extern "C" extern void getDistTable__12dAttention_cFi();
-extern "C" extern void chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs();
-extern "C" extern void chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs();
-extern "C" extern void chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs();
-extern "C" extern void getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c();
-extern "C" extern void standWaitJump__11daObj_GrA_cFPv();
+void jointCtrlCallBack(J3DJoint*, s32);
+extern "C" void Execute__11daObj_GrA_cFPPA3_A4_f();
+extern "C" void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
+extern "C" void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
+void getDistTableIdx(s32, s32);
+void s_sub(void*, void*);
+void daObj_GrA_Create(void*);
+void daObj_GrA_Delete(void*);
+void daObj_GrA_Execute(void*);
+void daObj_GrA_Draw(void*);
+bool daObj_GrA_IsDelete(void*);
+extern "C" bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
+extern "C" void func_80C04F3C();
+extern "C" void func_80C04F58();
+extern "C" void __sinit_d_a_obj_gra2_cpp();
+void s_sub2(void*, void*);
+void skipCallBack(void*, s32);
+extern "C" void turn__11daObj_GrA_cFsfi();
+extern "C" void turn_step__11daObj_GrA_cFsiii();
+extern "C" void chkFindPlayer2__11daObj_GrA_cFis();
+extern "C" void chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs();
+extern "C" void chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs();
+extern "C" void chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs();
+
+extern "C" void jointCtrlCallBack__FP8J3DJointi();
+extern "C" void rideCallBack__11daObj_GrA_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __ct__11daObj_GrA_cFv();
+extern "C" void __dt__11daObj_GrA_cFv();
+extern "C" void create__11daObj_GrA_cFv();
+extern "C" void CreateHeap__11daObj_GrA_cFv();
+extern "C" void Delete__11daObj_GrA_cFv();
+extern "C" void Execute__11daObj_GrA_cFPPA3_A4_f();
+extern "C" void Draw__11daObj_GrA_cFv();
+extern "C" void jointCtrl__11daObj_GrA_cFP8J3DJointP8J3DModel();
+extern "C" void getResName__11daObj_GrA_cFv();
+extern "C" void getMode__11daObj_GrA_cFv();
+extern "C" void getPathNo__11daObj_GrA_cFv();
+extern "C" void getTagNo__11daObj_GrA_cFv();
+extern "C" void getJumpType__11daObj_GrA_cFv();
+extern "C" void isDelete__11daObj_GrA_cFv();
+extern "C" void restart__11daObj_GrA_cFv();
+extern "C" void init__11daObj_GrA_cFv();
+extern "C" void setBaseAnm__11daObj_GrA_cFif();
+extern "C" void setFaceAnm__11daObj_GrA_cFibf();
+extern "C" void setFaceBtp__11daObj_GrA_cFi();
+extern "C" void setBaseMotion__11daObj_GrA_cFif();
+extern "C" void setFaceMotion__11daObj_GrA_cFif();
+extern "C" void calcMotion__11daObj_GrA_cFv();
+extern "C" void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
+extern "C" void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i();
+extern "C" void getDistTableIdx__Fii();
+extern "C" void setParam__11daObj_GrA_cFv();
+extern "C" void checkEvent__11daObj_GrA_cFv();
+extern "C" void mainProc__11daObj_GrA_cFv();
+extern "C" void adjustShapeAngle__11daObj_GrA_cFv();
+extern "C" void setMtx__11daObj_GrA_cFi();
+extern "C" void setCollisions__11daObj_GrA_cFv();
+extern "C" void setAttnPos__11daObj_GrA_cFv();
+extern "C" void drawOtherMdls__11daObj_GrA_cFv();
+extern "C" bool dbgDraw__11daObj_GrA_cFv();
+extern "C" void ppMoveInit__11daObj_GrA_cFv();
+extern "C" void setLookMode__11daObj_GrA_cFi();
+extern "C" void lookat__11daObj_GrA_cFv();
+extern "C" void hitChk__11daObj_GrA_cFv();
+extern "C" void wait__11daObj_GrA_cFPv();
+extern "C" void talk__11daObj_GrA_cFPv();
+extern "C" void ctrlMsgAnm__11daObj_GrA_cFRiRiP10fopAc_ac_c();
+extern "C" void s_sub__FPvPv();
+extern "C" void checkTagGraSub__11daObj_GrA_cFP10fopAc_ac_c();
+extern "C" void fallAbyssCheck__11daObj_GrA_cFv();
+extern "C" void setPrtcl__11daObj_GrA_cFv();
+extern "C" void base000__11daObj_GrA_cFi();
+extern "C" void base001__11daObj_GrA_cFi();
+extern "C" void base003__11daObj_GrA_cFi();
+extern "C" void base004__11daObj_GrA_cFi();
+extern "C" void base005__11daObj_GrA_cFi();
+extern "C" void base006__11daObj_GrA_cFi();
+extern "C" void base007__11daObj_GrA_cFi();
+extern "C" void base008__11daObj_GrA_cFi();
+extern "C" void base009__11daObj_GrA_cFi();
+extern "C" void base010__11daObj_GrA_cFi();
+extern "C" void base013__11daObj_GrA_cFi();
+extern "C" void base016__11daObj_GrA_cFi();
+extern "C" void base017__11daObj_GrA_cFi();
+extern "C" void base018__11daObj_GrA_cFi();
+extern "C" void base019__11daObj_GrA_cFi();
+extern "C" void base020__11daObj_GrA_cFi();
+extern "C" void base021__11daObj_GrA_cFi();
+extern "C" void base022__11daObj_GrA_cFi();
+extern "C" void base023__11daObj_GrA_cFi();
+extern "C" void base024__11daObj_GrA_cFi();
+extern "C" void base025__11daObj_GrA_cFi();
+extern "C" void base026__11daObj_GrA_cFi();
+extern "C" void face000__11daObj_GrA_cFi();
+extern "C" void face003__11daObj_GrA_cFi();
+extern "C" void face004__11daObj_GrA_cFi();
+extern "C" void face005__11daObj_GrA_cFi();
+extern "C" void face006__11daObj_GrA_cFi();
+extern "C" void face007__11daObj_GrA_cFi();
+extern "C" void face008__11daObj_GrA_cFi();
+extern "C" void face009__11daObj_GrA_cFi();
+extern "C" void face010__11daObj_GrA_cFi();
+extern "C" void face011__11daObj_GrA_cFi();
+extern "C" void face012__11daObj_GrA_cFi();
+extern "C" void face016__11daObj_GrA_cFi();
+extern "C" void face017__11daObj_GrA_cFi();
+extern "C" void face999__11daObj_GrA_cFi();
+extern "C" void evtcutTalk__11daObj_GrA_cFii();
+extern "C" void setFaceTalkAfter__11daObj_GrA_cFv();
+extern "C" void daObj_GrA_Create__FPv();
+extern "C" void daObj_GrA_Delete__FPv();
+extern "C" void daObj_GrA_Execute__FPv();
+extern "C" void daObj_GrA_Draw__FPv();
+extern "C" bool daObj_GrA_IsDelete__FPv();
+extern "C" void __dt__17daObj_GrA_Param_cFv();
+extern "C" void __dt__16daBaseNpc_path_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv();
+extern "C" void __ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv();
+extern "C" void __dt__18daBaseNpc_acMngr_cFv();
+extern "C" void __dt__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool Draw__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool Create__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool IsDelete__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool ToFore__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool ToBack__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool CreateHeap__23daBaseNpc_moveBgActor_cFv();
+extern "C" bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
+extern "C" bool Delete__23daBaseNpc_moveBgActor_cFv();
+extern "C" void func_80C04F3C();
+extern "C" void func_80C04F58();
+extern "C" void __sinit_d_a_obj_gra2_cpp();
+extern "C" void getSrchCircleR__11daObj_GrA_cFv();
+extern "C" void standWait__11daObj_GrA_cFPv();
+extern "C" void walk__11daObj_GrA_cFPv();
+extern "C" void defence__11daObj_GrA_cFPv();
+extern "C" void toStone__11daObj_GrA_cFPv();
+extern "C" void step__11daObj_GrA_cFPv();
+extern "C" void rollReturn__11daObj_GrA_cFPv();
+extern "C" void soldierDemoSkip__11daObj_GrA_cFv();
+extern "C" void soldierDemo__11daObj_GrA_cFPv();
+extern "C" void getSrchLinkR__11daObj_GrA_cFv();
+extern "C" void getSrchGraR__11daObj_GrA_cFv();
+extern "C" void getSpeed__11daObj_GrA_cFv();
+extern "C" void standRoll__11daObj_GrA_cFPv();
+extern "C" void rollDemo__11daObj_GrA_cFPv();
+extern "C" void rollAttack__11daObj_GrA_cFPv();
+extern "C" void rollAttacked__11daObj_GrA_cFPv();
+extern "C" void rollEscape__11daObj_GrA_cFPv();
+extern "C" void rollLanding__11daObj_GrA_cFv();
+extern "C" void thrown__11daObj_GrA_cFPv();
+extern "C" void demo_camera__11daObj_GrA_cFv();
+extern "C" void rollAttackedDemo__11daObj_GrA_cFv();
+extern "C" void graThrowDemo__11daObj_GrA_cFv();
+extern "C" void setCarryStatus__11daObj_GrA_cFv();
+extern "C" void checkThrow__11daObj_GrA_cFv();
+extern "C" void calcCatchPos__11daObj_GrA_cFfi();
+extern "C" void initCrazyBeforeCatch__11daObj_GrA_cFi();
+extern "C" void executeCrazyBeforeCatch__11daObj_GrA_cFv();
+extern "C" void initCrazyCatch__11daObj_GrA_cFi();
+extern "C" void executeCrazyCatch__11daObj_GrA_cFv();
+extern "C" void initCrazyThrow__11daObj_GrA_cFi();
+extern "C" void executeCrazyThrow__11daObj_GrA_cFv();
+extern "C" void initCrazyAttack__11daObj_GrA_cFv();
+extern "C" void executeCrazyJumping__11daObj_GrA_cFv();
+extern "C" void modeChangeCheck__11daObj_GrA_cFv();
+extern "C" void getGraPos__10daTagGra_cFv();
+extern "C" void s_sub2__FPvPv();
+extern "C" void checkGraSub__11daObj_GrA_cFP10fopAc_ac_c();
+extern "C" void waitDemo__11daObj_GrA_cFPv();
+extern "C" void skipDemoGra__11daObj_GrA_cFv();
+extern "C" void skipCallBack__FPvi();
+extern "C" void startDemo__11daObj_GrA_cFPv();
+extern "C" void turn__11daObj_GrA_cFsfi();
+extern "C" void turn_step__11daObj_GrA_cFsiii();
+extern "C" void chkFindPlayer2__11daObj_GrA_cFis();
+extern "C" void getDistTable__12dAttention_cFi();
+extern "C" void chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs();
+extern "C" void chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs();
+extern "C" void chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs();
+extern "C" void getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c();
+extern "C" void standWaitJump__11daObj_GrA_cFPv();
 SECTION_RODATA extern const u8 m__17daObj_GrA_Param_c[192];
 SECTION_RODATA extern const u8 l_bgcParam[80];
 SECTION_RODATA extern const u8 l_dirToAngleTBL[8];
@@ -522,8 +747,11 @@ SECTION_BSS extern u8 data_80C10B70[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -533,7 +761,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointCtrlCallBack__FP8J3DJointi) {
+asm void jointCtrlCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/jointCtrlCallBack__FP8J3DJointi.s"
 }
@@ -544,7 +772,7 @@ ASM_FUNCTION(jointCtrlCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__11daObj_GrA_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daObj_GrA_c::rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rideCallBack__11daObj_GrA_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -555,7 +783,7 @@ ASM_FUNCTION(rideCallBack__11daObj_GrA_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daObj_GrA_cFv) {
+asm daObj_GrA_c::daObj_GrA_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__11daObj_GrA_cFv.s"
 }
@@ -566,7 +794,7 @@ ASM_FUNCTION(__ct__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daObj_GrA_cFv) {
+asm daObj_GrA_c::~daObj_GrA_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__11daObj_GrA_cFv.s"
 }
@@ -577,7 +805,7 @@ ASM_FUNCTION(__dt__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/create__11daObj_GrA_cFv.s"
 }
@@ -588,7 +816,7 @@ ASM_FUNCTION(create__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/CreateHeap__11daObj_GrA_cFv.s"
 }
@@ -599,7 +827,7 @@ ASM_FUNCTION(CreateHeap__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Delete__11daObj_GrA_cFv.s"
 }
@@ -610,7 +838,7 @@ ASM_FUNCTION(Delete__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObj_GrA_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObj_GrA_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Execute__11daObj_GrA_cFPPA3_A4_f.s"
 }
@@ -621,7 +849,7 @@ ASM_FUNCTION(Execute__11daObj_GrA_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Draw__11daObj_GrA_cFv.s"
 }
@@ -632,7 +860,7 @@ ASM_FUNCTION(Draw__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jointCtrl__11daObj_GrA_cFP8J3DJointP8J3DModel) {
+asm void daObj_GrA_c::jointCtrl(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/jointCtrl__11daObj_GrA_cFP8J3DJointP8J3DModel.s"
 }
@@ -643,7 +871,7 @@ ASM_FUNCTION(jointCtrl__11daObj_GrA_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getResName__11daObj_GrA_cFv.s"
 }
@@ -654,7 +882,7 @@ ASM_FUNCTION(getResName__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMode__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getMode() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getMode__11daObj_GrA_cFv.s"
 }
@@ -665,7 +893,7 @@ ASM_FUNCTION(getMode__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPathNo__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getPathNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getPathNo__11daObj_GrA_cFv.s"
 }
@@ -676,7 +904,7 @@ ASM_FUNCTION(getPathNo__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTagNo__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getTagNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getTagNo__11daObj_GrA_cFv.s"
 }
@@ -687,7 +915,7 @@ ASM_FUNCTION(getTagNo__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJumpType__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getJumpType() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getJumpType__11daObj_GrA_cFv.s"
 }
@@ -698,7 +926,7 @@ ASM_FUNCTION(getJumpType__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/isDelete__11daObj_GrA_cFv.s"
 }
@@ -709,7 +937,7 @@ ASM_FUNCTION(isDelete__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(restart__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::restart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/restart__11daObj_GrA_cFv.s"
 }
@@ -720,7 +948,7 @@ ASM_FUNCTION(restart__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/init__11daObj_GrA_cFv.s"
 }
@@ -731,7 +959,7 @@ ASM_FUNCTION(init__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseAnm__11daObj_GrA_cFif) {
+asm void daObj_GrA_c::setBaseAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setBaseAnm__11daObj_GrA_cFif.s"
 }
@@ -742,7 +970,7 @@ ASM_FUNCTION(setBaseAnm__11daObj_GrA_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceAnm__11daObj_GrA_cFibf) {
+asm void daObj_GrA_c::setFaceAnm(s32 field_0, bool field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setFaceAnm__11daObj_GrA_cFibf.s"
 }
@@ -753,7 +981,7 @@ ASM_FUNCTION(setFaceAnm__11daObj_GrA_cFibf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceBtp__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::setFaceBtp(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setFaceBtp__11daObj_GrA_cFi.s"
 }
@@ -764,7 +992,7 @@ ASM_FUNCTION(setFaceBtp__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMotion__11daObj_GrA_cFif) {
+asm void daObj_GrA_c::setBaseMotion(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setBaseMotion__11daObj_GrA_cFif.s"
 }
@@ -775,7 +1003,7 @@ ASM_FUNCTION(setBaseMotion__11daObj_GrA_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceMotion__11daObj_GrA_cFif) {
+asm void daObj_GrA_c::setFaceMotion(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setFaceMotion__11daObj_GrA_cFif.s"
 }
@@ -786,7 +1014,7 @@ ASM_FUNCTION(setFaceMotion__11daObj_GrA_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMotion__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::calcMotion() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/calcMotion__11daObj_GrA_cFv.s"
 }
@@ -797,7 +1025,7 @@ ASM_FUNCTION(calcMotion__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i) {
+extern "C" asm void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i.s"
 }
@@ -808,7 +1036,7 @@ ASM_FUNCTION(checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i) {
+extern "C" asm void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i.s"
 }
@@ -819,7 +1047,7 @@ ASM_FUNCTION(setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDistTableIdx__Fii) {
+asm void getDistTableIdx(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getDistTableIdx__Fii.s"
 }
@@ -830,7 +1058,7 @@ ASM_FUNCTION(getDistTableIdx__Fii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setParam__11daObj_GrA_cFv.s"
 }
@@ -841,7 +1069,7 @@ ASM_FUNCTION(setParam__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkEvent__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::checkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkEvent__11daObj_GrA_cFv.s"
 }
@@ -852,7 +1080,7 @@ ASM_FUNCTION(checkEvent__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mainProc__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::mainProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/mainProc__11daObj_GrA_cFv.s"
 }
@@ -860,21 +1088,16 @@ ASM_FUNCTION(mainProc__11daObj_GrA_cFv) {
 
 
 /* 80C01FE4-80C01FE8 0004+00 .text      adjustShapeAngle__11daObj_GrA_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__11daObj_GrA_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/adjustShapeAngle__11daObj_GrA_cFv.s"
+void daObj_GrA_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C01FE8-80C02614 062C+00 .text      setMtx__11daObj_GrA_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::setMtx(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setMtx__11daObj_GrA_cFi.s"
 }
@@ -885,7 +1108,7 @@ ASM_FUNCTION(setMtx__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setCollisions() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setCollisions__11daObj_GrA_cFv.s"
 }
@@ -896,7 +1119,7 @@ ASM_FUNCTION(setCollisions__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setAttnPos__11daObj_GrA_cFv.s"
 }
@@ -904,32 +1127,22 @@ ASM_FUNCTION(setAttnPos__11daObj_GrA_cFv) {
 
 
 /* 80C02A5C-80C02A60 0004+00 .text      drawOtherMdls__11daObj_GrA_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__11daObj_GrA_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/drawOtherMdls__11daObj_GrA_cFv.s"
+void daObj_GrA_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C02A60-80C02A68 0008+00 .text      dbgDraw__11daObj_GrA_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(dbgDraw__11daObj_GrA_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/dbgDraw__11daObj_GrA_cFv.s"
+bool daObj_GrA_c::dbgDraw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C02A68-80C02AD4 006C+00 .text      ppMoveInit__11daObj_GrA_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ppMoveInit__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::ppMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ppMoveInit__11daObj_GrA_cFv.s"
 }
@@ -940,7 +1153,7 @@ ASM_FUNCTION(ppMoveInit__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setLookMode__11daObj_GrA_cFi.s"
 }
@@ -951,7 +1164,7 @@ ASM_FUNCTION(setLookMode__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/lookat__11daObj_GrA_cFv.s"
 }
@@ -962,7 +1175,7 @@ ASM_FUNCTION(lookat__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hitChk__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::hitChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/hitChk__11daObj_GrA_cFv.s"
 }
@@ -973,7 +1186,7 @@ ASM_FUNCTION(hitChk__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/wait__11daObj_GrA_cFPv.s"
 }
@@ -984,7 +1197,7 @@ ASM_FUNCTION(wait__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/talk__11daObj_GrA_cFPv.s"
 }
@@ -995,7 +1208,7 @@ ASM_FUNCTION(talk__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlMsgAnm__11daObj_GrA_cFRiRiP10fopAc_ac_c) {
+asm void daObj_GrA_c::ctrlMsgAnm(s32& field_0, s32& field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ctrlMsgAnm__11daObj_GrA_cFRiRiP10fopAc_ac_c.s"
 }
@@ -1006,7 +1219,7 @@ ASM_FUNCTION(ctrlMsgAnm__11daObj_GrA_cFRiRiP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub__FPvPv) {
+asm void s_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/s_sub__FPvPv.s"
 }
@@ -1017,7 +1230,7 @@ ASM_FUNCTION(s_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTagGraSub__11daObj_GrA_cFP10fopAc_ac_c) {
+asm void daObj_GrA_c::checkTagGraSub(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkTagGraSub__11daObj_GrA_cFP10fopAc_ac_c.s"
 }
@@ -1028,7 +1241,7 @@ ASM_FUNCTION(checkTagGraSub__11daObj_GrA_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fallAbyssCheck__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::fallAbyssCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/fallAbyssCheck__11daObj_GrA_cFv.s"
 }
@@ -1039,7 +1252,7 @@ ASM_FUNCTION(fallAbyssCheck__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPrtcl__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setPrtcl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setPrtcl__11daObj_GrA_cFv.s"
 }
@@ -1050,7 +1263,7 @@ ASM_FUNCTION(setPrtcl__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base000__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base000(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base000__11daObj_GrA_cFi.s"
 }
@@ -1061,7 +1274,7 @@ ASM_FUNCTION(base000__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base001__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base001(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base001__11daObj_GrA_cFi.s"
 }
@@ -1072,7 +1285,7 @@ ASM_FUNCTION(base001__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base003__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base003(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base003__11daObj_GrA_cFi.s"
 }
@@ -1083,7 +1296,7 @@ ASM_FUNCTION(base003__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base004__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base004(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base004__11daObj_GrA_cFi.s"
 }
@@ -1094,7 +1307,7 @@ ASM_FUNCTION(base004__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base005__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base005(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base005__11daObj_GrA_cFi.s"
 }
@@ -1105,7 +1318,7 @@ ASM_FUNCTION(base005__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base006__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base006(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base006__11daObj_GrA_cFi.s"
 }
@@ -1116,7 +1329,7 @@ ASM_FUNCTION(base006__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base007__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base007(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base007__11daObj_GrA_cFi.s"
 }
@@ -1127,7 +1340,7 @@ ASM_FUNCTION(base007__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base008__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base008(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base008__11daObj_GrA_cFi.s"
 }
@@ -1138,7 +1351,7 @@ ASM_FUNCTION(base008__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base009__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base009(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base009__11daObj_GrA_cFi.s"
 }
@@ -1149,7 +1362,7 @@ ASM_FUNCTION(base009__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base010__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base010(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base010__11daObj_GrA_cFi.s"
 }
@@ -1160,7 +1373,7 @@ ASM_FUNCTION(base010__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base013__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base013(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base013__11daObj_GrA_cFi.s"
 }
@@ -1171,7 +1384,7 @@ ASM_FUNCTION(base013__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base016__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base016(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base016__11daObj_GrA_cFi.s"
 }
@@ -1182,7 +1395,7 @@ ASM_FUNCTION(base016__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base017__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base017(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base017__11daObj_GrA_cFi.s"
 }
@@ -1193,7 +1406,7 @@ ASM_FUNCTION(base017__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base018__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base018(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base018__11daObj_GrA_cFi.s"
 }
@@ -1204,7 +1417,7 @@ ASM_FUNCTION(base018__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base019__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base019(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base019__11daObj_GrA_cFi.s"
 }
@@ -1215,7 +1428,7 @@ ASM_FUNCTION(base019__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base020__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base020(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base020__11daObj_GrA_cFi.s"
 }
@@ -1226,7 +1439,7 @@ ASM_FUNCTION(base020__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base021__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base021(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base021__11daObj_GrA_cFi.s"
 }
@@ -1237,7 +1450,7 @@ ASM_FUNCTION(base021__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base022__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base022(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base022__11daObj_GrA_cFi.s"
 }
@@ -1248,7 +1461,7 @@ ASM_FUNCTION(base022__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base023__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base023(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base023__11daObj_GrA_cFi.s"
 }
@@ -1259,7 +1472,7 @@ ASM_FUNCTION(base023__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base024__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base024(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base024__11daObj_GrA_cFi.s"
 }
@@ -1270,7 +1483,7 @@ ASM_FUNCTION(base024__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base025__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base025(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base025__11daObj_GrA_cFi.s"
 }
@@ -1281,7 +1494,7 @@ ASM_FUNCTION(base025__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(base026__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::base026(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/base026__11daObj_GrA_cFi.s"
 }
@@ -1292,7 +1505,7 @@ ASM_FUNCTION(base026__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face000__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face000(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face000__11daObj_GrA_cFi.s"
 }
@@ -1303,7 +1516,7 @@ ASM_FUNCTION(face000__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face003__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face003(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face003__11daObj_GrA_cFi.s"
 }
@@ -1314,7 +1527,7 @@ ASM_FUNCTION(face003__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face004__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face004(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face004__11daObj_GrA_cFi.s"
 }
@@ -1325,7 +1538,7 @@ ASM_FUNCTION(face004__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face005__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face005(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face005__11daObj_GrA_cFi.s"
 }
@@ -1336,7 +1549,7 @@ ASM_FUNCTION(face005__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face006__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face006(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face006__11daObj_GrA_cFi.s"
 }
@@ -1347,7 +1560,7 @@ ASM_FUNCTION(face006__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face007__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face007(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face007__11daObj_GrA_cFi.s"
 }
@@ -1358,7 +1571,7 @@ ASM_FUNCTION(face007__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face008__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face008(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face008__11daObj_GrA_cFi.s"
 }
@@ -1369,7 +1582,7 @@ ASM_FUNCTION(face008__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face009__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face009(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face009__11daObj_GrA_cFi.s"
 }
@@ -1380,7 +1593,7 @@ ASM_FUNCTION(face009__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face010__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face010(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face010__11daObj_GrA_cFi.s"
 }
@@ -1391,7 +1604,7 @@ ASM_FUNCTION(face010__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face011__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face011(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face011__11daObj_GrA_cFi.s"
 }
@@ -1402,7 +1615,7 @@ ASM_FUNCTION(face011__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face012__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face012(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face012__11daObj_GrA_cFi.s"
 }
@@ -1413,7 +1626,7 @@ ASM_FUNCTION(face012__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face016__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face016(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face016__11daObj_GrA_cFi.s"
 }
@@ -1424,7 +1637,7 @@ ASM_FUNCTION(face016__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face017__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face017(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face017__11daObj_GrA_cFi.s"
 }
@@ -1435,7 +1648,7 @@ ASM_FUNCTION(face017__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(face999__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::face999(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/face999__11daObj_GrA_cFi.s"
 }
@@ -1446,7 +1659,7 @@ ASM_FUNCTION(face999__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtcutTalk__11daObj_GrA_cFii) {
+asm void daObj_GrA_c::evtcutTalk(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/evtcutTalk__11daObj_GrA_cFii.s"
 }
@@ -1457,7 +1670,7 @@ ASM_FUNCTION(evtcutTalk__11daObj_GrA_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFaceTalkAfter__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setFaceTalkAfter() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setFaceTalkAfter__11daObj_GrA_cFv.s"
 }
@@ -1468,7 +1681,7 @@ ASM_FUNCTION(setFaceTalkAfter__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_GrA_Create__FPv) {
+asm void daObj_GrA_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_Create__FPv.s"
 }
@@ -1479,7 +1692,7 @@ ASM_FUNCTION(daObj_GrA_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_GrA_Delete__FPv) {
+asm void daObj_GrA_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_Delete__FPv.s"
 }
@@ -1490,7 +1703,7 @@ ASM_FUNCTION(daObj_GrA_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_GrA_Execute__FPv) {
+asm void daObj_GrA_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_Execute__FPv.s"
 }
@@ -1501,7 +1714,7 @@ ASM_FUNCTION(daObj_GrA_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_GrA_Draw__FPv) {
+asm void daObj_GrA_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_Draw__FPv.s"
 }
@@ -1509,21 +1722,16 @@ ASM_FUNCTION(daObj_GrA_Draw__FPv) {
 
 
 /* 80C04B14-80C04B1C 0008+00 .text      daObj_GrA_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_GrA_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_IsDelete__FPv.s"
+bool daObj_GrA_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04B1C-80C04B64 0048+00 .text      __dt__17daObj_GrA_Param_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daObj_GrA_Param_cFv) {
+asm daObj_GrA_Param_c::~daObj_GrA_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__17daObj_GrA_Param_cFv.s"
 }
@@ -1534,7 +1742,7 @@ ASM_FUNCTION(__dt__17daObj_GrA_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daBaseNpc_path_cFv) {
+asm daBaseNpc_path_c::~daBaseNpc_path_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__16daBaseNpc_path_cFv.s"
 }
@@ -1542,21 +1750,16 @@ ASM_FUNCTION(__dt__16daBaseNpc_path_cFv) {
 
 
 /* 80C04BAC-80C04BB0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C04BB0-80C04BF8 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__8cM3dGCylFv.s"
 }
@@ -1567,7 +1770,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__8cM3dGAabFv.s"
 }
@@ -1578,7 +1781,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__4cXyzFv.s"
 }
@@ -1589,7 +1792,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__8dCcD_SphFv.s"
 }
@@ -1600,7 +1803,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__8dCcD_SphFv.s"
 }
@@ -1611,7 +1814,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__8cM3dGSphFv.s"
 }
@@ -1622,7 +1825,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv) {
+asm daObj_GrA_c::daObj_GrA_prtclMngr_c::~daObj_GrA_c::daObj_GrA_prtclMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv.s"
 }
@@ -1630,21 +1833,16 @@ ASM_FUNCTION(__dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv) {
 
 
 /* 80C04E50-80C04E54 0004+00 .text      __ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv.s"
+daObj_GrA_c::daObj_GrA_prtclMngr_c::daObj_GrA_c::daObj_GrA_prtclMngr_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C04E54-80C04E9C 0048+00 .text      __dt__18daBaseNpc_acMngr_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daBaseNpc_acMngr_cFv) {
+asm daBaseNpc_acMngr_c::~daBaseNpc_acMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__18daBaseNpc_acMngr_cFv.s"
 }
@@ -1655,7 +1853,7 @@ ASM_FUNCTION(__dt__18daBaseNpc_acMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__23daBaseNpc_moveBgActor_cFv) {
+asm daBaseNpc_moveBgActor_c::~daBaseNpc_moveBgActor_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__dt__23daBaseNpc_moveBgActor_cFv.s"
 }
@@ -1663,98 +1861,58 @@ ASM_FUNCTION(__dt__23daBaseNpc_moveBgActor_cFv) {
 
 
 /* 80C04EFC-80C04F04 0008+00 .text      Draw__23daBaseNpc_moveBgActor_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Draw__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F04-80C04F0C 0008+00 .text      Create__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Create__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Create__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Create() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F0C-80C04F14 0008+00 .text      IsDelete__23daBaseNpc_moveBgActor_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(IsDelete__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/IsDelete__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::IsDelete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F14-80C04F1C 0008+00 .text      ToFore__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ToFore__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ToFore__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::ToFore() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F1C-80C04F24 0008+00 .text      ToBack__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ToBack__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ToBack__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::ToBack() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F24-80C04F2C 0008+00 .text      CreateHeap__23daBaseNpc_moveBgActor_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/CreateHeap__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F2C-80C04F34 0008+00 .text      Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f.s"
+extern "C" bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F34-80C04F3C 0008+00 .text      Delete__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__23daBaseNpc_moveBgActor_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Delete__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F3C-80C04F58 001C+00 .text      cLib_calcTimer<i>__FPi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C04F3C) {
+extern "C" asm void func_80C04F3C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/func_80C04F3C.s"
 }
@@ -1765,7 +1923,7 @@ ASM_FUNCTION(func_80C04F3C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C04F58) {
+extern "C" asm void func_80C04F58() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/func_80C04F58.s"
 }
@@ -1776,7 +1934,7 @@ ASM_FUNCTION(func_80C04F58) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_gra2_cpp) {
+extern "C" asm void __sinit_d_a_obj_gra2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__sinit_d_a_obj_gra2_cpp.s"
 }
@@ -1787,7 +1945,7 @@ ASM_FUNCTION(__sinit_d_a_obj_gra2_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSrchCircleR__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getSrchCircleR() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getSrchCircleR__11daObj_GrA_cFv.s"
 }
@@ -1798,7 +1956,7 @@ ASM_FUNCTION(getSrchCircleR__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(standWait__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::standWait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/standWait__11daObj_GrA_cFPv.s"
 }
@@ -1809,7 +1967,7 @@ ASM_FUNCTION(standWait__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(walk__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::walk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/walk__11daObj_GrA_cFPv.s"
 }
@@ -1820,7 +1978,7 @@ ASM_FUNCTION(walk__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(defence__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::defence(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/defence__11daObj_GrA_cFPv.s"
 }
@@ -1831,7 +1989,7 @@ ASM_FUNCTION(defence__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(toStone__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::toStone(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/toStone__11daObj_GrA_cFPv.s"
 }
@@ -1842,7 +2000,7 @@ ASM_FUNCTION(toStone__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(step__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::step(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/step__11daObj_GrA_cFPv.s"
 }
@@ -1853,7 +2011,7 @@ ASM_FUNCTION(step__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollReturn__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::rollReturn(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollReturn__11daObj_GrA_cFPv.s"
 }
@@ -1864,7 +2022,7 @@ ASM_FUNCTION(rollReturn__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(soldierDemoSkip__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::soldierDemoSkip() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/soldierDemoSkip__11daObj_GrA_cFv.s"
 }
@@ -1875,7 +2033,7 @@ ASM_FUNCTION(soldierDemoSkip__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(soldierDemo__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::soldierDemo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/soldierDemo__11daObj_GrA_cFPv.s"
 }
@@ -1886,7 +2044,7 @@ ASM_FUNCTION(soldierDemo__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSrchLinkR__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getSrchLinkR() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getSrchLinkR__11daObj_GrA_cFv.s"
 }
@@ -1897,7 +2055,7 @@ ASM_FUNCTION(getSrchLinkR__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSrchGraR__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getSrchGraR() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getSrchGraR__11daObj_GrA_cFv.s"
 }
@@ -1908,7 +2066,7 @@ ASM_FUNCTION(getSrchGraR__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSpeed__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::getSpeed() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getSpeed__11daObj_GrA_cFv.s"
 }
@@ -1919,7 +2077,7 @@ ASM_FUNCTION(getSpeed__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(standRoll__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::standRoll(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/standRoll__11daObj_GrA_cFPv.s"
 }
@@ -1930,7 +2088,7 @@ ASM_FUNCTION(standRoll__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollDemo__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::rollDemo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollDemo__11daObj_GrA_cFPv.s"
 }
@@ -1941,7 +2099,7 @@ ASM_FUNCTION(rollDemo__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollAttack__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::rollAttack(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollAttack__11daObj_GrA_cFPv.s"
 }
@@ -1952,7 +2110,7 @@ ASM_FUNCTION(rollAttack__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollAttacked__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::rollAttacked(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollAttacked__11daObj_GrA_cFPv.s"
 }
@@ -1963,7 +2121,7 @@ ASM_FUNCTION(rollAttacked__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollEscape__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::rollEscape(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollEscape__11daObj_GrA_cFPv.s"
 }
@@ -1974,7 +2132,7 @@ ASM_FUNCTION(rollEscape__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollLanding__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::rollLanding() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollLanding__11daObj_GrA_cFv.s"
 }
@@ -1985,7 +2143,7 @@ ASM_FUNCTION(rollLanding__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(thrown__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::thrown(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/thrown__11daObj_GrA_cFPv.s"
 }
@@ -1996,7 +2154,7 @@ ASM_FUNCTION(thrown__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::demo_camera() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/demo_camera__11daObj_GrA_cFv.s"
 }
@@ -2007,7 +2165,7 @@ ASM_FUNCTION(demo_camera__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rollAttackedDemo__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::rollAttackedDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/rollAttackedDemo__11daObj_GrA_cFv.s"
 }
@@ -2018,7 +2176,7 @@ ASM_FUNCTION(rollAttackedDemo__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(graThrowDemo__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::graThrowDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/graThrowDemo__11daObj_GrA_cFv.s"
 }
@@ -2029,7 +2187,7 @@ ASM_FUNCTION(graThrowDemo__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCarryStatus__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::setCarryStatus() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setCarryStatus__11daObj_GrA_cFv.s"
 }
@@ -2040,7 +2198,7 @@ ASM_FUNCTION(setCarryStatus__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkThrow__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::checkThrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkThrow__11daObj_GrA_cFv.s"
 }
@@ -2051,7 +2209,7 @@ ASM_FUNCTION(checkThrow__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCatchPos__11daObj_GrA_cFfi) {
+asm void daObj_GrA_c::calcCatchPos(f32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/calcCatchPos__11daObj_GrA_cFfi.s"
 }
@@ -2062,7 +2220,7 @@ ASM_FUNCTION(calcCatchPos__11daObj_GrA_cFfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyBeforeCatch__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::initCrazyBeforeCatch(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/initCrazyBeforeCatch__11daObj_GrA_cFi.s"
 }
@@ -2073,7 +2231,7 @@ ASM_FUNCTION(initCrazyBeforeCatch__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyBeforeCatch__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::executeCrazyBeforeCatch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/executeCrazyBeforeCatch__11daObj_GrA_cFv.s"
 }
@@ -2084,7 +2242,7 @@ ASM_FUNCTION(executeCrazyBeforeCatch__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyCatch__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::initCrazyCatch(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/initCrazyCatch__11daObj_GrA_cFi.s"
 }
@@ -2095,7 +2253,7 @@ ASM_FUNCTION(initCrazyCatch__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyCatch__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::executeCrazyCatch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/executeCrazyCatch__11daObj_GrA_cFv.s"
 }
@@ -2106,7 +2264,7 @@ ASM_FUNCTION(executeCrazyCatch__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyThrow__11daObj_GrA_cFi) {
+asm void daObj_GrA_c::initCrazyThrow(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/initCrazyThrow__11daObj_GrA_cFi.s"
 }
@@ -2117,7 +2275,7 @@ ASM_FUNCTION(initCrazyThrow__11daObj_GrA_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyThrow__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::executeCrazyThrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/executeCrazyThrow__11daObj_GrA_cFv.s"
 }
@@ -2128,7 +2286,7 @@ ASM_FUNCTION(executeCrazyThrow__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyAttack__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::initCrazyAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/initCrazyAttack__11daObj_GrA_cFv.s"
 }
@@ -2139,7 +2297,7 @@ ASM_FUNCTION(initCrazyAttack__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyJumping__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::executeCrazyJumping() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/executeCrazyJumping__11daObj_GrA_cFv.s"
 }
@@ -2150,7 +2308,7 @@ ASM_FUNCTION(executeCrazyJumping__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeChangeCheck__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::modeChangeCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/modeChangeCheck__11daObj_GrA_cFv.s"
 }
@@ -2161,7 +2319,7 @@ ASM_FUNCTION(modeChangeCheck__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGraPos__10daTagGra_cFv) {
+asm void daTagGra_c::getGraPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getGraPos__10daTagGra_cFv.s"
 }
@@ -2172,7 +2330,7 @@ ASM_FUNCTION(getGraPos__10daTagGra_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sub2__FPvPv) {
+asm void s_sub2(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/s_sub2__FPvPv.s"
 }
@@ -2183,7 +2341,7 @@ ASM_FUNCTION(s_sub2__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGraSub__11daObj_GrA_cFP10fopAc_ac_c) {
+asm void daObj_GrA_c::checkGraSub(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkGraSub__11daObj_GrA_cFP10fopAc_ac_c.s"
 }
@@ -2194,7 +2352,7 @@ ASM_FUNCTION(checkGraSub__11daObj_GrA_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(waitDemo__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::waitDemo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/waitDemo__11daObj_GrA_cFPv.s"
 }
@@ -2205,7 +2363,7 @@ ASM_FUNCTION(waitDemo__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(skipDemoGra__11daObj_GrA_cFv) {
+asm void daObj_GrA_c::skipDemoGra() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/skipDemoGra__11daObj_GrA_cFv.s"
 }
@@ -2216,7 +2374,7 @@ ASM_FUNCTION(skipDemoGra__11daObj_GrA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(skipCallBack__FPvi) {
+asm void skipCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/skipCallBack__FPvi.s"
 }
@@ -2227,7 +2385,7 @@ ASM_FUNCTION(skipCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startDemo__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::startDemo(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/startDemo__11daObj_GrA_cFPv.s"
 }
@@ -2238,7 +2396,7 @@ ASM_FUNCTION(startDemo__11daObj_GrA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn__11daObj_GrA_cFsfi) {
+extern "C" asm void turn__11daObj_GrA_cFsfi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/turn__11daObj_GrA_cFsfi.s"
 }
@@ -2249,7 +2407,7 @@ ASM_FUNCTION(turn__11daObj_GrA_cFsfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_step__11daObj_GrA_cFsiii) {
+extern "C" asm void turn_step__11daObj_GrA_cFsiii() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/turn_step__11daObj_GrA_cFsiii.s"
 }
@@ -2260,7 +2418,7 @@ ASM_FUNCTION(turn_step__11daObj_GrA_cFsiii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFindPlayer2__11daObj_GrA_cFis) {
+extern "C" asm void chkFindPlayer2__11daObj_GrA_cFis() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/chkFindPlayer2__11daObj_GrA_cFis.s"
 }
@@ -2271,7 +2429,7 @@ ASM_FUNCTION(chkFindPlayer2__11daObj_GrA_cFis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDistTable__12dAttention_cFi) {
+asm void dAttention_c::getDistTable(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getDistTable__12dAttention_cFi.s"
 }
@@ -2282,7 +2440,7 @@ ASM_FUNCTION(getDistTable__12dAttention_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs) {
+extern "C" asm void chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs.s"
 }
@@ -2293,7 +2451,7 @@ ASM_FUNCTION(chkPointInArea__11daObj_GrA_cF4cXyz4cXyzfffs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs) {
+extern "C" asm void chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs.s"
 }
@@ -2304,7 +2462,7 @@ ASM_FUNCTION(chkPointInArea__11daObj_GrA_cF4cXyz4cXyz4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs) {
+extern "C" asm void chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs.s"
 }
@@ -2315,7 +2473,7 @@ ASM_FUNCTION(chkActorInSight2__11daObj_GrA_cFP10fopAc_ac_cfs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c) {
+asm void daObj_GrA_c::getAttentionPos(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c.s"
 }
@@ -2326,7 +2484,7 @@ ASM_FUNCTION(getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(standWaitJump__11daObj_GrA_cFPv) {
+asm void daObj_GrA_c::standWaitJump(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/standWaitJump__11daObj_GrA_cFPv.s"
 }

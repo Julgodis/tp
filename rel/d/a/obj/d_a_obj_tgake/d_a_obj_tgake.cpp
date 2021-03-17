@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjGake_c;
+
+struct daObjGake_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjGake_cFv();
-extern "C" extern void setBaseMtx__11daObjGake_cFv();
-extern "C" extern void Create__11daObjGake_cFv();
-extern "C" extern void CreateHeap__11daObjGake_cFv();
-extern "C" extern void create1st__11daObjGake_cFv();
-extern "C" extern void Execute__11daObjGake_cFPPA3_A4_f();
-extern "C" extern void Draw__11daObjGake_cFv();
-extern "C" extern void Delete__11daObjGake_cFv();
-extern "C" extern void daObjGake_create1st__FP11daObjGake_c();
-extern "C" extern void daObjGake_MoveBGDelete__FP11daObjGake_c();
-extern "C" extern void daObjGake_MoveBGExecute__FP11daObjGake_c();
-extern "C" extern void daObjGake_MoveBGDraw__FP11daObjGake_c();
+extern "C" void Execute__11daObjGake_cFPPA3_A4_f();
+void daObjGake_create1st(daObjGake_c*);
+void daObjGake_MoveBGDelete(daObjGake_c*);
+void daObjGake_MoveBGExecute(daObjGake_c*);
+void daObjGake_MoveBGDraw(daObjGake_c*);
+
+extern "C" void initBaseMtx__11daObjGake_cFv();
+extern "C" void setBaseMtx__11daObjGake_cFv();
+extern "C" void Create__11daObjGake_cFv();
+extern "C" void CreateHeap__11daObjGake_cFv();
+extern "C" void create1st__11daObjGake_cFv();
+extern "C" void Execute__11daObjGake_cFPPA3_A4_f();
+extern "C" void Draw__11daObjGake_cFv();
+extern "C" void Delete__11daObjGake_cFv();
+extern "C" void daObjGake_create1st__FP11daObjGake_c();
+extern "C" void daObjGake_MoveBGDelete__FP11daObjGake_c();
+extern "C" void daObjGake_MoveBGExecute__FP11daObjGake_c();
+extern "C" void daObjGake_MoveBGDraw__FP11daObjGake_c();
 SECTION_RODATA extern const u8 stringBase0[8];
 SECTION_DATA extern u8 l_arcName[4];
 SECTION_DATA extern u8 daObjGake_METHODS[32];
@@ -31,7 +53,9 @@ SECTION_DATA extern void*const __vt__11daObjGake_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +65,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjGake_cFv) {
+asm void daObjGake_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/initBaseMtx__11daObjGake_cFv.s"
 }
@@ -52,7 +76,7 @@ ASM_FUNCTION(initBaseMtx__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjGake_cFv) {
+asm void daObjGake_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/setBaseMtx__11daObjGake_cFv.s"
 }
@@ -63,7 +87,7 @@ ASM_FUNCTION(setBaseMtx__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjGake_cFv) {
+asm void daObjGake_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/Create__11daObjGake_cFv.s"
 }
@@ -74,7 +98,7 @@ ASM_FUNCTION(Create__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjGake_cFv) {
+asm void daObjGake_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/CreateHeap__11daObjGake_cFv.s"
 }
@@ -85,7 +109,7 @@ ASM_FUNCTION(CreateHeap__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__11daObjGake_cFv) {
+asm void daObjGake_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/create1st__11daObjGake_cFv.s"
 }
@@ -96,7 +120,7 @@ ASM_FUNCTION(create1st__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjGake_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjGake_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/Execute__11daObjGake_cFPPA3_A4_f.s"
 }
@@ -107,7 +131,7 @@ ASM_FUNCTION(Execute__11daObjGake_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjGake_cFv) {
+asm void daObjGake_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/Draw__11daObjGake_cFv.s"
 }
@@ -118,7 +142,7 @@ ASM_FUNCTION(Draw__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjGake_cFv) {
+asm void daObjGake_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/Delete__11daObjGake_cFv.s"
 }
@@ -129,7 +153,7 @@ ASM_FUNCTION(Delete__11daObjGake_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGake_create1st__FP11daObjGake_c) {
+asm void daObjGake_create1st(daObjGake_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_create1st__FP11daObjGake_c.s"
 }
@@ -140,7 +164,7 @@ ASM_FUNCTION(daObjGake_create1st__FP11daObjGake_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGake_MoveBGDelete__FP11daObjGake_c) {
+asm void daObjGake_MoveBGDelete(daObjGake_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGDelete__FP11daObjGake_c.s"
 }
@@ -151,7 +175,7 @@ ASM_FUNCTION(daObjGake_MoveBGDelete__FP11daObjGake_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGake_MoveBGExecute__FP11daObjGake_c) {
+asm void daObjGake_MoveBGExecute(daObjGake_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGExecute__FP11daObjGake_c.s"
 }
@@ -162,7 +186,7 @@ ASM_FUNCTION(daObjGake_MoveBGExecute__FP11daObjGake_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGake_MoveBGDraw__FP11daObjGake_c) {
+asm void daObjGake_MoveBGDraw(daObjGake_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGDraw__FP11daObjGake_c.s"
 }

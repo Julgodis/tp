@@ -6,31 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daMagLiftRot_c;
+struct fopAc_ac_c;
+
+struct daMagLiftRot_HIO_c {
+	daMagLiftRot_HIO_c();
+	~daMagLiftRot_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daMagLiftRot_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveLift();
+	void init_modeMove();
+	void modeMove();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveWait();
+	void modeMoveWait();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18daMagLiftRot_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__14daMagLiftRot_cFv();
-extern "C" extern void CreateHeap__14daMagLiftRot_cFv();
-extern "C" extern void create__14daMagLiftRot_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__14daMagLiftRot_cFPPA3_A4_f();
-extern "C" extern void moveLift__14daMagLiftRot_cFv();
-extern "C" extern void init_modeMove__14daMagLiftRot_cFv();
-extern "C" extern void modeMove__14daMagLiftRot_cFv();
-extern "C" extern void init_modeWait__14daMagLiftRot_cFv();
-extern "C" extern void modeWait__14daMagLiftRot_cFv();
-extern "C" extern void init_modeMoveWait__14daMagLiftRot_cFv();
-extern "C" extern void modeMoveWait__14daMagLiftRot_cFv();
-extern "C" extern void Draw__14daMagLiftRot_cFv();
-extern "C" extern void Delete__14daMagLiftRot_cFv();
-extern "C" extern void daMagLiftRot_Draw__FP14daMagLiftRot_c();
-extern "C" extern void daMagLiftRot_Execute__FP14daMagLiftRot_c();
-extern "C" extern void daMagLiftRot_Delete__FP14daMagLiftRot_c();
-extern "C" extern void daMagLiftRot_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__18daMagLiftRot_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_magLiftRot_cpp();
+extern "C" void Execute__14daMagLiftRot_cFPPA3_A4_f();
+void daMagLiftRot_Draw(daMagLiftRot_c*);
+void daMagLiftRot_Execute(daMagLiftRot_c*);
+void daMagLiftRot_Delete(daMagLiftRot_c*);
+void daMagLiftRot_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_magLiftRot_cpp();
+
+extern "C" void __ct__18daMagLiftRot_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daMagLiftRot_cFv();
+extern "C" void CreateHeap__14daMagLiftRot_cFv();
+extern "C" void create__14daMagLiftRot_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__14daMagLiftRot_cFPPA3_A4_f();
+extern "C" void moveLift__14daMagLiftRot_cFv();
+extern "C" void init_modeMove__14daMagLiftRot_cFv();
+extern "C" void modeMove__14daMagLiftRot_cFv();
+extern "C" void init_modeWait__14daMagLiftRot_cFv();
+extern "C" void modeWait__14daMagLiftRot_cFv();
+extern "C" void init_modeMoveWait__14daMagLiftRot_cFv();
+extern "C" void modeMoveWait__14daMagLiftRot_cFv();
+extern "C" void Draw__14daMagLiftRot_cFv();
+extern "C" void Delete__14daMagLiftRot_cFv();
+extern "C" void daMagLiftRot_Draw__FP14daMagLiftRot_c();
+extern "C" void daMagLiftRot_Execute__FP14daMagLiftRot_c();
+extern "C" void daMagLiftRot_Delete__FP14daMagLiftRot_c();
+extern "C" void daMagLiftRot_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daMagLiftRot_HIO_cFv();
+extern "C" void __sinit_d_a_obj_magLiftRot_cpp();
 SECTION_RODATA extern const u8 lit_3627[4];
 SECTION_RODATA extern const u32 lit_3628;
 SECTION_RODATA extern const u32 lit_3629;
@@ -79,8 +124,11 @@ SECTION_BSS extern u8 data_80C8FD0C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -90,7 +138,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daMagLiftRot_HIO_cFv) {
+asm daMagLiftRot_HIO_c::daMagLiftRot_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/__ct__18daMagLiftRot_HIO_cFv.s"
 }
@@ -101,7 +149,7 @@ ASM_FUNCTION(__ct__18daMagLiftRot_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -112,7 +160,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/setBaseMtx__14daMagLiftRot_cFv.s"
 }
@@ -123,7 +171,7 @@ ASM_FUNCTION(setBaseMtx__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/CreateHeap__14daMagLiftRot_cFv.s"
 }
@@ -134,7 +182,7 @@ ASM_FUNCTION(CreateHeap__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/create__14daMagLiftRot_cFv.s"
 }
@@ -145,7 +193,7 @@ ASM_FUNCTION(create__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/__dt__12J3DFrameCtrlFv.s"
 }
@@ -156,7 +204,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daMagLiftRot_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daMagLiftRot_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/Execute__14daMagLiftRot_cFPPA3_A4_f.s"
 }
@@ -167,7 +215,7 @@ ASM_FUNCTION(Execute__14daMagLiftRot_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLift__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::moveLift() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/moveLift__14daMagLiftRot_cFv.s"
 }
@@ -178,7 +226,7 @@ ASM_FUNCTION(moveLift__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/init_modeMove__14daMagLiftRot_cFv.s"
 }
@@ -189,7 +237,7 @@ ASM_FUNCTION(init_modeMove__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/modeMove__14daMagLiftRot_cFv.s"
 }
@@ -200,7 +248,7 @@ ASM_FUNCTION(modeMove__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/init_modeWait__14daMagLiftRot_cFv.s"
 }
@@ -211,7 +259,7 @@ ASM_FUNCTION(init_modeWait__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/modeWait__14daMagLiftRot_cFv.s"
 }
@@ -222,7 +270,7 @@ ASM_FUNCTION(modeWait__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveWait__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::init_modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/init_modeMoveWait__14daMagLiftRot_cFv.s"
 }
@@ -233,7 +281,7 @@ ASM_FUNCTION(init_modeMoveWait__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveWait__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/modeMoveWait__14daMagLiftRot_cFv.s"
 }
@@ -244,7 +292,7 @@ ASM_FUNCTION(modeMoveWait__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/Draw__14daMagLiftRot_cFv.s"
 }
@@ -255,7 +303,7 @@ ASM_FUNCTION(Draw__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daMagLiftRot_cFv) {
+asm void daMagLiftRot_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/Delete__14daMagLiftRot_cFv.s"
 }
@@ -266,7 +314,7 @@ ASM_FUNCTION(Delete__14daMagLiftRot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLiftRot_Draw__FP14daMagLiftRot_c) {
+asm void daMagLiftRot_Draw(daMagLiftRot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Draw__FP14daMagLiftRot_c.s"
 }
@@ -277,7 +325,7 @@ ASM_FUNCTION(daMagLiftRot_Draw__FP14daMagLiftRot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLiftRot_Execute__FP14daMagLiftRot_c) {
+asm void daMagLiftRot_Execute(daMagLiftRot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Execute__FP14daMagLiftRot_c.s"
 }
@@ -288,7 +336,7 @@ ASM_FUNCTION(daMagLiftRot_Execute__FP14daMagLiftRot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLiftRot_Delete__FP14daMagLiftRot_c) {
+asm void daMagLiftRot_Delete(daMagLiftRot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Delete__FP14daMagLiftRot_c.s"
 }
@@ -299,7 +347,7 @@ ASM_FUNCTION(daMagLiftRot_Delete__FP14daMagLiftRot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLiftRot_Create__FP10fopAc_ac_c) {
+asm void daMagLiftRot_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/daMagLiftRot_Create__FP10fopAc_ac_c.s"
 }
@@ -310,7 +358,7 @@ ASM_FUNCTION(daMagLiftRot_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daMagLiftRot_HIO_cFv) {
+asm daMagLiftRot_HIO_c::~daMagLiftRot_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/__dt__18daMagLiftRot_HIO_cFv.s"
 }
@@ -321,7 +369,7 @@ ASM_FUNCTION(__dt__18daMagLiftRot_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_magLiftRot_cpp) {
+extern "C" asm void __sinit_d_a_obj_magLiftRot_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLiftRot/d_a_obj_magLiftRot/__sinit_d_a_obj_magLiftRot_cpp.s"
 }

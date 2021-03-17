@@ -6,27 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjHata_c;
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daObjHata_c {
+	daObjHata_c();
+	~daObjHata_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void setModelMtx();
+	void init();
+	void moveSwing();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjHata_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__11daObjHata_cFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__11daObjHata_cFv();
-extern "C" extern void createHeap__11daObjHata_cFv();
-extern "C" extern void create__11daObjHata_cFv();
-extern "C" extern void Delete__11daObjHata_cFv();
-extern "C" extern void draw__11daObjHata_cFv();
-extern "C" extern void execute__11daObjHata_cFv();
-extern "C" extern void setModelMtx__11daObjHata_cFv();
-extern "C" extern void init__11daObjHata_cFv();
-extern "C" extern void moveSwing__11daObjHata_cFv();
-extern "C" extern void daObjHata_create__FP11daObjHata_c();
-extern "C" extern void daObjHata_Delete__FP11daObjHata_c();
-extern "C" extern void daObjHata_execute__FP11daObjHata_c();
-extern "C" extern void daObjHata_draw__FP11daObjHata_c();
+void daObjHata_c_createHeap(fopAc_ac_c*);
+void nodeCallBack(J3DJoint*, s32);
+void daObjHata_create(daObjHata_c*);
+void daObjHata_Delete(daObjHata_c*);
+void daObjHata_execute(daObjHata_c*);
+void daObjHata_draw(daObjHata_c*);
+
+extern "C" void daObjHata_c_createHeap__FP10fopAc_ac_c();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__11daObjHata_cFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__11daObjHata_cFv();
+extern "C" void createHeap__11daObjHata_cFv();
+extern "C" void create__11daObjHata_cFv();
+extern "C" void Delete__11daObjHata_cFv();
+extern "C" void draw__11daObjHata_cFv();
+extern "C" void execute__11daObjHata_cFv();
+extern "C" void setModelMtx__11daObjHata_cFv();
+extern "C" void init__11daObjHata_cFv();
+extern "C" void moveSwing__11daObjHata_cFv();
+extern "C" void daObjHata_create__FP11daObjHata_c();
+extern "C" void daObjHata_Delete__FP11daObjHata_c();
+extern "C" void daObjHata_execute__FP11daObjHata_c();
+extern "C" void daObjHata_draw__FP11daObjHata_c();
 SECTION_RODATA extern const u32 lit_3788;
 SECTION_RODATA extern const u32 lit_3789;
 SECTION_RODATA extern const u8 data_80C19480[12];
@@ -47,7 +86,9 @@ SECTION_DATA extern void*const __vt__11daObjHata_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +98,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHata_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjHata_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -68,7 +109,7 @@ ASM_FUNCTION(daObjHata_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/nodeCallBack__FP8J3DJointi.s"
 }
@@ -79,7 +120,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/__dt__5csXyzFv.s"
 }
@@ -90,7 +131,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daObjHata_cFv) {
+asm daObjHata_c::daObjHata_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/__ct__11daObjHata_cFv.s"
 }
@@ -98,21 +139,16 @@ ASM_FUNCTION(__ct__11daObjHata_cFv) {
 
 
 /* 80C18D64-80C18D68 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C18D68-80C18E00 0098+00 .text      __dt__11daObjHata_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daObjHata_cFv) {
+asm daObjHata_c::~daObjHata_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/__dt__11daObjHata_cFv.s"
 }
@@ -123,7 +159,7 @@ ASM_FUNCTION(__dt__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daObjHata_cFv) {
+asm void daObjHata_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/createHeap__11daObjHata_cFv.s"
 }
@@ -134,7 +170,7 @@ ASM_FUNCTION(createHeap__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjHata_cFv) {
+asm void daObjHata_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/create__11daObjHata_cFv.s"
 }
@@ -145,7 +181,7 @@ ASM_FUNCTION(create__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjHata_cFv) {
+asm void daObjHata_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/Delete__11daObjHata_cFv.s"
 }
@@ -156,7 +192,7 @@ ASM_FUNCTION(Delete__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjHata_cFv) {
+asm void daObjHata_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/draw__11daObjHata_cFv.s"
 }
@@ -167,7 +203,7 @@ ASM_FUNCTION(draw__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjHata_cFv) {
+asm void daObjHata_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/execute__11daObjHata_cFv.s"
 }
@@ -178,7 +214,7 @@ ASM_FUNCTION(execute__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__11daObjHata_cFv) {
+asm void daObjHata_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/setModelMtx__11daObjHata_cFv.s"
 }
@@ -189,7 +225,7 @@ ASM_FUNCTION(setModelMtx__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11daObjHata_cFv) {
+asm void daObjHata_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/init__11daObjHata_cFv.s"
 }
@@ -200,7 +236,7 @@ ASM_FUNCTION(init__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveSwing__11daObjHata_cFv) {
+asm void daObjHata_c::moveSwing() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/moveSwing__11daObjHata_cFv.s"
 }
@@ -211,7 +247,7 @@ ASM_FUNCTION(moveSwing__11daObjHata_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHata_create__FP11daObjHata_c) {
+asm void daObjHata_create(daObjHata_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_create__FP11daObjHata_c.s"
 }
@@ -222,7 +258,7 @@ ASM_FUNCTION(daObjHata_create__FP11daObjHata_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHata_Delete__FP11daObjHata_c) {
+asm void daObjHata_Delete(daObjHata_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_Delete__FP11daObjHata_c.s"
 }
@@ -233,7 +269,7 @@ ASM_FUNCTION(daObjHata_Delete__FP11daObjHata_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHata_execute__FP11daObjHata_c) {
+asm void daObjHata_execute(daObjHata_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_execute__FP11daObjHata_c.s"
 }
@@ -244,7 +280,7 @@ ASM_FUNCTION(daObjHata_execute__FP11daObjHata_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHata_draw__FP11daObjHata_c) {
+asm void daObjHata_draw(daObjHata_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hata/d_a_obj_hata/daObjHata_draw__FP11daObjHata_c.s"
 }

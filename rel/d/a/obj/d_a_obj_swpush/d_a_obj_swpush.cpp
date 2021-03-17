@@ -6,56 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct dBgW;
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgW {
+};
+
+struct cM3dGTri {
+	~cM3dGTri();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DJoint {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void prmZ_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void is_switch2__Q211daObjSwpush5Act_cCFv();
-extern "C" extern void solidHeapCB__Q211daObjSwpush5Act_cFP10fopAc_ac_c();
-extern "C" extern void create_heap__Q211daObjSwpush5Act_cFv();
-extern "C" extern void create_res_load__Q211daObjSwpush5Act_cFv();
-extern "C" extern void Mthd_Create__Q211daObjSwpush5Act_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void Mthd_Delete__Q211daObjSwpush5Act_cFv();
-extern "C" extern void set_mtx__Q211daObjSwpush5Act_cFv();
-extern "C" extern void init_mtx__Q211daObjSwpush5Act_cFv();
-extern "C" extern void set_btp_frame__Q211daObjSwpush5Act_cFv();
-extern "C" extern void rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGTriFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void jnodeCB__Q211daObjSwpush5Act_cFP8J3DJointi();
-extern "C" extern void calc_top_pos__Q211daObjSwpush5Act_cFv();
-extern "C" extern void top_bg_aim_req__Q211daObjSwpush5Act_cFfs();
-extern "C" extern void set_push_flag__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_upper_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_upper__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_u_l_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_u_l__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_lower_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_lower__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_l_u_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void mode_l_u__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_non_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_non__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_reqPause_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_reqPause__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_runPause_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_runPause__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_stop_puase__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_reqSw_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_reqSw__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_runSw_init__Q211daObjSwpush5Act_cFv();
-extern "C" extern void demo_runSw__Q211daObjSwpush5Act_cFv();
-extern "C" extern void check_ride_couple__Q211daObjSwpush5Act_cFs();
-extern "C" extern void nr_ride_people__Q211daObjSwpush5Act_cFc();
-extern "C" extern void Mthd_Execute__Q211daObjSwpush5Act_cFv();
-extern "C" extern void Mthd_Draw__Q211daObjSwpush5Act_cFv();
-extern "C" extern void func_80484C5C();
-extern "C" extern void func_80484C7C();
-extern "C" extern void func_80484C9C();
-extern "C" extern void func_80484CBC();
-extern "C" extern void func_80484CDC();
-extern "C" extern void func_80484CE4();
+extern "C" void top_bg_aim_req__Q211daObjSwpush5Act_cFfs();
+extern "C" void check_ride_couple__Q211daObjSwpush5Act_cFs();
+extern "C" void nr_ride_people__Q211daObjSwpush5Act_cFc();
+extern "C" void func_80484C5C();
+extern "C" void func_80484C7C();
+extern "C" void func_80484C9C();
+extern "C" void func_80484CBC();
+extern "C" bool func_80484CDC();
+extern "C" void func_80484CE4();
+
+extern "C" void prmZ_init__Q211daObjSwpush5Act_cFv();
+extern "C" void is_switch2__Q211daObjSwpush5Act_cCFv();
+extern "C" void solidHeapCB__Q211daObjSwpush5Act_cFP10fopAc_ac_c();
+extern "C" void create_heap__Q211daObjSwpush5Act_cFv();
+extern "C" void create_res_load__Q211daObjSwpush5Act_cFv();
+extern "C" void Mthd_Create__Q211daObjSwpush5Act_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void Mthd_Delete__Q211daObjSwpush5Act_cFv();
+extern "C" void set_mtx__Q211daObjSwpush5Act_cFv();
+extern "C" void init_mtx__Q211daObjSwpush5Act_cFv();
+extern "C" void set_btp_frame__Q211daObjSwpush5Act_cFv();
+extern "C" void rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGTriFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void jnodeCB__Q211daObjSwpush5Act_cFP8J3DJointi();
+extern "C" void calc_top_pos__Q211daObjSwpush5Act_cFv();
+extern "C" void top_bg_aim_req__Q211daObjSwpush5Act_cFfs();
+extern "C" void set_push_flag__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_upper_init__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_upper__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_u_l_init__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_u_l__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_lower_init__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_lower__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_l_u_init__Q211daObjSwpush5Act_cFv();
+extern "C" void mode_l_u__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_non_init__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_non__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_reqPause_init__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_reqPause__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_runPause_init__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_runPause__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_stop_puase__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_reqSw_init__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_reqSw__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_runSw_init__Q211daObjSwpush5Act_cFv();
+extern "C" void demo_runSw__Q211daObjSwpush5Act_cFv();
+extern "C" void check_ride_couple__Q211daObjSwpush5Act_cFs();
+extern "C" void nr_ride_people__Q211daObjSwpush5Act_cFc();
+extern "C" void Mthd_Execute__Q211daObjSwpush5Act_cFv();
+extern "C" void Mthd_Draw__Q211daObjSwpush5Act_cFv();
+extern "C" void func_80484C5C();
+extern "C" void func_80484C7C();
+extern "C" void func_80484C9C();
+extern "C" void func_80484CBC();
+extern "C" bool func_80484CDC();
+extern "C" void func_80484CE4();
 SECTION_RODATA extern const u8 M_bmd__Q211daObjSwpush5Act_c[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 M_dzb__Q211daObjSwpush5Act_c[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 M_heap_size__Q211daObjSwpush5Act_c[12];
@@ -148,8 +187,11 @@ SECTION_BSS extern u8 data_80485100[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -159,7 +201,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(prmZ_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::prmZ_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/prmZ_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -170,7 +212,7 @@ ASM_FUNCTION(prmZ_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(is_switch2__Q211daObjSwpush5Act_cCFv) {
+asm void daObjSwpush::Act_c::is_switch2() const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/is_switch2__Q211daObjSwpush5Act_cCFv.s"
 }
@@ -181,7 +223,7 @@ ASM_FUNCTION(is_switch2__Q211daObjSwpush5Act_cCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(solidHeapCB__Q211daObjSwpush5Act_cFP10fopAc_ac_c) {
+asm void daObjSwpush::Act_c::solidHeapCB(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/solidHeapCB__Q211daObjSwpush5Act_cFP10fopAc_ac_c.s"
 }
@@ -192,7 +234,7 @@ ASM_FUNCTION(solidHeapCB__Q211daObjSwpush5Act_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_heap__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::create_heap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/create_heap__Q211daObjSwpush5Act_cFv.s"
 }
@@ -203,7 +245,7 @@ ASM_FUNCTION(create_heap__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_res_load__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::create_res_load() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/create_res_load__Q211daObjSwpush5Act_cFv.s"
 }
@@ -214,7 +256,7 @@ ASM_FUNCTION(create_res_load__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Create__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::Mthd_Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/Mthd_Create__Q211daObjSwpush5Act_cFv.s"
 }
@@ -225,7 +267,7 @@ ASM_FUNCTION(Mthd_Create__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/__dt__4cXyzFv.s"
 }
@@ -236,7 +278,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Delete__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::Mthd_Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/Mthd_Delete__Q211daObjSwpush5Act_cFv.s"
 }
@@ -247,7 +289,7 @@ ASM_FUNCTION(Mthd_Delete__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_mtx__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::set_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/set_mtx__Q211daObjSwpush5Act_cFv.s"
 }
@@ -258,7 +300,7 @@ ASM_FUNCTION(set_mtx__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_mtx__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::init_mtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/init_mtx__Q211daObjSwpush5Act_cFv.s"
 }
@@ -266,21 +308,16 @@ ASM_FUNCTION(init_mtx__Q211daObjSwpush5Act_cFv) {
 
 
 /* 80483570-80483574 0004+00 .text      set_btp_frame__Q211daObjSwpush5Act_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(set_btp_frame__Q211daObjSwpush5Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/set_btp_frame__Q211daObjSwpush5Act_cFv.s"
+void daObjSwpush::Act_c::set_btp_frame() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80483574-80483910 039C+00 .text      rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daObjSwpush::Act_c::rideCB(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -291,7 +328,7 @@ ASM_FUNCTION(rideCB__Q211daObjSwpush5Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGTriFv) {
+asm cM3dGTri::~cM3dGTri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/__dt__8cM3dGTriFv.s"
 }
@@ -302,7 +339,7 @@ ASM_FUNCTION(__dt__8cM3dGTriFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/__dt__8cM3dGPlaFv.s"
 }
@@ -313,7 +350,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(jnodeCB__Q211daObjSwpush5Act_cFP8J3DJointi) {
+asm void daObjSwpush::Act_c::jnodeCB(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/jnodeCB__Q211daObjSwpush5Act_cFP8J3DJointi.s"
 }
@@ -324,7 +361,7 @@ ASM_FUNCTION(jnodeCB__Q211daObjSwpush5Act_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc_top_pos__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::calc_top_pos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/calc_top_pos__Q211daObjSwpush5Act_cFv.s"
 }
@@ -335,7 +372,7 @@ ASM_FUNCTION(calc_top_pos__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(top_bg_aim_req__Q211daObjSwpush5Act_cFfs) {
+extern "C" asm void top_bg_aim_req__Q211daObjSwpush5Act_cFfs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/top_bg_aim_req__Q211daObjSwpush5Act_cFfs.s"
 }
@@ -346,7 +383,7 @@ ASM_FUNCTION(top_bg_aim_req__Q211daObjSwpush5Act_cFfs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_push_flag__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::set_push_flag() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/set_push_flag__Q211daObjSwpush5Act_cFv.s"
 }
@@ -357,7 +394,7 @@ ASM_FUNCTION(set_push_flag__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_upper_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_upper_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_upper_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -368,7 +405,7 @@ ASM_FUNCTION(mode_upper_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_upper__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_upper() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_upper__Q211daObjSwpush5Act_cFv.s"
 }
@@ -379,7 +416,7 @@ ASM_FUNCTION(mode_upper__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_u_l_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_u_l_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_u_l_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -390,7 +427,7 @@ ASM_FUNCTION(mode_u_l_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_u_l__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_u_l() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_u_l__Q211daObjSwpush5Act_cFv.s"
 }
@@ -401,7 +438,7 @@ ASM_FUNCTION(mode_u_l__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_lower_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_lower_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_lower_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -412,7 +449,7 @@ ASM_FUNCTION(mode_lower_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_lower__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_lower() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_lower__Q211daObjSwpush5Act_cFv.s"
 }
@@ -423,7 +460,7 @@ ASM_FUNCTION(mode_lower__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_l_u_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_l_u_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_l_u_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -434,7 +471,7 @@ ASM_FUNCTION(mode_l_u_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_l_u__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::mode_l_u() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/mode_l_u__Q211daObjSwpush5Act_cFv.s"
 }
@@ -445,7 +482,7 @@ ASM_FUNCTION(mode_l_u__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_non_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_non_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_non_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -453,21 +490,16 @@ ASM_FUNCTION(demo_non_init__Q211daObjSwpush5Act_cFv) {
 
 
 /* 8048457C-80484580 0004+00 .text      demo_non__Q211daObjSwpush5Act_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demo_non__Q211daObjSwpush5Act_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_non__Q211daObjSwpush5Act_cFv.s"
+void daObjSwpush::Act_c::demo_non() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80484580-804845D8 0058+00 .text      demo_reqPause_init__Q211daObjSwpush5Act_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqPause_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_reqPause_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_reqPause_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -478,7 +510,7 @@ ASM_FUNCTION(demo_reqPause_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqPause__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_reqPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_reqPause__Q211daObjSwpush5Act_cFv.s"
 }
@@ -489,7 +521,7 @@ ASM_FUNCTION(demo_reqPause__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runPause_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_runPause_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_runPause_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -500,7 +532,7 @@ ASM_FUNCTION(demo_runPause_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runPause__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_runPause() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_runPause__Q211daObjSwpush5Act_cFv.s"
 }
@@ -511,7 +543,7 @@ ASM_FUNCTION(demo_runPause__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_stop_puase__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_stop_puase() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_stop_puase__Q211daObjSwpush5Act_cFv.s"
 }
@@ -522,7 +554,7 @@ ASM_FUNCTION(demo_stop_puase__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqSw_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_reqSw_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_reqSw_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -533,7 +565,7 @@ ASM_FUNCTION(demo_reqSw_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_reqSw__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_reqSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_reqSw__Q211daObjSwpush5Act_cFv.s"
 }
@@ -544,7 +576,7 @@ ASM_FUNCTION(demo_reqSw__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runSw_init__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_runSw_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_runSw_init__Q211daObjSwpush5Act_cFv.s"
 }
@@ -555,7 +587,7 @@ ASM_FUNCTION(demo_runSw_init__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_runSw__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::demo_runSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_runSw__Q211daObjSwpush5Act_cFv.s"
 }
@@ -566,7 +598,7 @@ ASM_FUNCTION(demo_runSw__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_ride_couple__Q211daObjSwpush5Act_cFs) {
+extern "C" asm void check_ride_couple__Q211daObjSwpush5Act_cFs() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/check_ride_couple__Q211daObjSwpush5Act_cFs.s"
 }
@@ -577,7 +609,7 @@ ASM_FUNCTION(check_ride_couple__Q211daObjSwpush5Act_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nr_ride_people__Q211daObjSwpush5Act_cFc) {
+extern "C" asm void nr_ride_people__Q211daObjSwpush5Act_cFc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/nr_ride_people__Q211daObjSwpush5Act_cFc.s"
 }
@@ -588,7 +620,7 @@ ASM_FUNCTION(nr_ride_people__Q211daObjSwpush5Act_cFc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Execute__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::Mthd_Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/Mthd_Execute__Q211daObjSwpush5Act_cFv.s"
 }
@@ -599,7 +631,7 @@ ASM_FUNCTION(Mthd_Execute__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Mthd_Draw__Q211daObjSwpush5Act_cFv) {
+asm void daObjSwpush::Act_c::Mthd_Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/Mthd_Draw__Q211daObjSwpush5Act_cFv.s"
 }
@@ -610,7 +642,7 @@ ASM_FUNCTION(Mthd_Draw__Q211daObjSwpush5Act_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80484C5C) {
+extern "C" asm void func_80484C5C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484C5C.s"
 }
@@ -621,7 +653,7 @@ ASM_FUNCTION(func_80484C5C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80484C7C) {
+extern "C" asm void func_80484C7C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484C7C.s"
 }
@@ -632,7 +664,7 @@ ASM_FUNCTION(func_80484C7C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80484C9C) {
+extern "C" asm void func_80484C9C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484C9C.s"
 }
@@ -643,7 +675,7 @@ ASM_FUNCTION(func_80484C9C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80484CBC) {
+extern "C" asm void func_80484CBC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484CBC.s"
 }
@@ -651,21 +683,16 @@ ASM_FUNCTION(func_80484CBC) {
 
 
 /* 80484CDC-80484CE4 0008+00 .text      Mthd_IsDelete__Q211daObjSwpush28@unnamed@d_a_obj_swpush_cpp@FPv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(func_80484CDC) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484CDC.s"
+extern "C" bool func_80484CDC() {
+	return true;
 }
-#pragma pop
 
 
 /* 80484CE4-80484D00 001C+00 .text      PrmAbstract<Q311daObjSwpush5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ311daObjSwpush5Act_c5Prm_eQ311daObjSwpush5Act_c5Prm_e */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80484CE4) {
+extern "C" asm void func_80484CE4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484CE4.s"
 }

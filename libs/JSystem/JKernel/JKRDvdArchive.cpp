@@ -6,17 +6,163 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRDvdArchive (JKRDvdArchive) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
+// build JKRArchive (JKRArchive) False/False
+// build JKRArchive (JKRArchive) True/False
+struct JKRArchive;
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin JKRArchive) */
+// outer dependency: JKRArchive::EMountMode
+// outer dependency: JKRArchive::SDIFileEntry
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	// JKRArchive::EMountMode
+	// JKRArchive::SDIFileEntry
+	// build EMountDirection (JKRArchive::EMountDirection) False/False
+	/* dependencies (begin JKRArchive::EMountDirection) */
+	/* dependencies (end JKRArchive::EMountDirection) */
+	struct EMountDirection {
+	};
+
+	// build SDIFileEntry (JKRArchive::SDIFileEntry) False/False
+	/* dependencies (begin JKRArchive::SDIFileEntry) */
+	/* dependencies (end JKRArchive::SDIFileEntry) */
+	struct SDIFileEntry {
+	};
+
+	// build EMountMode (JKRArchive::EMountMode) False/False
+	/* dependencies (begin JKRArchive::EMountMode) */
+	/* dependencies (end JKRArchive::EMountMode) */
+	struct EMountMode {
+	};
+
+	/* 802D5A38 */ void becomeCurrent(char const*);
+	/* 802D5BE8 */ void getResource(char const*);
+	/* 802D5C64 */ void getResource(u32, char const*);
+	/* 802D5D8C */ void readResource(void*, u32, u32, char const*);
+	/* 802D5E30 */ void readResource(void*, u32, char const*);
+	/* 802D5FB4 */ void removeResourceAll();
+	/* 802D603C */ void removeResource(void*);
+	/* 802D609C */ void detachResource(void*);
+	/* 802D60D8 */ void getResSize(void const*) const;
+	/* 802D6150 */ void countFile(char const*) const;
+	/* 802D61B0 */ void getFirstFile(char const*) const;
+	/* 802D6294 */ JKRArchive(s32, JKRArchive::EMountMode);
+	/* 802D6334 */ ~JKRArchive();
+	/* 802D6734 */ void findPtrResource(void const*) const;
+	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
+	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
+};
+
+// build JKRArchive (JKRArchive) True/True
+/* top-level dependencies (begin JKRDvdArchive) */
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRArchive::SDIFileEntry
+/* top-level dependencies (end JKRDvdArchive) */
+struct JKRDvdArchive {
+	// JKRHeap
+	// JKRArchive::EMountDirection
+	// JKRArchive::SDIFileEntry
+	/* 802D7BF0 */ JKRDvdArchive(s32, JKRArchive::EMountDirection);
+	/* 802D7C98 */ ~JKRDvdArchive();
+	/* 802D7DB4 */ void open(s32);
+	/* 802D8050 */ void fetchResource(JKRArchive::SDIFileEntry*, u32*);
+	/* 802D8168 */ void fetchResource(void*, u32, JKRArchive::SDIFileEntry*, u32*);
+	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, char*, u32, s32, s32);
+	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, s32, s32, char**);
+	/* 802D8698 */ void getExpandedResSize(void const*) const;
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build JKRHeap (JKRHeap) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D41D4 */ void unmount();
+};
+
+// build JKRDvdFile (JKRDvdFile) False/False
+/* top-level dependencies (begin JKRDvdFile) */
+/* top-level dependencies (end JKRDvdFile) */
+struct JKRDvdFile {
+	/* 802D96A0 */ JKRDvdFile(s32);
+};
+
+// build JKRDvdRipper (JKRDvdRipper) False/False
+// build JKRHeap (JKRHeap) True/True
+// build JKRExpandSwitch (JKRExpandSwitch) False/False
+/* top-level dependencies (begin JKRExpandSwitch) */
+/* top-level dependencies (end JKRExpandSwitch) */
+struct JKRExpandSwitch {
+};
+
+// build JKRDvdRipper (JKRDvdRipper) True/False
+struct JKRDvdRipper;
+/* top-level dependencies (begin JKRDvdRipper) */
+// outer dependency: JKRHeap
+// outer dependency: JKRExpandSwitch
+// outer dependency: JKRDvdRipper::EAllocDirection
+/* top-level dependencies (end JKRDvdRipper) */
+struct JKRDvdRipper {
+	// JKRHeap
+	// JKRExpandSwitch
+	// JKRDvdRipper::EAllocDirection
+	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
+	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
+	/* dependencies (end JKRDvdRipper::EAllocDirection) */
+	struct EAllocDirection {
+	};
+
+	/* 802D9C54 */ void loadToMainRAM(s32, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+};
+
+// build JKRExpandSwitch (JKRExpandSwitch) True/True
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+};
+
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBFF0 */ void prepend(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// build JSUPtrLink (JSUPtrLink) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
-extern "C" extern void __dt__13JKRDvdArchiveFv();
-extern "C" extern void open__13JKRDvdArchiveFl();
-extern "C" extern void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl();
-extern "C" extern void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl();
-extern "C" extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii();
-extern "C" extern void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc();
-extern "C" extern void getExpandedResSize__13JKRDvdArchiveCFPCv();
+
+extern "C" void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void __dt__13JKRDvdArchiveFv();
+extern "C" void open__13JKRDvdArchiveFl();
+extern "C" void fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii();
+extern "C" void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc();
+extern "C" void getExpandedResSize__13JKRDvdArchiveCFPCv();
 SECTION_RODATA extern const u8 JKRDvdArchive__stringBase0[112];
 SECTION_DATA extern void*const __vt__13JKRDvdArchive[20];
 
@@ -24,48 +170,65 @@ SECTION_DATA extern void*const __vt__13JKRDvdArchive[20];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void copyMemory__7JKRHeapFPvPvUl();
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void unmount__13JKRFileLoaderFv();
-extern "C" extern void becomeCurrent__10JKRArchiveFPCc();
-extern "C" extern void getResource__10JKRArchiveFPCc();
-extern "C" extern void getResource__10JKRArchiveFUlPCc();
-extern "C" extern void readResource__10JKRArchiveFPvUlUlPCc();
-extern "C" extern void readResource__10JKRArchiveFPvUlPCc();
-extern "C" extern void removeResourceAll__10JKRArchiveFv();
-extern "C" extern void removeResource__10JKRArchiveFPv();
-extern "C" extern void detachResource__10JKRArchiveFPv();
-extern "C" extern void getResSize__10JKRArchiveCFPCv();
-extern "C" extern void countFile__10JKRArchiveCFPCc();
-extern "C" extern void getFirstFile__10JKRArchiveCFPCc();
-extern "C" extern void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
-extern "C" extern void __dt__10JKRArchiveFv();
-extern "C" extern void findPtrResource__10JKRArchiveCFPCv();
-extern "C" extern void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
-extern "C" extern void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
-extern "C" extern void __ct__10JKRDvdFileFl();
-extern "C" extern void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" extern void prepend__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void panic_f__12JUTExceptionFPCciPCce();
-extern "C" extern void DCInvalidateRange();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void abs();
+SECTION_INIT void memset();
+void* operator new(u32, JKRHeap*, s32);
+void operator delete(void*);
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCInvalidateRange();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+
+SECTION_INIT void memset();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void copyMemory__7JKRHeapFPvPvUl();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void unmount__13JKRFileLoaderFv();
+extern "C" void becomeCurrent__10JKRArchiveFPCc();
+extern "C" void getResource__10JKRArchiveFPCc();
+extern "C" void getResource__10JKRArchiveFUlPCc();
+extern "C" void readResource__10JKRArchiveFPvUlUlPCc();
+extern "C" void readResource__10JKRArchiveFPvUlPCc();
+extern "C" void removeResourceAll__10JKRArchiveFv();
+extern "C" void removeResource__10JKRArchiveFPv();
+extern "C" void detachResource__10JKRArchiveFPv();
+extern "C" void getResSize__10JKRArchiveCFPCv();
+extern "C" void countFile__10JKRArchiveCFPCc();
+extern "C" void getFirstFile__10JKRArchiveCFPCc();
+extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
+extern "C" void __dt__10JKRArchiveFv();
+extern "C" void findPtrResource__10JKRArchiveCFPCv();
+extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+extern "C" void __ct__10JKRDvdFileFl();
+extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCInvalidateRange();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
 SECTION_BSS extern u8 sVolumeList__13JKRFileLoader[12];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
@@ -74,7 +237,7 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC398-803CC3E8 0050+00 .data      __vt__13JKRDvdArchive                                        */
+/* 803CC398-803CC3E8 0050+00 rc=2 efc=0 .data      __vt__13JKRDvdArchive                                        */
 void* const __vt__13JKRDvdArchive[20] = {
 	NULL, /* RTTI */
 	NULL,
@@ -98,55 +261,55 @@ void* const __vt__13JKRDvdArchive[20] = {
 	(void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
-/* 802D7BF0-802D7C98 00A8+00 .text      __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection       */
+/* 802D7BF0-802D7C98 00A8+00 rc=1 efc=1 .text      __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection) {
+asm JKRDvdArchive::JKRDvdArchive(s32 field_0, JKRArchive::EMountDirection field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/__ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection.s"
 }
 #pragma pop
 
 
-/* 802D7C98-802D7DB4 011C+00 .text      __dt__13JKRDvdArchiveFv                                      */
+/* 802D7C98-802D7DB4 011C+00 rc=1 efc=0 .text      __dt__13JKRDvdArchiveFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13JKRDvdArchiveFv) {
+asm JKRDvdArchive::~JKRDvdArchive() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/__dt__13JKRDvdArchiveFv.s"
 }
 #pragma pop
 
 
-/* 802D7DB4-802D8050 029C+00 .text      open__13JKRDvdArchiveFl                                      */
+/* 802D7DB4-802D8050 029C+00 rc=1 efc=0 .text      open__13JKRDvdArchiveFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(open__13JKRDvdArchiveFl) {
+asm void JKRDvdArchive::open(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/open__13JKRDvdArchiveFl.s"
 }
 #pragma pop
 
 
-/* 802D8050-802D8168 0118+00 .text      fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D8050-802D8168 0118+00 rc=1 efc=0 .text      fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl) {
+asm void JKRDvdArchive::fetchResource(JKRArchive::SDIFileEntry* field_0, u32* field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl.s"
 }
 #pragma pop
 
 
-/* 802D8168-802D826C 0104+00 .text      fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D8168-802D826C 0104+00 rc=1 efc=0 .text      fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl) {
+asm void JKRDvdArchive::fetchResource(void* field_0, u32 field_1, JKRArchive::SDIFileEntry* field_2, u32* field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl.s"
 }
@@ -154,7 +317,7 @@ ASM_FUNCTION(fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl
 
 
 /* ############################################################################################## */
-/* 8039D1B0-8039D220 006D+03 .rodata    @stringBase0                                                 */
+/* 8039D1B0-8039D220 006D+03 rc=2 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -169,37 +332,36 @@ SECTION_DEAD char* const stringBase_8039D1FC =
 SECTION_DEAD char* const pad_8039D21D = "\0\0";
 #pragma pop
 
-/* 802D826C-802D8474 0208+00 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii       */
+/* 802D826C-802D8474 0208+00 rc=2 efc=1 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii) {
+asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, char* field_3, u32 field_4, s32 field_5, s32 field_6) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii.s"
 }
 #pragma pop
 
 
-/* 802D8474-802D8698 0224+00 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc */
+/* 802D8474-802D8698 0224+00 rc=2 efc=1 .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc) {
+asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, JKRHeap* field_3, s32 field_4, s32 field_5, char** field_6) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc.s"
 }
 #pragma pop
 
 
-/* 802D8698-802D87D4 013C+00 .text      getExpandedResSize__13JKRDvdArchiveCFPCv                     */
+/* 802D8698-802D87D4 013C+00 rc=1 efc=0 .text      getExpandedResSize__13JKRDvdArchiveCFPCv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getExpandedResSize__13JKRDvdArchiveCFPCv) {
+asm void JKRDvdArchive::getExpandedResSize(void const* field_0) const {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/getExpandedResSize__13JKRDvdArchiveCFPCv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

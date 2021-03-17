@@ -9,15 +9,25 @@
 // Forward References:
 // 
 
-extern "C" extern void IsCard();
-extern "C" extern void CARDProbe();
-extern "C" extern void CARDProbeEx();
-extern "C" extern void DoMount();
-extern "C" extern void __CARDMountCallback();
-extern "C" extern void CARDMountAsync();
-extern "C" extern void CARDMount();
-extern "C" extern void DoUnmount();
-extern "C" extern void CARDUnmount();
+extern "C" static void IsCard();
+extern "C" void CARDProbe();
+extern "C" void CARDProbeEx();
+extern "C" static void DoMount();
+extern "C" void __CARDMountCallback();
+extern "C" static void CARDMountAsync();
+extern "C" void CARDMount();
+extern "C" static void DoUnmount();
+extern "C" void CARDUnmount();
+
+extern "C" static void IsCard();
+extern "C" void CARDProbe();
+extern "C" void CARDProbeEx();
+extern "C" static void DoMount();
+extern "C" void __CARDMountCallback();
+extern "C" static void CARDMountAsync();
+extern "C" void CARDMount();
+extern "C" static void DoUnmount();
+extern "C" void CARDUnmount();
 SECTION_DATA extern u8 SectorSizeTable[32];
 SECTION_DATA extern u8 LatencyTable[32];
 
@@ -25,37 +35,69 @@ SECTION_DATA extern u8 LatencyTable[32];
 // External References:
 // 
 
-extern "C" extern void OSCancelAlarm();
-extern "C" extern void DCInvalidateRange();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void __OSLockSramEx();
-extern "C" extern void __OSUnlockSramEx();
-extern "C" extern void EXISetExiCallback();
-extern "C" extern void EXIProbe();
-extern "C" extern void EXIProbeEx();
-extern "C" extern void EXIAttach();
-extern "C" extern void EXIDetach();
-extern "C" extern void EXILock();
-extern "C" extern void EXIUnlock();
-extern "C" extern void EXIGetState();
-extern "C" extern void EXIGetID();
-extern "C" extern void __CARDDefaultApiCallback();
-extern "C" extern void __CARDSyncCallback();
-extern "C" extern void __CARDExtHandler();
-extern "C" extern void __CARDExiHandler();
-extern "C" extern void __CARDUnlockedHandler();
-extern "C" extern void __CARDEnableInterrupt();
-extern "C" extern void __CARDReadStatus();
-extern "C" extern void __CARDReadVendorID();
-extern "C" extern void __CARDClearStatus();
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
-extern "C" extern void __CARDSync();
-extern "C" extern void CARDGetFastMode();
-extern "C" extern void __CARDUnlock();
-extern "C" extern void __CARDRead();
-extern "C" extern void __CARDVerify();
+extern "C" void OSCancelAlarm();
+extern "C" void DCInvalidateRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+extern "C" void EXISetExiCallback();
+extern "C" void EXIProbe();
+extern "C" void EXIProbeEx();
+extern "C" void EXIAttach();
+extern "C" void EXIDetach();
+extern "C" void EXILock();
+extern "C" void EXIUnlock();
+extern "C" void EXIGetState();
+extern "C" void EXIGetID();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDExtHandler();
+extern "C" void __CARDExiHandler();
+extern "C" void __CARDUnlockedHandler();
+extern "C" void __CARDEnableInterrupt();
+extern "C" void __CARDReadStatus();
+extern "C" void __CARDReadVendorID();
+extern "C" void __CARDClearStatus();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void CARDGetFastMode();
+extern "C" void __CARDUnlock();
+extern "C" void __CARDRead();
+extern "C" void __CARDVerify();
+
+extern "C" void OSCancelAlarm();
+extern "C" void DCInvalidateRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+extern "C" void EXISetExiCallback();
+extern "C" void EXIProbe();
+extern "C" void EXIProbeEx();
+extern "C" void EXIAttach();
+extern "C" void EXIDetach();
+extern "C" void EXILock();
+extern "C" void EXIUnlock();
+extern "C" void EXIGetState();
+extern "C" void EXIGetID();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDExtHandler();
+extern "C" void __CARDExiHandler();
+extern "C" void __CARDUnlockedHandler();
+extern "C" void __CARDEnableInterrupt();
+extern "C" void __CARDReadStatus();
+extern "C" void __CARDReadVendorID();
+extern "C" void __CARDClearStatus();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void CARDGetFastMode();
+extern "C" void __CARDUnlock();
+extern "C" void __CARDRead();
+extern "C" void __CARDVerify();
 SECTION_BSS extern u8 __CARDBlock[544];
 SECTION_SDATA extern u8 struct_80450A70[8];
 
@@ -64,39 +106,39 @@ SECTION_SDATA extern u8 struct_80450A70[8];
 // 
 
 /* ############################################################################################## */
-/* 803D2000-803D2020 0020+00 .data      SectorSizeTable                                              */
+/* 803D2000-803D2020 0020+00 rc=3 efc=0 .data      SectorSizeTable                                              */
 u8 SectorSizeTable[32] = {
 	0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80356948-80356A14 00CC+00 .text      IsCard                                                       */
+/* 80356948-80356A14 00CC+00 rc=2 efc=0 .text      IsCard                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(IsCard) {
+extern "C" asm static void IsCard() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/IsCard.s"
 }
 #pragma pop
 
 
-/* 80356A14-80356A4C 0038+00 .text      CARDProbe                                                    */
+/* 80356A14-80356A4C 0038+00 rc=1 efc=1 .text      CARDProbe                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDProbe) {
+extern "C" asm void CARDProbe() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDProbe.s"
 }
 #pragma pop
 
 
-/* 80356A4C-80356BC8 017C+00 .text      CARDProbeEx                                                  */
+/* 80356A4C-80356BC8 017C+00 rc=1 efc=1 .text      CARDProbeEx                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDProbeEx) {
+extern "C" asm void CARDProbeEx() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDProbeEx.s"
 }
@@ -104,76 +146,75 @@ ASM_FUNCTION(CARDProbeEx) {
 
 
 /* ############################################################################################## */
-/* 803D2020-803D2040 0020+00 .data      LatencyTable                                                 */
+/* 803D2020-803D2040 0020+00 rc=1 efc=0 .data      LatencyTable                                                 */
 u8 LatencyTable[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00,
 };
 
-/* 80356BC8-8035701C 0454+00 .text      DoMount                                                      */
+/* 80356BC8-8035701C 0454+00 rc=2 efc=0 .text      DoMount                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DoMount) {
+extern "C" asm static void DoMount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/DoMount.s"
 }
 #pragma pop
 
 
-/* 8035701C-80357154 0138+00 .text      __CARDMountCallback                                          */
+/* 8035701C-80357154 0138+00 rc=3 efc=1 .text      __CARDMountCallback                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__CARDMountCallback) {
+extern "C" asm void __CARDMountCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/__CARDMountCallback.s"
 }
 #pragma pop
 
 
-/* 80357154-803572F4 01A0+00 .text      CARDMountAsync                                               */
+/* 80357154-803572F4 01A0+00 rc=1 efc=0 .text      CARDMountAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDMountAsync) {
+extern "C" asm static void CARDMountAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDMountAsync.s"
 }
 #pragma pop
 
 
-/* 803572F4-8035733C 0048+00 .text      CARDMount                                                    */
+/* 803572F4-8035733C 0048+00 rc=1 efc=1 .text      CARDMount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDMount) {
+extern "C" asm void CARDMount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDMount.s"
 }
 #pragma pop
 
 
-/* 8035733C-803573D8 009C+00 .text      DoUnmount                                                    */
+/* 8035733C-803573D8 009C+00 rc=2 efc=0 .text      DoUnmount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DoUnmount) {
+extern "C" asm static void DoUnmount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/DoUnmount.s"
 }
 #pragma pop
 
 
-/* 803573D8-80357484 00AC+00 .text      CARDUnmount                                                  */
+/* 803573D8-80357484 00AC+00 rc=2 efc=2 .text      CARDUnmount                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDUnmount) {
+extern "C" asm void CARDUnmount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDUnmount.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

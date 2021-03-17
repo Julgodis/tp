@@ -6,16 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin dBgS_SplGrpChk) */
+// outer dependency: cXyz
+/* top-level dependencies (end dBgS_SplGrpChk) */
+struct dBgS_SplGrpChk {
+	// cXyz
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078BB0 */ dBgS_SplGrpChk();
+	/* 80078C78 */ ~dBgS_SplGrpChk();
+	/* 80078D0C */ void Init();
+};
+
+// build cXyz (cXyz) True/True
+// build dBgS_Chk (dBgS_Chk) False/False
+/* top-level dependencies (begin dBgS_Chk) */
+/* top-level dependencies (end dBgS_Chk) */
+struct dBgS_Chk {
+	/* 8007749C */ dBgS_Chk();
+	/* 800774E8 */ ~dBgS_Chk();
+	/* 80077560 */ void GetPolyPassChkInfo();
+	/* 80077564 */ void GetGrpPassChkInfo();
+};
+
+// build cBgS_Chk (cBgS_Chk) False/False
+/* top-level dependencies (begin cBgS_Chk) */
+/* top-level dependencies (end cBgS_Chk) */
+struct cBgS_Chk {
+	/* 80267B4C */ cBgS_Chk();
+	/* 80267B70 */ ~cBgS_Chk();
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Set__14dBgS_SplGrpChkFR4cXyzf();
-extern "C" extern void __ct__14dBgS_SplGrpChkFv();
-extern "C" extern void __dt__14dBgS_SplGrpChkFv();
-extern "C" extern void Init__14dBgS_SplGrpChkFv();
-extern "C" extern void func_80078D4C();
-extern "C" extern void func_80078D54();
-extern "C" extern void func_80078D5C();
+extern "C" static void func_80078D4C();
+extern "C" static void func_80078D54();
+extern "C" static void func_80078D5C();
+
+extern "C" void Set__14dBgS_SplGrpChkFR4cXyzf();
+extern "C" void __ct__14dBgS_SplGrpChkFv();
+extern "C" void __dt__14dBgS_SplGrpChkFv();
+extern "C" void Init__14dBgS_SplGrpChkFv();
+extern "C" static void func_80078D4C();
+extern "C" static void func_80078D54();
+extern "C" static void func_80078D5C();
 SECTION_DATA extern void*const __vt__14dBgS_SplGrpChk[12];
 SECTION_SDATA2 extern u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4];
 SECTION_SDATA2 extern f32 d_bg_d_bg_s_spl_grp_chk__lit_320;
@@ -24,26 +78,28 @@ SECTION_SDATA2 extern f32 d_bg_d_bg_s_spl_grp_chk__lit_320;
 // External References:
 // 
 
-extern "C" extern void __ct__8dBgS_ChkFv();
-extern "C" extern void __dt__8dBgS_ChkFv();
-extern "C" extern void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" extern void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" extern void __ct__8cBgS_ChkFv();
-extern "C" extern void __dt__8cBgS_ChkFv();
-extern "C" extern void __ct__13cBgS_PolyInfoFv();
-extern "C" extern void __dt__13cBgS_PolyInfoFv();
-extern "C" extern void ClearPi__13cBgS_PolyInfoFv();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
-/* 80078B90-80078BB0 0020+00 .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
+/* 80078B90-80078BB0 0020+00 rc=2 efc=2 .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__14dBgS_SplGrpChkFR4cXyzf) {
+asm void dBgS_SplGrpChk::Set(cXyz& field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/Set__14dBgS_SplGrpChkFR4cXyzf.s"
 }
@@ -51,7 +107,7 @@ ASM_FUNCTION(Set__14dBgS_SplGrpChkFR4cXyzf) {
 
 
 /* ############################################################################################## */
-/* 803ABA08-803ABA38 0030+00 .data      __vt__14dBgS_SplGrpChk                                       */
+/* 803ABA08-803ABA38 0030+00 rc=2 efc=0 .data      __vt__14dBgS_SplGrpChk                                       */
 void* const __vt__14dBgS_SplGrpChk[12] = {
 	NULL, /* RTTI */
 	NULL,
@@ -67,78 +123,77 @@ void* const __vt__14dBgS_SplGrpChk[12] = {
 	(void*)func_80078D54,
 };
 
-/* 804526E8-804526EC 0004+00 .sdata2    @319                                                         */
+/* 804526E8-804526EC 0004+00 rc=1 efc=0 .sdata2    @319                                                         */
 u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804526EC-804526F0 0004+00 .sdata2    @320                                                         */
+/* 804526EC-804526F0 0004+00 rc=1 efc=0 .sdata2    @320                                                         */
 f32 d_bg_d_bg_s_spl_grp_chk__lit_320 = 1000000000.0f;
 
-/* 80078BB0-80078C78 00C8+00 .text      __ct__14dBgS_SplGrpChkFv                                     */
+/* 80078BB0-80078C78 00C8+00 rc=1 efc=1 .text      __ct__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dBgS_SplGrpChkFv) {
+asm dBgS_SplGrpChk::dBgS_SplGrpChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/__ct__14dBgS_SplGrpChkFv.s"
 }
 #pragma pop
 
 
-/* 80078C78-80078D0C 0094+00 .text      __dt__14dBgS_SplGrpChkFv                                     */
+/* 80078C78-80078D0C 0094+00 rc=6 efc=2 .text      __dt__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_SplGrpChkFv) {
+asm dBgS_SplGrpChk::~dBgS_SplGrpChk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/__dt__14dBgS_SplGrpChkFv.s"
 }
 #pragma pop
 
 
-/* 80078D0C-80078D4C 0040+00 .text      Init__14dBgS_SplGrpChkFv                                     */
+/* 80078D0C-80078D4C 0040+00 rc=1 efc=1 .text      Init__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Init__14dBgS_SplGrpChkFv) {
+asm void dBgS_SplGrpChk::Init() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/Init__14dBgS_SplGrpChkFv.s"
 }
 #pragma pop
 
 
-/* 80078D4C-80078D54 0008+00 .text      @16@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D4C-80078D54 0008+00 rc=1 efc=0 .text      @16@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80078D4C) {
+extern "C" asm static void func_80078D4C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D4C.s"
 }
 #pragma pop
 
 
-/* 80078D54-80078D5C 0008+00 .text      @52@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D54-80078D5C 0008+00 rc=1 efc=0 .text      @52@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80078D54) {
+extern "C" asm static void func_80078D54() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D54.s"
 }
 #pragma pop
 
 
-/* 80078D5C-80078D64 0008+00 .text      @36@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D5C-80078D64 0008+00 rc=1 efc=0 .text      @36@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80078D5C) {
+extern "C" asm static void func_80078D5C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D5C.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

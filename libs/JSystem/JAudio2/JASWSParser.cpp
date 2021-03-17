@@ -6,42 +6,137 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASWSParser (JASWSParser) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
+};
+
+/* top-level dependencies (begin JASWSParser) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JASWSParser) */
+struct JASWSParser {
+	// JKRHeap
+	/* 80298FB0 */ void getGroupCount(void const*);
+	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
+	/* 80299034 */ void createBasicWaveBank(void const*, JKRHeap*);
+	/* 80299264 */ void createSimpleWaveBank(void const*, JKRHeap*);
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build JASBasicWaveBank (JASBasicWaveBank) False/False
+// build JASBasicWaveBank (JASBasicWaveBank) True/False
+struct JASBasicWaveBank;
+// build JKRHeap (JKRHeap) True/True
+// build JASWaveInfo (JASWaveInfo) False/False
+/* top-level dependencies (begin JASWaveInfo) */
+/* top-level dependencies (end JASWaveInfo) */
+struct JASWaveInfo {
+};
+
+/* top-level dependencies (begin JASBasicWaveBank) */
+// outer dependency: JASBasicWaveBank::TWaveGroup
+// outer dependency: JKRHeap
+// outer dependency: JASWaveInfo
+/* top-level dependencies (end JASBasicWaveBank) */
+struct JASBasicWaveBank {
+	// JASBasicWaveBank::TWaveGroup
+	// JKRHeap
+	// JASWaveInfo
+	// build TWaveGroup (JASBasicWaveBank::TWaveGroup) False/False
+	/* dependencies (begin JASBasicWaveBank::TWaveGroup) */
+	/* dependencies (end JASBasicWaveBank::TWaveGroup) */
+	struct TWaveGroup {
+		// JKRHeap
+		/* 80298A84 */ void setWaveCount(u32, JKRHeap*);
+	};
+
+	/* 802984F8 */ JASBasicWaveBank();
+	/* 80298640 */ void getWaveGroup(u32);
+	/* 80298664 */ void setGroupCount(u32, JKRHeap*);
+	/* 80298710 */ void setWaveTableSize(u32, JKRHeap*);
+	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, s32, u16, JASWaveInfo const&);
+};
+
+// build JASWaveInfo (JASWaveInfo) True/True
+// build JASSimpleWaveBank (JASSimpleWaveBank) False/False
+// build JKRHeap (JKRHeap) True/True
+// build JASWaveInfo (JASWaveInfo) True/True
+/* top-level dependencies (begin JASSimpleWaveBank) */
+// outer dependency: JKRHeap
+// outer dependency: JASWaveInfo
+/* top-level dependencies (end JASSimpleWaveBank) */
+struct JASSimpleWaveBank {
+	// JKRHeap
+	// JASWaveInfo
+	/* 80298C94 */ JASSimpleWaveBank();
+	/* 80298DE0 */ void setWaveTableSize(u32, JKRHeap*);
+	/* 80298E84 */ void setWaveInfo(u32, JASWaveInfo const&);
+};
+
+// build JASWaveArc (JASWaveArc) False/False
+/* top-level dependencies (begin JASWaveArc) */
+/* top-level dependencies (end JASWaveArc) */
+struct JASWaveArc {
+	/* 8029A70C */ void setFileName(char const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getGroupCount__11JASWSParserFPCv();
-extern "C" extern void createWaveBank__11JASWSParserFPCvP7JKRHeap();
-extern "C" extern void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap();
-extern "C" extern void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap();
-extern "C" extern void func_80299490();
-extern "C" extern void func_802994A8();
-extern "C" extern void func_802994C0();
-extern "C" extern void func_802994D8();
-extern "C" extern void func_802994F0();
-extern "C" extern void func_80299508();
-extern "C" extern void func_80299520();
+extern "C" static void func_80299490();
+extern "C" static void func_802994A8();
+extern "C" static void func_802994C0();
+extern "C" static void func_802994D8();
+extern "C" static void func_802994F0();
+extern "C" static void func_80299508();
+extern "C" static void func_80299520();
+
+extern "C" void getGroupCount__11JASWSParserFPCv();
+extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" static void func_80299490();
+extern "C" static void func_802994A8();
+extern "C" static void func_802994C0();
+extern "C" static void func_802994D8();
+extern "C" static void func_802994F0();
+extern "C" static void func_80299508();
+extern "C" static void func_80299520();
 SECTION_SBSS extern u8 sUsedHeapSize__11JASWSParser[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__16JASBasicWaveBankFv();
-extern "C" extern void getWaveGroup__16JASBasicWaveBankFUl();
-extern "C" extern void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap();
-extern "C" extern void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap();
-extern "C" extern void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo();
-extern "C" extern void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap();
-extern "C" extern void __ct__17JASSimpleWaveBankFv();
-extern "C" extern void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
-extern "C" extern void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
-extern "C" extern void setFileName__10JASWaveArcFPCc();
-extern "C" extern void getFreeSize__7JKRHeapFv();
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_23();
+void* operator new(u32, JKRHeap*, s32);
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
+
+extern "C" void __ct__16JASBasicWaveBankFv();
+extern "C" void getWaveGroup__16JASBasicWaveBankFUl();
+extern "C" void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo();
+extern "C" void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap();
+extern "C" void __ct__17JASSimpleWaveBankFv();
+extern "C" void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
+extern "C" void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
+extern "C" void setFileName__10JASWaveArcFPCc();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
 SECTION_SDATA extern u32 one__11JASWaveInfo;
 SECTION_SBSS extern u8 JASDram[4];
 
@@ -49,22 +144,22 @@ SECTION_SBSS extern u8 JASDram[4];
 // Declarations:
 // 
 
-/* 80298FB0-80298FD8 0028+00 .text      getGroupCount__11JASWSParserFPCv                             */
+/* 80298FB0-80298FD8 0028+00 rc=1 efc=0 .text      getGroupCount__11JASWSParserFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGroupCount__11JASWSParserFPCv) {
+asm void JASWSParser::getGroupCount(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/getGroupCount__11JASWSParserFPCv.s"
 }
 #pragma pop
 
 
-/* 80298FD8-80299034 005C+00 .text      createWaveBank__11JASWSParserFPCvP7JKRHeap                   */
+/* 80298FD8-80299034 005C+00 rc=1 efc=1 .text      createWaveBank__11JASWSParserFPCvP7JKRHeap                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createWaveBank__11JASWSParserFPCvP7JKRHeap) {
+asm void JASWSParser::createWaveBank(void const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/createWaveBank__11JASWSParserFPCvP7JKRHeap.s"
 }
@@ -72,106 +167,105 @@ ASM_FUNCTION(createWaveBank__11JASWSParserFPCvP7JKRHeap) {
 
 
 /* ############################################################################################## */
-/* 80451280-80451288 0004+04 .sbss      sUsedHeapSize__11JASWSParser                                 */
+/* 80451280-80451288 0004+04 rc=2 efc=0 .sbss      sUsedHeapSize__11JASWSParser                                 */
 u8 sUsedHeapSize__11JASWSParser[4 + 4 /* padding */];
 
-/* 80299034-80299264 0230+00 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap              */
+/* 80299034-80299264 0230+00 rc=1 efc=0 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createBasicWaveBank__11JASWSParserFPCvP7JKRHeap) {
+asm void JASWSParser::createBasicWaveBank(void const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/createBasicWaveBank__11JASWSParserFPCvP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 80299264-80299490 022C+00 .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap             */
+/* 80299264-80299490 022C+00 rc=1 efc=0 .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap) {
+asm void JASWSParser::createSimpleWaveBank(void const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 80299490-802994A8 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl     */
+/* 80299490-802994A8 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80299490) {
+extern "C" asm static void func_80299490() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_80299490.s"
 }
 #pragma pop
 
 
-/* 802994A8-802994C0 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl         */
+/* 802994A8-802994C0 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802994A8) {
+extern "C" asm static void func_802994A8() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_802994A8.s"
 }
 #pragma pop
 
 
-/* 802994C0-802994D8 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl */
+/* 802994C0-802994D8 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802994C0) {
+extern "C" asm static void func_802994C0() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_802994C0.s"
 }
 #pragma pop
 
 
-/* 802994D8-802994F0 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl */
+/* 802994D8-802994F0 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802994D8) {
+extern "C" asm static void func_802994D8() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_802994D8.s"
 }
 #pragma pop
 
 
-/* 802994F0-80299508 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl         */
+/* 802994F0-80299508 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802994F0) {
+extern "C" asm static void func_802994F0() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_802994F0.s"
 }
 #pragma pop
 
 
-/* 80299508-80299520 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl   */
+/* 80299508-80299520 0018+00 rc=2 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80299508) {
+extern "C" asm static void func_80299508() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_80299508.s"
 }
 #pragma pop
 
 
-/* 80299520-80299538 0018+00 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl   */
+/* 80299520-80299538 0018+00 rc=3 efc=0 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80299520) {
+extern "C" asm static void func_80299520() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASWSParser/func_80299520.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

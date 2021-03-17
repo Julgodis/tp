@@ -6,20 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTag_ShopCamera_c {
+	void create();
+	bool Delete();
+	bool Execute();
+	bool Draw();
+	void initialize();
+	~daTag_ShopCamera_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__18daTag_ShopCamera_cFv();
-extern "C" extern void Delete__18daTag_ShopCamera_cFv();
-extern "C" extern void Execute__18daTag_ShopCamera_cFv();
-extern "C" extern void Draw__18daTag_ShopCamera_cFv();
-extern "C" extern void initialize__18daTag_ShopCamera_cFv();
-extern "C" extern void daTag_ShopCamera_Create__FPv();
-extern "C" extern void daTag_ShopCamera_Delete__FPv();
-extern "C" extern void daTag_ShopCamera_Execute__FPv();
-extern "C" extern void daTag_ShopCamera_Draw__FPv();
-extern "C" extern void daTag_ShopCamera_IsDelete__FPv();
-extern "C" extern void __dt__18daTag_ShopCamera_cFv();
+void daTag_ShopCamera_Create(void*);
+void daTag_ShopCamera_Delete(void*);
+void daTag_ShopCamera_Execute(void*);
+void daTag_ShopCamera_Draw(void*);
+bool daTag_ShopCamera_IsDelete(void*);
+
+extern "C" void create__18daTag_ShopCamera_cFv();
+extern "C" bool Delete__18daTag_ShopCamera_cFv();
+extern "C" bool Execute__18daTag_ShopCamera_cFv();
+extern "C" bool Draw__18daTag_ShopCamera_cFv();
+extern "C" void initialize__18daTag_ShopCamera_cFv();
+extern "C" void daTag_ShopCamera_Create__FPv();
+extern "C" void daTag_ShopCamera_Delete__FPv();
+extern "C" void daTag_ShopCamera_Execute__FPv();
+extern "C" void daTag_ShopCamera_Draw__FPv();
+extern "C" bool daTag_ShopCamera_IsDelete__FPv();
+extern "C" void __dt__18daTag_ShopCamera_cFv();
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_RODATA extern const u32 lit_3664;
 SECTION_RODATA extern const u32 lit_3665;
@@ -32,7 +51,9 @@ SECTION_DATA extern void*const __vt__18daTag_ShopCamera_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +63,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__18daTag_ShopCamera_cFv) {
+asm void daTag_ShopCamera_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/create__18daTag_ShopCamera_cFv.s"
 }
@@ -50,43 +71,28 @@ ASM_FUNCTION(create__18daTag_ShopCamera_cFv) {
 
 
 /* 80D608FC-80D60904 0008+00 .text      Delete__18daTag_ShopCamera_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__18daTag_ShopCamera_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Delete__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D60904-80D6090C 0008+00 .text      Execute__18daTag_ShopCamera_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Execute__18daTag_ShopCamera_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Execute__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6090C-80D60914 0008+00 .text      Draw__18daTag_ShopCamera_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__18daTag_ShopCamera_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Draw__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D60914-80D60990 007C+00 .text      initialize__18daTag_ShopCamera_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__18daTag_ShopCamera_cFv) {
+asm void daTag_ShopCamera_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/initialize__18daTag_ShopCamera_cFv.s"
 }
@@ -97,7 +103,7 @@ ASM_FUNCTION(initialize__18daTag_ShopCamera_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopCamera_Create__FPv) {
+asm void daTag_ShopCamera_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_Create__FPv.s"
 }
@@ -108,7 +114,7 @@ ASM_FUNCTION(daTag_ShopCamera_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopCamera_Delete__FPv) {
+asm void daTag_ShopCamera_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_Delete__FPv.s"
 }
@@ -119,7 +125,7 @@ ASM_FUNCTION(daTag_ShopCamera_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopCamera_Execute__FPv) {
+asm void daTag_ShopCamera_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_Execute__FPv.s"
 }
@@ -130,7 +136,7 @@ ASM_FUNCTION(daTag_ShopCamera_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopCamera_Draw__FPv) {
+asm void daTag_ShopCamera_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_Draw__FPv.s"
 }
@@ -138,21 +144,16 @@ ASM_FUNCTION(daTag_ShopCamera_Draw__FPv) {
 
 
 /* 80D60A10-80D60A18 0008+00 .text      daTag_ShopCamera_IsDelete__FPv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTag_ShopCamera_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_IsDelete__FPv.s"
+bool daTag_ShopCamera_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D60A18-80D60A78 0060+00 .text      __dt__18daTag_ShopCamera_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daTag_ShopCamera_cFv) {
+asm daTag_ShopCamera_c::~daTag_ShopCamera_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/__dt__18daTag_ShopCamera_cFv.s"
 }

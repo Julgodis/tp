@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_BSS extern u8 data_80D2BA88[4];
 
 // 
@@ -16,10 +17,12 @@ SECTION_BSS extern u8 data_80D2BA88[4];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
+/* ############################################################################################## */
 /* 80D2BA88-80D2BA8C 0004+00 .bss       None                                                         */
 u8 data_80D2BA88[4];
 

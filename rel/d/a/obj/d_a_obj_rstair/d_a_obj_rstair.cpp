@@ -6,36 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjRotStair_c;
+
+struct daObjRotStair_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void move_proc_call();
+	void init_modeWait();
+	void modeWait();
+	void init_modeRotate();
+	void modeRotate();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void checkChangeSw();
+	void offSwitch(s32);
+	void onWaterModel();
+	void offWaterModel();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__15daObjRotStair_cFv();
-extern "C" extern void setBaseMtx__15daObjRotStair_cFv();
-extern "C" extern void Create__15daObjRotStair_cFv();
-extern "C" extern void CreateHeap__15daObjRotStair_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__15daObjRotStair_cFv();
-extern "C" extern void Execute__15daObjRotStair_cFPPA3_A4_f();
-extern "C" extern void move_proc_call__15daObjRotStair_cFv();
-extern "C" extern void init_modeWait__15daObjRotStair_cFv();
-extern "C" extern void modeWait__15daObjRotStair_cFv();
-extern "C" extern void init_modeRotate__15daObjRotStair_cFv();
-extern "C" extern void modeRotate__15daObjRotStair_cFv();
-extern "C" extern void event_proc_call__15daObjRotStair_cFv();
-extern "C" extern void actionWait__15daObjRotStair_cFv();
-extern "C" extern void actionOrderEvent__15daObjRotStair_cFv();
-extern "C" extern void actionEvent__15daObjRotStair_cFv();
-extern "C" extern void actionDead__15daObjRotStair_cFv();
-extern "C" extern void checkChangeSw__15daObjRotStair_cFv();
-extern "C" extern void offSwitch__15daObjRotStair_cFi();
-extern "C" extern void onWaterModel__15daObjRotStair_cFv();
-extern "C" extern void offWaterModel__15daObjRotStair_cFv();
-extern "C" extern void Draw__15daObjRotStair_cFv();
-extern "C" extern void Delete__15daObjRotStair_cFv();
-extern "C" extern void daObjRotStair_create1st__FP15daObjRotStair_c();
-extern "C" extern void daObjRotStair_MoveBGDelete__FP15daObjRotStair_c();
-extern "C" extern void daObjRotStair_MoveBGExecute__FP15daObjRotStair_c();
-extern "C" extern void daObjRotStair_MoveBGDraw__FP15daObjRotStair_c();
+extern "C" void Execute__15daObjRotStair_cFPPA3_A4_f();
+void daObjRotStair_create1st(daObjRotStair_c*);
+void daObjRotStair_MoveBGDelete(daObjRotStair_c*);
+void daObjRotStair_MoveBGExecute(daObjRotStair_c*);
+void daObjRotStair_MoveBGDraw(daObjRotStair_c*);
+
+extern "C" void initBaseMtx__15daObjRotStair_cFv();
+extern "C" void setBaseMtx__15daObjRotStair_cFv();
+extern "C" void Create__15daObjRotStair_cFv();
+extern "C" void CreateHeap__15daObjRotStair_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__15daObjRotStair_cFv();
+extern "C" void Execute__15daObjRotStair_cFPPA3_A4_f();
+extern "C" void move_proc_call__15daObjRotStair_cFv();
+extern "C" void init_modeWait__15daObjRotStair_cFv();
+extern "C" void modeWait__15daObjRotStair_cFv();
+extern "C" void init_modeRotate__15daObjRotStair_cFv();
+extern "C" void modeRotate__15daObjRotStair_cFv();
+extern "C" void event_proc_call__15daObjRotStair_cFv();
+extern "C" void actionWait__15daObjRotStair_cFv();
+extern "C" void actionOrderEvent__15daObjRotStair_cFv();
+extern "C" void actionEvent__15daObjRotStair_cFv();
+extern "C" void actionDead__15daObjRotStair_cFv();
+extern "C" void checkChangeSw__15daObjRotStair_cFv();
+extern "C" void offSwitch__15daObjRotStair_cFi();
+extern "C" void onWaterModel__15daObjRotStair_cFv();
+extern "C" void offWaterModel__15daObjRotStair_cFv();
+extern "C" void Draw__15daObjRotStair_cFv();
+extern "C" void Delete__15daObjRotStair_cFv();
+extern "C" void daObjRotStair_create1st__FP15daObjRotStair_c();
+extern "C" void daObjRotStair_MoveBGDelete__FP15daObjRotStair_c();
+extern "C" void daObjRotStair_MoveBGExecute__FP15daObjRotStair_c();
+extern "C" void daObjRotStair_MoveBGDraw__FP15daObjRotStair_c();
 SECTION_RODATA extern const u8 l_wtr_bmd[8];
 SECTION_RODATA extern const u8 l_wtr_btk[8];
 SECTION_RODATA extern const u8 l_target_angleY[16];
@@ -66,7 +106,9 @@ SECTION_DATA extern void*const __vt__15daObjRotStair_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -76,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/initBaseMtx__15daObjRotStair_cFv.s"
 }
@@ -87,7 +129,7 @@ ASM_FUNCTION(initBaseMtx__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/setBaseMtx__15daObjRotStair_cFv.s"
 }
@@ -98,7 +140,7 @@ ASM_FUNCTION(setBaseMtx__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/Create__15daObjRotStair_cFv.s"
 }
@@ -109,7 +151,7 @@ ASM_FUNCTION(Create__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/CreateHeap__15daObjRotStair_cFv.s"
 }
@@ -120,7 +162,7 @@ ASM_FUNCTION(CreateHeap__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/__dt__12J3DFrameCtrlFv.s"
 }
@@ -131,7 +173,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/create1st__15daObjRotStair_cFv.s"
 }
@@ -142,7 +184,7 @@ ASM_FUNCTION(create1st__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjRotStair_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjRotStair_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/Execute__15daObjRotStair_cFPPA3_A4_f.s"
 }
@@ -153,7 +195,7 @@ ASM_FUNCTION(Execute__15daObjRotStair_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move_proc_call__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::move_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/move_proc_call__15daObjRotStair_cFv.s"
 }
@@ -164,7 +206,7 @@ ASM_FUNCTION(move_proc_call__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/init_modeWait__15daObjRotStair_cFv.s"
 }
@@ -175,7 +217,7 @@ ASM_FUNCTION(init_modeWait__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/modeWait__15daObjRotStair_cFv.s"
 }
@@ -186,7 +228,7 @@ ASM_FUNCTION(modeWait__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeRotate__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::init_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/init_modeRotate__15daObjRotStair_cFv.s"
 }
@@ -197,7 +239,7 @@ ASM_FUNCTION(init_modeRotate__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeRotate__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/modeRotate__15daObjRotStair_cFv.s"
 }
@@ -208,7 +250,7 @@ ASM_FUNCTION(modeRotate__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/event_proc_call__15daObjRotStair_cFv.s"
 }
@@ -219,7 +261,7 @@ ASM_FUNCTION(event_proc_call__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/actionWait__15daObjRotStair_cFv.s"
 }
@@ -230,7 +272,7 @@ ASM_FUNCTION(actionWait__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/actionOrderEvent__15daObjRotStair_cFv.s"
 }
@@ -241,7 +283,7 @@ ASM_FUNCTION(actionOrderEvent__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/actionEvent__15daObjRotStair_cFv.s"
 }
@@ -249,21 +291,16 @@ ASM_FUNCTION(actionEvent__15daObjRotStair_cFv) {
 
 
 /* 80CC221C-80CC2220 0004+00 .text      actionDead__15daObjRotStair_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__15daObjRotStair_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/actionDead__15daObjRotStair_cFv.s"
+void daObjRotStair_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC2220-80CC22A0 0080+00 .text      checkChangeSw__15daObjRotStair_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeSw__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::checkChangeSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/checkChangeSw__15daObjRotStair_cFv.s"
 }
@@ -274,7 +311,7 @@ ASM_FUNCTION(checkChangeSw__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offSwitch__15daObjRotStair_cFi) {
+asm void daObjRotStair_c::offSwitch(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/offSwitch__15daObjRotStair_cFi.s"
 }
@@ -285,7 +322,7 @@ ASM_FUNCTION(offSwitch__15daObjRotStair_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onWaterModel__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::onWaterModel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/onWaterModel__15daObjRotStair_cFv.s"
 }
@@ -296,7 +333,7 @@ ASM_FUNCTION(onWaterModel__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offWaterModel__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::offWaterModel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/offWaterModel__15daObjRotStair_cFv.s"
 }
@@ -307,7 +344,7 @@ ASM_FUNCTION(offWaterModel__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/Draw__15daObjRotStair_cFv.s"
 }
@@ -318,7 +355,7 @@ ASM_FUNCTION(Draw__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjRotStair_cFv) {
+asm void daObjRotStair_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/Delete__15daObjRotStair_cFv.s"
 }
@@ -329,7 +366,7 @@ ASM_FUNCTION(Delete__15daObjRotStair_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRotStair_create1st__FP15daObjRotStair_c) {
+asm void daObjRotStair_create1st(daObjRotStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_create1st__FP15daObjRotStair_c.s"
 }
@@ -340,7 +377,7 @@ ASM_FUNCTION(daObjRotStair_create1st__FP15daObjRotStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRotStair_MoveBGDelete__FP15daObjRotStair_c) {
+asm void daObjRotStair_MoveBGDelete(daObjRotStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGDelete__FP15daObjRotStair_c.s"
 }
@@ -351,7 +388,7 @@ ASM_FUNCTION(daObjRotStair_MoveBGDelete__FP15daObjRotStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRotStair_MoveBGExecute__FP15daObjRotStair_c) {
+asm void daObjRotStair_MoveBGExecute(daObjRotStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGExecute__FP15daObjRotStair_c.s"
 }
@@ -362,7 +399,7 @@ ASM_FUNCTION(daObjRotStair_MoveBGExecute__FP15daObjRotStair_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjRotStair_MoveBGDraw__FP15daObjRotStair_c) {
+asm void daObjRotStair_MoveBGDraw(daObjRotStair_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGDraw__FP15daObjRotStair_c.s"
 }

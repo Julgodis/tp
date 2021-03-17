@@ -6,16 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMmsg_c;
+
+struct daTagMmsg_c {
+	void create();
+	~daTagMmsg_c();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__11daTagMmsg_cFv();
-extern "C" extern void daTagMmsg_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__11daTagMmsg_cFv();
-extern "C" extern void daTagMmsg_Delete__FP11daTagMmsg_c();
-extern "C" extern void execute__11daTagMmsg_cFv();
-extern "C" extern void daTagMmsg_Execute__FP11daTagMmsg_c();
-extern "C" extern void daTagMmsg_Draw__FP11daTagMmsg_c();
+void daTagMmsg_Create(fopAc_ac_c*);
+void daTagMmsg_Delete(daTagMmsg_c*);
+void daTagMmsg_Execute(daTagMmsg_c*);
+bool daTagMmsg_Draw(daTagMmsg_c*);
+
+extern "C" void create__11daTagMmsg_cFv();
+extern "C" void daTagMmsg_Create__FP10fopAc_ac_c();
+extern "C" void __dt__11daTagMmsg_cFv();
+extern "C" void daTagMmsg_Delete__FP11daTagMmsg_c();
+extern "C" void execute__11daTagMmsg_cFv();
+extern "C" void daTagMmsg_Execute__FP11daTagMmsg_c();
+extern "C" bool daTagMmsg_Draw__FP11daTagMmsg_c();
 SECTION_RODATA extern const u32 lit_3702;
 SECTION_RODATA extern const u32 lit_3703;
 SECTION_RODATA extern const u32 lit_3704;
@@ -26,7 +47,9 @@ SECTION_DATA extern u8 g_profile_Tag_Mmsg[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -36,7 +59,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTagMmsg_cFv) {
+asm void daTagMmsg_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/create__11daTagMmsg_cFv.s"
 }
@@ -47,7 +70,7 @@ ASM_FUNCTION(create__11daTagMmsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMmsg_Create__FP10fopAc_ac_c) {
+asm void daTagMmsg_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/daTagMmsg_Create__FP10fopAc_ac_c.s"
 }
@@ -58,7 +81,7 @@ ASM_FUNCTION(daTagMmsg_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daTagMmsg_cFv) {
+asm daTagMmsg_c::~daTagMmsg_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/__dt__11daTagMmsg_cFv.s"
 }
@@ -69,7 +92,7 @@ ASM_FUNCTION(__dt__11daTagMmsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMmsg_Delete__FP11daTagMmsg_c) {
+asm void daTagMmsg_Delete(daTagMmsg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/daTagMmsg_Delete__FP11daTagMmsg_c.s"
 }
@@ -80,7 +103,7 @@ ASM_FUNCTION(daTagMmsg_Delete__FP11daTagMmsg_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daTagMmsg_cFv) {
+asm void daTagMmsg_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/execute__11daTagMmsg_cFv.s"
 }
@@ -91,7 +114,7 @@ ASM_FUNCTION(execute__11daTagMmsg_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMmsg_Execute__FP11daTagMmsg_c) {
+asm void daTagMmsg_Execute(daTagMmsg_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/daTagMmsg_Execute__FP11daTagMmsg_c.s"
 }
@@ -99,14 +122,9 @@ ASM_FUNCTION(daTagMmsg_Execute__FP11daTagMmsg_c) {
 
 
 /* 80D5BD28-80D5BD30 0008+00 .text      daTagMmsg_Draw__FP11daTagMmsg_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagMmsg_Draw__FP11daTagMmsg_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/daTagMmsg_Draw__FP11daTagMmsg_c.s"
+bool daTagMmsg_Draw(daTagMmsg_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

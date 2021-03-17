@@ -6,56 +6,99 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build fast_create_request (fast_create_request) False/False
+/* top-level dependencies (begin fast_create_request) */
+/* top-level dependencies (end fast_create_request) */
+struct fast_create_request {
+};
+
+// build base_process_class (base_process_class) False/False
+/* top-level dependencies (begin base_process_class) */
+/* top-level dependencies (end base_process_class) */
+struct base_process_class {
+};
+
+// build create_request (create_request) False/False
+/* top-level dependencies (begin create_request) */
+/* top-level dependencies (end create_request) */
+struct create_request {
+};
+
+// build layer_class (layer_class) False/False
+/* top-level dependencies (begin layer_class) */
+/* top-level dependencies (end layer_class) */
+struct layer_class {
+};
+
+// build create_request_method_class (create_request_method_class) False/False
+/* top-level dependencies (begin create_request_method_class) */
+/* top-level dependencies (end create_request_method_class) */
+struct create_request_method_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcFCtRq_Do__FP19fast_create_request();
-extern "C" extern void fpcFCtRq_Delete__FP19fast_create_request();
-extern "C" extern void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+static void fpcFCtRq_Do(fast_create_request*);
+static bool fpcFCtRq_Delete(fast_create_request*);
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+
+extern "C" static void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request();
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
 SECTION_DATA extern void*data_803A3AE0[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcBs_MakeOfId__Fv();
-extern "C" extern void fpcBs_Create__FsUiPv();
-extern "C" extern void fpcBs_SubCreate__FP18base_process_class();
-extern "C" extern void fpcCtRq_Cancel__FP14create_request();
-extern "C" extern void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
-extern "C" extern void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" extern void fpcLd_Use__Fs();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
+void fpcBs_MakeOfId();
+void fpcBs_Create(s16, s32, void*);
+void fpcBs_SubCreate(base_process_class*);
+void fpcCtRq_Cancel(create_request*);
+void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLd_Use(s16);
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+
+extern "C" void fpcBs_MakeOfId__Fv();
+extern "C" void fpcBs_Create__FsUiPv();
+extern "C" void fpcBs_SubCreate__FP18base_process_class();
+extern "C" void fpcCtRq_Cancel__FP14create_request();
+extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLd_Use__Fs();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:
 // 
 
-/* 80023A48-80023A98 0050+00 .text      fpcFCtRq_Do__FP19fast_create_request                         */
+/* 80023A48-80023A98 0050+00 rc=1 efc=0 .text      fpcFCtRq_Do__FP19fast_create_request                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcFCtRq_Do__FP19fast_create_request) {
+asm static void fpcFCtRq_Do(fast_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_fstcreate_req/fpcFCtRq_Do__FP19fast_create_request.s"
 }
 #pragma pop
 
 
-/* 80023A98-80023AA0 0008+00 .text      fpcFCtRq_Delete__FP19fast_create_request                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(fpcFCtRq_Delete__FP19fast_create_request) {
-	nofralloc
-#include "asm/f_pc/f_pc_fstcreate_req/fpcFCtRq_Delete__FP19fast_create_request.s"
+/* 80023A98-80023AA0 0008+00 rc=1 efc=0 .text      fpcFCtRq_Delete__FP19fast_create_request                     */
+static bool fpcFCtRq_Delete(fast_create_request* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
-/* 803A3AE0-803A3AF0 000C+04 .data      submethod$2214                                               */
+/* 803A3AE0-803A3AF0 000C+04 rc=1 efc=0 .data      submethod$2214                                               */
 void* data_803A3AE0[4] = {
 	(void*)fpcFCtRq_Do__FP19fast_create_request,
 	NULL,
@@ -64,15 +107,14 @@ void* data_803A3AE0[4] = {
 	NULL,
 };
 
-/* 80023AA0-80023B70 00D0+00 .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023AA0-80023B70 00D0+00 rc=1 efc=1 .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv) {
+extern "C" asm void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_fstcreate_req/fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

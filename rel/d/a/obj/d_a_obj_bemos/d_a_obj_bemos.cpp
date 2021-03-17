@@ -6,92 +6,231 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daObjBm_c;
+
+struct J3DJoint {
+};
+
+struct daObjBm_c {
+	struct Bgc_c {
+		daObjBm_c::Bgc_c();
+	};
+
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void main_proc_call();
+	void initActionEnBemos();
+	void initActionObjBemos();
+	void actionEnBemos();
+	void actionObjBemos();
+	void setCrawCO();
+	void calcBeamPos();
+	void calcBeamLenAndAt();
+	void checkFindPlayer();
+	void checkSearchPlayer();
+	void getSearchDistance();
+	void getBeamSearchDistance();
+	void effect_proc();
+	void effectWait();
+	void initEffectSet0();
+	void effectSet0();
+	void effectSet1();
+	void effectEnd();
+	void check_to_walk();
+	void mode_wait_init();
+	void mode_wait();
+	void mode_walk_init();
+	void mode_walk();
+	void mode_afl();
+	void mode_dead_init();
+	void mode_dead();
+	void clr_moment_cnt();
+	void initActionSwWait();
+	void actionSwWait();
+	void initActionWarning();
+	void actionWarning();
+	void initActionFindPlayer();
+	void actionFindPlayer();
+	void initActionAttack();
+	void actionAttack();
+	void initActionDead();
+	void actionDead();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dBgS_WtrChk {
+	~dBgS_WtrChk();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+	dBgS_ObjGndChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__9daObjBm_cFv();
-extern "C" extern void setBaseMtx__9daObjBm_cFv();
-extern "C" extern void Create__9daObjBm_cFv();
-extern "C" extern void CreateHeap__9daObjBm_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__9daObjBm_cFv();
-extern "C" extern void Execute__9daObjBm_cFPPA3_A4_f();
-extern "C" extern void main_proc_call__9daObjBm_cFv();
-extern "C" extern void initActionEnBemos__9daObjBm_cFv();
-extern "C" extern void initActionObjBemos__9daObjBm_cFv();
-extern "C" extern void actionEnBemos__9daObjBm_cFv();
-extern "C" extern void actionObjBemos__9daObjBm_cFv();
-extern "C" extern void setCrawCO__9daObjBm_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void calcBeamPos__9daObjBm_cFv();
-extern "C" extern void calcBeamLenAndAt__9daObjBm_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void checkFindPlayer__9daObjBm_cFv();
-extern "C" extern void checkSearchPlayer__9daObjBm_cFv();
-extern "C" extern void getSearchDistance__9daObjBm_cFv();
-extern "C" extern void getBeamSearchDistance__9daObjBm_cFv();
-extern "C" extern void effect_proc__9daObjBm_cFv();
-extern "C" extern void effectWait__9daObjBm_cFv();
-extern "C" extern void initEffectSet0__9daObjBm_cFv();
-extern "C" extern void effectSet0__9daObjBm_cFv();
-extern "C" extern void effectSet1__9daObjBm_cFv();
-extern "C" extern void effectEnd__9daObjBm_cFv();
-extern "C" extern void check_to_walk__9daObjBm_cFv();
-extern "C" extern void mode_wait_init__9daObjBm_cFv();
-extern "C" extern void mode_wait__9daObjBm_cFv();
-extern "C" extern void mode_walk_init__9daObjBm_cFv();
-extern "C" extern void mode_walk__9daObjBm_cFv();
-extern "C" extern void mode_afl__9daObjBm_cFv();
-extern "C" extern void mode_dead_init__9daObjBm_cFv();
-extern "C" extern void mode_dead__9daObjBm_cFv();
-extern "C" extern void clr_moment_cnt__9daObjBm_cFv();
-extern "C" extern void __ct__Q29daObjBm_c5Bgc_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf();
-extern "C" extern void chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis();
-extern "C" extern void initActionSwWait__9daObjBm_cFv();
-extern "C" extern void actionSwWait__9daObjBm_cFv();
-extern "C" extern void initActionWarning__9daObjBm_cFv();
-extern "C" extern void actionWarning__9daObjBm_cFv();
-extern "C" extern void initActionFindPlayer__9daObjBm_cFv();
-extern "C" extern void actionFindPlayer__9daObjBm_cFv();
-extern "C" extern void initActionAttack__9daObjBm_cFv();
-extern "C" extern void actionAttack__9daObjBm_cFv();
-extern "C" extern void initActionDead__9daObjBm_cFv();
-extern "C" extern void actionDead__9daObjBm_cFv();
-extern "C" extern void Draw__9daObjBm_cFv();
-extern "C" extern void Delete__9daObjBm_cFv();
-extern "C" extern void daObjBm_create1st__FP9daObjBm_c();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjBm_MoveBGDelete__FP9daObjBm_c();
-extern "C" extern void daObjBm_MoveBGExecute__FP9daObjBm_c();
-extern "C" extern void daObjBm_MoveBGDraw__FP9daObjBm_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80BB3490();
-extern "C" extern void func_80BB34AC();
-extern "C" extern void __sinit_d_a_obj_bemos_cpp();
-extern "C" extern void func_80BB35A8();
-extern "C" extern void __dt__11dBgS_WtrChkFv();
-extern "C" extern void func_80BB3658();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __ct__14dBgS_ObjGndChkFv();
-extern "C" extern void func_80BB3764();
-extern "C" extern void func_80BB376C();
-extern "C" extern void func_80BB3774();
-extern "C" extern void func_80BB377C();
-extern "C" extern void func_80BB3784();
-extern "C" extern void func_80BB378C();
-extern "C" extern void func_80BB3794();
-extern "C" extern void func_80BB379C();
+extern "C" void PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__9daObjBm_cFPPA3_A4_f();
+extern "C" void wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf();
+extern "C" void chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis();
+void daObjBm_create1st(daObjBm_c*);
+void daObjBm_MoveBGDelete(daObjBm_c*);
+void daObjBm_MoveBGExecute(daObjBm_c*);
+void daObjBm_MoveBGDraw(daObjBm_c*);
+extern "C" void func_80BB3490();
+extern "C" void func_80BB34AC();
+extern "C" void __sinit_d_a_obj_bemos_cpp();
+extern "C" void func_80BB35A8();
+extern "C" void func_80BB3658();
+extern "C" void func_80BB3764();
+extern "C" void func_80BB376C();
+extern "C" void func_80BB3774();
+extern "C" void func_80BB377C();
+extern "C" void func_80BB3784();
+extern "C" void func_80BB378C();
+extern "C" void func_80BB3794();
+extern "C" void func_80BB379C();
+
+extern "C" void PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__9daObjBm_cFv();
+extern "C" void setBaseMtx__9daObjBm_cFv();
+extern "C" void Create__9daObjBm_cFv();
+extern "C" void CreateHeap__9daObjBm_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__9daObjBm_cFv();
+extern "C" void Execute__9daObjBm_cFPPA3_A4_f();
+extern "C" void main_proc_call__9daObjBm_cFv();
+extern "C" void initActionEnBemos__9daObjBm_cFv();
+extern "C" void initActionObjBemos__9daObjBm_cFv();
+extern "C" void actionEnBemos__9daObjBm_cFv();
+extern "C" void actionObjBemos__9daObjBm_cFv();
+extern "C" void setCrawCO__9daObjBm_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void calcBeamPos__9daObjBm_cFv();
+extern "C" void calcBeamLenAndAt__9daObjBm_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void checkFindPlayer__9daObjBm_cFv();
+extern "C" void checkSearchPlayer__9daObjBm_cFv();
+extern "C" void getSearchDistance__9daObjBm_cFv();
+extern "C" void getBeamSearchDistance__9daObjBm_cFv();
+extern "C" void effect_proc__9daObjBm_cFv();
+extern "C" void effectWait__9daObjBm_cFv();
+extern "C" void initEffectSet0__9daObjBm_cFv();
+extern "C" void effectSet0__9daObjBm_cFv();
+extern "C" void effectSet1__9daObjBm_cFv();
+extern "C" void effectEnd__9daObjBm_cFv();
+extern "C" void check_to_walk__9daObjBm_cFv();
+extern "C" void mode_wait_init__9daObjBm_cFv();
+extern "C" void mode_wait__9daObjBm_cFv();
+extern "C" void mode_walk_init__9daObjBm_cFv();
+extern "C" void mode_walk__9daObjBm_cFv();
+extern "C" void mode_afl__9daObjBm_cFv();
+extern "C" void mode_dead_init__9daObjBm_cFv();
+extern "C" void mode_dead__9daObjBm_cFv();
+extern "C" void clr_moment_cnt__9daObjBm_cFv();
+extern "C" void __ct__Q29daObjBm_c5Bgc_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf();
+extern "C" void chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis();
+extern "C" void initActionSwWait__9daObjBm_cFv();
+extern "C" void actionSwWait__9daObjBm_cFv();
+extern "C" void initActionWarning__9daObjBm_cFv();
+extern "C" void actionWarning__9daObjBm_cFv();
+extern "C" void initActionFindPlayer__9daObjBm_cFv();
+extern "C" void actionFindPlayer__9daObjBm_cFv();
+extern "C" void initActionAttack__9daObjBm_cFv();
+extern "C" void actionAttack__9daObjBm_cFv();
+extern "C" void initActionDead__9daObjBm_cFv();
+extern "C" void actionDead__9daObjBm_cFv();
+extern "C" void Draw__9daObjBm_cFv();
+extern "C" void Delete__9daObjBm_cFv();
+extern "C" void daObjBm_create1st__FP9daObjBm_c();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjBm_MoveBGDelete__FP9daObjBm_c();
+extern "C" void daObjBm_MoveBGExecute__FP9daObjBm_c();
+extern "C" void daObjBm_MoveBGDraw__FP9daObjBm_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80BB3490();
+extern "C" void func_80BB34AC();
+extern "C" void __sinit_d_a_obj_bemos_cpp();
+extern "C" void func_80BB35A8();
+extern "C" void __dt__11dBgS_WtrChkFv();
+extern "C" void func_80BB3658();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __ct__14dBgS_ObjGndChkFv();
+extern "C" void func_80BB3764();
+extern "C" void func_80BB376C();
+extern "C" void func_80BB3774();
+extern "C" void func_80BB377C();
+extern "C" void func_80BB3784();
+extern "C" void func_80BB378C();
+extern "C" void func_80BB3794();
+extern "C" void func_80BB379C();
 SECTION_RODATA extern const u8 l_eye_offset[12];
 SECTION_RODATA extern const u8 l_high_beam_offset[12];
 SECTION_RODATA extern const u8 l_mid_beam_offset[12];
@@ -247,8 +386,11 @@ SECTION_BSS extern u8 data_80BB5284[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -258,7 +400,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BAE36C.s"
 }
@@ -269,7 +411,7 @@ ASM_FUNCTION(PPCallBack__9daObjBm_cFP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13Pus
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/nodeCallBack__FP8J3DJointi.s"
 }
@@ -280,7 +422,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__9daObjBm_cFv) {
+asm void daObjBm_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initBaseMtx__9daObjBm_cFv.s"
 }
@@ -291,7 +433,7 @@ ASM_FUNCTION(initBaseMtx__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daObjBm_cFv) {
+asm void daObjBm_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/setBaseMtx__9daObjBm_cFv.s"
 }
@@ -302,7 +444,7 @@ ASM_FUNCTION(setBaseMtx__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__9daObjBm_cFv) {
+asm void daObjBm_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/Create__9daObjBm_cFv.s"
 }
@@ -313,7 +455,7 @@ ASM_FUNCTION(Create__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daObjBm_cFv) {
+asm void daObjBm_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/CreateHeap__9daObjBm_cFv.s"
 }
@@ -324,7 +466,7 @@ ASM_FUNCTION(CreateHeap__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__12J3DFrameCtrlFv.s"
 }
@@ -335,7 +477,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__9daObjBm_cFv) {
+asm void daObjBm_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/create1st__9daObjBm_cFv.s"
 }
@@ -346,7 +488,7 @@ ASM_FUNCTION(create1st__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daObjBm_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daObjBm_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/Execute__9daObjBm_cFPPA3_A4_f.s"
 }
@@ -357,7 +499,7 @@ ASM_FUNCTION(Execute__9daObjBm_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main_proc_call__9daObjBm_cFv) {
+asm void daObjBm_c::main_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/main_proc_call__9daObjBm_cFv.s"
 }
@@ -368,7 +510,7 @@ ASM_FUNCTION(main_proc_call__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionEnBemos__9daObjBm_cFv) {
+asm void daObjBm_c::initActionEnBemos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionEnBemos__9daObjBm_cFv.s"
 }
@@ -379,7 +521,7 @@ ASM_FUNCTION(initActionEnBemos__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionObjBemos__9daObjBm_cFv) {
+asm void daObjBm_c::initActionObjBemos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionObjBemos__9daObjBm_cFv.s"
 }
@@ -390,7 +532,7 @@ ASM_FUNCTION(initActionObjBemos__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEnBemos__9daObjBm_cFv) {
+asm void daObjBm_c::actionEnBemos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionEnBemos__9daObjBm_cFv.s"
 }
@@ -401,7 +543,7 @@ ASM_FUNCTION(actionEnBemos__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionObjBemos__9daObjBm_cFv) {
+asm void daObjBm_c::actionObjBemos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionObjBemos__9daObjBm_cFv.s"
 }
@@ -412,7 +554,7 @@ ASM_FUNCTION(actionObjBemos__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCrawCO__9daObjBm_cFv) {
+asm void daObjBm_c::setCrawCO() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/setCrawCO__9daObjBm_cFv.s"
 }
@@ -423,7 +565,7 @@ ASM_FUNCTION(setCrawCO__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__4cXyzFv.s"
 }
@@ -434,7 +576,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcBeamPos__9daObjBm_cFv) {
+asm void daObjBm_c::calcBeamPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/calcBeamPos__9daObjBm_cFv.s"
 }
@@ -445,7 +587,7 @@ ASM_FUNCTION(calcBeamPos__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcBeamLenAndAt__9daObjBm_cFv) {
+asm void daObjBm_c::calcBeamLenAndAt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/calcBeamLenAndAt__9daObjBm_cFv.s"
 }
@@ -456,7 +598,7 @@ ASM_FUNCTION(calcBeamLenAndAt__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__8cM3dGPlaFv.s"
 }
@@ -467,7 +609,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFindPlayer__9daObjBm_cFv) {
+asm void daObjBm_c::checkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/checkFindPlayer__9daObjBm_cFv.s"
 }
@@ -478,7 +620,7 @@ ASM_FUNCTION(checkFindPlayer__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSearchPlayer__9daObjBm_cFv) {
+asm void daObjBm_c::checkSearchPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/checkSearchPlayer__9daObjBm_cFv.s"
 }
@@ -489,7 +631,7 @@ ASM_FUNCTION(checkSearchPlayer__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSearchDistance__9daObjBm_cFv) {
+asm void daObjBm_c::getSearchDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/getSearchDistance__9daObjBm_cFv.s"
 }
@@ -500,7 +642,7 @@ ASM_FUNCTION(getSearchDistance__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBeamSearchDistance__9daObjBm_cFv) {
+asm void daObjBm_c::getBeamSearchDistance() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/getBeamSearchDistance__9daObjBm_cFv.s"
 }
@@ -511,7 +653,7 @@ ASM_FUNCTION(getBeamSearchDistance__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effect_proc__9daObjBm_cFv) {
+asm void daObjBm_c::effect_proc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effect_proc__9daObjBm_cFv.s"
 }
@@ -519,21 +661,16 @@ ASM_FUNCTION(effect_proc__9daObjBm_cFv) {
 
 
 /* 80BB0580-80BB0584 0004+00 .text      effectWait__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectWait__9daObjBm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectWait__9daObjBm_cFv.s"
+void daObjBm_c::effectWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0584-80BB0718 0194+00 .text      initEffectSet0__9daObjBm_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEffectSet0__9daObjBm_cFv) {
+asm void daObjBm_c::initEffectSet0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initEffectSet0__9daObjBm_cFv.s"
 }
@@ -541,43 +678,28 @@ ASM_FUNCTION(initEffectSet0__9daObjBm_cFv) {
 
 
 /* 80BB0718-80BB071C 0004+00 .text      effectSet0__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectSet0__9daObjBm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectSet0__9daObjBm_cFv.s"
+void daObjBm_c::effectSet0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB071C-80BB0720 0004+00 .text      effectSet1__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectSet1__9daObjBm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectSet1__9daObjBm_cFv.s"
+void daObjBm_c::effectSet1() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0720-80BB0724 0004+00 .text      effectEnd__9daObjBm_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(effectEnd__9daObjBm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectEnd__9daObjBm_cFv.s"
+void daObjBm_c::effectEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0724-80BB0824 0100+00 .text      check_to_walk__9daObjBm_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_to_walk__9daObjBm_cFv) {
+asm void daObjBm_c::check_to_walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/check_to_walk__9daObjBm_cFv.s"
 }
@@ -588,7 +710,7 @@ ASM_FUNCTION(check_to_walk__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait_init__9daObjBm_cFv) {
+asm void daObjBm_c::mode_wait_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_wait_init__9daObjBm_cFv.s"
 }
@@ -599,7 +721,7 @@ ASM_FUNCTION(mode_wait_init__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_wait__9daObjBm_cFv) {
+asm void daObjBm_c::mode_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_wait__9daObjBm_cFv.s"
 }
@@ -610,7 +732,7 @@ ASM_FUNCTION(mode_wait__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_walk_init__9daObjBm_cFv) {
+asm void daObjBm_c::mode_walk_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_walk_init__9daObjBm_cFv.s"
 }
@@ -621,7 +743,7 @@ ASM_FUNCTION(mode_walk_init__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_walk__9daObjBm_cFv) {
+asm void daObjBm_c::mode_walk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_walk__9daObjBm_cFv.s"
 }
@@ -632,7 +754,7 @@ ASM_FUNCTION(mode_walk__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_afl__9daObjBm_cFv) {
+asm void daObjBm_c::mode_afl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_afl__9daObjBm_cFv.s"
 }
@@ -643,7 +765,7 @@ ASM_FUNCTION(mode_afl__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_dead_init__9daObjBm_cFv) {
+asm void daObjBm_c::mode_dead_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_dead_init__9daObjBm_cFv.s"
 }
@@ -651,21 +773,16 @@ ASM_FUNCTION(mode_dead_init__9daObjBm_cFv) {
 
 
 /* 80BB0DE4-80BB0DE8 0004+00 .text      mode_dead__9daObjBm_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mode_dead__9daObjBm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_dead__9daObjBm_cFv.s"
+void daObjBm_c::mode_dead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0DE8-80BB0E0C 0024+00 .text      clr_moment_cnt__9daObjBm_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(clr_moment_cnt__9daObjBm_cFv) {
+asm void daObjBm_c::clr_moment_cnt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/clr_moment_cnt__9daObjBm_cFv.s"
 }
@@ -676,7 +793,7 @@ ASM_FUNCTION(clr_moment_cnt__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q29daObjBm_c5Bgc_cFv) {
+asm daObjBm_c::Bgc_c::daObjBm_c::Bgc_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__ct__Q29daObjBm_c5Bgc_cFv.s"
 }
@@ -684,21 +801,16 @@ ASM_FUNCTION(__ct__Q29daObjBm_c5Bgc_cFv) {
 
 
 /* 80BB0ED0-80BB0ED4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0ED4-80BB1154 0280+00 .text      wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf) {
+extern "C" asm void wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cisf.s"
 }
@@ -709,7 +821,7 @@ ASM_FUNCTION(wall_pos__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_ci
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis) {
+extern "C" asm void chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSrc_cis.s"
 }
@@ -720,7 +832,7 @@ ASM_FUNCTION(chk_wall_pre__Q29daObjBm_c5Bgc_cFPC10fopAc_ac_cPCQ29daObjBm_c8BgcSr
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionSwWait__9daObjBm_cFv) {
+asm void daObjBm_c::initActionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionSwWait__9daObjBm_cFv.s"
 }
@@ -731,7 +843,7 @@ ASM_FUNCTION(initActionSwWait__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWait__9daObjBm_cFv) {
+asm void daObjBm_c::actionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionSwWait__9daObjBm_cFv.s"
 }
@@ -742,7 +854,7 @@ ASM_FUNCTION(actionSwWait__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionWarning__9daObjBm_cFv) {
+asm void daObjBm_c::initActionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionWarning__9daObjBm_cFv.s"
 }
@@ -753,7 +865,7 @@ ASM_FUNCTION(initActionWarning__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWarning__9daObjBm_cFv) {
+asm void daObjBm_c::actionWarning() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionWarning__9daObjBm_cFv.s"
 }
@@ -764,7 +876,7 @@ ASM_FUNCTION(actionWarning__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionFindPlayer__9daObjBm_cFv) {
+asm void daObjBm_c::initActionFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionFindPlayer__9daObjBm_cFv.s"
 }
@@ -775,7 +887,7 @@ ASM_FUNCTION(initActionFindPlayer__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionFindPlayer__9daObjBm_cFv) {
+asm void daObjBm_c::actionFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionFindPlayer__9daObjBm_cFv.s"
 }
@@ -786,7 +898,7 @@ ASM_FUNCTION(actionFindPlayer__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionAttack__9daObjBm_cFv) {
+asm void daObjBm_c::initActionAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionAttack__9daObjBm_cFv.s"
 }
@@ -797,7 +909,7 @@ ASM_FUNCTION(initActionAttack__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionAttack__9daObjBm_cFv) {
+asm void daObjBm_c::actionAttack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionAttack__9daObjBm_cFv.s"
 }
@@ -808,7 +920,7 @@ ASM_FUNCTION(actionAttack__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionDead__9daObjBm_cFv) {
+asm void daObjBm_c::initActionDead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/initActionDead__9daObjBm_cFv.s"
 }
@@ -819,7 +931,7 @@ ASM_FUNCTION(initActionDead__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDead__9daObjBm_cFv) {
+asm void daObjBm_c::actionDead() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/actionDead__9daObjBm_cFv.s"
 }
@@ -830,7 +942,7 @@ ASM_FUNCTION(actionDead__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daObjBm_cFv) {
+asm void daObjBm_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/Draw__9daObjBm_cFv.s"
 }
@@ -841,7 +953,7 @@ ASM_FUNCTION(Draw__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daObjBm_cFv) {
+asm void daObjBm_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/Delete__9daObjBm_cFv.s"
 }
@@ -852,7 +964,7 @@ ASM_FUNCTION(Delete__9daObjBm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBm_create1st__FP9daObjBm_c) {
+asm void daObjBm_create1st(daObjBm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/daObjBm_create1st__FP9daObjBm_c.s"
 }
@@ -863,7 +975,7 @@ ASM_FUNCTION(daObjBm_create1st__FP9daObjBm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__8dCcD_CylFv.s"
 }
@@ -874,7 +986,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__ct__8dCcD_CylFv.s"
 }
@@ -885,7 +997,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__8cM3dGCylFv.s"
 }
@@ -896,7 +1008,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__8cM3dGSphFv.s"
 }
@@ -907,7 +1019,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__8cM3dGAabFv.s"
 }
@@ -918,7 +1030,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__10dCcD_GSttsFv.s"
 }
@@ -929,7 +1041,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__12dBgS_AcchCirFv.s"
 }
@@ -940,7 +1052,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -951,7 +1063,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBm_MoveBGDelete__FP9daObjBm_c) {
+asm void daObjBm_MoveBGDelete(daObjBm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/daObjBm_MoveBGDelete__FP9daObjBm_c.s"
 }
@@ -962,7 +1074,7 @@ ASM_FUNCTION(daObjBm_MoveBGDelete__FP9daObjBm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBm_MoveBGExecute__FP9daObjBm_c) {
+asm void daObjBm_MoveBGExecute(daObjBm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/daObjBm_MoveBGExecute__FP9daObjBm_c.s"
 }
@@ -973,7 +1085,7 @@ ASM_FUNCTION(daObjBm_MoveBGExecute__FP9daObjBm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBm_MoveBGDraw__FP9daObjBm_c) {
+asm void daObjBm_MoveBGDraw(daObjBm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/daObjBm_MoveBGDraw__FP9daObjBm_c.s"
 }
@@ -984,7 +1096,7 @@ ASM_FUNCTION(daObjBm_MoveBGDraw__FP9daObjBm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__10cCcD_GSttsFv.s"
 }
@@ -995,7 +1107,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3490) {
+extern "C" asm void func_80BB3490() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3490.s"
 }
@@ -1006,7 +1118,7 @@ ASM_FUNCTION(func_80BB3490) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB34AC) {
+extern "C" asm void func_80BB34AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB34AC.s"
 }
@@ -1017,7 +1129,7 @@ ASM_FUNCTION(func_80BB34AC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_bemos_cpp) {
+extern "C" asm void __sinit_d_a_obj_bemos_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__sinit_d_a_obj_bemos_cpp.s"
 }
@@ -1028,7 +1140,7 @@ ASM_FUNCTION(__sinit_d_a_obj_bemos_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB35A8) {
+extern "C" asm void func_80BB35A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB35A8.s"
 }
@@ -1039,7 +1151,7 @@ ASM_FUNCTION(func_80BB35A8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dBgS_WtrChkFv) {
+asm dBgS_WtrChk::~dBgS_WtrChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__11dBgS_WtrChkFv.s"
 }
@@ -1050,7 +1162,7 @@ ASM_FUNCTION(__dt__11dBgS_WtrChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3658) {
+extern "C" asm void func_80BB3658() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3658.s"
 }
@@ -1061,7 +1173,7 @@ ASM_FUNCTION(func_80BB3658) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -1072,7 +1184,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__ct__14dBgS_ObjGndChkFv.s"
 }
@@ -1083,7 +1195,7 @@ ASM_FUNCTION(__ct__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3764) {
+extern "C" asm void func_80BB3764() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3764.s"
 }
@@ -1094,7 +1206,7 @@ ASM_FUNCTION(func_80BB3764) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB376C) {
+extern "C" asm void func_80BB376C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB376C.s"
 }
@@ -1105,7 +1217,7 @@ ASM_FUNCTION(func_80BB376C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3774) {
+extern "C" asm void func_80BB3774() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3774.s"
 }
@@ -1116,7 +1228,7 @@ ASM_FUNCTION(func_80BB3774) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB377C) {
+extern "C" asm void func_80BB377C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB377C.s"
 }
@@ -1127,7 +1239,7 @@ ASM_FUNCTION(func_80BB377C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3784) {
+extern "C" asm void func_80BB3784() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3784.s"
 }
@@ -1138,7 +1250,7 @@ ASM_FUNCTION(func_80BB3784) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB378C) {
+extern "C" asm void func_80BB378C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB378C.s"
 }
@@ -1149,7 +1261,7 @@ ASM_FUNCTION(func_80BB378C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB3794) {
+extern "C" asm void func_80BB3794() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB3794.s"
 }
@@ -1160,7 +1272,7 @@ ASM_FUNCTION(func_80BB3794) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BB379C) {
+extern "C" asm void func_80BB379C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/func_80BB379C.s"
 }

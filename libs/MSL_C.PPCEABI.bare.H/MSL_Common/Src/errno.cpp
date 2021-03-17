@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 
 // 
@@ -16,10 +17,12 @@ SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 804519A8-804519B0 0004+04 .sbss      errno                                                        */
+/* ############################################################################################## */
+/* 804519A8-804519B0 0004+04 rc=6 efc=6 .sbss      errno                                                        */
 u8 errno[4 + 4 /* padding */];
 

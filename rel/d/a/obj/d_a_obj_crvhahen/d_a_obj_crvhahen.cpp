@@ -6,28 +6,68 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cXyz;
+struct daObjCRVHAHEN_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjCRVHAHEN_c {
+	void HahenSet(cXyz, cXyz, cXyz, cXyz, f32);
+	void Wall_Check(cXyz, cXyz);
+	void Hahen_Hakai(s32, s32);
+	void CheckCull();
+	void checkViewArea(cXyz*);
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVHAHEN_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c();
-extern "C" extern void HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf();
-extern "C" extern void Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void Hahen_Hakai__15daObjCRVHAHEN_cFii();
-extern "C" extern void CheckCull__15daObjCRVHAHEN_cFv();
-extern "C" extern void checkViewArea__15daObjCRVHAHEN_cFP4cXyz();
-extern "C" extern void Execute__15daObjCRVHAHEN_cFv();
-extern "C" extern void Delete__15daObjCRVHAHEN_cFv();
-extern "C" extern void setBaseMtx__15daObjCRVHAHEN_cFv();
-extern "C" extern void daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c();
-extern "C" extern void daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c();
-extern "C" extern void create__15daObjCRVHAHEN_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c();
+void useHeapInit(fopAc_ac_c*);
+void daObjCRVHAHEN_Create(fopAc_ac_c*);
+void daObjCRVHAHEN_Delete(daObjCRVHAHEN_c*);
+void daObjCRVHAHEN_Draw(daObjCRVHAHEN_c*);
+void daObjCRVHAHEN_Execute(daObjCRVHAHEN_c*);
+bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c*);
+
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObjCRVHAHEN_Create__FP10fopAc_ac_c();
+extern "C" void daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c();
+extern "C" void HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf();
+extern "C" void Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz();
+extern "C" void __dt__4cXyzFv();
+extern "C" void Hahen_Hakai__15daObjCRVHAHEN_cFii();
+extern "C" void CheckCull__15daObjCRVHAHEN_cFv();
+extern "C" void checkViewArea__15daObjCRVHAHEN_cFP4cXyz();
+extern "C" void Execute__15daObjCRVHAHEN_cFv();
+extern "C" void Delete__15daObjCRVHAHEN_cFv();
+extern "C" void setBaseMtx__15daObjCRVHAHEN_cFv();
+extern "C" void daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c();
+extern "C" void daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c();
+extern "C" void create__15daObjCRVHAHEN_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c();
 SECTION_RODATA extern const u32 lit_3703;
 SECTION_RODATA extern const u32 lit_3704;
 SECTION_RODATA extern const u32 lit_3705;
@@ -55,7 +95,9 @@ SECTION_DATA extern u8 g_profile_Obj_CRVHAHEN[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +107,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -76,7 +118,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVHAHEN_Create__FP10fopAc_ac_c) {
+asm void daObjCRVHAHEN_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_Create__FP10fopAc_ac_c.s"
 }
@@ -87,7 +129,7 @@ ASM_FUNCTION(daObjCRVHAHEN_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c) {
+asm void daObjCRVHAHEN_Delete(daObjCRVHAHEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c.s"
 }
@@ -98,7 +140,7 @@ ASM_FUNCTION(daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf) {
+asm void daObjCRVHAHEN_c::HahenSet(cXyz field_0, cXyz field_1, cXyz field_2, cXyz field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf.s"
 }
@@ -109,7 +151,7 @@ ASM_FUNCTION(HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz) {
+asm void daObjCRVHAHEN_c::Wall_Check(cXyz field_0, cXyz field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz.s"
 }
@@ -120,7 +162,7 @@ ASM_FUNCTION(Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__dt__4cXyzFv.s"
 }
@@ -131,7 +173,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Hahen_Hakai__15daObjCRVHAHEN_cFii) {
+asm void daObjCRVHAHEN_c::Hahen_Hakai(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/Hahen_Hakai__15daObjCRVHAHEN_cFii.s"
 }
@@ -142,7 +184,7 @@ ASM_FUNCTION(Hahen_Hakai__15daObjCRVHAHEN_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCull__15daObjCRVHAHEN_cFv) {
+asm void daObjCRVHAHEN_c::CheckCull() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/CheckCull__15daObjCRVHAHEN_cFv.s"
 }
@@ -153,7 +195,7 @@ ASM_FUNCTION(CheckCull__15daObjCRVHAHEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkViewArea__15daObjCRVHAHEN_cFP4cXyz) {
+asm void daObjCRVHAHEN_c::checkViewArea(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/checkViewArea__15daObjCRVHAHEN_cFP4cXyz.s"
 }
@@ -164,7 +206,7 @@ ASM_FUNCTION(checkViewArea__15daObjCRVHAHEN_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjCRVHAHEN_cFv) {
+asm void daObjCRVHAHEN_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/Execute__15daObjCRVHAHEN_cFv.s"
 }
@@ -175,7 +217,7 @@ ASM_FUNCTION(Execute__15daObjCRVHAHEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjCRVHAHEN_cFv) {
+asm void daObjCRVHAHEN_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/Delete__15daObjCRVHAHEN_cFv.s"
 }
@@ -186,7 +228,7 @@ ASM_FUNCTION(Delete__15daObjCRVHAHEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjCRVHAHEN_cFv) {
+asm void daObjCRVHAHEN_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/setBaseMtx__15daObjCRVHAHEN_cFv.s"
 }
@@ -197,7 +239,7 @@ ASM_FUNCTION(setBaseMtx__15daObjCRVHAHEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c) {
+asm void daObjCRVHAHEN_Draw(daObjCRVHAHEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c.s"
 }
@@ -208,7 +250,7 @@ ASM_FUNCTION(daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c) {
+asm void daObjCRVHAHEN_Execute(daObjCRVHAHEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c.s"
 }
@@ -219,7 +261,7 @@ ASM_FUNCTION(daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjCRVHAHEN_cFv) {
+asm void daObjCRVHAHEN_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/create__15daObjCRVHAHEN_cFv.s"
 }
@@ -230,7 +272,7 @@ ASM_FUNCTION(create__15daObjCRVHAHEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__dt__5csXyzFv.s"
 }
@@ -238,36 +280,21 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80BD3FD8-80BD3FDC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD3FDC-80BD3FE0 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD3FE0-80BD3FE8 0008+00 .text      daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c.s"
+bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

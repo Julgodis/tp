@@ -6,33 +6,89 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daBarDesk_c;
+
+struct daBarDesk_HIO_c {
+	daBarDesk_HIO_c();
+	~daBarDesk_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daBarDesk_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void windowProc();
+	void init_modeWait();
+	void modeWait();
+	void init_modeBreak();
+	void modeBreak();
+	void setBreakEffect();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daBarDesk_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daBarDesk_cFv();
-extern "C" extern void CreateHeap__11daBarDesk_cFv();
-extern "C" extern void create__11daBarDesk_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__11daBarDesk_cFPPA3_A4_f();
-extern "C" extern void windowProc__11daBarDesk_cFv();
-extern "C" extern void init_modeWait__11daBarDesk_cFv();
-extern "C" extern void modeWait__11daBarDesk_cFv();
-extern "C" extern void init_modeBreak__11daBarDesk_cFv();
-extern "C" extern void modeBreak__11daBarDesk_cFv();
-extern "C" extern void setBreakEffect__11daBarDesk_cFv();
-extern "C" extern void Draw__11daBarDesk_cFv();
-extern "C" extern void Delete__11daBarDesk_cFv();
-extern "C" extern void daBarDesk_Draw__FP11daBarDesk_c();
-extern "C" extern void daBarDesk_Execute__FP11daBarDesk_c();
-extern "C" extern void daBarDesk_Delete__FP11daBarDesk_c();
-extern "C" extern void daBarDesk_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daBarDesk_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_barDesk_cpp();
+extern "C" void Execute__11daBarDesk_cFPPA3_A4_f();
+void daBarDesk_Draw(daBarDesk_c*);
+void daBarDesk_Execute(daBarDesk_c*);
+void daBarDesk_Delete(daBarDesk_c*);
+void daBarDesk_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_barDesk_cpp();
+
+extern "C" void __ct__15daBarDesk_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daBarDesk_cFv();
+extern "C" void CreateHeap__11daBarDesk_cFv();
+extern "C" void create__11daBarDesk_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__11daBarDesk_cFPPA3_A4_f();
+extern "C" void windowProc__11daBarDesk_cFv();
+extern "C" void init_modeWait__11daBarDesk_cFv();
+extern "C" void modeWait__11daBarDesk_cFv();
+extern "C" void init_modeBreak__11daBarDesk_cFv();
+extern "C" void modeBreak__11daBarDesk_cFv();
+extern "C" void setBreakEffect__11daBarDesk_cFv();
+extern "C" void Draw__11daBarDesk_cFv();
+extern "C" void Delete__11daBarDesk_cFv();
+extern "C" void daBarDesk_Draw__FP11daBarDesk_c();
+extern "C" void daBarDesk_Execute__FP11daBarDesk_c();
+extern "C" void daBarDesk_Delete__FP11daBarDesk_c();
+extern "C" void daBarDesk_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daBarDesk_HIO_cFv();
+extern "C" void __sinit_d_a_obj_barDesk_cpp();
 SECTION_RODATA extern const u8 mCcDObjInfo__11daBarDesk_c[48];
 SECTION_RODATA extern const u32 lit_3839;
 SECTION_RODATA extern const u32 lit_3861;
@@ -64,8 +120,11 @@ SECTION_BSS extern u8 data_80BA9D2C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -75,7 +134,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daBarDesk_HIO_cFv) {
+asm daBarDesk_HIO_c::daBarDesk_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__ct__15daBarDesk_HIO_cFv.s"
 }
@@ -86,7 +145,7 @@ ASM_FUNCTION(__ct__15daBarDesk_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -97,7 +156,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daBarDesk_cFv) {
+asm void daBarDesk_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/setBaseMtx__11daBarDesk_cFv.s"
 }
@@ -108,7 +167,7 @@ ASM_FUNCTION(setBaseMtx__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daBarDesk_cFv) {
+asm void daBarDesk_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/CreateHeap__11daBarDesk_cFv.s"
 }
@@ -119,7 +178,7 @@ ASM_FUNCTION(CreateHeap__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daBarDesk_cFv) {
+asm void daBarDesk_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/create__11daBarDesk_cFv.s"
 }
@@ -130,7 +189,7 @@ ASM_FUNCTION(create__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__8cM3dGCylFv.s"
 }
@@ -141,7 +200,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__8cM3dGAabFv.s"
 }
@@ -152,7 +211,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__10dCcD_GSttsFv.s"
 }
@@ -163,7 +222,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daBarDesk_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daBarDesk_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/Execute__11daBarDesk_cFPPA3_A4_f.s"
 }
@@ -174,7 +233,7 @@ ASM_FUNCTION(Execute__11daBarDesk_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(windowProc__11daBarDesk_cFv) {
+asm void daBarDesk_c::windowProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/windowProc__11daBarDesk_cFv.s"
 }
@@ -185,7 +244,7 @@ ASM_FUNCTION(windowProc__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daBarDesk_cFv) {
+asm void daBarDesk_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/init_modeWait__11daBarDesk_cFv.s"
 }
@@ -196,7 +255,7 @@ ASM_FUNCTION(init_modeWait__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daBarDesk_cFv) {
+asm void daBarDesk_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/modeWait__11daBarDesk_cFv.s"
 }
@@ -207,7 +266,7 @@ ASM_FUNCTION(modeWait__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__11daBarDesk_cFv) {
+asm void daBarDesk_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/init_modeBreak__11daBarDesk_cFv.s"
 }
@@ -218,7 +277,7 @@ ASM_FUNCTION(init_modeBreak__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__11daBarDesk_cFv) {
+asm void daBarDesk_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/modeBreak__11daBarDesk_cFv.s"
 }
@@ -229,7 +288,7 @@ ASM_FUNCTION(modeBreak__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBreakEffect__11daBarDesk_cFv) {
+asm void daBarDesk_c::setBreakEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/setBreakEffect__11daBarDesk_cFv.s"
 }
@@ -240,7 +299,7 @@ ASM_FUNCTION(setBreakEffect__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daBarDesk_cFv) {
+asm void daBarDesk_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/Draw__11daBarDesk_cFv.s"
 }
@@ -251,7 +310,7 @@ ASM_FUNCTION(Draw__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daBarDesk_cFv) {
+asm void daBarDesk_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/Delete__11daBarDesk_cFv.s"
 }
@@ -262,7 +321,7 @@ ASM_FUNCTION(Delete__11daBarDesk_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBarDesk_Draw__FP11daBarDesk_c) {
+asm void daBarDesk_Draw(daBarDesk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/daBarDesk_Draw__FP11daBarDesk_c.s"
 }
@@ -273,7 +332,7 @@ ASM_FUNCTION(daBarDesk_Draw__FP11daBarDesk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBarDesk_Execute__FP11daBarDesk_c) {
+asm void daBarDesk_Execute(daBarDesk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/daBarDesk_Execute__FP11daBarDesk_c.s"
 }
@@ -284,7 +343,7 @@ ASM_FUNCTION(daBarDesk_Execute__FP11daBarDesk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBarDesk_Delete__FP11daBarDesk_c) {
+asm void daBarDesk_Delete(daBarDesk_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/daBarDesk_Delete__FP11daBarDesk_c.s"
 }
@@ -295,7 +354,7 @@ ASM_FUNCTION(daBarDesk_Delete__FP11daBarDesk_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBarDesk_Create__FP10fopAc_ac_c) {
+asm void daBarDesk_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/daBarDesk_Create__FP10fopAc_ac_c.s"
 }
@@ -306,7 +365,7 @@ ASM_FUNCTION(daBarDesk_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__10cCcD_GSttsFv.s"
 }
@@ -317,7 +376,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daBarDesk_HIO_cFv) {
+asm daBarDesk_HIO_c::~daBarDesk_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__dt__15daBarDesk_HIO_cFv.s"
 }
@@ -328,7 +387,7 @@ ASM_FUNCTION(__dt__15daBarDesk_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_barDesk_cpp) {
+extern "C" asm void __sinit_d_a_obj_barDesk_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_barDesk/d_a_obj_barDesk/__sinit_d_a_obj_barDesk_cpp.s"
 }

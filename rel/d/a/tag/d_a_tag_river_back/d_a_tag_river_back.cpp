@@ -6,23 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagRiverBack_c;
+
+struct daTagRiverBack_c {
+	void Create();
+	void create();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__16daTagRiverBack_cFv();
-extern "C" extern void create__16daTagRiverBack_cFv();
-extern "C" extern void execute__16daTagRiverBack_cFv();
-extern "C" extern void event_proc_call__16daTagRiverBack_cFv();
-extern "C" extern void actionWait__16daTagRiverBack_cFv();
-extern "C" extern void actionOrderEvent__16daTagRiverBack_cFv();
-extern "C" extern void actionEvent__16daTagRiverBack_cFv();
-extern "C" extern void actionDead__16daTagRiverBack_cFv();
-extern "C" extern void demoProc__16daTagRiverBack_cFv();
-extern "C" extern void _delete__16daTagRiverBack_cFv();
-extern "C" extern void daTagRiverBack_Execute__FP16daTagRiverBack_c();
-extern "C" extern void daTagRiverBack_Delete__FP16daTagRiverBack_c();
-extern "C" extern void daTagRiverBack_Create__FP16daTagRiverBack_c();
-extern "C" extern void func_80D5F920();
+void daTagRiverBack_Execute(daTagRiverBack_c*);
+void daTagRiverBack_Delete(daTagRiverBack_c*);
+void daTagRiverBack_Create(daTagRiverBack_c*);
+extern "C" void func_80D5F920();
+
+extern "C" void Create__16daTagRiverBack_cFv();
+extern "C" void create__16daTagRiverBack_cFv();
+extern "C" void execute__16daTagRiverBack_cFv();
+extern "C" void event_proc_call__16daTagRiverBack_cFv();
+extern "C" void actionWait__16daTagRiverBack_cFv();
+extern "C" void actionOrderEvent__16daTagRiverBack_cFv();
+extern "C" void actionEvent__16daTagRiverBack_cFv();
+extern "C" void actionDead__16daTagRiverBack_cFv();
+extern "C" void demoProc__16daTagRiverBack_cFv();
+extern "C" void _delete__16daTagRiverBack_cFv();
+extern "C" void daTagRiverBack_Execute__FP16daTagRiverBack_c();
+extern "C" void daTagRiverBack_Delete__FP16daTagRiverBack_c();
+extern "C" void daTagRiverBack_Create__FP16daTagRiverBack_c();
+extern "C" void func_80D5F920();
 SECTION_RODATA extern const u32 lit_3813;
 SECTION_RODATA extern const u32 lit_3814;
 SECTION_RODATA extern const u8 lit_3815[4];
@@ -46,7 +70,9 @@ SECTION_DATA extern u8 g_profile_Tag_RiverBack[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -56,7 +82,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/Create__16daTagRiverBack_cFv.s"
 }
@@ -67,7 +93,7 @@ ASM_FUNCTION(Create__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/func_80D5F360.s"
 }
@@ -78,7 +104,7 @@ ASM_FUNCTION(create__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/execute__16daTagRiverBack_cFv.s"
 }
@@ -89,7 +115,7 @@ ASM_FUNCTION(execute__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/event_proc_call__16daTagRiverBack_cFv.s"
 }
@@ -100,7 +126,7 @@ ASM_FUNCTION(event_proc_call__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/actionWait__16daTagRiverBack_cFv.s"
 }
@@ -111,7 +137,7 @@ ASM_FUNCTION(actionWait__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/actionOrderEvent__16daTagRiverBack_cFv.s"
 }
@@ -122,7 +148,7 @@ ASM_FUNCTION(actionOrderEvent__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/actionEvent__16daTagRiverBack_cFv.s"
 }
@@ -130,21 +156,16 @@ ASM_FUNCTION(actionEvent__16daTagRiverBack_cFv) {
 
 
 /* 80D5F70C-80D5F710 0004+00 .text      actionDead__16daTagRiverBack_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__16daTagRiverBack_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/actionDead__16daTagRiverBack_cFv.s"
+void daTagRiverBack_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D5F710-80D5F88C 017C+00 .text      demoProc__16daTagRiverBack_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/demoProc__16daTagRiverBack_cFv.s"
 }
@@ -155,7 +176,7 @@ ASM_FUNCTION(demoProc__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__16daTagRiverBack_cFv) {
+asm void daTagRiverBack_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/_delete__16daTagRiverBack_cFv.s"
 }
@@ -166,7 +187,7 @@ ASM_FUNCTION(_delete__16daTagRiverBack_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRiverBack_Execute__FP16daTagRiverBack_c) {
+asm void daTagRiverBack_Execute(daTagRiverBack_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Execute__FP16daTagRiverBack_c.s"
 }
@@ -177,7 +198,7 @@ ASM_FUNCTION(daTagRiverBack_Execute__FP16daTagRiverBack_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRiverBack_Delete__FP16daTagRiverBack_c) {
+asm void daTagRiverBack_Delete(daTagRiverBack_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Delete__FP16daTagRiverBack_c.s"
 }
@@ -188,7 +209,7 @@ ASM_FUNCTION(daTagRiverBack_Delete__FP16daTagRiverBack_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRiverBack_Create__FP16daTagRiverBack_c) {
+asm void daTagRiverBack_Create(daTagRiverBack_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Create__FP16daTagRiverBack_c.s"
 }
@@ -199,7 +220,7 @@ ASM_FUNCTION(daTagRiverBack_Create__FP16daTagRiverBack_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D5F920) {
+extern "C" asm void func_80D5F920() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/func_80D5F920.s"
 }

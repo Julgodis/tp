@@ -6,37 +6,85 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daMagLift_c;
+struct fopAc_ac_c;
+
+struct daMagLift_HIO_c {
+	daMagLift_HIO_c();
+	~daMagLift_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daMagLift_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveLift();
+	void modeAcc();
+	void init_modeMove();
+	void modeMove();
+	void init_modeBrk();
+	void modeBrk();
+	void init_modeWaitInit();
+	void modeWaitInit();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveWait();
+	void modeMoveWait();
+	void modeDead();
+	void setNextPoint();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daMagLift_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daMagLift_cFv();
-extern "C" extern void CreateHeap__11daMagLift_cFv();
-extern "C" extern void create__11daMagLift_cFv();
-extern "C" extern void Execute__11daMagLift_cFPPA3_A4_f();
-extern "C" extern void moveLift__11daMagLift_cFv();
-extern "C" extern void modeAcc__11daMagLift_cFv();
-extern "C" extern void init_modeMove__11daMagLift_cFv();
-extern "C" extern void modeMove__11daMagLift_cFv();
-extern "C" extern void init_modeBrk__11daMagLift_cFv();
-extern "C" extern void modeBrk__11daMagLift_cFv();
-extern "C" extern void init_modeWaitInit__11daMagLift_cFv();
-extern "C" extern void modeWaitInit__11daMagLift_cFv();
-extern "C" extern void init_modeWait__11daMagLift_cFv();
-extern "C" extern void modeWait__11daMagLift_cFv();
-extern "C" extern void init_modeMoveWait__11daMagLift_cFv();
-extern "C" extern void modeMoveWait__11daMagLift_cFv();
-extern "C" extern void modeDead__11daMagLift_cFv();
-extern "C" extern void setNextPoint__11daMagLift_cFv();
-extern "C" extern void Draw__11daMagLift_cFv();
-extern "C" extern void Delete__11daMagLift_cFv();
-extern "C" extern void daMagLift_Draw__FP11daMagLift_c();
-extern "C" extern void daMagLift_Execute__FP11daMagLift_c();
-extern "C" extern void daMagLift_Delete__FP11daMagLift_c();
-extern "C" extern void daMagLift_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__15daMagLift_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_magLift_cpp();
+extern "C" void Execute__11daMagLift_cFPPA3_A4_f();
+void daMagLift_Draw(daMagLift_c*);
+void daMagLift_Execute(daMagLift_c*);
+void daMagLift_Delete(daMagLift_c*);
+void daMagLift_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_magLift_cpp();
+
+extern "C" void __ct__15daMagLift_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daMagLift_cFv();
+extern "C" void CreateHeap__11daMagLift_cFv();
+extern "C" void create__11daMagLift_cFv();
+extern "C" void Execute__11daMagLift_cFPPA3_A4_f();
+extern "C" void moveLift__11daMagLift_cFv();
+extern "C" void modeAcc__11daMagLift_cFv();
+extern "C" void init_modeMove__11daMagLift_cFv();
+extern "C" void modeMove__11daMagLift_cFv();
+extern "C" void init_modeBrk__11daMagLift_cFv();
+extern "C" void modeBrk__11daMagLift_cFv();
+extern "C" void init_modeWaitInit__11daMagLift_cFv();
+extern "C" void modeWaitInit__11daMagLift_cFv();
+extern "C" void init_modeWait__11daMagLift_cFv();
+extern "C" void modeWait__11daMagLift_cFv();
+extern "C" void init_modeMoveWait__11daMagLift_cFv();
+extern "C" void modeMoveWait__11daMagLift_cFv();
+extern "C" void modeDead__11daMagLift_cFv();
+extern "C" void setNextPoint__11daMagLift_cFv();
+extern "C" void Draw__11daMagLift_cFv();
+extern "C" void Delete__11daMagLift_cFv();
+extern "C" void daMagLift_Draw__FP11daMagLift_c();
+extern "C" void daMagLift_Execute__FP11daMagLift_c();
+extern "C" void daMagLift_Delete__FP11daMagLift_c();
+extern "C" void daMagLift_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daMagLift_HIO_cFv();
+extern "C" void __sinit_d_a_obj_magLift_cpp();
 SECTION_RODATA extern const u8 mSpeed__11daMagLift_c[64];
 SECTION_RODATA extern const u8 lit_3718[4];
 SECTION_RODATA extern const u32 lit_3759;
@@ -73,8 +121,11 @@ SECTION_BSS extern u8 data_80C8E85C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -84,7 +135,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daMagLift_HIO_cFv) {
+asm daMagLift_HIO_c::daMagLift_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/__ct__15daMagLift_HIO_cFv.s"
 }
@@ -95,7 +146,7 @@ ASM_FUNCTION(__ct__15daMagLift_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -106,7 +157,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daMagLift_cFv) {
+asm void daMagLift_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/setBaseMtx__11daMagLift_cFv.s"
 }
@@ -117,7 +168,7 @@ ASM_FUNCTION(setBaseMtx__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daMagLift_cFv) {
+asm void daMagLift_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/CreateHeap__11daMagLift_cFv.s"
 }
@@ -128,7 +179,7 @@ ASM_FUNCTION(CreateHeap__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daMagLift_cFv) {
+asm void daMagLift_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/create__11daMagLift_cFv.s"
 }
@@ -139,7 +190,7 @@ ASM_FUNCTION(create__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daMagLift_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daMagLift_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/Execute__11daMagLift_cFPPA3_A4_f.s"
 }
@@ -150,7 +201,7 @@ ASM_FUNCTION(Execute__11daMagLift_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLift__11daMagLift_cFv) {
+asm void daMagLift_c::moveLift() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/moveLift__11daMagLift_cFv.s"
 }
@@ -161,7 +212,7 @@ ASM_FUNCTION(moveLift__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeAcc__11daMagLift_cFv) {
+asm void daMagLift_c::modeAcc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeAcc__11daMagLift_cFv.s"
 }
@@ -172,7 +223,7 @@ ASM_FUNCTION(modeAcc__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__11daMagLift_cFv) {
+asm void daMagLift_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/init_modeMove__11daMagLift_cFv.s"
 }
@@ -183,7 +234,7 @@ ASM_FUNCTION(init_modeMove__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daMagLift_cFv) {
+asm void daMagLift_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeMove__11daMagLift_cFv.s"
 }
@@ -194,7 +245,7 @@ ASM_FUNCTION(modeMove__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBrk__11daMagLift_cFv) {
+asm void daMagLift_c::init_modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/init_modeBrk__11daMagLift_cFv.s"
 }
@@ -205,7 +256,7 @@ ASM_FUNCTION(init_modeBrk__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBrk__11daMagLift_cFv) {
+asm void daMagLift_c::modeBrk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeBrk__11daMagLift_cFv.s"
 }
@@ -216,7 +267,7 @@ ASM_FUNCTION(modeBrk__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitInit__11daMagLift_cFv) {
+asm void daMagLift_c::init_modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/init_modeWaitInit__11daMagLift_cFv.s"
 }
@@ -227,7 +278,7 @@ ASM_FUNCTION(init_modeWaitInit__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitInit__11daMagLift_cFv) {
+asm void daMagLift_c::modeWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeWaitInit__11daMagLift_cFv.s"
 }
@@ -238,7 +289,7 @@ ASM_FUNCTION(modeWaitInit__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daMagLift_cFv) {
+asm void daMagLift_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/init_modeWait__11daMagLift_cFv.s"
 }
@@ -249,7 +300,7 @@ ASM_FUNCTION(init_modeWait__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daMagLift_cFv) {
+asm void daMagLift_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeWait__11daMagLift_cFv.s"
 }
@@ -260,7 +311,7 @@ ASM_FUNCTION(modeWait__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveWait__11daMagLift_cFv) {
+asm void daMagLift_c::init_modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/init_modeMoveWait__11daMagLift_cFv.s"
 }
@@ -271,7 +322,7 @@ ASM_FUNCTION(init_modeMoveWait__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveWait__11daMagLift_cFv) {
+asm void daMagLift_c::modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeMoveWait__11daMagLift_cFv.s"
 }
@@ -279,21 +330,16 @@ ASM_FUNCTION(modeMoveWait__11daMagLift_cFv) {
 
 
 /* 80C8E318-80C8E31C 0004+00 .text      modeDead__11daMagLift_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeDead__11daMagLift_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/modeDead__11daMagLift_cFv.s"
+void daMagLift_c::modeDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C8E31C-80C8E450 0134+00 .text      setNextPoint__11daMagLift_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPoint__11daMagLift_cFv) {
+asm void daMagLift_c::setNextPoint() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/setNextPoint__11daMagLift_cFv.s"
 }
@@ -304,7 +350,7 @@ ASM_FUNCTION(setNextPoint__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daMagLift_cFv) {
+asm void daMagLift_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/Draw__11daMagLift_cFv.s"
 }
@@ -315,7 +361,7 @@ ASM_FUNCTION(Draw__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daMagLift_cFv) {
+asm void daMagLift_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/Delete__11daMagLift_cFv.s"
 }
@@ -326,7 +372,7 @@ ASM_FUNCTION(Delete__11daMagLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLift_Draw__FP11daMagLift_c) {
+asm void daMagLift_Draw(daMagLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Draw__FP11daMagLift_c.s"
 }
@@ -337,7 +383,7 @@ ASM_FUNCTION(daMagLift_Draw__FP11daMagLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLift_Execute__FP11daMagLift_c) {
+asm void daMagLift_Execute(daMagLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Execute__FP11daMagLift_c.s"
 }
@@ -348,7 +394,7 @@ ASM_FUNCTION(daMagLift_Execute__FP11daMagLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLift_Delete__FP11daMagLift_c) {
+asm void daMagLift_Delete(daMagLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Delete__FP11daMagLift_c.s"
 }
@@ -359,7 +405,7 @@ ASM_FUNCTION(daMagLift_Delete__FP11daMagLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMagLift_Create__FP10fopAc_ac_c) {
+asm void daMagLift_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/daMagLift_Create__FP10fopAc_ac_c.s"
 }
@@ -370,7 +416,7 @@ ASM_FUNCTION(daMagLift_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daMagLift_HIO_cFv) {
+asm daMagLift_HIO_c::~daMagLift_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/__dt__15daMagLift_HIO_cFv.s"
 }
@@ -381,7 +427,7 @@ ASM_FUNCTION(__dt__15daMagLift_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_magLift_cpp) {
+extern "C" asm void __sinit_d_a_obj_magLift_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magLift/d_a_obj_magLift/__sinit_d_a_obj_magLift_cpp.s"
 }

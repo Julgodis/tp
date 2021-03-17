@@ -6,28 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjNameplate_c;
+
+struct daObjNameplate_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void initCcSphere();
+	void setCcSphere();
+	void calcAngle();
+	void calcSpring();
+	void checkHitAngle();
+	void messageProc();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__16daObjNameplate_cFv();
-extern "C" extern void initBaseMtx__16daObjNameplate_cFv();
-extern "C" extern void setBaseMtx__16daObjNameplate_cFv();
-extern "C" extern void initCcSphere__16daObjNameplate_cFv();
-extern "C" extern void setCcSphere__16daObjNameplate_cFv();
-extern "C" extern void calcAngle__16daObjNameplate_cFv();
-extern "C" extern void calcSpring__16daObjNameplate_cFv();
-extern "C" extern void checkHitAngle__16daObjNameplate_cFv();
-extern "C" extern void messageProc__16daObjNameplate_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjNameplate_Draw__FP16daObjNameplate_c();
-extern "C" extern void daObjNameplate_Execute__FP16daObjNameplate_c();
-extern "C" extern void daObjNameplate_IsDelete__FP16daObjNameplate_c();
-extern "C" extern void daObjNameplate_Delete__FP16daObjNameplate_c();
-extern "C" extern void daObjNameplate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjNameplate_Draw(daObjNameplate_c*);
+void daObjNameplate_Execute(daObjNameplate_c*);
+bool daObjNameplate_IsDelete(daObjNameplate_c*);
+void daObjNameplate_Delete(daObjNameplate_c*);
+void daObjNameplate_Create(fopAc_ac_c*);
+
+extern "C" void create_init__16daObjNameplate_cFv();
+extern "C" void initBaseMtx__16daObjNameplate_cFv();
+extern "C" void setBaseMtx__16daObjNameplate_cFv();
+extern "C" void initCcSphere__16daObjNameplate_cFv();
+extern "C" void setCcSphere__16daObjNameplate_cFv();
+extern "C" void calcAngle__16daObjNameplate_cFv();
+extern "C" void calcSpring__16daObjNameplate_cFv();
+extern "C" void checkHitAngle__16daObjNameplate_cFv();
+extern "C" void messageProc__16daObjNameplate_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjNameplate_Draw__FP16daObjNameplate_c();
+extern "C" void daObjNameplate_Execute__FP16daObjNameplate_c();
+extern "C" bool daObjNameplate_IsDelete__FP16daObjNameplate_c();
+extern "C" void daObjNameplate_Delete__FP16daObjNameplate_c();
+extern "C" void daObjNameplate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__16daObjNameplate_c[32];
 SECTION_RODATA extern const u32 lit_3659;
 SECTION_RODATA extern const u32 lit_3660;
@@ -55,7 +100,9 @@ SECTION_DATA extern void*const __vt__8cM3dGSph[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +112,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/create_init__16daObjNameplate_cFv.s"
 }
@@ -76,7 +123,7 @@ ASM_FUNCTION(create_init__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/initBaseMtx__16daObjNameplate_cFv.s"
 }
@@ -87,7 +134,7 @@ ASM_FUNCTION(initBaseMtx__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/setBaseMtx__16daObjNameplate_cFv.s"
 }
@@ -98,7 +145,7 @@ ASM_FUNCTION(setBaseMtx__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcSphere__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::initCcSphere() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/initCcSphere__16daObjNameplate_cFv.s"
 }
@@ -109,7 +156,7 @@ ASM_FUNCTION(initCcSphere__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcSphere__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::setCcSphere() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/setCcSphere__16daObjNameplate_cFv.s"
 }
@@ -120,7 +167,7 @@ ASM_FUNCTION(setCcSphere__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAngle__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::calcAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/calcAngle__16daObjNameplate_cFv.s"
 }
@@ -131,7 +178,7 @@ ASM_FUNCTION(calcAngle__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcSpring__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::calcSpring() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/calcSpring__16daObjNameplate_cFv.s"
 }
@@ -142,7 +189,7 @@ ASM_FUNCTION(calcSpring__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHitAngle__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::checkHitAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/checkHitAngle__16daObjNameplate_cFv.s"
 }
@@ -153,7 +200,7 @@ ASM_FUNCTION(checkHitAngle__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(messageProc__16daObjNameplate_cFv) {
+asm void daObjNameplate_c::messageProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/messageProc__16daObjNameplate_cFv.s"
 }
@@ -164,7 +211,7 @@ ASM_FUNCTION(messageProc__16daObjNameplate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -175,7 +222,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNameplate_Draw__FP16daObjNameplate_c) {
+asm void daObjNameplate_Draw(daObjNameplate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Draw__FP16daObjNameplate_c.s"
 }
@@ -186,7 +233,7 @@ ASM_FUNCTION(daObjNameplate_Draw__FP16daObjNameplate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNameplate_Execute__FP16daObjNameplate_c) {
+asm void daObjNameplate_Execute(daObjNameplate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Execute__FP16daObjNameplate_c.s"
 }
@@ -194,21 +241,16 @@ ASM_FUNCTION(daObjNameplate_Execute__FP16daObjNameplate_c) {
 
 
 /* 80594AB4-80594ABC 0008+00 .text      daObjNameplate_IsDelete__FP16daObjNameplate_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjNameplate_IsDelete__FP16daObjNameplate_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_IsDelete__FP16daObjNameplate_c.s"
+bool daObjNameplate_IsDelete(daObjNameplate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80594ABC-80594BF8 013C+00 .text      daObjNameplate_Delete__FP16daObjNameplate_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNameplate_Delete__FP16daObjNameplate_c) {
+asm void daObjNameplate_Delete(daObjNameplate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Delete__FP16daObjNameplate_c.s"
 }
@@ -219,7 +261,7 @@ ASM_FUNCTION(daObjNameplate_Delete__FP16daObjNameplate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjNameplate_Create__FP10fopAc_ac_c) {
+asm void daObjNameplate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Create__FP10fopAc_ac_c.s"
 }
@@ -230,7 +272,7 @@ ASM_FUNCTION(daObjNameplate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/__dt__8cM3dGSphFv.s"
 }
@@ -241,7 +283,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/__dt__8cM3dGAabFv.s"
 }
@@ -252,7 +294,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/__dt__10dCcD_GSttsFv.s"
 }
@@ -263,7 +305,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/__dt__10cCcD_GSttsFv.s"
 }

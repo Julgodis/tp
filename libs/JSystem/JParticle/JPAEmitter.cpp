@@ -6,20 +6,105 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPAEmitterCallBack (JPAEmitterCallBack) False/False
+/* top-level dependencies (begin JPAEmitterCallBack) */
+/* top-level dependencies (end JPAEmitterCallBack) */
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
+// build JPABaseEmitter (JPABaseEmitter) False/False
+// build JPAEmitterManager (JPAEmitterManager) False/False
+/* top-level dependencies (begin JPAEmitterManager) */
+/* top-level dependencies (end JPAEmitterManager) */
+struct JPAEmitterManager {
+};
+
+// build JPAResource (JPAResource) False/False
+/* top-level dependencies (begin JPAResource) */
+/* top-level dependencies (end JPAResource) */
+struct JPAResource {
+};
+
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
+// build JPABaseParticle (JPABaseParticle) False/False
+// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
+/* top-level dependencies (begin JPAEmitterWorkData) */
+/* top-level dependencies (end JPAEmitterWorkData) */
+struct JPAEmitterWorkData {
+};
+
+/* top-level dependencies (begin JPABaseParticle) */
+// outer dependency: JPAEmitterWorkData
+/* top-level dependencies (end JPABaseParticle) */
+struct JPABaseParticle {
+	// JPAEmitterWorkData
+	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
+	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
+};
+
+/* top-level dependencies (begin JPABaseEmitter) */
+// outer dependency: JPAEmitterManager
+// outer dependency: JPAResource
+// outer dependency: _GXTexMapID
+// outer dependency: JPABaseParticle
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+	// JPAEmitterManager
+	// JPAResource
+	// _GXTexMapID
+	// JPABaseParticle
+	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
+	/* 8027EA40 */ void createParticle();
+	/* 8027EB60 */ void createChild(JPABaseParticle*);
+	/* 8027EC60 */ void deleteAllParticle();
+	/* 8027EDD4 */ void processTillStartFrame();
+	/* 8027EE14 */ void processTermination();
+	/* 8027EF30 */ void getCurrentCreateNumber() const;
+	/* 8027EF40 */ void getDrawCount() const;
+	/* 8027EF50 */ void loadTexture(char, _GXTexMapID);
+};
+
+// build JPAEmitterManager (JPAEmitterManager) True/True
+// build JPAResource (JPAResource) True/True
+// build JPABaseParticle (JPABaseParticle) True/True
+// build _GXTexMapID (_GXTexMapID) True/True
+// build JPAEmitterWorkData (JPAEmitterWorkData) True/True
+// build JUTTexture (JUTTexture) False/False
+// build _GXTexMapID (_GXTexMapID) True/True
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: _GXTexMapID
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// _GXTexMapID
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__18JPAEmitterCallBackFv();
-extern "C" extern void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
-extern "C" extern void createParticle__14JPABaseEmitterFv();
-extern "C" extern void createChild__14JPABaseEmitterFP15JPABaseParticle();
-extern "C" extern void deleteAllParticle__14JPABaseEmitterFv();
-extern "C" extern void processTillStartFrame__14JPABaseEmitterFv();
-extern "C" extern void processTermination__14JPABaseEmitterFv();
-extern "C" extern void func_8027EEB0();
-extern "C" extern void getCurrentCreateNumber__14JPABaseEmitterCFv();
-extern "C" extern void getDrawCount__14JPABaseEmitterCFv();
-extern "C" extern void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
+extern "C" void func_8027EEB0();
+
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
+extern "C" void createParticle__14JPABaseEmitterFv();
+extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void processTillStartFrame__14JPABaseEmitterFv();
+extern "C" void processTermination__14JPABaseEmitterFv();
+extern "C" void func_8027EEB0();
+extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv();
+extern "C" void getDrawCount__14JPABaseEmitterCFv();
+extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
 SECTION_SDATA2 extern f32 JPAEmitter__lit_2440;
 SECTION_SDATA2 extern u8 JPAEmitter__lit_2441[4];
 SECTION_SDATA2 extern f32 lit_2442;
@@ -30,14 +115,20 @@ SECTION_SDATA2 extern f32 lit_2444;
 // External References:
 // 
 
-extern "C" extern void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" extern void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void __dl__FPv();
-extern "C" extern void load__10JUTTextureF11_GXTexMapID();
-extern "C" extern void PSMTXIdentity();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXScale();
-extern "C" extern void PSMTXMultVec();
+void operator delete(void*);
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+
+extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void __dl__FPv();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
 SECTION_DATA extern void*const __vt__18JPAEmitterCallBack[7];
 SECTION_SDATA extern u32 __float_epsilon;
 
@@ -45,11 +136,11 @@ SECTION_SDATA extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027E6A4-8027E6EC 0048+00 .text      __dt__18JPAEmitterCallBackFv                                 */
+/* 8027E6A4-8027E6EC 0048+00 rc=14 efc=14 .text      __dt__18JPAEmitterCallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18JPAEmitterCallBackFv) {
+asm JPAEmitterCallBack::~JPAEmitterCallBack() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/__dt__18JPAEmitterCallBackFv.s"
 }
@@ -57,132 +148,131 @@ ASM_FUNCTION(__dt__18JPAEmitterCallBackFv) {
 
 
 /* ############################################################################################## */
-/* 80455370-80455374 0004+00 .sdata2    @2440                                                        */
+/* 80455370-80455374 0004+00 rc=1 efc=0 .sdata2    @2440                                                        */
 f32 JPAEmitter__lit_2440 = 32.0f;
 
-/* 80455374-80455378 0004+00 .sdata2    @2441                                                        */
+/* 80455374-80455378 0004+00 rc=1 efc=0 .sdata2    @2441                                                        */
 u8 JPAEmitter__lit_2441[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455378-8045537C 0004+00 .sdata2    @2442                                                        */
+/* 80455378-8045537C 0004+00 rc=1 efc=0 .sdata2    @2442                                                        */
 f32 lit_2442 = 0.5f;
 
-/* 8045537C-80455380 0004+00 .sdata2    @2443                                                        */
+/* 8045537C-80455380 0004+00 rc=1 efc=0 .sdata2    @2443                                                        */
 f32 lit_2443 = 3.0f;
 
-/* 80455380-80455388 0004+04 .sdata2    @2444                                                        */
+/* 80455380-80455388 0004+04 rc=1 efc=0 .sdata2    @2444                                                        */
 f32 lit_2444 = 1.0f;
 /* padding 4 bytes */
 
-/* 8027E6EC-8027EA40 0354+00 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    */
+/* 8027E6EC-8027EA40 0354+00 rc=1 efc=1 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource) {
+asm void JPABaseEmitter::init(JPAEmitterManager* field_0, JPAResource* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource.s"
 }
 #pragma pop
 
 
-/* 8027EA40-8027EB60 0120+00 .text      createParticle__14JPABaseEmitterFv                           */
+/* 8027EA40-8027EB60 0120+00 rc=3 efc=3 .text      createParticle__14JPABaseEmitterFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createParticle__14JPABaseEmitterFv) {
+asm void JPABaseEmitter::createParticle() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/createParticle__14JPABaseEmitterFv.s"
 }
 #pragma pop
 
 
-/* 8027EB60-8027EC60 0100+00 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             */
+/* 8027EB60-8027EC60 0100+00 rc=1 efc=1 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createChild__14JPABaseEmitterFP15JPABaseParticle) {
+asm void JPABaseEmitter::createChild(JPABaseParticle* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/createChild__14JPABaseEmitterFP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027EC60-8027EDD4 0174+00 .text      deleteAllParticle__14JPABaseEmitterFv                        */
+/* 8027EC60-8027EDD4 0174+00 rc=2 efc=2 .text      deleteAllParticle__14JPABaseEmitterFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteAllParticle__14JPABaseEmitterFv) {
+asm void JPABaseEmitter::deleteAllParticle() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/deleteAllParticle__14JPABaseEmitterFv.s"
 }
 #pragma pop
 
 
-/* 8027EDD4-8027EE14 0040+00 .text      processTillStartFrame__14JPABaseEmitterFv                    */
+/* 8027EDD4-8027EE14 0040+00 rc=1 efc=1 .text      processTillStartFrame__14JPABaseEmitterFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(processTillStartFrame__14JPABaseEmitterFv) {
+asm void JPABaseEmitter::processTillStartFrame() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/processTillStartFrame__14JPABaseEmitterFv.s"
 }
 #pragma pop
 
 
-/* 8027EE14-8027EEB0 009C+00 .text      processTermination__14JPABaseEmitterFv                       */
+/* 8027EE14-8027EEB0 009C+00 rc=1 efc=1 .text      processTermination__14JPABaseEmitterFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(processTermination__14JPABaseEmitterFv) {
+asm void JPABaseEmitter::processTermination() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/processTermination__14JPABaseEmitterFv.s"
 }
 #pragma pop
 
 
-/* 8027EEB0-8027EF30 0080+00 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
+/* 8027EEB0-8027EF30 0080+00 rc=1 efc=1 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8027EEB0) {
+extern "C" asm void func_8027EEB0() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/func_8027EEB0.s"
 }
 #pragma pop
 
 
-/* 8027EF30-8027EF40 0010+00 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  */
+/* 8027EF30-8027EF40 0010+00 rc=1 efc=1 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCurrentCreateNumber__14JPABaseEmitterCFv) {
+asm void JPABaseEmitter::getCurrentCreateNumber() const {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/getCurrentCreateNumber__14JPABaseEmitterCFv.s"
 }
 #pragma pop
 
 
-/* 8027EF40-8027EF50 0010+00 .text      getDrawCount__14JPABaseEmitterCFv                            */
+/* 8027EF40-8027EF50 0010+00 rc=3 efc=3 .text      getDrawCount__14JPABaseEmitterCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDrawCount__14JPABaseEmitterCFv) {
+asm void JPABaseEmitter::getDrawCount() const {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/getDrawCount__14JPABaseEmitterCFv.s"
 }
 #pragma pop
 
 
-/* 8027EF50-8027EFA4 0054+00 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                */
+/* 8027EF50-8027EFA4 0054+00 rc=1 efc=1 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadTexture__14JPABaseEmitterFUc11_GXTexMapID) {
+asm void JPABaseEmitter::loadTexture(char field_0, _GXTexMapID field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/loadTexture__14JPABaseEmitterFUc11_GXTexMapID.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

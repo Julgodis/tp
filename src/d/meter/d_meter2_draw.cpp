@@ -6,105 +6,484 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMeter2Draw_c (dMeter2Draw_c) False/False
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DPane (J2DPane) False/False
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DBasePosition
+// outer dependency: J2DRotateAxis
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DBasePosition
+	// J2DRotateAxis
+	/* 802F666C */ void appendChild(J2DPane*);
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+	/* 802F79A8 */ void getGlbVtx(char) const;
+	/* 802F7FCC */ void animationTransform();
+};
+
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DPane
+	// J2DScreen
+	// JKRExpHeap
+	// JUtility::TColor
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build JUtility (JUtility) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+/* top-level dependencies (begin dMeter2Draw_c) */
+// outer dependency: CPaneMgr
+// outer dependency: JUtility::TColor
+// outer dependency: CPaneMgrAlpha
+// outer dependency: JKRExpHeap
+// outer dependency: J2DAnmColor
+/* top-level dependencies (end dMeter2Draw_c) */
+struct dMeter2Draw_c {
+	// JUtility::TColor
+	// J2DAnmColor
+	// CPaneMgr
+	// CPaneMgrAlpha
+	// JKRExpHeap
+	/* 8020FAB4 */ dMeter2Draw_c(JKRExpHeap*);
+	/* 802102F8 */ ~dMeter2Draw_c();
+	/* 80210FB0 */ void init();
+	/* 8021135C */ void exec(u32);
+	/* 8021151C */ void draw();
+	/* 80211BEC */ void initLife();
+	/* 80211E64 */ void initMagic();
+	/* 80212190 */ void initLightDrop();
+	/* 80212404 */ void initRupeeKey();
+	/* 802126E4 */ void initButton();
+	/* 8021350C */ void initButtonCross();
+	/* 80213CEC */ void playPikariBckAnimation(f32);
+	/* 80213D6C */ void setPikariBpkAnimation(J2DAnmColor*);
+	/* 80213E3C */ void playPikariBpkAnimation(f32);
+	/* 80213E94 */ void playOxygenBpkAnimation(J2DAnmColor*);
+	/* 80213FF0 */ void drawPikari(CPaneMgr*, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 8021462C */ void drawPikariHakusha(f32, f32, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+	/* 802147CC */ void changeTextureLife(s32, bool, char);
+	/* 802149F4 */ void drawLife(s16, s16, f32, f32);
+	/* 80214C20 */ void setAlphaLifeChange(bool);
+	/* 80214DF4 */ void setAlphaLifeAnimeMin();
+	/* 80214E54 */ void setAlphaLifeAnimeMax();
+	/* 80214EB4 */ void drawKanteraScreen(char);
+	/* 80215290 */ void drawMagic(s16, s16, f32, f32);
+	/* 80215380 */ void setAlphaMagicChange(bool);
+	/* 802154A8 */ void drawKantera(s32, s32, f32, f32);
+	/* 802155B8 */ void setAlphaKanteraChange(bool);
+	/* 802156E0 */ void setAlphaKanteraAnimeMin();
+	/* 8021575C */ void setAlphaKanteraAnimeMax();
+	/* 802157E0 */ void drawOxygen(s32, s32, f32, f32);
+	/* 802158F0 */ void setAlphaOxygenChange(bool);
+	/* 80215A18 */ void setAlphaOxygenAnimeMin();
+	/* 80215A94 */ void setAlphaOxygenAnimeMax();
+	/* 80215B18 */ void drawLightDrop(char, char, f32, f32, f32, f32, char);
+	/* 80215DA4 */ void setAlphaLightDropChange(bool);
+	/* 80215DA8 */ void getNowLightDropRateCalc();
+	/* 80215E40 */ void setAlphaLightDropAnimeMin();
+	/* 80215F88 */ void setAlphaLightDropAnimeMax();
+	/* 8021632C */ void drawRupee(s16);
+	/* 80216684 */ void setAlphaRupeeChange(bool);
+	/* 802168D0 */ void setAlphaRupeeAnimeMin();
+	/* 80216990 */ void setAlphaRupeeAnimeMax();
+	/* 80216A40 */ void drawKey(s16);
+	/* 80216B28 */ void setAlphaKeyChange(bool);
+	/* 80216CA8 */ void setAlphaKeyAnimeMin();
+	/* 80216D2C */ void setAlphaKeyAnimeMax();
+	/* 80216DAC */ void drawButtonA(char, f32, f32, f32, f32, f32, bool, bool);
+	/* 802170E4 */ void drawButtonB(char, bool, f32, f32, f32, f32, f32, bool);
+	/* 8021764C */ void drawButtonR(char, char, bool, bool);
+	/* 802176EC */ void drawButtonZ(char);
+	/* 80217904 */ void drawButton3D(char);
+	/* 80217954 */ void drawButtonC(char, bool);
+	/* 802179C0 */ void drawButtonS(char);
+	/* 80217A10 */ void drawButtonBin(char);
+	/* 80217AB4 */ void drawButtonXY(s32, char, char, bool, bool);
+	/* 80218238 */ void getButtonCrossParentInitTransY();
+	/* 80218254 */ void drawButtonCross(f32, f32);
+	/* 80218338 */ void setAlphaButtonCrossAnimeMin();
+	/* 802183A8 */ void setAlphaButtonCrossAnimeMax();
+	/* 80218448 */ void setAlphaButtonCrossItemAnimeMin();
+	/* 80218524 */ void setAlphaButtonCrossItemAnimeMax();
+	/* 802185E8 */ void setAlphaButtonCrossMapAnimeMin();
+	/* 802186C4 */ void setAlphaButtonCrossMapAnimeMax();
+	/* 80218788 */ void setAlphaButtonChange(bool);
+	/* 8021901C */ void setAlphaButtonAnimeMin();
+	/* 802190A8 */ void setAlphaButtonAnimeMax();
+	/* 80219174 */ void setAlphaButtonAAnimeMin();
+	/* 80219258 */ void setAlphaButtonAAnimeMax();
+	/* 80219324 */ void setAlphaButtonBAnimeMin();
+	/* 80219474 */ void setAlphaButtonBAnimeMax();
+	/* 802195A4 */ void setButtonIconAAlpha(char, u32, bool);
+	/* 80219788 */ void setButtonIconBAlpha(char, u32, bool);
+	/* 80219A84 */ void setButtonIconMidonaAlpha(u32);
+	/* 80219E98 */ void setButtonIconAlpha(s32, char, u32, bool);
+	/* 8021A29C */ void getNumberTexture(s32);
+	/* 8021A2F4 */ void getActionString(char, char, char*);
+	/* 8021A468 */ void changeTextureItemB(char);
+	/* 8021A71C */ void changeTextureItemXY(s32, char);
+	/* 8021A9C8 */ void setAlphaAnimeMin(CPaneMgrAlpha*, s16);
+	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
+	/* 8021AB84 */ void setItemNum(char, char, char);
+	/* 8021AEC8 */ void drawItemNum(char, f32);
+	/* 8021AF78 */ void drawKanteraMeter(char, f32);
+	/* 8021B0C8 */ void isButtonVisible();
+	/* 8021B104 */ void setItemParamX(char);
+	/* 8021B364 */ void setItemParamY(char);
+	/* 8021B5B0 */ void setItemParamZ(char);
+	/* 8021B810 */ void setItemParamB(char);
+	/* 8021BB6C */ void getFishingType();
+	/* 8021BBB4 */ void getCanoeFishing();
+	/* 8021BC24 */ void getCameraSubject();
+	/* 8021BC54 */ void getItemSubject();
+	/* 8021BCAC */ void getPlayerSubject();
+	/* 8021BCC0 */ void isBButtonShow(bool);
+	/* 8021BDD0 */ void getButtonTimer();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build CPaneMgr (CPaneMgr) True/True
+// build JUtility (JUtility) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE548 */ void free(void*);
+};
+
+// build dSv_player_item_c (dSv_player_item_c) False/False
+/* top-level dependencies (begin dSv_player_item_c) */
+/* top-level dependencies (end dSv_player_item_c) */
+struct dSv_player_item_c {
+	/* 80033030 */ void getItem(s32, bool) const;
+};
+
+// build dSv_light_drop_c (dSv_light_drop_c) False/False
+/* top-level dependencies (begin dSv_light_drop_c) */
+/* top-level dependencies (end dSv_light_drop_c) */
+struct dSv_light_drop_c {
+	/* 80034340 */ void getLightDropNum(char) const;
+	/* 8003439C */ void isLightDropGetFlag(char) const;
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dKantera_icon_c (dKantera_icon_c) False/False
+/* top-level dependencies (begin dKantera_icon_c) */
+/* top-level dependencies (end dKantera_icon_c) */
+struct dKantera_icon_c {
+	/* 801AE938 */ dKantera_icon_c();
+	/* 801AEB7C */ void setAlphaRate(f32);
+	/* 801AEBA0 */ void setPos(f32, f32);
+	/* 801AEBF4 */ void setScale(f32, f32);
+	/* 801AEC44 */ void setNowGauge(u16, u16);
+};
+
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
+/* top-level dependencies (begin JMSMesgEntry_c) */
+/* top-level dependencies (end JMSMesgEntry_c) */
+struct JMSMesgEntry_c {
+};
+
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: JMSMesgEntry_c
+// outer dependency: J2DPicture
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// JMSMesgEntry_c
+	// J2DPicture
+	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
+	/* 8021C370 */ void getStringKana(u32, char*, JMSMesgEntry_c*);
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+	/* 8021C950 */ void isDirectUseItem(s32);
+	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+};
+
+// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
+// build J2DPicture (J2DPicture) True/True
+// build dMsgObject_c (dMsgObject_c) False/False
+/* top-level dependencies (begin dMsgObject_c) */
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	/* 802370E8 */ void isHowlMessage();
+	/* 8023822C */ void getStatus();
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build J2DPane (J2DPane) True/True
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DRotateAxis (J2DRotateAxis) True/True
+// build J2DBasePosition (J2DBasePosition) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build ResTIMG (ResTIMG) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13dMeter2Draw_cFP10JKRExpHeap();
-extern "C" extern void __dt__13dMeter2Draw_cFv();
-extern "C" extern void init__13dMeter2Draw_cFv();
-extern "C" extern void exec__13dMeter2Draw_cFUl();
-extern "C" extern void draw__13dMeter2Draw_cFv();
-extern "C" extern void initLife__13dMeter2Draw_cFv();
-extern "C" extern void initMagic__13dMeter2Draw_cFv();
-extern "C" extern void initLightDrop__13dMeter2Draw_cFv();
-extern "C" extern void initRupeeKey__13dMeter2Draw_cFv();
-extern "C" extern void initButton__13dMeter2Draw_cFv();
-extern "C" extern void initButtonCross__13dMeter2Draw_cFv();
-extern "C" extern void playPikariBckAnimation__13dMeter2Draw_cFf();
-extern "C" extern void setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
-extern "C" extern void playPikariBpkAnimation__13dMeter2Draw_cFf();
-extern "C" extern void playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
-extern "C" extern void drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" extern void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void changeTextureLife__13dMeter2Draw_cFibUc();
-extern "C" extern void drawLife__13dMeter2Draw_cFssff();
-extern "C" extern void setAlphaLifeChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaLifeAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaLifeAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawKanteraScreen__13dMeter2Draw_cFUc();
-extern "C" extern void drawMagic__13dMeter2Draw_cFssff();
-extern "C" extern void setAlphaMagicChange__13dMeter2Draw_cFb();
-extern "C" extern void drawKantera__13dMeter2Draw_cFllff();
-extern "C" extern void setAlphaKanteraChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawOxygen__13dMeter2Draw_cFllff();
-extern "C" extern void setAlphaOxygenChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawLightDrop__13dMeter2Draw_cFUcUcffffUc();
-extern "C" extern void setAlphaLightDropChange__13dMeter2Draw_cFb();
-extern "C" extern void getNowLightDropRateCalc__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawRupee__13dMeter2Draw_cFs();
-extern "C" extern void setAlphaRupeeChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawKey__13dMeter2Draw_cFs();
-extern "C" extern void setAlphaKeyChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaKeyAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaKeyAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void drawButtonA__13dMeter2Draw_cFUcfffffbb();
-extern "C" extern void drawButtonB__13dMeter2Draw_cFUcbfffffb();
-extern "C" extern void drawButtonR__13dMeter2Draw_cFUcUcbb();
-extern "C" extern void drawButtonZ__13dMeter2Draw_cFUc();
-extern "C" extern void drawButton3D__13dMeter2Draw_cFUc();
-extern "C" extern void drawButtonC__13dMeter2Draw_cFUcb();
-extern "C" extern void drawButtonS__13dMeter2Draw_cFUc();
-extern "C" extern void drawButtonBin__13dMeter2Draw_cFUc();
-extern "C" extern void drawButtonXY__13dMeter2Draw_cFiUcUcbb();
-extern "C" extern void getButtonCrossParentInitTransY__13dMeter2Draw_cFv();
-extern "C" extern void drawButtonCross__13dMeter2Draw_cFff();
-extern "C" extern void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonChange__13dMeter2Draw_cFb();
-extern "C" extern void setAlphaButtonAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv();
-extern "C" extern void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv();
-extern "C" extern void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb();
-extern "C" extern void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb();
-extern "C" extern void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl();
-extern "C" extern void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb();
-extern "C" extern void getNumberTexture__13dMeter2Draw_cFi();
-extern "C" extern void getActionString__13dMeter2Draw_cFUcUcPUc();
-extern "C" extern void changeTextureItemB__13dMeter2Draw_cFUc();
-extern "C" extern void changeTextureItemXY__13dMeter2Draw_cFiUc();
-extern "C" extern void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern "C" extern void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern "C" extern void setItemNum__13dMeter2Draw_cFUcUcUc();
-extern "C" extern void drawItemNum__13dMeter2Draw_cFUcf();
-extern "C" extern void drawKanteraMeter__13dMeter2Draw_cFUcf();
-extern "C" extern void isButtonVisible__13dMeter2Draw_cFv();
-extern "C" extern void setItemParamX__13dMeter2Draw_cFUc();
-extern "C" extern void setItemParamY__13dMeter2Draw_cFUc();
-extern "C" extern void setItemParamZ__13dMeter2Draw_cFUc();
-extern "C" extern void setItemParamB__13dMeter2Draw_cFUc();
-extern "C" extern void getFishingType__13dMeter2Draw_cFv();
-extern "C" extern void getCanoeFishing__13dMeter2Draw_cFv();
-extern "C" extern void getCameraSubject__13dMeter2Draw_cFv();
-extern "C" extern void getItemSubject__13dMeter2Draw_cFv();
-extern "C" extern void getPlayerSubject__13dMeter2Draw_cFv();
-extern "C" extern void isBButtonShow__13dMeter2Draw_cFb();
-extern "C" extern void getButtonTimer__13dMeter2Draw_cFv();
+
+extern "C" void __ct__13dMeter2Draw_cFP10JKRExpHeap();
+extern "C" void __dt__13dMeter2Draw_cFv();
+extern "C" void init__13dMeter2Draw_cFv();
+extern "C" void exec__13dMeter2Draw_cFUl();
+extern "C" void draw__13dMeter2Draw_cFv();
+extern "C" void initLife__13dMeter2Draw_cFv();
+extern "C" void initMagic__13dMeter2Draw_cFv();
+extern "C" void initLightDrop__13dMeter2Draw_cFv();
+extern "C" void initRupeeKey__13dMeter2Draw_cFv();
+extern "C" void initButton__13dMeter2Draw_cFv();
+extern "C" void initButtonCross__13dMeter2Draw_cFv();
+extern "C" void playPikariBckAnimation__13dMeter2Draw_cFf();
+extern "C" void setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
+extern "C" void playPikariBpkAnimation__13dMeter2Draw_cFf();
+extern "C" void playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
+extern "C" void drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void changeTextureLife__13dMeter2Draw_cFibUc();
+extern "C" void drawLife__13dMeter2Draw_cFssff();
+extern "C" void setAlphaLifeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaLifeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLifeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKanteraScreen__13dMeter2Draw_cFUc();
+extern "C" void drawMagic__13dMeter2Draw_cFssff();
+extern "C" void setAlphaMagicChange__13dMeter2Draw_cFb();
+extern "C" void drawKantera__13dMeter2Draw_cFllff();
+extern "C" void setAlphaKanteraChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawOxygen__13dMeter2Draw_cFllff();
+extern "C" void setAlphaOxygenChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawLightDrop__13dMeter2Draw_cFUcUcffffUc();
+extern "C" void setAlphaLightDropChange__13dMeter2Draw_cFb();
+extern "C" void getNowLightDropRateCalc__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawRupee__13dMeter2Draw_cFs();
+extern "C" void setAlphaRupeeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKey__13dMeter2Draw_cFs();
+extern "C" void setAlphaKeyChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKeyAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKeyAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawButtonA__13dMeter2Draw_cFUcfffffbb();
+extern "C" void drawButtonB__13dMeter2Draw_cFUcbfffffb();
+extern "C" void drawButtonR__13dMeter2Draw_cFUcUcbb();
+extern "C" void drawButtonZ__13dMeter2Draw_cFUc();
+extern "C" void drawButton3D__13dMeter2Draw_cFUc();
+extern "C" void drawButtonC__13dMeter2Draw_cFUcb();
+extern "C" void drawButtonS__13dMeter2Draw_cFUc();
+extern "C" void drawButtonBin__13dMeter2Draw_cFUc();
+extern "C" void drawButtonXY__13dMeter2Draw_cFiUcUcbb();
+extern "C" void getButtonCrossParentInitTransY__13dMeter2Draw_cFv();
+extern "C" void drawButtonCross__13dMeter2Draw_cFff();
+extern "C" void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaButtonAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl();
+extern "C" void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb();
+extern "C" void getNumberTexture__13dMeter2Draw_cFi();
+extern "C" void getActionString__13dMeter2Draw_cFUcUcPUc();
+extern "C" void changeTextureItemB__13dMeter2Draw_cFUc();
+extern "C" void changeTextureItemXY__13dMeter2Draw_cFiUc();
+extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas();
+extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
+extern "C" void setItemNum__13dMeter2Draw_cFUcUcUc();
+extern "C" void drawItemNum__13dMeter2Draw_cFUcf();
+extern "C" void drawKanteraMeter__13dMeter2Draw_cFUcf();
+extern "C" void isButtonVisible__13dMeter2Draw_cFv();
+extern "C" void setItemParamX__13dMeter2Draw_cFUc();
+extern "C" void setItemParamY__13dMeter2Draw_cFUc();
+extern "C" void setItemParamZ__13dMeter2Draw_cFUc();
+extern "C" void setItemParamB__13dMeter2Draw_cFUc();
+extern "C" void getFishingType__13dMeter2Draw_cFv();
+extern "C" void getCanoeFishing__13dMeter2Draw_cFv();
+extern "C" void getCameraSubject__13dMeter2Draw_cFv();
+extern "C" void getItemSubject__13dMeter2Draw_cFv();
+extern "C" void getPlayerSubject__13dMeter2Draw_cFv();
+extern "C" void isBButtonShow__13dMeter2Draw_cFb();
+extern "C" void getButtonTimer__13dMeter2Draw_cFv();
 SECTION_RODATA extern const u8 data_80398258[40];
 SECTION_RODATA extern const u8 data_80398280[40];
 SECTION_RODATA extern const u8 data_803982A8[40];
@@ -212,89 +591,129 @@ SECTION_SBSS2 extern u8 data_80456B9C[4];
 // External References:
 // 
 
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void dComIfGs_getMaxLifeGauge__Fv();
-extern "C" extern void dComIfGp_getSelectItem__Fi();
-extern "C" extern void getItem__17dSv_player_item_cCFib();
-extern "C" extern void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void isBottleItem__FUc();
-extern "C" extern void dCam_getBody__Fv();
-extern "C" extern void __ct__15dKantera_icon_cFv();
-extern "C" extern void setAlphaRate__15dKantera_icon_cFf();
-extern "C" extern void setPos__15dKantera_icon_cFff();
-extern "C" extern void setScale__15dKantera_icon_cFff();
-extern "C" extern void setNowGauge__15dKantera_icon_cFUsUs();
-extern "C" extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void isDirectUseItem__13dMeter2Info_cFi();
-extern "C" extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern "C" extern void dMeter2Info_getNumberTextureName__Fi();
-extern "C" extern void dMeter2Info_isMapOpenCheck__Fv();
-extern "C" extern void dMeter2Info_isItemOpenCheck__Fv();
-extern "C" extern void dMeter2Info_set2DVibration__Fv();
-extern "C" extern void dMsgObject_getGroupID__Fv();
-extern "C" extern void isHowlMessage__12dMsgObject_cFv();
-extern "C" extern void getStatus__12dMsgObject_cFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void paneTrans__8CPaneMgrFff();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void isVisible__13CPaneMgrAlphaFv();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" extern void cLib_addCalc2__FPffff();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void alloc__7JKRHeapFUli();
-extern "C" extern void free__7JKRHeapFPv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" extern void appendChild__7J2DPaneFP7J2DPane();
-extern "C" extern void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" extern void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern "C" extern void getGlbVtx__7J2DPaneCFUc();
-extern "C" extern void animationTransform__7J2DPaneFv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void func_802FC800();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void _savegpr_15();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_21();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_15();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_21();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
-extern "C" extern void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void dComIfGs_getMaxLifeGauge();
+void dComIfGp_getSelectItem(s32);
+void isBottleItem(char);
+void dCam_getBody();
+void dMeter2Info_getNumberTextureName(s32);
+void dMeter2Info_isMapOpenCheck();
+void dMeter2Info_isItemOpenCheck();
+void dMeter2Info_set2DVibration();
+void dMsgObject_getGroupID();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802FC800();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfGs_getMaxLifeGauge__Fv();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isBottleItem__FUc();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void isDirectUseItem__13dMeter2Info_cFi();
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_isMapOpenCheck__Fv();
+extern "C" void dMeter2Info_isItemOpenCheck__Fv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMsgObject_getGroupID__Fv();
+extern "C" void isHowlMessage__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void appendChild__7J2DPaneFP7J2DPane();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void getGlbVtx__7J2DPaneCFUc();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void func_802FC800();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -308,42 +727,42 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80398258-80398280 0028+00 .rodata    a_tag$3949                                                   */
+/* 80398258-80398280 0028+00 rc=4 efc=0 .rodata    a_tag$3949                                                   */
 SECTION_RODATA const u8 data_80398258[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74,
 };
 
-/* 80398280-803982A8 0028+00 .rodata    b_tag$3950                                                   */
+/* 80398280-803982A8 0028+00 rc=0 efc=0 .rodata    b_tag$3950                                                   */
 SECTION_RODATA const u8 data_80398280[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x62, 0x74,
 };
 
-/* 803982A8-803982D0 0028+00 .rodata    z_tag$3951                                                   */
+/* 803982A8-803982D0 0028+00 rc=0 efc=0 .rodata    z_tag$3951                                                   */
 SECTION_RODATA const u8 data_803982A8[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x7A, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x72, 0x74,
 };
 
-/* 803982D0-803982F8 0028+00 .rodata    x_tag$3952                                                   */
+/* 803982D0-803982F8 0028+00 rc=0 efc=0 .rodata    x_tag$3952                                                   */
 SECTION_RODATA const u8 data_803982D0[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x78, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x78, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x78, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x78, 0x74, 0x34,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x78, 0x74, 0x35,
 };
 
-/* 803982F8-80398320 0028+00 .rodata    y_tag$3953                                                   */
+/* 803982F8-80398320 0028+00 rc=0 efc=0 .rodata    y_tag$3953                                                   */
 SECTION_RODATA const u8 data_803982F8[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x79, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x79, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x79, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x79, 0x74, 0x34,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x79, 0x74, 0x35,
 };
 
-/* 80398320-803983C0 00A0+00 .rodata    life_tag$4931                                                */
+/* 80398320-803983C0 00A0+00 rc=0 efc=0 .rodata    life_tag$4931                                                */
 SECTION_RODATA const u8 data_80398320[160] = {
 	0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x30, 0x33,
@@ -357,7 +776,7 @@ SECTION_RODATA const u8 data_80398320[160] = {
 	0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x31, 0x38, 0x00, 0x00, 0x68, 0x70, 0x62, 0x5F, 0x31, 0x39,
 };
 
-/* 803983C0-80398460 00A0+00 .rodata    mark_tag$4932                                                */
+/* 803983C0-80398460 00A0+00 rc=0 efc=0 .rodata    mark_tag$4932                                                */
 SECTION_RODATA const u8 data_803983C0[160] = {
 	0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x30, 0x30, 0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x30, 0x31,
 	0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x30, 0x32, 0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x30, 0x33,
@@ -371,7 +790,7 @@ SECTION_RODATA const u8 data_803983C0[160] = {
 	0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x31, 0x38, 0x68, 0x65, 0x61, 0x72, 0x74, 0x6E, 0x31, 0x39,
 };
 
-/* 80398460-80398500 00A0+00 .rodata    base_tag$4933                                                */
+/* 80398460-80398500 00A0+00 rc=0 efc=0 .rodata    base_tag$4933                                                */
 SECTION_RODATA const u8 data_80398460[160] = {
 	0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x30, 0x30, 0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x30, 0x31,
 	0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x30, 0x32, 0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x30, 0x33,
@@ -385,7 +804,7 @@ SECTION_RODATA const u8 data_80398460[160] = {
 	0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x31, 0x38, 0x68, 0x5F, 0x62, 0x61, 0x5F, 0x6E, 0x31, 0x39,
 };
 
-/* 80398500-803985A0 00A0+00 .rodata    lifet1_tag$4934                                              */
+/* 80398500-803985A0 00A0+00 rc=0 efc=0 .rodata    lifet1_tag$4934                                              */
 SECTION_RODATA const u8 data_80398500[160] = {
 	0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x30, 0x73, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x31, 0x73,
 	0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x32, 0x73, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x33, 0x73,
@@ -399,7 +818,7 @@ SECTION_RODATA const u8 data_80398500[160] = {
 	0x68, 0x65, 0x61, 0x72, 0x5F, 0x31, 0x38, 0x73, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x31, 0x39, 0x73,
 };
 
-/* 803985A0-80398640 00A0+00 .rodata    lifet2_tag$4935                                              */
+/* 803985A0-80398640 00A0+00 rc=0 efc=0 .rodata    lifet2_tag$4935                                              */
 SECTION_RODATA const u8 data_803985A0[160] = {
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x30, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x31,
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x32, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x30, 0x33,
@@ -413,7 +832,7 @@ SECTION_RODATA const u8 data_803985A0[160] = {
 	0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x31, 0x38, 0x00, 0x68, 0x65, 0x61, 0x72, 0x5F, 0x31, 0x39,
 };
 
-/* 80398640-803986C0 0080+00 .rodata    tuta_0$5094                                                  */
+/* 80398640-803986C0 0080+00 rc=0 efc=0 .rodata    tuta_0$5094                                                  */
 SECTION_RODATA const u8 data_80398640[128] = {
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33,
@@ -425,7 +844,7 @@ SECTION_RODATA const u8 data_80398640[128] = {
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x31, 0x34, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x31, 0x35,
 };
 
-/* 803986C0-80398740 0080+00 .rodata    tuta_1$5095                                                  */
+/* 803986C0-80398740 0080+00 rc=0 efc=0 .rodata    tuta_1$5095                                                  */
 SECTION_RODATA const u8 data_803986C0[128] = {
 	0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x30, 0x33,
@@ -437,7 +856,7 @@ SECTION_RODATA const u8 data_803986C0[128] = {
 	0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x31, 0x34, 0x00, 0x00, 0x00, 0x73, 0x6C, 0x5F, 0x31, 0x35,
 };
 
-/* 80398740-803987C0 0080+00 .rodata    tuta_2$5096                                                  */
+/* 80398740-803987C0 0080+00 rc=0 efc=0 .rodata    tuta_2$5096                                                  */
 SECTION_RODATA const u8 data_80398740[128] = {
 	0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x30, 0x33,
@@ -449,62 +868,62 @@ SECTION_RODATA const u8 data_80398740[128] = {
 	0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x31, 0x34, 0x00, 0x00, 0x73, 0x63, 0x70, 0x5F, 0x31, 0x35,
 };
 
-/* 803987C0-803987E0 0020+00 .rodata    rupeet1_tag$5152                                             */
+/* 803987C0-803987E0 0020+00 rc=0 efc=0 .rodata    rupeet1_tag$5152                                             */
 SECTION_RODATA const u8 data_803987C0[32] = {
 	0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x31, 0x5F, 0x73, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x32, 0x5F, 0x73,
 	0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x33, 0x5F, 0x73, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x34, 0x5F, 0x73,
 };
 
-/* 803987E0-80398800 0020+00 .rodata    rupeet2_tag$5153                                             */
+/* 803987E0-80398800 0020+00 rc=0 efc=0 .rodata    rupeet2_tag$5153                                             */
 SECTION_RODATA const u8 data_803987E0[32] = {
 	0x00, 0x00, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x31, 0x00, 0x00, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x32,
 	0x00, 0x00, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x33, 0x00, 0x00, 0x00, 0x72, 0x5F, 0x6E, 0x5F, 0x34,
 };
 
-/* 80398800-80398828 0028+00 .rodata    key_tag$5165                                                 */
+/* 80398800-80398828 0028+00 rc=0 efc=0 .rodata    key_tag$5165                                                 */
 SECTION_RODATA const u8 data_80398800[40] = {
 	0x00, 0x6B, 0x65, 0x79, 0x5F, 0x6E, 0x75, 0x6C, 0x00, 0x6B, 0x5F, 0x6E, 0x5F, 0x31, 0x5F, 0x6E,
 	0x00, 0x6B, 0x5F, 0x6E, 0x5F, 0x32, 0x5F, 0x6E, 0x00, 0x6B, 0x5F, 0x6E, 0x5F, 0x33, 0x5F, 0x6E,
 	0x00, 0x6B, 0x5F, 0x6E, 0x5F, 0x34, 0x5F, 0x6E,
 };
 
-/* 80398828-80398850 0028+00 .rodata    juji_i_tag$5269                                              */
+/* 80398828-80398850 0028+00 rc=1 efc=0 .rodata    juji_i_tag$5269                                              */
 SECTION_RODATA const u8 data_80398828[40] = {
 	0x6A, 0x75, 0x5F, 0x72, 0x69, 0x6E, 0x67, 0x34, 0x00, 0x79, 0x61, 0x6A, 0x69, 0x5F, 0x30, 0x30,
 	0x00, 0x79, 0x61, 0x6A, 0x69, 0x5F, 0x30, 0x31, 0x6A, 0x75, 0x5F, 0x72, 0x69, 0x6E, 0x67, 0x32,
 	0x6A, 0x75, 0x5F, 0x72, 0x69, 0x6E, 0x67, 0x34,
 };
 
-/* 80398850-80398878 0028+00 .rodata    juji_m_tag$5270                                              */
+/* 80398850-80398878 0028+00 rc=1 efc=0 .rodata    juji_m_tag$5270                                              */
 SECTION_RODATA const u8 data_80398850[40] = {
 	0x6A, 0x75, 0x5F, 0x72, 0x69, 0x6E, 0x67, 0x33, 0x00, 0x79, 0x61, 0x6A, 0x69, 0x5F, 0x30, 0x32,
 	0x00, 0x79, 0x61, 0x6A, 0x69, 0x5F, 0x30, 0x33, 0x6A, 0x75, 0x5F, 0x72, 0x69, 0x6E, 0x67, 0x33,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80398878-80398898 0020+00 .rodata    tag_bigh$5851                                                */
+/* 80398878-80398898 0020+00 rc=1 efc=0 .rodata    tag_bigh$5851                                                */
 SECTION_RODATA const u8 data_80398878[32] = {
 	0x00, 0x62, 0x69, 0x67, 0x68, 0x5F, 0x30, 0x30, 0x00, 0x62, 0x69, 0x67, 0x68, 0x5F, 0x30, 0x31,
 	0x00, 0x62, 0x69, 0x67, 0x68, 0x5F, 0x30, 0x32, 0x00, 0x62, 0x69, 0x67, 0x68, 0x5F, 0x30, 0x33,
 };
 
-/* 80398898-803988A8 0010+00 .rodata    tag_du$5852                                                  */
+/* 80398898-803988A8 0010+00 rc=1 efc=0 .rodata    tag_du$5852                                                  */
 SECTION_RODATA const u8 data_80398898[16] = {
 	0x68, 0x65, 0x61, 0x72, 0x74, 0x5F, 0x6C, 0x6E, 0x68, 0x65, 0x61, 0x72, 0x74, 0x5F, 0x75, 0x6E,
 };
 
-/* 803988A8-803988B8 0010+00 .rodata    tag$7361                                                     */
+/* 803988A8-803988B8 0010+00 rc=1 efc=0 .rodata    tag$7361                                                     */
 SECTION_RODATA const u8 data_803988A8[16] = {
 	0x69, 0x74, 0x65, 0x6D, 0x5F, 0x78, 0x5F, 0x6E, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x79, 0x5F, 0x6E,
 };
 
-/* 803988B8-803988D0 0018+00 .rodata    tag$7759                                                     */
+/* 803988B8-803988D0 0018+00 rc=0 efc=0 .rodata    tag$7759                                                     */
 SECTION_RODATA const u8 data_803988B8[24] = {
 	0x69, 0x74, 0x65, 0x6D, 0x5F, 0x78, 0x5F, 0x6E, 0x69, 0x74, 0x65, 0x6D, 0x5F, 0x79, 0x5F, 0x6E,
 	0x69, 0x74, 0x65, 0x6D, 0x5F, 0x6A, 0x5F, 0x6E,
 };
 
-/* 803988D0-80398A78 01A7+01 .rodata    @stringBase0                                                 */
+/* 803988D0-80398A78 01A7+01 rc=6 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -540,7 +959,7 @@ SECTION_DEAD char* const stringBase_80398A6F = "F_SP127";
 SECTION_DEAD char* const pad_80398A77 = "";
 #pragma pop
 
-/* 803BF328-803BF350 0028+00 .data      bmg_filename$3954                                            */
+/* 803BF328-803BF350 0028+00 rc=1 efc=0 .data      bmg_filename$3954                                            */
 void* data_803BF328[10] = {
 	(void*)&d_meter_d_meter2_draw__stringBase0,
 	(void*)0x803988DB,
@@ -554,7 +973,7 @@ void* data_803BF328[10] = {
 	(void*)0x80398933,
 };
 
-/* 803BF350-803BF554 0204+00 .data      i_action_num$8471                                            */
+/* 803BF350-803BF554 0204+00 rc=1 efc=0 .data      i_action_num$8471                                            */
 u8 data_803BF350[516] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0xE9, 0x00, 0x00, 0x03, 0xEA, 0x00, 0x00, 0x03, 0xEB,
 	0x00, 0x00, 0x03, 0xEC, 0x00, 0x00, 0x03, 0xED, 0x00, 0x00, 0x03, 0xEE, 0x00, 0x00, 0x03, 0xEF,
@@ -591,7 +1010,7 @@ u8 data_803BF350[516] = {
 	0x00, 0x00, 0x03, 0xF0,
 };
 
-/* 803BF554-803BF578 0024+00 .data      @9008                                                        */
+/* 803BF554-803BF578 0024+00 rc=1 efc=0 .data      @9008                                                        */
 void* lit_9008[9] = {
 	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x8C),
 	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
@@ -604,7 +1023,7 @@ void* lit_9008[9] = {
 	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x17C),
 };
 
-/* 803BF578-803BF59C 0024+00 .data      @9030                                                        */
+/* 803BF578-803BF59C 0024+00 rc=1 efc=0 .data      @9030                                                        */
 void* lit_9030[9] = {
 	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x8C),
 	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
@@ -617,7 +1036,7 @@ void* lit_9030[9] = {
 	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x168),
 };
 
-/* 803BF59C-803BF5C0 0024+00 .data      @9053                                                        */
+/* 803BF59C-803BF5C0 0024+00 rc=1 efc=0 .data      @9053                                                        */
 void* d_meter_d_meter2_draw__lit_9053[9] = {
 	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x8C),
 	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
@@ -630,7 +1049,7 @@ void* d_meter_d_meter2_draw__lit_9053[9] = {
 	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x17C),
 };
 
-/* 803BF5C0-803BF750 0190+00 .data      @9106                                                        */
+/* 803BF5C0-803BF750 0190+00 rc=1 efc=0 .data      @9106                                                        */
 void* lit_9106[100] = {
 	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
 	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
@@ -734,7 +1153,7 @@ void* lit_9106[100] = {
 	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
 };
 
-/* 803BF750-803BF760 0010+00 .data      __vt__13dMeter2Draw_c                                        */
+/* 803BF750-803BF760 0010+00 rc=2 efc=0 .data      __vt__13dMeter2Draw_c                                        */
 void* const __vt__13dMeter2Draw_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -742,58 +1161,58 @@ void* const __vt__13dMeter2Draw_c[4] = {
 	(void*)__dt__13dMeter2Draw_cFv,
 };
 
-/* 80454880-80454884 0004+00 .sdata2    @4182                                                        */
+/* 80454880-80454884 0004+00 rc=38 efc=0 .sdata2    @4182                                                        */
 u8 d_meter_d_meter2_draw__lit_4182[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454884-80454888 0004+00 .sdata2    @4183                                                        */
+/* 80454884-80454888 0004+00 rc=14 efc=0 .sdata2    @4183                                                        */
 f32 d_meter_d_meter2_draw__lit_4183 = 1.0f;
 
-/* 80454888-8045488C 0004+00 .sdata2    @4184                                                        */
+/* 80454888-8045488C 0004+00 rc=5 efc=0 .sdata2    @4184                                                        */
 f32 d_meter_d_meter2_draw__lit_4184 = 17.0f;
 
-/* 8045488C-80454890 0004+00 .sdata2    @4185                                                        */
+/* 8045488C-80454890 0004+00 rc=1 efc=0 .sdata2    @4185                                                        */
 f32 d_meter_d_meter2_draw__lit_4185 = 20.0f;
 
-/* 8020FAB4-802102F8 0844+00 .text      __ct__13dMeter2Draw_cFP10JKRExpHeap                          */
+/* 8020FAB4-802102F8 0844+00 rc=1 efc=1 .text      __ct__13dMeter2Draw_cFP10JKRExpHeap                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dMeter2Draw_cFP10JKRExpHeap) {
+asm dMeter2Draw_c::dMeter2Draw_c(JKRExpHeap* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/__ct__13dMeter2Draw_cFP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 802102F8-80210FB0 0CB8+00 .text      __dt__13dMeter2Draw_cFv                                      */
+/* 802102F8-80210FB0 0CB8+00 rc=1 efc=0 .text      __dt__13dMeter2Draw_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dMeter2Draw_cFv) {
+asm dMeter2Draw_c::~dMeter2Draw_c() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/__dt__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80210FB0-8021135C 03AC+00 .text      init__13dMeter2Draw_cFv                                      */
+/* 80210FB0-8021135C 03AC+00 rc=1 efc=0 .text      init__13dMeter2Draw_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::init() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/init__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021135C-8021151C 01C0+00 .text      exec__13dMeter2Draw_cFUl                                     */
+/* 8021135C-8021151C 01C0+00 rc=1 efc=1 .text      exec__13dMeter2Draw_cFUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exec__13dMeter2Draw_cFUl) {
+asm void dMeter2Draw_c::exec(u32 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/exec__13dMeter2Draw_cFUl.s"
 }
@@ -801,145 +1220,145 @@ ASM_FUNCTION(exec__13dMeter2Draw_cFUl) {
 
 
 /* ############################################################################################## */
-/* 80454890-80454894 0004+00 .sdata2    @4921                                                        */
+/* 80454890-80454894 0004+00 rc=1 efc=0 .sdata2    @4921                                                        */
 f32 d_meter_d_meter2_draw__lit_4921 = 16.0f;
 
-/* 80454894-80454898 0004+00 .sdata2    @4922                                                        */
+/* 80454894-80454898 0004+00 rc=9 efc=0 .sdata2    @4922                                                        */
 f32 d_meter_d_meter2_draw__lit_4922 = 0.5f;
 
-/* 80454898-804548A0 0004+04 .sdata2    @4923                                                        */
+/* 80454898-804548A0 0004+04 rc=7 efc=0 .sdata2    @4923                                                        */
 f32 d_meter_d_meter2_draw__lit_4923 = 18.0f;
 /* padding 4 bytes */
 
-/* 804548A0-804548A8 0008+00 .sdata2    @4925                                                        */
+/* 804548A0-804548A8 0008+00 rc=13 efc=0 .sdata2    @4925                                                        */
 f64 lit_4925 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8021151C-80211BEC 06D0+00 .text      draw__13dMeter2Draw_cFv                                      */
+/* 8021151C-80211BEC 06D0+00 rc=1 efc=0 .text      draw__13dMeter2Draw_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::draw() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/draw__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80211BEC-80211E64 0278+00 .text      initLife__13dMeter2Draw_cFv                                  */
+/* 80211BEC-80211E64 0278+00 rc=1 efc=0 .text      initLife__13dMeter2Draw_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initLife__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initLife() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initLife__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80211E64-80212190 032C+00 .text      initMagic__13dMeter2Draw_cFv                                 */
+/* 80211E64-80212190 032C+00 rc=1 efc=0 .text      initMagic__13dMeter2Draw_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initMagic__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initMagic() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initMagic__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80212190-80212404 0274+00 .text      initLightDrop__13dMeter2Draw_cFv                             */
+/* 80212190-80212404 0274+00 rc=1 efc=0 .text      initLightDrop__13dMeter2Draw_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initLightDrop__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initLightDrop() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initLightDrop__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80212404-802126E4 02E0+00 .text      initRupeeKey__13dMeter2Draw_cFv                              */
+/* 80212404-802126E4 02E0+00 rc=1 efc=0 .text      initRupeeKey__13dMeter2Draw_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initRupeeKey__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initRupeeKey() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initRupeeKey__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802126E4-8021350C 0E28+00 .text      initButton__13dMeter2Draw_cFv                                */
+/* 802126E4-8021350C 0E28+00 rc=1 efc=0 .text      initButton__13dMeter2Draw_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initButton__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initButton() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initButton__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021350C-80213CEC 07E0+00 .text      initButtonCross__13dMeter2Draw_cFv                           */
+/* 8021350C-80213CEC 07E0+00 rc=1 efc=0 .text      initButtonCross__13dMeter2Draw_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initButtonCross__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::initButtonCross() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/initButtonCross__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80213CEC-80213D6C 0080+00 .text      playPikariBckAnimation__13dMeter2Draw_cFf                    */
+/* 80213CEC-80213D6C 0080+00 rc=3 efc=0 .text      playPikariBckAnimation__13dMeter2Draw_cFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playPikariBckAnimation__13dMeter2Draw_cFf) {
+asm void dMeter2Draw_c::playPikariBckAnimation(f32 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/playPikariBckAnimation__13dMeter2Draw_cFf.s"
 }
 #pragma pop
 
 
-/* 80213D6C-80213E3C 00D0+00 .text      setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor        */
+/* 80213D6C-80213E3C 00D0+00 rc=1 efc=0 .text      setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor) {
+asm void dMeter2Draw_c::setPikariBpkAnimation(J2DAnmColor* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor.s"
 }
 #pragma pop
 
 
-/* 80213E3C-80213E94 0058+00 .text      playPikariBpkAnimation__13dMeter2Draw_cFf                    */
+/* 80213E3C-80213E94 0058+00 rc=3 efc=0 .text      playPikariBpkAnimation__13dMeter2Draw_cFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playPikariBpkAnimation__13dMeter2Draw_cFf) {
+asm void dMeter2Draw_c::playPikariBpkAnimation(f32 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/playPikariBpkAnimation__13dMeter2Draw_cFf.s"
 }
 #pragma pop
 
 
-/* 80213E94-80213FF0 015C+00 .text      playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor       */
+/* 80213E94-80213FF0 015C+00 rc=1 efc=0 .text      playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor) {
+asm void dMeter2Draw_c::playOxygenBpkAnimation(J2DAnmColor* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor.s"
 }
 #pragma pop
 
 
-/* 80213FF0-802140DC 00EC+00 .text      drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc */
+/* 80213FF0-802140DC 00EC+00 rc=1 efc=0 .text      drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc) {
+asm void dMeter2Draw_c::drawPikari(CPaneMgr* field_0, f32* field_1, f32 field_2, JUtility::TColor field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, f32 field_7, char field_8) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/func_80213FF0.s"
 }
@@ -947,86 +1366,86 @@ ASM_FUNCTION(drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtil
 
 
 /* ############################################################################################## */
-/* 804548A8-804548AC 0004+00 .sdata2    @5784                                                        */
+/* 804548A8-804548AC 0004+00 rc=1 efc=0 .sdata2    @5784                                                        */
 f32 d_meter_d_meter2_draw__lit_5784 = 28.0f;
 
-/* 804548AC-804548B0 0004+00 .sdata2    @5785                                                        */
+/* 804548AC-804548B0 0004+00 rc=1 efc=0 .sdata2    @5785                                                        */
 f32 d_meter_d_meter2_draw__lit_5785 = 24.0f;
 
-/* 804548B0-804548B4 0004+00 .sdata2    @5786                                                        */
+/* 804548B0-804548B4 0004+00 rc=4 efc=0 .sdata2    @5786                                                        */
 f32 lit_5786 = -1.0f;
 
-/* 802140DC-8021462C 0550+00 .text      drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc */
+/* 802140DC-8021462C 0550+00 rc=7 efc=6 .text      drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc) {
+asm void dMeter2Draw_c::drawPikari(f32 field_0, f32 field_1, f32* field_2, f32 field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, JUtility::TColor field_7, f32 field_8, char field_9) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/func_802140DC.s"
 }
 #pragma pop
 
 
-/* 8021462C-802147CC 01A0+00 .text      drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+/* 8021462C-802147CC 01A0+00 rc=1 efc=1 .text      drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor) {
+asm void dMeter2Draw_c::drawPikariHakusha(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, JUtility::TColor field_7) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/func_8021462C.s"
 }
 #pragma pop
 
 
-/* 802147CC-802149F4 0228+00 .text      changeTextureLife__13dMeter2Draw_cFibUc                      */
+/* 802147CC-802149F4 0228+00 rc=1 efc=0 .text      changeTextureLife__13dMeter2Draw_cFibUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTextureLife__13dMeter2Draw_cFibUc) {
+asm void dMeter2Draw_c::changeTextureLife(s32 field_0, bool field_1, char field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureLife__13dMeter2Draw_cFibUc.s"
 }
 #pragma pop
 
 
-/* 802149F4-80214C20 022C+00 .text      drawLife__13dMeter2Draw_cFssff                               */
+/* 802149F4-80214C20 022C+00 rc=2 efc=1 .text      drawLife__13dMeter2Draw_cFssff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawLife__13dMeter2Draw_cFssff) {
+asm void dMeter2Draw_c::drawLife(s16 field_0, s16 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawLife__13dMeter2Draw_cFssff.s"
 }
 #pragma pop
 
 
-/* 80214C20-80214DF4 01D4+00 .text      setAlphaLifeChange__13dMeter2Draw_cFb                        */
+/* 80214C20-80214DF4 01D4+00 rc=2 efc=1 .text      setAlphaLifeChange__13dMeter2Draw_cFb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLifeChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaLifeChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaLifeChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 80214DF4-80214E54 0060+00 .text      setAlphaLifeAnimeMin__13dMeter2Draw_cFv                      */
+/* 80214DF4-80214E54 0060+00 rc=1 efc=1 .text      setAlphaLifeAnimeMin__13dMeter2Draw_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLifeAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaLifeAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaLifeAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80214E54-80214EB4 0060+00 .text      setAlphaLifeAnimeMax__13dMeter2Draw_cFv                      */
+/* 80214E54-80214EB4 0060+00 rc=1 efc=1 .text      setAlphaLifeAnimeMax__13dMeter2Draw_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLifeAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaLifeAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaLifeAnimeMax__13dMeter2Draw_cFv.s"
 }
@@ -1034,14 +1453,14 @@ ASM_FUNCTION(setAlphaLifeAnimeMax__13dMeter2Draw_cFv) {
 
 
 /* ############################################################################################## */
-/* 804548B4-804548B8 0004+00 .sdata2    @6143                                                        */
+/* 804548B4-804548B8 0004+00 rc=1 efc=0 .sdata2    @6143                                                        */
 f32 d_meter_d_meter2_draw__lit_6143 = 0.25f;
 
-/* 80214EB4-80215290 03DC+00 .text      drawKanteraScreen__13dMeter2Draw_cFUc                        */
+/* 80214EB4-80215290 03DC+00 rc=1 efc=0 .text      drawKanteraScreen__13dMeter2Draw_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawKanteraScreen__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::drawKanteraScreen(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKanteraScreen__13dMeter2Draw_cFUc.s"
 }
@@ -1049,25 +1468,25 @@ ASM_FUNCTION(drawKanteraScreen__13dMeter2Draw_cFUc) {
 
 
 /* ############################################################################################## */
-/* 804548B8-804548BC 0004+00 .sdata2    @6175                                                        */
+/* 804548B8-804548BC 0004+00 rc=1 efc=0 .sdata2    @6175                                                        */
 f32 lit_6175 = 0.03125f;
 
-/* 80215290-80215380 00F0+00 .text      drawMagic__13dMeter2Draw_cFssff                              */
+/* 80215290-80215380 00F0+00 rc=1 efc=0 .text      drawMagic__13dMeter2Draw_cFssff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawMagic__13dMeter2Draw_cFssff) {
+asm void dMeter2Draw_c::drawMagic(s16 field_0, s16 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawMagic__13dMeter2Draw_cFssff.s"
 }
 #pragma pop
 
 
-/* 80215380-802154A8 0128+00 .text      setAlphaMagicChange__13dMeter2Draw_cFb                       */
+/* 80215380-802154A8 0128+00 rc=2 efc=0 .text      setAlphaMagicChange__13dMeter2Draw_cFb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaMagicChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaMagicChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaMagicChange__13dMeter2Draw_cFb.s"
 }
@@ -1075,94 +1494,94 @@ ASM_FUNCTION(setAlphaMagicChange__13dMeter2Draw_cFb) {
 
 
 /* ############################################################################################## */
-/* 804548BC-804548C0 0004+00 .sdata2    @6210                                                        */
+/* 804548BC-804548C0 0004+00 rc=4 efc=0 .sdata2    @6210                                                        */
 f32 lit_6210 = 5.0f;
 
-/* 804548C0-804548C8 0008+00 .sdata2    @6293                                                        */
+/* 804548C0-804548C8 0008+00 rc=9 efc=0 .sdata2    @6293                                                        */
 f64 lit_6293 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802154A8-802155B8 0110+00 .text      drawKantera__13dMeter2Draw_cFllff                            */
+/* 802154A8-802155B8 0110+00 rc=2 efc=1 .text      drawKantera__13dMeter2Draw_cFllff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawKantera__13dMeter2Draw_cFllff) {
+asm void dMeter2Draw_c::drawKantera(s32 field_0, s32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKantera__13dMeter2Draw_cFllff.s"
 }
 #pragma pop
 
 
-/* 802155B8-802156E0 0128+00 .text      setAlphaKanteraChange__13dMeter2Draw_cFb                     */
+/* 802155B8-802156E0 0128+00 rc=3 efc=1 .text      setAlphaKanteraChange__13dMeter2Draw_cFb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKanteraChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaKanteraChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKanteraChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 802156E0-8021575C 007C+00 .text      setAlphaKanteraAnimeMin__13dMeter2Draw_cFv                   */
+/* 802156E0-8021575C 007C+00 rc=1 efc=1 .text      setAlphaKanteraAnimeMin__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKanteraAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaKanteraAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKanteraAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021575C-802157E0 0084+00 .text      setAlphaKanteraAnimeMax__13dMeter2Draw_cFv                   */
+/* 8021575C-802157E0 0084+00 rc=1 efc=1 .text      setAlphaKanteraAnimeMax__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKanteraAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaKanteraAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKanteraAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802157E0-802158F0 0110+00 .text      drawOxygen__13dMeter2Draw_cFllff                             */
+/* 802157E0-802158F0 0110+00 rc=1 efc=1 .text      drawOxygen__13dMeter2Draw_cFllff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOxygen__13dMeter2Draw_cFllff) {
+asm void dMeter2Draw_c::drawOxygen(s32 field_0, s32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawOxygen__13dMeter2Draw_cFllff.s"
 }
 #pragma pop
 
 
-/* 802158F0-80215A18 0128+00 .text      setAlphaOxygenChange__13dMeter2Draw_cFb                      */
+/* 802158F0-80215A18 0128+00 rc=2 efc=1 .text      setAlphaOxygenChange__13dMeter2Draw_cFb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaOxygenChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaOxygenChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaOxygenChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 80215A18-80215A94 007C+00 .text      setAlphaOxygenAnimeMin__13dMeter2Draw_cFv                    */
+/* 80215A18-80215A94 007C+00 rc=1 efc=1 .text      setAlphaOxygenAnimeMin__13dMeter2Draw_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaOxygenAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaOxygenAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaOxygenAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80215A94-80215B18 0084+00 .text      setAlphaOxygenAnimeMax__13dMeter2Draw_cFv                    */
+/* 80215A94-80215B18 0084+00 rc=1 efc=1 .text      setAlphaOxygenAnimeMax__13dMeter2Draw_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaOxygenAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaOxygenAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaOxygenAnimeMax__13dMeter2Draw_cFv.s"
 }
@@ -1170,410 +1589,405 @@ ASM_FUNCTION(setAlphaOxygenAnimeMax__13dMeter2Draw_cFv) {
 
 
 /* ############################################################################################## */
-/* 804548C8-804548CC 0004+00 .sdata2    @6524                                                        */
+/* 804548C8-804548CC 0004+00 rc=4 efc=0 .sdata2    @6524                                                        */
 f32 lit_6524 = 3.0f / 10.0f;
 
-/* 80215B18-80215DA4 028C+00 .text      drawLightDrop__13dMeter2Draw_cFUcUcffffUc                    */
+/* 80215B18-80215DA4 028C+00 rc=2 efc=1 .text      drawLightDrop__13dMeter2Draw_cFUcUcffffUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawLightDrop__13dMeter2Draw_cFUcUcffffUc) {
+asm void dMeter2Draw_c::drawLightDrop(char field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, char field_6) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawLightDrop__13dMeter2Draw_cFUcUcffffUc.s"
 }
 #pragma pop
 
 
-/* 80215DA4-80215DA8 0004+00 .text      setAlphaLightDropChange__13dMeter2Draw_cFb                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLightDropChange__13dMeter2Draw_cFb) {
-	nofralloc
-#include "asm/d/meter/d_meter2_draw/setAlphaLightDropChange__13dMeter2Draw_cFb.s"
+/* 80215DA4-80215DA8 0004+00 rc=2 efc=1 .text      setAlphaLightDropChange__13dMeter2Draw_cFb                   */
+void dMeter2Draw_c::setAlphaLightDropChange(bool field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80215DA8-80215E40 0098+00 .text      getNowLightDropRateCalc__13dMeter2Draw_cFv                   */
+/* 80215DA8-80215E40 0098+00 rc=1 efc=1 .text      getNowLightDropRateCalc__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowLightDropRateCalc__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getNowLightDropRateCalc() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getNowLightDropRateCalc__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80215E40-80215F88 0148+00 .text      setAlphaLightDropAnimeMin__13dMeter2Draw_cFv                 */
+/* 80215E40-80215F88 0148+00 rc=1 efc=1 .text      setAlphaLightDropAnimeMin__13dMeter2Draw_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLightDropAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaLightDropAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaLightDropAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80215F88-8021632C 03A4+00 .text      setAlphaLightDropAnimeMax__13dMeter2Draw_cFv                 */
+/* 80215F88-8021632C 03A4+00 rc=1 efc=1 .text      setAlphaLightDropAnimeMax__13dMeter2Draw_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaLightDropAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaLightDropAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaLightDropAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021632C-80216684 0358+00 .text      drawRupee__13dMeter2Draw_cFs                                 */
+/* 8021632C-80216684 0358+00 rc=2 efc=1 .text      drawRupee__13dMeter2Draw_cFs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawRupee__13dMeter2Draw_cFs) {
+asm void dMeter2Draw_c::drawRupee(s16 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawRupee__13dMeter2Draw_cFs.s"
 }
 #pragma pop
 
 
-/* 80216684-802168D0 024C+00 .text      setAlphaRupeeChange__13dMeter2Draw_cFb                       */
+/* 80216684-802168D0 024C+00 rc=2 efc=1 .text      setAlphaRupeeChange__13dMeter2Draw_cFb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRupeeChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaRupeeChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaRupeeChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 802168D0-80216990 00C0+00 .text      setAlphaRupeeAnimeMin__13dMeter2Draw_cFv                     */
+/* 802168D0-80216990 00C0+00 rc=1 efc=1 .text      setAlphaRupeeAnimeMin__13dMeter2Draw_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRupeeAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaRupeeAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaRupeeAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80216990-80216A40 00B0+00 .text      setAlphaRupeeAnimeMax__13dMeter2Draw_cFv                     */
+/* 80216990-80216A40 00B0+00 rc=1 efc=1 .text      setAlphaRupeeAnimeMax__13dMeter2Draw_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRupeeAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaRupeeAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaRupeeAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80216A40-80216B28 00E8+00 .text      drawKey__13dMeter2Draw_cFs                                   */
+/* 80216A40-80216B28 00E8+00 rc=2 efc=1 .text      drawKey__13dMeter2Draw_cFs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawKey__13dMeter2Draw_cFs) {
+asm void dMeter2Draw_c::drawKey(s16 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKey__13dMeter2Draw_cFs.s"
 }
 #pragma pop
 
 
-/* 80216B28-80216CA8 0180+00 .text      setAlphaKeyChange__13dMeter2Draw_cFb                         */
+/* 80216B28-80216CA8 0180+00 rc=2 efc=1 .text      setAlphaKeyChange__13dMeter2Draw_cFb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKeyChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaKeyChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKeyChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 80216CA8-80216D2C 0084+00 .text      setAlphaKeyAnimeMin__13dMeter2Draw_cFv                       */
+/* 80216CA8-80216D2C 0084+00 rc=1 efc=1 .text      setAlphaKeyAnimeMin__13dMeter2Draw_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKeyAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaKeyAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKeyAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80216D2C-80216DAC 0080+00 .text      setAlphaKeyAnimeMax__13dMeter2Draw_cFv                       */
+/* 80216D2C-80216DAC 0080+00 rc=1 efc=1 .text      setAlphaKeyAnimeMax__13dMeter2Draw_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaKeyAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaKeyAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaKeyAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80216DAC-802170E4 0338+00 .text      drawButtonA__13dMeter2Draw_cFUcfffffbb                       */
+/* 80216DAC-802170E4 0338+00 rc=2 efc=1 .text      drawButtonA__13dMeter2Draw_cFUcfffffbb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonA__13dMeter2Draw_cFUcfffffbb) {
+asm void dMeter2Draw_c::drawButtonA(char field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, bool field_6, bool field_7) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonA__13dMeter2Draw_cFUcfffffbb.s"
 }
 #pragma pop
 
 
-/* 802170E4-8021764C 0568+00 .text      drawButtonB__13dMeter2Draw_cFUcbfffffb                       */
+/* 802170E4-8021764C 0568+00 rc=2 efc=1 .text      drawButtonB__13dMeter2Draw_cFUcbfffffb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonB__13dMeter2Draw_cFUcbfffffb) {
+asm void dMeter2Draw_c::drawButtonB(char field_0, bool field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, bool field_7) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonB__13dMeter2Draw_cFUcbfffffb.s"
 }
 #pragma pop
 
 
-/* 8021764C-802176EC 00A0+00 .text      drawButtonR__13dMeter2Draw_cFUcUcbb                          */
+/* 8021764C-802176EC 00A0+00 rc=2 efc=1 .text      drawButtonR__13dMeter2Draw_cFUcUcbb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonR__13dMeter2Draw_cFUcUcbb) {
+asm void dMeter2Draw_c::drawButtonR(char field_0, char field_1, bool field_2, bool field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonR__13dMeter2Draw_cFUcUcbb.s"
 }
 #pragma pop
 
 
-/* 802176EC-80217904 0218+00 .text      drawButtonZ__13dMeter2Draw_cFUc                              */
+/* 802176EC-80217904 0218+00 rc=2 efc=1 .text      drawButtonZ__13dMeter2Draw_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonZ__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::drawButtonZ(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonZ__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 80217904-80217954 0050+00 .text      drawButton3D__13dMeter2Draw_cFUc                             */
+/* 80217904-80217954 0050+00 rc=2 efc=1 .text      drawButton3D__13dMeter2Draw_cFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButton3D__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::drawButton3D(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButton3D__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 80217954-802179C0 006C+00 .text      drawButtonC__13dMeter2Draw_cFUcb                             */
+/* 80217954-802179C0 006C+00 rc=2 efc=1 .text      drawButtonC__13dMeter2Draw_cFUcb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonC__13dMeter2Draw_cFUcb) {
+asm void dMeter2Draw_c::drawButtonC(char field_0, bool field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonC__13dMeter2Draw_cFUcb.s"
 }
 #pragma pop
 
 
-/* 802179C0-80217A10 0050+00 .text      drawButtonS__13dMeter2Draw_cFUc                              */
+/* 802179C0-80217A10 0050+00 rc=2 efc=1 .text      drawButtonS__13dMeter2Draw_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonS__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::drawButtonS(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonS__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 80217A10-80217AB4 00A4+00 .text      drawButtonBin__13dMeter2Draw_cFUc                            */
+/* 80217A10-80217AB4 00A4+00 rc=1 efc=1 .text      drawButtonBin__13dMeter2Draw_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonBin__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::drawButtonBin(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonBin__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 80217AB4-80218238 0784+00 .text      drawButtonXY__13dMeter2Draw_cFiUcUcbb                        */
+/* 80217AB4-80218238 0784+00 rc=2 efc=1 .text      drawButtonXY__13dMeter2Draw_cFiUcUcbb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonXY__13dMeter2Draw_cFiUcUcbb) {
+asm void dMeter2Draw_c::drawButtonXY(s32 field_0, char field_1, char field_2, bool field_3, bool field_4) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonXY__13dMeter2Draw_cFiUcUcbb.s"
 }
 #pragma pop
 
 
-/* 80218238-80218254 001C+00 .text      getButtonCrossParentInitTransY__13dMeter2Draw_cFv            */
+/* 80218238-80218254 001C+00 rc=1 efc=1 .text      getButtonCrossParentInitTransY__13dMeter2Draw_cFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getButtonCrossParentInitTransY__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getButtonCrossParentInitTransY() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getButtonCrossParentInitTransY__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80218254-80218338 00E4+00 .text      drawButtonCross__13dMeter2Draw_cFff                          */
+/* 80218254-80218338 00E4+00 rc=2 efc=1 .text      drawButtonCross__13dMeter2Draw_cFff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawButtonCross__13dMeter2Draw_cFff) {
+asm void dMeter2Draw_c::drawButtonCross(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonCross__13dMeter2Draw_cFff.s"
 }
 #pragma pop
 
 
-/* 80218338-802183A8 0070+00 .text      setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv               */
+/* 80218338-802183A8 0070+00 rc=1 efc=1 .text      setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802183A8-80218448 00A0+00 .text      setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv               */
+/* 802183A8-80218448 00A0+00 rc=1 efc=1 .text      setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80218448-80218524 00DC+00 .text      setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv           */
+/* 80218448-80218524 00DC+00 rc=2 efc=0 .text      setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossItemAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80218524-802185E8 00C4+00 .text      setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv           */
+/* 80218524-802185E8 00C4+00 rc=1 efc=0 .text      setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossItemAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802185E8-802186C4 00DC+00 .text      setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv            */
+/* 802185E8-802186C4 00DC+00 rc=2 efc=0 .text      setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossMapAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802186C4-80218788 00C4+00 .text      setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv            */
+/* 802186C4-80218788 00C4+00 rc=1 efc=0 .text      setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonCrossMapAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80218788-8021901C 0894+00 .text      setAlphaButtonChange__13dMeter2Draw_cFb                      */
+/* 80218788-8021901C 0894+00 rc=2 efc=1 .text      setAlphaButtonChange__13dMeter2Draw_cFb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonChange__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::setAlphaButtonChange(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonChange__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 8021901C-802190A8 008C+00 .text      setAlphaButtonAnimeMin__13dMeter2Draw_cFv                    */
+/* 8021901C-802190A8 008C+00 rc=1 efc=1 .text      setAlphaButtonAnimeMin__13dMeter2Draw_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 802190A8-80219174 00CC+00 .text      setAlphaButtonAnimeMax__13dMeter2Draw_cFv                    */
+/* 802190A8-80219174 00CC+00 rc=1 efc=1 .text      setAlphaButtonAnimeMax__13dMeter2Draw_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80219174-80219258 00E4+00 .text      setAlphaButtonAAnimeMin__13dMeter2Draw_cFv                   */
+/* 80219174-80219258 00E4+00 rc=1 efc=1 .text      setAlphaButtonAAnimeMin__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonAAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonAAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonAAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80219258-80219324 00CC+00 .text      setAlphaButtonAAnimeMax__13dMeter2Draw_cFv                   */
+/* 80219258-80219324 00CC+00 rc=1 efc=1 .text      setAlphaButtonAAnimeMax__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonAAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonAAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonAAnimeMax__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80219324-80219474 0150+00 .text      setAlphaButtonBAnimeMin__13dMeter2Draw_cFv                   */
+/* 80219324-80219474 0150+00 rc=1 efc=1 .text      setAlphaButtonBAnimeMin__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonBAnimeMin__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonBAnimeMin() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonBAnimeMin__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 80219474-802195A4 0130+00 .text      setAlphaButtonBAnimeMax__13dMeter2Draw_cFv                   */
+/* 80219474-802195A4 0130+00 rc=1 efc=1 .text      setAlphaButtonBAnimeMax__13dMeter2Draw_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaButtonBAnimeMax__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::setAlphaButtonBAnimeMax() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaButtonBAnimeMax__13dMeter2Draw_cFv.s"
 }
@@ -1581,25 +1995,25 @@ ASM_FUNCTION(setAlphaButtonBAnimeMax__13dMeter2Draw_cFv) {
 
 
 /* ############################################################################################## */
-/* 804548CC-804548D0 0004+00 .sdata2    @8207                                                        */
+/* 804548CC-804548D0 0004+00 rc=5 efc=0 .sdata2    @8207                                                        */
 f32 d_meter_d_meter2_draw__lit_8207 = 255.0f;
 
-/* 802195A4-80219788 01E4+00 .text      setButtonIconAAlpha__13dMeter2Draw_cFUcUlb                   */
+/* 802195A4-80219788 01E4+00 rc=1 efc=1 .text      setButtonIconAAlpha__13dMeter2Draw_cFUcUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonIconAAlpha__13dMeter2Draw_cFUcUlb) {
+asm void dMeter2Draw_c::setButtonIconAAlpha(char field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconAAlpha__13dMeter2Draw_cFUcUlb.s"
 }
 #pragma pop
 
 
-/* 80219788-80219A84 02FC+00 .text      setButtonIconBAlpha__13dMeter2Draw_cFUcUlb                   */
+/* 80219788-80219A84 02FC+00 rc=1 efc=1 .text      setButtonIconBAlpha__13dMeter2Draw_cFUcUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonIconBAlpha__13dMeter2Draw_cFUcUlb) {
+asm void dMeter2Draw_c::setButtonIconBAlpha(char field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconBAlpha__13dMeter2Draw_cFUcUlb.s"
 }
@@ -1607,39 +2021,39 @@ ASM_FUNCTION(setButtonIconBAlpha__13dMeter2Draw_cFUcUlb) {
 
 
 /* ############################################################################################## */
-/* 804548D0-804548D4 0004+00 .sdata2    @8359                                                        */
+/* 804548D0-804548D4 0004+00 rc=1 efc=0 .sdata2    @8359                                                        */
 f32 lit_8359 = 2.0f / 5.0f;
 
-/* 804548D4-804548D8 0004+00 .sdata2    @8360                                                        */
+/* 804548D4-804548D8 0004+00 rc=1 efc=0 .sdata2    @8360                                                        */
 f32 d_meter_d_meter2_draw__lit_8360 = 1.0f / 10.0f;
 
-/* 80219A84-80219E98 0414+00 .text      setButtonIconMidonaAlpha__13dMeter2Draw_cFUl                 */
+/* 80219A84-80219E98 0414+00 rc=1 efc=1 .text      setButtonIconMidonaAlpha__13dMeter2Draw_cFUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonIconMidonaAlpha__13dMeter2Draw_cFUl) {
+asm void dMeter2Draw_c::setButtonIconMidonaAlpha(u32 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconMidonaAlpha__13dMeter2Draw_cFUl.s"
 }
 #pragma pop
 
 
-/* 80219E98-8021A29C 0404+00 .text      setButtonIconAlpha__13dMeter2Draw_cFiUcUlb                   */
+/* 80219E98-8021A29C 0404+00 rc=1 efc=1 .text      setButtonIconAlpha__13dMeter2Draw_cFiUcUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setButtonIconAlpha__13dMeter2Draw_cFiUcUlb) {
+asm void dMeter2Draw_c::setButtonIconAlpha(s32 field_0, char field_1, u32 field_2, bool field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconAlpha__13dMeter2Draw_cFiUcUlb.s"
 }
 #pragma pop
 
 
-/* 8021A29C-8021A2F4 0058+00 .text      getNumberTexture__13dMeter2Draw_cFi                          */
+/* 8021A29C-8021A2F4 0058+00 rc=1 efc=0 .text      getNumberTexture__13dMeter2Draw_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNumberTexture__13dMeter2Draw_cFi) {
+asm void dMeter2Draw_c::getNumberTexture(s32 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getNumberTexture__13dMeter2Draw_cFi.s"
 }
@@ -1647,14 +2061,14 @@ ASM_FUNCTION(getNumberTexture__13dMeter2Draw_cFi) {
 
 
 /* ############################################################################################## */
-/* 80430158-80430178 0020+00 .bss       i_text_buf$8454                                              */
+/* 80430158-80430178 0020+00 rc=1 efc=0 .bss       i_text_buf$8454                                              */
 u8 data_80430158[32];
 
-/* 8021A2F4-8021A468 0174+00 .text      getActionString__13dMeter2Draw_cFUcUcPUc                     */
+/* 8021A2F4-8021A468 0174+00 rc=10 efc=1 .text      getActionString__13dMeter2Draw_cFUcUcPUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getActionString__13dMeter2Draw_cFUcUcPUc) {
+asm void dMeter2Draw_c::getActionString(char field_0, char field_1, char* field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getActionString__13dMeter2Draw_cFUcUcPUc.s"
 }
@@ -1662,72 +2076,72 @@ ASM_FUNCTION(getActionString__13dMeter2Draw_cFUcUcPUc) {
 
 
 /* ############################################################################################## */
-/* 804548D8-804548DC 0004+00 .sdata2    @8548                                                        */
+/* 804548D8-804548DC 0004+00 rc=2 efc=0 .sdata2    @8548                                                        */
 f32 lit_8548 = 100.0f;
 
-/* 804548DC-804548E0 0004+00 .sdata2    @8549                                                        */
+/* 804548DC-804548E0 0004+00 rc=2 efc=0 .sdata2    @8549                                                        */
 f32 lit_8549 = 48.0f;
 
-/* 8021A468-8021A71C 02B4+00 .text      changeTextureItemB__13dMeter2Draw_cFUc                       */
+/* 8021A468-8021A71C 02B4+00 rc=2 efc=0 .text      changeTextureItemB__13dMeter2Draw_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTextureItemB__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::changeTextureItemB(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureItemB__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 8021A71C-8021A9C8 02AC+00 .text      changeTextureItemXY__13dMeter2Draw_cFiUc                     */
+/* 8021A71C-8021A9C8 02AC+00 rc=1 efc=0 .text      changeTextureItemXY__13dMeter2Draw_cFiUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeTextureItemXY__13dMeter2Draw_cFiUc) {
+asm void dMeter2Draw_c::changeTextureItemXY(s32 field_0, char field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureItemXY__13dMeter2Draw_cFiUc.s"
 }
 #pragma pop
 
 
-/* 8021A9C8-8021AAA4 00DC+00 .text      setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas          */
+/* 8021A9C8-8021AAA4 00DC+00 rc=12 efc=2 .text      setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas) {
+asm void dMeter2Draw_c::setAlphaAnimeMin(CPaneMgrAlpha* field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas.s"
 }
 #pragma pop
 
 
-/* 8021AAA4-8021AB84 00E0+00 .text      setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas          */
+/* 8021AAA4-8021AB84 00E0+00 rc=33 efc=23 .text      setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas) {
+asm void dMeter2Draw_c::setAlphaAnimeMax(CPaneMgrAlpha* field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas.s"
 }
 #pragma pop
 
 
-/* 8021AB84-8021AEC8 0344+00 .text      setItemNum__13dMeter2Draw_cFUcUcUc                           */
+/* 8021AB84-8021AEC8 0344+00 rc=6 efc=6 .text      setItemNum__13dMeter2Draw_cFUcUcUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemNum__13dMeter2Draw_cFUcUcUc) {
+asm void dMeter2Draw_c::setItemNum(char field_0, char field_1, char field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemNum__13dMeter2Draw_cFUcUcUc.s"
 }
 #pragma pop
 
 
-/* 8021AEC8-8021AF78 00B0+00 .text      drawItemNum__13dMeter2Draw_cFUcf                             */
+/* 8021AEC8-8021AF78 00B0+00 rc=1 efc=1 .text      drawItemNum__13dMeter2Draw_cFUcf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawItemNum__13dMeter2Draw_cFUcf) {
+asm void dMeter2Draw_c::drawItemNum(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawItemNum__13dMeter2Draw_cFUcf.s"
 }
@@ -1735,40 +2149,40 @@ ASM_FUNCTION(drawItemNum__13dMeter2Draw_cFUcf) {
 
 
 /* ############################################################################################## */
-/* 804548E0-804548E4 0004+00 .sdata2    @8774                                                        */
+/* 804548E0-804548E4 0004+00 rc=1 efc=0 .sdata2    @8774                                                        */
 f32 lit_8774 = 9.0f;
 
-/* 804548E4-804548E8 0004+00 .sdata2    @8775                                                        */
+/* 804548E4-804548E8 0004+00 rc=1 efc=0 .sdata2    @8775                                                        */
 f32 lit_8775 = 3.0f / 5.0f;
 
-/* 80456B90-80456B94 0004+00 .sbss2     @8746                                                        */
+/* 80456B90-80456B94 0004+00 rc=1 efc=0 .sbss2     @8746                                                        */
 u8 d_meter_d_meter2_draw__lit_8746[4];
 
-/* 80456B94-80456B98 0004+00 .sbss2     None                                                         */
+/* 80456B94-80456B98 0004+00 rc=1 efc=0 .sbss2     None                                                         */
 u8 data_80456B94[4];
 
-/* 80456B98-80456B9C 0004+00 .sbss2     @8747                                                        */
+/* 80456B98-80456B9C 0004+00 rc=1 efc=0 .sbss2     @8747                                                        */
 u8 d_meter_d_meter2_draw__lit_8747[4];
 
-/* 80456B9C-80456BA0 0004+00 .sbss2     None                                                         */
+/* 80456B9C-80456BA0 0004+00 rc=1 efc=0 .sbss2     None                                                         */
 u8 data_80456B9C[4];
 
-/* 8021AF78-8021B0C8 0150+00 .text      drawKanteraMeter__13dMeter2Draw_cFUcf                        */
+/* 8021AF78-8021B0C8 0150+00 rc=1 efc=1 .text      drawKanteraMeter__13dMeter2Draw_cFUcf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawKanteraMeter__13dMeter2Draw_cFUcf) {
+asm void dMeter2Draw_c::drawKanteraMeter(char field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKanteraMeter__13dMeter2Draw_cFUcf.s"
 }
 #pragma pop
 
 
-/* 8021B0C8-8021B104 003C+00 .text      isButtonVisible__13dMeter2Draw_cFv                           */
+/* 8021B0C8-8021B104 003C+00 rc=3 efc=3 .text      isButtonVisible__13dMeter2Draw_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isButtonVisible__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::isButtonVisible() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/isButtonVisible__13dMeter2Draw_cFv.s"
 }
@@ -1776,59 +2190,59 @@ ASM_FUNCTION(isButtonVisible__13dMeter2Draw_cFv) {
 
 
 /* ############################################################################################## */
-/* 804548E8-804548EC 0004+00 .sdata2    @8992                                                        */
+/* 804548E8-804548EC 0004+00 rc=2 efc=0 .sdata2    @8992                                                        */
 f32 lit_8992 = 4.0f;
 
-/* 804548EC-804548F0 0004+00 .sdata2    @8993                                                        */
+/* 804548EC-804548F0 0004+00 rc=1 efc=0 .sdata2    @8993                                                        */
 f32 d_meter_d_meter2_draw__lit_8993 = -11.0f;
 
-/* 804548F0-804548F4 0004+00 .sdata2    @8994                                                        */
+/* 804548F0-804548F4 0004+00 rc=4 efc=0 .sdata2    @8994                                                        */
 f32 lit_8994 = 17.0f / 10.0f;
 
-/* 804548F4-804548F8 0004+00 .sdata2    @8995                                                        */
+/* 804548F4-804548F8 0004+00 rc=3 efc=0 .sdata2    @8995                                                        */
 f32 lit_8995 = -4.0f;
 
-/* 804548F8-804548FC 0004+00 .sdata2    @8996                                                        */
+/* 804548F8-804548FC 0004+00 rc=2 efc=0 .sdata2    @8996                                                        */
 f32 lit_8996 = -46.0f / 5.0f;
 
-/* 804548FC-80454900 0004+00 .sdata2    @8997                                                        */
+/* 804548FC-80454900 0004+00 rc=2 efc=0 .sdata2    @8997                                                        */
 f32 lit_8997 = 19.0f / 20.0f;
 
-/* 80454900-80454904 0004+00 .sdata2    @8998                                                        */
+/* 80454900-80454904 0004+00 rc=2 efc=0 .sdata2    @8998                                                        */
 f32 lit_8998 = 46.0f / 5.0f;
 
-/* 80454904-80454908 0004+00 .sdata2    @8999                                                        */
+/* 80454904-80454908 0004+00 rc=1 efc=0 .sdata2    @8999                                                        */
 f32 lit_8999 = -14.0f;
 
-/* 80454908-8045490C 0004+00 .sdata2    @9000                                                        */
+/* 80454908-8045490C 0004+00 rc=2 efc=0 .sdata2    @9000                                                        */
 f32 lit_9000 = 2.0f;
 
-/* 8045490C-80454910 0004+00 .sdata2    @9001                                                        */
+/* 8045490C-80454910 0004+00 rc=2 efc=0 .sdata2    @9001                                                        */
 f32 lit_9001 = 1.5f;
 
-/* 80454910-80454914 0004+00 .sdata2    @9002                                                        */
+/* 80454910-80454914 0004+00 rc=2 efc=0 .sdata2    @9002                                                        */
 f32 lit_9002 = 350.0f;
 
-/* 80454914-80454918 0004+00 .sdata2    @9003                                                        */
+/* 80454914-80454918 0004+00 rc=1 efc=0 .sdata2    @9003                                                        */
 f32 lit_9003 = -2.0f;
 
-/* 80454918-8045491C 0004+00 .sdata2    @9004                                                        */
+/* 80454918-8045491C 0004+00 rc=1 efc=0 .sdata2    @9004                                                        */
 f32 lit_9004 = -15.0f;
 
-/* 8045491C-80454920 0004+00 .sdata2    @9005                                                        */
+/* 8045491C-80454920 0004+00 rc=3 efc=0 .sdata2    @9005                                                        */
 f32 lit_9005 = -13.0f / 10.0f;
 
-/* 80454920-80454924 0004+00 .sdata2    @9006                                                        */
+/* 80454920-80454924 0004+00 rc=2 efc=0 .sdata2    @9006                                                        */
 f32 lit_9006 = -16.0f;
 
-/* 80454924-80454928 0004+00 .sdata2    @9007                                                        */
+/* 80454924-80454928 0004+00 rc=3 efc=0 .sdata2    @9007                                                        */
 f32 lit_9007 = 1.888888955116272f;
 
-/* 8021B104-8021B364 0260+00 .text      setItemParamX__13dMeter2Draw_cFUc                            */
+/* 8021B104-8021B364 0260+00 rc=3 efc=0 .text      setItemParamX__13dMeter2Draw_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemParamX__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::setItemParamX(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamX__13dMeter2Draw_cFUc.s"
 }
@@ -1836,26 +2250,26 @@ ASM_FUNCTION(setItemParamX__13dMeter2Draw_cFUc) {
 
 
 /* ############################################################################################## */
-/* 80454928-8045492C 0004+00 .sdata2    @9025                                                        */
+/* 80454928-8045492C 0004+00 rc=3 efc=0 .sdata2    @9025                                                        */
 f32 lit_9025 = 14.0f;
 
-/* 8045492C-80454930 0004+00 .sdata2    @9026                                                        */
+/* 8045492C-80454930 0004+00 rc=2 efc=0 .sdata2    @9026                                                        */
 f32 lit_9026 = 13.0f / 10.0f;
 
-/* 80454930-80454934 0004+00 .sdata2    @9027                                                        */
+/* 80454930-80454934 0004+00 rc=2 efc=0 .sdata2    @9027                                                        */
 f32 lit_9027 = -33.0f / 5.0f;
 
-/* 80454934-80454938 0004+00 .sdata2    @9028                                                        */
+/* 80454934-80454938 0004+00 rc=2 efc=0 .sdata2    @9028                                                        */
 f32 lit_9028 = 33.0f / 5.0f;
 
-/* 80454938-8045493C 0004+00 .sdata2    @9029                                                        */
+/* 80454938-8045493C 0004+00 rc=1 efc=0 .sdata2    @9029                                                        */
 f32 lit_9029 = -9.0f / 5.0f;
 
-/* 8021B364-8021B5B0 024C+00 .text      setItemParamY__13dMeter2Draw_cFUc                            */
+/* 8021B364-8021B5B0 024C+00 rc=3 efc=0 .text      setItemParamY__13dMeter2Draw_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemParamY__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::setItemParamY(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamY__13dMeter2Draw_cFUc.s"
 }
@@ -1863,29 +2277,29 @@ ASM_FUNCTION(setItemParamY__13dMeter2Draw_cFUc) {
 
 
 /* ############################################################################################## */
-/* 8045493C-80454940 0004+00 .sdata2    @9047                                                        */
+/* 8045493C-80454940 0004+00 rc=2 efc=0 .sdata2    @9047                                                        */
 f32 lit_9047 = 11.0f / 5.0f;
 
-/* 80454940-80454944 0004+00 .sdata2    @9048                                                        */
+/* 80454940-80454944 0004+00 rc=2 efc=0 .sdata2    @9048                                                        */
 f32 lit_9048 = -30.0f;
 
-/* 80454944-80454948 0004+00 .sdata2    @9049                                                        */
+/* 80454944-80454948 0004+00 rc=2 efc=0 .sdata2    @9049                                                        */
 f32 lit_9049 = 0.75f;
 
-/* 80454948-8045494C 0004+00 .sdata2    @9050                                                        */
+/* 80454948-8045494C 0004+00 rc=2 efc=0 .sdata2    @9050                                                        */
 f32 lit_9050 = 4.0f / 5.0f;
 
-/* 8045494C-80454950 0004+00 .sdata2    @9051                                                        */
+/* 8045494C-80454950 0004+00 rc=2 efc=0 .sdata2    @9051                                                        */
 f32 lit_9051 = 7.0f / 5.0f;
 
-/* 80454950-80454954 0004+00 .sdata2    @9052                                                        */
+/* 80454950-80454954 0004+00 rc=1 efc=0 .sdata2    @9052                                                        */
 f32 lit_9052 = -3.5f;
 
-/* 8021B5B0-8021B810 0260+00 .text      setItemParamZ__13dMeter2Draw_cFUc                            */
+/* 8021B5B0-8021B810 0260+00 rc=3 efc=0 .text      setItemParamZ__13dMeter2Draw_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemParamZ__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::setItemParamZ(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamZ__13dMeter2Draw_cFUc.s"
 }
@@ -1893,143 +2307,142 @@ ASM_FUNCTION(setItemParamZ__13dMeter2Draw_cFUc) {
 
 
 /* ############################################################################################## */
-/* 80454954-80454958 0004+00 .sdata2    @9089                                                        */
+/* 80454954-80454958 0004+00 rc=1 efc=0 .sdata2    @9089                                                        */
 f32 lit_9089 = 17.299999237060547f;
 
-/* 80454958-8045495C 0004+00 .sdata2    @9090                                                        */
+/* 80454958-8045495C 0004+00 rc=1 efc=0 .sdata2    @9090                                                        */
 f32 d_meter_d_meter2_draw__lit_9090 = -46.79999923706055f;
 
-/* 8045495C-80454960 0004+00 .sdata2    @9091                                                        */
+/* 8045495C-80454960 0004+00 rc=1 efc=0 .sdata2    @9091                                                        */
 f32 d_meter_d_meter2_draw__lit_9091 = 26.0f;
 
-/* 80454960-80454964 0004+00 .sdata2    @9092                                                        */
+/* 80454960-80454964 0004+00 rc=1 efc=0 .sdata2    @9092                                                        */
 f32 lit_9092 = -54.70000076293945f;
 
-/* 80454964-80454968 0004+00 .sdata2    @9093                                                        */
+/* 80454964-80454968 0004+00 rc=1 efc=0 .sdata2    @9093                                                        */
 f32 lit_9093 = 20.700000762939453f;
 
-/* 80454968-8045496C 0004+00 .sdata2    @9094                                                        */
+/* 80454968-8045496C 0004+00 rc=1 efc=0 .sdata2    @9094                                                        */
 f32 lit_9094 = -55.70000076293945f;
 
-/* 8045496C-80454970 0004+00 .sdata2    @9095                                                        */
+/* 8045496C-80454970 0004+00 rc=1 efc=0 .sdata2    @9095                                                        */
 f32 lit_9095 = 77.0f / 5.0f;
 
-/* 80454970-80454974 0004+00 .sdata2    @9096                                                        */
+/* 80454970-80454974 0004+00 rc=1 efc=0 .sdata2    @9096                                                        */
 f32 lit_9096 = -47.79999923706055f;
 
-/* 80454974-80454978 0004+00 .sdata2    @9097                                                        */
+/* 80454974-80454978 0004+00 rc=1 efc=0 .sdata2    @9097                                                        */
 f32 lit_9097 = 23.299999237060547f;
 
-/* 80454978-8045497C 0004+00 .sdata2    @9098                                                        */
+/* 80454978-8045497C 0004+00 rc=1 efc=0 .sdata2    @9098                                                        */
 f32 lit_9098 = 29.299999237060547f;
 
-/* 8045497C-80454980 0004+00 .sdata2    @9099                                                        */
+/* 8045497C-80454980 0004+00 rc=1 efc=0 .sdata2    @9099                                                        */
 f32 lit_9099 = 20.299999237060547f;
 
-/* 80454980-80454984 0004+00 .sdata2    @9100                                                        */
+/* 80454980-80454984 0004+00 rc=1 efc=0 .sdata2    @9100                                                        */
 f32 lit_9100 = 12.0f;
 
-/* 80454984-80454988 0004+00 .sdata2    @9101                                                        */
+/* 80454984-80454988 0004+00 rc=1 efc=0 .sdata2    @9101                                                        */
 f32 lit_9101 = -22.0f;
 
-/* 80454988-8045498C 0004+00 .sdata2    @9102                                                        */
+/* 80454988-8045498C 0004+00 rc=1 efc=0 .sdata2    @9102                                                        */
 f32 lit_9102 = 21.0f;
 
-/* 8045498C-80454990 0004+00 .sdata2    @9103                                                        */
+/* 8045498C-80454990 0004+00 rc=1 efc=0 .sdata2    @9103                                                        */
 f32 lit_9103 = -46.70000076293945f;
 
-/* 80454990-80454994 0004+00 .sdata2    @9104                                                        */
+/* 80454990-80454994 0004+00 rc=1 efc=0 .sdata2    @9104                                                        */
 f32 lit_9104 = 19.0f;
 
-/* 80454994-80454998 0004+00 .sdata2    @9105                                                        */
+/* 80454994-80454998 0004+00 rc=1 efc=0 .sdata2    @9105                                                        */
 f32 lit_9105 = -45.0f;
 
-/* 8021B810-8021BB6C 035C+00 .text      setItemParamB__13dMeter2Draw_cFUc                            */
+/* 8021B810-8021BB6C 035C+00 rc=3 efc=0 .text      setItemParamB__13dMeter2Draw_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setItemParamB__13dMeter2Draw_cFUc) {
+asm void dMeter2Draw_c::setItemParamB(char field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamB__13dMeter2Draw_cFUc.s"
 }
 #pragma pop
 
 
-/* 8021BB6C-8021BBB4 0048+00 .text      getFishingType__13dMeter2Draw_cFv                            */
+/* 8021BB6C-8021BBB4 0048+00 rc=1 efc=0 .text      getFishingType__13dMeter2Draw_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFishingType__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getFishingType() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getFishingType__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021BBB4-8021BC24 0070+00 .text      getCanoeFishing__13dMeter2Draw_cFv                           */
+/* 8021BBB4-8021BC24 0070+00 rc=3 efc=1 .text      getCanoeFishing__13dMeter2Draw_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCanoeFishing__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getCanoeFishing() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getCanoeFishing__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021BC24-8021BC54 0030+00 .text      getCameraSubject__13dMeter2Draw_cFv                          */
+/* 8021BC24-8021BC54 0030+00 rc=1 efc=1 .text      getCameraSubject__13dMeter2Draw_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCameraSubject__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getCameraSubject() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getCameraSubject__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021BC54-8021BCAC 0058+00 .text      getItemSubject__13dMeter2Draw_cFv                            */
+/* 8021BC54-8021BCAC 0058+00 rc=1 efc=1 .text      getItemSubject__13dMeter2Draw_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getItemSubject__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getItemSubject() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getItemSubject__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021BCAC-8021BCC0 0014+00 .text      getPlayerSubject__13dMeter2Draw_cFv                          */
+/* 8021BCAC-8021BCC0 0014+00 rc=1 efc=1 .text      getPlayerSubject__13dMeter2Draw_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPlayerSubject__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getPlayerSubject() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getPlayerSubject__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* 8021BCC0-8021BDD0 0110+00 .text      isBButtonShow__13dMeter2Draw_cFb                             */
+/* 8021BCC0-8021BDD0 0110+00 rc=4 efc=2 .text      isBButtonShow__13dMeter2Draw_cFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isBButtonShow__13dMeter2Draw_cFb) {
+asm void dMeter2Draw_c::isBButtonShow(bool field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/isBButtonShow__13dMeter2Draw_cFb.s"
 }
 #pragma pop
 
 
-/* 8021BDD0-8021BDDC 000C+00 .text      getButtonTimer__13dMeter2Draw_cFv                            */
+/* 8021BDD0-8021BDDC 000C+00 rc=1 efc=1 .text      getButtonTimer__13dMeter2Draw_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getButtonTimer__13dMeter2Draw_cFv) {
+asm void dMeter2Draw_c::getButtonTimer() {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getButtonTimer__13dMeter2Draw_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

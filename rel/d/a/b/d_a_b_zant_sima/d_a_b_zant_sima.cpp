@@ -6,23 +6,58 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daB_ZANTS_c;
+struct dBgW;
+
+struct daB_ZANTS_c {
+	void draw();
+	void action();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__11daB_ZANTS_cFv();
-extern "C" extern void daB_ZANTS_Draw__FP11daB_ZANTS_c();
-extern "C" extern void zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void action__11daB_ZANTS_cFv();
-extern "C" extern void execute__11daB_ZANTS_cFv();
-extern "C" extern void daB_ZANTS_Execute__FP11daB_ZANTS_c();
-extern "C" extern void daB_ZANTS_IsDelete__FP11daB_ZANTS_c();
-extern "C" extern void _delete__11daB_ZANTS_cFv();
-extern "C" extern void daB_ZANTS_Delete__FP11daB_ZANTS_c();
-extern "C" extern void CreateHeap__11daB_ZANTS_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__11daB_ZANTS_cFv();
-extern "C" extern void daB_ZANTS_Create__FP11daB_ZANTS_c();
+void daB_ZANTS_Draw(daB_ZANTS_c*);
+void zants_ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daB_ZANTS_Execute(daB_ZANTS_c*);
+bool daB_ZANTS_IsDelete(daB_ZANTS_c*);
+void daB_ZANTS_Delete(daB_ZANTS_c*);
+void useHeapInit(fopAc_ac_c*);
+void daB_ZANTS_Create(daB_ZANTS_c*);
+
+extern "C" void draw__11daB_ZANTS_cFv();
+extern "C" void daB_ZANTS_Draw__FP11daB_ZANTS_c();
+extern "C" void zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void action__11daB_ZANTS_cFv();
+extern "C" void execute__11daB_ZANTS_cFv();
+extern "C" void daB_ZANTS_Execute__FP11daB_ZANTS_c();
+extern "C" bool daB_ZANTS_IsDelete__FP11daB_ZANTS_c();
+extern "C" void _delete__11daB_ZANTS_cFv();
+extern "C" void daB_ZANTS_Delete__FP11daB_ZANTS_c();
+extern "C" void CreateHeap__11daB_ZANTS_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__11daB_ZANTS_cFv();
+extern "C" void daB_ZANTS_Create__FP11daB_ZANTS_c();
 SECTION_RODATA extern const u8 lit_3800[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3801[8];
 SECTION_RODATA extern const u32 lit_3802;
@@ -44,7 +79,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +91,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/draw__11daB_ZANTS_cFv.s"
 }
@@ -65,7 +102,7 @@ ASM_FUNCTION(draw__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTS_Draw__FP11daB_ZANTS_c) {
+asm void daB_ZANTS_Draw(daB_ZANTS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Draw__FP11daB_ZANTS_c.s"
 }
@@ -76,7 +113,7 @@ ASM_FUNCTION(daB_ZANTS_Draw__FP11daB_ZANTS_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void zants_ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -87,7 +124,7 @@ ASM_FUNCTION(zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/action__11daB_ZANTS_cFv.s"
 }
@@ -98,7 +135,7 @@ ASM_FUNCTION(action__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/execute__11daB_ZANTS_cFv.s"
 }
@@ -109,7 +146,7 @@ ASM_FUNCTION(execute__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTS_Execute__FP11daB_ZANTS_c) {
+asm void daB_ZANTS_Execute(daB_ZANTS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Execute__FP11daB_ZANTS_c.s"
 }
@@ -117,21 +154,16 @@ ASM_FUNCTION(daB_ZANTS_Execute__FP11daB_ZANTS_c) {
 
 
 /* 80652EB8-80652EC0 0008+00 .text      daB_ZANTS_IsDelete__FP11daB_ZANTS_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTS_IsDelete__FP11daB_ZANTS_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_IsDelete__FP11daB_ZANTS_c.s"
+bool daB_ZANTS_IsDelete(daB_ZANTS_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80652EC0-80652F18 0058+00 .text      _delete__11daB_ZANTS_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/_delete__11daB_ZANTS_cFv.s"
 }
@@ -142,7 +174,7 @@ ASM_FUNCTION(_delete__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTS_Delete__FP11daB_ZANTS_c) {
+asm void daB_ZANTS_Delete(daB_ZANTS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Delete__FP11daB_ZANTS_c.s"
 }
@@ -153,7 +185,7 @@ ASM_FUNCTION(daB_ZANTS_Delete__FP11daB_ZANTS_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/CreateHeap__11daB_ZANTS_cFv.s"
 }
@@ -164,7 +196,7 @@ ASM_FUNCTION(CreateHeap__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/__dt__12J3DFrameCtrlFv.s"
 }
@@ -175,7 +207,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -186,7 +218,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daB_ZANTS_cFv) {
+asm void daB_ZANTS_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/create__11daB_ZANTS_cFv.s"
 }
@@ -197,7 +229,7 @@ ASM_FUNCTION(create__11daB_ZANTS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANTS_Create__FP11daB_ZANTS_c) {
+asm void daB_ZANTS_Create(daB_ZANTS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Create__FP11daB_ZANTS_c.s"
 }

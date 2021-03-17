@@ -6,21 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPAEmitterWorkData (JPAEmitterWorkData) False/False
+/* top-level dependencies (begin JPAEmitterWorkData) */
+/* top-level dependencies (end JPAEmitterWorkData) */
+struct JPAEmitterWorkData {
+};
+
+// build JPABaseParticle (JPABaseParticle) False/False
+/* top-level dependencies (begin JPABaseParticle) */
+/* top-level dependencies (end JPABaseParticle) */
+struct JPABaseParticle {
+};
+
+// build JPAExtraShape (JPAExtraShape) False/False
+/* top-level dependencies (begin JPAExtraShape) */
+/* top-level dependencies (end JPAExtraShape) */
+struct JPAExtraShape {
+	/* 8027AD88 */ JPAExtraShape(char const*);
+	/* 8027ADBC */ void init();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" extern void __ct__13JPAExtraShapeFPCUc();
-extern "C" extern void init__13JPAExtraShapeFv();
+void JPACalcScaleX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleCopy(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmNormal(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmRepeatX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmRepeatY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmReverseX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmReverseY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcAlphaAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcAlphaFlickAnm(JPAEmitterWorkData*, JPABaseParticle*);
+
+extern "C" void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void __ct__13JPAExtraShapeFPCUc();
+extern "C" void init__13JPAExtraShapeFv();
 SECTION_SDATA2 extern f32 JPAExtraShape__lit_2270;
 SECTION_SDATA2 extern f64 JPAExtraShape__lit_2312;
 SECTION_SDATA2 extern f32 lit_2339;
@@ -33,6 +68,7 @@ SECTION_SDATA2 extern u8 JPAExtraShape__lit_2503[4 + 4 /* padding */];
 // External References:
 // 
 
+
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 
 // 
@@ -40,48 +76,48 @@ SECTION_BSS extern u8 sincosTable___5JMath[65536];
 // 
 
 /* ############################################################################################## */
-/* 804552E0-804552E8 0004+04 .sdata2    @2270                                                        */
+/* 804552E0-804552E8 0004+04 rc=6 efc=0 .sdata2    @2270                                                        */
 f32 JPAExtraShape__lit_2270 = 1.0f;
 /* padding 4 bytes */
 
-/* 8027A918-8027A990 0078+00 .text      JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle      */
+/* 8027A918-8027A990 0078+00 rc=1 efc=1 .text      JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleX(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027A990-8027AA08 0078+00 .text      JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle      */
+/* 8027A990-8027AA08 0078+00 rc=1 efc=1 .text      JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleY(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027AA08-8027AA14 000C+00 .text      JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle   */
+/* 8027AA08-8027AA14 000C+00 rc=1 efc=1 .text      JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleCopy(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027AA14-8027AA20 000C+00 .text      JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA14-8027AA20 000C+00 rc=1 efc=1 .text      JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleAnmNormal(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
@@ -89,25 +125,25 @@ ASM_FUNCTION(JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle) {
 
 
 /* ############################################################################################## */
-/* 804552E8-804552F0 0008+00 .sdata2    @2312                                                        */
+/* 804552E8-804552F0 0008+00 rc=5 efc=0 .sdata2    @2312                                                        */
 f64 JPAExtraShape__lit_2312 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8027AA20-8027AA84 0064+00 .text      JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA20-8027AA84 0064+00 rc=1 efc=1 .text      JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleAnmRepeatX(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027AA84-8027AAE8 0064+00 .text      JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA84-8027AAE8 0064+00 rc=1 efc=1 .text      JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleAnmRepeatY(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
@@ -115,25 +151,25 @@ ASM_FUNCTION(JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle) {
 
 
 /* ############################################################################################## */
-/* 804552F0-804552F4 0004+00 .sdata2    @2339                                                        */
+/* 804552F0-804552F4 0004+00 rc=2 efc=0 .sdata2    @2339                                                        */
 f32 lit_2339 = 2.0f;
 
-/* 8027AAE8-8027AB7C 0094+00 .text      JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AAE8-8027AB7C 0094+00 rc=1 efc=1 .text      JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleAnmReverseX(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027AB7C-8027AC10 0094+00 .text      JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AB7C-8027AC10 0094+00 rc=1 efc=1 .text      JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcScaleAnmReverseY(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
@@ -141,14 +177,14 @@ ASM_FUNCTION(JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle) 
 
 
 /* ############################################################################################## */
-/* 804552F4-804552F8 0004+00 .sdata2    @2390                                                        */
+/* 804552F4-804552F8 0004+00 rc=2 efc=0 .sdata2    @2390                                                        */
 f32 lit_2390 = 255.0f;
 
-/* 8027AC10-8027AC98 0088+00 .text      JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle    */
+/* 8027AC10-8027AC98 0088+00 rc=1 efc=1 .text      JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcAlphaAnm(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
@@ -156,28 +192,28 @@ ASM_FUNCTION(JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle) {
 
 
 /* ############################################################################################## */
-/* 804552F8-804552FC 0004+00 .sdata2    @2433                                                        */
+/* 804552F8-804552FC 0004+00 rc=1 efc=0 .sdata2    @2433                                                        */
 f32 lit_2433 = 16384.0f;
 
-/* 804552FC-80455300 0004+00 .sdata2    @2434                                                        */
+/* 804552FC-80455300 0004+00 rc=1 efc=0 .sdata2    @2434                                                        */
 f32 lit_2434 = 0.5f;
 
-/* 8027AC98-8027AD88 00F0+00 .text      JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AC98-8027AD88 00F0+00 rc=1 efc=1 .text      JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle) {
+asm void JPACalcAlphaFlickAnm(JPAEmitterWorkData* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle.s"
 }
 #pragma pop
 
 
-/* 8027AD88-8027ADBC 0034+00 .text      __ct__13JPAExtraShapeFPCUc                                   */
+/* 8027AD88-8027ADBC 0034+00 rc=1 efc=1 .text      __ct__13JPAExtraShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13JPAExtraShapeFPCUc) {
+asm JPAExtraShape::JPAExtraShape(char const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/__ct__13JPAExtraShapeFPCUc.s"
 }
@@ -185,22 +221,21 @@ ASM_FUNCTION(__ct__13JPAExtraShapeFPCUc) {
 
 
 /* ############################################################################################## */
-/* 80455300-80455308 0004+04 .sdata2    @2503                                                        */
+/* 80455300-80455308 0004+04 rc=1 efc=0 .sdata2    @2503                                                        */
 u8 JPAExtraShape__lit_2503[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8027ADBC-8027AEBC 0100+00 .text      init__13JPAExtraShapeFv                                      */
+/* 8027ADBC-8027AEBC 0100+00 rc=1 efc=0 .text      init__13JPAExtraShapeFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13JPAExtraShapeFv) {
+asm void JPAExtraShape::init() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/init__13JPAExtraShapeFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

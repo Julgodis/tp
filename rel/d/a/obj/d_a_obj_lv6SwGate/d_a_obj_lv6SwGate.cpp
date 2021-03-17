@@ -6,40 +6,109 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daLv6SwGate_c;
+struct fopAc_ac_c;
+
+struct daLv6SwGate_HIO_c {
+	daLv6SwGate_HIO_c();
+	~daLv6SwGate_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6SwGate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void isSwitch();
+	void moveGate();
+	void init_modeWait();
+	void modeWait();
+	void init_modeOpen();
+	void modeOpen();
+	void init_modeClose();
+	void modeClose();
+	void init_modeBreak();
+	void modeBreak();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daLv6SwGate_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daLv6SwGate_cFv();
-extern "C" extern void CreateHeap__13daLv6SwGate_cFv();
-extern "C" extern void create__13daLv6SwGate_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void isSwitch__13daLv6SwGate_cFv();
-extern "C" extern void Execute__13daLv6SwGate_cFPPA3_A4_f();
-extern "C" extern void moveGate__13daLv6SwGate_cFv();
-extern "C" extern void init_modeWait__13daLv6SwGate_cFv();
-extern "C" extern void modeWait__13daLv6SwGate_cFv();
-extern "C" extern void init_modeOpen__13daLv6SwGate_cFv();
-extern "C" extern void modeOpen__13daLv6SwGate_cFv();
-extern "C" extern void init_modeClose__13daLv6SwGate_cFv();
-extern "C" extern void modeClose__13daLv6SwGate_cFv();
-extern "C" extern void init_modeBreak__13daLv6SwGate_cFv();
-extern "C" extern void modeBreak__13daLv6SwGate_cFv();
-extern "C" extern void Draw__13daLv6SwGate_cFv();
-extern "C" extern void Delete__13daLv6SwGate_cFv();
-extern "C" extern void daLv6SwGate_Draw__FP13daLv6SwGate_c();
-extern "C" extern void daLv6SwGate_Execute__FP13daLv6SwGate_c();
-extern "C" extern void daLv6SwGate_Delete__FP13daLv6SwGate_c();
-extern "C" extern void daLv6SwGate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17daLv6SwGate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6SwGate_cpp();
+extern "C" void Execute__13daLv6SwGate_cFPPA3_A4_f();
+void daLv6SwGate_Draw(daLv6SwGate_c*);
+void daLv6SwGate_Execute(daLv6SwGate_c*);
+void daLv6SwGate_Delete(daLv6SwGate_c*);
+void daLv6SwGate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6SwGate_cpp();
+
+extern "C" void __ct__17daLv6SwGate_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv6SwGate_cFv();
+extern "C" void CreateHeap__13daLv6SwGate_cFv();
+extern "C" void create__13daLv6SwGate_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void isSwitch__13daLv6SwGate_cFv();
+extern "C" void Execute__13daLv6SwGate_cFPPA3_A4_f();
+extern "C" void moveGate__13daLv6SwGate_cFv();
+extern "C" void init_modeWait__13daLv6SwGate_cFv();
+extern "C" void modeWait__13daLv6SwGate_cFv();
+extern "C" void init_modeOpen__13daLv6SwGate_cFv();
+extern "C" void modeOpen__13daLv6SwGate_cFv();
+extern "C" void init_modeClose__13daLv6SwGate_cFv();
+extern "C" void modeClose__13daLv6SwGate_cFv();
+extern "C" void init_modeBreak__13daLv6SwGate_cFv();
+extern "C" void modeBreak__13daLv6SwGate_cFv();
+extern "C" void Draw__13daLv6SwGate_cFv();
+extern "C" void Delete__13daLv6SwGate_cFv();
+extern "C" void daLv6SwGate_Draw__FP13daLv6SwGate_c();
+extern "C" void daLv6SwGate_Execute__FP13daLv6SwGate_c();
+extern "C" void daLv6SwGate_Delete__FP13daLv6SwGate_c();
+extern "C" void daLv6SwGate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17daLv6SwGate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6SwGate_cpp();
 SECTION_RODATA extern const u32 lit_3633;
 SECTION_RODATA extern const u32 lit_3634;
 SECTION_RODATA extern const u32 lit_3635;
@@ -83,8 +152,11 @@ SECTION_BSS extern u8 data_80C7576C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -94,7 +166,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daLv6SwGate_HIO_cFv) {
+asm daLv6SwGate_HIO_c::daLv6SwGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__ct__17daLv6SwGate_HIO_cFv.s"
 }
@@ -105,7 +177,7 @@ ASM_FUNCTION(__ct__17daLv6SwGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -116,7 +188,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -127,7 +199,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/setBaseMtx__13daLv6SwGate_cFv.s"
 }
@@ -138,7 +210,7 @@ ASM_FUNCTION(setBaseMtx__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/CreateHeap__13daLv6SwGate_cFv.s"
 }
@@ -149,7 +221,7 @@ ASM_FUNCTION(CreateHeap__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/create__13daLv6SwGate_cFv.s"
 }
@@ -160,7 +232,7 @@ ASM_FUNCTION(create__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__8dCcD_CylFv.s"
 }
@@ -171,7 +243,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__ct__8dCcD_CylFv.s"
 }
@@ -182,7 +254,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__8cM3dGCylFv.s"
 }
@@ -193,7 +265,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__8cM3dGAabFv.s"
 }
@@ -204,7 +276,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__10dCcD_GSttsFv.s"
 }
@@ -215,7 +287,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSwitch__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::isSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/isSwitch__13daLv6SwGate_cFv.s"
 }
@@ -226,7 +298,7 @@ ASM_FUNCTION(isSwitch__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daLv6SwGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daLv6SwGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/Execute__13daLv6SwGate_cFPPA3_A4_f.s"
 }
@@ -237,7 +309,7 @@ ASM_FUNCTION(Execute__13daLv6SwGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveGate__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::moveGate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/moveGate__13daLv6SwGate_cFv.s"
 }
@@ -248,7 +320,7 @@ ASM_FUNCTION(moveGate__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/init_modeWait__13daLv6SwGate_cFv.s"
 }
@@ -256,21 +328,16 @@ ASM_FUNCTION(init_modeWait__13daLv6SwGate_cFv) {
 
 
 /* 80C74B54-80C74B58 0004+00 .text      modeWait__13daLv6SwGate_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__13daLv6SwGate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/modeWait__13daLv6SwGate_cFv.s"
+void daLv6SwGate_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C74B58-80C74B64 000C+00 .text      init_modeOpen__13daLv6SwGate_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/init_modeOpen__13daLv6SwGate_cFv.s"
 }
@@ -281,7 +348,7 @@ ASM_FUNCTION(init_modeOpen__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/modeOpen__13daLv6SwGate_cFv.s"
 }
@@ -292,7 +359,7 @@ ASM_FUNCTION(modeOpen__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeClose__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::init_modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/init_modeClose__13daLv6SwGate_cFv.s"
 }
@@ -303,7 +370,7 @@ ASM_FUNCTION(init_modeClose__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/modeClose__13daLv6SwGate_cFv.s"
 }
@@ -314,7 +381,7 @@ ASM_FUNCTION(modeClose__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/init_modeBreak__13daLv6SwGate_cFv.s"
 }
@@ -325,7 +392,7 @@ ASM_FUNCTION(init_modeBreak__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/modeBreak__13daLv6SwGate_cFv.s"
 }
@@ -336,7 +403,7 @@ ASM_FUNCTION(modeBreak__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/Draw__13daLv6SwGate_cFv.s"
 }
@@ -347,7 +414,7 @@ ASM_FUNCTION(Draw__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daLv6SwGate_cFv) {
+asm void daLv6SwGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/Delete__13daLv6SwGate_cFv.s"
 }
@@ -358,7 +425,7 @@ ASM_FUNCTION(Delete__13daLv6SwGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6SwGate_Draw__FP13daLv6SwGate_c) {
+asm void daLv6SwGate_Draw(daLv6SwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/daLv6SwGate_Draw__FP13daLv6SwGate_c.s"
 }
@@ -369,7 +436,7 @@ ASM_FUNCTION(daLv6SwGate_Draw__FP13daLv6SwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6SwGate_Execute__FP13daLv6SwGate_c) {
+asm void daLv6SwGate_Execute(daLv6SwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/daLv6SwGate_Execute__FP13daLv6SwGate_c.s"
 }
@@ -380,7 +447,7 @@ ASM_FUNCTION(daLv6SwGate_Execute__FP13daLv6SwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6SwGate_Delete__FP13daLv6SwGate_c) {
+asm void daLv6SwGate_Delete(daLv6SwGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/daLv6SwGate_Delete__FP13daLv6SwGate_c.s"
 }
@@ -391,7 +458,7 @@ ASM_FUNCTION(daLv6SwGate_Delete__FP13daLv6SwGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6SwGate_Create__FP10fopAc_ac_c) {
+asm void daLv6SwGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/daLv6SwGate_Create__FP10fopAc_ac_c.s"
 }
@@ -402,7 +469,7 @@ ASM_FUNCTION(daLv6SwGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__10cCcD_GSttsFv.s"
 }
@@ -413,7 +480,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv6SwGate_HIO_cFv) {
+asm daLv6SwGate_HIO_c::~daLv6SwGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__dt__17daLv6SwGate_HIO_cFv.s"
 }
@@ -424,7 +491,7 @@ ASM_FUNCTION(__dt__17daLv6SwGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6SwGate_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6SwGate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6SwGate/d_a_obj_lv6SwGate/__sinit_d_a_obj_lv6SwGate_cpp.s"
 }

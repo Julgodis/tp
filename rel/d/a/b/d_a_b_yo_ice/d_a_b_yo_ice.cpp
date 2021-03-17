@@ -6,51 +6,125 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daB_YOI_c;
+struct fopAc_ac_c;
+
+struct daB_YOI_HIO_c {
+	daB_YOI_HIO_c();
+	~daB_YOI_HIO_c();
+};
+
+struct daB_YOI_c {
+	void draw();
+	void setActionMode(s32, s32);
+	void damage_check();
+	void setOperate(s32);
+	void setWeight(u8);
+	void setBreakIceEffect();
+	void setWallBreakIceEffect();
+	void setApperEffect();
+	void setApperEffect2();
+	void setLandingEffect();
+	void executeFirst();
+	void getSingleFallPos();
+	void executeRiseUp();
+	void executeSingleFall();
+	void executeYose();
+	void executeYoseFall();
+	void executeDemoRevival();
+	void executeDamage();
+	void executeDeath();
+	void crack_execute();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+	daB_YOI_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daB_YO_c {
+	void getIceCenterPos();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daB_YOI_HIO_cFv();
-extern "C" extern void draw__9daB_YOI_cFv();
-extern "C" extern void daB_YOI_Draw__FP9daB_YOI_c();
-extern "C" extern void setActionMode__9daB_YOI_cFii();
-extern "C" extern void damage_check__9daB_YOI_cFv();
-extern "C" extern void setOperate__9daB_YOI_cFi();
-extern "C" extern void setWeight__9daB_YOI_cFUc();
-extern "C" extern void setBreakIceEffect__9daB_YOI_cFv();
-extern "C" extern void setWallBreakIceEffect__9daB_YOI_cFv();
-extern "C" extern void setApperEffect__9daB_YOI_cFv();
-extern "C" extern void setApperEffect2__9daB_YOI_cFv();
-extern "C" extern void setLandingEffect__9daB_YOI_cFv();
-extern "C" extern void executeFirst__9daB_YOI_cFv();
-extern "C" extern void getSingleFallPos__9daB_YOI_cFv();
-extern "C" extern void executeRiseUp__9daB_YOI_cFv();
-extern "C" extern void executeSingleFall__9daB_YOI_cFv();
-extern "C" extern void executeYose__9daB_YOI_cFv();
-extern "C" extern void executeYoseFall__9daB_YOI_cFv();
-extern "C" extern void executeDemoRevival__9daB_YOI_cFv();
-extern "C" extern void executeDamage__9daB_YOI_cFv();
-extern "C" extern void executeDeath__9daB_YOI_cFv();
-extern "C" extern void crack_execute__9daB_YOI_cFv();
-extern "C" extern void action__9daB_YOI_cFv();
-extern "C" extern void mtx_set__9daB_YOI_cFv();
-extern "C" extern void cc_set__9daB_YOI_cFv();
-extern "C" extern void execute__9daB_YOI_cFv();
-extern "C" extern void daB_YOI_Execute__FP9daB_YOI_c();
-extern "C" extern void daB_YOI_IsDelete__FP9daB_YOI_c();
-extern "C" extern void _delete__9daB_YOI_cFv();
-extern "C" extern void daB_YOI_Delete__FP9daB_YOI_c();
-extern "C" extern void CreateHeap__9daB_YOI_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__9daB_YOI_cFv();
-extern "C" extern void __ct__9daB_YOI_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daB_YOI_Create__FP9daB_YOI_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__13daB_YOI_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_yo_ice_cpp();
-extern "C" extern void getIceCenterPos__8daB_YO_cFv();
+void daB_YOI_Draw(daB_YOI_c*);
+void daB_YOI_Execute(daB_YOI_c*);
+bool daB_YOI_IsDelete(daB_YOI_c*);
+void daB_YOI_Delete(daB_YOI_c*);
+void useHeapInit(fopAc_ac_c*);
+void daB_YOI_Create(daB_YOI_c*);
+extern "C" void __sinit_d_a_b_yo_ice_cpp();
+
+extern "C" void __ct__13daB_YOI_HIO_cFv();
+extern "C" void draw__9daB_YOI_cFv();
+extern "C" void daB_YOI_Draw__FP9daB_YOI_c();
+extern "C" void setActionMode__9daB_YOI_cFii();
+extern "C" void damage_check__9daB_YOI_cFv();
+extern "C" void setOperate__9daB_YOI_cFi();
+extern "C" void setWeight__9daB_YOI_cFUc();
+extern "C" void setBreakIceEffect__9daB_YOI_cFv();
+extern "C" void setWallBreakIceEffect__9daB_YOI_cFv();
+extern "C" void setApperEffect__9daB_YOI_cFv();
+extern "C" void setApperEffect2__9daB_YOI_cFv();
+extern "C" void setLandingEffect__9daB_YOI_cFv();
+extern "C" void executeFirst__9daB_YOI_cFv();
+extern "C" void getSingleFallPos__9daB_YOI_cFv();
+extern "C" void executeRiseUp__9daB_YOI_cFv();
+extern "C" void executeSingleFall__9daB_YOI_cFv();
+extern "C" void executeYose__9daB_YOI_cFv();
+extern "C" void executeYoseFall__9daB_YOI_cFv();
+extern "C" void executeDemoRevival__9daB_YOI_cFv();
+extern "C" void executeDamage__9daB_YOI_cFv();
+extern "C" void executeDeath__9daB_YOI_cFv();
+extern "C" void crack_execute__9daB_YOI_cFv();
+extern "C" void action__9daB_YOI_cFv();
+extern "C" void mtx_set__9daB_YOI_cFv();
+extern "C" void cc_set__9daB_YOI_cFv();
+extern "C" void execute__9daB_YOI_cFv();
+extern "C" void daB_YOI_Execute__FP9daB_YOI_c();
+extern "C" bool daB_YOI_IsDelete__FP9daB_YOI_c();
+extern "C" void _delete__9daB_YOI_cFv();
+extern "C" void daB_YOI_Delete__FP9daB_YOI_c();
+extern "C" void CreateHeap__9daB_YOI_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__9daB_YOI_cFv();
+extern "C" void __ct__9daB_YOI_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daB_YOI_Create__FP9daB_YOI_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__13daB_YOI_HIO_cFv();
+extern "C" void __sinit_d_a_b_yo_ice_cpp();
+extern "C" void getIceCenterPos__8daB_YO_cFv();
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u32 lit_3777;
 SECTION_RODATA extern const u32 lit_3858;
@@ -138,8 +212,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -149,7 +226,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daB_YOI_HIO_cFv) {
+asm daB_YOI_HIO_c::daB_YOI_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__ct__13daB_YOI_HIO_cFv.s"
 }
@@ -160,7 +237,7 @@ ASM_FUNCTION(__ct__13daB_YOI_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daB_YOI_cFv) {
+asm void daB_YOI_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/draw__9daB_YOI_cFv.s"
 }
@@ -171,7 +248,7 @@ ASM_FUNCTION(draw__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_YOI_Draw__FP9daB_YOI_c) {
+asm void daB_YOI_Draw(daB_YOI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_Draw__FP9daB_YOI_c.s"
 }
@@ -182,7 +259,7 @@ ASM_FUNCTION(daB_YOI_Draw__FP9daB_YOI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__9daB_YOI_cFii) {
+asm void daB_YOI_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setActionMode__9daB_YOI_cFii.s"
 }
@@ -193,7 +270,7 @@ ASM_FUNCTION(setActionMode__9daB_YOI_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__9daB_YOI_cFv) {
+asm void daB_YOI_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/damage_check__9daB_YOI_cFv.s"
 }
@@ -204,7 +281,7 @@ ASM_FUNCTION(damage_check__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOperate__9daB_YOI_cFi) {
+asm void daB_YOI_c::setOperate(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setOperate__9daB_YOI_cFi.s"
 }
@@ -215,7 +292,7 @@ ASM_FUNCTION(setOperate__9daB_YOI_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWeight__9daB_YOI_cFUc) {
+asm void daB_YOI_c::setWeight(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setWeight__9daB_YOI_cFUc.s"
 }
@@ -226,7 +303,7 @@ ASM_FUNCTION(setWeight__9daB_YOI_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBreakIceEffect__9daB_YOI_cFv) {
+asm void daB_YOI_c::setBreakIceEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setBreakIceEffect__9daB_YOI_cFv.s"
 }
@@ -237,7 +314,7 @@ ASM_FUNCTION(setBreakIceEffect__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWallBreakIceEffect__9daB_YOI_cFv) {
+asm void daB_YOI_c::setWallBreakIceEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setWallBreakIceEffect__9daB_YOI_cFv.s"
 }
@@ -248,7 +325,7 @@ ASM_FUNCTION(setWallBreakIceEffect__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setApperEffect__9daB_YOI_cFv) {
+asm void daB_YOI_c::setApperEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setApperEffect__9daB_YOI_cFv.s"
 }
@@ -259,7 +336,7 @@ ASM_FUNCTION(setApperEffect__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setApperEffect2__9daB_YOI_cFv) {
+asm void daB_YOI_c::setApperEffect2() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setApperEffect2__9daB_YOI_cFv.s"
 }
@@ -270,7 +347,7 @@ ASM_FUNCTION(setApperEffect2__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLandingEffect__9daB_YOI_cFv) {
+asm void daB_YOI_c::setLandingEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/setLandingEffect__9daB_YOI_cFv.s"
 }
@@ -281,7 +358,7 @@ ASM_FUNCTION(setLandingEffect__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFirst__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeFirst() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeFirst__9daB_YOI_cFv.s"
 }
@@ -292,7 +369,7 @@ ASM_FUNCTION(executeFirst__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSingleFallPos__9daB_YOI_cFv) {
+asm void daB_YOI_c::getSingleFallPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/getSingleFallPos__9daB_YOI_cFv.s"
 }
@@ -303,7 +380,7 @@ ASM_FUNCTION(getSingleFallPos__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeRiseUp__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeRiseUp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeRiseUp__9daB_YOI_cFv.s"
 }
@@ -314,7 +391,7 @@ ASM_FUNCTION(executeRiseUp__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSingleFall__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeSingleFall() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeSingleFall__9daB_YOI_cFv.s"
 }
@@ -325,7 +402,7 @@ ASM_FUNCTION(executeSingleFall__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeYose__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeYose() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeYose__9daB_YOI_cFv.s"
 }
@@ -336,7 +413,7 @@ ASM_FUNCTION(executeYose__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeYoseFall__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeYoseFall() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeYoseFall__9daB_YOI_cFv.s"
 }
@@ -347,7 +424,7 @@ ASM_FUNCTION(executeYoseFall__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDemoRevival__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeDemoRevival() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeDemoRevival__9daB_YOI_cFv.s"
 }
@@ -358,7 +435,7 @@ ASM_FUNCTION(executeDemoRevival__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeDamage__9daB_YOI_cFv.s"
 }
@@ -369,7 +446,7 @@ ASM_FUNCTION(executeDamage__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDeath__9daB_YOI_cFv) {
+asm void daB_YOI_c::executeDeath() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/executeDeath__9daB_YOI_cFv.s"
 }
@@ -380,7 +457,7 @@ ASM_FUNCTION(executeDeath__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(crack_execute__9daB_YOI_cFv) {
+asm void daB_YOI_c::crack_execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/crack_execute__9daB_YOI_cFv.s"
 }
@@ -391,7 +468,7 @@ ASM_FUNCTION(crack_execute__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__9daB_YOI_cFv) {
+asm void daB_YOI_c::action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/action__9daB_YOI_cFv.s"
 }
@@ -402,7 +479,7 @@ ASM_FUNCTION(action__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__9daB_YOI_cFv) {
+asm void daB_YOI_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/mtx_set__9daB_YOI_cFv.s"
 }
@@ -413,7 +490,7 @@ ASM_FUNCTION(mtx_set__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__9daB_YOI_cFv) {
+asm void daB_YOI_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/cc_set__9daB_YOI_cFv.s"
 }
@@ -424,7 +501,7 @@ ASM_FUNCTION(cc_set__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daB_YOI_cFv) {
+asm void daB_YOI_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/execute__9daB_YOI_cFv.s"
 }
@@ -435,7 +512,7 @@ ASM_FUNCTION(execute__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_YOI_Execute__FP9daB_YOI_c) {
+asm void daB_YOI_Execute(daB_YOI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_Execute__FP9daB_YOI_c.s"
 }
@@ -443,21 +520,16 @@ ASM_FUNCTION(daB_YOI_Execute__FP9daB_YOI_c) {
 
 
 /* 8063D454-8063D45C 0008+00 .text      daB_YOI_IsDelete__FP9daB_YOI_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_YOI_IsDelete__FP9daB_YOI_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_IsDelete__FP9daB_YOI_c.s"
+bool daB_YOI_IsDelete(daB_YOI_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8063D45C-8063D4D8 007C+00 .text      _delete__9daB_YOI_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__9daB_YOI_cFv) {
+asm void daB_YOI_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/_delete__9daB_YOI_cFv.s"
 }
@@ -468,7 +540,7 @@ ASM_FUNCTION(_delete__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_YOI_Delete__FP9daB_YOI_c) {
+asm void daB_YOI_Delete(daB_YOI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_Delete__FP9daB_YOI_c.s"
 }
@@ -479,7 +551,7 @@ ASM_FUNCTION(daB_YOI_Delete__FP9daB_YOI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daB_YOI_cFv) {
+asm void daB_YOI_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/CreateHeap__9daB_YOI_cFv.s"
 }
@@ -490,7 +562,7 @@ ASM_FUNCTION(CreateHeap__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -501,7 +573,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daB_YOI_cFv) {
+asm void daB_YOI_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/create__9daB_YOI_cFv.s"
 }
@@ -512,7 +584,7 @@ ASM_FUNCTION(create__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9daB_YOI_cFv) {
+asm daB_YOI_c::daB_YOI_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__ct__9daB_YOI_cFv.s"
 }
@@ -523,7 +595,7 @@ ASM_FUNCTION(__ct__9daB_YOI_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__dt__8cM3dGCylFv.s"
 }
@@ -534,7 +606,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__dt__8cM3dGAabFv.s"
 }
@@ -545,7 +617,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__dt__10dCcD_GSttsFv.s"
 }
@@ -556,7 +628,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_YOI_Create__FP9daB_YOI_c) {
+asm void daB_YOI_Create(daB_YOI_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_Create__FP9daB_YOI_c.s"
 }
@@ -567,7 +639,7 @@ ASM_FUNCTION(daB_YOI_Create__FP9daB_YOI_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__dt__10cCcD_GSttsFv.s"
 }
@@ -578,7 +650,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daB_YOI_HIO_cFv) {
+asm daB_YOI_HIO_c::~daB_YOI_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__dt__13daB_YOI_HIO_cFv.s"
 }
@@ -589,7 +661,7 @@ ASM_FUNCTION(__dt__13daB_YOI_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_yo_ice_cpp) {
+extern "C" asm void __sinit_d_a_b_yo_ice_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/__sinit_d_a_b_yo_ice_cpp.s"
 }
@@ -600,7 +672,7 @@ ASM_FUNCTION(__sinit_d_a_b_yo_ice_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIceCenterPos__8daB_YO_cFv) {
+asm void daB_YO_c::getIceCenterPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/getIceCenterPos__8daB_YO_cFv.s"
 }

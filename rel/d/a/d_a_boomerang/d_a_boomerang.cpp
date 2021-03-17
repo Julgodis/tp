@@ -6,65 +6,177 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct dCcD_GObjInf;
+struct daBoomerang_c;
+struct J3DJoint;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daBoomerang_sight_c {
+	void createHeap();
+	void initialize();
+	void playAnime(s32, s32);
+	void initFrame(s32);
+	void copyNumData(s32);
+	void setSight(cXyz const*, s32);
+	void draw();
+	~daBoomerang_sight_c();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daBoomerang_c {
+	void windModelCallBack();
+	void draw();
+	void lockLineCallback(fopAc_ac_c*);
+	void moveLineCallback(fopAc_ac_c*);
+	void pushLockList(s32);
+	void cancelLockActorBase(fopAc_ac_c*);
+	void setAimActorBase(fopAc_ac_c*);
+	void setLockActor(fopAc_ac_c*, s32);
+	void resetLockActor();
+	void setRoomInfo();
+	void setKeepMatrix();
+	void setMoveMatrix();
+	void setRotAngle();
+	void setAimPos();
+	void checkBgHit(cXyz*, cXyz*);
+	void setEffectTraceMatrix(u32*, u16);
+	void setEffect();
+	void procWait();
+	void procMove();
+	void execute();
+	~daBoomerang_c();
+	void createHeap();
+	void create();
+	daBoomerang_c();
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dDlst_base_c {
+	void draw();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__19daBoomerang_sight_cFv();
-extern "C" extern void initialize__19daBoomerang_sight_cFv();
-extern "C" extern void playAnime__19daBoomerang_sight_cFii();
-extern "C" extern void initFrame__19daBoomerang_sight_cFi();
-extern "C" extern void copyNumData__19daBoomerang_sight_cFi();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void setSight__19daBoomerang_sight_cFPC4cXyzi();
-extern "C" extern void draw__19daBoomerang_sight_cFv();
-extern "C" extern void windModelCallBack__13daBoomerang_cFv();
-extern "C" extern void daBoomeang_windModelCallBack__FP8J3DJointi();
-extern "C" extern void draw__13daBoomerang_cFv();
-extern "C" extern void daBoomerang_Draw__FP13daBoomerang_c();
-extern "C" extern void lockLineCallback__13daBoomerang_cFP10fopAc_ac_c();
-extern "C" extern void daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void moveLineCallback__13daBoomerang_cFP10fopAc_ac_c();
-extern "C" extern void daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void pushLockList__13daBoomerang_cFi();
-extern "C" extern void cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c();
-extern "C" extern void setAimActorBase__13daBoomerang_cFP10fopAc_ac_c();
-extern "C" extern void setLockActor__13daBoomerang_cFP10fopAc_ac_ci();
-extern "C" extern void resetLockActor__13daBoomerang_cFv();
-extern "C" extern void setRoomInfo__13daBoomerang_cFv();
-extern "C" extern void setKeepMatrix__13daBoomerang_cFv();
-extern "C" extern void setMoveMatrix__13daBoomerang_cFv();
-extern "C" extern void setRotAngle__13daBoomerang_cFv();
-extern "C" extern void setAimPos__13daBoomerang_cFv();
-extern "C" extern void checkBgHit__13daBoomerang_cFP4cXyzP4cXyz();
-extern "C" extern void setEffectTraceMatrix__13daBoomerang_cFPUlUs();
-extern "C" extern void setEffect__13daBoomerang_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void procWait__13daBoomerang_cFv();
-extern "C" extern void procMove__13daBoomerang_cFv();
-extern "C" extern void execute__13daBoomerang_cFv();
-extern "C" extern void daBoomerang_Execute__FP13daBoomerang_c();
-extern "C" extern void __dt__13daBoomerang_cFv();
-extern "C" extern void daBoomerang_Delete__FP13daBoomerang_c();
-extern "C" extern void createHeap__13daBoomerang_cFv();
-extern "C" extern void daBoomerang_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__13daBoomerang_cFv();
-extern "C" extern void __ct__13daBoomerang_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daBoomerang_Create__FP10fopAc_ac_c();
-extern "C" extern void draw__12dDlst_base_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_804A2764();
-extern "C" extern void func_804A276C();
-extern "C" extern void func_804A2774();
-extern "C" extern void func_804A277C();
-extern "C" extern void func_804A2784();
-extern "C" extern void __dt__19daBoomerang_sight_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
+void daBoomeang_windModelCallBack(J3DJoint*, s32);
+void daBoomerang_Draw(daBoomerang_c*);
+void daBoomerang_lockLineCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daBoomerang_moveLineCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daBoomerang_Execute(daBoomerang_c*);
+void daBoomerang_Delete(daBoomerang_c*);
+void daBoomerang_createHeap(fopAc_ac_c*);
+void daBoomerang_Create(fopAc_ac_c*);
+extern "C" void func_804A2764();
+extern "C" void func_804A276C();
+extern "C" void func_804A2774();
+extern "C" void func_804A277C();
+extern "C" void func_804A2784();
+
+extern "C" void createHeap__19daBoomerang_sight_cFv();
+extern "C" void initialize__19daBoomerang_sight_cFv();
+extern "C" void playAnime__19daBoomerang_sight_cFii();
+extern "C" void initFrame__19daBoomerang_sight_cFi();
+extern "C" void copyNumData__19daBoomerang_sight_cFi();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setSight__19daBoomerang_sight_cFPC4cXyzi();
+extern "C" void draw__19daBoomerang_sight_cFv();
+extern "C" void windModelCallBack__13daBoomerang_cFv();
+extern "C" void daBoomeang_windModelCallBack__FP8J3DJointi();
+extern "C" void draw__13daBoomerang_cFv();
+extern "C" void daBoomerang_Draw__FP13daBoomerang_c();
+extern "C" void lockLineCallback__13daBoomerang_cFP10fopAc_ac_c();
+extern "C" void daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void moveLineCallback__13daBoomerang_cFP10fopAc_ac_c();
+extern "C" void daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void pushLockList__13daBoomerang_cFi();
+extern "C" void cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c();
+extern "C" void setAimActorBase__13daBoomerang_cFP10fopAc_ac_c();
+extern "C" void setLockActor__13daBoomerang_cFP10fopAc_ac_ci();
+extern "C" void resetLockActor__13daBoomerang_cFv();
+extern "C" void setRoomInfo__13daBoomerang_cFv();
+extern "C" void setKeepMatrix__13daBoomerang_cFv();
+extern "C" void setMoveMatrix__13daBoomerang_cFv();
+extern "C" void setRotAngle__13daBoomerang_cFv();
+extern "C" void setAimPos__13daBoomerang_cFv();
+extern "C" void checkBgHit__13daBoomerang_cFP4cXyzP4cXyz();
+extern "C" void setEffectTraceMatrix__13daBoomerang_cFPUlUs();
+extern "C" void setEffect__13daBoomerang_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void procWait__13daBoomerang_cFv();
+extern "C" void procMove__13daBoomerang_cFv();
+extern "C" void execute__13daBoomerang_cFv();
+extern "C" void daBoomerang_Execute__FP13daBoomerang_c();
+extern "C" void __dt__13daBoomerang_cFv();
+extern "C" void daBoomerang_Delete__FP13daBoomerang_c();
+extern "C" void createHeap__13daBoomerang_cFv();
+extern "C" void daBoomerang_createHeap__FP10fopAc_ac_c();
+extern "C" void create__13daBoomerang_cFv();
+extern "C" void __ct__13daBoomerang_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daBoomerang_Create__FP10fopAc_ac_c();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_804A2764();
+extern "C" void func_804A276C();
+extern "C" void func_804A2774();
+extern "C" void func_804A277C();
+extern "C" void func_804A2784();
+extern "C" void __dt__19daBoomerang_sight_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
 SECTION_RODATA extern const u8 lit_4078[12];
 SECTION_RODATA extern const u8 l_blurTop[12];
 SECTION_RODATA extern const u8 l_blurRoot[12];
@@ -201,7 +313,9 @@ SECTION_BSS extern u8 data_804A2DB4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -211,7 +325,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__19daBoomerang_sight_cFv) {
+asm void daBoomerang_sight_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/createHeap__19daBoomerang_sight_cFv.s"
 }
@@ -222,7 +336,7 @@ ASM_FUNCTION(createHeap__19daBoomerang_sight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__19daBoomerang_sight_cFv) {
+asm void daBoomerang_sight_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/initialize__19daBoomerang_sight_cFv.s"
 }
@@ -233,7 +347,7 @@ ASM_FUNCTION(initialize__19daBoomerang_sight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playAnime__19daBoomerang_sight_cFii) {
+asm void daBoomerang_sight_c::playAnime(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/playAnime__19daBoomerang_sight_cFii.s"
 }
@@ -244,7 +358,7 @@ ASM_FUNCTION(playAnime__19daBoomerang_sight_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFrame__19daBoomerang_sight_cFi) {
+asm void daBoomerang_sight_c::initFrame(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/initFrame__19daBoomerang_sight_cFi.s"
 }
@@ -255,7 +369,7 @@ ASM_FUNCTION(initFrame__19daBoomerang_sight_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyNumData__19daBoomerang_sight_cFi) {
+asm void daBoomerang_sight_c::copyNumData(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/copyNumData__19daBoomerang_sight_cFi.s"
 }
@@ -266,7 +380,7 @@ ASM_FUNCTION(copyNumData__19daBoomerang_sight_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__4cXyzFv.s"
 }
@@ -277,7 +391,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSight__19daBoomerang_sight_cFPC4cXyzi) {
+asm void daBoomerang_sight_c::setSight(cXyz const* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setSight__19daBoomerang_sight_cFPC4cXyzi.s"
 }
@@ -288,7 +402,7 @@ ASM_FUNCTION(setSight__19daBoomerang_sight_cFPC4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__19daBoomerang_sight_cFv) {
+asm void daBoomerang_sight_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/draw__19daBoomerang_sight_cFv.s"
 }
@@ -299,7 +413,7 @@ ASM_FUNCTION(draw__19daBoomerang_sight_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(windModelCallBack__13daBoomerang_cFv) {
+asm void daBoomerang_c::windModelCallBack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/windModelCallBack__13daBoomerang_cFv.s"
 }
@@ -310,7 +424,7 @@ ASM_FUNCTION(windModelCallBack__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomeang_windModelCallBack__FP8J3DJointi) {
+asm void daBoomeang_windModelCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomeang_windModelCallBack__FP8J3DJointi.s"
 }
@@ -321,7 +435,7 @@ ASM_FUNCTION(daBoomeang_windModelCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__13daBoomerang_cFv) {
+asm void daBoomerang_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/draw__13daBoomerang_cFv.s"
 }
@@ -332,7 +446,7 @@ ASM_FUNCTION(draw__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_Draw__FP13daBoomerang_c) {
+asm void daBoomerang_Draw(daBoomerang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Draw__FP13daBoomerang_c.s"
 }
@@ -343,7 +457,7 @@ ASM_FUNCTION(daBoomerang_Draw__FP13daBoomerang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lockLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
+asm void daBoomerang_c::lockLineCallback(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/lockLineCallback__13daBoomerang_cFP10fopAc_ac_c.s"
 }
@@ -354,7 +468,7 @@ ASM_FUNCTION(lockLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daBoomerang_lockLineCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_8049F63C.s"
 }
@@ -365,7 +479,7 @@ ASM_FUNCTION(daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
+asm void daBoomerang_c::moveLineCallback(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/moveLineCallback__13daBoomerang_cFP10fopAc_ac_c.s"
 }
@@ -376,7 +490,7 @@ ASM_FUNCTION(moveLineCallback__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daBoomerang_moveLineCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_8049F6EC.s"
 }
@@ -387,7 +501,7 @@ ASM_FUNCTION(daBoomerang_moveLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pushLockList__13daBoomerang_cFi) {
+asm void daBoomerang_c::pushLockList(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/pushLockList__13daBoomerang_cFi.s"
 }
@@ -398,7 +512,7 @@ ASM_FUNCTION(pushLockList__13daBoomerang_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c) {
+asm void daBoomerang_c::cancelLockActorBase(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c.s"
 }
@@ -409,7 +523,7 @@ ASM_FUNCTION(cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAimActorBase__13daBoomerang_cFP10fopAc_ac_c) {
+asm void daBoomerang_c::setAimActorBase(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setAimActorBase__13daBoomerang_cFP10fopAc_ac_c.s"
 }
@@ -420,7 +534,7 @@ ASM_FUNCTION(setAimActorBase__13daBoomerang_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLockActor__13daBoomerang_cFP10fopAc_ac_ci) {
+asm void daBoomerang_c::setLockActor(fopAc_ac_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setLockActor__13daBoomerang_cFP10fopAc_ac_ci.s"
 }
@@ -431,7 +545,7 @@ ASM_FUNCTION(setLockActor__13daBoomerang_cFP10fopAc_ac_ci) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetLockActor__13daBoomerang_cFv) {
+asm void daBoomerang_c::resetLockActor() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/resetLockActor__13daBoomerang_cFv.s"
 }
@@ -442,7 +556,7 @@ ASM_FUNCTION(resetLockActor__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__13daBoomerang_cFv) {
+asm void daBoomerang_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setRoomInfo__13daBoomerang_cFv.s"
 }
@@ -453,7 +567,7 @@ ASM_FUNCTION(setRoomInfo__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKeepMatrix__13daBoomerang_cFv) {
+asm void daBoomerang_c::setKeepMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setKeepMatrix__13daBoomerang_cFv.s"
 }
@@ -464,7 +578,7 @@ ASM_FUNCTION(setKeepMatrix__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMoveMatrix__13daBoomerang_cFv) {
+asm void daBoomerang_c::setMoveMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setMoveMatrix__13daBoomerang_cFv.s"
 }
@@ -475,7 +589,7 @@ ASM_FUNCTION(setMoveMatrix__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRotAngle__13daBoomerang_cFv) {
+asm void daBoomerang_c::setRotAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setRotAngle__13daBoomerang_cFv.s"
 }
@@ -486,7 +600,7 @@ ASM_FUNCTION(setRotAngle__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAimPos__13daBoomerang_cFv) {
+asm void daBoomerang_c::setAimPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setAimPos__13daBoomerang_cFv.s"
 }
@@ -497,7 +611,7 @@ ASM_FUNCTION(setAimPos__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBgHit__13daBoomerang_cFP4cXyzP4cXyz) {
+asm void daBoomerang_c::checkBgHit(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/checkBgHit__13daBoomerang_cFP4cXyzP4cXyz.s"
 }
@@ -508,7 +622,7 @@ ASM_FUNCTION(checkBgHit__13daBoomerang_cFP4cXyzP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffectTraceMatrix__13daBoomerang_cFPUlUs) {
+asm void daBoomerang_c::setEffectTraceMatrix(u32* field_0, u16 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setEffectTraceMatrix__13daBoomerang_cFPUlUs.s"
 }
@@ -519,7 +633,7 @@ ASM_FUNCTION(setEffectTraceMatrix__13daBoomerang_cFPUlUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__13daBoomerang_cFv) {
+asm void daBoomerang_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/setEffect__13daBoomerang_cFv.s"
 }
@@ -530,7 +644,7 @@ ASM_FUNCTION(setEffect__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__8cM3dGPlaFv.s"
 }
@@ -541,7 +655,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWait__13daBoomerang_cFv) {
+asm void daBoomerang_c::procWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/procWait__13daBoomerang_cFv.s"
 }
@@ -552,7 +666,7 @@ ASM_FUNCTION(procWait__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMove__13daBoomerang_cFv) {
+asm void daBoomerang_c::procMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/procMove__13daBoomerang_cFv.s"
 }
@@ -563,7 +677,7 @@ ASM_FUNCTION(procMove__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daBoomerang_cFv) {
+asm void daBoomerang_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/execute__13daBoomerang_cFv.s"
 }
@@ -574,7 +688,7 @@ ASM_FUNCTION(execute__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_Execute__FP13daBoomerang_c) {
+asm void daBoomerang_Execute(daBoomerang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Execute__FP13daBoomerang_c.s"
 }
@@ -585,7 +699,7 @@ ASM_FUNCTION(daBoomerang_Execute__FP13daBoomerang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daBoomerang_cFv) {
+asm daBoomerang_c::~daBoomerang_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__13daBoomerang_cFv.s"
 }
@@ -596,7 +710,7 @@ ASM_FUNCTION(__dt__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_Delete__FP13daBoomerang_c) {
+asm void daBoomerang_Delete(daBoomerang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Delete__FP13daBoomerang_c.s"
 }
@@ -607,7 +721,7 @@ ASM_FUNCTION(daBoomerang_Delete__FP13daBoomerang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__13daBoomerang_cFv) {
+asm void daBoomerang_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/createHeap__13daBoomerang_cFv.s"
 }
@@ -618,7 +732,7 @@ ASM_FUNCTION(createHeap__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_createHeap__FP10fopAc_ac_c) {
+asm void daBoomerang_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_createHeap__FP10fopAc_ac_c.s"
 }
@@ -629,7 +743,7 @@ ASM_FUNCTION(daBoomerang_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daBoomerang_cFv) {
+asm void daBoomerang_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/create__13daBoomerang_cFv.s"
 }
@@ -640,7 +754,7 @@ ASM_FUNCTION(create__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daBoomerang_cFv) {
+asm daBoomerang_c::daBoomerang_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__ct__13daBoomerang_cFv.s"
 }
@@ -651,7 +765,7 @@ ASM_FUNCTION(__ct__13daBoomerang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -662,7 +776,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__8cM3dGCylFv.s"
 }
@@ -673,7 +787,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__8cM3dGAabFv.s"
 }
@@ -684,7 +798,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__10dCcD_GSttsFv.s"
 }
@@ -695,7 +809,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -706,7 +820,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBoomerang_Create__FP10fopAc_ac_c) {
+asm void daBoomerang_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Create__FP10fopAc_ac_c.s"
 }
@@ -714,21 +828,16 @@ ASM_FUNCTION(daBoomerang_Create__FP10fopAc_ac_c) {
 
 
 /* 804A2718-804A271C 0004+00 .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12dDlst_base_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A271C-804A2764 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__10cCcD_GSttsFv.s"
 }
@@ -739,7 +848,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A2764) {
+extern "C" asm void func_804A2764() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2764.s"
 }
@@ -750,7 +859,7 @@ ASM_FUNCTION(func_804A2764) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A276C) {
+extern "C" asm void func_804A276C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A276C.s"
 }
@@ -761,7 +870,7 @@ ASM_FUNCTION(func_804A276C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A2774) {
+extern "C" asm void func_804A2774() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2774.s"
 }
@@ -772,7 +881,7 @@ ASM_FUNCTION(func_804A2774) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A277C) {
+extern "C" asm void func_804A277C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A277C.s"
 }
@@ -783,7 +892,7 @@ ASM_FUNCTION(func_804A277C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A2784) {
+extern "C" asm void func_804A2784() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2784.s"
 }
@@ -794,7 +903,7 @@ ASM_FUNCTION(func_804A2784) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daBoomerang_sight_cFv) {
+asm daBoomerang_sight_c::~daBoomerang_sight_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__19daBoomerang_sight_cFv.s"
 }
@@ -802,21 +911,16 @@ ASM_FUNCTION(__dt__19daBoomerang_sight_cFv) {
 
 
 /* 804A27FC-804A2800 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A2800-804A2848 0048+00 .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__dt__12J3DFrameCtrlFv.s"
 }

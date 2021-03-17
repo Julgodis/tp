@@ -6,38 +6,102 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTaFence_c;
+struct fopAc_ac_c;
+
+struct daTaFence_HIO_c {
+	daTaFence_HIO_c();
+	~daTaFence_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTaFence_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void fenceProc();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveInit();
+	void modeMoveInit();
+	void init_modeMove();
+	void modeMove();
+	void init_modeMoveEnd();
+	void modeMoveEnd();
+	void Draw();
+	void Delete();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daTaFence_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__11daTaFence_cFv();
-extern "C" extern void CreateHeap__11daTaFence_cFv();
-extern "C" extern void create__11daTaFence_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void Execute__11daTaFence_cFPPA3_A4_f();
-extern "C" extern void fenceProc__11daTaFence_cFv();
-extern "C" extern void init_modeWait__11daTaFence_cFv();
-extern "C" extern void modeWait__11daTaFence_cFv();
-extern "C" extern void init_modeMoveInit__11daTaFence_cFv();
-extern "C" extern void modeMoveInit__11daTaFence_cFv();
-extern "C" extern void init_modeMove__11daTaFence_cFv();
-extern "C" extern void modeMove__11daTaFence_cFv();
-extern "C" extern void init_modeMoveEnd__11daTaFence_cFv();
-extern "C" extern void modeMoveEnd__11daTaFence_cFv();
-extern "C" extern void Draw__11daTaFence_cFv();
-extern "C" extern void Delete__11daTaFence_cFv();
-extern "C" extern void daTaFence_Draw__FP11daTaFence_c();
-extern "C" extern void daTaFence_Execute__FP11daTaFence_c();
-extern "C" extern void daTaFence_Delete__FP11daTaFence_c();
-extern "C" extern void daTaFence_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daTaFence_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_taFence_cpp();
+extern "C" void Execute__11daTaFence_cFPPA3_A4_f();
+void daTaFence_Draw(daTaFence_c*);
+void daTaFence_Execute(daTaFence_c*);
+void daTaFence_Delete(daTaFence_c*);
+void daTaFence_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_taFence_cpp();
+
+extern "C" void __ct__15daTaFence_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daTaFence_cFv();
+extern "C" void CreateHeap__11daTaFence_cFv();
+extern "C" void create__11daTaFence_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void Execute__11daTaFence_cFPPA3_A4_f();
+extern "C" void fenceProc__11daTaFence_cFv();
+extern "C" void init_modeWait__11daTaFence_cFv();
+extern "C" void modeWait__11daTaFence_cFv();
+extern "C" void init_modeMoveInit__11daTaFence_cFv();
+extern "C" void modeMoveInit__11daTaFence_cFv();
+extern "C" void init_modeMove__11daTaFence_cFv();
+extern "C" void modeMove__11daTaFence_cFv();
+extern "C" void init_modeMoveEnd__11daTaFence_cFv();
+extern "C" void modeMoveEnd__11daTaFence_cFv();
+extern "C" void Draw__11daTaFence_cFv();
+extern "C" void Delete__11daTaFence_cFv();
+extern "C" void daTaFence_Draw__FP11daTaFence_c();
+extern "C" void daTaFence_Execute__FP11daTaFence_c();
+extern "C" void daTaFence_Delete__FP11daTaFence_c();
+extern "C" void daTaFence_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daTaFence_HIO_cFv();
+extern "C" void __sinit_d_a_obj_taFence_cpp();
 SECTION_RODATA extern const u8 lit_3651[4];
 SECTION_RODATA extern const u32 lit_3652;
 SECTION_RODATA extern const u32 lit_3653;
@@ -88,8 +152,11 @@ SECTION_BSS extern u8 data_80D063B0[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -99,7 +166,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daTaFence_HIO_cFv) {
+asm daTaFence_HIO_c::daTaFence_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__ct__15daTaFence_HIO_cFv.s"
 }
@@ -110,7 +177,7 @@ ASM_FUNCTION(__ct__15daTaFence_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -121,7 +188,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daTaFence_cFv) {
+asm void daTaFence_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/setBaseMtx__11daTaFence_cFv.s"
 }
@@ -132,7 +199,7 @@ ASM_FUNCTION(setBaseMtx__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daTaFence_cFv) {
+asm void daTaFence_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/CreateHeap__11daTaFence_cFv.s"
 }
@@ -143,7 +210,7 @@ ASM_FUNCTION(CreateHeap__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daTaFence_cFv) {
+asm void daTaFence_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/create__11daTaFence_cFv.s"
 }
@@ -154,7 +221,7 @@ ASM_FUNCTION(create__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__8dCcD_CylFv.s"
 }
@@ -165,7 +232,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__ct__8dCcD_CylFv.s"
 }
@@ -176,7 +243,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__8cM3dGCylFv.s"
 }
@@ -187,7 +254,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__8cM3dGAabFv.s"
 }
@@ -198,7 +265,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__10dCcD_GSttsFv.s"
 }
@@ -209,7 +276,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daTaFence_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daTaFence_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/Execute__11daTaFence_cFPPA3_A4_f.s"
 }
@@ -220,7 +287,7 @@ ASM_FUNCTION(Execute__11daTaFence_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fenceProc__11daTaFence_cFv) {
+asm void daTaFence_c::fenceProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/fenceProc__11daTaFence_cFv.s"
 }
@@ -231,7 +298,7 @@ ASM_FUNCTION(fenceProc__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__11daTaFence_cFv) {
+asm void daTaFence_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/init_modeWait__11daTaFence_cFv.s"
 }
@@ -242,7 +309,7 @@ ASM_FUNCTION(init_modeWait__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__11daTaFence_cFv) {
+asm void daTaFence_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/modeWait__11daTaFence_cFv.s"
 }
@@ -253,7 +320,7 @@ ASM_FUNCTION(modeWait__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveInit__11daTaFence_cFv) {
+asm void daTaFence_c::init_modeMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/init_modeMoveInit__11daTaFence_cFv.s"
 }
@@ -264,7 +331,7 @@ ASM_FUNCTION(init_modeMoveInit__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveInit__11daTaFence_cFv) {
+asm void daTaFence_c::modeMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/modeMoveInit__11daTaFence_cFv.s"
 }
@@ -275,7 +342,7 @@ ASM_FUNCTION(modeMoveInit__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__11daTaFence_cFv) {
+asm void daTaFence_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/init_modeMove__11daTaFence_cFv.s"
 }
@@ -286,7 +353,7 @@ ASM_FUNCTION(init_modeMove__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__11daTaFence_cFv) {
+asm void daTaFence_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/modeMove__11daTaFence_cFv.s"
 }
@@ -297,7 +364,7 @@ ASM_FUNCTION(modeMove__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveEnd__11daTaFence_cFv) {
+asm void daTaFence_c::init_modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/init_modeMoveEnd__11daTaFence_cFv.s"
 }
@@ -305,21 +372,16 @@ ASM_FUNCTION(init_modeMoveEnd__11daTaFence_cFv) {
 
 
 /* 80D05E54-80D05E58 0004+00 .text      modeMoveEnd__11daTaFence_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeMoveEnd__11daTaFence_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/modeMoveEnd__11daTaFence_cFv.s"
+void daTaFence_c::modeMoveEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D05E58-80D05EFC 00A4+00 .text      Draw__11daTaFence_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daTaFence_cFv) {
+asm void daTaFence_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/Draw__11daTaFence_cFv.s"
 }
@@ -330,7 +392,7 @@ ASM_FUNCTION(Draw__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daTaFence_cFv) {
+asm void daTaFence_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/Delete__11daTaFence_cFv.s"
 }
@@ -341,7 +403,7 @@ ASM_FUNCTION(Delete__11daTaFence_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTaFence_Draw__FP11daTaFence_c) {
+asm void daTaFence_Draw(daTaFence_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/daTaFence_Draw__FP11daTaFence_c.s"
 }
@@ -352,7 +414,7 @@ ASM_FUNCTION(daTaFence_Draw__FP11daTaFence_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTaFence_Execute__FP11daTaFence_c) {
+asm void daTaFence_Execute(daTaFence_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/daTaFence_Execute__FP11daTaFence_c.s"
 }
@@ -363,7 +425,7 @@ ASM_FUNCTION(daTaFence_Execute__FP11daTaFence_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTaFence_Delete__FP11daTaFence_c) {
+asm void daTaFence_Delete(daTaFence_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/daTaFence_Delete__FP11daTaFence_c.s"
 }
@@ -374,7 +436,7 @@ ASM_FUNCTION(daTaFence_Delete__FP11daTaFence_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTaFence_Create__FP10fopAc_ac_c) {
+asm void daTaFence_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/daTaFence_Create__FP10fopAc_ac_c.s"
 }
@@ -385,7 +447,7 @@ ASM_FUNCTION(daTaFence_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__10cCcD_GSttsFv.s"
 }
@@ -396,7 +458,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daTaFence_HIO_cFv) {
+asm daTaFence_HIO_c::~daTaFence_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__dt__15daTaFence_HIO_cFv.s"
 }
@@ -407,7 +469,7 @@ ASM_FUNCTION(__dt__15daTaFence_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_taFence_cpp) {
+extern "C" asm void __sinit_d_a_obj_taFence_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_taFence/d_a_obj_taFence/__sinit_d_a_obj_taFence_cpp.s"
 }

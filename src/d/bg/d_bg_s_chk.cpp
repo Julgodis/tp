@@ -6,32 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dBgS_Chk (dBgS_Chk) False/False
+/* top-level dependencies (begin dBgS_Chk) */
+/* top-level dependencies (end dBgS_Chk) */
+struct dBgS_Chk {
+	/* 8007749C */ dBgS_Chk();
+	/* 800774E8 */ ~dBgS_Chk();
+	/* 80077560 */ void GetPolyPassChkInfo();
+	/* 80077564 */ void GetGrpPassChkInfo();
+};
+
+// build dBgS_GrpPassChk (dBgS_GrpPassChk) False/False
+/* top-level dependencies (begin dBgS_GrpPassChk) */
+/* top-level dependencies (end dBgS_GrpPassChk) */
+struct dBgS_GrpPassChk {
+	/* 80077BA0 */ dBgS_GrpPassChk();
+	/* 80077BC4 */ ~dBgS_GrpPassChk();
+};
+
+// build dBgS_PolyPassChk (dBgS_PolyPassChk) False/False
+/* top-level dependencies (begin dBgS_PolyPassChk) */
+/* top-level dependencies (end dBgS_PolyPassChk) */
+struct dBgS_PolyPassChk {
+	/* 80078D64 */ dBgS_PolyPassChk();
+	/* 80078DB0 */ ~dBgS_PolyPassChk();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8dBgS_ChkFv();
-extern "C" extern void __dt__8dBgS_ChkFv();
-extern "C" extern void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" extern void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" extern void func_80077574();
+extern "C" static void func_80077574();
+
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" static void func_80077574();
 SECTION_DATA extern void*const __vt__8dBgS_Chk[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__15dBgS_GrpPassChkFv();
-extern "C" extern void __dt__15dBgS_GrpPassChkFv();
-extern "C" extern void __ct__16dBgS_PolyPassChkFv();
-extern "C" extern void __dt__16dBgS_PolyPassChkFv();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __ct__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15dBgS_GrpPassChkFv();
+extern "C" void __ct__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16dBgS_PolyPassChkFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803AB670-803AB688 0018+00 .data      __vt__8dBgS_Chk                                              */
+/* 803AB670-803AB688 0018+00 rc=2 efc=0 .data      __vt__8dBgS_Chk                                              */
 void* const __vt__8dBgS_Chk[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -41,59 +75,53 @@ void* const __vt__8dBgS_Chk[6] = {
 	(void*)func_80077574,
 };
 
-/* 8007749C-800774E8 004C+00 .text      __ct__8dBgS_ChkFv                                            */
+/* 8007749C-800774E8 004C+00 rc=6 efc=6 .text      __ct__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dBgS_ChkFv) {
+asm dBgS_Chk::dBgS_Chk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_chk/__ct__8dBgS_ChkFv.s"
 }
 #pragma pop
 
 
-/* 800774E8-80077560 0078+00 .text      __dt__8dBgS_ChkFv                                            */
+/* 800774E8-80077560 0078+00 rc=8 efc=6 .text      __dt__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dBgS_ChkFv) {
+asm dBgS_Chk::~dBgS_Chk() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_chk/__dt__8dBgS_ChkFv.s"
 }
 #pragma pop
 
 
-/* 80077560-80077564 0004+00 .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(GetPolyPassChkInfo__8dBgS_ChkFv) {
-	nofralloc
-#include "asm/d/bg/d_bg_s_chk/GetPolyPassChkInfo__8dBgS_ChkFv.s"
+/* 80077560-80077564 0004+00 rc=6 efc=6 .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
+void dBgS_Chk::GetPolyPassChkInfo() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80077564-80077574 0010+00 .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
+/* 80077564-80077574 0010+00 rc=6 efc=6 .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetGrpPassChkInfo__8dBgS_ChkFv) {
+asm void dBgS_Chk::GetGrpPassChkInfo() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_chk/GetGrpPassChkInfo__8dBgS_ChkFv.s"
 }
 #pragma pop
 
 
-/* 80077574-8007757C 0008+00 .text      @16@__dt__8dBgS_ChkFv                                        */
+/* 80077574-8007757C 0008+00 rc=1 efc=0 .text      @16@__dt__8dBgS_ChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80077574) {
+extern "C" asm static void func_80077574() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_chk/func_80077574.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

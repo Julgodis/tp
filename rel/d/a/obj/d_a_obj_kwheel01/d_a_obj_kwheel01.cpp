@@ -6,29 +6,62 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjKWheel01_c;
+
+struct daObjKWheel01_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	void eventStart();
+	~daObjKWheel01_c();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__15daObjKWheel01_cFv();
-extern "C" extern void setMtx__15daObjKWheel01_cFv();
-extern "C" extern void CreateHeap__15daObjKWheel01_cFv();
-extern "C" extern void Create__15daObjKWheel01_cFv();
-extern "C" extern void searchKWheel00__FPvPv();
-extern "C" extern void Execute__15daObjKWheel01_cFPPA3_A4_f();
-extern "C" extern void Draw__15daObjKWheel01_cFv();
-extern "C" extern void Delete__15daObjKWheel01_cFv();
-extern "C" extern void eventStart__15daObjKWheel01_cFv();
-extern "C" extern void daObjKWheel01_create1st__FP15daObjKWheel01_c();
-extern "C" extern void daObjKWheel01_MoveBGDelete__FP15daObjKWheel01_c();
-extern "C" extern void daObjKWheel01_MoveBGExecute__FP15daObjKWheel01_c();
-extern "C" extern void daObjKWheel01_MoveBGDraw__FP15daObjKWheel01_c();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__15daObjKWheel01_cFv();
-extern "C" extern void func_80C4F6A0();
-extern "C" extern void func_80C4F6A8();
+void searchKWheel00(void*, void*);
+extern "C" void Execute__15daObjKWheel01_cFPPA3_A4_f();
+void daObjKWheel01_create1st(daObjKWheel01_c*);
+void daObjKWheel01_MoveBGDelete(daObjKWheel01_c*);
+void daObjKWheel01_MoveBGExecute(daObjKWheel01_c*);
+void daObjKWheel01_MoveBGDraw(daObjKWheel01_c*);
+extern "C" void func_80C4F6A0();
+extern "C" void func_80C4F6A8();
+
+extern "C" void create1st__15daObjKWheel01_cFv();
+extern "C" void setMtx__15daObjKWheel01_cFv();
+extern "C" void CreateHeap__15daObjKWheel01_cFv();
+extern "C" void Create__15daObjKWheel01_cFv();
+extern "C" void searchKWheel00__FPvPv();
+extern "C" void Execute__15daObjKWheel01_cFPPA3_A4_f();
+extern "C" void Draw__15daObjKWheel01_cFv();
+extern "C" void Delete__15daObjKWheel01_cFv();
+extern "C" void eventStart__15daObjKWheel01_cFv();
+extern "C" void daObjKWheel01_create1st__FP15daObjKWheel01_c();
+extern "C" void daObjKWheel01_MoveBGDelete__FP15daObjKWheel01_c();
+extern "C" void daObjKWheel01_MoveBGExecute__FP15daObjKWheel01_c();
+extern "C" void daObjKWheel01_MoveBGDraw__FP15daObjKWheel01_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__15daObjKWheel01_cFv();
+extern "C" void func_80C4F6A0();
+extern "C" void func_80C4F6A8();
 SECTION_RODATA extern const u8 l_dzbidx[12];
 SECTION_RODATA extern const u8 l_bmdidx[8];
 SECTION_RODATA extern const u8 l_cull_box[24];
@@ -46,7 +79,9 @@ SECTION_DATA extern void*const __vt__15daObjKWheel01_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -56,7 +91,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/create1st__15daObjKWheel01_cFv.s"
 }
@@ -67,7 +102,7 @@ ASM_FUNCTION(create1st__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/setMtx__15daObjKWheel01_cFv.s"
 }
@@ -78,7 +113,7 @@ ASM_FUNCTION(setMtx__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/CreateHeap__15daObjKWheel01_cFv.s"
 }
@@ -89,7 +124,7 @@ ASM_FUNCTION(CreateHeap__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/Create__15daObjKWheel01_cFv.s"
 }
@@ -100,7 +135,7 @@ ASM_FUNCTION(Create__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchKWheel00__FPvPv) {
+asm void searchKWheel00(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/searchKWheel00__FPvPv.s"
 }
@@ -111,7 +146,7 @@ ASM_FUNCTION(searchKWheel00__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjKWheel01_cFPPA3_A4_f) {
+extern "C" asm void Execute__15daObjKWheel01_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/Execute__15daObjKWheel01_cFPPA3_A4_f.s"
 }
@@ -122,7 +157,7 @@ ASM_FUNCTION(Execute__15daObjKWheel01_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/Draw__15daObjKWheel01_cFv.s"
 }
@@ -133,7 +168,7 @@ ASM_FUNCTION(Draw__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/Delete__15daObjKWheel01_cFv.s"
 }
@@ -144,7 +179,7 @@ ASM_FUNCTION(Delete__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__15daObjKWheel01_cFv) {
+asm void daObjKWheel01_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/eventStart__15daObjKWheel01_cFv.s"
 }
@@ -155,7 +190,7 @@ ASM_FUNCTION(eventStart__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel01_create1st__FP15daObjKWheel01_c) {
+asm void daObjKWheel01_create1st(daObjKWheel01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/daObjKWheel01_create1st__FP15daObjKWheel01_c.s"
 }
@@ -166,7 +201,7 @@ ASM_FUNCTION(daObjKWheel01_create1st__FP15daObjKWheel01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel01_MoveBGDelete__FP15daObjKWheel01_c) {
+asm void daObjKWheel01_MoveBGDelete(daObjKWheel01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/daObjKWheel01_MoveBGDelete__FP15daObjKWheel01_c.s"
 }
@@ -177,7 +212,7 @@ ASM_FUNCTION(daObjKWheel01_MoveBGDelete__FP15daObjKWheel01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel01_MoveBGExecute__FP15daObjKWheel01_c) {
+asm void daObjKWheel01_MoveBGExecute(daObjKWheel01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/daObjKWheel01_MoveBGExecute__FP15daObjKWheel01_c.s"
 }
@@ -188,7 +223,7 @@ ASM_FUNCTION(daObjKWheel01_MoveBGExecute__FP15daObjKWheel01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKWheel01_MoveBGDraw__FP15daObjKWheel01_c) {
+asm void daObjKWheel01_MoveBGDraw(daObjKWheel01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/daObjKWheel01_MoveBGDraw__FP15daObjKWheel01_c.s"
 }
@@ -199,7 +234,7 @@ ASM_FUNCTION(daObjKWheel01_MoveBGDraw__FP15daObjKWheel01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/__dt__17dEvLib_callback_cFv.s"
 }
@@ -207,43 +242,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C4F5F4-80C4F5FC 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4F5FC-80C4F604 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4F604-80C4F60C 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4F60C-80C4F6A0 0094+00 .text      __dt__15daObjKWheel01_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daObjKWheel01_cFv) {
+asm daObjKWheel01_c::~daObjKWheel01_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/__dt__15daObjKWheel01_cFv.s"
 }
@@ -254,7 +274,7 @@ ASM_FUNCTION(__dt__15daObjKWheel01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4F6A0) {
+extern "C" asm void func_80C4F6A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/func_80C4F6A0.s"
 }
@@ -265,7 +285,7 @@ ASM_FUNCTION(func_80C4F6A0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4F6A8) {
+extern "C" asm void func_80C4F6A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kwheel01/d_a_obj_kwheel01/func_80C4F6A8.s"
 }

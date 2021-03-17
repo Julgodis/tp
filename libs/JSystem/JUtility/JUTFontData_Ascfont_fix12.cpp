@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_RODATA extern const u8 JUTResFONT_Ascfont_fix12[16736];
 
 // 
@@ -16,11 +17,13 @@ SECTION_RODATA extern const u8 JUTResFONT_Ascfont_fix12[16736];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8039DA20-803A1B80 4160+00 .rodata    JUTResFONT_Ascfont_fix12                                     */
+/* ############################################################################################## */
+/* 8039DA20-803A1B80 4160+00 rc=1 efc=1 .rodata    JUTResFONT_Ascfont_fix12                                     */
 SECTION_RODATA const u8 JUTResFONT_Ascfont_fix12[16736] = {
 	0x46, 0x4F, 0x4E, 0x54, 0x62, 0x66, 0x6E, 0x31, 0x00, 0x00, 0x41, 0x60, 0x00, 0x00, 0x00, 0x04,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

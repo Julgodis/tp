@@ -6,28 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjCrope_c;
+
+struct daObjCrope_c {
+	void createHeap();
+	void create();
+	~daObjCrope_c();
+	void setNormalRopePos();
+	void setRideRopePos();
+	void execute();
+	void draw();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	cXyz();
+	~cXyz();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cM3dGLin {
+	~cM3dGLin();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeap__12daObjCrope_cFv();
-extern "C" extern void daObjCrope_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__12daObjCrope_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObjCrope_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daObjCrope_cFv();
-extern "C" extern void daObjCrope_Delete__FP12daObjCrope_c();
-extern "C" extern void setNormalRopePos__12daObjCrope_cFv();
-extern "C" extern void setRideRopePos__12daObjCrope_cFv();
-extern "C" extern void execute__12daObjCrope_cFv();
-extern "C" extern void __dt__8cM3dGLinFv();
-extern "C" extern void daObjCrope_Execute__FP12daObjCrope_c();
-extern "C" extern void draw__12daObjCrope_cFv();
-extern "C" extern void daObjCrope_Draw__FP12daObjCrope_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daObjCrope_createHeap(fopAc_ac_c*);
+void daObjCrope_Create(fopAc_ac_c*);
+void daObjCrope_Delete(daObjCrope_c*);
+void daObjCrope_Execute(daObjCrope_c*);
+void daObjCrope_Draw(daObjCrope_c*);
+
+extern "C" void createHeap__12daObjCrope_cFv();
+extern "C" void daObjCrope_createHeap__FP10fopAc_ac_c();
+extern "C" void create__12daObjCrope_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObjCrope_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daObjCrope_cFv();
+extern "C" void daObjCrope_Delete__FP12daObjCrope_c();
+extern "C" void setNormalRopePos__12daObjCrope_cFv();
+extern "C" void setRideRopePos__12daObjCrope_cFv();
+extern "C" void execute__12daObjCrope_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void daObjCrope_Execute__FP12daObjCrope_c();
+extern "C" void draw__12daObjCrope_cFv();
+extern "C" void daObjCrope_Draw__FP12daObjCrope_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_3870;
 SECTION_RODATA extern const u32 lit_3871;
@@ -65,7 +116,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +128,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__12daObjCrope_cFv) {
+asm void daObjCrope_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/createHeap__12daObjCrope_cFv.s"
 }
@@ -86,7 +139,7 @@ ASM_FUNCTION(createHeap__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrope_createHeap__FP10fopAc_ac_c) {
+asm void daObjCrope_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_createHeap__FP10fopAc_ac_c.s"
 }
@@ -97,7 +150,7 @@ ASM_FUNCTION(daObjCrope_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjCrope_cFv) {
+asm void daObjCrope_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/create__12daObjCrope_cFv.s"
 }
@@ -105,21 +158,16 @@ ASM_FUNCTION(create__12daObjCrope_cFv) {
 
 
 /* 80BCD3D8-80BCD3DC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BCD3DC-80BCD424 0048+00 .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__8cM3dGSphFv.s"
 }
@@ -130,7 +178,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__8cM3dGAabFv.s"
 }
@@ -141,7 +189,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__10dCcD_GSttsFv.s"
 }
@@ -152,7 +200,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__4cXyzFv.s"
 }
@@ -163,7 +211,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrope_Create__FP10fopAc_ac_c) {
+asm void daObjCrope_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Create__FP10fopAc_ac_c.s"
 }
@@ -174,7 +222,7 @@ ASM_FUNCTION(daObjCrope_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daObjCrope_cFv) {
+asm daObjCrope_c::~daObjCrope_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__12daObjCrope_cFv.s"
 }
@@ -185,7 +233,7 @@ ASM_FUNCTION(__dt__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrope_Delete__FP12daObjCrope_c) {
+asm void daObjCrope_Delete(daObjCrope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Delete__FP12daObjCrope_c.s"
 }
@@ -196,7 +244,7 @@ ASM_FUNCTION(daObjCrope_Delete__FP12daObjCrope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalRopePos__12daObjCrope_cFv) {
+asm void daObjCrope_c::setNormalRopePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/setNormalRopePos__12daObjCrope_cFv.s"
 }
@@ -207,7 +255,7 @@ ASM_FUNCTION(setNormalRopePos__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRideRopePos__12daObjCrope_cFv) {
+asm void daObjCrope_c::setRideRopePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/setRideRopePos__12daObjCrope_cFv.s"
 }
@@ -218,7 +266,7 @@ ASM_FUNCTION(setRideRopePos__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjCrope_cFv) {
+asm void daObjCrope_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/execute__12daObjCrope_cFv.s"
 }
@@ -229,7 +277,7 @@ ASM_FUNCTION(execute__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGLinFv) {
+asm cM3dGLin::~cM3dGLin() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__8cM3dGLinFv.s"
 }
@@ -240,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGLinFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrope_Execute__FP12daObjCrope_c) {
+asm void daObjCrope_Execute(daObjCrope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Execute__FP12daObjCrope_c.s"
 }
@@ -251,7 +299,7 @@ ASM_FUNCTION(daObjCrope_Execute__FP12daObjCrope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjCrope_cFv) {
+asm void daObjCrope_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/draw__12daObjCrope_cFv.s"
 }
@@ -262,7 +310,7 @@ ASM_FUNCTION(draw__12daObjCrope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjCrope_Draw__FP12daObjCrope_c) {
+asm void daObjCrope_Draw(daObjCrope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Draw__FP12daObjCrope_c.s"
 }
@@ -273,7 +321,7 @@ ASM_FUNCTION(daObjCrope_Draw__FP12daObjCrope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__dt__10cCcD_GSttsFv.s"
 }

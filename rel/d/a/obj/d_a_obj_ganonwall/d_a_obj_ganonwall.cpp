@@ -6,24 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjGWall_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjGWall_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void checkDraw();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__12daObjGWall_cFv();
-extern "C" extern void setBaseMtx__12daObjGWall_cFv();
-extern "C" extern void Create__12daObjGWall_cFv();
-extern "C" extern void CreateHeap__12daObjGWall_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__12daObjGWall_cFv();
-extern "C" extern void execute__12daObjGWall_cFv();
-extern "C" extern void checkDraw__12daObjGWall_cFv();
-extern "C" extern void draw__12daObjGWall_cFv();
-extern "C" extern void _delete__12daObjGWall_cFv();
-extern "C" extern void daObjGWall_Draw__FP12daObjGWall_c();
-extern "C" extern void daObjGWall_Execute__FP12daObjGWall_c();
-extern "C" extern void daObjGWall_Delete__FP12daObjGWall_c();
-extern "C" extern void daObjGWall_Create__FP12daObjGWall_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjGWall_Draw(daObjGWall_c*);
+void daObjGWall_Execute(daObjGWall_c*);
+void daObjGWall_Delete(daObjGWall_c*);
+void daObjGWall_Create(daObjGWall_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__12daObjGWall_cFv();
+extern "C" void setBaseMtx__12daObjGWall_cFv();
+extern "C" void Create__12daObjGWall_cFv();
+extern "C" void CreateHeap__12daObjGWall_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__12daObjGWall_cFv();
+extern "C" void execute__12daObjGWall_cFv();
+extern "C" void checkDraw__12daObjGWall_cFv();
+extern "C" void draw__12daObjGWall_cFv();
+extern "C" void _delete__12daObjGWall_cFv();
+extern "C" void daObjGWall_Draw__FP12daObjGWall_c();
+extern "C" void daObjGWall_Execute__FP12daObjGWall_c();
+extern "C" void daObjGWall_Delete__FP12daObjGWall_c();
+extern "C" void daObjGWall_Create__FP12daObjGWall_c();
 SECTION_RODATA extern const u8 l_idx[96];
 SECTION_RODATA extern const u8 l_color[96];
 SECTION_RODATA extern const u32 lit_3681;
@@ -44,7 +76,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -54,7 +88,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -65,7 +99,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjGWall_cFv) {
+asm void daObjGWall_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/initBaseMtx__12daObjGWall_cFv.s"
 }
@@ -76,7 +110,7 @@ ASM_FUNCTION(initBaseMtx__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjGWall_cFv) {
+asm void daObjGWall_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/setBaseMtx__12daObjGWall_cFv.s"
 }
@@ -87,7 +121,7 @@ ASM_FUNCTION(setBaseMtx__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjGWall_cFv) {
+asm void daObjGWall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/Create__12daObjGWall_cFv.s"
 }
@@ -98,7 +132,7 @@ ASM_FUNCTION(Create__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjGWall_cFv) {
+asm void daObjGWall_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/CreateHeap__12daObjGWall_cFv.s"
 }
@@ -109,7 +143,7 @@ ASM_FUNCTION(CreateHeap__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/__dt__12J3DFrameCtrlFv.s"
 }
@@ -120,7 +154,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjGWall_cFv) {
+asm void daObjGWall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/func_80BF4FF0.s"
 }
@@ -131,7 +165,7 @@ ASM_FUNCTION(create__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjGWall_cFv) {
+asm void daObjGWall_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/execute__12daObjGWall_cFv.s"
 }
@@ -142,7 +176,7 @@ ASM_FUNCTION(execute__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDraw__12daObjGWall_cFv) {
+asm void daObjGWall_c::checkDraw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/checkDraw__12daObjGWall_cFv.s"
 }
@@ -153,7 +187,7 @@ ASM_FUNCTION(checkDraw__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjGWall_cFv) {
+asm void daObjGWall_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/draw__12daObjGWall_cFv.s"
 }
@@ -164,7 +198,7 @@ ASM_FUNCTION(draw__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjGWall_cFv) {
+asm void daObjGWall_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/_delete__12daObjGWall_cFv.s"
 }
@@ -175,7 +209,7 @@ ASM_FUNCTION(_delete__12daObjGWall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall_Draw__FP12daObjGWall_c) {
+asm void daObjGWall_Draw(daObjGWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Draw__FP12daObjGWall_c.s"
 }
@@ -186,7 +220,7 @@ ASM_FUNCTION(daObjGWall_Draw__FP12daObjGWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall_Execute__FP12daObjGWall_c) {
+asm void daObjGWall_Execute(daObjGWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Execute__FP12daObjGWall_c.s"
 }
@@ -197,7 +231,7 @@ ASM_FUNCTION(daObjGWall_Execute__FP12daObjGWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall_Delete__FP12daObjGWall_c) {
+asm void daObjGWall_Delete(daObjGWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Delete__FP12daObjGWall_c.s"
 }
@@ -208,7 +242,7 @@ ASM_FUNCTION(daObjGWall_Delete__FP12daObjGWall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjGWall_Create__FP12daObjGWall_c) {
+asm void daObjGWall_Create(daObjGWall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ganonwall/d_a_obj_ganonwall/daObjGWall_Create__FP12daObjGWall_c.s"
 }

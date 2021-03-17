@@ -6,34 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daPropY_c;
+
+struct daPropY_HIO_c {
+	daPropY_HIO_c();
+	~daPropY_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daPropY_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void procMain();
+	void init_modeMoveWait();
+	void modeMoveWait();
+	void init_modeMove();
+	void modeMove();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMove2();
+	void modeMove2();
+	void init_modeStop();
+	void modeStop();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daPropY_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__9daPropY_cFv();
-extern "C" extern void CreateHeap__9daPropY_cFv();
-extern "C" extern void create__9daPropY_cFv();
-extern "C" extern void Execute__9daPropY_cFPPA3_A4_f();
-extern "C" extern void procMain__9daPropY_cFv();
-extern "C" extern void init_modeMoveWait__9daPropY_cFv();
-extern "C" extern void modeMoveWait__9daPropY_cFv();
-extern "C" extern void init_modeMove__9daPropY_cFv();
-extern "C" extern void modeMove__9daPropY_cFv();
-extern "C" extern void init_modeWait__9daPropY_cFv();
-extern "C" extern void modeWait__9daPropY_cFv();
-extern "C" extern void init_modeMove2__9daPropY_cFv();
-extern "C" extern void modeMove2__9daPropY_cFv();
-extern "C" extern void init_modeStop__9daPropY_cFv();
-extern "C" extern void modeStop__9daPropY_cFv();
-extern "C" extern void Draw__9daPropY_cFv();
-extern "C" extern void Delete__9daPropY_cFv();
-extern "C" extern void daPropY_Draw__FP9daPropY_c();
-extern "C" extern void daPropY_Execute__FP9daPropY_c();
-extern "C" extern void daPropY_Delete__FP9daPropY_c();
-extern "C" extern void daPropY_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daPropY_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv7PropellerY_cpp();
+extern "C" void Execute__9daPropY_cFPPA3_A4_f();
+void daPropY_Draw(daPropY_c*);
+void daPropY_Execute(daPropY_c*);
+void daPropY_Delete(daPropY_c*);
+void daPropY_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv7PropellerY_cpp();
+
+extern "C" void __ct__13daPropY_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__9daPropY_cFv();
+extern "C" void CreateHeap__9daPropY_cFv();
+extern "C" void create__9daPropY_cFv();
+extern "C" void Execute__9daPropY_cFPPA3_A4_f();
+extern "C" void procMain__9daPropY_cFv();
+extern "C" void init_modeMoveWait__9daPropY_cFv();
+extern "C" void modeMoveWait__9daPropY_cFv();
+extern "C" void init_modeMove__9daPropY_cFv();
+extern "C" void modeMove__9daPropY_cFv();
+extern "C" void init_modeWait__9daPropY_cFv();
+extern "C" void modeWait__9daPropY_cFv();
+extern "C" void init_modeMove2__9daPropY_cFv();
+extern "C" void modeMove2__9daPropY_cFv();
+extern "C" void init_modeStop__9daPropY_cFv();
+extern "C" void modeStop__9daPropY_cFv();
+extern "C" void Draw__9daPropY_cFv();
+extern "C" void Delete__9daPropY_cFv();
+extern "C" void daPropY_Draw__FP9daPropY_c();
+extern "C" void daPropY_Execute__FP9daPropY_c();
+extern "C" void daPropY_Delete__FP9daPropY_c();
+extern "C" void daPropY_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daPropY_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv7PropellerY_cpp();
 SECTION_RODATA extern const u8 lit_3650[4];
 SECTION_RODATA extern const u32 lit_3651;
 SECTION_RODATA extern const u32 lit_3652;
@@ -71,8 +116,11 @@ SECTION_BSS extern u8 data_80C862EC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -82,7 +130,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daPropY_HIO_cFv) {
+asm daPropY_HIO_c::daPropY_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/__ct__13daPropY_HIO_cFv.s"
 }
@@ -93,7 +141,7 @@ ASM_FUNCTION(__ct__13daPropY_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -104,7 +152,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daPropY_cFv) {
+asm void daPropY_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/setBaseMtx__9daPropY_cFv.s"
 }
@@ -115,7 +163,7 @@ ASM_FUNCTION(setBaseMtx__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daPropY_cFv) {
+asm void daPropY_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/CreateHeap__9daPropY_cFv.s"
 }
@@ -126,7 +174,7 @@ ASM_FUNCTION(CreateHeap__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daPropY_cFv) {
+asm void daPropY_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/create__9daPropY_cFv.s"
 }
@@ -137,7 +185,7 @@ ASM_FUNCTION(create__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daPropY_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daPropY_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/Execute__9daPropY_cFPPA3_A4_f.s"
 }
@@ -148,7 +196,7 @@ ASM_FUNCTION(Execute__9daPropY_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__9daPropY_cFv) {
+asm void daPropY_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/procMain__9daPropY_cFv.s"
 }
@@ -159,7 +207,7 @@ ASM_FUNCTION(procMain__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveWait__9daPropY_cFv) {
+asm void daPropY_c::init_modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/init_modeMoveWait__9daPropY_cFv.s"
 }
@@ -167,21 +215,16 @@ ASM_FUNCTION(init_modeMoveWait__9daPropY_cFv) {
 
 
 /* 80C859C0-80C859C4 0004+00 .text      modeMoveWait__9daPropY_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeMoveWait__9daPropY_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeMoveWait__9daPropY_cFv.s"
+void daPropY_c::modeMoveWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C859C4-80C859E0 001C+00 .text      init_modeMove__9daPropY_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__9daPropY_cFv) {
+asm void daPropY_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/init_modeMove__9daPropY_cFv.s"
 }
@@ -192,7 +235,7 @@ ASM_FUNCTION(init_modeMove__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__9daPropY_cFv) {
+asm void daPropY_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeMove__9daPropY_cFv.s"
 }
@@ -203,7 +246,7 @@ ASM_FUNCTION(modeMove__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__9daPropY_cFv) {
+asm void daPropY_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/init_modeWait__9daPropY_cFv.s"
 }
@@ -214,7 +257,7 @@ ASM_FUNCTION(init_modeWait__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__9daPropY_cFv) {
+asm void daPropY_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeWait__9daPropY_cFv.s"
 }
@@ -225,7 +268,7 @@ ASM_FUNCTION(modeWait__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove2__9daPropY_cFv) {
+asm void daPropY_c::init_modeMove2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/init_modeMove2__9daPropY_cFv.s"
 }
@@ -236,7 +279,7 @@ ASM_FUNCTION(init_modeMove2__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove2__9daPropY_cFv) {
+asm void daPropY_c::modeMove2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeMove2__9daPropY_cFv.s"
 }
@@ -247,7 +290,7 @@ ASM_FUNCTION(modeMove2__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeStop__9daPropY_cFv) {
+asm void daPropY_c::init_modeStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/init_modeStop__9daPropY_cFv.s"
 }
@@ -258,7 +301,7 @@ ASM_FUNCTION(init_modeStop__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeStop__9daPropY_cFv) {
+asm void daPropY_c::modeStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeStop__9daPropY_cFv.s"
 }
@@ -269,7 +312,7 @@ ASM_FUNCTION(modeStop__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daPropY_cFv) {
+asm void daPropY_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/Draw__9daPropY_cFv.s"
 }
@@ -280,7 +323,7 @@ ASM_FUNCTION(Draw__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daPropY_cFv) {
+asm void daPropY_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/Delete__9daPropY_cFv.s"
 }
@@ -291,7 +334,7 @@ ASM_FUNCTION(Delete__9daPropY_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPropY_Draw__FP9daPropY_c) {
+asm void daPropY_Draw(daPropY_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/daPropY_Draw__FP9daPropY_c.s"
 }
@@ -302,7 +345,7 @@ ASM_FUNCTION(daPropY_Draw__FP9daPropY_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPropY_Execute__FP9daPropY_c) {
+asm void daPropY_Execute(daPropY_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/daPropY_Execute__FP9daPropY_c.s"
 }
@@ -313,7 +356,7 @@ ASM_FUNCTION(daPropY_Execute__FP9daPropY_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPropY_Delete__FP9daPropY_c) {
+asm void daPropY_Delete(daPropY_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/daPropY_Delete__FP9daPropY_c.s"
 }
@@ -324,7 +367,7 @@ ASM_FUNCTION(daPropY_Delete__FP9daPropY_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPropY_Create__FP10fopAc_ac_c) {
+asm void daPropY_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/daPropY_Create__FP10fopAc_ac_c.s"
 }
@@ -335,7 +378,7 @@ ASM_FUNCTION(daPropY_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daPropY_HIO_cFv) {
+asm daPropY_HIO_c::~daPropY_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/__dt__13daPropY_HIO_cFv.s"
 }
@@ -346,7 +389,7 @@ ASM_FUNCTION(__dt__13daPropY_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv7PropellerY_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv7PropellerY_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/__sinit_d_a_obj_lv7PropellerY_cpp.s"
 }

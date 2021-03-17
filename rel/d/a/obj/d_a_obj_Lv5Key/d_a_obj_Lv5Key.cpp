@@ -6,39 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjLv5Key_c;
+
+struct daObjLv5Key_c {
+	void CreateHeap();
+	void Init();
+	void setBgc();
+	void initCcSph();
+	void setCcSph();
+	void Action();
+	void Wait(s32);
+	void Open(s32);
+	void Fall(s32);
+	void Land(s32);
+	void Shake(s32);
+	void TranslateByNowDirect(f32, f32, f32);
+	void Execute();
+	void Draw();
+	void Delete();
+	void setBaseMtx();
+	void create_1st();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CreateHeap__13daObjLv5Key_cFv();
-extern "C" extern void Init__13daObjLv5Key_cFv();
-extern "C" extern void setBgc__13daObjLv5Key_cFv();
-extern "C" extern void initCcSph__13daObjLv5Key_cFv();
-extern "C" extern void setCcSph__13daObjLv5Key_cFv();
-extern "C" extern void daObjLv5Key_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjLv5Key_Delete__FP13daObjLv5Key_c();
-extern "C" extern void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi();
-extern "C" extern void Action__13daObjLv5Key_cFv();
-extern "C" extern void Wait__13daObjLv5Key_cFi();
-extern "C" extern void Open__13daObjLv5Key_cFi();
-extern "C" extern void Fall__13daObjLv5Key_cFi();
-extern "C" extern void Land__13daObjLv5Key_cFi();
-extern "C" extern void Shake__13daObjLv5Key_cFi();
-extern "C" extern void TranslateByNowDirect__13daObjLv5Key_cFfff();
-extern "C" extern void Execute__13daObjLv5Key_cFv();
-extern "C" extern void Draw__13daObjLv5Key_cFv();
-extern "C" extern void Delete__13daObjLv5Key_cFv();
-extern "C" extern void setBaseMtx__13daObjLv5Key_cFv();
-extern "C" extern void daObjLv5Key_Draw__FP13daObjLv5Key_c();
-extern "C" extern void daObjLv5Key_Execute__FP13daObjLv5Key_c();
-extern "C" extern void create_1st__13daObjLv5Key_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObjLv5Key_IsDelete__FP13daObjLv5Key_c();
-extern "C" extern void func_80B9C908();
-extern "C" extern void func_80B9C910();
+void daObjLv5Key_Create(fopAc_ac_c*);
+void daObjLv5Key_Delete(daObjLv5Key_c*);
+extern "C" void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi();
+void daObjLv5Key_Draw(daObjLv5Key_c*);
+void daObjLv5Key_Execute(daObjLv5Key_c*);
+void useHeapInit(fopAc_ac_c*);
+bool daObjLv5Key_IsDelete(daObjLv5Key_c*);
+extern "C" void func_80B9C908();
+extern "C" void func_80B9C910();
+
+extern "C" void CreateHeap__13daObjLv5Key_cFv();
+extern "C" void Init__13daObjLv5Key_cFv();
+extern "C" void setBgc__13daObjLv5Key_cFv();
+extern "C" void initCcSph__13daObjLv5Key_cFv();
+extern "C" void setCcSph__13daObjLv5Key_cFv();
+extern "C" void daObjLv5Key_Create__FP10fopAc_ac_c();
+extern "C" void daObjLv5Key_Delete__FP13daObjLv5Key_c();
+extern "C" void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi();
+extern "C" void Action__13daObjLv5Key_cFv();
+extern "C" void Wait__13daObjLv5Key_cFi();
+extern "C" void Open__13daObjLv5Key_cFi();
+extern "C" void Fall__13daObjLv5Key_cFi();
+extern "C" void Land__13daObjLv5Key_cFi();
+extern "C" void Shake__13daObjLv5Key_cFi();
+extern "C" void TranslateByNowDirect__13daObjLv5Key_cFfff();
+extern "C" void Execute__13daObjLv5Key_cFv();
+extern "C" void Draw__13daObjLv5Key_cFv();
+extern "C" void Delete__13daObjLv5Key_cFv();
+extern "C" void setBaseMtx__13daObjLv5Key_cFv();
+extern "C" void daObjLv5Key_Draw__FP13daObjLv5Key_c();
+extern "C" void daObjLv5Key_Execute__FP13daObjLv5Key_c();
+extern "C" void create_1st__13daObjLv5Key_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" bool daObjLv5Key_IsDelete__FP13daObjLv5Key_c();
+extern "C" void func_80B9C908();
+extern "C" void func_80B9C910();
 SECTION_RODATA extern const u32 lit_3755;
 SECTION_RODATA extern const u32 lit_3767;
 SECTION_RODATA extern const u32 lit_3768;
@@ -78,7 +134,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -88,7 +146,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/CreateHeap__13daObjLv5Key_cFv.s"
 }
@@ -99,7 +157,7 @@ ASM_FUNCTION(CreateHeap__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Init__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::Init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Init__13daObjLv5Key_cFv.s"
 }
@@ -110,7 +168,7 @@ ASM_FUNCTION(Init__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBgc__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::setBgc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/setBgc__13daObjLv5Key_cFv.s"
 }
@@ -121,7 +179,7 @@ ASM_FUNCTION(setBgc__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCcSph__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::initCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/initCcSph__13daObjLv5Key_cFv.s"
 }
@@ -132,7 +190,7 @@ ASM_FUNCTION(initCcSph__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCcSph__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::setCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/setCcSph__13daObjLv5Key_cFv.s"
 }
@@ -143,7 +201,7 @@ ASM_FUNCTION(setCcSph__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv5Key_Create__FP10fopAc_ac_c) {
+asm void daObjLv5Key_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_Create__FP10fopAc_ac_c.s"
 }
@@ -154,7 +212,7 @@ ASM_FUNCTION(daObjLv5Key_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv5Key_Delete__FP13daObjLv5Key_c) {
+asm void daObjLv5Key_Delete(daObjLv5Key_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_Delete__FP13daObjLv5Key_c.s"
 }
@@ -165,7 +223,7 @@ ASM_FUNCTION(daObjLv5Key_Delete__FP13daObjLv5Key_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi) {
+extern "C" asm void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi.s"
 }
@@ -176,7 +234,7 @@ ASM_FUNCTION(setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Action__13daObjLv5Key_cFv.s"
 }
@@ -187,7 +245,7 @@ ASM_FUNCTION(Action__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Wait__13daObjLv5Key_cFi) {
+asm void daObjLv5Key_c::Wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Wait__13daObjLv5Key_cFi.s"
 }
@@ -198,7 +256,7 @@ ASM_FUNCTION(Wait__13daObjLv5Key_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Open__13daObjLv5Key_cFi) {
+asm void daObjLv5Key_c::Open(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Open__13daObjLv5Key_cFi.s"
 }
@@ -209,7 +267,7 @@ ASM_FUNCTION(Open__13daObjLv5Key_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Fall__13daObjLv5Key_cFi) {
+asm void daObjLv5Key_c::Fall(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Fall__13daObjLv5Key_cFi.s"
 }
@@ -220,7 +278,7 @@ ASM_FUNCTION(Fall__13daObjLv5Key_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Land__13daObjLv5Key_cFi) {
+asm void daObjLv5Key_c::Land(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Land__13daObjLv5Key_cFi.s"
 }
@@ -231,7 +289,7 @@ ASM_FUNCTION(Land__13daObjLv5Key_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Shake__13daObjLv5Key_cFi) {
+asm void daObjLv5Key_c::Shake(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Shake__13daObjLv5Key_cFi.s"
 }
@@ -242,7 +300,7 @@ ASM_FUNCTION(Shake__13daObjLv5Key_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TranslateByNowDirect__13daObjLv5Key_cFfff) {
+asm void daObjLv5Key_c::TranslateByNowDirect(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/TranslateByNowDirect__13daObjLv5Key_cFfff.s"
 }
@@ -253,7 +311,7 @@ ASM_FUNCTION(TranslateByNowDirect__13daObjLv5Key_cFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Execute__13daObjLv5Key_cFv.s"
 }
@@ -264,7 +322,7 @@ ASM_FUNCTION(Execute__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Draw__13daObjLv5Key_cFv.s"
 }
@@ -275,7 +333,7 @@ ASM_FUNCTION(Draw__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/Delete__13daObjLv5Key_cFv.s"
 }
@@ -286,7 +344,7 @@ ASM_FUNCTION(Delete__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/setBaseMtx__13daObjLv5Key_cFv.s"
 }
@@ -297,7 +355,7 @@ ASM_FUNCTION(setBaseMtx__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv5Key_Draw__FP13daObjLv5Key_c) {
+asm void daObjLv5Key_Draw(daObjLv5Key_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_Draw__FP13daObjLv5Key_c.s"
 }
@@ -308,7 +366,7 @@ ASM_FUNCTION(daObjLv5Key_Draw__FP13daObjLv5Key_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv5Key_Execute__FP13daObjLv5Key_c) {
+asm void daObjLv5Key_Execute(daObjLv5Key_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_Execute__FP13daObjLv5Key_c.s"
 }
@@ -319,7 +377,7 @@ ASM_FUNCTION(daObjLv5Key_Execute__FP13daObjLv5Key_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_1st__13daObjLv5Key_cFv) {
+asm void daObjLv5Key_c::create_1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/create_1st__13daObjLv5Key_cFv.s"
 }
@@ -330,7 +388,7 @@ ASM_FUNCTION(create_1st__13daObjLv5Key_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/__dt__8cM3dGSphFv.s"
 }
@@ -341,7 +399,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/__dt__8cM3dGAabFv.s"
 }
@@ -352,7 +410,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -363,7 +421,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/__dt__12J3DFrameCtrlFv.s"
 }
@@ -374,7 +432,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -382,21 +440,16 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 
 
 /* 80B9C900-80B9C908 0008+00 .text      daObjLv5Key_IsDelete__FP13daObjLv5Key_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjLv5Key_IsDelete__FP13daObjLv5Key_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_IsDelete__FP13daObjLv5Key_c.s"
+bool daObjLv5Key_IsDelete(daObjLv5Key_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B9C908-80B9C910 0008+00 .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B9C908) {
+extern "C" asm void func_80B9C908() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/func_80B9C908.s"
 }
@@ -407,7 +460,7 @@ ASM_FUNCTION(func_80B9C908) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B9C910) {
+extern "C" asm void func_80B9C910() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/func_80B9C910.s"
 }

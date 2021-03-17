@@ -6,92 +6,231 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct mf_ke_s;
+struct J3DJoint;
+struct mg_fish_class;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daMg_Fish_HIO_c {
+	daMg_Fish_HIO_c();
+	~daMg_Fish_HIO_c();
+};
+
+struct mg_fish_class {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct J3DJoint {
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct mf_ke_s {
+	~mf_ke_s();
+	mf_ke_s();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15daMg_Fish_HIO_cFv();
-extern "C" extern void hit_vib_set__FP13mg_fish_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void sibuki_set__FP13mg_fish_classf4cXyz();
-extern "C" extern void s_hitfish_sub__FPvPv();
-extern "C" extern void pl_check__FP13mg_fish_classf();
-extern "C" extern void anm_init__FP13mg_fish_classifUcf();
-extern "C" extern void mouth_open__FP13mg_fish_class();
-extern "C" extern void mouth_close__FP13mg_fish_class();
-extern "C" extern void s_lure_sub__FPvPv();
-extern "C" extern void s_esa_sub__FPvPv();
-extern "C" extern void s_bait_sub__FPvPv();
-extern "C" extern void s_other_search_sub__FPvPv();
-extern "C" extern void search_lure__FP13mg_fish_classi();
-extern "C" extern void s_other_bait_sub__FPvPv();
-extern "C" extern void search_bait__FP13mg_fish_class();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void nodeCallBack2__FP8J3DJointi();
-extern "C" extern void nodeCallBackLH__FP8J3DJointi();
-extern "C" extern void nodeCallBackBB__FP8J3DJointi();
-extern "C" extern void s_bt_sub__FPvPv();
-extern "C" extern void s_sp_sub__FPvPv();
-extern "C" extern void s_lh_sub__FPvPv();
-extern "C" extern void s_bin_sub__FPvPv();
-extern "C" extern void s_kn_sub__FPvPv();
-extern "C" extern void s_ed_sub__FPvPv();
-extern "C" extern void s_sy_sub__FPvPv();
-extern "C" extern void s_bb_sub__FPvPv();
-extern "C" extern void s_bb2_sub__FPvPv();
-extern "C" extern void s_sg_sub__FPvPv();
-extern "C" extern void daMg_Fish_Draw__FP13mg_fish_class();
-extern "C" extern void get_surface_y__FP13mg_fish_classP4cXyz();
-extern "C" extern void get_ground_y__FP13mg_fish_classP4cXyz();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void mf_swim__FP13mg_fish_class();
-extern "C" extern void pos_bg_check__FP4cXyzP4cXyz();
-extern "C" extern void path_search__FP13mg_fish_class();
-extern "C" extern void mf_swim_p__FP13mg_fish_class();
-extern "C" extern void mf_swim_s__FP13mg_fish_class();
-extern "C" extern void mf_stay__FP13mg_fish_class();
-extern "C" extern void mf_away__FP13mg_fish_class();
-extern "C" extern void ri_swim__FP13mg_fish_class();
-extern "C" extern void dmcalc__FP13mg_fish_class();
-extern "C" extern void mf_lure_search__FP13mg_fish_class();
-extern "C" extern void mf_bait_search__FP13mg_fish_class();
-extern "C" extern void mf_hit__FP13mg_fish_class();
-extern "C" extern void mf_jump__FP13mg_fish_class();
-extern "C" extern void pota_set__FP13mg_fish_class();
-extern "C" extern void mf_catch__FP13mg_fish_class();
-extern "C" extern void mf_esa_search__FP13mg_fish_class();
-extern "C" extern void mf_esa_hit__FP13mg_fish_class();
-extern "C" extern void mf_esa_catch__FP13mg_fish_class();
-extern "C" extern void mf_aqua__FP13mg_fish_class();
-extern "C" extern void ri_aqua__FP13mg_fish_class();
-extern "C" extern void mf_aqua_tilt__FP13mg_fish_class();
-extern "C" extern void action__FP13mg_fish_class();
-extern "C" extern void ke_control__FP13mg_fish_classP7mf_ke_s();
-extern "C" extern void ke_move__FP13mg_fish_classP7mf_ke_si();
-extern "C" extern void daMg_Fish_Execute__FP13mg_fish_class();
-extern "C" extern void daMg_Fish_IsDelete__FP13mg_fish_class();
-extern "C" extern void daMg_Fish_Delete__FP13mg_fish_class();
-extern "C" extern void useHeapInit2__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapImg_fisht__FP10fopAc_ac_c();
-extern "C" extern void daMg_Fish_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__7mf_ke_sFv();
-extern "C" extern void __ct__7mf_ke_sFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__15daMg_Fish_HIO_cFv();
-extern "C" extern void __sinit_d_a_mg_fish_cpp();
-extern "C" extern void func_8053612C();
-extern "C" extern void func_80536134();
-extern "C" extern void func_8053613C();
-extern "C" extern void func_80536144();
-extern "C" extern void func_8053614C();
+void hit_vib_set(mg_fish_class*);
+void sibuki_set(mg_fish_class*, f32, cXyz);
+void s_hitfish_sub(void*, void*);
+void pl_check(mg_fish_class*, f32);
+void anm_init(mg_fish_class*, s32, f32, u8, f32);
+void mouth_open(mg_fish_class*);
+void mouth_close(mg_fish_class*);
+void s_lure_sub(void*, void*);
+void s_esa_sub(void*, void*);
+void s_bait_sub(void*, void*);
+void s_other_search_sub(void*, void*);
+void search_lure(mg_fish_class*, s32);
+void s_other_bait_sub(void*, void*);
+void search_bait(mg_fish_class*);
+void nodeCallBack(J3DJoint*, s32);
+void nodeCallBack2(J3DJoint*, s32);
+void nodeCallBackLH(J3DJoint*, s32);
+void nodeCallBackBB(J3DJoint*, s32);
+void s_bt_sub(void*, void*);
+void s_sp_sub(void*, void*);
+void s_lh_sub(void*, void*);
+void s_bin_sub(void*, void*);
+void s_kn_sub(void*, void*);
+void s_ed_sub(void*, void*);
+void s_sy_sub(void*, void*);
+void s_bb_sub(void*, void*);
+void s_bb2_sub(void*, void*);
+void s_sg_sub(void*, void*);
+void daMg_Fish_Draw(mg_fish_class*);
+void get_surface_y(mg_fish_class*, cXyz*);
+void get_ground_y(mg_fish_class*, cXyz*);
+void mf_swim(mg_fish_class*);
+void pos_bg_check(cXyz*, cXyz*);
+void path_search(mg_fish_class*);
+void mf_swim_p(mg_fish_class*);
+void mf_swim_s(mg_fish_class*);
+void mf_stay(mg_fish_class*);
+void mf_away(mg_fish_class*);
+void ri_swim(mg_fish_class*);
+void dmcalc(mg_fish_class*);
+void mf_lure_search(mg_fish_class*);
+void mf_bait_search(mg_fish_class*);
+void mf_hit(mg_fish_class*);
+void mf_jump(mg_fish_class*);
+void pota_set(mg_fish_class*);
+void mf_catch(mg_fish_class*);
+void mf_esa_search(mg_fish_class*);
+void mf_esa_hit(mg_fish_class*);
+void mf_esa_catch(mg_fish_class*);
+void mf_aqua(mg_fish_class*);
+void ri_aqua(mg_fish_class*);
+void mf_aqua_tilt(mg_fish_class*);
+void action(mg_fish_class*);
+void ke_control(mg_fish_class*, mf_ke_s*);
+void ke_move(mg_fish_class*, mf_ke_s*, s32);
+void daMg_Fish_Execute(mg_fish_class*);
+bool daMg_Fish_IsDelete(mg_fish_class*);
+void daMg_Fish_Delete(mg_fish_class*);
+void useHeapInit2(fopAc_ac_c*);
+void useHeapImg_fisht(fopAc_ac_c*);
+void daMg_Fish_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_mg_fish_cpp();
+extern "C" void func_8053612C();
+extern "C" void func_80536134();
+extern "C" void func_8053613C();
+extern "C" void func_80536144();
+extern "C" void func_8053614C();
+
+extern "C" void __ct__15daMg_Fish_HIO_cFv();
+extern "C" void hit_vib_set__FP13mg_fish_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void sibuki_set__FP13mg_fish_classf4cXyz();
+extern "C" void s_hitfish_sub__FPvPv();
+extern "C" void pl_check__FP13mg_fish_classf();
+extern "C" void anm_init__FP13mg_fish_classifUcf();
+extern "C" void mouth_open__FP13mg_fish_class();
+extern "C" void mouth_close__FP13mg_fish_class();
+extern "C" void s_lure_sub__FPvPv();
+extern "C" void s_esa_sub__FPvPv();
+extern "C" void s_bait_sub__FPvPv();
+extern "C" void s_other_search_sub__FPvPv();
+extern "C" void search_lure__FP13mg_fish_classi();
+extern "C" void s_other_bait_sub__FPvPv();
+extern "C" void search_bait__FP13mg_fish_class();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void nodeCallBack2__FP8J3DJointi();
+extern "C" void nodeCallBackLH__FP8J3DJointi();
+extern "C" void nodeCallBackBB__FP8J3DJointi();
+extern "C" void s_bt_sub__FPvPv();
+extern "C" void s_sp_sub__FPvPv();
+extern "C" void s_lh_sub__FPvPv();
+extern "C" void s_bin_sub__FPvPv();
+extern "C" void s_kn_sub__FPvPv();
+extern "C" void s_ed_sub__FPvPv();
+extern "C" void s_sy_sub__FPvPv();
+extern "C" void s_bb_sub__FPvPv();
+extern "C" void s_bb2_sub__FPvPv();
+extern "C" void s_sg_sub__FPvPv();
+extern "C" void daMg_Fish_Draw__FP13mg_fish_class();
+extern "C" void get_surface_y__FP13mg_fish_classP4cXyz();
+extern "C" void get_ground_y__FP13mg_fish_classP4cXyz();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void mf_swim__FP13mg_fish_class();
+extern "C" void pos_bg_check__FP4cXyzP4cXyz();
+extern "C" void path_search__FP13mg_fish_class();
+extern "C" void mf_swim_p__FP13mg_fish_class();
+extern "C" void mf_swim_s__FP13mg_fish_class();
+extern "C" void mf_stay__FP13mg_fish_class();
+extern "C" void mf_away__FP13mg_fish_class();
+extern "C" void ri_swim__FP13mg_fish_class();
+extern "C" void dmcalc__FP13mg_fish_class();
+extern "C" void mf_lure_search__FP13mg_fish_class();
+extern "C" void mf_bait_search__FP13mg_fish_class();
+extern "C" void mf_hit__FP13mg_fish_class();
+extern "C" void mf_jump__FP13mg_fish_class();
+extern "C" void pota_set__FP13mg_fish_class();
+extern "C" void mf_catch__FP13mg_fish_class();
+extern "C" void mf_esa_search__FP13mg_fish_class();
+extern "C" void mf_esa_hit__FP13mg_fish_class();
+extern "C" void mf_esa_catch__FP13mg_fish_class();
+extern "C" void mf_aqua__FP13mg_fish_class();
+extern "C" void ri_aqua__FP13mg_fish_class();
+extern "C" void mf_aqua_tilt__FP13mg_fish_class();
+extern "C" void action__FP13mg_fish_class();
+extern "C" void ke_control__FP13mg_fish_classP7mf_ke_s();
+extern "C" void ke_move__FP13mg_fish_classP7mf_ke_si();
+extern "C" void daMg_Fish_Execute__FP13mg_fish_class();
+extern "C" bool daMg_Fish_IsDelete__FP13mg_fish_class();
+extern "C" void daMg_Fish_Delete__FP13mg_fish_class();
+extern "C" void useHeapInit2__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapImg_fisht__FP10fopAc_ac_c();
+extern "C" void daMg_Fish_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__7mf_ke_sFv();
+extern "C" void __ct__7mf_ke_sFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daMg_Fish_HIO_cFv();
+extern "C" void __sinit_d_a_mg_fish_cpp();
+extern "C" void func_8053612C();
+extern "C" void func_80536134();
+extern "C" void func_8053613C();
+extern "C" void func_80536144();
+extern "C" void func_8053614C();
 SECTION_RODATA extern const u32 lit_3679;
 SECTION_RODATA extern const u32 lit_3680;
 SECTION_RODATA extern const u32 lit_3681;
@@ -349,8 +488,11 @@ SECTION_BSS extern u8 data_80536D58[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -360,7 +502,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15daMg_Fish_HIO_cFv) {
+asm daMg_Fish_HIO_c::daMg_Fish_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__15daMg_Fish_HIO_cFv.s"
 }
@@ -371,7 +513,7 @@ ASM_FUNCTION(__ct__15daMg_Fish_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_vib_set__FP13mg_fish_class) {
+asm void hit_vib_set(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/hit_vib_set__FP13mg_fish_class.s"
 }
@@ -382,7 +524,7 @@ ASM_FUNCTION(hit_vib_set__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__4cXyzFv.s"
 }
@@ -393,7 +535,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sibuki_set__FP13mg_fish_classf4cXyz) {
+asm void sibuki_set(mg_fish_class* field_0, f32 field_1, cXyz field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/sibuki_set__FP13mg_fish_classf4cXyz.s"
 }
@@ -404,7 +546,7 @@ ASM_FUNCTION(sibuki_set__FP13mg_fish_classf4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_hitfish_sub__FPvPv) {
+asm void s_hitfish_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_hitfish_sub__FPvPv.s"
 }
@@ -415,7 +557,7 @@ ASM_FUNCTION(s_hitfish_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_check__FP13mg_fish_classf) {
+asm void pl_check(mg_fish_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/pl_check__FP13mg_fish_classf.s"
 }
@@ -426,7 +568,7 @@ ASM_FUNCTION(pl_check__FP13mg_fish_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP13mg_fish_classifUcf) {
+asm void anm_init(mg_fish_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/anm_init__FP13mg_fish_classifUcf.s"
 }
@@ -437,7 +579,7 @@ ASM_FUNCTION(anm_init__FP13mg_fish_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mouth_open__FP13mg_fish_class) {
+asm void mouth_open(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mouth_open__FP13mg_fish_class.s"
 }
@@ -448,7 +590,7 @@ ASM_FUNCTION(mouth_open__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mouth_close__FP13mg_fish_class) {
+asm void mouth_close(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mouth_close__FP13mg_fish_class.s"
 }
@@ -459,7 +601,7 @@ ASM_FUNCTION(mouth_close__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_lure_sub__FPvPv) {
+asm void s_lure_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_lure_sub__FPvPv.s"
 }
@@ -470,7 +612,7 @@ ASM_FUNCTION(s_lure_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_esa_sub__FPvPv) {
+asm void s_esa_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_esa_sub__FPvPv.s"
 }
@@ -481,7 +623,7 @@ ASM_FUNCTION(s_esa_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bait_sub__FPvPv) {
+asm void s_bait_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_bait_sub__FPvPv.s"
 }
@@ -492,7 +634,7 @@ ASM_FUNCTION(s_bait_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_other_search_sub__FPvPv) {
+asm void s_other_search_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_other_search_sub__FPvPv.s"
 }
@@ -503,7 +645,7 @@ ASM_FUNCTION(s_other_search_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_lure__FP13mg_fish_classi) {
+asm void search_lure(mg_fish_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/search_lure__FP13mg_fish_classi.s"
 }
@@ -514,7 +656,7 @@ ASM_FUNCTION(search_lure__FP13mg_fish_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_other_bait_sub__FPvPv) {
+asm void s_other_bait_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_other_bait_sub__FPvPv.s"
 }
@@ -525,7 +667,7 @@ ASM_FUNCTION(s_other_bait_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_bait__FP13mg_fish_class) {
+asm void search_bait(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/search_bait__FP13mg_fish_class.s"
 }
@@ -536,7 +678,7 @@ ASM_FUNCTION(search_bait__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/nodeCallBack__FP8J3DJointi.s"
 }
@@ -547,7 +689,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack2__FP8J3DJointi) {
+asm void nodeCallBack2(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/nodeCallBack2__FP8J3DJointi.s"
 }
@@ -558,7 +700,7 @@ ASM_FUNCTION(nodeCallBack2__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBackLH__FP8J3DJointi) {
+asm void nodeCallBackLH(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/nodeCallBackLH__FP8J3DJointi.s"
 }
@@ -569,7 +711,7 @@ ASM_FUNCTION(nodeCallBackLH__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBackBB__FP8J3DJointi) {
+asm void nodeCallBackBB(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/nodeCallBackBB__FP8J3DJointi.s"
 }
@@ -580,7 +722,7 @@ ASM_FUNCTION(nodeCallBackBB__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bt_sub__FPvPv) {
+asm void s_bt_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_bt_sub__FPvPv.s"
 }
@@ -591,7 +733,7 @@ ASM_FUNCTION(s_bt_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sp_sub__FPvPv) {
+asm void s_sp_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_sp_sub__FPvPv.s"
 }
@@ -602,7 +744,7 @@ ASM_FUNCTION(s_sp_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_lh_sub__FPvPv) {
+asm void s_lh_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_lh_sub__FPvPv.s"
 }
@@ -613,7 +755,7 @@ ASM_FUNCTION(s_lh_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bin_sub__FPvPv) {
+asm void s_bin_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_bin_sub__FPvPv.s"
 }
@@ -624,7 +766,7 @@ ASM_FUNCTION(s_bin_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_kn_sub__FPvPv) {
+asm void s_kn_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_kn_sub__FPvPv.s"
 }
@@ -635,7 +777,7 @@ ASM_FUNCTION(s_kn_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ed_sub__FPvPv) {
+asm void s_ed_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_ed_sub__FPvPv.s"
 }
@@ -646,7 +788,7 @@ ASM_FUNCTION(s_ed_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sy_sub__FPvPv) {
+asm void s_sy_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_sy_sub__FPvPv.s"
 }
@@ -657,7 +799,7 @@ ASM_FUNCTION(s_sy_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bb_sub__FPvPv) {
+asm void s_bb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_bb_sub__FPvPv.s"
 }
@@ -668,7 +810,7 @@ ASM_FUNCTION(s_bb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bb2_sub__FPvPv) {
+asm void s_bb2_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_bb2_sub__FPvPv.s"
 }
@@ -679,7 +821,7 @@ ASM_FUNCTION(s_bb2_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_sg_sub__FPvPv) {
+asm void s_sg_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/s_sg_sub__FPvPv.s"
 }
@@ -690,7 +832,7 @@ ASM_FUNCTION(s_sg_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMg_Fish_Draw__FP13mg_fish_class) {
+asm void daMg_Fish_Draw(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_Draw__FP13mg_fish_class.s"
 }
@@ -701,7 +843,7 @@ ASM_FUNCTION(daMg_Fish_Draw__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_surface_y__FP13mg_fish_classP4cXyz) {
+asm void get_surface_y(mg_fish_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/get_surface_y__FP13mg_fish_classP4cXyz.s"
 }
@@ -712,7 +854,7 @@ ASM_FUNCTION(get_surface_y__FP13mg_fish_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_ground_y__FP13mg_fish_classP4cXyz) {
+asm void get_ground_y(mg_fish_class* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/get_ground_y__FP13mg_fish_classP4cXyz.s"
 }
@@ -723,7 +865,7 @@ ASM_FUNCTION(get_ground_y__FP13mg_fish_classP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -734,7 +876,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_swim__FP13mg_fish_class) {
+asm void mf_swim(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_swim__FP13mg_fish_class.s"
 }
@@ -745,7 +887,7 @@ ASM_FUNCTION(mf_swim__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pos_bg_check__FP4cXyzP4cXyz) {
+asm void pos_bg_check(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/pos_bg_check__FP4cXyzP4cXyz.s"
 }
@@ -756,7 +898,7 @@ ASM_FUNCTION(pos_bg_check__FP4cXyzP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(path_search__FP13mg_fish_class) {
+asm void path_search(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/path_search__FP13mg_fish_class.s"
 }
@@ -767,7 +909,7 @@ ASM_FUNCTION(path_search__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_swim_p__FP13mg_fish_class) {
+asm void mf_swim_p(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_swim_p__FP13mg_fish_class.s"
 }
@@ -778,7 +920,7 @@ ASM_FUNCTION(mf_swim_p__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_swim_s__FP13mg_fish_class) {
+asm void mf_swim_s(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_swim_s__FP13mg_fish_class.s"
 }
@@ -789,7 +931,7 @@ ASM_FUNCTION(mf_swim_s__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_stay__FP13mg_fish_class) {
+asm void mf_stay(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_stay__FP13mg_fish_class.s"
 }
@@ -800,7 +942,7 @@ ASM_FUNCTION(mf_stay__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_away__FP13mg_fish_class) {
+asm void mf_away(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_away__FP13mg_fish_class.s"
 }
@@ -811,7 +953,7 @@ ASM_FUNCTION(mf_away__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ri_swim__FP13mg_fish_class) {
+asm void ri_swim(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/ri_swim__FP13mg_fish_class.s"
 }
@@ -822,7 +964,7 @@ ASM_FUNCTION(ri_swim__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dmcalc__FP13mg_fish_class) {
+asm void dmcalc(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/dmcalc__FP13mg_fish_class.s"
 }
@@ -833,7 +975,7 @@ ASM_FUNCTION(dmcalc__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_lure_search__FP13mg_fish_class) {
+asm void mf_lure_search(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_lure_search__FP13mg_fish_class.s"
 }
@@ -844,7 +986,7 @@ ASM_FUNCTION(mf_lure_search__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_bait_search__FP13mg_fish_class) {
+asm void mf_bait_search(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_bait_search__FP13mg_fish_class.s"
 }
@@ -855,7 +997,7 @@ ASM_FUNCTION(mf_bait_search__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_hit__FP13mg_fish_class) {
+asm void mf_hit(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_hit__FP13mg_fish_class.s"
 }
@@ -866,7 +1008,7 @@ ASM_FUNCTION(mf_hit__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_jump__FP13mg_fish_class) {
+asm void mf_jump(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_jump__FP13mg_fish_class.s"
 }
@@ -877,7 +1019,7 @@ ASM_FUNCTION(mf_jump__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pota_set__FP13mg_fish_class) {
+asm void pota_set(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/pota_set__FP13mg_fish_class.s"
 }
@@ -888,7 +1030,7 @@ ASM_FUNCTION(pota_set__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_catch__FP13mg_fish_class) {
+asm void mf_catch(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_catch__FP13mg_fish_class.s"
 }
@@ -899,7 +1041,7 @@ ASM_FUNCTION(mf_catch__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_esa_search__FP13mg_fish_class) {
+asm void mf_esa_search(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_esa_search__FP13mg_fish_class.s"
 }
@@ -910,7 +1052,7 @@ ASM_FUNCTION(mf_esa_search__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_esa_hit__FP13mg_fish_class) {
+asm void mf_esa_hit(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_esa_hit__FP13mg_fish_class.s"
 }
@@ -921,7 +1063,7 @@ ASM_FUNCTION(mf_esa_hit__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_esa_catch__FP13mg_fish_class) {
+asm void mf_esa_catch(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_esa_catch__FP13mg_fish_class.s"
 }
@@ -932,7 +1074,7 @@ ASM_FUNCTION(mf_esa_catch__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_aqua__FP13mg_fish_class) {
+asm void mf_aqua(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_aqua__FP13mg_fish_class.s"
 }
@@ -943,7 +1085,7 @@ ASM_FUNCTION(mf_aqua__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ri_aqua__FP13mg_fish_class) {
+asm void ri_aqua(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/ri_aqua__FP13mg_fish_class.s"
 }
@@ -954,7 +1096,7 @@ ASM_FUNCTION(ri_aqua__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mf_aqua_tilt__FP13mg_fish_class) {
+asm void mf_aqua_tilt(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/mf_aqua_tilt__FP13mg_fish_class.s"
 }
@@ -965,7 +1107,7 @@ ASM_FUNCTION(mf_aqua_tilt__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP13mg_fish_class) {
+asm void action(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/action__FP13mg_fish_class.s"
 }
@@ -976,7 +1118,7 @@ ASM_FUNCTION(action__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ke_control__FP13mg_fish_classP7mf_ke_s) {
+asm void ke_control(mg_fish_class* field_0, mf_ke_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/ke_control__FP13mg_fish_classP7mf_ke_s.s"
 }
@@ -987,7 +1129,7 @@ ASM_FUNCTION(ke_control__FP13mg_fish_classP7mf_ke_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ke_move__FP13mg_fish_classP7mf_ke_si) {
+asm void ke_move(mg_fish_class* field_0, mf_ke_s* field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/ke_move__FP13mg_fish_classP7mf_ke_si.s"
 }
@@ -998,7 +1140,7 @@ ASM_FUNCTION(ke_move__FP13mg_fish_classP7mf_ke_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMg_Fish_Execute__FP13mg_fish_class) {
+asm void daMg_Fish_Execute(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_Execute__FP13mg_fish_class.s"
 }
@@ -1006,21 +1148,16 @@ ASM_FUNCTION(daMg_Fish_Execute__FP13mg_fish_class) {
 
 
 /* 80534964-8053496C 0008+00 .text      daMg_Fish_IsDelete__FP13mg_fish_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daMg_Fish_IsDelete__FP13mg_fish_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_IsDelete__FP13mg_fish_class.s"
+bool daMg_Fish_IsDelete(mg_fish_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8053496C-805349DC 0070+00 .text      daMg_Fish_Delete__FP13mg_fish_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMg_Fish_Delete__FP13mg_fish_class) {
+asm void daMg_Fish_Delete(mg_fish_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_Delete__FP13mg_fish_class.s"
 }
@@ -1031,7 +1168,7 @@ ASM_FUNCTION(daMg_Fish_Delete__FP13mg_fish_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit2__FP10fopAc_ac_c) {
+asm void useHeapInit2(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/useHeapInit2__FP10fopAc_ac_c.s"
 }
@@ -1042,7 +1179,7 @@ ASM_FUNCTION(useHeapInit2__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1053,7 +1190,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapImg_fisht__FP10fopAc_ac_c) {
+asm void useHeapImg_fisht(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/useHeapImg_fisht__FP10fopAc_ac_c.s"
 }
@@ -1064,7 +1201,7 @@ ASM_FUNCTION(useHeapImg_fisht__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMg_Fish_Create__FP10fopAc_ac_c) {
+asm void daMg_Fish_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_Create__FP10fopAc_ac_c.s"
 }
@@ -1075,7 +1212,7 @@ ASM_FUNCTION(daMg_Fish_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__8cM3dGCylFv.s"
 }
@@ -1086,7 +1223,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__8cM3dGAabFv.s"
 }
@@ -1097,7 +1234,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__10dCcD_GSttsFv.s"
 }
@@ -1108,7 +1245,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1119,7 +1256,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1130,7 +1267,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7mf_ke_sFv) {
+asm mf_ke_s::~mf_ke_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__7mf_ke_sFv.s"
 }
@@ -1141,7 +1278,7 @@ ASM_FUNCTION(__dt__7mf_ke_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7mf_ke_sFv) {
+asm mf_ke_s::mf_ke_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__7mf_ke_sFv.s"
 }
@@ -1152,7 +1289,7 @@ ASM_FUNCTION(__ct__7mf_ke_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__5csXyzFv.s"
 }
@@ -1160,32 +1297,22 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80536058-8053605C 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053605C-80536060 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80536060-805360A8 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__10cCcD_GSttsFv.s"
 }
@@ -1196,7 +1323,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daMg_Fish_HIO_cFv) {
+asm daMg_Fish_HIO_c::~daMg_Fish_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__dt__15daMg_Fish_HIO_cFv.s"
 }
@@ -1207,7 +1334,7 @@ ASM_FUNCTION(__dt__15daMg_Fish_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_mg_fish_cpp) {
+extern "C" asm void __sinit_d_a_mg_fish_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__sinit_d_a_mg_fish_cpp.s"
 }
@@ -1218,7 +1345,7 @@ ASM_FUNCTION(__sinit_d_a_mg_fish_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053612C) {
+extern "C" asm void func_8053612C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/func_8053612C.s"
 }
@@ -1229,7 +1356,7 @@ ASM_FUNCTION(func_8053612C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80536134) {
+extern "C" asm void func_80536134() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/func_80536134.s"
 }
@@ -1240,7 +1367,7 @@ ASM_FUNCTION(func_80536134) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053613C) {
+extern "C" asm void func_8053613C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/func_8053613C.s"
 }
@@ -1251,7 +1378,7 @@ ASM_FUNCTION(func_8053613C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80536144) {
+extern "C" asm void func_80536144() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/func_80536144.s"
 }
@@ -1262,7 +1389,7 @@ ASM_FUNCTION(func_80536144) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8053614C) {
+extern "C" asm void func_8053614C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/func_8053614C.s"
 }

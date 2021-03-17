@@ -9,50 +9,39 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKReleaseMutex();
-extern "C" extern void TRKAcquireMutex();
-extern "C" extern void TRKInitializeMutex();
+extern "C" bool TRKReleaseMutex();
+extern "C" bool TRKAcquireMutex();
+extern "C" bool TRKInitializeMutex();
+
+extern "C" bool TRKReleaseMutex();
+extern "C" bool TRKAcquireMutex();
+extern "C" bool TRKInitializeMutex();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8036F498-8036F4A0 0008+00 .text      TRKReleaseMutex                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKReleaseMutex) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKReleaseMutex.s"
+/* 8036F498-8036F4A0 0008+00 rc=6 efc=6 .text      TRKReleaseMutex                                              */
+extern "C" bool TRKReleaseMutex() {
+	return false;
 }
-#pragma pop
 
 
-/* 8036F4A0-8036F4A8 0008+00 .text      TRKAcquireMutex                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKAcquireMutex) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKAcquireMutex.s"
+/* 8036F4A0-8036F4A8 0008+00 rc=6 efc=6 .text      TRKAcquireMutex                                              */
+extern "C" bool TRKAcquireMutex() {
+	return false;
 }
-#pragma pop
 
 
-/* 8036F4A8-8036F4B0 0008+00 .text      TRKInitializeMutex                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKInitializeMutex) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK/TRKInitializeMutex.s"
+/* 8036F4A8-8036F4B0 0008+00 rc=2 efc=2 .text      TRKInitializeMutex                                           */
+extern "C" bool TRKInitializeMutex() {
+	return false;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

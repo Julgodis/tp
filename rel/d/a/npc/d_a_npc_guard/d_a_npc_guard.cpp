@@ -6,62 +6,173 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct fopAc_ac_c {
+};
+
+struct daNpcGuard_c {
+	struct Mode_e {
+	};
+
+	void setAction(daNpcGuard_c::Mode_e);
+	void callInit();
+	void callExecute();
+	void initPath();
+	void executePath();
+	void initRun();
+	void executeRun();
+	void initFightWait();
+	void executeFightWait();
+	void initFightStep();
+	void executeFightStep();
+	void initFightMenace();
+	void executeFightMenace();
+	void initFear();
+	void executeFear();
+	void initEscape();
+	void executeEscape();
+	void setAngle();
+	void setSpeed(f32, f32, f32*, s32);
+	void pathMoveF();
+	void create();
+	void create_init();
+	void setMtx();
+	void lookat();
+	~daNpcGuard_c();
+	void execute();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+};
+
+struct daNpcCd2_c {
+	~daNpcCd2_c();
+};
+
+struct dNpcLib_lookat_c {
+	~dNpcLib_lookat_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void setAction__12daNpcGuard_cFQ212daNpcGuard_c6Mode_e();
-extern "C" extern void callInit__12daNpcGuard_cFv();
-extern "C" extern void callExecute__12daNpcGuard_cFv();
-extern "C" extern void initPath__12daNpcGuard_cFv();
-extern "C" extern void executePath__12daNpcGuard_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void initRun__12daNpcGuard_cFv();
-extern "C" extern void executeRun__12daNpcGuard_cFv();
-extern "C" extern void initFightWait__12daNpcGuard_cFv();
-extern "C" extern void executeFightWait__12daNpcGuard_cFv();
-extern "C" extern void initFightStep__12daNpcGuard_cFv();
-extern "C" extern void executeFightStep__12daNpcGuard_cFv();
-extern "C" extern void initFightMenace__12daNpcGuard_cFv();
-extern "C" extern void executeFightMenace__12daNpcGuard_cFv();
-extern "C" extern void initFear__12daNpcGuard_cFv();
-extern "C" extern void executeFear__12daNpcGuard_cFv();
-extern "C" extern void initEscape__12daNpcGuard_cFv();
-extern "C" extern void executeEscape__12daNpcGuard_cFv();
-extern "C" extern void setAngle__12daNpcGuard_cFv();
-extern "C" extern void setSpeed__12daNpcGuard_cFffPfi();
-extern "C" extern void pathMoveF__12daNpcGuard_cFv();
-extern "C" extern void daNpcGuard_Create__FPv();
-extern "C" extern void create__12daNpcGuard_cFv();
-extern "C" extern void create_init__12daNpcGuard_cFv();
-extern "C" extern void setMtx__12daNpcGuard_cFv();
-extern "C" extern void lookat__12daNpcGuard_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void daNpcGuard_Delete__FPv();
-extern "C" extern void __dt__12daNpcGuard_cFv();
-extern "C" extern void daNpcGuard_Execute__FPv();
-extern "C" extern void execute__12daNpcGuard_cFv();
-extern "C" extern void daNpcGuard_Draw__FPv();
-extern "C" extern void daNpcGuard_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_809F24B4();
-extern "C" extern void func_809F24D0();
-extern "C" extern void func_809F250C();
-extern "C" extern void __sinit_d_a_npc_guard_cpp();
-extern "C" extern void func_809F26E8();
-extern "C" extern void func_809F26F0();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__10daNpcCd2_cFv();
-extern "C" extern void __dt__16dNpcLib_lookat_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
+void createHeapCallBack(fopAc_ac_c*);
+void daNpcGuard_Create(void*);
+void daNpcGuard_Delete(void*);
+void daNpcGuard_Execute(void*);
+void daNpcGuard_Draw(void*);
+bool daNpcGuard_IsDelete(void*);
+extern "C" void func_809F24B4();
+extern "C" void func_809F24D0();
+extern "C" void func_809F250C();
+extern "C" void __sinit_d_a_npc_guard_cpp();
+extern "C" void func_809F26E8();
+extern "C" void func_809F26F0();
+
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void setAction__12daNpcGuard_cFQ212daNpcGuard_c6Mode_e();
+extern "C" void callInit__12daNpcGuard_cFv();
+extern "C" void callExecute__12daNpcGuard_cFv();
+extern "C" void initPath__12daNpcGuard_cFv();
+extern "C" void executePath__12daNpcGuard_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void initRun__12daNpcGuard_cFv();
+extern "C" void executeRun__12daNpcGuard_cFv();
+extern "C" void initFightWait__12daNpcGuard_cFv();
+extern "C" void executeFightWait__12daNpcGuard_cFv();
+extern "C" void initFightStep__12daNpcGuard_cFv();
+extern "C" void executeFightStep__12daNpcGuard_cFv();
+extern "C" void initFightMenace__12daNpcGuard_cFv();
+extern "C" void executeFightMenace__12daNpcGuard_cFv();
+extern "C" void initFear__12daNpcGuard_cFv();
+extern "C" void executeFear__12daNpcGuard_cFv();
+extern "C" void initEscape__12daNpcGuard_cFv();
+extern "C" void executeEscape__12daNpcGuard_cFv();
+extern "C" void setAngle__12daNpcGuard_cFv();
+extern "C" void setSpeed__12daNpcGuard_cFffPfi();
+extern "C" void pathMoveF__12daNpcGuard_cFv();
+extern "C" void daNpcGuard_Create__FPv();
+extern "C" void create__12daNpcGuard_cFv();
+extern "C" void create_init__12daNpcGuard_cFv();
+extern "C" void setMtx__12daNpcGuard_cFv();
+extern "C" void lookat__12daNpcGuard_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void daNpcGuard_Delete__FPv();
+extern "C" void __dt__12daNpcGuard_cFv();
+extern "C" void daNpcGuard_Execute__FPv();
+extern "C" void execute__12daNpcGuard_cFv();
+extern "C" void daNpcGuard_Draw__FPv();
+extern "C" bool daNpcGuard_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_809F24B4();
+extern "C" void func_809F24D0();
+extern "C" void func_809F250C();
+extern "C" void __sinit_d_a_npc_guard_cpp();
+extern "C" void func_809F26E8();
+extern "C" void func_809F26F0();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__10daNpcCd2_cFv();
+extern "C" void __dt__16dNpcLib_lookat_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
 SECTION_RODATA extern const u32 lit_3900;
 SECTION_RODATA extern const u32 lit_3901;
 SECTION_RODATA extern const u8 lit_3951[8];
@@ -139,7 +250,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -149,7 +262,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -160,7 +273,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__12daNpcGuard_cFQ212daNpcGuard_c6Mode_e) {
+asm void daNpcGuard_c::setAction(daNpcGuard_c::Mode_e field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/setAction__12daNpcGuard_cFQ212daNpcGuard_c6Mode_e.s"
 }
@@ -171,7 +284,7 @@ ASM_FUNCTION(setAction__12daNpcGuard_cFQ212daNpcGuard_c6Mode_e) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callInit__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::callInit() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/callInit__12daNpcGuard_cFv.s"
 }
@@ -182,7 +295,7 @@ ASM_FUNCTION(callInit__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callExecute__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::callExecute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/callExecute__12daNpcGuard_cFv.s"
 }
@@ -193,7 +306,7 @@ ASM_FUNCTION(callExecute__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPath__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initPath() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initPath__12daNpcGuard_cFv.s"
 }
@@ -204,7 +317,7 @@ ASM_FUNCTION(initPath__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePath__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executePath() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executePath__12daNpcGuard_cFv.s"
 }
@@ -215,7 +328,7 @@ ASM_FUNCTION(executePath__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__8cM3dGPlaFv.s"
 }
@@ -226,7 +339,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__4cXyzFv.s"
 }
@@ -237,7 +350,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initRun__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initRun() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initRun__12daNpcGuard_cFv.s"
 }
@@ -248,7 +361,7 @@ ASM_FUNCTION(initRun__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeRun__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeRun() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeRun__12daNpcGuard_cFv.s"
 }
@@ -259,7 +372,7 @@ ASM_FUNCTION(executeRun__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFightWait__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initFightWait() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initFightWait__12daNpcGuard_cFv.s"
 }
@@ -270,7 +383,7 @@ ASM_FUNCTION(initFightWait__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFightWait__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeFightWait() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeFightWait__12daNpcGuard_cFv.s"
 }
@@ -281,7 +394,7 @@ ASM_FUNCTION(executeFightWait__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFightStep__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initFightStep() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initFightStep__12daNpcGuard_cFv.s"
 }
@@ -292,7 +405,7 @@ ASM_FUNCTION(initFightStep__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFightStep__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeFightStep() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeFightStep__12daNpcGuard_cFv.s"
 }
@@ -303,7 +416,7 @@ ASM_FUNCTION(executeFightStep__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFightMenace__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initFightMenace() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initFightMenace__12daNpcGuard_cFv.s"
 }
@@ -314,7 +427,7 @@ ASM_FUNCTION(initFightMenace__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFightMenace__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeFightMenace() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeFightMenace__12daNpcGuard_cFv.s"
 }
@@ -325,7 +438,7 @@ ASM_FUNCTION(executeFightMenace__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFear__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initFear() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initFear__12daNpcGuard_cFv.s"
 }
@@ -336,7 +449,7 @@ ASM_FUNCTION(initFear__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFear__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeFear() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeFear__12daNpcGuard_cFv.s"
 }
@@ -347,7 +460,7 @@ ASM_FUNCTION(executeFear__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEscape__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::initEscape() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/initEscape__12daNpcGuard_cFv.s"
 }
@@ -358,7 +471,7 @@ ASM_FUNCTION(initEscape__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeEscape__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::executeEscape() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/executeEscape__12daNpcGuard_cFv.s"
 }
@@ -369,7 +482,7 @@ ASM_FUNCTION(executeEscape__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngle__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::setAngle() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/setAngle__12daNpcGuard_cFv.s"
 }
@@ -380,7 +493,7 @@ ASM_FUNCTION(setAngle__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSpeed__12daNpcGuard_cFffPfi) {
+asm void daNpcGuard_c::setSpeed(f32 field_0, f32 field_1, f32* field_2, s32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/setSpeed__12daNpcGuard_cFffPfi.s"
 }
@@ -391,7 +504,7 @@ ASM_FUNCTION(setSpeed__12daNpcGuard_cFffPfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pathMoveF__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::pathMoveF() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/pathMoveF__12daNpcGuard_cFv.s"
 }
@@ -402,7 +515,7 @@ ASM_FUNCTION(pathMoveF__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcGuard_Create__FPv) {
+asm void daNpcGuard_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Create__FPv.s"
 }
@@ -413,7 +526,7 @@ ASM_FUNCTION(daNpcGuard_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/create__12daNpcGuard_cFv.s"
 }
@@ -424,7 +537,7 @@ ASM_FUNCTION(create__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/create_init__12daNpcGuard_cFv.s"
 }
@@ -435,7 +548,7 @@ ASM_FUNCTION(create_init__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/setMtx__12daNpcGuard_cFv.s"
 }
@@ -446,7 +559,7 @@ ASM_FUNCTION(setMtx__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/lookat__12daNpcGuard_cFv.s"
 }
@@ -457,7 +570,7 @@ ASM_FUNCTION(lookat__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__5csXyzFv.s"
 }
@@ -468,7 +581,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__8dCcD_SphFv.s"
 }
@@ -479,7 +592,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__ct__8dCcD_SphFv.s"
 }
@@ -490,7 +603,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__8cM3dGSphFv.s"
 }
@@ -501,7 +614,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcGuard_Delete__FPv) {
+asm void daNpcGuard_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Delete__FPv.s"
 }
@@ -512,7 +625,7 @@ ASM_FUNCTION(daNpcGuard_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daNpcGuard_cFv) {
+asm daNpcGuard_c::~daNpcGuard_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__12daNpcGuard_cFv.s"
 }
@@ -523,7 +636,7 @@ ASM_FUNCTION(__dt__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcGuard_Execute__FPv) {
+asm void daNpcGuard_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Execute__FPv.s"
 }
@@ -534,7 +647,7 @@ ASM_FUNCTION(daNpcGuard_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daNpcGuard_cFv) {
+asm void daNpcGuard_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/execute__12daNpcGuard_cFv.s"
 }
@@ -545,7 +658,7 @@ ASM_FUNCTION(execute__12daNpcGuard_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcGuard_Draw__FPv) {
+asm void daNpcGuard_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_Draw__FPv.s"
 }
@@ -553,21 +666,16 @@ ASM_FUNCTION(daNpcGuard_Draw__FPv) {
 
 
 /* 809F2464-809F246C 0008+00 .text      daNpcGuard_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcGuard_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_IsDelete__FPv.s"
+bool daNpcGuard_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809F246C-809F24B4 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__10cCcD_GSttsFv.s"
 }
@@ -578,7 +686,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F24B4) {
+extern "C" asm void func_809F24B4() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F24B4.s"
 }
@@ -589,7 +697,7 @@ ASM_FUNCTION(func_809F24B4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F24D0) {
+extern "C" asm void func_809F24D0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F24D0.s"
 }
@@ -600,7 +708,7 @@ ASM_FUNCTION(func_809F24D0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F250C) {
+extern "C" asm void func_809F250C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F250C.s"
 }
@@ -611,7 +719,7 @@ ASM_FUNCTION(func_809F250C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_guard_cpp) {
+extern "C" asm void __sinit_d_a_npc_guard_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__sinit_d_a_npc_guard_cpp.s"
 }
@@ -622,7 +730,7 @@ ASM_FUNCTION(__sinit_d_a_npc_guard_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F26E8) {
+extern "C" asm void func_809F26E8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F26E8.s"
 }
@@ -633,7 +741,7 @@ ASM_FUNCTION(func_809F26E8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809F26F0) {
+extern "C" asm void func_809F26F0() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/func_809F26F0.s"
 }
@@ -644,7 +752,7 @@ ASM_FUNCTION(func_809F26F0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -655,7 +763,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daNpcCd2_cFv) {
+asm daNpcCd2_c::~daNpcCd2_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__10daNpcCd2_cFv.s"
 }
@@ -666,7 +774,7 @@ ASM_FUNCTION(__dt__10daNpcCd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dNpcLib_lookat_cFv) {
+asm dNpcLib_lookat_c::~dNpcLib_lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__16dNpcLib_lookat_cFv.s"
 }
@@ -677,7 +785,7 @@ ASM_FUNCTION(__dt__16dNpcLib_lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__8cM3dGCylFv.s"
 }
@@ -688,7 +796,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__8cM3dGAabFv.s"
 }
@@ -699,7 +807,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__10dCcD_GSttsFv.s"
 }
@@ -710,7 +818,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__12dBgS_AcchCirFv.s"
 }
@@ -721,7 +829,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/__dt__12dBgS_ObjAcchFv.s"
 }

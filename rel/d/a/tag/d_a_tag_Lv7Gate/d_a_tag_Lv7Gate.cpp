@@ -6,20 +6,48 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagLv7Gate_c;
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daTagLv7Gate_c {
+	void create();
+	void create_init();
+	void execute();
+	void calcFly();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daTagLv7Gate_Create__FP10fopAc_ac_c();
-extern "C" extern void create__14daTagLv7Gate_cFv();
-extern "C" extern void create_init__14daTagLv7Gate_cFv();
-extern "C" extern void daTagLv7Gate_Execute__FP14daTagLv7Gate_c();
-extern "C" extern void execute__14daTagLv7Gate_cFv();
-extern "C" extern void calcFly__14daTagLv7Gate_cFv();
-extern "C" extern void daTagLv7Gate_Draw__FP14daTagLv7Gate_c();
-extern "C" extern void daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c();
-extern "C" extern void daTagLv7Gate_Delete__FP14daTagLv7Gate_c();
+void createSolidHeap(fopAc_ac_c*);
+void daTagLv7Gate_Create(fopAc_ac_c*);
+void daTagLv7Gate_Execute(daTagLv7Gate_c*);
+void daTagLv7Gate_Draw(daTagLv7Gate_c*);
+bool daTagLv7Gate_IsDelete(daTagLv7Gate_c*);
+void daTagLv7Gate_Delete(daTagLv7Gate_c*);
+
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daTagLv7Gate_Create__FP10fopAc_ac_c();
+extern "C" void create__14daTagLv7Gate_cFv();
+extern "C" void create_init__14daTagLv7Gate_cFv();
+extern "C" void daTagLv7Gate_Execute__FP14daTagLv7Gate_c();
+extern "C" void execute__14daTagLv7Gate_cFv();
+extern "C" void calcFly__14daTagLv7Gate_cFv();
+extern "C" void daTagLv7Gate_Draw__FP14daTagLv7Gate_c();
+extern "C" bool daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c();
+extern "C" void daTagLv7Gate_Delete__FP14daTagLv7Gate_c();
 SECTION_RODATA extern const u32 lit_3698;
 SECTION_RODATA extern const u32 lit_3829;
 SECTION_RODATA extern const u8 lit_3935[4 + 4 /* padding */];
@@ -42,7 +70,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -52,7 +82,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -63,7 +93,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/__dt__12J3DFrameCtrlFv.s"
 }
@@ -74,7 +104,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv7Gate_Create__FP10fopAc_ac_c) {
+asm void daTagLv7Gate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_Create__FP10fopAc_ac_c.s"
 }
@@ -85,7 +115,7 @@ ASM_FUNCTION(daTagLv7Gate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagLv7Gate_cFv) {
+asm void daTagLv7Gate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/create__14daTagLv7Gate_cFv.s"
 }
@@ -96,7 +126,7 @@ ASM_FUNCTION(create__14daTagLv7Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daTagLv7Gate_cFv) {
+asm void daTagLv7Gate_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/create_init__14daTagLv7Gate_cFv.s"
 }
@@ -107,7 +137,7 @@ ASM_FUNCTION(create_init__14daTagLv7Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv7Gate_Execute__FP14daTagLv7Gate_c) {
+asm void daTagLv7Gate_Execute(daTagLv7Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_Execute__FP14daTagLv7Gate_c.s"
 }
@@ -118,7 +148,7 @@ ASM_FUNCTION(daTagLv7Gate_Execute__FP14daTagLv7Gate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagLv7Gate_cFv) {
+asm void daTagLv7Gate_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/execute__14daTagLv7Gate_cFv.s"
 }
@@ -129,7 +159,7 @@ ASM_FUNCTION(execute__14daTagLv7Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcFly__14daTagLv7Gate_cFv) {
+asm void daTagLv7Gate_c::calcFly() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/calcFly__14daTagLv7Gate_cFv.s"
 }
@@ -140,7 +170,7 @@ ASM_FUNCTION(calcFly__14daTagLv7Gate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv7Gate_Draw__FP14daTagLv7Gate_c) {
+asm void daTagLv7Gate_Draw(daTagLv7Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_Draw__FP14daTagLv7Gate_c.s"
 }
@@ -148,21 +178,16 @@ ASM_FUNCTION(daTagLv7Gate_Draw__FP14daTagLv7Gate_c) {
 
 
 /* 80D51A58-80D51A60 0008+00 .text      daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c.s"
+bool daTagLv7Gate_IsDelete(daTagLv7Gate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D51A60-80D51ACC 006C+00 .text      daTagLv7Gate_Delete__FP14daTagLv7Gate_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagLv7Gate_Delete__FP14daTagLv7Gate_c) {
+asm void daTagLv7Gate_Delete(daTagLv7Gate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_Delete__FP14daTagLv7Gate_c.s"
 }

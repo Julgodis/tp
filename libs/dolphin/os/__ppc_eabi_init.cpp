@@ -9,52 +9,57 @@
 // Forward References:
 // 
 
-extern "C" extern void __init_user();
-extern "C" extern void __init_cpp();
-extern "C" extern void _ExitProcess();
+extern "C" void __init_user();
+extern "C" static void __init_cpp();
+extern "C" void _ExitProcess();
+
+extern "C" void __init_user();
+extern "C" static void __init_cpp();
+extern "C" void _ExitProcess();
 
 // 
 // External References:
 // 
 
-extern "C" extern void PPCHalt();
+extern "C" void PPCHalt();
+
+extern "C" void PPCHalt();
 extern const void*const __init_cpp_exceptions_reference;
 
 // 
 // Declarations:
 // 
 
-/* 80342B78-80342B98 0020+00 .text      __init_user                                                  */
+/* 80342B78-80342B98 0020+00 rc=1 efc=1 .text      __init_user                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__init_user) {
+extern "C" asm void __init_user() {
 	nofralloc
 #include "asm/dolphin/os/__ppc_eabi_init/__init_user.s"
 }
 #pragma pop
 
 
-/* 80342B98-80342BEC 0054+00 .text      __init_cpp                                                   */
+/* 80342B98-80342BEC 0054+00 rc=1 efc=0 .text      __init_cpp                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__init_cpp) {
+extern "C" asm static void __init_cpp() {
 	nofralloc
 #include "asm/dolphin/os/__ppc_eabi_init/__init_cpp.s"
 }
 #pragma pop
 
 
-/* 80342BEC-80342C0C 0020+00 .text      _ExitProcess                                                 */
+/* 80342BEC-80342C0C 0020+00 rc=2 efc=2 .text      _ExitProcess                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_ExitProcess) {
+extern "C" asm void _ExitProcess() {
 	nofralloc
 #include "asm/dolphin/os/__ppc_eabi_init/_ExitProcess.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,55 +6,114 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjKshtr_c;
+
+struct daObjKshtr_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void offDzb();
+	void CreateHeap();
+	void initKey();
+	void phase_0();
+	void phase_1();
+	s32 phase_2();
+	void create1st();
+	void event_proc_call();
+	void event_proc_call2();
+	void checkArea();
+	void checkOpen();
+	void getDemoAction();
+	void demoProc2();
+	void adjustmentProc();
+	void keyUnlockInit();
+	void keyUnlock();
+	void openInit();
+	void openProc();
+	void openProc_type1();
+	void openProc_type2();
+	void openProc_typeL3Boss();
+	void demoProc();
+	void demoJail1();
+	void demoJail2();
+	void demoJail11();
+	bool demoJail21();
+	void anmInit();
+	void actionWaitEvent();
+	void actionEvent();
+	void actionDead();
+	void actionWaitEvent2();
+	void actionOpen();
+	void actionEvent2();
+	void actionDead2();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjKshtr_cFv();
-extern "C" extern void setBaseMtx__12daObjKshtr_cFv();
-extern "C" extern void Create__12daObjKshtr_cFv();
-extern "C" extern void offDzb__12daObjKshtr_cFv();
-extern "C" extern void CreateHeap__12daObjKshtr_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void initKey__12daObjKshtr_cFv();
-extern "C" extern void phase_0__12daObjKshtr_cFv();
-extern "C" extern void phase_1__12daObjKshtr_cFv();
-extern "C" extern void phase_2__12daObjKshtr_cFv();
-extern "C" extern void create1st__12daObjKshtr_cFv();
-extern "C" extern void event_proc_call__12daObjKshtr_cFv();
-extern "C" extern void event_proc_call2__12daObjKshtr_cFv();
-extern "C" extern void Execute__12daObjKshtr_cFPPA3_A4_f();
-extern "C" extern void checkArea__12daObjKshtr_cFv();
-extern "C" extern void checkOpen__12daObjKshtr_cFv();
-extern "C" extern void getDemoAction__12daObjKshtr_cFv();
-extern "C" extern void demoProc2__12daObjKshtr_cFv();
-extern "C" extern void adjustmentProc__12daObjKshtr_cFv();
-extern "C" extern void keyUnlockInit__12daObjKshtr_cFv();
-extern "C" extern void keyUnlock__12daObjKshtr_cFv();
-extern "C" extern void openInit__12daObjKshtr_cFv();
-extern "C" extern void openProc__12daObjKshtr_cFv();
-extern "C" extern void openProc_type1__12daObjKshtr_cFv();
-extern "C" extern void openProc_type2__12daObjKshtr_cFv();
-extern "C" extern void openProc_typeL3Boss__12daObjKshtr_cFv();
-extern "C" extern void demoProc__12daObjKshtr_cFv();
-extern "C" extern void demoJail1__12daObjKshtr_cFv();
-extern "C" extern void demoJail2__12daObjKshtr_cFv();
-extern "C" extern void demoJail11__12daObjKshtr_cFv();
-extern "C" extern void demoJail21__12daObjKshtr_cFv();
-extern "C" extern void anmInit__12daObjKshtr_cFv();
-extern "C" extern void actionWaitEvent__12daObjKshtr_cFv();
-extern "C" extern void actionEvent__12daObjKshtr_cFv();
-extern "C" extern void actionDead__12daObjKshtr_cFv();
-extern "C" extern void actionWaitEvent2__12daObjKshtr_cFv();
-extern "C" extern void actionOpen__12daObjKshtr_cFv();
-extern "C" extern void actionEvent2__12daObjKshtr_cFv();
-extern "C" extern void actionDead2__12daObjKshtr_cFv();
-extern "C" extern void Draw__12daObjKshtr_cFv();
-extern "C" extern void Delete__12daObjKshtr_cFv();
-extern "C" extern void daObjKshtr_create1st__FP12daObjKshtr_c();
-extern "C" extern void daObjKshtr_MoveBGDelete__FP12daObjKshtr_c();
-extern "C" extern void daObjKshtr_MoveBGExecute__FP12daObjKshtr_c();
-extern "C" extern void daObjKshtr_MoveBGDraw__FP12daObjKshtr_c();
-extern "C" extern void func_80C49C84();
+extern "C" void Execute__12daObjKshtr_cFPPA3_A4_f();
+void daObjKshtr_create1st(daObjKshtr_c*);
+void daObjKshtr_MoveBGDelete(daObjKshtr_c*);
+void daObjKshtr_MoveBGExecute(daObjKshtr_c*);
+void daObjKshtr_MoveBGDraw(daObjKshtr_c*);
+extern "C" void func_80C49C84();
+
+extern "C" void initBaseMtx__12daObjKshtr_cFv();
+extern "C" void setBaseMtx__12daObjKshtr_cFv();
+extern "C" void Create__12daObjKshtr_cFv();
+extern "C" void offDzb__12daObjKshtr_cFv();
+extern "C" void CreateHeap__12daObjKshtr_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void initKey__12daObjKshtr_cFv();
+extern "C" void phase_0__12daObjKshtr_cFv();
+extern "C" void phase_1__12daObjKshtr_cFv();
+extern "C" s32 phase_2__12daObjKshtr_cFv();
+extern "C" void create1st__12daObjKshtr_cFv();
+extern "C" void event_proc_call__12daObjKshtr_cFv();
+extern "C" void event_proc_call2__12daObjKshtr_cFv();
+extern "C" void Execute__12daObjKshtr_cFPPA3_A4_f();
+extern "C" void checkArea__12daObjKshtr_cFv();
+extern "C" void checkOpen__12daObjKshtr_cFv();
+extern "C" void getDemoAction__12daObjKshtr_cFv();
+extern "C" void demoProc2__12daObjKshtr_cFv();
+extern "C" void adjustmentProc__12daObjKshtr_cFv();
+extern "C" void keyUnlockInit__12daObjKshtr_cFv();
+extern "C" void keyUnlock__12daObjKshtr_cFv();
+extern "C" void openInit__12daObjKshtr_cFv();
+extern "C" void openProc__12daObjKshtr_cFv();
+extern "C" void openProc_type1__12daObjKshtr_cFv();
+extern "C" void openProc_type2__12daObjKshtr_cFv();
+extern "C" void openProc_typeL3Boss__12daObjKshtr_cFv();
+extern "C" void demoProc__12daObjKshtr_cFv();
+extern "C" void demoJail1__12daObjKshtr_cFv();
+extern "C" void demoJail2__12daObjKshtr_cFv();
+extern "C" void demoJail11__12daObjKshtr_cFv();
+extern "C" bool demoJail21__12daObjKshtr_cFv();
+extern "C" void anmInit__12daObjKshtr_cFv();
+extern "C" void actionWaitEvent__12daObjKshtr_cFv();
+extern "C" void actionEvent__12daObjKshtr_cFv();
+extern "C" void actionDead__12daObjKshtr_cFv();
+extern "C" void actionWaitEvent2__12daObjKshtr_cFv();
+extern "C" void actionOpen__12daObjKshtr_cFv();
+extern "C" void actionEvent2__12daObjKshtr_cFv();
+extern "C" void actionDead2__12daObjKshtr_cFv();
+extern "C" void Draw__12daObjKshtr_cFv();
+extern "C" void Delete__12daObjKshtr_cFv();
+extern "C" void daObjKshtr_create1st__FP12daObjKshtr_c();
+extern "C" void daObjKshtr_MoveBGDelete__FP12daObjKshtr_c();
+extern "C" void daObjKshtr_MoveBGExecute__FP12daObjKshtr_c();
+extern "C" void daObjKshtr_MoveBGDraw__FP12daObjKshtr_c();
+extern "C" void func_80C49C84();
 SECTION_RODATA extern const u8 l_bmd[20];
 SECTION_RODATA extern const u8 l_dzb[20];
 SECTION_RODATA extern const u8 l_heap_size[20];
@@ -111,7 +170,9 @@ SECTION_DATA extern void*const __vt__12daObjKshtr_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -121,7 +182,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/initBaseMtx__12daObjKshtr_cFv.s"
 }
@@ -132,7 +193,7 @@ ASM_FUNCTION(initBaseMtx__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/setBaseMtx__12daObjKshtr_cFv.s"
 }
@@ -143,7 +204,7 @@ ASM_FUNCTION(setBaseMtx__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/Create__12daObjKshtr_cFv.s"
 }
@@ -154,7 +215,7 @@ ASM_FUNCTION(Create__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offDzb__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::offDzb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/offDzb__12daObjKshtr_cFv.s"
 }
@@ -165,7 +226,7 @@ ASM_FUNCTION(offDzb__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/CreateHeap__12daObjKshtr_cFv.s"
 }
@@ -176,7 +237,7 @@ ASM_FUNCTION(CreateHeap__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/__dt__12J3DFrameCtrlFv.s"
 }
@@ -187,7 +248,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initKey__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::initKey() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/initKey__12daObjKshtr_cFv.s"
 }
@@ -198,7 +259,7 @@ ASM_FUNCTION(initKey__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_0__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::phase_0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/phase_0__12daObjKshtr_cFv.s"
 }
@@ -209,7 +270,7 @@ ASM_FUNCTION(phase_0__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_1__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::phase_1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/phase_1__12daObjKshtr_cFv.s"
 }
@@ -217,21 +278,16 @@ ASM_FUNCTION(phase_1__12daObjKshtr_cFv) {
 
 
 /* 80C48320-80C48328 0008+00 .text      phase_2__12daObjKshtr_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(phase_2__12daObjKshtr_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/phase_2__12daObjKshtr_cFv.s"
+s32 daObjKshtr_c::phase_2() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80C48328-80C483CC 00A4+00 .text      create1st__12daObjKshtr_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/create1st__12daObjKshtr_cFv.s"
 }
@@ -242,7 +298,7 @@ ASM_FUNCTION(create1st__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/event_proc_call__12daObjKshtr_cFv.s"
 }
@@ -253,7 +309,7 @@ ASM_FUNCTION(event_proc_call__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::event_proc_call2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/event_proc_call2__12daObjKshtr_cFv.s"
 }
@@ -264,7 +320,7 @@ ASM_FUNCTION(event_proc_call2__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjKshtr_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjKshtr_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/Execute__12daObjKshtr_cFPPA3_A4_f.s"
 }
@@ -275,7 +331,7 @@ ASM_FUNCTION(Execute__12daObjKshtr_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::checkArea() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/checkArea__12daObjKshtr_cFv.s"
 }
@@ -286,7 +342,7 @@ ASM_FUNCTION(checkArea__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpen__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::checkOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/checkOpen__12daObjKshtr_cFv.s"
 }
@@ -297,7 +353,7 @@ ASM_FUNCTION(checkOpen__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoAction__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::getDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/getDemoAction__12daObjKshtr_cFv.s"
 }
@@ -308,7 +364,7 @@ ASM_FUNCTION(getDemoAction__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::demoProc2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoProc2__12daObjKshtr_cFv.s"
 }
@@ -319,7 +375,7 @@ ASM_FUNCTION(demoProc2__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjustmentProc__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::adjustmentProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/adjustmentProc__12daObjKshtr_cFv.s"
 }
@@ -330,7 +386,7 @@ ASM_FUNCTION(adjustmentProc__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyUnlockInit__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::keyUnlockInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/keyUnlockInit__12daObjKshtr_cFv.s"
 }
@@ -341,7 +397,7 @@ ASM_FUNCTION(keyUnlockInit__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyUnlock__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::keyUnlock() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/keyUnlock__12daObjKshtr_cFv.s"
 }
@@ -352,7 +408,7 @@ ASM_FUNCTION(keyUnlock__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::openInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/openInit__12daObjKshtr_cFv.s"
 }
@@ -363,7 +419,7 @@ ASM_FUNCTION(openInit__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::openProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/openProc__12daObjKshtr_cFv.s"
 }
@@ -374,7 +430,7 @@ ASM_FUNCTION(openProc__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc_type1__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::openProc_type1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/openProc_type1__12daObjKshtr_cFv.s"
 }
@@ -385,7 +441,7 @@ ASM_FUNCTION(openProc_type1__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc_type2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::openProc_type2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/openProc_type2__12daObjKshtr_cFv.s"
 }
@@ -396,7 +452,7 @@ ASM_FUNCTION(openProc_type2__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc_typeL3Boss__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::openProc_typeL3Boss() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/openProc_typeL3Boss__12daObjKshtr_cFv.s"
 }
@@ -407,7 +463,7 @@ ASM_FUNCTION(openProc_typeL3Boss__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoProc__12daObjKshtr_cFv.s"
 }
@@ -418,7 +474,7 @@ ASM_FUNCTION(demoProc__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoJail1__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::demoJail1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoJail1__12daObjKshtr_cFv.s"
 }
@@ -429,7 +485,7 @@ ASM_FUNCTION(demoJail1__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoJail2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::demoJail2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoJail2__12daObjKshtr_cFv.s"
 }
@@ -440,7 +496,7 @@ ASM_FUNCTION(demoJail2__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoJail11__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::demoJail11() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoJail11__12daObjKshtr_cFv.s"
 }
@@ -448,21 +504,16 @@ ASM_FUNCTION(demoJail11__12daObjKshtr_cFv) {
 
 
 /* 80C496C8-80C496D0 0008+00 .text      demoJail21__12daObjKshtr_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoJail21__12daObjKshtr_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoJail21__12daObjKshtr_cFv.s"
+bool daObjKshtr_c::demoJail21() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C496D0-80C497A0 00D0+00 .text      anmInit__12daObjKshtr_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anmInit__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::anmInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/anmInit__12daObjKshtr_cFv.s"
 }
@@ -473,7 +524,7 @@ ASM_FUNCTION(anmInit__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitEvent__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::actionWaitEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionWaitEvent__12daObjKshtr_cFv.s"
 }
@@ -484,7 +535,7 @@ ASM_FUNCTION(actionWaitEvent__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionEvent__12daObjKshtr_cFv.s"
 }
@@ -492,21 +543,16 @@ ASM_FUNCTION(actionEvent__12daObjKshtr_cFv) {
 
 
 /* 80C49914-80C49918 0004+00 .text      actionDead__12daObjKshtr_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__12daObjKshtr_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionDead__12daObjKshtr_cFv.s"
+void daObjKshtr_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C49918-80C499CC 00B4+00 .text      actionWaitEvent2__12daObjKshtr_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitEvent2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::actionWaitEvent2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionWaitEvent2__12daObjKshtr_cFv.s"
 }
@@ -517,7 +563,7 @@ ASM_FUNCTION(actionWaitEvent2__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpen__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::actionOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionOpen__12daObjKshtr_cFv.s"
 }
@@ -528,7 +574,7 @@ ASM_FUNCTION(actionOpen__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent2__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::actionEvent2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionEvent2__12daObjKshtr_cFv.s"
 }
@@ -536,21 +582,16 @@ ASM_FUNCTION(actionEvent2__12daObjKshtr_cFv) {
 
 
 /* 80C49A70-80C49A74 0004+00 .text      actionDead2__12daObjKshtr_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead2__12daObjKshtr_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionDead2__12daObjKshtr_cFv.s"
+void daObjKshtr_c::actionDead2() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C49A74-80C49B4C 00D8+00 .text      Draw__12daObjKshtr_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/Draw__12daObjKshtr_cFv.s"
 }
@@ -561,7 +602,7 @@ ASM_FUNCTION(Draw__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjKshtr_cFv) {
+asm void daObjKshtr_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/Delete__12daObjKshtr_cFv.s"
 }
@@ -572,7 +613,7 @@ ASM_FUNCTION(Delete__12daObjKshtr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKshtr_create1st__FP12daObjKshtr_c) {
+asm void daObjKshtr_create1st(daObjKshtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/daObjKshtr_create1st__FP12daObjKshtr_c.s"
 }
@@ -583,7 +624,7 @@ ASM_FUNCTION(daObjKshtr_create1st__FP12daObjKshtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKshtr_MoveBGDelete__FP12daObjKshtr_c) {
+asm void daObjKshtr_MoveBGDelete(daObjKshtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/daObjKshtr_MoveBGDelete__FP12daObjKshtr_c.s"
 }
@@ -594,7 +635,7 @@ ASM_FUNCTION(daObjKshtr_MoveBGDelete__FP12daObjKshtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKshtr_MoveBGExecute__FP12daObjKshtr_c) {
+asm void daObjKshtr_MoveBGExecute(daObjKshtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/daObjKshtr_MoveBGExecute__FP12daObjKshtr_c.s"
 }
@@ -605,7 +646,7 @@ ASM_FUNCTION(daObjKshtr_MoveBGExecute__FP12daObjKshtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKshtr_MoveBGDraw__FP12daObjKshtr_c) {
+asm void daObjKshtr_MoveBGDraw(daObjKshtr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/daObjKshtr_MoveBGDraw__FP12daObjKshtr_c.s"
 }
@@ -616,7 +657,7 @@ ASM_FUNCTION(daObjKshtr_MoveBGDraw__FP12daObjKshtr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C49C84) {
+extern "C" asm void func_80C49C84() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/func_80C49C84.s"
 }

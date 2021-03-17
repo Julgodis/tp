@@ -6,84 +6,533 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cCcD_DivideInfo (cCcD_DivideInfo) False/False
+/* top-level dependencies (begin cCcD_DivideInfo) */
+/* top-level dependencies (end cCcD_DivideInfo) */
+struct cCcD_DivideInfo {
+	/* 80263358 */ void Set(u32, u32, u32);
+	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
+};
+
+// build cCcD_DivideArea (cCcD_DivideArea) False/False
+// build cM3dGAab (cM3dGAab) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
+/* top-level dependencies (begin cM3dGAab) */
+// outer dependency: cXyz
+/* top-level dependencies (end cM3dGAab) */
+struct cM3dGAab {
+	// cXyz
+	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
+	/* 8026ECF8 */ void ClearForMinMax();
+	/* 8026ED1C */ void SetMinMax(cXyz const&);
+	/* 8026EE68 */ void PlusR(f32);
+};
+
+// build cCcD_DivideInfo (cCcD_DivideInfo) True/True
+/* top-level dependencies (begin cCcD_DivideArea) */
+// outer dependency: cM3dGAab
+// outer dependency: cCcD_DivideInfo
+/* top-level dependencies (end cCcD_DivideArea) */
+struct cCcD_DivideArea {
+	// cM3dGAab
+	// cCcD_DivideInfo
+	/* 802633A8 */ void SetArea(cM3dGAab const&);
+	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
+	/* 802636A0 */ void CalcDivideInfoOverArea(cCcD_DivideInfo*, cM3dGAab const&);
+};
+
+// build cM3dGAab (cM3dGAab) True/True
+// build cCcD_Stts (cCcD_Stts) False/False
+/* top-level dependencies (begin cCcD_Stts) */
+/* top-level dependencies (end cCcD_Stts) */
+struct cCcD_Stts {
+	/* 801410A4 */ ~cCcD_Stts();
+	/* 80263894 */ bool GetGStts() const;
+	/* 8026389C */ bool GetGStts();
+	/* 802638A4 */ void Init(s32, s32, void*, s32);
+	/* 80263904 */ void Ct();
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 8026395C */ void ClrCcMove();
+	/* 80263970 */ void PlusDmg(s32);
+	/* 80263984 */ void GetWeightF() const;
+	/* 802649E8 */ void ClrAt();
+	/* 802649EC */ void ClrTg();
+};
+
+// build cCcD_ObjCommonBase (cCcD_ObjCommonBase) False/False
+/* top-level dependencies (begin cCcD_ObjCommonBase) */
+/* top-level dependencies (end cCcD_ObjCommonBase) */
+struct cCcD_ObjCommonBase {
+	/* 802639B0 */ void ct();
+};
+
+// build cCcD_ObjHitInf (cCcD_ObjHitInf) False/False
+// build cCcD_SrcObjHitInf (cCcD_SrcObjHitInf) False/False
+/* top-level dependencies (begin cCcD_SrcObjHitInf) */
+/* top-level dependencies (end cCcD_SrcObjHitInf) */
+struct cCcD_SrcObjHitInf {
+};
+
+/* top-level dependencies (begin cCcD_ObjHitInf) */
+// outer dependency: cCcD_SrcObjHitInf
+/* top-level dependencies (end cCcD_ObjHitInf) */
+struct cCcD_ObjHitInf {
+	// cCcD_SrcObjHitInf
+	/* 802639C4 */ void Set(cCcD_SrcObjHitInf const&);
+};
+
+// build cCcD_SrcObjHitInf (cCcD_SrcObjHitInf) True/True
+// build cCcD_Obj (cCcD_Obj) False/False
+// build cCcD_SrcObj (cCcD_SrcObj) False/False
+/* top-level dependencies (begin cCcD_SrcObj) */
+/* top-level dependencies (end cCcD_SrcObj) */
+struct cCcD_SrcObj {
+};
+
+/* top-level dependencies (begin cCcD_Obj) */
+// outer dependency: cCcD_SrcObj
+/* top-level dependencies (end cCcD_Obj) */
+struct cCcD_Obj {
+	// cCcD_SrcObj
+	/* 80263A10 */ void ct();
+	/* 80263A1C */ void Set(cCcD_SrcObj const&);
+	/* 80263A48 */ void GetAc();
+};
+
+// build cCcD_SrcObj (cCcD_SrcObj) True/True
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) False/False
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/False
+struct cCcD_ShapeAttr;
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cCcD_ShapeAttr) */
+// outer dependency: cCcD_ShapeAttr::Shape
+// outer dependency: cXyz
+/* top-level dependencies (end cCcD_ShapeAttr) */
+struct cCcD_ShapeAttr {
+	// cCcD_ShapeAttr::Shape
+	// cXyz
+	// build Shape (cCcD_ShapeAttr::Shape) False/False
+	/* dependencies (begin cCcD_ShapeAttr::Shape) */
+	/* dependencies (end cCcD_ShapeAttr::Shape) */
+	struct Shape {
+	};
+
+	/* 80084E2C */ void GetCoCP();
+	/* 80084E38 */ void GetCoCP() const;
+	/* 8008556C */ ~cCcD_ShapeAttr();
+	/* 80263A64 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+	/* 802649D8 */ bool CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
+};
+
+// build cCcD_TriAttr (cCcD_TriAttr) False/False
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_PntAttr (cCcD_PntAttr) False/False
+/* top-level dependencies (begin cCcD_PntAttr) */
+/* top-level dependencies (end cCcD_PntAttr) */
+struct cCcD_PntAttr {
+};
+
+// build cCcD_SphAttr (cCcD_SphAttr) False/False
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_PntAttr (cCcD_PntAttr) True/True
+// build cCcD_AabAttr (cCcD_AabAttr) False/False
+/* top-level dependencies (begin cCcD_AabAttr) */
+/* top-level dependencies (end cCcD_AabAttr) */
+struct cCcD_AabAttr {
+};
+
+// build cCcD_CpsAttr (cCcD_CpsAttr) False/False
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_PntAttr (cCcD_PntAttr) True/True
+// build cCcD_SphAttr (cCcD_SphAttr) True/False
+struct cCcD_SphAttr;
+// build cCcD_AabAttr (cCcD_AabAttr) True/True
+// build cCcD_TriAttr (cCcD_TriAttr) True/False
+struct cCcD_TriAttr;
+// build cCcD_CylAttr (cCcD_CylAttr) False/False
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_PntAttr (cCcD_PntAttr) True/True
+// build cCcD_SphAttr (cCcD_SphAttr) True/True
+// build cCcD_AabAttr (cCcD_AabAttr) True/True
+// build cCcD_CpsAttr (cCcD_CpsAttr) True/False
+struct cCcD_CpsAttr;
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_TriAttr (cCcD_TriAttr) True/True
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cCcD_CylAttr) */
+// outer dependency: cCcD_ShapeAttr
+// outer dependency: cCcD_PntAttr
+// outer dependency: cCcD_SphAttr
+// outer dependency: cCcD_AabAttr
+// outer dependency: cCcD_CpsAttr
+// outer dependency: cCcD_ShapeAttr::Shape
+// outer dependency: cCcD_TriAttr
+// outer dependency: cXyz
+/* top-level dependencies (end cCcD_CylAttr) */
+struct cCcD_CylAttr {
+	// cCcD_ShapeAttr
+	// cCcD_PntAttr
+	// cCcD_SphAttr
+	// cCcD_AabAttr
+	// cCcD_CpsAttr
+	// cCcD_ShapeAttr::Shape
+	// cCcD_TriAttr
+	// cXyz
+	/* 80037A4C */ void GetCoCP();
+	/* 80084CC0 */ void GetCoCP() const;
+	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084CD0 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084CD8 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 80084D10 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084D18 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084D20 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084D28 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 800854E0 */ ~cCcD_CylAttr();
+	/* 8026417C */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 802641C8 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 8026420C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80264250 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80264288 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 802642CC */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80264310 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80264368 */ void CalcAabBox();
+	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+};
+
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cCcD_CpsAttr) */
+// outer dependency: cCcD_ShapeAttr
+// outer dependency: cCcD_PntAttr
+// outer dependency: cCcD_SphAttr
+// outer dependency: cCcD_AabAttr
+// outer dependency: cCcD_TriAttr
+// outer dependency: cCcD_CylAttr
+// outer dependency: cXyz
+/* top-level dependencies (end cCcD_CpsAttr) */
+struct cCcD_CpsAttr {
+	// cCcD_ShapeAttr
+	// cCcD_PntAttr
+	// cCcD_SphAttr
+	// cCcD_AabAttr
+	// cCcD_TriAttr
+	// cCcD_CylAttr
+	// cXyz
+	/* 80084FD4 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084FDC */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 8008501C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80085024 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 8008502C */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80085034 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80085450 */ ~cCcD_CpsAttr();
+	/* 80263D38 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80263D7C */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80263E04 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80263ED4 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80263F24 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80263F74 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80263FC4 */ void CalcAabBox();
+	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
+};
+
+// build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build cCcD_TriAttr (cCcD_TriAttr) True/True
+// build cCcD_CylAttr (cCcD_CylAttr) True/True
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cCcD_SphAttr) */
+// outer dependency: cCcD_ShapeAttr
+// outer dependency: cCcD_PntAttr
+// outer dependency: cCcD_AabAttr
+// outer dependency: cCcD_CpsAttr
+// outer dependency: cCcD_ShapeAttr::Shape
+// outer dependency: cCcD_TriAttr
+// outer dependency: cCcD_CylAttr
+// outer dependency: cXyz
+/* top-level dependencies (end cCcD_SphAttr) */
+struct cCcD_SphAttr {
+	// cCcD_ShapeAttr
+	// cCcD_PntAttr
+	// cCcD_AabAttr
+	// cCcD_CpsAttr
+	// cCcD_ShapeAttr::Shape
+	// cCcD_TriAttr
+	// cCcD_CylAttr
+	// cXyz
+	/* 80037A54 */ void GetCoCP();
+	/* 80084B44 */ void GetCoCP() const;
+	/* 80084B4C */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084B54 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084B5C */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 80084B94 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084B9C */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084BA4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084BAC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 8008721C */ ~cCcD_SphAttr();
+	/* 802644EC */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80264538 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 8026457C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 802645C0 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 802645F8 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80264644 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80264688 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 802646E0 */ void CalcAabBox();
+	/* 8026476C */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 80264808 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+};
+
+// build cCcD_AabAttr (cCcD_AabAttr) True/True
+// build cCcD_CpsAttr (cCcD_CpsAttr) True/True
+// build cCcD_CylAttr (cCcD_CylAttr) True/True
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cCcD_TriAttr) */
+// outer dependency: cCcD_ShapeAttr
+// outer dependency: cCcD_PntAttr
+// outer dependency: cCcD_SphAttr
+// outer dependency: cCcD_AabAttr
+// outer dependency: cCcD_CpsAttr
+// outer dependency: cCcD_CylAttr
+// outer dependency: cXyz
+/* top-level dependencies (end cCcD_TriAttr) */
+struct cCcD_TriAttr {
+	// cCcD_ShapeAttr
+	// cCcD_PntAttr
+	// cCcD_SphAttr
+	// cCcD_AabAttr
+	// cCcD_CpsAttr
+	// cCcD_CylAttr
+	// cXyz
+	/* 80084E44 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084E4C */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084E54 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 80084E8C */ bool CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80084E94 */ bool CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80084E9C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084EA4 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084EAC */ bool CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80084EB4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084EBC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80263A88 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80263B58 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80263B90 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80263BCC */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80263C04 */ void CalcAabBox();
+	/* 80263C9C */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 80264938 */ ~cCcD_TriAttr();
+};
+
+// build cCcD_CpsAttr (cCcD_CpsAttr) True/True
+// build cXyz (cXyz) True/True
+// build cCcD_CylAttr (cCcD_CylAttr) True/True
+// build cCcD_SphAttr (cCcD_SphAttr) True/True
+// build cCcD_ObjAt (cCcD_ObjAt) False/False
+// build cCcD_Obj (cCcD_Obj) True/True
+// build cCcD_SrcObjAt (cCcD_SrcObjAt) False/False
+/* top-level dependencies (begin cCcD_SrcObjAt) */
+/* top-level dependencies (end cCcD_SrcObjAt) */
+struct cCcD_SrcObjAt {
+};
+
+/* top-level dependencies (begin cCcD_ObjAt) */
+// outer dependency: cCcD_Obj
+// outer dependency: cCcD_SrcObjAt
+/* top-level dependencies (end cCcD_ObjAt) */
+struct cCcD_ObjAt {
+	// cCcD_Obj
+	// cCcD_SrcObjAt
+	/* 8026483C */ void SetHit(cCcD_Obj*);
+	/* 8026484C */ void Set(cCcD_SrcObjAt const&);
+	/* 80264868 */ void ClrHit();
+};
+
+// build cCcD_SrcObjAt (cCcD_SrcObjAt) True/True
+// build cCcD_ObjTg (cCcD_ObjTg) False/False
+// build cCcD_Obj (cCcD_Obj) True/True
+// build cCcD_SrcObjTg (cCcD_SrcObjTg) False/False
+/* top-level dependencies (begin cCcD_SrcObjTg) */
+/* top-level dependencies (end cCcD_SrcObjTg) */
+struct cCcD_SrcObjTg {
+};
+
+/* top-level dependencies (begin cCcD_ObjTg) */
+// outer dependency: cCcD_Obj
+// outer dependency: cCcD_SrcObjTg
+/* top-level dependencies (end cCcD_ObjTg) */
+struct cCcD_ObjTg {
+	// cCcD_Obj
+	// cCcD_SrcObjTg
+	/* 80264880 */ void Set(cCcD_SrcObjTg const&);
+	/* 80264894 */ void SetGrp(u32);
+	/* 802648B0 */ void ClrHit();
+	/* 802648C8 */ void SetHit(cCcD_Obj*);
+};
+
+// build cCcD_SrcObjTg (cCcD_SrcObjTg) True/True
+// build cCcD_ObjCo (cCcD_ObjCo) False/False
+// build cCcD_Obj (cCcD_Obj) True/True
+/* top-level dependencies (begin cCcD_ObjCo) */
+// outer dependency: cCcD_Obj
+/* top-level dependencies (end cCcD_ObjCo) */
+struct cCcD_ObjCo {
+	// cCcD_Obj
+	/* 802648D8 */ void SetHit(cCcD_Obj*);
+	/* 802648E8 */ void ClrHit();
+	/* 80264900 */ void SetIGrp(u32);
+	/* 8026491C */ void SetVsGrp(u32);
+};
+
+// build cCcD_AabAttr (cCcD_AabAttr) True/True
+// build cCcD_PntAttr (cCcD_PntAttr) True/True
+// build cM3dGCyl (cM3dGCyl) False/False
+// build cM3dGSph (cM3dGSph) False/False
+// build cXyz (cXyz) True/True
+// build cM3dGCyl (cM3dGCyl) True/False
+struct cM3dGCyl;
+/* top-level dependencies (begin cM3dGSph) */
+// outer dependency: cXyz
+// outer dependency: cM3dGCyl
+/* top-level dependencies (end cM3dGSph) */
+struct cM3dGSph {
+	// cXyz
+	// cM3dGCyl
+	/* 8026F710 */ void cross(cM3dGSph const*, cXyz*) const;
+	/* 8026F73C */ void cross(cM3dGCyl const*, cXyz*) const;
+};
+
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cM3dGCyl) */
+// outer dependency: cM3dGSph
+// outer dependency: cXyz
+/* top-level dependencies (end cM3dGCyl) */
+struct cM3dGCyl {
+	// cM3dGSph
+	// cXyz
+	/* 8026F208 */ void cross(cM3dGSph const*, cXyz*) const;
+	/* 8026F22C */ void cross(cM3dGCyl const*, cXyz*) const;
+};
+
+// build cM3dGSph (cM3dGSph) True/True
+// build cM3dGTri (cM3dGTri) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// build cM3dGCyl (cM3dGCyl) True/True
+/* top-level dependencies (begin cM3dGTri) */
+// outer dependency: Vec
+// outer dependency: cM3dGCyl
+/* top-level dependencies (end cM3dGTri) */
+struct cM3dGTri {
+	// Vec
+	// cM3dGCyl
+	/* 8026F7B0 */ void cross(cM3dGCyl const*, Vec*) const;
+};
+
+// build Vec (Vec) True/True
+// build cM3dGCps (cM3dGCps) False/False
+/* top-level dependencies (begin cM3dGCps) */
+/* top-level dependencies (end cM3dGCps) */
+struct cM3dGCps {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Set__15cCcD_DivideInfoFUlUlUl();
-extern "C" extern void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
-extern "C" extern void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
-extern "C" extern void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
-extern "C" extern void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab();
-extern "C" extern void GetGStts__9cCcD_SttsCFv();
-extern "C" extern void GetGStts__9cCcD_SttsFv();
-extern "C" extern void Init__9cCcD_SttsFiiPvUi();
-extern "C" extern void Ct__9cCcD_SttsFv();
-extern "C" extern void PlusCcMove__9cCcD_SttsFfff();
-extern "C" extern void ClrCcMove__9cCcD_SttsFv();
-extern "C" extern void PlusDmg__9cCcD_SttsFi();
-extern "C" extern void GetWeightF__9cCcD_SttsCFv();
-extern "C" extern void ct__18cCcD_ObjCommonBaseFv();
-extern "C" extern void Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf();
-extern "C" extern void ct__8cCcD_ObjFv();
-extern "C" extern void Set__8cCcD_ObjFRC11cCcD_SrcObj();
-extern "C" extern void GetAc__8cCcD_ObjFv();
-extern "C" extern void getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz();
-extern "C" extern void CalcAabBox__12cCcD_TriAttrFv();
-extern "C" extern void GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf();
-extern "C" extern void CalcAabBox__12cCcD_CpsAttrFv();
-extern "C" extern void GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf();
-extern "C" extern void CalcAabBox__12cCcD_CylAttrFv();
-extern "C" extern void GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz();
-extern "C" extern void getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf();
-extern "C" extern void CalcAabBox__12cCcD_SphAttrFv();
-extern "C" extern void GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz();
-extern "C" extern void getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape();
-extern "C" extern void SetHit__10cCcD_ObjAtFP8cCcD_Obj();
-extern "C" extern void Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt();
-extern "C" extern void ClrHit__10cCcD_ObjAtFv();
-extern "C" extern void Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg();
-extern "C" extern void SetGrp__10cCcD_ObjTgFUl();
-extern "C" extern void ClrHit__10cCcD_ObjTgFv();
-extern "C" extern void SetHit__10cCcD_ObjTgFP8cCcD_Obj();
-extern "C" extern void SetHit__10cCcD_ObjCoFP8cCcD_Obj();
-extern "C" extern void ClrHit__10cCcD_ObjCoFv();
-extern "C" extern void SetIGrp__10cCcD_ObjCoFUl();
-extern "C" extern void SetVsGrp__10cCcD_ObjCoFUl();
-extern "C" extern void __dt__12cCcD_TriAttrFv();
-extern "C" extern void CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern "C" extern void CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf();
-extern "C" extern void ClrAt__9cCcD_SttsFv();
-extern "C" extern void ClrTg__9cCcD_SttsFv();
-extern "C" extern void __sinit_c_cc_d_cpp();
-extern "C" extern void func_80264A4C();
-extern "C" extern void func_80264A54();
-extern "C" extern void func_80264A5C();
-extern "C" extern void func_80264A64();
+extern "C" void __sinit_c_cc_d_cpp();
+extern "C" static void func_80264A4C();
+extern "C" static void func_80264A54();
+extern "C" static void func_80264A5C();
+extern "C" static void func_80264A64();
+
+extern "C" void Set__15cCcD_DivideInfoFUlUlUl();
+extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
+extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
+extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
+extern "C" void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab();
+extern "C" bool GetGStts__9cCcD_SttsCFv();
+extern "C" bool GetGStts__9cCcD_SttsFv();
+extern "C" void Init__9cCcD_SttsFiiPvUi();
+extern "C" void Ct__9cCcD_SttsFv();
+extern "C" void PlusCcMove__9cCcD_SttsFfff();
+extern "C" void ClrCcMove__9cCcD_SttsFv();
+extern "C" void PlusDmg__9cCcD_SttsFi();
+extern "C" void GetWeightF__9cCcD_SttsCFv();
+extern "C" void ct__18cCcD_ObjCommonBaseFv();
+extern "C" void Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf();
+extern "C" void ct__8cCcD_ObjFv();
+extern "C" void Set__8cCcD_ObjFRC11cCcD_SrcObj();
+extern "C" void GetAc__8cCcD_ObjFv();
+extern "C" void getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape();
+extern "C" void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz();
+extern "C" void CalcAabBox__12cCcD_TriAttrFv();
+extern "C" void GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz();
+extern "C" void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf();
+extern "C" void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf();
+extern "C" void CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf();
+extern "C" void CalcAabBox__12cCcD_CpsAttrFv();
+extern "C" void GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz();
+extern "C" void CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf();
+extern "C" void CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf();
+extern "C" void CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf();
+extern "C" void CalcAabBox__12cCcD_CylAttrFv();
+extern "C" void GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz();
+extern "C" void getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape();
+extern "C" void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz();
+extern "C" void CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf();
+extern "C" void CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf();
+extern "C" void CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf();
+extern "C" void CalcAabBox__12cCcD_SphAttrFv();
+extern "C" void GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz();
+extern "C" void getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape();
+extern "C" void SetHit__10cCcD_ObjAtFP8cCcD_Obj();
+extern "C" void Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt();
+extern "C" void ClrHit__10cCcD_ObjAtFv();
+extern "C" void Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg();
+extern "C" void SetGrp__10cCcD_ObjTgFUl();
+extern "C" void ClrHit__10cCcD_ObjTgFv();
+extern "C" void SetHit__10cCcD_ObjTgFP8cCcD_Obj();
+extern "C" void SetHit__10cCcD_ObjCoFP8cCcD_Obj();
+extern "C" void ClrHit__10cCcD_ObjCoFv();
+extern "C" void SetIGrp__10cCcD_ObjCoFUl();
+extern "C" void SetVsGrp__10cCcD_ObjCoFUl();
+extern "C" void __dt__12cCcD_TriAttrFv();
+extern "C" bool CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz();
+extern "C" bool CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf();
+extern "C" void ClrAt__9cCcD_SttsFv();
+extern "C" void ClrTg__9cCcD_SttsFv();
+extern "C" void __sinit_c_cc_d_cpp();
+extern "C" static void func_80264A4C();
+extern "C" static void func_80264A54();
+extern "C" static void func_80264A5C();
+extern "C" static void func_80264A64();
 SECTION_RODATA extern const u8 l_base[128];
 SECTION_DATA extern void*const __vt__12cCcD_SphAttr[25];
 SECTION_DATA extern void*const __vt__12cCcD_CylAttr[25];
@@ -103,80 +552,103 @@ SECTION_SDATA2 extern f32 c_cc_d__lit_2632;
 // External References:
 // 
 
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void GetCoCP__12cCcD_CylAttrFv();
-extern "C" extern void GetCoCP__12cCcD_SphAttrFv();
-extern "C" extern void GetCoCP__12cCcD_SphAttrCFv();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf();
-extern "C" extern void CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf();
-extern "C" extern void GetCoCP__12cCcD_CylAttrCFv();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf();
-extern "C" extern void CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf();
-extern "C" extern void GetCoCP__14cCcD_ShapeAttrFv();
-extern "C" extern void GetCoCP__14cCcD_ShapeAttrCFv();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf();
-extern "C" extern void CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz();
-extern "C" extern void CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf();
-extern "C" extern void CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf();
-extern "C" extern void __dt__12cCcD_CpsAttrFv();
-extern "C" extern void __dt__12cCcD_CylAttrFv();
-extern "C" extern void __dt__14cCcD_ShapeAttrFv();
-extern "C" extern void __dt__12cCcD_SphAttrFv();
-extern "C" extern void __dt__9cCcD_SttsFv();
-extern "C" extern void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphPf();
-extern "C" extern void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPf();
-extern "C" extern void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec();
-extern "C" extern void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylPf();
-extern "C" extern void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
-extern "C" extern void cM3d_Cross_CpsCps__FRC8cM3dGCpsRC8cM3dGCpsP3Vec();
-extern "C" extern void cM3d_Cross_CpsCyl__FRC8cM3dGCpsRC8cM3dGCylP3Vec();
-extern "C" extern void cM3d_Cross_CpsSph__FRC8cM3dGCpsRC8cM3dGSphP3Vec();
-extern "C" extern void cM3d_Cross_TriTri__FRC8cM3dGTriRC8cM3dGTriP3Vec();
-extern "C" extern void cM3d_Cross_CpsTri__FRC8cM3dGCps8cM3dGTriP3Vec();
-extern "C" extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
-extern "C" extern void ClearForMinMax__8cM3dGAabFv();
-extern "C" extern void SetMinMax__8cM3dGAabFRC4cXyz();
-extern "C" extern void PlusR__8cM3dGAabFf();
-extern "C" extern void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
-extern "C" extern void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
-extern "C" extern void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
-extern "C" extern void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
-extern "C" extern void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSVECAdd();
-extern "C" extern void PSVECSubtract();
-extern "C" extern void PSVECScale();
-extern "C" extern void PSVECNormalize();
-extern "C" extern void PSVECMag();
-extern "C" extern void PSVECDotProduct();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, f32*);
+void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, f32*);
+void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*);
+void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, f32*);
+void cM3d_Cross_CylTri(cM3dGCyl const*, cM3dGTri const*, Vec*);
+void cM3d_Cross_CpsCps(cM3dGCps const&, cM3dGCps const&, Vec*);
+void cM3d_Cross_CpsCyl(cM3dGCps const&, cM3dGCyl const&, Vec*);
+void cM3d_Cross_CpsSph(cM3dGCps const&, cM3dGSph const&, Vec*);
+void cM3d_Cross_TriTri(cM3dGTri const&, cM3dGTri const&, Vec*);
+void cM3d_Cross_CpsTri(cM3dGCps const&, cM3dGTri, Vec*);
+void operator delete(void*);
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+
+extern "C" void __dt__4cXyzFv();
+extern "C" void GetCoCP__12cCcD_CylAttrFv();
+extern "C" void GetCoCP__12cCcD_SphAttrFv();
+extern "C" void GetCoCP__12cCcD_SphAttrCFv();
+extern "C" bool CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz();
+extern "C" bool CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz();
+extern "C" bool CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf();
+extern "C" bool CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf();
+extern "C" bool CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf();
+extern "C" void CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf();
+extern "C" void GetCoCP__12cCcD_CylAttrCFv();
+extern "C" bool CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz();
+extern "C" bool CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz();
+extern "C" bool CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf();
+extern "C" bool CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf();
+extern "C" bool CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf();
+extern "C" void CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf();
+extern "C" void GetCoCP__14cCcD_ShapeAttrFv();
+extern "C" void GetCoCP__14cCcD_ShapeAttrCFv();
+extern "C" bool CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz();
+extern "C" bool CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf();
+extern "C" bool CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf();
+extern "C" void CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf();
+extern "C" bool CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz();
+extern "C" bool CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz();
+extern "C" void CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz();
+extern "C" bool CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf();
+extern "C" bool CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf();
+extern "C" bool CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf();
+extern "C" void CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf();
+extern "C" void __dt__12cCcD_CpsAttrFv();
+extern "C" void __dt__12cCcD_CylAttrFv();
+extern "C" void __dt__14cCcD_ShapeAttrFv();
+extern "C" void __dt__12cCcD_SphAttrFv();
+extern "C" void __dt__9cCcD_SttsFv();
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphPf();
+extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPf();
+extern "C" void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec();
+extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylPf();
+extern "C" void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
+extern "C" void cM3d_Cross_CpsCps__FRC8cM3dGCpsRC8cM3dGCpsP3Vec();
+extern "C" void cM3d_Cross_CpsCyl__FRC8cM3dGCpsRC8cM3dGCylP3Vec();
+extern "C" void cM3d_Cross_CpsSph__FRC8cM3dGCpsRC8cM3dGSphP3Vec();
+extern "C" void cM3d_Cross_TriTri__FRC8cM3dGTriRC8cM3dGTriP3Vec();
+extern "C" void cM3d_Cross_CpsTri__FRC8cM3dGCps8cM3dGTriP3Vec();
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+extern "C" void ClearForMinMax__8cM3dGAabFv();
+extern "C" void SetMinMax__8cM3dGAabFRC4cXyz();
+extern "C" void PlusR__8cM3dGAabFf();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
+extern "C" void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
+extern "C" void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
+extern "C" void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 SECTION_DATA extern void*const __vt__8cM3dGTri[3];
@@ -187,22 +659,22 @@ SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80263358-80263368 0010+00 .text      Set__15cCcD_DivideInfoFUlUlUl                                */
+/* 80263358-80263368 0010+00 rc=3 efc=1 .text      Set__15cCcD_DivideInfoFUlUlUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__15cCcD_DivideInfoFUlUlUl) {
+asm void cCcD_DivideInfo::Set(u32 field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Set__15cCcD_DivideInfoFUlUlUl.s"
 }
 #pragma pop
 
 
-/* 80263368-802633A8 0040+00 .text      Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo                  */
+/* 80263368-802633A8 0040+00 rc=5 efc=5 .text      Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo) {
+asm void cCcD_DivideInfo::Chk(cCcD_DivideInfo const& field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo.s"
 }
@@ -210,17 +682,17 @@ ASM_FUNCTION(Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo) {
 
 
 /* ############################################################################################## */
-/* 80455018-8045501C 0004+00 .sdata2    @2305                                                        */
+/* 80455018-8045501C 0004+00 rc=1 efc=0 .sdata2    @2305                                                        */
 f32 lit_2305 = 0.03125f;
 
-/* 8045501C-80455020 0004+00 .sdata2    @2306                                                        */
+/* 8045501C-80455020 0004+00 rc=2 efc=0 .sdata2    @2306                                                        */
 f32 lit_2306 = 1.0f;
 
-/* 802633A8-802634D4 012C+00 .text      SetArea__15cCcD_DivideAreaFRC8cM3dGAab                       */
+/* 802633A8-802634D4 012C+00 rc=2 efc=2 .text      SetArea__15cCcD_DivideAreaFRC8cM3dGAab                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetArea__15cCcD_DivideAreaFRC8cM3dGAab) {
+asm void cCcD_DivideArea::SetArea(cM3dGAab const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetArea__15cCcD_DivideAreaFRC8cM3dGAab.s"
 }
@@ -228,7 +700,7 @@ ASM_FUNCTION(SetArea__15cCcD_DivideAreaFRC8cM3dGAab) {
 
 
 /* ############################################################################################## */
-/* 8039A7E8-8039A868 0080+00 .rodata    l_base                                                       */
+/* 8039A7E8-8039A868 0080+00 rc=2 efc=0 .rodata    l_base                                                       */
 SECTION_RODATA const u8 l_base[128] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x0F,
 	0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0xFF,
@@ -240,55 +712,45 @@ SECTION_RODATA const u8 l_base[128] = {
 	0x1F, 0xFF, 0xFF, 0xFF, 0x3F, 0xFF, 0xFF, 0xFF, 0x7F, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 802634D4-802636A0 01CC+00 .text      CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl */
+/* 802634D4-802636A0 01CC+00 rc=2 efc=2 .text      CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl) {
+asm void cCcD_DivideArea::CalcDivideInfo(cCcD_DivideInfo* field_0, cM3dGAab const& field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl.s"
 }
 #pragma pop
 
 
-/* 802636A0-80263894 01F4+00 .text      CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab */
+/* 802636A0-80263894 01F4+00 rc=3 efc=3 .text      CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab) {
+asm void cCcD_DivideArea::CalcDivideInfoOverArea(cCcD_DivideInfo* field_0, cM3dGAab const& field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab.s"
 }
 #pragma pop
 
 
-/* 80263894-8026389C 0008+00 .text      GetGStts__9cCcD_SttsCFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(GetGStts__9cCcD_SttsCFv) {
-	nofralloc
-#include "asm/SSystem/SComponent/c_cc_d/GetGStts__9cCcD_SttsCFv.s"
+/* 80263894-8026389C 0008+00 rc=2 efc=1 .text      GetGStts__9cCcD_SttsCFv                                      */
+bool cCcD_Stts::GetGStts() const {
+	return false;
 }
-#pragma pop
 
 
-/* 8026389C-802638A4 0008+00 .text      GetGStts__9cCcD_SttsFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(GetGStts__9cCcD_SttsFv) {
-	nofralloc
-#include "asm/SSystem/SComponent/c_cc_d/GetGStts__9cCcD_SttsFv.s"
+/* 8026389C-802638A4 0008+00 rc=1 efc=0 .text      GetGStts__9cCcD_SttsFv                                       */
+bool cCcD_Stts::GetGStts() {
+	return false;
 }
-#pragma pop
 
 
-/* 802638A4-80263904 0060+00 .text      Init__9cCcD_SttsFiiPvUi                                      */
+/* 802638A4-80263904 0060+00 rc=1 efc=1 .text      Init__9cCcD_SttsFiiPvUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Init__9cCcD_SttsFiiPvUi) {
+asm void cCcD_Stts::Init(s32 field_0, s32 field_1, void* field_2, s32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Init__9cCcD_SttsFiiPvUi.s"
 }
@@ -296,51 +758,51 @@ ASM_FUNCTION(Init__9cCcD_SttsFiiPvUi) {
 
 
 /* ############################################################################################## */
-/* 80455020-80455028 0004+04 .sdata2    @2431                                                        */
+/* 80455020-80455028 0004+04 rc=13 efc=0 .sdata2    @2431                                                        */
 u8 lit_2431[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80263904-80263934 0030+00 .text      Ct__9cCcD_SttsFv                                             */
+/* 80263904-80263934 0030+00 rc=2 efc=1 .text      Ct__9cCcD_SttsFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Ct__9cCcD_SttsFv) {
+asm void cCcD_Stts::Ct() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Ct__9cCcD_SttsFv.s"
 }
 #pragma pop
 
 
-/* 80263934-8026395C 0028+00 .text      PlusCcMove__9cCcD_SttsFfff                                   */
+/* 80263934-8026395C 0028+00 rc=3 efc=3 .text      PlusCcMove__9cCcD_SttsFfff                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PlusCcMove__9cCcD_SttsFfff) {
+asm void cCcD_Stts::PlusCcMove(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/PlusCcMove__9cCcD_SttsFfff.s"
 }
 #pragma pop
 
 
-/* 8026395C-80263970 0014+00 .text      ClrCcMove__9cCcD_SttsFv                                      */
+/* 8026395C-80263970 0014+00 rc=10 efc=10 .text      ClrCcMove__9cCcD_SttsFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrCcMove__9cCcD_SttsFv) {
+asm void cCcD_Stts::ClrCcMove() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ClrCcMove__9cCcD_SttsFv.s"
 }
 #pragma pop
 
 
-/* 80263970-80263984 0014+00 .text      PlusDmg__9cCcD_SttsFi                                        */
+/* 80263970-80263984 0014+00 rc=2 efc=2 .text      PlusDmg__9cCcD_SttsFi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PlusDmg__9cCcD_SttsFi) {
+asm void cCcD_Stts::PlusDmg(s32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/PlusDmg__9cCcD_SttsFi.s"
 }
@@ -348,135 +810,135 @@ ASM_FUNCTION(PlusDmg__9cCcD_SttsFi) {
 
 
 /* ############################################################################################## */
-/* 80455028-80455030 0008+00 .sdata2    @2472                                                        */
+/* 80455028-80455030 0008+00 rc=1 efc=0 .sdata2    @2472                                                        */
 f64 lit_2472 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80263984-802639B0 002C+00 .text      GetWeightF__9cCcD_SttsCFv                                    */
+/* 80263984-802639B0 002C+00 rc=1 efc=1 .text      GetWeightF__9cCcD_SttsCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetWeightF__9cCcD_SttsCFv) {
+asm void cCcD_Stts::GetWeightF() const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetWeightF__9cCcD_SttsCFv.s"
 }
 #pragma pop
 
 
-/* 802639B0-802639C4 0014+00 .text      ct__18cCcD_ObjCommonBaseFv                                   */
+/* 802639B0-802639C4 0014+00 rc=1 efc=1 .text      ct__18cCcD_ObjCommonBaseFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ct__18cCcD_ObjCommonBaseFv) {
+asm void cCcD_ObjCommonBase::ct() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ct__18cCcD_ObjCommonBaseFv.s"
 }
 #pragma pop
 
 
-/* 802639C4-80263A10 004C+00 .text      Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf                  */
+/* 802639C4-80263A10 004C+00 rc=1 efc=0 .text      Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf) {
+asm void cCcD_ObjHitInf::Set(cCcD_SrcObjHitInf const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Set__14cCcD_ObjHitInfFRC17cCcD_SrcObjHitInf.s"
 }
 #pragma pop
 
 
-/* 80263A10-80263A1C 000C+00 .text      ct__8cCcD_ObjFv                                              */
+/* 80263A10-80263A1C 000C+00 rc=1 efc=1 .text      ct__8cCcD_ObjFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ct__8cCcD_ObjFv) {
+asm void cCcD_Obj::ct() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ct__8cCcD_ObjFv.s"
 }
 #pragma pop
 
 
-/* 80263A1C-80263A48 002C+00 .text      Set__8cCcD_ObjFRC11cCcD_SrcObj                               */
+/* 80263A1C-80263A48 002C+00 rc=1 efc=1 .text      Set__8cCcD_ObjFRC11cCcD_SrcObj                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cCcD_ObjFRC11cCcD_SrcObj) {
+asm void cCcD_Obj::Set(cCcD_SrcObj const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Set__8cCcD_ObjFRC11cCcD_SrcObj.s"
 }
 #pragma pop
 
 
-/* 80263A48-80263A64 001C+00 .text      GetAc__8cCcD_ObjFv                                           */
+/* 80263A48-80263A64 001C+00 rc=9 efc=9 .text      GetAc__8cCcD_ObjFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetAc__8cCcD_ObjFv) {
+asm void cCcD_Obj::GetAc() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetAc__8cCcD_ObjFv.s"
 }
 #pragma pop
 
 
-/* 80263A64-80263A88 0024+00 .text      getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape  */
+/* 80263A64-80263A88 0024+00 rc=5 efc=2 .text      getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape) {
+asm void cCcD_ShapeAttr::getShapeAccess(cCcD_ShapeAttr::Shape* field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape.s"
 }
 #pragma pop
 
 
-/* 80263A88-80263B58 00D0+00 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz            */
+/* 80263A88-80263B58 00D0+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz) {
+asm void cCcD_TriAttr::CrossAtTg(cCcD_CpsAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263B58-80263B90 0038+00 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz            */
+/* 80263B58-80263B90 0038+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz) {
+asm void cCcD_TriAttr::CrossAtTg(cCcD_CylAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263B90-80263BCC 003C+00 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz            */
+/* 80263B90-80263BCC 003C+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz) {
+asm void cCcD_TriAttr::CrossAtTg(cCcD_SphAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263BCC-80263C04 0038+00 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz            */
+/* 80263BCC-80263C04 0038+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz) {
+asm void cCcD_TriAttr::CrossAtTg(cCcD_TriAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263C04-80263C9C 0098+00 .text      CalcAabBox__12cCcD_TriAttrFv                                 */
+/* 80263C04-80263C9C 0098+00 rc=2 efc=1 .text      CalcAabBox__12cCcD_TriAttrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcAabBox__12cCcD_TriAttrFv) {
+asm void cCcD_TriAttr::CalcAabBox() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcAabBox__12cCcD_TriAttrFv.s"
 }
@@ -484,455 +946,455 @@ ASM_FUNCTION(CalcAabBox__12cCcD_TriAttrFv) {
 
 
 /* ############################################################################################## */
-/* 80455030-80455038 0004+04 .sdata2    @2632                                                        */
+/* 80455030-80455038 0004+04 rc=1 efc=0 .sdata2    @2632                                                        */
 f32 c_cc_d__lit_2632 = -1.0f;
 /* padding 4 bytes */
 
-/* 80263C9C-80263D38 009C+00 .text      GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz                       */
+/* 80263C9C-80263D38 009C+00 rc=2 efc=1 .text      GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz) {
+asm void cCcD_TriAttr::GetNVec(cXyz const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263D38-80263D7C 0044+00 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz            */
+/* 80263D38-80263D7C 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz) {
+asm void cCcD_CpsAttr::CrossAtTg(cCcD_CpsAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263D7C-80263DC0 0044+00 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz            */
+/* 80263D7C-80263DC0 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz) {
+asm void cCcD_CpsAttr::CrossAtTg(cCcD_CylAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263DC0-80263E04 0044+00 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz            */
+/* 80263DC0-80263E04 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz) {
+asm void cCcD_CpsAttr::CrossAtTg(cCcD_SphAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263E04-80263ED4 00D0+00 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz            */
+/* 80263E04-80263ED4 00D0+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz) {
+asm void cCcD_CpsAttr::CrossAtTg(cCcD_TriAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80263ED4-80263F24 0050+00 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf                  */
+/* 80263ED4-80263F24 0050+00 rc=2 efc=1 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf) {
+asm void cCcD_CpsAttr::CrossCo(cCcD_CpsAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf.s"
 }
 #pragma pop
 
 
-/* 80263F24-80263F74 0050+00 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf                  */
+/* 80263F24-80263F74 0050+00 rc=2 efc=1 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf) {
+asm void cCcD_CpsAttr::CrossCo(cCcD_CylAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf.s"
 }
 #pragma pop
 
 
-/* 80263F74-80263FC4 0050+00 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf                  */
+/* 80263F74-80263FC4 0050+00 rc=2 efc=1 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf) {
+asm void cCcD_CpsAttr::CrossCo(cCcD_SphAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf.s"
 }
 #pragma pop
 
 
-/* 80263FC4-80264014 0050+00 .text      CalcAabBox__12cCcD_CpsAttrFv                                 */
+/* 80263FC4-80264014 0050+00 rc=3 efc=2 .text      CalcAabBox__12cCcD_CpsAttrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcAabBox__12cCcD_CpsAttrFv) {
+asm void cCcD_CpsAttr::CalcAabBox() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcAabBox__12cCcD_CpsAttrFv.s"
 }
 #pragma pop
 
 
-/* 80264014-8026417C 0168+00 .text      GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz                       */
+/* 80264014-8026417C 0168+00 rc=2 efc=1 .text      GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz) {
+asm void cCcD_CpsAttr::GetNVec(cXyz const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026417C-802641C8 004C+00 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz            */
+/* 8026417C-802641C8 004C+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz) {
+asm void cCcD_CylAttr::CrossAtTg(cCcD_CpsAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 802641C8-8026420C 0044+00 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz            */
+/* 802641C8-8026420C 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz) {
+asm void cCcD_CylAttr::CrossAtTg(cCcD_CylAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026420C-80264250 0044+00 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz            */
+/* 8026420C-80264250 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz) {
+asm void cCcD_CylAttr::CrossAtTg(cCcD_SphAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80264250-80264288 0038+00 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz            */
+/* 80264250-80264288 0038+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz) {
+asm void cCcD_CylAttr::CrossAtTg(cCcD_TriAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80264288-802642CC 0044+00 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf                  */
+/* 80264288-802642CC 0044+00 rc=2 efc=1 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf) {
+asm void cCcD_CylAttr::CrossCo(cCcD_CylAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf.s"
 }
 #pragma pop
 
 
-/* 802642CC-80264310 0044+00 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf                  */
+/* 802642CC-80264310 0044+00 rc=2 efc=1 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf) {
+asm void cCcD_CylAttr::CrossCo(cCcD_SphAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf.s"
 }
 #pragma pop
 
 
-/* 80264310-80264368 0058+00 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf                  */
+/* 80264310-80264368 0058+00 rc=2 efc=1 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf) {
+asm void cCcD_CylAttr::CrossCo(cCcD_CpsAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf.s"
 }
 #pragma pop
 
 
-/* 80264368-802643D0 0068+00 .text      CalcAabBox__12cCcD_CylAttrFv                                 */
+/* 80264368-802643D0 0068+00 rc=2 efc=1 .text      CalcAabBox__12cCcD_CylAttrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcAabBox__12cCcD_CylAttrFv) {
+asm void cCcD_CylAttr::CalcAabBox() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcAabBox__12cCcD_CylAttrFv.s"
 }
 #pragma pop
 
 
-/* 802643D0-802644B8 00E8+00 .text      GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz                       */
+/* 802643D0-802644B8 00E8+00 rc=2 efc=1 .text      GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz) {
+asm void cCcD_CylAttr::GetNVec(cXyz const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* 802644B8-802644EC 0034+00 .text      getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape    */
+/* 802644B8-802644EC 0034+00 rc=2 efc=1 .text      getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape) {
+asm void cCcD_CylAttr::getShapeAccess(cCcD_ShapeAttr::Shape* field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape.s"
 }
 #pragma pop
 
 
-/* 802644EC-80264538 004C+00 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz            */
+/* 802644EC-80264538 004C+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz) {
+asm void cCcD_SphAttr::CrossAtTg(cCcD_CpsAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80264538-8026457C 0044+00 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz            */
+/* 80264538-8026457C 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz) {
+asm void cCcD_SphAttr::CrossAtTg(cCcD_CylAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026457C-802645C0 0044+00 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz            */
+/* 8026457C-802645C0 0044+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz) {
+asm void cCcD_SphAttr::CrossAtTg(cCcD_SphAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 802645C0-802645F8 0038+00 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz            */
+/* 802645C0-802645F8 0038+00 rc=2 efc=1 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz) {
+asm void cCcD_SphAttr::CrossAtTg(cCcD_TriAttr const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz.s"
 }
 #pragma pop
 
 
-/* 802645F8-80264644 004C+00 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf                  */
+/* 802645F8-80264644 004C+00 rc=2 efc=1 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf) {
+asm void cCcD_SphAttr::CrossCo(cCcD_CylAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf.s"
 }
 #pragma pop
 
 
-/* 80264644-80264688 0044+00 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf                  */
+/* 80264644-80264688 0044+00 rc=2 efc=1 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf) {
+asm void cCcD_SphAttr::CrossCo(cCcD_SphAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf.s"
 }
 #pragma pop
 
 
-/* 80264688-802646E0 0058+00 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf                  */
+/* 80264688-802646E0 0058+00 rc=2 efc=1 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf) {
+asm void cCcD_SphAttr::CrossCo(cCcD_CpsAttr const& field_0, f32* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf.s"
 }
 #pragma pop
 
 
-/* 802646E0-8026476C 008C+00 .text      CalcAabBox__12cCcD_SphAttrFv                                 */
+/* 802646E0-8026476C 008C+00 rc=3 efc=2 .text      CalcAabBox__12cCcD_SphAttrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CalcAabBox__12cCcD_SphAttrFv) {
+asm void cCcD_SphAttr::CalcAabBox() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/CalcAabBox__12cCcD_SphAttrFv.s"
 }
 #pragma pop
 
 
-/* 8026476C-80264808 009C+00 .text      GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz                       */
+/* 8026476C-80264808 009C+00 rc=2 efc=1 .text      GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz) {
+asm void cCcD_SphAttr::GetNVec(cXyz const& field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* 80264808-8026483C 0034+00 .text      getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape    */
+/* 80264808-8026483C 0034+00 rc=2 efc=1 .text      getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape) {
+asm void cCcD_SphAttr::getShapeAccess(cCcD_ShapeAttr::Shape* field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape.s"
 }
 #pragma pop
 
 
-/* 8026483C-8026484C 0010+00 .text      SetHit__10cCcD_ObjAtFP8cCcD_Obj                              */
+/* 8026483C-8026484C 0010+00 rc=1 efc=1 .text      SetHit__10cCcD_ObjAtFP8cCcD_Obj                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetHit__10cCcD_ObjAtFP8cCcD_Obj) {
+asm void cCcD_ObjAt::SetHit(cCcD_Obj* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetHit__10cCcD_ObjAtFP8cCcD_Obj.s"
 }
 #pragma pop
 
 
-/* 8026484C-80264868 001C+00 .text      Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt                          */
+/* 8026484C-80264868 001C+00 rc=1 efc=0 .text      Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt) {
+asm void cCcD_ObjAt::Set(cCcD_SrcObjAt const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Set__10cCcD_ObjAtFRC13cCcD_SrcObjAt.s"
 }
 #pragma pop
 
 
-/* 80264868-80264880 0018+00 .text      ClrHit__10cCcD_ObjAtFv                                       */
+/* 80264868-80264880 0018+00 rc=2 efc=2 .text      ClrHit__10cCcD_ObjAtFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrHit__10cCcD_ObjAtFv) {
+asm void cCcD_ObjAt::ClrHit() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ClrHit__10cCcD_ObjAtFv.s"
 }
 #pragma pop
 
 
-/* 80264880-80264894 0014+00 .text      Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg                          */
+/* 80264880-80264894 0014+00 rc=1 efc=0 .text      Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg) {
+asm void cCcD_ObjTg::Set(cCcD_SrcObjTg const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/Set__10cCcD_ObjTgFRC13cCcD_SrcObjTg.s"
 }
 #pragma pop
 
 
-/* 80264894-802648B0 001C+00 .text      SetGrp__10cCcD_ObjTgFUl                                      */
+/* 80264894-802648B0 001C+00 rc=0 efc=0 .text      SetGrp__10cCcD_ObjTgFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetGrp__10cCcD_ObjTgFUl) {
+asm void cCcD_ObjTg::SetGrp(u32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetGrp__10cCcD_ObjTgFUl.s"
 }
 #pragma pop
 
 
-/* 802648B0-802648C8 0018+00 .text      ClrHit__10cCcD_ObjTgFv                                       */
+/* 802648B0-802648C8 0018+00 rc=2 efc=2 .text      ClrHit__10cCcD_ObjTgFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrHit__10cCcD_ObjTgFv) {
+asm void cCcD_ObjTg::ClrHit() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ClrHit__10cCcD_ObjTgFv.s"
 }
 #pragma pop
 
 
-/* 802648C8-802648D8 0010+00 .text      SetHit__10cCcD_ObjTgFP8cCcD_Obj                              */
+/* 802648C8-802648D8 0010+00 rc=1 efc=1 .text      SetHit__10cCcD_ObjTgFP8cCcD_Obj                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetHit__10cCcD_ObjTgFP8cCcD_Obj) {
+asm void cCcD_ObjTg::SetHit(cCcD_Obj* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetHit__10cCcD_ObjTgFP8cCcD_Obj.s"
 }
 #pragma pop
 
 
-/* 802648D8-802648E8 0010+00 .text      SetHit__10cCcD_ObjCoFP8cCcD_Obj                              */
+/* 802648D8-802648E8 0010+00 rc=1 efc=1 .text      SetHit__10cCcD_ObjCoFP8cCcD_Obj                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetHit__10cCcD_ObjCoFP8cCcD_Obj) {
+asm void cCcD_ObjCo::SetHit(cCcD_Obj* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetHit__10cCcD_ObjCoFP8cCcD_Obj.s"
 }
 #pragma pop
 
 
-/* 802648E8-80264900 0018+00 .text      ClrHit__10cCcD_ObjCoFv                                       */
+/* 802648E8-80264900 0018+00 rc=2 efc=2 .text      ClrHit__10cCcD_ObjCoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrHit__10cCcD_ObjCoFv) {
+asm void cCcD_ObjCo::ClrHit() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ClrHit__10cCcD_ObjCoFv.s"
 }
 #pragma pop
 
 
-/* 80264900-8026491C 001C+00 .text      SetIGrp__10cCcD_ObjCoFUl                                     */
+/* 80264900-8026491C 001C+00 rc=1 efc=1 .text      SetIGrp__10cCcD_ObjCoFUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetIGrp__10cCcD_ObjCoFUl) {
+asm void cCcD_ObjCo::SetIGrp(u32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetIGrp__10cCcD_ObjCoFUl.s"
 }
 #pragma pop
 
 
-/* 8026491C-80264938 001C+00 .text      SetVsGrp__10cCcD_ObjCoFUl                                    */
+/* 8026491C-80264938 001C+00 rc=1 efc=1 .text      SetVsGrp__10cCcD_ObjCoFUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetVsGrp__10cCcD_ObjCoFUl) {
+asm void cCcD_ObjCo::SetVsGrp(u32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/SetVsGrp__10cCcD_ObjCoFUl.s"
 }
@@ -940,7 +1402,7 @@ ASM_FUNCTION(SetVsGrp__10cCcD_ObjCoFUl) {
 
 
 /* ############################################################################################## */
-/* 803C3540-803C35A4 0064+00 .data      __vt__12cCcD_SphAttr                                         */
+/* 803C3540-803C35A4 0064+00 rc=5 efc=5 .data      __vt__12cCcD_SphAttr                                         */
 void* const __vt__12cCcD_SphAttr[25] = {
 	NULL, /* RTTI */
 	NULL,
@@ -969,7 +1431,7 @@ void* const __vt__12cCcD_SphAttr[25] = {
 	(void*)func_80264A64,
 };
 
-/* 803C35A4-803C3608 0064+00 .data      __vt__12cCcD_CylAttr                                         */
+/* 803C35A4-803C3608 0064+00 rc=9 efc=9 .data      __vt__12cCcD_CylAttr                                         */
 void* const __vt__12cCcD_CylAttr[25] = {
 	NULL, /* RTTI */
 	NULL,
@@ -998,7 +1460,7 @@ void* const __vt__12cCcD_CylAttr[25] = {
 	(void*)func_80264A5C,
 };
 
-/* 803C3608-803C366C 0064+00 .data      __vt__12cCcD_CpsAttr                                         */
+/* 803C3608-803C366C 0064+00 rc=9 efc=9 .data      __vt__12cCcD_CpsAttr                                         */
 void* const __vt__12cCcD_CpsAttr[25] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1027,7 +1489,7 @@ void* const __vt__12cCcD_CpsAttr[25] = {
 	(void*)func_80264A54,
 };
 
-/* 803C366C-803C36D0 0064+00 .data      __vt__12cCcD_TriAttr                                         */
+/* 803C366C-803C36D0 0064+00 rc=2 efc=1 .data      __vt__12cCcD_TriAttr                                         */
 void* const __vt__12cCcD_TriAttr[25] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1056,7 +1518,7 @@ void* const __vt__12cCcD_TriAttr[25] = {
 	(void*)func_80264A4C,
 };
 
-/* 803C36D0-803C3728 0058+00 .data      __vt__14cCcD_ShapeAttr                                       */
+/* 803C36D0-803C3728 0058+00 rc=19 efc=18 .data      __vt__14cCcD_ShapeAttr                                       */
 void* const __vt__14cCcD_ShapeAttr[22] = {
 	NULL, /* RTTI */
 	NULL,
@@ -1082,55 +1544,40 @@ void* const __vt__14cCcD_ShapeAttr[22] = {
 	(void*)getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape,
 };
 
-/* 80264938-802649D8 00A0+00 .text      __dt__12cCcD_TriAttrFv                                       */
+/* 80264938-802649D8 00A0+00 rc=2 efc=0 .text      __dt__12cCcD_TriAttrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12cCcD_TriAttrFv) {
+asm cCcD_TriAttr::~cCcD_TriAttr() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/__dt__12cCcD_TriAttrFv.s"
 }
 #pragma pop
 
 
-/* 802649D8-802649E0 0008+00 .text      CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz) {
-	nofralloc
-#include "asm/SSystem/SComponent/c_cc_d/CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz.s"
+/* 802649D8-802649E0 0008+00 rc=1 efc=0 .text      CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz        */
+bool cCcD_ShapeAttr::CrossAtTg(cCcD_ShapeAttr const& field_0, cXyz* field_1) const {
+	return false;
 }
-#pragma pop
 
 
-/* 802649E0-802649E8 0008+00 .text      CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf) {
-	nofralloc
-#include "asm/SSystem/SComponent/c_cc_d/CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf.s"
+/* 802649E0-802649E8 0008+00 rc=1 efc=0 .text      CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf              */
+bool cCcD_ShapeAttr::CrossCo(cCcD_ShapeAttr const& field_0, f32* field_1) const {
+	return false;
 }
-#pragma pop
 
 
-/* 802649E8-802649EC 0004+00 .text      ClrAt__9cCcD_SttsFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ClrAt__9cCcD_SttsFv) {
-	nofralloc
-#include "asm/SSystem/SComponent/c_cc_d/ClrAt__9cCcD_SttsFv.s"
+/* 802649E8-802649EC 0004+00 rc=1 efc=0 .text      ClrAt__9cCcD_SttsFv                                          */
+void cCcD_Stts::ClrAt() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802649EC-802649F8 000C+00 .text      ClrTg__9cCcD_SttsFv                                          */
+/* 802649EC-802649F8 000C+00 rc=1 efc=0 .text      ClrTg__9cCcD_SttsFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ClrTg__9cCcD_SttsFv) {
+asm void cCcD_Stts::ClrTg() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/ClrTg__9cCcD_SttsFv.s"
 }
@@ -1138,61 +1585,61 @@ ASM_FUNCTION(ClrTg__9cCcD_SttsFv) {
 
 
 /* ############################################################################################## */
-/* 80430CA8-80430CB4 000C+00 .bss       @2414                                                        */
+/* 80430CA8-80430CB4 000C+00 rc=1 efc=0 .bss       @2414                                                        */
 u8 lit_2414[12];
 
-/* 80430CB4-80430CC0 000C+00 .bss       m_virtual_center__14cCcD_ShapeAttr                           */
+/* 80430CB4-80430CC0 000C+00 rc=3 efc=2 .bss       m_virtual_center__14cCcD_ShapeAttr                           */
 u8 m_virtual_center__14cCcD_ShapeAttr[12];
 
-/* 802649F8-80264A4C 0054+00 .text      __sinit_c_cc_d_cpp                                           */
+/* 802649F8-80264A4C 0054+00 rc=1 efc=1 .text      __sinit_c_cc_d_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_c_cc_d_cpp) {
+extern "C" asm void __sinit_c_cc_d_cpp() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/__sinit_c_cc_d_cpp.s"
 }
 #pragma pop
 
 
-/* 80264A4C-80264A54 0008+00 .text      @32@__dt__12cCcD_TriAttrFv                                   */
+/* 80264A4C-80264A54 0008+00 rc=1 efc=0 .text      @32@__dt__12cCcD_TriAttrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80264A4C) {
+extern "C" asm static void func_80264A4C() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/func_80264A4C.s"
 }
 #pragma pop
 
 
-/* 80264A54-80264A5C 0008+00 .text      @32@__dt__12cCcD_CpsAttrFv                                   */
+/* 80264A54-80264A5C 0008+00 rc=1 efc=0 .text      @32@__dt__12cCcD_CpsAttrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80264A54) {
+extern "C" asm static void func_80264A54() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/func_80264A54.s"
 }
 #pragma pop
 
 
-/* 80264A5C-80264A64 0008+00 .text      @32@__dt__12cCcD_CylAttrFv                                   */
+/* 80264A5C-80264A64 0008+00 rc=1 efc=0 .text      @32@__dt__12cCcD_CylAttrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80264A5C) {
+extern "C" asm static void func_80264A5C() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/func_80264A5C.s"
 }
 #pragma pop
 
 
-/* 80264A64-80264A6C 0008+00 .text      @32@__dt__12cCcD_SphAttrFv                                   */
+/* 80264A64-80264A6C 0008+00 rc=1 efc=0 .text      @32@__dt__12cCcD_SphAttrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80264A64) {
+extern "C" asm static void func_80264A64() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_d/func_80264A64.s"
 }
@@ -1200,7 +1647,7 @@ ASM_FUNCTION(func_80264A64) {
 
 
 /* ############################################################################################## */
-/* 803C3728-803C3748 0020+00 .data      __vt__9cCcD_Stts                                             */
+/* 803C3728-803C3748 0020+00 rc=9 efc=9 .data      __vt__9cCcD_Stts                                             */
 void* const __vt__9cCcD_Stts[8] = {
 	NULL, /* RTTI */
 	NULL,

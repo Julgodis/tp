@@ -6,29 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build daObj_SSBase_c (daObj_SSBase_c) False/False
+/* top-level dependencies (begin daObj_SSBase_c) */
+/* top-level dependencies (end daObj_SSBase_c) */
+struct daObj_SSBase_c {
+	/* 8015E3F8 */ daObj_SSBase_c();
+	/* 8015E450 */ ~daObj_SSBase_c();
+	/* 8015E4B0 */ void getProcessID();
+	/* 8015E4C8 */ void setSoldOut();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_SSBase_cFv();
-extern "C" extern void __dt__14daObj_SSBase_cFv();
-extern "C" extern void getProcessID__14daObj_SSBase_cFv();
-extern "C" extern void setSoldOut__14daObj_SSBase_cFv();
+
+extern "C" void __ct__14daObj_SSBase_cFv();
+extern "C" void __dt__14daObj_SSBase_cFv();
+extern "C" void getProcessID__14daObj_SSBase_cFv();
+extern "C" void setSoldOut__14daObj_SSBase_cFv();
 SECTION_DATA extern void*const __vt__14daObj_SSBase_c[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__10fopAc_ac_cFv();
-extern "C" extern void __dt__10fopAc_ac_cFv();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803BA088-803BA0A0 0014+04 .data      __vt__14daObj_SSBase_c                                       */
+/* 803BA088-803BA0A0 0014+04 rc=2 efc=0 .data      __vt__14daObj_SSBase_c                                       */
 void* const __vt__14daObj_SSBase_c[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -39,48 +64,42 @@ void* const __vt__14daObj_SSBase_c[6] = {
 	NULL,
 };
 
-/* 8015E3F8-8015E450 0058+00 .text      __ct__14daObj_SSBase_cFv                                     */
+/* 8015E3F8-8015E450 0058+00 rc=0 efc=0 .text      __ct__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_SSBase_cFv) {
+asm daObj_SSBase_c::daObj_SSBase_c() {
 	nofralloc
 #include "asm/a/obj/d_a_obj_ss_base/__ct__14daObj_SSBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8015E450-8015E4B0 0060+00 .text      __dt__14daObj_SSBase_cFv                                     */
+/* 8015E450-8015E4B0 0060+00 rc=1 efc=0 .text      __dt__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_SSBase_cFv) {
+asm daObj_SSBase_c::~daObj_SSBase_c() {
 	nofralloc
 #include "asm/a/obj/d_a_obj_ss_base/__dt__14daObj_SSBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 rc=1 efc=0 .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getProcessID__14daObj_SSBase_cFv) {
+asm void daObj_SSBase_c::getProcessID() {
 	nofralloc
 #include "asm/a/obj/d_a_obj_ss_base/getProcessID__14daObj_SSBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8015E4C8-8015E4CC 0004+00 .text      setSoldOut__14daObj_SSBase_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setSoldOut__14daObj_SSBase_cFv) {
-	nofralloc
-#include "asm/a/obj/d_a_obj_ss_base/setSoldOut__14daObj_SSBase_cFv.s"
+/* 8015E4C8-8015E4CC 0004+00 rc=1 efc=0 .text      setSoldOut__14daObj_SSBase_cFv                               */
+void daObj_SSBase_c::setSoldOut() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

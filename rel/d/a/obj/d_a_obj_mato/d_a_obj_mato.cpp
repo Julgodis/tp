@@ -6,33 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMATO_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjMATO_c {
+	void action();
+	void hit_check();
+	void start_wait(s32);
+	void wait(s32);
+	void disappear(s32);
+	void getRupee(s32);
+	void execute();
+	void _delete();
+	void setBaseMtx();
+	void mato_init();
+	void create();
+};
+
+struct MatoData_s {
+	~MatoData_s();
+	MatoData_s();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObjMATO_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjMATO_Delete__FP11daObjMATO_c();
-extern "C" extern void action__11daObjMATO_cFv();
-extern "C" extern void hit_check__11daObjMATO_cFv();
-extern "C" extern void start_wait__11daObjMATO_cFi();
-extern "C" extern void wait__11daObjMATO_cFi();
-extern "C" extern void disappear__11daObjMATO_cFi();
-extern "C" extern void getRupee__11daObjMATO_cFi();
-extern "C" extern void execute__11daObjMATO_cFv();
-extern "C" extern void _delete__11daObjMATO_cFv();
-extern "C" extern void setBaseMtx__11daObjMATO_cFv();
-extern "C" extern void daObjMATO_Draw__FP11daObjMATO_c();
-extern "C" extern void daObjMATO_Execute__FP11daObjMATO_c();
-extern "C" extern void mato_init__11daObjMATO_cFv();
-extern "C" extern void create__11daObjMATO_cFv();
-extern "C" extern void __dt__10MatoData_sFv();
-extern "C" extern void __ct__10MatoData_sFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjMATO_IsDelete__FP11daObjMATO_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+extern "C" void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi();
+void useHeapInit(fopAc_ac_c*);
+void daObjMATO_Create(fopAc_ac_c*);
+void daObjMATO_Delete(daObjMATO_c*);
+void daObjMATO_Draw(daObjMATO_c*);
+void daObjMATO_Execute(daObjMATO_c*);
+bool daObjMATO_IsDelete(daObjMATO_c*);
+
+extern "C" void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObjMATO_Create__FP10fopAc_ac_c();
+extern "C" void daObjMATO_Delete__FP11daObjMATO_c();
+extern "C" void action__11daObjMATO_cFv();
+extern "C" void hit_check__11daObjMATO_cFv();
+extern "C" void start_wait__11daObjMATO_cFi();
+extern "C" void wait__11daObjMATO_cFi();
+extern "C" void disappear__11daObjMATO_cFi();
+extern "C" void getRupee__11daObjMATO_cFi();
+extern "C" void execute__11daObjMATO_cFv();
+extern "C" void _delete__11daObjMATO_cFv();
+extern "C" void setBaseMtx__11daObjMATO_cFv();
+extern "C" void daObjMATO_Draw__FP11daObjMATO_c();
+extern "C" void daObjMATO_Execute__FP11daObjMATO_c();
+extern "C" void mato_init__11daObjMATO_cFv();
+extern "C" void create__11daObjMATO_cFv();
+extern "C" void __dt__10MatoData_sFv();
+extern "C" void __ct__10MatoData_sFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" bool daObjMATO_IsDelete__FP11daObjMATO_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 l_B_ling_bmd_table[28];
 SECTION_RODATA extern const u8 lit_3878[4];
 SECTION_RODATA extern const u32 lit_3900;
@@ -65,7 +118,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +130,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi) {
+extern "C" asm void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi.s"
 }
@@ -86,7 +141,7 @@ ASM_FUNCTION(setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -97,7 +152,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMATO_Create__FP10fopAc_ac_c) {
+asm void daObjMATO_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_Create__FP10fopAc_ac_c.s"
 }
@@ -108,7 +163,7 @@ ASM_FUNCTION(daObjMATO_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMATO_Delete__FP11daObjMATO_c) {
+asm void daObjMATO_Delete(daObjMATO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_Delete__FP11daObjMATO_c.s"
 }
@@ -119,7 +174,7 @@ ASM_FUNCTION(daObjMATO_Delete__FP11daObjMATO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__11daObjMATO_cFv) {
+asm void daObjMATO_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/action__11daObjMATO_cFv.s"
 }
@@ -130,7 +185,7 @@ ASM_FUNCTION(action__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hit_check__11daObjMATO_cFv) {
+asm void daObjMATO_c::hit_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/hit_check__11daObjMATO_cFv.s"
 }
@@ -141,7 +196,7 @@ ASM_FUNCTION(hit_check__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(start_wait__11daObjMATO_cFi) {
+asm void daObjMATO_c::start_wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/start_wait__11daObjMATO_cFi.s"
 }
@@ -152,7 +207,7 @@ ASM_FUNCTION(start_wait__11daObjMATO_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__11daObjMATO_cFi) {
+asm void daObjMATO_c::wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/wait__11daObjMATO_cFi.s"
 }
@@ -163,7 +218,7 @@ ASM_FUNCTION(wait__11daObjMATO_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(disappear__11daObjMATO_cFi) {
+asm void daObjMATO_c::disappear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/disappear__11daObjMATO_cFi.s"
 }
@@ -174,7 +229,7 @@ ASM_FUNCTION(disappear__11daObjMATO_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRupee__11daObjMATO_cFi) {
+asm void daObjMATO_c::getRupee(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/getRupee__11daObjMATO_cFi.s"
 }
@@ -185,7 +240,7 @@ ASM_FUNCTION(getRupee__11daObjMATO_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjMATO_cFv) {
+asm void daObjMATO_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/execute__11daObjMATO_cFv.s"
 }
@@ -196,7 +251,7 @@ ASM_FUNCTION(execute__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daObjMATO_cFv) {
+asm void daObjMATO_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/_delete__11daObjMATO_cFv.s"
 }
@@ -207,7 +262,7 @@ ASM_FUNCTION(_delete__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjMATO_cFv) {
+asm void daObjMATO_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/setBaseMtx__11daObjMATO_cFv.s"
 }
@@ -218,7 +273,7 @@ ASM_FUNCTION(setBaseMtx__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMATO_Draw__FP11daObjMATO_c) {
+asm void daObjMATO_Draw(daObjMATO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_Draw__FP11daObjMATO_c.s"
 }
@@ -229,7 +284,7 @@ ASM_FUNCTION(daObjMATO_Draw__FP11daObjMATO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMATO_Execute__FP11daObjMATO_c) {
+asm void daObjMATO_Execute(daObjMATO_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_Execute__FP11daObjMATO_c.s"
 }
@@ -240,7 +295,7 @@ ASM_FUNCTION(daObjMATO_Execute__FP11daObjMATO_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mato_init__11daObjMATO_cFv) {
+asm void daObjMATO_c::mato_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/mato_init__11daObjMATO_cFv.s"
 }
@@ -251,7 +306,7 @@ ASM_FUNCTION(mato_init__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjMATO_cFv) {
+asm void daObjMATO_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/create__11daObjMATO_cFv.s"
 }
@@ -262,7 +317,7 @@ ASM_FUNCTION(create__11daObjMATO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10MatoData_sFv) {
+asm MatoData_s::~MatoData_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__dt__10MatoData_sFv.s"
 }
@@ -273,7 +328,7 @@ ASM_FUNCTION(__dt__10MatoData_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10MatoData_sFv) {
+asm MatoData_s::MatoData_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__ct__10MatoData_sFv.s"
 }
@@ -284,7 +339,7 @@ ASM_FUNCTION(__ct__10MatoData_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__dt__8cM3dGCylFv.s"
 }
@@ -295,7 +350,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__dt__8cM3dGAabFv.s"
 }
@@ -306,7 +361,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__dt__10dCcD_GSttsFv.s"
 }
@@ -314,21 +369,16 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 
 
 /* 80C92BF8-80C92C00 0008+00 .text      daObjMATO_IsDelete__FP11daObjMATO_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMATO_IsDelete__FP11daObjMATO_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_IsDelete__FP11daObjMATO_c.s"
+bool daObjMATO_IsDelete(daObjMATO_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C92C00-80C92C48 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/__dt__10cCcD_GSttsFv.s"
 }

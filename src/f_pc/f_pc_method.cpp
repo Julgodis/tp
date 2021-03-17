@@ -6,77 +6,93 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build process_method_class (process_method_class) False/False
+/* top-level dependencies (begin process_method_class) */
+/* top-level dependencies (end process_method_class) */
+struct process_method_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcMtd_Method__FPFPv_iPv();
-extern "C" extern void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" extern void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" extern void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void fpcMtd_Method__FPFPv_iPv();
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+
+extern "C" void fpcMtd_Method__FPFPv_iPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80022428-80022460 0038+00 .text      fpcMtd_Method__FPFPv_iPv                                     */
+/* 80022428-80022460 0038+00 rc=10 efc=6 .text      fpcMtd_Method__FPFPv_iPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcMtd_Method__FPFPv_iPv) {
+extern "C" asm void fpcMtd_Method__FPFPv_iPv() {
 	nofralloc
 #include "asm/f_pc/f_pc_method/fpcMtd_Method__FPFPv_iPv.s"
 }
 #pragma pop
 
 
-/* 80022460-80022484 0024+00 .text      fpcMtd_Execute__FP20process_method_classPv                   */
+/* 80022460-80022484 0024+00 rc=10 efc=10 .text      fpcMtd_Execute__FP20process_method_classPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcMtd_Execute__FP20process_method_classPv) {
+asm void fpcMtd_Execute(process_method_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_method/fpcMtd_Execute__FP20process_method_classPv.s"
 }
 #pragma pop
 
 
-/* 80022484-800224A8 0024+00 .text      fpcMtd_IsDelete__FP20process_method_classPv                  */
+/* 80022484-800224A8 0024+00 rc=10 efc=10 .text      fpcMtd_IsDelete__FP20process_method_classPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcMtd_IsDelete__FP20process_method_classPv) {
+asm void fpcMtd_IsDelete(process_method_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_method/fpcMtd_IsDelete__FP20process_method_classPv.s"
 }
 #pragma pop
 
 
-/* 800224A8-800224CC 0024+00 .text      fpcMtd_Delete__FP20process_method_classPv                    */
+/* 800224A8-800224CC 0024+00 rc=10 efc=10 .text      fpcMtd_Delete__FP20process_method_classPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcMtd_Delete__FP20process_method_classPv) {
+asm void fpcMtd_Delete(process_method_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_method/fpcMtd_Delete__FP20process_method_classPv.s"
 }
 #pragma pop
 
 
-/* 800224CC-800224F0 0024+00 .text      fpcMtd_Create__FP20process_method_classPv                    */
+/* 800224CC-800224F0 0024+00 rc=10 efc=10 .text      fpcMtd_Create__FP20process_method_classPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcMtd_Create__FP20process_method_classPv) {
+asm void fpcMtd_Create(process_method_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_method/fpcMtd_Create__FP20process_method_classPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

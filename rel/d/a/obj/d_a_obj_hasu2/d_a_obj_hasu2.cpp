@@ -6,26 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct nObjMHasu {
+	struct daObjMHasu_c {
+		nObjMHasu::daObjMHasu_c();
+		void create1st();
+		void setMtx();
+		void CreateHeap();
+		void Create();
+		void Draw();
+		void Delete();
+		void upDownHasu();
+		void updateCount(u8);
+		void setHasuCount(f32);
+		~nObjMHasu::daObjMHasu_c();
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __ct__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void create1st__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void setMtx__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void CreateHeap__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void Create__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f();
-extern "C" extern void Draw__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void Delete__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void upDownHasu__Q29nObjMHasu12daObjMHasu_cFv();
-extern "C" extern void updateCount__Q29nObjMHasu12daObjMHasu_cFUc();
-extern "C" extern void setHasuCount__Q29nObjMHasu12daObjMHasu_cFf();
-extern "C" extern void daObjMHasu_create1st__FPQ29nObjMHasu12daObjMHasu_c();
-extern "C" extern void daObjMHasu_MoveBGDelete__FPQ29nObjMHasu12daObjMHasu_c();
-extern "C" extern void daObjMHasu_MoveBGExecute__FPQ29nObjMHasu12daObjMHasu_c();
-extern "C" extern void daObjMHasu_MoveBGDraw__FPQ29nObjMHasu12daObjMHasu_c();
-extern "C" extern void __dt__Q29nObjMHasu12daObjMHasu_cFv();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f();
+void daObjMHasu_create1st(nObjMHasu::daObjMHasu_c*);
+void daObjMHasu_MoveBGDelete(nObjMHasu::daObjMHasu_c*);
+void daObjMHasu_MoveBGExecute(nObjMHasu::daObjMHasu_c*);
+void daObjMHasu_MoveBGDraw(nObjMHasu::daObjMHasu_c*);
+
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __ct__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void create1st__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void setMtx__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void CreateHeap__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void Create__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f();
+extern "C" void Draw__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void Delete__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void upDownHasu__Q29nObjMHasu12daObjMHasu_cFv();
+extern "C" void updateCount__Q29nObjMHasu12daObjMHasu_cFUc();
+extern "C" void setHasuCount__Q29nObjMHasu12daObjMHasu_cFf();
+extern "C" void daObjMHasu_create1st__FPQ29nObjMHasu12daObjMHasu_c();
+extern "C" void daObjMHasu_MoveBGDelete__FPQ29nObjMHasu12daObjMHasu_c();
+extern "C" void daObjMHasu_MoveBGExecute__FPQ29nObjMHasu12daObjMHasu_c();
+extern "C" void daObjMHasu_MoveBGDraw__FPQ29nObjMHasu12daObjMHasu_c();
+extern "C" void __dt__Q29nObjMHasu12daObjMHasu_cFv();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3634;
 SECTION_RODATA extern const u32 lit_3635;
@@ -49,7 +86,9 @@ SECTION_DATA extern void*const __vt__Q29nObjMHasu12daObjMHasu_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -59,7 +98,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -70,7 +109,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q29nObjMHasu12daObjMHasu_cFv) {
+asm nObjMHasu::daObjMHasu_c::nObjMHasu::daObjMHasu_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/__ct__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -81,7 +120,7 @@ ASM_FUNCTION(__ct__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/create1st__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -92,7 +131,7 @@ ASM_FUNCTION(create1st__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/setMtx__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -103,7 +142,7 @@ ASM_FUNCTION(setMtx__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/CreateHeap__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -114,7 +153,7 @@ ASM_FUNCTION(CreateHeap__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/Create__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -125,7 +164,7 @@ ASM_FUNCTION(Create__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f) {
+extern "C" asm void Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f.s"
 }
@@ -136,7 +175,7 @@ ASM_FUNCTION(Execute__Q29nObjMHasu12daObjMHasu_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/Draw__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -147,7 +186,7 @@ ASM_FUNCTION(Draw__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/Delete__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -158,7 +197,7 @@ ASM_FUNCTION(Delete__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(upDownHasu__Q29nObjMHasu12daObjMHasu_cFv) {
+asm void nObjMHasu::daObjMHasu_c::upDownHasu() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/upDownHasu__Q29nObjMHasu12daObjMHasu_cFv.s"
 }
@@ -169,7 +208,7 @@ ASM_FUNCTION(upDownHasu__Q29nObjMHasu12daObjMHasu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(updateCount__Q29nObjMHasu12daObjMHasu_cFUc) {
+asm void nObjMHasu::daObjMHasu_c::updateCount(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/updateCount__Q29nObjMHasu12daObjMHasu_cFUc.s"
 }
@@ -180,7 +219,7 @@ ASM_FUNCTION(updateCount__Q29nObjMHasu12daObjMHasu_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHasuCount__Q29nObjMHasu12daObjMHasu_cFf) {
+asm void nObjMHasu::daObjMHasu_c::setHasuCount(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/setHasuCount__Q29nObjMHasu12daObjMHasu_cFf.s"
 }
@@ -191,7 +230,7 @@ ASM_FUNCTION(setHasuCount__Q29nObjMHasu12daObjMHasu_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHasu_create1st__FPQ29nObjMHasu12daObjMHasu_c) {
+asm void daObjMHasu_create1st(nObjMHasu::daObjMHasu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/daObjMHasu_create1st__FPQ29nObjMHasu12daObjMHasu_c.s"
 }
@@ -202,7 +241,7 @@ ASM_FUNCTION(daObjMHasu_create1st__FPQ29nObjMHasu12daObjMHasu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHasu_MoveBGDelete__FPQ29nObjMHasu12daObjMHasu_c) {
+asm void daObjMHasu_MoveBGDelete(nObjMHasu::daObjMHasu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/daObjMHasu_MoveBGDelete__FPQ29nObjMHasu12daObjMHasu_c.s"
 }
@@ -213,7 +252,7 @@ ASM_FUNCTION(daObjMHasu_MoveBGDelete__FPQ29nObjMHasu12daObjMHasu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHasu_MoveBGExecute__FPQ29nObjMHasu12daObjMHasu_c) {
+asm void daObjMHasu_MoveBGExecute(nObjMHasu::daObjMHasu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/daObjMHasu_MoveBGExecute__FPQ29nObjMHasu12daObjMHasu_c.s"
 }
@@ -224,7 +263,7 @@ ASM_FUNCTION(daObjMHasu_MoveBGExecute__FPQ29nObjMHasu12daObjMHasu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMHasu_MoveBGDraw__FPQ29nObjMHasu12daObjMHasu_c) {
+asm void daObjMHasu_MoveBGDraw(nObjMHasu::daObjMHasu_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/daObjMHasu_MoveBGDraw__FPQ29nObjMHasu12daObjMHasu_c.s"
 }
@@ -235,7 +274,7 @@ ASM_FUNCTION(daObjMHasu_MoveBGDraw__FPQ29nObjMHasu12daObjMHasu_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q29nObjMHasu12daObjMHasu_cFv) {
+asm nObjMHasu::daObjMHasu_c::~nObjMHasu::daObjMHasu_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hasu2/d_a_obj_hasu2/__dt__Q29nObjMHasu12daObjMHasu_cFv.s"
 }

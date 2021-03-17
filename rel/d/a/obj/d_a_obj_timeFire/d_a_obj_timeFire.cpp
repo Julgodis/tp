@@ -6,26 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTimeFire_c;
+
+struct daTimeFire_HIO_c {
+	daTimeFire_HIO_c();
+	~daTimeFire_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daTimeFire_c {
+	void setBaseMtx();
+	void create();
+	void lightInit();
+	void setLight();
+	void cutLight();
+	void Execute();
+	void fireCheck(u8);
+	bool Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daTimeFire_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daTimeFire_cFv();
-extern "C" extern void create__12daTimeFire_cFv();
-extern "C" extern void lightInit__12daTimeFire_cFv();
-extern "C" extern void setLight__12daTimeFire_cFv();
-extern "C" extern void cutLight__12daTimeFire_cFv();
-extern "C" extern void Execute__12daTimeFire_cFv();
-extern "C" extern void fireCheck__12daTimeFire_cFUc();
-extern "C" extern void Draw__12daTimeFire_cFv();
-extern "C" extern void Delete__12daTimeFire_cFv();
-extern "C" extern void daTimeFire_Draw__FP12daTimeFire_c();
-extern "C" extern void daTimeFire_Execute__FP12daTimeFire_c();
-extern "C" extern void daTimeFire_Delete__FP12daTimeFire_c();
-extern "C" extern void daTimeFire_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daTimeFire_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_timeFire_cpp();
+void daTimeFire_Draw(daTimeFire_c*);
+void daTimeFire_Execute(daTimeFire_c*);
+void daTimeFire_Delete(daTimeFire_c*);
+void daTimeFire_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_timeFire_cpp();
+
+extern "C" void __ct__16daTimeFire_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daTimeFire_cFv();
+extern "C" void create__12daTimeFire_cFv();
+extern "C" void lightInit__12daTimeFire_cFv();
+extern "C" void setLight__12daTimeFire_cFv();
+extern "C" void cutLight__12daTimeFire_cFv();
+extern "C" void Execute__12daTimeFire_cFv();
+extern "C" void fireCheck__12daTimeFire_cFUc();
+extern "C" bool Draw__12daTimeFire_cFv();
+extern "C" void Delete__12daTimeFire_cFv();
+extern "C" void daTimeFire_Draw__FP12daTimeFire_c();
+extern "C" void daTimeFire_Execute__FP12daTimeFire_c();
+extern "C" void daTimeFire_Delete__FP12daTimeFire_c();
+extern "C" void daTimeFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daTimeFire_HIO_cFv();
+extern "C" void __sinit_d_a_obj_timeFire_cpp();
 SECTION_RODATA extern const u32 lit_3686;
 SECTION_RODATA extern const u8 lit_3688[8];
 SECTION_RODATA extern const u32 lit_3707;
@@ -42,8 +79,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -53,7 +93,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daTimeFire_HIO_cFv) {
+asm daTimeFire_HIO_c::daTimeFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/__ct__16daTimeFire_HIO_cFv.s"
 }
@@ -64,7 +104,7 @@ ASM_FUNCTION(__ct__16daTimeFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -75,7 +115,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daTimeFire_cFv) {
+asm void daTimeFire_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/setBaseMtx__12daTimeFire_cFv.s"
 }
@@ -86,7 +126,7 @@ ASM_FUNCTION(setBaseMtx__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTimeFire_cFv) {
+asm void daTimeFire_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/create__12daTimeFire_cFv.s"
 }
@@ -97,7 +137,7 @@ ASM_FUNCTION(create__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightInit__12daTimeFire_cFv) {
+asm void daTimeFire_c::lightInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/lightInit__12daTimeFire_cFv.s"
 }
@@ -108,7 +148,7 @@ ASM_FUNCTION(lightInit__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLight__12daTimeFire_cFv) {
+asm void daTimeFire_c::setLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/setLight__12daTimeFire_cFv.s"
 }
@@ -119,7 +159,7 @@ ASM_FUNCTION(setLight__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutLight__12daTimeFire_cFv) {
+asm void daTimeFire_c::cutLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/cutLight__12daTimeFire_cFv.s"
 }
@@ -130,7 +170,7 @@ ASM_FUNCTION(cutLight__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daTimeFire_cFv) {
+asm void daTimeFire_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/Execute__12daTimeFire_cFv.s"
 }
@@ -141,7 +181,7 @@ ASM_FUNCTION(Execute__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fireCheck__12daTimeFire_cFUc) {
+asm void daTimeFire_c::fireCheck(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/fireCheck__12daTimeFire_cFUc.s"
 }
@@ -149,21 +189,16 @@ ASM_FUNCTION(fireCheck__12daTimeFire_cFUc) {
 
 
 /* 80D0EF88-80D0EF90 0008+00 .text      Draw__12daTimeFire_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daTimeFire_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/Draw__12daTimeFire_cFv.s"
+bool daTimeFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D0EF90-80D0EFB8 0028+00 .text      Delete__12daTimeFire_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daTimeFire_cFv) {
+asm void daTimeFire_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/Delete__12daTimeFire_cFv.s"
 }
@@ -174,7 +209,7 @@ ASM_FUNCTION(Delete__12daTimeFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTimeFire_Draw__FP12daTimeFire_c) {
+asm void daTimeFire_Draw(daTimeFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Draw__FP12daTimeFire_c.s"
 }
@@ -185,7 +220,7 @@ ASM_FUNCTION(daTimeFire_Draw__FP12daTimeFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTimeFire_Execute__FP12daTimeFire_c) {
+asm void daTimeFire_Execute(daTimeFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Execute__FP12daTimeFire_c.s"
 }
@@ -196,7 +231,7 @@ ASM_FUNCTION(daTimeFire_Execute__FP12daTimeFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTimeFire_Delete__FP12daTimeFire_c) {
+asm void daTimeFire_Delete(daTimeFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Delete__FP12daTimeFire_c.s"
 }
@@ -207,7 +242,7 @@ ASM_FUNCTION(daTimeFire_Delete__FP12daTimeFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTimeFire_Create__FP10fopAc_ac_c) {
+asm void daTimeFire_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/daTimeFire_Create__FP10fopAc_ac_c.s"
 }
@@ -218,7 +253,7 @@ ASM_FUNCTION(daTimeFire_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daTimeFire_HIO_cFv) {
+asm daTimeFire_HIO_c::~daTimeFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/__dt__16daTimeFire_HIO_cFv.s"
 }
@@ -229,7 +264,7 @@ ASM_FUNCTION(__dt__16daTimeFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_timeFire_cpp) {
+extern "C" asm void __sinit_d_a_obj_timeFire_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/__sinit_d_a_obj_timeFire_cpp.s"
 }

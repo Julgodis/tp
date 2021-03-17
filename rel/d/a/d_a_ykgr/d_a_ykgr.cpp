@@ -6,23 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JPABaseEmitter;
+struct JPABaseParticle;
+
+struct JPABaseEmitter {
+};
+
+struct JPABaseParticle {
+};
+
+struct dPa_YkgrPcallBack {
+	void draw(JPABaseEmitter*, JPABaseParticle*);
+	void setParam(f32);
+	~dPa_YkgrPcallBack();
+};
+
+struct daYkgr_c {
+	void getPosRate();
+};
+
+struct daYkgr_HIO_c {
+	~daYkgr_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct JPAParticleCallBack {
+	void execute(JPABaseEmitter*, JPABaseParticle*);
+	void draw(JPABaseEmitter*, JPABaseParticle*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" extern void setParam__17dPa_YkgrPcallBackFf();
-extern "C" extern void getPosRate__8daYkgr_cFv();
-extern "C" extern void daYkgrCreate__FPv();
-extern "C" extern void daYkgrDelete__FPv();
-extern "C" extern void daYkgrExecute__FPv();
-extern "C" extern void daYkgrDraw__FPv();
-extern "C" extern void daYkgrIsDelete__FPv();
-extern "C" extern void __dt__12daYkgr_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void __dt__17dPa_YkgrPcallBackFv();
-extern "C" extern void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" extern void __sinit_d_a_ykgr_cpp();
-extern "C" extern void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+void daYkgrCreate(void*);
+bool daYkgrDelete(void*);
+void daYkgrExecute(void*);
+void daYkgrDraw(void*);
+bool daYkgrIsDelete(void*);
+extern "C" void __sinit_d_a_ykgr_cpp();
+
+extern "C" void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void setParam__17dPa_YkgrPcallBackFf();
+extern "C" void getPosRate__8daYkgr_cFv();
+extern "C" void daYkgrCreate__FPv();
+extern "C" bool daYkgrDelete__FPv();
+extern "C" void daYkgrExecute__FPv();
+extern "C" void daYkgrDraw__FPv();
+extern "C" bool daYkgrIsDelete__FPv();
+extern "C" void __dt__12daYkgr_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__17dPa_YkgrPcallBackFv();
+extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void __sinit_d_a_ykgr_cpp();
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
 SECTION_RODATA extern const u32 lit_3759;
 SECTION_RODATA extern const u32 lit_3760;
 SECTION_RODATA extern const u8 lit_3761[4];
@@ -98,8 +141,11 @@ SECTION_BSS extern u8 data_805A91B8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -109,7 +155,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle) {
+asm void dPa_YkgrPcallBack::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle.s"
 }
@@ -120,7 +166,7 @@ ASM_FUNCTION(draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__17dPa_YkgrPcallBackFf) {
+asm void dPa_YkgrPcallBack::setParam(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/setParam__17dPa_YkgrPcallBackFf.s"
 }
@@ -131,7 +177,7 @@ ASM_FUNCTION(setParam__17dPa_YkgrPcallBackFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPosRate__8daYkgr_cFv) {
+asm void daYkgr_c::getPosRate() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/getPosRate__8daYkgr_cFv.s"
 }
@@ -142,7 +188,7 @@ ASM_FUNCTION(getPosRate__8daYkgr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daYkgrCreate__FPv) {
+asm void daYkgrCreate(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrCreate__FPv.s"
 }
@@ -150,21 +196,16 @@ ASM_FUNCTION(daYkgrCreate__FPv) {
 
 
 /* 805A8A48-805A8A50 0008+00 .text      daYkgrDelete__FPv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daYkgrDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrDelete__FPv.s"
+bool daYkgrDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A8A50-805A8BBC 016C+00 .text      daYkgrExecute__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daYkgrExecute__FPv) {
+asm void daYkgrExecute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrExecute__FPv.s"
 }
@@ -175,7 +216,7 @@ ASM_FUNCTION(daYkgrExecute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daYkgrDraw__FPv) {
+asm void daYkgrDraw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrDraw__FPv.s"
 }
@@ -183,21 +224,16 @@ ASM_FUNCTION(daYkgrDraw__FPv) {
 
 
 /* 805A8D90-805A8D98 0008+00 .text      daYkgrIsDelete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daYkgrIsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrIsDelete__FPv.s"
+bool daYkgrIsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A8D98-805A8DF4 005C+00 .text      __dt__12daYkgr_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daYkgr_HIO_cFv) {
+asm daYkgr_HIO_c::~daYkgr_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/__dt__12daYkgr_HIO_cFv.s"
 }
@@ -208,7 +244,7 @@ ASM_FUNCTION(__dt__12daYkgr_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -219,7 +255,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dPa_YkgrPcallBackFv) {
+asm dPa_YkgrPcallBack::~dPa_YkgrPcallBack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/__dt__17dPa_YkgrPcallBackFv.s"
 }
@@ -227,21 +263,16 @@ ASM_FUNCTION(__dt__17dPa_YkgrPcallBackFv) {
 
 
 /* 805A8E9C-805A8EA0 0004+00 .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
+void JPAParticleCallBack::execute(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805A8EA0-805A8FA4 0104+00 .text      __sinit_d_a_ykgr_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_ykgr_cpp) {
+extern "C" asm void __sinit_d_a_ykgr_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/__sinit_d_a_ykgr_cpp.s"
 }
@@ -249,14 +280,9 @@ ASM_FUNCTION(__sinit_d_a_ykgr_cpp) {
 
 
 /* 805A8FA4-805A8FA8 0004+00 .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
+void JPAParticleCallBack::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

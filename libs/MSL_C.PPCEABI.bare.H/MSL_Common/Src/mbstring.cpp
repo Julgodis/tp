@@ -9,33 +9,36 @@
 // Forward References:
 // 
 
-extern "C" extern void wcstombs();
+extern "C" void wcstombs();
+
+extern "C" void wcstombs();
 SECTION_SDATA2 extern u32 MSL_Common_Src_mbstring__lit_74;
 
 // 
 // External References:
 // 
 
-extern "C" extern void strncpy();
+extern "C" void strncpy();
+
+extern "C" void strncpy();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456668-80456670 0004+04 .sdata2    @74                                                          */
+/* 80456668-80456670 0004+04 rc=1 efc=0 .sdata2    @74                                                          */
 u32 MSL_Common_Src_mbstring__lit_74 = 0x0000C0E0;
 /* padding 4 bytes */
 
-/* 80365F74-8036608C 0118+00 .text      wcstombs                                                     */
+/* 80365F74-8036608C 0118+00 rc=1 efc=1 .text      wcstombs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wcstombs) {
+extern "C" asm void wcstombs() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/mbstring/wcstombs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

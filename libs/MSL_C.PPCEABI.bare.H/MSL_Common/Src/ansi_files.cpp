@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void __flush_all();
-extern "C" extern void __close_all();
+extern "C" void __flush_all();
+extern "C" void __close_all();
+
+extern "C" void __flush_all();
+extern "C" void __close_all();
 SECTION_DATA extern void*__files[80];
 SECTION_BSS extern u8 stderr_buff[256];
 SECTION_BSS extern u8 stdout_buff[256];
@@ -20,21 +23,30 @@ SECTION_BSS extern u8 stdin_buff[256];
 // External References:
 // 
 
-extern "C" extern void free();
-extern "C" extern void __end_critical_region();
-extern "C" extern void __begin_critical_region();
-extern "C" extern void fflush();
-extern "C" extern void fclose();
-extern "C" extern void __close_console();
-extern "C" extern void __write_console();
-extern "C" extern void __read_console();
+extern "C" void free();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fflush();
+extern "C" void fclose();
+extern "C" bool __close_console();
+extern "C" void __write_console();
+extern "C" void __read_console();
+
+extern "C" void free();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fflush();
+extern "C" void fclose();
+extern "C" bool __close_console();
+extern "C" void __write_console();
+extern "C" void __read_console();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D29B0-803D2AF0 0140+00 .data      __files                                                      */
+/* 803D29B0-803D2AF0 0140+00 rc=17 efc=15 .data      __files                                                      */
 void* __files[80] = {
 	NULL,
 	(void*)0x0A800000,
@@ -118,22 +130,22 @@ void* __files[80] = {
 	NULL,
 };
 
-/* 8036300C-8036307C 0070+00 .text      __flush_all                                                  */
+/* 8036300C-8036307C 0070+00 rc=2 efc=2 .text      __flush_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__flush_all) {
+extern "C" asm void __flush_all() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/ansi_files/__flush_all.s"
 }
 #pragma pop
 
 
-/* 8036307C-80363124 00A8+00 .text      __close_all                                                  */
+/* 8036307C-80363124 00A8+00 rc=1 efc=1 .text      __close_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__close_all) {
+extern "C" asm void __close_all() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/ansi_files/__close_all.s"
 }
@@ -141,12 +153,12 @@ ASM_FUNCTION(__close_all) {
 
 
 /* ############################################################################################## */
-/* 8044D578-8044D678 0100+00 .bss       stderr_buff                                                  */
+/* 8044D578-8044D678 0100+00 rc=1 efc=0 .bss       stderr_buff                                                  */
 u8 stderr_buff[256];
 
-/* 8044D678-8044D778 0100+00 .bss       stdout_buff                                                  */
+/* 8044D678-8044D778 0100+00 rc=1 efc=0 .bss       stdout_buff                                                  */
 u8 stdout_buff[256];
 
-/* 8044D778-8044D878 0100+00 .bss       stdin_buff                                                   */
+/* 8044D778-8044D878 0100+00 rc=1 efc=0 .bss       stdin_buff                                                   */
 u8 stdin_buff[256];
 

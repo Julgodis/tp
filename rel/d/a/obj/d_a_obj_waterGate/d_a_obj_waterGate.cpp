@@ -6,32 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daWtGate_c;
+
+struct daWtGate_HIO_c {
+	daWtGate_HIO_c();
+	~daWtGate_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daWtGate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void move();
+	void init_modeWait();
+	void modeWait();
+	void init_modeOpen();
+	void modeOpen();
+	void init_modeClose();
+	void modeClose();
+	void init_modeEnd();
+	void modeEnd();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daWtGate_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daWtGate_cFv();
-extern "C" extern void CreateHeap__10daWtGate_cFv();
-extern "C" extern void create__10daWtGate_cFv();
-extern "C" extern void Execute__10daWtGate_cFPPA3_A4_f();
-extern "C" extern void move__10daWtGate_cFv();
-extern "C" extern void init_modeWait__10daWtGate_cFv();
-extern "C" extern void modeWait__10daWtGate_cFv();
-extern "C" extern void init_modeOpen__10daWtGate_cFv();
-extern "C" extern void modeOpen__10daWtGate_cFv();
-extern "C" extern void init_modeClose__10daWtGate_cFv();
-extern "C" extern void modeClose__10daWtGate_cFv();
-extern "C" extern void init_modeEnd__10daWtGate_cFv();
-extern "C" extern void modeEnd__10daWtGate_cFv();
-extern "C" extern void Draw__10daWtGate_cFv();
-extern "C" extern void Delete__10daWtGate_cFv();
-extern "C" extern void daWtGate_Draw__FP10daWtGate_c();
-extern "C" extern void daWtGate_Execute__FP10daWtGate_c();
-extern "C" extern void daWtGate_Delete__FP10daWtGate_c();
-extern "C" extern void daWtGate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daWtGate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_waterGate_cpp();
+extern "C" void Execute__10daWtGate_cFPPA3_A4_f();
+void daWtGate_Draw(daWtGate_c*);
+void daWtGate_Execute(daWtGate_c*);
+void daWtGate_Delete(daWtGate_c*);
+void daWtGate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_waterGate_cpp();
+
+extern "C" void __ct__14daWtGate_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daWtGate_cFv();
+extern "C" void CreateHeap__10daWtGate_cFv();
+extern "C" void create__10daWtGate_cFv();
+extern "C" void Execute__10daWtGate_cFPPA3_A4_f();
+extern "C" void move__10daWtGate_cFv();
+extern "C" void init_modeWait__10daWtGate_cFv();
+extern "C" void modeWait__10daWtGate_cFv();
+extern "C" void init_modeOpen__10daWtGate_cFv();
+extern "C" void modeOpen__10daWtGate_cFv();
+extern "C" void init_modeClose__10daWtGate_cFv();
+extern "C" void modeClose__10daWtGate_cFv();
+extern "C" void init_modeEnd__10daWtGate_cFv();
+extern "C" void modeEnd__10daWtGate_cFv();
+extern "C" void Draw__10daWtGate_cFv();
+extern "C" void Delete__10daWtGate_cFv();
+extern "C" void daWtGate_Draw__FP10daWtGate_c();
+extern "C" void daWtGate_Execute__FP10daWtGate_c();
+extern "C" void daWtGate_Delete__FP10daWtGate_c();
+extern "C" void daWtGate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daWtGate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_waterGate_cpp();
 SECTION_RODATA extern const u32 lit_3625;
 SECTION_RODATA extern const u32 lit_3712;
 SECTION_RODATA extern const u8 lit_3714[8];
@@ -61,8 +104,11 @@ SECTION_BSS extern u8 data_80D2C5C8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -72,7 +118,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daWtGate_HIO_cFv) {
+asm daWtGate_HIO_c::daWtGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/__ct__14daWtGate_HIO_cFv.s"
 }
@@ -83,7 +129,7 @@ ASM_FUNCTION(__ct__14daWtGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -94,7 +140,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daWtGate_cFv) {
+asm void daWtGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/setBaseMtx__10daWtGate_cFv.s"
 }
@@ -105,7 +151,7 @@ ASM_FUNCTION(setBaseMtx__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daWtGate_cFv) {
+asm void daWtGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/CreateHeap__10daWtGate_cFv.s"
 }
@@ -116,7 +162,7 @@ ASM_FUNCTION(CreateHeap__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daWtGate_cFv) {
+asm void daWtGate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/create__10daWtGate_cFv.s"
 }
@@ -127,7 +173,7 @@ ASM_FUNCTION(create__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daWtGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daWtGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/Execute__10daWtGate_cFPPA3_A4_f.s"
 }
@@ -138,7 +184,7 @@ ASM_FUNCTION(Execute__10daWtGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(move__10daWtGate_cFv) {
+asm void daWtGate_c::move() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/move__10daWtGate_cFv.s"
 }
@@ -149,7 +195,7 @@ ASM_FUNCTION(move__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daWtGate_cFv) {
+asm void daWtGate_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/init_modeWait__10daWtGate_cFv.s"
 }
@@ -160,7 +206,7 @@ ASM_FUNCTION(init_modeWait__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daWtGate_cFv) {
+asm void daWtGate_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/modeWait__10daWtGate_cFv.s"
 }
@@ -171,7 +217,7 @@ ASM_FUNCTION(modeWait__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__10daWtGate_cFv) {
+asm void daWtGate_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/init_modeOpen__10daWtGate_cFv.s"
 }
@@ -182,7 +228,7 @@ ASM_FUNCTION(init_modeOpen__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__10daWtGate_cFv) {
+asm void daWtGate_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/modeOpen__10daWtGate_cFv.s"
 }
@@ -193,7 +239,7 @@ ASM_FUNCTION(modeOpen__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeClose__10daWtGate_cFv) {
+asm void daWtGate_c::init_modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/init_modeClose__10daWtGate_cFv.s"
 }
@@ -204,7 +250,7 @@ ASM_FUNCTION(init_modeClose__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__10daWtGate_cFv) {
+asm void daWtGate_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/modeClose__10daWtGate_cFv.s"
 }
@@ -215,7 +261,7 @@ ASM_FUNCTION(modeClose__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeEnd__10daWtGate_cFv) {
+asm void daWtGate_c::init_modeEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/init_modeEnd__10daWtGate_cFv.s"
 }
@@ -223,21 +269,16 @@ ASM_FUNCTION(init_modeEnd__10daWtGate_cFv) {
 
 
 /* 80D2C25C-80D2C260 0004+00 .text      modeEnd__10daWtGate_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeEnd__10daWtGate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/modeEnd__10daWtGate_cFv.s"
+void daWtGate_c::modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2C260-80D2C304 00A4+00 .text      Draw__10daWtGate_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daWtGate_cFv) {
+asm void daWtGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/Draw__10daWtGate_cFv.s"
 }
@@ -248,7 +289,7 @@ ASM_FUNCTION(Draw__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daWtGate_cFv) {
+asm void daWtGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/Delete__10daWtGate_cFv.s"
 }
@@ -259,7 +300,7 @@ ASM_FUNCTION(Delete__10daWtGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtGate_Draw__FP10daWtGate_c) {
+asm void daWtGate_Draw(daWtGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/daWtGate_Draw__FP10daWtGate_c.s"
 }
@@ -270,7 +311,7 @@ ASM_FUNCTION(daWtGate_Draw__FP10daWtGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtGate_Execute__FP10daWtGate_c) {
+asm void daWtGate_Execute(daWtGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/daWtGate_Execute__FP10daWtGate_c.s"
 }
@@ -281,7 +322,7 @@ ASM_FUNCTION(daWtGate_Execute__FP10daWtGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtGate_Delete__FP10daWtGate_c) {
+asm void daWtGate_Delete(daWtGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/daWtGate_Delete__FP10daWtGate_c.s"
 }
@@ -292,7 +333,7 @@ ASM_FUNCTION(daWtGate_Delete__FP10daWtGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daWtGate_Create__FP10fopAc_ac_c) {
+asm void daWtGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/daWtGate_Create__FP10fopAc_ac_c.s"
 }
@@ -303,7 +344,7 @@ ASM_FUNCTION(daWtGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daWtGate_HIO_cFv) {
+asm daWtGate_HIO_c::~daWtGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/__dt__14daWtGate_HIO_cFv.s"
 }
@@ -314,7 +355,7 @@ ASM_FUNCTION(__dt__14daWtGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_waterGate_cpp) {
+extern "C" asm void __sinit_d_a_obj_waterGate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_waterGate/d_a_obj_waterGate/__sinit_d_a_obj_waterGate_cpp.s"
 }

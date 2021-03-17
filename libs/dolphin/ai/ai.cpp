@@ -9,25 +9,45 @@
 // Forward References:
 // 
 
-extern "C" extern void AIRegisterDMACallback();
-extern "C" extern void AIInitDMA();
-extern "C" extern void AIStartDMA();
-extern "C" extern void AIStopDMA();
-extern "C" extern void AISetStreamPlayState();
-extern "C" extern void AIGetStreamPlayState();
-extern "C" extern void AISetDSPSampleRate();
-extern "C" extern void AIGetDSPSampleRate();
-extern "C" extern void __AI_set_stream_sample_rate();
-extern "C" extern void AIGetStreamSampleRate();
-extern "C" extern void AISetStreamVolLeft();
-extern "C" extern void AIGetStreamVolLeft();
-extern "C" extern void AISetStreamVolRight();
-extern "C" extern void AIGetStreamVolRight();
-extern "C" extern void AIInit();
-extern "C" extern void __AISHandler();
-extern "C" extern void __AIDHandler();
-extern "C" extern void __AICallbackStackSwitch();
-extern "C" extern void __AI_SRC_INIT();
+extern "C" void AIRegisterDMACallback();
+extern "C" void AIInitDMA();
+extern "C" void AIStartDMA();
+extern "C" void AIStopDMA();
+extern "C" void AISetStreamPlayState();
+extern "C" static void AIGetStreamPlayState();
+extern "C" void AISetDSPSampleRate();
+extern "C" static void AIGetDSPSampleRate();
+extern "C" static void __AI_set_stream_sample_rate();
+extern "C" static void AIGetStreamSampleRate();
+extern "C" void AISetStreamVolLeft();
+extern "C" static void AIGetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" static void AIGetStreamVolRight();
+extern "C" void AIInit();
+extern "C" static void __AISHandler();
+extern "C" static void __AIDHandler();
+extern "C" static void __AICallbackStackSwitch();
+extern "C" static void __AI_SRC_INIT();
+
+extern "C" void AIRegisterDMACallback();
+extern "C" void AIInitDMA();
+extern "C" void AIStartDMA();
+extern "C" void AIStopDMA();
+extern "C" void AISetStreamPlayState();
+extern "C" static void AIGetStreamPlayState();
+extern "C" void AISetDSPSampleRate();
+extern "C" static void AIGetDSPSampleRate();
+extern "C" static void __AI_set_stream_sample_rate();
+extern "C" static void AIGetStreamSampleRate();
+extern "C" void AISetStreamVolLeft();
+extern "C" static void AIGetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" static void AIGetStreamVolRight();
+extern "C" void AIInit();
+extern "C" static void __AISHandler();
+extern "C" static void __AIDHandler();
+extern "C" static void __AICallbackStackSwitch();
+extern "C" static void __AI_SRC_INIT();
 SECTION_DATA extern u8 ai__lit_1[68 + 4 /* padding */];
 SECTION_SDATA extern void*__AIVersion[2];
 SECTION_SBSS extern u8 __AIS_Callback[4];
@@ -51,174 +71,183 @@ SECTION_SBSS extern u8 data_804518B4[4];
 // External References:
 // 
 
-extern "C" extern void OSRegisterVersion();
-extern "C" extern void OSSetCurrentContext();
-extern "C" extern void OSClearContext();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void __OSSetInterruptHandler();
-extern "C" extern void __OSUnmaskInterrupts();
-extern "C" extern void OSGetTime();
+extern "C" void OSRegisterVersion();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetTime();
+
+extern "C" void OSRegisterVersion();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetTime();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451878-8045187C 0004+00 .sbss      __AIS_Callback                                               */
+/* 80451878-8045187C 0004+00 rc=2 efc=0 .sbss      __AIS_Callback                                               */
 u8 __AIS_Callback[4];
 
-/* 8045187C-80451880 0004+00 .sbss      __AID_Callback                                               */
+/* 8045187C-80451880 0004+00 rc=3 efc=0 .sbss      __AID_Callback                                               */
 u8 __AID_Callback[4];
 
-/* 8034FC70-8034FCB4 0044+00 .text      AIRegisterDMACallback                                        */
+/* 8034FC70-8034FCB4 0044+00 rc=1 efc=1 .text      AIRegisterDMACallback                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIRegisterDMACallback) {
+extern "C" asm void AIRegisterDMACallback() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIRegisterDMACallback.s"
 }
 #pragma pop
 
 
-/* 8034FCB4-8034FD3C 0088+00 .text      AIInitDMA                                                    */
+/* 8034FCB4-8034FD3C 0088+00 rc=2 efc=2 .text      AIInitDMA                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIInitDMA) {
+extern "C" asm void AIInitDMA() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIInitDMA.s"
 }
 #pragma pop
 
 
-/* 8034FD3C-8034FD54 0018+00 .text      AIStartDMA                                                   */
+/* 8034FD3C-8034FD54 0018+00 rc=1 efc=1 .text      AIStartDMA                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIStartDMA) {
+extern "C" asm void AIStartDMA() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIStartDMA.s"
 }
 #pragma pop
 
 
-/* 8034FD54-8034FD6C 0018+00 .text      AIStopDMA                                                    */
+/* 8034FD54-8034FD6C 0018+00 rc=1 efc=1 .text      AIStopDMA                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIStopDMA) {
+extern "C" asm void AIStopDMA() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIStopDMA.s"
 }
 #pragma pop
 
 
-/* 8034FD6C-8034FE44 00D8+00 .text      AISetStreamPlayState                                         */
+/* 8034FD6C-8034FE44 00D8+00 rc=2 efc=1 .text      AISetStreamPlayState                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AISetStreamPlayState) {
+extern "C" asm void AISetStreamPlayState() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AISetStreamPlayState.s"
 }
 #pragma pop
 
 
-/* 8034FE44-8034FE54 0010+00 .text      AIGetStreamPlayState                                         */
+/* 8034FE44-8034FE54 0010+00 rc=1 efc=0 .text      AIGetStreamPlayState                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIGetStreamPlayState) {
+extern "C" asm static void AIGetStreamPlayState() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetStreamPlayState.s"
 }
 #pragma pop
 
 
-/* 8034FE54-8034FF34 00E0+00 .text      AISetDSPSampleRate                                           */
+/* 8034FE54-8034FF34 00E0+00 rc=2 efc=1 .text      AISetDSPSampleRate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AISetDSPSampleRate) {
+extern "C" asm void AISetDSPSampleRate() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AISetDSPSampleRate.s"
 }
 #pragma pop
 
 
-/* 8034FF34-8034FF48 0014+00 .text      AIGetDSPSampleRate                                           */
+/* 8034FF34-8034FF48 0014+00 rc=1 efc=0 .text      AIGetDSPSampleRate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIGetDSPSampleRate) {
+extern "C" asm static void AIGetDSPSampleRate() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetDSPSampleRate.s"
 }
 #pragma pop
 
 
-/* 8034FF48-8035001C 00D4+00 .text      __AI_set_stream_sample_rate                                  */
+/* 8034FF48-8035001C 00D4+00 rc=1 efc=0 .text      __AI_set_stream_sample_rate                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__AI_set_stream_sample_rate) {
+extern "C" asm static void __AI_set_stream_sample_rate() {
 	nofralloc
 #include "asm/dolphin/ai/ai/__AI_set_stream_sample_rate.s"
 }
 #pragma pop
 
 
-/* 8035001C-8035002C 0010+00 .text      AIGetStreamSampleRate                                        */
+/* 8035001C-8035002C 0010+00 rc=3 efc=0 .text      AIGetStreamSampleRate                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIGetStreamSampleRate) {
+extern "C" asm static void AIGetStreamSampleRate() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetStreamSampleRate.s"
 }
 #pragma pop
 
 
-/* 8035002C-80350048 001C+00 .text      AISetStreamVolLeft                                           */
+/* 8035002C-80350048 001C+00 rc=4 efc=1 .text      AISetStreamVolLeft                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AISetStreamVolLeft) {
+extern "C" asm void AISetStreamVolLeft() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AISetStreamVolLeft.s"
 }
 #pragma pop
 
 
-/* 80350048-80350058 0010+00 .text      AIGetStreamVolLeft                                           */
+/* 80350048-80350058 0010+00 rc=3 efc=0 .text      AIGetStreamVolLeft                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIGetStreamVolLeft) {
+extern "C" asm static void AIGetStreamVolLeft() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetStreamVolLeft.s"
 }
 #pragma pop
 
 
-/* 80350058-80350074 001C+00 .text      AISetStreamVolRight                                          */
+/* 80350058-80350074 001C+00 rc=4 efc=1 .text      AISetStreamVolRight                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AISetStreamVolRight) {
+extern "C" asm void AISetStreamVolRight() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AISetStreamVolRight.s"
 }
 #pragma pop
 
 
-/* 80350074-80350084 0010+00 .text      AIGetStreamVolRight                                          */
+/* 80350074-80350084 0010+00 rc=3 efc=0 .text      AIGetStreamVolRight                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIGetStreamVolRight) {
+extern "C" asm static void AIGetStreamVolRight() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIGetStreamVolRight.s"
 }
@@ -226,104 +255,104 @@ ASM_FUNCTION(AIGetStreamVolRight) {
 
 
 /* ############################################################################################## */
-/* 80450A40-80450A48 0004+04 .sdata     __AIVersion                                                  */
+/* 80450A40-80450A48 0004+04 rc=1 efc=0 .sdata     __AIVersion                                                  */
 void* __AIVersion[2] = {
 	(void*)&ai__lit_1,
 	/* padding */
 	NULL,
 };
 
-/* 80451880-80451884 0004+00 .sbss      __CallbackStack                                              */
+/* 80451880-80451884 0004+00 rc=3 efc=0 .sbss      __CallbackStack                                              */
 u8 __CallbackStack[4];
 
-/* 80451884-80451888 0004+00 .sbss      __OldStack                                                   */
+/* 80451884-80451888 0004+00 rc=1 efc=0 .sbss      __OldStack                                                   */
 u8 __OldStack[4];
 
-/* 80451888-8045188C 0004+00 .sbss      __AI_init_flag                                               */
+/* 80451888-8045188C 0004+00 rc=1 efc=0 .sbss      __AI_init_flag                                               */
 u8 __AI_init_flag[4];
 
-/* 8045188C-80451890 0004+00 .sbss      __AID_Active                                                 */
+/* 8045188C-80451890 0004+00 rc=1 efc=0 .sbss      __AID_Active                                                 */
 u8 __AID_Active[4];
 
-/* 80451890-80451894 0004+00 .sbss      bound_32KHz                                                  */
+/* 80451890-80451894 0004+00 rc=2 efc=0 .sbss      bound_32KHz                                                  */
 u8 bound_32KHz[4];
 
-/* 80451894-80451898 0004+00 .sbss      None                                                         */
+/* 80451894-80451898 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_80451894[4];
 
-/* 80451898-8045189C 0004+00 .sbss      bound_48KHz                                                  */
+/* 80451898-8045189C 0004+00 rc=2 efc=0 .sbss      bound_48KHz                                                  */
 u8 bound_48KHz[4];
 
-/* 8045189C-804518A0 0004+00 .sbss      None                                                         */
+/* 8045189C-804518A0 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_8045189C[4];
 
-/* 804518A0-804518A4 0004+00 .sbss      min_wait                                                     */
+/* 804518A0-804518A4 0004+00 rc=2 efc=0 .sbss      min_wait                                                     */
 u8 min_wait[4];
 
-/* 804518A4-804518A8 0004+00 .sbss      None                                                         */
+/* 804518A4-804518A8 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_804518A4[4];
 
-/* 804518A8-804518AC 0004+00 .sbss      max_wait                                                     */
+/* 804518A8-804518AC 0004+00 rc=2 efc=0 .sbss      max_wait                                                     */
 u8 max_wait[4];
 
-/* 804518AC-804518B0 0004+00 .sbss      None                                                         */
+/* 804518AC-804518B0 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_804518AC[4];
 
-/* 804518B0-804518B4 0004+00 .sbss      buffer                                                       */
+/* 804518B0-804518B4 0004+00 rc=2 efc=0 .sbss      buffer                                                       */
 u8 buffer[4];
 
-/* 804518B4-804518B8 0004+00 .sbss      None                                                         */
+/* 804518B4-804518B8 0004+00 rc=2 efc=0 .sbss      None                                                         */
 u8 data_804518B4[4];
 
-/* 80350084-803501F0 016C+00 .text      AIInit                                                       */
+/* 80350084-803501F0 016C+00 rc=1 efc=1 .text      AIInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(AIInit) {
+extern "C" asm void AIInit() {
 	nofralloc
 #include "asm/dolphin/ai/ai/AIInit.s"
 }
 #pragma pop
 
 
-/* 803501F0-8035026C 007C+00 .text      __AISHandler                                                 */
+/* 803501F0-8035026C 007C+00 rc=1 efc=0 .text      __AISHandler                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__AISHandler) {
+extern "C" asm static void __AISHandler() {
 	nofralloc
 #include "asm/dolphin/ai/ai/__AISHandler.s"
 }
 #pragma pop
 
 
-/* 8035026C-80350318 00AC+00 .text      __AIDHandler                                                 */
+/* 8035026C-80350318 00AC+00 rc=1 efc=0 .text      __AIDHandler                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__AIDHandler) {
+extern "C" asm static void __AIDHandler() {
 	nofralloc
 #include "asm/dolphin/ai/ai/__AIDHandler.s"
 }
 #pragma pop
 
 
-/* 80350318-80350370 0058+00 .text      __AICallbackStackSwitch                                      */
+/* 80350318-80350370 0058+00 rc=1 efc=0 .text      __AICallbackStackSwitch                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__AICallbackStackSwitch) {
+extern "C" asm static void __AICallbackStackSwitch() {
 	nofralloc
 #include "asm/dolphin/ai/ai/__AICallbackStackSwitch.s"
 }
 #pragma pop
 
 
-/* 80350370-80350554 01E4+00 .text      __AI_SRC_INIT                                                */
+/* 80350370-80350554 01E4+00 rc=3 efc=0 .text      __AI_SRC_INIT                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__AI_SRC_INIT) {
+extern "C" asm static void __AI_SRC_INIT() {
 	nofralloc
 #include "asm/dolphin/ai/ai/__AI_SRC_INIT.s"
 }
@@ -331,7 +360,7 @@ ASM_FUNCTION(__AI_SRC_INIT) {
 
 
 /* ############################################################################################## */
-/* 803D1BA0-803D1BE8 0044+04 .data      @1                                                           */
+/* 803D1BA0-803D1BE8 0044+04 rc=1 efc=0 .data      @1                                                           */
 u8 ai__lit_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,

@@ -6,32 +6,69 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjStopper2_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjStopper2_c {
+	void getStopModelData();
+	void initBaseMtx();
+	void setBaseMtx();
+	void getMaxOffsetY();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void event_proc_call();
+	void actionWait();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void demoProc();
+	void draw();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void getStopName__Fv();
-extern "C" extern void getStopModelData__15daObjStopper2_cFv();
-extern "C" extern void initBaseMtx__15daObjStopper2_cFv();
-extern "C" extern void setBaseMtx__15daObjStopper2_cFv();
-extern "C" extern void getMaxOffsetY__15daObjStopper2_cFv();
-extern "C" extern void Create__15daObjStopper2_cFv();
-extern "C" extern void CreateHeap__15daObjStopper2_cFv();
-extern "C" extern void create__15daObjStopper2_cFv();
-extern "C" extern void execute__15daObjStopper2_cFv();
-extern "C" extern void event_proc_call__15daObjStopper2_cFv();
-extern "C" extern void actionWait__15daObjStopper2_cFv();
-extern "C" extern void actionOrderEvent__15daObjStopper2_cFv();
-extern "C" extern void actionEvent__15daObjStopper2_cFv();
-extern "C" extern void actionDead__15daObjStopper2_cFv();
-extern "C" extern void demoProc__15daObjStopper2_cFv();
-extern "C" extern void draw__15daObjStopper2_cFv();
-extern "C" extern void _delete__15daObjStopper2_cFv();
-extern "C" extern void daObjStopper2_Draw__FP15daObjStopper2_c();
-extern "C" extern void daObjStopper2_Execute__FP15daObjStopper2_c();
-extern "C" extern void daObjStopper2_Delete__FP15daObjStopper2_c();
-extern "C" extern void daObjStopper2_Create__FP15daObjStopper2_c();
-extern "C" extern void func_80CEFE6C();
+void CheckCreateHeap(fopAc_ac_c*);
+void getStopName();
+void daObjStopper2_Draw(daObjStopper2_c*);
+void daObjStopper2_Execute(daObjStopper2_c*);
+void daObjStopper2_Delete(daObjStopper2_c*);
+void daObjStopper2_Create(daObjStopper2_c*);
+extern "C" void func_80CEFE6C();
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void getStopName__Fv();
+extern "C" void getStopModelData__15daObjStopper2_cFv();
+extern "C" void initBaseMtx__15daObjStopper2_cFv();
+extern "C" void setBaseMtx__15daObjStopper2_cFv();
+extern "C" void getMaxOffsetY__15daObjStopper2_cFv();
+extern "C" void Create__15daObjStopper2_cFv();
+extern "C" void CreateHeap__15daObjStopper2_cFv();
+extern "C" void create__15daObjStopper2_cFv();
+extern "C" void execute__15daObjStopper2_cFv();
+extern "C" void event_proc_call__15daObjStopper2_cFv();
+extern "C" void actionWait__15daObjStopper2_cFv();
+extern "C" void actionOrderEvent__15daObjStopper2_cFv();
+extern "C" void actionEvent__15daObjStopper2_cFv();
+extern "C" void actionDead__15daObjStopper2_cFv();
+extern "C" void demoProc__15daObjStopper2_cFv();
+extern "C" void draw__15daObjStopper2_cFv();
+extern "C" void _delete__15daObjStopper2_cFv();
+extern "C" void daObjStopper2_Draw__FP15daObjStopper2_c();
+extern "C" void daObjStopper2_Execute__FP15daObjStopper2_c();
+extern "C" void daObjStopper2_Delete__FP15daObjStopper2_c();
+extern "C" void daObjStopper2_Create__FP15daObjStopper2_c();
+extern "C" void func_80CEFE6C();
 SECTION_RODATA extern const u8 lit_3722[4];
 SECTION_RODATA extern const u32 lit_3723;
 SECTION_RODATA extern const u32 lit_3921;
@@ -60,7 +97,9 @@ SECTION_DATA extern u8 g_profile_Obj_Stopper2[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -70,7 +109,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -81,7 +120,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStopName__Fv) {
+asm void getStopName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/getStopName__Fv.s"
 }
@@ -92,7 +131,7 @@ ASM_FUNCTION(getStopName__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStopModelData__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::getStopModelData() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/getStopModelData__15daObjStopper2_cFv.s"
 }
@@ -103,7 +142,7 @@ ASM_FUNCTION(getStopModelData__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/initBaseMtx__15daObjStopper2_cFv.s"
 }
@@ -114,7 +153,7 @@ ASM_FUNCTION(initBaseMtx__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/setBaseMtx__15daObjStopper2_cFv.s"
 }
@@ -125,7 +164,7 @@ ASM_FUNCTION(setBaseMtx__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMaxOffsetY__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::getMaxOffsetY() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/getMaxOffsetY__15daObjStopper2_cFv.s"
 }
@@ -136,7 +175,7 @@ ASM_FUNCTION(getMaxOffsetY__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/Create__15daObjStopper2_cFv.s"
 }
@@ -147,7 +186,7 @@ ASM_FUNCTION(Create__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/CreateHeap__15daObjStopper2_cFv.s"
 }
@@ -158,7 +197,7 @@ ASM_FUNCTION(CreateHeap__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/func_80CEF5C8.s"
 }
@@ -169,7 +208,7 @@ ASM_FUNCTION(create__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/execute__15daObjStopper2_cFv.s"
 }
@@ -180,7 +219,7 @@ ASM_FUNCTION(execute__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(event_proc_call__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::event_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/event_proc_call__15daObjStopper2_cFv.s"
 }
@@ -191,7 +230,7 @@ ASM_FUNCTION(event_proc_call__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/actionWait__15daObjStopper2_cFv.s"
 }
@@ -202,7 +241,7 @@ ASM_FUNCTION(actionWait__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/actionOrderEvent__15daObjStopper2_cFv.s"
 }
@@ -213,7 +252,7 @@ ASM_FUNCTION(actionOrderEvent__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/actionEvent__15daObjStopper2_cFv.s"
 }
@@ -221,21 +260,16 @@ ASM_FUNCTION(actionEvent__15daObjStopper2_cFv) {
 
 
 /* 80CEFAD4-80CEFAD8 0004+00 .text      actionDead__15daObjStopper2_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__15daObjStopper2_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/actionDead__15daObjStopper2_cFv.s"
+void daObjStopper2_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEFAD8-80CEFD40 0268+00 .text      demoProc__15daObjStopper2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/demoProc__15daObjStopper2_cFv.s"
 }
@@ -246,7 +280,7 @@ ASM_FUNCTION(demoProc__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/draw__15daObjStopper2_cFv.s"
 }
@@ -257,7 +291,7 @@ ASM_FUNCTION(draw__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__15daObjStopper2_cFv) {
+asm void daObjStopper2_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/_delete__15daObjStopper2_cFv.s"
 }
@@ -268,7 +302,7 @@ ASM_FUNCTION(_delete__15daObjStopper2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper2_Draw__FP15daObjStopper2_c) {
+asm void daObjStopper2_Draw(daObjStopper2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/daObjStopper2_Draw__FP15daObjStopper2_c.s"
 }
@@ -279,7 +313,7 @@ ASM_FUNCTION(daObjStopper2_Draw__FP15daObjStopper2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper2_Execute__FP15daObjStopper2_c) {
+asm void daObjStopper2_Execute(daObjStopper2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/daObjStopper2_Execute__FP15daObjStopper2_c.s"
 }
@@ -290,7 +324,7 @@ ASM_FUNCTION(daObjStopper2_Execute__FP15daObjStopper2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper2_Delete__FP15daObjStopper2_c) {
+asm void daObjStopper2_Delete(daObjStopper2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/daObjStopper2_Delete__FP15daObjStopper2_c.s"
 }
@@ -301,7 +335,7 @@ ASM_FUNCTION(daObjStopper2_Delete__FP15daObjStopper2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper2_Create__FP15daObjStopper2_c) {
+asm void daObjStopper2_Create(daObjStopper2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/daObjStopper2_Create__FP15daObjStopper2_c.s"
 }
@@ -312,7 +346,7 @@ ASM_FUNCTION(daObjStopper2_Create__FP15daObjStopper2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CEFE6C) {
+extern "C" asm void func_80CEFE6C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/func_80CEFE6C.s"
 }

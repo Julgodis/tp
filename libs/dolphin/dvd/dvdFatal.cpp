@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void __DVDPrintFatalMessage();
+extern "C" void __DVDPrintFatalMessage();
+
+extern "C" void __DVDPrintFatalMessage();
 SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
 
 // 
@@ -17,23 +19,23 @@ SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804517C8-804517D0 0004+04 .sbss      FatalFunc                                                    */
+/* 804517C8-804517D0 0004+04 rc=1 efc=0 .sbss      FatalFunc                                                    */
 u8 FatalFunc[4 + 4 /* padding */];
 
-/* 8034BCFC-8034BD2C 0030+00 .text      __DVDPrintFatalMessage                                       */
+/* 8034BCFC-8034BD2C 0030+00 rc=1 efc=1 .text      __DVDPrintFatalMessage                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__DVDPrintFatalMessage) {
+extern "C" asm void __DVDPrintFatalMessage() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdFatal/__DVDPrintFatalMessage.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

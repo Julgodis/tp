@@ -6,29 +6,36 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DShapeMtx (J3DShapeMtx) False/False
+/* top-level dependencies (begin J3DShapeMtx) */
+/* top-level dependencies (end J3DShapeMtx) */
+struct J3DShapeMtx {
+	/* 80273E08 */ bool getUseMtxNum() const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getUseMtxNum__11J3DShapeMtxCFv();
+
+extern "C" bool getUseMtxNum__11J3DShapeMtxCFv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80273E08-80273E10 0008+00 .text      getUseMtxNum__11J3DShapeMtxCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getUseMtxNum__11J3DShapeMtxCFv) {
-	nofralloc
-#include "asm/JSystem/J3DU/J3DUDL/getUseMtxNum__11J3DShapeMtxCFv.s"
+/* 80273E08-80273E10 0008+00 rc=4 efc=4 .text      getUseMtxNum__11J3DShapeMtxCFv                               */
+bool J3DShapeMtx::getUseMtxNum() const {
+	return true;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

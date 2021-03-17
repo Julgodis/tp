@@ -9,23 +9,41 @@
 // Forward References:
 // 
 
-extern "C" extern void TRKDoSetOption();
-extern "C" extern void TRKDoStop();
-extern "C" extern void TRKDoStep();
-extern "C" extern void TRKDoContinue();
-extern "C" extern void TRKDoWriteRegisters();
-extern "C" extern void TRKDoReadRegisters();
-extern "C" extern void TRKDoWriteMemory();
-extern "C" extern void TRKDoReadMemory();
-extern "C" extern void TRKDoSupportMask();
-extern "C" extern void TRKDoVersions();
-extern "C" extern void TRKDoOverride();
-extern "C" extern void TRKDoReset();
-extern "C" extern void TRKDoDisconnect();
-extern "C" extern void TRKDoConnect();
-extern "C" extern void SetTRKConnected();
-extern "C" extern void GetTRKConnected();
-extern "C" extern void OutputData();
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void SetTRKConnected();
+extern "C" void GetTRKConnected();
+extern "C" void OutputData();
+
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void SetTRKConnected();
+extern "C" void GetTRKConnected();
+extern "C" void OutputData();
 SECTION_RODATA extern const u8 lit_321[31 + 1 /* padding */];
 SECTION_RODATA extern const u8 lit_322[8];
 SECTION_RODATA extern const u8 lit_323[9 + 3 /* padding */];
@@ -50,40 +68,68 @@ SECTION_BSS extern u8 IsTRKConnected[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-SECTION_INIT extern void __TRK_reset();
-extern "C" extern void TRKConstructEvent();
-extern "C" extern void TRKPostEvent();
-extern "C" extern void TRKMessageSend();
-extern "C" extern void TRKAppendBuffer_ui8();
-extern "C" extern void TRKReadBuffer();
-extern "C" extern void TRKAppendBuffer();
-extern "C" extern void TRKSetBufferPosition();
-extern "C" extern void TRKResetBuffer();
-extern "C" extern void usr_puts_serial();
-extern "C" extern void TRKTargetAccessARAM();
-extern "C" extern void TRKTargetStop();
-extern "C" extern void TRKTargetStopped();
-extern "C" extern void TRKTargetGetPC();
-extern "C" extern void TRKTargetStepOutOfRange();
-extern "C" extern void TRKTargetSingleStep();
-extern "C" extern void TRKTargetAccessExtended2();
-extern "C" extern void TRKTargetAccessExtended1();
-extern "C" extern void TRKTargetAccessFP();
-extern "C" extern void TRKTargetAccessDefault();
-extern "C" extern void TRKTargetAccessMemory();
-extern "C" extern void __TRK_copy_vectors();
-extern "C" extern void TRKWriteUARTN();
-extern "C" extern void TRKTargetContinue();
-extern "C" extern void SetUseSerialIO();
-extern "C" extern void MWTRACE();
+SECTION_INIT void memset();
+SECTION_INIT void __TRK_reset();
+extern "C" void TRKConstructEvent();
+extern "C" void TRKPostEvent();
+extern "C" void TRKMessageSend();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKReadBuffer();
+extern "C" void TRKAppendBuffer();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKResetBuffer();
+extern "C" void usr_puts_serial();
+extern "C" void TRKTargetAccessARAM();
+extern "C" void TRKTargetStop();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetGetPC();
+extern "C" void TRKTargetStepOutOfRange();
+extern "C" void TRKTargetSingleStep();
+extern "C" void TRKTargetAccessExtended2();
+extern "C" void TRKTargetAccessExtended1();
+extern "C" void TRKTargetAccessFP();
+extern "C" void TRKTargetAccessDefault();
+extern "C" void TRKTargetAccessMemory();
+extern "C" void __TRK_copy_vectors();
+extern "C" void TRKWriteUARTN();
+extern "C" void TRKTargetContinue();
+extern "C" void SetUseSerialIO();
+extern "C" void MWTRACE();
+
+SECTION_INIT void memset();
+SECTION_INIT void __TRK_reset();
+extern "C" void TRKConstructEvent();
+extern "C" void TRKPostEvent();
+extern "C" void TRKMessageSend();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKReadBuffer();
+extern "C" void TRKAppendBuffer();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKResetBuffer();
+extern "C" void usr_puts_serial();
+extern "C" void TRKTargetAccessARAM();
+extern "C" void TRKTargetStop();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetGetPC();
+extern "C" void TRKTargetStepOutOfRange();
+extern "C" void TRKTargetSingleStep();
+extern "C" void TRKTargetAccessExtended2();
+extern "C" void TRKTargetAccessExtended1();
+extern "C" void TRKTargetAccessFP();
+extern "C" void TRKTargetAccessDefault();
+extern "C" void TRKTargetAccessMemory();
+extern "C" void __TRK_copy_vectors();
+extern "C" void TRKWriteUARTN();
+extern "C" void TRKTargetContinue();
+extern "C" void SetUseSerialIO();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A28D0-803A28F0 001F+01 .rodata    @321                                                         */
+/* 803A28D0-803A28F0 001F+01 rc=4 efc=0 .rodata    @321                                                         */
 SECTION_RODATA const u8 lit_321[32] = {
 	0x0A, 0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x4F, 0x70, 0x74, 0x69, 0x6F, 0x6E,
 	0x20, 0x3A, 0x20, 0x53, 0x65, 0x72, 0x69, 0x61, 0x6C, 0x49, 0x4F, 0x20, 0x2D, 0x20, 0x00,
@@ -91,33 +137,33 @@ SECTION_RODATA const u8 lit_321[32] = {
 	0x00,
 };
 
-/* 8036DD14-8036DDBC 00A8+00 .text      TRKDoSetOption                                               */
+/* 8036DD14-8036DDBC 00A8+00 rc=1 efc=1 .text      TRKDoSetOption                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoSetOption) {
+extern "C" asm void TRKDoSetOption() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoSetOption.s"
 }
 #pragma pop
 
 
-/* 8036DDBC-8036DE64 00A8+00 .text      TRKDoStop                                                    */
+/* 8036DDBC-8036DE64 00A8+00 rc=1 efc=1 .text      TRKDoStop                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoStop) {
+extern "C" asm void TRKDoStop() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoStop.s"
 }
 #pragma pop
 
 
-/* 8036DE64-8036E084 0220+00 .text      TRKDoStep                                                    */
+/* 8036DE64-8036E084 0220+00 rc=1 efc=1 .text      TRKDoStep                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoStep) {
+extern "C" asm void TRKDoStep() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoStep.s"
 }
@@ -125,28 +171,28 @@ ASM_FUNCTION(TRKDoStep) {
 
 
 /* ############################################################################################## */
-/* 803A28F0-803A28F8 0008+00 .rodata    @322                                                         */
+/* 803A28F0-803A28F8 0008+00 rc=0 efc=0 .rodata    @322                                                         */
 SECTION_RODATA const u8 lit_322[8] = {
 	0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65, 0x0A, 0x00,
 };
 
-/* 803A28F8-803A2904 0009+03 .rodata    @323                                                         */
+/* 803A28F8-803A2904 0009+03 rc=0 efc=0 .rodata    @323                                                         */
 SECTION_RODATA const u8 lit_323[12] = {
 	0x44, 0x69, 0x73, 0x61, 0x62, 0x6C, 0x65, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 803A2904-803A2910 000C+00 .rodata    @370                                                         */
+/* 803A2904-803A2910 000C+00 rc=1 efc=0 .rodata    @370                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_370[12] = {
 	0x44, 0x6F, 0x43, 0x6F, 0x6E, 0x74, 0x69, 0x6E, 0x75, 0x65, 0x0A, 0x00,
 };
 
-/* 8036E084-8036E134 00B0+00 .text      TRKDoContinue                                                */
+/* 8036E084-8036E134 00B0+00 rc=1 efc=1 .text      TRKDoContinue                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoContinue) {
+extern "C" asm void TRKDoContinue() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoContinue.s"
 }
@@ -154,7 +200,7 @@ ASM_FUNCTION(TRKDoContinue) {
 
 
 /* ############################################################################################## */
-/* 803A2910-803A2930 001F+01 .rodata    @402                                                         */
+/* 803A2910-803A2930 001F+01 rc=0 efc=0 .rodata    @402                                                         */
 SECTION_RODATA const u8 lit_402[32] = {
 	0x44, 0x6F, 0x46, 0x6C, 0x75, 0x73, 0x68, 0x43, 0x61, 0x63, 0x68, 0x65, 0x20, 0x75, 0x6E, 0x69,
 	0x6D, 0x70, 0x6C, 0x65, 0x6D, 0x65, 0x6E, 0x74, 0x65, 0x64, 0x21, 0x21, 0x21, 0x0A, 0x00,
@@ -162,7 +208,7 @@ SECTION_RODATA const u8 lit_402[32] = {
 	0x00,
 };
 
-/* 803A2930-803A2950 001F+01 .rodata    @403                                                         */
+/* 803A2930-803A2950 001F+01 rc=1 efc=0 .rodata    @403                                                         */
 SECTION_RODATA const u8 lit_403[32] = {
 	0x53, 0x65, 0x6E, 0x64, 0x41, 0x43, 0x4B, 0x20, 0x3A, 0x20, 0x43, 0x61, 0x6C, 0x6C, 0x69, 0x6E,
 	0x67, 0x20, 0x4D, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x53, 0x65, 0x6E, 0x64, 0x0A, 0x00,
@@ -170,7 +216,7 @@ SECTION_RODATA const u8 lit_403[32] = {
 	0x00,
 };
 
-/* 803A2950-803A2968 0017+01 .rodata    @404                                                         */
+/* 803A2950-803A2968 0017+01 rc=1 efc=0 .rodata    @404                                                         */
 SECTION_RODATA const u8 lit_404[24] = {
 	0x4D, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x53, 0x65, 0x6E, 0x64, 0x20, 0x65, 0x72, 0x72, 0x20,
 	0x3A, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
@@ -178,22 +224,22 @@ SECTION_RODATA const u8 lit_404[24] = {
 	0x00,
 };
 
-/* 8036E134-8036E3C4 0290+00 .text      TRKDoWriteRegisters                                          */
+/* 8036E134-8036E3C4 0290+00 rc=1 efc=1 .text      TRKDoWriteRegisters                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoWriteRegisters) {
+extern "C" asm void TRKDoWriteRegisters() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoWriteRegisters.s"
 }
 #pragma pop
 
 
-/* 8036E3C4-8036E6A4 02E0+00 .text      TRKDoReadRegisters                                           */
+/* 8036E3C4-8036E6A4 02E0+00 rc=1 efc=1 .text      TRKDoReadRegisters                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoReadRegisters) {
+extern "C" asm void TRKDoReadRegisters() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReadRegisters.s"
 }
@@ -201,7 +247,7 @@ ASM_FUNCTION(TRKDoReadRegisters) {
 
 
 /* ############################################################################################## */
-/* 803D3200-803D321C 001C+00 .data      @499                                                         */
+/* 803D3200-803D321C 001C+00 rc=1 efc=0 .data      @499                                                         */
 void* MetroTRK_Portable_msghndlr__lit_499[7] = {
 	(void*)(((char*)TRKDoWriteMemory)+0x194),
 	(void*)(((char*)TRKDoWriteMemory)+0x1B4),
@@ -212,11 +258,11 @@ void* MetroTRK_Portable_msghndlr__lit_499[7] = {
 	(void*)(((char*)TRKDoWriteMemory)+0x1AC),
 };
 
-/* 8036E6A4-8036E8E0 023C+00 .text      TRKDoWriteMemory                                             */
+/* 8036E6A4-8036E8E0 023C+00 rc=2 efc=1 .text      TRKDoWriteMemory                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoWriteMemory) {
+extern "C" asm void TRKDoWriteMemory() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoWriteMemory.s"
 }
@@ -224,7 +270,7 @@ ASM_FUNCTION(TRKDoWriteMemory) {
 
 
 /* ############################################################################################## */
-/* 803D321C-803D3238 001C+00 .data      @536                                                         */
+/* 803D321C-803D3238 001C+00 rc=1 efc=0 .data      @536                                                         */
 void* MetroTRK_Portable_msghndlr__lit_536[7] = {
 	(void*)(((char*)TRKDoReadMemory)+0x19C),
 	(void*)(((char*)TRKDoReadMemory)+0x1BC),
@@ -235,55 +281,45 @@ void* MetroTRK_Portable_msghndlr__lit_536[7] = {
 	(void*)(((char*)TRKDoReadMemory)+0x1B4),
 };
 
-/* 8036E8E0-8036EB24 0244+00 .text      TRKDoReadMemory                                              */
+/* 8036E8E0-8036EB24 0244+00 rc=2 efc=1 .text      TRKDoReadMemory                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoReadMemory) {
+extern "C" asm void TRKDoReadMemory() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReadMemory.s"
 }
 #pragma pop
 
 
-/* 8036EB24-8036EB2C 0008+00 .text      TRKDoSupportMask                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKDoSupportMask) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoSupportMask.s"
+/* 8036EB24-8036EB2C 0008+00 rc=1 efc=1 .text      TRKDoSupportMask                                             */
+extern "C" bool TRKDoSupportMask() {
+	return false;
 }
-#pragma pop
 
 
-/* 8036EB2C-8036EB34 0008+00 .text      TRKDoVersions                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(TRKDoVersions) {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoVersions.s"
+/* 8036EB2C-8036EB34 0008+00 rc=1 efc=1 .text      TRKDoVersions                                                */
+extern "C" bool TRKDoVersions() {
+	return false;
 }
-#pragma pop
 
 
-/* 8036EB34-8036EB8C 0058+00 .text      TRKDoOverride                                                */
+/* 8036EB34-8036EB8C 0058+00 rc=1 efc=1 .text      TRKDoOverride                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoOverride) {
+extern "C" asm void TRKDoOverride() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoOverride.s"
 }
 #pragma pop
 
 
-/* 8036EB8C-8036EBE4 0058+00 .text      TRKDoReset                                                   */
+/* 8036EB8C-8036EBE4 0058+00 rc=1 efc=1 .text      TRKDoReset                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoReset) {
+extern "C" asm void TRKDoReset() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReset.s"
 }
@@ -291,47 +327,47 @@ ASM_FUNCTION(TRKDoReset) {
 
 
 /* ############################################################################################## */
-/* 8044F288-8044F290 0004+04 .bss       IsTRKConnected                                               */
+/* 8044F288-8044F290 0004+04 rc=4 efc=0 .bss       IsTRKConnected                                               */
 u8 IsTRKConnected[4 + 4 /* padding */];
 
-/* 8036EBE4-8036EC5C 0078+00 .text      TRKDoDisconnect                                              */
+/* 8036EBE4-8036EC5C 0078+00 rc=1 efc=1 .text      TRKDoDisconnect                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoDisconnect) {
+extern "C" asm void TRKDoDisconnect() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoDisconnect.s"
 }
 #pragma pop
 
 
-/* 8036EC5C-8036ECC0 0064+00 .text      TRKDoConnect                                                 */
+/* 8036EC5C-8036ECC0 0064+00 rc=1 efc=1 .text      TRKDoConnect                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKDoConnect) {
+extern "C" asm void TRKDoConnect() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoConnect.s"
 }
 #pragma pop
 
 
-/* 8036ECC0-8036ECCC 000C+00 .text      SetTRKConnected                                              */
+/* 8036ECC0-8036ECCC 000C+00 rc=1 efc=1 .text      SetTRKConnected                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetTRKConnected) {
+extern "C" asm void SetTRKConnected() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/SetTRKConnected.s"
 }
 #pragma pop
 
 
-/* 8036ECCC-8036ECDC 0010+00 .text      GetTRKConnected                                              */
+/* 8036ECCC-8036ECDC 0010+00 rc=3 efc=3 .text      GetTRKConnected                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetTRKConnected) {
+extern "C" asm void GetTRKConnected() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/GetTRKConnected.s"
 }
@@ -339,14 +375,14 @@ ASM_FUNCTION(GetTRKConnected) {
 
 
 /* ############################################################################################## */
-/* 803A2968-803A2990 0028+00 .rodata    @462                                                         */
+/* 803A2968-803A2990 0028+00 rc=0 efc=0 .rodata    @462                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_462[40] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x6C, 0x65, 0x6E, 0x67, 0x74, 0x68, 0x20,
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
-/* 803A2990-803A29C8 0036+02 .rodata    @463                                                         */
+/* 803A2990-803A29C8 0036+02 rc=0 efc=0 .rodata    @463                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_463[56] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x20,
@@ -356,14 +392,14 @@ SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_463[56] = {
 	0x00, 0x00,
 };
 
-/* 803A29C8-803A29F0 0028+00 .rodata    @464                                                         */
+/* 803A29C8-803A29F0 0028+00 rc=0 efc=0 .rodata    @464                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_464[40] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x46, 0x50, 0x20, 0x72, 0x65, 0x67, 0x73, 0x20,
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
-/* 803A29F0-803A2A20 002F+01 .rodata    @465                                                         */
+/* 803A29F0-803A2A20 002F+01 rc=0 efc=0 .rodata    @465                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_465[48] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64,
@@ -372,7 +408,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_465[48] = {
 	0x00,
 };
 
-/* 803A2A20-803A2A50 002F+01 .rodata    @466                                                         */
+/* 803A2A20-803A2A50 002F+01 rc=0 efc=0 .rodata    @466                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_466[48] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64,
@@ -381,7 +417,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_466[48] = {
 	0x00,
 };
 
-/* 803A2A50-803A2A80 002D+03 .rodata    @498                                                         */
+/* 803A2A50-803A2A80 002D+03 rc=0 efc=0 .rodata    @498                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_498[48] = {
 	0x57, 0x72, 0x69, 0x74, 0x65, 0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x28, 0x30, 0x78, 0x25,
 	0x30, 0x32, 0x78, 0x29, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x30, 0x78,
@@ -390,33 +426,32 @@ SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_498[48] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803A2A80-803A2AAC 002C+00 .rodata    @535                                                         */
+/* 803A2A80-803A2AAC 002C+00 rc=0 efc=0 .rodata    @535                                                         */
 SECTION_RODATA const u8 MetroTRK_Portable_msghndlr__lit_535[44] = {
 	0x52, 0x65, 0x61, 0x64, 0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x28, 0x30, 0x78, 0x25, 0x30,
 	0x32, 0x78, 0x29, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x30, 0x78, 0x25,
 	0x30, 0x38, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
-/* 803A2AAC-803A2AB4 0006+02 .rodata    @573                                                         */
+/* 803A2AAC-803A2AB4 0006+02 rc=1 efc=0 .rodata    @573                                                         */
 SECTION_RODATA const u8 lit_573[8] = {
 	0x25, 0x30, 0x32, 0x78, 0x20, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803A2AB4-803A2AB8 0002+02 .rodata    @574                                                         */
+/* 803A2AB4-803A2AB8 0002+02 rc=1 efc=0 .rodata    @574                                                         */
 SECTION_RODATA const u16 lit_574 = 0x0A00;
 /* padding 2 bytes */
 
-/* 8036ECDC-8036ED84 00A8+00 .text      OutputData                                                   */
+/* 8036ECDC-8036ED84 00A8+00 rc=1 efc=1 .text      OutputData                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OutputData) {
+extern "C" asm void OutputData() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/OutputData.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,21 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_maki_class;
+
+struct daObj_Maki_HIO_c {
+	daObj_Maki_HIO_c();
+	~daObj_Maki_HIO_c();
+};
+
+struct obj_maki_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Maki_HIO_cFv();
-extern "C" extern void daObj_Maki_Draw__FP14obj_maki_class();
-extern "C" extern void daObj_Maki_Execute__FP14obj_maki_class();
-extern "C" extern void daObj_Maki_IsDelete__FP14obj_maki_class();
-extern "C" extern void daObj_Maki_Delete__FP14obj_maki_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Maki_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__16daObj_Maki_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_maki_cpp();
+void daObj_Maki_Draw(obj_maki_class*);
+void daObj_Maki_Execute(obj_maki_class*);
+bool daObj_Maki_IsDelete(obj_maki_class*);
+void daObj_Maki_Delete(obj_maki_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Maki_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_maki_cpp();
+
+extern "C" void __ct__16daObj_Maki_HIO_cFv();
+extern "C" void daObj_Maki_Draw__FP14obj_maki_class();
+extern "C" void daObj_Maki_Execute__FP14obj_maki_class();
+extern "C" bool daObj_Maki_IsDelete__FP14obj_maki_class();
+extern "C" void daObj_Maki_Delete__FP14obj_maki_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Maki_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__16daObj_Maki_HIO_cFv();
+extern "C" void __sinit_d_a_obj_maki_cpp();
 SECTION_RODATA extern const u32 lit_3928;
 SECTION_RODATA extern const u32 lit_3929;
 SECTION_RODATA extern const u32 lit_3930;
@@ -50,8 +88,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -61,7 +102,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Maki_HIO_cFv) {
+asm daObj_Maki_HIO_c::daObj_Maki_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__ct__16daObj_Maki_HIO_cFv.s"
 }
@@ -72,7 +113,7 @@ ASM_FUNCTION(__ct__16daObj_Maki_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Maki_Draw__FP14obj_maki_class) {
+asm void daObj_Maki_Draw(obj_maki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Draw__FP14obj_maki_class.s"
 }
@@ -83,7 +124,7 @@ ASM_FUNCTION(daObj_Maki_Draw__FP14obj_maki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Maki_Execute__FP14obj_maki_class) {
+asm void daObj_Maki_Execute(obj_maki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Execute__FP14obj_maki_class.s"
 }
@@ -91,21 +132,16 @@ ASM_FUNCTION(daObj_Maki_Execute__FP14obj_maki_class) {
 
 
 /* 80C90378-80C90380 0008+00 .text      daObj_Maki_IsDelete__FP14obj_maki_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Maki_IsDelete__FP14obj_maki_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_IsDelete__FP14obj_maki_class.s"
+bool daObj_Maki_IsDelete(obj_maki_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C90380-80C903F0 0070+00 .text      daObj_Maki_Delete__FP14obj_maki_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Maki_Delete__FP14obj_maki_class) {
+asm void daObj_Maki_Delete(obj_maki_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Delete__FP14obj_maki_class.s"
 }
@@ -116,7 +152,7 @@ ASM_FUNCTION(daObj_Maki_Delete__FP14obj_maki_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -127,7 +163,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__dt__12J3DFrameCtrlFv.s"
 }
@@ -138,7 +174,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Maki_Create__FP10fopAc_ac_c) {
+asm void daObj_Maki_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_Create__FP10fopAc_ac_c.s"
 }
@@ -149,7 +185,7 @@ ASM_FUNCTION(daObj_Maki_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__dt__8cM3dGSphFv.s"
 }
@@ -160,7 +196,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__dt__8cM3dGAabFv.s"
 }
@@ -171,7 +207,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Maki_HIO_cFv) {
+asm daObj_Maki_HIO_c::~daObj_Maki_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__dt__16daObj_Maki_HIO_cFv.s"
 }
@@ -182,7 +218,7 @@ ASM_FUNCTION(__dt__16daObj_Maki_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_maki_cpp) {
+extern "C" asm void __sinit_d_a_obj_maki_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/__sinit_d_a_obj_maki_cpp.s"
 }

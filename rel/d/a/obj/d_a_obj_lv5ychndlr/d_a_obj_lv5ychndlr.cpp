@@ -6,29 +6,82 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjYchndlr_c;
+struct dBgW;
+
+struct daObjYchndlr_c {
+	void create1st();
+	void setMtx();
+	void rideActor(fopAc_ac_c*);
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjYchndlr_c();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__14daObjYchndlr_cFv();
-extern "C" extern void setMtx__14daObjYchndlr_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void rideActor__14daObjYchndlr_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__14daObjYchndlr_cFv();
-extern "C" extern void Create__14daObjYchndlr_cFv();
-extern "C" extern void Execute__14daObjYchndlr_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjYchndlr_cFv();
-extern "C" extern void Delete__14daObjYchndlr_cFv();
-extern "C" extern void daObjYchndlr_create1st__FP14daObjYchndlr_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c();
-extern "C" extern void daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c();
-extern "C" extern void daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daObjYchndlr_cFv();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__14daObjYchndlr_cFPPA3_A4_f();
+void daObjYchndlr_create1st(daObjYchndlr_c*);
+void daObjYchndlr_MoveBGDelete(daObjYchndlr_c*);
+void daObjYchndlr_MoveBGExecute(daObjYchndlr_c*);
+void daObjYchndlr_MoveBGDraw(daObjYchndlr_c*);
+
+extern "C" void create1st__14daObjYchndlr_cFv();
+extern "C" void setMtx__14daObjYchndlr_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void rideActor__14daObjYchndlr_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__14daObjYchndlr_cFv();
+extern "C" void Create__14daObjYchndlr_cFv();
+extern "C" void Execute__14daObjYchndlr_cFPPA3_A4_f();
+extern "C" void Draw__14daObjYchndlr_cFv();
+extern "C" void Delete__14daObjYchndlr_cFv();
+extern "C" void daObjYchndlr_create1st__FP14daObjYchndlr_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c();
+extern "C" void daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c();
+extern "C" void daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daObjYchndlr_cFv();
 SECTION_RODATA extern const u8 l_bmdidx[8];
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u8 lit_3699[4];
@@ -65,7 +118,9 @@ SECTION_DATA extern void*const __vt__14daObjYchndlr_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +130,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/create1st__14daObjYchndlr_cFv.s"
 }
@@ -86,7 +141,7 @@ ASM_FUNCTION(create1st__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/setMtx__14daObjYchndlr_cFv.s"
 }
@@ -97,7 +152,7 @@ ASM_FUNCTION(setMtx__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -108,7 +163,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideActor__14daObjYchndlr_cFP10fopAc_ac_c) {
+asm void daObjYchndlr_c::rideActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/rideActor__14daObjYchndlr_cFP10fopAc_ac_c.s"
 }
@@ -119,7 +174,7 @@ ASM_FUNCTION(rideActor__14daObjYchndlr_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/CreateHeap__14daObjYchndlr_cFv.s"
 }
@@ -130,7 +185,7 @@ ASM_FUNCTION(CreateHeap__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Create__14daObjYchndlr_cFv.s"
 }
@@ -141,7 +196,7 @@ ASM_FUNCTION(Create__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjYchndlr_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjYchndlr_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Execute__14daObjYchndlr_cFPPA3_A4_f.s"
 }
@@ -152,7 +207,7 @@ ASM_FUNCTION(Execute__14daObjYchndlr_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Draw__14daObjYchndlr_cFv.s"
 }
@@ -163,7 +218,7 @@ ASM_FUNCTION(Draw__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjYchndlr_cFv) {
+asm void daObjYchndlr_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/Delete__14daObjYchndlr_cFv.s"
 }
@@ -174,7 +229,7 @@ ASM_FUNCTION(Delete__14daObjYchndlr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYchndlr_create1st__FP14daObjYchndlr_c) {
+asm void daObjYchndlr_create1st(daObjYchndlr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_create1st__FP14daObjYchndlr_c.s"
 }
@@ -185,7 +240,7 @@ ASM_FUNCTION(daObjYchndlr_create1st__FP14daObjYchndlr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__8cM3dGCylFv.s"
 }
@@ -196,7 +251,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__8cM3dGAabFv.s"
 }
@@ -207,7 +262,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__8dCcD_CylFv.s"
 }
@@ -218,7 +273,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__ct__8dCcD_CylFv.s"
 }
@@ -229,7 +284,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__10dCcD_GSttsFv.s"
 }
@@ -240,7 +295,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c) {
+asm void daObjYchndlr_MoveBGDelete(daObjYchndlr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c.s"
 }
@@ -251,7 +306,7 @@ ASM_FUNCTION(daObjYchndlr_MoveBGDelete__FP14daObjYchndlr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c) {
+asm void daObjYchndlr_MoveBGExecute(daObjYchndlr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c.s"
 }
@@ -262,7 +317,7 @@ ASM_FUNCTION(daObjYchndlr_MoveBGExecute__FP14daObjYchndlr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c) {
+asm void daObjYchndlr_MoveBGDraw(daObjYchndlr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c.s"
 }
@@ -273,7 +328,7 @@ ASM_FUNCTION(daObjYchndlr_MoveBGDraw__FP14daObjYchndlr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__10cCcD_GSttsFv.s"
 }
@@ -284,7 +339,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjYchndlr_cFv) {
+asm daObjYchndlr_c::~daObjYchndlr_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5ychndlr/d_a_obj_lv5ychndlr/__dt__14daObjYchndlr_cFv.s"
 }

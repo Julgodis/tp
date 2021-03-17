@@ -6,30 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjLv6ElevtA_c;
+
+struct daObjLv6ElevtA_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void eventStart();
+	void moveAngle(void*);
+	void Draw();
+	void Delete();
+	~daObjLv6ElevtA_c();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__16daObjLv6ElevtA_cFv();
-extern "C" extern void setMtx__16daObjLv6ElevtA_cFv();
-extern "C" extern void CreateHeap__16daObjLv6ElevtA_cFv();
-extern "C" extern void Create__16daObjLv6ElevtA_cFv();
-extern "C" extern void searchObjLv6SwTurn__FPvPv();
-extern "C" extern void eventStart__16daObjLv6ElevtA_cFv();
-extern "C" extern void moveAngle__16daObjLv6ElevtA_cFPv();
-extern "C" extern void Execute__16daObjLv6ElevtA_cFPPA3_A4_f();
-extern "C" extern void Draw__16daObjLv6ElevtA_cFv();
-extern "C" extern void Delete__16daObjLv6ElevtA_cFv();
-extern "C" extern void daObjLv6ElevtA_create1st__FP16daObjLv6ElevtA_c();
-extern "C" extern void daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c();
-extern "C" extern void daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c();
-extern "C" extern void daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__16daObjLv6ElevtA_cFv();
-extern "C" extern void func_80C837F8();
-extern "C" extern void func_80C83800();
+void searchObjLv6SwTurn(void*, void*);
+extern "C" void Execute__16daObjLv6ElevtA_cFPPA3_A4_f();
+void daObjLv6ElevtA_create1st(daObjLv6ElevtA_c*);
+void daObjLv6ElevtA_MoveBGDelete(daObjLv6ElevtA_c*);
+void daObjLv6ElevtA_MoveBGExecute(daObjLv6ElevtA_c*);
+void daObjLv6ElevtA_MoveBGDraw(daObjLv6ElevtA_c*);
+extern "C" void func_80C837F8();
+extern "C" void func_80C83800();
+
+extern "C" void create1st__16daObjLv6ElevtA_cFv();
+extern "C" void setMtx__16daObjLv6ElevtA_cFv();
+extern "C" void CreateHeap__16daObjLv6ElevtA_cFv();
+extern "C" void Create__16daObjLv6ElevtA_cFv();
+extern "C" void searchObjLv6SwTurn__FPvPv();
+extern "C" void eventStart__16daObjLv6ElevtA_cFv();
+extern "C" void moveAngle__16daObjLv6ElevtA_cFPv();
+extern "C" void Execute__16daObjLv6ElevtA_cFPPA3_A4_f();
+extern "C" void Draw__16daObjLv6ElevtA_cFv();
+extern "C" void Delete__16daObjLv6ElevtA_cFv();
+extern "C" void daObjLv6ElevtA_create1st__FP16daObjLv6ElevtA_c();
+extern "C" void daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c();
+extern "C" void daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c();
+extern "C" void daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__16daObjLv6ElevtA_cFv();
+extern "C" void func_80C837F8();
+extern "C" void func_80C83800();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3752;
 SECTION_RODATA extern const u32 lit_3753;
@@ -48,7 +82,9 @@ SECTION_DATA extern void*const __vt__16daObjLv6ElevtA_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -58,7 +94,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/create1st__16daObjLv6ElevtA_cFv.s"
 }
@@ -69,7 +105,7 @@ ASM_FUNCTION(create1st__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/setMtx__16daObjLv6ElevtA_cFv.s"
 }
@@ -80,7 +116,7 @@ ASM_FUNCTION(setMtx__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/CreateHeap__16daObjLv6ElevtA_cFv.s"
 }
@@ -91,7 +127,7 @@ ASM_FUNCTION(CreateHeap__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/Create__16daObjLv6ElevtA_cFv.s"
 }
@@ -102,7 +138,7 @@ ASM_FUNCTION(Create__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchObjLv6SwTurn__FPvPv) {
+asm void searchObjLv6SwTurn(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/searchObjLv6SwTurn__FPvPv.s"
 }
@@ -113,7 +149,7 @@ ASM_FUNCTION(searchObjLv6SwTurn__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventStart__16daObjLv6ElevtA_cFv.s"
 }
@@ -124,7 +160,7 @@ ASM_FUNCTION(eventStart__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveAngle__16daObjLv6ElevtA_cFPv) {
+asm void daObjLv6ElevtA_c::moveAngle(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/moveAngle__16daObjLv6ElevtA_cFPv.s"
 }
@@ -135,7 +171,7 @@ ASM_FUNCTION(moveAngle__16daObjLv6ElevtA_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjLv6ElevtA_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjLv6ElevtA_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/Execute__16daObjLv6ElevtA_cFPPA3_A4_f.s"
 }
@@ -146,7 +182,7 @@ ASM_FUNCTION(Execute__16daObjLv6ElevtA_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/Draw__16daObjLv6ElevtA_cFv.s"
 }
@@ -157,7 +193,7 @@ ASM_FUNCTION(Draw__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjLv6ElevtA_cFv) {
+asm void daObjLv6ElevtA_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/Delete__16daObjLv6ElevtA_cFv.s"
 }
@@ -168,7 +204,7 @@ ASM_FUNCTION(Delete__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6ElevtA_create1st__FP16daObjLv6ElevtA_c) {
+asm void daObjLv6ElevtA_create1st(daObjLv6ElevtA_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/daObjLv6ElevtA_create1st__FP16daObjLv6ElevtA_c.s"
 }
@@ -179,7 +215,7 @@ ASM_FUNCTION(daObjLv6ElevtA_create1st__FP16daObjLv6ElevtA_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c) {
+asm void daObjLv6ElevtA_MoveBGDelete(daObjLv6ElevtA_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c.s"
 }
@@ -190,7 +226,7 @@ ASM_FUNCTION(daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c) {
+asm void daObjLv6ElevtA_MoveBGExecute(daObjLv6ElevtA_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c.s"
 }
@@ -201,7 +237,7 @@ ASM_FUNCTION(daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c) {
+asm void daObjLv6ElevtA_MoveBGDraw(daObjLv6ElevtA_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c.s"
 }
@@ -212,7 +248,7 @@ ASM_FUNCTION(daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/__dt__17dEvLib_callback_cFv.s"
 }
@@ -220,43 +256,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C8374C-80C83754 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C83754-80C8375C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C8375C-80C83764 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C83764-80C837F8 0094+00 .text      __dt__16daObjLv6ElevtA_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjLv6ElevtA_cFv) {
+asm daObjLv6ElevtA_c::~daObjLv6ElevtA_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/__dt__16daObjLv6ElevtA_cFv.s"
 }
@@ -267,7 +288,7 @@ ASM_FUNCTION(__dt__16daObjLv6ElevtA_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C837F8) {
+extern "C" asm void func_80C837F8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/func_80C837F8.s"
 }
@@ -278,7 +299,7 @@ ASM_FUNCTION(func_80C837F8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C83800) {
+extern "C" asm void func_80C83800() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/func_80C83800.s"
 }

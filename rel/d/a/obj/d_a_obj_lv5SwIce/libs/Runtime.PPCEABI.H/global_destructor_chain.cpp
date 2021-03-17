@@ -9,8 +9,11 @@
 // Forward References:
 // 
 
-extern "C" extern void __register_global_object();
-extern "C" extern void __destroy_global_chain();
+extern "C" void __register_global_object();
+extern "C" void __destroy_global_chain();
+
+extern "C" void __register_global_object();
+extern "C" void __destroy_global_chain();
 extern const void*const __destroy_global_chain_reference;
 extern const u8 pad_80C6D500[8];
 SECTION_BSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
@@ -18,6 +21,7 @@ SECTION_BSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 // 
 // External References:
 // 
+
 
 
 // 
@@ -34,7 +38,7 @@ __declspec(section ".dtors$10") const void* const __destroy_global_chain_referen
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__register_global_object) {
+extern "C" asm void __register_global_object() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5SwIce/libs/Runtime.PPCEABI.H/global_destructor_chain/__register_global_object.s"
 }
@@ -45,7 +49,7 @@ ASM_FUNCTION(__register_global_object) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__destroy_global_chain) {
+extern "C" asm void __destroy_global_chain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5SwIce/libs/Runtime.PPCEABI.H/global_destructor_chain/__destroy_global_chain.s"
 }

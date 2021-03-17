@@ -6,31 +6,70 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjSM_DOOR_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjSM_DOOR_c {
+	void ChangeModel();
+	void Action();
+	void SetDzb();
+	void ReleaceDzb();
+	void DrawChk1();
+	void DrawChk2();
+	void setBaseMtx();
+	void create();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjSM_DOOR_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjSM_DOOR_Delete__FP14daObjSM_DOOR_c();
-extern "C" extern void s_obj_sub__FPvPv();
-extern "C" extern void ChangeModel__14daObjSM_DOOR_cFv();
-extern "C" extern void Action__14daObjSM_DOOR_cFv();
-extern "C" extern void SetDzb__14daObjSM_DOOR_cFv();
-extern "C" extern void ReleaceDzb__14daObjSM_DOOR_cFv();
-extern "C" extern void DrawChk1__14daObjSM_DOOR_cFv();
-extern "C" extern void DrawChk2__14daObjSM_DOOR_cFv();
-extern "C" extern void setBaseMtx__14daObjSM_DOOR_cFv();
-extern "C" extern void daObjSM_DOOR_Draw__FP14daObjSM_DOOR_c();
-extern "C" extern void daObjSM_DOOR_Execute__FP14daObjSM_DOOR_c();
-extern "C" extern void create__14daObjSM_DOOR_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjSM_DOOR_IsDelete__FP14daObjSM_DOOR_c();
-extern "C" extern void CreateHeap__14daObjSM_DOOR_cFv();
-extern "C" extern void Create__14daObjSM_DOOR_cFv();
-extern "C" extern void Execute__14daObjSM_DOOR_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjSM_DOOR_cFv();
-extern "C" extern void Delete__14daObjSM_DOOR_cFv();
-extern "C" extern void func_80CD9578();
-extern "C" extern void func_80CD9580();
+void daObjSM_DOOR_Create(fopAc_ac_c*);
+void daObjSM_DOOR_Delete(daObjSM_DOOR_c*);
+void s_obj_sub(void*, void*);
+void daObjSM_DOOR_Draw(daObjSM_DOOR_c*);
+void daObjSM_DOOR_Execute(daObjSM_DOOR_c*);
+bool daObjSM_DOOR_IsDelete(daObjSM_DOOR_c*);
+extern "C" void Execute__14daObjSM_DOOR_cFPPA3_A4_f();
+extern "C" void func_80CD9578();
+extern "C" void func_80CD9580();
+
+extern "C" void daObjSM_DOOR_Create__FP10fopAc_ac_c();
+extern "C" void daObjSM_DOOR_Delete__FP14daObjSM_DOOR_c();
+extern "C" void s_obj_sub__FPvPv();
+extern "C" void ChangeModel__14daObjSM_DOOR_cFv();
+extern "C" void Action__14daObjSM_DOOR_cFv();
+extern "C" void SetDzb__14daObjSM_DOOR_cFv();
+extern "C" void ReleaceDzb__14daObjSM_DOOR_cFv();
+extern "C" void DrawChk1__14daObjSM_DOOR_cFv();
+extern "C" void DrawChk2__14daObjSM_DOOR_cFv();
+extern "C" void setBaseMtx__14daObjSM_DOOR_cFv();
+extern "C" void daObjSM_DOOR_Draw__FP14daObjSM_DOOR_c();
+extern "C" void daObjSM_DOOR_Execute__FP14daObjSM_DOOR_c();
+extern "C" void create__14daObjSM_DOOR_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" bool daObjSM_DOOR_IsDelete__FP14daObjSM_DOOR_c();
+extern "C" void CreateHeap__14daObjSM_DOOR_cFv();
+extern "C" void Create__14daObjSM_DOOR_cFv();
+extern "C" void Execute__14daObjSM_DOOR_cFPPA3_A4_f();
+extern "C" void Draw__14daObjSM_DOOR_cFv();
+extern "C" void Delete__14daObjSM_DOOR_cFv();
+extern "C" void func_80CD9578();
+extern "C" void func_80CD9580();
 SECTION_RODATA extern const u8 lit_3697[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3698[8];
 SECTION_RODATA extern const u8 lit_3699[8];
@@ -58,7 +97,9 @@ SECTION_DATA extern void*const __vt__14daObjSM_DOOR_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -68,7 +109,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSM_DOOR_Create__FP10fopAc_ac_c) {
+asm void daObjSM_DOOR_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/daObjSM_DOOR_Create__FP10fopAc_ac_c.s"
 }
@@ -79,7 +120,7 @@ ASM_FUNCTION(daObjSM_DOOR_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSM_DOOR_Delete__FP14daObjSM_DOOR_c) {
+asm void daObjSM_DOOR_Delete(daObjSM_DOOR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/daObjSM_DOOR_Delete__FP14daObjSM_DOOR_c.s"
 }
@@ -90,7 +131,7 @@ ASM_FUNCTION(daObjSM_DOOR_Delete__FP14daObjSM_DOOR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_sub__FPvPv) {
+asm void s_obj_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/s_obj_sub__FPvPv.s"
 }
@@ -101,7 +142,7 @@ ASM_FUNCTION(s_obj_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ChangeModel__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::ChangeModel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/ChangeModel__14daObjSM_DOOR_cFv.s"
 }
@@ -112,7 +153,7 @@ ASM_FUNCTION(ChangeModel__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/Action__14daObjSM_DOOR_cFv.s"
 }
@@ -123,7 +164,7 @@ ASM_FUNCTION(Action__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetDzb__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::SetDzb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/SetDzb__14daObjSM_DOOR_cFv.s"
 }
@@ -134,7 +175,7 @@ ASM_FUNCTION(SetDzb__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ReleaceDzb__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::ReleaceDzb() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/ReleaceDzb__14daObjSM_DOOR_cFv.s"
 }
@@ -145,7 +186,7 @@ ASM_FUNCTION(ReleaceDzb__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DrawChk1__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::DrawChk1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/DrawChk1__14daObjSM_DOOR_cFv.s"
 }
@@ -156,7 +197,7 @@ ASM_FUNCTION(DrawChk1__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DrawChk2__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::DrawChk2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/DrawChk2__14daObjSM_DOOR_cFv.s"
 }
@@ -167,7 +208,7 @@ ASM_FUNCTION(DrawChk2__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/setBaseMtx__14daObjSM_DOOR_cFv.s"
 }
@@ -178,7 +219,7 @@ ASM_FUNCTION(setBaseMtx__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSM_DOOR_Draw__FP14daObjSM_DOOR_c) {
+asm void daObjSM_DOOR_Draw(daObjSM_DOOR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/daObjSM_DOOR_Draw__FP14daObjSM_DOOR_c.s"
 }
@@ -189,7 +230,7 @@ ASM_FUNCTION(daObjSM_DOOR_Draw__FP14daObjSM_DOOR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSM_DOOR_Execute__FP14daObjSM_DOOR_c) {
+asm void daObjSM_DOOR_Execute(daObjSM_DOOR_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/daObjSM_DOOR_Execute__FP14daObjSM_DOOR_c.s"
 }
@@ -200,7 +241,7 @@ ASM_FUNCTION(daObjSM_DOOR_Execute__FP14daObjSM_DOOR_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/create__14daObjSM_DOOR_cFv.s"
 }
@@ -211,7 +252,7 @@ ASM_FUNCTION(create__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -219,21 +260,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80CD909C-80CD90A4 0008+00 .text      daObjSM_DOOR_IsDelete__FP14daObjSM_DOOR_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjSM_DOOR_IsDelete__FP14daObjSM_DOOR_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/daObjSM_DOOR_IsDelete__FP14daObjSM_DOOR_c.s"
+bool daObjSM_DOOR_IsDelete(daObjSM_DOOR_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CD90A4-80CD9258 01B4+00 .text      CreateHeap__14daObjSM_DOOR_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/CreateHeap__14daObjSM_DOOR_cFv.s"
 }
@@ -244,7 +280,7 @@ ASM_FUNCTION(CreateHeap__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/func_80CD9258.s"
 }
@@ -255,7 +291,7 @@ ASM_FUNCTION(Create__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjSM_DOOR_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjSM_DOOR_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/Execute__14daObjSM_DOOR_cFPPA3_A4_f.s"
 }
@@ -266,7 +302,7 @@ ASM_FUNCTION(Execute__14daObjSM_DOOR_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/Draw__14daObjSM_DOOR_cFv.s"
 }
@@ -277,7 +313,7 @@ ASM_FUNCTION(Draw__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjSM_DOOR_cFv) {
+asm void daObjSM_DOOR_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/Delete__14daObjSM_DOOR_cFv.s"
 }
@@ -288,7 +324,7 @@ ASM_FUNCTION(Delete__14daObjSM_DOOR_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CD9578) {
+extern "C" asm void func_80CD9578() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/func_80CD9578.s"
 }
@@ -299,7 +335,7 @@ ASM_FUNCTION(func_80CD9578) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CD9580) {
+extern "C" asm void func_80CD9580() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sm_door/d_a_obj_sm_door/func_80CD9580.s"
 }

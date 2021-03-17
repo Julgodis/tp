@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void fmod();
+extern "C" void fmod();
+
+extern "C" void fmod();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_fmod();
+extern "C" void __ieee754_fmod();
+
+extern "C" void __ieee754_fmod();
 
 // 
 // Declarations:
 // 
 
-/* 8036C760-8036C780 0020+00 .text      fmod                                                         */
+/* 8036C760-8036C780 0020+00 rc=8 efc=8 .text      fmod                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fmod) {
+extern "C" asm void fmod() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_fmod/fmod.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

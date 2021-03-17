@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void TRK_fill_mem();
+extern "C" void TRK_fill_mem();
+
+extern "C" void TRK_fill_mem();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8036F580-8036F638 00B8+00 .text      TRK_fill_mem                                                 */
+/* 8036F580-8036F638 00B8+00 rc=1 efc=1 .text      TRK_fill_mem                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRK_fill_mem) {
+extern "C" asm void TRK_fill_mem() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mem_TRK/TRK_fill_mem.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

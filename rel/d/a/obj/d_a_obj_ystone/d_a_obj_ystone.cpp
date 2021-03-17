@@ -6,19 +6,46 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_ystone_class;
+struct fopAc_ac_c;
+
+struct obj_ystone_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getNowLevel__Fv();
-extern "C" extern void daObj_Ystone_Draw__FP16obj_ystone_class();
-extern "C" extern void setModelBaseMtx__FP16obj_ystone_class();
-extern "C" extern void action__FP16obj_ystone_class();
-extern "C" extern void daObj_Ystone_Execute__FP16obj_ystone_class();
-extern "C" extern void daObj_Ystone_IsDelete__FP16obj_ystone_class();
-extern "C" extern void daObj_Ystone_Delete__FP16obj_ystone_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Ystone_Create__FP10fopAc_ac_c();
+void getNowLevel();
+void daObj_Ystone_Draw(obj_ystone_class*);
+void setModelBaseMtx(obj_ystone_class*);
+void action(obj_ystone_class*);
+void daObj_Ystone_Execute(obj_ystone_class*);
+bool daObj_Ystone_IsDelete(obj_ystone_class*);
+void daObj_Ystone_Delete(obj_ystone_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Ystone_Create(fopAc_ac_c*);
+
+extern "C" void getNowLevel__Fv();
+extern "C" void daObj_Ystone_Draw__FP16obj_ystone_class();
+extern "C" void setModelBaseMtx__FP16obj_ystone_class();
+extern "C" void action__FP16obj_ystone_class();
+extern "C" void daObj_Ystone_Execute__FP16obj_ystone_class();
+extern "C" bool daObj_Ystone_IsDelete__FP16obj_ystone_class();
+extern "C" void daObj_Ystone_Delete__FP16obj_ystone_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Ystone_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_bmdIndex[28];
 SECTION_RODATA extern const u8 l_brkIndex[12];
 SECTION_RODATA extern const u8 l_btkIndex[28];
@@ -38,7 +65,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +77,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNowLevel__Fv) {
+asm void getNowLevel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/getNowLevel__Fv.s"
 }
@@ -59,7 +88,7 @@ ASM_FUNCTION(getNowLevel__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ystone_Draw__FP16obj_ystone_class) {
+asm void daObj_Ystone_Draw(obj_ystone_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_Draw__FP16obj_ystone_class.s"
 }
@@ -70,7 +99,7 @@ ASM_FUNCTION(daObj_Ystone_Draw__FP16obj_ystone_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelBaseMtx__FP16obj_ystone_class) {
+asm void setModelBaseMtx(obj_ystone_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/setModelBaseMtx__FP16obj_ystone_class.s"
 }
@@ -81,7 +110,7 @@ ASM_FUNCTION(setModelBaseMtx__FP16obj_ystone_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP16obj_ystone_class) {
+asm void action(obj_ystone_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/action__FP16obj_ystone_class.s"
 }
@@ -92,7 +121,7 @@ ASM_FUNCTION(action__FP16obj_ystone_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ystone_Execute__FP16obj_ystone_class) {
+asm void daObj_Ystone_Execute(obj_ystone_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_Execute__FP16obj_ystone_class.s"
 }
@@ -100,21 +129,16 @@ ASM_FUNCTION(daObj_Ystone_Execute__FP16obj_ystone_class) {
 
 
 /* 80D3E770-80D3E778 0008+00 .text      daObj_Ystone_IsDelete__FP16obj_ystone_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ystone_IsDelete__FP16obj_ystone_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_IsDelete__FP16obj_ystone_class.s"
+bool daObj_Ystone_IsDelete(obj_ystone_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3E778-80D3E7B8 0040+00 .text      daObj_Ystone_Delete__FP16obj_ystone_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ystone_Delete__FP16obj_ystone_class) {
+asm void daObj_Ystone_Delete(obj_ystone_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_Delete__FP16obj_ystone_class.s"
 }
@@ -125,7 +149,7 @@ ASM_FUNCTION(daObj_Ystone_Delete__FP16obj_ystone_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -136,7 +160,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/__dt__12J3DFrameCtrlFv.s"
 }
@@ -147,7 +171,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Ystone_Create__FP10fopAc_ac_c) {
+asm void daObj_Ystone_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_Create__FP10fopAc_ac_c.s"
 }

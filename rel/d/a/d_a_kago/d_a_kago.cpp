@@ -6,100 +6,235 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daKago_c;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daKago_HIO_c {
+	daKago_HIO_c();
+	~daKago_HIO_c();
+};
+
+struct daKago_c {
+	void getBckName(s32);
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void draw();
+	void executeBalloonMenu();
+	void checkGroundHeight(cXyz, f32*);
+	void checkRoofHeight(cXyz);
+	void checkMoveHeight();
+	void checkSizeBg();
+	bool getBeforeGroundHeight(u8);
+	void demo_skip(s32);
+	void DemoSkipCallBack(void*, s32);
+	void setActionMode(s32, s32);
+	void setMidnaTagPos();
+	void setMidnaRideOn();
+	void setPlayerRideOn();
+	void setRideOff();
+	void searchNearPassPoint();
+	void setSceneChange(s32);
+	void createBalloonScore();
+	void startBalloonScore();
+	void endBalloonScore();
+	void checkNextPath(cXyz);
+	void checkHeight();
+	void checkYaguraPos(cXyz);
+	void checkWallHitFall(s32);
+	void checkAttackStart();
+	void getValueY(f32);
+	void getValueX(f32);
+	void getValueAbsX(f32);
+	void flySpeedCalcLockOn();
+	void checkFlySceneChange();
+	void setFlyAway();
+	void setFlyAnime();
+	void executeFly();
+	void executeStagger();
+	void executeWait();
+	void calcAttackMove(s32);
+	void executeAttack();
+	void calcCircleCamera(s32);
+	void executeEvent();
+	void initPerchDemo();
+	void executePerchDemo();
+	void PerchDemoAwayForward();
+	void executePerch();
+	void executeEvent2();
+	void initFirstDemo();
+	void executeFirstDemo();
+	void executePerch2();
+	void executeLandingLakeHairia();
+	void executeLandingBoartHouse();
+	void executeLanding();
+	void moveDemoFly();
+	void setFlyEffect();
+	void setDashEffect();
+	void setDamageEffect();
+	void setDashBlurEffect(s32);
+	void setWallHitEffect(cXyz, s32);
+	void setSibukiEffect();
+	void setDashSibukiEffect();
+	void setWaterFallEffect();
+	void setFlySound();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void CreateHeap();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct daPy_py_c {
+	void getMidnaActor();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daKago_HIO_cFv();
-extern "C" extern void getBckName__8daKago_cFi();
-extern "C" extern void setBck__8daKago_cFiUcff();
-extern "C" extern void checkBck__8daKago_cFi();
-extern "C" extern void draw__8daKago_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daKago_Draw__FP8daKago_c();
-extern "C" extern void executeBalloonMenu__8daKago_cFv();
-extern "C" extern void checkGroundHeight__8daKago_cF4cXyzPf();
-extern "C" extern void checkRoofHeight__8daKago_cF4cXyz();
-extern "C" extern void checkMoveHeight__8daKago_cFv();
-extern "C" extern void checkSizeBg__8daKago_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void getBeforeGroundHeight__8daKago_cFUc();
-extern "C" extern void demo_skip__8daKago_cFi();
-extern "C" extern void DemoSkipCallBack__8daKago_cFPvi();
-extern "C" extern void setActionMode__8daKago_cFii();
-extern "C" extern void setMidnaTagPos__8daKago_cFv();
-extern "C" extern void setMidnaRideOn__8daKago_cFv();
-extern "C" extern void setPlayerRideOn__8daKago_cFv();
-extern "C" extern void setRideOff__8daKago_cFv();
-extern "C" extern void searchNearPassPoint__8daKago_cFv();
-extern "C" extern void setSceneChange__8daKago_cFi();
-extern "C" extern void createBalloonScore__8daKago_cFv();
-extern "C" extern void startBalloonScore__8daKago_cFv();
-extern "C" extern void endBalloonScore__8daKago_cFv();
-extern "C" extern void checkNextPath__8daKago_cF4cXyz();
-extern "C" extern void checkHeight__8daKago_cFv();
-extern "C" extern void checkYaguraPos__8daKago_cF4cXyz();
-extern "C" extern void checkWallHitFall__8daKago_cFi();
-extern "C" extern void checkAttackStart__8daKago_cFv();
-extern "C" extern void getValueY__8daKago_cFf();
-extern "C" extern void getValueX__8daKago_cFf();
-extern "C" extern void getValueAbsX__8daKago_cFf();
-extern "C" extern void flySpeedCalcLockOn__8daKago_cFv();
-extern "C" extern void flySpeedCalc__8daKago_cFsi();
-extern "C" extern void checkFlySceneChange__8daKago_cFv();
-extern "C" extern void setFlyAway__8daKago_cFv();
-extern "C" extern void setFlyAnime__8daKago_cFv();
-extern "C" extern void executeFly__8daKago_cFv();
-extern "C" extern void executeStagger__8daKago_cFv();
-extern "C" extern void executeWait__8daKago_cFv();
-extern "C" extern void calcAttackMove__8daKago_cFi();
-extern "C" extern void executeAttack__8daKago_cFv();
-extern "C" extern void calcCircleCamera__8daKago_cFi();
-extern "C" extern void executeEvent__8daKago_cFv();
-extern "C" extern void initPerchDemo__8daKago_cFv();
-extern "C" extern void executePerchDemo__8daKago_cFv();
-extern "C" extern void PerchDemoAwayForward__8daKago_cFv();
-extern "C" extern void executePerch__8daKago_cFv();
-extern "C" extern void executeEvent2__8daKago_cFv();
-extern "C" extern void initFirstDemo__8daKago_cFv();
-extern "C" extern void executeFirstDemo__8daKago_cFv();
-extern "C" extern void executePerch2__8daKago_cFv();
-extern "C" extern void executeLandingLakeHairia__8daKago_cFv();
-extern "C" extern void executeLandingBoartHouse__8daKago_cFv();
-extern "C" extern void executeLanding__8daKago_cFv();
-extern "C" extern void moveDemoFly__8daKago_cFv();
-extern "C" extern void setFlyEffect__8daKago_cFv();
-extern "C" extern void setDashEffect__8daKago_cFv();
-extern "C" extern void setDamageEffect__8daKago_cFv();
-extern "C" extern void setDashBlurEffect__8daKago_cFi();
-extern "C" extern void setWallHitEffect__8daKago_cF4cXyzi();
-extern "C" extern void setSibukiEffect__8daKago_cFv();
-extern "C" extern void setDashSibukiEffect__8daKago_cFv();
-extern "C" extern void setWaterFallEffect__8daKago_cFv();
-extern "C" extern void s_waterfall__FPvPv();
-extern "C" extern void setFlySound__8daKago_cFv();
-extern "C" extern void action__8daKago_cFv();
-extern "C" extern void mtx_set__8daKago_cFv();
-extern "C" extern void cc_set__8daKago_cFv();
-extern "C" extern void execute__8daKago_cFv();
-extern "C" extern void daKago_Execute__FP8daKago_c();
-extern "C" extern void daKago_IsDelete__FP8daKago_c();
-extern "C" extern void _delete__8daKago_cFv();
-extern "C" extern void daKago_Delete__FP8daKago_c();
-extern "C" extern void ctrlJoint__8daKago_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__8daKago_cFP8J3DJointi();
-extern "C" extern void CreateHeap__8daKago_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__8daKago_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daKago_Create__FP8daKago_c();
-extern "C" extern void __dt__12daKago_HIO_cFv();
-extern "C" extern void __sinit_d_a_kago_cpp();
-extern "C" extern void func_80854AD0();
-extern "C" extern void func_80854AD8();
-extern "C" extern void getMidnaActor__9daPy_py_cFv();
+void daKago_Draw(daKago_c*);
+extern "C" void flySpeedCalc__8daKago_cFsi();
+void s_waterfall(void*, void*);
+void daKago_Execute(daKago_c*);
+bool daKago_IsDelete(daKago_c*);
+void daKago_Delete(daKago_c*);
+void useHeapInit(fopAc_ac_c*);
+void daKago_Create(daKago_c*);
+extern "C" void __sinit_d_a_kago_cpp();
+extern "C" void func_80854AD0();
+extern "C" void func_80854AD8();
+
+extern "C" void __ct__12daKago_HIO_cFv();
+extern "C" void getBckName__8daKago_cFi();
+extern "C" void setBck__8daKago_cFiUcff();
+extern "C" void checkBck__8daKago_cFi();
+extern "C" void draw__8daKago_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daKago_Draw__FP8daKago_c();
+extern "C" void executeBalloonMenu__8daKago_cFv();
+extern "C" void checkGroundHeight__8daKago_cF4cXyzPf();
+extern "C" void checkRoofHeight__8daKago_cF4cXyz();
+extern "C" void checkMoveHeight__8daKago_cFv();
+extern "C" void checkSizeBg__8daKago_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" bool getBeforeGroundHeight__8daKago_cFUc();
+extern "C" void demo_skip__8daKago_cFi();
+extern "C" void DemoSkipCallBack__8daKago_cFPvi();
+extern "C" void setActionMode__8daKago_cFii();
+extern "C" void setMidnaTagPos__8daKago_cFv();
+extern "C" void setMidnaRideOn__8daKago_cFv();
+extern "C" void setPlayerRideOn__8daKago_cFv();
+extern "C" void setRideOff__8daKago_cFv();
+extern "C" void searchNearPassPoint__8daKago_cFv();
+extern "C" void setSceneChange__8daKago_cFi();
+extern "C" void createBalloonScore__8daKago_cFv();
+extern "C" void startBalloonScore__8daKago_cFv();
+extern "C" void endBalloonScore__8daKago_cFv();
+extern "C" void checkNextPath__8daKago_cF4cXyz();
+extern "C" void checkHeight__8daKago_cFv();
+extern "C" void checkYaguraPos__8daKago_cF4cXyz();
+extern "C" void checkWallHitFall__8daKago_cFi();
+extern "C" void checkAttackStart__8daKago_cFv();
+extern "C" void getValueY__8daKago_cFf();
+extern "C" void getValueX__8daKago_cFf();
+extern "C" void getValueAbsX__8daKago_cFf();
+extern "C" void flySpeedCalcLockOn__8daKago_cFv();
+extern "C" void flySpeedCalc__8daKago_cFsi();
+extern "C" void checkFlySceneChange__8daKago_cFv();
+extern "C" void setFlyAway__8daKago_cFv();
+extern "C" void setFlyAnime__8daKago_cFv();
+extern "C" void executeFly__8daKago_cFv();
+extern "C" void executeStagger__8daKago_cFv();
+extern "C" void executeWait__8daKago_cFv();
+extern "C" void calcAttackMove__8daKago_cFi();
+extern "C" void executeAttack__8daKago_cFv();
+extern "C" void calcCircleCamera__8daKago_cFi();
+extern "C" void executeEvent__8daKago_cFv();
+extern "C" void initPerchDemo__8daKago_cFv();
+extern "C" void executePerchDemo__8daKago_cFv();
+extern "C" void PerchDemoAwayForward__8daKago_cFv();
+extern "C" void executePerch__8daKago_cFv();
+extern "C" void executeEvent2__8daKago_cFv();
+extern "C" void initFirstDemo__8daKago_cFv();
+extern "C" void executeFirstDemo__8daKago_cFv();
+extern "C" void executePerch2__8daKago_cFv();
+extern "C" void executeLandingLakeHairia__8daKago_cFv();
+extern "C" void executeLandingBoartHouse__8daKago_cFv();
+extern "C" void executeLanding__8daKago_cFv();
+extern "C" void moveDemoFly__8daKago_cFv();
+extern "C" void setFlyEffect__8daKago_cFv();
+extern "C" void setDashEffect__8daKago_cFv();
+extern "C" void setDamageEffect__8daKago_cFv();
+extern "C" void setDashBlurEffect__8daKago_cFi();
+extern "C" void setWallHitEffect__8daKago_cF4cXyzi();
+extern "C" void setSibukiEffect__8daKago_cFv();
+extern "C" void setDashSibukiEffect__8daKago_cFv();
+extern "C" void setWaterFallEffect__8daKago_cFv();
+extern "C" void s_waterfall__FPvPv();
+extern "C" void setFlySound__8daKago_cFv();
+extern "C" void action__8daKago_cFv();
+extern "C" void mtx_set__8daKago_cFv();
+extern "C" void cc_set__8daKago_cFv();
+extern "C" void execute__8daKago_cFv();
+extern "C" void daKago_Execute__FP8daKago_c();
+extern "C" bool daKago_IsDelete__FP8daKago_c();
+extern "C" void _delete__8daKago_cFv();
+extern "C" void daKago_Delete__FP8daKago_c();
+extern "C" void ctrlJoint__8daKago_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__8daKago_cFP8J3DJointi();
+extern "C" void CreateHeap__8daKago_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__8daKago_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void daKago_Create__FP8daKago_c();
+extern "C" void __dt__12daKago_HIO_cFv();
+extern "C" void __sinit_d_a_kago_cpp();
+extern "C" void func_80854AD0();
+extern "C" void func_80854AD8();
+extern "C" void getMidnaActor__9daPy_py_cFv();
 SECTION_RODATA extern const u32 lit_3929;
 SECTION_RODATA extern const u32 lit_3930;
 SECTION_RODATA extern const u32 lit_3931;
@@ -255,8 +390,11 @@ SECTION_BSS extern u8 l_HIO[92];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -266,7 +404,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daKago_HIO_cFv) {
+asm daKago_HIO_c::daKago_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__ct__12daKago_HIO_cFv.s"
 }
@@ -277,7 +415,7 @@ ASM_FUNCTION(__ct__12daKago_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBckName__8daKago_cFi) {
+asm void daKago_c::getBckName(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/getBckName__8daKago_cFi.s"
 }
@@ -288,7 +426,7 @@ ASM_FUNCTION(getBckName__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__8daKago_cFiUcff) {
+asm void daKago_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setBck__8daKago_cFiUcff.s"
 }
@@ -299,7 +437,7 @@ ASM_FUNCTION(setBck__8daKago_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__8daKago_cFi) {
+asm void daKago_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkBck__8daKago_cFi.s"
 }
@@ -310,7 +448,7 @@ ASM_FUNCTION(checkBck__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daKago_cFv) {
+asm void daKago_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/draw__8daKago_cFv.s"
 }
@@ -321,7 +459,7 @@ ASM_FUNCTION(draw__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__4cXyzFv.s"
 }
@@ -332,7 +470,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKago_Draw__FP8daKago_c) {
+asm void daKago_Draw(daKago_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Draw__FP8daKago_c.s"
 }
@@ -343,7 +481,7 @@ ASM_FUNCTION(daKago_Draw__FP8daKago_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBalloonMenu__8daKago_cFv) {
+asm void daKago_c::executeBalloonMenu() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeBalloonMenu__8daKago_cFv.s"
 }
@@ -354,7 +492,7 @@ ASM_FUNCTION(executeBalloonMenu__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGroundHeight__8daKago_cF4cXyzPf) {
+asm void daKago_c::checkGroundHeight(cXyz field_0, f32* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkGroundHeight__8daKago_cF4cXyzPf.s"
 }
@@ -365,7 +503,7 @@ ASM_FUNCTION(checkGroundHeight__8daKago_cF4cXyzPf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRoofHeight__8daKago_cF4cXyz) {
+asm void daKago_c::checkRoofHeight(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkRoofHeight__8daKago_cF4cXyz.s"
 }
@@ -376,7 +514,7 @@ ASM_FUNCTION(checkRoofHeight__8daKago_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkMoveHeight__8daKago_cFv) {
+asm void daKago_c::checkMoveHeight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkMoveHeight__8daKago_cFv.s"
 }
@@ -387,7 +525,7 @@ ASM_FUNCTION(checkMoveHeight__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSizeBg__8daKago_cFv) {
+asm void daKago_c::checkSizeBg() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkSizeBg__8daKago_cFv.s"
 }
@@ -398,7 +536,7 @@ ASM_FUNCTION(checkSizeBg__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__8cM3dGPlaFv.s"
 }
@@ -406,21 +544,16 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 
 
 /* 8084A6DC-8084A6E4 0008+00 .text      getBeforeGroundHeight__8daKago_cFUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBeforeGroundHeight__8daKago_cFUc) {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/getBeforeGroundHeight__8daKago_cFUc.s"
+bool daKago_c::getBeforeGroundHeight(u8 field_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 8084A6E4-8084AA64 0380+00 .text      demo_skip__8daKago_cFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_skip__8daKago_cFi) {
+asm void daKago_c::demo_skip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/demo_skip__8daKago_cFi.s"
 }
@@ -431,7 +564,7 @@ ASM_FUNCTION(demo_skip__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DemoSkipCallBack__8daKago_cFPvi) {
+asm void daKago_c::DemoSkipCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/DemoSkipCallBack__8daKago_cFPvi.s"
 }
@@ -442,7 +575,7 @@ ASM_FUNCTION(DemoSkipCallBack__8daKago_cFPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__8daKago_cFii) {
+asm void daKago_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setActionMode__8daKago_cFii.s"
 }
@@ -453,7 +586,7 @@ ASM_FUNCTION(setActionMode__8daKago_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaTagPos__8daKago_cFv) {
+asm void daKago_c::setMidnaTagPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setMidnaTagPos__8daKago_cFv.s"
 }
@@ -464,7 +597,7 @@ ASM_FUNCTION(setMidnaTagPos__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaRideOn__8daKago_cFv) {
+asm void daKago_c::setMidnaRideOn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setMidnaRideOn__8daKago_cFv.s"
 }
@@ -475,7 +608,7 @@ ASM_FUNCTION(setMidnaRideOn__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPlayerRideOn__8daKago_cFv) {
+asm void daKago_c::setPlayerRideOn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setPlayerRideOn__8daKago_cFv.s"
 }
@@ -486,7 +619,7 @@ ASM_FUNCTION(setPlayerRideOn__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRideOff__8daKago_cFv) {
+asm void daKago_c::setRideOff() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setRideOff__8daKago_cFv.s"
 }
@@ -497,7 +630,7 @@ ASM_FUNCTION(setRideOff__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchNearPassPoint__8daKago_cFv) {
+asm void daKago_c::searchNearPassPoint() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/searchNearPassPoint__8daKago_cFv.s"
 }
@@ -508,7 +641,7 @@ ASM_FUNCTION(searchNearPassPoint__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSceneChange__8daKago_cFi) {
+asm void daKago_c::setSceneChange(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setSceneChange__8daKago_cFi.s"
 }
@@ -519,7 +652,7 @@ ASM_FUNCTION(setSceneChange__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createBalloonScore__8daKago_cFv) {
+asm void daKago_c::createBalloonScore() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/createBalloonScore__8daKago_cFv.s"
 }
@@ -530,7 +663,7 @@ ASM_FUNCTION(createBalloonScore__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startBalloonScore__8daKago_cFv) {
+asm void daKago_c::startBalloonScore() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/startBalloonScore__8daKago_cFv.s"
 }
@@ -541,7 +674,7 @@ ASM_FUNCTION(startBalloonScore__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endBalloonScore__8daKago_cFv) {
+asm void daKago_c::endBalloonScore() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/endBalloonScore__8daKago_cFv.s"
 }
@@ -552,7 +685,7 @@ ASM_FUNCTION(endBalloonScore__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNextPath__8daKago_cF4cXyz) {
+asm void daKago_c::checkNextPath(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkNextPath__8daKago_cF4cXyz.s"
 }
@@ -563,7 +696,7 @@ ASM_FUNCTION(checkNextPath__8daKago_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHeight__8daKago_cFv) {
+asm void daKago_c::checkHeight() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkHeight__8daKago_cFv.s"
 }
@@ -574,7 +707,7 @@ ASM_FUNCTION(checkHeight__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkYaguraPos__8daKago_cF4cXyz) {
+asm void daKago_c::checkYaguraPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkYaguraPos__8daKago_cF4cXyz.s"
 }
@@ -585,7 +718,7 @@ ASM_FUNCTION(checkYaguraPos__8daKago_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWallHitFall__8daKago_cFi) {
+asm void daKago_c::checkWallHitFall(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkWallHitFall__8daKago_cFi.s"
 }
@@ -596,7 +729,7 @@ ASM_FUNCTION(checkWallHitFall__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAttackStart__8daKago_cFv) {
+asm void daKago_c::checkAttackStart() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkAttackStart__8daKago_cFv.s"
 }
@@ -607,7 +740,7 @@ ASM_FUNCTION(checkAttackStart__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValueY__8daKago_cFf) {
+asm void daKago_c::getValueY(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/getValueY__8daKago_cFf.s"
 }
@@ -618,7 +751,7 @@ ASM_FUNCTION(getValueY__8daKago_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValueX__8daKago_cFf) {
+asm void daKago_c::getValueX(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/getValueX__8daKago_cFf.s"
 }
@@ -629,7 +762,7 @@ ASM_FUNCTION(getValueX__8daKago_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getValueAbsX__8daKago_cFf) {
+asm void daKago_c::getValueAbsX(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/getValueAbsX__8daKago_cFf.s"
 }
@@ -640,7 +773,7 @@ ASM_FUNCTION(getValueAbsX__8daKago_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flySpeedCalcLockOn__8daKago_cFv) {
+asm void daKago_c::flySpeedCalcLockOn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/flySpeedCalcLockOn__8daKago_cFv.s"
 }
@@ -651,7 +784,7 @@ ASM_FUNCTION(flySpeedCalcLockOn__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flySpeedCalc__8daKago_cFsi) {
+extern "C" asm void flySpeedCalc__8daKago_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/flySpeedCalc__8daKago_cFsi.s"
 }
@@ -662,7 +795,7 @@ ASM_FUNCTION(flySpeedCalc__8daKago_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFlySceneChange__8daKago_cFv) {
+asm void daKago_c::checkFlySceneChange() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/checkFlySceneChange__8daKago_cFv.s"
 }
@@ -673,7 +806,7 @@ ASM_FUNCTION(checkFlySceneChange__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlyAway__8daKago_cFv) {
+asm void daKago_c::setFlyAway() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setFlyAway__8daKago_cFv.s"
 }
@@ -684,7 +817,7 @@ ASM_FUNCTION(setFlyAway__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlyAnime__8daKago_cFv) {
+asm void daKago_c::setFlyAnime() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setFlyAnime__8daKago_cFv.s"
 }
@@ -695,7 +828,7 @@ ASM_FUNCTION(setFlyAnime__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFly__8daKago_cFv) {
+asm void daKago_c::executeFly() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeFly__8daKago_cFv.s"
 }
@@ -706,7 +839,7 @@ ASM_FUNCTION(executeFly__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeStagger__8daKago_cFv) {
+asm void daKago_c::executeStagger() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeStagger__8daKago_cFv.s"
 }
@@ -717,7 +850,7 @@ ASM_FUNCTION(executeStagger__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__8daKago_cFv) {
+asm void daKago_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeWait__8daKago_cFv.s"
 }
@@ -728,7 +861,7 @@ ASM_FUNCTION(executeWait__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcAttackMove__8daKago_cFi) {
+asm void daKago_c::calcAttackMove(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/calcAttackMove__8daKago_cFi.s"
 }
@@ -739,7 +872,7 @@ ASM_FUNCTION(calcAttackMove__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttack__8daKago_cFv) {
+asm void daKago_c::executeAttack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeAttack__8daKago_cFv.s"
 }
@@ -750,7 +883,7 @@ ASM_FUNCTION(executeAttack__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCircleCamera__8daKago_cFi) {
+asm void daKago_c::calcCircleCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/calcCircleCamera__8daKago_cFi.s"
 }
@@ -761,7 +894,7 @@ ASM_FUNCTION(calcCircleCamera__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeEvent__8daKago_cFv) {
+asm void daKago_c::executeEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeEvent__8daKago_cFv.s"
 }
@@ -772,7 +905,7 @@ ASM_FUNCTION(executeEvent__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initPerchDemo__8daKago_cFv) {
+asm void daKago_c::initPerchDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/initPerchDemo__8daKago_cFv.s"
 }
@@ -783,7 +916,7 @@ ASM_FUNCTION(initPerchDemo__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePerchDemo__8daKago_cFv) {
+asm void daKago_c::executePerchDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executePerchDemo__8daKago_cFv.s"
 }
@@ -794,7 +927,7 @@ ASM_FUNCTION(executePerchDemo__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(PerchDemoAwayForward__8daKago_cFv) {
+asm void daKago_c::PerchDemoAwayForward() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/PerchDemoAwayForward__8daKago_cFv.s"
 }
@@ -805,7 +938,7 @@ ASM_FUNCTION(PerchDemoAwayForward__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePerch__8daKago_cFv) {
+asm void daKago_c::executePerch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executePerch__8daKago_cFv.s"
 }
@@ -816,7 +949,7 @@ ASM_FUNCTION(executePerch__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeEvent2__8daKago_cFv) {
+asm void daKago_c::executeEvent2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeEvent2__8daKago_cFv.s"
 }
@@ -827,7 +960,7 @@ ASM_FUNCTION(executeEvent2__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFirstDemo__8daKago_cFv) {
+asm void daKago_c::initFirstDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/initFirstDemo__8daKago_cFv.s"
 }
@@ -838,7 +971,7 @@ ASM_FUNCTION(initFirstDemo__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFirstDemo__8daKago_cFv) {
+asm void daKago_c::executeFirstDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeFirstDemo__8daKago_cFv.s"
 }
@@ -849,7 +982,7 @@ ASM_FUNCTION(executeFirstDemo__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executePerch2__8daKago_cFv) {
+asm void daKago_c::executePerch2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executePerch2__8daKago_cFv.s"
 }
@@ -860,7 +993,7 @@ ASM_FUNCTION(executePerch2__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLandingLakeHairia__8daKago_cFv) {
+asm void daKago_c::executeLandingLakeHairia() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeLandingLakeHairia__8daKago_cFv.s"
 }
@@ -871,7 +1004,7 @@ ASM_FUNCTION(executeLandingLakeHairia__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLandingBoartHouse__8daKago_cFv) {
+asm void daKago_c::executeLandingBoartHouse() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeLandingBoartHouse__8daKago_cFv.s"
 }
@@ -882,7 +1015,7 @@ ASM_FUNCTION(executeLandingBoartHouse__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLanding__8daKago_cFv) {
+asm void daKago_c::executeLanding() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/executeLanding__8daKago_cFv.s"
 }
@@ -893,7 +1026,7 @@ ASM_FUNCTION(executeLanding__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveDemoFly__8daKago_cFv) {
+asm void daKago_c::moveDemoFly() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/moveDemoFly__8daKago_cFv.s"
 }
@@ -904,7 +1037,7 @@ ASM_FUNCTION(moveDemoFly__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlyEffect__8daKago_cFv) {
+asm void daKago_c::setFlyEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setFlyEffect__8daKago_cFv.s"
 }
@@ -915,7 +1048,7 @@ ASM_FUNCTION(setFlyEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDashEffect__8daKago_cFv) {
+asm void daKago_c::setDashEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setDashEffect__8daKago_cFv.s"
 }
@@ -926,7 +1059,7 @@ ASM_FUNCTION(setDashEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDamageEffect__8daKago_cFv) {
+asm void daKago_c::setDamageEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setDamageEffect__8daKago_cFv.s"
 }
@@ -937,7 +1070,7 @@ ASM_FUNCTION(setDamageEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDashBlurEffect__8daKago_cFi) {
+asm void daKago_c::setDashBlurEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setDashBlurEffect__8daKago_cFi.s"
 }
@@ -948,7 +1081,7 @@ ASM_FUNCTION(setDashBlurEffect__8daKago_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWallHitEffect__8daKago_cF4cXyzi) {
+asm void daKago_c::setWallHitEffect(cXyz field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setWallHitEffect__8daKago_cF4cXyzi.s"
 }
@@ -959,7 +1092,7 @@ ASM_FUNCTION(setWallHitEffect__8daKago_cF4cXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSibukiEffect__8daKago_cFv) {
+asm void daKago_c::setSibukiEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setSibukiEffect__8daKago_cFv.s"
 }
@@ -970,7 +1103,7 @@ ASM_FUNCTION(setSibukiEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDashSibukiEffect__8daKago_cFv) {
+asm void daKago_c::setDashSibukiEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setDashSibukiEffect__8daKago_cFv.s"
 }
@@ -981,7 +1114,7 @@ ASM_FUNCTION(setDashSibukiEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterFallEffect__8daKago_cFv) {
+asm void daKago_c::setWaterFallEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setWaterFallEffect__8daKago_cFv.s"
 }
@@ -992,7 +1125,7 @@ ASM_FUNCTION(setWaterFallEffect__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_waterfall__FPvPv) {
+asm void s_waterfall(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/s_waterfall__FPvPv.s"
 }
@@ -1003,7 +1136,7 @@ ASM_FUNCTION(s_waterfall__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlySound__8daKago_cFv) {
+asm void daKago_c::setFlySound() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/setFlySound__8daKago_cFv.s"
 }
@@ -1014,7 +1147,7 @@ ASM_FUNCTION(setFlySound__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__8daKago_cFv) {
+asm void daKago_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/action__8daKago_cFv.s"
 }
@@ -1025,7 +1158,7 @@ ASM_FUNCTION(action__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__8daKago_cFv) {
+asm void daKago_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/mtx_set__8daKago_cFv.s"
 }
@@ -1036,7 +1169,7 @@ ASM_FUNCTION(mtx_set__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__8daKago_cFv) {
+asm void daKago_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/cc_set__8daKago_cFv.s"
 }
@@ -1047,7 +1180,7 @@ ASM_FUNCTION(cc_set__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daKago_cFv) {
+asm void daKago_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/execute__8daKago_cFv.s"
 }
@@ -1058,7 +1191,7 @@ ASM_FUNCTION(execute__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKago_Execute__FP8daKago_c) {
+asm void daKago_Execute(daKago_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Execute__FP8daKago_c.s"
 }
@@ -1066,21 +1199,16 @@ ASM_FUNCTION(daKago_Execute__FP8daKago_c) {
 
 
 /* 80854188-80854190 0008+00 .text      daKago_IsDelete__FP8daKago_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKago_IsDelete__FP8daKago_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_IsDelete__FP8daKago_c.s"
+bool daKago_IsDelete(daKago_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80854190-80854200 0070+00 .text      _delete__8daKago_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__8daKago_cFv) {
+asm void daKago_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/_delete__8daKago_cFv.s"
 }
@@ -1091,7 +1219,7 @@ ASM_FUNCTION(_delete__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKago_Delete__FP8daKago_c) {
+asm void daKago_Delete(daKago_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Delete__FP8daKago_c.s"
 }
@@ -1102,7 +1230,7 @@ ASM_FUNCTION(daKago_Delete__FP8daKago_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__8daKago_cFP8J3DJointP8J3DModel) {
+asm void daKago_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/ctrlJoint__8daKago_cFP8J3DJointP8J3DModel.s"
 }
@@ -1113,7 +1241,7 @@ ASM_FUNCTION(ctrlJoint__8daKago_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__8daKago_cFP8J3DJointi) {
+asm void daKago_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/JointCallBack__8daKago_cFP8J3DJointi.s"
 }
@@ -1124,7 +1252,7 @@ ASM_FUNCTION(JointCallBack__8daKago_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daKago_cFv) {
+asm void daKago_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/CreateHeap__8daKago_cFv.s"
 }
@@ -1135,7 +1263,7 @@ ASM_FUNCTION(CreateHeap__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1146,7 +1274,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daKago_cFv) {
+asm void daKago_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/create__8daKago_cFv.s"
 }
@@ -1157,7 +1285,7 @@ ASM_FUNCTION(create__8daKago_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__8cM3dGSphFv.s"
 }
@@ -1168,7 +1296,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__8cM3dGAabFv.s"
 }
@@ -1179,7 +1307,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1187,21 +1315,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 80854A28-80854A2C 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80854A2C-80854A4C 0020+00 .text      daKago_Create__FP8daKago_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKago_Create__FP8daKago_c) {
+asm void daKago_Create(daKago_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Create__FP8daKago_c.s"
 }
@@ -1212,7 +1335,7 @@ ASM_FUNCTION(daKago_Create__FP8daKago_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daKago_HIO_cFv) {
+asm daKago_HIO_c::~daKago_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__dt__12daKago_HIO_cFv.s"
 }
@@ -1223,7 +1346,7 @@ ASM_FUNCTION(__dt__12daKago_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_kago_cpp) {
+extern "C" asm void __sinit_d_a_kago_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/__sinit_d_a_kago_cpp.s"
 }
@@ -1234,7 +1357,7 @@ ASM_FUNCTION(__sinit_d_a_kago_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80854AD0) {
+extern "C" asm void func_80854AD0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/func_80854AD0.s"
 }
@@ -1245,7 +1368,7 @@ ASM_FUNCTION(func_80854AD0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80854AD8) {
+extern "C" asm void func_80854AD8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/func_80854AD8.s"
 }
@@ -1256,7 +1379,7 @@ ASM_FUNCTION(func_80854AD8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMidnaActor__9daPy_py_cFv) {
+asm void daPy_py_c::getMidnaActor() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/getMidnaActor__9daPy_py_cFv.s"
 }

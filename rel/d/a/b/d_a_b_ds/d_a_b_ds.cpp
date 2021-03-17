@@ -6,114 +6,289 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daB_DS_c;
+struct csXyz;
+struct Vec;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daB_DS_HIO_c {
+	daB_DS_HIO_c();
+	~daB_DS_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daB_DS_c {
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void draw();
+	void setBck(s32, u8, f32, f32);
+	void setActionMode(s32, s32);
+	void mSmokeSet();
+	void mHeadAngle_Clear();
+	void HandHitSoundSet(bool);
+	void handSPosSet(s32);
+	void hand_smokeSet(u8);
+	void mZsMoveChk();
+	void mZsMoveChk_Guard();
+	void mTrapScale();
+	void mClearTrap(bool);
+	void mCreateTrap(bool);
+	void mChangeVer2();
+	void damage_check();
+	void neck_set();
+	void mCutTypeCheck();
+	void startDemoCheck();
+	void setYoMessage(s32);
+	void doYoMessage();
+	void executeOpeningDemo();
+	void mHandBreathChk();
+	void executeWait();
+	void executeCircle();
+	void mBreakBoneSUB();
+	void damageSet();
+	void damageHitCamera();
+	void damageDownCheck();
+	void executeDamage();
+	void executeEtcDamage();
+	void breath_smokeSet();
+	void executeBreathAttack();
+	void executeHandAttack();
+	void executeBreathSearch();
+	void executeBattle2OpeningDemo();
+	void mFlyBMove(f32);
+	void mFuwafuwaSet(bool);
+	void mBattle2BreathFireSet(u32);
+	void mNeckAngleSet();
+	void mSetFirstPos();
+	void mChkScreenIn();
+	void mRailInOutCheck();
+	void executeBattle2Wait();
+	void mBattle2MoveFSet();
+	void executeBattle2FMove();
+	void executeBattle2Tired();
+	void executeBattle2Damage();
+	void mDeadMove();
+	void executeBattle2Dead();
+	void executeBullet();
+	void mBulletAction();
+	void mSoundSE_Set();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void cc_etc_set();
+	void mBattle2Action();
+	void mBattle2_spinner_damage_check();
+	void mBattle2_damage_check();
+	void mBattle2_mtx_set();
+	void mBattle2_cc_etc_set();
+	void mBattle2_cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+	daB_DS_c();
+};
+
+struct cXyz {
+	void abs() const;
+	cXyz();
+	~cXyz();
+	void operator=(cXyz const&);
+	void set(Vec const&);
+	cXyz(cXyz const&);
+	void zero();
+};
+
+struct csXyz {
+};
+
+struct mDoExt_morf_c {
+	void isStop();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct dCcD_Sph {
+	dCcD_Sph();
+	~dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void changeDemoPos0(cXyz const*);
+};
+
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daB_DS_HIO_cFv();
-extern "C" extern void ctrlJoint__8daB_DS_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__8daB_DS_cFP8J3DJointi();
-extern "C" extern void draw__8daB_DS_cFv();
-extern "C" extern void daB_DS_Draw__FP8daB_DS_c();
-extern "C" extern void setBck__8daB_DS_cFiUcff();
-extern "C" extern void setActionMode__8daB_DS_cFii();
-extern "C" extern void mSmokeSet__8daB_DS_cFv();
-extern "C" extern void mHeadAngle_Clear__8daB_DS_cFv();
-extern "C" extern void HandHitSoundSet__8daB_DS_cFb();
-extern "C" extern void handSPosSet__8daB_DS_cFi();
-extern "C" extern void hand_smokeSet__8daB_DS_cFUc();
-extern "C" extern void mZsMoveChk__8daB_DS_cFv();
-extern "C" extern void mZsMoveChk_Guard__8daB_DS_cFv();
-extern "C" extern void mTrapScale__8daB_DS_cFv();
-extern "C" extern void mClearTrap__8daB_DS_cFb();
-extern "C" extern void mCreateTrap__8daB_DS_cFb();
-extern "C" extern void mChangeVer2__8daB_DS_cFv();
-extern "C" extern void damage_check__8daB_DS_cFv();
-extern "C" extern void neck_set__8daB_DS_cFv();
-extern "C" extern void mCutTypeCheck__8daB_DS_cFv();
-extern "C" extern void startDemoCheck__8daB_DS_cFv();
-extern "C" extern void setYoMessage__8daB_DS_cFi();
-extern "C" extern void doYoMessage__8daB_DS_cFv();
-extern "C" extern void executeOpeningDemo__8daB_DS_cFv();
-extern "C" extern void setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf();
-extern "C" extern void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void abs__4cXyzCFv();
-extern "C" extern void isStop__13mDoExt_morf_cFv();
-extern "C" extern void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void mHandBreathChk__8daB_DS_cFv();
-extern "C" extern void executeWait__8daB_DS_cFv();
-extern "C" extern void executeCircle__8daB_DS_cFv();
-extern "C" extern void mBreakBoneSUB__8daB_DS_cFv();
-extern "C" extern void damageSet__8daB_DS_cFv();
-extern "C" extern void damageHitCamera__8daB_DS_cFv();
-extern "C" extern void damageDownCheck__8daB_DS_cFv();
-extern "C" extern void executeDamage__8daB_DS_cFv();
-extern "C" extern void executeEtcDamage__8daB_DS_cFv();
-extern "C" extern void breath_smokeSet__8daB_DS_cFv();
-extern "C" extern void executeBreathAttack__8daB_DS_cFv();
-extern "C" extern void executeHandAttack__8daB_DS_cFv();
-extern "C" extern void executeBreathSearch__8daB_DS_cFv();
-extern "C" extern void executeBattle2OpeningDemo__8daB_DS_cFv();
-extern "C" extern void mFlyBMove__8daB_DS_cFf();
-extern "C" extern void mFuwafuwaSet__8daB_DS_cFb();
-extern "C" extern void mBattle2BreathFireSet__8daB_DS_cFUl();
-extern "C" extern void mNeckAngleSet__8daB_DS_cFv();
-extern "C" extern void mSetFirstPos__8daB_DS_cFv();
-extern "C" extern void mChkScreenIn__8daB_DS_cFv();
-extern "C" extern void mRailInOutCheck__8daB_DS_cFv();
-extern "C" extern void executeBattle2Wait__8daB_DS_cFv();
-extern "C" extern void mBattle2MoveFSet__8daB_DS_cFv();
-extern "C" extern void executeBattle2FMove__8daB_DS_cFv();
-extern "C" extern void executeBattle2Tired__8daB_DS_cFv();
-extern "C" extern void executeBattle2Damage__8daB_DS_cFv();
-extern "C" extern void mDeadMove__8daB_DS_cFv();
-extern "C" extern void executeBattle2Dead__8daB_DS_cFv();
-extern "C" extern void executeBullet__8daB_DS_cFv();
-extern "C" extern void mBulletAction__8daB_DS_cFv();
-extern "C" extern void mSoundSE_Set__8daB_DS_cFv();
-extern "C" extern void action__8daB_DS_cFv();
-extern "C" extern void mtx_set__8daB_DS_cFv();
-extern "C" extern void cc_set__8daB_DS_cFv();
-extern "C" extern void cc_etc_set__8daB_DS_cFv();
-extern "C" extern void mBattle2Action__8daB_DS_cFv();
-extern "C" extern void mBattle2_spinner_damage_check__8daB_DS_cFv();
-extern "C" extern void mBattle2_damage_check__8daB_DS_cFv();
-extern "C" extern void mBattle2_mtx_set__8daB_DS_cFv();
-extern "C" extern void mBattle2_cc_etc_set__8daB_DS_cFv();
-extern "C" extern void mBattle2_cc_set__8daB_DS_cFv();
-extern "C" extern void execute__8daB_DS_cFv();
-extern "C" extern void daB_DS_Execute__FP8daB_DS_c();
-extern "C" extern void daB_DS_IsDelete__FP8daB_DS_c();
-extern "C" extern void _delete__8daB_DS_cFv();
-extern "C" extern void daB_DS_Delete__FP8daB_DS_c();
-extern "C" extern void CreateHeap__8daB_DS_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__8daB_DS_cFv();
-extern "C" extern void __ct__8daB_DS_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void daB_DS_Create__FP8daB_DS_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daB_DS_HIO_cFv();
-extern "C" extern void func_805DC8E4();
-extern "C" extern void func_805DC900();
-extern "C" extern void __sinit_d_a_b_ds_cpp();
-extern "C" extern void func_805DC958();
-extern "C" extern void func_805DC960();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void changeDemoPos0__9daPy_py_cFPC4cXyz();
-extern "C" extern void __as__4cXyzFRC4cXyz();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void set__4cXyzFRC3Vec();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void zero__4cXyzFv();
+void daB_DS_Draw(daB_DS_c*);
+extern "C" void setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf();
+void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*);
+void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*);
+void daB_DS_Execute(daB_DS_c*);
+bool daB_DS_IsDelete(daB_DS_c*);
+void daB_DS_Delete(daB_DS_c*);
+void useHeapInit(fopAc_ac_c*);
+void daB_DS_Create(daB_DS_c*);
+extern "C" void func_805DC8E4();
+extern "C" void func_805DC900();
+extern "C" void __sinit_d_a_b_ds_cpp();
+extern "C" void func_805DC958();
+extern "C" void func_805DC960();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+
+extern "C" void __ct__12daB_DS_HIO_cFv();
+extern "C" void ctrlJoint__8daB_DS_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__8daB_DS_cFP8J3DJointi();
+extern "C" void draw__8daB_DS_cFv();
+extern "C" void daB_DS_Draw__FP8daB_DS_c();
+extern "C" void setBck__8daB_DS_cFiUcff();
+extern "C" void setActionMode__8daB_DS_cFii();
+extern "C" void mSmokeSet__8daB_DS_cFv();
+extern "C" void mHeadAngle_Clear__8daB_DS_cFv();
+extern "C" void HandHitSoundSet__8daB_DS_cFb();
+extern "C" void handSPosSet__8daB_DS_cFi();
+extern "C" void hand_smokeSet__8daB_DS_cFUc();
+extern "C" void mZsMoveChk__8daB_DS_cFv();
+extern "C" void mZsMoveChk_Guard__8daB_DS_cFv();
+extern "C" void mTrapScale__8daB_DS_cFv();
+extern "C" void mClearTrap__8daB_DS_cFb();
+extern "C" void mCreateTrap__8daB_DS_cFb();
+extern "C" void mChangeVer2__8daB_DS_cFv();
+extern "C" void damage_check__8daB_DS_cFv();
+extern "C" void neck_set__8daB_DS_cFv();
+extern "C" void mCutTypeCheck__8daB_DS_cFv();
+extern "C" void startDemoCheck__8daB_DS_cFv();
+extern "C" void setYoMessage__8daB_DS_cFi();
+extern "C" void doYoMessage__8daB_DS_cFv();
+extern "C" void executeOpeningDemo__8daB_DS_cFv();
+extern "C" void setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf();
+extern "C" void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void abs__4cXyzCFv();
+extern "C" void isStop__13mDoExt_morf_cFv();
+extern "C" void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void mHandBreathChk__8daB_DS_cFv();
+extern "C" void executeWait__8daB_DS_cFv();
+extern "C" void executeCircle__8daB_DS_cFv();
+extern "C" void mBreakBoneSUB__8daB_DS_cFv();
+extern "C" void damageSet__8daB_DS_cFv();
+extern "C" void damageHitCamera__8daB_DS_cFv();
+extern "C" void damageDownCheck__8daB_DS_cFv();
+extern "C" void executeDamage__8daB_DS_cFv();
+extern "C" void executeEtcDamage__8daB_DS_cFv();
+extern "C" void breath_smokeSet__8daB_DS_cFv();
+extern "C" void executeBreathAttack__8daB_DS_cFv();
+extern "C" void executeHandAttack__8daB_DS_cFv();
+extern "C" void executeBreathSearch__8daB_DS_cFv();
+extern "C" void executeBattle2OpeningDemo__8daB_DS_cFv();
+extern "C" void mFlyBMove__8daB_DS_cFf();
+extern "C" void mFuwafuwaSet__8daB_DS_cFb();
+extern "C" void mBattle2BreathFireSet__8daB_DS_cFUl();
+extern "C" void mNeckAngleSet__8daB_DS_cFv();
+extern "C" void mSetFirstPos__8daB_DS_cFv();
+extern "C" void mChkScreenIn__8daB_DS_cFv();
+extern "C" void mRailInOutCheck__8daB_DS_cFv();
+extern "C" void executeBattle2Wait__8daB_DS_cFv();
+extern "C" void mBattle2MoveFSet__8daB_DS_cFv();
+extern "C" void executeBattle2FMove__8daB_DS_cFv();
+extern "C" void executeBattle2Tired__8daB_DS_cFv();
+extern "C" void executeBattle2Damage__8daB_DS_cFv();
+extern "C" void mDeadMove__8daB_DS_cFv();
+extern "C" void executeBattle2Dead__8daB_DS_cFv();
+extern "C" void executeBullet__8daB_DS_cFv();
+extern "C" void mBulletAction__8daB_DS_cFv();
+extern "C" void mSoundSE_Set__8daB_DS_cFv();
+extern "C" void action__8daB_DS_cFv();
+extern "C" void mtx_set__8daB_DS_cFv();
+extern "C" void cc_set__8daB_DS_cFv();
+extern "C" void cc_etc_set__8daB_DS_cFv();
+extern "C" void mBattle2Action__8daB_DS_cFv();
+extern "C" void mBattle2_spinner_damage_check__8daB_DS_cFv();
+extern "C" void mBattle2_damage_check__8daB_DS_cFv();
+extern "C" void mBattle2_mtx_set__8daB_DS_cFv();
+extern "C" void mBattle2_cc_etc_set__8daB_DS_cFv();
+extern "C" void mBattle2_cc_set__8daB_DS_cFv();
+extern "C" void execute__8daB_DS_cFv();
+extern "C" void daB_DS_Execute__FP8daB_DS_c();
+extern "C" bool daB_DS_IsDelete__FP8daB_DS_c();
+extern "C" void _delete__8daB_DS_cFv();
+extern "C" void daB_DS_Delete__FP8daB_DS_c();
+extern "C" void CreateHeap__8daB_DS_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__8daB_DS_cFv();
+extern "C" void __ct__8daB_DS_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void daB_DS_Create__FP8daB_DS_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daB_DS_HIO_cFv();
+extern "C" void func_805DC8E4();
+extern "C" void func_805DC900();
+extern "C" void __sinit_d_a_b_ds_cpp();
+extern "C" void func_805DC958();
+extern "C" void func_805DC960();
+extern "C" void __dt__4cXyzFv();
+extern "C" void changeDemoPos0__9daPy_py_cFPC4cXyz();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void set__4cXyzFRC3Vec();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void zero__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3932;
 SECTION_RODATA extern const u8 lit_3933[4];
 SECTION_RODATA extern const u32 lit_3934;
@@ -649,8 +824,11 @@ SECTION_BSS extern u8 data_805DE30C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -660,7 +838,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daB_DS_HIO_cFv) {
+asm daB_DS_HIO_c::daB_DS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__12daB_DS_HIO_cFv.s"
 }
@@ -671,7 +849,7 @@ ASM_FUNCTION(__ct__12daB_DS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__8daB_DS_cFP8J3DJointP8J3DModel) {
+asm void daB_DS_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/ctrlJoint__8daB_DS_cFP8J3DJointP8J3DModel.s"
 }
@@ -682,7 +860,7 @@ ASM_FUNCTION(ctrlJoint__8daB_DS_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__8daB_DS_cFP8J3DJointi) {
+asm void daB_DS_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/JointCallBack__8daB_DS_cFP8J3DJointi.s"
 }
@@ -693,7 +871,7 @@ ASM_FUNCTION(JointCallBack__8daB_DS_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daB_DS_cFv) {
+asm void daB_DS_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/draw__8daB_DS_cFv.s"
 }
@@ -704,7 +882,7 @@ ASM_FUNCTION(draw__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DS_Draw__FP8daB_DS_c) {
+asm void daB_DS_Draw(daB_DS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_Draw__FP8daB_DS_c.s"
 }
@@ -715,7 +893,7 @@ ASM_FUNCTION(daB_DS_Draw__FP8daB_DS_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__8daB_DS_cFiUcff) {
+asm void daB_DS_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/setBck__8daB_DS_cFiUcff.s"
 }
@@ -726,7 +904,7 @@ ASM_FUNCTION(setBck__8daB_DS_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__8daB_DS_cFii) {
+asm void daB_DS_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/setActionMode__8daB_DS_cFii.s"
 }
@@ -737,7 +915,7 @@ ASM_FUNCTION(setActionMode__8daB_DS_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mSmokeSet__8daB_DS_cFv) {
+asm void daB_DS_c::mSmokeSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mSmokeSet__8daB_DS_cFv.s"
 }
@@ -748,7 +926,7 @@ ASM_FUNCTION(mSmokeSet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mHeadAngle_Clear__8daB_DS_cFv) {
+asm void daB_DS_c::mHeadAngle_Clear() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mHeadAngle_Clear__8daB_DS_cFv.s"
 }
@@ -759,7 +937,7 @@ ASM_FUNCTION(mHeadAngle_Clear__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(HandHitSoundSet__8daB_DS_cFb) {
+asm void daB_DS_c::HandHitSoundSet(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/HandHitSoundSet__8daB_DS_cFb.s"
 }
@@ -770,7 +948,7 @@ ASM_FUNCTION(HandHitSoundSet__8daB_DS_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(handSPosSet__8daB_DS_cFi) {
+asm void daB_DS_c::handSPosSet(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/handSPosSet__8daB_DS_cFi.s"
 }
@@ -781,7 +959,7 @@ ASM_FUNCTION(handSPosSet__8daB_DS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hand_smokeSet__8daB_DS_cFUc) {
+asm void daB_DS_c::hand_smokeSet(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/hand_smokeSet__8daB_DS_cFUc.s"
 }
@@ -792,7 +970,7 @@ ASM_FUNCTION(hand_smokeSet__8daB_DS_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mZsMoveChk__8daB_DS_cFv) {
+asm void daB_DS_c::mZsMoveChk() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mZsMoveChk__8daB_DS_cFv.s"
 }
@@ -803,7 +981,7 @@ ASM_FUNCTION(mZsMoveChk__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mZsMoveChk_Guard__8daB_DS_cFv) {
+asm void daB_DS_c::mZsMoveChk_Guard() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mZsMoveChk_Guard__8daB_DS_cFv.s"
 }
@@ -814,7 +992,7 @@ ASM_FUNCTION(mZsMoveChk_Guard__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mTrapScale__8daB_DS_cFv) {
+asm void daB_DS_c::mTrapScale() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mTrapScale__8daB_DS_cFv.s"
 }
@@ -825,7 +1003,7 @@ ASM_FUNCTION(mTrapScale__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mClearTrap__8daB_DS_cFb) {
+asm void daB_DS_c::mClearTrap(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mClearTrap__8daB_DS_cFb.s"
 }
@@ -836,7 +1014,7 @@ ASM_FUNCTION(mClearTrap__8daB_DS_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mCreateTrap__8daB_DS_cFb) {
+asm void daB_DS_c::mCreateTrap(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mCreateTrap__8daB_DS_cFb.s"
 }
@@ -847,7 +1025,7 @@ ASM_FUNCTION(mCreateTrap__8daB_DS_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mChangeVer2__8daB_DS_cFv) {
+asm void daB_DS_c::mChangeVer2() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mChangeVer2__8daB_DS_cFv.s"
 }
@@ -858,7 +1036,7 @@ ASM_FUNCTION(mChangeVer2__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__8daB_DS_cFv) {
+asm void daB_DS_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/damage_check__8daB_DS_cFv.s"
 }
@@ -869,7 +1047,7 @@ ASM_FUNCTION(damage_check__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(neck_set__8daB_DS_cFv) {
+asm void daB_DS_c::neck_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/neck_set__8daB_DS_cFv.s"
 }
@@ -880,7 +1058,7 @@ ASM_FUNCTION(neck_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mCutTypeCheck__8daB_DS_cFv) {
+asm void daB_DS_c::mCutTypeCheck() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mCutTypeCheck__8daB_DS_cFv.s"
 }
@@ -891,7 +1069,7 @@ ASM_FUNCTION(mCutTypeCheck__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startDemoCheck__8daB_DS_cFv) {
+asm void daB_DS_c::startDemoCheck() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/startDemoCheck__8daB_DS_cFv.s"
 }
@@ -902,7 +1080,7 @@ ASM_FUNCTION(startDemoCheck__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setYoMessage__8daB_DS_cFi) {
+asm void daB_DS_c::setYoMessage(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/setYoMessage__8daB_DS_cFi.s"
 }
@@ -913,7 +1091,7 @@ ASM_FUNCTION(setYoMessage__8daB_DS_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doYoMessage__8daB_DS_cFv) {
+asm void daB_DS_c::doYoMessage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/doYoMessage__8daB_DS_cFv.s"
 }
@@ -924,7 +1102,7 @@ ASM_FUNCTION(doYoMessage__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeOpeningDemo__8daB_DS_cFv) {
+asm void daB_DS_c::executeOpeningDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeOpeningDemo__8daB_DS_cFv.s"
 }
@@ -935,7 +1113,7 @@ ASM_FUNCTION(executeOpeningDemo__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf) {
+extern "C" asm void setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf.s"
 }
@@ -946,7 +1124,7 @@ ASM_FUNCTION(setGlobalSRTMatrix__14JPABaseEmitterFPA4_Cf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u32 field_0, u16 field_1, cXyz const* field_2, csXyz const* field_3, cXyz const* field_4) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -957,7 +1135,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs__4cXyzCFv) {
+asm void cXyz::abs() const {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/abs__4cXyzCFv.s"
 }
@@ -968,7 +1146,7 @@ ASM_FUNCTION(abs__4cXyzCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isStop__13mDoExt_morf_cFv) {
+asm void mDoExt_morf_c::isStop() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/isStop__13mDoExt_morf_cFv.s"
 }
@@ -979,7 +1157,7 @@ ASM_FUNCTION(isStop__13mDoExt_morf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u16 field_0, cXyz const* field_1, csXyz const* field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -990,7 +1168,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mHandBreathChk__8daB_DS_cFv) {
+asm void daB_DS_c::mHandBreathChk() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mHandBreathChk__8daB_DS_cFv.s"
 }
@@ -1001,7 +1179,7 @@ ASM_FUNCTION(mHandBreathChk__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__8daB_DS_cFv) {
+asm void daB_DS_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeWait__8daB_DS_cFv.s"
 }
@@ -1012,7 +1190,7 @@ ASM_FUNCTION(executeWait__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCircle__8daB_DS_cFv) {
+asm void daB_DS_c::executeCircle() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeCircle__8daB_DS_cFv.s"
 }
@@ -1023,7 +1201,7 @@ ASM_FUNCTION(executeCircle__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBreakBoneSUB__8daB_DS_cFv) {
+asm void daB_DS_c::mBreakBoneSUB() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBreakBoneSUB__8daB_DS_cFv.s"
 }
@@ -1034,7 +1212,7 @@ ASM_FUNCTION(mBreakBoneSUB__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damageSet__8daB_DS_cFv) {
+asm void daB_DS_c::damageSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/damageSet__8daB_DS_cFv.s"
 }
@@ -1045,7 +1223,7 @@ ASM_FUNCTION(damageSet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damageHitCamera__8daB_DS_cFv) {
+asm void daB_DS_c::damageHitCamera() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/damageHitCamera__8daB_DS_cFv.s"
 }
@@ -1056,7 +1234,7 @@ ASM_FUNCTION(damageHitCamera__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damageDownCheck__8daB_DS_cFv) {
+asm void daB_DS_c::damageDownCheck() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/damageDownCheck__8daB_DS_cFv.s"
 }
@@ -1067,7 +1245,7 @@ ASM_FUNCTION(damageDownCheck__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__8daB_DS_cFv) {
+asm void daB_DS_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeDamage__8daB_DS_cFv.s"
 }
@@ -1078,7 +1256,7 @@ ASM_FUNCTION(executeDamage__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeEtcDamage__8daB_DS_cFv) {
+asm void daB_DS_c::executeEtcDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeEtcDamage__8daB_DS_cFv.s"
 }
@@ -1089,7 +1267,7 @@ ASM_FUNCTION(executeEtcDamage__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(breath_smokeSet__8daB_DS_cFv) {
+asm void daB_DS_c::breath_smokeSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/breath_smokeSet__8daB_DS_cFv.s"
 }
@@ -1100,7 +1278,7 @@ ASM_FUNCTION(breath_smokeSet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBreathAttack__8daB_DS_cFv) {
+asm void daB_DS_c::executeBreathAttack() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBreathAttack__8daB_DS_cFv.s"
 }
@@ -1111,7 +1289,7 @@ ASM_FUNCTION(executeBreathAttack__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeHandAttack__8daB_DS_cFv) {
+asm void daB_DS_c::executeHandAttack() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeHandAttack__8daB_DS_cFv.s"
 }
@@ -1122,7 +1300,7 @@ ASM_FUNCTION(executeHandAttack__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBreathSearch__8daB_DS_cFv) {
+asm void daB_DS_c::executeBreathSearch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBreathSearch__8daB_DS_cFv.s"
 }
@@ -1133,7 +1311,7 @@ ASM_FUNCTION(executeBreathSearch__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2OpeningDemo__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2OpeningDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2OpeningDemo__8daB_DS_cFv.s"
 }
@@ -1144,7 +1322,7 @@ ASM_FUNCTION(executeBattle2OpeningDemo__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mFlyBMove__8daB_DS_cFf) {
+asm void daB_DS_c::mFlyBMove(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mFlyBMove__8daB_DS_cFf.s"
 }
@@ -1155,7 +1333,7 @@ ASM_FUNCTION(mFlyBMove__8daB_DS_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mFuwafuwaSet__8daB_DS_cFb) {
+asm void daB_DS_c::mFuwafuwaSet(bool field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mFuwafuwaSet__8daB_DS_cFb.s"
 }
@@ -1166,7 +1344,7 @@ ASM_FUNCTION(mFuwafuwaSet__8daB_DS_cFb) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2BreathFireSet__8daB_DS_cFUl) {
+asm void daB_DS_c::mBattle2BreathFireSet(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2BreathFireSet__8daB_DS_cFUl.s"
 }
@@ -1177,7 +1355,7 @@ ASM_FUNCTION(mBattle2BreathFireSet__8daB_DS_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mNeckAngleSet__8daB_DS_cFv) {
+asm void daB_DS_c::mNeckAngleSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mNeckAngleSet__8daB_DS_cFv.s"
 }
@@ -1188,7 +1366,7 @@ ASM_FUNCTION(mNeckAngleSet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mSetFirstPos__8daB_DS_cFv) {
+asm void daB_DS_c::mSetFirstPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mSetFirstPos__8daB_DS_cFv.s"
 }
@@ -1199,7 +1377,7 @@ ASM_FUNCTION(mSetFirstPos__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mChkScreenIn__8daB_DS_cFv) {
+asm void daB_DS_c::mChkScreenIn() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mChkScreenIn__8daB_DS_cFv.s"
 }
@@ -1210,7 +1388,7 @@ ASM_FUNCTION(mChkScreenIn__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mRailInOutCheck__8daB_DS_cFv) {
+asm void daB_DS_c::mRailInOutCheck() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mRailInOutCheck__8daB_DS_cFv.s"
 }
@@ -1221,7 +1399,7 @@ ASM_FUNCTION(mRailInOutCheck__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2Wait__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2Wait() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2Wait__8daB_DS_cFv.s"
 }
@@ -1232,7 +1410,7 @@ ASM_FUNCTION(executeBattle2Wait__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2MoveFSet__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2MoveFSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2MoveFSet__8daB_DS_cFv.s"
 }
@@ -1243,7 +1421,7 @@ ASM_FUNCTION(mBattle2MoveFSet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2FMove__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2FMove() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2FMove__8daB_DS_cFv.s"
 }
@@ -1254,7 +1432,7 @@ ASM_FUNCTION(executeBattle2FMove__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2Tired__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2Tired() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2Tired__8daB_DS_cFv.s"
 }
@@ -1265,7 +1443,7 @@ ASM_FUNCTION(executeBattle2Tired__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2Damage__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2Damage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2Damage__8daB_DS_cFv.s"
 }
@@ -1276,7 +1454,7 @@ ASM_FUNCTION(executeBattle2Damage__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDeadMove__8daB_DS_cFv) {
+asm void daB_DS_c::mDeadMove() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mDeadMove__8daB_DS_cFv.s"
 }
@@ -1287,7 +1465,7 @@ ASM_FUNCTION(mDeadMove__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattle2Dead__8daB_DS_cFv) {
+asm void daB_DS_c::executeBattle2Dead() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBattle2Dead__8daB_DS_cFv.s"
 }
@@ -1298,7 +1476,7 @@ ASM_FUNCTION(executeBattle2Dead__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBullet__8daB_DS_cFv) {
+asm void daB_DS_c::executeBullet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/executeBullet__8daB_DS_cFv.s"
 }
@@ -1309,7 +1487,7 @@ ASM_FUNCTION(executeBullet__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBulletAction__8daB_DS_cFv) {
+asm void daB_DS_c::mBulletAction() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBulletAction__8daB_DS_cFv.s"
 }
@@ -1320,7 +1498,7 @@ ASM_FUNCTION(mBulletAction__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mSoundSE_Set__8daB_DS_cFv) {
+asm void daB_DS_c::mSoundSE_Set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mSoundSE_Set__8daB_DS_cFv.s"
 }
@@ -1331,7 +1509,7 @@ ASM_FUNCTION(mSoundSE_Set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__8daB_DS_cFv) {
+asm void daB_DS_c::action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/action__8daB_DS_cFv.s"
 }
@@ -1342,7 +1520,7 @@ ASM_FUNCTION(action__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__8daB_DS_cFv) {
+asm void daB_DS_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mtx_set__8daB_DS_cFv.s"
 }
@@ -1353,7 +1531,7 @@ ASM_FUNCTION(mtx_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__8daB_DS_cFv) {
+asm void daB_DS_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/cc_set__8daB_DS_cFv.s"
 }
@@ -1364,7 +1542,7 @@ ASM_FUNCTION(cc_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_etc_set__8daB_DS_cFv) {
+asm void daB_DS_c::cc_etc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/cc_etc_set__8daB_DS_cFv.s"
 }
@@ -1375,7 +1553,7 @@ ASM_FUNCTION(cc_etc_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2Action__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2Action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2Action__8daB_DS_cFv.s"
 }
@@ -1386,7 +1564,7 @@ ASM_FUNCTION(mBattle2Action__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2_spinner_damage_check__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2_spinner_damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2_spinner_damage_check__8daB_DS_cFv.s"
 }
@@ -1397,7 +1575,7 @@ ASM_FUNCTION(mBattle2_spinner_damage_check__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2_damage_check__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2_damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2_damage_check__8daB_DS_cFv.s"
 }
@@ -1408,7 +1586,7 @@ ASM_FUNCTION(mBattle2_damage_check__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2_mtx_set__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2_mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2_mtx_set__8daB_DS_cFv.s"
 }
@@ -1419,7 +1597,7 @@ ASM_FUNCTION(mBattle2_mtx_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2_cc_etc_set__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2_cc_etc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2_cc_etc_set__8daB_DS_cFv.s"
 }
@@ -1430,7 +1608,7 @@ ASM_FUNCTION(mBattle2_cc_etc_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mBattle2_cc_set__8daB_DS_cFv) {
+asm void daB_DS_c::mBattle2_cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/mBattle2_cc_set__8daB_DS_cFv.s"
 }
@@ -1441,7 +1619,7 @@ ASM_FUNCTION(mBattle2_cc_set__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daB_DS_cFv) {
+asm void daB_DS_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/execute__8daB_DS_cFv.s"
 }
@@ -1452,7 +1630,7 @@ ASM_FUNCTION(execute__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DS_Execute__FP8daB_DS_c) {
+asm void daB_DS_Execute(daB_DS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_Execute__FP8daB_DS_c.s"
 }
@@ -1460,21 +1638,16 @@ ASM_FUNCTION(daB_DS_Execute__FP8daB_DS_c) {
 
 
 /* 805DB1A4-805DB1AC 0008+00 .text      daB_DS_IsDelete__FP8daB_DS_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_DS_IsDelete__FP8daB_DS_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_IsDelete__FP8daB_DS_c.s"
+bool daB_DS_IsDelete(daB_DS_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805DB1AC-805DB244 0098+00 .text      _delete__8daB_DS_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__8daB_DS_cFv) {
+asm void daB_DS_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/_delete__8daB_DS_cFv.s"
 }
@@ -1485,7 +1658,7 @@ ASM_FUNCTION(_delete__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DS_Delete__FP8daB_DS_c) {
+asm void daB_DS_Delete(daB_DS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_Delete__FP8daB_DS_c.s"
 }
@@ -1496,7 +1669,7 @@ ASM_FUNCTION(daB_DS_Delete__FP8daB_DS_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daB_DS_cFv) {
+asm void daB_DS_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/CreateHeap__8daB_DS_cFv.s"
 }
@@ -1507,7 +1680,7 @@ ASM_FUNCTION(CreateHeap__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1518,7 +1691,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1529,7 +1702,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daB_DS_cFv) {
+asm void daB_DS_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/create__8daB_DS_cFv.s"
 }
@@ -1540,7 +1713,7 @@ ASM_FUNCTION(create__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daB_DS_cFv) {
+asm daB_DS_c::daB_DS_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__8daB_DS_cFv.s"
 }
@@ -1551,7 +1724,7 @@ ASM_FUNCTION(__ct__8daB_DS_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__8cM3dGCylFv.s"
 }
@@ -1562,7 +1735,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__8dCcD_SphFv.s"
 }
@@ -1573,7 +1746,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__8dCcD_SphFv.s"
 }
@@ -1584,7 +1757,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__8cM3dGSphFv.s"
 }
@@ -1595,7 +1768,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__8cM3dGAabFv.s"
 }
@@ -1606,7 +1779,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__10dCcD_GSttsFv.s"
 }
@@ -1617,7 +1790,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1628,7 +1801,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1636,21 +1809,16 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 
 
 /* 805DC830-805DC834 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805DC834-805DC854 0020+00 .text      daB_DS_Create__FP8daB_DS_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DS_Create__FP8daB_DS_c) {
+asm void daB_DS_Create(daB_DS_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_Create__FP8daB_DS_c.s"
 }
@@ -1661,7 +1829,7 @@ ASM_FUNCTION(daB_DS_Create__FP8daB_DS_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__10cCcD_GSttsFv.s"
 }
@@ -1672,7 +1840,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daB_DS_HIO_cFv) {
+asm daB_DS_HIO_c::~daB_DS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__12daB_DS_HIO_cFv.s"
 }
@@ -1683,7 +1851,7 @@ ASM_FUNCTION(__dt__12daB_DS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805DC8E4) {
+extern "C" asm void func_805DC8E4() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/func_805DC8E4.s"
 }
@@ -1694,7 +1862,7 @@ ASM_FUNCTION(func_805DC8E4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805DC900) {
+extern "C" asm void func_805DC900() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/func_805DC900.s"
 }
@@ -1705,7 +1873,7 @@ ASM_FUNCTION(func_805DC900) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_ds_cpp) {
+extern "C" asm void __sinit_d_a_b_ds_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__sinit_d_a_b_ds_cpp.s"
 }
@@ -1716,7 +1884,7 @@ ASM_FUNCTION(__sinit_d_a_b_ds_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805DC958) {
+extern "C" asm void func_805DC958() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/func_805DC958.s"
 }
@@ -1727,7 +1895,7 @@ ASM_FUNCTION(func_805DC958) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805DC960) {
+extern "C" asm void func_805DC960() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/func_805DC960.s"
 }
@@ -1738,7 +1906,7 @@ ASM_FUNCTION(func_805DC960) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__dt__4cXyzFv.s"
 }
@@ -1749,7 +1917,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
+asm void daPy_py_c::changeDemoPos0(cXyz const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/changeDemoPos0__9daPy_py_cFPC4cXyz.s"
 }
@@ -1760,7 +1928,7 @@ ASM_FUNCTION(changeDemoPos0__9daPy_py_cFPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__as__4cXyzFRC4cXyz.s"
 }
@@ -1771,7 +1939,7 @@ ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -1782,7 +1950,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__4cXyzFRC3Vec) {
+asm void cXyz::set(Vec const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/set__4cXyzFRC3Vec.s"
 }
@@ -1793,7 +1961,7 @@ ASM_FUNCTION(set__4cXyzFRC3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__4cXyzFRC4cXyz.s"
 }
@@ -1804,7 +1972,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(zero__4cXyzFv) {
+asm void cXyz::zero() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/zero__4cXyzFv.s"
 }

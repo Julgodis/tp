@@ -6,45 +6,110 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daObjSwHang_c;
+
+struct J3DJoint {
+};
+
+struct daObjSwHang_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void calcHangPos();
+	void checkDown();
+	void changeOnStatus();
+	void changeOffStatus();
+	void action();
+	void checkDownSw();
+	void init_modeOffWait();
+	void modeOffWait();
+	void init_modeOnWait();
+	void modeOnWait();
+	void eventStart();
+	void Draw();
+	void Delete();
+	~daObjSwHang_c();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__13daObjSwHang_cFv();
-extern "C" extern void setBaseMtx__13daObjSwHang_cFv();
-extern "C" extern void Create__13daObjSwHang_cFv();
-extern "C" extern void CreateHeap__13daObjSwHang_cFv();
-extern "C" extern void create1st__13daObjSwHang_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void calcHangPos__13daObjSwHang_cFv();
-extern "C" extern void checkDown__13daObjSwHang_cFv();
-extern "C" extern void changeOnStatus__13daObjSwHang_cFv();
-extern "C" extern void changeOffStatus__13daObjSwHang_cFv();
-extern "C" extern void Execute__13daObjSwHang_cFPPA3_A4_f();
-extern "C" extern void action__13daObjSwHang_cFv();
-extern "C" extern void checkDownSw__13daObjSwHang_cFv();
-extern "C" extern void init_modeOffWait__13daObjSwHang_cFv();
-extern "C" extern void modeOffWait__13daObjSwHang_cFv();
-extern "C" extern void init_modeOnWait__13daObjSwHang_cFv();
-extern "C" extern void modeOnWait__13daObjSwHang_cFv();
-extern "C" extern void eventStart__13daObjSwHang_cFv();
-extern "C" extern void Draw__13daObjSwHang_cFv();
-extern "C" extern void Delete__13daObjSwHang_cFv();
-extern "C" extern void daObjSwHang_create1st__FP13daObjSwHang_c();
-extern "C" extern void daObjSwHang_MoveBGDelete__FP13daObjSwHang_c();
-extern "C" extern void daObjSwHang_MoveBGExecute__FP13daObjSwHang_c();
-extern "C" extern void daObjSwHang_MoveBGDraw__FP13daObjSwHang_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__13daObjSwHang_cFv();
-extern "C" extern void func_80CFD1A8();
-extern "C" extern void func_80CFD1C4();
-extern "C" extern void func_80CFD1CC();
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__13daObjSwHang_cFPPA3_A4_f();
+void daObjSwHang_create1st(daObjSwHang_c*);
+void daObjSwHang_MoveBGDelete(daObjSwHang_c*);
+void daObjSwHang_MoveBGExecute(daObjSwHang_c*);
+void daObjSwHang_MoveBGDraw(daObjSwHang_c*);
+extern "C" void func_80CFD1A8();
+extern "C" void func_80CFD1C4();
+extern "C" void func_80CFD1CC();
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__13daObjSwHang_cFv();
+extern "C" void setBaseMtx__13daObjSwHang_cFv();
+extern "C" void Create__13daObjSwHang_cFv();
+extern "C" void CreateHeap__13daObjSwHang_cFv();
+extern "C" void create1st__13daObjSwHang_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void calcHangPos__13daObjSwHang_cFv();
+extern "C" void checkDown__13daObjSwHang_cFv();
+extern "C" void changeOnStatus__13daObjSwHang_cFv();
+extern "C" void changeOffStatus__13daObjSwHang_cFv();
+extern "C" void Execute__13daObjSwHang_cFPPA3_A4_f();
+extern "C" void action__13daObjSwHang_cFv();
+extern "C" void checkDownSw__13daObjSwHang_cFv();
+extern "C" void init_modeOffWait__13daObjSwHang_cFv();
+extern "C" void modeOffWait__13daObjSwHang_cFv();
+extern "C" void init_modeOnWait__13daObjSwHang_cFv();
+extern "C" void modeOnWait__13daObjSwHang_cFv();
+extern "C" void eventStart__13daObjSwHang_cFv();
+extern "C" void Draw__13daObjSwHang_cFv();
+extern "C" void Delete__13daObjSwHang_cFv();
+extern "C" void daObjSwHang_create1st__FP13daObjSwHang_c();
+extern "C" void daObjSwHang_MoveBGDelete__FP13daObjSwHang_c();
+extern "C" void daObjSwHang_MoveBGExecute__FP13daObjSwHang_c();
+extern "C" void daObjSwHang_MoveBGDraw__FP13daObjSwHang_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__13daObjSwHang_cFv();
+extern "C" void func_80CFD1A8();
+extern "C" void func_80CFD1C4();
+extern "C" void func_80CFD1CC();
 SECTION_RODATA extern const u8 l_bmdIdx[20];
 SECTION_RODATA extern const u8 l_dzbIdx[20];
 SECTION_RODATA extern const u8 l_dzbIdx2[20];
@@ -87,7 +152,9 @@ SECTION_DATA extern void*const __vt__13daObjSwHang_c[18];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -97,7 +164,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/nodeCallBack__FP8J3DJointi.s"
 }
@@ -108,7 +175,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/initBaseMtx__13daObjSwHang_cFv.s"
 }
@@ -119,7 +186,7 @@ ASM_FUNCTION(initBaseMtx__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/setBaseMtx__13daObjSwHang_cFv.s"
 }
@@ -130,7 +197,7 @@ ASM_FUNCTION(setBaseMtx__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/Create__13daObjSwHang_cFv.s"
 }
@@ -141,7 +208,7 @@ ASM_FUNCTION(Create__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/CreateHeap__13daObjSwHang_cFv.s"
 }
@@ -152,7 +219,7 @@ ASM_FUNCTION(CreateHeap__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/create1st__13daObjSwHang_cFv.s"
 }
@@ -163,7 +230,7 @@ ASM_FUNCTION(create1st__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__8cM3dGSphFv.s"
 }
@@ -174,7 +241,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__8cM3dGAabFv.s"
 }
@@ -185,7 +252,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__10dCcD_GSttsFv.s"
 }
@@ -196,7 +263,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHangPos__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::calcHangPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/calcHangPos__13daObjSwHang_cFv.s"
 }
@@ -207,7 +274,7 @@ ASM_FUNCTION(calcHangPos__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDown__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::checkDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/checkDown__13daObjSwHang_cFv.s"
 }
@@ -218,7 +285,7 @@ ASM_FUNCTION(checkDown__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOnStatus__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::changeOnStatus() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/changeOnStatus__13daObjSwHang_cFv.s"
 }
@@ -229,7 +296,7 @@ ASM_FUNCTION(changeOnStatus__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOffStatus__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::changeOffStatus() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/changeOffStatus__13daObjSwHang_cFv.s"
 }
@@ -240,7 +307,7 @@ ASM_FUNCTION(changeOffStatus__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjSwHang_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjSwHang_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/Execute__13daObjSwHang_cFPPA3_A4_f.s"
 }
@@ -251,7 +318,7 @@ ASM_FUNCTION(Execute__13daObjSwHang_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/action__13daObjSwHang_cFv.s"
 }
@@ -262,7 +329,7 @@ ASM_FUNCTION(action__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDownSw__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::checkDownSw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/checkDownSw__13daObjSwHang_cFv.s"
 }
@@ -273,7 +340,7 @@ ASM_FUNCTION(checkDownSw__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOffWait__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::init_modeOffWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/init_modeOffWait__13daObjSwHang_cFv.s"
 }
@@ -284,7 +351,7 @@ ASM_FUNCTION(init_modeOffWait__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOffWait__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::modeOffWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/modeOffWait__13daObjSwHang_cFv.s"
 }
@@ -295,7 +362,7 @@ ASM_FUNCTION(modeOffWait__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOnWait__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::init_modeOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/init_modeOnWait__13daObjSwHang_cFv.s"
 }
@@ -306,7 +373,7 @@ ASM_FUNCTION(init_modeOnWait__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOnWait__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::modeOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/modeOnWait__13daObjSwHang_cFv.s"
 }
@@ -317,7 +384,7 @@ ASM_FUNCTION(modeOnWait__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/eventStart__13daObjSwHang_cFv.s"
 }
@@ -328,7 +395,7 @@ ASM_FUNCTION(eventStart__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/Draw__13daObjSwHang_cFv.s"
 }
@@ -339,7 +406,7 @@ ASM_FUNCTION(Draw__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjSwHang_cFv) {
+asm void daObjSwHang_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/Delete__13daObjSwHang_cFv.s"
 }
@@ -350,7 +417,7 @@ ASM_FUNCTION(Delete__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwHang_create1st__FP13daObjSwHang_c) {
+asm void daObjSwHang_create1st(daObjSwHang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/daObjSwHang_create1st__FP13daObjSwHang_c.s"
 }
@@ -361,7 +428,7 @@ ASM_FUNCTION(daObjSwHang_create1st__FP13daObjSwHang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwHang_MoveBGDelete__FP13daObjSwHang_c) {
+asm void daObjSwHang_MoveBGDelete(daObjSwHang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/daObjSwHang_MoveBGDelete__FP13daObjSwHang_c.s"
 }
@@ -372,7 +439,7 @@ ASM_FUNCTION(daObjSwHang_MoveBGDelete__FP13daObjSwHang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwHang_MoveBGExecute__FP13daObjSwHang_c) {
+asm void daObjSwHang_MoveBGExecute(daObjSwHang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/daObjSwHang_MoveBGExecute__FP13daObjSwHang_c.s"
 }
@@ -383,7 +450,7 @@ ASM_FUNCTION(daObjSwHang_MoveBGExecute__FP13daObjSwHang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwHang_MoveBGDraw__FP13daObjSwHang_c) {
+asm void daObjSwHang_MoveBGDraw(daObjSwHang_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/daObjSwHang_MoveBGDraw__FP13daObjSwHang_c.s"
 }
@@ -394,7 +461,7 @@ ASM_FUNCTION(daObjSwHang_MoveBGDraw__FP13daObjSwHang_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__10cCcD_GSttsFv.s"
 }
@@ -405,7 +472,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__17dEvLib_callback_cFv.s"
 }
@@ -413,43 +480,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80CFD01C-80CFD024 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CFD024-80CFD02C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CFD02C-80CFD034 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CFD034-80CFD1A8 0174+00 .text      __dt__13daObjSwHang_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObjSwHang_cFv) {
+asm daObjSwHang_c::~daObjSwHang_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/__dt__13daObjSwHang_cFv.s"
 }
@@ -460,7 +512,7 @@ ASM_FUNCTION(__dt__13daObjSwHang_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFD1A8) {
+extern "C" asm void func_80CFD1A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/func_80CFD1A8.s"
 }
@@ -471,7 +523,7 @@ ASM_FUNCTION(func_80CFD1A8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFD1C4) {
+extern "C" asm void func_80CFD1C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/func_80CFD1C4.s"
 }
@@ -482,7 +534,7 @@ ASM_FUNCTION(func_80CFD1C4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CFD1CC) {
+extern "C" asm void func_80CFD1CC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swhang/d_a_obj_swhang/func_80CFD1CC.s"
 }

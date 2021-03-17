@@ -9,18 +9,31 @@
 // Forward References:
 // 
 
-extern "C" extern void cM_rad2s__Ff();
-extern "C" extern void U_GetAtanTable__Fff();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void cM_atan2f__Fff();
-extern "C" extern void cM_initRnd__Fiii();
-extern "C" extern void cM_rnd__Fv();
-extern "C" extern void cM_rndF__Ff();
-extern "C" extern void cM_rndFX__Ff();
-extern "C" extern void cM_initRnd2__Fiii();
-extern "C" extern void cM_rnd2__Fv();
-extern "C" extern void cM_rndF2__Ff();
-extern "C" extern void cM_rndFX2__Ff();
+void cM_rad2s(f32);
+static void U_GetAtanTable(f32, f32);
+void cM_atan2s(f32, f32);
+void cM_atan2f(f32, f32);
+void cM_initRnd(s32, s32, s32);
+void cM_rnd();
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cM_initRnd2(s32, s32, s32);
+static void cM_rnd2();
+void cM_rndF2(f32);
+void cM_rndFX2(f32);
+
+extern "C" void cM_rad2s__Ff();
+extern "C" static void U_GetAtanTable__Fff();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_atan2f__Fff();
+extern "C" void cM_initRnd__Fiii();
+extern "C" void cM_rnd__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cM_initRnd2__Fiii();
+extern "C" static void cM_rnd2__Fv();
+extern "C" void cM_rndF2__Ff();
+extern "C" void cM_rndFX2__Ff();
 SECTION_DATA extern u8 atntable[2050 + 6 /* padding */];
 SECTION_SBSS extern u8 data_80451168[4];
 SECTION_SBSS extern u8 data_8045116C[4];
@@ -45,7 +58,9 @@ SECTION_SDATA2 extern f32 c_math__lit_2312;
 // External References:
 // 
 
-extern "C" extern void fmod();
+extern "C" void fmod();
+
+extern "C" void fmod();
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 
 // 
@@ -53,17 +68,17 @@ SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 804550A8-804550B0 0008+00 .sdata2    @2201                                                        */
+/* 804550A8-804550B0 0008+00 rc=1 efc=0 .sdata2    @2201                                                        */
 f64 c_math__lit_2201 = 6.2831854820251465;
 
-/* 804550B0-804550B4 0004+00 .sdata2    @2215                                                        */
+/* 804550B0-804550B4 0004+00 rc=1 efc=0 .sdata2    @2215                                                        */
 f32 c_math__lit_2215 = 10430.3779296875f;
 
-/* 802675E4-80267640 005C+00 .text      cM_rad2s__Ff                                                 */
+/* 802675E4-80267640 005C+00 rc=23 efc=23 .text      cM_rad2s__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rad2s__Ff) {
+asm void cM_rad2s(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rad2s__Ff.s"
 }
@@ -71,7 +86,7 @@ ASM_FUNCTION(cM_rad2s__Ff) {
 
 
 /* ############################################################################################## */
-/* 803C3778-803C3F80 0802+06 .data      atntable                                                     */
+/* 803C3778-803C3F80 0802+06 rc=1 efc=0 .data      atntable                                                     */
 u8 atntable[2056] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x14, 0x00, 0x1F, 0x00, 0x29, 0x00, 0x33, 0x00, 0x3D, 0x00, 0x47,
 	0x00, 0x51, 0x00, 0x5C, 0x00, 0x66, 0x00, 0x70, 0x00, 0x7A, 0x00, 0x84, 0x00, 0x8F, 0x00, 0x99,
@@ -206,14 +221,14 @@ u8 atntable[2056] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804550B4-804550B8 0004+00 .sdata2    @2232                                                        */
+/* 804550B4-804550B8 0004+00 rc=1 efc=0 .sdata2    @2232                                                        */
 f32 lit_2232 = 1024.0f;
 
-/* 80267640-80267674 0034+00 .text      U_GetAtanTable__Fff                                          */
+/* 80267640-80267674 0034+00 rc=1 efc=0 .text      U_GetAtanTable__Fff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(U_GetAtanTable__Fff) {
+asm static void U_GetAtanTable(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/U_GetAtanTable__Fff.s"
 }
@@ -221,16 +236,16 @@ ASM_FUNCTION(U_GetAtanTable__Fff) {
 
 
 /* ############################################################################################## */
-/* 804550B8-804550BC 0004+00 .sdata2    @2277                                                        */
+/* 804550B8-804550BC 0004+00 rc=1 efc=0 .sdata2    @2277                                                        */
 u8 c_math__lit_2277[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80267674-80267814 01A0+00 .text      cM_atan2s__Fff                                               */
+/* 80267674-80267814 01A0+00 rc=83 efc=82 .text      cM_atan2s__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_atan2s__Fff) {
+asm void cM_atan2s(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_atan2s__Fff.s"
 }
@@ -238,17 +253,17 @@ ASM_FUNCTION(cM_atan2s__Fff) {
 
 
 /* ############################################################################################## */
-/* 804550BC-804550C0 0004+00 .sdata2    @2282                                                        */
+/* 804550BC-804550C0 0004+00 rc=1 efc=0 .sdata2    @2282                                                        */
 f32 lit_2282 = 9.58738019107841e-05f;
 
-/* 804550C0-804550C8 0008+00 .sdata2    @2284                                                        */
+/* 804550C0-804550C8 0008+00 rc=3 efc=0 .sdata2    @2284                                                        */
 f64 lit_2284 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80267814-8026785C 0048+00 .text      cM_atan2f__Fff                                               */
+/* 80267814-8026785C 0048+00 rc=4 efc=4 .text      cM_atan2f__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_atan2f__Fff) {
+asm void cM_atan2f(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_atan2f__Fff.s"
 }
@@ -256,20 +271,20 @@ ASM_FUNCTION(cM_atan2f__Fff) {
 
 
 /* ############################################################################################## */
-/* 80451168-8045116C 0004+00 .sbss      r0                                                           */
+/* 80451168-8045116C 0004+00 rc=2 efc=0 .sbss      r0                                                           */
 u8 data_80451168[4];
 
-/* 8045116C-80451170 0004+00 .sbss      r1                                                           */
+/* 8045116C-80451170 0004+00 rc=2 efc=0 .sbss      r1                                                           */
 u8 data_8045116C[4];
 
-/* 80451170-80451174 0004+00 .sbss      r2                                                           */
+/* 80451170-80451174 0004+00 rc=2 efc=0 .sbss      r2                                                           */
 u8 data_80451170[4];
 
-/* 8026785C-8026786C 0010+00 .text      cM_initRnd__Fiii                                             */
+/* 8026785C-8026786C 0010+00 rc=1 efc=1 .text      cM_initRnd__Fiii                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_initRnd__Fiii) {
+asm void cM_initRnd(s32 field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd__Fiii.s"
 }
@@ -277,35 +292,35 @@ ASM_FUNCTION(cM_initRnd__Fiii) {
 
 
 /* ############################################################################################## */
-/* 804550C8-804550CC 0004+00 .sdata2    @2296                                                        */
+/* 804550C8-804550CC 0004+00 rc=2 efc=0 .sdata2    @2296                                                        */
 f32 lit_2296 = 30323.0f;
 
-/* 804550CC-804550D0 0004+00 .sdata2    @2297                                                        */
+/* 804550CC-804550D0 0004+00 rc=2 efc=0 .sdata2    @2297                                                        */
 f32 lit_2297 = 30269.0f;
 
-/* 804550D0-804550D8 0004+04 .sdata2    @2298                                                        */
+/* 804550D0-804550D8 0004+04 rc=2 efc=0 .sdata2    @2298                                                        */
 f32 lit_2298 = 30307.0f;
 /* padding 4 bytes */
 
-/* 804550D8-804550E0 0008+00 .sdata2    @2299                                                        */
+/* 804550D8-804550E0 0008+00 rc=2 efc=0 .sdata2    @2299                                                        */
 f64 c_math__lit_2299 = 1.0;
 
-/* 8026786C-80267954 00E8+00 .text      cM_rnd__Fv                                                   */
+/* 8026786C-80267954 00E8+00 rc=17 efc=15 .text      cM_rnd__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rnd__Fv) {
+asm void cM_rnd() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rnd__Fv.s"
 }
 #pragma pop
 
 
-/* 80267954-8026798C 0038+00 .text      cM_rndF__Ff                                                  */
+/* 80267954-8026798C 0038+00 rc=34 efc=34 .text      cM_rndF__Ff                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rndF__Ff) {
+asm void cM_rndF(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndF__Ff.s"
 }
@@ -313,17 +328,17 @@ ASM_FUNCTION(cM_rndF__Ff) {
 
 
 /* ############################################################################################## */
-/* 804550E0-804550E4 0004+00 .sdata2    @2311                                                        */
+/* 804550E0-804550E4 0004+00 rc=2 efc=0 .sdata2    @2311                                                        */
 f32 c_math__lit_2311 = 2.0f;
 
-/* 804550E4-804550E8 0004+00 .sdata2    @2312                                                        */
+/* 804550E4-804550E8 0004+00 rc=2 efc=0 .sdata2    @2312                                                        */
 f32 c_math__lit_2312 = 0.5f;
 
-/* 8026798C-802679D4 0048+00 .text      cM_rndFX__Ff                                                 */
+/* 8026798C-802679D4 0048+00 rc=24 efc=24 .text      cM_rndFX__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rndFX__Ff) {
+asm void cM_rndFX(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndFX__Ff.s"
 }
@@ -331,57 +346,56 @@ ASM_FUNCTION(cM_rndFX__Ff) {
 
 
 /* ############################################################################################## */
-/* 80451174-80451178 0004+00 .sbss      r02                                                          */
+/* 80451174-80451178 0004+00 rc=2 efc=0 .sbss      r02                                                          */
 u8 data_80451174[4];
 
-/* 80451178-8045117C 0004+00 .sbss      r12                                                          */
+/* 80451178-8045117C 0004+00 rc=2 efc=0 .sbss      r12                                                          */
 u8 data_80451178[4];
 
-/* 8045117C-80451180 0004+00 .sbss      r22                                                          */
+/* 8045117C-80451180 0004+00 rc=2 efc=0 .sbss      r22                                                          */
 u8 data_8045117C[4];
 
-/* 802679D4-802679E4 0010+00 .text      cM_initRnd2__Fiii                                            */
+/* 802679D4-802679E4 0010+00 rc=0 efc=0 .text      cM_initRnd2__Fiii                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_initRnd2__Fiii) {
+asm void cM_initRnd2(s32 field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd2__Fiii.s"
 }
 #pragma pop
 
 
-/* 802679E4-80267ACC 00E8+00 .text      cM_rnd2__Fv                                                  */
+/* 802679E4-80267ACC 00E8+00 rc=2 efc=0 .text      cM_rnd2__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rnd2__Fv) {
+asm static void cM_rnd2() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rnd2__Fv.s"
 }
 #pragma pop
 
 
-/* 80267ACC-80267B04 0038+00 .text      cM_rndF2__Ff                                                 */
+/* 80267ACC-80267B04 0038+00 rc=0 efc=0 .text      cM_rndF2__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rndF2__Ff) {
+asm void cM_rndF2(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndF2__Ff.s"
 }
 #pragma pop
 
 
-/* 80267B04-80267B4C 0048+00 .text      cM_rndFX2__Ff                                                */
+/* 80267B04-80267B4C 0048+00 rc=0 efc=0 .text      cM_rndFX2__Ff                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_rndFX2__Ff) {
+asm void cM_rndFX2(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rndFX2__Ff.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

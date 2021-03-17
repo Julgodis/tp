@@ -6,27 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjLndRope_c;
+
+struct daObjLndRope_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void setNormalRopePos();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__14daObjLndRope_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void initBaseMtx__14daObjLndRope_cFv();
-extern "C" extern void setBaseMtx__14daObjLndRope_cFv();
-extern "C" extern void setNormalRopePos__14daObjLndRope_cFv();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void daObjLndRope_Draw__FP14daObjLndRope_c();
-extern "C" extern void daObjLndRope_Execute__FP14daObjLndRope_c();
-extern "C" extern void daObjLndRope_IsDelete__FP14daObjLndRope_c();
-extern "C" extern void daObjLndRope_Delete__FP14daObjLndRope_c();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void daObjLndRope_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void createSolidHeap(fopAc_ac_c*);
+void daObjLndRope_Draw(daObjLndRope_c*);
+void daObjLndRope_Execute(daObjLndRope_c*);
+bool daObjLndRope_IsDelete(daObjLndRope_c*);
+void daObjLndRope_Delete(daObjLndRope_c*);
+void daObjLndRope_Create(fopAc_ac_c*);
+
+extern "C" void create_init__14daObjLndRope_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void initBaseMtx__14daObjLndRope_cFv();
+extern "C" void setBaseMtx__14daObjLndRope_cFv();
+extern "C" void setNormalRopePos__14daObjLndRope_cFv();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void daObjLndRope_Draw__FP14daObjLndRope_c();
+extern "C" void daObjLndRope_Execute__FP14daObjLndRope_c();
+extern "C" bool daObjLndRope_IsDelete__FP14daObjLndRope_c();
+extern "C" void daObjLndRope_Delete__FP14daObjLndRope_c();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void daObjLndRope_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__14daObjLndRope_c[20];
 SECTION_RODATA extern const u8 l_laundryList[13 + 3 /* padding */];
 SECTION_RODATA extern const u32 lit_3791;
@@ -60,7 +110,9 @@ SECTION_DATA extern void*const __vt__10dCcD_GStts[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -70,7 +122,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__14daObjLndRope_cFv) {
+asm void daObjLndRope_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/create_init__14daObjLndRope_cFv.s"
 }
@@ -81,7 +133,7 @@ ASM_FUNCTION(create_init__14daObjLndRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__4cXyzFv.s"
 }
@@ -92,7 +144,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjLndRope_cFv) {
+asm void daObjLndRope_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/initBaseMtx__14daObjLndRope_cFv.s"
 }
@@ -103,7 +155,7 @@ ASM_FUNCTION(initBaseMtx__14daObjLndRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjLndRope_cFv) {
+asm void daObjLndRope_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/setBaseMtx__14daObjLndRope_cFv.s"
 }
@@ -114,7 +166,7 @@ ASM_FUNCTION(setBaseMtx__14daObjLndRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalRopePos__14daObjLndRope_cFv) {
+asm void daObjLndRope_c::setNormalRopePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/setNormalRopePos__14daObjLndRope_cFv.s"
 }
@@ -125,7 +177,7 @@ ASM_FUNCTION(setNormalRopePos__14daObjLndRope_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -136,7 +188,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLndRope_Draw__FP14daObjLndRope_c) {
+asm void daObjLndRope_Draw(daObjLndRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_Draw__FP14daObjLndRope_c.s"
 }
@@ -147,7 +199,7 @@ ASM_FUNCTION(daObjLndRope_Draw__FP14daObjLndRope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLndRope_Execute__FP14daObjLndRope_c) {
+asm void daObjLndRope_Execute(daObjLndRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_Execute__FP14daObjLndRope_c.s"
 }
@@ -155,21 +207,16 @@ ASM_FUNCTION(daObjLndRope_Execute__FP14daObjLndRope_c) {
 
 
 /* 80C52E34-80C52E3C 0008+00 .text      daObjLndRope_IsDelete__FP14daObjLndRope_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjLndRope_IsDelete__FP14daObjLndRope_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_IsDelete__FP14daObjLndRope_c.s"
+bool daObjLndRope_IsDelete(daObjLndRope_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C52E3C-80C52F2C 00F0+00 .text      daObjLndRope_Delete__FP14daObjLndRope_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLndRope_Delete__FP14daObjLndRope_c) {
+asm void daObjLndRope_Delete(daObjLndRope_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_Delete__FP14daObjLndRope_c.s"
 }
@@ -180,7 +227,7 @@ ASM_FUNCTION(daObjLndRope_Delete__FP14daObjLndRope_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__8dCcD_SphFv.s"
 }
@@ -191,7 +238,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLndRope_Create__FP10fopAc_ac_c) {
+asm void daObjLndRope_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_Create__FP10fopAc_ac_c.s"
 }
@@ -199,21 +246,16 @@ ASM_FUNCTION(daObjLndRope_Create__FP10fopAc_ac_c) {
 
 
 /* 80C53140-80C53144 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C53144-80C531C8 0084+00 .text      __ct__8dCcD_SphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__ct__8dCcD_SphFv.s"
 }
@@ -224,7 +266,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__8cM3dGSphFv.s"
 }
@@ -235,7 +277,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__8cM3dGAabFv.s"
 }
@@ -246,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__10dCcD_GSttsFv.s"
 }
@@ -257,7 +299,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__dt__10cCcD_GSttsFv.s"
 }

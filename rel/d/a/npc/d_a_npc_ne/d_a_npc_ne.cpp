@@ -6,67 +6,164 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct npc_ne_class;
+
+struct daNpc_Ne_HIO_c {
+	daNpc_Ne_HIO_c();
+	~daNpc_Ne_HIO_c();
+};
+
+struct npc_ne_class {
+	npc_ne_class();
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNpc_Ne_HIO_cFv();
-extern "C" extern void anm_init__FP12npc_ne_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daNpc_Ne_Draw__FP12npc_ne_class();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void ne_carry_check__FP12npc_ne_class();
-extern "C" extern void way_bg_check__FP12npc_ne_classs();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void water_check__FP12npc_ne_classf();
-extern "C" extern void climb_angle_get__FP12npc_ne_class();
-extern "C" extern void s_bl_sub__FPvPv();
-extern "C" extern void s_ss_sub__FPvPv();
-extern "C" extern void search_bird__FP12npc_ne_class();
-extern "C" extern void way_check__FP12npc_ne_classs();
-extern "C" extern void npc_ne_wait__FP12npc_ne_class();
-extern "C" extern void npc_ne_away__FP12npc_ne_class();
-extern "C" extern void ground_search__FP12npc_ne_class();
-extern "C" extern void s_fish_sub__FPvPv();
-extern "C" extern void npc_ne_tame__FP12npc_ne_class();
-extern "C" extern void npc_ne_sanbasi__FP12npc_ne_class();
-extern "C" extern void npc_ne_bird__FP12npc_ne_class();
-extern "C" extern void npc_ne_ball__FP12npc_ne_class();
-extern "C" extern void npc_ne_pathwalk__FP12npc_ne_class();
-extern "C" extern void npc_ne_jump__FP12npc_ne_class();
-extern "C" extern void npc_ne_s_jump__FP12npc_ne_class();
-extern "C" extern void npc_ne_roof__FP12npc_ne_class();
-extern "C" extern void home_path_search__FP12npc_ne_classi();
-extern "C" extern void npc_ne_home__FP12npc_ne_class();
-extern "C" extern void wall_angle_get__FP12npc_ne_class();
-extern "C" extern void search_ground_1__FP12npc_ne_class();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void search_ground_2__FP12npc_ne_classs();
-extern "C" extern void npc_ne_swim__FP12npc_ne_class();
-extern "C" extern void npc_ne_outswim__FP12npc_ne_class();
-extern "C" extern void npc_ne_climb__FP12npc_ne_class();
-extern "C" extern void npc_ne_drop__FP12npc_ne_class();
-extern "C" extern void npc_ne_s_drop__FP12npc_ne_class();
-extern "C" extern void npc_ne_carry__FP12npc_ne_class();
-extern "C" extern void npc_ne_dish__FP12npc_ne_class();
-extern "C" extern void npc_ne_message__FP12npc_ne_class();
-extern "C" extern void action__FP12npc_ne_class();
-extern "C" extern void demo_camera__FP12npc_ne_class();
-extern "C" extern void message__FP12npc_ne_class();
-extern "C" extern void daNpc_Ne_Execute__FP12npc_ne_class();
-extern "C" extern void daNpc_Ne_IsDelete__FP12npc_ne_class();
-extern "C" extern void daNpc_Ne_Delete__FP12npc_ne_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNpc_Ne_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__12npc_ne_classFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__14daNpc_Ne_HIO_cFv();
-extern "C" extern void __sinit_d_a_npc_ne_cpp();
-extern "C" extern void func_80A923F8();
-extern "C" extern void func_80A92400();
+void anm_init(npc_ne_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daNpc_Ne_Draw(npc_ne_class*);
+void other_bg_check(fopAc_ac_c*, fopAc_ac_c*);
+void ne_carry_check(npc_ne_class*);
+extern "C" void way_bg_check__FP12npc_ne_classs();
+void water_check(npc_ne_class*, f32);
+void climb_angle_get(npc_ne_class*);
+void s_bl_sub(void*, void*);
+void s_ss_sub(void*, void*);
+void search_bird(npc_ne_class*);
+extern "C" void way_check__FP12npc_ne_classs();
+void npc_ne_wait(npc_ne_class*);
+void npc_ne_away(npc_ne_class*);
+void ground_search(npc_ne_class*);
+void s_fish_sub(void*, void*);
+void npc_ne_tame(npc_ne_class*);
+void npc_ne_sanbasi(npc_ne_class*);
+void npc_ne_bird(npc_ne_class*);
+void npc_ne_ball(npc_ne_class*);
+void npc_ne_pathwalk(npc_ne_class*);
+void npc_ne_jump(npc_ne_class*);
+void npc_ne_s_jump(npc_ne_class*);
+void npc_ne_roof(npc_ne_class*);
+void home_path_search(npc_ne_class*, s32);
+void npc_ne_home(npc_ne_class*);
+void wall_angle_get(npc_ne_class*);
+void search_ground_1(npc_ne_class*);
+extern "C" void search_ground_2__FP12npc_ne_classs();
+void npc_ne_swim(npc_ne_class*);
+void npc_ne_outswim(npc_ne_class*);
+void npc_ne_climb(npc_ne_class*);
+void npc_ne_drop(npc_ne_class*);
+void npc_ne_s_drop(npc_ne_class*);
+void npc_ne_carry(npc_ne_class*);
+void npc_ne_dish(npc_ne_class*);
+void npc_ne_message(npc_ne_class*);
+void action(npc_ne_class*);
+void demo_camera(npc_ne_class*);
+void message(npc_ne_class*);
+void daNpc_Ne_Execute(npc_ne_class*);
+bool daNpc_Ne_IsDelete(npc_ne_class*);
+void daNpc_Ne_Delete(npc_ne_class*);
+void useHeapInit(fopAc_ac_c*);
+void daNpc_Ne_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_npc_ne_cpp();
+extern "C" void func_80A923F8();
+extern "C" void func_80A92400();
+
+extern "C" void __ct__14daNpc_Ne_HIO_cFv();
+extern "C" void anm_init__FP12npc_ne_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daNpc_Ne_Draw__FP12npc_ne_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" void other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void ne_carry_check__FP12npc_ne_class();
+extern "C" void way_bg_check__FP12npc_ne_classs();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void water_check__FP12npc_ne_classf();
+extern "C" void climb_angle_get__FP12npc_ne_class();
+extern "C" void s_bl_sub__FPvPv();
+extern "C" void s_ss_sub__FPvPv();
+extern "C" void search_bird__FP12npc_ne_class();
+extern "C" void way_check__FP12npc_ne_classs();
+extern "C" void npc_ne_wait__FP12npc_ne_class();
+extern "C" void npc_ne_away__FP12npc_ne_class();
+extern "C" void ground_search__FP12npc_ne_class();
+extern "C" void s_fish_sub__FPvPv();
+extern "C" void npc_ne_tame__FP12npc_ne_class();
+extern "C" void npc_ne_sanbasi__FP12npc_ne_class();
+extern "C" void npc_ne_bird__FP12npc_ne_class();
+extern "C" void npc_ne_ball__FP12npc_ne_class();
+extern "C" void npc_ne_pathwalk__FP12npc_ne_class();
+extern "C" void npc_ne_jump__FP12npc_ne_class();
+extern "C" void npc_ne_s_jump__FP12npc_ne_class();
+extern "C" void npc_ne_roof__FP12npc_ne_class();
+extern "C" void home_path_search__FP12npc_ne_classi();
+extern "C" void npc_ne_home__FP12npc_ne_class();
+extern "C" void wall_angle_get__FP12npc_ne_class();
+extern "C" void search_ground_1__FP12npc_ne_class();
+extern "C" void __ct__4cXyzFv();
+extern "C" void search_ground_2__FP12npc_ne_classs();
+extern "C" void npc_ne_swim__FP12npc_ne_class();
+extern "C" void npc_ne_outswim__FP12npc_ne_class();
+extern "C" void npc_ne_climb__FP12npc_ne_class();
+extern "C" void npc_ne_drop__FP12npc_ne_class();
+extern "C" void npc_ne_s_drop__FP12npc_ne_class();
+extern "C" void npc_ne_carry__FP12npc_ne_class();
+extern "C" void npc_ne_dish__FP12npc_ne_class();
+extern "C" void npc_ne_message__FP12npc_ne_class();
+extern "C" void action__FP12npc_ne_class();
+extern "C" void demo_camera__FP12npc_ne_class();
+extern "C" void message__FP12npc_ne_class();
+extern "C" void daNpc_Ne_Execute__FP12npc_ne_class();
+extern "C" bool daNpc_Ne_IsDelete__FP12npc_ne_class();
+extern "C" void daNpc_Ne_Delete__FP12npc_ne_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNpc_Ne_Create__FP10fopAc_ac_c();
+extern "C" void __ct__12npc_ne_classFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__14daNpc_Ne_HIO_cFv();
+extern "C" void __sinit_d_a_npc_ne_cpp();
+extern "C" void func_80A923F8();
+extern "C" void func_80A92400();
 SECTION_RODATA extern const u32 lit_3990;
 SECTION_RODATA extern const u32 lit_3991;
 SECTION_RODATA extern const u32 lit_3992;
@@ -240,8 +337,11 @@ SECTION_BSS extern u8 data_80A92B7C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -251,7 +351,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNpc_Ne_HIO_cFv) {
+asm daNpc_Ne_HIO_c::daNpc_Ne_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__ct__14daNpc_Ne_HIO_cFv.s"
 }
@@ -262,7 +362,7 @@ ASM_FUNCTION(__ct__14daNpc_Ne_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP12npc_ne_classifUcf) {
+asm void anm_init(npc_ne_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/anm_init__FP12npc_ne_classifUcf.s"
 }
@@ -273,7 +373,7 @@ ASM_FUNCTION(anm_init__FP12npc_ne_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/nodeCallBack__FP8J3DJointi.s"
 }
@@ -284,7 +384,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ne_Draw__FP12npc_ne_class) {
+asm void daNpc_Ne_Draw(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Draw__FP12npc_ne_class.s"
 }
@@ -295,7 +395,7 @@ ASM_FUNCTION(daNpc_Ne_Draw__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__4cXyzFv.s"
 }
@@ -306,7 +406,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c) {
+asm void other_bg_check(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -317,7 +417,7 @@ ASM_FUNCTION(other_bg_check__FP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ne_carry_check__FP12npc_ne_class) {
+asm void ne_carry_check(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/ne_carry_check__FP12npc_ne_class.s"
 }
@@ -328,7 +428,7 @@ ASM_FUNCTION(ne_carry_check__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_bg_check__FP12npc_ne_classs) {
+extern "C" asm void way_bg_check__FP12npc_ne_classs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/way_bg_check__FP12npc_ne_classs.s"
 }
@@ -339,7 +439,7 @@ ASM_FUNCTION(way_bg_check__FP12npc_ne_classs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__8cM3dGPlaFv.s"
 }
@@ -350,7 +450,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(water_check__FP12npc_ne_classf) {
+asm void water_check(npc_ne_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/water_check__FP12npc_ne_classf.s"
 }
@@ -361,7 +461,7 @@ ASM_FUNCTION(water_check__FP12npc_ne_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(climb_angle_get__FP12npc_ne_class) {
+asm void climb_angle_get(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/climb_angle_get__FP12npc_ne_class.s"
 }
@@ -372,7 +472,7 @@ ASM_FUNCTION(climb_angle_get__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bl_sub__FPvPv) {
+asm void s_bl_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/s_bl_sub__FPvPv.s"
 }
@@ -383,7 +483,7 @@ ASM_FUNCTION(s_bl_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_ss_sub__FPvPv) {
+asm void s_ss_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/s_ss_sub__FPvPv.s"
 }
@@ -394,7 +494,7 @@ ASM_FUNCTION(s_ss_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_bird__FP12npc_ne_class) {
+asm void search_bird(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/search_bird__FP12npc_ne_class.s"
 }
@@ -405,7 +505,7 @@ ASM_FUNCTION(search_bird__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(way_check__FP12npc_ne_classs) {
+extern "C" asm void way_check__FP12npc_ne_classs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/way_check__FP12npc_ne_classs.s"
 }
@@ -416,7 +516,7 @@ ASM_FUNCTION(way_check__FP12npc_ne_classs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_wait__FP12npc_ne_class) {
+asm void npc_ne_wait(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_wait__FP12npc_ne_class.s"
 }
@@ -427,7 +527,7 @@ ASM_FUNCTION(npc_ne_wait__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_away__FP12npc_ne_class) {
+asm void npc_ne_away(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_away__FP12npc_ne_class.s"
 }
@@ -438,7 +538,7 @@ ASM_FUNCTION(npc_ne_away__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ground_search__FP12npc_ne_class) {
+asm void ground_search(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/ground_search__FP12npc_ne_class.s"
 }
@@ -449,7 +549,7 @@ ASM_FUNCTION(ground_search__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fish_sub__FPvPv) {
+asm void s_fish_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/s_fish_sub__FPvPv.s"
 }
@@ -460,7 +560,7 @@ ASM_FUNCTION(s_fish_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_tame__FP12npc_ne_class) {
+asm void npc_ne_tame(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_tame__FP12npc_ne_class.s"
 }
@@ -471,7 +571,7 @@ ASM_FUNCTION(npc_ne_tame__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_sanbasi__FP12npc_ne_class) {
+asm void npc_ne_sanbasi(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_sanbasi__FP12npc_ne_class.s"
 }
@@ -482,7 +582,7 @@ ASM_FUNCTION(npc_ne_sanbasi__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_bird__FP12npc_ne_class) {
+asm void npc_ne_bird(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_bird__FP12npc_ne_class.s"
 }
@@ -493,7 +593,7 @@ ASM_FUNCTION(npc_ne_bird__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_ball__FP12npc_ne_class) {
+asm void npc_ne_ball(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_ball__FP12npc_ne_class.s"
 }
@@ -504,7 +604,7 @@ ASM_FUNCTION(npc_ne_ball__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_pathwalk__FP12npc_ne_class) {
+asm void npc_ne_pathwalk(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_pathwalk__FP12npc_ne_class.s"
 }
@@ -515,7 +615,7 @@ ASM_FUNCTION(npc_ne_pathwalk__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_jump__FP12npc_ne_class) {
+asm void npc_ne_jump(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_jump__FP12npc_ne_class.s"
 }
@@ -526,7 +626,7 @@ ASM_FUNCTION(npc_ne_jump__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_s_jump__FP12npc_ne_class) {
+asm void npc_ne_s_jump(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_s_jump__FP12npc_ne_class.s"
 }
@@ -537,7 +637,7 @@ ASM_FUNCTION(npc_ne_s_jump__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_roof__FP12npc_ne_class) {
+asm void npc_ne_roof(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_roof__FP12npc_ne_class.s"
 }
@@ -548,7 +648,7 @@ ASM_FUNCTION(npc_ne_roof__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(home_path_search__FP12npc_ne_classi) {
+asm void home_path_search(npc_ne_class* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/home_path_search__FP12npc_ne_classi.s"
 }
@@ -559,7 +659,7 @@ ASM_FUNCTION(home_path_search__FP12npc_ne_classi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_home__FP12npc_ne_class) {
+asm void npc_ne_home(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_home__FP12npc_ne_class.s"
 }
@@ -570,7 +670,7 @@ ASM_FUNCTION(npc_ne_home__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wall_angle_get__FP12npc_ne_class) {
+asm void wall_angle_get(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/wall_angle_get__FP12npc_ne_class.s"
 }
@@ -581,7 +681,7 @@ ASM_FUNCTION(wall_angle_get__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_ground_1__FP12npc_ne_class) {
+asm void search_ground_1(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/search_ground_1__FP12npc_ne_class.s"
 }
@@ -589,21 +689,16 @@ ASM_FUNCTION(search_ground_1__FP12npc_ne_class) {
 
 
 /* 80A8DD54-80A8DD58 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A8DD58-80A8DEE0 0188+00 .text      search_ground_2__FP12npc_ne_classs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_ground_2__FP12npc_ne_classs) {
+extern "C" asm void search_ground_2__FP12npc_ne_classs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/search_ground_2__FP12npc_ne_classs.s"
 }
@@ -614,7 +709,7 @@ ASM_FUNCTION(search_ground_2__FP12npc_ne_classs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_swim__FP12npc_ne_class) {
+asm void npc_ne_swim(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_swim__FP12npc_ne_class.s"
 }
@@ -625,7 +720,7 @@ ASM_FUNCTION(npc_ne_swim__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_outswim__FP12npc_ne_class) {
+asm void npc_ne_outswim(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_outswim__FP12npc_ne_class.s"
 }
@@ -636,7 +731,7 @@ ASM_FUNCTION(npc_ne_outswim__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_climb__FP12npc_ne_class) {
+asm void npc_ne_climb(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_climb__FP12npc_ne_class.s"
 }
@@ -647,7 +742,7 @@ ASM_FUNCTION(npc_ne_climb__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_drop__FP12npc_ne_class) {
+asm void npc_ne_drop(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_drop__FP12npc_ne_class.s"
 }
@@ -658,7 +753,7 @@ ASM_FUNCTION(npc_ne_drop__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_s_drop__FP12npc_ne_class) {
+asm void npc_ne_s_drop(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_s_drop__FP12npc_ne_class.s"
 }
@@ -669,7 +764,7 @@ ASM_FUNCTION(npc_ne_s_drop__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_carry__FP12npc_ne_class) {
+asm void npc_ne_carry(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_carry__FP12npc_ne_class.s"
 }
@@ -680,7 +775,7 @@ ASM_FUNCTION(npc_ne_carry__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_dish__FP12npc_ne_class) {
+asm void npc_ne_dish(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_dish__FP12npc_ne_class.s"
 }
@@ -691,7 +786,7 @@ ASM_FUNCTION(npc_ne_dish__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(npc_ne_message__FP12npc_ne_class) {
+asm void npc_ne_message(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/npc_ne_message__FP12npc_ne_class.s"
 }
@@ -702,7 +797,7 @@ ASM_FUNCTION(npc_ne_message__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12npc_ne_class) {
+asm void action(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/action__FP12npc_ne_class.s"
 }
@@ -713,7 +808,7 @@ ASM_FUNCTION(action__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP12npc_ne_class) {
+asm void demo_camera(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/demo_camera__FP12npc_ne_class.s"
 }
@@ -724,7 +819,7 @@ ASM_FUNCTION(demo_camera__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(message__FP12npc_ne_class) {
+asm void message(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/message__FP12npc_ne_class.s"
 }
@@ -735,7 +830,7 @@ ASM_FUNCTION(message__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ne_Execute__FP12npc_ne_class) {
+asm void daNpc_Ne_Execute(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Execute__FP12npc_ne_class.s"
 }
@@ -743,21 +838,16 @@ ASM_FUNCTION(daNpc_Ne_Execute__FP12npc_ne_class) {
 
 
 /* 80A9172C-80A91734 0008+00 .text      daNpc_Ne_IsDelete__FP12npc_ne_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ne_IsDelete__FP12npc_ne_class) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_IsDelete__FP12npc_ne_class.s"
+bool daNpc_Ne_IsDelete(npc_ne_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A91734-80A91798 0064+00 .text      daNpc_Ne_Delete__FP12npc_ne_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ne_Delete__FP12npc_ne_class) {
+asm void daNpc_Ne_Delete(npc_ne_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Delete__FP12npc_ne_class.s"
 }
@@ -768,7 +858,7 @@ ASM_FUNCTION(daNpc_Ne_Delete__FP12npc_ne_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -779,7 +869,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__12J3DFrameCtrlFv.s"
 }
@@ -790,7 +880,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Ne_Create__FP10fopAc_ac_c) {
+asm void daNpc_Ne_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_Create__FP10fopAc_ac_c.s"
 }
@@ -801,7 +891,7 @@ ASM_FUNCTION(daNpc_Ne_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12npc_ne_classFv) {
+asm npc_ne_class::npc_ne_class() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__ct__12npc_ne_classFv.s"
 }
@@ -812,7 +902,7 @@ ASM_FUNCTION(__ct__12npc_ne_classFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__8cM3dGSphFv.s"
 }
@@ -823,7 +913,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__8cM3dGAabFv.s"
 }
@@ -834,7 +924,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -845,7 +935,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpc_Ne_HIO_cFv) {
+asm daNpc_Ne_HIO_c::~daNpc_Ne_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__dt__14daNpc_Ne_HIO_cFv.s"
 }
@@ -856,7 +946,7 @@ ASM_FUNCTION(__dt__14daNpc_Ne_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_ne_cpp) {
+extern "C" asm void __sinit_d_a_npc_ne_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__sinit_d_a_npc_ne_cpp.s"
 }
@@ -867,7 +957,7 @@ ASM_FUNCTION(__sinit_d_a_npc_ne_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A923F8) {
+extern "C" asm void func_80A923F8() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/func_80A923F8.s"
 }
@@ -878,7 +968,7 @@ ASM_FUNCTION(func_80A923F8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A92400) {
+extern "C" asm void func_80A92400() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/func_80A92400.s"
 }

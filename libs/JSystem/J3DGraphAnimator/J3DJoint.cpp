@@ -6,18 +6,78 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DMtxCalcCalcTransformBasic (J3DMtxCalcCalcTransformBasic) False/False
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
+/* top-level dependencies (begin J3DMtxCalcCalcTransformBasic) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end J3DMtxCalcCalcTransformBasic) */
+struct J3DMtxCalcCalcTransformBasic {
+	// J3DTransformInfo
+	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
+};
+
+// build J3DTransformInfo (J3DTransformInfo) True/True
+// build J3DMtxCalcCalcTransformSoftimage (J3DMtxCalcCalcTransformSoftimage) False/False
+// build J3DTransformInfo (J3DTransformInfo) True/True
+/* top-level dependencies (begin J3DMtxCalcCalcTransformSoftimage) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end J3DMtxCalcCalcTransformSoftimage) */
+struct J3DMtxCalcCalcTransformSoftimage {
+	// J3DTransformInfo
+	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
+};
+
+// build J3DMtxCalcCalcTransformMaya (J3DMtxCalcCalcTransformMaya) False/False
+// build J3DTransformInfo (J3DTransformInfo) True/True
+/* top-level dependencies (begin J3DMtxCalcCalcTransformMaya) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end J3DMtxCalcCalcTransformMaya) */
+struct J3DMtxCalcCalcTransformMaya {
+	// J3DTransformInfo
+	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
+};
+
+// build J3DJoint (J3DJoint) False/False
+/* top-level dependencies (begin J3DJoint) */
+/* top-level dependencies (end J3DJoint) */
+struct J3DJoint {
+	/* 8032F13C */ void appendChild(J3DJoint*);
+	/* 8032F170 */ J3DJoint();
+	/* 8032F254 */ void entryIn();
+	/* 8032F3F8 */ void recursiveCalc();
+};
+
+// build J3DMaterial (J3DMaterial) False/False
+/* top-level dependencies (begin J3DMaterial) */
+/* top-level dependencies (end J3DMaterial) */
+struct J3DMaterial {
+	/* 80316AB0 */ void setCurrentMtx();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
-extern "C" extern void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
-extern "C" extern void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
-extern "C" extern void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
-extern "C" extern void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
-extern "C" extern void appendChild__8J3DJointFP8J3DJoint();
-extern "C" extern void __ct__8J3DJointFv();
-extern "C" extern void entryIn__8J3DJointFv();
-extern "C" extern void recursiveCalc__8J3DJointFv();
+extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
+extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
+
+extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
+extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
+extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
+extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
+extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
+extern "C" void appendChild__8J3DJointFP8J3DJoint();
+extern "C" void __ct__8J3DJointFv();
+extern "C" void entryIn__8J3DJointFv();
+extern "C" void recursiveCalc__8J3DJointFv();
 SECTION_RODATA extern const u8 J3DJoint__lit_882[12];
 SECTION_RODATA extern const u8 J3DJoint__lit_893[12];
 SECTION_RODATA extern const u8 lit_1257[12];
@@ -32,14 +92,22 @@ SECTION_SDATA2 extern u8 lit_1220[4];
 // External References:
 // 
 
-extern "C" extern void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
-extern "C" extern void J3DGetTranslateRotateMtx__FsssfffPA4_f();
-extern "C" extern void setCurrentMtx__11J3DMaterialFv();
-extern "C" extern void JMAMTXApplyScale__FPA4_CfPA4_ffff();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
+extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
+extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+
+extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
+extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
+extern "C" void setCurrentMtx__11J3DMaterialFv();
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 SECTION_RODATA extern const u8 j3dDefaultTransformInfo[32];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 mCurrentMtx__6J3DSys[48];
@@ -52,16 +120,16 @@ SECTION_SBSS extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A2068-803A2074 000C+00 .rodata    @882                                                         */
+/* 803A2068-803A2074 000C+00 rc=1 efc=0 .rodata    @882                                                         */
 SECTION_RODATA const u8 J3DJoint__lit_882[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8032EC28-8032ECAC 0084+00 .text      init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf            */
+/* 8032EC28-8032ECAC 0084+00 rc=1 efc=1 .text      init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf) {
+extern "C" asm void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf.s"
 }
@@ -69,16 +137,16 @@ ASM_FUNCTION(init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf) {
 
 
 /* ############################################################################################## */
-/* 803A2074-803A2080 000C+00 .rodata    @893                                                         */
+/* 803A2074-803A2080 000C+00 rc=1 efc=0 .rodata    @893                                                         */
 SECTION_RODATA const u8 J3DJoint__lit_893[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8032ECAC-8032ED30 0084+00 .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
+/* 8032ECAC-8032ED30 0084+00 rc=2 efc=2 .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf) {
+extern "C" asm void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf.s"
 }
@@ -86,53 +154,53 @@ ASM_FUNCTION(init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf) {
 
 
 /* ############################################################################################## */
-/* 804515F0-804515F4 0004+00 .sbss      mMtxBuffer__10J3DMtxCalc                                     */
+/* 804515F0-804515F4 0004+00 rc=4 efc=1 .sbss      mMtxBuffer__10J3DMtxCalc                                     */
 u8 mMtxBuffer__10J3DMtxCalc[4];
 
-/* 804515F4-804515F8 0004+00 .sbss      mJoint__10J3DMtxCalc                                         */
+/* 804515F4-804515F8 0004+00 rc=13 efc=9 .sbss      mJoint__10J3DMtxCalc                                         */
 u8 mJoint__10J3DMtxCalc[4];
 
-/* 804564A0-804564A4 0004+00 .sdata2    @922                                                         */
+/* 804564A0-804564A4 0004+00 rc=3 efc=0 .sdata2    @922                                                         */
 f32 lit_922 = 1.0f;
 
-/* 8032ED30-8032EE50 0120+00 .text      calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo */
+/* 8032ED30-8032EE50 0120+00 rc=1 efc=1 .text      calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo) {
+asm void J3DMtxCalcCalcTransformBasic::calcTransform(J3DTransformInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo.s"
 }
 #pragma pop
 
 
-/* 8032EE50-8032EFBC 016C+00 .text      calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo */
+/* 8032EE50-8032EFBC 016C+00 rc=1 efc=1 .text      calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo) {
+asm void J3DMtxCalcCalcTransformSoftimage::calcTransform(J3DTransformInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo.s"
 }
 #pragma pop
 
 
-/* 8032EFBC-8032F13C 0180+00 .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
+/* 8032EFBC-8032F13C 0180+00 rc=6 efc=6 .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo) {
+asm void J3DMtxCalcCalcTransformMaya::calcTransform(J3DTransformInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo.s"
 }
 #pragma pop
 
 
-/* 8032F13C-8032F170 0034+00 .text      appendChild__8J3DJointFP8J3DJoint                            */
+/* 8032F13C-8032F170 0034+00 rc=1 efc=1 .text      appendChild__8J3DJointFP8J3DJoint                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(appendChild__8J3DJointFP8J3DJoint) {
+asm void J3DJoint::appendChild(J3DJoint* field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/appendChild__8J3DJointFP8J3DJoint.s"
 }
@@ -140,37 +208,37 @@ ASM_FUNCTION(appendChild__8J3DJointFP8J3DJoint) {
 
 
 /* ############################################################################################## */
-/* 803A2080-803A208C 000C+00 .rodata    @1257                                                        */
+/* 803A2080-803A208C 000C+00 rc=1 efc=0 .rodata    @1257                                                        */
 SECTION_RODATA const u8 lit_1257[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A208C-803A2098 000C+00 .rodata    @1259                                                        */
+/* 803A208C-803A2098 000C+00 rc=1 efc=0 .rodata    @1259                                                        */
 SECTION_RODATA const u8 lit_1259[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804564A4-804564A8 0004+00 .sdata2    @1220                                                        */
+/* 804564A4-804564A8 0004+00 rc=1 efc=0 .sdata2    @1220                                                        */
 u8 lit_1220[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8032F170-8032F254 00E4+00 .text      __ct__8J3DJointFv                                            */
+/* 8032F170-8032F254 00E4+00 rc=1 efc=1 .text      __ct__8J3DJointFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8J3DJointFv) {
+asm J3DJoint::J3DJoint() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/__ct__8J3DJointFv.s"
 }
 #pragma pop
 
 
-/* 8032F254-8032F3F8 01A4+00 .text      entryIn__8J3DJointFv                                         */
+/* 8032F254-8032F3F8 01A4+00 rc=1 efc=1 .text      entryIn__8J3DJointFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entryIn__8J3DJointFv) {
+asm void J3DJoint::entryIn() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/entryIn__8J3DJointFv.s"
 }
@@ -178,18 +246,17 @@ ASM_FUNCTION(entryIn__8J3DJointFv) {
 
 
 /* ############################################################################################## */
-/* 804515F8-80451600 0004+04 .sbss      mCurrentMtxCalc__8J3DJoint                                   */
+/* 804515F8-80451600 0004+04 rc=2 efc=1 .sbss      mCurrentMtxCalc__8J3DJoint                                   */
 u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
-/* 8032F3F8-8032F5A8 01B0+00 .text      recursiveCalc__8J3DJointFv                                   */
+/* 8032F3F8-8032F5A8 01B0+00 rc=1 efc=1 .text      recursiveCalc__8J3DJointFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(recursiveCalc__8J3DJointFv) {
+asm void J3DJoint::recursiveCalc() {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/recursiveCalc__8J3DJointFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

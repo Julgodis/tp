@@ -6,19 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAIStreamMgr (JAIStreamMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+/* top-level dependencies (begin JAIStreamMgr) */
+// outer dependency: JAISoundID
+/* top-level dependencies (end JAIStreamMgr) */
+struct JAIStreamMgr {
+	// JAISoundID
+	/* 802A3B68 */ JAIStreamMgr(bool);
+	/* 802A3D70 */ void freeDeadStream_();
+	/* 802A3EBC */ void calc();
+	/* 802A4028 */ void stop();
+	/* 802A4068 */ void stop(u32);
+	/* 802A40B8 */ void stopSoundID(JAISoundID);
+	/* 802A4118 */ void mixOut();
+	/* 802A4174 */ void newStream_();
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build JASGenericMemPool (JASGenericMemPool) False/False
+/* top-level dependencies (begin JASGenericMemPool) */
+/* top-level dependencies (end JASGenericMemPool) */
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+// build JAISound (JAISound) False/False
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+};
+
+/* top-level dependencies (begin JAISound) */
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end JAISound) */
+struct JAISound {
+	// JAISoundHandle
+	/* 802A21BC */ void attachHandle(JAISoundHandle*);
+	/* 802A24DC */ void stop(u32);
+	/* 802A2598 */ void stop();
+};
+
+// build JAISoundHandle (JAISoundHandle) True/True
+// build JAIStream (JAIStream) False/False
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
+// build JASSoundParams (JASSoundParams) False/False
+/* top-level dependencies (begin JASSoundParams) */
+/* top-level dependencies (end JASSoundParams) */
+struct JASSoundParams {
+};
+
+/* top-level dependencies (begin JAIStream) */
+// outer dependency: JAISoundActivity
+// outer dependency: JASSoundParams
+/* top-level dependencies (end JAIStream) */
+struct JAIStream {
+	// JAISoundActivity
+	// JASSoundParams
+	/* 802A34E4 */ void JAIStreamMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
+	/* 802A388C */ void JAIStreamMgr_calc_();
+};
+
+// build JASSoundParams (JASSoundParams) True/True
+// build JAISoundActivity (JAISoundActivity) True/True
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) True/True
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBF14 */ void initiate();
+	/* 802DBF4C */ void append(JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12JAIStreamMgrFb();
-extern "C" extern void func_802A3C3C();
-extern "C" extern void freeDeadStream___12JAIStreamMgrFv();
-extern "C" extern void func_802A3E68();
-extern "C" extern void calc__12JAIStreamMgrFv();
-extern "C" extern void stop__12JAIStreamMgrFv();
-extern "C" extern void stop__12JAIStreamMgrFUl();
-extern "C" extern void stopSoundID__12JAIStreamMgrF10JAISoundID();
-extern "C" extern void mixOut__12JAIStreamMgrFv();
-extern "C" extern void newStream___12JAIStreamMgrFv();
+extern "C" void func_802A3C3C();
+extern "C" void func_802A3E68();
+
+extern "C" void __ct__12JAIStreamMgrFb();
+extern "C" void func_802A3C3C();
+extern "C" void freeDeadStream___12JAIStreamMgrFv();
+extern "C" void func_802A3E68();
+extern "C" void calc__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFUl();
+extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID();
+extern "C" void mixOut__12JAIStreamMgrFv();
+extern "C" void newStream___12JAIStreamMgrFv();
 SECTION_BSS extern u8 JAIStreamMgr__lit_745[12];
 SECTION_BSS extern u8 data_804340FC[16 + 4 /* padding */];
 SECTION_SDATA2 extern f32 lit_653;
@@ -29,27 +132,36 @@ SECTION_SDATA2 extern f32 lit_655;
 // External References:
 // 
 
-extern "C" extern void __ct__17JASGenericMemPoolFv();
-extern "C" extern void __dt__17JASGenericMemPoolFv();
-extern "C" extern void alloc__17JASGenericMemPoolFUl();
-extern "C" extern void free__17JASGenericMemPoolFPvUl();
-extern "C" extern void attachHandle__8JAISoundFP14JAISoundHandle();
-extern "C" extern void stop__8JAISoundFUl();
-extern "C" extern void stop__8JAISoundFv();
-extern "C" extern void func_802A3104();
-extern "C" extern void func_802A319C();
-extern "C" extern void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
-extern "C" extern void JAIStreamMgr_calc___9JAIStreamFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dt__10JSUPtrLinkFv();
-extern "C" extern void initiate__10JSUPtrListFv();
-extern "C" extern void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_29();
+extern "C" void func_802A3104();
+extern "C" void func_802A319C();
+void operator delete(void*);
+extern "C" void __register_global_object();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
+
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" void func_802A3104();
+extern "C" void func_802A319C();
+extern "C" void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
+extern "C" void JAIStreamMgr_calc___9JAIStreamFv();
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
 SECTION_DATA extern void*const __vt__9JAIStream[12];
 SECTION_SBSS extern u8 data_80450B5C[4];
 SECTION_SBSS extern u8 data_80450B64[4];
@@ -60,34 +172,34 @@ SECTION_SBSS extern u8 data_80451328[8];
 // 
 
 /* ############################################################################################## */
-/* 80455800-80455804 0004+00 .sdata2    @653                                                         */
+/* 80455800-80455804 0004+00 rc=1 efc=0 .sdata2    @653                                                         */
 f32 lit_653 = 1.0f;
 
-/* 80455804-80455808 0004+00 .sdata2    @654                                                         */
+/* 80455804-80455808 0004+00 rc=1 efc=0 .sdata2    @654                                                         */
 u8 lit_654[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455808-80455810 0004+04 .sdata2    @655                                                         */
+/* 80455808-80455810 0004+04 rc=1 efc=0 .sdata2    @655                                                         */
 f32 lit_655 = 0.5f;
 /* padding 4 bytes */
 
-/* 802A3B68-802A3C3C 00D4+00 .text      __ct__12JAIStreamMgrFb                                       */
+/* 802A3B68-802A3C3C 00D4+00 rc=1 efc=1 .text      __ct__12JAIStreamMgrFb                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12JAIStreamMgrFb) {
+asm JAIStreamMgr::JAIStreamMgr(bool field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/__ct__12JAIStreamMgrFb.s"
 }
 #pragma pop
 
 
-/* 802A3C3C-802A3D70 0134+00 .text      startSound__12JAIStreamMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802A3C3C-802A3D70 0134+00 rc=1 efc=1 .text      startSound__12JAIStreamMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802A3C3C) {
+extern "C" asm void func_802A3C3C() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/func_802A3C3C.s"
 }
@@ -95,98 +207,97 @@ ASM_FUNCTION(func_802A3C3C) {
 
 
 /* ############################################################################################## */
-/* 804340F0-804340FC 000C+00 .bss       @745                                                         */
+/* 804340F0-804340FC 000C+00 rc=2 efc=0 .bss       @745                                                         */
 u8 JAIStreamMgr__lit_745[12];
 
-/* 804340FC-80434110 0010+04 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9JAIStream>Fv */
+/* 804340FC-80434110 0010+04 rc=3 efc=1 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9JAIStream>Fv */
 u8 data_804340FC[16 + 4 /* padding */];
 
-/* 802A3D70-802A3E68 00F8+00 .text      freeDeadStream___12JAIStreamMgrFv                            */
+/* 802A3D70-802A3E68 00F8+00 rc=1 efc=0 .text      freeDeadStream___12JAIStreamMgrFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(freeDeadStream___12JAIStreamMgrFv) {
+asm void JAIStreamMgr::freeDeadStream_() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/freeDeadStream___12JAIStreamMgrFv.s"
 }
 #pragma pop
 
 
-/* 802A3E68-802A3EBC 0054+00 .text      __dt__22JASMemPool<9JAIStream>Fv                             */
+/* 802A3E68-802A3EBC 0054+00 rc=3 efc=1 .text      __dt__22JASMemPool<9JAIStream>Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_802A3E68) {
+extern "C" asm void func_802A3E68() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/func_802A3E68.s"
 }
 #pragma pop
 
 
-/* 802A3EBC-802A4028 016C+00 .text      calc__12JAIStreamMgrFv                                       */
+/* 802A3EBC-802A4028 016C+00 rc=1 efc=1 .text      calc__12JAIStreamMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__12JAIStreamMgrFv) {
+asm void JAIStreamMgr::calc() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/calc__12JAIStreamMgrFv.s"
 }
 #pragma pop
 
 
-/* 802A4028-802A4068 0040+00 .text      stop__12JAIStreamMgrFv                                       */
+/* 802A4028-802A4068 0040+00 rc=1 efc=1 .text      stop__12JAIStreamMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stop__12JAIStreamMgrFv) {
+asm void JAIStreamMgr::stop() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/stop__12JAIStreamMgrFv.s"
 }
 #pragma pop
 
 
-/* 802A4068-802A40B8 0050+00 .text      stop__12JAIStreamMgrFUl                                      */
+/* 802A4068-802A40B8 0050+00 rc=2 efc=2 .text      stop__12JAIStreamMgrFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stop__12JAIStreamMgrFUl) {
+asm void JAIStreamMgr::stop(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/stop__12JAIStreamMgrFUl.s"
 }
 #pragma pop
 
 
-/* 802A40B8-802A4118 0060+00 .text      stopSoundID__12JAIStreamMgrF10JAISoundID                     */
+/* 802A40B8-802A4118 0060+00 rc=1 efc=1 .text      stopSoundID__12JAIStreamMgrF10JAISoundID                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopSoundID__12JAIStreamMgrF10JAISoundID) {
+asm void JAIStreamMgr::stopSoundID(JAISoundID field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/stopSoundID__12JAIStreamMgrF10JAISoundID.s"
 }
 #pragma pop
 
 
-/* 802A4118-802A4174 005C+00 .text      mixOut__12JAIStreamMgrFv                                     */
+/* 802A4118-802A4174 005C+00 rc=1 efc=1 .text      mixOut__12JAIStreamMgrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mixOut__12JAIStreamMgrFv) {
+asm void JAIStreamMgr::mixOut() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/mixOut__12JAIStreamMgrFv.s"
 }
 #pragma pop
 
 
-/* 802A4174-802A4244 00D0+00 .text      newStream___12JAIStreamMgrFv                                 */
+/* 802A4174-802A4244 00D0+00 rc=1 efc=0 .text      newStream___12JAIStreamMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newStream___12JAIStreamMgrFv) {
+asm void JAIStreamMgr::newStream_() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStreamMgr/newStream___12JAIStreamMgrFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

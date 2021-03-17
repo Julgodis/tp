@@ -6,55 +6,127 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daPoFire_c;
+
+struct daPoFire_HIO_c {
+	daPoFire_HIO_c();
+	~daPoFire_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daPoFire_c {
+	void setBaseMtx();
+	void create();
+	void Execute();
+	void procMain();
+	void setFire();
+	void searchCandle(void*, void*);
+	void searchFireTag(void*, void*);
+	void init_modeInitMove();
+	void modeInitMove();
+	void modeWait();
+	void init_modeWaitSetEffect();
+	void modeWaitSetEffect();
+	void init_modeMoveOut();
+	void modeMoveOut();
+	void init_modeMove();
+	void modeMove();
+	void init_modeMoveWait();
+	void modeMoveWait();
+	void modeNoMove();
+	void init_modeOnFire();
+	void modeOnFire();
+	void init_modeFireEnd();
+	void modeFireEnd();
+	void eventStart();
+	void eventRun();
+	bool eventEnd();
+	bool Draw();
+	void Delete();
+	~daPoFire_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+struct daPoCandle_c {
+	void getFirePos();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daPoFire_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daPoFire_cFv();
-extern "C" extern void create__10daPoFire_cFv();
-extern "C" extern void Execute__10daPoFire_cFv();
-extern "C" extern void procMain__10daPoFire_cFv();
-extern "C" extern void setFire__10daPoFire_cFv();
-extern "C" extern void searchCandle__10daPoFire_cFPvPv();
-extern "C" extern void searchFireTag__10daPoFire_cFPvPv();
-extern "C" extern void init_modeInitMove__10daPoFire_cFv();
-extern "C" extern void modeInitMove__10daPoFire_cFv();
-extern "C" extern void modeWait__10daPoFire_cFv();
-extern "C" extern void init_modeWaitSetEffect__10daPoFire_cFv();
-extern "C" extern void modeWaitSetEffect__10daPoFire_cFv();
-extern "C" extern void init_modeMoveOut__10daPoFire_cFv();
-extern "C" extern void modeMoveOut__10daPoFire_cFv();
-extern "C" extern void init_modeMove__10daPoFire_cFv();
-extern "C" extern void modeMove__10daPoFire_cFv();
-extern "C" extern void init_modeMoveWait__10daPoFire_cFv();
-extern "C" extern void modeMoveWait__10daPoFire_cFv();
-extern "C" extern void modeNoMove__10daPoFire_cFv();
-extern "C" extern void init_modeOnFire__10daPoFire_cFv();
-extern "C" extern void modeOnFire__10daPoFire_cFv();
-extern "C" extern void init_modeFireEnd__10daPoFire_cFv();
-extern "C" extern void modeFireEnd__10daPoFire_cFv();
-extern "C" extern void eventStart__10daPoFire_cFv();
-extern "C" extern void eventRun__10daPoFire_cFv();
-extern "C" extern void eventEnd__10daPoFire_cFv();
-extern "C" extern void Draw__10daPoFire_cFv();
-extern "C" extern void Delete__10daPoFire_cFv();
-extern "C" extern void daPoFire_Draw__FP10daPoFire_c();
-extern "C" extern void daPoFire_Execute__FP10daPoFire_c();
-extern "C" extern void daPoFire_Delete__FP10daPoFire_c();
-extern "C" extern void daPoFire_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daPoFire_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_poFire_cpp();
-extern "C" extern void func_80CB3DBC();
-extern "C" extern void func_80CB3DC4();
-extern "C" extern void func_80CB3DCC();
-extern "C" extern void func_80CB3DD4();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void getFirePos__12daPoCandle_cFv();
-extern "C" extern void __dt__10daPoFire_cFv();
+void daPoFire_Draw(daPoFire_c*);
+void daPoFire_Execute(daPoFire_c*);
+void daPoFire_Delete(daPoFire_c*);
+void daPoFire_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_poFire_cpp();
+extern "C" void func_80CB3DBC();
+extern "C" void func_80CB3DC4();
+extern "C" void func_80CB3DCC();
+extern "C" void func_80CB3DD4();
+
+extern "C" void __ct__14daPoFire_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daPoFire_cFv();
+extern "C" void create__10daPoFire_cFv();
+extern "C" void Execute__10daPoFire_cFv();
+extern "C" void procMain__10daPoFire_cFv();
+extern "C" void setFire__10daPoFire_cFv();
+extern "C" void searchCandle__10daPoFire_cFPvPv();
+extern "C" void searchFireTag__10daPoFire_cFPvPv();
+extern "C" void init_modeInitMove__10daPoFire_cFv();
+extern "C" void modeInitMove__10daPoFire_cFv();
+extern "C" void modeWait__10daPoFire_cFv();
+extern "C" void init_modeWaitSetEffect__10daPoFire_cFv();
+extern "C" void modeWaitSetEffect__10daPoFire_cFv();
+extern "C" void init_modeMoveOut__10daPoFire_cFv();
+extern "C" void modeMoveOut__10daPoFire_cFv();
+extern "C" void init_modeMove__10daPoFire_cFv();
+extern "C" void modeMove__10daPoFire_cFv();
+extern "C" void init_modeMoveWait__10daPoFire_cFv();
+extern "C" void modeMoveWait__10daPoFire_cFv();
+extern "C" void modeNoMove__10daPoFire_cFv();
+extern "C" void init_modeOnFire__10daPoFire_cFv();
+extern "C" void modeOnFire__10daPoFire_cFv();
+extern "C" void init_modeFireEnd__10daPoFire_cFv();
+extern "C" void modeFireEnd__10daPoFire_cFv();
+extern "C" void eventStart__10daPoFire_cFv();
+extern "C" void eventRun__10daPoFire_cFv();
+extern "C" bool eventEnd__10daPoFire_cFv();
+extern "C" bool Draw__10daPoFire_cFv();
+extern "C" void Delete__10daPoFire_cFv();
+extern "C" void daPoFire_Draw__FP10daPoFire_c();
+extern "C" void daPoFire_Execute__FP10daPoFire_c();
+extern "C" void daPoFire_Delete__FP10daPoFire_c();
+extern "C" void daPoFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daPoFire_HIO_cFv();
+extern "C" void __sinit_d_a_obj_poFire_cpp();
+extern "C" void func_80CB3DBC();
+extern "C" void func_80CB3DC4();
+extern "C" void func_80CB3DCC();
+extern "C" void func_80CB3DD4();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void getFirePos__12daPoCandle_cFv();
+extern "C" void __dt__10daPoFire_cFv();
 SECTION_RODATA extern const u32 lit_3662;
 SECTION_RODATA extern const u32 lit_3663;
 SECTION_RODATA extern const u32 lit_3664;
@@ -104,8 +176,11 @@ SECTION_BSS extern u8 data_80CB4148[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -115,7 +190,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daPoFire_HIO_cFv) {
+asm daPoFire_HIO_c::daPoFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__ct__14daPoFire_HIO_cFv.s"
 }
@@ -126,7 +201,7 @@ ASM_FUNCTION(__ct__14daPoFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -137,7 +212,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daPoFire_cFv) {
+asm void daPoFire_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/setBaseMtx__10daPoFire_cFv.s"
 }
@@ -148,7 +223,7 @@ ASM_FUNCTION(setBaseMtx__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daPoFire_cFv) {
+asm void daPoFire_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/create__10daPoFire_cFv.s"
 }
@@ -159,7 +234,7 @@ ASM_FUNCTION(create__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daPoFire_cFv) {
+asm void daPoFire_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/Execute__10daPoFire_cFv.s"
 }
@@ -170,7 +245,7 @@ ASM_FUNCTION(Execute__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__10daPoFire_cFv) {
+asm void daPoFire_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/procMain__10daPoFire_cFv.s"
 }
@@ -181,7 +256,7 @@ ASM_FUNCTION(procMain__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFire__10daPoFire_cFv) {
+asm void daPoFire_c::setFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/setFire__10daPoFire_cFv.s"
 }
@@ -192,7 +267,7 @@ ASM_FUNCTION(setFire__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchCandle__10daPoFire_cFPvPv) {
+asm void daPoFire_c::searchCandle(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/searchCandle__10daPoFire_cFPvPv.s"
 }
@@ -203,7 +278,7 @@ ASM_FUNCTION(searchCandle__10daPoFire_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchFireTag__10daPoFire_cFPvPv) {
+asm void daPoFire_c::searchFireTag(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/searchFireTag__10daPoFire_cFPvPv.s"
 }
@@ -214,7 +289,7 @@ ASM_FUNCTION(searchFireTag__10daPoFire_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeInitMove__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeInitMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeInitMove__10daPoFire_cFv.s"
 }
@@ -225,7 +300,7 @@ ASM_FUNCTION(init_modeInitMove__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeInitMove__10daPoFire_cFv) {
+asm void daPoFire_c::modeInitMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeInitMove__10daPoFire_cFv.s"
 }
@@ -236,7 +311,7 @@ ASM_FUNCTION(modeInitMove__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daPoFire_cFv) {
+asm void daPoFire_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeWait__10daPoFire_cFv.s"
 }
@@ -247,7 +322,7 @@ ASM_FUNCTION(modeWait__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitSetEffect__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeWaitSetEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeWaitSetEffect__10daPoFire_cFv.s"
 }
@@ -258,7 +333,7 @@ ASM_FUNCTION(init_modeWaitSetEffect__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitSetEffect__10daPoFire_cFv) {
+asm void daPoFire_c::modeWaitSetEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeWaitSetEffect__10daPoFire_cFv.s"
 }
@@ -269,7 +344,7 @@ ASM_FUNCTION(modeWaitSetEffect__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveOut__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeMoveOut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeMoveOut__10daPoFire_cFv.s"
 }
@@ -280,7 +355,7 @@ ASM_FUNCTION(init_modeMoveOut__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveOut__10daPoFire_cFv) {
+asm void daPoFire_c::modeMoveOut() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeMoveOut__10daPoFire_cFv.s"
 }
@@ -291,7 +366,7 @@ ASM_FUNCTION(modeMoveOut__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMove__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeMove__10daPoFire_cFv.s"
 }
@@ -302,7 +377,7 @@ ASM_FUNCTION(init_modeMove__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMove__10daPoFire_cFv) {
+asm void daPoFire_c::modeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeMove__10daPoFire_cFv.s"
 }
@@ -313,7 +388,7 @@ ASM_FUNCTION(modeMove__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveWait__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeMoveWait__10daPoFire_cFv.s"
 }
@@ -324,7 +399,7 @@ ASM_FUNCTION(init_modeMoveWait__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveWait__10daPoFire_cFv) {
+asm void daPoFire_c::modeMoveWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeMoveWait__10daPoFire_cFv.s"
 }
@@ -335,7 +410,7 @@ ASM_FUNCTION(modeMoveWait__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeNoMove__10daPoFire_cFv) {
+asm void daPoFire_c::modeNoMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeNoMove__10daPoFire_cFv.s"
 }
@@ -346,7 +421,7 @@ ASM_FUNCTION(modeNoMove__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOnFire__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeOnFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeOnFire__10daPoFire_cFv.s"
 }
@@ -357,7 +432,7 @@ ASM_FUNCTION(init_modeOnFire__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOnFire__10daPoFire_cFv) {
+asm void daPoFire_c::modeOnFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeOnFire__10daPoFire_cFv.s"
 }
@@ -368,7 +443,7 @@ ASM_FUNCTION(modeOnFire__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeFireEnd__10daPoFire_cFv) {
+asm void daPoFire_c::init_modeFireEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/init_modeFireEnd__10daPoFire_cFv.s"
 }
@@ -379,7 +454,7 @@ ASM_FUNCTION(init_modeFireEnd__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeFireEnd__10daPoFire_cFv) {
+asm void daPoFire_c::modeFireEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/modeFireEnd__10daPoFire_cFv.s"
 }
@@ -390,7 +465,7 @@ ASM_FUNCTION(modeFireEnd__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__10daPoFire_cFv) {
+asm void daPoFire_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventStart__10daPoFire_cFv.s"
 }
@@ -401,7 +476,7 @@ ASM_FUNCTION(eventStart__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventRun__10daPoFire_cFv) {
+asm void daPoFire_c::eventRun() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventRun__10daPoFire_cFv.s"
 }
@@ -409,32 +484,22 @@ ASM_FUNCTION(eventRun__10daPoFire_cFv) {
 
 
 /* 80CB3C64-80CB3C6C 0008+00 .text      eventEnd__10daPoFire_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__10daPoFire_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventEnd__10daPoFire_cFv.s"
+bool daPoFire_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3C6C-80CB3C74 0008+00 .text      Draw__10daPoFire_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daPoFire_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/Draw__10daPoFire_cFv.s"
+bool daPoFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3C74-80CB3CA4 0030+00 .text      Delete__10daPoFire_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daPoFire_cFv) {
+asm void daPoFire_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/Delete__10daPoFire_cFv.s"
 }
@@ -445,7 +510,7 @@ ASM_FUNCTION(Delete__10daPoFire_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoFire_Draw__FP10daPoFire_c) {
+asm void daPoFire_Draw(daPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/daPoFire_Draw__FP10daPoFire_c.s"
 }
@@ -456,7 +521,7 @@ ASM_FUNCTION(daPoFire_Draw__FP10daPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoFire_Execute__FP10daPoFire_c) {
+asm void daPoFire_Execute(daPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/daPoFire_Execute__FP10daPoFire_c.s"
 }
@@ -467,7 +532,7 @@ ASM_FUNCTION(daPoFire_Execute__FP10daPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoFire_Delete__FP10daPoFire_c) {
+asm void daPoFire_Delete(daPoFire_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/daPoFire_Delete__FP10daPoFire_c.s"
 }
@@ -478,7 +543,7 @@ ASM_FUNCTION(daPoFire_Delete__FP10daPoFire_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPoFire_Create__FP10fopAc_ac_c) {
+asm void daPoFire_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/daPoFire_Create__FP10fopAc_ac_c.s"
 }
@@ -489,7 +554,7 @@ ASM_FUNCTION(daPoFire_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daPoFire_HIO_cFv) {
+asm daPoFire_HIO_c::~daPoFire_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__dt__14daPoFire_HIO_cFv.s"
 }
@@ -500,7 +565,7 @@ ASM_FUNCTION(__dt__14daPoFire_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_poFire_cpp) {
+extern "C" asm void __sinit_d_a_obj_poFire_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__sinit_d_a_obj_poFire_cpp.s"
 }
@@ -511,7 +576,7 @@ ASM_FUNCTION(__sinit_d_a_obj_poFire_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB3DBC) {
+extern "C" asm void func_80CB3DBC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/func_80CB3DBC.s"
 }
@@ -522,7 +587,7 @@ ASM_FUNCTION(func_80CB3DBC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB3DC4) {
+extern "C" asm void func_80CB3DC4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/func_80CB3DC4.s"
 }
@@ -533,7 +598,7 @@ ASM_FUNCTION(func_80CB3DC4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB3DCC) {
+extern "C" asm void func_80CB3DCC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/func_80CB3DCC.s"
 }
@@ -544,7 +609,7 @@ ASM_FUNCTION(func_80CB3DCC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB3DD4) {
+extern "C" asm void func_80CB3DD4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/func_80CB3DD4.s"
 }
@@ -555,7 +620,7 @@ ASM_FUNCTION(func_80CB3DD4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__dt__17dEvLib_callback_cFv.s"
 }
@@ -563,43 +628,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80CB3E24-80CB3E2C 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E2C-80CB3E34 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E34-80CB3E3C 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E3C-80CB3E58 001C+00 .text      getFirePos__12daPoCandle_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFirePos__12daPoCandle_cFv) {
+asm void daPoCandle_c::getFirePos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/getFirePos__12daPoCandle_cFv.s"
 }
@@ -610,7 +660,7 @@ ASM_FUNCTION(getFirePos__12daPoCandle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daPoFire_cFv) {
+asm daPoFire_c::~daPoFire_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/__dt__10daPoFire_cFv.s"
 }

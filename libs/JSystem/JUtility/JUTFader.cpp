@@ -6,16 +6,76 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTFader (JUTFader) False/False
+// build JUTFader (JUTFader) True/False
+struct JUTFader;
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin JUTFader) */
+// outer dependency: JUTFader::EStatus
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTFader) */
+struct JUTFader {
+	// JUTFader::EStatus
+	// JUtility::TColor
+	// build EStatus (JUTFader::EStatus) False/False
+	/* dependencies (begin JUTFader::EStatus) */
+	/* dependencies (end JUTFader::EStatus) */
+	struct EStatus {
+	};
+
+	/* 802E5530 */ JUTFader(s32, s32, s32, s32, JUtility::TColor);
+	/* 802E55DC */ void control();
+	/* 802E56DC */ void draw();
+	/* 802E576C */ void startFadeIn(s32);
+	/* 802E579C */ void startFadeOut(s32);
+	/* 802E57D0 */ void setStatus(JUTFader::EStatus, s32);
+	/* 802E5840 */ ~JUTFader();
+};
+
+// build JUtility (JUtility) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+// build JUtility (JUtility) True/True
+/* top-level dependencies (begin J2DGrafContext) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+	// JUtility::TColor
+	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+};
+
+// build J2DOrthoGraph (J2DOrthoGraph) False/False
+/* top-level dependencies (begin J2DOrthoGraph) */
+/* top-level dependencies (end J2DOrthoGraph) */
+struct J2DOrthoGraph {
+	/* 802E9670 */ J2DOrthoGraph();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
-extern "C" extern void control__8JUTFaderFv();
-extern "C" extern void draw__8JUTFaderFv();
-extern "C" extern void startFadeIn__8JUTFaderFi();
-extern "C" extern void startFadeOut__8JUTFaderFi();
-extern "C" extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
-extern "C" extern void __dt__8JUTFaderFv();
+
+extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
+extern "C" void control__8JUTFaderFv();
+extern "C" void draw__8JUTFaderFv();
+extern "C" void startFadeIn__8JUTFaderFi();
+extern "C" void startFadeOut__8JUTFaderFi();
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+extern "C" void __dt__8JUTFaderFv();
 SECTION_DATA extern void*const __vt__8JUTFader[6];
 SECTION_SDATA2 extern f64 lit_2196;
 
@@ -23,10 +83,13 @@ SECTION_SDATA2 extern f64 lit_2196;
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void func_802E9260();
-extern "C" extern void __ct__13J2DOrthoGraphFv();
+void operator delete(void*);
+extern "C" void func_802E9260();
+
+extern "C" void __dl__FPv();
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void func_802E9260();
+extern "C" void __ct__13J2DOrthoGraphFv();
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 
@@ -35,7 +98,7 @@ SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 // 
 
 /* ############################################################################################## */
-/* 803CC990-803CC9A8 0018+00 .data      __vt__8JUTFader                                              */
+/* 803CC990-803CC9A8 0018+00 rc=2 efc=0 .data      __vt__8JUTFader                                              */
 void* const __vt__8JUTFader[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -45,84 +108,83 @@ void* const __vt__8JUTFader[6] = {
 	(void*)draw__8JUTFaderFv,
 };
 
-/* 804560D0-804560D8 0008+00 .sdata2    @2196                                                        */
+/* 804560D0-804560D8 0008+00 rc=1 efc=0 .sdata2    @2196                                                        */
 f64 lit_2196 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E5530-802E55DC 00AC+00 .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
+/* 802E5530-802E55DC 00AC+00 rc=1 efc=1 .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8JUTFaderFiiiiQ28JUtility6TColor) {
+asm JUTFader::JUTFader(s32 field_0, s32 field_1, s32 field_2, s32 field_3, JUtility::TColor field_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/__ct__8JUTFaderFiiiiQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 802E55DC-802E56DC 0100+00 .text      control__8JUTFaderFv                                         */
+/* 802E55DC-802E56DC 0100+00 rc=1 efc=1 .text      control__8JUTFaderFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(control__8JUTFaderFv) {
+asm void JUTFader::control() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/control__8JUTFaderFv.s"
 }
 #pragma pop
 
 
-/* 802E56DC-802E576C 0090+00 .text      draw__8JUTFaderFv                                            */
+/* 802E56DC-802E576C 0090+00 rc=1 efc=0 .text      draw__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8JUTFaderFv) {
+asm void JUTFader::draw() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/draw__8JUTFaderFv.s"
 }
 #pragma pop
 
 
-/* 802E576C-802E579C 0030+00 .text      startFadeIn__8JUTFaderFi                                     */
+/* 802E576C-802E579C 0030+00 rc=1 efc=0 .text      startFadeIn__8JUTFaderFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startFadeIn__8JUTFaderFi) {
+asm void JUTFader::startFadeIn(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeIn__8JUTFaderFi.s"
 }
 #pragma pop
 
 
-/* 802E579C-802E57D0 0034+00 .text      startFadeOut__8JUTFaderFi                                    */
+/* 802E579C-802E57D0 0034+00 rc=1 efc=0 .text      startFadeOut__8JUTFaderFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startFadeOut__8JUTFaderFi) {
+asm void JUTFader::startFadeOut(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeOut__8JUTFaderFi.s"
 }
 #pragma pop
 
 
-/* 802E57D0-802E5840 0070+00 .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
+/* 802E57D0-802E5840 0070+00 rc=1 efc=1 .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStatus__8JUTFaderFQ28JUTFader7EStatusi) {
+asm void JUTFader::setStatus(JUTFader::EStatus field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/setStatus__8JUTFaderFQ28JUTFader7EStatusi.s"
 }
 #pragma pop
 
 
-/* 802E5840-802E5888 0048+00 .text      __dt__8JUTFaderFv                                            */
+/* 802E5840-802E5888 0048+00 rc=1 efc=0 .text      __dt__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8JUTFaderFv) {
+asm JUTFader::~JUTFader() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/__dt__8JUTFaderFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

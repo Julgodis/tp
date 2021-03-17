@@ -6,11 +6,23 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSus_c;
+
+struct daSus_c {
+	void create();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__7daSus_cFv();
-extern "C" extern void daSus_create__FP7daSus_c();
+void daSus_create(daSus_c*);
+
+extern "C" void create__7daSus_cFv();
+extern "C" void daSus_create__FP7daSus_c();
 SECTION_RODATA extern const u32 lit_3640;
 SECTION_RODATA extern const u32 lit_3641;
 SECTION_RODATA extern const u32 lit_3642;
@@ -22,7 +34,9 @@ SECTION_DATA extern u8 g_profile_SUSPEND[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -32,7 +46,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__7daSus_cFv) {
+asm void daSus_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_suspend/d_a_suspend/create__7daSus_cFv.s"
 }
@@ -43,7 +57,7 @@ ASM_FUNCTION(create__7daSus_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSus_create__FP7daSus_c) {
+asm void daSus_create(daSus_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_suspend/d_a_suspend/daSus_create__FP7daSus_c.s"
 }

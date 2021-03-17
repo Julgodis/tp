@@ -6,34 +6,84 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagAtkItem_c;
+
+struct daTagAtkItem_c {
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void action();
+	void eventStart();
+	void eventEnd();
+	void checkHit();
+	void createItem();
+	bool _delete();
+	~daTagAtkItem_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventRun();
+	bool eventStart();
+	bool eventEnd();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setBaseMtx__14daTagAtkItem_cFv();
-extern "C" extern void Create__14daTagAtkItem_cFv();
-extern "C" extern void create__14daTagAtkItem_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void execute__14daTagAtkItem_cFv();
-extern "C" extern void action__14daTagAtkItem_cFv();
-extern "C" extern void eventStart__14daTagAtkItem_cFv();
-extern "C" extern void eventEnd__14daTagAtkItem_cFv();
-extern "C" extern void checkHit__14daTagAtkItem_cFv();
-extern "C" extern void createItem__14daTagAtkItem_cFv();
-extern "C" extern void _delete__14daTagAtkItem_cFv();
-extern "C" extern void daTagAtkItem_Execute__FP14daTagAtkItem_c();
-extern "C" extern void daTagAtkItem_Delete__FP14daTagAtkItem_c();
-extern "C" extern void daTagAtkItem_Create__FP14daTagAtkItem_c();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void func_805A3100();
-extern "C" extern void func_805A3108();
-extern "C" extern void func_805A3110();
-extern "C" extern void __dt__14daTagAtkItem_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daTagAtkItem_Execute(daTagAtkItem_c*);
+void daTagAtkItem_Delete(daTagAtkItem_c*);
+void daTagAtkItem_Create(daTagAtkItem_c*);
+extern "C" void func_805A3100();
+extern "C" void func_805A3108();
+extern "C" void func_805A3110();
+
+extern "C" void setBaseMtx__14daTagAtkItem_cFv();
+extern "C" void Create__14daTagAtkItem_cFv();
+extern "C" void create__14daTagAtkItem_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void execute__14daTagAtkItem_cFv();
+extern "C" void action__14daTagAtkItem_cFv();
+extern "C" void eventStart__14daTagAtkItem_cFv();
+extern "C" void eventEnd__14daTagAtkItem_cFv();
+extern "C" void checkHit__14daTagAtkItem_cFv();
+extern "C" void createItem__14daTagAtkItem_cFv();
+extern "C" bool _delete__14daTagAtkItem_cFv();
+extern "C" void daTagAtkItem_Execute__FP14daTagAtkItem_c();
+extern "C" void daTagAtkItem_Delete__FP14daTagAtkItem_c();
+extern "C" void daTagAtkItem_Create__FP14daTagAtkItem_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void func_805A3100();
+extern "C" void func_805A3108();
+extern "C" void func_805A3110();
+extern "C" void __dt__14daTagAtkItem_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u32 lit_3657;
 SECTION_RODATA extern const u32 lit_3658;
 SECTION_RODATA extern const u8 lit_3859[4 + 4 /* padding */];
@@ -55,7 +105,9 @@ SECTION_DATA extern void*const __vt__17dEvLib_callback_c[6];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -65,7 +117,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/setBaseMtx__14daTagAtkItem_cFv.s"
 }
@@ -76,7 +128,7 @@ ASM_FUNCTION(setBaseMtx__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/Create__14daTagAtkItem_cFv.s"
 }
@@ -87,7 +139,7 @@ ASM_FUNCTION(Create__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A2A34.s"
 }
@@ -98,7 +150,7 @@ ASM_FUNCTION(create__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__8cM3dGCylFv.s"
 }
@@ -109,7 +161,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__8cM3dGAabFv.s"
 }
@@ -120,7 +172,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__10dCcD_GSttsFv.s"
 }
@@ -131,7 +183,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/execute__14daTagAtkItem_cFv.s"
 }
@@ -142,7 +194,7 @@ ASM_FUNCTION(execute__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::action() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/action__14daTagAtkItem_cFv.s"
 }
@@ -153,7 +205,7 @@ ASM_FUNCTION(action__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventStart__14daTagAtkItem_cFv.s"
 }
@@ -164,7 +216,7 @@ ASM_FUNCTION(eventStart__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::eventEnd() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventEnd__14daTagAtkItem_cFv.s"
 }
@@ -175,7 +227,7 @@ ASM_FUNCTION(eventEnd__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHit__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::checkHit() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/checkHit__14daTagAtkItem_cFv.s"
 }
@@ -186,7 +238,7 @@ ASM_FUNCTION(checkHit__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createItem__14daTagAtkItem_cFv) {
+asm void daTagAtkItem_c::createItem() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/createItem__14daTagAtkItem_cFv.s"
 }
@@ -194,21 +246,16 @@ ASM_FUNCTION(createItem__14daTagAtkItem_cFv) {
 
 
 /* 805A3038-805A3040 0008+00 .text      _delete__14daTagAtkItem_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daTagAtkItem_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/_delete__14daTagAtkItem_cFv.s"
+bool daTagAtkItem_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A3040-805A3060 0020+00 .text      daTagAtkItem_Execute__FP14daTagAtkItem_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAtkItem_Execute__FP14daTagAtkItem_c) {
+asm void daTagAtkItem_Execute(daTagAtkItem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Execute__FP14daTagAtkItem_c.s"
 }
@@ -219,7 +266,7 @@ ASM_FUNCTION(daTagAtkItem_Execute__FP14daTagAtkItem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAtkItem_Delete__FP14daTagAtkItem_c) {
+asm void daTagAtkItem_Delete(daTagAtkItem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Delete__FP14daTagAtkItem_c.s"
 }
@@ -230,7 +277,7 @@ ASM_FUNCTION(daTagAtkItem_Delete__FP14daTagAtkItem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagAtkItem_Create__FP14daTagAtkItem_c) {
+asm void daTagAtkItem_Create(daTagAtkItem_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/daTagAtkItem_Create__FP14daTagAtkItem_c.s"
 }
@@ -241,7 +288,7 @@ ASM_FUNCTION(daTagAtkItem_Create__FP14daTagAtkItem_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__17dEvLib_callback_cFv.s"
 }
@@ -249,43 +296,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 805A30E8-805A30F0 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A30F0-805A30F8 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A30F8-805A3100 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A3100-805A3108 0008+00 .text      @1384@eventEnd__14daTagAtkItem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A3100) {
+extern "C" asm void func_805A3100() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3100.s"
 }
@@ -296,7 +328,7 @@ ASM_FUNCTION(func_805A3100) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A3108) {
+extern "C" asm void func_805A3108() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3108.s"
 }
@@ -307,7 +339,7 @@ ASM_FUNCTION(func_805A3108) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805A3110) {
+extern "C" asm void func_805A3110() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/func_805A3110.s"
 }
@@ -318,7 +350,7 @@ ASM_FUNCTION(func_805A3110) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTagAtkItem_cFv) {
+asm daTagAtkItem_c::~daTagAtkItem_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__14daTagAtkItem_cFv.s"
 }
@@ -329,7 +361,7 @@ ASM_FUNCTION(__dt__14daTagAtkItem_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/__dt__10cCcD_GSttsFv.s"
 }

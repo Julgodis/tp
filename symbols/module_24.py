@@ -28,13 +28,13 @@ SECTIONS = [
 
 # Symbols
 SYMBOLS = [
-	{'addr':0x804857C0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x804857EC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485818,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"Function"},
-	{'addr':0x80485838,'size':316,'pad':0,'label':"checkWork__8daScex_cFv",'name':"checkWork__8daScex_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
-	{'addr':0x80485974,'size':188,'pad':0,'label':"daScex_Create__FP10fopAc_ac_c",'name':"daScex_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485A30,'size':32,'pad':0,'label':"daScex_Execute__FP8daScex_c",'name':"daScex_Execute__FP8daScex_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"Function"},
-	{'addr':0x80485A50,'size':576,'pad':0,'label':"execute__8daScex_cFv",'name':"execute__8daScex_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"Function"},
+	{'addr':0x804857C0,'size':44,'pad':0,'label':"_prolog",'name':"_prolog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x804857EC,'size':44,'pad':0,'label':"_epilog",'name':"_epilog",'lib':-1,'tu':1,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485818,'size':32,'pad':0,'label':"_unresolved",'name':"_unresolved",'lib':-1,'tu':1,'section':0,'rc':5,'type':"ASMFunction"},
+	{'addr':0x80485838,'size':316,'pad':0,'label':"checkWork__8daScex_cFv",'name':"checkWork__8daScex_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
+	{'addr':0x80485974,'size':188,'pad':0,'label':"daScex_Create__FP10fopAc_ac_c",'name':"daScex_Create__FP10fopAc_ac_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485A30,'size':32,'pad':0,'label':"daScex_Execute__FP8daScex_c",'name':"daScex_Execute__FP8daScex_c",'lib':-1,'tu':4,'section':0,'rc':0,'type':"ASMFunction"},
+	{'addr':0x80485A50,'size':576,'pad':0,'label':"execute__8daScex_cFv",'name':"execute__8daScex_cFv",'lib':-1,'tu':4,'section':0,'rc':1,'type':"ASMFunction"},
 	{'addr':0x80485C90,'size':4,'pad':0,'label':"data_80485C90",'name':None,'lib':-1,'tu':2,'section':1,'rc':0,'type':"InitData"},
 	{'addr':0x80485C94,'size':4,'pad':0,'label':"data_80485C94",'name':None,'lib':-1,'tu':3,'section':2,'rc':0,'type':"InitData"},
 	{'addr':0x80485C98,'size':4,'pad':0,'label':"lit_3758",'name':"@3758",'lib':-1,'tu':4,'section':3,'rc':0,'type':"Integer"},

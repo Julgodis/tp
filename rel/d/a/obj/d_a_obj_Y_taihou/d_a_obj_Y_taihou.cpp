@@ -6,44 +6,119 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjYtaihou_c;
+struct daObjCarry_c;
+struct dCcD_GObjInf;
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct daObjYtaihou_c {
+	void create1st();
+	void setIronBall(daObjCarry_c*);
+	void getEvent(u8);
+	void loadAngle();
+	void saveAngle();
+	void setNextAngle();
+	void setMtx();
+	void rotateCheck();
+	void shotCheck();
+	void eventStart();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjYtaihou_c();
+};
+
+struct daObjCarry_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void searchIronBallCallback__FPvPv();
-extern "C" extern void create1st__14daObjYtaihou_cFv();
-extern "C" extern void setIronBall__14daObjYtaihou_cFP12daObjCarry_c();
-extern "C" extern void getEvent__14daObjYtaihou_cFUc();
-extern "C" extern void loadAngle__14daObjYtaihou_cFv();
-extern "C" extern void saveAngle__14daObjYtaihou_cFv();
-extern "C" extern void setNextAngle__14daObjYtaihou_cFv();
-extern "C" extern void setMtx__14daObjYtaihou_cFv();
-extern "C" extern void rotateCheck__14daObjYtaihou_cFv();
-extern "C" extern void shotCheck__14daObjYtaihou_cFv();
-extern "C" extern void eventStart__14daObjYtaihou_cFv();
-extern "C" extern void CreateHeap__14daObjYtaihou_cFv();
-extern "C" extern void Create__14daObjYtaihou_cFv();
-extern "C" extern void Execute__14daObjYtaihou_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjYtaihou_cFv();
-extern "C" extern void Delete__14daObjYtaihou_cFv();
-extern "C" extern void daObjYtaihou_create1st__FP14daObjYtaihou_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c();
-extern "C" extern void daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c();
-extern "C" extern void daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__14daObjYtaihou_cFv();
-extern "C" extern void func_80BA1118();
-extern "C" extern void func_80BA1134();
-extern "C" extern void func_80BA113C();
+void ccHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+extern "C" void pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+void searchIronBallCallback(void*, void*);
+extern "C" void Execute__14daObjYtaihou_cFPPA3_A4_f();
+void daObjYtaihou_create1st(daObjYtaihou_c*);
+void daObjYtaihou_MoveBGDelete(daObjYtaihou_c*);
+void daObjYtaihou_MoveBGExecute(daObjYtaihou_c*);
+void daObjYtaihou_MoveBGDraw(daObjYtaihou_c*);
+extern "C" void func_80BA1118();
+extern "C" void func_80BA1134();
+extern "C" void func_80BA113C();
+
+extern "C" void ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void __dt__4cXyzFv();
+extern "C" void searchIronBallCallback__FPvPv();
+extern "C" void create1st__14daObjYtaihou_cFv();
+extern "C" void setIronBall__14daObjYtaihou_cFP12daObjCarry_c();
+extern "C" void getEvent__14daObjYtaihou_cFUc();
+extern "C" void loadAngle__14daObjYtaihou_cFv();
+extern "C" void saveAngle__14daObjYtaihou_cFv();
+extern "C" void setNextAngle__14daObjYtaihou_cFv();
+extern "C" void setMtx__14daObjYtaihou_cFv();
+extern "C" void rotateCheck__14daObjYtaihou_cFv();
+extern "C" void shotCheck__14daObjYtaihou_cFv();
+extern "C" void eventStart__14daObjYtaihou_cFv();
+extern "C" void CreateHeap__14daObjYtaihou_cFv();
+extern "C" void Create__14daObjYtaihou_cFv();
+extern "C" void Execute__14daObjYtaihou_cFPPA3_A4_f();
+extern "C" void Draw__14daObjYtaihou_cFv();
+extern "C" void Delete__14daObjYtaihou_cFv();
+extern "C" void daObjYtaihou_create1st__FP14daObjYtaihou_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c();
+extern "C" void daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c();
+extern "C" void daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__14daObjYtaihou_cFv();
+extern "C" void func_80BA1118();
+extern "C" void func_80BA1134();
+extern "C" void func_80BA113C();
 SECTION_RODATA extern const u32 lit_3695;
 SECTION_RODATA extern const u32 lit_3696;
 SECTION_RODATA extern const u32 lit_3697;
@@ -128,8 +203,11 @@ SECTION_BSS extern u8 data_80BA13DC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -139,7 +217,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void ccHitCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80B9FAEC.s"
 }
@@ -150,7 +228,7 @@ ASM_FUNCTION(ccHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GO
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel) {
+extern "C" asm void pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80B9FC40.s"
 }
@@ -161,7 +239,7 @@ ASM_FUNCTION(pushPullcallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPul
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__4cXyzFv.s"
 }
@@ -172,7 +250,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchIronBallCallback__FPvPv) {
+asm void searchIronBallCallback(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/searchIronBallCallback__FPvPv.s"
 }
@@ -183,7 +261,7 @@ ASM_FUNCTION(searchIronBallCallback__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/create1st__14daObjYtaihou_cFv.s"
 }
@@ -194,7 +272,7 @@ ASM_FUNCTION(create1st__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIronBall__14daObjYtaihou_cFP12daObjCarry_c) {
+asm void daObjYtaihou_c::setIronBall(daObjCarry_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/setIronBall__14daObjYtaihou_cFP12daObjCarry_c.s"
 }
@@ -205,7 +283,7 @@ ASM_FUNCTION(setIronBall__14daObjYtaihou_cFP12daObjCarry_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEvent__14daObjYtaihou_cFUc) {
+asm void daObjYtaihou_c::getEvent(u8 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/getEvent__14daObjYtaihou_cFUc.s"
 }
@@ -216,7 +294,7 @@ ASM_FUNCTION(getEvent__14daObjYtaihou_cFUc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadAngle__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::loadAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/loadAngle__14daObjYtaihou_cFv.s"
 }
@@ -227,7 +305,7 @@ ASM_FUNCTION(loadAngle__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(saveAngle__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::saveAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/saveAngle__14daObjYtaihou_cFv.s"
 }
@@ -238,7 +316,7 @@ ASM_FUNCTION(saveAngle__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextAngle__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::setNextAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/setNextAngle__14daObjYtaihou_cFv.s"
 }
@@ -249,7 +327,7 @@ ASM_FUNCTION(setNextAngle__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/setMtx__14daObjYtaihou_cFv.s"
 }
@@ -260,7 +338,7 @@ ASM_FUNCTION(setMtx__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rotateCheck__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::rotateCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/rotateCheck__14daObjYtaihou_cFv.s"
 }
@@ -271,7 +349,7 @@ ASM_FUNCTION(rotateCheck__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shotCheck__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::shotCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/shotCheck__14daObjYtaihou_cFv.s"
 }
@@ -282,7 +360,7 @@ ASM_FUNCTION(shotCheck__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/eventStart__14daObjYtaihou_cFv.s"
 }
@@ -293,7 +371,7 @@ ASM_FUNCTION(eventStart__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/CreateHeap__14daObjYtaihou_cFv.s"
 }
@@ -304,7 +382,7 @@ ASM_FUNCTION(CreateHeap__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/Create__14daObjYtaihou_cFv.s"
 }
@@ -315,7 +393,7 @@ ASM_FUNCTION(Create__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjYtaihou_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjYtaihou_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/Execute__14daObjYtaihou_cFPPA3_A4_f.s"
 }
@@ -326,7 +404,7 @@ ASM_FUNCTION(Execute__14daObjYtaihou_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/Draw__14daObjYtaihou_cFv.s"
 }
@@ -337,7 +415,7 @@ ASM_FUNCTION(Draw__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjYtaihou_cFv) {
+asm void daObjYtaihou_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/Delete__14daObjYtaihou_cFv.s"
 }
@@ -348,7 +426,7 @@ ASM_FUNCTION(Delete__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYtaihou_create1st__FP14daObjYtaihou_c) {
+asm void daObjYtaihou_create1st(daObjYtaihou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_create1st__FP14daObjYtaihou_c.s"
 }
@@ -359,7 +437,7 @@ ASM_FUNCTION(daObjYtaihou_create1st__FP14daObjYtaihou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__8cM3dGCylFv.s"
 }
@@ -370,7 +448,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__8cM3dGAabFv.s"
 }
@@ -381,7 +459,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__10dCcD_GSttsFv.s"
 }
@@ -392,7 +470,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c) {
+asm void daObjYtaihou_MoveBGDelete(daObjYtaihou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c.s"
 }
@@ -403,7 +481,7 @@ ASM_FUNCTION(daObjYtaihou_MoveBGDelete__FP14daObjYtaihou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c) {
+asm void daObjYtaihou_MoveBGExecute(daObjYtaihou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c.s"
 }
@@ -414,7 +492,7 @@ ASM_FUNCTION(daObjYtaihou_MoveBGExecute__FP14daObjYtaihou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c) {
+asm void daObjYtaihou_MoveBGDraw(daObjYtaihou_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c.s"
 }
@@ -425,7 +503,7 @@ ASM_FUNCTION(daObjYtaihou_MoveBGDraw__FP14daObjYtaihou_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__10cCcD_GSttsFv.s"
 }
@@ -436,7 +514,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__17dEvLib_callback_cFv.s"
 }
@@ -444,43 +522,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80BA0F8C-80BA0F94 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA0F94-80BA0F9C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA0F9C-80BA0FA4 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA0FA4-80BA1118 0174+00 .text      __dt__14daObjYtaihou_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObjYtaihou_cFv) {
+asm daObjYtaihou_c::~daObjYtaihou_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/__dt__14daObjYtaihou_cFv.s"
 }
@@ -491,7 +554,7 @@ ASM_FUNCTION(__dt__14daObjYtaihou_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA1118) {
+extern "C" asm void func_80BA1118() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80BA1118.s"
 }
@@ -502,7 +565,7 @@ ASM_FUNCTION(func_80BA1118) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA1134) {
+extern "C" asm void func_80BA1134() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80BA1134.s"
 }
@@ -513,7 +576,7 @@ ASM_FUNCTION(func_80BA1134) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA113C) {
+extern "C" asm void func_80BA113C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Y_taihou/d_a_obj_Y_taihou/func_80BA113C.s"
 }

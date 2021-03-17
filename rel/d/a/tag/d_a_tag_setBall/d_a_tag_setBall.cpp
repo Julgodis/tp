@@ -6,18 +6,37 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagSetBall_c;
+
+struct daTagSetBall_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	bool execute();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daTagSetBall_cFv();
-extern "C" extern void setBaseMtx__14daTagSetBall_cFv();
-extern "C" extern void Create__14daTagSetBall_cFv();
-extern "C" extern void create__14daTagSetBall_cFv();
-extern "C" extern void execute__14daTagSetBall_cFv();
-extern "C" extern void _delete__14daTagSetBall_cFv();
-extern "C" extern void daTagSetBall_Execute__FP14daTagSetBall_c();
-extern "C" extern void daTagSetBall_Delete__FP14daTagSetBall_c();
-extern "C" extern void daTagSetBall_Create__FP14daTagSetBall_c();
+void daTagSetBall_Execute(daTagSetBall_c*);
+void daTagSetBall_Delete(daTagSetBall_c*);
+void daTagSetBall_Create(daTagSetBall_c*);
+
+extern "C" void initBaseMtx__14daTagSetBall_cFv();
+extern "C" void setBaseMtx__14daTagSetBall_cFv();
+extern "C" void Create__14daTagSetBall_cFv();
+extern "C" void create__14daTagSetBall_cFv();
+extern "C" bool execute__14daTagSetBall_cFv();
+extern "C" bool _delete__14daTagSetBall_cFv();
+extern "C" void daTagSetBall_Execute__FP14daTagSetBall_c();
+extern "C" void daTagSetBall_Delete__FP14daTagSetBall_c();
+extern "C" void daTagSetBall_Create__FP14daTagSetBall_c();
 SECTION_DATA extern u8 l_daTagSetBall_Method[32];
 SECTION_DATA extern u8 g_profile_Tag_SetBall[48];
 
@@ -25,7 +44,9 @@ SECTION_DATA extern u8 g_profile_Tag_SetBall[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -35,7 +56,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daTagSetBall_cFv) {
+asm void daTagSetBall_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/initBaseMtx__14daTagSetBall_cFv.s"
 }
@@ -43,21 +64,16 @@ ASM_FUNCTION(initBaseMtx__14daTagSetBall_cFv) {
 
 
 /* 80D60218-80D6021C 0004+00 .text      setBaseMtx__14daTagSetBall_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daTagSetBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/setBaseMtx__14daTagSetBall_cFv.s"
+void daTagSetBall_c::setBaseMtx() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D6021C-80D6024C 0030+00 .text      Create__14daTagSetBall_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daTagSetBall_cFv) {
+asm void daTagSetBall_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/Create__14daTagSetBall_cFv.s"
 }
@@ -68,7 +84,7 @@ ASM_FUNCTION(Create__14daTagSetBall_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagSetBall_cFv) {
+asm void daTagSetBall_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/func_80D6024C.s"
 }
@@ -76,32 +92,22 @@ ASM_FUNCTION(create__14daTagSetBall_cFv) {
 
 
 /* 80D602B4-80D602BC 0008+00 .text      execute__14daTagSetBall_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagSetBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/execute__14daTagSetBall_cFv.s"
+bool daTagSetBall_c::execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D602BC-80D602C4 0008+00 .text      _delete__14daTagSetBall_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daTagSetBall_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/_delete__14daTagSetBall_cFv.s"
+bool daTagSetBall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D602C4-80D602E4 0020+00 .text      daTagSetBall_Execute__FP14daTagSetBall_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSetBall_Execute__FP14daTagSetBall_c) {
+asm void daTagSetBall_Execute(daTagSetBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/daTagSetBall_Execute__FP14daTagSetBall_c.s"
 }
@@ -112,7 +118,7 @@ ASM_FUNCTION(daTagSetBall_Execute__FP14daTagSetBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSetBall_Delete__FP14daTagSetBall_c) {
+asm void daTagSetBall_Delete(daTagSetBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/daTagSetBall_Delete__FP14daTagSetBall_c.s"
 }
@@ -123,7 +129,7 @@ ASM_FUNCTION(daTagSetBall_Delete__FP14daTagSetBall_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagSetBall_Create__FP14daTagSetBall_c) {
+asm void daTagSetBall_Create(daTagSetBall_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/daTagSetBall_Create__FP14daTagSetBall_c.s"
 }

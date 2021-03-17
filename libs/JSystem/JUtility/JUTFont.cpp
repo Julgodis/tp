@@ -6,80 +6,113 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTFont (JUTFont) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
+/* top-level dependencies (begin JUTFont) */
+// outer dependency: JUtility::TColor
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+	// JUtility::TColor
+	/* 802DECF8 */ JUTFont();
+	/* 802DED24 */ void initialize_state();
+	/* 802DED70 */ void setCharColor(JUtility::TColor);
+	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+// build JUtility (JUtility) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__7JUTFontFv();
-extern "C" extern void initialize_state__7JUTFontFv();
-extern "C" extern void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern "C" extern void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" extern void drawString_size_scale__7JUTFontFffffPCcUlb();
+
+extern "C" void __ct__7JUTFontFv();
+extern "C" void initialize_state__7JUTFontFv();
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
 
 // 
 // External References:
 // 
 
-extern "C" extern void _savegpr_27();
-extern "C" extern void _restgpr_27();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 SECTION_DATA extern void*const __vt__7JUTFont[17];
 
 // 
 // Declarations:
 // 
 
-/* 802DECF8-802DED24 002C+00 .text      __ct__7JUTFontFv                                             */
+/* 802DECF8-802DED24 002C+00 rc=2 efc=2 .text      __ct__7JUTFontFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7JUTFontFv) {
+asm JUTFont::JUTFont() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFont/__ct__7JUTFontFv.s"
 }
 #pragma pop
 
 
-/* 802DED24-802DED70 004C+00 .text      initialize_state__7JUTFontFv                                 */
+/* 802DED24-802DED70 004C+00 rc=9 efc=9 .text      initialize_state__7JUTFontFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize_state__7JUTFontFv) {
+asm void JUTFont::initialize_state() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFont/initialize_state__7JUTFontFv.s"
 }
 #pragma pop
 
 
-/* 802DED70-802DEDC4 0054+00 .text      setCharColor__7JUTFontFQ28JUtility6TColor                    */
+/* 802DED70-802DEDC4 0054+00 rc=4 efc=3 .text      setCharColor__7JUTFontFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCharColor__7JUTFontFQ28JUtility6TColor) {
+asm void JUTFont::setCharColor(JUtility::TColor field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFont/setCharColor__7JUTFontFQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 802DEDC4-802DEE28 0064+00 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  */
+/* 802DEDC4-802DEE28 0064+00 rc=2 efc=2 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor) {
+asm void JUTFont::setGradColor(JUtility::TColor field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFont/setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor.s"
 }
 #pragma pop
 
 
-/* 802DEE28-802DEF48 0120+00 .text      drawString_size_scale__7JUTFontFffffPCcUlb                   */
+/* 802DEE28-802DEF48 0120+00 rc=3 efc=3 .text      drawString_size_scale__7JUTFontFffffPCcUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawString_size_scale__7JUTFontFffffPCcUlb) {
+asm void JUTFont::drawString_size_scale(f32 field_0, f32 field_1, f32 field_2, f32 field_3, char const* field_4, u32 field_5, bool field_6) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFont/drawString_size_scale__7JUTFontFffffPCcUlb.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

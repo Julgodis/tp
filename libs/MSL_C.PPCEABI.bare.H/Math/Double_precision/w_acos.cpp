@@ -9,27 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void acos();
+extern "C" void acos();
+
+extern "C" void acos();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ieee754_acos();
+extern "C" void __ieee754_acos();
+
+extern "C" void __ieee754_acos();
 
 // 
 // Declarations:
 // 
 
-/* 8036C6E0-8036C700 0020+00 .text      acos                                                         */
+/* 8036C6E0-8036C700 0020+00 rc=2 efc=2 .text      acos                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(acos) {
+extern "C" asm void acos() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_acos/acos.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

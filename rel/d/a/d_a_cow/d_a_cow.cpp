@@ -6,117 +6,280 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+struct cXyz;
+
+struct daCow_c {
+	void calcRunAnime(s32);
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void setEffect();
+	void isChaseCowGame();
+	void setCarryStatus();
+	void setActetcStatus();
+	void checkNadeNadeFinish();
+	void checkNadeNade();
+	void setSeSnort();
+	void setRushVibration(s32);
+	void checkThrow();
+	void damage_check();
+	void setEnterCow20();
+	void setEnterCow10();
+	void setGroundAngle();
+	void checkRun();
+	void checkNearCowRun();
+	void action_wait();
+	void action_eat();
+	void action_moo();
+	void action_shake();
+	void checkNearWolf();
+	void checkPlayerWait();
+	void checkPlayerSurprise();
+	void checkPlayerPos();
+	void checkBeforeBg();
+	void checkOutOfGate(cXyz);
+	void getCowshedAngle();
+	void getCowshedDist();
+	void checkCowIn(f32, f32);
+	void checkCowInOwn(s32);
+	void action_run();
+	void checkCurringPen();
+	void setCowInCage();
+	void setEnterCount();
+	void action_enter();
+	void isAngry();
+	void isGuardFad();
+	void setAngryHit();
+	void setRedTev();
+	void setAngryTurn();
+	void action_angry();
+	void calcCatchPos(f32, s32);
+	void executeCrazyWait();
+	void executeCrazyDash();
+	void initCrazyBeforeCatch(s32);
+	void executeCrazyBeforeCatch();
+	void initCrazyCatch(s32);
+	void executeCrazyCatch();
+	void initCrazyThrow(s32);
+	void executeCrazyThrow();
+	void initCrazyAttack(s32);
+	void executeCrazyAttack();
+	void initCrazyAway(s32);
+	void executeCrazyAway();
+	void executeCrazyEnd();
+	void initCrazyBack(s32);
+	void executeCrazyBack();
+	void action_crazy();
+	void executeCrazyBack2();
+	void action_thrown();
+	void checkWolfBusters();
+	void action_wolf();
+	void action_damage();
+	void action();
+	void setMtx();
+	void setAttnPos();
+	void setCollisions();
+	void Execute();
+	void CreateHeap();
+	void createHeapCallBack(fopAc_ac_c*);
+	void initialize();
+	void create();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void Draw();
+	void Delete();
+	void getShapeAngle();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void checkNowWolf();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void calcRunAnime__7daCow_cFi();
-extern "C" extern void setBck__7daCow_cFiUcff();
-extern "C" extern void checkBck__7daCow_cFi();
-extern "C" extern void setEffect__7daCow_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void isChaseCowGame__7daCow_cFv();
-extern "C" extern void setCarryStatus__7daCow_cFv();
-extern "C" extern void setActetcStatus__7daCow_cFv();
-extern "C" extern void checkNadeNadeFinish__7daCow_cFv();
-extern "C" extern void checkNadeNade__7daCow_cFv();
-extern "C" extern void setSeSnort__7daCow_cFv();
-extern "C" extern void setRushVibration__7daCow_cFi();
-extern "C" extern void checkThrow__7daCow_cFv();
-extern "C" extern void setBodyAngle__7daCow_cFs();
-extern "C" extern void setBodyAngle2__7daCow_cFs();
-extern "C" extern void checkProcess__7daCow_cFM7daCow_cFPCvPv_v();
-extern "C" extern void setProcess__7daCow_cFM7daCow_cFPCvPv_vi();
-extern "C" extern void damage_check__7daCow_cFv();
-extern "C" extern void setEnterCow20__7daCow_cFv();
-extern "C" extern void setEnterCow10__7daCow_cFv();
-extern "C" extern void setGroundAngle__7daCow_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void s_near_cow__FPvPv();
-extern "C" extern void s_angry_cow__FPvPv();
-extern "C" extern void s_angry_cow2__FPvPv();
-extern "C" extern void checkRun__7daCow_cFv();
-extern "C" extern void checkNearCowRun__7daCow_cFv();
-extern "C" extern void action_wait__7daCow_cFv();
-extern "C" extern void action_eat__7daCow_cFv();
-extern "C" extern void action_moo__7daCow_cFv();
-extern "C" extern void action_shake__7daCow_cFv();
-extern "C" extern void checkNearWolf__7daCow_cFv();
-extern "C" extern void checkPlayerWait__7daCow_cFv();
-extern "C" extern void checkPlayerSurprise__7daCow_cFv();
-extern "C" extern void checkPlayerPos__7daCow_cFv();
-extern "C" extern void checkBeforeBg__7daCow_cFv();
-extern "C" extern void checkOutOfGate__7daCow_cF4cXyz();
-extern "C" extern void getCowshedAngle__7daCow_cFv();
-extern "C" extern void getCowshedDist__7daCow_cFv();
-extern "C" extern void checkCowIn__7daCow_cFff();
-extern "C" extern void checkCowInOwn__7daCow_cFi();
-extern "C" extern void action_run__7daCow_cFv();
-extern "C" extern void checkCurringPen__7daCow_cFv();
-extern "C" extern void setCowInCage__7daCow_cFv();
-extern "C" extern void setEnterCount__7daCow_cFv();
-extern "C" extern void action_enter__7daCow_cFv();
-extern "C" extern void isAngry__7daCow_cFv();
-extern "C" extern void isGuardFad__7daCow_cFv();
-extern "C" extern void setAngryHit__7daCow_cFv();
-extern "C" extern void checkBeforeBgAngry__7daCow_cFs();
-extern "C" extern void setRedTev__7daCow_cFv();
-extern "C" extern void setAngryTurn__7daCow_cFv();
-extern "C" extern void action_angry__7daCow_cFv();
-extern "C" extern void calcCatchPos__7daCow_cFfi();
-extern "C" extern void executeCrazyWait__7daCow_cFv();
-extern "C" extern void executeCrazyDash__7daCow_cFv();
-extern "C" extern void initCrazyBeforeCatch__7daCow_cFi();
-extern "C" extern void executeCrazyBeforeCatch__7daCow_cFv();
-extern "C" extern void initCrazyCatch__7daCow_cFi();
-extern "C" extern void executeCrazyCatch__7daCow_cFv();
-extern "C" extern void initCrazyThrow__7daCow_cFi();
-extern "C" extern void executeCrazyThrow__7daCow_cFv();
-extern "C" extern void initCrazyAttack__7daCow_cFi();
-extern "C" extern void executeCrazyAttack__7daCow_cFv();
-extern "C" extern void initCrazyAway__7daCow_cFi();
-extern "C" extern void executeCrazyAway__7daCow_cFv();
-extern "C" extern void executeCrazyEnd__7daCow_cFv();
-extern "C" extern void initCrazyBack__7daCow_cFi();
-extern "C" extern void executeCrazyBack__7daCow_cFv();
-extern "C" extern void action_crazy__7daCow_cFv();
-extern "C" extern void executeCrazyBack2__7daCow_cFv();
-extern "C" extern void action_thrown__7daCow_cFv();
-extern "C" extern void checkWolfBusters__7daCow_cFv();
-extern "C" extern void action_wolf__7daCow_cFv();
-extern "C" extern void action_damage__7daCow_cFv();
-extern "C" extern void action__7daCow_cFv();
-extern "C" extern void setMtx__7daCow_cFv();
-extern "C" extern void setAttnPos__7daCow_cFv();
-extern "C" extern void setCollisions__7daCow_cFv();
-extern "C" extern void Execute__7daCow_cFv();
-extern "C" extern void daCow_Execute__FPv();
-extern "C" extern void CreateHeap__7daCow_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void createHeapCallBack__7daCow_cFP10fopAc_ac_c();
-extern "C" extern void initialize__7daCow_cFv();
-extern "C" extern void create__7daCow_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daCow_Create__FPv();
-extern "C" extern void ctrlJoint__7daCow_cFP8J3DJointP8J3DModel();
-extern "C" extern void ctrlJointCallBack__7daCow_cFP8J3DJointi();
-extern "C" extern void Draw__7daCow_cFv();
-extern "C" extern void daCow_Draw__FPv();
-extern "C" extern void Delete__7daCow_cFv();
-extern "C" extern void daCow_Delete__FPv();
-extern "C" extern void daCow_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80662CB0();
-extern "C" extern void __sinit_d_a_cow_cpp();
-extern "C" extern void func_80662D60();
-extern "C" extern void func_80662D68();
-extern "C" extern void getShapeAngle__7daCow_cFv();
-extern "C" extern void checkNowWolf__9daPy_py_cFv();
+extern "C" void setBodyAngle__7daCow_cFs();
+extern "C" void setBodyAngle2__7daCow_cFs();
+extern "C" void checkProcess__7daCow_cFM7daCow_cFPCvPv_v();
+extern "C" void setProcess__7daCow_cFM7daCow_cFPCvPv_vi();
+void s_near_cow(void*, void*);
+void s_angry_cow(void*, void*);
+void s_angry_cow2(void*, void*);
+extern "C" void checkBeforeBgAngry__7daCow_cFs();
+void daCow_Execute(void*);
+void daCow_Create(void*);
+void daCow_Draw(void*);
+void daCow_Delete(void*);
+bool daCow_IsDelete(void*);
+extern "C" void func_80662CB0();
+extern "C" void __sinit_d_a_cow_cpp();
+extern "C" void func_80662D60();
+extern "C" void func_80662D68();
+
+extern "C" void calcRunAnime__7daCow_cFi();
+extern "C" void setBck__7daCow_cFiUcff();
+extern "C" void checkBck__7daCow_cFi();
+extern "C" void setEffect__7daCow_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void isChaseCowGame__7daCow_cFv();
+extern "C" void setCarryStatus__7daCow_cFv();
+extern "C" void setActetcStatus__7daCow_cFv();
+extern "C" void checkNadeNadeFinish__7daCow_cFv();
+extern "C" void checkNadeNade__7daCow_cFv();
+extern "C" void setSeSnort__7daCow_cFv();
+extern "C" void setRushVibration__7daCow_cFi();
+extern "C" void checkThrow__7daCow_cFv();
+extern "C" void setBodyAngle__7daCow_cFs();
+extern "C" void setBodyAngle2__7daCow_cFs();
+extern "C" void checkProcess__7daCow_cFM7daCow_cFPCvPv_v();
+extern "C" void setProcess__7daCow_cFM7daCow_cFPCvPv_vi();
+extern "C" void damage_check__7daCow_cFv();
+extern "C" void setEnterCow20__7daCow_cFv();
+extern "C" void setEnterCow10__7daCow_cFv();
+extern "C" void setGroundAngle__7daCow_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void s_near_cow__FPvPv();
+extern "C" void s_angry_cow__FPvPv();
+extern "C" void s_angry_cow2__FPvPv();
+extern "C" void checkRun__7daCow_cFv();
+extern "C" void checkNearCowRun__7daCow_cFv();
+extern "C" void action_wait__7daCow_cFv();
+extern "C" void action_eat__7daCow_cFv();
+extern "C" void action_moo__7daCow_cFv();
+extern "C" void action_shake__7daCow_cFv();
+extern "C" void checkNearWolf__7daCow_cFv();
+extern "C" void checkPlayerWait__7daCow_cFv();
+extern "C" void checkPlayerSurprise__7daCow_cFv();
+extern "C" void checkPlayerPos__7daCow_cFv();
+extern "C" void checkBeforeBg__7daCow_cFv();
+extern "C" void checkOutOfGate__7daCow_cF4cXyz();
+extern "C" void getCowshedAngle__7daCow_cFv();
+extern "C" void getCowshedDist__7daCow_cFv();
+extern "C" void checkCowIn__7daCow_cFff();
+extern "C" void checkCowInOwn__7daCow_cFi();
+extern "C" void action_run__7daCow_cFv();
+extern "C" void checkCurringPen__7daCow_cFv();
+extern "C" void setCowInCage__7daCow_cFv();
+extern "C" void setEnterCount__7daCow_cFv();
+extern "C" void action_enter__7daCow_cFv();
+extern "C" void isAngry__7daCow_cFv();
+extern "C" void isGuardFad__7daCow_cFv();
+extern "C" void setAngryHit__7daCow_cFv();
+extern "C" void checkBeforeBgAngry__7daCow_cFs();
+extern "C" void setRedTev__7daCow_cFv();
+extern "C" void setAngryTurn__7daCow_cFv();
+extern "C" void action_angry__7daCow_cFv();
+extern "C" void calcCatchPos__7daCow_cFfi();
+extern "C" void executeCrazyWait__7daCow_cFv();
+extern "C" void executeCrazyDash__7daCow_cFv();
+extern "C" void initCrazyBeforeCatch__7daCow_cFi();
+extern "C" void executeCrazyBeforeCatch__7daCow_cFv();
+extern "C" void initCrazyCatch__7daCow_cFi();
+extern "C" void executeCrazyCatch__7daCow_cFv();
+extern "C" void initCrazyThrow__7daCow_cFi();
+extern "C" void executeCrazyThrow__7daCow_cFv();
+extern "C" void initCrazyAttack__7daCow_cFi();
+extern "C" void executeCrazyAttack__7daCow_cFv();
+extern "C" void initCrazyAway__7daCow_cFi();
+extern "C" void executeCrazyAway__7daCow_cFv();
+extern "C" void executeCrazyEnd__7daCow_cFv();
+extern "C" void initCrazyBack__7daCow_cFi();
+extern "C" void executeCrazyBack__7daCow_cFv();
+extern "C" void action_crazy__7daCow_cFv();
+extern "C" void executeCrazyBack2__7daCow_cFv();
+extern "C" void action_thrown__7daCow_cFv();
+extern "C" void checkWolfBusters__7daCow_cFv();
+extern "C" void action_wolf__7daCow_cFv();
+extern "C" void action_damage__7daCow_cFv();
+extern "C" void action__7daCow_cFv();
+extern "C" void setMtx__7daCow_cFv();
+extern "C" void setAttnPos__7daCow_cFv();
+extern "C" void setCollisions__7daCow_cFv();
+extern "C" void Execute__7daCow_cFv();
+extern "C" void daCow_Execute__FPv();
+extern "C" void CreateHeap__7daCow_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void createHeapCallBack__7daCow_cFP10fopAc_ac_c();
+extern "C" void initialize__7daCow_cFv();
+extern "C" void create__7daCow_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daCow_Create__FPv();
+extern "C" void ctrlJoint__7daCow_cFP8J3DJointP8J3DModel();
+extern "C" void ctrlJointCallBack__7daCow_cFP8J3DJointi();
+extern "C" void Draw__7daCow_cFv();
+extern "C" void daCow_Draw__FPv();
+extern "C" void Delete__7daCow_cFv();
+extern "C" void daCow_Delete__FPv();
+extern "C" bool daCow_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80662CB0();
+extern "C" void __sinit_d_a_cow_cpp();
+extern "C" void func_80662D60();
+extern "C" void func_80662D68();
+extern "C" void getShapeAngle__7daCow_cFv();
+extern "C" void checkNowWolf__9daPy_py_cFv();
 SECTION_RODATA extern const u32 lit_3987;
 SECTION_RODATA extern const u32 lit_3988;
 SECTION_RODATA extern const u32 lit_3989;
@@ -349,8 +512,11 @@ SECTION_BSS extern u8 data_806635B8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -360,7 +526,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRunAnime__7daCow_cFi) {
+asm void daCow_c::calcRunAnime(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/calcRunAnime__7daCow_cFi.s"
 }
@@ -371,7 +537,7 @@ ASM_FUNCTION(calcRunAnime__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__7daCow_cFiUcff) {
+asm void daCow_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setBck__7daCow_cFiUcff.s"
 }
@@ -382,7 +548,7 @@ ASM_FUNCTION(setBck__7daCow_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__7daCow_cFi) {
+asm void daCow_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkBck__7daCow_cFi.s"
 }
@@ -393,7 +559,7 @@ ASM_FUNCTION(checkBck__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__7daCow_cFv) {
+asm void daCow_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setEffect__7daCow_cFv.s"
 }
@@ -404,7 +570,7 @@ ASM_FUNCTION(setEffect__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__4cXyzFv.s"
 }
@@ -415,7 +581,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isChaseCowGame__7daCow_cFv) {
+asm void daCow_c::isChaseCowGame() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/isChaseCowGame__7daCow_cFv.s"
 }
@@ -426,7 +592,7 @@ ASM_FUNCTION(isChaseCowGame__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCarryStatus__7daCow_cFv) {
+asm void daCow_c::setCarryStatus() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setCarryStatus__7daCow_cFv.s"
 }
@@ -437,7 +603,7 @@ ASM_FUNCTION(setCarryStatus__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActetcStatus__7daCow_cFv) {
+asm void daCow_c::setActetcStatus() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setActetcStatus__7daCow_cFv.s"
 }
@@ -448,7 +614,7 @@ ASM_FUNCTION(setActetcStatus__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNadeNadeFinish__7daCow_cFv) {
+asm void daCow_c::checkNadeNadeFinish() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkNadeNadeFinish__7daCow_cFv.s"
 }
@@ -459,7 +625,7 @@ ASM_FUNCTION(checkNadeNadeFinish__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNadeNade__7daCow_cFv) {
+asm void daCow_c::checkNadeNade() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkNadeNade__7daCow_cFv.s"
 }
@@ -470,7 +636,7 @@ ASM_FUNCTION(checkNadeNade__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSeSnort__7daCow_cFv) {
+asm void daCow_c::setSeSnort() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setSeSnort__7daCow_cFv.s"
 }
@@ -481,7 +647,7 @@ ASM_FUNCTION(setSeSnort__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRushVibration__7daCow_cFi) {
+asm void daCow_c::setRushVibration(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setRushVibration__7daCow_cFi.s"
 }
@@ -492,7 +658,7 @@ ASM_FUNCTION(setRushVibration__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkThrow__7daCow_cFv) {
+asm void daCow_c::checkThrow() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkThrow__7daCow_cFv.s"
 }
@@ -503,7 +669,7 @@ ASM_FUNCTION(checkThrow__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyAngle__7daCow_cFs) {
+extern "C" asm void setBodyAngle__7daCow_cFs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setBodyAngle__7daCow_cFs.s"
 }
@@ -514,7 +680,7 @@ ASM_FUNCTION(setBodyAngle__7daCow_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyAngle2__7daCow_cFs) {
+extern "C" asm void setBodyAngle2__7daCow_cFs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setBodyAngle2__7daCow_cFs.s"
 }
@@ -525,7 +691,7 @@ ASM_FUNCTION(setBodyAngle2__7daCow_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkProcess__7daCow_cFM7daCow_cFPCvPv_v) {
+extern "C" asm void checkProcess__7daCow_cFM7daCow_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkProcess__7daCow_cFM7daCow_cFPCvPv_v.s"
 }
@@ -536,7 +702,7 @@ ASM_FUNCTION(checkProcess__7daCow_cFM7daCow_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setProcess__7daCow_cFM7daCow_cFPCvPv_vi) {
+extern "C" asm void setProcess__7daCow_cFM7daCow_cFPCvPv_vi() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setProcess__7daCow_cFM7daCow_cFPCvPv_vi.s"
 }
@@ -547,7 +713,7 @@ ASM_FUNCTION(setProcess__7daCow_cFM7daCow_cFPCvPv_vi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__7daCow_cFv) {
+asm void daCow_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/damage_check__7daCow_cFv.s"
 }
@@ -558,7 +724,7 @@ ASM_FUNCTION(damage_check__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnterCow20__7daCow_cFv) {
+asm void daCow_c::setEnterCow20() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setEnterCow20__7daCow_cFv.s"
 }
@@ -569,7 +735,7 @@ ASM_FUNCTION(setEnterCow20__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnterCow10__7daCow_cFv) {
+asm void daCow_c::setEnterCow10() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setEnterCow10__7daCow_cFv.s"
 }
@@ -580,7 +746,7 @@ ASM_FUNCTION(setEnterCow10__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGroundAngle__7daCow_cFv) {
+asm void daCow_c::setGroundAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setGroundAngle__7daCow_cFv.s"
 }
@@ -591,7 +757,7 @@ ASM_FUNCTION(setGroundAngle__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__8cM3dGPlaFv.s"
 }
@@ -602,7 +768,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_near_cow__FPvPv) {
+asm void s_near_cow(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/s_near_cow__FPvPv.s"
 }
@@ -613,7 +779,7 @@ ASM_FUNCTION(s_near_cow__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_angry_cow__FPvPv) {
+asm void s_angry_cow(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/s_angry_cow__FPvPv.s"
 }
@@ -624,7 +790,7 @@ ASM_FUNCTION(s_angry_cow__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_angry_cow2__FPvPv) {
+asm void s_angry_cow2(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/s_angry_cow2__FPvPv.s"
 }
@@ -635,7 +801,7 @@ ASM_FUNCTION(s_angry_cow2__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRun__7daCow_cFv) {
+asm void daCow_c::checkRun() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkRun__7daCow_cFv.s"
 }
@@ -646,7 +812,7 @@ ASM_FUNCTION(checkRun__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNearCowRun__7daCow_cFv) {
+asm void daCow_c::checkNearCowRun() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkNearCowRun__7daCow_cFv.s"
 }
@@ -657,7 +823,7 @@ ASM_FUNCTION(checkNearCowRun__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_wait__7daCow_cFv) {
+asm void daCow_c::action_wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_wait__7daCow_cFv.s"
 }
@@ -668,7 +834,7 @@ ASM_FUNCTION(action_wait__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_eat__7daCow_cFv) {
+asm void daCow_c::action_eat() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_eat__7daCow_cFv.s"
 }
@@ -679,7 +845,7 @@ ASM_FUNCTION(action_eat__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_moo__7daCow_cFv) {
+asm void daCow_c::action_moo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_moo__7daCow_cFv.s"
 }
@@ -690,7 +856,7 @@ ASM_FUNCTION(action_moo__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_shake__7daCow_cFv) {
+asm void daCow_c::action_shake() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_shake__7daCow_cFv.s"
 }
@@ -701,7 +867,7 @@ ASM_FUNCTION(action_shake__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNearWolf__7daCow_cFv) {
+asm void daCow_c::checkNearWolf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkNearWolf__7daCow_cFv.s"
 }
@@ -712,7 +878,7 @@ ASM_FUNCTION(checkNearWolf__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerWait__7daCow_cFv) {
+asm void daCow_c::checkPlayerWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkPlayerWait__7daCow_cFv.s"
 }
@@ -723,7 +889,7 @@ ASM_FUNCTION(checkPlayerWait__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerSurprise__7daCow_cFv) {
+asm void daCow_c::checkPlayerSurprise() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkPlayerSurprise__7daCow_cFv.s"
 }
@@ -734,7 +900,7 @@ ASM_FUNCTION(checkPlayerSurprise__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPlayerPos__7daCow_cFv) {
+asm void daCow_c::checkPlayerPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkPlayerPos__7daCow_cFv.s"
 }
@@ -745,7 +911,7 @@ ASM_FUNCTION(checkPlayerPos__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBeforeBg__7daCow_cFv) {
+asm void daCow_c::checkBeforeBg() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkBeforeBg__7daCow_cFv.s"
 }
@@ -756,7 +922,7 @@ ASM_FUNCTION(checkBeforeBg__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOutOfGate__7daCow_cF4cXyz) {
+asm void daCow_c::checkOutOfGate(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkOutOfGate__7daCow_cF4cXyz.s"
 }
@@ -767,7 +933,7 @@ ASM_FUNCTION(checkOutOfGate__7daCow_cF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCowshedAngle__7daCow_cFv) {
+asm void daCow_c::getCowshedAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/getCowshedAngle__7daCow_cFv.s"
 }
@@ -778,7 +944,7 @@ ASM_FUNCTION(getCowshedAngle__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCowshedDist__7daCow_cFv) {
+asm void daCow_c::getCowshedDist() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/getCowshedDist__7daCow_cFv.s"
 }
@@ -789,7 +955,7 @@ ASM_FUNCTION(getCowshedDist__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCowIn__7daCow_cFff) {
+asm void daCow_c::checkCowIn(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkCowIn__7daCow_cFff.s"
 }
@@ -800,7 +966,7 @@ ASM_FUNCTION(checkCowIn__7daCow_cFff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCowInOwn__7daCow_cFi) {
+asm void daCow_c::checkCowInOwn(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkCowInOwn__7daCow_cFi.s"
 }
@@ -811,7 +977,7 @@ ASM_FUNCTION(checkCowInOwn__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_run__7daCow_cFv) {
+asm void daCow_c::action_run() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_run__7daCow_cFv.s"
 }
@@ -822,7 +988,7 @@ ASM_FUNCTION(action_run__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCurringPen__7daCow_cFv) {
+asm void daCow_c::checkCurringPen() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkCurringPen__7daCow_cFv.s"
 }
@@ -833,7 +999,7 @@ ASM_FUNCTION(checkCurringPen__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCowInCage__7daCow_cFv) {
+asm void daCow_c::setCowInCage() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setCowInCage__7daCow_cFv.s"
 }
@@ -844,7 +1010,7 @@ ASM_FUNCTION(setCowInCage__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnterCount__7daCow_cFv) {
+asm void daCow_c::setEnterCount() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setEnterCount__7daCow_cFv.s"
 }
@@ -855,7 +1021,7 @@ ASM_FUNCTION(setEnterCount__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_enter__7daCow_cFv) {
+asm void daCow_c::action_enter() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_enter__7daCow_cFv.s"
 }
@@ -866,7 +1032,7 @@ ASM_FUNCTION(action_enter__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isAngry__7daCow_cFv) {
+asm void daCow_c::isAngry() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/isAngry__7daCow_cFv.s"
 }
@@ -877,7 +1043,7 @@ ASM_FUNCTION(isAngry__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isGuardFad__7daCow_cFv) {
+asm void daCow_c::isGuardFad() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/isGuardFad__7daCow_cFv.s"
 }
@@ -888,7 +1054,7 @@ ASM_FUNCTION(isGuardFad__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngryHit__7daCow_cFv) {
+asm void daCow_c::setAngryHit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setAngryHit__7daCow_cFv.s"
 }
@@ -899,7 +1065,7 @@ ASM_FUNCTION(setAngryHit__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBeforeBgAngry__7daCow_cFs) {
+extern "C" asm void checkBeforeBgAngry__7daCow_cFs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkBeforeBgAngry__7daCow_cFs.s"
 }
@@ -910,7 +1076,7 @@ ASM_FUNCTION(checkBeforeBgAngry__7daCow_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRedTev__7daCow_cFv) {
+asm void daCow_c::setRedTev() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setRedTev__7daCow_cFv.s"
 }
@@ -921,7 +1087,7 @@ ASM_FUNCTION(setRedTev__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngryTurn__7daCow_cFv) {
+asm void daCow_c::setAngryTurn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setAngryTurn__7daCow_cFv.s"
 }
@@ -932,7 +1098,7 @@ ASM_FUNCTION(setAngryTurn__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_angry__7daCow_cFv) {
+asm void daCow_c::action_angry() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_angry__7daCow_cFv.s"
 }
@@ -943,7 +1109,7 @@ ASM_FUNCTION(action_angry__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcCatchPos__7daCow_cFfi) {
+asm void daCow_c::calcCatchPos(f32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/calcCatchPos__7daCow_cFfi.s"
 }
@@ -954,7 +1120,7 @@ ASM_FUNCTION(calcCatchPos__7daCow_cFfi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyWait__7daCow_cFv) {
+asm void daCow_c::executeCrazyWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyWait__7daCow_cFv.s"
 }
@@ -965,7 +1131,7 @@ ASM_FUNCTION(executeCrazyWait__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyDash__7daCow_cFv) {
+asm void daCow_c::executeCrazyDash() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyDash__7daCow_cFv.s"
 }
@@ -976,7 +1142,7 @@ ASM_FUNCTION(executeCrazyDash__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyBeforeCatch__7daCow_cFi) {
+asm void daCow_c::initCrazyBeforeCatch(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyBeforeCatch__7daCow_cFi.s"
 }
@@ -987,7 +1153,7 @@ ASM_FUNCTION(initCrazyBeforeCatch__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyBeforeCatch__7daCow_cFv) {
+asm void daCow_c::executeCrazyBeforeCatch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyBeforeCatch__7daCow_cFv.s"
 }
@@ -998,7 +1164,7 @@ ASM_FUNCTION(executeCrazyBeforeCatch__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyCatch__7daCow_cFi) {
+asm void daCow_c::initCrazyCatch(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyCatch__7daCow_cFi.s"
 }
@@ -1009,7 +1175,7 @@ ASM_FUNCTION(initCrazyCatch__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyCatch__7daCow_cFv) {
+asm void daCow_c::executeCrazyCatch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyCatch__7daCow_cFv.s"
 }
@@ -1020,7 +1186,7 @@ ASM_FUNCTION(executeCrazyCatch__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyThrow__7daCow_cFi) {
+asm void daCow_c::initCrazyThrow(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyThrow__7daCow_cFi.s"
 }
@@ -1031,7 +1197,7 @@ ASM_FUNCTION(initCrazyThrow__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyThrow__7daCow_cFv) {
+asm void daCow_c::executeCrazyThrow() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyThrow__7daCow_cFv.s"
 }
@@ -1042,7 +1208,7 @@ ASM_FUNCTION(executeCrazyThrow__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyAttack__7daCow_cFi) {
+asm void daCow_c::initCrazyAttack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyAttack__7daCow_cFi.s"
 }
@@ -1053,7 +1219,7 @@ ASM_FUNCTION(initCrazyAttack__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyAttack__7daCow_cFv) {
+asm void daCow_c::executeCrazyAttack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyAttack__7daCow_cFv.s"
 }
@@ -1064,7 +1230,7 @@ ASM_FUNCTION(executeCrazyAttack__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyAway__7daCow_cFi) {
+asm void daCow_c::initCrazyAway(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyAway__7daCow_cFi.s"
 }
@@ -1075,7 +1241,7 @@ ASM_FUNCTION(initCrazyAway__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyAway__7daCow_cFv) {
+asm void daCow_c::executeCrazyAway() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyAway__7daCow_cFv.s"
 }
@@ -1086,7 +1252,7 @@ ASM_FUNCTION(executeCrazyAway__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyEnd__7daCow_cFv) {
+asm void daCow_c::executeCrazyEnd() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyEnd__7daCow_cFv.s"
 }
@@ -1097,7 +1263,7 @@ ASM_FUNCTION(executeCrazyEnd__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initCrazyBack__7daCow_cFi) {
+asm void daCow_c::initCrazyBack(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initCrazyBack__7daCow_cFi.s"
 }
@@ -1108,7 +1274,7 @@ ASM_FUNCTION(initCrazyBack__7daCow_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyBack__7daCow_cFv) {
+asm void daCow_c::executeCrazyBack() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyBack__7daCow_cFv.s"
 }
@@ -1119,7 +1285,7 @@ ASM_FUNCTION(executeCrazyBack__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_crazy__7daCow_cFv) {
+asm void daCow_c::action_crazy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_crazy__7daCow_cFv.s"
 }
@@ -1130,7 +1296,7 @@ ASM_FUNCTION(action_crazy__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeCrazyBack2__7daCow_cFv) {
+asm void daCow_c::executeCrazyBack2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/executeCrazyBack2__7daCow_cFv.s"
 }
@@ -1141,7 +1307,7 @@ ASM_FUNCTION(executeCrazyBack2__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_thrown__7daCow_cFv) {
+asm void daCow_c::action_thrown() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_thrown__7daCow_cFv.s"
 }
@@ -1152,7 +1318,7 @@ ASM_FUNCTION(action_thrown__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWolfBusters__7daCow_cFv) {
+asm void daCow_c::checkWolfBusters() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkWolfBusters__7daCow_cFv.s"
 }
@@ -1163,7 +1329,7 @@ ASM_FUNCTION(checkWolfBusters__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_wolf__7daCow_cFv) {
+asm void daCow_c::action_wolf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_wolf__7daCow_cFv.s"
 }
@@ -1174,7 +1340,7 @@ ASM_FUNCTION(action_wolf__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action_damage__7daCow_cFv) {
+asm void daCow_c::action_damage() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action_damage__7daCow_cFv.s"
 }
@@ -1185,7 +1351,7 @@ ASM_FUNCTION(action_damage__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__7daCow_cFv) {
+asm void daCow_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/action__7daCow_cFv.s"
 }
@@ -1196,7 +1362,7 @@ ASM_FUNCTION(action__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__7daCow_cFv) {
+asm void daCow_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setMtx__7daCow_cFv.s"
 }
@@ -1207,7 +1373,7 @@ ASM_FUNCTION(setMtx__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__7daCow_cFv) {
+asm void daCow_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setAttnPos__7daCow_cFv.s"
 }
@@ -1218,7 +1384,7 @@ ASM_FUNCTION(setAttnPos__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__7daCow_cFv) {
+asm void daCow_c::setCollisions() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setCollisions__7daCow_cFv.s"
 }
@@ -1229,7 +1395,7 @@ ASM_FUNCTION(setCollisions__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__7daCow_cFv) {
+asm void daCow_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/Execute__7daCow_cFv.s"
 }
@@ -1240,7 +1406,7 @@ ASM_FUNCTION(Execute__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCow_Execute__FPv) {
+asm void daCow_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_Execute__FPv.s"
 }
@@ -1251,7 +1417,7 @@ ASM_FUNCTION(daCow_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__7daCow_cFv) {
+asm void daCow_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/CreateHeap__7daCow_cFv.s"
 }
@@ -1262,7 +1428,7 @@ ASM_FUNCTION(CreateHeap__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1273,7 +1439,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__7daCow_cFP10fopAc_ac_c) {
+asm void daCow_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/createHeapCallBack__7daCow_cFP10fopAc_ac_c.s"
 }
@@ -1284,7 +1450,7 @@ ASM_FUNCTION(createHeapCallBack__7daCow_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initialize__7daCow_cFv) {
+asm void daCow_c::initialize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/initialize__7daCow_cFv.s"
 }
@@ -1295,7 +1461,7 @@ ASM_FUNCTION(initialize__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__7daCow_cFv) {
+asm void daCow_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/create__7daCow_cFv.s"
 }
@@ -1306,7 +1472,7 @@ ASM_FUNCTION(create__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__8dCcD_SphFv.s"
 }
@@ -1317,7 +1483,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__ct__8dCcD_SphFv.s"
 }
@@ -1328,7 +1494,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__8cM3dGSphFv.s"
 }
@@ -1339,7 +1505,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__8cM3dGAabFv.s"
 }
@@ -1350,7 +1516,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1361,7 +1527,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__10dCcD_GSttsFv.s"
 }
@@ -1372,7 +1538,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1383,7 +1549,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCow_Create__FPv) {
+asm void daCow_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_Create__FPv.s"
 }
@@ -1394,7 +1560,7 @@ ASM_FUNCTION(daCow_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__7daCow_cFP8J3DJointP8J3DModel) {
+asm void daCow_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/ctrlJoint__7daCow_cFP8J3DJointP8J3DModel.s"
 }
@@ -1405,7 +1571,7 @@ ASM_FUNCTION(ctrlJoint__7daCow_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__7daCow_cFP8J3DJointi) {
+asm void daCow_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/ctrlJointCallBack__7daCow_cFP8J3DJointi.s"
 }
@@ -1416,7 +1582,7 @@ ASM_FUNCTION(ctrlJointCallBack__7daCow_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__7daCow_cFv) {
+asm void daCow_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/Draw__7daCow_cFv.s"
 }
@@ -1427,7 +1593,7 @@ ASM_FUNCTION(Draw__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCow_Draw__FPv) {
+asm void daCow_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_Draw__FPv.s"
 }
@@ -1438,7 +1604,7 @@ ASM_FUNCTION(daCow_Draw__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__7daCow_cFv) {
+asm void daCow_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/Delete__7daCow_cFv.s"
 }
@@ -1449,7 +1615,7 @@ ASM_FUNCTION(Delete__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCow_Delete__FPv) {
+asm void daCow_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_Delete__FPv.s"
 }
@@ -1457,21 +1623,16 @@ ASM_FUNCTION(daCow_Delete__FPv) {
 
 
 /* 80662C60-80662C68 0008+00 .text      daCow_IsDelete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daCow_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_IsDelete__FPv.s"
+bool daCow_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80662C68-80662CB0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__dt__10cCcD_GSttsFv.s"
 }
@@ -1482,7 +1643,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80662CB0) {
+extern "C" asm void func_80662CB0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/func_80662CB0.s"
 }
@@ -1493,7 +1654,7 @@ ASM_FUNCTION(func_80662CB0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_cow_cpp) {
+extern "C" asm void __sinit_d_a_cow_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/__sinit_d_a_cow_cpp.s"
 }
@@ -1504,7 +1665,7 @@ ASM_FUNCTION(__sinit_d_a_cow_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80662D60) {
+extern "C" asm void func_80662D60() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/func_80662D60.s"
 }
@@ -1515,7 +1676,7 @@ ASM_FUNCTION(func_80662D60) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80662D68) {
+extern "C" asm void func_80662D68() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/func_80662D68.s"
 }
@@ -1526,7 +1687,7 @@ ASM_FUNCTION(func_80662D68) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getShapeAngle__7daCow_cFv) {
+asm void daCow_c::getShapeAngle() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/getShapeAngle__7daCow_cFv.s"
 }
@@ -1537,7 +1698,7 @@ ASM_FUNCTION(getShapeAngle__7daCow_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkNowWolf__9daPy_py_cFv) {
+asm void daPy_py_c::checkNowWolf() {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkNowWolf__9daPy_py_cFv.s"
 }

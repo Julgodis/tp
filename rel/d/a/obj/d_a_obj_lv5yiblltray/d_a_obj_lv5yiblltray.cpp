@@ -6,37 +6,101 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct dBgW;
+struct daObjYIblltray_c;
+
+struct daObjYIblltray_c {
+	void create1st();
+	void setMtx();
+	void CreateHeap();
+	void Create();
+	void rideActor(fopAc_ac_c*);
+	void sendBall(s32);
+	void onAttention();
+	void offAttention();
+	void initRotTo();
+	void Draw();
+	void Delete();
+	~daObjYIblltray_c();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__16daObjYIblltray_cFv();
-extern "C" extern void setMtx__16daObjYIblltray_cFv();
-extern "C" extern void CreateHeap__16daObjYIblltray_cFv();
-extern "C" extern void rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Create__16daObjYIblltray_cFv();
-extern "C" extern void rideActor__16daObjYIblltray_cFP10fopAc_ac_c();
-extern "C" extern void sendBall__16daObjYIblltray_cFUi();
-extern "C" extern void searchObjYIblltray__FPvPv();
-extern "C" extern void searchNearIronball__FPvPv();
-extern "C" extern void searchNearBackTrayIronball__FPvPv();
-extern "C" extern void onAttention__16daObjYIblltray_cFv();
-extern "C" extern void offAttention__16daObjYIblltray_cFv();
-extern "C" extern void Execute__16daObjYIblltray_cFPPA3_A4_f();
-extern "C" extern void initRotTo__16daObjYIblltray_cFv();
-extern "C" extern void Draw__16daObjYIblltray_cFv();
-extern "C" extern void Delete__16daObjYIblltray_cFv();
-extern "C" extern void daObjYIblltray_create1st__FP16daObjYIblltray_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjYIblltray_MoveBGDelete__FP16daObjYIblltray_c();
-extern "C" extern void daObjYIblltray_MoveBGExecute__FP16daObjYIblltray_c();
-extern "C" extern void daObjYIblltray_MoveBGDraw__FP16daObjYIblltray_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__16daObjYIblltray_cFv();
+void rideCallback(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void searchObjYIblltray(void*, void*);
+void searchNearIronball(void*, void*);
+void searchNearBackTrayIronball(void*, void*);
+extern "C" void Execute__16daObjYIblltray_cFPPA3_A4_f();
+void daObjYIblltray_create1st(daObjYIblltray_c*);
+void daObjYIblltray_MoveBGDelete(daObjYIblltray_c*);
+void daObjYIblltray_MoveBGExecute(daObjYIblltray_c*);
+void daObjYIblltray_MoveBGDraw(daObjYIblltray_c*);
+
+extern "C" void create1st__16daObjYIblltray_cFv();
+extern "C" void setMtx__16daObjYIblltray_cFv();
+extern "C" void CreateHeap__16daObjYIblltray_cFv();
+extern "C" void rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Create__16daObjYIblltray_cFv();
+extern "C" void rideActor__16daObjYIblltray_cFP10fopAc_ac_c();
+extern "C" void sendBall__16daObjYIblltray_cFUi();
+extern "C" void searchObjYIblltray__FPvPv();
+extern "C" void searchNearIronball__FPvPv();
+extern "C" void searchNearBackTrayIronball__FPvPv();
+extern "C" void onAttention__16daObjYIblltray_cFv();
+extern "C" void offAttention__16daObjYIblltray_cFv();
+extern "C" void Execute__16daObjYIblltray_cFPPA3_A4_f();
+extern "C" void initRotTo__16daObjYIblltray_cFv();
+extern "C" void Draw__16daObjYIblltray_cFv();
+extern "C" void Delete__16daObjYIblltray_cFv();
+extern "C" void daObjYIblltray_create1st__FP16daObjYIblltray_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daObjYIblltray_MoveBGDelete__FP16daObjYIblltray_c();
+extern "C" void daObjYIblltray_MoveBGExecute__FP16daObjYIblltray_c();
+extern "C" void daObjYIblltray_MoveBGDraw__FP16daObjYIblltray_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__16daObjYIblltray_cFv();
 SECTION_RODATA extern const u8 l_cull_box[24];
 SECTION_RODATA extern const u32 lit_3692;
 SECTION_RODATA extern const u32 lit_3693;
@@ -81,7 +145,9 @@ SECTION_DATA extern void*const __vt__16daObjYIblltray_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -91,7 +157,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/create1st__16daObjYIblltray_cFv.s"
 }
@@ -102,7 +168,7 @@ ASM_FUNCTION(create1st__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/setMtx__16daObjYIblltray_cFv.s"
 }
@@ -113,7 +179,7 @@ ASM_FUNCTION(setMtx__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/CreateHeap__16daObjYIblltray_cFv.s"
 }
@@ -124,7 +190,7 @@ ASM_FUNCTION(CreateHeap__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallback(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -135,7 +201,7 @@ ASM_FUNCTION(rideCallback__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/Create__16daObjYIblltray_cFv.s"
 }
@@ -146,7 +212,7 @@ ASM_FUNCTION(Create__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideActor__16daObjYIblltray_cFP10fopAc_ac_c) {
+asm void daObjYIblltray_c::rideActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/rideActor__16daObjYIblltray_cFP10fopAc_ac_c.s"
 }
@@ -157,7 +223,7 @@ ASM_FUNCTION(rideActor__16daObjYIblltray_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(sendBall__16daObjYIblltray_cFUi) {
+asm void daObjYIblltray_c::sendBall(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/sendBall__16daObjYIblltray_cFUi.s"
 }
@@ -168,7 +234,7 @@ ASM_FUNCTION(sendBall__16daObjYIblltray_cFUi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchObjYIblltray__FPvPv) {
+asm void searchObjYIblltray(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/searchObjYIblltray__FPvPv.s"
 }
@@ -179,7 +245,7 @@ ASM_FUNCTION(searchObjYIblltray__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchNearIronball__FPvPv) {
+asm void searchNearIronball(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/searchNearIronball__FPvPv.s"
 }
@@ -190,7 +256,7 @@ ASM_FUNCTION(searchNearIronball__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchNearBackTrayIronball__FPvPv) {
+asm void searchNearBackTrayIronball(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/searchNearBackTrayIronball__FPvPv.s"
 }
@@ -201,7 +267,7 @@ ASM_FUNCTION(searchNearBackTrayIronball__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onAttention__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::onAttention() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/onAttention__16daObjYIblltray_cFv.s"
 }
@@ -212,7 +278,7 @@ ASM_FUNCTION(onAttention__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offAttention__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::offAttention() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/offAttention__16daObjYIblltray_cFv.s"
 }
@@ -223,7 +289,7 @@ ASM_FUNCTION(offAttention__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjYIblltray_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjYIblltray_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/Execute__16daObjYIblltray_cFPPA3_A4_f.s"
 }
@@ -234,7 +300,7 @@ ASM_FUNCTION(Execute__16daObjYIblltray_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initRotTo__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::initRotTo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/initRotTo__16daObjYIblltray_cFv.s"
 }
@@ -245,7 +311,7 @@ ASM_FUNCTION(initRotTo__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/Draw__16daObjYIblltray_cFv.s"
 }
@@ -256,7 +322,7 @@ ASM_FUNCTION(Draw__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjYIblltray_cFv) {
+asm void daObjYIblltray_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/Delete__16daObjYIblltray_cFv.s"
 }
@@ -267,7 +333,7 @@ ASM_FUNCTION(Delete__16daObjYIblltray_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYIblltray_create1st__FP16daObjYIblltray_c) {
+asm void daObjYIblltray_create1st(daObjYIblltray_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/daObjYIblltray_create1st__FP16daObjYIblltray_c.s"
 }
@@ -278,7 +344,7 @@ ASM_FUNCTION(daObjYIblltray_create1st__FP16daObjYIblltray_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__12J3DFrameCtrlFv.s"
 }
@@ -289,7 +355,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__10dCcD_GSttsFv.s"
 }
@@ -300,7 +366,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__8dCcD_CylFv.s"
 }
@@ -311,7 +377,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__ct__8dCcD_CylFv.s"
 }
@@ -322,7 +388,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__8cM3dGCylFv.s"
 }
@@ -333,7 +399,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__8cM3dGAabFv.s"
 }
@@ -344,7 +410,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYIblltray_MoveBGDelete__FP16daObjYIblltray_c) {
+asm void daObjYIblltray_MoveBGDelete(daObjYIblltray_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/daObjYIblltray_MoveBGDelete__FP16daObjYIblltray_c.s"
 }
@@ -355,7 +421,7 @@ ASM_FUNCTION(daObjYIblltray_MoveBGDelete__FP16daObjYIblltray_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYIblltray_MoveBGExecute__FP16daObjYIblltray_c) {
+asm void daObjYIblltray_MoveBGExecute(daObjYIblltray_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/daObjYIblltray_MoveBGExecute__FP16daObjYIblltray_c.s"
 }
@@ -366,7 +432,7 @@ ASM_FUNCTION(daObjYIblltray_MoveBGExecute__FP16daObjYIblltray_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjYIblltray_MoveBGDraw__FP16daObjYIblltray_c) {
+asm void daObjYIblltray_MoveBGDraw(daObjYIblltray_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/daObjYIblltray_MoveBGDraw__FP16daObjYIblltray_c.s"
 }
@@ -377,7 +443,7 @@ ASM_FUNCTION(daObjYIblltray_MoveBGDraw__FP16daObjYIblltray_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__10cCcD_GSttsFv.s"
 }
@@ -388,7 +454,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjYIblltray_cFv) {
+asm daObjYIblltray_c::~daObjYIblltray_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5yiblltray/d_a_obj_lv5yiblltray/__dt__16daObjYIblltray_cFv.s"
 }

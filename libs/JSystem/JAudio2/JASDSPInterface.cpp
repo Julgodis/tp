@@ -6,44 +6,128 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASDsp (JASDsp) False/False
+// build JASWaveInfo (JASWaveInfo) False/False
+/* top-level dependencies (begin JASWaveInfo) */
+/* top-level dependencies (end JASWaveInfo) */
+struct JASWaveInfo {
+};
+
+// build JASDsp (JASDsp) True/False
+struct JASDsp;
+/* top-level dependencies (begin JASDsp) */
+// outer dependency: JASWaveInfo
+// outer dependency: JASDsp::FxlineConfig_
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// JASDsp::FxlineConfig_
+	// build FxlineConfig_ (JASDsp::FxlineConfig_) False/False
+	/* dependencies (begin JASDsp::FxlineConfig_) */
+	/* dependencies (end JASDsp::FxlineConfig_) */
+	struct FxlineConfig_ {
+	};
+
+	// build TChannel (JASDsp::TChannel) False/False
+	/* dependencies (begin JASDsp::TChannel) */
+	/* dependencies (end JASDsp::TChannel) */
+	struct TChannel {
+		// JASWaveInfo
+		/* 8029DCA4 */ void init();
+		/* 8029DCE0 */ void playStart();
+		/* 8029DD44 */ void playStop();
+		/* 8029DD50 */ void replyFinishRequest();
+		/* 8029DD60 */ void forceStop();
+		/* 8029DD6C */ void isActive() const;
+		/* 8029DD7C */ void isFinish() const;
+		/* 8029DD8C */ void setWaveInfo(JASWaveInfo const&, u32, u32);
+		/* 8029DEAC */ void setOscInfo(u32);
+		/* 8029DEC4 */ void initAutoMixer();
+		/* 8029DEF0 */ void setAutoMixer(u16, char, char, char, char);
+		/* 8029DF1C */ void setPitch(u16);
+		/* 8029DF34 */ void setMixerInitVolume(char, s16);
+		/* 8029DF54 */ void setMixerVolume(char, s16);
+		/* 8029DF80 */ void setPauseFlag(char);
+		/* 8029DF8C */ void flush();
+		/* 8029DFB0 */ void initFilter();
+		/* 8029E00C */ void setFilterMode(u16);
+		/* 8029E044 */ void setIIRFilterParam(s16*);
+		/* 8029E06C */ void setFIR8FilterParam(s16*);
+		/* 8029E094 */ void setDistFilter(s16);
+		/* 8029E09C */ void setBusConnect(char, char);
+	};
+
+	/* 8029D9A4 */ void releaseHalt(u32);
+	/* 8029D9C4 */ void finishWork(u16);
+	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
+	/* 8029DA04 */ void setDSPMixerLevel(f32);
+	/* 8029DA30 */ void getDSPMixerLevel();
+	/* 8029DA38 */ void getDSPHandle(s32);
+	/* 8029DA48 */ void setFilterTable(s16*, s16*, u32);
+	/* 8029DA6C */ void flushBuffer();
+	/* 8029DAA0 */ void invalChannelAll();
+	/* 8029DAC8 */ void initBuffer();
+	/* 8029DB78 */ void setFXLine(char, s16*, JASDsp::FxlineConfig_*);
+};
+
+// build JASWaveInfo (JASWaveInfo) True/True
+// build JASCalc (JASCalc) False/False
+/* top-level dependencies (begin JASCalc) */
+/* top-level dependencies (end JASCalc) */
+struct JASCalc {
+	/* 8028F480 */ void bzero(void*, u32);
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void boot__6JASDspFPFPv_v();
-extern "C" extern void releaseHalt__6JASDspFUl();
-extern "C" extern void finishWork__6JASDspFUs();
-extern "C" extern void syncFrame__6JASDspFUlUlUl();
-extern "C" extern void setDSPMixerLevel__6JASDspFf();
-extern "C" extern void getDSPMixerLevel__6JASDspFv();
-extern "C" extern void getDSPHandle__6JASDspFi();
-extern "C" extern void setFilterTable__6JASDspFPsPsUl();
-extern "C" extern void flushBuffer__6JASDspFv();
-extern "C" extern void invalChannelAll__6JASDspFv();
-extern "C" extern void initBuffer__6JASDspFv();
-extern "C" extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
-extern "C" extern void init__Q26JASDsp8TChannelFv();
-extern "C" extern void playStart__Q26JASDsp8TChannelFv();
-extern "C" extern void playStop__Q26JASDsp8TChannelFv();
-extern "C" extern void replyFinishRequest__Q26JASDsp8TChannelFv();
-extern "C" extern void forceStop__Q26JASDsp8TChannelFv();
-extern "C" extern void isActive__Q26JASDsp8TChannelCFv();
-extern "C" extern void isFinish__Q26JASDsp8TChannelCFv();
-extern "C" extern void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
-extern "C" extern void setOscInfo__Q26JASDsp8TChannelFUl();
-extern "C" extern void initAutoMixer__Q26JASDsp8TChannelFv();
-extern "C" extern void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
-extern "C" extern void setPitch__Q26JASDsp8TChannelFUs();
-extern "C" extern void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
-extern "C" extern void setMixerVolume__Q26JASDsp8TChannelFUcs();
-extern "C" extern void setPauseFlag__Q26JASDsp8TChannelFUc();
-extern "C" extern void flush__Q26JASDsp8TChannelFv();
-extern "C" extern void initFilter__Q26JASDsp8TChannelFv();
-extern "C" extern void setFilterMode__Q26JASDsp8TChannelFUs();
-extern "C" extern void setIIRFilterParam__Q26JASDsp8TChannelFPs();
-extern "C" extern void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
-extern "C" extern void setDistFilter__Q26JASDsp8TChannelFs();
-extern "C" extern void setBusConnect__Q26JASDsp8TChannelFUcUc();
-extern "C" extern void DSP_CreateMap2__FUl();
+extern "C" void boot__6JASDspFPFPv_v();
+void DSP_CreateMap2(u32);
+
+extern "C" void boot__6JASDspFPFPv_v();
+extern "C" void releaseHalt__6JASDspFUl();
+extern "C" void finishWork__6JASDspFUs();
+extern "C" void syncFrame__6JASDspFUlUlUl();
+extern "C" void setDSPMixerLevel__6JASDspFf();
+extern "C" void getDSPMixerLevel__6JASDspFv();
+extern "C" void getDSPHandle__6JASDspFi();
+extern "C" void setFilterTable__6JASDspFPsPsUl();
+extern "C" void flushBuffer__6JASDspFv();
+extern "C" void invalChannelAll__6JASDspFv();
+extern "C" void initBuffer__6JASDspFv();
+extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+extern "C" void init__Q26JASDsp8TChannelFv();
+extern "C" void playStart__Q26JASDsp8TChannelFv();
+extern "C" void playStop__Q26JASDsp8TChannelFv();
+extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv();
+extern "C" void forceStop__Q26JASDsp8TChannelFv();
+extern "C" void isActive__Q26JASDsp8TChannelCFv();
+extern "C" void isFinish__Q26JASDsp8TChannelCFv();
+extern "C" void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
+extern "C" void setOscInfo__Q26JASDsp8TChannelFUl();
+extern "C" void initAutoMixer__Q26JASDsp8TChannelFv();
+extern "C" void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
+extern "C" void setPitch__Q26JASDsp8TChannelFUs();
+extern "C" void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
+extern "C" void setMixerVolume__Q26JASDsp8TChannelFUcs();
+extern "C" void setPauseFlag__Q26JASDsp8TChannelFUc();
+extern "C" void flush__Q26JASDsp8TChannelFv();
+extern "C" void initFilter__Q26JASDsp8TChannelFv();
+extern "C" void setFilterMode__Q26JASDsp8TChannelFUs();
+extern "C" void setIIRFilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setDistFilter__Q26JASDsp8TChannelFs();
+extern "C" void setBusConnect__Q26JASDsp8TChannelFUcUc();
+extern "C" void DSP_CreateMap2__FUl();
 SECTION_RODATA extern const u8 DSPADPCM_FILTER__6JASDsp[64];
 SECTION_RODATA extern const void*const DSPRES_FILTER__6JASDsp[320];
 SECTION_RODATA extern const u8 data_8039B8A0[24];
@@ -61,23 +145,40 @@ SECTION_SDATA2 extern u8 data_80455754[8 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void cDyl_InitAsyncIsDone__Fv();
-extern "C" extern void bzero__7JASCalcFPvUl();
-extern "C" extern void DSPReleaseHalt2__FUl();
-extern "C" extern void DsetupTable__FUlUlUlUlUl();
-extern "C" extern void DsetMixerLevel__Ff();
-extern "C" extern void DspBoot__FPFPv_v();
-extern "C" extern void DspFinishWork__FUs();
-extern "C" extern void DsyncFrame2__FUlUlUl();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void DCInvalidateRange();
-extern "C" extern void DCFlushRange();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void cDyl_InitAsyncIsDone();
+void DSPReleaseHalt2(u32);
+void DsetupTable(u32, u32, u32, u32, u32);
+void DsetMixerLevel(f32);
+extern "C" void DspBoot__FPFPv_v();
+void DspFinishWork(u16);
+void DsyncFrame2(u32, u32, u32);
+void* operator new[](u32, JKRHeap*, s32);
+extern "C" void DCInvalidateRange();
+extern "C" void DCFlushRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void DSPReleaseHalt2__FUl();
+extern "C" void DsetupTable__FUlUlUlUlUl();
+extern "C" void DsetMixerLevel__Ff();
+extern "C" void DspBoot__FPFPv_v();
+extern "C" void DspFinishWork__FUs();
+extern "C" void DsyncFrame2__FUlUlUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void DCInvalidateRange();
+extern "C" void DCFlushRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 JASDram[4];
 
 // 
@@ -85,58 +186,58 @@ SECTION_SBSS extern u8 JASDram[4];
 // 
 
 /* ############################################################################################## */
-/* 804512E8-804512EC 0004+00 .sbss      CH_BUF__6JASDsp                                              */
+/* 804512E8-804512EC 0004+00 rc=5 efc=0 .sbss      CH_BUF__6JASDsp                                              */
 u8 CH_BUF__6JASDsp[4];
 
-/* 804512EC-804512F0 0004+00 .sbss      FX_BUF__6JASDsp                                              */
+/* 804512EC-804512F0 0004+00 rc=3 efc=0 .sbss      FX_BUF__6JASDsp                                              */
 u8 FX_BUF__6JASDsp[4];
 
-/* 804512F0-804512F4 0004+00 .sbss      sDSPVolume__6JASDsp                                          */
+/* 804512F0-804512F4 0004+00 rc=2 efc=0 .sbss      sDSPVolume__6JASDsp                                          */
 u8 sDSPVolume__6JASDsp[4];
 
-/* 804512F4-804512F8 0004+00 .sbss      None                                                         */
+/* 804512F4-804512F8 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 struct_804512F4[4];
 /* 804512F4 0001 data_804512F4 */
 /* 804512F5 0003 data_804512F5 */
 
-/* 8029D958-8029D9A4 004C+00 .text      boot__6JASDspFPFPv_v                                         */
+/* 8029D958-8029D9A4 004C+00 rc=1 efc=1 .text      boot__6JASDspFPFPv_v                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(boot__6JASDspFPFPv_v) {
+extern "C" asm void boot__6JASDspFPFPv_v() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/boot__6JASDspFPFPv_v.s"
 }
 #pragma pop
 
 
-/* 8029D9A4-8029D9C4 0020+00 .text      releaseHalt__6JASDspFUl                                      */
+/* 8029D9A4-8029D9C4 0020+00 rc=1 efc=1 .text      releaseHalt__6JASDspFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(releaseHalt__6JASDspFUl) {
+asm void JASDsp::releaseHalt(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/releaseHalt__6JASDspFUl.s"
 }
 #pragma pop
 
 
-/* 8029D9C4-8029D9E4 0020+00 .text      finishWork__6JASDspFUs                                       */
+/* 8029D9C4-8029D9E4 0020+00 rc=1 efc=1 .text      finishWork__6JASDspFUs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(finishWork__6JASDspFUs) {
+asm void JASDsp::finishWork(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/finishWork__6JASDspFUs.s"
 }
 #pragma pop
 
 
-/* 8029D9E4-8029DA04 0020+00 .text      syncFrame__6JASDspFUlUlUl                                    */
+/* 8029D9E4-8029DA04 0020+00 rc=1 efc=1 .text      syncFrame__6JASDspFUlUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(syncFrame__6JASDspFUlUlUl) {
+asm void JASDsp::syncFrame(u32 field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/syncFrame__6JASDspFUlUlUl.s"
 }
@@ -144,69 +245,69 @@ ASM_FUNCTION(syncFrame__6JASDspFUlUlUl) {
 
 
 /* ############################################################################################## */
-/* 80455748-8045574C 0004+00 .sdata2    @176                                                         */
+/* 80455748-8045574C 0004+00 rc=1 efc=0 .sdata2    @176                                                         */
 f32 JASDSPInterface__lit_176 = 4.0f;
 
-/* 8029DA04-8029DA30 002C+00 .text      setDSPMixerLevel__6JASDspFf                                  */
+/* 8029DA04-8029DA30 002C+00 rc=1 efc=1 .text      setDSPMixerLevel__6JASDspFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDSPMixerLevel__6JASDspFf) {
+asm void JASDsp::setDSPMixerLevel(f32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setDSPMixerLevel__6JASDspFf.s"
 }
 #pragma pop
 
 
-/* 8029DA30-8029DA38 0008+00 .text      getDSPMixerLevel__6JASDspFv                                  */
+/* 8029DA30-8029DA38 0008+00 rc=1 efc=1 .text      getDSPMixerLevel__6JASDspFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDSPMixerLevel__6JASDspFv) {
+asm void JASDsp::getDSPMixerLevel() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/getDSPMixerLevel__6JASDspFv.s"
 }
 #pragma pop
 
 
-/* 8029DA38-8029DA48 0010+00 .text      getDSPHandle__6JASDspFi                                      */
+/* 8029DA38-8029DA48 0010+00 rc=1 efc=1 .text      getDSPHandle__6JASDspFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDSPHandle__6JASDspFi) {
+asm void JASDsp::getDSPHandle(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/getDSPHandle__6JASDspFi.s"
 }
 #pragma pop
 
 
-/* 8029DA48-8029DA6C 0024+00 .text      setFilterTable__6JASDspFPsPsUl                               */
+/* 8029DA48-8029DA6C 0024+00 rc=3 efc=0 .text      setFilterTable__6JASDspFPsPsUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFilterTable__6JASDspFPsPsUl) {
+asm void JASDsp::setFilterTable(s16* field_0, s16* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setFilterTable__6JASDspFPsPsUl.s"
 }
 #pragma pop
 
 
-/* 8029DA6C-8029DAA0 0034+00 .text      flushBuffer__6JASDspFv                                       */
+/* 8029DA6C-8029DAA0 0034+00 rc=1 efc=0 .text      flushBuffer__6JASDspFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flushBuffer__6JASDspFv) {
+asm void JASDsp::flushBuffer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/flushBuffer__6JASDspFv.s"
 }
 #pragma pop
 
 
-/* 8029DAA0-8029DAC8 0028+00 .text      invalChannelAll__6JASDspFv                                   */
+/* 8029DAA0-8029DAC8 0028+00 rc=1 efc=1 .text      invalChannelAll__6JASDspFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(invalChannelAll__6JASDspFv) {
+asm void JASDsp::invalChannelAll() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/invalChannelAll__6JASDspFv.s"
 }
@@ -214,7 +315,7 @@ ASM_FUNCTION(invalChannelAll__6JASDspFv) {
 
 
 /* ############################################################################################## */
-/* 8039B360-8039B3A0 0040+00 .rodata    DSPADPCM_FILTER__6JASDsp                                     */
+/* 8039B360-8039B3A0 0040+00 rc=1 efc=0 .rodata    DSPADPCM_FILTER__6JASDsp                                     */
 SECTION_RODATA const u8 DSPADPCM_FILTER__6JASDsp[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00, 0x04, 0x00,
 	0x10, 0x00, 0xF8, 0x00, 0x0E, 0x00, 0xFA, 0x00, 0x0C, 0x00, 0xFC, 0x00, 0x12, 0x00, 0xF6, 0x00,
@@ -222,7 +323,7 @@ SECTION_RODATA const u8 DSPADPCM_FILTER__6JASDsp[64] = {
 	0x04, 0x00, 0xFC, 0x00, 0xFC, 0x00, 0x04, 0x00, 0xFC, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00,
 };
 
-/* 8039B3A0-8039B8A0 0500+00 .rodata    DSPRES_FILTER__6JASDsp                                       */
+/* 8039B3A0-8039B8A0 0500+00 rc=1 efc=0 .rodata    DSPRES_FILTER__6JASDsp                                       */
 SECTION_RODATA const void* const DSPRES_FILTER__6JASDsp[320] = {
 	(void*)0x0C3966AD,
 	(void*)0x0D46FFDF,
@@ -546,11 +647,11 @@ SECTION_RODATA const void* const DSPRES_FILTER__6JASDsp[320] = {
 	(void*)0x7FF57FFD,
 };
 
-/* 8029DAC8-8029DB78 00B0+00 .text      initBuffer__6JASDspFv                                        */
+/* 8029DAC8-8029DB78 00B0+00 rc=1 efc=1 .text      initBuffer__6JASDspFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBuffer__6JASDspFv) {
+asm void JASDsp::initBuffer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/initBuffer__6JASDspFv.s"
 }
@@ -558,7 +659,7 @@ ASM_FUNCTION(initBuffer__6JASDspFv) {
 
 
 /* ############################################################################################## */
-/* 803C78F0-803C7920 0018+18 .data      SEND_TABLE__6JASDsp                                          */
+/* 803C78F0-803C7920 0018+18 rc=1 efc=0 .data      SEND_TABLE__6JASDsp                                          */
 u8 SEND_TABLE__6JASDsp[48] = {
 	0x0D, 0x00, 0x0D, 0x60, 0x0D, 0xC8, 0x0E, 0x28, 0x0E, 0x88, 0x0E, 0xE8, 0x0C, 0xA0, 0x0F, 0x40,
 	0x0F, 0xA0, 0x0B, 0x00, 0x09, 0xA0, 0x00, 0x00,
@@ -567,88 +668,88 @@ u8 SEND_TABLE__6JASDsp[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029DB78-8029DCA4 012C+00 .text      setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_             */
+/* 8029DB78-8029DCA4 012C+00 rc=2 efc=1 .text      setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_) {
+asm void JASDsp::setFXLine(char field_0, s16* field_1, JASDsp::FxlineConfig_* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_.s"
 }
 #pragma pop
 
 
-/* 8029DCA4-8029DCE0 003C+00 .text      init__Q26JASDsp8TChannelFv                                   */
+/* 8029DCA4-8029DCE0 003C+00 rc=1 efc=1 .text      init__Q26JASDsp8TChannelFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::init() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/init__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DCE0-8029DD44 0064+00 .text      playStart__Q26JASDsp8TChannelFv                              */
+/* 8029DCE0-8029DD44 0064+00 rc=1 efc=1 .text      playStart__Q26JASDsp8TChannelFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playStart__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::playStart() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/playStart__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DD44-8029DD50 000C+00 .text      playStop__Q26JASDsp8TChannelFv                               */
+/* 8029DD44-8029DD50 000C+00 rc=1 efc=1 .text      playStop__Q26JASDsp8TChannelFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playStop__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::playStop() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/playStop__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DD50-8029DD60 0010+00 .text      replyFinishRequest__Q26JASDsp8TChannelFv                     */
+/* 8029DD50-8029DD60 0010+00 rc=1 efc=1 .text      replyFinishRequest__Q26JASDsp8TChannelFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(replyFinishRequest__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::replyFinishRequest() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/replyFinishRequest__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DD60-8029DD6C 000C+00 .text      forceStop__Q26JASDsp8TChannelFv                              */
+/* 8029DD60-8029DD6C 000C+00 rc=1 efc=1 .text      forceStop__Q26JASDsp8TChannelFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(forceStop__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::forceStop() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/forceStop__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DD6C-8029DD7C 0010+00 .text      isActive__Q26JASDsp8TChannelCFv                              */
+/* 8029DD6C-8029DD7C 0010+00 rc=1 efc=0 .text      isActive__Q26JASDsp8TChannelCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isActive__Q26JASDsp8TChannelCFv) {
+asm void JASDsp::TChannel::isActive() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/isActive__Q26JASDsp8TChannelCFv.s"
 }
 #pragma pop
 
 
-/* 8029DD7C-8029DD8C 0010+00 .text      isFinish__Q26JASDsp8TChannelCFv                              */
+/* 8029DD7C-8029DD8C 0010+00 rc=1 efc=1 .text      isFinish__Q26JASDsp8TChannelCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isFinish__Q26JASDsp8TChannelCFv) {
+asm void JASDsp::TChannel::isFinish() const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/isFinish__Q26JASDsp8TChannelCFv.s"
 }
@@ -656,166 +757,166 @@ ASM_FUNCTION(isFinish__Q26JASDsp8TChannelCFv) {
 
 
 /* ############################################################################################## */
-/* 8045574C-80455754 0008+00 .sdata2    COMP_BLOCKSAMPLES$331                                        */
+/* 8045574C-80455754 0008+00 rc=1 efc=0 .sdata2    COMP_BLOCKSAMPLES$331                                        */
 u8 data_8045574C[8] = {
 	0x10, 0x10, 0x01, 0x01, 0x01, 0x10, 0x10, 0x01,
 };
 
-/* 80455754-80455760 0008+04 .sdata2    COMP_BLOCKBYTES$332                                          */
+/* 80455754-80455760 0008+04 rc=1 efc=0 .sdata2    COMP_BLOCKBYTES$332                                          */
 u8 data_80455754[12] = {
 	0x09, 0x05, 0x08, 0x10, 0x01, 0x01, 0x01, 0x01,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029DD8C-8029DEAC 0120+00 .text      setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl          */
+/* 8029DD8C-8029DEAC 0120+00 rc=1 efc=1 .text      setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl) {
+asm void JASDsp::TChannel::setWaveInfo(JASWaveInfo const& field_0, u32 field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl.s"
 }
 #pragma pop
 
 
-/* 8029DEAC-8029DEC4 0018+00 .text      setOscInfo__Q26JASDsp8TChannelFUl                            */
+/* 8029DEAC-8029DEC4 0018+00 rc=1 efc=1 .text      setOscInfo__Q26JASDsp8TChannelFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOscInfo__Q26JASDsp8TChannelFUl) {
+asm void JASDsp::TChannel::setOscInfo(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setOscInfo__Q26JASDsp8TChannelFUl.s"
 }
 #pragma pop
 
 
-/* 8029DEC4-8029DEF0 002C+00 .text      initAutoMixer__Q26JASDsp8TChannelFv                          */
+/* 8029DEC4-8029DEF0 002C+00 rc=1 efc=1 .text      initAutoMixer__Q26JASDsp8TChannelFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initAutoMixer__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::initAutoMixer() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/initAutoMixer__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DEF0-8029DF1C 002C+00 .text      setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc                  */
+/* 8029DEF0-8029DF1C 002C+00 rc=1 efc=1 .text      setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc) {
+asm void JASDsp::TChannel::setAutoMixer(u16 field_0, char field_1, char field_2, char field_3, char field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc.s"
 }
 #pragma pop
 
 
-/* 8029DF1C-8029DF34 0018+00 .text      setPitch__Q26JASDsp8TChannelFUs                              */
+/* 8029DF1C-8029DF34 0018+00 rc=2 efc=2 .text      setPitch__Q26JASDsp8TChannelFUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPitch__Q26JASDsp8TChannelFUs) {
+asm void JASDsp::TChannel::setPitch(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setPitch__Q26JASDsp8TChannelFUs.s"
 }
 #pragma pop
 
 
-/* 8029DF34-8029DF54 0020+00 .text      setMixerInitVolume__Q26JASDsp8TChannelFUcs                   */
+/* 8029DF34-8029DF54 0020+00 rc=1 efc=1 .text      setMixerInitVolume__Q26JASDsp8TChannelFUcs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMixerInitVolume__Q26JASDsp8TChannelFUcs) {
+asm void JASDsp::TChannel::setMixerInitVolume(char field_0, s16 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setMixerInitVolume__Q26JASDsp8TChannelFUcs.s"
 }
 #pragma pop
 
 
-/* 8029DF54-8029DF80 002C+00 .text      setMixerVolume__Q26JASDsp8TChannelFUcs                       */
+/* 8029DF54-8029DF80 002C+00 rc=1 efc=1 .text      setMixerVolume__Q26JASDsp8TChannelFUcs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMixerVolume__Q26JASDsp8TChannelFUcs) {
+asm void JASDsp::TChannel::setMixerVolume(char field_0, s16 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setMixerVolume__Q26JASDsp8TChannelFUcs.s"
 }
 #pragma pop
 
 
-/* 8029DF80-8029DF8C 000C+00 .text      setPauseFlag__Q26JASDsp8TChannelFUc                          */
+/* 8029DF80-8029DF8C 000C+00 rc=2 efc=2 .text      setPauseFlag__Q26JASDsp8TChannelFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPauseFlag__Q26JASDsp8TChannelFUc) {
+asm void JASDsp::TChannel::setPauseFlag(char field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setPauseFlag__Q26JASDsp8TChannelFUc.s"
 }
 #pragma pop
 
 
-/* 8029DF8C-8029DFB0 0024+00 .text      flush__Q26JASDsp8TChannelFv                                  */
+/* 8029DF8C-8029DFB0 0024+00 rc=1 efc=1 .text      flush__Q26JASDsp8TChannelFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flush__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::flush() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/flush__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029DFB0-8029E00C 005C+00 .text      initFilter__Q26JASDsp8TChannelFv                             */
+/* 8029DFB0-8029E00C 005C+00 rc=1 efc=0 .text      initFilter__Q26JASDsp8TChannelFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initFilter__Q26JASDsp8TChannelFv) {
+asm void JASDsp::TChannel::initFilter() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/initFilter__Q26JASDsp8TChannelFv.s"
 }
 #pragma pop
 
 
-/* 8029E00C-8029E044 0038+00 .text      setFilterMode__Q26JASDsp8TChannelFUs                         */
+/* 8029E00C-8029E044 0038+00 rc=1 efc=1 .text      setFilterMode__Q26JASDsp8TChannelFUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFilterMode__Q26JASDsp8TChannelFUs) {
+asm void JASDsp::TChannel::setFilterMode(u16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setFilterMode__Q26JASDsp8TChannelFUs.s"
 }
 #pragma pop
 
 
-/* 8029E044-8029E06C 0028+00 .text      setIIRFilterParam__Q26JASDsp8TChannelFPs                     */
+/* 8029E044-8029E06C 0028+00 rc=1 efc=1 .text      setIIRFilterParam__Q26JASDsp8TChannelFPs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIIRFilterParam__Q26JASDsp8TChannelFPs) {
+asm void JASDsp::TChannel::setIIRFilterParam(s16* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setIIRFilterParam__Q26JASDsp8TChannelFPs.s"
 }
 #pragma pop
 
 
-/* 8029E06C-8029E094 0028+00 .text      setFIR8FilterParam__Q26JASDsp8TChannelFPs                    */
+/* 8029E06C-8029E094 0028+00 rc=1 efc=1 .text      setFIR8FilterParam__Q26JASDsp8TChannelFPs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFIR8FilterParam__Q26JASDsp8TChannelFPs) {
+asm void JASDsp::TChannel::setFIR8FilterParam(s16* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setFIR8FilterParam__Q26JASDsp8TChannelFPs.s"
 }
 #pragma pop
 
 
-/* 8029E094-8029E09C 0008+00 .text      setDistFilter__Q26JASDsp8TChannelFs                          */
+/* 8029E094-8029E09C 0008+00 rc=1 efc=1 .text      setDistFilter__Q26JASDsp8TChannelFs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDistFilter__Q26JASDsp8TChannelFs) {
+asm void JASDsp::TChannel::setDistFilter(s16 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setDistFilter__Q26JASDsp8TChannelFs.s"
 }
@@ -823,28 +924,28 @@ ASM_FUNCTION(setDistFilter__Q26JASDsp8TChannelFs) {
 
 
 /* ############################################################################################## */
-/* 8039B8A0-8039B8B8 0018+00 .rodata    connect_table$463                                            */
+/* 8039B8A0-8039B8B8 0018+00 rc=1 efc=0 .rodata    connect_table$463                                            */
 SECTION_RODATA const u8 data_8039B8A0[24] = {
 	0x00, 0x00, 0x0D, 0x00, 0x0D, 0x60, 0x0D, 0xC0, 0x0E, 0x20, 0x0E, 0x80, 0x0E, 0xE0, 0x0C, 0xA0,
 	0x0F, 0x40, 0x0F, 0xA0, 0x0B, 0x00, 0x09, 0xA0,
 };
 
-/* 8029E09C-8029E0BC 0020+00 .text      setBusConnect__Q26JASDsp8TChannelFUcUc                       */
+/* 8029E09C-8029E0BC 0020+00 rc=1 efc=1 .text      setBusConnect__Q26JASDsp8TChannelFUcUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBusConnect__Q26JASDsp8TChannelFUcUc) {
+asm void JASDsp::TChannel::setBusConnect(char field_0, char field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setBusConnect__Q26JASDsp8TChannelFUcUc.s"
 }
 #pragma pop
 
 
-/* 8029E0BC-8029E130 0074+00 .text      DSP_CreateMap2__FUl                                          */
+/* 8029E0BC-8029E130 0074+00 rc=1 efc=1 .text      DSP_CreateMap2__FUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DSP_CreateMap2__FUl) {
+asm void DSP_CreateMap2(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/DSP_CreateMap2__FUl.s"
 }
@@ -852,7 +953,7 @@ ASM_FUNCTION(DSP_CreateMap2__FUl) {
 
 
 /* ############################################################################################## */
-/* 804507B8-804507C0 0004+04 .sdata     one__11JASWaveInfo                                           */
+/* 804507B8-804507C0 0004+04 rc=5 efc=5 .sdata     one__11JASWaveInfo                                           */
 u32 one__11JASWaveInfo = 0x00000001;
 /* padding 4 bytes */
 

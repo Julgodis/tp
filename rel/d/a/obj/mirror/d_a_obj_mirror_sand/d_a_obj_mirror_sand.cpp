@@ -6,19 +6,49 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMirrorSand_c;
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daObjMirrorSand_c {
+	void initBaseMtx();
+	void setBaseMtx();
+};
+
+struct dBgW {
+	~dBgW();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void initBaseMtx__17daObjMirrorSand_cFv();
-extern "C" extern void setBaseMtx__17daObjMirrorSand_cFv();
-extern "C" extern void daObjMirrorSand_Draw__FP17daObjMirrorSand_c();
-extern "C" extern void daObjMirrorSand_Execute__FP17daObjMirrorSand_c();
-extern "C" extern void daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c();
-extern "C" extern void daObjMirrorSand_Delete__FP17daObjMirrorSand_c();
-extern "C" extern void __dt__4dBgWFv();
-extern "C" extern void daObjMirrorSand_Create__FP10fopAc_ac_c();
+void createSolidHeap(fopAc_ac_c*);
+void daObjMirrorSand_Draw(daObjMirrorSand_c*);
+void daObjMirrorSand_Execute(daObjMirrorSand_c*);
+bool daObjMirrorSand_IsDelete(daObjMirrorSand_c*);
+void daObjMirrorSand_Delete(daObjMirrorSand_c*);
+void daObjMirrorSand_Create(fopAc_ac_c*);
+
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void initBaseMtx__17daObjMirrorSand_cFv();
+extern "C" void setBaseMtx__17daObjMirrorSand_cFv();
+extern "C" void daObjMirrorSand_Draw__FP17daObjMirrorSand_c();
+extern "C" void daObjMirrorSand_Execute__FP17daObjMirrorSand_c();
+extern "C" bool daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c();
+extern "C" void daObjMirrorSand_Delete__FP17daObjMirrorSand_c();
+extern "C" void __dt__4dBgWFv();
+extern "C" void daObjMirrorSand_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3729;
 SECTION_RODATA extern const u8 lit_3730[4];
 SECTION_RODATA extern const u8 lit_3732[8];
@@ -32,7 +62,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +74,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -53,7 +85,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/__dt__12J3DFrameCtrlFv.s"
 }
@@ -64,7 +96,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__17daObjMirrorSand_cFv) {
+asm void daObjMirrorSand_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/initBaseMtx__17daObjMirrorSand_cFv.s"
 }
@@ -75,7 +107,7 @@ ASM_FUNCTION(initBaseMtx__17daObjMirrorSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__17daObjMirrorSand_cFv) {
+asm void daObjMirrorSand_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/setBaseMtx__17daObjMirrorSand_cFv.s"
 }
@@ -86,7 +118,7 @@ ASM_FUNCTION(setBaseMtx__17daObjMirrorSand_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorSand_Draw__FP17daObjMirrorSand_c) {
+asm void daObjMirrorSand_Draw(daObjMirrorSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Draw__FP17daObjMirrorSand_c.s"
 }
@@ -97,7 +129,7 @@ ASM_FUNCTION(daObjMirrorSand_Draw__FP17daObjMirrorSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorSand_Execute__FP17daObjMirrorSand_c) {
+asm void daObjMirrorSand_Execute(daObjMirrorSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Execute__FP17daObjMirrorSand_c.s"
 }
@@ -105,21 +137,16 @@ ASM_FUNCTION(daObjMirrorSand_Execute__FP17daObjMirrorSand_c) {
 
 
 /* 80C98700-80C98708 0008+00 .text      daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c.s"
+bool daObjMirrorSand_IsDelete(daObjMirrorSand_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C98708-80C987B8 00B0+00 .text      daObjMirrorSand_Delete__FP17daObjMirrorSand_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorSand_Delete__FP17daObjMirrorSand_c) {
+asm void daObjMirrorSand_Delete(daObjMirrorSand_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Delete__FP17daObjMirrorSand_c.s"
 }
@@ -130,7 +157,7 @@ ASM_FUNCTION(daObjMirrorSand_Delete__FP17daObjMirrorSand_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4dBgWFv) {
+asm dBgW::~dBgW() {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/__dt__4dBgWFv.s"
 }
@@ -141,7 +168,7 @@ ASM_FUNCTION(__dt__4dBgWFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMirrorSand_Create__FP10fopAc_ac_c) {
+asm void daObjMirrorSand_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Create__FP10fopAc_ac_c.s"
 }

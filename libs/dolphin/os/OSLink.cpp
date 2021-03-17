@@ -9,16 +9,27 @@
 // Forward References:
 // 
 
-extern "C" extern void OSNotifyLink();
-extern "C" extern void OSNotifyUnlink();
-extern "C" extern void OSSetStringTable();
-extern "C" extern void Relocate();
-extern "C" extern void Link();
-extern "C" extern void OSLink();
-extern "C" extern void OSLinkFixed();
-extern "C" extern void Undo();
-extern "C" extern void OSUnlink();
-extern "C" extern void __OSModuleInit();
+extern "C" static void OSNotifyLink();
+extern "C" static void OSNotifyUnlink();
+extern "C" void OSSetStringTable();
+extern "C" static void Relocate();
+extern "C" static void Link();
+extern "C" void OSLink();
+extern "C" void OSLinkFixed();
+extern "C" static void Undo();
+extern "C" void OSUnlink();
+extern "C" void __OSModuleInit();
+
+extern "C" static void OSNotifyLink();
+extern "C" static void OSNotifyUnlink();
+extern "C" void OSSetStringTable();
+extern "C" static void Relocate();
+extern "C" static void Link();
+extern "C" void OSLink();
+extern "C" void OSLinkFixed();
+extern "C" static void Undo();
+extern "C" void OSUnlink();
+extern "C" void __OSModuleInit();
 SECTION_DATA extern u8 OSLink__lit_62[37 + 3 /* padding */];
 SECTION_DATA extern u8 lit_189[39 + 1 /* padding */];
 
@@ -26,42 +37,37 @@ SECTION_DATA extern u8 lit_189[39 + 1 /* padding */];
 // External References:
 // 
 
-SECTION_INIT extern void memset();
-extern "C" extern void OSReport();
-extern "C" extern void DCFlushRange();
-extern "C" extern void ICInvalidateRange();
+SECTION_INIT void memset();
+extern "C" void OSReport();
+extern "C" void DCFlushRange();
+extern "C" void ICInvalidateRange();
+
+SECTION_INIT void memset();
+extern "C" void OSReport();
+extern "C" void DCFlushRange();
+extern "C" void ICInvalidateRange();
 
 // 
 // Declarations:
 // 
 
-/* 8033DF60-8033DF64 0004+00 .text      OSNotifyLink                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(OSNotifyLink) {
-	nofralloc
-#include "asm/dolphin/os/OSLink/OSNotifyLink.s"
+/* 8033DF60-8033DF64 0004+00 rc=1 efc=0 .text      OSNotifyLink                                                 */
+extern "C" static void OSNotifyLink() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8033DF64-8033DF68 0004+00 .text      OSNotifyUnlink                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(OSNotifyUnlink) {
-	nofralloc
-#include "asm/dolphin/os/OSLink/OSNotifyUnlink.s"
+/* 8033DF64-8033DF68 0004+00 rc=1 efc=0 .text      OSNotifyUnlink                                               */
+extern "C" static void OSNotifyUnlink() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8033DF68-8033DF74 000C+00 .text      OSSetStringTable                                             */
+/* 8033DF68-8033DF74 000C+00 rc=1 efc=1 .text      OSSetStringTable                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSSetStringTable) {
+extern "C" asm void OSSetStringTable() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/OSSetStringTable.s"
 }
@@ -69,7 +75,7 @@ ASM_FUNCTION(OSSetStringTable) {
 
 
 /* ############################################################################################## */
-/* 803D0788-803D07B0 0025+03 .data      @62                                                          */
+/* 803D0788-803D07B0 0025+03 rc=1 efc=0 .data      @62                                                          */
 u8 OSLink__lit_62[40] = {
 	0x4F, 0x53, 0x4C, 0x69, 0x6E, 0x6B, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20,
 	0x72, 0x65, 0x6C, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x74, 0x79, 0x70, 0x65, 0x20,
@@ -78,44 +84,44 @@ u8 OSLink__lit_62[40] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 8033DF74-8033E230 02BC+00 .text      Relocate                                                     */
+/* 8033DF74-8033E230 02BC+00 rc=1 efc=0 .text      Relocate                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Relocate) {
+extern "C" asm static void Relocate() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/Relocate.s"
 }
 #pragma pop
 
 
-/* 8033E230-8033E510 02E0+00 .text      Link                                                         */
+/* 8033E230-8033E510 02E0+00 rc=2 efc=0 .text      Link                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Link) {
+extern "C" asm static void Link() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/Link.s"
 }
 #pragma pop
 
 
-/* 8033E510-8033E534 0024+00 .text      OSLink                                                       */
+/* 8033E510-8033E534 0024+00 rc=1 efc=1 .text      OSLink                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSLink) {
+extern "C" asm void OSLink() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/OSLink.s"
 }
 #pragma pop
 
 
-/* 8033E534-8033E570 003C+00 .text      OSLinkFixed                                                  */
+/* 8033E534-8033E570 003C+00 rc=1 efc=1 .text      OSLinkFixed                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSLinkFixed) {
+extern "C" asm void OSLinkFixed() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/OSLinkFixed.s"
 }
@@ -123,7 +129,7 @@ ASM_FUNCTION(OSLinkFixed) {
 
 
 /* ############################################################################################## */
-/* 803D07B0-803D07D8 0027+01 .data      @189                                                         */
+/* 803D07B0-803D07D8 0027+01 rc=1 efc=0 .data      @189                                                         */
 u8 lit_189[40] = {
 	0x4F, 0x53, 0x55, 0x6E, 0x6C, 0x69, 0x6E, 0x6B, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77,
 	0x6E, 0x20, 0x72, 0x65, 0x6C, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x74, 0x79, 0x70,
@@ -132,37 +138,36 @@ u8 lit_189[40] = {
 	0x00,
 };
 
-/* 8033E570-8033E7A8 0238+00 .text      Undo                                                         */
+/* 8033E570-8033E7A8 0238+00 rc=1 efc=0 .text      Undo                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Undo) {
+extern "C" asm static void Undo() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/Undo.s"
 }
 #pragma pop
 
 
-/* 8033E7A8-8033E97C 01D4+00 .text      OSUnlink                                                     */
+/* 8033E7A8-8033E97C 01D4+00 rc=1 efc=1 .text      OSUnlink                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(OSUnlink) {
+extern "C" asm void OSUnlink() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/OSUnlink.s"
 }
 #pragma pop
 
 
-/* 8033E97C-8033E994 0018+00 .text      __OSModuleInit                                               */
+/* 8033E97C-8033E994 0018+00 rc=1 efc=1 .text      __OSModuleInit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSModuleInit) {
+extern "C" asm void __OSModuleInit() {
 	nofralloc
 #include "asm/dolphin/os/OSLink/__OSModuleInit.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

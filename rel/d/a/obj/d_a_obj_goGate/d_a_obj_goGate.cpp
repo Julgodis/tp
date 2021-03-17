@@ -6,31 +6,73 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daGoGate_c;
+
+struct daGoGate_HIO_c {
+	daGoGate_HIO_c();
+	~daGoGate_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daGoGate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveGate();
+	void init_modeWait();
+	void modeWait();
+	void init_modeMoveOpen();
+	void modeMoveOpen();
+	void init_modeMoveClose();
+	void modeMoveClose();
+	void setSe();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daGoGate_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daGoGate_cFv();
-extern "C" extern void CreateHeap__10daGoGate_cFv();
-extern "C" extern void create__10daGoGate_cFv();
-extern "C" extern void Execute__10daGoGate_cFPPA3_A4_f();
-extern "C" extern void moveGate__10daGoGate_cFv();
-extern "C" extern void init_modeWait__10daGoGate_cFv();
-extern "C" extern void modeWait__10daGoGate_cFv();
-extern "C" extern void init_modeMoveOpen__10daGoGate_cFv();
-extern "C" extern void modeMoveOpen__10daGoGate_cFv();
-extern "C" extern void init_modeMoveClose__10daGoGate_cFv();
-extern "C" extern void modeMoveClose__10daGoGate_cFv();
-extern "C" extern void setSe__10daGoGate_cFv();
-extern "C" extern void Draw__10daGoGate_cFv();
-extern "C" extern void Delete__10daGoGate_cFv();
-extern "C" extern void daGoGate_Draw__FP10daGoGate_c();
-extern "C" extern void daGoGate_Execute__FP10daGoGate_c();
-extern "C" extern void daGoGate_Delete__FP10daGoGate_c();
-extern "C" extern void daGoGate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daGoGate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_goGate_cpp();
+extern "C" void Execute__10daGoGate_cFPPA3_A4_f();
+void daGoGate_Draw(daGoGate_c*);
+void daGoGate_Execute(daGoGate_c*);
+void daGoGate_Delete(daGoGate_c*);
+void daGoGate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_goGate_cpp();
+
+extern "C" void __ct__14daGoGate_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daGoGate_cFv();
+extern "C" void CreateHeap__10daGoGate_cFv();
+extern "C" void create__10daGoGate_cFv();
+extern "C" void Execute__10daGoGate_cFPPA3_A4_f();
+extern "C" void moveGate__10daGoGate_cFv();
+extern "C" void init_modeWait__10daGoGate_cFv();
+extern "C" void modeWait__10daGoGate_cFv();
+extern "C" void init_modeMoveOpen__10daGoGate_cFv();
+extern "C" void modeMoveOpen__10daGoGate_cFv();
+extern "C" void init_modeMoveClose__10daGoGate_cFv();
+extern "C" void modeMoveClose__10daGoGate_cFv();
+extern "C" void setSe__10daGoGate_cFv();
+extern "C" void Draw__10daGoGate_cFv();
+extern "C" void Delete__10daGoGate_cFv();
+extern "C" void daGoGate_Draw__FP10daGoGate_c();
+extern "C" void daGoGate_Execute__FP10daGoGate_c();
+extern "C" void daGoGate_Delete__FP10daGoGate_c();
+extern "C" void daGoGate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daGoGate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_goGate_cpp();
 SECTION_RODATA extern const u32 lit_3627;
 SECTION_RODATA extern const u8 lit_3648[4];
 SECTION_RODATA extern const u32 lit_3712;
@@ -60,8 +102,11 @@ SECTION_BSS extern u8 data_80BFE128[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -71,7 +116,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daGoGate_HIO_cFv) {
+asm daGoGate_HIO_c::daGoGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/__ct__14daGoGate_HIO_cFv.s"
 }
@@ -82,7 +127,7 @@ ASM_FUNCTION(__ct__14daGoGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -93,7 +138,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daGoGate_cFv) {
+asm void daGoGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/setBaseMtx__10daGoGate_cFv.s"
 }
@@ -104,7 +149,7 @@ ASM_FUNCTION(setBaseMtx__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daGoGate_cFv) {
+asm void daGoGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/CreateHeap__10daGoGate_cFv.s"
 }
@@ -115,7 +160,7 @@ ASM_FUNCTION(CreateHeap__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daGoGate_cFv) {
+asm void daGoGate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/create__10daGoGate_cFv.s"
 }
@@ -126,7 +171,7 @@ ASM_FUNCTION(create__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daGoGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daGoGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/Execute__10daGoGate_cFPPA3_A4_f.s"
 }
@@ -137,7 +182,7 @@ ASM_FUNCTION(Execute__10daGoGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveGate__10daGoGate_cFv) {
+asm void daGoGate_c::moveGate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/moveGate__10daGoGate_cFv.s"
 }
@@ -148,7 +193,7 @@ ASM_FUNCTION(moveGate__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daGoGate_cFv) {
+asm void daGoGate_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/init_modeWait__10daGoGate_cFv.s"
 }
@@ -156,21 +201,16 @@ ASM_FUNCTION(init_modeWait__10daGoGate_cFv) {
 
 
 /* 80BFDAE4-80BFDAE8 0004+00 .text      modeWait__10daGoGate_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daGoGate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/modeWait__10daGoGate_cFv.s"
+void daGoGate_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFDAE8-80BFDAF4 000C+00 .text      init_modeMoveOpen__10daGoGate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveOpen__10daGoGate_cFv) {
+asm void daGoGate_c::init_modeMoveOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/init_modeMoveOpen__10daGoGate_cFv.s"
 }
@@ -181,7 +221,7 @@ ASM_FUNCTION(init_modeMoveOpen__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveOpen__10daGoGate_cFv) {
+asm void daGoGate_c::modeMoveOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/modeMoveOpen__10daGoGate_cFv.s"
 }
@@ -192,7 +232,7 @@ ASM_FUNCTION(modeMoveOpen__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveClose__10daGoGate_cFv) {
+asm void daGoGate_c::init_modeMoveClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/init_modeMoveClose__10daGoGate_cFv.s"
 }
@@ -203,7 +243,7 @@ ASM_FUNCTION(init_modeMoveClose__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeMoveClose__10daGoGate_cFv) {
+asm void daGoGate_c::modeMoveClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/modeMoveClose__10daGoGate_cFv.s"
 }
@@ -214,7 +254,7 @@ ASM_FUNCTION(modeMoveClose__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSe__10daGoGate_cFv) {
+asm void daGoGate_c::setSe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/setSe__10daGoGate_cFv.s"
 }
@@ -225,7 +265,7 @@ ASM_FUNCTION(setSe__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daGoGate_cFv) {
+asm void daGoGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/Draw__10daGoGate_cFv.s"
 }
@@ -236,7 +276,7 @@ ASM_FUNCTION(Draw__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daGoGate_cFv) {
+asm void daGoGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/Delete__10daGoGate_cFv.s"
 }
@@ -247,7 +287,7 @@ ASM_FUNCTION(Delete__10daGoGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGoGate_Draw__FP10daGoGate_c) {
+asm void daGoGate_Draw(daGoGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/daGoGate_Draw__FP10daGoGate_c.s"
 }
@@ -258,7 +298,7 @@ ASM_FUNCTION(daGoGate_Draw__FP10daGoGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGoGate_Execute__FP10daGoGate_c) {
+asm void daGoGate_Execute(daGoGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/daGoGate_Execute__FP10daGoGate_c.s"
 }
@@ -269,7 +309,7 @@ ASM_FUNCTION(daGoGate_Execute__FP10daGoGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGoGate_Delete__FP10daGoGate_c) {
+asm void daGoGate_Delete(daGoGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/daGoGate_Delete__FP10daGoGate_c.s"
 }
@@ -280,7 +320,7 @@ ASM_FUNCTION(daGoGate_Delete__FP10daGoGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGoGate_Create__FP10fopAc_ac_c) {
+asm void daGoGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/daGoGate_Create__FP10fopAc_ac_c.s"
 }
@@ -291,7 +331,7 @@ ASM_FUNCTION(daGoGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daGoGate_HIO_cFv) {
+asm daGoGate_HIO_c::~daGoGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/__dt__14daGoGate_HIO_cFv.s"
 }
@@ -302,7 +342,7 @@ ASM_FUNCTION(__dt__14daGoGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_goGate_cpp) {
+extern "C" asm void __sinit_d_a_obj_goGate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_goGate/d_a_obj_goGate/__sinit_d_a_obj_goGate_cpp.s"
 }

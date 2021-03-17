@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagWrHowl_c;
+
+struct daTagWrHowl_c {
+	daTagWrHowl_c();
+	~daTagWrHowl_c();
+	void create();
+	bool Delete();
+	bool draw();
+	void execute();
+	void init();
+	void chkWlfInTag();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daTagWrHowl_cFv();
-extern "C" extern void __dt__13daTagWrHowl_cFv();
-extern "C" extern void create__13daTagWrHowl_cFv();
-extern "C" extern void Delete__13daTagWrHowl_cFv();
-extern "C" extern void draw__13daTagWrHowl_cFv();
-extern "C" extern void execute__13daTagWrHowl_cFv();
-extern "C" extern void init__13daTagWrHowl_cFv();
-extern "C" extern void chkWlfInTag__13daTagWrHowl_cFv();
-extern "C" extern void daTagWrHowl_create__FP13daTagWrHowl_c();
-extern "C" extern void daTagWrHowl_Delete__FP13daTagWrHowl_c();
-extern "C" extern void daTagWrHowl_execute__FP13daTagWrHowl_c();
-extern "C" extern void daTagWrHowl_draw__FP13daTagWrHowl_c();
+void daTagWrHowl_create(daTagWrHowl_c*);
+void daTagWrHowl_Delete(daTagWrHowl_c*);
+void daTagWrHowl_execute(daTagWrHowl_c*);
+void daTagWrHowl_draw(daTagWrHowl_c*);
+
+extern "C" void __ct__13daTagWrHowl_cFv();
+extern "C" void __dt__13daTagWrHowl_cFv();
+extern "C" void create__13daTagWrHowl_cFv();
+extern "C" bool Delete__13daTagWrHowl_cFv();
+extern "C" bool draw__13daTagWrHowl_cFv();
+extern "C" void execute__13daTagWrHowl_cFv();
+extern "C" void init__13daTagWrHowl_cFv();
+extern "C" void chkWlfInTag__13daTagWrHowl_cFv();
+extern "C" void daTagWrHowl_create__FP13daTagWrHowl_c();
+extern "C" void daTagWrHowl_Delete__FP13daTagWrHowl_c();
+extern "C" void daTagWrHowl_execute__FP13daTagWrHowl_c();
+extern "C" void daTagWrHowl_draw__FP13daTagWrHowl_c();
 SECTION_RODATA extern const u32 lit_3680;
 SECTION_DATA extern u8 daTagWrHowl_METHODS[32];
 SECTION_DATA extern u8 g_profile_Tag_WaraHowl[48];
@@ -30,7 +52,9 @@ SECTION_DATA extern void*const __vt__13daTagWrHowl_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -40,7 +64,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daTagWrHowl_cFv) {
+asm daTagWrHowl_c::daTagWrHowl_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/__ct__13daTagWrHowl_cFv.s"
 }
@@ -51,7 +75,7 @@ ASM_FUNCTION(__ct__13daTagWrHowl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daTagWrHowl_cFv) {
+asm daTagWrHowl_c::~daTagWrHowl_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/__dt__13daTagWrHowl_cFv.s"
 }
@@ -62,7 +86,7 @@ ASM_FUNCTION(__dt__13daTagWrHowl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daTagWrHowl_cFv) {
+asm void daTagWrHowl_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/create__13daTagWrHowl_cFv.s"
 }
@@ -70,32 +94,22 @@ ASM_FUNCTION(create__13daTagWrHowl_cFv) {
 
 
 /* 80D6402C-80D64034 0008+00 .text      Delete__13daTagWrHowl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daTagWrHowl_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/Delete__13daTagWrHowl_cFv.s"
+bool daTagWrHowl_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D64034-80D6403C 0008+00 .text      draw__13daTagWrHowl_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__13daTagWrHowl_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/draw__13daTagWrHowl_cFv.s"
+bool daTagWrHowl_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6403C-80D64090 0054+00 .text      execute__13daTagWrHowl_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daTagWrHowl_cFv) {
+asm void daTagWrHowl_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/execute__13daTagWrHowl_cFv.s"
 }
@@ -106,7 +120,7 @@ ASM_FUNCTION(execute__13daTagWrHowl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__13daTagWrHowl_cFv) {
+asm void daTagWrHowl_c::init() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/init__13daTagWrHowl_cFv.s"
 }
@@ -117,7 +131,7 @@ ASM_FUNCTION(init__13daTagWrHowl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkWlfInTag__13daTagWrHowl_cFv) {
+asm void daTagWrHowl_c::chkWlfInTag() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/chkWlfInTag__13daTagWrHowl_cFv.s"
 }
@@ -128,7 +142,7 @@ ASM_FUNCTION(chkWlfInTag__13daTagWrHowl_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWrHowl_create__FP13daTagWrHowl_c) {
+asm void daTagWrHowl_create(daTagWrHowl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_create__FP13daTagWrHowl_c.s"
 }
@@ -139,7 +153,7 @@ ASM_FUNCTION(daTagWrHowl_create__FP13daTagWrHowl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWrHowl_Delete__FP13daTagWrHowl_c) {
+asm void daTagWrHowl_Delete(daTagWrHowl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_Delete__FP13daTagWrHowl_c.s"
 }
@@ -150,7 +164,7 @@ ASM_FUNCTION(daTagWrHowl_Delete__FP13daTagWrHowl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWrHowl_execute__FP13daTagWrHowl_c) {
+asm void daTagWrHowl_execute(daTagWrHowl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_execute__FP13daTagWrHowl_c.s"
 }
@@ -161,7 +175,7 @@ ASM_FUNCTION(daTagWrHowl_execute__FP13daTagWrHowl_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagWrHowl_draw__FP13daTagWrHowl_c) {
+asm void daTagWrHowl_draw(daTagWrHowl_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/daTagWrHowl_draw__FP13daTagWrHowl_c.s"
 }

@@ -9,6 +9,7 @@
 // Forward References:
 // 
 
+
 SECTION_SDATA extern u32 __float_nan;
 SECTION_SDATA extern u32 __float_huge;
 SECTION_SDATA extern u32 __float_max;
@@ -20,22 +21,24 @@ SECTION_SDATA extern u32 data_80450AF0;
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80450AE0-80450AE4 0004+00 .sdata     __float_nan                                                  */
+/* ############################################################################################## */
+/* 80450AE0-80450AE4 0004+00 rc=204 efc=204 .sdata     __float_nan                                                  */
 u32 __float_nan = 0x7FFFFFFF;
 
-/* 80450AE4-80450AE8 0004+00 .sdata     __float_huge                                                 */
+/* 80450AE4-80450AE8 0004+00 rc=1 efc=1 .sdata     __float_huge                                                 */
 u32 __float_huge = 0x7F800000;
 
-/* 80450AE8-80450AEC 0004+00 .sdata     __float_max                                                  */
+/* 80450AE8-80450AEC 0004+00 rc=18 efc=18 .sdata     __float_max                                                  */
 u32 __float_max = 0x7F7FFFFF;
 
-/* 80450AEC-80450AF0 0004+00 .sdata     __float_epsilon                                              */
+/* 80450AEC-80450AF0 0004+00 rc=28 efc=28 .sdata     __float_epsilon                                              */
 u32 __float_epsilon = 0x34000000;
 
-/* 80450AF0-80450AF4 0004+00 .sdata     None                                                         */
+/* 80450AF0-80450AF4 0004+00 rc=1 efc=1 .sdata     None                                                         */
 u32 data_80450AF0 = 0x80000000;
 

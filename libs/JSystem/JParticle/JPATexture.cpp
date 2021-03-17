@@ -6,27 +6,59 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JPATexture (JPATexture) False/False
+/* top-level dependencies (begin JPATexture) */
+/* top-level dependencies (end JPATexture) */
+struct JPATexture {
+	/* 8027D7D4 */ JPATexture(char const*);
+	/* 8027D83C */ ~JPATexture();
+};
+
+// build JUTTexture (JUTTexture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// ResTIMG
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10JPATextureFPCUc();
-extern "C" extern void __dt__10JPATextureFv();
+
+extern "C" void __ct__10JPATextureFPCUc();
+extern "C" void __dt__10JPATextureFv();
 SECTION_DATA extern void*const __vt__10JPATexture[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dt__10JUTTextureFv();
-extern "C" extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C4598-803C45A8 000C+04 .data      __vt__10JPATexture                                           */
+/* 803C4598-803C45A8 000C+04 rc=2 efc=0 .data      __vt__10JPATexture                                           */
 void* const __vt__10JPATexture[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -35,26 +67,25 @@ void* const __vt__10JPATexture[4] = {
 	NULL,
 };
 
-/* 8027D7D4-8027D83C 0068+00 .text      __ct__10JPATextureFPCUc                                      */
+/* 8027D7D4-8027D83C 0068+00 rc=1 efc=1 .text      __ct__10JPATextureFPCUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JPATextureFPCUc) {
+asm JPATexture::JPATexture(char const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPATexture/__ct__10JPATextureFPCUc.s"
 }
 #pragma pop
 
 
-/* 8027D83C-8027D8A0 0064+00 .text      __dt__10JPATextureFv                                         */
+/* 8027D83C-8027D8A0 0064+00 rc=1 efc=0 .text      __dt__10JPATextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10JPATextureFv) {
+asm JPATexture::~JPATexture() {
 	nofralloc
 #include "asm/JSystem/JParticle/JPATexture/__dt__10JPATextureFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

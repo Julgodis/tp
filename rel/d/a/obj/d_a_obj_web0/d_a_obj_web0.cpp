@@ -6,22 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_web0_class;
+
+struct daObj_Web0_HIO_c {
+	daObj_Web0_HIO_c();
+	~daObj_Web0_HIO_c();
+};
+
+struct obj_web0_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Web0_HIO_cFv();
-extern "C" extern void daObj_Web0_Draw__FP14obj_web0_class();
-extern "C" extern void damage_check__FP14obj_web0_class();
-extern "C" extern void daObj_Web0_Execute__FP14obj_web0_class();
-extern "C" extern void daObj_Web0_IsDelete__FP14obj_web0_class();
-extern "C" extern void daObj_Web0_Delete__FP14obj_web0_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Web0_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__16daObj_Web0_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_web0_cpp();
+void daObj_Web0_Draw(obj_web0_class*);
+void damage_check(obj_web0_class*);
+void daObj_Web0_Execute(obj_web0_class*);
+bool daObj_Web0_IsDelete(obj_web0_class*);
+void daObj_Web0_Delete(obj_web0_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Web0_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_web0_cpp();
+
+extern "C" void __ct__16daObj_Web0_HIO_cFv();
+extern "C" void daObj_Web0_Draw__FP14obj_web0_class();
+extern "C" void damage_check__FP14obj_web0_class();
+extern "C" void daObj_Web0_Execute__FP14obj_web0_class();
+extern "C" bool daObj_Web0_IsDelete__FP14obj_web0_class();
+extern "C" void daObj_Web0_Delete__FP14obj_web0_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Web0_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__16daObj_Web0_HIO_cFv();
+extern "C" void __sinit_d_a_obj_web0_cpp();
 SECTION_RODATA extern const u32 lit_3724;
 SECTION_RODATA extern const u32 lit_3725;
 SECTION_RODATA extern const u32 lit_3726;
@@ -50,8 +89,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -61,7 +103,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Web0_HIO_cFv) {
+asm daObj_Web0_HIO_c::daObj_Web0_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__ct__16daObj_Web0_HIO_cFv.s"
 }
@@ -72,7 +114,7 @@ ASM_FUNCTION(__ct__16daObj_Web0_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Web0_Draw__FP14obj_web0_class) {
+asm void daObj_Web0_Draw(obj_web0_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Draw__FP14obj_web0_class.s"
 }
@@ -83,7 +125,7 @@ ASM_FUNCTION(daObj_Web0_Draw__FP14obj_web0_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP14obj_web0_class) {
+asm void damage_check(obj_web0_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/damage_check__FP14obj_web0_class.s"
 }
@@ -94,7 +136,7 @@ ASM_FUNCTION(damage_check__FP14obj_web0_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Web0_Execute__FP14obj_web0_class) {
+asm void daObj_Web0_Execute(obj_web0_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Execute__FP14obj_web0_class.s"
 }
@@ -102,21 +144,16 @@ ASM_FUNCTION(daObj_Web0_Execute__FP14obj_web0_class) {
 
 
 /* 80D34B24-80D34B2C 0008+00 .text      daObj_Web0_IsDelete__FP14obj_web0_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Web0_IsDelete__FP14obj_web0_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_IsDelete__FP14obj_web0_class.s"
+bool daObj_Web0_IsDelete(obj_web0_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D34B2C-80D34B94 0068+00 .text      daObj_Web0_Delete__FP14obj_web0_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Web0_Delete__FP14obj_web0_class) {
+asm void daObj_Web0_Delete(obj_web0_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Delete__FP14obj_web0_class.s"
 }
@@ -127,7 +164,7 @@ ASM_FUNCTION(daObj_Web0_Delete__FP14obj_web0_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -138,7 +175,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__dt__12J3DFrameCtrlFv.s"
 }
@@ -149,7 +186,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Web0_Create__FP10fopAc_ac_c) {
+asm void daObj_Web0_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_Create__FP10fopAc_ac_c.s"
 }
@@ -160,7 +197,7 @@ ASM_FUNCTION(daObj_Web0_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__dt__8cM3dGSphFv.s"
 }
@@ -171,7 +208,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__dt__8cM3dGAabFv.s"
 }
@@ -182,7 +219,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Web0_HIO_cFv) {
+asm daObj_Web0_HIO_c::~daObj_Web0_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__dt__16daObj_Web0_HIO_cFv.s"
 }
@@ -193,7 +230,7 @@ ASM_FUNCTION(__dt__16daObj_Web0_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_web0_cpp) {
+extern "C" asm void __sinit_d_a_obj_web0_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/__sinit_d_a_obj_web0_cpp.s"
 }

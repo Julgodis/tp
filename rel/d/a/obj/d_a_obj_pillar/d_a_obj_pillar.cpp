@@ -6,39 +6,105 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daPillar_c;
+struct dBgW;
+
+struct daPillar_HIO_c {
+	daPillar_HIO_c();
+	~daPillar_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daPillar_c {
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void checkAttacked();
+	void on_switch();
+	void checkShake();
+	void setShake_rcrash();
+	void setShake_strong();
+	void setShake_weak();
+	void switch_proc_call();
+	void actionSwOnWait();
+	void actionSwOn();
+	void actionEnd();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daPillar_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void setBaseMtx__10daPillar_cFv();
-extern "C" extern void Create__10daPillar_cFv();
-extern "C" extern void CreateHeap__10daPillar_cFv();
-extern "C" extern void create1st__10daPillar_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void checkAttacked__10daPillar_cFv();
-extern "C" extern void on_switch__10daPillar_cFv();
-extern "C" extern void checkShake__10daPillar_cFv();
-extern "C" extern void setShake_rcrash__10daPillar_cFv();
-extern "C" extern void setShake_strong__10daPillar_cFv();
-extern "C" extern void setShake_weak__10daPillar_cFv();
-extern "C" extern void switch_proc_call__10daPillar_cFv();
-extern "C" extern void actionSwOnWait__10daPillar_cFv();
-extern "C" extern void actionSwOn__10daPillar_cFv();
-extern "C" extern void actionEnd__10daPillar_cFv();
-extern "C" extern void Execute__10daPillar_cFPPA3_A4_f();
-extern "C" extern void Draw__10daPillar_cFv();
-extern "C" extern void Delete__10daPillar_cFv();
-extern "C" extern void daPillar_create1st__FP10daPillar_c();
-extern "C" extern void daPillar_MoveBGDelete__FP10daPillar_c();
-extern "C" extern void daPillar_MoveBGExecute__FP10daPillar_c();
-extern "C" extern void daPillar_MoveBGDraw__FP10daPillar_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daPillar_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_pillar_cpp();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__10daPillar_cFPPA3_A4_f();
+void daPillar_create1st(daPillar_c*);
+void daPillar_MoveBGDelete(daPillar_c*);
+void daPillar_MoveBGExecute(daPillar_c*);
+void daPillar_MoveBGDraw(daPillar_c*);
+extern "C" void __sinit_d_a_obj_pillar_cpp();
+
+extern "C" void __ct__14daPillar_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void setBaseMtx__10daPillar_cFv();
+extern "C" void Create__10daPillar_cFv();
+extern "C" void CreateHeap__10daPillar_cFv();
+extern "C" void create1st__10daPillar_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void checkAttacked__10daPillar_cFv();
+extern "C" void on_switch__10daPillar_cFv();
+extern "C" void checkShake__10daPillar_cFv();
+extern "C" void setShake_rcrash__10daPillar_cFv();
+extern "C" void setShake_strong__10daPillar_cFv();
+extern "C" void setShake_weak__10daPillar_cFv();
+extern "C" void switch_proc_call__10daPillar_cFv();
+extern "C" void actionSwOnWait__10daPillar_cFv();
+extern "C" void actionSwOn__10daPillar_cFv();
+extern "C" void actionEnd__10daPillar_cFv();
+extern "C" void Execute__10daPillar_cFPPA3_A4_f();
+extern "C" void Draw__10daPillar_cFv();
+extern "C" void Delete__10daPillar_cFv();
+extern "C" void daPillar_create1st__FP10daPillar_c();
+extern "C" void daPillar_MoveBGDelete__FP10daPillar_c();
+extern "C" void daPillar_MoveBGExecute__FP10daPillar_c();
+extern "C" void daPillar_MoveBGDraw__FP10daPillar_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daPillar_HIO_cFv();
+extern "C" void __sinit_d_a_obj_pillar_cpp();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_shadowBmd[8];
@@ -90,8 +156,11 @@ SECTION_BSS extern u8 data_80CB0C54[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -101,7 +170,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daPillar_HIO_cFv) {
+asm daPillar_HIO_c::daPillar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__ct__14daPillar_HIO_cFv.s"
 }
@@ -112,7 +181,7 @@ ASM_FUNCTION(__ct__14daPillar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -123,7 +192,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -134,7 +203,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daPillar_cFv) {
+asm void daPillar_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/setBaseMtx__10daPillar_cFv.s"
 }
@@ -145,7 +214,7 @@ ASM_FUNCTION(setBaseMtx__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daPillar_cFv) {
+asm void daPillar_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/Create__10daPillar_cFv.s"
 }
@@ -156,7 +225,7 @@ ASM_FUNCTION(Create__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daPillar_cFv) {
+asm void daPillar_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/CreateHeap__10daPillar_cFv.s"
 }
@@ -167,7 +236,7 @@ ASM_FUNCTION(CreateHeap__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__10daPillar_cFv) {
+asm void daPillar_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/create1st__10daPillar_cFv.s"
 }
@@ -178,7 +247,7 @@ ASM_FUNCTION(create1st__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__8cM3dGCylFv.s"
 }
@@ -189,7 +258,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__8cM3dGAabFv.s"
 }
@@ -200,7 +269,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__10dCcD_GSttsFv.s"
 }
@@ -211,7 +280,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAttacked__10daPillar_cFv) {
+asm void daPillar_c::checkAttacked() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/checkAttacked__10daPillar_cFv.s"
 }
@@ -222,7 +291,7 @@ ASM_FUNCTION(checkAttacked__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(on_switch__10daPillar_cFv) {
+asm void daPillar_c::on_switch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/on_switch__10daPillar_cFv.s"
 }
@@ -233,7 +302,7 @@ ASM_FUNCTION(on_switch__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkShake__10daPillar_cFv) {
+asm void daPillar_c::checkShake() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/checkShake__10daPillar_cFv.s"
 }
@@ -244,7 +313,7 @@ ASM_FUNCTION(checkShake__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShake_rcrash__10daPillar_cFv) {
+asm void daPillar_c::setShake_rcrash() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/setShake_rcrash__10daPillar_cFv.s"
 }
@@ -255,7 +324,7 @@ ASM_FUNCTION(setShake_rcrash__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShake_strong__10daPillar_cFv) {
+asm void daPillar_c::setShake_strong() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/setShake_strong__10daPillar_cFv.s"
 }
@@ -266,7 +335,7 @@ ASM_FUNCTION(setShake_strong__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShake_weak__10daPillar_cFv) {
+asm void daPillar_c::setShake_weak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/setShake_weak__10daPillar_cFv.s"
 }
@@ -277,7 +346,7 @@ ASM_FUNCTION(setShake_weak__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(switch_proc_call__10daPillar_cFv) {
+asm void daPillar_c::switch_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/switch_proc_call__10daPillar_cFv.s"
 }
@@ -288,7 +357,7 @@ ASM_FUNCTION(switch_proc_call__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait__10daPillar_cFv) {
+asm void daPillar_c::actionSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/actionSwOnWait__10daPillar_cFv.s"
 }
@@ -299,7 +368,7 @@ ASM_FUNCTION(actionSwOnWait__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOn__10daPillar_cFv) {
+asm void daPillar_c::actionSwOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/actionSwOn__10daPillar_cFv.s"
 }
@@ -307,21 +376,16 @@ ASM_FUNCTION(actionSwOn__10daPillar_cFv) {
 
 
 /* 80CB03CC-80CB03D0 0004+00 .text      actionEnd__10daPillar_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionEnd__10daPillar_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/actionEnd__10daPillar_cFv.s"
+void daPillar_c::actionEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CB03D0-80CB0658 0288+00 .text      Execute__10daPillar_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daPillar_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daPillar_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/Execute__10daPillar_cFPPA3_A4_f.s"
 }
@@ -332,7 +396,7 @@ ASM_FUNCTION(Execute__10daPillar_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daPillar_cFv) {
+asm void daPillar_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/Draw__10daPillar_cFv.s"
 }
@@ -343,7 +407,7 @@ ASM_FUNCTION(Draw__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daPillar_cFv) {
+asm void daPillar_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/Delete__10daPillar_cFv.s"
 }
@@ -354,7 +418,7 @@ ASM_FUNCTION(Delete__10daPillar_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPillar_create1st__FP10daPillar_c) {
+asm void daPillar_create1st(daPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_create1st__FP10daPillar_c.s"
 }
@@ -365,7 +429,7 @@ ASM_FUNCTION(daPillar_create1st__FP10daPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPillar_MoveBGDelete__FP10daPillar_c) {
+asm void daPillar_MoveBGDelete(daPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGDelete__FP10daPillar_c.s"
 }
@@ -376,7 +440,7 @@ ASM_FUNCTION(daPillar_MoveBGDelete__FP10daPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPillar_MoveBGExecute__FP10daPillar_c) {
+asm void daPillar_MoveBGExecute(daPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGExecute__FP10daPillar_c.s"
 }
@@ -387,7 +451,7 @@ ASM_FUNCTION(daPillar_MoveBGExecute__FP10daPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPillar_MoveBGDraw__FP10daPillar_c) {
+asm void daPillar_MoveBGDraw(daPillar_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGDraw__FP10daPillar_c.s"
 }
@@ -398,7 +462,7 @@ ASM_FUNCTION(daPillar_MoveBGDraw__FP10daPillar_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__10cCcD_GSttsFv.s"
 }
@@ -409,7 +473,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daPillar_HIO_cFv) {
+asm daPillar_HIO_c::~daPillar_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__14daPillar_HIO_cFv.s"
 }
@@ -420,7 +484,7 @@ ASM_FUNCTION(__dt__14daPillar_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_pillar_cpp) {
+extern "C" asm void __sinit_d_a_obj_pillar_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__sinit_d_a_obj_pillar_cpp.s"
 }

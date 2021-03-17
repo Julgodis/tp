@@ -6,22 +6,49 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjE_CREATE_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjE_CREATE_c {
+	void NormalAction();
+	void SearchAction();
+	void LoopAction();
+	void Action();
+	void Execute();
+	void Delete();
+	void NameChk();
+	void create();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjE_CREATE_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjE_CREATE_Delete__FP15daObjE_CREATE_c();
-extern "C" extern void NormalAction__15daObjE_CREATE_cFv();
-extern "C" extern void SearchAction__15daObjE_CREATE_cFv();
-extern "C" extern void LoopAction__15daObjE_CREATE_cFv();
-extern "C" extern void Action__15daObjE_CREATE_cFv();
-extern "C" extern void Execute__15daObjE_CREATE_cFv();
-extern "C" extern void Delete__15daObjE_CREATE_cFv();
-extern "C" extern void daObjE_CREATE_Draw__FP15daObjE_CREATE_c();
-extern "C" extern void daObjE_CREATE_Execute__FP15daObjE_CREATE_c();
-extern "C" extern void NameChk__15daObjE_CREATE_cFv();
-extern "C" extern void create__15daObjE_CREATE_cFv();
-extern "C" extern void daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c();
+void daObjE_CREATE_Create(fopAc_ac_c*);
+void daObjE_CREATE_Delete(daObjE_CREATE_c*);
+bool daObjE_CREATE_Draw(daObjE_CREATE_c*);
+void daObjE_CREATE_Execute(daObjE_CREATE_c*);
+bool daObjE_CREATE_IsDelete(daObjE_CREATE_c*);
+
+extern "C" void daObjE_CREATE_Create__FP10fopAc_ac_c();
+extern "C" void daObjE_CREATE_Delete__FP15daObjE_CREATE_c();
+extern "C" void NormalAction__15daObjE_CREATE_cFv();
+extern "C" void SearchAction__15daObjE_CREATE_cFv();
+extern "C" void LoopAction__15daObjE_CREATE_cFv();
+extern "C" void Action__15daObjE_CREATE_cFv();
+extern "C" void Execute__15daObjE_CREATE_cFv();
+extern "C" void Delete__15daObjE_CREATE_cFv();
+extern "C" bool daObjE_CREATE_Draw__FP15daObjE_CREATE_c();
+extern "C" void daObjE_CREATE_Execute__FP15daObjE_CREATE_c();
+extern "C" void NameChk__15daObjE_CREATE_cFv();
+extern "C" void create__15daObjE_CREATE_cFv();
+extern "C" bool daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c();
 SECTION_RODATA extern const u8 lit_3720[4];
 SECTION_RODATA extern const u32 lit_3721;
 SECTION_RODATA extern const u32 lit_3722;
@@ -34,7 +61,9 @@ SECTION_DATA extern u8 g_profile_Obj_E_CREATE[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +73,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjE_CREATE_Create__FP10fopAc_ac_c) {
+asm void daObjE_CREATE_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Create__FP10fopAc_ac_c.s"
 }
@@ -55,7 +84,7 @@ ASM_FUNCTION(daObjE_CREATE_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjE_CREATE_Delete__FP15daObjE_CREATE_c) {
+asm void daObjE_CREATE_Delete(daObjE_CREATE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Delete__FP15daObjE_CREATE_c.s"
 }
@@ -66,7 +95,7 @@ ASM_FUNCTION(daObjE_CREATE_Delete__FP15daObjE_CREATE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(NormalAction__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::NormalAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/NormalAction__15daObjE_CREATE_cFv.s"
 }
@@ -77,7 +106,7 @@ ASM_FUNCTION(NormalAction__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SearchAction__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::SearchAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/SearchAction__15daObjE_CREATE_cFv.s"
 }
@@ -88,7 +117,7 @@ ASM_FUNCTION(SearchAction__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LoopAction__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::LoopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/LoopAction__15daObjE_CREATE_cFv.s"
 }
@@ -99,7 +128,7 @@ ASM_FUNCTION(LoopAction__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/Action__15daObjE_CREATE_cFv.s"
 }
@@ -110,7 +139,7 @@ ASM_FUNCTION(Action__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/Execute__15daObjE_CREATE_cFv.s"
 }
@@ -121,7 +150,7 @@ ASM_FUNCTION(Execute__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/Delete__15daObjE_CREATE_cFv.s"
 }
@@ -129,21 +158,16 @@ ASM_FUNCTION(Delete__15daObjE_CREATE_cFv) {
 
 
 /* 80BE35F0-80BE35F8 0008+00 .text      daObjE_CREATE_Draw__FP15daObjE_CREATE_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjE_CREATE_Draw__FP15daObjE_CREATE_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Draw__FP15daObjE_CREATE_c.s"
+bool daObjE_CREATE_Draw(daObjE_CREATE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE35F8-80BE3618 0020+00 .text      daObjE_CREATE_Execute__FP15daObjE_CREATE_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjE_CREATE_Execute__FP15daObjE_CREATE_c) {
+asm void daObjE_CREATE_Execute(daObjE_CREATE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Execute__FP15daObjE_CREATE_c.s"
 }
@@ -154,7 +178,7 @@ ASM_FUNCTION(daObjE_CREATE_Execute__FP15daObjE_CREATE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(NameChk__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::NameChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/NameChk__15daObjE_CREATE_cFv.s"
 }
@@ -165,7 +189,7 @@ ASM_FUNCTION(NameChk__15daObjE_CREATE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15daObjE_CREATE_cFv) {
+asm void daObjE_CREATE_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/create__15daObjE_CREATE_cFv.s"
 }
@@ -173,14 +197,9 @@ ASM_FUNCTION(create__15daObjE_CREATE_cFv) {
 
 
 /* 80BE3878-80BE3880 0008+00 .text      daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c.s"
+bool daObjE_CREATE_IsDelete(daObjE_CREATE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

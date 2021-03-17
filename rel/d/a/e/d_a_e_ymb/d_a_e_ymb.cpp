@@ -6,91 +6,227 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daE_YMB_c;
+struct J3DJoint;
+struct J3DModel;
+struct dBgW;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daE_YMB_HIO_c {
+	daE_YMB_HIO_c();
+	~daE_YMB_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daE_YMB_c {
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void draw();
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void setActionMode(s32, s32);
+	void setLastDamage();
+	void damage_check();
+	void setCameraSwitch();
+	void checkWaterPos();
+	void checkGroundPos();
+	void setFlyWaitVoice();
+	void setDownWaitVoice();
+	void setHitBoardSe();
+	void setElecEffect1();
+	void setElecEffect2();
+	void setWaterEffect1();
+	void setWaterEffect2();
+	void setBoilEffect(s32);
+	void setDamageEffect(s32);
+	void setDownHamonEffect();
+	void setFlyBlurEffect();
+	void setRockDamageEffect();
+	void setDeathEffect();
+	void executeWait();
+	void setBitePos(s32);
+	void setInclination();
+	void setBodyAngle();
+	void checkWolfLockIn();
+	void executeFly();
+	void executeFlyAttack();
+	void executeRunAway();
+	void executeGuard();
+	void executeSwim();
+	void executeWaterJump();
+	void getNearDownPos();
+	void executeDamage();
+	void setMidnaBindInit(cXyz*);
+	void setMidnaBindLevel(s32);
+	void setWolfLockEffect();
+	void initDownToWater();
+	void calcDownToWater();
+	void executeDown();
+	void setCreateDrop();
+	void executeDeath();
+	void demo_skip(s32);
+	void DemoSkipCallBack(void*, s32);
+	void calcLakeDemoPlayerPos();
+	void executeLakeDemo();
+	void executeStartDemo();
+	void checkStartBattleDemo();
+	void executeBattleDemo();
+	void action();
+	void mtx_set();
+	void getBellyBitePos(cXyz*);
+	void getDownLockPoint();
+	void setAttentionPos();
+	void cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObjDrop_c {
+	void setPos(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daE_YMB_HIO_cFv();
-extern "C" extern void ctrlJoint__9daE_YMB_cFP8J3DJointP8J3DModel();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void JointCallBack__9daE_YMB_cFP8J3DJointi();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void draw__9daE_YMB_cFv();
-extern "C" extern void daE_YMB_Draw__FP9daE_YMB_c();
-extern "C" extern void setBck__9daE_YMB_cFiUcff();
-extern "C" extern void checkBck__9daE_YMB_cFi();
-extern "C" extern void setActionMode__9daE_YMB_cFii();
-extern "C" extern void setLastDamage__9daE_YMB_cFv();
-extern "C" extern void damage_check__9daE_YMB_cFv();
-extern "C" extern void setCameraSwitch__9daE_YMB_cFv();
-extern "C" extern void checkWaterPos__9daE_YMB_cFv();
-extern "C" extern void checkGroundPos__9daE_YMB_cFv();
-extern "C" extern void setFlyWaitVoice__9daE_YMB_cFv();
-extern "C" extern void setDownWaitVoice__9daE_YMB_cFv();
-extern "C" extern void setHitBoardSe__9daE_YMB_cFv();
-extern "C" extern void setElecEffect1__9daE_YMB_cFv();
-extern "C" extern void setElecEffect2__9daE_YMB_cFv();
-extern "C" extern void setWaterEffect1__9daE_YMB_cFv();
-extern "C" extern void setWaterEffect2__9daE_YMB_cFv();
-extern "C" extern void setBoilEffect__9daE_YMB_cFi();
-extern "C" extern void setDamageEffect__9daE_YMB_cFi();
-extern "C" extern void setDownHamonEffect__9daE_YMB_cFv();
-extern "C" extern void setFlyBlurEffect__9daE_YMB_cFv();
-extern "C" extern void setRockDamageEffect__9daE_YMB_cFv();
-extern "C" extern void setDeathEffect__9daE_YMB_cFv();
-extern "C" extern void search_drop__FPvPv();
-extern "C" extern void executeWait__9daE_YMB_cFv();
-extern "C" extern void setBitePos__9daE_YMB_cFi();
-extern "C" extern void setInclination__9daE_YMB_cFv();
-extern "C" extern void setBodyAngle__9daE_YMB_cFv();
-extern "C" extern void checkWolfLockIn__9daE_YMB_cFv();
-extern "C" extern void executeFly__9daE_YMB_cFv();
-extern "C" extern void executeFlyAttack__9daE_YMB_cFv();
-extern "C" extern void executeRunAway__9daE_YMB_cFv();
-extern "C" extern void executeGuard__9daE_YMB_cFv();
-extern "C" extern void executeSwim__9daE_YMB_cFv();
-extern "C" extern void executeWaterJump__9daE_YMB_cFv();
-extern "C" extern void getNearDownPos__9daE_YMB_cFv();
-extern "C" extern void executeDamage__9daE_YMB_cFv();
-extern "C" extern void setMidnaBindInit__9daE_YMB_cFP4cXyz();
-extern "C" extern void setMidnaBindLevel__9daE_YMB_cFi();
-extern "C" extern void setWolfLockEffect__9daE_YMB_cFv();
-extern "C" extern void initDownToWater__9daE_YMB_cFv();
-extern "C" extern void calcDownToWater__9daE_YMB_cFv();
-extern "C" extern void executeDown__9daE_YMB_cFv();
-extern "C" extern void setCreateDrop__9daE_YMB_cFv();
-extern "C" extern void executeDeath__9daE_YMB_cFv();
-extern "C" extern void demo_skip__9daE_YMB_cFi();
-extern "C" extern void DemoSkipCallBack__9daE_YMB_cFPvi();
-extern "C" extern void calcLakeDemoPlayerPos__9daE_YMB_cFv();
-extern "C" extern void executeLakeDemo__9daE_YMB_cFv();
-extern "C" extern void executeStartDemo__9daE_YMB_cFv();
-extern "C" extern void checkStartBattleDemo__9daE_YMB_cFv();
-extern "C" extern void executeBattleDemo__9daE_YMB_cFv();
-extern "C" extern void action__9daE_YMB_cFv();
-extern "C" extern void mtx_set__9daE_YMB_cFv();
-extern "C" extern void getBellyBitePos__9daE_YMB_cFP4cXyz();
-extern "C" extern void getDownLockPoint__9daE_YMB_cFv();
-extern "C" extern void setAttentionPos__9daE_YMB_cFv();
-extern "C" extern void cc_set__9daE_YMB_cFv();
-extern "C" extern void execute__9daE_YMB_cFv();
-extern "C" extern void daE_YMB_Execute__FP9daE_YMB_c();
-extern "C" extern void daE_YMB_IsDelete__FP9daE_YMB_c();
-extern "C" extern void _delete__9daE_YMB_cFv();
-extern "C" extern void daE_YMB_Delete__FP9daE_YMB_c();
-extern "C" extern void CreateHeap__9daE_YMB_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__9daE_YMB_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daE_YMB_Create__FP9daE_YMB_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__13daE_YMB_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_ymb_cpp();
-extern "C" extern void setPos__11daObjDrop_cF4cXyz();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daE_YMB_Draw(daE_YMB_c*);
+void search_drop(void*, void*);
+void daE_YMB_Execute(daE_YMB_c*);
+bool daE_YMB_IsDelete(daE_YMB_c*);
+void daE_YMB_Delete(daE_YMB_c*);
+void useHeapInit(fopAc_ac_c*);
+void daE_YMB_Create(daE_YMB_c*);
+extern "C" void __sinit_d_a_e_ymb_cpp();
+
+extern "C" void __ct__13daE_YMB_HIO_cFv();
+extern "C" void ctrlJoint__9daE_YMB_cFP8J3DJointP8J3DModel();
+extern "C" void __dt__4cXyzFv();
+extern "C" void JointCallBack__9daE_YMB_cFP8J3DJointi();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void draw__9daE_YMB_cFv();
+extern "C" void daE_YMB_Draw__FP9daE_YMB_c();
+extern "C" void setBck__9daE_YMB_cFiUcff();
+extern "C" void checkBck__9daE_YMB_cFi();
+extern "C" void setActionMode__9daE_YMB_cFii();
+extern "C" void setLastDamage__9daE_YMB_cFv();
+extern "C" void damage_check__9daE_YMB_cFv();
+extern "C" void setCameraSwitch__9daE_YMB_cFv();
+extern "C" void checkWaterPos__9daE_YMB_cFv();
+extern "C" void checkGroundPos__9daE_YMB_cFv();
+extern "C" void setFlyWaitVoice__9daE_YMB_cFv();
+extern "C" void setDownWaitVoice__9daE_YMB_cFv();
+extern "C" void setHitBoardSe__9daE_YMB_cFv();
+extern "C" void setElecEffect1__9daE_YMB_cFv();
+extern "C" void setElecEffect2__9daE_YMB_cFv();
+extern "C" void setWaterEffect1__9daE_YMB_cFv();
+extern "C" void setWaterEffect2__9daE_YMB_cFv();
+extern "C" void setBoilEffect__9daE_YMB_cFi();
+extern "C" void setDamageEffect__9daE_YMB_cFi();
+extern "C" void setDownHamonEffect__9daE_YMB_cFv();
+extern "C" void setFlyBlurEffect__9daE_YMB_cFv();
+extern "C" void setRockDamageEffect__9daE_YMB_cFv();
+extern "C" void setDeathEffect__9daE_YMB_cFv();
+extern "C" void search_drop__FPvPv();
+extern "C" void executeWait__9daE_YMB_cFv();
+extern "C" void setBitePos__9daE_YMB_cFi();
+extern "C" void setInclination__9daE_YMB_cFv();
+extern "C" void setBodyAngle__9daE_YMB_cFv();
+extern "C" void checkWolfLockIn__9daE_YMB_cFv();
+extern "C" void executeFly__9daE_YMB_cFv();
+extern "C" void executeFlyAttack__9daE_YMB_cFv();
+extern "C" void executeRunAway__9daE_YMB_cFv();
+extern "C" void executeGuard__9daE_YMB_cFv();
+extern "C" void executeSwim__9daE_YMB_cFv();
+extern "C" void executeWaterJump__9daE_YMB_cFv();
+extern "C" void getNearDownPos__9daE_YMB_cFv();
+extern "C" void executeDamage__9daE_YMB_cFv();
+extern "C" void setMidnaBindInit__9daE_YMB_cFP4cXyz();
+extern "C" void setMidnaBindLevel__9daE_YMB_cFi();
+extern "C" void setWolfLockEffect__9daE_YMB_cFv();
+extern "C" void initDownToWater__9daE_YMB_cFv();
+extern "C" void calcDownToWater__9daE_YMB_cFv();
+extern "C" void executeDown__9daE_YMB_cFv();
+extern "C" void setCreateDrop__9daE_YMB_cFv();
+extern "C" void executeDeath__9daE_YMB_cFv();
+extern "C" void demo_skip__9daE_YMB_cFi();
+extern "C" void DemoSkipCallBack__9daE_YMB_cFPvi();
+extern "C" void calcLakeDemoPlayerPos__9daE_YMB_cFv();
+extern "C" void executeLakeDemo__9daE_YMB_cFv();
+extern "C" void executeStartDemo__9daE_YMB_cFv();
+extern "C" void checkStartBattleDemo__9daE_YMB_cFv();
+extern "C" void executeBattleDemo__9daE_YMB_cFv();
+extern "C" void action__9daE_YMB_cFv();
+extern "C" void mtx_set__9daE_YMB_cFv();
+extern "C" void getBellyBitePos__9daE_YMB_cFP4cXyz();
+extern "C" void getDownLockPoint__9daE_YMB_cFv();
+extern "C" void setAttentionPos__9daE_YMB_cFv();
+extern "C" void cc_set__9daE_YMB_cFv();
+extern "C" void execute__9daE_YMB_cFv();
+extern "C" void daE_YMB_Execute__FP9daE_YMB_c();
+extern "C" bool daE_YMB_IsDelete__FP9daE_YMB_c();
+extern "C" void _delete__9daE_YMB_cFv();
+extern "C" void daE_YMB_Delete__FP9daE_YMB_c();
+extern "C" void CreateHeap__9daE_YMB_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__9daE_YMB_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daE_YMB_Create__FP9daE_YMB_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__13daE_YMB_HIO_cFv();
+extern "C" void __sinit_d_a_e_ymb_cpp();
+extern "C" void setPos__11daObjDrop_cF4cXyz();
 SECTION_RODATA extern const u32 lit_3791;
 SECTION_RODATA extern const u32 lit_3792;
 SECTION_RODATA extern const u32 lit_3793;
@@ -349,8 +485,11 @@ SECTION_BSS extern u8 data_80822110[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -360,7 +499,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daE_YMB_HIO_cFv) {
+asm daE_YMB_HIO_c::daE_YMB_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__ct__13daE_YMB_HIO_cFv.s"
 }
@@ -371,7 +510,7 @@ ASM_FUNCTION(__ct__13daE_YMB_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__9daE_YMB_cFP8J3DJointP8J3DModel) {
+asm void daE_YMB_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/ctrlJoint__9daE_YMB_cFP8J3DJointP8J3DModel.s"
 }
@@ -382,7 +521,7 @@ ASM_FUNCTION(ctrlJoint__9daE_YMB_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__4cXyzFv.s"
 }
@@ -393,7 +532,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__9daE_YMB_cFP8J3DJointi) {
+asm void daE_YMB_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/JointCallBack__9daE_YMB_cFP8J3DJointi.s"
 }
@@ -404,7 +543,7 @@ ASM_FUNCTION(JointCallBack__9daE_YMB_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -415,7 +554,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daE_YMB_cFv) {
+asm void daE_YMB_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/draw__9daE_YMB_cFv.s"
 }
@@ -426,7 +565,7 @@ ASM_FUNCTION(draw__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_YMB_Draw__FP9daE_YMB_c) {
+asm void daE_YMB_Draw(daE_YMB_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_Draw__FP9daE_YMB_c.s"
 }
@@ -437,7 +576,7 @@ ASM_FUNCTION(daE_YMB_Draw__FP9daE_YMB_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__9daE_YMB_cFiUcff) {
+asm void daE_YMB_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setBck__9daE_YMB_cFiUcff.s"
 }
@@ -448,7 +587,7 @@ ASM_FUNCTION(setBck__9daE_YMB_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__9daE_YMB_cFi) {
+asm void daE_YMB_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/checkBck__9daE_YMB_cFi.s"
 }
@@ -459,7 +598,7 @@ ASM_FUNCTION(checkBck__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__9daE_YMB_cFii) {
+asm void daE_YMB_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setActionMode__9daE_YMB_cFii.s"
 }
@@ -470,7 +609,7 @@ ASM_FUNCTION(setActionMode__9daE_YMB_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLastDamage__9daE_YMB_cFv) {
+asm void daE_YMB_c::setLastDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setLastDamage__9daE_YMB_cFv.s"
 }
@@ -481,7 +620,7 @@ ASM_FUNCTION(setLastDamage__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__9daE_YMB_cFv) {
+asm void daE_YMB_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/damage_check__9daE_YMB_cFv.s"
 }
@@ -492,7 +631,7 @@ ASM_FUNCTION(damage_check__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCameraSwitch__9daE_YMB_cFv) {
+asm void daE_YMB_c::setCameraSwitch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setCameraSwitch__9daE_YMB_cFv.s"
 }
@@ -503,7 +642,7 @@ ASM_FUNCTION(setCameraSwitch__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterPos__9daE_YMB_cFv) {
+asm void daE_YMB_c::checkWaterPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/checkWaterPos__9daE_YMB_cFv.s"
 }
@@ -514,7 +653,7 @@ ASM_FUNCTION(checkWaterPos__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGroundPos__9daE_YMB_cFv) {
+asm void daE_YMB_c::checkGroundPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/checkGroundPos__9daE_YMB_cFv.s"
 }
@@ -525,7 +664,7 @@ ASM_FUNCTION(checkGroundPos__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlyWaitVoice__9daE_YMB_cFv) {
+asm void daE_YMB_c::setFlyWaitVoice() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setFlyWaitVoice__9daE_YMB_cFv.s"
 }
@@ -536,7 +675,7 @@ ASM_FUNCTION(setFlyWaitVoice__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDownWaitVoice__9daE_YMB_cFv) {
+asm void daE_YMB_c::setDownWaitVoice() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setDownWaitVoice__9daE_YMB_cFv.s"
 }
@@ -547,7 +686,7 @@ ASM_FUNCTION(setDownWaitVoice__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHitBoardSe__9daE_YMB_cFv) {
+asm void daE_YMB_c::setHitBoardSe() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setHitBoardSe__9daE_YMB_cFv.s"
 }
@@ -558,7 +697,7 @@ ASM_FUNCTION(setHitBoardSe__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setElecEffect1__9daE_YMB_cFv) {
+asm void daE_YMB_c::setElecEffect1() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setElecEffect1__9daE_YMB_cFv.s"
 }
@@ -569,7 +708,7 @@ ASM_FUNCTION(setElecEffect1__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setElecEffect2__9daE_YMB_cFv) {
+asm void daE_YMB_c::setElecEffect2() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setElecEffect2__9daE_YMB_cFv.s"
 }
@@ -580,7 +719,7 @@ ASM_FUNCTION(setElecEffect2__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterEffect1__9daE_YMB_cFv) {
+asm void daE_YMB_c::setWaterEffect1() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setWaterEffect1__9daE_YMB_cFv.s"
 }
@@ -591,7 +730,7 @@ ASM_FUNCTION(setWaterEffect1__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterEffect2__9daE_YMB_cFv) {
+asm void daE_YMB_c::setWaterEffect2() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setWaterEffect2__9daE_YMB_cFv.s"
 }
@@ -602,7 +741,7 @@ ASM_FUNCTION(setWaterEffect2__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBoilEffect__9daE_YMB_cFi) {
+asm void daE_YMB_c::setBoilEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setBoilEffect__9daE_YMB_cFi.s"
 }
@@ -613,7 +752,7 @@ ASM_FUNCTION(setBoilEffect__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDamageEffect__9daE_YMB_cFi) {
+asm void daE_YMB_c::setDamageEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setDamageEffect__9daE_YMB_cFi.s"
 }
@@ -624,7 +763,7 @@ ASM_FUNCTION(setDamageEffect__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDownHamonEffect__9daE_YMB_cFv) {
+asm void daE_YMB_c::setDownHamonEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setDownHamonEffect__9daE_YMB_cFv.s"
 }
@@ -635,7 +774,7 @@ ASM_FUNCTION(setDownHamonEffect__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFlyBlurEffect__9daE_YMB_cFv) {
+asm void daE_YMB_c::setFlyBlurEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setFlyBlurEffect__9daE_YMB_cFv.s"
 }
@@ -646,7 +785,7 @@ ASM_FUNCTION(setFlyBlurEffect__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRockDamageEffect__9daE_YMB_cFv) {
+asm void daE_YMB_c::setRockDamageEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setRockDamageEffect__9daE_YMB_cFv.s"
 }
@@ -657,7 +796,7 @@ ASM_FUNCTION(setRockDamageEffect__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDeathEffect__9daE_YMB_cFv) {
+asm void daE_YMB_c::setDeathEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setDeathEffect__9daE_YMB_cFv.s"
 }
@@ -668,7 +807,7 @@ ASM_FUNCTION(setDeathEffect__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_drop__FPvPv) {
+asm void search_drop(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/search_drop__FPvPv.s"
 }
@@ -679,7 +818,7 @@ ASM_FUNCTION(search_drop__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeWait__9daE_YMB_cFv.s"
 }
@@ -690,7 +829,7 @@ ASM_FUNCTION(executeWait__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBitePos__9daE_YMB_cFi) {
+asm void daE_YMB_c::setBitePos(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setBitePos__9daE_YMB_cFi.s"
 }
@@ -701,7 +840,7 @@ ASM_FUNCTION(setBitePos__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInclination__9daE_YMB_cFv) {
+asm void daE_YMB_c::setInclination() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setInclination__9daE_YMB_cFv.s"
 }
@@ -712,7 +851,7 @@ ASM_FUNCTION(setInclination__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBodyAngle__9daE_YMB_cFv) {
+asm void daE_YMB_c::setBodyAngle() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setBodyAngle__9daE_YMB_cFv.s"
 }
@@ -723,7 +862,7 @@ ASM_FUNCTION(setBodyAngle__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWolfLockIn__9daE_YMB_cFv) {
+asm void daE_YMB_c::checkWolfLockIn() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/checkWolfLockIn__9daE_YMB_cFv.s"
 }
@@ -734,7 +873,7 @@ ASM_FUNCTION(checkWolfLockIn__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFly__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeFly() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeFly__9daE_YMB_cFv.s"
 }
@@ -745,7 +884,7 @@ ASM_FUNCTION(executeFly__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFlyAttack__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeFlyAttack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeFlyAttack__9daE_YMB_cFv.s"
 }
@@ -756,7 +895,7 @@ ASM_FUNCTION(executeFlyAttack__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeRunAway__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeRunAway() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeRunAway__9daE_YMB_cFv.s"
 }
@@ -767,7 +906,7 @@ ASM_FUNCTION(executeRunAway__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeGuard__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeGuard() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeGuard__9daE_YMB_cFv.s"
 }
@@ -778,7 +917,7 @@ ASM_FUNCTION(executeGuard__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSwim__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeSwim() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeSwim__9daE_YMB_cFv.s"
 }
@@ -789,7 +928,7 @@ ASM_FUNCTION(executeSwim__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWaterJump__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeWaterJump() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeWaterJump__9daE_YMB_cFv.s"
 }
@@ -800,7 +939,7 @@ ASM_FUNCTION(executeWaterJump__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getNearDownPos__9daE_YMB_cFv) {
+asm void daE_YMB_c::getNearDownPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/getNearDownPos__9daE_YMB_cFv.s"
 }
@@ -811,7 +950,7 @@ ASM_FUNCTION(getNearDownPos__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeDamage__9daE_YMB_cFv.s"
 }
@@ -822,7 +961,7 @@ ASM_FUNCTION(executeDamage__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindInit__9daE_YMB_cFP4cXyz) {
+asm void daE_YMB_c::setMidnaBindInit(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setMidnaBindInit__9daE_YMB_cFP4cXyz.s"
 }
@@ -833,7 +972,7 @@ ASM_FUNCTION(setMidnaBindInit__9daE_YMB_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindLevel__9daE_YMB_cFi) {
+asm void daE_YMB_c::setMidnaBindLevel(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setMidnaBindLevel__9daE_YMB_cFi.s"
 }
@@ -844,7 +983,7 @@ ASM_FUNCTION(setMidnaBindLevel__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWolfLockEffect__9daE_YMB_cFv) {
+asm void daE_YMB_c::setWolfLockEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setWolfLockEffect__9daE_YMB_cFv.s"
 }
@@ -855,7 +994,7 @@ ASM_FUNCTION(setWolfLockEffect__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDownToWater__9daE_YMB_cFv) {
+asm void daE_YMB_c::initDownToWater() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/initDownToWater__9daE_YMB_cFv.s"
 }
@@ -866,7 +1005,7 @@ ASM_FUNCTION(initDownToWater__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcDownToWater__9daE_YMB_cFv) {
+asm void daE_YMB_c::calcDownToWater() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/calcDownToWater__9daE_YMB_cFv.s"
 }
@@ -877,7 +1016,7 @@ ASM_FUNCTION(calcDownToWater__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDown__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeDown() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeDown__9daE_YMB_cFv.s"
 }
@@ -888,7 +1027,7 @@ ASM_FUNCTION(executeDown__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCreateDrop__9daE_YMB_cFv) {
+asm void daE_YMB_c::setCreateDrop() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setCreateDrop__9daE_YMB_cFv.s"
 }
@@ -899,7 +1038,7 @@ ASM_FUNCTION(setCreateDrop__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDeath__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeDeath() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeDeath__9daE_YMB_cFv.s"
 }
@@ -910,7 +1049,7 @@ ASM_FUNCTION(executeDeath__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_skip__9daE_YMB_cFi) {
+asm void daE_YMB_c::demo_skip(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/demo_skip__9daE_YMB_cFi.s"
 }
@@ -921,7 +1060,7 @@ ASM_FUNCTION(demo_skip__9daE_YMB_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DemoSkipCallBack__9daE_YMB_cFPvi) {
+asm void daE_YMB_c::DemoSkipCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/DemoSkipCallBack__9daE_YMB_cFPvi.s"
 }
@@ -932,7 +1071,7 @@ ASM_FUNCTION(DemoSkipCallBack__9daE_YMB_cFPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcLakeDemoPlayerPos__9daE_YMB_cFv) {
+asm void daE_YMB_c::calcLakeDemoPlayerPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/calcLakeDemoPlayerPos__9daE_YMB_cFv.s"
 }
@@ -943,7 +1082,7 @@ ASM_FUNCTION(calcLakeDemoPlayerPos__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLakeDemo__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeLakeDemo() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeLakeDemo__9daE_YMB_cFv.s"
 }
@@ -954,7 +1093,7 @@ ASM_FUNCTION(executeLakeDemo__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeStartDemo__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeStartDemo() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeStartDemo__9daE_YMB_cFv.s"
 }
@@ -965,7 +1104,7 @@ ASM_FUNCTION(executeStartDemo__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkStartBattleDemo__9daE_YMB_cFv) {
+asm void daE_YMB_c::checkStartBattleDemo() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/checkStartBattleDemo__9daE_YMB_cFv.s"
 }
@@ -976,7 +1115,7 @@ ASM_FUNCTION(checkStartBattleDemo__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeBattleDemo__9daE_YMB_cFv) {
+asm void daE_YMB_c::executeBattleDemo() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/executeBattleDemo__9daE_YMB_cFv.s"
 }
@@ -987,7 +1126,7 @@ ASM_FUNCTION(executeBattleDemo__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__9daE_YMB_cFv) {
+asm void daE_YMB_c::action() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/action__9daE_YMB_cFv.s"
 }
@@ -998,7 +1137,7 @@ ASM_FUNCTION(action__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__9daE_YMB_cFv) {
+asm void daE_YMB_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/mtx_set__9daE_YMB_cFv.s"
 }
@@ -1009,7 +1148,7 @@ ASM_FUNCTION(mtx_set__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBellyBitePos__9daE_YMB_cFP4cXyz) {
+asm void daE_YMB_c::getBellyBitePos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/getBellyBitePos__9daE_YMB_cFP4cXyz.s"
 }
@@ -1020,7 +1159,7 @@ ASM_FUNCTION(getBellyBitePos__9daE_YMB_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDownLockPoint__9daE_YMB_cFv) {
+asm void daE_YMB_c::getDownLockPoint() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/getDownLockPoint__9daE_YMB_cFv.s"
 }
@@ -1031,7 +1170,7 @@ ASM_FUNCTION(getDownLockPoint__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttentionPos__9daE_YMB_cFv) {
+asm void daE_YMB_c::setAttentionPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setAttentionPos__9daE_YMB_cFv.s"
 }
@@ -1042,7 +1181,7 @@ ASM_FUNCTION(setAttentionPos__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__9daE_YMB_cFv) {
+asm void daE_YMB_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/cc_set__9daE_YMB_cFv.s"
 }
@@ -1053,7 +1192,7 @@ ASM_FUNCTION(cc_set__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daE_YMB_cFv) {
+asm void daE_YMB_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/execute__9daE_YMB_cFv.s"
 }
@@ -1064,7 +1203,7 @@ ASM_FUNCTION(execute__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_YMB_Execute__FP9daE_YMB_c) {
+asm void daE_YMB_Execute(daE_YMB_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_Execute__FP9daE_YMB_c.s"
 }
@@ -1072,21 +1211,16 @@ ASM_FUNCTION(daE_YMB_Execute__FP9daE_YMB_c) {
 
 
 /* 80820A38-80820A40 0008+00 .text      daE_YMB_IsDelete__FP9daE_YMB_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_YMB_IsDelete__FP9daE_YMB_c) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_IsDelete__FP9daE_YMB_c.s"
+bool daE_YMB_IsDelete(daE_YMB_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80820A40-80820AD0 0090+00 .text      _delete__9daE_YMB_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__9daE_YMB_cFv) {
+asm void daE_YMB_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/_delete__9daE_YMB_cFv.s"
 }
@@ -1097,7 +1231,7 @@ ASM_FUNCTION(_delete__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_YMB_Delete__FP9daE_YMB_c) {
+asm void daE_YMB_Delete(daE_YMB_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_Delete__FP9daE_YMB_c.s"
 }
@@ -1108,7 +1242,7 @@ ASM_FUNCTION(daE_YMB_Delete__FP9daE_YMB_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daE_YMB_cFv) {
+asm void daE_YMB_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/CreateHeap__9daE_YMB_cFv.s"
 }
@@ -1119,7 +1253,7 @@ ASM_FUNCTION(CreateHeap__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1130,7 +1264,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1141,7 +1275,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daE_YMB_cFv) {
+asm void daE_YMB_c::create() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/create__9daE_YMB_cFv.s"
 }
@@ -1152,7 +1286,7 @@ ASM_FUNCTION(create__9daE_YMB_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__8cM3dGSphFv.s"
 }
@@ -1163,7 +1297,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__8cM3dGAabFv.s"
 }
@@ -1174,7 +1308,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__8dCcD_SphFv.s"
 }
@@ -1185,7 +1319,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__ct__8dCcD_SphFv.s"
 }
@@ -1196,7 +1330,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__10dCcD_GSttsFv.s"
 }
@@ -1207,7 +1341,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_YMB_Create__FP9daE_YMB_c) {
+asm void daE_YMB_Create(daE_YMB_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_Create__FP9daE_YMB_c.s"
 }
@@ -1218,7 +1352,7 @@ ASM_FUNCTION(daE_YMB_Create__FP9daE_YMB_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__10cCcD_GSttsFv.s"
 }
@@ -1229,7 +1363,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daE_YMB_HIO_cFv) {
+asm daE_YMB_HIO_c::~daE_YMB_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__dt__13daE_YMB_HIO_cFv.s"
 }
@@ -1240,7 +1374,7 @@ ASM_FUNCTION(__dt__13daE_YMB_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_ymb_cpp) {
+extern "C" asm void __sinit_d_a_e_ymb_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/__sinit_d_a_e_ymb_cpp.s"
 }
@@ -1251,7 +1385,7 @@ ASM_FUNCTION(__sinit_d_a_e_ymb_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__11daObjDrop_cF4cXyz) {
+asm void daObjDrop_c::setPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/setPos__11daObjDrop_cF4cXyz.s"
 }

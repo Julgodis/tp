@@ -6,128 +6,183 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cM3dGCyl (cM3dGCyl) False/False
+// build cM3dGSph (cM3dGSph) False/False
+/* top-level dependencies (begin cM3dGSph) */
+/* top-level dependencies (end cM3dGSph) */
+struct cM3dGSph {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build cM3dGCylS (cM3dGCylS) False/False
+/* top-level dependencies (begin cM3dGCylS) */
+/* top-level dependencies (end cM3dGCylS) */
+struct cM3dGCylS {
+};
+
+/* top-level dependencies (begin cM3dGCyl) */
+// outer dependency: cM3dGSph
+// outer dependency: cXyz
+// outer dependency: cM3dGCylS
+/* top-level dependencies (end cM3dGCyl) */
+struct cM3dGCyl {
+	// cM3dGSph
+	// cXyz
+	// cM3dGCylS
+	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
+	/* 8026F114 */ void Set(cM3dGCylS const&);
+	/* 8026F180 */ void Set(cXyz const&, f32, f32);
+	/* 8026F1DC */ void SetC(cXyz const&);
+	/* 8026F1F8 */ void SetH(f32);
+	/* 8026F200 */ void SetR(f32);
+	/* 8026F208 */ void cross(cM3dGSph const*, cXyz*) const;
+	/* 8026F22C */ void cross(cM3dGCyl const*, cXyz*) const;
+	/* 8026F24C */ void calcMinMax(cXyz*, cXyz*);
+};
+
+// build cXyz (cXyz) True/True
+// build cM3dGCylS (cM3dGCylS) True/True
+// build cM3dGSph (cM3dGSph) True/True
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8cM3dGCylFPC4cXyzff();
-extern "C" extern void Set__8cM3dGCylFRC9cM3dGCylS();
-extern "C" extern void Set__8cM3dGCylFRC4cXyzff();
-extern "C" extern void SetC__8cM3dGCylFRC4cXyz();
-extern "C" extern void SetH__8cM3dGCylFf();
-extern "C" extern void SetR__8cM3dGCylFf();
-extern "C" extern void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
-extern "C" extern void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
-extern "C" extern void calcMinMax__8cM3dGCylFP4cXyzP4cXyz();
+
+extern "C" void __ct__8cM3dGCylFPC4cXyzff();
+extern "C" void Set__8cM3dGCylFRC9cM3dGCylS();
+extern "C" void Set__8cM3dGCylFRC4cXyzff();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
+extern "C" void calcMinMax__8cM3dGCylFP4cXyzP4cXyz();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
-extern "C" extern void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec();
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*);
+void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*);
+
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
+extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec();
 SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 
 // 
 // Declarations:
 // 
 
-/* 8026F0A8-8026F114 006C+00 .text      __ct__8cM3dGCylFPC4cXyzff                                    */
+/* 8026F0A8-8026F114 006C+00 rc=1 efc=1 .text      __ct__8cM3dGCylFPC4cXyzff                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8cM3dGCylFPC4cXyzff) {
+asm cM3dGCyl::cM3dGCyl(cXyz const* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/__ct__8cM3dGCylFPC4cXyzff.s"
 }
 #pragma pop
 
 
-/* 8026F114-8026F180 006C+00 .text      Set__8cM3dGCylFRC9cM3dGCylS                                  */
+/* 8026F114-8026F180 006C+00 rc=1 efc=1 .text      Set__8cM3dGCylFRC9cM3dGCylS                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGCylFRC9cM3dGCylS) {
+asm void cM3dGCyl::Set(cM3dGCylS const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/Set__8cM3dGCylFRC9cM3dGCylS.s"
 }
 #pragma pop
 
 
-/* 8026F180-8026F1DC 005C+00 .text      Set__8cM3dGCylFRC4cXyzff                                     */
+/* 8026F180-8026F1DC 005C+00 rc=2 efc=2 .text      Set__8cM3dGCylFRC4cXyzff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__8cM3dGCylFRC4cXyzff) {
+asm void cM3dGCyl::Set(cXyz const& field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/Set__8cM3dGCylFRC4cXyzff.s"
 }
 #pragma pop
 
 
-/* 8026F1DC-8026F1F8 001C+00 .text      SetC__8cM3dGCylFRC4cXyz                                      */
+/* 8026F1DC-8026F1F8 001C+00 rc=16 efc=13 .text      SetC__8cM3dGCylFRC4cXyz                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetC__8cM3dGCylFRC4cXyz) {
+asm void cM3dGCyl::SetC(cXyz const& field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/SetC__8cM3dGCylFRC4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F1F8-8026F200 0008+00 .text      SetH__8cM3dGCylFf                                            */
+/* 8026F1F8-8026F200 0008+00 rc=14 efc=11 .text      SetH__8cM3dGCylFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetH__8cM3dGCylFf) {
+asm void cM3dGCyl::SetH(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/SetH__8cM3dGCylFf.s"
 }
 #pragma pop
 
 
-/* 8026F200-8026F208 0008+00 .text      SetR__8cM3dGCylFf                                            */
+/* 8026F200-8026F208 0008+00 rc=9 efc=6 .text      SetR__8cM3dGCylFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetR__8cM3dGCylFf) {
+asm void cM3dGCyl::SetR(f32 field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/SetR__8cM3dGCylFf.s"
 }
 #pragma pop
 
 
-/* 8026F208-8026F22C 0024+00 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          */
+/* 8026F208-8026F22C 0024+00 rc=1 efc=1 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cross__8cM3dGCylCFPC8cM3dGSphP4cXyz) {
+asm void cM3dGCyl::cross(cM3dGSph const* field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/cross__8cM3dGCylCFPC8cM3dGSphP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F22C-8026F24C 0020+00 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          */
+/* 8026F22C-8026F24C 0020+00 rc=1 efc=1 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cross__8cM3dGCylCFPC8cM3dGCylP4cXyz) {
+asm void cM3dGCyl::cross(cM3dGCyl const* field_0, cXyz* field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/cross__8cM3dGCylCFPC8cM3dGCylP4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026F24C-8026F2A8 005C+00 .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           */
+/* 8026F24C-8026F2A8 005C+00 rc=2 efc=2 .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMinMax__8cM3dGCylFP4cXyzP4cXyz) {
+asm void cM3dGCyl::calcMinMax(cXyz* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_m3d_g_cyl/calcMinMax__8cM3dGCylFP4cXyzP4cXyz.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,31 +6,77 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daMirror_c;
+struct J3DModel;
+
+struct fopAc_ac_c {
+};
+
+struct dMirror_packet_c {
+	dMirror_packet_c();
+	void reset();
+	void calcMinMax();
+	void entryModel(J3DModel*);
+	void mirrorZdraw(f32*, f32*, f32, f32, f32, f32, f32, f32);
+	void mainDraw();
+	void draw();
+	~dMirror_packet_c();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct J3DModel {
+};
+
+struct daMirror_c {
+	daMirror_c();
+	void createHeap();
+	void setModelMtx();
+	void create();
+	void execute();
+	void entryModel(J3DModel*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daMirror_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__16dMirror_packet_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void reset__16dMirror_packet_cFv();
-extern "C" extern void calcMinMax__16dMirror_packet_cFv();
-extern "C" extern void entryModel__16dMirror_packet_cFP8J3DModel();
-extern "C" extern void mirrorZdraw__16dMirror_packet_cFPfPfffffff();
-extern "C" extern void modelDraw__16dMirror_packet_cFP8J3DModelPA4_f();
-extern "C" extern void mainDraw__16dMirror_packet_cFv();
-extern "C" extern void draw__16dMirror_packet_cFv();
-extern "C" extern void __ct__10daMirror_cFv();
-extern "C" extern void __dt__16dMirror_packet_cFv();
-extern "C" extern void createHeap__10daMirror_cFv();
-extern "C" extern void setModelMtx__10daMirror_cFv();
-extern "C" extern void daMirror_create__FP10daMirror_c();
-extern "C" extern void create__10daMirror_cFv();
-extern "C" extern void daMirror_Delete__FP10daMirror_c();
-extern "C" extern void daMirror_execute__FP10daMirror_c();
-extern "C" extern void execute__10daMirror_cFv();
-extern "C" extern void daMirror_draw__FP10daMirror_c();
-extern "C" extern void entryModel__10daMirror_cFP8J3DModel();
+void daMirror_c_createHeap(fopAc_ac_c*);
+extern "C" void modelDraw__16dMirror_packet_cFP8J3DModelPA4_f();
+void daMirror_create(daMirror_c*);
+void daMirror_Delete(daMirror_c*);
+void daMirror_execute(daMirror_c*);
+void daMirror_draw(daMirror_c*);
+
+extern "C" void daMirror_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__16dMirror_packet_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void reset__16dMirror_packet_cFv();
+extern "C" void calcMinMax__16dMirror_packet_cFv();
+extern "C" void entryModel__16dMirror_packet_cFP8J3DModel();
+extern "C" void mirrorZdraw__16dMirror_packet_cFPfPfffffff();
+extern "C" void modelDraw__16dMirror_packet_cFP8J3DModelPA4_f();
+extern "C" void mainDraw__16dMirror_packet_cFv();
+extern "C" void draw__16dMirror_packet_cFv();
+extern "C" void __ct__10daMirror_cFv();
+extern "C" void __dt__16dMirror_packet_cFv();
+extern "C" void createHeap__10daMirror_cFv();
+extern "C" void setModelMtx__10daMirror_cFv();
+extern "C" void daMirror_create__FP10daMirror_c();
+extern "C" void create__10daMirror_cFv();
+extern "C" void daMirror_Delete__FP10daMirror_c();
+extern "C" void daMirror_execute__FP10daMirror_c();
+extern "C" void execute__10daMirror_cFv();
+extern "C" void daMirror_draw__FP10daMirror_c();
+extern "C" void entryModel__10daMirror_cFP8J3DModel();
 SECTION_RODATA extern const u32 lit_3884;
 SECTION_RODATA extern const u8 data_80872590[8];
 SECTION_RODATA extern const u8 lit_3945[4];
@@ -65,7 +111,9 @@ SECTION_DATA extern void*const __vt__16dMirror_packet_c[5];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -75,7 +123,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMirror_c_createHeap__FP10fopAc_ac_c) {
+asm void daMirror_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -86,7 +134,7 @@ ASM_FUNCTION(daMirror_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dMirror_packet_cFv) {
+asm dMirror_packet_c::dMirror_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/__ct__16dMirror_packet_cFv.s"
 }
@@ -97,7 +145,7 @@ ASM_FUNCTION(__ct__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/__dt__4cXyzFv.s"
 }
@@ -105,21 +153,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80870C90-80870C94 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mirror/d_a_mirror/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80870C94-80870CA0 000C+00 .text      reset__16dMirror_packet_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__16dMirror_packet_cFv) {
+asm void dMirror_packet_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/reset__16dMirror_packet_cFv.s"
 }
@@ -130,7 +173,7 @@ ASM_FUNCTION(reset__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMinMax__16dMirror_packet_cFv) {
+asm void dMirror_packet_c::calcMinMax() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/calcMinMax__16dMirror_packet_cFv.s"
 }
@@ -141,7 +184,7 @@ ASM_FUNCTION(calcMinMax__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entryModel__16dMirror_packet_cFP8J3DModel) {
+asm void dMirror_packet_c::entryModel(J3DModel* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/entryModel__16dMirror_packet_cFP8J3DModel.s"
 }
@@ -152,7 +195,7 @@ ASM_FUNCTION(entryModel__16dMirror_packet_cFP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mirrorZdraw__16dMirror_packet_cFPfPfffffff) {
+asm void dMirror_packet_c::mirrorZdraw(f32* field_0, f32* field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/mirrorZdraw__16dMirror_packet_cFPfPfffffff.s"
 }
@@ -163,7 +206,7 @@ ASM_FUNCTION(mirrorZdraw__16dMirror_packet_cFPfPfffffff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modelDraw__16dMirror_packet_cFP8J3DModelPA4_f) {
+extern "C" asm void modelDraw__16dMirror_packet_cFP8J3DModelPA4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/modelDraw__16dMirror_packet_cFP8J3DModelPA4_f.s"
 }
@@ -174,7 +217,7 @@ ASM_FUNCTION(modelDraw__16dMirror_packet_cFP8J3DModelPA4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mainDraw__16dMirror_packet_cFv) {
+asm void dMirror_packet_c::mainDraw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/mainDraw__16dMirror_packet_cFv.s"
 }
@@ -185,7 +228,7 @@ ASM_FUNCTION(mainDraw__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dMirror_packet_cFv) {
+asm void dMirror_packet_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/draw__16dMirror_packet_cFv.s"
 }
@@ -196,7 +239,7 @@ ASM_FUNCTION(draw__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10daMirror_cFv) {
+asm daMirror_c::daMirror_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/__ct__10daMirror_cFv.s"
 }
@@ -207,7 +250,7 @@ ASM_FUNCTION(__ct__10daMirror_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dMirror_packet_cFv) {
+asm dMirror_packet_c::~dMirror_packet_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/__dt__16dMirror_packet_cFv.s"
 }
@@ -218,7 +261,7 @@ ASM_FUNCTION(__dt__16dMirror_packet_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__10daMirror_cFv) {
+asm void daMirror_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/createHeap__10daMirror_cFv.s"
 }
@@ -229,7 +272,7 @@ ASM_FUNCTION(createHeap__10daMirror_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__10daMirror_cFv) {
+asm void daMirror_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/setModelMtx__10daMirror_cFv.s"
 }
@@ -240,7 +283,7 @@ ASM_FUNCTION(setModelMtx__10daMirror_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMirror_create__FP10daMirror_c) {
+asm void daMirror_create(daMirror_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_create__FP10daMirror_c.s"
 }
@@ -251,7 +294,7 @@ ASM_FUNCTION(daMirror_create__FP10daMirror_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daMirror_cFv) {
+asm void daMirror_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/create__10daMirror_cFv.s"
 }
@@ -262,7 +305,7 @@ ASM_FUNCTION(create__10daMirror_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMirror_Delete__FP10daMirror_c) {
+asm void daMirror_Delete(daMirror_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_Delete__FP10daMirror_c.s"
 }
@@ -273,7 +316,7 @@ ASM_FUNCTION(daMirror_Delete__FP10daMirror_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMirror_execute__FP10daMirror_c) {
+asm void daMirror_execute(daMirror_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_execute__FP10daMirror_c.s"
 }
@@ -284,7 +327,7 @@ ASM_FUNCTION(daMirror_execute__FP10daMirror_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daMirror_cFv) {
+asm void daMirror_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/execute__10daMirror_cFv.s"
 }
@@ -295,7 +338,7 @@ ASM_FUNCTION(execute__10daMirror_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daMirror_draw__FP10daMirror_c) {
+asm void daMirror_draw(daMirror_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_draw__FP10daMirror_c.s"
 }
@@ -306,7 +349,7 @@ ASM_FUNCTION(daMirror_draw__FP10daMirror_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(entryModel__10daMirror_cFP8J3DModel) {
+asm void daMirror_c::entryModel(J3DModel* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/entryModel__10daMirror_cFP8J3DModel.s"
 }

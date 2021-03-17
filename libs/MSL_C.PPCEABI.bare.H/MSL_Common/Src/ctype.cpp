@@ -9,7 +9,9 @@
 // Forward References:
 // 
 
-extern "C" extern void tolower();
+extern "C" void tolower();
+
+extern "C" void tolower();
 SECTION_DATA extern u8 __ctype_map[256];
 SECTION_DATA extern u8 __lower_map[256];
 SECTION_DATA extern u8 __upper_map[256];
@@ -19,12 +21,13 @@ SECTION_DATA extern u8 __upper_map[256];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2C18-803D2D18 0100+00 .data      __ctype_map                                                  */
+/* 803D2C18-803D2D18 0100+00 rc=3 efc=3 .data      __ctype_map                                                  */
 u8 __ctype_map[256] = {
 	0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x02, 0x02, 0x02, 0x02, 0x01, 0x01,
 	0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
@@ -44,7 +47,7 @@ u8 __ctype_map[256] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D2D18-803D2E18 0100+00 .data      __lower_map                                                  */
+/* 803D2D18-803D2E18 0100+00 rc=4 efc=3 .data      __lower_map                                                  */
 u8 __lower_map[256] = {
 	0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F,
 	0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F,
@@ -64,11 +67,11 @@ u8 __lower_map[256] = {
 	0xF0, 0xF1, 0xF2, 0xF3, 0xF4, 0xF5, 0xF6, 0xF7, 0xF8, 0xF9, 0xFA, 0xFB, 0xFC, 0xFD, 0xFE, 0xFF,
 };
 
-/* 80365470-80365494 0024+00 .text      tolower                                                      */
+/* 80365470-80365494 0024+00 rc=4 efc=4 .text      tolower                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tolower) {
+extern "C" asm void tolower() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/ctype/tolower.s"
 }
@@ -76,7 +79,7 @@ ASM_FUNCTION(tolower) {
 
 
 /* ############################################################################################## */
-/* 803D2E18-803D2F18 0100+00 .data      __upper_map                                                  */
+/* 803D2E18-803D2F18 0100+00 rc=1 efc=1 .data      __upper_map                                                  */
 u8 __upper_map[256] = {
 	0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F,
 	0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F,

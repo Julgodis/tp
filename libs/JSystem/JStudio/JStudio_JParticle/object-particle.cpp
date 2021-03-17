@@ -6,32 +6,180 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio_JParticle (JStudio_JParticle) False/False
+// build JStudio_JParticle (JStudio_JParticle) True/False
+struct JStudio_JParticle;
+// build JStudio (JStudio) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// build JStudio (JStudio) True/False
+/* top-level dependencies (begin JStudio) */
+// outer dependency: _GXColor
+// outer dependency: Vec
+// outer dependency: JStudio::TAdaptor::TSetVariableValue_immediate
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build data (JStudio::data) False/False
+	/* dependencies (begin JStudio::data) */
+	/* dependencies (end JStudio::data) */
+	struct data {
+		// build TEOperationData (JStudio::data::TEOperationData) False/False
+		/* dependencies (begin JStudio::data::TEOperationData) */
+		/* dependencies (end JStudio::data::TEOperationData) */
+		struct TEOperationData {
+		};
+
+	};
+
+	// build TAdaptor (JStudio::TAdaptor) False/False
+	/* dependencies (begin JStudio::TAdaptor) */
+	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
+	/* dependencies (end JStudio::TAdaptor) */
+	struct TAdaptor {
+		// _GXColor
+		// Vec
+		// JStudio::TAdaptor::TSetVariableValue_immediate
+		// build TSetVariableValue_immediate (JStudio::TAdaptor::TSetVariableValue_immediate) False/False
+		/* dependencies (begin JStudio::TAdaptor::TSetVariableValue_immediate) */
+		/* dependencies (end JStudio::TAdaptor::TSetVariableValue_immediate) */
+		struct TSetVariableValue_immediate {
+		};
+
+		/* 8028601C */ void adaptor_do_begin();
+		/* 80286028 */ void adaptor_do_data(void const*, u32, void const*, u32);
+		/* 802861C0 */ void adaptor_setVariableValue_immediate(JStudio::TAdaptor::TSetVariableValue_immediate const*);
+		/* 80286274 */ void adaptor_getVariableValue_Vec(Vec*, u32 const*) const;
+		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
+	};
+
+	// build TAdaptor_particle (JStudio::TAdaptor_particle) False/False
+	/* dependencies (begin JStudio::TAdaptor_particle) */
+	/* dependencies (end JStudio::TAdaptor_particle) */
+	struct TAdaptor_particle {
+		/* 8028770C */ ~TAdaptor_particle();
+	};
+
+	// build TVariableValue (JStudio::TVariableValue) False/False
+	/* dependencies (begin JStudio::TVariableValue) */
+	/* dependencies (end JStudio::TVariableValue) */
+	struct TVariableValue {
+		/* 8028B568 */ TVariableValue();
+	};
+
+};
+
+// build JPABaseEmitter (JPABaseEmitter) False/False
+/* top-level dependencies (begin JPABaseEmitter) */
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+};
+
+/* top-level dependencies (begin JStudio_JParticle) */
+// outer dependency: JStudio_JParticle::TCreateObject
+// outer dependency: JStudio::data::TEOperationData
+// outer dependency: JPABaseEmitter
+/* top-level dependencies (end JStudio_JParticle) */
+struct JStudio_JParticle {
+	// build TAdaptor_particle (JStudio_JParticle::TAdaptor_particle) False/False
+	/* dependencies (begin JStudio_JParticle::TAdaptor_particle) */
+	// inner dependency: TCreateObject (JStudio_JParticle::TCreateObject) True False (for JStudio_JParticle::TAdaptor_particle)
+	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
+	/* dependencies (begin JStudio_JParticle::TCreateObject) */
+	/* dependencies (end JStudio_JParticle::TCreateObject) */
+	struct TCreateObject {
+	};
+
+	/* dependencies (end JStudio_JParticle::TAdaptor_particle) */
+	struct TAdaptor_particle {
+		// JStudio_JParticle::TCreateObject
+		// JStudio::data::TEOperationData
+		// build TJPACallback_emitter_ (JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) False/False
+		/* dependencies (begin JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) */
+		/* dependencies (end JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_) */
+		struct TJPACallback_emitter_ {
+			// JPABaseEmitter
+			/* 8028E700 */ ~TJPACallback_emitter_();
+			/* 8028ECC0 */ void execute(JPABaseEmitter*);
+			/* 8028F060 */ void executeAfter(JPABaseEmitter*);
+			/* 8028F098 */ void draw(JPABaseEmitter*);
+			/* 8028F0D0 */ void drawAfter(JPABaseEmitter*);
+		};
+
+		/* 8028E60C */ TAdaptor_particle(JStudio_JParticle::TCreateObject*);
+		/* 8028E760 */ ~TAdaptor_particle();
+		/* 8028E850 */ void adaptor_do_prepare();
+		/* 8028E97C */ void adaptor_do_end();
+		/* 8028E980 */ void adaptor_do_update(u32);
+		/* 8028EA68 */ void adaptor_do_PARTICLE(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EA7C */ void adaptor_do_BEGIN(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EAB0 */ void adaptor_do_BEGIN_FADE_IN(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EAF8 */ void adaptor_do_END(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EB24 */ void adaptor_do_END_FADE_OUT(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EB6C */ void adaptor_do_PARENT(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EBD8 */ void adaptor_do_PARENT_NODE(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EC58 */ void adaptor_do_PARENT_ENABLE(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EC74 */ void adaptor_do_PARENT_FUNCTION(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028EC88 */ void adaptor_do_REPEAT(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028ECA4 */ void adaptor_do_ON_EXIT_NOT_END(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028F108 */ void beginParticle_fadeIn_();
+		/* 8028F1C0 */ void endParticle_fadeOut_(u32);
+	};
+
+	// build TCreateObject (JStudio_JParticle::TCreateObject) True/True
+};
+
+// build JStudio (JStudio) True/True
+// build JPABaseEmitter (JPABaseEmitter) True/True
+// build JPAEmitterCallBack (JPAEmitterCallBack) False/False
+/* top-level dependencies (begin JPAEmitterCallBack) */
+/* top-level dependencies (end JPAEmitterCallBack) */
+struct JPAEmitterCallBack {
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
+// build Vec (Vec) True/True
+// build _GXColor (_GXColor) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
-extern "C" extern void __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv();
-extern "C" extern void __dt__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" extern void adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" extern void adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" extern void adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl();
-extern "C" extern void adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" extern void executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" extern void draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" extern void drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" extern void beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" extern void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl();
+
+extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
+extern "C" void __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv();
+extern "C" void __dt__Q217JStudio_JParticle17TAdaptor_particleFv();
+extern "C" void adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv();
+extern "C" void adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv();
+extern "C" void adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl();
+extern "C" void adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
+extern "C" void executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
+extern "C" void draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
+extern "C" void drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
+extern "C" void beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv();
+extern "C" void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl();
 SECTION_DATA extern void*const __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_[7];
 SECTION_DATA extern void*const __vt__Q217JStudio_JParticle17TAdaptor_particle[19];
 SECTION_BSS extern u8 data_80431540[144];
@@ -48,23 +196,33 @@ SECTION_SDATA2 extern f64 lit_1629;
 // External References:
 // 
 
-extern "C" extern void __dt__18JPAEmitterCallBackFv();
-extern "C" extern void JPAGetXYZRotateMtx__FsssPA4_f();
-extern "C" extern void func_80280808();
-extern "C" extern void adaptor_do_begin__Q27JStudio8TAdaptorFv();
-extern "C" extern void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
-extern "C" extern void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
-extern "C" extern void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
-extern "C" extern void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" extern void __dt__Q27JStudio17TAdaptor_particleFv();
-extern "C" extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" extern void __ct__Q27JStudio14TVariableValueFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void __construct_array();
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_80280808();
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+void operator delete(void*);
+extern "C" void PSMTXMultVec();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_80280808();
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
+extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void __dt__Q27JStudio17TAdaptor_particleFv();
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+extern "C" void __ct__Q27JStudio14TVariableValueFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12];
@@ -80,7 +238,7 @@ SECTION_SBSS extern u8 data_80451200[8];
 // 
 
 /* ############################################################################################## */
-/* 803C5AF0-803C5B0C 001C+00 .data      __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_ */
+/* 803C5AF0-803C5B0C 001C+00 rc=3 efc=0 .data      __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_ */
 void* const __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_[7] = {
 	NULL, /* RTTI */
 	NULL,
@@ -91,7 +249,7 @@ void* const __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter
 	(void*)drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
 };
 
-/* 803C5B0C-803C5B58 004C+00 .data      __vt__Q217JStudio_JParticle17TAdaptor_particle               */
+/* 803C5B0C-803C5B58 004C+00 rc=2 efc=0 .data      __vt__Q217JStudio_JParticle17TAdaptor_particle               */
 void* const __vt__Q217JStudio_JParticle17TAdaptor_particle[19] = {
 	NULL, /* RTTI */
 	NULL,
@@ -114,33 +272,33 @@ void* const __vt__Q217JStudio_JParticle17TAdaptor_particle[19] = {
 	(void*)adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
 };
 
-/* 8028E60C-8028E700 00F4+00 .text      __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject */
+/* 8028E60C-8028E700 00F4+00 rc=1 efc=1 .text      __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject) {
+asm JStudio_JParticle::TAdaptor_particle::TAdaptor_particle(JStudio_JParticle::TCreateObject* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028E60C.s"
 }
 #pragma pop
 
 
-/* 8028E700-8028E760 0060+00 .text      __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv */
+/* 8028E700-8028E760 0060+00 rc=1 efc=0 .text      __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv) {
+asm JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_::~TJPACallback_emitter_() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028E700.s"
 }
 #pragma pop
 
 
-/* 8028E760-8028E850 00F0+00 .text      __dt__Q217JStudio_JParticle17TAdaptor_particleFv             */
+/* 8028E760-8028E850 00F0+00 rc=1 efc=0 .text      __dt__Q217JStudio_JParticle17TAdaptor_particleFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q217JStudio_JParticle17TAdaptor_particleFv) {
+asm JStudio_JParticle::TAdaptor_particle::~TAdaptor_particle() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/__dt__Q217JStudio_JParticle17TAdaptor_particleFv.s"
 }
@@ -148,169 +306,164 @@ ASM_FUNCTION(__dt__Q217JStudio_JParticle17TAdaptor_particleFv) {
 
 
 /* ############################################################################################## */
-/* 80431540-804315D0 0090+00 .bss       aoData$1265                                                  */
+/* 80431540-804315D0 0090+00 rc=1 efc=0 .bss       aoData$1265                                                  */
 u8 data_80431540[144];
 
-/* 80455520-80455524 0004+00 .sdata2    @1361                                                        */
+/* 80455520-80455524 0004+00 rc=1 efc=0 .sdata2    @1361                                                        */
 u8 lit_1361[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455524-80455528 0004+00 .sdata2    @1362                                                        */
+/* 80455524-80455528 0004+00 rc=1 efc=0 .sdata2    @1362                                                        */
 f32 lit_1362 = 1.0f;
 
-/* 80455528-80455530 0004+04 .sdata2    @1363                                                        */
+/* 80455528-80455530 0004+04 rc=1 efc=0 .sdata2    @1363                                                        */
 f32 lit_1363 = 255.0f;
 /* padding 4 bytes */
 
-/* 8028E850-8028E97C 012C+00 .text      adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv */
+/* 8028E850-8028E97C 012C+00 rc=1 efc=0 .text      adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_prepare() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv.s"
 }
 #pragma pop
 
 
-/* 8028E97C-8028E980 0004+00 .text      adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv) {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv.s"
+/* 8028E97C-8028E980 0004+00 rc=1 efc=0 .text      adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv   */
+void JStudio_JParticle::TAdaptor_particle::adaptor_do_end() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8028E980-8028EA68 00E8+00 .text      adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl */
+/* 8028E980-8028EA68 00E8+00 rc=1 efc=0 .text      adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_update(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl.s"
 }
 #pragma pop
 
 
-/* 8028EA68-8028EA7C 0014+00 .text      adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EA68-8028EA7C 0014+00 rc=1 efc=0 .text      adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_PARTICLE(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EA68.s"
 }
 #pragma pop
 
 
-/* 8028EA7C-8028EAB0 0034+00 .text      adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EA7C-8028EAB0 0034+00 rc=1 efc=0 .text      adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_BEGIN(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EA7C.s"
 }
 #pragma pop
 
 
-/* 8028EAB0-8028EAF8 0048+00 .text      adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EAB0-8028EAF8 0048+00 rc=1 efc=0 .text      adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_BEGIN_FADE_IN(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EAB0.s"
 }
 #pragma pop
 
 
-/* 8028EAF8-8028EB24 002C+00 .text      adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EAF8-8028EB24 002C+00 rc=1 efc=0 .text      adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_END(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EAF8.s"
 }
 #pragma pop
 
 
-/* 8028EB24-8028EB6C 0048+00 .text      adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EB24-8028EB6C 0048+00 rc=1 efc=0 .text      adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_END_FADE_OUT(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EB24.s"
 }
 #pragma pop
 
 
-/* 8028EB6C-8028EBD8 006C+00 .text      adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EB6C-8028EBD8 006C+00 rc=1 efc=0 .text      adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_PARENT(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EB6C.s"
 }
 #pragma pop
 
 
-/* 8028EBD8-8028EC58 0080+00 .text      adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EBD8-8028EC58 0080+00 rc=1 efc=0 .text      adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_PARENT_NODE(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EBD8.s"
 }
 #pragma pop
 
 
-/* 8028EC58-8028EC74 001C+00 .text      adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EC58-8028EC74 001C+00 rc=1 efc=0 .text      adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_PARENT_ENABLE(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC58.s"
 }
 #pragma pop
 
 
-/* 8028EC74-8028EC88 0014+00 .text      adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EC74-8028EC88 0014+00 rc=1 efc=0 .text      adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_PARENT_FUNCTION(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC74.s"
 }
 #pragma pop
 
 
-/* 8028EC88-8028ECA4 001C+00 .text      adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028EC88-8028ECA4 001C+00 rc=1 efc=0 .text      adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_REPEAT(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028EC88.s"
 }
 #pragma pop
 
 
-/* 8028ECA4-8028ECC0 001C+00 .text      adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028ECA4-8028ECC0 001C+00 rc=1 efc=0 .text      adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_ON_EXIT_NOT_END(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028ECA4.s"
 }
@@ -318,85 +471,84 @@ ASM_FUNCTION(adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particl
 
 
 /* ############################################################################################## */
-/* 80455530-80455538 0008+00 .sdata2    @1622                                                        */
+/* 80455530-80455538 0008+00 rc=1 efc=0 .sdata2    @1622                                                        */
 f64 lit_1622 = 65536.0;
 
-/* 80455538-80455540 0008+00 .sdata2    @1623                                                        */
+/* 80455538-80455540 0008+00 rc=1 efc=0 .sdata2    @1623                                                        */
 f64 lit_1623 = 360.0;
 
-/* 80455540-80455548 0008+00 .sdata2    @1624                                                        */
+/* 80455540-80455548 0008+00 rc=1 efc=0 .sdata2    @1624                                                        */
 f64 lit_1624 = 1.0;
 
-/* 80455548-80455550 0008+00 .sdata2    @1625                                                        */
+/* 80455548-80455550 0008+00 rc=1 efc=0 .sdata2    @1625                                                        */
 f64 lit_1625 = 255.0;
 
-/* 80455550-80455558 0008+00 .sdata2    @1629                                                        */
+/* 80455550-80455558 0008+00 rc=2 efc=0 .sdata2    @1629                                                        */
 f64 lit_1629 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8028ECC0-8028F060 03A0+00 .text      execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
+/* 8028ECC0-8028F060 03A0+00 rc=1 efc=0 .text      execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
+asm void JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_::execute(JPABaseEmitter* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028ECC0.s"
 }
 #pragma pop
 
 
-/* 8028F060-8028F098 0038+00 .text      executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
+/* 8028F060-8028F098 0038+00 rc=1 efc=0 .text      executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
+asm void JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_::executeAfter(JPABaseEmitter* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F060.s"
 }
 #pragma pop
 
 
-/* 8028F098-8028F0D0 0038+00 .text      draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
+/* 8028F098-8028F0D0 0038+00 rc=1 efc=0 .text      draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
+asm void JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_::draw(JPABaseEmitter* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F098.s"
 }
 #pragma pop
 
 
-/* 8028F0D0-8028F108 0038+00 .text      drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
+/* 8028F0D0-8028F108 0038+00 rc=1 efc=0 .text      drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter) {
+asm void JStudio_JParticle::TAdaptor_particle::TJPACallback_emitter_::drawAfter(JPABaseEmitter* field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F0D0.s"
 }
 #pragma pop
 
 
-/* 8028F108-8028F1C0 00B8+00 .text      beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv */
+/* 8028F108-8028F1C0 00B8+00 rc=3 efc=0 .text      beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv) {
+asm void JStudio_JParticle::TAdaptor_particle::beginParticle_fadeIn_() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F108.s"
 }
 #pragma pop
 
 
-/* 8028F1C0-8028F2E8 0128+00 .text      endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl */
+/* 8028F1C0-8028F2E8 0128+00 rc=1 efc=0 .text      endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl) {
+asm void JStudio_JParticle::TAdaptor_particle::endParticle_fadeOut_(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/func_8028F1C0.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

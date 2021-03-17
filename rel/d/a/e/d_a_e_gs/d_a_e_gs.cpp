@@ -6,21 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct e_gs_class;
+
+struct daE_GS_HIO_c {
+	daE_GS_HIO_c();
+	~daE_GS_HIO_c();
+};
+
+struct e_gs_class {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_GS_HIO_cFv();
-extern "C" extern void anm_init__FP10e_gs_classifUcf();
-extern "C" extern void daE_GS_Draw__FP10e_gs_class();
-extern "C" extern void e_gs_wait__FP10e_gs_class();
-extern "C" extern void action__FP10e_gs_class();
-extern "C" extern void daE_GS_Execute__FP10e_gs_class();
-extern "C" extern void daE_GS_IsDelete__FP10e_gs_class();
-extern "C" extern void daE_GS_Delete__FP10e_gs_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_GS_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daE_GS_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_gs_cpp();
+void anm_init(e_gs_class*, s32, f32, u8, f32);
+void daE_GS_Draw(e_gs_class*);
+void e_gs_wait(e_gs_class*);
+void action(e_gs_class*);
+void daE_GS_Execute(e_gs_class*);
+bool daE_GS_IsDelete(e_gs_class*);
+void daE_GS_Delete(e_gs_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_GS_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_gs_cpp();
+
+extern "C" void __ct__12daE_GS_HIO_cFv();
+extern "C" void anm_init__FP10e_gs_classifUcf();
+extern "C" void daE_GS_Draw__FP10e_gs_class();
+extern "C" void e_gs_wait__FP10e_gs_class();
+extern "C" void action__FP10e_gs_class();
+extern "C" void daE_GS_Execute__FP10e_gs_class();
+extern "C" bool daE_GS_IsDelete__FP10e_gs_class();
+extern "C" void daE_GS_Delete__FP10e_gs_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_GS_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daE_GS_HIO_cFv();
+extern "C" void __sinit_d_a_e_gs_cpp();
 SECTION_RODATA extern const u32 lit_3646;
 SECTION_RODATA extern const u32 lit_3647;
 SECTION_RODATA extern const u32 lit_3648;
@@ -47,8 +76,11 @@ SECTION_BSS extern u8 l_HIO[28];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -58,7 +90,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_GS_HIO_cFv) {
+asm daE_GS_HIO_c::daE_GS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/__ct__12daE_GS_HIO_cFv.s"
 }
@@ -69,7 +101,7 @@ ASM_FUNCTION(__ct__12daE_GS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10e_gs_classifUcf) {
+asm void anm_init(e_gs_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/anm_init__FP10e_gs_classifUcf.s"
 }
@@ -80,7 +112,7 @@ ASM_FUNCTION(anm_init__FP10e_gs_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_GS_Draw__FP10e_gs_class) {
+asm void daE_GS_Draw(e_gs_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Draw__FP10e_gs_class.s"
 }
@@ -91,7 +123,7 @@ ASM_FUNCTION(daE_GS_Draw__FP10e_gs_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(e_gs_wait__FP10e_gs_class) {
+asm void e_gs_wait(e_gs_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/e_gs_wait__FP10e_gs_class.s"
 }
@@ -102,7 +134,7 @@ ASM_FUNCTION(e_gs_wait__FP10e_gs_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10e_gs_class) {
+asm void action(e_gs_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/action__FP10e_gs_class.s"
 }
@@ -113,7 +145,7 @@ ASM_FUNCTION(action__FP10e_gs_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_GS_Execute__FP10e_gs_class) {
+asm void daE_GS_Execute(e_gs_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Execute__FP10e_gs_class.s"
 }
@@ -121,21 +153,16 @@ ASM_FUNCTION(daE_GS_Execute__FP10e_gs_class) {
 
 
 /* 806DFA48-806DFA50 0008+00 .text      daE_GS_IsDelete__FP10e_gs_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_GS_IsDelete__FP10e_gs_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_IsDelete__FP10e_gs_class.s"
+bool daE_GS_IsDelete(e_gs_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806DFA50-806DFAB8 0068+00 .text      daE_GS_Delete__FP10e_gs_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_GS_Delete__FP10e_gs_class) {
+asm void daE_GS_Delete(e_gs_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Delete__FP10e_gs_class.s"
 }
@@ -146,7 +173,7 @@ ASM_FUNCTION(daE_GS_Delete__FP10e_gs_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -157,7 +184,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_GS_Create__FP10fopAc_ac_c) {
+asm void daE_GS_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Create__FP10fopAc_ac_c.s"
 }
@@ -168,7 +195,7 @@ ASM_FUNCTION(daE_GS_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_GS_HIO_cFv) {
+asm daE_GS_HIO_c::~daE_GS_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/__dt__12daE_GS_HIO_cFv.s"
 }
@@ -179,7 +206,7 @@ ASM_FUNCTION(__dt__12daE_GS_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_gs_cpp) {
+extern "C" asm void __sinit_d_a_e_gs_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/__sinit_d_a_e_gs_cpp.s"
 }

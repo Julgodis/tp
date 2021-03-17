@@ -6,98 +6,217 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daDoor20_c;
+struct cXyz;
+
+struct daDoor20_c {
+	void getStopBmdName();
+	void getStopModelData();
+	void getAlwaysArcName();
+	void getArcName();
+	void getBmdName();
+	void getBtk();
+	void getDzbName();
+	void getModelData();
+	void getSize2X();
+	void CreateHeap();
+	void setEventPrm();
+	void checkOpenMsgDoor(s32*);
+	void adjustmentAngle();
+	void adjustmentProc();
+	void setAngle();
+	void openInit_0();
+	void openInit_1();
+	void openInit(s32);
+	void openProc(s32);
+	void openEnd_0();
+	void openEnd_1();
+	void openEnd(s32);
+	void closeInit_0();
+	void closeInit_1();
+	void closeInit(s32);
+	void closeProc(s32);
+	void closeEnd_0();
+	void closeEnd_1();
+	void closeEnd(s32);
+	void openInit2();
+	void closeEnd2();
+	void calcMtx_2();
+	void calcMtx();
+	void CreateInit();
+	void setKey();
+	void create();
+	void demoProc();
+	void orderStopEvent();
+	void actionWait();
+	void actionStopClose();
+	void actionDemo();
+	void actionInit();
+	void execute();
+	void draw();
+	void setDoorAngleSpec();
+	void _delete();
+	void createKey();
+	void deleteKey();
+	void adjoinPlayer();
+	void frontCheckOld();
+	void frontCheck();
+	void drawCheck(s32);
+	void checkExecute();
+	void startDemoProc();
+	void makeEventId();
+	void initProc();
+	void initOpenDemo(s32);
+	void checkArea(f32, f32, f32);
+	void openInitCom(s32);
+	void closeEndCom();
+	void getRestartPos(cXyz*);
+	void getDemoAction();
+	void setGoal();
+	void chkMakeStop();
+	void chkStopF();
+	void chkStopB();
+	void setStopDemo();
+	void chkStopClose();
+	void setStop();
+	void chkStopOpen();
+	void chkMakeKey();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cXyz {
+};
+
+struct dDoor_stop_c {
+	void calcMtx(daDoor20_c*);
+	void closeInit(daDoor20_c*);
+	void closeProc(daDoor20_c*);
+	void openInit(daDoor20_c*);
+	void openProc(daDoor20_c*);
+	void create(daDoor20_c*);
+	void draw(daDoor20_c*);
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getStopBmdName__10daDoor20_cFv();
-extern "C" extern void getStopModelData__10daDoor20_cFv();
-extern "C" extern void getAlwaysArcName__10daDoor20_cFv();
-extern "C" extern void getArcName__10daDoor20_cFv();
-extern "C" extern void getBmdName__10daDoor20_cFv();
-extern "C" extern void getBtk__10daDoor20_cFv();
-extern "C" extern void getDzbName__10daDoor20_cFv();
-extern "C" extern void getModelData__10daDoor20_cFv();
-extern "C" extern void getSize2X__10daDoor20_cFv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daDoor20_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEventPrm__10daDoor20_cFv();
-extern "C" extern void checkOpenMsgDoor__10daDoor20_cFPi();
-extern "C" extern void adjustmentAngle__10daDoor20_cFv();
-extern "C" extern void adjustmentProc__10daDoor20_cFv();
-extern "C" extern void setAngle__10daDoor20_cFv();
-extern "C" extern void openInit_0__10daDoor20_cFv();
-extern "C" extern void openInit_1__10daDoor20_cFv();
-extern "C" extern void openInit__10daDoor20_cFi();
-extern "C" extern void openProc__10daDoor20_cFi();
-extern "C" extern void openEnd_0__10daDoor20_cFv();
-extern "C" extern void openEnd_1__10daDoor20_cFv();
-extern "C" extern void openEnd__10daDoor20_cFi();
-extern "C" extern void closeInit_0__10daDoor20_cFv();
-extern "C" extern void closeInit_1__10daDoor20_cFv();
-extern "C" extern void closeInit__10daDoor20_cFi();
-extern "C" extern void closeProc__10daDoor20_cFi();
-extern "C" extern void closeEnd_0__10daDoor20_cFv();
-extern "C" extern void closeEnd_1__10daDoor20_cFv();
-extern "C" extern void closeEnd__10daDoor20_cFi();
-extern "C" extern void openInit2__10daDoor20_cFv();
-extern "C" extern void closeEnd2__10daDoor20_cFv();
-extern "C" extern void calcMtx_2__10daDoor20_cFv();
-extern "C" extern void calcMtx__10daDoor20_cFv();
-extern "C" extern void CreateInit__10daDoor20_cFv();
-extern "C" extern void setKey__10daDoor20_cFv();
-extern "C" extern void create__10daDoor20_cFv();
-extern "C" extern void demoProc__10daDoor20_cFv();
-extern "C" extern void orderStopEvent__10daDoor20_cFv();
-extern "C" extern void actionWait__10daDoor20_cFv();
-extern "C" extern void actionStopClose__10daDoor20_cFv();
-extern "C" extern void actionDemo__10daDoor20_cFv();
-extern "C" extern void actionInit__10daDoor20_cFv();
-extern "C" extern void execute__10daDoor20_cFv();
-extern "C" extern void draw__10daDoor20_cFv();
-extern "C" extern void setDoorAngleSpec__10daDoor20_cFv();
-extern "C" extern void _delete__10daDoor20_cFv();
-extern "C" extern void createKey__10daDoor20_cFv();
-extern "C" extern void deleteKey__10daDoor20_cFv();
-extern "C" extern void adjoinPlayer__10daDoor20_cFv();
-extern "C" extern void frontCheckOld__10daDoor20_cFv();
-extern "C" extern void frontCheck__10daDoor20_cFv();
-extern "C" extern void drawCheck__10daDoor20_cFi();
-extern "C" extern void checkExecute__10daDoor20_cFv();
-extern "C" extern void startDemoProc__10daDoor20_cFv();
-extern "C" extern void makeEventId__10daDoor20_cFv();
-extern "C" extern void initProc__10daDoor20_cFv();
-extern "C" extern void initOpenDemo__10daDoor20_cFi();
-extern "C" extern void checkArea__10daDoor20_cFfff();
-extern "C" extern void openInitCom__10daDoor20_cFi();
-extern "C" extern void closeEndCom__10daDoor20_cFv();
-extern "C" extern void getRestartPos__10daDoor20_cFP4cXyz();
-extern "C" extern void getDemoAction__10daDoor20_cFv();
-extern "C" extern void setGoal__10daDoor20_cFv();
-extern "C" extern void chkMakeStop__10daDoor20_cFv();
-extern "C" extern void chkStopF__10daDoor20_cFv();
-extern "C" extern void chkStopB__10daDoor20_cFv();
-extern "C" extern void setStopDemo__10daDoor20_cFv();
-extern "C" extern void chkStopClose__10daDoor20_cFv();
-extern "C" extern void setStop__10daDoor20_cFv();
-extern "C" extern void chkStopOpen__10daDoor20_cFv();
-extern "C" extern void chkMakeKey__10daDoor20_cFv();
-extern "C" extern void calcMtx__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void closeInit__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void closeProc__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void openInit__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void openProc__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void create__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void draw__12dDoor_stop_cFP10daDoor20_c();
-extern "C" extern void daDoor20_Draw__FP10daDoor20_c();
-extern "C" extern void daDoor20_Execute__FP10daDoor20_c();
-extern "C" extern void daDoor20_Delete__FP10daDoor20_c();
-extern "C" extern void daDoor20_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void func_804667EC();
-extern "C" extern void func_80466808();
-extern "C" extern void func_80466810();
+void CheckCreateHeap(fopAc_ac_c*);
+void daDoor20_Draw(daDoor20_c*);
+void daDoor20_Execute(daDoor20_c*);
+void daDoor20_Delete(daDoor20_c*);
+void daDoor20_Create(fopAc_ac_c*);
+extern "C" void func_804667EC();
+extern "C" void func_80466808();
+extern "C" void func_80466810();
+
+extern "C" void getStopBmdName__10daDoor20_cFv();
+extern "C" void getStopModelData__10daDoor20_cFv();
+extern "C" void getAlwaysArcName__10daDoor20_cFv();
+extern "C" void getArcName__10daDoor20_cFv();
+extern "C" void getBmdName__10daDoor20_cFv();
+extern "C" void getBtk__10daDoor20_cFv();
+extern "C" void getDzbName__10daDoor20_cFv();
+extern "C" void getModelData__10daDoor20_cFv();
+extern "C" void getSize2X__10daDoor20_cFv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daDoor20_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEventPrm__10daDoor20_cFv();
+extern "C" void checkOpenMsgDoor__10daDoor20_cFPi();
+extern "C" void adjustmentAngle__10daDoor20_cFv();
+extern "C" void adjustmentProc__10daDoor20_cFv();
+extern "C" void setAngle__10daDoor20_cFv();
+extern "C" void openInit_0__10daDoor20_cFv();
+extern "C" void openInit_1__10daDoor20_cFv();
+extern "C" void openInit__10daDoor20_cFi();
+extern "C" void openProc__10daDoor20_cFi();
+extern "C" void openEnd_0__10daDoor20_cFv();
+extern "C" void openEnd_1__10daDoor20_cFv();
+extern "C" void openEnd__10daDoor20_cFi();
+extern "C" void closeInit_0__10daDoor20_cFv();
+extern "C" void closeInit_1__10daDoor20_cFv();
+extern "C" void closeInit__10daDoor20_cFi();
+extern "C" void closeProc__10daDoor20_cFi();
+extern "C" void closeEnd_0__10daDoor20_cFv();
+extern "C" void closeEnd_1__10daDoor20_cFv();
+extern "C" void closeEnd__10daDoor20_cFi();
+extern "C" void openInit2__10daDoor20_cFv();
+extern "C" void closeEnd2__10daDoor20_cFv();
+extern "C" void calcMtx_2__10daDoor20_cFv();
+extern "C" void calcMtx__10daDoor20_cFv();
+extern "C" void CreateInit__10daDoor20_cFv();
+extern "C" void setKey__10daDoor20_cFv();
+extern "C" void create__10daDoor20_cFv();
+extern "C" void demoProc__10daDoor20_cFv();
+extern "C" void orderStopEvent__10daDoor20_cFv();
+extern "C" void actionWait__10daDoor20_cFv();
+extern "C" void actionStopClose__10daDoor20_cFv();
+extern "C" void actionDemo__10daDoor20_cFv();
+extern "C" void actionInit__10daDoor20_cFv();
+extern "C" void execute__10daDoor20_cFv();
+extern "C" void draw__10daDoor20_cFv();
+extern "C" void setDoorAngleSpec__10daDoor20_cFv();
+extern "C" void _delete__10daDoor20_cFv();
+extern "C" void createKey__10daDoor20_cFv();
+extern "C" void deleteKey__10daDoor20_cFv();
+extern "C" void adjoinPlayer__10daDoor20_cFv();
+extern "C" void frontCheckOld__10daDoor20_cFv();
+extern "C" void frontCheck__10daDoor20_cFv();
+extern "C" void drawCheck__10daDoor20_cFi();
+extern "C" void checkExecute__10daDoor20_cFv();
+extern "C" void startDemoProc__10daDoor20_cFv();
+extern "C" void makeEventId__10daDoor20_cFv();
+extern "C" void initProc__10daDoor20_cFv();
+extern "C" void initOpenDemo__10daDoor20_cFi();
+extern "C" void checkArea__10daDoor20_cFfff();
+extern "C" void openInitCom__10daDoor20_cFi();
+extern "C" void closeEndCom__10daDoor20_cFv();
+extern "C" void getRestartPos__10daDoor20_cFP4cXyz();
+extern "C" void getDemoAction__10daDoor20_cFv();
+extern "C" void setGoal__10daDoor20_cFv();
+extern "C" void chkMakeStop__10daDoor20_cFv();
+extern "C" void chkStopF__10daDoor20_cFv();
+extern "C" void chkStopB__10daDoor20_cFv();
+extern "C" void setStopDemo__10daDoor20_cFv();
+extern "C" void chkStopClose__10daDoor20_cFv();
+extern "C" void setStop__10daDoor20_cFv();
+extern "C" void chkStopOpen__10daDoor20_cFv();
+extern "C" void chkMakeKey__10daDoor20_cFv();
+extern "C" void calcMtx__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void closeInit__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void closeProc__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void openInit__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void openProc__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void create__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void draw__12dDoor_stop_cFP10daDoor20_c();
+extern "C" void daDoor20_Draw__FP10daDoor20_c();
+extern "C" void daDoor20_Execute__FP10daDoor20_c();
+extern "C" void daDoor20_Delete__FP10daDoor20_c();
+extern "C" void daDoor20_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void func_804667EC();
+extern "C" void func_80466808();
+extern "C" void func_80466810();
 SECTION_RODATA extern const u32 lit_4018;
 SECTION_RODATA extern const u32 lit_4124;
 SECTION_RODATA extern const u32 lit_4125;
@@ -179,7 +298,9 @@ SECTION_BSS extern u8 data_80467340[32];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -189,7 +310,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStopBmdName__10daDoor20_cFv) {
+asm void daDoor20_c::getStopBmdName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getStopBmdName__10daDoor20_cFv.s"
 }
@@ -200,7 +321,7 @@ ASM_FUNCTION(getStopBmdName__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStopModelData__10daDoor20_cFv) {
+asm void daDoor20_c::getStopModelData() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getStopModelData__10daDoor20_cFv.s"
 }
@@ -211,7 +332,7 @@ ASM_FUNCTION(getStopModelData__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAlwaysArcName__10daDoor20_cFv) {
+asm void daDoor20_c::getAlwaysArcName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getAlwaysArcName__10daDoor20_cFv.s"
 }
@@ -222,7 +343,7 @@ ASM_FUNCTION(getAlwaysArcName__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcName__10daDoor20_cFv) {
+asm void daDoor20_c::getArcName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getArcName__10daDoor20_cFv.s"
 }
@@ -233,7 +354,7 @@ ASM_FUNCTION(getArcName__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBmdName__10daDoor20_cFv) {
+asm void daDoor20_c::getBmdName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getBmdName__10daDoor20_cFv.s"
 }
@@ -244,7 +365,7 @@ ASM_FUNCTION(getBmdName__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBtk__10daDoor20_cFv) {
+asm void daDoor20_c::getBtk() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getBtk__10daDoor20_cFv.s"
 }
@@ -255,7 +376,7 @@ ASM_FUNCTION(getBtk__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDzbName__10daDoor20_cFv) {
+asm void daDoor20_c::getDzbName() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getDzbName__10daDoor20_cFv.s"
 }
@@ -266,7 +387,7 @@ ASM_FUNCTION(getDzbName__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getModelData__10daDoor20_cFv) {
+asm void daDoor20_c::getModelData() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getModelData__10daDoor20_cFv.s"
 }
@@ -277,7 +398,7 @@ ASM_FUNCTION(getModelData__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSize2X__10daDoor20_cFv) {
+asm void daDoor20_c::getSize2X() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getSize2X__10daDoor20_cFv.s"
 }
@@ -288,7 +409,7 @@ ASM_FUNCTION(getSize2X__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -299,7 +420,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daDoor20_cFv) {
+asm void daDoor20_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/CreateHeap__10daDoor20_cFv.s"
 }
@@ -310,7 +431,7 @@ ASM_FUNCTION(CreateHeap__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/__dt__12J3DFrameCtrlFv.s"
 }
@@ -321,7 +442,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEventPrm__10daDoor20_cFv) {
+asm void daDoor20_c::setEventPrm() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setEventPrm__10daDoor20_cFv.s"
 }
@@ -332,7 +453,7 @@ ASM_FUNCTION(setEventPrm__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkOpenMsgDoor__10daDoor20_cFPi) {
+asm void daDoor20_c::checkOpenMsgDoor(s32* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/checkOpenMsgDoor__10daDoor20_cFPi.s"
 }
@@ -343,7 +464,7 @@ ASM_FUNCTION(checkOpenMsgDoor__10daDoor20_cFPi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjustmentAngle__10daDoor20_cFv) {
+asm void daDoor20_c::adjustmentAngle() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/adjustmentAngle__10daDoor20_cFv.s"
 }
@@ -354,7 +475,7 @@ ASM_FUNCTION(adjustmentAngle__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjustmentProc__10daDoor20_cFv) {
+asm void daDoor20_c::adjustmentProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/adjustmentProc__10daDoor20_cFv.s"
 }
@@ -365,7 +486,7 @@ ASM_FUNCTION(adjustmentProc__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngle__10daDoor20_cFv) {
+asm void daDoor20_c::setAngle() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setAngle__10daDoor20_cFv.s"
 }
@@ -376,7 +497,7 @@ ASM_FUNCTION(setAngle__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit_0__10daDoor20_cFv) {
+asm void daDoor20_c::openInit_0() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInit_0__10daDoor20_cFv.s"
 }
@@ -387,7 +508,7 @@ ASM_FUNCTION(openInit_0__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit_1__10daDoor20_cFv) {
+asm void daDoor20_c::openInit_1() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInit_1__10daDoor20_cFv.s"
 }
@@ -398,7 +519,7 @@ ASM_FUNCTION(openInit_1__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__10daDoor20_cFi) {
+asm void daDoor20_c::openInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInit__10daDoor20_cFi.s"
 }
@@ -409,7 +530,7 @@ ASM_FUNCTION(openInit__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc__10daDoor20_cFi) {
+asm void daDoor20_c::openProc(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openProc__10daDoor20_cFi.s"
 }
@@ -417,21 +538,16 @@ ASM_FUNCTION(openProc__10daDoor20_cFi) {
 
 
 /* 804622A8-804622AC 0004+00 .text      openEnd_0__10daDoor20_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(openEnd_0__10daDoor20_cFv) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openEnd_0__10daDoor20_cFv.s"
+void daDoor20_c::openEnd_0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804622AC-80462328 007C+00 .text      openEnd_1__10daDoor20_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openEnd_1__10daDoor20_cFv) {
+asm void daDoor20_c::openEnd_1() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openEnd_1__10daDoor20_cFv.s"
 }
@@ -442,7 +558,7 @@ ASM_FUNCTION(openEnd_1__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openEnd__10daDoor20_cFi) {
+asm void daDoor20_c::openEnd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openEnd__10daDoor20_cFi.s"
 }
@@ -453,7 +569,7 @@ ASM_FUNCTION(openEnd__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeInit_0__10daDoor20_cFv) {
+asm void daDoor20_c::closeInit_0() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeInit_0__10daDoor20_cFv.s"
 }
@@ -464,7 +580,7 @@ ASM_FUNCTION(closeInit_0__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeInit_1__10daDoor20_cFv) {
+asm void daDoor20_c::closeInit_1() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeInit_1__10daDoor20_cFv.s"
 }
@@ -475,7 +591,7 @@ ASM_FUNCTION(closeInit_1__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeInit__10daDoor20_cFi) {
+asm void daDoor20_c::closeInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeInit__10daDoor20_cFi.s"
 }
@@ -486,7 +602,7 @@ ASM_FUNCTION(closeInit__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeProc__10daDoor20_cFi) {
+asm void daDoor20_c::closeProc(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeProc__10daDoor20_cFi.s"
 }
@@ -494,21 +610,16 @@ ASM_FUNCTION(closeProc__10daDoor20_cFi) {
 
 
 /* 804627E8-804627EC 0004+00 .text      closeEnd_0__10daDoor20_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(closeEnd_0__10daDoor20_cFv) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEnd_0__10daDoor20_cFv.s"
+void daDoor20_c::closeEnd_0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804627EC-80462868 007C+00 .text      closeEnd_1__10daDoor20_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeEnd_1__10daDoor20_cFv) {
+asm void daDoor20_c::closeEnd_1() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEnd_1__10daDoor20_cFv.s"
 }
@@ -519,7 +630,7 @@ ASM_FUNCTION(closeEnd_1__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeEnd__10daDoor20_cFi) {
+asm void daDoor20_c::closeEnd(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEnd__10daDoor20_cFi.s"
 }
@@ -530,7 +641,7 @@ ASM_FUNCTION(closeEnd__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit2__10daDoor20_cFv) {
+asm void daDoor20_c::openInit2() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInit2__10daDoor20_cFv.s"
 }
@@ -541,7 +652,7 @@ ASM_FUNCTION(openInit2__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeEnd2__10daDoor20_cFv) {
+asm void daDoor20_c::closeEnd2() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEnd2__10daDoor20_cFv.s"
 }
@@ -552,7 +663,7 @@ ASM_FUNCTION(closeEnd2__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMtx_2__10daDoor20_cFv) {
+asm void daDoor20_c::calcMtx_2() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/calcMtx_2__10daDoor20_cFv.s"
 }
@@ -563,7 +674,7 @@ ASM_FUNCTION(calcMtx_2__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMtx__10daDoor20_cFv) {
+asm void daDoor20_c::calcMtx() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/calcMtx__10daDoor20_cFv.s"
 }
@@ -574,7 +685,7 @@ ASM_FUNCTION(calcMtx__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__10daDoor20_cFv) {
+asm void daDoor20_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/CreateInit__10daDoor20_cFv.s"
 }
@@ -585,7 +696,7 @@ ASM_FUNCTION(CreateInit__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setKey__10daDoor20_cFv) {
+asm void daDoor20_c::setKey() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setKey__10daDoor20_cFv.s"
 }
@@ -596,7 +707,7 @@ ASM_FUNCTION(setKey__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daDoor20_cFv) {
+asm void daDoor20_c::create() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/create__10daDoor20_cFv.s"
 }
@@ -607,7 +718,7 @@ ASM_FUNCTION(create__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__10daDoor20_cFv) {
+asm void daDoor20_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/demoProc__10daDoor20_cFv.s"
 }
@@ -618,7 +729,7 @@ ASM_FUNCTION(demoProc__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderStopEvent__10daDoor20_cFv) {
+asm void daDoor20_c::orderStopEvent() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/orderStopEvent__10daDoor20_cFv.s"
 }
@@ -629,7 +740,7 @@ ASM_FUNCTION(orderStopEvent__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__10daDoor20_cFv) {
+asm void daDoor20_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/actionWait__10daDoor20_cFv.s"
 }
@@ -640,7 +751,7 @@ ASM_FUNCTION(actionWait__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionStopClose__10daDoor20_cFv) {
+asm void daDoor20_c::actionStopClose() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/actionStopClose__10daDoor20_cFv.s"
 }
@@ -651,7 +762,7 @@ ASM_FUNCTION(actionStopClose__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionDemo__10daDoor20_cFv) {
+asm void daDoor20_c::actionDemo() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/actionDemo__10daDoor20_cFv.s"
 }
@@ -662,7 +773,7 @@ ASM_FUNCTION(actionDemo__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__10daDoor20_cFv) {
+asm void daDoor20_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/actionInit__10daDoor20_cFv.s"
 }
@@ -673,7 +784,7 @@ ASM_FUNCTION(actionInit__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daDoor20_cFv) {
+asm void daDoor20_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/execute__10daDoor20_cFv.s"
 }
@@ -684,7 +795,7 @@ ASM_FUNCTION(execute__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daDoor20_cFv) {
+asm void daDoor20_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/draw__10daDoor20_cFv.s"
 }
@@ -695,7 +806,7 @@ ASM_FUNCTION(draw__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDoorAngleSpec__10daDoor20_cFv) {
+asm void daDoor20_c::setDoorAngleSpec() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setDoorAngleSpec__10daDoor20_cFv.s"
 }
@@ -706,7 +817,7 @@ ASM_FUNCTION(setDoorAngleSpec__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daDoor20_cFv) {
+asm void daDoor20_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/_delete__10daDoor20_cFv.s"
 }
@@ -717,7 +828,7 @@ ASM_FUNCTION(_delete__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createKey__10daDoor20_cFv) {
+asm void daDoor20_c::createKey() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/createKey__10daDoor20_cFv.s"
 }
@@ -728,7 +839,7 @@ ASM_FUNCTION(createKey__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteKey__10daDoor20_cFv) {
+asm void daDoor20_c::deleteKey() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/deleteKey__10daDoor20_cFv.s"
 }
@@ -739,7 +850,7 @@ ASM_FUNCTION(deleteKey__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adjoinPlayer__10daDoor20_cFv) {
+asm void daDoor20_c::adjoinPlayer() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/adjoinPlayer__10daDoor20_cFv.s"
 }
@@ -750,7 +861,7 @@ ASM_FUNCTION(adjoinPlayer__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frontCheckOld__10daDoor20_cFv) {
+asm void daDoor20_c::frontCheckOld() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/frontCheckOld__10daDoor20_cFv.s"
 }
@@ -761,7 +872,7 @@ ASM_FUNCTION(frontCheckOld__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frontCheck__10daDoor20_cFv) {
+asm void daDoor20_c::frontCheck() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/frontCheck__10daDoor20_cFv.s"
 }
@@ -772,7 +883,7 @@ ASM_FUNCTION(frontCheck__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawCheck__10daDoor20_cFi) {
+asm void daDoor20_c::drawCheck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/drawCheck__10daDoor20_cFi.s"
 }
@@ -783,7 +894,7 @@ ASM_FUNCTION(drawCheck__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkExecute__10daDoor20_cFv) {
+asm void daDoor20_c::checkExecute() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/checkExecute__10daDoor20_cFv.s"
 }
@@ -794,7 +905,7 @@ ASM_FUNCTION(checkExecute__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startDemoProc__10daDoor20_cFv) {
+asm void daDoor20_c::startDemoProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/startDemoProc__10daDoor20_cFv.s"
 }
@@ -805,7 +916,7 @@ ASM_FUNCTION(startDemoProc__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeEventId__10daDoor20_cFv) {
+asm void daDoor20_c::makeEventId() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/makeEventId__10daDoor20_cFv.s"
 }
@@ -816,7 +927,7 @@ ASM_FUNCTION(makeEventId__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initProc__10daDoor20_cFv) {
+asm void daDoor20_c::initProc() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/initProc__10daDoor20_cFv.s"
 }
@@ -827,7 +938,7 @@ ASM_FUNCTION(initProc__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initOpenDemo__10daDoor20_cFi) {
+asm void daDoor20_c::initOpenDemo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/initOpenDemo__10daDoor20_cFi.s"
 }
@@ -838,7 +949,7 @@ ASM_FUNCTION(initOpenDemo__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArea__10daDoor20_cFfff) {
+asm void daDoor20_c::checkArea(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/checkArea__10daDoor20_cFfff.s"
 }
@@ -849,7 +960,7 @@ ASM_FUNCTION(checkArea__10daDoor20_cFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInitCom__10daDoor20_cFi) {
+asm void daDoor20_c::openInitCom(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInitCom__10daDoor20_cFi.s"
 }
@@ -860,7 +971,7 @@ ASM_FUNCTION(openInitCom__10daDoor20_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeEndCom__10daDoor20_cFv) {
+asm void daDoor20_c::closeEndCom() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEndCom__10daDoor20_cFv.s"
 }
@@ -871,7 +982,7 @@ ASM_FUNCTION(closeEndCom__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRestartPos__10daDoor20_cFP4cXyz) {
+asm void daDoor20_c::getRestartPos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getRestartPos__10daDoor20_cFP4cXyz.s"
 }
@@ -882,7 +993,7 @@ ASM_FUNCTION(getRestartPos__10daDoor20_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoAction__10daDoor20_cFv) {
+asm void daDoor20_c::getDemoAction() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/getDemoAction__10daDoor20_cFv.s"
 }
@@ -893,7 +1004,7 @@ ASM_FUNCTION(getDemoAction__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoal__10daDoor20_cFv) {
+asm void daDoor20_c::setGoal() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setGoal__10daDoor20_cFv.s"
 }
@@ -904,7 +1015,7 @@ ASM_FUNCTION(setGoal__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkMakeStop__10daDoor20_cFv) {
+asm void daDoor20_c::chkMakeStop() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkMakeStop__10daDoor20_cFv.s"
 }
@@ -915,7 +1026,7 @@ ASM_FUNCTION(chkMakeStop__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkStopF__10daDoor20_cFv) {
+asm void daDoor20_c::chkStopF() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkStopF__10daDoor20_cFv.s"
 }
@@ -926,7 +1037,7 @@ ASM_FUNCTION(chkStopF__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkStopB__10daDoor20_cFv) {
+asm void daDoor20_c::chkStopB() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkStopB__10daDoor20_cFv.s"
 }
@@ -937,7 +1048,7 @@ ASM_FUNCTION(chkStopB__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStopDemo__10daDoor20_cFv) {
+asm void daDoor20_c::setStopDemo() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setStopDemo__10daDoor20_cFv.s"
 }
@@ -948,7 +1059,7 @@ ASM_FUNCTION(setStopDemo__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkStopClose__10daDoor20_cFv) {
+asm void daDoor20_c::chkStopClose() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkStopClose__10daDoor20_cFv.s"
 }
@@ -959,7 +1070,7 @@ ASM_FUNCTION(chkStopClose__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStop__10daDoor20_cFv) {
+asm void daDoor20_c::setStop() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/setStop__10daDoor20_cFv.s"
 }
@@ -970,7 +1081,7 @@ ASM_FUNCTION(setStop__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkStopOpen__10daDoor20_cFv) {
+asm void daDoor20_c::chkStopOpen() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkStopOpen__10daDoor20_cFv.s"
 }
@@ -981,7 +1092,7 @@ ASM_FUNCTION(chkStopOpen__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkMakeKey__10daDoor20_cFv) {
+asm void daDoor20_c::chkMakeKey() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/chkMakeKey__10daDoor20_cFv.s"
 }
@@ -992,7 +1103,7 @@ ASM_FUNCTION(chkMakeKey__10daDoor20_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMtx__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::calcMtx(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/calcMtx__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1003,7 +1114,7 @@ ASM_FUNCTION(calcMtx__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeInit__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::closeInit(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeInit__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1014,7 +1125,7 @@ ASM_FUNCTION(closeInit__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeProc__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::closeProc(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeProc__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1025,7 +1136,7 @@ ASM_FUNCTION(closeProc__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::openInit(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openInit__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1036,7 +1147,7 @@ ASM_FUNCTION(openInit__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openProc__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::openProc(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openProc__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1047,7 +1158,7 @@ ASM_FUNCTION(openProc__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::create(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/create__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1058,7 +1169,7 @@ ASM_FUNCTION(create__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__12dDoor_stop_cFP10daDoor20_c) {
+asm void dDoor_stop_c::draw(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/draw__12dDoor_stop_cFP10daDoor20_c.s"
 }
@@ -1069,7 +1180,7 @@ ASM_FUNCTION(draw__12dDoor_stop_cFP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoor20_Draw__FP10daDoor20_c) {
+asm void daDoor20_Draw(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/daDoor20_Draw__FP10daDoor20_c.s"
 }
@@ -1080,7 +1191,7 @@ ASM_FUNCTION(daDoor20_Draw__FP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoor20_Execute__FP10daDoor20_c) {
+asm void daDoor20_Execute(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/daDoor20_Execute__FP10daDoor20_c.s"
 }
@@ -1091,7 +1202,7 @@ ASM_FUNCTION(daDoor20_Execute__FP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoor20_Delete__FP10daDoor20_c) {
+asm void daDoor20_Delete(daDoor20_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/daDoor20_Delete__FP10daDoor20_c.s"
 }
@@ -1102,7 +1213,7 @@ ASM_FUNCTION(daDoor20_Delete__FP10daDoor20_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDoor20_Create__FP10fopAc_ac_c) {
+asm void daDoor20_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/daDoor20_Create__FP10fopAc_ac_c.s"
 }
@@ -1113,7 +1224,7 @@ ASM_FUNCTION(daDoor20_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1124,7 +1235,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1135,7 +1246,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804667EC) {
+extern "C" asm void func_804667EC() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/func_804667EC.s"
 }
@@ -1146,7 +1257,7 @@ ASM_FUNCTION(func_804667EC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80466808) {
+extern "C" asm void func_80466808() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/func_80466808.s"
 }
@@ -1157,7 +1268,7 @@ ASM_FUNCTION(func_80466808) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80466810) {
+extern "C" asm void func_80466810() {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/func_80466810.s"
 }

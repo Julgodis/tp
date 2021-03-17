@@ -6,21 +6,165 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio_JStage (JStudio_JStage) False/False
+// build JStage (JStage) False/False
+/* top-level dependencies (begin JStage) */
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TSystem (JStage::TSystem) False/False
+	/* dependencies (begin JStage::TSystem) */
+	/* dependencies (end JStage::TSystem) */
+	struct TSystem {
+	};
+
+	// build TLight (JStage::TLight) False/False
+	/* dependencies (begin JStage::TLight) */
+	/* dependencies (end JStage::TLight) */
+	struct TLight {
+	};
+
+};
+
+// build JStage (JStage) True/True
+// build JStudio (JStudio) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build JStudio (JStudio) True/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin JStudio) */
+// outer dependency: _GXColor
+// outer dependency: JStudio::TVariableValue
+// outer dependency: Vec
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build data (JStudio::data) False/False
+	/* dependencies (begin JStudio::data) */
+	/* dependencies (end JStudio::data) */
+	struct data {
+		// build TEOperationData (JStudio::data::TEOperationData) False/False
+		/* dependencies (begin JStudio::data::TEOperationData) */
+		/* dependencies (end JStudio::data::TEOperationData) */
+		struct TEOperationData {
+		};
+
+	};
+
+	// build TAdaptor (JStudio::TAdaptor) False/False
+	/* dependencies (begin JStudio::TAdaptor) */
+	/* dependencies (end JStudio::TAdaptor) */
+	struct TAdaptor {
+		// _GXColor
+		// Vec
+		/* 80286204 */ void adaptor_setVariableValue_Vec(u32 const*, Vec const&);
+		/* 80286274 */ void adaptor_getVariableValue_Vec(Vec*, u32 const*) const;
+		/* 802862AC */ void adaptor_setVariableValue_GXColor(u32 const*, _GXColor const&);
+		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
+	};
+
+	// build TVariableValue (JStudio::TVariableValue) False/False
+	/* dependencies (begin JStudio::TVariableValue) */
+	/* dependencies (end JStudio::TVariableValue) */
+	struct TVariableValue {
+		// build TOutput (JStudio::TVariableValue::TOutput) False/False
+		/* dependencies (begin JStudio::TVariableValue::TOutput) */
+		/* dependencies (end JStudio::TVariableValue::TOutput) */
+		struct TOutput {
+			/* 80285E0C */ ~TOutput();
+		};
+
+		/* 80285EB8 */ void update_immediate_(JStudio::TVariableValue*, f64);
+		/* 8028B568 */ TVariableValue();
+	};
+
+	// build TAdaptor_light (JStudio::TAdaptor_light) False/False
+	/* dependencies (begin JStudio::TAdaptor_light) */
+	/* dependencies (end JStudio::TAdaptor_light) */
+	struct TAdaptor_light {
+		/* 80287308 */ ~TAdaptor_light();
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio_JStage) */
+// outer dependency: JStage::TSystem
+// outer dependency: JStage::TLight
+// outer dependency: JStudio::TAdaptor
+// outer dependency: JStudio::data::TEOperationData
+/* top-level dependencies (end JStudio_JStage) */
+struct JStudio_JStage {
+	// build TAdaptor_light (JStudio_JStage::TAdaptor_light) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_light) */
+	/* dependencies (end JStudio_JStage::TAdaptor_light) */
+	struct TAdaptor_light {
+		// JStudio::data::TEOperationData
+		// JStage::TSystem
+		// JStage::TLight
+		// build TVVOutput_direction_ (JStudio_JStage::TAdaptor_light::TVVOutput_direction_) False/False
+		/* dependencies (begin JStudio_JStage::TAdaptor_light::TVVOutput_direction_) */
+		/* dependencies (end JStudio_JStage::TAdaptor_light::TVVOutput_direction_) */
+		struct TVVOutput_direction_ {
+			// JStudio::TAdaptor
+			/* 8028D24C */ void operator()(f32, JStudio::TAdaptor*) const;
+			/* 8028D258 */ ~TVVOutput_direction_();
+		};
+
+		/* 8028CB50 */ TAdaptor_light(JStage::TSystem const*, JStage::TLight*);
+		/* 8028CBF4 */ ~TAdaptor_light();
+		/* 8028CC68 */ void adaptor_do_prepare();
+		/* 8028CCB0 */ void adaptor_do_begin();
+		/* 8028CF68 */ void adaptor_do_end();
+		/* 8028CFBC */ void adaptor_do_update(u32);
+		/* 8028D18C */ void adaptor_do_data(void const*, u32, void const*, u32);
+		/* 8028D1B0 */ void adaptor_do_FACULTY(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028D228 */ void adaptor_do_ENABLE(JStudio::data::TEOperationData, void const*, u32);
+	};
+
+	// build TAdaptor_object_ (JStudio_JStage::TAdaptor_object_) False/False
+	/* dependencies (begin JStudio_JStage::TAdaptor_object_) */
+	/* dependencies (end JStudio_JStage::TAdaptor_object_) */
+	struct TAdaptor_object_ {
+		// JStudio::data::TEOperationData
+		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
+		/* 8028A550 */ void adaptor_object_ENABLE_(JStudio::data::TEOperationData, void const*, u32);
+	};
+
+};
+
+// build JStage (JStage) True/True
+// build JStudio (JStudio) True/True
+// build Vec (Vec) True/True
+// build _GXColor (_GXColor) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
-extern "C" extern void __dt__Q214JStudio_JStage14TAdaptor_lightFv();
-extern "C" extern void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv();
-extern "C" extern void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv();
-extern "C" extern void adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv();
-extern "C" extern void adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl();
-extern "C" extern void adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl();
-extern "C" extern void adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor();
-extern "C" extern void __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv();
-extern "C" extern void func_8028D2B8();
+extern "C" void func_8028D2B8();
+
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
+extern "C" void __dt__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl();
+extern "C" void adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl();
+extern "C" void adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor();
+extern "C" void __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv();
+extern "C" void func_8028D2B8();
 SECTION_DATA extern void*const __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_[4];
 SECTION_DATA extern void*const __vt__Q214JStudio_JStage14TAdaptor_light[10];
 SECTION_BSS extern u8 lit_930[12];
@@ -41,28 +185,41 @@ SECTION_SDATA2 extern f32 object_light__lit_898;
 // External References:
 // 
 
-extern "C" extern void __dt__Q37JStudio14TVariableValue7TOutputFv();
-extern "C" extern void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" extern void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
-extern "C" extern void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
-extern "C" extern void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
-extern "C" extern void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" extern void __dt__Q27JStudio14TAdaptor_lightFv();
-extern "C" extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern "C" extern void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" extern void __ct__Q27JStudio14TVariableValueFv();
-extern "C" extern void __dl__FPv();
-extern "C" extern void PSMTXMultVec();
-extern "C" extern void PSMTXMultVecSR();
-extern "C" extern void PSVECAdd();
-extern "C" extern void PSVECSubtract();
-extern "C" extern void __register_global_object();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
-extern "C" extern void cos();
-extern "C" extern void sin();
-extern "C" extern void atan2();
+void operator delete(void*);
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void atan2();
+
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void __dt__Q27JStudio14TAdaptor_lightFv();
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void __ct__Q27JStudio14TVariableValueFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void atan2();
 SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
 SECTION_RODATA extern const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
@@ -77,7 +234,7 @@ SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* paddi
 // 
 
 /* ############################################################################################## */
-/* 803C5A30-803C5A40 0010+00 .data      __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_ */
+/* 803C5A30-803C5A40 0010+00 rc=2 efc=0 .data      __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_ */
 void* const __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -85,7 +242,7 @@ void* const __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_[4] = 
 	(void*)__dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv,
 };
 
-/* 803C5A40-803C5A68 0028+00 .data      __vt__Q214JStudio_JStage14TAdaptor_light                     */
+/* 803C5A40-803C5A68 0028+00 rc=2 efc=0 .data      __vt__Q214JStudio_JStage14TAdaptor_light                     */
 void* const __vt__Q214JStudio_JStage14TAdaptor_light[10] = {
 	NULL, /* RTTI */
 	NULL,
@@ -99,22 +256,22 @@ void* const __vt__Q214JStudio_JStage14TAdaptor_light[10] = {
 	(void*)adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl,
 };
 
-/* 8028CB50-8028CBF4 00A4+00 .text      __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight */
+/* 8028CB50-8028CBF4 00A4+00 rc=1 efc=1 .text      __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight) {
+asm JStudio_JStage::TAdaptor_light::TAdaptor_light(JStage::TSystem const* field_0, JStage::TLight* field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028CB50.s"
 }
 #pragma pop
 
 
-/* 8028CBF4-8028CC68 0074+00 .text      __dt__Q214JStudio_JStage14TAdaptor_lightFv                   */
+/* 8028CBF4-8028CC68 0074+00 rc=1 efc=0 .text      __dt__Q214JStudio_JStage14TAdaptor_lightFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q214JStudio_JStage14TAdaptor_lightFv) {
+asm JStudio_JStage::TAdaptor_light::~TAdaptor_light() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/__dt__Q214JStudio_JStage14TAdaptor_lightFv.s"
 }
@@ -122,32 +279,32 @@ ASM_FUNCTION(__dt__Q214JStudio_JStage14TAdaptor_lightFv) {
 
 
 /* ############################################################################################## */
-/* 80431400-8043140C 000C+00 .bss       @930                                                         */
+/* 80431400-8043140C 000C+00 rc=1 efc=0 .bss       @930                                                         */
 u8 lit_930[12];
 
-/* 8043140C-80431418 000C+00 .bss       @931                                                         */
+/* 8043140C-80431418 000C+00 rc=0 efc=0 .bss       @931                                                         */
 u8 object_light__lit_931[12];
 
-/* 80431418-80431424 000C+00 .bss       @932                                                         */
+/* 80431418-80431424 000C+00 rc=0 efc=0 .bss       @932                                                         */
 u8 lit_932[12];
 
-/* 80431424-80431430 000C+00 .bss       @933                                                         */
+/* 80431424-80431430 000C+00 rc=0 efc=0 .bss       @933                                                         */
 u8 lit_933[12];
 
-/* 80431430-8043143C 000C+00 .bss       @934                                                         */
+/* 80431430-8043143C 000C+00 rc=0 efc=0 .bss       @934                                                         */
 u8 object_light__lit_934[12];
 
-/* 8043143C-80431448 000C+00 .bss       @935                                                         */
+/* 8043143C-80431448 000C+00 rc=0 efc=0 .bss       @935                                                         */
 u8 object_light__lit_935[12];
 
-/* 80431448-80431490 0048+00 .bss       saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light   */
+/* 80431448-80431490 0048+00 rc=1 efc=0 .bss       saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light   */
 u8 saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light[72];
 
-/* 8028CC68-8028CCB0 0048+00 .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv     */
+/* 8028CC68-8028CCB0 0048+00 rc=1 efc=0 .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_prepare() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv.s"
 }
@@ -155,43 +312,43 @@ ASM_FUNCTION(adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv) {
 
 
 /* ############################################################################################## */
-/* 804554E8-804554F0 0004+04 .sdata2    @846                                                         */
+/* 804554E8-804554F0 0004+04 rc=1 efc=0 .sdata2    @846                                                         */
 u8 object_light__lit_846[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804554F0-804554F8 0008+00 .sdata2    @847                                                         */
+/* 804554F0-804554F8 0008+00 rc=1 efc=0 .sdata2    @847                                                         */
 f64 object_light__lit_847 = 0.5;
 
-/* 804554F8-80455500 0008+00 .sdata2    @848                                                         */
+/* 804554F8-80455500 0008+00 rc=1 efc=0 .sdata2    @848                                                         */
 f64 object_light__lit_848 = 3.0;
 
-/* 80455500-80455508 0008+00 .sdata2    @849                                                         */
+/* 80455500-80455508 0008+00 rc=1 efc=0 .sdata2    @849                                                         */
 u8 object_light__lit_849[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455508-8045550C 0004+00 .sdata2    @850                                                         */
+/* 80455508-8045550C 0004+00 rc=1 efc=0 .sdata2    @850                                                         */
 f32 object_light__lit_850 = 57.295780181884766f;
 
-/* 8028CCB0-8028CF68 02B8+00 .text      adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv       */
+/* 8028CCB0-8028CF68 02B8+00 rc=1 efc=0 .text      adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_begin() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv.s"
 }
 #pragma pop
 
 
-/* 8028CF68-8028CFBC 0054+00 .text      adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv         */
+/* 8028CF68-8028CFBC 0054+00 rc=1 efc=0 .text      adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_end() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv.s"
 }
@@ -199,84 +356,83 @@ ASM_FUNCTION(adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv) {
 
 
 /* ############################################################################################## */
-/* 8045550C-80455510 0004+00 .sdata2    @898                                                         */
+/* 8045550C-80455510 0004+00 rc=1 efc=0 .sdata2    @898                                                         */
 f32 object_light__lit_898 = 0.01745329238474369f;
 
-/* 8028CFBC-8028D18C 01D0+00 .text      adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl     */
+/* 8028CFBC-8028D18C 01D0+00 rc=1 efc=0 .text      adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_update(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl.s"
 }
 #pragma pop
 
 
-/* 8028D18C-8028D1B0 0024+00 .text      adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl */
+/* 8028D18C-8028D1B0 0024+00 rc=1 efc=0 .text      adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_data(void const* field_0, u32 field_1, void const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl.s"
 }
 #pragma pop
 
 
-/* 8028D1B0-8028D228 0078+00 .text      adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028D1B0-8028D228 0078+00 rc=1 efc=0 .text      adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_FACULTY(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D1B0.s"
 }
 #pragma pop
 
 
-/* 8028D228-8028D24C 0024+00 .text      adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028D228-8028D24C 0024+00 rc=1 efc=0 .text      adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl) {
+asm void JStudio_JStage::TAdaptor_light::adaptor_do_ENABLE(JStudio::data::TEOperationData field_0, void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D228.s"
 }
 #pragma pop
 
 
-/* 8028D24C-8028D258 000C+00 .text      __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor */
+/* 8028D24C-8028D258 000C+00 rc=1 efc=0 .text      __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor) {
+asm void JStudio_JStage::TAdaptor_light::TVVOutput_direction_::operator()(f32 field_0, JStudio::TAdaptor* field_1) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D24C.s"
 }
 #pragma pop
 
 
-/* 8028D258-8028D2B8 0060+00 .text      __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv */
+/* 8028D258-8028D2B8 0060+00 rc=2 efc=0 .text      __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv) {
+asm JStudio_JStage::TAdaptor_light::TVVOutput_direction_::~TVVOutput_direction_() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/__dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv.s"
 }
 #pragma pop
 
 
-/* 8028D2B8-8028D550 0298+00 .text      __sinit_object-light_cpp                                     */
+/* 8028D2B8-8028D550 0298+00 rc=1 efc=1 .text      __sinit_object-light_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8028D2B8) {
+extern "C" asm void func_8028D2B8() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-light/func_8028D2B8.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

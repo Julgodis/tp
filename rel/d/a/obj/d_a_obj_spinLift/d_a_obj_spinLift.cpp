@@ -6,32 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSpinLift_c;
+
+struct daSpinLift_HIO_c {
+	daSpinLift_HIO_c();
+	~daSpinLift_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daSpinLift_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveLift();
+	void init_modeWait();
+	void modeWait();
+	void init_modeUpMove();
+	void modeUpMove();
+	void init_modeDownMove();
+	void modeDownMove();
+	void init_modeMoveEnd();
+	void modeMoveEnd();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daSpinLift_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daSpinLift_cFv();
-extern "C" extern void CreateHeap__12daSpinLift_cFv();
-extern "C" extern void create__12daSpinLift_cFv();
-extern "C" extern void Execute__12daSpinLift_cFPPA3_A4_f();
-extern "C" extern void moveLift__12daSpinLift_cFv();
-extern "C" extern void init_modeWait__12daSpinLift_cFv();
-extern "C" extern void modeWait__12daSpinLift_cFv();
-extern "C" extern void init_modeUpMove__12daSpinLift_cFv();
-extern "C" extern void modeUpMove__12daSpinLift_cFv();
-extern "C" extern void init_modeDownMove__12daSpinLift_cFv();
-extern "C" extern void modeDownMove__12daSpinLift_cFv();
-extern "C" extern void init_modeMoveEnd__12daSpinLift_cFv();
-extern "C" extern void modeMoveEnd__12daSpinLift_cFv();
-extern "C" extern void Draw__12daSpinLift_cFv();
-extern "C" extern void Delete__12daSpinLift_cFv();
-extern "C" extern void daSpinLift_Draw__FP12daSpinLift_c();
-extern "C" extern void daSpinLift_Execute__FP12daSpinLift_c();
-extern "C" extern void daSpinLift_Delete__FP12daSpinLift_c();
-extern "C" extern void daSpinLift_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daSpinLift_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_spinLift_cpp();
+extern "C" void Execute__12daSpinLift_cFPPA3_A4_f();
+void daSpinLift_Draw(daSpinLift_c*);
+void daSpinLift_Execute(daSpinLift_c*);
+void daSpinLift_Delete(daSpinLift_c*);
+void daSpinLift_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_spinLift_cpp();
+
+extern "C" void __ct__16daSpinLift_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daSpinLift_cFv();
+extern "C" void CreateHeap__12daSpinLift_cFv();
+extern "C" void create__12daSpinLift_cFv();
+extern "C" void Execute__12daSpinLift_cFPPA3_A4_f();
+extern "C" void moveLift__12daSpinLift_cFv();
+extern "C" void init_modeWait__12daSpinLift_cFv();
+extern "C" void modeWait__12daSpinLift_cFv();
+extern "C" void init_modeUpMove__12daSpinLift_cFv();
+extern "C" void modeUpMove__12daSpinLift_cFv();
+extern "C" void init_modeDownMove__12daSpinLift_cFv();
+extern "C" void modeDownMove__12daSpinLift_cFv();
+extern "C" void init_modeMoveEnd__12daSpinLift_cFv();
+extern "C" void modeMoveEnd__12daSpinLift_cFv();
+extern "C" void Draw__12daSpinLift_cFv();
+extern "C" void Delete__12daSpinLift_cFv();
+extern "C" void daSpinLift_Draw__FP12daSpinLift_c();
+extern "C" void daSpinLift_Execute__FP12daSpinLift_c();
+extern "C" void daSpinLift_Delete__FP12daSpinLift_c();
+extern "C" void daSpinLift_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daSpinLift_HIO_cFv();
+extern "C" void __sinit_d_a_obj_spinLift_cpp();
 SECTION_RODATA extern const u8 lit_3637[4];
 SECTION_RODATA extern const u8 l_bmdIdx[36];
 SECTION_RODATA extern const u8 l_dzbIdx[36];
@@ -66,8 +109,11 @@ SECTION_BSS extern u8 data_80CE4EE4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -77,7 +123,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daSpinLift_HIO_cFv) {
+asm daSpinLift_HIO_c::daSpinLift_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/__ct__16daSpinLift_HIO_cFv.s"
 }
@@ -88,7 +134,7 @@ ASM_FUNCTION(__ct__16daSpinLift_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -99,7 +145,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daSpinLift_cFv) {
+asm void daSpinLift_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/setBaseMtx__12daSpinLift_cFv.s"
 }
@@ -110,7 +156,7 @@ ASM_FUNCTION(setBaseMtx__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daSpinLift_cFv) {
+asm void daSpinLift_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/CreateHeap__12daSpinLift_cFv.s"
 }
@@ -121,7 +167,7 @@ ASM_FUNCTION(CreateHeap__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daSpinLift_cFv) {
+asm void daSpinLift_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/create__12daSpinLift_cFv.s"
 }
@@ -132,7 +178,7 @@ ASM_FUNCTION(create__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daSpinLift_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daSpinLift_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/Execute__12daSpinLift_cFPPA3_A4_f.s"
 }
@@ -143,7 +189,7 @@ ASM_FUNCTION(Execute__12daSpinLift_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveLift__12daSpinLift_cFv) {
+asm void daSpinLift_c::moveLift() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/moveLift__12daSpinLift_cFv.s"
 }
@@ -154,7 +200,7 @@ ASM_FUNCTION(moveLift__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daSpinLift_cFv) {
+asm void daSpinLift_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/init_modeWait__12daSpinLift_cFv.s"
 }
@@ -162,21 +208,16 @@ ASM_FUNCTION(init_modeWait__12daSpinLift_cFv) {
 
 
 /* 80CE429C-80CE42A0 0004+00 .text      modeWait__12daSpinLift_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daSpinLift_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/modeWait__12daSpinLift_cFv.s"
+void daSpinLift_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CE42A0-80CE42C4 0024+00 .text      init_modeUpMove__12daSpinLift_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeUpMove__12daSpinLift_cFv) {
+asm void daSpinLift_c::init_modeUpMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/init_modeUpMove__12daSpinLift_cFv.s"
 }
@@ -187,7 +228,7 @@ ASM_FUNCTION(init_modeUpMove__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeUpMove__12daSpinLift_cFv) {
+asm void daSpinLift_c::modeUpMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/modeUpMove__12daSpinLift_cFv.s"
 }
@@ -198,7 +239,7 @@ ASM_FUNCTION(modeUpMove__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeDownMove__12daSpinLift_cFv) {
+asm void daSpinLift_c::init_modeDownMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/init_modeDownMove__12daSpinLift_cFv.s"
 }
@@ -209,7 +250,7 @@ ASM_FUNCTION(init_modeDownMove__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeDownMove__12daSpinLift_cFv) {
+asm void daSpinLift_c::modeDownMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/modeDownMove__12daSpinLift_cFv.s"
 }
@@ -220,7 +261,7 @@ ASM_FUNCTION(modeDownMove__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeMoveEnd__12daSpinLift_cFv) {
+asm void daSpinLift_c::init_modeMoveEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/init_modeMoveEnd__12daSpinLift_cFv.s"
 }
@@ -228,21 +269,16 @@ ASM_FUNCTION(init_modeMoveEnd__12daSpinLift_cFv) {
 
 
 /* 80CE4A9C-80CE4AA0 0004+00 .text      modeMoveEnd__12daSpinLift_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeMoveEnd__12daSpinLift_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/modeMoveEnd__12daSpinLift_cFv.s"
+void daSpinLift_c::modeMoveEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CE4AA0-80CE4B44 00A4+00 .text      Draw__12daSpinLift_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daSpinLift_cFv) {
+asm void daSpinLift_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/Draw__12daSpinLift_cFv.s"
 }
@@ -253,7 +289,7 @@ ASM_FUNCTION(Draw__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daSpinLift_cFv) {
+asm void daSpinLift_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/Delete__12daSpinLift_cFv.s"
 }
@@ -264,7 +300,7 @@ ASM_FUNCTION(Delete__12daSpinLift_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinLift_Draw__FP12daSpinLift_c) {
+asm void daSpinLift_Draw(daSpinLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/daSpinLift_Draw__FP12daSpinLift_c.s"
 }
@@ -275,7 +311,7 @@ ASM_FUNCTION(daSpinLift_Draw__FP12daSpinLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinLift_Execute__FP12daSpinLift_c) {
+asm void daSpinLift_Execute(daSpinLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/daSpinLift_Execute__FP12daSpinLift_c.s"
 }
@@ -286,7 +322,7 @@ ASM_FUNCTION(daSpinLift_Execute__FP12daSpinLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinLift_Delete__FP12daSpinLift_c) {
+asm void daSpinLift_Delete(daSpinLift_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/daSpinLift_Delete__FP12daSpinLift_c.s"
 }
@@ -297,7 +333,7 @@ ASM_FUNCTION(daSpinLift_Delete__FP12daSpinLift_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSpinLift_Create__FP10fopAc_ac_c) {
+asm void daSpinLift_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/daSpinLift_Create__FP10fopAc_ac_c.s"
 }
@@ -308,7 +344,7 @@ ASM_FUNCTION(daSpinLift_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daSpinLift_HIO_cFv) {
+asm daSpinLift_HIO_c::~daSpinLift_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/__dt__16daSpinLift_HIO_cFv.s"
 }
@@ -319,7 +355,7 @@ ASM_FUNCTION(__dt__16daSpinLift_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_spinLift_cpp) {
+extern "C" asm void __sinit_d_a_obj_spinLift_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_spinLift/d_a_obj_spinLift/__sinit_d_a_obj_spinLift_cpp.s"
 }

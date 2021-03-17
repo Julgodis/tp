@@ -6,120 +6,164 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build node_lists_tree_class (node_lists_tree_class) False/False
+/* top-level dependencies (begin node_lists_tree_class) */
+/* top-level dependencies (end node_lists_tree_class) */
+struct node_lists_tree_class {
+};
+
+// build node_list_class (node_list_class) False/False
+/* top-level dependencies (begin node_list_class) */
+/* top-level dependencies (end node_list_class) */
+struct node_list_class {
+};
+
+// build node_class (node_class) False/False
+/* top-level dependencies (begin node_class) */
+/* top-level dependencies (end node_class) */
+struct node_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void cTg_IsUse__FP16create_tag_class();
-extern "C" extern void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" extern void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
-extern "C" extern void cTg_GetFirst__FP15node_list_class();
-extern "C" extern void cTg_SingleCut__FP16create_tag_class();
-extern "C" extern void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" extern void cTg_Create__FP16create_tag_classPv();
+void cTg_IsUse(create_tag_class*);
+void cTg_SingleCutFromTree(create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
+void cTg_InsertToTree(node_lists_tree_class*, s32, create_tag_class*, s32);
+void cTg_GetFirst(node_list_class*);
+void cTg_SingleCut(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
+
+extern "C" void cTg_IsUse__FP16create_tag_class();
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+extern "C" void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
+extern "C" void cTg_GetFirst__FP15node_list_class();
+extern "C" void cTg_SingleCut__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cLs_SingleCut__FP10node_class();
-extern "C" extern void cLs_Addition__FP15node_list_classP10node_class();
-extern "C" extern void cLs_GetFirst__FP15node_list_class();
-extern "C" extern void cNd_Create__FP10node_classPv();
-extern "C" extern void cTr_SingleCut__FP10node_class();
-extern "C" extern void cTr_Addition__FP21node_lists_tree_classiP10node_class();
-extern "C" extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
+void cLs_SingleCut(node_class*);
+void cLs_Addition(node_list_class*, node_class*);
+void cLs_GetFirst(node_list_class*);
+void cNd_Create(node_class*, void*);
+void cTr_SingleCut(node_class*);
+void cTr_Addition(node_lists_tree_class*, s32, node_class*);
+void cTr_Insert(node_lists_tree_class*, s32, node_class*, s32);
+
+extern "C" void cLs_SingleCut__FP10node_class();
+extern "C" void cLs_Addition__FP15node_list_classP10node_class();
+extern "C" void cLs_GetFirst__FP15node_list_class();
+extern "C" void cNd_Create__FP10node_classPv();
+extern "C" void cTr_SingleCut__FP10node_class();
+extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class();
+extern "C" void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
 
 // 
 // Declarations:
 // 
 
-/* 80266880-8026688C 000C+00 .text      cTg_IsUse__FP16create_tag_class                              */
+/* 80266880-8026688C 000C+00 rc=3 efc=3 .text      cTg_IsUse__FP16create_tag_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_IsUse__FP16create_tag_class) {
+asm void cTg_IsUse(create_tag_class* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_IsUse__FP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 8026688C-802668CC 0040+00 .text      cTg_SingleCutFromTree__FP16create_tag_class                  */
+/* 8026688C-802668CC 0040+00 rc=4 efc=4 .text      cTg_SingleCutFromTree__FP16create_tag_class                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_SingleCutFromTree__FP16create_tag_class) {
+asm void cTg_SingleCutFromTree(create_tag_class* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_SingleCutFromTree__FP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 802668CC-8026691C 0050+00 .text      cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
+/* 802668CC-8026691C 0050+00 rc=3 efc=3 .text      cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class) {
+asm void cTg_AdditionToTree(node_lists_tree_class* field_0, s32 field_1, create_tag_class* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 8026691C-8026696C 0050+00 .text      cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
+/* 8026691C-8026696C 0050+00 rc=1 efc=1 .text      cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi) {
+asm void cTg_InsertToTree(node_lists_tree_class* field_0, s32 field_1, create_tag_class* field_2, s32 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi.s"
 }
 #pragma pop
 
 
-/* 8026696C-802669A4 0038+00 .text      cTg_GetFirst__FP15node_list_class                            */
+/* 8026696C-802669A4 0038+00 rc=1 efc=1 .text      cTg_GetFirst__FP15node_list_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_GetFirst__FP15node_list_class) {
+asm void cTg_GetFirst(node_list_class* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_GetFirst__FP15node_list_class.s"
 }
 #pragma pop
 
 
-/* 802669A4-802669E4 0040+00 .text      cTg_SingleCut__FP16create_tag_class                          */
+/* 802669A4-802669E4 0040+00 rc=7 efc=7 .text      cTg_SingleCut__FP16create_tag_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_SingleCut__FP16create_tag_class) {
+asm void cTg_SingleCut(create_tag_class* field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_SingleCut__FP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 802669E4-80266A34 0050+00 .text      cTg_Addition__FP15node_list_classP16create_tag_class         */
+/* 802669E4-80266A34 0050+00 rc=7 efc=7 .text      cTg_Addition__FP15node_list_classP16create_tag_class         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_Addition__FP15node_list_classP16create_tag_class) {
+asm void cTg_Addition(node_list_class* field_0, create_tag_class* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_Addition__FP15node_list_classP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* 80266A34-80266A7C 0048+00 .text      cTg_Create__FP16create_tag_classPv                           */
+/* 80266A34-80266A7C 0048+00 rc=10 efc=10 .text      cTg_Create__FP16create_tag_classPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cTg_Create__FP16create_tag_classPv) {
+asm void cTg_Create(create_tag_class* field_0, void* field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_Create__FP16create_tag_classPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

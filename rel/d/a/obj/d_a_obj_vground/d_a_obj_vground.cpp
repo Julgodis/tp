@@ -6,23 +6,54 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjVGnd_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjVGnd_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__11daObjVGnd_cFv();
-extern "C" extern void setBaseMtx__11daObjVGnd_cFv();
-extern "C" extern void Create__11daObjVGnd_cFv();
-extern "C" extern void CreateHeap__11daObjVGnd_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create__11daObjVGnd_cFv();
-extern "C" extern void execute__11daObjVGnd_cFv();
-extern "C" extern void draw__11daObjVGnd_cFv();
-extern "C" extern void _delete__11daObjVGnd_cFv();
-extern "C" extern void daObjVGnd_Draw__FP11daObjVGnd_c();
-extern "C" extern void daObjVGnd_Execute__FP11daObjVGnd_c();
-extern "C" extern void daObjVGnd_Delete__FP11daObjVGnd_c();
-extern "C" extern void daObjVGnd_Create__FP10fopAc_ac_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjVGnd_Draw(daObjVGnd_c*);
+void daObjVGnd_Execute(daObjVGnd_c*);
+void daObjVGnd_Delete(daObjVGnd_c*);
+void daObjVGnd_Create(fopAc_ac_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__11daObjVGnd_cFv();
+extern "C" void setBaseMtx__11daObjVGnd_cFv();
+extern "C" void Create__11daObjVGnd_cFv();
+extern "C" void CreateHeap__11daObjVGnd_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__11daObjVGnd_cFv();
+extern "C" void execute__11daObjVGnd_cFv();
+extern "C" void draw__11daObjVGnd_cFv();
+extern "C" void _delete__11daObjVGnd_cFv();
+extern "C" void daObjVGnd_Draw__FP11daObjVGnd_c();
+extern "C" void daObjVGnd_Execute__FP11daObjVGnd_c();
+extern "C" void daObjVGnd_Delete__FP11daObjVGnd_c();
+extern "C" void daObjVGnd_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3630;
 SECTION_RODATA extern const u32 lit_3704;
 SECTION_RODATA extern const u32 lit_3778;
@@ -37,7 +68,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -47,7 +80,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -58,7 +91,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/initBaseMtx__11daObjVGnd_cFv.s"
 }
@@ -69,7 +102,7 @@ ASM_FUNCTION(initBaseMtx__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/setBaseMtx__11daObjVGnd_cFv.s"
 }
@@ -80,7 +113,7 @@ ASM_FUNCTION(setBaseMtx__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/Create__11daObjVGnd_cFv.s"
 }
@@ -91,7 +124,7 @@ ASM_FUNCTION(Create__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/CreateHeap__11daObjVGnd_cFv.s"
 }
@@ -102,7 +135,7 @@ ASM_FUNCTION(CreateHeap__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/__dt__12J3DFrameCtrlFv.s"
 }
@@ -113,7 +146,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/func_80D216F4.s"
 }
@@ -124,7 +157,7 @@ ASM_FUNCTION(create__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/execute__11daObjVGnd_cFv.s"
 }
@@ -135,7 +168,7 @@ ASM_FUNCTION(execute__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/draw__11daObjVGnd_cFv.s"
 }
@@ -146,7 +179,7 @@ ASM_FUNCTION(draw__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daObjVGnd_cFv) {
+asm void daObjVGnd_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/_delete__11daObjVGnd_cFv.s"
 }
@@ -157,7 +190,7 @@ ASM_FUNCTION(_delete__11daObjVGnd_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVGnd_Draw__FP11daObjVGnd_c) {
+asm void daObjVGnd_Draw(daObjVGnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Draw__FP11daObjVGnd_c.s"
 }
@@ -168,7 +201,7 @@ ASM_FUNCTION(daObjVGnd_Draw__FP11daObjVGnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVGnd_Execute__FP11daObjVGnd_c) {
+asm void daObjVGnd_Execute(daObjVGnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Execute__FP11daObjVGnd_c.s"
 }
@@ -179,7 +212,7 @@ ASM_FUNCTION(daObjVGnd_Execute__FP11daObjVGnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVGnd_Delete__FP11daObjVGnd_c) {
+asm void daObjVGnd_Delete(daObjVGnd_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Delete__FP11daObjVGnd_c.s"
 }
@@ -190,7 +223,7 @@ ASM_FUNCTION(daObjVGnd_Delete__FP11daObjVGnd_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjVGnd_Create__FP10fopAc_ac_c) {
+asm void daObjVGnd_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Create__FP10fopAc_ac_c.s"
 }

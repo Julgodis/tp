@@ -6,70 +6,144 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAUSeqCollection (JAUSeqCollection) False/False
+// build JAISeqDataRegion (JAISeqDataRegion) False/False
+/* top-level dependencies (begin JAISeqDataRegion) */
+/* top-level dependencies (end JAISeqDataRegion) */
+struct JAISeqDataRegion {
+};
+
+// build JAISeqData (JAISeqData) False/False
+/* top-level dependencies (begin JAISeqData) */
+/* top-level dependencies (end JAISeqData) */
+struct JAISeqData {
+};
+
+/* top-level dependencies (begin JAUSeqCollection) */
+// outer dependency: JAISeqDataRegion
+// outer dependency: JAISeqData
+/* top-level dependencies (end JAUSeqCollection) */
+struct JAUSeqCollection {
+	// JAISeqDataRegion
+	// JAISeqData
+	/* 802A66A0 */ JAUSeqCollection();
+	/* 802A66AC */ void init(void const*);
+	/* 802A66FC */ void getSeqData(s32, s32, JAISeqData*);
+	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
+};
+
+// build JAISeqData (JAISeqData) True/True
+// build JAISeqDataRegion (JAISeqDataRegion) True/True
+// build JAUSeqDataMgr_SeqCollection (JAUSeqDataMgr_SeqCollection) False/False
+// build JAISeqDataUser (JAISeqDataUser) False/False
+/* top-level dependencies (begin JAISeqDataUser) */
+/* top-level dependencies (end JAISeqDataUser) */
+struct JAISeqDataUser {
+};
+
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build JAISeqData (JAISeqData) True/True
+/* top-level dependencies (begin JAUSeqDataMgr_SeqCollection) */
+// outer dependency: JAISeqDataUser
+// outer dependency: JAISoundID
+// outer dependency: JAISeqData
+/* top-level dependencies (end JAUSeqDataMgr_SeqCollection) */
+struct JAUSeqDataMgr_SeqCollection {
+	// JAISeqDataUser
+	// JAISoundID
+	// JAISeqData
+	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
+	/* 802A67D0 */ void setSeqDataUser(JAISeqDataUser*);
+	/* 802A67DC */ void releaseSeqData();
+	/* 802A683C */ void getSeqData(JAISoundID, JAISeqData*);
+	/* 802A6894 */ ~JAUSeqDataMgr_SeqCollection();
+};
+
+// build JAISeqDataUser (JAISeqDataUser) True/True
+// build JAISoundID (JAISoundID) True/True
+// build JAISeqDataMgr (JAISeqDataMgr) False/False
+/* top-level dependencies (begin JAISeqDataMgr) */
+/* top-level dependencies (end JAISeqDataMgr) */
+struct JAISeqDataMgr {
+	/* 802A17BC */ ~JAISeqDataMgr();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16JAUSeqCollectionFv();
-extern "C" extern void init__16JAUSeqCollectionFPCv();
-extern "C" extern void getSeqData__16JAUSeqCollectionFiiP10JAISeqData();
-extern "C" extern void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion();
-extern "C" extern void __ct__27JAUSeqDataMgr_SeqCollectionFv();
-extern "C" extern void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser();
-extern "C" extern void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv();
-extern "C" extern void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData();
-extern "C" extern void __dt__27JAUSeqDataMgr_SeqCollectionFv();
+
+extern "C" void __ct__16JAUSeqCollectionFv();
+extern "C" void init__16JAUSeqCollectionFPCv();
+extern "C" void getSeqData__16JAUSeqCollectionFiiP10JAISeqData();
+extern "C" void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion();
+extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser();
+extern "C" void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData();
+extern "C" void __dt__27JAUSeqDataMgr_SeqCollectionFv();
 SECTION_DATA extern void*const __vt__27JAUSeqDataMgr_SeqCollection[6];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dt__13JAISeqDataMgrFv();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dt__13JAISeqDataMgrFv();
+extern "C" void __dl__FPv();
 SECTION_DATA extern void*const __vt__13JAISeqDataMgr[6];
 
 // 
 // Declarations:
 // 
 
-/* 802A66A0-802A66AC 000C+00 .text      __ct__16JAUSeqCollectionFv                                   */
+/* 802A66A0-802A66AC 000C+00 rc=1 efc=0 .text      __ct__16JAUSeqCollectionFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16JAUSeqCollectionFv) {
+asm JAUSeqCollection::JAUSeqCollection() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/__ct__16JAUSeqCollectionFv.s"
 }
 #pragma pop
 
 
-/* 802A66AC-802A66FC 0050+00 .text      init__16JAUSeqCollectionFPCv                                 */
+/* 802A66AC-802A66FC 0050+00 rc=1 efc=1 .text      init__16JAUSeqCollectionFPCv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__16JAUSeqCollectionFPCv) {
+asm void JAUSeqCollection::init(void const* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/init__16JAUSeqCollectionFPCv.s"
 }
 #pragma pop
 
 
-/* 802A66FC-802A6754 0058+00 .text      getSeqData__16JAUSeqCollectionFiiP10JAISeqData               */
+/* 802A66FC-802A6754 0058+00 rc=1 efc=0 .text      getSeqData__16JAUSeqCollectionFiiP10JAISeqData               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSeqData__16JAUSeqCollectionFiiP10JAISeqData) {
+asm void JAUSeqCollection::getSeqData(s32 field_0, s32 field_1, JAISeqData* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/getSeqData__16JAUSeqCollectionFiiP10JAISeqData.s"
 }
 #pragma pop
 
 
-/* 802A6754-802A677C 0028+00 .text      getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion     */
+/* 802A6754-802A677C 0028+00 rc=1 efc=0 .text      getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion) {
+asm void JAUSeqCollection::getSeqDataRegion(JAISeqDataRegion* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion.s"
 }
@@ -77,7 +151,7 @@ ASM_FUNCTION(getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion) {
 
 
 /* ############################################################################################## */
-/* 803C9B38-803C9B50 0018+00 .data      __vt__27JAUSeqDataMgr_SeqCollection                          */
+/* 803C9B38-803C9B50 0018+00 rc=2 efc=0 .data      __vt__27JAUSeqDataMgr_SeqCollection                          */
 void* const __vt__27JAUSeqDataMgr_SeqCollection[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -87,59 +161,58 @@ void* const __vt__27JAUSeqDataMgr_SeqCollection[6] = {
 	(void*)setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser,
 };
 
-/* 802A677C-802A67D0 0054+00 .text      __ct__27JAUSeqDataMgr_SeqCollectionFv                        */
+/* 802A677C-802A67D0 0054+00 rc=1 efc=1 .text      __ct__27JAUSeqDataMgr_SeqCollectionFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__27JAUSeqDataMgr_SeqCollectionFv) {
+asm JAUSeqDataMgr_SeqCollection::JAUSeqDataMgr_SeqCollection() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/__ct__27JAUSeqDataMgr_SeqCollectionFv.s"
 }
 #pragma pop
 
 
-/* 802A67D0-802A67DC 000C+00 .text      setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser */
+/* 802A67D0-802A67DC 000C+00 rc=1 efc=0 .text      setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser) {
+asm void JAUSeqDataMgr_SeqCollection::setSeqDataUser(JAISeqDataUser* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser.s"
 }
 #pragma pop
 
 
-/* 802A67DC-802A683C 0060+00 .text      releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv              */
+/* 802A67DC-802A683C 0060+00 rc=1 efc=0 .text      releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv) {
+asm void JAUSeqDataMgr_SeqCollection::releaseSeqData() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv.s"
 }
 #pragma pop
 
 
-/* 802A683C-802A6894 0058+00 .text      getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData */
+/* 802A683C-802A6894 0058+00 rc=1 efc=0 .text      getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData) {
+asm void JAUSeqDataMgr_SeqCollection::getSeqData(JAISoundID field_0, JAISeqData* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData.s"
 }
 #pragma pop
 
 
-/* 802A6894-802A68F4 0060+00 .text      __dt__27JAUSeqDataMgr_SeqCollectionFv                        */
+/* 802A6894-802A68F4 0060+00 rc=1 efc=0 .text      __dt__27JAUSeqDataMgr_SeqCollectionFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__27JAUSeqDataMgr_SeqCollectionFv) {
+asm JAUSeqDataMgr_SeqCollection::~JAUSeqDataMgr_SeqCollection() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/__dt__27JAUSeqDataMgr_SeqCollectionFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

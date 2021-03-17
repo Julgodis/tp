@@ -6,31 +6,131 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JASHeap (JASHeap) False/False
+// build JASDisposer (JASDisposer) False/False
+/* top-level dependencies (begin JASDisposer) */
+/* top-level dependencies (end JASDisposer) */
+struct JASDisposer {
+	/* 80290BCC */ void onDispose();
+};
+
+/* top-level dependencies (begin JASHeap) */
+// outer dependency: JASDisposer
+/* top-level dependencies (end JASHeap) */
+struct JASHeap {
+	// JASDisposer
+	/* 80290140 */ JASHeap(JASDisposer*);
+	/* 802901AC */ void initRootHeap(void*, u32);
+	/* 8029021C */ void alloc(JASHeap*, u32);
+	/* 802903F4 */ void allocTail(JASHeap*, u32);
+	/* 802904E4 */ void free();
+	/* 80290608 */ void insertChild(JASHeap*, JASHeap*, void*, u32, bool);
+	/* 802906F0 */ void getTailHeap();
+	/* 8029077C */ void getTailOffset();
+	/* 802907E0 */ void getCurOffset();
+	/* 80290B54 */ ~JASHeap();
+};
+
+// build JASDisposer (JASDisposer) True/True
+// build JASGenericMemPool (JASGenericMemPool) False/False
+/* top-level dependencies (begin JASGenericMemPool) */
+/* top-level dependencies (end JASGenericMemPool) */
+struct JASGenericMemPool {
+	/* 80290848 */ JASGenericMemPool();
+	/* 80290860 */ ~JASGenericMemPool();
+	/* 802908C8 */ void newMemPool(u32, s32);
+	/* 80290948 */ void alloc(u32);
+	/* 80290994 */ void free(void*, u32);
+};
+
+// build JASKernel (JASKernel) False/False
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+};
+
+/* top-level dependencies (begin JASKernel) */
+// outer dependency: JKRSolidHeap
+/* top-level dependencies (end JASKernel) */
+struct JASKernel {
+	// JKRSolidHeap
+	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
+	/* 80290AC0 */ void getSystemHeap();
+	/* 80290AC8 */ void getCommandHeap();
+	/* 80290AD0 */ void setupAramHeap(u32, u32);
+	/* 80290B08 */ void getAramHeap();
+};
+
+// build JKRSolidHeap (JKRSolidHeap) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin JKRExpHeap) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+	// JKRHeap
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+// build JSUPtrLink (JSUPtrLink) False/False
+/* top-level dependencies (begin JSUPtrLink) */
+/* top-level dependencies (end JSUPtrLink) */
+struct JSUPtrLink {
+	/* 802DBDFC */ JSUPtrLink(void*);
+	/* 802DBE14 */ ~JSUPtrLink();
+};
+
+// build JSUPtrList (JSUPtrList) False/False
+// build JSUPtrLink (JSUPtrLink) True/True
+/* top-level dependencies (begin JSUPtrList) */
+// outer dependency: JSUPtrLink
+/* top-level dependencies (end JSUPtrList) */
+struct JSUPtrList {
+	// JSUPtrLink
+	/* 802DBEAC */ ~JSUPtrList();
+	/* 802DBF14 */ void initiate();
+	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
+	/* 802DC15C */ void remove(JSUPtrLink*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__7JASHeapFP11JASDisposer();
-extern "C" extern void initRootHeap__7JASHeapFPvUl();
-extern "C" extern void alloc__7JASHeapFP7JASHeapUl();
-extern "C" extern void allocTail__7JASHeapFP7JASHeapUl();
-extern "C" extern void free__7JASHeapFv();
-extern "C" extern void insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb();
-extern "C" extern void getTailHeap__7JASHeapFv();
-extern "C" extern void getTailOffset__7JASHeapFv();
-extern "C" extern void getCurOffset__7JASHeapFv();
-extern "C" extern void __ct__17JASGenericMemPoolFv();
-extern "C" extern void __dt__17JASGenericMemPoolFv();
-extern "C" extern void newMemPool__17JASGenericMemPoolFUli();
-extern "C" extern void alloc__17JASGenericMemPoolFUl();
-extern "C" extern void free__17JASGenericMemPoolFPvUl();
-extern "C" extern void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
-extern "C" extern void getSystemHeap__9JASKernelFv();
-extern "C" extern void getCommandHeap__9JASKernelFv();
-extern "C" extern void setupAramHeap__9JASKernelFUlUl();
-extern "C" extern void getAramHeap__9JASKernelFv();
-extern "C" extern void __sinit_JASHeapCtrl_cpp();
-extern "C" extern void __dt__7JASHeapFv();
-extern "C" extern void onDispose__11JASDisposerFv();
+extern "C" void __sinit_JASHeapCtrl_cpp();
+
+extern "C" void __ct__7JASHeapFP11JASDisposer();
+extern "C" void initRootHeap__7JASHeapFPvUl();
+extern "C" void alloc__7JASHeapFP7JASHeapUl();
+extern "C" void allocTail__7JASHeapFP7JASHeapUl();
+extern "C" void free__7JASHeapFv();
+extern "C" void insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb();
+extern "C" void getTailHeap__7JASHeapFv();
+extern "C" void getTailOffset__7JASHeapFv();
+extern "C" void getCurOffset__7JASHeapFv();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void newMemPool__17JASGenericMemPoolFUli();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
+extern "C" void getSystemHeap__9JASKernelFv();
+extern "C" void getCommandHeap__9JASKernelFv();
+extern "C" void setupAramHeap__9JASKernelFUlUl();
+extern "C" void getAramHeap__9JASKernelFv();
+extern "C" void __sinit_JASHeapCtrl_cpp();
+extern "C" void __dt__7JASHeapFv();
+extern "C" void onDispose__11JASDisposerFv();
 SECTION_BSS extern u8 lit_313[12];
 SECTION_BSS extern u8 audioAramHeap__9JASKernel[68];
 SECTION_SBSS extern u8 JASDram[4];
@@ -42,150 +142,167 @@ SECTION_SBSS extern u8 sCommandHeap__9JASKernel[4];
 // External References:
 // 
 
-extern "C" extern void __nw__FUlP7JKRHeapi();
-extern "C" extern void __nwa__FUlP7JKRHeapi();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __dla__FPv();
-extern "C" extern void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" extern void __ct__10JSUPtrLinkFPv();
-extern "C" extern void __dt__10JSUPtrLinkFv();
-extern "C" extern void __dt__10JSUPtrListFv();
-extern "C" extern void initiate__10JSUPtrListFv();
-extern "C" extern void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
-extern "C" extern void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" extern void OSInitMutex();
-extern "C" extern void OSLockMutex();
-extern "C" extern void OSUnlockMutex();
-extern "C" extern void __register_global_object();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+void* operator new(u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, s32);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 
 // Declarations:
 // 
 
-/* 80290140-802901AC 006C+00 .text      __ct__7JASHeapFP11JASDisposer                                */
+/* 80290140-802901AC 006C+00 rc=3 efc=2 .text      __ct__7JASHeapFP11JASDisposer                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7JASHeapFP11JASDisposer) {
+asm JASHeap::JASHeap(JASDisposer* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/__ct__7JASHeapFP11JASDisposer.s"
 }
 #pragma pop
 
 
-/* 802901AC-8029021C 0070+00 .text      initRootHeap__7JASHeapFPvUl                                  */
+/* 802901AC-8029021C 0070+00 rc=1 efc=0 .text      initRootHeap__7JASHeapFPvUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initRootHeap__7JASHeapFPvUl) {
+asm void JASHeap::initRootHeap(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/initRootHeap__7JASHeapFPvUl.s"
 }
 #pragma pop
 
 
-/* 8029021C-802903F4 01D8+00 .text      alloc__7JASHeapFP7JASHeapUl                                  */
+/* 8029021C-802903F4 01D8+00 rc=2 efc=2 .text      alloc__7JASHeapFP7JASHeapUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alloc__7JASHeapFP7JASHeapUl) {
+asm void JASHeap::alloc(JASHeap* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/alloc__7JASHeapFP7JASHeapUl.s"
 }
 #pragma pop
 
 
-/* 802903F4-802904E4 00F0+00 .text      allocTail__7JASHeapFP7JASHeapUl                              */
+/* 802903F4-802904E4 00F0+00 rc=1 efc=1 .text      allocTail__7JASHeapFP7JASHeapUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allocTail__7JASHeapFP7JASHeapUl) {
+asm void JASHeap::allocTail(JASHeap* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/allocTail__7JASHeapFP7JASHeapUl.s"
 }
 #pragma pop
 
 
-/* 802904E4-80290608 0124+00 .text      free__7JASHeapFv                                             */
+/* 802904E4-80290608 0124+00 rc=4 efc=4 .text      free__7JASHeapFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(free__7JASHeapFv) {
+asm void JASHeap::free() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/free__7JASHeapFv.s"
 }
 #pragma pop
 
 
-/* 80290608-802906F0 00E8+00 .text      insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb                */
+/* 80290608-802906F0 00E8+00 rc=2 efc=0 .text      insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb) {
+asm void JASHeap::insertChild(JASHeap* field_0, JASHeap* field_1, void* field_2, u32 field_3, bool field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb.s"
 }
 #pragma pop
 
 
-/* 802906F0-8029077C 008C+00 .text      getTailHeap__7JASHeapFv                                      */
+/* 802906F0-8029077C 008C+00 rc=3 efc=0 .text      getTailHeap__7JASHeapFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTailHeap__7JASHeapFv) {
+asm void JASHeap::getTailHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getTailHeap__7JASHeapFv.s"
 }
 #pragma pop
 
 
-/* 8029077C-802907E0 0064+00 .text      getTailOffset__7JASHeapFv                                    */
+/* 8029077C-802907E0 0064+00 rc=2 efc=0 .text      getTailOffset__7JASHeapFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTailOffset__7JASHeapFv) {
+asm void JASHeap::getTailOffset() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getTailOffset__7JASHeapFv.s"
 }
 #pragma pop
 
 
-/* 802907E0-80290848 0068+00 .text      getCurOffset__7JASHeapFv                                     */
+/* 802907E0-80290848 0068+00 rc=2 efc=0 .text      getCurOffset__7JASHeapFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCurOffset__7JASHeapFv) {
+asm void JASHeap::getCurOffset() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getCurOffset__7JASHeapFv.s"
 }
 #pragma pop
 
 
-/* 80290848-80290860 0018+00 .text      __ct__17JASGenericMemPoolFv                                  */
+/* 80290848-80290860 0018+00 rc=32 efc=32 .text      __ct__17JASGenericMemPoolFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17JASGenericMemPoolFv) {
+asm JASGenericMemPool::JASGenericMemPool() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/__ct__17JASGenericMemPoolFv.s"
 }
 #pragma pop
 
 
-/* 80290860-802908C8 0068+00 .text      __dt__17JASGenericMemPoolFv                                  */
+/* 80290860-802908C8 0068+00 rc=9 efc=9 .text      __dt__17JASGenericMemPoolFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17JASGenericMemPoolFv) {
+asm JASGenericMemPool::~JASGenericMemPool() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/__dt__17JASGenericMemPoolFv.s"
 }
@@ -193,36 +310,36 @@ ASM_FUNCTION(__dt__17JASGenericMemPoolFv) {
 
 
 /* ############################################################################################## */
-/* 80451210-80451214 0004+00 .sbss      JASDram                                                      */
+/* 80451210-80451214 0004+00 rc=17 efc=15 .sbss      JASDram                                                      */
 u8 JASDram[4];
 
-/* 802908C8-80290948 0080+00 .text      newMemPool__17JASGenericMemPoolFUli                          */
+/* 802908C8-80290948 0080+00 rc=4 efc=4 .text      newMemPool__17JASGenericMemPoolFUli                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newMemPool__17JASGenericMemPoolFUli) {
+asm void JASGenericMemPool::newMemPool(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/newMemPool__17JASGenericMemPoolFUli.s"
 }
 #pragma pop
 
 
-/* 80290948-80290994 004C+00 .text      alloc__17JASGenericMemPoolFUl                                */
+/* 80290948-80290994 004C+00 rc=13 efc=13 .text      alloc__17JASGenericMemPoolFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(alloc__17JASGenericMemPoolFUl) {
+asm void JASGenericMemPool::alloc(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/alloc__17JASGenericMemPoolFUl.s"
 }
 #pragma pop
 
 
-/* 80290994-802909B8 0024+00 .text      free__17JASGenericMemPoolFPvUl                               */
+/* 80290994-802909B8 0024+00 rc=15 efc=15 .text      free__17JASGenericMemPoolFPvUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(free__17JASGenericMemPoolFPvUl) {
+asm void JASGenericMemPool::free(void* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/free__17JASGenericMemPoolFPvUl.s"
 }
@@ -230,42 +347,42 @@ ASM_FUNCTION(free__17JASGenericMemPoolFPvUl) {
 
 
 /* ############################################################################################## */
-/* 80451214-80451218 0004+00 .sbss      sAramBase__9JASKernel                                        */
+/* 80451214-80451218 0004+00 rc=1 efc=0 .sbss      sAramBase__9JASKernel                                        */
 u8 sAramBase__9JASKernel[4];
 
-/* 80451218-8045121C 0004+00 .sbss      sSystemHeap__9JASKernel                                      */
+/* 80451218-8045121C 0004+00 rc=2 efc=0 .sbss      sSystemHeap__9JASKernel                                      */
 u8 sSystemHeap__9JASKernel[4];
 
-/* 8045121C-80451220 0004+00 .sbss      sCommandHeap__9JASKernel                                     */
+/* 8045121C-80451220 0004+00 rc=2 efc=0 .sbss      sCommandHeap__9JASKernel                                     */
 u8 sCommandHeap__9JASKernel[4];
 
-/* 802909B8-80290AC0 0108+00 .text      setupRootHeap__9JASKernelFP12JKRSolidHeapUl                  */
+/* 802909B8-80290AC0 0108+00 rc=1 efc=1 .text      setupRootHeap__9JASKernelFP12JKRSolidHeapUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setupRootHeap__9JASKernelFP12JKRSolidHeapUl) {
+asm void JASKernel::setupRootHeap(JKRSolidHeap* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/setupRootHeap__9JASKernelFP12JKRSolidHeapUl.s"
 }
 #pragma pop
 
 
-/* 80290AC0-80290AC8 0008+00 .text      getSystemHeap__9JASKernelFv                                  */
+/* 80290AC0-80290AC8 0008+00 rc=4 efc=3 .text      getSystemHeap__9JASKernelFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSystemHeap__9JASKernelFv) {
+asm void JASKernel::getSystemHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getSystemHeap__9JASKernelFv.s"
 }
 #pragma pop
 
 
-/* 80290AC8-80290AD0 0008+00 .text      getCommandHeap__9JASKernelFv                                 */
+/* 80290AC8-80290AD0 0008+00 rc=6 efc=6 .text      getCommandHeap__9JASKernelFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getCommandHeap__9JASKernelFv) {
+asm void JASKernel::getCommandHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getCommandHeap__9JASKernelFv.s"
 }
@@ -273,65 +390,59 @@ ASM_FUNCTION(getCommandHeap__9JASKernelFv) {
 
 
 /* ############################################################################################## */
-/* 804315D0-804315DC 000C+00 .bss       @313                                                         */
+/* 804315D0-804315DC 000C+00 rc=1 efc=0 .bss       @313                                                         */
 u8 lit_313[12];
 
-/* 804315DC-80431620 0044+00 .bss       audioAramHeap__9JASKernel                                    */
+/* 804315DC-80431620 0044+00 rc=3 efc=0 .bss       audioAramHeap__9JASKernel                                    */
 u8 audioAramHeap__9JASKernel[68];
 
-/* 80290AD0-80290B08 0038+00 .text      setupAramHeap__9JASKernelFUlUl                               */
+/* 80290AD0-80290B08 0038+00 rc=1 efc=1 .text      setupAramHeap__9JASKernelFUlUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setupAramHeap__9JASKernelFUlUl) {
+asm void JASKernel::setupAramHeap(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/setupAramHeap__9JASKernelFUlUl.s"
 }
 #pragma pop
 
 
-/* 80290B08-80290B14 000C+00 .text      getAramHeap__9JASKernelFv                                    */
+/* 80290B08-80290B14 000C+00 rc=3 efc=3 .text      getAramHeap__9JASKernelFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAramHeap__9JASKernelFv) {
+asm void JASKernel::getAramHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/getAramHeap__9JASKernelFv.s"
 }
 #pragma pop
 
 
-/* 80290B14-80290B54 0040+00 .text      __sinit_JASHeapCtrl_cpp                                      */
+/* 80290B14-80290B54 0040+00 rc=1 efc=1 .text      __sinit_JASHeapCtrl_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_JASHeapCtrl_cpp) {
+extern "C" asm void __sinit_JASHeapCtrl_cpp() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/__sinit_JASHeapCtrl_cpp.s"
 }
 #pragma pop
 
 
-/* 80290B54-80290BCC 0078+00 .text      __dt__7JASHeapFv                                             */
+/* 80290B54-80290BCC 0078+00 rc=4 efc=3 .text      __dt__7JASHeapFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7JASHeapFv) {
+asm JASHeap::~JASHeap() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/__dt__7JASHeapFv.s"
 }
 #pragma pop
 
 
-/* 80290BCC-80290BD0 0004+00 .text      onDispose__11JASDisposerFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(onDispose__11JASDisposerFv) {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASHeapCtrl/onDispose__11JASDisposerFv.s"
+/* 80290BCC-80290BD0 0004+00 rc=1 efc=1 .text      onDispose__11JASDisposerFv                                   */
+void JASDisposer::onDispose() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

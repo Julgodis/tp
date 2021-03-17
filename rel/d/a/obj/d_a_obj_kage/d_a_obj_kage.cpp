@@ -6,15 +6,29 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_kage_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Kage_Draw__FP14obj_kage_class();
-extern "C" extern void daObj_Kage_Execute__FP14obj_kage_class();
-extern "C" extern void daObj_Kage_IsDelete__FP14obj_kage_class();
-extern "C" extern void daObj_Kage_Delete__FP14obj_kage_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Kage_Create__FP10fopAc_ac_c();
+void daObj_Kage_Draw(obj_kage_class*);
+void daObj_Kage_Execute(obj_kage_class*);
+bool daObj_Kage_IsDelete(obj_kage_class*);
+void daObj_Kage_Delete(obj_kage_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Kage_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Kage_Draw__FP14obj_kage_class();
+extern "C" void daObj_Kage_Execute__FP14obj_kage_class();
+extern "C" bool daObj_Kage_IsDelete__FP14obj_kage_class();
+extern "C" void daObj_Kage_Delete__FP14obj_kage_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Kage_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3854[4];
 SECTION_RODATA extern const u32 lit_3855;
 SECTION_RODATA extern const u32 lit_3856;
@@ -36,7 +50,9 @@ SECTION_DATA extern u8 g_profile_OBJ_KAGE[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -46,7 +62,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kage_Draw__FP14obj_kage_class) {
+asm void daObj_Kage_Draw(obj_kage_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Draw__FP14obj_kage_class.s"
 }
@@ -57,7 +73,7 @@ ASM_FUNCTION(daObj_Kage_Draw__FP14obj_kage_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kage_Execute__FP14obj_kage_class) {
+asm void daObj_Kage_Execute(obj_kage_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Execute__FP14obj_kage_class.s"
 }
@@ -65,21 +81,16 @@ ASM_FUNCTION(daObj_Kage_Execute__FP14obj_kage_class) {
 
 
 /* 80C31764-80C3176C 0008+00 .text      daObj_Kage_IsDelete__FP14obj_kage_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kage_IsDelete__FP14obj_kage_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_IsDelete__FP14obj_kage_class.s"
+bool daObj_Kage_IsDelete(obj_kage_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C3176C-80C3179C 0030+00 .text      daObj_Kage_Delete__FP14obj_kage_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kage_Delete__FP14obj_kage_class) {
+asm void daObj_Kage_Delete(obj_kage_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Delete__FP14obj_kage_class.s"
 }
@@ -90,7 +101,7 @@ ASM_FUNCTION(daObj_Kage_Delete__FP14obj_kage_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -101,7 +112,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Kage_Create__FP10fopAc_ac_c) {
+asm void daObj_Kage_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_Create__FP10fopAc_ac_c.s"
 }

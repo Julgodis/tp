@@ -6,22 +6,208 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+};
+
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
+/* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end dMsgStringBase_c) */
+struct dMsgStringBase_c {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 802493B4 */ dMsgStringBase_c();
+	/* 80249528 */ ~dMsgStringBase_c();
+	/* 80249700 */ void getResource();
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 802498D8 */ void getStringPageLocal(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249A48 */ void getPageMax(s32);
+	/* 80249A70 */ void getMessageLocal(u32, char*);
+	/* 80249BAC */ void drawFontLocal(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+	/* 80249BB0 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249BD0 */ void getStringPage(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249BF8 */ void getMessage(u32, char*);
+	/* 80249C18 */ void resetStringLocal(J2DTextBox*);
+	/* 80249C1C */ void drawOutFontLocal(J2DTextBox*, f32);
+};
+
+// build J2DTextBox (J2DTextBox) True/True
+// build JUTFont (JUTFont) True/True
+// build COutFont_c (COutFont_c) True/True
+// build jmessage_string_tReference (jmessage_string_tReference) False/False
+// build JUTFont (JUTFont) True/True
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) True/True
+/* top-level dependencies (begin jmessage_string_tReference) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end jmessage_string_tReference) */
+struct jmessage_string_tReference {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 8022F8C0 */ jmessage_string_tReference();
+	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 8022FA38 */ void getLineLength(s32);
+};
+
+// build jmessage_string_tControl (jmessage_string_tControl) False/False
+/* top-level dependencies (begin jmessage_string_tControl) */
+/* top-level dependencies (end jmessage_string_tControl) */
+struct jmessage_string_tControl {
+	/* 8022FB5C */ jmessage_string_tControl();
+};
+
+// build jmessage_string_tSequenceProcessor (jmessage_string_tSequenceProcessor) False/False
+// build jmessage_string_tControl (jmessage_string_tControl) True/True
+// build jmessage_string_tReference (jmessage_string_tReference) True/True
+/* top-level dependencies (begin jmessage_string_tSequenceProcessor) */
+// outer dependency: jmessage_string_tControl
+// outer dependency: jmessage_string_tReference
+/* top-level dependencies (end jmessage_string_tSequenceProcessor) */
+struct jmessage_string_tSequenceProcessor {
+	// jmessage_string_tControl
+	// jmessage_string_tReference
+	/* 80230A08 */ jmessage_string_tSequenceProcessor(jmessage_string_tReference const*, jmessage_string_tControl*);
+};
+
+// build jmessage_string_tRenderingProcessor (jmessage_string_tRenderingProcessor) False/False
+// build jmessage_string_tReference (jmessage_string_tReference) True/True
+/* top-level dependencies (begin jmessage_string_tRenderingProcessor) */
+// outer dependency: jmessage_string_tReference
+/* top-level dependencies (end jmessage_string_tRenderingProcessor) */
+struct jmessage_string_tRenderingProcessor {
+	// jmessage_string_tReference
+	/* 80230BC8 */ jmessage_string_tRenderingProcessor(jmessage_string_tReference const*);
+};
+
+// build JMessage (JMessage) False/False
+// build JMessage (JMessage) True/False
+struct JMessage;
+/* top-level dependencies (begin JMessage) */
+// outer dependency: JMessage::TResourceContainer
+/* top-level dependencies (end JMessage) */
+struct JMessage {
+	// build TControl (JMessage::TControl) False/False
+	/* dependencies (begin JMessage::TControl) */
+	/* dependencies (end JMessage::TControl) */
+	struct TControl {
+		/* 802A75D4 */ void reset();
+		/* 802A7634 */ void update();
+		/* 802A76BC */ void render();
+		/* 802A78F4 */ void setMessageID(u32, u32, bool*);
+	};
+
+	// build TResourceContainer (JMessage::TResourceContainer) False/False
+	/* dependencies (begin JMessage::TResourceContainer) */
+	/* dependencies (end JMessage::TResourceContainer) */
+	struct TResourceContainer {
+		// build TCResource (JMessage::TResourceContainer::TCResource) False/False
+		/* dependencies (begin JMessage::TResourceContainer::TCResource) */
+		/* dependencies (end JMessage::TResourceContainer::TCResource) */
+		struct TCResource {
+			/* 802A8EF8 */ ~TCResource();
+		};
+
+		/* 802A906C */ TResourceContainer();
+	};
+
+	// build TParse (JMessage::TParse) False/False
+	/* dependencies (begin JMessage::TParse) */
+	// inner dependency: TResourceContainer (JMessage::TResourceContainer) True False (for JMessage::TParse)
+	// build TResourceContainer (JMessage::TResourceContainer) True/True
+	/* dependencies (end JMessage::TParse) */
+	struct TParse {
+		// JMessage::TResourceContainer
+		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
+	};
+
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+// build JGadget (JGadget) False/False
+// build JGadget (JGadget) True/False
+struct JGadget;
+/* top-level dependencies (begin JGadget) */
+// outer dependency: JGadget::TNodeLinkList::iterator
+/* top-level dependencies (end JGadget) */
+struct JGadget {
+	// build binary (JGadget::binary) False/False
+	/* dependencies (begin JGadget::binary) */
+	/* dependencies (end JGadget::binary) */
+	struct binary {
+		// build TParse_header_block (JGadget::binary::TParse_header_block) False/False
+		/* dependencies (begin JGadget::binary::TParse_header_block) */
+		/* dependencies (end JGadget::binary::TParse_header_block) */
+		struct TParse_header_block {
+			/* 802DC910 */ void parse_next(void const**, u32);
+		};
+
+	};
+
+	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
+	/* dependencies (begin JGadget::TNodeLinkList) */
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
+	/* dependencies (end JGadget::TNodeLinkList) */
+	struct TNodeLinkList {
+		// JGadget::TNodeLinkList::iterator
+		// build iterator (JGadget::TNodeLinkList::iterator) False/False
+		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
+		/* dependencies (end JGadget::TNodeLinkList::iterator) */
+		struct iterator {
+		};
+
+		/* 802DCA58 */ void erase(JGadget::TNodeLinkList::iterator);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16dMsgStringBase_cFv();
-extern "C" extern void __dt__16dMsgStringBase_cFv();
-extern "C" extern void getResource__16dMsgStringBase_cFv();
-extern "C" extern void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getPageMax__16dMsgStringBase_cFi();
-extern "C" extern void getMessageLocal__16dMsgStringBase_cFUlPc();
-extern "C" extern void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc();
-extern "C" extern void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getMessage__16dMsgStringBase_cFUlPc();
-extern "C" extern void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox();
-extern "C" extern void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf();
+
+extern "C" void __ct__16dMsgStringBase_cFv();
+extern "C" void __dt__16dMsgStringBase_cFv();
+extern "C" void getResource__16dMsgStringBase_cFv();
+extern "C" void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getPageMax__16dMsgStringBase_cFi();
+extern "C" void getMessageLocal__16dMsgStringBase_cFUlPc();
+extern "C" void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getMessage__16dMsgStringBase_cFUlPc();
+extern "C" void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox();
+extern "C" void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf();
 SECTION_RODATA extern const u8 d_msg_d_msg_string_base__stringBase0[24];
 SECTION_DATA extern void*const __vt__16dMsgStringBase_c[8];
 SECTION_SDATA2 extern u8 d_msg_d_msg_string_base__lit_4046[4 + 4 /* padding */];
@@ -30,33 +216,45 @@ SECTION_SDATA2 extern u8 d_msg_d_msg_string_base__lit_4046[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" extern void __ct__26jmessage_string_tReferenceFv();
-extern "C" extern void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getLineLength__26jmessage_string_tReferenceFi();
-extern "C" extern void __ct__24jmessage_string_tControlFv();
-extern "C" extern void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
-extern "C" extern void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
-extern "C" extern void reset__Q28JMessage8TControlFv();
-extern "C" extern void update__Q28JMessage8TControlFv();
-extern "C" extern void render__Q28JMessage8TControlFv();
-extern "C" extern void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern "C" extern void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" extern void __ct__Q28JMessage18TResourceContainerFv();
-extern "C" extern void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
-extern "C" extern void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcpy();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
+
+extern "C" void __ct__26jmessage_string_tReferenceFv();
+extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getLineLength__26jmessage_string_tReferenceFi();
+extern "C" void __ct__24jmessage_string_tControlFv();
+extern "C" void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
+extern "C" void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
+extern "C" void reset__Q28JMessage8TControlFv();
+extern "C" void update__Q28JMessage8TControlFv();
+extern "C" void render__Q28JMessage8TControlFv();
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void __ct__Q28JMessage18TResourceContainerFv();
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];
 
@@ -65,7 +263,7 @@ SECTION_BSS extern u8 g_meter2_info[248];
 // 
 
 /* ############################################################################################## */
-/* 803C1478-803C1498 0020+00 .data      __vt__16dMsgStringBase_c                                     */
+/* 803C1478-803C1498 0020+00 rc=2 efc=0 .data      __vt__16dMsgStringBase_c                                     */
 void* const __vt__16dMsgStringBase_c[8] = {
 	NULL, /* RTTI */
 	NULL,
@@ -77,22 +275,22 @@ void* const __vt__16dMsgStringBase_c[8] = {
 	(void*)drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc,
 };
 
-/* 802493B4-80249528 0174+00 .text      __ct__16dMsgStringBase_cFv                                   */
+/* 802493B4-80249528 0174+00 rc=2 efc=2 .text      __ct__16dMsgStringBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dMsgStringBase_cFv) {
+asm dMsgStringBase_c::dMsgStringBase_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/__ct__16dMsgStringBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80249528-80249700 01D8+00 .text      __dt__16dMsgStringBase_cFv                                   */
+/* 80249528-80249700 01D8+00 rc=1 efc=1 .text      __dt__16dMsgStringBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dMsgStringBase_cFv) {
+asm dMsgStringBase_c::~dMsgStringBase_c() {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/__dt__16dMsgStringBase_cFv.s"
 }
@@ -100,7 +298,7 @@ ASM_FUNCTION(__dt__16dMsgStringBase_cFv) {
 
 
 /* ############################################################################################## */
-/* 80399C98-80399CB0 0013+05 .rodata    @stringBase0                                                 */
+/* 80399C98-80399CB0 0013+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -110,22 +308,22 @@ SECTION_DEAD char* const stringBase_80399CA3 = """\x1B""CR[%d]";
 SECTION_DEAD char* const pad_80399CAB = "\0\0\0\0";
 #pragma pop
 
-/* 80249700-80249768 0068+00 .text      getResource__16dMsgStringBase_cFv                            */
+/* 80249700-80249768 0068+00 rc=3 efc=2 .text      getResource__16dMsgStringBase_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResource__16dMsgStringBase_cFv) {
+asm void dMsgStringBase_c::getResource() {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getResource__16dMsgStringBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80249768-802498D8 0170+00 .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249768-802498D8 0170+00 rc=2 efc=1 .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgStringBase_c::getStringLocal(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
@@ -133,110 +331,94 @@ ASM_FUNCTION(getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JU
 
 
 /* ############################################################################################## */
-/* 80454D70-80454D78 0004+04 .sdata2    @4046                                                        */
+/* 80454D70-80454D78 0004+04 rc=2 efc=0 .sdata2    @4046                                                        */
 u8 d_msg_d_msg_string_base__lit_4046[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802498D8-80249A48 0170+00 .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 802498D8-80249A48 0170+00 rc=2 efc=1 .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgStringBase_c::getStringPageLocal(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/func_802498D8.s"
 }
 #pragma pop
 
 
-/* 80249A48-80249A70 0028+00 .text      getPageMax__16dMsgStringBase_cFi                             */
+/* 80249A48-80249A70 0028+00 rc=1 efc=1 .text      getPageMax__16dMsgStringBase_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPageMax__16dMsgStringBase_cFi) {
+asm void dMsgStringBase_c::getPageMax(s32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getPageMax__16dMsgStringBase_cFi.s"
 }
 #pragma pop
 
 
-/* 80249A70-80249BAC 013C+00 .text      getMessageLocal__16dMsgStringBase_cFUlPc                     */
+/* 80249A70-80249BAC 013C+00 rc=1 efc=0 .text      getMessageLocal__16dMsgStringBase_cFUlPc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessageLocal__16dMsgStringBase_cFUlPc) {
+asm void dMsgStringBase_c::getMessageLocal(u32 field_0, char* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getMessageLocal__16dMsgStringBase_cFUlPc.s"
 }
 #pragma pop
 
 
-/* 80249BAC-80249BB0 0004+00 .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc.s"
+/* 80249BAC-80249BB0 0004+00 rc=1 efc=0 .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
+void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80249BB0-80249BD0 0020+00 .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BB0-80249BD0 0020+00 rc=1 efc=0 .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgStringBase_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
 #pragma pop
 
 
-/* 80249BD0-80249BF8 0028+00 .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BD0-80249BF8 0028+00 rc=1 efc=0 .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgStringBase_c::getStringPage(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
 #pragma pop
 
 
-/* 80249BF8-80249C18 0020+00 .text      getMessage__16dMsgStringBase_cFUlPc                          */
+/* 80249BF8-80249C18 0020+00 rc=2 efc=1 .text      getMessage__16dMsgStringBase_cFUlPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMessage__16dMsgStringBase_cFUlPc) {
+asm void dMsgStringBase_c::getMessage(u32 field_0, char* field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getMessage__16dMsgStringBase_cFUlPc.s"
 }
 #pragma pop
 
 
-/* 80249C18-80249C1C 0004+00 .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(resetStringLocal__16dMsgStringBase_cFP10J2DTextBox) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/resetStringLocal__16dMsgStringBase_cFP10J2DTextBox.s"
+/* 80249C18-80249C1C 0004+00 rc=1 efc=0 .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
+void dMsgStringBase_c::resetStringLocal(J2DTextBox* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80249C1C-80249C20 0004+00 .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf.s"
+/* 80249C1C-80249C20 0004+00 rc=1 efc=0 .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
+void dMsgStringBase_c::drawOutFontLocal(J2DTextBox* field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

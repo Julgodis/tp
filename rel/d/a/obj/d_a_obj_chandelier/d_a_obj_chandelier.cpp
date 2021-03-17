@@ -6,31 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjChandelier_c;
+
+struct daObjChandelier_c {
+	daObjChandelier_c();
+	~daObjChandelier_c();
+	void CreateHeap();
+	void create1st();
+	void Delete();
+	void Draw();
+	void exeModeWait();
+	void exeModeStartSwg();
+	void exeModeDown();
+	void exeModeEndSwg();
+	void exeModeHookSwg();
+	void init();
+	void setModelMtx();
+	void moveSwing(f32, f32, f32, f32);
+	void moveSwingFall();
+	void hookSwingInitParm();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daObjChandelier_cFv();
-extern "C" extern void __dt__17daObjChandelier_cFv();
-extern "C" extern void CreateHeap__17daObjChandelier_cFv();
-extern "C" extern void create1st__17daObjChandelier_cFv();
-extern "C" extern void Delete__17daObjChandelier_cFv();
-extern "C" extern void Draw__17daObjChandelier_cFv();
-extern "C" extern void Execute__17daObjChandelier_cFPPA3_A4_f();
-extern "C" extern void exeModeWait__17daObjChandelier_cFv();
-extern "C" extern void exeModeStartSwg__17daObjChandelier_cFv();
-extern "C" extern void exeModeDown__17daObjChandelier_cFv();
-extern "C" extern void exeModeEndSwg__17daObjChandelier_cFv();
-extern "C" extern void exeModeHookSwg__17daObjChandelier_cFv();
-extern "C" extern void init__17daObjChandelier_cFv();
-extern "C" extern void setModelMtx__17daObjChandelier_cFv();
-extern "C" extern void moveSwing__17daObjChandelier_cFffff();
-extern "C" extern void moveSwingFall__17daObjChandelier_cFv();
-extern "C" extern void hookSwingInitParm__17daObjChandelier_cFv();
-extern "C" extern void daObjChandelier_create1st__FP17daObjChandelier_c();
-extern "C" extern void daObjChandelier_MoveBGDelete__FP17daObjChandelier_c();
-extern "C" extern void daObjChandelier_MoveBGExecute__FP17daObjChandelier_c();
-extern "C" extern void daObjChandelier_MoveBGDraw__FP17daObjChandelier_c();
-extern "C" extern void __sinit_d_a_obj_chandelier_cpp();
+extern "C" void Execute__17daObjChandelier_cFPPA3_A4_f();
+void daObjChandelier_create1st(daObjChandelier_c*);
+void daObjChandelier_MoveBGDelete(daObjChandelier_c*);
+void daObjChandelier_MoveBGExecute(daObjChandelier_c*);
+void daObjChandelier_MoveBGDraw(daObjChandelier_c*);
+extern "C" void __sinit_d_a_obj_chandelier_cpp();
+
+extern "C" void __ct__17daObjChandelier_cFv();
+extern "C" void __dt__17daObjChandelier_cFv();
+extern "C" void CreateHeap__17daObjChandelier_cFv();
+extern "C" void create1st__17daObjChandelier_cFv();
+extern "C" void Delete__17daObjChandelier_cFv();
+extern "C" void Draw__17daObjChandelier_cFv();
+extern "C" void Execute__17daObjChandelier_cFPPA3_A4_f();
+extern "C" void exeModeWait__17daObjChandelier_cFv();
+extern "C" void exeModeStartSwg__17daObjChandelier_cFv();
+extern "C" void exeModeDown__17daObjChandelier_cFv();
+extern "C" void exeModeEndSwg__17daObjChandelier_cFv();
+extern "C" void exeModeHookSwg__17daObjChandelier_cFv();
+extern "C" void init__17daObjChandelier_cFv();
+extern "C" void setModelMtx__17daObjChandelier_cFv();
+extern "C" void moveSwing__17daObjChandelier_cFffff();
+extern "C" void moveSwingFall__17daObjChandelier_cFv();
+extern "C" void hookSwingInitParm__17daObjChandelier_cFv();
+extern "C" void daObjChandelier_create1st__FP17daObjChandelier_c();
+extern "C" void daObjChandelier_MoveBGDelete__FP17daObjChandelier_c();
+extern "C" void daObjChandelier_MoveBGExecute__FP17daObjChandelier_c();
+extern "C" void daObjChandelier_MoveBGDraw__FP17daObjChandelier_c();
+extern "C" void __sinit_d_a_obj_chandelier_cpp();
 SECTION_RODATA extern const u32 lit_3731;
 SECTION_RODATA extern const u8 lit_3732[4];
 SECTION_RODATA extern const u32 lit_3733;
@@ -74,7 +106,9 @@ SECTION_DATA extern void*const __vt__17daObjChandelier_c[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -84,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daObjChandelier_cFv) {
+asm daObjChandelier_c::daObjChandelier_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/__ct__17daObjChandelier_cFv.s"
 }
@@ -95,7 +129,7 @@ ASM_FUNCTION(__ct__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daObjChandelier_cFv) {
+asm daObjChandelier_c::~daObjChandelier_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/__dt__17daObjChandelier_cFv.s"
 }
@@ -106,7 +140,7 @@ ASM_FUNCTION(__dt__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/CreateHeap__17daObjChandelier_cFv.s"
 }
@@ -117,7 +151,7 @@ ASM_FUNCTION(CreateHeap__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/create1st__17daObjChandelier_cFv.s"
 }
@@ -128,7 +162,7 @@ ASM_FUNCTION(create1st__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/Delete__17daObjChandelier_cFv.s"
 }
@@ -139,7 +173,7 @@ ASM_FUNCTION(Delete__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/Draw__17daObjChandelier_cFv.s"
 }
@@ -150,7 +184,7 @@ ASM_FUNCTION(Draw__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__17daObjChandelier_cFPPA3_A4_f) {
+extern "C" asm void Execute__17daObjChandelier_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/Execute__17daObjChandelier_cFPPA3_A4_f.s"
 }
@@ -161,7 +195,7 @@ ASM_FUNCTION(Execute__17daObjChandelier_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeWait__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::exeModeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/exeModeWait__17daObjChandelier_cFv.s"
 }
@@ -172,7 +206,7 @@ ASM_FUNCTION(exeModeWait__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeStartSwg__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::exeModeStartSwg() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/exeModeStartSwg__17daObjChandelier_cFv.s"
 }
@@ -183,7 +217,7 @@ ASM_FUNCTION(exeModeStartSwg__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeDown__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::exeModeDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/exeModeDown__17daObjChandelier_cFv.s"
 }
@@ -194,7 +228,7 @@ ASM_FUNCTION(exeModeDown__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeEndSwg__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::exeModeEndSwg() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/exeModeEndSwg__17daObjChandelier_cFv.s"
 }
@@ -205,7 +239,7 @@ ASM_FUNCTION(exeModeEndSwg__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeHookSwg__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::exeModeHookSwg() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/exeModeHookSwg__17daObjChandelier_cFv.s"
 }
@@ -216,7 +250,7 @@ ASM_FUNCTION(exeModeHookSwg__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/init__17daObjChandelier_cFv.s"
 }
@@ -227,7 +261,7 @@ ASM_FUNCTION(init__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/setModelMtx__17daObjChandelier_cFv.s"
 }
@@ -238,7 +272,7 @@ ASM_FUNCTION(setModelMtx__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveSwing__17daObjChandelier_cFffff) {
+asm void daObjChandelier_c::moveSwing(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/moveSwing__17daObjChandelier_cFffff.s"
 }
@@ -249,7 +283,7 @@ ASM_FUNCTION(moveSwing__17daObjChandelier_cFffff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveSwingFall__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::moveSwingFall() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/moveSwingFall__17daObjChandelier_cFv.s"
 }
@@ -260,7 +294,7 @@ ASM_FUNCTION(moveSwingFall__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hookSwingInitParm__17daObjChandelier_cFv) {
+asm void daObjChandelier_c::hookSwingInitParm() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/hookSwingInitParm__17daObjChandelier_cFv.s"
 }
@@ -271,7 +305,7 @@ ASM_FUNCTION(hookSwingInitParm__17daObjChandelier_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChandelier_create1st__FP17daObjChandelier_c) {
+asm void daObjChandelier_create1st(daObjChandelier_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/daObjChandelier_create1st__FP17daObjChandelier_c.s"
 }
@@ -282,7 +316,7 @@ ASM_FUNCTION(daObjChandelier_create1st__FP17daObjChandelier_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChandelier_MoveBGDelete__FP17daObjChandelier_c) {
+asm void daObjChandelier_MoveBGDelete(daObjChandelier_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/daObjChandelier_MoveBGDelete__FP17daObjChandelier_c.s"
 }
@@ -293,7 +327,7 @@ ASM_FUNCTION(daObjChandelier_MoveBGDelete__FP17daObjChandelier_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChandelier_MoveBGExecute__FP17daObjChandelier_c) {
+asm void daObjChandelier_MoveBGExecute(daObjChandelier_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/daObjChandelier_MoveBGExecute__FP17daObjChandelier_c.s"
 }
@@ -304,7 +338,7 @@ ASM_FUNCTION(daObjChandelier_MoveBGExecute__FP17daObjChandelier_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjChandelier_MoveBGDraw__FP17daObjChandelier_c) {
+asm void daObjChandelier_MoveBGDraw(daObjChandelier_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/daObjChandelier_MoveBGDraw__FP17daObjChandelier_c.s"
 }
@@ -315,7 +349,7 @@ ASM_FUNCTION(daObjChandelier_MoveBGDraw__FP17daObjChandelier_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_chandelier_cpp) {
+extern "C" asm void __sinit_d_a_obj_chandelier_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_chandelier/d_a_obj_chandelier/__sinit_d_a_obj_chandelier_cpp.s"
 }

@@ -6,35 +6,87 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv3Water2_c;
+
+struct daLv3Water2_HIO_c {
+	daLv3Water2_HIO_c();
+	~daLv3Water2_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv3Water2_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void mode_proc_wait();
+	void mode_init_levelCtrl();
+	void mode_proc_levelCtrl();
+	void Draw();
+	void Delete();
+	void eventStart();
+	~daLv3Water2_c();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daLv3Water2_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daLv3Water2_cFv();
-extern "C" extern void CreateHeap__13daLv3Water2_cFv();
-extern "C" extern void create__13daLv3Water2_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__13daLv3Water2_cFPPA3_A4_f();
-extern "C" extern void mode_proc_wait__13daLv3Water2_cFv();
-extern "C" extern void mode_init_levelCtrl__13daLv3Water2_cFv();
-extern "C" extern void mode_proc_levelCtrl__13daLv3Water2_cFv();
-extern "C" extern void Draw__13daLv3Water2_cFv();
-extern "C" extern void Delete__13daLv3Water2_cFv();
-extern "C" extern void eventStart__13daLv3Water2_cFv();
-extern "C" extern void daLv3Water2_Draw__FP13daLv3Water2_c();
-extern "C" extern void daLv3Water2_Execute__FP13daLv3Water2_c();
-extern "C" extern void daLv3Water2_Delete__FP13daLv3Water2_c();
-extern "C" extern void daLv3Water2_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daLv3Water2_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv3Water2_cpp();
-extern "C" extern void func_80C5B228();
-extern "C" extern void func_80C5B230();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__13daLv3Water2_cFv();
+extern "C" void Execute__13daLv3Water2_cFPPA3_A4_f();
+void daLv3Water2_Draw(daLv3Water2_c*);
+void daLv3Water2_Execute(daLv3Water2_c*);
+void daLv3Water2_Delete(daLv3Water2_c*);
+void daLv3Water2_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv3Water2_cpp();
+extern "C" void func_80C5B228();
+extern "C" void func_80C5B230();
+
+extern "C" void __ct__17daLv3Water2_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv3Water2_cFv();
+extern "C" void CreateHeap__13daLv3Water2_cFv();
+extern "C" void create__13daLv3Water2_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__13daLv3Water2_cFPPA3_A4_f();
+extern "C" void mode_proc_wait__13daLv3Water2_cFv();
+extern "C" void mode_init_levelCtrl__13daLv3Water2_cFv();
+extern "C" void mode_proc_levelCtrl__13daLv3Water2_cFv();
+extern "C" void Draw__13daLv3Water2_cFv();
+extern "C" void Delete__13daLv3Water2_cFv();
+extern "C" void eventStart__13daLv3Water2_cFv();
+extern "C" void daLv3Water2_Draw__FP13daLv3Water2_c();
+extern "C" void daLv3Water2_Execute__FP13daLv3Water2_c();
+extern "C" void daLv3Water2_Delete__FP13daLv3Water2_c();
+extern "C" void daLv3Water2_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daLv3Water2_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv3Water2_cpp();
+extern "C" void func_80C5B228();
+extern "C" void func_80C5B230();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__13daLv3Water2_cFv();
 SECTION_RODATA extern const u32 l_bmdIdx;
 SECTION_RODATA extern const u32 l_dzbIdx;
 SECTION_RODATA extern const u32 l_btkIdx;
@@ -67,8 +119,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -78,7 +133,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daLv3Water2_HIO_cFv) {
+asm daLv3Water2_HIO_c::daLv3Water2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__ct__17daLv3Water2_HIO_cFv.s"
 }
@@ -89,7 +144,7 @@ ASM_FUNCTION(__ct__17daLv3Water2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -100,7 +155,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/setBaseMtx__13daLv3Water2_cFv.s"
 }
@@ -111,7 +166,7 @@ ASM_FUNCTION(setBaseMtx__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/CreateHeap__13daLv3Water2_cFv.s"
 }
@@ -122,7 +177,7 @@ ASM_FUNCTION(CreateHeap__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/create__13daLv3Water2_cFv.s"
 }
@@ -133,7 +188,7 @@ ASM_FUNCTION(create__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -144,7 +199,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daLv3Water2_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daLv3Water2_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/Execute__13daLv3Water2_cFPPA3_A4_f.s"
 }
@@ -155,7 +210,7 @@ ASM_FUNCTION(Execute__13daLv3Water2_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_wait__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::mode_proc_wait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/mode_proc_wait__13daLv3Water2_cFv.s"
 }
@@ -166,7 +221,7 @@ ASM_FUNCTION(mode_proc_wait__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_init_levelCtrl__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::mode_init_levelCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/mode_init_levelCtrl__13daLv3Water2_cFv.s"
 }
@@ -177,7 +232,7 @@ ASM_FUNCTION(mode_init_levelCtrl__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_levelCtrl__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::mode_proc_levelCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/mode_proc_levelCtrl__13daLv3Water2_cFv.s"
 }
@@ -188,7 +243,7 @@ ASM_FUNCTION(mode_proc_levelCtrl__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/Draw__13daLv3Water2_cFv.s"
 }
@@ -199,7 +254,7 @@ ASM_FUNCTION(Draw__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/Delete__13daLv3Water2_cFv.s"
 }
@@ -210,7 +265,7 @@ ASM_FUNCTION(Delete__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__13daLv3Water2_cFv) {
+asm void daLv3Water2_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/eventStart__13daLv3Water2_cFv.s"
 }
@@ -221,7 +276,7 @@ ASM_FUNCTION(eventStart__13daLv3Water2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv3Water2_Draw__FP13daLv3Water2_c) {
+asm void daLv3Water2_Draw(daLv3Water2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/daLv3Water2_Draw__FP13daLv3Water2_c.s"
 }
@@ -232,7 +287,7 @@ ASM_FUNCTION(daLv3Water2_Draw__FP13daLv3Water2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv3Water2_Execute__FP13daLv3Water2_c) {
+asm void daLv3Water2_Execute(daLv3Water2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/daLv3Water2_Execute__FP13daLv3Water2_c.s"
 }
@@ -243,7 +298,7 @@ ASM_FUNCTION(daLv3Water2_Execute__FP13daLv3Water2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv3Water2_Delete__FP13daLv3Water2_c) {
+asm void daLv3Water2_Delete(daLv3Water2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/daLv3Water2_Delete__FP13daLv3Water2_c.s"
 }
@@ -254,7 +309,7 @@ ASM_FUNCTION(daLv3Water2_Delete__FP13daLv3Water2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv3Water2_Create__FP10fopAc_ac_c) {
+asm void daLv3Water2_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/daLv3Water2_Create__FP10fopAc_ac_c.s"
 }
@@ -265,7 +320,7 @@ ASM_FUNCTION(daLv3Water2_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv3Water2_HIO_cFv) {
+asm daLv3Water2_HIO_c::~daLv3Water2_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__dt__17daLv3Water2_HIO_cFv.s"
 }
@@ -276,7 +331,7 @@ ASM_FUNCTION(__dt__17daLv3Water2_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv3Water2_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv3Water2_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__sinit_d_a_obj_lv3Water2_cpp.s"
 }
@@ -287,7 +342,7 @@ ASM_FUNCTION(__sinit_d_a_obj_lv3Water2_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C5B228) {
+extern "C" asm void func_80C5B228() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/func_80C5B228.s"
 }
@@ -298,7 +353,7 @@ ASM_FUNCTION(func_80C5B228) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C5B230) {
+extern "C" asm void func_80C5B230() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/func_80C5B230.s"
 }
@@ -309,7 +364,7 @@ ASM_FUNCTION(func_80C5B230) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__dt__17dEvLib_callback_cFv.s"
 }
@@ -317,43 +372,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C5B280-80C5B288 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5B288-80C5B290 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5B290-80C5B298 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5B298-80C5B350 00B8+00 .text      __dt__13daLv3Water2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daLv3Water2_cFv) {
+asm daLv3Water2_c::~daLv3Water2_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3Water2/d_a_obj_lv3Water2/__dt__13daLv3Water2_cFv.s"
 }

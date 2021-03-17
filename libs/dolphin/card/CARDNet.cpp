@@ -9,25 +9,30 @@
 // Forward References:
 // 
 
-extern "C" extern void CARDGetSerialNo();
+extern "C" void CARDGetSerialNo();
+
+extern "C" void CARDGetSerialNo();
 SECTION_SDATA extern u8 struct_80450A70[8];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __CARDGetControlBlock();
-extern "C" extern void __CARDPutControlBlock();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
 
 // 
 // Declarations:
 // 
 
-/* 80359158-8035921C 00C4+00 .text      CARDGetSerialNo                                              */
+/* 80359158-8035921C 00C4+00 rc=1 efc=1 .text      CARDGetSerialNo                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CARDGetSerialNo) {
+extern "C" asm void CARDGetSerialNo() {
 	nofralloc
 #include "asm/dolphin/card/CARDNet/CARDGetSerialNo.s"
 }
@@ -35,7 +40,7 @@ ASM_FUNCTION(CARDGetSerialNo) {
 
 
 /* ############################################################################################## */
-/* 80450A70-80450A78 0008+00 .sdata     None                                                         */
+/* 80450A70-80450A78 0008+00 rc=4 efc=4 .sdata     None                                                         */
 u8 struct_80450A70[8] = {
 	/* data_80450A70 */
 	0xFF, 0xFF,

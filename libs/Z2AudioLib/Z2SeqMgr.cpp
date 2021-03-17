@@ -6,56 +6,221 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build Z2SeqMgr (Z2SeqMgr) False/False
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+/* top-level dependencies (begin Z2SeqMgr) */
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	// JAISoundHandle
+	/* 802AEEA0 */ Z2SeqMgr();
+	/* 802AF010 */ void bgmStart(u32, u32, s32);
+	/* 802AF408 */ void bgmStop(u32, s32);
+	/* 802AF49C */ void subBgmStart(u32);
+	/* 802AF884 */ void subBgmStop();
+	/* 802AF9D0 */ void subBgmStopInner();
+	/* 802AFB94 */ void bgmStreamPrepare(u32);
+	/* 802AFDEC */ void bgmStreamCheckReady();
+	/* 802AFE18 */ void bgmStreamPlay();
+	/* 802AFEDC */ void bgmStreamStop(u32);
+	/* 802AFF8C */ void changeBgmStatus(s32);
+	/* 802B1DF4 */ void changeSubBgmStatus(s32);
+	/* 802B299C */ void onVariantBgmJumpEnd(bool);
+	/* 802B2A88 */ void changeFishingBgm(s32);
+	/* 802B2CA4 */ void talkInBgm();
+	/* 802B2D64 */ void talkOutBgm();
+	/* 802B2DAC */ void menuInBgm();
+	/* 802B2DF4 */ void menuOutBgm();
+	/* 802B2E3C */ void fanfareFramework();
+	/* 802B327C */ void stopWolfHowlSong();
+	/* 802B3318 */ void setHeightVolMod(bool, u32);
+	/* 802B3398 */ void setTimeProcVolMod(bool, u32);
+	/* 802B33A8 */ void processBgmFramework();
+	/* 802B3EAC */ void checkBgmIDPlaying(u32);
+	/* 802B3F40 */ void getChildTrackVolume(JAISoundHandle*, s32);
+	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, s32, f32, u32, f32, f32);
+	/* 802B4128 */ void resetBattleBgmParams();
+	/* 802B4164 */ void setBattleBgmOff(bool);
+	/* 802B421C */ void setBattleSearched(bool);
+	/* 802B43D0 */ void setBattleDistIgnore(bool);
+	/* 802B43E0 */ void setBattleGhostMute(bool);
+	/* 802B4498 */ void setBattleDistState(char);
+	/* 802B4844 */ void setBattleSeqState(char);
+	/* 802B4AFC */ void setBattleLastHit(char);
+	/* 802B4BD0 */ void battleBgmFramework();
+	/* 802B4EB0 */ void startBattleBgm(bool);
+	/* 802B5204 */ void stopBattleBgm(char, char);
+	/* 802B545C */ void fieldBgmStart();
+	/* 802B556C */ void fieldRidingMute();
+	/* 802B5750 */ void onFieldBgmJumpStart();
+	/* 802B579C */ void onFieldBgmJumpEnd();
+	/* 802B594C */ void fieldBgmFramework();
+	/* 802B5E80 */ void mbossBgmMuteProcess();
+	/* 802B5E84 */ void bgmSetSwordUsing(s32);
+	/* 802B5E88 */ void bgmNowBattle(f32);
+	/* 802B5E8C */ void taktModeMute();
+	/* 802B5ED4 */ void taktModeMuteOff();
+};
+
+// build JAISoundHandle (JAISoundHandle) True/True
+// build JAISeqMgr (JAISeqMgr) False/False
+/* top-level dependencies (begin JAISeqMgr) */
+/* top-level dependencies (end JAISeqMgr) */
+struct JAISeqMgr {
+	/* 802A1C90 */ void calc();
+	/* 802A1E3C */ void stop(u32);
+	/* 802A1EFC */ void mixOut();
+};
+
+// build JAISound (JAISound) False/False
+/* top-level dependencies (begin JAISound) */
+/* top-level dependencies (end JAISound) */
+struct JAISound {
+	/* 802A21A0 */ void releaseHandle();
+	/* 802A24DC */ void stop(u32);
+	/* 802A2598 */ void stop();
+};
+
+// build JAISoundStatus_ (JAISoundStatus_) False/False
+/* top-level dependencies (begin JAISoundStatus_) */
+/* top-level dependencies (end JAISoundStatus_) */
+struct JAISoundStatus_ {
+	/* 802A2220 */ void lockWhenPrepared();
+	/* 802A2244 */ void unlockIfLocked();
+};
+
+// build JAISoundParamsMove (JAISoundParamsMove) False/False
+/* top-level dependencies (begin JAISoundParamsMove) */
+/* top-level dependencies (end JAISoundParamsMove) */
+struct JAISoundParamsMove {
+	/* 802A2DB4 */ void moveVolume(f32, u32);
+	/* 802A2EBC */ void movePan(f32, u32);
+	/* 802A2F14 */ void moveDolby(f32, u32);
+};
+
+// build JAIStreamMgr (JAIStreamMgr) False/False
+/* top-level dependencies (begin JAIStreamMgr) */
+/* top-level dependencies (end JAIStreamMgr) */
+struct JAIStreamMgr {
+	/* 802A4068 */ void stop(u32);
+};
+
+// build Z2Calc (Z2Calc) False/False
+// build Z2Calc (Z2Calc) True/False
+struct Z2Calc;
+/* top-level dependencies (begin Z2Calc) */
+// outer dependency: Z2Calc::CurveSign
+/* top-level dependencies (end Z2Calc) */
+struct Z2Calc {
+	// Z2Calc::CurveSign
+	// build CurveSign (Z2Calc::CurveSign) False/False
+	/* dependencies (begin Z2Calc::CurveSign) */
+	/* dependencies (end Z2Calc::CurveSign) */
+	struct CurveSign {
+	};
+
+	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
+	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
+};
+
+// build Z2SoundStarter (Z2SoundStarter) False/False
+// build JAISoundHandle (JAISoundHandle) True/True
+/* top-level dependencies (begin Z2SoundStarter) */
+// outer dependency: JAISoundHandle
+/* top-level dependencies (end Z2SoundStarter) */
+struct Z2SoundStarter {
+	// JAISoundHandle
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, char);
+};
+
+// build Z2StatusMgr (Z2StatusMgr) False/False
+/* top-level dependencies (begin Z2StatusMgr) */
+/* top-level dependencies (end Z2StatusMgr) */
+struct Z2StatusMgr {
+	/* 802B61E8 */ void setDemoName(char*);
+	/* 802B6734 */ void checkDayTime();
+};
+
+// build Z2SceneMgr (Z2SceneMgr) False/False
+/* top-level dependencies (begin Z2SceneMgr) */
+/* top-level dependencies (end Z2SceneMgr) */
+struct Z2SceneMgr {
+	/* 802B68E0 */ void setSceneExist(bool);
+};
+
+// build Z2SoundObjMgr (Z2SoundObjMgr) False/False
+/* top-level dependencies (begin Z2SoundObjMgr) */
+/* top-level dependencies (end Z2SoundObjMgr) */
+struct Z2SoundObjMgr {
+	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
+	/* 802BF994 */ void searchEnemy();
+	/* 802C0100 */ void setBattleInit();
+	/* 802C0120 */ void checkBattleFinish();
+	/* 802C01E4 */ void isTwilightBattle();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__8Z2SeqMgrFv();
-extern "C" extern void bgmStart__8Z2SeqMgrFUlUll();
-extern "C" extern void bgmStop__8Z2SeqMgrFUll();
-extern "C" extern void subBgmStart__8Z2SeqMgrFUl();
-extern "C" extern void subBgmStop__8Z2SeqMgrFv();
-extern "C" extern void subBgmStopInner__8Z2SeqMgrFv();
-extern "C" extern void bgmStreamPrepare__8Z2SeqMgrFUl();
-extern "C" extern void bgmStreamCheckReady__8Z2SeqMgrFv();
-extern "C" extern void bgmStreamPlay__8Z2SeqMgrFv();
-extern "C" extern void bgmStreamStop__8Z2SeqMgrFUl();
-extern "C" extern void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" extern void changeSubBgmStatus__8Z2SeqMgrFl();
-extern "C" extern void onVariantBgmJumpEnd__8Z2SeqMgrFb();
-extern "C" extern void changeFishingBgm__8Z2SeqMgrFl();
-extern "C" extern void talkInBgm__8Z2SeqMgrFv();
-extern "C" extern void talkOutBgm__8Z2SeqMgrFv();
-extern "C" extern void menuInBgm__8Z2SeqMgrFv();
-extern "C" extern void menuOutBgm__8Z2SeqMgrFv();
-extern "C" extern void fanfareFramework__8Z2SeqMgrFv();
-extern "C" extern void stopWolfHowlSong__8Z2SeqMgrFv();
-extern "C" extern void setHeightVolMod__8Z2SeqMgrFbUl();
-extern "C" extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
-extern "C" extern void processBgmFramework__8Z2SeqMgrFv();
-extern "C" extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
-extern "C" extern void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
-extern "C" extern void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
-extern "C" extern void resetBattleBgmParams__8Z2SeqMgrFv();
-extern "C" extern void setBattleBgmOff__8Z2SeqMgrFb();
-extern "C" extern void setBattleSearched__8Z2SeqMgrFb();
-extern "C" extern void setBattleDistIgnore__8Z2SeqMgrFb();
-extern "C" extern void setBattleGhostMute__8Z2SeqMgrFb();
-extern "C" extern void setBattleDistState__8Z2SeqMgrFUc();
-extern "C" extern void setBattleSeqState__8Z2SeqMgrFUc();
-extern "C" extern void setBattleLastHit__8Z2SeqMgrFUc();
-extern "C" extern void battleBgmFramework__8Z2SeqMgrFv();
-extern "C" extern void startBattleBgm__8Z2SeqMgrFb();
-extern "C" extern void stopBattleBgm__8Z2SeqMgrFUcUc();
-extern "C" extern void fieldBgmStart__8Z2SeqMgrFv();
-extern "C" extern void fieldRidingMute__8Z2SeqMgrFv();
-extern "C" extern void onFieldBgmJumpStart__8Z2SeqMgrFv();
-extern "C" extern void onFieldBgmJumpEnd__8Z2SeqMgrFv();
-extern "C" extern void fieldBgmFramework__8Z2SeqMgrFv();
-extern "C" extern void mbossBgmMuteProcess__8Z2SeqMgrFv();
-extern "C" extern void bgmSetSwordUsing__8Z2SeqMgrFl();
-extern "C" extern void bgmNowBattle__8Z2SeqMgrFf();
-extern "C" extern void taktModeMute__8Z2SeqMgrFv();
-extern "C" extern void taktModeMuteOff__8Z2SeqMgrFv();
+
+extern "C" void __ct__8Z2SeqMgrFv();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void subBgmStopInner__8Z2SeqMgrFv();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb();
+extern "C" void changeFishingBgm__8Z2SeqMgrFl();
+extern "C" void talkInBgm__8Z2SeqMgrFv();
+extern "C" void talkOutBgm__8Z2SeqMgrFv();
+extern "C" void menuInBgm__8Z2SeqMgrFv();
+extern "C" void menuOutBgm__8Z2SeqMgrFv();
+extern "C" void fanfareFramework__8Z2SeqMgrFv();
+extern "C" void stopWolfHowlSong__8Z2SeqMgrFv();
+extern "C" void setHeightVolMod__8Z2SeqMgrFbUl();
+extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl();
+extern "C" void processBgmFramework__8Z2SeqMgrFv();
+extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+extern "C" void resetBattleBgmParams__8Z2SeqMgrFv();
+extern "C" void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" void setBattleSearched__8Z2SeqMgrFb();
+extern "C" void setBattleDistIgnore__8Z2SeqMgrFb();
+extern "C" void setBattleGhostMute__8Z2SeqMgrFb();
+extern "C" void setBattleDistState__8Z2SeqMgrFUc();
+extern "C" void setBattleSeqState__8Z2SeqMgrFUc();
+extern "C" void setBattleLastHit__8Z2SeqMgrFUc();
+extern "C" void battleBgmFramework__8Z2SeqMgrFv();
+extern "C" void startBattleBgm__8Z2SeqMgrFb();
+extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc();
+extern "C" void fieldBgmStart__8Z2SeqMgrFv();
+extern "C" void fieldRidingMute__8Z2SeqMgrFv();
+extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv();
+extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv();
+extern "C" void fieldBgmFramework__8Z2SeqMgrFv();
+extern "C" void mbossBgmMuteProcess__8Z2SeqMgrFv();
+extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl();
+extern "C" void bgmNowBattle__8Z2SeqMgrFf();
+extern "C" void taktModeMute__8Z2SeqMgrFv();
+extern "C" void taktModeMuteOff__8Z2SeqMgrFv();
 SECTION_RODATA extern const u8 Z2SeqMgr__stringBase0[640];
 SECTION_DATA extern void*Z2SeqMgr__lit_3900[165];
 SECTION_DATA extern void*lit_3988[159];
@@ -99,37 +264,44 @@ SECTION_SDATA2 extern f32 lit_5913;
 // External References:
 // 
 
-extern "C" extern void calc__9JAISeqMgrFv();
-extern "C" extern void stop__9JAISeqMgrFUl();
-extern "C" extern void mixOut__9JAISeqMgrFv();
-extern "C" extern void releaseSound__14JAISoundHandleFv();
-extern "C" extern void releaseHandle__8JAISoundFv();
-extern "C" extern void lockWhenPrepared__15JAISoundStatus_Fv();
-extern "C" extern void unlockIfLocked__15JAISoundStatus_Fv();
-extern "C" extern void stop__8JAISoundFUl();
-extern "C" extern void stop__8JAISoundFv();
-extern "C" extern void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" extern void movePan__18JAISoundParamsMoveFfUl();
-extern "C" extern void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" extern void stop__12JAIStreamMgrFUl();
-extern "C" extern void linearTransform__6Z2CalcFfffffb();
-extern "C" extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" extern void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
-extern "C" extern void setDemoName__11Z2StatusMgrFPc();
-extern "C" extern void checkDayTime__11Z2StatusMgrFv();
-extern "C" extern void setSceneExist__10Z2SceneMgrFb();
-extern "C" extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern "C" extern void searchEnemy__13Z2SoundObjMgrFv();
-extern "C" extern void setBattleInit__13Z2SoundObjMgrFv();
-extern "C" extern void checkBattleFinish__13Z2SoundObjMgrFv();
-extern "C" extern void isTwilightBattle__13Z2SoundObjMgrFv();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+
+extern "C" void calc__9JAISeqMgrFv();
+extern "C" void stop__9JAISeqMgrFUl();
+extern "C" void mixOut__9JAISeqMgrFv();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void releaseHandle__8JAISoundFv();
+extern "C" void lockWhenPrepared__15JAISoundStatus_Fv();
+extern "C" void unlockIfLocked__15JAISoundStatus_Fv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void stop__12JAIStreamMgrFUl();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void checkDayTime__11Z2StatusMgrFv();
+extern "C" void setSceneExist__10Z2SceneMgrFb();
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" void searchEnemy__13Z2SoundObjMgrFv();
+extern "C" void setBattleInit__13Z2SoundObjMgrFv();
+extern "C" void checkBattleFinish__13Z2SoundObjMgrFv();
+extern "C" void isTwilightBattle__13Z2SoundObjMgrFv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
 SECTION_SDATA extern f32 VOL_BGM_TALKING__7Z2Param;
 SECTION_SDATA extern f32 VOL_BGM_PAUSING__7Z2Param;
@@ -151,19 +323,19 @@ SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80455998-8045599C 0004+00 .sdata2    @3372                                                        */
+/* 80455998-8045599C 0004+00 rc=23 efc=0 .sdata2    @3372                                                        */
 f32 lit_3372 = 1.0f;
 
-/* 8045599C-804559A0 0004+00 .sdata2    @3373                                                        */
+/* 8045599C-804559A0 0004+00 rc=23 efc=0 .sdata2    @3373                                                        */
 u8 lit_3373[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802AEEA0-802AF010 0170+00 .text      __ct__8Z2SeqMgrFv                                            */
+/* 802AEEA0-802AF010 0170+00 rc=1 efc=1 .text      __ct__8Z2SeqMgrFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8Z2SeqMgrFv) {
+asm Z2SeqMgr::Z2SeqMgr() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/__ct__8Z2SeqMgrFv.s"
 }
@@ -171,29 +343,29 @@ ASM_FUNCTION(__ct__8Z2SeqMgrFv) {
 
 
 /* ############################################################################################## */
-/* 804559A0-804559A8 0004+04 .sdata2    @3559                                                        */
+/* 804559A0-804559A8 0004+04 rc=1 efc=0 .sdata2    @3559                                                        */
 f32 Z2SeqMgr__lit_3559 = -10000.0f;
 /* padding 4 bytes */
 
-/* 804559A8-804559B0 0008+00 .sdata2    @3561                                                        */
+/* 804559A8-804559B0 0008+00 rc=22 efc=0 .sdata2    @3561                                                        */
 f64 Z2SeqMgr__lit_3561 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802AF010-802AF408 03F8+00 .text      bgmStart__8Z2SeqMgrFUlUll                                    */
+/* 802AF010-802AF408 03F8+00 rc=8 efc=5 .text      bgmStart__8Z2SeqMgrFUlUll                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStart__8Z2SeqMgrFUlUll) {
+asm void Z2SeqMgr::bgmStart(u32 field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStart__8Z2SeqMgrFUlUll.s"
 }
 #pragma pop
 
 
-/* 802AF408-802AF49C 0094+00 .text      bgmStop__8Z2SeqMgrFUll                                       */
+/* 802AF408-802AF49C 0094+00 rc=8 efc=5 .text      bgmStop__8Z2SeqMgrFUll                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStop__8Z2SeqMgrFUll) {
+asm void Z2SeqMgr::bgmStop(u32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStop__8Z2SeqMgrFUll.s"
 }
@@ -201,7 +373,7 @@ ASM_FUNCTION(bgmStop__8Z2SeqMgrFUll) {
 
 
 /* ############################################################################################## */
-/* 8039BA08-8039BC88 0280+00 .rodata    @stringBase0                                                 */
+/* 8039BA08-8039BC88 0280+00 rc=4 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -290,7 +462,7 @@ SECTION_DEAD char* const stringBase_8039BC72 = "force_start";
 SECTION_DEAD char* const stringBase_8039BC7E = "force_end";
 #pragma pop
 
-/* 803C9DF8-803CA08C 0294+00 .data      @3900                                                        */
+/* 803C9DF8-803CA08C 0294+00 rc=1 efc=0 .data      @3900                                                        */
 void* Z2SeqMgr__lit_3900[165] = {
 	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
@@ -459,11 +631,11 @@ void* Z2SeqMgr__lit_3900[165] = {
 	(void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 };
 
-/* 802AF49C-802AF884 03E8+00 .text      subBgmStart__8Z2SeqMgrFUl                                    */
+/* 802AF49C-802AF884 03E8+00 rc=9 efc=6 .text      subBgmStart__8Z2SeqMgrFUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(subBgmStart__8Z2SeqMgrFUl) {
+asm void Z2SeqMgr::subBgmStart(u32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/subBgmStart__8Z2SeqMgrFUl.s"
 }
@@ -471,7 +643,7 @@ ASM_FUNCTION(subBgmStart__8Z2SeqMgrFUl) {
 
 
 /* ############################################################################################## */
-/* 803CA08C-803CA308 027C+00 .data      @3988                                                        */
+/* 803CA08C-803CA308 027C+00 rc=1 efc=0 .data      @3988                                                        */
 void* lit_3988[159] = {
 	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
 	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
@@ -634,66 +806,66 @@ void* lit_3988[159] = {
 	(void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xF4),
 };
 
-/* 802AF884-802AF9D0 014C+00 .text      subBgmStop__8Z2SeqMgrFv                                      */
+/* 802AF884-802AF9D0 014C+00 rc=8 efc=4 .text      subBgmStop__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(subBgmStop__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::subBgmStop() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/subBgmStop__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802AF9D0-802AFB94 01C4+00 .text      subBgmStopInner__8Z2SeqMgrFv                                 */
+/* 802AF9D0-802AFB94 01C4+00 rc=2 efc=0 .text      subBgmStopInner__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(subBgmStopInner__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::subBgmStopInner() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/subBgmStopInner__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802AFB94-802AFDEC 0258+00 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
+/* 802AFB94-802AFDEC 0258+00 rc=4 efc=3 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStreamPrepare__8Z2SeqMgrFUl) {
+asm void Z2SeqMgr::bgmStreamPrepare(u32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPrepare__8Z2SeqMgrFUl.s"
 }
 #pragma pop
 
 
-/* 802AFDEC-802AFE18 002C+00 .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
+/* 802AFDEC-802AFE18 002C+00 rc=1 efc=1 .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStreamCheckReady__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::bgmStreamCheckReady() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamCheckReady__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802AFE18-802AFEDC 00C4+00 .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
+/* 802AFE18-802AFEDC 00C4+00 rc=5 efc=4 .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStreamPlay__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::bgmStreamPlay() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamPlay__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802AFEDC-802AFF8C 00B0+00 .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
+/* 802AFEDC-802AFF8C 00B0+00 rc=3 efc=1 .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bgmStreamStop__8Z2SeqMgrFUl) {
+asm void Z2SeqMgr::bgmStreamStop(u32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/bgmStreamStop__8Z2SeqMgrFUl.s"
 }
@@ -701,7 +873,7 @@ ASM_FUNCTION(bgmStreamStop__8Z2SeqMgrFUl) {
 
 
 /* ############################################################################################## */
-/* 803CA308-803CA33C 0034+00 .data      @4739                                                        */
+/* 803CA308-803CA33C 0034+00 rc=1 efc=0 .data      @4739                                                        */
 void* Z2SeqMgr__lit_4739[13] = {
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
@@ -718,142 +890,142 @@ void* Z2SeqMgr__lit_4739[13] = {
 	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x3C0),
 };
 
-/* 804559B0-804559B4 0004+00 .sdata2    @4726                                                        */
+/* 804559B0-804559B4 0004+00 rc=1 efc=0 .sdata2    @4726                                                        */
 f32 Z2SeqMgr__lit_4726 = 13.0f / 20.0f;
 
-/* 804559B4-804559B8 0004+00 .sdata2    @4727                                                        */
+/* 804559B4-804559B8 0004+00 rc=10 efc=0 .sdata2    @4727                                                        */
 f32 Z2SeqMgr__lit_4727 = -1.0f;
 
-/* 804559B8-804559BC 0004+00 .sdata2    @4728                                                        */
+/* 804559B8-804559BC 0004+00 rc=1 efc=0 .sdata2    @4728                                                        */
 f32 Z2SeqMgr__lit_4728 = 29.0f / 100.0f;
 
-/* 804559BC-804559C0 0004+00 .sdata2    @4729                                                        */
+/* 804559BC-804559C0 0004+00 rc=1 efc=0 .sdata2    @4729                                                        */
 f32 Z2SeqMgr__lit_4729 = 7.0f / 20.0f;
 
-/* 804559C0-804559C4 0004+00 .sdata2    @4730                                                        */
+/* 804559C0-804559C4 0004+00 rc=1 efc=0 .sdata2    @4730                                                        */
 f32 Z2SeqMgr__lit_4730 = 3.0f / 5.0f;
 
-/* 804559C4-804559C8 0004+00 .sdata2    @4731                                                        */
+/* 804559C4-804559C8 0004+00 rc=2 efc=0 .sdata2    @4731                                                        */
 f32 Z2SeqMgr__lit_4731 = 0.5f;
 
-/* 804559C8-804559CC 0004+00 .sdata2    @4732                                                        */
+/* 804559C8-804559CC 0004+00 rc=3 efc=0 .sdata2    @4732                                                        */
 f32 Z2SeqMgr__lit_4732 = 3.0f / 10.0f;
 
-/* 804559CC-804559D0 0004+00 .sdata2    @4733                                                        */
+/* 804559CC-804559D0 0004+00 rc=1 efc=0 .sdata2    @4733                                                        */
 f32 Z2SeqMgr__lit_4733 = 3100.0f;
 
-/* 804559D0-804559D4 0004+00 .sdata2    @4734                                                        */
+/* 804559D0-804559D4 0004+00 rc=1 efc=0 .sdata2    @4734                                                        */
 f32 Z2SeqMgr__lit_4734 = 200.0f;
 
-/* 804559D4-804559D8 0004+00 .sdata2    @4735                                                        */
+/* 804559D4-804559D8 0004+00 rc=1 efc=0 .sdata2    @4735                                                        */
 f32 Z2SeqMgr__lit_4735 = 1600.0f;
 
-/* 804559D8-804559DC 0004+00 .sdata2    @4736                                                        */
+/* 804559D8-804559DC 0004+00 rc=1 efc=0 .sdata2    @4736                                                        */
 f32 Z2SeqMgr__lit_4736 = 4.0f / 5.0f;
 
-/* 804559DC-804559E0 0004+00 .sdata2    @4737                                                        */
+/* 804559DC-804559E0 0004+00 rc=1 efc=0 .sdata2    @4737                                                        */
 f32 Z2SeqMgr__lit_4737 = 3150.0f;
 
-/* 804559E0-804559E8 0004+04 .sdata2    @4738                                                        */
+/* 804559E0-804559E8 0004+04 rc=1 efc=0 .sdata2    @4738                                                        */
 f32 Z2SeqMgr__lit_4738 = 6150.0f;
 /* padding 4 bytes */
 
-/* 804559E8-804559F0 0008+00 .sdata2    @4741                                                        */
+/* 804559E8-804559F0 0008+00 rc=1 efc=0 .sdata2    @4741                                                        */
 f64 Z2SeqMgr__lit_4741 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802AFF8C-802B1DF4 1E68+00 .text      changeBgmStatus__8Z2SeqMgrFl                                 */
+/* 802AFF8C-802B1DF4 1E68+00 rc=13 efc=8 .text      changeBgmStatus__8Z2SeqMgrFl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeBgmStatus__8Z2SeqMgrFl) {
+asm void Z2SeqMgr::changeBgmStatus(s32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/changeBgmStatus__8Z2SeqMgrFl.s"
 }
 #pragma pop
 
 
-/* 802B1DF4-802B299C 0BA8+00 .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
+/* 802B1DF4-802B299C 0BA8+00 rc=5 efc=3 .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeSubBgmStatus__8Z2SeqMgrFl) {
+asm void Z2SeqMgr::changeSubBgmStatus(s32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/changeSubBgmStatus__8Z2SeqMgrFl.s"
 }
 #pragma pop
 
 
-/* 802B299C-802B2A88 00EC+00 .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
+/* 802B299C-802B2A88 00EC+00 rc=1 efc=1 .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onVariantBgmJumpEnd__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::onVariantBgmJumpEnd(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/onVariantBgmJumpEnd__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
 
-/* 802B2A88-802B2CA4 021C+00 .text      changeFishingBgm__8Z2SeqMgrFl                                */
+/* 802B2A88-802B2CA4 021C+00 rc=1 efc=0 .text      changeFishingBgm__8Z2SeqMgrFl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeFishingBgm__8Z2SeqMgrFl) {
+asm void Z2SeqMgr::changeFishingBgm(s32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/changeFishingBgm__8Z2SeqMgrFl.s"
 }
 #pragma pop
 
 
-/* 802B2CA4-802B2D64 00C0+00 .text      talkInBgm__8Z2SeqMgrFv                                       */
+/* 802B2CA4-802B2D64 00C0+00 rc=1 efc=1 .text      talkInBgm__8Z2SeqMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talkInBgm__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::talkInBgm() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/talkInBgm__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B2D64-802B2DAC 0048+00 .text      talkOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2D64-802B2DAC 0048+00 rc=1 efc=1 .text      talkOutBgm__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talkOutBgm__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::talkOutBgm() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/talkOutBgm__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B2DAC-802B2DF4 0048+00 .text      menuInBgm__8Z2SeqMgrFv                                       */
+/* 802B2DAC-802B2DF4 0048+00 rc=1 efc=1 .text      menuInBgm__8Z2SeqMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuInBgm__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::menuInBgm() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/menuInBgm__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B2DF4-802B2E3C 0048+00 .text      menuOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2DF4-802B2E3C 0048+00 rc=1 efc=1 .text      menuOutBgm__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuOutBgm__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::menuOutBgm() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/menuOutBgm__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B2E3C-802B327C 0440+00 .text      fanfareFramework__8Z2SeqMgrFv                                */
+/* 802B2E3C-802B327C 0440+00 rc=1 efc=0 .text      fanfareFramework__8Z2SeqMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fanfareFramework__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::fanfareFramework() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/fanfareFramework__8Z2SeqMgrFv.s"
 }
@@ -861,7 +1033,7 @@ ASM_FUNCTION(fanfareFramework__8Z2SeqMgrFv) {
 
 
 /* ############################################################################################## */
-/* 803CA33C-803CA3F8 00BC+00 .data      @5219                                                        */
+/* 803CA33C-803CA3F8 00BC+00 rc=1 efc=0 .data      @5219                                                        */
 void* lit_5219[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
@@ -912,7 +1084,7 @@ void* lit_5219[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 };
 
-/* 803CA3F8-803CA4B4 00BC+00 .data      @5218                                                        */
+/* 803CA3F8-803CA4B4 00BC+00 rc=1 efc=0 .data      @5218                                                        */
 void* lit_5218[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
@@ -963,33 +1135,33 @@ void* lit_5218[47] = {
 	(void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 };
 
-/* 802B327C-802B3318 009C+00 .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
+/* 802B327C-802B3318 009C+00 rc=3 efc=1 .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopWolfHowlSong__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::stopWolfHowlSong() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/stopWolfHowlSong__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B3318-802B3398 0080+00 .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
+/* 802B3318-802B3398 0080+00 rc=1 efc=1 .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHeightVolMod__8Z2SeqMgrFbUl) {
+asm void Z2SeqMgr::setHeightVolMod(bool field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setHeightVolMod__8Z2SeqMgrFbUl.s"
 }
 #pragma pop
 
 
-/* 802B3398-802B33A8 0010+00 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
+/* 802B3398-802B33A8 0010+00 rc=1 efc=1 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTimeProcVolMod__8Z2SeqMgrFbUl) {
+asm void Z2SeqMgr::setTimeProcVolMod(bool field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setTimeProcVolMod__8Z2SeqMgrFbUl.s"
 }
@@ -997,125 +1169,125 @@ ASM_FUNCTION(setTimeProcVolMod__8Z2SeqMgrFbUl) {
 
 
 /* ############################################################################################## */
-/* 80450870-80450874 0004+00 .sdata     sDeathMtBottom                                               */
+/* 80450870-80450874 0004+00 rc=1 efc=0 .sdata     sDeathMtBottom                                               */
 f32 sDeathMtBottom = -1000.0f;
 
-/* 80450874-80450878 0004+00 .sdata     sDeathMtTop                                                  */
+/* 80450874-80450878 0004+00 rc=1 efc=0 .sdata     sDeathMtTop                                                  */
 f32 sDeathMtTop = 3650.0f;
 
-/* 80450878-80450880 0004+04 .sdata     sUnderWaterDepthMax                                          */
+/* 80450878-80450880 0004+04 rc=1 efc=0 .sdata     sUnderWaterDepthMax                                          */
 f32 sUnderWaterDepthMax = 3500.0f;
 /* padding 4 bytes */
 
-/* 804559F0-804559F4 0004+00 .sdata2    @5673                                                        */
+/* 804559F0-804559F4 0004+00 rc=1 efc=0 .sdata2    @5673                                                        */
 f32 lit_5673 = -10500.0f;
 
-/* 804559F4-804559F8 0004+00 .sdata2    @5674                                                        */
+/* 804559F4-804559F8 0004+00 rc=1 efc=0 .sdata2    @5674                                                        */
 f32 lit_5674 = -7500.0f;
 
-/* 804559F8-804559FC 0004+00 .sdata2    @5675                                                        */
+/* 804559F8-804559FC 0004+00 rc=1 efc=0 .sdata2    @5675                                                        */
 f32 lit_5675 = 1.0f / 10.0f;
 
-/* 804559FC-80455A00 0004+00 .sdata2    @5676                                                        */
+/* 804559FC-80455A00 0004+00 rc=1 efc=0 .sdata2    @5676                                                        */
 f32 lit_5676 = -1500.0f;
 
-/* 80455A00-80455A04 0004+00 .sdata2    @5677                                                        */
+/* 80455A00-80455A04 0004+00 rc=1 efc=0 .sdata2    @5677                                                        */
 f32 lit_5677 = -13000.0f;
 
-/* 80455A04-80455A08 0004+00 .sdata2    @5678                                                        */
+/* 80455A04-80455A08 0004+00 rc=1 efc=0 .sdata2    @5678                                                        */
 f32 lit_5678 = -4500.0f;
 
-/* 80455A08-80455A0C 0004+00 .sdata2    @5679                                                        */
+/* 80455A08-80455A0C 0004+00 rc=1 efc=0 .sdata2    @5679                                                        */
 f32 lit_5679 = -45000.0f;
 
-/* 80455A0C-80455A10 0004+00 .sdata2    @5680                                                        */
+/* 80455A0C-80455A10 0004+00 rc=1 efc=0 .sdata2    @5680                                                        */
 f32 lit_5680 = -3000.0f;
 
-/* 80455A10-80455A14 0004+00 .sdata2    @5681                                                        */
+/* 80455A10-80455A14 0004+00 rc=1 efc=0 .sdata2    @5681                                                        */
 f32 lit_5681 = 900.0f;
 
-/* 802B33A8-802B3EAC 0B04+00 .text      processBgmFramework__8Z2SeqMgrFv                             */
+/* 802B33A8-802B3EAC 0B04+00 rc=1 efc=1 .text      processBgmFramework__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(processBgmFramework__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::processBgmFramework() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/processBgmFramework__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B3EAC-802B3F40 0094+00 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
+/* 802B3EAC-802B3F40 0094+00 rc=2 efc=2 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBgmIDPlaying__8Z2SeqMgrFUl) {
+asm void Z2SeqMgr::checkBgmIDPlaying(u32 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/checkBgmIDPlaying__8Z2SeqMgrFUl.s"
 }
 #pragma pop
 
 
-/* 802B3F40-802B3FEC 00AC+00 .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
+/* 802B3F40-802B3FEC 00AC+00 rc=1 efc=0 .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei) {
+asm void Z2SeqMgr::getChildTrackVolume(JAISoundHandle* field_0, s32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei.s"
 }
 #pragma pop
 
 
-/* 802B3FEC-802B4128 013C+00 .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
+/* 802B3FEC-802B4128 013C+00 rc=11 efc=2 .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff) {
+asm void Z2SeqMgr::setChildTrackVolume(JAISoundHandle* field_0, s32 field_1, f32 field_2, u32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff.s"
 }
 #pragma pop
 
 
-/* 802B4128-802B4164 003C+00 .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
+/* 802B4128-802B4164 003C+00 rc=2 efc=1 .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(resetBattleBgmParams__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::resetBattleBgmParams() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/resetBattleBgmParams__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B4164-802B421C 00B8+00 .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
+/* 802B4164-802B421C 00B8+00 rc=7 efc=3 .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleBgmOff__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::setBattleBgmOff(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleBgmOff__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
 
-/* 802B421C-802B43D0 01B4+00 .text      setBattleSearched__8Z2SeqMgrFb                               */
+/* 802B421C-802B43D0 01B4+00 rc=1 efc=1 .text      setBattleSearched__8Z2SeqMgrFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleSearched__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::setBattleSearched(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleSearched__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
 
-/* 802B43D0-802B43E0 0010+00 .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
+/* 802B43D0-802B43E0 0010+00 rc=3 efc=0 .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleDistIgnore__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::setBattleDistIgnore(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistIgnore__8Z2SeqMgrFb.s"
 }
@@ -1123,124 +1295,124 @@ ASM_FUNCTION(setBattleDistIgnore__8Z2SeqMgrFb) {
 
 
 /* ############################################################################################## */
-/* 80455A14-80455A18 0004+00 .sdata2    @5913                                                        */
+/* 80455A14-80455A18 0004+00 rc=1 efc=0 .sdata2    @5913                                                        */
 f32 lit_5913 = 2.0f / 5.0f;
 
-/* 802B43E0-802B4498 00B8+00 .text      setBattleGhostMute__8Z2SeqMgrFb                              */
+/* 802B43E0-802B4498 00B8+00 rc=2 efc=2 .text      setBattleGhostMute__8Z2SeqMgrFb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleGhostMute__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::setBattleGhostMute(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleGhostMute__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
 
-/* 802B4498-802B4844 03AC+00 .text      setBattleDistState__8Z2SeqMgrFUc                             */
+/* 802B4498-802B4844 03AC+00 rc=1 efc=1 .text      setBattleDistState__8Z2SeqMgrFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleDistState__8Z2SeqMgrFUc) {
+asm void Z2SeqMgr::setBattleDistState(char field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistState__8Z2SeqMgrFUc.s"
 }
 #pragma pop
 
 
-/* 802B4844-802B4AFC 02B8+00 .text      setBattleSeqState__8Z2SeqMgrFUc                              */
+/* 802B4844-802B4AFC 02B8+00 rc=4 efc=3 .text      setBattleSeqState__8Z2SeqMgrFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleSeqState__8Z2SeqMgrFUc) {
+asm void Z2SeqMgr::setBattleSeqState(char field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleSeqState__8Z2SeqMgrFUc.s"
 }
 #pragma pop
 
 
-/* 802B4AFC-802B4BD0 00D4+00 .text      setBattleLastHit__8Z2SeqMgrFUc                               */
+/* 802B4AFC-802B4BD0 00D4+00 rc=4 efc=4 .text      setBattleLastHit__8Z2SeqMgrFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBattleLastHit__8Z2SeqMgrFUc) {
+asm void Z2SeqMgr::setBattleLastHit(char field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleLastHit__8Z2SeqMgrFUc.s"
 }
 #pragma pop
 
 
-/* 802B4BD0-802B4EB0 02E0+00 .text      battleBgmFramework__8Z2SeqMgrFv                              */
+/* 802B4BD0-802B4EB0 02E0+00 rc=1 efc=0 .text      battleBgmFramework__8Z2SeqMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(battleBgmFramework__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::battleBgmFramework() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/battleBgmFramework__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B4EB0-802B5204 0354+00 .text      startBattleBgm__8Z2SeqMgrFb                                  */
+/* 802B4EB0-802B5204 0354+00 rc=1 efc=0 .text      startBattleBgm__8Z2SeqMgrFb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startBattleBgm__8Z2SeqMgrFb) {
+asm void Z2SeqMgr::startBattleBgm(bool field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/startBattleBgm__8Z2SeqMgrFb.s"
 }
 #pragma pop
 
 
-/* 802B5204-802B545C 0258+00 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
+/* 802B5204-802B545C 0258+00 rc=4 efc=1 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopBattleBgm__8Z2SeqMgrFUcUc) {
+asm void Z2SeqMgr::stopBattleBgm(char field_0, char field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/stopBattleBgm__8Z2SeqMgrFUcUc.s"
 }
 #pragma pop
 
 
-/* 802B545C-802B556C 0110+00 .text      fieldBgmStart__8Z2SeqMgrFv                                   */
+/* 802B545C-802B556C 0110+00 rc=1 efc=0 .text      fieldBgmStart__8Z2SeqMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fieldBgmStart__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::fieldBgmStart() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/fieldBgmStart__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B556C-802B5750 01E4+00 .text      fieldRidingMute__8Z2SeqMgrFv                                 */
+/* 802B556C-802B5750 01E4+00 rc=3 efc=0 .text      fieldRidingMute__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fieldRidingMute__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::fieldRidingMute() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/fieldRidingMute__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B5750-802B579C 004C+00 .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
+/* 802B5750-802B579C 004C+00 rc=1 efc=1 .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onFieldBgmJumpStart__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::onFieldBgmJumpStart() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpStart__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B579C-802B594C 01B0+00 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
+/* 802B579C-802B594C 01B0+00 rc=1 efc=1 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onFieldBgmJumpEnd__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::onFieldBgmJumpEnd() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/onFieldBgmJumpEnd__8Z2SeqMgrFv.s"
 }
@@ -1248,7 +1420,7 @@ ASM_FUNCTION(onFieldBgmJumpEnd__8Z2SeqMgrFv) {
 
 
 /* ############################################################################################## */
-/* 803CA4B4-803CA508 0054+00 .data      @6877                                                        */
+/* 803CA4B4-803CA508 0054+00 rc=1 efc=0 .data      @6877                                                        */
 void* Z2SeqMgr__lit_6877[21] = {
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
@@ -1273,70 +1445,54 @@ void* Z2SeqMgr__lit_6877[21] = {
 	(void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 };
 
-/* 802B594C-802B5E80 0534+00 .text      fieldBgmFramework__8Z2SeqMgrFv                               */
+/* 802B594C-802B5E80 0534+00 rc=2 efc=0 .text      fieldBgmFramework__8Z2SeqMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fieldBgmFramework__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::fieldBgmFramework() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/fieldBgmFramework__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B5E80-802B5E84 0004+00 .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(mbossBgmMuteProcess__8Z2SeqMgrFv) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/mbossBgmMuteProcess__8Z2SeqMgrFv.s"
+/* 802B5E80-802B5E84 0004+00 rc=1 efc=0 .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
+void Z2SeqMgr::mbossBgmMuteProcess() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802B5E84-802B5E88 0004+00 .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(bgmSetSwordUsing__8Z2SeqMgrFl) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmSetSwordUsing__8Z2SeqMgrFl.s"
+/* 802B5E84-802B5E88 0004+00 rc=2 efc=2 .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
+void Z2SeqMgr::bgmSetSwordUsing(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802B5E88-802B5E8C 0004+00 .text      bgmNowBattle__8Z2SeqMgrFf                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(bgmNowBattle__8Z2SeqMgrFf) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2SeqMgr/bgmNowBattle__8Z2SeqMgrFf.s"
+/* 802B5E88-802B5E8C 0004+00 rc=1 efc=1 .text      bgmNowBattle__8Z2SeqMgrFf                                    */
+void Z2SeqMgr::bgmNowBattle(f32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 802B5E8C-802B5ED4 0048+00 .text      taktModeMute__8Z2SeqMgrFv                                    */
+/* 802B5E8C-802B5ED4 0048+00 rc=1 efc=1 .text      taktModeMute__8Z2SeqMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(taktModeMute__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::taktModeMute() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/taktModeMute__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* 802B5ED4-802B5F1C 0048+00 .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
+/* 802B5ED4-802B5F1C 0048+00 rc=1 efc=1 .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(taktModeMuteOff__8Z2SeqMgrFv) {
+asm void Z2SeqMgr::taktModeMuteOff() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/taktModeMuteOff__8Z2SeqMgrFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,18 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cCcD_Obj (cCcD_Obj) False/False
+/* top-level dependencies (begin cCcD_Obj) */
+/* top-level dependencies (end cCcD_Obj) */
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+// build Z2Creature (Z2Creature) False/False
+/* top-level dependencies (begin Z2Creature) */
+/* top-level dependencies (end Z2Creature) */
+struct Z2Creature {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build dCcU_AtInfo (dCcU_AtInfo) False/False
+/* top-level dependencies (begin dCcU_AtInfo) */
+/* top-level dependencies (end dCcU_AtInfo) */
+struct dCcU_AtInfo {
+};
+
+// build daPy_py_c (daPy_py_c) False/False
+/* top-level dependencies (begin daPy_py_c) */
+/* top-level dependencies (end daPy_py_c) */
+struct daPy_py_c {
+	/* 80088134 */ bool checkCutJumpCancelTurn() const;
+	/* 8015F398 */ void checkMasterSwordEquip();
+};
+
+// build dCcD_GObjInf (dCcD_GObjInf) False/False
+/* top-level dependencies (begin dCcD_GObjInf) */
+/* top-level dependencies (end dCcD_GObjInf) */
+struct dCcD_GObjInf {
+	/* 800845B0 */ void getHitSeID(char, s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void pl_cut_LRC__Fi();
-extern "C" extern void cc_pl_cut_bit_get__Fv();
-extern "C" extern void getMapInfo__FSc();
-extern "C" extern void getHitId__FP8cCcD_Obji();
-extern "C" extern void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c();
-extern "C" extern void at_power_get__FP11dCcU_AtInfo();
-extern "C" extern void at_power_check__FP11dCcU_AtInfo();
-extern "C" extern void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo();
-extern "C" extern void checkCutJumpCancelTurn__9daPy_py_cCFv();
+void pl_cut_LRC(s32);
+static void cc_pl_cut_bit_get();
+static void getMapInfo(char);
+static void getHitId(cCcD_Obj*, s32);
+void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*);
+static void at_power_get(dCcU_AtInfo*);
+static void at_power_check(dCcU_AtInfo*);
+void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*);
+
+extern "C" void pl_cut_LRC__Fi();
+extern "C" static void cc_pl_cut_bit_get__Fv();
+extern "C" static void getMapInfo__FSc();
+extern "C" static void getHitId__FP8cCcD_Obji();
+extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c();
+extern "C" static void at_power_get__FP11dCcU_AtInfo();
+extern "C" static void at_power_check__FP11dCcU_AtInfo();
+extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo();
+extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv();
 SECTION_DATA extern u8 plCutLRC[232];
 SECTION_SDATA2 extern u8 d_cc_d_cc_uty__lit_4212[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 d_cc_d_cc_uty__lit_4213;
@@ -31,15 +84,22 @@ SECTION_SDATA2 extern f32 lit_4218;
 // External References:
 // 
 
-extern "C" extern void getHitSeID__12dCcD_GObjInfFUci();
-extern "C" extern void dCcD_GetGObjInf__FP8cCcD_Obj();
-extern "C" extern void checkMasterSwordEquip__9daPy_py_cFv();
-extern "C" extern void GetAc__8cCcD_ObjFv();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void cM_rndFX__Ff();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _restgpr_25();
+void dCcD_GetGObjInf(cCcD_Obj*);
+void cM_atan2s(f32, f32);
+void cM_rndFX(f32);
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_25();
+
+extern "C" void getHitSeID__12dCcD_GObjInfFUci();
+extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj();
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
+extern "C" void GetAc__8cCcD_ObjFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_25();
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 struct_80451124[4];
@@ -49,7 +109,7 @@ SECTION_SBSS extern u8 struct_80451124[4];
 // 
 
 /* ############################################################################################## */
-/* 803AC418-803AC500 00E8+00 .data      plCutLRC                                                     */
+/* 803AC418-803AC500 00E8+00 rc=1 efc=0 .data      plCutLRC                                                     */
 u8 plCutLRC[232] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
@@ -68,77 +128,77 @@ u8 plCutLRC[232] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800873B0-800873D4 0024+00 .text      pl_cut_LRC__Fi                                               */
+/* 800873B0-800873D4 0024+00 rc=0 efc=0 .text      pl_cut_LRC__Fi                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_cut_LRC__Fi) {
+asm void pl_cut_LRC(s32 field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/pl_cut_LRC__Fi.s"
 }
 #pragma pop
 
 
-/* 800873D4-800874C4 00F0+00 .text      cc_pl_cut_bit_get__Fv                                        */
+/* 800873D4-800874C4 00F0+00 rc=1 efc=0 .text      cc_pl_cut_bit_get__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_pl_cut_bit_get__Fv) {
+asm static void cc_pl_cut_bit_get() {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/cc_pl_cut_bit_get__Fv.s"
 }
 #pragma pop
 
 
-/* 800874C4-800874F0 002C+00 .text      getMapInfo__FSc                                              */
+/* 800874C4-800874F0 002C+00 rc=1 efc=0 .text      getMapInfo__FSc                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMapInfo__FSc) {
+asm static void getMapInfo(char field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/getMapInfo__FSc.s"
 }
 #pragma pop
 
 
-/* 800874F0-80087514 0024+00 .text      getHitId__FP8cCcD_Obji                                       */
+/* 800874F0-80087514 0024+00 rc=2 efc=0 .text      getHitId__FP8cCcD_Obji                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHitId__FP8cCcD_Obji) {
+asm static void getHitId(cCcD_Obj* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/getHitId__FP8cCcD_Obji.s"
 }
 #pragma pop
 
 
-/* 80087514-80087594 0080+00 .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          */
+/* 80087514-80087594 0080+00 rc=0 efc=0 .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c) {
+asm void def_se_set(Z2Creature* field_0, cCcD_Obj* field_1, u32 field_2, fopAc_ac_c* field_3) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80087594-80087A58 04C4+00 .text      at_power_get__FP11dCcU_AtInfo                                */
+/* 80087594-80087A58 04C4+00 rc=1 efc=0 .text      at_power_get__FP11dCcU_AtInfo                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(at_power_get__FP11dCcU_AtInfo) {
+asm static void at_power_get(dCcU_AtInfo* field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/at_power_get__FP11dCcU_AtInfo.s"
 }
 #pragma pop
 
 
-/* 80087A58-80087C04 01AC+00 .text      at_power_check__FP11dCcU_AtInfo                              */
+/* 80087A58-80087C04 01AC+00 rc=1 efc=0 .text      at_power_check__FP11dCcU_AtInfo                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(at_power_check__FP11dCcU_AtInfo) {
+asm static void at_power_check(dCcU_AtInfo* field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/at_power_check__FP11dCcU_AtInfo.s"
 }
@@ -146,54 +206,48 @@ ASM_FUNCTION(at_power_check__FP11dCcU_AtInfo) {
 
 
 /* ############################################################################################## */
-/* 80452798-804527A0 0004+04 .sdata2    @4212                                                        */
+/* 80452798-804527A0 0004+04 rc=1 efc=0 .sdata2    @4212                                                        */
 u8 d_cc_d_cc_uty__lit_4212[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804527A0-804527A8 0008+00 .sdata2    @4213                                                        */
+/* 804527A0-804527A8 0008+00 rc=1 efc=0 .sdata2    @4213                                                        */
 f64 d_cc_d_cc_uty__lit_4213 = 0.5;
 
-/* 804527A8-804527B0 0008+00 .sdata2    @4214                                                        */
+/* 804527A8-804527B0 0008+00 rc=1 efc=0 .sdata2    @4214                                                        */
 f64 lit_4214 = 3.0;
 
-/* 804527B0-804527B8 0008+00 .sdata2    @4215                                                        */
+/* 804527B0-804527B8 0008+00 rc=1 efc=0 .sdata2    @4215                                                        */
 u8 d_cc_d_cc_uty__lit_4215[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804527B8-804527BC 0004+00 .sdata2    @4216                                                        */
+/* 804527B8-804527BC 0004+00 rc=1 efc=0 .sdata2    @4216                                                        */
 f32 lit_4216 = 100.0f;
 
-/* 804527BC-804527C0 0004+00 .sdata2    @4217                                                        */
+/* 804527BC-804527C0 0004+00 rc=1 efc=0 .sdata2    @4217                                                        */
 f32 lit_4217 = 4000.0f;
 
-/* 804527C0-804527C8 0004+04 .sdata2    @4218                                                        */
+/* 804527C0-804527C8 0004+04 rc=1 efc=0 .sdata2    @4218                                                        */
 f32 lit_4218 = 10000.0f;
 /* padding 4 bytes */
 
-/* 80087C04-80088134 0530+00 .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    */
+/* 80087C04-80088134 0530+00 rc=0 efc=0 .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo) {
+asm void cc_at_check(fopAc_ac_c* field_0, dCcU_AtInfo* field_1) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo.s"
 }
 #pragma pop
 
 
-/* 80088134-8008813C 0008+00 .text      checkCutJumpCancelTurn__9daPy_py_cCFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkCutJumpCancelTurn__9daPy_py_cCFv) {
-	nofralloc
-#include "asm/d/cc/d_cc_uty/checkCutJumpCancelTurn__9daPy_py_cCFv.s"
+/* 80088134-8008813C 0008+00 rc=1 efc=1 .text      checkCutJumpCancelTurn__9daPy_py_cCFv                        */
+bool daPy_py_c::checkCutJumpCancelTurn() const {
+	return false;
 }
-#pragma pop
 
 
-/* ############################################################################################## */

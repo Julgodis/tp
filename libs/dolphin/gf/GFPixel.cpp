@@ -6,12 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build _GXFogType (_GXFogType) False/False
+/* top-level dependencies (begin _GXFogType) */
+/* top-level dependencies (end _GXFogType) */
+struct _GXFogType {
+};
+
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+// build _GXBlendMode (_GXBlendMode) False/False
+/* top-level dependencies (begin _GXBlendMode) */
+/* top-level dependencies (end _GXBlendMode) */
+struct _GXBlendMode {
+};
+
+// build _GXBlendFactor (_GXBlendFactor) False/False
+/* top-level dependencies (begin _GXBlendFactor) */
+/* top-level dependencies (end _GXBlendFactor) */
+struct _GXBlendFactor {
+};
+
+// build _GXLogicOp (_GXLogicOp) False/False
+/* top-level dependencies (begin _GXLogicOp) */
+/* top-level dependencies (end _GXLogicOp) */
+struct _GXLogicOp {
+};
+
+// build _GXCompare (_GXCompare) False/False
+/* top-level dependencies (begin _GXCompare) */
+/* top-level dependencies (end _GXCompare) */
+struct _GXCompare {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void GFSetFog__F10_GXFogTypeffff8_GXColor();
-extern "C" extern void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
-extern "C" extern void GFSetZMode__FUc10_GXCompareUc();
+void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, char, char, char);
+void GFSetZMode(char, _GXCompare, char);
+
+extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor();
+extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
+extern "C" void GFSetZMode__FUc10_GXCompareUc();
 SECTION_SDATA2 extern u8 GFPixel__lit_293[4];
 SECTION_SDATA2 extern f32 GFPixel__lit_294;
 SECTION_SDATA2 extern f64 lit_295;
@@ -24,71 +68,74 @@ SECTION_SDATA2 extern f64 GFPixel__lit_301;
 // External References:
 // 
 
-extern "C" extern void __cvt_fp2unsigned();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80455F68-80455F6C 0004+00 .sdata2    @293                                                         */
+/* 80455F68-80455F6C 0004+00 rc=1 efc=0 .sdata2    @293                                                         */
 u8 GFPixel__lit_293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455F6C-80455F70 0004+00 .sdata2    @294                                                         */
+/* 80455F6C-80455F70 0004+00 rc=1 efc=0 .sdata2    @294                                                         */
 f32 GFPixel__lit_294 = 0.5f;
 
-/* 80455F70-80455F78 0008+00 .sdata2    @295                                                         */
+/* 80455F70-80455F78 0008+00 rc=1 efc=0 .sdata2    @295                                                         */
 f64 lit_295 = 1.0;
 
-/* 80455F78-80455F80 0004+04 .sdata2    @296                                                         */
+/* 80455F78-80455F80 0004+04 rc=1 efc=0 .sdata2    @296                                                         */
 f32 lit_296 = 2.0f;
 /* padding 4 bytes */
 
-/* 80455F80-80455F88 0008+00 .sdata2    @297                                                         */
+/* 80455F80-80455F88 0008+00 rc=1 efc=0 .sdata2    @297                                                         */
 f64 GFPixel__lit_297 = 0.5;
 
-/* 80455F88-80455F90 0004+04 .sdata2    @298                                                         */
+/* 80455F88-80455F90 0004+04 rc=1 efc=0 .sdata2    @298                                                         */
 f32 lit_298 = 8388638.0f;
 /* padding 4 bytes */
 
-/* 80455F90-80455F98 0008+00 .sdata2    @301                                                         */
+/* 80455F90-80455F98 0008+00 rc=1 efc=0 .sdata2    @301                                                         */
 f64 GFPixel__lit_301 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802CDE9C-802CE004 0168+00 .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
+/* 802CDE9C-802CE004 0168+00 rc=1 efc=1 .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GFSetFog__F10_GXFogTypeffff8_GXColor) {
+asm void GFSetFog(_GXFogType field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, _GXColor field_5) {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetFog__F10_GXFogTypeffff8_GXColor.s"
 }
 #pragma pop
 
 
-/* 802CE004-802CE0A4 00A0+00 .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
+/* 802CE004-802CE0A4 00A0+00 rc=1 efc=1 .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc) {
+asm void GFSetBlendModeEtc(_GXBlendMode field_0, _GXBlendFactor field_1, _GXBlendFactor field_2, _GXLogicOp field_3, char field_4, char field_5, char field_6) {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc.s"
 }
 #pragma pop
 
 
-/* 802CE0A4-802CE0D0 002C+00 .text      GFSetZMode__FUc10_GXCompareUc                                */
+/* 802CE0A4-802CE0D0 002C+00 rc=1 efc=1 .text      GFSetZMode__FUc10_GXCompareUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GFSetZMode__FUc10_GXCompareUc) {
+asm void GFSetZMode(char field_0, _GXCompare field_1, char field_2) {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetZMode__FUc10_GXCompareUc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

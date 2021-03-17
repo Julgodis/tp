@@ -6,33 +6,95 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct br_s;
+struct obj_brg_class;
+struct dBgW;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct obj_brg_class {
+};
+
+struct br_s {
+	~br_s();
+	br_s();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DLightObj {
+	J3DLightObj();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daObj_Brg_Draw__FP13obj_brg_class();
-extern "C" extern void control1__FP13obj_brg_classP4br_s();
-extern "C" extern void control2__FP13obj_brg_classP4br_s();
-extern "C" extern void control3__FP13obj_brg_classP4br_s();
-extern "C" extern void cut_control1__FP13obj_brg_classP4br_s();
-extern "C" extern void cut_control2__FP13obj_brg_classP4br_s();
-extern "C" extern void himo_cut_control1__FP13obj_brg_classP4cXyzf();
-extern "C" extern void obj_brg_move__FP13obj_brg_class();
-extern "C" extern void daObj_Brg_Execute__FP13obj_brg_class();
-extern "C" extern void daObj_Brg_IsDelete__FP13obj_brg_class();
-extern "C" extern void daObj_Brg_Delete__FP13obj_brg_class();
-extern "C" extern void CreateInit__FP10fopAc_ac_c();
-extern "C" extern void CallbackCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void daObj_Brg_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__4br_sFv();
-extern "C" extern void __ct__4br_sFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void __ct__4cXyzFv();
+void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void daObj_Brg_Draw(obj_brg_class*);
+void control1(obj_brg_class*, br_s*);
+void control2(obj_brg_class*, br_s*);
+void control3(obj_brg_class*, br_s*);
+void cut_control1(obj_brg_class*, br_s*);
+void cut_control2(obj_brg_class*, br_s*);
+void himo_cut_control1(obj_brg_class*, cXyz*, f32);
+void obj_brg_move(obj_brg_class*);
+void daObj_Brg_Execute(obj_brg_class*);
+void daObj_Brg_IsDelete(obj_brg_class*);
+void daObj_Brg_Delete(obj_brg_class*);
+void CreateInit(fopAc_ac_c*);
+void CallbackCreateHeap(fopAc_ac_c*);
+void daObj_Brg_Create(fopAc_ac_c*);
+
+extern "C" void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daObj_Brg_Draw__FP13obj_brg_class();
+extern "C" void control1__FP13obj_brg_classP4br_s();
+extern "C" void control2__FP13obj_brg_classP4br_s();
+extern "C" void control3__FP13obj_brg_classP4br_s();
+extern "C" void cut_control1__FP13obj_brg_classP4br_s();
+extern "C" void cut_control2__FP13obj_brg_classP4br_s();
+extern "C" void himo_cut_control1__FP13obj_brg_classP4cXyzf();
+extern "C" void obj_brg_move__FP13obj_brg_class();
+extern "C" void daObj_Brg_Execute__FP13obj_brg_class();
+extern "C" void daObj_Brg_IsDelete__FP13obj_brg_class();
+extern "C" void daObj_Brg_Delete__FP13obj_brg_class();
+extern "C" void CreateInit__FP10fopAc_ac_c();
+extern "C" void CallbackCreateHeap__FP10fopAc_ac_c();
+extern "C" void daObj_Brg_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__4br_sFv();
+extern "C" void __ct__4br_sFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void __ct__4cXyzFv();
 SECTION_RODATA extern const u8 lit_3896[4];
 SECTION_RODATA extern const u32 lit_3897;
 SECTION_RODATA extern const u32 lit_3898;
@@ -253,8 +315,11 @@ SECTION_BSS extern u8 data_80BC279C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -264,7 +329,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -275,7 +340,7 @@ ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__dt__4cXyzFv.s"
 }
@@ -286,7 +351,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brg_Draw__FP13obj_brg_class) {
+asm void daObj_Brg_Draw(obj_brg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Draw__FP13obj_brg_class.s"
 }
@@ -297,7 +362,7 @@ ASM_FUNCTION(daObj_Brg_Draw__FP13obj_brg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(control1__FP13obj_brg_classP4br_s) {
+asm void control1(obj_brg_class* field_0, br_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/control1__FP13obj_brg_classP4br_s.s"
 }
@@ -308,7 +373,7 @@ ASM_FUNCTION(control1__FP13obj_brg_classP4br_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(control2__FP13obj_brg_classP4br_s) {
+asm void control2(obj_brg_class* field_0, br_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/control2__FP13obj_brg_classP4br_s.s"
 }
@@ -319,7 +384,7 @@ ASM_FUNCTION(control2__FP13obj_brg_classP4br_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(control3__FP13obj_brg_classP4br_s) {
+asm void control3(obj_brg_class* field_0, br_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/control3__FP13obj_brg_classP4br_s.s"
 }
@@ -330,7 +395,7 @@ ASM_FUNCTION(control3__FP13obj_brg_classP4br_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_control1__FP13obj_brg_classP4br_s) {
+asm void cut_control1(obj_brg_class* field_0, br_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/cut_control1__FP13obj_brg_classP4br_s.s"
 }
@@ -341,7 +406,7 @@ ASM_FUNCTION(cut_control1__FP13obj_brg_classP4br_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cut_control2__FP13obj_brg_classP4br_s) {
+asm void cut_control2(obj_brg_class* field_0, br_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/cut_control2__FP13obj_brg_classP4br_s.s"
 }
@@ -352,7 +417,7 @@ ASM_FUNCTION(cut_control2__FP13obj_brg_classP4br_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(himo_cut_control1__FP13obj_brg_classP4cXyzf) {
+asm void himo_cut_control1(obj_brg_class* field_0, cXyz* field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/himo_cut_control1__FP13obj_brg_classP4cXyzf.s"
 }
@@ -363,7 +428,7 @@ ASM_FUNCTION(himo_cut_control1__FP13obj_brg_classP4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(obj_brg_move__FP13obj_brg_class) {
+asm void obj_brg_move(obj_brg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/obj_brg_move__FP13obj_brg_class.s"
 }
@@ -374,7 +439,7 @@ ASM_FUNCTION(obj_brg_move__FP13obj_brg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brg_Execute__FP13obj_brg_class) {
+asm void daObj_Brg_Execute(obj_brg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Execute__FP13obj_brg_class.s"
 }
@@ -385,7 +450,7 @@ ASM_FUNCTION(daObj_Brg_Execute__FP13obj_brg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brg_IsDelete__FP13obj_brg_class) {
+asm void daObj_Brg_IsDelete(obj_brg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_IsDelete__FP13obj_brg_class.s"
 }
@@ -396,7 +461,7 @@ ASM_FUNCTION(daObj_Brg_IsDelete__FP13obj_brg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brg_Delete__FP13obj_brg_class) {
+asm void daObj_Brg_Delete(obj_brg_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Delete__FP13obj_brg_class.s"
 }
@@ -407,7 +472,7 @@ ASM_FUNCTION(daObj_Brg_Delete__FP13obj_brg_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__FP10fopAc_ac_c) {
+asm void CreateInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/CreateInit__FP10fopAc_ac_c.s"
 }
@@ -418,7 +483,7 @@ ASM_FUNCTION(CreateInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CallbackCreateHeap__FP10fopAc_ac_c) {
+asm void CallbackCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/CallbackCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -429,7 +494,7 @@ ASM_FUNCTION(CallbackCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Brg_Create__FP10fopAc_ac_c) {
+asm void daObj_Brg_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/daObj_Brg_Create__FP10fopAc_ac_c.s"
 }
@@ -440,7 +505,7 @@ ASM_FUNCTION(daObj_Brg_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__dt__8dCcD_CylFv.s"
 }
@@ -451,7 +516,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__ct__8dCcD_CylFv.s"
 }
@@ -462,7 +527,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__dt__8cM3dGCylFv.s"
 }
@@ -473,7 +538,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__dt__8cM3dGAabFv.s"
 }
@@ -484,7 +549,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4br_sFv) {
+asm br_s::~br_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__dt__4br_sFv.s"
 }
@@ -495,7 +560,7 @@ ASM_FUNCTION(__dt__4br_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4br_sFv) {
+asm br_s::br_s() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__ct__4br_sFv.s"
 }
@@ -506,7 +571,7 @@ ASM_FUNCTION(__ct__4br_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__ct__11J3DLightObjFv.s"
 }
@@ -514,14 +579,9 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 
 
 /* 80BC2134-80BC2138 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

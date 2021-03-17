@@ -6,41 +6,105 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daBkyRock_c;
+
+struct fopAc_ac_c {
+};
+
+struct daBkyRock_c {
+	struct _pieceData {
+		daBkyRock_c::_pieceData();
+	};
+
+	daBkyRock_c();
+	~daBkyRock_c();
+	void create();
+	void execute();
+	void draw();
+	void Delete();
+	void setModelMtx();
+	void createHeap();
+	void init();
+	void middleExe();
+	void exeModeNoDamage();
+	void exeModeDamage();
+	void exeModePiece();
+	void chkHitBombArrow();
+	void initChangeModeBefore();
+	void initChangeModeAfter();
+	void pieceMove();
+	void pieceMoveInit();
+	void callBombEmt(s32, u16 const*);
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daBkyRock_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__11daBkyRock_cFv();
-extern "C" extern void __ct__Q211daBkyRock_c10_pieceDataFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__11daBkyRock_cFv();
-extern "C" extern void create__11daBkyRock_cFv();
-extern "C" extern void execute__11daBkyRock_cFv();
-extern "C" extern void draw__11daBkyRock_cFv();
-extern "C" extern void Delete__11daBkyRock_cFv();
-extern "C" extern void setModelMtx__11daBkyRock_cFv();
-extern "C" extern void createHeap__11daBkyRock_cFv();
-extern "C" extern void init__11daBkyRock_cFv();
-extern "C" extern void middleExe__11daBkyRock_cFv();
-extern "C" extern void exeModeNoDamage__11daBkyRock_cFv();
-extern "C" extern void exeModeDamage__11daBkyRock_cFv();
-extern "C" extern void exeModePiece__11daBkyRock_cFv();
-extern "C" extern void chkHitBombArrow__11daBkyRock_cFv();
-extern "C" extern void initChangeModeBefore__11daBkyRock_cFv();
-extern "C" extern void initChangeModeAfter__11daBkyRock_cFv();
-extern "C" extern void pieceMove__11daBkyRock_cFv();
-extern "C" extern void pieceMoveInit__11daBkyRock_cFv();
-extern "C" extern void callBombEmt__11daBkyRock_cFiPCUs();
-extern "C" extern void daBkyRock_create__FP11daBkyRock_c();
-extern "C" extern void daBkyRock_Delete__FP11daBkyRock_c();
-extern "C" extern void daBkyRock_execute__FP11daBkyRock_c();
-extern "C" extern void daBkyRock_draw__FP11daBkyRock_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_bky_rock_cpp();
+void daBkyRock_c_createHeap(fopAc_ac_c*);
+void daBkyRock_create(daBkyRock_c*);
+void daBkyRock_Delete(daBkyRock_c*);
+void daBkyRock_execute(daBkyRock_c*);
+void daBkyRock_draw(daBkyRock_c*);
+extern "C" void __sinit_d_a_obj_bky_rock_cpp();
+
+extern "C" void daBkyRock_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__11daBkyRock_cFv();
+extern "C" void __ct__Q211daBkyRock_c10_pieceDataFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__11daBkyRock_cFv();
+extern "C" void create__11daBkyRock_cFv();
+extern "C" void execute__11daBkyRock_cFv();
+extern "C" void draw__11daBkyRock_cFv();
+extern "C" void Delete__11daBkyRock_cFv();
+extern "C" void setModelMtx__11daBkyRock_cFv();
+extern "C" void createHeap__11daBkyRock_cFv();
+extern "C" void init__11daBkyRock_cFv();
+extern "C" void middleExe__11daBkyRock_cFv();
+extern "C" void exeModeNoDamage__11daBkyRock_cFv();
+extern "C" void exeModeDamage__11daBkyRock_cFv();
+extern "C" void exeModePiece__11daBkyRock_cFv();
+extern "C" void chkHitBombArrow__11daBkyRock_cFv();
+extern "C" void initChangeModeBefore__11daBkyRock_cFv();
+extern "C" void initChangeModeAfter__11daBkyRock_cFv();
+extern "C" void pieceMove__11daBkyRock_cFv();
+extern "C" void pieceMoveInit__11daBkyRock_cFv();
+extern "C" void callBombEmt__11daBkyRock_cFiPCUs();
+extern "C" void daBkyRock_create__FP11daBkyRock_c();
+extern "C" void daBkyRock_Delete__FP11daBkyRock_c();
+extern "C" void daBkyRock_execute__FP11daBkyRock_c();
+extern "C" void daBkyRock_draw__FP11daBkyRock_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_bky_rock_cpp();
 SECTION_RODATA extern const u8 VIBMODE_POWER[12];
 SECTION_RODATA extern const u8 PARTICLE_SCALE[8];
 SECTION_RODATA extern const u8 PARTICLE_OFFSET_POS_Y[8];
@@ -99,7 +163,9 @@ SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -109,7 +175,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkyRock_c_createHeap__FP10fopAc_ac_c) {
+asm void daBkyRock_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/daBkyRock_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -120,7 +186,7 @@ ASM_FUNCTION(daBkyRock_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daBkyRock_cFv) {
+asm daBkyRock_c::daBkyRock_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__ct__11daBkyRock_cFv.s"
 }
@@ -131,7 +197,7 @@ ASM_FUNCTION(__ct__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q211daBkyRock_c10_pieceDataFv) {
+asm daBkyRock_c::_pieceData::daBkyRock_c::_pieceData() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__ct__Q211daBkyRock_c10_pieceDataFv.s"
 }
@@ -142,7 +208,7 @@ ASM_FUNCTION(__ct__Q211daBkyRock_c10_pieceDataFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__8dCcD_CylFv.s"
 }
@@ -153,7 +219,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__ct__8dCcD_CylFv.s"
 }
@@ -164,7 +230,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__8cM3dGCylFv.s"
 }
@@ -175,7 +241,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__8cM3dGAabFv.s"
 }
@@ -186,7 +252,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__10dCcD_GSttsFv.s"
 }
@@ -197,7 +263,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daBkyRock_cFv) {
+asm daBkyRock_c::~daBkyRock_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__11daBkyRock_cFv.s"
 }
@@ -208,7 +274,7 @@ ASM_FUNCTION(__dt__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daBkyRock_cFv) {
+asm void daBkyRock_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/create__11daBkyRock_cFv.s"
 }
@@ -219,7 +285,7 @@ ASM_FUNCTION(create__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daBkyRock_cFv) {
+asm void daBkyRock_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/execute__11daBkyRock_cFv.s"
 }
@@ -230,7 +296,7 @@ ASM_FUNCTION(execute__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daBkyRock_cFv) {
+asm void daBkyRock_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/draw__11daBkyRock_cFv.s"
 }
@@ -241,7 +307,7 @@ ASM_FUNCTION(draw__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daBkyRock_cFv) {
+asm void daBkyRock_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/Delete__11daBkyRock_cFv.s"
 }
@@ -252,7 +318,7 @@ ASM_FUNCTION(Delete__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__11daBkyRock_cFv) {
+asm void daBkyRock_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/setModelMtx__11daBkyRock_cFv.s"
 }
@@ -263,7 +329,7 @@ ASM_FUNCTION(setModelMtx__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daBkyRock_cFv) {
+asm void daBkyRock_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/createHeap__11daBkyRock_cFv.s"
 }
@@ -274,7 +340,7 @@ ASM_FUNCTION(createHeap__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11daBkyRock_cFv) {
+asm void daBkyRock_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/init__11daBkyRock_cFv.s"
 }
@@ -285,7 +351,7 @@ ASM_FUNCTION(init__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(middleExe__11daBkyRock_cFv) {
+asm void daBkyRock_c::middleExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/middleExe__11daBkyRock_cFv.s"
 }
@@ -296,7 +362,7 @@ ASM_FUNCTION(middleExe__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeNoDamage__11daBkyRock_cFv) {
+asm void daBkyRock_c::exeModeNoDamage() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/exeModeNoDamage__11daBkyRock_cFv.s"
 }
@@ -307,7 +373,7 @@ ASM_FUNCTION(exeModeNoDamage__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeDamage__11daBkyRock_cFv) {
+asm void daBkyRock_c::exeModeDamage() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/exeModeDamage__11daBkyRock_cFv.s"
 }
@@ -318,7 +384,7 @@ ASM_FUNCTION(exeModeDamage__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModePiece__11daBkyRock_cFv) {
+asm void daBkyRock_c::exeModePiece() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/exeModePiece__11daBkyRock_cFv.s"
 }
@@ -329,7 +395,7 @@ ASM_FUNCTION(exeModePiece__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkHitBombArrow__11daBkyRock_cFv) {
+asm void daBkyRock_c::chkHitBombArrow() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/chkHitBombArrow__11daBkyRock_cFv.s"
 }
@@ -340,7 +406,7 @@ ASM_FUNCTION(chkHitBombArrow__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initChangeModeBefore__11daBkyRock_cFv) {
+asm void daBkyRock_c::initChangeModeBefore() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/initChangeModeBefore__11daBkyRock_cFv.s"
 }
@@ -351,7 +417,7 @@ ASM_FUNCTION(initChangeModeBefore__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initChangeModeAfter__11daBkyRock_cFv) {
+asm void daBkyRock_c::initChangeModeAfter() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/initChangeModeAfter__11daBkyRock_cFv.s"
 }
@@ -362,7 +428,7 @@ ASM_FUNCTION(initChangeModeAfter__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pieceMove__11daBkyRock_cFv) {
+asm void daBkyRock_c::pieceMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/pieceMove__11daBkyRock_cFv.s"
 }
@@ -373,7 +439,7 @@ ASM_FUNCTION(pieceMove__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pieceMoveInit__11daBkyRock_cFv) {
+asm void daBkyRock_c::pieceMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/pieceMoveInit__11daBkyRock_cFv.s"
 }
@@ -384,7 +450,7 @@ ASM_FUNCTION(pieceMoveInit__11daBkyRock_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(callBombEmt__11daBkyRock_cFiPCUs) {
+asm void daBkyRock_c::callBombEmt(s32 field_0, u16 const* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/callBombEmt__11daBkyRock_cFiPCUs.s"
 }
@@ -395,7 +461,7 @@ ASM_FUNCTION(callBombEmt__11daBkyRock_cFiPCUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkyRock_create__FP11daBkyRock_c) {
+asm void daBkyRock_create(daBkyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/daBkyRock_create__FP11daBkyRock_c.s"
 }
@@ -406,7 +472,7 @@ ASM_FUNCTION(daBkyRock_create__FP11daBkyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkyRock_Delete__FP11daBkyRock_c) {
+asm void daBkyRock_Delete(daBkyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/daBkyRock_Delete__FP11daBkyRock_c.s"
 }
@@ -417,7 +483,7 @@ ASM_FUNCTION(daBkyRock_Delete__FP11daBkyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkyRock_execute__FP11daBkyRock_c) {
+asm void daBkyRock_execute(daBkyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/daBkyRock_execute__FP11daBkyRock_c.s"
 }
@@ -428,7 +494,7 @@ ASM_FUNCTION(daBkyRock_execute__FP11daBkyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daBkyRock_draw__FP11daBkyRock_c) {
+asm void daBkyRock_draw(daBkyRock_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/daBkyRock_draw__FP11daBkyRock_c.s"
 }
@@ -439,7 +505,7 @@ ASM_FUNCTION(daBkyRock_draw__FP11daBkyRock_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__dt__10cCcD_GSttsFv.s"
 }
@@ -450,7 +516,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_bky_rock_cpp) {
+extern "C" asm void __sinit_d_a_obj_bky_rock_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bky_rock/d_a_obj_bky_rock/__sinit_d_a_obj_bky_rock_cpp.s"
 }

@@ -9,38 +9,41 @@
 // Forward References:
 // 
 
-extern "C" extern void __flush_buffer();
-extern "C" extern void __prep_buffer();
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 803650E0-803651A4 00C4+00 .text      __flush_buffer                                               */
+/* 803650E0-803651A4 00C4+00 rc=5 efc=5 .text      __flush_buffer                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__flush_buffer) {
+extern "C" asm void __flush_buffer() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/buffer_io/__flush_buffer.s"
 }
 #pragma pop
 
 
-/* 803651A4-803651D8 0034+00 .text      __prep_buffer                                                */
+/* 803651A4-803651D8 0034+00 rc=2 efc=2 .text      __prep_buffer                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__prep_buffer) {
+extern "C" asm void __prep_buffer() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/buffer_io/__prep_buffer.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

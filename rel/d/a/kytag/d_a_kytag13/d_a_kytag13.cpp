@@ -6,20 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct DOUBLE_POS;
+struct fopAc_ac_c;
+struct kytag13_class;
+struct cXyz;
+
+struct kytag13_class {
+};
+
+struct DOUBLE_POS {
+};
+
+struct cXyz {
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daKytag13_Draw__FP13kytag13_class();
-extern "C" extern void vectle_calc__FP10DOUBLE_POSP4cXyz();
-extern "C" extern void daKytag13_Execute_standard__FP13kytag13_class();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void daKytag13_Execute__FP13kytag13_class();
-extern "C" extern void daKytag13_IsDelete__FP13kytag13_class();
-extern "C" extern void daKytag13_Delete__FP13kytag13_class();
-extern "C" extern void daKytag13_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80860450();
-extern "C" extern void func_80860458();
-extern "C" extern void func_80860460();
+bool daKytag13_Draw(kytag13_class*);
+void vectle_calc(DOUBLE_POS*, cXyz*);
+void daKytag13_Execute_standard(kytag13_class*);
+void daKytag13_Execute(kytag13_class*);
+bool daKytag13_IsDelete(kytag13_class*);
+bool daKytag13_Delete(kytag13_class*);
+void daKytag13_Create(fopAc_ac_c*);
+extern "C" void func_80860450();
+extern "C" void func_80860458();
+extern "C" void func_80860460();
+
+extern "C" bool daKytag13_Draw__FP13kytag13_class();
+extern "C" void vectle_calc__FP10DOUBLE_POSP4cXyz();
+extern "C" void daKytag13_Execute_standard__FP13kytag13_class();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void daKytag13_Execute__FP13kytag13_class();
+extern "C" bool daKytag13_IsDelete__FP13kytag13_class();
+extern "C" bool daKytag13_Delete__FP13kytag13_class();
+extern "C" void daKytag13_Create__FP10fopAc_ac_c();
+extern "C" void func_80860450();
+extern "C" void func_80860458();
+extern "C" void func_80860460();
 SECTION_RODATA extern const u8 lit_3783[8];
 SECTION_RODATA extern const u8 lit_3784[4];
 SECTION_RODATA extern const u32 lit_4177;
@@ -74,28 +110,25 @@ SECTION_DATA extern void*const __vt__14dBgS_ObjGndChk[12];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
 // 
 
 /* 8085F1F8-8085F200 0008+00 .text      daKytag13_Draw__FP13kytag13_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_Draw__FP13kytag13_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Draw__FP13kytag13_class.s"
+bool daKytag13_Draw(kytag13_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8085F200-8085F2B0 00B0+00 .text      vectle_calc__FP10DOUBLE_POSP4cXyz                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(vectle_calc__FP10DOUBLE_POSP4cXyz) {
+asm void vectle_calc(DOUBLE_POS* field_0, cXyz* field_1) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/vectle_calc__FP10DOUBLE_POSP4cXyz.s"
 }
@@ -106,7 +139,7 @@ ASM_FUNCTION(vectle_calc__FP10DOUBLE_POSP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_Execute_standard__FP13kytag13_class) {
+asm void daKytag13_Execute_standard(kytag13_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Execute_standard__FP13kytag13_class.s"
 }
@@ -117,7 +150,7 @@ ASM_FUNCTION(daKytag13_Execute_standard__FP13kytag13_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -128,7 +161,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_Execute__FP13kytag13_class) {
+asm void daKytag13_Execute(kytag13_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Execute__FP13kytag13_class.s"
 }
@@ -136,32 +169,22 @@ ASM_FUNCTION(daKytag13_Execute__FP13kytag13_class) {
 
 
 /* 80860200-80860208 0008+00 .text      daKytag13_IsDelete__FP13kytag13_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_IsDelete__FP13kytag13_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_IsDelete__FP13kytag13_class.s"
+bool daKytag13_IsDelete(kytag13_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80860208-80860210 0008+00 .text      daKytag13_Delete__FP13kytag13_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_Delete__FP13kytag13_class) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Delete__FP13kytag13_class.s"
+bool daKytag13_Delete(kytag13_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80860210-80860450 0240+00 .text      daKytag13_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKytag13_Create__FP10fopAc_ac_c) {
+asm void daKytag13_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Create__FP10fopAc_ac_c.s"
 }
@@ -172,7 +195,7 @@ ASM_FUNCTION(daKytag13_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80860450) {
+extern "C" asm void func_80860450() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860450.s"
 }
@@ -183,7 +206,7 @@ ASM_FUNCTION(func_80860450) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80860458) {
+extern "C" asm void func_80860458() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860458.s"
 }
@@ -194,7 +217,7 @@ ASM_FUNCTION(func_80860458) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80860460) {
+extern "C" asm void func_80860460() {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/func_80860460.s"
 }

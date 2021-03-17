@@ -6,36 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+
+struct daObj_Pleaf_c {
+	~daObj_Pleaf_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void getResName();
+	void isDelete();
+	void setEnvTevColor();
+	void setRoomNo();
+	void setMtx();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daObj_Pleaf_Param_c {
+	~daObj_Pleaf_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daObj_Pleaf_cFv();
-extern "C" extern void create__13daObj_Pleaf_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void CreateHeap__13daObj_Pleaf_cFv();
-extern "C" extern void Delete__13daObj_Pleaf_cFv();
-extern "C" extern void Execute__13daObj_Pleaf_cFv();
-extern "C" extern void Draw__13daObj_Pleaf_cFv();
-extern "C" extern void createHeapCallBack__13daObj_Pleaf_cFP10fopAc_ac_c();
-extern "C" extern void getResName__13daObj_Pleaf_cFv();
-extern "C" extern void isDelete__13daObj_Pleaf_cFv();
-extern "C" extern void setEnvTevColor__13daObj_Pleaf_cFv();
-extern "C" extern void setRoomNo__13daObj_Pleaf_cFv();
-extern "C" extern void setMtx__13daObj_Pleaf_cFv();
-extern "C" extern void daObj_Pleaf_Create__FPv();
-extern "C" extern void daObj_Pleaf_Delete__FPv();
-extern "C" extern void daObj_Pleaf_Execute__FPv();
-extern "C" extern void daObj_Pleaf_Draw__FPv();
-extern "C" extern void daObj_Pleaf_IsDelete__FPv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_obj_pleaf_cpp();
-extern "C" extern void __dt__19daObj_Pleaf_Param_cFv();
-extern "C" extern void func_80CB1840();
-extern "C" extern void func_80CB1848();
+void daObj_Pleaf_Create(void*);
+void daObj_Pleaf_Delete(void*);
+void daObj_Pleaf_Execute(void*);
+void daObj_Pleaf_Draw(void*);
+bool daObj_Pleaf_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_pleaf_cpp();
+extern "C" void func_80CB1840();
+extern "C" void func_80CB1848();
+
+extern "C" void __dt__13daObj_Pleaf_cFv();
+extern "C" void create__13daObj_Pleaf_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void CreateHeap__13daObj_Pleaf_cFv();
+extern "C" void Delete__13daObj_Pleaf_cFv();
+extern "C" void Execute__13daObj_Pleaf_cFv();
+extern "C" void Draw__13daObj_Pleaf_cFv();
+extern "C" void createHeapCallBack__13daObj_Pleaf_cFP10fopAc_ac_c();
+extern "C" void getResName__13daObj_Pleaf_cFv();
+extern "C" void isDelete__13daObj_Pleaf_cFv();
+extern "C" void setEnvTevColor__13daObj_Pleaf_cFv();
+extern "C" void setRoomNo__13daObj_Pleaf_cFv();
+extern "C" void setMtx__13daObj_Pleaf_cFv();
+extern "C" void daObj_Pleaf_Create__FPv();
+extern "C" void daObj_Pleaf_Delete__FPv();
+extern "C" void daObj_Pleaf_Execute__FPv();
+extern "C" void daObj_Pleaf_Draw__FPv();
+extern "C" bool daObj_Pleaf_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_obj_pleaf_cpp();
+extern "C" void __dt__19daObj_Pleaf_Param_cFv();
+extern "C" void func_80CB1840();
+extern "C" void func_80CB1848();
 SECTION_RODATA extern const u8 m__19daObj_Pleaf_Param_c[16];
 SECTION_RODATA extern const u32 lit_3905;
 SECTION_RODATA extern const u32 lit_3906;
@@ -63,8 +124,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -74,7 +138,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObj_Pleaf_cFv) {
+asm daObj_Pleaf_c::~daObj_Pleaf_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__13daObj_Pleaf_cFv.s"
 }
@@ -85,7 +149,7 @@ ASM_FUNCTION(__dt__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/create__13daObj_Pleaf_cFv.s"
 }
@@ -96,7 +160,7 @@ ASM_FUNCTION(create__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__8cM3dGSphFv.s"
 }
@@ -107,7 +171,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__8cM3dGAabFv.s"
 }
@@ -118,7 +182,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__12dBgS_AcchCirFv.s"
 }
@@ -129,7 +193,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__10dCcD_GSttsFv.s"
 }
@@ -140,7 +204,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -151,7 +215,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/CreateHeap__13daObj_Pleaf_cFv.s"
 }
@@ -162,7 +226,7 @@ ASM_FUNCTION(CreateHeap__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/Delete__13daObj_Pleaf_cFv.s"
 }
@@ -173,7 +237,7 @@ ASM_FUNCTION(Delete__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/Execute__13daObj_Pleaf_cFv.s"
 }
@@ -184,7 +248,7 @@ ASM_FUNCTION(Execute__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/Draw__13daObj_Pleaf_cFv.s"
 }
@@ -195,7 +259,7 @@ ASM_FUNCTION(Draw__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daObj_Pleaf_cFP10fopAc_ac_c) {
+asm void daObj_Pleaf_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/createHeapCallBack__13daObj_Pleaf_cFP10fopAc_ac_c.s"
 }
@@ -206,7 +270,7 @@ ASM_FUNCTION(createHeapCallBack__13daObj_Pleaf_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResName__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::getResName() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/getResName__13daObj_Pleaf_cFv.s"
 }
@@ -217,7 +281,7 @@ ASM_FUNCTION(getResName__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/isDelete__13daObj_Pleaf_cFv.s"
 }
@@ -228,7 +292,7 @@ ASM_FUNCTION(isDelete__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEnvTevColor__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::setEnvTevColor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/setEnvTevColor__13daObj_Pleaf_cFv.s"
 }
@@ -239,7 +303,7 @@ ASM_FUNCTION(setEnvTevColor__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomNo__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::setRoomNo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/setRoomNo__13daObj_Pleaf_cFv.s"
 }
@@ -250,7 +314,7 @@ ASM_FUNCTION(setRoomNo__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__13daObj_Pleaf_cFv) {
+asm void daObj_Pleaf_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/setMtx__13daObj_Pleaf_cFv.s"
 }
@@ -261,7 +325,7 @@ ASM_FUNCTION(setMtx__13daObj_Pleaf_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pleaf_Create__FPv) {
+asm void daObj_Pleaf_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Create__FPv.s"
 }
@@ -272,7 +336,7 @@ ASM_FUNCTION(daObj_Pleaf_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pleaf_Delete__FPv) {
+asm void daObj_Pleaf_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Delete__FPv.s"
 }
@@ -283,7 +347,7 @@ ASM_FUNCTION(daObj_Pleaf_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pleaf_Execute__FPv) {
+asm void daObj_Pleaf_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Execute__FPv.s"
 }
@@ -294,7 +358,7 @@ ASM_FUNCTION(daObj_Pleaf_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pleaf_Draw__FPv) {
+asm void daObj_Pleaf_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_Draw__FPv.s"
 }
@@ -302,21 +366,16 @@ ASM_FUNCTION(daObj_Pleaf_Draw__FPv) {
 
 
 /* 80CB1768-80CB1770 0008+00 .text      daObj_Pleaf_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Pleaf_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_IsDelete__FPv.s"
+bool daObj_Pleaf_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB1770-80CB17B8 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__10cCcD_GSttsFv.s"
 }
@@ -327,7 +386,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_pleaf_cpp) {
+extern "C" asm void __sinit_d_a_obj_pleaf_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__sinit_d_a_obj_pleaf_cpp.s"
 }
@@ -338,7 +397,7 @@ ASM_FUNCTION(__sinit_d_a_obj_pleaf_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daObj_Pleaf_Param_cFv) {
+asm daObj_Pleaf_Param_c::~daObj_Pleaf_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/__dt__19daObj_Pleaf_Param_cFv.s"
 }
@@ -349,7 +408,7 @@ ASM_FUNCTION(__dt__19daObj_Pleaf_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB1840) {
+extern "C" asm void func_80CB1840() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/func_80CB1840.s"
 }
@@ -360,7 +419,7 @@ ASM_FUNCTION(func_80CB1840) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CB1848) {
+extern "C" asm void func_80CB1848() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/func_80CB1848.s"
 }

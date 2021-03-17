@@ -6,48 +6,128 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv6ChangeGate_c;
+
+struct daLv6ChangeGate_HIO_c {
+	daLv6ChangeGate_HIO_c();
+	~daLv6ChangeGate_HIO_c();
+};
+
+struct fOpAcm_HIO_entry_c {
+	~fOpAcm_HIO_entry_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv6ChangeGate_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void isSwitch();
+	void moveGate();
+	void eventStart();
+	void init_modeWait();
+	void modeWait();
+	void init_modeSlideRight();
+	void modeSlideRight();
+	void init_modeSlideLeft();
+	void modeSlideLeft();
+	void init_modeBreak();
+	void modeBreak();
+	void Draw();
+	void Delete();
+	~daLv6ChangeGate_c();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__21daLv6ChangeGate_HIO_cFv();
-extern "C" extern void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__17daLv6ChangeGate_cFv();
-extern "C" extern void CreateHeap__17daLv6ChangeGate_cFv();
-extern "C" extern void create__17daLv6ChangeGate_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void isSwitch__17daLv6ChangeGate_cFv();
-extern "C" extern void Execute__17daLv6ChangeGate_cFPPA3_A4_f();
-extern "C" extern void moveGate__17daLv6ChangeGate_cFv();
-extern "C" extern void eventStart__17daLv6ChangeGate_cFv();
-extern "C" extern void init_modeWait__17daLv6ChangeGate_cFv();
-extern "C" extern void modeWait__17daLv6ChangeGate_cFv();
-extern "C" extern void init_modeSlideRight__17daLv6ChangeGate_cFv();
-extern "C" extern void modeSlideRight__17daLv6ChangeGate_cFv();
-extern "C" extern void init_modeSlideLeft__17daLv6ChangeGate_cFv();
-extern "C" extern void modeSlideLeft__17daLv6ChangeGate_cFv();
-extern "C" extern void init_modeBreak__17daLv6ChangeGate_cFv();
-extern "C" extern void modeBreak__17daLv6ChangeGate_cFv();
-extern "C" extern void Draw__17daLv6ChangeGate_cFv();
-extern "C" extern void Delete__17daLv6ChangeGate_cFv();
-extern "C" extern void daLv6ChangeGate_Draw__FP17daLv6ChangeGate_c();
-extern "C" extern void daLv6ChangeGate_Execute__FP17daLv6ChangeGate_c();
-extern "C" extern void daLv6ChangeGate_Delete__FP17daLv6ChangeGate_c();
-extern "C" extern void daLv6ChangeGate_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__21daLv6ChangeGate_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv6ChangeGate_cpp();
-extern "C" extern void func_80C71FC4();
-extern "C" extern void func_80C71FCC();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__17daLv6ChangeGate_cFv();
+extern "C" void Execute__17daLv6ChangeGate_cFPPA3_A4_f();
+void daLv6ChangeGate_Draw(daLv6ChangeGate_c*);
+void daLv6ChangeGate_Execute(daLv6ChangeGate_c*);
+void daLv6ChangeGate_Delete(daLv6ChangeGate_c*);
+void daLv6ChangeGate_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv6ChangeGate_cpp();
+extern "C" void func_80C71FC4();
+extern "C" void func_80C71FCC();
+
+extern "C" void __ct__21daLv6ChangeGate_HIO_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__17daLv6ChangeGate_cFv();
+extern "C" void CreateHeap__17daLv6ChangeGate_cFv();
+extern "C" void create__17daLv6ChangeGate_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void isSwitch__17daLv6ChangeGate_cFv();
+extern "C" void Execute__17daLv6ChangeGate_cFPPA3_A4_f();
+extern "C" void moveGate__17daLv6ChangeGate_cFv();
+extern "C" void eventStart__17daLv6ChangeGate_cFv();
+extern "C" void init_modeWait__17daLv6ChangeGate_cFv();
+extern "C" void modeWait__17daLv6ChangeGate_cFv();
+extern "C" void init_modeSlideRight__17daLv6ChangeGate_cFv();
+extern "C" void modeSlideRight__17daLv6ChangeGate_cFv();
+extern "C" void init_modeSlideLeft__17daLv6ChangeGate_cFv();
+extern "C" void modeSlideLeft__17daLv6ChangeGate_cFv();
+extern "C" void init_modeBreak__17daLv6ChangeGate_cFv();
+extern "C" void modeBreak__17daLv6ChangeGate_cFv();
+extern "C" void Draw__17daLv6ChangeGate_cFv();
+extern "C" void Delete__17daLv6ChangeGate_cFv();
+extern "C" void daLv6ChangeGate_Draw__FP17daLv6ChangeGate_c();
+extern "C" void daLv6ChangeGate_Execute__FP17daLv6ChangeGate_c();
+extern "C" void daLv6ChangeGate_Delete__FP17daLv6ChangeGate_c();
+extern "C" void daLv6ChangeGate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__21daLv6ChangeGate_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv6ChangeGate_cpp();
+extern "C" void func_80C71FC4();
+extern "C" void func_80C71FCC();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__17daLv6ChangeGate_cFv();
 SECTION_RODATA extern const u32 lit_3639;
 SECTION_RODATA extern const u32 lit_3640;
 SECTION_RODATA extern const u8 mCcDObjInfo__17daLv6ChangeGate_c[48];
@@ -88,8 +168,11 @@ SECTION_BSS extern u8 data_80C7239C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -99,7 +182,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__21daLv6ChangeGate_HIO_cFv) {
+asm daLv6ChangeGate_HIO_c::daLv6ChangeGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__ct__21daLv6ChangeGate_HIO_cFv.s"
 }
@@ -110,7 +193,7 @@ ASM_FUNCTION(__ct__21daLv6ChangeGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
+asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__18fOpAcm_HIO_entry_cFv.s"
 }
@@ -121,7 +204,7 @@ ASM_FUNCTION(__dt__18fOpAcm_HIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -132,7 +215,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/setBaseMtx__17daLv6ChangeGate_cFv.s"
 }
@@ -143,7 +226,7 @@ ASM_FUNCTION(setBaseMtx__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/CreateHeap__17daLv6ChangeGate_cFv.s"
 }
@@ -154,7 +237,7 @@ ASM_FUNCTION(CreateHeap__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/create__17daLv6ChangeGate_cFv.s"
 }
@@ -165,7 +248,7 @@ ASM_FUNCTION(create__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__8dCcD_CylFv.s"
 }
@@ -176,7 +259,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__ct__8dCcD_CylFv.s"
 }
@@ -187,7 +270,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__8cM3dGCylFv.s"
 }
@@ -198,7 +281,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__8cM3dGAabFv.s"
 }
@@ -209,7 +292,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__10dCcD_GSttsFv.s"
 }
@@ -220,7 +303,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSwitch__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::isSwitch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/isSwitch__17daLv6ChangeGate_cFv.s"
 }
@@ -231,7 +314,7 @@ ASM_FUNCTION(isSwitch__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__17daLv6ChangeGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__17daLv6ChangeGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/Execute__17daLv6ChangeGate_cFPPA3_A4_f.s"
 }
@@ -242,7 +325,7 @@ ASM_FUNCTION(Execute__17daLv6ChangeGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveGate__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::moveGate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/moveGate__17daLv6ChangeGate_cFv.s"
 }
@@ -253,7 +336,7 @@ ASM_FUNCTION(moveGate__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventStart__17daLv6ChangeGate_cFv.s"
 }
@@ -264,7 +347,7 @@ ASM_FUNCTION(eventStart__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/init_modeWait__17daLv6ChangeGate_cFv.s"
 }
@@ -272,21 +355,16 @@ ASM_FUNCTION(init_modeWait__17daLv6ChangeGate_cFv) {
 
 
 /* 80C71600-80C71604 0004+00 .text      modeWait__17daLv6ChangeGate_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__17daLv6ChangeGate_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/modeWait__17daLv6ChangeGate_cFv.s"
+void daLv6ChangeGate_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C71604-80C716B4 00B0+00 .text      init_modeSlideRight__17daLv6ChangeGate_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeSlideRight__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::init_modeSlideRight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/init_modeSlideRight__17daLv6ChangeGate_cFv.s"
 }
@@ -297,7 +375,7 @@ ASM_FUNCTION(init_modeSlideRight__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSlideRight__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::modeSlideRight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/modeSlideRight__17daLv6ChangeGate_cFv.s"
 }
@@ -308,7 +386,7 @@ ASM_FUNCTION(modeSlideRight__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeSlideLeft__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::init_modeSlideLeft() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/init_modeSlideLeft__17daLv6ChangeGate_cFv.s"
 }
@@ -319,7 +397,7 @@ ASM_FUNCTION(init_modeSlideLeft__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeSlideLeft__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::modeSlideLeft() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/modeSlideLeft__17daLv6ChangeGate_cFv.s"
 }
@@ -330,7 +408,7 @@ ASM_FUNCTION(modeSlideLeft__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/init_modeBreak__17daLv6ChangeGate_cFv.s"
 }
@@ -341,7 +419,7 @@ ASM_FUNCTION(init_modeBreak__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/modeBreak__17daLv6ChangeGate_cFv.s"
 }
@@ -352,7 +430,7 @@ ASM_FUNCTION(modeBreak__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/Draw__17daLv6ChangeGate_cFv.s"
 }
@@ -363,7 +441,7 @@ ASM_FUNCTION(Draw__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__17daLv6ChangeGate_cFv) {
+asm void daLv6ChangeGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/Delete__17daLv6ChangeGate_cFv.s"
 }
@@ -374,7 +452,7 @@ ASM_FUNCTION(Delete__17daLv6ChangeGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6ChangeGate_Draw__FP17daLv6ChangeGate_c) {
+asm void daLv6ChangeGate_Draw(daLv6ChangeGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/daLv6ChangeGate_Draw__FP17daLv6ChangeGate_c.s"
 }
@@ -385,7 +463,7 @@ ASM_FUNCTION(daLv6ChangeGate_Draw__FP17daLv6ChangeGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6ChangeGate_Execute__FP17daLv6ChangeGate_c) {
+asm void daLv6ChangeGate_Execute(daLv6ChangeGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/daLv6ChangeGate_Execute__FP17daLv6ChangeGate_c.s"
 }
@@ -396,7 +474,7 @@ ASM_FUNCTION(daLv6ChangeGate_Execute__FP17daLv6ChangeGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6ChangeGate_Delete__FP17daLv6ChangeGate_c) {
+asm void daLv6ChangeGate_Delete(daLv6ChangeGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/daLv6ChangeGate_Delete__FP17daLv6ChangeGate_c.s"
 }
@@ -407,7 +485,7 @@ ASM_FUNCTION(daLv6ChangeGate_Delete__FP17daLv6ChangeGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv6ChangeGate_Create__FP10fopAc_ac_c) {
+asm void daLv6ChangeGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/daLv6ChangeGate_Create__FP10fopAc_ac_c.s"
 }
@@ -418,7 +496,7 @@ ASM_FUNCTION(daLv6ChangeGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__10cCcD_GSttsFv.s"
 }
@@ -429,7 +507,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__21daLv6ChangeGate_HIO_cFv) {
+asm daLv6ChangeGate_HIO_c::~daLv6ChangeGate_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__21daLv6ChangeGate_HIO_cFv.s"
 }
@@ -440,7 +518,7 @@ ASM_FUNCTION(__dt__21daLv6ChangeGate_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv6ChangeGate_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv6ChangeGate_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__sinit_d_a_obj_lv6ChangeGate_cpp.s"
 }
@@ -451,7 +529,7 @@ ASM_FUNCTION(__sinit_d_a_obj_lv6ChangeGate_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C71FC4) {
+extern "C" asm void func_80C71FC4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/func_80C71FC4.s"
 }
@@ -462,7 +540,7 @@ ASM_FUNCTION(func_80C71FC4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C71FCC) {
+extern "C" asm void func_80C71FCC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/func_80C71FCC.s"
 }
@@ -473,7 +551,7 @@ ASM_FUNCTION(func_80C71FCC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__17dEvLib_callback_cFv.s"
 }
@@ -481,43 +559,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C7201C-80C72024 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C72024-80C7202C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C7202C-80C72034 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C72034-80C72138 0104+00 .text      __dt__17daLv6ChangeGate_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daLv6ChangeGate_cFv) {
+asm daLv6ChangeGate_c::~daLv6ChangeGate_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/__dt__17daLv6ChangeGate_cFv.s"
 }

@@ -64,6 +64,9 @@ class GlobalSymbolTable:
     def __getitem__(self, key):
         return self.at(key[0], key[1])
 
+    def resolve_set(self, addrs):
+        return [ self.at(*x) for x in addrs ]
+
     def add_symbol(self, symbol: Symbol):
         if symbol.size > 0:
             self.symbols.addi(symbol.start, symbol.end, symbol)

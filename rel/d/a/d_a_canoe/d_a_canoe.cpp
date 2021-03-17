@@ -6,42 +6,120 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct cBgS_PolyInfo;
+struct daCanoe_c;
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct daCanoe_c {
+	void createHeap();
+	void create();
+	~daCanoe_c();
+	void setRoomInfo();
+	void setMatrix();
+	void setCollision();
+	void posMove();
+	void checkGomikabe(cBgS_PolyInfo&);
+	void setFrontBackPos();
+	void frontBackBgCheck();
+	void setPaddleEffect();
+	void setCanoeSliderEffect();
+	void execute();
+	void draw();
+};
+
+struct dCcD_Cyl {
+	~dCcD_Cyl();
+	dCcD_Cyl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_LinkAcch {
+	~dBgS_LinkAcch();
+	dBgS_LinkAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void createHeap__9daCanoe_cFv();
-extern "C" extern void daCanoe_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__9daCanoe_cFv();
-extern "C" extern void __dt__8dCcD_CylFv();
-extern "C" extern void __ct__8dCcD_CylFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__13dBgS_LinkAcchFv();
-extern "C" extern void __ct__13dBgS_LinkAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daCanoe_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__9daCanoe_cFv();
-extern "C" extern void daCanoe_Delete__FP9daCanoe_c();
-extern "C" extern void setRoomInfo__9daCanoe_cFv();
-extern "C" extern void setMatrix__9daCanoe_cFv();
-extern "C" extern void setCollision__9daCanoe_cFv();
-extern "C" extern void posMove__9daCanoe_cFv();
-extern "C" extern void checkGomikabe__9daCanoe_cFR13cBgS_PolyInfo();
-extern "C" extern void setFrontBackPos__9daCanoe_cFv();
-extern "C" extern void frontBackBgCheck__9daCanoe_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setPaddleEffect__9daCanoe_cFv();
-extern "C" extern void setCanoeSliderEffect__9daCanoe_cFv();
-extern "C" extern void execute__9daCanoe_cFv();
-extern "C" extern void daCanoe_Execute__FP9daCanoe_c();
-extern "C" extern void draw__9daCanoe_cFv();
-extern "C" extern void daCanoe_Draw__FP9daCanoe_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_804DD5BC();
-extern "C" extern void func_804DD5C4();
+void daCanoe_searchTagWaterFall(fopAc_ac_c*, void*);
+void daCanoe_createHeap(fopAc_ac_c*);
+void daCanoe_Create(fopAc_ac_c*);
+void daCanoe_Delete(daCanoe_c*);
+void daCanoe_Execute(daCanoe_c*);
+void daCanoe_Draw(daCanoe_c*);
+extern "C" void func_804DD5BC();
+extern "C" void func_804DD5C4();
+
+extern "C" void daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void createHeap__9daCanoe_cFv();
+extern "C" void daCanoe_createHeap__FP10fopAc_ac_c();
+extern "C" void create__9daCanoe_cFv();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__13dBgS_LinkAcchFv();
+extern "C" void __ct__13dBgS_LinkAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daCanoe_Create__FP10fopAc_ac_c();
+extern "C" void __dt__9daCanoe_cFv();
+extern "C" void daCanoe_Delete__FP9daCanoe_c();
+extern "C" void setRoomInfo__9daCanoe_cFv();
+extern "C" void setMatrix__9daCanoe_cFv();
+extern "C" void setCollision__9daCanoe_cFv();
+extern "C" void posMove__9daCanoe_cFv();
+extern "C" void checkGomikabe__9daCanoe_cFR13cBgS_PolyInfo();
+extern "C" void setFrontBackPos__9daCanoe_cFv();
+extern "C" void frontBackBgCheck__9daCanoe_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setPaddleEffect__9daCanoe_cFv();
+extern "C" void setCanoeSliderEffect__9daCanoe_cFv();
+extern "C" void execute__9daCanoe_cFv();
+extern "C" void daCanoe_Execute__FP9daCanoe_c();
+extern "C" void draw__9daCanoe_cFv();
+extern "C" void daCanoe_Draw__FP9daCanoe_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_804DD5BC();
+extern "C" void func_804DD5C4();
 SECTION_RODATA extern const u8 lit_3766[12];
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 l_arcName2[7 + 1 /* padding */];
@@ -158,8 +236,11 @@ SECTION_BSS extern u8 data_804DD8D4[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -169,7 +250,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv) {
+asm void daCanoe_searchTagWaterFall(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv.s"
 }
@@ -180,7 +261,7 @@ ASM_FUNCTION(daCanoe_searchTagWaterFall__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__4cXyzFv.s"
 }
@@ -191,7 +272,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__9daCanoe_cFv) {
+asm void daCanoe_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/createHeap__9daCanoe_cFv.s"
 }
@@ -202,7 +283,7 @@ ASM_FUNCTION(createHeap__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_createHeap__FP10fopAc_ac_c) {
+asm void daCanoe_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_createHeap__FP10fopAc_ac_c.s"
 }
@@ -213,7 +294,7 @@ ASM_FUNCTION(daCanoe_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daCanoe_cFv) {
+asm void daCanoe_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/create__9daCanoe_cFv.s"
 }
@@ -224,7 +305,7 @@ ASM_FUNCTION(create__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_CylFv) {
+asm dCcD_Cyl::~dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__8dCcD_CylFv.s"
 }
@@ -235,7 +316,7 @@ ASM_FUNCTION(__dt__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_CylFv) {
+asm dCcD_Cyl::dCcD_Cyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__ct__8dCcD_CylFv.s"
 }
@@ -246,7 +327,7 @@ ASM_FUNCTION(__ct__8dCcD_CylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__8cM3dGCylFv.s"
 }
@@ -257,7 +338,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__8cM3dGAabFv.s"
 }
@@ -268,7 +349,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dBgS_LinkAcchFv) {
+asm dBgS_LinkAcch::~dBgS_LinkAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__13dBgS_LinkAcchFv.s"
 }
@@ -279,7 +360,7 @@ ASM_FUNCTION(__dt__13dBgS_LinkAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13dBgS_LinkAcchFv) {
+asm dBgS_LinkAcch::dBgS_LinkAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__ct__13dBgS_LinkAcchFv.s"
 }
@@ -290,7 +371,7 @@ ASM_FUNCTION(__ct__13dBgS_LinkAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__12dBgS_AcchCirFv.s"
 }
@@ -301,7 +382,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__10dCcD_GSttsFv.s"
 }
@@ -312,7 +393,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_Create__FP10fopAc_ac_c) {
+asm void daCanoe_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Create__FP10fopAc_ac_c.s"
 }
@@ -323,7 +404,7 @@ ASM_FUNCTION(daCanoe_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daCanoe_cFv) {
+asm daCanoe_c::~daCanoe_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__9daCanoe_cFv.s"
 }
@@ -334,7 +415,7 @@ ASM_FUNCTION(__dt__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_Delete__FP9daCanoe_c) {
+asm void daCanoe_Delete(daCanoe_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Delete__FP9daCanoe_c.s"
 }
@@ -345,7 +426,7 @@ ASM_FUNCTION(daCanoe_Delete__FP9daCanoe_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daCanoe_cFv) {
+asm void daCanoe_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setRoomInfo__9daCanoe_cFv.s"
 }
@@ -356,7 +437,7 @@ ASM_FUNCTION(setRoomInfo__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__9daCanoe_cFv) {
+asm void daCanoe_c::setMatrix() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setMatrix__9daCanoe_cFv.s"
 }
@@ -367,7 +448,7 @@ ASM_FUNCTION(setMatrix__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__9daCanoe_cFv) {
+asm void daCanoe_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setCollision__9daCanoe_cFv.s"
 }
@@ -378,7 +459,7 @@ ASM_FUNCTION(setCollision__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMove__9daCanoe_cFv) {
+asm void daCanoe_c::posMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/posMove__9daCanoe_cFv.s"
 }
@@ -389,7 +470,7 @@ ASM_FUNCTION(posMove__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGomikabe__9daCanoe_cFR13cBgS_PolyInfo) {
+asm void daCanoe_c::checkGomikabe(cBgS_PolyInfo& field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/checkGomikabe__9daCanoe_cFR13cBgS_PolyInfo.s"
 }
@@ -400,7 +481,7 @@ ASM_FUNCTION(checkGomikabe__9daCanoe_cFR13cBgS_PolyInfo) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFrontBackPos__9daCanoe_cFv) {
+asm void daCanoe_c::setFrontBackPos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setFrontBackPos__9daCanoe_cFv.s"
 }
@@ -411,7 +492,7 @@ ASM_FUNCTION(setFrontBackPos__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(frontBackBgCheck__9daCanoe_cFv) {
+asm void daCanoe_c::frontBackBgCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/frontBackBgCheck__9daCanoe_cFv.s"
 }
@@ -422,7 +503,7 @@ ASM_FUNCTION(frontBackBgCheck__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__8cM3dGPlaFv.s"
 }
@@ -433,7 +514,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPaddleEffect__9daCanoe_cFv) {
+asm void daCanoe_c::setPaddleEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setPaddleEffect__9daCanoe_cFv.s"
 }
@@ -444,7 +525,7 @@ ASM_FUNCTION(setPaddleEffect__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCanoeSliderEffect__9daCanoe_cFv) {
+asm void daCanoe_c::setCanoeSliderEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/setCanoeSliderEffect__9daCanoe_cFv.s"
 }
@@ -455,7 +536,7 @@ ASM_FUNCTION(setCanoeSliderEffect__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daCanoe_cFv) {
+asm void daCanoe_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/execute__9daCanoe_cFv.s"
 }
@@ -466,7 +547,7 @@ ASM_FUNCTION(execute__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_Execute__FP9daCanoe_c) {
+asm void daCanoe_Execute(daCanoe_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Execute__FP9daCanoe_c.s"
 }
@@ -477,7 +558,7 @@ ASM_FUNCTION(daCanoe_Execute__FP9daCanoe_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daCanoe_cFv) {
+asm void daCanoe_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/draw__9daCanoe_cFv.s"
 }
@@ -488,7 +569,7 @@ ASM_FUNCTION(draw__9daCanoe_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daCanoe_Draw__FP9daCanoe_c) {
+asm void daCanoe_Draw(daCanoe_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/daCanoe_Draw__FP9daCanoe_c.s"
 }
@@ -499,7 +580,7 @@ ASM_FUNCTION(daCanoe_Draw__FP9daCanoe_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/__dt__10cCcD_GSttsFv.s"
 }
@@ -510,7 +591,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804DD5BC) {
+extern "C" asm void func_804DD5BC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/func_804DD5BC.s"
 }
@@ -521,7 +602,7 @@ ASM_FUNCTION(func_804DD5BC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804DD5C4) {
+extern "C" asm void func_804DD5C4() {
 	nofralloc
 #include "asm/rel/d/a/d_a_canoe/d_a_canoe/func_804DD5C4.s"
 }

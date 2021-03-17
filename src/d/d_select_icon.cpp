@@ -6,15 +6,61 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dSi_HIO_c (dSi_HIO_c) False/False
+/* top-level dependencies (begin dSi_HIO_c) */
+/* top-level dependencies (end dSi_HIO_c) */
+struct dSi_HIO_c {
+	/* 80195A2C */ dSi_HIO_c();
+	/* 80195C1C */ ~dSi_HIO_c();
+};
+
+// build dSelect_icon_c (dSelect_icon_c) False/False
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+};
+
+/* top-level dependencies (begin dSelect_icon_c) */
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_icon_c) */
+struct dSelect_icon_c {
+	// J2DPane
+	/* 80195A3C */ void animation();
+	/* 80195B40 */ void setAlpha(char);
+	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
+};
+
+// build J2DPane (J2DPane) True/True
+// build CPaneMgr (CPaneMgr) False/False
+/* top-level dependencies (begin CPaneMgr) */
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	/* 80254638 */ void paneScale(f32, f32);
+};
+
+// build J2DScreen (J2DScreen) False/False
+/* top-level dependencies (begin J2DScreen) */
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	/* 802F9690 */ void animation();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__9dSi_HIO_cFv();
-extern "C" extern void animation__14dSelect_icon_cFv();
-extern "C" extern void setAlpha__14dSelect_icon_cFUc();
-extern "C" extern void setPos__14dSelect_icon_cFP7J2DPaneff();
-extern "C" extern void __dt__9dSi_HIO_cFv();
-extern "C" extern void __sinit_d_select_icon_cpp();
+extern "C" void __sinit_d_select_icon_cpp();
+
+extern "C" void __ct__9dSi_HIO_cFv();
+extern "C" void animation__14dSelect_icon_cFv();
+extern "C" void setAlpha__14dSelect_icon_cFUc();
+extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff();
+extern "C" void __dt__9dSi_HIO_cFv();
+extern "C" void __sinit_d_select_icon_cpp();
 SECTION_DATA extern void*const __vt__9dSi_HIO_c[4];
 SECTION_BSS extern u8 lit_3648[12 + 4 /* padding */];
 SECTION_SBSS extern u8 g_siHIO[8];
@@ -26,17 +72,20 @@ SECTION_SDATA2 extern f32 lit_3814;
 // External References:
 // 
 
-extern "C" extern void paneScale__8CPaneMgrFff();
-extern "C" extern void __dl__FPv();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void __register_global_object();
+void operator delete(void*);
+extern "C" void __register_global_object();
+
+extern "C" void paneScale__8CPaneMgrFff();
+extern "C" void __dl__FPv();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803BB7B8-803BB7C8 000C+04 .data      __vt__9dSi_HIO_c                                             */
+/* 803BB7B8-803BB7C8 000C+04 rc=2 efc=0 .data      __vt__9dSi_HIO_c                                             */
 void* const __vt__9dSi_HIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -45,11 +94,11 @@ void* const __vt__9dSi_HIO_c[4] = {
 	NULL,
 };
 
-/* 80195A2C-80195A3C 0010+00 .text      __ct__9dSi_HIO_cFv                                           */
+/* 80195A2C-80195A3C 0010+00 rc=1 efc=0 .text      __ct__9dSi_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dSi_HIO_cFv) {
+asm dSi_HIO_c::dSi_HIO_c() {
 	nofralloc
 #include "asm/d/d_select_icon/__ct__9dSi_HIO_cFv.s"
 }
@@ -57,32 +106,32 @@ ASM_FUNCTION(__ct__9dSi_HIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453A70-80453A78 0004+04 .sdata2    @3740                                                        */
+/* 80453A70-80453A78 0004+04 rc=1 efc=0 .sdata2    @3740                                                        */
 u8 d_d_select_icon__lit_3740[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453A78-80453A80 0008+00 .sdata2    @3773                                                        */
+/* 80453A78-80453A80 0008+00 rc=1 efc=0 .sdata2    @3773                                                        */
 f64 d_d_select_icon__lit_3773 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80195A3C-80195B40 0104+00 .text      animation__14dSelect_icon_cFv                                */
+/* 80195A3C-80195B40 0104+00 rc=1 efc=1 .text      animation__14dSelect_icon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(animation__14dSelect_icon_cFv) {
+asm void dSelect_icon_c::animation() {
 	nofralloc
 #include "asm/d/d_select_icon/animation__14dSelect_icon_cFv.s"
 }
 #pragma pop
 
 
-/* 80195B40-80195B70 0030+00 .text      setAlpha__14dSelect_icon_cFUc                                */
+/* 80195B40-80195B70 0030+00 rc=1 efc=1 .text      setAlpha__14dSelect_icon_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlpha__14dSelect_icon_cFUc) {
+asm void dSelect_icon_c::setAlpha(char field_0) {
 	nofralloc
 #include "asm/d/d_select_icon/setAlpha__14dSelect_icon_cFUc.s"
 }
@@ -90,26 +139,26 @@ ASM_FUNCTION(setAlpha__14dSelect_icon_cFUc) {
 
 
 /* ############################################################################################## */
-/* 80453A80-80453A88 0004+04 .sdata2    @3814                                                        */
+/* 80453A80-80453A88 0004+04 rc=1 efc=0 .sdata2    @3814                                                        */
 f32 lit_3814 = 100.0f;
 /* padding 4 bytes */
 
-/* 80195B70-80195C1C 00AC+00 .text      setPos__14dSelect_icon_cFP7J2DPaneff                         */
+/* 80195B70-80195C1C 00AC+00 rc=1 efc=1 .text      setPos__14dSelect_icon_cFP7J2DPaneff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__14dSelect_icon_cFP7J2DPaneff) {
+asm void dSelect_icon_c::setPos(J2DPane* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_select_icon/setPos__14dSelect_icon_cFP7J2DPaneff.s"
 }
 #pragma pop
 
 
-/* 80195C1C-80195C64 0048+00 .text      __dt__9dSi_HIO_cFv                                           */
+/* 80195C1C-80195C64 0048+00 rc=2 efc=0 .text      __dt__9dSi_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dSi_HIO_cFv) {
+asm dSi_HIO_c::~dSi_HIO_c() {
 	nofralloc
 #include "asm/d/d_select_icon/__dt__9dSi_HIO_cFv.s"
 }
@@ -117,21 +166,20 @@ ASM_FUNCTION(__dt__9dSi_HIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 8042CA10-8042CA20 000C+04 .bss       @3648                                                        */
+/* 8042CA10-8042CA20 000C+04 rc=1 efc=0 .bss       @3648                                                        */
 u8 lit_3648[12 + 4 /* padding */];
 
-/* 80451050-80451058 0008+00 .sbss      g_siHIO                                                      */
+/* 80451050-80451058 0008+00 rc=1 efc=0 .sbss      g_siHIO                                                      */
 u8 g_siHIO[8];
 
-/* 80195C64-80195C9C 0038+00 .text      __sinit_d_select_icon_cpp                                    */
+/* 80195C64-80195C9C 0038+00 rc=1 efc=1 .text      __sinit_d_select_icon_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_select_icon_cpp) {
+extern "C" asm void __sinit_d_select_icon_cpp() {
 	nofralloc
 #include "asm/d/d_select_icon/__sinit_d_select_icon_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

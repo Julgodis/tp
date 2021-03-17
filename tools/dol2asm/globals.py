@@ -24,14 +24,15 @@ BASEROM_PATH = None
 
 BASE_PATH = ""
 
+CONSOLE = Console()
+
 logging.basicConfig(
     level="NOTSET",
     format="%(message)s",
     datefmt="[%X]",
-    handlers=[RichHandler(rich_tracebacks=True)]
+    handlers=[RichHandler(console=CONSOLE,rich_tracebacks=True)]
 )
 
-CONSOLE = Console()
 LOG = logging.getLogger("rich")
 LOG.setLevel(logging.INFO)
 
@@ -1730,3 +1731,9 @@ LIBRARY_LUT = [
     ("JStudio", "JSystem/JStudio/"),
     ("J", "JSystem/"),
 ]
+
+NAMESPACES = set([
+    "JStudio::fvb",
+    "JStudio::ctb",
+    "JStudio"
+])

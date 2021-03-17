@@ -6,138 +6,210 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DPane (J2DPane) False/False
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
+/* top-level dependencies (begin J2DAnmVisibilityFull) */
+/* top-level dependencies (end J2DAnmVisibilityFull) */
+struct J2DAnmVisibilityFull {
+};
+
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DAnmTransform
+// outer dependency: J2DAnmTexPattern
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DAnmVisibilityFull
+	// J2DAnmVtxColor
+	// J2DAnmTransform
+	// J2DAnmTexPattern
+	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
+	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
+	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
+	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
+};
+
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DTextBoxEx (J2DTextBoxEx) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+/* top-level dependencies (begin J2DTextBoxEx) */
+// outer dependency: J2DAnmTransform
+/* top-level dependencies (end J2DTextBoxEx) */
+struct J2DTextBoxEx {
+	// J2DAnmTransform
+	/* 80256024 */ void getMaterial() const;
+	/* 80256044 */ void setAnimation(J2DAnmTransform*);
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8025602C */ bool getMaterial() const;
+};
+
+// build J2DPictureEx (J2DPictureEx) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+/* top-level dependencies (begin J2DPictureEx) */
+// outer dependency: J2DAnmTransform
+/* top-level dependencies (end J2DPictureEx) */
+struct J2DPictureEx {
+	// J2DAnmTransform
+	/* 80256034 */ void getMaterial() const;
+	/* 80256064 */ void setAnimation(J2DAnmTransform*);
+};
+
+// build J2DPicture (J2DPicture) False/False
+/* top-level dependencies (begin J2DPicture) */
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	/* 8025603C */ bool getMaterial() const;
+};
+
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// build J2DWindowEx (J2DWindowEx) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+/* top-level dependencies (begin J2DWindowEx) */
+// outer dependency: J2DAnmTransform
+/* top-level dependencies (end J2DWindowEx) */
+struct J2DWindowEx {
+	// J2DAnmTransform
+	/* 80256084 */ void setAnimation(J2DAnmTransform*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" extern void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" extern void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
-extern "C" extern void getMaterial__12J2DTextBoxExCFv();
-extern "C" extern void getMaterial__10J2DTextBoxCFv();
-extern "C" extern void getMaterial__12J2DPictureExCFv();
-extern "C" extern void getMaterial__10J2DPictureCFv();
-extern "C" extern void setAnimation__12J2DTextBoxExFP15J2DAnmTransform();
-extern "C" extern void setAnimation__12J2DPictureExFP15J2DAnmTransform();
-extern "C" extern void setAnimation__11J2DWindowExFP15J2DAnmTransform();
+
+extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
+extern "C" void getMaterial__12J2DTextBoxExCFv();
+extern "C" bool getMaterial__10J2DTextBoxCFv();
+extern "C" void getMaterial__12J2DPictureExCFv();
+extern "C" bool getMaterial__10J2DPictureCFv();
+extern "C" void setAnimation__12J2DTextBoxExFP15J2DAnmTransform();
+extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTransform();
+extern "C" void setAnimation__11J2DWindowExFP15J2DAnmTransform();
 
 // 
 // External References:
 // 
 
-extern "C" extern void setAnimation__7J2DPaneFP15J2DAnmTransform();
+
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
 
 // 
 // Declarations:
 // 
 
-/* 80256018-8025601C 0004+00 .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__7J2DPaneFP14J2DAnmVtxColor) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP14J2DAnmVtxColor.s"
+/* 80256018-8025601C 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
+void J2DPane::setAnimation(J2DAnmVtxColor* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8025601C-80256020 0004+00 .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__7J2DPaneFP20J2DAnmVisibilityFull) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP20J2DAnmVisibilityFull.s"
+/* 8025601C-80256020 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
+void J2DPane::setAnimation(J2DAnmVisibilityFull* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80256020-80256024 0004+00 .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__7J2DPaneFP16J2DAnmTexPattern) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP16J2DAnmTexPattern.s"
+/* 80256020-80256024 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
+void J2DPane::setAnimation(J2DAnmTexPattern* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 80256024-8025602C 0008+00 .text      getMaterial__12J2DTextBoxExCFv                               */
+/* 80256024-8025602C 0008+00 rc=1 efc=1 .text      getMaterial__12J2DTextBoxExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMaterial__12J2DTextBoxExCFv) {
+asm void J2DTextBoxEx::getMaterial() const {
 	nofralloc
 #include "asm/d/pane/d_pane_class_ex/getMaterial__12J2DTextBoxExCFv.s"
 }
 #pragma pop
 
 
-/* 8025602C-80256034 0008+00 .text      getMaterial__10J2DTextBoxCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getMaterial__10J2DTextBoxCFv) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/getMaterial__10J2DTextBoxCFv.s"
+/* 8025602C-80256034 0008+00 rc=1 efc=1 .text      getMaterial__10J2DTextBoxCFv                                 */
+bool J2DTextBox::getMaterial() const {
+	return false;
 }
-#pragma pop
 
 
-/* 80256034-8025603C 0008+00 .text      getMaterial__12J2DPictureExCFv                               */
+/* 80256034-8025603C 0008+00 rc=1 efc=1 .text      getMaterial__12J2DPictureExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMaterial__12J2DPictureExCFv) {
+asm void J2DPictureEx::getMaterial() const {
 	nofralloc
 #include "asm/d/pane/d_pane_class_ex/getMaterial__12J2DPictureExCFv.s"
 }
 #pragma pop
 
 
-/* 8025603C-80256044 0008+00 .text      getMaterial__10J2DPictureCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getMaterial__10J2DPictureCFv) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/getMaterial__10J2DPictureCFv.s"
+/* 8025603C-80256044 0008+00 rc=1 efc=1 .text      getMaterial__10J2DPictureCFv                                 */
+bool J2DPicture::getMaterial() const {
+	return false;
 }
-#pragma pop
 
 
-/* 80256044-80256064 0020+00 .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
+/* 80256044-80256064 0020+00 rc=1 efc=1 .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DTextBoxExFP15J2DAnmTransform) {
+asm void J2DTextBoxEx::setAnimation(J2DAnmTransform* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_ex/setAnimation__12J2DTextBoxExFP15J2DAnmTransform.s"
 }
 #pragma pop
 
 
-/* 80256064-80256084 0020+00 .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
+/* 80256064-80256084 0020+00 rc=1 efc=1 .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__12J2DPictureExFP15J2DAnmTransform) {
+asm void J2DPictureEx::setAnimation(J2DAnmTransform* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_ex/setAnimation__12J2DPictureExFP15J2DAnmTransform.s"
 }
 #pragma pop
 
 
-/* 80256084-802560A4 0020+00 .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
+/* 80256084-802560A4 0020+00 rc=1 efc=1 .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAnimation__11J2DWindowExFP15J2DAnmTransform) {
+asm void J2DWindowEx::setAnimation(J2DAnmTransform* field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_ex/setAnimation__11J2DWindowExFP15J2DAnmTransform.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

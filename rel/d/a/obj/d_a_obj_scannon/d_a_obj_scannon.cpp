@@ -6,61 +6,140 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct daSCannon_c;
+
+struct fopAc_ac_c {
+};
+
+struct daSCannon_c {
+	daSCannon_c();
+	~daSCannon_c();
+	void create();
+	void execute();
+	void draw();
+	void Delete();
+	void setModelMtx();
+	void setPtlModelMtx();
+	void createHeap();
+	void middleExe();
+	void orderEvtInit();
+	void exeModeWait();
+	void exeModeOrderEvt();
+	void exeModeActionEvt();
+	void exeModeEnd();
+	void demoExe();
+	void demoModeInit(s32);
+	void demoInitLinkIn();
+	void demoExeLinkIn();
+	void demoInitSet();
+	void demoExeSet();
+	void demoInitMove();
+	void demoExeMove();
+	void demoInitFire();
+	void demoExeFire();
+	void demoInitFinish();
+	void demoExeFinish();
+	void demoInitWarpEndWait();
+	void demoExeWarpEndWait();
+	void demoInitWarpEndMove();
+	void demoExeWarpEndMove();
+	void changeScene();
+	void init();
+	void initEmtRt(u16, s32, u16 const*, JPABaseEmitter**);
+	void exeEmtRt(u16, s32, JPABaseEmitter**);
+	void initEmtLine();
+	void exeEmtLine();
+	void delEmtAll();
+	void setCannonRepair();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct JPABaseEmitter {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void eventCallBack__FPvi();
-extern "C" extern void daSCannon_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__11daSCannon_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void __dt__11daSCannon_cFv();
-extern "C" extern void create__11daSCannon_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void execute__11daSCannon_cFv();
-extern "C" extern void draw__11daSCannon_cFv();
-extern "C" extern void Delete__11daSCannon_cFv();
-extern "C" extern void setModelMtx__11daSCannon_cFv();
-extern "C" extern void setPtlModelMtx__11daSCannon_cFv();
-extern "C" extern void createHeap__11daSCannon_cFv();
-extern "C" extern void middleExe__11daSCannon_cFv();
-extern "C" extern void orderEvtInit__11daSCannon_cFv();
-extern "C" extern void exeModeWait__11daSCannon_cFv();
-extern "C" extern void exeModeOrderEvt__11daSCannon_cFv();
-extern "C" extern void exeModeActionEvt__11daSCannon_cFv();
-extern "C" extern void exeModeEnd__11daSCannon_cFv();
-extern "C" extern void demoExe__11daSCannon_cFv();
-extern "C" extern void demoModeInit__11daSCannon_cFi();
-extern "C" extern void demoInitLinkIn__11daSCannon_cFv();
-extern "C" extern void demoExeLinkIn__11daSCannon_cFv();
-extern "C" extern void demoInitSet__11daSCannon_cFv();
-extern "C" extern void demoExeSet__11daSCannon_cFv();
-extern "C" extern void demoInitMove__11daSCannon_cFv();
-extern "C" extern void demoExeMove__11daSCannon_cFv();
-extern "C" extern void demoInitFire__11daSCannon_cFv();
-extern "C" extern void demoExeFire__11daSCannon_cFv();
-extern "C" extern void demoInitFinish__11daSCannon_cFv();
-extern "C" extern void demoExeFinish__11daSCannon_cFv();
-extern "C" extern void demoInitWarpEndWait__11daSCannon_cFv();
-extern "C" extern void demoExeWarpEndWait__11daSCannon_cFv();
-extern "C" extern void demoInitWarpEndMove__11daSCannon_cFv();
-extern "C" extern void demoExeWarpEndMove__11daSCannon_cFv();
-extern "C" extern void changeScene__11daSCannon_cFv();
-extern "C" extern void init__11daSCannon_cFv();
-extern "C" extern void initEmtRt__11daSCannon_cFUsiPCUsPP14JPABaseEmitter();
-extern "C" extern void exeEmtRt__11daSCannon_cFUsiPP14JPABaseEmitter();
-extern "C" extern void initEmtLine__11daSCannon_cFv();
-extern "C" extern void exeEmtLine__11daSCannon_cFv();
-extern "C" extern void delEmtAll__11daSCannon_cFv();
-extern "C" extern void setCannonRepair__11daSCannon_cFv();
-extern "C" extern void daSCannon_create__FP11daSCannon_c();
-extern "C" extern void daSCannon_Delete__FP11daSCannon_c();
-extern "C" extern void daSCannon_execute__FP11daSCannon_c();
-extern "C" extern void daSCannon_draw__FP11daSCannon_c();
-extern "C" extern void func_80CC8F14();
-extern "C" extern void __sinit_d_a_obj_scannon_cpp();
-extern "C" extern void func_80CC916C();
-extern "C" extern void func_80CC9174();
+void eventCallBack(void*, s32);
+void daSCannon_c_createHeap(fopAc_ac_c*);
+void daSCannon_create(daSCannon_c*);
+void daSCannon_Delete(daSCannon_c*);
+void daSCannon_execute(daSCannon_c*);
+void daSCannon_draw(daSCannon_c*);
+extern "C" void func_80CC8F14();
+extern "C" void __sinit_d_a_obj_scannon_cpp();
+extern "C" void func_80CC916C();
+extern "C" void func_80CC9174();
+
+extern "C" void eventCallBack__FPvi();
+extern "C" void daSCannon_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__11daSCannon_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void __dt__11daSCannon_cFv();
+extern "C" void create__11daSCannon_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void execute__11daSCannon_cFv();
+extern "C" void draw__11daSCannon_cFv();
+extern "C" void Delete__11daSCannon_cFv();
+extern "C" void setModelMtx__11daSCannon_cFv();
+extern "C" void setPtlModelMtx__11daSCannon_cFv();
+extern "C" void createHeap__11daSCannon_cFv();
+extern "C" void middleExe__11daSCannon_cFv();
+extern "C" void orderEvtInit__11daSCannon_cFv();
+extern "C" void exeModeWait__11daSCannon_cFv();
+extern "C" void exeModeOrderEvt__11daSCannon_cFv();
+extern "C" void exeModeActionEvt__11daSCannon_cFv();
+extern "C" void exeModeEnd__11daSCannon_cFv();
+extern "C" void demoExe__11daSCannon_cFv();
+extern "C" void demoModeInit__11daSCannon_cFi();
+extern "C" void demoInitLinkIn__11daSCannon_cFv();
+extern "C" void demoExeLinkIn__11daSCannon_cFv();
+extern "C" void demoInitSet__11daSCannon_cFv();
+extern "C" void demoExeSet__11daSCannon_cFv();
+extern "C" void demoInitMove__11daSCannon_cFv();
+extern "C" void demoExeMove__11daSCannon_cFv();
+extern "C" void demoInitFire__11daSCannon_cFv();
+extern "C" void demoExeFire__11daSCannon_cFv();
+extern "C" void demoInitFinish__11daSCannon_cFv();
+extern "C" void demoExeFinish__11daSCannon_cFv();
+extern "C" void demoInitWarpEndWait__11daSCannon_cFv();
+extern "C" void demoExeWarpEndWait__11daSCannon_cFv();
+extern "C" void demoInitWarpEndMove__11daSCannon_cFv();
+extern "C" void demoExeWarpEndMove__11daSCannon_cFv();
+extern "C" void changeScene__11daSCannon_cFv();
+extern "C" void init__11daSCannon_cFv();
+extern "C" void initEmtRt__11daSCannon_cFUsiPCUsPP14JPABaseEmitter();
+extern "C" void exeEmtRt__11daSCannon_cFUsiPP14JPABaseEmitter();
+extern "C" void initEmtLine__11daSCannon_cFv();
+extern "C" void exeEmtLine__11daSCannon_cFv();
+extern "C" void delEmtAll__11daSCannon_cFv();
+extern "C" void setCannonRepair__11daSCannon_cFv();
+extern "C" void daSCannon_create__FP11daSCannon_c();
+extern "C" void daSCannon_Delete__FP11daSCannon_c();
+extern "C" void daSCannon_execute__FP11daSCannon_c();
+extern "C" void daSCannon_draw__FP11daSCannon_c();
+extern "C" void func_80CC8F14();
+extern "C" void __sinit_d_a_obj_scannon_cpp();
+extern "C" void func_80CC916C();
+extern "C" void func_80CC9174();
 SECTION_RODATA extern const u8 TKS_SET_POS[12];
 SECTION_RODATA extern const u8 SMK_PARTICLE_NAME[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 APP_PARTICLE_NAME[6 + 2 /* padding */];
@@ -133,7 +212,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -143,7 +224,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventCallBack__FPvi) {
+asm void eventCallBack(void* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/eventCallBack__FPvi.s"
 }
@@ -154,7 +235,7 @@ ASM_FUNCTION(eventCallBack__FPvi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannon_c_createHeap__FP10fopAc_ac_c) {
+asm void daSCannon_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/daSCannon_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -165,7 +246,7 @@ ASM_FUNCTION(daSCannon_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daSCannon_cFv) {
+asm daSCannon_c::daSCannon_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__ct__11daSCannon_cFv.s"
 }
@@ -176,7 +257,7 @@ ASM_FUNCTION(__ct__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__dt__12J3DFrameCtrlFv.s"
 }
@@ -187,7 +268,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daSCannon_cFv) {
+asm daSCannon_c::~daSCannon_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__dt__11daSCannon_cFv.s"
 }
@@ -198,7 +279,7 @@ ASM_FUNCTION(__dt__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daSCannon_cFv) {
+asm void daSCannon_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/create__11daSCannon_cFv.s"
 }
@@ -209,7 +290,7 @@ ASM_FUNCTION(create__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -220,7 +301,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__dt__12dBgS_AcchCirFv.s"
 }
@@ -231,7 +312,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daSCannon_cFv) {
+asm void daSCannon_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/execute__11daSCannon_cFv.s"
 }
@@ -242,7 +323,7 @@ ASM_FUNCTION(execute__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daSCannon_cFv) {
+asm void daSCannon_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/draw__11daSCannon_cFv.s"
 }
@@ -253,7 +334,7 @@ ASM_FUNCTION(draw__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daSCannon_cFv) {
+asm void daSCannon_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/Delete__11daSCannon_cFv.s"
 }
@@ -264,7 +345,7 @@ ASM_FUNCTION(Delete__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__11daSCannon_cFv) {
+asm void daSCannon_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/setModelMtx__11daSCannon_cFv.s"
 }
@@ -275,7 +356,7 @@ ASM_FUNCTION(setModelMtx__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPtlModelMtx__11daSCannon_cFv) {
+asm void daSCannon_c::setPtlModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/setPtlModelMtx__11daSCannon_cFv.s"
 }
@@ -286,7 +367,7 @@ ASM_FUNCTION(setPtlModelMtx__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daSCannon_cFv) {
+asm void daSCannon_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/createHeap__11daSCannon_cFv.s"
 }
@@ -297,7 +378,7 @@ ASM_FUNCTION(createHeap__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(middleExe__11daSCannon_cFv) {
+asm void daSCannon_c::middleExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/middleExe__11daSCannon_cFv.s"
 }
@@ -308,7 +389,7 @@ ASM_FUNCTION(middleExe__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderEvtInit__11daSCannon_cFv) {
+asm void daSCannon_c::orderEvtInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/orderEvtInit__11daSCannon_cFv.s"
 }
@@ -319,7 +400,7 @@ ASM_FUNCTION(orderEvtInit__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeWait__11daSCannon_cFv) {
+asm void daSCannon_c::exeModeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeModeWait__11daSCannon_cFv.s"
 }
@@ -330,7 +411,7 @@ ASM_FUNCTION(exeModeWait__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeOrderEvt__11daSCannon_cFv) {
+asm void daSCannon_c::exeModeOrderEvt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeModeOrderEvt__11daSCannon_cFv.s"
 }
@@ -341,7 +422,7 @@ ASM_FUNCTION(exeModeOrderEvt__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeModeActionEvt__11daSCannon_cFv) {
+asm void daSCannon_c::exeModeActionEvt() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeModeActionEvt__11daSCannon_cFv.s"
 }
@@ -349,21 +430,16 @@ ASM_FUNCTION(exeModeActionEvt__11daSCannon_cFv) {
 
 
 /* 80CC7EBC-80CC7EC0 0004+00 .text      exeModeEnd__11daSCannon_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(exeModeEnd__11daSCannon_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeModeEnd__11daSCannon_cFv.s"
+void daSCannon_c::exeModeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC7EC0-80CC7FAC 00EC+00 .text      demoExe__11daSCannon_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExe__11daSCannon_cFv) {
+asm void daSCannon_c::demoExe() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExe__11daSCannon_cFv.s"
 }
@@ -374,7 +450,7 @@ ASM_FUNCTION(demoExe__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoModeInit__11daSCannon_cFi) {
+asm void daSCannon_c::demoModeInit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoModeInit__11daSCannon_cFi.s"
 }
@@ -382,21 +458,16 @@ ASM_FUNCTION(demoModeInit__11daSCannon_cFi) {
 
 
 /* 80CC8044-80CC8048 0004+00 .text      demoInitLinkIn__11daSCannon_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoInitLinkIn__11daSCannon_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitLinkIn__11daSCannon_cFv.s"
+void daSCannon_c::demoInitLinkIn() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC8048-80CC8108 00C0+00 .text      demoExeLinkIn__11daSCannon_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeLinkIn__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeLinkIn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeLinkIn__11daSCannon_cFv.s"
 }
@@ -407,7 +478,7 @@ ASM_FUNCTION(demoExeLinkIn__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitSet__11daSCannon_cFv) {
+asm void daSCannon_c::demoInitSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitSet__11daSCannon_cFv.s"
 }
@@ -418,7 +489,7 @@ ASM_FUNCTION(demoInitSet__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeSet__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeSet__11daSCannon_cFv.s"
 }
@@ -426,21 +497,16 @@ ASM_FUNCTION(demoExeSet__11daSCannon_cFv) {
 
 
 /* 80CC8274-80CC8278 0004+00 .text      demoInitMove__11daSCannon_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(demoInitMove__11daSCannon_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitMove__11daSCannon_cFv.s"
+void daSCannon_c::demoInitMove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC8278-80CC8378 0100+00 .text      demoExeMove__11daSCannon_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeMove__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeMove__11daSCannon_cFv.s"
 }
@@ -451,7 +517,7 @@ ASM_FUNCTION(demoExeMove__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitFire__11daSCannon_cFv) {
+asm void daSCannon_c::demoInitFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitFire__11daSCannon_cFv.s"
 }
@@ -462,7 +528,7 @@ ASM_FUNCTION(demoInitFire__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeFire__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeFire() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeFire__11daSCannon_cFv.s"
 }
@@ -473,7 +539,7 @@ ASM_FUNCTION(demoExeFire__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitFinish__11daSCannon_cFv) {
+asm void daSCannon_c::demoInitFinish() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitFinish__11daSCannon_cFv.s"
 }
@@ -484,7 +550,7 @@ ASM_FUNCTION(demoInitFinish__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeFinish__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeFinish() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeFinish__11daSCannon_cFv.s"
 }
@@ -495,7 +561,7 @@ ASM_FUNCTION(demoExeFinish__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitWarpEndWait__11daSCannon_cFv) {
+asm void daSCannon_c::demoInitWarpEndWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitWarpEndWait__11daSCannon_cFv.s"
 }
@@ -506,7 +572,7 @@ ASM_FUNCTION(demoInitWarpEndWait__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeWarpEndWait__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeWarpEndWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeWarpEndWait__11daSCannon_cFv.s"
 }
@@ -517,7 +583,7 @@ ASM_FUNCTION(demoExeWarpEndWait__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInitWarpEndMove__11daSCannon_cFv) {
+asm void daSCannon_c::demoInitWarpEndMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitWarpEndMove__11daSCannon_cFv.s"
 }
@@ -528,7 +594,7 @@ ASM_FUNCTION(demoInitWarpEndMove__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoExeWarpEndMove__11daSCannon_cFv) {
+asm void daSCannon_c::demoExeWarpEndMove() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoExeWarpEndMove__11daSCannon_cFv.s"
 }
@@ -539,7 +605,7 @@ ASM_FUNCTION(demoExeWarpEndMove__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeScene__11daSCannon_cFv) {
+asm void daSCannon_c::changeScene() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/changeScene__11daSCannon_cFv.s"
 }
@@ -550,7 +616,7 @@ ASM_FUNCTION(changeScene__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11daSCannon_cFv) {
+asm void daSCannon_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/init__11daSCannon_cFv.s"
 }
@@ -561,7 +627,7 @@ ASM_FUNCTION(init__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEmtRt__11daSCannon_cFUsiPCUsPP14JPABaseEmitter) {
+asm void daSCannon_c::initEmtRt(u16 field_0, s32 field_1, u16 const* field_2, JPABaseEmitter** field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/initEmtRt__11daSCannon_cFUsiPCUsPP14JPABaseEmitter.s"
 }
@@ -572,7 +638,7 @@ ASM_FUNCTION(initEmtRt__11daSCannon_cFUsiPCUsPP14JPABaseEmitter) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeEmtRt__11daSCannon_cFUsiPP14JPABaseEmitter) {
+asm void daSCannon_c::exeEmtRt(u16 field_0, s32 field_1, JPABaseEmitter** field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeEmtRt__11daSCannon_cFUsiPP14JPABaseEmitter.s"
 }
@@ -583,7 +649,7 @@ ASM_FUNCTION(exeEmtRt__11daSCannon_cFUsiPP14JPABaseEmitter) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initEmtLine__11daSCannon_cFv) {
+asm void daSCannon_c::initEmtLine() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/initEmtLine__11daSCannon_cFv.s"
 }
@@ -594,7 +660,7 @@ ASM_FUNCTION(initEmtLine__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(exeEmtLine__11daSCannon_cFv) {
+asm void daSCannon_c::exeEmtLine() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeEmtLine__11daSCannon_cFv.s"
 }
@@ -605,7 +671,7 @@ ASM_FUNCTION(exeEmtLine__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(delEmtAll__11daSCannon_cFv) {
+asm void daSCannon_c::delEmtAll() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/delEmtAll__11daSCannon_cFv.s"
 }
@@ -616,7 +682,7 @@ ASM_FUNCTION(delEmtAll__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCannonRepair__11daSCannon_cFv) {
+asm void daSCannon_c::setCannonRepair() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/setCannonRepair__11daSCannon_cFv.s"
 }
@@ -627,7 +693,7 @@ ASM_FUNCTION(setCannonRepair__11daSCannon_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannon_create__FP11daSCannon_c) {
+asm void daSCannon_create(daSCannon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/daSCannon_create__FP11daSCannon_c.s"
 }
@@ -638,7 +704,7 @@ ASM_FUNCTION(daSCannon_create__FP11daSCannon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannon_Delete__FP11daSCannon_c) {
+asm void daSCannon_Delete(daSCannon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/daSCannon_Delete__FP11daSCannon_c.s"
 }
@@ -649,7 +715,7 @@ ASM_FUNCTION(daSCannon_Delete__FP11daSCannon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannon_execute__FP11daSCannon_c) {
+asm void daSCannon_execute(daSCannon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/daSCannon_execute__FP11daSCannon_c.s"
 }
@@ -660,7 +726,7 @@ ASM_FUNCTION(daSCannon_execute__FP11daSCannon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSCannon_draw__FP11daSCannon_c) {
+asm void daSCannon_draw(daSCannon_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/daSCannon_draw__FP11daSCannon_c.s"
 }
@@ -671,7 +737,7 @@ ASM_FUNCTION(daSCannon_draw__FP11daSCannon_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CC8F14) {
+extern "C" asm void func_80CC8F14() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/func_80CC8F14.s"
 }
@@ -682,7 +748,7 @@ ASM_FUNCTION(func_80CC8F14) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_scannon_cpp) {
+extern "C" asm void __sinit_d_a_obj_scannon_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/__sinit_d_a_obj_scannon_cpp.s"
 }
@@ -693,7 +759,7 @@ ASM_FUNCTION(__sinit_d_a_obj_scannon_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CC916C) {
+extern "C" asm void func_80CC916C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/func_80CC916C.s"
 }
@@ -704,7 +770,7 @@ ASM_FUNCTION(func_80CC916C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CC9174) {
+extern "C" asm void func_80CC9174() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/func_80CC9174.s"
 }

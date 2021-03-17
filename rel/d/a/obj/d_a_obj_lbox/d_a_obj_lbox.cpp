@@ -6,24 +6,65 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_lbox_class;
+
+struct daObj_Lbox_HIO_c {
+	daObj_Lbox_HIO_c();
+	~daObj_Lbox_HIO_c();
+};
+
+struct obj_lbox_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daObj_Lbox_HIO_cFv();
-extern "C" extern void daObj_Lbox_Draw__FP14obj_lbox_class();
-extern "C" extern void action__FP14obj_lbox_class();
-extern "C" extern void daObj_Lbox_Execute__FP14obj_lbox_class();
-extern "C" extern void daObj_Lbox_IsDelete__FP14obj_lbox_class();
-extern "C" extern void daObj_Lbox_Delete__FP14obj_lbox_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Lbox_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__16daObj_Lbox_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lbox_cpp();
-extern "C" extern void func_80C53F98();
-extern "C" extern void func_80C53FA0();
+void daObj_Lbox_Draw(obj_lbox_class*);
+void action(obj_lbox_class*);
+void daObj_Lbox_Execute(obj_lbox_class*);
+bool daObj_Lbox_IsDelete(obj_lbox_class*);
+void daObj_Lbox_Delete(obj_lbox_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Lbox_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lbox_cpp();
+extern "C" void func_80C53F98();
+extern "C" void func_80C53FA0();
+
+extern "C" void __ct__16daObj_Lbox_HIO_cFv();
+extern "C" void daObj_Lbox_Draw__FP14obj_lbox_class();
+extern "C" void action__FP14obj_lbox_class();
+extern "C" void daObj_Lbox_Execute__FP14obj_lbox_class();
+extern "C" bool daObj_Lbox_IsDelete__FP14obj_lbox_class();
+extern "C" void daObj_Lbox_Delete__FP14obj_lbox_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Lbox_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__16daObj_Lbox_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lbox_cpp();
+extern "C" void func_80C53F98();
+extern "C" void func_80C53FA0();
 SECTION_RODATA extern const u32 lit_3768;
 SECTION_RODATA extern const u8 lit_3769[4];
 SECTION_RODATA extern const u32 lit_3877;
@@ -56,8 +97,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -67,7 +111,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daObj_Lbox_HIO_cFv) {
+asm daObj_Lbox_HIO_c::daObj_Lbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__ct__16daObj_Lbox_HIO_cFv.s"
 }
@@ -78,7 +122,7 @@ ASM_FUNCTION(__ct__16daObj_Lbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lbox_Draw__FP14obj_lbox_class) {
+asm void daObj_Lbox_Draw(obj_lbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_Draw__FP14obj_lbox_class.s"
 }
@@ -89,7 +133,7 @@ ASM_FUNCTION(daObj_Lbox_Draw__FP14obj_lbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP14obj_lbox_class) {
+asm void action(obj_lbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/action__FP14obj_lbox_class.s"
 }
@@ -100,7 +144,7 @@ ASM_FUNCTION(action__FP14obj_lbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lbox_Execute__FP14obj_lbox_class) {
+asm void daObj_Lbox_Execute(obj_lbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_Execute__FP14obj_lbox_class.s"
 }
@@ -108,21 +152,16 @@ ASM_FUNCTION(daObj_Lbox_Execute__FP14obj_lbox_class) {
 
 
 /* 80C539C8-80C539D0 0008+00 .text      daObj_Lbox_IsDelete__FP14obj_lbox_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lbox_IsDelete__FP14obj_lbox_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_IsDelete__FP14obj_lbox_class.s"
+bool daObj_Lbox_IsDelete(obj_lbox_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C539D0-80C53A38 0068+00 .text      daObj_Lbox_Delete__FP14obj_lbox_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lbox_Delete__FP14obj_lbox_class) {
+asm void daObj_Lbox_Delete(obj_lbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_Delete__FP14obj_lbox_class.s"
 }
@@ -133,7 +172,7 @@ ASM_FUNCTION(daObj_Lbox_Delete__FP14obj_lbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -144,7 +183,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lbox_Create__FP10fopAc_ac_c) {
+asm void daObj_Lbox_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_Create__FP10fopAc_ac_c.s"
 }
@@ -155,7 +194,7 @@ ASM_FUNCTION(daObj_Lbox_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__dt__8cM3dGSphFv.s"
 }
@@ -166,7 +205,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__dt__8cM3dGAabFv.s"
 }
@@ -177,7 +216,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -188,7 +227,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObj_Lbox_HIO_cFv) {
+asm daObj_Lbox_HIO_c::~daObj_Lbox_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__dt__16daObj_Lbox_HIO_cFv.s"
 }
@@ -199,7 +238,7 @@ ASM_FUNCTION(__dt__16daObj_Lbox_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lbox_cpp) {
+extern "C" asm void __sinit_d_a_obj_lbox_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/__sinit_d_a_obj_lbox_cpp.s"
 }
@@ -210,7 +249,7 @@ ASM_FUNCTION(__sinit_d_a_obj_lbox_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C53F98) {
+extern "C" asm void func_80C53F98() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/func_80C53F98.s"
 }
@@ -221,7 +260,7 @@ ASM_FUNCTION(func_80C53F98) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C53FA0) {
+extern "C" asm void func_80C53FA0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/func_80C53FA0.s"
 }

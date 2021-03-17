@@ -6,48 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build method_filter (method_filter) False/False
+/* top-level dependencies (begin method_filter) */
+/* top-level dependencies (end method_filter) */
+struct method_filter {
+};
+
+// build layer_class (layer_class) False/False
+/* top-level dependencies (begin layer_class) */
+/* top-level dependencies (end layer_class) */
+struct layer_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" extern void fpcLnIt_Queue__FPFPvPv_i();
+static void fpcLnIt_MethodCall(create_tag_class*, method_filter*);
+extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+
+extern "C" static void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void fpcLnIt_Queue__FPFPvPv_i();
 
 // 
 // External References:
 // 
 
-extern "C" extern void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" extern void fpcLy_CurrentLayer__Fv();
-extern "C" extern void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-extern "C" extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLy_CurrentLayer();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+void cTgIt_MethodCall(create_tag_class*, method_filter*);
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
 // 
 // Declarations:
 // 
 
-/* 800236C0-80023728 0068+00 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
+/* 800236C0-80023728 0068+00 rc=1 efc=0 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnIt_MethodCall__FP16create_tag_classP13method_filter) {
+asm static void fpcLnIt_MethodCall(create_tag_class* field_0, method_filter* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_iter/fpcLnIt_MethodCall__FP16create_tag_classP13method_filter.s"
 }
 #pragma pop
 
 
-/* 80023728-80023764 003C+00 .text      fpcLnIt_Queue__FPFPvPv_i                                     */
+/* 80023728-80023764 003C+00 rc=1 efc=1 .text      fpcLnIt_Queue__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fpcLnIt_Queue__FPFPvPv_i) {
+extern "C" asm void fpcLnIt_Queue__FPFPvPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_line_iter/fpcLnIt_Queue__FPFPvPv_i.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

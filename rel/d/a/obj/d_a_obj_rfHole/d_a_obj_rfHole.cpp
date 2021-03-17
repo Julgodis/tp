@@ -6,35 +6,85 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daRfHole_c;
+struct dBgW;
+
+struct daRfHole_HIO_c {
+	daRfHole_HIO_c();
+	~daRfHole_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daRfHole_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	void playerAreaCheck();
+	void holeProc();
+	void init_modeWait();
+	void modeWait();
+	void init_modeBreak();
+	void modeBreak();
+	void init_modeBreakEff();
+	void modeBreakEff();
+	void init_modeEnd();
+	void modeEnd();
+	void setBreakEffect();
+	void Draw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daRfHole_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__10daRfHole_cFv();
-extern "C" extern void CreateHeap__10daRfHole_cFv();
-extern "C" extern void create__10daRfHole_cFv();
-extern "C" extern void rideCallBack__10daRfHole_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void playerAreaCheck__10daRfHole_cFv();
-extern "C" extern void Execute__10daRfHole_cFPPA3_A4_f();
-extern "C" extern void holeProc__10daRfHole_cFv();
-extern "C" extern void init_modeWait__10daRfHole_cFv();
-extern "C" extern void modeWait__10daRfHole_cFv();
-extern "C" extern void init_modeBreak__10daRfHole_cFv();
-extern "C" extern void modeBreak__10daRfHole_cFv();
-extern "C" extern void init_modeBreakEff__10daRfHole_cFv();
-extern "C" extern void modeBreakEff__10daRfHole_cFv();
-extern "C" extern void init_modeEnd__10daRfHole_cFv();
-extern "C" extern void modeEnd__10daRfHole_cFv();
-extern "C" extern void setBreakEffect__10daRfHole_cFv();
-extern "C" extern void Draw__10daRfHole_cFv();
-extern "C" extern void Delete__10daRfHole_cFv();
-extern "C" extern void daRfHole_Draw__FP10daRfHole_c();
-extern "C" extern void daRfHole_Execute__FP10daRfHole_c();
-extern "C" extern void daRfHole_Delete__FP10daRfHole_c();
-extern "C" extern void daRfHole_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__14daRfHole_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_rfHole_cpp();
+extern "C" void Execute__10daRfHole_cFPPA3_A4_f();
+void daRfHole_Draw(daRfHole_c*);
+void daRfHole_Execute(daRfHole_c*);
+void daRfHole_Delete(daRfHole_c*);
+void daRfHole_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_rfHole_cpp();
+
+extern "C" void __ct__14daRfHole_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daRfHole_cFv();
+extern "C" void CreateHeap__10daRfHole_cFv();
+extern "C" void create__10daRfHole_cFv();
+extern "C" void rideCallBack__10daRfHole_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void playerAreaCheck__10daRfHole_cFv();
+extern "C" void Execute__10daRfHole_cFPPA3_A4_f();
+extern "C" void holeProc__10daRfHole_cFv();
+extern "C" void init_modeWait__10daRfHole_cFv();
+extern "C" void modeWait__10daRfHole_cFv();
+extern "C" void init_modeBreak__10daRfHole_cFv();
+extern "C" void modeBreak__10daRfHole_cFv();
+extern "C" void init_modeBreakEff__10daRfHole_cFv();
+extern "C" void modeBreakEff__10daRfHole_cFv();
+extern "C" void init_modeEnd__10daRfHole_cFv();
+extern "C" void modeEnd__10daRfHole_cFv();
+extern "C" void setBreakEffect__10daRfHole_cFv();
+extern "C" void Draw__10daRfHole_cFv();
+extern "C" void Delete__10daRfHole_cFv();
+extern "C" void daRfHole_Draw__FP10daRfHole_c();
+extern "C" void daRfHole_Execute__FP10daRfHole_c();
+extern "C" void daRfHole_Delete__FP10daRfHole_c();
+extern "C" void daRfHole_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daRfHole_HIO_cFv();
+extern "C" void __sinit_d_a_obj_rfHole_cpp();
 SECTION_RODATA extern const u32 lit_3649;
 SECTION_RODATA extern const u32 lit_3650;
 SECTION_RODATA extern const u8 lit_3651[4 + 4 /* padding */];
@@ -66,8 +116,11 @@ SECTION_BSS extern u8 data_80CB9C0C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -77,7 +130,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daRfHole_HIO_cFv) {
+asm daRfHole_HIO_c::daRfHole_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/__ct__14daRfHole_HIO_cFv.s"
 }
@@ -88,7 +141,7 @@ ASM_FUNCTION(__ct__14daRfHole_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -99,7 +152,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daRfHole_cFv) {
+asm void daRfHole_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/setBaseMtx__10daRfHole_cFv.s"
 }
@@ -110,7 +163,7 @@ ASM_FUNCTION(setBaseMtx__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daRfHole_cFv) {
+asm void daRfHole_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/CreateHeap__10daRfHole_cFv.s"
 }
@@ -121,7 +174,7 @@ ASM_FUNCTION(CreateHeap__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daRfHole_cFv) {
+asm void daRfHole_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/create__10daRfHole_cFv.s"
 }
@@ -132,7 +185,7 @@ ASM_FUNCTION(create__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__10daRfHole_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daRfHole_c::rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/rideCallBack__10daRfHole_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -143,7 +196,7 @@ ASM_FUNCTION(rideCallBack__10daRfHole_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playerAreaCheck__10daRfHole_cFv) {
+asm void daRfHole_c::playerAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/playerAreaCheck__10daRfHole_cFv.s"
 }
@@ -154,7 +207,7 @@ ASM_FUNCTION(playerAreaCheck__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daRfHole_cFPPA3_A4_f) {
+extern "C" asm void Execute__10daRfHole_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/Execute__10daRfHole_cFPPA3_A4_f.s"
 }
@@ -165,7 +218,7 @@ ASM_FUNCTION(Execute__10daRfHole_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(holeProc__10daRfHole_cFv) {
+asm void daRfHole_c::holeProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/holeProc__10daRfHole_cFv.s"
 }
@@ -176,7 +229,7 @@ ASM_FUNCTION(holeProc__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__10daRfHole_cFv) {
+asm void daRfHole_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/init_modeWait__10daRfHole_cFv.s"
 }
@@ -187,7 +240,7 @@ ASM_FUNCTION(init_modeWait__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__10daRfHole_cFv) {
+asm void daRfHole_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/modeWait__10daRfHole_cFv.s"
 }
@@ -198,7 +251,7 @@ ASM_FUNCTION(modeWait__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreak__10daRfHole_cFv) {
+asm void daRfHole_c::init_modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/init_modeBreak__10daRfHole_cFv.s"
 }
@@ -209,7 +262,7 @@ ASM_FUNCTION(init_modeBreak__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreak__10daRfHole_cFv) {
+asm void daRfHole_c::modeBreak() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/modeBreak__10daRfHole_cFv.s"
 }
@@ -220,7 +273,7 @@ ASM_FUNCTION(modeBreak__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeBreakEff__10daRfHole_cFv) {
+asm void daRfHole_c::init_modeBreakEff() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/init_modeBreakEff__10daRfHole_cFv.s"
 }
@@ -231,7 +284,7 @@ ASM_FUNCTION(init_modeBreakEff__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeBreakEff__10daRfHole_cFv) {
+asm void daRfHole_c::modeBreakEff() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/modeBreakEff__10daRfHole_cFv.s"
 }
@@ -242,7 +295,7 @@ ASM_FUNCTION(modeBreakEff__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeEnd__10daRfHole_cFv) {
+asm void daRfHole_c::init_modeEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/init_modeEnd__10daRfHole_cFv.s"
 }
@@ -253,7 +306,7 @@ ASM_FUNCTION(init_modeEnd__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeEnd__10daRfHole_cFv) {
+asm void daRfHole_c::modeEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/modeEnd__10daRfHole_cFv.s"
 }
@@ -264,7 +317,7 @@ ASM_FUNCTION(modeEnd__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBreakEffect__10daRfHole_cFv) {
+asm void daRfHole_c::setBreakEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/setBreakEffect__10daRfHole_cFv.s"
 }
@@ -275,7 +328,7 @@ ASM_FUNCTION(setBreakEffect__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__10daRfHole_cFv) {
+asm void daRfHole_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/Draw__10daRfHole_cFv.s"
 }
@@ -286,7 +339,7 @@ ASM_FUNCTION(Draw__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daRfHole_cFv) {
+asm void daRfHole_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/Delete__10daRfHole_cFv.s"
 }
@@ -297,7 +350,7 @@ ASM_FUNCTION(Delete__10daRfHole_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRfHole_Draw__FP10daRfHole_c) {
+asm void daRfHole_Draw(daRfHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Draw__FP10daRfHole_c.s"
 }
@@ -308,7 +361,7 @@ ASM_FUNCTION(daRfHole_Draw__FP10daRfHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRfHole_Execute__FP10daRfHole_c) {
+asm void daRfHole_Execute(daRfHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Execute__FP10daRfHole_c.s"
 }
@@ -319,7 +372,7 @@ ASM_FUNCTION(daRfHole_Execute__FP10daRfHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRfHole_Delete__FP10daRfHole_c) {
+asm void daRfHole_Delete(daRfHole_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Delete__FP10daRfHole_c.s"
 }
@@ -330,7 +383,7 @@ ASM_FUNCTION(daRfHole_Delete__FP10daRfHole_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRfHole_Create__FP10fopAc_ac_c) {
+asm void daRfHole_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/daRfHole_Create__FP10fopAc_ac_c.s"
 }
@@ -341,7 +394,7 @@ ASM_FUNCTION(daRfHole_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daRfHole_HIO_cFv) {
+asm daRfHole_HIO_c::~daRfHole_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/__dt__14daRfHole_HIO_cFv.s"
 }
@@ -352,7 +405,7 @@ ASM_FUNCTION(__dt__14daRfHole_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_rfHole_cpp) {
+extern "C" asm void __sinit_d_a_obj_rfHole_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rfHole/d_a_obj_rfHole/__sinit_d_a_obj_rfHole_cpp.s"
 }

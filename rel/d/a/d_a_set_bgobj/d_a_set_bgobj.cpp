@@ -6,14 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSetBgObj_c;
+
+struct daSetBgObj_c {
+	void CreateInit();
+	void create();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CreateInit__12daSetBgObj_cFv();
-extern "C" extern void create__12daSetBgObj_cFv();
-extern "C" extern void Delete__12daSetBgObj_cFv();
-extern "C" extern void daSetBgObj_Delete__FP12daSetBgObj_c();
-extern "C" extern void daSetBgObj_Create__FP10fopAc_ac_c();
+void daSetBgObj_Delete(daSetBgObj_c*);
+void daSetBgObj_Create(fopAc_ac_c*);
+
+extern "C" void CreateInit__12daSetBgObj_cFv();
+extern "C" void create__12daSetBgObj_cFv();
+extern "C" void Delete__12daSetBgObj_cFv();
+extern "C" void daSetBgObj_Delete__FP12daSetBgObj_c();
+extern "C" void daSetBgObj_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 l_specName[9 + 3 /* padding */];
 SECTION_RODATA extern const u8 stringBase0[3];
 SECTION_DATA extern u8 data_80485F10[10 + 2 /* padding */];
@@ -24,7 +43,9 @@ SECTION_DATA extern u8 g_profile_SET_BG_OBJ[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -34,7 +55,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__12daSetBgObj_cFv) {
+asm void daSetBgObj_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/CreateInit__12daSetBgObj_cFv.s"
 }
@@ -45,7 +66,7 @@ ASM_FUNCTION(CreateInit__12daSetBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daSetBgObj_cFv) {
+asm void daSetBgObj_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/create__12daSetBgObj_cFv.s"
 }
@@ -56,7 +77,7 @@ ASM_FUNCTION(create__12daSetBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daSetBgObj_cFv) {
+asm void daSetBgObj_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/Delete__12daSetBgObj_cFv.s"
 }
@@ -67,7 +88,7 @@ ASM_FUNCTION(Delete__12daSetBgObj_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSetBgObj_Delete__FP12daSetBgObj_c) {
+asm void daSetBgObj_Delete(daSetBgObj_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/daSetBgObj_Delete__FP12daSetBgObj_c.s"
 }
@@ -78,7 +99,7 @@ ASM_FUNCTION(daSetBgObj_Delete__FP12daSetBgObj_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSetBgObj_Create__FP10fopAc_ac_c) {
+asm void daSetBgObj_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/daSetBgObj_Create__FP10fopAc_ac_c.s"
 }

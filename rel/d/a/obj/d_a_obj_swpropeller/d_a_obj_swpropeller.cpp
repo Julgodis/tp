@@ -6,32 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjSwPr_c;
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjSwPr_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void setRotateTime();
+	void switchCtrl();
+	void execute_type_boomerang();
+	void execute_type_wind();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void initBaseMtx__11daObjSwPr_cFv();
-extern "C" extern void setBaseMtx__11daObjSwPr_cFv();
-extern "C" extern void Create__11daObjSwPr_cFv();
-extern "C" extern void CreateHeap__11daObjSwPr_cFv();
-extern "C" extern void create__11daObjSwPr_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void setRotateTime__11daObjSwPr_cFv();
-extern "C" extern void switchCtrl__11daObjSwPr_cFv();
-extern "C" extern void execute_type_boomerang__11daObjSwPr_cFv();
-extern "C" extern void execute_type_wind__11daObjSwPr_cFv();
-extern "C" extern void execute__11daObjSwPr_cFv();
-extern "C" extern void draw__11daObjSwPr_cFv();
-extern "C" extern void _delete__11daObjSwPr_cFv();
-extern "C" extern void daObjSwPr_Draw__FP11daObjSwPr_c();
-extern "C" extern void daObjSwPr_Execute__FP11daObjSwPr_c();
-extern "C" extern void daObjSwPr_Delete__FP11daObjSwPr_c();
-extern "C" extern void daObjSwPr_Create__FP10fopAc_ac_c();
-extern "C" extern void func_8059B26C();
-extern "C" extern void func_8059B288();
-extern "C" extern void func_8059B2A4();
+void nodeCallBack(J3DJoint*, s32);
+void CheckCreateHeap(fopAc_ac_c*);
+void daObjSwPr_Draw(daObjSwPr_c*);
+void daObjSwPr_Execute(daObjSwPr_c*);
+void daObjSwPr_Delete(daObjSwPr_c*);
+void daObjSwPr_Create(fopAc_ac_c*);
+extern "C" void func_8059B26C();
+extern "C" void func_8059B288();
+extern "C" void func_8059B2A4();
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__11daObjSwPr_cFv();
+extern "C" void setBaseMtx__11daObjSwPr_cFv();
+extern "C" void Create__11daObjSwPr_cFv();
+extern "C" void CreateHeap__11daObjSwPr_cFv();
+extern "C" void create__11daObjSwPr_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void setRotateTime__11daObjSwPr_cFv();
+extern "C" void switchCtrl__11daObjSwPr_cFv();
+extern "C" void execute_type_boomerang__11daObjSwPr_cFv();
+extern "C" void execute_type_wind__11daObjSwPr_cFv();
+extern "C" void execute__11daObjSwPr_cFv();
+extern "C" void draw__11daObjSwPr_cFv();
+extern "C" void _delete__11daObjSwPr_cFv();
+extern "C" void daObjSwPr_Draw__FP11daObjSwPr_c();
+extern "C" void daObjSwPr_Execute__FP11daObjSwPr_c();
+extern "C" void daObjSwPr_Delete__FP11daObjSwPr_c();
+extern "C" void daObjSwPr_Create__FP10fopAc_ac_c();
+extern "C" void func_8059B26C();
+extern "C" void func_8059B288();
+extern "C" void func_8059B2A4();
 SECTION_RODATA extern const u8 l_bmdName[8];
 SECTION_RODATA extern const u8 l_heap_size[8];
 SECTION_RODATA extern const u8 l_cyl_src[68];
@@ -57,7 +104,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -67,7 +116,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/nodeCallBack__FP8J3DJointi.s"
 }
@@ -78,7 +127,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -89,7 +138,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/initBaseMtx__11daObjSwPr_cFv.s"
 }
@@ -100,7 +149,7 @@ ASM_FUNCTION(initBaseMtx__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/setBaseMtx__11daObjSwPr_cFv.s"
 }
@@ -111,7 +160,7 @@ ASM_FUNCTION(setBaseMtx__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/Create__11daObjSwPr_cFv.s"
 }
@@ -122,7 +171,7 @@ ASM_FUNCTION(Create__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/CreateHeap__11daObjSwPr_cFv.s"
 }
@@ -133,7 +182,7 @@ ASM_FUNCTION(CreateHeap__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059A888.s"
 }
@@ -144,7 +193,7 @@ ASM_FUNCTION(create__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/__dt__8cM3dGCylFv.s"
 }
@@ -155,7 +204,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/__dt__8cM3dGAabFv.s"
 }
@@ -166,7 +215,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRotateTime__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::setRotateTime() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/setRotateTime__11daObjSwPr_cFv.s"
 }
@@ -177,7 +226,7 @@ ASM_FUNCTION(setRotateTime__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(switchCtrl__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::switchCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/switchCtrl__11daObjSwPr_cFv.s"
 }
@@ -188,7 +237,7 @@ ASM_FUNCTION(switchCtrl__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute_type_boomerang__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::execute_type_boomerang() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/execute_type_boomerang__11daObjSwPr_cFv.s"
 }
@@ -199,7 +248,7 @@ ASM_FUNCTION(execute_type_boomerang__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute_type_wind__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::execute_type_wind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/execute_type_wind__11daObjSwPr_cFv.s"
 }
@@ -210,7 +259,7 @@ ASM_FUNCTION(execute_type_wind__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/execute__11daObjSwPr_cFv.s"
 }
@@ -221,7 +270,7 @@ ASM_FUNCTION(execute__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/draw__11daObjSwPr_cFv.s"
 }
@@ -232,7 +281,7 @@ ASM_FUNCTION(draw__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__11daObjSwPr_cFv) {
+asm void daObjSwPr_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/_delete__11daObjSwPr_cFv.s"
 }
@@ -243,7 +292,7 @@ ASM_FUNCTION(_delete__11daObjSwPr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwPr_Draw__FP11daObjSwPr_c) {
+asm void daObjSwPr_Draw(daObjSwPr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Draw__FP11daObjSwPr_c.s"
 }
@@ -254,7 +303,7 @@ ASM_FUNCTION(daObjSwPr_Draw__FP11daObjSwPr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwPr_Execute__FP11daObjSwPr_c) {
+asm void daObjSwPr_Execute(daObjSwPr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Execute__FP11daObjSwPr_c.s"
 }
@@ -265,7 +314,7 @@ ASM_FUNCTION(daObjSwPr_Execute__FP11daObjSwPr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwPr_Delete__FP11daObjSwPr_c) {
+asm void daObjSwPr_Delete(daObjSwPr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Delete__FP11daObjSwPr_c.s"
 }
@@ -276,7 +325,7 @@ ASM_FUNCTION(daObjSwPr_Delete__FP11daObjSwPr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjSwPr_Create__FP10fopAc_ac_c) {
+asm void daObjSwPr_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/daObjSwPr_Create__FP10fopAc_ac_c.s"
 }
@@ -287,7 +336,7 @@ ASM_FUNCTION(daObjSwPr_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059B26C) {
+extern "C" asm void func_8059B26C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059B26C.s"
 }
@@ -298,7 +347,7 @@ ASM_FUNCTION(func_8059B26C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059B288) {
+extern "C" asm void func_8059B288() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059B288.s"
 }
@@ -309,7 +358,7 @@ ASM_FUNCTION(func_8059B288) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059B2A4) {
+extern "C" asm void func_8059B2A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_swpropeller/d_a_obj_swpropeller/func_8059B2A4.s"
 }

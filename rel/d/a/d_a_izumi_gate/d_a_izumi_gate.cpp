@@ -6,21 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daIzumiGate_c;
+
+struct daIzumiGate_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__13daIzumiGate_cFv();
-extern "C" extern void setBaseMtx__13daIzumiGate_cFv();
-extern "C" extern void daIzumiGate_Draw__FP13daIzumiGate_c();
-extern "C" extern void daIzumiGate_Execute__FP13daIzumiGate_c();
-extern "C" extern void daIzumiGate_IsDelete__FP13daIzumiGate_c();
-extern "C" extern void daIzumiGate_Delete__FP13daIzumiGate_c();
-extern "C" extern void daIzumiGate_Create__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__13daIzumiGate_cFv();
-extern "C" extern void Create__13daIzumiGate_cFv();
-extern "C" extern void Execute__13daIzumiGate_cFPPA3_A4_f();
-extern "C" extern void Draw__13daIzumiGate_cFv();
-extern "C" extern void Delete__13daIzumiGate_cFv();
+void daIzumiGate_Draw(daIzumiGate_c*);
+void daIzumiGate_Execute(daIzumiGate_c*);
+bool daIzumiGate_IsDelete(daIzumiGate_c*);
+void daIzumiGate_Delete(daIzumiGate_c*);
+void daIzumiGate_Create(fopAc_ac_c*);
+extern "C" void Execute__13daIzumiGate_cFPPA3_A4_f();
+
+extern "C" void initBaseMtx__13daIzumiGate_cFv();
+extern "C" void setBaseMtx__13daIzumiGate_cFv();
+extern "C" void daIzumiGate_Draw__FP13daIzumiGate_c();
+extern "C" void daIzumiGate_Execute__FP13daIzumiGate_c();
+extern "C" bool daIzumiGate_IsDelete__FP13daIzumiGate_c();
+extern "C" void daIzumiGate_Delete__FP13daIzumiGate_c();
+extern "C" void daIzumiGate_Create__FP10fopAc_ac_c();
+extern "C" void CreateHeap__13daIzumiGate_cFv();
+extern "C" void Create__13daIzumiGate_cFv();
+extern "C" void Execute__13daIzumiGate_cFPPA3_A4_f();
+extern "C" void Draw__13daIzumiGate_cFv();
+extern "C" void Delete__13daIzumiGate_cFv();
 SECTION_RODATA extern const u8 stringBase0[48];
 SECTION_DATA extern u8 l_arcName[4];
 SECTION_DATA extern u8 l_daIzumiGate_Method[32];
@@ -31,7 +57,9 @@ SECTION_DATA extern void*const __vt__13daIzumiGate_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +69,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/initBaseMtx__13daIzumiGate_cFv.s"
 }
@@ -52,7 +80,7 @@ ASM_FUNCTION(initBaseMtx__13daIzumiGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/setBaseMtx__13daIzumiGate_cFv.s"
 }
@@ -63,7 +91,7 @@ ASM_FUNCTION(setBaseMtx__13daIzumiGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daIzumiGate_Draw__FP13daIzumiGate_c) {
+asm void daIzumiGate_Draw(daIzumiGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Draw__FP13daIzumiGate_c.s"
 }
@@ -74,7 +102,7 @@ ASM_FUNCTION(daIzumiGate_Draw__FP13daIzumiGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daIzumiGate_Execute__FP13daIzumiGate_c) {
+asm void daIzumiGate_Execute(daIzumiGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Execute__FP13daIzumiGate_c.s"
 }
@@ -82,21 +110,16 @@ ASM_FUNCTION(daIzumiGate_Execute__FP13daIzumiGate_c) {
 
 
 /* 80849158-80849160 0008+00 .text      daIzumiGate_IsDelete__FP13daIzumiGate_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daIzumiGate_IsDelete__FP13daIzumiGate_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_IsDelete__FP13daIzumiGate_c.s"
+bool daIzumiGate_IsDelete(daIzumiGate_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80849160-80849184 0024+00 .text      daIzumiGate_Delete__FP13daIzumiGate_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daIzumiGate_Delete__FP13daIzumiGate_c) {
+asm void daIzumiGate_Delete(daIzumiGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Delete__FP13daIzumiGate_c.s"
 }
@@ -107,7 +130,7 @@ ASM_FUNCTION(daIzumiGate_Delete__FP13daIzumiGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daIzumiGate_Create__FP10fopAc_ac_c) {
+asm void daIzumiGate_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Create__FP10fopAc_ac_c.s"
 }
@@ -118,7 +141,7 @@ ASM_FUNCTION(daIzumiGate_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/CreateHeap__13daIzumiGate_cFv.s"
 }
@@ -129,7 +152,7 @@ ASM_FUNCTION(CreateHeap__13daIzumiGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/Create__13daIzumiGate_cFv.s"
 }
@@ -140,7 +163,7 @@ ASM_FUNCTION(Create__13daIzumiGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daIzumiGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daIzumiGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/Execute__13daIzumiGate_cFPPA3_A4_f.s"
 }
@@ -151,7 +174,7 @@ ASM_FUNCTION(Execute__13daIzumiGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/Draw__13daIzumiGate_cFv.s"
 }
@@ -162,7 +185,7 @@ ASM_FUNCTION(Draw__13daIzumiGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daIzumiGate_cFv) {
+asm void daIzumiGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/Delete__13daIzumiGate_cFv.s"
 }

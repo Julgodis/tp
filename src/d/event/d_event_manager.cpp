@@ -6,62 +6,291 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dEvent_exception_c (dEvent_exception_c) False/False
+/* top-level dependencies (begin dEvent_exception_c) */
+/* top-level dependencies (end dEvent_exception_c) */
+struct dEvent_exception_c {
+	/* 800463DC */ void init();
+	/* 800463F0 */ void setStartDemo(s32);
+	/* 80046480 */ void getEventName();
+};
+
+// build dEvent_manager_c (dEvent_manager_c) False/False
+// build cXyz (cXyz) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin cXyz) */
+// outer dependency: Vec
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	// Vec
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+// build dEvDtData_c (dEvDtData_c) False/False
+/* top-level dependencies (begin dEvDtData_c) */
+/* top-level dependencies (end dEvDtData_c) */
+struct dEvDtData_c {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build dEvDtEvent_c (dEvDtEvent_c) False/False
+// build dEvDtStaff_c (dEvDtStaff_c) False/False
+/* top-level dependencies (begin dEvDtStaff_c) */
+/* top-level dependencies (end dEvDtStaff_c) */
+struct dEvDtStaff_c {
+	/* 80044134 */ void init();
+};
+
+/* top-level dependencies (begin dEvDtEvent_c) */
+// outer dependency: dEvDtStaff_c
+/* top-level dependencies (end dEvDtEvent_c) */
+struct dEvDtEvent_c {
+	// dEvDtStaff_c
+	/* 80043E78 */ void finishCheck();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
+};
+
+/* top-level dependencies (begin dEvent_manager_c) */
+// outer dependency: cXyz
+// outer dependency: dEvDtData_c
+// outer dependency: fopAc_ac_c
+// outer dependency: dEvDtEvent_c
+/* top-level dependencies (end dEvent_manager_c) */
+struct dEvent_manager_c {
+	// cXyz
+	// dEvDtData_c
+	// fopAc_ac_c
+	// dEvDtEvent_c
+	/* 800465E8 */ void getSubstance(dEvDtData_c*, s32);
+	/* 80046688 */ dEvent_manager_c();
+	/* 80046710 */ void create();
+	/* 80046800 */ void setObjectArchive(char*);
+	/* 80046888 */ void demoInit();
+	/* 80046904 */ void roomInit(s32);
+	/* 800469EC */ void roomFinish(s32);
+	/* 80046A58 */ void orderStartDemo();
+	/* 80046C0C */ void remove();
+	/* 80046CB8 */ void startProc(dEvDtEvent_c*);
+	/* 80046DA0 */ void closeProc(dEvDtEvent_c*);
+	/* 80046DAC */ void endProc(s16, s32);
+	/* 80046E64 */ void Sequencer();
+	/* 800473FC */ void Experts();
+	/* 80047454 */ void getEventData(s16, s32);
+	/* 800474BC */ void getEventData(s16);
+	/* 80047514 */ void getEventIdx(char const*, char, s32);
+	/* 80047698 */ void getEventIdx(fopAc_ac_c*, char);
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, char);
+	/* 80047930 */ void isMapToolCamera(char, s32);
+	/* 80047984 */ void order(s16);
+	/* 800479F8 */ void startCheck(s16);
+	/* 80047A38 */ void startCheckOld(char const*);
+	/* 80047A78 */ void endCheck(s16);
+	/* 80047ADC */ void endCheckOld(char const*);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, s32);
+	/* 80047D4C */ void getIsAddvance(s32);
+	/* 80047E10 */ void getMyActIdx(s32, char const**, s32, s32, s32);
+	/* 80047F5C */ void getMyNowCutName(s32);
+	/* 80047FC8 */ void getMyDataP(s32, char const*, s32);
+	/* 800480EC */ void getMySubstanceP(s32, char const*, s32);
+	/* 80048144 */ void getMySubstanceNum(s32, char const*);
+	/* 8004817C */ void cutEnd(s32);
+	/* 800481F4 */ void getEventPrio(fopAc_ac_c*, s16);
+	/* 800482CC */ void issueStaff(char const*);
+	/* 80048348 */ void cancelStaff(char const*);
+	/* 800483C4 */ void setGoal(cXyz*);
+	/* 800483E0 */ void getGoal();
+	/* 800483E8 */ void getRunEventName();
+	/* 80048520 */ void specialCast_Shutter(s16, s32);
+	/* 80048618 */ void specialCast(char const*, s32);
+	/* 800487F0 */ void ChkPresentEnd();
+	/* 8004882C */ void checkStartDemo();
+};
+
+// build dEvDtData_c (dEvDtData_c) True/True
+// build dEvDtBase_c (dEvDtBase_c) False/False
+// build dEvDtEvent_c (dEvDtEvent_c) True/True
+/* top-level dependencies (begin dEvDtBase_c) */
+// outer dependency: dEvDtEvent_c
+/* top-level dependencies (end dEvDtBase_c) */
+struct dEvDtBase_c {
+	// dEvDtEvent_c
+	/* 80030190 */ ~dEvDtBase_c();
+	/* 80046138 */ void init();
+	/* 8004616C */ void init(char*, s32);
+	/* 8004628C */ void advanceCut(dEvDtEvent_c*);
+	/* 800466E0 */ dEvDtBase_c();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dEvDtEvent_c (dEvDtEvent_c) True/True
+// build cXyz (cXyz) True/True
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(s32);
+};
+
+// build dSv_info_c (dSv_info_c) False/False
+/* top-level dependencies (begin dSv_info_c) */
+/* top-level dependencies (end dSv_info_c) */
+struct dSv_info_c {
+	/* 80035360 */ void isSwitch(s32, s32) const;
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 80042468 */ void reset();
+	/* 800429A8 */ void onSkipFade();
+	/* 80043278 */ void getStageEventDt();
+	/* 80043280 */ void sceneChange(s32);
+	/* 800432EC */ void convPId(s32);
+	/* 80043500 */ void searchMapEventData(char, s32);
+	/* 8004360C */ void runningEventID(s16);
+	/* 8004365C */ void setPt2(void*);
+	/* 800436BC */ void setPtI(void*);
+	/* 800436F4 */ void setPtD(void*);
+};
+
+// build dEvDtFlag_c (dEvDtFlag_c) False/False
+/* top-level dependencies (begin dEvDtFlag_c) */
+/* top-level dependencies (end dEvDtFlag_c) */
+struct dEvDtFlag_c {
+	/* 80043DC8 */ void flagSet(s32);
+	/* 80043E58 */ void init();
+};
+
+// build dEvDtStaff_c (dEvDtStaff_c) True/True
+// build dCamera_c (dCamera_c) False/False
+/* top-level dependencies (begin dCamera_c) */
+/* top-level dependencies (end dCamera_c) */
+struct dCamera_c {
+	/* 80180A40 */ void EventRecoverNotime();
+	/* 80181E98 */ void Center();
+};
+
+// build Vec (Vec) True/True
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Z2StatusMgr (Z2StatusMgr) False/False
+/* top-level dependencies (begin Z2StatusMgr) */
+/* top-level dependencies (end Z2StatusMgr) */
+struct Z2StatusMgr {
+	/* 802B61E8 */ void setDemoName(char*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void init__18dEvent_exception_cFv();
-extern "C" extern void setStartDemo__18dEvent_exception_cFi();
-extern "C" extern void getEventName__18dEvent_exception_cFv();
-extern "C" extern void getSubstance__16dEvent_manager_cFP11dEvDtData_ci();
-extern "C" extern void __ct__16dEvent_manager_cFv();
-extern "C" extern void __ct__11dEvDtBase_cFv();
-extern "C" extern void create__16dEvent_manager_cFv();
-extern "C" extern void setObjectArchive__16dEvent_manager_cFPc();
-extern "C" extern void demoInit__16dEvent_manager_cFv();
-extern "C" extern void roomInit__16dEvent_manager_cFi();
-extern "C" extern void roomFinish__16dEvent_manager_cFi();
-extern "C" extern void orderStartDemo__16dEvent_manager_cFv();
-extern "C" extern void remove__16dEvent_manager_cFv();
-extern "C" extern void extraOnObjectCallBack__FP10fopAc_ac_cPv();
-extern "C" extern void extraOffObjectCallBack__FP10fopAc_ac_cPv();
-extern "C" extern void allOffObjectCallBack__FP10fopAc_ac_cPv();
-extern "C" extern void startProc__16dEvent_manager_cFP12dEvDtEvent_c();
-extern "C" extern void closeProc__16dEvent_manager_cFP12dEvDtEvent_c();
-extern "C" extern void endProc__16dEvent_manager_cFsi();
-extern "C" extern void Sequencer__16dEvent_manager_cFv();
-extern "C" extern void Experts__16dEvent_manager_cFv();
-extern "C" extern void getEventData__16dEvent_manager_cFsi();
-extern "C" extern void getEventData__16dEvent_manager_cFs();
-extern "C" extern void getEventIdx__16dEvent_manager_cFPCcUcl();
-extern "C" extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
-extern "C" extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
-extern "C" extern void isMapToolCamera__16dEvent_manager_cFUcl();
-extern "C" extern void order__16dEvent_manager_cFs();
-extern "C" extern void startCheck__16dEvent_manager_cFs();
-extern "C" extern void startCheckOld__16dEvent_manager_cFPCc();
-extern "C" extern void endCheck__16dEvent_manager_cFs();
-extern "C" extern void endCheckOld__16dEvent_manager_cFPCc();
-extern "C" extern void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
-extern "C" extern void getIsAddvance__16dEvent_manager_cFi();
-extern "C" extern void dEvmng_strcmp__FPCcPc();
-extern "C" extern void getMyActIdx__16dEvent_manager_cFiPCPCciii();
-extern "C" extern void getMyNowCutName__16dEvent_manager_cFi();
-extern "C" extern void getMyDataP__16dEvent_manager_cFiPCci();
-extern "C" extern void getMySubstanceP__16dEvent_manager_cFiPCci();
-extern "C" extern void getMySubstanceNum__16dEvent_manager_cFiPCc();
-extern "C" extern void cutEnd__16dEvent_manager_cFi();
-extern "C" extern void getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs();
-extern "C" extern void issueStaff__16dEvent_manager_cFPCc();
-extern "C" extern void cancelStaff__16dEvent_manager_cFPCc();
-extern "C" extern void setGoal__16dEvent_manager_cFP4cXyz();
-extern "C" extern void getGoal__16dEvent_manager_cFv();
-extern "C" extern void getRunEventName__16dEvent_manager_cFv();
-extern "C" extern void findShutterCallBack__FP10fopAc_ac_cPv();
-extern "C" extern void specialCast_Shutter__16dEvent_manager_cFsi();
-extern "C" extern void specialCast__16dEvent_manager_cFPCci();
-extern "C" extern void dEv_talkman_get_action__Fi();
-extern "C" extern void ChkPresentEnd__16dEvent_manager_cFv();
-extern "C" extern void checkStartDemo__16dEvent_manager_cFv();
+static void extraOnObjectCallBack(fopAc_ac_c*, void*);
+static void extraOffObjectCallBack(fopAc_ac_c*, void*);
+static void allOffObjectCallBack(fopAc_ac_c*, void*);
+static void dEvmng_strcmp(char const*, char*);
+static void findShutterCallBack(fopAc_ac_c*, void*);
+static void dEv_talkman_get_action(s32);
+
+extern "C" void init__18dEvent_exception_cFv();
+extern "C" void setStartDemo__18dEvent_exception_cFi();
+extern "C" void getEventName__18dEvent_exception_cFv();
+extern "C" void getSubstance__16dEvent_manager_cFP11dEvDtData_ci();
+extern "C" void __ct__16dEvent_manager_cFv();
+extern "C" void __ct__11dEvDtBase_cFv();
+extern "C" void create__16dEvent_manager_cFv();
+extern "C" void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" void demoInit__16dEvent_manager_cFv();
+extern "C" void roomInit__16dEvent_manager_cFi();
+extern "C" void roomFinish__16dEvent_manager_cFi();
+extern "C" void orderStartDemo__16dEvent_manager_cFv();
+extern "C" void remove__16dEvent_manager_cFv();
+extern "C" static void extraOnObjectCallBack__FP10fopAc_ac_cPv();
+extern "C" static void extraOffObjectCallBack__FP10fopAc_ac_cPv();
+extern "C" static void allOffObjectCallBack__FP10fopAc_ac_cPv();
+extern "C" void startProc__16dEvent_manager_cFP12dEvDtEvent_c();
+extern "C" void closeProc__16dEvent_manager_cFP12dEvDtEvent_c();
+extern "C" void endProc__16dEvent_manager_cFsi();
+extern "C" void Sequencer__16dEvent_manager_cFv();
+extern "C" void Experts__16dEvent_manager_cFv();
+extern "C" void getEventData__16dEvent_manager_cFsi();
+extern "C" void getEventData__16dEvent_manager_cFs();
+extern "C" void getEventIdx__16dEvent_manager_cFPCcUcl();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void isMapToolCamera__16dEvent_manager_cFUcl();
+extern "C" void order__16dEvent_manager_cFs();
+extern "C" void startCheck__16dEvent_manager_cFs();
+extern "C" void startCheckOld__16dEvent_manager_cFPCc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void endCheckOld__16dEvent_manager_cFPCc();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" static void dEvmng_strcmp__FPCcPc();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMyNowCutName__16dEvent_manager_cFi();
+extern "C" void getMyDataP__16dEvent_manager_cFiPCci();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs();
+extern "C" void issueStaff__16dEvent_manager_cFPCc();
+extern "C" void cancelStaff__16dEvent_manager_cFPCc();
+extern "C" void setGoal__16dEvent_manager_cFP4cXyz();
+extern "C" void getGoal__16dEvent_manager_cFv();
+extern "C" void getRunEventName__16dEvent_manager_cFv();
+extern "C" static void findShutterCallBack__FP10fopAc_ac_cPv();
+extern "C" void specialCast_Shutter__16dEvent_manager_cFsi();
+extern "C" void specialCast__16dEvent_manager_cFPCci();
+extern "C" static void dEv_talkman_get_action__Fi();
+extern "C" void ChkPresentEnd__16dEvent_manager_cFv();
+extern "C" void checkStartDemo__16dEvent_manager_cFv();
 SECTION_RODATA extern const u8 data_80379F50[15 + 1 /* padding */];
 SECTION_RODATA extern const u8 d_event_d_event_manager__stringBase0[424];
 SECTION_DATA extern void*data_803A8270[14];
@@ -84,65 +313,98 @@ SECTION_SDATA2 extern f32 d_event_d_event_manager__lit_5055;
 // External References:
 // 
 
-extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" extern void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
-extern "C" extern void fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs();
-extern "C" extern void fopAcM_searchFromName4Event__FPCcs();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void dComIfG_getStageRes__FPCc();
-extern "C" extern void dComIfG_getRoomArcName__Fi();
-extern "C" extern void dComIfGp_SelectWarpPt_get__Fv();
-extern "C" extern void __dt__11dEvDtBase_cFv();
-extern "C" extern void isSwitch__10dSv_info_cCFii();
-extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" extern void reset__14dEvt_control_cFv();
-extern "C" extern void dEv_defaultSkipProc__FPvi();
-extern "C" extern void dEv_defaultSkipZev__FPvi();
-extern "C" extern void dEv_defaultSkipStb__FPvi();
-extern "C" extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
-extern "C" extern void onSkipFade__14dEvt_control_cFv();
-extern "C" extern void getStageEventDt__14dEvt_control_cFv();
-extern "C" extern void sceneChange__14dEvt_control_cFi();
-extern "C" extern void convPId__14dEvt_control_cFUi();
-extern "C" extern void searchMapEventData__14dEvt_control_cFUcl();
-extern "C" extern void runningEventID__14dEvt_control_cFs();
-extern "C" extern void setPt2__14dEvt_control_cFPv();
-extern "C" extern void setPtI__14dEvt_control_cFPv();
-extern "C" extern void setPtD__14dEvt_control_cFPv();
-extern "C" extern void flagSet__11dEvDtFlag_cFi();
-extern "C" extern void init__11dEvDtFlag_cFv();
-extern "C" extern void finishCheck__12dEvDtEvent_cFv();
-extern "C" extern void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
-extern "C" extern void init__12dEvDtStaff_cFv();
-extern "C" extern void init__11dEvDtBase_cFv();
-extern "C" extern void init__11dEvDtBase_cFPci();
-extern "C" extern void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
-extern "C" extern void EventRecoverNotime__9dCamera_cFv();
-extern "C" extern void dCam_getBody__Fv();
-extern "C" extern void Center__9dCamera_cFv();
-extern "C" extern void __mi__4cXyzCFRC3Vec();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void setDemoName__11Z2StatusMgrFPc();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_22();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_22();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void strchr();
-extern "C" extern void strcmp();
-extern "C" extern void strcpy();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, char, u16, u16, u16);
+void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, char, s16, u16, u16, u16);
+void fopAcM_searchFromName4Event(char const*, s16);
+void dComIfG_getStageRes(char const*);
+void dComIfG_getRoomArcName(s32);
+void dComIfGp_SelectWarpPt_get();
+void dEv_defaultSkipProc(void*, s32);
+void dEv_defaultSkipZev(void*, s32);
+void dEv_defaultSkipStb(void*, s32);
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+void dCam_getBody();
+extern "C" void PSVECSquareMag();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strchr();
+extern "C" void strcmp();
+extern "C" void strcpy();
+
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs();
+extern "C" void fopAcM_searchFromName4Event__FPCcs();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfG_getRoomArcName__Fi();
+extern "C" void dComIfGp_SelectWarpPt_get__Fv();
+extern "C" void __dt__11dEvDtBase_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void dEv_defaultSkipProc__FPvi();
+extern "C" void dEv_defaultSkipZev__FPvi();
+extern "C" void dEv_defaultSkipStb__FPvi();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void onSkipFade__14dEvt_control_cFv();
+extern "C" void getStageEventDt__14dEvt_control_cFv();
+extern "C" void sceneChange__14dEvt_control_cFi();
+extern "C" void convPId__14dEvt_control_cFUi();
+extern "C" void searchMapEventData__14dEvt_control_cFUcl();
+extern "C" void runningEventID__14dEvt_control_cFs();
+extern "C" void setPt2__14dEvt_control_cFPv();
+extern "C" void setPtI__14dEvt_control_cFPv();
+extern "C" void setPtD__14dEvt_control_cFPv();
+extern "C" void flagSet__11dEvDtFlag_cFi();
+extern "C" void init__11dEvDtFlag_cFv();
+extern "C" void finishCheck__12dEvDtEvent_cFv();
+extern "C" void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
+extern "C" void init__12dEvDtStaff_cFv();
+extern "C" void init__11dEvDtBase_cFv();
+extern "C" void init__11dEvDtBase_cFPci();
+extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
+extern "C" void EventRecoverNotime__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void Center__9dCamera_cFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void PSVECSquareMag();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strchr();
+extern "C" void strcmp();
+extern "C" void strcpy();
 SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
@@ -154,22 +416,22 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800463DC-800463F0 0014+00 .text      init__18dEvent_exception_cFv                                 */
+/* 800463DC-800463F0 0014+00 rc=2 efc=0 .text      init__18dEvent_exception_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__18dEvent_exception_cFv) {
+asm void dEvent_exception_c::init() {
 	nofralloc
 #include "asm/d/event/d_event_manager/init__18dEvent_exception_cFv.s"
 }
 #pragma pop
 
 
-/* 800463F0-80046480 0090+00 .text      setStartDemo__18dEvent_exception_cFi                         */
+/* 800463F0-80046480 0090+00 rc=2 efc=2 .text      setStartDemo__18dEvent_exception_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStartDemo__18dEvent_exception_cFi) {
+asm void dEvent_exception_c::setStartDemo(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/setStartDemo__18dEvent_exception_cFi.s"
 }
@@ -177,14 +439,14 @@ ASM_FUNCTION(setStartDemo__18dEvent_exception_cFi) {
 
 
 /* ############################################################################################## */
-/* 80379F50-80379F60 000F+01 .rodata    DataFileName__29@unnamed@d_event_manager_cpp@                */
+/* 80379F50-80379F60 000F+01 rc=6 efc=0 .rodata    DataFileName__29@unnamed@d_event_manager_cpp@                */
 SECTION_RODATA const u8 data_80379F50[16] = {
 	0x65, 0x76, 0x65, 0x6E, 0x74, 0x5F, 0x6C, 0x69, 0x73, 0x74, 0x2E, 0x64, 0x61, 0x74, 0x00,
 	/* padding */
 	0x00,
 };
 
-/* 80379F60-8037A108 01A4+04 .rodata    @stringBase0                                                 */
+/* 80379F60-8037A108 01A4+04 rc=14 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -225,7 +487,7 @@ SECTION_DEAD char* const stringBase_8037A0FC = "TALKMAN";
 SECTION_DEAD char* const pad_8037A104 = "\0\0\0";
 #pragma pop
 
-/* 803A8270-803A82A8 0038+00 .data      soecial_names$3966                                           */
+/* 803A8270-803A82A8 0038+00 rc=1 efc=0 .data      soecial_names$3966                                           */
 void* data_803A8270[14] = {
 	(void*)&d_event_d_event_manager__stringBase0,
 	(void*)0x80379F70,
@@ -243,187 +505,187 @@ void* data_803A8270[14] = {
 	(void*)0x8037A023,
 };
 
-/* 80046480-800465E8 0168+00 .text      getEventName__18dEvent_exception_cFv                         */
+/* 80046480-800465E8 0168+00 rc=1 efc=0 .text      getEventName__18dEvent_exception_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventName__18dEvent_exception_cFv) {
+asm void dEvent_exception_c::getEventName() {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventName__18dEvent_exception_cFv.s"
 }
 #pragma pop
 
 
-/* 800465E8-80046688 00A0+00 .text      getSubstance__16dEvent_manager_cFP11dEvDtData_ci             */
+/* 800465E8-80046688 00A0+00 rc=1 efc=0 .text      getSubstance__16dEvent_manager_cFP11dEvDtData_ci             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSubstance__16dEvent_manager_cFP11dEvDtData_ci) {
+asm void dEvent_manager_c::getSubstance(dEvDtData_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getSubstance__16dEvent_manager_cFP11dEvDtData_ci.s"
 }
 #pragma pop
 
 
-/* 80046688-800466E0 0058+00 .text      __ct__16dEvent_manager_cFv                                   */
+/* 80046688-800466E0 0058+00 rc=1 efc=1 .text      __ct__16dEvent_manager_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dEvent_manager_cFv) {
+asm dEvent_manager_c::dEvent_manager_c() {
 	nofralloc
 #include "asm/d/event/d_event_manager/__ct__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 800466E0-80046710 0030+00 .text      __ct__11dEvDtBase_cFv                                        */
+/* 800466E0-80046710 0030+00 rc=1 efc=0 .text      __ct__11dEvDtBase_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dEvDtBase_cFv) {
+asm dEvDtBase_c::dEvDtBase_c() {
 	nofralloc
 #include "asm/d/event/d_event_manager/__ct__11dEvDtBase_cFv.s"
 }
 #pragma pop
 
 
-/* 80046710-80046800 00F0+00 .text      create__16dEvent_manager_cFv                                 */
+/* 80046710-80046800 00F0+00 rc=1 efc=1 .text      create__16dEvent_manager_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::create() {
 	nofralloc
 #include "asm/d/event/d_event_manager/create__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 80046800-80046888 0088+00 .text      setObjectArchive__16dEvent_manager_cFPc                      */
+/* 80046800-80046888 0088+00 rc=8 efc=8 .text      setObjectArchive__16dEvent_manager_cFPc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setObjectArchive__16dEvent_manager_cFPc) {
+asm void dEvent_manager_c::setObjectArchive(char* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/setObjectArchive__16dEvent_manager_cFPc.s"
 }
 #pragma pop
 
 
-/* 80046888-80046904 007C+00 .text      demoInit__16dEvent_manager_cFv                               */
+/* 80046888-80046904 007C+00 rc=1 efc=1 .text      demoInit__16dEvent_manager_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoInit__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::demoInit() {
 	nofralloc
 #include "asm/d/event/d_event_manager/demoInit__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 80046904-800469EC 00E8+00 .text      roomInit__16dEvent_manager_cFi                               */
+/* 80046904-800469EC 00E8+00 rc=1 efc=1 .text      roomInit__16dEvent_manager_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(roomInit__16dEvent_manager_cFi) {
+asm void dEvent_manager_c::roomInit(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/roomInit__16dEvent_manager_cFi.s"
 }
 #pragma pop
 
 
-/* 800469EC-80046A58 006C+00 .text      roomFinish__16dEvent_manager_cFi                             */
+/* 800469EC-80046A58 006C+00 rc=1 efc=1 .text      roomFinish__16dEvent_manager_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(roomFinish__16dEvent_manager_cFi) {
+asm void dEvent_manager_c::roomFinish(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/roomFinish__16dEvent_manager_cFi.s"
 }
 #pragma pop
 
 
-/* 80046A58-80046C0C 01B4+00 .text      orderStartDemo__16dEvent_manager_cFv                         */
+/* 80046A58-80046C0C 01B4+00 rc=1 efc=1 .text      orderStartDemo__16dEvent_manager_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderStartDemo__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::orderStartDemo() {
 	nofralloc
 #include "asm/d/event/d_event_manager/orderStartDemo__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 80046C0C-80046C74 0068+00 .text      remove__16dEvent_manager_cFv                                 */
+/* 80046C0C-80046C74 0068+00 rc=1 efc=1 .text      remove__16dEvent_manager_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(remove__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::remove() {
 	nofralloc
 #include "asm/d/event/d_event_manager/remove__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 80046C74-80046C88 0014+00 .text      extraOnObjectCallBack__FP10fopAc_ac_cPv                      */
+/* 80046C74-80046C88 0014+00 rc=1 efc=0 .text      extraOnObjectCallBack__FP10fopAc_ac_cPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(extraOnObjectCallBack__FP10fopAc_ac_cPv) {
+asm static void extraOnObjectCallBack(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/extraOnObjectCallBack__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* 80046C88-80046C9C 0014+00 .text      extraOffObjectCallBack__FP10fopAc_ac_cPv                     */
+/* 80046C88-80046C9C 0014+00 rc=1 efc=0 .text      extraOffObjectCallBack__FP10fopAc_ac_cPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(extraOffObjectCallBack__FP10fopAc_ac_cPv) {
+asm static void extraOffObjectCallBack(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/extraOffObjectCallBack__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* 80046C9C-80046CB8 001C+00 .text      allOffObjectCallBack__FP10fopAc_ac_cPv                       */
+/* 80046C9C-80046CB8 001C+00 rc=1 efc=0 .text      allOffObjectCallBack__FP10fopAc_ac_cPv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(allOffObjectCallBack__FP10fopAc_ac_cPv) {
+asm static void allOffObjectCallBack(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/allOffObjectCallBack__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* 80046CB8-80046DA0 00E8+00 .text      startProc__16dEvent_manager_cFP12dEvDtEvent_c                */
+/* 80046CB8-80046DA0 00E8+00 rc=1 efc=0 .text      startProc__16dEvent_manager_cFP12dEvDtEvent_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startProc__16dEvent_manager_cFP12dEvDtEvent_c) {
+asm void dEvent_manager_c::startProc(dEvDtEvent_c* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/startProc__16dEvent_manager_cFP12dEvDtEvent_c.s"
 }
 #pragma pop
 
 
-/* 80046DA0-80046DAC 000C+00 .text      closeProc__16dEvent_manager_cFP12dEvDtEvent_c                */
+/* 80046DA0-80046DAC 000C+00 rc=2 efc=0 .text      closeProc__16dEvent_manager_cFP12dEvDtEvent_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(closeProc__16dEvent_manager_cFP12dEvDtEvent_c) {
+asm void dEvent_manager_c::closeProc(dEvDtEvent_c* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/closeProc__16dEvent_manager_cFP12dEvDtEvent_c.s"
 }
 #pragma pop
 
 
-/* 80046DAC-80046E64 00B8+00 .text      endProc__16dEvent_manager_cFsi                               */
+/* 80046DAC-80046E64 00B8+00 rc=2 efc=2 .text      endProc__16dEvent_manager_cFsi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endProc__16dEvent_manager_cFsi) {
+asm void dEvent_manager_c::endProc(s16 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/endProc__16dEvent_manager_cFsi.s"
 }
@@ -431,71 +693,71 @@ ASM_FUNCTION(endProc__16dEvent_manager_cFsi) {
 
 
 /* ############################################################################################## */
-/* 80451F00-80451F08 0004+04 .sdata2    @4398                                                        */
+/* 80451F00-80451F08 0004+04 rc=1 efc=0 .sdata2    @4398                                                        */
 u8 d_event_d_event_manager__lit_4398[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451F08-80451F10 0008+00 .sdata2    @4399                                                        */
+/* 80451F08-80451F10 0008+00 rc=1 efc=0 .sdata2    @4399                                                        */
 f64 d_event_d_event_manager__lit_4399 = 0.5;
 
-/* 80451F10-80451F18 0008+00 .sdata2    @4400                                                        */
+/* 80451F10-80451F18 0008+00 rc=1 efc=0 .sdata2    @4400                                                        */
 f64 d_event_d_event_manager__lit_4400 = 3.0;
 
-/* 80451F18-80451F20 0008+00 .sdata2    @4401                                                        */
+/* 80451F18-80451F20 0008+00 rc=1 efc=0 .sdata2    @4401                                                        */
 u8 lit_4401[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451F20-80451F24 0004+00 .sdata2    @4402                                                        */
+/* 80451F20-80451F24 0004+00 rc=1 efc=0 .sdata2    @4402                                                        */
 f32 lit_4402 = 180.0f;
 
-/* 80451F24-80451F28 0004+00 .sdata2    @4403                                                        */
+/* 80451F24-80451F28 0004+00 rc=1 efc=0 .sdata2    @4403                                                        */
 f32 lit_4403 = 1.0f;
 
-/* 80451F28-80451F2C 0004+00 .sdata2    @4404                                                        */
+/* 80451F28-80451F2C 0004+00 rc=1 efc=0 .sdata2    @4404                                                        */
 f32 d_event_d_event_manager__lit_4404 = -1.0f;
 
-/* 80046E64-800473FC 0598+00 .text      Sequencer__16dEvent_manager_cFv                              */
+/* 80046E64-800473FC 0598+00 rc=1 efc=1 .text      Sequencer__16dEvent_manager_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Sequencer__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::Sequencer() {
 	nofralloc
 #include "asm/d/event/d_event_manager/Sequencer__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 800473FC-80047454 0058+00 .text      Experts__16dEvent_manager_cFv                                */
+/* 800473FC-80047454 0058+00 rc=1 efc=1 .text      Experts__16dEvent_manager_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Experts__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::Experts() {
 	nofralloc
 #include "asm/d/event/d_event_manager/Experts__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 80047454-800474BC 0068+00 .text      getEventData__16dEvent_manager_cFsi                          */
+/* 80047454-800474BC 0068+00 rc=1 efc=0 .text      getEventData__16dEvent_manager_cFsi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventData__16dEvent_manager_cFsi) {
+asm void dEvent_manager_c::getEventData(s16 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventData__16dEvent_manager_cFsi.s"
 }
 #pragma pop
 
 
-/* 800474BC-80047514 0058+00 .text      getEventData__16dEvent_manager_cFs                           */
+/* 800474BC-80047514 0058+00 rc=12 efc=3 .text      getEventData__16dEvent_manager_cFs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventData__16dEvent_manager_cFs) {
+asm void dEvent_manager_c::getEventData(s16 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventData__16dEvent_manager_cFs.s"
 }
@@ -503,14 +765,14 @@ ASM_FUNCTION(getEventData__16dEvent_manager_cFs) {
 
 
 /* ############################################################################################## */
-/* 804246A0-804246B4 0011+03 .bss       map_tool_name$4449                                           */
+/* 804246A0-804246B4 0011+03 rc=1 efc=0 .bss       map_tool_name$4449                                           */
 u8 data_804246A0[17 + 3 /* padding */];
 
-/* 80047514-80047698 0184+00 .text      getEventIdx__16dEvent_manager_cFPCcUcl                       */
+/* 80047514-80047698 0184+00 rc=11 efc=8 .text      getEventIdx__16dEvent_manager_cFPCcUcl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventIdx__16dEvent_manager_cFPCcUcl) {
+asm void dEvent_manager_c::getEventIdx(char const* field_0, char field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFPCcUcl.s"
 }
@@ -518,14 +780,14 @@ ASM_FUNCTION(getEventIdx__16dEvent_manager_cFPCcUcl) {
 
 
 /* ############################################################################################## */
-/* 804246B4-804246C8 0011+03 .bss       map_tool_name$4498                                           */
+/* 804246B4-804246C8 0011+03 rc=1 efc=0 .bss       map_tool_name$4498                                           */
 u8 data_804246B4[17 + 3 /* padding */];
 
-/* 80047698-80047758 00C0+00 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc              */
+/* 80047698-80047758 00C0+00 rc=3 efc=3 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc) {
+asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc.s"
 }
@@ -533,245 +795,245 @@ ASM_FUNCTION(getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc) {
 
 
 /* ############################################################################################## */
-/* 804246C8-804246E0 0011+07 .bss       map_tool_name$4511                                           */
+/* 804246C8-804246E0 0011+07 rc=1 efc=0 .bss       map_tool_name$4511                                           */
 u8 data_804246C8[17 + 7 /* padding */];
 
-/* 80047758-80047930 01D8+00 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc           */
+/* 80047758-80047930 01D8+00 rc=11 efc=10 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc) {
+asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char const* field_1, char field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc.s"
 }
 #pragma pop
 
 
-/* 80047930-80047984 0054+00 .text      isMapToolCamera__16dEvent_manager_cFUcl                      */
+/* 80047930-80047984 0054+00 rc=0 efc=0 .text      isMapToolCamera__16dEvent_manager_cFUcl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isMapToolCamera__16dEvent_manager_cFUcl) {
+asm void dEvent_manager_c::isMapToolCamera(char field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/isMapToolCamera__16dEvent_manager_cFUcl.s"
 }
 #pragma pop
 
 
-/* 80047984-800479F8 0074+00 .text      order__16dEvent_manager_cFs                                  */
+/* 80047984-800479F8 0074+00 rc=6 efc=6 .text      order__16dEvent_manager_cFs                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(order__16dEvent_manager_cFs) {
+asm void dEvent_manager_c::order(s16 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/order__16dEvent_manager_cFs.s"
 }
 #pragma pop
 
 
-/* 800479F8-80047A38 0040+00 .text      startCheck__16dEvent_manager_cFs                             */
+/* 800479F8-80047A38 0040+00 rc=1 efc=0 .text      startCheck__16dEvent_manager_cFs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startCheck__16dEvent_manager_cFs) {
+asm void dEvent_manager_c::startCheck(s16 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/startCheck__16dEvent_manager_cFs.s"
 }
 #pragma pop
 
 
-/* 80047A38-80047A78 0040+00 .text      startCheckOld__16dEvent_manager_cFPCc                        */
+/* 80047A38-80047A78 0040+00 rc=2 efc=2 .text      startCheckOld__16dEvent_manager_cFPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startCheckOld__16dEvent_manager_cFPCc) {
+asm void dEvent_manager_c::startCheckOld(char const* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/startCheckOld__16dEvent_manager_cFPCc.s"
 }
 #pragma pop
 
 
-/* 80047A78-80047ADC 0064+00 .text      endCheck__16dEvent_manager_cFs                               */
+/* 80047A78-80047ADC 0064+00 rc=3 efc=2 .text      endCheck__16dEvent_manager_cFs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endCheck__16dEvent_manager_cFs) {
+asm void dEvent_manager_c::endCheck(s16 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/endCheck__16dEvent_manager_cFs.s"
 }
 #pragma pop
 
 
-/* 80047ADC-80047B1C 0040+00 .text      endCheckOld__16dEvent_manager_cFPCc                          */
+/* 80047ADC-80047B1C 0040+00 rc=2 efc=2 .text      endCheckOld__16dEvent_manager_cFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endCheckOld__16dEvent_manager_cFPCc) {
+asm void dEvent_manager_c::endCheckOld(char const* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/endCheckOld__16dEvent_manager_cFPCc.s"
 }
 #pragma pop
 
 
-/* 80047B1C-80047D4C 0230+00 .text      getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci           */
+/* 80047B1C-80047D4C 0230+00 rc=11 efc=10 .text      getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci) {
+asm void dEvent_manager_c::getMyStaffId(char const* field_0, fopAc_ac_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci.s"
 }
 #pragma pop
 
 
-/* 80047D4C-80047DAC 0060+00 .text      getIsAddvance__16dEvent_manager_cFi                          */
+/* 80047D4C-80047DAC 0060+00 rc=9 efc=9 .text      getIsAddvance__16dEvent_manager_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIsAddvance__16dEvent_manager_cFi) {
+asm void dEvent_manager_c::getIsAddvance(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getIsAddvance__16dEvent_manager_cFi.s"
 }
 #pragma pop
 
 
-/* 80047DAC-80047E10 0064+00 .text      dEvmng_strcmp__FPCcPc                                        */
+/* 80047DAC-80047E10 0064+00 rc=1 efc=0 .text      dEvmng_strcmp__FPCcPc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dEvmng_strcmp__FPCcPc) {
+asm static void dEvmng_strcmp(char const* field_0, char* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/dEvmng_strcmp__FPCcPc.s"
 }
 #pragma pop
 
 
-/* 80047E10-80047F5C 014C+00 .text      getMyActIdx__16dEvent_manager_cFiPCPCciii                    */
+/* 80047E10-80047F5C 014C+00 rc=2 efc=1 .text      getMyActIdx__16dEvent_manager_cFiPCPCciii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMyActIdx__16dEvent_manager_cFiPCPCciii) {
+asm void dEvent_manager_c::getMyActIdx(s32 field_0, char const** field_1, s32 field_2, s32 field_3, s32 field_4) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyActIdx__16dEvent_manager_cFiPCPCciii.s"
 }
 #pragma pop
 
 
-/* 80047F5C-80047FC8 006C+00 .text      getMyNowCutName__16dEvent_manager_cFi                        */
+/* 80047F5C-80047FC8 006C+00 rc=10 efc=9 .text      getMyNowCutName__16dEvent_manager_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMyNowCutName__16dEvent_manager_cFi) {
+asm void dEvent_manager_c::getMyNowCutName(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyNowCutName__16dEvent_manager_cFi.s"
 }
 #pragma pop
 
 
-/* 80047FC8-800480EC 0124+00 .text      getMyDataP__16dEvent_manager_cFiPCci                         */
+/* 80047FC8-800480EC 0124+00 rc=2 efc=0 .text      getMyDataP__16dEvent_manager_cFiPCci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMyDataP__16dEvent_manager_cFiPCci) {
+asm void dEvent_manager_c::getMyDataP(s32 field_0, char const* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyDataP__16dEvent_manager_cFiPCci.s"
 }
 #pragma pop
 
 
-/* 800480EC-80048144 0058+00 .text      getMySubstanceP__16dEvent_manager_cFiPCci                    */
+/* 800480EC-80048144 0058+00 rc=22 efc=22 .text      getMySubstanceP__16dEvent_manager_cFiPCci                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMySubstanceP__16dEvent_manager_cFiPCci) {
+asm void dEvent_manager_c::getMySubstanceP(s32 field_0, char const* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMySubstanceP__16dEvent_manager_cFiPCci.s"
 }
 #pragma pop
 
 
-/* 80048144-8004817C 0038+00 .text      getMySubstanceNum__16dEvent_manager_cFiPCc                   */
+/* 80048144-8004817C 0038+00 rc=12 efc=12 .text      getMySubstanceNum__16dEvent_manager_cFiPCc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMySubstanceNum__16dEvent_manager_cFiPCc) {
+asm void dEvent_manager_c::getMySubstanceNum(s32 field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMySubstanceNum__16dEvent_manager_cFiPCc.s"
 }
 #pragma pop
 
 
-/* 8004817C-800481F4 0078+00 .text      cutEnd__16dEvent_manager_cFi                                 */
+/* 8004817C-800481F4 0078+00 rc=79 efc=78 .text      cutEnd__16dEvent_manager_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutEnd__16dEvent_manager_cFi) {
+asm void dEvent_manager_c::cutEnd(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/cutEnd__16dEvent_manager_cFi.s"
 }
 #pragma pop
 
 
-/* 800481F4-800482CC 00D8+00 .text      getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs              */
+/* 800481F4-800482CC 00D8+00 rc=4 efc=4 .text      getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs) {
+asm void dEvent_manager_c::getEventPrio(fopAc_ac_c* field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs.s"
 }
 #pragma pop
 
 
-/* 800482CC-80048348 007C+00 .text      issueStaff__16dEvent_manager_cFPCc                           */
+/* 800482CC-80048348 007C+00 rc=2 efc=1 .text      issueStaff__16dEvent_manager_cFPCc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(issueStaff__16dEvent_manager_cFPCc) {
+asm void dEvent_manager_c::issueStaff(char const* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/issueStaff__16dEvent_manager_cFPCc.s"
 }
 #pragma pop
 
 
-/* 80048348-800483C4 007C+00 .text      cancelStaff__16dEvent_manager_cFPCc                          */
+/* 80048348-800483C4 007C+00 rc=1 efc=1 .text      cancelStaff__16dEvent_manager_cFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelStaff__16dEvent_manager_cFPCc) {
+asm void dEvent_manager_c::cancelStaff(char const* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/cancelStaff__16dEvent_manager_cFPCc.s"
 }
 #pragma pop
 
 
-/* 800483C4-800483E0 001C+00 .text      setGoal__16dEvent_manager_cFP4cXyz                           */
+/* 800483C4-800483E0 001C+00 rc=3 efc=2 .text      setGoal__16dEvent_manager_cFP4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGoal__16dEvent_manager_cFP4cXyz) {
+asm void dEvent_manager_c::setGoal(cXyz* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/setGoal__16dEvent_manager_cFP4cXyz.s"
 }
 #pragma pop
 
 
-/* 800483E0-800483E8 0008+00 .text      getGoal__16dEvent_manager_cFv                                */
+/* 800483E0-800483E8 0008+00 rc=1 efc=1 .text      getGoal__16dEvent_manager_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getGoal__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::getGoal() {
 	nofralloc
 #include "asm/d/event/d_event_manager/getGoal__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 800483E8-8004846C 0084+00 .text      getRunEventName__16dEvent_manager_cFv                        */
+/* 800483E8-8004846C 0084+00 rc=5 efc=5 .text      getRunEventName__16dEvent_manager_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRunEventName__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::getRunEventName() {
 	nofralloc
 #include "asm/d/event/d_event_manager/getRunEventName__16dEvent_manager_cFv.s"
 }
@@ -779,17 +1041,17 @@ ASM_FUNCTION(getRunEventName__16dEvent_manager_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451F2C-80451F30 0004+00 .sdata2    @5025                                                        */
+/* 80451F2C-80451F30 0004+00 rc=1 efc=0 .sdata2    @5025                                                        */
 f32 d_event_d_event_manager__lit_5025 = 10.0f;
 
-/* 80451F30-80451F34 0004+00 .sdata2    @5026                                                        */
+/* 80451F30-80451F34 0004+00 rc=1 efc=0 .sdata2    @5026                                                        */
 f32 d_event_d_event_manager__lit_5026 = -10.0f;
 
-/* 8004846C-80048520 00B4+00 .text      findShutterCallBack__FP10fopAc_ac_cPv                        */
+/* 8004846C-80048520 00B4+00 rc=1 efc=0 .text      findShutterCallBack__FP10fopAc_ac_cPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(findShutterCallBack__FP10fopAc_ac_cPv) {
+asm static void findShutterCallBack(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/findShutterCallBack__FP10fopAc_ac_cPv.s"
 }
@@ -797,25 +1059,25 @@ ASM_FUNCTION(findShutterCallBack__FP10fopAc_ac_cPv) {
 
 
 /* ############################################################################################## */
-/* 80451F34-80451F38 0004+00 .sdata2    @5055                                                        */
+/* 80451F34-80451F38 0004+00 rc=1 efc=0 .sdata2    @5055                                                        */
 f32 d_event_d_event_manager__lit_5055 = 100.0f;
 
-/* 80048520-80048618 00F8+00 .text      specialCast_Shutter__16dEvent_manager_cFsi                   */
+/* 80048520-80048618 00F8+00 rc=1 efc=0 .text      specialCast_Shutter__16dEvent_manager_cFsi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialCast_Shutter__16dEvent_manager_cFsi) {
+asm void dEvent_manager_c::specialCast_Shutter(s16 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/specialCast_Shutter__16dEvent_manager_cFsi.s"
 }
 #pragma pop
 
 
-/* 80048618-80048748 0130+00 .text      specialCast__16dEvent_manager_cFPCci                         */
+/* 80048618-80048748 0130+00 rc=1 efc=0 .text      specialCast__16dEvent_manager_cFPCci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialCast__16dEvent_manager_cFPCci) {
+asm void dEvent_manager_c::specialCast(char const* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/specialCast__16dEvent_manager_cFPCci.s"
 }
@@ -823,44 +1085,43 @@ ASM_FUNCTION(specialCast__16dEvent_manager_cFPCci) {
 
 
 /* ############################################################################################## */
-/* 803A82A8-803A82B8 000C+04 .data      action_table$5100                                            */
+/* 803A82A8-803A82B8 000C+04 rc=1 efc=0 .data      action_table$5100                                            */
 u8 data_803A82A8[16] = {
 	0x80, 0x37, 0xA0, 0xEB, 0x80, 0x37, 0xA0, 0xF0, 0x80, 0x37, 0xA0, 0xF6,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80048748-800487F0 00A8+00 .text      dEv_talkman_get_action__Fi                                   */
+/* 80048748-800487F0 00A8+00 rc=1 efc=0 .text      dEv_talkman_get_action__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dEv_talkman_get_action__Fi) {
+asm static void dEv_talkman_get_action(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/dEv_talkman_get_action__Fi.s"
 }
 #pragma pop
 
 
-/* 800487F0-8004882C 003C+00 .text      ChkPresentEnd__16dEvent_manager_cFv                          */
+/* 800487F0-8004882C 003C+00 rc=0 efc=0 .text      ChkPresentEnd__16dEvent_manager_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ChkPresentEnd__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::ChkPresentEnd() {
 	nofralloc
 #include "asm/d/event/d_event_manager/ChkPresentEnd__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* 8004882C-8004886C 0040+00 .text      checkStartDemo__16dEvent_manager_cFv                         */
+/* 8004882C-8004886C 0040+00 rc=2 efc=2 .text      checkStartDemo__16dEvent_manager_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkStartDemo__16dEvent_manager_cFv) {
+asm void dEvent_manager_c::checkStartDemo() {
 	nofralloc
 #include "asm/d/event/d_event_manager/checkStartDemo__16dEvent_manager_cFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

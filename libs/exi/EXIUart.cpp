@@ -9,10 +9,15 @@
 // Forward References:
 // 
 
-extern "C" extern void ProbeBarnacle();
-extern "C" extern void __OSEnableBarnacle();
-extern "C" extern void InitializeUART();
-extern "C" extern void WriteUARTN();
+extern "C" static void ProbeBarnacle();
+extern "C" void __OSEnableBarnacle();
+extern "C" void InitializeUART();
+extern "C" void WriteUARTN();
+
+extern "C" static void ProbeBarnacle();
+extern "C" void __OSEnableBarnacle();
+extern "C" void InitializeUART();
+extern "C" void WriteUARTN();
 SECTION_SBSS extern u8 Chan[4];
 SECTION_SBSS extern u8 Dev[4];
 SECTION_SBSS extern u8 Enabled[4];
@@ -22,26 +27,37 @@ SECTION_SBSS extern u8 BarnacleEnabled[4];
 // External References:
 // 
 
-extern "C" extern void OSGetConsoleType();
-extern "C" extern void EXIImm();
-extern "C" extern void EXISync();
-extern "C" extern void EXIAttach();
-extern "C" extern void EXIDetach();
-extern "C" extern void EXISelect();
-extern "C" extern void EXIDeselect();
-extern "C" extern void EXILock();
-extern "C" extern void EXIUnlock();
-extern "C" extern void EXIGetID();
+extern "C" void OSGetConsoleType();
+extern "C" void EXIImm();
+extern "C" void EXISync();
+extern "C" void EXIAttach();
+extern "C" void EXIDetach();
+extern "C" void EXISelect();
+extern "C" void EXIDeselect();
+extern "C" void EXILock();
+extern "C" void EXIUnlock();
+extern "C" void EXIGetID();
+
+extern "C" void OSGetConsoleType();
+extern "C" void EXIImm();
+extern "C" void EXISync();
+extern "C" void EXIAttach();
+extern "C" void EXIDetach();
+extern "C" void EXISelect();
+extern "C" void EXIDeselect();
+extern "C" void EXILock();
+extern "C" void EXIUnlock();
+extern "C" void EXIGetID();
 
 // 
 // Declarations:
 // 
 
-/* 803445E8-80344774 018C+00 .text      ProbeBarnacle                                                */
+/* 803445E8-80344774 018C+00 rc=1 efc=0 .text      ProbeBarnacle                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ProbeBarnacle) {
+extern "C" asm static void ProbeBarnacle() {
 	nofralloc
 #include "asm/exi/EXIUart/ProbeBarnacle.s"
 }
@@ -49,49 +65,48 @@ ASM_FUNCTION(ProbeBarnacle) {
 
 
 /* ############################################################################################## */
-/* 804516E0-804516E4 0004+00 .sbss      Chan                                                         */
+/* 804516E0-804516E4 0004+00 rc=3 efc=0 .sbss      Chan                                                         */
 u8 Chan[4];
 
-/* 804516E4-804516E8 0004+00 .sbss      Dev                                                          */
+/* 804516E4-804516E8 0004+00 rc=3 efc=0 .sbss      Dev                                                          */
 u8 Dev[4];
 
-/* 804516E8-804516EC 0004+00 .sbss      Enabled                                                      */
+/* 804516E8-804516EC 0004+00 rc=3 efc=0 .sbss      Enabled                                                      */
 u8 Enabled[4];
 
-/* 804516EC-804516F0 0004+00 .sbss      BarnacleEnabled                                              */
+/* 804516EC-804516F0 0004+00 rc=2 efc=0 .sbss      BarnacleEnabled                                              */
 u8 BarnacleEnabled[4];
 
-/* 80344774-80344930 01BC+00 .text      __OSEnableBarnacle                                           */
+/* 80344774-80344930 01BC+00 rc=1 efc=1 .text      __OSEnableBarnacle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSEnableBarnacle) {
+extern "C" asm void __OSEnableBarnacle() {
 	nofralloc
 #include "asm/exi/EXIUart/__OSEnableBarnacle.s"
 }
 #pragma pop
 
 
-/* 80344930-803449A0 0070+00 .text      InitializeUART                                               */
+/* 80344930-803449A0 0070+00 rc=1 efc=1 .text      InitializeUART                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitializeUART) {
+extern "C" asm void InitializeUART() {
 	nofralloc
 #include "asm/exi/EXIUart/InitializeUART.s"
 }
 #pragma pop
 
 
-/* 803449A0-80344BA0 0200+00 .text      WriteUARTN                                                   */
+/* 803449A0-80344BA0 0200+00 rc=1 efc=1 .text      WriteUARTN                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WriteUARTN) {
+extern "C" asm void WriteUARTN() {
 	nofralloc
 #include "asm/exi/EXIUart/WriteUARTN.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

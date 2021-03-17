@@ -6,15 +6,56 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DLightInfo (J3DLightInfo) False/False
+/* top-level dependencies (begin J3DLightInfo) */
+/* top-level dependencies (end J3DLightInfo) */
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
+/* top-level dependencies (begin J3DTexMtxInfo) */
+/* top-level dependencies (end J3DTexMtxInfo) */
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+};
+
+// build J3DIndTexMtxInfo (J3DIndTexMtxInfo) False/False
+/* top-level dependencies (begin J3DIndTexMtxInfo) */
+/* top-level dependencies (end J3DIndTexMtxInfo) */
+struct J3DIndTexMtxInfo {
+	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
+};
+
+// build J3DFogInfo (J3DFogInfo) False/False
+/* top-level dependencies (begin J3DFogInfo) */
+/* top-level dependencies (end J3DFogInfo) */
+struct J3DFogInfo {
+	/* 80325800 */ void operator=(J3DFogInfo const&);
+};
+
+// build J3DNBTScaleInfo (J3DNBTScaleInfo) False/False
+/* top-level dependencies (begin J3DNBTScaleInfo) */
+/* top-level dependencies (end J3DNBTScaleInfo) */
+struct J3DNBTScaleInfo {
+	/* 8032587C */ void operator=(J3DNBTScaleInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" extern void setEffectMtx__13J3DTexMtxInfoFPA4_f();
-extern "C" extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern "C" extern void __as__10J3DFogInfoFRC10J3DFogInfo();
-extern "C" extern void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
+extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
 SECTION_SDATA2 extern f32 lit_409;
 SECTION_SDATA2 extern u8 lit_410[4];
 
@@ -23,26 +64,27 @@ SECTION_SDATA2 extern u8 lit_410[4];
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 803256C4-80325718 0054+00 .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
+/* 803256C4-80325718 0054+00 rc=11 efc=11 .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__12J3DLightInfoFRC12J3DLightInfo) {
+asm void J3DLightInfo::operator=(J3DLightInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__12J3DLightInfoFRC12J3DLightInfo.s"
 }
 #pragma pop
 
 
-/* 80325718-80325794 007C+00 .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo                      */
+/* 80325718-80325794 007C+00 rc=4 efc=4 .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__13J3DTexMtxInfoFRC13J3DTexMtxInfo) {
+asm void J3DTexMtxInfo::operator=(J3DTexMtxInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__13J3DTexMtxInfoFRC13J3DTexMtxInfo.s"
 }
@@ -50,56 +92,55 @@ ASM_FUNCTION(__as__13J3DTexMtxInfoFRC13J3DTexMtxInfo) {
 
 
 /* ############################################################################################## */
-/* 80456410-80456414 0004+00 .sdata2    @409                                                         */
+/* 80456410-80456414 0004+00 rc=1 efc=0 .sdata2    @409                                                         */
 f32 lit_409 = 1.0f;
 
-/* 80456414-80456418 0004+00 .sdata2    @410                                                         */
+/* 80456414-80456418 0004+00 rc=1 efc=0 .sdata2    @410                                                         */
 u8 lit_410[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80325794-803257DC 0048+00 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
+/* 80325794-803257DC 0048+00 rc=2 efc=2 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffectMtx__13J3DTexMtxInfoFPA4_f) {
+extern "C" asm void setEffectMtx__13J3DTexMtxInfoFPA4_f() {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/setEffectMtx__13J3DTexMtxInfoFPA4_f.s"
 }
 #pragma pop
 
 
-/* 803257DC-80325800 0024+00 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo                */
+/* 803257DC-80325800 0024+00 rc=5 efc=5 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo) {
+asm void J3DIndTexMtxInfo::operator=(J3DIndTexMtxInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo.s"
 }
 #pragma pop
 
 
-/* 80325800-8032587C 007C+00 .text      __as__10J3DFogInfoFRC10J3DFogInfo                            */
+/* 80325800-8032587C 007C+00 rc=6 efc=6 .text      __as__10J3DFogInfoFRC10J3DFogInfo                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__10J3DFogInfoFRC10J3DFogInfo) {
+asm void J3DFogInfo::operator=(J3DFogInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__10J3DFogInfoFRC10J3DFogInfo.s"
 }
 #pragma pop
 
 
-/* 8032587C-803258A0 0024+00 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo                  */
+/* 8032587C-803258A0 0024+00 rc=6 efc=6 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo) {
+asm void J3DNBTScaleInfo::operator=(J3DNBTScaleInfo const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/__as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

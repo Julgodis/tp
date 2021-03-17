@@ -6,46 +6,115 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjTEN_c;
+
+struct daObj_TenHIO_c {
+	daObj_TenHIO_c();
+	~daObj_TenHIO_c();
+};
+
+struct daObjTEN_c {
+	void InitCcSph();
+	void SetCcSph();
+	void WaitAction();
+	void WallCheck();
+	void SpeedSet();
+	void WallWalk();
+	void WalkAction();
+	void MoveAction();
+	void Action();
+	void ShopAction();
+	void checkGroundPos();
+	void Insect_Release();
+	void ParticleSet();
+	void BoomChk();
+	void Execute();
+	void ObjHit();
+	void Z_BufferChk();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_TenHIO_cFv();
-extern "C" extern void InitCcSph__10daObjTEN_cFv();
-extern "C" extern void SetCcSph__10daObjTEN_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjTEN_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjTEN_Delete__FP10daObjTEN_c();
-extern "C" extern void WaitAction__10daObjTEN_cFv();
-extern "C" extern void WallCheck__10daObjTEN_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void SpeedSet__10daObjTEN_cFv();
-extern "C" extern void WallWalk__10daObjTEN_cFv();
-extern "C" extern void WalkAction__10daObjTEN_cFv();
-extern "C" extern void MoveAction__10daObjTEN_cFv();
-extern "C" extern void Action__10daObjTEN_cFv();
-extern "C" extern void ShopAction__10daObjTEN_cFv();
-extern "C" extern void checkGroundPos__10daObjTEN_cFv();
-extern "C" extern void Insect_Release__10daObjTEN_cFv();
-extern "C" extern void ParticleSet__10daObjTEN_cFv();
-extern "C" extern void BoomChk__10daObjTEN_cFv();
-extern "C" extern void Execute__10daObjTEN_cFv();
-extern "C" extern void ObjHit__10daObjTEN_cFv();
-extern "C" extern void Z_BufferChk__10daObjTEN_cFv();
-extern "C" extern void Delete__10daObjTEN_cFv();
-extern "C" extern void setBaseMtx__10daObjTEN_cFv();
-extern "C" extern void daObjTEN_Draw__FP10daObjTEN_c();
-extern "C" extern void daObjTEN_Execute__FP10daObjTEN_c();
-extern "C" extern void CreateChk__10daObjTEN_cFv();
-extern "C" extern void create__10daObjTEN_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjTEN_IsDelete__FP10daObjTEN_c();
-extern "C" extern void __dt__14daObj_TenHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_ten_cpp();
-extern "C" extern void func_80D0B8CC();
-extern "C" extern void func_80D0B8D4();
+void useHeapInit(fopAc_ac_c*);
+void daObjTEN_Create(fopAc_ac_c*);
+void daObjTEN_Delete(daObjTEN_c*);
+void daObjTEN_Draw(daObjTEN_c*);
+void daObjTEN_Execute(daObjTEN_c*);
+bool daObjTEN_IsDelete(daObjTEN_c*);
+extern "C" void __sinit_d_a_obj_ten_cpp();
+extern "C" void func_80D0B8CC();
+extern "C" void func_80D0B8D4();
+
+extern "C" void __ct__14daObj_TenHIO_cFv();
+extern "C" void InitCcSph__10daObjTEN_cFv();
+extern "C" void SetCcSph__10daObjTEN_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjTEN_Create__FP10fopAc_ac_c();
+extern "C" void daObjTEN_Delete__FP10daObjTEN_c();
+extern "C" void WaitAction__10daObjTEN_cFv();
+extern "C" void WallCheck__10daObjTEN_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void SpeedSet__10daObjTEN_cFv();
+extern "C" void WallWalk__10daObjTEN_cFv();
+extern "C" void WalkAction__10daObjTEN_cFv();
+extern "C" void MoveAction__10daObjTEN_cFv();
+extern "C" void Action__10daObjTEN_cFv();
+extern "C" void ShopAction__10daObjTEN_cFv();
+extern "C" void checkGroundPos__10daObjTEN_cFv();
+extern "C" void Insect_Release__10daObjTEN_cFv();
+extern "C" void ParticleSet__10daObjTEN_cFv();
+extern "C" void BoomChk__10daObjTEN_cFv();
+extern "C" void Execute__10daObjTEN_cFv();
+extern "C" void ObjHit__10daObjTEN_cFv();
+extern "C" void Z_BufferChk__10daObjTEN_cFv();
+extern "C" void Delete__10daObjTEN_cFv();
+extern "C" void setBaseMtx__10daObjTEN_cFv();
+extern "C" void daObjTEN_Draw__FP10daObjTEN_c();
+extern "C" void daObjTEN_Execute__FP10daObjTEN_c();
+extern "C" void CreateChk__10daObjTEN_cFv();
+extern "C" void create__10daObjTEN_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjTEN_IsDelete__FP10daObjTEN_c();
+extern "C" void __dt__14daObj_TenHIO_cFv();
+extern "C" void __sinit_d_a_obj_ten_cpp();
+extern "C" void func_80D0B8CC();
+extern "C" void func_80D0B8D4();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u16 l_ten_itemno;
 SECTION_RODATA extern const u8 data_80D0B8F8[64];
@@ -105,8 +174,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -116,7 +188,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_TenHIO_cFv) {
+asm daObj_TenHIO_c::daObj_TenHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__ct__14daObj_TenHIO_cFv.s"
 }
@@ -127,7 +199,7 @@ ASM_FUNCTION(__ct__14daObj_TenHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__10daObjTEN_cFv) {
+asm void daObjTEN_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/InitCcSph__10daObjTEN_cFv.s"
 }
@@ -138,7 +210,7 @@ ASM_FUNCTION(InitCcSph__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__10daObjTEN_cFv) {
+asm void daObjTEN_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/SetCcSph__10daObjTEN_cFv.s"
 }
@@ -149,7 +221,7 @@ ASM_FUNCTION(SetCcSph__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -160,7 +232,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__12J3DFrameCtrlFv.s"
 }
@@ -171,7 +243,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTEN_Create__FP10fopAc_ac_c) {
+asm void daObjTEN_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/daObjTEN_Create__FP10fopAc_ac_c.s"
 }
@@ -182,7 +254,7 @@ ASM_FUNCTION(daObjTEN_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTEN_Delete__FP10daObjTEN_c) {
+asm void daObjTEN_Delete(daObjTEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/daObjTEN_Delete__FP10daObjTEN_c.s"
 }
@@ -193,7 +265,7 @@ ASM_FUNCTION(daObjTEN_Delete__FP10daObjTEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__10daObjTEN_cFv) {
+asm void daObjTEN_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/WaitAction__10daObjTEN_cFv.s"
 }
@@ -204,7 +276,7 @@ ASM_FUNCTION(WaitAction__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallCheck__10daObjTEN_cFv) {
+asm void daObjTEN_c::WallCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/WallCheck__10daObjTEN_cFv.s"
 }
@@ -215,7 +287,7 @@ ASM_FUNCTION(WallCheck__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__8cM3dGPlaFv.s"
 }
@@ -226,7 +298,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__10daObjTEN_cFv) {
+asm void daObjTEN_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/SpeedSet__10daObjTEN_cFv.s"
 }
@@ -237,7 +309,7 @@ ASM_FUNCTION(SpeedSet__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallWalk__10daObjTEN_cFv) {
+asm void daObjTEN_c::WallWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/WallWalk__10daObjTEN_cFv.s"
 }
@@ -248,7 +320,7 @@ ASM_FUNCTION(WallWalk__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WalkAction__10daObjTEN_cFv) {
+asm void daObjTEN_c::WalkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/WalkAction__10daObjTEN_cFv.s"
 }
@@ -259,7 +331,7 @@ ASM_FUNCTION(WalkAction__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__10daObjTEN_cFv) {
+asm void daObjTEN_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/MoveAction__10daObjTEN_cFv.s"
 }
@@ -270,7 +342,7 @@ ASM_FUNCTION(MoveAction__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__10daObjTEN_cFv) {
+asm void daObjTEN_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/Action__10daObjTEN_cFv.s"
 }
@@ -281,7 +353,7 @@ ASM_FUNCTION(Action__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopAction__10daObjTEN_cFv) {
+asm void daObjTEN_c::ShopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/ShopAction__10daObjTEN_cFv.s"
 }
@@ -292,7 +364,7 @@ ASM_FUNCTION(ShopAction__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkGroundPos__10daObjTEN_cFv) {
+asm void daObjTEN_c::checkGroundPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/checkGroundPos__10daObjTEN_cFv.s"
 }
@@ -303,7 +375,7 @@ ASM_FUNCTION(checkGroundPos__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__10daObjTEN_cFv) {
+asm void daObjTEN_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/Insect_Release__10daObjTEN_cFv.s"
 }
@@ -314,7 +386,7 @@ ASM_FUNCTION(Insect_Release__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__10daObjTEN_cFv) {
+asm void daObjTEN_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/ParticleSet__10daObjTEN_cFv.s"
 }
@@ -325,7 +397,7 @@ ASM_FUNCTION(ParticleSet__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BoomChk__10daObjTEN_cFv) {
+asm void daObjTEN_c::BoomChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/BoomChk__10daObjTEN_cFv.s"
 }
@@ -336,7 +408,7 @@ ASM_FUNCTION(BoomChk__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjTEN_cFv) {
+asm void daObjTEN_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/Execute__10daObjTEN_cFv.s"
 }
@@ -347,7 +419,7 @@ ASM_FUNCTION(Execute__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__10daObjTEN_cFv) {
+asm void daObjTEN_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/ObjHit__10daObjTEN_cFv.s"
 }
@@ -358,7 +430,7 @@ ASM_FUNCTION(ObjHit__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__10daObjTEN_cFv) {
+asm void daObjTEN_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/Z_BufferChk__10daObjTEN_cFv.s"
 }
@@ -369,7 +441,7 @@ ASM_FUNCTION(Z_BufferChk__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjTEN_cFv) {
+asm void daObjTEN_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/Delete__10daObjTEN_cFv.s"
 }
@@ -380,7 +452,7 @@ ASM_FUNCTION(Delete__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjTEN_cFv) {
+asm void daObjTEN_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/setBaseMtx__10daObjTEN_cFv.s"
 }
@@ -391,7 +463,7 @@ ASM_FUNCTION(setBaseMtx__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTEN_Draw__FP10daObjTEN_c) {
+asm void daObjTEN_Draw(daObjTEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/daObjTEN_Draw__FP10daObjTEN_c.s"
 }
@@ -402,7 +474,7 @@ ASM_FUNCTION(daObjTEN_Draw__FP10daObjTEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTEN_Execute__FP10daObjTEN_c) {
+asm void daObjTEN_Execute(daObjTEN_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/daObjTEN_Execute__FP10daObjTEN_c.s"
 }
@@ -413,7 +485,7 @@ ASM_FUNCTION(daObjTEN_Execute__FP10daObjTEN_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__10daObjTEN_cFv) {
+asm void daObjTEN_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/CreateChk__10daObjTEN_cFv.s"
 }
@@ -424,7 +496,7 @@ ASM_FUNCTION(CreateChk__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjTEN_cFv) {
+asm void daObjTEN_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/create__10daObjTEN_cFv.s"
 }
@@ -435,7 +507,7 @@ ASM_FUNCTION(create__10daObjTEN_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -446,7 +518,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__8cM3dGSphFv.s"
 }
@@ -457,7 +529,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__8cM3dGAabFv.s"
 }
@@ -465,21 +537,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80D0B840-80D0B848 0008+00 .text      daObjTEN_IsDelete__FP10daObjTEN_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjTEN_IsDelete__FP10daObjTEN_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/daObjTEN_IsDelete__FP10daObjTEN_c.s"
+bool daObjTEN_IsDelete(daObjTEN_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D0B848-80D0B890 0048+00 .text      __dt__14daObj_TenHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_TenHIO_cFv) {
+asm daObj_TenHIO_c::~daObj_TenHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__dt__14daObj_TenHIO_cFv.s"
 }
@@ -490,7 +557,7 @@ ASM_FUNCTION(__dt__14daObj_TenHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_ten_cpp) {
+extern "C" asm void __sinit_d_a_obj_ten_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/__sinit_d_a_obj_ten_cpp.s"
 }
@@ -501,7 +568,7 @@ ASM_FUNCTION(__sinit_d_a_obj_ten_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D0B8CC) {
+extern "C" asm void func_80D0B8CC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/func_80D0B8CC.s"
 }
@@ -512,7 +579,7 @@ ASM_FUNCTION(func_80D0B8CC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D0B8D4) {
+extern "C" asm void func_80D0B8D4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ten/d_a_obj_ten/func_80D0B8D4.s"
 }

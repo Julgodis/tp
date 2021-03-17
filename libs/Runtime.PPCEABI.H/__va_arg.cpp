@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void __va_arg();
+extern "C" void __va_arg();
+
+extern "C" void __va_arg();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80361B14-80361BDC 00C8+00 .text      __va_arg                                                     */
+/* 80361B14-80361BDC 00C8+00 rc=3 efc=3 .text      __va_arg                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__va_arg) {
+extern "C" asm void __va_arg() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/__va_arg/__va_arg.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTagRmbitSw_c;
+
+struct daTagRmbitSw_c {
+	daTagRmbitSw_c();
+	~daTagRmbitSw_c();
+	void create();
+	bool Delete();
+	bool draw();
+	void execute();
+	void init();
+	void chkPlyrInTag();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daTagRmbitSw_cFv();
-extern "C" extern void __dt__14daTagRmbitSw_cFv();
-extern "C" extern void create__14daTagRmbitSw_cFv();
-extern "C" extern void Delete__14daTagRmbitSw_cFv();
-extern "C" extern void draw__14daTagRmbitSw_cFv();
-extern "C" extern void execute__14daTagRmbitSw_cFv();
-extern "C" extern void init__14daTagRmbitSw_cFv();
-extern "C" extern void chkPlyrInTag__14daTagRmbitSw_cFv();
-extern "C" extern void daTagRmbitSw_create__FP14daTagRmbitSw_c();
-extern "C" extern void daTagRmbitSw_Delete__FP14daTagRmbitSw_c();
-extern "C" extern void daTagRmbitSw_execute__FP14daTagRmbitSw_c();
-extern "C" extern void daTagRmbitSw_draw__FP14daTagRmbitSw_c();
+void daTagRmbitSw_create(daTagRmbitSw_c*);
+void daTagRmbitSw_Delete(daTagRmbitSw_c*);
+void daTagRmbitSw_execute(daTagRmbitSw_c*);
+void daTagRmbitSw_draw(daTagRmbitSw_c*);
+
+extern "C" void __ct__14daTagRmbitSw_cFv();
+extern "C" void __dt__14daTagRmbitSw_cFv();
+extern "C" void create__14daTagRmbitSw_cFv();
+extern "C" bool Delete__14daTagRmbitSw_cFv();
+extern "C" bool draw__14daTagRmbitSw_cFv();
+extern "C" void execute__14daTagRmbitSw_cFv();
+extern "C" void init__14daTagRmbitSw_cFv();
+extern "C" void chkPlyrInTag__14daTagRmbitSw_cFv();
+extern "C" void daTagRmbitSw_create__FP14daTagRmbitSw_c();
+extern "C" void daTagRmbitSw_Delete__FP14daTagRmbitSw_c();
+extern "C" void daTagRmbitSw_execute__FP14daTagRmbitSw_c();
+extern "C" void daTagRmbitSw_draw__FP14daTagRmbitSw_c();
 SECTION_RODATA extern const u32 lit_3817;
 SECTION_RODATA extern const u32 lit_3818;
 SECTION_RODATA extern const u8 lit_3853[4];
@@ -32,7 +54,9 @@ SECTION_DATA extern void*const __vt__14daTagRmbitSw_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -42,7 +66,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daTagRmbitSw_cFv) {
+asm daTagRmbitSw_c::daTagRmbitSw_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/__ct__14daTagRmbitSw_cFv.s"
 }
@@ -53,7 +77,7 @@ ASM_FUNCTION(__ct__14daTagRmbitSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daTagRmbitSw_cFv) {
+asm daTagRmbitSw_c::~daTagRmbitSw_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/__dt__14daTagRmbitSw_cFv.s"
 }
@@ -64,7 +88,7 @@ ASM_FUNCTION(__dt__14daTagRmbitSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daTagRmbitSw_cFv) {
+asm void daTagRmbitSw_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/create__14daTagRmbitSw_cFv.s"
 }
@@ -72,32 +96,22 @@ ASM_FUNCTION(create__14daTagRmbitSw_cFv) {
 
 
 /* 80D5FBEC-80D5FBF4 0008+00 .text      Delete__14daTagRmbitSw_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daTagRmbitSw_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/Delete__14daTagRmbitSw_cFv.s"
+bool daTagRmbitSw_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5FBF4-80D5FBFC 0008+00 .text      draw__14daTagRmbitSw_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__14daTagRmbitSw_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/draw__14daTagRmbitSw_cFv.s"
+bool daTagRmbitSw_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5FBFC-80D5FDB8 01BC+00 .text      execute__14daTagRmbitSw_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daTagRmbitSw_cFv) {
+asm void daTagRmbitSw_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/execute__14daTagRmbitSw_cFv.s"
 }
@@ -108,7 +122,7 @@ ASM_FUNCTION(execute__14daTagRmbitSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14daTagRmbitSw_cFv) {
+asm void daTagRmbitSw_c::init() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/init__14daTagRmbitSw_cFv.s"
 }
@@ -119,7 +133,7 @@ ASM_FUNCTION(init__14daTagRmbitSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPlyrInTag__14daTagRmbitSw_cFv) {
+asm void daTagRmbitSw_c::chkPlyrInTag() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/chkPlyrInTag__14daTagRmbitSw_cFv.s"
 }
@@ -130,7 +144,7 @@ ASM_FUNCTION(chkPlyrInTag__14daTagRmbitSw_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRmbitSw_create__FP14daTagRmbitSw_c) {
+asm void daTagRmbitSw_create(daTagRmbitSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/daTagRmbitSw_create__FP14daTagRmbitSw_c.s"
 }
@@ -141,7 +155,7 @@ ASM_FUNCTION(daTagRmbitSw_create__FP14daTagRmbitSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRmbitSw_Delete__FP14daTagRmbitSw_c) {
+asm void daTagRmbitSw_Delete(daTagRmbitSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/daTagRmbitSw_Delete__FP14daTagRmbitSw_c.s"
 }
@@ -152,7 +166,7 @@ ASM_FUNCTION(daTagRmbitSw_Delete__FP14daTagRmbitSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRmbitSw_execute__FP14daTagRmbitSw_c) {
+asm void daTagRmbitSw_execute(daTagRmbitSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/daTagRmbitSw_execute__FP14daTagRmbitSw_c.s"
 }
@@ -163,7 +177,7 @@ ASM_FUNCTION(daTagRmbitSw_execute__FP14daTagRmbitSw_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagRmbitSw_draw__FP14daTagRmbitSw_c) {
+asm void daTagRmbitSw_draw(daTagRmbitSw_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/daTagRmbitSw_draw__FP14daTagRmbitSw_c.s"
 }

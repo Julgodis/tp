@@ -6,29 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JMath (JMath) False/False
+/* top-level dependencies (begin JMath) */
+/* top-level dependencies (end JMath) */
+struct JMath {
+	// build TRandom_fast_ (JMath::TRandom_fast_) False/False
+	/* dependencies (begin JMath::TRandom_fast_) */
+	/* dependencies (end JMath::TRandom_fast_) */
+	struct TRandom_fast_ {
+		/* 80339AE4 */ TRandom_fast_(u32);
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__Q25JMath13TRandom_fast_FUl();
+
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80339AE4-80339AEC 0008+00 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
+/* 80339AE4-80339AEC 0008+00 rc=3 efc=3 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__Q25JMath13TRandom_fast_FUl) {
+asm JMath::TRandom_fast_::TRandom_fast_(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JMath/random/__ct__Q25JMath13TRandom_fast_FUl.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

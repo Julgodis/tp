@@ -6,42 +6,98 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daSwhit0_c;
+
+struct daSwhit0_c {
+	void getSwNo();
+	void getSwNo2();
+	void getEvNo();
+	void getTimer();
+	void getType();
+	void makeEventId();
+	void CreateHeap();
+	void CreateInit();
+	void create();
+	void checkHit();
+	void setCombackTimer();
+	void endCombackTimer();
+	void onSwitch();
+	void offSwitch();
+	void DemoProc();
+	void orderEvent();
+	void actionOffWait();
+	void actionToOnReady();
+	void actionToOnOrder();
+	void actionToOnDemo();
+	void actionToOnDemo2();
+	void actionSwWait();
+	void actionOnWait();
+	void setDrawMtx();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getSwNo__10daSwhit0_cFv();
-extern "C" extern void getSwNo2__10daSwhit0_cFv();
-extern "C" extern void getEvNo__10daSwhit0_cFv();
-extern "C" extern void getTimer__10daSwhit0_cFv();
-extern "C" extern void getType__10daSwhit0_cFv();
-extern "C" extern void makeEventId__10daSwhit0_cFv();
-extern "C" extern void CreateHeap__10daSwhit0_cFv();
-extern "C" extern void CreateInit__10daSwhit0_cFv();
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void create__10daSwhit0_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void checkHit__10daSwhit0_cFv();
-extern "C" extern void setCombackTimer__10daSwhit0_cFv();
-extern "C" extern void endCombackTimer__10daSwhit0_cFv();
-extern "C" extern void onSwitch__10daSwhit0_cFv();
-extern "C" extern void offSwitch__10daSwhit0_cFv();
-extern "C" extern void DemoProc__10daSwhit0_cFv();
-extern "C" extern void orderEvent__10daSwhit0_cFv();
-extern "C" extern void actionOffWait__10daSwhit0_cFv();
-extern "C" extern void actionToOnReady__10daSwhit0_cFv();
-extern "C" extern void actionToOnOrder__10daSwhit0_cFv();
-extern "C" extern void actionToOnDemo__10daSwhit0_cFv();
-extern "C" extern void actionToOnDemo2__10daSwhit0_cFv();
-extern "C" extern void actionSwWait__10daSwhit0_cFv();
-extern "C" extern void actionOnWait__10daSwhit0_cFv();
-extern "C" extern void setDrawMtx__10daSwhit0_cFv();
-extern "C" extern void daSwhit0_Draw__FP10daSwhit0_c();
-extern "C" extern void daSwhit0_Execute__FP10daSwhit0_c();
-extern "C" extern void daSwhit0_Delete__FP10daSwhit0_c();
-extern "C" extern void daSwhit0_Create__FP10fopAc_ac_c();
-extern "C" extern void func_8048734C();
+void CheckCreateHeap(fopAc_ac_c*);
+void daSwhit0_Draw(daSwhit0_c*);
+void daSwhit0_Execute(daSwhit0_c*);
+void daSwhit0_Delete(daSwhit0_c*);
+void daSwhit0_Create(fopAc_ac_c*);
+extern "C" void func_8048734C();
+
+extern "C" void getSwNo__10daSwhit0_cFv();
+extern "C" void getSwNo2__10daSwhit0_cFv();
+extern "C" void getEvNo__10daSwhit0_cFv();
+extern "C" void getTimer__10daSwhit0_cFv();
+extern "C" void getType__10daSwhit0_cFv();
+extern "C" void makeEventId__10daSwhit0_cFv();
+extern "C" void CreateHeap__10daSwhit0_cFv();
+extern "C" void CreateInit__10daSwhit0_cFv();
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void create__10daSwhit0_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void checkHit__10daSwhit0_cFv();
+extern "C" void setCombackTimer__10daSwhit0_cFv();
+extern "C" void endCombackTimer__10daSwhit0_cFv();
+extern "C" void onSwitch__10daSwhit0_cFv();
+extern "C" void offSwitch__10daSwhit0_cFv();
+extern "C" void DemoProc__10daSwhit0_cFv();
+extern "C" void orderEvent__10daSwhit0_cFv();
+extern "C" void actionOffWait__10daSwhit0_cFv();
+extern "C" void actionToOnReady__10daSwhit0_cFv();
+extern "C" void actionToOnOrder__10daSwhit0_cFv();
+extern "C" void actionToOnDemo__10daSwhit0_cFv();
+extern "C" void actionToOnDemo2__10daSwhit0_cFv();
+extern "C" void actionSwWait__10daSwhit0_cFv();
+extern "C" void actionOnWait__10daSwhit0_cFv();
+extern "C" void setDrawMtx__10daSwhit0_cFv();
+extern "C" void daSwhit0_Draw__FP10daSwhit0_c();
+extern "C" void daSwhit0_Execute__FP10daSwhit0_c();
+extern "C" void daSwhit0_Delete__FP10daSwhit0_c();
+extern "C" void daSwhit0_Create__FP10fopAc_ac_c();
+extern "C" void func_8048734C();
 SECTION_RODATA extern const u32 lit_3685;
 SECTION_RODATA extern const u32 lit_3725;
 SECTION_RODATA extern const u32 lit_3982;
@@ -62,7 +118,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -72,7 +130,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwNo__10daSwhit0_cFv) {
+asm void daSwhit0_c::getSwNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/getSwNo__10daSwhit0_cFv.s"
 }
@@ -83,7 +141,7 @@ ASM_FUNCTION(getSwNo__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getSwNo2__10daSwhit0_cFv) {
+asm void daSwhit0_c::getSwNo2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/getSwNo2__10daSwhit0_cFv.s"
 }
@@ -94,7 +152,7 @@ ASM_FUNCTION(getSwNo2__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEvNo__10daSwhit0_cFv) {
+asm void daSwhit0_c::getEvNo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/getEvNo__10daSwhit0_cFv.s"
 }
@@ -105,7 +163,7 @@ ASM_FUNCTION(getEvNo__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTimer__10daSwhit0_cFv) {
+asm void daSwhit0_c::getTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/getTimer__10daSwhit0_cFv.s"
 }
@@ -116,7 +174,7 @@ ASM_FUNCTION(getTimer__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__10daSwhit0_cFv) {
+asm void daSwhit0_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/getType__10daSwhit0_cFv.s"
 }
@@ -127,7 +185,7 @@ ASM_FUNCTION(getType__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(makeEventId__10daSwhit0_cFv) {
+asm void daSwhit0_c::makeEventId() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/makeEventId__10daSwhit0_cFv.s"
 }
@@ -138,7 +196,7 @@ ASM_FUNCTION(makeEventId__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daSwhit0_cFv) {
+asm void daSwhit0_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/CreateHeap__10daSwhit0_cFv.s"
 }
@@ -149,7 +207,7 @@ ASM_FUNCTION(CreateHeap__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateInit__10daSwhit0_cFv) {
+asm void daSwhit0_c::CreateInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/CreateInit__10daSwhit0_cFv.s"
 }
@@ -160,7 +218,7 @@ ASM_FUNCTION(CreateInit__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -171,7 +229,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daSwhit0_cFv) {
+asm void daSwhit0_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/create__10daSwhit0_cFv.s"
 }
@@ -182,7 +240,7 @@ ASM_FUNCTION(create__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/__dt__8cM3dGSphFv.s"
 }
@@ -193,7 +251,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/__dt__8cM3dGAabFv.s"
 }
@@ -204,7 +262,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/__dt__12J3DFrameCtrlFv.s"
 }
@@ -215,7 +273,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHit__10daSwhit0_cFv) {
+asm void daSwhit0_c::checkHit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/checkHit__10daSwhit0_cFv.s"
 }
@@ -226,7 +284,7 @@ ASM_FUNCTION(checkHit__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCombackTimer__10daSwhit0_cFv) {
+asm void daSwhit0_c::setCombackTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/setCombackTimer__10daSwhit0_cFv.s"
 }
@@ -237,7 +295,7 @@ ASM_FUNCTION(setCombackTimer__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endCombackTimer__10daSwhit0_cFv) {
+asm void daSwhit0_c::endCombackTimer() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/endCombackTimer__10daSwhit0_cFv.s"
 }
@@ -248,7 +306,7 @@ ASM_FUNCTION(endCombackTimer__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onSwitch__10daSwhit0_cFv) {
+asm void daSwhit0_c::onSwitch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/onSwitch__10daSwhit0_cFv.s"
 }
@@ -259,7 +317,7 @@ ASM_FUNCTION(onSwitch__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offSwitch__10daSwhit0_cFv) {
+asm void daSwhit0_c::offSwitch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/offSwitch__10daSwhit0_cFv.s"
 }
@@ -270,7 +328,7 @@ ASM_FUNCTION(offSwitch__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DemoProc__10daSwhit0_cFv) {
+asm void daSwhit0_c::DemoProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/DemoProc__10daSwhit0_cFv.s"
 }
@@ -281,7 +339,7 @@ ASM_FUNCTION(DemoProc__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(orderEvent__10daSwhit0_cFv) {
+asm void daSwhit0_c::orderEvent() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/orderEvent__10daSwhit0_cFv.s"
 }
@@ -292,7 +350,7 @@ ASM_FUNCTION(orderEvent__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOffWait__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionOffWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionOffWait__10daSwhit0_cFv.s"
 }
@@ -303,7 +361,7 @@ ASM_FUNCTION(actionOffWait__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionToOnReady__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionToOnReady() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionToOnReady__10daSwhit0_cFv.s"
 }
@@ -314,7 +372,7 @@ ASM_FUNCTION(actionToOnReady__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionToOnOrder__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionToOnOrder() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionToOnOrder__10daSwhit0_cFv.s"
 }
@@ -325,7 +383,7 @@ ASM_FUNCTION(actionToOnOrder__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionToOnDemo__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionToOnDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionToOnDemo__10daSwhit0_cFv.s"
 }
@@ -336,7 +394,7 @@ ASM_FUNCTION(actionToOnDemo__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionToOnDemo2__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionToOnDemo2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionToOnDemo2__10daSwhit0_cFv.s"
 }
@@ -347,7 +405,7 @@ ASM_FUNCTION(actionToOnDemo2__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwWait__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionSwWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionSwWait__10daSwhit0_cFv.s"
 }
@@ -358,7 +416,7 @@ ASM_FUNCTION(actionSwWait__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOnWait__10daSwhit0_cFv) {
+asm void daSwhit0_c::actionOnWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/actionOnWait__10daSwhit0_cFv.s"
 }
@@ -369,7 +427,7 @@ ASM_FUNCTION(actionOnWait__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDrawMtx__10daSwhit0_cFv) {
+asm void daSwhit0_c::setDrawMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/setDrawMtx__10daSwhit0_cFv.s"
 }
@@ -380,7 +438,7 @@ ASM_FUNCTION(setDrawMtx__10daSwhit0_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwhit0_Draw__FP10daSwhit0_c) {
+asm void daSwhit0_Draw(daSwhit0_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/daSwhit0_Draw__FP10daSwhit0_c.s"
 }
@@ -391,7 +449,7 @@ ASM_FUNCTION(daSwhit0_Draw__FP10daSwhit0_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwhit0_Execute__FP10daSwhit0_c) {
+asm void daSwhit0_Execute(daSwhit0_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/daSwhit0_Execute__FP10daSwhit0_c.s"
 }
@@ -402,7 +460,7 @@ ASM_FUNCTION(daSwhit0_Execute__FP10daSwhit0_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwhit0_Delete__FP10daSwhit0_c) {
+asm void daSwhit0_Delete(daSwhit0_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/daSwhit0_Delete__FP10daSwhit0_c.s"
 }
@@ -413,7 +471,7 @@ ASM_FUNCTION(daSwhit0_Delete__FP10daSwhit0_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwhit0_Create__FP10fopAc_ac_c) {
+asm void daSwhit0_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/daSwhit0_Create__FP10fopAc_ac_c.s"
 }
@@ -424,7 +482,7 @@ ASM_FUNCTION(daSwhit0_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8048734C) {
+extern "C" asm void func_8048734C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swhit0/d_a_swhit0/func_8048734C.s"
 }

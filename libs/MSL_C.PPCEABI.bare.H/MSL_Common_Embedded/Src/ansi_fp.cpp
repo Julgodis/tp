@@ -9,10 +9,15 @@
 // Forward References:
 // 
 
-extern "C" extern void __num2dec();
-extern "C" extern void __num2dec_internal();
-extern "C" extern void __two_exp();
-extern "C" extern void __timesdec();
+extern "C" void __num2dec();
+extern "C" static void __num2dec_internal();
+extern "C" static void __two_exp();
+extern "C" static void __timesdec();
+
+extern "C" void __num2dec();
+extern "C" static void __num2dec_internal();
+extern "C" static void __two_exp();
+extern "C" static void __timesdec();
 SECTION_RODATA extern const u8 MSL_Common_Embedded_Src_ansi_fp__stringBase0[224];
 SECTION_DATA extern void*lit_1710[74];
 SECTION_SDATA2 extern u8 lit_824[8];
@@ -21,22 +26,29 @@ SECTION_SDATA2 extern u8 lit_824[8];
 // External References:
 // 
 
-extern "C" extern void __div2u();
-extern "C" extern void __mod2u();
-extern "C" extern void __cvt_dbl_usll();
-extern "C" extern void frexp();
-extern "C" extern void ldexp();
-extern "C" extern void modf();
+extern "C" void __div2u();
+extern "C" void __mod2u();
+extern "C" void __cvt_dbl_usll();
+extern "C" void frexp();
+extern "C" void ldexp();
+extern "C" void modf();
+
+extern "C" void __div2u();
+extern "C" void __mod2u();
+extern "C" void __cvt_dbl_usll();
+extern "C" void frexp();
+extern "C" void ldexp();
+extern "C" void modf();
 
 // 
 // Declarations:
 // 
 
-/* 80363124-803632C8 01A4+00 .text      __num2dec                                                    */
+/* 80363124-803632C8 01A4+00 rc=2 efc=2 .text      __num2dec                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__num2dec) {
+extern "C" asm void __num2dec() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp/__num2dec.s"
 }
@@ -44,16 +56,16 @@ ASM_FUNCTION(__num2dec) {
 
 
 /* ############################################################################################## */
-/* 80456660-80456668 0008+00 .sdata2    @824                                                         */
+/* 80456660-80456668 0008+00 rc=1 efc=0 .sdata2    @824                                                         */
 u8 lit_824[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803632C8-8036367C 03B4+00 .text      __num2dec_internal                                           */
+/* 803632C8-8036367C 03B4+00 rc=1 efc=0 .text      __num2dec_internal                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__num2dec_internal) {
+extern "C" asm static void __num2dec_internal() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp/__num2dec_internal.s"
 }
@@ -61,7 +73,7 @@ ASM_FUNCTION(__num2dec_internal) {
 
 
 /* ############################################################################################## */
-/* 803A2238-803A2318 00DD+03 .rodata    @stringBase0                                                 */
+/* 803A2238-803A2318 00DD+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -94,7 +106,7 @@ SECTION_DEAD char* const stringBase_803A2311 = "256";
 SECTION_DEAD char* const pad_803A2315 = "\0\0";
 #pragma pop
 
-/* 803D2AF0-803D2C18 0124+04 .data      @1710                                                        */
+/* 803D2AF0-803D2C18 0124+04 rc=1 efc=0 .data      @1710                                                        */
 void* lit_1710[74] = {
 	(void*)(((char*)__two_exp)+0x40),
 	(void*)(((char*)__two_exp)+0x14DC),
@@ -173,26 +185,25 @@ void* lit_1710[74] = {
 	NULL,
 };
 
-/* 8036367C-80364E00 1784+00 .text      __two_exp                                                    */
+/* 8036367C-80364E00 1784+00 rc=2 efc=0 .text      __two_exp                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__two_exp) {
+extern "C" asm static void __two_exp() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp/__two_exp.s"
 }
 #pragma pop
 
 
-/* 80364E00-80365078 0278+00 .text      __timesdec                                                   */
+/* 80364E00-80365078 0278+00 rc=2 efc=0 .text      __timesdec                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__timesdec) {
+extern "C" asm static void __timesdec() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp/__timesdec.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

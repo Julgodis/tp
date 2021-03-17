@@ -6,17 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagMhint_c;
+
+struct daTagMhint_c {
+	void create();
+	~daTagMhint_c();
+	void eventOrder();
+	void execute();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__12daTagMhint_cFv();
-extern "C" extern void daTagMhint_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagMhint_cFv();
-extern "C" extern void daTagMhint_Delete__FP12daTagMhint_c();
-extern "C" extern void eventOrder__12daTagMhint_cFv();
-extern "C" extern void execute__12daTagMhint_cFv();
-extern "C" extern void daTagMhint_Execute__FP12daTagMhint_c();
-extern "C" extern void daTagMhint_Draw__FP12daTagMhint_c();
+void daTagMhint_Create(fopAc_ac_c*);
+void daTagMhint_Delete(daTagMhint_c*);
+void daTagMhint_Execute(daTagMhint_c*);
+bool daTagMhint_Draw(daTagMhint_c*);
+
+extern "C" void create__12daTagMhint_cFv();
+extern "C" void daTagMhint_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagMhint_cFv();
+extern "C" void daTagMhint_Delete__FP12daTagMhint_c();
+extern "C" void eventOrder__12daTagMhint_cFv();
+extern "C" void execute__12daTagMhint_cFv();
+extern "C" void daTagMhint_Execute__FP12daTagMhint_c();
+extern "C" bool daTagMhint_Draw__FP12daTagMhint_c();
 SECTION_RODATA extern const u32 lit_3741;
 SECTION_RODATA extern const u32 lit_3742;
 SECTION_RODATA extern const u32 lit_3743;
@@ -31,7 +53,9 @@ SECTION_DATA extern u8 g_profile_Tag_Mhint[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -41,7 +65,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagMhint_cFv) {
+asm void daTagMhint_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/create__12daTagMhint_cFv.s"
 }
@@ -52,7 +76,7 @@ ASM_FUNCTION(create__12daTagMhint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMhint_Create__FP10fopAc_ac_c) {
+asm void daTagMhint_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Create__FP10fopAc_ac_c.s"
 }
@@ -63,7 +87,7 @@ ASM_FUNCTION(daTagMhint_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagMhint_cFv) {
+asm daTagMhint_c::~daTagMhint_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/__dt__12daTagMhint_cFv.s"
 }
@@ -74,7 +98,7 @@ ASM_FUNCTION(__dt__12daTagMhint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMhint_Delete__FP12daTagMhint_c) {
+asm void daTagMhint_Delete(daTagMhint_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Delete__FP12daTagMhint_c.s"
 }
@@ -85,7 +109,7 @@ ASM_FUNCTION(daTagMhint_Delete__FP12daTagMhint_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventOrder__12daTagMhint_cFv) {
+asm void daTagMhint_c::eventOrder() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/eventOrder__12daTagMhint_cFv.s"
 }
@@ -96,7 +120,7 @@ ASM_FUNCTION(eventOrder__12daTagMhint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagMhint_cFv) {
+asm void daTagMhint_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/execute__12daTagMhint_cFv.s"
 }
@@ -107,7 +131,7 @@ ASM_FUNCTION(execute__12daTagMhint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagMhint_Execute__FP12daTagMhint_c) {
+asm void daTagMhint_Execute(daTagMhint_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Execute__FP12daTagMhint_c.s"
 }
@@ -115,14 +139,9 @@ ASM_FUNCTION(daTagMhint_Execute__FP12daTagMhint_c) {
 
 
 /* 805A6024-805A602C 0008+00 .text      daTagMhint_Draw__FP12daTagMhint_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daTagMhint_Draw__FP12daTagMhint_c) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Draw__FP12daTagMhint_c.s"
+bool daTagMhint_Draw(daTagMhint_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -6,93 +6,122 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JUTNameTab (JUTNameTab) False/False
+// build ResNTAB (ResNTAB) False/False
+/* top-level dependencies (begin ResNTAB) */
+/* top-level dependencies (end ResNTAB) */
+struct ResNTAB {
+};
+
+/* top-level dependencies (begin JUTNameTab) */
+// outer dependency: ResNTAB
+/* top-level dependencies (end JUTNameTab) */
+struct JUTNameTab {
+	// ResNTAB
+	/* 802DE9A0 */ JUTNameTab();
+	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
+	/* 802DEA1C */ void setResource(ResNTAB const*);
+	/* 802DEA58 */ void getIndex(char const*) const;
+	/* 802DEAF8 */ void getName(u16) const;
+	/* 802DEB28 */ void calcKeyCode(char const*) const;
+};
+
+// build ResNTAB (ResNTAB) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__10JUTNameTabFv();
-extern "C" extern void __ct__10JUTNameTabFPC7ResNTAB();
-extern "C" extern void setResource__10JUTNameTabFPC7ResNTAB();
-extern "C" extern void getIndex__10JUTNameTabCFPCc();
-extern "C" extern void getName__10JUTNameTabCFUs();
-extern "C" extern void calcKeyCode__10JUTNameTabCFPCc();
+
+extern "C" void __ct__10JUTNameTabFv();
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void calcKeyCode__10JUTNameTabCFPCc();
 
 // 
 // External References:
 // 
 
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
-extern "C" extern void strcmp();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void strcmp();
+
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void strcmp();
 SECTION_DATA extern void*const __vt__10JUTNameTab[3];
 
 // 
 // Declarations:
 // 
 
-/* 802DE9A0-802DE9E0 0040+00 .text      __ct__10JUTNameTabFv                                         */
+/* 802DE9A0-802DE9E0 0040+00 rc=5 efc=5 .text      __ct__10JUTNameTabFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JUTNameTabFv) {
+asm JUTNameTab::JUTNameTab() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/__ct__10JUTNameTabFv.s"
 }
 #pragma pop
 
 
-/* 802DE9E0-802DEA1C 003C+00 .text      __ct__10JUTNameTabFPC7ResNTAB                                */
+/* 802DE9E0-802DEA1C 003C+00 rc=12 efc=12 .text      __ct__10JUTNameTabFPC7ResNTAB                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JUTNameTabFPC7ResNTAB) {
+asm JUTNameTab::JUTNameTab(ResNTAB const* field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/__ct__10JUTNameTabFPC7ResNTAB.s"
 }
 #pragma pop
 
 
-/* 802DEA1C-802DEA58 003C+00 .text      setResource__10JUTNameTabFPC7ResNTAB                         */
+/* 802DEA1C-802DEA58 003C+00 rc=12 efc=10 .text      setResource__10JUTNameTabFPC7ResNTAB                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setResource__10JUTNameTabFPC7ResNTAB) {
+asm void JUTNameTab::setResource(ResNTAB const* field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/setResource__10JUTNameTabFPC7ResNTAB.s"
 }
 #pragma pop
 
 
-/* 802DEA58-802DEAF8 00A0+00 .text      getIndex__10JUTNameTabCFPCc                                  */
+/* 802DEA58-802DEAF8 00A0+00 rc=9 efc=9 .text      getIndex__10JUTNameTabCFPCc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIndex__10JUTNameTabCFPCc) {
+asm void JUTNameTab::getIndex(char const* field_0) const {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/getIndex__10JUTNameTabCFPCc.s"
 }
 #pragma pop
 
 
-/* 802DEAF8-802DEB28 0030+00 .text      getName__10JUTNameTabCFUs                                    */
+/* 802DEAF8-802DEB28 0030+00 rc=14 efc=14 .text      getName__10JUTNameTabCFUs                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getName__10JUTNameTabCFUs) {
+asm void JUTNameTab::getName(u16 field_0) const {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/getName__10JUTNameTabCFUs.s"
 }
 #pragma pop
 
 
-/* 802DEB28-802DEB58 0030+00 .text      calcKeyCode__10JUTNameTabCFPCc                               */
+/* 802DEB28-802DEB58 0030+00 rc=1 efc=0 .text      calcKeyCode__10JUTNameTabCFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcKeyCode__10JUTNameTabCFPCc) {
+asm void JUTNameTab::calcKeyCode(char const* field_0) const {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTNameTab/calcKeyCode__10JUTNameTabCFPCc.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

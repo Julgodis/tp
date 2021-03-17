@@ -6,12 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build daShopItem_c (daShopItem_c) False/False
+/* top-level dependencies (begin daShopItem_c) */
+/* top-level dependencies (end daShopItem_c) */
+struct daShopItem_c {
+	/* 80037C14 */ void getRotateP();
+	/* 80037C1C */ void getPosP();
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build daItemBase_c (daItemBase_c) False/False
+/* top-level dependencies (begin daItemBase_c) */
+/* top-level dependencies (end daItemBase_c) */
+struct daItemBase_c {
+	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getRotateP__12daShopItem_cFv();
-extern "C" extern void getPosP__12daShopItem_cFv();
-extern "C" extern void CheckShopItemCreateHeap__FP10fopAc_ac_c();
+void CheckShopItemCreateHeap(fopAc_ac_c*);
+
+extern "C" void getRotateP__12daShopItem_cFv();
+extern "C" void getPosP__12daShopItem_cFv();
+extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c();
 SECTION_RODATA extern const void*const mData__12daShopItem_c[276];
 SECTION_RODATA extern const u8 d_a_d_a_shop_item_static__stringBase0[192];
 
@@ -19,28 +46,29 @@ SECTION_RODATA extern const u8 d_a_d_a_shop_item_static__stringBase0[192];
 // External References:
 // 
 
-extern "C" extern void CreateItemHeap__12daItemBase_cFPCcsssssss();
+
+extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss();
 
 // 
 // Declarations:
 // 
 
-/* 80037C14-80037C1C 0008+00 .text      getRotateP__12daShopItem_cFv                                 */
+/* 80037C14-80037C1C 0008+00 rc=1 efc=1 .text      getRotateP__12daShopItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRotateP__12daShopItem_cFv) {
+asm void daShopItem_c::getRotateP() {
 	nofralloc
 #include "asm/d/a/d_a_shop_item_static/getRotateP__12daShopItem_cFv.s"
 }
 #pragma pop
 
 
-/* 80037C1C-80037C24 0008+00 .text      getPosP__12daShopItem_cFv                                    */
+/* 80037C1C-80037C24 0008+00 rc=2 efc=2 .text      getPosP__12daShopItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPosP__12daShopItem_cFv) {
+asm void daShopItem_c::getPosP() {
 	nofralloc
 #include "asm/d/a/d_a_shop_item_static/getPosP__12daShopItem_cFv.s"
 }
@@ -48,7 +76,7 @@ ASM_FUNCTION(getPosP__12daShopItem_cFv) {
 
 
 /* ############################################################################################## */
-/* 803792E8-80379738 0450+00 .rodata    mData__12daShopItem_c                                        */
+/* 803792E8-80379738 0450+00 rc=1 efc=0 .rodata    mData__12daShopItem_c                                        */
 SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)&d_a_d_a_shop_item_static__stringBase0,
 	(void*)0x0003FFFF,
@@ -328,11 +356,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	NULL,
 };
 
-/* 80037C24-80037C7C 0058+00 .text      CheckShopItemCreateHeap__FP10fopAc_ac_c                      */
+/* 80037C24-80037C7C 0058+00 rc=0 efc=0 .text      CheckShopItemCreateHeap__FP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckShopItemCreateHeap__FP10fopAc_ac_c) {
+asm void CheckShopItemCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/a/d_a_shop_item_static/CheckShopItemCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -340,7 +368,7 @@ ASM_FUNCTION(CheckShopItemCreateHeap__FP10fopAc_ac_c) {
 
 
 /* ############################################################################################## */
-/* 80379738-803797F8 00BF+01 .rodata    @stringBase0                                                 */
+/* 80379738-803797F8 00BF+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"

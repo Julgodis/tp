@@ -6,30 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjTrnd2_c;
+
+struct daObjTrnd2_c {
+	void setPntWind();
+	void cutPntWind();
+	void movePntWind();
+	void setCpsInfo();
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void create();
+	void execute();
+	void setParticle();
+	void endParticle();
+	void startParticle();
+	void stopParticle();
+	bool draw();
+	void _delete();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setPntWind__12daObjTrnd2_cFv();
-extern "C" extern void cutPntWind__12daObjTrnd2_cFv();
-extern "C" extern void movePntWind__12daObjTrnd2_cFv();
-extern "C" extern void setCpsInfo__12daObjTrnd2_cFv();
-extern "C" extern void initBaseMtx__12daObjTrnd2_cFv();
-extern "C" extern void setBaseMtx__12daObjTrnd2_cFv();
-extern "C" extern void Create__12daObjTrnd2_cFv();
-extern "C" extern void create__12daObjTrnd2_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void execute__12daObjTrnd2_cFv();
-extern "C" extern void setParticle__12daObjTrnd2_cFv();
-extern "C" extern void endParticle__12daObjTrnd2_cFv();
-extern "C" extern void startParticle__12daObjTrnd2_cFv();
-extern "C" extern void stopParticle__12daObjTrnd2_cFv();
-extern "C" extern void draw__12daObjTrnd2_cFv();
-extern "C" extern void _delete__12daObjTrnd2_cFv();
-extern "C" extern void daObjTrnd2_Draw__FP12daObjTrnd2_c();
-extern "C" extern void daObjTrnd2_Execute__FP12daObjTrnd2_c();
-extern "C" extern void daObjTrnd2_Delete__FP12daObjTrnd2_c();
-extern "C" extern void daObjTrnd2_Create__FP12daObjTrnd2_c();
-extern "C" extern void func_80D1D3B0();
+void daObjTrnd2_Draw(daObjTrnd2_c*);
+void daObjTrnd2_Execute(daObjTrnd2_c*);
+void daObjTrnd2_Delete(daObjTrnd2_c*);
+void daObjTrnd2_Create(daObjTrnd2_c*);
+extern "C" void func_80D1D3B0();
+
+extern "C" void setPntWind__12daObjTrnd2_cFv();
+extern "C" void cutPntWind__12daObjTrnd2_cFv();
+extern "C" void movePntWind__12daObjTrnd2_cFv();
+extern "C" void setCpsInfo__12daObjTrnd2_cFv();
+extern "C" void initBaseMtx__12daObjTrnd2_cFv();
+extern "C" void setBaseMtx__12daObjTrnd2_cFv();
+extern "C" void Create__12daObjTrnd2_cFv();
+extern "C" void create__12daObjTrnd2_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__12daObjTrnd2_cFv();
+extern "C" void setParticle__12daObjTrnd2_cFv();
+extern "C" void endParticle__12daObjTrnd2_cFv();
+extern "C" void startParticle__12daObjTrnd2_cFv();
+extern "C" void stopParticle__12daObjTrnd2_cFv();
+extern "C" bool draw__12daObjTrnd2_cFv();
+extern "C" void _delete__12daObjTrnd2_cFv();
+extern "C" void daObjTrnd2_Draw__FP12daObjTrnd2_c();
+extern "C" void daObjTrnd2_Execute__FP12daObjTrnd2_c();
+extern "C" void daObjTrnd2_Delete__FP12daObjTrnd2_c();
+extern "C" void daObjTrnd2_Create__FP12daObjTrnd2_c();
+extern "C" void func_80D1D3B0();
 SECTION_RODATA extern const u8 l_R02_eff_id[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 l_R04_eff_id[6 + 2 /* padding */];
 SECTION_RODATA extern const u8 l_R05_eff_id[6 + 2 /* padding */];
@@ -62,7 +96,9 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -72,7 +108,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPntWind__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::setPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/setPntWind__12daObjTrnd2_cFv.s"
 }
@@ -83,7 +119,7 @@ ASM_FUNCTION(setPntWind__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutPntWind__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::cutPntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/cutPntWind__12daObjTrnd2_cFv.s"
 }
@@ -94,7 +130,7 @@ ASM_FUNCTION(cutPntWind__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(movePntWind__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::movePntWind() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/movePntWind__12daObjTrnd2_cFv.s"
 }
@@ -105,7 +141,7 @@ ASM_FUNCTION(movePntWind__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCpsInfo__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::setCpsInfo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/setCpsInfo__12daObjTrnd2_cFv.s"
 }
@@ -116,7 +152,7 @@ ASM_FUNCTION(setCpsInfo__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/initBaseMtx__12daObjTrnd2_cFv.s"
 }
@@ -127,7 +163,7 @@ ASM_FUNCTION(initBaseMtx__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/setBaseMtx__12daObjTrnd2_cFv.s"
 }
@@ -138,7 +174,7 @@ ASM_FUNCTION(setBaseMtx__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/Create__12daObjTrnd2_cFv.s"
 }
@@ -149,7 +185,7 @@ ASM_FUNCTION(Create__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/func_80D1CC80.s"
 }
@@ -160,7 +196,7 @@ ASM_FUNCTION(create__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/__dt__8cM3dGAabFv.s"
 }
@@ -171,7 +207,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/execute__12daObjTrnd2_cFv.s"
 }
@@ -182,7 +218,7 @@ ASM_FUNCTION(execute__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParticle__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::setParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/setParticle__12daObjTrnd2_cFv.s"
 }
@@ -193,7 +229,7 @@ ASM_FUNCTION(setParticle__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endParticle__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::endParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/endParticle__12daObjTrnd2_cFv.s"
 }
@@ -204,7 +240,7 @@ ASM_FUNCTION(endParticle__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startParticle__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::startParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/startParticle__12daObjTrnd2_cFv.s"
 }
@@ -215,7 +251,7 @@ ASM_FUNCTION(startParticle__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(stopParticle__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::stopParticle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/stopParticle__12daObjTrnd2_cFv.s"
 }
@@ -223,21 +259,16 @@ ASM_FUNCTION(stopParticle__12daObjTrnd2_cFv) {
 
 
 /* 80D1D2E0-80D1D2E8 0008+00 .text      draw__12daObjTrnd2_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12daObjTrnd2_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/draw__12daObjTrnd2_cFv.s"
+bool daObjTrnd2_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1D2E8-80D1D330 0048+00 .text      _delete__12daObjTrnd2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__12daObjTrnd2_cFv) {
+asm void daObjTrnd2_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/_delete__12daObjTrnd2_cFv.s"
 }
@@ -248,7 +279,7 @@ ASM_FUNCTION(_delete__12daObjTrnd2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd2_Draw__FP12daObjTrnd2_c) {
+asm void daObjTrnd2_Draw(daObjTrnd2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Draw__FP12daObjTrnd2_c.s"
 }
@@ -259,7 +290,7 @@ ASM_FUNCTION(daObjTrnd2_Draw__FP12daObjTrnd2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd2_Execute__FP12daObjTrnd2_c) {
+asm void daObjTrnd2_Execute(daObjTrnd2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Execute__FP12daObjTrnd2_c.s"
 }
@@ -270,7 +301,7 @@ ASM_FUNCTION(daObjTrnd2_Execute__FP12daObjTrnd2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd2_Delete__FP12daObjTrnd2_c) {
+asm void daObjTrnd2_Delete(daObjTrnd2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Delete__FP12daObjTrnd2_c.s"
 }
@@ -281,7 +312,7 @@ ASM_FUNCTION(daObjTrnd2_Delete__FP12daObjTrnd2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjTrnd2_Create__FP12daObjTrnd2_c) {
+asm void daObjTrnd2_Create(daObjTrnd2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Create__FP12daObjTrnd2_c.s"
 }
@@ -292,7 +323,7 @@ ASM_FUNCTION(daObjTrnd2_Create__FP12daObjTrnd2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D1D3B0) {
+extern "C" asm void func_80D1D3B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/func_80D1D3B0.s"
 }

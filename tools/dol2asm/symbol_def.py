@@ -120,7 +120,7 @@ def export_file(context: Context, module: Module, symbol_table: GlobalSymbolTabl
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
                     refs = symbol.internal_references(context, symbol_table)
-                    if isinstance(symbol, Function):
+                    if isinstance(symbol, ASMFunction):
                         refs = refs - symbol.sda_hack_references
                     for ref in refs:
                         if ref == symbol:

@@ -6,23 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjLv4Gear_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjLv4Gear_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" extern void searchSwSpinSub__FPvPv();
-extern "C" extern void initBaseMtx__14daObjLv4Gear_cFv();
-extern "C" extern void setBaseMtx__14daObjLv4Gear_cFv();
-extern "C" extern void Create__14daObjLv4Gear_cFv();
-extern "C" extern void CreateHeap__14daObjLv4Gear_cFv();
-extern "C" extern void create__14daObjLv4Gear_cFv();
-extern "C" extern void execute__14daObjLv4Gear_cFv();
-extern "C" extern void draw__14daObjLv4Gear_cFv();
-extern "C" extern void _delete__14daObjLv4Gear_cFv();
-extern "C" extern void daObjLv4Gear_Draw__FP14daObjLv4Gear_c();
-extern "C" extern void daObjLv4Gear_Execute__FP14daObjLv4Gear_c();
-extern "C" extern void daObjLv4Gear_Delete__FP14daObjLv4Gear_c();
-extern "C" extern void daObjLv4Gear_Create__FP14daObjLv4Gear_c();
+void CheckCreateHeap(fopAc_ac_c*);
+void searchSwSpinSub(void*, void*);
+void daObjLv4Gear_Draw(daObjLv4Gear_c*);
+void daObjLv4Gear_Execute(daObjLv4Gear_c*);
+void daObjLv4Gear_Delete(daObjLv4Gear_c*);
+void daObjLv4Gear_Create(daObjLv4Gear_c*);
+
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void searchSwSpinSub__FPvPv();
+extern "C" void initBaseMtx__14daObjLv4Gear_cFv();
+extern "C" void setBaseMtx__14daObjLv4Gear_cFv();
+extern "C" void Create__14daObjLv4Gear_cFv();
+extern "C" void CreateHeap__14daObjLv4Gear_cFv();
+extern "C" void create__14daObjLv4Gear_cFv();
+extern "C" void execute__14daObjLv4Gear_cFv();
+extern "C" void draw__14daObjLv4Gear_cFv();
+extern "C" void _delete__14daObjLv4Gear_cFv();
+extern "C" void daObjLv4Gear_Draw__FP14daObjLv4Gear_c();
+extern "C" void daObjLv4Gear_Execute__FP14daObjLv4Gear_c();
+extern "C" void daObjLv4Gear_Delete__FP14daObjLv4Gear_c();
+extern "C" void daObjLv4Gear_Create__FP14daObjLv4Gear_c();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_size[8];
 SECTION_RODATA extern const u32 l_rot_start_time;
@@ -38,7 +66,9 @@ SECTION_DATA extern u8 g_profile_Obj_Lv4Gear[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +78,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
+asm void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
@@ -59,7 +89,7 @@ ASM_FUNCTION(CheckCreateHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchSwSpinSub__FPvPv) {
+asm void searchSwSpinSub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/searchSwSpinSub__FPvPv.s"
 }
@@ -70,7 +100,7 @@ ASM_FUNCTION(searchSwSpinSub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/initBaseMtx__14daObjLv4Gear_cFv.s"
 }
@@ -81,7 +111,7 @@ ASM_FUNCTION(initBaseMtx__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/setBaseMtx__14daObjLv4Gear_cFv.s"
 }
@@ -92,7 +122,7 @@ ASM_FUNCTION(setBaseMtx__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/Create__14daObjLv4Gear_cFv.s"
 }
@@ -103,7 +133,7 @@ ASM_FUNCTION(Create__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/CreateHeap__14daObjLv4Gear_cFv.s"
 }
@@ -114,7 +144,7 @@ ASM_FUNCTION(CreateHeap__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/func_80C68124.s"
 }
@@ -125,7 +155,7 @@ ASM_FUNCTION(create__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/execute__14daObjLv4Gear_cFv.s"
 }
@@ -136,7 +166,7 @@ ASM_FUNCTION(execute__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/draw__14daObjLv4Gear_cFv.s"
 }
@@ -147,7 +177,7 @@ ASM_FUNCTION(draw__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__14daObjLv4Gear_cFv) {
+asm void daObjLv4Gear_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/_delete__14daObjLv4Gear_cFv.s"
 }
@@ -158,7 +188,7 @@ ASM_FUNCTION(_delete__14daObjLv4Gear_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Gear_Draw__FP14daObjLv4Gear_c) {
+asm void daObjLv4Gear_Draw(daObjLv4Gear_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Draw__FP14daObjLv4Gear_c.s"
 }
@@ -169,7 +199,7 @@ ASM_FUNCTION(daObjLv4Gear_Draw__FP14daObjLv4Gear_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Gear_Execute__FP14daObjLv4Gear_c) {
+asm void daObjLv4Gear_Execute(daObjLv4Gear_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Execute__FP14daObjLv4Gear_c.s"
 }
@@ -180,7 +210,7 @@ ASM_FUNCTION(daObjLv4Gear_Execute__FP14daObjLv4Gear_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Gear_Delete__FP14daObjLv4Gear_c) {
+asm void daObjLv4Gear_Delete(daObjLv4Gear_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Delete__FP14daObjLv4Gear_c.s"
 }
@@ -191,7 +221,7 @@ ASM_FUNCTION(daObjLv4Gear_Delete__FP14daObjLv4Gear_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLv4Gear_Create__FP14daObjLv4Gear_c) {
+asm void daObjLv4Gear_Create(daObjLv4Gear_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Create__FP14daObjLv4Gear_c.s"
 }

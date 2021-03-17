@@ -6,23 +6,53 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjBurnBox_c;
+
+struct daObjBurnBox_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__14daObjBurnBox_cFv();
-extern "C" extern void setBaseMtx__14daObjBurnBox_cFv();
-extern "C" extern void Create__14daObjBurnBox_cFv();
-extern "C" extern void CreateHeap__14daObjBurnBox_cFv();
-extern "C" extern void create1st__14daObjBurnBox_cFv();
-extern "C" extern void Execute__14daObjBurnBox_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjBurnBox_cFv();
-extern "C" extern void Delete__14daObjBurnBox_cFv();
-extern "C" extern void daObjBurnBox_create1st__FP14daObjBurnBox_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjBurnBox_MoveBGDelete__FP14daObjBurnBox_c();
-extern "C" extern void daObjBurnBox_MoveBGExecute__FP14daObjBurnBox_c();
-extern "C" extern void daObjBurnBox_MoveBGDraw__FP14daObjBurnBox_c();
+extern "C" void Execute__14daObjBurnBox_cFPPA3_A4_f();
+void daObjBurnBox_create1st(daObjBurnBox_c*);
+void daObjBurnBox_MoveBGDelete(daObjBurnBox_c*);
+void daObjBurnBox_MoveBGExecute(daObjBurnBox_c*);
+void daObjBurnBox_MoveBGDraw(daObjBurnBox_c*);
+
+extern "C" void initBaseMtx__14daObjBurnBox_cFv();
+extern "C" void setBaseMtx__14daObjBurnBox_cFv();
+extern "C" void Create__14daObjBurnBox_cFv();
+extern "C" void CreateHeap__14daObjBurnBox_cFv();
+extern "C" void create1st__14daObjBurnBox_cFv();
+extern "C" void Execute__14daObjBurnBox_cFPPA3_A4_f();
+extern "C" void Draw__14daObjBurnBox_cFv();
+extern "C" void Delete__14daObjBurnBox_cFv();
+extern "C" void daObjBurnBox_create1st__FP14daObjBurnBox_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daObjBurnBox_MoveBGDelete__FP14daObjBurnBox_c();
+extern "C" void daObjBurnBox_MoveBGExecute__FP14daObjBurnBox_c();
+extern "C" void daObjBurnBox_MoveBGDraw__FP14daObjBurnBox_c();
 SECTION_RODATA extern const u8 l_bmd[12];
 SECTION_RODATA extern const u8 l_heap_size[12];
 SECTION_RODATA extern const u8 l_cyl_src[68];
@@ -43,7 +73,9 @@ SECTION_DATA extern void*const __vt__14daObjBurnBox_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -53,7 +85,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/initBaseMtx__14daObjBurnBox_cFv.s"
 }
@@ -64,7 +96,7 @@ ASM_FUNCTION(initBaseMtx__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/setBaseMtx__14daObjBurnBox_cFv.s"
 }
@@ -75,7 +107,7 @@ ASM_FUNCTION(setBaseMtx__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/Create__14daObjBurnBox_cFv.s"
 }
@@ -86,7 +118,7 @@ ASM_FUNCTION(Create__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/CreateHeap__14daObjBurnBox_cFv.s"
 }
@@ -97,7 +129,7 @@ ASM_FUNCTION(CreateHeap__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/create1st__14daObjBurnBox_cFv.s"
 }
@@ -108,7 +140,7 @@ ASM_FUNCTION(create1st__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjBurnBox_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjBurnBox_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/Execute__14daObjBurnBox_cFPPA3_A4_f.s"
 }
@@ -119,7 +151,7 @@ ASM_FUNCTION(Execute__14daObjBurnBox_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/Draw__14daObjBurnBox_cFv.s"
 }
@@ -130,7 +162,7 @@ ASM_FUNCTION(Draw__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjBurnBox_cFv) {
+asm void daObjBurnBox_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/Delete__14daObjBurnBox_cFv.s"
 }
@@ -141,7 +173,7 @@ ASM_FUNCTION(Delete__14daObjBurnBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBurnBox_create1st__FP14daObjBurnBox_c) {
+asm void daObjBurnBox_create1st(daObjBurnBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/daObjBurnBox_create1st__FP14daObjBurnBox_c.s"
 }
@@ -152,7 +184,7 @@ ASM_FUNCTION(daObjBurnBox_create1st__FP14daObjBurnBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/__dt__8cM3dGCylFv.s"
 }
@@ -163,7 +195,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/__dt__8cM3dGAabFv.s"
 }
@@ -174,7 +206,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBurnBox_MoveBGDelete__FP14daObjBurnBox_c) {
+asm void daObjBurnBox_MoveBGDelete(daObjBurnBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/daObjBurnBox_MoveBGDelete__FP14daObjBurnBox_c.s"
 }
@@ -185,7 +217,7 @@ ASM_FUNCTION(daObjBurnBox_MoveBGDelete__FP14daObjBurnBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBurnBox_MoveBGExecute__FP14daObjBurnBox_c) {
+asm void daObjBurnBox_MoveBGExecute(daObjBurnBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/daObjBurnBox_MoveBGExecute__FP14daObjBurnBox_c.s"
 }
@@ -196,7 +228,7 @@ ASM_FUNCTION(daObjBurnBox_MoveBGExecute__FP14daObjBurnBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBurnBox_MoveBGDraw__FP14daObjBurnBox_c) {
+asm void daObjBurnBox_MoveBGDraw(daObjBurnBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_burnbox/d_a_obj_burnbox/daObjBurnBox_MoveBGDraw__FP14daObjBurnBox_c.s"
 }

@@ -6,112 +6,304 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daNpc_Yelia_c {
+	~daNpc_Yelia_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void getType();
+	void isDelete();
+	void reset();
+	void afterJntAnm(s32);
+	void setParam();
+	void checkChangeEvt();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void beforeMove();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void selectAction();
+	void cutConversationAboutLoopHole(s32);
+	void cutTWResistance(s32);
+	void cutTakeWoodStatue(s32);
+	void cutClothTry(s32);
+	void cutThankYou(s32);
+	void wait(void*);
+	void horseWait(void*);
+	void reminiscence(void*);
+	void talk(void*);
+	bool getEyeballMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+	bool chkXYItems();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+	bool getEyeballLMaterialNo();
+	bool getEyeballRMaterialNo();
+	bool evtEndProc();
+	void afterMoved();
+	void decTmr();
+	void drawOtherMdl();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	bool afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+	daNpcT_ActorMngr_c();
+};
+
+struct daNpcT_Path_c {
+	~daNpcT_Path_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpc_Yelia_Param_c {
+	~daNpc_Yelia_Param_c();
+};
+
+struct daDitem_c {
+	void setOffsetPos(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daNpc_Yelia_cFv();
-extern "C" extern void create__13daNpc_Yelia_cFv();
-extern "C" extern void CreateHeap__13daNpc_Yelia_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__13daNpc_Yelia_cFv();
-extern "C" extern void Execute__13daNpc_Yelia_cFv();
-extern "C" extern void Draw__13daNpc_Yelia_cFv();
-extern "C" extern void createHeapCallBack__13daNpc_Yelia_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpc_Yelia_cFP8J3DJointi();
-extern "C" extern void getType__13daNpc_Yelia_cFv();
-extern "C" extern void isDelete__13daNpc_Yelia_cFv();
-extern "C" extern void reset__13daNpc_Yelia_cFv();
-extern "C" extern void afterJntAnm__13daNpc_Yelia_cFi();
-extern "C" extern void setParam__13daNpc_Yelia_cFv();
-extern "C" extern void checkChangeEvt__13daNpc_Yelia_cFv();
-extern "C" extern void setAfterTalkMotion__13daNpc_Yelia_cFv();
-extern "C" extern void srchActors__13daNpc_Yelia_cFv();
-extern "C" extern void evtTalk__13daNpc_Yelia_cFv();
-extern "C" extern void evtCutProc__13daNpc_Yelia_cFv();
-extern "C" extern void action__13daNpc_Yelia_cFv();
-extern "C" extern void beforeMove__13daNpc_Yelia_cFv();
-extern "C" extern void setAttnPos__13daNpc_Yelia_cFv();
-extern "C" extern void setCollision__13daNpc_Yelia_cFv();
-extern "C" extern void drawDbgInfo__13daNpc_Yelia_cFv();
-extern "C" extern void selectAction__13daNpc_Yelia_cFv();
-extern "C" extern void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
-extern "C" extern void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
-extern "C" extern void cutConversationAboutLoopHole__13daNpc_Yelia_cFi();
-extern "C" extern void cutTWResistance__13daNpc_Yelia_cFi();
-extern "C" extern void cutTakeWoodStatue__13daNpc_Yelia_cFi();
-extern "C" extern void cutClothTry__13daNpc_Yelia_cFi();
-extern "C" extern void cutThankYou__13daNpc_Yelia_cFi();
-extern "C" extern void wait__13daNpc_Yelia_cFPv();
-extern "C" extern void horseWait__13daNpc_Yelia_cFPv();
-extern "C" extern void reminiscence__13daNpc_Yelia_cFPv();
-extern "C" extern void talk__13daNpc_Yelia_cFPv();
-extern "C" extern void daNpc_Yelia_Create__FPv();
-extern "C" extern void daNpc_Yelia_Delete__FPv();
-extern "C" extern void daNpc_Yelia_Execute__FPv();
-extern "C" extern void daNpc_Yelia_Draw__FPv();
-extern "C" extern void daNpc_Yelia_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__13daNpcT_Path_cFv();
-extern "C" extern void __ct__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getFootLJointNo__8daNpcT_cFv();
-extern "C" extern void getFootRJointNo__8daNpcT_cFv();
-extern "C" extern void getEyeballLMaterialNo__8daNpcT_cFv();
-extern "C" extern void getEyeballRMaterialNo__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void afterMoved__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawOtherMdl__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void afterSetMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void changeAnm__8daNpcT_cFPiPi();
-extern "C" extern void changeBck__8daNpcT_cFPiPi();
-extern "C" extern void changeBtp__8daNpcT_cFPiPi();
-extern "C" extern void changeBtk__8daNpcT_cFPiPi();
-extern "C" extern void func_80B52004();
-extern "C" extern void __sinit_d_a_npc_yelia_cpp();
-extern "C" extern void __ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void getEyeballMaterialNo__13daNpc_Yelia_cFv();
-extern "C" extern void getHeadJointNo__13daNpc_Yelia_cFv();
-extern "C" extern void getNeckJointNo__13daNpc_Yelia_cFv();
-extern "C" extern void getBackboneJointNo__13daNpc_Yelia_cFv();
-extern "C" extern void checkChangeJoint__13daNpc_Yelia_cFi();
-extern "C" extern void checkRemoveJoint__13daNpc_Yelia_cFi();
-extern "C" extern void chkXYItems__13daNpc_Yelia_cFv();
-extern "C" extern void __dt__19daNpc_Yelia_Param_cFv();
-extern "C" extern void func_80B52274();
-extern "C" extern void func_80B5227C();
-extern "C" extern void setOffsetPos__9daDitem_cF4cXyz();
+extern "C" void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
+void daNpc_Yelia_Create(void*);
+void daNpc_Yelia_Delete(void*);
+void daNpc_Yelia_Execute(void*);
+void daNpc_Yelia_Draw(void*);
+bool daNpc_Yelia_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void func_80B52004();
+extern "C" void __sinit_d_a_npc_yelia_cpp();
+extern "C" void __ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_80B52274();
+extern "C" void func_80B5227C();
+
+extern "C" void __dt__13daNpc_Yelia_cFv();
+extern "C" void create__13daNpc_Yelia_cFv();
+extern "C" void CreateHeap__13daNpc_Yelia_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_Yelia_cFv();
+extern "C" void Execute__13daNpc_Yelia_cFv();
+extern "C" void Draw__13daNpc_Yelia_cFv();
+extern "C" void createHeapCallBack__13daNpc_Yelia_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_Yelia_cFP8J3DJointi();
+extern "C" void getType__13daNpc_Yelia_cFv();
+extern "C" void isDelete__13daNpc_Yelia_cFv();
+extern "C" void reset__13daNpc_Yelia_cFv();
+extern "C" void afterJntAnm__13daNpc_Yelia_cFi();
+extern "C" void setParam__13daNpc_Yelia_cFv();
+extern "C" void checkChangeEvt__13daNpc_Yelia_cFv();
+extern "C" void setAfterTalkMotion__13daNpc_Yelia_cFv();
+extern "C" void srchActors__13daNpc_Yelia_cFv();
+extern "C" void evtTalk__13daNpc_Yelia_cFv();
+extern "C" void evtCutProc__13daNpc_Yelia_cFv();
+extern "C" void action__13daNpc_Yelia_cFv();
+extern "C" void beforeMove__13daNpc_Yelia_cFv();
+extern "C" void setAttnPos__13daNpc_Yelia_cFv();
+extern "C" void setCollision__13daNpc_Yelia_cFv();
+extern "C" bool drawDbgInfo__13daNpc_Yelia_cFv();
+extern "C" void selectAction__13daNpc_Yelia_cFv();
+extern "C" void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i();
+extern "C" void cutConversationAboutLoopHole__13daNpc_Yelia_cFi();
+extern "C" void cutTWResistance__13daNpc_Yelia_cFi();
+extern "C" void cutTakeWoodStatue__13daNpc_Yelia_cFi();
+extern "C" void cutClothTry__13daNpc_Yelia_cFi();
+extern "C" void cutThankYou__13daNpc_Yelia_cFi();
+extern "C" void wait__13daNpc_Yelia_cFPv();
+extern "C" void horseWait__13daNpc_Yelia_cFPv();
+extern "C" void reminiscence__13daNpc_Yelia_cFPv();
+extern "C" void talk__13daNpc_Yelia_cFPv();
+extern "C" void daNpc_Yelia_Create__FPv();
+extern "C" void daNpc_Yelia_Delete__FPv();
+extern "C" void daNpc_Yelia_Execute__FPv();
+extern "C" void daNpc_Yelia_Draw__FPv();
+extern "C" bool daNpc_Yelia_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__13daNpcT_Path_cFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawOtherMdl__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void func_80B52004();
+extern "C" void __sinit_d_a_npc_yelia_cpp();
+extern "C" void __ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" bool getEyeballMaterialNo__13daNpc_Yelia_cFv();
+extern "C" s32 getHeadJointNo__13daNpc_Yelia_cFv();
+extern "C" s32 getNeckJointNo__13daNpc_Yelia_cFv();
+extern "C" bool getBackboneJointNo__13daNpc_Yelia_cFv();
+extern "C" void checkChangeJoint__13daNpc_Yelia_cFi();
+extern "C" void checkRemoveJoint__13daNpc_Yelia_cFi();
+extern "C" bool chkXYItems__13daNpc_Yelia_cFv();
+extern "C" void __dt__19daNpc_Yelia_Param_cFv();
+extern "C" void func_80B52274();
+extern "C" void func_80B5227C();
+extern "C" void setOffsetPos__9daDitem_cF4cXyz();
 SECTION_RODATA extern const u8 m__19daNpc_Yelia_Param_c[140];
 SECTION_RODATA extern const u8 data_80B52340[40];
 SECTION_RODATA extern const u32 lit_4164;
@@ -205,8 +397,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -216,7 +411,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_Yelia_cFv) {
+asm daNpc_Yelia_c::~daNpc_Yelia_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__13daNpc_Yelia_cFv.s"
 }
@@ -227,7 +422,7 @@ ASM_FUNCTION(__dt__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/create__13daNpc_Yelia_cFv.s"
 }
@@ -238,7 +433,7 @@ ASM_FUNCTION(create__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/CreateHeap__13daNpc_Yelia_cFv.s"
 }
@@ -249,7 +444,7 @@ ASM_FUNCTION(CreateHeap__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -260,7 +455,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -271,7 +466,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__14J3DTevColorAnmFv.s"
 }
@@ -282,7 +477,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__14J3DTevColorAnmFv.s"
 }
@@ -293,7 +488,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__11J3DTexNoAnmFv.s"
 }
@@ -304,7 +499,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__11J3DTexNoAnmFv.s"
 }
@@ -315,7 +510,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -326,7 +521,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -337,7 +532,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__14J3DMatColorAnmFv.s"
 }
@@ -348,7 +543,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__14J3DMatColorAnmFv.s"
 }
@@ -359,7 +554,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/Delete__13daNpc_Yelia_cFv.s"
 }
@@ -370,7 +565,7 @@ ASM_FUNCTION(Delete__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/Execute__13daNpc_Yelia_cFv.s"
 }
@@ -381,7 +576,7 @@ ASM_FUNCTION(Execute__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/Draw__13daNpc_Yelia_cFv.s"
 }
@@ -392,7 +587,7 @@ ASM_FUNCTION(Draw__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpc_Yelia_cFP10fopAc_ac_c) {
+asm void daNpc_Yelia_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/createHeapCallBack__13daNpc_Yelia_cFP10fopAc_ac_c.s"
 }
@@ -403,7 +598,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpc_Yelia_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpc_Yelia_cFP8J3DJointi) {
+asm void daNpc_Yelia_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/ctrlJointCallBack__13daNpc_Yelia_cFP8J3DJointi.s"
 }
@@ -414,7 +609,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpc_Yelia_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getType__13daNpc_Yelia_cFv.s"
 }
@@ -425,7 +620,7 @@ ASM_FUNCTION(getType__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/isDelete__13daNpc_Yelia_cFv.s"
 }
@@ -436,7 +631,7 @@ ASM_FUNCTION(isDelete__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/reset__13daNpc_Yelia_cFv.s"
 }
@@ -447,7 +642,7 @@ ASM_FUNCTION(reset__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::afterJntAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/afterJntAnm__13daNpc_Yelia_cFi.s"
 }
@@ -458,7 +653,7 @@ ASM_FUNCTION(afterJntAnm__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setParam__13daNpc_Yelia_cFv.s"
 }
@@ -469,7 +664,7 @@ ASM_FUNCTION(setParam__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::checkChangeEvt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/checkChangeEvt__13daNpc_Yelia_cFv.s"
 }
@@ -480,7 +675,7 @@ ASM_FUNCTION(checkChangeEvt__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setAfterTalkMotion__13daNpc_Yelia_cFv.s"
 }
@@ -491,7 +686,7 @@ ASM_FUNCTION(setAfterTalkMotion__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActors__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::srchActors() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/srchActors__13daNpc_Yelia_cFv.s"
 }
@@ -502,7 +697,7 @@ ASM_FUNCTION(srchActors__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/evtTalk__13daNpc_Yelia_cFv.s"
 }
@@ -513,7 +708,7 @@ ASM_FUNCTION(evtTalk__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/evtCutProc__13daNpc_Yelia_cFv.s"
 }
@@ -524,7 +719,7 @@ ASM_FUNCTION(evtCutProc__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/action__13daNpc_Yelia_cFv.s"
 }
@@ -535,7 +730,7 @@ ASM_FUNCTION(action__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/beforeMove__13daNpc_Yelia_cFv.s"
 }
@@ -546,7 +741,7 @@ ASM_FUNCTION(beforeMove__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setAttnPos__13daNpc_Yelia_cFv.s"
 }
@@ -557,7 +752,7 @@ ASM_FUNCTION(setAttnPos__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setCollision__13daNpc_Yelia_cFv.s"
 }
@@ -565,21 +760,16 @@ ASM_FUNCTION(setCollision__13daNpc_Yelia_cFv) {
 
 
 /* 80B4EFA4-80B4EFAC 0008+00 .text      drawDbgInfo__13daNpc_Yelia_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/drawDbgInfo__13daNpc_Yelia_cFv.s"
+bool daNpc_Yelia_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B4EFAC-80B4F054 00A8+00 .text      selectAction__13daNpc_Yelia_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__13daNpc_Yelia_cFv) {
+asm void daNpc_Yelia_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/selectAction__13daNpc_Yelia_cFv.s"
 }
@@ -590,7 +780,7 @@ ASM_FUNCTION(selectAction__13daNpc_Yelia_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i) {
+extern "C" asm void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i.s"
 }
@@ -601,7 +791,7 @@ ASM_FUNCTION(chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i) {
+extern "C" asm void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i.s"
 }
@@ -612,7 +802,7 @@ ASM_FUNCTION(setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutLoopHole__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::cutConversationAboutLoopHole(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/cutConversationAboutLoopHole__13daNpc_Yelia_cFi.s"
 }
@@ -623,7 +813,7 @@ ASM_FUNCTION(cutConversationAboutLoopHole__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutTWResistance__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::cutTWResistance(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/cutTWResistance__13daNpc_Yelia_cFi.s"
 }
@@ -634,7 +824,7 @@ ASM_FUNCTION(cutTWResistance__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutTakeWoodStatue__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::cutTakeWoodStatue(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/cutTakeWoodStatue__13daNpc_Yelia_cFi.s"
 }
@@ -645,7 +835,7 @@ ASM_FUNCTION(cutTakeWoodStatue__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutClothTry__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::cutClothTry(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/cutClothTry__13daNpc_Yelia_cFi.s"
 }
@@ -656,7 +846,7 @@ ASM_FUNCTION(cutClothTry__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutThankYou__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::cutThankYou(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/cutThankYou__13daNpc_Yelia_cFi.s"
 }
@@ -667,7 +857,7 @@ ASM_FUNCTION(cutThankYou__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_Yelia_cFPv) {
+asm void daNpc_Yelia_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/wait__13daNpc_Yelia_cFPv.s"
 }
@@ -678,7 +868,7 @@ ASM_FUNCTION(wait__13daNpc_Yelia_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(horseWait__13daNpc_Yelia_cFPv) {
+asm void daNpc_Yelia_c::horseWait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/horseWait__13daNpc_Yelia_cFPv.s"
 }
@@ -689,7 +879,7 @@ ASM_FUNCTION(horseWait__13daNpc_Yelia_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reminiscence__13daNpc_Yelia_cFPv) {
+asm void daNpc_Yelia_c::reminiscence(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/reminiscence__13daNpc_Yelia_cFPv.s"
 }
@@ -700,7 +890,7 @@ ASM_FUNCTION(reminiscence__13daNpc_Yelia_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_Yelia_cFPv) {
+asm void daNpc_Yelia_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/talk__13daNpc_Yelia_cFPv.s"
 }
@@ -711,7 +901,7 @@ ASM_FUNCTION(talk__13daNpc_Yelia_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Yelia_Create__FPv) {
+asm void daNpc_Yelia_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/daNpc_Yelia_Create__FPv.s"
 }
@@ -722,7 +912,7 @@ ASM_FUNCTION(daNpc_Yelia_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Yelia_Delete__FPv) {
+asm void daNpc_Yelia_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/daNpc_Yelia_Delete__FPv.s"
 }
@@ -733,7 +923,7 @@ ASM_FUNCTION(daNpc_Yelia_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Yelia_Execute__FPv) {
+asm void daNpc_Yelia_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/daNpc_Yelia_Execute__FPv.s"
 }
@@ -744,7 +934,7 @@ ASM_FUNCTION(daNpc_Yelia_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Yelia_Draw__FPv) {
+asm void daNpc_Yelia_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/daNpc_Yelia_Draw__FPv.s"
 }
@@ -752,21 +942,16 @@ ASM_FUNCTION(daNpc_Yelia_Draw__FPv) {
 
 
 /* 80B50F60-80B50F68 0008+00 .text      daNpc_Yelia_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Yelia_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/daNpc_Yelia_IsDelete__FPv.s"
+bool daNpc_Yelia_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B50F68-80B50F98 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -777,7 +962,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__10cCcD_GSttsFv.s"
 }
@@ -788,7 +973,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__8daNpcT_cFv.s"
 }
@@ -799,7 +984,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__4cXyzFv.s"
 }
@@ -810,7 +995,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__5csXyzFv.s"
 }
@@ -821,7 +1006,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -832,7 +1017,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
+asm daNpcT_Path_c::~daNpcT_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__13daNpcT_Path_cFv.s"
 }
@@ -843,7 +1028,7 @@ ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__18daNpcT_ActorMngr_cFv.s"
 }
@@ -854,7 +1039,7 @@ ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__8cM3dGCylFv.s"
 }
@@ -865,7 +1050,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__8cM3dGAabFv.s"
 }
@@ -876,7 +1061,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/func_80B5153C.s"
 }
@@ -884,21 +1069,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 80B51940-80B51944 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51944-80B51A40 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -906,21 +1086,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 80B51A40-80B51A44 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51A44-80B51A8C 0048+00 .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -931,7 +1106,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__12dBgS_AcchCirFv.s"
 }
@@ -942,7 +1117,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__10dCcD_GSttsFv.s"
 }
@@ -953,7 +1128,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -964,7 +1139,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__12J3DFrameCtrlFv.s"
 }
@@ -975,7 +1150,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -986,7 +1161,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -994,87 +1169,52 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 80B51F34-80B51F38 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51F38-80B51F40 0008+00 .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80B51F40-80B51F48 0008+00 .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80B51F48-80B51F50 0008+00 .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B51F50-80B51F58 0008+00 .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B51F58-80B51F60 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B51F60-80B51F64 0004+00 .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51F64-80B51F7C 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/decTmr__8daNpcT_cFv.s"
 }
@@ -1082,54 +1222,34 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 80B51F7C-80B51F80 0004+00 .text      drawOtherMdl__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/drawOtherMdl__8daNpcT_cFv.s"
+void daNpcT_c::drawOtherMdl() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51F80-80B51F84 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51F84-80B51F8C 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B51F8C-80B51F94 0008+00 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B51F94-80B51FC4 0030+00 .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -1140,7 +1260,7 @@ ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1148,54 +1268,34 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 
 
 /* 80B51FF4-80B51FF8 0004+00 .text      changeAnm__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/changeAnm__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeAnm(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51FF8-80B51FFC 0004+00 .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBck__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B51FFC-80B52000 0004+00 .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B52000-80B52004 0004+00 .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B52004-80B52020 001C+00 .text      cLib_calcTimer<i>__FPi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B52004) {
+extern "C" asm void func_80B52004() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/func_80B52004.s"
 }
@@ -1206,7 +1306,7 @@ ASM_FUNCTION(func_80B52004) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_yelia_cpp) {
+extern "C" asm void __sinit_d_a_npc_yelia_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__sinit_d_a_npc_yelia_cpp.s"
 }
@@ -1217,7 +1317,7 @@ ASM_FUNCTION(__sinit_d_a_npc_yelia_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/func_80B52104.s"
 }
@@ -1225,54 +1325,34 @@ ASM_FUNCTION(__ct__13daNpc_Yelia_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_moti
 
 
 /* 80B521E4-80B521EC 0008+00 .text      getEyeballMaterialNo__13daNpc_Yelia_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getEyeballMaterialNo__13daNpc_Yelia_cFv.s"
+bool daNpc_Yelia_c::getEyeballMaterialNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B521EC-80B521F4 0008+00 .text      getHeadJointNo__13daNpc_Yelia_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getHeadJointNo__13daNpc_Yelia_cFv.s"
+s32 daNpc_Yelia_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80B521F4-80B521FC 0008+00 .text      getNeckJointNo__13daNpc_Yelia_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getNeckJointNo__13daNpc_Yelia_cFv.s"
+s32 daNpc_Yelia_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 80B521FC-80B52204 0008+00 .text      getBackboneJointNo__13daNpc_Yelia_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/getBackboneJointNo__13daNpc_Yelia_cFv.s"
+bool daNpc_Yelia_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B52204-80B52214 0010+00 .text      checkChangeJoint__13daNpc_Yelia_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/checkChangeJoint__13daNpc_Yelia_cFi.s"
 }
@@ -1283,7 +1363,7 @@ ASM_FUNCTION(checkChangeJoint__13daNpc_Yelia_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__13daNpc_Yelia_cFi) {
+asm void daNpc_Yelia_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/checkRemoveJoint__13daNpc_Yelia_cFi.s"
 }
@@ -1291,21 +1371,16 @@ ASM_FUNCTION(checkRemoveJoint__13daNpc_Yelia_cFi) {
 
 
 /* 80B52224-80B5222C 0008+00 .text      chkXYItems__13daNpc_Yelia_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__13daNpc_Yelia_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/chkXYItems__13daNpc_Yelia_cFv.s"
+bool daNpc_Yelia_c::chkXYItems() {
+	return true;
 }
-#pragma pop
 
 
 /* 80B5222C-80B52274 0048+00 .text      __dt__19daNpc_Yelia_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_Yelia_Param_cFv) {
+asm daNpc_Yelia_Param_c::~daNpc_Yelia_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/__dt__19daNpc_Yelia_Param_cFv.s"
 }
@@ -1316,7 +1391,7 @@ ASM_FUNCTION(__dt__19daNpc_Yelia_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B52274) {
+extern "C" asm void func_80B52274() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/func_80B52274.s"
 }
@@ -1327,7 +1402,7 @@ ASM_FUNCTION(func_80B52274) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80B5227C) {
+extern "C" asm void func_80B5227C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/func_80B5227C.s"
 }
@@ -1338,7 +1413,7 @@ ASM_FUNCTION(func_80B5227C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setOffsetPos__9daDitem_cF4cXyz) {
+asm void daDitem_c::setOffsetPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setOffsetPos__9daDitem_cF4cXyz.s"
 }

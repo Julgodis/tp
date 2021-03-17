@@ -6,127 +6,341 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct J3DJoint;
+struct daNpcT_faceMotionAnmData_c;
+struct daNpcT_motionAnmData_c;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daNpc_Hanjo_c {
+	~daNpc_Hanjo_c();
+	void create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void getType();
+	void isDelete();
+	void reset();
+	void afterJntAnm(s32);
+	void setParam();
+	void checkChangeEvt();
+	void setAfterTalkMotion();
+	void srchActors();
+	void evtTalk();
+	void evtCutProc();
+	void action();
+	void beforeMove();
+	void afterMoved();
+	void setAttnPos();
+	void setCollision();
+	bool drawDbgInfo();
+	void drawOtherMdl();
+	void selectAction();
+	void initShoot(s32);
+	void shoot(s32);
+	void initDive();
+	void dive();
+	void commandToHawk();
+	void cutConversationAboutSaru(s32);
+	void cutConversation(s32);
+	void cutPursuitBee(s32);
+	void cutAppearHawker(s32);
+	void cutDive(s32);
+	void wait(void*);
+	void throwStone(void*);
+	void takayose(void*);
+	void talk(void*);
+	s32 getEyeballMaterialNo();
+	s32 getHeadJointNo();
+	s32 getNeckJointNo();
+	bool getBackboneJointNo();
+	void checkChangeJoint(s32);
+	void checkRemoveJoint(s32);
+	s32 getFootLJointNo();
+	s32 getFootRJointNo();
+};
+
+struct J3DTevKColorAnm {
+	~J3DTevKColorAnm();
+	J3DTevKColorAnm();
+};
+
+struct J3DTevColorAnm {
+	~J3DTevColorAnm();
+	J3DTevColorAnm();
+};
+
+struct J3DTexNoAnm {
+	~J3DTexNoAnm();
+	J3DTexNoAnm();
+	void calc(u16*) const;
+};
+
+struct J3DTexMtxAnm {
+	~J3DTexMtxAnm();
+	J3DTexMtxAnm();
+};
+
+struct J3DMatColorAnm {
+	~J3DMatColorAnm();
+	J3DMatColorAnm();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DJoint {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcT_c {
+	~daNpcT_c();
+	void ctrlSubFaceMotion(s32);
+	bool getEyeballLMaterialNo();
+	bool getEyeballRMaterialNo();
+	bool evtEndProc();
+	bool chkXYItems();
+	void decTmr();
+	void drawGhost();
+	bool afterSetFaceMotionAnm(s32, s32, f32, s32);
+	bool afterSetMotionAnm(s32, s32, f32, s32);
+	void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
+	void getMotionAnm(daNpcT_motionAnmData_c);
+	void changeAnm(s32*, s32*);
+	void changeBck(s32*, s32*);
+	void changeBtp(s32*, s32*);
+	void changeBtk(s32*, s32*);
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct daNpcT_ActorMngr_c {
+	~daNpcT_ActorMngr_c();
+	daNpcT_ActorMngr_c();
+};
+
+struct daNpcT_Path_c {
+	~daNpcT_Path_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct daNpcT_JntAnm_c {
+	~daNpcT_JntAnm_c();
+};
+
+struct daNpcT_MotionSeqMngr_c {
+	~daNpcT_MotionSeqMngr_c();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpc_HanjoStone_c {
+	~daNpc_HanjoStone_c();
+	daNpc_HanjoStone_c();
+	void getPos();
+	void getOld();
+	void posMoveF(fopAc_ac_c*);
+	void setPos(cXyz);
+	void setAngle(csXyz);
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct daNpc_Hanjo_Param_c {
+	~daNpc_Hanjo_Param_c();
+};
+
+struct daTag_EvtArea_c {
+	void chkPointInArea(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__13daNpc_Hanjo_cFv();
-extern "C" extern void create__13daNpc_Hanjo_cFv();
-extern "C" extern void CreateHeap__13daNpc_Hanjo_cFv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void Delete__13daNpc_Hanjo_cFv();
-extern "C" extern void Execute__13daNpc_Hanjo_cFv();
-extern "C" extern void Draw__13daNpc_Hanjo_cFv();
-extern "C" extern void createHeapCallBack__13daNpc_Hanjo_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__13daNpc_Hanjo_cFP8J3DJointi();
-extern "C" extern void getType__13daNpc_Hanjo_cFv();
-extern "C" extern void isDelete__13daNpc_Hanjo_cFv();
-extern "C" extern void reset__13daNpc_Hanjo_cFv();
-extern "C" extern void afterJntAnm__13daNpc_Hanjo_cFi();
-extern "C" extern void setParam__13daNpc_Hanjo_cFv();
-extern "C" extern void checkChangeEvt__13daNpc_Hanjo_cFv();
-extern "C" extern void setAfterTalkMotion__13daNpc_Hanjo_cFv();
-extern "C" extern void srchActors__13daNpc_Hanjo_cFv();
-extern "C" extern void evtTalk__13daNpc_Hanjo_cFv();
-extern "C" extern void evtCutProc__13daNpc_Hanjo_cFv();
-extern "C" extern void action__13daNpc_Hanjo_cFv();
-extern "C" extern void beforeMove__13daNpc_Hanjo_cFv();
-extern "C" extern void afterMoved__13daNpc_Hanjo_cFv();
-extern "C" extern void setAttnPos__13daNpc_Hanjo_cFv();
-extern "C" extern void setCollision__13daNpc_Hanjo_cFv();
-extern "C" extern void drawDbgInfo__13daNpc_Hanjo_cFv();
-extern "C" extern void drawOtherMdl__13daNpc_Hanjo_cFv();
-extern "C" extern void selectAction__13daNpc_Hanjo_cFv();
-extern "C" extern void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
-extern "C" extern void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
-extern "C" extern void initShoot__13daNpc_Hanjo_cFi();
-extern "C" extern void shoot__13daNpc_Hanjo_cFi();
-extern "C" extern void initDive__13daNpc_Hanjo_cFv();
-extern "C" extern void dive__13daNpc_Hanjo_cFv();
-extern "C" extern void lookround__13daNpc_Hanjo_cFs();
-extern "C" extern void commandToHawk__13daNpc_Hanjo_cFv();
-extern "C" extern void cutConversationAboutSaru__13daNpc_Hanjo_cFi();
-extern "C" extern void cutConversation__13daNpc_Hanjo_cFi();
-extern "C" extern void cutPursuitBee__13daNpc_Hanjo_cFi();
-extern "C" extern void cutAppearHawker__13daNpc_Hanjo_cFi();
-extern "C" extern void cutDive__13daNpc_Hanjo_cFi();
-extern "C" extern void wait__13daNpc_Hanjo_cFPv();
-extern "C" extern void throwStone__13daNpc_Hanjo_cFPv();
-extern "C" extern void takayose__13daNpc_Hanjo_cFPv();
-extern "C" extern void talk__13daNpc_Hanjo_cFPv();
-extern "C" extern void daNpc_Hanjo_Create__FPv();
-extern "C" extern void daNpc_Hanjo_Delete__FPv();
-extern "C" extern void daNpc_Hanjo_Execute__FPv();
-extern "C" extern void daNpc_Hanjo_Draw__FPv();
-extern "C" extern void daNpc_Hanjo_IsDelete__FPv();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__8daNpcT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __dt__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__13daNpcT_Path_cFv();
-extern "C" extern void __ct__18daNpcT_ActorMngr_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__15daNpcT_JntAnm_cFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__22daNpcT_MotionSeqMngr_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
-extern "C" extern void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
-extern "C" extern void ctrlSubFaceMotion__8daNpcT_cFi();
-extern "C" extern void getEyeballLMaterialNo__8daNpcT_cFv();
-extern "C" extern void getEyeballRMaterialNo__8daNpcT_cFv();
-extern "C" extern void evtEndProc__8daNpcT_cFv();
-extern "C" extern void chkXYItems__8daNpcT_cFv();
-extern "C" extern void decTmr__8daNpcT_cFv();
-extern "C" extern void drawGhost__8daNpcT_cFv();
-extern "C" extern void afterSetFaceMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void afterSetMotionAnm__8daNpcT_cFiifi();
-extern "C" extern void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
-extern "C" extern void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
-extern "C" extern void changeAnm__8daNpcT_cFPiPi();
-extern "C" extern void changeBck__8daNpcT_cFPiPi();
-extern "C" extern void changeBtp__8daNpcT_cFPiPi();
-extern "C" extern void changeBtk__8daNpcT_cFPiPi();
-extern "C" extern void func_809FFE6C();
-extern "C" extern void func_809FFE88();
-extern "C" extern void __sinit_d_a_npc_hanjo_cpp();
-extern "C" extern void __dt__18daNpc_HanjoStone_cFv();
-extern "C" extern void __ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
-extern "C" extern void __ct__18daNpc_HanjoStone_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void getEyeballMaterialNo__13daNpc_Hanjo_cFv();
-extern "C" extern void getPos__18daNpc_HanjoStone_cFv();
-extern "C" extern void getOld__18daNpc_HanjoStone_cFv();
-extern "C" extern void posMoveF__18daNpc_HanjoStone_cFP10fopAc_ac_c();
-extern "C" extern void setPos__18daNpc_HanjoStone_cF4cXyz();
-extern "C" extern void getHeadJointNo__13daNpc_Hanjo_cFv();
-extern "C" extern void getNeckJointNo__13daNpc_Hanjo_cFv();
-extern "C" extern void getBackboneJointNo__13daNpc_Hanjo_cFv();
-extern "C" extern void setAngle__18daNpc_HanjoStone_cF5csXyz();
-extern "C" extern void checkChangeJoint__13daNpc_Hanjo_cFi();
-extern "C" extern void checkRemoveJoint__13daNpc_Hanjo_cFi();
-extern "C" extern void getFootLJointNo__13daNpc_Hanjo_cFv();
-extern "C" extern void getFootRJointNo__13daNpc_Hanjo_cFv();
-extern "C" extern void __dt__19daNpc_Hanjo_Param_cFv();
-extern "C" extern void func_80A0057C();
-extern "C" extern void func_80A00584();
-extern "C" extern void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
+extern "C" void lookround__13daNpc_Hanjo_cFs();
+void daNpc_Hanjo_Create(void*);
+void daNpc_Hanjo_Delete(void*);
+void daNpc_Hanjo_Execute(void*);
+void daNpc_Hanjo_Draw(void*);
+bool daNpc_Hanjo_IsDelete(void*);
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void func_809FFE6C();
+extern "C" void func_809FFE88();
+extern "C" void __sinit_d_a_npc_hanjo_cpp();
+extern "C" void __ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void func_80A0057C();
+extern "C" void func_80A00584();
+
+extern "C" void __dt__13daNpc_Hanjo_cFv();
+extern "C" void create__13daNpc_Hanjo_cFv();
+extern "C" void CreateHeap__13daNpc_Hanjo_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_Hanjo_cFv();
+extern "C" void Execute__13daNpc_Hanjo_cFv();
+extern "C" void Draw__13daNpc_Hanjo_cFv();
+extern "C" void createHeapCallBack__13daNpc_Hanjo_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_Hanjo_cFP8J3DJointi();
+extern "C" void getType__13daNpc_Hanjo_cFv();
+extern "C" void isDelete__13daNpc_Hanjo_cFv();
+extern "C" void reset__13daNpc_Hanjo_cFv();
+extern "C" void afterJntAnm__13daNpc_Hanjo_cFi();
+extern "C" void setParam__13daNpc_Hanjo_cFv();
+extern "C" void checkChangeEvt__13daNpc_Hanjo_cFv();
+extern "C" void setAfterTalkMotion__13daNpc_Hanjo_cFv();
+extern "C" void srchActors__13daNpc_Hanjo_cFv();
+extern "C" void evtTalk__13daNpc_Hanjo_cFv();
+extern "C" void evtCutProc__13daNpc_Hanjo_cFv();
+extern "C" void action__13daNpc_Hanjo_cFv();
+extern "C" void beforeMove__13daNpc_Hanjo_cFv();
+extern "C" void afterMoved__13daNpc_Hanjo_cFv();
+extern "C" void setAttnPos__13daNpc_Hanjo_cFv();
+extern "C" void setCollision__13daNpc_Hanjo_cFv();
+extern "C" bool drawDbgInfo__13daNpc_Hanjo_cFv();
+extern "C" void drawOtherMdl__13daNpc_Hanjo_cFv();
+extern "C" void selectAction__13daNpc_Hanjo_cFv();
+extern "C" void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i();
+extern "C" void initShoot__13daNpc_Hanjo_cFi();
+extern "C" void shoot__13daNpc_Hanjo_cFi();
+extern "C" void initDive__13daNpc_Hanjo_cFv();
+extern "C" void dive__13daNpc_Hanjo_cFv();
+extern "C" void lookround__13daNpc_Hanjo_cFs();
+extern "C" void commandToHawk__13daNpc_Hanjo_cFv();
+extern "C" void cutConversationAboutSaru__13daNpc_Hanjo_cFi();
+extern "C" void cutConversation__13daNpc_Hanjo_cFi();
+extern "C" void cutPursuitBee__13daNpc_Hanjo_cFi();
+extern "C" void cutAppearHawker__13daNpc_Hanjo_cFi();
+extern "C" void cutDive__13daNpc_Hanjo_cFi();
+extern "C" void wait__13daNpc_Hanjo_cFPv();
+extern "C" void throwStone__13daNpc_Hanjo_cFPv();
+extern "C" void takayose__13daNpc_Hanjo_cFPv();
+extern "C" void talk__13daNpc_Hanjo_cFPv();
+extern "C" void daNpc_Hanjo_Create__FPv();
+extern "C" void daNpc_Hanjo_Delete__FPv();
+extern "C" void daNpc_Hanjo_Execute__FPv();
+extern "C" void daNpc_Hanjo_Draw__FPv();
+extern "C" bool daNpc_Hanjo_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__13daNpcT_Path_cFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs();
+extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void func_809FFE6C();
+extern "C" void func_809FFE88();
+extern "C" void __sinit_d_a_npc_hanjo_cpp();
+extern "C" void __dt__18daNpc_HanjoStone_cFv();
+extern "C" void __ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__18daNpc_HanjoStone_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" s32 getEyeballMaterialNo__13daNpc_Hanjo_cFv();
+extern "C" void getPos__18daNpc_HanjoStone_cFv();
+extern "C" void getOld__18daNpc_HanjoStone_cFv();
+extern "C" void posMoveF__18daNpc_HanjoStone_cFP10fopAc_ac_c();
+extern "C" void setPos__18daNpc_HanjoStone_cF4cXyz();
+extern "C" s32 getHeadJointNo__13daNpc_Hanjo_cFv();
+extern "C" s32 getNeckJointNo__13daNpc_Hanjo_cFv();
+extern "C" bool getBackboneJointNo__13daNpc_Hanjo_cFv();
+extern "C" void setAngle__18daNpc_HanjoStone_cF5csXyz();
+extern "C" void checkChangeJoint__13daNpc_Hanjo_cFi();
+extern "C" void checkRemoveJoint__13daNpc_Hanjo_cFi();
+extern "C" s32 getFootLJointNo__13daNpc_Hanjo_cFv();
+extern "C" s32 getFootRJointNo__13daNpc_Hanjo_cFv();
+extern "C" void __dt__19daNpc_Hanjo_Param_cFv();
+extern "C" void func_80A0057C();
+extern "C" void func_80A00584();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
 SECTION_RODATA extern const u8 m__19daNpc_Hanjo_Param_c[180];
 SECTION_RODATA extern const u8 mStoneCcDObjInfo__13daNpc_Hanjo_c[48];
 SECTION_RODATA extern const u8 data_80A006E4[20];
@@ -286,8 +500,11 @@ SECTION_BSS extern u8 data_80A01354[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -297,7 +514,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpc_Hanjo_cFv) {
+asm daNpc_Hanjo_c::~daNpc_Hanjo_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__13daNpc_Hanjo_cFv.s"
 }
@@ -308,7 +525,7 @@ ASM_FUNCTION(__dt__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/create__13daNpc_Hanjo_cFv.s"
 }
@@ -319,7 +536,7 @@ ASM_FUNCTION(create__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/CreateHeap__13daNpc_Hanjo_cFv.s"
 }
@@ -330,7 +547,7 @@ ASM_FUNCTION(CreateHeap__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__15J3DTevKColorAnmFv.s"
 }
@@ -341,7 +558,7 @@ ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__15J3DTevKColorAnmFv.s"
 }
@@ -352,7 +569,7 @@ ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__14J3DTevColorAnmFv.s"
 }
@@ -363,7 +580,7 @@ ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__14J3DTevColorAnmFv.s"
 }
@@ -374,7 +591,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__11J3DTexNoAnmFv.s"
 }
@@ -385,7 +602,7 @@ ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__11J3DTexNoAnmFv.s"
 }
@@ -396,7 +613,7 @@ ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__12J3DTexMtxAnmFv.s"
 }
@@ -407,7 +624,7 @@ ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__12J3DTexMtxAnmFv.s"
 }
@@ -418,7 +635,7 @@ ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__14J3DMatColorAnmFv.s"
 }
@@ -429,7 +646,7 @@ ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__14J3DMatColorAnmFv.s"
 }
@@ -440,7 +657,7 @@ ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/Delete__13daNpc_Hanjo_cFv.s"
 }
@@ -451,7 +668,7 @@ ASM_FUNCTION(Delete__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/Execute__13daNpc_Hanjo_cFv.s"
 }
@@ -462,7 +679,7 @@ ASM_FUNCTION(Execute__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/Draw__13daNpc_Hanjo_cFv.s"
 }
@@ -473,7 +690,7 @@ ASM_FUNCTION(Draw__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__13daNpc_Hanjo_cFP10fopAc_ac_c) {
+asm void daNpc_Hanjo_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/createHeapCallBack__13daNpc_Hanjo_cFP10fopAc_ac_c.s"
 }
@@ -484,7 +701,7 @@ ASM_FUNCTION(createHeapCallBack__13daNpc_Hanjo_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__13daNpc_Hanjo_cFP8J3DJointi) {
+asm void daNpc_Hanjo_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/ctrlJointCallBack__13daNpc_Hanjo_cFP8J3DJointi.s"
 }
@@ -495,7 +712,7 @@ ASM_FUNCTION(ctrlJointCallBack__13daNpc_Hanjo_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getType__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::getType() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getType__13daNpc_Hanjo_cFv.s"
 }
@@ -506,7 +723,7 @@ ASM_FUNCTION(getType__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isDelete__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::isDelete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/isDelete__13daNpc_Hanjo_cFv.s"
 }
@@ -517,7 +734,7 @@ ASM_FUNCTION(isDelete__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/reset__13daNpc_Hanjo_cFv.s"
 }
@@ -528,7 +745,7 @@ ASM_FUNCTION(reset__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterJntAnm__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::afterJntAnm(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/afterJntAnm__13daNpc_Hanjo_cFi.s"
 }
@@ -539,7 +756,7 @@ ASM_FUNCTION(afterJntAnm__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setParam__13daNpc_Hanjo_cFv.s"
 }
@@ -550,7 +767,7 @@ ASM_FUNCTION(setParam__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeEvt__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::checkChangeEvt() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/checkChangeEvt__13daNpc_Hanjo_cFv.s"
 }
@@ -561,7 +778,7 @@ ASM_FUNCTION(checkChangeEvt__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAfterTalkMotion__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::setAfterTalkMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setAfterTalkMotion__13daNpc_Hanjo_cFv.s"
 }
@@ -572,7 +789,7 @@ ASM_FUNCTION(setAfterTalkMotion__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchActors__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::srchActors() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/srchActors__13daNpc_Hanjo_cFv.s"
 }
@@ -583,7 +800,7 @@ ASM_FUNCTION(srchActors__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtTalk__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::evtTalk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/evtTalk__13daNpc_Hanjo_cFv.s"
 }
@@ -594,7 +811,7 @@ ASM_FUNCTION(evtTalk__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(evtCutProc__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::evtCutProc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/evtCutProc__13daNpc_Hanjo_cFv.s"
 }
@@ -605,7 +822,7 @@ ASM_FUNCTION(evtCutProc__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::action() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/action__13daNpc_Hanjo_cFv.s"
 }
@@ -616,7 +833,7 @@ ASM_FUNCTION(action__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(beforeMove__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::beforeMove() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/beforeMove__13daNpc_Hanjo_cFv.s"
 }
@@ -627,7 +844,7 @@ ASM_FUNCTION(beforeMove__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(afterMoved__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::afterMoved() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/afterMoved__13daNpc_Hanjo_cFv.s"
 }
@@ -638,7 +855,7 @@ ASM_FUNCTION(afterMoved__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setAttnPos__13daNpc_Hanjo_cFv.s"
 }
@@ -649,7 +866,7 @@ ASM_FUNCTION(setAttnPos__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCollision__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::setCollision() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setCollision__13daNpc_Hanjo_cFv.s"
 }
@@ -657,21 +874,16 @@ ASM_FUNCTION(setCollision__13daNpc_Hanjo_cFv) {
 
 
 /* 809FB2C4-809FB2CC 0008+00 .text      drawDbgInfo__13daNpc_Hanjo_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/drawDbgInfo__13daNpc_Hanjo_cFv.s"
+bool daNpc_Hanjo_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809FB2CC-809FB59C 02D0+00 .text      drawOtherMdl__13daNpc_Hanjo_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdl__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::drawOtherMdl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/drawOtherMdl__13daNpc_Hanjo_cFv.s"
 }
@@ -682,7 +894,7 @@ ASM_FUNCTION(drawOtherMdl__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectAction__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::selectAction() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/selectAction__13daNpc_Hanjo_cFv.s"
 }
@@ -693,7 +905,7 @@ ASM_FUNCTION(selectAction__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i) {
+extern "C" asm void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i.s"
 }
@@ -704,7 +916,7 @@ ASM_FUNCTION(chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i) {
+extern "C" asm void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i.s"
 }
@@ -715,7 +927,7 @@ ASM_FUNCTION(setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initShoot__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::initShoot(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/initShoot__13daNpc_Hanjo_cFi.s"
 }
@@ -726,7 +938,7 @@ ASM_FUNCTION(initShoot__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(shoot__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::shoot(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/shoot__13daNpc_Hanjo_cFi.s"
 }
@@ -737,7 +949,7 @@ ASM_FUNCTION(shoot__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initDive__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::initDive() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/initDive__13daNpc_Hanjo_cFv.s"
 }
@@ -748,7 +960,7 @@ ASM_FUNCTION(initDive__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dive__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::dive() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/dive__13daNpc_Hanjo_cFv.s"
 }
@@ -759,7 +971,7 @@ ASM_FUNCTION(dive__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookround__13daNpc_Hanjo_cFs) {
+extern "C" asm void lookround__13daNpc_Hanjo_cFs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/lookround__13daNpc_Hanjo_cFs.s"
 }
@@ -770,7 +982,7 @@ ASM_FUNCTION(lookround__13daNpc_Hanjo_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(commandToHawk__13daNpc_Hanjo_cFv) {
+asm void daNpc_Hanjo_c::commandToHawk() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/commandToHawk__13daNpc_Hanjo_cFv.s"
 }
@@ -781,7 +993,7 @@ ASM_FUNCTION(commandToHawk__13daNpc_Hanjo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversationAboutSaru__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::cutConversationAboutSaru(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/cutConversationAboutSaru__13daNpc_Hanjo_cFi.s"
 }
@@ -792,7 +1004,7 @@ ASM_FUNCTION(cutConversationAboutSaru__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutConversation__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::cutConversation(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/cutConversation__13daNpc_Hanjo_cFi.s"
 }
@@ -803,7 +1015,7 @@ ASM_FUNCTION(cutConversation__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutPursuitBee__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::cutPursuitBee(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/cutPursuitBee__13daNpc_Hanjo_cFi.s"
 }
@@ -814,7 +1026,7 @@ ASM_FUNCTION(cutPursuitBee__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutAppearHawker__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::cutAppearHawker(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/cutAppearHawker__13daNpc_Hanjo_cFi.s"
 }
@@ -825,7 +1037,7 @@ ASM_FUNCTION(cutAppearHawker__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutDive__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::cutDive(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/cutDive__13daNpc_Hanjo_cFi.s"
 }
@@ -836,7 +1048,7 @@ ASM_FUNCTION(cutDive__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__13daNpc_Hanjo_cFPv) {
+asm void daNpc_Hanjo_c::wait(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/wait__13daNpc_Hanjo_cFPv.s"
 }
@@ -847,7 +1059,7 @@ ASM_FUNCTION(wait__13daNpc_Hanjo_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(throwStone__13daNpc_Hanjo_cFPv) {
+asm void daNpc_Hanjo_c::throwStone(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/throwStone__13daNpc_Hanjo_cFPv.s"
 }
@@ -858,7 +1070,7 @@ ASM_FUNCTION(throwStone__13daNpc_Hanjo_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(takayose__13daNpc_Hanjo_cFPv) {
+asm void daNpc_Hanjo_c::takayose(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/takayose__13daNpc_Hanjo_cFPv.s"
 }
@@ -869,7 +1081,7 @@ ASM_FUNCTION(takayose__13daNpc_Hanjo_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk__13daNpc_Hanjo_cFPv) {
+asm void daNpc_Hanjo_c::talk(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/talk__13daNpc_Hanjo_cFPv.s"
 }
@@ -880,7 +1092,7 @@ ASM_FUNCTION(talk__13daNpc_Hanjo_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Hanjo_Create__FPv) {
+asm void daNpc_Hanjo_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/daNpc_Hanjo_Create__FPv.s"
 }
@@ -891,7 +1103,7 @@ ASM_FUNCTION(daNpc_Hanjo_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Hanjo_Delete__FPv) {
+asm void daNpc_Hanjo_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/daNpc_Hanjo_Delete__FPv.s"
 }
@@ -902,7 +1114,7 @@ ASM_FUNCTION(daNpc_Hanjo_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Hanjo_Execute__FPv) {
+asm void daNpc_Hanjo_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/daNpc_Hanjo_Execute__FPv.s"
 }
@@ -913,7 +1125,7 @@ ASM_FUNCTION(daNpc_Hanjo_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Hanjo_Draw__FPv) {
+asm void daNpc_Hanjo_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/daNpc_Hanjo_Draw__FPv.s"
 }
@@ -921,21 +1133,16 @@ ASM_FUNCTION(daNpc_Hanjo_Draw__FPv) {
 
 
 /* 809FEDD8-809FEDE0 0008+00 .text      daNpc_Hanjo_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpc_Hanjo_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/daNpc_Hanjo_IsDelete__FPv.s"
+bool daNpc_Hanjo_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809FEDE0-809FEE10 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/calc__11J3DTexNoAnmCFPUs.s"
 }
@@ -946,7 +1153,7 @@ ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__10cCcD_GSttsFv.s"
 }
@@ -957,7 +1164,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcT_cFv) {
+asm daNpcT_c::~daNpcT_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__8daNpcT_cFv.s"
 }
@@ -968,7 +1175,7 @@ ASM_FUNCTION(__dt__8daNpcT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__4cXyzFv.s"
 }
@@ -979,7 +1186,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__5csXyzFv.s"
 }
@@ -990,7 +1197,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::~daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1001,7 +1208,7 @@ ASM_FUNCTION(__dt__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
+asm daNpcT_Path_c::~daNpcT_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__13daNpcT_Path_cFv.s"
 }
@@ -1012,7 +1219,7 @@ ASM_FUNCTION(__dt__13daNpcT_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
+asm daNpcT_ActorMngr_c::daNpcT_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__18daNpcT_ActorMngr_cFv.s"
 }
@@ -1023,7 +1230,7 @@ ASM_FUNCTION(__ct__18daNpcT_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__8cM3dGCylFv.s"
 }
@@ -1034,7 +1241,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__8cM3dGAabFv.s"
 }
@@ -1045,7 +1252,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_809FF3B4.s"
 }
@@ -1053,21 +1260,16 @@ ASM_FUNCTION(__ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmD
 
 
 /* 809FF7B8-809FF7BC 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FF7BC-809FF8B8 00FC+00 .text      __dt__15daNpcT_JntAnm_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
+asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__15daNpcT_JntAnm_cFv.s"
 }
@@ -1075,21 +1277,16 @@ ASM_FUNCTION(__dt__15daNpcT_JntAnm_cFv) {
 
 
 /* 809FF8B8-809FF8BC 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FF8BC-809FF904 0048+00 .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
+asm daNpcT_MotionSeqMngr_c::~daNpcT_MotionSeqMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__22daNpcT_MotionSeqMngr_cFv.s"
 }
@@ -1100,7 +1297,7 @@ ASM_FUNCTION(__dt__22daNpcT_MotionSeqMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1111,7 +1308,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__10dCcD_GSttsFv.s"
 }
@@ -1122,7 +1319,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1133,7 +1330,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1144,7 +1341,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
+extern "C" asm void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs.s"
 }
@@ -1155,7 +1352,7 @@ ASM_FUNCTION(setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
+extern "C" asm void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs.s"
 }
@@ -1163,65 +1360,40 @@ ASM_FUNCTION(setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs) {
 
 
 /* 809FFDAC-809FFDB0 0004+00 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlSubFaceMotion__8daNpcT_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFDB0-809FFDB8 0008+00 .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballLMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809FFDB8-809FFDC0 0008+00 .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballRMaterialNo__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809FFDC0-809FFDC8 0008+00 .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(evtEndProc__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 809FFDC8-809FFDD0 0008+00 .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(chkXYItems__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 809FFDD0-809FFDE8 0018+00 .text      decTmr__8daNpcT_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decTmr__8daNpcT_cFv) {
+asm void daNpcT_c::decTmr() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/decTmr__8daNpcT_cFv.s"
 }
@@ -1229,43 +1401,28 @@ ASM_FUNCTION(decTmr__8daNpcT_cFv) {
 
 
 /* 809FFDE8-809FFDEC 0004+00 .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawGhost__8daNpcT_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFDEC-809FFDF4 0008+00 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetFaceMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 809FFDF4-809FFDFC 0008+00 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(afterSetMotionAnm__8daNpcT_cFiifi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 809FFDFC-809FFE2C 0030+00 .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
+asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c.s"
 }
@@ -1276,7 +1433,7 @@ ASM_FUNCTION(getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
+asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c.s"
 }
@@ -1284,54 +1441,34 @@ ASM_FUNCTION(getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c) {
 
 
 /* 809FFE5C-809FFE60 0004+00 .text      changeAnm__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeAnm__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/changeAnm__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeAnm(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFE60-809FFE64 0004+00 .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBck__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFE64-809FFE68 0004+00 .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtp__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFE68-809FFE6C 0004+00 .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(changeBtk__8daNpcT_cFPiPi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809FFE6C-809FFE88 001C+00 .text      cLib_calcTimer<i>__FPi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809FFE6C) {
+extern "C" asm void func_809FFE6C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_809FFE6C.s"
 }
@@ -1342,7 +1479,7 @@ ASM_FUNCTION(func_809FFE6C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_809FFE88) {
+extern "C" asm void func_809FFE88() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_809FFE88.s"
 }
@@ -1353,7 +1490,7 @@ ASM_FUNCTION(func_809FFE88) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_hanjo_cpp) {
+extern "C" asm void __sinit_d_a_npc_hanjo_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__sinit_d_a_npc_hanjo_cpp.s"
 }
@@ -1364,7 +1501,7 @@ ASM_FUNCTION(__sinit_d_a_npc_hanjo_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpc_HanjoStone_cFv) {
+asm daNpc_HanjoStone_c::~daNpc_HanjoStone_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__18daNpc_HanjoStone_cFv.s"
 }
@@ -1375,7 +1512,7 @@ ASM_FUNCTION(__dt__18daNpc_HanjoStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc) {
+extern "C" asm void __ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_80A000A8.s"
 }
@@ -1386,7 +1523,7 @@ ASM_FUNCTION(__ct__13daNpc_Hanjo_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_moti
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpc_HanjoStone_cFv) {
+asm daNpc_HanjoStone_c::daNpc_HanjoStone_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__ct__18daNpc_HanjoStone_cFv.s"
 }
@@ -1397,7 +1534,7 @@ ASM_FUNCTION(__ct__18daNpc_HanjoStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__8cM3dGSphFv.s"
 }
@@ -1405,21 +1542,16 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 
 
 /* 80A00334-80A0033C 0008+00 .text      getEyeballMaterialNo__13daNpc_Hanjo_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getEyeballMaterialNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getEyeballMaterialNo__13daNpc_Hanjo_cFv.s"
+s32 daNpc_Hanjo_c::getEyeballMaterialNo() {
+	return 2;
 }
-#pragma pop
 
 
 /* 80A0033C-80A00358 001C+00 .text      getPos__18daNpc_HanjoStone_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPos__18daNpc_HanjoStone_cFv) {
+asm void daNpc_HanjoStone_c::getPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getPos__18daNpc_HanjoStone_cFv.s"
 }
@@ -1430,7 +1562,7 @@ ASM_FUNCTION(getPos__18daNpc_HanjoStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getOld__18daNpc_HanjoStone_cFv) {
+asm void daNpc_HanjoStone_c::getOld() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getOld__18daNpc_HanjoStone_cFv.s"
 }
@@ -1441,7 +1573,7 @@ ASM_FUNCTION(getOld__18daNpc_HanjoStone_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(posMoveF__18daNpc_HanjoStone_cFP10fopAc_ac_c) {
+asm void daNpc_HanjoStone_c::posMoveF(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/posMoveF__18daNpc_HanjoStone_cFP10fopAc_ac_c.s"
 }
@@ -1452,7 +1584,7 @@ ASM_FUNCTION(posMoveF__18daNpc_HanjoStone_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__18daNpc_HanjoStone_cF4cXyz) {
+asm void daNpc_HanjoStone_c::setPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setPos__18daNpc_HanjoStone_cF4cXyz.s"
 }
@@ -1460,43 +1592,28 @@ ASM_FUNCTION(setPos__18daNpc_HanjoStone_cF4cXyz) {
 
 
 /* 80A004D0-80A004D8 0008+00 .text      getHeadJointNo__13daNpc_Hanjo_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getHeadJointNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getHeadJointNo__13daNpc_Hanjo_cFv.s"
+s32 daNpc_Hanjo_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80A004D8-80A004E0 0008+00 .text      getNeckJointNo__13daNpc_Hanjo_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getNeckJointNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getNeckJointNo__13daNpc_Hanjo_cFv.s"
+s32 daNpc_Hanjo_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 80A004E0-80A004E8 0008+00 .text      getBackboneJointNo__13daNpc_Hanjo_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getBackboneJointNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getBackboneJointNo__13daNpc_Hanjo_cFv.s"
+bool daNpc_Hanjo_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 80A004E8-80A00504 001C+00 .text      setAngle__18daNpc_HanjoStone_cF5csXyz                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAngle__18daNpc_HanjoStone_cF5csXyz) {
+asm void daNpc_HanjoStone_c::setAngle(csXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setAngle__18daNpc_HanjoStone_cF5csXyz.s"
 }
@@ -1507,7 +1624,7 @@ ASM_FUNCTION(setAngle__18daNpc_HanjoStone_cF5csXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkChangeJoint__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::checkChangeJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/checkChangeJoint__13daNpc_Hanjo_cFi.s"
 }
@@ -1518,7 +1635,7 @@ ASM_FUNCTION(checkChangeJoint__13daNpc_Hanjo_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkRemoveJoint__13daNpc_Hanjo_cFi) {
+asm void daNpc_Hanjo_c::checkRemoveJoint(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/checkRemoveJoint__13daNpc_Hanjo_cFi.s"
 }
@@ -1526,32 +1643,22 @@ ASM_FUNCTION(checkRemoveJoint__13daNpc_Hanjo_cFi) {
 
 
 /* 80A00524-80A0052C 0008+00 .text      getFootLJointNo__13daNpc_Hanjo_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootLJointNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getFootLJointNo__13daNpc_Hanjo_cFv.s"
+s32 daNpc_Hanjo_c::getFootLJointNo() {
+	return 22;
 }
-#pragma pop
 
 
 /* 80A0052C-80A00534 0008+00 .text      getFootRJointNo__13daNpc_Hanjo_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getFootRJointNo__13daNpc_Hanjo_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/getFootRJointNo__13daNpc_Hanjo_cFv.s"
+s32 daNpc_Hanjo_c::getFootRJointNo() {
+	return 26;
 }
-#pragma pop
 
 
 /* 80A00534-80A0057C 0048+00 .text      __dt__19daNpc_Hanjo_Param_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19daNpc_Hanjo_Param_cFv) {
+asm daNpc_Hanjo_Param_c::~daNpc_Hanjo_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/__dt__19daNpc_Hanjo_Param_cFv.s"
 }
@@ -1562,7 +1669,7 @@ ASM_FUNCTION(__dt__19daNpc_Hanjo_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A0057C) {
+extern "C" asm void func_80A0057C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_80A0057C.s"
 }
@@ -1573,7 +1680,7 @@ ASM_FUNCTION(func_80A0057C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A00584) {
+extern "C" asm void func_80A00584() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/func_80A00584.s"
 }
@@ -1584,7 +1691,7 @@ ASM_FUNCTION(func_80A00584) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkPointInArea__15daTag_EvtArea_cF4cXyz) {
+asm void daTag_EvtArea_c::chkPointInArea(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/chkPointInArea__15daTag_EvtArea_cF4cXyz.s"
 }

@@ -6,31 +6,86 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjPDtile_c;
+struct dBgW;
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daObjPDtile_c {
+	void create1st();
+	void setMtx();
+	void rideActor(fopAc_ac_c*);
+	void CreateHeap();
+	void Create();
+	void Draw();
+	void Delete();
+	~daObjPDtile_c();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void create1st__13daObjPDtile_cFv();
-extern "C" extern void setMtx__13daObjPDtile_cFv();
-extern "C" extern void rideActor__13daObjPDtile_cFP10fopAc_ac_c();
-extern "C" extern void CreateHeap__13daObjPDtile_cFv();
-extern "C" extern void Create__13daObjPDtile_cFv();
-extern "C" extern void Execute__13daObjPDtile_cFPPA3_A4_f();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void Draw__13daObjPDtile_cFv();
-extern "C" extern void Delete__13daObjPDtile_cFv();
-extern "C" extern void daObjPDtile_create1st__FP13daObjPDtile_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjPDtile_MoveBGDelete__FP13daObjPDtile_c();
-extern "C" extern void daObjPDtile_MoveBGExecute__FP13daObjPDtile_c();
-extern "C" extern void daObjPDtile_MoveBGDraw__FP13daObjPDtile_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__13daObjPDtile_cFv();
-extern "C" extern void func_80CAC4EC();
-extern "C" extern void func_80CAC4F4();
-extern "C" extern void func_80CAC4FC();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__13daObjPDtile_cFPPA3_A4_f();
+void daObjPDtile_create1st(daObjPDtile_c*);
+void daObjPDtile_MoveBGDelete(daObjPDtile_c*);
+void daObjPDtile_MoveBGExecute(daObjPDtile_c*);
+void daObjPDtile_MoveBGDraw(daObjPDtile_c*);
+extern "C" void func_80CAC4EC();
+extern "C" void func_80CAC4F4();
+extern "C" void func_80CAC4FC();
+
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void create1st__13daObjPDtile_cFv();
+extern "C" void setMtx__13daObjPDtile_cFv();
+extern "C" void rideActor__13daObjPDtile_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__13daObjPDtile_cFv();
+extern "C" void Create__13daObjPDtile_cFv();
+extern "C" void Execute__13daObjPDtile_cFPPA3_A4_f();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void Draw__13daObjPDtile_cFv();
+extern "C" void Delete__13daObjPDtile_cFv();
+extern "C" void daObjPDtile_create1st__FP13daObjPDtile_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjPDtile_MoveBGDelete__FP13daObjPDtile_c();
+extern "C" void daObjPDtile_MoveBGExecute__FP13daObjPDtile_c();
+extern "C" void daObjPDtile_MoveBGDraw__FP13daObjPDtile_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__13daObjPDtile_cFv();
+extern "C" void func_80CAC4EC();
+extern "C" void func_80CAC4F4();
+extern "C" void func_80CAC4FC();
 SECTION_RODATA extern const u32 lit_3680;
 SECTION_RODATA extern const u32 lit_3681;
 SECTION_RODATA extern const u32 lit_3682;
@@ -89,7 +144,9 @@ SECTION_DATA extern void*const __vt__13daObjPDtile_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -99,7 +156,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -110,7 +167,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/create1st__13daObjPDtile_cFv.s"
 }
@@ -121,7 +178,7 @@ ASM_FUNCTION(create1st__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMtx__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::setMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/setMtx__13daObjPDtile_cFv.s"
 }
@@ -132,7 +189,7 @@ ASM_FUNCTION(setMtx__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideActor__13daObjPDtile_cFP10fopAc_ac_c) {
+asm void daObjPDtile_c::rideActor(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/rideActor__13daObjPDtile_cFP10fopAc_ac_c.s"
 }
@@ -143,7 +200,7 @@ ASM_FUNCTION(rideActor__13daObjPDtile_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/CreateHeap__13daObjPDtile_cFv.s"
 }
@@ -154,7 +211,7 @@ ASM_FUNCTION(CreateHeap__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/Create__13daObjPDtile_cFv.s"
 }
@@ -165,7 +222,7 @@ ASM_FUNCTION(Create__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjPDtile_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjPDtile_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/Execute__13daObjPDtile_cFPPA3_A4_f.s"
 }
@@ -176,7 +233,7 @@ ASM_FUNCTION(Execute__13daObjPDtile_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -187,7 +244,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/Draw__13daObjPDtile_cFv.s"
 }
@@ -198,7 +255,7 @@ ASM_FUNCTION(Draw__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjPDtile_cFv) {
+asm void daObjPDtile_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/Delete__13daObjPDtile_cFv.s"
 }
@@ -209,7 +266,7 @@ ASM_FUNCTION(Delete__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDtile_create1st__FP13daObjPDtile_c) {
+asm void daObjPDtile_create1st(daObjPDtile_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/daObjPDtile_create1st__FP13daObjPDtile_c.s"
 }
@@ -220,7 +277,7 @@ ASM_FUNCTION(daObjPDtile_create1st__FP13daObjPDtile_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__8cM3dGCylFv.s"
 }
@@ -231,7 +288,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__8cM3dGAabFv.s"
 }
@@ -242,7 +299,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__10dCcD_GSttsFv.s"
 }
@@ -253,7 +310,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDtile_MoveBGDelete__FP13daObjPDtile_c) {
+asm void daObjPDtile_MoveBGDelete(daObjPDtile_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/daObjPDtile_MoveBGDelete__FP13daObjPDtile_c.s"
 }
@@ -264,7 +321,7 @@ ASM_FUNCTION(daObjPDtile_MoveBGDelete__FP13daObjPDtile_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDtile_MoveBGExecute__FP13daObjPDtile_c) {
+asm void daObjPDtile_MoveBGExecute(daObjPDtile_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/daObjPDtile_MoveBGExecute__FP13daObjPDtile_c.s"
 }
@@ -275,7 +332,7 @@ ASM_FUNCTION(daObjPDtile_MoveBGExecute__FP13daObjPDtile_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjPDtile_MoveBGDraw__FP13daObjPDtile_c) {
+asm void daObjPDtile_MoveBGDraw(daObjPDtile_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/daObjPDtile_MoveBGDraw__FP13daObjPDtile_c.s"
 }
@@ -286,7 +343,7 @@ ASM_FUNCTION(daObjPDtile_MoveBGDraw__FP13daObjPDtile_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__10cCcD_GSttsFv.s"
 }
@@ -297,7 +354,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daObjPDtile_cFv) {
+asm daObjPDtile_c::~daObjPDtile_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/__dt__13daObjPDtile_cFv.s"
 }
@@ -308,7 +365,7 @@ ASM_FUNCTION(__dt__13daObjPDtile_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CAC4EC) {
+extern "C" asm void func_80CAC4EC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/func_80CAC4EC.s"
 }
@@ -319,7 +376,7 @@ ASM_FUNCTION(func_80CAC4EC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CAC4F4) {
+extern "C" asm void func_80CAC4F4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/func_80CAC4F4.s"
 }
@@ -330,7 +387,7 @@ ASM_FUNCTION(func_80CAC4F4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CAC4FC) {
+extern "C" asm void func_80CAC4FC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdtile/d_a_obj_pdtile/func_80CAC4FC.s"
 }

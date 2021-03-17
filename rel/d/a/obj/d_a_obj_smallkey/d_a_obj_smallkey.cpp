@@ -6,63 +6,177 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct cBgS_PolyInfo;
+struct daKey_c;
+struct dCcD_GObjInf;
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_GObjInf {
+};
+
+struct daKey_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	bool __CreateHeap();
+	void create();
+	void bg_check();
+	void actionInitInit();
+	void actionInit();
+	void actionParentWaitInit();
+	void actionParentWait();
+	void actionWaitInit();
+	void actionWait();
+	void initActionOrderGetDemo();
+	void actionOrderGetDemo();
+	void actionGetDemo();
+	void actionInitSwOnWait();
+	void actionSwOnWait();
+	void actionInitBoomerangCarry();
+	void actionBoomerangCarry();
+	void effectSet();
+	void effectStop();
+	void effectCtrl();
+	void seStartTwinkle_private(u32);
+	void actionInitE_GB();
+	void actionE_GB();
+	void execute();
+	void draw();
+	void _delete();
+};
+
+struct dPa_followEcallBack {
+	~dPa_followEcallBack();
+	void __defctor();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void searchParentSub__FPvPv();
-extern "C" extern void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void initBaseMtx__7daKey_cFv();
-extern "C" extern void setBaseMtx__7daKey_cFv();
-extern "C" extern void Create__7daKey_cFv();
-extern "C" extern void __CreateHeap__7daKey_cFv();
-extern "C" extern void create__7daKey_cFv();
-extern "C" extern void __dt__19dPa_followEcallBackFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __defctor__19dPa_followEcallBackFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void bg_check__7daKey_cFv();
-extern "C" extern void actionInitInit__7daKey_cFv();
-extern "C" extern void actionInit__7daKey_cFv();
-extern "C" extern void actionParentWaitInit__7daKey_cFv();
-extern "C" extern void actionParentWait__7daKey_cFv();
-extern "C" extern void actionWaitInit__7daKey_cFv();
-extern "C" extern void actionWait__7daKey_cFv();
-extern "C" extern void initActionOrderGetDemo__7daKey_cFv();
-extern "C" extern void actionOrderGetDemo__7daKey_cFv();
-extern "C" extern void actionGetDemo__7daKey_cFv();
-extern "C" extern void actionInitSwOnWait__7daKey_cFv();
-extern "C" extern void actionSwOnWait__7daKey_cFv();
-extern "C" extern void actionInitBoomerangCarry__7daKey_cFv();
-extern "C" extern void actionBoomerangCarry__7daKey_cFv();
-extern "C" extern void effectSet__7daKey_cFv();
-extern "C" extern void effectStop__7daKey_cFv();
-extern "C" extern void effectCtrl__7daKey_cFv();
-extern "C" extern void seStartTwinkle_private__7daKey_cFUl();
-extern "C" extern void actionInitE_GB__7daKey_cFv();
-extern "C" extern void actionE_GB__7daKey_cFv();
-extern "C" extern void execute__7daKey_cFv();
-extern "C" extern void draw__7daKey_cFv();
-extern "C" extern void _delete__7daKey_cFv();
-extern "C" extern void daKey_Draw__FP7daKey_c();
-extern "C" extern void daKey_Execute__FP7daKey_c();
-extern "C" extern void daKey_Delete__FP7daKey_c();
-extern "C" extern void daKey_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void func_80CDB7C0();
-extern "C" extern void func_80CDB7DC();
-extern "C" extern void func_80CDB7E4();
+void searchParentSub(void*, void*);
+void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+void keyGetTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void keyGetCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daKey_Draw(daKey_c*);
+void daKey_Execute(daKey_c*);
+void daKey_Delete(daKey_c*);
+void daKey_Create(fopAc_ac_c*);
+extern "C" void func_80CDB7C0();
+extern "C" void func_80CDB7DC();
+extern "C" void func_80CDB7E4();
+
+extern "C" void searchParentSub__FPvPv();
+extern "C" void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void initBaseMtx__7daKey_cFv();
+extern "C" void setBaseMtx__7daKey_cFv();
+extern "C" void Create__7daKey_cFv();
+extern "C" bool __CreateHeap__7daKey_cFv();
+extern "C" void create__7daKey_cFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__7daKey_cFv();
+extern "C" void actionInitInit__7daKey_cFv();
+extern "C" void actionInit__7daKey_cFv();
+extern "C" void actionParentWaitInit__7daKey_cFv();
+extern "C" void actionParentWait__7daKey_cFv();
+extern "C" void actionWaitInit__7daKey_cFv();
+extern "C" void actionWait__7daKey_cFv();
+extern "C" void initActionOrderGetDemo__7daKey_cFv();
+extern "C" void actionOrderGetDemo__7daKey_cFv();
+extern "C" void actionGetDemo__7daKey_cFv();
+extern "C" void actionInitSwOnWait__7daKey_cFv();
+extern "C" void actionSwOnWait__7daKey_cFv();
+extern "C" void actionInitBoomerangCarry__7daKey_cFv();
+extern "C" void actionBoomerangCarry__7daKey_cFv();
+extern "C" void effectSet__7daKey_cFv();
+extern "C" void effectStop__7daKey_cFv();
+extern "C" void effectCtrl__7daKey_cFv();
+extern "C" void seStartTwinkle_private__7daKey_cFUl();
+extern "C" void actionInitE_GB__7daKey_cFv();
+extern "C" void actionE_GB__7daKey_cFv();
+extern "C" void execute__7daKey_cFv();
+extern "C" void draw__7daKey_cFv();
+extern "C" void _delete__7daKey_cFv();
+extern "C" void daKey_Draw__FP7daKey_c();
+extern "C" void daKey_Execute__FP7daKey_c();
+extern "C" void daKey_Delete__FP7daKey_c();
+extern "C" void daKey_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void func_80CDB7C0();
+extern "C" void func_80CDB7DC();
+extern "C" void func_80CDB7E4();
 SECTION_RODATA extern const u8 l_cyl_src[68];
 SECTION_RODATA extern const u8 lit_3875[4];
 SECTION_RODATA extern const u8 lit_3876[8];
@@ -111,7 +225,9 @@ SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -121,7 +237,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchParentSub__FPvPv) {
+asm void searchParentSub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/searchParentSub__FPvPv.s"
 }
@@ -132,7 +248,7 @@ ASM_FUNCTION(searchParentSub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
+asm void Reflect(cXyz* field_0, cBgS_PolyInfo const& field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/Reflect__FP4cXyzRC13cBgS_PolyInfof.s"
 }
@@ -143,7 +259,7 @@ ASM_FUNCTION(Reflect__FP4cXyzRC13cBgS_PolyInfof) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__8cM3dGPlaFv.s"
 }
@@ -154,7 +270,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void keyGetTgCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CD9E84.s"
 }
@@ -165,7 +281,7 @@ ASM_FUNCTION(keyGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void keyGetCoCallBack(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CD9EE0.s"
 }
@@ -176,7 +292,7 @@ ASM_FUNCTION(keyGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__7daKey_cFv) {
+asm void daKey_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/initBaseMtx__7daKey_cFv.s"
 }
@@ -187,7 +303,7 @@ ASM_FUNCTION(initBaseMtx__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__7daKey_cFv) {
+asm void daKey_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/setBaseMtx__7daKey_cFv.s"
 }
@@ -198,7 +314,7 @@ ASM_FUNCTION(setBaseMtx__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__7daKey_cFv) {
+asm void daKey_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/Create__7daKey_cFv.s"
 }
@@ -206,21 +322,16 @@ ASM_FUNCTION(Create__7daKey_cFv) {
 
 
 /* 80CDA15C-80CDA164 0008+00 .text      __CreateHeap__7daKey_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__CreateHeap__7daKey_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__CreateHeap__7daKey_cFv.s"
+bool daKey_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDA164-80CDA404 02A0+00 .text      create__7daKey_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__7daKey_cFv) {
+asm void daKey_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDA164.s"
 }
@@ -231,7 +342,7 @@ ASM_FUNCTION(create__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
+asm dPa_followEcallBack::~dPa_followEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__19dPa_followEcallBackFv.s"
 }
@@ -239,21 +350,16 @@ ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
 
 
 /* 80CDA488-80CDA48C 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDA48C-80CDA4B4 0028+00 .text      __defctor__19dPa_followEcallBackFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
+asm void dPa_followEcallBack::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__defctor__19dPa_followEcallBackFv.s"
 }
@@ -264,7 +370,7 @@ ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__8cM3dGCylFv.s"
 }
@@ -275,7 +381,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__8cM3dGAabFv.s"
 }
@@ -286,7 +392,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__10dCcD_GSttsFv.s"
 }
@@ -297,7 +403,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__12dBgS_AcchCirFv.s"
 }
@@ -308,7 +414,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -319,7 +425,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bg_check__7daKey_cFv) {
+asm void daKey_c::bg_check() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/bg_check__7daKey_cFv.s"
 }
@@ -330,7 +436,7 @@ ASM_FUNCTION(bg_check__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitInit__7daKey_cFv) {
+asm void daKey_c::actionInitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionInitInit__7daKey_cFv.s"
 }
@@ -341,7 +447,7 @@ ASM_FUNCTION(actionInitInit__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInit__7daKey_cFv) {
+asm void daKey_c::actionInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionInit__7daKey_cFv.s"
 }
@@ -352,7 +458,7 @@ ASM_FUNCTION(actionInit__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionParentWaitInit__7daKey_cFv) {
+asm void daKey_c::actionParentWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionParentWaitInit__7daKey_cFv.s"
 }
@@ -363,7 +469,7 @@ ASM_FUNCTION(actionParentWaitInit__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionParentWait__7daKey_cFv) {
+asm void daKey_c::actionParentWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionParentWait__7daKey_cFv.s"
 }
@@ -374,7 +480,7 @@ ASM_FUNCTION(actionParentWait__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitInit__7daKey_cFv) {
+asm void daKey_c::actionWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionWaitInit__7daKey_cFv.s"
 }
@@ -385,7 +491,7 @@ ASM_FUNCTION(actionWaitInit__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__7daKey_cFv) {
+asm void daKey_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionWait__7daKey_cFv.s"
 }
@@ -396,7 +502,7 @@ ASM_FUNCTION(actionWait__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initActionOrderGetDemo__7daKey_cFv) {
+asm void daKey_c::initActionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/initActionOrderGetDemo__7daKey_cFv.s"
 }
@@ -407,7 +513,7 @@ ASM_FUNCTION(initActionOrderGetDemo__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderGetDemo__7daKey_cFv) {
+asm void daKey_c::actionOrderGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionOrderGetDemo__7daKey_cFv.s"
 }
@@ -418,7 +524,7 @@ ASM_FUNCTION(actionOrderGetDemo__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionGetDemo__7daKey_cFv) {
+asm void daKey_c::actionGetDemo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionGetDemo__7daKey_cFv.s"
 }
@@ -429,7 +535,7 @@ ASM_FUNCTION(actionGetDemo__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitSwOnWait__7daKey_cFv) {
+asm void daKey_c::actionInitSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionInitSwOnWait__7daKey_cFv.s"
 }
@@ -440,7 +546,7 @@ ASM_FUNCTION(actionInitSwOnWait__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionSwOnWait__7daKey_cFv) {
+asm void daKey_c::actionSwOnWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionSwOnWait__7daKey_cFv.s"
 }
@@ -451,7 +557,7 @@ ASM_FUNCTION(actionSwOnWait__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitBoomerangCarry__7daKey_cFv) {
+asm void daKey_c::actionInitBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionInitBoomerangCarry__7daKey_cFv.s"
 }
@@ -462,7 +568,7 @@ ASM_FUNCTION(actionInitBoomerangCarry__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionBoomerangCarry__7daKey_cFv) {
+asm void daKey_c::actionBoomerangCarry() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionBoomerangCarry__7daKey_cFv.s"
 }
@@ -473,7 +579,7 @@ ASM_FUNCTION(actionBoomerangCarry__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectSet__7daKey_cFv) {
+asm void daKey_c::effectSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/effectSet__7daKey_cFv.s"
 }
@@ -484,7 +590,7 @@ ASM_FUNCTION(effectSet__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectStop__7daKey_cFv) {
+asm void daKey_c::effectStop() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/effectStop__7daKey_cFv.s"
 }
@@ -495,7 +601,7 @@ ASM_FUNCTION(effectStop__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(effectCtrl__7daKey_cFv) {
+asm void daKey_c::effectCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/effectCtrl__7daKey_cFv.s"
 }
@@ -506,7 +612,7 @@ ASM_FUNCTION(effectCtrl__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStartTwinkle_private__7daKey_cFUl) {
+asm void daKey_c::seStartTwinkle_private(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/seStartTwinkle_private__7daKey_cFUl.s"
 }
@@ -517,7 +623,7 @@ ASM_FUNCTION(seStartTwinkle_private__7daKey_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionInitE_GB__7daKey_cFv) {
+asm void daKey_c::actionInitE_GB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionInitE_GB__7daKey_cFv.s"
 }
@@ -528,7 +634,7 @@ ASM_FUNCTION(actionInitE_GB__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionE_GB__7daKey_cFv) {
+asm void daKey_c::actionE_GB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/actionE_GB__7daKey_cFv.s"
 }
@@ -539,7 +645,7 @@ ASM_FUNCTION(actionE_GB__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__7daKey_cFv) {
+asm void daKey_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/execute__7daKey_cFv.s"
 }
@@ -550,7 +656,7 @@ ASM_FUNCTION(execute__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__7daKey_cFv) {
+asm void daKey_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/draw__7daKey_cFv.s"
 }
@@ -561,7 +667,7 @@ ASM_FUNCTION(draw__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__7daKey_cFv) {
+asm void daKey_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/_delete__7daKey_cFv.s"
 }
@@ -572,7 +678,7 @@ ASM_FUNCTION(_delete__7daKey_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKey_Draw__FP7daKey_c) {
+asm void daKey_Draw(daKey_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/daKey_Draw__FP7daKey_c.s"
 }
@@ -583,7 +689,7 @@ ASM_FUNCTION(daKey_Draw__FP7daKey_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKey_Execute__FP7daKey_c) {
+asm void daKey_Execute(daKey_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/daKey_Execute__FP7daKey_c.s"
 }
@@ -594,7 +700,7 @@ ASM_FUNCTION(daKey_Execute__FP7daKey_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKey_Delete__FP7daKey_c) {
+asm void daKey_Delete(daKey_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/daKey_Delete__FP7daKey_c.s"
 }
@@ -605,7 +711,7 @@ ASM_FUNCTION(daKey_Delete__FP7daKey_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKey_Create__FP10fopAc_ac_c) {
+asm void daKey_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/daKey_Create__FP10fopAc_ac_c.s"
 }
@@ -616,7 +722,7 @@ ASM_FUNCTION(daKey_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__10cCcD_GSttsFv.s"
 }
@@ -627,7 +733,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -635,54 +741,34 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 80CDB7B0-80CDB7B4 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDB7B4-80CDB7B8 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDB7B8-80CDB7BC 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDB7BC-80CDB7C0 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDB7C0-80CDB7DC 001C+00 .text      cLib_calcTimer<Uc>__FPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDB7C0) {
+extern "C" asm void func_80CDB7C0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDB7C0.s"
 }
@@ -693,7 +779,7 @@ ASM_FUNCTION(func_80CDB7C0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDB7DC) {
+extern "C" asm void func_80CDB7DC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDB7DC.s"
 }
@@ -704,7 +790,7 @@ ASM_FUNCTION(func_80CDB7DC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CDB7E4) {
+extern "C" asm void func_80CDB7E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_smallkey/d_a_obj_smallkey/func_80CDB7E4.s"
 }

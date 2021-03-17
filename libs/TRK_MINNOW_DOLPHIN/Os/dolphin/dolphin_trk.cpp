@@ -9,14 +9,23 @@
 // Forward References:
 // 
 
-extern "C" extern void InitMetroTRK();
-extern "C" extern void InitMetroTRK_BBA();
-extern "C" extern void TRK__write_aram();
-extern "C" extern void TRK__read_aram();
-extern "C" extern void TRKInitializeTarget();
-extern "C" extern void __TRK_copy_vectors();
-extern "C" extern void TRKTargetTranslate();
-extern "C" extern void EnableMetroTRKInterrupts();
+extern "C" void InitMetroTRK();
+extern "C" void InitMetroTRK_BBA();
+extern "C" void TRK__write_aram();
+extern "C" void TRK__read_aram();
+extern "C" void TRKInitializeTarget();
+extern "C" void __TRK_copy_vectors();
+extern "C" void TRKTargetTranslate();
+extern "C" void EnableMetroTRKInterrupts();
+
+extern "C" void InitMetroTRK();
+extern "C" void InitMetroTRK_BBA();
+extern "C" void TRK__write_aram();
+extern "C" void TRK__read_aram();
+extern "C" void TRKInitializeTarget();
+extern "C" void __TRK_copy_vectors();
+extern "C" void TRKTargetTranslate();
+extern "C" void EnableMetroTRKInterrupts();
 SECTION_DATA extern u8 TRK_ISR_OFFSETS[60 + 4 /* padding */];
 SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
 
@@ -24,18 +33,30 @@ SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT extern void TRK_memcpy();
+SECTION_INIT void TRK_memcpy();
+extern "C" void ARGetDMAStatus();
+extern "C" void ARStartDMA();
+extern "C" void __ARClearInterrupt();
+extern "C" void __ARGetInterruptStatus();
+extern "C" void TRK_flush_cache();
+extern "C" void __TRK_get_MSR();
+extern "C" void TRKSaveExtended1Block();
+extern "C" void TRK_main();
+extern "C" void EnableEXI2Interrupts();
+extern "C" void InitMetroTRKCommTable();
+
+SECTION_INIT void TRK_memcpy();
 SECTION_INIT extern const u8 __TRK_unknown_data[7988];
-extern "C" extern void ARGetDMAStatus();
-extern "C" extern void ARStartDMA();
-extern "C" extern void __ARClearInterrupt();
-extern "C" extern void __ARGetInterruptStatus();
-extern "C" extern void TRK_flush_cache();
-extern "C" extern void __TRK_get_MSR();
-extern "C" extern void TRKSaveExtended1Block();
-extern "C" extern void TRK_main();
-extern "C" extern void EnableEXI2Interrupts();
-extern "C" extern void InitMetroTRKCommTable();
+extern "C" void ARGetDMAStatus();
+extern "C" void ARStartDMA();
+extern "C" void __ARClearInterrupt();
+extern "C" void __ARGetInterruptStatus();
+extern "C" void TRK_flush_cache();
+extern "C" void __TRK_get_MSR();
+extern "C" void TRKSaveExtended1Block();
+extern "C" void TRK_main();
+extern "C" void EnableEXI2Interrupts();
+extern "C" void InitMetroTRKCommTable();
 SECTION_BSS extern u8 gTRKState[164];
 SECTION_BSS extern u8 gTRKCPUState[1072];
 
@@ -43,44 +64,44 @@ SECTION_BSS extern u8 gTRKCPUState[1072];
 // Declarations:
 // 
 
-/* 80371560-803715F8 0098+00 .text      InitMetroTRK                                                 */
+/* 80371560-803715F8 0098+00 rc=1 efc=1 .text      InitMetroTRK                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitMetroTRK) {
+extern "C" asm void InitMetroTRK() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/InitMetroTRK.s"
 }
 #pragma pop
 
 
-/* 803715F8-8037168C 0094+00 .text      InitMetroTRK_BBA                                             */
+/* 803715F8-8037168C 0094+00 rc=1 efc=1 .text      InitMetroTRK_BBA                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitMetroTRK_BBA) {
+extern "C" asm void InitMetroTRK_BBA() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/InitMetroTRK_BBA.s"
 }
 #pragma pop
 
 
-/* 8037168C-80371878 01EC+00 .text      TRK__write_aram                                              */
+/* 8037168C-80371878 01EC+00 rc=1 efc=1 .text      TRK__write_aram                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRK__write_aram) {
+extern "C" asm void TRK__write_aram() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/TRK__write_aram.s"
 }
 #pragma pop
 
 
-/* 80371878-803719AC 0134+00 .text      TRK__read_aram                                               */
+/* 80371878-803719AC 0134+00 rc=1 efc=1 .text      TRK__read_aram                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRK__read_aram) {
+extern "C" asm void TRK__read_aram() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/TRK__read_aram.s"
 }
@@ -88,14 +109,14 @@ ASM_FUNCTION(TRK__read_aram) {
 
 
 /* ############################################################################################## */
-/* 8044F810-8044F818 0004+04 .bss       lc_base                                                      */
+/* 8044F810-8044F818 0004+04 rc=3 efc=0 .bss       lc_base                                                      */
 u8 lc_base[4 + 4 /* padding */];
 
-/* 803719AC-803719F8 004C+00 .text      TRKInitializeTarget                                          */
+/* 803719AC-803719F8 004C+00 rc=1 efc=1 .text      TRKInitializeTarget                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKInitializeTarget) {
+extern "C" asm void TRKInitializeTarget() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/TRKInitializeTarget.s"
 }
@@ -103,7 +124,7 @@ ASM_FUNCTION(TRKInitializeTarget) {
 
 
 /* ############################################################################################## */
-/* 803D3268-803D32A8 003C+04 .data      TRK_ISR_OFFSETS                                              */
+/* 803D3268-803D32A8 003C+04 rc=1 efc=0 .data      TRK_ISR_OFFSETS                                              */
 u8 TRK_ISR_OFFSETS[64] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,
 	0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,
@@ -113,37 +134,36 @@ u8 TRK_ISR_OFFSETS[64] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803719F8-80371B24 012C+00 .text      __TRK_copy_vectors                                           */
+/* 803719F8-80371B24 012C+00 rc=1 efc=1 .text      __TRK_copy_vectors                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__TRK_copy_vectors) {
+extern "C" asm void __TRK_copy_vectors() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/__TRK_copy_vectors.s"
 }
 #pragma pop
 
 
-/* 80371B24-80371B7C 0058+00 .text      TRKTargetTranslate                                           */
+/* 80371B24-80371B7C 0058+00 rc=1 efc=1 .text      TRKTargetTranslate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(TRKTargetTranslate) {
+extern "C" asm void TRKTargetTranslate() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/TRKTargetTranslate.s"
 }
 #pragma pop
 
 
-/* 80371B7C-80371B9C 0020+00 .text      EnableMetroTRKInterrupts                                     */
+/* 80371B7C-80371B9C 0020+00 rc=1 efc=1 .text      EnableMetroTRKInterrupts                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(EnableMetroTRKInterrupts) {
+extern "C" asm void EnableMetroTRKInterrupts() {
 	nofralloc
 #include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk/EnableMetroTRKInterrupts.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

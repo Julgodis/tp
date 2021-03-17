@@ -6,56 +6,88 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DJointFactory (J3DJointFactory) False/False
+// build J3DJointBlock (J3DJointBlock) False/False
+/* top-level dependencies (begin J3DJointBlock) */
+/* top-level dependencies (end J3DJointBlock) */
+struct J3DJointBlock {
+};
+
+/* top-level dependencies (begin J3DJointFactory) */
+// outer dependency: J3DJointBlock
+/* top-level dependencies (end J3DJointFactory) */
+struct J3DJointFactory {
+	// J3DJointBlock
+	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
+	/* 803371D0 */ void create(s32);
+};
+
+// build J3DJointBlock (J3DJointBlock) True/True
+// build J3DJoint (J3DJoint) False/False
+/* top-level dependencies (begin J3DJoint) */
+/* top-level dependencies (end J3DJoint) */
+struct J3DJoint {
+	/* 8032F170 */ J3DJoint();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__15J3DJointFactoryFRC13J3DJointBlock();
-extern "C" extern void create__15J3DJointFactoryFi();
-extern "C" extern void func_80337338();
+extern "C" static void func_80337338();
+
+extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock();
+extern "C" void create__15J3DJointFactoryFi();
+extern "C" static void func_80337338();
 
 // 
 // External References:
 // 
 
-extern "C" extern void __nw__FUl();
-extern "C" extern void __ct__8J3DJointFv();
-extern "C" extern void func_8033677C();
+void* operator new(u32);
+extern "C" void func_8033677C();
+
+extern "C" void* __nw__FUl();
+extern "C" void __ct__8J3DJointFv();
+extern "C" void func_8033677C();
 
 // 
 // Declarations:
 // 
 
-/* 80337178-803371D0 0058+00 .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    */
+/* 80337178-803371D0 0058+00 rc=1 efc=1 .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DJointFactoryFRC13J3DJointBlock) {
+asm J3DJointFactory::J3DJointFactory(J3DJointBlock const& field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DJointFactory/__ct__15J3DJointFactoryFRC13J3DJointBlock.s"
 }
 #pragma pop
 
 
-/* 803371D0-80337338 0168+00 .text      create__15J3DJointFactoryFi                                  */
+/* 803371D0-80337338 0168+00 rc=1 efc=1 .text      create__15J3DJointFactoryFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__15J3DJointFactoryFi) {
+asm void J3DJointFactory::create(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DJointFactory/create__15J3DJointFactoryFi.s"
 }
 #pragma pop
 
 
-/* 80337338-80337350 0018+00 .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            */
+/* 80337338-80337350 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80337338) {
+extern "C" asm static void func_80337338() {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DJointFactory/func_80337338.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

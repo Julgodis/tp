@@ -1,8 +1,9 @@
 import util
-from symbols import *
-from collections import defaultdict
 import demangle
+import data_types
+from collections import defaultdict
 from data import *
+from data_types import ConstType, ReferenceType, PointerType
 
 def is_demangled_safe(parts, pointer_types):
     for part in parts:
@@ -29,7 +30,58 @@ def is_demangled_safe(parts, pointer_types):
 
     return True
 
-def nameCollision(label_collisions, reference_collisions, parent_name, symbol):
+integer_types = {
+    ("char", True, False): data_types.U8,
+    ("short", True, False): data_types.U16,
+    ("long", True, False): data_types.U32,
+    ("long long", True, False): data_types.U64,
+    ("char", False, True): data_types.S8,
+    ("char", False, False): data_types.CHAR,
+    ("short", False, True): data_types.S16,
+    ("short", False, False): data_types.S16,
+    ("long", False, True): data_types.S32,
+    ("long", False, False): data_types.S32,
+    ("long long", False, True): data_types.S64,
+    ("long long", False, False): data_types.S64,
+}
+
+type_map = {
+    "void": data_types.VOID,
+    "bool": data_types.BOOL,
+    "int": data_types.S32,
+    "float": data_types.F32,
+    "double": data_types.F64,
+    "f32": data_types.F32,
+    "f64": data_types.F64,
+}
+
+def type_from_demangled_param(param):
+    if isinstance(param, demangle.FuncParam):
+        return None
+    elif isinstance(param, demangle.ArrayParam):
+        return None
+        
+    type = data_types.builtin_from(param.name)
+    if not type:
+        integer_key = (param.name, param.is_unsigned, param.is_signed)
+        if integer_key in integer_types:
+            type = integer_types[integer_key]
+        elif param.name in type_map:
+            type = type_map[param.name]
+        elif not demangle.is_builtin_type(param.name):
+            type = NamedType(name = param.name)
+        else:
+            return None
+
+    if param.is_const:
+        type = ConstType(of=type)
+    for _ in range(param.pointer_lvl):
+        type = PointerType(of=type)
+    if param.is_ref:
+        type = ReferenceType(of=type)
+    return type
+
+def nameCollision(context, label_collisions, reference_collisions, parent_name, symbol):
     if label_collisions[symbol.identifier.label] > 1 or reference_collisions[symbol.identifier.reference] > 1:
         obj_prefix = parent_name.replace(
             "/", "_").replace(".", "_").replace("-", "_")
@@ -38,11 +90,74 @@ def nameCollision(label_collisions, reference_collisions, parent_name, symbol):
         #else:
         symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
 
-def nameFix(label_collisions, reference_collisions, symbol):
+
+special_func_return_types = {
+    'ct': None,
+    'dt': None,
+
+    'eq': data_types.BOOL,
+    'ne': data_types.BOOL,
+    'lt': data_types.BOOL,
+    'gt': data_types.BOOL,
+    'dla': data_types.VOID,
+    'nwa': data_types.VOID_PTR,
+    'dl': data_types.VOID,
+    'nw': data_types.VOID_PTR,
+}
+
+def nameFix(context, label_collisions, reference_collisions, symbol):
     util.escape_name(symbol.identifier)
 
+    if (symbol.identifier.name and 
+        (not "@" in symbol.identifier.name) and 
+        (not "<" in symbol.identifier.name) and 
+        (not ">" in symbol.identifier.name) and isinstance(symbol, Function)):
+        name = symbol.identifier.name
+        try:
+            p = demangle.ParseCtx(name)
+            p.demangle()
+
+            if len(p.to_str()) > 0 and p.to_str() != name:
+                types = [
+                    type_from_demangled_param(x)
+                    for x in p.demangled
+                ]
+                
+                valid = True
+                for type in types:
+                    if type == None:
+                        valid = False
+                        break
+
+                if valid:
+                    symbol.func_name = p.func_name
+                    symbol.class_name = p.class_name
+                    symbol.func_is_const = p.is_const
+                    symbol.special_func_name = p.special_func_name
+                    symbol.argument_types = [x for x in types if x != data_types.VOID]
+
+                    if symbol.special_func_name in special_func_return_types:
+                        return_type = special_func_return_types[symbol.special_func_name]
+                        if symbol.return_type:
+                            if return_type:
+                                context.warning(f"overriding function '{symbol.label}' return type from: '{symbol.return_type.type()}', to: {return_type.type()}")
+                            else:
+                                context.warning(f"discarding function '{symbol.label}' return type: '{symbol.return_type.type()}'")
+                            symbol.return_type = return_type
+                        else:
+                            symbol.return_type = return_type
+                else:
+                    context.warning(f"one of the demangled parameters could not be converted to data-type.")
+                    context.warning([ x[1] for x in zip(types, p.demangled) if not x[0] ])
+                        
+        except demangle.ParseError as e:
+            context.error(f"demangle error: '{name}' ({e}) {p.func_name}")
+            pass
+
+
+
+
     """
-    if type(symbol).__name__ == "Function" or isinstance(symbol, ReturnFunction):
         if symbol.name.demangled:
             parts = symbol.name.demangled.demangled
             demangled = symbol.name.demangled.to_str()
@@ -71,11 +186,11 @@ def nameFix(label_collisions, reference_collisions, symbol):
                     symbol.name.pointer_types = pointer_types
                     symbol.name.is_function = True
     """
-
+    """
     if isinstance(symbol, StaticLocalData):
-        nameFix(label_collisions, reference_collisions, symbol.value)
-        nameFix(label_collisions, reference_collisions, symbol.init_flag)
-
+        nameFix(context, label_collisions, reference_collisions, symbol.value)
+        nameFix(context, label_collisions, reference_collisions, symbol.init_flag)
+    """
     label_collisions[symbol.identifier.label] += 1
     reference_collisions[symbol.identifier.reference] += 1
 
@@ -87,12 +202,14 @@ def execute(context, libraries):
         for tu in lib.translation_units.values():
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
+                    """
                     if isinstance(symbol, StringBaseData):
                         tu.using_string_base = True
-                    nameFix(label_collisions, reference_collisions, symbol)
+                    """
+                    nameFix(context, label_collisions, reference_collisions, symbol)
 
     for lib in libraries:
         for tu in lib.translation_units.values():
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
-                    nameCollision(label_collisions, reference_collisions, tu.name, symbol)
+                    nameCollision(context, label_collisions, reference_collisions, tu.name, symbol)

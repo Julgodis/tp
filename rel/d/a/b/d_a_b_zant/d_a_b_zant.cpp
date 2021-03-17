@@ -6,110 +6,274 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct dCcD_Sph;
+struct dCcD_GObjInf;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct daB_ZANT_c;
+
+struct daB_ZANT_HIO_c {
+	daB_ZANT_HIO_c();
+	~daB_ZANT_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daB_ZANT_c {
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void draw();
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void setActionMode(s32, s32);
+	void checkBigDamage();
+	void checkDamageType();
+	void setDamageSe(dCcD_Sph*, s32);
+	void damage_check();
+	void ice_damage_check();
+	void setNextDamageMode(s32);
+	void checkAvoidWeapon(s32);
+	void setTgHitBit(s32);
+	void setCoHitBit(s32);
+	void setTgShield(s32);
+	void setTgType(u32);
+	void setZantMessage(s32);
+	void doZantMessage();
+	void setIceLandingEffect(s32);
+	void setWaterBubble();
+	void setMonkeyFallEffect();
+	void setLastRollEffect();
+	void getMagicSpeed();
+	void getMagicWaterSpeed();
+	void executeSmallAttack();
+	void calcScale(s32);
+	void executeWarp();
+	void executeDamage();
+	void executeConfuse();
+	void executeOpening();
+	void executeFly();
+	void executeFlyGround();
+	void checkSwimLinkNearMouth();
+	void checkSwimLinkNear();
+	void executeHook();
+	void executeWater();
+	void executeSwim();
+	void executeSimaJump();
+	void executeIceDemo();
+	void executeIceJump();
+	void executeIceStep();
+	void executeIceDamage();
+	void setFarPillarPos();
+	void setNearPillarPos();
+	void setNextPillarInfo(s32);
+	void setNextPillarPos();
+	void checkPillarSwing();
+	void executeMonkey();
+	void executeMonkeyFall();
+	void executeMonkeyDamage();
+	void setLastWarp(s32, s32);
+	void executeLastStartDemo();
+	void executeLastAttack();
+	void executeLastTired();
+	void executeLastDamage();
+	void executeLastEndDemo();
+	void calcMahojinAnime();
+	void calcRoomChangeCamera(s32);
+	void initNextRoom();
+	void executeRoomChange();
+	void setBaseActionMode(s32);
+	void action();
+	void mtx_set();
+	void cc_set();
+	void cc_ice_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dCcD_Sph {
+	void operator=(dCcD_Sph const&);
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct dCcD_GObjInf {
+	void operator=(dCcD_GObjInf const&);
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjGndChk {
+	~dBgS_ObjGndChk();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daB_ZANT_HIO_cFv();
-extern "C" extern void ctrlJoint__10daB_ZANT_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__10daB_ZANT_cFP8J3DJointi();
-extern "C" extern void draw__10daB_ZANT_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daB_ZANT_Draw__FP10daB_ZANT_c();
-extern "C" extern void setBck__10daB_ZANT_cFiUcff();
-extern "C" extern void checkBck__10daB_ZANT_cFi();
-extern "C" extern void setActionMode__10daB_ZANT_cFii();
-extern "C" extern void checkBigDamage__10daB_ZANT_cFv();
-extern "C" extern void checkDamageType__10daB_ZANT_cFv();
-extern "C" extern void setDamageSe__10daB_ZANT_cFP8dCcD_Sphi();
-extern "C" extern void damage_check__10daB_ZANT_cFv();
-extern "C" extern void __as__8dCcD_SphFRC8dCcD_Sph();
-extern "C" extern void __as__12dCcD_GObjInfFRC12dCcD_GObjInf();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void ice_damage_check__10daB_ZANT_cFv();
-extern "C" extern void setNextDamageMode__10daB_ZANT_cFi();
-extern "C" extern void s_obj_sub__FPvPv();
-extern "C" extern void checkAvoidWeapon__10daB_ZANT_cFi();
-extern "C" extern void setTgHitBit__10daB_ZANT_cFi();
-extern "C" extern void setCoHitBit__10daB_ZANT_cFi();
-extern "C" extern void setTgShield__10daB_ZANT_cFi();
-extern "C" extern void setTgType__10daB_ZANT_cFUl();
-extern "C" extern void setZantMessage__10daB_ZANT_cFi();
-extern "C" extern void doZantMessage__10daB_ZANT_cFv();
-extern "C" extern void setIceLandingEffect__10daB_ZANT_cFi();
-extern "C" extern void setWaterBubble__10daB_ZANT_cFv();
-extern "C" extern void setMonkeyFallEffect__10daB_ZANT_cFv();
-extern "C" extern void setLastRollEffect__10daB_ZANT_cFv();
-extern "C" extern void s_pillar_sub__FPvPv();
-extern "C" extern void getMagicSpeed__10daB_ZANT_cFv();
-extern "C" extern void getMagicWaterSpeed__10daB_ZANT_cFv();
-extern "C" extern void executeSmallAttack__10daB_ZANT_cFv();
-extern "C" extern void calcScale__10daB_ZANT_cFi();
-extern "C" extern void executeWarp__10daB_ZANT_cFv();
-extern "C" extern void __dt__14dBgS_ObjGndChkFv();
-extern "C" extern void executeDamage__10daB_ZANT_cFv();
-extern "C" extern void executeConfuse__10daB_ZANT_cFv();
-extern "C" extern void executeOpening__10daB_ZANT_cFv();
-extern "C" extern void executeFly__10daB_ZANT_cFv();
-extern "C" extern void executeFlyGround__10daB_ZANT_cFv();
-extern "C" extern void checkSwimLinkNearMouth__10daB_ZANT_cFv();
-extern "C" extern void checkSwimLinkNear__10daB_ZANT_cFv();
-extern "C" extern void executeHook__10daB_ZANT_cFv();
-extern "C" extern void executeWater__10daB_ZANT_cFv();
-extern "C" extern void executeSwim__10daB_ZANT_cFv();
-extern "C" extern void executeSimaJump__10daB_ZANT_cFv();
-extern "C" extern void executeIceDemo__10daB_ZANT_cFv();
-extern "C" extern void executeIceJump__10daB_ZANT_cFv();
-extern "C" extern void executeIceStep__10daB_ZANT_cFv();
-extern "C" extern void executeIceDamage__10daB_ZANT_cFv();
-extern "C" extern void setFarPillarPos__10daB_ZANT_cFv();
-extern "C" extern void setNearPillarPos__10daB_ZANT_cFv();
-extern "C" extern void setNextPillarInfo__10daB_ZANT_cFi();
-extern "C" extern void setNextPillarPos__10daB_ZANT_cFv();
-extern "C" extern void checkPillarSwing__10daB_ZANT_cFv();
-extern "C" extern void executeMonkey__10daB_ZANT_cFv();
-extern "C" extern void executeMonkeyFall__10daB_ZANT_cFv();
-extern "C" extern void executeMonkeyDamage__10daB_ZANT_cFv();
-extern "C" extern void setLastWarp__10daB_ZANT_cFii();
-extern "C" extern void executeLastStartDemo__10daB_ZANT_cFv();
-extern "C" extern void executeLastAttack__10daB_ZANT_cFv();
-extern "C" extern void executeLastTired__10daB_ZANT_cFv();
-extern "C" extern void executeLastDamage__10daB_ZANT_cFv();
-extern "C" extern void s_del_tp__FPvPv();
-extern "C" extern void executeLastEndDemo__10daB_ZANT_cFv();
-extern "C" extern void calcMahojinAnime__10daB_ZANT_cFv();
-extern "C" extern void calcRoomChangeCamera__10daB_ZANT_cFi();
-extern "C" extern void initNextRoom__10daB_ZANT_cFv();
-extern "C" extern void executeRoomChange__10daB_ZANT_cFv();
-extern "C" extern void setBaseActionMode__10daB_ZANT_cFi();
-extern "C" extern void action__10daB_ZANT_cFv();
-extern "C" extern void mtx_set__10daB_ZANT_cFv();
-extern "C" extern void cc_set__10daB_ZANT_cFv();
-extern "C" extern void cc_ice_set__10daB_ZANT_cFv();
-extern "C" extern void execute__10daB_ZANT_cFv();
-extern "C" extern void daB_ZANT_Execute__FP10daB_ZANT_c();
-extern "C" extern void daB_ZANT_IsDelete__FP10daB_ZANT_c();
-extern "C" extern void _delete__10daB_ZANT_cFv();
-extern "C" extern void daB_ZANT_Delete__FP10daB_ZANT_c();
-extern "C" extern void CreateHeap__10daB_ZANT_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__10daB_ZANT_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void daB_ZANT_Create__FP10daB_ZANT_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__14daB_ZANT_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_zant_cpp();
-extern "C" extern void func_8064EAE0();
-extern "C" extern void func_8064EAE8();
-extern "C" extern void func_8064EAF0();
-extern "C" extern void func_8064EAF8();
-extern "C" extern void func_8064EB00();
+void daB_ZANT_Draw(daB_ZANT_c*);
+void s_obj_sub(void*, void*);
+void s_pillar_sub(void*, void*);
+void s_del_tp(void*, void*);
+void daB_ZANT_Execute(daB_ZANT_c*);
+bool daB_ZANT_IsDelete(daB_ZANT_c*);
+void daB_ZANT_Delete(daB_ZANT_c*);
+void useHeapInit(fopAc_ac_c*);
+void daB_ZANT_Create(daB_ZANT_c*);
+extern "C" void __sinit_d_a_b_zant_cpp();
+extern "C" void func_8064EAE0();
+extern "C" void func_8064EAE8();
+extern "C" void func_8064EAF0();
+extern "C" void func_8064EAF8();
+extern "C" void func_8064EB00();
+
+extern "C" void __ct__14daB_ZANT_HIO_cFv();
+extern "C" void ctrlJoint__10daB_ZANT_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__10daB_ZANT_cFP8J3DJointi();
+extern "C" void draw__10daB_ZANT_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daB_ZANT_Draw__FP10daB_ZANT_c();
+extern "C" void setBck__10daB_ZANT_cFiUcff();
+extern "C" void checkBck__10daB_ZANT_cFi();
+extern "C" void setActionMode__10daB_ZANT_cFii();
+extern "C" void checkBigDamage__10daB_ZANT_cFv();
+extern "C" void checkDamageType__10daB_ZANT_cFv();
+extern "C" void setDamageSe__10daB_ZANT_cFP8dCcD_Sphi();
+extern "C" void damage_check__10daB_ZANT_cFv();
+extern "C" void __as__8dCcD_SphFRC8dCcD_Sph();
+extern "C" void __as__12dCcD_GObjInfFRC12dCcD_GObjInf();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void ice_damage_check__10daB_ZANT_cFv();
+extern "C" void setNextDamageMode__10daB_ZANT_cFi();
+extern "C" void s_obj_sub__FPvPv();
+extern "C" void checkAvoidWeapon__10daB_ZANT_cFi();
+extern "C" void setTgHitBit__10daB_ZANT_cFi();
+extern "C" void setCoHitBit__10daB_ZANT_cFi();
+extern "C" void setTgShield__10daB_ZANT_cFi();
+extern "C" void setTgType__10daB_ZANT_cFUl();
+extern "C" void setZantMessage__10daB_ZANT_cFi();
+extern "C" void doZantMessage__10daB_ZANT_cFv();
+extern "C" void setIceLandingEffect__10daB_ZANT_cFi();
+extern "C" void setWaterBubble__10daB_ZANT_cFv();
+extern "C" void setMonkeyFallEffect__10daB_ZANT_cFv();
+extern "C" void setLastRollEffect__10daB_ZANT_cFv();
+extern "C" void s_pillar_sub__FPvPv();
+extern "C" void getMagicSpeed__10daB_ZANT_cFv();
+extern "C" void getMagicWaterSpeed__10daB_ZANT_cFv();
+extern "C" void executeSmallAttack__10daB_ZANT_cFv();
+extern "C" void calcScale__10daB_ZANT_cFi();
+extern "C" void executeWarp__10daB_ZANT_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void executeDamage__10daB_ZANT_cFv();
+extern "C" void executeConfuse__10daB_ZANT_cFv();
+extern "C" void executeOpening__10daB_ZANT_cFv();
+extern "C" void executeFly__10daB_ZANT_cFv();
+extern "C" void executeFlyGround__10daB_ZANT_cFv();
+extern "C" void checkSwimLinkNearMouth__10daB_ZANT_cFv();
+extern "C" void checkSwimLinkNear__10daB_ZANT_cFv();
+extern "C" void executeHook__10daB_ZANT_cFv();
+extern "C" void executeWater__10daB_ZANT_cFv();
+extern "C" void executeSwim__10daB_ZANT_cFv();
+extern "C" void executeSimaJump__10daB_ZANT_cFv();
+extern "C" void executeIceDemo__10daB_ZANT_cFv();
+extern "C" void executeIceJump__10daB_ZANT_cFv();
+extern "C" void executeIceStep__10daB_ZANT_cFv();
+extern "C" void executeIceDamage__10daB_ZANT_cFv();
+extern "C" void setFarPillarPos__10daB_ZANT_cFv();
+extern "C" void setNearPillarPos__10daB_ZANT_cFv();
+extern "C" void setNextPillarInfo__10daB_ZANT_cFi();
+extern "C" void setNextPillarPos__10daB_ZANT_cFv();
+extern "C" void checkPillarSwing__10daB_ZANT_cFv();
+extern "C" void executeMonkey__10daB_ZANT_cFv();
+extern "C" void executeMonkeyFall__10daB_ZANT_cFv();
+extern "C" void executeMonkeyDamage__10daB_ZANT_cFv();
+extern "C" void setLastWarp__10daB_ZANT_cFii();
+extern "C" void executeLastStartDemo__10daB_ZANT_cFv();
+extern "C" void executeLastAttack__10daB_ZANT_cFv();
+extern "C" void executeLastTired__10daB_ZANT_cFv();
+extern "C" void executeLastDamage__10daB_ZANT_cFv();
+extern "C" void s_del_tp__FPvPv();
+extern "C" void executeLastEndDemo__10daB_ZANT_cFv();
+extern "C" void calcMahojinAnime__10daB_ZANT_cFv();
+extern "C" void calcRoomChangeCamera__10daB_ZANT_cFi();
+extern "C" void initNextRoom__10daB_ZANT_cFv();
+extern "C" void executeRoomChange__10daB_ZANT_cFv();
+extern "C" void setBaseActionMode__10daB_ZANT_cFi();
+extern "C" void action__10daB_ZANT_cFv();
+extern "C" void mtx_set__10daB_ZANT_cFv();
+extern "C" void cc_set__10daB_ZANT_cFv();
+extern "C" void cc_ice_set__10daB_ZANT_cFv();
+extern "C" void execute__10daB_ZANT_cFv();
+extern "C" void daB_ZANT_Execute__FP10daB_ZANT_c();
+extern "C" bool daB_ZANT_IsDelete__FP10daB_ZANT_c();
+extern "C" void _delete__10daB_ZANT_cFv();
+extern "C" void daB_ZANT_Delete__FP10daB_ZANT_c();
+extern "C" void CreateHeap__10daB_ZANT_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__10daB_ZANT_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void daB_ZANT_Create__FP10daB_ZANT_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__14daB_ZANT_HIO_cFv();
+extern "C" void __sinit_d_a_b_zant_cpp();
+extern "C" void func_8064EAE0();
+extern "C" void func_8064EAE8();
+extern "C" void func_8064EAF0();
+extern "C" void func_8064EAF8();
+extern "C" void func_8064EB00();
 SECTION_RODATA extern const u8 lit_3757[12];
 SECTION_RODATA extern const u32 lit_4169;
 SECTION_RODATA extern const u32 lit_4170;
@@ -382,8 +546,11 @@ SECTION_BSS extern u8 data_8064F6F8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -393,7 +560,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daB_ZANT_HIO_cFv) {
+asm daB_ZANT_HIO_c::daB_ZANT_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__ct__14daB_ZANT_HIO_cFv.s"
 }
@@ -404,7 +571,7 @@ ASM_FUNCTION(__ct__14daB_ZANT_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__10daB_ZANT_cFP8J3DJointP8J3DModel) {
+asm void daB_ZANT_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/ctrlJoint__10daB_ZANT_cFP8J3DJointP8J3DModel.s"
 }
@@ -415,7 +582,7 @@ ASM_FUNCTION(ctrlJoint__10daB_ZANT_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__10daB_ZANT_cFP8J3DJointi) {
+asm void daB_ZANT_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/JointCallBack__10daB_ZANT_cFP8J3DJointi.s"
 }
@@ -426,7 +593,7 @@ ASM_FUNCTION(JointCallBack__10daB_ZANT_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/draw__10daB_ZANT_cFv.s"
 }
@@ -437,7 +604,7 @@ ASM_FUNCTION(draw__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__4cXyzFv.s"
 }
@@ -448,7 +615,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANT_Draw__FP10daB_ZANT_c) {
+asm void daB_ZANT_Draw(daB_ZANT_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_Draw__FP10daB_ZANT_c.s"
 }
@@ -459,7 +626,7 @@ ASM_FUNCTION(daB_ZANT_Draw__FP10daB_ZANT_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__10daB_ZANT_cFiUcff) {
+asm void daB_ZANT_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setBck__10daB_ZANT_cFiUcff.s"
 }
@@ -470,7 +637,7 @@ ASM_FUNCTION(setBck__10daB_ZANT_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkBck__10daB_ZANT_cFi.s"
 }
@@ -481,7 +648,7 @@ ASM_FUNCTION(checkBck__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__10daB_ZANT_cFii) {
+asm void daB_ZANT_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setActionMode__10daB_ZANT_cFii.s"
 }
@@ -492,7 +659,7 @@ ASM_FUNCTION(setActionMode__10daB_ZANT_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBigDamage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::checkBigDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkBigDamage__10daB_ZANT_cFv.s"
 }
@@ -503,7 +670,7 @@ ASM_FUNCTION(checkBigDamage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkDamageType__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::checkDamageType() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkDamageType__10daB_ZANT_cFv.s"
 }
@@ -514,7 +681,7 @@ ASM_FUNCTION(checkDamageType__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDamageSe__10daB_ZANT_cFP8dCcD_Sphi) {
+asm void daB_ZANT_c::setDamageSe(dCcD_Sph* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setDamageSe__10daB_ZANT_cFP8dCcD_Sphi.s"
 }
@@ -525,7 +692,7 @@ ASM_FUNCTION(setDamageSe__10daB_ZANT_cFP8dCcD_Sphi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/damage_check__10daB_ZANT_cFv.s"
 }
@@ -536,7 +703,7 @@ ASM_FUNCTION(damage_check__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__8dCcD_SphFRC8dCcD_Sph) {
+asm void dCcD_Sph::operator=(dCcD_Sph const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__as__8dCcD_SphFRC8dCcD_Sph.s"
 }
@@ -547,7 +714,7 @@ ASM_FUNCTION(__as__8dCcD_SphFRC8dCcD_Sph) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__12dCcD_GObjInfFRC12dCcD_GObjInf) {
+asm void dCcD_GObjInf::operator=(dCcD_GObjInf const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__as__12dCcD_GObjInfFRC12dCcD_GObjInf.s"
 }
@@ -558,7 +725,7 @@ ASM_FUNCTION(__as__12dCcD_GObjInfFRC12dCcD_GObjInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__8dCcD_SphFv.s"
 }
@@ -569,7 +736,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__8cM3dGSphFv.s"
 }
@@ -580,7 +747,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__8cM3dGAabFv.s"
 }
@@ -591,7 +758,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ice_damage_check__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::ice_damage_check() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/ice_damage_check__10daB_ZANT_cFv.s"
 }
@@ -602,7 +769,7 @@ ASM_FUNCTION(ice_damage_check__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextDamageMode__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setNextDamageMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setNextDamageMode__10daB_ZANT_cFi.s"
 }
@@ -613,7 +780,7 @@ ASM_FUNCTION(setNextDamageMode__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_sub__FPvPv) {
+asm void s_obj_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/s_obj_sub__FPvPv.s"
 }
@@ -624,7 +791,7 @@ ASM_FUNCTION(s_obj_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAvoidWeapon__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::checkAvoidWeapon(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkAvoidWeapon__10daB_ZANT_cFi.s"
 }
@@ -635,7 +802,7 @@ ASM_FUNCTION(checkAvoidWeapon__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgHitBit__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setTgHitBit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setTgHitBit__10daB_ZANT_cFi.s"
 }
@@ -646,7 +813,7 @@ ASM_FUNCTION(setTgHitBit__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCoHitBit__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setCoHitBit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setCoHitBit__10daB_ZANT_cFi.s"
 }
@@ -657,7 +824,7 @@ ASM_FUNCTION(setCoHitBit__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgShield__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setTgShield(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setTgShield__10daB_ZANT_cFi.s"
 }
@@ -668,7 +835,7 @@ ASM_FUNCTION(setTgShield__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgType__10daB_ZANT_cFUl) {
+asm void daB_ZANT_c::setTgType(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setTgType__10daB_ZANT_cFUl.s"
 }
@@ -679,7 +846,7 @@ ASM_FUNCTION(setTgType__10daB_ZANT_cFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setZantMessage__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setZantMessage(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setZantMessage__10daB_ZANT_cFi.s"
 }
@@ -690,7 +857,7 @@ ASM_FUNCTION(setZantMessage__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doZantMessage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::doZantMessage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/doZantMessage__10daB_ZANT_cFv.s"
 }
@@ -701,7 +868,7 @@ ASM_FUNCTION(doZantMessage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIceLandingEffect__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setIceLandingEffect(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setIceLandingEffect__10daB_ZANT_cFi.s"
 }
@@ -712,7 +879,7 @@ ASM_FUNCTION(setIceLandingEffect__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterBubble__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setWaterBubble() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setWaterBubble__10daB_ZANT_cFv.s"
 }
@@ -723,7 +890,7 @@ ASM_FUNCTION(setWaterBubble__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMonkeyFallEffect__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setMonkeyFallEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setMonkeyFallEffect__10daB_ZANT_cFv.s"
 }
@@ -734,7 +901,7 @@ ASM_FUNCTION(setMonkeyFallEffect__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLastRollEffect__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setLastRollEffect() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setLastRollEffect__10daB_ZANT_cFv.s"
 }
@@ -745,7 +912,7 @@ ASM_FUNCTION(setLastRollEffect__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_pillar_sub__FPvPv) {
+asm void s_pillar_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/s_pillar_sub__FPvPv.s"
 }
@@ -756,7 +923,7 @@ ASM_FUNCTION(s_pillar_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMagicSpeed__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::getMagicSpeed() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/getMagicSpeed__10daB_ZANT_cFv.s"
 }
@@ -767,7 +934,7 @@ ASM_FUNCTION(getMagicSpeed__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMagicWaterSpeed__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::getMagicWaterSpeed() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/getMagicWaterSpeed__10daB_ZANT_cFv.s"
 }
@@ -778,7 +945,7 @@ ASM_FUNCTION(getMagicWaterSpeed__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSmallAttack__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeSmallAttack() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeSmallAttack__10daB_ZANT_cFv.s"
 }
@@ -789,7 +956,7 @@ ASM_FUNCTION(executeSmallAttack__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcScale__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::calcScale(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/calcScale__10daB_ZANT_cFi.s"
 }
@@ -800,7 +967,7 @@ ASM_FUNCTION(calcScale__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWarp__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeWarp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeWarp__10daB_ZANT_cFv.s"
 }
@@ -811,7 +978,7 @@ ASM_FUNCTION(executeWarp__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
+asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__14dBgS_ObjGndChkFv.s"
 }
@@ -822,7 +989,7 @@ ASM_FUNCTION(__dt__14dBgS_ObjGndChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeDamage__10daB_ZANT_cFv.s"
 }
@@ -833,7 +1000,7 @@ ASM_FUNCTION(executeDamage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeConfuse__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeConfuse() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeConfuse__10daB_ZANT_cFv.s"
 }
@@ -844,7 +1011,7 @@ ASM_FUNCTION(executeConfuse__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeOpening__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeOpening() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeOpening__10daB_ZANT_cFv.s"
 }
@@ -855,7 +1022,7 @@ ASM_FUNCTION(executeOpening__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFly__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeFly() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeFly__10daB_ZANT_cFv.s"
 }
@@ -866,7 +1033,7 @@ ASM_FUNCTION(executeFly__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeFlyGround__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeFlyGround() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeFlyGround__10daB_ZANT_cFv.s"
 }
@@ -877,7 +1044,7 @@ ASM_FUNCTION(executeFlyGround__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSwimLinkNearMouth__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::checkSwimLinkNearMouth() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkSwimLinkNearMouth__10daB_ZANT_cFv.s"
 }
@@ -888,7 +1055,7 @@ ASM_FUNCTION(checkSwimLinkNearMouth__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSwimLinkNear__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::checkSwimLinkNear() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkSwimLinkNear__10daB_ZANT_cFv.s"
 }
@@ -899,7 +1066,7 @@ ASM_FUNCTION(checkSwimLinkNear__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeHook__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeHook() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeHook__10daB_ZANT_cFv.s"
 }
@@ -910,7 +1077,7 @@ ASM_FUNCTION(executeHook__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWater__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeWater() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeWater__10daB_ZANT_cFv.s"
 }
@@ -921,7 +1088,7 @@ ASM_FUNCTION(executeWater__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSwim__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeSwim() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeSwim__10daB_ZANT_cFv.s"
 }
@@ -932,7 +1099,7 @@ ASM_FUNCTION(executeSwim__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeSimaJump__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeSimaJump() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeSimaJump__10daB_ZANT_cFv.s"
 }
@@ -943,7 +1110,7 @@ ASM_FUNCTION(executeSimaJump__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeIceDemo__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeIceDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeIceDemo__10daB_ZANT_cFv.s"
 }
@@ -954,7 +1121,7 @@ ASM_FUNCTION(executeIceDemo__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeIceJump__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeIceJump() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeIceJump__10daB_ZANT_cFv.s"
 }
@@ -965,7 +1132,7 @@ ASM_FUNCTION(executeIceJump__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeIceStep__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeIceStep() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeIceStep__10daB_ZANT_cFv.s"
 }
@@ -976,7 +1143,7 @@ ASM_FUNCTION(executeIceStep__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeIceDamage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeIceDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeIceDamage__10daB_ZANT_cFv.s"
 }
@@ -987,7 +1154,7 @@ ASM_FUNCTION(executeIceDamage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFarPillarPos__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setFarPillarPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setFarPillarPos__10daB_ZANT_cFv.s"
 }
@@ -998,7 +1165,7 @@ ASM_FUNCTION(setFarPillarPos__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNearPillarPos__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setNearPillarPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setNearPillarPos__10daB_ZANT_cFv.s"
 }
@@ -1009,7 +1176,7 @@ ASM_FUNCTION(setNearPillarPos__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPillarInfo__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setNextPillarInfo(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setNextPillarInfo__10daB_ZANT_cFi.s"
 }
@@ -1020,7 +1187,7 @@ ASM_FUNCTION(setNextPillarInfo__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNextPillarPos__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::setNextPillarPos() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setNextPillarPos__10daB_ZANT_cFv.s"
 }
@@ -1031,7 +1198,7 @@ ASM_FUNCTION(setNextPillarPos__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkPillarSwing__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::checkPillarSwing() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/checkPillarSwing__10daB_ZANT_cFv.s"
 }
@@ -1042,7 +1209,7 @@ ASM_FUNCTION(checkPillarSwing__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeMonkey__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeMonkey() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeMonkey__10daB_ZANT_cFv.s"
 }
@@ -1053,7 +1220,7 @@ ASM_FUNCTION(executeMonkey__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeMonkeyFall__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeMonkeyFall() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeMonkeyFall__10daB_ZANT_cFv.s"
 }
@@ -1064,7 +1231,7 @@ ASM_FUNCTION(executeMonkeyFall__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeMonkeyDamage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeMonkeyDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeMonkeyDamage__10daB_ZANT_cFv.s"
 }
@@ -1075,7 +1242,7 @@ ASM_FUNCTION(executeMonkeyDamage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLastWarp__10daB_ZANT_cFii) {
+asm void daB_ZANT_c::setLastWarp(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setLastWarp__10daB_ZANT_cFii.s"
 }
@@ -1086,7 +1253,7 @@ ASM_FUNCTION(setLastWarp__10daB_ZANT_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLastStartDemo__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeLastStartDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeLastStartDemo__10daB_ZANT_cFv.s"
 }
@@ -1097,7 +1264,7 @@ ASM_FUNCTION(executeLastStartDemo__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLastAttack__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeLastAttack() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeLastAttack__10daB_ZANT_cFv.s"
 }
@@ -1108,7 +1275,7 @@ ASM_FUNCTION(executeLastAttack__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLastTired__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeLastTired() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeLastTired__10daB_ZANT_cFv.s"
 }
@@ -1119,7 +1286,7 @@ ASM_FUNCTION(executeLastTired__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLastDamage__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeLastDamage() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeLastDamage__10daB_ZANT_cFv.s"
 }
@@ -1130,7 +1297,7 @@ ASM_FUNCTION(executeLastDamage__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_del_tp__FPvPv) {
+asm void s_del_tp(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/s_del_tp__FPvPv.s"
 }
@@ -1141,7 +1308,7 @@ ASM_FUNCTION(s_del_tp__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeLastEndDemo__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeLastEndDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeLastEndDemo__10daB_ZANT_cFv.s"
 }
@@ -1152,7 +1319,7 @@ ASM_FUNCTION(executeLastEndDemo__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcMahojinAnime__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::calcMahojinAnime() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/calcMahojinAnime__10daB_ZANT_cFv.s"
 }
@@ -1163,7 +1330,7 @@ ASM_FUNCTION(calcMahojinAnime__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcRoomChangeCamera__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::calcRoomChangeCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/calcRoomChangeCamera__10daB_ZANT_cFi.s"
 }
@@ -1174,7 +1341,7 @@ ASM_FUNCTION(calcRoomChangeCamera__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initNextRoom__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::initNextRoom() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/initNextRoom__10daB_ZANT_cFv.s"
 }
@@ -1185,7 +1352,7 @@ ASM_FUNCTION(initNextRoom__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeRoomChange__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::executeRoomChange() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/executeRoomChange__10daB_ZANT_cFv.s"
 }
@@ -1196,7 +1363,7 @@ ASM_FUNCTION(executeRoomChange__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseActionMode__10daB_ZANT_cFi) {
+asm void daB_ZANT_c::setBaseActionMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/setBaseActionMode__10daB_ZANT_cFi.s"
 }
@@ -1207,7 +1374,7 @@ ASM_FUNCTION(setBaseActionMode__10daB_ZANT_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/action__10daB_ZANT_cFv.s"
 }
@@ -1218,7 +1385,7 @@ ASM_FUNCTION(action__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/mtx_set__10daB_ZANT_cFv.s"
 }
@@ -1229,7 +1396,7 @@ ASM_FUNCTION(mtx_set__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/cc_set__10daB_ZANT_cFv.s"
 }
@@ -1240,7 +1407,7 @@ ASM_FUNCTION(cc_set__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_ice_set__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::cc_ice_set() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/cc_ice_set__10daB_ZANT_cFv.s"
 }
@@ -1251,7 +1418,7 @@ ASM_FUNCTION(cc_ice_set__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/execute__10daB_ZANT_cFv.s"
 }
@@ -1262,7 +1429,7 @@ ASM_FUNCTION(execute__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANT_Execute__FP10daB_ZANT_c) {
+asm void daB_ZANT_Execute(daB_ZANT_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_Execute__FP10daB_ZANT_c.s"
 }
@@ -1270,21 +1437,16 @@ ASM_FUNCTION(daB_ZANT_Execute__FP10daB_ZANT_c) {
 
 
 /* 8064DB68-8064DB70 0008+00 .text      daB_ZANT_IsDelete__FP10daB_ZANT_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANT_IsDelete__FP10daB_ZANT_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_IsDelete__FP10daB_ZANT_c.s"
+bool daB_ZANT_IsDelete(daB_ZANT_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8064DB70-8064DBE4 0074+00 .text      _delete__10daB_ZANT_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/_delete__10daB_ZANT_cFv.s"
 }
@@ -1295,7 +1457,7 @@ ASM_FUNCTION(_delete__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANT_Delete__FP10daB_ZANT_c) {
+asm void daB_ZANT_Delete(daB_ZANT_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_Delete__FP10daB_ZANT_c.s"
 }
@@ -1306,7 +1468,7 @@ ASM_FUNCTION(daB_ZANT_Delete__FP10daB_ZANT_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/CreateHeap__10daB_ZANT_cFv.s"
 }
@@ -1317,7 +1479,7 @@ ASM_FUNCTION(CreateHeap__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1328,7 +1490,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -1339,7 +1501,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daB_ZANT_cFv) {
+asm void daB_ZANT_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/create__10daB_ZANT_cFv.s"
 }
@@ -1350,7 +1512,7 @@ ASM_FUNCTION(create__10daB_ZANT_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__8cM3dGCylFv.s"
 }
@@ -1361,7 +1523,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__ct__8dCcD_SphFv.s"
 }
@@ -1372,7 +1534,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__10dCcD_GSttsFv.s"
 }
@@ -1383,7 +1545,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1394,7 +1556,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1405,7 +1567,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_ZANT_Create__FP10daB_ZANT_c) {
+asm void daB_ZANT_Create(daB_ZANT_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_Create__FP10daB_ZANT_c.s"
 }
@@ -1416,7 +1578,7 @@ ASM_FUNCTION(daB_ZANT_Create__FP10daB_ZANT_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__10cCcD_GSttsFv.s"
 }
@@ -1427,7 +1589,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daB_ZANT_HIO_cFv) {
+asm daB_ZANT_HIO_c::~daB_ZANT_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__dt__14daB_ZANT_HIO_cFv.s"
 }
@@ -1438,7 +1600,7 @@ ASM_FUNCTION(__dt__14daB_ZANT_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_zant_cpp) {
+extern "C" asm void __sinit_d_a_b_zant_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/__sinit_d_a_b_zant_cpp.s"
 }
@@ -1449,7 +1611,7 @@ ASM_FUNCTION(__sinit_d_a_b_zant_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8064EAE0) {
+extern "C" asm void func_8064EAE0() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/func_8064EAE0.s"
 }
@@ -1460,7 +1622,7 @@ ASM_FUNCTION(func_8064EAE0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8064EAE8) {
+extern "C" asm void func_8064EAE8() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/func_8064EAE8.s"
 }
@@ -1471,7 +1633,7 @@ ASM_FUNCTION(func_8064EAE8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8064EAF0) {
+extern "C" asm void func_8064EAF0() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/func_8064EAF0.s"
 }
@@ -1482,7 +1644,7 @@ ASM_FUNCTION(func_8064EAF0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8064EAF8) {
+extern "C" asm void func_8064EAF8() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/func_8064EAF8.s"
 }
@@ -1493,7 +1655,7 @@ ASM_FUNCTION(func_8064EAF8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8064EB00) {
+extern "C" asm void func_8064EB00() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/func_8064EB00.s"
 }

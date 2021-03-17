@@ -6,46 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// build method_filter (method_filter) False/False
+/* top-level dependencies (begin method_filter) */
+/* top-level dependencies (end method_filter) */
+struct method_filter {
+};
+
+// build judge_filter (judge_filter) False/False
+/* top-level dependencies (begin judge_filter) */
+/* top-level dependencies (end judge_filter) */
+struct judge_filter {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopAcIt_Executor__FPFPvPv_iPv();
-extern "C" extern void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
 
 // 
 // External References:
 // 
 
-extern "C" extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern "C" extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+void cTgIt_MethodCall(create_tag_class*, method_filter*);
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
+
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
 SECTION_DATA extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 800197BC-800197F8 003C+00 .text      fopAcIt_Executor__FPFPvPv_iPv                                */
+/* 800197BC-800197F8 003C+00 rc=5 efc=5 .text      fopAcIt_Executor__FPFPvPv_iPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcIt_Executor__FPFPvPv_iPv) {
+extern "C" asm void fopAcIt_Executor__FPFPvPv_iPv() {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Executor__FPFPvPv_iPv.s"
 }
 #pragma pop
 
 
-/* 800197F8-80019834 003C+00 .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
+/* 800197F8-80019834 003C+00 rc=67 efc=67 .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcIt_Judge__FPFPvPv_PvPv) {
+extern "C" asm void fopAcIt_Judge__FPFPvPv_PvPv() {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Judge__FPFPvPv_PvPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

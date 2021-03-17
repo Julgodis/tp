@@ -6,18 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daAttp_c;
+
+struct daAttp_c {
+	void Create();
+	void create();
+	void execute();
+	bool draw();
+	bool _delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__8daAttp_cFv();
-extern "C" extern void create__8daAttp_cFv();
-extern "C" extern void execute__8daAttp_cFv();
-extern "C" extern void draw__8daAttp_cFv();
-extern "C" extern void _delete__8daAttp_cFv();
-extern "C" extern void daAttp_Draw__FP8daAttp_c();
-extern "C" extern void daAttp_Execute__FP8daAttp_c();
-extern "C" extern void daAttp_Delete__FP8daAttp_c();
-extern "C" extern void daAttp_Create__FP10fopAc_ac_c();
+void daAttp_Draw(daAttp_c*);
+void daAttp_Execute(daAttp_c*);
+void daAttp_Delete(daAttp_c*);
+void daAttp_Create(fopAc_ac_c*);
+
+extern "C" void Create__8daAttp_cFv();
+extern "C" void create__8daAttp_cFv();
+extern "C" void execute__8daAttp_cFv();
+extern "C" bool draw__8daAttp_cFv();
+extern "C" bool _delete__8daAttp_cFv();
+extern "C" void daAttp_Draw__FP8daAttp_c();
+extern "C" void daAttp_Execute__FP8daAttp_c();
+extern "C" void daAttp_Delete__FP8daAttp_c();
+extern "C" void daAttp_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 data_804D5724[2 + 2 /* padding */];
 SECTION_RODATA extern const u8 lit_3772[4];
 SECTION_DATA extern u8 lit_3773[32];
@@ -28,7 +51,9 @@ SECTION_DATA extern u8 g_profile_Tag_Attp[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -38,7 +63,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__8daAttp_cFv) {
+asm void daAttp_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/Create__8daAttp_cFv.s"
 }
@@ -49,7 +74,7 @@ ASM_FUNCTION(Create__8daAttp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daAttp_cFv) {
+asm void daAttp_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/func_804D5354.s"
 }
@@ -60,7 +85,7 @@ ASM_FUNCTION(create__8daAttp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daAttp_cFv) {
+asm void daAttp_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/execute__8daAttp_cFv.s"
 }
@@ -68,32 +93,22 @@ ASM_FUNCTION(execute__8daAttp_cFv) {
 
 
 /* 804D568C-804D5694 0008+00 .text      draw__8daAttp_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__8daAttp_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/draw__8daAttp_cFv.s"
+bool daAttp_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5694-804D569C 0008+00 .text      _delete__8daAttp_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__8daAttp_cFv) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/_delete__8daAttp_cFv.s"
+bool daAttp_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D569C-804D56BC 0020+00 .text      daAttp_Draw__FP8daAttp_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAttp_Draw__FP8daAttp_c) {
+asm void daAttp_Draw(daAttp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/daAttp_Draw__FP8daAttp_c.s"
 }
@@ -104,7 +119,7 @@ ASM_FUNCTION(daAttp_Draw__FP8daAttp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAttp_Execute__FP8daAttp_c) {
+asm void daAttp_Execute(daAttp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/daAttp_Execute__FP8daAttp_c.s"
 }
@@ -115,7 +130,7 @@ ASM_FUNCTION(daAttp_Execute__FP8daAttp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAttp_Delete__FP8daAttp_c) {
+asm void daAttp_Delete(daAttp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/daAttp_Delete__FP8daAttp_c.s"
 }
@@ -126,7 +141,7 @@ ASM_FUNCTION(daAttp_Delete__FP8daAttp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAttp_Create__FP10fopAc_ac_c) {
+asm void daAttp_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/daAttp_Create__FP10fopAc_ac_c.s"
 }

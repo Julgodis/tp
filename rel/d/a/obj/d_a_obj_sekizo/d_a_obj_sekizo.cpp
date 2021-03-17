@@ -6,24 +6,50 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObj_Sekizo_c {
+	void create();
+	void CreateHeap();
+	void Create();
+	void Delete();
+	void Draw();
+	void initBaseMtx();
+	void setBaseMtx();
+};
+
+struct daObj_Sekizo_Param_c {
+	~daObj_Sekizo_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create__14daObj_Sekizo_cFv();
-extern "C" extern void CreateHeap__14daObj_Sekizo_cFv();
-extern "C" extern void Create__14daObj_Sekizo_cFv();
-extern "C" extern void Delete__14daObj_Sekizo_cFv();
-extern "C" extern void Execute__14daObj_Sekizo_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObj_Sekizo_cFv();
-extern "C" extern void initBaseMtx__14daObj_Sekizo_cFv();
-extern "C" extern void setBaseMtx__14daObj_Sekizo_cFv();
-extern "C" extern void daObj_Sekizo_Create__FPv();
-extern "C" extern void daObj_Sekizo_Delete__FPv();
-extern "C" extern void daObj_Sekizo_Execute__FPv();
-extern "C" extern void daObj_Sekizo_Draw__FPv();
-extern "C" extern void daObj_Sekizo_IsDelete__FPv();
-extern "C" extern void __sinit_d_a_obj_sekizo_cpp();
-extern "C" extern void __dt__20daObj_Sekizo_Param_cFv();
+extern "C" void Execute__14daObj_Sekizo_cFPPA3_A4_f();
+void daObj_Sekizo_Create(void*);
+void daObj_Sekizo_Delete(void*);
+void daObj_Sekizo_Execute(void*);
+void daObj_Sekizo_Draw(void*);
+bool daObj_Sekizo_IsDelete(void*);
+extern "C" void __sinit_d_a_obj_sekizo_cpp();
+
+extern "C" void create__14daObj_Sekizo_cFv();
+extern "C" void CreateHeap__14daObj_Sekizo_cFv();
+extern "C" void Create__14daObj_Sekizo_cFv();
+extern "C" void Delete__14daObj_Sekizo_cFv();
+extern "C" void Execute__14daObj_Sekizo_cFPPA3_A4_f();
+extern "C" void Draw__14daObj_Sekizo_cFv();
+extern "C" void initBaseMtx__14daObj_Sekizo_cFv();
+extern "C" void setBaseMtx__14daObj_Sekizo_cFv();
+extern "C" void daObj_Sekizo_Create__FPv();
+extern "C" void daObj_Sekizo_Delete__FPv();
+extern "C" void daObj_Sekizo_Execute__FPv();
+extern "C" void daObj_Sekizo_Draw__FPv();
+extern "C" bool daObj_Sekizo_IsDelete__FPv();
+extern "C" void __sinit_d_a_obj_sekizo_cpp();
+extern "C" void __dt__20daObj_Sekizo_Param_cFv();
 SECTION_RODATA extern const u8 stringBase0[8];
 SECTION_DATA extern u8 cNullVec__6Z2Calc[12];
 SECTION_DATA extern u32 lit_1787;
@@ -42,8 +68,11 @@ SECTION_BSS extern u8 l_HIO[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -53,7 +82,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/create__14daObj_Sekizo_cFv.s"
 }
@@ -64,7 +93,7 @@ ASM_FUNCTION(create__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/CreateHeap__14daObj_Sekizo_cFv.s"
 }
@@ -75,7 +104,7 @@ ASM_FUNCTION(CreateHeap__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/func_80CCDD8C.s"
 }
@@ -86,7 +115,7 @@ ASM_FUNCTION(Create__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/Delete__14daObj_Sekizo_cFv.s"
 }
@@ -97,7 +126,7 @@ ASM_FUNCTION(Delete__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObj_Sekizo_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObj_Sekizo_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/Execute__14daObj_Sekizo_cFPPA3_A4_f.s"
 }
@@ -108,7 +137,7 @@ ASM_FUNCTION(Execute__14daObj_Sekizo_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/Draw__14daObj_Sekizo_cFv.s"
 }
@@ -119,7 +148,7 @@ ASM_FUNCTION(Draw__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/initBaseMtx__14daObj_Sekizo_cFv.s"
 }
@@ -130,7 +159,7 @@ ASM_FUNCTION(initBaseMtx__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObj_Sekizo_cFv) {
+asm void daObj_Sekizo_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/setBaseMtx__14daObj_Sekizo_cFv.s"
 }
@@ -141,7 +170,7 @@ ASM_FUNCTION(setBaseMtx__14daObj_Sekizo_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Sekizo_Create__FPv) {
+asm void daObj_Sekizo_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Create__FPv.s"
 }
@@ -152,7 +181,7 @@ ASM_FUNCTION(daObj_Sekizo_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Sekizo_Delete__FPv) {
+asm void daObj_Sekizo_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Delete__FPv.s"
 }
@@ -163,7 +192,7 @@ ASM_FUNCTION(daObj_Sekizo_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Sekizo_Execute__FPv) {
+asm void daObj_Sekizo_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Execute__FPv.s"
 }
@@ -174,7 +203,7 @@ ASM_FUNCTION(daObj_Sekizo_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Sekizo_Draw__FPv) {
+asm void daObj_Sekizo_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Draw__FPv.s"
 }
@@ -182,21 +211,16 @@ ASM_FUNCTION(daObj_Sekizo_Draw__FPv) {
 
 
 /* 80CCE0D0-80CCE0D8 0008+00 .text      daObj_Sekizo_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Sekizo_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_IsDelete__FPv.s"
+bool daObj_Sekizo_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CCE0D8-80CCE118 0040+00 .text      __sinit_d_a_obj_sekizo_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_sekizo_cpp) {
+extern "C" asm void __sinit_d_a_obj_sekizo_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/__sinit_d_a_obj_sekizo_cpp.s"
 }
@@ -207,7 +231,7 @@ ASM_FUNCTION(__sinit_d_a_obj_sekizo_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daObj_Sekizo_Param_cFv) {
+asm daObj_Sekizo_Param_c::~daObj_Sekizo_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/__dt__20daObj_Sekizo_Param_cFv.s"
 }

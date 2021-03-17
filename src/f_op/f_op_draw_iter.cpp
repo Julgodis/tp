@@ -6,17 +6,32 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build create_tag_class (create_tag_class) False/False
+/* top-level dependencies (begin create_tag_class) */
+/* top-level dependencies (end create_tag_class) */
+struct create_tag_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void fopDwIt_GetTag__Fv();
-extern "C" extern void fopDwIt_Begin__Fv();
-extern "C" extern void fopDwIt_Next__FP16create_tag_class();
+static void fopDwIt_GetTag();
+void fopDwIt_Begin();
+void fopDwIt_Next(create_tag_class*);
+
+extern "C" static void fopDwIt_GetTag__Fv();
+extern "C" void fopDwIt_Begin__Fv();
+extern "C" void fopDwIt_Next__FP16create_tag_class();
 SECTION_SBSS extern u8 l_fopDwTg_id[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
+
 
 SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 
@@ -25,40 +40,39 @@ SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 // 
 
 /* ############################################################################################## */
-/* 80450CF8-80450D00 0004+04 .sbss      l_fopDwTg_id                                                 */
+/* 80450CF8-80450D00 0004+04 rc=2 efc=0 .sbss      l_fopDwTg_id                                                 */
 u8 l_fopDwTg_id[4 + 4 /* padding */];
 
-/* 80020400-80020444 0044+00 .text      fopDwIt_GetTag__Fv                                           */
+/* 80020400-80020444 0044+00 rc=2 efc=0 .text      fopDwIt_GetTag__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwIt_GetTag__Fv) {
+asm static void fopDwIt_GetTag() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_GetTag__Fv.s"
 }
 #pragma pop
 
 
-/* 80020444-80020480 003C+00 .text      fopDwIt_Begin__Fv                                            */
+/* 80020444-80020480 003C+00 rc=1 efc=1 .text      fopDwIt_Begin__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwIt_Begin__Fv) {
+asm void fopDwIt_Begin() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_Begin__Fv.s"
 }
 #pragma pop
 
 
-/* 80020480-800204AC 002C+00 .text      fopDwIt_Next__FP16create_tag_class                           */
+/* 80020480-800204AC 002C+00 rc=1 efc=1 .text      fopDwIt_Next__FP16create_tag_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopDwIt_Next__FP16create_tag_class) {
+asm void fopDwIt_Next(create_tag_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_Next__FP16create_tag_class.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

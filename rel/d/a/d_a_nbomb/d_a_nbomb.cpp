@@ -6,66 +6,171 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daNbomb_c;
+struct dCcD_GObjInf;
+
+struct fopAc_ac_c {
+};
+
+struct daNbomb_c {
+	void coHitCallback(fopAc_ac_c*);
+	void tgHitCallback(dCcD_GObjInf*);
+	void searchEnemy(fopAc_ac_c*);
+	void createHeap();
+	void create();
+	daNbomb_c();
+	~daNbomb_c();
+	void checkTimerStop();
+	void checkExplode();
+	void setRoomInfo();
+	void setSmokePos();
+	void setEffect();
+	void setHookshotOffset();
+	void setFreeze();
+	void checkWaterIn();
+	void insectLineCheck();
+	void setHitPolygon(s32);
+	void procExplodeInit();
+	void procExplode();
+	void procCarryInit();
+	void procCarry();
+	void procWaitInit();
+	void procWait();
+	void procFlowerWaitInit();
+	void procFlowerWait();
+	void procBoomerangMoveInit(dCcD_GObjInf*);
+	void procBoomerangMove();
+	void procInsectMoveInit();
+	void procInsectMove();
+	void execute();
+	void draw();
+	void checkExplodeNow();
+	void deleteBombAndEffect();
+	void setCargoBombExplode();
+};
+
+struct dCcD_GObjInf {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_BombAcch {
+	~dBgS_BombAcch();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dBomb_c {
+	bool checkExplodeNow();
+	void deleteBombAndEffect();
+	void setCargoBombExplode();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void coHitCallback__9daNbomb_cFP10fopAc_ac_c();
-extern "C" extern void daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void tgHitCallback__9daNbomb_cFP12dCcD_GObjInf();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void daNbomb_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" extern void searchEnemy__9daNbomb_cFP10fopAc_ac_c();
-extern "C" extern void daNbomb_searchEnemy__FP10fopAc_ac_cPv();
-extern "C" extern void createHeap__9daNbomb_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daNbomb_createHeap__FP10fopAc_ac_c();
-extern "C" extern void create__9daNbomb_cFv();
-extern "C" extern void __ct__9daNbomb_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__13dBgS_BombAcchFv();
-extern "C" extern void daNbomb_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__9daNbomb_cFv();
-extern "C" extern void daNbomb_Delete__FP9daNbomb_c();
-extern "C" extern void checkTimerStop__9daNbomb_cFv();
-extern "C" extern void checkExplode__9daNbomb_cFv();
-extern "C" extern void setRoomInfo__9daNbomb_cFv();
-extern "C" extern void setSmokePos__9daNbomb_cFv();
-extern "C" extern void setEffect__9daNbomb_cFv();
-extern "C" extern void setHookshotOffset__9daNbomb_cFv();
-extern "C" extern void setFreeze__9daNbomb_cFv();
-extern "C" extern void checkWaterIn__9daNbomb_cFv();
-extern "C" extern void insectLineCheck__9daNbomb_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void setHitPolygon__9daNbomb_cFi();
-extern "C" extern void procExplodeInit__9daNbomb_cFv();
-extern "C" extern void procExplode__9daNbomb_cFv();
-extern "C" extern void procCarryInit__9daNbomb_cFv();
-extern "C" extern void procCarry__9daNbomb_cFv();
-extern "C" extern void procWaitInit__9daNbomb_cFv();
-extern "C" extern void procWait__9daNbomb_cFv();
-extern "C" extern void procFlowerWaitInit__9daNbomb_cFv();
-extern "C" extern void procFlowerWait__9daNbomb_cFv();
-extern "C" extern void procBoomerangMoveInit__9daNbomb_cFP12dCcD_GObjInf();
-extern "C" extern void procBoomerangMove__9daNbomb_cFv();
-extern "C" extern void procInsectMoveInit__9daNbomb_cFv();
-extern "C" extern void procInsectMove__9daNbomb_cFv();
-extern "C" extern void execute__9daNbomb_cFv();
-extern "C" extern void daNbomb_Execute__FP9daNbomb_c();
-extern "C" extern void draw__9daNbomb_cFv();
-extern "C" extern void daNbomb_Draw__FP9daNbomb_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_nbomb_cpp();
-extern "C" extern void func_804CC2B0();
-extern "C" extern void func_804CC2B8();
-extern "C" extern void checkExplodeNow__9daNbomb_cFv();
-extern "C" extern void deleteBombAndEffect__9daNbomb_cFv();
-extern "C" extern void setCargoBombExplode__9daNbomb_cFv();
-extern "C" extern void checkExplodeNow__7dBomb_cFv();
-extern "C" extern void deleteBombAndEffect__7dBomb_cFv();
-extern "C" extern void setCargoBombExplode__7dBomb_cFv();
+void daNbomb_coHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daNbomb_tgHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+void daNbomb_searchEnemy(fopAc_ac_c*, void*);
+void daNbomb_createHeap(fopAc_ac_c*);
+void daNbomb_Create(fopAc_ac_c*);
+void daNbomb_Delete(daNbomb_c*);
+void daNbomb_Execute(daNbomb_c*);
+void daNbomb_Draw(daNbomb_c*);
+extern "C" void __sinit_d_a_nbomb_cpp();
+extern "C" void func_804CC2B0();
+extern "C" void func_804CC2B8();
+
+extern "C" void coHitCallback__9daNbomb_cFP10fopAc_ac_c();
+extern "C" void daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void tgHitCallback__9daNbomb_cFP12dCcD_GObjInf();
+extern "C" void __dt__4cXyzFv();
+extern "C" void daNbomb_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void searchEnemy__9daNbomb_cFP10fopAc_ac_c();
+extern "C" void daNbomb_searchEnemy__FP10fopAc_ac_cPv();
+extern "C" void createHeap__9daNbomb_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daNbomb_createHeap__FP10fopAc_ac_c();
+extern "C" void create__9daNbomb_cFv();
+extern "C" void __ct__9daNbomb_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__13dBgS_BombAcchFv();
+extern "C" void daNbomb_Create__FP10fopAc_ac_c();
+extern "C" void __dt__9daNbomb_cFv();
+extern "C" void daNbomb_Delete__FP9daNbomb_c();
+extern "C" void checkTimerStop__9daNbomb_cFv();
+extern "C" void checkExplode__9daNbomb_cFv();
+extern "C" void setRoomInfo__9daNbomb_cFv();
+extern "C" void setSmokePos__9daNbomb_cFv();
+extern "C" void setEffect__9daNbomb_cFv();
+extern "C" void setHookshotOffset__9daNbomb_cFv();
+extern "C" void setFreeze__9daNbomb_cFv();
+extern "C" void checkWaterIn__9daNbomb_cFv();
+extern "C" void insectLineCheck__9daNbomb_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setHitPolygon__9daNbomb_cFi();
+extern "C" void procExplodeInit__9daNbomb_cFv();
+extern "C" void procExplode__9daNbomb_cFv();
+extern "C" void procCarryInit__9daNbomb_cFv();
+extern "C" void procCarry__9daNbomb_cFv();
+extern "C" void procWaitInit__9daNbomb_cFv();
+extern "C" void procWait__9daNbomb_cFv();
+extern "C" void procFlowerWaitInit__9daNbomb_cFv();
+extern "C" void procFlowerWait__9daNbomb_cFv();
+extern "C" void procBoomerangMoveInit__9daNbomb_cFP12dCcD_GObjInf();
+extern "C" void procBoomerangMove__9daNbomb_cFv();
+extern "C" void procInsectMoveInit__9daNbomb_cFv();
+extern "C" void procInsectMove__9daNbomb_cFv();
+extern "C" void execute__9daNbomb_cFv();
+extern "C" void daNbomb_Execute__FP9daNbomb_c();
+extern "C" void draw__9daNbomb_cFv();
+extern "C" void daNbomb_Draw__FP9daNbomb_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_nbomb_cpp();
+extern "C" void func_804CC2B0();
+extern "C" void func_804CC2B8();
+extern "C" void checkExplodeNow__9daNbomb_cFv();
+extern "C" void deleteBombAndEffect__9daNbomb_cFv();
+extern "C" void setCargoBombExplode__9daNbomb_cFv();
+extern "C" bool checkExplodeNow__7dBomb_cFv();
+extern "C" void deleteBombAndEffect__7dBomb_cFv();
+extern "C" void setCargoBombExplode__7dBomb_cFv();
 SECTION_RODATA extern const u8 lit_3767[12];
 SECTION_RODATA extern const u8 l_localCenterOffset[12];
 SECTION_RODATA extern const u8 l_arcNameBombF[6 + 2 /* padding */];
@@ -206,8 +311,11 @@ SECTION_BSS extern u8 data_804CC748[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -217,7 +325,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(coHitCallback__9daNbomb_cFP10fopAc_ac_c) {
+asm void daNbomb_c::coHitCallback(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/coHitCallback__9daNbomb_cFP10fopAc_ac_c.s"
 }
@@ -228,7 +336,7 @@ ASM_FUNCTION(coHitCallback__9daNbomb_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daNbomb_coHitCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -239,7 +347,7 @@ ASM_FUNCTION(daNbomb_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(tgHitCallback__9daNbomb_cFP12dCcD_GObjInf) {
+asm void daNbomb_c::tgHitCallback(dCcD_GObjInf* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/tgHitCallback__9daNbomb_cFP12dCcD_GObjInf.s"
 }
@@ -250,7 +358,7 @@ ASM_FUNCTION(tgHitCallback__9daNbomb_cFP12dCcD_GObjInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__4cXyzFv.s"
 }
@@ -261,7 +369,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf) {
+asm void daNbomb_tgHitCallback(fopAc_ac_c* field_0, dCcD_GObjInf* field_1, fopAc_ac_c* field_2, dCcD_GObjInf* field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf.s"
 }
@@ -272,7 +380,7 @@ ASM_FUNCTION(daNbomb_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(searchEnemy__9daNbomb_cFP10fopAc_ac_c) {
+asm void daNbomb_c::searchEnemy(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/searchEnemy__9daNbomb_cFP10fopAc_ac_c.s"
 }
@@ -283,7 +391,7 @@ ASM_FUNCTION(searchEnemy__9daNbomb_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_searchEnemy__FP10fopAc_ac_cPv) {
+asm void daNbomb_searchEnemy(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_searchEnemy__FP10fopAc_ac_cPv.s"
 }
@@ -294,7 +402,7 @@ ASM_FUNCTION(daNbomb_searchEnemy__FP10fopAc_ac_cPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__9daNbomb_cFv) {
+asm void daNbomb_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/createHeap__9daNbomb_cFv.s"
 }
@@ -305,7 +413,7 @@ ASM_FUNCTION(createHeap__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__12J3DFrameCtrlFv.s"
 }
@@ -316,7 +424,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_createHeap__FP10fopAc_ac_c) {
+asm void daNbomb_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_createHeap__FP10fopAc_ac_c.s"
 }
@@ -327,7 +435,7 @@ ASM_FUNCTION(daNbomb_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daNbomb_cFv) {
+asm void daNbomb_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/create__9daNbomb_cFv.s"
 }
@@ -338,7 +446,7 @@ ASM_FUNCTION(create__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9daNbomb_cFv) {
+asm daNbomb_c::daNbomb_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__ct__9daNbomb_cFv.s"
 }
@@ -349,7 +457,7 @@ ASM_FUNCTION(__ct__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__8cM3dGSphFv.s"
 }
@@ -360,7 +468,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__8cM3dGAabFv.s"
 }
@@ -371,7 +479,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__10dCcD_GSttsFv.s"
 }
@@ -382,7 +490,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__12dBgS_AcchCirFv.s"
 }
@@ -393,7 +501,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13dBgS_BombAcchFv) {
+asm dBgS_BombAcch::~dBgS_BombAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__13dBgS_BombAcchFv.s"
 }
@@ -404,7 +512,7 @@ ASM_FUNCTION(__dt__13dBgS_BombAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_Create__FP10fopAc_ac_c) {
+asm void daNbomb_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Create__FP10fopAc_ac_c.s"
 }
@@ -415,7 +523,7 @@ ASM_FUNCTION(daNbomb_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9daNbomb_cFv) {
+asm daNbomb_c::~daNbomb_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__9daNbomb_cFv.s"
 }
@@ -426,7 +534,7 @@ ASM_FUNCTION(__dt__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_Delete__FP9daNbomb_c) {
+asm void daNbomb_Delete(daNbomb_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Delete__FP9daNbomb_c.s"
 }
@@ -437,7 +545,7 @@ ASM_FUNCTION(daNbomb_Delete__FP9daNbomb_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkTimerStop__9daNbomb_cFv) {
+asm void daNbomb_c::checkTimerStop() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkTimerStop__9daNbomb_cFv.s"
 }
@@ -448,7 +556,7 @@ ASM_FUNCTION(checkTimerStop__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkExplode__9daNbomb_cFv) {
+asm void daNbomb_c::checkExplode() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkExplode__9daNbomb_cFv.s"
 }
@@ -459,7 +567,7 @@ ASM_FUNCTION(checkExplode__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRoomInfo__9daNbomb_cFv) {
+asm void daNbomb_c::setRoomInfo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setRoomInfo__9daNbomb_cFv.s"
 }
@@ -470,7 +578,7 @@ ASM_FUNCTION(setRoomInfo__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setSmokePos__9daNbomb_cFv) {
+asm void daNbomb_c::setSmokePos() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setSmokePos__9daNbomb_cFv.s"
 }
@@ -481,7 +589,7 @@ ASM_FUNCTION(setSmokePos__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setEffect__9daNbomb_cFv) {
+asm void daNbomb_c::setEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setEffect__9daNbomb_cFv.s"
 }
@@ -492,7 +600,7 @@ ASM_FUNCTION(setEffect__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHookshotOffset__9daNbomb_cFv) {
+asm void daNbomb_c::setHookshotOffset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setHookshotOffset__9daNbomb_cFv.s"
 }
@@ -503,7 +611,7 @@ ASM_FUNCTION(setHookshotOffset__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setFreeze__9daNbomb_cFv) {
+asm void daNbomb_c::setFreeze() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setFreeze__9daNbomb_cFv.s"
 }
@@ -514,7 +622,7 @@ ASM_FUNCTION(setFreeze__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterIn__9daNbomb_cFv) {
+asm void daNbomb_c::checkWaterIn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkWaterIn__9daNbomb_cFv.s"
 }
@@ -525,7 +633,7 @@ ASM_FUNCTION(checkWaterIn__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(insectLineCheck__9daNbomb_cFv) {
+asm void daNbomb_c::insectLineCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/insectLineCheck__9daNbomb_cFv.s"
 }
@@ -536,7 +644,7 @@ ASM_FUNCTION(insectLineCheck__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__8cM3dGPlaFv.s"
 }
@@ -547,7 +655,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHitPolygon__9daNbomb_cFi) {
+asm void daNbomb_c::setHitPolygon(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setHitPolygon__9daNbomb_cFi.s"
 }
@@ -558,7 +666,7 @@ ASM_FUNCTION(setHitPolygon__9daNbomb_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procExplodeInit__9daNbomb_cFv) {
+asm void daNbomb_c::procExplodeInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procExplodeInit__9daNbomb_cFv.s"
 }
@@ -569,7 +677,7 @@ ASM_FUNCTION(procExplodeInit__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procExplode__9daNbomb_cFv) {
+asm void daNbomb_c::procExplode() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procExplode__9daNbomb_cFv.s"
 }
@@ -580,7 +688,7 @@ ASM_FUNCTION(procExplode__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procCarryInit__9daNbomb_cFv) {
+asm void daNbomb_c::procCarryInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procCarryInit__9daNbomb_cFv.s"
 }
@@ -591,7 +699,7 @@ ASM_FUNCTION(procCarryInit__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procCarry__9daNbomb_cFv) {
+asm void daNbomb_c::procCarry() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procCarry__9daNbomb_cFv.s"
 }
@@ -602,7 +710,7 @@ ASM_FUNCTION(procCarry__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWaitInit__9daNbomb_cFv) {
+asm void daNbomb_c::procWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procWaitInit__9daNbomb_cFv.s"
 }
@@ -613,7 +721,7 @@ ASM_FUNCTION(procWaitInit__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procWait__9daNbomb_cFv) {
+asm void daNbomb_c::procWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procWait__9daNbomb_cFv.s"
 }
@@ -624,7 +732,7 @@ ASM_FUNCTION(procWait__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procFlowerWaitInit__9daNbomb_cFv) {
+asm void daNbomb_c::procFlowerWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procFlowerWaitInit__9daNbomb_cFv.s"
 }
@@ -635,7 +743,7 @@ ASM_FUNCTION(procFlowerWaitInit__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procFlowerWait__9daNbomb_cFv) {
+asm void daNbomb_c::procFlowerWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procFlowerWait__9daNbomb_cFv.s"
 }
@@ -646,7 +754,7 @@ ASM_FUNCTION(procFlowerWait__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procBoomerangMoveInit__9daNbomb_cFP12dCcD_GObjInf) {
+asm void daNbomb_c::procBoomerangMoveInit(dCcD_GObjInf* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procBoomerangMoveInit__9daNbomb_cFP12dCcD_GObjInf.s"
 }
@@ -657,7 +765,7 @@ ASM_FUNCTION(procBoomerangMoveInit__9daNbomb_cFP12dCcD_GObjInf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procBoomerangMove__9daNbomb_cFv) {
+asm void daNbomb_c::procBoomerangMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procBoomerangMove__9daNbomb_cFv.s"
 }
@@ -668,7 +776,7 @@ ASM_FUNCTION(procBoomerangMove__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procInsectMoveInit__9daNbomb_cFv) {
+asm void daNbomb_c::procInsectMoveInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procInsectMoveInit__9daNbomb_cFv.s"
 }
@@ -679,7 +787,7 @@ ASM_FUNCTION(procInsectMoveInit__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procInsectMove__9daNbomb_cFv) {
+asm void daNbomb_c::procInsectMove() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/procInsectMove__9daNbomb_cFv.s"
 }
@@ -690,7 +798,7 @@ ASM_FUNCTION(procInsectMove__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__9daNbomb_cFv) {
+asm void daNbomb_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/execute__9daNbomb_cFv.s"
 }
@@ -701,7 +809,7 @@ ASM_FUNCTION(execute__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_Execute__FP9daNbomb_c) {
+asm void daNbomb_Execute(daNbomb_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Execute__FP9daNbomb_c.s"
 }
@@ -712,7 +820,7 @@ ASM_FUNCTION(daNbomb_Execute__FP9daNbomb_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__9daNbomb_cFv) {
+asm void daNbomb_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/draw__9daNbomb_cFv.s"
 }
@@ -723,7 +831,7 @@ ASM_FUNCTION(draw__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNbomb_Draw__FP9daNbomb_c) {
+asm void daNbomb_Draw(daNbomb_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/daNbomb_Draw__FP9daNbomb_c.s"
 }
@@ -734,7 +842,7 @@ ASM_FUNCTION(daNbomb_Draw__FP9daNbomb_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__dt__10cCcD_GSttsFv.s"
 }
@@ -745,7 +853,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_nbomb_cpp) {
+extern "C" asm void __sinit_d_a_nbomb_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/__sinit_d_a_nbomb_cpp.s"
 }
@@ -756,7 +864,7 @@ ASM_FUNCTION(__sinit_d_a_nbomb_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804CC2B0) {
+extern "C" asm void func_804CC2B0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/func_804CC2B0.s"
 }
@@ -767,7 +875,7 @@ ASM_FUNCTION(func_804CC2B0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804CC2B8) {
+extern "C" asm void func_804CC2B8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/func_804CC2B8.s"
 }
@@ -778,7 +886,7 @@ ASM_FUNCTION(func_804CC2B8) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkExplodeNow__9daNbomb_cFv) {
+asm void daNbomb_c::checkExplodeNow() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkExplodeNow__9daNbomb_cFv.s"
 }
@@ -789,7 +897,7 @@ ASM_FUNCTION(checkExplodeNow__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteBombAndEffect__9daNbomb_cFv) {
+asm void daNbomb_c::deleteBombAndEffect() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/deleteBombAndEffect__9daNbomb_cFv.s"
 }
@@ -800,7 +908,7 @@ ASM_FUNCTION(deleteBombAndEffect__9daNbomb_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCargoBombExplode__9daNbomb_cFv) {
+asm void daNbomb_c::setCargoBombExplode() {
 	nofralloc
 #include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setCargoBombExplode__9daNbomb_cFv.s"
 }
@@ -808,36 +916,21 @@ ASM_FUNCTION(setCargoBombExplode__9daNbomb_cFv) {
 
 
 /* 804CC31C-804CC324 0008+00 .text      checkExplodeNow__7dBomb_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkExplodeNow__7dBomb_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkExplodeNow__7dBomb_cFv.s"
+bool dBomb_c::checkExplodeNow() {
+	return false;
 }
-#pragma pop
 
 
 /* 804CC324-804CC328 0004+00 .text      deleteBombAndEffect__7dBomb_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(deleteBombAndEffect__7dBomb_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/deleteBombAndEffect__7dBomb_cFv.s"
+void dBomb_c::deleteBombAndEffect() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CC328-804CC32C 0004+00 .text      setCargoBombExplode__7dBomb_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCargoBombExplode__7dBomb_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setCargoBombExplode__7dBomb_cFv.s"
+void dBomb_c::setCargoBombExplode() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

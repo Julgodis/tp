@@ -9,26 +9,23 @@
 // Forward References:
 // 
 
-extern "C" extern void setInitEventBit__Fv();
+void setInitEventBit();
+
+extern "C" void setInitEventBit__Fv();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80035C88-80035C8C 0004+00 .text      setInitEventBit__Fv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setInitEventBit__Fv) {
-	nofralloc
-#include "asm/d/save/d_save_init/setInitEventBit__Fv.s"
+/* 80035C88-80035C8C 0004+00 rc=1 efc=1 .text      setInitEventBit__Fv                                          */
+void setInitEventBit() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* ############################################################################################## */

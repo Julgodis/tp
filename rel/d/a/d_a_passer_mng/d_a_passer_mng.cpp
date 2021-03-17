@@ -6,19 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daPasserMng_c;
+struct fopAc_ac_c;
+
+struct daPasserMng_c {
+	void execute();
+	void getPasserParam();
+	void getLuggageParamHigh(u32);
+	void create();
+	void create_init();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daPasserMng_Execute__FP13daPasserMng_c();
-extern "C" extern void execute__13daPasserMng_cFv();
-extern "C" extern void getPasserParam__13daPasserMng_cFv();
-extern "C" extern void getLuggageParamHigh__13daPasserMng_cFUl();
-extern "C" extern void daPasserMng_IsDelete__FP13daPasserMng_c();
-extern "C" extern void daPasserMng_Delete__FP13daPasserMng_c();
-extern "C" extern void daPasserMng_Create__FP10fopAc_ac_c();
-extern "C" extern void create__13daPasserMng_cFv();
-extern "C" extern void create_init__13daPasserMng_cFv();
-extern "C" extern void func_80D46B9C();
+void daPasserMng_Execute(daPasserMng_c*);
+bool daPasserMng_IsDelete(daPasserMng_c*);
+void daPasserMng_Delete(daPasserMng_c*);
+void daPasserMng_Create(fopAc_ac_c*);
+extern "C" void func_80D46B9C();
+
+extern "C" void daPasserMng_Execute__FP13daPasserMng_c();
+extern "C" void execute__13daPasserMng_cFv();
+extern "C" void getPasserParam__13daPasserMng_cFv();
+extern "C" void getLuggageParamHigh__13daPasserMng_cFUl();
+extern "C" bool daPasserMng_IsDelete__FP13daPasserMng_c();
+extern "C" void daPasserMng_Delete__FP13daPasserMng_c();
+extern "C" void daPasserMng_Create__FP10fopAc_ac_c();
+extern "C" void create__13daPasserMng_cFv();
+extern "C" void create_init__13daPasserMng_cFv();
+extern "C" void func_80D46B9C();
 SECTION_RODATA extern const u8 groupA[32];
 SECTION_RODATA extern const u8 groupB[36];
 SECTION_RODATA extern const u8 groupC[36];
@@ -34,7 +58,9 @@ SECTION_DATA extern u8 g_profile_PASSER_MNG[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +70,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPasserMng_Execute__FP13daPasserMng_c) {
+asm void daPasserMng_Execute(daPasserMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/daPasserMng_Execute__FP13daPasserMng_c.s"
 }
@@ -55,7 +81,7 @@ ASM_FUNCTION(daPasserMng_Execute__FP13daPasserMng_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__13daPasserMng_cFv) {
+asm void daPasserMng_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/execute__13daPasserMng_cFv.s"
 }
@@ -66,7 +92,7 @@ ASM_FUNCTION(execute__13daPasserMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getPasserParam__13daPasserMng_cFv) {
+asm void daPasserMng_c::getPasserParam() {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/getPasserParam__13daPasserMng_cFv.s"
 }
@@ -77,7 +103,7 @@ ASM_FUNCTION(getPasserParam__13daPasserMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLuggageParamHigh__13daPasserMng_cFUl) {
+asm void daPasserMng_c::getLuggageParamHigh(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/getLuggageParamHigh__13daPasserMng_cFUl.s"
 }
@@ -85,21 +111,16 @@ ASM_FUNCTION(getLuggageParamHigh__13daPasserMng_cFUl) {
 
 
 /* 80D466FC-80D46704 0008+00 .text      daPasserMng_IsDelete__FP13daPasserMng_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daPasserMng_IsDelete__FP13daPasserMng_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/daPasserMng_IsDelete__FP13daPasserMng_c.s"
+bool daPasserMng_IsDelete(daPasserMng_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D46704-80D46748 0044+00 .text      daPasserMng_Delete__FP13daPasserMng_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPasserMng_Delete__FP13daPasserMng_c) {
+asm void daPasserMng_Delete(daPasserMng_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/daPasserMng_Delete__FP13daPasserMng_c.s"
 }
@@ -110,7 +131,7 @@ ASM_FUNCTION(daPasserMng_Delete__FP13daPasserMng_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPasserMng_Create__FP10fopAc_ac_c) {
+asm void daPasserMng_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/daPasserMng_Create__FP10fopAc_ac_c.s"
 }
@@ -121,7 +142,7 @@ ASM_FUNCTION(daPasserMng_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daPasserMng_cFv) {
+asm void daPasserMng_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/create__13daPasserMng_cFv.s"
 }
@@ -132,7 +153,7 @@ ASM_FUNCTION(create__13daPasserMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__13daPasserMng_cFv) {
+asm void daPasserMng_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/create_init__13daPasserMng_cFv.s"
 }
@@ -143,7 +164,7 @@ ASM_FUNCTION(create_init__13daPasserMng_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80D46B9C) {
+extern "C" asm void func_80D46B9C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/func_80D46B9C.s"
 }

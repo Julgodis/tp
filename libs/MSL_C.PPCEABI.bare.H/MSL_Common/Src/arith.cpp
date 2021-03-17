@@ -9,38 +9,41 @@
 // Forward References:
 // 
 
-extern "C" extern void div();
-extern "C" extern void abs();
+extern "C" void div();
+extern "C" void abs();
+
+extern "C" void div();
+extern "C" void abs();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80365078-803650D0 0058+00 .text      div                                                          */
+/* 80365078-803650D0 0058+00 rc=1 efc=1 .text      div                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(div) {
+extern "C" asm void div() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith/div.s"
 }
 #pragma pop
 
 
-/* 803650D0-803650E0 0010+00 .text      abs                                                          */
+/* 803650D0-803650E0 0010+00 rc=66 efc=66 .text      abs                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs) {
+extern "C" asm void abs() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith/abs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

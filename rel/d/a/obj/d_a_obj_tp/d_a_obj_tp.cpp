@@ -6,22 +6,64 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_tp_class;
+struct fopAc_ac_c;
+
+struct obj_tp_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Tp_Draw__FP12obj_tp_class();
-extern "C" extern void anm_init__FP12obj_tp_classifUcf();
-extern "C" extern void s_tp_sub__FPvPv();
-extern "C" extern void daObj_Tp_Execute__FP12obj_tp_class();
-extern "C" extern void daObj_Tp_IsDelete__FP12obj_tp_class();
-extern "C" extern void daObj_Tp_Delete__FP12obj_tp_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Tp_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void daObj_Tp_Draw(obj_tp_class*);
+void anm_init(obj_tp_class*, s32, f32, u8, f32);
+void s_tp_sub(void*, void*);
+void daObj_Tp_Execute(obj_tp_class*);
+bool daObj_Tp_IsDelete(obj_tp_class*);
+void daObj_Tp_Delete(obj_tp_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Tp_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Tp_Draw__FP12obj_tp_class();
+extern "C" void anm_init__FP12obj_tp_classifUcf();
+extern "C" void s_tp_sub__FPvPv();
+extern "C" void daObj_Tp_Execute__FP12obj_tp_class();
+extern "C" bool daObj_Tp_IsDelete__FP12obj_tp_class();
+extern "C" void daObj_Tp_Delete__FP12obj_tp_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Tp_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u32 lit_3879;
 SECTION_RODATA extern const u32 lit_3880;
 SECTION_RODATA extern const u8 lit_3881[4];
@@ -69,7 +111,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -79,7 +123,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tp_Draw__FP12obj_tp_class) {
+asm void daObj_Tp_Draw(obj_tp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_Draw__FP12obj_tp_class.s"
 }
@@ -90,7 +134,7 @@ ASM_FUNCTION(daObj_Tp_Draw__FP12obj_tp_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP12obj_tp_classifUcf) {
+asm void anm_init(obj_tp_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/anm_init__FP12obj_tp_classifUcf.s"
 }
@@ -101,7 +145,7 @@ ASM_FUNCTION(anm_init__FP12obj_tp_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_tp_sub__FPvPv) {
+asm void s_tp_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/s_tp_sub__FPvPv.s"
 }
@@ -112,7 +156,7 @@ ASM_FUNCTION(s_tp_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tp_Execute__FP12obj_tp_class) {
+asm void daObj_Tp_Execute(obj_tp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_Execute__FP12obj_tp_class.s"
 }
@@ -120,21 +164,16 @@ ASM_FUNCTION(daObj_Tp_Execute__FP12obj_tp_class) {
 
 
 /* 80D1E460-80D1E468 0008+00 .text      daObj_Tp_IsDelete__FP12obj_tp_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tp_IsDelete__FP12obj_tp_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_IsDelete__FP12obj_tp_class.s"
+bool daObj_Tp_IsDelete(obj_tp_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1E468-80D1E4C0 0058+00 .text      daObj_Tp_Delete__FP12obj_tp_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tp_Delete__FP12obj_tp_class) {
+asm void daObj_Tp_Delete(obj_tp_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_Delete__FP12obj_tp_class.s"
 }
@@ -145,7 +184,7 @@ ASM_FUNCTION(daObj_Tp_Delete__FP12obj_tp_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -156,7 +195,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/__dt__12J3DFrameCtrlFv.s"
 }
@@ -167,7 +206,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Tp_Create__FP10fopAc_ac_c) {
+asm void daObj_Tp_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_Create__FP10fopAc_ac_c.s"
 }
@@ -178,7 +217,7 @@ ASM_FUNCTION(daObj_Tp_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/__dt__8cM3dGCylFv.s"
 }
@@ -189,7 +228,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/__dt__8cM3dGAabFv.s"
 }
@@ -200,7 +239,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/__dt__10dCcD_GSttsFv.s"
 }
@@ -211,7 +250,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/__dt__10cCcD_GSttsFv.s"
 }

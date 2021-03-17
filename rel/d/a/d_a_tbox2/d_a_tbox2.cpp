@@ -6,47 +6,116 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daTbox2_c;
+
+struct daTbox2_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void demoProc();
+	void openInit();
+	void mode_proc_call();
+	void mode_exec_wait();
+	void mode_exec();
+	void action();
+	void init_actionWait();
+	void actionWait();
+	void init_actionNotOpenDemo();
+	void actionNotOpenDemo();
+	void init_actionOpenDemo();
+	void actionOpenDemo();
+	void init_actionOpenWait();
+	void actionOpenWait();
+	void setGetDemoItem();
+	void boxCheck();
+	void Draw();
+	void Delete();
+	bool checkSmallTbox();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__9daTbox2_cFv();
-extern "C" extern void setBaseMtx__9daTbox2_cFv();
-extern "C" extern void Create__9daTbox2_cFv();
-extern "C" extern void CreateHeap__9daTbox2_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__9daTbox2_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void demoProc__9daTbox2_cFv();
-extern "C" extern void openInit__9daTbox2_cFv();
-extern "C" extern void Execute__9daTbox2_cFPPA3_A4_f();
-extern "C" extern void mode_proc_call__9daTbox2_cFv();
-extern "C" extern void mode_exec_wait__9daTbox2_cFv();
-extern "C" extern void mode_exec__9daTbox2_cFv();
-extern "C" extern void action__9daTbox2_cFv();
-extern "C" extern void init_actionWait__9daTbox2_cFv();
-extern "C" extern void actionWait__9daTbox2_cFv();
-extern "C" extern void init_actionNotOpenDemo__9daTbox2_cFv();
-extern "C" extern void actionNotOpenDemo__9daTbox2_cFv();
-extern "C" extern void init_actionOpenDemo__9daTbox2_cFv();
-extern "C" extern void actionOpenDemo__9daTbox2_cFv();
-extern "C" extern void init_actionOpenWait__9daTbox2_cFv();
-extern "C" extern void actionOpenWait__9daTbox2_cFv();
-extern "C" extern void setGetDemoItem__9daTbox2_cFv();
-extern "C" extern void boxCheck__9daTbox2_cFv();
-extern "C" extern void Draw__9daTbox2_cFv();
-extern "C" extern void Delete__9daTbox2_cFv();
-extern "C" extern void daTbox2_create1st__FP9daTbox2_c();
-extern "C" extern void daTbox2_MoveBGDelete__FP9daTbox2_c();
-extern "C" extern void daTbox2_MoveBGExecute__FP9daTbox2_c();
-extern "C" extern void daTbox2_MoveBGDraw__FP9daTbox2_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void checkSmallTbox__9daTbox2_cFv();
-extern "C" extern void func_80498148();
-extern "C" extern void func_80498150();
+extern "C" void Execute__9daTbox2_cFPPA3_A4_f();
+void daTbox2_create1st(daTbox2_c*);
+void daTbox2_MoveBGDelete(daTbox2_c*);
+void daTbox2_MoveBGExecute(daTbox2_c*);
+void daTbox2_MoveBGDraw(daTbox2_c*);
+extern "C" void func_80498148();
+extern "C" void func_80498150();
+
+extern "C" void initBaseMtx__9daTbox2_cFv();
+extern "C" void setBaseMtx__9daTbox2_cFv();
+extern "C" void Create__9daTbox2_cFv();
+extern "C" void CreateHeap__9daTbox2_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__9daTbox2_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void demoProc__9daTbox2_cFv();
+extern "C" void openInit__9daTbox2_cFv();
+extern "C" void Execute__9daTbox2_cFPPA3_A4_f();
+extern "C" void mode_proc_call__9daTbox2_cFv();
+extern "C" void mode_exec_wait__9daTbox2_cFv();
+extern "C" void mode_exec__9daTbox2_cFv();
+extern "C" void action__9daTbox2_cFv();
+extern "C" void init_actionWait__9daTbox2_cFv();
+extern "C" void actionWait__9daTbox2_cFv();
+extern "C" void init_actionNotOpenDemo__9daTbox2_cFv();
+extern "C" void actionNotOpenDemo__9daTbox2_cFv();
+extern "C" void init_actionOpenDemo__9daTbox2_cFv();
+extern "C" void actionOpenDemo__9daTbox2_cFv();
+extern "C" void init_actionOpenWait__9daTbox2_cFv();
+extern "C" void actionOpenWait__9daTbox2_cFv();
+extern "C" void setGetDemoItem__9daTbox2_cFv();
+extern "C" void boxCheck__9daTbox2_cFv();
+extern "C" void Draw__9daTbox2_cFv();
+extern "C" void Delete__9daTbox2_cFv();
+extern "C" void daTbox2_create1st__FP9daTbox2_c();
+extern "C" void daTbox2_MoveBGDelete__FP9daTbox2_c();
+extern "C" void daTbox2_MoveBGExecute__FP9daTbox2_c();
+extern "C" void daTbox2_MoveBGDraw__FP9daTbox2_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" bool checkSmallTbox__9daTbox2_cFv();
+extern "C" void func_80498148();
+extern "C" void func_80498150();
 SECTION_RODATA extern const u8 l_resInfo[32];
 SECTION_RODATA extern const u8 l_cyl_info[60];
 SECTION_RODATA extern const u32 lit_3714;
@@ -90,7 +159,9 @@ SECTION_DATA extern void*const __vt__9daTbox2_c[11];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -100,7 +171,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__9daTbox2_cFv) {
+asm void daTbox2_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/initBaseMtx__9daTbox2_cFv.s"
 }
@@ -111,7 +182,7 @@ ASM_FUNCTION(initBaseMtx__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daTbox2_cFv) {
+asm void daTbox2_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/setBaseMtx__9daTbox2_cFv.s"
 }
@@ -122,7 +193,7 @@ ASM_FUNCTION(setBaseMtx__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__9daTbox2_cFv) {
+asm void daTbox2_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/Create__9daTbox2_cFv.s"
 }
@@ -133,7 +204,7 @@ ASM_FUNCTION(Create__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daTbox2_cFv) {
+asm void daTbox2_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/CreateHeap__9daTbox2_cFv.s"
 }
@@ -144,7 +215,7 @@ ASM_FUNCTION(CreateHeap__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__12J3DFrameCtrlFv.s"
 }
@@ -155,7 +226,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__9daTbox2_cFv) {
+asm void daTbox2_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/create1st__9daTbox2_cFv.s"
 }
@@ -166,7 +237,7 @@ ASM_FUNCTION(create1st__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__12dBgS_AcchCirFv.s"
 }
@@ -177,7 +248,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -188,7 +259,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__8cM3dGCylFv.s"
 }
@@ -199,7 +270,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__8cM3dGAabFv.s"
 }
@@ -210,7 +281,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__10dCcD_GSttsFv.s"
 }
@@ -221,7 +292,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demoProc__9daTbox2_cFv) {
+asm void daTbox2_c::demoProc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/demoProc__9daTbox2_cFv.s"
 }
@@ -232,7 +303,7 @@ ASM_FUNCTION(demoProc__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openInit__9daTbox2_cFv) {
+asm void daTbox2_c::openInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/openInit__9daTbox2_cFv.s"
 }
@@ -243,7 +314,7 @@ ASM_FUNCTION(openInit__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daTbox2_cFPPA3_A4_f) {
+extern "C" asm void Execute__9daTbox2_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/Execute__9daTbox2_cFPPA3_A4_f.s"
 }
@@ -254,7 +325,7 @@ ASM_FUNCTION(Execute__9daTbox2_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_proc_call__9daTbox2_cFv) {
+asm void daTbox2_c::mode_proc_call() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/mode_proc_call__9daTbox2_cFv.s"
 }
@@ -265,7 +336,7 @@ ASM_FUNCTION(mode_proc_call__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_exec_wait__9daTbox2_cFv) {
+asm void daTbox2_c::mode_exec_wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/mode_exec_wait__9daTbox2_cFv.s"
 }
@@ -276,7 +347,7 @@ ASM_FUNCTION(mode_exec_wait__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mode_exec__9daTbox2_cFv) {
+asm void daTbox2_c::mode_exec() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/mode_exec__9daTbox2_cFv.s"
 }
@@ -287,7 +358,7 @@ ASM_FUNCTION(mode_exec__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__9daTbox2_cFv) {
+asm void daTbox2_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/action__9daTbox2_cFv.s"
 }
@@ -298,7 +369,7 @@ ASM_FUNCTION(action__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_actionWait__9daTbox2_cFv) {
+asm void daTbox2_c::init_actionWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/init_actionWait__9daTbox2_cFv.s"
 }
@@ -306,21 +377,16 @@ ASM_FUNCTION(init_actionWait__9daTbox2_cFv) {
 
 
 /* 804978D4-804978D8 0004+00 .text      actionWait__9daTbox2_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionWait__9daTbox2_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/actionWait__9daTbox2_cFv.s"
+void daTbox2_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804978D8-804978E4 000C+00 .text      init_actionNotOpenDemo__9daTbox2_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_actionNotOpenDemo__9daTbox2_cFv) {
+asm void daTbox2_c::init_actionNotOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/init_actionNotOpenDemo__9daTbox2_cFv.s"
 }
@@ -331,7 +397,7 @@ ASM_FUNCTION(init_actionNotOpenDemo__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionNotOpenDemo__9daTbox2_cFv) {
+asm void daTbox2_c::actionNotOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/actionNotOpenDemo__9daTbox2_cFv.s"
 }
@@ -342,7 +408,7 @@ ASM_FUNCTION(actionNotOpenDemo__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_actionOpenDemo__9daTbox2_cFv) {
+asm void daTbox2_c::init_actionOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/init_actionOpenDemo__9daTbox2_cFv.s"
 }
@@ -353,7 +419,7 @@ ASM_FUNCTION(init_actionOpenDemo__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpenDemo__9daTbox2_cFv) {
+asm void daTbox2_c::actionOpenDemo() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/actionOpenDemo__9daTbox2_cFv.s"
 }
@@ -364,7 +430,7 @@ ASM_FUNCTION(actionOpenDemo__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_actionOpenWait__9daTbox2_cFv) {
+asm void daTbox2_c::init_actionOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/init_actionOpenWait__9daTbox2_cFv.s"
 }
@@ -375,7 +441,7 @@ ASM_FUNCTION(init_actionOpenWait__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOpenWait__9daTbox2_cFv) {
+asm void daTbox2_c::actionOpenWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/actionOpenWait__9daTbox2_cFv.s"
 }
@@ -386,7 +452,7 @@ ASM_FUNCTION(actionOpenWait__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setGetDemoItem__9daTbox2_cFv) {
+asm void daTbox2_c::setGetDemoItem() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/setGetDemoItem__9daTbox2_cFv.s"
 }
@@ -397,7 +463,7 @@ ASM_FUNCTION(setGetDemoItem__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(boxCheck__9daTbox2_cFv) {
+asm void daTbox2_c::boxCheck() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/boxCheck__9daTbox2_cFv.s"
 }
@@ -408,7 +474,7 @@ ASM_FUNCTION(boxCheck__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daTbox2_cFv) {
+asm void daTbox2_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/Draw__9daTbox2_cFv.s"
 }
@@ -419,7 +485,7 @@ ASM_FUNCTION(Draw__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daTbox2_cFv) {
+asm void daTbox2_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/Delete__9daTbox2_cFv.s"
 }
@@ -430,7 +496,7 @@ ASM_FUNCTION(Delete__9daTbox2_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox2_create1st__FP9daTbox2_c) {
+asm void daTbox2_create1st(daTbox2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/daTbox2_create1st__FP9daTbox2_c.s"
 }
@@ -441,7 +507,7 @@ ASM_FUNCTION(daTbox2_create1st__FP9daTbox2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox2_MoveBGDelete__FP9daTbox2_c) {
+asm void daTbox2_MoveBGDelete(daTbox2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/daTbox2_MoveBGDelete__FP9daTbox2_c.s"
 }
@@ -452,7 +518,7 @@ ASM_FUNCTION(daTbox2_MoveBGDelete__FP9daTbox2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox2_MoveBGExecute__FP9daTbox2_c) {
+asm void daTbox2_MoveBGExecute(daTbox2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/daTbox2_MoveBGExecute__FP9daTbox2_c.s"
 }
@@ -463,7 +529,7 @@ ASM_FUNCTION(daTbox2_MoveBGExecute__FP9daTbox2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTbox2_MoveBGDraw__FP9daTbox2_c) {
+asm void daTbox2_MoveBGDraw(daTbox2_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/daTbox2_MoveBGDraw__FP9daTbox2_c.s"
 }
@@ -474,7 +540,7 @@ ASM_FUNCTION(daTbox2_MoveBGDraw__FP9daTbox2_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/__dt__10cCcD_GSttsFv.s"
 }
@@ -482,21 +548,16 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 
 
 /* 80498140-80498148 0008+00 .text      checkSmallTbox__9daTbox2_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(checkSmallTbox__9daTbox2_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/checkSmallTbox__9daTbox2_cFv.s"
+bool daTbox2_c::checkSmallTbox() {
+	return true;
 }
-#pragma pop
 
 
 /* 80498148-80498150 0008+00 .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80498148) {
+extern "C" asm void func_80498148() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/func_80498148.s"
 }
@@ -507,7 +568,7 @@ ASM_FUNCTION(func_80498148) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80498150) {
+extern "C" asm void func_80498150() {
 	nofralloc
 #include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/func_80498150.s"
 }

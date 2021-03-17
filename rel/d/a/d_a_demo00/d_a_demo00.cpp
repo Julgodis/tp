@@ -6,44 +6,136 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct mDoExt_3DlineMat0_c;
+struct J3DMaterial;
+struct mDoExt_3DlineMat1_c;
+struct demo_s1_ke_s;
+struct daDemo00_c;
+struct J3DModel;
+struct fopAc_ac_c;
+struct dDemo_actor_c;
+struct dKy_tevstr_c;
+
+struct daDemo00_resID_c {
+	void reset();
+};
+
+struct daDemo00_model_c {
+	void reset();
+};
+
+struct daDemo00_c {
+	~daDemo00_c();
+	void setBaseMtx();
+	void setShadowSize();
+	void createHeap();
+	void actStandby(dDemo_actor_c*);
+	void actPerformance(dDemo_actor_c*);
+	void actLeaving(dDemo_actor_c*);
+	void draw();
+	void execute();
+};
+
+struct demo_s1_ke_s {
+	~demo_s1_ke_s();
+	demo_s1_ke_s();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dDemo_actor_c {
+};
+
+struct J3DMaterial {
+};
+
+struct mDoExt_3DlineMat1_c {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct mDoExt_3DlineMat0_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void reset__16daDemo00_resID_cFv();
-extern "C" extern void reset__16daDemo00_model_cFv();
-extern "C" extern void __dt__10daDemo00_cFv();
-extern "C" extern void __dt__12demo_s1_ke_sFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void get_foward_angle__FP4cXyzP4cXyzPsPs();
-extern "C" extern void setBaseMtx__10daDemo00_cFv();
-extern "C" extern void setShadowSize__10daDemo00_cFv();
-extern "C" extern void awaCheck__FP8J3DModel();
-extern "C" extern void createHeapCallBack__FP10fopAc_ac_c();
-extern "C" extern void createHeap__10daDemo00_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void actStandby__10daDemo00_cFP13dDemo_actor_c();
-extern "C" extern void actPerformance__10daDemo00_cFP13dDemo_actor_c();
-extern "C" extern void actLeaving__10daDemo00_cFP13dDemo_actor_c();
-extern "C" extern void mDad00_changeXluMaterial__FP11J3DMateriali();
-extern "C" extern void teduna_calc__FP4cXyzP4cXyzP4cXyzsi();
-extern "C" extern void teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii();
-extern "C" extern void teduna_ganon_hand_set__FP8J3DModelii();
-extern "C" extern void ke_control__FP10daDemo00_cP12demo_s1_ke_sif();
-extern "C" extern void ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif();
-extern "C" extern void ke_set__FP10daDemo00_c();
-extern "C" extern void daDemo00_Draw__FP10daDemo00_c();
-extern "C" extern void draw__10daDemo00_cFv();
-extern "C" extern void daDemo00_Execute__FP10daDemo00_c();
-extern "C" extern void execute__10daDemo00_cFv();
-extern "C" extern void daDemo00_IsDelete__FP10daDemo00_c();
-extern "C" extern void daDemo00_Delete__FP10daDemo00_c();
-extern "C" extern void daDemo00_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__12demo_s1_ke_sFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __sinit_d_a_demo00_cpp();
-extern "C" extern void func_804A87DC();
-extern "C" extern void func_804A8814();
+extern "C" void get_foward_angle__FP4cXyzP4cXyzPsPs();
+void awaCheck(J3DModel*);
+void createHeapCallBack(fopAc_ac_c*);
+void mDad00_changeXluMaterial(J3DMaterial*, s32);
+extern "C" void teduna_calc__FP4cXyzP4cXyzP4cXyzsi();
+void teduna_draw(J3DModel*, mDoExt_3DlineMat1_c*, dKy_tevstr_c*, s32, s32, s32, s32);
+void teduna_ganon_hand_set(J3DModel*, s32, s32);
+void ke_control(daDemo00_c*, demo_s1_ke_s*, s32, f32);
+void ke_move(daDemo00_c*, mDoExt_3DlineMat0_c*, demo_s1_ke_s*, s32, f32);
+void ke_set(daDemo00_c*);
+void daDemo00_Draw(daDemo00_c*);
+void daDemo00_Execute(daDemo00_c*);
+bool daDemo00_IsDelete(daDemo00_c*);
+void daDemo00_Delete(daDemo00_c*);
+void daDemo00_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_demo00_cpp();
+extern "C" void func_804A87DC();
+extern "C" void func_804A8814();
+
+extern "C" void reset__16daDemo00_resID_cFv();
+extern "C" void reset__16daDemo00_model_cFv();
+extern "C" void __dt__10daDemo00_cFv();
+extern "C" void __dt__12demo_s1_ke_sFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void get_foward_angle__FP4cXyzP4cXyzPsPs();
+extern "C" void setBaseMtx__10daDemo00_cFv();
+extern "C" void setShadowSize__10daDemo00_cFv();
+extern "C" void awaCheck__FP8J3DModel();
+extern "C" void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void createHeap__10daDemo00_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void actStandby__10daDemo00_cFP13dDemo_actor_c();
+extern "C" void actPerformance__10daDemo00_cFP13dDemo_actor_c();
+extern "C" void actLeaving__10daDemo00_cFP13dDemo_actor_c();
+extern "C" void mDad00_changeXluMaterial__FP11J3DMateriali();
+extern "C" void teduna_calc__FP4cXyzP4cXyzP4cXyzsi();
+extern "C" void teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii();
+extern "C" void teduna_ganon_hand_set__FP8J3DModelii();
+extern "C" void ke_control__FP10daDemo00_cP12demo_s1_ke_sif();
+extern "C" void ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif();
+extern "C" void ke_set__FP10daDemo00_c();
+extern "C" void daDemo00_Draw__FP10daDemo00_c();
+extern "C" void draw__10daDemo00_cFv();
+extern "C" void daDemo00_Execute__FP10daDemo00_c();
+extern "C" void execute__10daDemo00_cFv();
+extern "C" bool daDemo00_IsDelete__FP10daDemo00_c();
+extern "C" void daDemo00_Delete__FP10daDemo00_c();
+extern "C" void daDemo00_Create__FP10fopAc_ac_c();
+extern "C" void __ct__12demo_s1_ke_sFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __sinit_d_a_demo00_cpp();
+extern "C" void func_804A87DC();
+extern "C" void func_804A8814();
 SECTION_RODATA extern const u8 lit_3727[12];
 SECTION_RODATA extern const u8 lit_4004[4];
 SECTION_RODATA extern const u32 lit_4122;
@@ -196,8 +288,11 @@ SECTION_BSS extern u8 data_804A8E84[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -207,7 +302,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__16daDemo00_resID_cFv) {
+asm void daDemo00_resID_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/reset__16daDemo00_resID_cFv.s"
 }
@@ -218,7 +313,7 @@ ASM_FUNCTION(reset__16daDemo00_resID_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__16daDemo00_model_cFv) {
+asm void daDemo00_model_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/reset__16daDemo00_model_cFv.s"
 }
@@ -229,7 +324,7 @@ ASM_FUNCTION(reset__16daDemo00_model_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10daDemo00_cFv) {
+asm daDemo00_c::~daDemo00_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__dt__10daDemo00_cFv.s"
 }
@@ -240,7 +335,7 @@ ASM_FUNCTION(__dt__10daDemo00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12demo_s1_ke_sFv) {
+asm demo_s1_ke_s::~demo_s1_ke_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__dt__12demo_s1_ke_sFv.s"
 }
@@ -251,7 +346,7 @@ ASM_FUNCTION(__dt__12demo_s1_ke_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__dt__4cXyzFv.s"
 }
@@ -262,7 +357,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__dt__8cM3dGPlaFv.s"
 }
@@ -273,7 +368,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get_foward_angle__FP4cXyzP4cXyzPsPs) {
+extern "C" asm void get_foward_angle__FP4cXyzP4cXyzPsPs() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/get_foward_angle__FP4cXyzP4cXyzPsPs.s"
 }
@@ -284,7 +379,7 @@ ASM_FUNCTION(get_foward_angle__FP4cXyzP4cXyzPsPs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daDemo00_cFv) {
+asm void daDemo00_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/setBaseMtx__10daDemo00_cFv.s"
 }
@@ -295,7 +390,7 @@ ASM_FUNCTION(setBaseMtx__10daDemo00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setShadowSize__10daDemo00_cFv) {
+asm void daDemo00_c::setShadowSize() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/setShadowSize__10daDemo00_cFv.s"
 }
@@ -306,7 +401,7 @@ ASM_FUNCTION(setShadowSize__10daDemo00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(awaCheck__FP8J3DModel) {
+asm void awaCheck(J3DModel* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/awaCheck__FP8J3DModel.s"
 }
@@ -317,7 +412,7 @@ ASM_FUNCTION(awaCheck__FP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
+asm void createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/createHeapCallBack__FP10fopAc_ac_c.s"
 }
@@ -328,7 +423,7 @@ ASM_FUNCTION(createHeapCallBack__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__10daDemo00_cFv) {
+asm void daDemo00_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/createHeap__10daDemo00_cFv.s"
 }
@@ -339,7 +434,7 @@ ASM_FUNCTION(createHeap__10daDemo00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__dt__12J3DFrameCtrlFv.s"
 }
@@ -350,7 +445,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actStandby__10daDemo00_cFP13dDemo_actor_c) {
+asm void daDemo00_c::actStandby(dDemo_actor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/actStandby__10daDemo00_cFP13dDemo_actor_c.s"
 }
@@ -361,7 +456,7 @@ ASM_FUNCTION(actStandby__10daDemo00_cFP13dDemo_actor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actPerformance__10daDemo00_cFP13dDemo_actor_c) {
+asm void daDemo00_c::actPerformance(dDemo_actor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/actPerformance__10daDemo00_cFP13dDemo_actor_c.s"
 }
@@ -372,7 +467,7 @@ ASM_FUNCTION(actPerformance__10daDemo00_cFP13dDemo_actor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actLeaving__10daDemo00_cFP13dDemo_actor_c) {
+asm void daDemo00_c::actLeaving(dDemo_actor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/actLeaving__10daDemo00_cFP13dDemo_actor_c.s"
 }
@@ -383,7 +478,7 @@ ASM_FUNCTION(actLeaving__10daDemo00_cFP13dDemo_actor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDad00_changeXluMaterial__FP11J3DMateriali) {
+asm void mDad00_changeXluMaterial(J3DMaterial* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/mDad00_changeXluMaterial__FP11J3DMateriali.s"
 }
@@ -394,7 +489,7 @@ ASM_FUNCTION(mDad00_changeXluMaterial__FP11J3DMateriali) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(teduna_calc__FP4cXyzP4cXyzP4cXyzsi) {
+extern "C" asm void teduna_calc__FP4cXyzP4cXyzP4cXyzsi() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/teduna_calc__FP4cXyzP4cXyzP4cXyzsi.s"
 }
@@ -405,7 +500,7 @@ ASM_FUNCTION(teduna_calc__FP4cXyzP4cXyzP4cXyzsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii) {
+asm void teduna_draw(J3DModel* field_0, mDoExt_3DlineMat1_c* field_1, dKy_tevstr_c* field_2, s32 field_3, s32 field_4, s32 field_5, s32 field_6) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii.s"
 }
@@ -416,7 +511,7 @@ ASM_FUNCTION(teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii) 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(teduna_ganon_hand_set__FP8J3DModelii) {
+asm void teduna_ganon_hand_set(J3DModel* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/teduna_ganon_hand_set__FP8J3DModelii.s"
 }
@@ -427,7 +522,7 @@ ASM_FUNCTION(teduna_ganon_hand_set__FP8J3DModelii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ke_control__FP10daDemo00_cP12demo_s1_ke_sif) {
+asm void ke_control(daDemo00_c* field_0, demo_s1_ke_s* field_1, s32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/ke_control__FP10daDemo00_cP12demo_s1_ke_sif.s"
 }
@@ -438,7 +533,7 @@ ASM_FUNCTION(ke_control__FP10daDemo00_cP12demo_s1_ke_sif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif) {
+asm void ke_move(daDemo00_c* field_0, mDoExt_3DlineMat0_c* field_1, demo_s1_ke_s* field_2, s32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif.s"
 }
@@ -449,7 +544,7 @@ ASM_FUNCTION(ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ke_set__FP10daDemo00_c) {
+asm void ke_set(daDemo00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/ke_set__FP10daDemo00_c.s"
 }
@@ -460,7 +555,7 @@ ASM_FUNCTION(ke_set__FP10daDemo00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDemo00_Draw__FP10daDemo00_c) {
+asm void daDemo00_Draw(daDemo00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_Draw__FP10daDemo00_c.s"
 }
@@ -471,7 +566,7 @@ ASM_FUNCTION(daDemo00_Draw__FP10daDemo00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__10daDemo00_cFv) {
+asm void daDemo00_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/draw__10daDemo00_cFv.s"
 }
@@ -482,7 +577,7 @@ ASM_FUNCTION(draw__10daDemo00_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDemo00_Execute__FP10daDemo00_c) {
+asm void daDemo00_Execute(daDemo00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_Execute__FP10daDemo00_c.s"
 }
@@ -493,7 +588,7 @@ ASM_FUNCTION(daDemo00_Execute__FP10daDemo00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daDemo00_cFv) {
+asm void daDemo00_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/execute__10daDemo00_cFv.s"
 }
@@ -501,21 +596,16 @@ ASM_FUNCTION(execute__10daDemo00_cFv) {
 
 
 /* 804A84AC-804A84B4 0008+00 .text      daDemo00_IsDelete__FP10daDemo00_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDemo00_IsDelete__FP10daDemo00_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_IsDelete__FP10daDemo00_c.s"
+bool daDemo00_IsDelete(daDemo00_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A84B4-804A84DC 0028+00 .text      daDemo00_Delete__FP10daDemo00_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDemo00_Delete__FP10daDemo00_c) {
+asm void daDemo00_Delete(daDemo00_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_Delete__FP10daDemo00_c.s"
 }
@@ -526,7 +616,7 @@ ASM_FUNCTION(daDemo00_Delete__FP10daDemo00_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDemo00_Create__FP10fopAc_ac_c) {
+asm void daDemo00_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_Create__FP10fopAc_ac_c.s"
 }
@@ -537,7 +627,7 @@ ASM_FUNCTION(daDemo00_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12demo_s1_ke_sFv) {
+asm demo_s1_ke_s::demo_s1_ke_s() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__ct__12demo_s1_ke_sFv.s"
 }
@@ -545,21 +635,16 @@ ASM_FUNCTION(__ct__12demo_s1_ke_sFv) {
 
 
 /* 804A871C-804A8720 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A8720-804A87DC 00BC+00 .text      __sinit_d_a_demo00_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_demo00_cpp) {
+extern "C" asm void __sinit_d_a_demo00_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/__sinit_d_a_demo00_cpp.s"
 }
@@ -570,7 +655,7 @@ ASM_FUNCTION(__sinit_d_a_demo00_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A87DC) {
+extern "C" asm void func_804A87DC() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/func_804A87DC.s"
 }
@@ -581,7 +666,7 @@ ASM_FUNCTION(func_804A87DC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_804A8814) {
+extern "C" asm void func_804A8814() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo00/d_a_demo00/func_804A8814.s"
 }

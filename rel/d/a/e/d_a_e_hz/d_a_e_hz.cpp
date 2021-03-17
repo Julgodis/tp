@@ -6,74 +6,200 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daE_HZ_c;
+struct fopEn_enemy_c;
+struct Z2CreatureEnemy;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daE_HZ_HIO_c {
+	daE_HZ_HIO_c();
+	~daE_HZ_HIO_c();
+};
+
+struct daE_HZ_c {
+	void setBck(s32, u8, f32, f32);
+	void checkBck(s32);
+	void draw();
+	void setActionMode(s32);
+	void checkHideStart();
+	void checkAttackStart();
+	void checkArrowCharge();
+	void setTgSetBit(s32);
+	void isWait();
+	void checkFall();
+	void setCloseSmokeEffect();
+	void executeWait();
+	void getHideSpeed();
+	void executeHide();
+	void executeAttack();
+	void initBackWalk();
+	void executeAway();
+	void setWindEnd();
+	void executeWind();
+	void executeChance();
+	void initRollDamage();
+	void doRollDamage();
+	void executeDamage();
+	void executeDeath();
+	void setWindChanceEnd();
+	void executeWindChance();
+	void executeWindWalk();
+	void setWaterEffect();
+	void executeWaterDeath();
+	void executeDeathWait();
+	void damage_check();
+	void checkWaterSurface();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void CreateHeap();
+	void setInitPos();
+	void create();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct dCcD_Sph {
+	~dCcD_Sph();
+	dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct J3DLightObj {
+	J3DLightObj();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct fopEn_enemy_c {
+};
+
+struct Z2CreatureEnemy {
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_HZ_HIO_cFv();
-extern "C" extern void setBck__8daE_HZ_cFiUcff();
-extern "C" extern void checkBck__8daE_HZ_cFi();
-extern "C" extern void draw__8daE_HZ_cFv();
-extern "C" extern void daE_HZ_Draw__FP8daE_HZ_c();
-extern "C" extern void s_obj_sub__FPvPv();
-extern "C" extern void setActionMode__8daE_HZ_cFi();
-extern "C" extern void checkHideStart__8daE_HZ_cFv();
-extern "C" extern void checkAttackStart__8daE_HZ_cFv();
-extern "C" extern void checkArrowCharge__8daE_HZ_cFv();
-extern "C" extern void setTgSetBit__8daE_HZ_cFi();
-extern "C" extern void isWait__8daE_HZ_cFv();
-extern "C" extern void checkFall__8daE_HZ_cFv();
-extern "C" extern void setCloseSmokeEffect__8daE_HZ_cFv();
-extern "C" extern void executeWait__8daE_HZ_cFv();
-extern "C" extern void getHideSpeed__8daE_HZ_cFv();
-extern "C" extern void executeHide__8daE_HZ_cFv();
-extern "C" extern void executeAttack__8daE_HZ_cFv();
-extern "C" extern void initBackWalk__8daE_HZ_cFv();
-extern "C" extern void executeAway__8daE_HZ_cFv();
-extern "C" extern void setWindEnd__8daE_HZ_cFv();
-extern "C" extern void executeWind__8daE_HZ_cFv();
-extern "C" extern void executeChance__8daE_HZ_cFv();
-extern "C" extern void initRollDamage__8daE_HZ_cFv();
-extern "C" extern void doRollDamage__8daE_HZ_cFv();
-extern "C" extern void executeDamage__8daE_HZ_cFv();
-extern "C" extern void executeDeath__8daE_HZ_cFv();
-extern "C" extern void setWindChanceEnd__8daE_HZ_cFv();
-extern "C" extern void executeWindChance__8daE_HZ_cFv();
-extern "C" extern void executeWindWalk__8daE_HZ_cFv();
-extern "C" extern void setWaterEffect__8daE_HZ_cFv();
-extern "C" extern void executeWaterDeath__8daE_HZ_cFv();
-extern "C" extern void executeDeathWait__8daE_HZ_cFv();
-extern "C" extern void damage_check__8daE_HZ_cFv();
-extern "C" extern void checkWaterSurface__8daE_HZ_cFv();
-extern "C" extern void action__8daE_HZ_cFv();
-extern "C" extern void mtx_set__8daE_HZ_cFv();
-extern "C" extern void cc_set__8daE_HZ_cFv();
-extern "C" extern void execute__8daE_HZ_cFv();
-extern "C" extern void daE_HZ_Execute__FP8daE_HZ_c();
-extern "C" extern void daE_HZ_IsDelete__FP8daE_HZ_c();
-extern "C" extern void _delete__8daE_HZ_cFv();
-extern "C" extern void daE_HZ_Delete__FP8daE_HZ_c();
-extern "C" extern void ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__8daE_HZ_cFP8J3DJointi();
-extern "C" extern void CreateHeap__8daE_HZ_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void setInitPos__8daE_HZ_cFv();
-extern "C" extern void create__8daE_HZ_cFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void daE_HZ_Create__FP8daE_HZ_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daE_HZ_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_hz_cpp();
-extern "C" extern void func_806F03EC();
-extern "C" extern void func_806F03F4();
-extern "C" extern void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
-extern "C" extern void __dt__4cXyzFv();
+void daE_HZ_Draw(daE_HZ_c*);
+void s_obj_sub(void*, void*);
+void daE_HZ_Execute(daE_HZ_c*);
+bool daE_HZ_IsDelete(daE_HZ_c*);
+void daE_HZ_Delete(daE_HZ_c*);
+void useHeapInit(fopAc_ac_c*);
+void daE_HZ_Create(daE_HZ_c*);
+extern "C" void __sinit_d_a_e_hz_cpp();
+extern "C" void func_806F03EC();
+extern "C" void func_806F03F4();
+void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*);
+
+extern "C" void __ct__12daE_HZ_HIO_cFv();
+extern "C" void setBck__8daE_HZ_cFiUcff();
+extern "C" void checkBck__8daE_HZ_cFi();
+extern "C" void draw__8daE_HZ_cFv();
+extern "C" void daE_HZ_Draw__FP8daE_HZ_c();
+extern "C" void s_obj_sub__FPvPv();
+extern "C" void setActionMode__8daE_HZ_cFi();
+extern "C" void checkHideStart__8daE_HZ_cFv();
+extern "C" void checkAttackStart__8daE_HZ_cFv();
+extern "C" void checkArrowCharge__8daE_HZ_cFv();
+extern "C" void setTgSetBit__8daE_HZ_cFi();
+extern "C" void isWait__8daE_HZ_cFv();
+extern "C" void checkFall__8daE_HZ_cFv();
+extern "C" void setCloseSmokeEffect__8daE_HZ_cFv();
+extern "C" void executeWait__8daE_HZ_cFv();
+extern "C" void getHideSpeed__8daE_HZ_cFv();
+extern "C" void executeHide__8daE_HZ_cFv();
+extern "C" void executeAttack__8daE_HZ_cFv();
+extern "C" void initBackWalk__8daE_HZ_cFv();
+extern "C" void executeAway__8daE_HZ_cFv();
+extern "C" void setWindEnd__8daE_HZ_cFv();
+extern "C" void executeWind__8daE_HZ_cFv();
+extern "C" void executeChance__8daE_HZ_cFv();
+extern "C" void initRollDamage__8daE_HZ_cFv();
+extern "C" void doRollDamage__8daE_HZ_cFv();
+extern "C" void executeDamage__8daE_HZ_cFv();
+extern "C" void executeDeath__8daE_HZ_cFv();
+extern "C" void setWindChanceEnd__8daE_HZ_cFv();
+extern "C" void executeWindChance__8daE_HZ_cFv();
+extern "C" void executeWindWalk__8daE_HZ_cFv();
+extern "C" void setWaterEffect__8daE_HZ_cFv();
+extern "C" void executeWaterDeath__8daE_HZ_cFv();
+extern "C" void executeDeathWait__8daE_HZ_cFv();
+extern "C" void damage_check__8daE_HZ_cFv();
+extern "C" void checkWaterSurface__8daE_HZ_cFv();
+extern "C" void action__8daE_HZ_cFv();
+extern "C" void mtx_set__8daE_HZ_cFv();
+extern "C" void cc_set__8daE_HZ_cFv();
+extern "C" void execute__8daE_HZ_cFv();
+extern "C" void daE_HZ_Execute__FP8daE_HZ_c();
+extern "C" bool daE_HZ_IsDelete__FP8daE_HZ_c();
+extern "C" void _delete__8daE_HZ_cFv();
+extern "C" void daE_HZ_Delete__FP8daE_HZ_c();
+extern "C" void ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__8daE_HZ_cFP8J3DJointi();
+extern "C" void CreateHeap__8daE_HZ_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void setInitPos__8daE_HZ_cFv();
+extern "C" void create__8daE_HZ_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void daE_HZ_Create__FP8daE_HZ_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daE_HZ_HIO_cFv();
+extern "C" void __sinit_d_a_e_hz_cpp();
+extern "C" void func_806F03EC();
+extern "C" void func_806F03F4();
+extern "C" void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
+extern "C" void __dt__4cXyzFv();
 SECTION_RODATA extern const u32 lit_3966;
 SECTION_RODATA extern const u8 lit_3967[4];
 SECTION_RODATA extern const u32 lit_3968;
@@ -206,8 +332,11 @@ SECTION_BSS extern u8 data_806F0C40[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -217,7 +346,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_HZ_HIO_cFv) {
+asm daE_HZ_HIO_c::daE_HZ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__ct__12daE_HZ_HIO_cFv.s"
 }
@@ -228,7 +357,7 @@ ASM_FUNCTION(__ct__12daE_HZ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__8daE_HZ_cFiUcff) {
+asm void daE_HZ_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setBck__8daE_HZ_cFiUcff.s"
 }
@@ -239,7 +368,7 @@ ASM_FUNCTION(setBck__8daE_HZ_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkBck__8daE_HZ_cFi) {
+asm void daE_HZ_c::checkBck(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkBck__8daE_HZ_cFi.s"
 }
@@ -250,7 +379,7 @@ ASM_FUNCTION(checkBck__8daE_HZ_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daE_HZ_cFv) {
+asm void daE_HZ_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/draw__8daE_HZ_cFv.s"
 }
@@ -261,7 +390,7 @@ ASM_FUNCTION(draw__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZ_Draw__FP8daE_HZ_c) {
+asm void daE_HZ_Draw(daE_HZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_Draw__FP8daE_HZ_c.s"
 }
@@ -272,7 +401,7 @@ ASM_FUNCTION(daE_HZ_Draw__FP8daE_HZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_obj_sub__FPvPv) {
+asm void s_obj_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/s_obj_sub__FPvPv.s"
 }
@@ -283,7 +412,7 @@ ASM_FUNCTION(s_obj_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__8daE_HZ_cFi) {
+asm void daE_HZ_c::setActionMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setActionMode__8daE_HZ_cFi.s"
 }
@@ -294,7 +423,7 @@ ASM_FUNCTION(setActionMode__8daE_HZ_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkHideStart__8daE_HZ_cFv) {
+asm void daE_HZ_c::checkHideStart() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkHideStart__8daE_HZ_cFv.s"
 }
@@ -305,7 +434,7 @@ ASM_FUNCTION(checkHideStart__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkAttackStart__8daE_HZ_cFv) {
+asm void daE_HZ_c::checkAttackStart() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkAttackStart__8daE_HZ_cFv.s"
 }
@@ -316,7 +445,7 @@ ASM_FUNCTION(checkAttackStart__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkArrowCharge__8daE_HZ_cFv) {
+asm void daE_HZ_c::checkArrowCharge() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkArrowCharge__8daE_HZ_cFv.s"
 }
@@ -327,7 +456,7 @@ ASM_FUNCTION(checkArrowCharge__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTgSetBit__8daE_HZ_cFi) {
+asm void daE_HZ_c::setTgSetBit(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setTgSetBit__8daE_HZ_cFi.s"
 }
@@ -338,7 +467,7 @@ ASM_FUNCTION(setTgSetBit__8daE_HZ_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isWait__8daE_HZ_cFv) {
+asm void daE_HZ_c::isWait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/isWait__8daE_HZ_cFv.s"
 }
@@ -349,7 +478,7 @@ ASM_FUNCTION(isWait__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkFall__8daE_HZ_cFv) {
+asm void daE_HZ_c::checkFall() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkFall__8daE_HZ_cFv.s"
 }
@@ -360,7 +489,7 @@ ASM_FUNCTION(checkFall__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCloseSmokeEffect__8daE_HZ_cFv) {
+asm void daE_HZ_c::setCloseSmokeEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setCloseSmokeEffect__8daE_HZ_cFv.s"
 }
@@ -371,7 +500,7 @@ ASM_FUNCTION(setCloseSmokeEffect__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeWait__8daE_HZ_cFv.s"
 }
@@ -382,7 +511,7 @@ ASM_FUNCTION(executeWait__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getHideSpeed__8daE_HZ_cFv) {
+asm void daE_HZ_c::getHideSpeed() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/getHideSpeed__8daE_HZ_cFv.s"
 }
@@ -393,7 +522,7 @@ ASM_FUNCTION(getHideSpeed__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeHide__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeHide() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeHide__8daE_HZ_cFv.s"
 }
@@ -404,7 +533,7 @@ ASM_FUNCTION(executeHide__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttack__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeAttack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeAttack__8daE_HZ_cFv.s"
 }
@@ -415,7 +544,7 @@ ASM_FUNCTION(executeAttack__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBackWalk__8daE_HZ_cFv) {
+asm void daE_HZ_c::initBackWalk() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/initBackWalk__8daE_HZ_cFv.s"
 }
@@ -426,7 +555,7 @@ ASM_FUNCTION(initBackWalk__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAway__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeAway() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeAway__8daE_HZ_cFv.s"
 }
@@ -437,7 +566,7 @@ ASM_FUNCTION(executeAway__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWindEnd__8daE_HZ_cFv) {
+asm void daE_HZ_c::setWindEnd() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setWindEnd__8daE_HZ_cFv.s"
 }
@@ -448,7 +577,7 @@ ASM_FUNCTION(setWindEnd__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWind__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeWind() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeWind__8daE_HZ_cFv.s"
 }
@@ -459,7 +588,7 @@ ASM_FUNCTION(executeWind__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeChance__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeChance() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeChance__8daE_HZ_cFv.s"
 }
@@ -470,7 +599,7 @@ ASM_FUNCTION(executeChance__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initRollDamage__8daE_HZ_cFv) {
+asm void daE_HZ_c::initRollDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/initRollDamage__8daE_HZ_cFv.s"
 }
@@ -481,7 +610,7 @@ ASM_FUNCTION(initRollDamage__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(doRollDamage__8daE_HZ_cFv) {
+asm void daE_HZ_c::doRollDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/doRollDamage__8daE_HZ_cFv.s"
 }
@@ -492,7 +621,7 @@ ASM_FUNCTION(doRollDamage__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeDamage__8daE_HZ_cFv.s"
 }
@@ -503,7 +632,7 @@ ASM_FUNCTION(executeDamage__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDeath__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeDeath() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeDeath__8daE_HZ_cFv.s"
 }
@@ -514,7 +643,7 @@ ASM_FUNCTION(executeDeath__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWindChanceEnd__8daE_HZ_cFv) {
+asm void daE_HZ_c::setWindChanceEnd() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setWindChanceEnd__8daE_HZ_cFv.s"
 }
@@ -525,7 +654,7 @@ ASM_FUNCTION(setWindChanceEnd__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWindChance__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeWindChance() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeWindChance__8daE_HZ_cFv.s"
 }
@@ -536,7 +665,7 @@ ASM_FUNCTION(executeWindChance__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWindWalk__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeWindWalk() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeWindWalk__8daE_HZ_cFv.s"
 }
@@ -547,7 +676,7 @@ ASM_FUNCTION(executeWindWalk__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWaterEffect__8daE_HZ_cFv) {
+asm void daE_HZ_c::setWaterEffect() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setWaterEffect__8daE_HZ_cFv.s"
 }
@@ -558,7 +687,7 @@ ASM_FUNCTION(setWaterEffect__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWaterDeath__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeWaterDeath() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeWaterDeath__8daE_HZ_cFv.s"
 }
@@ -569,7 +698,7 @@ ASM_FUNCTION(executeWaterDeath__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDeathWait__8daE_HZ_cFv) {
+asm void daE_HZ_c::executeDeathWait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/executeDeathWait__8daE_HZ_cFv.s"
 }
@@ -580,7 +709,7 @@ ASM_FUNCTION(executeDeathWait__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__8daE_HZ_cFv) {
+asm void daE_HZ_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/damage_check__8daE_HZ_cFv.s"
 }
@@ -591,7 +720,7 @@ ASM_FUNCTION(damage_check__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkWaterSurface__8daE_HZ_cFv) {
+asm void daE_HZ_c::checkWaterSurface() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/checkWaterSurface__8daE_HZ_cFv.s"
 }
@@ -602,7 +731,7 @@ ASM_FUNCTION(checkWaterSurface__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__8daE_HZ_cFv) {
+asm void daE_HZ_c::action() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/action__8daE_HZ_cFv.s"
 }
@@ -613,7 +742,7 @@ ASM_FUNCTION(action__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__8daE_HZ_cFv) {
+asm void daE_HZ_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/mtx_set__8daE_HZ_cFv.s"
 }
@@ -624,7 +753,7 @@ ASM_FUNCTION(mtx_set__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__8daE_HZ_cFv) {
+asm void daE_HZ_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/cc_set__8daE_HZ_cFv.s"
 }
@@ -635,7 +764,7 @@ ASM_FUNCTION(cc_set__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daE_HZ_cFv) {
+asm void daE_HZ_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/execute__8daE_HZ_cFv.s"
 }
@@ -646,7 +775,7 @@ ASM_FUNCTION(execute__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZ_Execute__FP8daE_HZ_c) {
+asm void daE_HZ_Execute(daE_HZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_Execute__FP8daE_HZ_c.s"
 }
@@ -654,21 +783,16 @@ ASM_FUNCTION(daE_HZ_Execute__FP8daE_HZ_c) {
 
 
 /* 806EF6AC-806EF6B4 0008+00 .text      daE_HZ_IsDelete__FP8daE_HZ_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_HZ_IsDelete__FP8daE_HZ_c) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_IsDelete__FP8daE_HZ_c.s"
+bool daE_HZ_IsDelete(daE_HZ_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806EF6B4-806EF750 009C+00 .text      _delete__8daE_HZ_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__8daE_HZ_cFv) {
+asm void daE_HZ_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/_delete__8daE_HZ_cFv.s"
 }
@@ -679,7 +803,7 @@ ASM_FUNCTION(_delete__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZ_Delete__FP8daE_HZ_c) {
+asm void daE_HZ_Delete(daE_HZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_Delete__FP8daE_HZ_c.s"
 }
@@ -690,7 +814,7 @@ ASM_FUNCTION(daE_HZ_Delete__FP8daE_HZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel) {
+asm void daE_HZ_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel.s"
 }
@@ -701,7 +825,7 @@ ASM_FUNCTION(ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__8daE_HZ_cFP8J3DJointi) {
+asm void daE_HZ_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/JointCallBack__8daE_HZ_cFP8J3DJointi.s"
 }
@@ -712,7 +836,7 @@ ASM_FUNCTION(JointCallBack__8daE_HZ_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daE_HZ_cFv) {
+asm void daE_HZ_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/CreateHeap__8daE_HZ_cFv.s"
 }
@@ -723,7 +847,7 @@ ASM_FUNCTION(CreateHeap__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -734,7 +858,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setInitPos__8daE_HZ_cFv) {
+asm void daE_HZ_c::setInitPos() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setInitPos__8daE_HZ_cFv.s"
 }
@@ -745,7 +869,7 @@ ASM_FUNCTION(setInitPos__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daE_HZ_cFv) {
+asm void daE_HZ_c::create() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/create__8daE_HZ_cFv.s"
 }
@@ -756,7 +880,7 @@ ASM_FUNCTION(create__8daE_HZ_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__8dCcD_SphFv.s"
 }
@@ -767,7 +891,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__ct__8dCcD_SphFv.s"
 }
@@ -778,7 +902,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__8cM3dGSphFv.s"
 }
@@ -789,7 +913,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__8cM3dGAabFv.s"
 }
@@ -800,7 +924,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__10dCcD_GSttsFv.s"
 }
@@ -811,7 +935,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -822,7 +946,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__12dBgS_AcchCirFv.s"
 }
@@ -833,7 +957,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DLightObjFv) {
+asm J3DLightObj::J3DLightObj() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__ct__11J3DLightObjFv.s"
 }
@@ -844,7 +968,7 @@ ASM_FUNCTION(__ct__11J3DLightObjFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HZ_Create__FP8daE_HZ_c) {
+asm void daE_HZ_Create(daE_HZ_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_Create__FP8daE_HZ_c.s"
 }
@@ -855,7 +979,7 @@ ASM_FUNCTION(daE_HZ_Create__FP8daE_HZ_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__10cCcD_GSttsFv.s"
 }
@@ -866,7 +990,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_HZ_HIO_cFv) {
+asm daE_HZ_HIO_c::~daE_HZ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__12daE_HZ_HIO_cFv.s"
 }
@@ -877,7 +1001,7 @@ ASM_FUNCTION(__dt__12daE_HZ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_hz_cpp) {
+extern "C" asm void __sinit_d_a_e_hz_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__sinit_d_a_e_hz_cpp.s"
 }
@@ -888,7 +1012,7 @@ ASM_FUNCTION(__sinit_d_a_e_hz_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806F03EC) {
+extern "C" asm void func_806F03EC() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/func_806F03EC.s"
 }
@@ -899,7 +1023,7 @@ ASM_FUNCTION(func_806F03EC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806F03F4) {
+extern "C" asm void func_806F03F4() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/func_806F03F4.s"
 }
@@ -910,7 +1034,7 @@ ASM_FUNCTION(func_806F03F4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz) {
+asm void setMidnaBindEffect(fopEn_enemy_c* field_0, Z2CreatureEnemy* field_1, cXyz* field_2, cXyz* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz.s"
 }
@@ -921,7 +1045,7 @@ ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/__dt__4cXyzFv.s"
 }

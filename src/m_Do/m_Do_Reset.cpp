@@ -6,14 +6,65 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build mDoRst (mDoRst) False/False
+/* top-level dependencies (begin mDoRst) */
+/* top-level dependencies (end mDoRst) */
+struct mDoRst {
+	/* 800157F4 */ void getResetData();
+};
+
+// build JASTaskThread (JASTaskThread) False/False
+/* top-level dependencies (begin JASTaskThread) */
+/* top-level dependencies (end JASTaskThread) */
+struct JASTaskThread {
+	/* 8028FE88 */ void pause(bool);
+};
+
+// build JASDvd (JASDvd) False/False
+/* top-level dependencies (begin JASDvd) */
+/* top-level dependencies (end JASDvd) */
+struct JASDvd {
+	/* 8028FEFC */ void getThreadPointer();
+};
+
+// build Z2AudioMgr (Z2AudioMgr) False/False
+/* top-level dependencies (begin Z2AudioMgr) */
+/* top-level dependencies (end Z2AudioMgr) */
+struct Z2AudioMgr {
+	/* 802CDA6C */ void hasReset() const;
+};
+
+// build JUTVideo (JUTVideo) False/False
+/* top-level dependencies (begin JUTVideo) */
+/* top-level dependencies (end JUTVideo) */
+struct JUTVideo {
+	/* 802E4CAC */ void destroyManager();
+};
+
+// build JUTXfb (JUTXfb) False/False
+/* top-level dependencies (begin JUTXfb) */
+/* top-level dependencies (end JUTXfb) */
+struct JUTXfb {
+	/* 802E5214 */ void clearIndex();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void my_OSCancelAlarmAll__Fv();
-extern "C" extern void destroyVideo__Fv();
-extern "C" extern void mDoRst_reset__FiUli();
-extern "C" extern void mDoRst_resetCallBack__FiPv();
-extern "C" extern void getResetData__6mDoRstFv();
+static void my_OSCancelAlarmAll();
+static void destroyVideo();
+void mDoRst_reset(s32, u32, s32);
+void mDoRst_resetCallBack(s32, void*);
+
+extern "C" static void my_OSCancelAlarmAll__Fv();
+extern "C" static void destroyVideo__Fv();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void getResetData__6mDoRstFv();
 SECTION_RODATA extern const u8 m_Do_m_Do_Reset__stringBase0[16];
 SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80450C80[8];
@@ -23,35 +74,60 @@ SECTION_SBSS extern u8 data_80450C88[8];
 // External References:
 // 
 
-extern "C" extern void OSAttention();
-extern "C" extern void mDoDvdErr_ThdCleanup__Fv();
-extern "C" extern void cAPICPad_recalibrate__Fv();
-extern "C" extern void pause__13JASTaskThreadFb();
-extern "C" extern void getThreadPointer__6JASDvdFv();
-extern "C" extern void hasReset__10Z2AudioMgrCFv();
-extern "C" extern void destroyManager__8JUTVideoFv();
-extern "C" extern void clearIndex__6JUTXfbFv();
-extern "C" extern void LCDisable();
-extern "C" extern void OSDisableInterrupts();
-extern "C" extern void OSRestoreInterrupts();
-extern "C" extern void OSSetSaveRegion();
-extern "C" extern void OSResetSystem();
-extern "C" extern void OSGetCurrentThread();
-extern "C" extern void OSCancelThread();
-extern "C" extern void OSDetachThread();
-extern "C" extern void OSSuspendThread();
-extern "C" extern void DVDGetDriveStatus();
-extern "C" extern void DVDCheckDisk();
-extern "C" extern void VIWaitForRetrace();
-extern "C" extern void VIFlush();
-extern "C" extern void VISetBlack();
-extern "C" extern void GXSetCurrentGXThread();
-extern "C" extern void GXGetCurrentGXThread();
-extern "C" extern void GXFlush();
-extern "C" extern void GXAbortFrame();
-extern "C" extern void GXDrawDone();
-extern "C" extern void GXSetDrawDoneCallback();
-extern "C" extern void _savegpr_27();
+extern "C" void OSAttention();
+void mDoDvdErr_ThdCleanup();
+void cAPICPad_recalibrate();
+extern "C" void LCDisable();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSSetSaveRegion();
+extern "C" void OSResetSystem();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCancelThread();
+extern "C" void OSDetachThread();
+extern "C" void OSSuspendThread();
+extern "C" void DVDGetDriveStatus();
+extern "C" void DVDCheckDisk();
+extern "C" void VIWaitForRetrace();
+extern "C" void VIFlush();
+extern "C" void VISetBlack();
+extern "C" void GXSetCurrentGXThread();
+extern "C" void GXGetCurrentGXThread();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXDrawDone();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void _savegpr_27();
+
+extern "C" void OSAttention();
+extern "C" void mDoDvdErr_ThdCleanup__Fv();
+extern "C" void cAPICPad_recalibrate__Fv();
+extern "C" void pause__13JASTaskThreadFb();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void hasReset__10Z2AudioMgrCFv();
+extern "C" void destroyManager__8JUTVideoFv();
+extern "C" void clearIndex__6JUTXfbFv();
+extern "C" void LCDisable();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSSetSaveRegion();
+extern "C" void OSResetSystem();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCancelThread();
+extern "C" void OSDetachThread();
+extern "C" void OSSuspendThread();
+extern "C" void DVDGetDriveStatus();
+extern "C" void DVDCheckDisk();
+extern "C" void VIWaitForRetrace();
+extern "C" void VIFlush();
+extern "C" void VISetBlack();
+extern "C" void GXSetCurrentGXThread();
+extern "C" void GXGetCurrentGXThread();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXDrawDone();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void _savegpr_27();
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
 SECTION_SBSS extern u8 struct_80450BB8[4];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -64,22 +140,17 @@ SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800155D8-800155DC 0004+00 .text      my_OSCancelAlarmAll__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(my_OSCancelAlarmAll__Fv) {
-	nofralloc
-#include "asm/m_Do/m_Do_Reset/my_OSCancelAlarmAll__Fv.s"
+/* 800155D8-800155DC 0004+00 rc=1 efc=0 .text      my_OSCancelAlarmAll__Fv                                      */
+static void my_OSCancelAlarmAll() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 800155DC-80015614 0038+00 .text      destroyVideo__Fv                                             */
+/* 800155DC-80015614 0038+00 rc=1 efc=0 .text      destroyVideo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(destroyVideo__Fv) {
+asm static void destroyVideo() {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/destroyVideo__Fv.s"
 }
@@ -87,43 +158,43 @@ ASM_FUNCTION(destroyVideo__Fv) {
 
 
 /* ############################################################################################## */
-/* 80374198-803741A8 0010+00 .rodata    @stringBase0                                                 */
+/* 80374198-803741A8 0010+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 #pragma pop
 
-/* 80450C78-80450C80 0004+04 .sbss      mResetData__6mDoRst                                          */
+/* 80450C78-80450C80 0004+04 rc=45 efc=42 .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
-/* 80015614-8001574C 0138+00 .text      mDoRst_reset__FiUli                                          */
+/* 80015614-8001574C 0138+00 rc=3 efc=3 .text      mDoRst_reset__FiUli                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoRst_reset__FiUli) {
+asm void mDoRst_reset(s32 field_0, u32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/mDoRst_reset__FiUli.s"
 }
 #pragma pop
 
 
-/* 8001574C-800157F4 00A8+00 .text      mDoRst_resetCallBack__FiPv                                   */
+/* 8001574C-800157F4 00A8+00 rc=3 efc=3 .text      mDoRst_resetCallBack__FiPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoRst_resetCallBack__FiPv) {
+asm void mDoRst_resetCallBack(s32 field_0, void* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/mDoRst_resetCallBack__FiPv.s"
 }
 #pragma pop
 
 
-/* 800157F4-800157FC 0008+00 .text      getResetData__6mDoRstFv                                      */
+/* 800157F4-800157FC 0008+00 rc=1 efc=0 .text      getResetData__6mDoRstFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResetData__6mDoRstFv) {
+asm void mDoRst::getResetData() {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/getResetData__6mDoRstFv.s"
 }
@@ -131,11 +202,11 @@ ASM_FUNCTION(getResetData__6mDoRstFv) {
 
 
 /* ############################################################################################## */
-/* 80450C80-80450C88 0008+00 .sbss      None                                                         */
+/* 80450C80-80450C88 0008+00 rc=6 efc=6 .sbss      None                                                         */
 u8 struct_80450C80[8];
 /* 80450C80 0001 data_80450C80 */
 /* 80450C81 0007 data_80450C81 */
 
-/* 80450C88-80450C90 0008+00 .sbss      None                                                         */
+/* 80450C88-80450C90 0008+00 rc=2 efc=2 .sbss      None                                                         */
 u8 data_80450C88[8];
 

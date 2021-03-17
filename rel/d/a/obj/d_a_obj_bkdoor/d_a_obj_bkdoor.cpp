@@ -6,23 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjBkDoor_c;
+
+struct daObjBkDoor_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void openCheck();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void search_door__FPvPv();
-extern "C" extern void initBaseMtx__13daObjBkDoor_cFv();
-extern "C" extern void setBaseMtx__13daObjBkDoor_cFv();
-extern "C" extern void Create__13daObjBkDoor_cFv();
-extern "C" extern void CreateHeap__13daObjBkDoor_cFv();
-extern "C" extern void create1st__13daObjBkDoor_cFv();
-extern "C" extern void openCheck__13daObjBkDoor_cFv();
-extern "C" extern void Execute__13daObjBkDoor_cFPPA3_A4_f();
-extern "C" extern void Draw__13daObjBkDoor_cFv();
-extern "C" extern void Delete__13daObjBkDoor_cFv();
-extern "C" extern void daObjBkDoor_create1st__FP13daObjBkDoor_c();
-extern "C" extern void daObjBkDoor_MoveBGDelete__FP13daObjBkDoor_c();
-extern "C" extern void daObjBkDoor_MoveBGExecute__FP13daObjBkDoor_c();
-extern "C" extern void daObjBkDoor_MoveBGDraw__FP13daObjBkDoor_c();
+void search_door(void*, void*);
+extern "C" void Execute__13daObjBkDoor_cFPPA3_A4_f();
+void daObjBkDoor_create1st(daObjBkDoor_c*);
+void daObjBkDoor_MoveBGDelete(daObjBkDoor_c*);
+void daObjBkDoor_MoveBGExecute(daObjBkDoor_c*);
+void daObjBkDoor_MoveBGDraw(daObjBkDoor_c*);
+
+extern "C" void search_door__FPvPv();
+extern "C" void initBaseMtx__13daObjBkDoor_cFv();
+extern "C" void setBaseMtx__13daObjBkDoor_cFv();
+extern "C" void Create__13daObjBkDoor_cFv();
+extern "C" void CreateHeap__13daObjBkDoor_cFv();
+extern "C" void create1st__13daObjBkDoor_cFv();
+extern "C" void openCheck__13daObjBkDoor_cFv();
+extern "C" void Execute__13daObjBkDoor_cFPPA3_A4_f();
+extern "C" void Draw__13daObjBkDoor_cFv();
+extern "C" void Delete__13daObjBkDoor_cFv();
+extern "C" void daObjBkDoor_create1st__FP13daObjBkDoor_c();
+extern "C" void daObjBkDoor_MoveBGDelete__FP13daObjBkDoor_c();
+extern "C" void daObjBkDoor_MoveBGExecute__FP13daObjBkDoor_c();
+extern "C" void daObjBkDoor_MoveBGDraw__FP13daObjBkDoor_c();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_dzb[8];
 SECTION_RODATA extern const u8 l_col_offsetX[20];
@@ -47,7 +71,9 @@ SECTION_DATA extern void*const __vt__13daObjBkDoor_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -57,7 +83,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(search_door__FPvPv) {
+asm void search_door(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/search_door__FPvPv.s"
 }
@@ -68,7 +94,7 @@ ASM_FUNCTION(search_door__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/initBaseMtx__13daObjBkDoor_cFv.s"
 }
@@ -79,7 +105,7 @@ ASM_FUNCTION(initBaseMtx__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/setBaseMtx__13daObjBkDoor_cFv.s"
 }
@@ -90,7 +116,7 @@ ASM_FUNCTION(setBaseMtx__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/Create__13daObjBkDoor_cFv.s"
 }
@@ -101,7 +127,7 @@ ASM_FUNCTION(Create__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/CreateHeap__13daObjBkDoor_cFv.s"
 }
@@ -112,7 +138,7 @@ ASM_FUNCTION(CreateHeap__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/create1st__13daObjBkDoor_cFv.s"
 }
@@ -123,7 +149,7 @@ ASM_FUNCTION(create1st__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(openCheck__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::openCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/openCheck__13daObjBkDoor_cFv.s"
 }
@@ -134,7 +160,7 @@ ASM_FUNCTION(openCheck__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daObjBkDoor_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daObjBkDoor_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/Execute__13daObjBkDoor_cFPPA3_A4_f.s"
 }
@@ -145,7 +171,7 @@ ASM_FUNCTION(Execute__13daObjBkDoor_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/Draw__13daObjBkDoor_cFv.s"
 }
@@ -156,7 +182,7 @@ ASM_FUNCTION(Draw__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daObjBkDoor_cFv) {
+asm void daObjBkDoor_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/Delete__13daObjBkDoor_cFv.s"
 }
@@ -167,7 +193,7 @@ ASM_FUNCTION(Delete__13daObjBkDoor_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBkDoor_create1st__FP13daObjBkDoor_c) {
+asm void daObjBkDoor_create1st(daObjBkDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/daObjBkDoor_create1st__FP13daObjBkDoor_c.s"
 }
@@ -178,7 +204,7 @@ ASM_FUNCTION(daObjBkDoor_create1st__FP13daObjBkDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBkDoor_MoveBGDelete__FP13daObjBkDoor_c) {
+asm void daObjBkDoor_MoveBGDelete(daObjBkDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/daObjBkDoor_MoveBGDelete__FP13daObjBkDoor_c.s"
 }
@@ -189,7 +215,7 @@ ASM_FUNCTION(daObjBkDoor_MoveBGDelete__FP13daObjBkDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBkDoor_MoveBGExecute__FP13daObjBkDoor_c) {
+asm void daObjBkDoor_MoveBGExecute(daObjBkDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/daObjBkDoor_MoveBGExecute__FP13daObjBkDoor_c.s"
 }
@@ -200,7 +226,7 @@ ASM_FUNCTION(daObjBkDoor_MoveBGExecute__FP13daObjBkDoor_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjBkDoor_MoveBGDraw__FP13daObjBkDoor_c) {
+asm void daObjBkDoor_MoveBGDraw(daObjBkDoor_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bkdoor/d_a_obj_bkdoor/daObjBkDoor_MoveBGDraw__FP13daObjBkDoor_c.s"
 }

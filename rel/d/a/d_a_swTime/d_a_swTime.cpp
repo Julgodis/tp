@@ -6,16 +6,33 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daSwTime_c;
+
+struct daSwTime_c {
+	void Create();
+	void create();
+	void execute();
+	bool _delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void Create__10daSwTime_cFv();
-extern "C" extern void create__10daSwTime_cFv();
-extern "C" extern void execute__10daSwTime_cFv();
-extern "C" extern void _delete__10daSwTime_cFv();
-extern "C" extern void daSwTime_Execute__FP10daSwTime_c();
-extern "C" extern void daSwTime_Delete__FP10daSwTime_c();
-extern "C" extern void daSwTime_Create__FP10daSwTime_c();
+void daSwTime_Execute(daSwTime_c*);
+void daSwTime_Delete(daSwTime_c*);
+void daSwTime_Create(daSwTime_c*);
+
+extern "C" void Create__10daSwTime_cFv();
+extern "C" void create__10daSwTime_cFv();
+extern "C" void execute__10daSwTime_cFv();
+extern "C" bool _delete__10daSwTime_cFv();
+extern "C" void daSwTime_Execute__FP10daSwTime_c();
+extern "C" void daSwTime_Delete__FP10daSwTime_c();
+extern "C" void daSwTime_Create__FP10daSwTime_c();
 SECTION_DATA extern u8 l_daSwTime_Method[32];
 SECTION_DATA extern u8 g_profile_SwTime[48];
 
@@ -23,7 +40,9 @@ SECTION_DATA extern u8 g_profile_SwTime[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -33,7 +52,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__10daSwTime_cFv) {
+asm void daSwTime_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/Create__10daSwTime_cFv.s"
 }
@@ -44,7 +63,7 @@ ASM_FUNCTION(Create__10daSwTime_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daSwTime_cFv) {
+asm void daSwTime_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/func_80D4F660.s"
 }
@@ -55,7 +74,7 @@ ASM_FUNCTION(create__10daSwTime_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__10daSwTime_cFv) {
+asm void daSwTime_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/execute__10daSwTime_cFv.s"
 }
@@ -63,21 +82,16 @@ ASM_FUNCTION(execute__10daSwTime_cFv) {
 
 
 /* 80D4F758-80D4F760 0008+00 .text      _delete__10daSwTime_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(_delete__10daSwTime_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swTime/d_a_swTime/_delete__10daSwTime_cFv.s"
+bool daSwTime_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4F760-80D4F780 0020+00 .text      daSwTime_Execute__FP10daSwTime_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwTime_Execute__FP10daSwTime_c) {
+asm void daSwTime_Execute(daSwTime_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Execute__FP10daSwTime_c.s"
 }
@@ -88,7 +102,7 @@ ASM_FUNCTION(daSwTime_Execute__FP10daSwTime_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwTime_Delete__FP10daSwTime_c) {
+asm void daSwTime_Delete(daSwTime_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Delete__FP10daSwTime_c.s"
 }
@@ -99,7 +113,7 @@ ASM_FUNCTION(daSwTime_Delete__FP10daSwTime_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daSwTime_Create__FP10daSwTime_c) {
+asm void daSwTime_Create(daSwTime_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Create__FP10daSwTime_c.s"
 }

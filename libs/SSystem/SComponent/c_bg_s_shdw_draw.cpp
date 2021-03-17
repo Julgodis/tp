@@ -6,23 +6,67 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build cBgS_ShdwDraw (cBgS_ShdwDraw) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin cBgS_ShdwDraw) */
+// outer dependency: cXyz
+/* top-level dependencies (end cBgS_ShdwDraw) */
+struct cBgS_ShdwDraw {
+	// cXyz
+	/* 80267F88 */ cBgS_ShdwDraw();
+	/* 80267FD0 */ ~cBgS_ShdwDraw();
+	/* 80268048 */ void Set(cXyz&, cXyz&);
+};
+
+// build cXyz (cXyz) True/True
+// build cBgS_Chk (cBgS_Chk) False/False
+/* top-level dependencies (begin cBgS_Chk) */
+/* top-level dependencies (end cBgS_Chk) */
+struct cBgS_Chk {
+	/* 80267B4C */ cBgS_Chk();
+	/* 80267B70 */ ~cBgS_Chk();
+};
+
+// build cM3dGAab (cM3dGAab) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin cM3dGAab) */
+// outer dependency: cXyz
+/* top-level dependencies (end cM3dGAab) */
+struct cM3dGAab {
+	// cXyz
+	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13cBgS_ShdwDrawFv();
-extern "C" extern void __dt__13cBgS_ShdwDrawFv();
-extern "C" extern void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
-extern "C" extern void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+
+extern "C" void __ct__13cBgS_ShdwDrawFv();
+extern "C" void __dt__13cBgS_ShdwDrawFv();
+extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
 SECTION_DATA extern void*const __vt__13cBgS_ShdwDraw[4];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __ct__8cBgS_ChkFv();
-extern "C" extern void __dt__8cBgS_ChkFv();
-extern "C" extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+extern "C" void __dl__FPv();
 SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 
 // 
@@ -30,7 +74,7 @@ SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 // 
 
 /* ############################################################################################## */
-/* 803C3FC0-803C3FD0 000C+04 .data      __vt__13cBgS_ShdwDraw                                        */
+/* 803C3FC0-803C3FD0 000C+04 rc=2 efc=0 .data      __vt__13cBgS_ShdwDraw                                        */
 void* const __vt__13cBgS_ShdwDraw[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -39,48 +83,47 @@ void* const __vt__13cBgS_ShdwDraw[4] = {
 	NULL,
 };
 
-/* 80267F88-80267FD0 0048+00 .text      __ct__13cBgS_ShdwDrawFv                                      */
+/* 80267F88-80267FD0 0048+00 rc=1 efc=1 .text      __ct__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13cBgS_ShdwDrawFv) {
+asm cBgS_ShdwDraw::cBgS_ShdwDraw() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_shdw_draw/__ct__13cBgS_ShdwDrawFv.s"
 }
 #pragma pop
 
 
-/* 80267FD0-80268048 0078+00 .text      __dt__13cBgS_ShdwDrawFv                                      */
+/* 80267FD0-80268048 0078+00 rc=3 efc=2 .text      __dt__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13cBgS_ShdwDrawFv) {
+asm cBgS_ShdwDraw::~cBgS_ShdwDraw() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_shdw_draw/__dt__13cBgS_ShdwDrawFv.s"
 }
 #pragma pop
 
 
-/* 80268048-8026806C 0024+00 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
+/* 80268048-8026806C 0024+00 rc=1 efc=1 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Set__13cBgS_ShdwDrawFR4cXyzR4cXyz) {
+asm void cBgS_ShdwDraw::Set(cXyz& field_0, cXyz& field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_shdw_draw/Set__13cBgS_ShdwDrawFR4cXyzR4cXyz.s"
 }
 #pragma pop
 
 
-/* 8026806C-80268074 0008+00 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
+/* 8026806C-80268074 0008+00 rc=1 efc=1 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i) {
+extern "C" asm void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_shdw_draw/SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

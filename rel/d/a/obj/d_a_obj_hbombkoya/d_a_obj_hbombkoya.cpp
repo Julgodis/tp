@@ -6,30 +6,79 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjHBombkoya_c;
+
+struct daObjHBombkoya_c {
+	struct PSetTbl {
+	};
+
+	void create1st();
+	void CreateHeap();
+	void Create();
+	void setParticle(u16*, s32, daObjHBombkoya_c::PSetTbl*, s32, s32);
+	void Draw();
+	void Delete();
+	~daObjHBombkoya_c();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create1st__16daObjHBombkoya_cFv();
-extern "C" extern void CreateHeap__16daObjHBombkoya_cFv();
-extern "C" extern void Create__16daObjHBombkoya_cFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii();
-extern "C" extern void Execute__16daObjHBombkoya_cFPPA3_A4_f();
-extern "C" extern void Draw__16daObjHBombkoya_cFv();
-extern "C" extern void Delete__16daObjHBombkoya_cFv();
-extern "C" extern void daObjHBombkoya_create1st__FP16daObjHBombkoya_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void daObjHBombkoya_MoveBGDelete__FP16daObjHBombkoya_c();
-extern "C" extern void daObjHBombkoya_MoveBGExecute__FP16daObjHBombkoya_c();
-extern "C" extern void daObjHBombkoya_MoveBGDraw__FP16daObjHBombkoya_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__16daObjHBombkoya_cFv();
-extern "C" extern void func_80C1C5E8();
+extern "C" void Execute__16daObjHBombkoya_cFPPA3_A4_f();
+void daObjHBombkoya_create1st(daObjHBombkoya_c*);
+void daObjHBombkoya_MoveBGDelete(daObjHBombkoya_c*);
+void daObjHBombkoya_MoveBGExecute(daObjHBombkoya_c*);
+void daObjHBombkoya_MoveBGDraw(daObjHBombkoya_c*);
+extern "C" void func_80C1C5E8();
+
+extern "C" void create1st__16daObjHBombkoya_cFv();
+extern "C" void CreateHeap__16daObjHBombkoya_cFv();
+extern "C" void Create__16daObjHBombkoya_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii();
+extern "C" void Execute__16daObjHBombkoya_cFPPA3_A4_f();
+extern "C" void Draw__16daObjHBombkoya_cFv();
+extern "C" void Delete__16daObjHBombkoya_cFv();
+extern "C" void daObjHBombkoya_create1st__FP16daObjHBombkoya_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void daObjHBombkoya_MoveBGDelete__FP16daObjHBombkoya_c();
+extern "C" void daObjHBombkoya_MoveBGExecute__FP16daObjHBombkoya_c();
+extern "C" void daObjHBombkoya_MoveBGDraw__FP16daObjHBombkoya_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__16daObjHBombkoya_cFv();
+extern "C" void func_80C1C5E8();
 SECTION_RODATA extern const u32 lit_3699;
 SECTION_RODATA extern const u32 lit_3747;
 SECTION_RODATA extern const u8 lit_3758[16];
@@ -57,7 +106,9 @@ SECTION_DATA extern void*const __vt__16daObjHBombkoya_c[17];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -67,7 +118,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__16daObjHBombkoya_cFv) {
+asm void daObjHBombkoya_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/create1st__16daObjHBombkoya_cFv.s"
 }
@@ -78,7 +129,7 @@ ASM_FUNCTION(create1st__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__16daObjHBombkoya_cFv) {
+asm void daObjHBombkoya_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/CreateHeap__16daObjHBombkoya_cFv.s"
 }
@@ -89,7 +140,7 @@ ASM_FUNCTION(CreateHeap__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__16daObjHBombkoya_cFv) {
+asm void daObjHBombkoya_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/Create__16daObjHBombkoya_cFv.s"
 }
@@ -100,7 +151,7 @@ ASM_FUNCTION(Create__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__8cM3dGAabFv.s"
 }
@@ -111,7 +162,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii) {
+asm void daObjHBombkoya_c::setParticle(u16* field_0, s32 field_1, daObjHBombkoya_c::PSetTbl* field_2, s32 field_3, s32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/func_80C1BB7C.s"
 }
@@ -122,7 +173,7 @@ ASM_FUNCTION(setParticle__16daObjHBombkoya_cFPUsiPQ216daObjHBombkoya_c7PSetTblii
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__16daObjHBombkoya_cFPPA3_A4_f) {
+extern "C" asm void Execute__16daObjHBombkoya_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/Execute__16daObjHBombkoya_cFPPA3_A4_f.s"
 }
@@ -133,7 +184,7 @@ ASM_FUNCTION(Execute__16daObjHBombkoya_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__16daObjHBombkoya_cFv) {
+asm void daObjHBombkoya_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/Draw__16daObjHBombkoya_cFv.s"
 }
@@ -144,7 +195,7 @@ ASM_FUNCTION(Draw__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__16daObjHBombkoya_cFv) {
+asm void daObjHBombkoya_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/Delete__16daObjHBombkoya_cFv.s"
 }
@@ -155,7 +206,7 @@ ASM_FUNCTION(Delete__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBombkoya_create1st__FP16daObjHBombkoya_c) {
+asm void daObjHBombkoya_create1st(daObjHBombkoya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/daObjHBombkoya_create1st__FP16daObjHBombkoya_c.s"
 }
@@ -166,7 +217,7 @@ ASM_FUNCTION(daObjHBombkoya_create1st__FP16daObjHBombkoya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__8cM3dGCylFv.s"
 }
@@ -177,7 +228,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__10dCcD_GSttsFv.s"
 }
@@ -188,7 +239,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBombkoya_MoveBGDelete__FP16daObjHBombkoya_c) {
+asm void daObjHBombkoya_MoveBGDelete(daObjHBombkoya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/daObjHBombkoya_MoveBGDelete__FP16daObjHBombkoya_c.s"
 }
@@ -199,7 +250,7 @@ ASM_FUNCTION(daObjHBombkoya_MoveBGDelete__FP16daObjHBombkoya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBombkoya_MoveBGExecute__FP16daObjHBombkoya_c) {
+asm void daObjHBombkoya_MoveBGExecute(daObjHBombkoya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/daObjHBombkoya_MoveBGExecute__FP16daObjHBombkoya_c.s"
 }
@@ -210,7 +261,7 @@ ASM_FUNCTION(daObjHBombkoya_MoveBGExecute__FP16daObjHBombkoya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjHBombkoya_MoveBGDraw__FP16daObjHBombkoya_c) {
+asm void daObjHBombkoya_MoveBGDraw(daObjHBombkoya_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/daObjHBombkoya_MoveBGDraw__FP16daObjHBombkoya_c.s"
 }
@@ -221,7 +272,7 @@ ASM_FUNCTION(daObjHBombkoya_MoveBGDraw__FP16daObjHBombkoya_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__10cCcD_GSttsFv.s"
 }
@@ -232,7 +283,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__17dEvLib_callback_cFv.s"
 }
@@ -240,43 +291,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80C1C45C-80C1C464 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C1C464-80C1C46C 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C1C46C-80C1C474 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C1C474-80C1C5E8 0174+00 .text      __dt__16daObjHBombkoya_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daObjHBombkoya_cFv) {
+asm daObjHBombkoya_c::~daObjHBombkoya_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/__dt__16daObjHBombkoya_cFv.s"
 }
@@ -287,7 +323,7 @@ ASM_FUNCTION(__dt__16daObjHBombkoya_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C1C5E8) {
+extern "C" asm void func_80C1C5E8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hbombkoya/d_a_obj_hbombkoya/func_80C1C5E8.s"
 }

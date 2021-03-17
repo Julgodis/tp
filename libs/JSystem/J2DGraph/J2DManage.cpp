@@ -6,55 +6,90 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J2DDataManage (J2DDataManage) False/False
+// build JSUInputStream (JSUInputStream) False/False
+/* top-level dependencies (begin JSUInputStream) */
+/* top-level dependencies (end JSUInputStream) */
+struct JSUInputStream {
+	/* 802DC298 */ void read(void*, s32);
+};
+
+/* top-level dependencies (begin J2DDataManage) */
+// outer dependency: JSUInputStream
+/* top-level dependencies (end J2DDataManage) */
+struct J2DDataManage {
+	// JSUInputStream
+	/* 8030CE18 */ void get(char const*);
+	/* 8030CE7C */ void get(JSUInputStream*);
+};
+
+// build JSUInputStream (JSUInputStream) True/True
+// build J2DResReference (J2DResReference) False/False
+/* top-level dependencies (begin J2DResReference) */
+/* top-level dependencies (end J2DResReference) */
+struct J2DResReference {
+	/* 8030CF10 */ void getResReference(u16) const;
+	/* 8030CF44 */ void getName(u16) const;
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void get__13J2DDataManageFPCc();
-extern "C" extern void get__13J2DDataManageFP14JSUInputStream();
-extern "C" extern void getResReference__15J2DResReferenceCFUs();
-extern "C" extern void getName__15J2DResReferenceCFUs();
+
+extern "C" void get__13J2DDataManageFPCc();
+extern "C" void get__13J2DDataManageFP14JSUInputStream();
+extern "C" void getResReference__15J2DResReferenceCFUs();
+extern "C" void getName__15J2DResReferenceCFUs();
 SECTION_BSS extern u8 data_804349C0[257 + 7 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" extern void read__14JSUInputStreamFPvl();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 
 // 
 // Declarations:
 // 
 
-/* 8030CE18-8030CE7C 0064+00 .text      get__13J2DDataManageFPCc                                     */
+/* 8030CE18-8030CE7C 0064+00 rc=4 efc=3 .text      get__13J2DDataManageFPCc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get__13J2DDataManageFPCc) {
+asm void J2DDataManage::get(char const* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/get__13J2DDataManageFPCc.s"
 }
 #pragma pop
 
 
-/* 8030CE7C-8030CF10 0094+00 .text      get__13J2DDataManageFP14JSUInputStream                       */
+/* 8030CE7C-8030CF10 0094+00 rc=1 efc=1 .text      get__13J2DDataManageFP14JSUInputStream                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(get__13J2DDataManageFP14JSUInputStream) {
+asm void J2DDataManage::get(JSUInputStream* field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/get__13J2DDataManageFP14JSUInputStream.s"
 }
 #pragma pop
 
 
-/* 8030CF10-8030CF44 0034+00 .text      getResReference__15J2DResReferenceCFUs                       */
+/* 8030CF10-8030CF44 0034+00 rc=3 efc=2 .text      getResReference__15J2DResReferenceCFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResReference__15J2DResReferenceCFUs) {
+asm void J2DResReference::getResReference(u16 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/getResReference__15J2DResReferenceCFUs.s"
 }
@@ -62,18 +97,17 @@ ASM_FUNCTION(getResReference__15J2DResReferenceCFUs) {
 
 
 /* ############################################################################################## */
-/* 804349C0-80434AC8 0101+07 .bss       p_name$494                                                   */
+/* 804349C0-80434AC8 0101+07 rc=1 efc=0 .bss       p_name$494                                                   */
 u8 data_804349C0[257 + 7 /* padding */];
 
-/* 8030CF44-8030D098 0154+00 .text      getName__15J2DResReferenceCFUs                               */
+/* 8030CF44-8030D098 0154+00 rc=2 efc=2 .text      getName__15J2DResReferenceCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getName__15J2DResReferenceCFUs) {
+asm void J2DResReference::getName(u16 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DManage/getName__15J2DResReferenceCFUs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

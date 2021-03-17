@@ -6,17 +6,42 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct obj_lv3WaterB_class;
+
+struct obj_lv3WaterB_class {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class();
-extern "C" extern void action__FP19obj_lv3WaterB_class();
-extern "C" extern void daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class();
-extern "C" extern void daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class();
-extern "C" extern void daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObj_Lv3waterB_Create__FP10fopAc_ac_c();
+void daObj_Lv3waterB_Draw(obj_lv3WaterB_class*);
+void action(obj_lv3WaterB_class*);
+void daObj_Lv3waterB_Execute(obj_lv3WaterB_class*);
+bool daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class*);
+void daObj_Lv3waterB_Delete(obj_lv3WaterB_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Lv3waterB_Create(fopAc_ac_c*);
+
+extern "C" void daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class();
+extern "C" void action__FP19obj_lv3WaterB_class();
+extern "C" void daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class();
+extern "C" bool daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class();
+extern "C" void daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObj_Lv3waterB_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u32 lit_3724;
 SECTION_RODATA extern const u32 lit_3725;
 SECTION_RODATA extern const u8 lit_3726[4];
@@ -34,7 +59,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -44,7 +71,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class) {
+asm void daObj_Lv3waterB_Draw(obj_lv3WaterB_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class.s"
 }
@@ -55,7 +82,7 @@ ASM_FUNCTION(daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP19obj_lv3WaterB_class) {
+asm void action(obj_lv3WaterB_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/action__FP19obj_lv3WaterB_class.s"
 }
@@ -66,7 +93,7 @@ ASM_FUNCTION(action__FP19obj_lv3WaterB_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class) {
+asm void daObj_Lv3waterB_Execute(obj_lv3WaterB_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class.s"
 }
@@ -74,21 +101,16 @@ ASM_FUNCTION(daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class) {
 
 
 /* 80C5B8C0-80C5B8C8 0008+00 .text      daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class.s"
+bool daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5B8C8-80C5B94C 0084+00 .text      daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class) {
+asm void daObj_Lv3waterB_Delete(obj_lv3WaterB_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class.s"
 }
@@ -99,7 +121,7 @@ ASM_FUNCTION(daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -110,7 +132,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/__dt__12J3DFrameCtrlFv.s"
 }
@@ -121,7 +143,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Lv3waterB_Create__FP10fopAc_ac_c) {
+asm void daObj_Lv3waterB_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_Create__FP10fopAc_ac_c.s"
 }

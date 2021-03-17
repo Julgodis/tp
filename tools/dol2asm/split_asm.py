@@ -62,15 +62,56 @@ from queue import Empty
 import traceback 
 import hashlib
 
+"""
+def dm(name):
+    g.LOG.info("---------------------------------------------------------")
+    g.LOG.info(name)
+    try:
+        p = demangle.ParseCtx(name)
+        p.demangle()
+        g.LOG.info(p.to_str())
+        g.LOG.info(p.func_name)
+        g.LOG.info(p.class_name)
+        g.LOG.info(p.demangled)
+    except demangle.ParseError as e:
+        g.LOG.error(e)
+
+dm("mDoExt_J3DModel__create__FP12J3DModelDataUlUl")
+dm("JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience")
+dm("checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i")
+dm("_unresolved")
+dm("__sinit_d_a_obj_heavySw_cpp")
+dm("__dt__26__partial_array_destructorFv")
+dm("mDoAud_Create__Fv")
+dm("OSPanic")
+dm("countUsed__FP10JKRExpHeap")
+dm("OSVAttention__FPCcP16__va_list_struct")
+
+dm("mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct")
+dm("mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct")
+dm("mDoPrintf_vprintf__FPCcP16__va_list_struct")
+dm("dKy_Draw__FP17sub_kankyo__class")
+dm("dKy_Execute__FP17sub_kankyo__class")
+dm("dKy_IsDelete__FP17sub_kankyo__class")
+dm("dKy_Delete__FP17sub_kankyo__class")
+dm("__dt__26__partial_array_destructorFv")
+dm("setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl")
+dm("set__Q23std16__bitset_base<8>FUlb")
+dm("reset__Q23std16__bitset_base<8>FUl")
+dm("test__Q23std16__bitset_base<8>CFUl")
+dm("__ct__Q23std16__bitset_base<8>Fv")
+dm("panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct")
+dm("printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb")
+dm("TRK__write_aram")
+dm("TRK__read_aram")
+sys.exit(1)
+"""
 
 def sha1_check(path, data, expected):
     sha1 = hashlib.sha1()
     sha1.update(data)
 
     current = sha1.hexdigest().upper()
-    g.LOG.debug(f"provided SHA1: '{current}'")
-    g.LOG.debug(f"expected SHA1: '{expected}'")
-
     if current != expected:
         raise Dol2ZelException(f"SHA1 checksum miss-match for '{path}'.\n'{current}'\n'{expected}'")
 
@@ -84,10 +125,11 @@ def main(debug, game_path):
     rel_path = Path("rel/")
 
     cpp_gen = True
-    asm_gen = True
-    mk_gen = True
-    symbols_gen = True
+    asm_gen = False
+    mk_gen = False
+    symbols_gen = False
     no_file_generation = False
+    select_modules = [0]
 
     cpp_group_count = 4
     asm_group_count = 16
@@ -178,6 +220,7 @@ def main(debug, game_path):
 
     # extract rels from 'RELs.arc'
     g.CONSOLE.print(f"{step_count:2} Read RELs from '{rels_archive_path}'")
+    step_count += 1
     found_rel_count = 0
     with rels_archive_path.open('rb') as file:
         rarc = arclib.read(file.read())
@@ -201,7 +244,6 @@ def main(debug, game_path):
     g.LOG.info(f"found {found_rel_count} RELs in '{rels_archive_path}'")
 
     #
-    select_modules = []
     if not select_modules:
         gen_modules = [0] + [ x for x in g.RELS.keys() ]
     else:
@@ -237,7 +279,7 @@ def main(debug, game_path):
     rels_items.sort(key=lambda x: x[0])
     for index, rel in rels_items:
         # TODO:
-        #break
+        break
         base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
 
         relocations = defaultdict(list)
@@ -359,8 +401,42 @@ def main(debug, game_path):
     for section, symbol in require_resolve:
         symbol.resolve_references(main_context, symbol_table, section)
 
-    g.CONSOLE.print(f"{step_count:2} Determine library paths")
+
+    g.CONSOLE.print(f"{step_count:2} Calculate reference count")
     step_count += 1
+
+    # add reference to entrypoint
+    entrypoint = symbol_table[0, globals.ENTRY_POINT]
+    entrypoint.add_reference(None)
+
+    # these symbols are required to be external, because otherwise the linker will not find them
+    __fini_cpp_exceptions = symbol_table[0, 0x8036283C]
+    __init_cpp_exceptions = symbol_table[0, 0x80362870]
+    __fini_cpp_exceptions.add_reference(None)
+    __init_cpp_exceptions.add_reference(None)
+
+    total_rc_step_count = 0
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                total_rc_step_count += sum([ len(x.symbols) for x in tu.sections.values() ])
+
+    with Progress(console=g.CONSOLE, transient=True, refresh_per_second=1) as progress:
+        task = progress.add_task(f"processing...", total=total_rc_step_count)
+        for module in modules:
+            for lib in module.libraries.values():
+                for tu in lib.translation_units.values():
+                    count = 0
+                    for section in tu.sections.values():
+                        for symbol in section.symbols:
+                            refs = symbol.internal_references(main_context, symbol_table)
+                            for reference in refs:
+                                reference.add_reference(symbol)
+                        count += len(section.symbols)
+                    progress.update(task, advance=count)    
+
+    g.CONSOLE.print(f"{step_count:2} Determine library paths")
+    step_count += 1 
     for module in modules:
         if module.index == 0:
             base = module.libraries[None]
@@ -405,7 +481,7 @@ def main(debug, game_path):
             for tu in lib.translation_units.values():
                 for sec in tu.sections.values():
                     for symbol in sec.symbols:
-                        if not isinstance(symbol, Function):
+                        if not isinstance(symbol, ASMFunction):
                             continue
 
                         include_path = f"{tu.asm_function_path(lib)}/{symbol.identifier.label}.s"
@@ -425,7 +501,7 @@ def main(debug, game_path):
                 for tu in lib.translation_units.values():
                     for sec in tu.sections.values():
                         for symbol in sec.symbols:
-                            if not isinstance(symbol, Function):
+                            if not isinstance(symbol, ASMFunction):
                                 continue
                             if no_file_generation:
                                 if symbol.include_path.exists():
@@ -476,7 +552,7 @@ def main(debug, game_path):
     if len(cpp_tasks) > 0:
         g.CONSOLE.print(f"{step_count:2} Generate C++ files")
         step_count += 1
-        random.shuffle(cpp_tasks)
+        #random.shuffle(cpp_tasks)
         start_time = time.time()
         tasks = [ (x,) for x in util.chunks(cpp_tasks, cpp_group_count) ]
         mp.progress(process_count, cpp.export_translation_unit_group, tasks, shared={
@@ -513,4 +589,4 @@ def main(debug, game_path):
     g.CONSOLE.print(f"{step_count:2} Complete! Everything took {total_end_time-total_start_time:.2f} seconds")
     sys.exit(1)
 
-main(debug = False, game_path = Path("game/"))
+main(debug = True, game_path = Path("game/"))

@@ -6,45 +6,104 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daAmiShutter_c;
+
+struct daAmiShutter_HIO_c {
+	daAmiShutter_HIO_c();
+	~daAmiShutter_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daAmiShutter_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void moveShutter();
+	void playerAreaCheck();
+	void init_modeWait();
+	void modeWait();
+	void init_modeWaitEvent();
+	void modeWaitEvent();
+	void eventStart();
+	void init_modeClose();
+	void modeClose();
+	void init_modeCloseEvent();
+	void modeCloseEvent();
+	void init_modeCloseEnd();
+	void modeCloseEnd();
+	void init_modeOpen();
+	void modeOpen();
+	void Draw();
+	void Delete();
+	~daAmiShutter_c();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dEvLib_callback_c {
+	~dEvLib_callback_c();
+	bool eventStart();
+	bool eventRun();
+	bool eventEnd();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__18daAmiShutter_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__14daAmiShutter_cFv();
-extern "C" extern void CreateHeap__14daAmiShutter_cFv();
-extern "C" extern void create__14daAmiShutter_cFv();
-extern "C" extern void Execute__14daAmiShutter_cFPPA3_A4_f();
-extern "C" extern void moveShutter__14daAmiShutter_cFv();
-extern "C" extern void playerAreaCheck__14daAmiShutter_cFv();
-extern "C" extern void init_modeWait__14daAmiShutter_cFv();
-extern "C" extern void modeWait__14daAmiShutter_cFv();
-extern "C" extern void init_modeWaitEvent__14daAmiShutter_cFv();
-extern "C" extern void modeWaitEvent__14daAmiShutter_cFv();
-extern "C" extern void eventStart__14daAmiShutter_cFv();
-extern "C" extern void init_modeClose__14daAmiShutter_cFv();
-extern "C" extern void modeClose__14daAmiShutter_cFv();
-extern "C" extern void init_modeCloseEvent__14daAmiShutter_cFv();
-extern "C" extern void modeCloseEvent__14daAmiShutter_cFv();
-extern "C" extern void init_modeCloseEnd__14daAmiShutter_cFv();
-extern "C" extern void modeCloseEnd__14daAmiShutter_cFv();
-extern "C" extern void init_modeOpen__14daAmiShutter_cFv();
-extern "C" extern void modeOpen__14daAmiShutter_cFv();
-extern "C" extern void Draw__14daAmiShutter_cFv();
-extern "C" extern void Delete__14daAmiShutter_cFv();
-extern "C" extern void daAmiShutter_Draw__FP14daAmiShutter_c();
-extern "C" extern void daAmiShutter_Execute__FP14daAmiShutter_c();
-extern "C" extern void daAmiShutter_Delete__FP14daAmiShutter_c();
-extern "C" extern void daAmiShutter_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__18daAmiShutter_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_amiShutter_cpp();
-extern "C" extern void func_80BA2278();
-extern "C" extern void func_80BA2280();
-extern "C" extern void __dt__17dEvLib_callback_cFv();
-extern "C" extern void eventStart__17dEvLib_callback_cFv();
-extern "C" extern void eventRun__17dEvLib_callback_cFv();
-extern "C" extern void eventEnd__17dEvLib_callback_cFv();
-extern "C" extern void __dt__14daAmiShutter_cFv();
+extern "C" void Execute__14daAmiShutter_cFPPA3_A4_f();
+void daAmiShutter_Draw(daAmiShutter_c*);
+void daAmiShutter_Execute(daAmiShutter_c*);
+void daAmiShutter_Delete(daAmiShutter_c*);
+void daAmiShutter_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_amiShutter_cpp();
+extern "C" void func_80BA2278();
+extern "C" void func_80BA2280();
+
+extern "C" void __ct__18daAmiShutter_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daAmiShutter_cFv();
+extern "C" void CreateHeap__14daAmiShutter_cFv();
+extern "C" void create__14daAmiShutter_cFv();
+extern "C" void Execute__14daAmiShutter_cFPPA3_A4_f();
+extern "C" void moveShutter__14daAmiShutter_cFv();
+extern "C" void playerAreaCheck__14daAmiShutter_cFv();
+extern "C" void init_modeWait__14daAmiShutter_cFv();
+extern "C" void modeWait__14daAmiShutter_cFv();
+extern "C" void init_modeWaitEvent__14daAmiShutter_cFv();
+extern "C" void modeWaitEvent__14daAmiShutter_cFv();
+extern "C" void eventStart__14daAmiShutter_cFv();
+extern "C" void init_modeClose__14daAmiShutter_cFv();
+extern "C" void modeClose__14daAmiShutter_cFv();
+extern "C" void init_modeCloseEvent__14daAmiShutter_cFv();
+extern "C" void modeCloseEvent__14daAmiShutter_cFv();
+extern "C" void init_modeCloseEnd__14daAmiShutter_cFv();
+extern "C" void modeCloseEnd__14daAmiShutter_cFv();
+extern "C" void init_modeOpen__14daAmiShutter_cFv();
+extern "C" void modeOpen__14daAmiShutter_cFv();
+extern "C" void Draw__14daAmiShutter_cFv();
+extern "C" void Delete__14daAmiShutter_cFv();
+extern "C" void daAmiShutter_Draw__FP14daAmiShutter_c();
+extern "C" void daAmiShutter_Execute__FP14daAmiShutter_c();
+extern "C" void daAmiShutter_Delete__FP14daAmiShutter_c();
+extern "C" void daAmiShutter_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daAmiShutter_HIO_cFv();
+extern "C" void __sinit_d_a_obj_amiShutter_cpp();
+extern "C" void func_80BA2278();
+extern "C" void func_80BA2280();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__14daAmiShutter_cFv();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_RODATA extern const u32 lit_3656;
 SECTION_RODATA extern const u32 lit_3739;
@@ -83,8 +142,11 @@ SECTION_BSS extern u8 data_80BA2580[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -94,7 +156,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daAmiShutter_HIO_cFv) {
+asm daAmiShutter_HIO_c::daAmiShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__ct__18daAmiShutter_HIO_cFv.s"
 }
@@ -105,7 +167,7 @@ ASM_FUNCTION(__ct__18daAmiShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -116,7 +178,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/setBaseMtx__14daAmiShutter_cFv.s"
 }
@@ -127,7 +189,7 @@ ASM_FUNCTION(setBaseMtx__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/CreateHeap__14daAmiShutter_cFv.s"
 }
@@ -138,7 +200,7 @@ ASM_FUNCTION(CreateHeap__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/create__14daAmiShutter_cFv.s"
 }
@@ -149,7 +211,7 @@ ASM_FUNCTION(create__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daAmiShutter_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daAmiShutter_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/Execute__14daAmiShutter_cFPPA3_A4_f.s"
 }
@@ -160,7 +222,7 @@ ASM_FUNCTION(Execute__14daAmiShutter_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveShutter__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::moveShutter() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/moveShutter__14daAmiShutter_cFv.s"
 }
@@ -171,7 +233,7 @@ ASM_FUNCTION(moveShutter__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playerAreaCheck__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::playerAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/playerAreaCheck__14daAmiShutter_cFv.s"
 }
@@ -182,7 +244,7 @@ ASM_FUNCTION(playerAreaCheck__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeWait__14daAmiShutter_cFv.s"
 }
@@ -193,7 +255,7 @@ ASM_FUNCTION(init_modeWait__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeWait__14daAmiShutter_cFv.s"
 }
@@ -204,7 +266,7 @@ ASM_FUNCTION(modeWait__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWaitEvent__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeWaitEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeWaitEvent__14daAmiShutter_cFv.s"
 }
@@ -215,7 +277,7 @@ ASM_FUNCTION(init_modeWaitEvent__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWaitEvent__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::modeWaitEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeWaitEvent__14daAmiShutter_cFv.s"
 }
@@ -226,7 +288,7 @@ ASM_FUNCTION(modeWaitEvent__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(eventStart__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::eventStart() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventStart__14daAmiShutter_cFv.s"
 }
@@ -237,7 +299,7 @@ ASM_FUNCTION(eventStart__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeClose__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeClose__14daAmiShutter_cFv.s"
 }
@@ -248,7 +310,7 @@ ASM_FUNCTION(init_modeClose__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeClose__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::modeClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeClose__14daAmiShutter_cFv.s"
 }
@@ -259,7 +321,7 @@ ASM_FUNCTION(modeClose__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeCloseEvent__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeCloseEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeCloseEvent__14daAmiShutter_cFv.s"
 }
@@ -270,7 +332,7 @@ ASM_FUNCTION(init_modeCloseEvent__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeCloseEvent__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::modeCloseEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeCloseEvent__14daAmiShutter_cFv.s"
 }
@@ -281,7 +343,7 @@ ASM_FUNCTION(modeCloseEvent__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeCloseEnd__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeCloseEnd() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeCloseEnd__14daAmiShutter_cFv.s"
 }
@@ -289,21 +351,16 @@ ASM_FUNCTION(init_modeCloseEnd__14daAmiShutter_cFv) {
 
 
 /* 80BA1F7C-80BA1F80 0004+00 .text      modeCloseEnd__14daAmiShutter_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeCloseEnd__14daAmiShutter_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeCloseEnd__14daAmiShutter_cFv.s"
+void daAmiShutter_c::modeCloseEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BA1F80-80BA2004 0084+00 .text      init_modeOpen__14daAmiShutter_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeOpen__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::init_modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/init_modeOpen__14daAmiShutter_cFv.s"
 }
@@ -314,7 +371,7 @@ ASM_FUNCTION(init_modeOpen__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeOpen__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::modeOpen() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeOpen__14daAmiShutter_cFv.s"
 }
@@ -325,7 +382,7 @@ ASM_FUNCTION(modeOpen__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/Draw__14daAmiShutter_cFv.s"
 }
@@ -336,7 +393,7 @@ ASM_FUNCTION(Draw__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daAmiShutter_cFv) {
+asm void daAmiShutter_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/Delete__14daAmiShutter_cFv.s"
 }
@@ -347,7 +404,7 @@ ASM_FUNCTION(Delete__14daAmiShutter_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAmiShutter_Draw__FP14daAmiShutter_c) {
+asm void daAmiShutter_Draw(daAmiShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Draw__FP14daAmiShutter_c.s"
 }
@@ -358,7 +415,7 @@ ASM_FUNCTION(daAmiShutter_Draw__FP14daAmiShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAmiShutter_Execute__FP14daAmiShutter_c) {
+asm void daAmiShutter_Execute(daAmiShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Execute__FP14daAmiShutter_c.s"
 }
@@ -369,7 +426,7 @@ ASM_FUNCTION(daAmiShutter_Execute__FP14daAmiShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAmiShutter_Delete__FP14daAmiShutter_c) {
+asm void daAmiShutter_Delete(daAmiShutter_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Delete__FP14daAmiShutter_c.s"
 }
@@ -380,7 +437,7 @@ ASM_FUNCTION(daAmiShutter_Delete__FP14daAmiShutter_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daAmiShutter_Create__FP10fopAc_ac_c) {
+asm void daAmiShutter_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/daAmiShutter_Create__FP10fopAc_ac_c.s"
 }
@@ -391,7 +448,7 @@ ASM_FUNCTION(daAmiShutter_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daAmiShutter_HIO_cFv) {
+asm daAmiShutter_HIO_c::~daAmiShutter_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__dt__18daAmiShutter_HIO_cFv.s"
 }
@@ -402,7 +459,7 @@ ASM_FUNCTION(__dt__18daAmiShutter_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_amiShutter_cpp) {
+extern "C" asm void __sinit_d_a_obj_amiShutter_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__sinit_d_a_obj_amiShutter_cpp.s"
 }
@@ -413,7 +470,7 @@ ASM_FUNCTION(__sinit_d_a_obj_amiShutter_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA2278) {
+extern "C" asm void func_80BA2278() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/func_80BA2278.s"
 }
@@ -424,7 +481,7 @@ ASM_FUNCTION(func_80BA2278) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BA2280) {
+extern "C" asm void func_80BA2280() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/func_80BA2280.s"
 }
@@ -435,7 +492,7 @@ ASM_FUNCTION(func_80BA2280) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
+asm dEvLib_callback_c::~dEvLib_callback_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__dt__17dEvLib_callback_cFv.s"
 }
@@ -443,43 +500,28 @@ ASM_FUNCTION(__dt__17dEvLib_callback_cFv) {
 
 
 /* 80BA22D0-80BA22D8 0008+00 .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventStart__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22D8-80BA22E0 0008+00 .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventRun__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22E0-80BA22E8 0008+00 .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(eventEnd__17dEvLib_callback_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22E8-80BA237C 0094+00 .text      __dt__14daAmiShutter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daAmiShutter_cFv) {
+asm daAmiShutter_c::~daAmiShutter_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/__dt__14daAmiShutter_cFv.s"
 }

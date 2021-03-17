@@ -9,11 +9,13 @@
 // Forward References:
 // 
 
+
 extern const u8 data_8059F434[4];
 
 // 
 // External References:
 // 
+
 
 
 // 

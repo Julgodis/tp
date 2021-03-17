@@ -6,47 +6,117 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjKUW_c;
+
+struct daObj_KuwHIO_c {
+	daObj_KuwHIO_c();
+	~daObj_KuwHIO_c();
+};
+
+struct daObjKUW_c {
+	void InitCcSph();
+	void SetCcSph();
+	void CreateHeap();
+	void ShopWaitAction();
+	void WaitAction();
+	void WallCheck();
+	void SpeedSet();
+	void WallWalk();
+	void WalkAction();
+	void MoveAction();
+	void Action();
+	void ShopAction();
+	void Insect_Release();
+	void Z_BufferChk();
+	void ParticleSet();
+	void BoomChk();
+	void ObjHit();
+	void Execute();
+	void Delete();
+	void setBaseMtx();
+	void CreateChk();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_KuwHIO_cFv();
-extern "C" extern void InitCcSph__10daObjKUW_cFv();
-extern "C" extern void SetCcSph__10daObjKUW_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void CreateHeap__10daObjKUW_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjKUW_Create__FP10fopAc_ac_c();
-extern "C" extern void daObjKUW_Delete__FP10daObjKUW_c();
-extern "C" extern void ShopWaitAction__10daObjKUW_cFv();
-extern "C" extern void WaitAction__10daObjKUW_cFv();
-extern "C" extern void WallCheck__10daObjKUW_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void SpeedSet__10daObjKUW_cFv();
-extern "C" extern void WallWalk__10daObjKUW_cFv();
-extern "C" extern void WalkAction__10daObjKUW_cFv();
-extern "C" extern void MoveAction__10daObjKUW_cFv();
-extern "C" extern void Action__10daObjKUW_cFv();
-extern "C" extern void ShopAction__10daObjKUW_cFv();
-extern "C" extern void Insect_Release__10daObjKUW_cFv();
-extern "C" extern void Z_BufferChk__10daObjKUW_cFv();
-extern "C" extern void ParticleSet__10daObjKUW_cFv();
-extern "C" extern void BoomChk__10daObjKUW_cFv();
-extern "C" extern void ObjHit__10daObjKUW_cFv();
-extern "C" extern void Execute__10daObjKUW_cFv();
-extern "C" extern void Delete__10daObjKUW_cFv();
-extern "C" extern void setBaseMtx__10daObjKUW_cFv();
-extern "C" extern void daObjKUW_Draw__FP10daObjKUW_c();
-extern "C" extern void daObjKUW_Execute__FP10daObjKUW_c();
-extern "C" extern void CreateChk__10daObjKUW_cFv();
-extern "C" extern void create__10daObjKUW_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjKUW_IsDelete__FP10daObjKUW_c();
-extern "C" extern void __dt__14daObj_KuwHIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kuwagata_cpp();
-extern "C" extern void func_80C4D46C();
-extern "C" extern void func_80C4D474();
+void useHeapInit(fopAc_ac_c*);
+void daObjKUW_Create(fopAc_ac_c*);
+void daObjKUW_Delete(daObjKUW_c*);
+void daObjKUW_Draw(daObjKUW_c*);
+void daObjKUW_Execute(daObjKUW_c*);
+bool daObjKUW_IsDelete(daObjKUW_c*);
+extern "C" void __sinit_d_a_obj_kuwagata_cpp();
+extern "C" void func_80C4D46C();
+extern "C" void func_80C4D474();
+
+extern "C" void __ct__14daObj_KuwHIO_cFv();
+extern "C" void InitCcSph__10daObjKUW_cFv();
+extern "C" void SetCcSph__10daObjKUW_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daObjKUW_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjKUW_Create__FP10fopAc_ac_c();
+extern "C" void daObjKUW_Delete__FP10daObjKUW_c();
+extern "C" void ShopWaitAction__10daObjKUW_cFv();
+extern "C" void WaitAction__10daObjKUW_cFv();
+extern "C" void WallCheck__10daObjKUW_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void SpeedSet__10daObjKUW_cFv();
+extern "C" void WallWalk__10daObjKUW_cFv();
+extern "C" void WalkAction__10daObjKUW_cFv();
+extern "C" void MoveAction__10daObjKUW_cFv();
+extern "C" void Action__10daObjKUW_cFv();
+extern "C" void ShopAction__10daObjKUW_cFv();
+extern "C" void Insect_Release__10daObjKUW_cFv();
+extern "C" void Z_BufferChk__10daObjKUW_cFv();
+extern "C" void ParticleSet__10daObjKUW_cFv();
+extern "C" void BoomChk__10daObjKUW_cFv();
+extern "C" void ObjHit__10daObjKUW_cFv();
+extern "C" void Execute__10daObjKUW_cFv();
+extern "C" void Delete__10daObjKUW_cFv();
+extern "C" void setBaseMtx__10daObjKUW_cFv();
+extern "C" void daObjKUW_Draw__FP10daObjKUW_c();
+extern "C" void daObjKUW_Execute__FP10daObjKUW_c();
+extern "C" void CreateChk__10daObjKUW_cFv();
+extern "C" void create__10daObjKUW_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" bool daObjKUW_IsDelete__FP10daObjKUW_c();
+extern "C" void __dt__14daObj_KuwHIO_cFv();
+extern "C" void __sinit_d_a_obj_kuwagata_cpp();
+extern "C" void func_80C4D46C();
+extern "C" void func_80C4D474();
 SECTION_RODATA extern const u32 lit_3775;
 SECTION_RODATA extern const u32 lit_3776;
 SECTION_RODATA extern const u8 data_80C4D498[64];
@@ -108,8 +178,11 @@ SECTION_BSS extern u8 l_HIO[16];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -119,7 +192,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_KuwHIO_cFv) {
+asm daObj_KuwHIO_c::daObj_KuwHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__ct__14daObj_KuwHIO_cFv.s"
 }
@@ -130,7 +203,7 @@ ASM_FUNCTION(__ct__14daObj_KuwHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(InitCcSph__10daObjKUW_cFv) {
+asm void daObjKUW_c::InitCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/InitCcSph__10daObjKUW_cFv.s"
 }
@@ -141,7 +214,7 @@ ASM_FUNCTION(InitCcSph__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCcSph__10daObjKUW_cFv) {
+asm void daObjKUW_c::SetCcSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/SetCcSph__10daObjKUW_cFv.s"
 }
@@ -152,7 +225,7 @@ ASM_FUNCTION(SetCcSph__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -163,7 +236,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__10daObjKUW_cFv) {
+asm void daObjKUW_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/CreateHeap__10daObjKUW_cFv.s"
 }
@@ -174,7 +247,7 @@ ASM_FUNCTION(CreateHeap__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__12J3DFrameCtrlFv.s"
 }
@@ -185,7 +258,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKUW_Create__FP10fopAc_ac_c) {
+asm void daObjKUW_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/daObjKUW_Create__FP10fopAc_ac_c.s"
 }
@@ -196,7 +269,7 @@ ASM_FUNCTION(daObjKUW_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKUW_Delete__FP10daObjKUW_c) {
+asm void daObjKUW_Delete(daObjKUW_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/daObjKUW_Delete__FP10daObjKUW_c.s"
 }
@@ -207,7 +280,7 @@ ASM_FUNCTION(daObjKUW_Delete__FP10daObjKUW_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopWaitAction__10daObjKUW_cFv) {
+asm void daObjKUW_c::ShopWaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/ShopWaitAction__10daObjKUW_cFv.s"
 }
@@ -218,7 +291,7 @@ ASM_FUNCTION(ShopWaitAction__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WaitAction__10daObjKUW_cFv) {
+asm void daObjKUW_c::WaitAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/WaitAction__10daObjKUW_cFv.s"
 }
@@ -229,7 +302,7 @@ ASM_FUNCTION(WaitAction__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallCheck__10daObjKUW_cFv) {
+asm void daObjKUW_c::WallCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/WallCheck__10daObjKUW_cFv.s"
 }
@@ -240,7 +313,7 @@ ASM_FUNCTION(WallCheck__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__8cM3dGPlaFv.s"
 }
@@ -251,7 +324,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__10daObjKUW_cFv) {
+asm void daObjKUW_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/SpeedSet__10daObjKUW_cFv.s"
 }
@@ -262,7 +335,7 @@ ASM_FUNCTION(SpeedSet__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WallWalk__10daObjKUW_cFv) {
+asm void daObjKUW_c::WallWalk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/WallWalk__10daObjKUW_cFv.s"
 }
@@ -273,7 +346,7 @@ ASM_FUNCTION(WallWalk__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(WalkAction__10daObjKUW_cFv) {
+asm void daObjKUW_c::WalkAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/WalkAction__10daObjKUW_cFv.s"
 }
@@ -284,7 +357,7 @@ ASM_FUNCTION(WalkAction__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MoveAction__10daObjKUW_cFv) {
+asm void daObjKUW_c::MoveAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/MoveAction__10daObjKUW_cFv.s"
 }
@@ -295,7 +368,7 @@ ASM_FUNCTION(MoveAction__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__10daObjKUW_cFv) {
+asm void daObjKUW_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/Action__10daObjKUW_cFv.s"
 }
@@ -306,7 +379,7 @@ ASM_FUNCTION(Action__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ShopAction__10daObjKUW_cFv) {
+asm void daObjKUW_c::ShopAction() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/ShopAction__10daObjKUW_cFv.s"
 }
@@ -317,7 +390,7 @@ ASM_FUNCTION(ShopAction__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Insect_Release__10daObjKUW_cFv) {
+asm void daObjKUW_c::Insect_Release() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/Insect_Release__10daObjKUW_cFv.s"
 }
@@ -328,7 +401,7 @@ ASM_FUNCTION(Insect_Release__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Z_BufferChk__10daObjKUW_cFv) {
+asm void daObjKUW_c::Z_BufferChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/Z_BufferChk__10daObjKUW_cFv.s"
 }
@@ -339,7 +412,7 @@ ASM_FUNCTION(Z_BufferChk__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ParticleSet__10daObjKUW_cFv) {
+asm void daObjKUW_c::ParticleSet() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/ParticleSet__10daObjKUW_cFv.s"
 }
@@ -350,7 +423,7 @@ ASM_FUNCTION(ParticleSet__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BoomChk__10daObjKUW_cFv) {
+asm void daObjKUW_c::BoomChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/BoomChk__10daObjKUW_cFv.s"
 }
@@ -361,7 +434,7 @@ ASM_FUNCTION(BoomChk__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ObjHit__10daObjKUW_cFv) {
+asm void daObjKUW_c::ObjHit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/ObjHit__10daObjKUW_cFv.s"
 }
@@ -372,7 +445,7 @@ ASM_FUNCTION(ObjHit__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__10daObjKUW_cFv) {
+asm void daObjKUW_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/Execute__10daObjKUW_cFv.s"
 }
@@ -383,7 +456,7 @@ ASM_FUNCTION(Execute__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__10daObjKUW_cFv) {
+asm void daObjKUW_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/Delete__10daObjKUW_cFv.s"
 }
@@ -394,7 +467,7 @@ ASM_FUNCTION(Delete__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjKUW_cFv) {
+asm void daObjKUW_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/setBaseMtx__10daObjKUW_cFv.s"
 }
@@ -405,7 +478,7 @@ ASM_FUNCTION(setBaseMtx__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKUW_Draw__FP10daObjKUW_c) {
+asm void daObjKUW_Draw(daObjKUW_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/daObjKUW_Draw__FP10daObjKUW_c.s"
 }
@@ -416,7 +489,7 @@ ASM_FUNCTION(daObjKUW_Draw__FP10daObjKUW_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKUW_Execute__FP10daObjKUW_c) {
+asm void daObjKUW_Execute(daObjKUW_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/daObjKUW_Execute__FP10daObjKUW_c.s"
 }
@@ -427,7 +500,7 @@ ASM_FUNCTION(daObjKUW_Execute__FP10daObjKUW_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateChk__10daObjKUW_cFv) {
+asm void daObjKUW_c::CreateChk() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/CreateChk__10daObjKUW_cFv.s"
 }
@@ -438,7 +511,7 @@ ASM_FUNCTION(CreateChk__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__10daObjKUW_cFv) {
+asm void daObjKUW_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/create__10daObjKUW_cFv.s"
 }
@@ -449,7 +522,7 @@ ASM_FUNCTION(create__10daObjKUW_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -460,7 +533,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__8cM3dGSphFv.s"
 }
@@ -471,7 +544,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__8cM3dGAabFv.s"
 }
@@ -479,21 +552,16 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 
 
 /* 80C4D3E0-80C4D3E8 0008+00 .text      daObjKUW_IsDelete__FP10daObjKUW_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjKUW_IsDelete__FP10daObjKUW_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/daObjKUW_IsDelete__FP10daObjKUW_c.s"
+bool daObjKUW_IsDelete(daObjKUW_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C4D3E8-80C4D430 0048+00 .text      __dt__14daObj_KuwHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_KuwHIO_cFv) {
+asm daObj_KuwHIO_c::~daObj_KuwHIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__dt__14daObj_KuwHIO_cFv.s"
 }
@@ -504,7 +572,7 @@ ASM_FUNCTION(__dt__14daObj_KuwHIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kuwagata_cpp) {
+extern "C" asm void __sinit_d_a_obj_kuwagata_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/__sinit_d_a_obj_kuwagata_cpp.s"
 }
@@ -515,7 +583,7 @@ ASM_FUNCTION(__sinit_d_a_obj_kuwagata_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4D46C) {
+extern "C" asm void func_80C4D46C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/func_80C4D46C.s"
 }
@@ -526,7 +594,7 @@ ASM_FUNCTION(func_80C4D46C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80C4D474) {
+extern "C" asm void func_80C4D474() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kuwagata/d_a_obj_kuwagata/func_80C4D474.s"
 }

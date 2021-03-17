@@ -6,54 +6,288 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dNm_HIO_c (dNm_HIO_c) False/False
+/* top-level dependencies (begin dNm_HIO_c) */
+/* top-level dependencies (end dNm_HIO_c) */
+struct dNm_HIO_c {
+	/* 8024E3E0 */ dNm_HIO_c();
+	/* 802511A4 */ ~dNm_HIO_c();
+};
+
+// build dName_c (dName_c) False/False
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+};
+
+/* top-level dependencies (begin dName_c) */
+// outer dependency: J2DPane
+/* top-level dependencies (end dName_c) */
+struct dName_c {
+	// J2DPane
+	/* 8024E408 */ dName_c(J2DPane*);
+	/* 8024E468 */ ~dName_c();
+	/* 8024E62C */ void _create();
+	/* 8024E6D4 */ void init();
+	/* 8024E7A4 */ void initial();
+	/* 8024E7EC */ void showIcon();
+	/* 8024E9A0 */ void _move();
+	/* 8024EC10 */ void nameCheck();
+	/* 8024EC4C */ void playNameSet(s32);
+	/* 8024EC84 */ void cursorAnm();
+	/* 8024ED48 */ void Wait();
+	/* 8024ED4C */ void MojiSelect();
+	/* 8024F034 */ void MojiSelectAnmInit();
+	/* 8024F0E0 */ void MojiSelectAnm();
+	/* 8024F164 */ void MojiSelectAnm2();
+	/* 8024F1E8 */ void MojiSelectAnm3();
+	/* 8024F1EC */ void mojiChange(char);
+	/* 8024F55C */ void selectMojiSet();
+	/* 8024F59C */ void getMoji();
+	/* 8024F634 */ void setMoji(s32);
+	/* 8024F88C */ void setNameText();
+	/* 8024F914 */ void nameCursorMove();
+	/* 8024F994 */ void selectCursorMove();
+	/* 8024FAF4 */ void menuCursorPosSet();
+	/* 8024FB08 */ void MenuSelect();
+	/* 8024FDA0 */ void MenuSelectAnmInit();
+	/* 8024FDF4 */ void MenuSelectAnm();
+	/* 8024FEB4 */ void MenuSelectAnm2();
+	/* 8024FFA0 */ void MenuSelectAnm3();
+	/* 8024FFA4 */ void menuAbtnSelect();
+	/* 80250074 */ void backSpace();
+	/* 802501B0 */ void mojiListChange();
+	/* 80250284 */ void menuCursorMove();
+	/* 80250380 */ void menuCursorMove2();
+	/* 802504A0 */ void selectCursorPosSet(s32);
+	/* 80250560 */ void _draw();
+	/* 802505CC */ void screenSet();
+	/* 80250CEC */ void displayInit();
+	/* 80250E54 */ void NameStrSet();
+	/* 80251048 */ void getMenuPosIdx(char);
+};
+
+// build J2DPane (J2DPane) True/True
+// build dDlst_NameIN_c (dDlst_NameIN_c) False/False
+/* top-level dependencies (begin dDlst_NameIN_c) */
+/* top-level dependencies (end dDlst_NameIN_c) */
+struct dDlst_NameIN_c {
+	/* 80251094 */ void draw();
+	/* 8025115C */ ~dDlst_NameIN_c();
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+// build dDlst_list_c (dDlst_list_c) False/False
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+/* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: dDlst_base_c
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	// dDlst_base_c
+	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
+};
+
+// build dDlst_base_c (dDlst_base_c) True/True
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	// J2DPane
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+/* top-level dependencies (begin CPaneMgrAlpha) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	// J2DScreen
+	// JKRExpHeap
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__9dNm_HIO_cFv();
-extern "C" extern void __ct__7dName_cFP7J2DPane();
-extern "C" extern void __dt__7dName_cFv();
-extern "C" extern void _create__7dName_cFv();
-extern "C" extern void init__7dName_cFv();
-extern "C" extern void initial__7dName_cFv();
-extern "C" extern void showIcon__7dName_cFv();
-extern "C" extern void _move__7dName_cFv();
-extern "C" extern void nameCheck__7dName_cFv();
-extern "C" extern void playNameSet__7dName_cFi();
-extern "C" extern void cursorAnm__7dName_cFv();
-extern "C" extern void Wait__7dName_cFv();
-extern "C" extern void MojiSelect__7dName_cFv();
-extern "C" extern void MojiSelectAnmInit__7dName_cFv();
-extern "C" extern void MojiSelectAnm__7dName_cFv();
-extern "C" extern void MojiSelectAnm2__7dName_cFv();
-extern "C" extern void MojiSelectAnm3__7dName_cFv();
-extern "C" extern void mojiChange__7dName_cFUc();
-extern "C" extern void selectMojiSet__7dName_cFv();
-extern "C" extern void getMoji__7dName_cFv();
-extern "C" extern void setMoji__7dName_cFi();
-extern "C" extern void setNameText__7dName_cFv();
-extern "C" extern void nameCursorMove__7dName_cFv();
-extern "C" extern void selectCursorMove__7dName_cFv();
-extern "C" extern void menuCursorPosSet__7dName_cFv();
-extern "C" extern void MenuSelect__7dName_cFv();
-extern "C" extern void MenuSelectAnmInit__7dName_cFv();
-extern "C" extern void MenuSelectAnm__7dName_cFv();
-extern "C" extern void MenuSelectAnm2__7dName_cFv();
-extern "C" extern void MenuSelectAnm3__7dName_cFv();
-extern "C" extern void menuAbtnSelect__7dName_cFv();
-extern "C" extern void backSpace__7dName_cFv();
-extern "C" extern void mojiListChange__7dName_cFv();
-extern "C" extern void menuCursorMove__7dName_cFv();
-extern "C" extern void menuCursorMove2__7dName_cFv();
-extern "C" extern void selectCursorPosSet__7dName_cFi();
-extern "C" extern void _draw__7dName_cFv();
-extern "C" extern void screenSet__7dName_cFv();
-extern "C" extern void displayInit__7dName_cFv();
-extern "C" extern void NameStrSet__7dName_cFv();
-extern "C" extern void getMenuPosIdx__7dName_cFUc();
-extern "C" extern void draw__14dDlst_NameIN_cFv();
-extern "C" extern void __dt__14dDlst_NameIN_cFv();
-extern "C" extern void __dt__9dNm_HIO_cFv();
-extern "C" extern void __sinit_d_name_cpp();
+extern "C" void __sinit_d_name_cpp();
+
+extern "C" void __ct__9dNm_HIO_cFv();
+extern "C" void __ct__7dName_cFP7J2DPane();
+extern "C" void __dt__7dName_cFv();
+extern "C" void _create__7dName_cFv();
+extern "C" void init__7dName_cFv();
+extern "C" void initial__7dName_cFv();
+extern "C" void showIcon__7dName_cFv();
+extern "C" void _move__7dName_cFv();
+extern "C" void nameCheck__7dName_cFv();
+extern "C" void playNameSet__7dName_cFi();
+extern "C" void cursorAnm__7dName_cFv();
+extern "C" void Wait__7dName_cFv();
+extern "C" void MojiSelect__7dName_cFv();
+extern "C" void MojiSelectAnmInit__7dName_cFv();
+extern "C" void MojiSelectAnm__7dName_cFv();
+extern "C" void MojiSelectAnm2__7dName_cFv();
+extern "C" void MojiSelectAnm3__7dName_cFv();
+extern "C" void mojiChange__7dName_cFUc();
+extern "C" void selectMojiSet__7dName_cFv();
+extern "C" void getMoji__7dName_cFv();
+extern "C" void setMoji__7dName_cFi();
+extern "C" void setNameText__7dName_cFv();
+extern "C" void nameCursorMove__7dName_cFv();
+extern "C" void selectCursorMove__7dName_cFv();
+extern "C" void menuCursorPosSet__7dName_cFv();
+extern "C" void MenuSelect__7dName_cFv();
+extern "C" void MenuSelectAnmInit__7dName_cFv();
+extern "C" void MenuSelectAnm__7dName_cFv();
+extern "C" void MenuSelectAnm2__7dName_cFv();
+extern "C" void MenuSelectAnm3__7dName_cFv();
+extern "C" void menuAbtnSelect__7dName_cFv();
+extern "C" void backSpace__7dName_cFv();
+extern "C" void mojiListChange__7dName_cFv();
+extern "C" void menuCursorMove__7dName_cFv();
+extern "C" void menuCursorMove2__7dName_cFv();
+extern "C" void selectCursorPosSet__7dName_cFi();
+extern "C" void _draw__7dName_cFv();
+extern "C" void screenSet__7dName_cFv();
+extern "C" void displayInit__7dName_cFv();
+extern "C" void NameStrSet__7dName_cFv();
+extern "C" void getMenuPosIdx__7dName_cFUc();
+extern "C" void draw__14dDlst_NameIN_cFv();
+extern "C" void __dt__14dDlst_NameIN_cFv();
+extern "C" void __dt__9dNm_HIO_cFv();
+extern "C" void __sinit_d_name_cpp();
 SECTION_RODATA extern const u8 d_d_name__stringBase0[792];
 SECTION_DATA extern u8 d_d_name__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*l_mojiHira[65];
@@ -104,59 +338,88 @@ SECTION_SDATA2 extern f32 d_d_name__lit_4725;
 // External References:
 // 
 
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_removeMesgFont__Fv();
-extern "C" extern void fopMsgM_messageGet__FPcUl();
-extern "C" extern void __ct__9STControlFssssffss();
-extern "C" extern void checkTrigger__9STControlFv();
-extern "C" extern void checkLeftTrigger__9STControlFv();
-extern "C" extern void checkRightTrigger__9STControlFv();
-extern "C" extern void checkUpTrigger__9STControlFv();
-extern "C" extern void checkDownTrigger__9STControlFv();
-extern "C" extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void scaleAnime__8CPaneMgrFsffUc();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFPCce();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXScale();
-extern "C" extern void __register_global_object();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void strcat();
-extern "C" extern void strcpy();
+void mDoExt_getMesgFont();
+void mDoExt_removeMesgFont();
+void fopMsgM_messageGet(char*, u32);
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcat();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_removeMesgFont__Fv();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void __ct__9STControlFssssffss();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void scaleAnime__8CPaneMgrFsffUc();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcat();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -167,12 +430,12 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C1F50-803C1F5C 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803C1F50-803C1F5C 000C+00 rc=5 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_d_name__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C1F5C-803C2060 0104+00 .data      l_mojiHira                                                   */
+/* 803C1F5C-803C2060 0104+00 rc=0 efc=0 .data      l_mojiHira                                                   */
 void* l_mojiHira[65] = {
 	(void*)&d_d_name__stringBase0,
 	(void*)0x80399CCB,
@@ -241,7 +504,7 @@ void* l_mojiHira[65] = {
 	(void*)0x80399D76,
 };
 
-/* 803C2060-803C2164 0104+00 .data      l_mojiHira2                                                  */
+/* 803C2060-803C2164 0104+00 rc=0 efc=0 .data      l_mojiHira2                                                  */
 u8 l_mojiHira2[260] = {
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x7C, 0x80, 0x39, 0x9D, 0x7F, 0x80, 0x39, 0x9D, 0x82,
@@ -262,7 +525,7 @@ u8 l_mojiHira2[260] = {
 	0x80, 0x39, 0x9D, 0x79,
 };
 
-/* 803C2164-803C2268 0104+00 .data      l_mojiHira3                                                  */
+/* 803C2164-803C2268 0104+00 rc=0 efc=0 .data      l_mojiHira3                                                  */
 u8 l_mojiHira3[260] = {
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
@@ -283,7 +546,7 @@ u8 l_mojiHira3[260] = {
 	0x80, 0x39, 0x9D, 0x79,
 };
 
-/* 803C2268-803C236C 0104+00 .data      l_mojikata                                                   */
+/* 803C2268-803C236C 0104+00 rc=0 efc=0 .data      l_mojikata                                                   */
 u8 l_mojikata[260] = {
 	0x80, 0x39, 0x9D, 0xC7, 0x80, 0x39, 0x9D, 0xCA, 0x80, 0x39, 0x9D, 0xCD, 0x80, 0x39, 0x9D, 0xD0,
 	0x80, 0x39, 0x9D, 0xD3, 0x80, 0x39, 0x9D, 0xD6, 0x80, 0x39, 0x9D, 0xD9, 0x80, 0x39, 0x9D, 0xDC,
@@ -304,7 +567,7 @@ u8 l_mojikata[260] = {
 	0x80, 0x39, 0x9D, 0x76,
 };
 
-/* 803C236C-803C2470 0104+00 .data      l_mojikata2                                                  */
+/* 803C236C-803C2470 0104+00 rc=0 efc=0 .data      l_mojikata2                                                  */
 u8 l_mojikata2[260] = {
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0x6C, 0x80, 0x39, 0x9D, 0x79,
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9E, 0x6F, 0x80, 0x39, 0x9E, 0x72, 0x80, 0x39, 0x9E, 0x75,
@@ -325,7 +588,7 @@ u8 l_mojikata2[260] = {
 	0x80, 0x39, 0x9D, 0x79,
 };
 
-/* 803C2470-803C2574 0104+00 .data      l_mojikata3                                                  */
+/* 803C2470-803C2574 0104+00 rc=0 efc=0 .data      l_mojikata3                                                  */
 u8 l_mojikata3[260] = {
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
 	0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79, 0x80, 0x39, 0x9D, 0x79,
@@ -346,7 +609,7 @@ u8 l_mojikata3[260] = {
 	0x80, 0x39, 0x9D, 0x79,
 };
 
-/* 803C2574-803C2678 0104+00 .data      l_mojiEisu                                                   */
+/* 803C2574-803C2678 0104+00 rc=0 efc=0 .data      l_mojiEisu                                                   */
 u8 l_mojiEisu[260] = {
 	0x80, 0x39, 0x9E, 0xBA, 0x80, 0x39, 0x9E, 0xBC, 0x80, 0x39, 0x9E, 0xBE, 0x80, 0x39, 0x9E, 0xC0,
 	0x80, 0x39, 0x9E, 0xC2, 0x80, 0x39, 0x9E, 0xC4, 0x80, 0x39, 0x9E, 0xC6, 0x80, 0x39, 0x9E, 0xC8,
@@ -367,70 +630,70 @@ u8 l_mojiEisu[260] = {
 	0x80, 0x39, 0x9F, 0x3A,
 };
 
-/* 803C2678-803C2684 000C+00 .data      @3825                                                        */
+/* 803C2678-803C2684 000C+00 rc=0 efc=0 .data      @3825                                                        */
 void* d_d_name__lit_3825[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MojiSelect__7dName_cFv,
 };
 
-/* 803C2684-803C2690 000C+00 .data      @3826                                                        */
+/* 803C2684-803C2690 000C+00 rc=0 efc=0 .data      @3826                                                        */
 void* d_d_name__lit_3826[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MojiSelectAnm__7dName_cFv,
 };
 
-/* 803C2690-803C269C 000C+00 .data      @3827                                                        */
+/* 803C2690-803C269C 000C+00 rc=0 efc=0 .data      @3827                                                        */
 void* d_d_name__lit_3827[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MojiSelectAnm2__7dName_cFv,
 };
 
-/* 803C269C-803C26A8 000C+00 .data      @3828                                                        */
+/* 803C269C-803C26A8 000C+00 rc=0 efc=0 .data      @3828                                                        */
 void* d_d_name__lit_3828[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MojiSelectAnm3__7dName_cFv,
 };
 
-/* 803C26A8-803C26B4 000C+00 .data      @3829                                                        */
+/* 803C26A8-803C26B4 000C+00 rc=0 efc=0 .data      @3829                                                        */
 void* d_d_name__lit_3829[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MenuSelect__7dName_cFv,
 };
 
-/* 803C26B4-803C26C0 000C+00 .data      @3830                                                        */
+/* 803C26B4-803C26C0 000C+00 rc=0 efc=0 .data      @3830                                                        */
 void* d_d_name__lit_3830[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MenuSelectAnm__7dName_cFv,
 };
 
-/* 803C26C0-803C26CC 000C+00 .data      @3831                                                        */
+/* 803C26C0-803C26CC 000C+00 rc=0 efc=0 .data      @3831                                                        */
 void* d_d_name__lit_3831[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MenuSelectAnm2__7dName_cFv,
 };
 
-/* 803C26CC-803C26D8 000C+00 .data      @3832                                                        */
+/* 803C26CC-803C26D8 000C+00 rc=0 efc=0 .data      @3832                                                        */
 void* d_d_name__lit_3832[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)MenuSelectAnm3__7dName_cFv,
 };
 
-/* 803C26D8-803C26E4 000C+00 .data      @3833                                                        */
+/* 803C26D8-803C26E4 000C+00 rc=0 efc=0 .data      @3833                                                        */
 void* d_d_name__lit_3833[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)Wait__7dName_cFv,
 };
 
-/* 803C26E4-803C2750 006C+00 .data      SelProc                                                      */
+/* 803C26E4-803C2750 006C+00 rc=1 efc=0 .data      SelProc                                                      */
 u8 SelProc[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -441,7 +704,7 @@ u8 SelProc[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C2750-803C2788 0034+04 .data      @4121                                                        */
+/* 803C2750-803C2788 0034+04 rc=1 efc=0 .data      @4121                                                        */
 void* d_d_name__lit_4121[14] = {
 	(void*)(((char*)mojiChange__7dName_cFUc)+0x8C),
 	(void*)(((char*)mojiChange__7dName_cFUc)+0x130),
@@ -460,7 +723,7 @@ void* d_d_name__lit_4121[14] = {
 	NULL,
 };
 
-/* 803C2788-803C27C8 0040+00 .data      l_cur0TagName$4610                                           */
+/* 803C2788-803C27C8 0040+00 rc=0 efc=0 .data      l_cur0TagName$4610                                           */
 u8 data_803C2788[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33,
@@ -468,7 +731,7 @@ u8 data_803C2788[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37,
 };
 
-/* 803C27C8-803C2808 0040+00 .data      l_cur1TagName$4611                                           */
+/* 803C27C8-803C2808 0040+00 rc=0 efc=0 .data      l_cur1TagName$4611                                           */
 u8 data_803C27C8[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x31, 0x72,
 	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x32, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x33, 0x72,
@@ -476,13 +739,13 @@ u8 data_803C27C8[64] = {
 	0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x36, 0x72, 0x00, 0x00, 0x00, 0x73, 0x5F, 0x30, 0x37, 0x72,
 };
 
-/* 803C2808-803C2828 0020+00 .data      l_menu_icon_tag$4617                                         */
+/* 803C2808-803C2828 0020+00 rc=0 efc=0 .data      l_menu_icon_tag$4617                                         */
 u8 data_803C2808[32] = {
 	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x6E,
 	0x6A, 0x5F, 0x65, 0x69, 0x67, 0x6F, 0x5F, 0x6E, 0x00, 0x70, 0x5F, 0x65, 0x6E, 0x64, 0x5F, 0x6E,
 };
 
-/* 803C2828-803C28A0 0078+00 .data      l_menu_tag$4618                                              */
+/* 803C2828-803C28A0 0078+00 rc=0 efc=0 .data      l_menu_tag$4618                                              */
 u8 data_803C2828[120] = {
 	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x30, 0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x31,
 	0x00, 0x70, 0x5F, 0x41, 0x42, 0x43, 0x5F, 0x32, 0x00, 0x70, 0x5F, 0x61, 0x62, 0x63, 0x5F, 0x30,
@@ -494,12 +757,12 @@ u8 data_803C2828[120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C28A0-803C28B0 0010+00 .data      l_menu_msg$4619                                              */
+/* 803C28A0-803C28B0 0010+00 rc=0 efc=0 .data      l_menu_msg$4619                                              */
 u8 data_803C28A0[16] = {
 	0x00, 0x00, 0x03, 0x8B, 0x00, 0x00, 0x03, 0x8C, 0x00, 0x00, 0x03, 0x88, 0x00, 0x00, 0x03, 0x8E,
 };
 
-/* 803C28B0-803C2AB8 0208+00 .data      l_tagName$4635                                               */
+/* 803C28B0-803C2AB8 0208+00 rc=0 efc=0 .data      l_tagName$4635                                               */
 u8 data_803C28B0[520] = {
 	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x30, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x31,
 	0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x32, 0x00, 0x00, 0x6D, 0x5F, 0x30, 0x30, 0x5F, 0x33,
@@ -536,7 +799,7 @@ u8 data_803C28B0[520] = {
 	0x00, 0x00, 0x00, 0x6D, 0x31, 0x32, 0x5F, 0x34,
 };
 
-/* 803C2AB8-803C2AF8 0040+00 .data      l_nameTagName$4642                                           */
+/* 803C2AB8-803C2AF8 0040+00 rc=0 efc=0 .data      l_nameTagName$4642                                           */
 u8 data_803C2AB8[64] = {
 	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x30, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x31,
 	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x32, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x33,
@@ -544,7 +807,7 @@ u8 data_803C2AB8[64] = {
 	0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x36, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x37,
 };
 
-/* 803C2AF8-803C2B38 0040+00 .data      l_nameCurTagName$4643                                        */
+/* 803C2AF8-803C2B38 0040+00 rc=0 efc=0 .data      l_nameCurTagName$4643                                        */
 u8 data_803C2AF8[64] = {
 	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x30, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x31,
 	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x32, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x33,
@@ -552,7 +815,7 @@ u8 data_803C2AF8[64] = {
 	0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x36, 0x00, 0x73, 0x5F, 0x5F, 0x6E, 0x5F, 0x30, 0x37,
 };
 
-/* 803C2B38-803C2B64 0010+1C .data      __vt__14dDlst_NameIN_c                                       */
+/* 803C2B38-803C2B64 0010+1C rc=3 efc=0 .data      __vt__14dDlst_NameIN_c                                       */
 void* const __vt__14dDlst_NameIN_c[11] = {
 	NULL, /* RTTI */
 	NULL,
@@ -568,7 +831,7 @@ void* const __vt__14dDlst_NameIN_c[11] = {
 	NULL,
 };
 
-/* 803C2B64-803C2B7C 000C+0C .data      __vt__7dName_c                                               */
+/* 803C2B64-803C2B7C 000C+0C rc=2 efc=0 .data      __vt__7dName_c                                               */
 void* const __vt__7dName_c[6] = {
 	NULL, /* RTTI */
 	NULL,
@@ -579,46 +842,46 @@ void* const __vt__7dName_c[6] = {
 	NULL,
 };
 
-/* 803C2B7C-803C2B88 000C+00 .data      __vt__9dNm_HIO_c                                             */
+/* 803C2B7C-803C2B88 000C+00 rc=2 efc=0 .data      __vt__9dNm_HIO_c                                             */
 void* const __vt__9dNm_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dNm_HIO_cFv,
 };
 
-/* 80454DB0-80454DB4 0004+00 .sdata2    @3665                                                        */
+/* 80454DB0-80454DB4 0004+00 rc=1 efc=0 .sdata2    @3665                                                        */
 f32 d_d_name__lit_3665 = 13.0f / 10.0f;
 
-/* 80454DB4-80454DB8 0004+00 .sdata2    @3666                                                        */
+/* 80454DB4-80454DB8 0004+00 rc=1 efc=0 .sdata2    @3666                                                        */
 f32 d_d_name__lit_3666 = 7.0f / 5.0f;
 
-/* 8024E3E0-8024E408 0028+00 .text      __ct__9dNm_HIO_cFv                                           */
+/* 8024E3E0-8024E408 0028+00 rc=1 efc=0 .text      __ct__9dNm_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__9dNm_HIO_cFv) {
+asm dNm_HIO_c::dNm_HIO_c() {
 	nofralloc
 #include "asm/d/d_name/__ct__9dNm_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 8024E408-8024E468 0060+00 .text      __ct__7dName_cFP7J2DPane                                     */
+/* 8024E408-8024E468 0060+00 rc=1 efc=1 .text      __ct__7dName_cFP7J2DPane                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__7dName_cFP7J2DPane) {
+asm dName_c::dName_c(J2DPane* field_0) {
 	nofralloc
 #include "asm/d/d_name/__ct__7dName_cFP7J2DPane.s"
 }
 #pragma pop
 
 
-/* 8024E468-8024E62C 01C4+00 .text      __dt__7dName_cFv                                             */
+/* 8024E468-8024E62C 01C4+00 rc=1 efc=0 .text      __dt__7dName_cFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__7dName_cFv) {
+asm dName_c::~dName_c() {
 	nofralloc
 #include "asm/d/d_name/__dt__7dName_cFv.s"
 }
@@ -626,45 +889,45 @@ ASM_FUNCTION(__dt__7dName_cFv) {
 
 
 /* ############################################################################################## */
-/* 80430728-80430734 000C+00 .bss       @3660                                                        */
+/* 80430728-80430734 000C+00 rc=1 efc=0 .bss       @3660                                                        */
 u8 lit_3660[12];
 
-/* 80430734-80430748 0014+00 .bss       g_nmHIO                                                      */
+/* 80430734-80430748 0014+00 rc=9 efc=0 .bss       g_nmHIO                                                      */
 u8 g_nmHIO[20];
 
-/* 80454DB8-80454DBC 0004+00 .sdata2    @3755                                                        */
+/* 80454DB8-80454DBC 0004+00 rc=1 efc=0 .sdata2    @3755                                                        */
 f32 d_d_name__lit_3755 = 9.0f / 10.0f;
 
-/* 80454DBC-80454DC0 0004+00 .sdata2    @3756                                                        */
+/* 80454DBC-80454DC0 0004+00 rc=1 efc=0 .sdata2    @3756                                                        */
 f32 d_d_name__lit_3756 = 0.5f;
 
-/* 8024E62C-8024E6D4 00A8+00 .text      _create__7dName_cFv                                          */
+/* 8024E62C-8024E6D4 00A8+00 rc=1 efc=0 .text      _create__7dName_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__7dName_cFv) {
+asm void dName_c::_create() {
 	nofralloc
 #include "asm/d/d_name/_create__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024E6D4-8024E7A4 00D0+00 .text      init__7dName_cFv                                             */
+/* 8024E6D4-8024E7A4 00D0+00 rc=1 efc=0 .text      init__7dName_cFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__7dName_cFv) {
+asm void dName_c::init() {
 	nofralloc
 #include "asm/d/d_name/init__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024E7A4-8024E7EC 0048+00 .text      initial__7dName_cFv                                          */
+/* 8024E7A4-8024E7EC 0048+00 rc=4 efc=4 .text      initial__7dName_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initial__7dName_cFv) {
+asm void dName_c::initial() {
 	nofralloc
 #include "asm/d/d_name/initial__7dName_cFv.s"
 }
@@ -672,14 +935,14 @@ ASM_FUNCTION(initial__7dName_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454DC0-80454DC4 0004+00 .sdata2    @3820                                                        */
+/* 80454DC0-80454DC4 0004+00 rc=16 efc=0 .sdata2    @3820                                                        */
 f32 d_d_name__lit_3820 = 1.0f;
 
-/* 8024E7EC-8024E9A0 01B4+00 .text      showIcon__7dName_cFv                                         */
+/* 8024E7EC-8024E9A0 01B4+00 rc=2 efc=2 .text      showIcon__7dName_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(showIcon__7dName_cFv) {
+asm void dName_c::showIcon() {
 	nofralloc
 #include "asm/d/d_name/showIcon__7dName_cFv.s"
 }
@@ -687,36 +950,36 @@ ASM_FUNCTION(showIcon__7dName_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454DC4-80454DC8 0004+00 .sdata2    @3886                                                        */
+/* 80454DC4-80454DC8 0004+00 rc=6 efc=0 .sdata2    @3886                                                        */
 f32 d_d_name__lit_3886 = -1.0f;
 
-/* 8024E9A0-8024EC10 0270+00 .text      _move__7dName_cFv                                            */
+/* 8024E9A0-8024EC10 0270+00 rc=2 efc=2 .text      _move__7dName_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__7dName_cFv) {
+asm void dName_c::_move() {
 	nofralloc
 #include "asm/d/d_name/_move__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024EC10-8024EC4C 003C+00 .text      nameCheck__7dName_cFv                                        */
+/* 8024EC10-8024EC4C 003C+00 rc=3 efc=0 .text      nameCheck__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameCheck__7dName_cFv) {
+asm void dName_c::nameCheck() {
 	nofralloc
 #include "asm/d/d_name/nameCheck__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024EC4C-8024EC84 0038+00 .text      playNameSet__7dName_cFi                                      */
+/* 8024EC4C-8024EC84 0038+00 rc=1 efc=0 .text      playNameSet__7dName_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playNameSet__7dName_cFi) {
+asm void dName_c::playNameSet(s32 field_0) {
 	nofralloc
 #include "asm/d/d_name/playNameSet__7dName_cFi.s"
 }
@@ -724,36 +987,31 @@ ASM_FUNCTION(playNameSet__7dName_cFi) {
 
 
 /* ############################################################################################## */
-/* 80454DC8-80454DD0 0008+00 .sdata2    @3936                                                        */
+/* 80454DC8-80454DD0 0008+00 rc=1 efc=0 .sdata2    @3936                                                        */
 f64 d_d_name__lit_3936 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8024EC84-8024ED48 00C4+00 .text      cursorAnm__7dName_cFv                                        */
+/* 8024EC84-8024ED48 00C4+00 rc=1 efc=0 .text      cursorAnm__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cursorAnm__7dName_cFv) {
+asm void dName_c::cursorAnm() {
 	nofralloc
 #include "asm/d/d_name/cursorAnm__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024ED48-8024ED4C 0004+00 .text      Wait__7dName_cFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Wait__7dName_cFv) {
-	nofralloc
-#include "asm/d/d_name/Wait__7dName_cFv.s"
+/* 8024ED48-8024ED4C 0004+00 rc=1 efc=0 .text      Wait__7dName_cFv                                             */
+void dName_c::Wait() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8024ED4C-8024F034 02E8+00 .text      MojiSelect__7dName_cFv                                       */
+/* 8024ED4C-8024F034 02E8+00 rc=1 efc=0 .text      MojiSelect__7dName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MojiSelect__7dName_cFv) {
+asm void dName_c::MojiSelect() {
 	nofralloc
 #include "asm/d/d_name/MojiSelect__7dName_cFv.s"
 }
@@ -761,93 +1019,88 @@ ASM_FUNCTION(MojiSelect__7dName_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454DD0-80454DD4 0004+00 .sdata2    @4009                                                        */
+/* 80454DD0-80454DD4 0004+00 rc=5 efc=0 .sdata2    @4009                                                        */
 u8 d_d_name__lit_4009[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8024F034-8024F0E0 00AC+00 .text      MojiSelectAnmInit__7dName_cFv                                */
+/* 8024F034-8024F0E0 00AC+00 rc=2 efc=0 .text      MojiSelectAnmInit__7dName_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MojiSelectAnmInit__7dName_cFv) {
+asm void dName_c::MojiSelectAnmInit() {
 	nofralloc
 #include "asm/d/d_name/MojiSelectAnmInit__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F0E0-8024F164 0084+00 .text      MojiSelectAnm__7dName_cFv                                    */
+/* 8024F0E0-8024F164 0084+00 rc=1 efc=0 .text      MojiSelectAnm__7dName_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MojiSelectAnm__7dName_cFv) {
+asm void dName_c::MojiSelectAnm() {
 	nofralloc
 #include "asm/d/d_name/MojiSelectAnm__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F164-8024F1E8 0084+00 .text      MojiSelectAnm2__7dName_cFv                                   */
+/* 8024F164-8024F1E8 0084+00 rc=1 efc=0 .text      MojiSelectAnm2__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MojiSelectAnm2__7dName_cFv) {
+asm void dName_c::MojiSelectAnm2() {
 	nofralloc
 #include "asm/d/d_name/MojiSelectAnm2__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F1E8-8024F1EC 0004+00 .text      MojiSelectAnm3__7dName_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(MojiSelectAnm3__7dName_cFv) {
-	nofralloc
-#include "asm/d/d_name/MojiSelectAnm3__7dName_cFv.s"
+/* 8024F1E8-8024F1EC 0004+00 rc=1 efc=0 .text      MojiSelectAnm3__7dName_cFv                                   */
+void dName_c::MojiSelectAnm3() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8024F1EC-8024F55C 0370+00 .text      mojiChange__7dName_cFUc                                      */
+/* 8024F1EC-8024F55C 0370+00 rc=1 efc=0 .text      mojiChange__7dName_cFUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mojiChange__7dName_cFUc) {
+asm void dName_c::mojiChange(char field_0) {
 	nofralloc
 #include "asm/d/d_name/mojiChange__7dName_cFUc.s"
 }
 #pragma pop
 
 
-/* 8024F55C-8024F59C 0040+00 .text      selectMojiSet__7dName_cFv                                    */
+/* 8024F55C-8024F59C 0040+00 rc=1 efc=0 .text      selectMojiSet__7dName_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectMojiSet__7dName_cFv) {
+asm void dName_c::selectMojiSet() {
 	nofralloc
 #include "asm/d/d_name/selectMojiSet__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F59C-8024F634 0098+00 .text      getMoji__7dName_cFv                                          */
+/* 8024F59C-8024F634 0098+00 rc=1 efc=0 .text      getMoji__7dName_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMoji__7dName_cFv) {
+asm void dName_c::getMoji() {
 	nofralloc
 #include "asm/d/d_name/getMoji__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F634-8024F88C 0258+00 .text      setMoji__7dName_cFi                                          */
+/* 8024F634-8024F88C 0258+00 rc=1 efc=0 .text      setMoji__7dName_cFi                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMoji__7dName_cFi) {
+asm void dName_c::setMoji(s32 field_0) {
 	nofralloc
 #include "asm/d/d_name/setMoji__7dName_cFi.s"
 }
@@ -855,7 +1108,7 @@ ASM_FUNCTION(setMoji__7dName_cFi) {
 
 
 /* ############################################################################################## */
-/* 80399CC8-80399FE0 0314+04 .rodata    @stringBase0                                                 */
+/* 80399CC8-80399FE0 0314+04 rc=4 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -1104,176 +1357,171 @@ SECTION_DEAD char* const stringBase_80399FDB = "";
 SECTION_DEAD char* const pad_80399FDC = "\0\0\0";
 #pragma pop
 
-/* 8024F88C-8024F914 0088+00 .text      setNameText__7dName_cFv                                      */
+/* 8024F88C-8024F914 0088+00 rc=4 efc=0 .text      setNameText__7dName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNameText__7dName_cFv) {
+asm void dName_c::setNameText() {
 	nofralloc
 #include "asm/d/d_name/setNameText__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F914-8024F994 0080+00 .text      nameCursorMove__7dName_cFv                                   */
+/* 8024F914-8024F994 0080+00 rc=5 efc=0 .text      nameCursorMove__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nameCursorMove__7dName_cFv) {
+asm void dName_c::nameCursorMove() {
 	nofralloc
 #include "asm/d/d_name/nameCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024F994-8024FAF4 0160+00 .text      selectCursorMove__7dName_cFv                                 */
+/* 8024F994-8024FAF4 0160+00 rc=3 efc=0 .text      selectCursorMove__7dName_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectCursorMove__7dName_cFv) {
+asm void dName_c::selectCursorMove() {
 	nofralloc
 #include "asm/d/d_name/selectCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FAF4-8024FB08 0014+00 .text      menuCursorPosSet__7dName_cFv                                 */
+/* 8024FAF4-8024FB08 0014+00 rc=1 efc=0 .text      menuCursorPosSet__7dName_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuCursorPosSet__7dName_cFv) {
+asm void dName_c::menuCursorPosSet() {
 	nofralloc
 #include "asm/d/d_name/menuCursorPosSet__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FB08-8024FDA0 0298+00 .text      MenuSelect__7dName_cFv                                       */
+/* 8024FB08-8024FDA0 0298+00 rc=1 efc=0 .text      MenuSelect__7dName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MenuSelect__7dName_cFv) {
+asm void dName_c::MenuSelect() {
 	nofralloc
 #include "asm/d/d_name/MenuSelect__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FDA0-8024FDF4 0054+00 .text      MenuSelectAnmInit__7dName_cFv                                */
+/* 8024FDA0-8024FDF4 0054+00 rc=2 efc=0 .text      MenuSelectAnmInit__7dName_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MenuSelectAnmInit__7dName_cFv) {
+asm void dName_c::MenuSelectAnmInit() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnmInit__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FDF4-8024FEB4 00C0+00 .text      MenuSelectAnm__7dName_cFv                                    */
+/* 8024FDF4-8024FEB4 00C0+00 rc=1 efc=0 .text      MenuSelectAnm__7dName_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MenuSelectAnm__7dName_cFv) {
+asm void dName_c::MenuSelectAnm() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnm__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FEB4-8024FFA0 00EC+00 .text      MenuSelectAnm2__7dName_cFv                                   */
+/* 8024FEB4-8024FFA0 00EC+00 rc=1 efc=0 .text      MenuSelectAnm2__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(MenuSelectAnm2__7dName_cFv) {
+asm void dName_c::MenuSelectAnm2() {
 	nofralloc
 #include "asm/d/d_name/MenuSelectAnm2__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 8024FFA0-8024FFA4 0004+00 .text      MenuSelectAnm3__7dName_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(MenuSelectAnm3__7dName_cFv) {
-	nofralloc
-#include "asm/d/d_name/MenuSelectAnm3__7dName_cFv.s"
+/* 8024FFA0-8024FFA4 0004+00 rc=1 efc=0 .text      MenuSelectAnm3__7dName_cFv                                   */
+void dName_c::MenuSelectAnm3() {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8024FFA4-80250074 00D0+00 .text      menuAbtnSelect__7dName_cFv                                   */
+/* 8024FFA4-80250074 00D0+00 rc=1 efc=0 .text      menuAbtnSelect__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuAbtnSelect__7dName_cFv) {
+asm void dName_c::menuAbtnSelect() {
 	nofralloc
 #include "asm/d/d_name/menuAbtnSelect__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80250074-802501B0 013C+00 .text      backSpace__7dName_cFv                                        */
+/* 80250074-802501B0 013C+00 rc=1 efc=0 .text      backSpace__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(backSpace__7dName_cFv) {
+asm void dName_c::backSpace() {
 	nofralloc
 #include "asm/d/d_name/backSpace__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 802501B0-80250284 00D4+00 .text      mojiListChange__7dName_cFv                                   */
+/* 802501B0-80250284 00D4+00 rc=2 efc=0 .text      mojiListChange__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mojiListChange__7dName_cFv) {
+asm void dName_c::mojiListChange() {
 	nofralloc
 #include "asm/d/d_name/mojiListChange__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80250284-80250380 00FC+00 .text      menuCursorMove__7dName_cFv                                   */
+/* 80250284-80250380 00FC+00 rc=1 efc=0 .text      menuCursorMove__7dName_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuCursorMove__7dName_cFv) {
+asm void dName_c::menuCursorMove() {
 	nofralloc
 #include "asm/d/d_name/menuCursorMove__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80250380-802504A0 0120+00 .text      menuCursorMove2__7dName_cFv                                  */
+/* 80250380-802504A0 0120+00 rc=1 efc=0 .text      menuCursorMove2__7dName_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(menuCursorMove2__7dName_cFv) {
+asm void dName_c::menuCursorMove2() {
 	nofralloc
 #include "asm/d/d_name/menuCursorMove2__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 802504A0-80250560 00C0+00 .text      selectCursorPosSet__7dName_cFi                               */
+/* 802504A0-80250560 00C0+00 rc=1 efc=0 .text      selectCursorPosSet__7dName_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(selectCursorPosSet__7dName_cFi) {
+asm void dName_c::selectCursorPosSet(s32 field_0) {
 	nofralloc
 #include "asm/d/d_name/selectCursorPosSet__7dName_cFi.s"
 }
 #pragma pop
 
 
-/* 80250560-802505CC 006C+00 .text      _draw__7dName_cFv                                            */
+/* 80250560-802505CC 006C+00 rc=1 efc=1 .text      _draw__7dName_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__7dName_cFv) {
+asm void dName_c::_draw() {
 	nofralloc
 #include "asm/d/d_name/_draw__7dName_cFv.s"
 }
@@ -1281,105 +1529,104 @@ ASM_FUNCTION(_draw__7dName_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454DD4-80454DD8 0004+00 .sdata2    @4722                                                        */
+/* 80454DD4-80454DD8 0004+00 rc=1 efc=0 .sdata2    @4722                                                        */
 f32 d_d_name__lit_4722 = 41.0f / 50.0f;
 
-/* 80454DD8-80454DDC 0004+00 .sdata2    @4723                                                        */
+/* 80454DD8-80454DDC 0004+00 rc=1 efc=0 .sdata2    @4723                                                        */
 f32 d_d_name__lit_4723 = 77.0f / 100.0f;
 
-/* 80454DDC-80454DE0 0004+00 .sdata2    @4724                                                        */
+/* 80454DDC-80454DE0 0004+00 rc=1 efc=0 .sdata2    @4724                                                        */
 f32 d_d_name__lit_4724 = 1.0f / 20.0f;
 
-/* 80454DE0-80454DE8 0004+04 .sdata2    @4725                                                        */
+/* 80454DE0-80454DE8 0004+04 rc=1 efc=0 .sdata2    @4725                                                        */
 f32 d_d_name__lit_4725 = 2.0f / 5.0f;
 /* padding 4 bytes */
 
-/* 802505CC-80250CEC 0720+00 .text      screenSet__7dName_cFv                                        */
+/* 802505CC-80250CEC 0720+00 rc=1 efc=0 .text      screenSet__7dName_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSet__7dName_cFv) {
+asm void dName_c::screenSet() {
 	nofralloc
 #include "asm/d/d_name/screenSet__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80250CEC-80250E54 0168+00 .text      displayInit__7dName_cFv                                      */
+/* 80250CEC-80250E54 0168+00 rc=2 efc=0 .text      displayInit__7dName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(displayInit__7dName_cFv) {
+asm void dName_c::displayInit() {
 	nofralloc
 #include "asm/d/d_name/displayInit__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80250E54-80251048 01F4+00 .text      NameStrSet__7dName_cFv                                       */
+/* 80250E54-80251048 01F4+00 rc=1 efc=0 .text      NameStrSet__7dName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(NameStrSet__7dName_cFv) {
+asm void dName_c::NameStrSet() {
 	nofralloc
 #include "asm/d/d_name/NameStrSet__7dName_cFv.s"
 }
 #pragma pop
 
 
-/* 80251048-80251094 004C+00 .text      getMenuPosIdx__7dName_cFUc                                   */
+/* 80251048-80251094 004C+00 rc=6 efc=0 .text      getMenuPosIdx__7dName_cFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getMenuPosIdx__7dName_cFUc) {
+asm void dName_c::getMenuPosIdx(char field_0) {
 	nofralloc
 #include "asm/d/d_name/getMenuPosIdx__7dName_cFUc.s"
 }
 #pragma pop
 
 
-/* 80251094-8025115C 00C8+00 .text      draw__14dDlst_NameIN_cFv                                     */
+/* 80251094-8025115C 00C8+00 rc=1 efc=0 .text      draw__14dDlst_NameIN_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14dDlst_NameIN_cFv) {
+asm void dDlst_NameIN_c::draw() {
 	nofralloc
 #include "asm/d/d_name/draw__14dDlst_NameIN_cFv.s"
 }
 #pragma pop
 
 
-/* 8025115C-802511A4 0048+00 .text      __dt__14dDlst_NameIN_cFv                                     */
+/* 8025115C-802511A4 0048+00 rc=1 efc=0 .text      __dt__14dDlst_NameIN_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dDlst_NameIN_cFv) {
+asm dDlst_NameIN_c::~dDlst_NameIN_c() {
 	nofralloc
 #include "asm/d/d_name/__dt__14dDlst_NameIN_cFv.s"
 }
 #pragma pop
 
 
-/* 802511A4-802511EC 0048+00 .text      __dt__9dNm_HIO_cFv                                           */
+/* 802511A4-802511EC 0048+00 rc=2 efc=0 .text      __dt__9dNm_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dNm_HIO_cFv) {
+asm dNm_HIO_c::~dNm_HIO_c() {
 	nofralloc
 #include "asm/d/d_name/__dt__9dNm_HIO_cFv.s"
 }
 #pragma pop
 
 
-/* 802511EC-80251314 0128+00 .text      __sinit_d_name_cpp                                           */
+/* 802511EC-80251314 0128+00 rc=1 efc=1 .text      __sinit_d_name_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_name_cpp) {
+extern "C" asm void __sinit_d_name_cpp() {
 	nofralloc
 #include "asm/d/d_name/__sinit_d_name_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

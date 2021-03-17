@@ -6,64 +6,429 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dRes_info_c (dRes_info_c) False/False
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+	/* 80325E14 */ void newSharedDisplayList(u32);
+	/* 80325F94 */ void makeSharedDL();
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	/* 802D5CE4 */ void getIdxResource(u32);
+	/* 802D625C */ void getFileAttribute(u32) const;
+	/* 802D6684 */ void findIdxResource(u32) const;
+	/* 802D66AC */ void findNameResource(char const*) const;
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+/* top-level dependencies (begin dRes_info_c) */
+// outer dependency: J3DModelData
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive
+// outer dependency: cXyz
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+	// J3DModelData
+	// JKRHeap
+	// JKRArchive
+	// cXyz
+	/* 8003A260 */ dRes_info_c();
+	/* 8003A280 */ ~dRes_info_c();
+	/* 8003A348 */ void set(char const*, char const*, char, JKRHeap*);
+	/* 8003AB30 */ void onWarpMaterial(J3DModelData*);
+	/* 8003AC1C */ void offWarpMaterial(J3DModelData*);
+	/* 8003AD08 */ void setWarpSRT(J3DModelData*, cXyz const&, f32, f32);
+	/* 8003AE14 */ void loaderBasicBmd(u32, void*);
+	/* 8003B30C */ void loadResource();
+	/* 8003B998 */ void deleteArchiveRes();
+	/* 8003BAC4 */ void setRes(JKRArchive*, JKRHeap*);
+	/* 8003BAF8 */ void setRes();
+	/* 8003BD2C */ void dump_long(dRes_info_c*, s32);
+	/* 8003BE38 */ void dump(dRes_info_c*, s32);
+};
+
+// build JKRHeap (JKRHeap) True/True
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+// build J3DModelData (J3DModelData) True/True
+// build J3DTevStage (J3DTevStage) False/False
+// build J3DTevStageInfo (J3DTevStageInfo) False/False
+/* top-level dependencies (begin J3DTevStageInfo) */
+/* top-level dependencies (end J3DTevStageInfo) */
+struct J3DTevStageInfo {
+};
+
+/* top-level dependencies (begin J3DTevStage) */
+// outer dependency: J3DTevStageInfo
+/* top-level dependencies (end J3DTevStage) */
+struct J3DTevStage {
+	// J3DTevStageInfo
+	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
+	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
+};
+
+// build J3DTevStageInfo (J3DTevStageInfo) True/True
+// build J3DTexGenBlock (J3DTexGenBlock) False/False
+// build J3DTexMtx (J3DTexMtx) False/False
+/* top-level dependencies (begin J3DTexMtx) */
+/* top-level dependencies (end J3DTexMtx) */
+struct J3DTexMtx {
+};
+
+/* top-level dependencies (begin J3DTexGenBlock) */
+// outer dependency: J3DTexMtx
+/* top-level dependencies (end J3DTexGenBlock) */
+struct J3DTexGenBlock {
+	// J3DTexMtx
+	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
+};
+
+// build J3DTexMtx (J3DTexMtx) True/True
+// build cXyz (cXyz) True/True
+// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
+/* top-level dependencies (begin J3DTevKColorAnm) */
+/* top-level dependencies (end J3DTevKColorAnm) */
+struct J3DTevKColorAnm {
+	/* 8003B150 */ ~J3DTevKColorAnm();
+	/* 8003B18C */ J3DTevKColorAnm();
+};
+
+// build J3DTevColorAnm (J3DTevColorAnm) False/False
+/* top-level dependencies (begin J3DTevColorAnm) */
+/* top-level dependencies (end J3DTevColorAnm) */
+struct J3DTevColorAnm {
+	/* 8003B1A4 */ ~J3DTevColorAnm();
+	/* 8003B1E0 */ J3DTevColorAnm();
+};
+
+// build J3DTexNoAnm (J3DTexNoAnm) False/False
+/* top-level dependencies (begin J3DTexNoAnm) */
+/* top-level dependencies (end J3DTexNoAnm) */
+struct J3DTexNoAnm {
+	/* 8003B1F8 */ ~J3DTexNoAnm();
+	/* 8003B240 */ J3DTexNoAnm();
+	/* 8003C82C */ void calc(u16*) const;
+};
+
+// build J3DTexMtxAnm (J3DTexMtxAnm) False/False
+/* top-level dependencies (begin J3DTexMtxAnm) */
+/* top-level dependencies (end J3DTexMtxAnm) */
+struct J3DTexMtxAnm {
+	/* 8003B264 */ ~J3DTexMtxAnm();
+	/* 8003B2A0 */ J3DTexMtxAnm();
+};
+
+// build J3DMatColorAnm (J3DMatColorAnm) False/False
+/* top-level dependencies (begin J3DMatColorAnm) */
+/* top-level dependencies (end J3DMatColorAnm) */
+struct J3DMatColorAnm {
+	/* 8003B2B8 */ ~J3DMatColorAnm();
+	/* 8003B2F4 */ J3DMatColorAnm();
+};
+
+// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
+/* top-level dependencies (begin J3DAnmTransformKey) */
+// outer dependency: J3DTransformInfo
+/* top-level dependencies (end J3DAnmTransformKey) */
+struct J3DAnmTransformKey {
+	// J3DTransformInfo
+	/* 8003B8D0 */ ~J3DAnmTransformKey();
+	/* 8003C800 */ s32 getKind() const;
+	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
+	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
+};
+
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+	/* 8003B93C */ ~J3DAnmTransform();
+	/* 8003C77C */ bool getKind() const;
+	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build dRes_control_c (dRes_control_c) False/False
+// build JKRHeap (JKRHeap) True/True
+// build dRes_info_c (dRes_info_c) True/True
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: JKRHeap
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// JKRHeap
+	// dRes_info_c
+	/* 8003BFB0 */ ~dRes_control_c();
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
+	/* 8003C260 */ void newResInfo(dRes_info_c*, s32);
+	/* 8003C288 */ void getResInfoLoaded(char const*, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, s32);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+	/* 8003C4E4 */ void setObjectRes(char const*, void*, u32, JKRHeap*);
+	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
+	/* 8003C638 */ void dump();
+	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
+};
+
+// build J3DAnmBase (J3DAnmBase) False/False
+/* top-level dependencies (begin J3DAnmBase) */
+/* top-level dependencies (end J3DAnmBase) */
+struct J3DAnmBase {
+	/* 8003C734 */ ~J3DAnmBase();
+};
+
+// build mDoExt_transAnmBas (mDoExt_transAnmBas) False/False
+/* top-level dependencies (begin mDoExt_transAnmBas) */
+/* top-level dependencies (end mDoExt_transAnmBas) */
+struct mDoExt_transAnmBas {
+	/* 8003C784 */ ~mDoExt_transAnmBas();
+};
+
+// build J3DTransformInfo (J3DTransformInfo) True/True
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+};
+
+// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+struct mDoDvdThd_mountArchive_c {
+	// JKRHeap
+	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+};
+
+// build cBgS (cBgS) False/False
+/* top-level dependencies (begin cBgS) */
+/* top-level dependencies (end cBgS) */
+struct cBgS {
+	/* 80074578 */ void ConvDzb(void*);
+};
+
+// build dBgWKCol (dBgWKCol) False/False
+/* top-level dependencies (begin dBgWKCol) */
+/* top-level dependencies (end dBgWKCol) */
+struct dBgWKCol {
+	/* 8007E7D0 */ void initKCollision(void*);
+};
+
+// build JKRMemArchive (JKRMemArchive) False/False
+// build JKRMemBreakFlag (JKRMemBreakFlag) False/False
+/* top-level dependencies (begin JKRMemBreakFlag) */
+/* top-level dependencies (end JKRMemBreakFlag) */
+struct JKRMemBreakFlag {
+};
+
+/* top-level dependencies (begin JKRMemArchive) */
+// outer dependency: JKRMemBreakFlag
+/* top-level dependencies (end JKRMemArchive) */
+struct JKRMemArchive {
+	// JKRMemBreakFlag
+	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
+};
+
+// build JKRMemBreakFlag (JKRMemBreakFlag) True/True
+// build JUTNameTab (JUTNameTab) False/False
+/* top-level dependencies (begin JUTNameTab) */
+/* top-level dependencies (end JUTNameTab) */
+struct JUTNameTab {
+	/* 802DEAF8 */ void getName(u16) const;
+};
+
+// build J3DTexture (J3DTexture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J3DTexture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J3DTexture) */
+struct J3DTexture {
+	// ResTIMG
+	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build J3DShape (J3DShape) False/False
+// build _GXAttr (_GXAttr) False/False
+/* top-level dependencies (begin _GXAttr) */
+/* top-level dependencies (end _GXAttr) */
+struct _GXAttr {
+};
+
+/* top-level dependencies (begin J3DShape) */
+// outer dependency: _GXAttr
+/* top-level dependencies (end J3DShape) */
+struct J3DShape {
+	// _GXAttr
+	/* 80314BB8 */ void addTexMtxIndexInDL(_GXAttr, u32);
+	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
+};
+
+// build _GXAttr (_GXAttr) True/True
+// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
+/* top-level dependencies (begin J3DTexMtxInfo) */
+/* top-level dependencies (end J3DTexMtxInfo) */
+struct J3DTexMtxInfo {
+	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+};
+
+// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
+/* top-level dependencies (begin J3DAnmTexPattern) */
+/* top-level dependencies (end J3DAnmTexPattern) */
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+// build J3DMaterialAnm (J3DMaterialAnm) False/False
+/* top-level dependencies (begin J3DMaterialAnm) */
+/* top-level dependencies (end J3DMaterialAnm) */
+struct J3DMaterialAnm {
+	/* 8032C320 */ void initialize();
+};
+
+// build J3DClusterLoaderDataBase (J3DClusterLoaderDataBase) False/False
+/* top-level dependencies (begin J3DClusterLoaderDataBase) */
+/* top-level dependencies (end J3DClusterLoaderDataBase) */
+struct J3DClusterLoaderDataBase {
+	/* 80334130 */ void load(void const*);
+};
+
+// build J3DModelLoaderDataBase (J3DModelLoaderDataBase) False/False
+/* top-level dependencies (begin J3DModelLoaderDataBase) */
+/* top-level dependencies (end J3DModelLoaderDataBase) */
+struct J3DModelLoaderDataBase {
+	/* 803346BC */ void load(void const*, u32);
+};
+
+// build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
+// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
+/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
+/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
+struct J3DAnmLoaderDataBaseFlag {
+};
+
+// build J3DAnmBase (J3DAnmBase) True/True
+/* top-level dependencies (begin J3DAnmLoaderDataBase) */
+// outer dependency: J3DAnmLoaderDataBaseFlag
+// outer dependency: J3DAnmBase
+/* top-level dependencies (end J3DAnmLoaderDataBase) */
+struct J3DAnmLoaderDataBase {
+	// J3DAnmLoaderDataBaseFlag
+	// J3DAnmBase
+	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
+	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
+};
+
+// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11dRes_info_cFv();
-extern "C" extern void __dt__11dRes_info_cFv();
-extern "C" extern void set__11dRes_info_cFPCcPCcUcP7JKRHeap();
-extern "C" extern void setAlpha__FP16J3DMaterialTable();
-extern "C" extern void setIndirectTex__FP12J3DModelData();
-extern "C" extern void setAlpha__FP12J3DModelData();
-extern "C" extern void addWarpMaterial__FP12J3DModelData();
-extern "C" extern void __ct__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" extern void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx();
-extern "C" extern void onWarpMaterial__11dRes_info_cFP12J3DModelData();
-extern "C" extern void offWarpMaterial__11dRes_info_cFP12J3DModelData();
-extern "C" extern void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff();
-extern "C" extern void loaderBasicBmd__11dRes_info_cFUlPv();
-extern "C" extern void __dt__15J3DTevKColorAnmFv();
-extern "C" extern void __ct__15J3DTevKColorAnmFv();
-extern "C" extern void __dt__14J3DTevColorAnmFv();
-extern "C" extern void __ct__14J3DTevColorAnmFv();
-extern "C" extern void __dt__11J3DTexNoAnmFv();
-extern "C" extern void __ct__11J3DTexNoAnmFv();
-extern "C" extern void __dt__12J3DTexMtxAnmFv();
-extern "C" extern void __ct__12J3DTexMtxAnmFv();
-extern "C" extern void __dt__14J3DMatColorAnmFv();
-extern "C" extern void __ct__14J3DMatColorAnmFv();
-extern "C" extern void loadResource__11dRes_info_cFv();
-extern "C" extern void __dt__18J3DAnmTransformKeyFv();
-extern "C" extern void __dt__15J3DAnmTransformFv();
-extern "C" extern void deleteArchiveRes__11dRes_info_cFv();
-extern "C" extern void getArcHeader__FP10JKRArchive();
-extern "C" extern void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap();
-extern "C" extern void setRes__11dRes_info_cFv();
-extern "C" extern void myGetMemBlockSize__FPv();
-extern "C" extern void myGetMemBlockSize0__FPv();
-extern "C" extern void dump_long__11dRes_info_cFP11dRes_info_ci();
-extern "C" extern void dump__11dRes_info_cFP11dRes_info_ci();
-extern "C" extern void __dt__14dRes_control_cFv();
-extern "C" extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void newResInfo__14dRes_control_cFP11dRes_info_ci();
-extern "C" extern void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" extern void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
-extern "C" extern void syncAllRes__14dRes_control_cFP11dRes_info_ci();
-extern "C" extern void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap();
-extern "C" extern void setStageRes__14dRes_control_cFPCcP7JKRHeap();
-extern "C" extern void dump__14dRes_control_cFv();
-extern "C" extern void getObjectResName2Index__14dRes_control_cFPCcPCc();
-extern "C" extern void __dt__10J3DAnmBaseFv();
-extern "C" extern void getKind__15J3DAnmTransformCFv();
-extern "C" extern void __dt__18mDoExt_transAnmBasFv();
-extern "C" extern void getKind__18J3DAnmTransformKeyCFv();
-extern "C" extern void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo();
-extern "C" extern void calc__11J3DTexNoAnmCFPUs();
+static void setAlpha(J3DMaterialTable*);
+static void setIndirectTex(J3DModelData*);
+static void setAlpha(J3DModelData*);
+static void addWarpMaterial(J3DModelData*);
+static void getArcHeader(JKRArchive*);
+static void myGetMemBlockSize(void*);
+static void myGetMemBlockSize0(void*);
+
+extern "C" void __ct__11dRes_info_cFv();
+extern "C" void __dt__11dRes_info_cFv();
+extern "C" void set__11dRes_info_cFPCcPCcUcP7JKRHeap();
+extern "C" static void setAlpha__FP16J3DMaterialTable();
+extern "C" static void setIndirectTex__FP12J3DModelData();
+extern "C" static void setAlpha__FP12J3DModelData();
+extern "C" static void addWarpMaterial__FP12J3DModelData();
+extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx();
+extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff();
+extern "C" void loaderBasicBmd__11dRes_info_cFUlPv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void loadResource__11dRes_info_cFv();
+extern "C" void __dt__18J3DAnmTransformKeyFv();
+extern "C" void __dt__15J3DAnmTransformFv();
+extern "C" void deleteArchiveRes__11dRes_info_cFv();
+extern "C" static void getArcHeader__FP10JKRArchive();
+extern "C" void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap();
+extern "C" void setRes__11dRes_info_cFv();
+extern "C" static void myGetMemBlockSize__FPv();
+extern "C" static void myGetMemBlockSize0__FPv();
+extern "C" void dump_long__11dRes_info_cFP11dRes_info_ci();
+extern "C" void dump__11dRes_info_cFP11dRes_info_ci();
+extern "C" void __dt__14dRes_control_cFv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void newResInfo__14dRes_control_cFP11dRes_info_ci();
+extern "C" void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+extern "C" void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap();
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
+extern "C" void dump__14dRes_control_cFv();
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
+extern "C" void __dt__10J3DAnmBaseFv();
+extern "C" bool getKind__15J3DAnmTransformCFv();
+extern "C" void __dt__18mDoExt_transAnmBasFv();
+extern "C" s32 getKind__18J3DAnmTransformKeyCFv();
+extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
 SECTION_RODATA extern const u8 l_texMtxInfo[100];
 SECTION_RODATA extern const u8 data_803798A4[20];
 SECTION_RODATA extern const u8 d_d_resorce__stringBase0[888];
@@ -83,73 +448,115 @@ SECTION_SDATA2 extern f32 d_d_resorce__lit_4333;
 // External References:
 // 
 
-extern "C" extern void OSReport_Error();
-extern "C" extern void OSReport_Warning();
-extern "C" extern void mDoMtx_YrotM__FPA4_fs();
-extern "C" extern void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" extern void mDoExt_getGameHeap__Fv();
-extern "C" extern void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
-extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
-extern "C" extern void mDoExt_resIDToIndex__FP10JKRArchiveUs();
-extern "C" extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern "C" extern void ConvDzb__4cBgSFPv();
-extern "C" extern void initKCollision__8dBgWKColFPv();
-extern "C" extern void getSize__7JKRHeapFPvP7JKRHeap();
-extern "C" extern void findFromRoot__7JKRHeapFPv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __nwa__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getIdxResource__10JKRArchiveFUl();
-extern "C" extern void getFileAttribute__10JKRArchiveCFUl();
-extern "C" extern void findIdxResource__10JKRArchiveCFUl();
-extern "C" extern void findNameResource__10JKRArchiveCFPCc();
-extern "C" extern void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
-extern "C" extern void getName__10JUTNameTabCFUs();
-extern "C" extern void JUTReportConsole_f();
-extern "C" extern void addResTIMG__10J3DTextureFUsPC7ResTIMG();
-extern "C" extern void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
-extern "C" extern void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
-extern "C" extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" extern void newSharedDisplayList__12J3DModelDataFUl();
-extern "C" extern void makeSharedDL__12J3DModelDataFv();
-extern "C" extern void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
-extern "C" extern void __ct__15J3DAnmTransformFsPfPsPf();
-extern "C" extern void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo();
-extern "C" extern void getTexNo__16J3DAnmTexPatternCFUsPUs();
-extern "C" extern void initialize__14J3DMaterialAnmFv();
-extern "C" extern void load__24J3DClusterLoaderDataBaseFPCv();
-extern "C" extern void load__22J3DModelLoaderDataBaseFPCvUl();
-extern "C" extern void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" extern void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
-extern "C" extern void DCStoreRangeNoSync();
-extern "C" extern void OSLockMutex();
-extern "C" extern void OSUnlockMutex();
-extern "C" extern void PSMTXConcat();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void __destroy_arr();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_20();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_20();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void memcmp();
-extern "C" extern void snprintf();
-extern "C" extern void strncpy();
-extern "C" extern void strlen();
-extern "C" extern void stricmp();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+void mDoExt_getGameHeap();
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_resIDToIndex(JKRArchive*, u16);
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+extern "C" void JUTReportConsole_f();
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
+extern "C" void snprintf();
+extern "C" void strncpy();
+extern "C" void strlen();
+extern "C" void stricmp();
+
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void ConvDzb__4cBgSFPv();
+extern "C" void initKCollision__8dBgWKColFPv();
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getIdxResource__10JKRArchiveFUl();
+extern "C" void getFileAttribute__10JKRArchiveCFUl();
+extern "C" void findIdxResource__10JKRArchiveCFUl();
+extern "C" void findNameResource__10JKRArchiveCFPCc();
+extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void JUTReportConsole_f();
+extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG();
+extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
+extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void newSharedDisplayList__12J3DModelDataFUl();
+extern "C" void makeSharedDL__12J3DModelDataFv();
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
+extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo();
+extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void load__24J3DClusterLoaderDataBaseFPCv();
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
+extern "C" void snprintf();
+extern "C" void strncpy();
+extern "C" void strlen();
+extern "C" void stricmp();
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
 SECTION_DATA extern void*const __vt__14J3DMaterialAnm[4];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
@@ -164,22 +571,22 @@ SECTION_SDATA2 extern u8 j3dDefaultTevSwapMode[4];
 // Declarations:
 // 
 
-/* 8003A260-8003A280 0020+00 .text      __ct__11dRes_info_cFv                                        */
+/* 8003A260-8003A280 0020+00 rc=1 efc=1 .text      __ct__11dRes_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11dRes_info_cFv) {
+asm dRes_info_c::dRes_info_c() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__11dRes_info_cFv.s"
 }
 #pragma pop
 
 
-/* 8003A280-8003A348 00C8+00 .text      __dt__11dRes_info_cFv                                        */
+/* 8003A280-8003A348 00C8+00 rc=4 efc=1 .text      __dt__11dRes_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11dRes_info_cFv) {
+asm dRes_info_c::~dRes_info_c() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__11dRes_info_cFv.s"
 }
@@ -187,7 +594,7 @@ ASM_FUNCTION(__dt__11dRes_info_cFv) {
 
 
 /* ############################################################################################## */
-/* 80379840-803798A4 0064+00 .rodata    l_texMtxInfo                                                 */
+/* 80379840-803798A4 0064+00 rc=2 efc=0 .rodata    l_texMtxInfo                                                 */
 SECTION_RODATA const u8 l_texMtxInfo[100] = {
 	0x00, 0x08, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3D, 0xCC, 0xCC, 0xCD, 0x3D, 0xCC, 0xCC, 0xCD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -198,13 +605,13 @@ SECTION_RODATA const u8 l_texMtxInfo[100] = {
 	0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803798A4-803798B8 0014+00 .rodata    l_tevStageInfo$3774                                          */
+/* 803798A4-803798B8 0014+00 rc=1 efc=0 .rodata    l_tevStageInfo$3774                                          */
 SECTION_RODATA const u8 data_803798A4[20] = {
 	0x05, 0x0F, 0x08, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x01, 0x00, 0x07, 0x04, 0x00, 0x07, 0x00, 0x00,
 	0x00, 0x01, 0x00, 0x00,
 };
 
-/* 803798B8-80379C30 0373+05 .rodata    @stringBase0                                                 */
+/* 803798B8-80379C30 0373+05 rc=13 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -258,44 +665,44 @@ SECTION_DEAD char* const stringBase_80379C09 =
 SECTION_DEAD char* const pad_80379C2B = "\0\0\0\0";
 #pragma pop
 
-/* 8003A348-8003A3F0 00A8+00 .text      set__11dRes_info_cFPCcPCcUcP7JKRHeap                         */
+/* 8003A348-8003A3F0 00A8+00 rc=1 efc=0 .text      set__11dRes_info_cFPCcPCcUcP7JKRHeap                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__11dRes_info_cFPCcPCcUcP7JKRHeap) {
+asm void dRes_info_c::set(char const* field_0, char const* field_1, char field_2, JKRHeap* field_3) {
 	nofralloc
 #include "asm/d/d_resorce/set__11dRes_info_cFPCcPCcUcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8003A3F0-8003A490 00A0+00 .text      setAlpha__FP16J3DMaterialTable                               */
+/* 8003A3F0-8003A490 00A0+00 rc=1 efc=0 .text      setAlpha__FP16J3DMaterialTable                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlpha__FP16J3DMaterialTable) {
+asm static void setAlpha(J3DMaterialTable* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/setAlpha__FP16J3DMaterialTable.s"
 }
 #pragma pop
 
 
-/* 8003A490-8003A81C 038C+00 .text      setIndirectTex__FP12J3DModelData                             */
+/* 8003A490-8003A81C 038C+00 rc=1 efc=0 .text      setIndirectTex__FP12J3DModelData                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setIndirectTex__FP12J3DModelData) {
+asm static void setIndirectTex(J3DModelData* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/setIndirectTex__FP12J3DModelData.s"
 }
 #pragma pop
 
 
-/* 8003A81C-8003A840 0024+00 .text      setAlpha__FP12J3DModelData                                   */
+/* 8003A81C-8003A840 0024+00 rc=1 efc=0 .text      setAlpha__FP12J3DModelData                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlpha__FP12J3DModelData) {
+asm static void setAlpha(J3DModelData* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/setAlpha__FP12J3DModelData.s"
 }
@@ -303,81 +710,76 @@ ASM_FUNCTION(setAlpha__FP12J3DModelData) {
 
 
 /* ############################################################################################## */
-/* 80450628-8045062C 0004+00 .sdata     l_texCoordInfo$3772                                          */
+/* 80450628-8045062C 0004+00 rc=1 efc=0 .sdata     l_texCoordInfo$3772                                          */
 u8 data_80450628[4] = {
 	0x00, 0x00, 0x27, 0x00,
 };
 
-/* 8045062C-80450630 0004+00 .sdata     l_tevOrderInfo$3773                                          */
+/* 8045062C-80450630 0004+00 rc=1 efc=0 .sdata     l_tevOrderInfo$3773                                          */
 u8 data_8045062C[4] = {
 	0x00, 0x03, 0xFF, 0x00,
 };
 
-/* 80451DF0-80451DF8 0008+00 .sdata2    l_alphaCompInfo$3775                                         */
+/* 80451DF0-80451DF8 0008+00 rc=1 efc=0 .sdata2    l_alphaCompInfo$3775                                         */
 u8 data_80451DF0[8] = {
 	0x04, 0x80, 0x00, 0x03, 0xFF, 0x00, 0x00, 0x00,
 };
 
-/* 8003A840-8003AACC 028C+00 .text      addWarpMaterial__FP12J3DModelData                            */
+/* 8003A840-8003AACC 028C+00 rc=1 efc=0 .text      addWarpMaterial__FP12J3DModelData                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addWarpMaterial__FP12J3DModelData) {
+asm static void addWarpMaterial(J3DModelData* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/addWarpMaterial__FP12J3DModelData.s"
 }
 #pragma pop
 
 
-/* 8003AACC-8003AB2C 0060+00 .text      __ct__11J3DTevStageFRC15J3DTevStageInfo                      */
+/* 8003AACC-8003AB2C 0060+00 rc=3 efc=2 .text      __ct__11J3DTevStageFRC15J3DTevStageInfo                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTevStageFRC15J3DTevStageInfo) {
+asm J3DTevStage::J3DTevStage(J3DTevStageInfo const& field_0) {
 	nofralloc
 #include "asm/d/d_resorce/__ct__11J3DTevStageFRC15J3DTevStageInfo.s"
 }
 #pragma pop
 
 
-/* 8003AB2C-8003AB30 0004+00 .text      setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx) {
-	nofralloc
-#include "asm/d/d_resorce/setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx.s"
+/* 8003AB2C-8003AB30 0004+00 rc=2 efc=2 .text      setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx                    */
+void J3DTexGenBlock::setTexMtx(u32 field_0, J3DTexMtx* field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
-/* 8003AB30-8003AC1C 00EC+00 .text      onWarpMaterial__11dRes_info_cFP12J3DModelData                */
+/* 8003AB30-8003AC1C 00EC+00 rc=2 efc=2 .text      onWarpMaterial__11dRes_info_cFP12J3DModelData                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onWarpMaterial__11dRes_info_cFP12J3DModelData) {
+asm void dRes_info_c::onWarpMaterial(J3DModelData* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/onWarpMaterial__11dRes_info_cFP12J3DModelData.s"
 }
 #pragma pop
 
 
-/* 8003AC1C-8003AD08 00EC+00 .text      offWarpMaterial__11dRes_info_cFP12J3DModelData               */
+/* 8003AC1C-8003AD08 00EC+00 rc=2 efc=2 .text      offWarpMaterial__11dRes_info_cFP12J3DModelData               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(offWarpMaterial__11dRes_info_cFP12J3DModelData) {
+asm void dRes_info_c::offWarpMaterial(J3DModelData* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/offWarpMaterial__11dRes_info_cFP12J3DModelData.s"
 }
 #pragma pop
 
 
-/* 8003AD08-8003AE14 010C+00 .text      setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff           */
+/* 8003AD08-8003AE14 010C+00 rc=1 efc=1 .text      setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff) {
+asm void dRes_info_c::setWarpSRT(J3DModelData* field_0, cXyz const& field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/d_resorce/setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff.s"
 }
@@ -385,7 +787,7 @@ ASM_FUNCTION(setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff) {
 
 
 /* ############################################################################################## */
-/* 803A7C18-803A7C38 0020+00 .data      @4017                                                        */
+/* 803A7C18-803A7C38 0020+00 rc=1 efc=0 .data      @4017                                                        */
 void* lit_4017[8] = {
 	(void*)(((char*)loaderBasicBmd__11dRes_info_cFUlPv)+0x180),
 	(void*)(((char*)loaderBasicBmd__11dRes_info_cFUlPv)+0x130),
@@ -397,55 +799,55 @@ void* lit_4017[8] = {
 	(void*)(((char*)loaderBasicBmd__11dRes_info_cFUlPv)+0x178),
 };
 
-/* 8003AE14-8003B150 033C+00 .text      loaderBasicBmd__11dRes_info_cFUlPv                           */
+/* 8003AE14-8003B150 033C+00 rc=3 efc=1 .text      loaderBasicBmd__11dRes_info_cFUlPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loaderBasicBmd__11dRes_info_cFUlPv) {
+asm void dRes_info_c::loaderBasicBmd(u32 field_0, void* field_1) {
 	nofralloc
 #include "asm/d/d_resorce/loaderBasicBmd__11dRes_info_cFUlPv.s"
 }
 #pragma pop
 
 
-/* 8003B150-8003B18C 003C+00 .text      __dt__15J3DTevKColorAnmFv                                    */
+/* 8003B150-8003B18C 003C+00 rc=10 efc=8 .text      __dt__15J3DTevKColorAnmFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__15J3DTevKColorAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B18C-8003B1A4 0018+00 .text      __ct__15J3DTevKColorAnmFv                                    */
+/* 8003B18C-8003B1A4 0018+00 rc=5 efc=3 .text      __ct__15J3DTevKColorAnmFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__15J3DTevKColorAnmFv) {
+asm J3DTevKColorAnm::J3DTevKColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__15J3DTevKColorAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B1A4-8003B1E0 003C+00 .text      __dt__14J3DTevColorAnmFv                                     */
+/* 8003B1A4-8003B1E0 003C+00 rc=10 efc=8 .text      __dt__14J3DTevColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::~J3DTevColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__14J3DTevColorAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B1E0-8003B1F8 0018+00 .text      __ct__14J3DTevColorAnmFv                                     */
+/* 8003B1E0-8003B1F8 0018+00 rc=5 efc=3 .text      __ct__14J3DTevColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
+asm J3DTevColorAnm::J3DTevColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__14J3DTevColorAnmFv.s"
 }
@@ -453,7 +855,7 @@ ASM_FUNCTION(__ct__14J3DTevColorAnmFv) {
 
 
 /* ############################################################################################## */
-/* 803A7C38-803A7C48 0010+00 .data      __vt__10J3DAnmBase                                           */
+/* 803A7C38-803A7C48 0010+00 rc=26 efc=22 .data      __vt__10J3DAnmBase                                           */
 void* const __vt__10J3DAnmBase[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -461,7 +863,7 @@ void* const __vt__10J3DAnmBase[4] = {
 	NULL,
 };
 
-/* 803A7C48-803A7C5C 0014+00 .data      __vt__15J3DAnmTransform                                      */
+/* 803A7C48-803A7C5C 0014+00 rc=6 efc=3 .data      __vt__15J3DAnmTransform                                      */
 void* const __vt__15J3DAnmTransform[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -470,7 +872,7 @@ void* const __vt__15J3DAnmTransform[5] = {
 	NULL,
 };
 
-/* 803A7C5C-803A7C70 0014+00 .data      __vt__18mDoExt_transAnmBas                                   */
+/* 803A7C5C-803A7C70 0014+00 rc=3 efc=1 .data      __vt__18mDoExt_transAnmBas                                   */
 void* const __vt__18mDoExt_transAnmBas[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -479,7 +881,7 @@ void* const __vt__18mDoExt_transAnmBas[5] = {
 	(void*)getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo,
 };
 
-/* 803A7C70-803A7C84 0014+00 .data      __vt__18J3DAnmTransformKey                                   */
+/* 803A7C70-803A7C84 0014+00 rc=5 efc=2 .data      __vt__18J3DAnmTransformKey                                   */
 void* const __vt__18J3DAnmTransformKey[5] = {
 	NULL, /* RTTI */
 	NULL,
@@ -488,183 +890,183 @@ void* const __vt__18J3DAnmTransformKey[5] = {
 	(void*)getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo,
 };
 
-/* 803A7C84-803A7C90 000C+00 .data      __vt__11J3DTexNoAnm                                          */
+/* 803A7C84-803A7C90 000C+00 rc=3 efc=1 .data      __vt__11J3DTexNoAnm                                          */
 void* const __vt__11J3DTexNoAnm[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)calc__11J3DTexNoAnmCFPUs,
 };
 
-/* 8003B1F8-8003B240 0048+00 .text      __dt__11J3DTexNoAnmFv                                        */
+/* 8003B1F8-8003B240 0048+00 rc=10 efc=8 .text      __dt__11J3DTexNoAnmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::~J3DTexNoAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__11J3DTexNoAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B240-8003B264 0024+00 .text      __ct__11J3DTexNoAnmFv                                        */
+/* 8003B240-8003B264 0024+00 rc=5 efc=3 .text      __ct__11J3DTexNoAnmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11J3DTexNoAnmFv) {
+asm J3DTexNoAnm::J3DTexNoAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__11J3DTexNoAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B264-8003B2A0 003C+00 .text      __dt__12J3DTexMtxAnmFv                                       */
+/* 8003B264-8003B2A0 003C+00 rc=10 efc=8 .text      __dt__12J3DTexMtxAnmFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__12J3DTexMtxAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B2A0-8003B2B8 0018+00 .text      __ct__12J3DTexMtxAnmFv                                       */
+/* 8003B2A0-8003B2B8 0018+00 rc=5 efc=3 .text      __ct__12J3DTexMtxAnmFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12J3DTexMtxAnmFv) {
+asm J3DTexMtxAnm::J3DTexMtxAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__12J3DTexMtxAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B2B8-8003B2F4 003C+00 .text      __dt__14J3DMatColorAnmFv                                     */
+/* 8003B2B8-8003B2F4 003C+00 rc=10 efc=8 .text      __dt__14J3DMatColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::~J3DMatColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__14J3DMatColorAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B2F4-8003B30C 0018+00 .text      __ct__14J3DMatColorAnmFv                                     */
+/* 8003B2F4-8003B30C 0018+00 rc=5 efc=3 .text      __ct__14J3DMatColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14J3DMatColorAnmFv) {
+asm J3DMatColorAnm::J3DMatColorAnm() {
 	nofralloc
 #include "asm/d/d_resorce/__ct__14J3DMatColorAnmFv.s"
 }
 #pragma pop
 
 
-/* 8003B30C-8003B8D0 05C4+00 .text      loadResource__11dRes_info_cFv                                */
+/* 8003B30C-8003B8D0 05C4+00 rc=2 efc=0 .text      loadResource__11dRes_info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadResource__11dRes_info_cFv) {
+asm void dRes_info_c::loadResource() {
 	nofralloc
 #include "asm/d/d_resorce/loadResource__11dRes_info_cFv.s"
 }
 #pragma pop
 
 
-/* 8003B8D0-8003B93C 006C+00 .text      __dt__18J3DAnmTransformKeyFv                                 */
+/* 8003B8D0-8003B93C 006C+00 rc=1 efc=0 .text      __dt__18J3DAnmTransformKeyFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18J3DAnmTransformKeyFv) {
+asm J3DAnmTransformKey::~J3DAnmTransformKey() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__18J3DAnmTransformKeyFv.s"
 }
 #pragma pop
 
 
-/* 8003B93C-8003B998 005C+00 .text      __dt__15J3DAnmTransformFv                                    */
+/* 8003B93C-8003B998 005C+00 rc=1 efc=0 .text      __dt__15J3DAnmTransformFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15J3DAnmTransformFv) {
+asm J3DAnmTransform::~J3DAnmTransform() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__15J3DAnmTransformFv.s"
 }
 #pragma pop
 
 
-/* 8003B998-8003BA9C 0104+00 .text      deleteArchiveRes__11dRes_info_cFv                            */
+/* 8003B998-8003BA9C 0104+00 rc=1 efc=0 .text      deleteArchiveRes__11dRes_info_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteArchiveRes__11dRes_info_cFv) {
+asm void dRes_info_c::deleteArchiveRes() {
 	nofralloc
 #include "asm/d/d_resorce/deleteArchiveRes__11dRes_info_cFv.s"
 }
 #pragma pop
 
 
-/* 8003BA9C-8003BAC4 0028+00 .text      getArcHeader__FP10JKRArchive                                 */
+/* 8003BA9C-8003BAC4 0028+00 rc=2 efc=0 .text      getArcHeader__FP10JKRArchive                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getArcHeader__FP10JKRArchive) {
+asm static void getArcHeader(JKRArchive* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/getArcHeader__FP10JKRArchive.s"
 }
 #pragma pop
 
 
-/* 8003BAC4-8003BAF8 0034+00 .text      setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap                 */
+/* 8003BAC4-8003BAF8 0034+00 rc=1 efc=0 .text      setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap) {
+asm void dRes_info_c::setRes(JKRArchive* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/d/d_resorce/setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8003BAF8-8003BC98 01A0+00 .text      setRes__11dRes_info_cFv                                      */
+/* 8003BAF8-8003BC98 01A0+00 rc=2 efc=0 .text      setRes__11dRes_info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRes__11dRes_info_cFv) {
+asm void dRes_info_c::setRes() {
 	nofralloc
 #include "asm/d/d_resorce/setRes__11dRes_info_cFv.s"
 }
 #pragma pop
 
 
-/* 8003BC98-8003BD00 0068+00 .text      myGetMemBlockSize__FPv                                       */
+/* 8003BC98-8003BD00 0068+00 rc=1 efc=0 .text      myGetMemBlockSize__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myGetMemBlockSize__FPv) {
+asm static void myGetMemBlockSize(void* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/myGetMemBlockSize__FPv.s"
 }
 #pragma pop
 
 
-/* 8003BD00-8003BD2C 002C+00 .text      myGetMemBlockSize0__FPv                                      */
+/* 8003BD00-8003BD2C 002C+00 rc=1 efc=0 .text      myGetMemBlockSize0__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(myGetMemBlockSize0__FPv) {
+asm static void myGetMemBlockSize0(void* field_0) {
 	nofralloc
 #include "asm/d/d_resorce/myGetMemBlockSize0__FPv.s"
 }
 #pragma pop
 
 
-/* 8003BD2C-8003BE38 010C+00 .text      dump_long__11dRes_info_cFP11dRes_info_ci                     */
+/* 8003BD2C-8003BE38 010C+00 rc=1 efc=0 .text      dump_long__11dRes_info_cFP11dRes_info_ci                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump_long__11dRes_info_cFP11dRes_info_ci) {
+asm void dRes_info_c::dump_long(dRes_info_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_resorce/dump_long__11dRes_info_cFP11dRes_info_ci.s"
 }
@@ -672,253 +1074,242 @@ ASM_FUNCTION(dump_long__11dRes_info_cFP11dRes_info_ci) {
 
 
 /* ############################################################################################## */
-/* 80451DF8-80451E00 0008+00 .sdata2    @4277                                                        */
+/* 80451DF8-80451E00 0008+00 rc=1 efc=0 .sdata2    @4277                                                        */
 f64 d_d_resorce__lit_4277 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80451E00-80451E08 0004+04 .sdata2    @4333                                                        */
+/* 80451E00-80451E08 0004+04 rc=1 efc=0 .sdata2    @4333                                                        */
 f32 d_d_resorce__lit_4333 = 0.0009765625f;
 /* padding 4 bytes */
 
-/* 8003BE38-8003BFB0 0178+00 .text      dump__11dRes_info_cFP11dRes_info_ci                          */
+/* 8003BE38-8003BFB0 0178+00 rc=1 efc=0 .text      dump__11dRes_info_cFP11dRes_info_ci                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump__11dRes_info_cFP11dRes_info_ci) {
+asm void dRes_info_c::dump(dRes_info_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_resorce/dump__11dRes_info_cFP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003BFB0-8003C078 00C8+00 .text      __dt__14dRes_control_cFv                                     */
+/* 8003BFB0-8003C078 00C8+00 rc=1 efc=1 .text      __dt__14dRes_control_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dRes_control_cFv) {
+asm dRes_control_c::~dRes_control_c() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__14dRes_control_cFv.s"
 }
 #pragma pop
 
 
-/* 8003C078-8003C160 00E8+00 .text      setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap    */
+/* 8003C078-8003C160 00E8+00 rc=10 efc=8 .text      setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap) {
+asm void dRes_control_c::setRes(char const* field_0, dRes_info_c* field_1, s32 field_2, char const* field_3, char field_4, JKRHeap* field_5) {
 	nofralloc
 #include "asm/d/d_resorce/setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8003C160-8003C194 0034+00 .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
+/* 8003C160-8003C194 0034+00 rc=10 efc=10 .text      syncRes__14dRes_control_cFPCcP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(syncRes__14dRes_control_cFPCcP11dRes_info_ci) {
+asm void dRes_control_c::syncRes(char const* field_0, dRes_info_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_resorce/syncRes__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C194-8003C1E4 0050+00 .text      deleteRes__14dRes_control_cFPCcP11dRes_info_ci               */
+/* 8003C194-8003C1E4 0050+00 rc=8 efc=7 .text      deleteRes__14dRes_control_cFPCcP11dRes_info_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(deleteRes__14dRes_control_cFPCcP11dRes_info_ci) {
+asm void dRes_control_c::deleteRes(char const* field_0, dRes_info_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_resorce/deleteRes__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C1E4-8003C260 007C+00 .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
+/* 8003C1E4-8003C260 007C+00 rc=10 efc=5 .text      getResInfo__14dRes_control_cFPCcP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResInfo__14dRes_control_cFPCcP11dRes_info_ci) {
+asm void dRes_control_c::getResInfo(char const* field_0, dRes_info_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_resorce/getResInfo__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C260-8003C288 0028+00 .text      newResInfo__14dRes_control_cFP11dRes_info_ci                 */
+/* 8003C260-8003C288 0028+00 rc=1 efc=0 .text      newResInfo__14dRes_control_cFP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(newResInfo__14dRes_control_cFP11dRes_info_ci) {
+asm void dRes_control_c::newResInfo(dRes_info_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_resorce/newResInfo__14dRes_control_cFP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C288-8003C2EC 0064+00 .text      getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci        */
+/* 8003C288-8003C2EC 0064+00 rc=4 efc=0 .text      getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci) {
+asm void dRes_control_c::getResInfoLoaded(char const* field_0, dRes_info_c* field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/d_resorce/getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C2EC-8003C37C 0090+00 .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
+/* 8003C2EC-8003C37C 0090+00 rc=55 efc=54 .text      getRes__14dRes_control_cFPCclP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRes__14dRes_control_cFPCclP11dRes_info_ci) {
+asm void dRes_control_c::getRes(char const* field_0, s32 field_1, dRes_info_c* field_2, s32 field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getRes__14dRes_control_cFPCclP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C37C-8003C400 0084+00 .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
+/* 8003C37C-8003C400 0084+00 rc=18 efc=18 .text      getRes__14dRes_control_cFPCcPCcP11dRes_info_ci               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRes__14dRes_control_cFPCcPCcP11dRes_info_ci) {
+asm void dRes_control_c::getRes(char const* field_0, char const* field_1, dRes_info_c* field_2, s32 field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getRes__14dRes_control_cFPCcPCcP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C400-8003C470 0070+00 .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
+/* 8003C400-8003C470 0070+00 rc=7 efc=7 .text      getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci) {
+asm void dRes_control_c::getIDRes(char const* field_0, u16 field_1, dRes_info_c* field_2, s32 field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C470-8003C4E4 0074+00 .text      syncAllRes__14dRes_control_cFP11dRes_info_ci                 */
+/* 8003C470-8003C4E4 0074+00 rc=3 efc=3 .text      syncAllRes__14dRes_control_cFP11dRes_info_ci                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(syncAllRes__14dRes_control_cFP11dRes_info_ci) {
+asm void dRes_control_c::syncAllRes(dRes_info_c* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/d_resorce/syncAllRes__14dRes_control_cFP11dRes_info_ci.s"
 }
 #pragma pop
 
 
-/* 8003C4E4-8003C5BC 00D8+00 .text      setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap              */
+/* 8003C4E4-8003C5BC 00D8+00 rc=1 efc=0 .text      setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap) {
+asm void dRes_control_c::setObjectRes(char const* field_0, void* field_1, u32 field_2, JKRHeap* field_3) {
 	nofralloc
 #include "asm/d/d_resorce/setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8003C5BC-8003C638 007C+00 .text      setStageRes__14dRes_control_cFPCcP7JKRHeap                   */
+/* 8003C5BC-8003C638 007C+00 rc=2 efc=2 .text      setStageRes__14dRes_control_cFPCcP7JKRHeap                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setStageRes__14dRes_control_cFPCcP7JKRHeap) {
+asm void dRes_control_c::setStageRes(char const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/d/d_resorce/setStageRes__14dRes_control_cFPCcP7JKRHeap.s"
 }
 #pragma pop
 
 
-/* 8003C638-8003C6B8 0080+00 .text      dump__14dRes_control_cFv                                     */
+/* 8003C638-8003C6B8 0080+00 rc=2 efc=2 .text      dump__14dRes_control_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dump__14dRes_control_cFv) {
+asm void dRes_control_c::dump() {
 	nofralloc
 #include "asm/d/d_resorce/dump__14dRes_control_cFv.s"
 }
 #pragma pop
 
 
-/* 8003C6B8-8003C734 007C+00 .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
+/* 8003C6B8-8003C734 007C+00 rc=0 efc=0 .text      getObjectResName2Index__14dRes_control_cFPCcPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getObjectResName2Index__14dRes_control_cFPCcPCc) {
+asm void dRes_control_c::getObjectResName2Index(char const* field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/d_resorce/getObjectResName2Index__14dRes_control_cFPCcPCc.s"
 }
 #pragma pop
 
 
-/* 8003C734-8003C77C 0048+00 .text      __dt__10J3DAnmBaseFv                                         */
+/* 8003C734-8003C77C 0048+00 rc=1 efc=0 .text      __dt__10J3DAnmBaseFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10J3DAnmBaseFv) {
+asm J3DAnmBase::~J3DAnmBase() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__10J3DAnmBaseFv.s"
 }
 #pragma pop
 
 
-/* 8003C77C-8003C784 0008+00 .text      getKind__15J3DAnmTransformCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getKind__15J3DAnmTransformCFv) {
-	nofralloc
-#include "asm/d/d_resorce/getKind__15J3DAnmTransformCFv.s"
+/* 8003C77C-8003C784 0008+00 rc=1 efc=0 .text      getKind__15J3DAnmTransformCFv                                */
+bool J3DAnmTransform::getKind() const {
+	return false;
 }
-#pragma pop
 
 
-/* 8003C784-8003C800 007C+00 .text      __dt__18mDoExt_transAnmBasFv                                 */
+/* 8003C784-8003C800 007C+00 rc=1 efc=0 .text      __dt__18mDoExt_transAnmBasFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18mDoExt_transAnmBasFv) {
+asm mDoExt_transAnmBas::~mDoExt_transAnmBas() {
 	nofralloc
 #include "asm/d/d_resorce/__dt__18mDoExt_transAnmBasFv.s"
 }
 #pragma pop
 
 
-/* 8003C800-8003C808 0008+00 .text      getKind__18J3DAnmTransformKeyCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(getKind__18J3DAnmTransformKeyCFv) {
-	nofralloc
-#include "asm/d/d_resorce/getKind__18J3DAnmTransformKeyCFv.s"
+/* 8003C800-8003C808 0008+00 rc=2 efc=0 .text      getKind__18J3DAnmTransformKeyCFv                             */
+s32 J3DAnmTransformKey::getKind() const {
+	return 8;
 }
-#pragma pop
 
 
-/* 8003C808-8003C82C 0024+00 .text      getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo    */
+/* 8003C808-8003C82C 0024+00 rc=2 efc=0 .text      getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo) {
+asm void J3DAnmTransformKey::getTransform(u16 field_0, J3DTransformInfo* field_1) const {
 	nofralloc
 #include "asm/d/d_resorce/getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo.s"
 }
 #pragma pop
 
 
-/* 8003C82C-8003C85C 0030+00 .text      calc__11J3DTexNoAnmCFPUs                                     */
+/* 8003C82C-8003C85C 0030+00 rc=1 efc=0 .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calc__11J3DTexNoAnmCFPUs) {
+asm void J3DTexNoAnm::calc(u16* field_0) const {
 	nofralloc
 #include "asm/d/d_resorce/calc__11J3DTexNoAnmCFPUs.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

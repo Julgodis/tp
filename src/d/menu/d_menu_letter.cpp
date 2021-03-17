@@ -6,57 +6,384 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dMenu_Letter_c (dMenu_Letter_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build CSTControl (CSTControl) False/False
+/* top-level dependencies (begin CSTControl) */
+/* top-level dependencies (end CSTControl) */
+struct CSTControl {
+};
+
+// build STControl (STControl) False/False
+/* top-level dependencies (begin STControl) */
+/* top-level dependencies (end STControl) */
+struct STControl {
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+/* top-level dependencies (begin dMenu_Letter_c) */
+// outer dependency: JKRExpHeap
+// outer dependency: CSTControl
+// outer dependency: STControl
+/* top-level dependencies (end dMenu_Letter_c) */
+struct dMenu_Letter_c {
+	// JKRExpHeap
+	// CSTControl
+	// STControl
+	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
+	/* 801DCF34 */ ~dMenu_Letter_c();
+	/* 801DD36C */ void _create();
+	/* 801DD474 */ void _move();
+	/* 801DD50C */ void _draw();
+	/* 801DD934 */ void isSync();
+	/* 801DD95C */ void letter_init_calc();
+	/* 801DDA20 */ void init();
+	/* 801DDA74 */ void _open();
+	/* 801DDC98 */ void _close();
+	/* 801DDE18 */ void wait_init();
+	/* 801DDE54 */ void wait_move();
+	/* 801DE164 */ void slide_right_init();
+	/* 801DE1E8 */ void slide_right_move();
+	/* 801DE24C */ void slide_left_init();
+	/* 801DE2D0 */ void slide_left_move();
+	/* 801DE334 */ void read_open_init();
+	/* 801DE564 */ void read_open_move();
+	/* 801DE70C */ void read_move_init();
+	/* 801DE824 */ void read_move_move();
+	/* 801DEA48 */ void read_next_fadeout_init();
+	/* 801DEA94 */ void read_next_fadeout_move();
+	/* 801DEBD8 */ void read_next_fadein_init();
+	/* 801DED04 */ void read_next_fadein_move();
+	/* 801DEE20 */ void read_close_init();
+	/* 801DEE6C */ void read_close_move();
+	/* 801DF010 */ void screenSetMenu();
+	/* 801DFA58 */ void screenSetBase();
+	/* 801E0330 */ void screenSetShadow();
+	/* 801E03D8 */ void screenSetLetter();
+	/* 801E09A8 */ void screenSetDoIcon();
+	/* 801E0B24 */ void setCursorPos();
+	/* 801E0BB0 */ void changeActiveColor();
+	/* 801E0E34 */ void changePageLight();
+	/* 801E0E84 */ void setPageText();
+	/* 801E1038 */ void setDMYPageText();
+	/* 801E11EC */ void copyDMYMenu();
+	/* 801E1518 */ void setAButtonString(u16);
+	/* 801E15C8 */ void setBButtonString(u16);
+	/* 801E1678 */ void getLetterNum();
+	/* 801E1748 */ void setHIO(bool);
+	/* 801E1D5C */ void draw();
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build STControl (STControl) True/True
+// build CSTControl (CSTControl) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 801DFA28 */ void getWhite() const;
+	/* 801DFA34 */ void getBlack() const;
+	/* 80300658 */ void getStringPtr() const;
+};
+
+// build J2DPicture (J2DPicture) False/False
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+/* top-level dependencies (begin J2DPicture) */
+// outer dependency: ResTIMG
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
+	// ResTIMG
+	/* 801DFA40 */ void getWhite() const;
+	/* 801DFA4C */ void getBlack() const;
+	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+// build dMsgString_c (dMsgString_c) False/False
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
+/* top-level dependencies (begin dMsgString_c) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end dMsgString_c) */
+struct dMsgString_c {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 801E1D10 */ void getStringPage(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249C20 */ dMsgString_c();
+	/* 80249D28 */ ~dMsgString_c();
+};
+
+// build JUTFont (JUTFont) True/True
+// build COutFont_c (COutFont_c) True/True
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build mDoDvdThd_mountArchive_c (mDoDvdThd_mountArchive_c) False/False
+// build JKRHeap (JKRHeap) True/True
+/* top-level dependencies (begin mDoDvdThd_mountArchive_c) */
+// outer dependency: JKRHeap
+/* top-level dependencies (end mDoDvdThd_mountArchive_c) */
+struct mDoDvdThd_mountArchive_c {
+	// JKRHeap
+	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+};
+
+// build dSv_letter_info_c (dSv_letter_info_c) False/False
+/* top-level dependencies (begin dSv_letter_info_c) */
+/* top-level dependencies (end dSv_letter_info_c) */
+struct dSv_letter_info_c {
+	/* 80034428 */ void onLetterGetFlag(s32);
+	/* 80034474 */ void onLetterReadFlag(s32);
+	/* 8003449C */ void isLetterReadFlag(s32) const;
+};
+
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// JKRArchive
+	// J2DPane
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DPane (J2DPane) True/True
+// build dMeter2Info_c (dMeter2Info_c) False/False
+// build JMSMesgEntry_c (JMSMesgEntry_c) False/False
+/* top-level dependencies (begin JMSMesgEntry_c) */
+/* top-level dependencies (end JMSMesgEntry_c) */
+struct JMSMesgEntry_c {
+};
+
+/* top-level dependencies (begin dMeter2Info_c) */
+// outer dependency: JMSMesgEntry_c
+/* top-level dependencies (end dMeter2Info_c) */
+struct dMeter2Info_c {
+	// JMSMesgEntry_c
+	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
+};
+
+// build JMSMesgEntry_c (JMSMesgEntry_c) True/True
+// build dMsgScrnArrow_c (dMsgScrnArrow_c) False/False
+/* top-level dependencies (begin dMsgScrnArrow_c) */
+/* top-level dependencies (end dMsgScrnArrow_c) */
+struct dMsgScrnArrow_c {
+	/* 8023B9B4 */ dMsgScrnArrow_c();
+	/* 8023BDC0 */ void draw();
+	/* 8023BDF8 */ void setPos(f32, f32);
+	/* 8023BE34 */ void arwAnimeInit();
+	/* 8023BE90 */ void arwAnimeMove();
+	/* 8023BFC4 */ void dotAnimeInit();
+	/* 8023C010 */ void dotAnimeMove();
+};
+
+// build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build JUTFont (JUTFont) True/True
+// build J2DTextBox (J2DTextBox) True/True
+// build COutFont_c (COutFont_c) True/True
+/* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: JUTFont
+// outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+/* top-level dependencies (end dMsgStringBase_c) */
+struct dMsgStringBase_c {
+	// JUTFont
+	// J2DTextBox
+	// COutFont_c
+	/* 802498D8 */ void getStringPageLocal(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249A48 */ void getPageMax(s32);
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80253930 */ CPaneMgr();
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253A18 */ ~CPaneMgr();
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802557D0 */ void setAlphaRate(f32);
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build J2DGrafContext (J2DGrafContext) True/True
+// build ResTIMG (ResTIMG) True/True
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" extern void __dt__14dMenu_Letter_cFv();
-extern "C" extern void _create__14dMenu_Letter_cFv();
-extern "C" extern void _move__14dMenu_Letter_cFv();
-extern "C" extern void _draw__14dMenu_Letter_cFv();
-extern "C" extern void isSync__14dMenu_Letter_cFv();
-extern "C" extern void letter_init_calc__14dMenu_Letter_cFv();
-extern "C" extern void init__14dMenu_Letter_cFv();
-extern "C" extern void _open__14dMenu_Letter_cFv();
-extern "C" extern void _close__14dMenu_Letter_cFv();
-extern "C" extern void wait_init__14dMenu_Letter_cFv();
-extern "C" extern void wait_move__14dMenu_Letter_cFv();
-extern "C" extern void slide_right_init__14dMenu_Letter_cFv();
-extern "C" extern void slide_right_move__14dMenu_Letter_cFv();
-extern "C" extern void slide_left_init__14dMenu_Letter_cFv();
-extern "C" extern void slide_left_move__14dMenu_Letter_cFv();
-extern "C" extern void read_open_init__14dMenu_Letter_cFv();
-extern "C" extern void read_open_move__14dMenu_Letter_cFv();
-extern "C" extern void read_move_init__14dMenu_Letter_cFv();
-extern "C" extern void read_move_move__14dMenu_Letter_cFv();
-extern "C" extern void read_next_fadeout_init__14dMenu_Letter_cFv();
-extern "C" extern void read_next_fadeout_move__14dMenu_Letter_cFv();
-extern "C" extern void read_next_fadein_init__14dMenu_Letter_cFv();
-extern "C" extern void read_next_fadein_move__14dMenu_Letter_cFv();
-extern "C" extern void read_close_init__14dMenu_Letter_cFv();
-extern "C" extern void read_close_move__14dMenu_Letter_cFv();
-extern "C" extern void screenSetMenu__14dMenu_Letter_cFv();
-extern "C" extern void getWhite__10J2DTextBoxCFv();
-extern "C" extern void getBlack__10J2DTextBoxCFv();
-extern "C" extern void getWhite__10J2DPictureCFv();
-extern "C" extern void getBlack__10J2DPictureCFv();
-extern "C" extern void screenSetBase__14dMenu_Letter_cFv();
-extern "C" extern void screenSetShadow__14dMenu_Letter_cFv();
-extern "C" extern void screenSetLetter__14dMenu_Letter_cFv();
-extern "C" extern void screenSetDoIcon__14dMenu_Letter_cFv();
-extern "C" extern void setCursorPos__14dMenu_Letter_cFv();
-extern "C" extern void changeActiveColor__14dMenu_Letter_cFv();
-extern "C" extern void changePageLight__14dMenu_Letter_cFv();
-extern "C" extern void setPageText__14dMenu_Letter_cFv();
-extern "C" extern void setDMYPageText__14dMenu_Letter_cFv();
-extern "C" extern void copyDMYMenu__14dMenu_Letter_cFv();
-extern "C" extern void setAButtonString__14dMenu_Letter_cFUs();
-extern "C" extern void setBButtonString__14dMenu_Letter_cFUs();
-extern "C" extern void getLetterNum__14dMenu_Letter_cFv();
-extern "C" extern void setHIO__14dMenu_Letter_cFb();
-extern "C" extern void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void draw__14dMenu_Letter_cFv();
-extern "C" extern void __sinit_d_menu_letter_cpp();
+extern "C" void __sinit_d_menu_letter_cpp();
+
+extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void __dt__14dMenu_Letter_cFv();
+extern "C" void _create__14dMenu_Letter_cFv();
+extern "C" void _move__14dMenu_Letter_cFv();
+extern "C" void _draw__14dMenu_Letter_cFv();
+extern "C" void isSync__14dMenu_Letter_cFv();
+extern "C" void letter_init_calc__14dMenu_Letter_cFv();
+extern "C" void init__14dMenu_Letter_cFv();
+extern "C" void _open__14dMenu_Letter_cFv();
+extern "C" void _close__14dMenu_Letter_cFv();
+extern "C" void wait_init__14dMenu_Letter_cFv();
+extern "C" void wait_move__14dMenu_Letter_cFv();
+extern "C" void slide_right_init__14dMenu_Letter_cFv();
+extern "C" void slide_right_move__14dMenu_Letter_cFv();
+extern "C" void slide_left_init__14dMenu_Letter_cFv();
+extern "C" void slide_left_move__14dMenu_Letter_cFv();
+extern "C" void read_open_init__14dMenu_Letter_cFv();
+extern "C" void read_open_move__14dMenu_Letter_cFv();
+extern "C" void read_move_init__14dMenu_Letter_cFv();
+extern "C" void read_move_move__14dMenu_Letter_cFv();
+extern "C" void read_next_fadeout_init__14dMenu_Letter_cFv();
+extern "C" void read_next_fadeout_move__14dMenu_Letter_cFv();
+extern "C" void read_next_fadein_init__14dMenu_Letter_cFv();
+extern "C" void read_next_fadein_move__14dMenu_Letter_cFv();
+extern "C" void read_close_init__14dMenu_Letter_cFv();
+extern "C" void read_close_move__14dMenu_Letter_cFv();
+extern "C" void screenSetMenu__14dMenu_Letter_cFv();
+extern "C" void getWhite__10J2DTextBoxCFv();
+extern "C" void getBlack__10J2DTextBoxCFv();
+extern "C" void getWhite__10J2DPictureCFv();
+extern "C" void getBlack__10J2DPictureCFv();
+extern "C" void screenSetBase__14dMenu_Letter_cFv();
+extern "C" void screenSetShadow__14dMenu_Letter_cFv();
+extern "C" void screenSetLetter__14dMenu_Letter_cFv();
+extern "C" void screenSetDoIcon__14dMenu_Letter_cFv();
+extern "C" void setCursorPos__14dMenu_Letter_cFv();
+extern "C" void changeActiveColor__14dMenu_Letter_cFv();
+extern "C" void changePageLight__14dMenu_Letter_cFv();
+extern "C" void setPageText__14dMenu_Letter_cFv();
+extern "C" void setDMYPageText__14dMenu_Letter_cFv();
+extern "C" void copyDMYMenu__14dMenu_Letter_cFv();
+extern "C" void setAButtonString__14dMenu_Letter_cFUs();
+extern "C" void setBButtonString__14dMenu_Letter_cFUs();
+extern "C" void getLetterNum__14dMenu_Letter_cFv();
+extern "C" void setHIO__14dMenu_Letter_cFb();
+extern "C" void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void draw__14dMenu_Letter_cFv();
+extern "C" void __sinit_d_menu_letter_cpp();
 SECTION_RODATA extern const u8 data_803969C8[48];
 SECTION_RODATA extern const u8 data_803969F8[48];
 SECTION_RODATA extern const u8 data_80396A28[48];
@@ -116,74 +443,106 @@ SECTION_SDATA2 extern f32 d_menu_d_menu_letter__lit_4310;
 // External References:
 // 
 
-extern "C" extern void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" extern void mDoExt_getMesgFont__Fv();
-extern "C" extern void mDoExt_getSubFont__Fv();
-extern "C" extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern "C" extern void checkUpTrigger__9STControlFv();
-extern "C" extern void checkDownTrigger__9STControlFv();
-extern "C" extern void onLetterGetFlag__17dSv_letter_info_cFi();
-extern "C" extern void onLetterReadFlag__17dSv_letter_info_cFi();
-extern "C" extern void isLetterReadFlag__17dSv_letter_info_cCFi();
-extern "C" extern void __ct__Q28JUtility6TColorFv();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setScale__16dSelect_cursor_cFf();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" extern void dMeter2Info_getRecieveLetterNum__Fv();
-extern "C" extern void dMeter2Info_set2DVibration__Fv();
-extern "C" extern void __ct__15dMsgScrnArrow_cFv();
-extern "C" extern void draw__15dMsgScrnArrow_cFv();
-extern "C" extern void setPos__15dMsgScrnArrow_cFff();
-extern "C" extern void arwAnimeInit__15dMsgScrnArrow_cFv();
-extern "C" extern void arwAnimeMove__15dMsgScrnArrow_cFv();
-extern "C" extern void dotAnimeInit__15dMsgScrnArrow_cFv();
-extern "C" extern void dotAnimeMove__15dMsgScrnArrow_cFv();
-extern "C" extern void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" extern void getPageMax__16dMsgStringBase_cFi();
-extern "C" extern void __ct__12dMsgString_cFv();
-extern "C" extern void __dt__12dMsgString_cFv();
-extern "C" extern void __ct__8CPaneMgrFv();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void __dt__8CPaneMgrFv();
-extern "C" extern void paneTrans__8CPaneMgrFff();
-extern "C" extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void cLib_addCalc2__FPffff();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void func_802E90C0();
-extern "C" extern void getBounds__7J2DPaneFv();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" extern void getStringPtr__10J2DTextBoxCFv();
-extern "C" extern void setString__10J2DTextBoxFsPCce();
-extern "C" extern void GXGetScissor();
-extern "C" extern void __construct_array();
-extern "C" extern void __ptmf_scall();
-extern "C" extern void __save_gpr();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void __restore_gpr();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void sprintf();
-extern "C" extern void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getSubFont();
+void dMeter2Info_getRecieveLetterNum();
+void dMeter2Info_set2DVibration();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void func_802E90C0();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcpy();
+
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void onLetterGetFlag__17dSv_letter_info_cFi();
+extern "C" void onLetterReadFlag__17dSv_letter_info_cFi();
+extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getRecieveLetterNum__Fv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void __ct__15dMsgScrnArrow_cFv();
+extern "C" void draw__15dMsgScrnArrow_cFv();
+extern "C" void setPos__15dMsgScrnArrow_cFff();
+extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getPageMax__16dMsgStringBase_cFi();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void func_802E90C0();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcpy();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 letter_data__12dMenu_Letter[512];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
@@ -198,68 +557,68 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803BDA00-803BDA0C 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BDA00-803BDA0C 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_menu_d_menu_letter__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDA0C-803BDA18 000C+00 .data      @3795                                                        */
+/* 803BDA0C-803BDA18 000C+00 rc=0 efc=0 .data      @3795                                                        */
 void* d_menu_d_menu_letter__lit_3795[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)wait_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA18-803BDA24 000C+00 .data      @3796                                                        */
+/* 803BDA18-803BDA24 000C+00 rc=0 efc=0 .data      @3796                                                        */
 void* d_menu_d_menu_letter__lit_3796[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)slide_right_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA24-803BDA30 000C+00 .data      @3797                                                        */
+/* 803BDA24-803BDA30 000C+00 rc=0 efc=0 .data      @3797                                                        */
 void* d_menu_d_menu_letter__lit_3797[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)slide_left_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA30-803BDA3C 000C+00 .data      @3798                                                        */
+/* 803BDA30-803BDA3C 000C+00 rc=0 efc=0 .data      @3798                                                        */
 void* d_menu_d_menu_letter__lit_3798[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_open_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA3C-803BDA48 000C+00 .data      @3799                                                        */
+/* 803BDA3C-803BDA48 000C+00 rc=0 efc=0 .data      @3799                                                        */
 void* d_menu_d_menu_letter__lit_3799[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_move_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA48-803BDA54 000C+00 .data      @3800                                                        */
+/* 803BDA48-803BDA54 000C+00 rc=0 efc=0 .data      @3800                                                        */
 void* d_menu_d_menu_letter__lit_3800[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_next_fadeout_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA54-803BDA60 000C+00 .data      @3801                                                        */
+/* 803BDA54-803BDA60 000C+00 rc=0 efc=0 .data      @3801                                                        */
 void* d_menu_d_menu_letter__lit_3801[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_next_fadein_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA60-803BDA6C 000C+00 .data      @3802                                                        */
+/* 803BDA60-803BDA6C 000C+00 rc=0 efc=0 .data      @3802                                                        */
 void* d_menu_d_menu_letter__lit_3802[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_close_init__14dMenu_Letter_cFv,
 };
 
-/* 803BDA6C-803BDACC 0060+00 .data      map_init_process                                             */
+/* 803BDA6C-803BDACC 0060+00 rc=2 efc=0 .data      map_init_process                                             */
 u8 d_menu_d_menu_letter__map_init_process[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -269,63 +628,63 @@ u8 d_menu_d_menu_letter__map_init_process[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDACC-803BDAD8 000C+00 .data      @3803                                                        */
+/* 803BDACC-803BDAD8 000C+00 rc=0 efc=0 .data      @3803                                                        */
 void* d_menu_d_menu_letter__lit_3803[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)wait_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDAD8-803BDAE4 000C+00 .data      @3804                                                        */
+/* 803BDAD8-803BDAE4 000C+00 rc=0 efc=0 .data      @3804                                                        */
 void* d_menu_d_menu_letter__lit_3804[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)slide_right_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDAE4-803BDAF0 000C+00 .data      @3805                                                        */
+/* 803BDAE4-803BDAF0 000C+00 rc=0 efc=0 .data      @3805                                                        */
 void* d_menu_d_menu_letter__lit_3805[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)slide_left_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDAF0-803BDAFC 000C+00 .data      @3806                                                        */
+/* 803BDAF0-803BDAFC 000C+00 rc=0 efc=0 .data      @3806                                                        */
 void* d_menu_d_menu_letter__lit_3806[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_open_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDAFC-803BDB08 000C+00 .data      @3807                                                        */
+/* 803BDAFC-803BDB08 000C+00 rc=0 efc=0 .data      @3807                                                        */
 void* d_menu_d_menu_letter__lit_3807[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_move_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDB08-803BDB14 000C+00 .data      @3808                                                        */
+/* 803BDB08-803BDB14 000C+00 rc=0 efc=0 .data      @3808                                                        */
 void* d_menu_d_menu_letter__lit_3808[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_next_fadeout_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDB14-803BDB20 000C+00 .data      @3809                                                        */
+/* 803BDB14-803BDB20 000C+00 rc=0 efc=0 .data      @3809                                                        */
 void* d_menu_d_menu_letter__lit_3809[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_next_fadein_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDB20-803BDB2C 000C+00 .data      @3810                                                        */
+/* 803BDB20-803BDB2C 000C+00 rc=0 efc=0 .data      @3810                                                        */
 void* d_menu_d_menu_letter__lit_3810[3] = {
 	NULL,
 	(void*)0xFFFFFFFF,
 	(void*)read_close_move__14dMenu_Letter_cFv,
 };
 
-/* 803BDB2C-803BDB8C 0060+00 .data      map_move_process                                             */
+/* 803BDB2C-803BDB8C 0060+00 rc=1 efc=0 .data      map_move_process                                             */
 u8 d_menu_d_menu_letter__map_move_process[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -335,7 +694,7 @@ u8 d_menu_d_menu_letter__map_move_process[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDB8C-803BDBA8 0010+0C .data      __vt__14dMenu_Letter_c                                       */
+/* 803BDB8C-803BDBA8 0010+0C rc=2 efc=0 .data      __vt__14dMenu_Letter_c                                       */
 void* const __vt__14dMenu_Letter_c[7] = {
 	NULL, /* RTTI */
 	NULL,
@@ -347,30 +706,30 @@ void* const __vt__14dMenu_Letter_c[7] = {
 	NULL,
 };
 
-/* 804542E0-804542E4 0004+00 .sdata2    @3827                                                        */
+/* 804542E0-804542E4 0004+00 rc=13 efc=0 .sdata2    @3827                                                        */
 u8 d_menu_d_menu_letter__lit_3827[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804542E4-804542E8 0004+00 .sdata2    @3828                                                        */
+/* 804542E4-804542E8 0004+00 rc=10 efc=0 .sdata2    @3828                                                        */
 f32 d_menu_d_menu_letter__lit_3828 = 1.0f;
 
-/* 801DCDC0-801DCF34 0174+00 .text      __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl */
+/* 801DCDC0-801DCF34 0174+00 rc=2 efc=2 .text      __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl) {
+asm dMenu_Letter_c::dMenu_Letter_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/__ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl.s"
 }
 #pragma pop
 
 
-/* 801DCF34-801DD36C 0438+00 .text      __dt__14dMenu_Letter_cFv                                     */
+/* 801DCF34-801DD36C 0438+00 rc=1 efc=0 .text      __dt__14dMenu_Letter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14dMenu_Letter_cFv) {
+asm dMenu_Letter_c::~dMenu_Letter_c() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/__dt__14dMenu_Letter_cFv.s"
 }
@@ -378,34 +737,34 @@ ASM_FUNCTION(__dt__14dMenu_Letter_cFv) {
 
 
 /* ############################################################################################## */
-/* 804542E8-804542EC 0004+00 .sdata2    @3964                                                        */
+/* 804542E8-804542EC 0004+00 rc=1 efc=0 .sdata2    @3964                                                        */
 f32 d_menu_d_menu_letter__lit_3964 = 53.0f / 50.0f;
 
-/* 804542EC-804542F0 0004+00 .sdata2    @3965                                                        */
+/* 804542EC-804542F0 0004+00 rc=1 efc=0 .sdata2    @3965                                                        */
 f32 d_menu_d_menu_letter__lit_3965 = 9.0f / 10.0f;
 
-/* 804542F0-804542F4 0004+00 .sdata2    @3966                                                        */
+/* 804542F0-804542F4 0004+00 rc=1 efc=0 .sdata2    @3966                                                        */
 f32 lit_3966 = 1.0f / 50.0f;
 
-/* 804542F4-804542F8 0004+00 .sdata2    @3967                                                        */
+/* 804542F4-804542F8 0004+00 rc=1 efc=0 .sdata2    @3967                                                        */
 f32 lit_3967 = 2.0f / 5.0f;
 
-/* 801DD36C-801DD474 0108+00 .text      _create__14dMenu_Letter_cFv                                  */
+/* 801DD36C-801DD474 0108+00 rc=1 efc=0 .text      _create__14dMenu_Letter_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_create__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::_create() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/_create__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DD474-801DD50C 0098+00 .text      _move__14dMenu_Letter_cFv                                    */
+/* 801DD474-801DD50C 0098+00 rc=2 efc=2 .text      _move__14dMenu_Letter_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/_move__14dMenu_Letter_cFv.s"
 }
@@ -413,57 +772,57 @@ ASM_FUNCTION(_move__14dMenu_Letter_cFv) {
 
 
 /* ############################################################################################## */
-/* 804542F8-804542FC 0004+00 .sdata2    @4054                                                        */
+/* 804542F8-804542FC 0004+00 rc=1 efc=0 .sdata2    @4054                                                        */
 f32 d_menu_d_menu_letter__lit_4054 = 608.0f;
 
-/* 804542FC-80454300 0004+00 .sdata2    @4055                                                        */
+/* 804542FC-80454300 0004+00 rc=1 efc=0 .sdata2    @4055                                                        */
 f32 d_menu_d_menu_letter__lit_4055 = 448.0f;
 
-/* 80454300-80454308 0004+04 .sdata2    @4056                                                        */
+/* 80454300-80454308 0004+04 rc=3 efc=0 .sdata2    @4056                                                        */
 f32 d_menu_d_menu_letter__lit_4056 = -1.0f;
 /* padding 4 bytes */
 
-/* 80454308-80454310 0008+00 .sdata2    @4058                                                        */
+/* 80454308-80454310 0008+00 rc=3 efc=0 .sdata2    @4058                                                        */
 f64 d_menu_d_menu_letter__lit_4058 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801DD50C-801DD934 0428+00 .text      _draw__14dMenu_Letter_cFv                                    */
+/* 801DD50C-801DD934 0428+00 rc=2 efc=1 .text      _draw__14dMenu_Letter_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_draw__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::_draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/_draw__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DD934-801DD95C 0028+00 .text      isSync__14dMenu_Letter_cFv                                   */
+/* 801DD934-801DD95C 0028+00 rc=2 efc=2 .text      isSync__14dMenu_Letter_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(isSync__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::isSync() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/isSync__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DD95C-801DDA20 00C4+00 .text      letter_init_calc__14dMenu_Letter_cFv                         */
+/* 801DD95C-801DDA20 00C4+00 rc=1 efc=0 .text      letter_init_calc__14dMenu_Letter_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(letter_init_calc__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::letter_init_calc() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/letter_init_calc__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DDA20-801DDA74 0054+00 .text      init__14dMenu_Letter_cFv                                     */
+/* 801DDA20-801DDA74 0054+00 rc=1 efc=0 .text      init__14dMenu_Letter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/init__14dMenu_Letter_cFv.s"
 }
@@ -471,98 +830,98 @@ ASM_FUNCTION(init__14dMenu_Letter_cFv) {
 
 
 /* ############################################################################################## */
-/* 803969C8-803969F8 0030+00 .rodata    tag_sub0$4610                                                */
+/* 803969C8-803969F8 0030+00 rc=2 efc=0 .rodata    tag_sub0$4610                                                */
 SECTION_RODATA const u8 data_803969C8[48] = {
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x73,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x33, 0x73,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x35, 0x73,
 };
 
-/* 803969F8-80396A28 0030+00 .rodata    tag_sub1$4611                                                */
+/* 803969F8-80396A28 0030+00 rc=0 efc=0 .rodata    tag_sub1$4611                                                */
 SECTION_RODATA const u8 data_803969F8[48] = {
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31,
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x33,
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x35,
 };
 
-/* 80396A28-80396A58 0030+00 .rodata    tag_name0$4612                                               */
+/* 80396A28-80396A58 0030+00 rc=0 efc=0 .rodata    tag_name0$4612                                               */
 SECTION_RODATA const u8 data_80396A28[48] = {
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x66, 0x37, 0x73,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x66, 0x38, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39, 0x73,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x30, 0x73, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x31, 0x73,
 };
 
-/* 80396A58-80396A88 0030+00 .rodata    tag_name1$4613                                               */
+/* 80396A58-80396A88 0030+00 rc=0 efc=0 .rodata    tag_name1$4613                                               */
 SECTION_RODATA const u8 data_80396A58[48] = {
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x66, 0x36, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x66, 0x37,
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x38, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x30, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x31,
 };
 
-/* 80396A88-80396AB8 0030+00 .rodata    ftag_sub0$4614                                               */
+/* 80396A88-80396AB8 0030+00 rc=0 efc=0 .rodata    ftag_sub0$4614                                               */
 SECTION_RODATA const u8 data_80396A88[48] = {
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x73,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x33, 0x73,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x35, 0x73,
 };
 
-/* 80396AB8-80396AE8 0030+00 .rodata    ftag_sub1$4615                                               */
+/* 80396AB8-80396AE8 0030+00 rc=0 efc=0 .rodata    ftag_sub1$4615                                               */
 SECTION_RODATA const u8 data_80396AB8[48] = {
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x33,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x35,
 };
 
-/* 80396AE8-80396B18 0030+00 .rodata    ftag_name0$4616                                              */
+/* 80396AE8-80396B18 0030+00 rc=0 efc=0 .rodata    ftag_name0$4616                                              */
 SECTION_RODATA const u8 data_80396AE8[48] = {
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x37, 0x73,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x66, 0x38, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39, 0x73,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x30, 0x73, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x31, 0x73,
 };
 
-/* 80396B18-80396B48 0030+00 .rodata    ftag_name1$4617                                              */
+/* 80396B18-80396B48 0030+00 rc=0 efc=0 .rodata    ftag_name1$4617                                              */
 SECTION_RODATA const u8 data_80396B18[48] = {
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x37,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x38, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x30, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x31,
 };
 
-/* 80396B48-80396B78 0030+00 .rodata    tag_letter$4628                                              */
+/* 80396B48-80396B78 0030+00 rc=0 efc=0 .rodata    tag_letter$4628                                              */
 SECTION_RODATA const u8 data_80396B48[48] = {
 	0x6C, 0x65, 0x74, 0x5F, 0x30, 0x30, 0x5F, 0x6E, 0x6C, 0x65, 0x74, 0x5F, 0x30, 0x31, 0x5F, 0x6E,
 	0x6C, 0x65, 0x74, 0x5F, 0x30, 0x32, 0x5F, 0x6E, 0x6C, 0x65, 0x74, 0x5F, 0x30, 0x33, 0x5F, 0x6E,
 	0x6C, 0x65, 0x74, 0x5F, 0x30, 0x34, 0x5F, 0x6E, 0x6C, 0x65, 0x74, 0x5F, 0x30, 0x35, 0x5F, 0x6E,
 };
 
-/* 80396B78-80396BA8 0030+00 .rodata    tag_frame$4635                                               */
+/* 80396B78-80396BA8 0030+00 rc=0 efc=0 .rodata    tag_frame$4635                                               */
 SECTION_RODATA const u8 data_80396B78[48] = {
 	0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x30, 0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x31,
 	0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x32, 0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x33,
 	0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x34, 0x66, 0x6C, 0x61, 0x6D, 0x65, 0x5F, 0x30, 0x35,
 };
 
-/* 80396BA8-80396BD8 0030+00 .rodata    tag_menu0$4636                                               */
+/* 80396BA8-80396BD8 0030+00 rc=0 efc=0 .rodata    tag_menu0$4636                                               */
 SECTION_RODATA const u8 data_80396BA8[48] = {
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x33,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x34, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x35,
 };
 
-/* 80396BD8-80396C08 0030+00 .rodata    tag_menu1$4637                                               */
+/* 80396BD8-80396C08 0030+00 rc=0 efc=0 .rodata    tag_menu1$4637                                               */
 SECTION_RODATA const u8 data_80396BD8[48] = {
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x37,
 	0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x38, 0x00, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39,
 	0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x30, 0x66, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31, 0x31,
 };
 
-/* 80396C08-80396C38 0030+00 .rodata    tag_midoku$4638                                              */
+/* 80396C08-80396C38 0030+00 rc=0 efc=0 .rodata    tag_midoku$4638                                              */
 SECTION_RODATA const u8 data_80396C08[48] = {
 	0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x30, 0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x31,
 	0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x32, 0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x33,
 	0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x34, 0x6D, 0x69, 0x64, 0x6F, 0x6B, 0x75, 0x5F, 0x35,
 };
 
-/* 80396C38-80396C80 0048+00 .rodata    tag_pip$4827                                                 */
+/* 80396C38-80396C80 0048+00 rc=0 efc=0 .rodata    tag_pip$4827                                                 */
 SECTION_RODATA const u8 data_80396C38[72] = {
 	0x00, 0x70, 0x69, 0x5F, 0x30, 0x30, 0x5F, 0x6E, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x31, 0x5F, 0x6E,
 	0x00, 0x70, 0x69, 0x5F, 0x30, 0x32, 0x5F, 0x6E, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x33, 0x5F, 0x6E,
@@ -571,7 +930,7 @@ SECTION_RODATA const u8 data_80396C38[72] = {
 	0x00, 0x70, 0x69, 0x5F, 0x30, 0x38, 0x5F, 0x6E,
 };
 
-/* 80396C80-80396CC8 0048+00 .rodata    tag_pil$4828                                                 */
+/* 80396C80-80396CC8 0048+00 rc=0 efc=0 .rodata    tag_pil$4828                                                 */
 SECTION_RODATA const u8 data_80396C80[72] = {
 	0x00, 0x70, 0x69, 0x5F, 0x6C, 0x5F, 0x30, 0x30, 0x00, 0x70, 0x69, 0x5F, 0x6C, 0x5F, 0x30, 0x31,
 	0x00, 0x70, 0x69, 0x5F, 0x6C, 0x5F, 0x30, 0x32, 0x00, 0x70, 0x69, 0x5F, 0x6C, 0x5F, 0x30, 0x33,
@@ -580,7 +939,7 @@ SECTION_RODATA const u8 data_80396C80[72] = {
 	0x00, 0x70, 0x69, 0x5F, 0x6C, 0x5F, 0x30, 0x38,
 };
 
-/* 80396CC8-80396D10 0048+00 .rodata    tag_pii$4829                                                 */
+/* 80396CC8-80396D10 0048+00 rc=0 efc=0 .rodata    tag_pii$4829                                                 */
 SECTION_RODATA const u8 data_80396CC8[72] = {
 	0x00, 0x00, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x30, 0x00, 0x00, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x31,
 	0x00, 0x00, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x32, 0x00, 0x00, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x33,
@@ -589,7 +948,7 @@ SECTION_RODATA const u8 data_80396CC8[72] = {
 	0x00, 0x00, 0x00, 0x70, 0x69, 0x5F, 0x30, 0x38,
 };
 
-/* 80396D10-80396D70 0060+00 .rodata    line_tag$4914                                                */
+/* 80396D10-80396D70 0060+00 rc=1 efc=0 .rodata    line_tag$4914                                                */
 SECTION_RODATA const u8 data_80396D10[96] = {
 	0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x30, 0x39, 0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x31, 0x30,
 	0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x31, 0x31, 0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x31, 0x32,
@@ -599,21 +958,21 @@ SECTION_RODATA const u8 data_80396D10[96] = {
 	0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x31, 0x39, 0x00, 0x00, 0x6C, 0x69, 0x6E, 0x65, 0x32, 0x30,
 };
 
-/* 80396D70-80396D98 0028+00 .rodata    text_a_tag$5024                                              */
+/* 80396D70-80396D98 0028+00 rc=1 efc=0 .rodata    text_a_tag$5024                                              */
 SECTION_RODATA const u8 data_80396D70[40] = {
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396D98-80396DC0 0028+00 .rodata    text_b_tag$5025                                              */
+/* 80396D98-80396DC0 0028+00 rc=1 efc=0 .rodata    text_b_tag$5025                                              */
 SECTION_RODATA const u8 data_80396D98[40] = {
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396DC0-80396EA8 00E8+00 .rodata    @stringBase0                                                 */
+/* 80396DC0-80396EA8 00E8+00 rc=10 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -630,58 +989,58 @@ SECTION_DEAD char* const stringBase_80396E82 =
     "zelda_collect_soubi_do_icon_parts.blo";
 #pragma pop
 
-/* 80454310-80454318 0008+00 .sdata2    @4171                                                        */
+/* 80454310-80454318 0008+00 rc=7 efc=0 .sdata2    @4171                                                        */
 f64 d_menu_d_menu_letter__lit_4171 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801DDA74-801DDC98 0224+00 .text      _open__14dMenu_Letter_cFv                                    */
+/* 801DDA74-801DDC98 0224+00 rc=2 efc=2 .text      _open__14dMenu_Letter_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_open__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::_open() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/_open__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DDC98-801DDE18 0180+00 .text      _close__14dMenu_Letter_cFv                                   */
+/* 801DDC98-801DDE18 0180+00 rc=1 efc=1 .text      _close__14dMenu_Letter_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_close__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::_close() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/_close__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DDE18-801DDE54 003C+00 .text      wait_init__14dMenu_Letter_cFv                                */
+/* 801DDE18-801DDE54 003C+00 rc=1 efc=0 .text      wait_init__14dMenu_Letter_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::wait_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/wait_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DDE54-801DE164 0310+00 .text      wait_move__14dMenu_Letter_cFv                                */
+/* 801DDE54-801DE164 0310+00 rc=1 efc=0 .text      wait_move__14dMenu_Letter_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::wait_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/wait_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE164-801DE1E8 0084+00 .text      slide_right_init__14dMenu_Letter_cFv                         */
+/* 801DE164-801DE1E8 0084+00 rc=1 efc=0 .text      slide_right_init__14dMenu_Letter_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(slide_right_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::slide_right_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/slide_right_init__14dMenu_Letter_cFv.s"
 }
@@ -689,399 +1048,398 @@ ASM_FUNCTION(slide_right_init__14dMenu_Letter_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454318-8045431C 0004+00 .sdata2    @4308                                                        */
+/* 80454318-8045431C 0004+00 rc=3 efc=0 .sdata2    @4308                                                        */
 f32 d_menu_d_menu_letter__lit_4308 = 0.5f;
 
-/* 8045431C-80454320 0004+00 .sdata2    @4309                                                        */
+/* 8045431C-80454320 0004+00 rc=2 efc=0 .sdata2    @4309                                                        */
 f32 d_menu_d_menu_letter__lit_4309 = 50.0f;
 
-/* 80454320-80454328 0004+04 .sdata2    @4310                                                        */
+/* 80454320-80454328 0004+04 rc=2 efc=0 .sdata2    @4310                                                        */
 f32 d_menu_d_menu_letter__lit_4310 = 1.0f / 10.0f;
 /* padding 4 bytes */
 
-/* 801DE1E8-801DE24C 0064+00 .text      slide_right_move__14dMenu_Letter_cFv                         */
+/* 801DE1E8-801DE24C 0064+00 rc=1 efc=0 .text      slide_right_move__14dMenu_Letter_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(slide_right_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::slide_right_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/slide_right_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE24C-801DE2D0 0084+00 .text      slide_left_init__14dMenu_Letter_cFv                          */
+/* 801DE24C-801DE2D0 0084+00 rc=1 efc=0 .text      slide_left_init__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(slide_left_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::slide_left_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/slide_left_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE2D0-801DE334 0064+00 .text      slide_left_move__14dMenu_Letter_cFv                          */
+/* 801DE2D0-801DE334 0064+00 rc=1 efc=0 .text      slide_left_move__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(slide_left_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::slide_left_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/slide_left_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE334-801DE564 0230+00 .text      read_open_init__14dMenu_Letter_cFv                           */
+/* 801DE334-801DE564 0230+00 rc=1 efc=0 .text      read_open_init__14dMenu_Letter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_open_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_open_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_open_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE564-801DE70C 01A8+00 .text      read_open_move__14dMenu_Letter_cFv                           */
+/* 801DE564-801DE70C 01A8+00 rc=1 efc=0 .text      read_open_move__14dMenu_Letter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_open_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_open_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_open_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE70C-801DE824 0118+00 .text      read_move_init__14dMenu_Letter_cFv                           */
+/* 801DE70C-801DE824 0118+00 rc=1 efc=0 .text      read_move_init__14dMenu_Letter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_move_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_move_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_move_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DE824-801DEA48 0224+00 .text      read_move_move__14dMenu_Letter_cFv                           */
+/* 801DE824-801DEA48 0224+00 rc=1 efc=0 .text      read_move_move__14dMenu_Letter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_move_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_move_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_move_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DEA48-801DEA94 004C+00 .text      read_next_fadeout_init__14dMenu_Letter_cFv                   */
+/* 801DEA48-801DEA94 004C+00 rc=1 efc=0 .text      read_next_fadeout_init__14dMenu_Letter_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_next_fadeout_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_next_fadeout_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_next_fadeout_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DEA94-801DEBD8 0144+00 .text      read_next_fadeout_move__14dMenu_Letter_cFv                   */
+/* 801DEA94-801DEBD8 0144+00 rc=1 efc=0 .text      read_next_fadeout_move__14dMenu_Letter_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_next_fadeout_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_next_fadeout_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_next_fadeout_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DEBD8-801DED04 012C+00 .text      read_next_fadein_init__14dMenu_Letter_cFv                    */
+/* 801DEBD8-801DED04 012C+00 rc=1 efc=0 .text      read_next_fadein_init__14dMenu_Letter_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_next_fadein_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_next_fadein_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_next_fadein_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DED04-801DEE20 011C+00 .text      read_next_fadein_move__14dMenu_Letter_cFv                    */
+/* 801DED04-801DEE20 011C+00 rc=1 efc=0 .text      read_next_fadein_move__14dMenu_Letter_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_next_fadein_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_next_fadein_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_next_fadein_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DEE20-801DEE6C 004C+00 .text      read_close_init__14dMenu_Letter_cFv                          */
+/* 801DEE20-801DEE6C 004C+00 rc=1 efc=0 .text      read_close_init__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_close_init__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_close_init() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_close_init__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DEE6C-801DF010 01A4+00 .text      read_close_move__14dMenu_Letter_cFv                          */
+/* 801DEE6C-801DF010 01A4+00 rc=1 efc=0 .text      read_close_move__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read_close_move__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::read_close_move() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/read_close_move__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DF010-801DFA28 0A18+00 .text      screenSetMenu__14dMenu_Letter_cFv                            */
+/* 801DF010-801DFA28 0A18+00 rc=1 efc=0 .text      screenSetMenu__14dMenu_Letter_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetMenu__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::screenSetMenu() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/screenSetMenu__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801DFA28-801DFA34 000C+00 .text      getWhite__10J2DTextBoxCFv                                    */
+/* 801DFA28-801DFA34 000C+00 rc=1 efc=1 .text      getWhite__10J2DTextBoxCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWhite__10J2DTextBoxCFv) {
+asm void J2DTextBox::getWhite() const {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getWhite__10J2DTextBoxCFv.s"
 }
 #pragma pop
 
 
-/* 801DFA34-801DFA40 000C+00 .text      getBlack__10J2DTextBoxCFv                                    */
+/* 801DFA34-801DFA40 000C+00 rc=1 efc=1 .text      getBlack__10J2DTextBoxCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBlack__10J2DTextBoxCFv) {
+asm void J2DTextBox::getBlack() const {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getBlack__10J2DTextBoxCFv.s"
 }
 #pragma pop
 
 
-/* 801DFA40-801DFA4C 000C+00 .text      getWhite__10J2DPictureCFv                                    */
+/* 801DFA40-801DFA4C 000C+00 rc=1 efc=1 .text      getWhite__10J2DPictureCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWhite__10J2DPictureCFv) {
+asm void J2DPicture::getWhite() const {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getWhite__10J2DPictureCFv.s"
 }
 #pragma pop
 
 
-/* 801DFA4C-801DFA58 000C+00 .text      getBlack__10J2DPictureCFv                                    */
+/* 801DFA4C-801DFA58 000C+00 rc=1 efc=1 .text      getBlack__10J2DPictureCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBlack__10J2DPictureCFv) {
+asm void J2DPicture::getBlack() const {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getBlack__10J2DPictureCFv.s"
 }
 #pragma pop
 
 
-/* 801DFA58-801E0330 08D8+00 .text      screenSetBase__14dMenu_Letter_cFv                            */
+/* 801DFA58-801E0330 08D8+00 rc=1 efc=0 .text      screenSetBase__14dMenu_Letter_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetBase__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::screenSetBase() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/screenSetBase__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E0330-801E03D8 00A8+00 .text      screenSetShadow__14dMenu_Letter_cFv                          */
+/* 801E0330-801E03D8 00A8+00 rc=1 efc=0 .text      screenSetShadow__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetShadow__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::screenSetShadow() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/screenSetShadow__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E03D8-801E09A8 05D0+00 .text      screenSetLetter__14dMenu_Letter_cFv                          */
+/* 801E03D8-801E09A8 05D0+00 rc=1 efc=0 .text      screenSetLetter__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetLetter__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::screenSetLetter() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/screenSetLetter__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E09A8-801E0B24 017C+00 .text      screenSetDoIcon__14dMenu_Letter_cFv                          */
+/* 801E09A8-801E0B24 017C+00 rc=1 efc=0 .text      screenSetDoIcon__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(screenSetDoIcon__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::screenSetDoIcon() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/screenSetDoIcon__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E0B24-801E0BB0 008C+00 .text      setCursorPos__14dMenu_Letter_cFv                             */
+/* 801E0B24-801E0BB0 008C+00 rc=3 efc=0 .text      setCursorPos__14dMenu_Letter_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCursorPos__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::setCursorPos() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setCursorPos__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E0BB0-801E0E34 0284+00 .text      changeActiveColor__14dMenu_Letter_cFv                        */
+/* 801E0BB0-801E0E34 0284+00 rc=3 efc=0 .text      changeActiveColor__14dMenu_Letter_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeActiveColor__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::changeActiveColor() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/changeActiveColor__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E0E34-801E0E84 0050+00 .text      changePageLight__14dMenu_Letter_cFv                          */
+/* 801E0E34-801E0E84 0050+00 rc=2 efc=0 .text      changePageLight__14dMenu_Letter_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changePageLight__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::changePageLight() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/changePageLight__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E0E84-801E1038 01B4+00 .text      setPageText__14dMenu_Letter_cFv                              */
+/* 801E0E84-801E1038 01B4+00 rc=2 efc=0 .text      setPageText__14dMenu_Letter_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPageText__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::setPageText() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setPageText__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E1038-801E11EC 01B4+00 .text      setDMYPageText__14dMenu_Letter_cFv                           */
+/* 801E1038-801E11EC 01B4+00 rc=1 efc=0 .text      setDMYPageText__14dMenu_Letter_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setDMYPageText__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::setDMYPageText() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setDMYPageText__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E11EC-801E1518 032C+00 .text      copyDMYMenu__14dMenu_Letter_cFv                              */
+/* 801E11EC-801E1518 032C+00 rc=2 efc=0 .text      copyDMYMenu__14dMenu_Letter_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(copyDMYMenu__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::copyDMYMenu() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/copyDMYMenu__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E1518-801E15C8 00B0+00 .text      setAButtonString__14dMenu_Letter_cFUs                        */
+/* 801E1518-801E15C8 00B0+00 rc=7 efc=0 .text      setAButtonString__14dMenu_Letter_cFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAButtonString__14dMenu_Letter_cFUs) {
+asm void dMenu_Letter_c::setAButtonString(u16 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setAButtonString__14dMenu_Letter_cFUs.s"
 }
 #pragma pop
 
 
-/* 801E15C8-801E1678 00B0+00 .text      setBButtonString__14dMenu_Letter_cFUs                        */
+/* 801E15C8-801E1678 00B0+00 rc=7 efc=0 .text      setBButtonString__14dMenu_Letter_cFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBButtonString__14dMenu_Letter_cFUs) {
+asm void dMenu_Letter_c::setBButtonString(u16 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setBButtonString__14dMenu_Letter_cFUs.s"
 }
 #pragma pop
 
 
-/* 801E1678-801E1748 00D0+00 .text      getLetterNum__14dMenu_Letter_cFv                             */
+/* 801E1678-801E1748 00D0+00 rc=1 efc=0 .text      getLetterNum__14dMenu_Letter_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getLetterNum__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::getLetterNum() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getLetterNum__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E1748-801E1D10 05C8+00 .text      setHIO__14dMenu_Letter_cFb                                   */
+/* 801E1748-801E1D10 05C8+00 rc=2 efc=0 .text      setHIO__14dMenu_Letter_cFb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setHIO__14dMenu_Letter_cFb) {
+asm void dMenu_Letter_c::setHIO(bool field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/setHIO__14dMenu_Letter_cFb.s"
 }
 #pragma pop
 
 
-/* 801E1D10-801E1D5C 004C+00 .text      getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 801E1D10-801E1D5C 004C+00 rc=1 efc=1 .text      getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc) {
+asm void dMsgString_c::getStringPage(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
 #pragma pop
 
 
-/* 801E1D5C-801E1D7C 0020+00 .text      draw__14dMenu_Letter_cFv                                     */
+/* 801E1D5C-801E1D7C 0020+00 rc=1 efc=0 .text      draw__14dMenu_Letter_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__14dMenu_Letter_cFv) {
+asm void dMenu_Letter_c::draw() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/draw__14dMenu_Letter_cFv.s"
 }
 #pragma pop
 
 
-/* 801E1D7C-801E1F10 0194+00 .text      __sinit_d_menu_letter_cpp                                    */
+/* 801E1D7C-801E1F10 0194+00 rc=1 efc=1 .text      __sinit_d_menu_letter_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_menu_letter_cpp) {
+extern "C" asm void __sinit_d_menu_letter_cpp() {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/__sinit_d_menu_letter_cpp.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

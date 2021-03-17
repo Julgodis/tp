@@ -6,22 +6,48 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjOnsen_c;
+
+struct daObjOnsen_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjOnsen_cFv();
-extern "C" extern void setBaseMtx__12daObjOnsen_cFv();
-extern "C" extern void Create__12daObjOnsen_cFv();
-extern "C" extern void CreateHeap__12daObjOnsen_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void create1st__12daObjOnsen_cFv();
-extern "C" extern void Execute__12daObjOnsen_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjOnsen_cFv();
-extern "C" extern void Delete__12daObjOnsen_cFv();
-extern "C" extern void daObjOnsen_create1st__FP12daObjOnsen_c();
-extern "C" extern void daObjOnsen_MoveBGDelete__FP12daObjOnsen_c();
-extern "C" extern void daObjOnsen_MoveBGExecute__FP12daObjOnsen_c();
-extern "C" extern void daObjOnsen_MoveBGDraw__FP12daObjOnsen_c();
+extern "C" void Execute__12daObjOnsen_cFPPA3_A4_f();
+void daObjOnsen_create1st(daObjOnsen_c*);
+void daObjOnsen_MoveBGDelete(daObjOnsen_c*);
+void daObjOnsen_MoveBGExecute(daObjOnsen_c*);
+void daObjOnsen_MoveBGDraw(daObjOnsen_c*);
+
+extern "C" void initBaseMtx__12daObjOnsen_cFv();
+extern "C" void setBaseMtx__12daObjOnsen_cFv();
+extern "C" void Create__12daObjOnsen_cFv();
+extern "C" void CreateHeap__12daObjOnsen_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__12daObjOnsen_cFv();
+extern "C" void Execute__12daObjOnsen_cFPPA3_A4_f();
+extern "C" void Draw__12daObjOnsen_cFv();
+extern "C" void Delete__12daObjOnsen_cFv();
+extern "C" void daObjOnsen_create1st__FP12daObjOnsen_c();
+extern "C" void daObjOnsen_MoveBGDelete__FP12daObjOnsen_c();
+extern "C" void daObjOnsen_MoveBGExecute__FP12daObjOnsen_c();
+extern "C" void daObjOnsen_MoveBGDraw__FP12daObjOnsen_c();
 SECTION_RODATA extern const u8 l_bmd[8];
 SECTION_RODATA extern const u8 l_btk[8];
 SECTION_RODATA extern const u8 l_bmd2[8];
@@ -39,7 +65,9 @@ SECTION_DATA extern void*const __vt__12daObjOnsen_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -49,7 +77,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/initBaseMtx__12daObjOnsen_cFv.s"
 }
@@ -60,7 +88,7 @@ ASM_FUNCTION(initBaseMtx__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/setBaseMtx__12daObjOnsen_cFv.s"
 }
@@ -71,7 +99,7 @@ ASM_FUNCTION(setBaseMtx__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/Create__12daObjOnsen_cFv.s"
 }
@@ -82,7 +110,7 @@ ASM_FUNCTION(Create__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/CreateHeap__12daObjOnsen_cFv.s"
 }
@@ -93,7 +121,7 @@ ASM_FUNCTION(CreateHeap__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/__dt__12J3DFrameCtrlFv.s"
 }
@@ -104,7 +132,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/create1st__12daObjOnsen_cFv.s"
 }
@@ -115,7 +143,7 @@ ASM_FUNCTION(create1st__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjOnsen_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjOnsen_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/Execute__12daObjOnsen_cFPPA3_A4_f.s"
 }
@@ -126,7 +154,7 @@ ASM_FUNCTION(Execute__12daObjOnsen_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/Draw__12daObjOnsen_cFv.s"
 }
@@ -137,7 +165,7 @@ ASM_FUNCTION(Draw__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjOnsen_cFv) {
+asm void daObjOnsen_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/Delete__12daObjOnsen_cFv.s"
 }
@@ -148,7 +176,7 @@ ASM_FUNCTION(Delete__12daObjOnsen_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsen_create1st__FP12daObjOnsen_c) {
+asm void daObjOnsen_create1st(daObjOnsen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/daObjOnsen_create1st__FP12daObjOnsen_c.s"
 }
@@ -159,7 +187,7 @@ ASM_FUNCTION(daObjOnsen_create1st__FP12daObjOnsen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsen_MoveBGDelete__FP12daObjOnsen_c) {
+asm void daObjOnsen_MoveBGDelete(daObjOnsen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/daObjOnsen_MoveBGDelete__FP12daObjOnsen_c.s"
 }
@@ -170,7 +198,7 @@ ASM_FUNCTION(daObjOnsen_MoveBGDelete__FP12daObjOnsen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsen_MoveBGExecute__FP12daObjOnsen_c) {
+asm void daObjOnsen_MoveBGExecute(daObjOnsen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/daObjOnsen_MoveBGExecute__FP12daObjOnsen_c.s"
 }
@@ -181,7 +209,7 @@ ASM_FUNCTION(daObjOnsen_MoveBGExecute__FP12daObjOnsen_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjOnsen_MoveBGDraw__FP12daObjOnsen_c) {
+asm void daObjOnsen_MoveBGDraw(daObjOnsen_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_onsen/d_a_obj_onsen/daObjOnsen_MoveBGDraw__FP12daObjOnsen_c.s"
 }

@@ -6,92 +6,245 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct J3DModel;
+struct cXyz;
+
+struct daNpcKasiKyu_c {
+	daNpcKasiKyu_c();
+	~daNpcKasiKyu_c();
+	void Create();
+	void CreateHeap();
+	void Delete();
+	void Execute();
+	void Draw();
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void createHeapCallBack(fopAc_ac_c*);
+	void ctrlJointCallBack(J3DJoint*, s32);
+	void setParam();
+	void main();
+	void setAttnPos();
+	void setMotionAnm(s32, f32);
+	void setMotion(s32, f32, s32);
+	bool drawDbgInfo();
+	void reset();
+	void playMotion();
+	void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
+	void setLookMode(s32);
+	void lookat();
+	void chkFindPlayer();
+	void wait(s32);
+	void fear(s32);
+	void srchWolfTag();
+	void _srch_escape_tag(void*, void*);
+	void getWolfPathNearIdx();
+	void chace_st(s32);
+	void chace(s32);
+	void getChacePos();
+	void turn_link(s32);
+	void turn_home(s32);
+	void turn_center(s32);
+	void talk_dummy(s32);
+	void kya(s32);
+	void kya2(s32);
+	void kya_stop(s32);
+	void iyan(s32);
+	void iyan_look(s32);
+	void turn_hana(s32);
+	void escape(s32);
+	void wait_dummy(s32);
+	void cheer(s32);
+	void actor_front_check(fopAc_ac_c*);
+	void _getOffset(cXyz const&, cXyz&);
+	void adjustShapeAngle();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
+struct daNpcF_c {
+	struct daNpcF_anmPlayData {
+	};
+
+	~daNpcF_c();
+	daNpcF_c();
+	bool ctrlBtk();
+	void setCollisions();
+	bool setExpressionAnm(s32, bool);
+	bool setExpressionBtp(s32);
+	void setExpression(s32, f32);
+	void drawOtherMdls();
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+};
+
+struct daNpcF_Path_c {
+	~daNpcF_Path_c();
+};
+
+struct daNpcF_SPCurve_c {
+	~daNpcF_SPCurve_c();
+};
+
+struct daNpcF_ActorMngr_c {
+	~daNpcF_ActorMngr_c();
+	daNpcF_ActorMngr_c();
+};
+
+struct daNpcF_Lookat_c {
+	~daNpcF_Lookat_c();
+};
+
+struct csXyz {
+	~csXyz();
+	csXyz();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daNpcKasiKyu_Param_c {
+	~daNpcKasiKyu_Param_c();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daNpcKasiKyu_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__14daNpcKasiKyu_cFv();
-extern "C" extern void Create__14daNpcKasiKyu_cFv();
-extern "C" extern void CreateHeap__14daNpcKasiKyu_cFv();
-extern "C" extern void Delete__14daNpcKasiKyu_cFv();
-extern "C" extern void Execute__14daNpcKasiKyu_cFv();
-extern "C" extern void Draw__14daNpcKasiKyu_cFv();
-extern "C" extern void ctrlJoint__14daNpcKasiKyu_cFP8J3DJointP8J3DModel();
-extern "C" extern void createHeapCallBack__14daNpcKasiKyu_cFP10fopAc_ac_c();
-extern "C" extern void ctrlJointCallBack__14daNpcKasiKyu_cFP8J3DJointi();
-extern "C" extern void setParam__14daNpcKasiKyu_cFv();
-extern "C" extern void main__14daNpcKasiKyu_cFv();
-extern "C" extern void setAttnPos__14daNpcKasiKyu_cFv();
-extern "C" extern void setMotionAnm__14daNpcKasiKyu_cFif();
-extern "C" extern void setMotion__14daNpcKasiKyu_cFifi();
-extern "C" extern void drawDbgInfo__14daNpcKasiKyu_cFv();
-extern "C" extern void reset__14daNpcKasiKyu_cFv();
-extern "C" extern void playMotion__14daNpcKasiKyu_cFv();
-extern "C" extern void playMotionAnmLoop__14daNpcKasiKyu_cFPPPQ28daNpcF_c18daNpcF_anmPlayData();
-extern "C" extern void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i();
-extern "C" extern void setLookMode__14daNpcKasiKyu_cFi();
-extern "C" extern void lookat__14daNpcKasiKyu_cFv();
-extern "C" extern void step__14daNpcKasiKyu_cFsi();
-extern "C" extern void chkFindPlayer__14daNpcKasiKyu_cFv();
-extern "C" extern void wait__14daNpcKasiKyu_cFi();
-extern "C" extern void fear__14daNpcKasiKyu_cFi();
-extern "C" extern void srchWolfTag__14daNpcKasiKyu_cFv();
-extern "C" extern void _srch_escape_tag__14daNpcKasiKyu_cFPvPv();
-extern "C" extern void getWolfPathNearIdx__14daNpcKasiKyu_cFv();
-extern "C" extern void chace_st__14daNpcKasiKyu_cFi();
-extern "C" extern void chace__14daNpcKasiKyu_cFi();
-extern "C" extern void getChacePos__14daNpcKasiKyu_cFv();
-extern "C" extern void turn_link__14daNpcKasiKyu_cFi();
-extern "C" extern void turn_home__14daNpcKasiKyu_cFi();
-extern "C" extern void turn_center__14daNpcKasiKyu_cFi();
-extern "C" extern void talk_dummy__14daNpcKasiKyu_cFi();
-extern "C" extern void kya__14daNpcKasiKyu_cFi();
-extern "C" extern void kya2__14daNpcKasiKyu_cFi();
-extern "C" extern void kya_stop__14daNpcKasiKyu_cFi();
-extern "C" extern void iyan__14daNpcKasiKyu_cFi();
-extern "C" extern void iyan_look__14daNpcKasiKyu_cFi();
-extern "C" extern void turn_hana__14daNpcKasiKyu_cFi();
-extern "C" extern void escape__14daNpcKasiKyu_cFi();
-extern "C" extern void wait_dummy__14daNpcKasiKyu_cFi();
-extern "C" extern void cheer__14daNpcKasiKyu_cFi();
-extern "C" extern void _turn_to_link__14daNpcKasiKyu_cFs();
-extern "C" extern void _turn_pos__14daNpcKasiKyu_cFRC4cXyzs();
-extern "C" extern void actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c();
-extern "C" extern void _getOffset__14daNpcKasiKyu_cFRC4cXyzR4cXyz();
-extern "C" extern void daNpcKasiKyu_Create__FPv();
-extern "C" extern void daNpcKasiKyu_Delete__FPv();
-extern "C" extern void daNpcKasiKyu_Execute__FPv();
-extern "C" extern void daNpcKasiKyu_Draw__FPv();
-extern "C" extern void daNpcKasiKyu_IsDelete__FPv();
-extern "C" extern void __dt__13daNpcF_Path_cFv();
-extern "C" extern void __dt__16daNpcF_SPCurve_cFv();
-extern "C" extern void __dt__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __ct__18daNpcF_ActorMngr_cFv();
-extern "C" extern void __dt__15daNpcF_Lookat_cFv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void __ct__5csXyzFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __dt__8daNpcF_cFv();
-extern "C" extern void __ct__8daNpcF_cFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void ctrlBtk__8daNpcF_cFv();
-extern "C" extern void setCollisions__8daNpcF_cFv();
-extern "C" extern void setExpressionAnm__8daNpcF_cFib();
-extern "C" extern void setExpressionBtp__8daNpcF_cFi();
-extern "C" extern void setExpression__8daNpcF_cFif();
-extern "C" extern void drawOtherMdls__8daNpcF_cFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __sinit_d_a_npc_kasi_kyu_cpp();
-extern "C" extern void adjustShapeAngle__14daNpcKasiKyu_cFv();
-extern "C" extern void __dt__20daNpcKasiKyu_Param_cFv();
-extern "C" extern void func_80A25894();
-extern "C" extern void func_80A2589C();
+extern "C" void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i();
+extern "C" void step__14daNpcKasiKyu_cFsi();
+extern "C" void _turn_to_link__14daNpcKasiKyu_cFs();
+extern "C" void _turn_pos__14daNpcKasiKyu_cFRC4cXyzs();
+void daNpcKasiKyu_Create(void*);
+void daNpcKasiKyu_Delete(void*);
+void daNpcKasiKyu_Execute(void*);
+void daNpcKasiKyu_Draw(void*);
+bool daNpcKasiKyu_IsDelete(void*);
+extern "C" void __sinit_d_a_npc_kasi_kyu_cpp();
+extern "C" void func_80A25894();
+extern "C" void func_80A2589C();
+
+extern "C" void __ct__14daNpcKasiKyu_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__14daNpcKasiKyu_cFv();
+extern "C" void Create__14daNpcKasiKyu_cFv();
+extern "C" void CreateHeap__14daNpcKasiKyu_cFv();
+extern "C" void Delete__14daNpcKasiKyu_cFv();
+extern "C" void Execute__14daNpcKasiKyu_cFv();
+extern "C" void Draw__14daNpcKasiKyu_cFv();
+extern "C" void ctrlJoint__14daNpcKasiKyu_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__14daNpcKasiKyu_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__14daNpcKasiKyu_cFP8J3DJointi();
+extern "C" void setParam__14daNpcKasiKyu_cFv();
+extern "C" void main__14daNpcKasiKyu_cFv();
+extern "C" void setAttnPos__14daNpcKasiKyu_cFv();
+extern "C" void setMotionAnm__14daNpcKasiKyu_cFif();
+extern "C" void setMotion__14daNpcKasiKyu_cFifi();
+extern "C" bool drawDbgInfo__14daNpcKasiKyu_cFv();
+extern "C" void reset__14daNpcKasiKyu_cFv();
+extern "C" void playMotion__14daNpcKasiKyu_cFv();
+extern "C" void playMotionAnmLoop__14daNpcKasiKyu_cFPPPQ28daNpcF_c18daNpcF_anmPlayData();
+extern "C" void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i();
+extern "C" void setLookMode__14daNpcKasiKyu_cFi();
+extern "C" void lookat__14daNpcKasiKyu_cFv();
+extern "C" void step__14daNpcKasiKyu_cFsi();
+extern "C" void chkFindPlayer__14daNpcKasiKyu_cFv();
+extern "C" void wait__14daNpcKasiKyu_cFi();
+extern "C" void fear__14daNpcKasiKyu_cFi();
+extern "C" void srchWolfTag__14daNpcKasiKyu_cFv();
+extern "C" void _srch_escape_tag__14daNpcKasiKyu_cFPvPv();
+extern "C" void getWolfPathNearIdx__14daNpcKasiKyu_cFv();
+extern "C" void chace_st__14daNpcKasiKyu_cFi();
+extern "C" void chace__14daNpcKasiKyu_cFi();
+extern "C" void getChacePos__14daNpcKasiKyu_cFv();
+extern "C" void turn_link__14daNpcKasiKyu_cFi();
+extern "C" void turn_home__14daNpcKasiKyu_cFi();
+extern "C" void turn_center__14daNpcKasiKyu_cFi();
+extern "C" void talk_dummy__14daNpcKasiKyu_cFi();
+extern "C" void kya__14daNpcKasiKyu_cFi();
+extern "C" void kya2__14daNpcKasiKyu_cFi();
+extern "C" void kya_stop__14daNpcKasiKyu_cFi();
+extern "C" void iyan__14daNpcKasiKyu_cFi();
+extern "C" void iyan_look__14daNpcKasiKyu_cFi();
+extern "C" void turn_hana__14daNpcKasiKyu_cFi();
+extern "C" void escape__14daNpcKasiKyu_cFi();
+extern "C" void wait_dummy__14daNpcKasiKyu_cFi();
+extern "C" void cheer__14daNpcKasiKyu_cFi();
+extern "C" void _turn_to_link__14daNpcKasiKyu_cFs();
+extern "C" void _turn_pos__14daNpcKasiKyu_cFRC4cXyzs();
+extern "C" void actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c();
+extern "C" void _getOffset__14daNpcKasiKyu_cFRC4cXyzR4cXyz();
+extern "C" void daNpcKasiKyu_Create__FPv();
+extern "C" void daNpcKasiKyu_Delete__FPv();
+extern "C" void daNpcKasiKyu_Execute__FPv();
+extern "C" void daNpcKasiKyu_Draw__FPv();
+extern "C" bool daNpcKasiKyu_IsDelete__FPv();
+extern "C" void __dt__13daNpcF_Path_cFv();
+extern "C" void __dt__16daNpcF_SPCurve_cFv();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" bool ctrlBtk__8daNpcF_cFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionAnm__8daNpcF_cFib();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void setExpression__8daNpcF_cFif();
+extern "C" void drawOtherMdls__8daNpcF_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __sinit_d_a_npc_kasi_kyu_cpp();
+extern "C" void adjustShapeAngle__14daNpcKasiKyu_cFv();
+extern "C" void __dt__20daNpcKasiKyu_Param_cFv();
+extern "C" void func_80A25894();
+extern "C" void func_80A2589C();
 SECTION_RODATA extern const u8 m__20daNpcKasiKyu_Param_c[116];
 SECTION_RODATA extern const u32 lit_4197;
 SECTION_RODATA extern const u32 lit_4198;
@@ -263,8 +416,11 @@ SECTION_BSS extern u8 data_80A260CC[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -274,7 +430,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daNpcKasiKyu_cFv) {
+asm daNpcKasiKyu_c::daNpcKasiKyu_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__ct__14daNpcKasiKyu_cFv.s"
 }
@@ -285,7 +441,7 @@ ASM_FUNCTION(__ct__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__8cM3dGCylFv.s"
 }
@@ -296,7 +452,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__8cM3dGAabFv.s"
 }
@@ -307,7 +463,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daNpcKasiKyu_cFv) {
+asm daNpcKasiKyu_c::~daNpcKasiKyu_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__14daNpcKasiKyu_cFv.s"
 }
@@ -318,7 +474,7 @@ ASM_FUNCTION(__dt__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/Create__14daNpcKasiKyu_cFv.s"
 }
@@ -329,7 +485,7 @@ ASM_FUNCTION(Create__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/CreateHeap__14daNpcKasiKyu_cFv.s"
 }
@@ -340,7 +496,7 @@ ASM_FUNCTION(CreateHeap__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/Delete__14daNpcKasiKyu_cFv.s"
 }
@@ -351,7 +507,7 @@ ASM_FUNCTION(Delete__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/Execute__14daNpcKasiKyu_cFv.s"
 }
@@ -362,7 +518,7 @@ ASM_FUNCTION(Execute__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/Draw__14daNpcKasiKyu_cFv.s"
 }
@@ -373,7 +529,7 @@ ASM_FUNCTION(Draw__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__14daNpcKasiKyu_cFP8J3DJointP8J3DModel) {
+asm void daNpcKasiKyu_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/ctrlJoint__14daNpcKasiKyu_cFP8J3DJointP8J3DModel.s"
 }
@@ -384,7 +540,7 @@ ASM_FUNCTION(ctrlJoint__14daNpcKasiKyu_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__14daNpcKasiKyu_cFP10fopAc_ac_c) {
+asm void daNpcKasiKyu_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/createHeapCallBack__14daNpcKasiKyu_cFP10fopAc_ac_c.s"
 }
@@ -395,7 +551,7 @@ ASM_FUNCTION(createHeapCallBack__14daNpcKasiKyu_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJointCallBack__14daNpcKasiKyu_cFP8J3DJointi) {
+asm void daNpcKasiKyu_c::ctrlJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/ctrlJointCallBack__14daNpcKasiKyu_cFP8J3DJointi.s"
 }
@@ -406,7 +562,7 @@ ASM_FUNCTION(ctrlJointCallBack__14daNpcKasiKyu_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::setParam() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setParam__14daNpcKasiKyu_cFv.s"
 }
@@ -417,7 +573,7 @@ ASM_FUNCTION(setParam__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(main__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::main() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/main__14daNpcKasiKyu_cFv.s"
 }
@@ -428,7 +584,7 @@ ASM_FUNCTION(main__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAttnPos__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::setAttnPos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setAttnPos__14daNpcKasiKyu_cFv.s"
 }
@@ -439,7 +595,7 @@ ASM_FUNCTION(setAttnPos__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotionAnm__14daNpcKasiKyu_cFif) {
+asm void daNpcKasiKyu_c::setMotionAnm(s32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setMotionAnm__14daNpcKasiKyu_cFif.s"
 }
@@ -450,7 +606,7 @@ ASM_FUNCTION(setMotionAnm__14daNpcKasiKyu_cFif) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMotion__14daNpcKasiKyu_cFifi) {
+asm void daNpcKasiKyu_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setMotion__14daNpcKasiKyu_cFifi.s"
 }
@@ -458,21 +614,16 @@ ASM_FUNCTION(setMotion__14daNpcKasiKyu_cFifi) {
 
 
 /* 80A22A9C-80A22AA4 0008+00 .text      drawDbgInfo__14daNpcKasiKyu_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawDbgInfo__14daNpcKasiKyu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/drawDbgInfo__14daNpcKasiKyu_cFv.s"
+bool daNpcKasiKyu_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A22AA4-80A22CD8 0234+00 .text      reset__14daNpcKasiKyu_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(reset__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::reset() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/reset__14daNpcKasiKyu_cFv.s"
 }
@@ -483,7 +634,7 @@ ASM_FUNCTION(reset__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotion__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::playMotion() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/playMotion__14daNpcKasiKyu_cFv.s"
 }
@@ -494,7 +645,7 @@ ASM_FUNCTION(playMotion__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playMotionAnmLoop__14daNpcKasiKyu_cFPPPQ28daNpcF_c18daNpcF_anmPlayData) {
+asm void daNpcKasiKyu_c::playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData*** field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/func_80A2310C.s"
 }
@@ -505,7 +656,7 @@ ASM_FUNCTION(playMotionAnmLoop__14daNpcKasiKyu_cFPPPQ28daNpcF_c18daNpcF_anmPlayD
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i) {
+extern "C" asm void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i.s"
 }
@@ -516,7 +667,7 @@ ASM_FUNCTION(setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLookMode__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::setLookMode(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setLookMode__14daNpcKasiKyu_cFi.s"
 }
@@ -527,7 +678,7 @@ ASM_FUNCTION(setLookMode__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lookat__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::lookat() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/lookat__14daNpcKasiKyu_cFv.s"
 }
@@ -538,7 +689,7 @@ ASM_FUNCTION(lookat__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(step__14daNpcKasiKyu_cFsi) {
+extern "C" asm void step__14daNpcKasiKyu_cFsi() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/step__14daNpcKasiKyu_cFsi.s"
 }
@@ -549,7 +700,7 @@ ASM_FUNCTION(step__14daNpcKasiKyu_cFsi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkFindPlayer__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::chkFindPlayer() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/chkFindPlayer__14daNpcKasiKyu_cFv.s"
 }
@@ -560,7 +711,7 @@ ASM_FUNCTION(chkFindPlayer__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::wait(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/wait__14daNpcKasiKyu_cFi.s"
 }
@@ -571,7 +722,7 @@ ASM_FUNCTION(wait__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fear__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::fear(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/fear__14daNpcKasiKyu_cFi.s"
 }
@@ -582,7 +733,7 @@ ASM_FUNCTION(fear__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(srchWolfTag__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::srchWolfTag() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/srchWolfTag__14daNpcKasiKyu_cFv.s"
 }
@@ -593,7 +744,7 @@ ASM_FUNCTION(srchWolfTag__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_srch_escape_tag__14daNpcKasiKyu_cFPvPv) {
+asm void daNpcKasiKyu_c::_srch_escape_tag(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/_srch_escape_tag__14daNpcKasiKyu_cFPvPv.s"
 }
@@ -604,7 +755,7 @@ ASM_FUNCTION(_srch_escape_tag__14daNpcKasiKyu_cFPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getWolfPathNearIdx__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::getWolfPathNearIdx() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/getWolfPathNearIdx__14daNpcKasiKyu_cFv.s"
 }
@@ -615,7 +766,7 @@ ASM_FUNCTION(getWolfPathNearIdx__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chace_st__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::chace_st(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/chace_st__14daNpcKasiKyu_cFi.s"
 }
@@ -626,7 +777,7 @@ ASM_FUNCTION(chace_st__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chace__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::chace(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/chace__14daNpcKasiKyu_cFi.s"
 }
@@ -637,7 +788,7 @@ ASM_FUNCTION(chace__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getChacePos__14daNpcKasiKyu_cFv) {
+asm void daNpcKasiKyu_c::getChacePos() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/getChacePos__14daNpcKasiKyu_cFv.s"
 }
@@ -648,7 +799,7 @@ ASM_FUNCTION(getChacePos__14daNpcKasiKyu_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_link__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::turn_link(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/turn_link__14daNpcKasiKyu_cFi.s"
 }
@@ -659,7 +810,7 @@ ASM_FUNCTION(turn_link__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_home__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::turn_home(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/turn_home__14daNpcKasiKyu_cFi.s"
 }
@@ -670,7 +821,7 @@ ASM_FUNCTION(turn_home__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_center__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::turn_center(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/turn_center__14daNpcKasiKyu_cFi.s"
 }
@@ -681,7 +832,7 @@ ASM_FUNCTION(turn_center__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(talk_dummy__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::talk_dummy(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/talk_dummy__14daNpcKasiKyu_cFi.s"
 }
@@ -692,7 +843,7 @@ ASM_FUNCTION(talk_dummy__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kya__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::kya(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/kya__14daNpcKasiKyu_cFi.s"
 }
@@ -703,7 +854,7 @@ ASM_FUNCTION(kya__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kya2__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::kya2(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/kya2__14daNpcKasiKyu_cFi.s"
 }
@@ -714,7 +865,7 @@ ASM_FUNCTION(kya2__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(kya_stop__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::kya_stop(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/kya_stop__14daNpcKasiKyu_cFi.s"
 }
@@ -725,7 +876,7 @@ ASM_FUNCTION(kya_stop__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iyan__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::iyan(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/iyan__14daNpcKasiKyu_cFi.s"
 }
@@ -736,7 +887,7 @@ ASM_FUNCTION(iyan__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(iyan_look__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::iyan_look(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/iyan_look__14daNpcKasiKyu_cFi.s"
 }
@@ -747,7 +898,7 @@ ASM_FUNCTION(iyan_look__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(turn_hana__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::turn_hana(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/turn_hana__14daNpcKasiKyu_cFi.s"
 }
@@ -758,7 +909,7 @@ ASM_FUNCTION(turn_hana__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(escape__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::escape(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/escape__14daNpcKasiKyu_cFi.s"
 }
@@ -769,7 +920,7 @@ ASM_FUNCTION(escape__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait_dummy__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::wait_dummy(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/wait_dummy__14daNpcKasiKyu_cFi.s"
 }
@@ -780,7 +931,7 @@ ASM_FUNCTION(wait_dummy__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cheer__14daNpcKasiKyu_cFi) {
+asm void daNpcKasiKyu_c::cheer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/cheer__14daNpcKasiKyu_cFi.s"
 }
@@ -791,7 +942,7 @@ ASM_FUNCTION(cheer__14daNpcKasiKyu_cFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_turn_to_link__14daNpcKasiKyu_cFs) {
+extern "C" asm void _turn_to_link__14daNpcKasiKyu_cFs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/_turn_to_link__14daNpcKasiKyu_cFs.s"
 }
@@ -802,7 +953,7 @@ ASM_FUNCTION(_turn_to_link__14daNpcKasiKyu_cFs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_turn_pos__14daNpcKasiKyu_cFRC4cXyzs) {
+extern "C" asm void _turn_pos__14daNpcKasiKyu_cFRC4cXyzs() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/_turn_pos__14daNpcKasiKyu_cFRC4cXyzs.s"
 }
@@ -813,7 +964,7 @@ ASM_FUNCTION(_turn_pos__14daNpcKasiKyu_cFRC4cXyzs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c) {
+asm void daNpcKasiKyu_c::actor_front_check(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c.s"
 }
@@ -824,7 +975,7 @@ ASM_FUNCTION(actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_getOffset__14daNpcKasiKyu_cFRC4cXyzR4cXyz) {
+asm void daNpcKasiKyu_c::_getOffset(cXyz const& field_0, cXyz& field_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/_getOffset__14daNpcKasiKyu_cFRC4cXyzR4cXyz.s"
 }
@@ -835,7 +986,7 @@ ASM_FUNCTION(_getOffset__14daNpcKasiKyu_cFRC4cXyzR4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiKyu_Create__FPv) {
+asm void daNpcKasiKyu_Create(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/daNpcKasiKyu_Create__FPv.s"
 }
@@ -846,7 +997,7 @@ ASM_FUNCTION(daNpcKasiKyu_Create__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiKyu_Delete__FPv) {
+asm void daNpcKasiKyu_Delete(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/daNpcKasiKyu_Delete__FPv.s"
 }
@@ -857,7 +1008,7 @@ ASM_FUNCTION(daNpcKasiKyu_Delete__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiKyu_Execute__FPv) {
+asm void daNpcKasiKyu_Execute(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/daNpcKasiKyu_Execute__FPv.s"
 }
@@ -868,7 +1019,7 @@ ASM_FUNCTION(daNpcKasiKyu_Execute__FPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiKyu_Draw__FPv) {
+asm void daNpcKasiKyu_Draw(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/daNpcKasiKyu_Draw__FPv.s"
 }
@@ -876,21 +1027,16 @@ ASM_FUNCTION(daNpcKasiKyu_Draw__FPv) {
 
 
 /* 80A24F30-80A24F38 0008+00 .text      daNpcKasiKyu_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daNpcKasiKyu_IsDelete__FPv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/daNpcKasiKyu_IsDelete__FPv.s"
+bool daNpcKasiKyu_IsDelete(void* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A24F38-80A24F98 0060+00 .text      __dt__13daNpcF_Path_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daNpcF_Path_cFv) {
+asm daNpcF_Path_c::~daNpcF_Path_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__13daNpcF_Path_cFv.s"
 }
@@ -901,7 +1047,7 @@ ASM_FUNCTION(__dt__13daNpcF_Path_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daNpcF_SPCurve_cFv) {
+asm daNpcF_SPCurve_c::~daNpcF_SPCurve_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__16daNpcF_SPCurve_cFv.s"
 }
@@ -912,7 +1058,7 @@ ASM_FUNCTION(__dt__16daNpcF_SPCurve_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::~daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__18daNpcF_ActorMngr_cFv.s"
 }
@@ -923,7 +1069,7 @@ ASM_FUNCTION(__dt__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
+asm daNpcF_ActorMngr_c::daNpcF_ActorMngr_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__ct__18daNpcF_ActorMngr_cFv.s"
 }
@@ -934,7 +1080,7 @@ ASM_FUNCTION(__ct__18daNpcF_ActorMngr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
+asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__15daNpcF_Lookat_cFv.s"
 }
@@ -945,7 +1091,7 @@ ASM_FUNCTION(__dt__15daNpcF_Lookat_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__5csXyzFv.s"
 }
@@ -953,21 +1099,16 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 
 
 /* 80A25170-80A25174 0004+00 .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__5csXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A25174-80A251B0 003C+00 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__4cXyzFv.s"
 }
@@ -975,21 +1116,16 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 
 
 /* 80A251B0-80A251B4 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A251B4-80A25400 024C+00 .text      __dt__8daNpcF_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8daNpcF_cFv) {
+asm daNpcF_c::~daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__8daNpcF_cFv.s"
 }
@@ -1000,7 +1136,7 @@ ASM_FUNCTION(__dt__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daNpcF_cFv) {
+asm daNpcF_c::daNpcF_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__ct__8daNpcF_cFv.s"
 }
@@ -1011,7 +1147,7 @@ ASM_FUNCTION(__ct__8daNpcF_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1022,7 +1158,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__10dCcD_GSttsFv.s"
 }
@@ -1033,7 +1169,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1044,7 +1180,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__12J3DFrameCtrlFv.s"
 }
@@ -1052,76 +1188,46 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 
 
 /* 80A25774-80A2577C 0008+00 .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(ctrlBtk__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A2577C-80A25780 0004+00 .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setCollisions__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A25780-80A25788 0008+00 .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionAnm__8daNpcF_cFib) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A25788-80A25790 0008+00 .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpressionBtp__8daNpcF_cFi) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(s32 field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A25790-80A25794 0004+00 .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setExpression__8daNpcF_cFif) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A25794-80A25798 0004+00 .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawOtherMdls__8daNpcF_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A25798-80A257E0 0048+00 .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__10cCcD_GSttsFv.s"
 }
@@ -1132,7 +1238,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_npc_kasi_kyu_cpp) {
+extern "C" asm void __sinit_d_a_npc_kasi_kyu_cpp() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__sinit_d_a_npc_kasi_kyu_cpp.s"
 }
@@ -1140,21 +1246,16 @@ ASM_FUNCTION(__sinit_d_a_npc_kasi_kyu_cpp) {
 
 
 /* 80A25848-80A2584C 0004+00 .text      adjustShapeAngle__14daNpcKasiKyu_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(adjustShapeAngle__14daNpcKasiKyu_cFv) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/adjustShapeAngle__14daNpcKasiKyu_cFv.s"
+void daNpcKasiKyu_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A2584C-80A25894 0048+00 .text      __dt__20daNpcKasiKyu_Param_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__20daNpcKasiKyu_Param_cFv) {
+asm daNpcKasiKyu_Param_c::~daNpcKasiKyu_Param_c() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/__dt__20daNpcKasiKyu_Param_cFv.s"
 }
@@ -1165,7 +1266,7 @@ ASM_FUNCTION(__dt__20daNpcKasiKyu_Param_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A25894) {
+extern "C" asm void func_80A25894() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/func_80A25894.s"
 }
@@ -1176,7 +1277,7 @@ ASM_FUNCTION(func_80A25894) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80A2589C) {
+extern "C" asm void func_80A2589C() {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/func_80A2589C.s"
 }

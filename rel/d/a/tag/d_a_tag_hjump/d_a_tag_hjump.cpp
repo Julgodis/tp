@@ -6,18 +6,41 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTagHjump_c;
+
+struct daTagHjump_c {
+	void CreateHeap();
+	void create();
+	~daTagHjump_c();
+	void execute();
+	void Draw();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void CreateHeap__12daTagHjump_cFv();
-extern "C" extern void create__12daTagHjump_cFv();
-extern "C" extern void daTagHjump_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__12daTagHjump_cFv();
-extern "C" extern void daTagHjump_Delete__FP12daTagHjump_c();
-extern "C" extern void execute__12daTagHjump_cFv();
-extern "C" extern void daTagHjump_Execute__FP12daTagHjump_c();
-extern "C" extern void Draw__12daTagHjump_cFv();
-extern "C" extern void daTagHjump_Draw__FP12daTagHjump_c();
+void daTagHjump_Create(fopAc_ac_c*);
+void daTagHjump_Delete(daTagHjump_c*);
+void daTagHjump_Execute(daTagHjump_c*);
+void daTagHjump_Draw(daTagHjump_c*);
+
+extern "C" void CreateHeap__12daTagHjump_cFv();
+extern "C" void create__12daTagHjump_cFv();
+extern "C" void daTagHjump_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagHjump_cFv();
+extern "C" void daTagHjump_Delete__FP12daTagHjump_c();
+extern "C" void execute__12daTagHjump_cFv();
+extern "C" void daTagHjump_Execute__FP12daTagHjump_c();
+extern "C" void Draw__12daTagHjump_cFv();
+extern "C" void daTagHjump_Draw__FP12daTagHjump_c();
 SECTION_RODATA extern const u8 l_arcName[7 + 1 /* padding */];
 SECTION_RODATA extern const u32 lit_3747;
 SECTION_RODATA extern const u32 lit_3748;
@@ -38,7 +61,9 @@ SECTION_DATA extern void*const __vt__12daTagHjump_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -48,7 +73,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daTagHjump_cFv) {
+asm void daTagHjump_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/CreateHeap__12daTagHjump_cFv.s"
 }
@@ -59,7 +84,7 @@ ASM_FUNCTION(CreateHeap__12daTagHjump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daTagHjump_cFv) {
+asm void daTagHjump_c::create() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/create__12daTagHjump_cFv.s"
 }
@@ -70,7 +95,7 @@ ASM_FUNCTION(create__12daTagHjump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHjump_Create__FP10fopAc_ac_c) {
+asm void daTagHjump_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Create__FP10fopAc_ac_c.s"
 }
@@ -81,7 +106,7 @@ ASM_FUNCTION(daTagHjump_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daTagHjump_cFv) {
+asm daTagHjump_c::~daTagHjump_c() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/__dt__12daTagHjump_cFv.s"
 }
@@ -92,7 +117,7 @@ ASM_FUNCTION(__dt__12daTagHjump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHjump_Delete__FP12daTagHjump_c) {
+asm void daTagHjump_Delete(daTagHjump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Delete__FP12daTagHjump_c.s"
 }
@@ -103,7 +128,7 @@ ASM_FUNCTION(daTagHjump_Delete__FP12daTagHjump_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__12daTagHjump_cFv) {
+asm void daTagHjump_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/execute__12daTagHjump_cFv.s"
 }
@@ -114,7 +139,7 @@ ASM_FUNCTION(execute__12daTagHjump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHjump_Execute__FP12daTagHjump_c) {
+asm void daTagHjump_Execute(daTagHjump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Execute__FP12daTagHjump_c.s"
 }
@@ -125,7 +150,7 @@ ASM_FUNCTION(daTagHjump_Execute__FP12daTagHjump_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daTagHjump_cFv) {
+asm void daTagHjump_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/Draw__12daTagHjump_cFv.s"
 }
@@ -136,7 +161,7 @@ ASM_FUNCTION(Draw__12daTagHjump_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTagHjump_Draw__FP12daTagHjump_c) {
+asm void daTagHjump_Draw(daTagHjump_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Draw__FP12daTagHjump_c.s"
 }

@@ -6,32 +6,47 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JKRFile (JKRFile) False/False
+/* top-level dependencies (begin JKRFile) */
+/* top-level dependencies (end JKRFile) */
+struct JKRFile {
+	/* 802D9518 */ void read(void*, s32, s32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void read__7JKRFileFPvll();
+
+extern "C" void read__7JKRFileFPvll();
 
 // 
 // External References:
 // 
 
-extern "C" extern void VIWaitForRetrace();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _restgpr_28();
+extern "C" void VIWaitForRetrace();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+
+extern "C" void VIWaitForRetrace();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:
 // 
 
-/* 802D9518-802D9584 006C+00 .text      read__7JKRFileFPvll                                          */
+/* 802D9518-802D9584 006C+00 rc=2 efc=2 .text      read__7JKRFileFPvll                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(read__7JKRFileFPvll) {
+asm void JKRFile::read(void* field_0, s32 field_1, s32 field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFile/read__7JKRFileFPvll.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -6,21 +6,43 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct daObjMGate_c;
+
+struct daObjMGate_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__12daObjMGate_cFv();
-extern "C" extern void setBaseMtx__12daObjMGate_cFv();
-extern "C" extern void Create__12daObjMGate_cFv();
-extern "C" extern void CreateHeap__12daObjMGate_cFv();
-extern "C" extern void create1st__12daObjMGate_cFv();
-extern "C" extern void Execute__12daObjMGate_cFPPA3_A4_f();
-extern "C" extern void Draw__12daObjMGate_cFv();
-extern "C" extern void Delete__12daObjMGate_cFv();
-extern "C" extern void daObjMGate_create1st__FP12daObjMGate_c();
-extern "C" extern void daObjMGate_MoveBGDelete__FP12daObjMGate_c();
-extern "C" extern void daObjMGate_MoveBGExecute__FP12daObjMGate_c();
-extern "C" extern void daObjMGate_MoveBGDraw__FP12daObjMGate_c();
+extern "C" void Execute__12daObjMGate_cFPPA3_A4_f();
+void daObjMGate_create1st(daObjMGate_c*);
+void daObjMGate_MoveBGDelete(daObjMGate_c*);
+void daObjMGate_MoveBGExecute(daObjMGate_c*);
+void daObjMGate_MoveBGDraw(daObjMGate_c*);
+
+extern "C" void initBaseMtx__12daObjMGate_cFv();
+extern "C" void setBaseMtx__12daObjMGate_cFv();
+extern "C" void Create__12daObjMGate_cFv();
+extern "C" void CreateHeap__12daObjMGate_cFv();
+extern "C" void create1st__12daObjMGate_cFv();
+extern "C" void Execute__12daObjMGate_cFPPA3_A4_f();
+extern "C" void Draw__12daObjMGate_cFv();
+extern "C" void Delete__12daObjMGate_cFv();
+extern "C" void daObjMGate_create1st__FP12daObjMGate_c();
+extern "C" void daObjMGate_MoveBGDelete__FP12daObjMGate_c();
+extern "C" void daObjMGate_MoveBGExecute__FP12daObjMGate_c();
+extern "C" void daObjMGate_MoveBGDraw__FP12daObjMGate_c();
 SECTION_RODATA extern const u8 l_key_offset[24];
 SECTION_RODATA extern const u8 l_col_offsetX[20];
 SECTION_RODATA extern const u8 l_roll_crash_check_areaL[48];
@@ -52,7 +74,9 @@ SECTION_DATA extern void*const __vt__12daObjMGate_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -62,7 +86,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__12daObjMGate_cFv) {
+asm void daObjMGate_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/initBaseMtx__12daObjMGate_cFv.s"
 }
@@ -73,7 +97,7 @@ ASM_FUNCTION(initBaseMtx__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daObjMGate_cFv) {
+asm void daObjMGate_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/setBaseMtx__12daObjMGate_cFv.s"
 }
@@ -84,7 +108,7 @@ ASM_FUNCTION(setBaseMtx__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__12daObjMGate_cFv) {
+asm void daObjMGate_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/Create__12daObjMGate_cFv.s"
 }
@@ -95,7 +119,7 @@ ASM_FUNCTION(Create__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daObjMGate_cFv) {
+asm void daObjMGate_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/CreateHeap__12daObjMGate_cFv.s"
 }
@@ -106,7 +130,7 @@ ASM_FUNCTION(CreateHeap__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__12daObjMGate_cFv) {
+asm void daObjMGate_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/create1st__12daObjMGate_cFv.s"
 }
@@ -117,7 +141,7 @@ ASM_FUNCTION(create1st__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daObjMGate_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daObjMGate_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/Execute__12daObjMGate_cFPPA3_A4_f.s"
 }
@@ -128,7 +152,7 @@ ASM_FUNCTION(Execute__12daObjMGate_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daObjMGate_cFv) {
+asm void daObjMGate_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/Draw__12daObjMGate_cFv.s"
 }
@@ -139,7 +163,7 @@ ASM_FUNCTION(Draw__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daObjMGate_cFv) {
+asm void daObjMGate_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/Delete__12daObjMGate_cFv.s"
 }
@@ -150,7 +174,7 @@ ASM_FUNCTION(Delete__12daObjMGate_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMGate_create1st__FP12daObjMGate_c) {
+asm void daObjMGate_create1st(daObjMGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/daObjMGate_create1st__FP12daObjMGate_c.s"
 }
@@ -161,7 +185,7 @@ ASM_FUNCTION(daObjMGate_create1st__FP12daObjMGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMGate_MoveBGDelete__FP12daObjMGate_c) {
+asm void daObjMGate_MoveBGDelete(daObjMGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/daObjMGate_MoveBGDelete__FP12daObjMGate_c.s"
 }
@@ -172,7 +196,7 @@ ASM_FUNCTION(daObjMGate_MoveBGDelete__FP12daObjMGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMGate_MoveBGExecute__FP12daObjMGate_c) {
+asm void daObjMGate_MoveBGExecute(daObjMGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/daObjMGate_MoveBGExecute__FP12daObjMGate_c.s"
 }
@@ -183,7 +207,7 @@ ASM_FUNCTION(daObjMGate_MoveBGExecute__FP12daObjMGate_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMGate_MoveBGDraw__FP12daObjMGate_c) {
+asm void daObjMGate_MoveBGDraw(daObjMGate_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mgate/d_a_obj_mgate/daObjMGate_MoveBGDraw__FP12daObjMGate_c.s"
 }

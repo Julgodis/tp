@@ -6,27 +6,189 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dSelect_cursorHIO_c (dSelect_cursorHIO_c) False/False
+/* top-level dependencies (begin dSelect_cursorHIO_c) */
+/* top-level dependencies (end dSelect_cursorHIO_c) */
+struct dSelect_cursorHIO_c {
+	/* 801941E4 */ dSelect_cursorHIO_c();
+	/* 80195978 */ ~dSelect_cursorHIO_c();
+};
+
+// build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build J2DAnmTransformKey (J2DAnmTransformKey) False/False
+/* top-level dependencies (begin J2DAnmTransformKey) */
+/* top-level dependencies (end J2DAnmTransformKey) */
+struct J2DAnmTransformKey {
+	/* 801959C0 */ ~J2DAnmTransformKey();
+};
+
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+};
+
+/* top-level dependencies (begin dSelect_cursor_c) */
+// outer dependency: JKRArchive
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmTransformKey
+// outer dependency: J2DAnmColor
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_cursor_c) */
+struct dSelect_cursor_c {
+	// J2DAnmTransformKey
+	// J2DAnmColor
+	// J2DPane
+	// JKRArchive
+	// J2DAnmTextureSRTKey
+	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 801949EC */ ~dSelect_cursor_c();
+	/* 80194C30 */ void draw();
+	/* 80194CC0 */ void update();
+	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
+	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
+	/* 801951C8 */ void setScale(f32);
+	/* 801952A0 */ void setAlphaRate(f32);
+	/* 80195330 */ void addAlpha();
+	/* 801953CC */ void decAlpha();
+	/* 80195460 */ void setBpkAnimation(J2DAnmColor*);
+	/* 801955F0 */ void setBtk0Animation(J2DAnmTextureSRTKey*);
+	/* 80195724 */ void setCursorAnimation();
+	/* 801958E0 */ void setBckAnimation(J2DAnmTransformKey*);
+	/* 80195940 */ void moveCenter(J2DPane*, f32, f32);
+};
+
+// build JKRArchive (JKRArchive) True/True
+// build J2DPane (J2DPane) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
+// build J2DAnmTransformKey (J2DAnmTransformKey) True/True
+// build dSelect_icon_c (dSelect_icon_c) False/False
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin dSelect_icon_c) */
+// outer dependency: J2DPane
+/* top-level dependencies (end dSelect_icon_c) */
+struct dSelect_icon_c {
+	// J2DPane
+	/* 80195A3C */ void animation();
+	/* 80195B40 */ void setAlpha(char);
+	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
+};
+
+// build CPaneMgr (CPaneMgr) False/False
+// build J2DScreen (J2DScreen) False/False
+// build JKRArchive (JKRArchive) True/True
+// build J2DGrafContext (J2DGrafContext) False/False
+/* top-level dependencies (begin J2DGrafContext) */
+/* top-level dependencies (end J2DGrafContext) */
+struct J2DGrafContext {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JKRArchive
+// outer dependency: J2DGrafContext
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JKRArchive
+	// J2DGrafContext
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) True/True
+/* top-level dependencies (begin CPaneMgr) */
+// outer dependency: J2DScreen
+// outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// J2DScreen
+	// JKRExpHeap
+	// J2DPane
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+// build JKRFileLoader (JKRFileLoader) False/False
+/* top-level dependencies (begin JKRFileLoader) */
+/* top-level dependencies (end JKRFileLoader) */
+struct JKRFileLoader {
+	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+};
+
+// build J2DGrafContext (J2DGrafContext) True/True
+// build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
+/* top-level dependencies (begin J2DAnmLoaderDataBase) */
+/* top-level dependencies (end J2DAnmLoaderDataBase) */
+struct J2DAnmLoaderDataBase {
+	/* 80308A6C */ void load(void const*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__19dSelect_cursorHIO_cFv();
-extern "C" extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" extern void __dt__16dSelect_cursor_cFv();
-extern "C" extern void draw__16dSelect_cursor_cFv();
-extern "C" extern void update__16dSelect_cursor_cFv();
-extern "C" extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" extern void setParam__16dSelect_cursor_cFfffff();
-extern "C" extern void setScale__16dSelect_cursor_cFf();
-extern "C" extern void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" extern void addAlpha__16dSelect_cursor_cFv();
-extern "C" extern void decAlpha__16dSelect_cursor_cFv();
-extern "C" extern void setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor();
-extern "C" extern void setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey();
-extern "C" extern void setCursorAnimation__16dSelect_cursor_cFv();
-extern "C" extern void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey();
-extern "C" extern void moveCenter__16dSelect_cursor_cFP7J2DPaneff();
-extern "C" extern void __dt__19dSelect_cursorHIO_cFv();
-extern "C" extern void __dt__18J2DAnmTransformKeyFv();
+
+extern "C" void __ct__19dSelect_cursorHIO_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void __dt__16dSelect_cursor_cFv();
+extern "C" void draw__16dSelect_cursor_cFv();
+extern "C" void update__16dSelect_cursor_cFv();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void addAlpha__16dSelect_cursor_cFv();
+extern "C" void decAlpha__16dSelect_cursor_cFv();
+extern "C" void setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor();
+extern "C" void setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey();
+extern "C" void setCursorAnimation__16dSelect_cursor_cFv();
+extern "C" void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey();
+extern "C" void moveCenter__16dSelect_cursor_cFP7J2DPaneff();
+extern "C" void __dt__19dSelect_cursorHIO_cFv();
+extern "C" void __dt__18J2DAnmTransformKeyFv();
 SECTION_RODATA extern const u8 data_80394A10[32];
 SECTION_RODATA extern const u8 data_80394A30[32];
 SECTION_RODATA extern const u8 data_80394A50[64];
@@ -54,34 +216,47 @@ SECTION_SDATA2 extern f32 lit_4238;
 // External References:
 // 
 
-extern "C" extern void animation__14dSelect_icon_cFv();
-extern "C" extern void setAlpha__14dSelect_icon_cFUc();
-extern "C" extern void setPos__14dSelect_icon_cFP7J2DPaneff();
-extern "C" extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" extern void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" extern void show__13CPaneMgrAlphaFv();
-extern "C" extern void hide__13CPaneMgrAlphaFv();
-extern "C" extern void isVisible__13CPaneMgrAlphaFv();
-extern "C" extern void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" extern void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" extern void __nw__FUl();
-extern "C" extern void __dl__FPv();
-extern "C" extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" extern void __ct__9J2DScreenFv();
-extern "C" extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" extern void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" extern void animation__9J2DScreenFv();
-extern "C" extern void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" extern void _savegpr_23();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_27();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_23();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_27();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+extern "C" void animation__14dSelect_icon_cFv();
+extern "C" void setAlpha__14dSelect_icon_cFUc();
+extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*const __vt__10J2DAnmBase[4];
 SECTION_DATA extern void*const __vt__15J2DAnmTransform[9];
@@ -93,12 +268,12 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BB700-803BB70C 000C+00 .data      cNullVec__6Z2Calc                                            */
+/* 803BB700-803BB70C 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_d_select_cursor__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB70C-803BB71C 0010+00 .data      blo_name$3684                                                */
+/* 803BB70C-803BB71C 0010+00 rc=0 efc=0 .data      blo_name$3684                                                */
 void* data_803BB70C[4] = {
 	(void*)&d_d_select_cursor__stringBase0,
 	(void*)0x80394ABF,
@@ -106,22 +281,22 @@ void* data_803BB70C[4] = {
 	(void*)0x80394AFC,
 };
 
-/* 803BB71C-803BB72C 0010+00 .data      bck_name$3685                                                */
+/* 803BB71C-803BB72C 0010+00 rc=0 efc=0 .data      bck_name$3685                                                */
 u8 data_803BB71C[16] = {
 	0x80, 0x39, 0x4B, 0x1B, 0x80, 0x39, 0x4B, 0x1C, 0x80, 0x39, 0x4B, 0x1B, 0x80, 0x39, 0x4B, 0x1B,
 };
 
-/* 803BB72C-803BB73C 0010+00 .data      bpk_name$3686                                                */
+/* 803BB72C-803BB73C 0010+00 rc=0 efc=0 .data      bpk_name$3686                                                */
 u8 data_803BB72C[16] = {
 	0x80, 0x39, 0x4B, 0x38, 0x80, 0x39, 0x4B, 0x57, 0x80, 0x39, 0x4B, 0x73, 0x80, 0x39, 0x4B, 0x94,
 };
 
-/* 803BB73C-803BB74C 0010+00 .data      btk_name$3687                                                */
+/* 803BB73C-803BB74C 0010+00 rc=0 efc=0 .data      btk_name$3687                                                */
 u8 data_803BB73C[16] = {
 	0x80, 0x39, 0x4B, 0xB3, 0x80, 0x39, 0x4B, 0xD2, 0x80, 0x39, 0x4B, 0x1B, 0x80, 0x39, 0x4B, 0x1B,
 };
 
-/* 803BB74C-803BB78C 0010+30 .data      btk2_name$3688                                               */
+/* 803BB74C-803BB78C 0010+30 rc=0 efc=0 .data      btk2_name$3688                                               */
 u8 data_803BB74C[64] = {
 	0x80, 0x39, 0x4B, 0x1B, 0x80, 0x39, 0x4B, 0xEE, 0x80, 0x39, 0x4B, 0x1B, 0x80, 0x39, 0x4B, 0x1B,
 	/* padding */
@@ -130,7 +305,7 @@ u8 data_803BB74C[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB78C-803BB7A8 0010+0C .data      __vt__16dSelect_cursor_c                                     */
+/* 803BB78C-803BB7A8 0010+0C rc=2 efc=0 .data      __vt__16dSelect_cursor_c                                     */
 void* const __vt__16dSelect_cursor_c[7] = {
 	NULL, /* RTTI */
 	NULL,
@@ -142,7 +317,7 @@ void* const __vt__16dSelect_cursor_c[7] = {
 	NULL,
 };
 
-/* 803BB7A8-803BB7B8 000C+04 .data      __vt__19dSelect_cursorHIO_c                                  */
+/* 803BB7A8-803BB7B8 000C+04 rc=2 efc=0 .data      __vt__19dSelect_cursorHIO_c                                  */
 void* const __vt__19dSelect_cursorHIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
@@ -151,17 +326,17 @@ void* const __vt__19dSelect_cursorHIO_c[4] = {
 	NULL,
 };
 
-/* 80453A48-80453A4C 0004+00 .sdata2    @3673                                                        */
+/* 80453A48-80453A4C 0004+00 rc=4 efc=0 .sdata2    @3673                                                        */
 f32 lit_3673 = 1.0f;
 
-/* 80453A4C-80453A50 0004+00 .sdata2    @3674                                                        */
+/* 80453A4C-80453A50 0004+00 rc=1 efc=0 .sdata2    @3674                                                        */
 f32 lit_3674 = 3.0f / 10.0f;
 
-/* 801941E4-80194220 003C+00 .text      __ct__19dSelect_cursorHIO_cFv                                */
+/* 801941E4-80194220 003C+00 rc=1 efc=0 .text      __ct__19dSelect_cursorHIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__19dSelect_cursorHIO_cFv) {
+asm dSelect_cursorHIO_c::dSelect_cursorHIO_c() {
 	nofralloc
 #include "asm/d/d_select_cursor/__ct__19dSelect_cursorHIO_cFv.s"
 }
@@ -169,19 +344,19 @@ ASM_FUNCTION(__ct__19dSelect_cursorHIO_cFv) {
 
 
 /* ############################################################################################## */
-/* 80394A10-80394A30 0020+00 .rodata    corner_tag$3707                                              */
+/* 80394A10-80394A30 0020+00 rc=1 efc=0 .rodata    corner_tag$3707                                              */
 SECTION_RODATA const u8 data_80394A10[32] = {
 	0x6C, 0x5F, 0x75, 0x5F, 0x6E, 0x75, 0x6C, 0x6C, 0x6C, 0x5F, 0x64, 0x5F, 0x6E, 0x75, 0x6C, 0x6C,
 	0x72, 0x5F, 0x75, 0x5F, 0x6E, 0x75, 0x6C, 0x6C, 0x72, 0x5F, 0x64, 0x5F, 0x6E, 0x75, 0x6C, 0x6C,
 };
 
-/* 80394A30-80394A50 0020+00 .rodata    tag$4181                                                     */
+/* 80394A30-80394A50 0020+00 rc=1 efc=0 .rodata    tag$4181                                                     */
 SECTION_RODATA const u8 data_80394A30[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x6C, 0x64, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x6C, 0x75,
 	0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x72, 0x64, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x5F, 0x72, 0x75,
 };
 
-/* 80394A50-80394A90 0040+00 .rodata    tag$4197                                                     */
+/* 80394A50-80394A90 0040+00 rc=1 efc=0 .rodata    tag$4197                                                     */
 SECTION_RODATA const u8 data_80394A50[64] = {
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x64, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x64, 0x32,
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x75, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x6C, 0x75, 0x32,
@@ -189,12 +364,12 @@ SECTION_RODATA const u8 data_80394A50[64] = {
 	0x00, 0x69, 0x5F, 0x63, 0x5F, 0x72, 0x75, 0x31, 0x00, 0x69, 0x5F, 0x63, 0x5F, 0x72, 0x75, 0x32,
 };
 
-/* 80394A90-80394AA0 0010+00 .rodata    tag$4204                                                     */
+/* 80394A90-80394AA0 0010+00 rc=1 efc=0 .rodata    tag$4204                                                     */
 SECTION_RODATA const u8 data_80394A90[16] = {
 	0x00, 0x00, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x31, 0x00, 0x00, 0x67, 0x6F, 0x6C, 0x64, 0x30, 0x32,
 };
 
-/* 80394AA0-80394C10 016D+03 .rodata    @stringBase0                                                 */
+/* 80394AA0-80394C10 016D+03 rc=2 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -217,38 +392,38 @@ SECTION_DEAD char* const stringBase_80394BEE = "zelda_store_select_icon_02.btk";
 SECTION_DEAD char* const pad_80394C0D = "\0\0";
 #pragma pop
 
-/* 80453A50-80453A54 0004+00 .sdata2    @3808                                                        */
+/* 80453A50-80453A54 0004+00 rc=4 efc=0 .sdata2    @3808                                                        */
 u8 d_d_select_cursor__lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80194220-801949EC 07CC+00 .text      __ct__16dSelect_cursor_cFUcfP10JKRArchive                    */
+/* 80194220-801949EC 07CC+00 rc=14 efc=14 .text      __ct__16dSelect_cursor_cFUcfP10JKRArchive                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16dSelect_cursor_cFUcfP10JKRArchive) {
+asm dSelect_cursor_c::dSelect_cursor_c(char field_0, f32 field_1, JKRArchive* field_2) {
 	nofralloc
 #include "asm/d/d_select_cursor/__ct__16dSelect_cursor_cFUcfP10JKRArchive.s"
 }
 #pragma pop
 
 
-/* 801949EC-80194C30 0244+00 .text      __dt__16dSelect_cursor_cFv                                   */
+/* 801949EC-80194C30 0244+00 rc=1 efc=0 .text      __dt__16dSelect_cursor_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16dSelect_cursor_cFv) {
+asm dSelect_cursor_c::~dSelect_cursor_c() {
 	nofralloc
 #include "asm/d/d_select_cursor/__dt__16dSelect_cursor_cFv.s"
 }
 #pragma pop
 
 
-/* 80194C30-80194CC0 0090+00 .text      draw__16dSelect_cursor_cFv                                   */
+/* 80194C30-80194CC0 0090+00 rc=1 efc=0 .text      draw__16dSelect_cursor_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__16dSelect_cursor_cFv) {
+asm void dSelect_cursor_c::draw() {
 	nofralloc
 #include "asm/d/d_select_cursor/draw__16dSelect_cursor_cFv.s"
 }
@@ -256,17 +431,17 @@ ASM_FUNCTION(draw__16dSelect_cursor_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453A54-80453A58 0004+00 .sdata2    @4062                                                        */
+/* 80453A54-80453A58 0004+00 rc=3 efc=0 .sdata2    @4062                                                        */
 f32 d_d_select_cursor__lit_4062 = 0.5f;
 
-/* 80453A58-80453A60 0008+00 .sdata2    @4064                                                        */
+/* 80453A58-80453A60 0008+00 rc=3 efc=0 .sdata2    @4064                                                        */
 f64 d_d_select_cursor__lit_4064 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80194CC0-801950F4 0434+00 .text      update__16dSelect_cursor_cFv                                 */
+/* 80194CC0-801950F4 0434+00 rc=1 efc=0 .text      update__16dSelect_cursor_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(update__16dSelect_cursor_cFv) {
+asm void dSelect_cursor_c::update() {
 	nofralloc
 #include "asm/d/d_select_cursor/update__16dSelect_cursor_cFv.s"
 }
@@ -274,47 +449,47 @@ ASM_FUNCTION(update__16dSelect_cursor_cFv) {
 
 
 /* ############################################################################################## */
-/* 80453A60-80453A64 0004+00 .sdata2    @4089                                                        */
+/* 80453A60-80453A64 0004+00 rc=1 efc=0 .sdata2    @4089                                                        */
 f32 d_d_select_cursor__lit_4089 = -1.0f;
 
-/* 801950F4-801951B0 00BC+00 .text      setPos__16dSelect_cursor_cFffP7J2DPaneb                      */
+/* 801950F4-801951B0 00BC+00 rc=30 efc=30 .text      setPos__16dSelect_cursor_cFffP7J2DPaneb                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setPos__16dSelect_cursor_cFffP7J2DPaneb) {
+asm void dSelect_cursor_c::setPos(f32 field_0, f32 field_1, J2DPane* field_2, bool field_3) {
 	nofralloc
 #include "asm/d/d_select_cursor/setPos__16dSelect_cursor_cFffP7J2DPaneb.s"
 }
 #pragma pop
 
 
-/* 801951B0-801951C8 0018+00 .text      setParam__16dSelect_cursor_cFfffff                           */
+/* 801951B0-801951C8 0018+00 rc=24 efc=24 .text      setParam__16dSelect_cursor_cFfffff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setParam__16dSelect_cursor_cFfffff) {
+asm void dSelect_cursor_c::setParam(f32 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/d_select_cursor/setParam__16dSelect_cursor_cFfffff.s"
 }
 #pragma pop
 
 
-/* 801951C8-801952A0 00D8+00 .text      setScale__16dSelect_cursor_cFf                               */
+/* 801951C8-801952A0 00D8+00 rc=14 efc=14 .text      setScale__16dSelect_cursor_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setScale__16dSelect_cursor_cFf) {
+asm void dSelect_cursor_c::setScale(f32 field_0) {
 	nofralloc
 #include "asm/d/d_select_cursor/setScale__16dSelect_cursor_cFf.s"
 }
 #pragma pop
 
 
-/* 801952A0-80195330 0090+00 .text      setAlphaRate__16dSelect_cursor_cFf                           */
+/* 801952A0-80195330 0090+00 rc=77 efc=77 .text      setAlphaRate__16dSelect_cursor_cFf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAlphaRate__16dSelect_cursor_cFf) {
+asm void dSelect_cursor_c::setAlphaRate(f32 field_0) {
 	nofralloc
 #include "asm/d/d_select_cursor/setAlphaRate__16dSelect_cursor_cFf.s"
 }
@@ -322,47 +497,47 @@ ASM_FUNCTION(setAlphaRate__16dSelect_cursor_cFf) {
 
 
 /* ############################################################################################## */
-/* 80453A64-80453A68 0004+00 .sdata2    @4157                                                        */
+/* 80453A64-80453A68 0004+00 rc=2 efc=0 .sdata2    @4157                                                        */
 f32 d_d_select_cursor__lit_4157 = 5.0f;
 
-/* 80195330-801953CC 009C+00 .text      addAlpha__16dSelect_cursor_cFv                               */
+/* 80195330-801953CC 009C+00 rc=1 efc=1 .text      addAlpha__16dSelect_cursor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(addAlpha__16dSelect_cursor_cFv) {
+asm void dSelect_cursor_c::addAlpha() {
 	nofralloc
 #include "asm/d/d_select_cursor/addAlpha__16dSelect_cursor_cFv.s"
 }
 #pragma pop
 
 
-/* 801953CC-80195460 0094+00 .text      decAlpha__16dSelect_cursor_cFv                               */
+/* 801953CC-80195460 0094+00 rc=1 efc=1 .text      decAlpha__16dSelect_cursor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(decAlpha__16dSelect_cursor_cFv) {
+asm void dSelect_cursor_c::decAlpha() {
 	nofralloc
 #include "asm/d/d_select_cursor/decAlpha__16dSelect_cursor_cFv.s"
 }
 #pragma pop
 
 
-/* 80195460-801955F0 0190+00 .text      setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor           */
+/* 80195460-801955F0 0190+00 rc=1 efc=0 .text      setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor) {
+asm void dSelect_cursor_c::setBpkAnimation(J2DAnmColor* field_0) {
 	nofralloc
 #include "asm/d/d_select_cursor/setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor.s"
 }
 #pragma pop
 
 
-/* 801955F0-80195724 0134+00 .text      setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey  */
+/* 801955F0-80195724 0134+00 rc=1 efc=0 .text      setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey) {
+asm void dSelect_cursor_c::setBtk0Animation(J2DAnmTextureSRTKey* field_0) {
 	nofralloc
 #include "asm/d/d_select_cursor/setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey.s"
 }
@@ -370,65 +545,64 @@ ASM_FUNCTION(setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey) {
 
 
 /* ############################################################################################## */
-/* 80453A68-80453A6C 0004+00 .sdata2    @4237                                                        */
+/* 80453A68-80453A6C 0004+00 rc=1 efc=0 .sdata2    @4237                                                        */
 f32 d_d_select_cursor__lit_4237 = 20.0f;
 
-/* 80453A6C-80453A70 0004+00 .sdata2    @4238                                                        */
+/* 80453A6C-80453A70 0004+00 rc=1 efc=0 .sdata2    @4238                                                        */
 f32 lit_4238 = 10.0f;
 
-/* 80195724-801958E0 01BC+00 .text      setCursorAnimation__16dSelect_cursor_cFv                     */
+/* 80195724-801958E0 01BC+00 rc=1 efc=0 .text      setCursorAnimation__16dSelect_cursor_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCursorAnimation__16dSelect_cursor_cFv) {
+asm void dSelect_cursor_c::setCursorAnimation() {
 	nofralloc
 #include "asm/d/d_select_cursor/setCursorAnimation__16dSelect_cursor_cFv.s"
 }
 #pragma pop
 
 
-/* 801958E0-80195940 0060+00 .text      setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey    */
+/* 801958E0-80195940 0060+00 rc=1 efc=0 .text      setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey) {
+asm void dSelect_cursor_c::setBckAnimation(J2DAnmTransformKey* field_0) {
 	nofralloc
 #include "asm/d/d_select_cursor/setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey.s"
 }
 #pragma pop
 
 
-/* 80195940-80195978 0038+00 .text      moveCenter__16dSelect_cursor_cFP7J2DPaneff                   */
+/* 80195940-80195978 0038+00 rc=1 efc=0 .text      moveCenter__16dSelect_cursor_cFP7J2DPaneff                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveCenter__16dSelect_cursor_cFP7J2DPaneff) {
+asm void dSelect_cursor_c::moveCenter(J2DPane* field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_select_cursor/moveCenter__16dSelect_cursor_cFP7J2DPaneff.s"
 }
 #pragma pop
 
 
-/* 80195978-801959C0 0048+00 .text      __dt__19dSelect_cursorHIO_cFv                                */
+/* 80195978-801959C0 0048+00 rc=1 efc=0 .text      __dt__19dSelect_cursorHIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dSelect_cursorHIO_cFv) {
+asm dSelect_cursorHIO_c::~dSelect_cursorHIO_c() {
 	nofralloc
 #include "asm/d/d_select_cursor/__dt__19dSelect_cursorHIO_cFv.s"
 }
 #pragma pop
 
 
-/* 801959C0-80195A2C 006C+00 .text      __dt__18J2DAnmTransformKeyFv                                 */
+/* 801959C0-80195A2C 006C+00 rc=1 efc=1 .text      __dt__18J2DAnmTransformKeyFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18J2DAnmTransformKeyFv) {
+asm J2DAnmTransformKey::~J2DAnmTransformKey() {
 	nofralloc
 #include "asm/d/d_select_cursor/__dt__18J2DAnmTransformKeyFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

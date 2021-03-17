@@ -6,80 +6,229 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct csXyz;
+struct Vec;
+struct b_bq_class;
+struct J3DJoint;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daB_BQ_HIO_c {
+	daB_BQ_HIO_c();
+	~daB_BQ_HIO_c();
+};
+
+struct b_bq_class {
+	b_bq_class();
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	~cXyz();
+	cXyz();
+	void set(f32, f32, f32);
+	void operator=(cXyz const&);
+	cXyz(cXyz const&);
+	void abs() const;
+	cXyz(f32, f32, f32);
+	void operator+=(Vec const&);
+};
+
+struct cBgS_LinChk {
+	void GetCross();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dCcD_Sph {
+	dCcD_Sph();
+	~dCcD_Sph();
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct daPy_py_c {
+	void cancelOriginalDemo();
+	void changeOriginalDemo();
+};
+
+struct dEvt_control_c {
+	void checkSkipEdge();
+	void startCheckSkipEdge(void*);
+};
+
+struct csXyz {
+	~csXyz();
+};
+
+struct dEvt_info_c {
+	void onCondition(u16);
+	void checkCommandDemoAccrpt();
+};
+
+struct obj_ystone_class {
+	void setCurrentPos(cXyz);
+};
+
+struct JAISoundID {
+	JAISoundID(u32);
+};
+
+struct Vec {
+};
+
+struct mDoMtx_stack_c {
+	void multVecZero(Vec*);
+};
+
+struct J3DModel {
+	void getAnmMtx(s32);
+};
+
+struct std {
+	void fabsf(f32);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daB_BQ_HIO_cFv();
-extern "C" extern void anm_init__FP10b_bq_classifUcf();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void daB_BQ_Draw__FP10b_bq_class();
-extern "C" extern void s_fw_sub0__FPvPv();
-extern "C" extern void s_fw_sub1__FPvPv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void s_fw_sub2__FPvPv();
-extern "C" extern void s_fw_del_sub__FPvPv();
-extern "C" extern void s_bi_del_sub__FPvPv();
-extern "C" extern void damage_check__FP10b_bq_class();
-extern "C" extern void b_bq_stay__FP10b_bq_class();
-extern "C" extern void b_bq_wait__FP10b_bq_class();
-extern "C" extern void b_bq_damage__FP10b_bq_class();
-extern "C" extern void b_bq_attack__FP10b_bq_class();
-extern "C" extern void b_bq_end__FP10b_bq_class();
-extern "C" extern void action__FP10b_bq_class();
-extern "C" extern void anm_se_set__FP10b_bq_class();
-extern "C" extern void cam_3d_morf__FP10b_bq_classf();
-extern "C" extern void fish_set__FP10b_bq_class();
-extern "C" extern void demo_camera__FP10b_bq_class();
-extern "C" extern void GetCross__11cBgS_LinChkFv();
-extern "C" extern void cM_scos__Fs();
-extern "C" extern void daB_BQ_Execute__FP10b_bq_class();
-extern "C" extern void daB_BQ_IsDelete__FP10b_bq_class();
-extern "C" extern void daB_BQ_Delete__FP10b_bq_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daB_BQ_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__10b_bq_classFv();
-extern "C" extern void __ct__4cXyzFv();
-extern "C" extern void __ct__8dCcD_SphFv();
-extern "C" extern void __dt__8dCcD_SphFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daB_BQ_HIO_cFv();
-extern "C" extern void __sinit_d_a_b_bq_cpp();
-extern "C" extern void cancelOriginalDemo__9daPy_py_cFv();
-extern "C" extern void dComIfGp_event_reset__Fv();
-extern "C" extern void checkSkipEdge__14dEvt_control_cFv();
-extern "C" extern void fopAcM_GetParam__FPCv();
-extern "C" extern void dComIfGs_onStageBossEnemy__Fv();
-extern "C" extern void __dt__5csXyzFv();
-extern "C" extern void set__4cXyzFfff();
-extern "C" extern void __as__4cXyzFRC4cXyz();
-extern "C" extern void changeDemoMode__9daPy_py_cFUliis();
-extern "C" extern void changeOriginalDemo__9daPy_py_cFv();
-extern "C" extern void daPy_getPlayerActorClass__Fv();
-extern "C" extern void onCondition__11dEvt_info_cFUs();
-extern "C" extern void checkCommandDemoAccrpt__11dEvt_info_cFv();
-extern "C" extern void dComIfGp_getPlayer__Fi();
-extern "C" extern void dComIfGp_getCamera__Fi();
-extern "C" extern void dComIfGp_getPlayerCameraID__Fi();
-extern "C" extern void setCurrentPos__16obj_ystone_classF4cXyz();
-extern "C" extern void __ct__4cXyzFRC4cXyz();
-extern "C" extern void __ct__10JAISoundIDFUl();
-extern "C" extern void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
-extern "C" extern void setBaseTRMtx__8J3DModelFPA4_f();
-extern "C" extern void multVecZero__14mDoMtx_stack_cFP3Vec();
-extern "C" extern void getAnmMtx__8J3DModelFi();
-extern "C" extern void mDoAud_seStart__FUlPC3VecUlSc();
-extern "C" extern void cM_ssin__Fs();
-extern "C" extern void abs__4cXyzCFv();
-extern "C" extern void fabsf__3stdFf();
-extern "C" extern void startCheckSkipEdge__14dEvt_control_cFPv();
-extern "C" extern void dComIfGp_getEvent__Fv();
-extern "C" extern void dComIfGp_getVibration__Fv();
-extern "C" extern void __ct__4cXyzFfff();
-extern "C" extern void __apl__4cXyzFRC3Vec();
+void anm_init(b_bq_class*, s32, f32, u8, f32);
+void nodeCallBack(J3DJoint*, s32);
+void daB_BQ_Draw(b_bq_class*);
+void s_fw_sub0(void*, void*);
+void s_fw_sub1(void*, void*);
+void s_fw_sub2(void*, void*);
+void s_fw_del_sub(void*, void*);
+void s_bi_del_sub(void*, void*);
+void damage_check(b_bq_class*);
+void b_bq_stay(b_bq_class*);
+void b_bq_wait(b_bq_class*);
+void b_bq_damage(b_bq_class*);
+void b_bq_attack(b_bq_class*);
+void b_bq_end(b_bq_class*);
+void action(b_bq_class*);
+void anm_se_set(b_bq_class*);
+void cam_3d_morf(b_bq_class*, f32);
+void fish_set(b_bq_class*);
+void demo_camera(b_bq_class*);
+extern "C" void cM_scos__Fs();
+void daB_BQ_Execute(b_bq_class*);
+bool daB_BQ_IsDelete(b_bq_class*);
+void daB_BQ_Delete(b_bq_class*);
+void useHeapInit(fopAc_ac_c*);
+void daB_BQ_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_b_bq_cpp();
+void dComIfGp_event_reset();
+void fopAcM_GetParam(void const*);
+void dComIfGs_onStageBossEnemy();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+void daPy_getPlayerActorClass();
+void dComIfGp_getPlayer(s32);
+void dComIfGp_getCamera(s32);
+void dComIfGp_getPlayerCameraID(s32);
+void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*);
+extern "C" void setBaseTRMtx__8J3DModelFPA4_f();
+void mDoAud_seStart(u32, Vec const*, u32, s8);
+extern "C" void cM_ssin__Fs();
+void dComIfGp_getEvent();
+void dComIfGp_getVibration();
+
+extern "C" void __ct__12daB_BQ_HIO_cFv();
+extern "C" void anm_init__FP10b_bq_classifUcf();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void daB_BQ_Draw__FP10b_bq_class();
+extern "C" void s_fw_sub0__FPvPv();
+extern "C" void s_fw_sub1__FPvPv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void s_fw_sub2__FPvPv();
+extern "C" void s_fw_del_sub__FPvPv();
+extern "C" void s_bi_del_sub__FPvPv();
+extern "C" void damage_check__FP10b_bq_class();
+extern "C" void b_bq_stay__FP10b_bq_class();
+extern "C" void b_bq_wait__FP10b_bq_class();
+extern "C" void b_bq_damage__FP10b_bq_class();
+extern "C" void b_bq_attack__FP10b_bq_class();
+extern "C" void b_bq_end__FP10b_bq_class();
+extern "C" void action__FP10b_bq_class();
+extern "C" void anm_se_set__FP10b_bq_class();
+extern "C" void cam_3d_morf__FP10b_bq_classf();
+extern "C" void fish_set__FP10b_bq_class();
+extern "C" void demo_camera__FP10b_bq_class();
+extern "C" void GetCross__11cBgS_LinChkFv();
+extern "C" void cM_scos__Fs();
+extern "C" void daB_BQ_Execute__FP10b_bq_class();
+extern "C" bool daB_BQ_IsDelete__FP10b_bq_class();
+extern "C" void daB_BQ_Delete__FP10b_bq_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daB_BQ_Create__FP10fopAc_ac_c();
+extern "C" void __ct__10b_bq_classFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daB_BQ_HIO_cFv();
+extern "C" void __sinit_d_a_b_bq_cpp();
+extern "C" void cancelOriginalDemo__9daPy_py_cFv();
+extern "C" void dComIfGp_event_reset__Fv();
+extern "C" void checkSkipEdge__14dEvt_control_cFv();
+extern "C" void fopAcM_GetParam__FPCv();
+extern "C" void dComIfGs_onStageBossEnemy__Fv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void set__4cXyzFfff();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void changeDemoMode__9daPy_py_cFUliis();
+extern "C" void changeOriginalDemo__9daPy_py_cFv();
+extern "C" void daPy_getPlayerActorClass__Fv();
+extern "C" void onCondition__11dEvt_info_cFUs();
+extern "C" void checkCommandDemoAccrpt__11dEvt_info_cFv();
+extern "C" void dComIfGp_getPlayer__Fi();
+extern "C" void dComIfGp_getCamera__Fi();
+extern "C" void dComIfGp_getPlayerCameraID__Fi();
+extern "C" void setCurrentPos__16obj_ystone_classF4cXyz();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void __ct__10JAISoundIDFUl();
+extern "C" void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz();
+extern "C" void setBaseTRMtx__8J3DModelFPA4_f();
+extern "C" void multVecZero__14mDoMtx_stack_cFP3Vec();
+extern "C" void getAnmMtx__8J3DModelFi();
+extern "C" void mDoAud_seStart__FUlPC3VecUlSc();
+extern "C" void cM_ssin__Fs();
+extern "C" void abs__4cXyzCFv();
+extern "C" void fabsf__3stdFf();
+extern "C" void startCheckSkipEdge__14dEvt_control_cFPv();
+extern "C" void dComIfGp_getEvent__Fv();
+extern "C" void dComIfGp_getVibration__Fv();
+extern "C" void __ct__4cXyzFfff();
+extern "C" void __apl__4cXyzFRC3Vec();
 SECTION_RODATA extern const u32 lit_3816;
 SECTION_RODATA extern const u8 lit_3830[4];
 SECTION_RODATA extern const u32 lit_3831;
@@ -301,8 +450,11 @@ SECTION_BSS extern u8 data_805BAD70[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -312,7 +464,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daB_BQ_HIO_cFv) {
+asm daB_BQ_HIO_c::daB_BQ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__12daB_BQ_HIO_cFv.s"
 }
@@ -323,7 +475,7 @@ ASM_FUNCTION(__ct__12daB_BQ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_init__FP10b_bq_classifUcf) {
+asm void anm_init(b_bq_class* field_0, s32 field_1, f32 field_2, u8 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/anm_init__FP10b_bq_classifUcf.s"
 }
@@ -334,7 +486,7 @@ ASM_FUNCTION(anm_init__FP10b_bq_classifUcf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/nodeCallBack__FP8J3DJointi.s"
 }
@@ -345,7 +497,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_BQ_Draw__FP10b_bq_class) {
+asm void daB_BQ_Draw(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_Draw__FP10b_bq_class.s"
 }
@@ -356,7 +508,7 @@ ASM_FUNCTION(daB_BQ_Draw__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fw_sub0__FPvPv) {
+asm void s_fw_sub0(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/s_fw_sub0__FPvPv.s"
 }
@@ -367,7 +519,7 @@ ASM_FUNCTION(s_fw_sub0__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fw_sub1__FPvPv) {
+asm void s_fw_sub1(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/s_fw_sub1__FPvPv.s"
 }
@@ -378,7 +530,7 @@ ASM_FUNCTION(s_fw_sub1__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__4cXyzFv.s"
 }
@@ -389,7 +541,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fw_sub2__FPvPv) {
+asm void s_fw_sub2(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/s_fw_sub2__FPvPv.s"
 }
@@ -400,7 +552,7 @@ ASM_FUNCTION(s_fw_sub2__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_fw_del_sub__FPvPv) {
+asm void s_fw_del_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/s_fw_del_sub__FPvPv.s"
 }
@@ -411,7 +563,7 @@ ASM_FUNCTION(s_fw_del_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bi_del_sub__FPvPv) {
+asm void s_bi_del_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/s_bi_del_sub__FPvPv.s"
 }
@@ -422,7 +574,7 @@ ASM_FUNCTION(s_bi_del_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP10b_bq_class) {
+asm void damage_check(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/damage_check__FP10b_bq_class.s"
 }
@@ -433,7 +585,7 @@ ASM_FUNCTION(damage_check__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(b_bq_stay__FP10b_bq_class) {
+asm void b_bq_stay(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/b_bq_stay__FP10b_bq_class.s"
 }
@@ -444,7 +596,7 @@ ASM_FUNCTION(b_bq_stay__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(b_bq_wait__FP10b_bq_class) {
+asm void b_bq_wait(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/b_bq_wait__FP10b_bq_class.s"
 }
@@ -455,7 +607,7 @@ ASM_FUNCTION(b_bq_wait__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(b_bq_damage__FP10b_bq_class) {
+asm void b_bq_damage(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/b_bq_damage__FP10b_bq_class.s"
 }
@@ -466,7 +618,7 @@ ASM_FUNCTION(b_bq_damage__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(b_bq_attack__FP10b_bq_class) {
+asm void b_bq_attack(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/b_bq_attack__FP10b_bq_class.s"
 }
@@ -477,7 +629,7 @@ ASM_FUNCTION(b_bq_attack__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(b_bq_end__FP10b_bq_class) {
+asm void b_bq_end(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/b_bq_end__FP10b_bq_class.s"
 }
@@ -488,7 +640,7 @@ ASM_FUNCTION(b_bq_end__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP10b_bq_class) {
+asm void action(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/action__FP10b_bq_class.s"
 }
@@ -499,7 +651,7 @@ ASM_FUNCTION(action__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(anm_se_set__FP10b_bq_class) {
+asm void anm_se_set(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/anm_se_set__FP10b_bq_class.s"
 }
@@ -510,7 +662,7 @@ ASM_FUNCTION(anm_se_set__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cam_3d_morf__FP10b_bq_classf) {
+asm void cam_3d_morf(b_bq_class* field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/cam_3d_morf__FP10b_bq_classf.s"
 }
@@ -521,7 +673,7 @@ ASM_FUNCTION(cam_3d_morf__FP10b_bq_classf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fish_set__FP10b_bq_class) {
+asm void fish_set(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/fish_set__FP10b_bq_class.s"
 }
@@ -532,7 +684,7 @@ ASM_FUNCTION(fish_set__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(demo_camera__FP10b_bq_class) {
+asm void demo_camera(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/demo_camera__FP10b_bq_class.s"
 }
@@ -543,7 +695,7 @@ ASM_FUNCTION(demo_camera__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(GetCross__11cBgS_LinChkFv) {
+asm void cBgS_LinChk::GetCross() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/GetCross__11cBgS_LinChkFv.s"
 }
@@ -554,7 +706,7 @@ ASM_FUNCTION(GetCross__11cBgS_LinChkFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_scos__Fs) {
+extern "C" asm void cM_scos__Fs() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/cM_scos__Fs.s"
 }
@@ -565,7 +717,7 @@ ASM_FUNCTION(cM_scos__Fs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_BQ_Execute__FP10b_bq_class) {
+asm void daB_BQ_Execute(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_Execute__FP10b_bq_class.s"
 }
@@ -573,21 +725,16 @@ ASM_FUNCTION(daB_BQ_Execute__FP10b_bq_class) {
 
 
 /* 805B92F0-805B92F8 0008+00 .text      daB_BQ_IsDelete__FP10b_bq_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_BQ_IsDelete__FP10b_bq_class) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_IsDelete__FP10b_bq_class.s"
+bool daB_BQ_IsDelete(b_bq_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805B92F8-805B9370 0078+00 .text      daB_BQ_Delete__FP10b_bq_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_BQ_Delete__FP10b_bq_class) {
+asm void daB_BQ_Delete(b_bq_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_Delete__FP10b_bq_class.s"
 }
@@ -598,7 +745,7 @@ ASM_FUNCTION(daB_BQ_Delete__FP10b_bq_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -609,7 +756,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__12J3DFrameCtrlFv.s"
 }
@@ -620,7 +767,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_BQ_Create__FP10fopAc_ac_c) {
+asm void daB_BQ_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_Create__FP10fopAc_ac_c.s"
 }
@@ -631,7 +778,7 @@ ASM_FUNCTION(daB_BQ_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10b_bq_classFv) {
+asm b_bq_class::b_bq_class() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__10b_bq_classFv.s"
 }
@@ -639,21 +786,16 @@ ASM_FUNCTION(__ct__10b_bq_classFv) {
 
 
 /* 805B9D74-805B9D78 0004+00 .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFv) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805B9D78-805B9DFC 0084+00 .text      __ct__8dCcD_SphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8dCcD_SphFv) {
+asm dCcD_Sph::dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__8dCcD_SphFv.s"
 }
@@ -664,7 +806,7 @@ ASM_FUNCTION(__ct__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8dCcD_SphFv) {
+asm dCcD_Sph::~dCcD_Sph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__8dCcD_SphFv.s"
 }
@@ -675,7 +817,7 @@ ASM_FUNCTION(__dt__8dCcD_SphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__8cM3dGSphFv.s"
 }
@@ -686,7 +828,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__8cM3dGAabFv.s"
 }
@@ -697,7 +839,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__10dCcD_GSttsFv.s"
 }
@@ -708,7 +850,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__10cCcD_GSttsFv.s"
 }
@@ -719,7 +861,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daB_BQ_HIO_cFv) {
+asm daB_BQ_HIO_c::~daB_BQ_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__12daB_BQ_HIO_cFv.s"
 }
@@ -730,7 +872,7 @@ ASM_FUNCTION(__dt__12daB_BQ_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_bq_cpp) {
+extern "C" asm void __sinit_d_a_b_bq_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__sinit_d_a_b_bq_cpp.s"
 }
@@ -741,7 +883,7 @@ ASM_FUNCTION(__sinit_d_a_b_bq_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::cancelOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/cancelOriginalDemo__9daPy_py_cFv.s"
 }
@@ -752,7 +894,7 @@ ASM_FUNCTION(cancelOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_event_reset__Fv) {
+asm void dComIfGp_event_reset() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_event_reset__Fv.s"
 }
@@ -763,7 +905,7 @@ ASM_FUNCTION(dComIfGp_event_reset__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkSkipEdge__14dEvt_control_cFv) {
+asm void dEvt_control_c::checkSkipEdge() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/checkSkipEdge__14dEvt_control_cFv.s"
 }
@@ -774,7 +916,7 @@ ASM_FUNCTION(checkSkipEdge__14dEvt_control_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fopAcM_GetParam__FPCv) {
+asm void fopAcM_GetParam(void const* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/fopAcM_GetParam__FPCv.s"
 }
@@ -785,7 +927,7 @@ ASM_FUNCTION(fopAcM_GetParam__FPCv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGs_onStageBossEnemy__Fv) {
+asm void dComIfGs_onStageBossEnemy() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGs_onStageBossEnemy__Fv.s"
 }
@@ -796,7 +938,7 @@ ASM_FUNCTION(dComIfGs_onStageBossEnemy__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5csXyzFv) {
+asm csXyz::~csXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__dt__5csXyzFv.s"
 }
@@ -807,7 +949,7 @@ ASM_FUNCTION(__dt__5csXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set__4cXyzFfff) {
+asm void cXyz::set(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/set__4cXyzFfff.s"
 }
@@ -818,7 +960,7 @@ ASM_FUNCTION(set__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
+asm void cXyz::operator=(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__as__4cXyzFRC4cXyz.s"
 }
@@ -829,7 +971,7 @@ ASM_FUNCTION(__as__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
+extern "C" asm void changeDemoMode__9daPy_py_cFUliis() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/changeDemoMode__9daPy_py_cFUliis.s"
 }
@@ -840,7 +982,7 @@ ASM_FUNCTION(changeDemoMode__9daPy_py_cFUliis) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
+asm void daPy_py_c::changeOriginalDemo() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/changeOriginalDemo__9daPy_py_cFv.s"
 }
@@ -851,7 +993,7 @@ ASM_FUNCTION(changeOriginalDemo__9daPy_py_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
+asm void daPy_getPlayerActorClass() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daPy_getPlayerActorClass__Fv.s"
 }
@@ -862,7 +1004,7 @@ ASM_FUNCTION(daPy_getPlayerActorClass__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
+asm void dEvt_info_c::onCondition(u16 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/onCondition__11dEvt_info_cFUs.s"
 }
@@ -873,7 +1015,7 @@ ASM_FUNCTION(onCondition__11dEvt_info_cFUs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
+asm void dEvt_info_c::checkCommandDemoAccrpt() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/checkCommandDemoAccrpt__11dEvt_info_cFv.s"
 }
@@ -884,7 +1026,7 @@ ASM_FUNCTION(checkCommandDemoAccrpt__11dEvt_info_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
+asm void dComIfGp_getPlayer(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_getPlayer__Fi.s"
 }
@@ -895,7 +1037,7 @@ ASM_FUNCTION(dComIfGp_getPlayer__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getCamera__Fi) {
+asm void dComIfGp_getCamera(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_getCamera__Fi.s"
 }
@@ -906,7 +1048,7 @@ ASM_FUNCTION(dComIfGp_getCamera__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
+asm void dComIfGp_getPlayerCameraID(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_getPlayerCameraID__Fi.s"
 }
@@ -917,7 +1059,7 @@ ASM_FUNCTION(dComIfGp_getPlayerCameraID__Fi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCurrentPos__16obj_ystone_classF4cXyz) {
+asm void obj_ystone_class::setCurrentPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/setCurrentPos__16obj_ystone_classF4cXyz.s"
 }
@@ -928,7 +1070,7 @@ ASM_FUNCTION(setCurrentPos__16obj_ystone_classF4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
+asm cXyz::cXyz(cXyz const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__4cXyzFRC4cXyz.s"
 }
@@ -939,7 +1081,7 @@ ASM_FUNCTION(__ct__4cXyzFRC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__10JAISoundIDFUl) {
+asm JAISoundID::JAISoundID(u32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__10JAISoundIDFUl.s"
 }
@@ -950,7 +1092,7 @@ ASM_FUNCTION(__ct__10JAISoundIDFUl) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
+asm void dComIfGp_particle_set(u16 field_0, cXyz const* field_1, csXyz const* field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -961,7 +1103,7 @@ ASM_FUNCTION(dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseTRMtx__8J3DModelFPA4_f) {
+extern "C" asm void setBaseTRMtx__8J3DModelFPA4_f() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/setBaseTRMtx__8J3DModelFPA4_f.s"
 }
@@ -972,7 +1114,7 @@ ASM_FUNCTION(setBaseTRMtx__8J3DModelFPA4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(multVecZero__14mDoMtx_stack_cFP3Vec) {
+asm void mDoMtx_stack_c::multVecZero(Vec* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/multVecZero__14mDoMtx_stack_cFP3Vec.s"
 }
@@ -983,7 +1125,7 @@ ASM_FUNCTION(multVecZero__14mDoMtx_stack_cFP3Vec) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getAnmMtx__8J3DModelFi) {
+asm void J3DModel::getAnmMtx(s32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/getAnmMtx__8J3DModelFi.s"
 }
@@ -994,7 +1136,7 @@ ASM_FUNCTION(getAnmMtx__8J3DModelFi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
+asm void mDoAud_seStart(u32 field_0, Vec const* field_1, u32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/mDoAud_seStart__FUlPC3VecUlSc.s"
 }
@@ -1005,7 +1147,7 @@ ASM_FUNCTION(mDoAud_seStart__FUlPC3VecUlSc) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cM_ssin__Fs) {
+extern "C" asm void cM_ssin__Fs() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/cM_ssin__Fs.s"
 }
@@ -1016,7 +1158,7 @@ ASM_FUNCTION(cM_ssin__Fs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(abs__4cXyzCFv) {
+asm void cXyz::abs() const {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/abs__4cXyzCFv.s"
 }
@@ -1027,7 +1169,7 @@ ASM_FUNCTION(abs__4cXyzCFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fabsf__3stdFf) {
+asm void std::fabsf(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/fabsf__3stdFf.s"
 }
@@ -1038,7 +1180,7 @@ ASM_FUNCTION(fabsf__3stdFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startCheckSkipEdge__14dEvt_control_cFPv) {
+asm void dEvt_control_c::startCheckSkipEdge(void* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/startCheckSkipEdge__14dEvt_control_cFPv.s"
 }
@@ -1049,7 +1191,7 @@ ASM_FUNCTION(startCheckSkipEdge__14dEvt_control_cFPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getEvent__Fv) {
+asm void dComIfGp_getEvent() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_getEvent__Fv.s"
 }
@@ -1060,7 +1202,7 @@ ASM_FUNCTION(dComIfGp_getEvent__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dComIfGp_getVibration__Fv) {
+asm void dComIfGp_getVibration() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/dComIfGp_getVibration__Fv.s"
 }
@@ -1071,7 +1213,7 @@ ASM_FUNCTION(dComIfGp_getVibration__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__4cXyzFfff) {
+asm cXyz::cXyz(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__4cXyzFfff.s"
 }
@@ -1082,7 +1224,7 @@ ASM_FUNCTION(__ct__4cXyzFfff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__apl__4cXyzFRC3Vec) {
+asm void cXyz::operator+=(Vec const& field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__apl__4cXyzFRC3Vec.s"
 }

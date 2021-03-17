@@ -6,27 +6,72 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daRotBridge_c;
+struct dBgW;
+
+struct daRotBridge_HIO_c {
+	daRotBridge_HIO_c();
+	~daRotBridge_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daRotBridge_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+	void playerAreaCheck();
+	void moveBridge();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__17daRotBridge_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__13daRotBridge_cFv();
-extern "C" extern void CreateHeap__13daRotBridge_cFv();
-extern "C" extern void create__13daRotBridge_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void rideCallBack__13daRotBridge_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Execute__13daRotBridge_cFPPA3_A4_f();
-extern "C" extern void playerAreaCheck__13daRotBridge_cFv();
-extern "C" extern void moveBridge__13daRotBridge_cFv();
-extern "C" extern void Draw__13daRotBridge_cFv();
-extern "C" extern void Delete__13daRotBridge_cFv();
-extern "C" extern void daRotBridge_Draw__FP13daRotBridge_c();
-extern "C" extern void daRotBridge_Execute__FP13daRotBridge_c();
-extern "C" extern void daRotBridge_Delete__FP13daRotBridge_c();
-extern "C" extern void daRotBridge_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__17daRotBridge_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_rotBridge_cpp();
+extern "C" void Execute__13daRotBridge_cFPPA3_A4_f();
+void daRotBridge_Draw(daRotBridge_c*);
+void daRotBridge_Execute(daRotBridge_c*);
+void daRotBridge_Delete(daRotBridge_c*);
+void daRotBridge_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_rotBridge_cpp();
+
+extern "C" void __ct__17daRotBridge_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daRotBridge_cFv();
+extern "C" void CreateHeap__13daRotBridge_cFv();
+extern "C" void create__13daRotBridge_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void rideCallBack__13daRotBridge_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Execute__13daRotBridge_cFPPA3_A4_f();
+extern "C" void playerAreaCheck__13daRotBridge_cFv();
+extern "C" void moveBridge__13daRotBridge_cFv();
+extern "C" void Draw__13daRotBridge_cFv();
+extern "C" void Delete__13daRotBridge_cFv();
+extern "C" void daRotBridge_Draw__FP13daRotBridge_c();
+extern "C" void daRotBridge_Execute__FP13daRotBridge_c();
+extern "C" void daRotBridge_Delete__FP13daRotBridge_c();
+extern "C" void daRotBridge_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daRotBridge_HIO_cFv();
+extern "C" void __sinit_d_a_obj_rotBridge_cpp();
 SECTION_RODATA extern const u32 lit_3626;
 SECTION_RODATA extern const u8 l_bmdIdx[12];
 SECTION_RODATA extern const u8 l_dzbIdx[12];
@@ -54,8 +99,11 @@ SECTION_BSS extern u8 l_HIO[24];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -65,7 +113,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__17daRotBridge_HIO_cFv) {
+asm daRotBridge_HIO_c::daRotBridge_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__ct__17daRotBridge_HIO_cFv.s"
 }
@@ -76,7 +124,7 @@ ASM_FUNCTION(__ct__17daRotBridge_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -87,7 +135,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__13daRotBridge_cFv) {
+asm void daRotBridge_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/setBaseMtx__13daRotBridge_cFv.s"
 }
@@ -98,7 +146,7 @@ ASM_FUNCTION(setBaseMtx__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__13daRotBridge_cFv) {
+asm void daRotBridge_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/CreateHeap__13daRotBridge_cFv.s"
 }
@@ -109,7 +157,7 @@ ASM_FUNCTION(CreateHeap__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__13daRotBridge_cFv) {
+asm void daRotBridge_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/create__13daRotBridge_cFv.s"
 }
@@ -120,7 +168,7 @@ ASM_FUNCTION(create__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__dt__12J3DFrameCtrlFv.s"
 }
@@ -131,7 +179,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__13daRotBridge_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void daRotBridge_c::rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/rideCallBack__13daRotBridge_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -142,7 +190,7 @@ ASM_FUNCTION(rideCallBack__13daRotBridge_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__13daRotBridge_cFPPA3_A4_f) {
+extern "C" asm void Execute__13daRotBridge_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/Execute__13daRotBridge_cFPPA3_A4_f.s"
 }
@@ -153,7 +201,7 @@ ASM_FUNCTION(Execute__13daRotBridge_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(playerAreaCheck__13daRotBridge_cFv) {
+asm void daRotBridge_c::playerAreaCheck() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/playerAreaCheck__13daRotBridge_cFv.s"
 }
@@ -164,7 +212,7 @@ ASM_FUNCTION(playerAreaCheck__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(moveBridge__13daRotBridge_cFv) {
+asm void daRotBridge_c::moveBridge() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/moveBridge__13daRotBridge_cFv.s"
 }
@@ -175,7 +223,7 @@ ASM_FUNCTION(moveBridge__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__13daRotBridge_cFv) {
+asm void daRotBridge_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/Draw__13daRotBridge_cFv.s"
 }
@@ -186,7 +234,7 @@ ASM_FUNCTION(Draw__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__13daRotBridge_cFv) {
+asm void daRotBridge_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/Delete__13daRotBridge_cFv.s"
 }
@@ -197,7 +245,7 @@ ASM_FUNCTION(Delete__13daRotBridge_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotBridge_Draw__FP13daRotBridge_c) {
+asm void daRotBridge_Draw(daRotBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Draw__FP13daRotBridge_c.s"
 }
@@ -208,7 +256,7 @@ ASM_FUNCTION(daRotBridge_Draw__FP13daRotBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotBridge_Execute__FP13daRotBridge_c) {
+asm void daRotBridge_Execute(daRotBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Execute__FP13daRotBridge_c.s"
 }
@@ -219,7 +267,7 @@ ASM_FUNCTION(daRotBridge_Execute__FP13daRotBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotBridge_Delete__FP13daRotBridge_c) {
+asm void daRotBridge_Delete(daRotBridge_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Delete__FP13daRotBridge_c.s"
 }
@@ -230,7 +278,7 @@ ASM_FUNCTION(daRotBridge_Delete__FP13daRotBridge_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daRotBridge_Create__FP10fopAc_ac_c) {
+asm void daRotBridge_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/daRotBridge_Create__FP10fopAc_ac_c.s"
 }
@@ -241,7 +289,7 @@ ASM_FUNCTION(daRotBridge_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__17daRotBridge_HIO_cFv) {
+asm daRotBridge_HIO_c::~daRotBridge_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__dt__17daRotBridge_HIO_cFv.s"
 }
@@ -252,7 +300,7 @@ ASM_FUNCTION(__dt__17daRotBridge_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_rotBridge_cpp) {
+extern "C" asm void __sinit_d_a_obj_rotBridge_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotBridge/d_a_obj_rotBridge/__sinit_d_a_obj_rotBridge_cpp.s"
 }

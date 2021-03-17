@@ -6,44 +6,110 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct mDoExt_McaMorfSO;
+struct cXyz;
+struct daB_DRE_c;
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct mDoExt_McaMorfSO {
+};
+
+struct daB_DRE_c {
+	void SetAnm(mDoExt_McaMorfSO*, s32, s32, f32, f32);
+	void CameraSet();
+	void SetStopingCam();
+	void SetCMoveCam(cXyz, f32);
+	void SetCMoveCam(cXyz, f32, f32);
+	void SetMoveCam(f32, f32);
+	void SetReleaseCam();
+	void CamAction2();
+	void DrAction2();
+	void CamAction();
+	void Action();
+	void DrAction();
+	void SoundChk();
+	void Execute();
+	void SpeedSet();
+	void BreathSet();
+	void Delete();
+	void setBaseMtx();
+	void create();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct obj_ystone_class {
+	void setCurrentPos(cXyz);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daB_DRE_Create__FP10fopAc_ac_c();
-extern "C" extern void SetAnm__9daB_DRE_cFP16mDoExt_McaMorfSOiiff();
-extern "C" extern void daB_DRE_Delete__FP9daB_DRE_c();
-extern "C" extern void CameraSet__9daB_DRE_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void SetStopingCam__9daB_DRE_cFv();
-extern "C" extern void SetStopCam__9daB_DRE_cF4cXyzffs();
-extern "C" extern void SetCMoveCam__9daB_DRE_cF4cXyzf();
-extern "C" extern void SetCMoveCam__9daB_DRE_cF4cXyzff();
-extern "C" extern void SetEyeMoveCam__9daB_DRE_cF4cXyzffsf();
-extern "C" extern void SetEyeMoveCam__9daB_DRE_cF4cXyzffsff();
-extern "C" extern void SetMoveCam__9daB_DRE_cFff();
-extern "C" extern void SetReleaseCam__9daB_DRE_cFv();
-extern "C" extern void CamAction2__9daB_DRE_cFv();
-extern "C" extern void DrAction2__9daB_DRE_cFv();
-extern "C" extern void CamAction__9daB_DRE_cFv();
-extern "C" extern void Action__9daB_DRE_cFv();
-extern "C" extern void DrAction__9daB_DRE_cFv();
-extern "C" extern void SoundChk__9daB_DRE_cFv();
-extern "C" extern void Execute__9daB_DRE_cFv();
-extern "C" extern void SpeedSet__9daB_DRE_cFv();
-extern "C" extern void BreathSet__9daB_DRE_cFv();
-extern "C" extern void Delete__9daB_DRE_cFv();
-extern "C" extern void setBaseMtx__9daB_DRE_cFv();
-extern "C" extern void daB_DRE_Draw__FP9daB_DRE_c();
-extern "C" extern void daB_DRE_Execute__FP9daB_DRE_c();
-extern "C" extern void create__9daB_DRE_cFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daB_DRE_IsDelete__FP9daB_DRE_c();
-extern "C" extern void __sinit_d_a_b_dre_cpp();
-extern "C" extern void func_805CAD1C();
-extern "C" extern void func_805CAD24();
-extern "C" extern void setCurrentPos__16obj_ystone_classF4cXyz();
+void useHeapInit(fopAc_ac_c*);
+void daB_DRE_Create(fopAc_ac_c*);
+void daB_DRE_Delete(daB_DRE_c*);
+extern "C" void SetStopCam__9daB_DRE_cF4cXyzffs();
+extern "C" void SetEyeMoveCam__9daB_DRE_cF4cXyzffsf();
+extern "C" void SetEyeMoveCam__9daB_DRE_cF4cXyzffsff();
+void daB_DRE_Draw(daB_DRE_c*);
+void daB_DRE_Execute(daB_DRE_c*);
+bool daB_DRE_IsDelete(daB_DRE_c*);
+extern "C" void __sinit_d_a_b_dre_cpp();
+extern "C" void func_805CAD1C();
+extern "C" void func_805CAD24();
+
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daB_DRE_Create__FP10fopAc_ac_c();
+extern "C" void SetAnm__9daB_DRE_cFP16mDoExt_McaMorfSOiiff();
+extern "C" void daB_DRE_Delete__FP9daB_DRE_c();
+extern "C" void CameraSet__9daB_DRE_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void SetStopingCam__9daB_DRE_cFv();
+extern "C" void SetStopCam__9daB_DRE_cF4cXyzffs();
+extern "C" void SetCMoveCam__9daB_DRE_cF4cXyzf();
+extern "C" void SetCMoveCam__9daB_DRE_cF4cXyzff();
+extern "C" void SetEyeMoveCam__9daB_DRE_cF4cXyzffsf();
+extern "C" void SetEyeMoveCam__9daB_DRE_cF4cXyzffsff();
+extern "C" void SetMoveCam__9daB_DRE_cFff();
+extern "C" void SetReleaseCam__9daB_DRE_cFv();
+extern "C" void CamAction2__9daB_DRE_cFv();
+extern "C" void DrAction2__9daB_DRE_cFv();
+extern "C" void CamAction__9daB_DRE_cFv();
+extern "C" void Action__9daB_DRE_cFv();
+extern "C" void DrAction__9daB_DRE_cFv();
+extern "C" void SoundChk__9daB_DRE_cFv();
+extern "C" void Execute__9daB_DRE_cFv();
+extern "C" void SpeedSet__9daB_DRE_cFv();
+extern "C" void BreathSet__9daB_DRE_cFv();
+extern "C" void Delete__9daB_DRE_cFv();
+extern "C" void setBaseMtx__9daB_DRE_cFv();
+extern "C" void daB_DRE_Draw__FP9daB_DRE_c();
+extern "C" void daB_DRE_Execute__FP9daB_DRE_c();
+extern "C" void create__9daB_DRE_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" bool daB_DRE_IsDelete__FP9daB_DRE_c();
+extern "C" void __sinit_d_a_b_dre_cpp();
+extern "C" void func_805CAD1C();
+extern "C" void func_805CAD24();
+extern "C" void setCurrentPos__16obj_ystone_classF4cXyz();
 SECTION_RODATA extern const u32 lit_3844;
 SECTION_RODATA extern const u8 lit_3862[4];
 SECTION_RODATA extern const u32 lit_3863;
@@ -197,8 +263,11 @@ SECTION_BSS extern u8 data_805CB138[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -208,7 +277,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -219,7 +288,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/__dt__12J3DFrameCtrlFv.s"
 }
@@ -230,7 +299,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DRE_Create__FP10fopAc_ac_c) {
+asm void daB_DRE_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_Create__FP10fopAc_ac_c.s"
 }
@@ -241,7 +310,7 @@ ASM_FUNCTION(daB_DRE_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetAnm__9daB_DRE_cFP16mDoExt_McaMorfSOiiff) {
+asm void daB_DRE_c::SetAnm(mDoExt_McaMorfSO* field_0, s32 field_1, s32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetAnm__9daB_DRE_cFP16mDoExt_McaMorfSOiiff.s"
 }
@@ -252,7 +321,7 @@ ASM_FUNCTION(SetAnm__9daB_DRE_cFP16mDoExt_McaMorfSOiiff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DRE_Delete__FP9daB_DRE_c) {
+asm void daB_DRE_Delete(daB_DRE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_Delete__FP9daB_DRE_c.s"
 }
@@ -263,7 +332,7 @@ ASM_FUNCTION(daB_DRE_Delete__FP9daB_DRE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CameraSet__9daB_DRE_cFv) {
+asm void daB_DRE_c::CameraSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/CameraSet__9daB_DRE_cFv.s"
 }
@@ -274,7 +343,7 @@ ASM_FUNCTION(CameraSet__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/__dt__4cXyzFv.s"
 }
@@ -285,7 +354,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetStopingCam__9daB_DRE_cFv) {
+asm void daB_DRE_c::SetStopingCam() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetStopingCam__9daB_DRE_cFv.s"
 }
@@ -296,7 +365,7 @@ ASM_FUNCTION(SetStopingCam__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetStopCam__9daB_DRE_cF4cXyzffs) {
+extern "C" asm void SetStopCam__9daB_DRE_cF4cXyzffs() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetStopCam__9daB_DRE_cF4cXyzffs.s"
 }
@@ -307,7 +376,7 @@ ASM_FUNCTION(SetStopCam__9daB_DRE_cF4cXyzffs) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCMoveCam__9daB_DRE_cF4cXyzf) {
+asm void daB_DRE_c::SetCMoveCam(cXyz field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetCMoveCam__9daB_DRE_cF4cXyzf.s"
 }
@@ -318,7 +387,7 @@ ASM_FUNCTION(SetCMoveCam__9daB_DRE_cF4cXyzf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetCMoveCam__9daB_DRE_cF4cXyzff) {
+asm void daB_DRE_c::SetCMoveCam(cXyz field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetCMoveCam__9daB_DRE_cF4cXyzff.s"
 }
@@ -329,7 +398,7 @@ ASM_FUNCTION(SetCMoveCam__9daB_DRE_cF4cXyzff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetEyeMoveCam__9daB_DRE_cF4cXyzffsf) {
+extern "C" asm void SetEyeMoveCam__9daB_DRE_cF4cXyzffsf() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetEyeMoveCam__9daB_DRE_cF4cXyzffsf.s"
 }
@@ -340,7 +409,7 @@ ASM_FUNCTION(SetEyeMoveCam__9daB_DRE_cF4cXyzffsf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetEyeMoveCam__9daB_DRE_cF4cXyzffsff) {
+extern "C" asm void SetEyeMoveCam__9daB_DRE_cF4cXyzffsff() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetEyeMoveCam__9daB_DRE_cF4cXyzffsff.s"
 }
@@ -351,7 +420,7 @@ ASM_FUNCTION(SetEyeMoveCam__9daB_DRE_cF4cXyzffsff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetMoveCam__9daB_DRE_cFff) {
+asm void daB_DRE_c::SetMoveCam(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetMoveCam__9daB_DRE_cFff.s"
 }
@@ -362,7 +431,7 @@ ASM_FUNCTION(SetMoveCam__9daB_DRE_cFff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SetReleaseCam__9daB_DRE_cFv) {
+asm void daB_DRE_c::SetReleaseCam() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SetReleaseCam__9daB_DRE_cFv.s"
 }
@@ -373,7 +442,7 @@ ASM_FUNCTION(SetReleaseCam__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CamAction2__9daB_DRE_cFv) {
+asm void daB_DRE_c::CamAction2() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/CamAction2__9daB_DRE_cFv.s"
 }
@@ -384,7 +453,7 @@ ASM_FUNCTION(CamAction2__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DrAction2__9daB_DRE_cFv) {
+asm void daB_DRE_c::DrAction2() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/DrAction2__9daB_DRE_cFv.s"
 }
@@ -395,7 +464,7 @@ ASM_FUNCTION(DrAction2__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CamAction__9daB_DRE_cFv) {
+asm void daB_DRE_c::CamAction() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/CamAction__9daB_DRE_cFv.s"
 }
@@ -406,7 +475,7 @@ ASM_FUNCTION(CamAction__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Action__9daB_DRE_cFv) {
+asm void daB_DRE_c::Action() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/Action__9daB_DRE_cFv.s"
 }
@@ -417,7 +486,7 @@ ASM_FUNCTION(Action__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(DrAction__9daB_DRE_cFv) {
+asm void daB_DRE_c::DrAction() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/DrAction__9daB_DRE_cFv.s"
 }
@@ -428,7 +497,7 @@ ASM_FUNCTION(DrAction__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SoundChk__9daB_DRE_cFv) {
+asm void daB_DRE_c::SoundChk() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SoundChk__9daB_DRE_cFv.s"
 }
@@ -439,7 +508,7 @@ ASM_FUNCTION(SoundChk__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daB_DRE_cFv) {
+asm void daB_DRE_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/Execute__9daB_DRE_cFv.s"
 }
@@ -450,7 +519,7 @@ ASM_FUNCTION(Execute__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SpeedSet__9daB_DRE_cFv) {
+asm void daB_DRE_c::SpeedSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/SpeedSet__9daB_DRE_cFv.s"
 }
@@ -461,7 +530,7 @@ ASM_FUNCTION(SpeedSet__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(BreathSet__9daB_DRE_cFv) {
+asm void daB_DRE_c::BreathSet() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/BreathSet__9daB_DRE_cFv.s"
 }
@@ -472,7 +541,7 @@ ASM_FUNCTION(BreathSet__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daB_DRE_cFv) {
+asm void daB_DRE_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/Delete__9daB_DRE_cFv.s"
 }
@@ -483,7 +552,7 @@ ASM_FUNCTION(Delete__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daB_DRE_cFv) {
+asm void daB_DRE_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/setBaseMtx__9daB_DRE_cFv.s"
 }
@@ -494,7 +563,7 @@ ASM_FUNCTION(setBaseMtx__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DRE_Draw__FP9daB_DRE_c) {
+asm void daB_DRE_Draw(daB_DRE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_Draw__FP9daB_DRE_c.s"
 }
@@ -505,7 +574,7 @@ ASM_FUNCTION(daB_DRE_Draw__FP9daB_DRE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daB_DRE_Execute__FP9daB_DRE_c) {
+asm void daB_DRE_Execute(daB_DRE_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_Execute__FP9daB_DRE_c.s"
 }
@@ -516,7 +585,7 @@ ASM_FUNCTION(daB_DRE_Execute__FP9daB_DRE_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daB_DRE_cFv) {
+asm void daB_DRE_c::create() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/create__9daB_DRE_cFv.s"
 }
@@ -527,7 +596,7 @@ ASM_FUNCTION(create__9daB_DRE_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -535,21 +604,16 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 
 
 /* 805CACAC-805CACB4 0008+00 .text      daB_DRE_IsDelete__FP9daB_DRE_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daB_DRE_IsDelete__FP9daB_DRE_c) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_IsDelete__FP9daB_DRE_c.s"
+bool daB_DRE_IsDelete(daB_DRE_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805CACB4-805CAD1C 0068+00 .text      __sinit_d_a_b_dre_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_b_dre_cpp) {
+extern "C" asm void __sinit_d_a_b_dre_cpp() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/__sinit_d_a_b_dre_cpp.s"
 }
@@ -560,7 +624,7 @@ ASM_FUNCTION(__sinit_d_a_b_dre_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805CAD1C) {
+extern "C" asm void func_805CAD1C() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/func_805CAD1C.s"
 }
@@ -571,7 +635,7 @@ ASM_FUNCTION(func_805CAD1C) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_805CAD24) {
+extern "C" asm void func_805CAD24() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/func_805CAD24.s"
 }
@@ -582,7 +646,7 @@ ASM_FUNCTION(func_805CAD24) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setCurrentPos__16obj_ystone_classF4cXyz) {
+asm void obj_ystone_class::setCurrentPos(cXyz field_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/setCurrentPos__16obj_ystone_classF4cXyz.s"
 }

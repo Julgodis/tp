@@ -6,30 +6,91 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct fopAc_ac_c;
+struct daObjLdy_c;
+struct csXyz;
+
+struct daObjLdy_c {
+	void create_init();
+	void initBaseMtx();
+	void setBaseMtx();
+	void getJointAngle(csXyz*, s32);
+	void setNormalClothPos();
+	void calcJointAngle();
+	bool divorceParent();
+};
+
+struct csXyz {
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct LaundJoint_c {
+	~LaundJoint_c();
+	LaundJoint_c();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void create_init__10daObjLdy_cFv();
-extern "C" extern void initBaseMtx__10daObjLdy_cFv();
-extern "C" extern void setBaseMtx__10daObjLdy_cFv();
-extern "C" extern void getJointAngle__10daObjLdy_cFP5csXyzi();
-extern "C" extern void setNormalClothPos__10daObjLdy_cFv();
-extern "C" extern void calcJointAngle__10daObjLdy_cFv();
-extern "C" extern void divorceParent__10daObjLdy_cFv();
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void createSolidHeap__FP10fopAc_ac_c();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void daObjLdy_Draw__FP10daObjLdy_c();
-extern "C" extern void daObjLdy_Execute__FP10daObjLdy_c();
-extern "C" extern void daObjLdy_IsDelete__FP10daObjLdy_c();
-extern "C" extern void daObjLdy_Delete__FP10daObjLdy_c();
-extern "C" extern void __dt__12LaundJoint_cFv();
-extern "C" extern void daObjLdy_Create__FP10fopAc_ac_c();
-extern "C" extern void __ct__12LaundJoint_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__10cCcD_GSttsFv();
+void nodeCallBack(J3DJoint*, s32);
+void createSolidHeap(fopAc_ac_c*);
+void daObjLdy_Draw(daObjLdy_c*);
+void daObjLdy_Execute(daObjLdy_c*);
+bool daObjLdy_IsDelete(daObjLdy_c*);
+void daObjLdy_Delete(daObjLdy_c*);
+void daObjLdy_Create(fopAc_ac_c*);
+
+extern "C" void create_init__10daObjLdy_cFv();
+extern "C" void initBaseMtx__10daObjLdy_cFv();
+extern "C" void setBaseMtx__10daObjLdy_cFv();
+extern "C" void getJointAngle__10daObjLdy_cFP5csXyzi();
+extern "C" void setNormalClothPos__10daObjLdy_cFv();
+extern "C" void calcJointAngle__10daObjLdy_cFv();
+extern "C" bool divorceParent__10daObjLdy_cFv();
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void daObjLdy_Draw__FP10daObjLdy_c();
+extern "C" void daObjLdy_Execute__FP10daObjLdy_c();
+extern "C" bool daObjLdy_IsDelete__FP10daObjLdy_c();
+extern "C" void daObjLdy_Delete__FP10daObjLdy_c();
+extern "C" void __dt__12LaundJoint_cFv();
+extern "C" void daObjLdy_Create__FP10fopAc_ac_c();
+extern "C" void __ct__12LaundJoint_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 SECTION_RODATA extern const u8 M_attr__10daObjLdy_c[52];
 SECTION_RODATA extern const u32 lit_3751;
 SECTION_RODATA extern const u32 lit_3752;
@@ -62,7 +123,9 @@ SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -72,7 +135,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create_init__10daObjLdy_cFv) {
+asm void daObjLdy_c::create_init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/create_init__10daObjLdy_cFv.s"
 }
@@ -83,7 +146,7 @@ ASM_FUNCTION(create_init__10daObjLdy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__10daObjLdy_cFv) {
+asm void daObjLdy_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/initBaseMtx__10daObjLdy_cFv.s"
 }
@@ -94,7 +157,7 @@ ASM_FUNCTION(initBaseMtx__10daObjLdy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__10daObjLdy_cFv) {
+asm void daObjLdy_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/setBaseMtx__10daObjLdy_cFv.s"
 }
@@ -105,7 +168,7 @@ ASM_FUNCTION(setBaseMtx__10daObjLdy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getJointAngle__10daObjLdy_cFP5csXyzi) {
+asm void daObjLdy_c::getJointAngle(csXyz* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/getJointAngle__10daObjLdy_cFP5csXyzi.s"
 }
@@ -116,7 +179,7 @@ ASM_FUNCTION(getJointAngle__10daObjLdy_cFP5csXyzi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setNormalClothPos__10daObjLdy_cFv) {
+asm void daObjLdy_c::setNormalClothPos() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/setNormalClothPos__10daObjLdy_cFv.s"
 }
@@ -127,7 +190,7 @@ ASM_FUNCTION(setNormalClothPos__10daObjLdy_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcJointAngle__10daObjLdy_cFv) {
+asm void daObjLdy_c::calcJointAngle() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/calcJointAngle__10daObjLdy_cFv.s"
 }
@@ -135,21 +198,16 @@ ASM_FUNCTION(calcJointAngle__10daObjLdy_cFv) {
 
 
 /* 80C5183C-80C51844 0008+00 .text      divorceParent__10daObjLdy_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(divorceParent__10daObjLdy_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/divorceParent__10daObjLdy_cFv.s"
+bool daObjLdy_c::divorceParent() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C51844-80C518FC 00B8+00 .text      nodeCallBack__FP8J3DJointi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/nodeCallBack__FP8J3DJointi.s"
 }
@@ -160,7 +218,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
+asm void createSolidHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/createSolidHeap__FP10fopAc_ac_c.s"
 }
@@ -171,7 +229,7 @@ ASM_FUNCTION(createSolidHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__12J3DFrameCtrlFv.s"
 }
@@ -182,7 +240,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLdy_Draw__FP10daObjLdy_c) {
+asm void daObjLdy_Draw(daObjLdy_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_Draw__FP10daObjLdy_c.s"
 }
@@ -193,7 +251,7 @@ ASM_FUNCTION(daObjLdy_Draw__FP10daObjLdy_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLdy_Execute__FP10daObjLdy_c) {
+asm void daObjLdy_Execute(daObjLdy_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_Execute__FP10daObjLdy_c.s"
 }
@@ -201,21 +259,16 @@ ASM_FUNCTION(daObjLdy_Execute__FP10daObjLdy_c) {
 
 
 /* 80C51BDC-80C51BE4 0008+00 .text      daObjLdy_IsDelete__FP10daObjLdy_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObjLdy_IsDelete__FP10daObjLdy_c) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_IsDelete__FP10daObjLdy_c.s"
+bool daObjLdy_IsDelete(daObjLdy_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C51BE4-80C51D2C 0148+00 .text      daObjLdy_Delete__FP10daObjLdy_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLdy_Delete__FP10daObjLdy_c) {
+asm void daObjLdy_Delete(daObjLdy_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_Delete__FP10daObjLdy_c.s"
 }
@@ -226,7 +279,7 @@ ASM_FUNCTION(daObjLdy_Delete__FP10daObjLdy_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12LaundJoint_cFv) {
+asm LaundJoint_c::~LaundJoint_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__12LaundJoint_cFv.s"
 }
@@ -237,7 +290,7 @@ ASM_FUNCTION(__dt__12LaundJoint_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjLdy_Create__FP10fopAc_ac_c) {
+asm void daObjLdy_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_Create__FP10fopAc_ac_c.s"
 }
@@ -245,21 +298,16 @@ ASM_FUNCTION(daObjLdy_Create__FP10fopAc_ac_c) {
 
 
 /* 80C51EC0-80C51EC4 0004+00 .text      __ct__12LaundJoint_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(__ct__12LaundJoint_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__ct__12LaundJoint_cFv.s"
+LaundJoint_c::LaundJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C51EC4-80C51F0C 0048+00 .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__8cM3dGCylFv.s"
 }
@@ -270,7 +318,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__8cM3dGAabFv.s"
 }
@@ -281,7 +329,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__10dCcD_GSttsFv.s"
 }
@@ -292,7 +340,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__dt__10cCcD_GSttsFv.s"
 }

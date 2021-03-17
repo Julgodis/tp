@@ -6,35 +6,84 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daGrdWater_c;
+
+struct daGrdWater_HIO_c {
+	daGrdWater_HIO_c();
+	~daGrdWater_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daGrdWater_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	daGrdWater_c();
+	void init_modeWait();
+	void modeWait();
+	void init_modeLevelUpA();
+	void modeLevelUpA();
+	void init_modeLevelDownA();
+	void modeLevelDownA();
+	void init_modeLevelUpB();
+	void modeLevelUpB();
+	void init_modeLevelDownB();
+	void modeLevelDownB();
+	void Draw();
+	void Delete();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daGrdWater_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daGrdWater_cFv();
-extern "C" extern void CreateHeap__12daGrdWater_cFv();
-extern "C" extern void create__12daGrdWater_cFv();
-extern "C" extern void __ct__12daGrdWater_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void Execute__12daGrdWater_cFPPA3_A4_f();
-extern "C" extern void init_modeWait__12daGrdWater_cFv();
-extern "C" extern void modeWait__12daGrdWater_cFv();
-extern "C" extern void init_modeLevelUpA__12daGrdWater_cFv();
-extern "C" extern void modeLevelUpA__12daGrdWater_cFv();
-extern "C" extern void init_modeLevelDownA__12daGrdWater_cFv();
-extern "C" extern void modeLevelDownA__12daGrdWater_cFv();
-extern "C" extern void init_modeLevelUpB__12daGrdWater_cFv();
-extern "C" extern void modeLevelUpB__12daGrdWater_cFv();
-extern "C" extern void init_modeLevelDownB__12daGrdWater_cFv();
-extern "C" extern void modeLevelDownB__12daGrdWater_cFv();
-extern "C" extern void Draw__12daGrdWater_cFv();
-extern "C" extern void Delete__12daGrdWater_cFv();
-extern "C" extern void daGrdWater_Draw__FP12daGrdWater_c();
-extern "C" extern void daGrdWater_Execute__FP12daGrdWater_c();
-extern "C" extern void daGrdWater_Delete__FP12daGrdWater_c();
-extern "C" extern void daGrdWater_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daGrdWater_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_groundwater_cpp();
+extern "C" void Execute__12daGrdWater_cFPPA3_A4_f();
+void daGrdWater_Draw(daGrdWater_c*);
+void daGrdWater_Execute(daGrdWater_c*);
+void daGrdWater_Delete(daGrdWater_c*);
+void daGrdWater_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_groundwater_cpp();
+
+extern "C" void __ct__16daGrdWater_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daGrdWater_cFv();
+extern "C" void CreateHeap__12daGrdWater_cFv();
+extern "C" void create__12daGrdWater_cFv();
+extern "C" void __ct__12daGrdWater_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__12daGrdWater_cFPPA3_A4_f();
+extern "C" void init_modeWait__12daGrdWater_cFv();
+extern "C" void modeWait__12daGrdWater_cFv();
+extern "C" void init_modeLevelUpA__12daGrdWater_cFv();
+extern "C" void modeLevelUpA__12daGrdWater_cFv();
+extern "C" void init_modeLevelDownA__12daGrdWater_cFv();
+extern "C" void modeLevelDownA__12daGrdWater_cFv();
+extern "C" void init_modeLevelUpB__12daGrdWater_cFv();
+extern "C" void modeLevelUpB__12daGrdWater_cFv();
+extern "C" void init_modeLevelDownB__12daGrdWater_cFv();
+extern "C" void modeLevelDownB__12daGrdWater_cFv();
+extern "C" void Draw__12daGrdWater_cFv();
+extern "C" void Delete__12daGrdWater_cFv();
+extern "C" void daGrdWater_Draw__FP12daGrdWater_c();
+extern "C" void daGrdWater_Execute__FP12daGrdWater_c();
+extern "C" void daGrdWater_Delete__FP12daGrdWater_c();
+extern "C" void daGrdWater_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daGrdWater_HIO_cFv();
+extern "C" void __sinit_d_a_obj_groundwater_cpp();
 SECTION_RODATA extern const u8 lit_3642[4];
 SECTION_RODATA extern const u32 lit_3712;
 SECTION_RODATA extern const u8 lit_3891[8];
@@ -62,8 +111,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -73,7 +125,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daGrdWater_HIO_cFv) {
+asm daGrdWater_HIO_c::daGrdWater_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__ct__16daGrdWater_HIO_cFv.s"
 }
@@ -84,7 +136,7 @@ ASM_FUNCTION(__ct__16daGrdWater_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -95,7 +147,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daGrdWater_cFv) {
+asm void daGrdWater_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/setBaseMtx__12daGrdWater_cFv.s"
 }
@@ -106,7 +158,7 @@ ASM_FUNCTION(setBaseMtx__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daGrdWater_cFv) {
+asm void daGrdWater_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/CreateHeap__12daGrdWater_cFv.s"
 }
@@ -117,7 +169,7 @@ ASM_FUNCTION(CreateHeap__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daGrdWater_cFv) {
+asm void daGrdWater_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/create__12daGrdWater_cFv.s"
 }
@@ -128,7 +180,7 @@ ASM_FUNCTION(create__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daGrdWater_cFv) {
+asm daGrdWater_c::daGrdWater_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__ct__12daGrdWater_cFv.s"
 }
@@ -139,7 +191,7 @@ ASM_FUNCTION(__ct__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__dt__12J3DFrameCtrlFv.s"
 }
@@ -150,7 +202,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daGrdWater_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daGrdWater_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/Execute__12daGrdWater_cFPPA3_A4_f.s"
 }
@@ -161,7 +213,7 @@ ASM_FUNCTION(Execute__12daGrdWater_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__12daGrdWater_cFv) {
+asm void daGrdWater_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/init_modeWait__12daGrdWater_cFv.s"
 }
@@ -169,21 +221,16 @@ ASM_FUNCTION(init_modeWait__12daGrdWater_cFv) {
 
 
 /* 80C141A0-80C141A4 0004+00 .text      modeWait__12daGrdWater_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(modeWait__12daGrdWater_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/modeWait__12daGrdWater_cFv.s"
+void daGrdWater_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C141A4-80C1423C 0098+00 .text      init_modeLevelUpA__12daGrdWater_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLevelUpA__12daGrdWater_cFv) {
+asm void daGrdWater_c::init_modeLevelUpA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/init_modeLevelUpA__12daGrdWater_cFv.s"
 }
@@ -194,7 +241,7 @@ ASM_FUNCTION(init_modeLevelUpA__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLevelUpA__12daGrdWater_cFv) {
+asm void daGrdWater_c::modeLevelUpA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/modeLevelUpA__12daGrdWater_cFv.s"
 }
@@ -205,7 +252,7 @@ ASM_FUNCTION(modeLevelUpA__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLevelDownA__12daGrdWater_cFv) {
+asm void daGrdWater_c::init_modeLevelDownA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/init_modeLevelDownA__12daGrdWater_cFv.s"
 }
@@ -216,7 +263,7 @@ ASM_FUNCTION(init_modeLevelDownA__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLevelDownA__12daGrdWater_cFv) {
+asm void daGrdWater_c::modeLevelDownA() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/modeLevelDownA__12daGrdWater_cFv.s"
 }
@@ -227,7 +274,7 @@ ASM_FUNCTION(modeLevelDownA__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLevelUpB__12daGrdWater_cFv) {
+asm void daGrdWater_c::init_modeLevelUpB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/init_modeLevelUpB__12daGrdWater_cFv.s"
 }
@@ -238,7 +285,7 @@ ASM_FUNCTION(init_modeLevelUpB__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLevelUpB__12daGrdWater_cFv) {
+asm void daGrdWater_c::modeLevelUpB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/modeLevelUpB__12daGrdWater_cFv.s"
 }
@@ -249,7 +296,7 @@ ASM_FUNCTION(modeLevelUpB__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeLevelDownB__12daGrdWater_cFv) {
+asm void daGrdWater_c::init_modeLevelDownB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/init_modeLevelDownB__12daGrdWater_cFv.s"
 }
@@ -260,7 +307,7 @@ ASM_FUNCTION(init_modeLevelDownB__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeLevelDownB__12daGrdWater_cFv) {
+asm void daGrdWater_c::modeLevelDownB() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/modeLevelDownB__12daGrdWater_cFv.s"
 }
@@ -271,7 +318,7 @@ ASM_FUNCTION(modeLevelDownB__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daGrdWater_cFv) {
+asm void daGrdWater_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/Draw__12daGrdWater_cFv.s"
 }
@@ -282,7 +329,7 @@ ASM_FUNCTION(Draw__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daGrdWater_cFv) {
+asm void daGrdWater_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/Delete__12daGrdWater_cFv.s"
 }
@@ -293,7 +340,7 @@ ASM_FUNCTION(Delete__12daGrdWater_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrdWater_Draw__FP12daGrdWater_c) {
+asm void daGrdWater_Draw(daGrdWater_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/daGrdWater_Draw__FP12daGrdWater_c.s"
 }
@@ -304,7 +351,7 @@ ASM_FUNCTION(daGrdWater_Draw__FP12daGrdWater_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrdWater_Execute__FP12daGrdWater_c) {
+asm void daGrdWater_Execute(daGrdWater_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/daGrdWater_Execute__FP12daGrdWater_c.s"
 }
@@ -315,7 +362,7 @@ ASM_FUNCTION(daGrdWater_Execute__FP12daGrdWater_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrdWater_Delete__FP12daGrdWater_c) {
+asm void daGrdWater_Delete(daGrdWater_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/daGrdWater_Delete__FP12daGrdWater_c.s"
 }
@@ -326,7 +373,7 @@ ASM_FUNCTION(daGrdWater_Delete__FP12daGrdWater_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daGrdWater_Create__FP10fopAc_ac_c) {
+asm void daGrdWater_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/daGrdWater_Create__FP10fopAc_ac_c.s"
 }
@@ -337,7 +384,7 @@ ASM_FUNCTION(daGrdWater_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daGrdWater_HIO_cFv) {
+asm daGrdWater_HIO_c::~daGrdWater_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__dt__16daGrdWater_HIO_cFv.s"
 }
@@ -348,7 +395,7 @@ ASM_FUNCTION(__dt__16daGrdWater_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_groundwater_cpp) {
+extern "C" asm void __sinit_d_a_obj_groundwater_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_groundwater/d_a_obj_groundwater/__sinit_d_a_obj_groundwater_cpp.s"
 }

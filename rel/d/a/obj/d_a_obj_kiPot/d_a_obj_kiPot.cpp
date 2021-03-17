@@ -6,26 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daKiPot_c;
+
+struct daKiPot_HIO_c {
+	daKiPot_HIO_c();
+	~daKiPot_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daKiPot_c {
+	void setBaseMtx();
+	void create();
+	void Execute();
+	void procMain();
+	void init_modeWait();
+	void modeWait();
+	void chkEvent();
+	bool Draw();
+	bool Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daKiPot_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__9daKiPot_cFv();
-extern "C" extern void create__9daKiPot_cFv();
-extern "C" extern void Execute__9daKiPot_cFv();
-extern "C" extern void procMain__9daKiPot_cFv();
-extern "C" extern void init_modeWait__9daKiPot_cFv();
-extern "C" extern void modeWait__9daKiPot_cFv();
-extern "C" extern void chkEvent__9daKiPot_cFv();
-extern "C" extern void Draw__9daKiPot_cFv();
-extern "C" extern void Delete__9daKiPot_cFv();
-extern "C" extern void daKiPot_Draw__FP9daKiPot_c();
-extern "C" extern void daKiPot_Execute__FP9daKiPot_c();
-extern "C" extern void daKiPot_Delete__FP9daKiPot_c();
-extern "C" extern void daKiPot_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__13daKiPot_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_kiPot_cpp();
+void daKiPot_Draw(daKiPot_c*);
+void daKiPot_Execute(daKiPot_c*);
+void daKiPot_Delete(daKiPot_c*);
+void daKiPot_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_kiPot_cpp();
+
+extern "C" void __ct__13daKiPot_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__9daKiPot_cFv();
+extern "C" void create__9daKiPot_cFv();
+extern "C" void Execute__9daKiPot_cFv();
+extern "C" void procMain__9daKiPot_cFv();
+extern "C" void init_modeWait__9daKiPot_cFv();
+extern "C" void modeWait__9daKiPot_cFv();
+extern "C" void chkEvent__9daKiPot_cFv();
+extern "C" bool Draw__9daKiPot_cFv();
+extern "C" bool Delete__9daKiPot_cFv();
+extern "C" void daKiPot_Draw__FP9daKiPot_c();
+extern "C" void daKiPot_Execute__FP9daKiPot_c();
+extern "C" void daKiPot_Delete__FP9daKiPot_c();
+extern "C" void daKiPot_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daKiPot_HIO_cFv();
+extern "C" void __sinit_d_a_obj_kiPot_cpp();
 SECTION_RODATA extern const u32 lit_3683;
 SECTION_RODATA extern const u32 lit_3711;
 SECTION_RODATA extern const u32 lit_3712;
@@ -45,8 +82,11 @@ SECTION_BSS extern u8 data_80C4525C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -56,7 +96,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daKiPot_HIO_cFv) {
+asm daKiPot_HIO_c::daKiPot_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/__ct__13daKiPot_HIO_cFv.s"
 }
@@ -67,7 +107,7 @@ ASM_FUNCTION(__ct__13daKiPot_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -78,7 +118,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__9daKiPot_cFv) {
+asm void daKiPot_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/setBaseMtx__9daKiPot_cFv.s"
 }
@@ -89,7 +129,7 @@ ASM_FUNCTION(setBaseMtx__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daKiPot_cFv) {
+asm void daKiPot_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/create__9daKiPot_cFv.s"
 }
@@ -100,7 +140,7 @@ ASM_FUNCTION(create__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daKiPot_cFv) {
+asm void daKiPot_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/Execute__9daKiPot_cFv.s"
 }
@@ -111,7 +151,7 @@ ASM_FUNCTION(Execute__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(procMain__9daKiPot_cFv) {
+asm void daKiPot_c::procMain() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/procMain__9daKiPot_cFv.s"
 }
@@ -122,7 +162,7 @@ ASM_FUNCTION(procMain__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_modeWait__9daKiPot_cFv) {
+asm void daKiPot_c::init_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/init_modeWait__9daKiPot_cFv.s"
 }
@@ -133,7 +173,7 @@ ASM_FUNCTION(init_modeWait__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(modeWait__9daKiPot_cFv) {
+asm void daKiPot_c::modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/modeWait__9daKiPot_cFv.s"
 }
@@ -144,7 +184,7 @@ ASM_FUNCTION(modeWait__9daKiPot_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(chkEvent__9daKiPot_cFv) {
+asm void daKiPot_c::chkEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/chkEvent__9daKiPot_cFv.s"
 }
@@ -152,32 +192,22 @@ ASM_FUNCTION(chkEvent__9daKiPot_cFv) {
 
 
 /* 80C45058-80C45060 0008+00 .text      Draw__9daKiPot_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daKiPot_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/Draw__9daKiPot_cFv.s"
+bool daKiPot_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C45060-80C45068 0008+00 .text      Delete__9daKiPot_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daKiPot_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/Delete__9daKiPot_cFv.s"
+bool daKiPot_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C45068-80C45088 0020+00 .text      daKiPot_Draw__FP9daKiPot_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKiPot_Draw__FP9daKiPot_c) {
+asm void daKiPot_Draw(daKiPot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Draw__FP9daKiPot_c.s"
 }
@@ -188,7 +218,7 @@ ASM_FUNCTION(daKiPot_Draw__FP9daKiPot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKiPot_Execute__FP9daKiPot_c) {
+asm void daKiPot_Execute(daKiPot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Execute__FP9daKiPot_c.s"
 }
@@ -199,7 +229,7 @@ ASM_FUNCTION(daKiPot_Execute__FP9daKiPot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKiPot_Delete__FP9daKiPot_c) {
+asm void daKiPot_Delete(daKiPot_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Delete__FP9daKiPot_c.s"
 }
@@ -210,7 +240,7 @@ ASM_FUNCTION(daKiPot_Delete__FP9daKiPot_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daKiPot_Create__FP10fopAc_ac_c) {
+asm void daKiPot_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/daKiPot_Create__FP10fopAc_ac_c.s"
 }
@@ -221,7 +251,7 @@ ASM_FUNCTION(daKiPot_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daKiPot_HIO_cFv) {
+asm daKiPot_HIO_c::~daKiPot_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/__dt__13daKiPot_HIO_cFv.s"
 }
@@ -232,7 +262,7 @@ ASM_FUNCTION(__dt__13daKiPot_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_kiPot_cpp) {
+extern "C" asm void __sinit_d_a_obj_kiPot_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/__sinit_d_a_obj_kiPot_cpp.s"
 }

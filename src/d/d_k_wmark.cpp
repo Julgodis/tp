@@ -6,15 +6,162 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build kankyo_class (kankyo_class) False/False
+/* top-level dependencies (begin kankyo_class) */
+/* top-level dependencies (end kankyo_class) */
+struct kankyo_class {
+};
+
+// build dkWmark_c (dkWmark_c) False/False
+/* top-level dependencies (begin dkWmark_c) */
+/* top-level dependencies (end dkWmark_c) */
+struct dkWmark_c {
+	/* 80261640 */ ~dkWmark_c();
+	/* 802616C4 */ void setMatrix();
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+	/* 80267128 */ void atan2sX_Z() const;
+};
+
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build JKRSolidHeap (JKRSolidHeap) False/False
+/* top-level dependencies (begin JKRSolidHeap) */
+/* top-level dependencies (end JKRSolidHeap) */
+struct JKRSolidHeap {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+// build J3DLightObj (J3DLightObj) False/False
+/* top-level dependencies (begin J3DLightObj) */
+/* top-level dependencies (end J3DLightObj) */
+struct J3DLightObj {
+	/* 80018C0C */ J3DLightObj();
+};
+
+// build fopAcM_gc_c (fopAcM_gc_c) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin fopAcM_gc_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end fopAcM_gc_c) */
+struct fopAcM_gc_c {
+	// cXyz
+	/* 8001DCBC */ void gndCheck(cXyz const*);
+};
+
+// build dRes_control_c (dRes_control_c) False/False
+// build dRes_info_c (dRes_info_c) False/False
+/* top-level dependencies (begin dRes_info_c) */
+/* top-level dependencies (end dRes_info_c) */
+struct dRes_info_c {
+};
+
+/* top-level dependencies (begin dRes_control_c) */
+// outer dependency: dRes_info_c
+/* top-level dependencies (end dRes_control_c) */
+struct dRes_control_c {
+	// dRes_info_c
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+};
+
+// build dRes_info_c (dRes_info_c) True/True
+// build cBgS (cBgS) False/False
+// build cM3dGPla (cM3dGPla) False/False
+/* top-level dependencies (begin cM3dGPla) */
+/* top-level dependencies (end cM3dGPla) */
+struct cM3dGPla {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
+/* top-level dependencies (begin cBgS) */
+// outer dependency: cM3dGPla
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end cBgS) */
+struct cBgS {
+	// cM3dGPla
+	// cBgS_PolyInfo
+	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build cM3dGPla (cM3dGPla) True/True
+// build dBgS (dBgS) False/False
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+/* top-level dependencies (begin dBgS) */
+// outer dependency: cBgS_PolyInfo
+/* top-level dependencies (end dBgS) */
+struct dBgS {
+	// cBgS_PolyInfo
+	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
+};
+
+// build dScnKy_env_light_c (dScnKy_env_light_c) False/False
+// build J3DModelData (J3DModelData) True/True
+// build cXyz (cXyz) True/True
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
+/* top-level dependencies (begin dScnKy_env_light_c) */
+// outer dependency: J3DModelData
+// outer dependency: cXyz
+// outer dependency: dKy_tevstr_c
+/* top-level dependencies (end dScnKy_env_light_c) */
+struct dScnKy_env_light_c {
+	// J3DModelData
+	// cXyz
+	// dKy_tevstr_c
+	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
+};
+
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build J3DLightInfo (J3DLightInfo) False/False
+/* top-level dependencies (begin J3DLightInfo) */
+/* top-level dependencies (end J3DLightInfo) */
+struct J3DLightInfo {
+	/* 803256C4 */ void operator=(J3DLightInfo const&);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void dkWmark_Create__FP12kankyo_class();
-extern "C" extern void __dt__9dkWmark_cFv();
-extern "C" extern void dkWmark_Delete__FP9dkWmark_c();
-extern "C" extern void setMatrix__9dkWmark_cFv();
-extern "C" extern void dkWmark_Execute__FP9dkWmark_c();
-extern "C" extern void dkWmark_Draw__FP9dkWmark_c();
+static void dkWmark_Create(kankyo_class*);
+static void dkWmark_Delete(dkWmark_c*);
+static void dkWmark_Execute(dkWmark_c*);
+static void dkWmark_Draw(dkWmark_c*);
+
+extern "C" static void dkWmark_Create__FP12kankyo_class();
+extern "C" void __dt__9dkWmark_cFv();
+extern "C" static void dkWmark_Delete__FP9dkWmark_c();
+extern "C" void setMatrix__9dkWmark_cFv();
+extern "C" static void dkWmark_Execute__FP9dkWmark_c();
+extern "C" static void dkWmark_Draw__FP9dkWmark_c();
 SECTION_RODATA extern const u8 data_8039A488[12];
 SECTION_RODATA extern const u8 d_d_k_wmark__stringBase0[12];
 SECTION_DATA extern void*l_dkWmark_Method[5];
@@ -39,36 +186,57 @@ SECTION_SDATA2 extern f64 lit_3908;
 // External References:
 // 
 
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" extern void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" extern void mDoExt_restoreCurrentHeap__Fv();
-extern "C" extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" extern void __ct__11J3DLightObjFv();
-extern "C" extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
-extern "C" extern void fopKyM_Delete__FPv();
-extern "C" extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern "C" extern void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
-extern "C" extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern "C" extern void atan2sX_Z__4cXyzCFv();
-extern "C" extern void cM_atan2s__Fff();
-extern "C" extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
-extern "C" extern void __dl__FPv();
-extern "C" extern void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" extern void PSMTXCopy();
-extern "C" extern void PSMTXTrans();
-extern "C" extern void PSVECSquareMag();
-extern "C" extern void __register_global_object();
-extern "C" extern void __construct_array();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _restgpr_26();
-extern "C" extern void abs();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopKyM_Delete(void*);
+void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void cM_atan2s(f32, f32);
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
+void operator delete(void*);
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void abs();
+
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fopKyM_Delete__FPv();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
+extern "C" void __dl__FPv();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void abs();
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*g_fopKy_Method[6];
@@ -89,12 +257,12 @@ SECTION_SBSS extern u8 struct_80450D64[4];
 // 
 
 /* ############################################################################################## */
-/* 8039A488-8039A494 000C+00 .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
+/* 8039A488-8039A494 000C+00 rc=1 efc=0 .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
 SECTION_RODATA const u8 data_8039A488[12] = {
 	0x00, 0x00, 0x00, 0x82, 0x5F, 0x4B, 0x32, 0x3C, 0x64, 0x6E, 0x78, 0x28,
 };
 
-/* 8039A494-8039A4A0 0006+06 .rodata    @stringBase0                                                 */
+/* 8039A494-8039A4A0 0006+06 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -103,54 +271,54 @@ SECTION_DEAD char* const stringBase_8039A494 = "Alink";
 SECTION_DEAD char* const pad_8039A49A = "\0\0\0\0\0";
 #pragma pop
 
-/* 80430C90-80430C9C 000C+00 .bss       @3644                                                        */
+/* 80430C90-80430C9C 000C+00 rc=1 efc=0 .bss       @3644                                                        */
 u8 lit_3644[12];
 
-/* 80430C9C-80430CA8 000C+00 .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
+/* 80430C9C-80430CA8 000C+00 rc=1 efc=0 .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
 u8 data_80430C9C[12];
 
-/* 80451130-80451134 0004+00 .sbss      m_nowID__9dkWmark_c                                          */
+/* 80451130-80451134 0004+00 rc=2 efc=0 .sbss      m_nowID__9dkWmark_c                                          */
 u8 m_nowID__9dkWmark_c[4];
 
-/* 80451134-80451138 0004+00 .sbss      None                                                         */
+/* 80451134-80451138 0004+00 rc=1 efc=0 .sbss      None                                                         */
 u8 data_80451134[4];
 
-/* 80454FB0-80454FB4 0004+00 .sdata2    @3718                                                        */
+/* 80454FB0-80454FB4 0004+00 rc=1 efc=0 .sdata2    @3718                                                        */
 f32 d_d_k_wmark__lit_3718 = 11.0f / 10.0f;
 
-/* 80454FB4-80454FB8 0004+00 .sdata2    @3719                                                        */
+/* 80454FB4-80454FB8 0004+00 rc=2 efc=0 .sdata2    @3719                                                        */
 f32 d_d_k_wmark__lit_3719 = 1.0f;
 
-/* 80454FB8-80454FBC 0004+00 .sdata2    @3720                                                        */
+/* 80454FB8-80454FBC 0004+00 rc=1 efc=0 .sdata2    @3720                                                        */
 f32 d_d_k_wmark__lit_3720 = 3.0f / 5.0f;
 
-/* 8026141C-80261640 0224+00 .text      dkWmark_Create__FP12kankyo_class                             */
+/* 8026141C-80261640 0224+00 rc=1 efc=0 .text      dkWmark_Create__FP12kankyo_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dkWmark_Create__FP12kankyo_class) {
+asm static void dkWmark_Create(kankyo_class* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Create__FP12kankyo_class.s"
 }
 #pragma pop
 
 
-/* 80261640-8026169C 005C+00 .text      __dt__9dkWmark_cFv                                           */
+/* 80261640-8026169C 005C+00 rc=1 efc=0 .text      __dt__9dkWmark_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__9dkWmark_cFv) {
+asm dkWmark_c::~dkWmark_c() {
 	nofralloc
 #include "asm/d/d_k_wmark/__dt__9dkWmark_cFv.s"
 }
 #pragma pop
 
 
-/* 8026169C-802616C4 0028+00 .text      dkWmark_Delete__FP9dkWmark_c                                 */
+/* 8026169C-802616C4 0028+00 rc=1 efc=0 .text      dkWmark_Delete__FP9dkWmark_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dkWmark_Delete__FP9dkWmark_c) {
+asm static void dkWmark_Delete(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Delete__FP9dkWmark_c.s"
 }
@@ -158,32 +326,32 @@ ASM_FUNCTION(dkWmark_Delete__FP9dkWmark_c) {
 
 
 /* ############################################################################################## */
-/* 80454FBC-80454FC0 0004+00 .sdata2    @3844                                                        */
+/* 80454FBC-80454FC0 0004+00 rc=1 efc=0 .sdata2    @3844                                                        */
 f32 d_d_k_wmark__lit_3844 = 100.0f;
 
-/* 80454FC0-80454FC8 0004+04 .sdata2    @3845                                                        */
+/* 80454FC0-80454FC8 0004+04 rc=2 efc=0 .sdata2    @3845                                                        */
 u8 d_d_k_wmark__lit_3845[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454FC8-80454FD0 0008+00 .sdata2    @3846                                                        */
+/* 80454FC8-80454FD0 0008+00 rc=1 efc=0 .sdata2    @3846                                                        */
 f64 d_d_k_wmark__lit_3846 = 0.5;
 
-/* 80454FD0-80454FD8 0008+00 .sdata2    @3847                                                        */
+/* 80454FD0-80454FD8 0008+00 rc=1 efc=0 .sdata2    @3847                                                        */
 f64 d_d_k_wmark__lit_3847 = 3.0;
 
-/* 80454FD8-80454FE0 0008+00 .sdata2    @3848                                                        */
+/* 80454FD8-80454FE0 0008+00 rc=1 efc=0 .sdata2    @3848                                                        */
 u8 d_d_k_wmark__lit_3848[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802616C4-80261964 02A0+00 .text      setMatrix__9dkWmark_cFv                                      */
+/* 802616C4-80261964 02A0+00 rc=2 efc=0 .text      setMatrix__9dkWmark_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMatrix__9dkWmark_cFv) {
+asm void dkWmark_c::setMatrix() {
 	nofralloc
 #include "asm/d/d_k_wmark/setMatrix__9dkWmark_cFv.s"
 }
@@ -191,14 +359,14 @@ ASM_FUNCTION(setMatrix__9dkWmark_cFv) {
 
 
 /* ############################################################################################## */
-/* 80454FE0-80454FE4 0004+00 .sdata2    @3873                                                        */
+/* 80454FE0-80454FE4 0004+00 rc=1 efc=0 .sdata2    @3873                                                        */
 f32 d_d_k_wmark__lit_3873 = 1.0f / 50.0f;
 
-/* 80261964-80261A18 00B4+00 .text      dkWmark_Execute__FP9dkWmark_c                                */
+/* 80261964-80261A18 00B4+00 rc=1 efc=0 .text      dkWmark_Execute__FP9dkWmark_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dkWmark_Execute__FP9dkWmark_c) {
+asm static void dkWmark_Execute(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Execute__FP9dkWmark_c.s"
 }
@@ -206,17 +374,17 @@ ASM_FUNCTION(dkWmark_Execute__FP9dkWmark_c) {
 
 
 /* ############################################################################################## */
-/* 80454FE4-80454FE8 0004+00 .sdata2    @3906                                                        */
+/* 80454FE4-80454FE8 0004+00 rc=1 efc=0 .sdata2    @3906                                                        */
 f32 d_d_k_wmark__lit_3906 = 50.0f;
 
-/* 80454FE8-80454FF0 0008+00 .sdata2    @3908                                                        */
+/* 80454FE8-80454FF0 0008+00 rc=1 efc=0 .sdata2    @3908                                                        */
 f64 lit_3908 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80261A18-80261B54 013C+00 .text      dkWmark_Draw__FP9dkWmark_c                                   */
+/* 80261A18-80261B54 013C+00 rc=1 efc=0 .text      dkWmark_Draw__FP9dkWmark_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dkWmark_Draw__FP9dkWmark_c) {
+asm static void dkWmark_Draw(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Draw__FP9dkWmark_c.s"
 }
@@ -224,7 +392,7 @@ ASM_FUNCTION(dkWmark_Draw__FP9dkWmark_c) {
 
 
 /* ############################################################################################## */
-/* 803C3430-803C3444 0014+00 .data      l_dkWmark_Method                                             */
+/* 803C3430-803C3444 0014+00 rc=1 efc=0 .data      l_dkWmark_Method                                             */
 void* l_dkWmark_Method[5] = {
 	(void*)dkWmark_Create__FP12kankyo_class,
 	(void*)dkWmark_Delete__FP9dkWmark_c,
@@ -233,7 +401,7 @@ void* l_dkWmark_Method[5] = {
 	(void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 .data      g_profile_WMARK                                              */
+/* 803C3444-803C3470 0028+04 rc=0 efc=0 .data      g_profile_WMARK                                              */
 void* g_profile_WMARK[11] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,

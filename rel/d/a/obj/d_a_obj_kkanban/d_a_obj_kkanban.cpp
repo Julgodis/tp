@@ -6,26 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct J3DJoint;
+struct daObjKKanban_c;
+
+struct J3DJoint {
+};
+
+struct daObjKKanban_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void setTG();
+	void CreateHeap();
+	void create1st();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGTri {
+	~cM3dGTri();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void nodeCallBack__FP8J3DJointi();
-extern "C" extern void initBaseMtx__14daObjKKanban_cFv();
-extern "C" extern void setBaseMtx__14daObjKKanban_cFv();
-extern "C" extern void Create__14daObjKKanban_cFv();
-extern "C" extern void setTG__14daObjKKanban_cFv();
-extern "C" extern void CreateHeap__14daObjKKanban_cFv();
-extern "C" extern void create1st__14daObjKKanban_cFv();
-extern "C" extern void Execute__14daObjKKanban_cFPPA3_A4_f();
-extern "C" extern void Draw__14daObjKKanban_cFv();
-extern "C" extern void Delete__14daObjKKanban_cFv();
-extern "C" extern void daObjKKanban_create1st__FP14daObjKKanban_c();
-extern "C" extern void __dt__8cM3dGTriFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void daObjKKanban_MoveBGDelete__FP14daObjKKanban_c();
-extern "C" extern void daObjKKanban_MoveBGExecute__FP14daObjKKanban_c();
-extern "C" extern void daObjKKanban_MoveBGDraw__FP14daObjKKanban_c();
+void nodeCallBack(J3DJoint*, s32);
+extern "C" void Execute__14daObjKKanban_cFPPA3_A4_f();
+void daObjKKanban_create1st(daObjKKanban_c*);
+void daObjKKanban_MoveBGDelete(daObjKKanban_c*);
+void daObjKKanban_MoveBGExecute(daObjKKanban_c*);
+void daObjKKanban_MoveBGDraw(daObjKKanban_c*);
+
+extern "C" void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__14daObjKKanban_cFv();
+extern "C" void setBaseMtx__14daObjKKanban_cFv();
+extern "C" void Create__14daObjKKanban_cFv();
+extern "C" void setTG__14daObjKKanban_cFv();
+extern "C" void CreateHeap__14daObjKKanban_cFv();
+extern "C" void create1st__14daObjKKanban_cFv();
+extern "C" void Execute__14daObjKKanban_cFPPA3_A4_f();
+extern "C" void Draw__14daObjKKanban_cFv();
+extern "C" void Delete__14daObjKKanban_cFv();
+extern "C" void daObjKKanban_create1st__FP14daObjKKanban_c();
+extern "C" void __dt__8cM3dGTriFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void daObjKKanban_MoveBGDelete__FP14daObjKKanban_c();
+extern "C" void daObjKKanban_MoveBGExecute__FP14daObjKKanban_c();
+extern "C" void daObjKKanban_MoveBGDraw__FP14daObjKKanban_c();
 SECTION_RODATA extern const u32 lit_3715;
 SECTION_RODATA extern const u32 lit_3716;
 SECTION_RODATA extern const u32 lit_3717;
@@ -53,7 +93,9 @@ SECTION_DATA extern void*const __vt__14daObjKKanban_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -63,7 +105,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
+asm void nodeCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/nodeCallBack__FP8J3DJointi.s"
 }
@@ -74,7 +116,7 @@ ASM_FUNCTION(nodeCallBack__FP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/initBaseMtx__14daObjKKanban_cFv.s"
 }
@@ -85,7 +127,7 @@ ASM_FUNCTION(initBaseMtx__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/setBaseMtx__14daObjKKanban_cFv.s"
 }
@@ -96,7 +138,7 @@ ASM_FUNCTION(setBaseMtx__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/Create__14daObjKKanban_cFv.s"
 }
@@ -107,7 +149,7 @@ ASM_FUNCTION(Create__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setTG__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::setTG() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/setTG__14daObjKKanban_cFv.s"
 }
@@ -118,7 +160,7 @@ ASM_FUNCTION(setTG__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/CreateHeap__14daObjKKanban_cFv.s"
 }
@@ -129,7 +171,7 @@ ASM_FUNCTION(CreateHeap__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/create1st__14daObjKKanban_cFv.s"
 }
@@ -140,7 +182,7 @@ ASM_FUNCTION(create1st__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjKKanban_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjKKanban_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/Execute__14daObjKKanban_cFPPA3_A4_f.s"
 }
@@ -151,7 +193,7 @@ ASM_FUNCTION(Execute__14daObjKKanban_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/Draw__14daObjKKanban_cFv.s"
 }
@@ -162,7 +204,7 @@ ASM_FUNCTION(Draw__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjKKanban_cFv) {
+asm void daObjKKanban_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/Delete__14daObjKKanban_cFv.s"
 }
@@ -173,7 +215,7 @@ ASM_FUNCTION(Delete__14daObjKKanban_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKKanban_create1st__FP14daObjKKanban_c) {
+asm void daObjKKanban_create1st(daObjKKanban_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/daObjKKanban_create1st__FP14daObjKKanban_c.s"
 }
@@ -184,7 +226,7 @@ ASM_FUNCTION(daObjKKanban_create1st__FP14daObjKKanban_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGTriFv) {
+asm cM3dGTri::~cM3dGTri() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/__dt__8cM3dGTriFv.s"
 }
@@ -195,7 +237,7 @@ ASM_FUNCTION(__dt__8cM3dGTriFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/__dt__8cM3dGPlaFv.s"
 }
@@ -206,7 +248,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/__dt__8cM3dGAabFv.s"
 }
@@ -217,7 +259,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKKanban_MoveBGDelete__FP14daObjKKanban_c) {
+asm void daObjKKanban_MoveBGDelete(daObjKKanban_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/daObjKKanban_MoveBGDelete__FP14daObjKKanban_c.s"
 }
@@ -228,7 +270,7 @@ ASM_FUNCTION(daObjKKanban_MoveBGDelete__FP14daObjKKanban_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKKanban_MoveBGExecute__FP14daObjKKanban_c) {
+asm void daObjKKanban_MoveBGExecute(daObjKKanban_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/daObjKKanban_MoveBGExecute__FP14daObjKKanban_c.s"
 }
@@ -239,7 +281,7 @@ ASM_FUNCTION(daObjKKanban_MoveBGExecute__FP14daObjKKanban_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjKKanban_MoveBGDraw__FP14daObjKKanban_c) {
+asm void daObjKKanban_MoveBGDraw(daObjKKanban_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kkanban/d_a_obj_kkanban/daObjKKanban_MoveBGDraw__FP14daObjKKanban_c.s"
 }

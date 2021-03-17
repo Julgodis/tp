@@ -6,29 +6,63 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daDr_c;
+
+struct daDr_c {
+	void action();
+	void mtx_set();
+	void draw();
+	void wait();
+	void pl_walk();
+	void pl_turn();
+	void bridge_destroy();
+	void bridge_destroy2();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void check_start();
+	void create();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void setAction__6daDr_cFM6daDr_cFPCvPv_v();
-extern "C" extern void action__6daDr_cFv();
-extern "C" extern void mtx_set__6daDr_cFv();
-extern "C" extern void draw__6daDr_cFv();
-extern "C" extern void daDr_Draw__FP6daDr_c();
-extern "C" extern void wait__6daDr_cFv();
-extern "C" extern void pl_walk__6daDr_cFv();
-extern "C" extern void pl_turn__6daDr_cFv();
-extern "C" extern void bridge_destroy__6daDr_cFv();
-extern "C" extern void bridge_destroy2__6daDr_cFv();
-extern "C" extern void execute__6daDr_cFv();
-extern "C" extern void daDr_Execute__FP6daDr_c();
-extern "C" extern void daDr_IsDelete__FP6daDr_c();
-extern "C" extern void _delete__6daDr_cFv();
-extern "C" extern void daDr_Delete__FP6daDr_c();
-extern "C" extern void CreateHeap__6daDr_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void check_start__6daDr_cFv();
-extern "C" extern void create__6daDr_cFv();
-extern "C" extern void daDr_Create__FP6daDr_c();
+extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v();
+void daDr_Draw(daDr_c*);
+void daDr_Execute(daDr_c*);
+bool daDr_IsDelete(daDr_c*);
+void daDr_Delete(daDr_c*);
+void useHeapInit(fopAc_ac_c*);
+void daDr_Create(daDr_c*);
+
+extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v();
+extern "C" void action__6daDr_cFv();
+extern "C" void mtx_set__6daDr_cFv();
+extern "C" void draw__6daDr_cFv();
+extern "C" void daDr_Draw__FP6daDr_c();
+extern "C" void wait__6daDr_cFv();
+extern "C" void pl_walk__6daDr_cFv();
+extern "C" void pl_turn__6daDr_cFv();
+extern "C" void bridge_destroy__6daDr_cFv();
+extern "C" void bridge_destroy2__6daDr_cFv();
+extern "C" void execute__6daDr_cFv();
+extern "C" void daDr_Execute__FP6daDr_c();
+extern "C" bool daDr_IsDelete__FP6daDr_c();
+extern "C" void _delete__6daDr_cFv();
+extern "C" void daDr_Delete__FP6daDr_c();
+extern "C" void CreateHeap__6daDr_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void check_start__6daDr_cFv();
+extern "C" void create__6daDr_cFv();
+extern "C" void daDr_Create__FP6daDr_c();
 SECTION_RODATA extern const u32 lit_3864;
 SECTION_RODATA extern const u32 lit_3865;
 SECTION_RODATA extern const u32 lit_3866;
@@ -73,7 +107,9 @@ SECTION_DATA extern u8 g_profile_DR[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -83,7 +119,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setAction__6daDr_cFM6daDr_cFPCvPv_v) {
+extern "C" asm void setAction__6daDr_cFM6daDr_cFPCvPv_v() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/setAction__6daDr_cFM6daDr_cFPCvPv_v.s"
 }
@@ -94,7 +130,7 @@ ASM_FUNCTION(setAction__6daDr_cFM6daDr_cFPCvPv_v) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__6daDr_cFv) {
+asm void daDr_c::action() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/action__6daDr_cFv.s"
 }
@@ -105,7 +141,7 @@ ASM_FUNCTION(action__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__6daDr_cFv) {
+asm void daDr_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/mtx_set__6daDr_cFv.s"
 }
@@ -116,7 +152,7 @@ ASM_FUNCTION(mtx_set__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__6daDr_cFv) {
+asm void daDr_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/draw__6daDr_cFv.s"
 }
@@ -127,7 +163,7 @@ ASM_FUNCTION(draw__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDr_Draw__FP6daDr_c) {
+asm void daDr_Draw(daDr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Draw__FP6daDr_c.s"
 }
@@ -138,7 +174,7 @@ ASM_FUNCTION(daDr_Draw__FP6daDr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wait__6daDr_cFv) {
+asm void daDr_c::wait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/wait__6daDr_cFv.s"
 }
@@ -149,7 +185,7 @@ ASM_FUNCTION(wait__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_walk__6daDr_cFv) {
+asm void daDr_c::pl_walk() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/pl_walk__6daDr_cFv.s"
 }
@@ -160,7 +196,7 @@ ASM_FUNCTION(pl_walk__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pl_turn__6daDr_cFv) {
+asm void daDr_c::pl_turn() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/pl_turn__6daDr_cFv.s"
 }
@@ -171,7 +207,7 @@ ASM_FUNCTION(pl_turn__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bridge_destroy__6daDr_cFv) {
+asm void daDr_c::bridge_destroy() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/bridge_destroy__6daDr_cFv.s"
 }
@@ -182,7 +218,7 @@ ASM_FUNCTION(bridge_destroy__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bridge_destroy2__6daDr_cFv) {
+asm void daDr_c::bridge_destroy2() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/bridge_destroy2__6daDr_cFv.s"
 }
@@ -193,7 +229,7 @@ ASM_FUNCTION(bridge_destroy2__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__6daDr_cFv) {
+asm void daDr_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/execute__6daDr_cFv.s"
 }
@@ -204,7 +240,7 @@ ASM_FUNCTION(execute__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDr_Execute__FP6daDr_c) {
+asm void daDr_Execute(daDr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Execute__FP6daDr_c.s"
 }
@@ -212,21 +248,16 @@ ASM_FUNCTION(daDr_Execute__FP6daDr_c) {
 
 
 /* 805A9FF4-805A9FFC 0008+00 .text      daDr_IsDelete__FP6daDr_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daDr_IsDelete__FP6daDr_c) {
-	nofralloc
-#include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_IsDelete__FP6daDr_c.s"
+bool daDr_IsDelete(daDr_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A9FFC-805AA064 0068+00 .text      _delete__6daDr_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__6daDr_cFv) {
+asm void daDr_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/_delete__6daDr_cFv.s"
 }
@@ -237,7 +268,7 @@ ASM_FUNCTION(_delete__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDr_Delete__FP6daDr_c) {
+asm void daDr_Delete(daDr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Delete__FP6daDr_c.s"
 }
@@ -248,7 +279,7 @@ ASM_FUNCTION(daDr_Delete__FP6daDr_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__6daDr_cFv) {
+asm void daDr_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/CreateHeap__6daDr_cFv.s"
 }
@@ -259,7 +290,7 @@ ASM_FUNCTION(CreateHeap__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -270,7 +301,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(check_start__6daDr_cFv) {
+asm void daDr_c::check_start() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/check_start__6daDr_cFv.s"
 }
@@ -281,7 +312,7 @@ ASM_FUNCTION(check_start__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__6daDr_cFv) {
+asm void daDr_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/create__6daDr_cFv.s"
 }
@@ -292,7 +323,7 @@ ASM_FUNCTION(create__6daDr_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daDr_Create__FP6daDr_c) {
+asm void daDr_Create(daDr_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Create__FP6daDr_c.s"
 }

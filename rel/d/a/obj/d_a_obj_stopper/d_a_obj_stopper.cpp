@@ -6,53 +6,145 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JPABaseEmitter;
+struct fopAc_ac_c;
+struct daObjStopper_c;
+
+struct daObjStopper_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void action();
+	void actionWait();
+	void actionWaitOrderEvent();
+	void actionOrderEvent();
+	void actionEvent();
+	void actionDead();
+	void actionWaitClose();
+	void actionCloseInit();
+	void actionClose();
+	void hint_action1();
+	void hint_action2();
+	void hint_action3();
+	void Draw();
+	void Delete();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct dPa_followEcallBack {
+	~dPa_followEcallBack();
+	void __defctor();
+};
+
+struct dPa_levelEcallBack {
+	void cleanup();
+	~dPa_levelEcallBack();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct JPABaseEmitter {
+};
+
+struct JPAEmitterCallBack {
+	void execute(JPABaseEmitter*);
+	void executeAfter(JPABaseEmitter*);
+	void draw(JPABaseEmitter*);
+	void drawAfter(JPABaseEmitter*);
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getStopModelData__Fv();
-extern "C" extern void initBaseMtx__14daObjStopper_cFv();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void setBaseMtx__14daObjStopper_cFv();
-extern "C" extern void Create__14daObjStopper_cFv();
-extern "C" extern void CreateHeap__14daObjStopper_cFv();
-extern "C" extern void create__14daObjStopper_cFv();
-extern "C" extern void __dt__19dPa_followEcallBackFv();
-extern "C" extern void cleanup__18dPa_levelEcallBackFv();
-extern "C" extern void __defctor__19dPa_followEcallBackFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void Execute__14daObjStopper_cFPPA3_A4_f();
-extern "C" extern void action__14daObjStopper_cFv();
-extern "C" extern void actionWait__14daObjStopper_cFv();
-extern "C" extern void actionWaitOrderEvent__14daObjStopper_cFv();
-extern "C" extern void actionOrderEvent__14daObjStopper_cFv();
-extern "C" extern void actionEvent__14daObjStopper_cFv();
-extern "C" extern void actionDead__14daObjStopper_cFv();
-extern "C" extern void actionWaitClose__14daObjStopper_cFv();
-extern "C" extern void actionCloseInit__14daObjStopper_cFv();
-extern "C" extern void actionClose__14daObjStopper_cFv();
-extern "C" extern void hint_action1__14daObjStopper_cFv();
-extern "C" extern void hint_action2__14daObjStopper_cFv();
-extern "C" extern void hint_action3__14daObjStopper_cFv();
-extern "C" extern void Draw__14daObjStopper_cFv();
-extern "C" extern void Delete__14daObjStopper_cFv();
-extern "C" extern void daObjStopper_Draw__FP14daObjStopper_c();
-extern "C" extern void daObjStopper_Execute__FP14daObjStopper_c();
-extern "C" extern void daObjStopper_Delete__FP14daObjStopper_c();
-extern "C" extern void daObjStopper_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__18dPa_levelEcallBackFv();
-extern "C" extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" extern void func_80CEEF48();
-extern "C" extern void func_80CEEF64();
-extern "C" extern void func_80CEEF80();
-extern "C" extern void func_80CEEF88();
+void getStopModelData();
+extern "C" void Execute__14daObjStopper_cFPPA3_A4_f();
+void daObjStopper_Draw(daObjStopper_c*);
+void daObjStopper_Execute(daObjStopper_c*);
+void daObjStopper_Delete(daObjStopper_c*);
+void daObjStopper_Create(fopAc_ac_c*);
+extern "C" void func_80CEEF48();
+extern "C" void func_80CEEF64();
+extern "C" void func_80CEEF80();
+extern "C" void func_80CEEF88();
+
+extern "C" void getStopModelData__Fv();
+extern "C" void initBaseMtx__14daObjStopper_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setBaseMtx__14daObjStopper_cFv();
+extern "C" void Create__14daObjStopper_cFv();
+extern "C" void CreateHeap__14daObjStopper_cFv();
+extern "C" void create__14daObjStopper_cFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void Execute__14daObjStopper_cFPPA3_A4_f();
+extern "C" void action__14daObjStopper_cFv();
+extern "C" void actionWait__14daObjStopper_cFv();
+extern "C" void actionWaitOrderEvent__14daObjStopper_cFv();
+extern "C" void actionOrderEvent__14daObjStopper_cFv();
+extern "C" void actionEvent__14daObjStopper_cFv();
+extern "C" void actionDead__14daObjStopper_cFv();
+extern "C" void actionWaitClose__14daObjStopper_cFv();
+extern "C" void actionCloseInit__14daObjStopper_cFv();
+extern "C" void actionClose__14daObjStopper_cFv();
+extern "C" void hint_action1__14daObjStopper_cFv();
+extern "C" void hint_action2__14daObjStopper_cFv();
+extern "C" void hint_action3__14daObjStopper_cFv();
+extern "C" void Draw__14daObjStopper_cFv();
+extern "C" void Delete__14daObjStopper_cFv();
+extern "C" void daObjStopper_Draw__FP14daObjStopper_c();
+extern "C" void daObjStopper_Execute__FP14daObjStopper_c();
+extern "C" void daObjStopper_Delete__FP14daObjStopper_c();
+extern "C" void daObjStopper_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void func_80CEEF48();
+extern "C" void func_80CEEF64();
+extern "C" void func_80CEEF80();
+extern "C" void func_80CEEF88();
 SECTION_RODATA extern const u8 lit_3635[4];
 SECTION_RODATA extern const u32 lit_3636;
 SECTION_RODATA extern const u32 lit_3692;
@@ -143,8 +235,11 @@ SECTION_BSS extern u8 data_80CEF2A8[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -154,7 +249,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStopModelData__Fv) {
+asm void getStopModelData() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/getStopModelData__Fv.s"
 }
@@ -165,7 +260,7 @@ ASM_FUNCTION(getStopModelData__Fv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__14daObjStopper_cFv) {
+asm void daObjStopper_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/initBaseMtx__14daObjStopper_cFv.s"
 }
@@ -176,7 +271,7 @@ ASM_FUNCTION(initBaseMtx__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__4cXyzFv.s"
 }
@@ -187,7 +282,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__14daObjStopper_cFv) {
+asm void daObjStopper_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/setBaseMtx__14daObjStopper_cFv.s"
 }
@@ -198,7 +293,7 @@ ASM_FUNCTION(setBaseMtx__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__14daObjStopper_cFv) {
+asm void daObjStopper_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/Create__14daObjStopper_cFv.s"
 }
@@ -209,7 +304,7 @@ ASM_FUNCTION(Create__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__14daObjStopper_cFv) {
+asm void daObjStopper_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/CreateHeap__14daObjStopper_cFv.s"
 }
@@ -220,7 +315,7 @@ ASM_FUNCTION(CreateHeap__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__14daObjStopper_cFv) {
+asm void daObjStopper_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CED258.s"
 }
@@ -231,7 +326,7 @@ ASM_FUNCTION(create__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
+asm dPa_followEcallBack::~dPa_followEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__19dPa_followEcallBackFv.s"
 }
@@ -239,21 +334,16 @@ ASM_FUNCTION(__dt__19dPa_followEcallBackFv) {
 
 
 /* 80CED4C4-80CED4C8 0004+00 .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(cleanup__18dPa_levelEcallBackFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CED4C8-80CED4F0 0028+00 .text      __defctor__19dPa_followEcallBackFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
+asm void dPa_followEcallBack::__defctor() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__defctor__19dPa_followEcallBackFv.s"
 }
@@ -264,7 +354,7 @@ ASM_FUNCTION(__defctor__19dPa_followEcallBackFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__8cM3dGCylFv.s"
 }
@@ -275,7 +365,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__8cM3dGAabFv.s"
 }
@@ -286,7 +376,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__10dCcD_GSttsFv.s"
 }
@@ -297,7 +387,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__12dBgS_AcchCirFv.s"
 }
@@ -308,7 +398,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -319,7 +409,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__14daObjStopper_cFPPA3_A4_f) {
+extern "C" asm void Execute__14daObjStopper_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/Execute__14daObjStopper_cFPPA3_A4_f.s"
 }
@@ -330,7 +420,7 @@ ASM_FUNCTION(Execute__14daObjStopper_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__14daObjStopper_cFv) {
+asm void daObjStopper_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/action__14daObjStopper_cFv.s"
 }
@@ -341,7 +431,7 @@ ASM_FUNCTION(action__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWait__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionWait__14daObjStopper_cFv.s"
 }
@@ -352,7 +442,7 @@ ASM_FUNCTION(actionWait__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitOrderEvent__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionWaitOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionWaitOrderEvent__14daObjStopper_cFv.s"
 }
@@ -363,7 +453,7 @@ ASM_FUNCTION(actionWaitOrderEvent__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionOrderEvent__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionOrderEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionOrderEvent__14daObjStopper_cFv.s"
 }
@@ -374,7 +464,7 @@ ASM_FUNCTION(actionOrderEvent__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionEvent__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionEvent() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionEvent__14daObjStopper_cFv.s"
 }
@@ -382,21 +472,16 @@ ASM_FUNCTION(actionEvent__14daObjStopper_cFv) {
 
 
 /* 80CEE048-80CEE04C 0004+00 .text      actionDead__14daObjStopper_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(actionDead__14daObjStopper_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionDead__14daObjStopper_cFv.s"
+void daObjStopper_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEE04C-80CEE05C 0010+00 .text      actionWaitClose__14daObjStopper_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionWaitClose__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionWaitClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionWaitClose__14daObjStopper_cFv.s"
 }
@@ -407,7 +492,7 @@ ASM_FUNCTION(actionWaitClose__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionCloseInit__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionCloseInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionCloseInit__14daObjStopper_cFv.s"
 }
@@ -418,7 +503,7 @@ ASM_FUNCTION(actionCloseInit__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(actionClose__14daObjStopper_cFv) {
+asm void daObjStopper_c::actionClose() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/actionClose__14daObjStopper_cFv.s"
 }
@@ -429,7 +514,7 @@ ASM_FUNCTION(actionClose__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hint_action1__14daObjStopper_cFv) {
+asm void daObjStopper_c::hint_action1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/hint_action1__14daObjStopper_cFv.s"
 }
@@ -440,7 +525,7 @@ ASM_FUNCTION(hint_action1__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hint_action2__14daObjStopper_cFv) {
+asm void daObjStopper_c::hint_action2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/hint_action2__14daObjStopper_cFv.s"
 }
@@ -451,7 +536,7 @@ ASM_FUNCTION(hint_action2__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(hint_action3__14daObjStopper_cFv) {
+asm void daObjStopper_c::hint_action3() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/hint_action3__14daObjStopper_cFv.s"
 }
@@ -462,7 +547,7 @@ ASM_FUNCTION(hint_action3__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__14daObjStopper_cFv) {
+asm void daObjStopper_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/Draw__14daObjStopper_cFv.s"
 }
@@ -473,7 +558,7 @@ ASM_FUNCTION(Draw__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__14daObjStopper_cFv) {
+asm void daObjStopper_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/Delete__14daObjStopper_cFv.s"
 }
@@ -484,7 +569,7 @@ ASM_FUNCTION(Delete__14daObjStopper_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper_Draw__FP14daObjStopper_c) {
+asm void daObjStopper_Draw(daObjStopper_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Draw__FP14daObjStopper_c.s"
 }
@@ -495,7 +580,7 @@ ASM_FUNCTION(daObjStopper_Draw__FP14daObjStopper_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper_Execute__FP14daObjStopper_c) {
+asm void daObjStopper_Execute(daObjStopper_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Execute__FP14daObjStopper_c.s"
 }
@@ -506,7 +591,7 @@ ASM_FUNCTION(daObjStopper_Execute__FP14daObjStopper_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper_Delete__FP14daObjStopper_c) {
+asm void daObjStopper_Delete(daObjStopper_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Delete__FP14daObjStopper_c.s"
 }
@@ -517,7 +602,7 @@ ASM_FUNCTION(daObjStopper_Delete__FP14daObjStopper_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjStopper_Create__FP10fopAc_ac_c) {
+asm void daObjStopper_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/daObjStopper_Create__FP10fopAc_ac_c.s"
 }
@@ -528,7 +613,7 @@ ASM_FUNCTION(daObjStopper_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__10cCcD_GSttsFv.s"
 }
@@ -539,7 +624,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
+asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/__dt__18dPa_levelEcallBackFv.s"
 }
@@ -547,54 +632,34 @@ ASM_FUNCTION(__dt__18dPa_levelEcallBackFv) {
 
 
 /* 80CEEF38-80CEEF3C 0004+00 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(execute__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEEF3C-80CEEF40 0004+00 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEEF40-80CEEF44 0004+00 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEEF44-80CEEF48 0004+00 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* field_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CEEF48-80CEEF64 001C+00 .text      cLib_calcTimer<Us>__FPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CEEF48) {
+extern "C" asm void func_80CEEF48() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF48.s"
 }
@@ -605,7 +670,7 @@ ASM_FUNCTION(func_80CEEF48) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CEEF64) {
+extern "C" asm void func_80CEEF64() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF64.s"
 }
@@ -616,7 +681,7 @@ ASM_FUNCTION(func_80CEEF64) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CEEF80) {
+extern "C" asm void func_80CEEF80() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF80.s"
 }
@@ -627,7 +692,7 @@ ASM_FUNCTION(func_80CEEF80) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80CEEF88) {
+extern "C" asm void func_80CEEF88() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stopper/d_a_obj_stopper/func_80CEEF88.s"
 }

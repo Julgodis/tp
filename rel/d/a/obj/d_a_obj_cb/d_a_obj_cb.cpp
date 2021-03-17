@@ -6,25 +6,71 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct obj_cb_class;
+struct fopAc_ac_c;
+struct dBgW;
+
+struct daObj_Cb_HIO_c {
+	daObj_Cb_HIO_c();
+	~daObj_Cb_HIO_c();
+};
+
+struct obj_cb_class {
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__14daObj_Cb_HIO_cFv();
-extern "C" extern void daObj_Cb_Draw__FP12obj_cb_class();
-extern "C" extern void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void action__FP12obj_cb_class();
-extern "C" extern void daObj_Cb_Execute__FP12obj_cb_class();
-extern "C" extern void daObj_Cb_IsDelete__FP12obj_cb_class();
-extern "C" extern void daObj_Cb_Delete__FP12obj_cb_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daObj_Cb_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__14daObj_Cb_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_cb_cpp();
-extern "C" extern void func_80BC57C0();
-extern "C" extern void func_80BC57C8();
+void daObj_Cb_Draw(obj_cb_class*);
+void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+void action(obj_cb_class*);
+void daObj_Cb_Execute(obj_cb_class*);
+bool daObj_Cb_IsDelete(obj_cb_class*);
+void daObj_Cb_Delete(obj_cb_class*);
+void useHeapInit(fopAc_ac_c*);
+void daObj_Cb_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_cb_cpp();
+extern "C" void func_80BC57C0();
+extern "C" void func_80BC57C8();
+
+extern "C" void __ct__14daObj_Cb_HIO_cFv();
+extern "C" void daObj_Cb_Draw__FP12obj_cb_class();
+extern "C" void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void action__FP12obj_cb_class();
+extern "C" void daObj_Cb_Execute__FP12obj_cb_class();
+extern "C" bool daObj_Cb_IsDelete__FP12obj_cb_class();
+extern "C" void daObj_Cb_Delete__FP12obj_cb_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daObj_Cb_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__14daObj_Cb_HIO_cFv();
+extern "C" void __sinit_d_a_obj_cb_cpp();
+extern "C" void func_80BC57C0();
+extern "C" void func_80BC57C8();
 SECTION_RODATA extern const u8 lit_3882[4 + 4 /* padding */];
 SECTION_RODATA extern const u8 lit_3883[8];
 SECTION_RODATA extern const u8 lit_3884[8];
@@ -62,8 +108,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -73,7 +122,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__14daObj_Cb_HIO_cFv) {
+asm daObj_Cb_HIO_c::daObj_Cb_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__ct__14daObj_Cb_HIO_cFv.s"
 }
@@ -84,7 +133,7 @@ ASM_FUNCTION(__ct__14daObj_Cb_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Cb_Draw__FP12obj_cb_class) {
+asm void daObj_Cb_Draw(obj_cb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_Draw__FP12obj_cb_class.s"
 }
@@ -95,7 +144,7 @@ ASM_FUNCTION(daObj_Cb_Draw__FP12obj_cb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void ride_call_back(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -106,7 +155,7 @@ ASM_FUNCTION(ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__FP12obj_cb_class) {
+asm void action(obj_cb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/action__FP12obj_cb_class.s"
 }
@@ -117,7 +166,7 @@ ASM_FUNCTION(action__FP12obj_cb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Cb_Execute__FP12obj_cb_class) {
+asm void daObj_Cb_Execute(obj_cb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_Execute__FP12obj_cb_class.s"
 }
@@ -125,21 +174,16 @@ ASM_FUNCTION(daObj_Cb_Execute__FP12obj_cb_class) {
 
 
 /* 80BC5240-80BC5248 0008+00 .text      daObj_Cb_IsDelete__FP12obj_cb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daObj_Cb_IsDelete__FP12obj_cb_class) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_IsDelete__FP12obj_cb_class.s"
+bool daObj_Cb_IsDelete(obj_cb_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BC5248-80BC52CC 0084+00 .text      daObj_Cb_Delete__FP12obj_cb_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Cb_Delete__FP12obj_cb_class) {
+asm void daObj_Cb_Delete(obj_cb_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_Delete__FP12obj_cb_class.s"
 }
@@ -150,7 +194,7 @@ ASM_FUNCTION(daObj_Cb_Delete__FP12obj_cb_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -161,7 +205,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObj_Cb_Create__FP10fopAc_ac_c) {
+asm void daObj_Cb_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_Create__FP10fopAc_ac_c.s"
 }
@@ -172,7 +216,7 @@ ASM_FUNCTION(daObj_Cb_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__dt__8cM3dGSphFv.s"
 }
@@ -183,7 +227,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__dt__8cM3dGAabFv.s"
 }
@@ -194,7 +238,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -205,7 +249,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14daObj_Cb_HIO_cFv) {
+asm daObj_Cb_HIO_c::~daObj_Cb_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__dt__14daObj_Cb_HIO_cFv.s"
 }
@@ -216,7 +260,7 @@ ASM_FUNCTION(__dt__14daObj_Cb_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_cb_cpp) {
+extern "C" asm void __sinit_d_a_obj_cb_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/__sinit_d_a_obj_cb_cpp.s"
 }
@@ -227,7 +271,7 @@ ASM_FUNCTION(__sinit_d_a_obj_cb_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC57C0) {
+extern "C" asm void func_80BC57C0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/func_80BC57C0.s"
 }
@@ -238,7 +282,7 @@ ASM_FUNCTION(func_80BC57C0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80BC57C8) {
+extern "C" asm void func_80BC57C8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/func_80BC57C8.s"
 }

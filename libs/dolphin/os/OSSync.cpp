@@ -9,53 +9,60 @@
 // Forward References:
 // 
 
-extern "C" extern void SystemCallVector();
-extern "C" extern void __OSSystemCallVectorEnd();
-extern "C" extern void __OSInitSystemCall();
+extern "C" static void SystemCallVector();
+extern "C" static void __OSSystemCallVectorEnd();
+extern "C" void __OSInitSystemCall();
+
+extern "C" static void SystemCallVector();
+extern "C" static void __OSSystemCallVectorEnd();
+extern "C" void __OSInitSystemCall();
 
 // 
 // External References:
 // 
 
-SECTION_INIT extern void memcpy();
-extern "C" extern void DCFlushRangeNoSync();
-extern "C" extern void ICInvalidateRange();
+SECTION_INIT void memcpy();
+extern "C" void DCFlushRangeNoSync();
+extern "C" void ICInvalidateRange();
+
+SECTION_INIT void memcpy();
+extern "C" void DCFlushRangeNoSync();
+extern "C" void ICInvalidateRange();
 
 // 
 // Declarations:
 // 
 
-/* 80340A20-80340A3C 001C+00 .text      SystemCallVector                                             */
+/* 80340A20-80340A3C 001C+00 rc=1 efc=0 .text      SystemCallVector                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(SystemCallVector) {
+extern "C" asm static void SystemCallVector() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/SystemCallVector.s"
 }
 #pragma pop
 
 
-/* 80340A3C-80340A40 0004+00 .text      __OSSystemCallVectorEnd                                      */
+/* 80340A3C-80340A40 0004+00 rc=1 efc=0 .text      __OSSystemCallVectorEnd                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSSystemCallVectorEnd) {
+extern "C" asm static void __OSSystemCallVectorEnd() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/__OSSystemCallVectorEnd.s"
 }
 #pragma pop
 
 
-/* 80340A40-80340AA4 0064+00 .text      __OSInitSystemCall                                           */
+/* 80340A40-80340AA4 0064+00 rc=1 efc=1 .text      __OSInitSystemCall                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__OSInitSystemCall) {
+extern "C" asm void __OSInitSystemCall() {
 	nofralloc
 #include "asm/dolphin/os/OSSync/__OSInitSystemCall.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

@@ -9,18 +9,31 @@
 // Forward References:
 // 
 
-extern "C" extern void dKyd_dmpalet_getp__Fv();
-extern "C" extern void dKyd_dmpselect_getp__Fv();
-extern "C" extern void dKyd_dmenvr_getp__Fv();
-extern "C" extern void dKyd_dmvrbox_getp__Fv();
-extern "C" extern void dKyd_schejule_getp__Fv();
-extern "C" extern void dKyd_schejule_boss_getp__Fv();
-extern "C" extern void dKyd_xfog_table_set__FUc();
-extern "C" extern void dKyd_maple_col_getp__Fv();
-extern "C" extern void dKyd_darkworld_tbl_getp__Fv();
-extern "C" extern void dKyd_light_size_tbl_getp__Fv();
-extern "C" extern void dKyd_light_tw_size_tbl_getp__Fv();
-extern "C" extern void dKyd_BloomInf_tbl_getp__Fi();
+void dKyd_dmpalet_getp();
+void dKyd_dmpselect_getp();
+void dKyd_dmenvr_getp();
+void dKyd_dmvrbox_getp();
+void dKyd_schejule_getp();
+void dKyd_schejule_boss_getp();
+void dKyd_xfog_table_set(char);
+void dKyd_maple_col_getp();
+void dKyd_darkworld_tbl_getp();
+void dKyd_light_size_tbl_getp();
+void dKyd_light_tw_size_tbl_getp();
+void dKyd_BloomInf_tbl_getp(s32);
+
+extern "C" void dKyd_dmpalet_getp__Fv();
+extern "C" void dKyd_dmpselect_getp__Fv();
+extern "C" void dKyd_dmenvr_getp__Fv();
+extern "C" void dKyd_dmvrbox_getp__Fv();
+extern "C" void dKyd_schejule_getp__Fv();
+extern "C" void dKyd_schejule_boss_getp__Fv();
+extern "C" void dKyd_xfog_table_set__FUc();
+extern "C" void dKyd_maple_col_getp__Fv();
+extern "C" void dKyd_darkworld_tbl_getp__Fv();
+extern "C" void dKyd_light_size_tbl_getp__Fv();
+extern "C" void dKyd_light_tw_size_tbl_getp__Fv();
+extern "C" void dKyd_BloomInf_tbl_getp__Fi();
 SECTION_RODATA extern const u8 d_kankyo_d_kankyo_data__stringBase0[424];
 SECTION_DATA extern u8 l_kydata_BloomInf_tbl[768];
 SECTION_DATA extern void*l_darkworld_tbl[68];
@@ -39,6 +52,7 @@ SECTION_DATA extern u8 S_xfog_table_data[40 + 4 /* padding */];
 // External References:
 // 
 
+
 SECTION_BSS extern u8 g_env_light[4880];
 
 // 
@@ -46,7 +60,7 @@ SECTION_BSS extern u8 g_env_light[4880];
 // 
 
 /* ############################################################################################## */
-/* 803A8E98-803A9198 0300+00 .data      l_kydata_BloomInf_tbl                                        */
+/* 803A8E98-803A9198 0300+00 rc=1 efc=0 .data      l_kydata_BloomInf_tbl                                        */
 u8 l_kydata_BloomInf_tbl[768] = {
 	0x01, 0xFF, 0x40, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x28, 0x46, 0x87,
 	0xCF, 0xB1, 0x38, 0xD2, 0xFF, 0xFF, 0xFF, 0x60, 0x00, 0x2D, 0x46, 0x73, 0xCF, 0xB1, 0x38, 0xD2,
@@ -98,7 +112,7 @@ u8 l_kydata_BloomInf_tbl[768] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A9198-803A92A8 0110+00 .data      l_darkworld_tbl                                              */
+/* 803A9198-803A92A8 0110+00 rc=1 efc=0 .data      l_darkworld_tbl                                              */
 void* l_darkworld_tbl[68] = {
 	(void*)&d_kankyo_d_kankyo_data__stringBase0,
 	(void*)0x06000000,
@@ -170,7 +184,7 @@ void* l_darkworld_tbl[68] = {
 	NULL,
 };
 
-/* 803A92A8-803A93C8 0120+00 .data      l_light_size_tbl                                             */
+/* 803A92A8-803A93C8 0120+00 rc=1 efc=0 .data      l_light_size_tbl                                             */
 u8 l_light_size_tbl[288] = {
 	0x80, 0x37, 0xA2, 0xB8, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x1B, 0x00, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
@@ -192,7 +206,7 @@ u8 l_light_size_tbl[288] = {
 	0x80, 0x37, 0xA3, 0x5D, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xB1, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A93C8-803A9410 0048+00 .data      l_light_size_tbl_tw                                          */
+/* 803A93C8-803A9410 0048+00 rc=1 efc=0 .data      l_light_size_tbl_tw                                          */
 u8 l_light_size_tbl_tw[72] = {
 	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA2, 0x82, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x52, 0x00, 0x00, 0x00, 0x00,
@@ -201,14 +215,14 @@ u8 l_light_size_tbl_tw[72] = {
 	0x80, 0x37, 0xA2, 0x6A, 0x03, 0x00, 0x00, 0x00,
 };
 
-/* 803A9410-803A9434 0024+00 .data      l_maple_col                                                  */
+/* 803A9410-803A9434 0024+00 rc=1 efc=0 .data      l_maple_col                                                  */
 u8 l_maple_col[36] = {
 	0x56, 0x4B, 0x39, 0x37, 0x28, 0x1E, 0x6E, 0x32, 0x0F, 0x64, 0x64, 0x80, 0x52, 0x41, 0x66, 0x19,
 	0x0F, 0x00, 0x46, 0x00, 0x0F, 0x64, 0x64, 0x80, 0x65, 0x5E, 0x69, 0x0E, 0x23, 0x0B, 0x28, 0x14,
 	0x05, 0x5A, 0x5A, 0x6E,
 };
 
-/* 803A9434-803A94B8 0084+00 .data      l_time_attribute                                             */
+/* 803A9434-803A94B8 0084+00 rc=1 efc=0 .data      l_time_attribute                                             */
 u8 l_time_attribute[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x05, 0x05, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00,
@@ -221,7 +235,7 @@ u8 l_time_attribute[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A94B8-803A953C 0084+00 .data      l_time_attribute_boss                                        */
+/* 803A94B8-803A953C 0084+00 rc=1 efc=0 .data      l_time_attribute_boss                                        */
 u8 l_time_attribute_boss[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x01, 0x02, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x43, 0x34, 0x00, 0x00,
@@ -234,7 +248,7 @@ u8 l_time_attribute_boss[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A953C-803A987C 0340+00 .data      l_field_data                                                 */
+/* 803A953C-803A987C 0340+00 rc=1 efc=0 .data      l_field_data                                                 */
 u8 l_field_data[832] = {
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
@@ -290,11 +304,11 @@ u8 l_field_data[832] = {
 	0xC5, 0x9C, 0x40, 0x00, 0x46, 0xEA, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569DC-800569E8 000C+00 .text      dKyd_dmpalet_getp__Fv                                        */
+/* 800569DC-800569E8 000C+00 rc=1 efc=1 .text      dKyd_dmpalet_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_dmpalet_getp__Fv) {
+asm void dKyd_dmpalet_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_dmpalet_getp__Fv.s"
 }
@@ -302,17 +316,17 @@ ASM_FUNCTION(dKyd_dmpalet_getp__Fv) {
 
 
 /* ############################################################################################## */
-/* 803A987C-803A9894 0018+00 .data      l_pselect_default                                            */
+/* 803A987C-803A9894 0018+00 rc=1 efc=0 .data      l_pselect_default                                            */
 u8 l_pselect_default[24] = {
 	0x00, 0x00, 0x01, 0x02, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x05, 0x06,
 	0x06, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569E8-800569F4 000C+00 .text      dKyd_dmpselect_getp__Fv                                      */
+/* 800569E8-800569F4 000C+00 rc=1 efc=1 .text      dKyd_dmpselect_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_dmpselect_getp__Fv) {
+asm void dKyd_dmpselect_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_dmpselect_getp__Fv.s"
 }
@@ -320,7 +334,7 @@ ASM_FUNCTION(dKyd_dmpselect_getp__Fv) {
 
 
 /* ############################################################################################## */
-/* 803A9894-803A9918 0082+02 .data      l_envr_default                                               */
+/* 803A9894-803A9918 0082+02 rc=1 efc=0 .data      l_envr_default                                               */
 u8 l_envr_default[132] = {
 	0x00, 0x01, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -335,11 +349,11 @@ u8 l_envr_default[132] = {
 	0x00, 0x00,
 };
 
-/* 800569F4-80056A00 000C+00 .text      dKyd_dmenvr_getp__Fv                                         */
+/* 800569F4-80056A00 000C+00 rc=1 efc=1 .text      dKyd_dmenvr_getp__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_dmenvr_getp__Fv) {
+asm void dKyd_dmenvr_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_dmenvr_getp__Fv.s"
 }
@@ -347,7 +361,7 @@ ASM_FUNCTION(dKyd_dmenvr_getp__Fv) {
 
 
 /* ############################################################################################## */
-/* 803A9918-803A9A94 017A+02 .data      l_vr_box_data                                                */
+/* 803A9918-803A9A94 017A+02 rc=1 efc=0 .data      l_vr_box_data                                                */
 u8 l_vr_box_data[380] = {
 	0x2F, 0x1A, 0x07, 0x44, 0x1E, 0x10, 0xF5, 0xA5, 0x6C, 0x9A, 0x5C, 0x3B, 0xFF, 0x44, 0x1E, 0x10,
 	0xA3, 0xFF, 0x5B, 0x49, 0x72, 0x39, 0x5B, 0xA7, 0xFF, 0xF7, 0xF7, 0x83, 0x7E, 0x7D, 0x1D, 0x1E,
@@ -377,33 +391,33 @@ u8 l_vr_box_data[380] = {
 	0x00, 0x00,
 };
 
-/* 80056A00-80056A0C 000C+00 .text      dKyd_dmvrbox_getp__Fv                                        */
+/* 80056A00-80056A0C 000C+00 rc=1 efc=1 .text      dKyd_dmvrbox_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_dmvrbox_getp__Fv) {
+asm void dKyd_dmvrbox_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_dmvrbox_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A0C-80056A18 000C+00 .text      dKyd_schejule_getp__Fv                                       */
+/* 80056A0C-80056A18 000C+00 rc=1 efc=1 .text      dKyd_schejule_getp__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_schejule_getp__Fv) {
+asm void dKyd_schejule_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_schejule_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A18-80056A24 000C+00 .text      dKyd_schejule_boss_getp__Fv                                  */
+/* 80056A18-80056A24 000C+00 rc=1 efc=1 .text      dKyd_schejule_boss_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_schejule_boss_getp__Fv) {
+asm void dKyd_schejule_boss_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_schejule_boss_getp__Fv.s"
 }
@@ -411,7 +425,7 @@ ASM_FUNCTION(dKyd_schejule_boss_getp__Fv) {
 
 
 /* ############################################################################################## */
-/* 803A9A94-803A9AC0 0028+04 .data      S_xfog_table_data                                            */
+/* 803A9A94-803A9AC0 0028+04 rc=1 efc=0 .data      S_xfog_table_data                                            */
 u8 S_xfog_table_data[44] = {
 	0x01, 0x04, 0x01, 0x04, 0x01, 0x0E, 0x01, 0x18, 0x01, 0x22, 0x01, 0x2C, 0x01, 0x36, 0x01, 0x40,
 	0x01, 0x4A, 0x01, 0x54, 0x00, 0xFA, 0x01, 0x04, 0x01, 0x18, 0x01, 0x40, 0x01, 0x5E, 0x01, 0x90,
@@ -420,66 +434,66 @@ u8 S_xfog_table_data[44] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80056A24-80056A64 0040+00 .text      dKyd_xfog_table_set__FUc                                     */
+/* 80056A24-80056A64 0040+00 rc=2 efc=2 .text      dKyd_xfog_table_set__FUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_xfog_table_set__FUc) {
+asm void dKyd_xfog_table_set(char field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_xfog_table_set__FUc.s"
 }
 #pragma pop
 
 
-/* 80056A64-80056A70 000C+00 .text      dKyd_maple_col_getp__Fv                                      */
+/* 80056A64-80056A70 000C+00 rc=1 efc=1 .text      dKyd_maple_col_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_maple_col_getp__Fv) {
+asm void dKyd_maple_col_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_maple_col_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A70-80056A7C 000C+00 .text      dKyd_darkworld_tbl_getp__Fv                                  */
+/* 80056A70-80056A7C 000C+00 rc=4 efc=4 .text      dKyd_darkworld_tbl_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_darkworld_tbl_getp__Fv) {
+asm void dKyd_darkworld_tbl_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_darkworld_tbl_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A7C-80056A88 000C+00 .text      dKyd_light_size_tbl_getp__Fv                                 */
+/* 80056A7C-80056A88 000C+00 rc=1 efc=1 .text      dKyd_light_size_tbl_getp__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_light_size_tbl_getp__Fv) {
+asm void dKyd_light_size_tbl_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_light_size_tbl_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A88-80056A94 000C+00 .text      dKyd_light_tw_size_tbl_getp__Fv                              */
+/* 80056A88-80056A94 000C+00 rc=1 efc=1 .text      dKyd_light_tw_size_tbl_getp__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_light_tw_size_tbl_getp__Fv) {
+asm void dKyd_light_tw_size_tbl_getp() {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_light_tw_size_tbl_getp__Fv.s"
 }
 #pragma pop
 
 
-/* 80056A94-80056AA8 0014+00 .text      dKyd_BloomInf_tbl_getp__Fi                                   */
+/* 80056A94-80056AA8 0014+00 rc=1 efc=1 .text      dKyd_BloomInf_tbl_getp__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dKyd_BloomInf_tbl_getp__Fi) {
+asm void dKyd_BloomInf_tbl_getp(s32 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_BloomInf_tbl_getp__Fi.s"
 }
@@ -487,7 +501,7 @@ ASM_FUNCTION(dKyd_BloomInf_tbl_getp__Fi) {
 
 
 /* ############################################################################################## */
-/* 8037A1C0-8037A368 01A4+04 .rodata    @stringBase0                                                 */
+/* 8037A1C0-8037A368 01A4+04 rc=1 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"

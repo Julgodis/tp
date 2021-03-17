@@ -6,53 +6,158 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopEn_enemy_c;
+struct daE_HP_c;
+struct Z2CreatureEnemy;
+struct J3DJoint;
+struct J3DModel;
+struct fopAc_ac_c;
+struct cXyz;
+
+struct daE_HP_HIO_c {
+	daE_HP_HIO_c();
+	~daE_HP_HIO_c();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct daE_HP_c {
+	void ctrlJoint(J3DJoint*, J3DModel*);
+	void JointCallBack(J3DJoint*, s32);
+	void LampCtrlJoint(J3DJoint*, J3DModel*);
+	void LampJointCallBack(J3DJoint*, s32);
+	void draw();
+	void setBck(s32, u8, f32, f32);
+	void setActionMode(s32, s32);
+	void mChkDistance(f32);
+	void damage_check();
+	void executeWait();
+	void executeMove();
+	void executeRetMove();
+	void executeAttack();
+	void executeDamage();
+	void executeDown();
+	void executeDead();
+	void action();
+	void mtx_set();
+	void cc_set();
+	void execute();
+	void _delete();
+	void CreateHeap();
+	void create();
+	daE_HP_c();
+};
+
+struct cM3dGPla {
+	~cM3dGPla();
+};
+
+struct fopAc_ac_c {
+};
+
+struct cM3dGSph {
+	~cM3dGSph();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+struct fopEn_enemy_c {
+};
+
+struct Z2CreatureEnemy {
+};
+
+struct cXyz {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__12daE_HP_HIO_cFv();
-extern "C" extern void ctrlJoint__8daE_HP_cFP8J3DJointP8J3DModel();
-extern "C" extern void JointCallBack__8daE_HP_cFP8J3DJointi();
-extern "C" extern void LampCtrlJoint__8daE_HP_cFP8J3DJointP8J3DModel();
-extern "C" extern void LampJointCallBack__8daE_HP_cFP8J3DJointi();
-extern "C" extern void draw__8daE_HP_cFv();
-extern "C" extern void daE_HP_Draw__FP8daE_HP_c();
-extern "C" extern void setBck__8daE_HP_cFiUcff();
-extern "C" extern void setActionMode__8daE_HP_cFii();
-extern "C" extern void mChkDistance__8daE_HP_cFf();
-extern "C" extern void damage_check__8daE_HP_cFv();
-extern "C" extern void executeWait__8daE_HP_cFv();
-extern "C" extern void executeMove__8daE_HP_cFv();
-extern "C" extern void executeRetMove__8daE_HP_cFv();
-extern "C" extern void executeAttack__8daE_HP_cFv();
-extern "C" extern void executeDamage__8daE_HP_cFv();
-extern "C" extern void executeDown__8daE_HP_cFv();
-extern "C" extern void executeDead__8daE_HP_cFv();
-extern "C" extern void action__8daE_HP_cFv();
-extern "C" extern void __dt__8cM3dGPlaFv();
-extern "C" extern void mtx_set__8daE_HP_cFv();
-extern "C" extern void cc_set__8daE_HP_cFv();
-extern "C" extern void execute__8daE_HP_cFv();
-extern "C" extern void daE_HP_Execute__FP8daE_HP_c();
-extern "C" extern void daE_HP_IsDelete__FP8daE_HP_c();
-extern "C" extern void _delete__8daE_HP_cFv();
-extern "C" extern void daE_HP_Delete__FP8daE_HP_c();
-extern "C" extern void CreateHeap__8daE_HP_cFv();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void create__8daE_HP_cFv();
-extern "C" extern void __ct__8daE_HP_cFv();
-extern "C" extern void __dt__8cM3dGSphFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void daE_HP_Create__FP8daE_HP_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void __dt__12daE_HP_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_hp_cpp();
-extern "C" extern void func_806E9DBC();
-extern "C" extern void func_806E9DC4();
-extern "C" extern void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
+void daE_HP_Draw(daE_HP_c*);
+void daE_HP_Execute(daE_HP_c*);
+bool daE_HP_IsDelete(daE_HP_c*);
+void daE_HP_Delete(daE_HP_c*);
+void useHeapInit(fopAc_ac_c*);
+void daE_HP_Create(daE_HP_c*);
+extern "C" void __sinit_d_a_e_hp_cpp();
+extern "C" void func_806E9DBC();
+extern "C" void func_806E9DC4();
+void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*);
+
+extern "C" void __ct__12daE_HP_HIO_cFv();
+extern "C" void ctrlJoint__8daE_HP_cFP8J3DJointP8J3DModel();
+extern "C" void JointCallBack__8daE_HP_cFP8J3DJointi();
+extern "C" void LampCtrlJoint__8daE_HP_cFP8J3DJointP8J3DModel();
+extern "C" void LampJointCallBack__8daE_HP_cFP8J3DJointi();
+extern "C" void draw__8daE_HP_cFv();
+extern "C" void daE_HP_Draw__FP8daE_HP_c();
+extern "C" void setBck__8daE_HP_cFiUcff();
+extern "C" void setActionMode__8daE_HP_cFii();
+extern "C" void mChkDistance__8daE_HP_cFf();
+extern "C" void damage_check__8daE_HP_cFv();
+extern "C" void executeWait__8daE_HP_cFv();
+extern "C" void executeMove__8daE_HP_cFv();
+extern "C" void executeRetMove__8daE_HP_cFv();
+extern "C" void executeAttack__8daE_HP_cFv();
+extern "C" void executeDamage__8daE_HP_cFv();
+extern "C" void executeDown__8daE_HP_cFv();
+extern "C" void executeDead__8daE_HP_cFv();
+extern "C" void action__8daE_HP_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void mtx_set__8daE_HP_cFv();
+extern "C" void cc_set__8daE_HP_cFv();
+extern "C" void execute__8daE_HP_cFv();
+extern "C" void daE_HP_Execute__FP8daE_HP_c();
+extern "C" bool daE_HP_IsDelete__FP8daE_HP_c();
+extern "C" void _delete__8daE_HP_cFv();
+extern "C" void daE_HP_Delete__FP8daE_HP_c();
+extern "C" void CreateHeap__8daE_HP_cFv();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void create__8daE_HP_cFv();
+extern "C" void __ct__8daE_HP_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void daE_HP_Create__FP8daE_HP_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__12daE_HP_HIO_cFv();
+extern "C" void __sinit_d_a_e_hp_cpp();
+extern "C" void func_806E9DBC();
+extern "C" void func_806E9DC4();
+extern "C" void setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz();
 SECTION_RODATA extern const u32 lit_3905;
 SECTION_RODATA extern const u8 lit_3906[4];
 SECTION_RODATA extern const u32 lit_3907;
@@ -130,8 +235,11 @@ SECTION_BSS extern u8 l_HIO[20];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -141,7 +249,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__12daE_HP_HIO_cFv) {
+asm daE_HP_HIO_c::daE_HP_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__ct__12daE_HP_HIO_cFv.s"
 }
@@ -152,7 +260,7 @@ ASM_FUNCTION(__ct__12daE_HP_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(ctrlJoint__8daE_HP_cFP8J3DJointP8J3DModel) {
+asm void daE_HP_c::ctrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/ctrlJoint__8daE_HP_cFP8J3DJointP8J3DModel.s"
 }
@@ -163,7 +271,7 @@ ASM_FUNCTION(ctrlJoint__8daE_HP_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(JointCallBack__8daE_HP_cFP8J3DJointi) {
+asm void daE_HP_c::JointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/JointCallBack__8daE_HP_cFP8J3DJointi.s"
 }
@@ -174,7 +282,7 @@ ASM_FUNCTION(JointCallBack__8daE_HP_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LampCtrlJoint__8daE_HP_cFP8J3DJointP8J3DModel) {
+asm void daE_HP_c::LampCtrlJoint(J3DJoint* field_0, J3DModel* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/LampCtrlJoint__8daE_HP_cFP8J3DJointP8J3DModel.s"
 }
@@ -185,7 +293,7 @@ ASM_FUNCTION(LampCtrlJoint__8daE_HP_cFP8J3DJointP8J3DModel) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(LampJointCallBack__8daE_HP_cFP8J3DJointi) {
+asm void daE_HP_c::LampJointCallBack(J3DJoint* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/LampJointCallBack__8daE_HP_cFP8J3DJointi.s"
 }
@@ -196,7 +304,7 @@ ASM_FUNCTION(LampJointCallBack__8daE_HP_cFP8J3DJointi) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__8daE_HP_cFv) {
+asm void daE_HP_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/draw__8daE_HP_cFv.s"
 }
@@ -207,7 +315,7 @@ ASM_FUNCTION(draw__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HP_Draw__FP8daE_HP_c) {
+asm void daE_HP_Draw(daE_HP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_Draw__FP8daE_HP_c.s"
 }
@@ -218,7 +326,7 @@ ASM_FUNCTION(daE_HP_Draw__FP8daE_HP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBck__8daE_HP_cFiUcff) {
+asm void daE_HP_c::setBck(s32 field_0, u8 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/setBck__8daE_HP_cFiUcff.s"
 }
@@ -229,7 +337,7 @@ ASM_FUNCTION(setBck__8daE_HP_cFiUcff) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setActionMode__8daE_HP_cFii) {
+asm void daE_HP_c::setActionMode(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/setActionMode__8daE_HP_cFii.s"
 }
@@ -240,7 +348,7 @@ ASM_FUNCTION(setActionMode__8daE_HP_cFii) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mChkDistance__8daE_HP_cFf) {
+asm void daE_HP_c::mChkDistance(f32 field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/mChkDistance__8daE_HP_cFf.s"
 }
@@ -251,7 +359,7 @@ ASM_FUNCTION(mChkDistance__8daE_HP_cFf) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__8daE_HP_cFv) {
+asm void daE_HP_c::damage_check() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/damage_check__8daE_HP_cFv.s"
 }
@@ -262,7 +370,7 @@ ASM_FUNCTION(damage_check__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeWait__8daE_HP_cFv) {
+asm void daE_HP_c::executeWait() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeWait__8daE_HP_cFv.s"
 }
@@ -273,7 +381,7 @@ ASM_FUNCTION(executeWait__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeMove__8daE_HP_cFv) {
+asm void daE_HP_c::executeMove() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeMove__8daE_HP_cFv.s"
 }
@@ -284,7 +392,7 @@ ASM_FUNCTION(executeMove__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeRetMove__8daE_HP_cFv) {
+asm void daE_HP_c::executeRetMove() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeRetMove__8daE_HP_cFv.s"
 }
@@ -295,7 +403,7 @@ ASM_FUNCTION(executeRetMove__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeAttack__8daE_HP_cFv) {
+asm void daE_HP_c::executeAttack() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeAttack__8daE_HP_cFv.s"
 }
@@ -306,7 +414,7 @@ ASM_FUNCTION(executeAttack__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDamage__8daE_HP_cFv) {
+asm void daE_HP_c::executeDamage() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeDamage__8daE_HP_cFv.s"
 }
@@ -317,7 +425,7 @@ ASM_FUNCTION(executeDamage__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDown__8daE_HP_cFv) {
+asm void daE_HP_c::executeDown() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeDown__8daE_HP_cFv.s"
 }
@@ -328,7 +436,7 @@ ASM_FUNCTION(executeDown__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(executeDead__8daE_HP_cFv) {
+asm void daE_HP_c::executeDead() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/executeDead__8daE_HP_cFv.s"
 }
@@ -339,7 +447,7 @@ ASM_FUNCTION(executeDead__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__8daE_HP_cFv) {
+asm void daE_HP_c::action() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/action__8daE_HP_cFv.s"
 }
@@ -350,7 +458,7 @@ ASM_FUNCTION(action__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGPlaFv) {
+asm cM3dGPla::~cM3dGPla() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__8cM3dGPlaFv.s"
 }
@@ -361,7 +469,7 @@ ASM_FUNCTION(__dt__8cM3dGPlaFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(mtx_set__8daE_HP_cFv) {
+asm void daE_HP_c::mtx_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/mtx_set__8daE_HP_cFv.s"
 }
@@ -372,7 +480,7 @@ ASM_FUNCTION(mtx_set__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cc_set__8daE_HP_cFv) {
+asm void daE_HP_c::cc_set() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/cc_set__8daE_HP_cFv.s"
 }
@@ -383,7 +491,7 @@ ASM_FUNCTION(cc_set__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__8daE_HP_cFv) {
+asm void daE_HP_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/execute__8daE_HP_cFv.s"
 }
@@ -394,7 +502,7 @@ ASM_FUNCTION(execute__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HP_Execute__FP8daE_HP_c) {
+asm void daE_HP_Execute(daE_HP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_Execute__FP8daE_HP_c.s"
 }
@@ -402,21 +510,16 @@ ASM_FUNCTION(daE_HP_Execute__FP8daE_HP_c) {
 
 
 /* 806E9190-806E9198 0008+00 .text      daE_HP_IsDelete__FP8daE_HP_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_HP_IsDelete__FP8daE_HP_c) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_IsDelete__FP8daE_HP_c.s"
+bool daE_HP_IsDelete(daE_HP_c* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806E9198-806E9220 0088+00 .text      _delete__8daE_HP_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(_delete__8daE_HP_cFv) {
+asm void daE_HP_c::_delete() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/_delete__8daE_HP_cFv.s"
 }
@@ -427,7 +530,7 @@ ASM_FUNCTION(_delete__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HP_Delete__FP8daE_HP_c) {
+asm void daE_HP_Delete(daE_HP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_Delete__FP8daE_HP_c.s"
 }
@@ -438,7 +541,7 @@ ASM_FUNCTION(daE_HP_Delete__FP8daE_HP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__8daE_HP_cFv) {
+asm void daE_HP_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/CreateHeap__8daE_HP_cFv.s"
 }
@@ -449,7 +552,7 @@ ASM_FUNCTION(CreateHeap__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -460,7 +563,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__8daE_HP_cFv) {
+asm void daE_HP_c::create() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/create__8daE_HP_cFv.s"
 }
@@ -471,7 +574,7 @@ ASM_FUNCTION(create__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__8daE_HP_cFv) {
+asm daE_HP_c::daE_HP_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__ct__8daE_HP_cFv.s"
 }
@@ -482,7 +585,7 @@ ASM_FUNCTION(__ct__8daE_HP_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGSphFv) {
+asm cM3dGSph::~cM3dGSph() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__8cM3dGSphFv.s"
 }
@@ -493,7 +596,7 @@ ASM_FUNCTION(__dt__8cM3dGSphFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__8cM3dGCylFv.s"
 }
@@ -504,7 +607,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__8cM3dGAabFv.s"
 }
@@ -515,7 +618,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__10dCcD_GSttsFv.s"
 }
@@ -526,7 +629,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -537,7 +640,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__12dBgS_AcchCirFv.s"
 }
@@ -548,7 +651,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_HP_Create__FP8daE_HP_c) {
+asm void daE_HP_Create(daE_HP_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_Create__FP8daE_HP_c.s"
 }
@@ -559,7 +662,7 @@ ASM_FUNCTION(daE_HP_Create__FP8daE_HP_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__10cCcD_GSttsFv.s"
 }
@@ -570,7 +673,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12daE_HP_HIO_cFv) {
+asm daE_HP_HIO_c::~daE_HP_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__dt__12daE_HP_HIO_cFv.s"
 }
@@ -581,7 +684,7 @@ ASM_FUNCTION(__dt__12daE_HP_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_hp_cpp) {
+extern "C" asm void __sinit_d_a_e_hp_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/__sinit_d_a_e_hp_cpp.s"
 }
@@ -592,7 +695,7 @@ ASM_FUNCTION(__sinit_d_a_e_hp_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806E9DBC) {
+extern "C" asm void func_806E9DBC() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/func_806E9DBC.s"
 }
@@ -603,7 +706,7 @@ ASM_FUNCTION(func_806E9DBC) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_806E9DC4) {
+extern "C" asm void func_806E9DC4() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/func_806E9DC4.s"
 }
@@ -614,7 +717,7 @@ ASM_FUNCTION(func_806E9DC4) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz) {
+asm void setMidnaBindEffect(fopEn_enemy_c* field_0, Z2CreatureEnemy* field_1, cXyz* field_2, cXyz* field_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/setMidnaBindEffect__FP13fopEn_enemy_cP15Z2CreatureEnemyP4cXyzP4cXyz.s"
 }

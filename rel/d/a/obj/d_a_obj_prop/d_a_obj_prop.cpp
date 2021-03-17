@@ -6,23 +6,51 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjProp_c;
+
+struct fopAc_ac_c {
+};
+
+struct daObjProp_c {
+	daObjProp_c();
+	~daObjProp_c();
+	void createHeap();
+	void create();
+	void Delete();
+	void draw();
+	void execute();
+	void init();
+	void setModelMtx();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daObjProp_c_createHeap__FP10fopAc_ac_c();
-extern "C" extern void __ct__11daObjProp_cFv();
-extern "C" extern void __dt__11daObjProp_cFv();
-extern "C" extern void createHeap__11daObjProp_cFv();
-extern "C" extern void create__11daObjProp_cFv();
-extern "C" extern void Delete__11daObjProp_cFv();
-extern "C" extern void draw__11daObjProp_cFv();
-extern "C" extern void execute__11daObjProp_cFv();
-extern "C" extern void init__11daObjProp_cFv();
-extern "C" extern void setModelMtx__11daObjProp_cFv();
-extern "C" extern void daObjProp_create__FP11daObjProp_c();
-extern "C" extern void daObjProp_Delete__FP11daObjProp_c();
-extern "C" extern void daObjProp_execute__FP11daObjProp_c();
-extern "C" extern void daObjProp_draw__FP11daObjProp_c();
+void daObjProp_c_createHeap(fopAc_ac_c*);
+void daObjProp_create(daObjProp_c*);
+void daObjProp_Delete(daObjProp_c*);
+void daObjProp_execute(daObjProp_c*);
+void daObjProp_draw(daObjProp_c*);
+
+extern "C" void daObjProp_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__11daObjProp_cFv();
+extern "C" void __dt__11daObjProp_cFv();
+extern "C" void createHeap__11daObjProp_cFv();
+extern "C" void create__11daObjProp_cFv();
+extern "C" void Delete__11daObjProp_cFv();
+extern "C" void draw__11daObjProp_cFv();
+extern "C" void execute__11daObjProp_cFv();
+extern "C" void init__11daObjProp_cFv();
+extern "C" void setModelMtx__11daObjProp_cFv();
+extern "C" void daObjProp_create__FP11daObjProp_c();
+extern "C" void daObjProp_Delete__FP11daObjProp_c();
+extern "C" void daObjProp_execute__FP11daObjProp_c();
+extern "C" void daObjProp_draw__FP11daObjProp_c();
 SECTION_RODATA extern const u8 data_80CB5614[8];
 SECTION_RODATA extern const u8 data_80CB561C[4];
 SECTION_RODATA extern const u8 stringBase0[7];
@@ -35,7 +63,9 @@ SECTION_DATA extern void*const __vt__11daObjProp_c[3];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -45,7 +75,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjProp_c_createHeap__FP10fopAc_ac_c) {
+asm void daObjProp_c_createHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_c_createHeap__FP10fopAc_ac_c.s"
 }
@@ -56,7 +86,7 @@ ASM_FUNCTION(daObjProp_c_createHeap__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daObjProp_cFv) {
+asm daObjProp_c::daObjProp_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/__ct__11daObjProp_cFv.s"
 }
@@ -67,7 +97,7 @@ ASM_FUNCTION(__ct__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daObjProp_cFv) {
+asm daObjProp_c::~daObjProp_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/__dt__11daObjProp_cFv.s"
 }
@@ -78,7 +108,7 @@ ASM_FUNCTION(__dt__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeap__11daObjProp_cFv) {
+asm void daObjProp_c::createHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/createHeap__11daObjProp_cFv.s"
 }
@@ -89,7 +119,7 @@ ASM_FUNCTION(createHeap__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjProp_cFv) {
+asm void daObjProp_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/create__11daObjProp_cFv.s"
 }
@@ -100,7 +130,7 @@ ASM_FUNCTION(create__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjProp_cFv) {
+asm void daObjProp_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/Delete__11daObjProp_cFv.s"
 }
@@ -111,7 +141,7 @@ ASM_FUNCTION(Delete__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__11daObjProp_cFv) {
+asm void daObjProp_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/draw__11daObjProp_cFv.s"
 }
@@ -122,7 +152,7 @@ ASM_FUNCTION(draw__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(execute__11daObjProp_cFv) {
+asm void daObjProp_c::execute() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/execute__11daObjProp_cFv.s"
 }
@@ -133,7 +163,7 @@ ASM_FUNCTION(execute__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11daObjProp_cFv) {
+asm void daObjProp_c::init() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/init__11daObjProp_cFv.s"
 }
@@ -144,7 +174,7 @@ ASM_FUNCTION(init__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setModelMtx__11daObjProp_cFv) {
+asm void daObjProp_c::setModelMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/setModelMtx__11daObjProp_cFv.s"
 }
@@ -155,7 +185,7 @@ ASM_FUNCTION(setModelMtx__11daObjProp_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjProp_create__FP11daObjProp_c) {
+asm void daObjProp_create(daObjProp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_create__FP11daObjProp_c.s"
 }
@@ -166,7 +196,7 @@ ASM_FUNCTION(daObjProp_create__FP11daObjProp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjProp_Delete__FP11daObjProp_c) {
+asm void daObjProp_Delete(daObjProp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_Delete__FP11daObjProp_c.s"
 }
@@ -177,7 +207,7 @@ ASM_FUNCTION(daObjProp_Delete__FP11daObjProp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjProp_execute__FP11daObjProp_c) {
+asm void daObjProp_execute(daObjProp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_execute__FP11daObjProp_c.s"
 }
@@ -188,7 +218,7 @@ ASM_FUNCTION(daObjProp_execute__FP11daObjProp_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjProp_draw__FP11daObjProp_c) {
+asm void daObjProp_draw(daObjProp_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_prop/d_a_obj_prop/daObjProp_draw__FP11daObjProp_c.s"
 }

@@ -6,38 +6,91 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct e_bug_class;
+struct fopAc_ac_c;
+struct bug_s;
+
+struct daE_Bug_HIO_c {
+	daE_Bug_HIO_c();
+	~daE_Bug_HIO_c();
+};
+
+struct e_bug_class {
+};
+
+struct bug_s {
+	~bug_s();
+	bug_s();
+};
+
+struct cXyz {
+	~cXyz();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__13daE_Bug_HIO_cFv();
-extern "C" extern void daE_Bug_Draw__FP11e_bug_class();
-extern "C" extern void simple_bg_check__FP5bug_si();
-extern "C" extern void __dt__4cXyzFv();
-extern "C" extern void bug_mtxset__FP5bug_s();
-extern "C" extern void bug_mtxset_stick__FP5bug_s();
-extern "C" extern void bug_mtxset_stickW__FP5bug_s();
-extern "C" extern void bug_mtxset_fail__FP5bug_s();
-extern "C" extern void bug_ground_ang_set__FP5bug_s();
-extern "C" extern void bug_action__FP11e_bug_classP5bug_s();
-extern "C" extern void bug_stick__FP5bug_s();
-extern "C" extern void bug_stickW__FP5bug_s();
-extern "C" extern void wind_move__FP5bug_s();
-extern "C" extern void bug_fail__FP11e_bug_classP5bug_s();
-extern "C" extern void damage_check__FP11e_bug_classP5bug_s();
-extern "C" extern void set_wait__FP11e_bug_classP5bug_s();
-extern "C" extern void normal_move__FP11e_bug_classP5bug_s();
-extern "C" extern void bug_control__FP11e_bug_class();
-extern "C" extern void s_boom_sub__FPvPv();
-extern "C" extern void s_bomb_sub__FPvPv();
-extern "C" extern void daE_Bug_Execute__FP11e_bug_class();
-extern "C" extern void daE_Bug_IsDelete__FP11e_bug_class();
-extern "C" extern void daE_Bug_Delete__FP11e_bug_class();
-extern "C" extern void useHeapInit__FP10fopAc_ac_c();
-extern "C" extern void daE_Bug_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__5bug_sFv();
-extern "C" extern void __ct__5bug_sFv();
-extern "C" extern void __dt__13daE_Bug_HIO_cFv();
-extern "C" extern void __sinit_d_a_e_bug_cpp();
+void daE_Bug_Draw(e_bug_class*);
+void simple_bg_check(bug_s*, s32);
+void bug_mtxset(bug_s*);
+void bug_mtxset_stick(bug_s*);
+void bug_mtxset_stickW(bug_s*);
+void bug_mtxset_fail(bug_s*);
+void bug_ground_ang_set(bug_s*);
+void bug_action(e_bug_class*, bug_s*);
+void bug_stick(bug_s*);
+void bug_stickW(bug_s*);
+void wind_move(bug_s*);
+void bug_fail(e_bug_class*, bug_s*);
+void damage_check(e_bug_class*, bug_s*);
+void set_wait(e_bug_class*, bug_s*);
+void normal_move(e_bug_class*, bug_s*);
+void bug_control(e_bug_class*);
+void s_boom_sub(void*, void*);
+void s_bomb_sub(void*, void*);
+void daE_Bug_Execute(e_bug_class*);
+bool daE_Bug_IsDelete(e_bug_class*);
+void daE_Bug_Delete(e_bug_class*);
+void useHeapInit(fopAc_ac_c*);
+void daE_Bug_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_e_bug_cpp();
+
+extern "C" void __ct__13daE_Bug_HIO_cFv();
+extern "C" void daE_Bug_Draw__FP11e_bug_class();
+extern "C" void simple_bg_check__FP5bug_si();
+extern "C" void __dt__4cXyzFv();
+extern "C" void bug_mtxset__FP5bug_s();
+extern "C" void bug_mtxset_stick__FP5bug_s();
+extern "C" void bug_mtxset_stickW__FP5bug_s();
+extern "C" void bug_mtxset_fail__FP5bug_s();
+extern "C" void bug_ground_ang_set__FP5bug_s();
+extern "C" void bug_action__FP11e_bug_classP5bug_s();
+extern "C" void bug_stick__FP5bug_s();
+extern "C" void bug_stickW__FP5bug_s();
+extern "C" void wind_move__FP5bug_s();
+extern "C" void bug_fail__FP11e_bug_classP5bug_s();
+extern "C" void damage_check__FP11e_bug_classP5bug_s();
+extern "C" void set_wait__FP11e_bug_classP5bug_s();
+extern "C" void normal_move__FP11e_bug_classP5bug_s();
+extern "C" void bug_control__FP11e_bug_class();
+extern "C" void s_boom_sub__FPvPv();
+extern "C" void s_bomb_sub__FPvPv();
+extern "C" void daE_Bug_Execute__FP11e_bug_class();
+extern "C" bool daE_Bug_IsDelete__FP11e_bug_class();
+extern "C" void daE_Bug_Delete__FP11e_bug_class();
+extern "C" void useHeapInit__FP10fopAc_ac_c();
+extern "C" void daE_Bug_Create__FP10fopAc_ac_c();
+extern "C" void __dt__5bug_sFv();
+extern "C" void __ct__5bug_sFv();
+extern "C" void __dt__13daE_Bug_HIO_cFv();
+extern "C" void __sinit_d_a_e_bug_cpp();
 SECTION_RODATA extern const u32 lit_3829;
 SECTION_RODATA extern const u32 lit_3830;
 SECTION_RODATA extern const u8 lit_3945[4 + 4 /* padding */];
@@ -150,8 +203,11 @@ SECTION_BSS extern u8 data_80697F10[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -161,7 +217,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__13daE_Bug_HIO_cFv) {
+asm daE_Bug_HIO_c::daE_Bug_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__ct__13daE_Bug_HIO_cFv.s"
 }
@@ -172,7 +228,7 @@ ASM_FUNCTION(__ct__13daE_Bug_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bug_Draw__FP11e_bug_class) {
+asm void daE_Bug_Draw(e_bug_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Draw__FP11e_bug_class.s"
 }
@@ -183,7 +239,7 @@ ASM_FUNCTION(daE_Bug_Draw__FP11e_bug_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(simple_bg_check__FP5bug_si) {
+asm void simple_bg_check(bug_s* field_0, s32 field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/simple_bg_check__FP5bug_si.s"
 }
@@ -194,7 +250,7 @@ ASM_FUNCTION(simple_bg_check__FP5bug_si) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__4cXyzFv) {
+asm cXyz::~cXyz() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__dt__4cXyzFv.s"
 }
@@ -205,7 +261,7 @@ ASM_FUNCTION(__dt__4cXyzFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_mtxset__FP5bug_s) {
+asm void bug_mtxset(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_mtxset__FP5bug_s.s"
 }
@@ -216,7 +272,7 @@ ASM_FUNCTION(bug_mtxset__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_mtxset_stick__FP5bug_s) {
+asm void bug_mtxset_stick(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_mtxset_stick__FP5bug_s.s"
 }
@@ -227,7 +283,7 @@ ASM_FUNCTION(bug_mtxset_stick__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_mtxset_stickW__FP5bug_s) {
+asm void bug_mtxset_stickW(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_mtxset_stickW__FP5bug_s.s"
 }
@@ -238,7 +294,7 @@ ASM_FUNCTION(bug_mtxset_stickW__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_mtxset_fail__FP5bug_s) {
+asm void bug_mtxset_fail(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_mtxset_fail__FP5bug_s.s"
 }
@@ -249,7 +305,7 @@ ASM_FUNCTION(bug_mtxset_fail__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_ground_ang_set__FP5bug_s) {
+asm void bug_ground_ang_set(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_ground_ang_set__FP5bug_s.s"
 }
@@ -260,7 +316,7 @@ ASM_FUNCTION(bug_ground_ang_set__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_action__FP11e_bug_classP5bug_s) {
+asm void bug_action(e_bug_class* field_0, bug_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_action__FP11e_bug_classP5bug_s.s"
 }
@@ -271,7 +327,7 @@ ASM_FUNCTION(bug_action__FP11e_bug_classP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_stick__FP5bug_s) {
+asm void bug_stick(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_stick__FP5bug_s.s"
 }
@@ -282,7 +338,7 @@ ASM_FUNCTION(bug_stick__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_stickW__FP5bug_s) {
+asm void bug_stickW(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_stickW__FP5bug_s.s"
 }
@@ -293,7 +349,7 @@ ASM_FUNCTION(bug_stickW__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(wind_move__FP5bug_s) {
+asm void wind_move(bug_s* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/wind_move__FP5bug_s.s"
 }
@@ -304,7 +360,7 @@ ASM_FUNCTION(wind_move__FP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_fail__FP11e_bug_classP5bug_s) {
+asm void bug_fail(e_bug_class* field_0, bug_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_fail__FP11e_bug_classP5bug_s.s"
 }
@@ -315,7 +371,7 @@ ASM_FUNCTION(bug_fail__FP11e_bug_classP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(damage_check__FP11e_bug_classP5bug_s) {
+asm void damage_check(e_bug_class* field_0, bug_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/damage_check__FP11e_bug_classP5bug_s.s"
 }
@@ -326,7 +382,7 @@ ASM_FUNCTION(damage_check__FP11e_bug_classP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(set_wait__FP11e_bug_classP5bug_s) {
+asm void set_wait(e_bug_class* field_0, bug_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/set_wait__FP11e_bug_classP5bug_s.s"
 }
@@ -337,7 +393,7 @@ ASM_FUNCTION(set_wait__FP11e_bug_classP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(normal_move__FP11e_bug_classP5bug_s) {
+asm void normal_move(e_bug_class* field_0, bug_s* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/normal_move__FP11e_bug_classP5bug_s.s"
 }
@@ -348,7 +404,7 @@ ASM_FUNCTION(normal_move__FP11e_bug_classP5bug_s) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(bug_control__FP11e_bug_class) {
+asm void bug_control(e_bug_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/bug_control__FP11e_bug_class.s"
 }
@@ -359,7 +415,7 @@ ASM_FUNCTION(bug_control__FP11e_bug_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_boom_sub__FPvPv) {
+asm void s_boom_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/s_boom_sub__FPvPv.s"
 }
@@ -370,7 +426,7 @@ ASM_FUNCTION(s_boom_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(s_bomb_sub__FPvPv) {
+asm void s_bomb_sub(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/s_bomb_sub__FPvPv.s"
 }
@@ -381,7 +437,7 @@ ASM_FUNCTION(s_bomb_sub__FPvPv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bug_Execute__FP11e_bug_class) {
+asm void daE_Bug_Execute(e_bug_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Execute__FP11e_bug_class.s"
 }
@@ -389,21 +445,16 @@ ASM_FUNCTION(daE_Bug_Execute__FP11e_bug_class) {
 
 
 /* 806975A0-806975A8 0008+00 .text      daE_Bug_IsDelete__FP11e_bug_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daE_Bug_IsDelete__FP11e_bug_class) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_IsDelete__FP11e_bug_class.s"
+bool daE_Bug_IsDelete(e_bug_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806975A8-806976B4 010C+00 .text      daE_Bug_Delete__FP11e_bug_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bug_Delete__FP11e_bug_class) {
+asm void daE_Bug_Delete(e_bug_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Delete__FP11e_bug_class.s"
 }
@@ -414,7 +465,7 @@ ASM_FUNCTION(daE_Bug_Delete__FP11e_bug_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
+asm void useHeapInit(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/useHeapInit__FP10fopAc_ac_c.s"
 }
@@ -425,7 +476,7 @@ ASM_FUNCTION(useHeapInit__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daE_Bug_Create__FP10fopAc_ac_c) {
+asm void daE_Bug_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_Create__FP10fopAc_ac_c.s"
 }
@@ -436,7 +487,7 @@ ASM_FUNCTION(daE_Bug_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__5bug_sFv) {
+asm bug_s::~bug_s() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__dt__5bug_sFv.s"
 }
@@ -447,7 +498,7 @@ ASM_FUNCTION(__dt__5bug_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__5bug_sFv) {
+asm bug_s::bug_s() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__ct__5bug_sFv.s"
 }
@@ -458,7 +509,7 @@ ASM_FUNCTION(__ct__5bug_sFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__13daE_Bug_HIO_cFv) {
+asm daE_Bug_HIO_c::~daE_Bug_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__dt__13daE_Bug_HIO_cFv.s"
 }
@@ -469,7 +520,7 @@ ASM_FUNCTION(__dt__13daE_Bug_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_e_bug_cpp) {
+extern "C" asm void __sinit_d_a_e_bug_cpp() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/__sinit_d_a_e_bug_cpp.s"
 }

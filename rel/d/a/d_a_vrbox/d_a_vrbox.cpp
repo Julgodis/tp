@@ -6,16 +6,31 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct vrbox_class;
+struct fopAc_ac_c;
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void daVrbox_Draw__FP11vrbox_class();
-extern "C" extern void daVrbox_color_set__FP11vrbox_class();
-extern "C" extern void daVrbox_Execute__FP11vrbox_class();
-extern "C" extern void daVrbox_IsDelete__FP11vrbox_class();
-extern "C" extern void daVrbox_Delete__FP11vrbox_class();
-extern "C" extern void daVrbox_solidHeapCB__FP10fopAc_ac_c();
-extern "C" extern void daVrbox_Create__FP10fopAc_ac_c();
+void daVrbox_Draw(vrbox_class*);
+void daVrbox_color_set(vrbox_class*);
+bool daVrbox_Execute(vrbox_class*);
+bool daVrbox_IsDelete(vrbox_class*);
+bool daVrbox_Delete(vrbox_class*);
+void daVrbox_solidHeapCB(fopAc_ac_c*);
+void daVrbox_Create(fopAc_ac_c*);
+
+extern "C" void daVrbox_Draw__FP11vrbox_class();
+extern "C" void daVrbox_color_set__FP11vrbox_class();
+extern "C" bool daVrbox_Execute__FP11vrbox_class();
+extern "C" bool daVrbox_IsDelete__FP11vrbox_class();
+extern "C" bool daVrbox_Delete__FP11vrbox_class();
+extern "C" void daVrbox_solidHeapCB__FP10fopAc_ac_c();
+extern "C" void daVrbox_Create__FP10fopAc_ac_c();
 SECTION_RODATA extern const u8 lit_3695[4];
 SECTION_RODATA extern const u32 lit_3696;
 SECTION_RODATA extern const u8 stringBase0[15];
@@ -26,7 +41,9 @@ SECTION_DATA extern u8 g_profile_VRBOX[48];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -36,7 +53,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_Draw__FP11vrbox_class) {
+asm void daVrbox_Draw(vrbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Draw__FP11vrbox_class.s"
 }
@@ -47,7 +64,7 @@ ASM_FUNCTION(daVrbox_Draw__FP11vrbox_class) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_color_set__FP11vrbox_class) {
+asm void daVrbox_color_set(vrbox_class* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_color_set__FP11vrbox_class.s"
 }
@@ -55,43 +72,28 @@ ASM_FUNCTION(daVrbox_color_set__FP11vrbox_class) {
 
 
 /* 80498850-80498858 0008+00 .text      daVrbox_Execute__FP11vrbox_class                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_Execute__FP11vrbox_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Execute__FP11vrbox_class.s"
+bool daVrbox_Execute(vrbox_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80498858-80498860 0008+00 .text      daVrbox_IsDelete__FP11vrbox_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_IsDelete__FP11vrbox_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_IsDelete__FP11vrbox_class.s"
+bool daVrbox_IsDelete(vrbox_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80498860-80498868 0008+00 .text      daVrbox_Delete__FP11vrbox_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_Delete__FP11vrbox_class) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Delete__FP11vrbox_class.s"
+bool daVrbox_Delete(vrbox_class* field_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80498868-804988DC 0074+00 .text      daVrbox_solidHeapCB__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_solidHeapCB__FP10fopAc_ac_c) {
+asm void daVrbox_solidHeapCB(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_solidHeapCB__FP10fopAc_ac_c.s"
 }
@@ -102,7 +104,7 @@ ASM_FUNCTION(daVrbox_solidHeapCB__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daVrbox_Create__FP10fopAc_ac_c) {
+asm void daVrbox_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Create__FP10fopAc_ac_c.s"
 }

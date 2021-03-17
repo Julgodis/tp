@@ -6,92 +6,218 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMarm_c;
+struct dBgW;
+struct cXyz;
+
+struct cXyz {
+};
+
+struct daObjMarm_c {
+	void getBpartsOffset(cXyz*);
+	void getDpartsOffset(cXyz*);
+	void getEpartsOffset(cXyz*);
+	void getFpartsOffset(cXyz*);
+	void getRopeStartPos(cXyz*);
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void phase_0();
+	void phase_1();
+	void phase_2();
+	void create1st();
+	void action();
+	void init_typeA_modeWait();
+	void typeA_modeWait();
+	void init_typeA_modeMholeOn();
+	void typeA_modeMholeOn();
+	void typeA_modeLiftUp();
+	void typeA_modeLiftDown();
+	void init_typeA_modeRotate();
+	void typeA_modeRotate();
+	void typeA_modeEnd();
+	void init_typeB_modeWait();
+	void typeB_modeWait();
+	void init_typeB_modeMholeOn();
+	void typeB_modeMholeOn();
+	void init_typeB_modeLiftUp();
+	void typeB_modeLiftUp();
+	void typeB_modeLiftDown();
+	void init_typeB_modeRotate();
+	void typeB_modeRotate();
+	void typeB_modeEnd();
+	void init_typeC_modeWait();
+	void typeC_modeWait();
+	void init_typeC_modeMholeOn();
+	void typeC_modeMholeOn();
+	void init_typeC_modeLiftUp();
+	void typeC_modeLiftUp();
+	void init_typeC_modeLiftDown();
+	void typeC_modeLiftDown();
+	void init_typeC_modeRotate();
+	void typeC_modeRotate();
+	void typeC_modeEnd();
+	void init_typeD_modeWait();
+	void typeD_modeWait();
+	void init_typeD_modeMholeOn();
+	void typeD_modeMholeOn();
+	void init_typeD_modeLiftUp();
+	void typeD_modeLiftUp();
+	void init_typeD_modeLiftDown();
+	void typeD_modeLiftDown();
+	void init_typeD_modeRotate();
+	void typeD_modeRotate();
+	void typeD_modeEnd();
+	void setMagneHoleEffect();
+	void endMagneHoleEffect();
+	void calcHimo();
+	void seStart_MOVESTART();
+	void seStartLevel_MOVE();
+	void seStart_STOP();
+	void seStartLevel_UP();
+	void seStartLevel_DOWN();
+	void seStart_SWING();
+	void Draw();
+	void debugDraw();
+	void Delete();
+};
+
+struct dBgW {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dCcD_GStts {
+	~dCcD_GStts();
+};
+
+struct dBgS_AcchCir {
+	~dBgS_AcchCir();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct cCcD_GStts {
+	~cCcD_GStts();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getBpartsOffset__11daObjMarm_cFP4cXyz();
-extern "C" extern void getDpartsOffset__11daObjMarm_cFP4cXyz();
-extern "C" extern void getEpartsOffset__11daObjMarm_cFP4cXyz();
-extern "C" extern void getFpartsOffset__11daObjMarm_cFP4cXyz();
-extern "C" extern void getRopeStartPos__11daObjMarm_cFP4cXyz();
-extern "C" extern void initBaseMtx__11daObjMarm_cFv();
-extern "C" extern void setBaseMtx__11daObjMarm_cFv();
-extern "C" extern void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" extern void Create__11daObjMarm_cFv();
-extern "C" extern void CreateHeap__11daObjMarm_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
-extern "C" extern void phase_0__11daObjMarm_cFv();
-extern "C" extern void phase_1__11daObjMarm_cFv();
-extern "C" extern void phase_2__11daObjMarm_cFv();
-extern "C" extern void create1st__11daObjMarm_cFv();
-extern "C" extern void Execute__11daObjMarm_cFPPA3_A4_f();
-extern "C" extern void action__11daObjMarm_cFv();
-extern "C" extern void init_typeA_modeWait__11daObjMarm_cFv();
-extern "C" extern void typeA_modeWait__11daObjMarm_cFv();
-extern "C" extern void init_typeA_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void typeA_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void typeA_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void typeA_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void init_typeA_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeA_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeA_modeEnd__11daObjMarm_cFv();
-extern "C" extern void init_typeB_modeWait__11daObjMarm_cFv();
-extern "C" extern void typeB_modeWait__11daObjMarm_cFv();
-extern "C" extern void init_typeB_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void typeB_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void init_typeB_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void typeB_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void typeB_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void init_typeB_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeB_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeB_modeEnd__11daObjMarm_cFv();
-extern "C" extern void init_typeC_modeWait__11daObjMarm_cFv();
-extern "C" extern void typeC_modeWait__11daObjMarm_cFv();
-extern "C" extern void init_typeC_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void typeC_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void init_typeC_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void typeC_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void init_typeC_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void typeC_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void init_typeC_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeC_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeC_modeEnd__11daObjMarm_cFv();
-extern "C" extern void init_typeD_modeWait__11daObjMarm_cFv();
-extern "C" extern void typeD_modeWait__11daObjMarm_cFv();
-extern "C" extern void init_typeD_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void typeD_modeMholeOn__11daObjMarm_cFv();
-extern "C" extern void init_typeD_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void typeD_modeLiftUp__11daObjMarm_cFv();
-extern "C" extern void init_typeD_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void typeD_modeLiftDown__11daObjMarm_cFv();
-extern "C" extern void init_typeD_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeD_modeRotate__11daObjMarm_cFv();
-extern "C" extern void typeD_modeEnd__11daObjMarm_cFv();
-extern "C" extern void setMagneHoleEffect__11daObjMarm_cFv();
-extern "C" extern void endMagneHoleEffect__11daObjMarm_cFv();
-extern "C" extern void calcHimo__11daObjMarm_cFv();
-extern "C" extern void seStart_MOVESTART__11daObjMarm_cFv();
-extern "C" extern void seStartLevel_MOVE__11daObjMarm_cFv();
-extern "C" extern void seStart_STOP__11daObjMarm_cFv();
-extern "C" extern void seStartLevel_UP__11daObjMarm_cFv();
-extern "C" extern void seStartLevel_DOWN__11daObjMarm_cFv();
-extern "C" extern void seStart_SWING__11daObjMarm_cFv();
-extern "C" extern void Draw__11daObjMarm_cFv();
-extern "C" extern void debugDraw__11daObjMarm_cFv();
-extern "C" extern void Delete__11daObjMarm_cFv();
-extern "C" extern void daObjMarm_create1st__FP11daObjMarm_c();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__10dCcD_GSttsFv();
-extern "C" extern void __dt__12dBgS_AcchCirFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void daObjMarm_MoveBGDelete__FP11daObjMarm_c();
-extern "C" extern void daObjMarm_MoveBGExecute__FP11daObjMarm_c();
-extern "C" extern void daObjMarm_MoveBGDraw__FP11daObjMarm_c();
-extern "C" extern void __dt__10cCcD_GSttsFv();
-extern "C" extern void func_80592814();
-extern "C" extern void func_80592830();
-extern "C" extern void func_80592838();
+void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+extern "C" void Execute__11daObjMarm_cFPPA3_A4_f();
+void daObjMarm_create1st(daObjMarm_c*);
+void daObjMarm_MoveBGDelete(daObjMarm_c*);
+void daObjMarm_MoveBGExecute(daObjMarm_c*);
+void daObjMarm_MoveBGDraw(daObjMarm_c*);
+extern "C" void func_80592814();
+extern "C" void func_80592830();
+extern "C" void func_80592838();
+
+extern "C" void getBpartsOffset__11daObjMarm_cFP4cXyz();
+extern "C" void getDpartsOffset__11daObjMarm_cFP4cXyz();
+extern "C" void getEpartsOffset__11daObjMarm_cFP4cXyz();
+extern "C" void getFpartsOffset__11daObjMarm_cFP4cXyz();
+extern "C" void getRopeStartPos__11daObjMarm_cFP4cXyz();
+extern "C" void initBaseMtx__11daObjMarm_cFv();
+extern "C" void setBaseMtx__11daObjMarm_cFv();
+extern "C" void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void Create__11daObjMarm_cFv();
+extern "C" void CreateHeap__11daObjMarm_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void phase_0__11daObjMarm_cFv();
+extern "C" void phase_1__11daObjMarm_cFv();
+extern "C" void phase_2__11daObjMarm_cFv();
+extern "C" void create1st__11daObjMarm_cFv();
+extern "C" void Execute__11daObjMarm_cFPPA3_A4_f();
+extern "C" void action__11daObjMarm_cFv();
+extern "C" void init_typeA_modeWait__11daObjMarm_cFv();
+extern "C" void typeA_modeWait__11daObjMarm_cFv();
+extern "C" void init_typeA_modeMholeOn__11daObjMarm_cFv();
+extern "C" void typeA_modeMholeOn__11daObjMarm_cFv();
+extern "C" void typeA_modeLiftUp__11daObjMarm_cFv();
+extern "C" void typeA_modeLiftDown__11daObjMarm_cFv();
+extern "C" void init_typeA_modeRotate__11daObjMarm_cFv();
+extern "C" void typeA_modeRotate__11daObjMarm_cFv();
+extern "C" void typeA_modeEnd__11daObjMarm_cFv();
+extern "C" void init_typeB_modeWait__11daObjMarm_cFv();
+extern "C" void typeB_modeWait__11daObjMarm_cFv();
+extern "C" void init_typeB_modeMholeOn__11daObjMarm_cFv();
+extern "C" void typeB_modeMholeOn__11daObjMarm_cFv();
+extern "C" void init_typeB_modeLiftUp__11daObjMarm_cFv();
+extern "C" void typeB_modeLiftUp__11daObjMarm_cFv();
+extern "C" void typeB_modeLiftDown__11daObjMarm_cFv();
+extern "C" void init_typeB_modeRotate__11daObjMarm_cFv();
+extern "C" void typeB_modeRotate__11daObjMarm_cFv();
+extern "C" void typeB_modeEnd__11daObjMarm_cFv();
+extern "C" void init_typeC_modeWait__11daObjMarm_cFv();
+extern "C" void typeC_modeWait__11daObjMarm_cFv();
+extern "C" void init_typeC_modeMholeOn__11daObjMarm_cFv();
+extern "C" void typeC_modeMholeOn__11daObjMarm_cFv();
+extern "C" void init_typeC_modeLiftUp__11daObjMarm_cFv();
+extern "C" void typeC_modeLiftUp__11daObjMarm_cFv();
+extern "C" void init_typeC_modeLiftDown__11daObjMarm_cFv();
+extern "C" void typeC_modeLiftDown__11daObjMarm_cFv();
+extern "C" void init_typeC_modeRotate__11daObjMarm_cFv();
+extern "C" void typeC_modeRotate__11daObjMarm_cFv();
+extern "C" void typeC_modeEnd__11daObjMarm_cFv();
+extern "C" void init_typeD_modeWait__11daObjMarm_cFv();
+extern "C" void typeD_modeWait__11daObjMarm_cFv();
+extern "C" void init_typeD_modeMholeOn__11daObjMarm_cFv();
+extern "C" void typeD_modeMholeOn__11daObjMarm_cFv();
+extern "C" void init_typeD_modeLiftUp__11daObjMarm_cFv();
+extern "C" void typeD_modeLiftUp__11daObjMarm_cFv();
+extern "C" void init_typeD_modeLiftDown__11daObjMarm_cFv();
+extern "C" void typeD_modeLiftDown__11daObjMarm_cFv();
+extern "C" void init_typeD_modeRotate__11daObjMarm_cFv();
+extern "C" void typeD_modeRotate__11daObjMarm_cFv();
+extern "C" void typeD_modeEnd__11daObjMarm_cFv();
+extern "C" void setMagneHoleEffect__11daObjMarm_cFv();
+extern "C" void endMagneHoleEffect__11daObjMarm_cFv();
+extern "C" void calcHimo__11daObjMarm_cFv();
+extern "C" void seStart_MOVESTART__11daObjMarm_cFv();
+extern "C" void seStartLevel_MOVE__11daObjMarm_cFv();
+extern "C" void seStart_STOP__11daObjMarm_cFv();
+extern "C" void seStartLevel_UP__11daObjMarm_cFv();
+extern "C" void seStartLevel_DOWN__11daObjMarm_cFv();
+extern "C" void seStart_SWING__11daObjMarm_cFv();
+extern "C" void Draw__11daObjMarm_cFv();
+extern "C" void debugDraw__11daObjMarm_cFv();
+extern "C" void Delete__11daObjMarm_cFv();
+extern "C" void daObjMarm_create1st__FP11daObjMarm_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void daObjMarm_MoveBGDelete__FP11daObjMarm_c();
+extern "C" void daObjMarm_MoveBGExecute__FP11daObjMarm_c();
+extern "C" void daObjMarm_MoveBGDraw__FP11daObjMarm_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void func_80592814();
+extern "C" void func_80592830();
+extern "C" void func_80592838();
 SECTION_RODATA extern const u8 l_magne_scale[12];
 SECTION_RODATA extern const u8 l_trans[16];
 SECTION_RODATA extern const u8 l_down_length[16];
@@ -236,7 +362,9 @@ SECTION_BSS extern u8 data_80592E0C[4];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -246,7 +374,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getBpartsOffset__11daObjMarm_cFP4cXyz) {
+asm void daObjMarm_c::getBpartsOffset(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/getBpartsOffset__11daObjMarm_cFP4cXyz.s"
 }
@@ -257,7 +385,7 @@ ASM_FUNCTION(getBpartsOffset__11daObjMarm_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDpartsOffset__11daObjMarm_cFP4cXyz) {
+asm void daObjMarm_c::getDpartsOffset(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/getDpartsOffset__11daObjMarm_cFP4cXyz.s"
 }
@@ -268,7 +396,7 @@ ASM_FUNCTION(getDpartsOffset__11daObjMarm_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getEpartsOffset__11daObjMarm_cFP4cXyz) {
+asm void daObjMarm_c::getEpartsOffset(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/getEpartsOffset__11daObjMarm_cFP4cXyz.s"
 }
@@ -279,7 +407,7 @@ ASM_FUNCTION(getEpartsOffset__11daObjMarm_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getFpartsOffset__11daObjMarm_cFP4cXyz) {
+asm void daObjMarm_c::getFpartsOffset(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/getFpartsOffset__11daObjMarm_cFP4cXyz.s"
 }
@@ -290,7 +418,7 @@ ASM_FUNCTION(getFpartsOffset__11daObjMarm_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getRopeStartPos__11daObjMarm_cFP4cXyz) {
+asm void daObjMarm_c::getRopeStartPos(cXyz* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/getRopeStartPos__11daObjMarm_cFP4cXyz.s"
 }
@@ -301,7 +429,7 @@ ASM_FUNCTION(getRopeStartPos__11daObjMarm_cFP4cXyz) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjMarm_cFv) {
+asm void daObjMarm_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/initBaseMtx__11daObjMarm_cFv.s"
 }
@@ -312,7 +440,7 @@ ASM_FUNCTION(initBaseMtx__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjMarm_cFv) {
+asm void daObjMarm_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/setBaseMtx__11daObjMarm_cFv.s"
 }
@@ -323,7 +451,7 @@ ASM_FUNCTION(setBaseMtx__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
+asm void rideCallBack(dBgW* field_0, fopAc_ac_c* field_1, fopAc_ac_c* field_2) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c.s"
 }
@@ -334,7 +462,7 @@ ASM_FUNCTION(rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjMarm_cFv) {
+asm void daObjMarm_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/Create__11daObjMarm_cFv.s"
 }
@@ -345,7 +473,7 @@ ASM_FUNCTION(Create__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjMarm_cFv) {
+asm void daObjMarm_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/CreateHeap__11daObjMarm_cFv.s"
 }
@@ -356,7 +484,7 @@ ASM_FUNCTION(CreateHeap__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__12J3DFrameCtrlFv.s"
 }
@@ -367,7 +495,7 @@ ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_0__11daObjMarm_cFv) {
+asm void daObjMarm_c::phase_0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/phase_0__11daObjMarm_cFv.s"
 }
@@ -378,7 +506,7 @@ ASM_FUNCTION(phase_0__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_1__11daObjMarm_cFv) {
+asm void daObjMarm_c::phase_1() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/phase_1__11daObjMarm_cFv.s"
 }
@@ -389,7 +517,7 @@ ASM_FUNCTION(phase_1__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(phase_2__11daObjMarm_cFv) {
+asm void daObjMarm_c::phase_2() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/phase_2__11daObjMarm_cFv.s"
 }
@@ -400,7 +528,7 @@ ASM_FUNCTION(phase_2__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create1st__11daObjMarm_cFv) {
+asm void daObjMarm_c::create1st() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/create1st__11daObjMarm_cFv.s"
 }
@@ -411,7 +539,7 @@ ASM_FUNCTION(create1st__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjMarm_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjMarm_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/Execute__11daObjMarm_cFPPA3_A4_f.s"
 }
@@ -422,7 +550,7 @@ ASM_FUNCTION(Execute__11daObjMarm_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(action__11daObjMarm_cFv) {
+asm void daObjMarm_c::action() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/action__11daObjMarm_cFv.s"
 }
@@ -433,7 +561,7 @@ ASM_FUNCTION(action__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeA_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeA_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeA_modeWait__11daObjMarm_cFv.s"
 }
@@ -444,7 +572,7 @@ ASM_FUNCTION(init_typeA_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeA_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeWait__11daObjMarm_cFv.s"
 }
@@ -455,7 +583,7 @@ ASM_FUNCTION(typeA_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeA_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeA_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeA_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -466,7 +594,7 @@ ASM_FUNCTION(init_typeA_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeA_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -474,32 +602,22 @@ ASM_FUNCTION(typeA_modeMholeOn__11daObjMarm_cFv) {
 
 
 /* 80590C68-80590C6C 0004+00 .text      typeA_modeLiftUp__11daObjMarm_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeLiftUp__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeLiftUp__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeLiftUp() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590C6C-80590C70 0004+00 .text      typeA_modeLiftDown__11daObjMarm_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeLiftDown__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeLiftDown__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeLiftDown() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590C70-80590CE4 0074+00 .text      init_typeA_modeRotate__11daObjMarm_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeA_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeA_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeA_modeRotate__11daObjMarm_cFv.s"
 }
@@ -510,7 +628,7 @@ ASM_FUNCTION(init_typeA_modeRotate__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeA_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeRotate__11daObjMarm_cFv.s"
 }
@@ -518,21 +636,16 @@ ASM_FUNCTION(typeA_modeRotate__11daObjMarm_cFv) {
 
 
 /* 80590E24-80590E28 0004+00 .text      typeA_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeA_modeEnd__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590E28-80590E38 0010+00 .text      init_typeB_modeWait__11daObjMarm_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeB_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeB_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeB_modeWait__11daObjMarm_cFv.s"
 }
@@ -543,7 +656,7 @@ ASM_FUNCTION(init_typeB_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeB_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeWait__11daObjMarm_cFv.s"
 }
@@ -554,7 +667,7 @@ ASM_FUNCTION(typeB_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeB_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeB_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeB_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -565,7 +678,7 @@ ASM_FUNCTION(init_typeB_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeB_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -576,7 +689,7 @@ ASM_FUNCTION(typeB_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeB_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeB_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeB_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -587,7 +700,7 @@ ASM_FUNCTION(init_typeB_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeB_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -598,7 +711,7 @@ ASM_FUNCTION(typeB_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeLiftDown__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeB_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeLiftDown__11daObjMarm_cFv.s"
 }
@@ -609,7 +722,7 @@ ASM_FUNCTION(typeB_modeLiftDown__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeB_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeB_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeB_modeRotate__11daObjMarm_cFv.s"
 }
@@ -620,7 +733,7 @@ ASM_FUNCTION(init_typeB_modeRotate__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeB_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeRotate__11daObjMarm_cFv.s"
 }
@@ -628,21 +741,16 @@ ASM_FUNCTION(typeB_modeRotate__11daObjMarm_cFv) {
 
 
 /* 805912AC-805912B0 0004+00 .text      typeB_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeB_modeEnd__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeB_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805912B0-805912C0 0010+00 .text      init_typeC_modeWait__11daObjMarm_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeC_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeC_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeC_modeWait__11daObjMarm_cFv.s"
 }
@@ -653,7 +761,7 @@ ASM_FUNCTION(init_typeC_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeC_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeWait__11daObjMarm_cFv.s"
 }
@@ -664,7 +772,7 @@ ASM_FUNCTION(typeC_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeC_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeC_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeC_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -675,7 +783,7 @@ ASM_FUNCTION(init_typeC_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeC_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -686,7 +794,7 @@ ASM_FUNCTION(typeC_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeC_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeC_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeC_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -697,7 +805,7 @@ ASM_FUNCTION(init_typeC_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeC_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -708,7 +816,7 @@ ASM_FUNCTION(typeC_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeC_modeLiftDown__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeC_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeC_modeLiftDown__11daObjMarm_cFv.s"
 }
@@ -719,7 +827,7 @@ ASM_FUNCTION(init_typeC_modeLiftDown__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeLiftDown__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeC_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeLiftDown__11daObjMarm_cFv.s"
 }
@@ -730,7 +838,7 @@ ASM_FUNCTION(typeC_modeLiftDown__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeC_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeC_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeC_modeRotate__11daObjMarm_cFv.s"
 }
@@ -741,7 +849,7 @@ ASM_FUNCTION(init_typeC_modeRotate__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeC_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeRotate__11daObjMarm_cFv.s"
 }
@@ -749,21 +857,16 @@ ASM_FUNCTION(typeC_modeRotate__11daObjMarm_cFv) {
 
 
 /* 80591750-80591754 0004+00 .text      typeC_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeC_modeEnd__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeC_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591754-80591764 0010+00 .text      init_typeD_modeWait__11daObjMarm_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeD_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeD_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeD_modeWait__11daObjMarm_cFv.s"
 }
@@ -774,7 +877,7 @@ ASM_FUNCTION(init_typeD_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeWait__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeD_modeWait() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeWait__11daObjMarm_cFv.s"
 }
@@ -785,7 +888,7 @@ ASM_FUNCTION(typeD_modeWait__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeD_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeD_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeD_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -796,7 +899,7 @@ ASM_FUNCTION(init_typeD_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeMholeOn__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeD_modeMholeOn() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeMholeOn__11daObjMarm_cFv.s"
 }
@@ -807,7 +910,7 @@ ASM_FUNCTION(typeD_modeMholeOn__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeD_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeD_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeD_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -818,7 +921,7 @@ ASM_FUNCTION(init_typeD_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeLiftUp__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeD_modeLiftUp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeLiftUp__11daObjMarm_cFv.s"
 }
@@ -829,7 +932,7 @@ ASM_FUNCTION(typeD_modeLiftUp__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeD_modeLiftDown__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeD_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeD_modeLiftDown__11daObjMarm_cFv.s"
 }
@@ -840,7 +943,7 @@ ASM_FUNCTION(init_typeD_modeLiftDown__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeLiftDown__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeD_modeLiftDown() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeLiftDown__11daObjMarm_cFv.s"
 }
@@ -851,7 +954,7 @@ ASM_FUNCTION(typeD_modeLiftDown__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init_typeD_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::init_typeD_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/init_typeD_modeRotate__11daObjMarm_cFv.s"
 }
@@ -862,7 +965,7 @@ ASM_FUNCTION(init_typeD_modeRotate__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeRotate__11daObjMarm_cFv) {
+asm void daObjMarm_c::typeD_modeRotate() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeRotate__11daObjMarm_cFv.s"
 }
@@ -870,32 +973,22 @@ ASM_FUNCTION(typeD_modeRotate__11daObjMarm_cFv) {
 
 
 /* 80591BF4-80591BF8 0004+00 .text      typeD_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(typeD_modeEnd__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeD_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591BF8-80591BFC 0004+00 .text      setMagneHoleEffect__11daObjMarm_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(setMagneHoleEffect__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/setMagneHoleEffect__11daObjMarm_cFv.s"
+void daObjMarm_c::setMagneHoleEffect() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591BFC-80591C38 003C+00 .text      endMagneHoleEffect__11daObjMarm_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(endMagneHoleEffect__11daObjMarm_cFv) {
+asm void daObjMarm_c::endMagneHoleEffect() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/endMagneHoleEffect__11daObjMarm_cFv.s"
 }
@@ -906,7 +999,7 @@ ASM_FUNCTION(endMagneHoleEffect__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(calcHimo__11daObjMarm_cFv) {
+asm void daObjMarm_c::calcHimo() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/calcHimo__11daObjMarm_cFv.s"
 }
@@ -917,7 +1010,7 @@ ASM_FUNCTION(calcHimo__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStart_MOVESTART__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStart_MOVESTART() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStart_MOVESTART__11daObjMarm_cFv.s"
 }
@@ -928,7 +1021,7 @@ ASM_FUNCTION(seStart_MOVESTART__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStartLevel_MOVE__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStartLevel_MOVE() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStartLevel_MOVE__11daObjMarm_cFv.s"
 }
@@ -939,7 +1032,7 @@ ASM_FUNCTION(seStartLevel_MOVE__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStart_STOP__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStart_STOP() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStart_STOP__11daObjMarm_cFv.s"
 }
@@ -950,7 +1043,7 @@ ASM_FUNCTION(seStart_STOP__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStartLevel_UP__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStartLevel_UP() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStartLevel_UP__11daObjMarm_cFv.s"
 }
@@ -961,7 +1054,7 @@ ASM_FUNCTION(seStartLevel_UP__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStartLevel_DOWN__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStartLevel_DOWN() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStartLevel_DOWN__11daObjMarm_cFv.s"
 }
@@ -972,7 +1065,7 @@ ASM_FUNCTION(seStartLevel_DOWN__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(seStart_SWING__11daObjMarm_cFv) {
+asm void daObjMarm_c::seStart_SWING() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/seStart_SWING__11daObjMarm_cFv.s"
 }
@@ -983,7 +1076,7 @@ ASM_FUNCTION(seStart_SWING__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjMarm_cFv) {
+asm void daObjMarm_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/Draw__11daObjMarm_cFv.s"
 }
@@ -991,21 +1084,16 @@ ASM_FUNCTION(Draw__11daObjMarm_cFv) {
 
 
 /* 805923C4-805923C8 0004+00 .text      debugDraw__11daObjMarm_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(debugDraw__11daObjMarm_cFv) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/debugDraw__11daObjMarm_cFv.s"
+void daObjMarm_c::debugDraw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805923C8-80592468 00A0+00 .text      Delete__11daObjMarm_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjMarm_cFv) {
+asm void daObjMarm_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/Delete__11daObjMarm_cFv.s"
 }
@@ -1016,7 +1104,7 @@ ASM_FUNCTION(Delete__11daObjMarm_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMarm_create1st__FP11daObjMarm_c) {
+asm void daObjMarm_create1st(daObjMarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/daObjMarm_create1st__FP11daObjMarm_c.s"
 }
@@ -1027,7 +1115,7 @@ ASM_FUNCTION(daObjMarm_create1st__FP11daObjMarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__8cM3dGCylFv.s"
 }
@@ -1038,7 +1126,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__8cM3dGAabFv.s"
 }
@@ -1049,7 +1137,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
+asm dCcD_GStts::~dCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__10dCcD_GSttsFv.s"
 }
@@ -1060,7 +1148,7 @@ ASM_FUNCTION(__dt__10dCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
+asm dBgS_AcchCir::~dBgS_AcchCir() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__12dBgS_AcchCirFv.s"
 }
@@ -1071,7 +1159,7 @@ ASM_FUNCTION(__dt__12dBgS_AcchCirFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -1082,7 +1170,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMarm_MoveBGDelete__FP11daObjMarm_c) {
+asm void daObjMarm_MoveBGDelete(daObjMarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/daObjMarm_MoveBGDelete__FP11daObjMarm_c.s"
 }
@@ -1093,7 +1181,7 @@ ASM_FUNCTION(daObjMarm_MoveBGDelete__FP11daObjMarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMarm_MoveBGExecute__FP11daObjMarm_c) {
+asm void daObjMarm_MoveBGExecute(daObjMarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/daObjMarm_MoveBGExecute__FP11daObjMarm_c.s"
 }
@@ -1104,7 +1192,7 @@ ASM_FUNCTION(daObjMarm_MoveBGExecute__FP11daObjMarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMarm_MoveBGDraw__FP11daObjMarm_c) {
+asm void daObjMarm_MoveBGDraw(daObjMarm_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/daObjMarm_MoveBGDraw__FP11daObjMarm_c.s"
 }
@@ -1115,7 +1203,7 @@ ASM_FUNCTION(daObjMarm_MoveBGDraw__FP11daObjMarm_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
+asm cCcD_GStts::~cCcD_GStts() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/__dt__10cCcD_GSttsFv.s"
 }
@@ -1126,7 +1214,7 @@ ASM_FUNCTION(__dt__10cCcD_GSttsFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80592814) {
+extern "C" asm void func_80592814() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/func_80592814.s"
 }
@@ -1137,7 +1225,7 @@ ASM_FUNCTION(func_80592814) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80592830) {
+extern "C" asm void func_80592830() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/func_80592830.s"
 }
@@ -1148,7 +1236,7 @@ ASM_FUNCTION(func_80592830) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80592838) {
+extern "C" asm void func_80592838() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/func_80592838.s"
 }

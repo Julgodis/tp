@@ -6,40 +6,97 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daTitle_c;
+
+struct daTit_HIO_c {
+	daTit_HIO_c();
+	~daTit_HIO_c();
+};
+
+struct daTitle_c {
+	void CreateHeap();
+	void create();
+	void createHeapCallBack(fopAc_ac_c*);
+	void Execute();
+	void KeyWaitAnm();
+	void loadWait_init();
+	void loadWait_proc();
+	void logoDispWaitInit();
+	void logoDispWait();
+	void logoDispAnmInit();
+	void logoDispAnm();
+	void keyWaitInit();
+	void keyWait();
+	void nextScene_init();
+	void nextScene_proc();
+	void fastLogoDispInit();
+	void fastLogoDisp();
+	void getDemoPrm();
+	void Draw();
+	void Delete();
+};
+
+struct fopAc_ac_c {
+};
+
+struct dDlst_daTitle_c {
+	void draw();
+	~dDlst_daTitle_c();
+};
+
+struct dDlst_base_c {
+	void draw();
+};
+
+struct J3DFrameCtrl {
+	~J3DFrameCtrl();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__11daTit_HIO_cFv();
-extern "C" extern void CreateHeap__9daTitle_cFv();
-extern "C" extern void create__9daTitle_cFv();
-extern "C" extern void createHeapCallBack__9daTitle_cFP10fopAc_ac_c();
-extern "C" extern void Execute__9daTitle_cFv();
-extern "C" extern void KeyWaitAnm__9daTitle_cFv();
-extern "C" extern void loadWait_init__9daTitle_cFv();
-extern "C" extern void loadWait_proc__9daTitle_cFv();
-extern "C" extern void logoDispWaitInit__9daTitle_cFv();
-extern "C" extern void logoDispWait__9daTitle_cFv();
-extern "C" extern void logoDispAnmInit__9daTitle_cFv();
-extern "C" extern void logoDispAnm__9daTitle_cFv();
-extern "C" extern void keyWaitInit__9daTitle_cFv();
-extern "C" extern void keyWait__9daTitle_cFv();
-extern "C" extern void nextScene_init__9daTitle_cFv();
-extern "C" extern void nextScene_proc__9daTitle_cFv();
-extern "C" extern void fastLogoDispInit__9daTitle_cFv();
-extern "C" extern void fastLogoDisp__9daTitle_cFv();
-extern "C" extern void getDemoPrm__9daTitle_cFv();
-extern "C" extern void Draw__9daTitle_cFv();
-extern "C" extern void Delete__9daTitle_cFv();
-extern "C" extern void daTitle_Draw__FP9daTitle_c();
-extern "C" extern void daTitle_Execute__FP9daTitle_c();
-extern "C" extern void daTitle_Delete__FP9daTitle_c();
-extern "C" extern void daTitle_Create__FP10fopAc_ac_c();
-extern "C" extern void draw__15dDlst_daTitle_cFv();
-extern "C" extern void draw__12dDlst_base_cFv();
-extern "C" extern void __dt__11daTit_HIO_cFv();
-extern "C" extern void __sinit_d_a_title_cpp();
-extern "C" extern void __dt__15dDlst_daTitle_cFv();
-extern "C" extern void __dt__12J3DFrameCtrlFv();
+void daTitle_Draw(daTitle_c*);
+void daTitle_Execute(daTitle_c*);
+void daTitle_Delete(daTitle_c*);
+void daTitle_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_title_cpp();
+
+extern "C" void __ct__11daTit_HIO_cFv();
+extern "C" void CreateHeap__9daTitle_cFv();
+extern "C" void create__9daTitle_cFv();
+extern "C" void createHeapCallBack__9daTitle_cFP10fopAc_ac_c();
+extern "C" void Execute__9daTitle_cFv();
+extern "C" void KeyWaitAnm__9daTitle_cFv();
+extern "C" void loadWait_init__9daTitle_cFv();
+extern "C" void loadWait_proc__9daTitle_cFv();
+extern "C" void logoDispWaitInit__9daTitle_cFv();
+extern "C" void logoDispWait__9daTitle_cFv();
+extern "C" void logoDispAnmInit__9daTitle_cFv();
+extern "C" void logoDispAnm__9daTitle_cFv();
+extern "C" void keyWaitInit__9daTitle_cFv();
+extern "C" void keyWait__9daTitle_cFv();
+extern "C" void nextScene_init__9daTitle_cFv();
+extern "C" void nextScene_proc__9daTitle_cFv();
+extern "C" void fastLogoDispInit__9daTitle_cFv();
+extern "C" void fastLogoDisp__9daTitle_cFv();
+extern "C" void getDemoPrm__9daTitle_cFv();
+extern "C" void Draw__9daTitle_cFv();
+extern "C" void Delete__9daTitle_cFv();
+extern "C" void daTitle_Draw__FP9daTitle_c();
+extern "C" void daTitle_Execute__FP9daTitle_c();
+extern "C" void daTitle_Delete__FP9daTitle_c();
+extern "C" void daTitle_Create__FP10fopAc_ac_c();
+extern "C" void draw__15dDlst_daTitle_cFv();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__11daTit_HIO_cFv();
+extern "C" void __sinit_d_a_title_cpp();
+extern "C" void __dt__15dDlst_daTitle_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
 SECTION_RODATA extern const u8 lit_3772[12];
 SECTION_RODATA extern const u8 l_arcName[6 + 2 /* padding */];
 SECTION_RODATA extern const u32 lit_4003;
@@ -74,8 +131,11 @@ SECTION_BSS extern u8 g_daTitHIO[28];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -85,7 +145,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__11daTit_HIO_cFv) {
+asm daTit_HIO_c::daTit_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/__ct__11daTit_HIO_cFv.s"
 }
@@ -96,7 +156,7 @@ ASM_FUNCTION(__ct__11daTit_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__9daTitle_cFv) {
+asm void daTitle_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/CreateHeap__9daTitle_cFv.s"
 }
@@ -107,7 +167,7 @@ ASM_FUNCTION(CreateHeap__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__9daTitle_cFv) {
+asm void daTitle_c::create() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/create__9daTitle_cFv.s"
 }
@@ -118,7 +178,7 @@ ASM_FUNCTION(create__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(createHeapCallBack__9daTitle_cFP10fopAc_ac_c) {
+asm void daTitle_c::createHeapCallBack(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/createHeapCallBack__9daTitle_cFP10fopAc_ac_c.s"
 }
@@ -129,7 +189,7 @@ ASM_FUNCTION(createHeapCallBack__9daTitle_cFP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__9daTitle_cFv) {
+asm void daTitle_c::Execute() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/Execute__9daTitle_cFv.s"
 }
@@ -140,7 +200,7 @@ ASM_FUNCTION(Execute__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(KeyWaitAnm__9daTitle_cFv) {
+asm void daTitle_c::KeyWaitAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/KeyWaitAnm__9daTitle_cFv.s"
 }
@@ -151,7 +211,7 @@ ASM_FUNCTION(KeyWaitAnm__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadWait_init__9daTitle_cFv) {
+asm void daTitle_c::loadWait_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/loadWait_init__9daTitle_cFv.s"
 }
@@ -162,7 +222,7 @@ ASM_FUNCTION(loadWait_init__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(loadWait_proc__9daTitle_cFv) {
+asm void daTitle_c::loadWait_proc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/loadWait_proc__9daTitle_cFv.s"
 }
@@ -173,7 +233,7 @@ ASM_FUNCTION(loadWait_proc__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(logoDispWaitInit__9daTitle_cFv) {
+asm void daTitle_c::logoDispWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/logoDispWaitInit__9daTitle_cFv.s"
 }
@@ -184,7 +244,7 @@ ASM_FUNCTION(logoDispWaitInit__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(logoDispWait__9daTitle_cFv) {
+asm void daTitle_c::logoDispWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/logoDispWait__9daTitle_cFv.s"
 }
@@ -195,7 +255,7 @@ ASM_FUNCTION(logoDispWait__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(logoDispAnmInit__9daTitle_cFv) {
+asm void daTitle_c::logoDispAnmInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/logoDispAnmInit__9daTitle_cFv.s"
 }
@@ -206,7 +266,7 @@ ASM_FUNCTION(logoDispAnmInit__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(logoDispAnm__9daTitle_cFv) {
+asm void daTitle_c::logoDispAnm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/logoDispAnm__9daTitle_cFv.s"
 }
@@ -217,7 +277,7 @@ ASM_FUNCTION(logoDispAnm__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyWaitInit__9daTitle_cFv) {
+asm void daTitle_c::keyWaitInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/keyWaitInit__9daTitle_cFv.s"
 }
@@ -228,7 +288,7 @@ ASM_FUNCTION(keyWaitInit__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(keyWait__9daTitle_cFv) {
+asm void daTitle_c::keyWait() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/keyWait__9daTitle_cFv.s"
 }
@@ -239,7 +299,7 @@ ASM_FUNCTION(keyWait__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nextScene_init__9daTitle_cFv) {
+asm void daTitle_c::nextScene_init() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/nextScene_init__9daTitle_cFv.s"
 }
@@ -250,7 +310,7 @@ ASM_FUNCTION(nextScene_init__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(nextScene_proc__9daTitle_cFv) {
+asm void daTitle_c::nextScene_proc() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/nextScene_proc__9daTitle_cFv.s"
 }
@@ -261,7 +321,7 @@ ASM_FUNCTION(nextScene_proc__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fastLogoDispInit__9daTitle_cFv) {
+asm void daTitle_c::fastLogoDispInit() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/fastLogoDispInit__9daTitle_cFv.s"
 }
@@ -272,7 +332,7 @@ ASM_FUNCTION(fastLogoDispInit__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(fastLogoDisp__9daTitle_cFv) {
+asm void daTitle_c::fastLogoDisp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/fastLogoDisp__9daTitle_cFv.s"
 }
@@ -283,7 +343,7 @@ ASM_FUNCTION(fastLogoDisp__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getDemoPrm__9daTitle_cFv) {
+asm void daTitle_c::getDemoPrm() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/getDemoPrm__9daTitle_cFv.s"
 }
@@ -294,7 +354,7 @@ ASM_FUNCTION(getDemoPrm__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__9daTitle_cFv) {
+asm void daTitle_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/Draw__9daTitle_cFv.s"
 }
@@ -305,7 +365,7 @@ ASM_FUNCTION(Draw__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__9daTitle_cFv) {
+asm void daTitle_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/Delete__9daTitle_cFv.s"
 }
@@ -316,7 +376,7 @@ ASM_FUNCTION(Delete__9daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTitle_Draw__FP9daTitle_c) {
+asm void daTitle_Draw(daTitle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/daTitle_Draw__FP9daTitle_c.s"
 }
@@ -327,7 +387,7 @@ ASM_FUNCTION(daTitle_Draw__FP9daTitle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTitle_Execute__FP9daTitle_c) {
+asm void daTitle_Execute(daTitle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/daTitle_Execute__FP9daTitle_c.s"
 }
@@ -338,7 +398,7 @@ ASM_FUNCTION(daTitle_Execute__FP9daTitle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTitle_Delete__FP9daTitle_c) {
+asm void daTitle_Delete(daTitle_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/daTitle_Delete__FP9daTitle_c.s"
 }
@@ -349,7 +409,7 @@ ASM_FUNCTION(daTitle_Delete__FP9daTitle_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daTitle_Create__FP10fopAc_ac_c) {
+asm void daTitle_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/daTitle_Create__FP10fopAc_ac_c.s"
 }
@@ -360,7 +420,7 @@ ASM_FUNCTION(daTitle_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(draw__15dDlst_daTitle_cFv) {
+asm void dDlst_daTitle_c::draw() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/draw__15dDlst_daTitle_cFv.s"
 }
@@ -368,21 +428,16 @@ ASM_FUNCTION(draw__15dDlst_daTitle_cFv) {
 
 
 /* 80D67A04-80D67A08 0004+00 .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-ASM_FUNCTION(draw__12dDlst_base_cFv) {
-	nofralloc
-#include "asm/rel/d/a/d_a_title/d_a_title/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D67A08-80D67A50 0048+00 .text      __dt__11daTit_HIO_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11daTit_HIO_cFv) {
+asm daTit_HIO_c::~daTit_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/__dt__11daTit_HIO_cFv.s"
 }
@@ -393,7 +448,7 @@ ASM_FUNCTION(__dt__11daTit_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_title_cpp) {
+extern "C" asm void __sinit_d_a_title_cpp() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/__sinit_d_a_title_cpp.s"
 }
@@ -404,7 +459,7 @@ ASM_FUNCTION(__sinit_d_a_title_cpp) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__15dDlst_daTitle_cFv) {
+asm dDlst_daTitle_c::~dDlst_daTitle_c() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/__dt__15dDlst_daTitle_cFv.s"
 }
@@ -415,7 +470,7 @@ ASM_FUNCTION(__dt__15dDlst_daTitle_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12J3DFrameCtrlFv) {
+asm J3DFrameCtrl::~J3DFrameCtrl() {
 	nofralloc
 #include "asm/rel/d/a/d_a_title/d_a_title/__dt__12J3DFrameCtrlFv.s"
 }

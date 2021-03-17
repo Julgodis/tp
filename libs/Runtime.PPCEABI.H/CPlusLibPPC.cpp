@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void __copy();
+extern "C" void __copy();
+
+extern "C" void __copy();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 80361C3C-80361C6C 0030+00 .text      __copy                                                       */
+/* 80361C3C-80361C6C 0030+00 rc=0 efc=0 .text      __copy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__copy) {
+extern "C" asm void __copy() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/CPlusLibPPC/__copy.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

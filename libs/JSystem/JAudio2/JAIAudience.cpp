@@ -6,24 +6,38 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JAIAudience (JAIAudience) False/False
+/* top-level dependencies (begin JAIAudience) */
+/* top-level dependencies (end JAIAudience) */
+struct JAIAudience {
+	/* 8029EFF4 */ ~JAIAudience();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __dt__11JAIAudienceFv();
+
+extern "C" void __dt__11JAIAudienceFv();
 SECTION_DATA extern void*const __vt__11JAIAudience[8];
 
 // 
 // External References:
 // 
 
-extern "C" extern void __dl__FPv();
+void operator delete(void*);
+
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C9838-803C9858 0020+00 .data      __vt__11JAIAudience                                          */
+/* 803C9838-803C9858 0020+00 rc=2 efc=1 .data      __vt__11JAIAudience                                          */
 void* const __vt__11JAIAudience[8] = {
 	NULL, /* RTTI */
 	NULL,
@@ -35,15 +49,14 @@ void* const __vt__11JAIAudience[8] = {
 	NULL,
 };
 
-/* 8029EFF4-8029F03C 0048+00 .text      __dt__11JAIAudienceFv                                        */
+/* 8029EFF4-8029F03C 0048+00 rc=2 efc=1 .text      __dt__11JAIAudienceFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__11JAIAudienceFv) {
+asm JAIAudience::~JAIAudience() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIAudience/__dt__11JAIAudienceFv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

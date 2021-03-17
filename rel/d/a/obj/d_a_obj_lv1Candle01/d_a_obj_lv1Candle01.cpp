@@ -6,29 +6,75 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daLv1Cdl01_c;
+
+struct daLv1Cdl01_HIO_c {
+	daLv1Cdl01_HIO_c();
+	~daLv1Cdl01_HIO_c();
+};
+
+struct mDoHIO_entry_c {
+	~mDoHIO_entry_c();
+};
+
+struct daLv1Cdl01_c {
+	void setBaseMtx();
+	void CreateHeap();
+	void create();
+	void lightInit();
+	void setLight();
+	void cutLight();
+	void pointLightProc();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void __ct__16daLv1Cdl01_HIO_cFv();
-extern "C" extern void __dt__14mDoHIO_entry_cFv();
-extern "C" extern void setBaseMtx__12daLv1Cdl01_cFv();
-extern "C" extern void CreateHeap__12daLv1Cdl01_cFv();
-extern "C" extern void create__12daLv1Cdl01_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void lightInit__12daLv1Cdl01_cFv();
-extern "C" extern void setLight__12daLv1Cdl01_cFv();
-extern "C" extern void cutLight__12daLv1Cdl01_cFv();
-extern "C" extern void pointLightProc__12daLv1Cdl01_cFv();
-extern "C" extern void Execute__12daLv1Cdl01_cFPPA3_A4_f();
-extern "C" extern void Draw__12daLv1Cdl01_cFv();
-extern "C" extern void Delete__12daLv1Cdl01_cFv();
-extern "C" extern void daLv1Cdl01_Draw__FP12daLv1Cdl01_c();
-extern "C" extern void daLv1Cdl01_Execute__FP12daLv1Cdl01_c();
-extern "C" extern void daLv1Cdl01_Delete__FP12daLv1Cdl01_c();
-extern "C" extern void daLv1Cdl01_Create__FP10fopAc_ac_c();
-extern "C" extern void __dt__16daLv1Cdl01_HIO_cFv();
-extern "C" extern void __sinit_d_a_obj_lv1Candle01_cpp();
+extern "C" void Execute__12daLv1Cdl01_cFPPA3_A4_f();
+void daLv1Cdl01_Draw(daLv1Cdl01_c*);
+void daLv1Cdl01_Execute(daLv1Cdl01_c*);
+void daLv1Cdl01_Delete(daLv1Cdl01_c*);
+void daLv1Cdl01_Create(fopAc_ac_c*);
+extern "C" void __sinit_d_a_obj_lv1Candle01_cpp();
+
+extern "C" void __ct__16daLv1Cdl01_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daLv1Cdl01_cFv();
+extern "C" void CreateHeap__12daLv1Cdl01_cFv();
+extern "C" void create__12daLv1Cdl01_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void lightInit__12daLv1Cdl01_cFv();
+extern "C" void setLight__12daLv1Cdl01_cFv();
+extern "C" void cutLight__12daLv1Cdl01_cFv();
+extern "C" void pointLightProc__12daLv1Cdl01_cFv();
+extern "C" void Execute__12daLv1Cdl01_cFPPA3_A4_f();
+extern "C" void Draw__12daLv1Cdl01_cFv();
+extern "C" void Delete__12daLv1Cdl01_cFv();
+extern "C" void daLv1Cdl01_Draw__FP12daLv1Cdl01_c();
+extern "C" void daLv1Cdl01_Execute__FP12daLv1Cdl01_c();
+extern "C" void daLv1Cdl01_Delete__FP12daLv1Cdl01_c();
+extern "C" void daLv1Cdl01_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daLv1Cdl01_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv1Candle01_cpp();
 SECTION_RODATA extern const u8 mCcDObjInfo__12daLv1Cdl01_c[48];
 SECTION_RODATA extern const u32 lit_3723;
 SECTION_RODATA extern const u32 lit_3811;
@@ -59,8 +105,11 @@ SECTION_BSS extern u8 l_HIO[8];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
-extern "C" extern void __register_global_object();
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
+
+extern "C" void _unresolved();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:
@@ -70,7 +119,7 @@ extern "C" extern void __register_global_object();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__ct__16daLv1Cdl01_HIO_cFv) {
+asm daLv1Cdl01_HIO_c::daLv1Cdl01_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__ct__16daLv1Cdl01_HIO_cFv.s"
 }
@@ -81,7 +130,7 @@ ASM_FUNCTION(__ct__16daLv1Cdl01_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__dt__14mDoHIO_entry_cFv.s"
 }
@@ -92,7 +141,7 @@ ASM_FUNCTION(__dt__14mDoHIO_entry_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/setBaseMtx__12daLv1Cdl01_cFv.s"
 }
@@ -103,7 +152,7 @@ ASM_FUNCTION(setBaseMtx__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/CreateHeap__12daLv1Cdl01_cFv.s"
 }
@@ -114,7 +163,7 @@ ASM_FUNCTION(CreateHeap__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/create__12daLv1Cdl01_cFv.s"
 }
@@ -125,7 +174,7 @@ ASM_FUNCTION(create__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__dt__8cM3dGCylFv.s"
 }
@@ -136,7 +185,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__dt__8cM3dGAabFv.s"
 }
@@ -147,7 +196,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(lightInit__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::lightInit() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/lightInit__12daLv1Cdl01_cFv.s"
 }
@@ -158,7 +207,7 @@ ASM_FUNCTION(lightInit__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setLight__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::setLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/setLight__12daLv1Cdl01_cFv.s"
 }
@@ -169,7 +218,7 @@ ASM_FUNCTION(setLight__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(cutLight__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::cutLight() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/cutLight__12daLv1Cdl01_cFv.s"
 }
@@ -180,7 +229,7 @@ ASM_FUNCTION(cutLight__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(pointLightProc__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::pointLightProc() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/pointLightProc__12daLv1Cdl01_cFv.s"
 }
@@ -191,7 +240,7 @@ ASM_FUNCTION(pointLightProc__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__12daLv1Cdl01_cFPPA3_A4_f) {
+extern "C" asm void Execute__12daLv1Cdl01_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/Execute__12daLv1Cdl01_cFPPA3_A4_f.s"
 }
@@ -202,7 +251,7 @@ ASM_FUNCTION(Execute__12daLv1Cdl01_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/Draw__12daLv1Cdl01_cFv.s"
 }
@@ -213,7 +262,7 @@ ASM_FUNCTION(Draw__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__12daLv1Cdl01_cFv) {
+asm void daLv1Cdl01_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/Delete__12daLv1Cdl01_cFv.s"
 }
@@ -224,7 +273,7 @@ ASM_FUNCTION(Delete__12daLv1Cdl01_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv1Cdl01_Draw__FP12daLv1Cdl01_c) {
+asm void daLv1Cdl01_Draw(daLv1Cdl01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Draw__FP12daLv1Cdl01_c.s"
 }
@@ -235,7 +284,7 @@ ASM_FUNCTION(daLv1Cdl01_Draw__FP12daLv1Cdl01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv1Cdl01_Execute__FP12daLv1Cdl01_c) {
+asm void daLv1Cdl01_Execute(daLv1Cdl01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Execute__FP12daLv1Cdl01_c.s"
 }
@@ -246,7 +295,7 @@ ASM_FUNCTION(daLv1Cdl01_Execute__FP12daLv1Cdl01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv1Cdl01_Delete__FP12daLv1Cdl01_c) {
+asm void daLv1Cdl01_Delete(daLv1Cdl01_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Delete__FP12daLv1Cdl01_c.s"
 }
@@ -257,7 +306,7 @@ ASM_FUNCTION(daLv1Cdl01_Delete__FP12daLv1Cdl01_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daLv1Cdl01_Create__FP10fopAc_ac_c) {
+asm void daLv1Cdl01_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Create__FP10fopAc_ac_c.s"
 }
@@ -268,7 +317,7 @@ ASM_FUNCTION(daLv1Cdl01_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__16daLv1Cdl01_HIO_cFv) {
+asm daLv1Cdl01_HIO_c::~daLv1Cdl01_HIO_c() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__dt__16daLv1Cdl01_HIO_cFv.s"
 }
@@ -279,7 +328,7 @@ ASM_FUNCTION(__dt__16daLv1Cdl01_HIO_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__sinit_d_a_obj_lv1Candle01_cpp) {
+extern "C" asm void __sinit_d_a_obj_lv1Candle01_cpp() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/__sinit_d_a_obj_lv1Candle01_cpp.s"
 }

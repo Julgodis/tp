@@ -6,26 +6,66 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct fopAc_ac_c;
+struct daObjMBox_c;
+
+struct daObjMBox_c {
+	void initBaseMtx();
+	void setBaseMtx();
+	void Create();
+	void CreateHeap();
+	void create();
+	void Draw();
+	void Delete();
+};
+
+struct cM3dGCyl {
+	~cM3dGCyl();
+};
+
+struct cM3dGAab {
+	~cM3dGAab();
+};
+
+struct dBgS_ObjAcch {
+	~dBgS_ObjAcch();
+};
+
+struct fopAc_ac_c {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void initBaseMtx__11daObjMBox_cFv();
-extern "C" extern void setBaseMtx__11daObjMBox_cFv();
-extern "C" extern void Create__11daObjMBox_cFv();
-extern "C" extern void CreateHeap__11daObjMBox_cFv();
-extern "C" extern void create__11daObjMBox_cFv();
-extern "C" extern void __dt__8cM3dGCylFv();
-extern "C" extern void __dt__8cM3dGAabFv();
-extern "C" extern void __dt__12dBgS_ObjAcchFv();
-extern "C" extern void Execute__11daObjMBox_cFPPA3_A4_f();
-extern "C" extern void Draw__11daObjMBox_cFv();
-extern "C" extern void Delete__11daObjMBox_cFv();
-extern "C" extern void daObjMBox_Draw__FP11daObjMBox_c();
-extern "C" extern void daObjMBox_Execute__FP11daObjMBox_c();
-extern "C" extern void daObjMBox_Delete__FP11daObjMBox_c();
-extern "C" extern void daObjMBox_Create__FP10fopAc_ac_c();
-extern "C" extern void func_80593454();
-extern "C" extern void func_8059345C();
+extern "C" void Execute__11daObjMBox_cFPPA3_A4_f();
+void daObjMBox_Draw(daObjMBox_c*);
+void daObjMBox_Execute(daObjMBox_c*);
+void daObjMBox_Delete(daObjMBox_c*);
+void daObjMBox_Create(fopAc_ac_c*);
+extern "C" void func_80593454();
+extern "C" void func_8059345C();
+
+extern "C" void initBaseMtx__11daObjMBox_cFv();
+extern "C" void setBaseMtx__11daObjMBox_cFv();
+extern "C" void Create__11daObjMBox_cFv();
+extern "C" void CreateHeap__11daObjMBox_cFv();
+extern "C" void create__11daObjMBox_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void Execute__11daObjMBox_cFPPA3_A4_f();
+extern "C" void Draw__11daObjMBox_cFv();
+extern "C" void Delete__11daObjMBox_cFv();
+extern "C" void daObjMBox_Draw__FP11daObjMBox_c();
+extern "C" void daObjMBox_Execute__FP11daObjMBox_c();
+extern "C" void daObjMBox_Delete__FP11daObjMBox_c();
+extern "C" void daObjMBox_Create__FP10fopAc_ac_c();
+extern "C" void func_80593454();
+extern "C" void func_8059345C();
 SECTION_RODATA extern const u32 lit_3655;
 SECTION_RODATA extern const u8 stringBase0[10];
 SECTION_DATA extern u8 l_arcName[4];
@@ -40,7 +80,9 @@ SECTION_DATA extern void*const __vt__11daObjMBox_c[10];
 // External References:
 // 
 
-extern "C" extern void _unresolved();
+extern "C" void _unresolved();
+
+extern "C" void _unresolved();
 
 // 
 // Declarations:
@@ -50,7 +92,7 @@ extern "C" extern void _unresolved();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(initBaseMtx__11daObjMBox_cFv) {
+asm void daObjMBox_c::initBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/initBaseMtx__11daObjMBox_cFv.s"
 }
@@ -61,7 +103,7 @@ ASM_FUNCTION(initBaseMtx__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(setBaseMtx__11daObjMBox_cFv) {
+asm void daObjMBox_c::setBaseMtx() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/setBaseMtx__11daObjMBox_cFv.s"
 }
@@ -72,7 +114,7 @@ ASM_FUNCTION(setBaseMtx__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Create__11daObjMBox_cFv) {
+asm void daObjMBox_c::Create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/Create__11daObjMBox_cFv.s"
 }
@@ -83,7 +125,7 @@ ASM_FUNCTION(Create__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(CreateHeap__11daObjMBox_cFv) {
+asm void daObjMBox_c::CreateHeap() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/CreateHeap__11daObjMBox_cFv.s"
 }
@@ -94,7 +136,7 @@ ASM_FUNCTION(CreateHeap__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(create__11daObjMBox_cFv) {
+asm void daObjMBox_c::create() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_80593044.s"
 }
@@ -105,7 +147,7 @@ ASM_FUNCTION(create__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGCylFv) {
+asm cM3dGCyl::~cM3dGCyl() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/__dt__8cM3dGCylFv.s"
 }
@@ -116,7 +158,7 @@ ASM_FUNCTION(__dt__8cM3dGCylFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__8cM3dGAabFv) {
+asm cM3dGAab::~cM3dGAab() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/__dt__8cM3dGAabFv.s"
 }
@@ -127,7 +169,7 @@ ASM_FUNCTION(__dt__8cM3dGAabFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
+asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/__dt__12dBgS_ObjAcchFv.s"
 }
@@ -138,7 +180,7 @@ ASM_FUNCTION(__dt__12dBgS_ObjAcchFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Execute__11daObjMBox_cFPPA3_A4_f) {
+extern "C" asm void Execute__11daObjMBox_cFPPA3_A4_f() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/Execute__11daObjMBox_cFPPA3_A4_f.s"
 }
@@ -149,7 +191,7 @@ ASM_FUNCTION(Execute__11daObjMBox_cFPPA3_A4_f) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Draw__11daObjMBox_cFv) {
+asm void daObjMBox_c::Draw() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/Draw__11daObjMBox_cFv.s"
 }
@@ -160,7 +202,7 @@ ASM_FUNCTION(Draw__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(Delete__11daObjMBox_cFv) {
+asm void daObjMBox_c::Delete() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/Delete__11daObjMBox_cFv.s"
 }
@@ -171,7 +213,7 @@ ASM_FUNCTION(Delete__11daObjMBox_cFv) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMBox_Draw__FP11daObjMBox_c) {
+asm void daObjMBox_Draw(daObjMBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/daObjMBox_Draw__FP11daObjMBox_c.s"
 }
@@ -182,7 +224,7 @@ ASM_FUNCTION(daObjMBox_Draw__FP11daObjMBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMBox_Execute__FP11daObjMBox_c) {
+asm void daObjMBox_Execute(daObjMBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/daObjMBox_Execute__FP11daObjMBox_c.s"
 }
@@ -193,7 +235,7 @@ ASM_FUNCTION(daObjMBox_Execute__FP11daObjMBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMBox_Delete__FP11daObjMBox_c) {
+asm void daObjMBox_Delete(daObjMBox_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/daObjMBox_Delete__FP11daObjMBox_c.s"
 }
@@ -204,7 +246,7 @@ ASM_FUNCTION(daObjMBox_Delete__FP11daObjMBox_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(daObjMBox_Create__FP10fopAc_ac_c) {
+asm void daObjMBox_Create(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/daObjMBox_Create__FP10fopAc_ac_c.s"
 }
@@ -215,7 +257,7 @@ ASM_FUNCTION(daObjMBox_Create__FP10fopAc_ac_c) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_80593454) {
+extern "C" asm void func_80593454() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_80593454.s"
 }
@@ -226,7 +268,7 @@ ASM_FUNCTION(func_80593454) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(func_8059345C) {
+extern "C" asm void func_8059345C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_metalbox/d_a_obj_metalbox/func_8059345C.s"
 }

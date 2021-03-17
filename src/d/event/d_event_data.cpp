@@ -6,38 +6,273 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build dEvDtFlag_c (dEvDtFlag_c) False/False
+/* top-level dependencies (begin dEvDtFlag_c) */
+/* top-level dependencies (end dEvDtFlag_c) */
+struct dEvDtFlag_c {
+	/* 80043D60 */ void flagCheck(s32);
+	/* 80043DC8 */ void flagSet(s32);
+	/* 80043E30 */ void flagMaxCheck(s32);
+	/* 80043E58 */ void init();
+};
+
+// build dEvDtEvent_c (dEvDtEvent_c) False/False
+// build dEvDtStaff_c (dEvDtStaff_c) False/False
+/* top-level dependencies (begin dEvDtStaff_c) */
+/* top-level dependencies (end dEvDtStaff_c) */
+struct dEvDtStaff_c {
+	/* 80043FD8 */ void specialProc_WaitStart(s32);
+	/* 8004403C */ void specialProc_WaitProc(s32);
+	/* 80044080 */ void specialProc();
+	/* 80044134 */ void init();
+	/* 80044170 */ void advanceCut(s32);
+	/* 80044190 */ void specialProcLight();
+	/* 80044324 */ void specialProcMessage();
+	/* 80044A58 */ void specialProcSound();
+	/* 80044CB8 */ void specialProcCreate();
+	/* 80044EE4 */ void specialProcDirector();
+	/* 80045878 */ void specialProcPackage();
+	/* 80045AFC */ void specialProcTimekeeper();
+	/* 80045C34 */ void specialProcEffect();
+};
+
+/* top-level dependencies (begin dEvDtEvent_c) */
+// outer dependency: dEvDtStaff_c
+/* top-level dependencies (end dEvDtEvent_c) */
+struct dEvDtEvent_c {
+	// dEvDtStaff_c
+	/* 80043E78 */ void finishCheck();
+	/* 80043EFC */ void forceFinish();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
+};
+
+// build dEvDtStaff_c (dEvDtStaff_c) True/True
+// build dEvDtCut_c (dEvDtCut_c) False/False
+/* top-level dependencies (begin dEvDtCut_c) */
+/* top-level dependencies (end dEvDtCut_c) */
+struct dEvDtCut_c {
+	/* 800460A8 */ void startCheck();
+};
+
+// build dEvDtBase_c (dEvDtBase_c) False/False
+// build dEvDtStaff_c (dEvDtStaff_c) True/True
+// build dEvDtEvent_c (dEvDtEvent_c) True/True
+/* top-level dependencies (begin dEvDtBase_c) */
+// outer dependency: dEvDtStaff_c
+// outer dependency: dEvDtEvent_c
+/* top-level dependencies (end dEvDtBase_c) */
+struct dEvDtBase_c {
+	// dEvDtStaff_c
+	// dEvDtEvent_c
+	/* 80046138 */ void init();
+	/* 8004616C */ void init(char*, s32);
+	/* 8004628C */ void advanceCut(dEvDtEvent_c*);
+	/* 800462FC */ void advanceCutLocal(dEvDtStaff_c*);
+};
+
+// build mDoGph_gInf_c (mDoGph_gInf_c) False/False
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
+/* top-level dependencies (begin mDoGph_gInf_c) */
+// outer dependency: _GXColor
+/* top-level dependencies (end mDoGph_gInf_c) */
+struct mDoGph_gInf_c {
+	// _GXColor
+	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
+	/* 800080D0 */ void fadeOut(f32);
+};
+
+// build _GXColor (_GXColor) True/True
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build dStage_roomControl_c (dStage_roomControl_c) False/False
+/* top-level dependencies (begin dStage_roomControl_c) */
+/* top-level dependencies (end dStage_roomControl_c) */
+struct dStage_roomControl_c {
+	/* 80024384 */ void getStatusRoomDt(s32);
+};
+
+// build dSv_event_c (dSv_event_c) False/False
+/* top-level dependencies (begin dSv_event_c) */
+/* top-level dependencies (end dSv_event_c) */
+struct dSv_event_c {
+	/* 8003498C */ void onEventBit(u16);
+	/* 800349A4 */ void offEventBit(u16);
+	/* 800349BC */ void isEventBit(u16) const;
+};
+
+// build dDemo_c (dDemo_c) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin dDemo_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dDemo_c) */
+struct dDemo_c {
+	// cXyz
+	/* 80039B6C */ void start(char const*, cXyz*, f32);
+	/* 80039CF8 */ void end();
+};
+
+// build dEvt_control_c (dEvt_control_c) False/False
+/* top-level dependencies (begin dEvt_control_c) */
+/* top-level dependencies (end dEvt_control_c) */
+struct dEvt_control_c {
+	/* 80042958 */ void setSkipZev(void*, char*);
+	/* 80043278 */ void getStageEventDt();
+	/* 800432EC */ void convPId(s32);
+	/* 8004331C */ void getStbDemoData(char*);
+	/* 800434D8 */ void searchMapEventData(char);
+	/* 8004365C */ void setPt2(void*);
+	/* 8004368C */ void setPtT(void*);
+	/* 800436BC */ void setPtI(void*);
+	/* 800436F4 */ void setPtD(void*);
+};
+
+// build dEvent_manager_c (dEvent_manager_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dEvent_manager_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dEvent_manager_c) */
+struct dEvent_manager_c {
+	// fopAc_ac_c
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, s32);
+	/* 80047D4C */ void getIsAddvance(s32);
+	/* 80047F5C */ void getMyNowCutName(s32);
+	/* 800480EC */ void getMySubstanceP(s32, char const*, s32);
+	/* 80048144 */ void getMySubstanceNum(s32, char const*);
+	/* 8004817C */ void cutEnd(s32);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dDlst_list_c (dDlst_list_c) False/False
+/* top-level dependencies (begin dDlst_list_c) */
+/* top-level dependencies (end dDlst_list_c) */
+struct dDlst_list_c {
+	/* 800568D8 */ void wipeIn(f32);
+};
+
+// build dVibration_c (dVibration_c) False/False
+// build cXyz (cXyz) True/True
+/* top-level dependencies (begin dVibration_c) */
+// outer dependency: cXyz
+/* top-level dependencies (end dVibration_c) */
+struct dVibration_c {
+	// cXyz
+	/* 8006FA24 */ void StartShock(s32, s32, cXyz);
+	/* 8006FB10 */ void StartQuake(s32, s32, cXyz);
+	/* 8006FC0C */ void StartQuake(char const*, s32, s32, cXyz);
+	/* 8006FD94 */ void StopQuake(s32);
+};
+
+// build dCamera_c (dCamera_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dCamera_c) */
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dCamera_c) */
+struct dCamera_c {
+	// fopAc_ac_c
+	/* 80181170 */ void StartBlure(s32, fopAc_ac_c*, f32, f32);
+};
+
+// build dMsgObject_c (dMsgObject_c) False/False
+/* top-level dependencies (begin dMsgObject_c) */
+/* top-level dependencies (end dMsgObject_c) */
+struct dMsgObject_c {
+	/* 8023806C */ void demoMessageGroup();
+};
+
+// build Z2SeMgr (Z2SeMgr) False/False
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin Z2SeMgr) */
+// outer dependency: JAISoundID
+// outer dependency: Vec
+/* top-level dependencies (end Z2SeMgr) */
+struct Z2SeMgr {
+	// JAISoundID
+	// Vec
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+};
+
+// build JAISoundID (JAISoundID) True/True
+// build Vec (Vec) True/True
+// build Z2SeqMgr (Z2SeqMgr) False/False
+/* top-level dependencies (begin Z2SeqMgr) */
+/* top-level dependencies (end Z2SeqMgr) */
+struct Z2SeqMgr {
+	/* 802AF408 */ void bgmStop(u32, s32);
+	/* 802AFE18 */ void bgmStreamPlay();
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" extern void getTelopNo__FPCc();
-extern "C" extern void getTelopNo__Fv();
-extern "C" extern void getStartTelopNo__Fv();
-extern "C" extern void dEvDt_Next_Stage__Fii();
-extern "C" extern void flagCheck__11dEvDtFlag_cFi();
-extern "C" extern void flagSet__11dEvDtFlag_cFi();
-extern "C" extern void flagMaxCheck__11dEvDtFlag_cFi();
-extern "C" extern void init__11dEvDtFlag_cFv();
-extern "C" extern void finishCheck__12dEvDtEvent_cFv();
-extern "C" extern void forceFinish__12dEvDtEvent_cFv();
-extern "C" extern void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
-extern "C" extern void specialProc_WaitStart__12dEvDtStaff_cFi();
-extern "C" extern void specialProc_WaitProc__12dEvDtStaff_cFi();
-extern "C" extern void specialProc__12dEvDtStaff_cFv();
-extern "C" extern void init__12dEvDtStaff_cFv();
-extern "C" extern void advanceCut__12dEvDtStaff_cFi();
-extern "C" extern void specialProcLight__12dEvDtStaff_cFv();
-extern "C" extern void specialProcMessage__12dEvDtStaff_cFv();
-extern "C" extern void specialProcSound__12dEvDtStaff_cFv();
-extern "C" extern void specialProcCreate__12dEvDtStaff_cFv();
-extern "C" extern void specialProcDirector__12dEvDtStaff_cFv();
-extern "C" extern void specialProcPackage__12dEvDtStaff_cFv();
-extern "C" extern void specialProcTimekeeper__12dEvDtStaff_cFv();
-extern "C" extern void specialProcEffect__12dEvDtStaff_cFv();
-extern "C" extern void startCheck__10dEvDtCut_cFv();
-extern "C" extern void init__11dEvDtBase_cFv();
-extern "C" extern void init__11dEvDtBase_cFPci();
-extern "C" extern void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
-extern "C" extern void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c();
+static void getTelopNo(char const*);
+static void getTelopNo();
+static void getStartTelopNo();
+static void dEvDt_Next_Stage(s32, s32);
+
+extern "C" static void getTelopNo__FPCc();
+extern "C" static void getTelopNo__Fv();
+extern "C" static void getStartTelopNo__Fv();
+extern "C" static void dEvDt_Next_Stage__Fii();
+extern "C" void flagCheck__11dEvDtFlag_cFi();
+extern "C" void flagSet__11dEvDtFlag_cFi();
+extern "C" void flagMaxCheck__11dEvDtFlag_cFi();
+extern "C" void init__11dEvDtFlag_cFv();
+extern "C" void finishCheck__12dEvDtEvent_cFv();
+extern "C" void forceFinish__12dEvDtEvent_cFv();
+extern "C" void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
+extern "C" void specialProc_WaitStart__12dEvDtStaff_cFi();
+extern "C" void specialProc_WaitProc__12dEvDtStaff_cFi();
+extern "C" void specialProc__12dEvDtStaff_cFv();
+extern "C" void init__12dEvDtStaff_cFv();
+extern "C" void advanceCut__12dEvDtStaff_cFi();
+extern "C" void specialProcLight__12dEvDtStaff_cFv();
+extern "C" void specialProcMessage__12dEvDtStaff_cFv();
+extern "C" void specialProcSound__12dEvDtStaff_cFv();
+extern "C" void specialProcCreate__12dEvDtStaff_cFv();
+extern "C" void specialProcDirector__12dEvDtStaff_cFv();
+extern "C" void specialProcPackage__12dEvDtStaff_cFv();
+extern "C" void specialProcTimekeeper__12dEvDtStaff_cFv();
+extern "C" void specialProcEffect__12dEvDtStaff_cFv();
+extern "C" void startCheck__10dEvDtCut_cFv();
+extern "C" void init__11dEvDtBase_cFv();
+extern "C" void init__11dEvDtBase_cFPci();
+extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
+extern "C" void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c();
 SECTION_RODATA extern const u8 d_event_d_event_data__stringBase0[384];
 SECTION_DATA extern u8 TelopData[648];
 SECTION_DATA extern void*d_event_d_event_data__lit_4398[14];
@@ -56,70 +291,102 @@ SECTION_SDATA2 extern f32 lit_5200;
 // External References:
 // 
 
-extern "C" extern void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
-extern "C" extern void fadeOut__13mDoGph_gInf_cFf();
-extern "C" extern void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
-extern "C" extern void fopAcM_searchFromName4Event__FPCcs();
-extern "C" extern void fopMsgM_SearchByID__FUi();
-extern "C" extern void fopMsgM_messageSet__FUlUl();
-extern "C" extern void fopMsgM_messageSetDemo__FUl();
-extern "C" extern void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" extern void dStage_searchName__FPCc();
-extern "C" extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
-extern "C" extern void dComIfGs_onStageSwitch__Fii();
-extern "C" extern void dComIfGs_offStageSwitch__Fii();
-extern "C" extern void dComIfGs_isStageSwitch__Fii();
-extern "C" extern void onEventBit__11dSv_event_cFUs();
-extern "C" extern void offEventBit__11dSv_event_cFUs();
-extern "C" extern void isEventBit__11dSv_event_cCFUs();
-extern "C" extern void start__7dDemo_cFPCUcP4cXyzf();
-extern "C" extern void end__7dDemo_cFv();
-extern "C" extern void dEv_defaultSkipProc__FPvi();
-extern "C" extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
-extern "C" extern void setSkipZev__14dEvt_control_cFPvPc();
-extern "C" extern void getStageEventDt__14dEvt_control_cFv();
-extern "C" extern void convPId__14dEvt_control_cFUi();
-extern "C" extern void getStbDemoData__14dEvt_control_cFPc();
-extern "C" extern void searchMapEventData__14dEvt_control_cFUc();
-extern "C" extern void setPt2__14dEvt_control_cFPv();
-extern "C" extern void setPtT__14dEvt_control_cFPv();
-extern "C" extern void setPtI__14dEvt_control_cFPv();
-extern "C" extern void setPtD__14dEvt_control_cFPv();
-extern "C" extern void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
-extern "C" extern void getIsAddvance__16dEvent_manager_cFi();
-extern "C" extern void getMyNowCutName__16dEvent_manager_cFi();
-extern "C" extern void getMySubstanceP__16dEvent_manager_cFiPCci();
-extern "C" extern void getMySubstanceNum__16dEvent_manager_cFiPCc();
-extern "C" extern void cutEnd__16dEvent_manager_cFi();
-extern "C" extern void wipeIn__12dDlst_list_cFf();
-extern "C" extern void StartShock__12dVibration_cFii4cXyz();
-extern "C" extern void StartQuake__12dVibration_cFii4cXyz();
-extern "C" extern void StartQuake__12dVibration_cFPCUcii4cXyz();
-extern "C" extern void StopQuake__12dVibration_cFi();
-extern "C" extern void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
-extern "C" extern void dCam_getBody__Fv();
-extern "C" extern void d_GameOver_Create__FUc();
-extern "C" extern void d_GameOver_Delete__FRUi();
-extern "C" extern void dKy_set_nexttime__Ff();
-extern "C" extern void dKy_instant_timechg__Ff();
-extern "C" extern void dKy_instant_rainchg__Fv();
-extern "C" extern void demoMessageGroup__12dMsgObject_cFv();
-extern "C" extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" extern void bgmStop__8Z2SeqMgrFUll();
-extern "C" extern void bgmStreamPlay__8Z2SeqMgrFv();
-extern "C" extern void _savegpr_19();
-extern "C" extern void _savegpr_24();
-extern "C" extern void _savegpr_25();
-extern "C" extern void _savegpr_26();
-extern "C" extern void _savegpr_28();
-extern "C" extern void _savegpr_29();
-extern "C" extern void _restgpr_19();
-extern "C" extern void _restgpr_24();
-extern "C" extern void _restgpr_25();
-extern "C" extern void _restgpr_26();
-extern "C" extern void _restgpr_28();
-extern "C" extern void _restgpr_29();
-extern "C" extern void strcmp();
+void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void fopAcM_searchFromName4Event(char const*, s16);
+void fopMsgM_SearchByID(s32);
+void fopMsgM_messageSet(u32, u32);
+void fopMsgM_messageSetDemo(u32);
+void dStage_searchName(char const*);
+void dComIfGp_setNextStage(char const*, s16, char, char, f32, u32, s32, char, s16, s32, s32);
+void dComIfGs_onStageSwitch(s32, s32);
+void dComIfGs_offStageSwitch(s32, s32);
+void dComIfGs_isStageSwitch(s32, s32);
+void dEv_defaultSkipProc(void*, s32);
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+void dCam_getBody();
+void d_GameOver_Create(char);
+void d_GameOver_Delete(s32&);
+void dKy_set_nexttime(f32);
+void dKy_instant_timechg(f32);
+void dKy_instant_rainchg();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_searchFromName4Event__FPCcs();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void fopMsgM_messageSetDemo__FUl();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dStage_searchName__FPCc();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfGs_onStageSwitch__Fii();
+extern "C" void dComIfGs_offStageSwitch__Fii();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void start__7dDemo_cFPCUcP4cXyzf();
+extern "C" void end__7dDemo_cFv();
+extern "C" void dEv_defaultSkipProc__FPvi();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void setSkipZev__14dEvt_control_cFPvPc();
+extern "C" void getStageEventDt__14dEvt_control_cFv();
+extern "C" void convPId__14dEvt_control_cFUi();
+extern "C" void getStbDemoData__14dEvt_control_cFPc();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void setPt2__14dEvt_control_cFPv();
+extern "C" void setPtT__14dEvt_control_cFPv();
+extern "C" void setPtI__14dEvt_control_cFPv();
+extern "C" void setPtD__14dEvt_control_cFPv();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyNowCutName__16dEvent_manager_cFi();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void wipeIn__12dDlst_list_cFf();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+extern "C" void dCam_getBody__Fv();
+extern "C" void d_GameOver_Create__FUc();
+extern "C" void d_GameOver_Delete__FRUi();
+extern "C" void dKy_set_nexttime__Ff();
+extern "C" void dKy_instant_timechg__Ff();
+extern "C" void dKy_instant_rainchg__Fv();
+extern "C" void demoMessageGroup__12dMsgObject_cFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -137,7 +404,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A7FB0-803A8238 0288+00 .data      TelopData                                                    */
+/* 803A7FB0-803A8238 0288+00 rc=2 efc=0 .data      TelopData                                                    */
 u8 TelopData[648] = {
 	0x44, 0x30, 0x35, 0x00, 0x04, 0x4D, 0x10, 0x69, 0x00, 0x03, 0x00, 0x00, 0x44, 0x30, 0x35, 0x41,
 	0x04, 0x4D, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x44, 0x30, 0x35, 0x42, 0x04, 0x4D, 0xFF, 0xFF,
@@ -182,37 +449,37 @@ u8 TelopData[648] = {
 	0x04, 0x75, 0xFF, 0xFF, 0x00, 0x01, 0x00, 0x00,
 };
 
-/* 80450640-80450648 0004+04 .sdata     numTelopData                                                 */
+/* 80450640-80450648 0004+04 rc=2 efc=0 .sdata     numTelopData                                                 */
 u32 numTelopData = 0x00000036;
 /* padding 4 bytes */
 
-/* 8004372C-800437C4 0098+00 .text      getTelopNo__FPCc                                             */
+/* 8004372C-800437C4 0098+00 rc=2 efc=0 .text      getTelopNo__FPCc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTelopNo__FPCc) {
+asm static void getTelopNo(char const* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/getTelopNo__FPCc.s"
 }
 #pragma pop
 
 
-/* 800437C4-800437F0 002C+00 .text      getTelopNo__Fv                                               */
+/* 800437C4-800437F0 002C+00 rc=1 efc=0 .text      getTelopNo__Fv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getTelopNo__Fv) {
+asm static void getTelopNo() {
 	nofralloc
 #include "asm/d/event/d_event_data/getTelopNo__Fv.s"
 }
 #pragma pop
 
 
-/* 800437F0-80043A14 0224+00 .text      getStartTelopNo__Fv                                          */
+/* 800437F0-80043A14 0224+00 rc=1 efc=0 .text      getStartTelopNo__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(getStartTelopNo__Fv) {
+asm static void getStartTelopNo() {
 	nofralloc
 #include "asm/d/event/d_event_data/getStartTelopNo__Fv.s"
 }
@@ -220,7 +487,7 @@ ASM_FUNCTION(getStartTelopNo__Fv) {
 
 
 /* ############################################################################################## */
-/* 80379DD0-80379F50 017E+02 .rodata    @stringBase0                                                 */
+/* 80379DD0-80379F50 017E+02 rc=10 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -281,121 +548,121 @@ SECTION_DEAD char* const stringBase_80379F48 = "Scale";
 SECTION_DEAD char* const pad_80379F4E = "\0";
 #pragma pop
 
-/* 80451ED0-80451ED4 0004+00 .sdata2    @4264                                                        */
+/* 80451ED0-80451ED4 0004+00 rc=4 efc=0 .sdata2    @4264                                                        */
 u8 d_event_d_event_data__lit_4264[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451ED4-80451ED8 0004+00 .sdata2    @4265                                                        */
+/* 80451ED4-80451ED8 0004+00 rc=2 efc=0 .sdata2    @4265                                                        */
 f32 d_event_d_event_data__lit_4265 = 15.0f;
 
-/* 80451ED8-80451EE0 0008+00 .sdata2    @4267                                                        */
+/* 80451ED8-80451EE0 0008+00 rc=1 efc=0 .sdata2    @4267                                                        */
 f64 d_event_d_event_data__lit_4267 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80043A14-80043D60 034C+00 .text      dEvDt_Next_Stage__Fii                                        */
+/* 80043A14-80043D60 034C+00 rc=1 efc=0 .text      dEvDt_Next_Stage__Fii                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(dEvDt_Next_Stage__Fii) {
+asm static void dEvDt_Next_Stage(s32 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_data/dEvDt_Next_Stage__Fii.s"
 }
 #pragma pop
 
 
-/* 80043D60-80043DC8 0068+00 .text      flagCheck__11dEvDtFlag_cFi                                   */
+/* 80043D60-80043DC8 0068+00 rc=3 efc=0 .text      flagCheck__11dEvDtFlag_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flagCheck__11dEvDtFlag_cFi) {
+asm void dEvDtFlag_c::flagCheck(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagCheck__11dEvDtFlag_cFi.s"
 }
 #pragma pop
 
 
-/* 80043DC8-80043E30 0068+00 .text      flagSet__11dEvDtFlag_cFi                                     */
+/* 80043DC8-80043E30 0068+00 rc=3 efc=1 .text      flagSet__11dEvDtFlag_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flagSet__11dEvDtFlag_cFi) {
+asm void dEvDtFlag_c::flagSet(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagSet__11dEvDtFlag_cFi.s"
 }
 #pragma pop
 
 
-/* 80043E30-80043E58 0028+00 .text      flagMaxCheck__11dEvDtFlag_cFi                                */
+/* 80043E30-80043E58 0028+00 rc=2 efc=0 .text      flagMaxCheck__11dEvDtFlag_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(flagMaxCheck__11dEvDtFlag_cFi) {
+asm void dEvDtFlag_c::flagMaxCheck(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagMaxCheck__11dEvDtFlag_cFi.s"
 }
 #pragma pop
 
 
-/* 80043E58-80043E78 0020+00 .text      init__11dEvDtFlag_cFv                                        */
+/* 80043E58-80043E78 0020+00 rc=3 efc=3 .text      init__11dEvDtFlag_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11dEvDtFlag_cFv) {
+asm void dEvDtFlag_c::init() {
 	nofralloc
 #include "asm/d/event/d_event_data/init__11dEvDtFlag_cFv.s"
 }
 #pragma pop
 
 
-/* 80043E78-80043EFC 0084+00 .text      finishCheck__12dEvDtEvent_cFv                                */
+/* 80043E78-80043EFC 0084+00 rc=1 efc=1 .text      finishCheck__12dEvDtEvent_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(finishCheck__12dEvDtEvent_cFv) {
+asm void dEvDtEvent_c::finishCheck() {
 	nofralloc
 #include "asm/d/event/d_event_data/finishCheck__12dEvDtEvent_cFv.s"
 }
 #pragma pop
 
 
-/* 80043EFC-80043F70 0074+00 .text      forceFinish__12dEvDtEvent_cFv                                */
+/* 80043EFC-80043F70 0074+00 rc=1 efc=1 .text      forceFinish__12dEvDtEvent_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(forceFinish__12dEvDtEvent_cFv) {
+asm void dEvDtEvent_c::forceFinish() {
 	nofralloc
 #include "asm/d/event/d_event_data/forceFinish__12dEvDtEvent_cFv.s"
 }
 #pragma pop
 
 
-/* 80043F70-80043FD8 0068+00 .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             */
+/* 80043F70-80043FD8 0068+00 rc=1 efc=1 .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c) {
+asm void dEvDtEvent_c::specialStaffProc(dEvDtStaff_c* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c.s"
 }
 #pragma pop
 
 
-/* 80043FD8-8004403C 0064+00 .text      specialProc_WaitStart__12dEvDtStaff_cFi                      */
+/* 80043FD8-8004403C 0064+00 rc=4 efc=0 .text      specialProc_WaitStart__12dEvDtStaff_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProc_WaitStart__12dEvDtStaff_cFi) {
+asm void dEvDtStaff_c::specialProc_WaitStart(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProc_WaitStart__12dEvDtStaff_cFi.s"
 }
 #pragma pop
 
 
-/* 8004403C-80044080 0044+00 .text      specialProc_WaitProc__12dEvDtStaff_cFi                       */
+/* 8004403C-80044080 0044+00 rc=4 efc=0 .text      specialProc_WaitProc__12dEvDtStaff_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProc_WaitProc__12dEvDtStaff_cFi) {
+asm void dEvDtStaff_c::specialProc_WaitProc(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProc_WaitProc__12dEvDtStaff_cFi.s"
 }
@@ -403,7 +670,7 @@ ASM_FUNCTION(specialProc_WaitProc__12dEvDtStaff_cFi) {
 
 
 /* ############################################################################################## */
-/* 803A8238-803A8270 0034+04 .data      @4398                                                        */
+/* 803A8238-803A8270 0034+04 rc=1 efc=0 .data      @4398                                                        */
 void* d_event_d_event_data__lit_4398[14] = {
 	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
 	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x50),
@@ -422,33 +689,33 @@ void* d_event_d_event_data__lit_4398[14] = {
 	NULL,
 };
 
-/* 80044080-80044134 00B4+00 .text      specialProc__12dEvDtStaff_cFv                                */
+/* 80044080-80044134 00B4+00 rc=2 efc=0 .text      specialProc__12dEvDtStaff_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProc__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProc() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProc__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80044134-80044170 003C+00 .text      init__12dEvDtStaff_cFv                                       */
+/* 80044134-80044170 003C+00 rc=1 efc=1 .text      init__12dEvDtStaff_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::init() {
 	nofralloc
 #include "asm/d/event/d_event_data/init__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80044170-80044190 0020+00 .text      advanceCut__12dEvDtStaff_cFi                                 */
+/* 80044170-80044190 0020+00 rc=1 efc=0 .text      advanceCut__12dEvDtStaff_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(advanceCut__12dEvDtStaff_cFi) {
+asm void dEvDtStaff_c::advanceCut(s32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/advanceCut__12dEvDtStaff_cFi.s"
 }
@@ -456,29 +723,29 @@ ASM_FUNCTION(advanceCut__12dEvDtStaff_cFi) {
 
 
 /* ############################################################################################## */
-/* 80451EE0-80451EE8 0004+04 .sdata2    @4460                                                        */
+/* 80451EE0-80451EE8 0004+04 rc=1 efc=0 .sdata2    @4460                                                        */
 f32 d_event_d_event_data__lit_4460 = 1.0f / 15.0f;
 /* padding 4 bytes */
 
-/* 80451EE8-80451EF0 0008+00 .sdata2    @4461                                                        */
+/* 80451EE8-80451EF0 0008+00 rc=1 efc=0 .sdata2    @4461                                                        */
 f64 d_event_d_event_data__lit_4461 = 24.0;
 
-/* 80044190-80044324 0194+00 .text      specialProcLight__12dEvDtStaff_cFv                           */
+/* 80044190-80044324 0194+00 rc=1 efc=0 .text      specialProcLight__12dEvDtStaff_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcLight__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcLight() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcLight__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80044324-80044A58 0734+00 .text      specialProcMessage__12dEvDtStaff_cFv                         */
+/* 80044324-80044A58 0734+00 rc=1 efc=0 .text      specialProcMessage__12dEvDtStaff_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcMessage__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcMessage() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcMessage__12dEvDtStaff_cFv.s"
 }
@@ -486,39 +753,39 @@ ASM_FUNCTION(specialProcMessage__12dEvDtStaff_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451EF0-80451EF4 0004+00 .sdata2    @4668                                                        */
+/* 80451EF0-80451EF4 0004+00 rc=4 efc=0 .sdata2    @4668                                                        */
 f32 d_event_d_event_data__lit_4668 = 1.0f;
 
-/* 80451EF4-80451EF8 0004+00 .sdata2    @4669                                                        */
+/* 80451EF4-80451EF8 0004+00 rc=2 efc=0 .sdata2    @4669                                                        */
 f32 d_event_d_event_data__lit_4669 = -1.0f;
 
-/* 80044A58-80044CB8 0260+00 .text      specialProcSound__12dEvDtStaff_cFv                           */
+/* 80044A58-80044CB8 0260+00 rc=1 efc=0 .text      specialProcSound__12dEvDtStaff_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcSound__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcSound() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcSound__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80044CB8-80044EE4 022C+00 .text      specialProcCreate__12dEvDtStaff_cFv                          */
+/* 80044CB8-80044EE4 022C+00 rc=1 efc=0 .text      specialProcCreate__12dEvDtStaff_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcCreate__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcCreate() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcCreate__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80044EE4-80045878 0994+00 .text      specialProcDirector__12dEvDtStaff_cFv                        */
+/* 80044EE4-80045878 0994+00 rc=1 efc=0 .text      specialProcDirector__12dEvDtStaff_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcDirector__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcDirector() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcDirector__12dEvDtStaff_cFv.s"
 }
@@ -526,25 +793,25 @@ ASM_FUNCTION(specialProcDirector__12dEvDtStaff_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451EF8-80451EFC 0004+00 .sdata2    @5057                                                        */
+/* 80451EF8-80451EFC 0004+00 rc=1 efc=0 .sdata2    @5057                                                        */
 f32 d_event_d_event_data__lit_5057 = 10.0f;
 
-/* 80045878-80045AFC 0284+00 .text      specialProcPackage__12dEvDtStaff_cFv                         */
+/* 80045878-80045AFC 0284+00 rc=1 efc=0 .text      specialProcPackage__12dEvDtStaff_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcPackage__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcPackage() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcPackage__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 80045AFC-80045C34 0138+00 .text      specialProcTimekeeper__12dEvDtStaff_cFv                      */
+/* 80045AFC-80045C34 0138+00 rc=1 efc=0 .text      specialProcTimekeeper__12dEvDtStaff_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcTimekeeper__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcTimekeeper() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcTimekeeper__12dEvDtStaff_cFv.s"
 }
@@ -552,73 +819,72 @@ ASM_FUNCTION(specialProcTimekeeper__12dEvDtStaff_cFv) {
 
 
 /* ############################################################################################## */
-/* 80451EFC-80451F00 0004+00 .sdata2    @5200                                                        */
+/* 80451EFC-80451F00 0004+00 rc=1 efc=0 .sdata2    @5200                                                        */
 f32 lit_5200 = 4.0f / 5.0f;
 
-/* 80045C34-800460A8 0474+00 .text      specialProcEffect__12dEvDtStaff_cFv                          */
+/* 80045C34-800460A8 0474+00 rc=1 efc=0 .text      specialProcEffect__12dEvDtStaff_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(specialProcEffect__12dEvDtStaff_cFv) {
+asm void dEvDtStaff_c::specialProcEffect() {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProcEffect__12dEvDtStaff_cFv.s"
 }
 #pragma pop
 
 
-/* 800460A8-80046138 0090+00 .text      startCheck__10dEvDtCut_cFv                                   */
+/* 800460A8-80046138 0090+00 rc=1 efc=0 .text      startCheck__10dEvDtCut_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(startCheck__10dEvDtCut_cFv) {
+asm void dEvDtCut_c::startCheck() {
 	nofralloc
 #include "asm/d/event/d_event_data/startCheck__10dEvDtCut_cFv.s"
 }
 #pragma pop
 
 
-/* 80046138-8004616C 0034+00 .text      init__11dEvDtBase_cFv                                        */
+/* 80046138-8004616C 0034+00 rc=8 efc=7 .text      init__11dEvDtBase_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11dEvDtBase_cFv) {
+asm void dEvDtBase_c::init() {
 	nofralloc
 #include "asm/d/event/d_event_data/init__11dEvDtBase_cFv.s"
 }
 #pragma pop
 
 
-/* 8004616C-8004628C 0120+00 .text      init__11dEvDtBase_cFPci                                      */
+/* 8004616C-8004628C 0120+00 rc=6 efc=6 .text      init__11dEvDtBase_cFPci                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(init__11dEvDtBase_cFPci) {
+asm void dEvDtBase_c::init(char* field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_data/init__11dEvDtBase_cFPci.s"
 }
 #pragma pop
 
 
-/* 8004628C-800462FC 0070+00 .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    */
+/* 8004628C-800462FC 0070+00 rc=1 efc=1 .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(advanceCut__11dEvDtBase_cFP12dEvDtEvent_c) {
+asm void dEvDtBase_c::advanceCut(dEvDtEvent_c* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/advanceCut__11dEvDtBase_cFP12dEvDtEvent_c.s"
 }
 #pragma pop
 
 
-/* 800462FC-800463DC 00E0+00 .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               */
+/* 800462FC-800463DC 00E0+00 rc=1 efc=0 .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c) {
+asm void dEvDtBase_c::advanceCutLocal(dEvDtStaff_c* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */

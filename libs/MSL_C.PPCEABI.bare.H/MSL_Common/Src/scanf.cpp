@@ -9,26 +9,28 @@
 // Forward References:
 // 
 
-extern "C" extern void __StringRead();
+extern "C" void __StringRead();
+
+extern "C" void __StringRead();
 
 // 
 // External References:
 // 
 
 
+
 // 
 // Declarations:
 // 
 
-/* 8036878C-8036881C 0090+00 .text      __StringRead                                                 */
+/* 8036878C-8036881C 0090+00 rc=2 efc=2 .text      __StringRead                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-ASM_FUNCTION(__StringRead) {
+extern "C" asm void __StringRead() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/scanf/__StringRead.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */
